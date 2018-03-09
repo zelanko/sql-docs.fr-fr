@@ -2,10 +2,14 @@
 title: "Créer des instances de données XML | Microsoft Docs"
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: xml
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-xml
+ms.suite: sql
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,19 +22,20 @@ helpviewer_keywords:
 - XML [SQL Server], generating instances
 - white space [XML in SQL Server]
 ms.assetid: dbd6c06f-db6e-44a7-855a-6a55bf374907
-caps.latest.revision: "40"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 289962e12bcff765908e1fa088ad8caa867a636d
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 1fd7895dae9dd1e1008c848b471cf02b0b53953a
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="create-instances-of-xml-data"></a>Créer des instances de données XML
-  Cette rubrique décrit comment générer des instances XML.  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+Cette rubrique décrit comment générer des instances XML.  
   
  Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vous pouvez générer des instances XML des manières suivantes :  
   
@@ -70,11 +75,11 @@ from OpenRowset(BULK 'filename.xml', SINGLE_BLOB) R(x)
   
  Par défaut, l'analyseur XML rejette les espaces blancs non significatifs lors de la conversion des données chaîne en XML si l'une des conditions suivantes est vraie :  
   
--   `The xml:space` L’attribut n’est pas défini sur un élément ni sur ses éléments ancêtres.  
+-   L’attribut `xml:space` n’est pas défini sur un élément ou sur ses éléments ancêtres.  
   
 -   L'attribut `xml:space` en vigueur sur un élément, ou sur l'un de ses éléments ancêtres, a la valeur par défaut.  
   
- Exemple :  
+ Exemple :  
   
 ```  
 declare @x xml  
@@ -88,7 +93,7 @@ select @x
 <root><child/></root>  
 ```  
   
- Vous pouvez toutefois modifier ce comportement. Pour conserver les espaces blancs dans une instance du type de données xml, utilisez l’opérateur CONVERT et affectez à son paramètre facultatif *style* la valeur 1. Exemple :  
+ Vous pouvez toutefois modifier ce comportement. Pour conserver les espaces blancs dans une instance du type de données xml, utilisez l’opérateur CONVERT et affectez à son paramètre facultatif *style* la valeur 1. Exemple :  
   
 ```  
 SELECT CONVERT(xml, N'<root>      <child/>     </root>', 1)  
@@ -136,7 +141,7 @@ select @x
 ```  
   
 ## <a name="using-the-select-statement-with-a-for-xml-clause"></a>Utilisation de l'instruction SELECT avec la clause FOR XML  
- Vous pouvez utiliser la clause FOR XML dans une instruction SELECT pour renvoyer les résultats sous forme de code XML. Exemple :  
+ Vous pouvez utiliser la clause FOR XML dans une instruction SELECT pour renvoyer les résultats sous forme de code XML. Exemple :  
   
 ```  
 DECLARE @xmlDoc xml  
@@ -186,7 +191,7 @@ go
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retourne des instances du type de données **xml** au client comme résultat des différentes constructions serveur, telles que les requêtes FOR XML qui utilisent la directive TYPE, ou dans lesquelles le type de données **xml** est utilisé pour renvoyer du code XML d’après des colonnes, des variables et des paramètres de sortie SQL. Dans un code d’application cliente, le fournisseur ADO.NET demande que les informations de type de données **xml** soient transmises en code binaire à partir du serveur. Toutefois, si vous utilisez FOR XML sans la directive TYPE, les données XML reviennent en tant que type chaîne. Dans tous les cas, le fournisseur client est toujours en mesure de gérer toute forme XML.  
   
 ## <a name="using-constant-assignments"></a>Utilisation des affectations de constante  
- Une constante de chaîne peut être utilisée à la place d’une instance du type de données **xml** . Cela revient à convertir implicitement (via CAST) une chaîne en XML. Exemple :  
+ Une constante de chaîne peut être utilisée à la place d’une instance du type de données **xml** . Cela revient à convertir implicitement (via CAST) une chaîne en XML. Exemple :  
   
 ```  
 DECLARE @xmlDoc xml  
@@ -216,7 +221,7 @@ INSERT INTO T VALUES (3, '<Cust><Fname>Andrew</Fname><Lname>Fuller</Lname></Cust
 |-----------|-----------------|  
 |[Récupérer et interroger des données XML](../../relational-databases/xml/retrieve-and-query-xml-data.md)|Décrit les parties des instances XML qui ne sont pas conservées lorsqu'elles sont stockées dans des bases de données.|  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Comparer du XML typé et du XML non typé](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   
  [Méthodes des types de données xml](../../t-sql/xml/xml-data-type-methods.md)   
  [Langage de modification de données XML &#40;XML DML&#41;](../../t-sql/xml/xml-data-modification-language-xml-dml.md)   

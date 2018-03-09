@@ -8,21 +8,23 @@ ms.service:
 ms.component: t-sql|spatial-geography
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: TSQL
+dev_langs:
+- TSQL
 ms.assetid: d1822f1b-c1dd-4f2f-ab7c-6617c05a2b6c
-caps.latest.revision: "16"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 7311f69807392786bd99b72e6c08734dc355d941
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: 7f17a6adc4449e0c3e9e1b9e944732a9aa13672b
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="extended-methods-on-geography-instances"></a>Méthodes étendues sur les instances géographiques
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -55,7 +57,7 @@ ms.lasthandoff: 11/17/2017
   
 -   [EnvelopeCenter](../../t-sql/spatial-geography/envelopecenter-geography-data-type.md)  
   
--   [Filter](../../t-sql/spatial-geography/filter-geography-data-type.md)  
+-   [Filtre](../../t-sql/spatial-geography/filter-geography-data-type.md)  
   
 -   [HasM &#40; Type de données geography &#41;](../../t-sql/spatial-geography/hasm-geography-data-type.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: Destination ODBC | Documents Microsoft
+title: Destination ODBC | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -18,17 +18,16 @@ f1_keywords:
 - sql13.ssis.designer.odbcdest.columns.f1
 - sql13.ssis.designer.odbcdest.errorhandling.f1
 ms.assetid: bffa63e0-c737-4b54-b4ea-495a400ffcf8
-caps.latest.revision: 12
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
-ms.openlocfilehash: b17bf59986633097e381e968222c5da670eefd7b
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/17/2017
-
+ms.openlocfilehash: 34e524470a56b62657f231a22639fc3e2c20e2d1
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="odbc-destination"></a>Destination ODBC
   La destination ODBC charge en masse les données dans les tables de base de données compatibles ODBC. La destination ODBC utilise un gestionnaire de connexions ODBC pour se connecter à la source de données.  
@@ -70,13 +69,13 @@ ms.lasthandoff: 08/17/2017
   
  Pour plus d’informations, consultez l’une des rubriques suivantes :  
   
--   [Éditeur de Destination ODBC &#40; Page Gestionnaire de connexions &#41;](../../integration-services/data-flow/odbc-destination-editor-connection-manager-page.md)  
+-   [Éditeur de destination ODBC &#40;page Gestionnaire de connexions&#41;](../../integration-services/data-flow/odbc-destination-editor-connection-manager-page.md)  
   
--   [Éditeur de Destination ODBC &#40; Page mappages &#41;](../../integration-services/data-flow/odbc-destination-editor-mappings-page.md)  
+-   [Éditeur de destination ODBC &#40;page Mappages&#41;](../../integration-services/data-flow/odbc-destination-editor-mappings-page.md)  
   
--   [Éditeur de Destination ODBC &#40; Page sortie d’erreur &#41;](../../integration-services/data-flow/odbc-destination-editor-error-output-page.md)  
+-   [Éditeur de destination ODBC &#40;page Sortie d’erreur&#41;](../../integration-services/data-flow/odbc-destination-editor-error-output-page.md)  
   
- La boîte de dialogue **Éditeur avancé** contient les propriétés qui peuvent être définies par programmation.  
+ La boîte de dialogue **Éditeur avancé** contient les propriétés qui peuvent être définies par programme.  
   
  Pour ouvrir la boîte de dialogue **Éditeur avancé** :  
   
@@ -86,7 +85,7 @@ ms.lasthandoff: 08/17/2017
   
 ## <a name="in-this-section"></a>Dans cette section  
   
--   [Charger des données à l’aide de la Destination ODBC](../../integration-services/data-flow/load-data-by-using-the-odbc-destination.md)  
+-   [Charger des données à l’aide de la destination ODBC](../../integration-services/data-flow/load-data-by-using-the-odbc-destination.md)  
   
 -   [Propriétés personnalisées des destinations ODBC](../../integration-services/data-flow/odbc-destination-custom-properties.md)  
   
@@ -108,7 +107,7 @@ ms.lasthandoff: 08/17/2017
 #### <a name="connection-manager"></a>Gestionnaire de connexions  
  Sélectionnez un gestionnaire de connexions ODBC existant dans la liste ou cliquez sur Nouveau pour créer une nouvelle connexion. La connexion peut concerner n'importe quelle base de données prise en charge par ODBC.  
   
-#### <a name="new"></a>Nouveau  
+#### <a name="new"></a>Nouvelle  
  Cliquez sur **Nouveau**. La boîte de dialogue **Configurer l'Éditeur du gestionnaire de connexions ODBC** s'ouvre et vous permet de créer un nouveau gestionnaire de connexions.  
   
 #### <a name="data-access-mode"></a>Mode d'accès aux données  
@@ -129,14 +128,14 @@ ms.lasthandoff: 08/17/2017
   
 ### <a name="options"></a>Options  
   
-#### <a name="available-input-columns"></a>Colonnes d'entrée disponibles  
+#### <a name="available-input-columns"></a>Colonnes d’entrée disponibles  
  Liste des colonnes d'entrée disponibles. Par glisser-déplacer, mappez une colonne d'entrée à une colonne de destination disponible.  
   
 #### <a name="available-destination-columns"></a>Colonnes de destination disponibles  
  Liste des colonnes de destination disponibles. Par glisser-déplacer, mappez une colonne de destination à une colonne d'entrée disponible.  
   
 #### <a name="input-column"></a>Colonne d'entrée  
- Affichez les colonnes d’entrée que vous avez sélectionnées. Vous pouvez supprimer des mappages en sélectionnant  **\<ignorer >** pour exclure des colonnes de la sortie.  
+ Affichez les colonnes d’entrée que vous avez sélectionnées. Vous pouvez supprimer des mappages en sélectionnant **\<ignorer>** de manière à exclure des colonnes de la sortie.  
   
 #### <a name="destination-column"></a>Colonne de destination  
  Affiche toutes les colonnes de destination disponibles, mappées et non mappées.  
@@ -159,10 +158,10 @@ ms.lasthandoff: 08/17/2017
 #### <a name="inputoutput"></a>Entrée/sortie  
  Affichez le nom de la source de données.  
   
-#### <a name="column"></a>Colonne  
+#### <a name="column"></a>colonne  
  Non utilisé.  
   
-#### <a name="error"></a>Erreur  
+#### <a name="error"></a>Error  
  Sélectionnez la façon dont la destination ODBC doit gérer les erreurs dans un flux : ignorer l'échec, rediriger la ligne ou faire échouer le composant.  
   
 #### <a name="truncation"></a>Troncation  
@@ -189,4 +188,3 @@ ms.lasthandoff: 08/17/2017
 #### <a name="redirect-flow"></a>Rediriger le flux  
  La ligne qui provoque l'erreur ou la troncation est dirigée vers la sortie d'erreur de la destination ODBC. Pour plus d'informations, consultez Destination ODBC.  
   
-

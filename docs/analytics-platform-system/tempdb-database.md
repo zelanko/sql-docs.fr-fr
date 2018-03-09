@@ -3,10 +3,10 @@ title: "la base de données (SQL Server PDW) tempdb"
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.technology: mpp-data-warehouse
 ms.custom: 
 ms.date: 01/13/2017
@@ -17,11 +17,11 @@ ms.topic: article
 ms.assetid: 5840033d-2dc6-4576-8a5f-067e2a58b170
 caps.latest.revision: "22"
 ms.workload: not set
-ms.openlocfilehash: 94cd8614f5098a1f065dbfe19f0ec024c42f9179
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 459265906774604f4d98f7cfb2bd2ad09485cc7e
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="tempdb-database"></a>Base de données tempdb
 **tempdb** est une base de données système SQL Server PDW qui stocke les tables temporaires locales pour les bases de données utilisateur. Les tables temporaires sont souvent utilisés pour améliorer les performances des requêtes. Par exemple, vous pouvez utiliser une table temporaire modulariser un script et réutiliser des données calculées.  
@@ -86,12 +86,12 @@ Limitations et restrictions sur les tables temporaires locales. Vous *ne peut pa
 > [!NOTE]  
 > Vous *pouvez* créer et mettre à jour les statistiques sur une table temporaire. **ALTER INDEX** peut être utilisé pour reconstruire un index cluster.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
 Tous les utilisateurs peuvent créer des objets temporaires dans tempdb. Les utilisateurs n'ont accès qu'aux objets qu'ils possèdent, sauf s'ils ont reçu des autorisations supplémentaires. Il est possible de révoquer l’autorisation de connexion à tempdb pour empêcher un utilisateur d’utiliser tempdb. Cependant, cela n’est pas recommandé, car certaines opérations courantes nécessitent l’utilisation de tempdb.  
   
 ## <a name="RelatedTasks"></a>Tâches associées  
   
-|Tâches| Description|  
+|Tâches|Description|  
 |---------|---------------|  
 |Créer une table dans **tempdb**.|Vous pouvez créer une table temporaire avec les instructions CREATE TABLE et CREATE TABLE AS SELECT. Pour plus d’informations, consultez [CREATE TABLE](../t-sql/statements/create-table-azure-sql-data-warehouse.md) et [CREATE TABLE AS SELECT](../t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md).|  
 |Afficher la liste des tables existantes dans **tempdb**.|`SELECT * FROM tempdb.sys.tables;`|  

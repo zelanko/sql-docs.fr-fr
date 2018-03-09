@@ -8,9 +8,7 @@ ms.service:
 ms.component: application-integration
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -19,15 +17,15 @@ helpviewer_keywords:
 - integrating reports [Reporting Services]
 ms.assetid: f1014f7d-fafa-4aa8-8bd2-5bdba835d9b6
 caps.latest.revision: "32"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 1706d9ad033ccb1517e73ebee6d13f0d749b9f9e
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 5f82228cfa6f52195c7d0836fe557aad9da068f2
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="integrating-reporting-services-using-url-access"></a>Intégration de Reporting Services à l'aide de l'accès URL
   Avec l'accès URL, vous accédez aux rapports via l'URL d'un serveur de rapports. Une demande d'URL vous permet d'accéder à un serveur de rapports spécifique ainsi qu'aux rapports, ressources et autres éléments inclus dans la base de données du serveur de rapports. Vous pouvez également personnaliser la consultation des rapports et la navigation pour vos utilisateurs. La chaîne de requête de l'URL contient des paramètres d'informations de périphérique, ainsi que des paramètres de rapport ciblés sur votre rapport et la sortie de rendu choisie. La façon dont le serveur de rapports gère les demandes d'URL dépend des paramètres, des préfixes de paramètres et du type d'élément auquel vous accédez via l'URL.  
@@ -44,8 +42,8 @@ ms.lasthandoff: 12/05/2017
  [Utilisation de l’accès URL dans une application Windows](../../reporting-services/application-integration/integrating-reporting-services-using-url-access-windows-application.md)  
  Décrit comment utiliser l'accès URL pour intégrer [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] dans un environnement [!INCLUDE[msCoName](../../includes/msconame-md.md)] Win32.  
   
-## <a name="see-also"></a>Voir aussi  
- [Intégration de Reporting Services à des applications](../../reporting-services/application-integration/integrating-reporting-services-into-applications.md)   
+## <a name="see-also"></a> Voir aussi  
+ [Intégration de Reporting Services dans des applications](../../reporting-services/application-integration/integrating-reporting-services-into-applications.md)   
  [Accès URL &#40;SSRS&#41;](../../reporting-services/url-access-ssrs.md)  
   
   

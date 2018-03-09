@@ -3,32 +3,38 @@ title: "Correspondance des types de séquence | Documents Microsoft"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: xquery
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-applies_to: SQL Server
-dev_langs: XML
+applies_to:
+- SQL Server
+dev_langs:
+- XML
 helpviewer_keywords:
 - sequence type matching [XQuery]
 - XQuery, sequence type matching
 ms.assetid: 8c56fb69-ca04-4aba-b55a-64ae216c492d
-caps.latest.revision: "16"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6bd44dc569515f6673bb5791cd7d53a0500d09d2
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 5a86a8fdfbae6fb345839d281141c3606abae804
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="type-system---sequence-type-matching"></a>Système - de type correspondance des types de séquence
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Une valeur d'expression XQuery est toujours une séquence de zéro élément ou plus. Un élément peut être soit une valeur atomique, soit un nœud. Le type de séquence fait référence à la possibilité de mettre en correspondance le type de séquence retourné par une expression de requête avec un type spécifique. Exemple :  
+  Une valeur d'expression XQuery est toujours une séquence de zéro élément ou plus. Un élément peut être soit une valeur atomique, soit un nœud. Le type de séquence fait référence à la possibilité de mettre en correspondance le type de séquence retourné par une expression de requête avec un type spécifique. Par exemple :  
   
 -   Si la valeur d'expression est atomique, vous voudrez peut-être savoir s'il s'agit d'un type entier, décimal ou chaîne.  
   
@@ -436,6 +442,6 @@ RETURN
 -   Requêtes explicites pour **xsi : type** ou **xsi : nil** n’est pas pris en charge.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Système de type &#40; XQuery &#41;](../xquery/type-system-xquery.md)  
+ [Type System &#40;XQuery&#41;](../xquery/type-system-xquery.md)  
   
   

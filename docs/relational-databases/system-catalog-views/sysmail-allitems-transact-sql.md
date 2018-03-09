@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-catalog-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sysmail_allitems_TSQL
 - sysmail_allitems
-dev_langs: TSQL
-helpviewer_keywords: sysmail_allitems database mail view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sysmail_allitems database mail view
 ms.assetid: 21fb8432-7677-4435-902f-64a58bba4cbb
-caps.latest.revision: "17"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ba8deb3b11b01cf9f53e02024815150fa4441b6d
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: fb11426c67ddb253a1aa76ae3ea435e115b6fa69
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysmailallitems-transact-sql"></a>sysmail_allitems (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,22 +42,22 @@ ms.lasthandoff: 11/27/2017
 |-----------------|---------------|-----------------|  
 |**mailitem_id**|**int**|Identificateur de l'élément de messagerie dans la file d'attente des messages.|  
 |**profile_id**|**int**|Identificateur du profil utilisé pour envoyer le message.|  
-|**destinataires**|**varchar(max)**|Adresses de messagerie des destinataires du message.|  
-|**destinataires_en_copie**|**varchar(max)**|Adresses de messagerie des personnes qui reçoivent une copie du message.|  
-|**destinataires_en_copie_aveugle**|**varchar(max)**|Adresses de messagerie des personnes qui reçoivent une copie du message mais dont le nom n'apparaît pas dans l'en-tête du message.|  
-|**Objet**|**nvarchar(510)**|Ligne d'objet du message.|  
-|**corps**|**varchar(max)**|Le corps du message.|  
-|**body_format**|**varchar (20)**|Le format du corps du message. Les valeurs possibles sont TEXT et HTML.|  
+|**recipients**|**varchar(max)**|Adresses de messagerie des destinataires du message.|  
+|**copy_recipients**|**varchar(max)**|Adresses de messagerie des personnes qui reçoivent une copie du message.|  
+|**blind_copy_recipients**|**varchar(max)**|Adresses de messagerie des personnes qui reçoivent une copie du message mais dont le nom n'apparaît pas dans l'en-tête du message.|  
+|**subject**|**nvarchar(510)**|Ligne d'objet du message.|  
+|**body**|**varchar(max)**|Le corps du message.|  
+|**body_format**|**varchar(20)**|Le format du corps du message. Les valeurs possibles sont TEXT et HTML.|  
 |**importance**|**varchar(6)**|Le **importance** paramètre du message.|  
-|**respect de la**|**varchar(12)**|Le **sensibilité** paramètre du message.|  
+|**sensitivity**|**varchar(12)**|Le **sensibilité** paramètre du message.|  
 |**file_attachments**|**varchar(max)**|Liste des noms de fichiers joints au message électronique (délimitée par des points-virgules).|  
-|**attachment_encoding**|**varchar (20)**|Type de pièce jointe.|  
-|**requête**|**varchar(max)**|Requête exécutée par le programme de messagerie.|  
+|**attachment_encoding**|**varchar(20)**|Type de pièce jointe.|  
+|**query**|**varchar(max)**|Requête exécutée par le programme de messagerie.|  
 |**execute_query_database**|**sysname**|Contexte de base de données dans lequel le programme de messagerie a exécuté la requête.|  
 |**attach_query_result_as_file**|**bit**|Lorsque la valeur est 0, les résultats de la requête ont été inclus dans le corps du message électronique, après le contenu du corps. Lorsque la valeur est 1, les résultats ont été renvoyés sous forme de pièce jointe.|  
 |**query_result_header**|**bit**|Lorsque la valeur est 1, cela signifie que les résultats de la requête contenaient des en-têtes de colonne. Lorsque la valeur est 0, cela signifie que les résultats de la requête ne contenaient pas d'en-têtes de colonne.|  
 |**query_result_width**|**int**|Le **query_result_width** paramètre du message.|  
-|**query_result_separator**|**char (1)**|Caractère utilisé pour séparer les colonnes dans la sortie de la requête.|  
+|**query_result_separator**|**char(1)**|Caractère utilisé pour séparer les colonnes dans la sortie de la requête.|  
 |**exclude_query_output**|**bit**|Le **exclude_query_output** paramètre du message. Pour plus d’informations, consultez [sp_send_dbmail &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-send-dbmail-transact-sql.md).|  
 |**append_query_error**|**bit**|Le **append_query_error** paramètre du message. La valeur 0 indique que la messagerie de base de données ne doit pas envoyer le message électronique s'il existe une erreur dans la requête.|  
 |**send_request_date**|**datetime**|Date et heure d'arrivée du message dans la file d'attente des messages.|  
@@ -70,7 +73,7 @@ ms.lasthandoff: 11/27/2017
   
  Les tables système affichées dans cette vue contiennent tous les messages et peut entraîner la **msdb** base de données augmente. Supprimez périodiquement les anciens messages de la vue afin de réduire la taille de ces tables. Pour plus d’informations, consultez [créer un travail de l’Agent SQL Server pour archiver les Messages de messagerie de base de données et les journaux des événements](../../relational-databases/database-mail/create-a-sql-server-agent-job-to-archive-database-mail-messages-and-event-logs.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Accordées à **sysadmin** rôle serveur fixe et **DatabaseMailUserRole** rôle de base de données. Lors de l’exécution par un membre de la **sysadmin** rôle serveur fixe, cette vue affiche tous les messages. Les autres utilisateurs voient uniquement les messages qu'ils ont essayé d'envoyer.  
   
   

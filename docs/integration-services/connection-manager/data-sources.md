@@ -1,5 +1,5 @@
 ---
-title: "Sources de données | Documents Microsoft"
+title: "Sources de données | Microsoft Docs"
 ms.custom: 
 ms.date: 08/27/2016
 ms.prod: sql-non-specified
@@ -15,17 +15,16 @@ ms.topic: article
 helpviewer_keywords:
 - data sources [Integration Services], about data sources
 ms.assetid: 7ac81612-9822-470f-8d0f-a1dc96142fe3
-caps.latest.revision: 41
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 77ca3b5849eb90d21da55989d2c9ec7ae94a53f6
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/27/2017
-
+ms.openlocfilehash: eccbd3683393dfd27665fe827af74100cef415db
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="data-sources"></a>Sources de données
   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] inclut un objet au moment de la conception que vous pouvez utiliser dans les packages [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] : la source de données.  
@@ -52,4 +51,3 @@ ms.lasthandoff: 09/27/2017
  Il n'existe aucune dépendance entre une source de données et les gestionnaires de connexions qui la référencent. Si une source de données ne fait plus partie d'un projet, les packages restent valides car les informations relatives à la source de données, comme son type de connexion et sa chaîne de connexion, sont incluses dans la définition du package.  
   
   
-

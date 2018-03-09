@@ -28,11 +28,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 4dff68e0c4e50a755ec058602bd61208ccd9b7de
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 6b0cb350ffccb7ad61335de314765f2b85dc0821
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="create-database-scoped-credential-transact-sql"></a>CRÉER des informations d’identification inclus dans l’étendue de base de données (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
@@ -63,7 +63,7 @@ WITH IDENTITY = 'identity_name'
 >  [!WARNING]
 >  La valeur de clé SAS pourrait commencer par un ' ?' (point d’interrogation). Lorsque vous utilisez la clé SAS, vous devez supprimer l’interligne ' ?'. Dans le cas contraire, vos efforts risque d’être bloqués.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Informations d’identification d’une étendue de la base de données sont un enregistrement qui contient les informations d’authentification qui sont requis pour se connecter à une ressource en dehors de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La plupart des informations d'identification incluent un utilisateur et un mot de passe Windows.  
   
  Avant de créer une base de données étendus aux informations d’identification, la base de données doit avoir une clé principale pour protéger les informations d’identification. Pour plus d’informations, consultez [CREATE MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-master-key-transact-sql.md).  
@@ -87,14 +87,14 @@ WITH IDENTITY = 'identity_name'
 
 - [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) et [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md) utilisation de base de données étendue des informations d’identification pour accéder aux données depuis le stockage blob Azure. Pour plus d’informations, consultez [exemples d’accès en bloc à des données dans le stockage d’objets Blob Azure](../../relational-databases/import-export/examples-of-bulk-access-to-data-in-azure-blob-storage.md). 
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Requiert **contrôle** autorisation sur la base de données.  
   
 ## <a name="examples"></a>Exemples  
 ### <a name="a-creating-a-database-scoped-credential-for-your-application"></a>A. Création d’une base de données d’une étendue d’informations d’identification pour votre application.
  L’exemple suivant crée les informations d’identification de la portée de la base de données appelée `AppCred`. Les informations d’identification de base de données applique contient l’utilisateur Windows `Mary5` et un mot de passe.  
   
-```tsql  
+```sql  
 -- Create a db master key if one does not already exist, using your own password.  
 CREATE MASTER KEY ENCRYPTION BY PASSWORD='<EnterStrongPasswordHere>';  
   
@@ -106,7 +106,7 @@ GO
 
 ### <a name="b-creating-a-database-scoped-credential-for-a-shared-access-signature"></a>B. Création d’une base de données d’une étendue d’informations d’identification d’une signature d’accès partagé.   
 L’exemple suivant crée une information d’identification de la portée de la base de données qui peut être utilisée pour créer un [source de données externe](../../t-sql/statements/create-external-data-source-transact-sql.md), ce qui peut faire opérations en bloc, telles que [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) et [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md). Signatures d’accès partagé ne peut pas être utilisés avec PolyBase dans SQL Server, de points d’accès ou d’entrepôt de données SQL.
-```tsql
+```sql
 CREATE DATABASE SCOPED CREDENTIAL MyCredentials  
 WITH IDENTITY = 'SHARED ACCESS SIGNATURE',
 SECRET = 'QLYMgmSXMklt%2FI1U6DcVrQixnlU5Sgbtk1qDRakUBGs%3D';
@@ -118,7 +118,7 @@ L’exemple suivant crée une information d’identification de la portée de la
 Azure Data Lake Store utilise une Application Active Directory de Azure pour l’authentification de Service.
 Veuillez [créer une application AAD](https://docs.microsoft.com/en-us/azure/data-lake-store/data-lake-store-authenticate-using-active-directory) client_id, OAuth_2.0_Token_EndPoint et clé de document avant d’essayer de créer des informations d’identification d’une étendue de la base de données.
 
-```tsql
+```sql
 CREATE DATABASE SCOPED CREDENTIAL ADL_User
 WITH
     IDENTITY = '<client_id>@\<OAuth_2.0_Token_EndPoint>'

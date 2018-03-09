@@ -2,15 +2,13 @@
 title: "Élément (ASSL) de contenu | Documents Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: scripting
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: Content Element
@@ -25,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 98f996bf7b1b274afed0313ef326596f3e88d5f2
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f9d0cd4dc1e60a59af3b8d3e976eeff888d24aa1
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="content-element-assl"></a>Élément Content (ASSL)
-  Décrit le contenu de la colonne dans la [MiningStructure](../../../analysis-services/scripting/objects/miningstructure-element-assl.md) élément.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Décrit le contenu de la colonne dans la [MiningStructure](../../../analysis-services/scripting/objects/miningstructure-element-assl.md) élément.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -50,7 +48,7 @@ ms.lasthandoff: 11/17/2017
 |Caractéristique|Description|  
 |--------------------|-----------------|  
 |Type de données et longueur|Chaîne (énumération)|  
-|Valeur par défaut|Aucune|  
+|Valeur par défaut|None|  
 |Cardinalité|1-1 : élément obligatoire qui peut apparaître une fois et une seule.|  
   
 ## <a name="element-relationships"></a>Relations entre les éléments  
@@ -58,14 +56,14 @@ ms.lasthandoff: 11/17/2017
 |Relation|Élément|  
 |------------------|-------------|  
 |Élément parent|[ScalarMiningStructureColumn](../../../analysis-services/scripting/data-type/scalarminingstructurecolumn-data-type-assl.md)|  
-|Éléments enfants|Aucune|  
+|Éléments enfants|None|  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Cette énumération décrit le type de contenu représenté par une colonne de structure d'exploration de données et peut être étendue autant que nécessaire par les fournisseurs d'algorithmes d'exploration de données. Pour plus d’informations sur les types de contenu, consultez [Types de contenu &#40;exploration de données&#41;](../../../analysis-services/data-mining/content-types-data-mining.md).  
   
  Les valeurs répertoriées dans le tableau suivant sont généralement prises en charge par les fournisseurs d'algorithmes d'exploration de données.  
   
-|Valeur| Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |*Discrètes*|La colonne contient des valeurs discrètes.|  
 |*Continue*|Les valeurs de la colonne définissent un jeu continu de données numériques.|  
@@ -82,7 +80,7 @@ ms.lasthandoff: 11/17/2017
   
  Outre ces valeurs standards, d’exploration de données des fournisseurs d’algorithmes inclus avec [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] prennent en charge les valeurs dans le tableau suivant.  
   
-|Valeur| Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |*Séquence de touches*|La colonne est une colonne clé, et les valeurs de la colonne représentent une séquence d'événements.<br /><br /> Remarque : Ce type de contenu est uniquement applicable aux colonnes clés, dans lequel le **IsKey** a la valeur **True**.|  
 |*Temps clé*|La colonne est une colonne clé, et les valeurs de la colonne représentent des unités de mesure du temps.<br /><br /> Remarque : Ce type de contenu est uniquement applicable aux colonnes clés, dans lequel le **IsKey** a la valeur **True**.|  

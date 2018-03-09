@@ -2,10 +2,14 @@
 title: "Éditeur XML (SQL Server Management Studio) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-scripting
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -13,21 +17,22 @@ f1_keywords:
 - sql13.swb.editorxml.f1
 - vs.xmleditor
 - sql13.swb.xmleditor.f1
-helpviewer_keywords: XML Designer [SQL Server Management Studio]
+helpviewer_keywords:
+- XML Designer [SQL Server Management Studio]
 ms.assetid: 0824a5ce-e67b-4b53-98d9-d371faf2d23c
-caps.latest.revision: "27"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: bc3cfd22e1bff42f4ea4730337d01da0c2d5f6a7
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: f434c04ccf8d15d5bddd9c91ffe06bb9c6f69b40
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="xml-editor-sql-server-management-studio"></a>Éditeur XML (SQL Server Management Studio)
-  Fournit un ensemble d'outils visuels pour utiliser des schémas XML, des groupes de données ADO.NET et des documents XML. Le Concepteur XML prend en charge le langage de définition de schéma XML (XSD, XML Schema Definition) défini par le World Wide Web Consortium (WC3), mais pas les définitions de type de document (DTD) ni les autres langages de schéma XML, tel XDR (XML-Data Reduced).  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Fournit un ensemble d’outils visuels pour utiliser des schémas XML, des groupes de données ADO.NET et des documents XML. Le Concepteur XML prend en charge le langage de définition de schéma XML (XSD, XML Schema Definition) défini par le World Wide Web Consortium (WC3), mais pas les définitions de type de document (DTD) ni les autres langages de schéma XML, tel XDR (XML-Data Reduced).  
   
  Pour afficher le concepteur, ajoutez un groupe de données, un schéma XML ou un fichier XML à votre projet ou ouvrez l'un des types de fichiers énumérés dans le tableau suivant.  
   
@@ -80,7 +85,7 @@ ms.lasthandoff: 11/09/2017
   
 -   Cliquez sur l'icône moins (-) de l'élément le plus bas que vous souhaitez afficher dans le concepteur.  
   
-## <a name="data-view"></a>Mode Données  
+## <a name="data-view"></a>Vue de données  
  Le mode Données affiche une grille de données dont vous pouvez vous servir pour modifier les fichiers .xml. Seul le contenu d'un fichier XML (pas les balises ni la structure) peut être modifié en mode Données.  
   
  Il y a deux zones séparées en mode Données : **Tables de données** et **Données**. La zone **Tables de données** est une liste des relations définies à l’intérieur du fichier XML, dans l’ordre de leur imbrication (en allant de l’extérieur vers l’intérieur). La zone **Données** est une grille de données qui affiche les données en fonction de la sélection effectuée dans la zone Tables de données.  
@@ -105,7 +110,7 @@ ms.lasthandoff: 11/09/2017
 ## <a name="showplan-view"></a>Mode SHOWPLAN  
  Les plans de requête peuvent être enregistrés au format XML lorsqu'ils sont créés à l'aide de l'option SET SHOWPLAN_XML ON. Double-cliquez sur un fichier se terminant par l'extension .showplan pour ouvrir le plan de requête.  
   
-## <a name="see-also"></a>Voir aussi  
- [Enregistrer un plan d'exécution au format XML](../../relational-databases/performance/save-an-execution-plan-in-xml-format.md)  
+## <a name="see-also"></a> Voir aussi  
+ [Enregistrer un plan d’exécution au format XML](../../relational-databases/performance/save-an-execution-plan-in-xml-format.md)  
   
   

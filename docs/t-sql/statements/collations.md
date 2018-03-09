@@ -8,27 +8,29 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - COLLATE
 - COLLATE_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - collations [SQL Server], COLLATE clause
 - COLLATE clause
 ms.assetid: 76763ac8-3e0d-4bbb-aa53-f5e7da021daa
-caps.latest.revision: "25"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 4192928157e3f6e534b8fb50c34e349dac3f5b8c
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.openlocfilehash: 7a206f638b78a5e4311ab7889a7902aa39a17413
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="collations"></a>Classements
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -40,7 +42,6 @@ ms.lasthandoff: 11/21/2017
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
 COLLATE { <collation_name> | database_default }  
 <collation_name> :: =   
      { Windows_collation_name } | { SQL_collation_name }  
@@ -87,11 +88,11 @@ COLLATE { <collation_name> | database_default }
   
  COLLATE utilise *collate_name* pour faire référence au nom de classement SQL Server ou le classement Windows à appliquer à l’expression, la définition de colonne ou la définition de la base de données. *collation_name* peut être uniquement spécifiée *Windows_collation_name* ou un *SQL_collation_name* et le paramètre doit contenir une valeur littérale. *collation_name* ne peut pas être représenté par une variable ou une expression.  
   
- Les classements sont généralement identifiés par un nom de classement, hormis dans le programme d'installation. Dans le programme d'installation, vous spécifiez à la place l'indicateur du classement de la racine (les paramètres régionaux de classement) pour les classements Windows, puis spécifiez des options de tri qui respectent ou non la casse et les accents.  
+ Les classements sont généralement identifiés par un nom de classement, hormis dans le programme d'installation. Dans le programme d’installation, vous spécifiez à la place de l’indicateur de classement (le paramètres régionaux de classement) racine pour les classements Windows, puis spécifiez les options de tri qui respectent ou non la casse et les accents.  
   
  Vous pouvez exécuter la fonction système [fn_helpcollations](../../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md) pour récupérer une liste de tous les noms de classement valide pour les classements Windows et SQL Server :  
   
-```  
+```sql  
 SELECT name, description  
 FROM fn_helpcollations();  
 ```  
@@ -104,16 +105,18 @@ FROM fn_helpcollations();
   
 -   Lors de la restauration ou attachement d’une base de données, le classement par défaut de la base de données et le classement de n’importe quel **char**, **varchar**, et **texte** colonnes ou des paramètres dans la base de données doivent être pris en charge par le système d’exploitation.  
   
-     Traductions de page de codes sont prises en charge pour **char** et **varchar** des types de données, mais pas pour **texte** type de données. La perte de données lors de la traduction d'une page de codes n'est pas mentionnée.  
+> [!NOTE]
+> Traductions de page de codes sont prises en charge pour **char** et **varchar** des types de données, mais pas pour **texte** type de données. La perte de données lors de la traduction d'une page de codes n'est pas mentionnée.  
   
- Si le classement spécifié ou le classement utilisé par l’objet référencé utilise une page de codes non prise en charge par Windows, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] affiche une erreur.  
+> [!NOTE]
+> Si le classement spécifié ou le classement utilisé par l’objet référencé utilise une page de codes non prise en charge par Windows, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] affiche une erreur.  
   
 ## <a name="examples"></a>Exemples  
   
 ### <a name="a-specifying-collation-during-a-select"></a>A. Spécification d'un classement pendant une sélection  
  L'exemple suivant crée une table simple et insère 4 lignes. Il applique ensuite deux classements lors de la sélection de données de la table, montrant comment `Chiapas` est trié différemment.  
   
-```tsql  
+```sql  
 CREATE TABLE Locations  
 (Place varchar(15) NOT NULL);  
 GO  
@@ -132,39 +135,39 @@ COLLATE Traditional_Spanish_ci_ai ASC;
 GO  
 ```  
 
- Voici les résultats de la première requête.  
+Voici les résultats de la première requête.  
   
- ```
- Place 
- ------------- 
- California 
- Chiapas 
- Cinco Rios 
- Colima
- ```  
+```
+Place 
+------------- 
+California 
+Chiapas 
+Cinco Rios 
+Colima
+```  
   
- Voici les résultats de la seconde requête.  
-  
- ```
- Place 
- ------------- 
- California 
- Cinco Rios 
- Colima 
- Chiapas
- ```  
+Voici les résultats de la seconde requête.  
+ 
+```
+Place 
+------------- 
+California 
+Cinco Rios 
+Colima 
+Chiapas
+```  
   
 ### <a name="b-additional-examples"></a>B. Exemples supplémentaires  
- Pour obtenir des exemples supplémentaires qui utilisent **COLLATE**, consultez [CREATE DATABASE &#40; SQL Server Transact-SQL &#41; ](../../t-sql/statements/create-database-sql-server-transact-sql.md) exemple **g. création d’une base de données et en spécifiant un nom de classement et les options**, et [ALTER TABLE &#40; Transact-SQL &#41; ](../../t-sql/statements/alter-table-transact-sql.md) exemple **V. modification de classement de colonne**.  
+ Pour obtenir des exemples supplémentaires qui utilisent **COLLATE**, consultez [CREATE DATABASE &#40; SQL Server Transact-SQL &#41; ](../../t-sql/statements/create-database-sql-server-transact-sql.md#examples) exemple **g. création d’une base de données et en spécifiant un nom de classement et les options**, et [ALTER TABLE &#40; Transact-SQL &#41; ](../../t-sql/statements/alter-table-transact-sql.md#alter_column) exemple **V. modification de classement de colonne**.  
   
 ## <a name="see-also"></a>Voir aussi  
- [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
- [Prise en charge d'Unicode et du classement](../../relational-databases/collations/collation-and-unicode-support.md)   
- [Priorité de classement &#40;Transact-SQL&#41;](../../t-sql/statements/collation-precedence-transact-sql.md)   
- [Constantes &#40; Transact-SQL &#41;](../../t-sql/data-types/constants-transact-sql.md)   
- [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)   
- [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
- [DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)   
- [table &#40; Transact-SQL &#41;](../../t-sql/data-types/table-transact-sql.md)  
+ [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)    
+ [Prise en charge d'Unicode et du classement](../../relational-databases/collations/collation-and-unicode-support.md)    
+ [Priorité de classement &#40;Transact-SQL&#41;](../../t-sql/statements/collation-precedence-transact-sql.md)     
+ [Constants &#40;Transact-SQL&#41;](../../t-sql/data-types/constants-transact-sql.md)     
+ [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)     
+ [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)     
+ [DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)     
+ [table &#40;Transact-SQL&#41;](../../t-sql/data-types/table-transact-sql.md)     
   
   

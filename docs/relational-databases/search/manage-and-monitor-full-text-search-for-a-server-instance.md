@@ -1,30 +1,35 @@
 ---
 title: "Gérer et surveiller la recherche en texte intégral pour une instance de serveur | Microsoft Docs"
-ms.custom: SQL2016_New_Updated
+ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: search
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-search
+ms.suite: sql
+ms.technology:
+- dbe-search
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - full-text search [SQL Server], about
 - full-text search [SQL Server], server management
 ms.assetid: 2733ed78-6d33-4bf9-94da-60c3141b87c8
-caps.latest.revision: "19"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9d6f184f66b02ef2f92c9593001edc3364f4d62a
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: e1dbd4fe6152e7318da0267d25c5900ec10c4814
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="manage-and-monitor-full-text-search-for-a-server-instance"></a>Gérer et surveiller la recherche en texte intégral pour une instance de serveur
-  L'administration de la recherche en texte intégral pour une instance de serveur comprend :  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+L'administration de la recherche en texte intégral pour une instance de serveur comprend :  
   
 -   Des tâches de gestion du système telles que la gestion du service du lanceur FDHOST (MSSQLFDLauncher), le redémarrage du processus hôte de démon de filtre si vous modifiez les informations d'identification du compte de service, la configuration des propriétés en texte intégral à l'échelle du serveur et la sauvegarde des catalogues de texte intégral. Au niveau du serveur, par exemple, vous pouvez spécifier une langue de texte intégral par défaut qui diffère de la langue par défaut de l'instance de serveur dans son ensemble.  
   

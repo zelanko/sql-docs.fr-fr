@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -22,13 +20,13 @@ ms.assetid: 70eef636-6d8c-495e-83fc-dc0fe9771658
 caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 456f5fe95d2b5899360efaf0f2ab1d2ba492c228
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 2ab98b38e62004a5537515b1963f61d01b820697
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs"></a>Cellules, lignes et colonnes de région de données de tableau matriciel (Générateur de rapports et SSRS)
   Pour contrôler la façon dont les lignes et les colonnes d’une région de données de tableau matriciel présentent les données dans un rapport paginé [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , vous devez comprendre comment les lignes et les colonnes sont spécifiées pour les données de détail, les données de groupe, les étiquettes et les totaux. Dans la plupart des cas, vous pouvez utiliser les structures par défaut pour afficher vos données dans une table, une matrice ou une liste. Pour plus d’informations, consultez [Tables &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/tables-report-builder-and-ssrs.md), [Matrices](../../reporting-services/report-design/create-a-matrix-report-builder-and-ssrs.md) ou [Listes](../../reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md).  
@@ -46,7 +44,7 @@ ms.lasthandoff: 12/05/2017
 ### <a name="row-and-column-handles"></a>Poignées de ligne et de colonne  
  Lorsque vous sélectionnez une région de données de tableau matriciel, les poignées graphiques de ligne et de colonne indiquent l'objectif de chaque ligne et colonne. Les handles indiquent les lignes et colonnes qui sont à l'intérieur ou à l'extérieur d'un groupe. Le tableau suivant vous présente divers handles.  
   
-|Icône| Description|  
+|Icône|Description|  
 |----------|-----------------|  
 |![Handle de ligne avec 3 traits parallèles pour la ligne de détails](../../reporting-services/report-design/media/rs-icontablix-detailsrow.gif "handle de ligne avec 3 traits parallèles pour la ligne de détails")|Seulement le groupe de détails dans la hiérarchie des groupes de lignes|  
 |![Handle de ligne avec la ligne de détails et un groupe externe](../../reporting-services/report-design/media/rs-icontablix-groupwithdetails.gif "Handle de ligne avec la ligne de détails et un groupe externe")|Un groupe externe et le groupe de détails enfant|  
@@ -127,7 +125,7 @@ ms.lasthandoff: 12/05/2017
   
  Vous pouvez fractionner une cellule précédemment fusionnée. Vous pouvez fractionner des cellules horizontalement par colonnes ou verticalement par lignes. Pour fractionner une cellule en un bloc de cellules, commencez par fractionner horizontalement la cellule, puis fractionnez-la verticalement autant de fois que nécessaire.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Région de données de tableau matriciel &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/tablix-data-region-report-builder-and-ssrs.md)  
   
   

@@ -1,11 +1,11 @@
 ---
-title: "Étape 2 : Ajout et configuration du conteneur de boucles Foreach | Documents Microsoft"
+title: "Étape 2 : Ajout et configuration du conteneur de boucles Foreach | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
 ms.technology:
@@ -15,20 +15,19 @@ ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
 ms.assetid: 88a973cc-0f23-4ecf-adb6-5b06279c2df6
-caps.latest.revision: 36
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: a2e3655bedbb24f2174a62c8792cd168e7642592
-ms.openlocfilehash: 315933379f0ec61453fa0fd783686f9446a977c0
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 80a4fa426a322346de99aafef393e75a67e7e82a
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="lesson-2-2---adding-and-configuring-the-foreach-loop-container"></a>Leçon 2-2 : ajout et configuration du conteneur de boucles Foreach
-Dans cette tâche, vous allez activer la fonction qui permet d'effectuer des boucles dans un dossier de fichiers plats et d'appliquer la transformation de flux de données utilisée dans la leçon 1 à chacun de ces fichiers plats. Pour activer cette fonction, vous allez ajouter et configurer un conteneur de boucles Foreach dans le flux de contrôle.  
+# <a name="lesson-2-2---adding-and-configuring-the-foreach-loop-container"></a>Leçon 2-2 : Ajout et configuration du conteneur de boucles Foreach
+Dans cette tâche, vous allez activer la fonction qui permet d'effectuer des boucles dans un dossier de fichiers plats et d'appliquer la transformation de flux de données utilisée dans la leçon 1 à chacun de ces fichiers plats. Pour activer cette fonction, vous allez ajouter et configurer un conteneur de boucles Foreach dans le flux de contrôle.  
   
 Le conteneur de boucles Foreach que vous allez ajouter doit pouvoir se connecter à chaque fichier plat dans le dossier. Étant donné que tous les fichiers du dossier ont le même format, le conteneur de boucles Foreach peut utiliser le même Gestionnaire de connexions de fichiers plats pour se connecter à chacun de ces fichiers. Le Gestionnaire de connexions de fichiers plats que le conteneur va utiliser est le même que celui créé au cours de la leçon 1.  
   
@@ -43,7 +42,7 @@ Les procédures de cette tâche montrent comment créer et modifier le conteneur
 Une fois ces modifications apportées au package et le package exécuté, le conteneur de boucles Foreach effectue une itération dans la collection de fichiers dans le dossier Sample Data. Chaque fois qu’un fichier répondant aux critères est trouvé, le conteneur de boucles Foreach remplit la variable définie par l’utilisateur avec le nom du fichier, mappe cette variable à la propriété **ConnectionString** du Gestionnaire de connexions de fichiers plats Sample Currency Data, puis exécute le flux de données par rapport à ce fichier. Par conséquent, à chaque itération de la boucle Foreach, la tâche de flux de données utilise un fichier plat différent.  
   
 > [!NOTE]  
-> Étant donné que [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] sépare les flux à partir de flux de données de contrôle, les boucles que vous ajoutez au flux de contrôle ne nécessitent pas de modification pour le flux de données. Par conséquent, il n'est pas nécessaire de modifier le flux de données que vous avez créé au cours de la leçon 1.  
+> Étant donné que [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] sépare le flux de contrôle du flux de données, les boucles que vous ajoutez au flux de contrôle ne nécessitent pas la modification du flux de données. Par conséquent, il n'est pas nécessaire de modifier le flux de données que vous avez créé au cours de la leçon 1.  
   
 ### <a name="to-add-a-foreach-loop-container"></a>Pour ajouter un conteneur de boucles Foreach  
   
@@ -75,7 +74,7 @@ Une fois ces modifications apportées au package et le package exécuté, le con
   
     2.  Cliquez sur l'onglet **DOWNLOADS** (Téléchargements).  
   
-    3.  Cliquez sur le lien pour le [SQL2012. Integration_Services.Create_Simple_ETL_Tutorial.Sample.zip](http://msftisprodsamples.codeplex.com/downloads/get/596031) fichier.  
+    3.  Cliquez sur le lien vers le fichier [SQL2012.Integration_Services.Create_Simple_ETL_Tutorial.Sample.zip](http://msftisprodsamples.codeplex.com/downloads/get/596031).  
   
 6.  Dans la zone **Fichiers**, tapez **Currency_\*.txt**.  
   
@@ -83,7 +82,7 @@ Une fois ces modifications apportées au package et le package exécuté, le con
   
 1.  Cliquez sur **Mappages de variables**.  
   
-2.  Sur le **mappages de variables** page, dans le **Variable** colonne, cliquez sur la cellule vide et sélectionnez  **\<nouvelle Variable... >**.  
+2.  Dans la page **Mappages de variables**, dans la colonne **Variable**, cliquez sur la cellule vide et sélectionnez **\<Nouvelle variable>**.  
   
 3.  Dans la boîte de dialogue **Ajouter une variable** , pour **Nom**tapez **varFileName**.  
   
@@ -99,12 +98,11 @@ Une fois ces modifications apportées au package et le package exécuté, le con
 -   Faites glisser la tâche de flux de données **Extract Sample Currency Data** vers le conteneur de boucles Foreach maintenant renommé **Foreach File in Folder**.  
   
 ## <a name="next-lesson-task"></a>Tâche suivante de la leçon  
-[Étape 3 : Modification du Gestionnaire de connexions de fichiers plats](../integration-services/lesson-2-3-modifying-the-flat-file-connection-manager.md)  
+[Étape 3 : Modification du gestionnaire de connexions de fichiers plats](../integration-services/lesson-2-3-modifying-the-flat-file-connection-manager.md)  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [Configurer un conteneur de boucles Foreach](http://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25)  
 [Utiliser des variables dans des packages](http://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)  
   
   
   
-

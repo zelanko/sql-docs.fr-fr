@@ -1,5 +1,5 @@
 ---
-title: Destination de traitement de partition | Documents Microsoft
+title: Destination de traitement de partition | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -22,17 +22,16 @@ helpviewer_keywords:
 - Partition Processing destination [Integration Services]
 - destinations [Integration Services], Partition Processing
 ms.assetid: 36c592ff-3f78-4a58-b496-31c1c8eee131
-caps.latest.revision: 44
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
-ms.openlocfilehash: 124e43d651641eacbf98d82e1d9b1fffeec54b44
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/17/2017
-
+ms.openlocfilehash: 20277b2aee209f1632100615d94a1fc3caec27d9
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="partition-processing-destination"></a>Destination de traitement de partition
   La destination de traitement de partition charge et traite une partition [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Pour plus d’informations sur les partitions, consultez [Partitions &#40;Analysis Services - Données multidimensionnelles&#41;](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md).  
@@ -57,7 +56,7 @@ ms.lasthandoff: 08/17/2017
   
  Vous pouvez définir des propriétés au moyen du concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] ou par programmation.  
   
- La boîte de dialogue **Éditeur avancé** reflète les propriétés qui peuvent être définies par programmation. Pour plus d'informations sur les propriétés définissables dans la boîte de dialogue **Éditeur avancé** ou par programme, cliquez sur l'une des rubriques suivantes :  
+ La boîte de dialogue **Éditeur avancé** reflète les propriétés qui peuvent être définies par programmation. Pour plus d'informations sur les propriétés définissables dans la boîte de dialogue **Éditeur avancé** ou par programmation, cliquez sur l'une des rubriques suivantes :  
   
 -   [Propriétés communes](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
@@ -73,10 +72,10 @@ ms.lasthandoff: 08/17/2017
   
 ### <a name="options"></a>Options  
  **Connection manager**  
- Sélectionnez un gestionnaire de connexions existant dans la liste ou créez une connexion en cliquant sur **Nouveau**.  
+ Sélectionnez un gestionnaire de connexions existant dans la liste ou créez une nouvelle connexion en cliquant sur **Nouveau**.  
   
  **Nouveau**  
- Créez une connexion via la boîte de dialogue **Ajout d’un gestionnaire de connexions Analysis Services** .  
+ Créez une connexion à l’aide de la boîte de dialogue **Ajout d’un gestionnaire de connexions Analysis Services** .  
   
  **Liste des partitions disponibles**  
  Sélectionnez la partition à traiter.  
@@ -84,7 +83,7 @@ ms.lasthandoff: 08/17/2017
  **Méthode de traitement**  
  Sélectionnez la méthode de traitement. La valeur par défaut de cette option est **Complète**.  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |Ajouter (incrémentiel)|Permet d'effectuer un traitement incrémentiel de la partition.|  
 |Complète|Permet d'effectuer un traitement complet de la partition.|  
@@ -186,6 +185,5 @@ ms.lasthandoff: 08/17/2017
  **Parcourir (...)**  
  Sélectionnez le chemin d'accès du journal des erreurs.  
   
-## <a name="see-also"></a>Voir aussi  
- [Integration Services Error and Message Reference](../../integration-services/integration-services-error-and-message-reference.md)   
-
+## <a name="see-also"></a> Voir aussi  
+ [Guide de référence des erreurs et des messages propres à Integration Services](../../integration-services/integration-services-error-and-message-reference.md)   

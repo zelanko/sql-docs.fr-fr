@@ -2,23 +2,27 @@
 title: "Résolution des problèmes et Forum aux questions pour l’apprentissage dans SQL Server | Documents Microsoft"
 ms.custom: 
 ms.date: 06/16/2017
-ms.prod: sql-server-2016
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology: r-services
+ms.suite: sql
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: e110a2578d6663c2c7c4c2e0dd92957744b44f4a
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: d334aefbd43bf17e776a8b75a09a2cef8448542d
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="troubleshoot-machine-learning"></a>Résoudre les problèmes d’apprentissage
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Cet article fournit des informations de dépannage relatives à l’installation et configuration des fonctionnalités d’apprentissage machine dans SQL Server. Ces informations incluent des liens vers les guides d’installation, les problèmes connus et les notes de publication. Autres articles lié à partir de cet article fournit des conseils sur l’optimisation des performances pour les solutions d’apprentissage machine dans SQL Server.
 

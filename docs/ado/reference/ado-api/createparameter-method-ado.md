@@ -3,8 +3,9 @@ title: "CreateParameter, méthode (ADO) | Documents Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,18 +16,19 @@ apitype: COM
 f1_keywords:
 - Command15::raw_CreateParameter
 - Command15::CreateParameter
-helpviewer_keywords: CreateParameter method [RDS]
+helpviewer_keywords:
+- CreateParameter method [RDS]
 ms.assetid: 9666fdcc-0544-4ed7-a97b-c415f2a56d7e
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 929d7e91566aa18938a64f1085b1d77153205898
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c293e3a6e337e3c0331884bf1ee1eed57ad36003
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="createparameter-method-ado"></a>CreateParameter, méthode (ADO)
 Crée un nouveau [paramètre](../../../ado/reference/ado-api/parameter-object.md) objet avec les propriétés spécifiées.  
@@ -54,7 +56,7 @@ Set parameter = command.CreateParameter (Name, Type, Direction, Size, Value)
  *Taille*  
  Ce paramètre est facultatif. A **Long** valeur qui spécifie la longueur maximale de la valeur du paramètre en caractères ou en octets.  
   
- *Valeur*  
+ *Value*  
  Ce paramètre est facultatif. A **Variant** qui spécifie la valeur pour le **paramètre** objet.  
   
 ## <a name="remarks"></a>Notes  

@@ -8,20 +8,21 @@ ms.service:
 ms.component: in-memory-oltp
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine-imoltp
+ms.technology:
+- database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 138f5b0e-f8a4-400f-b581-8062aebc62b6
-caps.latest.revision: "4"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5de86bfa68d281e79f77b9578eff2385f20c0958
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 3235dffe296bb77f94807ac517fb86fcda33b64e
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="implementing-update-with-from-or-subqueries"></a>Implémentation d’UPDATE avec FROM ou des sous-requêtes
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -36,13 +37,13 @@ Voici l’instruction T-SQL UPDATE d’origine :
   
   
   
-  
+   ```
     UPDATE dbo.Table1  
         SET LastUpdated = SysDateTime()  
         FROM  
             dbo.Table1 t  
             JOIN Inserted i ON t.Id = i.Id;  
-  
+   ```
   
   
 
@@ -54,13 +55,13 @@ L’exemple de code T-SQL dans cette section illustre une solution de contournem
   
   
   
-
+ ```
     DROP TABLE IF EXISTS dbo.Table1;  
     go  
     DROP TYPE IF EXISTS dbo.Type1;  
     go  
     -----------------------------  
-    <a name="---table-and-table-type"></a>-- Table et type de table
+    -- Table and table type
     -----------------------------
   
     CREATE TABLE dbo.Table1  
@@ -83,14 +84,15 @@ L’exemple de code T-SQL dans cette section illustre une solution de contournem
         WITH (MEMORY_OPTIMIZED = ON);  
     go  
     ----------------------------- 
-    <a name="---trigger-that-contains-the-workaround-for-update-with-from"></a>-- déclencheur qui contient la solution de contournement pour UPDATE avec FROM 
+    -- trigger that contains the workaround for UPDATE with FROM 
     -----------------------------  
   
     CREATE TRIGGER dbo.tr_a_u_Table1  
         ON dbo.Table1  
         WITH NATIVE_COMPILATION, SCHEMABINDING  
         AFTER UPDATE  
-    AS BEGIN ATOMIC WITH  
+    AS 
+    BEGIN ATOMIC WITH  
         (  
         TRANSACTION ISOLATION LEVEL = SNAPSHOT,  
         LANGUAGE = N'us_english'  
@@ -105,9 +107,9 @@ L’exemple de code T-SQL dans cette section illustre une solution de contournem
           @i INT = 1,  @Id INT,  
           @max INT = SCOPE_IDENTITY();  
     
-      --- Boucle comme solution de contournement pour simuler un curseur.
-    --- Itérer les lignes de la variable de table optimisée  
-      --- en mémoire et effectuer une mise à jour pour chaque ligne.  
+      ---- Loop as a workaround to simulate a cursor.
+      ---- Iterate over the rows in the memory-optimized table  
+      ----   variable and perform an update for each row.  
     
       WHILE @i <= @max  
       BEGIN  
@@ -124,7 +126,7 @@ L’exemple de code T-SQL dans cette section illustre une solution de contournem
     END  
     go  
     -----------------------------  
-    <a name="---test-to-verify-functionality"></a>-- Tester pour vérifier la fonctionnalité
+    -- Test to verify functionality
     -----------------------------  
   
     SET NOCOUNT ON;  
@@ -148,7 +150,7 @@ L’exemple de code T-SQL dans cette section illustre une solution de contournem
     go  
     -----------------------------  
   
-    /**** Sortie réelle :  
+    /**** Actual output:  
   
     BEFORE-Update   Id   Column2   LastUpdated  
     BEFORE-Update   1       9      2016-04-20 21:18:42.8394659  
@@ -162,4 +164,4 @@ L’exemple de code T-SQL dans cette section illustre une solution de contournem
     ****/  
   
   
-  
+ ```

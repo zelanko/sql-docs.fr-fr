@@ -1,5 +1,5 @@
 ---
-title: Source ODBC | Documents Microsoft
+title: Source ODBC | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -18,17 +18,16 @@ f1_keywords:
 - sql13.ssis.designer.odbcsource.columns.f1
 - sql13.ssis.designer.odbcsource.errorhandling.f1
 ms.assetid: abcf34eb-9140-4100-82e6-b85bccd22abe
-caps.latest.revision: 9
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
-ms.openlocfilehash: 1e26fe82d939dd58cbbfa850f041a7ae3d23b248
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/17/2017
-
+ms.openlocfilehash: 9c8def299d18a8c7d64cd581fdf7934f366ce5dc
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="odbc-source"></a>Source ODBC
   La source ODBC extrait les données d'une base de données compatible ODBC à l'aide d'une table de base de données, d'une vue ou d'une instruction SQL.  
@@ -57,7 +56,7 @@ ms.lasthandoff: 08/17/2017
  Selon le comportement paramétré pour les erreurs, la source ODBC prend en charge les erreurs de retour (conversion de données, troncation) qui se produisent pendant le processus d'extraction dans la sortie d'erreur. Pour plus d’informations, consultez [Éditeur de destination ODBC &#40;page Gestionnaire de connexions&#41;](../../integration-services/data-flow/odbc-destination-editor-connection-manager-page.md).  
   
 ## <a name="data-type-support"></a>Prise en charge du type de données  
- Pour plus d'informations sur les types de données pris en charge par la source ODBC, consultez le Connecteur pour Open Database Connectivity (ODBC) d'Attunity.  
+ Pour plus d’informations sur les types de données pris en charge par la source ODBC, consultez le Connecteur pour Open Database Connectivity (ODBC).  
   
 ## <a name="extract-options"></a>Options d'extraction  
  La source ODBC s’exécute en mode **Lot** ou **Ligne par ligne** . Le mode utilisé est déterminé par la propriété **FetchMethod** . La liste suivante décrit les différents modes.  
@@ -68,7 +67,7 @@ ms.lasthandoff: 08/17/2017
   
  Pour plus d’informations sur la propriété **FetchMethod** , consultez [Propriétés personnalisées des sources ODBC](../../integration-services/data-flow/odbc-source-custom-properties.md).  
   
-## <a name="parallelism"></a>Parallélisme  
+## <a name="parallelism"></a>Parallelism  
  Il n'existe aucune limitation quant au nombre de composants de source ODBC pouvant s'exécuter en parallèle sur la même table ou des tables différentes, sur le même ordinateur ou sur des ordinateurs différents (autre que les limites de session globale habituelles).  
   
  Toutefois, les limites du fournisseur ODBC utilisé peuvent limiter le nombre de connexions simultanées par le fournisseur. Ces limites restreignent le nombre d'instances parallèles prises en charge pour la source ODBC. Le développeur SSIS doit avoir connaissance des limites de tout fournisseur ODBC utilisé et en tenir compte lors de la génération de packages SSIS.  
@@ -79,7 +78,7 @@ ms.lasthandoff: 08/17/2017
 ## <a name="configuring-the-odbc-source"></a>Configuration de la source ODBC  
  Vous pouvez définir la source ODBC par programmation ou par le biais du concepteur SSIS.  
   
- La boîte de dialogue **Éditeur avancé** contient les propriétés qui peuvent être définies par programmation.  
+ La boîte de dialogue **Éditeur avancé** contient les propriétés qui peuvent être définies par programme.  
   
  Pour ouvrir la boîte de dialogue **Éditeur avancé** :  
   
@@ -89,7 +88,7 @@ ms.lasthandoff: 08/17/2017
   
 ## <a name="in-this-section"></a>Dans cette section  
   
--   [Extraire des données à l’aide de la Source ODBC](../../integration-services/data-flow/extract-data-by-using-the-odbc-source.md)  
+-   [Extraire des données à l’aide de la source ODBC](../../integration-services/data-flow/extract-data-by-using-the-odbc-source.md)  
   
 -   [Propriétés personnalisées des sources ODBC](../../integration-services/data-flow/odbc-source-custom-properties.md)  
   
@@ -108,7 +107,7 @@ ms.lasthandoff: 08/17/2017
 #### <a name="connection-manager"></a>Gestionnaire de connexions  
  Sélectionnez un gestionnaire de connexions ODBC existant dans la liste ou cliquez sur **Nouveau** pour créer une nouvelle connexion. La connexion peut concerner n'importe quelle base de données prise en charge par ODBC.  
   
-#### <a name="new"></a>Nouveau  
+#### <a name="new"></a>Nouvelle  
  Cliquez sur **Nouveau**. La boîte de dialogue **Configurer l'Éditeur du gestionnaire de connexions ODBC** s'ouvre et vous permet de créer un nouveau gestionnaire de connexions ODBC.  
   
 #### <a name="data-access-mode"></a>Mode d'accès aux données  
@@ -169,10 +168,10 @@ ms.lasthandoff: 08/17/2017
 #### <a name="inputoutput"></a>Entrée/sortie  
  Affichez le nom de la source de données.  
   
-#### <a name="column"></a>Colonne  
+#### <a name="column"></a>colonne  
  Non utilisé.  
   
-#### <a name="error"></a>Erreur  
+#### <a name="error"></a>Error  
  Sélectionnez la façon dont la source ODBC doit gérer les erreurs dans un flux : ignorer l'échec, rediriger la ligne ou faire échouer le composant.  
   
 #### <a name="truncation"></a>Troncation  
@@ -200,4 +199,3 @@ ms.lasthandoff: 08/17/2017
  La ligne qui provoque l'erreur ou la troncation est dirigée vers la sortie d'erreur de la source ODBC.  
   
   
-

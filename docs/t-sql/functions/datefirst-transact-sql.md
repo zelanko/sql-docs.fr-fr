@@ -1,5 +1,5 @@
 ---
-title: '@@DATEFIRST (Transact-SQL) | Documents Microsoft'
+title: '@@DATEFIRST (Transact-SQL) | Microsoft Docs'
 ms.custom: 
 ms.date: 09/18/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,7 +17,8 @@ f1_keywords:
 - DATE FORMAT
 - '@@DATEFIRST_TSQL'
 - '@@DATEFIRST'
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - dates [SQL Server], functions
 - date and time [SQL Server], SET DATEFIRST
@@ -32,23 +34,23 @@ helpviewer_keywords:
 - functions [SQL Server], date and time
 - options [SQL Server], date
 ms.assetid: a178868e-49d5-4bd5-a5e2-1283409c8ce6
-caps.latest.revision: "46"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: fc8cff9f51841d085314f8100550aa35a80a4463
 ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="x40x40datefirst-transact-sql"></a>&#x40;&#x40; DATEFIRST (Transact-SQL)
+# <a name="x40x40datefirst-transact-sql"></a>&#x40;&#x40;DATEFIRST (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-Retourne la valeur actuelle, pour une session, de [SET DATEFIRST](../../t-sql/statements/set-datefirst-transact-sql.md).
+Renvoie la valeur actuelle, pour une session, de [SET DATEFIRST](../../t-sql/statements/set-datefirst-transact-sql.md).
   
-Pour une vue d’ensemble de tous les [!INCLUDE[tsql](../../includes/tsql-md.md)] les types de données date et heure et les fonctions, consultez [Date et fonctions et Types de données &#40; Transact-SQL &#41; ](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md).
+Pour obtenir une vue d'ensemble de tous les types de données et fonctions de date et d'heure [!INCLUDE[tsql](../../includes/tsql-md.md)], consultez [Types de données et fonctions de date et d'heure &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md).
   
 ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -61,7 +63,7 @@ Pour une vue d’ensemble de tous les [!INCLUDE[tsql](../../includes/tsql-md.md)
 ## <a name="return-type"></a>Type de retour  
 **tinyint**
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
 SET DATEFIRST spécifie le premier jour de la semaine. La valeur par défaut de l'anglais des États-Unis est 7, dimanche.
   
 Ce paramètre de langue affecte l'interprétation de chaînes de caractères lorsqu'elles sont converties en valeurs de date pour le stockage dans la base de données, et l'affichage des valeurs de date qui sont stockées dans la base de données. Ce paramètre n'affecte pas le format de stockage des données de date. Dans l'exemple suivant, la langue a d'abord pour valeur `Italian`. L'instruction `SELECT @@DATEFIRST;` retourne `1`. La langue prend ensuite pour valeur `us_english`. L'instruction `SELECT @@DATEFIRST;` retourne `7`.
@@ -93,15 +95,15 @@ First Day         Today
 5                 2  
 ```  
   
-## <a name="example"></a>Exemple
- [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]et[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="example"></a> Exemple
+ [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] et [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ```sql
 SELECT @@DATEFIRST;  
 ```  
   
 ## <a name="see-also"></a>Voir aussi
-[Fonctions de configuration &#40; Transact-SQL &#41;](../../t-sql/functions/configuration-functions-transact-sql.md)
+[Fonctions de configuration &#40;Transact-SQL&#41;](../../t-sql/functions/configuration-functions-transact-sql.md)
   
   
 

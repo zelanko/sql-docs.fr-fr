@@ -2,16 +2,13 @@
 title: "Définir le stockage de Partition (Analysis Services - multidimensionnel) | Documents Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -30,19 +27,20 @@ helpviewer_keywords:
 - ROLAP
 - medium latency MOLAP
 ms.assetid: e525e708-f719-4905-a4cc-20f6a9a3edcd
-caps.latest.revision: "31"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 4610c996aa58fc71090c5a724447cfe733ede5d7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 42823cdd118d3fb52df6265671eaca0fd25be96c
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="set-partition-storage-analysis-services---multidimensional"></a>Définir un stockage de partitions (Analysis Services - Multidimensionnel)
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] fournit plusieurs configurations de stockage standard pour les modes de stockage et les options de mise en cache. Celles-ci fournissent des configurations fréquemment utilisées pour la notification des mises à jour, la latence et la reconstruction des données.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] fournit plusieurs configurations de stockage standard pour les modes de stockage et les options de mise en cache. Celles-ci fournissent des configurations fréquemment utilisées pour la notification des mises à jour, la latence et la reconstruction des données.  
   
  Vous pouvez spécifier le stockage de partitions dans l'onglet Partitions du cube dans [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], ou dans la page de propriétés de partition de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   

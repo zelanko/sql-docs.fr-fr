@@ -1,5 +1,5 @@
 ---
-title: sp_help_log_shipping_monitor_secondary (Transact-SQL) | Documents Microsoft
+title: sp_help_log_shipping_monitor_secondary (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/02/2016
 ms.prod: sql-non-specified
@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_help_log_shipping_monitor_secondary
 - sp_help_log_shipping_monitor_secondary_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sp_help_log_shipping_monitor_secondary
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_help_log_shipping_monitor_secondary
 ms.assetid: 3ac091ea-c9a8-4c05-a0b6-1ccf4e001339
-caps.latest.revision: "22"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 612571cd299a0474b1d405d8d9885487eba70a16
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 80c3f736037a763b1cda3ee37c92b443ecd07e87
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sphelplogshippingmonitorsecondary-transact-sql"></a>sp_help_log_shipping_monitor_secondary (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,10 +49,10 @@ sp_help_log_shipping_monitor_secondary
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@secondary_server =** ] '*secondary_server*'  
+ [ **@secondary_server =** ] '*secondary_server*'  
  Nom du serveur secondaire. *secondary_server* est **sysname**, sans valeur par défaut.  
   
- [  **@secondary_database =** ] '*secondary_database*'  
+ [ **@secondary_database =** ] '*secondary_database*'  
  Nom de la base de données secondaire. *secondary_database* est **sysname**, sans valeur par défaut.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
@@ -65,7 +68,7 @@ sp_help_log_shipping_monitor_secondary
 |**primary_server**|Le nom de l’instance principale de la [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] dans la configuration d’envoi de journaux.|  
 |**primary_database**|Nom de la base de données primaire dans la configuration d'envoi de journaux.|  
 |**restore_threshold**|Nombre de minutes pouvant s'écouler entre les opérations de restauration avant qu'une alerte ne soit générée.|  
-|**l’argument threshold_alert**|L’alerte à déclencher lorsque le seuil de restauration est dépassé.|  
+|**threshold_alert**|L’alerte à déclencher lorsque le seuil de restauration est dépassé.|  
 |**threshold_alert_enabled**|Détermine si les alertes de seuil de restauration sont activées.<br /><br /> 1 = Activé.<br /><br /> 0 = Désactivées.|  
 |**last_copied_file**|Nom de fichier du dernier fichier de sauvegarde copié sur le serveur secondaire.|  
 |**last_copied_date**|Heure et date de la dernière copie sur le serveur secondaire.|  
@@ -78,11 +81,11 @@ sp_help_log_shipping_monitor_secondary
 ## <a name="remarks"></a>Notes  
  **sp_help_log_shipping_monitor_secondary** doit être exécuté à partir de la **master** base de données sur le serveur moniteur.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Seuls les membres de la **sysadmin** rôle serveur fixe peut exécuter cette procédure.  
   
 ## <a name="see-also"></a>Voir aussi  
- [À propos de la copie des journaux des transactions &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+ [À propos de journaux de transaction &#40; SQL Server &#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [Procédures stockées système &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -8,20 +8,21 @@ ms.service:
 ms.component: in-memory-oltp
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine-imoltp
+ms.technology:
+- database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 40e0e749-260c-4cfc-a848-444d30c09d85
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: JennieHubbard
 ms.author: jhubbard
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ebc75200894e27976911f2c7413e027fbb1c5b14
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: cadb8454b9d9470afc7b0add40e21fd9f1346b00
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="atomic-blocks-in-native-procedures"></a>Blocs atomiques dans des procédures en mode natif
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -43,7 +44,7 @@ ms.lasthandoff: 11/17/2017
   
  L'exemple suivant illustre le comportement de gestion des erreurs avec les blocs Atomic et les procédures stockées compilées en mode natif :  
   
-```tsql  
+```sql  
 -- sample table  
 CREATE TABLE dbo.t1 (  
   c1 int not null primary key nonclustered  
@@ -138,18 +139,18 @@ GO
   
  Les options suivantes sont requises avec **BEGIN ATOMIC**:  
   
-|Paramètre obligatoire| Description|  
+|Paramètre obligatoire|Description|  
 |----------------------|-----------------|  
 |**TRANSACTION ISOLATION LEVEL**|Les valeurs prises en charge sont **SNAPSHOT**, **REPEATABLEREAD**et **SERIALIZABLE**.|  
 |**LANGUAGE**|Détermine les formats de date et d'heure, et les messages système. Tous les langages et les alias dans [sys.syslanguages &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md) sont pris en charge.|  
   
  Les paramètres suivants sont facultatifs :  
   
-|Paramètre facultatif| Description|  
+|Paramètre facultatif|Description|  
 |----------------------|-----------------|  
 |**DATEFORMAT**|Tous les formats de date [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sont pris en charge. Lorsqu'il est spécifié, **DATEFORMAT** remplace le format de date par défaut associé à **LANGUAGE**.|  
 |**DATEFIRST**|Lorsqu'il est spécifié, **DATEFIRST** remplace la valeur par défaut associée à **LANGUAGE**.|  
-|**DELAYED_DURABILITY**|Les valeurs prises en charge sont **OFF** et **ON**.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Les validations de transactions peuvent avoir une durabilité complète, la durabilité par défaut ou une durabilité retardée. Pour plus d’informations, consultez [Contrôler la durabilité d’une transaction](../../relational-databases/logs/control-transaction-durability.md).|  
+|**DELAYED_DURABILITY**|Les valeurs prises en charge sont **OFF** et **ON**.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Les validations de transactions peuvent avoir une durabilité complète, la durabilité par défaut ou une durabilité retardée. Pour plus d’informations, consultez [Contrôler la durabilité d’une transaction](../../relational-databases/logs/control-transaction-durability.md).|  
   
  Les options SET suivantes ont la même valeur système par défaut pour tous les blocs Atomic de toutes les procédures stockées compilées en mode natif :  
   
@@ -169,7 +170,7 @@ GO
 |TEXTSIZE|0|  
 |XACT_ABORT|OFF<br /><br /> Les exceptions qui ne sont pas interceptées entraînent la restauration des blocs Atomic, mais pas l'abandon de la transaction, sauf si l'erreur condamne la transaction.|  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Procédures stockées compilées en mode natif](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)  
   
   

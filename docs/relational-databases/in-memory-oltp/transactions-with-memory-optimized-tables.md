@@ -1,27 +1,28 @@
 ---
 title: "Transactions avec tables optimisées en mémoire | Microsoft Docs"
 ms.custom: 
-ms.date: 09/29/2017
+ms.date: 01/16/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
 ms.reviewer: 
 ms.service: 
 ms.component: in-memory-oltp
 ms.suite: sql
-ms.technology: database-engine-imoltp
+ms.technology:
+- database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ba6f1a15-8b69-4ca6-9f44-f5e3f2962bc5
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 808602a0671f64daaf313af49ef4974d6e754061
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 1a5cb6088e12b51dcc8992093b65e8dc95ad8d57
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="transactions-with-memory-optimized-tables"></a>Transactions with Memory-Optimized Tables
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -170,7 +171,8 @@ Voici les conditions d’erreur qui peuvent entraîner l’échec des transactio
 | **41305**| Échec de la validation de lecture renouvelable Une ligne lue dans une table optimisée en mémoire a été mise à jour par une autre transaction qui a été validée avant cette transaction. | Cette erreur peut se produire lors de l’utilisation du niveau d’isolation REPEATABLE READ ou SERIALIZABLE, et également si les actions d’une transaction simultanée provoquent la violation d’une contrainte FOREIGN KEY. <br/><br/>Une telle violation simultanée de contraintes de clé étrangère est rare, et indique généralement un problème avec la logique de l’application ou avec une entrée de données. Toutefois, l’erreur peut également se produire s’il n’existe aucun index sur les colonnes impliquées dans la contrainte FOREIGN KEY. Il est donc recommandé de toujours créer un index sur les colonnes de clé étrangère d’une table optimisée en mémoire. <br/><br/> Pour plus d’informations sur les échecs de validation causés par des violations de clé étrangère, consultez [ce billet de blog](https://blogs.msdn.microsoft.com/sqlcat/2016/03/24/considerations-around-validation-errors-41305-and-41325-on-memory-optimized-tables-with-foreign-keys/) de l’équipe de consultants clients de SQL Server. |  
 | **41325** | Échec de la validation sérialisable Une nouvelle ligne a été insérée dans une plage analysée précédemment par la transaction actuelle. Nous appelons cela une ligne fantôme. | Cette erreur peut se produire lors de l’utilisation du niveau d’isolation SERIALIZABLE, et également si les actions d’une transaction simultanée provoquent la violation d’une contrainte PRIMARY KEY, UNIQUE ou FOREIGN KEY. <br/><br/> Une telle violation simultanée des contraintes est rare, et indique généralement un problème avec la logique de l’application ou avec une entrée de données. Toutefois, comme pour les échecs de validation REPEATABLE READ, cette erreur peut également se produire s’il existe une contrainte FOREIGN KEY sans index sur les colonnes impliquées. |  
 | **41301** | Échec de la dépendance : une dépendance a été prise sur une autre transaction dont la validation a échoué. | Cette transaction (Tx1) a pris une dépendance sur une autre transaction (Tx2) lorsque celle-ci (Tx2) était en phase de validation, en lisant des données écrites par Tx2. La validation de Tx2 a donc échoué. Le plus souvent, l’échec de la validation de Tx2 est causé par l’échec de la validation de REPEATABLE READ (41305) et de SERIALIZABLE (41325). La validation peut également échouer en cas d’échec d’E/S du journal, même si cela est moins fréquent. |
-| **41839** | Le nombre maximal de dépendances de validation d’une transaction a été dépassé. | Il existe une limite du nombre de transactions dont une transaction donnée (Tx1) peut dépendre. Ces transactions sont les dépendances sortantes. En outre, il existe une limite du nombre de transactions pouvant dépendre d’une transaction donnée (Tx1). Ces transactions sont les dépendances entrantes. La limite pour les deux est de 8 transactions. <br/><br/> Le plus souvent, cet échec est dû au fait qu’un nombre très important de transactions de lecture accède aux données écrites par une seule transaction d’écriture. La probabilité de cette erreur augmente si les opérations de lecture effectuent toutes une analyse importante des mêmes données et si la validation ou le traitement de validation de la transaction d’écriture sont longs, par exemple, si la transaction d’écriture effectue des analyses importantes avec un niveau d’isolation SERIALIZABLE (augmentation de la durée de la phase de validation) ou si le journal des transactions est placé sur un périphérique d’E/S de journal lent (augmentation de la durée de traitement de la validation). Si les transactions en lecture effectuent des explorations importantes et si elles sont censées accéder seulement à quelques lignes, cela peut indiquer qu’un index est manquant. De même, si la transaction d’écriture effectue des analyses importantes avec le niveau d’isolation SERIALIZABLE, mais qu’elle n’est censée accéder qu’à quelques lignes, cela peut également indiquer qu’un index est manquant. <br/><br/> Le nombre maximal de dépendances de validation peut être augmenté à l’aide de l’indicateur de trace **9926**. Utilisez cet indicateur de trace uniquement si vous obtenez cette erreur après avoir vérifié qu’aucun index n’est manquant, car cela pourrait masquer ces problèmes dans les cas mentionnés ci-dessus. Gardez également à l’esprit que la complexité des graphiques de dépendances, où chaque transaction comprend un grand nombre de dépendances entrantes et sortantes, ainsi que de nombreuses couches de dépendances, peut rendre le système inefficace.  |
+| **41823** et **41840** | Le quota pour les données utilisateur dans les tables optimisées en mémoire et les variables de table a été atteint. | L’erreur 41823 s’applique à SQL Server Express/Web/Standard Edition, ainsi qu’aux bases de données autonomes dans [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]. L’erreur 41840 s’applique aux pools élastiques dans [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]. <br/><br/> Dans la plupart des cas, ces erreurs indiquent que la taille maximale des données utilisateur a été atteinte. Le moyen de résoudre l’erreur consiste à supprimer des données dans les tables optimisées en mémoire. Dans de rares cas cependant, cette erreur est temporaire. Nous recommandons donc de faire une nouvelle tentative la première fois que ces erreurs sont rencontrées.<br/><br/> Comme les autres erreurs de cette liste, les erreurs 41823 et 41840 entraînent l’abandon de la transaction active. |
+| **41839** | Le nombre maximal de dépendances de validation d’une transaction a été dépassé. |**S’applique à :** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]. Aucune limite du nombre de dépendances de validation ne s’applique aux versions ultérieures de [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] et [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)].<br/><br/> Il existe une limite du nombre de transactions dont une transaction donnée (Tx1) peut dépendre. Ces transactions sont les dépendances sortantes. En outre, il existe une limite du nombre de transactions pouvant dépendre d’une transaction donnée (Tx1). Ces transactions sont les dépendances entrantes. La limite pour les deux est de 8 transactions. <br/><br/> Le plus souvent, cet échec est dû au fait qu’un nombre très important de transactions de lecture accède aux données écrites par une seule transaction d’écriture. La probabilité de cette erreur augmente si les opérations de lecture effectuent toutes une analyse importante des mêmes données et si la validation ou le traitement de validation de la transaction d’écriture sont longs, par exemple, si la transaction d’écriture effectue des analyses importantes avec un niveau d’isolation SERIALIZABLE (augmentation de la durée de la phase de validation) ou si le journal des transactions est placé sur un périphérique d’E/S de journal lent (augmentation de la durée de traitement de la validation). Si les transactions en lecture effectuent des explorations importantes et si elles sont censées accéder seulement à quelques lignes, cela peut indiquer qu’un index est manquant. De même, si la transaction d’écriture effectue des analyses importantes avec le niveau d’isolation SERIALIZABLE, mais qu’elle n’est censée accéder qu’à quelques lignes, cela peut également indiquer qu’un index est manquant. <br/><br/> Le nombre maximal de dépendances de validation peut être augmenté à l’aide de l’indicateur de trace **9926**. Utilisez cet indicateur de trace uniquement si vous obtenez cette erreur après avoir vérifié qu’aucun index n’est manquant, car cela pourrait masquer ces problèmes dans les cas mentionnés ci-dessus. Gardez également à l’esprit que la complexité des graphiques de dépendances, où chaque transaction comprend un grand nombre de dépendances entrantes et sortantes, ainsi que de nombreuses couches de dépendances, peut rendre le système inefficace.  |
  
   
 ### <a name="retry-logic"></a>Logique des nouvelles tentatives 
@@ -219,7 +221,7 @@ BEGIN
             SET @retry -= 1;
 
             IF (@retry > 0 AND
-                ERROR_NUMBER() in (41302, 41305, 41325, 41301, 41839, 1205)
+                ERROR_NUMBER() in (41302, 41305, 41325, 41301, 41823, 41840, 41839, 1205)
                 )
             BEGIN
                 IF XACT_STATE() = -1
@@ -303,7 +305,7 @@ go
   
 <a name="natcompstorprocs42ni"/>  
   
-## <a name="natively-compiled-stored-procedures"></a>Procédures stockées compilées en mode natif  
+## <a name="natively-compiled-stored-procedures"></a>procédures stockées compilées en mode natif  
   
 - Dans une procédure native, le bloc ATOMIQUE doit déclarer le niveau d’isolation de la transaction pour l’ensemble du bloc, par exemple :  
   - `... BEGIN ATOMIC WITH (TRANSACTION ISOLATION LEVEL = SNAPSHOT, ...) ...`  

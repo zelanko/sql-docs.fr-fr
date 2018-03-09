@@ -5,23 +5,24 @@ ms.date: 04/01/2016
 ms.prod: sql-non-specified
 ms.prod_service: mds
 ms.service: 
-ms.component: master-data-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
-ms.technology: master-data-services
+ms.technology:
+- master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 19519697-c219-44a8-9339-ee1b02545445
-caps.latest.revision: "8"
-author: smartysanthosh
-ms.author: nagavo
+caps.latest.revision: 
+author: leolimsft
+ms.author: lle
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ac8fc262775d11c08cb2e30a750549fe3b0ec96b
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: a64d484a0739e17e947370d2760886bcbac7dd90
+ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="master-data-services-features-and-tasks"></a>Fonctionnalités et tâches Master Data Services
   Apprenez à utiliser [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] pour gérer les données de référence de votre organisation. Apprenez comment créer et manipuler les objets de modèle, qui sont des conteneurs de données. Apprenez comment organiser et gérer les données de référence elles-mêmes. Apprenez comment importer et exporter des données de référence et partager des modèles entre les environnements de test et de production. Enfin, apprenez comment développer des applications personnalisées qui accèdent au service Web de [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .  
@@ -54,7 +55,7 @@ ms.lasthandoff: 11/20/2017
   
 ## <a name="improve-data-quality"></a>Améliorer la qualité des données  
   
--   [Règles d’entreprise &#40;Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md)  
+-   [Business Rules &#40;Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md)  
   
 -   [Validation &#40;Master Data Services&#41;](../master-data-services/validation-master-data-services.md)  
   

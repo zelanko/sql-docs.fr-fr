@@ -1,27 +1,32 @@
 ---
 title: "Effectuez-vous une mise à niveau à partir de SQL Server 2005 ? | Microsoft Docs"
-ms.custom: SQL2016_New_Updated
+ms.custom: 
 ms.date: 07/18/2017
-ms.prod:
-- sql-server-2016
-- sql-server-2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: install-windows
 ms.reviewer: 
-ms.suite: 
-ms.technology: setup-install
+ms.suite: sql
+ms.technology:
+- setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ad40e66f-71fe-4ee6-9ce3-17127e7b1d7a
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: 930b38a7cf74f6f5fca26ec97fb5510a1ad31b6f
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+manager: craigg
+ms.openlocfilehash: d582d7d9ca0bc90ca40ee34e946d49bf545024bd
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="are-you-upgrading-from-sql-server-2005"></a>Effectuez-vous une mise à niveau à partir de SQL Server 2005 ?
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+ 
  La fin du support étendu pour SQL Server 2005 est une bonne raison d’effectuer une mise à niveau vers une version plus récente de SQL Server et vers Azure SQL Database. La mise à niveau vous permet de maintenir la sécurité et la conformité, d’atteindre des performances élevées et d’optimiser l’infrastructure de votre plateforme de données.  
   
  Pour plus d’informations, et pour obtenir les documents et les outils nécessaires pour planifier et automatiser la mise à niveau ou la migration, consultez [Fin du support de SQL Server 2005](http://www.microsoft.com/en-us/server-cloud/products/sql-server-2005/).  
@@ -38,7 +43,7 @@ Pour une analyse plus complète de ces options, [cliquez ici](http://sql05upgrad
   
 |Option de stockage relationnel|Avantages|Autres facteurs à prendre en compte|  
 |-------------------------------|--------------|-------------------------------|  
-|**SQL Server local**<br /><br /> Envisagez cette option pour tous les types d’applications de base de données, des systèmes transactionnels aux entrepôts de données.|Dans la mesure où vous gérez le matériel et les logiciels, vous bénéficiez d’un contrôle optimal sur les fonctionnalités et l’évolutivité.<br /><br /> Si vous procédez à la mise à niveau à partir de SQL Server 2005, il s’agit de l’environnement le plus similaire.|L’investissement initial et les efforts de gestion continue sont les plus importants, car vous devez acheter, maintenir et gérer votre matériel et vos logiciels.<br /><br /> Pour plus d’informations, consultez la page [SQL Server](https://www.microsoft.com/EN-US/server-cloud/products/sql-server-2017/).|  
+|**SQL Server local**<br /><br /> Envisagez cette option pour tous les types d’applications de base de données, des systèmes transactionnels aux entrepôts de données.|Dans la mesure où vous gérez le matériel et les logiciels, vous bénéficiez d’un contrôle optimal sur les fonctionnalités et l’évolutivité.<br /><br /> Si vous procédez à la mise à niveau à partir de SQL Server 2005, il s’agit de l’environnement le plus similaire.|L’investissement initial et les efforts de gestion continue sont les plus importants, car vous devez acheter, maintenir et gérer votre matériel et vos logiciels.<br /><br /> Pour plus d’informations, consultez la page [SQL Server](https://www.microsoft.com/EN-US/server-cloud/products/sql-server-2017/).|  
 |**SQL Server hébergé sur Azure Virtual Machines**<br /><br /> Envisagez cette option si vous souhaitez :<br /><br /> profiter des avantages de la migration dans un environnement hébergé ;<br /><br /> contrôler l’environnement d’exploitation ;<br /><br /> bénéficier de toutes les fonctionnalités de SQL Server qui vous sont familières.|Vous pouvez effectuer rapidement le déploiement à partir d’une bibliothèque d’images de machine virtuelle.<br /><br /> Vous obtenez l’ensemble complet des fonctionnalités de SQL Server.<br /><br /> Vous économisez les coûts liés au matériel et au logiciel serveur. Votre consommation est facturée à l’heure.|Vous devez configurer et gérer SQL Server et le système d’exploitation.<br /><br /> <br /><br /> Pour plus d’informations, consultez [Vue d’ensemble de SQL Server sur les machines virtuelles Azure](https://azure.microsoft.com/documentation/articles/virtual-machines-sql-server-infrastructure-services/).<br /><br /> Pour plus d’informations sur la migration, consultez [Migration d’une base de données vers SQL Server sur une machine virtuelle Azure](https://azure.microsoft.com/documentation/articles/virtual-machines-migrate-onpremises-database/).|  
 |**Service de base de données hébergé par Azure SQL Database**<br /><br /> Envisagez cette option si vous souhaitez une solution économique nécessitant moins d’efforts de maintenance.<br /><br /> Cette option convient particulièrement aux applications qui ne nécessitent pas une capacité constante ou qui doivent fournir un accès externe.|Déploiement rapide et mise à l’échelle simplifiée.<br /><br /> Votre consommation est facturée à l’heure.<br /><br /> Le coût du service inclut non seulement le stockage, mais aussi des sauvegardes automatisées à haute disponibilité.|Azure SQL Database ne propose pas certaines fonctionnalités de SQL Server qui ne sont pas applicables à un environnement hébergé dans le cloud. Pour plus d’informations, consultez [Informations sur le langage Transact-SQL d’Azure SQL Database](https://azure.microsoft.com/documentation/articles/sql-database-transact-sql-information/).<br /><br /> Azure SQL Database limite également la taille des bases de données à 500 Go, contre 524 Po pour SQL Server.<br /><br /> Pour plus d’informations, consultez la page [Base de données SQL](https://azure.microsoft.com/services/sql-database/).<br /><br /> Pour plus d’informations sur la migration, consultez [Migration d’une base de données SQL Server vers une base de données SQL Azure](https://azure.microsoft.com/documentation/articles/sql-database-cloud-migrate/).|  
   
@@ -63,10 +68,10 @@ Pour une analyse plus complète de ces options, [cliquez ici](http://sql05upgrad
   
 -   Découvrez comment effectuer la mise à niveau.  
   
-    -   Passez en revue les méthodes de mise à niveau disponibles et découvrez comment planifier et tester dans la rubrique [Upgrade Database Engine](../../database-engine/install-windows/upgrade-database-engine.md).  
+    -   Passez en revue les méthodes de mise à niveau disponibles et découvrez comment planifier et tester dans l’article [Mettre à niveau le moteur de base de données](../../database-engine/install-windows/upgrade-database-engine.md).  
   
         > [!IMPORTANT]  
-        >  Vous ne pouvez pas effectuer une mise à niveau sur place d’une instance de SQL Server 2005 vers un serveur SQL Server 2017. Vous devez installer une instance de SQL Server 2017, puis migrer vos bases de données SQL Server 2005 vers la nouvelle installation. Pour plus d’informations, consultez la section « New Installation Upgrade » (Mise à niveau d’une nouvelle installation) de la rubrique [Choose a Database Engine Upgrade Method](../../database-engine/install-windows/choose-a-database-engine-upgrade-method.md).  
+        >  Vous ne pouvez pas effectuer une mise à niveau sur place d’une instance de SQL Server 2005 vers un serveur SQL Server 2017. Vous devez installer une instance de SQL Server 2017, puis migrer vos bases de données SQL Server 2005 vers la nouvelle installation. Pour plus d’informations, consultez la section « Mise à niveau d’une nouvelle installation » de l’article [Choisir une méthode de mise à niveau du moteur de base de données](../../database-engine/install-windows/choose-a-database-engine-upgrade-method.md).  
    
   
 -   Pour plus d’informations, et pour obtenir les documents et les outils nécessaires pour planifier et automatiser la mise à niveau ou la migration, consultez [Fin du support de SQL Server 2005](http://www.microsoft.com/en-us/server-cloud/products/sql-server-2005/).  
@@ -74,7 +79,7 @@ Pour une analyse plus complète de ces options, [cliquez ici](http://sql05upgrad
 ## <a name="get-sql-server"></a>Obtenir SQL Server  
  Pour télécharger une copie d’évaluation de SQL Server, [cliquez ici](http://www.microsoft.com/evalcenter/evaluate-sql-server-2016).  
   
-## <a name="next-steps"></a>Étapes suivantes  
+## <a name="next-steps"></a>Next Steps  
  [SQL Server 2017](http://www.microsoft.com/sql-server/sql-server-2017)   
  [Fin du support de SQL Server 2005](http://www.microsoft.com/en-us/server-cloud/products/sql-server-2005/)   
   

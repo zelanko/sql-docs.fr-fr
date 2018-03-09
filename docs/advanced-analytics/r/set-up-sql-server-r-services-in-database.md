@@ -2,12 +2,12 @@
 title: "Configurer SQL Server Machine Learning Services (de-de base de données) | Documents Microsoft"
 ms.custom: 
 ms.date: 11/15/2017
-ms.prod:
-- sql-server-2016
-- sql-server-2017
 ms.reviewer: 
-ms.suite: 
-ms.technology: r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 keywords:
@@ -16,18 +16,19 @@ keywords:
 - Configurer les Services de R
 - "installer l’apprentissage de SQL"
 ms.assetid: 4d773c74-c779-4fc2-b1b6-ec4b4990950d
-caps.latest.revision: "36"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Active
-ms.openlocfilehash: 3a32560422e8fc5f1a2e4284702d2cb28562f01f
-ms.sourcegitcommit: 06bb91d138a4d6395c7603a2d8f99c69a20642d3
+ms.openlocfilehash: 4d18a45b40c7f80ae2b46514f6c8245b80f6b142
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/16/2017
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="set-up-sql-server-machine-learning-services-in-database"></a>Configurer SQL Server Machine Learning Services (de-de base de données)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Cette rubrique explique comment installer et configurer le fonctionnalités qui prennent en charge dans base de données analytique dans SQL Server d’apprentissage suivante :
 
@@ -41,7 +42,7 @@ Cette rubrique explique comment installer et configurer le fonctionnalités qui 
 
 + Un serveur d’apprentissage machine avec **aucune** SQL Server
 
-    [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]le programme d’installation inclut également la possibilité d’installer une version « autonome » de l’apprentissage automatique des composants qui ne nécessite pas le moteur de base de données et ne s’exécute pas dans SQL Server.  En règle générale, nous recommandons que vous installez cette option sur un ordinateur autre que l’ordinateur qui héberge SQL Server.
+    [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] le programme d’installation inclut également la possibilité d’installer une version « autonome » de l’apprentissage automatique des composants qui ne nécessite pas le moteur de base de données et ne s’exécute pas dans SQL Server.  En règle générale, nous recommandons que vous installez cette option sur un ordinateur autre que l’ordinateur qui héberge SQL Server.
     
     [Configurer un serveur autonome apprentissage](create-a-standalone-r-server.md).
 

@@ -2,34 +2,31 @@
 title: Annotations CSDL pour Business Intelligence (CSDLBI) | Documents Microsoft
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 ms.assetid: bf6f372a-bc67-45ea-a771-b2dc5b0527e5
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 5cf3fd7bb1f6e5bf907e6550fe48a3e87c6be5af
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: dfc70006520f0d4a9e47661de5c065aecf59356f
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="csdl-annotations-for-business-intelligence-csdlbi"></a>Annotations CSDL pour Business Intelligence (CSDLBI)
-
-[!INCLUDE[ssas-appliesto-sqlas-all](../../includes/ssas-appliesto-sqlas-all.md)]
-
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] prend en charge la présentation de la définition d'un modèle tabulaire dans un format XML appelé langage CSDL (Conceptual Schema Definition Langage) avec des annotations Business Intelligence (CSDLBI). Cette rubrique fournit une vue d'ensemble de CSDLBI et de son utilisation avec des modèles de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
 ## <a name="understanding-the-role-of-csdl"></a>Comprendre le rôle du langage CSDL  
@@ -37,9 +34,9 @@ ms.lasthandoff: 11/17/2017
   
  Bien que le langage CSDL soit compatible avec l'Entity Data Framework, vous n'avez pas besoin de comprendre le modèle de relation d'entité et vous n'avez pas non plus besoin d'outils spéciaux pour générer un modèle tabulaire ou un rapport basé sur un modèle. Pour générer des modèles, utilisez des outils clients tels que [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] ou une API telle que AMO, puis déployez le modèle sur un serveur. Pour se connectent au modèle les clients utilisent un fichier de définition de modèle, généralement publié dans une bibliothèque SharePoint où il pourra être utilisé par les concepteurs de rapports et les consommateurs de rapports. Pour plus d'informations, consultez ces liens :  
   
--   [Solutions de modèles tabulaires &#40;SSAS Tabulaire&#41;](../../analysis-services/tabular-models/tabular-model-solutions-ssas-tabular.md)  
+-   [Solutions de modèles tabulaires](../../analysis-services/tabular-models/tabular-model-solutions-ssas-tabular.md)  
   
--   [Déploiement d’une solution de modèle tabulaire &#40;SSAS Tabulaire&#41;](../../analysis-services/tabular-models/tabular-model-solution-deployment-ssas-tabular.md)  
+-   [Déploiement de solutions de modèle tabulaire](../../analysis-services/tabular-models/tabular-model-solution-deployment-ssas-tabular.md)  
   
 -   [Connexion de modèle sémantique BI Power Pivot &#40;.bism&#41;](../../analysis-services/power-pivot-sharepoint/power-pivot-bi-semantic-model-connection-bism.md)  
   
@@ -57,7 +54,7 @@ ms.lasthandoff: 11/17/2017
 ### <a name="csdlbi-versions"></a>Versions de CSDLBI  
  La spécification CSDL d'origine (Entity Data Framework) prévoit la plupart des entités et des propriétés exigées pour prendre en charge la modélisation. Les annotations BI prennent en charge les spécifications particulières des modèles tabulaires, les propriétés de création de rapports requises pour les clients, tels que [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)], et les métadonnées supplémentaires requises pour les modèles multidimensionnels. Cette section décrit les mises à jour dans chaque version.  
   
- **CSDLBI VERSION 1.0**  
+ **CSDLBI 1.0**  
   
  Le jeu initial d'ajouts au schéma CSDL pour prendre en charge les modèles tabulaires [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] contenait des annotations afin de prendre en charge la modélisation des données, les calculs personnalisés et la présentation avancée :  
   
@@ -67,7 +64,7 @@ ms.lasthandoff: 11/17/2017
   
 -   Propriétés de visualisation et de navigation. Par exemple, des propriétés ont été ajoutées pour prendre en charge les champs de tri personnalisé, les images par défaut et  
   
- **1.1 DE CSDLBI**  
+ **CSDLBI 1.1**  
   
  Cette version du schéma CSDLBI inclut des ajouts pour la prise en charge des bases de données multidimensionnelles (telles que les cubes OLAP). Les nouveaux éléments et propriétés sont les suivants :  
   

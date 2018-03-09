@@ -3,8 +3,11 @@ title: "Règles pour l’entrée de valeurs de recherche (Visual Database Tools)
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -22,16 +25,16 @@ ms.assetid: 3c8134b7-83f4-41b4-99c8-e3949a685ff5
 caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bde4d45d9b161c54a03051a76bc867136ac34128
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 979bc40803391e773624d9d7f2b9e43e3bad5ee6
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="rules-for-entering-search-values-visual-database-tools"></a>Règles pour l'entrée de valeurs de recherche (Visual Database Tools)
-Cette rubrique décrit les conventions à utiliser lorsque vous entrez les types de valeurs littérales suivants pour une condition de recherche :  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Cette rubrique décrit les conventions à utiliser quand vous entrez les types de valeurs littérales suivants pour une condition de recherche :  
   
 -   Valeurs texte  
   
@@ -119,7 +122,7 @@ Le tableau suivant récapitule les formats de date que vous pouvez utiliser dans
   
 |**Volet**|**Format de date**|  
 |------------|-------------------|  
-|Critère|Données locales spécifiques, spécifiques à la base de données, ANSI standard<br /><br />Les dates entrées dans le [volet Critères](../../ssms/visual-db-tools/criteria-pane-visual-database-tools.md) sont converties dans un format compatible avec la base de données à l’intérieur du volet SQL.|  
+|Critères|Données locales spécifiques, spécifiques à la base de données, ANSI standard<br /><br />Les dates entrées dans le [volet Critères](../../ssms/visual-db-tools/criteria-pane-visual-database-tools.md) sont converties dans un format compatible avec la base de données à l’intérieur du volet SQL.|  
 |SQL|Données spécifique à la base de données, ANSI standard|  
 |Résultats|Données locales spécifiques|  
   
@@ -147,6 +150,6 @@ Le format des données logiques varie d'une base de données à l'autre. Très s
     WHERE contract <> 0  
     ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [Spécifier des critères de recherche &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md)  
   

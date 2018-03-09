@@ -8,7 +8,8 @@ ms.service:
 ms.component: availability-groups
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-high-availability
+ms.technology:
+- dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,16 +17,16 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], failover
 - failover [SQL Server], AlwaysOn Availability Groups
 ms.assetid: 1ed564b4-9835-4245-ae35-9ba67419a4ce
-caps.latest.revision: "24"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4c1ec4e43ebc62a5c64477cb372ad82f9d1bf26a
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 7e82b63c2bbc3d3788272f065d1cdb795decc8b1
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="configure-flexible-automatic-failover-policy"></a>Configurer la stratégie de basculement automatique flexible
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -65,7 +66,7 @@ ms.lasthandoff: 11/20/2017
   
 ###  <a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Autorisations  
+####  <a name="Permissions"></a> Permissions  
   
 |Tâche|Autorisations|  
 |----------|-----------------|  
@@ -92,7 +93,7 @@ ms.lasthandoff: 11/20/2017
   
         |[!INCLUDE[tsql](../../../includes/tsql-md.md)] Valeur|Niveau|Le basculement automatique démarre lorsque…|  
         |------------------------------|-----------|-------------------------------------------|  
-        |1|Un|Le serveur est arrêté. Le service SQL Server s'arrête à cause d'un basculement ou d'un redémarrage.|  
+        | 1|Un|Le serveur est arrêté. Le service SQL Server s'arrête à cause d'un basculement ou d'un redémarrage.|  
         |2|Deux|Le serveur ne répond pas. Toutes les conditions qui correspondent à une valeur inférieure sont remplies, le service SQL Server est connecté au cluster et le seuil du délai d'attente de contrôle d'intégrité est dépassé, ou le réplica principal actuel est dans un état d'échec.|  
         |3|Trois|Erreur critique du serveur. Toutes les conditions qui correspondent à une valeur inférieure sont remplies ou une erreur interne et critique de serveur est survenue.<br /><br /> C'est le niveau par défaut.|  
         |4|Quatre|Erreur de serveur modérée. Toutes les conditions qui correspondent à une valeur inférieure sont remplies ou une erreur modérée de serveur s'est produite.|  
@@ -116,7 +117,7 @@ ms.lasthandoff: 11/20/2017
   
 2.  Quand vous ajoutez un réplica de disponibilité à un groupe de disponibilité, utilisez l’applet de commande **New-SqlAvailabilityGroup** . Quand vous modifiez un réplica de disponibilité existant, utilisez l’applet de commande **Set-SqlAvailabilityGroup** .  
   
-    -   Pour définir le niveau de condition de basculement, utilisez le paramètre **FailureConditionLevel***niveau* , où *niveau* a l’une des valeurs suivantes :  
+    -   Pour définir le niveau de condition de basculement, utilisez le paramètre **FailureConditionLevel***niveau*, où *niveau* est une des valeurs suivantes :  
   
         |Valeur|Niveau|Le basculement automatique démarre lorsque…|  
         |-----------|-----------|-------------------------------------------|  
@@ -136,7 +137,7 @@ ms.lasthandoff: 11/20/2017
         -FailureConditionLevel OnServerDown  
         ```  
   
-    -   Pour définir le seuil du délai d’attente de vérification d’intégrité, utilisez le paramètre **HealthCheckTimeout***n* , où *n* est un entier compris entre 15000 millisecondes (15 secondes) et 4294967295 millisecondes. La valeur par défaut est 30 000 millisecondes (ou 30 secondes).  
+    -   Pour définir le seuil du délai d’attente de vérification d’intégrité, utilisez le paramètre *HealthCheckTimeout***n*, où *n* est un entier compris entre 15 000 millisecondes (15 secondes) et 4 294 967 295 millisecondes. La valeur par défaut est 30 000 millisecondes (ou 30 secondes).  
   
          Par exemple, la commande suivante modifie le seuil du délai d'attente de contrôle d'intégrité d'un groupe de disponibilité existant, `AG1`, sur 120 000 millisecondes (deux minutes).  
   
@@ -147,15 +148,15 @@ ms.lasthandoff: 11/20/2017
         ```  
   
 > [!NOTE]  
->  Pour afficher la syntaxe d’une applet de commande, utilisez l’applet de commande **Get-Help** dans l’environnement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell. Pour en savoir plus, voir [Get Help SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md).  
+>  Pour voir la syntaxe d’une applet de commande, utilisez l’applet de commande **Get-Help** dans l’environnement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell. Pour en savoir plus, voir [Get Help SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md).  
   
  **Pour configurer et utiliser le fournisseur SQL Server PowerShell**  
   
--   [fournisseur PowerShell SQL Server](../../../relational-databases/scripting/sql-server-powershell-provider.md)  
+-   [Fournisseur SQL Server PowerShell](../../../relational-databases/scripting/sql-server-powershell-provider.md)  
   
 -   [Get Help SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md)  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Vue d’ensemble des groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Modes de disponibilité &#40;groupes de disponibilité Always On&#41;](../../../database-engine/availability-groups/windows/availability-modes-always-on-availability-groups.md)   
  [Basculement et modes de basculement &#40;groupes de disponibilité AlwaysOn&#41;](../../../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md)   

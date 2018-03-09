@@ -1,5 +1,5 @@
 ---
-title: "Tâches de file d’attente de messages | Documents Microsoft"
+title: "Tâches MSMQ | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -24,19 +24,18 @@ helpviewer_keywords:
 - messages [Integration Services]
 - sending messages
 ms.assetid: ae1d8fad-6649-4e93-b589-14a32d07da33
-caps.latest.revision: 68
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 8806c102eaec2c2540374bfaddc33b76d8f6e584
-ms.openlocfilehash: eddacf0c8454160e6078ff59d150bab5218b6523
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/11/2017
-
+ms.openlocfilehash: d58b3c497860668dee90836193ff9bd788852715
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="message-queue-task"></a>Tâche MSMQ
+# <a name="message-queue-task"></a>Message Queue Task
   La tâche MSMQ vous permet d’utiliser Message Queuing (MSMQ) pour envoyer et recevoir des messages entre des packages [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ou pour envoyer des messages à une file d’attente d’application traitée par une application personnalisée. Ces messages peuvent être composés de texte brut, de fichiers ou de variables et leurs valeurs.  
   
  L'utilisation de la tâche MSMQ vous permet de coordonner des opérations à l'échelle de votre entreprise. Les messages peuvent être placés dans la file d'attente et remis ultérieurement si la destination est indisponible ou occupée ; par exemple, la tâche peut mettre en file d'attente les messages destinés à l'ordinateur portable hors connexion des représentants commerciaux, qui reçoivent leurs messages lorsqu'ils se connectent au réseau. Vous pouvez utiliser la tâche MSMQ pour effectuer les opérations suivantes :  
@@ -84,7 +83,7 @@ ms.lasthandoff: 08/11/2017
 -   Enregistrement du fichier de message sous un nom de fichier différent si le message utilise le type **Message de type fichier de données** .  
   
 ## <a name="custom-logging-messages-available-on-the-message-queue-task"></a>Messages de journalisation personnalisés disponibles dans la tâche MSMQ  
- Le tableau suivant répertorie les entrées de journal personnalisées de la tâche MSMQ. Pour plus d’informations, consultez [Journalisation d’Integration Services &#40;SSIS&#41;](../../integration-services/performance/integration-services-ssis-logging.md).  
+ Le tableau suivant répertorie les entrées de journal personnalisées de la tâche MSMQ. Pour plus d’informations, consultez [Journalisation Integration Services &#40;SSIS&#41;](../../integration-services/performance/integration-services-ssis-logging.md).  
   
 |Entrée du journal|Description|  
 |---------------|-----------------|  
@@ -98,13 +97,13 @@ ms.lasthandoff: 08/11/2017
 |**MSMQTaskTimeOut**|Indique que le délai de la tâche a expiré.|  
   
 ## <a name="configuration-of-the-message-queue-task"></a>Configuration de la tâche MSMQ  
- Vous pouvez définir des propriétés au moyen du concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] ou par programmation. Pour plus d'informations sur les propriétés définissables dans le concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] , cliquez sur la rubrique suivante :  
+ Vous pouvez définir les propriétés par le biais du concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] ou par programmation. Pour plus d'informations sur les propriétés définissables dans le concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] , cliquez sur la rubrique suivante :  
   
 -   [Page Expressions](../../integration-services/expressions/expressions-page.md)  
   
  Pour plus d’informations sur la définition par programmation de ces propriétés, consultez la documentation relative à la classe **Microsoft.SqlServer.Dts.Tasks.MessageQueueTask.MessageQueueTask** dans le Guide du développeur.  
   
-## <a name="related-tasks"></a>Tâches associées  
+## <a name="related-tasks"></a>Related Tasks  
  Pour plus d’informations sur la façon de définir ces propriétés dans le concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] , consultez [Définir les propriétés d’une tâche ou d’un conteneur](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b).  
   
 ## <a name="message-queue-task-editor-general-page"></a>Éditeur de tâche MSMQ (page Général)
@@ -124,9 +123,9 @@ ms.lasthandoff: 08/11/2017
  Indiquez si le format 2000 de Message Queuing (ou MSMQ) doit être utilisé. La valeur par défaut est **False**.  
   
  **MSMQConnection**  
- Sélectionnez un gestionnaire de connexions MSMQ existant ou cliquez sur \< **nouvelle connexion...** > pour en créer un nouveau.  
+ Sélectionnez un gestionnaire de connexions MSMQ existant ou cliquez sur \<**Nouvelle connexion...**> pour en créer un.  
   
- **Rubriques connexes** : [Gestionnaire de connexions MSMQ](../../integration-services/connection-manager/msmq-connection-manager.md), [Éditeur du gestionnaire de connexions MSMQ](../../integration-services/connection-manager/msmq-connection-manager-editor.md)  
+ **Rubriques connexes**: [Gestionnaire de connexions MSMQ](../../integration-services/connection-manager/msmq-connection-manager.md), [Éditeur du gestionnaire de connexions MSMQ](../../integration-services/connection-manager/msmq-connection-manager-editor.md)  
   
  **Message**  
  Spécifiez si la tâche MSMQ envoie ou reçoit des messages. Si vous sélectionnez l’option **Envoyer un message**, la page Envoyer est répertoriée dans le volet gauche de la boîte de dialogue ; si vous sélectionnez l’option **Recevoir un message**, la page Recevoir est répertoriée. Par défaut, cette valeur est définie sur **Envoyer un message**.  
@@ -150,7 +149,7 @@ ms.lasthandoff: 08/11/2017
  **MessageType**  
  Sélectionnez le type de message : Cette propriété dispose des options répertoriées dans le tableau suivant.  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |**Message de fichiers de données**|Le message est stocké dans un fichier. La sélection de cette valeur affiche l'option dynamique **DataFileMessage**.|  
 |**Message de type variable**|Le message est stocké dans une variable. Cette valeur affiche l'option dynamique **VariableMessage**.|  
@@ -188,7 +187,7 @@ ms.lasthandoff: 08/11/2017
  **MessageType**  
  Sélectionnez le type de message : Cette propriété dispose des options répertoriées dans le tableau suivant.  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |**Message de fichiers de données**|Le message est stocké dans un fichier. La sélection de cette valeur affiche l'option dynamique **DataFileMessage**.|  
 |**Message de type variable**|Le message est stocké dans une variable. Cette valeur affiche l'option dynamique **VariableMessage**.|  
@@ -207,7 +206,7 @@ ms.lasthandoff: 08/11/2017
  **Filtre**  
  Indiquez si vous voulez appliquer un filtre au message. Cette propriété dispose des options répertoriées dans le tableau suivant.  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |**Aucun filtre**|La tâche ne filtre pas les messages. Cette valeur affiche l’option dynamique **IdentifierReadOnly**.|  
 |**À partir du package**|Le message reçoit uniquement les messages du package spécifié. Cette valeur affiche l’option dynamique **Identifier**.|  
@@ -225,16 +224,16 @@ ms.lasthandoff: 08/11/2017
  **Rubriques connexes :** [Sélectionner un package](../../integration-services/control-flow/select-a-package.md)  
   
 #### <a name="messagetype--variable-message"></a>MessageType = Message de type variable  
- **Filtre**  
+ **Filter**  
  Indiquez si vous voulez appliquer un filtre aux messages. Cette propriété dispose des options répertoriées dans le tableau suivant.  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |**Aucun filtre**|La tâche ne filtre pas les messages. Cette valeur affiche l’option dynamique **IdentifierReadOnly**.|  
 |**À partir du package**|Le message reçoit uniquement les messages du package spécifié. Cette valeur affiche l’option dynamique **Identifier**.|  
   
  **Variable**  
- Tapez le nom de variable, ou cliquez sur \< **nouvelle variable...** >, puis configurez une nouvelle variable.  
+ Tapez le nom de la variable ou cliquez sur \<**Nouvelle variable…**>, puis configurez une nouvelle variable.  
   
  **Rubriques connexes :** [Ajouter une variable](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
@@ -254,7 +253,7 @@ ms.lasthandoff: 08/11/2017
  **Comparer**  
  Indiquez si vous voulez appliquer un filtre aux messages. Cette propriété dispose des options répertoriées dans le tableau suivant.  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |**Aucun**|Les messages ne sont pas comparés.|  
 |**Concordance exacte**|Les messages doivent correspondre exactement à la chaîne figurant dans l’option **CompareString** .|  
@@ -268,7 +267,7 @@ ms.lasthandoff: 08/11/2017
  **Comparer**  
  Indiquez si vous voulez appliquer un filtre aux messages. Cette propriété dispose des options répertoriées dans le tableau suivant.  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |**Aucun**|Les messages ne sont pas comparés.|  
 |**Concordance exacte**|Le message doit correspondre exactement à la chaîne figurant dans l’option **CompareString** .|  
@@ -279,7 +278,7 @@ ms.lasthandoff: 08/11/2017
  Si l’option **Comparer** n’est pas définie sur **Aucun**, indiquez la chaîne à laquelle le message doit être comparé.  
   
  **Variable**  
- Tapez le nom de la variable pour contenir le message reçu, ou cliquez sur \< **nouvelle variable...** >, puis configurez une nouvelle variable.  
+ Tapez le nom de la variable qui doit contenir le message reçu ou cliquez sur \<**Nouvelle variable…**>, puis configurez une nouvelle variable.  
   
  **Rubriques connexes :** [Ajouter une variable](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
@@ -303,9 +302,8 @@ ms.lasthandoff: 08/11/2017
  Créez une nouvelle variable.  
   
  **Rubriques connexes :** [Ajouter une variable](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Tâches Integration Services](../../integration-services/control-flow/integration-services-tasks.md)   
  [Flux de contrôle](../../integration-services/control-flow/control-flow.md)  
   
   
-

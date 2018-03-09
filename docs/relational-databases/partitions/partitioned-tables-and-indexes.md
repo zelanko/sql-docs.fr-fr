@@ -2,9 +2,12 @@
 title: "Tables et index partitionnés | Microsoft Docs"
 ms.custom: 
 ms.date: 01/20/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: partitions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-partition
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,18 +18,18 @@ helpviewer_keywords:
 - partitioned indexes [SQL Server], about partitioned indexes
 ms.assetid: cc5bf181-18a0-44d5-8bd7-8060d227c927
 caps.latest.revision: "48"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 85ad3feb00088d3a0d8fa6095b241cc9f07c1c13
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 6e5758702f60671b64fc97d9e9e98b89a80ccd6f
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
-# <a name="partitioned-tables-and-indexes"></a>Tables et index partitionnés
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend en charge le partitionnement des tables et des index. Les données des tables et des index partitionnés sont divisées en unités qui peuvent être réparties sur plusieurs groupes de fichiers d'une base de données. Les données sont partitionnées horizontalement, de sorte que les groupes de lignes sont mappés à des partitions individuelles. Toutes les partitions d'un index ou d'une table unique doivent résider dans la même base de données. La table ou l'index est traité en tant qu'entité logique unique lorsque des requêtes ou des mises à jour sont effectuées sur les données. Dans les versions antérieures à [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)]SP1, les tables et les index partitionnés n’étaient pas disponibles dans toutes les éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour obtenir la liste des fonctionnalités prises en charge par les éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez [Fonctionnalités prises en charge par les éditions de SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
+# <a name="partitioned-tables-and-indexes"></a>Partitioned Tables and Indexes
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend en charge le partitionnement des tables et des index. Les données des tables et des index partitionnés sont divisées en unités qui peuvent être réparties sur plusieurs groupes de fichiers d'une base de données. Les données sont partitionnées horizontalement, de sorte que les groupes de lignes sont mappés à des partitions individuelles. Toutes les partitions d'un index ou d'une table unique doivent résider dans la même base de données. La table ou l'index est traité en tant qu'entité logique unique lorsque des requêtes ou des mises à jour sont effectuées sur les données. Dans les versions antérieures à [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)]SP1, les tables et les index partitionnés n’étaient pas disponibles dans toutes les éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour obtenir la liste des fonctionnalités prises en charge par les éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez [Fonctionnalités prises en charge par les éditions de SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] prend en charge jusqu'à 15 000 partitions par défaut. Dans les versions antérieures à [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], le nombre de partitions était limité à 1 000 par défaut. Sur les systèmes x86, la création d'une table ou d'un index contenant plus de 1 000 partitions est possible, mais n'est pas prise en charge.  
@@ -77,7 +80,7 @@ ms.lasthandoff: 11/09/2017
  Pour optimiser les performances liées aux opérations parallèles, nous vous recommandons d’utiliser le même nombre de partitions que de cœurs de processeur, à hauteur de 64 (cette valeur correspondant au nombre maximal de processeurs parallèles que peut utiliser SQL Server).  
   
 ### <a name="memory-usage-and-guidelines"></a>Utilisation de la mémoire et recommandations  
- Nous vous recommandons d'utiliser au moins 16 Go de RAM si un grand nombre de partitions sont en cours d'utilisation. Si le système n'a pas assez de mémoire, les instructions DML (Data Manipulation Language), les instructions DDL (Data Definition Language) et d'autres opérations peuvent échouer en raison d'une insuffisance de mémoire. Les systèmes avec 16 Go de RAM qui exécutent un grand nombre de processus nécessitant beaucoup de mémoire risque de ne pas disposer de suffisamment de mémoire lors des opérations qui s'exécutent sur un grand nombre de partitions. Par conséquent, plus vous disposez de mémoire au-delà de 16 Go, moins vous risquez de rencontrer des problèmes de performances et de mémoire.  
+ Nous vous recommandons d'utiliser au moins 16 Go de RAM si un grand nombre de partitions sont en cours d'utilisation. Si le système n'a pas assez de mémoire, les instructions DML (Data Manipulation Language), les instructions DDL (Data Definition Language) et d'autres opérations peuvent échouer en raison d'une insuffisance de mémoire. Les systèmes avec 16 Go de RAM qui exécutent un grand nombre de processus nécessitant beaucoup de mémoire risque de ne pas disposer de suffisamment de mémoire lors des opérations qui s'exécutent sur un grand nombre de partitions. Par conséquent, plus vous disposez de mémoire au-delà de 16 Go, moins vous risquez de rencontrer des problèmes de performances et de mémoire.  
   
  Les limitations de mémoire peuvent affecter les performances de SQL Server ou sa capacité à créer un index partitionné. C'est le cas notamment lorsque l'index n'est pas aligné avec sa table de base ou son index cluster, si un index cluster a été appliqué à la table.  
   
@@ -103,7 +106,7 @@ ms.lasthandoff: 11/09/2017
 ## <a name="behavior-changes-in-statistics-computation-during-partitioned-index-operations"></a>Changements de comportement dans le calcul des statistiques pour les opérations d'index partitionnés  
  À partir de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], les statistiques ne sont pas créées en analysant toutes les lignes de la table lorsqu'un index partitionné est créé ou reconstruit. Au lieu de cela, l'optimiseur de requête utilise l'algorithme d'échantillonnage par défaut pour générer des statistiques. Après la mise à niveau d'une base de données avec des index partitionnés, vous pouvez remarquer une différence dans les données d'histogramme pour ces index. Cette modification du comportement peut ne pas affecter les performances des requêtes. Pour obtenir des statistiques sur les index partitionnés en analysant toutes les lignes de la table, utilisez CREATE STATISTICS ou UPDATE STATISTICS avec la clause FULLSCAN.  
   
-## <a name="related-tasks"></a>Tâches associées  
+## <a name="related-tasks"></a>Related Tasks  
   
 |||  
 |-|-|  
@@ -111,7 +114,7 @@ ms.lasthandoff: 11/09/2017
 |Décrit comment créer des fonctions de partition et des schémas de partition et les appliquer ensuite à une table ou à un index.|[Créer des tables et des index partitionnés](../../relational-databases/partitions/create-partitioned-tables-and-indexes.md)|  
 |||  
   
-## <a name="related-content"></a>Contenu connexe  
+## <a name="related-content"></a>Contenu associé  
  Les livres blancs suivants relatifs aux stratégies et implémentations de tables et index partitionnés pourront se révéler utiles.  
   
 -   [Stratégies de tables et d’index partitionnés avec SQL Server 2008](http://msdn.microsoft.com/library/dd578580\(SQL.100\).aspx)  

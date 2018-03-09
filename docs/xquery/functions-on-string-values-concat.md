@@ -3,30 +3,36 @@ title: Fonction concat (XQuery) | Documents Microsoft
 ms.custom: 
 ms.date: 03/09/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: xquery
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-applies_to: SQL Server
-dev_langs: XML
+applies_to:
+- SQL Server
+dev_langs:
+- XML
 helpviewer_keywords:
 - fn:concat function
 - concat function [XQuery]
 ms.assetid: d50afd20-a297-445e-be9e-13b48017e7ca
-caps.latest.revision: "32"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 97825cfdb9d633904d973b205ce965d3f5eb8f10
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 5f4970f431b3929268414fd78d7e834d7a835919
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="functions-on-string-values---concat"></a>Fonctions sur des valeurs de chaîne - concat
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Accepte zéro ou plusieurs chaînes comme arguments et renvoie une chaîne créée suite à la concaténation des valeurs de chacun de ces arguments.  
   
@@ -74,13 +80,13 @@ WHERE  PD.ProductModelID=28
   
 ```  
   
- Notez les points suivants dans la requête précédente :  
+ Notez les points suivants dans la requête précédente :  
   
 -   Dans la clause SELECT, CatalogDescription est une **xml** colonne de type. Par conséquent, le [méthode query() (type de données XML)](../t-sql/xml/query-method-xml-data-type.md), instructions.Query (), est utilisé. L'instruction XQuery est spécifiée comme argument de la méthode query.  
   
 -   Le document sur lequel porte la requête utilise des espaces de noms. Par conséquent, le **espace de noms** mot clé est utilisé pour définir le préfixe pour l’espace de noms. Pour plus d’informations, consultez [prologue XQuery](../xquery/modules-and-prologs-xquery-prolog.md).  
   
- Voici le résultat obtenu :  
+ Voici le résultat obtenu :  
   
 ```  
 <Product ProductModelID="28" ProductModelName="Road-450">1 year-parts and labor</Product>  

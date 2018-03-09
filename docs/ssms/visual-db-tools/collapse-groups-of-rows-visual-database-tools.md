@@ -3,8 +3,11 @@ title: "Réduire des groupes de lignes (Visual Database Tools) | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -16,16 +19,16 @@ ms.assetid: 7338dad0-965d-44ba-8c1a-b993acb7156d
 caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 11ab34e9c5651be1dc771d71a738f49bb230262a
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 4bc579ff02d58fbc4a06800af44e5eb514977aac
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="collapse-groups-of-rows-visual-database-tools"></a>Réduire des groupes de lignes (Visual Database Tools)
-Vous pouvez créer un résultat de requête dans lequel chaque ligne de résultat correspond à tout un groupe de lignes des données d'origine. La réduction de lignes donne les possibilités suivantes :  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Vous pouvez créer un résultat de requête dans lequel chaque ligne de résultat correspond à tout un groupe de lignes des données d’origine. La réduction de lignes donne les possibilités suivantes :  
   
 -   **Élimination de lignes en double** Certaines requêtes donnent des ensembles de résultats faisant apparaître plusieurs lignes identiques. Par exemple, vous pouvez créer un ensemble de résultats où les lignes citent une ville et son état si un auteur quelconque y réside, mais si plusieurs auteurs résident dans la même ville, vous obtiendrez plusieurs lignes identiques. L'instruction SQL obtenue peut se présenter de la manière suivante :  
   
@@ -71,7 +74,7 @@ Vous pouvez créer un résultat de requête dans lequel chaque ligne de résulta
   
     Pour plus d’informations sur la façon d’appliquer des critères de sélection aux groupes de lignes, consultez [Spécifier des conditions pour des groupes &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/specify-conditions-for-groups-visual-database-tools.md) et [Utiliser les clauses HAVING et WHERE dans la même requête &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/use-having-and-where-clauses-in-the-same-query-visual-database-tools.md).  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [Spécifier des critères de recherche &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md)  
 [Rubriques de procédures relatives à la conception de requêtes et de vues &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
   

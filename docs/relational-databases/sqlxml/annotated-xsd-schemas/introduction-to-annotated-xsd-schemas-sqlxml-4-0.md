@@ -8,7 +8,8 @@ ms.service:
 ms.component: sqlxml
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-xml
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -23,19 +24,20 @@ helpviewer_keywords:
 - annotated XSD schemas, examples
 - XML views [SQLXML]
 ms.assetid: 15282db1-65c4-43be-bdb7-e9ef49cb33a2
-caps.latest.revision: "29"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fcb543be6e567e25418cf2d54c387ab339c10d36
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 75af2a4c0523c6cc592105a016950a2b89e090ff
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="introduction-to-annotated-xsd-schemas-sqlxml-40"></a>Introduction aux schémas XSD annotés (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]Vous pouvez créer des vues XML des données relationnelles à l’aide du langage de définition de schéma XML (XSD). Ces vues peuvent ensuite être interrogées à l'aide de requêtes XML Path (XPath). Cette opération équivaut à créer des vues à l'aide d'instructions CREATE VIEW et à spécifier ensuite des requêtes SQL contre les vues.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+Vous pouvez créer des vues XML de données relationnelles à l'aide du langage XSD (XML Schema Definition). Ces vues peuvent ensuite être interrogées à l'aide de requêtes XML Path (XPath). Cette opération équivaut à créer des vues à l'aide d'instructions CREATE VIEW et à spécifier ensuite des requêtes SQL contre les vues.  
   
  Un schéma XML décrit la structure d'un document XML, ainsi que diverses contraintes agissant sur les données du document. Lorsque vous spécifiez des requêtes XPath à exécuter dans le schéma, la structure du document XML retournée est déterminée par le schéma dans lequel la requête XPath est exécutée.  
   
@@ -119,7 +121,7 @@ ms.lasthandoff: 11/17/2017
  Ce schéma XSD annoté crée la vue XML des données relationnelles. Vous pouvez interroger cette vue XML au moyen du langage XPath. En guise de résultat, une requête XPath retourne un document XML au lieu de l'ensemble de lignes retourné par les requêtes SQL.  
   
 > [!NOTE]  
->  Dans le schéma de mappage, le respect de la casse pour les valeurs relationnelles spécifiées (telles que le nom de table et le nom de colonne) varie selon que SQL Server utilise des paramètres de classement sensibles à la casse. Pour plus d’informations, consultez [Prise en charge d’Unicode et du classement](../../../relational-databases/collations/collation-and-unicode-support.md).  
+>  Dans le schéma de mappage, le respect de la casse pour les valeurs relationnelles spécifiées (telles que le nom de table et le nom de colonne) varie selon que SQL Server utilise des paramètres de classement sensibles à la casse. Pour plus d’informations, consultez [Collation and Unicode Support](../../../relational-databases/collations/collation-and-unicode-support.md).  
   
 ## <a name="other-resources"></a>Autres ressources  
  Vous trouverez des informations supplémentaires sur le langage XSD (XML Schema Definition), le langage XPath ( XML Path) et le langage XSLT (Extensible Stylesheet Language Transformations) sur les sites Web aux adresses suivantes :  

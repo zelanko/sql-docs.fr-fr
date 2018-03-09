@@ -1,11 +1,11 @@
 ---
-title: "Définir les propriétés de Package | Documents Microsoft"
+title: "Définir les propriétés d’un package | Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology:
@@ -28,17 +28,16 @@ helpviewer_keywords:
 - version properties [Integration Services]
 - SQL Server Integration Services packages, properties
 ms.assetid: 13f81c3e-2b18-4f83-b445-a2f4a2c560aa
-caps.latest.revision: 40
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f5acdf3ae4f27685fce7aab56aab423044491ee1
-ms.openlocfilehash: 658f7e77fe821fa4821b61162662175ab5f840c1
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 17db392a965b35d668404127d778bf7ef7ecc875
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="set-package-properties"></a>Définir les propriétés d'un package
   Lorsque vous créez un package dans [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] à l'aide de l'interface graphique fournie par [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , vous définissez les propriétés de l'objet de package dans la fenêtre Propriétés.  
@@ -116,7 +115,7 @@ ms.lasthandoff: 08/03/2017
 |**CreatorComputerName**|Nom de l'ordinateur sur lequel le package a été créé.|  
 |**CreatorName**|Nom de la personne qui a créé le package.|  
 |**Description**|Description des fonctionnalités du package.|  
-|**ID**|Identificateur global unique du package, affecté lors de la création du package. Cette propriété est en lecture seule. Pour générer une nouvelle valeur aléatoire pour le **ID** propriété, sélectionnez  **\<générer un nouvel ID\>**  dans la liste déroulante.|  
+|**ID**|Identificateur global unique du package, affecté lors de la création du package. Cette propriété est en lecture seule. Pour générer une nouvelle valeur aléatoire pour la propriété **ID**, sélectionnez **\<Générer un nouvel ID\>** dans la liste déroulante.|  
 |**Nom**|Nom du package.|  
 |**PackageType**|Type de package. Les valeurs possibles sont **Default**, **DTSDesigner**, **DTSDesigner100**, **DTSWizard**, **SQLDBMaint**et **SQLReplication**. La valeur par défaut de cette propriété est **Default**. Pour plus d'informations, consultez <xref:Microsoft.SqlServer.Dts.Runtime.DTSPackageType>.|  
   
@@ -147,7 +146,7 @@ ms.lasthandoff: 08/03/2017
   
 |Propriété|Description|  
 |--------------|-----------------|  
-|**IsolationLevel**|Niveau d'isolement de la transaction sur package. Cette propriété peut prendre les valeurs **Unspecified**, **Chaos**, **ReadUncommitted**, **ReadCommitted**, **RepeatableRead**, **Serializable**et **Snapshot**. La valeur par défaut de cette propriété est **Serializable**.<br /><br /> Remarque : la valeur **Snapshot** de la propriété **IsolationLevel** est incompatible avec les transactions de package. Cependant, vous ne pouvez pas utiliser la propriété **IsolationLevel** pour définir le niveau d'isolation des transactions de package pour **Shapshot**. Utilisez une requête SQL pour définir les transactions de package à **Snapshot**. Pour plus d’informations, consultez [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](../t-sql/statements/set-transaction-isolation-level-transact-sql.md).<br /><br /> Le système applique la propriété **IsolationLevel** aux transactions de package uniquement lorsque la propriété **TransactionOption** a la valeur **Required**.<br /><br /> La valeur de la propriété **IsolationLevel** demandée par un conteneur enfant est ignorée lorsque les conditions suivantes sont remplies :<br />La valeur de la propriété **TransactionOption** du conteneur enfant est **Supported**.<br />Le conteneur enfant rejoint la transaction d'un conteneur parent.<br /><br /> La valeur de la propriété **IsolationLevel** demandée par le conteneur est respectée uniquement lorsque le conteneur lance une nouvelle transaction. Un conteneur lance une nouvelle transaction lorsque les conditions suivantes sont remplies :<br />La valeur de la propriété **TransactionOption** du conteneur est **Required**.<br />Le parent n’a pas déjà démarré une transaction.<br /><br /> <br /><br /> Pour plus d'informations, consultez <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.IsolationLevel%2A>.|  
+|**IsolationLevel**|Niveau d'isolement de la transaction sur package. Cette propriété peut prendre les valeurs **Unspecified**, **Chaos**, **ReadUncommitted**, **ReadCommitted**, **RepeatableRead**, **Serializable**et **Snapshot**. La valeur par défaut de cette propriété est **Serializable**.<br /><br /> Remarque : la valeur **Snapshot** de la propriété **IsolationLevel** est incompatible avec les transactions de package. Cependant, vous ne pouvez pas utiliser la propriété **IsolationLevel** pour définir le niveau d'isolation des transactions de package pour **Shapshot**. Utilisez une requête SQL pour définir les transactions de package à **Snapshot**. Pour plus d’informations, consultez [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](../t-sql/statements/set-transaction-isolation-level-transact-sql.md).<br /><br /> Le système applique la propriété **IsolationLevel** aux transactions de package uniquement lorsque la propriété **TransactionOption** a la valeur **Required**.<br /><br /> La valeur de la propriété **IsolationLevel** demandée par un conteneur enfant est ignorée lorsque les conditions suivantes sont remplies :<br />La valeur de la propriété **TransactionOption** du conteneur enfant est **Supported**.<br />Le conteneur enfant rejoint la transaction d'un conteneur parent.<br /><br /> La valeur de la propriété **IsolationLevel** demandée par le conteneur est respectée uniquement lorsque le conteneur lance une nouvelle transaction. Un conteneur lance une nouvelle transaction lorsque les conditions suivantes sont remplies :<br />La valeur de la propriété **TransactionOption** du conteneur est **Required**.<br />Le parent n'a pas déjà démarré de transaction.<br /><br /> <br /><br /> Pour plus d'informations, consultez <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.IsolationLevel%2A>.|  
 |**TransactionOption**|Participation transactionnelle du package. Cette propriété peut prendre les valeurs **NotSupported**, **Supported**et **Required**. La valeur par défaut de cette propriété est **Supported**. Pour plus d'informations, consultez <xref:Microsoft.SqlServer.Dts.Runtime.DTSTransactionOption>.|  
   
 ###  <a name="Version"></a> Version  
@@ -161,7 +160,7 @@ ms.lasthandoff: 08/03/2017
 |**VersionMajor**|Dernière version majeure du package.|  
 |**VersionMinor**|Dernière version mineure du package.|  
 
-## <a name="set-package-properties-in-the-properties-window"></a>Définir les propriétés du package dans la fenêtre Propriétés 
+## <a name="set-package-properties-in-the-properties-window"></a>Définir les propriétés d’un package dans la fenêtre Propriétés 
 1.  Dans [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], ouvrez le projet [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] contenant le package à configurer.  
   
 2.  Dans **l’Explorateur de solutions**, double-cliquez sur le package pour l’ouvrir dans le concepteur [!INCLUDE[ssIS](../includes/ssis-md.md)] , ou cliquez avec le bouton droit et sélectionnez **Concepteur de vues**.  
@@ -176,4 +175,3 @@ ms.lasthandoff: 08/03/2017
   
 5.  Pour enregistrer le package mis à jour, dans le menu **Fichier** , cliquez sur **Enregistrer les éléments sélectionnés** .  
   
-

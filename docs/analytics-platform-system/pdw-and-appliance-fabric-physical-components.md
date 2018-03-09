@@ -3,10 +3,10 @@ title: "Composants physiques (système de plateforme Analytique) PDW et l’infr
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.technology: mpp-data-warehouse
 ms.custom: 
 ms.date: 01/05/2017
@@ -16,11 +16,11 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 7748d3da-0b7c-4ec6-9c22-4897758ba573
 caps.latest.revision: "17"
-ms.openlocfilehash: 93e4b1521b213c9d29f3cae9bcc900cad6c6a674
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 95e80aaa641b04391d96b55f7491e21f1a30b6d1
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="pdw-and-appliance-fabric-physical-components"></a>Composants physiques PDW et l’infrastructure d’application
 Les noms et descriptions pour les composants physiques de l’ensemble fibre optique PDW et l’équipement. La région PDW contient tous ces composants.  
@@ -32,9 +32,9 @@ Affiche les noms des composants physiques et où ils se trouvent dans le rack pr
   
 ![Noms de composants de région PDW - HP](./media/pdw-and-appliance-fabric-physical-components/APS_HW_ComponentNames-HP.png "APS_HW_ComponentNames-HP")  
   
-Le nom réel pour les composants PDW est le nom de région PDW, suivi par un tiret, suivi par le nom du composant. Par exemple, si le nom de région PDW est PDW123, les noms réels sont **PDW123-CTL01**, **PDW123-CMP01**, etc..  
+Le nom réel pour les composants PDW est le nom de région PDW, suivi par un tiret, suivi par le nom du composant. Par exemple, si le nom de région PDW est PDW123, les noms réels sont **PDW123-CTL01**, **PDW123-CMP01**, etc.  
   
-De même, le nom réel pour les composants d’infrastructure appliance est le domaine du matériel, suivi d’un tiret, suivi par le nom du composant. Par exemple, si le domaine d’application est FSW123, l’infrastructure d’application les machines virtuelles sont **FSW123-WDS**, **FSW123-AD01**, **FSW123-VMM**, etc..  
+De même, le nom réel pour les composants d’infrastructure appliance est le domaine du matériel, suivi d’un tiret, suivi par le nom du composant. Par exemple, si le domaine d’application est FSW123, l’infrastructure d’application les machines virtuelles sont **FSW123-WDS**, **FSW123-AD01**, **FSW123-VMM**, etc.  
   
 Voici une vue consolidée d’une région PDW avec 6 nœuds de calcul.  
   

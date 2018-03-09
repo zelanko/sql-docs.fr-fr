@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c1dcdaf02010c150e40295226e1258e385cdf75f
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 4a182979a037ec21f7d86d907bb0f0c2a020191a
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="odbc-cursor-library-error-codes"></a>Codes d’erreur bibliothèque de curseurs ODBC
 > [!IMPORTANT]  
@@ -36,7 +36,7 @@ ms.lasthandoff: 11/20/2017
 > [!NOTE]  
 >  La bibliothèque de curseurs ne trie pas les enregistrements d’état ; le Gestionnaire de pilotes et les ODBC 3. *x* pilotes sont chargés pour le classement des enregistrements d’état.  
   
-|SQLSTATE| Description|Peut être retourné à partir de|  
+|SQLSTATE|Description|Peut être retourné à partir de|  
 |--------------|-----------------|--------------------------|  
 |01000|Curseur n’est pas modifiable.|**SQLFetch**<br /><br /> **SQLFetchScroll**|  
 |01000|Bibliothèque de curseurs ne pas utilisé. Échec du chargement.|**SQLBrowseConnect**<br /><br /> **SQLConnect**<br /><br /> **SQLDriverConnect**|  

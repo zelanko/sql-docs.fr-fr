@@ -1,5 +1,5 @@
 ---
-title: "CRÉER le POOL de ressources (Transact-SQL) | Documents Microsoft"
+title: CREATE RESOURCE POOL (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/10/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - RESOURCE POOL
 - CREATE_RESOURCE_POOL_TSQL
 - RESOURCE_POOL_TSQL
-dev_langs: TSQL
-helpviewer_keywords: CREATE RESOURCE POOL
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- CREATE RESOURCE POOL
 ms.assetid: 82712505-c6f9-4a65-a469-f029b5a2d6cd
-caps.latest.revision: "42"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b0d6f56e80b0a28dffab2311df3ecce3b2ac76cd
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: 6da47e346606170b29798b0301c10c5adeeed055
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-resource-pool-transact-sql"></a>CREATE RESOURCE POOL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -67,7 +70,7 @@ CREATE RESOURCE POOL pool_name
 ```  
   
 ## <a name="arguments"></a>Arguments  
- *nom du pool*  
+ *pool_name*  
  Nom défini par l'utilisateur du pool de ressources. *pool_name* est alphanumérique, peut contenir jusqu'à 128 caractères, doit être unique au sein d’une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]et doivent respecter les règles pour [identificateurs](../../relational-databases/databases/database-identifiers.md).  
   
  MIN_CPU_PERCENT =*valeur*  
@@ -77,7 +80,7 @@ CREATE RESOURCE POOL pool_name
  Spécifie la processeur bande passante moyenne maximale que toutes les demandes dans le pool de ressources recevront en cas de contention du processeur. *valeur* est un entier dont le paramètre par défaut est 100. La plage autorisée pour *valeur* est comprise entre 1 et 100.  
   
  CAP_CPU_PERCENT =*valeur*  
- **S'applique à**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **S'applique à**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Spécifie une limite maximale d'utilisation fixe sur la bande passante de l'UC que toutes les demandes dans le pool de ressources recevront. Limite le niveau de la bande passante maximum de l'UC pour qu'il soit identique à la valeur spécifiée. *valeur* est un entier dont le paramètre par défaut est 100. La plage autorisée pour *valeur* est comprise entre 1 et 100.  
   
@@ -97,19 +100,19 @@ INNER JOIN sys.dm_os_schedulers AS sc
     AND sc.scheduler_id < 1048576;  
 ```  
   
- MIN_MEMORY_PERCENT =*valeur*  
+ MIN_MEMORY_PERCENT =*value*  
  Spécifie la quantité de mémoire minimale réservée à ce pool de ressources qui ne peut pas être partagée avec d'autres pools de ressources. *valeur* est un entier dont la valeur par défaut 0 la plage autorisée pour *valeur* est comprise entre 0 et 100.  
   
  MAX_MEMORY_PERCENT =*valeur*  
  Spécifie la mémoire totale du serveur qui peut être utilisée par les demandes dans ce pool de ressources. *valeur* est un entier dont le paramètre par défaut est 100. La plage autorisée pour *valeur* est comprise entre 1 et 100.  
   
- MIN_IOPS_PER_VOLUME =*valeur*  
- **S'applique à**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] et [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ MIN_IOPS_PER_VOLUME =*value*  
+ **S'applique à**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Spécifie les opérations d'E/S minimales par seconde (IOPS) par volume disque à réserver au pool de ressources. La plage autorisée pour *valeur* est comprise entre 0 et 2 ^ 31-1 (2 147 483 647). Spécifiez 0 pour indiquer l'absence de seuil minimal pour le pool. La valeur par défaut est 0.  
   
- MAX_IOPS_PER_VOLUME =*valeur*  
- **S'applique à**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] et [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ MAX_IOPS_PER_VOLUME =*value*  
+ **S'applique à**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Spécifie les opérations d'E/S maximales par seconde (IOPS) par volume disque à autoriser pour le pool de ressources. La plage autorisée pour *valeur* est comprise entre 0 et 2 ^ 31-1 (2 147 483 647). Spécifiez 0 pour définir un seuil illimité pour le pool. La valeur par défaut est 0.  
   
@@ -124,7 +127,7 @@ INNER JOIN sys.dm_os_schedulers AS sc
   
  Le pourcentage de l'UC total pour chaque composant d'affinité (planificateur(s) ou nœud(s) NUMA) ne doit pas dépasser 100 %.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Requiert l'autorisation CONTROL SERVER.  
   
 ## <a name="examples"></a>Exemples  
@@ -139,7 +142,7 @@ GO
   
  Dans l'exemple suivant, `CAP_CPU_PERCENT` est défini avec une limite maximale d'utilisation fixe de 30 % et `AFFINITY SCHEDULER` a pour valeur une plage de 0 à 63 et de 128 à 191. 
   
-**S'applique à**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+**S'applique à**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
 ```  
 CREATE RESOURCE POOL PoolAdmin  
@@ -156,7 +159,7 @@ WITH (
   
  L’exemple suivant définit `MIN_IOPS_PER_VOLUME` à \<une valeur > et `MAX_IOPS_PER_VOLUME` à \<une valeur >. Ces valeurs déterminent les opérations de lecture et d'écriture d'E/S physiques disponibles pour le pool de ressources.  
   
-**S'applique à**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] et [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+**S'applique à**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
 ```  
 CREATE RESOURCE POOL PoolAdmin  
@@ -174,7 +177,7 @@ WITH (
  [ALTER WORKLOAD GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/alter-workload-group-transact-sql.md)   
  [DROP WORKLOAD GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/drop-workload-group-transact-sql.md)   
  [ALTER RESOURCE GOVERNOR &#40;Transact-SQL&#41;](../../t-sql/statements/alter-resource-governor-transact-sql.md)   
- [Pool de ressources de Resource Governor](../../relational-databases/resource-governor/resource-governor-resource-pool.md)   
+ [Resource Governor Resource Pool](../../relational-databases/resource-governor/resource-governor-resource-pool.md)   
  [Créer un pool de ressources](../../relational-databases/resource-governor/create-a-resource-pool.md)  
   
   

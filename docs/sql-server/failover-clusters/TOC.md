@@ -25,3 +25,4 @@
 ### [Modifier l’adresse IP d’une instance de cluster de basculement](windows/change-the-ip-address-of-a-failover-cluster-instance.md)  
 ## [Mettre à niveau une instance de cluster de basculement SQL Server](windows/upgrade-a-sql-server-failover-cluster-instance.md)  
 ### [Mettre à niveau une instance de cluster de basculement SQL Server (programme d’installation)](windows/upgrade-a-sql-server-failover-cluster-instance-setup.md)
+### [Mettre à niveau une instance de cluster de basculement SQL Server (Windows Server 2008/2008 R2/2012)](windows/upgrade-sql-server-failover-cluster-instance-2008-2012.md)

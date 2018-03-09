@@ -1,5 +1,5 @@
 ---
-title: "Dériver les valeurs de colonne à l’aide de la Transformation de colonne dérivée | Documents Microsoft"
+title: "Dériver les valeurs de colonnes à l’aide de la transformation de colonne dérivée | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -18,17 +18,16 @@ helpviewer_keywords:
 - columns [Integration Services], values
 - Derived Column transformation
 ms.assetid: 28b07746-fc6f-42b2-b741-9de6fac3f29c
-caps.latest.revision: 48
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
-ms.openlocfilehash: c0106d70fa5a3b31f0a92edf5c7088cf427c59a8
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 80c5df3dec8351c6ab47e596081a5c4f8f7fd3fb
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="derive-column-values-by-using-the-derived-column-transformation"></a>Dériver les valeurs de colonnes à l'aide de la transformation de colonne dérivée
   Pour pouvoir ajouter et configurer une transformation de colonne dérivée, le package doit inclure au moins une tâche de flux de données et une source.  
@@ -52,7 +51,7 @@ ms.lasthandoff: 08/03/2017
     > [!NOTE]  
     >  Si l'expression n'est pas valide, son texte est mis en surbrillance et une info-bulle dans la colonne décrit les erreurs.  
   
-7.  Dans le **colonne dérivée** liste, sélectionnez  **\<ajouter en tant que nouvelle colonne >** pour écrire le résultat de l’évaluation de l’expression dans une nouvelle colonne ou sélectionnez une colonne existante à mettre à jour avec le résultat d’évaluation.  
+7.  Dans la liste **Colonne dérivée**, sélectionnez **\<ajouter en tant que nouvelle colonne>** pour écrire le résultat d’évaluation de l’expression dans une nouvelle colonne, ou sélectionnez une colonne existante à mettre à jour avec le résultat de l’évaluation.  
   
      Si vous choisissez d’utiliser une nouvelle colonne, la boîte de dialogue **Éditeur de transformation de colonne dérivée** évalue l’expression et affecte un type de données à la colonne en fonction du type de données, de la longueur, de la précision, de l’échelle et de la page de codes.  
   
@@ -66,13 +65,12 @@ ms.lasthandoff: 08/03/2017
   
 12. Pour enregistrer le package mis à jour, cliquez sur **Enregistrer les éléments sélectionnés** dans le menu **Fichier** .  
   
-## <a name="see-also"></a>Voir aussi  
- [Transformation de colonne dérivée](../../../integration-services/data-flow/transformations/derived-column-transformation.md)   
- [Types de données Integration Services](../../../integration-services/data-flow/integration-services-data-types.md)   
+## <a name="see-also"></a> Voir aussi  
+ [Derived Column Transformation](../../../integration-services/data-flow/transformations/derived-column-transformation.md)   
+ [Types de données d’Integration Services](../../../integration-services/data-flow/integration-services-data-types.md)   
  [Transformations Integration Services](../../../integration-services/data-flow/transformations/integration-services-transformations.md)   
- [Chemins d’accès d’Integration Services](../../../integration-services/data-flow/integration-services-paths.md)   
+ [Chemins Integration Services](../../../integration-services/data-flow/integration-services-paths.md)   
  [Tâche de flux de données](../../../integration-services/control-flow/data-flow-task.md)   
- [Integration Services &#40; SSIS &#41; Expressions](../../../integration-services/expressions/integration-services-ssis-expressions.md)  
+ [Expressions Integration Services &#40;SSIS&#41;](../../../integration-services/expressions/integration-services-ssis-expressions.md)  
   
   
-

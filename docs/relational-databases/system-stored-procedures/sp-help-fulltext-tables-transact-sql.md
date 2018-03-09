@@ -1,5 +1,5 @@
 ---
-title: sp_help_fulltext_tables (Transact-SQL) | Documents Microsoft
+title: sp_help_fulltext_tables (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_help_fulltext_tables
 - sp_help_fulltext_tables_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sp_help_fulltext_tables
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_help_fulltext_tables
 ms.assetid: 86e24a5f-a869-43f6-b83e-c52b7b01b5ff
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 587fb2495e065d00a9031c198704af6ede6e80d5
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 5398d465c2368ae216e05aa3232c5c2dcd1790f8
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sphelpfulltexttables-transact-sql"></a>sp_help_fulltext_tables (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +37,7 @@ ms.lasthandoff: 11/27/2017
   Affiche la liste des tables qui sont inscrites pour l'indexation de texte intégral.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]Utilisez **sys.fulltext_indexes** affichage du catalogue à la place. Pour plus d’informations, consultez [sys.fulltext_indexes &#40; Transact-SQL &#41; ](../../relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql.md).  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Utilisez **sys.fulltext_indexes** affichage du catalogue à la place. Pour plus d’informations, consultez [sys.fulltext_indexes &#40; Transact-SQL &#41; ](../../relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql.md).  
   
  ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -47,10 +50,10 @@ sp_help_fulltext_tables [ [ @fulltext_catalog_name = ] 'fulltext_catalog_name' ]
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@fulltext_catalog_name=**] **'***fulltext_catalog_name***'**  
+ [ **@fulltext_catalog_name=**] **'***fulltext_catalog_name***'**  
  Nom du catalogue de texte intégral. *fulltext_catalog_name* est **sysname**, avec NULL comme valeur par défaut. Si *fulltext_catalog_name* est omis ou a la valeur NULL, toutes les tables indexées en texte intégral associés à la base de données sont retournées. Si *fulltext_catalog_name* est spécifié, mais *table_name* est omis ou a la valeur NULL, les informations d’index de recherche en texte intégral sont récupérées pour chaque table indexée en texte intégral associé au catalogue. Si les deux *fulltext_catalog_name* et *table_name* sont spécifiés, une ligne est retournée si *table_name* associé *fulltext_catalog_name*; sinon, une erreur est générée.  
   
- [  **@table_name=**] **'***table_name***'**  
+ [ **@table_name=**] **'***table_name***'**  
  Nom de la table en une ou deux parties pour laquelle les métadonnées d'index de texte intégral sont demandées. *nom_table* est **nvarchar (517)**, avec NULL comme valeur par défaut. Si une seule *table_name* est spécifié, la ligne concernant *table_name* est retourné.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
@@ -61,13 +64,13 @@ sp_help_fulltext_tables [ [ @fulltext_catalog_name = ] 'fulltext_catalog_name' ]
 |Nom de colonne|Type de données| Description|  
 |-----------------|---------------|-----------------|  
 |**TABLE_OWNER**|**sysname**|Propriétaire de la table. Nom de l'utilisateur de la base de données qui a créé la table.|  
-|**NOM_TABLE**|**sysname**|Nom de la table.|  
+|**TABLE_NAME**|**sysname**|Nom de la table.|  
 |**FULLTEXT_KEY_INDEX_NAME**|**sysname**|Index imposant la contrainte UNIQUE dans la colonne désignée comme colonne clé unique.|  
 |**FULLTEXT_KEY_COLID**|**int**|ID de colonne de l'index unique identifié par FULLTEXT_KEY_NAME.|  
 |**FULLTEXT_INDEX_ACTIVE**|**int**|Indique si les colonnes de cette table marquées pour l'indexation de texte intégral peuvent faire l'objet de requêtes :<br /><br /> 0 = Inactif<br /><br /> 1 = Actif|  
 |**FULLTEXT_CATALOG_NAME**|**sysname**|Catalogue de texte intégral contenant les données d'index sur le texte intégral.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Les autorisations d'exécution reviennent par défaut aux membres du rôle **public** .  
   
 ## <a name="examples"></a>Exemples  
@@ -83,8 +86,8 @@ GO
 ## <a name="see-also"></a>Voir aussi  
  [INDEXPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/indexproperty-transact-sql.md)   
  [OBJECTPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/objectproperty-transact-sql.md)   
- [sp_fulltext_table &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-fulltext-table-transact-sql.md)   
- [sp_help_fulltext_tables_cursor &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-tables-cursor-transact-sql.md)   
+ [sp_fulltext_table &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-fulltext-table-transact-sql.md)   
+ [sp_help_fulltext_tables_cursor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-tables-cursor-transact-sql.md)   
  [Procédures stockées système &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

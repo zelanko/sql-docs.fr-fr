@@ -8,20 +8,21 @@ ms.service:
 ms.component: microsoft-excel-add-in
 ms.reviewer: 
 ms.suite: sql
-ms.technology: master-data-services
+ms.technology:
+- master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b987b141-5abf-4161-a073-4cfc3e7f5aae
-caps.latest.revision: "8"
-author: smartysanthosh
-ms.author: nagavo
+caps.latest.revision: 
+author: leolimsft
+ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6e255c0abb98d6ffae0cad9d68fd8696fdef8f71
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: af0dd255b49e77593bbd14ffa6d06542a995a06c
+ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="filter-dialog-box-mds-add-in-for-excel"></a>Boîte de dialogue Filtrer (Complément MDS pour Excel)
   Dans [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], utilisez la boîte de dialogue **Filtre** pour limiter la liste des données managées MDS avant de les charger dans Excel.  
@@ -45,9 +46,9 @@ ms.lasthandoff: 11/20/2017
   
 |Nom du contrôle|Description|  
 |------------------|-----------------|  
-|Attribut|Affiche l'attribut utilisé pour filtrer. Si aucun attribut n'est répertorié, les attributs n'ont pas été ajoutés.<br /><br /> Remarque : vous pouvez filtrer à l’aide d’attributs que vous n’envisagez pas d’afficher dans la feuille de calcul.|  
+|Attribute|Affiche l'attribut utilisé pour filtrer. Si aucun attribut n'est répertorié, les attributs n'ont pas été ajoutés.<br /><br /> Remarque : vous pouvez filtrer à l’aide d’attributs que vous n’envisagez pas d’afficher dans la feuille de calcul.|  
 |Opérateur|Affiche les opérateurs qui correspondent au type d'attribut sélectionné. Pour plus d’informations, consultez [Opérateurs de filtre &#40;Master Data Services&#41;](../../master-data-services/filter-operators-master-data-services.md).|  
-|Critère|Critères qui doivent servir de filtre.|  
+|Critères|Critères qui doivent servir de filtre.|  
 |Résumé de la mise à jour|Si vous utilisez de grands datasets, cliquez pour mettre à jour la section **Résumé** avec les informations relatives à la quantité de données qui seront chargées.|  
 |Ajouter|Quand vous cliquez sur un attribut dans la section **Colonnes** , puis sur **Ajouter**, un attribut est ajouté à la liste de filtres.|  
 |Supprimer tout|Supprime tous les filtres de la liste.|  
@@ -59,12 +60,12 @@ ms.lasthandoff: 11/20/2017
 |Nom du contrôle|Description|  
 |------------------|-----------------|  
 |Modèle|Nom du modèle.|  
-|Version|Nom de la version.|  
+|Options de version|Nom de la version.|  
 |Entité|Nom de l'entité.|  
 |Lignes|Nombre de lignes qui seront chargées dans Excel, en fonction des filtres appliqués dans la section **Lignes** .|  
 |Colonnes|Nombre de colonnes qui seront chargées dans Excel, en fonction des attributs sélectionnés dans la section **Colonnes** .|  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Filtrer les données avant l’exportation &#40;Complément MDS pour Excel&#41;](../../master-data-services/microsoft-excel-add-in/filter-data-before-exporting-mds-add-in-for-excel.md)   
  [Vue d’ensemble : exportation de données vers Excel &#40;Complément MDS pour Excel&#41;](../../master-data-services/microsoft-excel-add-in/overview-exporting-data-to-excel-mds-add-in-for-excel.md)  
   

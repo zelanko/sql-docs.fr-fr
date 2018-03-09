@@ -8,23 +8,25 @@ ms.service:
 ms.component: in-memory-oltp
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine-imoltp
+ms.technology:
+- database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 6e005de0-3a77-4b91-b497-14cc0f9f6605
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: JennieHubbard
 ms.author: jhubbard
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4e72a08f08a3d6ad49c429739108e0e862d0e507
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a83f67f8f376f48bc76a66636138a6b971e5b834
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
-# <a name="configuring-storage-for-memory-optimized-tables"></a>Configuration du stockage des tables mémoire optimisées
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Vous devez configurer des opérations d’entrée/sortie par seconde (IOPS) et la capacité de stockage.  
+# <a name="configuring-storage-for-memory-optimized-tables"></a>Configuration du stockage des tables optimisées en mémoire
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Vous devez configurer des opérations d'entrée/sortie par seconde (IOPS) et la capacité de stockage.  
   
 ## <a name="storage-capacity"></a>Capacité de stockage  
  Utilisez les informations contenues dans [Estimer les besoins en mémoire des tables optimisées en mémoire](../../relational-databases/in-memory-oltp/estimate-memory-requirements-for-memory-optimized-tables.md) pour estimer la taille en mémoire des tables durables optimisées en mémoire de la base de données. Les index n'étant pas conservés pour les tables mémoire optimisées, n'incluez pas la taille des index. Une fois que vous avez déterminé la taille, vous devez fournir l'espace disque correspondant à quatre fois la taille des tables durables en mémoire.  
@@ -45,7 +47,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="encryption"></a>Chiffrement  
  Dans [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], le stockage des tables optimisées en mémoire est chiffré dans le cadre de l’activation de TDE (Transparent Data Encryption) sur la base de données. Pour plus d’informations, consultez [Transparent Data Encryption &#40;TDE&#41;](../../relational-databases/security/encryption/transparent-data-encryption.md). Dans [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], les fichiers de point de contrôle ne sont pas chiffrés, même si TDE est activé sur la base de données.
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Création et gestion du stockage des objets mémoire optimisés](../../relational-databases/in-memory-oltp/creating-and-managing-storage-for-memory-optimized-objects.md)  
   
   

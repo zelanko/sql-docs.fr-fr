@@ -2,9 +2,12 @@
 title: Assistant Nouvelle Publication | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -39,18 +42,18 @@ f1_keywords:
 helpviewer_keywords: New Publication Wizard
 ms.assetid: 57d65d16-90d1-4b4c-b68e-6418a7064e76
 caps.latest.revision: "18"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 33adc9d05d1ef7ed1740f8aa28effc55e36028e0
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 1be53dfe84e9731339dabdc68c67cf9d161fae69
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
-# <a name="new-publication-wizard"></a>Assistant Nouvelle publication
-  Cette section fournit des informations sur les pages suivantes de l'Assistant Nouvelle publication :  
+# <a name="new-publication-wizard"></a>New Publication Wizard
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Cette section fournit des informations sur les pages suivantes de l’Assistant Nouvelle publication :  
   
 -   [Serveur de publication Oracle](../../relational-databases/replication/oracle-publisher.md)  
   
@@ -78,7 +81,7 @@ ms.lasthandoff: 11/09/2017
   
 -   [Agent d’instantané &#40;Assistant Nouvelle publication&#41;](../../relational-databases/replication/snapshot-agent-new-publication-wizard.md)  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)   
  [Publier des données et des objets de base de données](../../relational-databases/replication/publish/publish-data-and-database-objects.md)   
  [Référence des propriétés &#40;réplication&#41;](../../relational-databases/replication/properties-reference-replication.md)  

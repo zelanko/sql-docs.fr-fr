@@ -1,5 +1,5 @@
 ---
-title: UNICODE (Transact-SQL) | Documents Microsoft
+title: UNICODE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,28 +8,30 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - UNICODE
 - UNICODE_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - first character of input expression [SQL Server]
 - UNICODE function
 - Unicode [SQL Server], UNICODE function
 ms.assetid: 5e3c40b2-8401-4741-9f2a-bae70eaa4da6
-caps.latest.revision: "35"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 345fa8bd8abe4f26b2c3def6c48e1dc49fa37a7c
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.openlocfilehash: ce87bcab037ff99b7eaa03a443727db17db19b74
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="unicode-transact-sql"></a>UNICODE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -144,9 +146,11 @@ Character # Unicode Character UNICODE Value
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [NCHAR &#40; Transact-SQL &#41;](../../t-sql/functions/nchar-transact-sql.md)   
+ [ASCII &#40;Transact-SQL&#41;](../../t-sql/functions/ascii-transact-sql.md)  
+ [CHAR &#40;Transact-SQL&#41;](../../t-sql/functions/char-transact-sql.md)  
+ [NCHAR &#40;Transact-SQL&#41;](../../t-sql/functions/nchar-transact-sql.md)   
  [Fonctions de chaîne &#40; Transact-SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)   
- [Prise en charge d'Unicode et du classement](../../relational-databases/collations/collation-and-unicode-support.md)  
+ [Prise en charge d’Unicode et du classement](../../relational-databases/collations/collation-and-unicode-support.md)  
   
   
 

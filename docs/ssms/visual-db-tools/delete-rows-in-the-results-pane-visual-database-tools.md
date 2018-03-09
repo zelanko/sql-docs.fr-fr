@@ -3,8 +3,11 @@ title: "Supprimer des lignes dans le volet de résultats (Visual Database Tools)
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -20,16 +23,16 @@ ms.assetid: a1147905-fe4a-4fac-b576-a17622477e66
 caps.latest.revision: "3"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 806a4af5df592567fbcec5ed087f7e1bdf15104e
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 237fb1b60a47a9dbea9917ccec2121682658d4cf
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="delete-rows-in-the-results-pane-visual-database-tools"></a>Supprimer des lignes dans le volet Résultats (Visual Database Tools)
-Supprimez des lignes dans le volet Résultats si vous souhaitez supprimer des enregistrements dans la base de données. Pour supprimer l'ensemble des lignes, vous pouvez utiliser une requête Delete. Pour plus d’informations, consultez [Créer des requêtes Delete &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/create-delete-queries-visual-database-tools.md). Si vous souhaitez uniquement supprimer des lignes du volet Résultats, modifiez les critères de la requête. Pour plus d’informations, consultez [Spécifier des critères de recherche &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md).  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Supprimez des lignes dans le volet Résultats si vous souhaitez supprimer des enregistrements dans la base de données. Pour supprimer l'ensemble des lignes, vous pouvez utiliser une requête Delete. Pour plus d’informations, consultez [Créer des requêtes Delete &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/create-delete-queries-visual-database-tools.md). Si vous souhaitez uniquement supprimer des lignes du volet Résultats, modifiez les critères de la requête. Pour plus d’informations, consultez [Spécifier des critères de recherche &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md).  
   
 ### <a name="to-delete-a-row-or-rows"></a>Pour supprimer une ou plusieurs lignes  
   
@@ -45,7 +48,7 @@ Supprimez des lignes dans le volet Résultats si vous souhaitez supprimer des en
 > [!NOTE]  
 > Si certaines des lignes sélectionnées ne peuvent pas être supprimées de la base de données, aucune d'elles n'est supprimée et un message s'affiche pour vous indiquer les lignes qui ne peuvent pas être supprimées.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [Créer des requêtes Delete &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/create-delete-queries-visual-database-tools.md)  
 [Spécifier des critères de recherche &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md)  
   

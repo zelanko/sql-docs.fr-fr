@@ -1,5 +1,5 @@
 ---
-title: "Se connecter à une Source de données MySQL (SQL Server Assistant Importation et exportation) | Documents Microsoft"
+title: "Se connecter à une source de données MySQL (Assistant Importation et Exportation SQL Server) | Microsoft Docs"
 ms.custom: 
 ms.date: 06/20/2017
 ms.prod: sql-non-specified
@@ -13,83 +13,82 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 3d7c5a38-18d3-4cc9-a241-04422cb250d3
-caps.latest.revision: 10
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 3df56fcda5b39c2895de83feac4f302686b1adf3
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: d011a5b39f6aded3bc305c922b5d2788026559e2
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="connect-to-a-mysql-data-source-sql-server-import-and-export-wizard"></a>Se connecter à une Source de données MySQL (SQL Server Assistant Importation et exportation)
-Cette rubrique vous montre comment se connecter à un **MySQL** de source de données à partir de la **choisir une Source de données** ou **choisir une Destination** page de l’importation de SQL Server et l’Assistant Exportation. Il existe plusieurs fournisseurs de données que vous pouvez utiliser pour se connecter à MySQL.
+# <a name="connect-to-a-mysql-data-source-sql-server-import-and-export-wizard"></a>Se connecter à une source de données MySQL (Assistant Importation et Exportation SQL Server)
+Cette rubrique explique comment se connecter à une source de données **MySQL** à partir de la page **Choisir une source de données** ou **Choisir une destination** de l’Assistant Importation et Exportation SQL Server. Vous pouvez utiliser plusieurs fournisseurs de données pour vous connecter à MySQL.
 
 > [!IMPORTANT]
-> Les exigences détaillées et les conditions préalables requises pour la connexion à une base de données MySQL n’entrent pas dans le cadre de cet article de Microsoft. Cet article suppose que vous avez déjà installé par le logiciel MySQL client et que vous pouvez déjà se connecter à la base de données MySQL. Pour plus d’informations, consultez votre administrateur de base de données MySQL ou la documentation MySQL.
+> Les exigences et prérequis détaillés pour la connexion à une base de données MySQL n’entrent pas dans le cadre de cet article Microsoft. Il est supposé dans cet article que le logiciel client MySQL est déjà installé et que vous pouvez vous connecter à la base de données MySQL cible. Pour plus d’informations, consultez votre administrateur de base de données MySQL ou la documentation MySQL.
 
-## <a name="get-the-mysql-connectors"></a>Obtient les connecteurs MySQL
-Télécharger les fournisseurs et pilotes décrites dans cette rubrique à partir de la [MySQL connecteurs](https://dev.mysql.com/downloads/connector/) page.
+## <a name="get-the-mysql-connectors"></a>Se procurer les connecteurs MySQL
+Téléchargez les fournisseurs et les pilotes décrits dans cette rubrique depuis la page [Connecteurs MySQL](https://dev.mysql.com/downloads/connector/).
 
-## <a name="connect-to-mysql-with-the-net-framework-data-provider-for-mysql"></a>Se connecter à MySQL avec .net Framework Data Provider pour MySQL
-Après avoir sélectionné **fournisseur de données .NET Framework pour MySQL** sur la **choisir une Source de données** ou **choisir une Destination** page de l’Assistant, la page présente une liste groupée des options pour le fournisseur. Bon nombre d'entre elles sont des noms hostiles et les paramètres inhabituels. Heureusement, vous devez uniquement fournir quelques informations. Vous pouvez ignorer les valeurs par défaut pour les autres paramètres.
+## <a name="connect-to-mysql-with-the-net-framework-data-provider-for-mysql"></a>Se connecter à MySQL au moyen du fournisseur de données .NET Framework pour MySQL
+Après avoir sélectionné le **Fournisseur de données .NET Framework pour MySQL** dans la page **Choisir une source de données** ou **Choisir une destination** de l’Assistant, la page présente une liste groupée d’options pour le fournisseur. Nombre d’entre elles portent des noms inconnus et ont des paramètres inhabituels. Heureusement, vous ne devez fournir que peu d’éléments d’information. Vous pouvez ignorer les valeurs par défaut des autres paramètres.
 
 > [!NOTE]
-> Les options de connexion pour ce fournisseur de données sont les mêmes si MySQL est la source ou la destination. Autrement dit, les options sont les mêmes sur les deux le **choisir une Source de données** et **choisir une Destination** pages de l’Assistant.
+> Les options de connexion de ce fournisseur de données sont les mêmes que MySQL soit la source ou la destination. Autrement dit, les options que vous voyez sont identiques dans les pages **Choisir une source de données** et **Choisir une destination** de l’Assistant.
 
-|Informations nécessaires|.NET framework Data Provider pour la propriété de MySQL|
+|Informations nécessaires|Fournisseur de données .NET Framework pour la propriété MySQL|
 |---|---|
 |Nom du serveur|**Server**|
-|Nom de la base de données|**Base de données**|
-|Informations d’authentification (connexion)|**Id d’utilisateur** et **mot de passe**|
+|Nom de la base de données|**Sauvegarde de la base de données**|
+|Informations d’authentification (connexion)|**ID d’utilisateur** et **Mot de passe**|
 
-Vous n’êtes pas obligé d’entrer la chaîne de connexion dans le **ConnectionString** champ de la liste. Une fois que vous entrez des valeurs individuelles pour le nom du serveur MySQL (**Server**) et les informations de connexion, l’Assistant assemble la chaîne de connexion à partir de chacune de ces propriétés et leurs valeurs. 
+Il n’est pas nécessaire d’entrer la chaîne de connexion dans le champ **ConnectionString** de la liste. Une fois que vous avez entré les valeurs individuelles pour le nom du serveur MySQL (**Serveur**) et les informations de connexion, l’Assistant assemble la chaîne de connexion à partir des propriétés individuelles et de leurs valeurs. 
 
-![Se connecter à MySQL avec le fournisseur .NET, 1 sur 2](../../integration-services/import-export-data/media/connect-to-mysql-with-the-net-provider-1-of-2.png)
+![Se connecter à MySQL à l’aide du fournisseur .NET, 1 sur 2](../../integration-services/import-export-data/media/connect-to-mysql-with-the-net-provider-1-of-2.png)
 
-![Se connecter à MySQL avec le fournisseur .NET, 2 sur 2](../../integration-services/import-export-data/media/connect-to-mysql-with-the-net-provider-2-of-2.png)
+![Se connecter à MySQL à l’aide du fournisseur .NET, 2 sur 2](../../integration-services/import-export-data/media/connect-to-mysql-with-the-net-provider-2-of-2.png)
 
-## <a name="connect-to-mysql-with-the-mysql-odbc-driver"></a>Se connecter à MySQL avec le pilote ODBC de MySQL
-Pilotes ODBC ne sont pas répertoriées dans la liste déroulante des sources de données. Pour vous connecter avec un pilote ODBC, commencez par sélectionner le **fournisseur de données .NET Framework pour ODBC** comme source de données sur le **choisir une Source de données** ou **choisir une Destination** page. Ce fournisseur agit comme un wrapper autour du pilote ODBC.
+## <a name="connect-to-mysql-with-the-mysql-odbc-driver"></a>Se connecter à MySQL à l’aide du pilote ODBC MySQL
+Les pilotes ODBC ne sont pas répertoriés dans la liste déroulante des sources de données. Pour vous connecter avec un pilote ODBC, commencez par sélectionner le **Fournisseur de données .NET Framework pour ODBC** comme source de données dans la page **Choisir une source de données** ou **Choisir une destination**. Ce fournisseur agit comme un wrapper autour du pilote ODBC.
 
-Voici l’écran générique que vous voyez immédiatement après avoir sélectionné le fournisseur de données .NET Framework pour ODBC.
+Voici l’écran générique qui s’affiche immédiatement après que vous avez sélectionné le fournisseur de données .NET Framework pour ODBC.
 
-![Se connecter à SQL avec ODBC avant](../../integration-services/import-export-data/media/connect-to-sql-with-odbc-before.jpg)
+![Connexion à SQL avec ODBC avant](../../integration-services/import-export-data/media/connect-to-sql-with-odbc-before.jpg)
 
-### <a name="options-to-specify-mysql-odbc-driver"></a>Options pour spécifier (le pilote ODBC MySQL)
+### <a name="options-to-specify-mysql-odbc-driver"></a>Options à spécifier (pilote ODBC MySQL)
 
 > [!NOTE]
-> Les options de connexion pour ce fournisseur de données et le pilote ODBC sont les mêmes si MySQL est la source ou la destination. Autrement dit, les options sont les mêmes sur les deux le **choisir une Source de données** et **choisir une Destination** pages de l’Assistant.
+> Les options de connexion de ce fournisseur de données et de ce pilote ODBC sont les mêmes que MySQL soit la source ou la destination. Autrement dit, les options que vous voyez sont identiques dans les pages **Choisir une source de données** et **Choisir une destination** de l’Assistant.
 
-Pour vous connecter à MySQL avec le pilote ODBC de MySQL, assembler une chaîne de connexion qui inclut les paramètres suivants et leurs valeurs. Le format de chaîne de connexion complète immédiatement après la liste des paramètres.
+Pour vous connecter à MySQL au moyen du pilote ODBC MySQL, assemblez une chaîne de connexion qui inclut les paramètres suivants et leurs valeurs. Le format d’une chaîne de connexion complète est donné immédiatement après la liste des paramètres.
 
 > [!TIP]
-> Obtenir de l’aide d’assembler une chaîne de connexion est bonne. Ou, au lieu de fournir une chaîne de connexion, fournir une source de données existante (nom de source de données) ou créez-en un. Pour plus d’informations sur ces options, consultez [se connecter à une Source de données ODBC](../../integration-services/import-export-data/connect-to-an-odbc-data-source-sql-server-import-and-export-wizard.md).
+> Obtenez de l’aide pour l’assemblage d’une chaîne de connexion correcte. Au lieu de produire une chaîne de connexion, vous pouvez fournir un nom de source de données (DSN, data source name) existant ou en créer un. Pour obtenir plus d’informations sur ces options, consultez [Se connecter à une source de données ODBC](../../integration-services/import-export-data/connect-to-an-odbc-data-source-sql-server-import-and-export-wizard.md).
 
-**Pilote**  
-Le nom du pilote ODBC.
+**Driver**  
+Nom du pilote ODBC.
 
 **Server**  
-Le nom du serveur MySQL. 
+Nom du serveur MySQL. 
 
-**Base de données**  
-Le nom de la base de données MySQL.
+**Sauvegarde de la base de données**  
+Nom de la base de données MySQL.
 
-**UID** et **PWD**   
-L’id utilisateur et un mot de passe pour se connecter.
+**UID** et **Pwd**   
+ID d’utilisateur et mot de passe pour se connecter.
 
-### <a name="connection-string-format"></a>Format de chaîne de connexion
-Voici le format d’une chaîne de connexion par défaut.
+### <a name="connection-string-format"></a>Format de la chaîne de connexion
+Voici le format d’une chaîne de connexion standard.
 
     ```
     Driver={MySQL ODBC 5.3 Unicode Driver};Server=<server>;Database=<database>;UID=<user id>;PWD=<password>
     ```
 
-### <a name="enter-the-connection-string"></a>Entrez la chaîne de connexion
-Entrez la chaîne de connexion dans le **ConnectionString** champ, ou entrez le nom de source de données dans le **Dsn** champ sur la **choisir une Source de données** ou **choisir une Destination** page. Après avoir entré la chaîne de connexion, l’Assistant analyse la chaîne et affiche les propriétés et leurs valeurs dans la liste.
+### <a name="enter-the-connection-string"></a>Entrer la chaîne de connexion
+Indiquez la chaîne de connexion dans le champ **ConnectionString** ou entrez le nom de la source de données dans le champ **Dsn** de la page **Choisir une source de données** ou **Choisir une Destination**. Une fois que vous avez entré la chaîne de connexion, l’Assistant analyse cette chaîne et affiche les propriétés individuelles avec leur valeur dans la liste.
 
 L’exemple suivant utilise cette chaîne de connexion.
 
@@ -101,11 +100,10 @@ Voici l’écran que vous voyez après avoir entré la chaîne de connexion.
 
 ![Se connecter à MySQL avec ODBC](../../integration-services/import-export-data/media/connect-to-mysql-with-odbc.png)
 
-## <a name="other-data-providers-and-more-info"></a>Plus d’informations et les autres fournisseurs de données
-Pour plus d’informations sur la façon de se connecter à MySQL avec un fournisseur de données qui n’est pas répertorié ici, consultez [les chaînes de connexion MySQL](https://www.connectionstrings.com/mysql/). Ce site tiers contient également plus d’informations sur les fournisseurs de données et les paramètres de connexion décrites dans cette page.
+## <a name="other-data-providers-and-more-info"></a>Autres fournisseurs de données et renseignements complémentaires
+Pour plus d’informations sur la connexion à MySQL au moyen d’un fournisseur de données qui n’est pas répertorié ici, consultez [Chaînes de connexion MySQL](https://www.connectionstrings.com/mysql/). Ce site tiers contient également des informations complémentaires sur les fournisseurs de données et les paramètres de connexion décrits dans cette page.
 
 ## <a name="see-also"></a>Voir aussi
-[Choisissez une Source de données](../../integration-services/import-export-data/choose-a-data-source-sql-server-import-and-export-wizard.md)  
-[Choisir une Destination](../../integration-services/import-export-data/choose-a-destination-sql-server-import-and-export-wizard.md)
-
+[Choisir une source de données](../../integration-services/import-export-data/choose-a-data-source-sql-server-import-and-export-wizard.md)  
+[Choisir une destination](../../integration-services/import-export-data/choose-a-destination-sql-server-import-and-export-wizard.md)
 

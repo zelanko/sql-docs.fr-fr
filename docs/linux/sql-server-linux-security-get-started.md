@@ -1,27 +1,29 @@
 ---
 title: "Prise en main la sécurité SQL Server sur Linux | Documents Microsoft"
-description: "Cette rubrique décrit les actions de sécurité standard."
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+description: "Cet article décrit les actions de sécurité standard."
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.date: 10/02/2017
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: linux
+ms.component: 
 ms.suite: sql
 ms.technology: database-engine
 ms.assetid: ecc72850-8b01-492e-9a27-ec817648f0e0
-ms.custom: 
+ms.custom: sql-linux
 ms.workload: Inactive
-ms.openlocfilehash: faf7903fc945fc1ce966d6bf6560f55c8d494314
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 8000ee26dd5118d4380f4e2ab33d39aa96967466
+ms.sourcegitcommit: a8311ec5ad8313e85e6989f70c5ff9ef120821d6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="walkthrough-for-the-security-features-of-sql-server-on-linux"></a>Procédure pas à pas pour les fonctionnalités de sécurité de SQL Server sur Linux
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 Si vous êtes un utilisateur Linux qui est une nouveauté dans SQL Server, les tâches suivantes vous guident parmi les tâches de sécurité. Celles-ci ne sont pas uniques ou spécifiques à Linux, mais elle permet de vous donner une idée des zones pour approfondir vos recherches. Dans chaque exemple, un lien est fourni à la documentation détaillée de cette zone.
 
@@ -31,14 +33,14 @@ Si vous êtes un utilisateur Linux qui est une nouveauté dans SQL Server, les t
 
 ## <a name="create-a-login-and-a-database-user"></a>Créez une connexion et un utilisateur de base de données 
 
-D’autres accorder l’accès à SQL Server en créant une connexion dans la base de données master à l’aide de la [CREATE LOGIN](../t-sql/statements/create-login-transact-sql.md) instruction. Exemple :
+D’autres accorder l’accès à SQL Server en créant une connexion dans la base de données master à l’aide de la [CREATE LOGIN](../t-sql/statements/create-login-transact-sql.md) instruction. Par exemple :
 
 ```
 CREATE LOGIN Larry WITH PASSWORD = '************';  
 ```
 
 >  [!NOTE]
->  Utilisez toujours un mot de passe à la place les astérisques ci-dessus.
+>  Utilisez toujours un mot de passe à la place les astérisques dans la commande précédente.
 
 Comptes de connexion peuvent se connecter à SQL Server et avoir accès (avec des autorisations limitées) à la base de données master. Pour vous connecter à une base de données utilisateur, un compte de connexion a besoin d’une identité correspondante au niveau base de données, appelé utilisateur de base de données. Les utilisateurs sont spécifiques à chaque base de données et doivent être créés séparément dans chaque base de données à leur accorder l’accès. L’exemple suivant vous permet de passer dans la base de données AdventureWorks2014 et utilise ensuite la [CREATE USER](../t-sql/statements/create-user-transact-sql.md) instruction pour créer un utilisateur nommé Larry qui est associé à la connexion nommée Larry. Bien que la connexion et l’utilisateur sont liées (mappé à l’autre), ils sont des objets différents. La connexion est un principe de niveau serveur. L’utilisateur est un principal au niveau de la base de données.
 
@@ -52,7 +54,7 @@ GO
 - Un compte d’administrateur SQL Server peut se connecter à une base de données et pouvez créer plusieurs connexions et utilisateurs dans une base de données.  
 - Lorsqu’un utilisateur crée une base de données qu’ils deviennent le propriétaire de base de données, ce qui peut se connecter à cette base de données. Les propriétaires de base de données peuvent créer d’autres utilisateurs.
 
-Ultérieurement, vous pouvez autoriser des connexions pour créer une connexion plus en leur octroyant le `ALTER ANY LOGIN` autorisation. À l’intérieur d’une base de données, vous pouvez autoriser d’autres utilisateurs à créer d’autres utilisateurs en leur octroyant le `ALTER ANY USER` autorisation. Exemple :   
+Ultérieurement, vous pouvez autoriser des connexions pour créer une connexion plus en leur octroyant le `ALTER ANY LOGIN` autorisation. À l’intérieur d’une base de données, vous pouvez autoriser d’autres utilisateurs à créer d’autres utilisateurs en leur octroyant le `ALTER ANY USER` autorisation. Par exemple :   
 
 ```
 GRANT ALTER ANY LOGIN TO Larry;   
@@ -64,7 +66,7 @@ GRANT ALTER ANY USER TO Jerry;
 GO   
 ```
 
-La connexion Jerry peut créer plusieurs connexions, et l’utilisateur Jerry peuvent créer d’autres utilisateurs.
+La connexion Larry pouvez désormais créer plusieurs connexions, et l’utilisateur Jerry peuvent créer d’autres utilisateurs.
 
 
 ## <a name="granting-access-with-least-privileges"></a>Octroi d’accès avec des privilèges minimum
@@ -101,7 +103,7 @@ Pour plus d’informations sur le système d’autorisation, consultez [mise en 
 
 [Sécurité de niveau ligne](../relational-databases/security/row-level-security.md) vous permet de restreindre l’accès aux lignes dans une base de données en fonction de l’utilisateur qui exécute une requête. Cette fonctionnalité est utile pour les scénarios de s’assurer que les clients peuvent accéder uniquement leurs propres données ou que les employés peuvent accéder uniquement les données pertinentes à leur service.   
 
-Les étapes ci-dessous vous guide dans le paramétrage de plusieurs utilisateurs avec différents au niveau des lignes accès à la `Sales.SalesOrderHeader` table. 
+Les étapes suivantes dans la configuration des deux utilisateurs avec accès au niveau des lignes différent pour le `Sales.SalesOrderHeader` table. 
 
 Créez deux comptes d’utilisateur pour tester la sécurité au niveau des lignes :    
    
@@ -247,7 +249,7 @@ ALTER DATABASE AdventureWorks2014
 SET ENCRYPTION ON;   
 ```
 
-Pour supprimer le chiffrement transparent des données, exécutez`ALTER DATABASE AdventureWorks2014 SET ENCRYPTION OFF;`   
+Pour supprimer le chiffrement transparent des données, exécutez `ALTER DATABASE AdventureWorks2014 SET ENCRYPTION OFF;`   
 
 Les opérations de chiffrement et le déchiffrement sont planifiées sur les threads d’arrière-plan par SQL Server. Vous pouvez consulter l'état de ces opérations à l'aide des affichages catalogue et des vues de gestion dynamique mentionnés dans la liste fournie plus loin dans cette rubrique.   
 

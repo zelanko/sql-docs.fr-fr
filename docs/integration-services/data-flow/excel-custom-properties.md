@@ -1,25 +1,28 @@
 ---
-title: "Propriétés personnalisées d’Excel | Documents Microsoft"
+title: "Propriétés personnalisées d’Excel | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: data-flow
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: bdcc72b8-8950-47bd-88bf-5db6d48cc6bf
-caps.latest.revision: 8
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 0a635dcb4facce4cb9b6cf8501dc8bd01977a1b4
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/03/2017
-
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: 0c52f5c78afff62eaad9d837c86d32112a25bd0a
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="excel-custom-properties"></a>Propriétés personnalisées d'Excel
   **Propriétés personnalisées des sources**  
@@ -32,11 +35,11 @@ ms.lasthandoff: 08/03/2017
 |-------------------|---------------|-----------------|  
 |AccessMode|Entier|Mode utilisé pour accéder à la base de données. Les valeurs possibles sont **Open Rowset**, **OpenRowset à partir de Variable**, **Commande SQL**et **Commande SQL à partir d'une variable**. La valeur par défaut est **Open Rowset**.|  
 |CommandTimeout|Entier|Nombre de secondes accordées comme délai d'exécution d'une commande.  Une valeur égale à 0 indique un délai illimité.<br /><br /> **Remarque** Cette propriété n’est pas disponible dans l’ **Éditeur de source Excel**, mais elle peut être définie à l’aide de l’ **Éditeur avancé**.|  
-|OpenRowset|Chaîne|Nom de l'objet de base de données utilisé pour ouvrir un ensemble de lignes.|  
-|OpenRowsetVariable|Chaîne|Variable qui contient le nom de l'objet de base de données utilisé pour ouvrir un ensemble de lignes.|  
-|ParameterMapping|Chaîne|Mappage des paramètres de la commande SQL en variables.|  
-|SqlCommand|Chaîne|Commande SQL à exécuter.|  
-|SqlCommandVariable|Chaîne|Variable qui contient la commande SQL à exécuter.|  
+|OpenRowset|String|Nom de l'objet de base de données utilisé pour ouvrir un ensemble de lignes.|  
+|OpenRowsetVariable|String|Variable qui contient le nom de l'objet de base de données utilisé pour ouvrir un ensemble de lignes.|  
+|ParameterMapping|String|Mappage des paramètres de la commande SQL en variables.|  
+|SqlCommand|String|Commande SQL à exécuter.|  
+|SqlCommandVariable|String|Variable qui contient la commande SQL à exécuter.|  
   
  La sortie et les colonnes de sortie de la source Excel ne disposent pas de propriétés personnalisées.  
   
@@ -55,16 +58,16 @@ ms.lasthandoff: 08/03/2017
 |FastLoadKeepIdentity|Booléen|Valeur spécifiant si les valeurs d'identité doivent être copiées lors du chargement des données. Cette propriété est disponible uniquement lorsque vous utilisez l'une des options de chargement rapide. La valeur par défaut de cette propriété est **False**.|  
 |FastLoadKeepNulls|Booléen|Valeur spécifiant si les valeurs NULL doivent être copiées lors du chargement des données. Cette propriété est disponible uniquement avec l'une des options de chargement rapide. La valeur par défaut de cette propriété est **False**.|  
 |FastLoadMaxInsertCommitSize|Entier|Valeur qui spécifie la taille du lot que la destination Excel tente de valider au cours des opérations de chargement rapide. La valeur par défaut est **2147483647**. La valeur **0** indique une opération de validation simple après le traitement de toutes les lignes.|  
-|FastLoadOptions|Chaîne|Collection d'options de chargement rapide. Les options de chargement rapide incluent le verrouillage des tables et la vérification des contraintes. Vous pouvez spécifier une de ces options, les deux ou ni l'une ni l'autre.<br /><br /> Remarque : certaines options de cette propriété ne sont pas disponibles dans l’ **Éditeur de destination Excel**, mais vous pouvez les définir à l’aide de l’ **éditeur avancé**.|  
-|OpenRowset|Chaîne|Quand AccessMode a la valeur **OpenRowset**, nom de la table ou de la vue à laquelle la destination Excel a accès.|  
-|OpenRowsetVariable|Chaîne|Quand AccessMode a la valeur **OpenRowset à partir de Variable**, nom de la variable contenant le nom de la table ou de la vue à laquelle la destination Excel a accès.|  
-|SqlCommand|Chaîne|Quand AccessMode a la valeur **Commande SQL**, instruction Transact-SQL que la destination Excel utilise pour spécifier les colonnes de destination pour les données.|  
+|FastLoadOptions|String|Collection d'options de chargement rapide. Les options de chargement rapide incluent le verrouillage des tables et la vérification des contraintes. Vous pouvez spécifier une de ces options, les deux ou ni l'une ni l'autre.<br /><br /> Remarque : certaines options de cette propriété ne sont pas disponibles dans l’ **Éditeur de destination Excel**, mais vous pouvez les définir à l’aide de l’ **éditeur avancé**.|  
+|OpenRowset|String|Quand AccessMode a la valeur **OpenRowset**, nom de la table ou de la vue à laquelle la destination Excel a accès.|  
+|OpenRowsetVariable|String|Quand AccessMode a la valeur **OpenRowset à partir de Variable**, nom de la variable contenant le nom de la table ou de la vue à laquelle la destination Excel a accès.|  
+|SqlCommand|String|Quand AccessMode a la valeur **Commande SQL**, instruction Transact-SQL que la destination Excel utilise pour spécifier les colonnes de destination pour les données.|  
   
  L'entrée et les colonnes d'entrée de la destination Excel ne disposent pas de propriétés personnalisées.  
   
  Pour plus d’informations, consultez [Destination Excel](../../integration-services/data-flow/excel-destination.md).  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Propriétés communes](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
   

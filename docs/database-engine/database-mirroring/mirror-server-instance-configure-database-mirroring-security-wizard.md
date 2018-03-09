@@ -2,9 +2,12 @@
 title: "Instance de serveur miroir (Configurer l’Assistant Sécurité de mise en miroir de bases de données) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: database-mirroring
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -13,16 +16,16 @@ ms.assetid: 53223432-615e-440f-904d-925d33ec2144
 caps.latest.revision: "42"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5a1a1b795e571ea783618a2a8a75111b420ecc99
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: e6440acda92e77b3558cf60ba3c54cb5b8b3c042
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="mirror-server-instance-configure-database-mirroring-security-wizard"></a>Instance de serveur miroir (Configurer l'Assistant Sécurité de mise en miroir de bases de données)
-  Cette page vous permet de spécifier des informations sur l'instance de serveur avec la base de données miroir.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Cette page vous permet de spécifier des informations sur l’instance de serveur avec la base de données miroir.  
   
 > [!IMPORTANT]  
 >  L'instance de serveur miroir doit exécuter la même édition de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)](Standard ou Entreprise) que l'instance de serveur principal. En outre, nous vous conseillons vivement d'exécuter les instances sur des systèmes comparables pouvant gérer des charges de travail identiques.  
@@ -39,7 +42,7 @@ ms.lasthandoff: 11/09/2017
   
  Dans le cas contraire, entrez le nom de l'instance de serveur miroir. Notez que l'instance de serveur miroir ne peut pas être identique à l'instance de serveur principal.  
   
- **Connecter**  
+ **Se connecter**  
  Si aucune instance de serveur miroir n’a été spécifiée, cliquez sur **Se connecter** pour afficher la boîte de dialogue **Se connecter au serveur** , dans laquelle vous pouvez spécifier l’instance de serveur et établir une connexion.  
   
  Si l’instance a été spécifiée, mais que l’Assistant ne propose pas de connexion doté d’autorisations suffisantes pour vérifier l’existence du point de terminaison, cliquez sur **Se connecter**. Dans la boîte de dialogue **Se connecter au serveur** qui s’affiche, l’instance de serveur est présélectionnée et ne peut pas être modifiée. Spécifiez un compte de domaine qui possède une autorisation suffisante et connectez-vous à l'instance du serveur.  
@@ -65,7 +68,7 @@ ms.lasthandoff: 11/09/2017
   
  Pour désactiver le chiffrement, désactivez la case à cocher. Pour réactiver le chiffrement, activez la case à cocher.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Point de terminaison de mise en miroir de bases de données &#40;SQL Server&#41;](../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)   
  [Propriétés de la base de données &#40;page Mise en miroir&#41;](../../relational-databases/databases/database-properties-mirroring-page.md)   
  [Créer un point de terminaison de mise en miroir de bases de données pour l’authentification Windows &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)   

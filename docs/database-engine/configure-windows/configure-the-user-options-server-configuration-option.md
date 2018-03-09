@@ -17,15 +17,15 @@ helpviewer_keywords:
 - user options option [SQL Server]
 ms.assetid: cfed8f86-6bcf-4b90-88eb-9656e22d5dc5
 caps.latest.revision: "25"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 84f3081d1f5737c9b324c0ffe51b94a1c5a7183c
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 7cd2202d31fdb2b68b25bbe2214df156e38b9ce7
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="configure-the-user-options-server-configuration-option"></a>Configurer l'option de configuration de serveur user options
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +58,7 @@ ms.lasthandoff: 11/20/2017
   
     |Valeur|Configuration|Description|  
     |-----------|-------------------|-----------------|  
-    |1|DISABLE_DEF_CNST_CHK|Contrôle les opérations de vérification des contraintes provisoires ou différées.|  
+    | 1|DISABLE_DEF_CNST_CHK|Contrôle les opérations de vérification des contraintes provisoires ou différées.|  
     |2|IMPLICIT_TRANSACTIONS|Pour les connexions à la bibliothèque réseau dblib, contrôle si une transaction est lancée implicitement lors de l'exécution d'une instruction. Le paramètre IMPLICIT_TRANSACTIONS n'a aucun effet sur les connexions ODBC ou OLEDB.|  
     |4|CURSOR_CLOSE_ON_COMMIT|Contrôle le comportement des curseurs après une opération de validation.|  
     |8|ANSI_WARNINGS|Contrôle la troncature et la valeur NULL dans les avertissements relatifs aux fonctions d'agrégat.|  
@@ -78,7 +78,7 @@ ms.lasthandoff: 11/20/2017
   
 ###  <a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Autorisations  
+####  <a name="Permissions"></a> Permissions  
  Les autorisations d’exécution de **sp_configure** , sans paramètre ou avec le premier paramètre uniquement, sont accordées par défaut à tous les utilisateurs. Pour exécuter **sp_configure** avec les deux paramètres afin de modifier une option de configuration ou d’exécuter l’instruction RECONFIGURE, un utilisateur doit disposer de l’autorisation de niveau serveur ALTER SETTINGS. L'autorisation ALTER SETTINGS est implicitement détenue par les rôles serveur fixes **sysadmin** et **serveradmin** .  
   
 ##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
@@ -103,7 +103,7 @@ ms.lasthandoff: 11/20/2017
   
 3.  Copiez et collez l'exemple suivant dans la fenêtre de requête, puis cliquez sur **Exécuter**. Cet exemple montre comment utiliser [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) pour configurer `user options` afin de modifier le paramètre de l’option de serveur ANSI_WARNINGS.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012 ;  
 GO  
 EXEC sp_configure 'user options', 8 ;  
@@ -116,7 +116,7 @@ GO
 ##  <a name="FollowUp"></a> Suivi : Après avoir configuré l'option de configuration user options  
  Le paramètre prend effet immédiatement sans redémarrage du serveur.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [RECONFIGURE &#40;Transact-SQL&#41;](../../t-sql/language-elements/reconfigure-transact-sql.md)   
  [Options de configuration de serveur &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   

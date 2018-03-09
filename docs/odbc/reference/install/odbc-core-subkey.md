@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -21,16 +21,16 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 85c4e842ef48f412696c4a0c851480915f5d9b27
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 9331aa39d5df84cc5269fb995c594df9cd08e27f
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="odbc-core-subkey"></a>ODBC Core sous-clé
 La valeur sous la sous-clé ODBC Core donne le nombre d’utilisations pour les composants principaux (Gestionnaire de pilotes, bibliothèque de curseurs, programme d’installation DLL et ainsi de suite). Le format de cette valeur est illustré dans le tableau suivant.  
   
-|Nom|Type de données|data|  
+|Nom   |Type de données|data|  
 |----------|---------------|----------|  
 |UsageCount|REG_DWORD|*nombre*|  
   

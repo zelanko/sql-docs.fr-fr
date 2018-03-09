@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-data
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 1d7d87e2-bf0d-4ebb-a287-80b5a967a3f2
 caps.latest.revision: "7"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 5d09ae6530bc9180b23a4ec81eeaeaabf1c41110
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 0d5c9c11ddf274af9bf8f1851509dae5bff8e27a
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="extended-field-properties-for-an-analysis-services-database-ssrs"></a>Propriétés de champ étendues pour une base de données Analysis Services (SSRS)
   L’extension pour le traitement des données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] prend en charge les propriétés de champ étendues. Les propriétés de champs étendues sont des propriétés complémentaires aux propriétés **Value** et **IsMissing** qui sont disponibles sur la source de données et prises en charge par l’extension pour le traitement des données. Les propriétés étendues ne figurent pas dans le volet des données de rapport dans le cadre de la collection de champs pour un dataset de rapport. Vous pouvez inclure des valeurs de propriété de champ étendues dans votre rapport en écrivant des expressions qui en spécifient le nom à l’aide de la collection **Fields** intégrée.  
@@ -54,18 +52,18 @@ ms.lasthandoff: 12/05/2017
 |------------------|--------------|---------------------------------------|  
 |**Value**|**Objet**|Précise la valeur de données du champ.|  
 |**IsMissing**|**Booléen**|Indique si le champ figure dans le dataset obtenu.|  
-|**UniqueName**|**Chaîne**|Retourne le nom complet d'un niveau. Par exemple, la valeur **UniqueName** valeur d’un employé peut être *[Employee].[Employee Department].[Department].&[Sales].&[North American Sales Manager].&[272]*.|  
-|**BackgroundColor**|**Chaîne**|Retourne la couleur d'arrière-plan définie dans la base de données pour le champ.|  
-|**Color**|**Chaîne**|Retourne la couleur de premier plan définie dans la base de données pour l'élément.|  
-|**FontFamily**|**Chaîne**|Retourne le nom de la police définie dans la base de données pour l'élément.|  
-|**FontSize**|**Chaîne**|Retourne la taille en points de la police définie dans la base de données pour l'élément.|  
-|**FontWeight**|**Chaîne**|Retourne l'épaisseur de la police définie dans la base de données pour l'élément.|  
-|**FontStyle**|**Chaîne**|Retourne le style de la police définie dans la base de données pour l'élément.|  
-|**TextDecoration**|**Chaîne**|Retourne la mise en forme de texte spéciale définie dans la base de données pour l'élément.|  
-|**FormattedValue**|**Chaîne**|Retourne la valeur mise en forme d'une mesure ou d'un chiffre clé. Par exemple, la propriété **FormattedValue** de **Sales Amount Quota** retourne un format monétaire semblable à $1,124,400.00.|  
+|**UniqueName**|**String**|Retourne le nom complet d'un niveau. Par exemple, la valeur **UniqueName** valeur d’un employé peut être *[Employee].[Employee Department].[Department].&[Sales].&[North American Sales Manager].&[272]*.|  
+|**BackgroundColor**|**String**|Retourne la couleur d'arrière-plan définie dans la base de données pour le champ.|  
+|**Color**|**String**|Retourne la couleur de premier plan définie dans la base de données pour l'élément.|  
+|**FontFamily**|**String**|Retourne le nom de la police définie dans la base de données pour l'élément.|  
+|**FontSize**|**String**|Retourne la taille en points de la police définie dans la base de données pour l'élément.|  
+|**FontWeight**|**String**|Retourne l'épaisseur de la police définie dans la base de données pour l'élément.|  
+|**FontStyle**|**String**|Retourne le style de la police définie dans la base de données pour l'élément.|  
+|**TextDecoration**|**String**|Retourne la mise en forme de texte spéciale définie dans la base de données pour l'élément.|  
+|**FormattedValue**|**String**|Retourne la valeur mise en forme d'une mesure ou d'un chiffre clé. Par exemple, la propriété **FormattedValue** de **Sales Amount Quota** retourne un format monétaire semblable à $1,124,400.00.|  
 |**Clé**|**Objet**|Retourne la clé d'un niveau.|  
-|**LevelNumber**|**Entier**|Dans le cas des hiérarchies parent-enfant, cette propriété retourne le nombre de niveaux ou de dimensions.|  
-|**ParentUniqueName**|**Chaîne**|Dans le cas des hiérarchies parent-enfant, cette propriété retourne le nom complet du niveau parent.|  
+|**LevelNumber**|**Integer**|Dans le cas des hiérarchies parent-enfant, cette propriété retourne le nombre de niveaux ou de dimensions.|  
+|**ParentUniqueName**|**String**|Dans le cas des hiérarchies parent-enfant, cette propriété retourne le nom complet du niveau parent.|  
   
 > [!NOTE]  
 >  Ces propriétés de champ étendues ont des valeurs seulement si la source de données (par exemple, le cube [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ) fournit ces valeurs quand votre rapport s’exécute et récupère les données pour ses datasets. Vous pouvez alors faire référence à ces valeurs de propriété de champ à partir de n'importe quelle expression en utilisant la syntaxe décrite dans la section suivante. Cependant, dans la mesure où ces champs sont spécifiques à ce fournisseur de données, les modifications que vous apportez à ces valeurs ne sont pas enregistrées avec la définition du rapport.  
@@ -105,7 +103,7 @@ FROM [Adventure Works]
 |DateCaption|DateUniqueName|DateDayName|DateValueinOriginalDatatype|DateParentUniqueName|DateMemberKeyinOriginalDatatype|  
 |-----------------|--------------------|-----------------|---------------------------------|--------------------------|-------------------------------------|  
 |All Periods|[Date].[Date].[All Periods]|(Null)|(Null)|(Null)|0|  
-|1-juil-01|[Date].[Date].&[1]|Dimanche|7/1/2001|[Date].[Date].[All Periods]|1|  
+|1-juil-01|[Date].[Date].&[1]|Dimanche|7/1/2001|[Date].[Date].[All Periods]| 1|  
 |2-juil-01|[Date].[Date].&[2]|Lundi|7/2/2001|[Date].[Date].[All Periods]|2|  
 |3-juil-01|[Date].[Date].&[3]|Mardi|7/3/2001|[Date].[Date].[All Periods]|3|  
   
@@ -136,7 +134,7 @@ CELL PROPERTIES
   
  Même si les propriétés font partie de l'instruction select MDX, elles n'apparaissent pas dans les colonnes du jeu de résultats. Cependant, les données sont disponibles pour un rapport à l'aide de la fonctionnalité des propriétés étendues. Dans un volet des résultats d’une requête MDX dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], vous pouvez double-cliquer sur la cellule et afficher les valeurs de propriétés de cellules si elles sont définies dans le cube. Si vous double-cliquez sur la première cellule Nombre de commandes qui contient le chiffre 1,379, une fenêtre contextuelle s'affiche avec les propriétés de cellule suivantes :  
   
-|Propriété|Value|  
+|Propriété|Valeur|  
 |--------------|-----------|  
 |CellOrdinal|0|  
 |Value|2481|  
@@ -156,7 +154,7 @@ CELL PROPERTIES
   
  Cette expression trie la valeur du champ dans son type de données entier d'origine à partir de la source de données.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Expressions &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
  [Collections intégrées dans les expressions &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md)   
  [Collection de champs de dataset &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)  

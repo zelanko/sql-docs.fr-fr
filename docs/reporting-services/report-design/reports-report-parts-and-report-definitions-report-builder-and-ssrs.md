@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,13 +18,13 @@ ms.assetid: 2d746550-f8cc-4e97-8a06-d0f03cffc18d
 caps.latest.revision: "26"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 93d078f0d9209c7ee4a9a19f9cd9b2d8d757f81c
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 9f0429e82811f1acc05d50f579f9b8d46e975246
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="reports-report-parts-and-report-definitions-report-builder-and-ssrs"></a>Rapports, parties de rapports et définitions de rapports (Générateur de rapports et SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] utilise un certain nombre de termes pour décrire un rapport paginé dans différents états, notamment la définition initiale, le rapport publié et le rapport affiché tel qu’il apparaît à l’utilisateur.  
@@ -72,7 +70,7 @@ ms.lasthandoff: 12/05/2017
   
  Abonnez-vous à un rapport dont la remise est effectuée, au format de sortie que vous indiquez, dans une boîte de réception de messagerie électronique ou dans un partage de fichiers. Le format de rendu de rapport par défaut est HTML 4.0. Outre le format HTML, les rapports peuvent être générés dans divers formats de sortie, notamment Excel, Word, XML, PDF, TIFF et CSV. Tout comme les rapports publiés, les rapports rendus ne peuvent être ni modifiés ni réenregistrés sur un serveur de rapports. Pour plus d’informations, consultez [Exporter des rapports &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md).  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Concepts de création de rapport &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/report-authoring-concepts-report-builder-and-ssrs.md)   
  [Générateur de rapports dans SQL Server 2016](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)   
  [Recherche, affichage et gestion des rapports &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   

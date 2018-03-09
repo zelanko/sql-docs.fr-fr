@@ -8,7 +8,7 @@ ms.service:
 ms.component: install-windows
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - scale-out deployments [Reporting Services]
 ms.assetid: 2da86fb3-4b4d-407f-9825-74dcc42486f5
 caps.latest.revision: "10"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ee524d36f62b65fc4a74d33f0815ecea1ce92c6d
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 0b7c90c1760c555f0099d9a6ea8fc675d0bd0719
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="add-and-remove-encryption-keys-for-scale-out-deployment"></a>Ajouter et supprimer des clés de chiffrement pour un déploiement évolutif
   Vous pouvez exécuter [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] dans un modèle de déploiement avec montée en puissance parallèle si vous configurez plusieurs serveurs de rapports pour qu'ils utilisent une base de données de serveur de rapports partagée. L'appartenance d'un serveur de rapports au déploiement évolutif dépend si ce serveur a déposé ou non une clé de chiffrement dans la base de données de serveurs de rapports. Vous pouvez contrôler un déploiement évolutif en ajoutant et en supprimant des clés de chiffrement pour des instances de serveurs de rapports spécifiques. Si vous supprimez des nœuds du déploiement, vous pouvez les supprimer dans n'importe quel ordre. Si vous ajoutez des nœuds à un déploiement, vous devez joindre toutes les nouvelles instances à partir d'un serveur de rapports faisant déjà partie du déploiement.  
@@ -60,7 +60,7 @@ ms.lasthandoff: 12/05/2017
   
 2.  Exécutez **rskeymgmt.exe**. Vous pouvez exécuter cet utilitaire sur n'importe quel serveur de rapports intégré à un déploiement évolutif de serveurs de rapports.  
   
-3.  Utilisez l’argument **-r** pour séparer l’instance de serveur de rapports du déploiement évolutif. L'exemple suivant illustre les arguments que vous devez spécifier :  
+3.  Utilisez l’argument **-r** pour séparer l’instance de serveur de rapports du déploiement évolutif. L'exemple suivant illustre les arguments que vous devez spécifier :  
   
     ```  
     rskeymgmt -r <installation ID>  
@@ -69,7 +69,7 @@ ms.lasthandoff: 12/05/2017
   
  Ces étapes suppriment le serveur de rapports d'un déploiement avec montée en puissance parallèle, mais ne désinstallent pas l'instance [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] sur le serveur de rapports. Après avoir supprimé le serveur de rapports du déploiement avec montée en puissance parallèle, vous pouvez désinstaller [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] du serveur si vous n'avez plus besoin de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] sur ce serveur. Pour plus d’informations, consultez [Désinstaller une instance existante de SQL Server &#40;programme d’installation&#41;](../../sql-server/install/uninstall-an-existing-instance-of-sql-server-setup.md) dans la documentation en ligne de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Configurer et gérer des clés de chiffrement &#40;Gestionnaire de configuration de SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)   
  [Initialiser un serveur de rapports &#40;Gestionnaire de configuration de SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)  
   

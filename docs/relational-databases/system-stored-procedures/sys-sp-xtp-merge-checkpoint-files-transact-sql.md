@@ -1,5 +1,5 @@
 ---
-title: Sys.sp_xtp_merge_checkpoint_files (Transact-SQL) | Documents Microsoft
+title: sys.sp_xtp_merge_checkpoint_files (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 11/28/2016
 ms.prod: sql-non-specified
@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sys.sp_xtp_merge_checkpoint_files_TSQL
 - sys.sp_xtp_merge_checkpoint_files
-dev_langs: TSQL
-helpviewer_keywords: sys.sp_xtp_merge_checkpoint_files
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.sp_xtp_merge_checkpoint_files
 ms.assetid: da04df2a-f7a1-41e7-a1ef-2d5d68919892
-caps.latest.revision: "15"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f2034ab3fc7118a0e93aabaed345fa17407b7539
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: f2ea57de40e24824a71d4d89ad954fb19fe21e29
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysspxtpmergecheckpointfiles-transact-sql"></a>sys.sp_xtp_merge_checkpoint_files (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -60,12 +63,12 @@ sys.sp_xtp_merge_checkpoint_files database_name, @transaction_lower_bound, @tran
  La limite supérieure (bigint) de transactions pour un fichier de données, comme indiqué dans [sys.dm_db_xtp_checkpoint_files &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-checkpoint-files-transact-sql.md). Une erreur est générée pour une valeur transactionId non valide.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
- Aucune  
+ Aucun  
   
 ## <a name="cursors-returned"></a>Curseurs retournés  
- Aucune  
+ Aucun  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Requiert l'appartenance au rôle serveur fixe sysadmin et au rôle de base de données fixe db_owner.  
   
 ## <a name="remarks"></a>Notes  

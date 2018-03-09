@@ -3,10 +3,10 @@ title: "Lancez le Gestionnaire de Configuration (système de plateforme Analytiq
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.technology: mpp-data-warehouse
 ms.custom: 
 ms.date: 01/05/2017
@@ -16,18 +16,18 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: b914ba9a-e4ec-4750-934a-c447fc8909e3
 caps.latest.revision: "22"
-ms.openlocfilehash: 98ae90d198b4a1b68e1b72305721611a8efa30ff
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 2ead82cd226a585d261eac2779cacb72cd5edbb6
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="launch-the-configuration-manager"></a>Lancez le Gestionnaire de Configuration
 Cette rubrique fournit des instructions pour lancer le **Configuration Manager** pour le matériel de système de plateforme Analytique.  
   
 ## <a name="before-you-begin"></a>Avant de commencer  
   
-### <a name="prerequisites"></a>Conditions préalables  
+### <a name="prerequisites"></a>Prerequisites  
 Le système de plateforme Analytique**Configuration Manager** peut uniquement être exécutée par l’administrateur de domaine d’application. Pour exécuter cet outil, vous devez le mot de passe pour l’administrateur de domaine d’application. Pour créer d’autres administrateurs de points d’accès, consultez [créer un administrateur de domaine APS &#40; Points d’accès &#41; ](create-an-aps-domain-administrator-aps.md).  
   
 ## <a name="Accessing"></a>Lancer l’outil de Configuration Manager  

@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,7 +17,8 @@ f1_keywords:
 - CONVERT_TSQL
 - CAST
 - CONVERT
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - CAST function
 - automatic data type conversion
@@ -35,16 +37,16 @@ helpviewer_keywords:
 - time zones [SQL Server]
 - roundtrip conversions
 ms.assetid: a87d0850-c670-4720-9ad5-6f5a22343ea8
-caps.latest.revision: "136"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: dd3db7627c4190a51db01082138677bc2b6d40d9
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.openlocfilehash: 56326d7862c004ac056e329e6cc05f7bbe056aea
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="cast-and-convert-transact-sql"></a>CAST et CONVERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -58,7 +60,7 @@ SELECT 9.5 AS Original, CONVERT(int, 9.5) AS int,
     CONVERT(decimal(6,4), 9.5) AS decimal;
 ```  
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
-|Langue source   |int    |decimal |  
+|Langue source   |int    |Décimal |  
 |----|----|----|  
 |9.5 |9 |9.5000 |  
 
@@ -120,8 +122,8 @@ Lorsque *expression* est un type de données date ou heure *style* peut prendre 
 |-|**21** ou **121** (<sup>2</sup>)|Valeur par défaut canonique ODBC (avec millisecondes) pour time, date, datetime2, et datetimeoffset|aaaa-mm-jj hh:mi:ss.mmm (24h)|  
 |-|**126** (<sup>4</sup>)|ISO8601|aaaa-mm-jjThh:mi:ss.mmm (sans espace)<br /> Remarque : Lorsque la valeur en millisecondes (mmm) est que 0, la valeur de milliseconde n’est pas affichée. Par exemple, la valeur « 2012-11-07T18:26:20.000 » est affichée comme suit « 2012-11-07T18:26:20 ».|  
 |-|**127**(<sup>6, 7</sup>)|ISO8601 avec fuseau horaire Z.|aaaa-mm-jjThh:mi:ss.mmmZ (sans espace)<br /> Remarque : Lorsque la valeur en millisecondes (mmm) est que 0, la valeur en millisecondes n’est pas affichée. Par exemple, la valeur « 2012-11-07T18:26:20.000 » est affichée comme suit « 2012-11-07T18:26:20 ».|  
-|-|**130** (<sup>1,</sup><sup>2</sup>)|Calendrier islamique (<sup>5</sup>)|jj mois aaaa hh:mi:ss:mmmAM<br /> Dans ce style, « mois » représente une représentation unicode Hijri à plusieurs jetons pour le nom complet du mois. Cette valeur ne rend pas correctement sur une valeur par défaut installation américain de SSMS.|  
-|-|**131** (<sup>2</sup>)|Calendrier islamique (<sup>5</sup>)|jj/mm/yyyy hh:mi:ss:mmmAM|  
+|-|**130** (<sup>1,</sup><sup>2</sup>)|Hijri (<sup>5</sup>)|jj mois aaaa hh:mi:ss:mmmAM<br /> Dans ce style, « mois » représente une représentation unicode Hijri à plusieurs jetons pour le nom complet du mois. Cette valeur ne rend pas correctement sur une valeur par défaut installation américain de SSMS.|  
+|-|**131** (<sup>2</sup>)|Hijri (<sup>5</sup>)|jj/mm/yyyy hh:mi:ss:mmmAM|  
   
 <sup>1</sup> ces valeurs de style retournent des résultats non déterministes. Inclut tous les styles (aa, c'est-à-dire sans siècle) et un sous-ensemble de styles (aaaa, c'est-à-dire avec siècle).
   
@@ -166,7 +168,7 @@ Lorsque *expression* est **money** ou **smallmoney**, *style* peut prendre l’u
 |**126**|Équivalent du style 2 lors de la conversion en char(n) ou varchar(n)|  
   
 ## <a name="xml-styles"></a>styles XML
-Lorsque *expression* est **xml***, style* peut prendre l’une des valeurs indiquées dans le tableau suivant. Les autres valeurs sont traitées comme étant 0.
+Lorsque *expression* est **xml ***, style* peut prendre l’une des valeurs indiquées dans le tableau suivant. Les autres valeurs sont traitées comme étant 0.
   
 |Valeur|Sortie|  
 |---|---|
@@ -215,7 +217,7 @@ Conversion automatique n’est pas pris en charge pour le **texte** et **image**
 ## <a name="output-collation"></a>Classement des résultats  
 Lorsque l'entrée et la sortie de CAST ou CONVERT sont des chaînes de caractères, l'entrée et la sortie présentent les mêmes classement et étiquette de classement. Si l'entrée n'est pas une chaîne de caractères, la sortie présente le classement par défaut de la base de données et une étiquette de classement de contrainte par défaut. Pour plus d’informations, consultez [priorité de classement &#40; Transact-SQL &#41; ](../../t-sql/statements/collation-precedence-transact-sql.md).
   
-Pour attribuer un classement différent à la sortie, appliquez la clause COLLATE à l'expression de résultat de la fonction CAST ou CONVERT. Exemple :
+Pour attribuer un classement différent à la sortie, appliquez la clause COLLATE à l'expression de résultat de la fonction CAST ou CONVERT. Par exemple :
   
 `SELECT CAST('abc' AS varchar(5)) COLLATE French_CS_AS`
   
@@ -275,7 +277,7 @@ Gail        Erickson      Ms.    *
   
 Si vous convertissez des données dont le type de données diffère sur l'emplacement de la virgule, la valeur résultante peut parfois être tronquée, parfois être arrondie. Le tableau suivant illustre ce comportement.
   
-|De|Pour|Comportement|  
+|From|Pour|Comportement|  
 |---|---|---|
 |**numeric**|**numeric**|Arrondi|  
 |**numeric**|**int**|Tronqué|  
@@ -711,8 +713,10 @@ UnconvertedText         UsingCast               UsingConvertFrom_ISO8601
 ```  
   
 ## <a name="see-also"></a>Voir aussi
-[Conversion de Type de données &#40; moteur de base de données &#41;](../../t-sql/data-types/data-type-conversion-database-engine.md)  
-[SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)  
-[Fonctions système &#40; Transact-SQL &#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)  
-[Rédiger des instructions Transact-SQL internationales](../../relational-databases/collations/write-international-transact-sql-statements.md)
+ [Conversion de Type de données &#40; moteur de base de données &#41;](../../t-sql/data-types/data-type-conversion-database-engine.md)  
+ [FORMAT &#40;Transact-SQL&#41;](../../t-sql/functions/format-transact-sql.md)  
+ [STR &#40;Transact-SQL&#41;](../../t-sql/functions/str-transact-sql.md)  
+ [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)  
+ [Fonctions système &#40; Transact-SQL &#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)  
+ [Rédiger des instructions Transact-SQL internationales](../../relational-databases/collations/write-international-transact-sql-statements.md)
   

@@ -2,9 +2,12 @@
 title: "Copie des journaux de transaction et réplication (SQL Server) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: log-shipping
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,16 +18,16 @@ ms.assetid: 132bebfd-0206-4d23-829a-b38e5ed17bc9
 caps.latest.revision: "30"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: fc7c67f47d535a639f1862cc1bc8be92855f6567
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: a80220d2c963dcf5879422ae9e754963a1bb287d
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="log-shipping-and-replication-sql-server"></a>Copie des journaux de transaction et réplication (SQL Server)
-  La copie des journaux de transaction consiste à avoir deux exemplaires d'une même base de données qui résident généralement sur des ordinateurs différents. À un moment donné précis, les clients ne peuvent accéder qu'à un seul exemplaire de la base de données. Cet exemplaire s'appelle la base de données primaire. Les mises à jour apportées par les clients à la base de données primaire sont répercutées, par copie des journaux de transaction, à l'autre exemplaire de la base de données appelé base de données secondaire. La copie des journaux de transaction consiste à répercuter dans la base de données secondaire chaque insertion, mise à jour ou suppression apportée à la base de données primaire.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] La copie des journaux de transaction consiste à avoir deux exemplaires d’une même base de données qui résident généralement sur des ordinateurs différents. À un moment donné précis, les clients ne peuvent accéder qu'à un seul exemplaire de la base de données. Cet exemplaire s'appelle la base de données primaire. Les mises à jour apportées par les clients à la base de données primaire sont répercutées, par copie des journaux de transaction, à l'autre exemplaire de la base de données appelé base de données secondaire. La copie des journaux de transaction consiste à répercuter dans la base de données secondaire chaque insertion, mise à jour ou suppression apportée à la base de données primaire.  
   
  La copie des journaux de transaction peut intervenir en parallèle à la réplication selon les principes suivants :  
   
@@ -96,7 +99,7 @@ ms.lasthandoff: 11/09/2017
   
  **Pour configurer la réplication de fusion et la copie des journaux de transaction**  
   
-1.  Configurez la copie des journaux de transaction pour la base de données de publication. Pour plus d’informations, consultez [Configurer la copie des journaux de transaction &#40;SQL Server&#41;](../../database-engine/log-shipping/configure-log-shipping-sql-server.md).  
+1.  Configurez la copie des journaux de transaction pour la base de données de publication. Pour plus d’informations, consultez [Configurer la copie des journaux de transaction &#40;Transact-SQL&#41;](../../database-engine/log-shipping/configure-log-shipping-sql-server.md).  
   
 2.  Si le serveur de publication tombe en panne, au niveau du serveur secondaire, renommez l'ordinateur, puis l'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] d'après le nom du serveur principal. Pour plus d'informations sur la modification du nom de l'ordinateur, consultez la documentation Windows. Pour plus d’informations sur le renommage du serveur, consultez [Renommer un ordinateur qui héberge une instance autonome de SQL Server](../../database-engine/install-windows/rename-a-computer-that-hosts-a-stand-alone-instance-of-sql-server.md) et [Renommer une instance de cluster de basculement SQL Server](../../sql-server/failover-clusters/install/rename-a-sql-server-failover-cluster-instance.md).  
   
@@ -116,7 +119,7 @@ ms.lasthandoff: 11/09/2017
   
      Si la synchronisation se fait avec un Abonné exécutant une version de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] antérieure à [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], l'abonnement ne peut pas être anonyme. Il doit s'agir d'un abonnement client ou d'un abonnement serveur (appelées abonnement local et abonnement global dans les versions précédentes). Pour plus d’informations, consultez [Synchroniser les données](../../relational-databases/replication/synchronize-data.md).  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Fonctionnalités et tâches de réplication](../../relational-databases/replication/replication-features-and-tasks.md)   
  [À propos de la copie des journaux des transactions &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [Mise en miroir de bases de données et réplication &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-and-replication-sql-server.md)  

@@ -8,22 +8,23 @@ ms.service:
 ms.component: in-memory-oltp
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine-imoltp
+ms.technology:
+- database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b0a248a4-4488-4cc8-89fc-46906a8c24a1
-caps.latest.revision: "28"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ed01c6cc36fac642856ef74bbb6a73f15d433228
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 6f0bfa6d9cbbcfe33e1817c3c9df4b38b4f686f8
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
-# <a name="table-and-row-size-in-memory-optimized-tables"></a>Taille de la table et des lignes dans les tables mémoire optimisées
+# <a name="table-and-row-size-in-memory-optimized-tables"></a>Taille de la table et des lignes dans les tables optimisées en mémoire
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   Avant [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], la taille des données dans la ligne d’une table à mémoire optimisée ne pouvait pas être supérieure à [8 060 octets](https://msdn.microsoft.com/library/dn205318(v=sql.120).aspx). Toutefois, à compter de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] et dans Azure SQL Database, il est désormais possible de créer une table à mémoire optimisée avec plusieurs colonnes volumineuses (par exemple, plusieurs colonnes varbinary(8000)) et colonnes LOB (c'est-à-dire, varbinary(max), varchar(max) et nvarchar(max)) et d’effectuer des opérations dessus à l’aide de modules T-SQL compilés en mode natif et des types de table. 
@@ -106,14 +107,14 @@ Table mémoire optimisée, comportant des index et des lignes.
   
  Pour un temps supérieur à 200, la table contient les lignes suivantes :  
   
-|Nom|Ville|  
+|Nom   |Ville|  
 |----------|----------|  
 |John|Pékin|  
 |Jane|Prague|  
   
  Toutefois, toutes les transactions actives avec une heure de début 100 verront la version de la table suivante :  
   
-|Nom|Ville|  
+|Nom   |Ville|  
 |----------|----------|  
 |John|Paris|  
 |Jane|Prague|  
@@ -150,7 +151,7 @@ Table mémoire optimisée, comportant des index et des lignes.
   
  Prenons l'exemple d'une table Orders avec la définition suivante :  
   
-```tsql  
+```sql  
 CREATE TABLE dbo.Orders (  
      OrderID int NOT NULL   
            PRIMARY KEY NONCLUSTERED,  
@@ -232,7 +233,7 @@ GO
   
  La mémoire réelle allouée et utilisée par cette table et ses index peut être obtenue via la requête suivante :  
   
-```tsql  
+```sql  
 select * from sys.dm_db_xtp_table_memory_stats  
 where object_id = object_id('dbo.Orders')  
 ```  
@@ -248,7 +249,7 @@ where object_id = object_id('dbo.Orders')
 
 Le billet de blog [Nouveautés d’OLTP en mémoire dans SQL Server 2016 depuis CTP3](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/25/whats-new-for-in-memory-oltp-in-sql-server-2016-since-ctp3) détaille certaines de ces complexités.   
  
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Tables optimisées en mémoire](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)  
   
   

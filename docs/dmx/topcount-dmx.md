@@ -5,12 +5,10 @@ ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords: TOPCOUNT
@@ -22,11 +20,11 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: b5d0020ea38edda21d5aec96b0b5a469d2f5f963
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 412c741e3f48c23f65eafa2a998a257f07034dd9
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="topcount-dmx"></a>TopCount (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -46,7 +44,7 @@ TopCount(<table expression>, <rank expression>, <count>)
 ## <a name="return-type"></a>Type de retour  
  \<expression de table >  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  La valeur fournie par le \<rank expression > argument détermine l’ordre décroissant de classement pour les lignes qui sont fournis dans le \<expression de table > argument et le nombre de lignes supérieur spécifié dans le \<count > argument est retourné.  
   
  La fonction TopCount a été introduite initialement pour activer les prédictions associatives et, en général, produit les mêmes résultats qu’une instruction qui inclut **SELECT TOP** et **ORDER BY** clauses. Vous obtiendrez de meilleures performances pour les prédictions associatives si vous utilisez la **prédire (DMX)** (fonction), qui prend en charge la spécification d’un nombre de prédictions à retourner.  

@@ -1,5 +1,5 @@
 ---
-title: "Valeur des Options de demande de profil d’Inclusion (tâche de profilage des données) | Documents Microsoft"
+title: "Options Demande de profil d’inclusion de valeur (tâche de profilage des données) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -15,17 +15,16 @@ ms.topic: article
 helpviewer_keywords:
 - Data Profiling Task Editor
 ms.assetid: ca94da82-a4c9-4e87-9cba-c2d85bd31f01
-caps.latest.revision: 21
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: db75039979f7c0e4d6d17beeef4bf4457607290e
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 180c0ca64cf4619a8ada7a90d45fa0498e2ea87a
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="value-inclusion-profile-request-options-data-profiling-task"></a>Options Demande de profil d'inclusion de valeur (tâche de profilage des données)
   Utilisez le volet **Propriétés de la demande** de la page **Demandes de profil** pour définir les options de la **Demande de profil d’inclusion de valeur** sélectionnée dans le volet Demandes. Un profil d'inclusion de valeur calcule le chevauchement des valeurs entre deux colonnes ou des ensembles de colonnes. De cette manière, ce profil permet également de déterminer si une colonne ou un ensemble de colonnes peut servir de clé étrangère entre les tables sélectionnées. Ce profil peut également vous aider à identifier les problèmes dans vos données, tels que les valeurs non valides. Par exemple, vous utilisez un profil d'inclusion de valeur pour profiler la colonne ProductID d'une table Sales. et découvrez que la colonne contient des valeurs qui sont introuvables dans la colonne ProductID de la table Products.  
@@ -110,7 +109,7 @@ ms.lasthandoff: 08/03/2017
 > [!NOTE]  
 >  Quand vous utilisez le caractère générique **(\*)** pour **ColumnName**, **CompareOptions** est en lecture seule et est définie avec le paramètre **Default**.  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |**Default**|Trie et compare des données d'après le classement de la colonne dans la table source.|  
 |**BinarySort**|Trie et compare les données en fonction des modèles binaires définis pour chaque caractère. L'ordre de tri binaire respecte la casse et les accents. Il s'agit aussi de l'ordre de tri le plus rapide.|  
@@ -118,7 +117,7 @@ ms.lasthandoff: 08/03/2017
   
  Si vous sélectionnez **DictionarySort**, vous pouvez également sélectionner toutes les combinaisons d’options répertoriées dans le tableau suivant. Par défaut, aucune de ces options supplémentaires n'est sélectionnée.  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |**IgnoreCase**|Indique si la comparaison fait la distinction entre les lettres majuscules et minuscules. Si cette option est définie, la comparaison de chaînes ignore la casse. Par exemple, « ABC » est alors identique à « abc ».|  
 |**IgnoreNonSpace**|Indique si la comparaison fait la distinction entre les caractères avec espace et les caractères diacritiques. Si cette option est définie, la comparaison ignore les caractères diacritiques. Par exemple, « å » est identique à « a ».|  
@@ -133,7 +132,7 @@ ms.lasthandoff: 08/03/2017
  **InclusionThresholdSetting**  
  Sélectionnez le paramètre de seuil pour améliorer la sortie du profil. La valeur par défaut de cette propriété est **Specified**. Pour plus d'informations, consultez la section « Fonctionnement des paramètres de seuil », plus haut dans cette rubrique.  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |**Aucun**|Aucun seuil n'est spécifié. La puissance de la clé est signalée, quelle que soit sa valeur.|  
 |**Specified**|Utilisez le seuil spécifié dans **InclusionStrengthThreshold**. La puissance d'inclusion est précisée uniquement si elle est supérieure au seuil.|  
@@ -147,7 +146,7 @@ ms.lasthandoff: 08/03/2017
  **SupersetColumnsKeyThresholdSetting**  
  Spécifiez le seuil de sur-ensemble. La valeur par défaut de cette propriété est **Specified**. Pour plus d'informations, consultez la section « Fonctionnement des paramètres de seuil », plus haut dans cette rubrique.  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |**Aucun**|Aucun seuil n'est spécifié. La puissance d'inclusion est signalée, quelle que soit la puissance de clé de la colonne du sur-ensemble.|  
 |**Specified**|Utilisez le seuil spécifié dans **SupersetColumnsKeyThreshold**. La puissance d'inclusion est signalée uniquement si la puissance de clé de la colonne du sur-ensemble est supérieure au seuil.|  
@@ -161,9 +160,8 @@ ms.lasthandoff: 08/03/2017
  **MaxNumberOfViolations**  
  Spécifiez le nombre maximal de violations d'inclusion à signaler dans la sortie. La valeur par défaut de cette propriété est 100. Cette option est désactivée quand vous sélectionnez **Exact** comme valeur **InclusionThresholdSetting**.  
   
-## <a name="see-also"></a>Voir aussi  
- [Éditeur de tâche &#40; de profilage des données Page Général &#41;](../../integration-services/control-flow/data-profiling-task-editor-general-page.md)   
- [Formulaire de profil rapide de Table simple &#40; &#41; de la tâche de profilage des données](../../integration-services/control-flow/single-table-quick-profile-form-data-profiling-task.md)  
+## <a name="see-also"></a> Voir aussi  
+ [Éditeur de tâche de profilage de données &#40;page Général&#41;](../../integration-services/control-flow/data-profiling-task-editor-general-page.md)   
+ [Formulaire de profil rapide de table simple &#40;tâche de profilage des données&#41;](../../integration-services/control-flow/single-table-quick-profile-form-data-profiling-task.md)  
   
   
-

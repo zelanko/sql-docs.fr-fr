@@ -8,22 +8,23 @@ ms.service:
 ms.component: t-sql|queries
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 4846a576-57ea-4068-959c-81e69e39ddc1
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 3aa20ea08fe34eab316a41d46ea955a78e4be512
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: 515c21cbf7874c0268eeedad0b67e0ce7cf3726d
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="explain-transact-sql"></a>EXPLIQUEZ (Transact-SQL)
+# <a name="explain-transact-sql"></a>EXPLAIN (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
   Retourne le plan de requête pour un [!INCLUDE[ssDW](../../includes/ssdw-md.md)] [!INCLUDE[DWsql](../../includes/dwsql-md.md)] instruction sans l’instruction en cours d’exécution. Utilisez **expliquer** aperçu quelles opérations nécessitera le déplacement des données et d’afficher les coûts estimés des opérations de requête.  
@@ -42,7 +43,7 @@ EXPLAIN SQL_statement
  *SQL_statement*  
  Le [!INCLUDE[DWsql](../../includes/dwsql-md.md)] instruction sur laquelle **expliquer** s’exécutera. *SQL_statement* peut être une de ces commandes : **sélectionnez**, **insérer**, **mise à jour**, **supprimer**, **CREATE TABLE AS SELECT**, **CREATE REMOTE TABLE**.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Requiert le **SHOWPLAN** autorisation et l’autorisation d’exécuter *SQL_statement*. Consultez [autorisations : GRANT, DENY, REVOKE &#40; Entrepôt de données SQL Azure, Parallel Data Warehouse &#41; ](../../t-sql/statements/permissions-grant-deny-revoke-azure-sql-data-warehouse-parallel-data-warehouse.md).  
   
 ## <a name="return-value"></a>Valeur retournée  
@@ -68,11 +69,11 @@ EXPLAIN SQL_statement
   
 |Balise XML|Résumé, attributs et du contenu|  
 |-------------|--------------------------------------|  
-|\<dsql_query >|Élément de niveau supérieur ou de document.|
-|\<SQL >|Retourne les données *SQL_statement*.|  
-|\<params >|Cette balise n’est pas utilisée pour l’instant.|  
-|\<dsql_operations >|Résume et contient les étapes de la requête et inclut des informations de coût de la requête. Contient également tous les `<dsql_operation>` blocs. Cette balise contient des informations d’inventaire pour l’intégralité de la requête :<br /><br /> `<dsql_operations total_cost=total_cost total_number_operations=total_number_operations>`<br /><br /> *total_cost* est le temps total estimé de la requête à exécuter, en millisecondes.<br /><br /> *total_number_operations* est le nombre total d’opérations de la requête. Une opération qui va être parallélisée et exécuter sur plusieurs nœuds est comptée comme une seule opération.|  
-|\<dsql_operation >|Décrit une opération unique dans le plan de requête. Le \<dsql_operation > balise contient le type d’opération en tant qu’attribut :<br /><br /> `<dsql_operation operation_type=operation_type>`<br /><br /> *type_opération* est une des valeurs figurant dans [interrogation des données (SQL Server PDW)](http://msdn.microsoft.com/en-us/3f4f5643-012a-4c36-b5ec-691c4bbe668c).<br /><br /> Le contenu de la `\<dsql_operation>` bloc est dépendant du type d’opération.<br /><br /> Consultez le tableau ci-dessous.|  
+|\<dsql_query>|Élément de niveau supérieur ou de document.|
+|\<sql>|Retourne les données *SQL_statement*.|  
+|\<params>|Cette balise n’est pas utilisée pour l’instant.|  
+|\<dsql_operations>|Résume et contient les étapes de la requête et inclut des informations de coût de la requête. Contient également tous les `<dsql_operation>` blocs. Cette balise contient des informations d’inventaire pour l’intégralité de la requête :<br /><br /> `<dsql_operations total_cost=total_cost total_number_operations=total_number_operations>`<br /><br /> *total_cost* est le temps total estimé de la requête à exécuter, en millisecondes.<br /><br /> *total_number_operations* est le nombre total d’opérations de la requête. Une opération qui va être parallélisée et exécuter sur plusieurs nœuds est comptée comme une seule opération.|  
+|\<dsql_operation>|Décrit une opération unique dans le plan de requête. Le \<dsql_operation > balise contient le type d’opération en tant qu’attribut :<br /><br /> `<dsql_operation operation_type=operation_type>`<br /><br /> *type_opération* est une des valeurs figurant dans [interrogation des données (SQL Server PDW)](http://msdn.microsoft.com/en-us/3f4f5643-012a-4c36-b5ec-691c4bbe668c).<br /><br /> Le contenu de la `\<dsql_operation>` bloc est dépendant du type d’opération.<br /><br /> Consultez le tableau ci-dessous.|  
   
 |Type d’opération|Contenu|Exemple|  
 |--------------------|-------------|-------------|  

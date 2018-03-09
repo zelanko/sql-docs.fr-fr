@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_exec_describe_first_result_set_for_object (Transact-SQL) | Documents Microsoft
+title: sys.dm_exec_describe_first_result_set_for_object (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -8,25 +8,28 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_exec_describe_first_result_set_for_object_TSQL
 - sys.dm_exec_describe_first_result_set_for_object
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_exec_describe_first_result_set_for_object catalog view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_exec_describe_first_result_set_for_object catalog view
 ms.assetid: 63b0fde7-95d7-4ad7-a219-a9feacf1bd89
-caps.latest.revision: "22"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f09208161dd4b36f1b798925a58fffaa475e6176
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: bcdb3bd85543ae5feeb4b224350a5b72a2d95f7b
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmexecdescribefirstresultsetforobject-transact-sql"></a>sys.dm_exec_describe_first_result_set_for_object (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -64,8 +67,8 @@ sys.dm_exec_describe_first_result_set_for_object
 |**system_type_id**|**int**|Contient le system_type_id du type de données de la colonne comme spécifié dans sys.types. Pour les types CLR, bien que la colonne system_type_name retourne NULL, cette colonne retournera la valeur 240.|  
 |**system_type_name**|**nvarchar (256)**|Contient le nom du type de données. Inclut des arguments (tels que la longueur, la précision, l'échelle) spécifiés pour le type de données de la colonne. Si le type de données est un type d'alias défini par l'utilisateur, le type de système sous-jacent est spécifié ici. S'il s'agit d'un type clr défini par l'utilisateur, NULL est retourné dans cette colonne.|  
 |**max_length**|**smallint**|Longueur maximale (en octets) de la colonne.<br /><br /> -1 = la colonne est de type de données **varchar (max)**, **nvarchar (max)**, **varbinary (max)**, ou **xml**.<br /><br /> Pour **texte** des colonnes, le **max_length** valeur sera 16 ou à la valeur définie par **sp_tableoption 'text in row'**.|  
-|**précision**|**tinyint**|Précision de la colonne si elle est numérique. Dans le cas contraire, retourne la valeur 0.|  
-|**mise à l’échelle**|**tinyint**|Échelle de la colonne si elle est numérique. Dans le cas contraire, retourne la valeur 0.|  
+|**precision**|**tinyint**|Précision de la colonne si elle est numérique. Dans le cas contraire, retourne la valeur 0.|  
+|**scale**|**tinyint**|Échelle de la colonne si elle est numérique. Dans le cas contraire, retourne la valeur 0.|  
 |**collation_name**|**sysname**|Nom du classement de la colonne si elle est basée sur les caractères. Sinon, retourne NULL.|  
 |**user_type_id**|**int**|Pour les types d'alias et CLR, contient l'information user_type_id du type de données de la colonne comme spécifié dans sys.types. Sinon, a la valeur NULL.|  
 |**user_type_database**|**sysname**|Pour les types d'alias et CLR, contient le nom de la base de données dans laquelle le type est défini. Sinon, a la valeur NULL.|  
@@ -79,17 +82,17 @@ sys.dm_exec_describe_first_result_set_for_object
 |**is_xml_document**|**bit**|Retourne 1 si le type de données retourné est XML et que ce type est garanti être un document XML complet (nœud racine compris), par opposition à un fragment XML. Dans le cas contraire, retourne la valeur 0.|  
 |**is_case_sensitive**|**bit**|Retourne 1 si la colonne est d'un type chaîne sensible à la casse et 0 si ce n'est pas le cas.|  
 |**is_fixed_length_clr_type**|**bit**|Retourne 1 si la colonne est d'un type CLR de longueur fixe et 0 si ce n'est pas le cas.|  
-|**serveur_source**|**sysname**|Nom du serveur d'origine retourné par la colonne dans ce résultat (s'il provient d'un serveur distant). Le nom est donné tel qu’il apparaît dans sys.servers.  Retourne NULL si la colonne est initiée sur le serveur local, ou si elle ne peut pas être déterminé quel serveur elle provenance. Est fourni uniquement si les informations de navigation sont demandées.|  
+|**source_server**|**sysname**|Nom du serveur d'origine retourné par la colonne dans ce résultat (s'il provient d'un serveur distant). Le nom est donné tel qu’il apparaît dans sys.servers.  Retourne NULL si la colonne est initiée sur le serveur local, ou si elle ne peut pas être déterminé quel serveur elle provenance. Est fourni uniquement si les informations de navigation sont demandées.|  
 |**source_database**|**sysname**|Nom de la base de données d'origine retourné par la colonne dans ce résultat. Retourne NULL si la base de données ne peut pas être déterminée. Est fourni uniquement si les informations de navigation sont demandées.|  
 |**source_schema**|**sysname**|Nom du schéma d'origine retourné par la colonne dans ce résultat. Retourne NULL si le schéma ne peut pas être déterminé. Est fourni uniquement si les informations de navigation sont demandées.|  
-|**table_source**|**sysname**|Nom de la table d'origine retourné par la colonne dans ce résultat. Retourne NULL si la table ne peut pas être déterminée. Est fourni uniquement si les informations de navigation sont demandées.|  
+|**source_table**|**sysname**|Nom de la table d'origine retourné par la colonne dans ce résultat. Retourne NULL si la table ne peut pas être déterminée. Est fourni uniquement si les informations de navigation sont demandées.|  
 |**source_column**|**sysname**|Nom de la colonne d'origine retourné par la colonne dans ce résultat. Retourne NULL si la colonne ne peut pas être déterminée. Est fourni uniquement si les informations de navigation sont demandées.|  
 |**is_identity_column**|**bit**|Retourne 1 si la colonne est une colonne d'identité et 0 dans le cas contraire. Retourne NULL s'il est impossible de déterminer que la colonne est une colonne d'identité.|  
 |**is_part_of_unique_key**|**bit**|Retourne 1 si la colonne fait partie d'un index unique (notamment la contrainte unique et primaire) et 0 dans le cas contraire. Retourne NULL s'il est impossible de déterminer que la colonne fait partie d'un index unique. Fourni uniquement si les informations de navigation sont demandées.|  
 |**is_updateable**|**bit**|Retourne 1 si la colonne peut être mise à jour et 0 dans le cas contraire. Retourne NULL s'il est impossible de déterminer que la colonne peut être mise à jour.|  
 |**is_computed_column**|**bit**|Retourne 1 si la colonne est une colonne calculée et 0 dans le cas contraire. Retourne NULL s’il ne peut pas être déterminé que la colonne est une colonne calculée.|  
 |**is_sparse_column_set**|**bit**|Retourne 1 si la colonne est une colonne éparse et 0 dans le cas contraire. Retourne NULL s'il est impossible de déterminer que la colonne fait partie d'un jeu de colonnes éparses.|  
-|**valeur ordinal_in_order_by_list**|**smallint**|Position de cette colonne dans la liste ORDER BY. Retourne NULL si la colonne ne s'affiche pas dans la liste ORDER BY ou si la liste ORDER BY ne peut pas être déterminée de manière unique.|  
+|**ordinal_in_order_by_list**|**smallint**|Position de cette colonne dans la liste ORDER BY. Retourne NULL si la colonne ne s'affiche pas dans la liste ORDER BY ou si la liste ORDER BY ne peut pas être déterminée de manière unique.|  
 |**order_by_list_length**|**smallint**|Longueur de la liste ORDER BY. Retourne NULL s'il n'existe aucune liste ORDER BY ou si la liste ORDER BY ne peut pas être déterminée de manière unique. Notez que cette valeur sera la même pour toutes les lignes retournées par sp_describe_first_result_set.|  
 |**order_by_is_descending**|**smallint NULL**|Si la valeur ordinal_in_order_by_list n’est pas NULL, le **order_by_is_descending** colonne indique la direction de la clause ORDER BY pour cette colonne. Sinon, elle indique NULL.|  
 |**error_number**|**int**|Contient le numéro d'erreur retourné par la fonction. Contient NULL si aucune erreur ne s'est produite dans la colonne.|  
@@ -97,7 +100,7 @@ sys.dm_exec_describe_first_result_set_for_object
 |**error_state**|**int**|Contient le message d’état retourné par la fonction. Si aucune erreur ne s'est produite, la colonne contiendra NULL.|  
 |**error_message**|**nvarchar(4096)**|Contient le message retourné par la fonction. Si aucune erreur ne s'est produite, la colonne contiendra NULL.|  
 |**error_type**|**int**|Contient un entier qui représente l'erreur retournée. Mappé à error_type_desc. Consultez la liste sous les notes.|  
-|**error_type_desc**|**nvarchar (60)**|Contient une chaîne majuscule courte qui représente l'erreur retournée. Mappé à error_type. Consultez la liste sous les notes.|  
+|**error_type_desc**|**nvarchar(60)**|Contient une chaîne majuscule courte qui représente l'erreur retournée. Mappé à error_type. Consultez la liste sous les notes.|  
   
 ## <a name="remarks"></a>Notes  
  Cette fonction utilise le même algorithme que **sp_describe_first_result_set**. Pour plus d’informations, consultez [sp_describe_first_result_set &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md).  
@@ -120,7 +123,7 @@ sys.dm_exec_describe_first_result_set_for_object
 |12|OBJECT_ID_NOT_SUPPORTED|Le @object_id transmis à la fonction est pas pris en charge (autrement dit, pas une procédure stockée)|  
 |13|OBJECT_ID_DOES_NOT_EXIST|Le @object_id transmis à la fonction est introuvable dans le catalogue système.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Requiert l’autorisation d’exécuter le @tsql argument.  
   
 ## <a name="examples"></a>Exemples  
@@ -155,8 +158,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [sp_describe_first_result_set &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)   
- [sp_describe_undeclared_parameters &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql.md)   
- [Sys.dm_exec_describe_first_result_set &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md)  
+ [sp_describe_first_result_set &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)   
+ [sp_describe_undeclared_parameters &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql.md)   
+ [sys.dm_exec_describe_first_result_set &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md)  
   
   

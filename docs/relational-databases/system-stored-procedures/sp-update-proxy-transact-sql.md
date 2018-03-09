@@ -1,5 +1,5 @@
 ---
-title: sp_update_proxy (Transact-SQL) | Documents Microsoft
+title: sp_update_proxy (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,27 +8,29 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_update_proxy
 - sp_update_proxy_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - ALTER PROXY statement
 - sp_update_proxy
 ms.assetid: 864fd0e6-9d61-4f07-92ef-145318d2f881
-caps.latest.revision: "30"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4ad72013399fed71e934aaf8c628e6f8269d23d1
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: be0c172698bd3fa45b124f40aab261c5840304bb
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spupdateproxy-transact-sql"></a>sp_update_proxy (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +54,7 @@ sp_update_proxy
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@proxy_id** =] *id*  
+ [ **@proxy_id**= ] *id*  
  Numéro d'identification du proxy à modifier. Le *proxy_id* est **int**, avec NULL comme valeur par défaut.  
   
  [  **@proxy_name** =] **'***proxy_name***'**  
@@ -70,7 +72,7 @@ sp_update_proxy
  [  **@enabled**  =] *is_enabled*  
  Indique si le proxy est activé. Le *is_enabled* indicateur est **tinyint**, avec NULL comme valeur par défaut. Lorsque *is_enabled* est **0**, le proxy n’est pas activé et ne peut pas être utilisé par une étape de travail. Si cet argument est NULL, l'état du proxy reste inchangé.  
   
- [  **@description** =] **'***description***'**  
+ [ **@description**= ] **'***description***'**  
  Nouvelle description du proxy. Le *description* est **nvarchar (512)**, avec NULL comme valeur par défaut. Si cet argument est NULL, la description du proxy reste inchangé.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
@@ -83,7 +85,7 @@ sp_update_proxy
   
  Cette procédure modifie le proxy sans modifier son accès. Pour modifier l’accès à un serveur proxy, utilisez **sp_grant_login_to_proxy** et **sp_revoke_login_from_proxy**.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Seuls les membres de la **sysadmin** rôle de sécurité fixe peut exécuter cette procédure.  
   
 ## <a name="examples"></a>Exemples  
@@ -102,9 +104,9 @@ GO
 ## <a name="see-also"></a>Voir aussi  
  [L’Agent SQL Server stockées procédures &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
  [Implémenter la sécurité de l’Agent SQL Server](http://msdn.microsoft.com/library/d770d35c-c8de-4e00-9a85-7d03f45a0f0d)   
- [sp_add_proxy &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-add-proxy-transact-sql.md)   
- [sp_delete_proxy &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-delete-proxy-transact-sql.md)   
- [sp_grant_login_to_proxy &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-grant-login-to-proxy-transact-sql.md)   
- [sp_revoke_login_from_proxy &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-revoke-login-from-proxy-transact-sql.md)  
+ [sp_add_proxy &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-proxy-transact-sql.md)   
+ [sp_delete_proxy &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-proxy-transact-sql.md)   
+ [sp_grant_login_to_proxy &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-grant-login-to-proxy-transact-sql.md)   
+ [sp_revoke_login_from_proxy &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-revoke-login-from-proxy-transact-sql.md)  
   
   

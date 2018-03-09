@@ -3,12 +3,12 @@ title: "CRÉER la bibliothèque externe (Transact-SQL) | Documents Microsoft"
 ms.custom: 
 ms.date: 10/05/2017
 ms.prod: sql-non-specified
-ms.prod_service: 
+ms.prod_service: database-engine
 ms.service: 
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: r-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -20,16 +20,16 @@ dev_langs: TSQL
 helpviewer_keywords: CREATE EXTERNAL LIBRARY
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
-ms.openlocfilehash: 8d0f700ba30b77e892b37e98c43996d6e654e7ea
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+manager: craigg
+ms.openlocfilehash: fe1cb90bce5717d194defd2c684d7b20fc29a061
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-external-library-transact-sql"></a>CRÉER la bibliothèque externe (Transact-SQL)  
 
-[!INCLUDE[tsql-appliesto-ssvnxt-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssvnxt-xxxx-xxxx-xxx.md)]  
+[!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]  
 
 Télécharge des packages R sur une base de données à partir du chemin de flux ou un fichier spécifié d’octets.
 
@@ -61,7 +61,7 @@ WITH ( LANGUAGE = 'R' )
 
 ### <a name="arguments"></a>Arguments
 
-**nom_librairie**
+**library_name**
 
 Bibliothèques sont ajoutées à la base de données d’une étendue à l’utilisateur. Autrement dit, les noms de bibliothèque sont considérés comme étant uniques dans le contexte d’un utilisateur spécifique ou un propriétaire et les noms de bibliothèque doivent être uniques pour chaque utilisateur. Par exemple, deux utilisateurs **RUser1** et **RUser2** peuvent à la fois individuellement et séparément le téléchargement de la bibliothèque R `ggplot2`.
 
@@ -99,7 +99,7 @@ Bibliothèques téléchargées vers l’instance peuvent être public ou privé.
 
 Vous ne pouvez pas utiliser des objets BLOB comme source de données dans la version de SQL Server 2017.
 
-## <a name="permissions"></a>Permissions
+## <a name="permissions"></a>Autorisations
 
 Nécessite le `CREATE ANY EXTERNAL LIBRARY` autorisation.
 
@@ -191,7 +191,7 @@ DROP EXTERNAL LIBRARY customPackage <user_name>;
 
 ## <a name="see-also"></a>Voir aussi
 
-[ALTER bibliothèque externe (Transact-SQL)](alter-external-library-transact-sql.md)  
-[SUPPRIMER la bibliothèque externe (Transact-SQL)](drop-external-library-transact-sql.md)  
+[ALTER EXTERNAL LIBRARY (Transact-SQL)](alter-external-library-transact-sql.md)  
+[DROP EXTERNAL LIBRARY (Transact-SQL)](drop-external-library-transact-sql.md)  
 [sys.external_library_files](../../relational-databases/system-catalog-views/sys-external-library-files-transact-sql.md)  
 [sys.external_libraries](../../relational-databases/system-catalog-views/sys-external-libraries-transact-sql.md)  

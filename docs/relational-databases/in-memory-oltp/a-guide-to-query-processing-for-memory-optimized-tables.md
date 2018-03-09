@@ -8,20 +8,21 @@ ms.service:
 ms.component: in-memory-oltp
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine-imoltp
+ms.technology:
+- database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 065296fe-6711-4837-965e-252ef6c13a0f
-caps.latest.revision: "26"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ebca47eee84b4e48edc5164fa6a66670a84e3fee
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ee2351e74989e9a574b591366af4a8764b89dea0
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="a-guide-to-query-processing-for-memory-optimized-tables"></a>Guide du traitement des requêtes pour les tables optimisées en mémoire
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -49,7 +50,7 @@ ms.lasthandoff: 11/17/2017
   
  Prenons deux tables, Customer et Order. Le script [!INCLUDE[tsql](../../includes/tsql-md.md)] suivant contient les définitions des deux tables et des index associés, sur disque (au format traditionnel) :  
   
-```tsql  
+```sql  
 CREATE TABLE dbo.[Customer] (  
   CustomerID nchar (5) NOT NULL PRIMARY KEY,  
   ContactName nvarchar (30) NOT NULL   
@@ -72,7 +73,7 @@ GO
   
  La requête suivante joint les tables Customer et Order, et retourne l'ID de la commande et les informations client associées :  
   
-```tsql  
+```sql  
 SELECT o.OrderID, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.CustomerID = o.CustomerID  
 ```  
   
@@ -91,7 +92,7 @@ Plan de requête pour joindre des tables sur disque.
   
  Examinons une légère variante de cette requête, qui retourne toutes les lignes de la table Order, et plus seulement OrderID :  
   
-```tsql  
+```sql  
 SELECT o.*, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.CustomerID = o.CustomerID  
 ```  
   
@@ -144,7 +145,7 @@ Pipeline de traitement des requêtes pour l'accès en Transact-SQL interprété 
   
  Le script [!INCLUDE[tsql](../../includes/tsql-md.md)] suivant contient les versions mémoire optimisées des tables Order et Customer, utilisant des index de hachage :  
   
-```tsql  
+```sql  
 CREATE TABLE dbo.[Customer] (  
   CustomerID nchar (5) NOT NULL PRIMARY KEY NONCLUSTERED,  
   ContactName nvarchar (30) NOT NULL   
@@ -161,7 +162,7 @@ GO
   
  Imaginons la même requête exécutée sur des tables mémoire optimisées :  
   
-```tsql  
+```sql  
 SELECT o.OrderID, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.CustomerID = o.CustomerID  
 ```  
   
@@ -180,10 +181,10 @@ Plan de requête pour joindre des tables mémoire optimisées.
   
 -   Ce plan contient une **Correspondance de hash** plutôt qu’une **Jointure de fusion**. Les index des tables Order et Customer sont des index de hachage, et ne sont donc pas triés. Une **Jointure de fusion** nécessiterait des opérateurs de tri qui diminueraient les performances.  
   
-## <a name="natively-compiled-stored-procedures"></a>Procédures stockées compilées en mode natif  
+## <a name="natively-compiled-stored-procedures"></a>procédures stockées compilées en mode natif  
  Les procédures stockées compilées en mode natif sont des procédures stockées en [!INCLUDE[tsql](../../includes/tsql-md.md)] qui sont compilées dans le code machine, au lieu d'être interprétées par le moteur d'exécution de requête. Le script suivant crée une procédure stockée compilée en mode natif qui exécute l'exemple de requête (dans la section Exemple de requête).  
   
-```tsql  
+```sql  
 CREATE PROCEDURE usp_SampleJoin  
 WITH NATIVE_COMPILATION, SCHEMABINDING, EXECUTE AS OWNER  
 AS BEGIN ATOMIC WITH   
@@ -230,7 +231,7 @@ Exécution de procédures stockées compilées en mode natif.
   
  L'appel d'une procédure stockée compilée en mode natif se présente comme suit :  
   
-1.  L’utilisateur émet une instruction **EXEC***usp_myproc* .  
+1.  L’utilisateur émet une instruction **EXEC***usp_myproc*.  
   
 2.  L'analyseur extrait le nom et les paramètres de la procédure stockée.  
   
@@ -247,9 +248,9 @@ Exécution de procédures stockées compilées en mode natif.
  La détection des paramètres n'est pas utilisée pour compiler des procédures stockées compilées en mode natif. Tous les paramètres de la procédure stockée sont considérés comme ayant des valeurs UNKNOWN. À l’instar des procédures stockées interprétées, les procédures stockées compilées en mode natif prennent également en charge l’indicateur **OPTIMIZE FOR**. Pour plus d’informations, consultez [Indicateurs de requête &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md).  
   
 ### <a name="retrieving-a-query-execution-plan-for-natively-compiled-stored-procedures"></a>Récupération d'un plan d'exécution de requêtes pour les procédures stockées compilées en mode natif  
- Vous pouvez récupérer le plan d’exécution de requêtes pour une procédure stockée compilée en mode natif en utilisant le **plan d’exécution estimé** dans [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], ou en utilisant l’option SHOWPLAN_XML dans [!INCLUDE[tsql](../../includes/tsql-md.md)]. Par exemple :  
+ Vous pouvez récupérer le plan d’exécution de requêtes pour une procédure stockée compilée en mode natif en utilisant le **plan d’exécution estimé** dans [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], ou en utilisant l’option SHOWPLAN_XML dans [!INCLUDE[tsql](../../includes/tsql-md.md)]. Exemple :  
   
-```tsql  
+```sql  
 SET SHOWPLAN_XML ON  
 GO  
 EXEC dbo.usp_myproc  
@@ -268,11 +269,11 @@ GO
 |SELECT|`SELECT OrderID FROM dbo.[Order]`||  
 |INSERT|`INSERT dbo.Customer VALUES ('abc', 'def')`||  
 |UPDATE|`UPDATE dbo.Customer SET ContactName='ghi' WHERE CustomerID='abc'`||  
-|DELETE|`DELETE dbo.Customer WHERE CustomerID='abc'`||  
+|Suppression|`DELETE dbo.Customer WHERE CustomerID='abc'`||  
 |Compute Scalar|`SELECT OrderID+1 FROM dbo.[Order]`|Cet opérateur est utilisé pour les fonctions intrinsèques et les conversions de type. Certaines fonctions et conversions de type ne sont pas prises en charge à l'intérieur des procédures stockées compilées en mode natif.|  
 |Jointures de boucles imbriquées|`SELECT o.OrderID, c.CustomerID FROM dbo.[Order] o INNER JOIN dbo.[Customer] c`|Les boucles imbriquées sont le seul opérateur de jointure pris en charge dans les procédures stockées compilées en mode natif. Tous les plans qui contiennent des jointures utilisent l'opérateur Nested Loops, même si le plan pour la même requête exécutée en [!INCLUDE[tsql](../../includes/tsql-md.md)] interprété contient un hachage ou une jointure de fusion.|  
 |Trier|`SELECT ContactName FROM dbo.Customer ORDER BY ContactName`||  
-|Haut|`SELECT TOP 10 ContactName FROM dbo.Customer`||  
+|TOP|`SELECT TOP 10 ContactName FROM dbo.Customer`||  
 |Top-sort|`SELECT TOP 10 ContactName FROM dbo.Customer  ORDER BY ContactName`|L’expression **TOP** (nombre de lignes à retourner) ne peut pas dépasser 8 000 lignes. Moins s'il existe également des opérateurs de jointure et d'agrégation dans la requête. Les jointures et l'agrégation réduisent généralement le nombre de lignes à trier, par rapport au nombre de lignes des tables de base.|  
 |Agrégation de flux|`SELECT count(CustomerID) FROM dbo.Customer`|Notez que l'opérateur Hash Match n'est pas pris en charge pour l'agrégation. Par conséquent, toutes les agrégations dans les procédures stockées compilées en mode natif utilisent l'opérateur Stream Aggregate, même si le plan pour la même requête en [!INCLUDE[tsql](../../includes/tsql-md.md)] interprété utilise l'opérateur Hash Match.|  
   
@@ -307,7 +308,7 @@ SELECT o.OrderID, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.Custom
   
 -   L'analyse complète d'un index sur IX_CustomerID a été remplacée par une recherche d'index. Cela a abouti à l'analyse de 5 lignes, au lieu des 830 lignes requises pour l'analyse complète de l'index.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Tables optimisées en mémoire](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)  
   
   

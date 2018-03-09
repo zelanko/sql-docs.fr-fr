@@ -8,21 +8,23 @@ ms.service: sql-data-warehouse
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: sql-data-warehouse
+ms.technology:
+- sql-data-warehouse
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: TSQL
+dev_langs:
+- TSQL
 ms.assetid: 43c63b42-03cb-4fb5-8362-ec3b7e22a590
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2b1c9e31e5a5d3d2e31bdecce6eafda1a22ee302
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: e401596add887d6bfc3f7fc7bd6b5255128b251c
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sppdwloguserdatamasking-sql-data-warehouse"></a>sp_pdw_log_user_data_masking (entrepôt de données SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -45,7 +47,7 @@ sp_pdw_log_user_data_masking [ [ @masking_mode = ] value ] ;
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- [  **@masking_mode=** ] *masking_mode*  
+ [ **@masking_mode=** ] *masking_mode*  
  Détermine si les données d’utilisateur du journal de chiffrement transparent des données de masquage sont activées. *masking_mode* est **int**, et peut prendre l’une des valeurs suivantes :  
   
 -   0 = désactivé, l’utilisateur, les données apparaissent dans le [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] journaux d’activité.  
@@ -69,7 +71,7 @@ sp_pdw_log_user_data_masking [ [ @masking_mode = ] value ] ;
   
 -   Vous pouvez activer explicitement de masquage dans des données utilisateur [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] journaux d’activité à l’aide de la **sp_pdw_log_user_data_masking** procédure.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l’appartenance dans le **sysadmin** rôle de base de données fixe ou **CONTROL SERVER** autorisation.  
   
 ## <a name="example"></a>Exemple  
@@ -81,6 +83,6 @@ EXEC sp_pdw_log_user_data_masking 1;
   
 ## <a name="see-also"></a>Voir aussi  
  [sp_pdw_database_encryption pour &#40; Entrepôt de données SQL &#41;](../../relational-databases/system-stored-procedures/sp-pdw-database-encryption-sql-data-warehouse.md)   
- [sp_pdw_database_encryption_regenerate_system_keys &#40; Entrepôt de données SQL &#41;](../../relational-databases/system-stored-procedures/sp-pdw-database-encryption-regenerate-system-keys-sql-data-warehouse.md)  
+ [sp_pdw_database_encryption_regenerate_system_keys &#40;SQL Data Warehouse&#41;](../../relational-databases/system-stored-procedures/sp-pdw-database-encryption-regenerate-system-keys-sql-data-warehouse.md)  
   
   

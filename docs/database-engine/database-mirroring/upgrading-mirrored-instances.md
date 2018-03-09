@@ -2,9 +2,12 @@
 title: "Mise à niveau des instances en miroir | Microsoft Docs"
 ms.custom: 
 ms.date: 02/01/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: database-mirroring
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -16,21 +19,21 @@ ms.assetid: 0e73bd23-497d-42f1-9e81-8d5314bcd597
 caps.latest.revision: "44"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 27c4e397e7cf5dbf6b8a930badf965b293898537
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 06f9d525bc46843dcf5456fc70db0cdd4bd78b74
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="upgrading-mirrored-instances"></a>Mise à niveau des instances en miroir
-  Lors de la mise à niveau d’une instance en miroir [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vers une nouvelle version de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , un nouveau Service Pack [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ou une mise à jour cumulative, ou vers un nouveau Service Pack ou une nouvelle mise à jour cumulative de Windows, vous pouvez réduire le temps d’arrêt pour chaque base de données en miroir à un seul basculement manuel en effectuant une mise à niveau propagée (ou deux basculements manuels en cas de restauration automatique vers l’instance principale d’origine). Une mise à niveau propagée est un processus en plusieurs étapes qui, dans sa forme la plus simple, consiste à mettre à niveau l’instance de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] qui agit actuellement en tant que serveur miroir dans une session de mise en miroir, puis à basculer manuellement la base de données mise en miroir, à mettre à niveau l’ancienne instance de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] principale et à reprendre la mise en miroir. En pratique, le processus exact dépend du mode d’opération, du nombre et de la disposition de sessions de mise en miroir qui s’exécutent sur les instances [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] que vous mettez à niveau.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Lors de la mise à niveau d’une instance en miroir [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vers une nouvelle version de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], un nouveau Service Pack [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou une mise à jour cumulative, ou vers un nouveau Service Pack ou une nouvelle mise à jour cumulative de Windows, vous pouvez réduire le temps d’arrêt pour chaque base de données en miroir à un seul basculement manuel en effectuant une mise à niveau propagée (ou deux basculements manuels en cas de restauration automatique vers l’instance principale d’origine). Une mise à niveau propagée est un processus en plusieurs étapes qui, dans sa forme la plus simple, consiste à mettre à niveau l’instance de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] qui agit actuellement en tant que serveur miroir dans une session de mise en miroir, puis à basculer manuellement la base de données mise en miroir, à mettre à niveau l’ancienne instance de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] principale et à reprendre la mise en miroir. En pratique, le processus exact dépend du mode d’opération, du nombre et de la disposition de sessions de mise en miroir qui s’exécutent sur les instances [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] que vous mettez à niveau.  
   
 > [!NOTE]  
 >  Pour plus d’informations sur l’utilisation de la mise en miroir de base de données avec la copie des journaux de transaction lors d’une migration, téléchargez ce [livre blanc sur la mise en miroir de base de données et la copie de journaux de transaction](https://t.co/RmO6ruCT4J).  
   
-## <a name="prerequisites"></a>Conditions préalables  
+## <a name="prerequisites"></a>Prerequisites  
  Avant de commencer, passez en revue les informations importantes suivantes :  
   
 -   [Supported Version and Edition Upgrades](../../database-engine/install-windows/supported-version-and-edition-upgrades.md): vérifiez que vous pouvez procéder à une mise à niveau vers SQL Server 2016 à partir de votre version du système d’exploitation Windows et de la version de SQL Server. Par exemple, vous ne pouvez pas mettre à niveau directement une instance SQL Server 2005 vers [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
@@ -44,7 +47,7 @@ ms.lasthandoff: 11/09/2017
 ## <a name="recommended-preparation-best-practices"></a>Préparation recommandée (Meilleures pratiques)  
  Avant de commencer une mise à niveau propagée, nous recommandons d'effectuer les opérations suivantes :  
   
-1.  Procédez à un essai de basculement manuel sur au moins une de vos sessions de mise en miroir :  
+1.  Procédez à un essai de basculement manuel sur au moins une de vos sessions de mise en miroir :  
   
     -   [Basculer manuellement une session de mise en miroir de bases de données &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/manually-fail-over-a-database-mirroring-session-sql-server-management-studio.md)  
   
@@ -155,7 +158,7 @@ ms.lasthandoff: 11/09/2017
   
     -   [Ajouter un témoin de mise en miroir de bases de données à l’aide de l’authentification Windows &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/add-a-database-mirroring-witness-using-windows-authentication-transact-sql.md)  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Effectuer une mise à niveau vers SQL Server 2016 à l’aide de l’Assistant Installation &#40;programme d’installation&#41;](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)   
  [Installer SQL Server 2016 à partir de l’invite de commandes](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)   
  [Mise en miroir de bases de données ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-database-mirroring.md)   

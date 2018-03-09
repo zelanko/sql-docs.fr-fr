@@ -3,8 +3,11 @@ title: "Naviguer dans le Concepteur de requêtes et de vues (Visual Database Too
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,16 +20,16 @@ ms.assetid: 1c65acef-6dfa-463a-bf37-5a5335fe3865
 caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 36051cdc7eb95e2222f4af16dbf88536f4a263e7
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: a9336d8387ac7ff764821eee47405203672a31fe
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="navigate-in-the-query-and-view-designer-visual-database-tools"></a>Naviguer dans le Concepteur de requêtes et de vues (Visual Database Tools)
-Vous pouvez travailler dans le Concepteur de requêtes et de vues en vous servant du clavier ou de la souris. Pour connaître les méthodes spécifiques, consultez les tableaux suivants.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Vous pouvez travailler dans le Concepteur de requêtes et de vues en vous servant du clavier ou de la souris. Pour connaître les méthodes spécifiques, consultez les tableaux suivants.  
   
 ## <a name="any-pane"></a>Tous les volets  
   
@@ -45,7 +48,7 @@ Vous pouvez travailler dans le Concepteur de requêtes et de vues en vous servan
 |Vous déplacer entre les colonnes d'une table ou d'un objet structuré en table|Touches de direction|Dans la colonne à laquelle vous voulez accéder|  
 |Choisir la colonne de données sélectionnée pour la sortie|ESPACE ou touche PLUS|Sur la case à cocher en regard du nom de la colonne|  
 |Supprimer la colonne de données sélectionnée du résultat de la requête|ESPACE ou touche MOINS|Sur la case à cocher en regard du nom de la colonne|  
-|Supprimer la table, l'objet structuré en table ou la ligne de jointure de la requête|DELETE|Cliquez avec le bouton droit, puis cliquez sur **Supprimer**.|  
+|Supprimer la table, l'objet structuré en table ou la ligne de jointure de la requête|Suppression|Cliquez avec le bouton droit, puis cliquez sur **Supprimer**.|  
   
 > [!NOTE]  
 > Cette touche produit son effet sur tous les éléments sélectionnés. Pour sélectionner plusieurs éléments, appuyez sur la touche CTRL et, tout en la maintenant enfoncée, cliquez sur chaque élément.  
@@ -59,7 +62,7 @@ Pour plus d’informations, consultez [Volet Schéma &#40;Visual Database Tools&
 |Vous déplacer entre les cellules|Touches de direction, TAB ou MAJ+TAB|Sur la cellule cible|  
 |Vous déplacer sur la dernière ligne d'une colonne sélectionnée|Ctrl+Flèche bas||  
 |Vous déplacer sur la première ligne d'une colonne sélectionnée|Ctrl+Haut||  
-|Vous déplacer sur la cellule située en haut à gauche dans la partie visible de la grille|CTRL+ORIGINE||  
+|Vous déplacer sur la cellule située en haut à gauche dans la partie visible de la grille|Ctrl+Origine||  
 |Vous déplacer sur la cellule située en bas à droite|CTRL+FIN||  
 |Vous déplacer dans une liste déroulante|HAUT ou BAS|Sur le bouton dans la cellule|  
 |Sélectionner une colonne entière dans la grille|Ctrl + Espace|Sur l'en-tête de la colonne|  
@@ -69,8 +72,8 @@ Pour plus d’informations, consultez [Volet Schéma &#40;Visual Database Tools&
 |Coller le texte à partir du Presse-papiers (en mode Édition)|Ctrl+V||  
 |Basculer entre les modes Insertion et Refrappe pendant la modification d'une cellule|INS||  
 |Activer ou désactiver la case à cocher dans la colonne de sortie|ESPACE|Sur la case à cocher|  
-|Effacer le contenu d'une cellule sélectionné|DELETE||  
-|Effacer toutes les valeurs dans une colonne de grille sélectionnée|DELETE||  
+|Effacer le contenu d'une cellule sélectionné|Suppression||  
+|Effacer toutes les valeurs dans une colonne de grille sélectionnée|Suppression||  
 |Insérer une ligne entre des lignes existantes|INS après avoir sélectionné une ligne dans la grille||  
 |Ajouter une colonne Ou ...|INS après avoir sélectionné une colonne Ou ...||  
   
@@ -79,7 +82,7 @@ Pour plus d’informations, consultez [Volet Schéma &#40;Visual Database Tools&
   
 Pour plus d’informations, consultez [Volet Critères &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/criteria-pane-visual-database-tools.md).  
   
-## <a name="sql-pane"></a>Volet SQL  
+## <a name="sql-pane"></a>volet SQL  
 Quand vous travaillez dans le volet SQL, vous pouvez utiliser les touches d’édition Windows standard (par exemple, Ctrl+touches de direction pour vous déplacer entre les mots) et les commandes **Couper**, **Copier**et **Coller** du menu **Edition** .  
   
 > [!NOTE]  
@@ -94,13 +97,13 @@ Pour plus d’informations, consultez [Volet SQL &#40;Visual Database Tools&#41;
 |Vous déplacer entre des cellules|Touches de direction, TAB ou MAJ+TAB|Sur la cellule cible|  
 |Vous déplacer sur la première ou la dernière cellule de la ligne en cours|ORIGINE ou FIN||  
 |Vous déplacer sur la première ligne de la colonne en cours|Ctrl+Haut||  
-|Vous déplacer sur la cellule située en haut à gauche|CTRL+ORIGINE||  
+|Vous déplacer sur la cellule située en haut à gauche|Ctrl+Origine||  
 |Vous déplacer sur la cellule du bas dans la première colonne|Ctrl+Flèche bas||  
 |Étendre la sélection jusqu'au premier caractère d'une cellule|MAJ+ORIGNE||  
 |Étendre la sélection jusqu'au dernier caractère d'une cellule|MAJ+FIN||  
 |Basculer entre le mode Édition et le mode de sélection des cellules|F2||  
 |Basculer entre les modes Insertion et Refrappe pendant la modification d'une cellule|INS||  
-|Supprimer une ligne de la table|DELETE||  
+|Supprimer une ligne de la table|Suppression||  
 |Annuler les modifications effectuées dans la cellule en cours|ÉCHAP dans une cellule qui a été modifiée||  
 |Annuler les modifications effectuées dans la colonne en cours|ÉCHAP dans une cellule qui n'a pas été modifiée||  
 |Entrer une valeur NULL dans une cellule|Ctrl+0||  
@@ -114,6 +117,6 @@ Pour plus d’informations, consultez [Volet SQL &#40;Visual Database Tools&#41;
   
 Pour plus d’informations, consultez [Volet Résultats &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/results-pane-visual-database-tools.md).  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [Rubriques de procédures relatives à la conception de requêtes et de vues &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: "Script de journalisation supplémentaire Oracle | Documents Microsoft"
+title: "Script de journalisation supplémentaire Oracle | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -13,17 +13,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5e6ee618-b89b-46c7-92ad-4fc5ef7b777a
-caps.latest.revision: 6
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 16e3c1b59550236eaa1716d7251e55c0cee6b919
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: a4f97617decf23356dc663805494d5a2d9e2d72c
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="oracle-supplemental-logging-script"></a>Script de journalisation supplémentaire Oracle
   Cette boîte de dialogue affiche le script Oracle de journalisation supplémentaire.  
@@ -44,9 +43,8 @@ ms.lasthandoff: 08/03/2017
  **Copier**  
  Copie le script dans le Presse-papiers. Lorsque vous serez prêt, vous pourrez coller le script dans n'importe quel emplacement si un administrateur de base de données Oracle (DBA) doit examiner et exécuter le script de journalisation supplémentaire.  
   
-## <a name="see-also"></a>Voir aussi  
- [Comment gérer une Instance de capture de données modifiées](../../integration-services/change-data-capture/how-to-manage-a-cdc-instance.md)   
- [Gérer une Instance de capture de données modifiées](../../integration-services/change-data-capture/manage-a-cdc-instance.md)  
+## <a name="see-also"></a> Voir aussi  
+ [Procédure : gérer une instance de capture de données modifiées](../../integration-services/change-data-capture/how-to-manage-a-cdc-instance.md)   
+ [Gérer une instance CDC](../../integration-services/change-data-capture/manage-a-cdc-instance.md)  
   
   
-

@@ -1,26 +1,30 @@
 ---
 title: Prise en main de SQL Server apprentissage | Documents Microsoft
-ms.custom: SQL2016_New_Updated
+ms.custom:
+- SQL2016_New_Updated
 ms.date: 12/07/2016
-ms.prod: sql-server-2016
 ms.reviewer: 
-ms.suite: 
-ms.technology: r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 ms.assetid: 5b28a663-effe-41f6-9bda-eda95f0c6943
-caps.latest.revision: "34"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: 734deaac0381a3c5826038e7b5e133061749319f
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: d643bbdf32b946c5342484fa531303b5b74f4bcb
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="getting-started-with-sql-server-machine-learning"></a>Prise en main de SQL Server Machine Learning
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Machine Learning Services dans SQL Server est conçu pour prendre en charge des tâches courantes relatives aux données sans exposer vos données à des risques de sécurité ou de déplacement unnecesarily de données.
 
@@ -42,7 +46,7 @@ S’applique à : SQL Server 2016 R Services, SQL Server 2017 d’apprentissage
 3. Dans SQL Server 2016, R est ajouté par défaut. Dans SQL Server 2017, vous devez sélectionner une langue à ajouter. Vous pouvez sélectionner R ou Python ou activer à la fois.
 4. Lorsque le programme d’installation est terminé, effectuer quelques étapes supplémentaires pour permettre l’exécution du script externe et redémarrez le serveur.
 
-**Ressources**
+**Resources**
 
 + [Configurez SQL Server avec Machine Learning](../../advanced-analytics/r/set-up-sql-server-r-services-in-database.md)
 
@@ -64,7 +68,7 @@ Avec Machine Learning Services dans SQL Server, il est inutile de modifier ce pr
 + **Incorporer des scripts R ou Python dans [!INCLUDE[tsql](../../includes/tsql-md.md)] des procédures stockées**. Lorsque votre code est entièrement optimisé, placez-le dans une procédure stockée pour éviter le déplacement des données inutiles et optimiser les tâches de traitement des données.
 
 
-**Ressources**
+**Resources**
 
 + Installer [R Tools pour Visual Studio](https://docs.microsoft.com/visualstudio/rtvs/installation) ou RStudio.  
 
@@ -84,7 +88,7 @@ En règle générale, les chercheurs de données à l’aide de R ont des probl�
 
 + Choisir le meilleur langage pour la tâche.  R est idéal pour effectuer des calculs statistiques qui sont difficiles à implémenter à l’aide de SQL. Pour les opérations basées sur les données, exploiter la puissance du [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour optimiser les performances. Utilisez le moteur de base de données en mémoire pour effectuer des calculs très rapides sur les colonnes.
 
-**Ressources**
+**Resources**
 
 + [Étude de cas sur les performances](../../advanced-analytics/r/performance-case-study-r-services.md)
 + [R et optimisation des données](../../advanced-analytics/r/r-and-data-optimization-r-services.md)
@@ -96,7 +100,7 @@ Une fois le script ou modèle R est prêt pour la production, un développeur de
 
 ![rsql_keyscenario1](media/rsql-keyscenario1.png)
 
-+ **Sécurisé et extensible**. [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] utilise une nouvelle architecture d’extensibilité qui protège votre moteur de base de données et isole les sessions R. Vous pouvez contrôler les utilisateurs autorisés à exécuter des scripts R, et spécifier les bases de données accessibles au code R. Vous pouvez contrôler la quantité de ressources allouées au runtime R afin d’éviter que des calculs massifs ne mettent en péril les performances globales du serveur.
++ **Sécurisé et extensible**. [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] utilise une nouvelle architecture d’extensibilité qui protège votre moteur de base de données et isole les sessions R. Vous pouvez contrôler les utilisateurs autorisés à exécuter des scripts R, et spécifier les bases de données accessibles au code R. Vous pouvez contrôler la quantité de ressources allouées au runtime R afin d’éviter que des calculs massifs ne mettent en péril les performances globales du serveur.
 
 + **Planification et d’audit**. Lors de l’exécution des tâches de script externe [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vous pouvez contrôler et auditer les données utilisées par les chercheurs de données. Vous pouvez également planifier des travaux et créer des workflows contenant des scripts R ou Python externes, tout comme vous planifiez tout autre travail T-SQL ou procédure stockée.
 
@@ -106,7 +110,7 @@ Pour tirer parti de la gestion des ressources et les fonctionnalités de sécuri
 + Configuration de la sécurité et en verrouillant les packages utilisés par une tâche particulière
 + L’activation de la gouvernance de ressources
 
-**Ressources**
+**Resources**
 
 + [Gouvernance des ressources pour R](../../advanced-analytics/r/resource-governance-for-r-services.md)
 + [Gestion des packages R pour SQL Server](../../advanced-analytics/r/r-package-management-for-sql-server-r-services.md)

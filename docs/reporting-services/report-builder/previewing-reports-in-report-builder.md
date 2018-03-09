@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-builder
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ba6b5bdd-d8c6-4aa8-ba32-3a10b11969d4
 caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 629decc021a33945c5a4baae9aef1cda70d22f0b
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: a9e34b37436a71d34def9aaae26c38866098a5b7
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="previewing-reports-in-report-builder"></a>Aperçu des rapports dans le Générateur de rapports
   Quand vous créez un rapport paginé [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , il est utile d’afficher fréquemment un aperçu du rapport pour vérifier qu’il s’affiche comme vous le souhaitez. Cliquez sur **Exécuter**pour afficher un aperçu du rapport. Le rapport est restitué en mode Aperçu.  
@@ -83,7 +81,7 @@ ms.lasthandoff: 12/05/2017
   
  Si un sous-rapport utilisé par votre rapport est modifié après la création de votre session d'édition, le rendu du rapport échouera dans l'aperçu. Pour afficher un aperçu du rapport avec succès, vous devez enregistrer le rapport ou cliquer sur **Actualiser** pour obtenir de nouvelles données.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Datasets de rapport &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)   
  [Mise en forme des éléments de rapport &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/formatting-report-items-report-builder-and-ssrs.md)   
  [Tables, matrices et listes &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   

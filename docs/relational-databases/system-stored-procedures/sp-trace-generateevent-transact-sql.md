@@ -1,5 +1,5 @@
 ---
-title: sp_trace_generateevent (Transact-SQL) | Documents Microsoft
+title: sp_trace_generateevent (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/09/2016
 ms.prod: sql-non-specified
@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_trace_generateevent_TSQL
 - sp_trace_generateevent
-dev_langs: TSQL
-helpviewer_keywords: sp_trace_generateevent
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_trace_generateevent
 ms.assetid: 3ef05bfb-b467-4403-89cc-6e77ef9247dd
-caps.latest.revision: "35"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 28512a66275000a1d185dabdb1ce96a5ed242165
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 8f02fbb7e401740f6720fd8a654a38f3a9408e07
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sptracegenerateevent-transact-sql"></a>sp_trace_generateevent (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,13 +51,13 @@ sp_trace_generateevent [ @eventid = ] event_id
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@eventid=**] *event_id*  
+ [ **@eventid=**] *event_id*  
  ID de l'événement à activer. *event_id* est **int**, sans valeur par défaut. L’ID doit être un des numéros d’événements de 82 à 91, qui représentent les événements définis par l’utilisateur en tant qu’ensemble avec [sp_trace_setevent](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md).  
   
- [  **@userinfo** =] **'***user_info***'**  
+ [ **@userinfo**= ] **'***user_info***'**  
  Chaîne facultative, définie par l'utilisateur, qui identifie le motif de l'événement. *user_info* est **nvarchar (128)**, avec NULL comme valeur par défaut.  
   
- [  **@userdata** =] *user_data*  
+ [ **@userdata**= ] *user_data*  
  Données facultatives spécifiées par l'utilisateur et se rapportant à l'événement. *user_data* est **varbinary (8000)**, avec NULL comme valeur par défaut.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
@@ -74,7 +77,7 @@ sp_trace_generateevent [ @eventid = ] event_id
   
  Les paramètres de Trace de SQL toutes les procédures stockées (**sp_trace_xx**) sont de type strict. Si ces paramètres ne sont pas appelés avec des types de données appropriés pour les paramètres d'entrée tels qu'ils sont spécifiés dans la description de l'argument, la procédure stockée renvoie une erreur.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  L'utilisateur doit disposer de l'autorisation ALTER TRACE.  
   
 ## <a name="examples"></a>Exemples  
@@ -102,7 +105,7 @@ INSERT INTO user_config_test VALUES(1, 'abc');
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Sys.fn_trace_geteventinfo &#40; Transact-SQL &#41;](../../relational-databases/system-functions/sys-fn-trace-geteventinfo-transact-sql.md)   
+ [sys.fn_trace_geteventinfo &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-geteventinfo-transact-sql.md)   
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
  [Trace SQL](../../relational-databases/sql-trace/sql-trace.md)  
   

@@ -3,8 +3,9 @@ title: Fournisseur Microsoft OLE DB pour Microsoft Jet | Documents Microsoft
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,16 +17,16 @@ helpviewer_keywords:
 - providers [ADO], OLE DB provider for Microsoft Jet
 - OLE DB provider for Microsoft Jet [ADO]
 ms.assetid: fd956da1-5203-40af-aa7e-fc13a6c6581f
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 8a09ad6fb1af544e98f1b7875d1e04c396e46e60
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 5d703eff7e65b590961a4bc78a70032050e1b395
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-jet-overview"></a>Fournisseur Microsoft OLE DB pour Microsoft Jet présentation
 Le fournisseur OLE DB pour Microsoft Jet permet à ADO accéder aux bases de données Microsoft Jet.
@@ -196,7 +197,7 @@ Microsoft.Jet.OLEDB.4.0
 |Ensemble de lignes en mode Append-Only|DBPROP_APPENDONLY|
 |Blocage des objets de stockage|DBPROP_BLOCKINGSTORAGEOBJECTS|
 |Type de signet|DBPROP_BOOKMARKTYPE|
-|Signet|DBPROP_IROWSETLOCATE|
+|Bookmarkable|DBPROP_IROWSETLOCATE|
 |Signets ordonnés|DBPROP_ORDEREDBOOKMARKS|
 |Mettre en cache les colonnes différées|DBPROP_CACHEDEFERRED|
 |Modifier les lignes insérées|DBPROP_CHANGEINSERTEDROWS|
@@ -274,7 +275,7 @@ Microsoft.Jet.OLEDB.4.0
 |Ensemble de lignes en mode Append-Only|DBPROP_APPENDONLY|
 |Blocage des objets de stockage|DBPROP_BLOCKINGSTORAGEOBJECTS|
 |Type de signet|DBPROP_BOOKMARKTYPE|
-|Signet|DBPROP_IROWSETLOCATE|
+|Bookmarkable|DBPROP_IROWSETLOCATE|
 |Modifier les lignes insérées|DBPROP_CHANGEINSERTEDROWS|
 |Privilèges de colonne|DBPROP_COLUMNRESTRICT|
 |Notification de jeu de colonnes|DBPROP_NOTIFYCOLUMNSET|

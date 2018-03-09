@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords: ITEM
@@ -20,11 +20,11 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 45b34c8625837db7c379aa981f834559c4a033b6
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 9c7e727908bbd2265cab05b9d1aa2f55cc7b9ebd
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="item-tuple-mdx"></a>Item (Tuple) (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -55,7 +55,7 @@ Set_Expression.Item(String_Expression1 [ ,String_Expression2,...n])
  *Index*  
  Expression numérique valide qui précise le tuple spécifique par position dans le jeu à retourner.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Le **élément** fonction retourne un tuple du jeu spécifié. Il existe trois façons d’appeler le **élément** fonction :  
   
 -   Si une expression de chaîne unique est spécifiée, le **élément** fonction retourne le tuple spécifié. Par exemple, « ([2005].Q3, [Store05]) ».  

@@ -2,13 +2,13 @@
 title: "Implémenter la sécurité dynamique à l’aide de filtres de lignes | Documents Microsoft"
 ms.custom: 
 ms.date: 04/10/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: misc
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology: analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to: 
@@ -16,11 +16,11 @@ ms.assetid:
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.openlocfilehash: edc82bdddadbeacef82d767e8575e5f84ad719b7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 51ffec7f5fc4d5d6d44ff1dbab0e4a20827f6718
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="supplemental-lesson---implement-dynamic-security-by-using-row-filters"></a>Leçon supplémentaire - implémenter la sécurité dynamique à l’aide de filtres de lignes
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
@@ -35,7 +35,7 @@ Pour pouvoir effectuer cette leçon supplémentaire, vous allez accomplir une su
   
 Durée estimée pour effectuer cette leçon : **30 minutes**  
   
-## <a name="prerequisites"></a>Conditions préalables  
+## <a name="prerequisites"></a>Prerequisites  
 Cette leçon supplémentaire fait partie d’un didacticiel de modélisation tabulaire, qui doit être suivi dans l’ordre. Avant d'effectuer les tâches de cette leçon supplémentaire, vous devez avoir terminé toutes les leçons précédentes.  
   
 ## <a name="add-the-dimsalesterritory-table-to-the-aw-internet-sales-tabular-model-project"></a>Ajoutez la table dimSalesTerritory au projet Modèle tabulaire AW Internet Sales.  
@@ -133,7 +133,7 @@ Dans cette tâche, vous allez créer un rôle d'utilisateur. Ce rôle inclut un 
   
 3.  Cliquez sur le nouveau rôle puis, dans la colonne **Nom** , renommez le rôle en **Sales Employees by Territory**.  
   
-4.  Dans la colonne **Autorisations** , cliquez sur la liste déroulante, puis sélectionnez l’autorisation **Lecture** .  
+4.  Dans la colonne **Autorisations**, cliquez sur la liste déroulante, puis sélectionnez l’autorisation **Lecture**.  
   
 5.  Cliquez sur l’onglet **Membres** , puis cliquez sur **Ajouter**.  
   

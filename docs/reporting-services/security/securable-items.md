@@ -8,9 +8,7 @@ ms.service:
 ms.component: security
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,15 +18,15 @@ helpviewer_keywords:
 - role-based security [Reporting Services], securable items
 ms.assetid: 27f58d4c-5c7b-4947-af5b-0f1fa60faf5f
 caps.latest.revision: "45"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: f3345eedb8d1d8fa933deb6ac5f543fdb6e82f51
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 5aa30529e45f4436d6e3d5b7a366993f5f9fa909
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="securable-items"></a>Éléments sécurisables
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] utilise la sécurité basée sur les rôles pour contrôler l’accès aux éléments stockés sur un serveur de rapports. Lorsque vous accordez à un utilisateur l'accès à un serveur de rapports, vous le faites en général en créant une paire d'attributions de rôle :  
@@ -67,7 +65,7 @@ ms.lasthandoff: 12/05/2017
 |Sources de données partagées|Vous pouvez sécuriser les sources de données partagées afin de limiter l'accès à l'élément et aux pages de ses propriétés. Pour plus d’informations, consultez [Sécuriser les éléments de source de données partagée](../../reporting-services/security/secure-shared-data-source-items.md).|  
 |Datasets partagés|Les datasets partagés peuvent être sécurisés pour contrôler la plage d'actions que les utilisateurs peuvent effectuer, telles que l'affichage ou la modification de la définition, ou la modification des propriétés d'un dataset partagé donné.<br /><br /> Pour plus d’informations, consultez [Sécuriser les éléments de dataset partagés](../../reporting-services/security/secure-shared-dataset-items.md).|  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Octroi d'autorisations sur un serveur de rapports en mode natif](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)   
  [Créer, supprimer ou modifier un rôle &#40;Management Studio&#41;](../../reporting-services/security/role-definitions-create-delete-or-modify.md)   
  [Accorder à un utilisateur l’accès à un serveur de rapports &#40;Gestionnaire de rapports&#41;](../../reporting-services/security/grant-user-access-to-a-report-server-report-manager.md)   

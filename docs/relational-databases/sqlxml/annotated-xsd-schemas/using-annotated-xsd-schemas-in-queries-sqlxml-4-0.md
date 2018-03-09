@@ -8,7 +8,8 @@ ms.service:
 ms.component: sqlxml
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-xml
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -23,19 +24,20 @@ helpviewer_keywords:
 - XSD schemas [SQLXML], queries
 - templates [SQLXML], annotated XSD schemas in queries
 ms.assetid: 927a30a2-eae8-420d-851d-551c5f884f3c
-caps.latest.revision: "30"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9a873bc0b382c1b81daed1cedb6ebb6229296ba7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 6cd63b4426bdc1b4adf9020b5cf4bd3e50622528
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="using-annotated-xsd-schemas-in-queries-sqlxml-40"></a>Utilisation de schémas XSD annotés dans les requêtes (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]Vous pouvez spécifier des requêtes sur un schéma annoté pour extraire des données à partir de la base de données en spécifiant des requêtes XPath dans un modèle par rapport au schéma XSD.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+Vous pouvez spécifier des requêtes sur un schéma annoté afin de récupérer des données de la base de données ; pour ce faire, spécifiez des requêtes XPath dans un modèle par rapport au schéma XSD.  
   
  Le  **\<XPath-requête >** élément vous permet de spécifier une requête XPath sur la vue XML définie par le schéma annoté. Le schéma annoté sur lequel la requête XPath doit être exécutée est identifié à l’aide de la **schéma de mappage** attribut de la  **\<XPath-requête >** élément.  
   
@@ -145,6 +147,6 @@ ms.lasthandoff: 11/17/2017
 </sql:xpath-query>  
 ```  
   
- Le modèle spécifie une requête XPath mais ne spécifie pas de schéma de mappage. Par conséquent, cette requête est traitée comme un **dbobject** une requête de type dans laquelle Production.ProductPhoto est le nom de table et @ProductPhotoID= '100' représente un prédicat qui recherche une photo du produit avec la valeur d’ID de 100. @LargePhotoest la colonne à partir de laquelle récupérer la valeur.  
+ Le modèle spécifie une requête XPath mais ne spécifie pas de schéma de mappage. Par conséquent, cette requête est traitée comme un **dbobject** une requête de type dans laquelle Production.ProductPhoto est le nom de table et @ProductPhotoID= '100' représente un prédicat qui recherche une photo du produit avec la valeur d’ID de 100. @LargePhoto est la colonne à partir de laquelle récupérer la valeur.  
   
   

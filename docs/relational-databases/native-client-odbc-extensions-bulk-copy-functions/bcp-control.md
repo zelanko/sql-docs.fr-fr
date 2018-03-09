@@ -1,5 +1,5 @@
 ---
-title: bcp_control | Documents Microsoft
+title: bcp_control | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -17,15 +17,15 @@ apitype: DLLExport
 helpviewer_keywords: bcp_control function
 ms.assetid: 32187282-1385-4c52-9134-09f061eb44f5
 caps.latest.revision: "60"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0af6c90954aff66d17d7fafb3115138e7d71708f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 41d583812419f62ab7e9822fefaaac1a8b82a1f7
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="bcpcontrol"></a>bcp_control
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -45,7 +45,7 @@ RETCODE bcp_control (
   
 ## <a name="arguments"></a>Arguments  
  *pas*  
- Handle de connexion ODBC compatible avec la copie en bloc.  
+ Handle de connexion ODBC compatible avec la copie en bloc.  
   
  *eOption*  
  Prend l'une des valeurs suivantes :  
@@ -61,7 +61,7 @@ RETCODE bcp_control (
   
  Une erreur de séquence se produira également si vous appelez `bcp_control(hdbc,` BCPDELAYREADFMT`, (void *)FALSE)` après avoir appelé `bcp_control(hdbc,` BCPDELAYREADFMT`, (void *)TRUE)` et bcp_writefmt.  
   
- Pour plus d’informations, consultez [de découverte des métadonnées](../../relational-databases/native-client/features/metadata-discovery.md).  
+ Pour plus d'informations, consultez [Metadata Discovery](../../relational-databases/native-client/features/metadata-discovery.md).  
   
  BCPFILECP  
  *iValue* contient le numéro de la page de codes du fichier de données. Vous pouvez spécifier le numéro de la page de codes, par exemple 1252 ou 850, ou l'une de ces valeurs :  
@@ -76,12 +76,12 @@ RETCODE bcp_control (
  Numéro de version du format de fichier de données. Il peut s’agir de 80 ([!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]), 90 ([!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]), 100 ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ou [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]), de 110 ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]), ou 120 ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]). 120 est la valeur par défaut. Cela s'avère utile pour exporter et importer des données dans des formats pris en charge par une version antérieure du serveur. Par exemple, pour importer des données qui a été obtenues à partir d’une colonne de texte dans un [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] serveur dans un **varchar (max)** colonne dans un [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ou ultérieure de SQL server, vous devez spécifier 80. De même, si vous spécifiez 80 lorsque vous exportez des données à partir d’un **varchar (max)** colonne, il sera enregistré comme colonnes de texte sont enregistrés dans le [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] mettre en forme et peut être importé dans une colonne de texte d’un [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] server.  
   
  BCPFIRST  
- Première ligne du fichier de données ou de la table à copier. La valeur par défaut est 1 ; une valeur inférieure à 1 rétablit la valeur par défaut de cette option.  
+ Première ligne du fichier de données ou de la table à copier. La valeur par défaut est 1 ; une valeur inférieure à 1 rétablit la valeur par défaut de cette option.  
   
  BCPFIRSTEX  
- Pour les opérations bcp out, spécifie la première ligne de la table de base de données à copier dans le fichier de données.  
+ Pour les opérations bcp out, spécifie la première ligne de la table de base de données à copier dans le fichier de données.  
   
- Pour les opérations bcp in, spécifie la première ligne du fichier de données à copier dans la table de base de données.  
+ Pour les opérations bcp in, spécifie la première ligne du fichier de données à copier dans la table de base de données.  
   
  Le *iValue* paramètre est censé être l’adresse d’un entier 64 bits signé qui contient la valeur. La valeur maximale qui peut être passée à bcpfirstex est est 2 ^ 63-1.  
   
@@ -106,17 +106,17 @@ RETCODE bcp_control (
  Est la dernière ligne à copier. L'option par défaut consiste à copier toutes les lignes ; une valeur inférieure à 1 rétablit la valeur par défaut de cette option.  
   
  BCPLASTEX  
- Pour les opérations bcp out, spécifie la dernière ligne de la table de base de données à copier dans le fichier de données.  
+ Pour les opérations bcp out, spécifie la dernière ligne de la table de base de données à copier dans le fichier de données.  
   
- Pour les opérations bcp in, spécifie la dernière ligne du fichier de données à copier dans la table de base de données.  
+ Pour les opérations bcp in, spécifie la dernière ligne du fichier de données à copier dans la table de base de données.  
   
- Le *iValue* paramètre est censé être l’adresse d’un entier 64 bits signé qui contient la valeur. La valeur maximale qui peut être passée à BCPLASTEX est 2^63-1.  
+ Le *iValue* paramètre est censé être l’adresse d’un entier 64 bits signé qui contient la valeur. La valeur maximale qui peut être passée à BCPLASTEX est 2^63-1.  
   
  BCPMAXERRS  
- Est le nombre d’erreurs autorisées avant l’échec de l’opération de copie en bloc. La valeur par défaut est 10 ; une valeur inférieure à 1 rétablit cette option par défaut. La copie en bloc impose 65 535 erreurs au maximum. Toute tentative d'attribution d'une valeur supérieure à 65 535 à cette option entraîne l'attribution de la valeur 65 535 à l'option.  
+ Est le nombre d’erreurs autorisées avant l’échec de l’opération de copie en bloc. La valeur par défaut est 10 ; une valeur inférieure à 1 rétablit cette option par défaut. La copie en bloc impose 65 535 erreurs au maximum. Toute tentative d'attribution d'une valeur supérieure à 65 535 à cette option entraîne l'attribution de la valeur 65 535 à l'option.  
   
  BCPODBC  
- Lorsque la valeur est TRUE, spécifie que **datetime** et **smalldatetime** valeurs enregistrées au format caractère utilisent le préfixe de séquence d’échappement ODBC timestamp et le suffixe. L'option BCPODBC s'applique uniquement à BCP_OUT.  
+ Lorsque la valeur est TRUE, spécifie que **datetime** et **smalldatetime** valeurs enregistrées au format caractère utilisent le préfixe de séquence d’échappement ODBC timestamp et le suffixe. L’option BCPODBC s’applique uniquement aux DB_OUT.  
   
  Si la valeur est FALSE, un **datetime** valeur représentant le 1er janvier 1997 est convertie en chaîne de caractères : 1997-01-01 00:00:00.000. Si TRUE, le même **datetime** valeur est représentée en tant que : {ts ' 1997-01-01 00:00:00.000'}.  
   

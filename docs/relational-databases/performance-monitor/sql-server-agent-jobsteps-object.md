@@ -2,9 +2,12 @@
 title: SQL Server Agent, objet JobSteps | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance-monitor
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -13,22 +16,22 @@ helpviewer_keywords:
 - SQLAgent:JobSteps
 ms.assetid: 44f9983c-1753-4fe0-8475-973aa2460b3a
 caps.latest.revision: "23"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1cf950d708d527bdd8199fa39f132410b0c8d699
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: d6c2bfb8f1b628ba4515f3668b2a226e44b5c8fe
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sql-server-agent-jobsteps-object"></a>SQL Server Agent, objet JobSteps
-  L'objet de performance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] JobSteps **de l'Agent** intègre des compteurs de performances chargés de fournir des informations sur les étapes de travail de l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Le tableau ci-dessous répertorie les compteurs inclus dans cet objet.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] L’objet de performance **JobSteps** de l’Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] comprend des compteurs de performances chargés de fournir des informations sur les étapes de travail de l’Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Le tableau ci-dessous répertorie les compteurs inclus dans cet objet.  
   
  Le tableau suivant énumère les compteurs **SQLAgent:JobSteps** .  
   
-|Nom|Description|  
+|Nom   |Description|  
 |----------|-----------------|  
 |**Étapes actives**|Ce compteur fait état du nombre d'étapes de travail en cours d'exécution.|  
 |**Étapes en attente**|Ce compteur fait état du nombre d'étapes de travail en mesure d'être exécutées par l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , mais dont l'exécution n'a pas encore commencé.|  
@@ -52,7 +55,7 @@ ms.lasthandoff: 11/09/2017
 |**Snapshot**|Informations relatives aux étapes de travail qui utilisent le sous-système **Snapshot**|  
 |**TSQL**|Informations relatives aux étapes de travail qui exécutent [!INCLUDE[tsql](../../includes/tsql-md.md)].|  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Gérer les étapes de travail](http://msdn.microsoft.com/library/51352afc-a0a4-428b-8985-f9e58bb57c31)   
  [Utiliser des objets de performance](http://msdn.microsoft.com/library/830b843a-6b2a-4620-a51b-98358e9fc54b)   
  [Analyser l’utilisation des ressources &#40;Moniteur système&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  

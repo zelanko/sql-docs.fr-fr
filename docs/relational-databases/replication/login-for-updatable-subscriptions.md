@@ -2,31 +2,37 @@
 title: "Connexion des abonnements pouvant être mis à jour | Microsoft Docs"
 ms.custom: 
 ms.date: 08/25/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
-ms.technology: replication
+ms.suite: sql
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.rep.newsubwizard.updatablesubscriptionslogin.f1
+f1_keywords:
+- sql13.rep.newsubwizard.updatablesubscriptionslogin.f1
 ms.assetid: 301ea227-0455-40ba-9009-d38f8676b325
-caps.latest.revision: "18"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 906d464c7e3f345c21034cffcd51e1494c0724c3
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: bd0c4bab5c8a4474a3864df385af997febf656d9
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="login-for-updatable-subscriptions"></a>Connexion des abonnements pouvant être mis à jour
-  Pour une mise à jour immédiate, si vous avez sélectionné **Répliquer** dans la page **Abonnements pouvant être mis à jour** de cet Assistant, vous devez spécifier un compte avec l’Abonné sous lequel les connexions au serveur de publication s’effectuent. 
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Pour une mise à jour immédiate, si vous avez sélectionné **Répliquer** dans la page **Abonnements pouvant être mis à jour** de cet Assistant, vous devez spécifier un compte avec l’Abonné sous lequel les connexions au serveur de publication s’effectuent. 
   
  Les connexions sont utilisées par les déclencheurs qui sont activés pour l’Abonné et propagent les modifications sur le serveur de publication. Ce compte est nécessaire même si vous avez sélectionné **Mettre les modifications en file d’attente et valider dès que possible** dans la page **Abonnements pouvant être mis à jour**. L’Assistant Nouvel abonnement par défaut configure la mise à jour en attente avec la possibilité de passer à une mise à jour immédiate si nécessaire.  
   
-> **IMPORTANT** Le compte spécifié pour la connexion doit uniquement avoir l’autorisation d’insérer, de mettre à jour et de supprimer des données sur les vues créées par la réplication dans la base de données de publication. Il ne doit pas bénéficier d’autres autorisations. Accordez des autorisations sur les vues de la base de données de publication se présentant sous la forme **syncobj_***\<Nombre_hexadécimal>* au compte que vous avez configuré pour chaque Abonné.  
+> **IMPORTANT** Le compte spécifié pour la connexion doit uniquement avoir l’autorisation d’insérer, de mettre à jour et de supprimer des données sur les vues créées par la réplication dans la base de données de publication. Il ne doit pas bénéficier d’autres autorisations. Accordez des autorisations sur les vues de la base de données de publication se présentant sous la forme **syncobj_***\<Nombre_hexadécimal>* au compte que vous avez configuré pour chaque abonné.  
   
  Trois options sont possibles pour le type de connexion :  
   
@@ -55,6 +61,6 @@ ms.lasthandoff: 11/09/2017
  [Créer un abonnement pouvant être mis à jour pour une publication transactionnelle](publish/create-an-updatable-subscription-to-a-transactional-publication.md)   
  [Afficher et modifier les paramètres de sécurité de la réplication](../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)   
  [Abonnements pouvant être mis à jour pour la réplication transactionnelle](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)   
- [S’abonner à des publications](../../relational-databases/replication/subscribe-to-publications.md)  
+ [S'abonner à des publications](../../relational-databases/replication/subscribe-to-publications.md)  
   
   

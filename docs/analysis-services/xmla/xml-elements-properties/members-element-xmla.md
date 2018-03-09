@@ -2,15 +2,13 @@
 title: "Élément Members (XMLA) | Documents Microsoft"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: xmla
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: Members Element
@@ -28,14 +26,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 2d2b4f8a9c466fa85bdd1131a58c2c11fc232967
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 478115a00c7e0f97fcad6e25fc74c1e205bb0a75
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="members-element-xmla"></a>Élément Members (XMLA)
-  Contient une collection de [membre](../../../analysis-services/xmla/xml-elements-properties/member-element-xmla.md) éléments contenus par le parent [CrossProduct](../../../analysis-services/xmla/xml-elements-properties/crossproduct-element-xmla.md) élément.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]Contient une collection de [membre](../../../analysis-services/xmla/xml-elements-properties/member-element-xmla.md) éléments contenus par le parent [CrossProduct](../../../analysis-services/xmla/xml-elements-properties/crossproduct-element-xmla.md) élément.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -53,8 +51,8 @@ ms.lasthandoff: 11/17/2017
   
 |Caractéristique|Description|  
 |--------------------|-----------------|  
-|Type de données et longueur|Aucune|  
-|Valeur par défaut|Aucune|  
+|Type de données et longueur|None|  
+|Valeur par défaut|None|  
 |Cardinalité|0-n : élément facultatif pouvant apparaître plusieurs fois.|  
   
 ## <a name="element-relationships"></a>Relations entre les éléments  
@@ -66,14 +64,14 @@ ms.lasthandoff: 11/17/2017
   
 ## <a name="attributes"></a>Attributs  
   
-|Attribut|Description|  
+|Attribute|Description|  
 |---------------|-----------------|  
-|Hiérarchie|Attribut **String** requis. Le nom de la hiérarchie à laquelle les membres contenus par le **membres** l’élément appartient.|  
+|Hierarchy|Attribut **String** requis. Le nom de la hiérarchie à laquelle les membres contenus par le **membres** l’élément appartient.|  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Lorsqu’une application cliente définit le **AxisFormat** propriété *ClusterFormat*, les membres de chaque axe sont divisés en clusters dans lequel chaque cluster représente un produit croisé entre des ensembles ordonnés de membres de chaque hiérarchie. Chaque **axe** élément se compose d’un ou plusieurs **CrossProduct** éléments. Chaque **CrossProduct** élément contient un **membres** , élément pour chaque hiérarchie sur l’axe. Le **membres** élément contient à son tour, un **membre** élément pour chaque membre de la hiérarchie spécifiée incluse dans le produit croisé.  
   
-## <a name="example"></a>Exemple  
+## <a name="example"></a> Exemple  
  L’exemple suivant illustre la structure de la **membres** élément lorsqu’un client spécifie *ClusterFormat* pour le **AxisFormat** propriété XMLA les membres suivants de l’axe :  
   
 ||||||  

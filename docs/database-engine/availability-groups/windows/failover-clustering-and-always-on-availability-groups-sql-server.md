@@ -22,13 +22,13 @@ ms.assetid: 613bfbf1-9958-477b-a6be-c6d4f18785c3
 caps.latest.revision: "48"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: b605fdc999d3b0bb8937428e7b158322d182d839
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: dd664120017d7e498fd2930281380c718e98aaa9
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="failover-clustering-and-always-on-availability-groups-sql-server"></a>Clustering de basculement et groupes de disponibilité Always On (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -63,7 +63,7 @@ ms.lasthandoff: 11/20/2017
 ### <a name="cross-cluster-migration-of-always-on-availability-groups-for-os-upgrade"></a>Migration entre clusters de groupes de disponibilité Always On pour la mise à niveau du système d’exploitation  
  Depuis [!INCLUDE[ssSQL11SP1](../../../includes/sssql11sp1-md.md)], [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] prend en charge la migration entre clusters de groupes de disponibilité pour les déploiements dans un nouveau cluster de clustering de basculement Windows Server (WSFC). Une migration entre clusters déplace un groupe de disponibilité ou un lot de groupes de disponibilité vers le nouveau cluster WSFC de destination avec un temps mort minimal. Le processus de migration entre clusters permet de conserver les contrats de niveau de service (SLA) lors de la mise à niveau vers un cluster [!INCLUDE[win8srv](../../../includes/win8srv-md.md)] . [!INCLUDE[ssSQL11SP1](../../../includes/sssql11sp1-md.md)] (ou une version ultérieure) doit être installé et activé pour Always On sur le cluster WSFC de destination. La réussite d'une migration entre clusters dépend de la planification et de la préparation du cluster WSFC de destination.  
   
- Pour plus d’informations, consultez [Migration entre clusters de groupes de disponibilité Always On pour la mise à niveau du système d’exploitation](http://msdn.microsoft.com/library/jj873730.aspx).  
+ Pour plus d’informations, consultez [Cross-Cluster Migration of Always On Availability Groups for OS Upgrade](http://msdn.microsoft.com/library/jj873730.aspx)(Migration entre clusters de groupes de disponibilité Always On pour la mise à niveau du système d’exploitation).  
   
 ##  <a name="SQLServerFC"></a> [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Instances de cluster de basculement et groupes de disponibilité  
  Vous pouvez configurer une deuxième couche de basculement au niveau de l'instance serveur en implémentant le clustering de basculement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] avec le cluster WSFC. Un réplica de disponibilité peut être hébergé par une instance autonome de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ou par une instance de cluster de basculement. Un seul partenaire FCI peut héberger un réplica pour un groupe de disponibilité donné. Lorsqu'un réplica de disponibilité s'exécute sur une FCI, la liste des propriétaires possibles pour le groupe de disponibilité contiendra uniquement le nœud FCI actif.  
@@ -122,7 +122,7 @@ ms.lasthandoff: 11/20/2017
   
 -   N'utilisez pas le Gestionnaire du cluster de basculement pour déplacer des groupes de disponibilité vers différents nœuds ou faire basculer des groupes de disponibilité. Le Gestionnaire du cluster de basculement n'a pas connaissance de l'état de synchronisation des réplicas de disponibilité, et cela peut provoquer temps morts étendus. Vous devez utiliser [!INCLUDE[tsql](../../../includes/tsql-md.md)] ou [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)].  
   
-##  <a name="RelatedContent"></a> Contenu connexe  
+##  <a name="RelatedContent"></a> Contenu associé  
   
 -   **Blogs :**  
   
@@ -142,7 +142,7 @@ ms.lasthandoff: 11/20/2017
   
      [Livres blancs de l'équipe de consultants clients de SQL Server](http://sqlcat.com/)  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Vue d’ensemble des groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Activer et désactiver les groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md)   
  [Surveiller des groupes de disponibilité &#40;Transact-SQL&#41;](../../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)   

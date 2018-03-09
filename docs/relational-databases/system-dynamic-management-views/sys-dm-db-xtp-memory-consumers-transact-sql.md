@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_db_xtp_memory_consumers (Transact-SQL) | Documents Microsoft
+title: sys.dm_db_xtp_memory_consumers (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - dm_db_xtp_memory_consumers
 - dm_db_xtp_memory_consumers_TSQL
 - sys.dm_db_xtp_memory_consumers_stats_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_db_xtp_memory_consumers dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_db_xtp_memory_consumers dynamic management view
 ms.assetid: f7ab2eaf-e627-464d-91fe-0e170b3f37bc
-caps.latest.revision: "24"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 29a4fae7f62f76dc6d7f1256eed6e681fe0ff9e4
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 3b34320f2a94ce971bae2cd4406078b9b60669a3
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmdbxtpmemoryconsumers-transact-sql"></a>sys.dm_db_xtp_memory_consumers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -41,8 +44,8 @@ ms.lasthandoff: 11/17/2017
 |-----------------|---------------|-----------------|  
 |memory_consumer_id|**bigint**|ID (interne) du consommateur de mémoire.|  
 |memory_consumer_type|**int**|Type de consommateur de mémoire :<br /><br /> 0 = Agrégation. (Regroupe l'utilisation de la mémoire de deux consommateurs ou plus. Ne doit pas être affiché.)<br /><br /> 2=VARHEAP (Suit la consommation de mémoire pour un segment de longueur variable.)<br /><br /> 3=HASH (Suit la consommation de mémoire pour un index.)<br /><br /> 5=DB PAGE POOL (Suit la consommation de mémoire d'un pool de pages de base de données pour les opérations runtime.) Par exemple, les variables de table et certaines analyses sérialisables. Il existe un seul consommateur de mémoire de ce type par base de données.)|  
-|memory_consumer_type_desc|**nvarchar (64)**|Type de consommateur de mémoire : VARHEAP, HASH ou PGPOOL.<br /><br /> 0 – Ne doit pas être affiché.)<br /><br /> 2 - VARHEAP<br /><br /> 3 - HASH<br /><br /> 5 - PGPOOL|  
-|memory_consumer_desc|**nvarchar (64)**|Description de l'instance de consommateur de mémoire :<br /><br /> VARHEAP : <br />Segment de mémoire de la base de données. Utilisé pour allouer des données utilisateur à une base de données (lignes).<br />Segment de mémoire de la base de données système. Utilisé pour allouer les données de la base de données qui seront incluses dans les vidages de mémoire et qui n'incluent pas les données utilisateur.<br />Segment de mémoire de l'index de plage. Segment de mémoire privé utilisé par l'index de plage pour allouer les pages BW.<br /><br /> HACHAGE : Aucune description car object_id n’indique la table et index_id, l’index de hachage lui-même.<br /><br /> PGPOOL : Pour la base de données est le pool de pages qu’un seul pool de pages 64 Ko de la base de données.|  
+|memory_consumer_type_desc|**nvarchar(64)**|Type de consommateur de mémoire : VARHEAP, HASH ou PGPOOL.<br /><br /> 0 – Ne doit pas être affiché.)<br /><br /> 2 - VARHEAP<br /><br /> 3 - HASH<br /><br /> 5 - PGPOOL|  
+|memory_consumer_desc|**nvarchar(64)**|Description de l'instance de consommateur de mémoire :<br /><br /> VARHEAP : <br />Segment de mémoire de la base de données. Utilisé pour allouer des données utilisateur à une base de données (lignes).<br />Segment de mémoire de la base de données système. Utilisé pour allouer les données de la base de données qui seront incluses dans les vidages de mémoire et qui n'incluent pas les données utilisateur.<br />Segment de mémoire de l'index de plage. Segment de mémoire privé utilisé par l'index de plage pour allouer les pages BW.<br /><br /> HACHAGE : Aucune description car object_id n’indique la table et index_id, l’index de hachage lui-même.<br /><br /> PGPOOL : Pour la base de données est le pool de pages qu’un seul pool de pages 64 Ko de la base de données.|  
 |object_id|**bigint**|ID de l'objet auquel la mémoire allouée est attribuée. Valeur négative pour les objets système.|  
 |xtp_object_id|**bigint**|L’ID d’objet pour la table optimisée en mémoire.|  
 |index_id|**int**|ID d'index du consommateur (le cas échéant). NULL pour les tables de base.|  
@@ -59,7 +62,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="remarks"></a>Notes  
  Dans le résultat, les allocateurs au niveau de la base de données font référence aux tables utilisateur, aux index, et aux tables système. VARHEAP avec object_id = NULL fait référence à la mémoire allouée aux tables contenant des colonnes de longueur variable.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Toutes les lignes sont retournées si vous avez l'autorisation VIEW DATABASE STATE sur la base de données active. Sinon, un ensemble de lignes vide est retourné.  
   
  Si vous n'avez pas l'autorisation VIEW DATABASE, toutes les colonnes seront retournées pour les lignes dans les tables sur lesquelles vous avez l'autorisation SELECT.  

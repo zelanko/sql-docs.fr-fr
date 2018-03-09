@@ -1,5 +1,5 @@
 ---
-title: Sys.systypes (Transact-SQL) | Documents Microsoft
+title: sys.systypes (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-compatibility-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,21 +17,22 @@ f1_keywords:
 - systypes_TSQL
 - sys.systypes
 - systypes
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - sys.systypes compatibility view
 - systypes system table
 ms.assetid: 1b0b1d0c-5f7b-470b-bd52-8bfa922d7889
-caps.latest.revision: "50"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8b505bed051d34e8cdd4237fa3cb73e15f1fd0b2
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: aa54909c2d3f5e83a51ef1814564ae80828a292a
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="syssystypes-transact-sql"></a>sys.systypes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -40,28 +42,28 @@ ms.lasthandoff: 11/17/2017
 > [!IMPORTANT]  
 >  [!INCLUDE[ssnoteCompView](../../includes/ssnotecompview-md.md)]  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de colonne|Type de données| Description|  
 |-----------------|---------------|-----------------|  
 |**nom**|**sysname**|Nom du type de données.|  
-|**xType**|**tinyint**|Type de stockage physique|  
+|**xtype**|**tinyint**|Type de stockage physique|  
 |**status**|**tinyint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**xusertype**|**smallint**|Type d'utilisateur étendu Déborde ou retourne la valeur NULL si le nombre de types de données dépasse 32 767.|  
-|**longueur**|**smallint**|Longueur physique du type de données.|  
+|**length**|**smallint**|Longueur physique du type de données.|  
 |**xprec**|**tinyint**|Précision interne, telle qu'utilisée par le serveur. À ne pas utiliser dans les requêtes.|  
-|**XScale**|**tinyint**|Échelle interne, telle qu'utilisée par le serveur. À ne pas utiliser dans les requêtes.|  
-|**%Tles**|**int**|ID de la procédure stockée qui contient les contrôles d'intégrité de ce type de données.|  
-|**domaine**|**int**|ID de la procédure stockée qui contient les contrôles d'intégrité de ce type de données.|  
-|**UID**|**smallint**|ID de schéma du propriétaire du type.<br /><br /> Pour les bases de données mises à niveau à partir d'une version antérieure de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], l'ID de schéma correspond à l'ID d'utilisateur du propriétaire.<br /><br /> **\*\*Important \* \***  si vous utilisez une des opérations suivantes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instructions DDL, vous devez utiliser le [sys.types](../../relational-databases/system-catalog-views/sys-types-transact-sql.md) affichage au lieu de catalogue **sys.systypes**.<br /><br /> ALTER AUTHORIZATION ON TYPE<br /><br /> CREATE TYPE<br /><br /> Déborde ou retourne la valeur NULL si le nombre d'utilisateurs et de rôles dépasse 32 767.|  
-|**réservé**|**smallint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**xscale**|**tinyint**|Échelle interne, telle qu'utilisée par le serveur. À ne pas utiliser dans les requêtes.|  
+|**tdefault**|**int**|ID de la procédure stockée qui contient les contrôles d'intégrité de ce type de données.|  
+|**domain**|**int**|ID de la procédure stockée qui contient les contrôles d'intégrité de ce type de données.|  
+|**uid**|**smallint**|ID de schéma du propriétaire du type.<br /><br /> Pour les bases de données mises à niveau à partir d'une version antérieure de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], l'ID de schéma correspond à l'ID d'utilisateur du propriétaire.<br /><br /> **\*\*Important \* \***  si vous utilisez une des opérations suivantes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instructions DDL, vous devez utiliser le [sys.types](../../relational-databases/system-catalog-views/sys-types-transact-sql.md) affichage au lieu de catalogue **sys.systypes**.<br /><br /> ALTER AUTHORIZATION ON TYPE<br /><br /> CREATE TYPE<br /><br /> Déborde ou retourne la valeur NULL si le nombre d'utilisateurs et de rôles dépasse 32 767.|  
+|**reserved**|**smallint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**collationid**|**int**|Si la base de caractères, **collationid** est l’id du classement de la base de données en cours ; sinon, sa valeur est NULL.|  
 |**usertype**|**smallint**|ID de type d'utilisateur. Déborde ou retourne la valeur NULL si le nombre de types de données dépasse 32 767.|  
 |**variable**|**bit**|Type de données de longueur variable.<br /><br /> 1 = True<br /><br /> 0 = False|  
-|**AllowNulls**|**bit**|Détermine la possibilité de valeur NULL par défaut pour ce type de données. Cette valeur par défaut est substituée si la possibilité de valeur NULL est spécifiée à l’aide de [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md) ou [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md).|  
+|**allownulls**|**bit**|Détermine la possibilité de valeur NULL par défaut pour ce type de données. Cette valeur par défaut est substituée si la possibilité de valeur NULL est spécifiée à l’aide de [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md) ou [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md).|  
 |**type**|**tinyint**|Type de données de stockage physique.|  
-|**printfmt**|**varchar (255)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**PREC**|**smallint**|Niveau de précision de ce type de données<br /><br /> -1 = **xml** ou les types de valeur élevée.|  
-|**mise à l’échelle**|**tinyint**|Échelle de ce type de données, basée sur la précision.<br /><br /> NULL = le type de données est non numérique.|  
-|**classement**|**sysname**|Si la base de caractères, **classement** est le classement de la base de données en cours ; sinon, sa valeur est NULL.|  
+|**printfmt**|**varchar(255)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**prec**|**smallint**|Niveau de précision de ce type de données<br /><br /> -1 = **xml** ou les types de valeur élevée.|  
+|**scale**|**tinyint**|Échelle de ce type de données, basée sur la précision.<br /><br /> NULL = le type de données est non numérique.|  
+|**collation**|**sysname**|Si la base de caractères, **classement** est le classement de la base de données en cours ; sinon, sa valeur est NULL.|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Vues de compatibilité &#40; Transact-SQL &#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)   

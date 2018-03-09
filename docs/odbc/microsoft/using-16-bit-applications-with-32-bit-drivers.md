@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: microsoft
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 5cdfeea078774f5261bdeca25123a4743b1c874b
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 95ff3ce88daf4a508145c28ea194a97b9cbbbabe
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="using-16-bit-applications-with-32-bit-drivers"></a>À l’aide d’Applications 16 bits avec les pilotes 32 bits
 > [!IMPORTANT]  
@@ -52,7 +52,7 @@ ms.lasthandoff: 11/20/2017
 ## <a name="components"></a>Components  
  Le composant ODBC du kit SDK MDAC 2.8 SP1 inclut les fichiers suivants pour l’exécution d’applications 16 bits avec les pilotes 32 bits. Ces composants sont dans le répertoire \Redist.  
   
-|Nom de fichier| Description|  
+|Nom de fichier|Description|  
 |---------------|-----------------|  
 |Odbc16gt.dll|16 bits générique thunking DLL ODBC|  
 |ODBC32GT.dll|32 bits générique thunking DLL ODBC|  
@@ -64,7 +64,7 @@ ms.lasthandoff: 11/20/2017
   
  En outre, les fichiers suivants, ainsi que le Gestionnaire de pilote 2.10 de ODBC 16 bits, qui ne font pas partie d’ODBC 3.51, sont requis par et doivent être installés avec l’application 16 bits.  
   
-|Nom de fichier| Description|  
+|Nom de fichier|Description|  
 |---------------|-----------------|  
 |ODBC.dll|Gestionnaire de pilotes 16 bits|  
 |ODBCINST.dll|programme d’installation de 16 bits DLL|  

@@ -2,9 +2,12 @@
 title: "Certificats et clés asymétriques SQL Server | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: security
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -13,16 +16,16 @@ ms.assetid: 8519aa2f-f09c-4c1c-96b5-abc24811e60c
 caps.latest.revision: "18"
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: a1175f8ea6b93440437b23c6322fe2eb8a89332c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: eadfb0677c17e0c40d1b32ca01998c8079fcd238
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="sql-server-certificates-and-asymmetric-keys"></a>Certificats et clés asymétriques SQL Server
-  Le chiffrement à clé publique (PKI) est une forme de confidentialité des messages dans laquelle un utilisateur crée une clé *publique* et une clé *privée* . La clé privée est gardée secrète, alors que la clé publique peut être distribuée aux autres. Bien que les clés soient liées mathématiquement, la clé privée ne peut pas être dérivée facilement de la clé publique. La clé publique est utilisée pour chiffrer les données et la clé privée pour les déchiffrer. Un message chiffré à l'aide de la clé publique peut être déchiffré uniquement à l'aide de la clé privée appropriée. Comme il existe deux clés différentes, ces clés sont *asymétriques*.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Le chiffrement à clé publique (PKI) est une forme de confidentialité des messages dans laquelle un utilisateur crée une clé *publique* et une clé *privée*. La clé privée est gardée secrète, alors que la clé publique peut être distribuée aux autres. Bien que les clés soient liées mathématiquement, la clé privée ne peut pas être dérivée facilement de la clé publique. La clé publique est utilisée pour chiffrer les données et la clé privée pour les déchiffrer. Un message chiffré à l'aide de la clé publique peut être déchiffré uniquement à l'aide de la clé privée appropriée. Comme il existe deux clés différentes, ces clés sont *asymétriques*.  
   
  Les certificats et les clés asymétriques sont deux façons d'utiliser un chiffrement asymétrique. Les certificats sont souvent utilisés comme conteneurs pour les clés asymétriques car ils peuvent contenir plus d'informations, telles que les dates d'expiration et les émetteurs. Il n'y a aucune différence entre les deux mécanismes en ce qui concerne l'algorithme de chiffrement et aucune différence de puissance pour une même longueur de clé. En général, vous utilisez un certificat pour chiffrer d'autres types de clés de chiffrement dans une base de données ou pour signer des modules de code.  
   

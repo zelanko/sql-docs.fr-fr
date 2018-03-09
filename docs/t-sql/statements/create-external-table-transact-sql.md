@@ -8,29 +8,31 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - CREATE_EXTERNAL_TABLE
 - CREATE EXTERNAL TABLE
 - PolyBase, T-SQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - External
 - External, table create
 - PolyBase, external table
 ms.assetid: 6a6fd8fe-73f5-4639-9908-2279031abdec
-caps.latest.revision: "30"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 638708265e79ff0f3a927e9e049f3985cfe2752a
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
-ms.translationtype: HT
+ms.openlocfilehash: e9ee131e1c4bb09ae19c90d84b78a7d6fc662ae8
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="create-external-table-transact-sql"></a>CRÉER une TABLE externe (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -135,10 +137,10 @@ CREATE EXTERNAL TABLE [ database_name . [ schema_name ] . | schema_name. ] table
 ```  
   
 ## <a name="arguments"></a>Arguments  
- *database_name* . [nom_schéma]. | schema_name. ] *nom_table*  
+ *database_name* . [nom_schéma]. | schema_name. ] *table_name*  
  Un à trois - nom de partie de la table à créer. Pour une table externe, seules les métadonnées de la table sont stockée dans SQL, ainsi que des statistiques de base sur le fichier et ou le dossier référencé dans Hadoop ou Azure blob storage. Aucune donnée réelle est déplacée ou est stockée dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- \<column_definition > [ ,... *n*  ] CREATE EXTERNAL TABLE autorise une ou plusieurs définitions de colonne. CREATE EXTERNAL TABLE et CREATE TABLE utilisent la même syntaxe de définition d’une colonne. Une exception à cela, vous ne pouvez pas utiliser la contrainte par défaut sur des tables externes. Pour plus d’informations sur les définitions de colonne et leurs types de données, consultez [CREATE TABLE &#40; Transact-SQL &#41; ](../../t-sql/statements/create-table-transact-sql.md) et [créer la TABLE de base de données SQL Azure](http://msdn.microsoft.com/library/d53c529a-1d5f-417f-9a77-64ccc6eddca1).  
+ \<column_definition > [,...  *n*  ] CREATE EXTERNAL TABLE autorise une ou plusieurs définitions de colonne. CREATE EXTERNAL TABLE et CREATE TABLE utilisent la même syntaxe de définition d’une colonne. Une exception à cela, vous ne pouvez pas utiliser la contrainte par défaut sur des tables externes. Pour plus d’informations sur les définitions de colonne et leurs types de données, consultez [CREATE TABLE &#40; Transact-SQL &#41; ](../../t-sql/statements/create-table-transact-sql.md) et [créer la TABLE de base de données SQL Azure](http://msdn.microsoft.com/library/d53c529a-1d5f-417f-9a77-64ccc6eddca1).  
   
  Les définitions de colonne, y compris les types de données et le nombre de colonnes doit correspondre les données dans les fichiers externes. S’il existe une incompatibilité, les lignes du fichier sont rejetées lors de l’interrogation des données réelles.  
   
@@ -159,20 +161,20 @@ CREATE EXTERNAL TABLE [ database_name . [ schema_name ] . | schema_name. ] table
 |real|Unique|float|FloatWritable||  
 |money|Décimal|double|DoubleWritable||  
 |smallmoney|Décimal|double|DoubleWritable||  
-|nchar|Chaîne<br /><br /> Char]|chaîne|texte||  
-|nvarchar|Chaîne<br /><br /> Char]|chaîne|Texte||  
-|char|Chaîne<br /><br /> Char]|chaîne|Texte||  
-|varchar|Chaîne<br /><br /> Char]|chaîne|Texte||  
+|NCHAR|Chaîne<br /><br /> Char[]|chaîne|texte||  
+|nvarchar|Chaîne<br /><br /> Char[]|chaîne|Texte||  
+|char|Chaîne<br /><br /> Char[]|chaîne|Texte||  
+|varchar|Chaîne<br /><br /> Char[]|chaîne|Texte||  
 |binary|Byte[]|binary|BytesWritable|S’applique à la ruche 0,8 et versions ultérieur.|  
 |varbinary|Byte[]|binary|BytesWritable|S’applique à la ruche 0,8 et versions ultérieur.|  
-|date|DateTime|timestamp|TimestampWritable||  
-|smalldatetime|DateTime|timestamp|TimestampWritable||  
-|datetime2|DateTime|timestamp|TimestampWritable||  
-|datetime|DateTime|timestamp|TimestampWritable||  
-|time|TimeSpan|timestamp|TimestampWritable||  
-|decimal|Décimal|decimal|BigDecimalWritable|S’applique à Hive0.11 et versions ultérieures.|  
+|date|DateTime|TIMESTAMP|TimestampWritable||  
+|smalldatetime|DateTime|TIMESTAMP|TimestampWritable||  
+|datetime2|DateTime|TIMESTAMP|TimestampWritable||  
+|datetime|DateTime|TIMESTAMP|TimestampWritable||  
+|time|TimeSpan|TIMESTAMP|TimestampWritable||  
+|Décimal|Décimal|Décimal|BigDecimalWritable|S’applique à Hive0.11 et versions ultérieures.|  
   
- EMPLACEMENT = '*folder_or_filepath*'  
+ LOCATION =  '*folder_or_filepath*'  
  Spécifie le dossier ou le chemin d’accès et le nom de fichier pour les données réelles dans Hadoop ou Azure blob storage. L’emplacement démarre à partir du dossier racine ; le dossier racine est l’emplacement de données spécifié dans la source de données externe.  
   
  Si vous spécifiez l’emplacement à un dossier, une requête de PolyBase qui sélectionne à partir de la table externe récupérera les fichiers dans le dossier et tous ses sous-dossiers. Tout comme Hadoop, PolyBase ne retourne pas de dossiers cachés. Il ne retourne pas les fichiers dont le nom de fichier commence par un trait de soulignement (_) ou un point (.).  
@@ -251,7 +253,7 @@ CREATE EXTERNAL TABLE [ database_name . [ schema_name ] . | schema_name. ] table
  DISTRIBUTION  
  Ce paramètre est facultatif. Cette option n’est obligatoire uniquement pour les bases de données de type SHARD_MAP_MANAGER. Ce paramètre contrôle si une table est traitée comme une table partitionnée ou d’une table répliquée. Avec **SHARDED** (*nom de la colonne*) des tables, les données de différentes tables ne se chevauchent pas. **RÉPLIQUÉES** Spécifie que les tables ont les mêmes données sur chaque partition. **ROUND_ROBIN** indique qu’une méthode spécifique à l’application est utilisée pour distribuer les données.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Requiert les autorisations de l’utilisateur :  
   
 -   **CREATE TABLE**  
@@ -295,6 +297,7 @@ CREATE EXTERNAL TABLE [ database_name . [ schema_name ] . | schema_name. ] table
 -   CREATE TABLE et DROP TABLE  
   
 -   CREATE STATISTICS et DROP STATISTICS  
+Remarque : Créer et supprimer des statistiques sur les tables externes ne sont pas pris en charge dans la base de données SQL Azure. 
   
 -   CREATE VIEW et DROP VIEW  
   
@@ -365,7 +368,7 @@ WITH (
   
 CREATE EXTERNAL FILE FORMAT myfileformat_rc  
 WITH (  
-    FORMAT = RCFILE,  
+    FORMAT_TYPE = RCFILE,  
     SERDE_METHOD = 'org.apache.hadoop.hive.serde2.columnar.LazyBinaryColumnarSerDe'  
 )  
 ;  

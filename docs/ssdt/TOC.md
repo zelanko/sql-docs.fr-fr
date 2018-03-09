@@ -3,6 +3,7 @@
 # [ChangeLog pour SSDT](changelog-for-sql-server-data-tools-ssdt.md)
 # [Data-Tier Application Framework - Termes du contrat de licence](data-tier-application-framework-license-terms.md)
 # [Versions précédentes de SSDT et SSDT-BI](previous-releases-of-sql-server-data-tools-ssdt-and-ssdt-bi.md)
+# [Support Azure Active Directory](azure-active-directory.md)
 # [Outils SQL Server](sql-server-tools.md)
 # [Termes du contrat de licence - SSDT](sql-server-data-tools-license-terms.md)
 # [Termes du contrat de licence - SSDT (VS 2017)](sql-server-data-tools-license-terms-vs2017.md)

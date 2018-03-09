@@ -2,15 +2,13 @@
 title: "Graphique des bénéfices (Analysis Services - Exploration de données) | Documents Microsoft"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
 ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,19 +18,20 @@ helpviewer_keywords:
 - charts [Analysis Services]
 - profit charts [Analysis Services]
 ms.assetid: 760ee051-6fd8-48e3-8d2e-82db3ab45e45
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 445c65775a59a1fb9490d947246b22f4adeded2d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: e1bfda7f42bdc4423ee1ea1bc0ad2d59abe26347
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="profit-chart-analysis-services---data-mining"></a>Graphique des bénéfices (Analysis Services - Exploration de données)
-  Un graphique des bénéfices affiche la rentabilité estimée associée à l'utilisation d'un modèle d'exploration de données. Par exemple, supposons que votre modèle prédit les clients qu'une société doit contacter dans un scénario d'application professionnelle. Dans ce cas, vous devez ajouter au graphique des bénéfices des informations relatives au coût de la campagne de publipostage ciblée. Ensuite, dans le graphique terminé, consultez les bénéfices estimés si les clients sont correctement ciblés, par à rapport à la prise de contact aléatoire avec des clients.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Un graphique des bénéfices affiche la rentabilité estimée associée à l'utilisation d'un modèle d'exploration de données. Par exemple, supposons que votre modèle prédit les clients qu'une société doit contacter dans un scénario d'application professionnelle. Dans ce cas, vous devez ajouter au graphique des bénéfices des informations relatives au coût de la campagne de publipostage ciblée. Ensuite, dans le graphique terminé, consultez les bénéfices estimés si les clients sont correctement ciblés, par à rapport à la prise de contact aléatoire avec des clients.  
   
 ## <a name="build-a-profit-chart"></a>Créer un graphique des bénéfices  
  Un graphique des bénéfices est similaire à un graphique de courbes d'élévation. Commencez par créer un graphique de courbes d'élévation, puis ajoutez les informations relatives au coût et aux bénéfices.  
@@ -99,13 +98,13 @@ ms.lasthandoff: 11/17/2017
   
 |Rubriques|Liens|  
 |------------|-----------|  
-|Propose une procédure pas à pas permettant de créer un graphique de courbes d'élévation pour le modèle de publipostage ciblé.|[Didacticiel sur l'exploration de données de base](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)<br /><br /> [Test de la précision à l’aide de graphiques de courbes d’élévation &#40;Didacticiel sur l’exploration de données de base&#41;](http://msdn.microsoft.com/library/822d414b-4a39-473f-80c3-53476e30655a)|  
-|Explique les types de graphique associés.|[Graphique de courbes d’élévation &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/lift-chart-analysis-services-data-mining.md)<br /><br /> [Matrice de classification &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/classification-matrix-analysis-services-data-mining.md)<br /><br /> [Nuage de points &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/scatter-plot-analysis-services-data-mining.md)|  
-|Décrit la validation croisée des modèles d'exploration de données et des structures d'exploration de données.|[Validation croisée &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/cross-validation-analysis-services-data-mining.md)|  
-|Décrit les étapes permettant de créer des graphiques de courbes d'élévation et d'autres graphiques d'analyse de précision.|[Tâches de test et validation et procédures &#40;exploration des données&#41;](../../analysis-services/data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)|  
+|Propose une procédure pas à pas permettant de créer un graphique de courbes d'élévation pour le modèle de publipostage ciblé.|[Didacticiel d’exploration de données de base de données](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)<br /><br /> [Test de la précision avec des graphiques de courbes d’élévation &#40; Didacticiel d’exploration de données de base de données &#41;](http://msdn.microsoft.com/library/822d414b-4a39-473f-80c3-53476e30655a)|  
+|Explique les types de graphique associés.|[Graphique de courbes d’élévation &#40; Analysis Services - Exploration de données &#41;](../../analysis-services/data-mining/lift-chart-analysis-services-data-mining.md)<br /><br /> [Matrice de classification &#40; Analysis Services - Exploration de données &#41;](../../analysis-services/data-mining/classification-matrix-analysis-services-data-mining.md)<br /><br /> [Nuage de points &#40; Analysis Services - Exploration de données &#41;](../../analysis-services/data-mining/scatter-plot-analysis-services-data-mining.md)|  
+|Décrit la validation croisée des modèles d'exploration de données et des structures d'exploration de données.|[La Validation croisée &#40; Analysis Services - Exploration de données &#41;](../../analysis-services/data-mining/cross-validation-analysis-services-data-mining.md)|  
+|Décrit les étapes permettant de créer des graphiques de courbes d'élévation et d'autres graphiques d'analyse de précision.|[Test et de tâches de Validation et de procédures &#40; exploration de données &#41;](../../analysis-services/data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Test et validation &#40;exploration de données&#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)   
- [Test de la précision à l’aide de graphiques de courbes d’élévation &#40;Didacticiel sur l’exploration de données de base&#41;](http://msdn.microsoft.com/library/822d414b-4a39-473f-80c3-53476e30655a)  
+ [Test et Validation &#40; exploration de données &#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)   
+ [Test de la précision avec des graphiques de courbes d’élévation &#40; Didacticiel d’exploration de données de base de données &#41;](http://msdn.microsoft.com/library/822d414b-4a39-473f-80c3-53476e30655a)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: "La mise à niveau la Version d’un composant de flux de données | Documents Microsoft"
+title: "Mise à niveau de la version d’un composant de flux de données | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: extending-packages-custom-objects
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
@@ -20,17 +19,16 @@ helpviewer_keywords:
 - data flow components [Integration Services], upgrading version
 - upgrading data flow components [Integration Services]
 ms.assetid: c2a298c6-01b3-4ad1-884d-6108165eb56e
-caps.latest.revision: 25
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 65e38600b0974d75f5509a4231f6ebb0a15ba19a
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 6d8ae9c279e40bcfa3728969f39a1db1f97d7e26
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="upgrading-the-version-of-a-data-flow-component"></a>Mise à niveau de la version d'un composant de flux de données
   Les packages créés avec une version antérieure de votre composant peuvent contenir des métadonnées qui ne sont plus valides, telles que des propriétés personnalisées dont l'utilisation a été modifiée dans les versions plus récentes du composant. Vous pouvez remplacer la méthode <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.PerformUpgrade%2A> de la classe de base <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent> pour mettre à jour les métadonnées précédemment enregistrées dans les packages plus anciens afin de refléter les propriétés actuelles de votre composant.  
@@ -38,7 +36,7 @@ ms.lasthandoff: 08/03/2017
 > [!NOTE]  
 >  Lorsque vous recompilez un composant personnalisé pour une nouvelle version de [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)], vous n'avez pas à modifier la valeur de la propriété <xref:Microsoft.SqlServer.Dts.Pipeline.DtsPipelineComponentAttribute.CurrentVersion%2A> si les propriétés du composant n'ont pas changé.  
   
-## <a name="example"></a>Exemple  
+## <a name="example"></a> Exemple  
  L'exemple suivant contient le code de la version 2.0 d'un composant de flux de données fictif. Le nouveau numéro de version est défini dans la propriété <xref:Microsoft.SqlServer.Dts.Pipeline.DtsPipelineComponentAttribute.CurrentVersion%2A> de l'objet <xref:Microsoft.SqlServer.Dts.Pipeline.DtsPipelineComponentAttribute>. Le composant possède une propriété qui définit la manière dont les valeurs numériques qui dépassent un seuil doivent être gérées. Dans la version 1.0 du composant fictif, cette propriété a été nommée `RaiseErrorOnInvalidValue` et acceptait une valeur booléenne True ou False. Dans la version 2.0 du composant fictif, la propriété a été renommée `InvalidValueHandling` et accepte l'une des quatre valeurs possibles d'une énumération personnalisée.  
   
  La méthode <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.PerformUpgrade%2A> remplacée dans l'exemple suivant effectue les actions suivantes :  
@@ -54,9 +52,9 @@ ms.lasthandoff: 08/03/2017
 -   Définit les métadonnées de version sur la version actuelle du composant.  
   
 > [!NOTE]  
->  Le moteur de flux de données transmet son propre numéro de version dans le <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.PerformUpgrade%2A> méthode dans le *pipeline* paramètre. Ce paramètre est inutile dans la version 1.0 de [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)], mais peut s'avérer utile dans les versions suivantes.  
+>  Le moteur de flux de données transmet son propre numéro de version dans la méthode <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.PerformUpgrade%2A> dans le paramètre *pipelineVersion*. Ce paramètre est inutile dans la version 1.0 de [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)], mais peut s'avérer utile dans les versions suivantes.  
   
- L'exemple de code utilise uniquement les deux valeurs d'énumération qui mappent directement aux valeurs booléennes antérieures de la propriété personnalisée. Les utilisateurs peuvent sélectionner les autres valeurs d'énumération disponibles via l'interface utilisateur personnalisée du composant, dans l'éditeur avancé ou par programme. Pour plus d’informations sur l’affichage des valeurs d’énumération d’une propriété personnalisée dans l’éditeur avancé, consultez « Création de propriétés personnalisées » dans [méthodes au moment du Design d’un composant de flux de données](../../../integration-services/extending-packages-custom-objects/data-flow/design-time-methods-of-a-data-flow-component.md).  
+ L'exemple de code utilise uniquement les deux valeurs d'énumération qui mappent directement aux valeurs booléennes antérieures de la propriété personnalisée. Les utilisateurs peuvent sélectionner les autres valeurs d'énumération disponibles via l'interface utilisateur personnalisée du composant, dans l'éditeur avancé ou par programme. Pour plus d’informations sur l’affichage des valeurs d’énumération pour une propriété personnalisée dans l’Éditeur avancé, consultez « Création de propriétés personnalisées » dans [Méthodes de conception d’un composant de flux de données](../../../integration-services/extending-packages-custom-objects/data-flow/design-time-methods-of-a-data-flow-component.md).  
   
 ```vb  
 Imports Microsoft.SqlServer.Dts.Pipeline  
@@ -188,4 +186,3 @@ public class PerformUpgradeCS :
   
 }  
 ```
-

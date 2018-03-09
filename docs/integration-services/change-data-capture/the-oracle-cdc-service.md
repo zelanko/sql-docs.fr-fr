@@ -1,5 +1,5 @@
 ---
-title: "Le Service de capture de données modifiées Oracle | Documents Microsoft"
+title: Oracle CDC Service| Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -13,17 +13,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 47759ddc-358d-405b-acb9-189ada76ea6d
-caps.latest.revision: 8
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d1c3535f7818b1865d9ff7b0da1d098884b042ca
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 7371c120f4ff874a878a77cd3db0df8755aebd75
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="the-oracle-cdc-service"></a>Service de capture de données modifiées Oracle
   Le service de capture de données modifiées Oracle est un service Windows qui exécute le programme xdbcdcsvc.exe. Ce service peut être configuré pour exécuter plusieurs services Windows sur le même ordinateur, chacun avec un nom différent de service Windows. La création de plusieurs services Windows de capture de données modifiées Oracle sur un seul ordinateur est souvent réalisée pour obtenir une meilleure séparation entre eux, ou lorsque chacun d'eux doit fonctionner avec une autre instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -94,15 +93,14 @@ CREATE ASYMMETRIC KEY xdbcdc_asym_key
   
 -   [Prise en charge de la haute disponibilité](../../integration-services/change-data-capture/high-availability-support.md)  
   
--   [Autorisations de connexion SQL Server requises pour le service de capture de données modifiées](../../integration-services/change-data-capture/sql-server-connection-required-permissions-for-the-cdc-service.md)  
+-   [Autorisations de connexion SQL Server nécessaires pour le service CDC](../../integration-services/change-data-capture/sql-server-connection-required-permissions-for-the-cdc-service.md)  
   
--   [Rôles d'utilisateur](../../integration-services/change-data-capture/user-roles.md)  
+-   [Rôles d’utilisateur](../../integration-services/change-data-capture/user-roles.md)  
   
 -   [Utilisation du service de capture de données modifiées Oracle](../../integration-services/change-data-capture/working-with-the-oracle-cdc-service.md)  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Procédure : gérer un service de capture de données modifiées local](../../integration-services/change-data-capture/how-to-manage-a-local-cdc-service.md)   
- [Gérer un Service de capture de données modifiées Oracle](../../integration-services/change-data-capture/manage-an-oracle-cdc-service.md)  
+ [Gérer un service CDC Oracle](../../integration-services/change-data-capture/manage-an-oracle-cdc-service.md)  
   
   
-

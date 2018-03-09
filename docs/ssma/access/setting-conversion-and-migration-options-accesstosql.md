@@ -1,10 +1,13 @@
 ---
 title: "Définition des Options de Migration (AccessToSQL) et de la Conversion | Documents Microsoft"
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-access
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -24,11 +27,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 5cea7c02271cdf7acabb585e4be51f404f658a62
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 40be8e3f52464e7c6ae6f024d8c29f3d0acd04b9
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="setting-conversion-and-migration-options-accesstosql"></a>Conversion de paramètre et les Options de Migration (AccessToSQL)
 Pour chaque projet SSMA, vous pouvez définir les options au niveau du projet. Ces options déterminent la façon dont les objets sont convertis, la migration des données et la correspondance entre les types de sources de données et les types de données cible. Avant de convertir des objets à [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ou SQL Azure ou migrer des données dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ou SQL Azure, vérifiez que les options de configuration sont appropriées pour le projet.  
@@ -82,7 +85,7 @@ Vous pouvez également personnaliser les paramètres pour le projet actuel. Ces 
   
 3.  Cliquez sur **OK** pour enregistrer les paramètres.  
   
-## <a name="next-steps"></a>Étapes suivantes  
+## <a name="next-steps"></a>Next Steps  
 L’étape suivante de la migration dépend des besoins de votre projet :  
   
 -   Pour personnaliser le mappage des types de données source et cible, consultez [Source de mappage et les Types de données cible](http://msdn.microsoft.com/en-us/b362a075-16e7-423f-b63f-e1e9f02844a9)  

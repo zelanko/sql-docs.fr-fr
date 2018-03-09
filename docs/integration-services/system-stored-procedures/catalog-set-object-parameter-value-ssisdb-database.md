@@ -1,5 +1,5 @@
 ---
-title: "Catalog.set_object_parameter_value (base de données SSISDB) | Documents Microsoft"
+title: "catalog.set_object_parameter_value (base de données SSISDB) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -13,22 +13,21 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: fb887543-f92f-404d-9495-a1dd23a6716e
-caps.latest.revision: 17
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: e20b96e38f798c19a74d5f3a32a25e429dc8ebeb
-ms.openlocfilehash: 3a5dc70b1e955b3c702dc9e9dbe4776cc4ebd5ac
-ms.contentlocale: fr-fr
-ms.lasthandoff: 10/20/2017
-
+ms.openlocfilehash: 216f5e4e3a68ead9a8353b2b35fef0b3d1717cba
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="catalogsetobjectparametervalue-ssisdb-database"></a>catalog.set_object_parameter_value (base de données SSISDB)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Définit la valeur d'un paramètre dans le catalogue [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Associe la valeur à une variable d’environnement ou affecte une valeur littérale qui est utilisée par défaut lorsque aucune autre valeur n’est affectés.  
+  Définit la valeur d'un paramètre dans le catalogue [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Associe la valeur à une variable d’environnement ou affecte une valeur littérale qui est utilisée par défaut quand aucune autre valeur n’est affectée.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -44,40 +43,40 @@ catalog.set_object_parameter_value [@object_type =] object_type
   
 ## <a name="arguments"></a>Arguments  
  [@object_type =] *object_type*  
- Le type de paramètre. Utilisez la valeur `20` pour indiquer un paramètre du projet ou la valeur `30` pour indiquer un paramètre du package. Le *object_type* est **smallInt**.  
+ Type de paramètre. Utilisez la valeur `20` pour indiquer un paramètre du projet ou la valeur `30` pour indiquer un paramètre du package. *object_type* est de type **smallInt**.  
   
- [@folder_name =] *nom_dossier*  
- Nom du dossier qui contient le paramètre. Le *nom_dossier* est **nvarchar (128)**.  
+ [@folder_name =] *folder_name*  
+ Nom du dossier qui contient le paramètre. *folder_name* est de type **nvarchar(128)**.  
   
  [@project_name =] *project_name*  
- Nom du projet qui contient le paramètre. Le *project_name* est **nvarchar (128)**.  
+ Nom du projet qui contient le paramètre. *project_name* est de type **nvarchar(128)**.  
   
- [@parameter_name =] *nom_paramètre*  
- Nom du paramètre. Le *nom_paramètre* est **nvarchar (128)**.  
+ [@parameter_name =] *parameter_name*  
+ Nom du paramètre. *parameter_name* est de type **nvarchar(128)**.  
   
  [@parameter_value =] *parameter_value*  
- Valeur du paramètre. Le *parameter_value* est **sql_variant**.  
+ Valeur du paramètre. *parameter_value* est de type **sql_variant**.  
   
- [@object_name =] *nom_objet*  
- Nom du package. Cet argument est obligatoire lorsque le paramètre est un paramètre du package. Le *nom_objet* est **nvarchar (260)**.  
+ [@object_name =] *object_name*  
+ Nom du package. Cet argument est obligatoire lorsque le paramètre est un paramètre du package. *object_name* est de type **nvarchar(260)**.  
   
  [@value_type =] *value_type*  
- Type de valeur du paramètre. Utilisez le caractère `V` pour indiquer que *parameter_value* est une valeur littérale qui est utilisée par défaut lorsque aucune autre valeur n’est affecté avant l’exécution. Utilisez le caractère `R` pour indiquer que *parameter_value* est une valeur référencée et a été défini sur le nom d’une variable d’environnement. Cet argument est facultatif, le caractère `V` est utilisé par défaut. Le *value_type* est **char (1)**.  
+ Type de valeur du paramètre. Utilisez le caractère `V` pour indiquer que *parameter_value* est une valeur littérale qui est utilisée par défaut quand aucune autre valeur n’est affectée avant l’exécution. Utilisez le caractère `R` pour indiquer que *parameter_value* est une valeur référencée et qu’elle a été définie sur le nom d’une variable d’environnement. Cet argument est facultatif, le caractère `V` est utilisé par défaut. *value_type* est de type **char(1)**.  
   
-## <a name="return-code-value"></a>Valeur de Code de retour  
+## <a name="return-code-value"></a>Valeur du code de retour  
  0 (succès)  
   
 ## <a name="result-sets"></a>Jeux de résultats  
- Aucune  
+ None  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Cette procédure stockée requiert l'une des autorisations suivantes :  
   
 -   Autorisations READ et MODIFY sur le projet  
   
--   L’appartenance à la **ssis_admin** rôle de base de données  
+-   Appartenance au rôle de base de données **ssis_admin**  
   
--   L’appartenance à la **sysadmin** rôle de serveur  
+-   Appartenance au rôle serveur **sysadmin**  
   
 ## <a name="errors-and-warnings"></a>Erreurs et avertissements  
  La liste suivante décrit quelques conditions qui peuvent générer une erreur de procédure stockée :  
@@ -90,17 +89,16 @@ catalog.set_object_parameter_value [@object_type =] object_type
   
 -   Le type de valeur n'est pas valide.  
   
--   L’utilisateur ne dispose pas des autorisations appropriées  
+-   L’utilisateur n’a pas les autorisations appropriées  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
   
--   Si aucun *value_type* est spécifié, une valeur littérale pour *parameter_value* est utilisé par défaut. Lorsqu’une valeur littérale est utilisée, le *value_set* dans les [object_parameters](../../integration-services/system-views/catalog-object-parameters-ssisdb-database.md) affichage est défini sur `1`. Une valeur de paramètre NULL n'est pas autorisée.  
+-   Si aucun *value_type* n’est spécifié, une valeur littérale pour *parameter_value* est utilisée par défaut. Quand une valeur littérale est utilisée, le *value_set* dans la vue [object_parameters](../../integration-services/system-views/catalog-object-parameters-ssisdb-database.md) est défini sur `1`. Une valeur de paramètre NULL n'est pas autorisée.  
   
--   Si *value_type* contient le caractère `R`, qui désigne une valeur référencée, *parameter_value* fait référence au nom d’une variable d’environnement.  
+-   Si *value_type* contient le caractère `R`, qui dénote une valeur référencée, *parameter_value* fait référence au nom d’une variable d’environnement.  
   
--   La valeur `20` peuvent être utilisés pour *object_type* pour dénoter un paramètre de projet. Dans ce cas, une valeur pour *nom_objet* n’est pas nécessaire et toute valeur spécifiée pour *nom_objet* est ignoré. Cette valeur est utilisée lorsque l'utilisateur souhaite définir un paramètre du projet.  
+-   La valeur `20` peut être utilisée pour *object_type* afin de dénoter un paramètre du projet. Dans ce cas, une valeur pour *object_name* n’est pas nécessaire, et toute valeur spécifiée pour *object_name* est ignorée. Cette valeur est utilisée lorsque l'utilisateur souhaite définir un paramètre du projet.  
   
--   La valeur `30` peuvent être utilisés pour *object_type* pour dénoter un paramètre de package. Dans ce cas, une valeur pour *nom_objet* sert à désigner le package correspondant. Si *nom_objet* n’est pas spécifié, la procédure stockée renvoie une erreur et s’arrête.  
+-   La valeur `30` peut être utilisée pour *object_type* afin de dénoter un paramètre du package. Dans ce cas, une valeur pour *object_name* est utilisée pour dénoter le package correspondant. Si *object_name* n’est pas spécifié, la procédure stockée retourne une erreur et termine.  
   
   
-

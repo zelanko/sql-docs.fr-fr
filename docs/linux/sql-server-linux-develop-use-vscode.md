@@ -3,29 +3,29 @@ title: "Utiliser l’extension de mssql de Code Visual Studio pour SQL Server | 
 description: "Ce didacticiel montre comment utiliser l’extension mssql pour le Code de Visual Studio. Cette extension vous permet de modifier et exécuter des scripts Transact-SQL dans le Code de Visual Studio."
 author: erickangMSFT
 ms.author: erickang
-manager: jhubbard
+manager: craigg
 ms.date: 03/17/2017
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: linux
+ms.component: 
 ms.suite: sql
 ms.technology: database-engine
 ms.assetid: 9766ee75-32d3-4045-82a6-4c7968bdbaa6
-ms.custom: 
+ms.custom: sql-linux
 ms.workload: Active
-ms.openlocfilehash: 41bfb66db6f16d9e7ca8829568798a2aa57316da
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: caf053ca9dc50df6d3433a11e992e097f2147d7a
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="use-visual-studio-code-to-create-and-run-transact-sql-scripts-for-sql-server"></a>Utilisez le Code de Visual Studio pour créer et exécuter des scripts Transact-SQL pour SQL Server
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-Cette rubrique montre comment utiliser le **mssql** extension pour Visual Studio Code (Code de Visual Studio) pour développer des bases de données SQL Server.
+Cet article explique comment utiliser le **mssql** extension pour Visual Studio Code (Code de Visual Studio) pour développer des bases de données SQL Server.
 
 Code Visual Studio est un éditeur de code graphique pour Linux et Windows qui prend en charge les extensions macOS. Le [ **mssql** extension VS Code] vous permet de se connecter à SQL Server, la requête avec Transact-SQL (T-SQL) et afficher les résultats.
 
@@ -80,7 +80,7 @@ Le **mssql** extension permet mssql commandes et T-SQL IntelliSense dans l’éd
 
 Les étapes suivantes montrent comment se connecter à SQL Server avec le Code de Visual Studio.
 
-1. Dans le Code de Visual Studio, appuyez sur **CTRL + MAJ + P** (ou **F1**) pour ouvrir la Palette de commandes.
+1. Dans VS Code, appuyez sur **Ctrl+Maj+P** (ou **F1**) pour ouvrir la palette de commandes.
 
 2. Type **sql** pour afficher les commandes mssql.
 
@@ -91,7 +91,7 @@ Les étapes suivantes montrent comment se connecter à SQL Server avec le Code d
 
 4. Sélectionnez **créer le profil de connexion**. Cette opération crée un profil de connexion pour votre instance de SQL Server.
 
-5. Suivez les invites pour spécifier les propriétés de connexion pour le profil de connexion. Après avoir spécifié de chaque valeur, appuyez sur **entrée** pour continuer. 
+5. Suivez les invites afin de spécifier les propriétés de connexion pour le nouveau profil de connexion. Après avoir spécifié chaque valeur, appuyez sur **Entrée** pour continuer. 
 
    Le tableau suivant décrit les propriétés de profil de connexion.
 
@@ -101,13 +101,13 @@ Les étapes suivantes montrent comment se connecter à SQL Server avec le Code d
    | **[Facultatif] Nom de la base de données** | La base de données que vous souhaitez utiliser. Pour des raisons de ce didacticiel, ne spécifiez pas une base de données et le Presse **entrée** pour continuer. |
    | **Nom d'utilisateur** | Entrez le nom d’un utilisateur ayant accès à une base de données sur le serveur. Pour ce didacticiel, utilisez la valeur par défaut **SA** compte créé lors de l’installation de SQL Server. |
    | **Mot de passe (connexion SQL)** | Entrez le mot de passe de l'utilisateur spécifié. | 
-   | **Enregistrer le mot de passe ?** | Type **Oui** pour enregistrer le mot de passe. Sinon, tapez **non** serez invité à entrer le mot de passe chaque fois que le profil de connexion est utilisé. |
+   | **Enregistrer le mot de passe** | Type **Oui** pour enregistrer le mot de passe. Sinon, tapez **non** serez invité à entrer le mot de passe chaque fois que le profil de connexion est utilisé. |
    | **[Facultatif] Entrez un nom pour ce profil** | Le nom du profil de connexion. Par exemple, vous pouvez nommer le profil **localhost profil**. 
 
    > [!Tip] 
    > Vous pouvez créer et modifier des profils de connexion dans le fichier de paramètres utilisateur (settings.json). Ouvrez le fichier de paramètres en sélectionnant **préférences** , puis **paramètres utilisateur** dans le menu Visual Studio Code. Pour plus d’informations, consultez [gérer les profils de connexion].
 
-6. Appuyez sur la **ÉCHAP** touche pour fermer le message d’information qui vous informe que le profil est créé et connecté.
+6. Appuyez sur la touche **Échap** pour fermer le message d’information qui vous signale que le profil a été créé et connecté.
 
    > [!TIP]
    > Si vous obtenez un échec de connexion, tout d’abord essayer de diagnostiquer le problème du message d’erreur dans le **sortie** Panneau de configuration dans le Code de Visual Studio (sélectionnez **sortie** sur la **vue** menu). Examinez ensuite les [recommandations en matière de résolution des problèmes de connexion].

@@ -2,31 +2,29 @@
 title: Configurer et afficher SharePoint et la journalisation des Diagnostics | Documents Microsoft
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: power-pivot-sharepoint
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 85f62d29-cdc6-45b3-be1f-ff1182939858
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Active
-ms.openlocfilehash: 2ca4cda21f2cb76f2f46e13be5f87765a73d665d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ed3dbf6b45af894f4f2f841d7c8b3496a332028f
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="configure-and-view-sharepoint-and-diagnostic-logging"></a>Configurer et afficher SharePoint et la journalisation des Diagnostics
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] sont enregistrés dans les fichiers journaux SharePoint. Utilisez les informations de cette rubrique pour configurer les niveaux de journalisation et afficher les informations du fichier journal. Vous pouvez contrôler les événements du serveur [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] qui sont enregistrés dans le fichier. Vous pouvez également contrôler la gravité des messages enregistrés. Pour plus d’informations, consultez [Configurer la collecte des données d’utilisation &#40;PowerPivot pour SharePoint)](../../analysis-services/power-pivot-sharepoint/configure-usage-data-collection-for-power-pivot-for-sharepoint.md).  
   
  Dans cette rubrique :  
@@ -125,7 +123,7 @@ ms.lasthandoff: 11/17/2017
 #### <a name="entries-for-power-pivot-services"></a>Entrées pour les services Power Pivot  
  Le tableau suivant décrit les entrées d'opérations de serveur [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] susceptibles de se trouver dans un fichier journal SharePoint.  
   
-|Traiter|Domaine|Catégorie|Level|Boîte de|Détails|  
+|Traiter|Domaine|Catégorie|Niveau|Boîte de|Détails|  
 |-------------|----------|--------------|-----------|-------------|-------------|  
 |w3wp.exe|[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] Service|Utilisation|Commentaires|There are no current request statistics, nothing to log.|À intervalles prédéfinis, le service fournit les statistiques de réponse aux requêtes en tant qu'événement d'utilisation au système de collecte des données d'utilisation. Ce message indique qu'il n'existe aucune statistique sur les requêtes à signaler.|  
 |w3wp.exe|[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] Service|Web frontal|Commentaires|Démarrage de localiser un serveur d’applications pour la source de données =\<*chemin d’accès*>|Lorsqu'il reçoit une demande de connexion, le service [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] identifie un [!INCLUDE[ssGeminiSrv_md](../../includes/ssgeminisrv-md.md)] disponible pour gérer la demande. Si la batterie de serveurs ne contient qu'un seul serveur, le serveur local accepte toujours la demande.|  

@@ -1,5 +1,5 @@
 ---
-title: "Gérer un Service de capture de données modifiées Oracle | Documents Microsoft"
+title: "Gérer un service Oracle CDC | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -15,19 +15,18 @@ ms.topic: article
 f1_keywords:
 - createSrv
 ms.assetid: 5972cee3-b1a9-4c56-aed6-bdddf84af283
-caps.latest.revision: 8
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: ece331cf561da80bf56df914fec6f42159ade23e
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: f54659eeb98bd72edf2addbb0d68df8519d2eb0b
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="manage-an-oracle-cdc-service"></a>Gérer un service de capture de données modifiées Oracle
+# <a name="manage-an-oracle-cdc-service"></a>Manage an Oracle CDC Service
   Vous pouvez utiliser la console de configuration du service de capture de données modifiées pour gérer un service de capture de données modifiées spécifique.  
   
  **Pour sélectionner le service de capture de données modifiées à utiliser**  
@@ -38,7 +37,7 @@ ms.lasthandoff: 08/03/2017
   
      Vous pouvez également cliquer avec le bouton droit sur le service de capture de données modifiées que vous souhaitez utiliser et sélectionner l'action souhaitée. Consultez [What can you do with a CDC Service](../../integration-services/change-data-capture/manage-an-oracle-cdc-service.md#BKMK_WhatcandowithCDCService).  
   
- **- ou -**  
+ **OR**  
   
 1.  Sélectionnez **Services de capture de données modifiées locaux** dans le volet gauche de la console de configuration du service de capture de données modifiées.  
   
@@ -65,8 +64,7 @@ ms.lasthandoff: 08/03/2017
   
  Vous pouvez également cliquer avec le bouton droit sur le service de capture de données modifiées où vous souhaitez modifier les propriétés et sélectionner **Propriétés**.  
   
-## <a name="see-also"></a>Voir aussi  
- [Comment gérer un Service de capture de données modifiées Local](../../integration-services/change-data-capture/how-to-manage-a-local-cdc-service.md)  
+## <a name="see-also"></a> Voir aussi  
+ [Guide pratique pour gérer un service CDC local](../../integration-services/change-data-capture/how-to-manage-a-local-cdc-service.md)  
   
   
-

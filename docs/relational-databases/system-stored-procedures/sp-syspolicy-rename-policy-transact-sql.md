@@ -1,5 +1,5 @@
 ---
-title: sp_syspolicy_rename_policy (Transact-SQL) | Documents Microsoft
+title: sp_syspolicy_rename_policy (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/09/2016
 ms.prod: sql-non-specified
@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_syspolicy_rename_policy_TSQL
 - sp_syspolicy_rename_policy
-dev_langs: TSQL
-helpviewer_keywords: sp_syspolicy_rename_policy
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_syspolicy_rename_policy
 ms.assetid: ce2b07f5-23b1-4f49-8e7b-c18cf3f3d45b
-caps.latest.revision: "8"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fd1296c5d0a7fc4d1798b88fc1bb8f34c9b09b0b
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 5d82827cfd7a0d7ceaf9988e4fb8fa6a26d11976
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spsyspolicyrenamepolicy-transact-sql"></a>sp_syspolicy_rename_policy (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +51,7 @@ sp_syspolicy_rename_policy { [ @name = ] 'name' | [ @policy_id = ] policy_id }
  [  **@name=** ] **'***nom***'**  
  Nom de la stratégie que vous voulez renommer. *nom* est **sysname**et doit être spécifié si *policy_id* a la valeur NULL.  
   
- [  **@policy_id=** ] *policy_id*  
+ [ **@policy_id=** ] *policy_id*  
  Identificateur de la stratégie que vous voulez renommer. *policy_id* est **int**et doit être spécifié si *nom* est NULL.  
   
  [  **@new_name=** ] **'***nouveau_nom***'**  
@@ -62,7 +65,7 @@ sp_syspolicy_rename_policy { [ @name = ] 'name' | [ @policy_id = ] policy_id }
   
  Vous devez spécifier une valeur pour *nom* ou *policy_id*. Les deux ne peuvent pas être NULL. Pour obtenir ces valeurs, interrogez la vue système msdb.dbo.syspolicy_policies.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l'appartenance au rôle de base de données fixe PolicyAdministratorRole.  
   
 > [!IMPORTANT]  

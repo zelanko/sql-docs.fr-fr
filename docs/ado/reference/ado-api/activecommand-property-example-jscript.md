@@ -3,27 +3,30 @@ title: "Exemple de propriété ActiveCommand (JScript) | Documents Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: JScript
-helpviewer_keywords: ActiveCommand property [ADO], JScript example
+dev_langs:
+- JScript
+helpviewer_keywords:
+- ActiveCommand property [ADO], JScript example
 ms.assetid: be09e2af-ba31-4168-8ccd-2461bb24e49a
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 42f17064d474d53090dd1dcf4edb1759a2116aaf
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: afd176de04dbdc6bbcab64469b3d88b63e156ccc
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="activecommand-property-example-jscript"></a>Exemple de propriété ActiveCommand (JScript)
 Cet exemple illustre la [ActiveCommand](../../../ado/reference/ado-api/activecommand-property-ado.md) propriété. Coupez et collez le code suivant dans le bloc-notes ou un autre éditeur de texte et enregistrez-le sous **ActiveCommandJS.asp**.  

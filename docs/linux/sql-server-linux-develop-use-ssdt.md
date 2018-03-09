@@ -9,23 +9,23 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: linux
+ms.component: 
 ms.suite: sql
 ms.technology: database-engine
 ms.assetid: 1e924704-e07c-4a8b-b243-8c1dd8cff0d3
-ms.custom: 
+ms.custom: sql-linux
 ms.workload: On Demand
-ms.openlocfilehash: 91ab1a812b55c84e3b55c439290d247df91eea40
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 0ff7526517be55100400da6ac84b6f7c927fb50e
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="use-visual-studio-to-create-databases-for-sql-server-on-linux"></a>Utilisez Visual Studio pour créer des bases de données pour SQL Server sur Linux
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-SQL Server Data Tools (SSDT), Visual Studio se transforme en un environnement de gestion (DLM) du cycle de vie de développement et de base de données puissantes, pour SQL Server sur Linux. Vous pouvez développer, créer, tester et publier votre base de données à partir d’un projet de contrôle de code source, tout comme vous développez votre code d’application.
+SQL Server Data Tools (SSDT), Visual Studio se transforme en un environnement de gestion (DLM) du cycle de vie de développement et de base de données puissantes, pour SQL Server sur Linux. Vous pouvez développer, générer, tester et publier votre base de données à partir d’un projet sous contrôle de code source, tout comme vous développez votre code d’application.
 
 ## <a name="install-visual-studio-and-sql-server-data-tools"></a>Installer Visual Studio et SQL Server Data Tools
 
@@ -103,7 +103,7 @@ SQL Server Data Tools (SSDT), Visual Studio se transforme en un environnement de
 
 5. Vérifier l’état de la publication dans le **opérations des outils de données** fenêtre.
 
-6. Cliquez sur **vue Reulst** ou **afficher le Script** pour afficher les détails de la Microsoft Azure à publier les résultats sur votre serveur SQL Server sur Linux.
+6. Cliquez sur **vue Reulst** ou **afficher le Script** pour afficher les détails de la base de données à publier les résultats sur votre serveur SQL Server sur Linux.
 
     <img src="./media/sql-server-linux-develop-use-ssdt/publish-result.png" alt="publish result" style="width: 480px;"/>
 

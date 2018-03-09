@@ -2,10 +2,14 @@
 title: "Spécifier des métapropriétés dans OPENXML | Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: xml
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-xml
+ms.suite: sql
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,19 +19,20 @@ helpviewer_keywords:
 - extracting information of XML nodes [SQL Server]
 - OPENXML statement, metaproperties
 ms.assetid: 29bfd1c6-3f9a-43c4-924a-53d438e442f4
-caps.latest.revision: "23"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d0d2eed1cb054c76e7f6e4d816ec98ce60c36f0c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 968f1a5b32bbc6c2e6f2f955083e8fd247e3fc82
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="specify-metaproperties-in-openxml"></a>Spécifier des métapropriétés dans OPENXML
-  Les attributs de métapropriétés dans un document XML décrivent les propriétés d'un élément XML (élément, attribut ou tout autre nœud DOM). Ces attributs n'existent pas physiquement dans le texte du document XML. Toutefois, OPENXML fournit ces métapropriétés pour tous les éléments XML. Ces métapropriétés vous permettent d'extraire des informations (par exemple des informations de positionnement local et d'espace de noms) sur les nœuds XML. Ces informations vous procurent davantage de détails que ceux apparents dans la représentation textuelle.  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+Les attributs de métapropriétés dans un document XML décrivent les propriétés d'un élément XML (élément, attribut ou tout autre nœud DOM). Ces attributs n'existent pas physiquement dans le texte du document XML. Toutefois, OPENXML fournit ces métapropriétés pour tous les éléments XML. Ces métapropriétés vous permettent d'extraire des informations (par exemple des informations de positionnement local et d'espace de noms) sur les nœuds XML. Ces informations vous procurent davantage de détails que ceux apparents dans la représentation textuelle.  
   
  Vous pouvez mapper ces métapropriétés aux colonnes de l’ensemble de lignes dans une instruction OPENXML à l’aide du paramètre *ColPattern* . Les colonnes contiendront les valeurs des métapropriétés avec lesquelles elles sont mappées. Pour plus d’informations sur la syntaxe d’OPENXML, consultez [OPENXML &#40;Transact-SQL&#41;](../../t-sql/functions/openxml-transact-sql.md).  
   
@@ -214,7 +219,7 @@ O3    1999-07-14 00:00:00.000     <Order amount="100" note="Wrap it blue
 O4    1996-01-20 00:00:00.000     <Order amount="10000"/>  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [OPENXML &#40;Transact-SQL&#41;](../../t-sql/functions/openxml-transact-sql.md)   
  [OPENXML &#40;SQL Server&#41;](../../relational-databases/xml/openxml-sql-server.md)  
   

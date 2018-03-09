@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -26,13 +24,13 @@ ms.assetid: 4be5b463-3ce2-483d-a3c6-dae752cb543e
 caps.latest.revision: "9"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 423768a2a0381377a3d780e632399a41ecf11e5a
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: d26444b6232558c09d694c523d21e70f1d5d9475
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="built-in-collections---report-and-group-variables-references-report-builder"></a>Collections intégrées - Références à des variables de rapport et de groupe (Générateur de rapports)
   Lorsqu'un calcul complexe est utilisé plusieurs fois dans les expressions d'un rapport, vous pouvez créer une variable. Vous pouvez créer une variable de rapport ou une variable de groupe. Les noms de variable doivent être uniques dans un rapport.  
@@ -65,7 +63,7 @@ ms.lasthandoff: 12/05/2017
 ## <a name="group-variables"></a>Variables de groupe  
  Utilisez une variable de groupe pour calculer une expression complexe dans l'étendue d'un groupe. Une variable de groupe est valide uniquement dans l'étendue du groupe et ses groupes enfants.  
   
- Par exemple, supposez qu'une région de données affiche des données d'inventaire pour des éléments qui sont dans différentes catégories d'impôts et que vous souhaitez appliquer différents taux de taxe pour chaque catégorie. Vous regroupez les données en fonction des catégories et définissez une variable *Tax* sur le groupe parent. Vous définissez ensuite une variable de groupe pour *ItemTax* pour chaque catégorie d’impôts et affectez chacun des différents sous-groupes de catégories à la variable de groupe correcte. Par exemple :  
+ Par exemple, supposez qu'une région de données affiche des données d'inventaire pour des éléments qui sont dans différentes catégories d'impôts et que vous souhaitez appliquer différents taux de taxe pour chaque catégorie. Vous regroupez les données en fonction des catégories et définissez une variable *Tax* sur le groupe parent. Vous définissez ensuite une variable de groupe pour *ItemTax* pour chaque catégorie d’impôts et affectez chacun des différents sous-groupes de catégories à la variable de groupe correcte. Exemple :  
   
 -   Pour le groupe parent basé sur `[Category]`, affectez à la variable *Tax* la valeur `[Tax]`. Supposez que les valeurs des catégories sont Food et Clothing.  
   
@@ -79,7 +77,7 @@ ms.lasthandoff: 12/05/2017
   
  Pour faire référence à la variable dans une expression, utilisez la syntaxe de collection globale, par exemple `=Variables!GroupDescription.Value`. Sur l’aire de conception, la valeur s’affiche dans une zone de texte sous la forme `<<Expr>>`.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Filtrer, regrouper et trier des données &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
  [Collections intégrées dans les expressions &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md)   
  [Exemples d’expressions &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)  

@@ -22,11 +22,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 46eb86009bf940857788425afd4781ca79ab3686
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: c1af0b93536006ba5f7b106c10935b07263a572b
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="sphelpdb-transact-sql"></a>sp_helpdb (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -68,16 +68,16 @@ sp_helpdb [ [ @dbname= ] 'name' ]
 |**nom**|**NCHAR(128)**|Nom de fichier logique.|  
 |**fileid**|**smallint**|ID de fichier.|  
 |**nom de fichier**|**NCHAR(260)**|Nom de fichier du système d'exploitation (nom de fichier physique).|  
-|**groupe de fichiers**|**nvarchar (128)**|Groupe de fichiers auquel le fichier appartient.<br /><br /> NULL = Il s'agit d'un fichier journal. Ils ne font jamais partie d'un groupe de fichiers.|  
-|**taille**|**nvarchar(18)**|Taille du fichier exprimée en mégaoctets.|  
+|**groupe de fichiers**|**nvarchar(128)**|Groupe de fichiers auquel le fichier appartient.<br /><br /> NULL = Il s'agit d'un fichier journal. Ils ne font jamais partie d'un groupe de fichiers.|  
+|**size**|**nvarchar(18)**|Taille du fichier exprimée en mégaoctets.|  
 |**MaxSize**|**nvarchar(18)**|Taille maximale du fichier. La valeur UNLIMITED indique que le fichier peut augmenter jusqu'à ce que le disque soit plein.|  
 |**croissance**|**nvarchar(18)**|Incrément de croissance du fichier. Cela indique la quantité d’espace ajoutée au fichier que chaque nouvel espace de temps est nécessaire.|  
 |**utilisation**|**varchar (9)**|Utilisation du fichier. Pour un fichier de données, la valeur est **'données uniquement'** et du fichier journal de la valeur est **journal uniquement**.|  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Le **état** rapports quelles options ont été définies à ON dans la base de données du jeu de colonnes dans le résultat. Toutes les options de base de données ne sont pas signalées par le **état** colonne. Pour afficher une liste complète des paramètres de la base de données en cours, utilisez la **sys.databases** vue de catalogue.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Lorsqu’une base de données est spécifié, l’appartenance à la **public** rôle dans la base de données est nécessaire. Lorsqu’aucune base de données n’est spécifié, l’appartenance au **public** rôle dans le **master** base de données est requise.  
   
  Si une base de données ne sont pas accessibles, **sp_helpdb** affiche l’erreur message 15622 et autant d’informations sur la base de données que possible.  
@@ -87,14 +87,14 @@ sp_helpdb [ [ @dbname= ] 'name' ]
 ### <a name="a-returning-information-about-a-single-database"></a>A. Renvoi d'informations sur une base de données unique  
  Cet exemple affiche des informations sur la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
   
-```tsql  
+```sql  
 EXEC sp_helpdb N'AdventureWorks2012';  
 ```  
   
 ### <a name="b-returning-information-about-all-databases"></a>B. Renvoi d’informations sur toutes les bases de données  
  L'exemple ci-dessous affiche les informations relatives à toutes les bases de données installées sur le serveur sur lequel s'exécute [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-```tsql  
+```sql  
 EXEC sp_helpdb;  
 GO  
 ```  

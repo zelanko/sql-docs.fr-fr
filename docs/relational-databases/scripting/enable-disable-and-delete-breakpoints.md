@@ -2,26 +2,30 @@
 title: "Activer, désactiver et supprimer des points d’arrêt | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-scripting
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 357b5874-273f-43a9-8e30-83872bdea5dc
-caps.latest.revision: "5"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2e0fe1a775a1a786234308dce7056f20edaecb63
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 2c78a83bbf85641580f05d08af7272bce554bff2
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="enable-disable-and-delete-breakpoints"></a>Activer, désactiver et supprimer des points d'arrêt
-  Pour afficher et gérer tous les points d'arrêt ouverts, vous pouvez utiliser la fenêtre **Points d'arrêt** . Utilisez la fenêtre pour afficher les informations sur les points d'arrêt et entreprendre des actions, telles que la suppression, la désactivation ou l'activation des points d'arrêt.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Pour afficher et gérer tous les points d’arrêt ouverts, vous pouvez utiliser la fenêtre **Points d’arrêt**. Utilisez la fenêtre pour afficher les informations sur les points d'arrêt et entreprendre des actions, telles que la suppression, la désactivation ou l'activation des points d'arrêt.  
   
 ## <a name="the-breakpoints-window"></a>Fenêtre Points d'arrêt  
  La fenêtre **Points d'arrêt** répertorie des informations telles que la ligne de code sur laquelle se trouve le point d'arrêt. Dans la fenêtre **Points d'arrêt** , vous pouvez aussi supprimer, désactiver et activer des points d'arrêt. Pour plus d'informations sur la fenêtre **Points d'arrêt** , consultez [Points d'arrêt Window](../../relational-databases/scripting/transact-sql-debugger-breakpoints-window.md).  
@@ -95,7 +99,7 @@ ms.lasthandoff: 11/09/2017
   
 -   Dans la barre d'outils de la fenêtre **Points d'arrêt** , cliquez sur le bouton **Supprimer tous les points d'arrêt** .  
   
-## <a name="see-also"></a>Voir aussi  
- [Basculer un point d'arrêt](../../relational-databases/scripting/toggle-a-breakpoint.md)  
+## <a name="see-also"></a> Voir aussi  
+ [Basculer un point d’arrêt](../../relational-databases/scripting/toggle-a-breakpoint.md)  
   
   

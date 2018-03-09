@@ -2,32 +2,32 @@
 title: "Élément Property (CSDLBI) | Documents Microsoft"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 ms.assetid: f0770c5e-6420-4d0c-a5bf-b94eaf6877ca
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 1b71657fa8ff566b36e93b8c2bacfe3fb05630d7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 1fee5461b3b779227839c3f722c9c75626ed44fe
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="property-element-csdlbi"></a>Élément Property (CSDLBI)
-  L'élément Property en CSDLBI est un type complexe qui apporte des ajouts à l'élément Property CSDL, pour la prise en charge des modèles de données Business Intelligence.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+L'élément Property en CSDLBI est un type complexe qui apporte des ajouts à l'élément Property CSDL, pour la prise en charge des modèles de données Business Intelligence.  
   
 ## <a name="elements-and-attributes"></a>Éléments et attributs  
  Le tableau suivant répertorie les éléments et les attributs qui définissent l'élément Property CSDLBI.  
@@ -64,7 +64,7 @@ ms.lasthandoff: 11/17/2017
 |Volatile|Il est possible que la propriété ne reste pas constante entre les opérations d'actualisation.|  
   
 ## <a name="example"></a>Exemple  
- **Tabulaire**  
+ **Sous forme de tableau**  
   
  L'exemple XML suivant illustre la représentation, en CSDLBI version 1.1, de certaines propriétés de l'exemple de modèle tabulaire AdventureWorks.  
   
@@ -99,7 +99,7 @@ ms.lasthandoff: 11/17/2017
 ```  
   
 ## <a name="example"></a>Exemple  
- **(Multidimensionnel)**  
+ **Multidimensionnel**  
   
  L'exemple suivant, en CSDLBI version 1.1, illustre certaines propriétés des colonnes du modèle de données représentant le cube Contoso Operations. Notez que les annotations BI ne sont pas requises ou ne sont pas appliquées à la plupart des colonnes, uniquement à celles qui nécessitent une gestion spéciale dans la couche présentation.  
   
@@ -135,6 +135,6 @@ ms.lasthandoff: 11/17/2017
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Informations techniques de référence sur les annotations pour le décisionnel dans CSDL](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/technical-reference-for-bi-annotations-to-csdl.md)  
+ [Informations techniques de référence pour les Annotations BI au langage CSDL](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/technical-reference-for-bi-annotations-to-csdl.md)  
   
   

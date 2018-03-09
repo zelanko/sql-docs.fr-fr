@@ -8,20 +8,21 @@ ms.service:
 ms.component: in-memory-oltp
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine-imoltp
+ms.technology:
+- database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 05515013-28b5-4ccf-9a54-ae861448945b
-caps.latest.revision: "44"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ed811d1184287c1e45f93d3ddd4253400dc5a237
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 462245faec6b34c8ad38e47ec23c1f8038769ae8
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="supported-features-for-natively-compiled-t-sql-modules"></a>Fonctionnalités prises en charge pour les modules T-SQL compilés en mode natif
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -137,7 +138,7 @@ Clause HAVING :
   - Cette limite peut être abaissée lorsque la requête contient des jointures ou des fonctions d'agrégation. Par exemple, avec une jointure (entre deux tables), la limite est de 4 096 lignes. Avec deux jointures (entre trois tables), la limite est de 2 730 lignes.  
   - Vous pouvez obtenir plus de 8 192 résultats en stockant le nombre de lignes dans une variable :  
 
-```tsql
+```sql
 DECLARE @v INT = 9000;
 SELECT TOP (@v) … FROM … ORDER BY …
 ```
@@ -155,7 +156,7 @@ Les instructions DML suivantes sont prises en charge.
 
 -   UPDATE  
 
--   DELETE  
+-   Suppression  
 
 -   La clause WHERE est prise en charge avec les instructions UPDATE et DELETE.  
 
@@ -181,7 +182,7 @@ Les instructions DML suivantes sont prises en charge.
 -   BEGIN ATOMIC (à l’extérieur de la procédure stockée). Pour plus d’informations, consultez [Atomic Blocks](../../relational-databases/in-memory-oltp/atomic-blocks-in-native-procedures.md).  
 
 ##  <a name="so"></a> Opérateurs pris en charge  
- Les opérateurs suivants sont pris en charge :  
+ Les opérateurs suivants sont pris en charge :  
 
 -   [Opérateurs de comparaison &#40;Transact-SQL&#41;](../../t-sql/language-elements/comparison-operators-transact-sql.md) (par exemple >, \<, >= et <=)  
 
@@ -257,7 +258,7 @@ Les instructions DML suivantes sont prises en charge.
 
  Exemple avec TOP N = 8192 : Compiles  
 
-```tsql  
+```sql  
 CREATE PROCEDURE testTop  
 WITH EXECUTE AS OWNER, SCHEMABINDING, NATIVE_COMPILATION  
   AS  
@@ -270,7 +271,7 @@ GO
 
  Exemple avec TOP N > 8192 : Fails to compile.  
 
-```tsql  
+```sql  
 CREATE PROCEDURE testTop  
 WITH EXECUTE AS OWNER, SCHEMABINDING, NATIVE_COMPILATION  
   AS  
@@ -285,7 +286,7 @@ GO
 
  Exemple à l'aide d'une variable : Compiles  
 
-```tsql  
+```sql  
 CREATE PROCEDURE testTop  
 WITH EXECUTE AS OWNER, SCHEMABINDING, NATIVE_COMPILATION  
   AS  
@@ -305,7 +306,7 @@ GO
 
  La formule pour calculer la valeur maximale N prise en charge dans le pire des cas dans TOP est : `N = floor ( 65536 / number_of_tables * 8 + total_size+of+aggs )`.  
 
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Procédures stockées compilées en mode natif](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)   
  [Problèmes de migration pour les procédures stockées compilées en mode natif](../../relational-databases/in-memory-oltp/migration-issues-for-natively-compiled-stored-procedures.md)  
 

@@ -2,27 +2,32 @@
 title: "Créer des fonctionnalités de données à l’aide de R et SQL (procédure pas à pas) | Documents Microsoft"
 ms.custom: 
 ms.date: 08/23/2017
-ms.prod: sql-server-2016
 ms.reviewer: 
-ms.suite: 
-ms.technology: r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: 
+ms.technology: 
 ms.tgt_pltfrm: 
-ms.topic: article
-applies_to: SQL Server 2016
-dev_langs: R
+ms.topic: tutorial
+applies_to:
+- SQL Server 2016
+dev_langs:
+- R
 ms.assetid: 4981d4eb-0874-4fe9-82e1-edf99890e27a
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 095f5b9880a8f78a8d73461dd8cbeae28f30169e
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 9b447f8c8faa834bea4360844308e468bf15d89c
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="create-data-features-using-r-and-sql-walkthrough"></a>Créer des fonctionnalités de données à l’aide de R et SQL (procédure pas à pas)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 L’ingénierie des données est un aspect important du Machine Learning. Données nécessitent souvent une transformation avant de pouvoir l’utiliser pour la modélisation prédictive. Si les données n’ont pas les caractéristiques dont vous avez besoin, vous pouvez les créer à partir de valeurs existantes.
 
@@ -31,7 +36,7 @@ Pour cette tâche de modélisation, plutôt que d’utiliser les valeurs brutes 
 Dans cette étape, nous comparons les deux méthodes différentes pour la création d’une fonctionnalité à partir des données :
 
 - À l’aide d’une fonction R personnalisée
-- À l’aide d’une fonction personnalisée de T-SQL dans[!INCLUDE[tsql](../../includes/tsql-md.md)]
+- À l’aide d’une fonction personnalisée de T-SQL dans [!INCLUDE[tsql](../../includes/tsql-md.md)]
 
 L’objectif est de créer un nouveau [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] jeu de données qui incluant les colonnes d’origine et la nouvelle fonctionnalité numérique, *direct_distance*.
 

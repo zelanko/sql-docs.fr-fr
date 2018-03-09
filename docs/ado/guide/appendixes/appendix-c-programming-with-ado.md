@@ -3,26 +3,28 @@ title: "Annexe c : programmation avec ADO | Documents Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: ADO, programming
+helpviewer_keywords:
+- ADO, programming
 ms.assetid: 40af6e70-2a37-480f-aadc-92095d450af7
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1f7abcbece2ae08beab7cbe99f6bdb21ded96d41
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ce6030b4e039cf88ac22bc85dd5c2aba46ded7b4
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="appendix-c-programming-with-ado-in-development-environments"></a>Annexe c : programmation avec ADO dans les environnements de développement
 ADO est un composant d’interface COM automation qui peut être utilisé avec nombreux langages de programmation, y compris Microsoft Visual Basic, VBScript, JScript et Visual C++. Une version de l’objet ADO est installée avec chacun de ces outils et d’autres applications, telles que Microsoft Office et Microsoft SQL Server.

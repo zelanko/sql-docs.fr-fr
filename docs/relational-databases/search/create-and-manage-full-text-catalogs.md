@@ -2,28 +2,33 @@
 title: "Créer et gérer des catalogues de texte intégral | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: search
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-search
+ms.suite: sql
+ms.technology:
+- dbe-search
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - full-text catalogs [SQL Server], creating
 - full-text search [SQL Server], using SQL Server Management Studio
 ms.assetid: 824b7131-44a6-4815-89e6-62b7bab060e3
-caps.latest.revision: "21"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 8b4b38c2aac9a5d960f84f2b9d6f7b32762aa862
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: b3e98a00fd7f165fbd5c83b7149a8e63505116e3
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="create-and-manage-full-text-catalogs"></a>Créer et gérer des catalogues de texte intégral
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 Un catalogue de texte intégral est un conteneur logique pour un groupe d’index de recherche en texte intégral. Vous devez créer un catalogue de texte intégral avant de pouvoir créer un index de recherche en texte intégral.
 
 Un catalogue de texte intégral est un objet virtuel qui n’appartient à aucun groupe de fichiers.
@@ -31,9 +36,9 @@ Un catalogue de texte intégral est un objet virtuel qui n’appartient à aucun
 ##  <a name="creating"></a> Créer un catalogue de texte intégral  
 
 ### <a name="create-a-full-text-catalog-with-transact-sql"></a>Créer un catalogue de texte intégral avec Transact-SQL
-Utilisez [CREATE FULLTEXT CATALOG](../../t-sql/statements/create-fulltext-catalog-transact-sql.md). Par exemple :
+Utilisez [CREATE FULLTEXT CATALOG](../../t-sql/statements/create-fulltext-catalog-transact-sql.md). Exemple :
 
-```tsql 
+```sql 
 USE AdventureWorks;  
 GO  
 CREATE FULLTEXT CATALOG ftCatalog AS DEFAULT;  

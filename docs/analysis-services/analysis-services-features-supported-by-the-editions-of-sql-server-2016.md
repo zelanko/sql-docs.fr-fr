@@ -2,31 +2,28 @@
 title: "Fonctionnalités prises en charge par les éditions de SQL Server 2016 Analysis Services | Documents Microsoft"
 ms.custom: 
 ms.date: 06/29/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: misc
+ms.component: multidimensional-tabular
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
-- analysis-services/multidimensional-tabular
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f09d7be1-bd63-43f8-b91c-bf19166b4457
-caps.latest.revision: "4"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 05804908eb3d5b4d519516519eb091e92aeaee34
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 14c64237e32d433592f44fcbd0d56bd661cc4940
+ms.sourcegitcommit: c77a8ac1ab372927c09bf241d486e96881b61ac9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/29/2018
 ---
-# <a name="analysis-services-features-supported-by-the-editions-of-sql-server-2016"></a>Fonctionnalités Analysis Services prises en charge par les éditions de SQL Server 2016
+# <a name="analysis-services-features-supported-by-sql-server-editions"></a>Fonctionnalités Analysis Services pris en charge par les éditions de SQL Server
 [!INCLUDE[ssas-appliesto-sql2016-later](../includes/ssas-appliesto-sql2016-later.md)]
 
 Cette rubrique fournit des détails sur les fonctionnalités prises en charge par les différentes éditions de SQL Server 2016 Analysis Services. Pour les fonctionnalités prises en charge par les éditions Evaluation et Developer, consultez Enterprise edition.
@@ -48,7 +45,7 @@ Cette rubrique fournit des détails sur les fonctionnalités prises en charge pa
 |Hierarchies|Oui|Oui|||||Oui|  
 |Indicateurs de performance clés|Oui|Oui|||||Oui|  
 |Perspectives|Oui||||||Oui|  
-|Translations|Oui|Oui|||||Oui|  
+|Traductions|Oui|Oui|||||Oui|  
 |Calculs DAX, requêtes DAX, requêtes MDX|Oui|Oui|||||Oui|  
 |Sécurité au niveau des lignes|Oui|Oui|||||Oui|  
 |Partitions multiples|Oui||||||Oui|  
@@ -70,11 +67,11 @@ Cette rubrique fournit des détails sur les fonctionnalités prises en charge pa
 |Cube d'écriture différée|Oui|Oui|||||Oui|  
 |Dimensions d'écriture différée|Oui||||||Oui|  
 |Cellules d'écriture différée|Oui|Oui|||||Oui|  
-|Extraction|Oui|Oui|||||Oui|  
+|extraction|Oui|Oui|||||Oui|  
 |Types de hiérarchies avancés (parent-enfant et irrégulières)|Oui|Oui|||||Oui|  
 |Dimensions avancées (dimensions de référence, plusieurs-à-plusieurs)|Oui|Oui|||||Oui|  
 |Dimensions et mesures liées|Oui|Oui  <sup>2</sup> |||||Oui|  
-|Translations|Oui|Oui|||||Oui|  
+|Traductions|Oui|Oui|||||Oui|  
 |Aggregations|Oui|Oui|||||Oui|  
 |Partitions multiples|Oui|Oui, jusqu'à 3|||||Oui|  
 |Mise en cache proactive|Oui||||||Oui|  
@@ -125,6 +122,6 @@ Cette rubrique fournit des détails sur les fonctionnalités prises en charge pa
   
  ## <a name="see-also"></a>Voir aussi  
  [Spécifications de produit pour SQL Server 2016](http://msdn.microsoft.com/library/6445fd53-6844-4170-a86b-7fe76a9f64cb)   
- [Installation de SQL Server 2016](../database-engine/install-windows/installation-for-sql-server-2016.md)  
+ [Installation de SQL Server 2016](../database-engine/install-windows/installation-for-sql-server-2016.md)  
 
 

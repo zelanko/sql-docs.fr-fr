@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: microsoft
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 7db96c719d22b3f6dd47a02eac2ef7724c0b6040
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 0b71b742ff9c0833bd36deb256dda5169f2a51c7
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="schemaini-file-text-file-driver"></a>Fichier Schema.ini (pilote du fichier texte)
 Lorsque le pilote de texte est utilisé, le format du fichier texte est déterminé à l’aide d’un fichier d’informations de schéma. Le fichier d’informations de schéma est toujours nommé Schema.ini et toujours conservé dans le même répertoire que la source de données de texte. Le fichier d’informations de schéma fournit la méthode IISAM avec des informations sur le format général du fichier, le nom de colonne et les informations de type de données et plusieurs autres caractéristiques des données. Un fichier Schema.ini est toujours requis pour accéder à des données de longueur fixe. Vous devez utiliser un fichier Schema.ini lorsque votre table de texte contient la date/heure, devise, ou données Decimal ou à tout moment que vous souhaitez davantage de contrôle sur la gestion des données dans la table.  
@@ -99,14 +99,14 @@ Col2=CustomerName Text Width 30
 n=ColumnNametype [#]  
 ```  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Le tableau suivant décrit chaque partie de la **Col**  *n*  entrée.  
   
-|Paramètre| Description|  
+|Paramètre|Description|  
 |---------------|-----------------|  
 |*Nom de colonne*|Le nom de la colonne. Si le nom de colonne contient des espaces, vous devez le placer entre guillemets doubles.|  
 |*type*|Types de données sont les suivantes :<br /><br /> **Types de données Microsoft Jet**<br /><br /> bit<br /><br /> Byte<br /><br /> Short<br /><br /> Long<br /><br /> Monétaire (Currency)<br /><br /> Unique<br /><br /> Double<br /><br /> DateTime<br /><br /> Texte<br /><br /> Mémo<br /><br /> **Types de données ODBC** Char (sous forme de texte)<br /><br /> Float (comme Double)<br /><br /> Integer (comme court)<br /><br /> LongChar (comme Mémo)<br /><br /> Date *format de date*|  
-|**Largeur**|La valeur de chaîne littérale `Width`. Indique que le nombre suivant désigne la largeur de la colonne (facultatif pour les fichiers délimités par des caractères ; requis pour les fichiers de longueur fixe).|  
+|**Width**|La valeur de chaîne littérale `Width`. Indique que le nombre suivant désigne la largeur de la colonne (facultatif pour les fichiers délimités par des caractères ; requis pour les fichiers de longueur fixe).|  
 |*#*|La valeur entière qui désigne la largeur de la colonne (obligatoire si **largeur** est spécifié).|  
   
 ## <a name="selecting-a-character-set"></a>Sélection d’un jeu de caractères  
@@ -119,7 +119,7 @@ CharacterSet=ANSI
 ## <a name="specifying-data-type-formats-and-conversions"></a>Spécification des Formats de Type de données et les Conversions  
  Le fichier Schema.ini contient plusieurs options que vous pouvez utiliser pour spécifier comment les données sont converties ou affichées. Le tableau suivant répertorie chacun de ces options.  
   
-|Option| Description|  
+|Option|Description|  
 |------------|-----------------|  
 |**DateTimeFormat**|Peut être définie à une chaîne de format qui indique les dates et heures. Vous devez spécifier cette entrée si tous les champs de date/heure de l’importation/exportation sont gérées avec le même format. Tous les formats Microsoft Jet, à l’exception du matin. et heures. sont pris en charge. S’il n’existe aucune chaîne de format, les options de date courte le panneau de configuration Windows image et d’heure sont utilisées.|  
 |**DecimalSymbol**|Peut être définie sur n’importe quel caractère unique qui est utilisé pour séparer l’entier à partir de la partie fractionnaire d’un nombre.|  

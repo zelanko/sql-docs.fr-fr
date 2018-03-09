@@ -3,27 +3,27 @@ title: "Utiliser le groupe de disponibilité SQL Server sur Linux | Documents Mi
 description: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.date: 07/20/2017
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 
 ms.workload: Inactive
-ms.openlocfilehash: 54c9be66075ebbc9614de0b007b5b718e976121b
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 68e41573c107725ef7af12e8b990678f8991bb02
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 02/13/2018
 ---
-# <a name="operate-ha-availability-group-for-sql-server-on-linux"></a>Utiliser le groupe de disponibilité haute disponibilité pour SQL Server sur Linux
+# <a name="operate-always-on-availability-groups-on-linux"></a>Fonctionnent toujours sur les groupes de disponibilité sur Linux
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 ## <a name="failover"></a>Basculer le groupe de disponibilité
 
@@ -129,7 +129,7 @@ Pour plus d'informations, consultez :
  [SLES ressources - Guide d’Administration](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html#sec.ha.troubleshooting.resource) 
  
 
-### <a name="forceManual"></a>Manuel déplacer lorsque les outils de cluster ne sont pas réactifs 
+### <a name="forceManual"></a> Manuel déplacer lorsque les outils de cluster ne sont pas réactifs 
 
 Dans les cas extrêmes, si un utilisateur ne peut pas utiliser les outils de gestion de cluster pour l’interaction avec le cluster (par exemple, le cluster ne répond pas, les outils de gestion de cluster ont un comportement défectueux), l’utilisateur peut avoir à effectuer un basculement manuel - en ignorant le Gestionnaire du cluster externe. Cela n’est pas recommandée pour les opérations courantes et doit être utilisé dans les cas de cluster ne parvient pas à exécuter l’action de basculement à l’aide des outils de gestion du cluster.
 
@@ -137,13 +137,13 @@ Si vous ne peuvent pas basculer le groupe de disponibilité avec les outils de g
 
 1. Vérifiez que la ressource de groupe de disponibilité n’est pas plus gérée par le cluster. 
 
-      - Tentative de définition de la ressource au mode non géré. Cela signale à l’agent de ressource pour arrêter la surveillance des ressources et la gestion. Exemple : 
+      - Tentative de définition de la ressource au mode non géré. Cela signale à l’agent de ressource pour arrêter la surveillance des ressources et la gestion. Par exemple : 
       
       ```bash
       sudo pcs resource unmanage <**resourceName**>
       ```
 
-      - Si la tentative de définir le mode de la ressource en mode non managé échoue, supprimez la ressource. Exemple :
+      - Si la tentative de définir le mode de la ressource en mode non managé échoue, supprimez la ressource. Par exemple :
 
       ```bash
       sudo pcs resource delete <**resourceName**>
@@ -158,7 +158,7 @@ Si vous ne peuvent pas basculer le groupe de disponibilité avec les outils de g
    EXEC sp_set_session_context @key = N'external_cluster', @value = N'yes';
    ```
 
-1. Basculer le groupe de disponibilité avec Transact-SQL. Dans l’exemple ci-dessous, remplacez `<**MyAg**>` par le nom de votre groupe de disponibilité. Connectez-vous à l’instance de SQL Server qui héberge le réplica secondaire cible et exécutez la commande suivante :
+1. Basculer le groupe de disponibilité avec Transact-SQL. Dans l’exemple suivant, remplacez `<**MyAg**>` par le nom de votre groupe de disponibilité. Connectez-vous à l’instance de SQL Server qui héberge le réplica secondaire cible et exécutez la commande suivante :
 
    ```Transact-SQL
    ALTER AVAILABILITY GROUP <**MyAg**> FAILOVER;
@@ -188,9 +188,9 @@ Lorsque les réplicas du groupe de disponibilité sont sur des instances de SQL 
 1. Avant de commencer, sauvegardez chaque base de données.
 2. Mettre à niveau des instances de SQL Server qui hébergent les réplicas secondaires.
 
-    a. Mettre à niveau tout d’abord des réplicas secondaires asynchrones.
+    A. Mettre à niveau tout d’abord des réplicas secondaires asynchrones.
 
-    b. Mettre à niveau les réplicas secondaires synchrones.
+    B. Mettre à niveau les réplicas secondaires synchrones.
 
    >[!NOTE]
    >Si un groupe de disponibilité possède uniquement asynchrone réplicas - pour éviter toute perte de données modifiez un réplica synchrone et attendez qu’il est synchronisé. Puis, mettez à niveau de ce réplica.
@@ -232,19 +232,19 @@ Lorsque les réplicas du groupe de disponibilité sont sur des instances de SQL 
    >Les étapes suivantes s’appliquent uniquement aux groupes de disponibilité qui n’ont pas un gestionnaire de cluster.  
    Si le type de cluster de groupe de disponibilité est `NONE`manuellement basculer. Exécutez les étapes suivantes dans l'ordre :
 
-      a. La commande suivante définit le réplica principal vers le site secondaire. Remplacez `AG1` par le nom de votre groupe de disponibilité. Exécutez la commande Transact-SQL sur l’instance de SQL Server qui héberge le réplica principal.
+      A. La commande suivante définit le réplica principal vers le site secondaire. Remplacez `AG1` par le nom de votre groupe de disponibilité. Exécutez la commande Transact-SQL sur l’instance de SQL Server qui héberge le réplica principal.
 
       ```transact-sql
       ALTER AVAILABILITY GROUP [ag1] SET (ROLE = SECONDARY);
       ```
 
-      b. La commande suivante définit un réplica secondaire synchrone principal. Exécutez la commande Transact-SQL suivante sur l’instance cible de SQL Server - l’instance qui héberge le réplica secondaire synchrone.
+      B. La commande suivante définit un réplica secondaire synchrone principal. Exécutez la commande Transact-SQL suivante sur l’instance cible de SQL Server - l’instance qui héberge le réplica secondaire synchrone.
 
       ```transact-sql
       ALTER AVAILABILITY GROUP [ag1] FAILOVER;
       ```
 
-1. Après le basculement, mettez à niveau SQL Server sur l’ancien réplica principal en répétant la procédure décrite dans les étapes ci-dessus b.1-b.3.
+1. Après le basculement, mettez à niveau SQL Server sur l’ancien réplica principal en répétant la procédure décrite dans les étapes b.1-b.3.
 
    L’exemple suivant met à niveau `mssql-server` et `mssql-server-ha` packages.
 
@@ -267,7 +267,7 @@ Lorsque les réplicas du groupe de disponibilité sont sur des instances de SQL 
    pcs constraint remove location-ag_cluster-master-rhel1--INFINITY
    ```
 
-1. Pour un groupes de disponibilité avec un cluster externe manager - où type de cluster est externe, le nettoyage de la contrainte d’emplacement qui a été provoquée par le basculement manuel. 
+1. Pour un groupes de disponibilité avec un gestionnaire de cluster externe - où le type de cluster est externe, nettoyez la contrainte d’emplacement qui a été provoquée par le basculement manuel. 
 
    ```bash
    sudo pcs constraint remove cli-prefer-ag_cluster-master  

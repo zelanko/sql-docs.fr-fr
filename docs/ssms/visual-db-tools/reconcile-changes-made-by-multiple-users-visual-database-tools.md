@@ -3,8 +3,11 @@ title: "Rapprocher les modifications effectuées par plusieurs utilisateurs (Vis
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -16,16 +19,16 @@ ms.assetid: fc7ed4f2-ad3d-47fc-a3ef-51e5bb069ef0
 caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8b20829937e6ad532b4ce4a42e2fe42c6c70375f
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 356f09be20f11e2ec701e4e98d92cb1fbbd12b63
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="reconcile-changes-made-by-multiple-users-visual-database-tools"></a>Rapprocher les modifications effectuées par plusieurs utilisateurs (Visual Database Tools)
-Dans un environnement multi-utilisateur, des modifications peuvent être apportées à un même objet par plusieurs utilisateurs simultanément. Cela peut se produire lorsque vous travaillez sur la structure de l'objet dans le Concepteur de tables ou dans le Concepteur de schémas de base de données, ou dans les valeurs des résultats retournés dans le volet Résultats du Concepteur de requêtes et de vues. Cela peut provoquer des conflits que vous souhaiterez résoudre.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Dans un environnement multi-utilisateur, des changements peuvent être apportés à un même objet par plusieurs utilisateurs simultanément. Cela peut se produire lorsque vous travaillez sur la structure de l'objet dans le Concepteur de tables ou dans le Concepteur de schémas de base de données, ou dans les valeurs des résultats retournés dans le volet Résultats du Concepteur de requêtes et de vues. Cela peut provoquer des conflits que vous souhaiterez résoudre.  
   
 ## <a name="conflicts-in-the-table-or-database-diagram-designers"></a>Conflits dans le Concepteur de tables ou le Concepteur de schémas de base de données  
 Par exemple, un autre utilisateur peut supprimer ou renommer une table pendant que vous l'utilisez ou que vous travaillez avec une table connexe dans le Concepteur de tables. Si vous tentez d’enregistrer votre table, la [Boîte de dialogue Modifications détectées dans la base de données &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/database-changes-detected-dialog-box-visual-database-tools.md) vous avertit que la base de données a été modifiée depuis que vous avez ouvert la table.  
@@ -61,6 +64,6 @@ Par exemple, supposons qu'une collègue et vous-même exécutiez chacun une requ
   
     Dans ce cas, vous ne pouvez pas valider vos modifications apportées à la base de données.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [Boîte de dialogue Modifications détectées dans la base de données &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/database-changes-detected-dialog-box-visual-database-tools.md)  
   

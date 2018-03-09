@@ -2,26 +2,31 @@
 title: "Spécifier les chemins d’accès et les indicateurs d’optimisation des index XML sélectifs | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: xml
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-xml
+ms.suite: sql
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 486ee339-165b-4aeb-b760-d2ba023d7d0a
-caps.latest.revision: "12"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9b52b967dd2ff43f96726326e7e58da1feca898a
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: bf2e9bf99c208efeb26fe0a2b87b6a7bab964dd2
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="specify-paths-and-optimization-hints-for-selective-xml-indexes"></a>Spécifier les chemins d'accès et les indicateurs d'optimisation des index XML sélectifs
-  Cette rubrique explique comment spécifier les chemins d'accès de nœud à indexer et les indicateurs d'optimisation pour l'indexation lorsque vous créez ou modifiez des index XML sélectifs.  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+Cette rubrique explique comment spécifier les chemins d'accès de nœud à indexer et les indicateurs d'optimisation pour l'indexation lorsque vous créez ou modifiez des index XML sélectifs.  
   
  Vous spécifiez les chemins d'accès de nœud et les indicateurs d'optimisation en même temps dans l'une des instructions suivantes :  
   
@@ -64,7 +69,7 @@ ms.lasthandoff: 11/09/2017
   
  Voici un exemple d'index XML sélectif créé avec les mappages par défaut. Pour les trois chemins d’accès, le type de nœud par défaut (**xs:untypedAtomic**) et la cardinalité sont utilisés.  
   
-```tsql  
+```sql  
 CREATE SELECTIVE XML INDEX example_sxi_UX_default  
 ON Tbl(xmlcol)  
 FOR  
@@ -95,7 +100,7 @@ mypath03 = '/a/b/d'
   
  Vous pouvez optimiser l'index XML sélectif affiché de la manière suivante :  
   
-```tsql  
+```sql  
 CREATE SELECTIVE XML INDEX example_sxi_UX_optimized  
 ON Tbl(xmlcol)  
 FOR  
@@ -119,7 +124,7 @@ pathY = '/a/b/d' as XQUERY 'xs:string' MAXLENGTH(200) SINGLETON
   
  Considérez la requête suivante :  
   
-```tsql  
+```sql  
 SELECT T.record,  
     T.xmldata.value('(/a/b/d)[1]', 'NVARCHAR(200)')  
 FROM myXMLTable T  
@@ -127,7 +132,7 @@ FROM myXMLTable T
   
  La requête spécifiée retourne une valeur du chemin d'accès `/a/b/d` compressé dans un type de données NVARCHAR(200). Ainsi, le type de données à spécifier pour le nœud est évident. Néanmoins, il n'existe aucun schéma pour spécifier la cardinalité du nœud en XML non typé. Pour spécifier que le nœud `d` apparaît au plus une fois sous son nœud parent `b`, créez un index XML sélectif qui utilise l'indicateur d'optimisation de SINGLETON comme suit :  
   
-```tsql  
+```sql  
 CREATE SELECTIVE XML INDEX example_sxi_US  
 ON Tbl(xmlcol)  
 FOR  
@@ -225,7 +230,7 @@ node1223 = '/a/b/d' as SQL NVARCHAR(200) SINGLETON
   
      Considérez la requête simple suivante sur [l’exemple de document XML](#sample) dans cette rubrique :  
   
-    ```tsql  
+    ```sql  
     SELECT T.record FROM myXMLTable T  
     WHERE T.xmldata.exist('/a/b[./c = "43"]') = 1  
     ```  
@@ -240,7 +245,7 @@ node1223 = '/a/b/d' as SQL NVARCHAR(200) SINGLETON
   
  Pour améliorer les performances de l'instruction SELECT ci-dessus, créez l'index XML sélectif suivant :  
   
-```tsql  
+```sql  
 CREATE SELECTIVE XML INDEX simple_sxi  
 ON Tbl(xmlcol)  
 FOR  
@@ -253,7 +258,7 @@ FOR
 ### <a name="indexing-identical-paths"></a>Indexation de chemins d'accès identiques  
  Vous ne pouvez pas promouvoir des chemins d'accès identiques de même type de données sous des noms de chemins d'accès différents. Par exemple, la requête suivante génère une erreur, car `pathOne` et `pathTwo` sont identiques :  
   
-```tsql  
+```sql  
 CREATE SELECTIVE INDEX test_simple_sxi ON T1(xmlCol)  
 FOR  
 (  
@@ -264,7 +269,7 @@ FOR
   
  Toutefois, vous pouvez promouvoir des chemins d'accès de types de données différents avec des noms différents. Par exemple, la requête suivante est maintenant acceptable, car les types de données sont différents :  
   
-```tsql  
+```sql  
 CREATE SELECTIVE INDEX test_simple_sxi ON T1(xmlCol)  
 FOR  
 (  
@@ -280,7 +285,7 @@ FOR
   
  Voici une requête XQuery simple qui utilise la méthode exist() :  
   
-```tsql  
+```sql  
 SELECT T.record FROM myXMLTable T  
 WHERE T.xmldata.exist('/a/b/c/d/e/h') = 1  
 ```  
@@ -295,7 +300,7 @@ WHERE T.xmldata.exist('/a/b/c/d/e/h') = 1
   
  Voici une variation plus complexe de la requête XQuery précédente, avec un prédicat appliqué :  
   
-```tsql  
+```sql  
 SELECT T.record FROM myXMLTable T  
 WHERE T.xmldata.exist('/a/b/c/d/e[./f = "SQL"]') = 1  
 ```  
@@ -311,7 +316,7 @@ WHERE T.xmldata.exist('/a/b/c/d/e[./f = "SQL"]') = 1
   
  Voici une requête plus complexe avec une clause value() :  
   
-```tsql  
+```sql  
 SELECT T.record,  
     T.xmldata.value('(/a/b/c/d/e[./f = "SQL"]/g)[1]', 'nvarchar(100)')  
 FROM myXMLTable T  
@@ -329,7 +334,7 @@ FROM myXMLTable T
   
  Voici une requête qui utilise une clause FLWOR dans une clause exist(). (Le nom FLWOR provient des cinq clauses qui peuvent composer une expression XQuery FLWOR : FOR, LET, WHERE, ORDER BY et RETURN.)  
   
-```tsql  
+```sql  
 SELECT T.record FROM myXMLTable T  
 WHERE T.xmldata.exist('  
   For $x in /a/b/c/d/e  
@@ -359,8 +364,8 @@ WHERE T.xmldata.exist('
   
 |indicateur d'optimisation|Stockage plus efficace|Performances améliorées|  
 |-----------------------|----------------------------|--------------------------|  
-|**node()**|Oui|Non|  
-|**SINGLETON**|Non|Oui|  
+|**node()**|Oui|non|  
+|**SINGLETON**|non|Oui|  
 |**DATA TYPE**|Oui|Oui|  
 |**MAXLENGTH**|Oui|Oui|  
   
@@ -369,19 +374,19 @@ WHERE T.xmldata.exist('
   
 |indicateur d'optimisation|Types de données XQuery|Types de données SQL|  
 |-----------------------|-----------------------|--------------------|  
-|**node()**|Oui|Non|  
+|**node()**|Oui|non|  
 |**SINGLETON**|Oui|Oui|  
-|**DATA TYPE**|Oui|Non|  
-|**MAXLENGTH**|Oui|Non|  
+|**DATA TYPE**|Oui|non|  
+|**MAXLENGTH**|Oui|non|  
   
 ### <a name="node-optimization-hint"></a>Indicateur d'optimisation node()  
- S'applique à : types de données XQuery  
+ S'applique à : types de données XQuery  
   
  Vous pouvez utiliser l'optimisation node() pour spécifier un nœud dont la valeur n'est pas requise pour évaluer la requête classique. Cet indicateur réduit les besoins de stockage lorsque la requête classique doit uniquement évaluer l'existence du nœud. (Par défaut, un index XML sélectif stocke la valeur de tous les nœuds promus, à l'exception des types de nœuds complexes.)  
   
  Prenons l'exemple suivant :  
   
-```tsql  
+```sql  
 SELECT T.record FROM myXMLTable T  
 WHERE T.xmldata.exist('/a/b[./c=5]') = 1  
 ```  
@@ -436,7 +441,7 @@ WHERE T.xmldata.exist('/a/b[./c=5]') = 1
 ```  
   
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Index XML sélectifs &#40;SXI&#41;](../../relational-databases/xml/selective-xml-indexes-sxi.md)   
  [Créer, modifier ou supprimer des index XML sélectifs](../../relational-databases/xml/create-alter-and-drop-selective-xml-indexes.md)  
   

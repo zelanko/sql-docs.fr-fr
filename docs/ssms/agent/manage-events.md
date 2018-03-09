@@ -3,8 +3,11 @@ title: "Gérer les événements | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-agent
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -20,16 +23,16 @@ ms.assetid: 8f4ee7f5-80df-49fd-b2b8-d020e04b6e1b
 caps.latest.revision: "5"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ef565c7b6ad04d504ac7b861e8610664d0d916a4
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: aaa831f2f09c12a02fa997a912bd9d0b97ec6cba
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="manage-events"></a>Gérer les événements
-Vous pouvez transférer à une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] tous les messages d'événements qui correspondent à un niveau de gravité d'erreur ou le dépassent. Cette fonction est qualifiée de *transfert d'événements*. Le serveur de transfert est un serveur dédié qui peut également être un serveur maître. Le transfert d'événements permet de centraliser la gestion des alertes pour un groupe de serveurs, réduisant ainsi la charge de travail sur les serveurs à utilisation intense.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Vous pouvez transférer à une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] tous les messages d’événements qui correspondent à un niveau de gravité d’erreur ou le dépassent. Cette fonction est qualifiée de *transfert d'événements*. Le serveur de transfert est un serveur dédié qui peut également être un serveur maître. Le transfert d'événements permet de centraliser la gestion des alertes pour un groupe de serveurs, réduisant ainsi la charge de travail sur les serveurs à utilisation intense.  
   
 Lorsqu'un serveur reçoit des événements pour un groupe d'autres serveurs, le serveur qui reçoit les événements est qualifié de *serveur de gestion des alertes*. Dans un environnement multiserveur, il est recommandé de désigner le serveur maître comme serveur de gestion des alertes.  
   
@@ -90,6 +93,6 @@ Vous pouvez définir un travail à exécuter en réponse à une alerte. Par exem
 > [!NOTE]  
 > Un travail pouvant déclencher un événement, veillez à ne pas créer de boucle récursive de travail d'alerte.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [sp_add_notification (Transact-SQL)](http://msdn.microsoft.com/en-us/44bee7d9-7517-4071-99be-8b36f979c7cc)  
   

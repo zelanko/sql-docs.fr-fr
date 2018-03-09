@@ -2,9 +2,12 @@
 title: "Configurer la publication et la distribution | Microsoft Docs"
 ms.custom: 
 ms.date: 08/25/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,18 +17,18 @@ helpviewer_keywords:
 - publishing [SQL Server replication], configuring
 ms.assetid: 3cfc8966-833e-42fa-80cb-09175d1feed7
 caps.latest.revision: "42"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: cd7a911a8828bf4738df967c8af14a0ee52d2272
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: fb54d609ebaafeab5c358d0cbf089d0d71194337
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="configure-publishing-and-distribution"></a>Configurer la publication et la distribution
-  Cette rubrique explique comment configurer la publication et la distribution dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]ou d'objets RMO (Replication Management Objects).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Cette rubrique explique comment configurer la publication et la distribution dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l’aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)] ou d’objets RMO (Replication Management Objects).  
   
 
 ##  <a name="BeforeYouBegin"></a> Avant de commencer  
@@ -54,7 +57,7 @@ ms.lasthandoff: 11/09/2017
   
     -   Permettre en option aux autres serveurs de publication d'utiliser le serveur de distribution. Si d'autres serveurs de publication sont activés pour utiliser le serveur de distribution, vous devez entrer un mot de passe dans la page **Mot de passe du serveur de distribution** pour les connexions effectuées à partir de ces serveurs de publication sur le serveur de distribution.  
   
-    -   Scripter en option les paramètres de configuration. Pour plus d’informations, consultez [Scripting Replication](../../relational-databases/replication/scripting-replication.md).  
+    -   Scripter en option les paramètres de configuration. Pour plus d'informations, voir [Scripting Replication](../../relational-databases/replication/scripting-replication.md).  
   
 ##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
  La publication et la distribution de réplication peuvent être configurées par programme à l'aide de procédures stockées de réplication.  
@@ -165,11 +168,11 @@ ms.lasthandoff: 11/09/2017
   
  [!code-vb[HowTo#rmo_vb_AddDistPub](../../relational-databases/replication/codesnippet/visualbasic/rmohowtovb/rmotestenv.vb#rmo_vb_adddistpub)]  
   
-## <a name="see-also"></a>Voir aussi  
- [Afficher et modifier les propriétés d’un serveur de distribution ou d’un serveur de publication](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   
- [Concepts liés aux procédures stockées système de réplication](../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)   
+## <a name="see-also"></a> Voir aussi  
+ [Afficher et modifier les propriétés d’un serveur de distribution et d’un serveur de publication](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   
+ [Replication System Stored Procedures Concepts](../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)   
  [Configurer la distribution](../../relational-databases/replication/configure-distribution.md)   
- [Concepts liés à Replication Management Objects](../../relational-databases/replication/concepts/replication-management-objects-concepts.md)   
+ [Concepts liés à RMO (Replication Management Objects)](../../relational-databases/replication/concepts/replication-management-objects-concepts.md)   
  [Configurer la réplication pour les groupes de disponibilité Always On &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/configure-replication-for-always-on-availability-groups-sql-server.md)  
   
   

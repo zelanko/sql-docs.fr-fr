@@ -2,15 +2,13 @@
 title: "Pour les modèles de régression logistique contenu du modèle d’exploration de données | Documents Microsoft"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
 ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,19 +16,20 @@ helpviewer_keywords:
 - mining model content, logistic regression models
 - regression algorithms [Analysis Services]
 ms.assetid: 69cc0b86-e8bc-4d6c-903e-85724f5c0396
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 1c49ae086aba41c6b023a1cbd395e6ddd8fc8f29
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 5490990412aa4883d575a1fc65fee7e29db06dde
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="mining-model-content-for-logistic-regression-models"></a>Mining Model Content for Logistic Regression Models
-  Cette rubrique décrit le contenu du modèle d'exploration de données spécifique aux modèles qui utilisent l'algorithme MLR (Microsoft Logistic Regression). Pour obtenir une explication sur la procédure d’interprétation des statistiques et de la structure partagées par tous les types de modèles et pour obtenir des définitions générales de termes en rapport avec le contenu du modèle d’exploration de données, consultez [Contenu du modèle d’exploration &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md).  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Cette rubrique décrit le contenu du modèle d'exploration de données spécifique aux modèles qui utilisent l'algorithme MLR (Microsoft Logistic Regression). Pour obtenir une explication sur la procédure d’interprétation des statistiques et de la structure partagées par tous les types de modèles et pour obtenir des définitions générales de termes en rapport avec le contenu du modèle d’exploration de données, consultez [Contenu du modèle d’exploration &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md).  
   
 ## <a name="understanding-the-structure-of-a-logistic-regression-model"></a>Présentation de la structure d'un modèle de régression logistique  
  Un modèle de régression logistique est créé en utilisant l'algorithme MNN (Microsoft Neural Network) avec les paramètres qui contraignent le modèle à éliminer le nœud masqué. Par conséquent, la structure globale d'un modèle de régression logistique est presque identique à celle d'un réseau neuronal : chaque modèle a un nœud parent unique qui représente le modèle et ses métadonnées, et un nœud de statistiques marginales spécial (NODE_TYPE = 24) qui fournit des statistiques descriptives sur les entrées utilisées dans le modèle.  
@@ -103,7 +102,7 @@ ms.lasthandoff: 11/17/2017
 |Statistiques marginales|Toujours 0.|  
 |Couche d'entrée|Indique le nombre de paires de valeurs d'attribut d'entrée utilisées par le modèle.|  
 |Nœud d'entrée|Toujours 0.|  
-|Couche masquée|Dans un modèle de régression logistique, toujours 0.|  
+|hidden layer|Dans un modèle de régression logistique, toujours 0.|  
 |Couche de sortie|Indique le nombre de valeurs de sortie.|  
 |Nœud de sortie|Toujours 0.|  
   
@@ -134,7 +133,7 @@ ms.lasthandoff: 11/17/2017
 |Statistiques marginales|Vide|  
 |Couche d'entrée|Vide|  
 |Nœud d'entrée|Fragment XML qui contient les mêmes informations que la colonne NODE_DESCRIPTION.|  
-|Couche masquée|Vide|  
+|hidden layer|Vide|  
 |Couche de sortie|Vide|  
 |Nœud de sortie|Fragment XML qui contient les mêmes informations que la colonne NODE_DESCRIPTION.|  
   
@@ -195,6 +194,6 @@ ms.lasthandoff: 11/17/2017
  [Algorithme MLR (Microsoft Logistic Regression)](../../analysis-services/data-mining/microsoft-logistic-regression-algorithm.md)   
  [Contenu du modèle d’exploration de données pour les modèles de réseau neuronal &#40; Analysis Services - Exploration de données &#41;](../../analysis-services/data-mining/mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
  [Exemples de requêtes de modèle de régression logistique](../../analysis-services/data-mining/logistic-regression-model-query-examples.md)   
- [Informations techniques de référence sur l’algorithme Microsoft Logistic Regression](../../analysis-services/data-mining/microsoft-logistic-regression-algorithm-technical-reference.md)  
+ [Référence technique de Microsoft Logistic Regression algorithme](../../analysis-services/data-mining/microsoft-logistic-regression-algorithm-technical-reference.md)  
   
   

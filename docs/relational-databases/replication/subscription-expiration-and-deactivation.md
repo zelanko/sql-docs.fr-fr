@@ -2,9 +2,12 @@
 title: "Expiration et désactivation des abonnements | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -20,18 +23,18 @@ helpviewer_keywords:
 - deactivating subscriptions
 ms.assetid: 4d03f5ab-e721-4f56-aebc-60f6a56c1e07
 caps.latest.revision: "45"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 24341df9b17ed7e98b9a9c095e4874b05df4376b
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: ebf798f5575af888afa8dc3935174d9a6d916d6c
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="subscription-expiration-and-deactivation"></a>Expiration et désactivation des abonnements
-  Les abonnements peuvent expirer ou être désactivés s'ils ne sont pas synchronisés durant une certaine *période de rétention*. L'action qui se produit dépend du type de réplication et de période de rétention qui est dépassée.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Les abonnements peuvent expirer ou être désactivés s’ils ne sont pas synchronisés durant une certaine *période de rétention*. L'action qui se produit dépend du type de réplication et de période de rétention qui est dépassée.  
   
  Pour définir des périodes de rétention, consultez [Définir la période d’expiration des abonnements](../../relational-databases/replication/publish/set-the-expiration-period-for-subscriptions.md), [Définir la période de rétention de distribution pour les publications transactionnelles &#40;SQL Server Management Studio&#41;](../../relational-databases/replication/set-distribution-retention-period-for-transactional-publications.md) et [Configurer la publication et la distribution](../../relational-databases/replication/configure-publishing-and-distribution.md).  
   
@@ -45,7 +48,7 @@ ms.lasthandoff: 11/09/2017
      Si un abonnement par envoi de données expire, il est totalement supprimé, mais ce n'est pas le cas pour les abonnements par extraction de données. Vous devez nettoyer les abonnements par extraction de données au niveau de l'Abonné. Pour plus d’informations, voir [Delete a Pull Subscription](../../relational-databases/replication/delete-a-pull-subscription.md).  
   
 ## <a name="merge-replication"></a>Réplication de fusion  
- La réplication de fusion utilise la période de rétention de publication (paramètres **@retention** et **@retention_period_unit** de [sp_addmergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)). Lorsqu'un abonnement expire il doit être réinitialisé, parce que les métadonnées de l'abonnement sont supprimées. Les abonnements qui ne sont pas réinitialisés sont supprimés par le travail de **nettoyage de l'abonnement expiré** sur le serveur de publication. Par défaut, ce travail s'exécute chaque jour ; il supprime tous les abonnements par envoi de données qui ne se sont pas synchronisés au bout de deux fois la période de rétention de publication. Exemple :  
+ La réplication de fusion utilise la période de rétention de publication (paramètres **@retention** et **@retention_period_unit** de [sp_addmergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)). Lorsqu'un abonnement expire il doit être réinitialisé, parce que les métadonnées de l'abonnement sont supprimées. Les abonnements qui ne sont pas réinitialisés sont supprimés par le travail de **nettoyage de l'abonnement expiré** sur le serveur de publication. Par défaut, ce travail s'exécute chaque jour ; il supprime tous les abonnements par envoi de données qui ne se sont pas synchronisés au bout de deux fois la période de rétention de publication. Exemple :  
   
 -   Si une publication a une période de rétention de 14 jours, un abonnement peut expirer s'il ne s'est pas synchronisé au bout de 14 jours.  
   
@@ -70,9 +73,9 @@ ms.lasthandoff: 11/09/2017
   
 -   Après un nettoyage, si la période de conservation des publications est augmentée et qu’un abonnement essaie de fusionner avec le serveur de publication (qui a déjà supprimé les métadonnées), l’abonnement n’expire pas en raison de l’augmentation de la valeur de rétention. Cependant, le serveur de publication ne dispose pas d'une quantité suffisante de métadonnées pour télécharger les modifications apportées à l'Abonné, ce qui génère une non-convergence.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Réinitialiser des abonnements](../../relational-databases/replication/reinitialize-subscriptions.md)   
  [Administration de l’Agent de réplication](../../relational-databases/replication/agents/replication-agent-administration.md)   
- [S’abonner à des publications](../../relational-databases/replication/subscribe-to-publications.md)  
+ [S'abonner à des publications](../../relational-databases/replication/subscribe-to-publications.md)  
   
   

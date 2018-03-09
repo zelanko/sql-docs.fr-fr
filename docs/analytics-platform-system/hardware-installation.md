@@ -3,10 +3,10 @@ title: "Installation de matériel (système de plateforme Analytique)"
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.technology: mpp-data-warehouse
 ms.custom: 
 ms.date: 01/05/2017
@@ -16,11 +16,11 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: f4f612b9-f320-4391-952b-d3696cfbe2e2
 caps.latest.revision: "17"
-ms.openlocfilehash: 9eb9fc0c1249c63550c33f09ac357c519d93bd7f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ea0935ed3af9dcea187098e39df2d0219f98fd7a
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="hardware-installation"></a>Installation matérielle
 Cette rubrique décrit comment déplacer, décompressez et installez le matériel de votre solution SQL Server PDW. Cette rubrique est d’information uniquement et n’est destinée à vous aider à comprendre le processus. Votre application doit être décompressée, installée et vérifiée avant qu’il soit retourné à vous. La participation de client est requise pour les éléments tels que les données du centre accès, alimentation électrique et les connexions Ethernet.  
@@ -28,7 +28,7 @@ Cette rubrique décrit comment déplacer, décompressez et installez le matérie
 ## <a name="BeforeMoving"></a>Avant de déplacer tous les composants de la station de chargement  
 Effectuer les tâches suivantes avant de vous déplacez, décompressez ou tous les composants de l’appliance du rack.  
   
-|Tâche| Description|  
+|Tâche|Description|  
 |--------|---------------|  
 |Vérifiez que tous les composants sont arrivés.|Utilisez la nomenclature (nomenclature) pour vérifier que tous les composants sont arrivés et sont leurs palettes à la station de réception pour votre centre de données.|  
 |Vérifiez que le centre de données répond à toutes les conditions requises pour l’application|Démarrer cette tâche en examinant les spécifications matérielles et de fournir à votre fabricant de matériel des schémas de câblage. Les étapes suivantes fournissent des détails sur le rack exigences d’espace et de connectivité.|  
@@ -39,7 +39,7 @@ Effectuer les tâches suivantes avant de vous déplacez, décompressez ou tous l
 |Préparer pour obtenir une assistance avec le transport de composants|Déterminer à l’avance le type d’assistance, les équipements et outils que vous devrez gérer chaque composant et en toute sécurité sans provoquer des dommages.|  
   
 ## <a name="Moving"></a>Déplacer les Racks à partir de la station d’accueil lors du chargement dans le centre de données  
-Chaque palette contient tous les composants du rack une appliance, y compris les nœuds, câbles, câbles, etc..  
+Chaque palette contient tous les composants du rack une appliance, y compris les nœuds, câbles, câbles, etc.  
   
 Utilisez la liste de vérification suivante pour déplacer chaque rack de matériel à partir de la palette de la station d’accueil lors du chargement à son emplacement de rack dans le centre de données. Déplacez d’abord le rack de contrôle, puis déplacez les autres racks de données d’appliance.  
   
@@ -48,7 +48,7 @@ Utilisez la liste de vérification suivante pour déplacer chaque rack de matér
 >   
 > Jamais tentative de courbes d’élévation ou déplacer un nœud d’application ou un autre composant importante sans assistance ou équipement approprié. Contactez votre fabricant de matériel pour plus d’informations sur le poids de chaque composant afin que vous puissiez déterminer à l’avance le type d’assistance, les équipements et outils que vous devrez gérer chaque composant et en toute sécurité sans provoquer des dommages.  
   
-|Tâche| Description|  
+|Tâche|Description|  
 |--------|---------------|  
 |Vérifiez que la palette est|Avant de commencer à déplacer ou à décompresser la palette, veillez à ce qu’il est sur le terrain.|  
 |Dégager un nœud à partir de la palette|En commençant par le haut de la palette, dégager le nœud supérieur de la palette.|  
@@ -60,7 +60,7 @@ Utilisez la liste de vérification suivante pour déplacer chaque rack de matér
 ## <a name="AfterMoving"></a>Installer des composants supplémentaires  
 Utilisez la liste de vérification suivante pour installer les composants supplémentaires.  
   
-|Tâche| Description||  
+|Tâche|Description||  
 |--------|---------------|-|  
 |Décompressez et commutateurs réseau et les PDU en rack|Utilisez les diagrammes de rack pour placer les commutateurs de réseau et les PDU dans l’emplacement approprié dans le rack.||  
 |Connectez les câbles Infiniband et Ethernet selon les étiquettes de câble|Consultez le schéma de câblage. Chaque câble a une étiquette à chaque extrémité qui spécifie où il doit être connecté.||  

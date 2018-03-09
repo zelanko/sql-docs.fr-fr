@@ -1,5 +1,5 @@
 ---
-title: "Éditeur de Destination SAP BW (Page Gestionnaire de connexions) | Documents Microsoft"
+title: "Éditeur de destination SAP BW (page Gestionnaire de connexions) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -15,17 +15,16 @@ ms.topic: article
 f1_keywords:
 - sql13.dts.designer.sapbwdestination.connection.f1
 ms.assetid: 04ae38f8-5287-45a3-826a-8aac5dd15a91
-caps.latest.revision: 10
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 17d5ce8dd762a61b6dcbf4f2363d78c090495690
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 8b97acdf1b5621100c9fcfce5d5072126ff794d7
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="sap-bw-destination-editor-connection-manager-page"></a>Éditeur de destination SAP BW (page Gestionnaire de connexions)
   Utilisez la page **Gestionnaire de connexions** de l' **Éditeur de destination SAP BW** pour sélectionner le gestionnaire de connexions SAP BW qui sera utilisé par la destination SAP BW. Sur cette page, sélectionnez également les paramètres pour charger les données dans le système SAP Netweaver BW.  
@@ -49,7 +48,7 @@ ms.lasthandoff: 08/03/2017
 >  Si vous ne connaissez pas toutes les valeurs requises pour configurer la destination, adressez-vous à votre administrateur SAP.  
   
  **Gestionnaire de connexions SAP BW**  
- Sélectionnez un gestionnaire de connexions existant dans la liste ou créez une connexion en cliquant sur **Nouveau**.  
+ Sélectionnez un gestionnaire de connexions existant dans la liste ou créez une nouvelle connexion en cliquant sur **Nouveau**.  
   
  **Nouveau**  
  Créez un gestionnaire de connexions à l’aide de la boîte de dialogue **Gestionnaire de connexions SAP BW** .  
@@ -112,18 +111,17 @@ ms.lasthandoff: 08/03/2017
  **Créer**  
  Créez le type sélectionné d'objet SAP Netweaver BW.  
   
-|Type d'objet|Résultat|  
+|Type d'objet|Résultats|  
 |-----------------|------------|  
 |**InfoObject**|Créez un nouvel InfoObject à l'aide de la boîte de dialogue **Créer un nouvel InfoObject** . Pour plus d'informations sur cette boîte de dialogue, consultez [Create New InfoObject](../../integration-services/data-flow/create-new-infoobject.md).|  
 |**InfoCube**|Créez un nouvel InfoCube à l'aide de la boîte de dialogue **Créer un InfoCube pour les données de transaction** . Pour plus d'informations sur cette boîte de dialogue, consultez [Create InfoCube for Transaction Data](../../integration-services/data-flow/create-infocube-for-transaction-data.md).|  
 |**InfoSource**|Créez un nouvel InfoSource à l'aide de la boîte de dialogue **Créer un InfoSource** , puis avec **Créer un InfoSource pour les données de transaction** ou la boîte de dialogue **Créer un InfoSource pour les données maîtres** . Pour plus d'informations sur ces boîtes de dialogue, consultez [Create InfoSource](../../integration-services/data-flow/create-infosource.md), [Create InfoSource for Transaction Data](../../integration-services/data-flow/create-infosource-for-transaction-data.md) et [Create InfoSource for Master Data](../../integration-services/data-flow/create-infosource-for-master-data.md).|  
 |**InfoPackage**|Créez un nouvel InfoPackage à l'aide de la boîte de dialogue **Créer un InfoPackage** . Pour plus d'informations sur cette boîte de dialogue, consultez [Create InfoPackage](../../integration-services/data-flow/create-infopackage.md).|  
   
-## <a name="see-also"></a>Voir aussi  
- [Éditeur de Destination SAP BW &#40; Page mappages &#41;](../../integration-services/data-flow/sap-bw-destination-editor-mappings-page.md)   
- [Éditeur de Destination SAP BW &#40; Page sortie d’erreur &#41;](../../integration-services/data-flow/sap-bw-destination-editor-error-output-page.md)   
- [Éditeur de Destination SAP BW &#40; Page avancé &#41;](../../integration-services/data-flow/sap-bw-destination-editor-advanced-page.md)   
+## <a name="see-also"></a> Voir aussi  
+ [Éditeur de destination SAP BW &#40;page Mappages&#41;](../../integration-services/data-flow/sap-bw-destination-editor-mappings-page.md)   
+ [Éditeur de destination SAP BW &#40;page Sortie d’erreur&#41;](../../integration-services/data-flow/sap-bw-destination-editor-error-output-page.md)   
+ [Éditeur de destination SAP BW &#40;page Avancé&#41;](../../integration-services/data-flow/sap-bw-destination-editor-advanced-page.md)   
  [Aide (F1) sur Microsoft Connector pour SAP BW](../../integration-services/microsoft-connector-for-sap-bw-f1-help.md)  
   
   
-

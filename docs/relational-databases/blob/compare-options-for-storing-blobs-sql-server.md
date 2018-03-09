@@ -2,26 +2,31 @@
 title: Comparer les options pour le stockage des objets blob (SQL Server) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: blob
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-blob
+ms.suite: sql
+ms.technology:
+- dbe-blob
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 6038697b-36a9-49e8-a02a-2ad9e2e60e5a
-caps.latest.revision: "10"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 1cc4faaa92e5e42ce16f385e7d9e9a3a87c65a2e
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 5b32325de1691fae92ff7bcecfeeda305df98d31
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="compare-options-for-storing-blobs-sql-server"></a>Comparer les options pour le stockage des objets blob (SQL Server)
-  Explique et compare les options disponibles pour stocker des fichiers et des documents dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Explique et compare les options disponibles pour stocker des fichiers et des documents dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ##  <a name="Expectations"></a> Stockage de fichiers dans la base de données – Avantages et attentes  
  Un pourcentage important des données d'entreprise correspond à des données non structurées par nature et est stocké en général sous la forme de fichiers et de documents dans des systèmes de fichiers. La plupart de ces données sont produites, gérées et consommées par des applications qui accèdent aux fichiers via des API Windows. Les entreprises conservent en général ces données dans le système de fichiers, en stockant les métadonnées connexes des fichiers dans une base de données relationnelle.  
@@ -50,13 +55,13 @@ ms.lasthandoff: 11/09/2017
   
 |Fonctionnalité|Serveur de fichiers et solution de base de données|Solution FILESTREAM|Solution FileTable|  
 |-------------|---------------------------------------|-------------------------|------------------------|  
-|**Histoire unique pour les tâches de gestion**|Non|Oui|**Oui**|  
-|**Ensemble unique de services**: recherche, création de rapports, interrogation, etc.|Non|Oui|**Oui**|  
-|**Modèle de sécurité intégré**|Non|Oui|**Oui**|  
-|**Mises à jour sur place de données FILESTREAM**|Oui|Non|**Oui**|  
-|**Hiérarchie de répertoires et de fichiers maintenue dans la base de données**|Non|Non|**Oui**|  
-|**Compatibilité d'applications Windows**|Oui|Non|**Oui**|  
-|**Accès relationnel aux attributs de fichier**|Non|Non|**Oui**|  
+|**Histoire unique pour les tâches de gestion**|non|Oui|**Oui**|  
+|**Ensemble unique de services**: recherche, création de rapports, interrogation, etc.|non|Oui|**Oui**|  
+|**Modèle de sécurité intégré**|non|Oui|**Oui**|  
+|**Mises à jour sur place de données FILESTREAM**|Oui|non|**Oui**|  
+|**Hiérarchie de répertoires et de fichiers maintenue dans la base de données**|non|non|**Oui**|  
+|**Compatibilité d'applications Windows**|Oui|non|**Oui**|  
+|**Accès relationnel aux attributs de fichier**|non|non|**Oui**|  
   
 ##  <a name="CompareRBS"></a> Comparaison de FILESTREAM et du magasin d'objets blob distants (RBS)  
  Pour obtenir une comparaison de ces deux fonctionnalités, consultez la publication de blog suivante rédigée par l'équipe RBS : [SQL Server Remote BLOB Store and FILESTREAM feature comparison (en anglais)](http://go.microsoft.com/fwlink/?LinkId=210317).  

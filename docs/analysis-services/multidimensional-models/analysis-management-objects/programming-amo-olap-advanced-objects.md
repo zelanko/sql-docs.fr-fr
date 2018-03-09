@@ -1,35 +1,34 @@
 ---
 title: "Programmation OLAP AMO avancés objets | Documents Microsoft"
 ms.custom: 
-ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.date: 02/14/2018
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - programming [AMO]
 - Analysis Management Objects, OLAP
 - OLAP [AMO]
 - AMO, OLAP
 ms.assetid: b75f35a7-32df-4f22-983d-324aa98e15a9
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: b58d475dfab97de8076bf058bfdd1171ddb37f35
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 32457c48afcad9d40c901b78252afdf476df31e4
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="programming-amo-olap-advanced-objects"></a>Programmation d'objets OLAP AMO avancés
   Cette rubrique explique en détails la programation d'objets OLAP AMO (Analysis Management Objects) avancés. Cette rubrique contient les sections suivantes :  
@@ -44,7 +43,7 @@ ms.lasthandoff: 11/17/2017
   
 -   [Objets Translation](#Transl)  
   
-##  <a name="Action"></a>Objets action  
+##  <a name="Action">Objets action</a>  
  Les classes Action sont utilisées pour créer une réponse active lors de l'exploration de certaines zones du cube. Les objets Action peuvent être définis à l'aide d'objets AMO, mais ils sont utilisés à partir de l'application cliente qui explore les données. Les actions peuvent être de différents types et doivent être créées en fonction de leur type. Les actions peuvent être :  
   
 -   Des actions d'extraction, qui retournent l'ensemble de lignes qui représente les données sous-jacentes des cellules sélectionnées du cube où l'action se produit.  
@@ -192,7 +191,7 @@ static public void CreateActions(Cube cube)
 }  
 ```  
   
-##  <a name="KPI"></a>Objets KPI  
+##  <a name="KPI"></a> Kpi Objects  
  Un indicateur de performance clé (KPI) est un ensemble de calculs associés à un groupe de mesures dans un cube qui servent à évaluer les performances de l'entreprise. Les objets <xref:Microsoft.AnalysisServices.Kpi> peuvent être définis par AMO, mais ils sont utilisés à partir de l'application cliente qui explore les données.  
   
  La création d'un objet <xref:Microsoft.AnalysisServices.Kpi> passe par les étapes suivantes :  
@@ -351,7 +350,7 @@ static public void CreateKPIs(Cube cube)
 }.  
 ```  
   
-##  <a name="Persp"></a>Objets de perspective  
+##  <a name="Persp">Objets de perspective</a>  
  Les objets <xref:Microsoft.AnalysisServices.Perspective> peuvent être définis par AMO, mais ils sont utilisés à partir de l'application cliente qui explore les données.  
   
  La création d'un objet <xref:Microsoft.AnalysisServices.Perspective> passe par les étapes suivantes :  
@@ -414,7 +413,7 @@ static public void CreatePerspectives(Cube cube)
 }  
 ```  
   
-##  <a name="PC"></a>Objets ProactiveCaching  
+##  <a name="PC">Objets ProactiveCaching</a>  
  Les objets <xref:Microsoft.AnalysisServices.ProactiveCaching> peuvent être définis par AMO.  
   
  La création d'un objet <xref:Microsoft.AnalysisServices.ProactiveCaching> passe par les étapes suivantes :  
@@ -425,7 +424,7 @@ static public void CreatePerspectives(Cube cube)
   
 2.  Ajoutez des spécifications de cache.  
   
-|Spécification|Description|  
+|Spécification| Description|  
 |-------------------|-----------------|  
 |AggregationStorage|Type de stockage pour les agrégations.<br /><br /> S'applique uniquement aux partitions. Sur la dimension, doit être **Regular.**|  
 |SilenceInterval|Durée d'existence minimale du cache avant que ne démarre le processus de création d'images MOLAP.|  
@@ -471,7 +470,7 @@ static public void SetProactiveCachingSettings(Database db)
 }  
 ```  
   
-##  <a name="Transl"></a>Objets Translation  
+##  <a name="Transl">Objets Translation</a>  
  Les objets Translation peuvent être définis par AMO, mais ils sont utilisés à partir de l'application cliente qui explore les données. Les objets Translation sont des objets simples à coder. Les traductions de légendes d'objets sont fournies par les paires Identificateur de paramètres régionaux et Légende traduite. Plusieurs traductions peuvent être activées pour une même légende. Des traductions peuvent être fournies pour la plupart des objets [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], tels que les dimensions, les attributs, les hiérarchies, les cubes, les groupes de mesures, les mesures, etc.  
   
  L'exemple de code suivant fournit une traduction espagnole pour le nom de l'attribut Product Name.  

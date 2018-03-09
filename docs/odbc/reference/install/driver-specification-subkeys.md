@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -22,16 +22,16 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 6a2bbfe9608fabef11b4208597f550e32e2a816d
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 078afea5ea6dfa6e0c3312d8e61cabb37369a2f8
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="driver-specification-subkeys"></a>Pilote spécification sous-clés
 Chaque pilote répertorié dans la sous-clé de pilotes ODBC a une sous-clé qui lui sont propres. Cette sous-clé a le même nom que la valeur correspondante sous la sous-clé de pilotes ODBC. Les valeurs sous cette sous-clé répertorient les chemins d’accès complets du pilote et d’installation du pilote DLL, les valeurs des mots clés du pilote retournés par **SQLDrivers**et le nombre d’utilisations. Les formats des valeurs sont comme indiqué dans le tableau suivant.  
   
-|Nom|Type de données|data|  
+|Nom   |Type de données|data|  
 |----------|---------------|----------|  
 |APILevel|REG_SZ|**0** &#124; **1** &#124; **2**|  
 |ConnectFunctions|REG_SZ|{**Y**&#124; **N**} {**Y**&#124; **N**} {**Y**&#124; **N**}|  

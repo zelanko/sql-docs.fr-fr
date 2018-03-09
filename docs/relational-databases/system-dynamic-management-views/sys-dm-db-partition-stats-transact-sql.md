@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_db_partition_stats (Transact-SQL) | Documents Microsoft
+title: sys.dm_db_partition_stats (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - dm_db_partition_stats_TSQL
 - sys.dm_db_partition_stats_TSQL
 - sys.dm_db_partition_stats
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_db_partition_stats dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_db_partition_stats dynamic management view
 ms.assetid: 9db9d184-b3a2-421e-a804-b18ebcb099b7
-caps.latest.revision: "30"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: b58fb8b2933e99f2eb77dc03ed7fdfbb132375a6
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: fd061684962fe1d779b3f35f472b35ca52f45e95
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmdbpartitionstats-transact-sql"></a>sys.dm_db_partition_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -54,8 +57,8 @@ ms.lasthandoff: 11/17/2017
 |**used_page_count**|**bigint**|Nombre total de pages utilisées pour la partition. Calculée comme **in_row_used_page_count** + **lob_used_page_count** + **row_overflow_used_page_count**.|  
 |**reserved_page_count**|**bigint**|Nombre total de pages réservées pour la partition. Calculée comme **in_row_reserved_page_count** + **lob_reserved_page_count** + **row_overflow_reserved_page_count**.|  
 |**row_count**|**bigint**|Nombre approximatif de lignes dans la partition.|  
-|**pdw_node_id**|**int**|**S’applique aux**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> L’identificateur du nœud qui se trouve sur cette distribution.|  
-|**distribution_id**|**int**|**S’applique aux**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Id numérique unique associée à la distribution.|  
+|**pdw_node_id**|**int**|**S’applique aux**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> L’identificateur du nœud qui se trouve sur cette distribution.|  
+|**distribution_id**|**int**|**S’applique aux**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Id numérique unique associée à la distribution.|  
   
 ## <a name="remarks"></a>Notes  
  **Sys.dm_db_partition_stats** affiche des informations sur l’espace utilisé pour stocker et gérer dans la ligne des données métier et données de dépassement de ligne pour toutes les partitions dans une base de données. Une seule ligne est affichée par partition.  
@@ -68,7 +71,7 @@ ms.lasthandoff: 11/17/2017
   
  Le nombre total pour une table ou un index s'obtient en ajoutant les nombres obtenus pour l'ensemble des partitions concernées.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Requiert l’autorisation VIEW DATABASE STATE pour interroger le **sys.dm_db_partition_stats** vue de gestion dynamique. Pour plus d’informations sur les autorisations sur les vues de gestion dynamique, consultez [les fonctions et vues de gestion dynamique &#40; Transact-SQL &#41; ](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md).  
   
 ## <a name="examples"></a>Exemples  

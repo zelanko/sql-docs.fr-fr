@@ -8,9 +8,7 @@ ms.service:
 ms.component: wmi-provider-library-reference
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname: RestoreEncryptionKey (WMI MSReportServer_ConfigurationSetting Class)
@@ -19,15 +17,15 @@ apitype: MOFDef
 helpviewer_keywords: RestoreEncryptionKey method
 ms.assetid: 37e949f5-15af-4858-848a-f482ee94fcd9
 caps.latest.revision: "18"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 946af0f4e1b87eb5661a57c795c012e7e172d332
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: b1e68596bbb18811ca3221206bcc71948561db7d
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="configurationsetting-method---restoreencryptionkey"></a>Méthode ConfigurationSetting - RestoreEncryptionKey
   Réapplique la clé de chiffrement spécifiée à la base de données du serveur de rapports.  
@@ -64,7 +62,7 @@ public void RestoreEncryptionKey(out Byte[] KeyFile, out Int32 Length,
 ## <a name="return-value"></a>Valeur retournée  
  Retourne un paramètre *HRESULT* qui indique si l'appel de la méthode a réussi ou a échoué. Une valeur 0 indique que l'appel de méthode a réussi. Une valeur différente de zéro indique qu'une erreur s'est produite.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  S'il existe déjà une entrée pour le serveur de rapports dans la base de données du serveur de rapports, elle est supprimée. La nouvelle entrée est ensuite créée à l'aide de la clé de chiffrement spécifiée et de la clé publique du serveur de rapports.  
   
  Cette méthode est très efficace quand elle est appelée après la méthode [DeleteEncryptionKey](../../reporting-services/wmi-provider-library-reference/configurationsetting-method-deleteencryptionkey.md) , qui efface la liste de clés de chiffrement.  
@@ -72,7 +70,7 @@ public void RestoreEncryptionKey(out Byte[] KeyFile, out Int32 Length,
 ## <a name="requirements"></a>Spécifications  
  **Espace de noms :** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Membres MSReportServer_ConfigurationSetting](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  
   
   

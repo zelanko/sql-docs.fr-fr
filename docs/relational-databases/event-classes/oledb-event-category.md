@@ -2,10 +2,14 @@
 title: "OLEDB, catégorie d’événement | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -13,19 +17,20 @@ helpviewer_keywords:
 - SQL Server event classes, OLEDB event category
 - event classes [SQL Server], OLEDB event category
 ms.assetid: cf93e424-3dac-462d-b3da-92e7d0b064d4
-caps.latest.revision: "26"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 961afeea189ad59a7314bffc2f32f68fe183f071
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 111e97f459178ce8afdb9b710b5fc9db0f0fc9c6
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="oledb-event-category"></a>catégorie d'événements OLEDB
-  La catégorie d’événement **OLEDB** contient des événements OLEDB généraux.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+La catégorie d’événement **OLEDB** contient des événements OLEDB généraux.  
   
 ## <a name="in-this-section"></a>Dans cette section  
   
@@ -37,7 +42,7 @@ ms.lasthandoff: 11/09/2017
 |[Classe d'événements OLEDB Provider Information](../../relational-databases/event-classes/oledb-provider-information-event-class.md)|Indique qu'une requête distribuée s'est exécutée et a recueilli des informations qui correspondent à la connexion du fournisseur.|  
 |[Classe d'événements OLEDB QueryInterface](../../relational-databases/event-classes/oledb-queryinterface-event-class.md)|Indique que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a émis un appel OLE DB **QueryInterface** pour des requêtes distribuées et des procédures stockées distantes.|  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Événements étendus](../../relational-databases/extended-events/extended-events.md)  
   
   

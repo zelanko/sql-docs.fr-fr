@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-builder
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 11d72068-2d97-495e-948f-12d1e8c1957d
 caps.latest.revision: "9"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 450aab8382de0a22729a65b7fe506b2db41d9fc2
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: d87aa313c0bec7dccfd97feaf3e1771633d773ea
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="exporting-to-xml-report-builder-and-ssrs"></a>Exportation vers XML (Générateur de rapports et SSRS)
   L’extension de rendu XML retourne un rapport paginé au format XML. Le schéma du rapport XML est spécifique du rapport et contient uniquement des données. Les informations de mise en page ne sont pas rendues et la pagination n'est pas conservée par l'extension de rendu XML. La sortie XML générée par cette extension peut être importée dans une base de données, utilisée en tant que message de données XML ou envoyée à une application personnalisée.  
@@ -42,7 +40,7 @@ ms.lasthandoff: 12/05/2017
 |Zone de texte|Rendu sous la forme d'un attribut ou d'un élément à l'intérieur de son conteneur.|  
 |Rectangle|Rendu sous la forme d'un élément à l'intérieur de son conteneur.|  
 |Groupes de colonnes de matrices|Rendu sous la forme d'éléments à l'intérieur de groupes de lignes.|  
-|Mappage|Rendu sous la forme d'un élément à l'intérieur de l'élément de son conteneur. Les couches sont des éléments enfants de la carte et chaque couche comporte des éléments pour ses membres cartographiques et attributs de membre cartographique.|  
+|Carte|Rendu sous la forme d'un élément à l'intérieur de l'élément de son conteneur. Les couches sont des éléments enfants de la carte et chaque couche comporte des éléments pour ses membres cartographiques et attributs de membre cartographique.|  
 |Graphique|Rendu sous la forme d'un élément à l'intérieur de l'élément de son conteneur. Les séries sont des éléments enfants du graphique, et les catégories sont des éléments enfants d'une série. Effectue le rendu de toutes les étiquettes de graphiques pour chaque valeur de graphique. Les étiquettes et les valeurs sont incluses en tant qu'attributs.|  
 |Barre de données|Rendu sous la forme d'un élément à l'intérieur de l'élément de son conteneur, comme un graphique. En règle générale, une barre de données n'inclut pas de hiérarchies ou d'étiquettes, seulement des valeurs.|  
 |Graphique sparkline|Rendu sous la forme d'un élément à l'intérieur de l'élément de son conteneur, comme un graphique. En règle générale, un graphique sparkline n'inclut pas de hiérarchies ou d'étiquettes, seulement des valeurs.|  
@@ -90,7 +88,7 @@ ms.lasthandoff: 12/05/2017
   
  Les valeurs des variables sont les suivantes :  
   
-|Nom|Value|  
+|Nom   |Valeur|  
 |----------|-----------|  
 |Rapport|Report.DataElementName|  
 |ReportURL|URL absolue URLEncoded d'accès au rapport sur le serveur.|  
@@ -196,7 +194,7 @@ ms.lasthandoff: 12/05/2017
  Pour plus d'informations, consultez [XML Device Information Settings](../../reporting-services/xml-device-information-settings.md).  
   
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Pagination dans Reporting Services &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
  [Comportements de rendu &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)   
  [Fonctionnalités interactives des différentes extensions de rendu de rapport &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md)   

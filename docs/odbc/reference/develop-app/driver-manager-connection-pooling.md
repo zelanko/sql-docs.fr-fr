@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 5a2b77875c442720d452b8520e5c8fe03b122e2b
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: d2883c374768723eeff4100113873130eeea6da7
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="driver-manager-connection-pooling"></a>Regroupement de connexions du Gestionnaire de pilotes
 Le regroupement de connexions permet à une application d’utiliser une connexion à partir d’un pool de connexions qui ne doivent pas être rétablie pour chaque utilisation. Une fois qu’une connexion a été créée et placée dans un pool, une application peut réutiliser cette connexion sans effectuer le processus de connexion complète.  
@@ -48,7 +48,7 @@ Le regroupement de connexions permet à une application d’utiliser une connexi
   
  Un pilote doit implémenter cette option efficacement ou nuira aux performances de regroupement de connexion. Plus précisément, un appel pour obtenir cet attribut de connexion ne devrait pas provoquer un aller-retour au serveur. Au lieu de cela, un pilote doit simplement retourner le dernier état connu de la connexion. La connexion est inactive si le dernier voyage sur le serveur a échoué et pas morts si le dernier voyage a réussi.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Si une connexion a été perdue (signalées via SQL_ATTR_CONNECTION_DEAD), le Gestionnaire de pilotes ODBC détruira cette connexion en appelant SQLDisconnect dans le pilote. Nouvelles demandes de connexion ne peuvent pas rechercher une connexion utilisable dans le pool. Finit par le Gestionnaire de pilotes peut être une nouvelle connexion, en supposant que le pool est vide.  
   
  Pour utiliser un pool de connexions, une application effectue les étapes suivantes :  

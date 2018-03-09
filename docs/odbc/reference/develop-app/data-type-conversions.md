@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -23,11 +23,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c7742b8f95ba8fef61777e2cb106b6df12285ee3
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 78edde90cc7103f87039bc1a357ea1d0357366a6
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="data-type-conversions"></a>Conversions de types de données
 Données qui peuvent être converties à partir d’un type à un autre à un des quatre fois : lorsque données sont transférées de la variable d’une application vers un autre C à C, lorsque les données dans une variable d’application sont envoyées à un paramètre d’instruction C en SQL, lorsque les données dans une colonne de jeu de résultats sont retournées dans une variable d’application (SQL vers C), et lorsque les données sont transférées à partir de la source de données d’une colonne à un autre SQL (SQL).  

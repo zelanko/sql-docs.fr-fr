@@ -3,9 +3,13 @@ title: "Créer une catégorie de travaux | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-agent
 ms.reviewer: 
-ms.suite: 
-ms.technology: tools-ssms
+ms.suite: sql
+ms.technology:
+- tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -13,18 +17,19 @@ helpviewer_keywords:
 - jobs [SQL Server Agent], categories
 - categories [SQL Server Agent jobs]
 ms.assetid: e24a6d38-d231-4f64-ab89-2d1ef6f5792c
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 154d801187b23d5c9d3574078eaa9e2ce11ed128
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 0d1809cc9170cc0213d52dc4b96b75e44e9e05af
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="create-a-job-category"></a>Créer une catégorie de travaux
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 Cette rubrique explique comment créer une catégorie de travaux dans [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)], de [!INCLUDE[tsql](../../includes/tsql_md.md)] ou de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Management Objects.  
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent contient des catégories de travail intégrées auxquelles vous pouvez affecter des travaux. Vous pouvez également créer une catégorie de travail et lui affecter les travaux. Les catégories de travaux permettent d'organiser les travaux afin d'en faciliter le filtrage et le regroupement. Par exemple, vous pouvez organiser tous vos travaux de sauvegarde de base de données dans la catégorie Maintenance de bases de données. Vous pouvez également créer vos propres catégories de travaux.  
@@ -63,7 +68,7 @@ Pour plus d'informations, consultez [Implement SQL Server Agent Security](../../
   
 3.  Cliquez avec le bouton droit sur le dossier **Travaux** et sélectionnez **Gérer les catégories de travaux**.  
   
-4.  Dans la boîte de dialogue **Gérer les catégories de travaux***nom_serveur* , cliquez sur **Ajouter**.  
+4.  Dans la boîte de dialogue *Gérer les catégories de travaux***nom_serveur*, cliquez sur **Ajouter**.  
   
 5.  Dans la nouvelle boîte de dialogue, dans la zone **Nom** , entrez un nom pour la nouvelle catégorie de travaux.  
   
@@ -71,7 +76,7 @@ Pour plus d'informations, consultez [Implement SQL Server Agent Security](../../
   
 7.  Cliquez sur **OK**.  
   
-8.  Dans la boîte de dialogue **Gérer les catégories de travaux***nom_serveur* , cliquez sur **Actualiser** pour vous assurer que la nouvelle catégorie de travaux est active. Si tout se présente comme prévu, fermez cette boîte de dialogue.  
+8.  Dans la boîte de dialogue **Gérer les catégories de travaux***nom_serveur*, cliquez sur **Actualiser** pour garantir que la nouvelle catégorie de travaux est bien active. Si tout se présente comme prévu, fermez cette boîte de dialogue.  
   
 Pour plus d’informations sur ces boîtes de dialogue, consultez [Catégories de travaux - Gérer les catégories de travaux](../../ssms/agent/job-categories-manage-job-categories.md) et [Propriétés des catégories de travaux - Nouvelle catégorie de travaux](../../ssms/agent/job-categories-properties-new-job-category.md).  
   
@@ -79,7 +84,7 @@ Pour plus d’informations sur ces boîtes de dialogue, consultez [Catégories d
   
 #### <a name="to-create-a-job-category"></a>Pour créer une catégorie de travail  
   
-1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../includes/ssde_md.md)].  
+1.  Dans l'**Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../includes/ssde_md.md)].  
   
 2.  Dans la barre d'outils standard, cliquez sur **Nouvelle requête**.  
   

@@ -8,9 +8,7 @@ ms.service:
 ms.component: subscriptions
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -32,15 +30,15 @@ helpviewer_keywords:
 - subscriptions [Reporting Services], running processes
 ms.assetid: 473e574e-f1ff-4ef9-bda6-7028b357ac42
 caps.latest.revision: "53"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 30c9b46ae50450697f9288b0e40e062a20af8a82
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 624f3aa0fd17e6d3fc119cad25997e4832be3cde
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="manage-a-running-process"></a>Gérer un processus en cours d'exécution
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] analyse l'état des travaux qui s'exécutent sur le serveur de rapports. À intervalles réguliers, le serveur de rapports procède à une analyse des travaux en cours et transmet des informations d'état à la base de données du serveur de rapports ou aux bases de données d'application de service pour le mode SharePoint. Un travail est en cours si l'un des processus suivants est en cours : exécution de la requête sur un serveur de base de données distant ou local, traitement des rapports et rendu de rapport.  
@@ -66,7 +64,7 @@ ms.lasthandoff: 12/05/2017
 > [!NOTE]  
 >  Dans de rares cas, vous serez peut-être amené à redémarrer le serveur pour annuler un processus. Pour le mode SharePoint, vous devrez peut-être redémarrer le pool d'applications hébergeant l'application de service [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Pour plus d’informations, consultez [Démarrer et arrêter le service Report Server](../../reporting-services/report-server/start-and-stop-the-report-server-service.md).  
   
- Dans cette rubrique :  
+ Dans cette rubrique :  
   
 -   [Afficher et annuler les travaux (mode natif)](#bkmk_native)  
   
@@ -126,7 +124,7 @@ ms.lasthandoff: 12/05/2017
 ##  <a name="bkmk_programmatically"></a> Gestion des travaux par programmation  
  Vous pouvez gérer des travaux par programmation ou au moyen d'un script. Pour plus d’informations, consultez <xref:ReportService2010.ReportingService2010.ListJobs%2A>, <xref:ReportService2010.ReportingService2010.CancelJob%2A>.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Annuler les travaux du serveur de rapports &#40;Management Studio&#41;](../../reporting-services/tools/cancel-report-server-jobs-management-studio.md)   
  [Propriétés du travail &#40;Management Studio&#41;](../../reporting-services/tools/job-properties-management-studio.md)   
  [Modifier un fichier de configuration Reporting Services &#40;RSreportserver.config&#41;](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)   

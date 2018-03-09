@@ -24,15 +24,15 @@ helpviewer_keywords:
 - memory [SQL Server], servers
 ms.assetid: 29ce373e-18f8-46ff-aea6-15bbb10fb9c2
 caps.latest.revision: "78"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: f3d5134098013c95051fc38f634461d00718e2f8
-ms.sourcegitcommit: 28cccac53767db70763e5e705b8cc59a83c77317
+ms.openlocfilehash: 45a6ecb0861d15f0f4eb26855af46759a7db86ed
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="server-memory-server-configuration-options"></a>server memory (options de configuration du serveur)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -131,7 +131,7 @@ La mémoire peut être configurée jusqu’à la limite de l’espace d’adress
 ### <a name="example-a"></a>Exemple A  
  L'exemple suivant affecte la valeur 4 Go à l'option `max server memory` .  
   
-```t-sql  
+```sql  
 sp_configure 'show advanced options', 1;  
 GO  
 RECONFIGURE;  
@@ -145,7 +145,7 @@ GO
 ### <a name="example-b-determining-current-memory-allocation"></a>Exemple B. Détermination de l’allocation de mémoire actuelle  
  La requête suivante retourne des informations sur la mémoire allouée actuellement.  
   
-```t-sql  
+```sql  
 SELECT 
   physical_memory_in_use_kb/1024 AS sql_physical_memory_in_use_MB, 
     large_page_allocations_kb/1024 AS sql_large_page_allocations_MB, 
@@ -160,7 +160,7 @@ SELECT
 FROM sys.dm_os_process_memory;  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Guide d’architecture de gestion de la mémoire](../../relational-databases/memory-management-architecture-guide.md)   
  [Surveiller et régler les performances](../../relational-databases/performance/monitor-and-tune-for-performance.md)   
  [RECONFIGURE &#40;Transact-SQL&#41;](../../t-sql/language-elements/reconfigure-transact-sql.md)   

@@ -2,27 +2,30 @@
 title: Abonnement, Historique de synchronisation | Microsoft Docs
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords: sql13.rep.monitor.subscription.synchhistory.f1
 ms.assetid: 85f666f6-14ee-4f19-b385-e5cc508aabe4
 caps.latest.revision: "20"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5773373f1b865e8f3d36eebb3f459bbc84fc7e70
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: ec6cfef6e74a1bf6479a78301f85c6d062992db3
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="subscription-synchronization-history"></a>Abonnement, Historique de synchronisation
-  L'onglet **Historique de synchronisation** contient des informations détaillées sur l'Agent de fusion, notamment l'état, les statistiques d'articles, l'historique, les messages d'information et les messages d'erreur éventuels.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] L’onglet **Historique de synchronisation** contient des informations détaillées sur l’Agent de fusion, notamment l’état, les statistiques d’articles, l’historique, les messages d’information et les messages d’erreur éventuels.  
   
 ## <a name="options"></a>Options  
  Sélectionnez les sessions de l'Agent de fusion à afficher dans le menu **Afficher** , puis sélectionnez une session dans la grille **Sessions de l'Agent de fusion**. Les informations détaillées sur cette session figurent dans la grille **Articles traités dans la session sélectionnée**.  
@@ -31,9 +34,9 @@ ms.lasthandoff: 11/09/2017
  Sélectionnez les sessions de l'Agent de fusion à afficher.  
   
  **État**  
- État de l'Agent de fusion à la fin de la session. La liste ci-dessous indique les valeurs d'état possibles :  
+ État de l'Agent de fusion à la fin de la session. La liste ci-dessous indique les valeurs d'état possibles :  
   
--   Erreur  
+-   Error  
   
 -   Terminé  
   
@@ -96,10 +99,10 @@ ms.lasthandoff: 11/09/2017
  **Dernier message de la session sélectionnée**  
  Cette zone de texte contient le dernier message dans la session sélectionnée. Si une erreur se produit, elle contient des informations détaillées sur l'erreur et la commande qui a été exécutée lors de l'occurrence de l'erreur. Elle comporte également des liens vers des informations supplémentaires à propos de l'erreur.  
   
-## <a name="see-also"></a>Voir aussi  
- [Démarrer le moniteur de réplication](../../relational-databases/replication/monitor/start-the-replication-monitor.md)   
+## <a name="see-also"></a> Voir aussi  
+ [Démarrer le Moniteur de réplication](../../relational-databases/replication/monitor/start-the-replication-monitor.md)   
  [Afficher des informations et exécuter des tâches pour les agents associés à un abonnement &#40;moniteur de réplication&#41;](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-subscription-agents.md)   
  [Surveillance de la réplication](../../relational-databases/replication/monitor/monitoring-replication-overview.md)   
- [Replication Agents Overview](../../relational-databases/replication/agents/replication-agents-overview.md)  
+ [Présentation des Agents de réplication](../../relational-databases/replication/agents/replication-agents-overview.md)  
   
   

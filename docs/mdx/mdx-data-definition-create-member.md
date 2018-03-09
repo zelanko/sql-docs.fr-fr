@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -26,11 +26,11 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: 44a329213b7bbe39167e8f0c6b85e473d2d58411
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: bdffb139f9a2870a454c3cdec1318df9dcf4070f
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="mdx-data-definition---create-member"></a>Définition de données MDX - créer des membres
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -63,7 +63,7 @@ CREATE [ SESSION ] [HIDDDEN] [ CALCULATED ] MEMBER CURRENTCUBE | Cube_Name.Membe
  *Nom*  
  Expression scalaire valide qui définit la valeur de la propriété de membre calculé.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  L'instruction CREATE MEMBER définit les membres calculés disponibles tout au long de la session, et qui peuvent par conséquent être utilisés dans plusieurs requêtes au cours de la session. Pour plus d’informations, consultez [Creating Session-Scoped de membres calculés &#40; MDX &#41; ](../analysis-services/multidimensional-models/mdx/mdx-calculated-members-session-scoped-calculated-members.md).  
   
  Vous pouvez également définir un membre calculé qui ne doit être utilisé que par une requête unique. Pour définir un membre calculé limité à une seule requête, utilisez la clause WITH de l'instruction SELECT. Pour plus d’informations, consultez [Creating Query-Scoped de membres calculés &#40; MDX &#41; ](../analysis-services/multidimensional-models/mdx/mdx-calculated-members-query-scoped-calculated-members.md).  
@@ -91,7 +91,7 @@ CREATE [ SESSION ] [HIDDDEN] [ CALCULATED ] MEMBER CURRENTCUBE | Cube_Name.Membe
   
  Le comportement permet aux applications clientes génériques de travailler avec des cubes qui contiennent des calculs complexes, sans avoir à prendre en compte l'implémentation spécifique des calculs. Toutefois, dans certains scénarios, vous souhaiterez exécuter une session ou des membres calculés d’étendue de requête avant certains calculs dans le cube et aucun le **d’agrégation** fonction ni le **VisualTotals** (fonction) sont applicables. Pour ce faire, utilisez la propriété de calcul SCOPE_ISOLATION.  
   
-#### <a name="example"></a>Exemple  
+#### <a name="example"></a> Exemple  
  Le script ci-dessous est un exemple de scénario dans lequel la propriété de calcul SCOPE_ISOLATION est requise pour obtenir le résultat correct.  
   
  **Script MDX du cube :**  

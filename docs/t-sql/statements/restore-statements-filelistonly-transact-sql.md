@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,22 +17,23 @@ f1_keywords:
 - RESTORE_FILELISTONLY_TSQL
 - FILELISTONLY
 - FILELISTONLY_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - backups [SQL Server], file lists
 - RESTORE FILELISTONLY statement
 - listing backed up files
 ms.assetid: 0b4b4d11-eb9d-4f3e-9629-6c79cec7a81a
-caps.latest.revision: "83"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 54e5a186bc7beaa13cfb1fef8d69cc1fbf34cbf0
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: e6776115033e6e7222abc610673dd8b0aaff81dc
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="restore-statements---filelistonly-transact-sql"></a>RESTAURER les instructions - FILELISTONLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -88,23 +90,23 @@ FROM <backup_device>
   
 |Nom de colonne|Type de données| Description|  
 |-|-|-|  
-|LogicalName|**nvarchar (128)**|Nom logique du fichier.|  
-|PhysicalName|**nvarchar (260)**|Nom physique ou nom système du fichier.|  
-|Type|**char (1)**|Le type de fichier, un des :<br /><br /> **L** = Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fichier journal<br /><br /> **D**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fichier de données<br /><br /> **F** = catalogue de texte intégral<br /><br /> **S** = FileStream, FileTable, ou [!INCLUDE[hek_2](../../includes/hek-2-md.md)] conteneur|  
-|FileGroupName|**nvarchar (128)**|Nom du groupe de fichiers contenant le fichier.|  
-|Taille|**NUMERIC (20,0)**|Taille actuelle en octets.|  
-|MaxSize|**NUMERIC (20,0)**|Taille maximale autorisée en octets.|  
+|LogicalName|**nvarchar(128)**|Nom logique du fichier.|  
+|PhysicalName|**nvarchar(260)**|Nom physique ou nom système du fichier.|  
+|Type|**char(1)**|Le type de fichier, un des :<br /><br /> **L** = Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fichier journal<br /><br /> **D**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fichier de données<br /><br /> **F** = catalogue de texte intégral<br /><br /> **S** = FileStream, FileTable, ou [!INCLUDE[hek_2](../../includes/hek-2-md.md)] conteneur|  
+|FileGroupName|**nvarchar(128)**|Nom du groupe de fichiers contenant le fichier.|  
+|Taille|**numeric(20,0)**|Taille actuelle en octets.|  
+|MaxSize|**numeric(20,0)**|Taille maximale autorisée en octets.|  
 |FileID|**bigint**|Identificateur de fichier, unique dans la base de données.|  
-|CreateLSN|**NUMERIC(25,0)**|Numéro séquentiel dans le journal auquel le fichier a été créé.|  
-|DropLSN|**NUMERIC(25,0)** NULL|Le numéro de séquence de journal auquel le fichier a été supprimé. Si le fichier n'a pas été supprimé, cette valeur est NULL.|  
+|CreateLSN|**numeric(25,0)**|Numéro séquentiel dans le journal auquel le fichier a été créé.|  
+|DropLSN|**numeric(25,0)** NULL|Le numéro de séquence de journal auquel le fichier a été supprimé. Si le fichier n'a pas été supprimé, cette valeur est NULL.|  
 |UniqueID|**uniqueidentifier**|Identificateur global unique (GUID) du fichier.|  
 |ReadOnlyLSN|**NUMERIC(25,0) NULL**|Numéro séquentiel dans le journal auquel le groupe de fichiers contenant le fichier est passé de lecture-écriture à lecture seule (modification la plus récente).|  
-|ReadWriteLSN|**NUMERIC(25,0)** NULL|Numéro séquentiel dans le journal auquel le groupe de fichiers contenant le fichier est passé de lecture seule à lecture-écriture (modification la plus récente).|  
+|ReadWriteLSN|**numeric(25,0)** NULL|Numéro séquentiel dans le journal auquel le groupe de fichiers contenant le fichier est passé de lecture seule à lecture-écriture (modification la plus récente).|  
 |BackupSizeInBytes|**bigint**|Taille de la sauvegarde en octets pour ce fichier.|  
 |SourceBlockSize|**int**|Taille en octets des blocs du périphérique physique contenant le fichier (pas l'unité de sauvegarde).|  
 |FileGroupID|**int**|Identificateur du groupe de fichiers.|  
 |LogGroupGUID|**uniqueidentifier NULL**|NULL.|  
-|DifferentialBaseLSN|**NUMERIC(25,0)** NULL|Pour les sauvegardes différentielles, les modifications avec les numéros de séquence de journal supérieures ou égales à **DifferentialBaseLSN** sont inclus dans la sauvegarde différentielle.<br /><br /> Pour les autres types de sauvegarde, la valeur est NULL.|  
+|DifferentialBaseLSN|**numeric(25,0)** NULL|Pour les sauvegardes différentielles, les modifications avec les numéros de séquence de journal supérieures ou égales à **DifferentialBaseLSN** sont inclus dans la sauvegarde différentielle.<br /><br /> Pour les autres types de sauvegarde, la valeur est NULL.|  
 |DifferentialBaseGUID|**uniqueidentifier**|Pour les sauvegardes différentielles, il s'agit de l'identificateur unique de la base différentielle.<br /><br /> Pour les autres types de sauvegarde, la valeur est NULL.|  
 |IsReadOnly|**bit**|**1** = le fichier est en lecture seule.|  
 |IsPresent|**bit**|**1** = le fichier est présent dans la sauvegarde.|  
@@ -117,7 +119,7 @@ FROM <backup_device>
 > [!IMPORTANT]  
 >  La protection assurée par ce mot de passe est plutôt faible. Son but est d'éviter que des utilisateurs autorisés ou non autorisés effectuent une restauration incorrecte à l'aide des outils [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. En aucun cas, elle n'empêche la lecture des données de la sauvegarde par d'autres moyens ou le remplacement du mot de passe. [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] La méthode conseillé en matière de protection des sauvegardes consiste à stocker les bandes de sauvegarde dans un emplacement sûr ou à sauvegarder les fichiers disque protégés par une liste de contrôle d'accès (ACL). La liste de contrôle d'accès doit être définie à la racine du répertoire dans lequel les sauvegardes sont effectuées.  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>Autorisations  
  Dans [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], vous devez avoir l'autorisation CREATE DATABASE pour pouvoir obtenir des informations sur un jeu de sauvegardes ou sur une unité de sauvegarde. Pour plus d’informations, consultez [GRANT – octroi d’autorisations de base de données &#40;Transact-SQL&#41;](../../t-sql/statements/grant-database-permissions-transact-sql.md).  
   
 ## <a name="examples"></a>Exemples  

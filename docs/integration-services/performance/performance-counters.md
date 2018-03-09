@@ -1,5 +1,5 @@
 ---
-title: Les compteurs de performances | Documents Microsoft
+title: Compteurs de performances | Microsoft Docs
 ms.custom: 
 ms.date: 08/27/2016
 ms.prod: sql-non-specified
@@ -19,17 +19,16 @@ helpviewer_keywords:
 - counters [Integration Services]
 - data flow engine [Integration Services]
 ms.assetid: 11e17f4e-72ed-44d7-a71d-a68937a78e4c
-caps.latest.revision: 63
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: a079ca03c21823aa8a3308bccc92cc71e92930c5
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/27/2017
-
+ms.openlocfilehash: a94529428cccaa61e3e36b028770ac53113a4f98
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="performance-counters"></a>Compteurs de performances
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] installe un ensemble de compteurs de performances qui vous permettent d’analyser les performances du moteur de flux de données. Par exemple, le compteur Mémoires tampon spoulées permet de déterminer si des tampons de données sont écrits temporairement sur le disque lors de l'exécution d'un package. Cette permutation diminue les performances et indique que la mémoire de l'ordinateur est insuffisante.  
@@ -75,7 +74,7 @@ select * from [catalog].[dm_execution_performance_counters] (NULL)
   
 > **IMPORTANT** Si vous êtes membre du rôle de base de données **ssis_admin** , les statistiques de performances de toutes les exécutions en cours sont retournées.  Si vous n’êtes pas membre du rôle de base de données **ssis_admin** , les statistiques de performances des exécutions en cours pour lesquelles vous disposez d’autorisations de lecture sont retournées.  
   
-## <a name="related-content"></a>Contenu connexe  
+## <a name="related-content"></a>Contenu associé  
   
 -   Outil : [SSIS Performance Visualization for Business Intelligence Development Studio (projet CodePlex)](http://go.microsoft.com/fwlink/?LinkId=146626), sur le site codeplex.com.  
   
@@ -124,6 +123,5 @@ select * from [catalog].[dm_execution_performance_counters] (NULL)
     > [!NOTE]  
     >  Vous devez démarrer le service Journaux et alertes de performance à l'aide d'un compte local ou d'un compte de domaine membre du groupe Administrateurs.  
 
-## <a name="see-also"></a>Voir aussi  
- [L’exécution de projets et Packages](../packages/run-integration-services-ssis-packages.md) [événements consignés par un Package Integration Services](../../integration-services/performance/events-logged-by-an-integration-services-package.md)  
-
+## <a name="see-also"></a> Voir aussi  
+ [Exécution de projets et de packages](../packages/run-integration-services-ssis-packages.md) [Événements journalisés par un package Integration Services](../../integration-services/performance/events-logged-by-an-integration-services-package.md)  

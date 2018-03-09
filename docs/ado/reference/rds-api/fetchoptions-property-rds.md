@@ -3,8 +3,9 @@ title: "FetchOptions, propriété (RDS) | Documents Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,18 +13,19 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-helpviewer_keywords: FetchOptions property [ADO]
+helpviewer_keywords:
+- FetchOptions property [ADO]
 ms.assetid: 7b2e254a-9354-4541-bc98-bb185276388f
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: eb723da9cfd35101167b3d8618fefd4d55cc8f9d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f53c6be35a4b3035e81653ecd828c52ea0c959db
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="fetchoptions-property-rds"></a>FetchOptions, propriété (RDS)
 Indique le type de l’extraction asynchrone.  
@@ -36,7 +38,7 @@ Indique le type de l’extraction asynchrone.
   
 |Constante| Description|  
 |--------------|-----------------|  
-|**valeur adcFetchUpFront**|Tous les enregistrements de la [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) sont extraites avant que le contrôle est retourné à l’application. Le texte complet **Recordset** est extrait avant que l’application est autorisée à faire quoi que ce soit avec lui.|  
+|**adcFetchUpFront**|Tous les enregistrements de la [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) sont extraites avant que le contrôle est retourné à l’application. Le texte complet **Recordset** est extrait avant que l’application est autorisée à faire quoi que ce soit avec lui.|  
 |**adcFetchBackground**|Contrôle peut retourner à l’application dès que le premier lot d’enregistrements a été extrait. Suivante de la lecture de la **Recordset** que non extrait dans le premier lot est retardée jusqu'à ce que l’enregistrement recherché est extrait, moment auquel le contrôle retourne à l’application.|  
 |**adcFetchAsync**|Valeur par défaut. Contrôle retourne immédiatement à l’application, tandis que les enregistrements sont récupérés en arrière-plan. Si l’application tente de lire un enregistrement qui n’a pas encore été extrait, l’enregistrement le plus proche de l’enregistrement recherché est lues et le contrôle retourne immédiatement, ce qui indique que la fin actuelle de la **Recordset** a été atteinte. Par exemple, un appel à [MoveLast](../../../ado/reference/rds-api/movefirst-movelast-movenext-and-moveprevious-methods-rds.md) déplacera la position actuelle vers le dernier enregistrement extrait, même si plusieurs enregistrements continuera à remplir la **Recordset**.|  
   

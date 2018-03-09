@@ -2,13 +2,13 @@
 title: Langues et classements (Analysis Services) | Documents Microsoft
 ms.custom: 
 ms.date: 04/20/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: misc
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology: analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 keywords: Tester Analysis Services
@@ -26,13 +26,15 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 3992b6ea5ff2dedbb18571919041407a8545fd4a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 75a28b8a2e0d40ae453fce13058bb3cb53c0ea3e
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="languages-and-collations-analysis-services"></a>Langues et classements (Analysis Services)
+[!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]
+
   [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] prend en charge les langues et les classements fournis par les systèmes d'exploitation [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows. Les propriétés**Language** et **Collation** sont définies initialement au niveau de l'instance pendant l'installation, mais vous pouvez les modifier ultérieurement à différents niveaux de la hiérarchie d'objets.  
   
  Dans un modèle multidimensionnel (uniquement), vous pouvez définir ces propriétés sur une base de données ou sur un cube. Vous pouvez également les définir sur les traductions que vous créez pour des objets dans un cube. Dans un modèle tabulaire, la langue et le classement sont hérités du système d’exploitation hôte.  
@@ -70,7 +72,7 @@ ms.lasthandoff: 11/17/2017
 ###  <a name="bkmk_lcid"></a> La valeur de la propriété Language est un identificateur de paramètres régionaux (LCID)  
  Les valeurs valides incluent tout LCID qui figure dans la liste déroulante. Dans Management Studio et SQL Server Data Tools, les LCID sont représentés sous formes de chaînes équivalentes. Les mêmes langues sont utilisées partout où la propriété **Language** est exposée, indépendamment de l'outil. Le fait d'avoir une liste de langues identique permet de s'assurer que vous pouvez implémenter et tester les traductions de manière cohérente dans tout le modèle.  
   
- Bien qu'Analysis Services répertorie les langues par nom, la valeur réelle stockée pour la propriété est un LCID. Quand vous définissez une propriété de langue par programmation ou via le fichier msmdsrv.ini, utilisez [l’identificateur de paramètres régionaux (LCID)](http://en.wikipedia.org/wiki/Locale) comme valeur. Un LCID est une valeur 32 bits constituée d'un ID de langue, d'un ID de tri et de bits réservés qui identifient une langue particulière. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] utilise les LCID pour spécifier la langue sélectionnée pour les instances et les objets [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
+ Bien qu'Analysis Services répertorie les langues par nom, la valeur réelle stockée pour la propriété est un LCID. Quand vous définissez une propriété de langue par programmation ou via le fichier msmdsrv.ini, utilisez [l’identificateur de paramètres régionaux (LCID)](http://en.wikipedia.org/wiki/Locale) comme valeur. Un LCID est une valeur 32 bits constituée d'un ID de langue, d'un ID de tri et de bits réservés qui identifient une langue particulière. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] utilise des LCID pour spécifier la langue sélectionnée pour les instances et objets [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
   
  Vous pouvez définir le LCID au format hexadécimal ou décimal. Voici quelques exemples de valeurs valides pour la propriété **Language** :  
   
@@ -90,7 +92,7 @@ ms.lasthandoff: 11/17/2017
 ##  <a name="bkmk_collations"></a> Prise en charge du classement dans Analysis Services  
  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] utilise exclusivement les classements Windows (versions _90 et _100) et binaires. Il n'utilise pas les classements SQL Server hérités. Dans un cube, un classement unique est utilisé partout, à l'exception des traductions au niveau de l'attribut. Pour plus d’informations sur la définition des traductions d’attributs, consultez [Prise en charge des traductions dans Analysis Services](../analysis-services/translation-support-in-analysis-services.md).  
   
- Les classements contrôlent le respect de la casse pour toutes les chaînes dans un script de langue bicaméral, à l'exception des identificateurs d'objets. Si vous utilisez des caractères minuscules et majuscules dans un identificateur d’objet, sachez que le respect de la casse des identificateurs d’objets n’est pas déterminé par le classement, mais par [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Les identificateurs d'objets composés en script anglais ne respectent jamais la casse, quel que soit le classement. Pour le cyrillique et les autres langues bicamérale, c'est l'inverse (la casse est toujours respectée). Pour plus d'informations, consultez [Conseils et meilleures pratiques en matière de globalisation &#40;Analysis Services&#41;](../analysis-services/globalization-tips-and-best-practices-analysis-services.md) .  
+ Les classements contrôlent le respect de la casse pour toutes les chaînes dans un script de langue bicaméral, à l'exception des identificateurs d'objets. Si vous utilisez des caractères minuscules et majuscules dans un identificateur d’objet, sachez que le respect de la casse des identificateurs d’objets n’est pas déterminé par le classement, mais par [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Les identificateurs d'objets composés en script anglais ne respectent jamais la casse, quel que soit le classement. Pour le cyrillique et les autres langues bicamérale, c'est l'inverse (la casse est toujours respectée). Pour plus d'informations, consultez [Globalization Tips and Best Practices &#40;Analysis Services&#41;](../analysis-services/globalization-tips-and-best-practices-analysis-services.md) .  
   
  Le classement dans Analysis Services est compatible avec celui du moteur de base de données relationnelle SQL Server, en supposant que vous mainteniez la parité dans les options de tri que vous sélectionnez pour chaque service. Par exemple, si la base de données relationnelle respecte les accents, vous devez configurer le cube de la même façon. Des problèmes peuvent survenir quand les paramètres de classement divergent. Pour obtenir un exemple et des solutions de contournement, consultez [Les vides dans une chaîne Unicode sont traités différemment selon le classement](http://social.technet.microsoft.com/wiki/contents/articles/23979.ssas-processing-error-blanks-in-a-unicode-string-have-different-processing-outcomes-based-on-collation-and-character-set.aspx). Pour plus d'informations sur le classement et le moteur de base de données, consultez [Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md).  
   
@@ -105,7 +107,7 @@ ms.lasthandoff: 11/17/2017
   
     -   latin1_general_100  
   
-     Un classement Windows trie les caractères selon les caractéristiques linguistiques et culturelles de la langue. Dans Windows, les classements sont plus nombreux que les paramètres régionaux (ou langues) utilisés avec eux, car de nombreuses langues partagent le même alphabet et les mêmes règles de tri et de comparaison des caractères. Par exemple, 33 groupes de paramètres régionaux Windows, notamment tous les groupes de paramètres régionaux portugais et anglais, utilisent la page de codes Latin1 (1252) et possèdent un ensemble de règles communes pour le tri et la comparaison des caractères.  
+     Un classement Windows trie les caractères selon les caractéristiques linguistiques et culturelles de la langue. Dans Windows, les classements sont plus nombreux que les paramètres régionaux (ou langues) utilisés avec eux, car de nombreuses langues partagent le même alphabet et les mêmes règles de tri et de comparaison des caractères. Par exemple, 33 groupes de paramètres régionaux Windows, notamment tous les groupes de paramètres régionaux portugais et anglais, utilisent la page de codes Latin1 (1252) et possèdent un ensemble de règles communes pour le tri et la comparaison des caractères.  
   
     > [!NOTE]  
     >  Lorsque vous choisissez un classement, il est recommandé d’utiliser le même classement que celui de la base de données sous-jacente. Si vous avez le choix, la version _100 est cependant plus à jour et offre une convention de tri culturelle plus précise sur le plan linguistique.  
@@ -124,7 +126,7 @@ ms.lasthandoff: 11/17/2017
 |Ordre de tri (suffixe)|Description de l'ordre de tri|  
 |---------------------------|----------------------------|  
 |Binaire (_BIN) ou BIN2 (_BIN2)|Il existe deux types de classements binaires dans SQL Server ; les anciens classements BIN et les nouveaux classements BIN2. Dans un classement BIN2, tous les caractères sont triés selon leurs points de code. Dans un classement BIN, seul le premier caractère est trié selon le point de code et les autres caractères sont triés selon leurs valeurs d'octets. (En raison de l'architecture little endian de la plateforme Intel, les caractères de code Unicode sont toujours triés inversés par octet.)<br /><br /> Pour le classement binaire des types de données Unicode, les paramètres régionaux (la langue) ne sont pas pris en compte dans les tris de données. Par exemple, Latin_1_General_BIN et Japanese_BIN produisent des résultats de tri identiques quand ils sont utilisés avec des données Unicode.<br /><br /> L'ordre de tri binaire respecte la casse et les accents. Il s'agit aussi de l'ordre de tri le plus rapide.|  
-|Respecter la casse (_CS)|Fait la distinction entre les majuscules et les minuscules. Si cette option est activée, les minuscules sont triées avant leurs équivalents majuscules. Vous pouvez explicitement définir le non-respect de la casse en spécifiant _CI. Les paramètres de casse spécifiques au classement ne s'appliquent pas aux identificateurs d'objets, tels que l'ID d'une dimension, le cube et d'autres objets. Pour plus d'informations, consultez [Conseils et meilleures pratiques en matière de globalisation &#40;Analysis Services&#41;](../analysis-services/globalization-tips-and-best-practices-analysis-services.md) .|  
+|Respecter la casse (_CS)|Fait la distinction entre les majuscules et les minuscules. Si cette option est activée, les minuscules sont triées avant leurs équivalents majuscules. Vous pouvez explicitement définir le non-respect de la casse en spécifiant _CI. Les paramètres de casse spécifiques au classement ne s'appliquent pas aux identificateurs d'objets, tels que l'ID d'une dimension, le cube et d'autres objets. Pour plus d'informations, consultez [Globalization Tips and Best Practices &#40;Analysis Services&#41;](../analysis-services/globalization-tips-and-best-practices-analysis-services.md) .|  
 |Respecter les accents (_AS)|Fait la distinction entre les caractères accentués et non accentués. Par exemple, « a » n'est pas équivalent à « ấ ». Si cette option est désactivée, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] considère que la version accentuée et la version non accentuée d'une même lettre sont identiques dans les opérations de tri. Vous pouvez explicitement définir le non-respect des accents en spécifiant _AI.|  
 |Respecter le jeu de caractères Kana (_KS)|Fait la distinction entre les deux types de caractères japonais Kana : Hiragana et Katakana. Si cette option est désactivée, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] considère que les caractères Hiragana et Katakana sont des caractères identiques dans les opérations de tri. Il n'existe pas de suffixe d'ordre de tri pour les tris ne respectant pas le jeu de caractères Kana.|  
 |Respecter la largeur (_WS)|Fait la distinction entre un caractère codé sur un octet et le même caractère représenté sur deux octets. Si cette option est désactivée, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] considère que la version codée sur un octet et la version codée sur deux octets d’un même caractère sont identiques dans les opérations de tri. Il n'existe pas de suffixe d'ordre de tri pour les tris ne respectant pas la largeur.|  
@@ -184,6 +186,6 @@ ms.lasthandoff: 11/17/2017
 ## <a name="see-also"></a>Voir aussi  
  [Scénarios de globalisation pour Analysis Services](../analysis-services/globalization-scenarios-for-analysis-services.md)   
  [Globalisation conseils et meilleures pratiques &#40; Analysis Services &#41;](../analysis-services/globalization-tips-and-best-practices-analysis-services.md)   
- [Prise en charge d'Unicode et du classement](../relational-databases/collations/collation-and-unicode-support.md)  
+ [Prise en charge d’Unicode et du classement](../relational-databases/collations/collation-and-unicode-support.md)  
   
   

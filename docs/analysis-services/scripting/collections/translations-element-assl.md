@@ -2,15 +2,13 @@
 title: "Élément translations (ASSL) | Documents Microsoft"
 ms.custom: 
 ms.date: 03/15/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: scripting
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: Translations Element
@@ -25,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 4477a8b717a94465e7b56b03404e079ff9f6f4d9
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d41a39ea20c573712e98b38bf4ad929c7212a4c5
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="translations-element-assl"></a>Élément Translations (ASSL)
-  Contient la collection de [traduction](../../../analysis-services/scripting/objects/translation-element-assl.md) éléments associés à l’élément parent.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Contient la collection de [traduction](../../../analysis-services/scripting/objects/translation-element-assl.md) éléments associés à l’élément parent.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -55,9 +53,9 @@ ms.lasthandoff: 11/17/2017
   
 |Caractéristique|Description|  
 |--------------------|-----------------|  
-|Type de données et longueur|Aucune|  
-|Valeur par défaut|Aucune|  
-|Cardinalité|0-1: élément facultatif qui peut apparaître une fois et une seule.|  
+|Type de données et longueur|None|  
+|Valeur par défaut|None|  
+|Cardinalité|0-1 : élément facultatif qui peut apparaître une fois et une seule.|  
   
 ## <a name="element-relationships"></a>Relations entre les éléments  
   
@@ -72,7 +70,7 @@ ms.lasthandoff: 11/17/2017
 |[RelationshipEnd](../../../analysis-services/scripting/data-type/relationshipend-data-type-assl.md)|[Traduction](../../../analysis-services/scripting/data-type/relationshipendtranslation-element-assl.md) de type [RelationshipEndTranslation](../../../analysis-services/scripting/data-type/relationshipendtranslation-element-assl.md)|  
 |Autres|[Traduction](../../../analysis-services/scripting/objects/translation-element-assl.md)|  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Les éléments correspondants dans le modèle objet AMO (Analysis Management Objects) sont <xref:Microsoft.AnalysisServices.TranslationCollection> et <xref:Microsoft.AnalysisServices.AttributeTranslationCollection>.  
   
 ## <a name="see-also"></a>Voir aussi  

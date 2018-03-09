@@ -2,10 +2,14 @@
 title: "Exécuter le débogueur Transact-SQL | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-scripting
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -21,19 +25,19 @@ helpviewer_keywords:
 - Transact-SQL debugger, keyboard shortcuts
 - Transact-SQL debugger, starting
 ms.assetid: 386f6d09-dbec-4dc7-9e8a-cd9a4a50168c
-caps.latest.revision: "8"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d633d2f9a2e1a9ab407384338b4e9e0da34557b8
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 9f67818832da03faacf25adee23a1261ce44f430
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="run-the-transact-sql-debugger"></a>Exécuter le débogueur Transact-SQL
-  Vous pouvez démarrer le débogueur [!INCLUDE[tsql](../../includes/tsql-md.md)] après avoir ouvert une fenêtre de l’éditeur de requête du [!INCLUDE[ssDE](../../includes/ssde-md.md)] . Vous pouvez ensuite exécuter votre code [!INCLUDE[tsql](../../includes/tsql-md.md)] en mode débogage jusqu'à ce que vous arrêtiez le débogueur. Vous pouvez définir des options permettant de personnaliser la façon dont le débogueur s'exécute.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Vous pouvez démarrer le débogueur [!INCLUDE[tsql](../../includes/tsql-md.md)] après avoir ouvert une fenêtre de l’éditeur de requête du [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Vous pouvez ensuite exécuter votre code [!INCLUDE[tsql](../../includes/tsql-md.md)] en mode débogage jusqu'à ce que vous arrêtiez le débogueur. Vous pouvez définir des options permettant de personnaliser la façon dont le débogueur s'exécute.  
   
 ## <a name="starting-and-stopping-the-debugger"></a>Démarrage et arrêt du débogueur  
  La configuration requise pour démarrer le débogueur [!INCLUDE[tsql](../../includes/tsql-md.md)] est la suivante :  
@@ -56,7 +60,7 @@ ms.lasthandoff: 11/09/2017
   
  La fenêtre de l'éditeur de requête reste en mode débogage jusqu'à la fin de la dernière instruction dans la fenêtre de l'éditeur de requête ou jusqu'à l'arrêt du mode débogage. Vous pouvez arrêter le mode débogage et l'exécution d'instructions en utilisant l'une des méthodes suivantes :  
   
--   Dans le menu **Débogage** , cliquez sur **Arrêter le débogage**.  
+-   Dans le menu **Déboguer** , cliquez sur **Arrêter le débogage**.  
   
 -   Dans la barre d'outils **Déboguer** , cliquez sur le bouton **Arrêter le débogage** .  
   
@@ -107,7 +111,7 @@ ms.lasthandoff: 11/09/2017
 |**Désactiver tous les points d'arrêt**|Non disponible|Non disponible|Non disponible|Désactive tous les points d'arrêt.|  
 |Non disponible|**Ajouter un espion**|Non disponible|Non disponible|Ajoute l'expression sélectionnée à la fenêtre **Espion** .|  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Débogueur Transact-SQL](../../relational-databases/scripting/transact-sql-debugger.md)   
  [Exécuter pas à pas du code Transact-SQL](../../relational-databases/scripting/step-through-transact-sql-code.md)   
  [Informations du débogueur Transact-SQL](../../relational-databases/scripting/transact-sql-debugger-information.md)   

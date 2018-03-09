@@ -1,31 +1,33 @@
 ---
-title: "Catalog.add_execution_worker (base de données SSISDB) | Documents Microsoft"
+title: "catalog.add_execution_worker (base de données SSISDB) | Microsoft Docs"
 ms.custom: 
 ms.date: 12/16/2016
 ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: system-stored-procedures
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d587cedd-6402-4d5c-9526-7cd25627a037
-caps.latest.revision: 4
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 8ce83f2678a1f3dcae6539f33beb33070b8e771b
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 42d1332c727f26b6850c7fd7227c3a124ebc50a9
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="catalogaddexecutionworker-ssisdb-database"></a>Catalog.add_execution_worker (base de données SSISDB)
-[!INCLUDE[tsql-appliesto-ssvnxt-xxxx-xxxx-xxx.md](../../includes/tsql-appliesto-ssvnxt-xxxx-xxxx-xxx.md)]
+# <a name="catalogaddexecutionworker-ssisdb-database"></a>catalog.add_execution_worker (base de données SSISDB)
+[!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 
-Ajoute un [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] montée en puissance des processus de travail une instance d’exécution de monter en charge.
+Ajoute un [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Scale Out Worker à une instance d’exécution dans Scale Out.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -34,26 +36,26 @@ catalog.add_execution_worker [@execution_id = ] execution_id, [@workeragent_id =
 ```
 
 ## <a name="arguments"></a>Arguments
-[ @execution_id =] *execution_id*  
- Identificateur unique de l'instance d'exécution. Le *execution_id* est **bigint**.  
+[ @execution_id = ] *execution_id*  
+ Identificateur unique de l'instance d'exécution. *execution_id* est de type **bigint**.  
  
-[@workeragent_id =] *workeragent_id*  
-L’id de l’agent de travailleur d’un montée en puissance des processus de travail. Le *workeragent_id* est **uniqueIdentifier**.
+[@workeragent_id = ] *workeragent_id*  
+ID d’agent de Worker d’un Scale Out Worker. *workeragent_id* est de type **uniqueIdentifier**.
 
-## <a name="return-code-value"></a>Valeur de Code de retour  
+## <a name="return-code-value"></a>Valeur du code de retour  
  0 (succès)  
   
 ## <a name="result-sets"></a>Jeux de résultats  
- Aucun  
+ None  
 
 ## <a name="permissions"></a>Autorisations  
  Cette procédure stockée requiert l'une des autorisations suivantes :  
   
 -   Autorisations READ et MODIFY sur l'instance d'exécution  
   
--   L’appartenance à la **ssis_admin** rôle de base de données  
+-   Appartenance au rôle de base de données **ssis_admin**  
   
--   L’appartenance à la **sysadmin** rôle de serveur  
+-   Appartenance au rôle serveur **sysadmin**  
  
 ## <a name="errors-and-warnings"></a>Erreurs et avertissements  
  La liste suivante décrit quelques conditions qui peuvent générer une erreur ou un avertissement :  
@@ -62,11 +64,10 @@ L’id de l’agent de travailleur d’un montée en puissance des processus de 
 
 - L’identificateur d’exécution n’est pas valide.
 
-- L’id de l’agent de travailleur n’est pas valide.
+- L’ID d’agent de Worker n’est pas valide.
 
-- L’exécution n’est pas de monter en charge.
+- L’exécution n’a pas lieu dans Scale Out.
 
-## <a name="see-also"></a>Voir aussi
-[Exécuter des packages de monter en charge](~/integration-services/scale-out/run-packages-in-integration-services-ssis-scale-out.md).
-
+## <a name="see-also"></a> Voir aussi
+[Exécuter des packages dans Scale Out](~/integration-services/scale-out/run-packages-in-integration-services-ssis-scale-out.md).
 

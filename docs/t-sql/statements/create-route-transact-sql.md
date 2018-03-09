@@ -1,5 +1,5 @@
 ---
-title: "CRÉER un itinéraire (Transact-SQL) | Documents Microsoft"
+title: CREATE ROUTE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,7 +17,8 @@ f1_keywords:
 - ROUTE
 - CREATE ROUTE
 - ROUTE_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - lifetimes [Service Broker]
 - routes [Service Broker], creating
@@ -27,16 +29,16 @@ helpviewer_keywords:
 - activating routes
 - CREATE ROUTE statement
 ms.assetid: 7e695364-1a98-4cfd-8ebd-137ac5a425b3
-caps.latest.revision: "42"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c71b5fd2c6fb873889eafdb4bceafeba7699208d
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: 767be5069d65c11dad849a8fc32f5b15296a4eda
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-route-transact-sql"></a>CREATE ROUTE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -84,13 +86,13 @@ WHERE database_id = DB_ID()
   
  Si la clause BROKER_INSTANCE est omise, cet itinéraire correspond à n'importe quelle instance Service Broker. La priorité d'un itinéraire qui correspond à n'importe quelle instance de service Broker est plus élevée que celle d'un itinéraire pour lequel une instance service Broker explicite est spécifiée lorsque la conversation ne spécifie aucune instance Service Broker. Pour les conversations spécifiant une instance service Broker, la priorité d'un itinéraire pour lequel une instance Service Broker est spécifiée est plus élevée que celle d'un itinéraire qui correspond à n'importe quelle instance de Service Broker.  
   
- Durée de vie  **=**  *route_lifetime*  
+ LIFETIME **=***route_lifetime*  
  Spécifie la durée, en secondes, pendant laquelle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] conserve l'itinéraire dans la table de routage. Lorsque la durée de vie expire, l'itinéraire expire et [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] n'en tient plus compte lors de la sélection d'un itinéraire pour une nouvelle conversation. Si cette clause est omise, la *route_lifetime* a la valeur NULL et l’itinéraire n’expire jamais.  
   
- ADRESSE **='***next_hop_address***'**  
+ ADDRESS **='***next_hop_address***'**  
  Spécifie l'adresse réseau pour cet itinéraire. Le *next_hop_address* spécifie une adresse TCP/IP dans le format suivant :  
   
- **TCP : / /**{ *nom_DNS* | *nom_netbios* | *adresse_IP* } **:***numéro_port*  
+ **TCP://**{ *dns_name* | *netbios_name* | *ip_address* } **:***port_number*  
   
  Spécifié *numéro_port* doit correspondre au numéro de port pour le [!INCLUDE[ssSB](../../includes/sssb-md.md)] point de terminaison d’une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur l’ordinateur spécifié. Cela peut être obtenu en exécutant la requête ci-après dans la base de données sélectionnée :  
   
@@ -111,7 +113,7 @@ WHERE ssbe.name = N'MyServiceBrokerEndpoint';
  MIRROR_ADDRESS **='***next_hop_mirror_address***'**  
  Spécifie l’adresse réseau pour une base de données mise en miroir avec une base de données mise en miroir hébergée à le *next_hop_address*. Le *next_hop_mirror_address* spécifie une adresse TCP/IP dans le format suivant :  
   
- **TCP : / /**{ *nom_DNS* | *nom_netbios* | *adresse_IP* } **:** *numéro_port*  
+ **TCP://**{ *dns_name* | *netbios_name* | *ip_address* } **:** *port_number*  
   
  Spécifié *numéro_port* doit correspondre au numéro de port pour le [!INCLUDE[ssSB](../../includes/sssb-md.md)] point de terminaison d’une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur l’ordinateur spécifié. Cela peut être obtenu en exécutant la requête ci-après dans la base de données sélectionnée :  
   
@@ -138,7 +140,7 @@ WHERE ssbe.name = N'MyServiceBrokerEndpoint';
   
  Un itinéraire ne peut pas être un objet temporaire. Diriger les noms qui commencent par  **#**  sont autorisées, mais sont des objets permanents.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  L’autorisation de création d’un itinéraire par défaut, les membres de la **db_ddladmin** ou **db_owner** base de données fixe et le **sysadmin** rôle serveur fixe.  
   
 ## <a name="examples"></a>Exemples  
@@ -227,8 +229,8 @@ CREATE ROUTE TransportRoute
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [ALTER ROUTE &#40; Transact-SQL &#41;](../../t-sql/statements/alter-route-transact-sql.md)   
- [DROP ROUTE &#40; Transact-SQL &#41;](../../t-sql/statements/drop-route-transact-sql.md)   
+ [ALTER ROUTE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-route-transact-sql.md)   
+ [DROP ROUTE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-route-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
   
   

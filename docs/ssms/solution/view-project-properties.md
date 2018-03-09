@@ -3,8 +3,11 @@ title: "Afficher les propriétés d’un projet | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-solutions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,16 +18,16 @@ ms.assetid: 5537efab-19da-40a1-a201-20adc1d71e7e
 caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f79cd75f517f842ed475fcf36d71d74f0cc1836a
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: b704894472708af8af87aae4387cb1c78d6856e8
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="view-project-properties"></a>Afficher les propriétés d'un projet
-Vous pouvez afficher les propriétés associées à vos projets dans la fenêtre Propriétés.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Vous pouvez afficher les propriétés associées à vos projets dans la fenêtre Propriétés.  
   
 ### <a name="to-view-project-properties"></a>Pour afficher les propriétés d'un projet  
   
@@ -36,6 +39,6 @@ Vous pouvez afficher les propriétés associées à vos projets dans la fenêtre
   
 Les propriétés de projet, telles que la date de création, sont en lecture seule et ne peuvent pas être modifiées dans la fenêtre Propriétés.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [Explorateur de solutions](../../ssms/solution/solution-explorer.md)  
   

@@ -2,13 +2,13 @@
 title: "Leçon 12 : Créer des rôles | Documents Microsoft"
 ms.custom: 
 ms.date: 03/27/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tutorial
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology: analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to: SQL Server 2016
@@ -18,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 13879f3376bcfc86dc049d44f19d97ff5ee0d3d4
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 12a11fce82fbb0ec3e75ee9908f07372e5cbb086
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="lesson-11-create-roles"></a>Leçon 11 : Créer des rôles
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
@@ -44,7 +44,7 @@ Vous allez créer trois rôles :
   
 Durée estimée pour effectuer cette leçon : **15 minutes**  
   
-## <a name="prerequisites"></a>Conditions préalables  
+## <a name="prerequisites"></a>Prerequisites  
 Cette rubrique fait partie d'un didacticiel de modélisation tabulaire, qui doit être suivi dans l'ordre. Avant d’effectuer les tâches de cette leçon, vous devez avoir terminé la leçon précédente : [leçon 10 : créer des Partitions](../analysis-services/lesson-10-create-partitions.md).  
   
 ## <a name="create-roles"></a>Créer les rôles  
@@ -93,7 +93,7 @@ Cette rubrique fait partie d'un didacticiel de modélisation tabulaire, qui doit
 4.  Facultatif : cliquez sur l’onglet **Membres** , puis cliquez sur **Ajouter**. Dans la boîte de dialogue **Sélectionner des utilisateurs ou des groupes** , entrez les utilisateurs ou les groupes Windows de votre organisation à inclure dans le rôle. 
   
   
-## <a name="whats-next"></a>Étape suivante
+## <a name="whats-next"></a>Quelle est l’étape suivante ?
 Accédez à la leçon suivante : [leçon 12 : analyser dans Excel](../analysis-services/lesson-12-analyze-in-excel.md).
 
   

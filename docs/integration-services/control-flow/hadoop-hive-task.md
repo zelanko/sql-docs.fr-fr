@@ -1,5 +1,5 @@
 ---
-title: "Tâche Hive Hadoop | Documents Microsoft"
+title: "Hive Hadoop, tâche | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -15,17 +15,16 @@ ms.topic: article
 f1_keywords:
 - sql13.ssis.designer.hadoophivetask.f1
 ms.assetid: 10ff37c0-9f3f-442a-889b-c351afbdc74c
-caps.latest.revision: 6
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 5bfd2e1fcda13aed2d95bed0ec780ff4d3372b94
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 66e0ac41dbc9015be94ec18180a5c8fa3932efe9
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="hadoop-hive-task"></a>Tâche Hive Hadoop
   Utilisez la tâche Hive Hadoop pour exécuter le script Hive sur un cluster Hadoop.  
@@ -45,8 +44,7 @@ ms.lasthandoff: 08/03/2017
 |**HadoopScriptFilePath**|Lorsque **SourceType** présente la valeur **ScriptFile**, spécifiez le chemin d’accès au fichier de script sur Hadoop.|  
 |**TimeoutInMinutes**|Spécifiez une valeur de délai d’expiration en minutes. Le travail Hadoop s’arrête s’il ne s’est pas terminé avant la fin du délai d’expiration. Spécifiez 0 pour planifier une exécution asynchrone du travail Hadoop.|  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Gestionnaire de connexions Hadoop](../../integration-services/connection-manager/hadoop-connection-manager.md)  
   
   
-

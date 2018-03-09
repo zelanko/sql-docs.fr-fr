@@ -1,11 +1,11 @@
 ---
-title: "Étape 2 : Création d’un fichier endommagé | Documents Microsoft"
+title: "Étape 2 : Création d’un fichier endommagé | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
 ms.technology:
@@ -15,19 +15,18 @@ ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
 ms.assetid: cd0b18dc-66c3-4d88-86ef-8e40cb660fae
-caps.latest.revision: 23
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 7760a481839ec7bd33aeeefd4b066f3d7750020d
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 62350fd26606de512d982b66ff7f114addc3eb39
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="lesson-4-2---creating-a-corrupted-file"></a>Leçon 4-2 : création d’un fichier endommagé
+# <a name="lesson-4-2---creating-a-corrupted-file"></a>Leçon 4-2 : Création d’un fichier endommagé
 Afin de démontrer l'utilisation des fonctions de configuration et de gestion des erreurs de transformation, vous allez devoir créer un exemple de fichier plat qui, lors de son traitement, entraîne l'échec d'un composant.  
   
 Au cours de cette tâche, vous allez créer une copie d'un fichier plat existant. Vous ouvrirez ensuite ce fichier dans le Bloc-notes et modifierez la colonne **CurrencyID** pour vous assurer qu'aucune correspondance ne peut être établie au cours de la recherche de transformations. Lors du traitement du nouveau fichier, l'échec de la recherche provoquera à son tour l'échec de la transformation Lookup Currency Key et, par conséquent, celui du reste du package. Une fois le fichier exemple corrompu créé, vous exécuterez le package pour examiner son échec.  
@@ -70,9 +69,8 @@ Au cours de cette tâche, vous allez créer une copie d'un fichier plat existant
     > [!NOTE]  
     > Le nombre 27 désigne l'ID du composant. Cette valeur est attribuée lors de la création du flux de données ; la valeur définie dans votre package peut être différente.  
   
-## <a name="next-steps"></a>Étapes suivantes  
+## <a name="next-steps"></a>Next Steps  
 [Étape 3 : Ajout de redirection de flux d'erreurs](../integration-services/lesson-4-3-adding-error-flow-redirection.md)  
   
   
   
-

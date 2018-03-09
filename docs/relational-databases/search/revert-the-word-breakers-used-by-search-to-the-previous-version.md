@@ -2,28 +2,33 @@
 title: "Rétablir la version précédente des analyseurs lexicaux utilisés par la recherche | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: search
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-search
+ms.suite: sql
+ms.technology:
+- dbe-search
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 29b4488e-4c6a-4bf0-a64d-19e2fdafa7ae
-caps.latest.revision: "13"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4380c25d02f6fd6d05f41c030691738f3715d6e6
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: a3ad97ccd909c55268cf2be050d913fdc931433a
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="revert-the-word-breakers-used-by-search-to-the-previous-version"></a>Rétablir la version précédente des analyseurs lexicaux utilisés par la recherche
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] installe et active une version des analyseurs lexicaux et des générateurs de formes dérivées pour toutes les langues prises en charge par la recherche en texte intégral à l’exception du coréen. Cette rubrique décrit comment passer de cette version de ces composants à la version précédente, ou de la version précédente à la nouvelle version.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] installe et active une version des analyseurs lexicaux et des générateurs de formes dérivées pour toutes les langues prises en charge par la recherche en texte intégral à l’exception du coréen. Cet article décrit comment passer de cette version de ces composants à la version précédente, ou de la version précédente à la nouvelle version.  
   
- Cette rubrique ne couvre pas les langues suivantes :  
+ Cet article ne couvre pas les langues suivantes :  
   
 -   **Anglais**. Pour rétablir ou restaurer les composants anglais, consultez [Change the Word Breaker Used for US English and UK English](../../relational-databases/search/change-the-word-breaker-used-for-us-english-and-uk-english.md).  
   
@@ -36,7 +41,7 @@ ms.lasthandoff: 11/09/2017
  Pour obtenir des informations générales sur les analyseurs lexicaux et générateurs de formes dérivées, consultez [Configurer et gérer les analyseurs lexicaux et générateurs de formes dérivées pour la recherche](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md).  
   
 ##  <a name="overview"></a> Vue d'ensemble du rétablissement et de la restauration des analyseurs lexicaux et des générateurs de formes dérivées  
- Les instructions relatives au rétablissement et à la restauration des analyseurs lexicaux et des générateurs de formes dérivées dépendent de la langue. Le tableau suivant résume les trois ensembles d'actions qui peuvent être obligatoires pour rétablir la version antérieure des composants.  
+ Les instructions relatives au rétablissement et à la restauration des analyseurs lexicaux et des générateurs de formes dérivées dépendent de la langue. Le tableau suivant résume les trois ensembles d’actions qui peuvent être obligatoires pour rétablir la version antérieure des composants.  
   
 |Fichier actuel|Fichier précédent|Nombre de langues affectées|Action pour les fichiers|Action pour les entrées de Registre|  
 |------------------|-------------------|----------------------------------|----------------------|---------------------------------|  
@@ -47,7 +52,7 @@ ms.lasthandoff: 11/09/2017
 > [!WARNING]  
 >  Si vous remplacez la version actuelle du fichier NaturalLanguage6.dll par une version différente, le comportement de toutes les langues qui utilisent ce fichier est affecté.  
   
- Les fichiers décrits dans cette rubrique sont les fichiers DLL qui sont installés dans le dossier `MSSQL\Binn` de l’instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Le chemin d'accès complet est généralement le suivant :  
+ Les fichiers décrits dans cet article sont des fichiers DLL installés dans le dossier `MSSQL\Binn` de l’instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Le chemin d'accès complet est généralement le suivant :  
   
  `C:\Program Files\Microsoft SQL Server\<instance>\MSSQL\Binn`  
   
@@ -59,7 +64,7 @@ ms.lasthandoff: 11/09/2017
   
  **Liste des langues affectées**  
   
-|Langage|Abréviation<br />utilisée dans le<br />Registre|LCID|  
+|Langue|Abréviation<br />utilisée dans le<br />Registre|LCID|  
 |--------------|---------------------------------------|----------|  
 |Bengali|ben|1093|  
 |Bulgare|bgr|1026|  
@@ -130,10 +135,10 @@ ms.lasthandoff: 11/09/2017
   
  **Liste des langues affectées**  
   
-|Langage|Abréviation<br />utilisée dans le<br />Registre|LCID|  
+|Langue|Abréviation<br />utilisée dans le<br />Registre|LCID|  
 |--------------|---------------------------------------|----------|  
 |Arabe|ara|1025|  
-|Allemand|deu|1031|  
+|German|deu|1031|  
 |Japonais|jpn|1041|  
 |Néerlandais|nld|1043|  
 |Russe|rus|1049|  
@@ -215,8 +220,8 @@ ms.lasthandoff: 11/09/2017
 |---------------|------------------|-------------|  
 |CLSID précédent|7EFD3C7E-9E4B-4a93-9503-DECD74C0AC6D|483B0283-25DB-4c92-9C15-A65925CB95CE|  
 |Nom de fichier précédent|NaturalLanguage6.dll|NaturalLanguage6.dll|  
-|CLSID actuel|04b37e30-c9a9-4a7d-8f20-792fc87ddf71|Aucun|  
-|Nom de fichier actuel|MSWB7.dll|Aucun|  
+|CLSID actuel|04b37e30-c9a9-4a7d-8f20-792fc87ddf71|None|  
+|Nom de fichier actuel|MSWB7.dll|None|  
   
  **Allemand (deu), LCID 1031**  
   
@@ -225,7 +230,7 @@ ms.lasthandoff: 11/09/2017
 |CLSID précédent|45EACA36-DBE9-4e4a-A26D-5C201902346D|65170AE4-0AD2-4fa5-B3BA-7CD73E2DA825|  
 |Nom de fichier précédent|NaturalLanguage6.dll|NaturalLanguage6.dll|  
 |CLSID actuel|dfa00c33-bf19-482e-a791-3c785b0149b4|8a474d89-6e2f-419c-8dd5-9b50edc8c787|  
-|Nom de fichier actuel|MSWB7.dll|MSWB7.dll|  
+|Nom de fichier actuel|MsWb7.dll|MSWB7.dll|  
   
  **Japonais (jpn), LCID 1041**  
   
@@ -233,8 +238,8 @@ ms.lasthandoff: 11/09/2017
 |---------------|------------------|-------------|  
 |CLSID précédent|E1E8F15E-8BEC-45df-83BF-50FF84D0CAB5|3D5DF14F-649F-4cbc-853D-F18FEDE9CF5D|  
 |Nom de fichier précédent|NaturalLanguage6.dll|NaturalLanguage6.dll|  
-|CLSID actuel|04096682-6ece-4e9e-90c1-52d81f0422ed|Aucun|  
-|Nom de fichier actuel|MsWb70011.dll|Aucun|  
+|CLSID actuel|04096682-6ece-4e9e-90c1-52d81f0422ed|None|  
+|Nom de fichier actuel|MsWb70011.dll|None|  
   
  **Néerlandais (nld), LCID 1043**  
   
@@ -243,7 +248,7 @@ ms.lasthandoff: 11/09/2017
 |CLSID précédent|2C9F6BEB-C5B0-42b6-A5EE-84C24DC0D8EF|F7A465EE-13FB-409a-B878-195B420433AF|  
 |Nom de fichier précédent|NaturalLanguage6.dll|NaturalLanguage6.dll|  
 |CLSID actuel|69483c30-a9af-4552-8f84-a0796ad5285b|CF923CB5-1187-43ab-B053-3E44BED65FFA|  
-|Nom de fichier actuel|MSWB7.dll|MSWB7.dll|  
+|Nom de fichier actuel|MsWb7.dll|MSWB7.dll|  
   
  **Russe (rus), LCID 1049**  
   
@@ -252,14 +257,14 @@ ms.lasthandoff: 11/09/2017
 |CLSID précédent|2CB6CDA4-1C14-4392-A8EC-81EEF1F2E079|E06A0DDD-E81A-4e93-8A8D-F386C3A1B670|  
 |Nom de fichier précédent|NaturalLanguage6.dll|NaturalLanguage6.dll|  
 |CLSID actuel|aaa3d3bd-6de7-4317-91a0-d25e7d3babc3|d42c8b70-adeb-4b81-a52f-c09f24f77dfa|  
-|Nom de fichier actuel|MSWB7.dll|MSWB7.dll|  
+|Nom de fichier actuel|MsWb7.dll|MSWB7.dll|  
   
 ##  <a name="newnew"></a> Langues pour lesquelles ni le nom de fichier précédent ni le nom de fichier actuel n'est NaturalLanguage6.dll  
  Pour les langues dans le tableau suivant, les noms de fichier des analyseurs lexicaux et des générateurs de formes dérivées précédents sont différents des noms de fichier des nouvelles versions. Ni le nom de fichier précédent ni le nom de fichier actuel n'est NaturalLanguage6.dll. Vous n'êtes pas obligé de remplacer des fichiers, et ce car le programme d'installation de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] copie la version actuelle et la version précédente des composants dans le dossier Binn. Toutefois, vous devez modifier un ensemble d'entrées de Registre pour spécifier la version précédente ou la version actuelle des composants.  
   
  **Liste des langues affectées**  
   
-|Langage|Abréviation<br />utilisée dans le<br />Registre|LCID|  
+|Langue|Abréviation<br />utilisée dans le<br />Registre|LCID|  
 |--------------|---------------------------------------|----------|  
 |Chinois simplifié|chs|2052|  
 |Chinois traditionnel|cht|1028|  
@@ -349,8 +354,8 @@ ms.lasthandoff: 11/09/2017
 |---------------|------------------|-------------|  
 |CLSID précédent|CCA22CF4-59FE-11D1-BBFF-00C04FB97FDA|CEDC01C7-59FE-11D1-BBFF-00C04FB97FDA|  
 |Nom de fichier précédent|Thawbrkr.dll|Thawbrkr.dll|  
-|CLSID actuel|F70C0935-6E9F-4ef1-9F06-7876536DB900|Aucun|  
-|Nom de fichier actuel|MsWb7001e.dll|Aucun|  
+|CLSID actuel|F70C0935-6E9F-4ef1-9F06-7876536DB900|None|  
+|Nom de fichier actuel|MsWb7001e.dll|None|  
   
  **Chinois traditionnel (zh-hk), LCID 3076**  
   
@@ -379,7 +384,7 @@ ms.lasthandoff: 11/09/2017
 |CLSID actuel|E0831C90-BAB0-4ca5-B9BD-EA254B538DAC|  
 |Nom de fichier actuel|MsWb70804.dll|  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Change the Word Breaker Used for US English and UK English](../../relational-databases/search/change-the-word-breaker-used-for-us-english-and-uk-english.md)   
  [Changements de comportement de la recherche en texte intégral](http://msdn.microsoft.com/library/573444e8-51bc-4f3d-9813-0037d2e13b8f)  
   

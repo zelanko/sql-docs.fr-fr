@@ -8,10 +8,11 @@ ms.service:
 ms.component: clr
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - CAST function
 - data deletions [CLR integration]
@@ -30,19 +31,20 @@ helpviewer_keywords:
 - invoking UDT methods
 - inserting data
 ms.assetid: 51b1a5f2-7591-4e11-bfe2-d88e0836403f
-caps.latest.revision: "14"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9778886e6a58ad58e30fa73aa66b98f1c5daf24e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 365c7171b4bc00f718add4261ebcebab1cd5dfd2
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="working-with-user-defined-types---manipulating-udt-data"></a>Utilisation des Types définis par l’utilisateur - de manipulation de données UDT
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)][!INCLUDE[tsql](../../includes/tsql-md.md)] fournit aucune syntaxe spécialisée pour les instructions INSERT, UPDATE ou DELETE lors de la modification des données dans les colonnes de type défini par l’utilisateur (UDT). Les fonctions [!INCLUDE[tsql](../../includes/tsql-md.md)] CAST ou CONVERT sont utilisées pour convertir des types de données natives en type UDT.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  [!INCLUDE[tsql](../../includes/tsql-md.md)] ne fournit aucune syntaxe spécialisée pour les instructions INSERT, UPDATE ou DELETE lors de la modification de données dans des colonnes de type défini par l'utilisateur (UDT). Les fonctions [!INCLUDE[tsql](../../includes/tsql-md.md)] CAST ou CONVERT sont utilisées pour convertir des types de données natives en type UDT.  
   
 ## <a name="inserting-data-in-a-udt-column"></a>Insertion de données dans une colonne UDT  
  Les éléments suivants [!INCLUDE[tsql](../../includes/tsql-md.md)] instructions insèrent trois lignes d’exemples de données dans le **Points** table. Le **Point** type de données se compose de X et Y entier des valeurs qui sont exposées comme propriétés de l’UDT. Vous devez utiliser soit la fonction CAST ou CONVERT pour effectuer un cast de la virgule délimitée par des valeurs X et Y le **Point** type. Les deux premières instructions utilisent la fonction CONVERT pour convertir une valeur de chaîne pour le **Point** type et la troisième instruction utilise la fonction CAST :  
@@ -269,6 +271,6 @@ WHERE ID = 2
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Utilisation de types définis par l’utilisateur dans SQL Server](../../relational-databases/clr-integration-database-objects-user-defined-types/working-with-user-defined-types-in-sql-server.md)  
+ [Utilisation des Types définis par l’utilisateur dans SQL Server](../../relational-databases/clr-integration-database-objects-user-defined-types/working-with-user-defined-types-in-sql-server.md)  
   
   

@@ -1,33 +1,40 @@
 ---
 title: "Nouveautés de l’Assistant de Migration de données (SQL Server) | Documents Microsoft"
 ms.custom: 
-ms.date: 10/03/2017
+ms.date: 02/02/2018
 ms.prod: sql-non-specified
 ms.prod_service: dma
 ms.service: 
-ms.component: dma
+ms.component: 
 ms.reviewer: 
 ms.suite: sql
-ms.technology: sql-dma
+ms.technology:
+- sql-dma
 ms.tgt_pltfrm: 
 ms.topic: article
 keywords: 
-helpviewer_keywords: Data Migration Assistant, new features
+helpviewer_keywords:
+- Data Migration Assistant, new features
 ms.assetid: 
 caps.latest.revision: 
 author: HJToland3
 ms.author: jtoland
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 05c94bd5803520aa5424cca837784f8f67382d16
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 9b72ea21423b96a1dbd19eb5fb8f0a3b99c59e0d
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="whats-new-in-data-migration-assistant"></a>Nouveautés de l’Assistant Migration de données
 
 Cette rubrique répertorie les ajouts dans chaque version de données de Migration Assistant (DMA).
+
+## <a name="dma-v34"></a>DMA v3.4
+La version de v3.4 de DMA inclut les ajouts suivants :
+- Prise en charge 2017 du serveur SQL en tant que source pour les migrations vers la base de données SQL Azure.
+- Améliorations apportées à la stabilité, de performances et d’évaluation de la vérification de règle.
 
 ## <a name="dma-v33"></a>DMA v3.3
 La version v3.3 de DMA permet la migration d’une instance de SQL Server locale vers la nouvelle version de SQL Server 2017, Windows et Linux. Pendant le processus de migration globale pour Windows et Linux sont identiques, la migration vers SQL Server 2017 pour Linux nécessite quelques considérations supplémentaires.

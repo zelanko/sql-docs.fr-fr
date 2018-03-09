@@ -3,8 +3,9 @@ title: "Résumé du Gestionnaire d’événements ADO | Documents Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,16 +16,16 @@ helpviewer_keywords:
 - events [ADO], about event handlers
 - event handlers [ADO]
 ms.assetid: b34f4472-5e04-4a2c-ab64-38d6eca31a69
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e7a241c21719e2181f8dbbce11742a273d8552d7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d9e182d5b1e1b8755250cbf620ac102a7eacde0f
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="ado-connection-and-recordset-events"></a>Connexion ADO et les événements de jeu d’enregistrements
 Deux objets ADO peuvent déclencher des événements : le [connexion](../../../ado/reference/ado-api/connection-object-ado.md) objet et la [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objet. Le **ConnectionEvent** famille relative aux opérations sur le **connexion** objet et le **RecordsetEvent** famille relative aux opérations sur le  **Jeu d’enregistrements** objet.
@@ -38,7 +39,7 @@ Deux objets ADO peuvent déclencher des événements : le [connexion](../../../
 |ConnectionEvent| Description|
 |---------------------|-----------------|
 |[BeginTransComplete, CommitTransComplete, RollbackTransComplete](../../../ado/reference/ado-api/begintranscomplete-committranscomplete-and-rollbacktranscomplete-events-ado.md)|**Gestion des transactions** : indique que la transaction actuelle sur la connexion a démarré, validée ou restaurée.|
-|[WillConnect](../../../ado/reference/ado-api/willconnect-event-ado.md), [ConnectComplete, se déconnecter](../../../ado/reference/ado-api/connectcomplete-and-disconnect-events-ado.md)|**Gestion des connexions** : Notification qui démarre la connexion actuelle, a démarré ou est terminée.|
+|[WillConnect](../../../ado/reference/ado-api/willconnect-event-ado.md), [ConnectComplete, Disconnect](../../../ado/reference/ado-api/connectcomplete-and-disconnect-events-ado.md)|**Gestion des connexions** : Notification qui démarre la connexion actuelle, a démarré ou est terminée.|
 |[WillExecute](../../../ado/reference/ado-api/willexecute-event-ado.md), [ExecuteComplete](../../../ado/reference/ado-api/executecomplete-event-ado.md)|**Gestion de l’exécution de la commande** : notification signalant que l’exécution de la commande en cours sur la connexion démarre ou s’est terminée.|
 |[InfoMessage](../../../ado/reference/ado-api/infomessage-event-ado.md)|**Information** : Notification qu’il existe des informations supplémentaires sur l’opération en cours.|
 

@@ -1,30 +1,31 @@
 ---
 title: "Guide d’architecture de traitement des requêtes | Microsoft Docs"
 ms.custom: 
-ms.date: 11/07/2017
+ms.date: 02/16/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: 
 ms.component: relational-databases-misc
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - guide, query processing architecture
 - query processing architecture guide
 ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb5
-caps.latest.revision: "5"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1c129951edea28bc36c2151d8b20d8502088653e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 625481946af508b626a6bc142113298298a7fca2
+ms.sourcegitcommit: 7ed8c61fb54e3963e451bfb7f80c6a3899d93322
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/20/2018
 ---
 # <a name="query-processing-architecture-guide"></a>Guide d’architecture de traitement des requêtes
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,6 +35,40 @@ Le [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] traite les requêt
 ## <a name="sql-statement-processing"></a>Traitement des instructions SQL
 
 Le traitement d'une instruction SQL unique est le cas le plus simple d'exécution par [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Les étapes de traitement d’une instruction `SELECT` unique qui ne fait référence qu’à des tables de base locales (et non à des vues ou à des tables distantes) illustrent le processus de base.
+
+#### <a name="logical-operator-precedence"></a>Priorité des opérateurs logiques
+
+Quand une instruction contient plusieurs opérateurs logiques, `NOT` est traité en premier, ensuite `AND` et enfin `OR`. Les opérateurs arithmétiques, et au niveau du bit, sont traités avant les opérateurs logiques. Pour plus d’informations, consultez [Priorité des opérateurs](../t-sql/language-elements/operator-precedence-transact-sql.md).
+
+Dans l'exemple suivant, la condition de couleur est associée au modèle de produit 21 et non au modèle de produit 20, car `AND` est prioritaire sur `OR`.
+
+```sql
+SELECT ProductID, ProductModelID
+FROM Production.Product
+WHERE ProductModelID = 20 OR ProductModelID = 21
+  AND Color = 'Red';
+GO
+```
+
+Vous pouvez modifier la signification de la requête en forçant le traitement de `OR` en premier lieu à l'aide de parenthèses. La requête suivante recherche uniquement les produits rouges dans les modèles 20 et 21.
+
+```sql
+SELECT ProductID, ProductModelID
+FROM Production.Product
+WHERE (ProductModelID = 20 OR ProductModelID = 21)
+  AND Color = 'Red';
+GO
+```
+
+L'utilisation de parenthèses, même quand elles ne sont pas nécessaires, peut améliorer la lisibilité des requêtes et limiter les risques d'erreurs dues à la priorité des opérateurs. L'utilisation de parenthèses ne diminue pas les performances du système. L'exemple suivant est plus lisible que le premier, bien qu'il soit identique sur le plan de la syntaxe.
+
+```sql
+SELECT ProductID, ProductModelID
+FROM Production.Product
+WHERE ProductModelID = 20 OR (ProductModelID = 21
+  AND Color = 'Red');
+GO
+```
 
 #### <a name="optimizing-select-statements"></a>Optimisation des instructions SELECT
 
@@ -48,7 +83,6 @@ Une instruction `SELECT` ne définit que :
 * les tables contenant les données source. Ceci est spécifié dans la clause `FROM` .
 * la manière dont les tables sont reliées de façon logique pour les besoins de l’instruction `SELECT` . Elle est définie dans les spécifications de jointure, qui peuvent être présentes dans la clause `WHERE` ou dans une clause `ON` à la suite de `FROM`.
 * Les conditions auxquelles doivent répondre les lignes des tables sources afin de correspondre à l’instruction `SELECT` . Elles sont spécifiées dans les clauses `WHERE` et `HAVING` .
-
 
 Un plan d'exécution de requête permet de définir : 
 
@@ -105,7 +139,7 @@ Lorsqu'une instruction SQL fait référence à une vue non indexée, l'analyseur
 
 Imaginons par exemple la vue suivante :
 
-```tsql
+```sql
 USE AdventureWorks2014;
 GO
 CREATE VIEW EmployeeName AS
@@ -118,7 +152,7 @@ GO
 
 Sur la base de cette vue, les deux instructions SQL exécutent les mêmes opérations sur les tables de base et produisent les mêmes résultats :
 
-```tsql
+```sql
 /* SELECT referencing the EmployeeName view. */
 SELECT LastName AS EmployeeLastName, SalesOrderID, OrderDate
 FROM AdventureWorks2014.Sales.SalesOrderHeader AS soh
@@ -142,7 +176,7 @@ La fonctionnalité Showplan de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md
 
 Les indicateurs placés sur une vue dans une requête peuvent être en conflit avec d'autres indicateurs découverts lors du développement de la vue pour l'accès à ses tables de base. Lorsque cela se produit, la requête retourne une erreur. Imaginons par exemple la vue suivante, dont la définition contient un indicateur de table :
 
-```tsql
+```sql
 USE AdventureWorks2014;
 GO
 CREATE VIEW Person.AddrState WITH SCHEMABINDING AS
@@ -154,7 +188,7 @@ WHERE a.StateProvinceID = s.StateProvinceID;
 
 Supposons à présent cette requête :
 
-```tsql
+```sql
 SELECT AddressID, AddressLine1, StateProvinceCode, CountryRegionCode
 FROM Person.AddrState WITH (SERIALIZABLE)
 WHERE StateProvinceCode = 'WA';
@@ -168,7 +202,7 @@ Les indicateurs peuvent se propager à différents niveaux des vues imbriquées.
 
 Si l’indicateur `FORCE ORDER` est utilisé dans une requête contenant une vue, l’ordre de jointure des tables de la vue est déterminé par la position de la vue dans la construction ordonnée. Par exemple, la requête suivante effectue une sélection dans trois tables et une vue :
 
-```tsql
+```sql
 SELECT * FROM Table1, Table2, View1, Table3
 WHERE Table1.Col1 = Table2.Col1 
     AND Table2.Col1 = View1.Col1
@@ -178,7 +212,7 @@ OPTION (FORCE ORDER);
 
 `View1` est définie comme suit :
 
-```tsql
+```sql
 CREATE VIEW View1 AS
 SELECT Colx, Coly FROM TableA, TableB
 WHERE TableA.ColZ = TableB.Colz;
@@ -240,7 +274,7 @@ L'utilisation d'indicateurs n'est pas autorisée dans les définitions de vues i
 
 Le processeur de requêtes [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] optimise les performances des vues partitionnées distribuées. L'aspect le plus important des performances d'une vue distribuée partitionnée est de minimiser la quantité de données à transférer entre des serveurs membres.
 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] construit des plans intelligents et dynamiques qui utilisent efficacement les requêtes distribuées pour accéder aux données à partir des tables membres distantes : 
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] construit des plans intelligents et dynamiques qui utilisent efficacement les requêtes distribuées pour accéder aux données à partir de tables membres distantes : 
 
 * Le processeur de requêtes utilise d’abord OLE DB pour récupérer les définitions des contraintes de vérification de chaque table membre. Ceci permet au processeur de requêtes de mapper la distribution des valeurs de clés entre les tables membres.
 * The Query Processor compares the key ranges specified in an SQL statement `WHERE` d’une instruction SQL au mappage qui représente la distribution des lignes dans les tables membres. Le processeur de requêtes construit alors un plan d'exécution des requêtes qui utilise les requêtes distribuées pour récupérer uniquement les lignes distantes requises pour exécuter l'instruction SQL. Le plan d'exécution est également construit de telle sorte que tout accès aux tables membres distantes pour les données ou les métadonnées est différé jusqu'à ce que les informations soient requises.
@@ -249,7 +283,7 @@ Par exemple, prenons un système où une table de clients est partitionnée entr
 
 Étudiez le plan d’exécution qui est construit pour chaque requête exécutée sur Server1 :
 
-```tsql
+```sql
 SELECT *
 FROM CompanyData.dbo.Customers
 WHERE CustomerID BETWEEN 3200000 AND 3400000;
@@ -259,7 +293,7 @@ Le plan d’exécution pour cette requête extrait les lignes avec des valeurs d
 
 Le processeur de requêtes [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] peut également créer une logique dynamique dans les plans d’exécution de requêtes pour les instructions SQL dont les valeurs de clés ne sont pas connues au moment de la construction du plan. Prenons par exemple cette procédure stockée :
 
-```tsql
+```sql
 CREATE PROCEDURE GetCustomer @CustomerIDParameter INT
 AS
 SELECT *
@@ -269,7 +303,7 @@ WHERE CustomerID = @CustomerIDParameter;
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ne peut pas prévoir quelle valeur de clé sera fournie par le paramètre `@CustomerIDParameter` à chaque exécution de la procédure. Puisque la valeur de la clé ne peut pas être prévue, le processeur de requêtes ne peut pas non plus prévoir quelle table membre devra faire l'objet d'un accès. Pour gérer ce cas, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] construit un plan d'exécution comportant une logique conditionnelle, également appelée filtres dynamiques, pour contrôler quelle table membre fait l'objet d'un accès en fonction de la valeur du paramètre d'entrée. En partant du principe que la procédure stockée `GetCustomer` a été exécutée sur Server1, la logique du plan d’exécution peut être représentée sous la forme suivante :
 
-```tsql
+```sql
 IF @CustomerIDParameter BETWEEN 1 and 3299999
    Retrieve row from local table CustomerData.dbo.Customer_33
 ELSE IF @CustomerIDParameter BETWEEN 3300000 and 6599999
@@ -288,9 +322,9 @@ Le plan d'exécution des procédures stockées et des déclencheurs est exécut�
 
 ## <a name="execution-plan-caching-and-reuse"></a>Mise en mémoire cache et réutilisation du plan d'exécution
 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] dispose d'un pool de mémoire utilisé pour stocker les plans d'exécution et les tampons de données. Le pourcentage de ce pool alloué aux plans d'exécution ou aux tampons de données évolue de façon dynamique en fonction de l'état du système. La part du pool de mémoire utilisée pour stocker les plans d’exécution est appelée « cache du plan ».
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] dispose d’un pool de mémoire utilisé pour stocker les plans d’exécution et les mémoires tampons de données. Le pourcentage de ce pool alloué aux plans d'exécution ou aux tampons de données évolue de façon dynamique en fonction de l'état du système. La part du pool de mémoire utilisée pour stocker les plans d’exécution est appelée « cache du plan ».
 
-Les plans d'exécution de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] comprennent les composants principaux suivants : 
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Les plans d’exécution comprennent les composants principaux suivants : 
 
 * Plan d’exécution de requête Le corps du plan d’exécution est une structure de données réentrante et en lecture seule qui peut être utilisée par un nombre quelconque d’utilisateurs. Il constitue le plan de requête. Aucun contexte d'utilisateur n'est stocké dans le plan de requête. Il n'y a jamais plus d'une ou deux copies du plan de requête en mémoire : une copie pour toutes les exécutions en série et une autre pour toutes les exécutions en parallèle. La copie en parallèle couvre toutes les exécutions en parallèle, indépendamment de leur degré de parallélisme. 
 * Contexte d’exécution Chaque utilisateur exécutant actuellement la requête dispose d’une structure de données qui contient les données spécifiques à son exécution, telles que la valeur des paramètres. Cette structure de données constitue le contexte d'exécution. Les structures de données du contexte d'exécution sont réutilisées. Si un utilisateur exécute une requête et qu'une des structures n'est pas en cours d'utilisation, elle est réinitialisée avec le contexte du nouvel utilisateur. 
@@ -299,11 +333,11 @@ Les plans d'exécution de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]
 
 Quand une instruction SQL est exécutée dans [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], le moteur relationnel parcourt d’abord le cache de plan afin de voir s’il existe un plan d’exécution pour la même instruction SQL. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] réutilise le plan existant qu’il trouve, évitant ainsi la recompilation de l’instruction SQL. S'il n'existe aucun plan d'exécution, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] en génère un nouveau pour la requête.
 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] dispose d'un algorithme efficace qui permet de trouver un plan d'exécution existant pour toute instruction SQL spécifique. Dans la plupart des systèmes, les ressources minimales utilisées par cette analyse sont inférieures à celles économisées par la réutilisation de plans existants au lieu de la compilation de toutes les instructions SQL.
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] dispose d’un algorithme efficace qui permet de trouver un plan d’exécution existant pour toute instruction SQL spécifique. Dans la plupart des systèmes, les ressources minimales utilisées par cette analyse sont inférieures à celles économisées par la réutilisation de plans existants au lieu de la compilation de toutes les instructions SQL.
 
 Les algorithmes qui permettent d'associer de nouvelles instructions SQL à des plans d'exécution inutilisés existants en mémoire cache imposent que toutes les références d'objets soient complètes. Par exemple, la première de ces instructions `SELECT` n'est pas associée à un plan existant, contrairement à la seconde :
 
-```tsql
+```sql
 SELECT * FROM Person;
 
 SELECT * FROM Person.Person;
@@ -383,13 +417,13 @@ L'utilisation de paramètres, notamment de marqueurs de paramètres dans les app
  
 La seule différence entre les deux instructions `SELECT` suivantes porte sur les valeurs comparées dans la clause `WHERE` :
 
-```tsql
+```sql
 SELECT * 
 FROM AdventureWorks2014.Production.Product 
 WHERE ProductSubcategoryID = 1;
 ```
 
-```tsql
+```sql
 SELECT * 
 FROM AdventureWorks2014.Production.Product 
 WHERE ProductSubcategoryID = 4;
@@ -401,7 +435,7 @@ La séparation des constantes de l'instruction SQL à l'aide de paramètres perm
 
 * Dans Transact-SQL, utilisez `sp_executesql`: 
 
-   ```tsql
+   ```sql
    DECLARE @MyIntParm INT
    SET @MyIntParm = 1
    EXEC sp_executesql
@@ -436,7 +470,7 @@ Si vous ne construisez pas explicitement des paramètres dans la conception de v
 
 En cas d’activation du paramétrage forcé, il est toujours possible d’utiliser le paramétrage simple. Par exemple, la requête suivante ne peut être paramétrée conformément aux règles de paramétrage forcé :
 
-```tsql
+```sql
 SELECT * FROM Person.Address
 WHERE AddressID = 1 + 2;
 ```
@@ -454,18 +488,18 @@ Si vous exécutez une instruction SQL sans paramètres, [!INCLUDE[ssNoVersion](.
 
 Imaginons l'instruction suivante :
 
-```tsql
+```sql
 SELECT * FROM AdventureWorks2014.Production.Product 
 WHERE ProductSubcategoryID = 1;
 ```
 
 Vous pouvez spécifier comme paramètre la valeur 1 de la fin de l'instruction. Le moteur relationnel génère le plan d'exécution pour ce lot comme si un paramètre avait été spécifié au lieu de la valeur 1. En raison de ce paramétrage simple, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] reconnaît que les deux instructions suivantes génèrent essentiellement le même plan d’exécution et réutilise le premier plan pour la deuxième instruction :
 
-```tsql
+```sql
 SELECT * FROM AdventureWorks2014.Production.Product 
 WHERE ProductSubcategoryID = 1;
 ```
-```tsql
+```sql
 SELECT * FROM AdventureWorks2014.Production.Product 
 WHERE ProductSubcategoryID = 4;
 ```
@@ -561,7 +595,7 @@ La préparation d'une instruction est plus efficace si vous utilisez les marqueu
 
 Premièrement, l'application peut exécuter une requête différente pour chaque produit demandé :
 
-```tsql
+```sql
 SELECT * FROM AdventureWorks2014.Production.Product
 WHERE ProductID = 63;
 ```
@@ -569,7 +603,7 @@ WHERE ProductID = 63;
 Deuxièmement, l'application peut procéder comme suit : 
 
 1. Préparer une instruction contenant un marqueur de paramètres (?) :  
-   ```tsql
+   ```sql
    SELECT * FROM AdventureWorks2014.Production.Product  
    WHERE ProductID = ?;
    ```
@@ -599,7 +633,7 @@ Les valeurs de paramètres sont détectées pendant la compilation ou la recompi
 
 ## <a name="parallel-query-processing"></a>Traitement de requêtes en parallèle
 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] permet les requêtes parallèles afin d'optimiser leur exécution et les opérations d'index sur les ordinateurs dotés de plusieurs processeurs (ou unités centrales). Comme [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] peut exécuter une requête ou une opération d’index en parallèle à l’aide de plusieurs threads de travail du système d’exploitation, l’opération peut être exécutée rapidement et efficacement.
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] permet les requêtes parallèles afin d’optimiser leur exécution et les opérations d’index sur les ordinateurs dotés de plusieurs processeurs (ou unités centrales). Comme [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] peut exécuter une requête ou une opération d’index en parallèle à l’aide de plusieurs threads de travail du système d’exploitation, l’opération peut être exécutée rapidement et efficacement.
 
 Durant l'optimisation, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] recherche les requêtes ou les opérations d'index qui pourraient tirer profit d'une exécution en parallèle. Pour ces requêtes, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] insère des opérateurs d'échange dans le plan d'exécution de la requête afin de la préparer à l'exécution en parallèle. Un opérateur d'échange est un opérateur dans un plan d'exécution de requêtes qui assure la gestion du processus, la redistribution des données et le contrôle de flux. L’opérateur d’échange inclut les opérateurs logiques `Distribute Streams`, `Repartition Streams`et `Gather Streams` comme sous-types, qui peuvent apparaître dans la sortie Showplan du plan de requête d’une requête parallèle. 
 
@@ -613,7 +647,7 @@ L’optimiseur de requête [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)
 
 ### <a name="DOP"></a> Degré de parallélisme
 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] détecte automatiquement le meilleur degré de parallélisme pour chaque instance d'une exécution de requête en parallèle ou d'une opération DDL (Data Definition Language) d'index. Cette détection se fait sur la base des critères suivants : 
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] détecte automatiquement le meilleur degré de parallélisme pour chaque instance d’une exécution de requête en parallèle ou d’une opération DDL (Data Definition Language) d’index. Cette détection se fait sur la base des critères suivants : 
 
 1. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] fonctionne sur un ordinateur doté de plusieurs microprocesseurs ou UC, tel qu'un ordinateur à multitraitement symétrique (SMP, symmetric multiprocessing).  
   Seuls les ordinateurs dotés de plusieurs UC peuvent utiliser des requêtes en parallèle. 
@@ -654,7 +688,7 @@ La requête suivante compte le nombre de commandes passées dans le courant du t
 
 Cet exemple utilise des noms de tables et de colonnes théoriques.
 
-```tsql
+```sql
 SELECT o_orderpriority, COUNT(*) AS Order_Count
 FROM orders
 WHERE o_orderdate >= '2000/04/01'
@@ -672,7 +706,7 @@ WHERE o_orderdate >= '2000/04/01'
 
 Supposons que les index suivants soient définis dans les tables `lineitem` et `orders` :
 
-```tsql
+```sql
 CREATE INDEX l_order_dates_idx 
    ON lineitem
       (l_orderkey, l_receiptdate, l_commitdate, l_shipdate)
@@ -765,7 +799,7 @@ Microsoft [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] prend en charge
 * Noms de serveurs liés  
   Les procédures stockées système `sp_addlinkedserver` et `sp_addlinkedsrvlogin` servent à donner un nom de serveur à une source de données OLE DB. Les objets inclus dans ces serveurs liés peuvent être référencés dans des instructions Transact-SQL en utilisant un nom en quatre parties. Par exemple, si le nom d’un serveur lié `DeptSQLSrvr` est défini par rapport à une autre instance de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], l’instruction suivante fait référence à une table de ce serveur : 
   
-  ```tsql
+  ```sql
   SELECT JobTitle, HireDate 
   FROM DeptSQLSrvr.AdventureWorks2014.HumanResources.Employee;
   ```
@@ -775,7 +809,7 @@ Microsoft [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] prend en charge
 * Noms de connecteurs appropriés  
   Dans le cas de références rares à une source de données, la fonction `OPENROWSET` ou `OPENDATASOURCE` est spécifiée avec les informations nécessaires à la connexion au serveur lié. Il est donc possible de faire référence à l’ensemble de lignes comme à une table dans les instructions Transact-SQL : 
   
-  ```tsql
+  ```sql
   SELECT *
   FROM OPENROWSET('Microsoft.Jet.OLEDB.4.0',
         'c:\MSOffice\Access\Samples\Northwind.mdb';'Admin';'';
@@ -811,13 +845,13 @@ L'élimination de partition est maintenant réalisée dans cette opération de r
 
 In addition, the Query Optimizer is extended so that a seek or scan operation with one condition can be done on `PartitionID` (comme colonne principale logique) et éventuellement d'autres colonnes clés d'index, puis une recherche de second niveau, avec une condition différente, peut être réalisée sur une ou plusieurs colonnes supplémentaires, pour chaque valeur distincte répondant à la qualification de l'opération de recherche de premier niveau. Autrement dit, cette opération, appelée analyse par saut, permet à l’optimiseur de requête d’effectuer une opération de recherche ou d’analyse basée sur une condition pour déterminer à quelles partitions accéder et une opération de recherche d’index de second niveau au sein de cet opérateur pour retourner les lignes de ces partitions qui répondent à une condition différente. Examinez, par exemple, la requête suivante.
 
-```tsql
+```sql
 SELECT * FROM T WHERE a < 10 and b = 2;
 ```
 
 Dans cet exemple, supposons que la table T définie comme `T(a, b, c)`est partitionnée sur la colonne a et possède un index cluster sur la colonne b. Les limites de partition pour la table T sont définies par la fonction de partition suivante :
 
-```tsql
+```sql
 CREATE PARTITION FUNCTION myRangePF1 (int) AS RANGE LEFT FOR VALUES (3, 7, 10);
 ```
 
@@ -839,7 +873,7 @@ Vous pouvez examiner les plans d’exécution de requêtes sur les tables et les
 
 #### <a name="partition-information-enhancements"></a>Améliorations apportées aux informations de partition
 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] fournit des informations de partitionnement améliorées pour les plans d'exécution de compilation et au moment de l'exécution. Les plans d'exécution fournissent désormais les informations suivantes :
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] fournit des informations de partitionnement améliorées pour les plans d’exécution de compilation et au moment de l’exécution. Les plans d'exécution fournissent désormais les informations suivantes :
 
 * Un attribut `Partitioned` facultatif qui indique qu’un opérateur, tel que `seek`, `scan`, `insert`, `update`, `merge`ou `delete`, est effectué sur une table partitionnée.  
 * Un nouvel élément `SeekPredicateNew` avec un sous-élément `SeekKeys` qui inclut `PartitionID` comme la colonne clé d’index principale et des conditions de filtrage qui spécifient les recherches de plage sur `PartitionID`. La présence de deux sous-éléments `SeekKeys` indique qu’une opération d’analyse par saut sur `PartitionID` est utilisée.   
@@ -847,7 +881,7 @@ Vous pouvez examiner les plans d’exécution de requêtes sur les tables et les
 
 Pour démontrer comment ces informations sont affichées dans la sortie du plan d’exécution graphique et dans la sortie du plan d’exécution de requêtes XML, considérez la requête suivante sur la table partitionnée `fact_sales`. Cette requête met à jour les données dans deux partitions. 
 
-```tsql
+```sql
 UPDATE fact_sales
 SET quantity = quantity * 2
 WHERE date_id BETWEEN 20080802 AND 20080902;
@@ -969,14 +1003,14 @@ Pour améliorer les performances des requêtes qui accèdent à une grande quant
 * Créez un index cluster sur chaque grande table partitionnée pour tirer parti des optimisations d'analyse d'arbre B (B-tree).
 * Appliquez les recommandations mentionnées dans le livre blanc « [The Data Loading Performance Guide](http://msdn.microsoft.com/en-us/library/dd425070.aspx)» lors du chargement en masse des données dans des tables partitionnées.
 
-### <a name="example"></a>Exemple
+### <a name="example"></a> Exemple
 
 L'exemple suivant crée une base de données de test contenant une table unique avec sept partitions. Utilisez les outils décrits précédemment lors de l'exécution des requêtes dans cet exemple pour afficher des informations de partitionnement pour le plan de compilation et le plan au moment de l'exécution. 
 
 > [!NOTE]
 > Cet exemple insère plus d'un million de lignes dans la table. En fonction de votre matériel, l'exécution de cet exemple peut prendre plusieurs minutes. Avant d'exécuter cet exemple, vérifiez que l'espace disque dont vous disposez est supérieur à 1,5 Go. 
  
-```tsql
+```sql
 USE master;
 GO
 IF DB_ID (N'db_sales_test') IS NOT NULL
@@ -1044,4 +1078,5 @@ GO
  [Événements étendus](../relational-databases/extended-events/extended-events.md)  
  [Bonnes pratiques relatives au Magasin des requêtes](../relational-databases/performance/best-practice-with-the-query-store.md)  
  [Estimation de la cardinalité](../relational-databases/performance/cardinality-estimation-sql-server.md)  
- [Traitement des requêtes adaptatives](../relational-databases/performance/adaptive-query-processing.md)
+ [Traitement des requêtes adaptatives](../relational-databases/performance/adaptive-query-processing.md)   
+ [Priorité des opérateurs](../t-sql/language-elements/operator-precedence-transact-sql.md)

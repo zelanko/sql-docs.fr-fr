@@ -18,16 +18,16 @@ helpviewer_keywords:
 - sessions
 - extend events [SQL Server]
 ms.assetid: c3c92544-351a-4bce-a06a-1f2a47e494e9
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bea1e28b3bd0530658611334ea55af7312c5aa93
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 09eae3690643f45896325c141bd79ac218f27c04
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="sql-server-extended-events-sessions"></a>Sessions Événements étendus SQL Server
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -68,7 +68,7 @@ ms.lasthandoff: 11/17/2017
   
 -   Un même événement (Événement 1) ou une même cible (Cible 1) peuvent être activés dans plusieurs sessions.  
   
- Les sessions présentent les caractéristiques suivantes :  
+ Les sessions présentent les caractéristiques suivantes :  
   
 -   Les actions et les prédicats sont liés aux événements session par session. Si l'événement Événement 1 dans la session Session A est lié à l'action Action 1 et au prédicat Prédicat Z, cela n'affecte en aucune façon la possibilité que l'événement Événement 1 dans la session Session B soit lié aux actions Action 2 et Action 3 sans prédicat.  
   
@@ -84,7 +84,7 @@ ms.lasthandoff: 11/17/2017
   
  L'architecture des Événements étendus fournit un système flexible qui permet d'utiliser conjointement divers objets pour résoudre des problèmes spécifiques.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Événements étendus](../../relational-databases/extended-events/extended-events.md)  
   
   

@@ -2,18 +2,17 @@
 title: "Programmation du modèle multidimensionnel - propriétés de cube | Documents Microsoft"
 ms.custom: 
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - Collation property
 - ID property
@@ -36,19 +35,20 @@ helpviewer_keywords:
 - ProcessingPriority property
 - ProactiveCaching property
 ms.assetid: 72ca3387-620d-4473-8e23-7fe1f2b3d5bf
-caps.latest.revision: "40"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 5fc44854185830f93ff672cae6a0ebc68a88aa80
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 0d22d6fd46939b435cc0a8a6f25268aea0a192d6
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="cube-properties---multidimensional-model-programming"></a>Programmation du modèle multidimensionnel - propriétés de cube
-  Les cubes ont un grand nombre de propriétés que vous pouvez définir pour affecter le comportement à l'échelle du cube. Ces propriétés sont présentées dans le tableau suivant.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Les cubes ont un grand nombre de propriétés que vous pouvez définir pour affecter le comportement à l'échelle du cube. Ces propriétés sont présentées dans le tableau suivant.  
   
 > [!NOTE]  
 >  Certaines propriétés sont définies automatiquement lors de la création du cube et ne peuvent pas être modifiées.  
@@ -73,7 +73,7 @@ ms.lasthandoff: 11/17/2017
 |**ScriptErrorHandlingMode**|Détermine la gestion des erreurs. Les options sont **IgnoreNone** ou **IgnoreAll**|  
 |**Source**|Affiche la vue de source de données utilisée pour le cube.|  
 |**StorageLocation**|Spécifie l'emplacement de stockage du système de fichiers pour le cube. Si aucun n'est spécifié, l'emplacement est hérité de la base de données qui contient l'objet du cube.|  
-|**StorageMode**|Spécifie le mode de stockage pour le cube. Les valeurs sont **MOLAP**, **ROLAP**, ou **HOLAP ***.**|  
+|**StorageMode**|Spécifie le mode de stockage pour le cube. Les valeurs sont **MOLAP**, **ROLAP**, ou **HOLAP**.|  
 |**Visible**|Détermine la visibilité du cube.|  
   
 > [!NOTE]  

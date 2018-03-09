@@ -1,5 +1,5 @@
 ---
-title: "Transformation de Dimension à variation lente | Documents Microsoft"
+title: "Dimension à variation lente, transformation | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -20,17 +20,16 @@ helpviewer_keywords:
 - SCD transformation
 - updating slowly changing dimensions
 ms.assetid: f8849151-c171-4725-bd25-f2c33a40f4fe
-caps.latest.revision: 55
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 59f467f9aee0637bc9463c39b51b30e47eeaff47
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: d0b0582426598b30ed955bc1a2e2aae47c963097
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="slowly-changing-dimension-transformation"></a>Transformation de dimension à variation lente
   La transformation de dimension à variation lente coordonne la mise à jour et l'insertion d'enregistrements dans des tables de dimension d'entrepôts de données. Par exemple, vous pouvez utiliser cette transformation pour configurer les sorties de la transformation qui insèrent et mettent à jour des enregistrements dans la table DimProduct de la base de données [!INCLUDE[ssSampleDBDWobject](../../../includes/sssampledbdwobject-md.md)] à l’aide des données de la table Production.Products de la base de données OLTP AdventureWorks.  
@@ -93,7 +92,7 @@ ms.lasthandoff: 08/03/2017
  Vous pouvez consigner les appels émis par la transformation de dimension à variation lente vers des fournisseurs de données externes. Vous pouvez utiliser cette fonctionnalité de journalisation pour résoudre des problèmes liés à des connexions, des commandes et des requêtes à des sources de données externes qu'effectue la transformation de dimension à variation lente. Pour consigner les appels que la transformation de dimension à variation lente adresse à des fournisseurs de données externes, activez la journalisation des packages et sélectionnez l’événement **Diagnostic** au niveau du package. Pour plus d’informations, consultez [Outils de dépannage pour l’exécution des packages](../../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md).  
   
 ## <a name="configuring-the-slowly-changing-dimension-transformation"></a>Configuration de la transformation de dimension à variation lente  
- Vous pouvez définir des propriétés au moyen du concepteur [!INCLUDE[ssIS](../../../includes/ssis-md.md)] ou par programmation.  
+ Vous pouvez définir les propriétés par le biais du concepteur [!INCLUDE[ssIS](../../../includes/ssis-md.md)] ou par programmation.  
   
  Pour plus d'informations sur les propriétés définissables dans la boîte de dialogue **Éditeur avancé** ou par programmation, cliquez sur l'une des rubriques suivantes :  
   
@@ -110,12 +109,11 @@ ms.lasthandoff: 08/03/2017
   
 -   L'Assistant Chargement de dimension, qui vous guide lors des étapes de configuration de la transformation de dimension à variation lente et de création du flux de données pour les sorties de transformation. Pour modifier la configuration des dimensions à variation lente, réexécutez l'Assistant Chargement de dimension. Pour plus d’informations, consultez [Configurer les sorties à l’aide de l’Assistant Dimension à variation lente](../../../integration-services/data-flow/transformations/configure-outputs-using-the-slowly-changing-dimension-wizard.md).  
   
-## <a name="related-tasks"></a>Tâches associées  
+## <a name="related-tasks"></a>Related Tasks  
  [Définir les propriétés d’un composant de flux de données](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)  
   
-## <a name="related-content"></a>Contenu connexe  
+## <a name="related-content"></a>Contenu associé  
   
 -   Entrée de blog [Optimizing the Slowly Changing Dimension Wizard](http://go.microsoft.com/fwlink/?LinkId=199481)(Optimisation de l’Assistant Dimension à variation lente) sur blogs.msdn.com.  
   
   
-

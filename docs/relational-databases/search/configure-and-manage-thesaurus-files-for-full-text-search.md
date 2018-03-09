@@ -1,11 +1,15 @@
 ---
 title: "Configurer et gérer les fichiers de dictionnaire des synonymes pour la recherche en texte intégral | Microsoft Docs"
 ms.custom: 
-ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.date: 12/04/2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: search
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-search
+ms.suite: sql
+ms.technology:
+- dbe-search
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -13,19 +17,20 @@ helpviewer_keywords:
 - thesaurus [full-text search], configuring
 - thesaurus [full-text search]
 ms.assetid: 3ef96a63-8a52-45be-9a1f-265bff400e54
-caps.latest.revision: "84"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 669070a97978afa1c461cb8cfbc6e14143232432
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 849c650522d90348fd7bec2d115dd3af04b1c18b
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="configure-and-manage-thesaurus-files-for-full-text-search"></a>Configurer et gérer les fichiers de dictionnaire des synonymes pour la recherche en texte intégral
-Les requêtes de recherche en texte intégral [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peuvent rechercher des synonymes des termes spécifiés par l’utilisateur grâce à un *dictionnaire des synonymes* pour la recherche en texte intégral. Chaque dictionnaire des synonymes définit un jeu de synonymes pour une langue spécifique. En développant un dictionnaire des synonymes adapté à vos données de texte intégral, vous pouvez élargir efficacement l'étendue des requêtes de texte intégral sur ces données.
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Les requêtes de recherche en texte intégral peuvent rechercher des synonymes des termes spécifiés par l’utilisateur grâce à un *dictionnaire des synonymes* pour la recherche en texte intégral. Chaque dictionnaire des synonymes définit un jeu de synonymes pour une langue spécifique. En développant un dictionnaire des synonymes adapté à vos données de texte intégral, vous pouvez élargir efficacement l'étendue des requêtes de texte intégral sur ces données.
 
 La mise en correspondance avec le dictionnaire des synonymes intervient pour toutes les requêtes [FREETEXT](../../t-sql/queries/freetext-transact-sql.md) et [FREETEXTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md) et pour toutes les requêtes [CONTAINS](../../t-sql/queries/contains-transact-sql.md) et [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) qui spécifient la clause `FORMSOF THESAURUS`.
   
@@ -175,7 +180,7 @@ Le paramètre de signes diacritiques d’un dictionnaire des synonymes est spéc
 |Paramètre de signes diacritiques|Valeur|XML|  
 |------------------------|-----------|---------|  
 |ne respectent pas les accents|0|`<diacritics_sensitive>0</diacritics_sensitive>`|  
-|respectent les accents|1|`<diacritics_sensitive>1</diacritics_sensitive>`|  
+|respectent les accents| 1|`<diacritics_sensitive>1</diacritics_sensitive>`|  
   
 > [!NOTE]  
 >  Ce paramètre ne peut être appliqué qu'une seule fois dans le fichier et s'applique à tous les modèles de recherche au sein du fichier. Vous ne pouvez pas définir ce paramètre pour des modèles individuels.  
@@ -200,7 +205,7 @@ Vous pouvez configurer le dictionnaire des synonymes d’une langue donnée en m
   
 5.  Utilisez [sp_fulltext_load_thesaurus_file](../../relational-databases/system-stored-procedures/sp-fulltext-load-thesaurus-file-transact-sql.md) pour charger le contenu du fichier du dictionnaire des synonymes dans tempdb, en spécifiant l’identificateur de paramètres régionaux (LCID) qui correspond à la langue du fichier. Par exemple, pour le fichier du dictionnaire des synonymes anglais, tsenu.xml, le LCID correspondant est 1033.  
   
-    ```tsql  
+    ```sql  
     USE AdventureWorks;  
     EXEC sys.sp_fulltext_load_thesaurus_file 1033;  
     GO
@@ -226,7 +231,7 @@ Vous pouvez configurer le dictionnaire des synonymes d’une langue donnée en m
   
 -   Un dictionnaire des synonymes ne doit pas contenir d’entrées en double parmi les entrées `<sub>` des jeux d’expansion et les éléments `<pat>` des jeux de remplacement.  
 
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [CONTAINS &#40;Transact-SQL&#41;](../../t-sql/queries/contains-transact-sql.md)   
  [CONTAINSTABLE &#40;Transact-SQL&#41;](../../relational-databases/system-functions/containstable-transact-sql.md)   
  [FREETEXT &#40;Transact-SQL&#41;](../../t-sql/queries/freetext-transact-sql.md)   

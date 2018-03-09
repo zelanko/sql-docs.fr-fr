@@ -2,37 +2,42 @@
 title: "Configurer SQL Server sur une installation Server Core | Microsoft Docs"
 ms.custom: 
 ms.date: 09/05/2017
-ms.prod:
-- sql-server-2016
-- sql-server-2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: install-windows
 ms.reviewer: 
-ms.suite: 
-ms.technology: setup-install
+ms.suite: sql
+ms.technology:
+- setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - IsHadrEnabled server property
 - Server Core Installation [SQL Server]
 ms.assetid: ed6e5e94-4b8d-422a-a17e-61b05a4df903
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: 2356991aa91bc1390638d5cb84935068c79f2fd3
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+manager: craigg
+ms.openlocfilehash: a453e4c8a5ec3bc3e93d5c7f7e6ce6f1e354d21c
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="configure-sql-server-on-a-server-core-installation"></a>Configurer SQL Server sur une installation Server Core
-Cette rubrique fournit des détails sur la configuration de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur une installation Server Core.  
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
+Cet article fournit des détails sur la configuration de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur une installation Server Core.  
 
 ##  <a name="BKMK_ConfigureWindows"></a> Configurer et gérer Server Core sur Windows Server  
-Cette section fournit des références aux rubriques qui vous guident pour la configuration et la gestion d'une installation Server Core.  
+Cette section fournit des références aux articles qui vous guident pour la configuration et la gestion d’une installation Server Core.  
   
 Certaines fonctionnalités de [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)] ne sont pas prises en charge en mode Server Core.  Une partie de ces fonctionnalités peuvent être installées sur un ordinateur client ou un serveur différent qui n'exécute pas Server Core, et être connectées aux services de moteur de base de données installés sur Server Core.  
   
-Pour plus d'informations sur la configuration et la gestion d'une installation Server Core à distance, consultez les rubriques suivantes :  
+Pour plus d’informations sur la configuration et la gestion d’une installation Server Core à distance, consultez les articles suivants :  
   
 - [Installation de Server Core](http://technet.microsoft.com/windows-server-docs/get-started/getting-started-with-server-core)  
   
@@ -114,7 +119,7 @@ Ces étapes doivent être effectuées sur un PC exécutant l’édition cliente 
   
 7. Sélectionnez l'onglet **Haute disponibilité AlwaysOn** .  
   
-8. Vérifiez que champ Nom du cluster de basculement Windows contient le nom du nœud de cluster de basculement local. Si ce champ est vide, cette instance de serveur ne prend pas actuellement en charge les groupes de disponibilité AlwaysOn. L'ordinateur local n'est pas un nœud de cluster, le cluster WSFC a été arrêté, ou cette édition de [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)] ne prend pas en charge les groupes de disponibilité AlwaysOn.  
+8. Vérifiez que champ Nom du cluster de basculement Windows contient le nom du nœud de cluster de basculement local. Si ce champ est vide, cette instance de serveur ne prend pas actuellement en charge les groupes de disponibilité AlwaysOn. L’ordinateur local n’est pas un nœud de cluster, le cluster WSFC a été arrêté ou bien cette édition de [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)] ne prend pas en charge les groupes de disponibilité AlwaysOn.  
   
 9. Activez la case à cocher Activer les groupes de disponibilité AlwaysOn, puis cliquez sur OK.  
   
@@ -153,7 +158,7 @@ Enable-SqlAlwaysOn -Path SQLSERVER:\SQL\Machine\Instance
  Effectuez les actions décrites ci-dessous pour configurer l’accès à distance d’une instance de [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)] qui s’exécute sur Windows Server Core.  
   
 ### <a name="enable-remote-connections-on-the-instance-of-includessnoversionincludesssnoversion-mdmd"></a>Activer les connexions distantes sur l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
- Pour activer les connexions distantes, utilisez SQLCMD.exe localement et exécutez les instructions suivantes sur l'instance de Server Core :  
+ Pour activer les connexions distantes, utilisez SQLCMD.exe localement et exécutez les instructions suivantes sur l'instance de Server Core :  
   
 -   `EXEC sys.sp_configure N'remote access', N'1'`  
   
@@ -226,10 +231,10 @@ $Tcp
 ##  <a name="BKMK_troubleshoot"></a> Utiliser les outils de dépannage  
  Vous pouvez utiliser l’ [utilitaire SQLdiag](../../tools/sqldiag-utility.md) pour collecter des fichiers journaux et des fichiers de données à partir de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et depuis d’autres types de serveurs, mais aussi analyser vos serveurs au fil des jours ou trouver des solutions à des problèmes spécifiques les concernant. SQLdiag a été conçu pour accélérer et simplifier la collecte d'informations de diagnostic pour les services d'assistance Microsoft.  
   
- Vous pouvez lancer l'utilitaire dans l'invite de commandes d'administrateur sur Server Core, à l'aide de la syntaxe spécifiée dans la rubrique : [SQLdiag Utility](../../tools/sqldiag-utility.md).  
+ Vous pouvez lancer l’utilitaire à partir de l’invite de commandes d’administrateur sur Server Core, à l’aide de la syntaxe spécifiée dans l’article : [Utilitaire SQLdiag](../../tools/sqldiag-utility.md).  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Installer SQL Server sur Server Core](../../database-engine/install-windows/install-sql-server-on-server-core.md)   
- [Rubriques de procédures relatives à l’installation](http://msdn.microsoft.com/library/59de41e7-557f-462a-8914-53ec35496baa)  
+ [Articles de procédures relatives à l’installation](http://msdn.microsoft.com/library/59de41e7-557f-462a-8914-53ec35496baa)  
   
   

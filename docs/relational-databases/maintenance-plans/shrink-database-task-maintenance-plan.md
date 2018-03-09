@@ -2,9 +2,12 @@
 title: "Tâche Réduire la base de données (Plan de maintenance) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: maintenance-plans
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,18 +18,18 @@ f1_keywords:
 helpviewer_keywords: Shrink Database Task dialog box
 ms.assetid: a9874cac-cded-4145-9c38-8aafd267dbee
 caps.latest.revision: "28"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2dc6184a59756901c55bc15177914e9e08767da2
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 0b71a3f5cf438b4ac5f3cce071329a81cff88d25
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="shrink-database-task-maintenance-plan"></a>Tâche Réduire la base de données (Plan de maintenance)
-  Utilisez la boîte de dialogue **Tâche Réduire la base de données** pour créer une tâche qui tente de réduire la taille des bases de données sélectionnées. Utilisez les options ci-dessous pour déterminer la quantité d'espace inutilisé à conserver dans la base de données après sa réduction (plus le pourcentage est élevé, moins la base la base de données sera réduite). La valeur est calculée à partir du pourcentage des données effectivement présentes dans la base de données. Par exemple, une base de données de 100 Mo qui contiendrait 60 Mo de données et 40 Mo d'espace libre, avec un pourcentage d'espace libre de 50 %, pourrait conduire à 60 Mo de données et 30 Mo d'espace libre (en effet, 50 % de 60 Mo font 30 Mo). Seul l'espace supplémentaire de la base de données est éliminé. Les valeurs valides sont comprises entre 0 et 100.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Utilisez la boîte de dialogue **Tâche Réduire la base de données** pour créer une tâche qui tente de réduire la taille des bases de données sélectionnées. Utilisez les options ci-dessous pour déterminer la quantité d'espace inutilisé à conserver dans la base de données après sa réduction (plus le pourcentage est élevé, moins la base la base de données sera réduite). La valeur est calculée à partir du pourcentage des données effectivement présentes dans la base de données. Par exemple, une base de données de 100 Mo qui contiendrait 60 Mo de données et 40 Mo d'espace libre, avec un pourcentage d'espace libre de 50 %, pourrait conduire à 60 Mo de données et 30 Mo d'espace libre (en effet, 50 % de 60 Mo font 30 Mo). Seul l'espace supplémentaire de la base de données est éliminé. Les valeurs valides sont comprises entre 0 et 100.  
   
  La réduction des fichiers de données permet de récupérer de l'espace en déplaçant des pages de données de la fin du fichier vers un espace inoccupé plus proche de l'avant du fichier. Lorsqu'une quantité d'espace libre suffisante est créée à la fin du fichier, des pages de données à la fin du fichier peuvent être désallouées et retournées au système de fichiers.  
   
@@ -95,13 +98,13 @@ ms.lasthandoff: 11/09/2017
  **Utiliser un nom d'utilisateur et un mot de passe spécifiques**  
  Permet de se connecter à une instance du [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] en utilisant l’authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Cette option n'est pas disponible.  
   
- **Nom d'utilisateur**  
+ **User name**  
  Fournit le nom d'utilisateur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à utiliser pour l'authentification. Cette option n'est pas disponible.  
   
  **Mot de passe**  
  Fournit un mot de passe à utiliser pour l'authentification. Cette option n'est pas disponible.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [DBCC SHRINKDATABASE &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md)  
   
   

@@ -2,32 +2,32 @@
 title: "Représentation (tabulaire) d’une colonne de calcul | Documents Microsoft"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 ms.assetid: 190bfa92-2445-404d-86df-7cc94d283add
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: c1817234c6a3061afc53377053725009babbcc84
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 21e4a28e2be7492302e1b68506b4e74f695d30fd
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="tables---calculated-column-representation"></a>Tables - représentation sous forme de colonne calculée
-  Une colonne calculée est une expression DAX qui crée une colonne dans une table, dont les valeurs sont stockées dans la table. L'expression de colonne calculée est évaluée chaque fois que la table est traitée.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+Une colonne calculée est une expression DAX qui crée une colonne dans une table, dont les valeurs sont stockées dans la table. L'expression de colonne calculée est évaluée chaque fois que la table est traitée.  
   
 ## <a name="calculated-column-representation"></a>Représentation d'un colonne calculée  
   

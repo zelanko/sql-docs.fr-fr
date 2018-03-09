@@ -1,28 +1,30 @@
 ---
 title: Meilleures pratiques de performances pour SQL Server sur Linux | Documents Microsoft
-description: "Cette rubrique fournit des performances meilleures pratiques et des instructions pour l’exécution de SQL Server 2017 sur Linux."
+description: "Cet article fournit des performances meilleures pratiques et des instructions pour l’exécution de SQL Server 2017 sur Linux."
 author: rgward
 ms.author: bobward
-manager: jhubbard
+manager: craigg
 ms.date: 09/14/2017
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: Inactive
-ms.openlocfilehash: d6fb9839ee1ba7f583eca9445599422469212083
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: a5cc1b84780ce8b3ea471ee567a7296ab2b183b9
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="performance-best-practices-and-configuration-guidelines-for-sql-server-2017-on-linux"></a>Meilleures pratiques de performance et des instructions de configuration pour 2017 du serveur SQL sur Linux
 
-Cette rubrique fournit les meilleures pratiques et recommandations pour optimiser les performances pour les applications de base de données qui se connectent à SQL Server sur Linux. Ces recommandations sont spécifiques à l’exécution de la plate-forme Linux. Toutes les recommandations de SQL Server standard, telles que la création d’index, s’appliquent toujours.
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+
+Cet article fournit les meilleures pratiques et recommandations pour optimiser les performances pour les applications de base de données qui se connectent à SQL Server sur Linux. Ces recommandations sont spécifiques à l’exécution de la plate-forme Linux. Toutes les recommandations de SQL Server standard, telles que la création d’index, s’appliquent toujours.
 
 Les instructions suivantes contiennent des recommandations pour la configuration de SQL Server et le système d’exploitation Linux.
 
@@ -55,7 +57,6 @@ Les recommandations suivantes sont des paramètres de configuration facultatives
 Envisagez d’utiliser les paramètres de configuration de système d’exploitation Linux suivants pour bénéficier des performances optimales pour une Installation de SQL Server.
 
 ### <a name="kernel-settings-for-high-performance"></a>Paramètres de noyau pour des performances élevées
-
 Voici le débit pour une installation de SQL Server et les performances connexes élevé de paramètres de système d’exploitation Linux recommandée. Consultez la documentation de votre système d’exploitation Linux pour le processus configurer ces paramètres.
 
 
@@ -77,7 +78,7 @@ Le tableau suivant fournit des recommandations pour les paramètres de disque :
 | Paramètre | Valeur | Informations complémentaires |
 |---|---|---|
 | lues par anticipation de disque | 4096 | Consultez le **blockdev** commande |
-| paramètres de sysctl | Kernel.sched_min_granularity_ns = 10000000<br/>Kernel.sched_wakeup_granularity_ns = 15 000 000<br/>VM.dirty_ratio = 40<br/>VM.dirty_background_ratio = 10<br/>VM.swappiness=10 | Consultez le **sysctl** commande |
+| paramètres de sysctl | kernel.sched_min_granularity_ns = 10000000<br/>kernel.sched_wakeup_granularity_ns = 15000000<br/>vm.dirty_ratio = 40<br/>VM.dirty_background_ratio = 10<br/>vm.swappiness=10 | Consultez le **sysctl** commande |
 
 ### <a name="kernel-setting-auto-numa-balancing-for-multi-node-numa-systems"></a>Noyau paramètre auto numa équilibrage pour les systèmes à plusieurs nœuds NUMA
 
@@ -92,7 +93,7 @@ sysctl -w kernel.numa_balancing=0
 Le paramètre par défaut de **vm.max_map_count** (qui est de 65 536) peut ne pas être suffisamment élevée pour une installation de SQL Server. Modifiez cette valeur (qui est une limite supérieure) à 256 Ko.
 
 ```bash
-sysctl -w vm.max_map_count 262144
+sysctl -w vm.max_map_count=262144
 ```
 
 ### <a name="disable-last-accessed-datetime-on-file-systems-for-sql-server-data-and-log-files"></a>Désactiver les date/date du dernier accès sur les systèmes de fichiers pour les fichiers journaux et de données SQL Server
@@ -103,7 +104,7 @@ Utilisez le **noatime** attribut avec n’importe quel système de fichiers qui 
 
 La plupart des installations de Linux doit disposer de cette option sur par défaut. Nous vous recommandons de l’expérience de performances plus cohérent de laisser cette option de configuration activée.
 
-### <a name="swapfile"></a>fichier d’échange
+### <a name="swapfile"></a>swapfile
 
 Assurez-vous de qu'avoir un fichier d’échange configuré correctement pour éviter les problèmes de mémoire insuffisante. Consultez votre documentation Linux pour savoir comment créer et dimensionner correctement un fichier d’échange.
 

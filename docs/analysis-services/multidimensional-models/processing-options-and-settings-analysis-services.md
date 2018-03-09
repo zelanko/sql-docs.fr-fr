@@ -2,16 +2,13 @@
 title: "Options et paramètres (Analysis Services) de traitement | Documents Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -26,19 +23,20 @@ helpviewer_keywords:
 - process clear structure option [Analysis Services]
 - process default option [Analysis Services]
 ms.assetid: 2e858c74-ad3e-45f1-8745-efe2c0c3a7fa
-caps.latest.revision: "48"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 9ca6239dc157d5c6d7f4ac8afd24ff161b57992a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: e05c1a60cc016b9f72d486a5b0f03037b0faa9ef
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="processing-options-and-settings-analysis-services"></a>Options et paramètres de traitement (Analysis Services)
-  Lorsque vous traitez des objets dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], vous pouvez sélectionner une option de traitement afin de contrôler le type de traitement qui se produit pour chaque objet. Les types de traitement varient d'un objet à l'autre et en fonction des modification qui ont été apportées à l'objet depuis le dernier traitement. Si vous autorisez [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] à sélectionner automatiquement une méthode de traitement, la méthode utilisée sera celle qui permet de traiter complètement l'objet le plus rapidement possible.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Lorsque vous traitez des objets dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], vous pouvez sélectionner une option de traitement afin de contrôler le type de traitement qui se produit pour chaque objet. Les types de traitement varient d'un objet à l'autre et en fonction des modification qui ont été apportées à l'objet depuis le dernier traitement. Si vous autorisez [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] à sélectionner automatiquement une méthode de traitement, la méthode utilisée sera celle qui permet de traiter complètement l'objet le plus rapidement possible.  
   
  Les paramètres de traitement vous permettent de contrôler les objets traités et les méthodes utilisées pour traiter ces objets. Certains paramètres de traitement sont principalement utilisés pour des travaux de traitement par lots. Pour plus d’informations sur le traitement par lots, consultez [Traitement par lots &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/batch-processing-analysis-services.md).  
   
@@ -48,7 +46,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="processing-options"></a>Options de traitement  
  Le tableau suivant décrit les méthodes de traitement disponibles dans [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]et identifie les objets pour lesquels chaque méthode est prise en charge.  
   
-|Mode|S'applique à|Description|  
+|Mode|S'applique à| Description|  
 |----------|----------------|-----------------|  
 |**Traiter par défaut**|Cubes, bases de données, dimensions, groupes de mesures, modèles d'exploration, structures d'exploration et partitions.|Détecte l'état de traitement des objets de base de données et effectue le traitement nécessaire pour faire passer les objets non traités ou traités partiellement dans un état de traitement complet. Si vous modifiez une liaison de données, la fonction Traiter par défaut va traiter entièrement l'objet concerné (fonction Traiter entièrement).|  
 |**Traiter entièrement**|Cubes, bases de données, dimensions, groupes de mesures, modèles d'exploration, structures d'exploration et partitions.|Traite un objet [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] et tous les objets qu'il contient. Lorsque la commande Traiter entièrement est sélectionnée pour un objet qui a déjà été traité, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] supprime toutes les données de l'objet, puis traite l'objet. Ce type de traitement est requis en cas de modification structurelle d'un objet, par exemple lorsqu'une hiérarchie d'attribut est ajoutée, supprimée ou renommée.|  
@@ -63,7 +61,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="processing-settings"></a>Paramètres de traitement  
  Le tableau ci-dessous décrit les paramètres de traitement qu'il est possible d'utiliser lors de la création d'une opération de traitement.  
   
-|Option de traitement|Description|Valeur d'option|  
+|Option de traitement| Description|Valeur d'option|  
 |-----------------------|-----------------|------------------|  
 |**Parallel**|Utilisé pour le traitement par lots. Ce paramètre fait en sorte que [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] réplique les tâches à exécuter en parallèle dans une transaction individuelle. En cas d'échec, le résultat correspond à la restauration de toutes les modifications. Vous pouvez définir explicitement le nombre maximal de tâches parallèles ou laisser le serveur décider de la distribution optimale. L'option Parallèle permet d'accélérer le traitement.||  
 |**Séquentiel (Mode de transaction)**|Contrôle le comportement d'exécution du travail de traitement. Deux options sont disponibles.<br /><br /> Lorsque vous effectuez un traitement avec **Une seule transaction**, toutes les modifications sont validées une fois le travail de traitement réussi. Cela signifie que tous les objets [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] affectés par un travail de traitement spécifique demeurent disponibles pour les requêtes jusqu'au processus de validation. Cela rend les objets momentanément indisponibles. L'utilisation de **Transactions séparées** rend tous les objets affectés par un processus d'un travail de traitement indisponibles pour les requêtes dès que ce processus réussit.|**Une seule transaction**. Le travail de traitement s'exécute en tant que transaction unique. Si tous les processus du travail de traitement réussissent, toutes les modifications apportées par le travail de traitement sont validées. Si un processus échoue, toutes les modifications apportées par le travail de traitement sont annulées. **Une seule transaction** est la valeur par défaut.<br /><br /> **Transactions séparées**. Chaque processus du travail de traitement s'exécute en tant que travail autonome. Si un processus échoue, seul ce processus est annulé et le travail de traitement continue. Chaque travail valide toutes les modifications du processus à la fin du travail.|  

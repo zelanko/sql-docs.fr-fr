@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -29,11 +29,11 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: ab4dc73881d8c29586b4f70a2b89f68a00263abd
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: be395f43e1a372e54f9759edcf58d0b35f03d15c
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="mdx-data-definition---create-session-cube"></a>Définition de données MDX - créer un CUBE de SESSION
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -130,7 +130,7 @@ CREATE SESSION CUBE session_cube_name FROM <cube list> (<param list>)
  \<type de niveau >  
  Élément spécifié uniquement pour la définition de dimension dérivée.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Contrairement aux cubes serveur et locaux, un cube de session n'est pas conservé au-delà de la session qui l'a créé. Un cube de session est défini d'après les mesures et les définitions qui le caractérisent. Il existe deux types de dimensions.  
   
 -   Dimensions sources : dimensions qui appartenaient à un ou plusieurs cubes sources.  
@@ -175,7 +175,7 @@ CREATE SESSION CUBE session_cube_name FROM <cube list> (<param list>)
   
 -   Lorsque vous procédez à un regroupement sur une dimension de cube sur un cube serveur, le regroupement affecte toutes les dimensions de cube sur la base de la même dimension.  
   
-## <a name="example"></a>Exemple  
+## <a name="example"></a> Exemple  
  L'exemple suivant illustre la création d'une version au niveau de la session du cube Adventure Works qui contient la mesure Reseller Sales Amount et les dimensions Reseller, Product, Geography et Date. Dans ce cube de session, deux groupes sont créés, un groupe comporte les pays européens et un groupe contient les groupes d'Amérique du Nord. Cet exemple est une version simplifiée de l'instruction CREATE SESSION CUBE émise par Microsoft Excel lorsqu'un utilisateur crée un regroupement personnalisé de membres.  
   
 ```  

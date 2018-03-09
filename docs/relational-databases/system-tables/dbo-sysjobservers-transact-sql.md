@@ -1,5 +1,5 @@
 ---
-title: dbo.sysjobservers (Transact-SQL) | Documents Microsoft
+title: dbo.sysjobservers (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-tables
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - sysjobservers_TSQL
 - dbo.sysjobservers
 - dbo.sysjobservers_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sysjobservers system table
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sysjobservers system table
 ms.assetid: 9abcc20f-a421-4591-affb-62674d04575e
-caps.latest.revision: "26"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3e9d004a79ec106f06e4b15b9c3e54e46c7dcef3
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 60a5062226e97be3e7c3a38086f0e88dbf9fb023
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="dbosysjobservers-transact-sql"></a>dbo.sysjobservers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +43,7 @@ ms.lasthandoff: 11/27/2017
 |job_id|**uniqueidentifier**|Numéro d’identification du travail.|  
 |server_id|**int**|Numéro d’identification du serveur.|  
 |last_run_outcome|**tinyint**|Issue de la dernière exécution du travail :<br /><br /> **0** = Échec<br /><br /> **1** = réussite<br /><br /> **3** = Annuler|  
-|message de last_outcome_|**nvarchar (1024)**|Message associé, le cas échéant, à la colonne last_run_outcome.|  
+|message de last_outcome_|**nvarchar(1024)**|Message associé, le cas échéant, à la colonne last_run_outcome.|  
 |last_run_date|**int**|Date de la dernière exécution du travail.|  
 |last_run_time|**int**|Heure de la dernière exécution du travail.|  
 |last_run_duration|**int**|Durée d'exécution du travail, en heures, minutes et secondes. Calculé à l’aide de la formule : (*heures*\*10000) + (*minutes*\*100) + *secondes*.|  

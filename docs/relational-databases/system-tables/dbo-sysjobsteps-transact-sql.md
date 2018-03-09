@@ -1,5 +1,5 @@
 ---
-title: dbo.sysjobsteps (Transact-SQL) | Documents Microsoft
+title: dbo.sysjobsteps (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/09/2016
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-tables
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - dbo.sysjobsteps_TSQL
 - sysjobsteps
 - sysjobsteps_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sysjobsteps system table
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sysjobsteps system table
 ms.assetid: 978b8205-535b-461c-91f3-af9b08eca467
-caps.latest.revision: "28"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 4f316e40cc6bf89cf7296b5a2d864406142f7f87
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: f29d3ef22b724abc095da01ea5eef70aa9c447dd
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="dbosysjobsteps-transact-sql"></a>dbo.sysjobsteps (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,24 +41,24 @@ ms.lasthandoff: 11/17/2017
 |Nom de colonne|Type de données| Description|  
 |-----------------|---------------|-----------------|  
 |**job_id**|**uniqueidentifier**|ID du travail.|  
-|**argument id_étape**|**int**|ID de l'étape dans le travail|  
-|**nom_de_l**|**sysname**|Nom de l'étape du travail|  
-|**sous-système**|**nvarchar (40)**|Nom du sous-système utilisé par l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour exécuter l'étape du travail|  
+|**step_id**|**int**|ID de l'étape dans le travail|  
+|**step_name**|**sysname**|Nom de l'étape du travail|  
+|**subsystem**|**nvarchar(40)**|Nom du sous-système utilisé par l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour exécuter l'étape du travail|  
 |**commande**|**nvarchar(max)**|Commande à exécuter par **sous-système**.|  
-|**indicateurs**|**int**|Réservé.|  
+|**flags**|**int**|Réservé.|  
 |**additional_parameters**|**ntext**|Réservé.|  
 |**cmdexec_success_code**|**int**|Valeur de niveau d’erreur retourné par **CmdExec** les étapes du sous-système pour indiquer une réussite.|  
 |**on_success_action**|**tinyint**|Action à exécuter lors du succès d'une étape|  
-|**id_étape_succès**|**int**|ID de la prochaine étape à exécuter après le succès d'une étape|  
+|**on_success_step_id**|**int**|ID de la prochaine étape à exécuter après le succès d'une étape|  
 |**on_fail_action**|**tinyint**|Action à exécuter lors de l'échec d'une étape|  
-|**id_étape_échec**|**int**|ID de l'étape à exécuter après l'échec d'une étape|  
+|**on_fail_step_id**|**int**|ID de l'étape à exécuter après l'échec d'une étape|  
 |**server**|**sysname**|Réservé.|  
 |**database_name**|**sysname**|Nom de la base de données dans laquelle **commande** est exécutée si **sous-système** TSQL.|  
-|**nom_utilisateur_base_de_données**|**sysname**|Nom de l'utilisateur de la base de données dont le compte sera utilisé lors de l'exécution de l'étape|  
+|**database_user_name**|**sysname**|Nom de l'utilisateur de la base de données dont le compte sera utilisé lors de l'exécution de l'étape|  
 |**retry_attempts**|**int**|Nombre de tentatives de reprise en cas d'échec de l'étape|  
-|**intervalle_entre_reprises**|**int**|Délai d'attente entre chaque tentative de reprise|  
+|**retry_interval**|**int**|Délai d'attente entre chaque tentative de reprise|  
 |**os_run_priority**|**int**|Réservé.|  
-|**nom_fichier_sortie**|**nvarchar(200)**|Nom du fichier dans lequel le résultat de l’étape est sauvegardé lorsque **sous-système** TSQL, PowerShell, ou **CmdExec***.*|  
+|**output_file_name**|**nvarchar(200)**|Nom du fichier dans lequel le résultat de l’étape est sauvegardé lorsque **sous-système** TSQL, PowerShell, ou **CmdExec ***.*|  
 |**last_run_outcome**|**int**|Issue de l'exécution précédente de l'étape du travail<br /><br /> **0** = Échec<br /><br /> **1** = a réussi<br /><br /> **2** = nouvelle tentative<br /><br /> **3** = annulée<br /><br /> **5** = inconnu|  
 |**last_run_duration**|**int**|Durée (hhmmss) de l'étape lors de sa dernière exécution.|  
 |**last_run_retries**|**int**|Nombre de tentatives de reprises lors de la dernière exécution de l'étape du travail|  

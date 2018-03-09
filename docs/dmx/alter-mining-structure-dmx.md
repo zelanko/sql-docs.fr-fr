@@ -5,12 +5,10 @@ ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -29,11 +27,11 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 1e835c27541ab59fc6913b31600cd5804ea99f6b
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: e52b312871dd76ee1e72f515ce83a2e7269d5ab3
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="alter-mining-structure-dmx"></a>ALTER MINING STRUCTURE (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -78,12 +76,12 @@ USING <algorithm> [(<parameter list>)]
 >  Une liste des algorithmes pris en charge par le fournisseur actuel peut être récupérée à l’aide de [de lignes DMSCHEMA_MINING_SERVICES](../analysis-services/schema-rowsets/data-mining/dmschema-mining-services-rowset.md). Pour afficher les algorithmes pris en charge dans l’instance actuelle de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], consultez [propriétés d’exploration de données](../analysis-services/server-properties/data-mining-properties.md).  
   
  *liste de paramètres*  
- Ce paramètre est facultatif. Liste séparée par des virgules des paramètres définis par le fournisseur de l'algorithme.  
+ Facultatif. Liste séparée par des virgules des paramètres définis par le fournisseur de l'algorithme.  
   
  *critères de filtre*  
  Expression de filtre appliquée aux colonnes dans la table de cas.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Si la structure d'exploration de données contient des clés composites, le modèle d'exploration de données doit comporter toutes les colonnes clés définies dans la structure.  
   
  Si le modèle ne requiert pas de colonne prédictible, par exemple les modèles qui sont générés à l'aide de l'algorithme de gestion de clusters [!INCLUDE[msCoName](../includes/msconame-md.md)] et de l'algorithme MSC ([!INCLUDE[msCoName](../includes/msconame-md.md)] Sequence Clustering), il n'est pas nécessaire d'inclure une définition de colonne dans l'instruction. Tous les attributs figurant dans le modèle obtenu seront considérés comme des entrées.  
@@ -223,6 +221,6 @@ USING Microsoft_Decision Trees
 ## <a name="see-also"></a>Voir aussi  
  [Les Extensions d’exploration de données &#40; DMX &#41; Instructions de définition de données](../dmx/dmx-statements-data-definition.md)   
  [Les Extensions d’exploration de données &#40; DMX &#41; Instructions de Manipulation de données](../dmx/dmx-statements-data-manipulation.md)   
- [Les Extensions d’exploration de données &#40; DMX &#41; Référence des instructions](../dmx/data-mining-extensions-dmx-statements.md)  
+ [Guide de référence des instructions DMX &#40;Data Mining Extensions&#41;](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

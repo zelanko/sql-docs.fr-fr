@@ -8,9 +8,7 @@ ms.service:
 ms.component: wmi-provider-library-reference
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname: MSReportServer_ConfigurationSetting Class
@@ -21,15 +19,15 @@ helpviewer_keywords:
 - MSReportServer_ConfigurationSetting class
 ms.assetid: 874be718-54b9-49e8-a3d6-b83a0ba13dc3
 caps.latest.revision: "39"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 34daa93f93afc0eb85476100704301dcabababde
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 01079c495e34728b02cdbd4d9e6bc8b3adfefc09
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="msreportserverconfigurationsetting-class"></a>classe MSReportServer_ConfigurationSetting
   Représente les paramètres d’installation et d’exécution d’une instance de serveur de rapports. Ces paramètres sont stockés dans le fichier de configuration du serveur de rapports.  
@@ -49,7 +47,7 @@ public class MSReportServer_ConfigurationSetting
 ## <a name="thread-safety"></a>Sécurité des threads  
  Tous les membres publics statiques (**Shared** en [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]) de ce type sont sécurisés pour les opérations multithread. Il n'est pas garanti que les membres d'instance soient thread-safe.  
   
-## <a name="example"></a>Exemple  
+## <a name="example"></a> Exemple  
  Pour exécuter le code suivant, ajoutez le nom de votre serveur à la place de chaque \<*nom_serveur*>. Mettez à jour le chemin d'accès de façon à pointer vers votre emplacement d'installation, s'il ne s'agit pas de la valeur par défaut. L’exemple de code suivant parcourt chaque propriété dans la classe *MSReportServer_ConfigurationSetting* et affiche le nom de chaque propriété et sa valeur sur la console.  
   
 ```vb  
@@ -179,7 +177,7 @@ class Class1
   
  **Plateforme :** [!INCLUDE[ssRSWMIPlatform](../../includes/ssrswmiplatform-md.md)]  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Membres MSReportServer_ConfigurationSetting](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  
   
   

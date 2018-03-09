@@ -3,8 +3,9 @@ title: "Open (méthode) (connexion ADO) | Documents Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,18 +17,19 @@ f1_keywords:
 - Connection15::raw_Open
 - Connection15::Open
 - _Connection::Open
-helpviewer_keywords: Open method [ADO]
+helpviewer_keywords:
+- Open method [ADO]
 ms.assetid: 663defab-5545-4973-9036-24d5882c9737
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 9133d8e959d1831fc1ff64ed1d8ecace96c3f882
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: aecc064b9030adb40347737dc68998de3eee4d64
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="open-method-ado-connection"></a>Open (méthode) (connexion ADO)
 Ouvre une connexion à une source de données.  
@@ -43,7 +45,7 @@ connection.Open ConnectionString, UserID, Password, Options
  *ConnectionString*  
  Ce paramètre est facultatif. A **chaîne** valeur qui contient des informations de connexion. Consultez le [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) pour plus d’informations sur les paramètres corrects.  
   
- *ID d’utilisateur*  
+ *UserID*  
  Ce paramètre est facultatif. A **chaîne** valeur qui contient un nom d’utilisateur à utiliser pour établir la connexion.  
   
  *Mot de passe*  

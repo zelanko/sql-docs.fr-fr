@@ -2,32 +2,32 @@
 title: Ensemble de lignes DISCOVER_PARTITION_STAT | Documents Microsoft
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: schema-rowsets
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 ms.assetid: 20d339e2-f47f-437f-94d5-5b00b400356a
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: fbb28e83139c6318d235b3876b64e95e949cb4b1
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 649475fa5fd1a4e0bb2a6c734f916270ac7f9a64
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="discoverpartitionstat-rowset"></a>DISCOVER_PARTITION_STAT, ensemble de lignes
-  Retourne des statistiques sur les agrégations dans une partition particulière.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+Retourne des statistiques sur les agrégations dans une partition particulière.  
   
  **S'applique à :** modèles tabulaires, modèles multidimensionnels  
   
@@ -36,10 +36,10 @@ ms.lasthandoff: 11/17/2017
   
 |Nom de colonne|Indicateur de type|Restriction| Description|  
 |-----------------|--------------------|-----------------|-----------------|  
-|**NOM_BASE_DE_DONNÉES**|**DBTYPE_WSTR**|Requis|Nom de la base de données contient la dimension.<br /><br /> Cette colonne est requise dans la liste de restriction.|  
+|**DATABASE_NAME**|**DBTYPE_WSTR**|Requis|Nom de la base de données contient la dimension.<br /><br /> Cette colonne est requise dans la liste de restriction.|  
 |**CUBE_NAME**|**DBTYPE_WSTR**|Requis|Nom du cube ou du modèle tabulaire contenant la partition.<br /><br /> Cette colonne est requise dans la liste de restriction.|  
-|**NOM_GROUPE_MESURES**|**DBTYPE_WSTR**|Requis|Nom d'un groupe de mesures dans la dimension.<br /><br /> Cette colonne est requise dans la liste de restriction.|  
-|**NOM_PARTITION**|**DBTYPE_WSTR**|Requis|Nom d'une partition.<br /><br /> Cette colonne est requise dans la liste de restriction.|  
+|**MEASURE_GROUP_NAME**|**DBTYPE_WSTR**|Requis|Nom d'un groupe de mesures dans la dimension.<br /><br /> Cette colonne est requise dans la liste de restriction.|  
+|**PARTITION_NAME**|**DBTYPE_WSTR**|Requis|Nom d'une partition.<br /><br /> Cette colonne est requise dans la liste de restriction.|  
 |**AGGREGATION_NAME**|**DBTYPE_WSTR**||Nom de l'agrégation.|  
 |**AGGREGATION_SIZE**|**DBTYPE_I8**||Taille de l'agrégation.|  
   
@@ -56,6 +56,6 @@ ms.lasthandoff: 11/17/2017
 |ADOMDNAME|PartitionStat|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Ensembles de lignes de schéma XML for Analysis](../../../analysis-services/schema-rowsets/xml/xml-for-analysis-schema-rowsets.md)  
+ [XML for Analysis ensembles de lignes de schéma](../../../analysis-services/schema-rowsets/xml/xml-for-analysis-schema-rowsets.md)  
   
   

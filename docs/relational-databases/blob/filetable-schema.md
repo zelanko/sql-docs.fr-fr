@@ -2,29 +2,35 @@
 title: "Schéma de FileTable | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: blob
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-blob
+ms.suite: sql
+ms.technology:
+- dbe-blob
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: FileTables [SQL Server], table schema
+helpviewer_keywords:
+- FileTables [SQL Server], table schema
 ms.assetid: e1cb3880-cfda-40ac-91fc-d08998287f44
-caps.latest.revision: "7"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e86fc5ce302105336b51ba0baaa100f55002fba9
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 2e19f00c854bdbc79acc2d83f3d3c8095166ce5a
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="filetable-schema"></a>Schéma de FileTable
-  Décrit le schéma prédéfini et fixe d'un FileTable.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Décrit le schéma prédéfini et fixe d'un FileTable.  
   
-|Nom d'attribut de fichier|type|Taille|Par défaut|Description|Accessibilité du système de fichiers|  
+|Nom d'attribut de fichier|Type|Taille|Valeur par défaut|Description|Accessibilité du système de fichiers|  
 |-------------------------|----------|----------|-------------|-----------------|-------------------------------|  
 |**path_locator**|**hierarchyid**|variable|**hierarchyid** qui identifie la position de cet élément.|Position de ce nœud dans le FileNamespace hiérarchique.<br /><br /> Clé primaire de la table|Peut être créée et modifiée en définissant les valeurs de chemin d'accès Windows.|  
 |**stream_id**|**[uniqueidentifier] rowguidcol**||Valeur retournée par la fonction **NEWID()** .|ID unique pour les données FILESTREAM.|Non applicable.|  
@@ -44,7 +50,7 @@ ms.lasthandoff: 11/09/2017
 |**is_system**|**bit**<br /><br /> **Non Null**|1 octet|FALSE|Attribut de fichier système.|Calculé automatiquement. Peut également être défini à l'aide d'API Windows.|  
 |**is_temporary**|**bit**<br /><br /> **Non Null**|1 octet|FALSE|Attribut de fichier temporaire.|Calculé automatiquement. Peut également être défini à l'aide d'API Windows.|  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Créer, modifier et supprimer des FileTables](../../relational-databases/blob/create-alter-and-drop-filetables.md)  
   
   

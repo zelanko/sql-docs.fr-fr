@@ -1,39 +1,31 @@
 ---
 title: "Messagerie de base de données et les alertes par courrier électronique avec l’Agent SQL sur Linux | Documents Microsoft"
-description: "Cette rubrique décrit comment utiliser la messagerie de base de données et les alertes par courrier électronique avec SQL Server sur Linux"
+description: "Cet article décrit comment utiliser la messagerie de base de données et les alertes par courrier électronique avec SQL Server sur Linux"
 author: meet-bhagdev
 ms.author: meetb
-manager: jhubbard
-ms.date: 10/02/2017
+manager: craigg
+ms.date: 02/20/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: tbd
 ms.workload: Inactive
-ms.openlocfilehash: 36411ef9c26155f91956fbe572e60b3490f61b98
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 69d1ff539d2e488030f32b9246f1ccf40d92bdd8
+ms.sourcegitcommit: 57f45ee008141ddf009b1c1195442529e0ea1508
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 02/21/2018
 ---
 # <a name="db-mail-and-email-alerts-with-sql-agent-on-linux"></a>Messagerie de base de données et les alertes par courrier électronique avec l’Agent SQL sur Linux
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 Les étapes suivantes vous montrent comment configurer la messagerie de base de données et l’utiliser avec l’Agent SQL Server (**mssql-server-agent**) sur Linux. 
-
-> [!NOTE]
-> Pour utiliser la messagerie de base de données avec SQL Server sur Linux, vous devez utiliser SQL Server 2017 RC1 ou version ultérieure.
-
-## <a name="prerequisites"></a>Conditions préalables
-
-- SQL Server 2017 RC1 et versions ultérieures
-- L’Agent SQL Server v14.0.800.90-2 et versions ultérieures (si vous envisagez d’utiliser la messagerie pour les alertes)
 
 ## <a name="1-enable-db-mail"></a>1. Activer la messagerie de base de données
 

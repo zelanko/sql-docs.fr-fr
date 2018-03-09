@@ -8,7 +8,8 @@ ms.service:
 ms.component: sqlxml
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-xml
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -23,19 +24,20 @@ helpviewer_keywords:
 - hierarchical relationships [SQLXML]
 - key-fields annotation
 ms.assetid: 1a5ad868-8602-45c4-913d-6fbb837eebb0
-caps.latest.revision: "27"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b3a39418ec2c94a0c5b0a5dd227ef33aab4b22b0
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ac42ee657dd46f070eccf5d63ae9a454c3306e95
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="identifying-key-columns-using-sqlkey-fields-sqlxml-40"></a>Identification de colonnes clés à l'aide de sql:key-fields (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]Lorsqu’une requête XPath est spécifiée contre un schéma XSD, les informations de clé sont requis dans la plupart des cas pour obtenir une imbrication correcte dans le résultat. En spécifiant le **SQL : Key-champs** annotation est un moyen de s’assurer que la hiérarchie appropriée est générée.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+Lorsqu'une requête XPath est spécifiée contre un schéma XSD, les informations de clés sont requises dans la plupart des cas pour obtenir une imbrication correcte dans le résultat. En spécifiant le **SQL : Key-champs** annotation est un moyen de s’assurer que la hiérarchie appropriée est générée.  
   
 > [!NOTE]  
 >  Pour garantir l’imbrication correcte, il est recommandé de spécifier **SQL : Key-champs** pour les éléments qui mappent aux tables. Le XML produit est sensible au classement du jeu de résultats sous-jacent. Si **SQL : Key-champs** n’est pas spécifié, le code XML généré ne peut pas être formé correctement.  
@@ -178,7 +180,7 @@ ms.lasthandoff: 11/17/2017
   
      Pour plus d’informations, consultez [à l’aide d’ADO pour exécuter des requêtes SQLXML](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
- Voici le résultat obtenu :  
+ Voici le résultat obtenu :  
   
 ```  
 <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  

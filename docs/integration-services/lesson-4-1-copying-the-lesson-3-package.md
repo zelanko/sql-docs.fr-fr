@@ -1,11 +1,11 @@
 ---
-title: "Étape 1 : Copie du Package de la leçon 3 | Documents Microsoft"
+title: "Étape 1 : Copie du package de la leçon 3 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
 ms.technology:
@@ -15,26 +15,25 @@ ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
 ms.assetid: 0d053786-5203-43f3-a613-27a8dd2bc44a
-caps.latest.revision: 25
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 8c578fc6154a2a78e223bc1a920669228776e689
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 6268ea0291adc0d51a611722ffeeb67713d2954e
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="lesson-4-1---copying-the-lesson-3-package"></a>Leçon 4-1-copier le Package de la leçon 3
+# <a name="lesson-4-1---copying-the-lesson-3-package"></a>Leçon 4-1 : Copie du package de la leçon 3
 Dans cette tâche, vous allez créer une copie du package Lesson 3.dtsx que vous avez créé à la leçon 3. Si vous n'avez pas terminé la leçon 3, vous pouvez également ajouter au projet le package final de la leçon 3 inclus avec le didacticiel, puis le copier pour l'utiliser. Vous allez utiliser cette nouvelle copie tout au long de la leçon 4.  
   
 ### <a name="to-create-the-lesson-4-package"></a>Pour créer le package de la leçon 4  
   
 1.  Si [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Data Tools n’est pas déjà ouvert, dans le menu **Démarrer**, pointez sur **Tous les programmes**, puis sur **Microsoft SQL Server**et cliquez sur **SQL Server Data Tools**.  
   
-2.  Dans le menu **Fichier** , cliquez sur **Ouvrir**, cliquez sur **Projet/Solution**, sélectionnez **Didacticiel SSIS** , cliquez sur **Ouvrir**, puis double-cliquez sur **SSIS Tutorial.sln**.  
+2.  Dans le menu **Fichier**, cliquez sur **Ouvrir**, cliquez sur **Projet/Solution**, sélectionnez **Didacticiel SSIS**, cliquez sur **Ouvrir**, puis double-cliquez sur **SSIS Tutorial.sln**.  
   
 3.  Dans l’Explorateur de solutions, cliquez avec le bouton droit sur **Lesson 3.dtsx**et choisissez **Copier**.  
   
@@ -73,4 +72,3 @@ Dans cette tâche, vous allez créer une copie du package Lesson 3.dtsx que vous
 ## <a name="next-task-in-lesson"></a>Tâche suivante de la leçon  
 [Étape 2 : Création d'un fichier corrompu](../integration-services/lesson-4-2-creating-a-corrupted-file.md)  
   
-

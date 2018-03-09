@@ -8,20 +8,18 @@ ms.service:
 ms.component: report-server-sharepoint
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 61a79fe122947e5f68de277035e72639f22f5e6b
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 3bc11b3c437f6a596e3778b4ccf43b54d9668bf2
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="reporting-services-site-settings-and-site-features-sharepoint-mode"></a>Paramètres et fonctions du site Reporting Services (mode SharePoint)
 
@@ -34,7 +32,7 @@ Le mode SharePoint de Reporting Services propose plusieurs fonctionnalités pers
 > [!NOTE]
 > L’intégration de Reporting Services à SharePoint n’est plus disponible après SQL Server 2016.
 
-|Paramètre du site| Description|  
+|Paramètre du site|Description|  
 |------------------|-----------------|  
 |Paramètres du site Reporting Services|Paramètres à l’échelle du site décrits dans cette rubrique.|  
 |Gérer les alertes de données|Gestion de la fonctionnalité d'alertes de données.|  

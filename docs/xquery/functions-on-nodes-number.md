@@ -3,30 +3,36 @@ title: "numéro de fonction (XQuery) | Documents Microsoft"
 ms.custom: 
 ms.date: 03/09/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: xquery
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-applies_to: SQL Server
-dev_langs: XML
+applies_to:
+- SQL Server
+dev_langs:
+- XML
 helpviewer_keywords:
 - number function
 - fn:number function
 ms.assetid: dff6d19b-765c-4df9-afff-9a0e7be9b91b
-caps.latest.revision: "29"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ac925d16aa7a63c2c32748d71074117aa63e8486
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 85882cd83303223917300175059f0905a2d6ad2d
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="functions-on-nodes---number"></a>Fonctions sur les nœuds - nombre
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Retourne la valeur numérique du nœud qui est indiqué par *$arg*.  
   
@@ -75,7 +81,7 @@ FROM Production.ProductModel
 WHERE ProductModelID=7  
 ```  
   
- Notez les points suivants dans la requête précédente :  
+ Notez les points suivants dans la requête précédente :  
   
 -   Le **number()** fonction n’est pas requise, comme indiqué par la requête pour le **LotSizeA** attribut. Il s'agit d'une fonction XPath 1.0 qui est incluse pour garantir la compatibilité ascendante.  
   
@@ -83,7 +89,7 @@ WHERE ProductModelID=7
   
 -   La requête pour **LotSizeD** illustre l’utilisation d’une valeur numérique dans une opération arithmétique.  
   
- Voici le résultat obtenu :  
+ Voici le résultat obtenu :  
   
 ```  
 ProductModelID   Result  

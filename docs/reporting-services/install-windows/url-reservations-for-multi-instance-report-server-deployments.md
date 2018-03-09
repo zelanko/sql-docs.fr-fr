@@ -8,21 +8,21 @@ ms.service:
 ms.component: install-windows
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords: URL reservations
 ms.assetid: f67c83c0-1f74-42bb-bfc1-e50c38152d3d
 caps.latest.revision: "7"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: dc599768d1626591320e5cf727fba35ec98083c2
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 675fd1e47d93dcb2767669ff4b138f386947d71d
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="url-reservations-for-multi-instance-report-server-deployments"></a>Réservations d'URL pour les déploiements de serveur de rapports multi-instance
   Si vous installez plusieurs instances de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] sur le même ordinateur, vous devez considérer comment vous définirez les réservations d'URL pour chaque instance. Dans chaque instance, le service Web Report Server et le [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] doivent avoir au moins une réservation d’URL chacun. L'ensemble entier de réservations doit être unique dans HTTP.SYS.  
@@ -52,7 +52,7 @@ ms.lasthandoff: 12/05/2017
 ## <a name="uniqueness-requirements"></a>Spécifications relatives à l'unicité  
  Les technologies sous-jacentes utilisées par [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] imposent des spécifications relatives aux noms uniques. HTTP.SYS requiert que toutes les URL dans sa base de données de référentiel soient uniques. Vous pouvez varier le port, le nom d'hôte ou le nom de répertoire virtuel pour créer une URL unique. [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] requiert que les identités d’application soient uniques dans le même processus. Cette spécification affecte les noms de répertoires virtuels. Elle spécifie que vous ne pouvez pas dupliquer de nom de répertoire virtuel dans la même instance de serveur de rapports.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Configurer des URL de serveurs de rapports &#40;Gestionnaire de configuration de SSRS&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)   
  [Configurer une URL &#40;Gestionnaire de configuration de SSRS&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)  
   

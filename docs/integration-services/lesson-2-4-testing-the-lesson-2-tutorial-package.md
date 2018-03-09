@@ -1,11 +1,11 @@
 ---
-title: "Étape 4 : Test de la leçon 2 du Package du didacticiel | Documents Microsoft"
+title: "Étape 4 : Test du package du didacticiel de la leçon 2 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
 ms.technology:
@@ -15,19 +15,18 @@ ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
 ms.assetid: 0e8c0a25-8f79-41df-8ed2-f82a74b129cd
-caps.latest.revision: 31
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: b767baea5d3979763b2e7bfb741cb1fd6589ebfd
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 98f4b32fd8575a33f2b7a074ab3fe04e043d7777
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="lesson-2-4---testing-the-lesson-2-tutorial-package"></a>Leçon 2-4-test de la leçon 2 du Package du didacticiel
+# <a name="lesson-2-4---testing-the-lesson-2-tutorial-package"></a>Leçon 2-4 : Test du package du didacticiel de la leçon 2
 Une fois le conteneur de boucles Foreach et le gestionnaire de connexions de fichiers plats configurés, le package Lesson 2 peut parcourir l'ensemble des 14 fichiers plats dans le dossier Sample Data. À chaque fois qu'un nom de fichier correspondant au nom de fichier spécifié est trouvé, le conteneur de boucles Foreach remplace la variable définie par l'utilisateur par ce nom de fichier. Cette variable met à jour à son tour la propriété ConnectionString du Gestionnaire de connexions de fichiers plats, et une connexion au nouveau fichier plat est établie. Le conteneur de boucles Foreach exécute alors la tâche de flux de données inchangée sur les données du nouveau fichier plat avant de se connecter au fichier suivant dans le dossier.  
   
 Suivez la procédure ci-dessous pour tester la nouvelle fonctionnalité de bouclage que vous avez ajoutée à votre package.  
@@ -40,11 +39,11 @@ Avant de tester le package, vous devez vérifier que le flux de contrôle et le 
   
 **Flux de contrôle**  
   
-![Contrôler le flux de package](../integration-services/media/task4lesson2control.gif "contrôler le flux de package")  
+![Flux de contrôle dans le package](../integration-services/media/task4lesson2control.gif "Flux de contrôle dans le package")  
   
 **Flux de données**  
   
-![Flux de données dans le package](../integration-services/media/task9lesson1data.gif "dans le package de flux de données")  
+![Flux de données dans le package](../integration-services/media/task9lesson1data.gif "Flux de données dans le package")  
   
 ### <a name="to-test-the-lesson-2-tutorial-package"></a>Pour tester le package du didacticiel de la leçon 2  
   
@@ -57,10 +56,9 @@ Avant de tester le package, vous devez vérifier que le flux de contrôle et le 
 ## <a name="next-lesson"></a>Leçon suivante  
 [Leçon 5 : Ajouter des configurations de package SSIS pour le modèle de déploiement de package](../integration-services/lesson-5-add-ssis-package-configurations-for-the-package-deployment-model.md)  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [Exécution de projets et de packages](~/integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md)  
   
   
   
-
 

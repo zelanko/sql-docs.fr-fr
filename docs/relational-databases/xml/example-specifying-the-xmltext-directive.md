@@ -2,27 +2,33 @@
 title: "Exemple : spécification de la directive XMLTEXT | Microsoft Docs"
 ms.custom: 
 ms.date: 04/05/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: xml
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-xml
+ms.suite: sql
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: XMLTEXT directive
+helpviewer_keywords:
+- XMLTEXT directive
 ms.assetid: e78008ec-51e8-4fd1-b86f-1058a781de17
-caps.latest.revision: "10"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 13f296721a3648c1b75b7b5329d8b9d4a927cd20
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: e71a67f991291f1426fbf3a583169b339f69c110
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="example-specifying-the-xmltext-directive"></a>Exemple : spécification de la directive XMLTEXT
-  Cet exemple illustre l’adressage des informations contenues dans la colonne de dépassement de capacité à l’aide de la directive **XMLTEXT** dans une instruction `SELECT` utilisant le mode EXPLICIT.  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+Cet exemple illustre l’adressage des informations contenues dans la colonne de dépassement de capacité à l’aide de la directive **XMLTEXT** dans une instruction `SELECT` utilisant le mode EXPLICIT.  
   
  Soit la table `Person` . Cette table possède une colonne nommée `Overflow` , qui stocke les données non consommées du document XML.  
   
@@ -54,7 +60,7 @@ FOR XML EXPLICIT;
   
 -   En raison du conflit entre l’attribut `PersonID` de l’élément <`xmltext`> et l’attribut `PersonID` extrait du même niveau d’éléments, l’attribut de l’élément <`xmltext`> est ignoré, même si `PersonID` a la valeur NULL. En général, un attribut remplace un attribut de même nom dans les données en excès.  
   
- Voici le résultat obtenu :  
+ Voici le résultat obtenu :  
   
  ```   
  <Parent PersonID="P1" PersonName="Joe" attr1="data">content</Parent>  
@@ -88,7 +94,7 @@ FROM Person
 FOR XML EXPLICIT;  
 ```  
   
- Voici le résultat obtenu :  
+ Voici le résultat obtenu :  
   
  ```   
  <Parent PersonID="P1" PersonName="Joe" attr1="data">content</Parent>  
@@ -112,7 +118,7 @@ FROM Person
 FOR XML EXPLICIT  
 ```  
   
- Voici le résultat obtenu :  
+ Voici le résultat obtenu :  
   
  ```   
  <Parent PersonID="P1" PersonName="Joe">  
@@ -139,7 +145,7 @@ FROM Person
 FOR XML EXPLICIT;  
 ```  
   
- Voici le résultat obtenu :  
+ Voici le résultat obtenu :  
   
  ```   
  <Parent PersonID="P1" attr1="data">content<PersonName>Joe</PersonName>  
@@ -153,7 +159,7 @@ FOR XML EXPLICIT;
  </Parent>
  ```  
   
- Si les données de la colonne `XMLTEXT` contiennent des attributs sur l'élément racine, ces attributs ne sont pas montrés dans le schéma de données XML et l'analyseur MSXML ne valide pas le fragment de document XML obtenu. Exemple :  
+ Si les données de la colonne `XMLTEXT` contiennent des attributs sur l'élément racine, ces attributs ne sont pas montrés dans le schéma de données XML et l'analyseur MSXML ne valide pas le fragment de document XML obtenu. Exemple :  
   
 ```  
 SELECT 1 AS Tag,  
@@ -175,7 +181,7 @@ FOR XML EXPLICIT, xmldata;
  </overflow>
  ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Utiliser le mode EXPLICIT avec FOR XML](../../relational-databases/xml/use-explicit-mode-with-for-xml.md)  
   
   

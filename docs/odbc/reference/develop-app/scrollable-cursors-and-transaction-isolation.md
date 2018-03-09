@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e4db2f357942eb7bab34a17e8f9c03e442731055
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 6c9e38f4287a8832d8e794940093ce696ac0eaf7
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="scrollable-cursors-and-transaction-isolation"></a>Les curseurs permettant le défilement et Isolation des transactions
 Le tableau suivant répertorie les facteurs régissant la visibilité des modifications.  
@@ -46,17 +46,17 @@ Le tableau suivant répertorie les facteurs régissant la visibilité des modifi
 |Curseur type\action|Self|Propriétaire<br /><br /> Transactions-dépassement|Dépendant<br /><br /> Transactions-dépassement<br /><br /> (RU[a])|Dépendant<br /><br /> Transactions-dépassement<br /><br /> (RC[a])|Dépendant<br /><br /> Transactions-dépassement<br /><br /> (RR[a])|Dépendant<br /><br /> Transactions-dépassement<br /><br /> (S[a])|  
 |-------------------------|----------|-----------------|----------------------------------|----------------------------------|----------------------------------|---------------------------------|  
 |Statique|||||||  
-|Insert|Maybe [b]|Non|Non|Non|Non|Non|  
-|Update|Maybe [b]|Non|Non|Non|Non|Non|  
-|DELETE|Maybe [b]|Non|Non|Non|Non|Non|  
+|Insert|Maybe [b]|non|non|non|non|non|  
+|Update|Maybe [b]|non|non|non|non|non|  
+|DELETE|Maybe [b]|non|non|non|non|non|  
 |Curseur piloté par jeu de clés|||||||  
-|Insert|Maybe [b]|Non|Non|Non|Non|Non|  
-|Update|Oui|Oui|Oui|Oui|Non|Non|  
-|DELETE|Maybe [b]|Oui|Oui|Oui|Non|Non|  
+|Insert|Maybe [b]|non|non|non|non|non|  
+|Update|Oui|Oui|Oui|Oui|non|non|  
+|DELETE|Maybe [b]|Oui|Oui|Oui|non|non|  
 |Dynamique|||||||  
-|Insert|Oui|Oui|Oui|Oui|Oui|Non|  
-|Update|Oui|Oui|Oui|Oui|Non|Non|  
-|DELETE|Oui|Oui|Oui|Oui|Non|Non|  
+|Insert|Oui|Oui|Oui|Oui|Oui|non|  
+|Update|Oui|Oui|Oui|Oui|non|non|  
+|DELETE|Oui|Oui|Oui|Oui|non|non|  
   
  [a] les lettres entre parenthèses indiquent le niveau d’isolation de la transaction contenant le curseur ; le niveau d’isolation de l’autre transaction (dans lequel la modification a été apportée) n’est pas pertinent.  
   

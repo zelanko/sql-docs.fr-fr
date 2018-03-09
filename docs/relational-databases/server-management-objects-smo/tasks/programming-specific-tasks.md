@@ -8,7 +8,7 @@ ms.service:
 ms.component: smo
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -21,18 +21,20 @@ helpviewer_keywords:
 - SMO [SQL Server], tasks
 ms.assetid: a15949ef-88d9-4205-892e-0b66588b4fcc
 caps.latest.revision: "32"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 722cd58757ea108a187b4e7a0884daaee2d2d058
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 7c9e3323e743360d3a6ce2a340c87ab7dac7720b
+ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="programming-specific-tasks"></a>Programmation de tâches spécifiques
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Programmation de tâches spécifiques à l’aide d’objets SMO inclut des sujets complexes requis uniquement par les programmes ayant une fonction spécifique, par exemple la sauvegarde, surveillance des statistiques, la réplication, la gestion des objets d’instance et la définition des options de configuration.  
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+
+  La programmation de tâches spécifiques à l'aide d'objets SMO inclut des sujets complexes requis uniquement par les programmes ayant une fonction spécifique, par exemple la sauvegarde, l'analyse des statistiques, la réplication, la gestion des objets d'instance et la définition d'options de configuration.  
   
 |Rubrique| Description|  
 |-----------|-----------------|  

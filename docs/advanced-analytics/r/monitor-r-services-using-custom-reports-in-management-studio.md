@@ -2,25 +2,28 @@
 title: "Analyser R Services à l’aide de rapports personnalisés dans Management Studio | Microsoft Docs"
 ms.custom: 
 ms.date: 10/09/2017
-ms.prod: sql-server-2016
 ms.reviewer: 
-ms.suite: 
-ms.technology: r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5933c72c-ba63-4966-b882-75719ef8428e
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 46ed619271b56d59085b131839e65cd02e27d8fe
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 565041e140178055b4839985c10ba4633b5f0334
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="monitor-machine-learning-services-using-custom-reports-in-management-studio"></a>Surveiller les Services d’apprentissage Machine à l’aide des rapports personnalisés dans Management Studio
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Pour le rendre plus facile à gérer l’instance utilisée pour l’apprentissage, l’équipe de produit a fourni un nombre d’exemples de rapports personnalisés que vous pouvez ajouter à SQL Server Management Studio. Dans ces rapports, vous pouvez afficher des détails tels que :
 

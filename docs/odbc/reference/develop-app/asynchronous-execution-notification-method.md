@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 56eadba88bc229b4d3f3560c60988124b54f33b9
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: ea68f33ff231a9fb6f257e1cd681e25b3569721a
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="asynchronous-execution-notification-method"></a>Exécution asynchrone (méthode de notification)
 ODBC permet l’exécution asynchrone de connexion et les opérations de l’instruction. Un thread d’application peut appeler une fonction ODBC en mode asynchrone et la fonction peut retourner avant que l’opération est terminée, en autorisant le thread d’application effectuer d’autres tâches. Dans le SDK Windows 7, pour les opérations de connexion, ou l’instruction asynchrone, une application déterminé que l’opération asynchrone a été terminée à l’aide de la méthode d’interrogation. Pour plus d’informations, consultez [exécution asynchrone (méthode d’interrogation)](../../../odbc/reference/develop-app/asynchronous-execution-polling-method.md). À compter dans le SDK Windows 8, vous pouvez déterminer qu’une opération asynchrone est terminée à l’aide de la méthode de notification.  
@@ -336,7 +336,7 @@ if (SQL_ASYNC_NOTIFICATION_CAPABLE == InfoValue)
 |-------------------------------------------------------------------------|-------------------------------------------------------------------|----------|  
 |Activer|non null|Notification asynchrone|  
 |Activer|Null|Interrogation asynchrone|  
-|Désactiver|n'importe laquelle|Synchrone|  
+|Disable|n'importe laquelle|Synchrone|  
   
  Une application peut désactiver temporairement en mode d’opération asynchrone. ODBC ignore les valeurs de SQL_ATTR_ASYNC_DBC_EVENT si l’opération asynchrone au niveau de connexion est désactivée. ODBC ignore les valeurs de SQL_ATTR_ASYNC_STMT_EVENT si l’opération asynchrone d’instruction au niveau est désactivée.  
   

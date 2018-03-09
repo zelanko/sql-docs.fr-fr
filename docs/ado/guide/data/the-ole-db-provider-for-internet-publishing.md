@@ -3,8 +3,9 @@ title: Le fournisseur OLE DB pour la publication Internet | Documents Microsoft
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - Internet publishing [ADO]
 - providers [ADO], OLE DB provider for Internet publishing
 ms.assetid: 4869aafa-7401-4ce1-93ce-45406a60274f
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 29dc06f21ef0a20271184ae71ecb9d203897f2aa
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 128d8531f1a5f4c2ebff06b9db8b1510964bdcd4
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="the-ole-db-provider-for-internet-publishing"></a>Le fournisseur OLE DB pour la publication Internet
 ADO [enregistrement](../../../ado/reference/ado-api/record-object-ado.md) et [flux](../../../ado/reference/ado-api/stream-object-ado.md) objets peuvent être utilisés avec le fournisseur Microsoft OLE DB pour la publication Internet (fournisseur de publication Internet) pour accéder à et manipuler les ressources, telles que les dossiers ou fichiers Web pris en charge par Microsoft FrontPage. Avec ADO, vous pouvez spécifier la source d’un **enregistrement**, **flux**, ou [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) être une URL. Vous pouvez ensuite télécharger, télécharger, déplacer, copier et supprimer des ressources ou manipuler directement des propriétés de ressource.  
@@ -38,19 +39,19 @@ ADO [enregistrement](../../../ado/reference/ado-api/record-object-ado.md) et [fl
   
  Il existe trois façons de connecter ADO au fournisseur de publication Internet :  
   
--   Spécifiez « URL = » dans la chaîne de connexion. Exemple :  
+-   Spécifiez « URL = » dans la chaîne de connexion. Par exemple :  
   
     ```  
     objConn.Open "URL=http://servername"  
     ```  
   
--   Spécifiez Msdaipp.dso pour le *fournisseur* mot clé de la chaîne de connexion. Exemple :  
+-   Spécifiez Msdaipp.dso pour le *fournisseur* mot clé de la chaîne de connexion. Par exemple :  
   
     ```  
     objConn.Open "provider=MSDAIPP.DSO;data source=http://servername"  
     ```  
   
--   Spécifiez Msdaipp.dso pour le [fournisseur](../../../ado/reference/ado-api/provider-property-ado.md) propriété de la [connexion](../../../ado/reference/ado-api/connection-object-ado.md) objet. Exemple :  
+-   Spécifiez Msdaipp.dso pour le [fournisseur](../../../ado/reference/ado-api/provider-property-ado.md) propriété de la [connexion](../../../ado/reference/ado-api/connection-object-ado.md) objet. Par exemple :  
   
     ```  
     objConn.Provider = "MSDAIPP.DSO"  

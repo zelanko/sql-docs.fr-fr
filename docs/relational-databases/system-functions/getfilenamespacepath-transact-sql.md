@@ -1,5 +1,5 @@
 ---
-title: GetFileNamespacePath (Transact-SQL) | Documents Microsoft
+title: GetFileNamespacePath (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - GetFileNamespacePath
 - GetFileNamespacePath_TSQL
-dev_langs: TSQL
-helpviewer_keywords: GetFileNamespacePath function
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- GetFileNamespacePath function
 ms.assetid: b393ecef-baa8-4d05-a268-b2f309fce89a
-caps.latest.revision: "16"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 10f9a117a4ecac05d541ffb004f18106f88dec75
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 3f5c7dcdc32fa7f7d9519b00f5d33d9d0083ca85
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="getfilenamespacepath-transact-sql"></a>GetFileNamespacePath (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +44,7 @@ ms.lasthandoff: 11/27/2017
 ```  
   
 ## <a name="arguments"></a>Arguments  
- *nom de colonne*  
+ *column-name*  
  Nom de colonne de la varbinary (max) **file_stream** colonne dans un FileTable.  
   
  Le *-nom de la colonne* valeur doit être un nom de colonne valide. Il ne peut pas s'agir d'une expression ni d'une valeur convertie à partir d'une colonne présentant un autre type de données.  
@@ -80,7 +83,7 @@ ms.lasthandoff: 11/27/2017
 ## <a name="best-practices"></a>Bonnes pratiques  
  Pour garder le code et les applications indépendantes de l'ordinateur actuel et de la base de données, évitez d'écrire du code qui contient des chemins d'accès de fichier absolus. Au lieu de cela, obtenez le chemin d’accès complet à un fichier en cours d’exécution à l’aide de la **FileTableRootPath** et **GetFileNamespacePath** fonctions, comme indiqué dans l’exemple suivant. Par défaut, la fonction **GetFileNamespacePath** retourne le chemin relatif du fichier sous le chemin racine de la base de données.  
   
-```tsql  
+```sql  
 USE MyDocumentDB;  
 @root varchar(100)  
 SELECT @root = FileTableRootPath();  
@@ -106,6 +109,6 @@ WHERE Name = N’document.docx’;
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Travailler avec des répertoires et des chemins d’accès dans des FileTables](../../relational-databases/blob/work-with-directories-and-paths-in-filetables.md)  
+ [Travailler avec des répertoires et des chemins d'accès dans FileTables](../../relational-databases/blob/work-with-directories-and-paths-in-filetables.md)  
   
   

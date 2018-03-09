@@ -2,9 +2,12 @@
 title: "Actions courantes nécessitant une sauvegarde mise à jour | Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,18 +17,18 @@ helpviewer_keywords:
 - backups [SQL Server replication], actions requiring a backup
 ms.assetid: a5975bf4-183e-42e3-b7d1-ad02f89d2e1d
 caps.latest.revision: "32"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: dbf016e3d13b4a60022fe8b1f36c7e92128b428e
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 9b6d551be26a358f01e8825732973f0eae04dd93
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="common-actions-requiring-an-updated-backup"></a>Actions courantes nécessitant une sauvegarde mise à jour
-  Si vous effectuez des sauvegardes régulières des journaux, toutes les modifications liées à la réplication doivent être capturées dans les sauvegardes des journaux. Si vous ne sauvegardez pas les journaux, effectuez une sauvegarde des bases de données de publication, de distribution, d'abonnement ainsi que des bases de données **msdb**et **master** après avoir apporté des modifications à votre schéma ou topologie de réplication.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Si vous effectuez des sauvegardes régulières des journaux, toutes les modifications liées à la réplication doivent être capturées dans les sauvegardes de fichiers journaux. Si vous ne sauvegardez pas les journaux, effectuez une sauvegarde des bases de données de publication, de distribution, d'abonnement ainsi que des bases de données **msdb**et **master** après avoir apporté des modifications à votre schéma ou topologie de réplication.  
   
 ## <a name="publication-database"></a>Base de données de publication  
  Sauvegardez la base de données de publication après avoir :  
@@ -108,7 +111,7 @@ ms.lasthandoff: 11/09/2017
   
 -   activé ou désactivé un serveur de publication sur un serveur de publication de distribution (sur le serveur de publication et le serveur de distribution).  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Sauvegarde et restauration des bases de données SQL Server](../../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)   
  [Sauvegarder et restaurer des bases de données répliquées](../../../relational-databases/replication/administration/back-up-and-restore-replicated-databases.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: Catalog.deploy_packages | Documents Microsoft
+title: catalog.deploy_packages | Microsoft Docs
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -13,22 +13,21 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 8e861df6-d103-4d84-8438-e822533f6849
-caps.latest.revision: 4
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 1839430dd7fb83ab16c4de46011819e3ce28e835
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: f44775c2852c1d89c0549f2beab7fd903d66c4d3
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="catalogdeploypackages"></a>Catalog.deploy_packages
+# <a name="catalogdeploypackages"></a>catalog.deploy_packages
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Déploie un ou plusieurs packages dans un dossier sous le [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] catalogue ou met à jour un package existant qui a été déployé précédemment.  
+  Déploie un ou plusieurs packages dans un dossier du catalogue [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ou met à jour un package existant qui a été déployé.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -37,39 +36,38 @@ ms.lasthandoff: 09/26/2017
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [ @folder_name =] *nom_dossier*  
- Nom du dossier. Le *nom_dossier* est **nvarchar (128)**.  
+ [ @folder_name = ] *folder_name*  
+ Nom du dossier. *folder_name* est de type **nvarchar(128)**.  
   
- [ @project_name =] *project_name*  
- Le nom du projet dans le dossier. Le *project_name* est **nvarchar (128)**.  
+ [ @project_name = ] *project_name*  
+ Nom du projet dans le dossier. *project_name* est de type **nvarchar(128)**.  
   
- [ @packages_table =] *packages_table*  
- Le contenu binaire de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] package (.dtsx) fichier (s). Le *packages_table* est **[catalogue]. [ Package_Table_Type]**  
+ [ @packages_table = ] *packages_table*  
+ Contenu binaire du (des) fichier(s) de package (.dtsx) [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. *packages_table* est de type **[catalog].[Package_Table_Type]**  
   
- [ @operation_id =] *identifiant_opération*  
- Retourne l'identificateur unique de l'opération de déploiement. Le *identifiant_opération* est **bigint**.  
+ [ @operation_id = ] *operation_id*  
+ Retourne l'identificateur unique de l'opération de déploiement. *operation_id* est de type **bigint**.  
   
-## <a name="return-code-value"></a>Valeur de Code de retour  
+## <a name="return-code-value"></a>Valeur du code de retour  
  0 (succès)  
   
 ## <a name="result-sets"></a>Jeux de résultats  
- Aucune  
+ None  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Cette procédure stockée requiert l'une des autorisations suivantes :  
   
--   Autorisations CREATE_OBJECTS sur le projet ou modifier les autorisations sur le package à mettre à jour un package.  
+-   Autorisations CREATE_OBJECTS sur le projet ou autorisations MODIFY sur le package pour mettre à jour un package.  
   
--   L’appartenance à la **ssis_admin** rôle de base de données  
+-   Appartenance au rôle de base de données **ssis_admin**  
   
--   L’appartenance à la **sysadmin** rôle de serveur  
+-   Appartenance au rôle serveur **sysadmin**  
   
 ## <a name="errors-and-warnings"></a>Erreurs et avertissements  
  La liste suivante décrit quelques conditions qui peuvent générer une erreur de cette procédure stockée :  
   
--   Un paramètre fait référence à un objet qui n’existe pas, un paramètre essaie de créer un objet qui existe déjà, ou un paramètre n’est pas valide dans une autre façon.  
+-   Un paramètre fait référence à un objet qui n’existe pas, un paramètre essaie de créer un objet qui existe déjà, ou un paramètre n’est pas valide d’une autre manière.  
   
 -   L'utilisateur n'a pas des autorisations suffisantes.  
   
   
-

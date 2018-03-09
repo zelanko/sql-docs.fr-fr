@@ -3,8 +3,9 @@ title: "Execute (méthode) (connexion ADO) | Documents Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,18 +16,19 @@ apitype: COM
 f1_keywords:
 - Connection15::Execute
 - Connection15::raw_Execute
-helpviewer_keywords: Execute method [ADO]
+helpviewer_keywords:
+- Execute method [ADO]
 ms.assetid: 03c69320-96b2-4d85-8d49-a13b13e31578
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: b6f8e6c980d8263a5a7076603f447ecc8aa33e00
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ef36e770a2321357ed0d58153ad8e0b7493a232a
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="execute-method-ado-connection"></a>Execute (méthode) (connexion ADO)
 Exécute la requête spécifiée, l’instruction SQL, une procédure stockée ou du texte spécifique au fournisseur.  

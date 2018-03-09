@@ -2,18 +2,17 @@
 title: "Attributs et hiérarchies d’attributs | Documents Microsoft"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - regular attributes [Analysis Services]
 - parent attributes [Analysis Services]
@@ -27,19 +26,20 @@ helpviewer_keywords:
 - attributes [Analysis Services]
 - relationships [Analysis Services], attributes
 ms.assetid: 59de1ea2-e7a9-4a53-9ee0-14be52e95643
-caps.latest.revision: "49"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: a86eb2f15fe0109a2e5b2492a61ca7102e662e7e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 012caa5210886a9c2f6e72a6c1b7338154358d1f
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="attributes-and-attribute-hierarchies"></a>Attributs et hiérarchies d'attributs
-  Les dimensions sont des ensembles d'attributs, liés à une ou plusieurs colonnes dans une table ou une vue de la vue de source de données.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Les dimensions sont des ensembles d'attributs, liés à une ou plusieurs colonnes dans une table ou une vue de la vue de source de données.  
   
 ## <a name="key-attribute"></a>Attribut clé  
  Chaque dimension contient un attribut clé. Chaque attribut est lié à une ou plusieurs colonnes dans une table de dimension. Un attribut clé est l'attribut d'une dimension, qui identifie les colonnes dans la table principale de la dimension qui sont utilisées dans des relations de clé étrangère avec la table de faits. Généralement, l'attribut clé représente la colonne ou les colonnes clés primaires de la table de dimension. Vous pouvez définir une clé primaire logique dans une table d'une vue de source de données qui n'a pas de clé primaire physique dans la source de données sous-jacente. **Pour plus d’informations**, consultez [définir des clés primaires logiques dans une vue de Source de données &#40; Analysis Services &#41; ](../../analysis-services/multidimensional-models/define-logical-primary-keys-in-a-data-source-view-analysis-services.md). Lorsque vous définissez des attributs clés, l'Assistant Cube et l'Assistant Dimension tentent d'utiliser les colonnes clés primaires de la table de dimension dans la vue de source de données. Si la table de dimension n'a pas une clé primaire logique ou une clé primaire physique, les Assistants ne peuvent pas définir correctement les attributs clés de la dimension.  
@@ -56,8 +56,8 @@ ms.lasthandoff: 11/17/2017
  Par défaut, dans un schéma en étoile, tous les attributs sont directement liés à l'attribut clé, qui permet aux utilisateurs de parcourir les faits du cube sur la base de l'une des hiérarchies d'attributs de la dimension. Dans un schéma en flocon, tous les attributs sont soit directement liés à l'attribut clé si leur table sous-jacente est directement liée à la table de faits, soit indirectement liés au moyen de l'attribut qui est lié à la clé de la table sous-jacente qui lie la table en flocon à la table directement liée.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Créer des hiérarchies définies par l'utilisateur](../../analysis-services/multidimensional-models/user-defined-hierarchies-create.md)   
+ [Créer des hiérarchies définies par l’utilisateur](../../analysis-services/multidimensional-models/user-defined-hierarchies-create.md)   
  [Définir des relations d’attributs](../../analysis-services/multidimensional-models/attribute-relationships-define.md)   
- [Référence des propriétés d’attribut de dimension](../../analysis-services/multidimensional-models/dimension-attribute-properties-reference.md)  
+ [Dimension Attribute Properties Reference](../../analysis-services/multidimensional-models/dimension-attribute-properties-reference.md)  
   
   

@@ -2,9 +2,12 @@
 title: "À propos de l’accès de la connexion client aux réplicas de disponibilité (SQL Server) | Microsoft Docs"
 ms.custom: 
 ms.date: 05/17/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: availability-groups
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -19,16 +22,16 @@ ms.assetid: 29027e46-43e4-4b45-b650-c4cdeacdf552
 caps.latest.revision: "16"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: a06ad7142fa98b0a5e0a1ab1af0a98863744fa3c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: b73573c8fb57c50bbca5e74587952e7ed50fa307
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="about-client-connection-access-to-availability-replicas-sql-server"></a>À propos de l'accès de la connexion client aux réplicas de disponibilité (SQL Server)
-  Dans un groupe de disponibilité Always On, vous pouvez configurer un ou plusieurs réplicas de disponibilité pour autoriser les connexions en lecture seule lors d’une exécution sous le rôle secondaire (autrement dit, avec une exécution en tant que réplica secondaire). Vous pouvez également configurer chaque réplica de disponibilité afin d'autoriser ou exclure les connexions en lecture seule lors d'une exécution sous le rôle principal (autrement dit, avec une exécution comme réplica principal).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Dans un groupe de disponibilité Always On, vous pouvez configurer un ou plusieurs réplicas de disponibilité pour autoriser les connexions en lecture seule lors d’une exécution sous le rôle secondaire (autrement dit, avec une exécution en tant que réplica secondaire). Vous pouvez également configurer chaque réplica de disponibilité afin d'autoriser ou exclure les connexions en lecture seule lors d'une exécution sous le rôle principal (autrement dit, avec une exécution comme réplica principal).  
   
  Pour faciliter l'accès client aux bases de données primaires ou secondaires d'un groupe de disponibilité donné, vous devez définir un écouteur de groupe de disponibilité. Par défaut, l'écouteur de groupe de disponibilité dirige les connexions entrantes vers le réplica principal. Toutefois, vous pouvez configurer un groupe de disponibilité pour prendre en charge le routage en lecture seule, qui permet à son écouteur de groupe de disponibilité de rediriger les demandes de connexion des applications avec intention de lecture vers un réplica secondaire accessible en lecture. Pour plus d’informations, consultez [Configurer le routage en lecture seule pour un groupe de disponibilité &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server.md).  
   
@@ -83,7 +86,7 @@ ms.lasthandoff: 11/09/2017
   
 |Rôle de réplica|Accès à la connexion pris en charge sur le réplica|Intention de connexion|Résultat de la tentative de connexion|  
 |------------------|--------------------------------------------|-----------------------|--------------------------------|  
-|Secondary|Tous|Intention de lecture, lecture-écriture, ou aucune intention de connexion spécifiée|Réussi|  
+|Secondary|All|Intention de lecture, lecture-écriture, ou aucune intention de connexion spécifiée|Réussi|  
 |Secondary|Aucun (il s'agit du comportement secondaire par défaut.)|Intention de lecture, lecture-écriture, ou aucune intention de connexion spécifiée|Failure|  
 |Secondary|Intention de lecture uniquement|Intention de lecture|Réussi|  
 |Secondary|Intention de lecture uniquement|Lecture-écriture ou aucune intention de connexion spécifiée|Failure|  
@@ -100,8 +103,8 @@ ms.lasthandoff: 11/09/2017
   
 |Réplica|Mode de validation|Rôle initial|Accès à la connexion pour le rôle secondaire|Accès à la connexion pour le rôle principal|  
 |-------------|-----------------|------------------|------------------------------------------|----------------------------------------|  
-|Replica1|Synchrone|Principal|Aucun|Lecture-écriture|  
-|Replica2|Synchrone|Secondary|Aucun|Lecture-écriture|  
+|Replica1|Synchrone|Principal|None|Lecture-écriture|  
+|Replica2|Synchrone|Secondary|None|Lecture-écriture|  
 |Replica3|Asynchrone|Secondary|Intention de lecture uniquement|Lecture-écriture|  
 |Replica4|Asynchrone|Secondary|Intention de lecture uniquement|Lecture-écriture|  
   
@@ -119,13 +122,13 @@ ms.lasthandoff: 11/09/2017
   
 -   [Utiliser la boîte de dialogue Nouveau groupe de disponibilité &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-new-availability-group-dialog-box-sql-server-management-studio.md)  
   
-##  <a name="RelatedContent"></a> Contenu connexe  
+##  <a name="RelatedContent"></a> Contenu associé  
   
 -   [Microsoft SQL Server Always On Solutions Guide for High Availability and Disaster Recovery (Guide de solutions Microsoft SQL Server Always On pour la haute disponibilité et la récupération d’urgence)](http://go.microsoft.com/fwlink/?LinkId=227600)  
   
 -   [Blog de l’équipe de SQL Server Always On : Blog officiel de l’équipe de SQL Server Always On](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Vue d’ensemble des groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Écouteurs de groupe de disponibilité, connectivité client et basculement d’application &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)   
  [Statistiques](../../../relational-databases/statistics/statistics.md)  

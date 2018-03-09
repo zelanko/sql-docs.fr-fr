@@ -8,9 +8,7 @@ ms.service:
 ms.component: reports
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -28,15 +26,15 @@ helpviewer_keywords:
 - Report Designer [Reporting Services], publishing reports
 ms.assetid: bd7aa5e0-61ce-43fd-8f74-5d1aeed078bb
 caps.latest.revision: "47"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: dcd1e87588539961f9cd3dcb5e764b8fec420334
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 94377a58c5d61ea2d62d5c8e75cea5d4b82f9a4f
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="publishing-reports-to-a-report-server"></a>Publication de rapports sur un serveur de rapports
   Après avoir conçu et testé un rapport ou ensemble de rapports, vous pouvez utiliser les fonctionnalités de déploiement de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] pour publier les rapports sur un serveur de rapports. Vous pouvez publier des rapports individuels ou un projet Report Server qui peut inclure plusieurs rapports et sources de données. La publication d'un projet Report Server est la méthode la plus simple pour publier plusieurs rapports. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] utilise le terme *déployer*à la place du terme *publier*. Les deux termes sont interchangeables.  
@@ -76,7 +74,7 @@ Dans l’Explorateur de solutions, cliquez avec le bouton droit sur le rapport, 
  L'URL de serveur cible du serveur de rapports doit être spécifiée et vous pouvez modifier les dossiers par défaut vers lesquels les rapports et sources de données partagées sont déployés.  
 
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Pages de propriétés du projet, boîte de dialogue](../../reporting-services/tools/project-property-pages-dialog-box.md)   
  [Gestion du contenu du serveur de rapports &#40;SSRS en mode natif&#41;](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)   
  [Mettre à niveau des rapports](../../reporting-services/install-windows/upgrade-reports.md)  

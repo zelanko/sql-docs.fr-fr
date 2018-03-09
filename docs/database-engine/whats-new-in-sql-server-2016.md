@@ -16,15 +16,15 @@ helpviewer_keywords:
 - Database Engine [SQL Server], what's new
 ms.assetid: 8f625d5a-763c-4440-97b8-4b823a6e2439
 caps.latest.revision: "431"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 0ca847dd4e836fbfd350a8c92df263f50347ae99
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 0e5018b6b111790d2ff0415180e0608798da44ac
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="whats-new-in-database-engine---sql-server-2016"></a>Nouveautés du moteur de base de données - SQL Server 2016
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -271,7 +271,7 @@ La mise à jour automatique des statistiques est désormais plus intensive pour 
 La requête INSERT d’une instruction INSERT SELECT est multithread ou peut présenter un plan parallèle (au niveau de compatibilité 130). Pour disposer d’un plan parallèle, l’instruction INSERT … SELECT doit utiliser l’indicateur TABLOCK. Pour plus d’informations, voir [Parallel Insert Select](https://blogs.msdn.microsoft.com/sqlcat/2016/07/06/sqlsweet16-episode-3-parallel-insert-select/)(Instruction INSERT SELECT parallèle).
 
 ####  <a name="LiveStats"></a> Statistiques des requêtes dynamiques
- [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] offre la possibilité de visualiser le plan d’exécution dynamique d’une requête active. Ce plan de requête dynamique fournit des informations en temps réel sur le processus d’exécution des requêtes à mesure que les commandes passent d’un opérateur de plan de requête à un autre. Pour plus d’informations, voir [Live Query Statistics](../relational-databases/performance/live-query-statistics.md).
+ [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] offre la possibilité de visualiser le plan d’exécution dynamique d’une requête active. Ce plan de requête active fournit des informations en temps réel sur le processus d’exécution des requêtes à mesure que les commandes basculent d’un opérateur de plan de requête à un autre. Pour plus d’informations, voir [Live Query Statistics](../relational-databases/performance/live-query-statistics.md).
 
 ####  <a name="QueryStore"></a> Magasin de requêtes
 Le magasin de requêtes est une nouvelle fonctionnalité qui fournit aux administrateurs de base de données des informations sur le choix du plan de requête et sur les performances. Elle simplifie la résolution des problèmes de performances en vous permettant de trouver rapidement les différences de performances provoquées par un changement de plan de requête. La fonctionnalité capture automatiquement l'historique des requêtes, des plans et des statistiques d'exécution et les conserve à des fins de consultation. Elle sépare les données en périodes, ce qui vous permet de voir les modèles d'utilisation de base de données et de comprendre à quel moment le changement de plan de requête a eu lieu sur le serveur. Le magasin de requêtes, qui utilise une boîte de dialogue [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] pour présenter les informations, vous permet de forcer la requête vers l’un des plans de requête sélectionnés. Pour plus d’informations, voir [Monitoring Performance By Using the Query Store](../relational-databases/performance/monitoring-performance-by-using-the-query-store.md).
@@ -309,7 +309,7 @@ Dans [!INCLUDE[ssSQL15](../includes/sssql15-md.md)], la gestion de sauvegarde SQ
 
 -   Pendant l’installation, vous pouvez configurer le nombre de fichiers de base de données tempdb, la taille initiale, la croissance automatique et le positionnement des répertoires à l’aide du nouveau contrôle d’entrée de l’interface utilisateur figurant dans la section Configuration du moteur de base de données - TempDB de l’Assistant Installation de SQL Server.
 
--   La taille initiale par défaut est de 8 Mo et la croissance automatique par défaut est de 64 Mo.
+-   La taille initiale par défaut est de 8 Mo et la croissance automatique par défaut est de 64 Mo.
 
 -   Vous pouvez spécifier plusieurs volumes pour les fichiers de base de données tempdb. Si plusieurs répertoires sont spécifiés, les fichiers de données tempdb sont répartis entre les répertoires selon le principe du tourniquet (round robin).
 
@@ -452,7 +452,7 @@ SQL Server 2016 Upgrade Advisor Preview est un outil autonome qui permet aux uti
 
  Vous pouvez télécharger Upgrade Advisor Preview [ici](https://www.microsoft.com/en-us/download/details.aspx?id=48119) ou l’installer à l’aide de Web Platform Installer.
 
-## <a name="see-also"></a>Voir aussi
+## <a name="see-also"></a> Voir aussi
 [Nouveautés de SQL Server 2016](../sql-server/what-s-new-in-sql-server-2016.md)
  
 [Notes de publication de SQL Server 2016](../sql-server/sql-server-2016-release-notes.md) 

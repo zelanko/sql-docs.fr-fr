@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|language-elements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -18,7 +19,8 @@ f1_keywords:
 - BEGIN TRANSACTION
 - BEGIN TRAN
 - BEGIN_TRAN_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - transaction logs [SQL Server], BEGIN TRANSACTION statement
 - marked transactions [SQL Server], BEGIN TRANSACTION statement
@@ -30,16 +32,16 @@ helpviewer_keywords:
 - starting point marked for transactions
 - starting transactions
 ms.assetid: c6258df4-11f1-416a-816b-54f98c11145e
-caps.latest.revision: "56"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: d1e327dc8e5ce590ee3d2123b6049bbfc470d7b6
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: 260399c0964afeeafc0f8a221de13169ef277496
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="begin-transaction-transact-sql"></a>BEGIN TRANSACTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
@@ -69,12 +71,12 @@ BEGIN { TRAN | TRANSACTION }
 
   
 ## <a name="arguments"></a>Arguments  
- *argument*  
+ *transaction_name*  
  **S’applique à :** SQL Server (à partir de 2008), base de données SQL Azure
  
  Nom attribué à la transaction. *argument* doit être conforme aux règles des identificateurs, mais les identificateurs de plus de 32 caractères ne sont pas autorisés. Utilisez les noms de transaction seulement sur la paire la plus extérieure des instructions BEGIN...COMMIT ou BEGIN...ROLLBACK imbriquées. *argument* est toujours la casse, même lorsque l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne respecte pas la casse.  
   
- @*variable_nom_transaction*  
+ @*tran_name_variable*  
  **S’applique à :** SQL Server (à partir de 2008), base de données SQL Azure
  
  Nom d'une variable définie par l'utilisateur et contenant un nom de transaction valide. La variable doit être déclarée avec un **char**, **varchar**, **nchar**, ou **nvarchar** type de données. Si plus de 32 caractères sont passés à la variable, seuls les 32 premiers caractères seront utilisés et les autres seront tronqués.  
@@ -143,7 +145,7 @@ COMMIT TRAN T1;
   
  « L'option est ignorée. »  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l'appartenance au rôle public.  
   
 ## <a name="examples"></a>Exemples  
@@ -214,9 +216,9 @@ GO
 ## <a name="see-also"></a>Voir aussi  
  [BEGIN DISTRIBUTED TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/begin-distributed-transaction-transact-sql.md)   
  [COMMIT TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/commit-transaction-transact-sql.md)   
- [VALIDER le travail &#40; Transact-SQL &#41;](../../t-sql/language-elements/commit-work-transact-sql.md)   
+ [COMMIT WORK &#40;Transact-SQL&#41;](../../t-sql/language-elements/commit-work-transact-sql.md)   
  [ROLLBACK TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/rollback-transaction-transact-sql.md)   
- [TRAVAIL de restauration &#40; Transact-SQL &#41;](../../t-sql/language-elements/rollback-work-transact-sql.md)   
+ [ROLLBACK WORK &#40;Transact-SQL&#41;](../../t-sql/language-elements/rollback-work-transact-sql.md)   
  [SAVE TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/save-transaction-transact-sql.md)  
   
   

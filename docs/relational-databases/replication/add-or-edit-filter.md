@@ -2,27 +2,30 @@
 title: Ajouter un filtre ou Modifier le filtre | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords: sql13.rep.newpubwizard.addeditfilter.f1
 ms.assetid: bdd7c71d-1c59-4044-bfe8-c85f908345bb
 caps.latest.revision: "27"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b488f571aee2fcbe68a228489e078ccdc32e9ba2
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 0461e699bbf3593f87567d3972aa7e260bca3111
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="add-or-edit-filter"></a>Ajouter un filtre ou Modifier le filtre
-  Les boîtes de dialogue **Ajouter un filtre** et **Modifier le filtre** permettent d'ajouter et de modifier des filtres de lignes statiques ou paramétrés.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Les boîtes de dialogue **Ajouter un filtre** et **Modifier le filtre** permettent d’ajouter et de modifier des filtres de lignes statiques ou paramétrables.  
   
 > [!NOTE]  
 >  Pour pouvoir modifier un filtre dans une publication existante, vous devez procéder au préalable à un nouvel instantané de la publication. Si cette dernière dispose d'abonnements, ces abonnements doivent alors être réinitialisés. Pour plus d’informations sur les modifications de propriétés, consultez [Changer des propriétés de publication et d’article](../../relational-databases/replication/publish/change-publication-and-article-properties.md).  
@@ -61,11 +64,11 @@ ms.lasthandoff: 11/09/2017
   
  Après avoir ajouté ou modifié un filtre, cliquez sur **OK** pour enregistrer les modifications et fermer ainsi la boîte de dialogue. Le filtre que vous spécifiez est ensuite analysé et exécuté sur la table indiquée dans la clause SELECT. Si l'instruction de filtrage contient des erreurs de syntaxe ou rencontre tout autre problème, vous en êtes alors informé pour vous donner la possibilité de modifier l'instruction de filtrage.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)   
  [Afficher et modifier les propriétés d’une publication](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)   
  [Filtrer des données publiées](../../relational-databases/replication/publish/filter-published-data.md)   
- [Filtres de jointure](../../relational-databases/replication/merge/join-filters.md)   
+ [Join Filters](../../relational-databases/replication/merge/join-filters.md)   
  [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)   
  [Publier des données et des objets de base de données](../../relational-databases/replication/publish/publish-data-and-database-objects.md)  
   

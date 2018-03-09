@@ -3,8 +3,9 @@ title: "En général les commandes Shape | Documents Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,16 +16,16 @@ helpviewer_keywords:
 - shape commands [ADO]
 - data shaping [ADO], shape commands
 ms.assetid: 1fac7831-a187-4b15-9b43-aad380c5556c
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f58f3450a097d2c84de5909a8f2f6817e1274947
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: fb85b1f835f494e7f86e69d25ed225ce4c605e55
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="shape-commands-in-general"></a>En général, les commandes de forme
 Mise en forme des données définit les colonnes d’une forme **Recordset**, les relations entre les entités représentées par les colonnes et la façon dont le **Recordset** remplie avec des données.  
@@ -33,7 +34,7 @@ Mise en forme des données définit les colonnes d’une forme **Recordset**, le
   
 |Type de colonne| Description|  
 |-----------------|-----------------|  
-|data|Des champs une **Recordset** retournées par une commande de requête à un fournisseur de données, de table ou précédemment mise en forme **Recordset**.|  
+|données|Des champs une **Recordset** retournées par une commande de requête à un fournisseur de données, de table ou précédemment mise en forme **Recordset**.|  
 |chapitre|Une référence à un autre **Recordset**, appelé un *chapitre*. Les colonnes de chapitres permettent de définir un *parent-enfant* relation où la *parent* est la **Recordset** qui contient la colonne de chapitre et le *enfant* est la **Recordset** représenté par le chapitre.|  
 |agrégat|La valeur de la colonne est obtenue par l’exécution une *fonction d’agrégation* sur toutes les lignes ou une colonne de toutes les lignes d’un enfant **Recordset**. (Voir les fonctions d’agrégation dans la rubrique suivante, [les fonctions d’agrégation, la fonction de calcul et le mot clé NEW](../../../ado/guide/data/aggregate-functions-the-calc-function-and-the-new-keyword.md).)|  
 |Expression calculée|La valeur de la colonne est dérivée en calculant une expression Visual Basic pour Applications sur les colonnes de la même ligne de la **Recordset**. L’expression est l’argument de la fonction de calcul. (Consultez Expression calculée dans la rubrique suivante, [les fonctions d’agrégation, la fonction de calcul et le mot clé NEW](../../../ado/guide/data/aggregate-functions-the-calc-function-and-the-new-keyword.md) et dans [Visual Basic pour Applications Functions](../../../ado/guide/data/visual-basic-for-applications-functions.md).)|  

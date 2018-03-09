@@ -2,9 +2,12 @@
 title: "Banner (ssbdiagnose) d’élément | Documents Microsoft"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssbdiagnose
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,18 +17,18 @@ helpviewer_keywords:
 - ssbdiagnose
 ms.assetid: cc6cd49a-acf0-4cfb-8c6a-554692b89de2
 caps.latest.revision: "15"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7b226de6f78ebc66c952f4c8263db216b9724c4b
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 67483820a6f6b9e0033808df7233d1908002fa69
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="banner-element-ssbdiagnose"></a>Élément Banner (ssbdiagnose)
-  Identifie quel utilitaire a généré le fichier de sortie XML **ssbdiagnose** .  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Identifie quel utilitaire a généré le **ssbdiagnose** fichier de sortie XML.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -39,7 +42,7 @@ ms.lasthandoff: 11/09/2017
   
 ## <a name="element-attributes"></a>Attributs des éléments  
   
-|Attribut|Description|  
+|Attribut| Description|  
 |---------------|-----------------|  
 |**title**|Identifie l’utilitaire qui a généré le fichier de sortie XML **ssbdiagnose** .|  
 |**product**|Identifie le produit qui a généré le fichier de sortie XML **ssbdiagnose** .|  
@@ -57,7 +60,7 @@ ms.lasthandoff: 11/09/2017
   
 |Relation|Éléments|  
 |------------------|--------------|  
-|**Élément parent**|[Élément DiagnosticInformation &#40;ssbdiagnose&#41;](../../tools/ssbdiagnose/diagnosticinformation-element-ssbdiagnose.md)|  
+|**Élément parent**|[DiagnosticInformation Élément &#40; ssbdiagnose &#41;](../../tools/ssbdiagnose/diagnosticinformation-element-ssbdiagnose.md)|  
 |**Éléments enfants**|Aucun.|  
   
 ## <a name="example"></a>Exemple  
@@ -68,6 +71,6 @@ ms.lasthandoff: 11/09/2017
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Utilitaire ssbdiagnose &#40;Service Broker&#41;](../../tools/ssbdiagnose/ssbdiagnose-utility-service-broker.md)  
+ [Utilitaire ssbdiagnose &#40; Service Broker &#41;](../../tools/ssbdiagnose/ssbdiagnose-utility-service-broker.md)  
   
   

@@ -2,23 +2,27 @@
 title: "Présentation de l’architecture de SQL Server Machine Learning Services | Documents Microsoft"
 ms.custom: 
 ms.date: 11/03/2017
-ms.prod: sql-server-2017
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology: r-services
+ms.suite: sql
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: c81f114f97dee97a37832201637ac5e17fe08794
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 4272a0f421bc8286fc9be7be44e3b7ef8cc13905
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="architecture-overview-for-sql-server-machine-learning-services"></a>Présentation de l’architecture de SQL Server Machine Learning Services 
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Cette rubrique décrit les objectifs de l’infrastructure d’extensibilité qui prend en charge l’exécution du script Python et R dans SQL Server.
 

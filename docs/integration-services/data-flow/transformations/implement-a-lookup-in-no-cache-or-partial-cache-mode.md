@@ -1,5 +1,5 @@
 ---
-title: "Implémenter une recherche en Mode aucun Cache ou Cache partiel | Documents Microsoft"
+title: "Implémenter une recherche en mode Aucun cache ou Cache partiel | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -18,17 +18,16 @@ helpviewer_keywords:
 - lookups [Integration Services]
 - exact matches [Integration Services]
 ms.assetid: 01b7fbca-5181-4d47-9f75-7f25af6b40d2
-caps.latest.revision: 67
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: cb81f969cc30366489df367016c8096ea2ac1168
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 4312836f421788df8a2927afc8f6e0986a0490d2
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="implement-a-lookup-in-no-cache-or-partial-cache-mode"></a>Implémenter une recherche en mode Aucun cache ou Cache partiel
   Vous pouvez configurer la transformation de recherche afin qu'elle utilise le mode Cache partiel ou le mode Aucun cache.  
@@ -86,7 +85,7 @@ ms.lasthandoff: 08/03/2017
     >  La transformation de recherche mappe automatiquement les colonnes ayant le même nom et le même type de données.  
   
     > [!NOTE]  
-    >  Les types de données des colonnes doivent correspondre pour que les colonnes puissent être mappées. Pour plus d’informations, consultez [Integration Services Data Types](../../../integration-services/data-flow/integration-services-data-types.md).  
+    >  Les types de données des colonnes doivent correspondre pour que les colonnes puissent être mappées. Pour plus d’informations, consultez [Types de données Integration Services](../../../integration-services/data-flow/integration-services-data-types.md).  
   
 10. Incluez des colonnes de recherche dans la sortie en procédant comme suit :  
   
@@ -115,8 +114,7 @@ ms.lasthandoff: 08/03/2017
   
 14. Cliquez sur **OK** pour enregistrer les modifications apportées à la transformation de recherche, puis exécutez le package.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Transformations Integration Services](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  
   
   
-

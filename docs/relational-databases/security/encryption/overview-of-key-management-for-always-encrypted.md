@@ -8,20 +8,21 @@ ms.service:
 ms.component: security
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-security
+ms.technology:
+- dbe-security
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 07a305b1-4110-42f0-b7aa-28a4e32e912a
-caps.latest.revision: "32"
+caps.latest.revision: 
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 00fbddda37b58442e37618a25347576bc88caf07
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: fbe87e904a8e46ae19d6dcb06600352a29949dc2
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="overview-of-key-management-for-always-encrypted"></a>Vue d’ensemble de la gestion des clés pour Always Encrypted
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -100,7 +101,7 @@ Pour qu’Always Encrypted soit efficace contre ces types d’attaques, votre pr
 - Ne générez jamais de clés principales de colonne ou de clés de chiffrement de colonne sur un ordinateur qui héberge votre base de données. Au lieu de cela, générez les clés sur un ordinateur distinct dédié à la gestion de clés ou hébergeant des applications qui auront besoin d’un accès aux clés. Cela signifie que **vous ne devez jamais exécuter les outils utilisés pour générer les clés sur l’ordinateur qui héberge votre base de données** , car si un intrus accède à un ordinateur utilisé pour mettre en service ou gérer vos clés Always Encrypted, il risque d’obtenir vos clés, même si elles apparaissent uniquement dans la mémoire de l’outil pendant une courte durée.
 - Pour vous assurer que votre processus de gestion de clés ne révèle pas par inadvertance les clés principales de colonne ou les clés de chiffrement de colonne, vous devez impérativement identifier les adversaires potentiels et les menaces de sécurité avant de définir et d’implémenter un processus de gestion de clés. Par exemple, si votre objectif est de vous assurer que les administrateurs de base de données n’ont pas accès aux données sensibles, un administrateur de base de données ne doit pas être responsable de la génération des clés. En revanche, un administrateur de base de données *peut* gérer les métadonnées de clés dans la base de données, puisqu’elles ne contiennent pas les clés en clair.
 
-## <a name="next-steps"></a>Étapes suivantes
+## <a name="next-steps"></a>Next Steps
 
 - [Créer et stocker des clés principales de colonne (Always Encrypted)](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md)
 - [Configurer des clés Always Encrypted à l’aide de PowerShell](../../../relational-databases/security/encryption/configure-always-encrypted-keys-using-powershell.md)

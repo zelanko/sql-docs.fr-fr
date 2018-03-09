@@ -1,5 +1,5 @@
 ---
-title: Catalog.add_data_tap | Documents Microsoft
+title: catalog.add_data_tap | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -13,17 +13,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: a25ebcc7-535e-4619-adf6-4e2b5a62ba37
-caps.latest.revision: 23
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 686b40e7e1ad7f7843bee5af3295fdf394538f63
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: c1c4130b66a7c9c2011aaf1e2af30f799d753162
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="catalogadddatatap"></a>catalog.add_data_tap
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -42,36 +41,36 @@ catalog.add_data_tap [ @execution_id = ] execution_id
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [ @execution_id =] *execution_id*  
- ID de l'exécution contenant le package. Le *execution_id* est un **bigint**.  
+ [ @execution_id = ] *execution_id*  
+ ID de l'exécution contenant le package. *execution_id* est de type **bigint**.  
   
- [ @task_package_path =] *task_package_path*  
- Chemin d'accès de package de la tâche de flux de données. Le **PackagePath** propriété pour la tâche de flux de données spécifie le chemin d’accès. Le chemin d'accès respecte la casse. Pour rechercher le chemin d’accès du package, dans [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] avec le bouton droit de la tâche de flux de données, puis cliquez sur **propriétés**. Le **PackagePath** propriété s’affiche dans le **propriétés** fenêtre.  
+ [ @task_package_path = ] *task_package_path*  
+ Chemin d'accès de package de la tâche de flux de données. La propriété **PackagePath** de la tâche de flux de données spécifie le chemin d’accès. Le chemin d'accès respecte la casse. Pour rechercher le chemin d’accès au package, dans [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] cliquez avec le bouton droit sur la tâche de flux de données, puis cliquez sur **Propriétés**. La propriété **PackagePath** s’affiche dans la fenêtre **Propriétés**.  
   
- Le *task_package_path* est un **nvarchar (max)**.  
+ *task_package_path* est de type **nvarchar(max)**.  
   
- [ @dataflow_path_id_string =] *dataflow_path_id_string*  
- La chaîne d’identification pour le chemin d’accès du flux de données. Un chemin d'accès connectent deux composants de flux de données. Le **IdentificationString** propriété pour le chemin d’accès spécifie la chaîne.  
+ [ @dataflow_path_id_string = ] *dataflow_path_id_string*  
+ Chaîne d’identification du chemin d’accès de flux de données. Un chemin d'accès connectent deux composants de flux de données. La propriété **IdentificationString** du chemin d’accès spécifie la chaîne.  
   
- Pour rechercher la chaîne d’identification, dans [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] avec le bouton droit le chemin d’accès entre les composants de flux de données de deux, puis cliquez sur **propriétés**. Le **IdentificationString** propriété s’affiche dans le **propriétés** fenêtre.  
+ Pour rechercher la chaîne d’identification, dans [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] cliquez avec le bouton droit sur le chemin d’accès entre deux composants de flux de données, puis cliquez sur **Propriétés**. La propriété **IdentificationString** s’affiche dans la fenêtre **Propriétés**.  
   
- Le *dataflow_path_id_string* est un **nvarchar (4000)**.  
+ *dataflow_path_id_string* est de type **nvarchar(4000)**.  
   
- [ @data_filename =] *data_filename*  
+ [ @data_filename = ] *data_filename*  
  Nom du fichier qui stocke les données drainées. Si la tâche de flux de données s'exécute à l'intérieur d'un conteneur de boucles Foreach ou For, des fichiers distincts stockent les données drainées pour chaque itération de la boucle. Chaque fichier a pour préfixe un nombre qui correspond à une itération.  
   
- Par défaut, le fichier est stocké dans le \< *lecteur*> : dossier \Program Files\Microsoft SQL Server\130\DTS\DataDumps.  
+ Par défaut, le fichier est stocké dans le dossier \<*lecteur*>:\Program Files\Microsoft SQL Server\130\DTS\DataDumps.  
   
- Le *data_filename* est un **nvarchar (4000)**.  
+ *data_filename* est de type **nvarchar(4000)**.  
   
- [ @max_rows =] *max_rows*  
- Nombre de lignes capturées pendant le drainage de données. Si cette valeur n'est pas spécifiée, toutes les lignes sont capturées. Le *max_rows* est un **int**.  
+ [ @max_rows = ] *max_rows*  
+ Nombre de lignes capturées pendant le drainage de données. Si cette valeur n'est pas spécifiée, toutes les lignes sont capturées. *max_rows* est de type **int**.  
   
- [ @data_tap_id =] *data_tap_id*  
- Retourne l'ID de la collecte de données. Le *data_tap_id* est un **bigint**.  
+ [ @data_tap_id = ] *data_tap_id*  
+ Retourne l'ID de la collecte de données. *data_tap_id* est de type **bigint**.  
   
-## <a name="example"></a>Exemple  
- Dans l’exemple suivant, un drainage de données est créé sur le chemin d’accès de flux de données, `'Paths[OLE DB Source.OLE DB Source Output]`, dans le flux de données de tâche, `\Package\Data Flow Task`. Les données collectées sont stockées dans le `output0.txt` fichier dans le dossier DataDumps (\<*lecteur*> : \Program Files\Microsoft SQL Server\130\DTS\DataDumps).  
+## <a name="example"></a> Exemple  
+ Dans l’exemple suivant, un drainage de données est créé sur le chemin d’accès de flux de données, `'Paths[OLE DB Source.OLE DB Source Output]`, dans la tâche de flux de données, `\Package\Data Flow Task`. Les données drainées sont stockées dans le fichier `output0.txt` dans le dossier DataDumps (\<*lecteur*>:\Program Files\Microsoft SQL Server\130\DTS\DataDumps).  
   
 ```sql
 Declare @execution_id bigint  
@@ -84,8 +83,8 @@ Exec SSISDB.Catalog.add_data_tap @execution_id, @task_package_path='\Package\Dat
 Exec SSISDB.Catalog.start_execution @execution_id  
 ```  
   
-## <a name="remarks"></a>Notes  
- Pour ajouter des drainages de données, l’instance de l’exécution doit être dans l’état créé (une valeur de 1 dans le **état** colonne de la [catalog.operations &#40; Base de données SSISDB &#41; ](../../integration-services/system-views/catalog-operations-ssisdb-database.md)affichage). La valeur d'état change lorsque vous exécutez l'exécution. Vous pouvez créer une exécution en appelant [catalog.create_execution &#40; Base de données SSISDB &#41; ](../../integration-services/system-stored-procedures/catalog-create-execution-ssisdb-database.md).  
+## <a name="remarks"></a>Notes   
+ Pour ajouter des drainages de données, l’instance d’exécution doit avoir l’état Created (valeur 1 dans la colonne **status** de la vue [catalog.operations &#40;base de données SSISDB&#41;](../../integration-services/system-views/catalog-operations-ssisdb-database.md)). La valeur d'état change lorsque vous exécutez l'exécution. Vous pouvez créer une exécution en appelant [catalog.create_execution &#40;base de données SSISDB&#41;](../../integration-services/system-stored-procedures/catalog-create-execution-ssisdb-database.md).  
   
  Les considérations suivantes sont à prendre en compte pour la procédure stockée add_data_tap.  
   
@@ -107,16 +106,16 @@ Exec SSISDB.Catalog.start_execution @execution_id
  Lorsque la procédure stockée échoue, elle génère une erreur.  
   
 ## <a name="result-set"></a>Jeu de résultats  
- Aucune  
+ None  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Cette procédure stockée requiert l'une des autorisations suivantes :  
   
 -   Autorisations MODIFY sur l'instance d'exécution  
   
--   L’appartenance à la **ssis_admin** rôle de base de données  
+-   Appartenance au rôle de base de données **ssis_admin**  
   
--   L’appartenance à la **sysadmin** rôle de serveur  
+-   Appartenance au rôle serveur **sysadmin**  
   
 ## <a name="errors-and-warnings"></a>Erreurs et avertissements  
  La liste suivante décrit les conditions provoquant l'échec de la procédure stockée.  
@@ -130,10 +129,9 @@ Exec SSISDB.Catalog.start_execution @execution_id
 ## <a name="requirements"></a>Spécifications  
   
 ## <a name="external-resources"></a>Ressources externes  
- Entrée de blog, [SSIS 2012 : A Peek to Data Taps](http://go.microsoft.com/fwlink/?LinkId=239983), sur le site rafael-salas.com.  
+ Entrée de blog, [SSIS 2012: A Peek to Data Taps](http://go.microsoft.com/fwlink/?LinkId=239983), sur le site rafael-salas.com.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [catalog.add_data_tap_by_guid](../../integration-services/system-stored-procedures/catalog-add-data-tap-by-guid.md)  
   
   
-

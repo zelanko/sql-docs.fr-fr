@@ -3,8 +3,9 @@ title: Dimension, objet (ADO MD) | Documents Microsoft
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,19 +13,21 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords: Dimension
-helpviewer_keywords: Dimension object [ADO MD]
+f1_keywords:
+- Dimension
+helpviewer_keywords:
+- Dimension object [ADO MD]
 ms.assetid: 66adbbd2-23a3-4c19-a91b-84c31309aa1b
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b8b166484928abbeba70934d5b597c7e27d41f1f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 9a222c6495302f06e5fa2b8dd0e0d355869e3d40
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="dimension-object-ado-md"></a>Objet de dimension (ADO MD)
 Représente une des dimensions d’un cube multidimensionnel, contenant une ou plusieurs hiérarchies de membres.  
@@ -46,7 +49,7 @@ Représente une des dimensions d’un cube multidimensionnel, contenant une ou p
 |----------|-----------------|  
 |CatalogName|Le nom du catalogue auquel appartient ce cube.|  
 |CubeName|Nom du cube.|  
-|Hiérarchie par défaut|Le nom unique de la hiérarchie par défaut.|  
+|DefaultHierarchy|Le nom unique de la hiérarchie par défaut.|  
 | Description|Description explicite du cube.|  
 |DimensionCaption|Étiquette ou légende associée à la dimension.|  
 |DimensionCardinality|Le nombre de membres dans la dimension.|  

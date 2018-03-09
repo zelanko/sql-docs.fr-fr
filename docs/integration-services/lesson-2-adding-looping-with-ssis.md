@@ -1,11 +1,11 @@
 ---
-title: "Leçon 2 : Ajout d’un bouclage avec SSIS | Documents Microsoft"
+title: "Leçon 2 : Ajout d’un bouclage avec SSIS | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
 ms.technology:
@@ -15,17 +15,16 @@ ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
 ms.assetid: 01f2ed61-1e5a-4ec6-b6a6-2bd070c64077
-caps.latest.revision: 32
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 8559dc3afb5f347555b9b21b61abc50765fd92c4
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 683a2db5f7af5292051b5ce5c4cec9d49d465c2e
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="lesson-2-adding-looping-with-ssis"></a>Leçon 2 : Ajout d’un bouclage avec SSIS
 Au cours de la [Leçon 1 : Créer un projet et un package de base avec SSIS](../integration-services/lesson-1-create-a-project-and-basic-package-with-ssis.md), vous avez créé un package qui a extrait des données d’une source de fichier plat unique, transformé les données au moyen de la fonction de transformation des recherches, puis chargé les données dans la table de faits **FactCurrency** de l’exemple de base de données **AdventureWorksDW2012** .  
@@ -73,9 +72,8 @@ Cette leçon contient les tâches suivantes :
 ## <a name="start-the-lesson"></a>Démarrer la leçon  
 [Étape 1 : Copie du package de la leçon 1](../integration-services/lesson-2-1-copying-the-lesson-1-package.md)  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [Conteneur de boucles For](../integration-services/control-flow/for-loop-container.md)  
   
   
   
-

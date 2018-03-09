@@ -17,20 +17,20 @@ f1_keywords:
 - sql13.dqs.matchingproject.export.f1
 ms.assetid: 6aa9d199-83ce-4b5d-8497-71eef9258745
 caps.latest.revision: "36"
-author: JennieHubbard
-ms.author: jhubbard
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 284e081f53fe047a257d22020d0792897c8623ed
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 9874323ad1bef8199d2ebc969bb3673826b946fb
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="run-a-matching-project"></a>Exécuter un projet de correspondance
   Cette rubrique décrit comment réaliser la correspondance de données dans [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Le processus de correspondance identifie les clusters des enregistrements correspondants selon les règles de correspondance de la stratégie de correspondance, indique un enregistrement de chaque cluster en tant que survivant basé sur une règle de survivance, et exporte les résultats. DQS exécute le processus de correspondance, également appelé déduplication, dans un processus assisté par ordinateur, mais vous créez des règles de correspondance de manière interactive et sélectionnez la règle de survivance parmi plusieurs choix, afin de contrôler le processus de correspondance.  
   
- La correspondance est effectuée en trois étapes : un processus de mappage dans lequel vous identifiez la source de données et mappez les domaines à la source de données, un processus de correspondance dans lequel vous exécutez l'analyse de correspondance, et un processus de survivance et d'exportation dans lequel vous indiquez la règle de survivance et exportez les résultats de correspondance. Chacun de ces processus est exécuté sur une page distincte de l'Assistant de l'activité de correspondance, ce qui vous permet de vous déplacer dans les deux sens vers différentes pages, de réexécuter le processus et de fermer un processus de concordance spécifique, puis de retourner à la même étape du processus. DQS vous fournit des statistiques sur les données sources, les règles de correspondance et les résultats de correspondance qui vous permettent de prendre des décisions avisées sur la correspondance et d'affiner le processus de concordance.  
+ La correspondance est effectuée en trois étapes : un processus de mappage dans lequel vous identifiez la source de données et mappez les domaines à la source de données, un processus de correspondance dans lequel vous exécutez l'analyse de correspondance, et un processus de survivance et d'exportation dans lequel vous indiquez la règle de survivance et exportez les résultats de correspondance. Chacun de ces processus est exécuté sur une page distincte de l'Assistant de l'activité de correspondance, ce qui vous permet de vous déplacer dans les deux sens vers différentes pages, de réexécuter le processus et de fermer un processus de concordance spécifique, puis de retourner à la même étape du processus. DQS vous fournit des statistiques sur les données sources, les règles de correspondance et les résultats de correspondance qui vous permettent de prendre des décisions avisées sur la correspondance et d'affiner le processus de concordance.  
   
  Vous devez vous préparer à la correspondance en créant une stratégie de correspondance avec une ou plusieurs règles de correspondance, et en exécutant la stratégie sur des exemples de données. Le processus de projet de correspondance est distinct du processus de stratégie de correspondance, et une base de connaissances n'est pas remplie avec les connaissances de correspondance acquises à partir du projet de correspondance. Pour plus d'informations sur la création d'une stratégie de correspondance, consultez [Create a Matching Policy](../data-quality-services/create-a-matching-policy.md).  
   
@@ -44,7 +44,7 @@ ms.lasthandoff: 11/20/2017
   
 ###  <a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Autorisations  
+####  <a name="Permissions"></a> Permissions  
  Vous devez disposer du rôle dqs_kb_editor ou dqs_administrator sur la base de données DQS_MAIN pour exécuter un projet de correspondance.  
   
 ##  <a name="StartingaMatchingProject"></a> Première étape : Démarrage d'un projet de correspondance  
@@ -204,7 +204,7 @@ ms.lasthandoff: 11/20/2017
 -   **Exhaustivité**: pourcentage d'achèvement de l'exécution de la règle.  
   
 ### <a name="matching-policy-notifications"></a>Notifications de stratégie de correspondance  
- Pour l'activité de stratégie de correspondance, les conditions suivantes génèrent des notifications :  
+ Pour l'activité de stratégie de correspondance, les conditions suivantes génèrent des notifications :  
   
 -   Le champ est vide dans tous les enregistrements ; il est recommandé de l'éliminer du mappage.  
   

@@ -2,15 +2,13 @@
 title: "Créer un rapport de Validation croisée | Documents Microsoft"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
 ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,19 +17,20 @@ helpviewer_keywords:
 - cross-validation [data mining]
 - statistical standard deviation
 ms.assetid: 7b1fec4c-7053-41eb-b030-5179257967a4
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 08431f6a1eb5e2ed7ae82ea732fd2cdb466c6d70
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 6b8b5dad234adf73717b5785fc0f3b06becaebce
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="create-a-cross-validation-report"></a>Créer un rapport de validation croisée
-  Cette rubrique vous guide tout au long de la création d'un rapport de validation croisée à l'aide de l'onglet Graphique d'analyse de précision dans le Concepteur d'exploration de données. Pour obtenir des informations d’ordre général sur l’apparence du rapport de validation croisée et sur les mesures statistiques qu’il inclut, consultez [Validation croisée &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/cross-validation-analysis-services-data-mining.md).  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Cette rubrique vous guide tout au long de la création d'un rapport de validation croisée à l'aide de l'onglet Graphique d'analyse de précision dans le Concepteur d'exploration de données. Pour obtenir des informations d’ordre général sur l’apparence du rapport de validation croisée et sur les mesures statistiques qu’il inclut, consultez [Validation croisée &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/cross-validation-analysis-services-data-mining.md).  
   
  Un rapport de validation croisée est fondamentalement différent d'un graphique d'analyse de précision, tel qu'un graphique de courbes d'élévation ou une matrice de classification.  
   
@@ -99,6 +98,6 @@ ms.lasthandoff: 11/17/2017
 4.  Collez la sélection dans un classeur Excel ouvert. Si vous utilisez l'option **Coller** , le rapport est collé dans Excel au format HTML, ce qui conserve la mise en forme des lignes et des colonnes. Si vous collez le rapport en utilisant les options **Collage spécial** pour le texte ou le texte Unicode, le rapport est collé au format séparé par des lignes.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Mesures dans le rapport de validation croisée](../../analysis-services/data-mining/measures-in-the-cross-validation-report.md)  
+ [Mesures dans le rapport de Validation croisée](../../analysis-services/data-mining/measures-in-the-cross-validation-report.md)  
   
   

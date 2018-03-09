@@ -2,9 +2,12 @@
 title: "Identificateur de la base de données | Microsoft Docs"
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: databases
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -19,18 +22,18 @@ helpviewer_keywords:
 - database objects [SQL Server], names
 ms.assetid: 171291bb-f57f-4ad1-8cea-0b092d5d150c
 caps.latest.revision: "40"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 714352c240043c4ebfd2dd29ba82a8a87236c814
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 35570e23edbec76e06c58a0756c6850024d371ea
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="database-identifiers"></a>Identificateur de la base de données
-  Le nom d'un objet d'une base de données est son identificateur. Dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , tous les éléments peuvent avoir un identificateur. Les serveurs, les bases de données et les objets de bases de données tels que les tables, les vues, les colonnes, les index, les déclencheurs, les procédures, les contraintes, les règles, etc. peuvent avoir des identificateurs. La plupart des objets doivent avoir un identificateur ; les identificateurs sont facultatifs pour certains objets, tels que les contraintes.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Le nom d’un objet d’une base de données est son identificateur. Dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , tous les éléments peuvent avoir un identificateur. Les serveurs, les bases de données et les objets de bases de données tels que les tables, les vues, les colonnes, les index, les déclencheurs, les procédures, les contraintes, les règles, etc. peuvent avoir des identificateurs. La plupart des objets doivent avoir un identificateur ; les identificateurs sont facultatifs pour certains objets, tels que les contraintes.  
   
  L'identificateur d'un objet est créé lors de la définition de l'objet. L'identificateur est ensuite utilisé pour référencer l'objet. L'instruction suivante, par exemple, crée une table avec l'identificateur `TableX`, et deux colonnes avec les identificateurs `KeyCol` et `Description`:  
   
@@ -59,7 +62,7 @@ WHERE KeyCol = 124
 ```  
   
  Identificateurs délimités  
- Les identificateurs délimités sont mis entre guillemets (") ou entre crochets ([ ]). Les identificateurs qui respectent les règles relatives au format des identificateurs peuvent ne pas être délimités. Exemple :  
+ Les identificateurs délimités sont mis entre guillemets (") ou entre crochets ([ ]). Les identificateurs qui respectent les règles relatives au format des identificateurs peuvent ne pas être délimités. Exemple :  
   
 ```  
 SELECT *  
@@ -67,7 +70,7 @@ FROM [TableX]         --Delimiter is optional.
 WHERE [KeyCol] = 124  --Delimiter is optional.  
 ```  
   
- Ceux qui ne respectent pas ces règles ne peuvent être utilisés dans une instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] qu'en étant délimités. Exemple :  
+ Ceux qui ne respectent pas ces règles ne peuvent être utilisés dans une instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] qu'en étant délimités. Exemple :  
   
 ```  
 SELECT *  
@@ -109,7 +112,7 @@ WHERE [order] = 10   --Identifier is a reserved keyword.
 > [!NOTE]  
 >  Certaines règles relatives au format des identificateurs réguliers dépendent du niveau de compatibilité de la base de données. Vous pouvez définir ce niveau avec [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
  [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)   
  [CREATE DEFAULT &#40;Transact-SQL&#41;](../../t-sql/statements/create-default-transact-sql.md)   

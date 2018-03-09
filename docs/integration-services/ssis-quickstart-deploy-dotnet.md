@@ -1,74 +1,72 @@
 ---
-title: "Déployer un projet SSIS avec le code .NET (c#) | Documents Microsoft"
+title: "Déployer un projet SSIS avec du code .NET (C#) | Microsoft Docs"
 ms.date: 09/25/2017
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: quick-start
 ms.suite: sql
 ms.custom: 
-ms.technology:
-- integration-services
+ms.technology: integration-services
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 656e62f36446db4ef5b232129130a0253d2aebdf
-ms.openlocfilehash: c83ad5be88951b92c59a7517ed2676ff30692d02
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/22/2017
-
+ms.openlocfilehash: 8e01ed21accad152b2ef32d012f3194458ab0440
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# <a name="deploy-an-ssis-project-with-c-code-in-a-net-app"></a>Déployer un projet SSIS avec le code c# dans une application .NET
-Ce didacticiel de démarrage rapide montre comment écrire du code c# pour se connecter à un serveur de base de données et de déployer un projet SSIS.
+# <a name="deploy-an-ssis-project-with-c-code-in-a-net-app"></a>Déployer un projet SSIS avec du code C# dans une application .NET
+Ce didacticiel de démarrage rapide montre comment écrire du code C# pour se connecter à un serveur de base de données et déployer un projet SSIS.
 
-Pour créer une application c#, vous pouvez utiliser Visual Studio, Visual Studio Code ou un autre outil de votre choix.
+Pour créer une application C#, vous pouvez utiliser Visual Studio, Visual Studio Code ou un autre outil de votre choix.
 
-## <a name="prerequisites"></a>Conditions préalables
+## <a name="prerequisites"></a>Prerequisites
 
-Avant de commencer, assurez-vous que vous avez Visual Studio ou de Code Visual Studio est installé. Télécharger l’édition Community gratuite de Visual Studio ou le libre Visual Studio Code, à partir de [téléchargements Visual Studio](https://www.visualstudio.com/downloads/).
+Avant de commencer, vérifiez que Visual Studio ou Visual Studio Code est installé sur votre ordinateur. Téléchargez l’édition Community gratuite de Visual Studio, ou le logiciel Visual Studio Code gratuit, à partir de la page de [Téléchargements Visual Studio](https://www.visualstudio.com/downloads/).
 
 > [!NOTE]
-> Un serveur de base de données SQL Azure est à l’écoute sur le port 1433. Si vous essayez de vous connecter à un serveur de base de données SQL Azure à partir d’un pare-feu d’entreprise, ce port doit être ouvert dans le pare-feu d’entreprise pour vous connecter avec succès.
+> Un serveur Azure SQL Database écoute sur le port 1433. Si vous essayez de vous connecter à un serveur Azure SQL Database en étant derrière un pare-feu d’entreprise, ce port doit être ouvert dans le pare-feu d’entreprise pour que vous puissiez vous connecter.
 
-## <a name="get-the-connection-info-if-deployed-to-sql-database"></a>Obtenir les informations de connexion si déployé sur la base de données SQL 
+## <a name="get-the-connection-info-if-deployed-to-sql-database"></a>Obtenir les informations de connexion en cas de déploiement sur SQL Database 
 
-Si vos packages sont déployées sur une base de données SQL Azure, obtenir les informations de connexion que vous souhaitez vous connecter à la base de données du catalogue SSIS (SSISDB). Vous avez besoin des informations de nom et la connexion de serveur complet dans les procédures qui suivent.
+Si vos packages sont déployés sur Azure SQL Database, obtenez les informations de connexion dont vous avez besoin pour vous connecter à la base de données du catalogue SSIS (SSISDB). Vous avez besoin des informations de connexion et du nom de serveur complet dans les procédures qui suivent.
 
 1. Connectez-vous au [portail Azure](https://portal.azure.com/).
-2. Sélectionnez **bases de données SQL** dans le menu de gauche, cliquez sur la base de données SSISDB sur le **bases de données SQL** page. 
-3. Sur le **vue d’ensemble** pour votre base de données, vérifiez le nom du serveur complet. Pour afficher le **copie** option, pointez sur le nom du serveur. 
-4. Si vous oubliez vos informations de connexion de serveur de base de données SQL Azure, accédez à la page du serveur de base de données SQL pour afficher le nom d’administrateur de serveur. Vous pouvez réinitialiser le mot de passe si nécessaire.
-5. Cliquez sur **afficher les chaînes de connexion de base de données**.
-6. Passez en revue le **ADO.NET** chaîne de connexion. L’exemple de code utilise un `SqlConnectionStringBuilder` pour recréer cette chaîne de connexion avec les valeurs des paramètres individuels que vous fournissez.
+2. Sélectionnez **Bases de données SQL** dans le menu de gauche, puis cliquez sur la base de données SSISDB dans la page **Bases de données SQL**. 
+3. Dans la page **Vue d’ensemble** de votre base de données, notez le nom complet du serveur. Pour afficher l’option **Cliquer pour copier**, pointez sur le nom du serveur. 
+4. Si vous oubliez vos informations de connexion de serveur Azure SQL Database, accédez à la page du serveur SQL Database pour afficher le nom d’administrateur de serveur. Vous pouvez réinitialiser le mot de passe si nécessaire.
+5. Cliquez sur **Afficher les chaînes de connexion de la base de données**.
+6. Examinez la chaîne de connexion **ADO.NET** complète. L’exemple de code utilise un `SqlConnectionStringBuilder` pour recréer cette chaîne de connexion avec les valeurs des paramètres que vous fournissez.
 
-## <a name="create-a-new-visual-studio-project"></a>Créez un projet Visual Studio
+## <a name="create-a-new-visual-studio-project"></a>Créer un projet Visual Studio
 
-1. Dans Visual Studio, choisissez **fichier**, **nouveau**, **projet**. 
-2. Dans le **nouveau projet** boîte de dialogue, développez **Visual C#**.
-3. Sélectionnez **application Console** et entrez *deploy_ssis_project* pour le nom du projet.
+1. Dans Visual Studio, choisissez **Fichier**, **Nouveau**, **Projet**. 
+2. Dans la boîte de dialogue **Nouveau projet**, développez **Visual C#**.
+3. Sélectionnez **Application console** et entrez *run_ssis_project* comme nom de projet.
 4. Cliquez sur **OK** pour créer et ouvrir le nouveau projet dans Visual Studio.
 
 ## <a name="add-references"></a>Ajouter des références
-1. Dans l’Explorateur de solutions, cliquez sur le **références** et sélectionnez **ajouter une référence**. Le **Gestionnaire de références** boîte de dialogue s’ouvre.
-2. Dans le **Gestionnaire de références** boîte de dialogue, développez **assemblys** et sélectionnez **Extensions**.
-3. Sélectionnez les deux références suivantes à ajouter :
+1. Dans l’Explorateur de solutions, cliquez avec le bouton droit sur le dossier **Références**, puis sélectionnez **Ajouter une référence**. La boîte de dialogue **Gestionnaire de références** s’ouvre.
+2. Dans la boîte de dialogue **Gestionnaire de références**, développez **Assemblys** et sélectionnez **Extensions**.
+3. Sélectionnez les deux références suivantes à ajouter :
     -   Microsoft.SqlServer.Management.Sdk.Sfc
     -   Microsoft.SqlServer.Smo
-4. Cliquez sur le **Parcourir** pour ajouter une référence à **Microsoft.SqlServer.Management.IntegrationServices**. (Cet assembly est installé uniquement dans le global assembly cache (GAC).) Le **sélectionner les fichiers à référencer** boîte de dialogue s’ouvre.
-5. Dans le **sélectionner les fichiers à référencer** boîte de dialogue, accédez au dossier GAC qui contient l’assembly. En général, ce dossier est `C:\Windows\assembly\GAC_MSIL\Microsoft.SqlServer.Management.IntegrationServices\14.0.0.0__89845dcd8080cc91`.
-6. Sélectionnez l’assembly (autrement dit, le fichier .dll) dans le dossier et cliquez sur **ajouter**.
-7. Cliquez sur **OK** pour fermer la **Gestionnaire de références** boîte de dialogue zone et ajouter les références de trois. Pour vous assurer que les références sont, vérifiez le **références** liste dans l’Explorateur de solutions.
+4. Cliquez sur le bouton **Parcourir** pour ajouter une référence à **Microsoft.SqlServer.Management.IntegrationServices**. (Cet assembly est installé uniquement dans le Global Assembly Cache (GAC).) La boîte de dialogue **Sélectionner les fichiers à référencer** s’ouvre.
+5. Dans la boîte de dialogue **Sélectionner les fichiers à référencer**, accédez au dossier GAC qui contient l’assembly. En général, il s’agit du dossier `C:\Windows\assembly\GAC_MSIL\Microsoft.SqlServer.Management.IntegrationServices\14.0.0.0__89845dcd8080cc91`.
+6. Sélectionnez l’assembly (autrement dit, le fichier .dll) dans le dossier et cliquez sur **Ajouter**.
+7. Cliquez sur **OK** pour fermer la boîte de dialogue **Gestionnaire de références** et ajouter les trois références. Pour vérifier que les références y figurent, consultez la liste **Références** dans l’Explorateur de solutions.
 
-## <a name="add-the-c-code"></a>Ajoutez le code c# 
+## <a name="add-the-c-code"></a>Ajouter le code C# 
 1. Ouvrez **Program.cs**.
 
-2. Remplacez le contenu de **Program.cs** avec le code suivant. Ajoutez les valeurs appropriées pour votre serveur, une base de données, un utilisateur et un mot de passe.
+2. Remplacez le contenu de **Program.cs** par le code suivant. Ajoutez les valeurs appropriées pour votre serveur, base de données, utilisateur et mot de passe.
 
 > [!NOTE]
-> L’exemple suivant utilise l’authentification Windows. Pour utiliser l’authentification SQL Server, remplacez le `Integrated Security=SSPI;` argument avec `User ID=<user name>;Password=<password>;`.
+> L’exemple suivant utilise l’authentification Windows. Pour utiliser l’authentification SQL Server, remplacez l’argument `Integrated Security=SSPI;` par `User ID=<user name>;Password=<password>;`.
 
 ```csharp
 using Microsoft.SqlServer.Management.IntegrationServices;
@@ -115,7 +113,7 @@ namespace deploy_ssis_project
 }
 ```
 
-## <a name="run-the-code"></a>Exécutez le code
+## <a name="run-the-code"></a>Exécuter le code
 
 1. Pour exécuter l’application, appuyez sur **F5**.
 2. Dans SSMS, vérifiez que le projet a été déployé.
@@ -124,14 +122,13 @@ namespace deploy_ssis_project
 - Envisagez d’autres méthodes pour déployer un package.
     - [Déployer un package SSIS avec SSMS](./ssis-quickstart-deploy-ssms.md)
     - [Déployer un package SSIS avec Transact-SQL (SSMS)](./ssis-quickstart-deploy-tsql-ssms.md)
-    - [Déployer un package SSIS avec Transact-SQL (Code de Visual Studio)](ssis-quickstart-deploy-tsql-vscode.md)
+    - [Déployer un package SSIS avec Transact-SQL (VS Code)](ssis-quickstart-deploy-tsql-vscode.md)
     - [Déployer un package SSIS à partir de l’invite de commandes](./ssis-quickstart-deploy-cmdline.md)
     - [Déployer un package SSIS avec PowerShell](ssis-quickstart-deploy-powershell.md)
-- Exécuter un package déployé. Pour exécuter un package, vous pouvez choisir à partir de plusieurs outils et langages. Pour plus d’informations, consultez les articles suivants :
-    - [Exécutez un package SSIS avec SSMS](./ssis-quickstart-run-ssms.md)
-    - [Exécutez un package SSIS avec Transact-SQL (SSMS)](./ssis-quickstart-run-tsql-ssms.md)
-    - [Exécutez un package SSIS avec Transact-SQL (Code de Visual Studio)](ssis-quickstart-run-tsql-vscode.md)
-    - [Exécutez un package SSIS à partir de l’invite de commandes](./ssis-quickstart-run-cmdline.md)
+- Exécutez un package déployé. Pour exécuter un package, vous pouvez choisir parmi plusieurs outils et langages. Pour plus d’informations, consultez les articles suivants :
+    - [Exécuter un package SSIS avec SSMS](./ssis-quickstart-run-ssms.md)
+    - [Exécuter un package SSIS avec Transact-SQL (SSMS)](./ssis-quickstart-run-tsql-ssms.md)
+    - [Exécuter un package SSIS avec Transact-SQL (VS Code)](ssis-quickstart-run-tsql-vscode.md)
+    - [Exécuter un package SSIS à partir de l’invite de commandes](./ssis-quickstart-run-cmdline.md)
     - [Exécuter un package SSIS avec PowerShell](ssis-quickstart-run-powershell.md)
-    - [Exécutez un package SSIS avec c#](./ssis-quickstart-run-dotnet.md) 
-
+    - [Exécuter un package SSIS avec C#](./ssis-quickstart-run-dotnet.md) 

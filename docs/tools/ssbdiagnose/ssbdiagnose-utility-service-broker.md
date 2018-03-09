@@ -2,9 +2,12 @@
 title: Utilitaire ssbdiagnose (Service Broker) | Documents Microsoft
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssbdiagnose
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -25,18 +28,18 @@ helpviewer_keywords:
 - ssbdiagnose
 ms.assetid: 0c1636e8-a3db-438e-be4c-1ea40d1f4877
 caps.latest.revision: "45"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1649bfe2e52102242f8850b343c1e5616666c0f2
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: ee4dfdfeb9dd22130a287000731d656fbcfb803c
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="ssbdiagnose-utility-service-broker"></a>Utilitaire ssbdiagnose (Service Broker)
-  L’utilitaire **ssbdiagnose** signale des problèmes rencontrés dans des conversations [!INCLUDE[ssSB](../../includes/sssb-md.md)] ou dans la configuration des services [!INCLUDE[ssSB](../../includes/sssb-md.md)] . Des vérifications de configuration peuvent réalisées pour deux services ou pour un seul. Les problèmes sont signalés soit dans la fenêtre d’invite de commandes par un texte explicite, soit dans un fichier XML mis en forme qui peut être redirigé vers un fichier ou un autre programme.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Le **ssbdiagnose** utilitaire signale des problèmes dans [!INCLUDE[ssSB](../../includes/sssb-md.md)] conversations ou la configuration de [!INCLUDE[ssSB](../../includes/sssb-md.md)] services. Des vérifications de configuration peuvent réalisées pour deux services ou pour un seul. Les problèmes sont signalés soit dans la fenêtre d’invite de commandes par un texte explicite, soit dans un fichier XML mis en forme qui peut être redirigé vers un fichier ou un autre programme.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -119,7 +122,7 @@ ssbdiagnose
  **-IGNORE** *ID_erreur*  
  Spécifie que les erreurs ou les messages ayant l’ *ID_erreur* spécifié ne doivent pas être inclus dans les rapports. Vous pouvez spécifier **-IGNORE** plusieurs fois pour supprimer plusieurs ID de message.  
   
- **\<baseconnectionoptions >**  
+ **\<baseconnectionoptions>**  
  Spécifie les informations de connexion de base utilisées par **ssbdiagnose** quand les options de connexion ne sont pas incluses dans une clause spécifique. Les informations de connexion indiquées dans une clause spécifique remplacent celles figurant dans **baseconnectionoption** . Ceci est effectué individuellement pour chaque paramètre. Par exemple, si les options **-S** et **-d** sont spécifiées dans **baseconnetionoptions**, et si seule l’option **-d** est spécifiée dans **oconnetionoptions**, **ssbdiagnose** utilise -S de **baseconnetionoptions** et -d de **toconnetionoptions**.  
   
  **CONFIGURATION**  
@@ -128,7 +131,7 @@ ssbdiagnose
  **FROM SERVICE** *nom_service*  
  Spécifie le service qui lance les conversations.  
   
- **\<fromconnectionoptions >**  
+ **\<fromconnectionoptions>**  
  Spécifie les informations requises pour se connecter à la base de données contenant le service initiateur. Si **fromconnectionoptions** n’est pas spécifié, **ssbdiagnose** utilise les informations de connexion de **baseconnectionoptions** pour se connecter à la base de données de l’initiateur. Si **fromconnectionoptions** est spécifié, la base de données contenant le service initiateur doit y être indiquée. Si **fromconnectionoptions** n’est pas spécifié, **baseconnectionoptions** doit spécifier la base de données de l’initiateur.  
   
  **TO SERVICE** *nom_service*[, *ID_broker* ]  
@@ -136,7 +139,7 @@ ssbdiagnose
   
  *nom_service*: spécifie le nom du service cible.  
   
- *ID_broker*: spécifie l’ID [!INCLUDE[ssSB](../../includes/sssb-md.md)] qui identifie la base de données cible. *ID_broker* est un GUID. Vous pouvez exécuter la requête suivante dans la base de données cible pour le rechercher :  
+ *ID_broker*: spécifie l’ID [!INCLUDE[ssSB](../../includes/sssb-md.md)] qui identifie la base de données cible. *ID_broker* est un GUID. Vous pouvez exécuter la requête suivante dans la base de données cible pour le rechercher :  
   
 ```  
 SELECT service_broker_guid  
@@ -144,13 +147,13 @@ FROM sys.databases
 WHERE database_id = DB_ID();  
 ```  
   
- **\<toconnectionoptions >**  
+ **\<toconnectionoptions>**  
  Spécifie les informations requises pour connecter la base de données contenant le service cible. Si **toconnectionoptions** n’est pas spécifié, **ssbdiagnose** utilise les informations de connexion de **baseconnectionoptions** pour se connecter à la base de données cible.  
   
  **MIRROR**  
  Spécifie que le service [!INCLUDE[ssSB](../../includes/sssb-md.md)] associé est hébergé par une base de données miroir. **ssbdiagnose** vérifie si l’itinéraire du service est un itinéraire mis en miroir, où la clause MIRROR_ADDRESS est spécifiée sur CREATE ROUTE.  
   
- **\<mirrorconnectionoptions >**  
+ **\<mirrorconnectionoptions>**  
  Spécifie les informations requises pour se connecter à la base de données miroir. Si **mirrorconnectionoptions** n’est pas spécifié, **ssbdiagnose** utilise les informations de connexion de **baseconnectionoptions** pour se connecter à la base de données miroir.  
   
  **ON CONTRACT** *nom_contract*  
@@ -205,7 +208,7 @@ WHERE database_id = DB_ID();
  **-TIMEOUT** *intervalle_délai_d’attente*  
  Spécifie la durée d’exécution du rapport **RUNTIME** en secondes. Si vous ne spécifiez pas **-TIMEOUT** , le rapport d’exécution s’exécute indéfiniment. **-TIMEOUT** est utilisé uniquement sur les rapports **RUNTIME** , et non sur les rapports **CONFIGURATION** . Utilisez Ctrl+C pour quitter **ssbdiagnose** si **-TIMEOUT** n’a pas été spécifié, ou pour terminer un rapport d’exécution avant**-**l’expiration du délai d’attente. *intervalle_délai_d’attente* doit être un nombre compris entre 1 et 2 147 483 647.  
   
- **\<runtimeconnectionoptions >**  
+ **\<runtimeconnectionoptions>**  
  Spécifie les informations de connexion pour les bases de données contenant les services associés aux éléments de conversation qui sont surveillés. Si tous les services se trouvent dans la même base de données, vous ne devez spécifier qu’une seule clause **CONNECT TO** . Si les services se trouvent dans des bases de données séparées, vous devez fournir une clause **CONNECT TO** pour chaque base de données. Si **runtimeconnectionoptions** n’est pas spécifié, **ssbdiagnose** utilise les informations de connexion de **baseconnectionoptions**.  
   
  **–E**  
@@ -246,7 +249,7 @@ WHERE database_id = DB_ID();
  **-S** *nom_serveur*[\\*nom_instance*]  
  Spécifie l’instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)] qui contient les services [!INCLUDE[ssSB](../../includes/sssb-md.md)] à analyser.  
   
- Spécifiez *nom_serveur* pour vous connecter à l’instance par défaut du [!INCLUDE[ssDE](../../includes/ssde-md.md)] sur ce serveur. Spécifiez *nom_serveur***\\***nom_instance* pour vous connecter à une instance nommée du [!INCLUDE[ssDE](../../includes/ssde-md.md)] sur ce serveur. Si vous ne spécifiez pas l’option **-S** , **ssbdiagnose** utilise la valeur de la variable d’environnement SQLCMDSERVER. Si cette variable n’est pas définie non plus, **ssbdiagnose** se connecte à l’instance par défaut du [!INCLUDE[ssDE](../../includes/ssde-md.md)] sur l’ordinateur local.  
+ Spécifiez *nom_serveur* pour vous connecter à l’instance par défaut du [!INCLUDE[ssDE](../../includes/ssde-md.md)] sur ce serveur. Spécifiez *nom_serveur***\\***nom_instance* pour se connecter à une instance nommée de la [!INCLUDE[ssDE](../../includes/ssde-md.md)] sur ce serveur. Si vous ne spécifiez pas l’option **-S** , **ssbdiagnose** utilise la valeur de la variable d’environnement SQLCMDSERVER. Si cette variable n’est pas définie non plus, **ssbdiagnose** se connecte à l’instance par défaut du [!INCLUDE[ssDE](../../includes/ssde-md.md)] sur l’ordinateur local.  
   
  **-d** *nom_base_de_données*  
  Spécifie la base de données qui contient les services [!INCLUDE[ssSB](../../includes/sssb-md.md)] à analyser. Si cette base de données n'existe pas, un message d'erreur est généré. Si vous ne spécifiez pas l’option **-d** , la valeur par défaut est la base de données spécifiée dans la propriété de base de données par défaut de votre connexion.  
@@ -453,17 +456,17 @@ ssbdiagnose -XML -E -d MyDatabase CONFIGURATION FROM SERVICE
  [BEGIN DIALOG CONVERSATION &#40; Transact-SQL &#41;](../../t-sql/statements/begin-dialog-conversation-transact-sql.md)   
  [CRÉER une priorité de service BROKER &#40; Transact-SQL &#41;](../../t-sql/statements/create-broker-priority-transact-sql.md)   
  [CREATE CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/create-certificate-transact-sql.md)   
- [CRÉER un contrat &#40; Transact-SQL &#41;](../../t-sql/statements/create-contract-transact-sql.md)   
+ [CREATE CONTRACT &#40;Transact-SQL&#41;](../../t-sql/statements/create-contract-transact-sql.md)   
  [CREATE ENDPOINT &#40;Transact-SQL&#41;](../../t-sql/statements/create-endpoint-transact-sql.md)   
  [CREATE MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-master-key-transact-sql.md)   
- [CRÉER un TYPE DE MESSAGE &#40; Transact-SQL &#41;](../../t-sql/statements/create-message-type-transact-sql.md)   
+ [CREATE MESSAGE TYPE &#40;Transact-SQL&#41;](../../t-sql/statements/create-message-type-transact-sql.md)   
  [CREATE QUEUE &#40;Transact-SQL&#41;](../../t-sql/statements/create-queue-transact-sql.md)   
  [CREATE REMOTE SERVICE BINDING &#40;Transact-SQL&#41;](../../t-sql/statements/create-remote-service-binding-transact-sql.md)   
  [CREATE ROUTE &#40;Transact-SQL&#41;](../../t-sql/statements/create-route-transact-sql.md)   
  [CREATE SERVICE &#40;Transact-SQL&#41;](../../t-sql/statements/create-service-transact-sql.md)   
- [RÉCEPTION &#40; Transact-SQL &#41;](../../t-sql/statements/receive-transact-sql.md)   
- [Sys.transmission_queue &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-transmission-queue-transact-sql.md)   
- [Sys.conversation_endpoints &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-conversation-endpoints-transact-sql.md)   
- [Sys.conversation_groups &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-conversation-groups-transact-sql.md)  
+ [RECEIVE &#40;Transact-SQL&#41;](../../t-sql/statements/receive-transact-sql.md)   
+ [sys.transmission_queue &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-transmission-queue-transact-sql.md)   
+ [sys.conversation_endpoints &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-conversation-endpoints-transact-sql.md)   
+ [sys.conversation_groups &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-conversation-groups-transact-sql.md)  
   
   

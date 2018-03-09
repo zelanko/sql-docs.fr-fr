@@ -3,8 +3,11 @@ title: Arguments pour outils externes | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,20 +18,20 @@ ms.assetid: 3991c13a-f23f-450b-a2ba-19391c399735
 caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e445022950d162f84239cc91f79da8e720179d44
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: b0634f3f7fff7a96f972302a3f7f4da7e3f75ac2
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="arguments-for-external-tools"></a>Arguments pour outils externes
-Les arguments sont des variables pour lesquelles l'environnement Studio fournit des valeurs lorsque vous lancez un outil externe à partir du menu **Outils** . Des outils externes, tels que le Bloc-notes, peuvent être ajoutés au menu **Outils** via la boîte de dialogue **Outils externes** .  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Les arguments sont des variables pour lesquelles l’environnement Studio fournit des valeurs quand vous lancez un outil externe à partir du menu **Outils**. Des outils externes, tels que le Bloc-notes, peuvent être ajoutés au menu **Outils** via la boîte de dialogue **Outils externes** .  
   
 Le tableau ci-dessous répertorie les arguments pour les outils externes.  
   
-|Nom|Argument|Description|  
+|Nom   |Argument|Description|  
 |--------|------------|---------------|  
 |**Chemin d'accès de l'élément**|$(ItemPath)|Nom complet du fichier source en cours (sous la forme lecteur + chemin d'accès + nom du fichier) ; vide si la fenêtre active n'est pas une fenêtre source.|  
 |**Répertoire de l'élément**|$(ItemDir)|Répertoire de la source en cours (sous la forme lecteur + chemin d'accès) ; vide si la fenêtre active n'est pas une fenêtre source.|  
@@ -48,7 +51,7 @@ Le tableau ci-dessous répertorie les arguments pour les outils externes.
   
 *La ligne active, la colonne active ou le texte actif est basé sur la position du curseur dans l’éditeur de texte, comme indiqué dans la barre d’état.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [Boîte de dialogue Outils externes](../ssms/external-tools-dialog-box.md)  
 [Éléments généraux relatifs à l'interface utilisateur](../ssms/general-user-interface-elements.md)  
   

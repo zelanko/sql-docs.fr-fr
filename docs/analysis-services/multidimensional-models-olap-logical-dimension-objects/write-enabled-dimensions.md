@@ -2,15 +2,13 @@
 title: "Dimensions activées en écriture | Documents Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -26,13 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: cccf269cf941d6a687b5907d21de6658d0eb9eba
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 175199b7090abc373e0ac39d1e99e81480df4e2e
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="write-enabled-dimensions"></a>Dimensions activées en écriture
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
     
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepNextAvoid](../../includes/ssnotedepnextavoid-md.md)]  
@@ -43,7 +42,7 @@ ms.lasthandoff: 11/17/2017
   
  Les dimensions activées en écriture et les cubes activés en écriture ont des fonctionnalités différentes mais complémentaires. Une dimension activée en écriture permet aux utilisateurs de l'entreprise de mettre à jour les membres, tandis qu'un cube activé en écriture leur permet de mettre à jour les valeurs des cellules. Bien que ces deux fonctions soient complémentaires, il n'est pas nécessaire de les utiliser conjointement. Il n'est pas nécessaire d'inclure une dimension dans un cube pour pouvoir utiliser l'écriture différée de dimension. Une dimension activée en écriture peut également figurer dans un cube qui n'est pas activé en écriture. Différentes procédures permettent d'activer en écriture les dimensions et les cubes et de gérer leur sécurité.  
   
- Les restrictions suivantes s'appliquent à l'écriture différée de dimension :  
+ Les restrictions suivantes s'appliquent à l'écriture différée de dimension :  
   
 -   Lorsque vous créez un membre, vous devez inclure chaque attribut dans une dimension. Vous ne pouvez pas insérer un membre sans définir la valeur de l'attribut clé de la dimension. Par conséquent, la création de membres est soumise aux contraintes (telles que valeurs de clés non NULL) définies dans la table de dimension.  
   

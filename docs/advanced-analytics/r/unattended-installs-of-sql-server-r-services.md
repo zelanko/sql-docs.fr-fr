@@ -2,27 +2,28 @@
 title: Installation sans assistance de Machine Learning Services | Documents Microsoft
 ms.custom: 
 ms.date: 10/31/2017
-ms.prod:
-- sql-server-2016
-- sql-server-2017
 ms.reviewer: 
-ms.suite: 
-ms.technology: r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 77e92b2d-5777-4c31-bf02-f931ed54a247
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: c58bbb4a7277b37c9ef479b79ba4809a02218908
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: f1c7aaf35c0c58e9a7aab3c5b31725f586ffd2ac
+ms.sourcegitcommit: 4edac878b4751efa57601fe263c6b787b391bc7c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="unattended-installation-of-machine-learning-services-in-database"></a>Installation sans assistance de Machine Learning Services (de-de base de données)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Cet article décrit comment utiliser des arguments de ligne de commande avec le programme d’installation de SQL Server pour installer les composants d’apprentissage automatique.
 
@@ -34,7 +35,7 @@ Par une installation sans assistance, nous entendons ne pas utiliser les fonctio
 
 **S’applique à : SQL Server 2017 Machine Learning Services (de-de base de données), SQL Server 2016 R Services**
 
-## <a name="prerequisites"></a>Conditions préalables
+## <a name="prerequisites"></a>Configuration requise
 
 + Vous devez installer le moteur de base de données sur chaque instance dans laquelle vous allez utiliser l’apprentissage automatique.
 
@@ -48,9 +49,9 @@ Par une installation sans assistance, nous entendons ne pas utiliser les fonctio
 
 > [!IMPORTANT]
 > 
-> Étapes supplémentaires sont nécessaires une fois le programme d’installation est terminée pour activer la fonctionnalité. Ceux-ci incluent une reconfiguration et le redémarrage de l’instance. Bien sûr pour passer en revue tous les éléments dans la section [étapes de post-installation] (#bkmk_PostInstall) pour déterminer les actions nécessaires une fois le programme d’installation est terminée.
+> Étapes supplémentaires sont nécessaires une fois le programme d’installation est terminée pour activer la fonctionnalité. Ceux-ci incluent une reconfiguration et le redémarrage de l’instance. Veillez à consulter tous les éléments dans la section sur [étapes de post-installation](#bkmk_PostInstall) pour déterminer les actions nécessaires une fois le programme d’installation est terminée.
 
-## <a name="bkmk_NewInstall"></a>Installation de ligne de commande pour SQL Server 2017
+## <a name="bkmk_NewInstall"></a>  Installation de ligne de commande pour SQL Server 2017
 
 Les exemples suivants incluent les **minimale** fonctionnalités requises.
 
@@ -96,7 +97,7 @@ L’exemple suivant affiche les arguments requis pour exécuter en mode silencie
 Setup.exe /q /ACTION=Install /FEATURES=SQLENGINE,ADVANCEDANALYTICS, SQL_INST_MR, SQL_INST_MPY /INSTANCENAME=MSSQLSERVER.ServerName /SECURITYMODE=SQL /SAPWD="%password%" /SQLSYSADMINACCOUNTS="<username>" /IACCEPTSQLSERVERLICENSETERMS /IACCEPTROPENLICENSETERMS /IACCEPTPYTHONOPENLICENSETERMS
 ```
 
-## <a name="OldInstall"></a>Installation de ligne de commande pour SQL Server 2016
+## <a name="OldInstall"></a> Installation de ligne de commande pour SQL Server 2016
  
 L’exemple suivant affiche les arguments requis pour exécuter en mode silencieux, sans assistance d’installation de SQL Server 2016 avec le langage R ajouté.
 

@@ -3,8 +3,11 @@ title: "Paramètres (Type de mappage) du projet (SybaseToSQL) | Documents Micros
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-sybase
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0c1040ad5e3aba40b6ee9565a41e2f8ba6888509
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 594ef6405a41b199d527eaae56a77c7f1d91c4e6
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="project-settings-type-mapping-sybasetosql"></a>Paramètres (Type de mappage) du projet (SybaseToSQL)
 La page mappage de Type de la **les paramètres de projet** boîte de dialogue contient des paramètres permettant de personnaliser comment SSMA convertit les types de données Sybase Adaptive Server Enterprise (ASE) dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] des types de données.  
@@ -88,8 +91,8 @@ Le tableau suivant contient le mappage de type par défaut entre ASE et [!INCLUD
 |**float [\*... 15]**|**float [24]**|  
 |**float [16..\*]**|**float [53]**|  
 |**image**|**image**|  
-|**int**|**int**|  
-|**entier**|**int**|  
+|**Int**|**Int**|  
+|**entier**|**Int**|  
 |**longsysname**|**nvarchar [255]**|  
 |**money**|**money**|  
 |**national char**|**nchar**|  
@@ -125,7 +128,7 @@ Le tableau suivant contient le mappage de type par défaut entre ASE et [!INCLUD
 |**smallmoney**|**smallmoney**|  
 |**sysname**|**nvarchar [128]**|  
 |**sysname [\*... \*]**|**nvarchar [255]**|  
-|**text**|**text**|  
+|**texte**|**texte**|  
 |**time**|**heure [3]**|  
 |**timestamp**|**rowversion**|  
 |**tinyint**|**tinyint**|  
@@ -141,7 +144,7 @@ Le tableau suivant contient le mappage de type par défaut entre ASE et [!INCLUD
 |**univarchar [4001..\*]**|**nvarchar(max)**|  
 |**bigint non signé**|**numérique [20] [0]**|  
 |**entier non signé**|**bigint**|  
-|**smallint non signé**|**int**|  
+|**smallint non signé**|**Int**|  
 |**tinyint non signé**|**tinyint**|  
 |**varbinary**|**varbinary**|  
 |**varbinary [\*... 8000]**|**varbinary [\*]**|  

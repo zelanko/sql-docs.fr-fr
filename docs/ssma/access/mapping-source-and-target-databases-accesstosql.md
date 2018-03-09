@@ -1,10 +1,13 @@
 ---
 title: "Mappage de Source et bases de données cibles (AccessToSQL) | Documents Microsoft"
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-access
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -25,11 +28,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 3871ac3aa30e788841b0fef27d4134640aac5ad4
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 48e87d2b6c84db3534a3c52ee6176e29fd34257f
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mapping-source-and-target-databases-accesstosql"></a>Source de mappage et de bases de données cibles (AccessToSQL)
 Lorsque vous vous connectez à [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ou SQL Azure, vous devez spécifier une base de données cible pour la migration. Si vous avez plusieurs bases de données Access vous pouvez les mapper à plusieurs [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] bases de données (ou les schémas) ou à plusieurs schémas sous la base de données SQL Azure connectée.  

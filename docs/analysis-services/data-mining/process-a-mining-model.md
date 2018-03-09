@@ -2,15 +2,13 @@
 title: "Traiter un modèle d’exploration de données | Documents Microsoft"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
 ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords: mining models [Analysis Services], processing
@@ -20,14 +18,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 5bf9d1f64c100a69411b54efc7b371fc327f12cb
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 3152bfff58d0e5163c3ef3635ebee59a9258bd07
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="process-a-mining-model"></a>Traiter un modèle d'exploration de données
-  Dans l'onglet Modèles d'exploration de données du Concepteur d'exploration de données de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], vous pouvez traiter un modèle d'exploration de données associé à une structure d'exploration de données, ou traiter tous les modèles associés à la structure.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Dans l’onglet modèles d’exploration de concepteur d’exploration de données dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], vous pouvez traiter un modèle d’exploration de données qui est associé à une structure d’exploration de données, ou vous pouvez traiter tous les modèles qui sont associés à la structure.  
   
  Vous pouvez traiter un modèle d'exploration de données à l'aide des outils suivants :  
   
@@ -72,6 +70,6 @@ ms.lasthandoff: 11/17/2017
  La structure d'exploration de données et tous les modèles d'exploration de données associés ont été traités.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Tâches du modèle d'exploration de données et procédures](../../analysis-services/data-mining/mining-model-tasks-and-how-tos.md)  
+ [Tâches et procédures des modèles d’exploration de données](../../analysis-services/data-mining/mining-model-tasks-and-how-tos.md)  
   
   

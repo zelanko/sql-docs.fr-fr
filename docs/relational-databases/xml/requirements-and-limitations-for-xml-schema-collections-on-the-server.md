@@ -2,10 +2,14 @@
 title: "Spécifications et limitations relatives aux collections de schémas XML sur le serveur | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: xml
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-xml
+ms.suite: sql
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -23,19 +27,20 @@ helpviewer_keywords:
 - schema collections [SQL Server], guidelines
 - lexical representation
 ms.assetid: c2314fd5-4c6d-40cb-a128-07e532b40946
-caps.latest.revision: "84"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a168e76435ae4e88f716c6fccca1d39432283c86
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: e60de9c75202dc0c5c02a8765a1c2f8d4c631498
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="requirements-and-limitations-for-xml-schema-collections-on-the-server"></a>Spécifications et limitations relatives aux collections de schémas XML sur le serveur
-  La validation XSD (XML Schema Definition Language) des colonnes SQL utilisant le type de données **xml** est soumise à certaines limitations, lesquelles sont exposées dans le tableau suivant. Les recommandations à suivre pour modifier un schéma XSD afin qu'il soit compatible avec [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]y sont abordées. Les rubriques de cette section fournissent des informations supplémentaires concernant les limitations spécifiques, ainsi qu'une assistance pour leur utilisation.  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+La validation XSD (XML Schema Definition Language) des colonnes SQL utilisant le type de données **xml** est soumise à certaines limitations, lesquelles sont exposées dans le tableau suivant. Les recommandations à suivre pour modifier un schéma XSD afin qu'il soit compatible avec [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]y sont abordées. Les rubriques de cette section fournissent des informations supplémentaires concernant les limitations spécifiques, ainsi qu'une assistance pour leur utilisation.  
   
 |Élément|Limitation|  
 |----------|----------------|  
@@ -77,7 +82,7 @@ ms.lasthandoff: 11/09/2017
 |[Collections de schémas XML volumineuses et conditions de mémoire insuffisante](../../relational-databases/xml/large-xml-schema-collections-and-out-of-memory-conditions.md)|Fournit des solutions pour la condition de mémoire insuffisante qui se produit parfois avec les grandes collections de schémas.|  
 |[Modèles de contenu non déterministes](../../relational-databases/xml/non-deterministic-content-models.md)|Décrit les limitations relatives aux modèles de contenu non déterministes.|  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Données XML &#40;SQL Server&#41;](../../relational-databases/xml/xml-data-sql-server.md)   
  [Comparer du XML typé et du XML non typé](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   
  [Accorder des autorisations sur une collection de schémas XML](../../relational-databases/xml/grant-permissions-on-an-xml-schema-collection.md)   

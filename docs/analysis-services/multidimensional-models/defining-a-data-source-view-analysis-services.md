@@ -2,16 +2,13 @@
 title: "Définition des données de Source de vue (Analysis Services) | Documents Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,19 +17,20 @@ helpviewer_keywords:
 - Data Source View Wizard
 - data source views [Analysis Services], creating
 ms.assetid: 0bae4ee4-1742-40e9-bebe-17c788854484
-caps.latest.revision: "42"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: c73c6b68b7fb9f108b96732a7e30bb48f8404ba8
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a64d57676b6b9c0fb36772dfce08ed0a137df19a
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="defining-a-data-source-view-analysis-services"></a>Définition d'une vue de source de données (Analysis Services)
-  Une vue de source de données contient le modèle logique du schéma utilisé par les objets multidimensionnels de base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , autrement dit des cubes, des dimensions et des structures d’exploration de données. Une vue de source de données représente la définition, stockée au format XML, des métadonnées de ces éléments de schéma utilisés par le modèle UDM (Unified Dimensional Model) et par les structures d'exploration de données. Une vue de source de données :  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Une vue de source de données contient le modèle logique du schéma utilisé par les objets multidimensionnels de base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , autrement dit des cubes, des dimensions et des structures d’exploration de données. Une vue de source de données représente la définition, stockée au format XML, des métadonnées de ces éléments de schéma utilisés par le modèle UDM (Unified Dimensional Model) et par les structures d'exploration de données. Une vue de source de données :  
   
 -   contient les métadonnées représentant des objets sélectionnés à partir d'une ou de plusieurs sources de données sous-jacentes ou les métadonnées qui seront utilisées pour générer une banque de données relationnelles sous-jacente, si vous suivez l'approche verticale pour la génération du schéma ;  
   
@@ -128,7 +126,7 @@ ms.lasthandoff: 11/17/2017
   
  L'Assistant Vue de source de données utilise votre réponse pour faire correspondre les noms de colonnes et créer des relations entre les différentes tables dans la vue DSV. Les critères que vous pouvez spécifier sont répertoriés dans le tableau suivant.  
   
-|Critères de correspondance de nom|Description|  
+|Critères de correspondance de nom| Description|  
 |----------------------------|-----------------|  
 |**Nom identique à la clé primaire**|Le nom de la colonne clé étrangère de la table source est le même que le nom de la colonne clé primaire de la table de destination. Par exemple, la colonne de clé étrangère `Order.CustomerID` correspond à la colonne clé primaire `Customer.CustomerID`.|  
 |**Nom identique à celui de la table de destination**|Le nom de la colonne clé étrangère de la table source est le même que le nom de la table de destination. Par exemple, la colonne de clé étrangère `Order.Customer` correspond à la colonne clé primaire `Customer.CustomerID`.|  

@@ -1,26 +1,27 @@
 ---
 title: "Groupes de disponibilité de base (Groupes de disponibilité Always On) | Microsoft Docs"
 ms.custom: 
-ms.date: 09/27/2016
+ms.date: 02/01/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
 ms.component: availability-groups
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-high-availability
+ms.technology:
+- dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 285adbc7-ac9b-40f6-b4a9-3f1591d3b632
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: 2704a726c3d9c6caffd1c26bac0cfb3926d1c0b1
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+manager: craigg
+ms.openlocfilehash: ba38095f11a5f40ec6b9a9398217a98f390d146d
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="basic-availability-groups-always-on-availability-groups"></a>Groupes de disponibilité de base (Groupes de disponibilité Always On)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -42,9 +43,7 @@ ms.lasthandoff: 11/20/2017
 - Aucune vérification de l’intégrité sur les réplicas secondaires. 
 
 - Aucune prise en charge des réplicas hébergés sur les serveurs exécutant une version de SQL Server antérieure à SQL Server 2016 Community Technology Preview 3 (CTP3).  
-  
-- Aucune prise en charge de l’ajout ou de la suppression d’un réplica sur un groupe de disponibilité de base existant.  
-  
+
 - Prise en charge d’une base de données de disponibilité.  
   
 - Mise à niveau de groupes de disponibilité de base vers des groupes de disponibilité avancés impossible. Le groupe doit être supprimé et rajouté à un groupe qui contient des serveurs exécutant uniquement SQL Server 2016 Enterprise Edition.  
@@ -61,7 +60,7 @@ ms.lasthandoff: 11/20/2017
 > [!NOTE]  
 >  Les limitations des groupes de disponibilité de base s’appliquent à la commande **CREATE AVAILABILITY GROUP** lorsque **WITH BASIC** est spécifiée. Par exemple, vous obtiendrez une erreur si vous essayez de créer un groupe de disponibilité de base qui permet un accès en lecture. Les autres limitations s’appliquent de la même manière. Reportez-vous à la section Limitations de cette rubrique pour plus d’informations.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Vue d’ensemble des groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  
   
   

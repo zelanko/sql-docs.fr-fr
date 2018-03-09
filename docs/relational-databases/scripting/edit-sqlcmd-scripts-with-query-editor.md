@@ -2,10 +2,14 @@
 title: "Modifier des scripts SQLCMD à l’aide de l’Éditeur de requête | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-scripting
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,19 +19,19 @@ helpviewer_keywords:
 - Query Editor [Database Engine], SQLCMD scripts
 - scripts [SQL Server], SQL Server Management Studio
 ms.assetid: f77b866d-c330-47c9-9e74-0b8d8dff4b31
-caps.latest.revision: "42"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: cdd88c8bccec6251872c3ebd0095bd00d3e6ee72
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 35f569c6d26c888566eb8dbb47f1472101158d61
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="edit-sqlcmd-scripts-with-query-editor"></a>Modifier des scripts SQLCMD à l'aide de l'Éditeur de requête
-  Grâce à l'éditeur de requête du [!INCLUDE[ssDE](../../includes/ssde-md.md)] dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , vous pouvez écrire et modifier des requêtes en tant que scripts SQLCMD. Vous utilisez des scripts SQLCMD lorsque vous devez traiter des commandes Windows System et des instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] dans le même script.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Grâce à l’éditeur de requête du [!INCLUDE[ssDE](../../includes/ssde-md.md)] dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], vous pouvez écrire et modifier des requêtes en tant que scripts SQLCMD. Vous utilisez des scripts SQLCMD lorsque vous devez traiter des commandes Windows System et des instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] dans le même script.  
   
 ## <a name="sqlcmd-mode"></a>Mode SQLCMD  
  Pour utiliser l'éditeur de requête du [!INCLUDE[ssDE](../../includes/ssde-md.md)] moteur de base de données afin d'écrire ou de modifier des scripts SQLCMD, vous devez activer le mode de script SQLCMD. Par défaut, il n'est pas activé dans l'Éditeur de requête. Vous pouvez l'activer en cliquant sur l'icône **Mode SQLCMD** dans la barre d'outils ou en sélectionnant **Mode SQLCMD** dans le menu **Requête** .  
@@ -149,7 +153,7 @@ ms.lasthandoff: 11/09/2017
 ## <a name="color-coding-in-sqlcmd-scripts"></a>Codage en couleurs dans les scripts SQLCMD  
  Lorsque les scripts SQLCMD sont activés, les scripts sont codés en couleurs. Le codage en couleurs des mots clés [!INCLUDE[tsql](../../includes/tsql-md.md)] reste inchangé. Les commandes SQLCMD sont présentées avec un arrière-plan ombré.  
   
-## <a name="example"></a>Exemple  
+## <a name="example"></a> Exemple  
  L’exemple ci-après utilise une instruction **sqlcmd** pour créer un fichier de sortie nommé testoutput.txt et exécute deux instructions SELECT [!INCLUDE[tsql](../../includes/tsql-md.md)] ainsi qu’une commande du système d’exploitation (pour imprimer le répertoire actuel). Le fichier résultant contient la sortie du message provenant de l'instruction `DIR` , suivie des résultats des instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
   
 ```  
@@ -161,7 +165,7 @@ SELECT @@SERVERNAME AS 'Server Name'
 GO  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [sqlcmd Utility](../../tools/sqlcmd-utility.md)  
   
   

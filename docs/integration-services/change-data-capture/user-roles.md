@@ -1,5 +1,5 @@
 ---
-title: "Rôles d’utilisateur | Documents Microsoft"
+title: "Rôles d’utilisateur | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -13,17 +13,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: be0ec384-e03b-4483-96ca-02b289804d6a
-caps.latest.revision: 7
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 3c302cecea6c443e97badeca3737211cdadec239
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 0abefa916dda5690d033bc9cd74ac5f75245d408
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="user-roles"></a>Rôles d'utilisateur
   Cette section décrit les rôles d'utilisateur du service de capture de données modifiées pour Oracle par Attunity. Les rôles décrits sont des rôles de base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , les rôles Windows ou des rôles de base de données Oracle.  
@@ -60,7 +59,7 @@ ms.lasthandoff: 08/03/2017
   
 -   Agir en tant qu'administrateur de l'ordinateur autorisé en tant qu'administrateur sur l'ordinateur où le service de capture de données modifiées pour Oracle est installé. Cette personne installe le service de capture de données modifiées pour Oracle et utilise la console de configuration du service de capture de données modifiées pour configurer un service de capture de données modifiées pour Oracle sur un ordinateur local.  
   
-### <a name="service-account-oracle-cdc-service"></a>Compte de service : service de capture de données modifiées Oracle  
+### <a name="service-account-oracle-cdc-service"></a>Compte de service : service de capture de données modifiées Oracle  
  Il s'agit d'un compte de service Windows de capture de données modifiées Oracle utilisé pour exécuter le service de capture de données modifiées Oracle (le compte de service).  
   
  Le seul privilège obligatoire nécessaire pour le compte de service est de pouvoir utiliser le client Oracle et le fournisseur ODBC [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client. Ce compte n’a pas besoin d’accéder aux fichiers à moins que cela ne soit requis par des fournisseurs spécifiques (par exemple, si la chaîne de connexion du client Oracle référence des instances de base de données Oracle dans un fichier **tnsnames.ora** , puis ce fichier doit être accessible en lecture au compte de service).  
@@ -147,7 +146,7 @@ ms.lasthandoff: 08/03/2017
   
  La liste suivante décrit les privilèges requis pour l'utilisateur d'exploration de données de journaux :  
   
--   Sélectionnez sur \<any-captured-table >  
+-   SELECT sur \<tout_table_capturée>  
   
 -   SELECT ANY TRANSACTION  
   
@@ -181,4 +180,3 @@ ms.lasthandoff: 08/03/2017
  Les informations d'identification pour cet utilisateur ne sont jamais stockées. Elles sont requises par la console du concepteur CDC chaque fois qu'elles sont nécessaires et sont conservées pour les autres sessions d'interface utilisateur.  
   
   
-

@@ -5,12 +5,10 @@ ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs: DMX
@@ -24,18 +22,18 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: b750c1ba7fb7f0557b69aa70e768fd323e2de2c5
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 488c6dd83f34623a6f2a4fb026ff45a39f806c40
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="data-mining-extensions-dmx-operator-reference"></a>Guide de référence des opérateurs DMX (Data Mining Extensions)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Le langage d’Extensions DMX (Data Mining) dans [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] prend en charge les opérateurs arithmétiques, d’affectation, de comparaison, logiques et d’unaire. Le tableau ci-dessous affiche la liste des opérateurs pris en charge par DMX.  
   
-|Opérateur| Description|  
+|Opérateur|Description|  
 |--------------|-----------------|  
 |[+ &#40; Ajouter &#41; &#40; DMX &#41;](../dmx/add-dmx.md)|Opérateur arithmétique qui ajoute deux nombres ensemble.|  
 |[-&#40; Soustraire &#41; &#40; DMX &#41;](../dmx/subtract-dmx.md)|Opérateur arithmétique qui soustrait un nombre d'un autre.|  

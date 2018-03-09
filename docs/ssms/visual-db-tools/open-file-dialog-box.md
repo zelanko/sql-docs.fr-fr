@@ -3,8 +3,11 @@ title: "Boîte de dialogue Ouvrir un fichier | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,16 +18,16 @@ ms.assetid: 3e01b9f5-2b0a-4fb3-9da8-984d27d17b8a
 caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9d5f9d1622e694e9b771a353252306318346feae
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: b410bc86b35e2cacc83e9a367a9609e271c34290
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="open-file-dialog-box"></a>Boîte de dialogue Ouvrir un fichier
-La boîte de dialogue **Ouvrir un fichier** permet d'ouvrir un fichier existant à partir du disque. Vous pouvez également utiliser cette boîte de dialogue pour ouvrir un fichier déjà ouvert en utilisant des options d'encodage linguistique différentes.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] La boîte de dialogue **Ouvrir un fichier** permet d’ouvrir un fichier existant à partir du disque. Vous pouvez également utiliser cette boîte de dialogue pour ouvrir un fichier déjà ouvert en utilisant des options d'encodage linguistique différentes.  
   
 Pour accéder à cette boîte de dialogue, sélectionnez **Ouvrir** dans le menu **Fichier** , puis choisissez **Fichier**. Cette boîte de dialogue s'affiche également lorsque vous ouvrez des fichiers à partir d'autres éléments, comme la boîte de dialogue **Outils externes** . Dans le menu **Fichier** , sélectionnez **Ouvrir**et choisissez **Projet/Solution** pour ouvrir la boîte de dialogue **Ouvrir un projet** .  
   
@@ -32,7 +35,7 @@ Pour accéder à cette boîte de dialogue, sélectionnez **Ouvrir** dans le menu
 > Avant d'ouvrir un projet ou un composant dans [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)], déterminez la fiabilité de son code. Le fait d'ouvrir le projet ou le composant dans un [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] peut entraîner l'exécution de son code dans un processus approuvé sur votre ordinateur local.  
   
 ## <a name="option"></a>Option  
-**Regarder dans**  
+**Look in**  
 Recherchez le dossier de projet existant dans ce menu déroulant. Si vous sélectionnez un dossier dans cette liste, son contenu s'affiche dans le volet principal.  
   
 ## <a name="my-places-bar"></a>Barre Mon environnement  
@@ -65,7 +68,7 @@ Atteint le niveau suivant supérieur de l'arborescence.
 **Rechercher sur le Web**  
 Ce bouton n'est pas disponible.  
   
-**Delete**  
+**Supprimer**  
 Supprime les fichiers ou dossiers sélectionnés du support de stockage.  
   
 **Nouveau dossier**  
@@ -95,7 +98,7 @@ Cette commande n'est pas disponible.
 ## <a name="tools"></a>Outils  
 Sélectionnez un outil à appliquer à l'élément sélectionné dans le volet du sommaire.  
   
-**Delete**  
+**Supprimer**  
 Supprime le fichier ou dossier sélectionné du support de stockage.  
   
 **Mapper un lecteur réseau**  

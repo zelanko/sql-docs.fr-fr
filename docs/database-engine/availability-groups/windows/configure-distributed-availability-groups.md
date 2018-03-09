@@ -15,13 +15,13 @@ ms.assetid: f7c7acc5-a350-4a17-95e1-e689c78a0900
 caps.latest.revision: "28"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3e122b8b8aba89b971407c43c35715a387a687e1
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 67aaeb56b3d3230e650dc24d16221e2af6872344
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="configure-distributed-availability-group"></a>Configurer un groupe de disponibilité distribué  
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ Pour créer un groupe de disponibilité distribué, vous devez créer un groupe 
 
 Pour obtenir une présentation technique des groupes de disponibilité distribués, consultez [Groupes de disponibilité distribués](distributed-availability-groups.md).   
 
-## <a name="prerequisites"></a>Conditions préalables
+## <a name="prerequisites"></a>Prerequisites
 
 ### <a name="set-the-endpoint-listeners-to-listen-to-all-ip-addresses"></a>Définir les écouteurs de point de terminaison pour écouter toutes les adresses IP
 
@@ -209,12 +209,18 @@ ALTER AVAILABILITY GROUP [distributedag]
 GO  
 ```  
 
+## <a name="failover"></a>Joindre la base de données sur le réplica secondaire du deuxième groupe de disponibilité
+Lorsque la base de données qui se trouve sur le réplica secondaire du deuxième groupe de disponibilité est en restauration, vous devez la joindre manuellement au groupe de disponibilité.
+
+```sql  
+ALTER DATABASE [db1] SET HADR AVAILABILITY GROUP = [ag1];   
+```  
   
 ## <a name="failover"></a> Basculer vers un groupe de disponibilité secondaire  
 Seul le basculement manuel est pris en charge pour l’instant. L’instruction Transact-SQL suivante bascule le groupe de disponibilité distribué nommé `distributedag` :  
 
 
-1. Définissez le mode de disponibilité sur validation synchrone pour le groupe de disponibilité secondaire. 
+1. Définissez le mode de disponibilité sur validation synchrone pour les deux groupes de disponibilité. 
     
       ```sql  
       ALTER AVAILABILITY GROUP [distributedag] 
@@ -223,7 +229,7 @@ Seul le basculement manuel est pris en charge pour l’instant. L’instruction 
       'ag1' WITH 
          ( 
           LISTENER_URL = 'tcp://ag1-listener.contoso.com:5022',  
-          AVAILABILITY_MODE = ASYNCHRONOUS_COMMIT, 
+          AVAILABILITY_MODE = SYNCHRONOUS_COMMIT, 
           FAILOVER_MODE = MANUAL, 
           SEEDING_MODE = MANUAL 
           ), 

@@ -3,8 +3,11 @@ title: "Introduction à SQL Server Management Studio pour BI | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -16,16 +19,16 @@ ms.assetid: ffaa77b7-03d0-4d7a-aa42-c5091a4f2ceb
 caps.latest.revision: "5"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 626db0505010dc75499f1b14a4d5708e47c33550
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 4fc26ef0feb4ff86087bd0ddc571299621207464
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="introduction-to-sql-server-management-studio-for-business-intelligence"></a>Introduction à SQL Server Management Studio pour Business Intelligence
-Pour accéder, configurer, gérer et administrer [!INCLUDE[ssASnoversion](../includes/ssasnoversion_md.md)], [!INCLUDE[ssISnoversion](../includes/ssisnoversion_md.md)]et [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion_md.md)], utilisez [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)]. Même si les trois technologies de décisionnel reposent sur [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)], les tâches d'administration associées à chacune d'entre elle sont légèrement différentes.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Pour accéder, configurer, gérer et administrer [!INCLUDE[ssASnoversion](../includes/ssasnoversion_md.md)], [!INCLUDE[ssISnoversion](../includes/ssisnoversion_md.md)] et [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion_md.md)], utilisez [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)]. Même si les trois technologies de décisionnel reposent sur [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)], les tâches d'administration associées à chacune d'entre elle sont légèrement différentes.  
   
 > [!NOTE]  
 > Pour créer et modifier des solutions [!INCLUDE[ssASnoversion](../includes/ssasnoversion_md.md)], [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion_md.md)]et [!INCLUDE[ssISnoversion](../includes/ssisnoversion_md.md)] , utilisez [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull_md.md)], et non [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)]. [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull_md.md)] est un environnement de développement basé sur [!INCLUDE[msCoName](../includes/msconame_md.md)][!INCLUDE[vsprvs](../includes/vsprvs_md.md)].  
@@ -59,7 +62,7 @@ Vous gérez également le serveur en activant et configurant différentes foncti
   
 -   [Activation et désactivation de l'impression côté client pour Reporting Services](http://msdn.microsoft.com/en-us/0e709c96-7517-4547-8ef6-5632f8118524)  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [Développement et implémentation à l’aide de SQL Server Data Tools](http://msdn.microsoft.com/en-us/132ed779-3ec8-4734-9698-802116d1b017)  
 [Reporting Services dans les outils de données SQL Server](http://msdn.microsoft.com/en-us/0903c7b2-ac59-45f1-b7d0-922ecd9d76f8)  
   

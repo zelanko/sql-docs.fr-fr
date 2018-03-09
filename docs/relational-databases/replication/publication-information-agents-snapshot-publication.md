@@ -2,27 +2,30 @@
 title: "Informations de publication, Agents (Publication d’instantané) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords: sql13.rep.monitor.publicationinfo.downlevelagents.snapshot.f1
 ms.assetid: 599ff80b-392c-43aa-9db2-dc4ed33d4f6e
 caps.latest.revision: "23"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: aeb34c1be64a88831870832d7c55f4bc6a6f1369
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 4fa220a3e2530a029cb1ff26cdc2808ea2c275a6
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="publication-information-agents-snapshot-publication"></a>Informations de publication, Agents (Publication d'instantané)
-  L'onglet **Agents** contient des informations résumées sur l'Agent d'instantané de la publication sélectionnée.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] L’onglet **Agents** contient des informations récapitulatives sur l’Agent d’instantané de la publication sélectionnée.  
   
 ## <a name="options"></a>Options  
  Pour plus d'informations et en savoir plus sur les tâches associées à l'Agent d'instantané, cliquez avec le bouton droit de la souris sur l'Agent, puis cliquez sur une option dans le menu contextuel. Pour modifier la façon dont la grille affiche les données, cliquez avec le bouton droit sur la grille, puis cliquez sur l'une des options suivantes :  
@@ -40,7 +43,7 @@ ms.lasthandoff: 11/09/2017
  **État**  
  État de l'Agent d'instantané. La liste ci-dessous indique les valeurs d'état possibles :  
   
--   Erreur  
+-   Error  
   
 -   Nouvelle tentative de la commande qui a échoué  
   
@@ -49,7 +52,7 @@ ms.lasthandoff: 11/09/2017
 -   Terminé  
   
  **Agent**  
- L'Agent d'instantané. Il s'agit du seul Agent associé à une publication d'instantané. L'Agent de distribution est associé aux abonnements à cette publication. Pour plus d’informations, consultez [Afficher des informations et effectuer des tâches pour les agents associés à un abonnement &#40;Moniteur de réplication&#41;](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-subscription-agents.md).  
+ L'Agent d'instantané. Il s'agit du seul Agent associé à une publication d'instantané. L'Agent de distribution est associé aux abonnements à cette publication. Pour plus d’informations, consultez [Afficher des informations et effectuer des tâches pour les agents d’abonnement &#40;moniteur de réplication&#41;](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-subscription-agents.md).  
   
  **Dernière heure de début**  
  Heure du dernier démarrage de l'Agent.  
@@ -60,7 +63,7 @@ ms.lasthandoff: 11/09/2017
  **Dernière action**  
  La dernière action effectuée au cours de la dernière exécution de l'Agent.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Démarrer le Moniteur de réplication](../../relational-databases/replication/monitor/start-the-replication-monitor.md)   
  [Afficher des informations et exécuter des tâches pour un serveur de publication &#40;moniteur de réplication&#41;](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-publication-replication-monitor.md)   
  [Afficher des informations et effectuer des tâches pour les agents associés à une publication &#40;moniteur de réplication&#41;](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-publication-agents.md)   

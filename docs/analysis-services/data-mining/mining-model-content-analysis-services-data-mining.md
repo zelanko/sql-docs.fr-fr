@@ -2,15 +2,13 @@
 title: "Contenu du modèle d’exploration de données (Analysis Services - Exploration de données) | Documents Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
 ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -24,19 +22,20 @@ helpviewer_keywords:
 - support [data mining]
 - node distribution
 ms.assetid: e7c039f6-3266-4d84-bfbd-f99b6858acf4
-caps.latest.revision: "25"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 52e0108a90e47ae9868b450375be26ffdf563c63
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 1974e13ae601e899960f39917a9afd5349d38d53
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="mining-model-content-analysis-services---data-mining"></a>Contenu du modèle d’exploration de données (Analysis Services - Exploration de données)
-  Après avoir conçu et traité un modèle d'exploration de données à l'aide de données provenant de la structure d'exploration de données sous-jacente, celui-ci est complet et présente un *contenu de modèle d'exploration de données*. Vous pouvez utiliser ce contenu pour faire des prédictions ou analyser vos données.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Après avoir conçu et traité un modèle d'exploration de données à l'aide de données provenant de la structure d'exploration de données sous-jacente, celui-ci est complet et présente un *contenu de modèle d'exploration de données*. Vous pouvez utiliser ce contenu pour faire des prédictions ou analyser vos données.  
   
  Le contenu du modèle d'exploration de données inclut des métadonnées relatives au modèle, des statistiques sur les données, et les modèles découverts par l'algorithme d'exploration. Selon l'algorithme utilisé, le contenu du modèle peut inclure des formules de régression, les définitions de règles et jeux d'éléments, ou des pondérations et d'autres statistiques.  
   
@@ -150,7 +149,7 @@ ms.lasthandoff: 11/17/2017
 >  Certains modèles, tels que ceux créés par l'algorithme MNR (Microsoft Neural Network), contiennent aussi un type de nœud spécial qui fournit des statistiques descriptives sur les données d'apprentissage du modèle entier. Par définition, ces nœuds n'ont jamais de nœuds enfants.  
   
 ### <a name="node-distribution"></a>node distribution  
- La colonne NODE_DISTRIBUTION contient une table imbriquée qui fournit dans de nombreux nœuds des informations importantes et détaillées sur les modèles découverts par l'algorithme. Les statistiques exactes fournies dans cette table changent selon le type de modèle, la position du nœud dans l'arborescence, et si l'attribut prévisible est une valeur numérique continue ou une valeur discrète ; toutefois, elles peuvent inclure les valeurs minimales et maximales d'un attribut, les pondérations attribuées aux valeurs, le nombre de cas dans un nœud, les coefficients utilisés dans une formule de régression, et les mesures statistiques telles que l'écart type et la variance. Pour plus d'informations sur la manière d'interpréter la distribution de nœud, consultez la rubrique pour le type spécifique du type de modèle que vous utilisez.  
+ La colonne NODE_DISTRIBUTION contient une table imbriquée qui fournit dans de nombreux nœuds des informations importantes et détaillées sur les modèles découverts par l'algorithme. Les statistiques exactes fournies dans cette table changent selon le type de modèle, la position du nœud dans l'arborescence, et si l'attribut prévisible est une valeur numérique continue ou une valeur discrète ; toutefois, elles peuvent inclure les valeurs minimales et maximales d'un attribut, les pondérations attribuées aux valeurs, le nombre de cas dans un nœud, les coefficients utilisés dans une formule de régression, et les mesures statistiques telles que l'écart type et la variance. Pour plus d'informations sur la manière d'interpréter la distribution de nœud, consultez la rubrique pour le type spécifique du type de modèle que vous utilisez.  
   
 > [!NOTE]  
 >  La table NODE_DISTRIBUTION peut être vide, selon le type de nœud. Par exemple, certains nœuds servent uniquement à organiser une collection de nœuds enfants, et ce sont les nœuds enfants qui contiennent les statistiques détaillées.  
@@ -226,7 +225,7 @@ ms.lasthandoff: 11/17/2017
 |3|Continu|Indique que la valeur de l'attribut est une valeur numérique continue et par conséquent peut être représentée par une moyenne ainsi que la variance et l'écart type.|  
 |4|Discret|Indique une valeur, soit numérique, soit texte, traitée comme discrète.<br /><br /> **Remarque** Les valeurs discrètes peuvent être aussi manquantes ; toutefois, elles sont traitées différemment durant les calculs. Pour plus d’informations, consultez [Valeurs manquantes &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/missing-values-analysis-services-data-mining.md).|  
 |5|Discrétisé|Indique que l'attribut contient des valeurs numériques qui ont été discrétisées. La valeur sera une chaîne mise en forme qui décrit les compartiments de discrétisation.|  
-|6|Existing|Indique que l'attribut a des valeurs numériques continues et que les valeurs ont été fournies dans les données, au contraire des valeurs manquantes ou déduites.|  
+|6|Existant|Indique que l'attribut a des valeurs numériques continues et que les valeurs ont été fournies dans les données, au contraire des valeurs manquantes ou déduites.|  
 |7|Coefficient|Indique une valeur numérique qui représente un coefficient.<br /><br /> Un coefficient est une valeur appliquée lors du calcul de la valeur de la variable dépendante. Par exemple, si votre modèle crée une formule de régression qui prédit le revenu selon l’âge, le coefficient est utilisé dans la formule qui relie l'âge au revenu.|  
 |8|Gain du score|Indique une valeur numérique qui représente le gain de score pour un attribut.|  
 |9|Statistiques|Indique une valeur numérique qui représente une statistique pour un régresseur.|  
@@ -258,7 +257,7 @@ ms.lasthandoff: 11/17/2017
   
  Par exemple, si l'alimentation de tous les clients dans un arbre de décision est répartie de manière égale par sexe (et aucune valeur ne manque), la probabilité des nœuds enfants doit être .5. Toutefois, supposons que chacun des nœuds pour le sexe est également divisé par niveaux de revenu, Élevé, Moyen, et Bas. Dans ce cas, le score MARGINAL_PROBABILITY pour chaque nœud enfant doit toujours être .33 mais la valeur NODE_PROBABILTY sera le produit de toutes les probabilités qui mènent à ce nœud et donc toujours inférieure à la valeur MARGINAL_PROBABILITY.  
   
-|Niveau de nœud/attribut et valeur|probabilité marginale|probabilité du nœud|  
+|Niveau de nœud/attribut et valeur|Probabilité marginale|probabilité du nœud|  
 |----------------------------------------|--------------------------|----------------------|  
 |Racine du modèle<br /><br /> Tous les clients cibles|1|1|  
 |Clients cibles répartis par sexe|.5|.5|  
@@ -280,15 +279,15 @@ ms.lasthandoff: 11/17/2017
   
 |Type d'algorithme ou de modèle|model content|Interrogation des modèles d'exploration de données|  
 |-----------------------------|-------------------|----------------------------|  
-|Modèles de règles d'association|[Contenu du modèle d’exploration de données pour les modèles d’association &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/mining-model-content-for-association-models-analysis-services-data-mining.md)|[Exemples de requêtes de modèle d'association](../../analysis-services/data-mining/association-model-query-examples.md)|  
-|Modèles de clustering|[Contenu du modèle d’exploration de données pour les modèles d’arbre de décision &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)|[Exemples de requêtes de modèle de clustering](../../analysis-services/data-mining/clustering-model-query-examples.md)|  
-|Modèle d'arbres de décision|[Contenu du modèle d’exploration de données pour les modèles d’arbre de décision &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)|[Exemples de requêtes de modèle d'arbre de décision](../../analysis-services/data-mining/decision-trees-model-query-examples.md)|  
+|Modèles de règles d'association|[Contenu du modèle d’exploration de données pour les modèles d’association &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/mining-model-content-for-association-models-analysis-services-data-mining.md)|[Exemples de requêtes de modèle association](../../analysis-services/data-mining/association-model-query-examples.md)|  
+|Modèles de clustering|[Contenu du modèle d’exploration de données pour les modèles d’arbre de décision &#40; Analysis Services - Exploration de données &#41;](../../analysis-services/data-mining/mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)|[Exemples de requêtes modèle de clustering](../../analysis-services/data-mining/clustering-model-query-examples.md)|  
+|Modèle d'arbres de décision|[Contenu du modèle d’exploration de données pour les modèles d’arbre de décision &#40; Analysis Services - Exploration de données &#41;](../../analysis-services/data-mining/mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)|[Exemples de requêtes de modèle d’arbre de décision](../../analysis-services/data-mining/decision-trees-model-query-examples.md)|  
 |Modèles de régression linéaire|[Contenu du modèle d’exploration de données pour les modèles de régression linéaire &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)|[Exemples de requête de modèle de régression linéaire](../../analysis-services/data-mining/linear-regression-model-query-examples.md)|  
 |Modèles de régression logistique|[Contenu du modèle d’exploration de données pour les modèles de régression logistique &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/mining-model-content-for-logistic-regression-models.md)|[Exemples de requête de modèle de régression linéaire](../../analysis-services/data-mining/linear-regression-model-query-examples.md)|  
-|Modèles Naïve Bayes|[Contenu du modèle d’exploration de données pour les modèles Naive Bayes &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md)|[Exemples de requêtes de modèle Naive Bayes](../../analysis-services/data-mining/naive-bayes-model-query-examples.md)|  
+|Modèles Naïve Bayes|[Contenu du modèle d’exploration de données pour les modèles Naive Bayes &#40; Analysis Services - Exploration de données &#41;](../../analysis-services/data-mining/mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md)|[Exemples de requêtes de modèle Naive Bayes](../../analysis-services/data-mining/naive-bayes-model-query-examples.md)|  
 |Modèles de réseau neuronal|[Contenu du modèle d’exploration de données pour les modèles de réseau neuronal &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/mining-model-content-for-neural-network-models-analysis-services-data-mining.md)|[Exemples de requêtes de modèle de réseau neuronal](../../analysis-services/data-mining/neural-network-model-query-examples.md)|  
 |Sequence clustering|[Contenu du modèle d’exploration de données pour les modèles Sequence Clustering &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/mining-model-content-for-sequence-clustering-models.md)|[Exemples de requêtes de modèle MSC (Sequence Clustering)](../../analysis-services/data-mining/sequence-clustering-model-query-examples.md)|  
-|Modèles de séries chronologiques|[Contenu du modèle d’exploration de données pour les modèles de séries chronologiques &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md)|[Exemples de requêtes de modèle de série chronologique](../../analysis-services/data-mining/time-series-model-query-examples.md)|  
+|Modèles de séries chronologiques|[Contenu du modèle d’exploration de données pour les modèles de série chronologique &#40; Analysis Services - Exploration de données &#41;](../../analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md)|[Exemples de requêtes de modèle de série chronologique](../../analysis-services/data-mining/time-series-model-query-examples.md)|  
   
 ##  <a name="bkmk_Viewing"></a> Outils pour afficher le contenu du modèle d'exploration de données  
  Lorsque vous parcourez ou explorez un modèle dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], vous pouvez consulter les informations dans la **Visionneuse de l'arborescence de contenu générique**qui est disponible dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] et [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
@@ -311,7 +310,7 @@ SELECT * FROM [<mining model name>].CONTENT
  Dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], vous pouvez aussi accéder aux informations dans les ensembles de lignes de schéma d'exploration de données en ouvrant une connexion à l'instance [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] et en interrogeant les tables système. Pour plus d’informations, consultez [Ensembles de lignes de schéma d’exploration de données &#40;SSAS&#41;](../../analysis-services/data-mining/data-mining-schema-rowsets-ssas.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Visionneuse de l’arborescence de contenu générique Microsoft &#40;exploration de données&#41;](http://msdn.microsoft.com/library/751b4393-f6fd-48c1-bcef-bdca589ce34c)   
- [Algorithmes d’exploration de données &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)  
+ [Visionneuse de l’arborescence de contenu générique Microsoft &#40; exploration de données &#41;](http://msdn.microsoft.com/library/751b4393-f6fd-48c1-bcef-bdca589ce34c)   
+ [Algorithmes d’exploration de données &#40; Analysis Services - Exploration de données &#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)  
   
   

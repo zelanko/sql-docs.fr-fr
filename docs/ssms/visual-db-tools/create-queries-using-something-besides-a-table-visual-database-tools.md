@@ -3,8 +3,11 @@ title: "Créer des requêtes qui utilisent autre chose qu’une table | Microsof
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,16 +18,16 @@ ms.assetid: 8e4a1f0a-8a42-4733-be8d-e21d6dbddb33
 caps.latest.revision: "5"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ca9ab6532c1a83be15b1b9a80c0e96ef051fac27
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: ac44c00dd2ffb0a37a4a7a53a33dbddb54df49f9
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="create-queries-using-something-besides-a-table-visual-database-tools"></a>Créer des requêtes qui utilisent autre chose qu'une table (Visual Database Tools)
-Pour écrire une requête d'extraction, il faut toujours formuler quelles sont les colonnes et les lignes à obtenir ainsi que le lieu où le processeur de requêtes trouve les données d'origine. En général, une table ou plusieurs tables jointes constituent les données d'origine. Mais la source des données ne se trouve pas forcément dans une table. Les données d'origine peuvent venir de vues, de requêtes, de synonymes ou de fonctions définies par l'utilisateur et retournant une table.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Pour écrire une requête d’extraction, il faut toujours formuler quelles sont les colonnes et les lignes à obtenir ainsi que le lieu où le processeur de requêtes trouve les données d’origine. En général, une table ou plusieurs tables jointes constituent les données d'origine. Mais la source des données ne se trouve pas forcément dans une table. Les données d'origine peuvent venir de vues, de requêtes, de synonymes ou de fonctions définies par l'utilisateur et retournant une table.  
   
 ## <a name="using-a-view-in-place-of-a-table"></a>Utilisation d'une vue à la place d'une table  
 Il est possible de sélectionner des lignes d'une vue. Par exemple, une base de données contient une vue « ExpensiveBooks » dont tous les titres ont un prix supérieur à 19.99 (19,99 dollars). La définition de la vue peut se présenter de la manière suivante :  

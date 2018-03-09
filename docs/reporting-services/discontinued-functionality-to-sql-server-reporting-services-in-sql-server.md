@@ -1,12 +1,14 @@
 ---
 title: "Fonctionnalités supprimées de SQL Server Reporting Services dans SQL Server 2016 | Microsoft Docs"
 ms.date: 07/02/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: reporting-services
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.custom: 
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,15 +18,15 @@ helpviewer_keywords:
 - unsupported features [Reporting Services]
 ms.assetid: d529cc96-3483-480b-9bfc-bd28b1d0ef52
 caps.latest.revision: "54"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: fe01a4073387eadc7d4a07bb993bdfb7263c3fe4
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 1dc7d8fb5028b0814c0b015a469065e1ce901939
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="discontinued-functionality-to-sql-server-reporting-services-in-sql-server-2016"></a>Fonctionnalités supprimées de SQL Server Reporting Services dans SQL Server 2016
 
@@ -40,6 +42,7 @@ Une *fonctionnalité interrompue* désigne une fonctionnalité qui n’est plus 
 |-|-|
 |Charger des modèles de rapport via le portail web|Ceci peut encore être effectué via l’API SOAP.|
 |Gérer des modèles de rapport via le portail web|Ceci peut encore être effectué via l’API SOAP.|
+|Personnaliser des feuilles de style pour la visionneuse HTML et pour le Gestionnaire de rapports|Vous pouvez toujours [personnaliser le portail web](branding-the-web-portal.md).|
 
 ## <a name="next-steps"></a>Étapes suivantes
 

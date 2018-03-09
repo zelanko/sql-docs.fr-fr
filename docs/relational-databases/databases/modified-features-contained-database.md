@@ -2,27 +2,30 @@
 title: "Fonctionnalités modifiées (base de données à relation contenant-contenu) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: databases
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords: contained database, modifications to DBs
 ms.assetid: a2942509-39a2-4903-b504-ae80a300a9de
 caps.latest.revision: "27"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5fdd13aca35cc8c128cb4f28dbcb1c1b98bc95f6
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 56cbd393df49410b54f2e61e212f4ca55a6ef980
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="modified-features-contained-database"></a>Fonctionnalités modifiées (base de données à relation contenant-contenu)
-  Les fonctionnalités suivantes ont été modifiées pour être prises en charge par une base de données partiellement à relation contenant-contenu. Les fonctionnalités sont généralement modifiées de façon à ce qu'elles ne traversent pas la limite de base de données.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Les fonctionnalités suivantes ont été modifiées pour être prises en charge par une base de données partiellement à relation contenant-contenu. Les fonctionnalités sont généralement modifiées de façon à ce qu'elles ne traversent pas la limite de base de données.  
   
  Pour plus d’informations, consultez [Bases de données à relation contenant-contenu](../../relational-databases/databases/contained-databases.md).  
   
@@ -52,7 +55,7 @@ ms.lasthandoff: 11/09/2017
 ## <a name="user-options"></a>Options utilisateur  
  Au moment d’activer les bases de données à relation contenant-contenu, l’ [option user options](../../database-engine/configure-windows/configure-the-user-options-server-configuration-option.md) doit avoir la valeur 0 pour l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Classements de base de données à relation contenant-contenu](../../relational-databases/databases/contained-database-collations.md)   
  [Bases de données à relation contenant-contenu](../../relational-databases/databases/contained-databases.md)  
   

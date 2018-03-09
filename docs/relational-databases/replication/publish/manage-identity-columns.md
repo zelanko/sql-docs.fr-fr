@@ -2,9 +2,12 @@
 title: "Gérer des colonnes d’identité | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -16,18 +19,18 @@ helpviewer_keywords:
 - identity columns [SQL Server], replication
 ms.assetid: 98892836-cf63-494a-bd5d-6577d9810ddf
 caps.latest.revision: "42"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 25ddfbedda3781d3ac92d91e234a0172d34d044b
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 46d22fff51904ae27e64def3aaebacfe39bab40f
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="manage-identity-columns"></a>Gérer des colonnes d'identité
-  Cette rubrique explique comment gérer des colonnes d'identité dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ou [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Lorsque les insertions de l'Abonné sont répliquées sur le serveur de publication, les colonnes d'identité doivent être gérées afin d'éviter d'affecter la même valeur d'identité sur l'Abonné et sur le serveur de publication. La réplication peut gérer automatiquement les plages d'identité ou vous pouvez choisir de les gérer manuellement.  Pour plus d’informations sur les options de gestion des plages d’identité fournies par la réplication, consultez [Répliquer des colonnes d’identité](../../../relational-databases/replication/publish/replicate-identity-columns.md).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Cette rubrique explique comment gérer des colonnes d’identité dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] à l’aide de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ou [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Lorsque les insertions de l'Abonné sont répliquées sur le serveur de publication, les colonnes d'identité doivent être gérées afin d'éviter d'affecter la même valeur d'identité sur l'Abonné et sur le serveur de publication. La réplication peut gérer automatiquement les plages d'identité ou vous pouvez choisir de les gérer manuellement.  Pour plus d’informations sur les options de gestion des plages d’identité fournies par la réplication, consultez [Répliquer des colonnes d’identité](../../../relational-databases/replication/publish/replicate-identity-columns.md).  
   
  **Dans cette rubrique**  
   
@@ -150,7 +153,7 @@ ms.lasthandoff: 11/09/2017
   
     -   Pour désactiver la gestion automatique des plages d'identité, exécutez [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md) au niveau du serveur de publication dans la base de données de publication. Affectez la valeur **identityrangemanagementoption** à **@property** et la valeur **manual** ou **none** à **@value**.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Réplication transactionnelle d’égal à égal](../../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)   
  [Replication System Stored Procedures Concepts](../../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)   
  [Répliquer des colonnes d’identité](../../../relational-databases/replication/publish/replicate-identity-columns.md)  

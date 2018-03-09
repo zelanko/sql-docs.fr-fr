@@ -2,15 +2,13 @@
 title: Ensemble de lignes MDSCHEMA_CUBES | Documents Microsoft
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: schema-rowsets
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: MDSCHEMA_CUBES
@@ -23,24 +21,24 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 3ff85f0461a9ca0abc7c9acdfdd4cb2b23722c41
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 4b23f8bda8cc2aa410ddc04225420ff6372be3e4
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="mdschemacubes-rowset"></a>Ensemble de lignes MDSCHEMA_CUBES
-  Décrit la structure des cubes d'une base de données.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Décrit la structure des cubes d’une base de données.  
   
 ## <a name="rowset-columns"></a>Colonnes de l'ensemble de lignes  
  L'ensemble de lignes **MDSCHEMA_CUBES** contient les colonnes suivantes.  
   
-|Nom de colonne|Indicateur de type| Description|  
+|Nom de colonne|Indicateur de type|Description|  
 |-----------------|--------------------|-----------------|  
 |**CATALOG_NAME**|**DBTYPE_WSTR**|Nom de la base de données.|  
 |**SCHEMA_NAME**|**DBTYPE_WSTR**|Non pris en charge.|  
 |**CUBE_NAME**|**DBTYPE_WSTR**|Nom du cube ou de la dimension. Les noms de dimension sont précédés d'un symbole dollar ($).<br /><br /> Remarque : Seuls administrateurs de serveur et base de données disposer d’autorisations pour afficher les cubes créés à partir d’une dimension.|  
-|**CUBE_TYPE**|**DBTYPE_WSTR**|Type du cube. Les valeurs valides sont :<br /><br /> **CUBE**<br /><br /> **DIMENSION**|  
+|**CUBE_TYPE**|**DBTYPE_WSTR**|Type du cube. Les valeurs valides sont :<br /><br /> **CUBE**<br /><br /> **DIMENSION**|  
 |**CUBE_GUID**|**DBTYPE_GUID**|Non pris en charge.|  
 |**CREATED_ON**|**DBTYPE_DBTIMESTAMP**|Non pris en charge.|  
 |**LAST_SCHEMA_UPDATE**|**DBTYPE_DBTIMESTAMP**|Heure du dernier traitement du cube.|  
@@ -63,11 +61,11 @@ ms.lasthandoff: 11/17/2017
   
 |Nom de colonne|Indicateur de type|État de la restriction|  
 |-----------------|--------------------|-----------------------|  
-|**CATALOG_NAME**|**DBTYPE_WSTR**|Ce paramètre est facultatif.|  
-|**SCHEMA_NAME**|**DBTYPE_WSTR**|Ce paramètre est facultatif.|  
-|**CUBE_NAME**|**DBTYPE_WSTR**|Ce paramètre est facultatif.|  
+|**CATALOG_NAME**|**DBTYPE_WSTR**|Facultatif.|  
+|**SCHEMA_NAME**|**DBTYPE_WSTR**|Facultatif.|  
+|**CUBE_NAME**|**DBTYPE_WSTR**|Facultatif.|  
 |**CUBE_SOURCE**|**DBTYPE_UI2**|(Facultatif) Restriction par défaut est une valeur de 1. Une image bitmap avec l’une des valeurs valides suivantes :<br /><br /> 1 CUBE<br /><br /> 2 DIMENSION|  
-|**Cube_Name de base**|**DBTYPE_WSTR**|Ce paramètre est facultatif.|  
+|**Cube_Name de base**|**DBTYPE_WSTR**|Facultatif.|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Ensembles de lignes de schéma OLE DB pour OLAP](../../../analysis-services/schema-rowsets/ole-db-olap/ole-db-for-olap-schema-rowsets.md)  

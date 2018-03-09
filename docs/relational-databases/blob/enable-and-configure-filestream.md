@@ -2,27 +2,33 @@
 title: Activer et configurer FILESTREAM | Microsoft Docs
 ms.custom: 
 ms.date: 08/23/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: blob
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-blob
+ms.suite: sql
+ms.technology:
+- dbe-blob
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: FILESTREAM [SQL Server], enabling
+helpviewer_keywords:
+- FILESTREAM [SQL Server], enabling
 ms.assetid: 78737e19-c65b-48d9-8fa9-aa6f1e1bce73
-caps.latest.revision: "25"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 6839f11d9375fad6c2672b760bec3d5edee031d3
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: abc638065f8a8a9201d5dbd37f240e82a5c81a22
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="enable-and-configure-filestream"></a>Activer et configurer FILESTREAM
-  Pour pouvoir commencer à utiliser FILESTREAM, vous devez l’activer sur l’instance du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Cette rubrique décrit comment activer FILESTREAM à l'aide du Gestionnaire de configuration SQL Server.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Pour pouvoir commencer à utiliser FILESTREAM, vous devez l’activer sur l’instance du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Cette rubrique décrit comment activer FILESTREAM à l'aide du Gestionnaire de configuration SQL Server.  
   
 ##  <a name="enabling"></a> Activation de FILESTREAM  
   
@@ -50,7 +56,7 @@ ms.lasthandoff: 11/09/2017
   
 11. Dans l'Éditeur de requête, entrez le code [!INCLUDE[tsql](../../includes/tsql-md.md)] suivant :  
   
-    ```tsql  
+    ```sql  
     EXEC sp_configure filestream_access_level, 2  
     RECONFIGURE  
     ```  
@@ -79,9 +85,9 @@ ms.lasthandoff: 11/09/2017
   
 ||||||  
 |-|-|-|-|-|  
-|Niveau RAID|Performances en écriture|Performances en lecture|Tolérance de panne|Notes|  
+|Niveau RAID|Performances en écriture|Performances en lecture|Tolérance de panne|Notes |  
 |RAID 5|Normale|Normale|Excellent|Les performances sont meilleures qu'avec un seul disque ou une simple concaténation de disques, mais elles sont moins bonnes qu'avec le niveau RAID 0 ou le niveau RAID 5 utilisant l'agrégation par bandes.|  
-|RAID 0|Excellent|Excellent|Aucune||  
+|RAID 0|Excellent|Excellent|None||  
 |RAID 5 + agrégation par bandes|Excellent|Excellent|Excellent|Option la plus chère.|  
   
   

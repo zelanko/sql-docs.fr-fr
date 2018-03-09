@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-server
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,15 +16,15 @@ helpviewer_keywords:
 - execution logs [Reporting Services]
 ms.assetid: a7ead67d-1404-4e67-97e7-4c7b0d942070
 caps.latest.revision: "41"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 8458127daae58d63376f80dc1b67302928f9f943
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 1177b4cf7db3d55e839608f45fb036ae95e7baf5
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="report-server-executionlog-and-the-executionlog3-view"></a>Journal des exécutions du serveur de rapports et vue ExecutionLog3
   Le journal des exécutions du serveur de rapports [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]contient des informations sur les rapports qui sont exécutés sur le serveur ou sur plusieurs serveurs dans le cadre d’un déploiement évolutif en mode natif ou sur une batterie de serveurs SharePoint. Vous pouvez l'utiliser pour connaître la fréquence de demande d'un rapport, les formats de sortie les plus utilisés et le nombre de millisecondes de traitement consacré à chaque phrase du traitement. Le journal contient des informations sur le temps passé pour l'exécution d'une requête de dataset dans un rapport et le temps passé pour le traitement des données. Si vous êtes administrateur de serveur de rapports, vous pouvez passer en revue les informations du journal, identifier les tâches longues et faire des suggestions aux auteurs de rapports pour améliorer des zones du rapport (dataset ou traitement).  
@@ -116,7 +114,7 @@ select * from ExecutionLog3 order by TimeStart DESC
   
  La table suivante décrit les données qui sont capturées dans le journal d'exécution des rapports :  
   
-|Colonne|Description|  
+|colonne|Description|  
 |------------|-----------------|  
 |InstanceName|Nom de l'instance du serveur de rapports qui a géré la demande. Si votre environnement inclut plusieurs serveurs de rapports, vous pouvez analyser la distribution InstanceName pour surveiller et déterminer si votre programme d'équilibrage de la charge réseau distribue les requêtes entre les différents serveurs de rapports comme prévu.|  
 |ItemPath|Chemin de stockage d'un rapport ou d'un élément de rapport|  
@@ -331,7 +329,7 @@ select * from ExecutionLog2 order by TimeStart DESC
   
  La table suivante décrit les données qui sont capturées dans le journal d'exécution des rapports :  
   
-|Colonne|Description|  
+|colonne|Description|  
 |------------|-----------------|  
 |InstanceName|Nom de l'instance du serveur de rapports qui a géré la demande.|  
 |ReportPath|Structure du chemin d'accès au rapport.  Par exemple un rapport nommé « test » qui se trouve dans le dossier racine du gestionnaire de rapports, aura un ReportPath « /test ».<br /><br /> Un rapport nommé « test » qui est enregistré dans le dossier « samples » du gestionnaire de rapports, aura un ReportPath « /Samples/test/ »|  
@@ -363,7 +361,7 @@ select * from ExecutionLog order by TimeStart DESC
   
  La table suivante décrit les données qui sont capturées dans le journal d'exécution des rapports :  
   
-|Colonne|Description|  
+|colonne|Description|  
 |------------|-----------------|  
 |InstanceName|Nom de l'instance du serveur de rapports qui a géré la demande.|  
 |ReportID|Identificateur du rapport.|  
@@ -381,7 +379,7 @@ select * from ExecutionLog order by TimeStart DESC
 |ByteCount|Taille en octets des rapports rendus.|  
 |RowCount|Nombre de lignes retournées par les requêtes.|  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Activer des événements Reporting Services pour le journal des traces SharePoint &#40;ULS&#41;](../../reporting-services/report-server/turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls.md)   
  [Fichiers journaux et sources de Reporting Services](../../reporting-services/report-server/reporting-services-log-files-and-sources.md)   
  [Guide de référence des erreurs et des événements &#40;Reporting Services&#41;](../../reporting-services/troubleshooting/errors-and-events-reference-reporting-services.md)  

@@ -5,28 +5,29 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - SQLSetScrollOptions function [ODBC], mapping
 - mapping deprecated functions [ODBC], SQLSetScrollOptions
 ms.assetid: a0fa4510-8891-4a61-a867-b2555bc35f05
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0a81cbdd48f7e794a55fdeddbafc589c59efe5b7
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 57d4bb7747803f1fe65276ddb86c574763627906
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 02/15/2018
 ---
-# <a name="sqlsetscrolloptions-mapping"></a>Mappage de SQLSetScrollOptions
+# <a name="sqlsetscrolloptions-mapping"></a>SQLSetScrollOptions Mapping
 Lorsqu’une application appelle **SQLSetScrollOptions** via un ODBC 3*.x* pilote et le pilote ne prend pas en charge **SQLSetScrollOptions**, l’appel à  
   
 ```  
@@ -77,7 +78,7 @@ SQLSetScrollOptions(StatementHandle, Concurrency, KeysetSize, RowsetSize)
     |SQL_SCROLL_FORWARD_ONLY|SQL_CURSOR_FORWARD_ONLY|  
     |SQL_SCROLL_STATIC|SQL_CURSOR_STATIC|  
     |SQL_SCROLL_KEYSET_DRIVEN|SQL_CURSOR_KEYSET_DRIVEN|  
-    |SQL_SCROLL_DYNAMIC|TYPE SQL_CURSOR_DYNAMIC|  
+    |SQL_SCROLL_DYNAMIC|SQL_CURSOR_DYNAMIC|  
     |Une valeur supérieure à la *la RowsetSize* argument|SQL_CURSOR_KEYSET_DRIVEN|  
   
 -   Un appel à  

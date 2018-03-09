@@ -3,27 +3,27 @@ title: "Spécification de sauvegarde VDI - SQL Server sur Linux | Documents Micr
 description: "Spécification d’Interface de périphérique virtuel sauvegarde SQL Server."
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.date: 03/17/2017
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 0250ba2b-8cdd-450e-9109-bf74f70e1247
 ms.workload: Inactive
-ms.openlocfilehash: a57fee5d37032e54ac13f57ee3cb7d9a20fad6c5
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 9760b93a1e224c35617b4161d8996ff0ed3dff67
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="sql-server-on-linux-vdi-client-sdk-specification"></a>SQL Server sur le client Linux VDI spécification du Kit de développement logiciel
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 Ce document couvre les interfaces fournies par le serveur SQL Server sur un client de l’interface (VDI) périphérique virtuel Linux SDK. Éditeurs de logiciels indépendants (ISV) peuvent utiliser l’API Virtual Backup Device Application Programming Interface () pour intégrer SQL Server dans leurs produits. En règle générale, VDI sur Linux se comporte de la même façon et l’infrastructure VDI sur Windows avec les modifications suivantes :
 
@@ -110,7 +110,7 @@ Ce chapitre contient la description de chacune des fonctions de client. Les desc
 
 | Paramètres | Argument | Explication
 | ----- | ----- | ------ |
-| | **délai d’attente** | Il s’agit du délai d’attente en millisecondes. Utiliser l’infini ou n’importe quel entier négatif pour empêcher le délai d’attente.
+| | **timeout** | Il s’agit du délai d’attente en millisecondes. Utiliser l’infini ou n’importe quel entier négatif pour empêcher le délai d’attente.
 | | **cfg** | Si l’exécution aboutit, contient la configuration sélectionnée par le serveur. Pour plus d’informations, consultez « Configuration » plus loin dans ce document.
 
 | Valeurs de retour | Argument | Explication
@@ -165,7 +165,7 @@ Si cette fonction n’aboutit pas, une valeur null est retournée via la ppVirtu
 
 | Paramètres | Argument | Explication
 | ----- | ----- | ------ |
-| |**délai d’attente** |Il s’agit de la durée d’attente, en millisecondes. Utilisez INFINTE pour attendre indéfiniment. Utilisez 0 pour l’interrogation d’une commande. VD_E_TIMEOUT est retournée si aucune commande n’est disponible actuellement. Si le délai d’attente se produit, le client détermine l’action suivante.
+| |**timeout** |Il s’agit de la durée d’attente, en millisecondes. Utilisez INFINTE pour attendre indéfiniment. Utilisez 0 pour l’interrogation d’une commande. VD_E_TIMEOUT est retournée si aucune commande n’est disponible actuellement. Si le délai d’attente se produit, le client détermine l’action suivante.
 | |**Délai d'expiration** |Il s’agit de la durée d’attente, en millisecondes. Utilisez INFINTE ou une valeur négative pour attendre indéfiniment. Utilisez 0 pour l’interrogation d’une commande. VD_E_TIMEOUT est retournée si aucune commande n’est disponible avant l’expiration du délai. Si le délai d’attente se produit, le client détermine l’action suivante.
 | |**ppCmd** |Lorsqu’une commande est retournée avec succès, le paramètre retourne l’adresse d’une commande à exécuter. La mémoire retournée est en lecture seule. Lorsque la commande est terminée, ce pointeur est passé à la routine CompleteCommand. Pour plus d’informations sur chaque commande, consultez « Commandes » plus loin dans ce document.
         
@@ -222,7 +222,7 @@ Lorsque cette routine doive bloquer d’attente d’une commande, le thread rest
 
 | Paramètres | Argument | Explication
 | ----- | ----- | ------ |
-| |Aucune | Non applicable
+| |Aucun | Non applicable
         
 | Valeurs de retour | Argument | Explication
 | ----- | ----- | ------ |
@@ -242,7 +242,7 @@ Lorsque cette routine doive bloquer d’attente d’une commande, le thread rest
 
 | Paramètres | Argument | Explication
 | ----- | ----- | ------ |
-| |Aucune |Non applicable
+| |Aucun |Non applicable
         
 | Valeurs de retour | Argument | Explication
 | ----- | ----- | ------ |

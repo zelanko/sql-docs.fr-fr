@@ -3,25 +3,27 @@ title: Instances de Cluster de basculement, SQL Server sur Linux | Documents Mic
 description: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.date: 08/28/2017
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 
 ms.workload: Inactive
-ms.openlocfilehash: 36c5b7ccd0cc8c3a56dca700469fb4fd05fa2871
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: a9e8964b16eff5da35ef3abac6f493afc7615903
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="failover-cluster-instances---sql-server-on-linux"></a>Instances de Cluster de basculement, SQL Server sur Linux
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 Cet article explique les concepts liés aux instances de cluster de basculement SQL Server (ICF) sur Linux. 
 
@@ -40,13 +42,13 @@ Pour créer une instance de cluster SQL Server sur Linux, consultez [configurer 
 
 Le complément RHEL à haute disponibilité et la HAÉ SUSE reposent sur [STIMULATEUR](http://clusterlabs.org/).
 
-En tant que le diagramme ci-dessous illustre le stockage est présenté à deux serveurs. Les composants clusters - Corosync et STIMULATEUR - coordonnent les communications et gestion des ressources. Un des serveurs a la connexion active pour les ressources de stockage et le serveur SQL Server. Lorsque STIMULATEUR détecte une défaillance les composants clusters gèrent le déplacement des ressources vers un autre nœud.  
+Comme le montre le diagramme suivant, le stockage est présenté à deux serveurs. Les composants clusters - Corosync et STIMULATEUR - coordonnent les communications et gestion des ressources. Un des serveurs a la connexion active pour les ressources de stockage et le serveur SQL Server. Lorsque STIMULATEUR détecte une défaillance les composants clusters gèrent le déplacement des ressources vers un autre nœud.  
 
 ![Red Hat Enterprise Linux 7 partagé de Cluster de disque SQL](./media/sql-server-linux-shared-disk-cluster-red-hat-7-configure/LinuxCluster.png) 
 
 
 > [!NOTE]
-> À ce stade, l’intégration de SQL Server avec STIMULATEUR sur Linux n’est pas comme exhaustivement comme WSFC sur Windows. Dans SQL, il n’est pas connaissance de la présence du cluster, tous les l’orchestration est en dehors d’et le service est contrôlé sous la forme d’une instance autonome par STIMULATEUR. En outre, nom de réseau virtuel est spécifique à WSFC, il n’existe aucun équivalent de la même dans STIMULATEUR. Il est prévu que @@servername et sys.servers pour renvoyer le nom du nœud, tandis que le cluster DMV sys.dm_os_cluster_nodes et sys.dm_os_cluster_properties ne seront aucun enregistrement. Pour utiliser une chaîne de connexion qui pointe vers un nom de serveur de chaîne et n’utilisez pas l’adresse IP, ils doivent inscrire dans leur serveur DNS à l’adresse IP utilisée pour créer la ressource IP virtuelle (comme expliqué ci-dessous) avec le nom du serveur choisi.
+> À ce stade, l’intégration de SQL Server avec STIMULATEUR sur Linux n’est pas comme exhaustivement comme WSFC sur Windows. Dans SQL, il n’est pas connaissance de la présence du cluster, tous les l’orchestration est en dehors d’et le service est contrôlé sous la forme d’une instance autonome par STIMULATEUR. En outre, nom de réseau virtuel est spécifique à WSFC, il n’existe aucun équivalent de la même dans STIMULATEUR. Il est prévu que @@servername et sys.servers pour renvoyer le nom du nœud, tandis que le cluster DMV sys.dm_os_cluster_nodes et sys.dm_os_cluster_properties ne seront aucun enregistrement. Pour utiliser une chaîne de connexion qui pointe vers un nom de serveur de chaîne et n’utilisez pas l’adresse IP, ils doivent inscrire dans leur serveur DNS l’adresse IP utilisée pour créer la ressource IP virtuelle (comme expliqué dans les sections suivantes) avec le nom de serveur choisi.
 
 ## <a name="number-of-instances-and-nodes"></a>Nombre d’Instances et de nœuds
 
@@ -57,7 +59,7 @@ Un cluster STIMULATEUR ne peut avoir jusqu'à 16 nœuds lorsque Corosync est imp
 Dans une instance de cluster SQL Server, l’instance de SQL Server est active sur un nœud ou l’autre.
 
 ## <a name="ip-address-and-name"></a>Nom et adresse IP
-Sur un cluster Linux STIMULATEUR, chaque instance de cluster SQL Server devez sa propre adresse IP unique et un nom. Si la configuration ICF s’étend sur plusieurs sous-réseaux, une adresse IP sera requise par sous-réseau. Le nom unique et les adresses IP sont utilisés pour accéder à l’instance FCI afin que les applications et les utilisateurs finaux n’avez pas besoin de savoir quel serveur sous-jacent du cluster STIMULATEUR.
+Sur un cluster Linux STIMULATEUR, chaque instance de cluster SQL Server a besoin de sa propre adresse IP unique et un nom. Si la configuration ICF s’étend sur plusieurs sous-réseaux, une adresse IP sera requise par sous-réseau. Le nom unique et les adresses IP sont utilisés pour accéder à l’instance FCI afin que les applications et les utilisateurs finaux n’avez pas besoin de savoir quel serveur sous-jacent du cluster STIMULATEUR.
 
 Le nom de l’instance de cluster dans le système DNS doit être le même que le nom de la ressource FCI qui est créé dans le cluster STIMULATEUR.
 Le nom et l’adresse IP doivent être inscrit dans DNS.

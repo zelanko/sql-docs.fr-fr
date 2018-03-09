@@ -3,8 +3,9 @@ title: "Méthode Stat | Documents Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,19 +13,21 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords: _Stream::Stat
-helpviewer_keywords: Stat method [ADO]
+f1_keywords:
+- _Stream::Stat
+helpviewer_keywords:
+- Stat method [ADO]
 ms.assetid: 99a2b2d4-e6b1-4205-b011-72d024ea7240
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c33383de27f2685849034cec79c6b4589dfb0a79
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 2ad80d2f42e11834b0872f581913ad64939d25af
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="stat-method"></a>Stat, méthode
 Récupère des informations sur un [flux](../../../ado/reference/ado-api/stream-object-ado.md) objet.  
@@ -60,13 +63,13 @@ Long stream.Stat(StatStg, StatFlag)
  *cbSize*  
  Spécifie la taille en octets du flux ou octets du tableau.  
   
- *mtime et*  
+ *mtime*  
  Indique l’heure de la dernière modification de ce stockage, flux ou tableau d’octets.  
   
- *CTime*  
+ *ctime*  
  Indique l’heure de création de ce stockage, flux ou tableau d’octets.  
   
- *Atime*  
+ *atime*  
  Indique l’heure de dernier accès pour ce stockage, flux ou tableau d’octets.  
   
  Si STATFLAG_NONAME est spécifié dans le paramètre StatFlag, le nom du flux de données n’est pas renvoyé.  

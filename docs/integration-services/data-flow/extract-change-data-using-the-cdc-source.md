@@ -1,5 +1,5 @@
 ---
-title: "Extraire des données modifiées à l’aide de la Source CDC | Documents Microsoft"
+title: "Extraire des données modifiées à l’aide de la source de capture de données modifiées | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -13,17 +13,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 604fbafb-15fa-4d11-8487-77d7b626eed8
-caps.latest.revision: 8
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 343efa882f37276c6921edc72d2bf1e615ff1a18
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 545f7593878688f8b0d792410e363c738460fd90
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="extract-change-data-using-the-cdc-source"></a>Extraire des données modifiées à l'aide de la source de capture de données modifiées
   Pour pouvoir ajouter et configurer une source CDC, le package doit inclure au moins une tâche de flux de données et une tache de contrôle de capture de données modifiées.  
@@ -48,7 +47,7 @@ ms.lasthandoff: 08/03/2017
   
 7.  Sélectionnez ou tapez le nom de **l’instance de capture de données modifiées** contenant la table CDC à lire.  
   
-     Une table source capturée peut contenir une ou deux instances capturées pour gérer la transition transparente de la définition de table lors des modifications de schéma. Si plusieurs instances de capture sont définies pour la table source qui est capturée, sélectionnez l'instance de capture à utiliser ici. Le nom d’instance par défaut capture pour une table [schema]. [table] est \<schéma > _\<table >, mais que les noms d’instance de capture en cours d’utilisation peuvent être différents. La table réelle qui est lu à partir d’est la table CDC **cdc.\< instance de capture > _CT**.  
+     Une table source capturée peut contenir une ou deux instances capturées pour gérer la transition transparente de la définition de table lors des modifications de schéma. Si plusieurs instances de capture sont définies pour la table source qui est capturée, sélectionnez l'instance de capture à utiliser ici. Le nom par défaut de l’instance de capture pour une table [schema].[table] est \<schéma>_\<table>, mais le nom réel utilisé pour cette instance de capture peut être différent. La table réelle dans laquelle les données sont lues est la table CDC **cdc .\<instance-capture>_CT**.  
   
 8.  Sélectionnez le mode de traitement le plus adapté pour la gestion de vos besoins de traitement. Les options possibles sont les suivantes :  
   
@@ -58,9 +57,9 @@ ms.lasthandoff: 08/03/2017
   
     -   **Net**: retourne une seule ligne de modification par ligne source modifiée dans la plage de capture de données modifiées actuelle. Si une ligne source a été mise à jour plusieurs fois, la modification associée est appliquée (par exemple, l'insertion et la mise à jour sont considérées comme une mise à jour unique, et la mise à jour et la suppression sont considérées comme une suppression unique). Lorsque vous travaillez dans le mode de traitement de modifications Net, il est possible de fractionner les modifications apportées aux sorties de suppression, d'insertion et de mise à jour et de les traiter en parallèle car la ligne source apparaît dans plusieurs sorties.  
   
-    -   **NET avec masque de mise à jour**: ce mode est semblable au mode Net standard, mais il ajoute également des colonnes booléennes avec le modèle de nom **__ $\<nom de colonne >\__Changed** indiquant les colonnes modifiées en cours de modification ligne.  
+    -   **Net avec masque de mise à jour** : ce mode est semblable au mode Net standard, à ceci près qu’il ajoute des colonnes booléennes au modèle de nom **__$\<nom-colonne>\__Modifié** qui indique les colonnes modifiées dans la ligne de modification active.  
   
-    -   **Net avec fusion** : ce mode est semblable au mode Net standard, à ceci près que les opérations d’insertion et de mise à jour sont fusionnées en une seule opération de fusion (UPSERT).  
+    -   **Net avec fusion**: ce mode est semblable au mode Net standard, à ceci près que les opérations d’insertion et de mise à jour sont fusionnées en une seule opération de fusion (UPSERT).  
   
 9. Sélectionnez la variable de package de chaîne SSIS qui gère l'état de capture de données modifiées pour le contexte de capture de données modifiées actuel. Pour plus d’informations sur la variable d’état CDC, consultez [Définir une variable d’état](../../integration-services/data-flow/define-a-state-variable.md).  
   
@@ -78,10 +77,9 @@ ms.lasthandoff: 08/03/2017
   
 15. Cliquez sur **OK**.  
   
-## <a name="see-also"></a>Voir aussi  
- [Éditeur de Source de capture de données modifiées &#40; Page Gestionnaire de connexions &#41;](../../integration-services/data-flow/cdc-source-editor-connection-manager-page.md)   
- [Éditeur de Source de capture de données modifiées &#40; Page colonnes &#41;](../../integration-services/data-flow/cdc-source-editor-columns-page.md)   
- [Éditeur de Source de capture de données modifiées &#40; Page sortie d’erreur &#41;](../../integration-services/data-flow/cdc-source-editor-error-output-page.md)  
+## <a name="see-also"></a> Voir aussi  
+ [Éditeur de source CDC &#40;page Gestionnaire de connexions&#41;](../../integration-services/data-flow/cdc-source-editor-connection-manager-page.md)   
+ [Éditeur de source CDC &#40;page Colonnes&#41;](../../integration-services/data-flow/cdc-source-editor-columns-page.md)   
+ [Éditeur de source CDC &#40;page Sortie d’erreur&#41;](../../integration-services/data-flow/cdc-source-editor-error-output-page.md)  
   
   
-

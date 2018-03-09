@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,7 +17,8 @@ f1_keywords:
 - MOVE CONVERSATION
 - MOVE_TSQL
 - MOVE
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - moving conversations
 - MOVE CONVERSATION statement
@@ -24,16 +26,16 @@ helpviewer_keywords:
 - conversations [Service Broker], groups
 - conversations [Service Broker], moving
 ms.assetid: 1da4d2c9-e767-434e-b49b-615711a7f626
-caps.latest.revision: "28"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7367254b7dad104c7503c33777d26316a542b4ca
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: cd8c5e548bf45fe4a2fc6bf0638ebb5282981263
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="move-conversation-transact-sql"></a>MOVE CONVERSATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +57,7 @@ MOVE CONVERSATION conversation_handle
  *conversation_handle*  
  Variable ou constante contenant le descripteur de conversation à déplacer. *conversation_handle* doit être de type **uniqueidentifier**.  
   
- POUR *conversation_group_id*  
+ TO *conversation_group_id*  
  Variable ou constante contenant l'identificateur du groupe de conversations destinataire. *conversation_group_id* doit être de type **uniqueidentifier**.  
   
 ## <a name="remarks"></a>Notes  
@@ -68,7 +70,7 @@ MOVE CONVERSATION conversation_handle
   
  MOVE CONVERSATION n'est pas valide dans une fonction définie par l'utilisateur.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Pour déplacer une conversation, l'utilisateur actif doit être soit propriétaire de la conversation et du groupe de conversations, soit un membre du rôle serveur fixe sysadmin, soit un membre du rôle de base de données fixe db_owner.  
   
 ## <a name="examples"></a>Exemples  
@@ -89,8 +91,8 @@ MOVE CONVERSATION @conversation_handle TO @conversation_group_id ;
 ## <a name="see-also"></a>Voir aussi  
  [BEGIN DIALOG CONVERSATION &#40; Transact-SQL &#41;](../../t-sql/statements/begin-dialog-conversation-transact-sql.md)   
  [GET CONVERSATION GROUP &#40; Transact-SQL &#41;](../../t-sql/statements/get-conversation-group-transact-sql.md)   
- [CONVERSATION de fin &#40; Transact-SQL &#41;](../../t-sql/statements/end-conversation-transact-sql.md)   
- [Sys.conversation_groups &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-conversation-groups-transact-sql.md)   
- [Sys.conversation_endpoints &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-conversation-endpoints-transact-sql.md)  
+ [END CONVERSATION &#40;Transact-SQL&#41;](../../t-sql/statements/end-conversation-transact-sql.md)   
+ [sys.conversation_groups &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-conversation-groups-transact-sql.md)   
+ [sys.conversation_endpoints &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-conversation-endpoints-transact-sql.md)  
   
   

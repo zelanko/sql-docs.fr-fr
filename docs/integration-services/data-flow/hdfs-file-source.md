@@ -1,5 +1,5 @@
 ---
-title: Source de fichiers HDFS | Documents Microsoft
+title: Source de fichier HDFS | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -15,24 +15,23 @@ ms.topic: article
 f1_keywords:
 - sql13.ssis.designer.hdfsfilesrc.f1
 ms.assetid: f8cda200-c389-4a2e-8ee9-5d59b326aac1
-caps.latest.revision: 8
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 2b7ed3c3789b7c28476719422f600106a73bfebd
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: e2b6ce8222cb4eb1b99d2dc721dacc5f1aa3cfee
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="hdfs-file-source"></a>HDFS File Source
-  Le composant HDFS File Source permet à un package SSIS de lire les données provenant d’un fichier HDFS. Les formats de fichier pris en charge sont le format texte et Avro. (Les sources ORC ne sont pas prises en charge.)  
+  Le composant HDFS File Source permet à un package SSIS de lire les données provenant d’un fichier HDFS. Les formats de fichier pris en charge sont le format texte et Avro. (Les sources ORC ne sont pas prises en charge.)  
   
  Pour configurer HDFS File Source, opérez un glisser-déplacer de HDFS File Source vers le concepteur de flux de données, puis double-cliquez sur le composant pour ouvrir l’éditeur.  
   
- ![Éditeur de code Source du fichier HDFS](../../integration-services/data-flow/media/hdfs-file-source.png "HDFS File Source Editor")  
+ ![Éditeur de la source du fichier HDFS](../../integration-services/data-flow/media/hdfs-file-source.png "Éditeur de la source du fichier HDFS")  
   
 ## <a name="options"></a>Options  
  Configurez les options suivantes sur l’onglet **Général** de la boîte de dialogue **Hadoop File Source Editor** .  
@@ -47,9 +46,8 @@ ms.lasthandoff: 08/03/2017
   
  Après avoir configuré ces options, sélectionnez l’onglet **Colonnes** pour mapper les colonnes source aux colonnes de destination dans le flux de données.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Gestionnaire de connexions Hadoop](../../integration-services/connection-manager/hadoop-connection-manager.md)   
- [Destination du fichier HDFS](../../integration-services/data-flow/hdfs-file-destination.md)  
+ [Destination de fichier HDFS](../../integration-services/data-flow/hdfs-file-destination.md)  
   
   
-

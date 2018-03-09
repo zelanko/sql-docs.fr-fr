@@ -8,7 +8,8 @@ ms.service:
 ms.component: sqlxml
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-xml
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -17,19 +18,20 @@ helpviewer_keywords:
 - overflow data [SQLXML]
 - sql:overflow-field
 ms.assetid: f005182b-6151-432d-ab22-3bc025742cd3
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d821e3aafa0b822995bb76a191e8c23adbdeefd4
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f5b58728bc2af55830cc66ba0ed8f011095f2d5e
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="annotation-interpretation---sqloverflow-field"></a>Interprétation d’annotation - SQL : Overflow-champ
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]Dans un schéma, vous pouvez identifier une colonne comme une colonne de dépassement de capacité de recevoir toutes les données non consommées du document XML. Cette colonne est spécifiée dans le schéma à l’aide de la **SQL : Overflow-champ** annotation. Un schéma peut contenir plusieurs colonnes de dépassement.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+Dans un schéma, vous pouvez identifier une colonne en tant que colonne de dépassement destinée à recevoir toutes les données non consommées du document XML. Cette colonne est spécifiée dans le schéma à l’aide de la **SQL : Overflow-champ** annotation. Un schéma peut contenir plusieurs colonnes de dépassement.  
   
  Chaque fois qu’un nœud XML (élément ou attribut) pour lesquelles il existe un **SQL : Overflow-champ** annotation définie entre dans l’étendue, la colonne de dépassement est activée et reçoit des données non consommées. Lorsque le nœud sort de la portée, la colonne de dépassement n'est plus active et le chargement en masse XML active le champ de dépassement précédent (le cas échéant).  
   

@@ -1,5 +1,5 @@
 ---
-title: "Identifier les lignes de données semblables à l’aide de la Transformation de regroupement approximatif | Documents Microsoft"
+title: "Identifier des lignes de données semblables à l’aide de la transformation de regroupement probable | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -18,17 +18,16 @@ helpviewer_keywords:
 - similar data rows [Integration Services]
 - fuzzy matches
 ms.assetid: ffcb41a6-e23d-49ea-8c32-ac980e3dc495
-caps.latest.revision: 23
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d6d11c2474853586930e5cd46fde8f61526cd6ed
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 138dc14412f8d0b3f6ea20dbb8fb5bfa09101649
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="identify-similar-data-rows-by-using-the-fuzzy-grouping-transformation"></a>Identifier des lignes de données semblables à l'aide de la transformation de regroupement probable
   Pour ajouter et configurer une transformation de regroupement probable, le package doit déjà inclure au moins une tâche de flux de données et une source.  
@@ -87,11 +86,10 @@ ms.lasthandoff: 08/03/2017
   
 20. Pour enregistrer le package mis à jour, cliquez sur **Enregistrer les éléments sélectionnés** dans le menu **Fichier** .  
   
-## <a name="see-also"></a>Voir aussi  
- [Transformation de regroupement probable](../../../integration-services/data-flow/transformations/fuzzy-grouping-transformation.md)   
+## <a name="see-also"></a> Voir aussi  
+ [Fuzzy Grouping Transformation](../../../integration-services/data-flow/transformations/fuzzy-grouping-transformation.md)   
  [Transformations Integration Services](../../../integration-services/data-flow/transformations/integration-services-transformations.md)   
- [Chemins d’accès d’Integration Services](../../../integration-services/data-flow/integration-services-paths.md)   
- [Tâche de flux de données](../../../integration-services/control-flow/data-flow-task.md)  
+ [Chemins Integration Services](../../../integration-services/data-flow/integration-services-paths.md)   
+ [tâche de flux de données](../../../integration-services/control-flow/data-flow-task.md)  
   
   
-

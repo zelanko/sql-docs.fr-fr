@@ -1,5 +1,5 @@
 ---
-title: sysmail_help_principalprofile_sp (Transact-SQL) | Documents Microsoft
+title: sysmail_help_principalprofile_sp (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/02/2016
 ms.prod: sql-non-specified
@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sysmail_help_principalprofile_sp_TSQL
 - sysmail_help_principalprofile_sp
-dev_langs: TSQL
-helpviewer_keywords: sysmail_help_principalprofile_sp
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sysmail_help_principalprofile_sp
 ms.assetid: 0cfd6464-09c7-4f03-9d25-58001c096a9e
-caps.latest.revision: "43"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 322984b88e879adb952a1168b17178b8ffe20ae2
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 54763594122216c14ef8b74f17fbc83919ea44fc
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysmailhelpprincipalprofilesp-transact-sql"></a>sysmail_help_principalprofile_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,16 +48,16 @@ sysmail_help_principalprofile_sp [ {   [ @principal_id = ] principal_id | [ @pri
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@principal_id=** ] *principal_id*  
+ [ **@principal_id=** ] *principal_id*  
  Est l’ID de l’utilisateur de base de données ou d’un rôle dans le **msdb** base de données pour l’association à répertorier. *principal_id* est **int**, avec NULL comme valeur par défaut. Soit *principal_id* ou *principal_name* peut être spécifié.  
   
- [  **@principal_name=** ] **'***principal_name***'**  
+ [ **@principal_name=** ] **'***principal_name***'**  
  Est le nom de l’utilisateur de base de données ou d’un rôle dans le **msdb** base de données pour l’association à répertorier. *principal_name* est **sysname**, avec NULL comme valeur par défaut. Soit *principal_id* ou *principal_name* peut être spécifié.  
   
- [  **@profile_id=** ] *profile_id*  
+ [ **@profile_id=** ] *profile_id*  
  Identificateur du profil pour l'association à répertorier. *profile_id* est **int**, avec NULL comme valeur par défaut. Soit *profile_id* ou *profile_name* peut être spécifié.  
   
- [  **@profile_name=** ] **'***profile_name***'**  
+ [ **@profile_name=** ] **'***profile_name***'**  
  Nom du profil pour l'association à répertorier. *profile_name* est **sysname**, avec NULL comme valeur par défaut. Soit *profile_id* ou *profile_name* peut être spécifié.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
@@ -77,7 +80,7 @@ sysmail_help_principalprofile_sp [ {   [ @principal_id = ] principal_id | [ @pri
   
  **sysmail_help_principalprofile_sp** est dans le **msdb** de base de données et est détenue par le **dbo** schéma. La procédure doit être exécutée avec un nom en trois parties si la base de données actuelle n’est pas **msdb**.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l'appartenance au rôle serveur fixe **sysadmin** .  
   
 ## <a name="examples"></a>Exemples  

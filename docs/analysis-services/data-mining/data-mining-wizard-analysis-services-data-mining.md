@@ -2,15 +2,13 @@
 title: "Assistant exploration de données (Analysis Services - Exploration de données) | Documents Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
 ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,19 +17,20 @@ helpviewer_keywords:
 - Data Mining Wizard
 - relational mining models [Analysis Services]
 ms.assetid: d5fea90f-5f38-4639-8851-7707f6606a12
-caps.latest.revision: "57"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 4ad9dd40bb7f7f8da0820d9ccbefafed9079650b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: eab8188020685603ba45054b42957f6cc725b638
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="data-mining-wizard-analysis-services---data-mining"></a>Assistant Exploration de données (Analysis Services - Exploration de données)
-  L’Assistant Exploration de données inclus dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] démarre chaque fois que vous ajoutez une nouvelle structure d’exploration de données à un projet d’exploration de données. L'Assistant vous permet de choisir une source de données et de configurer une vue de source de données qui définit les données à utiliser pour l'analyse, puis vous aide à créer un modèle.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+L’Assistant Exploration de données inclus dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] démarre chaque fois que vous ajoutez une nouvelle structure d’exploration de données à un projet d’exploration de données. L'Assistant vous permet de choisir une source de données et de configurer une vue de source de données qui définit les données à utiliser pour l'analyse, puis vous aide à créer un modèle.  
   
  Pendant la dernière phase de l'Assistant, vous pouvez éventuellement diviser vos données en jeux d'apprentissage et de test, et activer certaines fonctionnalités telles que l'extraction.  
   
@@ -66,10 +65,10 @@ ms.lasthandoff: 11/17/2017
   
  Consultez les rubriques suivantes pour une procédure pas-à-pas de chaque option plus en détail :  
   
- [Créer une structure d'exploration de données relationnelle](../../analysis-services/data-mining/create-a-relational-mining-structure.md)  
+ [Créer une Structure d’exploration de données relationnelles](../../analysis-services/data-mining/create-a-relational-mining-structure.md)  
  Vous guide dans les décisions à prendre lors de la création d'un modèle d'exploration de données relationnel.  
   
- [Create an OLAP Mining Structure](../../analysis-services/data-mining/create-an-olap-mining-structure.md)  
+ [Créer une Structure d’exploration de données OLAP](../../analysis-services/data-mining/create-an-olap-mining-structure.md)  
  Décrit les options supplémentaires et les sélections à effectuer lors de la sélection de données à partir d'un cube OLAP.  
   
 > [!NOTE]  
@@ -78,7 +77,7 @@ ms.lasthandoff: 11/17/2017
 ### <a name="choosing-an-algorithm"></a>Choix d'un algorithme  
  Vous devez ensuite décider de l'algorithme à utiliser lors du traitement de vos données. Cette décision peut être difficile à prendre. Chaque algorithme fourni dans [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] a des fonctionnalités différentes et produit des résultats différents. Vous pouvez donc faire des essais et tenter différents modèles avant de déterminer celui qui est le plus approprié pour vos données et votre problème d'entreprise. Pour obtenir une explication des tâches pour lesquelles chaque algorithme est le plus approprié, consultez la rubrique suivante :  
   
- [Algorithmes d’exploration de données &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)  
+ [Algorithmes d’exploration de données &#40; Analysis Services - Exploration de données &#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)  
   
  Là encore, vous pouvez créer plusieurs modèles en utilisant différents algorithmes, ou bien modifier les paramètres des algorithmes pour créer différents modèles. Vous n'êtes pas bloqué dans votre choix de l'algorithme, et il est conseillé de créer différents modèles sur les mêmes données.  
   
@@ -112,20 +111,20 @@ ms.lasthandoff: 11/17/2017
 ## <a name="related-content"></a>Contenu connexe  
  Pour en savoir plus sur les décisions à prendre lors de la création d'un modèle d'exploration de données, consultez les liens suivants :  
   
- [Algorithmes d’exploration de données &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)  
+ [Algorithmes d’exploration de données &#40; Analysis Services - Exploration de données &#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)  
   
- [Types de contenu &#40;exploration de données&#41;](../../analysis-services/data-mining/content-types-data-mining.md)  
+ [Contenu des Types de &#40; exploration de données &#41;](../../analysis-services/data-mining/content-types-data-mining.md)  
   
- [Types de données &#40;exploration de données&#41;](../../analysis-services/data-mining/data-types-data-mining.md)  
+ [Types de données &#40; exploration de données &#41;](../../analysis-services/data-mining/data-types-data-mining.md)  
   
- [Sélection des fonctionnalités &#40;exploration de données&#41;](../../analysis-services/data-mining/feature-selection-data-mining.md)  
+ [Sélection des fonctionnalités &#40; exploration de données &#41;](../../analysis-services/data-mining/feature-selection-data-mining.md)  
   
- [Valeurs manquantes &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/missing-values-analysis-services-data-mining.md)  
+ [Les valeurs manquantes &#40; Analysis Services - Exploration de données &#41;](../../analysis-services/data-mining/missing-values-analysis-services-data-mining.md)  
   
- [Extraction sur des modèles d'exploration de données](../../analysis-services/data-mining/drillthrough-on-mining-models.md)  
+ [Extraction sur les modèles d’exploration de données](../../analysis-services/data-mining/drillthrough-on-mining-models.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Outils d'exploration de données](../../analysis-services/data-mining/data-mining-tools.md)   
- [Solutions d'exploration de données](../../analysis-services/data-mining/data-mining-solutions.md)  
+ [Outils d’exploration de données](../../analysis-services/data-mining/data-mining-tools.md)   
+ [Solutions d’exploration de données](../../analysis-services/data-mining/data-mining-solutions.md)  
   
   

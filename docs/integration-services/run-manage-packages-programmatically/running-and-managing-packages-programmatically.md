@@ -1,5 +1,5 @@
 ---
-title: "En cours d’exécution et la gestion des Packages par programme | Documents Microsoft"
+title: "Exécution et gestion de packages par programmation | Microsoft Docs"
 ms.custom: 
 ms.date: 03/17/2017
 ms.prod: sql-non-specified
@@ -8,24 +8,22 @@ ms.service:
 ms.component: run-manage-packages-programmatically
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
 ms.assetid: 1a08c75e-ce8c-45ee-81bd-32248bbdb2b2
-caps.latest.revision: 26
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 206411bed262d99b043cf667b9699a6fbeb85981
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: d2123402fe8037eabbf92d62e5652383dcb64129
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="running-and-managing-packages-programmatically"></a>Exécution et gestion de packages par programme
   Si vous devez gérer et exécuter des packages [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] hors de l'environnement de développement, vous pouvez manipuler les packages par programme. Cette méthode vous offre un choix d'options :  
@@ -38,7 +36,7 @@ ms.lasthandoff: 09/26/2017
   
  Vous pouvez charger et exécuter un package existant à partir d'une application cliente en écrivant quelques lignes de code seulement.  
   
- Cette section décrit et explique comment exécuter un package existant par programme et comment accéder à la sortie du flux d'autres applications. Une option de programmation avancée, vous pouvez créer par programme un [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] package ligne par ligne, comme décrit dans la rubrique [génération de Packages par programme](../../integration-services/building-packages-programmatically/building-packages-programmatically.md).  
+ Cette section décrit et explique comment exécuter un package existant par programme et comment accéder à la sortie du flux d'autres applications. Une option de programmation avancée vous permet de créer par programmation un package [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ligne par ligne, comme indiqué dans la rubrique [Génération de packages par programmation](../../integration-services/building-packages-programmatically/building-packages-programmatically.md).  
   
  Cette section présente également d'autres tâches d'administration que vous pouvez effectuer par programme pour gérer des packages stockés, des packages en cours d'exécution et des rôles de package.  
   
@@ -69,7 +67,7 @@ ms.lasthandoff: 09/26/2017
  [Gestion des packages en cours d’exécution par programmation](../../integration-services/run-manage-packages-programmatically/managing-running-packages-programmatically.md)  
  Décrit comment répertorier les packages en cours d'exécution, examiner leurs propriétés et arrêter un package exécuté.  
   
- [Gestion des rôles de Package par programme &#40; Service SSIS &#41;](../../integration-services/run-manage-packages-programmatically/managing-package-roles-programmatically-ssis-service.md)  
+ [Gestion par programmation des rôles de package &#40;Service SSIS&#41;](../../integration-services/run-manage-packages-programmatically/managing-package-roles-programmatically-ssis-service.md)  
  Explique comment obtenir ou définir des informations sur les rôles attribués à un package ou un dossier.  
   
 ## <a name="reference"></a>Référence  
@@ -86,8 +84,7 @@ ms.lasthandoff: 09/26/2017
  [Génération de packages par programmation](../../integration-services/building-packages-programmatically/building-packages-programmatically.md)  
  Explique comment créer, configurer et enregistrer des packages [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] par programme.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [SQL Server Integration Services](../../integration-services/sql-server-integration-services.md)  
   
   
-

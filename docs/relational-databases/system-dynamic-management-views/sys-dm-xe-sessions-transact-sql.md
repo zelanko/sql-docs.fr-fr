@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_xe_sessions (Transact-SQL) | Documents Microsoft
+title: sys.dm_xe_sessions (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,21 +17,22 @@ f1_keywords:
 - dm_xe_sessions
 - sys.dm_xe_sessions_TSQL
 - sys.dm_xe_sessions
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - sys.dm_xe_sessions dynamic management view
 - extended events [SQL Server], views
 ms.assetid: defd6efb-9507-4247-a91f-dc6ff5841e17
-caps.latest.revision: "17"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6d16dbc718232a6c3953e391d255986340d4f011
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 6c871158b5085d14eda8974530e392b5ed24baf5
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmxesessions-transact-sql"></a>sys.dm_xe_sessions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +41,7 @@ ms.lasthandoff: 11/17/2017
     
 |Nom de colonne|Type de données| Description|  
 |-----------------|---------------|-----------------|  
-|address|**varbinary (8)**|Adresse mémoire de la session. adresse est unique sur le système local. N'accepte pas la valeur NULL.|  
+|address|**varbinary(8)**|Adresse mémoire de la session. adresse est unique sur le système local. N'accepte pas la valeur NULL.|  
 |name|**nvarchar (256)**|Le nom de la session. nom est unique dans le système local. N'accepte pas la valeur NULL.|  
 |pending_buffers|**int**|Nombre de mémoires tampons saturées en attente de traitement. N'accepte pas la valeur NULL.|  
 |total_regular_buffers|**int**|Nombre total de mémoires tampons standard associées à la session. N'accepte pas la valeur NULL.<br /><br /> Remarque : Les mémoires tampons standard sont utilisées la plupart du temps. La taille de ces mémoires tampons est suffisante pour contenir de nombreux événements. En général, il y a au moins trois mémoires tampons par session. Le nombre de mémoires tampons standard est déterminé automatiquement par le serveur, selon le partitionnement de la mémoire défini à travers l'option MEMORY_PARTITION_MODE. La taille des mémoires tampons standard est égale à la valeur de l'option MAX_MEMORY (la valeur par défaut est de 4 Mo) divisée par le nombre de mémoires tampons. Pour plus d’informations sur le MEMORY_PARTITION_MODE et les options de MAX_MEMORY, consultez [CREATE EVENT SESSION &#40; Transact-SQL &#41; ](../../t-sql/statements/create-event-session-transact-sql.md).|  
@@ -57,7 +59,7 @@ ms.lasthandoff: 11/17/2017
 |create_time|**datetime**|Heure de création de la session. N'accepte pas la valeur NULL.|  
 |largest_event_dropped_size|**int**|Taille de l'événement le plus grand parmi ceux pour lesquels la mémoire tampon de session n'a pas suffi. N'accepte pas la valeur NULL.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  requièrent l'autorisation VIEW SERVER STATE sur le serveur.  
   
 ## <a name="change-history"></a>Historique des modifications  

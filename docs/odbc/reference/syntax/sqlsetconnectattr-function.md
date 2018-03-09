@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: d239280ebe6eaaafaed44341354bec8a6d0b225e
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 806acdd35452ff22e922158ed071d41d8e45f031
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlsetconnectattr-function"></a>Fonction SQLSetConnectAttr
 **Mise en conformité**  
@@ -82,7 +82,7 @@ SQLRETURN SQLSetConnectAttr(
   
  Le pilote peut retourner SQL_SUCCESS_WITH_INFO pour fournir des informations sur le résultat de la définition d’une option.  
   
-|SQLSTATE|Erreur| Description|  
+|SQLSTATE|Error|Description|  
 |--------------|-----------|-----------------|  
 |01000|Avertissement général|Message d’information de spécifiques au pilote. (La fonction retourne SQL_SUCCESS_WITH_INFO).|  
 |01 S 02|Valeur de l’option modifiée|Le pilote ne prenait pas en charge la valeur spécifiée dans *ValuePtr* et une valeur similaire. (La fonction retourne SQL_SUCCESS_WITH_INFO).|  
@@ -129,7 +129,7 @@ SQLRETURN SQLSetConnectAttr(
   
  Certains attributs de connexion peuvent être définies uniquement avant une connexion a été établie ; d’autres utilisateurs peuvent être définis uniquement après qu’une connexion a été établie. Le tableau suivant indique les attributs de connexion qui doivent être définies avant ou après qu’une connexion a été établie. *Soit* indique que l’attribut peut être défini avant ou après la connexion.  
   
-|Attribut|Définir avant ou après la connexion ?|  
+|Attribute|Définir avant ou après la connexion ?|  
 |---------------|-------------------------------------|  
 |SQL_ATTR_ACCESS_MODE|[1]|  
 |SQL_ATTR_ASYNC_DBC_EVENT|Avant ou après|  

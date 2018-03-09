@@ -3,8 +3,9 @@ title: URL absolues et relatives | Documents Microsoft
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,16 +17,16 @@ helpviewer_keywords:
 - absolute URLs [ADO]
 - URLs [ADO]
 ms.assetid: 6a34a7ef-50cc-4c3d-82f7-106b9a8f3caf
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ae21e6abedfda13da5a02130110cac0034ef8f34
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 3564236b7b6bee2ae21f1b78a4275fb615aa2e4e
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="absolute-and-relative-urls"></a>URL absolues et relatives
 Une URL spécifie l’emplacement d’une cible sur un ordinateur local ou en réseau. La cible peut être un fichier, répertoire, page HTML, image, programme et ainsi de suite*.*  
@@ -38,16 +39,16 @@ Une URL spécifie l’emplacement d’une cible sur un ordinateur local ou en r�
   
  Une URL relative comprend généralement uniquement le *chemin d’accès*et, éventuellement, le *ressource*, mais aucune *schéma* ou *server*. Les tableaux suivants décrivent les différentes parties du format d’URL complète.  
   
- *schéma*  
+ *scheme*  
  Spécifie comment la *ressource* est accessible.  
   
- *serveur*  
+ *server*  
  Spécifie le nom de l’ordinateur sur lequel le *ressource* se trouve.  
   
- *chemin d’accès*  
+ *path*  
  Spécifie la séquence de répertoires menant à la cible. Si *ressource* est omis, la cible est le dernier répertoire dans *chemin d’accès*.  
   
- *ressource*  
+ *resource*  
  Si inclus, *ressource* est la cible, et est généralement le nom d’un fichier. Il peut être un *fichier simple,* contenant un flux binaire d’octets, ou un *document structuré,* contenant un ou plusieurs stockages et des flux binaires d’octets.  
   
 ## <a name="url-scheme-registration"></a>Enregistrement du modèle d’URL  

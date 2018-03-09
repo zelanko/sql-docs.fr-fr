@@ -2,32 +2,30 @@
 title: "Enregistrer les opérations dans Analysis Services | Documents Microsoft"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: instances
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: aa1db060-95dc-4198-8aeb-cffdda44b140
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 546e28af279bd62018f54a7f1bff33c6e27b8883
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 59471831fc651827944e958898ad5d2d8e5cb879
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="log-operations-in-analysis-services"></a>Enregistrer les opérations dans Analysis Services
-  Une instance Analysis Services enregistre les notifications, erreurs et avertissements du serveur dans le fichier msmdsrv.log (un pour chaque instance que vous installez). Les administrateurs se réfèrent à ce fichier journal pour en savoir plus sur les événements ordinaires et extraordinaires. Dans les versions récentes, la journalisation a été améliorée pour inclure davantage d'informations. Désormais, les enregistrements de journaux incluent des informations sur la version et l'édition du produit, ainsi que sur des événements du processeur, de la mémoire, de la connectivité et de blocage. L'article [Améliorations apportées à la journalisation](http://support.microsoft.com/kb/2965035)fournit une liste de tous les changements.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Une instance Analysis Services enregistre les notifications, erreurs et avertissements du serveur dans le fichier msmdsrv.log (un pour chaque instance que vous installez). Les administrateurs se réfèrent à ce fichier journal pour en savoir plus sur les événements ordinaires et extraordinaires. Dans les versions récentes, la journalisation a été améliorée pour inclure davantage d'informations. Désormais, les enregistrements de journaux incluent des informations sur la version et l'édition du produit, ainsi que sur des événements du processeur, de la mémoire, de la connectivité et de blocage. L'article [Améliorations apportées à la journalisation](http://support.microsoft.com/kb/2965035)fournit une liste de tous les changements.  
   
  En plus de la fonctionnalité de journalisation intégrée, de nombreux administrateurs et développeurs utilisent des outils fournis par la communauté Analysis Services pour recueillir des données sur les opérations du serveur, comme **ASTrace**. Pour obtenir des liens de téléchargement, consultez [Exemples de la communauté Microsoft SQL Server : Analysis Services](https://sqlsrvanalysissrvcs.codeplex.com/) .  
   
@@ -54,8 +52,8 @@ ms.lasthandoff: 11/17/2017
 |Nom de fichier ou emplacement|Type|Utilisé pour|Activé par défaut|  
 |---------------------------|----------|--------------|-------------------|  
 |Msmdsrv.log|Journal des erreurs|Surveillance de routine et dépannage de base|Oui|  
-|Table OlapQueryLog dans une base de données relationnelle|Journal des requêtes|Recueillir les entrées de l'Assistant Optimisation de l'utilisation|Non|  
-|Fichiers SQLDmp\<guid > .mdmp fichiers|Blocages et exceptions|Dépannage approfondi|Non|  
+|Table OlapQueryLog dans une base de données relationnelle|Journal des requêtes|Recueillir les entrées de l'Assistant Optimisation de l'utilisation|non|  
+|Fichiers SQLDmp\<guid > .mdmp fichiers|Blocages et exceptions|Dépannage approfondi|non|  
   
  Nous vous recommandons vivement de consulter le lien suivant pour accéder à des ressources supplémentaires non traitées dans la rubrique suivante, qui fournit des [conseils sur la collecte de données initiale depuis le support Microsoft](http://blogs.msdn.com/b/as_emea/archive/2012/01/02/initial-data-collection-for-troubleshooting-analysis-services-issues.aspx).  
   
@@ -189,7 +187,7 @@ ms.lasthandoff: 11/17/2017
 -   Utilisez ASTrace2012 plutôt qu'un journal des requêtes pour savoir qui interroge les cubes. Le journal des requêtes sert généralement à fournir une entrée pour l'Assistant Optimisation de l'utilisation. Les données qu'il capture ne sont pas faciles à lire ou à interpréter. ASTrace2012 est un outil de la communauté, largement utilisé, qui capture les opérations de requêtes. Consultez [Exemples de la communauté Microsoft SQL Server : Analysis Services](https://sqlsrvanalysissrvcs.codeplex.com/).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Gestion d'instances Analysis Services](../../analysis-services/instances/analysis-services-instance-management.md)   
+ [Gestion d’instances Analysis Services](../../analysis-services/instances/analysis-services-instance-management.md)   
  [Introduction à la surveillance d’Analysis Services avec SQL Server Profiler](../../analysis-services/instances/introduction-to-monitoring-analysis-services-with-sql-server-profiler.md)   
  [Propriétés du serveur dans Analysis Services](../../analysis-services/server-properties/server-properties-in-analysis-services.md)  
   

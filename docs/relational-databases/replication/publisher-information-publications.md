@@ -2,27 +2,30 @@
 title: "Informations sur le serveur de distribution, Publications | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords: sql13.rep.monitor.publisherinfo.publications.f1
 ms.assetid: 0b2e3d4e-03b7-4c31-8f96-48648d750010
 caps.latest.revision: "27"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0d5a47e752f77625cbebc9fbb5ca5df42c8fb419
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: b003b3d18832f83fc1c57ea34c83e6da9dfab46c
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
-# <a name="publisher-information-publications"></a>Informations sur le serveur de publication, Publications
-  L'onglet **Publications** fournit des informations résumées pour toutes les publications sur le serveur de publication sélectionné dans le volet gauche.  
+# <a name="publisher-information-publications"></a>Informations sur le serveur de publication, onglet Publications
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] L’onglet **Publications** fournit des informations récapitulatives pour toutes les publications sur le serveur de publication sélectionné dans le volet gauche.  
   
 ## <a name="options"></a>Options  
  Pour modifier la façon dont la grille affiche les données, cliquez avec le bouton droit sur la grille, puis cliquez sur l'une des options suivantes :  
@@ -40,7 +43,7 @@ ms.lasthandoff: 11/09/2017
  **État**  
  État de chaque publication déterminé par l'état de priorité la plus haute de ses abonnements. La grille contenant les informations de publication est triée par défaut par la colonne **État** . La liste suivante répertorie les éventuelles valeurs d'état ainsi que leur ordre de tri (par exemple, les erreurs sont toujours affichées en haut de la grille) :  
   
--   Erreur  
+-   Error  
   
 -   Critique pour les performances  
   
@@ -84,8 +87,8 @@ ms.lasthandoff: 11/09/2017
   
  Pour plus d’informations sur la définition des indices et des seuils de performances, consultez [Analyser les performances avec le Moniteur de réplication](../../relational-databases/replication/monitor/monitor-performance-with-replication-monitor.md).  
   
-## <a name="see-also"></a>Voir aussi  
- [Démarrer le moniteur de réplication](../../relational-databases/replication/monitor/start-the-replication-monitor.md)   
+## <a name="see-also"></a> Voir aussi  
+ [Démarrer le Moniteur de réplication](../../relational-databases/replication/monitor/start-the-replication-monitor.md)   
  [Afficher des informations et exécuter des tâches pour un serveur de publication &#40;moniteur de réplication&#41;](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-publisher-replication-monitor.md)   
  [Moniteur de réplication](../../relational-databases/replication/monitor/monitoring-replication-overview.md)  
   

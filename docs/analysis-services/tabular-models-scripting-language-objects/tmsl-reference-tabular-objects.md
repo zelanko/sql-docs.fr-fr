@@ -2,15 +2,13 @@
 title: "Définitions d’objets dans le tableau de modèle un langage de script (TMSL) | Documents Microsoft"
 ms.custom: 
 ms.date: 05/30/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 486f0507-cec6-4672-b947-0bb61d1cbc46
@@ -19,17 +17,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 031c472ad444e809126eb897755777f970032b51
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f03fce7d1159e6fe7d34024e7cf63167024b752b
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="tmsl-reference---tabular-objects"></a>Référence TMSL - objets tabulaires
-
-[!INCLUDE[ssas-appliesto-sql2016-later-aas](../../includes/ssas-appliesto-sql2016-later-aas.md)]
-
-  Permet aux applications qui créer, utiliser ou administrer les bases de données tabulaires ou qui se connectent à une instance de SQL Server 2016 Analysis Services en mode tabulaire, le script langage TMSL (Tabular Model) pour les commandes et les représentations sous forme de l’objet au format JSON.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Permet aux applications qui créer, utiliser ou administrer les bases de données tabulaires ou qui se connectent à une instance de SQL Server 2016 Analysis Services en mode tabulaire, le script langage TMSL (Tabular Model) pour les commandes et les représentations sous forme de l’objet au format JSON.  
   
  Cet article décrit les principaux objets du schéma TMSL utilisées dans les scripts générés par SQL Server Management Studio, SQL Server Data Tools (SSDT) et PowerShell AMO.  
   

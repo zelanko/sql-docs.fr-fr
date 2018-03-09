@@ -1,5 +1,5 @@
 ---
-title: "Connexion aux Sources de données dans une tâche personnalisée | Documents Microsoft"
+title: "Connexion à des sources de données dans une tâche personnalisée | Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: extending-packages-custom-objects
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
@@ -26,17 +25,16 @@ helpviewer_keywords:
 - connections [Integration Services], external data sources
 - SSIS custom tasks, external data sources
 ms.assetid: 9f0b3a43-3eaa-4b3c-bb08-29b630c11306
-caps.latest.revision: 51
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 5b9446be2b632e6df78fbc1f66762de02d4644f5
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: a708c9c85fccff10691014d4696147b7d3bb39e8
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="connecting-to-data-sources-in-a-custom-task"></a>Connexion à des sources de données dans une tâche personnalisée
   Les tâches se connectent à des sources de données externes pour extraire ou enregistrer des données à l'aide d'un gestionnaire de connexions. Au moment de la conception, un gestionnaire de connexions représente une connexion logique et décrit des informations clés telles que le nom du serveur et des propriétés d'authentification. Au moment de l'exécution, les tâches appellent la méthode <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.AcquireConnection%2A> du gestionnaire de connexions pour établir la connexion physique à la source de données.  
@@ -47,7 +45,7 @@ ms.lasthandoff: 08/03/2017
   
  Les tâches appellent la méthode <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.AcquireConnection%2A> pour établir la connexion physique à la source de données. La méthode renvoie l'objet de connexion sous-jacent qui peut alors être utilisé par la tâche. Étant donné que le gestionnaire de connexions isole de la tâche les détails d'implémentation de l'objet de connexion sous-jacent, la tâche doit seulement appeler la méthode <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.AcquireConnection%2A> pour établir la connexion et n'a pas à s'occuper des autres aspects de la connexion.  
   
-## <a name="example"></a>Exemple  
+## <a name="example"></a> Exemple  
  L'exemple de code suivant montre la validation du nom <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> dans les méthodes Validate et Execute, puis indique comment utiliser la méthode <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.AcquireConnection%2A> pour établir la connexion physique dans la méthode Execute.  
   
 ```csharp  
@@ -145,9 +143,8 @@ Public Overrides Function Execute( _
 End Function  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- [Integration Services &#40; SSIS &#41; Connexions](../../../integration-services/connection-manager/integration-services-ssis-connections.md)   
+## <a name="see-also"></a> Voir aussi  
+ [Connexions Integration Services &#40;SSIS&#41;](../../../integration-services/connection-manager/integration-services-ssis-connections.md)   
  [Créer des gestionnaires de connexions](http://msdn.microsoft.com/library/6ca317b8-0061-4d9d-b830-ee8c21268345)  
   
   
-

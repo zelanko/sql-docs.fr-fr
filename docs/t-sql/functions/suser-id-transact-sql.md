@@ -1,5 +1,5 @@
 ---
-title: SUSER_ID (Transact-SQL) | Documents Microsoft
+title: SUSER_ID (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,13 +8,15 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - SUSER_ID_TSQL
 - SUSER_ID
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - users [SQL Server], IDs
 - logins [SQL Server], IDs
@@ -23,14 +25,14 @@ helpviewer_keywords:
 - identification numbers [SQL Server], logins
 - user IDs [SQL Server]
 ms.assetid: 348911ab-b0b6-4867-aee7-e6f42e053a4a
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: e4b00485c741857f1e3438c3e50995886900fe29
 ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 11/21/2017
 ---
@@ -40,7 +42,7 @@ ms.lasthandoff: 11/21/2017
   Retourne le numéro d'identification de la connexion de l'utilisateur.  
   
 > [!NOTE]  
->  En commençant par [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], SUSER_ID retourne la valeur répertoriée en tant que **principal_id** dans les **sys.server_principals** vue de catalogue.  
+>  À compter de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], SUSER_ID renvoie la valeur répertoriée en tant que **principal_id** dans l'affichage catalogue **sys.server_principals**.  
   
  ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -52,16 +54,16 @@ SUSER_ID ( [ 'login' ] )
 ```  
   
 ## <a name="arguments"></a>Arguments  
- **'** *connexion* **'**  
- Nom de connexion de l'utilisateur. *connexion* est **nchar**. Si *connexion* est spécifié en tant que **char**, *connexion* est implicitement converti en **nchar**. *connexion* peut être [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connexion ou utilisateur ou groupe Windows qui a l’autorisation de se connecter à une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si *connexion* est ne pas spécifié, le numéro d’identification pour l’utilisateur actuel est retourné. Si le paramètre contient le mot NULL, retourne NULL.  
+ **'** *login* **'**  
+ Nom de connexion de l'utilisateur. *login* est de type **nchar**. Si *login* est spécifié en tant que **char**, *login* est implicitement converti en **nchar**. *login* peut être une connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou un utilisateur ou groupe Windows quelconque qui a l'autorisation de se connecter à une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si *login* n'est pas spécifié, le numéro d'identification de la connexion de l'utilisateur actuel est renvoyé. Si le paramètre contient le mot NULL, retourne NULL.  
   
 ## <a name="return-types"></a>Types de retour  
- **int**  
+ **Int**  
   
-## <a name="remarks"></a>Notes  
- SUSER_ID retourne un numéro d'identification uniquement pour les connexions qui ont été explicitement prévues dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Cet ID est utilisé dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour assurer le suivi de la propriété et des autorisations. Il n'est pas équivalent à l'identificateur de sécurité (SID) de la connexion retourné par SUSER_SID. Si *connexion* est un compte de connexion SQL Server, le SID est mappé à un GUID. Si *connexion* est une connexion Windows ou de groupe Windows, le SID est mappé à un identificateur de sécurité Windows.  
+## <a name="remarks"></a>Notes   
+ SUSER_ID retourne un numéro d'identification uniquement pour les connexions qui ont été explicitement prévues dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Cet ID est utilisé dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour assurer le suivi de la propriété et des autorisations. Il n'est pas équivalent à l'identificateur de sécurité (SID) de la connexion retourné par SUSER_SID. Si *login* est une connexion SQL Server, le SID est mappé à un identificateur global unique (GUID). Si *login* est une connexion d'utilisateur Windows ou un groupe Windows, le SID est mappé à un identificateur de sécurité Windows.  
   
- SUSER_SID retourne un numéro SUID uniquement pour une connexion qui a une entrée dans le **syslogins** (table système).  
+ SUSER_SID renvoie un numéro SUID uniquement pour une connexion comportant une entrée dans la table système **syslogins**.  
   
  Les fonctions système sont utilisables dans la liste SELECT, dans la clause WHERE et en tout point où une expression est autorisée. En outre, elles doivent toujours être suivies de parenthèses, même si aucun paramètre n'est spécifié.  
   
@@ -72,9 +74,9 @@ SUSER_ID ( [ 'login' ] )
 SELECT SUSER_ID('sa');  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [sys.server_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)   
- [SUSER_SID &#40; Transact-SQL &#41;](../../t-sql/functions/suser-sid-transact-sql.md)   
- [Fonctions système &#40; Transact-SQL &#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)  
+ [SUSER_SID &#40;Transact-SQL&#41;](../../t-sql/functions/suser-sid-transact-sql.md)   
+ [Fonctions système &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)  
   
   

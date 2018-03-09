@@ -1,41 +1,43 @@
 ---
 title: AYANT (Transact-SQL) | Documents Microsoft
 ms.custom: 
-ms.date: 08/09/2017
+ms.date: 11/28/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: 
 ms.component: t-sql|queries
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - HAVING
 - HAVING_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - restricting conditions for result set
 - search conditions [SQL Server], HAVING clause
 - HAVING clause
 - HAVING clause, about HAVING clause
 ms.assetid: 55650709-001e-42f4-902f-ead09a3c34af
-caps.latest.revision: "27"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: f8ca5c21dfaf767009218b220d26520f178eb3a9
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: 5ec700e859eda5b1a6313183a7485686ce3727ce
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="select---having-transact-sql"></a>SELECT - ayant (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Indique un critère de recherche pour un groupe ou une fonction d'agrégation. HAVING ne peut être utilisé qu'avec l'instruction SELECT. HAVING est généralement utilisé dans une clause GROUP BY. Lorsque GROUP BY n'est pas utilisé, HAVING se comporte comme une clause WHERE.  
+  Indique un critère de recherche pour un groupe ou une fonction d'agrégation. HAVING ne peut être utilisé qu'avec l'instruction SELECT. HAVING est généralement utilisé avec une clause GROUP BY. Lorsque GROUP BY n’est pas utilisé, il existe un groupe unique et agrégé implicit.   
   
  ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -46,7 +48,7 @@ ms.lasthandoff: 11/17/2017
 ```  
   
 ## <a name="arguments"></a>Arguments  
-\<search_condition > Spécifie la condition de recherche pour le groupe ou l’agrégat répondre aux.  
+\<search_condition > Spécifie un ou plusieurs prédicats pour les groupes et/ou les agrégats à respecter. Pour plus d’informations sur les conditions de recherche et les prédicats, consultez [Condition de recherche &#40; Transact-SQL &#41; ](../../t-sql/queries/search-condition-transact-sql.md).  
   
  Le **texte**, **image**, et **ntext** des types de données ne peut pas être utilisés dans une clause HAVING.  
   
@@ -77,8 +79,8 @@ ORDER BY OrderDateKey;
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [GROUP BY &#40; Transact-SQL &#41;](../../t-sql/queries/select-group-by-transact-sql.md)   
- [OÙ &#40; Transact-SQL &#41;](../../t-sql/queries/where-transact-sql.md)  
+ [GROUP BY &#40;Transact-SQL&#41;](../../t-sql/queries/select-group-by-transact-sql.md)   
+ [WHERE &#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md)  
   
   
 

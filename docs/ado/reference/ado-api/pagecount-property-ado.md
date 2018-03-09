@@ -3,8 +3,9 @@ title: "PageCount, propriété (ADO) | Documents Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,19 +13,21 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords: Recordset15::PageCount
-helpviewer_keywords: PageCount property [ADO]
+f1_keywords:
+- Recordset15::PageCount
+helpviewer_keywords:
+- PageCount property [ADO]
 ms.assetid: b601b56c-0ac4-44ee-bc91-c3d2d104f00a
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c90da2ee1484776e4edf8a208f5ce2d5ba28e859
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d0ce12f42693b58a57ecc4a08c186027a054bc80
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="pagecount-property-ado"></a>PageCount, propriété (ADO)
 Indique le nombre de pages de données le [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objet contient.  

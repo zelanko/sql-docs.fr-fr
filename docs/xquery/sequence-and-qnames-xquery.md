@@ -3,32 +3,38 @@ title: "Séquence et QNames (XQuery) | Documents Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: xquery
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-applies_to: SQL Server
-dev_langs: XML
+applies_to:
+- SQL Server
+dev_langs:
+- XML
 helpviewer_keywords:
 - sequence [XQuery]
 - XQuery, sequence
 - QName [XQuery]
 - predefined namespaces [XML in SQL Server]
 ms.assetid: 3593ac26-dd78-4bf0-bb87-64fbcac5f026
-caps.latest.revision: "22"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2414607a95b28aeba61bded3d9898ac25cb720a0
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: f75694958ca453d1b630a0c02c422d35c6ff4c34
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="sequence-and-qnames-xquery"></a>Séquence et QNames (XQuery)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Cette rubrique décrit les concepts fondamentaux suivants de XQuery :  
   
@@ -55,7 +61,7 @@ WHERE ProductModelID=7;
   
 ```  
   
- Voici le résultat obtenu :  
+ Voici le résultat obtenu :  
   
 ```  
 <step1> Step 1 description goes here </step1>  
@@ -135,7 +141,7 @@ WHERE ProductModelID=7;
   
  Les espaces de noms suivants sont prédéfinis pour une utilisation avec prise en charge de XQuery dans [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
-|Préfixe|URI|  
+|Prefix|URI|  
 |------------|---------|  
 |xs|http://www.w3.org/2001/XMLSchema|  
 |xsi|http://www.w3.org/2001/XMLSchema-instance|  

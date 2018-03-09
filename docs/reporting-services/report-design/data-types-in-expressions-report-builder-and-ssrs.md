@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 94fdf921-270c-4c12-87b3-46b1cc98fae5
 caps.latest.revision: "9"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 51b8f1249bb257d3aea3752b6b593e470ae8c775
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: e8f9aac801e823f364070fc2b3ce2e6b4b015f78
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="data-types-in-expressions-report-builder-and-ssrs"></a>Types de données dans les expressions (Générateur de rapports et SSRS)
   Les données sont représentées par différents types de données permettant de les stocker et de les traiter de manière efficace. Les types de données typiques incluent du texte (également appelé chaînes), des numéros avec et sans décimales, des dates, des heures et des images. Les valeurs dans un rapport doivent être un type de données RDL (Report Definition Language). Vous pouvez mettre en forme une valeur selon votre préférence lorsque vous l'affichez dans un rapport. Par exemple, un champ qui représente une devise est stocké dans la définition de rapport sous la forme d'un nombre à virgule flottante, mais peut être affiché sous divers formats en fonction de la propriété de format choisie.  
@@ -38,7 +36,7 @@ ms.lasthandoff: 12/05/2017
   
 |Type RDL|Types CLR|  
 |--------------|---------------|  
-|Chaîne|Valeur par défaut : String<br /><br /> Chart, GUID, Timespan|  
+|String|Valeur par défaut : String<br /><br /> Chart, GUID, Timespan|  
 |Booléen|Valeur par défaut : Boolean|  
 |Entier|Valeur par défaut : Int64<br /><br /> Int16, Int32, Uint16, Uint64, Byte, Sbyte|  
 |DateTime|Valeur par défaut : DateTime<br /><br /> DateTimeOffset|  
@@ -86,7 +84,7 @@ ms.lasthandoff: 12/05/2017
   
  Le tableau suivant présente des exemples de conversion de types de données.  
   
-|Type de conversion|Exemple|  
+|Type de conversion| Exemple|  
 |------------------------|-------------|  
 |DateTime en String|`=CStr(Fields!Date.Value)`|  
 |String en DateTime|`=DateTime.Parse(Fields!DateTimeinStringFormat.Value)`|  
@@ -116,7 +114,7 @@ ms.lasthandoff: 12/05/2017
   
  Vous pouvez utiliser l'une des méthodes suivantes pour convertir ces données en une ou plusieurs valeurs CLR :  
   
--   Dans une zone de texte, utilisez une expression pour extraire certaines parties de la chaîne. Par exemple :  
+-   Dans une zone de texte, utilisez une expression pour extraire certaines parties de la chaîne. Exemple :  
   
     -   L'expression suivante extrait uniquement la partie Heure du décalage par rapport au fuseau horaire UTC et la convertit en minutes : `=CInt(Fields!MyDateTime.Value.Substring(Fields!MyDateTime.Value.Length-5,2)) * 60`  
   
@@ -150,7 +148,7 @@ ms.lasthandoff: 12/05/2017
   
  Pour plus d’et dans laformations sur les types de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , consultez [Types de données dans Analysis Services](../../analysis-services/multidimensional-models/olap-physical/data-types-in-analysis-services.md) et dans la [SQL Server Books Onlet dans lae](http://go.microsoft.com/fwlink/?linkid=120955).  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Mise en forme des éléments de rapport &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/formatting-report-items-report-builder-and-ssrs.md)  
   
   

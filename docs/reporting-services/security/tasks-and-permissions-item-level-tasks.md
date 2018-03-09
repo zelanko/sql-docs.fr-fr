@@ -8,23 +8,21 @@ ms.service:
 ms.component: security
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords: item-level tasks [Reporting Services]
 ms.assetid: fdeb7bc3-167a-4342-84e3-32e3faa1fa39
 caps.latest.revision: "37"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 3abea80a4ddfee5eddd4c4070b79b338d4b398ae
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 6a824675df700ba1910d21acea217061acb0879d
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="tasks-and-permissions---item-level-tasks"></a>Tâches et autorisations - Tâches au niveau élément
   Une tâche au niveau élément est une collection d'autorisations liées à un rapport, un dossier, un modèle de rapport, une ressource ou une source de données partagée. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] inclut également des tâches de niveau système qui s’appliquent à l’ensemble du site de serveur de rapports. Pour plus d’informations, consultez [Tâches au niveau système](../../reporting-services/security/tasks-and-permissions-system-level-tasks.md). Pour plus d'informations sur les tâches et les autorisations en général, consultez [Tasks and Permissions](../../reporting-services/security/tasks-and-permissions.md).  
@@ -37,7 +35,7 @@ ms.lasthandoff: 12/05/2017
   
  Les datasets partagés utilisent le même jeu d'autorisations que les rapports. Les parties de rapports utilisent le même jeu d'autorisations que les ressources.  
   
-|Tâche|S'applique à l'élément|Permissions|  
+|Tâche|S'applique à l'élément|Autorisations|  
 |----------|---------------------|-----------------|  
 |Lire les rapports|Rapports|Lire le contenu<br /><br /> Lire les définitions de rapport<br /><br /> Lire les propriétés|  
 |Lire les rapports|Datasets partagés|Lire le contenu<br /><br /> Lire les définitions de rapport<br /><br /> Lire les propriétés|  
@@ -65,7 +63,7 @@ ms.lasthandoff: 12/05/2017
 |Afficher les ressources|Ressources|Lire le contenu<br /><br /> Lire les propriétés|  
 |Afficher les ressources|Parties de rapports|Lire le contenu<br /><br /> Lire les propriétés|  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Octroi d'autorisations sur un serveur de rapports en mode natif](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)  
   
   

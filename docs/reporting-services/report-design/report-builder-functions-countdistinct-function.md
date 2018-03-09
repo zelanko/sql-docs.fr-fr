@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 902c251e-e1e8-41d2-ac20-5bb6138ac410
 caps.latest.revision: "7"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 7e8fd8fd42f2c9ee41562062b846c95f4b192b71
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 302974548c3f57cf9e700c1a995929463d34604d
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="report-builder-functions---countdistinct-function"></a>Fonctions du Générateur de rapports - CountDistinct
   Retourne le nombre de toutes les valeurs non Null distinctes spécifiées par l'expression, évaluée dans le contexte de l'étendue donnée.  
@@ -51,7 +49,7 @@ CountDistinct(expression, scope, recursive)
 ## <a name="return-type"></a>Type de retour  
  Retourne un **Integer**.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  La valeur du paramètre *scope* doit être une constante de chaîne et ne peut pas être une expression. Pour les agrégats externes ou les agrégats qui ne spécifient pas d'autres agrégats, le paramètre *scope* doit faire référence à l'étendue actuelle ou à une étendue contenante. Pour les agrégats d'agrégats, les agrégats imbriqués peuvent spécifier une étendue enfant.  
   
  *Expression* peut contenir des appels aux fonctions d'agrégation imbriquées avec les exceptions et conditions suivantes :  
@@ -68,18 +66,18 @@ CountDistinct(expression, scope, recursive)
   
  Pour plus d’informations sur les agrégats récursifs, consultez [Création de groupes de hiérarchies récursives &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/creating-recursive-hierarchy-groups-report-builder-and-ssrs.md).  
   
-## <a name="example"></a>Exemple  
+## <a name="example"></a> Exemple  
  L’exemple de code suivant affiche une expression qui calcule le nombre de valeurs non Null uniques de `Size` pour l’étendue par défaut et pour une étendue de groupe parent. L'expression est ajoutée à une cellule d'une ligne qui appartient au groupe enfant `GroupbySubcategory`. Le groupe parent est `GroupbyCategory`. L’expression affiche les résultats pour `GroupbySubcategory` (étendue par défaut) et pour `GroupbyCategory` (étendue de groupe parent).  
   
 > [!NOTE]  
->  Les expressions ne doivent pas contenir de retours chariot ni de sauts de ligne réels ; ceux-ci sont inclus dans l'exemple de code pour prendre en charge des convertisseurs de documentation. Si vous copiez l'exemple suivant, supprimez les retours chariot de chaque ligne.  
+>  Les expressions ne doivent pas contenir de retours chariot ni de sauts de ligne réels ; ceux-ci sont inclus dans l'exemple de code pour prendre en charge des convertisseurs de documentation. Si vous copiez l'exemple suivant, supprimez les retours chariot de chaque ligne.  
   
 ```  
 ="Distinct count (Subcategory): " & CountDistinct(Fields!Size.Value) &   
 "Distinct count (Category): " & CountDistinct(Fields!Size.Value,"GroupbyCategory")  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Utilisation d’expressions dans les rapports &#40;Générateur de rapport et SSRS&#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)   
  [Exemples d’expressions &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
  [Types de données dans les expressions &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/data-types-in-expressions-report-builder-and-ssrs.md)   

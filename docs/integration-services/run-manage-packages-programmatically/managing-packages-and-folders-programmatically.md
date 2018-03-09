@@ -1,5 +1,5 @@
 ---
-title: Gestion des Packages et des dossiers par programme | Documents Microsoft
+title: Gestion des packages et des dossiers par programmation | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: run-manage-packages-programmatically
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
@@ -19,23 +18,22 @@ helpviewer_keywords:
 - packages [Integration Services], managing
 - custom enumerators [Integration Services]
 ms.assetid: ec59b75d-ba09-44ac-9039-9d593bb462d9
-caps.latest.revision: 33
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: a40acf3a586c74119d948291fd179f78833cb37a
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 4d0213c5ae32099a934daf88c2c60ef12204b86c
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="managing-packages-and-folders-programmatically"></a>Gestion des packages et des dossiers par programme
-<a name="top"></a>Lorsque vous travaillez par programme avec [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] packages, vous devrez peut-être pour déterminer si un package ou dossier spécifique existe, pour gérer les dossiers dans lesquels les packages sont stockés. La classe <xref:Microsoft.SqlServer.Dts.Runtime.Application> de l'espace de noms <xref:Microsoft.SqlServer.Dts.Runtime> fournit différentes méthodes pour répondre à ces impératifs.    
+<a name="top"></a> Quand vous travaillez par programmation avec des packages [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], vous pouvez avoir besoin de déterminer si un package ou un dossier individuel existe, ou de gérer les dossiers dans lesquels les packages sont stockés. La classe <xref:Microsoft.SqlServer.Dts.Runtime.Application> de l'espace de noms <xref:Microsoft.SqlServer.Dts.Runtime> fournit différentes méthodes pour répondre à ces impératifs.    
     
-##  <a name="exists"></a>Déterminer si un Package ou un dossier existe    
- Pour déterminer par programme si un package enregistré existe, appelez une des méthodes suivantes avant d’essayer de charger et exécuter le package :    
+##  <a name="exists"></a> Détermination de l’existence d’un package ou dossier    
+ Pour déterminer par programmation si un package enregistré existe, appelez l’une des méthodes suivantes avant de tenter de le charger et l’exécuter :    
     
 |Emplacement de stockage|Méthode à appeler|    
 |----------------------|--------------------|    
@@ -51,10 +49,10 @@ ms.lasthandoff: 09/26/2017
     
  [Retour au début](#top)    
     
-##  <a name="managing"></a>Gestion des Packages et des dossiers    
+##  <a name="managing"></a> Gestion des packages et des dossiers    
  La classe <xref:Microsoft.SqlServer.Dts.Runtime.Application> de l'espace de noms <xref:Microsoft.SqlServer.Dts.Runtime> fournit des méthodes supplémentaires pour gérer les packages et les dossiers dans lesquels ils sont stockés.    
     
-###  <a name="managing_rempkg"></a>Suppression d’un Package    
+###  <a name="managing_rempkg"></a> Suppression d’un package    
  Pour supprimer un package enregistré par programme, appelez l'une des méthodes suivantes :    
     
 |Emplacement de stockage|Méthode à appeler|    
@@ -64,7 +62,7 @@ ms.lasthandoff: 09/26/2017
     
  [Retour au début](#top)    
     
-###  <a name="managing_create"></a>Création d’un dossier    
+###  <a name="managing_create"></a> Création d’un dossier    
  Pour créer un dossier de stockage par programme, appelez l'une des méthodes suivantes :    
     
 |Emplacement de stockage|Méthode à appeler|    
@@ -74,7 +72,7 @@ ms.lasthandoff: 09/26/2017
     
  [Retour au début](#top)    
     
-###  <a name="managing_remfldr"></a>Suppression d’un dossier    
+###  <a name="managing_remfldr"></a> Suppression d’un dossier    
  Pour supprimer un dossier de stockage par programme, appelez l'une des méthodes suivantes :    
     
 |Emplacement de stockage|Méthode à appeler|    
@@ -84,7 +82,7 @@ ms.lasthandoff: 09/26/2017
     
  [Retour au début](#top)    
     
-###  <a name="managing_rename"></a>Renommer un dossier    
+###  <a name="managing_rename"></a> Renommage d’un dossier    
  Pour renommer un dossier de stockage par programme, appelez l'une des méthodes suivantes :    
     
 |Emplacement de stockage|Méthode à appeler|    
@@ -94,9 +92,8 @@ ms.lasthandoff: 09/26/2017
     
  [Retour au début](#top)    
     
-## <a name="see-also"></a>Voir aussi    
- [Gestion des packages &#40; Service SSIS &#41;](../../integration-services/service/package-management-ssis-service.md)     
+## <a name="see-also"></a> Voir aussi    
+ [Gestion de packages &#40;Service SSIS&#41;](../../integration-services/service/package-management-ssis-service.md)     
  [Énumération des packages disponibles par programmation](../../integration-services/run-manage-packages-programmatically/enumerating-available-packages-programmatically.md)    
     
   
-

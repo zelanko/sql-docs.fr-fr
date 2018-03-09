@@ -2,29 +2,32 @@
 title: "Exploration du Cube déployé | Documents Microsoft"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tutorial
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology: analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 ms.assetid: 849c6109-1453-4fe4-a892-c49a982cfadb
-caps.latest.revision: "24"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 5ac15a2a9f2cb4f572e797b54b44194958c8d024
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 8ddbefdcbc54c076c801e5f4d83e107e48ac5ba9
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="lesson-3-5---browsing-the-deployed-cube"></a>Leçon 3-5-parcourir le Cube déployé
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 Dans la tâche suivante, vous parcourez le cube du didacticiel [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Étant donné que notre analyse compare la mesure entre plusieurs dimensions, utilisez un tableau croisé dynamique Excel pour parcourir vos données. Un tableau croisé dynamique permet de placer le client, la date et les informations produit sur différents axes afin que vous pouvoir voir les disparités des ventes sur Internet en fonction des points dans le temps, des caractéristiques démographiques de la clientèle et des gammes de produits.  
   
 ### <a name="to-browse-the-deployed-cube"></a>Pour parcourir le cube déployé  
@@ -52,7 +55,7 @@ Dans la tâche suivante, vous parcourez le cube du didacticiel [!INCLUDE[ssASnov
     ![Ventes sur Internet par région et ligne de produits](../analysis-services/media/l3-cube-browser-finish.gif "ventes Internet par région et ligne de produits")  
   
 ## <a name="next-lesson"></a>Leçon suivante  
-[Leçon 4 : Définition des attributs avancés et des propriétés de dimension](../analysis-services/lesson-4-defining-advanced-attribute-and-dimension-properties.md)  
+[Leçon 4 : Définition des attributs avancés et des propriétés de Dimension](../analysis-services/lesson-4-defining-advanced-attribute-and-dimension-properties.md)  
   
   
   

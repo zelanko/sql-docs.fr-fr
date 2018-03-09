@@ -2,26 +2,31 @@
 title: "Index XML sélectifs (SXI) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: xml
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-xml
+ms.suite: sql
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 598ecdcd-084b-4032-81b2-eed6ae9f5d44
-caps.latest.revision: "9"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d0918df220f63cefec2319eb6d6585522b2e3fd4
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 3e845dd3ae91488060e72ad75c3f60d7dc0c7977
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="selective-xml-indexes-sxi"></a>Index XML sélectifs (SXI)
-  Les index XML sélectifs sont un autre type d'index XML disponible en plus des index XML ordinaires. Les objectifs de la fonctionnalité d'index XML sélectif sont les suivants :  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+Les index XML sélectifs sont un autre type d'index XML disponible en plus des index XML ordinaires. Les objectifs de la fonctionnalité d'index XML sélectif sont les suivants :  
   
 -   Améliorer les performances des requêtes sur les données XML stockées dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -79,7 +84,7 @@ ms.lasthandoff: 11/09/2017
   
  Si vous devez uniquement interroger ces données sur le chemin d'accès `/book/title` et le chemin d'accès `/book/subjects` , créez l'index XML sélectif suivant :  
   
-```tsql  
+```sql  
 CREATE SELECTIVE XML INDEX SXI_index  
 ON Tbl(xmlcol)  
 FOR   

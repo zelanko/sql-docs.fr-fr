@@ -3,26 +3,30 @@ title: "Prise en charge d’OLTP en mémoire par SQL Server Management Objects 
 description: "Décrit les éléments dans SQL Server Management Objects (SMO) qui prennent en charge l’OLTP en mémoire."
 ms.custom: 
 ms.date: 08/18/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: in-memory-oltp
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine-imoltp
+ms.suite: sql
+ms.technology:
+- database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 2b67292d-6d8e-4016-9063-a97461ffe57a
-caps.latest.revision: "28"
+caps.latest.revision: 
 author: JennieHubbard
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 28c4c82392da940edcad5dba925204a90e0ad068
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 723de25c649545751bda5ddd79db47c5c367f478
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="sql-server-management-objects-support-for-in-memory-oltp"></a>Prise en charge SQL Server Management Objects pour OLTP en mémoire
-
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 Cette rubrique décrit les éléments dans SQL Server Management Objects (SMO) qui prennent en charge l’OLTP en mémoire.  
 
 ## <a name="smo-types-and-members"></a>Types et membres SMO

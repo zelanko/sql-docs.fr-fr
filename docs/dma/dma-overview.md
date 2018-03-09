@@ -1,34 +1,39 @@
 ---
 title: "Vue d’ensemble de l’Assistant de Migration de données (SQL Server) | Documents Microsoft"
 ms.custom: 
-ms.date: 10/04/2017
+ms.date: 02/07/2018
 ms.prod: sql-non-specified
 ms.prod_service: dma
 ms.service: 
-ms.component: dma
+ms.component: 
 ms.reviewer: 
 ms.suite: sql
-ms.technology: sql-dma
+ms.technology:
+- sql-dma
 ms.tgt_pltfrm: 
 ms.topic: article
 keywords: 
-helpviewer_keywords: Data Migration Assistant, overview
+helpviewer_keywords:
+- Data Migration Assistant, overview
 ms.assetid: 
 caps.latest.revision: 
 author: HJToland3
 ms.author: jtoland
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cc543e392818c2fa8ceea1c55e7a065df603b02d
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: c23ed7d07474cc763da951e782badd42458dacdb
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="overview-of-data-migration-assistant"></a>Vue d’ensemble de l’Assistant de Migration de données
 
-Données Migration Assistant (DMA) vous permet de mettre à niveau vers une plate-forme de données modernes en détectant les éventuels problèmes de compatibilité peuvent affecter les fonctionnalités de base de données dans votre nouvelle version de SQL Server et la base de données SQL Azure. DMA recommande des performances et des améliorations de la fiabilité de votre environnement cible et vous permet de déplacer votre schéma, les données et les objets de relation contenant-contenus de votre serveur source pour votre serveur cible.
+L’Assistant de Migration données (DMA) vous permet de mettre à niveau vers une plate-forme de données modernes en détectant les éventuels problèmes de compatibilité peuvent affecter les fonctionnalités de base de données dans votre nouvelle version de SQL Server et la base de données SQL Azure. DMA recommande des performances et des améliorations de la fiabilité de votre environnement cible et vous permet de déplacer votre schéma, les données et les objets de relation contenant-contenus de votre serveur source pour votre serveur cible.
 
+> [!NOTE] 
+> De grande taille (en termes de nombre et la taille des bases de données) migrations, il est recommandé d’utiliser le [Service de Migration de base de données Azure](https://docs.microsoft.com/en-us/azure/dms/dms-overview), qui peuvent migrer les bases de données à grande échelle.
+  
 ## <a name="capabilities"></a>Fonctions
 
 - Évaluer les instances de SQL Server sur site vers les bases de données SQL Azure. Le flux de travail d’évaluation vous aide à détecter les problèmes suivants qui peuvent affecter la migration de base de données SQL Azure et fournit des instructions détaillées sur la façon de les résoudre.
@@ -37,7 +42,7 @@ Données Migration Assistant (DMA) vous permet de mettre à niveau vers une plat
 
   - Partiellement pris en charge ou non pris en charge des fonctionnalités : détecte partiellement pris en charge ou non pris en charge des fonctionnalités qui sont actuellement en cours d’utilisation sur l’instance de SQL Server source. DMA fournit qu'un ensemble complet des recommandations, d’autres approches sont disponibles dans Azure et les mesures de sorte que vous pouvez incorporer dans vos projets de migration.
 
-- Détecter les problèmes qui peuvent affecter une mise à niveau vers un ordinateur local SQL Server.  Ceux-ci sont décrits comme des problèmes de compatibilité et sont organisés dans les catégories suivantes :
+- Détecter les problèmes qui peuvent affecter une mise à niveau vers un ordinateur local SQL Server. Ceux-ci sont décrits comme des problèmes de compatibilité et sont organisés dans les catégories suivantes :
 
   - Modifications avec rupture
 
@@ -70,17 +75,19 @@ Données Migration Assistant (DMA) vous permet de mettre à niveau vers une plat
 DMA remplace toutes les versions précédentes du Conseiller de mise à niveau de SQL Server et doit être utilisé pour les mises à niveau pour la plupart des versions de SQL Server. Suivent les versions prises en charge de sources et cibles.
 
 **Sources**
-- SQL Server 2005
-- SQL Server 2008
+- SQL Server 2005
+- SQL Server 2008
 - SQL Server 2008 R2
 - SQL Server 2012 
-- SQL Server 2014
+- SQL Server 2014
 - SQL Server 2016
+- SQL Server 2017 sur Windows
 
 **Cibles**
 - SQL Server 2012
-- SQL Server 2014
+- SQL Server 2014
 - SQL Server 2016
+- SQL Server 2017 sur Windows et Linux
 - Azure SQL Database
 
 ## <a name="installation"></a>Installation

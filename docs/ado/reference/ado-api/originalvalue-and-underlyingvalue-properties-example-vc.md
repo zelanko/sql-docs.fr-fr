@@ -3,29 +3,31 @@ title: "OriginalValue et UnderlyingValue, propriétés-exemple (VC ++) | Documen
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - UnderlyingValue property [ADO], VC++ example
 - OriginalValue property [ADO]
 ms.assetid: c5762ad2-f43b-453d-b44a-9c70210eb00f
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bc78a70ee7c3d6443126a190ce9bd80fe03105e1
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 458d61ec4c0d35376b4d989a7a2974483abe591e
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="originalvalue-and-underlyingvalue-properties-example-vc"></a>OriginalValue et UnderlyingValue, propriétés-exemple (VC ++)
 Cet exemple illustre la [OriginalValue](../../../ado/reference/ado-api/originalvalue-property-ado.md) et [UnderlyingValue](../../../ado/reference/ado-api/underlyingvalue-property.md) propriétés en affichant un message si les données sous-jacentes d’un enregistrement a changé pendant un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) mise à jour du lot.  
@@ -226,5 +228,5 @@ void PrintComError(_com_error &e) {
 **Valeur sous-jacente : sociologie**    
 ## <a name="see-also"></a>Voir aussi  
  [OriginalValue, propriété (ADO)](../../../ado/reference/ado-api/originalvalue-property-ado.md)   
- [Objet Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
+ [Recordset Object (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [UnderlyingValue, propriété](../../../ado/reference/ado-api/underlyingvalue-property.md)

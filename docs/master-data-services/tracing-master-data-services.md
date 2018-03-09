@@ -5,23 +5,24 @@ ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
 ms.service: 
-ms.component: master-data-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
-ms.technology: master-data-services
+ms.technology:
+- master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 45823fc8-723a-49f2-9a11-94d241245cfd
-caps.latest.revision: "7"
-author: smartysanthosh
-ms.author: nagavo
+caps.latest.revision: 
+author: leolimsft
+ms.author: lle
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: c4b5daabf1f2a9246fda5e58aaf5814063e576fb
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 72a82c699ff117d2b9b87ffec8ea2b4c97cae66f
+ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="tracing-master-data-services"></a>Suivi (Master Data Services)
   Le fichier Web.config contient une section de suivi, comme indiqué ci-dessous. Cette section est une nouveauté dans [!INCLUDE[ssSQL15](../includes/sssql15-md.md)][!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]  
@@ -56,7 +57,7 @@ ms.lasthandoff: 11/20/2017
   
 -   Les journaux sont enregistrés dans le dossier Logs sous le dossier WebApplication. L’emplacement par défaut est le suivant : C:\Program Files\Microsoft SQL Server\130\Master Data Services\WebApplication\Logs.  
   
--   Un fichier est créé quotidiennement ou tous les 10 Mo.  
+-   Un fichier est créé quotidiennement ou tous les 10 Mo.  
   
 -   Lorsque la taille du répertoire atteint 200 Mo, le journal le plus ancien est supprimé.  
   
@@ -68,7 +69,7 @@ ms.lasthandoff: 11/20/2017
     |CorrelationID|Un ID de corrélation est affecté à chaque demande. Tous les suivis déclenchés par la demande partagent le même ID de corrélation.<br /><br /> Lorsqu’une erreur se produit dans l’interface utilisateur, l’ID de corrélation apparaît dans le message d’erreur.|  
     |Opération|Nom de l’opération de demande. Si la demande est une demande de l’interface utilisateur Web, le nom de l’opération correspond à l’URL. Si la demande est une demande API, le nom de l’opération correspond au nom du service.|  
     |Level|Niveau de cette entrée de suivi.|  
-    |Boîte de|Corps du message de suivi.|  
+    |Message|Corps du message de suivi.|  
   
 ## <a name="external-resources"></a>Ressources externes  
  Billet de blog intitulé [Troubleshooting Logging Improvement](http://go.microsoft.com/fwlink/p/?LinkId=615377)(en anglais) sur msdn.com.  

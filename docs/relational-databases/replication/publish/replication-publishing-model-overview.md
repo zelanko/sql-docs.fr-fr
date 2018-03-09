@@ -2,9 +2,12 @@
 title: "Vue d’ensemble du modèle de publication de réplication"
 ms.custom: 
 ms.date: 09/01/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -22,18 +25,18 @@ helpviewer_keywords:
 - Distributors [SQL Server replication]
 ms.assetid: b9567832-e6a8-45b2-a3ed-ea12aa002f4b
 caps.latest.revision: "38"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 0c099b153a5d010c0851df9274647315f630c26e
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 63243f524fa4b94c4dfa535b533dbef87dd3a41c
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="replication-publishing-model-overview"></a>Vue d’ensemble du modèle de publication de réplication
-  La réplication utilise une métaphore de l'industrie de l'édition pour représenter les composants d'une topologie de réplication ; elle comprend un serveur de publication, un serveur de distribution, des abonnés, des publications, des articles et des abonnements. Il peut être utile de penser à la réplication [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dans les mêmes termes qu'un magazine :  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] La réplication utilise une métaphore de l’industrie de l’édition pour représenter les composants d’une topologie de réplication. Elle comprend un serveur de publication, un serveur de distribution, des abonnés, des publications, des articles et des abonnements. Il peut être utile de penser à la réplication [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dans les mêmes termes qu'un magazine :  
   
 -   L'éditeur d'un magazine produit une ou plusieurs publications  
   
@@ -67,7 +70,7 @@ ms.lasthandoff: 11/09/2017
 ## <a name="subscription"></a>Abonnement  
  Un abonnement est une requête portant sur la remise d'une copie d'une publication à un Abonné. L'abonnement définit la publication qui sera reçue, et où et quand elle sera reçue. Il existe deux types d'abonnements : les abonnements par émission de données et les abonnements par extraction. Pour plus d’informations sur les abonnements par envoi et par extraction de données, consultez [S’abonner à des publications](../../../relational-databases/replication/subscribe-to-publications.md).  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Vue d’ensemble des Agents de réplication](../../../relational-databases/replication/agents/replication-agents-overview.md)   
  [Types de réplication](../../../relational-databases/replication/types-of-replication.md)   
  [Configurer la réplication pour les groupes de disponibilité Always On (SQL Server)](../../../database-engine/availability-groups/windows/configure-replication-for-always-on-availability-groups-sql-server.md)   

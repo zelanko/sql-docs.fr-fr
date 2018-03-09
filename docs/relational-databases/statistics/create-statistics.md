@@ -2,10 +2,14 @@
 title: "Créer des statistiques | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: statistics
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-statistics
+ms.suite: sql
+ms.technology:
+- dbe-statistics
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -17,19 +21,20 @@ helpviewer_keywords:
 - creating statistics
 - statistics [SQL Server], creating
 ms.assetid: 95a455fb-664d-4c95-851e-c6b62d7ebe04
-caps.latest.revision: "9"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 161543d02f49763db010021f817302635367c001
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 9cf772ad4cffd6d992233d4324ce270c884cb06d
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="create-statistics"></a>Créer des statistiques
-  Vous pouvez créer des statistiques d'optimisation de requête sur une ou plusieurs colonnes d'une table ou d'une vue indexée dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)]. Pour la plupart des requêtes, l'optimiseur de requête génère déjà les statistiques utiles à un plan de requête de haute qualité ; dans certains cas, vous devez créer des statistiques supplémentaires.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+Vous pouvez créer des statistiques d'optimisation de requête sur une ou plusieurs colonnes d'une table ou d'une vue indexée dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)]. Pour la plupart des requêtes, l'optimiseur de requête génère déjà les statistiques utiles à un plan de requête de haute qualité ; dans certains cas, vous devez créer des statistiques supplémentaires.  
   
  **Dans cette rubrique**  
   
@@ -57,7 +62,7 @@ ms.lasthandoff: 11/09/2017
   
 ###  <a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Autorisations  
+####  <a name="Permissions"></a> Permissions  
  Nécessite que l’utilisateur soit le propriétaire de la table ou de la vue indexée ou qu’il soit membre d’un des rôles suivants : rôle serveur fixe **sysadmin** , rôle de base de données fixe **db_owner** ou rôle de base de données fixe **db_ddladmin** .  
   
 ##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
@@ -72,7 +77,7 @@ ms.lasthandoff: 11/09/2017
   
 4.  Cliquez avec le bouton droit sur le dossier **Statistiques** et sélectionnez **Nouvelles statistiques**.  
   
-     Les propriétés suivantes s’affichent dans la page **Général** dans la boîte de dialogue **Nouvelles statistiques sur la table***nom_table* .  
+     Les propriétés suivantes s’affichent dans la page **Général** de la boîte de dialogue **Nouvelles statistiques sur la table***nom_table*.  
   
      **Nom de la table**  
      Affiche le nom de la table décrite par les statistiques.  
@@ -116,12 +121,12 @@ ms.lasthandoff: 11/09/2017
      **Mettre à jour les statistiques pour ces colonnes**  
      Activez cette option pour mettre à jour les statistiques lors de la fermeture de la boîte de dialogue.  
   
-     Les propriétés suivantes s’affichent dans la page **Filtre** dans la boîte de dialogue **Nouvelles statistiques sur la table***nom_table* .  
+     La propriété suivante s’affiche dans la page **Filtre** de la boîte de dialogue **Nouvelles statistiques sur la table***nom_table*.  
   
      **Expression de filtre**  
-     Définit quelles lignes de données inclure dans les statistiques filtrées. Par exemple : `Production.ProductSubcategoryID IN ( 1,2,3 )`  
+     Définit quelles lignes de données inclure dans les statistiques filtrées. Par exemple, `Production.ProductSubcategoryID IN ( 1,2,3 )`  
   
-5.  Dans la boîte de dialogue **Nouvelles statistiques sur la table***nom_table* , dans la page **Général** , cliquez sur **Ajouter**.  
+5.  Dans la boîte de dialogue **Nouvelles statistiques sur la table***nom_table*, dans la page **Général**, cliquez sur **Ajouter**.  
   
      Les propriétés suivantes s'affichent dans la boîte de dialogue **Sélectionner les colonnes** . Ces informations sont en lecture seule.  
   
@@ -142,13 +147,13 @@ ms.lasthandoff: 11/09/2017
   
 6.  Dans la boîte de dialogue **Sélectionner les colonnes** , activez la ou les cases à cocher de chaque colonne pour laquelle vous voulez créer une statistique, puis cliquez sur **OK**.  
   
-7.  Dans la boîte de dialogue **Nouvelles statistiques sur la table***nom_table* , cliquez sur **OK**.  
+7.  Dans la boîte de dialogue **Nouvelles statistiques sur la table***nom_table*, cliquez sur **OK**.  
   
 ##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
   
 #### <a name="to-create-statistics"></a>Pour créer des statistiques  
   
-1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  Dans la barre d'outils standard, cliquez sur **Nouvelle requête**.  
   

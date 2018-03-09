@@ -1,33 +1,31 @@
 ---
-title: "DAX dans les modèles tabulaires (SSAS tabulaire) | Documents Microsoft"
+title: "DAX dans les modèles tabulaires | Documents Microsoft"
 ms.custom: 
 ms.date: 10/21/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b2693985-1bea-4861-a100-cea4761ba809
-caps.latest.revision: "26"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 73a56576091a746db0ca8c52ea2be22f60a50148
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 8bf7c6895b62fb992094bb3850a90ee904b7a956
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/23/2018
 ---
-# <a name="dax-in-tabular-models-ssas-tabular"></a>DAX dans les modèles tabulaires (SSAS tabulaire)
-  Les Expressions DAX (Data Analysis) est un langage de formule utilisé pour créer des calculs personnalisés dans Analysis Services, Power BI Desktop et Power Pivot dans Excel. Les formules DAX comportent des fonctions, des opérateurs, et des valeurs pour effectuer des calculs avancés sur les données des tables et des colonnes.  
+# <a name="dax-in-tabular-models"></a>DAX dans les modèles tabulaires 
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+Les Expressions DAX (Data Analysis) est un langage de formule utilisé pour créer des calculs personnalisés dans Analysis Services, Power BI Desktop et Power Pivot dans Excel. Les formules DAX comportent des fonctions, des opérateurs, et des valeurs pour effectuer des calculs avancés sur les données des tables et des colonnes.  
   
  Bien que DAX est utilisé dans Analysis Services, Power BI Desktop et Power Pivot dans Excel, cette rubrique s’applique plus aux projets de modèle tabulaire Analysis Services créés dans SQL Server Data Tools (SSDT).  
   
@@ -71,7 +69,7 @@ ms.lasthandoff: 11/17/2017
   
  Les modèles tabulaires, et DAX, prennent en charge les types de données suivants :  
   
-|Type de données dans le modèle|Type de données dans DAX|Description|  
+|Type de données dans le modèle|Type de données dans DAX| Description|  
 |------------------------|----------------------|-----------------|  
 |Nombre entier|Valeur entière de 64 bits (huit octets) <sup>1, 2</sup>|Nombres qui n'ont pas de décimales. Les entiers peuvent être des nombres positifs ou négatifs, mais doivent être compris entre -9 223 372 036 854 775 808 (-2^63) et 9 223 372 036 854 775 807 (2^63-1).|  
 |Nombre décimal|Nombre réel de 64 bits (huit octets) <sup>1, 2</sup>|Les nombres réels sont des nombres qui peuvent avoir des décimales. Les nombres réels couvrent une large gamme de valeurs :<br /><br /> Valeurs négatives de -1.79E +308 à -2.23E -308<br /><br /> Zéro<br /><br /> Valeurs positives de 2.23E -308 à -1.79E +308<br /><br /> Toutefois, le nombre de bits significatifs est limité à 17 chiffres décimaux.|  
@@ -110,7 +108,7 @@ ms.lasthandoff: 11/17/2017
   
 |||  
 |-|-|  
-|Formule|Description|  
+|Formule| Description|  
 |`=TODAY()`|Insère la date du jour dans chaque ligne de la colonne.|  
 |`=3`|Insère la valeur 3 dans chaque ligne de la colonne.|  
 |`=[Column1] + [Column2]`|Ajoute les valeurs dans la même ligne de [Column1] et [Column2] et place les résultats dans la colonne calculée de la même ligne.|  
@@ -144,7 +142,7 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
   
  Cette formule contient les éléments suivants :  
   
-|Élément de formule|Description|  
+|Élément de formule| Description|  
 |---------------------|-----------------|  
 |`Days in Current Quarter:=`|Nom de la mesure.|  
 |`=`|Le signe égal (=) démarre la formule.|  
@@ -369,14 +367,14 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
   
  Le traitement et le recalcul n'ont aucun effet sur les formules de filtre de lignes à moins que le résultat d'un nouveau calcul retourne une valeur différente, ce qui rend la ligne interrogeable ou non interrogeable par les membres du rôle.  
   
- Pour plus d’informations, consultez [Traiter les données &#40;SSAS Tabulaire&#41;](../../analysis-services/tabular-models/process-data-ssas-tabular.md).  
+ Pour plus d’informations, consultez [traiter les données](../../analysis-services/tabular-models/process-data-ssas-tabular.md).  
   
 ##  <a name="bkmk_troubleshoot"></a> Résolution des erreurs dans les formules  
  Si vous obtenez une erreur lorsque vous définissez une formule, la formule peut contenir une *erreur syntaxique*, une *erreur sémantique*ou une *erreur de calcul*.  
   
  Les erreurs syntactiques sont les plus faciles à résoudre. Elles impliquent en général une virgule ou une parenthèse manquante. Pour obtenir de l’aide sur la syntaxe d’une fonction, consultez [Référence des fonctions DAX](http://msdn.microsoft.com/en-us/4dbb28a1-dd1a-4fca-bcd5-e90f74864a7b).  
   
- L'autre type d'erreur se produit lorsque la syntaxe est correcte, mais que la valeur ou la colonne référencée n'a pas de sens dans le contexte de la formule. De telles erreurs sémantiques et de calcul peuvent être provoquées par l'un des problèmes suivants :  
+ L'autre type d'erreur se produit lorsque la syntaxe est correcte, mais que la valeur ou la colonne référencée n'a pas de sens dans le contexte de la formule. De telles erreurs sémantiques et de calcul peuvent être provoquées par l'un des problèmes suivants :  
   
 -   La formule fait référence à une colonne, une table ou une fonction non existante.  
   
@@ -401,8 +399,8 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
  [Référence DAX (Data Analysis Expressions)](http://msdn.microsoft.com/en-us/70a82136-0926-4a91-bcb3-e18e82593b0d)   
  [Mesures](../../analysis-services/tabular-models/measures-ssas-tabular.md)   
  [Colonnes calculées](../../analysis-services/tabular-models/ssas-calculated-columns.md)   
- [Rôles](../../analysis-services/tabular-models/roles-ssas-tabular.md)   
- [Indicateurs de performance clés](../../analysis-services/tabular-models/kpis-ssas-tabular.md)   
+ [Roles](../../analysis-services/tabular-models/roles-ssas-tabular.md)   
+ [KPIs](../../analysis-services/tabular-models/kpis-ssas-tabular.md)   
  [Sources de données prises en charge](../../analysis-services/tabular-models/data-sources-supported-ssas-tabular.md)  
   
   

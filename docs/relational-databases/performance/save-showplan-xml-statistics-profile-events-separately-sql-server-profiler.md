@@ -2,9 +2,12 @@
 title: "Enregistrer les événements Showplan XML Statistics Profile séparément (SQL Server Profiler) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,59 +17,59 @@ helpviewer_keywords:
 - events [SQL Server], Showplan XML
 ms.assetid: df393f13-d538-4d94-8155-9c2fdf5f755d
 caps.latest.revision: "20"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 71d33fbb533d741acf02a1b3194d0c1905c2f3e2
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 6a3f8e743eabbd8e084aeb28e26ccaa548adb1ba
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="save-showplan-xml-statistics-profile-events-separately-sql-server-profiler"></a>Enregistrer les événements Showplan XML Statistics Profile séparément (SQL Server Profiler)
-  Cette rubrique décrit comment enregistrer dans des fichiers .SQLPlan séparés les événements **Showplan XML Statistics Profile** capturés dans les traces à l'aide du [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]. Vous pouvez ouvrir les fichiers des événements **Showplan XML Statistics Profile** dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], qui vous permet d'afficher le plan d'exécution graphique de chaque événement.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Cette rubrique décrit comment enregistrer dans des fichiers .SQLPlan séparés les événements **Showplan XML Statistics Profile** capturés dans les traces à l’aide de [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]. Vous pouvez ouvrir les fichiers des événements **Showplan XML Statistics Profile** dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], qui vous permet d’afficher le plan d’exécution graphique de chaque événement.  
   
-### <a name="to-save-showplan-xml-statistics-events-separately"></a>Pour enregistrer séparément les événements de statistiques XML du plan d'exécution  
+## <a name="save-showplan-xml-statistics-profile-events-separately"></a>Enregistrer séparément les événements Showplan XML Statistics Profile  
   
-1.  Dans le menu **Fichier** , cliquez sur **Nouvelle trace**, puis connectez-vous à une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+1. Dans le menu **Fichier**, sélectionnez **Nouvelle trace**, puis connectez-vous à une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
      La boîte de dialogue **Propriétés de la trace** s'affiche.  
   
     > [!NOTE]  
-    >  Si la case à cocher **Démarrer le suivi juste après avoir établi la connexion**est activée, la boîte de dialogue **Propriétés de la trace**ne s’affiche pas et la trace démarre. Pour désactiver ce paramètre, dans le menu **Outils**, cliquez sur **Options**et désactivez la case à cocher **Démarrer le suivi juste après avoir établi la connexion** .  
+    >  Si vous cochez l’option **Démarrer le suivi juste après avoir établi la connexion**, la boîte de dialogue **Propriétés de la trace** ne s’affiche pas et le suivi est lancé. Pour désactiver ce paramètre, dans le menu **Outils**, sélectionnez **Options**, puis décochez la case **Démarrer le suivi juste après avoir établi la connexion**.  
   
-2.  Dans la zone **Nom de la trace** de la boîte de dialogue **Propriétés de la trace** , entrez le nom de la trace.  
+2. Dans la zone **Nom de la trace** de la boîte de dialogue **Propriétés de la trace** , entrez le nom de la trace.  
   
-3.  Dans la liste **Utiliser le modèle** , sélectionnez un modèle sur lequel baser la trace ou sélectionnez **Vide** pour ne pas utiliser de modèle.  
+3. Dans la liste **Utiliser le modèle**, sélectionnez un modèle de trace sur lequel baser le suivi. Si vous ne souhaitez pas utiliser de modèle, sélectionnez **Vide**.  
   
-4.  Procédez de l'une des manières suivantes :  
+4. Procédez de l'une des manières suivantes :  
   
-    -   Cliquez sur**Enregistrer dans le fichier**pour capturer la trace dans un fichier. Spécifiez une valeur dans **Définir la taille de fichier maximale**.  
+    -   Pour capturer la trace dans un fichier, cochez la case **Enregistrer dans le fichier**. Spécifiez une valeur dans **Définir la taille de fichier maximale**.  
   
-         Éventuellement, sélectionnez **Activer la substitution de fichiers** et **Données de traces des processus serveur**.  
+         Au besoin, activez les cases à cocher **Activer la substitution de fichier** et **Le serveur traite les données de trace** . 
   
-    -   Cliquez sur**Enregistrer dans la table** pour capturer la trace dans une table de base de données.  
+    -   Pour capturer la trace dans une table de base de données, cochez la case **Enregistrer dans la table**.  
   
-         Éventuellement, spécifiez une valeur dans **Définir le nombre de lignes maximal**.  
+         Au besoin, sélectionnez **Définir le nombre de lignes maximal**, puis spécifiez une valeur.  
   
-5.  Éventuellement, activez la case à cocher **Activer l'heure d'arrêt de la trace** pour indiquer une date et une heure d'arrêt.  
+5. Le cas échéant, activez la case à cocher **Activer l'heure d'arrêt de la trace** et indiquez une date et une heure d'arrêt. 
   
-6.  Cliquez sur l’onglet **Sélection des événements**.  
+6. Sélectionnez l’onglet **Sélection des événements**.  
   
-7.  Dans la zone **Events**, développez la catégorie d’événements **Performances**, puis activez la case à cocher **Showplan XML Statistics Profile**. Si la catégorie d'événements **Performance** n'est pas visible, activez la case à cocher **Afficher tous les événements** pour l'afficher.  
+7. Dans la colonne de données **Événements**, développez la catégorie d’événements **Performances**, puis cochez la case **Showplan XML Statistics Profile**. Si la catégorie d’événements **Performances** n’est pas visible, cochez la case **Afficher tous les événements** pour l’afficher.  
   
-     La boîte de dialogue **Paramètres d’extraction des événements**est ajouté à la boîte de dialogue **Propriétés de la trace**.  
+     L’onglet **Paramètres d’extraction des événements** est ajouté à la boîte de dialogue **Propriétés de la trace**.  
   
-8.  Dans le menu **Paramètres d’extraction des événements**, cliquez sur **Enregistrer les événements Showplan XML séparément**.  
+8. Sous l’onglet **Paramètres d’extraction des événements**, sélectionnez **Enregistrer les événements Showplan XML séparément**.  
   
 9. Dans la boîte de dialogue **Enregistrer sous** , entrez le nom du fichier qui stocke les événements **Showplan XML Statistics Profile** .  
   
-10. Cliquez sur **Tous les traitements Showplan XML dans un seul fichier** pour enregistrer tous les événements **Showplan XML Statistics Profile** dans un même fichier XML ou sur **Chaque traitement Showplan XML dans un fichier différent**pour créer un nouveau fichier XML pour chaque événement **Showplan XML Statistics Profile** .  
+10. Sélectionnez **Tous les lots dans un seul fichier** pour enregistrer tous les événements **Showplan XML Statistics Profile** dans un même fichier XML. Sinon, vous pouvez sélectionner l’option **Chaque lot Showplan XML dans un fichier différent** afin de créer un fichier XML pour chaque événement **Showplan XML Statistics Profile**.  
   
-11. Pour afficher le fichier des événements **Showplan XML Statistics Profile** dans SQL Server Management Studio, dans le menu **Fichier** , pointez sur **Ouvrir**et cliquez sur **Fichier**. Placez-vous dans le répertoire où vous avez enregistré le ou les fichiers des événements **Showplan XML Statistics Profile** pour en sélectionner un et l'ouvrir. Les fichiers des événements**Showplan XML Statistics Profile** possèdent l'extension .SQLPlan.  
+11. Pour afficher le fichier des événements **Showplan XML Statistics Profile** dans SQL Server Management Studio, dans le menu **Fichier**, pointez sur **Ouvrir**, puis sélectionnez **Fichier**. Accédez au répertoire où vous avez enregistré le ou les fichiers des événements **Showplan XML Statistics Profile** pour en sélectionner un et l’ouvrir. Les fichiers des événements**Showplan XML Statistics Profile** possèdent l'extension .SQLPlan.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Analyser des requêtes avec des résultats SHOWPLAN dans SQL Server Profiler](../../tools/sql-server-profiler/analyze-queries-with-showplan-results-in-sql-server-profiler.md)  
+ [Analyser des requêtes avec des résultats Showplan dans SQL Server Profiler](../../tools/sql-server-profiler/analyze-queries-with-showplan-results-in-sql-server-profiler.md)  
   
   

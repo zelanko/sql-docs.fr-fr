@@ -8,13 +8,15 @@ ms.service:
 ms.component: t-sql|queries
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - OVER_TSQL
 - OVER
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - order of rowsets [SQL Server]
 - rowsets [SQL Server], windowing
@@ -25,16 +27,16 @@ helpviewer_keywords:
 - rowsets [SQL Server], ordering
 - OVER clause
 ms.assetid: ddcef3a6-0341-43e0-ae73-630484b7b398
-caps.latest.revision: "75"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 1c7a34974cfcae2d58f7dcaefaffc9bc09e148f3
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: 1144e82253c5e9d2988ec9ff4a8aa47bb3cb2fb1
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="select---over-clause-transact-sql"></a>Sélectionnez - sur la clause for (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -125,13 +127,13 @@ OVER ( [ PARTITION BY value_expression ] [ order_by_clause ] )
  Spécifie une colonne ou une expression dans lesquelles trier. *order_by_expression* ne peut faire référence à des colonnes rendues disponibles par la clause FROM. Un entier ne peut pas être spécifié pour représenter un nom de colonne ou un alias.  
   
  COLLATE *collation_name*  
- Spécifie que l’opération ORDER BY doit être effectuée en fonction du classement spécifié dans *collation_name*. *collation_name* peut être un nom de classement Windows ou un nom de classement SQL. Pour plus d’informations, consultez [Prise en charge d’Unicode et du classement](../../relational-databases/collations/collation-and-unicode-support.md). COLLATE est applicable uniquement aux colonnes de type **char**, **varchar**, **nchar**, et **nvarchar**.  
+ Spécifie que l’opération ORDER BY doit être effectuée en fonction du classement spécifié dans *collation_name*. *collation_name* peut être un nom de classement Windows ou un nom de classement SQL. Pour plus d’informations, consultez [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md). COLLATE est applicable uniquement aux colonnes de type **char**, **varchar**, **nchar**, et **nvarchar**.  
   
  **ASC** | DESC  
  Spécifie que les valeurs dans la colonne spécifiée doivent être triées par ordre croissant ou décroissant. ASC correspond à l'ordre de tri par défaut. Les valeurs NULL sont traitées comme les plus petites valeurs possibles.  
   
  ROWS | RANGE  
-**S'applique à**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. 
+**S'applique à**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. 
   
  Limite davantage les lignes dans la partition en spécifiant les points de départ et de terminaison dans la partition. Cette opération s'effectue en spécifiant une plage de lignes par rapport à la ligne actuelle par association logique ou association physique. L'association physique est réalisée en utilisant la clause ROWS.  
   
@@ -141,7 +143,7 @@ OVER ( [ PARTITION BY value_expression ] [ order_by_clause ] )
 >  ROWS ou RANGE requièrent que la clause ORDER BY soit spécifiée. Si ORDER BY contient plusieurs expressions d'ordre, CURRENT ROW FOR RANGE prend en compte toutes les colonnes dans la liste ORDER BY lors de la détermination de la ligne actuelle.  
   
  UNBOUNDED PRECEDING  
-**S'applique à**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+**S'applique à**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Spécifie que la fenêtre commence à la première ligne de la partition. UNBOUNDED PRECEDING peut être spécifié comme point de départ de la fenêtre.  
   
@@ -149,17 +151,17 @@ OVER ( [ PARTITION BY value_expression ] [ order_by_clause ] )
  Spécifié avec \<spécification de valeur non signée > pour indiquer le nombre de lignes ou valeurs qui précèdent la ligne actuelle. Cette spécification n'est pas autorisée pour RANGE.  
   
  CURRENT ROW  
-**S'applique à**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. 
+**S'applique à**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. 
   
  Spécifie que la fenêtre commence ou se termine à la ligne actuelle en cas d'utilisation avec ROWS ou à la valeur actuelle en cas de utilisation avec RANGE. CURRENT ROW peut être spécifié comme point de départ et de fin.  
   
  ENTRE \<limite de cadre de fenêtre > AND \<frame de fenêtre lié >  
-**S'applique à**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. 
+**S'applique à**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. 
   
  Utilisé avec ROWS ou RANGE pour spécifier les points limite inférieurs (départ) et supérieurs (fin) de la fenêtre. \<limite de cadre de fenêtre > définit la limite de point de départ et \<limite de cadre de fenêtre > définit le point de terminaison de limite. La limite supérieure ne peut pas être inférieure à la limite inférieure.  
   
  UNBOUNDED FOLLOWING  
-**S'applique à**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. 
+**S'applique à**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. 
   
  Spécifie que la fenêtre se termine à la dernière ligne de la partition. FOLLOWING UNBOUNDED peut être spécifié comme point de fin de fenêtre. Par exemple RANGE BETWEEN CURRENT ROW AND UNBOUNDED FOLLOWING définit une fenêtre qui commence par la ligne actuelle et se termine à la dernière ligne de la partition.  
   
@@ -167,7 +169,7 @@ OVER ( [ PARTITION BY value_expression ] [ order_by_clause ] )
  Spécifié avec \<spécification de valeur non signée > pour indiquer le nombre de lignes ou les valeurs qui suivent la ligne actuelle. Lorsque \<spécification de valeur non signée > est spécifié en tant que la fenêtre de point de départ suivant, le point de fin doit être \<spécification de valeur non signée > suivant. Par exemple, ROWS BETWEEN 2 FOLLOWING AND 10 FOLLOWING définit une fenêtre qui commence avec la deuxième ligne qui suit la ligne actuelle et se termine par la dixième ligne qui suit la ligne actuelle. Cette spécification n'est pas autorisée pour RANGE.  
   
  littéral entier non signé  
-**S'applique à**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+**S'applique à**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Est un littéral entier positif (comprenant 0) qui spécifie le nombre de lignes ou de valeurs qui précèdent ou suivent la ligne ou la valeur actuelle. Cette condition est valide uniquement pour ROWS.  
   
@@ -195,7 +197,7 @@ Si ROWS/RANGE est spécifié et \<frame de fenêtre précédent > est utilisé p
 ### <a name="a-using-the-over-clause-with-the-rownumber-function"></a>A. Utilisation de la clause OVER avec la fonction ROW_NUMBER  
  L'exemple suivant montre comment utiliser la clause OVER avec la fonction ROW_NUMBER pour afficher un numéro de ligne pour chaque ligne dans une partition. La clause ORDER BY spécifiée dans la clause OVER trie les lignes dans chaque partition par la colonne `SalesYTD`. La clause ORDER BY dans l'instruction SELECT détermine l'ordre dans lequel la totalité du jeu de résultats de la requête est retournée.  
   
-```t-sql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT ROW_NUMBER() OVER(PARTITION BY PostalCode ORDER BY SalesYTD DESC) AS "Row Number",   
@@ -235,7 +237,7 @@ GO
 ### <a name="b-using-the-over-clause-with-aggregate-functions"></a>B. Utilisation de la clause OVER avec des fonctions d'agrégation  
  L'exemple suivant utilise la clause `OVER` avec des fonctions d'agrégation sur toutes les lignes retournées par la requête. Dans cet exemple, l'utilisation de la clause `OVER` est plus efficace que l'utilisation de sous-requêtes pour dériver les valeurs d'agrégation.  
   
-```t-sql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT SalesOrderID, ProductID, OrderQty  
@@ -278,7 +280,7 @@ SalesOrderID ProductID   OrderQty Total       Avg         Count       Min    Max
   
  L'exemple suivant illustre l'utilisation de la clause `OVER` avec une fonction d'agrégation dans une valeur calculée.  
   
-```t-sql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT SalesOrderID, ProductID, OrderQty  
@@ -322,7 +324,7 @@ SalesOrderID ProductID   OrderQty Total       Percent by ProductID
 ### <a name="c-producing-a-moving-average-and-cumulative-total"></a>C. Production d'une moyenne mobile et d'un total cumulé  
  L'exemple suivant utilise les fonctions AVG et SUM avec la clause OVER pour fournir une moyenne mobile et un total cumulé des ventes annuelles pour chaque secteur dans la table `Sales.SalesPerson`. Les données sont partitionnées par `TerritoryID` et classées logiquement par `SalesYTD`. Cela signifie que la fonction AVG est calculée pour chaque secteur selon l'année de vente. Notez que pour `TerritoryID` 1, il y a deux lignes pour l'année 2005 représentant les deux vendeurs avec leurs ventes de l'année. Les ventes moyennes pour ces deux lignes sont calculées et la troisième ligne représentant les ventes de l'année 2006 est incluse dans le calcul.  
   
-```t-sql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT BusinessEntityID, TerritoryID   
@@ -361,7 +363,7 @@ BusinessEntityID TerritoryID SalesYear   SalesYTD             MovingAvg         
   
  Dans cet exemple, la clause OVER n'inclut pas PARTITION BY. Cela signifie que la fonction sera appliquée à toutes les lignes retournées par la requête. La clause ORDER BY spécifiée dans la clause OVER détermine l'ordre logique selon lequel la fonction AVG est appliquée. La requête retourne une moyenne mobile des ventes par année pour tous les secteurs de vente spécifiés dans la clause WHERE. La clause ORDER BY spécifiée dans l'instruction SELECT détermine l'ordre dans lequel les lignes de la requête sont affichées.  
   
-```t-sql  
+```sql  
 SELECT BusinessEntityID, TerritoryID   
    ,DATEPART(yy,ModifiedDate) AS SalesYear  
    ,CONVERT(varchar(20),SalesYTD,1) AS  SalesYTD  
@@ -394,11 +396,11 @@ BusinessEntityID TerritoryID SalesYear   SalesYTD             MovingAvg         
   
 ### <a name="d-specifying-the-rows-clause"></a>D. Spécification de la clause ROWS  
   
-**S'applique à**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+**S'applique à**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  L’exemple suivant utilise la clause ROWS pour définir une fenêtre sur laquelle les lignes sont calculées en tant que la ligne actuelle et la *N* nombre de lignes qui suivent (1 ligne dans cet exemple).  
   
-```t-sql  
+```sql  
 SELECT BusinessEntityID, TerritoryID   
     ,CONVERT(varchar(20),SalesYTD,1) AS  SalesYTD  
     ,DATEPART(yy,ModifiedDate) AS SalesYear  
@@ -428,7 +430,7 @@ BusinessEntityID TerritoryID SalesYTD             SalesYear   CumulativeTotal
   
  Dans l'exemple suivant, la clause ROWS est spécifiée avec UNBOUNDED PRECEDING. Le résultat est que la fenêtre commence à la première ligne de la partition.  
   
-```t-sql  
+```sql  
 SELECT BusinessEntityID, TerritoryID   
     ,CONVERT(varchar(20),SalesYTD,1) AS  SalesYTD  
     ,DATEPART(yy,ModifiedDate) AS SalesYear  
@@ -462,7 +464,7 @@ BusinessEntityID TerritoryID SalesYTD             SalesYear   CumulativeTotal
 ### <a name="e-using-the-over-clause-with-the-rownumber-function"></a>E. Utilisation de la clause OVER avec la fonction ROW_NUMBER  
  L’exemple suivant retourne le ROW_NUMBER de ventes des représentants en fonction de leur quota de ventes affecté.  
   
-```t-sql  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT ROW_NUMBER() OVER(ORDER BY SUM(SalesAmountQuota) DESC) AS RowNumber,  
@@ -489,7 +491,7 @@ GROUP BY LastName, FirstName;
 ### <a name="f-using-the-over-clause-with-aggregate-functions"></a>F. Utilisation de la clause OVER avec des fonctions d'agrégation  
  Les exemples suivants illustrent l’utilisation de la clause OVER avec des fonctions d’agrégation. Dans cet exemple, à l’aide de la clause OVER est plus efficace que l’utilisation de sous-requêtes.  
   
-```t-sql  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT SalesOrderNumber AS OrderNumber, ProductKey,   
@@ -521,7 +523,7 @@ ORDER BY SalesOrderNumber,ProductKey;
  
  L’exemple suivant illustre l’utilisation de la clause OVER avec une fonction d’agrégation dans une valeur calculée. Notez que les fonctions d’agrégation sont calculées par `SalesOrderNumber` et le pourcentage de la commande totale est calculé pour chaque ligne de chaque `SalesOrderNumber`.  
   
-```t-sql  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT SalesOrderNumber AS OrderNumber, ProductKey AS Product,   

@@ -1,33 +1,34 @@
 ---
 title: "Graphiques de compartimentage et en rayons de soleil dans SQL Server Reporting Services | Microsoft Docs"
-ms.custom: SQL2016_New_Updated
+ms.custom: 
 ms.date: 08/31/2015
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
-ms.technology: reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 12307c8f-bca7-4d21-8ad5-0c07d819865b
 caps.latest.revision: "17"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 50224e926c08951887a6423ab1c95eb7ac23a944
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 1dcafd7c259a88fd57022da4e72f9e3abeb077b1
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="treemap-and-sunburst-charts-in-reporting-services"></a>Graphiques de compartimentage et en rayons de soleil dans Reporting Services
-[!INCLUDE[feedback_stackoverflow_msdn_connect_md](../../includes/feedback-stackoverflow-msdn-connect-md.md)]
-
-Les visualisations sous la forme de graphiques de compartimentage et en rayons de soleil de SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] sont parfaites pour représenter visuellement des données hiérarchiques. Cet article présente une vue d’ensemble de l’ajout d’un graphique de compartimentage ou d’un graphique en rayons de soleil à un rapport [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Il inclut également un exemple de requête AdventureWorks pour vous aider à démarrer.  
+[!INCLUDE[feedback-stackoverflow-msdn-connect-md](../../includes/feedback-stackoverflow-msdn-connect-md.md)] Les visualisations sous la forme de graphiques de compartimentage et en rayons de soleil de SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] sont parfaites pour représenter visuellement des données hiérarchiques. Cet article présente une vue d’ensemble de l’ajout d’un graphique de compartimentage ou d’un graphique en rayons de soleil à un rapport [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Il inclut également un exemple de requête AdventureWorks pour vous aider à démarrer.  
   
 ##  <a name="bkmk_treemap_chart"></a> Graphique de compartimentage  
 
-Un graphique de compartimentage divise la zone de graphique en rectangles représentant les différents niveaux et tailles relatives de la hiérarchie de données. Le compartimentage ressemble à un arbre, avec un tronc, des branches et des ramifications de plus en plus petites. Chaque rectangle est subdivisé en rectangles plus petits représentant un niveau inférieur dans la hiérarchie. Les rectangles de niveau supérieur du graphique de compartimentage sont disposés avec le plus grand rectangle en haut à gauche du graphique et le plus petit en bas à droite.  À l’intérieur d’un rectangle, le niveau suivant dans la hiérarchie est également organisé en rectangles allant de l’angle supérieur gauche à l’angle inférieur droit.  
+Un graphique de compartimentage divise la zone de graphique en rectangles représentant les différents niveaux et tailles relatives de la hiérarchie de données. Le mappage ressemble à arbre, avec un tronc, des branches et des ramifications de plus en plus petites. Chaque rectangle est subdivisé en rectangles plus petits représentant un niveau inférieur dans la hiérarchie. Les rectangles de niveau supérieur du graphique de compartimentage sont disposés avec le plus grand rectangle en haut à gauche du graphique et le plus petit en bas à droite.  À l’intérieur d’un rectangle, le niveau suivant dans la hiérarchie est également organisé en rectangles allant de l’angle supérieur gauche à l’angle inférieur droit.  
 
 Par exemple, dans l’exemple de graphique de compartimentage suivant, le territoire « Southwest » est le plus grand et « Germany » le plus petit. Dans le territoire« Southwest », les « Road Bikes » sont plus importants que les « Mountain Bikes ».  
  
@@ -131,7 +132,7 @@ Dans un graphique en rayons de soleil, la hiérarchie est représentée par une 
   
     3.  Dans Type de connexion, sélectionnez **Microsoft SQL Server**.  
   
-    4.  Entrez la chaîne de connexion à votre serveur et à la base de données. Exemple :  
+    4.  Entrez la chaîne de connexion à votre serveur et à la base de données. Exemple :  
   
         ```  
         Data Source=[server name];Initial Catalog=AdventureWorks2016  

@@ -2,29 +2,34 @@
 title: Utiliser la fonction EVENTDATA | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: triggers
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-ddl
+ms.suite: sql
+ms.technology:
+- dbe-ddl
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - EVENTDATA function
 - DDL triggers, EVENTDATA function
 ms.assetid: 675b8320-9c73-4526-bd2f-91ba42c1b604
-caps.latest.revision: "38"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f657cb2a52bb4871baba4c2fa6c8b846590ab111
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 049d6eb85ebd1fcbbfecb1d64ec507979a0026f1
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="use-the-eventdata-function"></a>Utiliser la fonction EVENTDATA
-  Les informations sur un événement qui lance un déclencheur DDL sont capturées à l'aide de la fonction EVENTDATA. Cette fonction retourne une valeur **xml** . Le schéma XML inclut des informations sur les éléments suivants :  
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+Les informations sur un événement qui lance un déclencheur DDL sont capturées à l'aide de la fonction EVENTDATA. Cette fonction retourne une valeur **xml** . Le schéma XML inclut des informations sur les éléments suivants :  
   
 -   l'heure de l'événement ;  
   
@@ -87,7 +92,7 @@ ALTER TABLE Person.Address ALTER COLUMN ModifiedDate date;
   
  L’instruction EVENTDATA() du déclencheur DDL capture le texte de l’instruction `ALTER TABLE` qui n’est pas autorisé.  
   
-## <a name="example"></a>Exemple  
+## <a name="example"></a> Exemple  
  Vous pouvez utiliser la fonction EVENTDATA pour créer un journal des événements. Dans l'exemple suivant, une table est créée pour stocker des informations sur l'événement. Un déclencheur DDL est ensuite créé sur la base de données active qui remplit la table avec les informations ci-dessous, chaque fois qu'un événement DDL se produit au niveau de la base de données :  
   
 -   l'heure de l'événement (avec la fonction GETDATE) ;  
@@ -132,7 +137,7 @@ GO
   
  L'exemple de base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] fournit un exemple similaire de déclencheur DDL. Pour trouver cet exemple, accédez au dossier des déclencheurs de base de données à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Ce dossier se trouve dans le dossier **Programmabilité** de la base de données [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] . Cliquez avec le bouton droit sur **ddlDatabseTriggerLog** et sélectionnez **Générer un script du déclencheur de la base de données en tant que**. Par défaut, le déclencheur DDL **ddlDatabseTriggerLog** est désactivé.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Événements DDL](../../relational-databases/triggers/ddl-events.md)   
  [Groupes d'événements DDL](../../relational-databases/triggers/ddl-event-groups.md)  
   

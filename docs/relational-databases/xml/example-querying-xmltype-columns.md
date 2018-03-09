@@ -2,29 +2,35 @@
 title: "Exemple : interrogation de colonnes de type XML | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: xml
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-xml
+ms.suite: sql
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: RAW mode, querying XML example
+helpviewer_keywords:
+- RAW mode, querying XML example
 ms.assetid: d9f3710d-7a2e-4abe-9c02-3e3c0df4d620
-caps.latest.revision: "10"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3c2e270a167d9b9c9f4a223ebd8cbd1fb268d57a
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 6b6c9252d91320b5aece66a4352a74324d04b917
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="example-querying-xmltype-columns"></a>Exemple: interrogation de colonnes de type XML
-  La requête ci-dessous inclut des colonnes de type **xml** . Elle extrait l’ID de modèle de produit, le nom et les étapes de fabrication dans le premier emplacement à partir de la colonne `Instructions` de type **xml** .  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+La requête ci-dessous inclut des colonnes de type **xml** . Elle extrait l’ID de modèle de produit, le nom et les étapes de fabrication dans le premier emplacement à partir de la colonne `Instructions` de type **xml** .  
   
-## <a name="example"></a>Exemple  
+## <a name="example"></a> Exemple  
   
 ```  
 USE AdventureWorks2012;  
@@ -93,7 +99,7 @@ FOR XML RAW ('ProductModelData'), root('MyRoot'), ELEMENTS XSINIL
 go  
 ```  
   
- Voici le résultat obtenu :  
+ Voici le résultat obtenu :  
   
 ```  
 <MyRoot xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
@@ -115,7 +121,7 @@ go
 </MyRoot>  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Utiliser le mode RAW avec FOR XML](../../relational-databases/xml/use-raw-mode-with-for-xml.md)  
   
   

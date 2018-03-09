@@ -2,30 +2,36 @@
 title: "Déclencheurs de connexion | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: triggers
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - logon triggers
 - login triggers
-helpviewer_keywords: triggers [SQL Server], logon
+helpviewer_keywords:
+- triggers [SQL Server], logon
 ms.assetid: 2f0ebb2f-de10-482d-9806-1a5de5b312b8
-caps.latest.revision: "13"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: e3176031068ca2c60b678bde49a306bda1e7c31d
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 123a1456150d99f47b6f524d76f0afa0d79ba86b
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="logon-triggers"></a>Déclencheurs de connexion
-  Les déclencheurs de connexion lancent des procédures stockées en réponse à un événement LOGON. Cet événement est déclenché lorsqu'une session utilisateur est établie avec une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Les déclencheurs de connexion sont activés au terme de la phase d'authentification de connexion mais avant l'établissement de la session utilisateur. Par conséquent, tous les messages provenant du corps du déclencheur et habituellement destinés à l'utilisateur, (les messages et les messages d'erreur de l'instruction PRINT, par exemple), sont dirigés vers le journal des erreurs [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Les déclencheurs de connexion ne sont pas activés si l'authentification échoue.  
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+Les déclencheurs de connexion lancent des procédures stockées en réponse à un événement LOGON. Cet événement est déclenché lorsqu'une session utilisateur est établie avec une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Les déclencheurs de connexion sont activés au terme de la phase d'authentification de connexion mais avant l'établissement de la session utilisateur. Par conséquent, tous les messages provenant du corps du déclencheur et habituellement destinés à l'utilisateur, (les messages et les messages d'erreur de l'instruction PRINT, par exemple), sont dirigés vers le journal des erreurs [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Les déclencheurs de connexion ne sont pas activés si l'authentification échoue.  
   
  Vous pouvez faire appel aux déclencheurs de connexion pour auditer et contrôler les sessions de serveur en effectuant, par exemple, le suivi de l'activité de connexion, en restreignant les connexions à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ou en limitant le nombre des sessions pour une connexion spécifique. Par exemple, dans le code suivant, le déclencheur de connexion refuse une tentative de connexion à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] initiée par la connexion *login_test* si trois sessions utilisateur ont déjà été créées par cette connexion.  
   
@@ -73,7 +79,7 @@ END;
 ## <a name="disabling-a-logon-trigger"></a>Désactivation d'un déclencheur de connexion  
  Un déclencheur de connexion peut empêcher les connexions au [!INCLUDE[ssDE](../../includes/ssde-md.md)] pour tous les utilisateurs, notamment les membres du rôle serveur fixe **sysadmin** . Quand un déclencheur de connexion empêche les connexions, les membres du rôle serveur fixe **sysadmin** peuvent se connecter à l’aide de la connexion administrateur dédiée, ou en démarrant le [!INCLUDE[ssDE](../../includes/ssde-md.md)] en mode de configuration minimale (-f). Pour plus d’informations, consultez [Options de démarrage du service moteur de base de données](../../database-engine/configure-windows/database-engine-service-startup-options.md).  
   
-## <a name="related-tasks"></a>Tâches associées  
+## <a name="related-tasks"></a>Related Tasks  
   
 |Tâche|Rubrique|  
 |----------|-----------|  
@@ -83,7 +89,7 @@ END;
 |Décrit comment retourner des informations sur les déclencheurs de connexion.|[sys.server_triggers &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-triggers-transact-sql.md)<br /><br /> [sys.server_trigger_events &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-trigger-events-transact-sql.md)|  
 |Décrit comment capturer les données d'événement de déclencheur de connexion.||  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Déclencheurs DDL](../../relational-databases/triggers/ddl-triggers.md)  
   
   

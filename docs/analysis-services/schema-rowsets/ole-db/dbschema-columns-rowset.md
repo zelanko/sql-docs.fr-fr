@@ -2,15 +2,13 @@
 title: Ensemble de lignes DBSCHEMA_COLUMNS | Documents Microsoft
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: schema-rowsets
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: DBSCHEMA_COLUMNS
@@ -23,19 +21,19 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ce502f05dbbb701f694f4699f2867b92c0b3158c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 32df882f6f6b34c4cd5049713240460c62324ddb
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="dbschemacolumns-rowset"></a>Ensemble de lignes DBSCHEMA_COLUMNS
-  Fournit des informations de colonne pour toutes les colonnes qui répondent aux critères de restriction indiqués.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Fournit des informations de colonne pour toutes les colonnes correspondant aux critères de restriction fournie.  
   
 ## <a name="rowset-columns"></a>Colonnes de l'ensemble de lignes  
  Le **DBSCHEMA_COLUMNS** ensemble de lignes contient les colonnes suivantes.  
   
-|Nom de colonne|Indicateur de type|Longueur| Description|  
+|Nom de colonne|Indicateur de type|Longueur|Description|  
 |-----------------|--------------------|------------|-----------------|  
 |**TABLE_CATALOG**|**DBTYPE_WSTR**||Nom de la base de données.|  
 |**TABLE_SCHEMA**|**DBTYPE_WSTR**||Non pris en charge.|  

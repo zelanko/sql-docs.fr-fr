@@ -3,8 +3,11 @@ title: "Enregistrer, boîte de dialogue (Visual Database Tools) | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,16 +18,16 @@ ms.assetid: 2db60e24-79b5-4943-8891-f1684e16ce3d
 caps.latest.revision: "3"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4a568b3dae2f510365d1db4a838ae58a02eb177a
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 79e9dee7e2e1bdd2dd36e5e826a3a8d8455904fb
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="save-dialog-box-visual-database-tools"></a>Enregistrer, boîte de dialogue (Visual Database Tools)
-S'affiche lorsque vous enregistrez votre travail dans le Concepteur de tables et qu'il affecte d'autres tables. Cette boîte de dialogue vous permet de confirmer les tables qui seront sauvegardées.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] S’affiche quand vous enregistrez votre travail dans le Concepteur de tables et qu’il affecte d’autres tables. Cette boîte de dialogue vous permet de confirmer les tables qui seront sauvegardées.  
   
 > [!NOTE]  
 > Les modifications que vous apportez à une table dans le Concepteur de tables ne sont pas validées dans la base de données aussi longtemps que vous n'avez pas enregistré la table. Une fois la table enregistrée, vous ne pouvez pas annuler les modifications. Pour abandonner les modifications non enregistrées, fermez toutes les tables ouvertes sans les enregistrer.  
@@ -36,6 +39,6 @@ Vérifie si cette boîte de dialogue apparaît au prochain enregistrement des ta
 **Enregistrer comme fichier texte**  
 Affiche la boîte de dialogue **Enregistrer sous** , vous demandant de spécifier un emplacement d’enregistrement pour un fichier texte énumérant les tables. Ce fichier fournit la liste des tables affectées par vos modifications.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [Concevoir des tables &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/design-tables-visual-database-tools.md)  
   

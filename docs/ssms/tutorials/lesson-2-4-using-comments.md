@@ -2,27 +2,31 @@
 title: Utilisation de commentaires | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-tutorial
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to: SQL Server 2016
 ms.assetid: 0e9e6eab-0343-4840-9690-1736552ce371
 caps.latest.revision: "28"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 0dc4641b0c397bcd57e64df629bab0d9bbc217af
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 2ae1735f3e81b64a23a671433f43f2370eaaa80e
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="lesson-2-4---using-comments"></a>Leçon 2-4 - Utilisation de commentaires
-[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] permet de mettre facilement en commentaire une partie d'un script.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] permet de mettre facilement en commentaire une partie d’un script.  
   
 ## <a name="commenting-out-part-of-a-script"></a>Mise en commentaire d'une partie de script  
   

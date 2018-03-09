@@ -2,9 +2,12 @@
 title: "Déployer une base de données à l’aide d’une DAC | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: data-tier-applications
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-data-tier-apps
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -19,18 +22,18 @@ helpviewer_keywords:
 - database deploy [SQL Server]
 ms.assetid: 08c506e8-4ba0-4a19-a066-6e6a5c420539
 caps.latest.revision: "12"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e9717734b42a35703da2323c6eabac6719203494
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 110cea8f6a219fad5121e88a19ed5608b2afcb59
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="deploy-a-database-by-using-a-dac"></a>Déployer une base de données à l'aide d'une DAC
-  Utilisez l’Assistant **Déploiement de base de données dans SQL Azure** pour déployer une base de données entre une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)] et un serveur [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] , ou entre deux serveurs [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)].  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Utilisez **l’Assistant Déploiement de base de données dans SQL Azure** pour déployer une base de données entre une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)] et un serveur [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)], ou entre deux serveurs [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)].  
   
 ##  <a name="BeforeBegin"></a> Avant de commencer  
  L'Assistant utilise un fichier d'archive d'application de la couche Données (DAC) BACPAC pour déployer les données et les définitions des objets de base de données. Il effectue une opération d'exportation DAC de la base de données source, et une importation DAC vers la destination.  
@@ -54,7 +57,7 @@ ms.lasthandoff: 11/09/2017
  Une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)] doit exécuter [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 4 (SP4) ou version ultérieure pour fonctionner avec l'Assistant. Si une base de données sur une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)] contient des objets qui ne sont pas pris en charge sur [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)], vous ne pouvez pas utiliser l'Assistant pour déployer la base de données dans [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]. Si une base de données sur [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] contient des objets qui ne sont pas pris en charge par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vous ne pouvez pas utiliser l'Assistant pour déployer la base de données sur des instances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ###  <a name="Security"></a> Sécurité  
- Pour améliorer la sécurité, les connexions d'authentification SQL Server sont stockées dans un fichier DAC BACPAC sans mot de passe. Lorsque le fichier BACPAC est importé, la connexion est créée en tant que connexion désactivée avec un mot de passe généré. Pour activer les connexions, connectez-vous à l'aide d'une connexion qui possède l'autorisation ALTER ANY LOGIN et utilisez ALTER LOGIN pour activer la connexion et affecter un nouveau mot de passe pouvant être communiqué à l'utilisateur. Cela n'est pas nécessaire pour les connexions d'authentification Windows car leurs mots de passe ne sont pas gérés par SQL Server.  
+ Pour améliorer la sécurité, les connexions d'authentification SQL Server sont stockées dans un fichier DAC BACPAC sans mot de passe. Lorsque le fichier BACPAC est importé, la connexion est créée en tant que connexion désactivée avec un mot de passe généré. Pour activer les connexions, connectez-vous à l'aide d'une connexion qui possède l'autorisation ALTER ANY LOGIN et utilisez ALTER LOGIN pour activer la connexion et affecter un nouveau mot de passe pouvant être communiqué à l'utilisateur. Cela n'est pas nécessaire pour les connexions d'authentification Windows car leurs mots de passe ne sont pas gérés par SQL Server.  
   
 #### <a name="permissions"></a>Autorisations  
  L'Assistant a besoin d'autorisations d'exportation DAC dans la base de données source. La connexion nécessite au minimum des autorisations ALTER ANY LOGIN et VIEW DEFINITION de la portée de la base de données, ainsi que des autorisations SELECT sur **sys.sql_expression_dependencies**. L'exportation d'une DAC peut être réalisée par les membres du rôle serveur fixe securityadmin également membres du rôle de base de données fixe database_owner dans la base de données à partir de laquelle est extraite la DAC. Les membres du rôle serveur fixe sysadmin ou le compte d’administrateur système intégré de SQL Server nommé **sa** peuvent également exporter une DAC.  
@@ -142,7 +145,7 @@ ms.lasthandoff: 11/09/2017
   
 6.  Utilisez la méthode **Import** de type **Microsoft.SqlServer.Management.Dac.DacStore** pour importer le fichier BACPAC. Spécifiez le fichier BACPAC créé par l'exportation.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Applications de la couche Données](../../relational-databases/data-tier-applications/data-tier-applications.md)   
  [Exporter une application de la couche Données](../../relational-databases/data-tier-applications/export-a-data-tier-application.md)   
  [Importer un fichier BACPAC pour créer une nouvelle base de données utilisateur](../../relational-databases/data-tier-applications/import-a-bacpac-file-to-create-a-new-user-database.md)  

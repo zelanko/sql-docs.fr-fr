@@ -2,27 +2,33 @@
 title: "Exemple : extraction d’informations sur les employés | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: xml
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-xml
+ms.suite: sql
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: EXPLICIT mode
+helpviewer_keywords:
+- EXPLICIT mode
 ms.assetid: 63cd6569-2600-485b-92b4-1f6ba09db219
-caps.latest.revision: "9"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cf27c767ea76c1577ac3c0e12dd1195c9ed34969
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: c3c7b4150738ac5dbf878014004c3bda20092e33
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="example-retrieving-employee-information"></a>Exemple : extraction d'informations sur les employés
-  Cet exemple extrait un ID et un nom pour chaque employé. Dans la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] , les ID des employés se trouvent dans la colonne BusinessEntityID de la table Employee. Les noms des employés figurent dans la table Person. La colonne BusinessEntityID peut être utilisée pour joindre les tables.  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+Cet exemple extrait un ID et un nom pour chaque employé. Dans la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] , les ID des employés se trouvent dans la colonne BusinessEntityID de la table Employee. Les noms des employés figurent dans la table Person. La colonne BusinessEntityID peut être utilisée pour joindre les tables.  
   
  Supposons que vous souhaitez générer un document XML à l'aide de la transformation FOR XML EXPLICIT comme suit :  
   
@@ -85,7 +91,7 @@ ORDER BY [Employee!1!EmpID],[Name!2!FName]
 FOR XML EXPLICIT;  
 ```  
   
- Voici le résultat partiel :  
+ Voici le résultat partiel :  
   
  `<Employee EmpID="1">`  
   
@@ -131,7 +137,7 @@ FOR XML EXPLICIT;
   
  Ce processus est répété pour le reste des lignes de l'ensemble de lignes. Notez l'importance du tri des lignes dans la table universelle pour que FOR XML EXPLICIT puisse traiter l'ensemble de lignes dans l'ordre et générer le document XML souhaité.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Utiliser le mode EXPLICIT avec FOR XML](../../relational-databases/xml/use-explicit-mode-with-for-xml.md)  
   
   

@@ -1,14 +1,15 @@
 ---
 title: "CRÉER des statistiques (Transact-SQL) | Documents Microsoft"
 ms.custom: 
-ms.date: 08/10/2017
+ms.date: 01/04/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: 
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,7 +17,8 @@ f1_keywords:
 - STATISTICS_TSQL
 - CREATE STATISTICS
 - CREATE_STATISTICS_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - query optimization statistics [SQL Server], creating
 - indexed views [SQL Server], statistics
@@ -26,16 +28,16 @@ helpviewer_keywords:
 - creating statistics [SQL Server]
 - NORECOMPUTE clause
 ms.assetid: b23e2f6b-076c-4e6d-9281-764bdb616ad2
-caps.latest.revision: "105"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 3e1f234dc76b6b231fc3f1d0f258937e70035a65
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.openlocfilehash: 088b79e73be6258afc5c664aaf14ba3cad9d2f5f
+ms.sourcegitcommit: 4aeedbb88c60a4b035a49754eff48128714ad290
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="create-statistics-transact-sql"></a>CREATE STATISTICS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -65,9 +67,10 @@ ON { table_or_indexed_view_name } ( column [ ,...n ] )
             [ [ , ] PERSIST_SAMPLE_PERCENT = { ON | OFF } ]    
           | SAMPLE number { PERCENT | ROWS }   
             [ [ , ] PERSIST_SAMPLE_PERCENT = { ON | OFF } ]    
-          | STATS_STREAM = stats_stream ] ]   
+          | <update_stats_stream_option> [ ,...n ]    
         [ [ , ] NORECOMPUTE ]   
-        [ [ , ] INCREMENTAL = { ON | OFF } ]  
+        [ [ , ] INCREMENTAL = { ON | OFF } ] 
+        [ [ , ] MAXDOP = max_degree_of_parallelism ]
     ] ;  
   
 <filter_predicate> ::=   
@@ -84,6 +87,11 @@ ON { table_or_indexed_view_name } ( column [ ,...n ] )
   
 <comparison_op> ::=  
     IS | IS NOT | = | <> | != | > | >= | !> | < | <= | !<  
+    
+<update_stats_stream_option> ::=  
+    [ STATS_STREAM = stats_stream ]  
+    [ ROWCOUNT = numeric_constant ]  
+    [ PAGECOUNT = numeric_contant ] 
 ```  
   
 ```  
@@ -138,11 +146,11 @@ CREATE STATISTICS statistics_name
   
  Voici quelques exemples de prédicats de filtre pour la table Production.BillOfMaterials :  
   
- `WHERE StartDate > '20000101' AND EndDate <= '20000630'`  
+ * `WHERE StartDate > '20000101' AND EndDate <= '20000630'`  
   
- `WHERE ComponentID IN (533, 324, 753)`  
+ * `WHERE ComponentID IN (533, 324, 753)`  
   
- `WHERE StartDate IN ('20000404', '20000905') AND EndDate IS NOT NULL`  
+ * `WHERE StartDate IN ('20000404', '20000905') AND EndDate IS NOT NULL`  
   
  Pour plus d’informations sur les prédicats de filtre, consultez [Create Filtered Indexes](../../relational-databases/indexes/create-filtered-indexes.md).  
   
@@ -184,28 +192,38 @@ CREATE STATISTICS statistics_name
  Si les statistiques par partition ne sont pas prises en charge, une erreur est générée. Les statistiques incrémentielles ne sont pas prises en charge pour les types de statistiques suivants :  
   
 -   statistiques créées avec des index qui ne sont pas alignés sur les partitions avec la table de base ;  
-  
 -   statistiques créées sur les bases de données secondaires lisibles Always On ;  
-  
 -   statistiques créées sur les bases de données en lecture seule ;  
-  
 -   statistiques créées sur les index filtrés ;  
-  
 -   statistiques créées sur les vues ;  
-  
 -   statistiques créées sur les tables internes ;  
-  
 -   Statistiques créées avec les index spatiaux ou les index XML.  
   
-**S'applique à**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] et [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+**S'applique à**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
-## <a name="permissions"></a>Permissions  
+MAXDOP = *max_degree_of_parallelism*  
+**S’applique aux**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (en commençant par [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3).  
+  
+ Remplace le **degré maximal de parallélisme** option de configuration pour la durée de l’opération de statistiques. Pour plus d’informations, consultez [Configurer l’option de configuration du serveur max degree of parallelism](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md). Utilisez MAXDOP pour limiter le nombre de processeurs utilisés dans une exécution de plan parallèle. Le nombre maximal de processeurs est égal à 64.  
+  
+ *max_degree_of_parallelism* peut être :  
+  
+  1  
+ Supprime la création de plans parallèles.  
+  
+ \>1  
+ Limite le nombre maximal de processeurs utilisés dans une opération de statistiques parallèle pour le nombre spécifié ou inférieur en fonction de la charge système actuelle.  
+  
+ 0 (valeur par défaut)  
+ Utilise le nombre réel de processeurs ou un nombre de processeurs inférieur en fonction de la charge de travail actuelle du système.  
+  
+ \<update_stats_stream_option >[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
+
+## <a name="permissions"></a>Autorisations  
  Requiert l’une de ces autorisations :  
   
 -   ALTER TABLE  
-  
 -   L’utilisateur est propriétaire de la table  
-  
 -   L’appartenance à la **db_ddladmin** rôle de base de données fixe  
   
 ## <a name="general-remarks"></a>Remarques d'ordre général  
@@ -224,8 +242,9 @@ CREATE STATISTICS statistics_name
  Le [sys.sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md) affichage catalogue effectue le suivi de chaque colonne dans le prédicat de statistiques filtrées en tant que dépendance de référence. Réfléchissez aux opérations que vous effectuez sur les colonnes de table avant de créer des statistiques filtrées car vous ne pouvez pas supprimer, renommer, ni modifier la définition d'une colonne de table qui est définie dans un prédicat de statistiques filtrées.  
   
 ## <a name="limitations-and-restrictions"></a>Limitations et restrictions  
-*  Mise à jour des statistiques n’est pas pris en charge sur les tables externes. Pour mettre à jour des statistiques sur une table externe, supprimez et recréez les statistiques.  
-*  Vous pouvez répertorier jusqu'à 64 colonnes par objet de statistiques.
+* Mise à jour des statistiques n’est pas pris en charge sur les tables externes. Pour mettre à jour des statistiques sur une table externe, supprimez et recréez les statistiques.  
+* Vous pouvez répertorier jusqu'à 64 colonnes par objet de statistiques.
+* L’option MAXDOP n’est pas compatible avec les options STATS_STREAM, nombre de lignes et PAGECOUNT.
   
 ## <a name="examples"></a>Exemples  
 
@@ -234,7 +253,7 @@ CREATE STATISTICS statistics_name
 ### <a name="a-using-create-statistics-with-sample-number-percent"></a>A. Utilisation de CREATE STATISTICS avec SAMPLE number PERCENT  
  L'exemple suivant crée les statistiques `ContactMail1`, à l'aide d'un exemple aléatoire de 5 pour cent des colonnes `BusinessEntityID` et `EmailPromotion` de la table `Contact` de la base de données [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
   
-```t-sql  
+```sql  
 CREATE STATISTICS ContactMail1  
     ON Person.Person (BusinessEntityID, EmailPromotion)  
     WITH SAMPLE 5 PERCENT;  
@@ -243,7 +262,7 @@ CREATE STATISTICS ContactMail1
 ### <a name="b-using-create-statistics-with-fullscan-and-norecompute"></a>B. Utilisation de CREATE STATISTICS avec FULLSCAN et NORECOMPUTE  
  L'exemple suivant crée les statistiques `ContactMail2` pour toutes les lignes des colonnes `BusinessEntityID` et `EmailPromotion` de la table `Contact` et désactive le recalcul automatique des statistiques.  
   
-```t-sql  
+```sql  
 CREATE STATISTICS NamePurchase  
     ON AdventureWorks2012.Person.Person (BusinessEntityID, EmailPromotion)  
     WITH FULLSCAN, NORECOMPUTE;  
@@ -252,7 +271,7 @@ CREATE STATISTICS NamePurchase
 ### <a name="c-using-create-statistics-to-create-filtered-statistics"></a>C. Utilisation de CREATE STATISTICS pour créer des statistiques filtrées  
  L'exemple suivant crée les statistiques filtrées `ContactPromotion1`. Le [!INCLUDE[ssDE](../../includes/ssde-md.md)] échantillonne 50 pour cent des données, puis sélectionne toutes les lignes pour lesquelles `EmailPromotion` est égal à 2.  
   
-```t-sql  
+```sql  
 CREATE STATISTICS ContactPromotion1  
     ON Person.Person (BusinessEntityID, LastName, EmailPromotion)  
 WHERE EmailPromotion = 2  
@@ -265,7 +284,7 @@ GO
   
  Étant donné que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] importe des données à partir de la table externe dans une table temporaire pour créer des statistiques, l’option d’analyse complète prendra beaucoup plus de temps. Pour une table volumineuse, la méthode d’échantillonnage par défaut est généralement suffisante.  
   
-```t-sql  
+```sql  
 --Create statistics on an external table and use default sampling.  
 CREATE STATISTICS CustomerStats1 ON DimCustomer (CustomerKey, EmailAddress);  
   
@@ -276,7 +295,7 @@ CREATE STATISTICS CustomerStats1 ON DimCustomer (CustomerKey, EmailAddress) WITH
 ### <a name="e-using-create-statistics-with-fullscan-and-persistsamplepercent"></a>E. Utilisation de CREATE STATISTICS avec FULLSCAN et PERSIST_SAMPLE_PERCENT  
  L’exemple suivant crée la `ContactMail2` des statistiques pour toutes les lignes de la `BusinessEntityID` et `EmailPromotion` les colonnes de la `Contact` de table et définit le pourcentage d’échantillonnage de 100 pour cent pour toutes les mises à jour ultérieures qui n'effectuent pas explicitement spécifient un pourcentage d’échantillonnage.  
   
-```t-sql  
+```sql  
 CREATE STATISTICS NamePurchase  
     ON AdventureWorks2012.Person.Person (BusinessEntityID, EmailPromotion)  
     WITH FULLSCAN, PERSIST_SAMPLE_PERCENT = ON;  
@@ -287,14 +306,14 @@ CREATE STATISTICS NamePurchase
 ### <a name="f-create-statistics-on-two-columns"></a>F. Créer des statistiques sur les deux colonnes  
  L’exemple suivant crée la `CustomerStats1` des statistiques, en fonction de la `CustomerKey` et `EmailAddress` les colonnes de la `DimCustomer` table. Les statistiques sont créées d’après un échantillon statistiquement significatif des lignes dans la `Customer` table.  
   
-```t-sql  
+```sql  
 CREATE STATISTICS CustomerStats1 ON DimCustomer (CustomerKey, EmailAddress);  
 ```  
   
 ### <a name="g-create-statistics-by-using-a-full-scan"></a>G. Créer des statistiques à l’aide d’une analyse complète  
  L’exemple suivant crée la `CustomerStatsFullScan` des statistiques, en fonction de l’analyse de toutes les lignes dans la `DimCustomer` table.  
   
-```t-sql  
+```sql  
 CREATE STATISTICS CustomerStatsFullScan 
 ON DimCustomer (CustomerKey, EmailAddress) WITH FULLSCAN;  
 ```  
@@ -302,7 +321,7 @@ ON DimCustomer (CustomerKey, EmailAddress) WITH FULLSCAN;
 ### <a name="h-create-statistics-by-specifying-the-sample-percentage"></a>H. Créer des statistiques en spécifiant le pourcentage d’échantillonnage  
  L’exemple suivant crée la `CustomerStatsSampleScan` des statistiques, en fonction de l’analyse de 50 pour cent des lignes dans la `DimCustomer` table.  
   
-```t-sql  
+```sql  
 CREATE STATISTICS CustomerStatsSampleScan 
 ON DimCustomer (CustomerKey, EmailAddress) WITH SAMPLE 50 PERCENT;  
 ```  

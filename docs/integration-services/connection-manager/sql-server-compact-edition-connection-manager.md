@@ -1,5 +1,5 @@
 ---
-title: Gestionnaire de connexions SQL Server Compact Edition | Documents Microsoft
+title: Gestionnaire de connexions de SQL Server Compact Edition | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -20,17 +20,16 @@ helpviewer_keywords:
 - connections [Integration Services], SQL Server Compact
 - connection managers [Integration Services], SQL Server Compact
 ms.assetid: ba627d4d-41f4-49fc-a921-f534cde67770
-caps.latest.revision: 33
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 8397673c7ed9dfe8ae02871f9077ed7286e49863
-ms.openlocfilehash: 6b3f09dad60239f595aaae0cac0162283d84430d
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 52662ac737fe33d151a423f8fa34feec7013e2dd
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="sql-server-compact-edition-connection-manager"></a>Gestionnaire de connexions de SQL Server Compact Edition
   Un gestionnaire de connexions [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact permet à un package de se connecter à une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact. La destination [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact incluse dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] utilise ce gestionnaire de connexions pour charger des données dans une table d’une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact.  
@@ -53,7 +52,7 @@ ms.lasthandoff: 08/09/2017
   
 -   Indiquez si la connexion créée à partir du gestionnaire de connexions est conservée au moment de l'exécution.  
   
- Vous pouvez définir des propriétés au moyen du concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] ou par programmation.  
+ Vous pouvez définir les propriétés par le biais du concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] ou par programmation.  
   
  Pour plus d’informations sur la configuration d’un gestionnaire de connexions par programmation, consultez <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> et [Ajout de connexions par programme](../../integration-services/building-packages-programmatically/adding-connections-programmatically.md).  
   
@@ -66,7 +65,7 @@ ms.lasthandoff: 08/09/2017
  **Nom et chemin d'accès au fichier de la base de données**  
  Entrez le chemin et le nom de fichier de la base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact.  
   
- **Parcourir**  
+ **...**  
  Recherchez le fichier de base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact souhaité à l’aide de la boîte de dialogue **Sélectionner la base de données SQL Server Compact Edition** .  
   
  **Mot de passe de la base de données**  
@@ -104,7 +103,7 @@ ms.lasthandoff: 08/09/2017
   
  L'option Mode comporte quatre valeurs, qui sont décrites dans le tableau suivant.  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |**Lecture seule**|Offre un accès en lecture seule à la base de données.|  
 |**Read Write**|Autorise l'accès en lecture et écriture à la base de données.|  
@@ -123,4 +122,3 @@ ms.lasthandoff: 08/09/2017
  **Mot de passe**  
  Entrez le mot de passe pour la base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact.  
   
-

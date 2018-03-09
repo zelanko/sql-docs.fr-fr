@@ -2,38 +2,35 @@
 title: "Après installation de Configuration (Analysis Services) | Documents Microsoft"
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: instances
+ms.component: data-mining - "setup-install"
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
-- setup-install
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 ms.assetid: 7f4417b2-0efb-4361-a79e-fa56e43ee054
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: a87a4995e5b7776012e81f9cf908949dbc9339a3
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 92eb00cbcfbc07ebb8b55445a246c1df04c06feb
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="post-install-configuration-analysis-services"></a>Configuration consécutive à l'installation (Analysis Services)
-  Après avoir installé Analysis Services, des tâches de configuration supplémentaires sont requises pour rendre le serveur complètement opérationnel et disponible en vue d'une utilisation générale. Cette section présente les autres tâches qui complètent l'installation. Selon les exigences en matière de connexion, vous devrez peut-être aussi configurer l’authentification (consultez [Se connecter à Analysis Services](../../analysis-services/instances/connect-to-analysis-services.md)).  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Après avoir installé Analysis Services, des tâches de configuration supplémentaires sont requises pour rendre le serveur complètement opérationnel et disponible en vue d'une utilisation générale. Cette section présente les autres tâches qui complètent l'installation. Selon les exigences en matière de connexion, vous devrez peut-être aussi configurer l’authentification (consultez [Se connecter à Analysis Services](../../analysis-services/instances/connect-to-analysis-services.md)).  
   
- Plus tard, des étapes supplémentaires devront être réalisées une fois que vous aurez des bases de données prêtes à déployer. Vous devrez notamment configurer les appartenances au rôle sur la base de données afin d'accorder à l'utilisateur l'accès aux données, concevoir une stratégie de sauvegarde et de restauration des bases de données et déterminer si vous avez besoin d'une charge de travail de traitement planifiée afin que les données soient actualisées à intervalles réguliers. Pour plus d’informations sur le déploiement et l’administration des bases de données, consultez ces liens : [Bases de données de modèle multidimensionnel &#40;SSAS&#41;](../../analysis-services/multidimensional-models/multidimensional-model-databases-ssas.md) et [Bases de données model tabulaires &#40;SSAS Tabulaire&#41;](../../analysis-services/tabular-models/tabular-model-databases-ssas-tabular.md).  
+ Plus tard, des étapes supplémentaires devront être réalisées une fois que vous aurez des bases de données prêtes à déployer. Vous devrez notamment configurer les appartenances au rôle sur la base de données afin d'accorder à l'utilisateur l'accès aux données, concevoir une stratégie de sauvegarde et de restauration des bases de données et déterminer si vous avez besoin d'une charge de travail de traitement planifiée afin que les données soient actualisées à intervalles réguliers. Vous trouverez plus d’informations sur le déploiement de la base de données et l’administration à ces liens : [des bases de données Model multidimensionnelles ](../../analysis-services/multidimensional-models/multidimensional-model-databases-ssas.md) et [des bases de données Model tabulaires](../../analysis-services/tabular-models/tabular-model-databases-ssas-tabular.md).  
   
 ## <a name="instance-configuration"></a>Configuration de l'instance  
- Analysis Services est un service réplicable, ce qui signifie que vous pouvez installer plusieurs instances du service sur un seul serveur. Chaque instance supplémentaire est installée séparément en tant qu'instance nommée, à l'aide du programme d'installation de SQL Server, et configurée indépendamment afin de prendre en charge le rôle prévu. Par exemple, un serveur de développement peut exécuter Boîte noire ou utiliser les valeurs par défaut pour le stockage des données, valeurs que vous pouvez aussi modifier sur des serveurs acceptant les charges de production. Autre exemple justifiant la configuration du système : l'installation de l'instance Analysis Services sur du matériel partagé par d'autres services. Lorsque vous hébergez plusieurs applications grandes consommatrices de données sur le même matériel, vous pouvez configurer des propriétés de serveur qui abaissent les seuils de mémoire afin d'optimiser les ressources disponibles pour toutes les applications.  
+ Analysis Services est un service réplicable, ce qui signifie que vous pouvez installer plusieurs instances du service sur un seul serveur. Chaque instance supplémentaire est installée séparément en tant qu'instance nommée, à l'aide du programme d'installation de SQL Server, et configurée indépendamment afin de prendre en charge le rôle prévu. Par exemple, un serveur de développement peut exécuter Boîte noire ou utiliser les valeurs par défaut pour le stockage des données, valeurs que vous pouvez aussi modifier sur des serveurs acceptant les charges de production. Autre exemple justifiant la configuration du système : l'installation de l'instance Analysis Services sur du matériel partagé par d'autres services. Lorsque vous hébergez plusieurs applications grandes consommatrices de données sur le même matériel, vous pouvez configurer des propriétés de serveur qui abaissent les seuils de mémoire afin d'optimiser les ressources disponibles pour toutes les applications.  
   
 ## <a name="post-installation-tasks"></a>Tâches consécutives à l'installation  
   
@@ -44,7 +41,7 @@ ms.lasthandoff: 11/17/2017
 |[Configurer les logiciels antivirus sur les ordinateurs exécutant SQL Server](https://support.microsoft.com/kb/309422) |Vous pouvez être amené à configurer des logiciels d’analyse, tel que des applications antivirus et anti-espions, pour exclure les dossiers et les types de fichiers SQL Server. Si un logiciel d’analyse verrouille un fichier programme ou un fichier de données au moment où Analysis Services doit l’utiliser, il peut s’ensuivre une interruption de service ou une altération de données. |
 |[Configurer les comptes de service &#40;Analysis Services&#41;](../../analysis-services/instances/configure-service-accounts-analysis-services.md)|Pendant l'installation, le compte de service Analysis Services a été configuré avec les autorisations appropriées pour permettre l'accès contrôlé aux fichiers exécutables du programme et aux fichiers de la base de données. En tant que tâche consécutive à l'installation, vous devez déterminer s'il faut autoriser l'utilisation du compte de service lors de l'exécution de tâches supplémentaires. Les charges de travail de traitement et de requête peuvent être exécutées sous le compte de service. Ces opérations réussissent uniquement quand le compte de service dispose des autorisations appropriées.|  
 |[Inscrire une instance Analysis Services dans un groupe de serveurs](../../analysis-services/instances/register-an-analysis-services-instance-in-a-server-group.md)|SQL Server Management Studio (SSMS) permet de créer des groupes de serveurs pour organiser vos instances de SQL Server. Il est plus facile de gérer des déploiements évolutif constitués de plusieurs instances de serveurs au sein de groupes de serveurs. Utilisez les informations de cette rubrique pour organiser les instances d'Analysis Services en groupes dans SSMS.|  
-|[Déterminer le mode serveur d'une instance Analysis Services](../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md)|Pendant l'installation, vous deviez sélectionner un mode serveur pour déterminer le type de modèle (multidimensionnel ou tabulaire) s'exécutant sur le serveur. Si vous avez des doutes quant au mode serveur, utilisez les informations de cette rubrique pour déterminer le mode qui a été installé.|  
+|[Déterminer le mode serveur d’une instance Analysis Services](../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md)|Pendant l'installation, vous deviez sélectionner un mode serveur pour déterminer le type de modèle (multidimensionnel ou tabulaire) s'exécutant sur le serveur. Si vous avez des doutes quant au mode serveur, utilisez les informations de cette rubrique pour déterminer le mode qui a été installé.|  
 |[Renommer une instance d'Analysis Services](../../analysis-services/instances/rename-an-analysis-services-instance.md)|Un nom descriptif peut vous aider à faire la distinction entre plusieurs instances ayant des modes serveur différents, ou entre des instances principalement utilisées par des services ou des équipes de votre organisation. Si vous souhaitez remplacer le nom de l'instance par un nom qui vous aide à mieux gérer vos installations, utilisez les informations de cette rubrique pour savoir comment procéder.|  
   
 ## <a name="next-steps"></a>Étapes suivantes  

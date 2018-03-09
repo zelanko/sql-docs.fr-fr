@@ -1,5 +1,5 @@
 ---
-title: "Créer la base de données (SQL Server Assistant Importation et exportation) | Documents Microsoft"
+title: "Créer la base de données (Assistant Importation et Exportation SQL Server) | Microsoft Docs"
 ms.custom: 
 ms.date: 02/17/2017
 ms.prod: sql-non-specified
@@ -15,22 +15,21 @@ ms.topic: article
 f1_keywords:
 - sql13.dts.impexpwizard.createdatabase.f1
 ms.assetid: 56a8a79f-086c-4bdc-8888-0045bb4b0cbf
-caps.latest.revision: 54
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 3f8c2b652515f4c84121dcf14371a9e86c8f86f2
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 9887db04ab04d6d78af9cecee96a1be12c58a42d
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-database-sql-server-import-and-export-wizard"></a>Créer la base de données (Assistant Importation et Exportation SQL Server)
 Si vous sélectionnez **Nouveau** dans la page **Choisir une destination** pour créer une base de données de destination SQL Server, l’Assistant Importation et Exportation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] présente la boîte de dialogue **Créer une base de données** . Dans cette page, spécifiez un nom pour la nouvelle base de données. Vous pouvez éventuellement modifier les paramètres de la taille initiale et la croissance automatique de la nouvelle base de données et de son fichier journal. 
 
-Le **Create Database** boîte de dialogue de l’Assistant propose uniquement les options de base qui sont disponibles pour la création d’une base de données SQL Server. Pour afficher et configurer toutes les options pour un nouveau [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de base de données, utilisez [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] pour créer la base de données, ou pour configurer la base de données une fois l’Assistant le crée. 
+La boîte de dialogue **Créer une base de données** de l’Assistant offre uniquement les options de base disponibles pour la création d’une base de données SQL Server. Pour afficher et configurer toutes les options d’une nouvelle base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], utilisez [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] pour créer la base de données, ou la configurer après sa création par l’Assistant. 
 
 > [!NOTE]
 > Si vous recherchez des informations sur l’instruction CREATE DATABASE [!INCLUDE[tsql](../../includes/tsql-md.md)] et non sur la boîte de dialogue **Créer une base de données** de l’Assistant Importation et Exportation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md).  
@@ -38,13 +37,13 @@ Le **Create Database** boîte de dialogue de l’Assistant propose uniquement le
 ## <a name="screen-shot-of-the-create-database-page"></a>Capture d’écran de la page Créer une base de données  
 La capture d’écran suivante montre la boîte de dialogue **Créer une base de données** de l’Assistant.  
 
-![Page de base de données de création de l’Assistant Importation et exportation](../../integration-services/import-export-data/media/create-database.png "page de base de données de création de l’Assistant Importation et exportation")  
+![Page Créer une base de données de l’Assistant Importation et Exportation](../../integration-services/import-export-data/media/create-database.png "Page Créer une base de données de l’Assistant Importation et Exportation")  
 
 ## <a name="provide-a-name-for-the-new-database"></a>Fournir un nom pour la nouvelle base de données  
 **Nom**  
- Fournissez un nom pour la base de données SQL Server de destination.
+ Fournissez un nom pour la base de données SQL Server de destination.
  
-### <a name="naming-requirements"></a>Exigences d’affectation de noms
+### <a name="naming-requirements"></a>Exigences concernant l’affectation des noms
 Veillez à respecter les conventions de nommage SQL Server quand vous nommez la base de données.  
   
 -   Le nom de la base de données doit être unique au sein d’une instance de SQL Server.  
@@ -95,7 +94,6 @@ Pour obtenir des informations détaillées sur ces critères, consultez [Identif
 ### <a name="more-info"></a>En savoir plus
 Pour plus d’informations sur les options de taille de fichier que vous voyez sur cette page, consultez [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md). 
 
-## <a name="whats-next"></a>Étape suivante  
+## <a name="whats-next"></a>Quelle est l’étape suivante ?  
  Une fois que vous avez fourni un nom pour la nouvelle base de données que l’Assistant va créer et cliqué sur **OK**, la boîte de dialogue **Créer une base de données** vous renvoie à la page **Choisir une Destination** . Pour plus d’informations, consultez [Choisir une destination](../../integration-services/import-export-data/choose-a-destination-sql-server-import-and-export-wizard.md).  
-
 

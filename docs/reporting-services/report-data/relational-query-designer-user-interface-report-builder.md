@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-data
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords: "10012"
@@ -20,15 +18,15 @@ helpviewer_keywords:
 - relational query designer
 ms.assetid: cd5fa70c-5218-40d5-9ae6-02d798b5c485
 caps.latest.revision: "23"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 20cfc19fedbf8bc1369804c2795f180228b6a88b
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: e563d196486a20a9d7df43d807f8a1726df3c7cc
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="relational-query-designer-user-interface-report-builder"></a>Interface utilisateur du Concepteur de requêtes relationnelles (Générateur de rapports)
   Le Générateur de rapports et le Concepteur de rapports de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]fournissent un concepteur de requêtes graphique et un concepteur de requêtes textuel qui permettent de créer une requête spécifiant les données à récupérer auprès de bases de données relationnelles [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDS](../../includes/sssds-md.md)] relational databases et [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDWCurrentFull](../../includes/ssdwcurrentfull-md.md)] pour un dataset de rapport. Utilisez le Concepteur de requêtes graphique pour explorer les métadonnées, créer une requête de manière interactive et afficher les résultats de votre requête. Utilisez le Concepteur de requêtes textuel pour afficher la requête créée par le Concepteur de requêtes graphique ou pour modifier une requête. Vous pouvez également importer une requête existante à partir d'un fichier ou d'un rapport.  
@@ -111,7 +109,7 @@ ms.lasthandoff: 12/05/2017
 |Max|Renvoie la valeur maximale figurant dans un groupe. Implémente l'agrégat SQL MAX.|  
 |StDev|Retourne l'écart type statistique de toutes les valeurs d'un groupe. Implémente l'agrégat SQL STDEV.|  
 |StDevP|Retourne l'écart type de remplissage de toutes les valeurs de l'expression spécifiée d'un groupe. Implémente l'agrégat SQL STDEVP.|  
-|Sum|Retourne la somme de toutes les valeurs du groupe. Implémente l'agrégat SQL SUM.|  
+|SUM|Retourne la somme de toutes les valeurs du groupe. Implémente l'agrégat SQL SUM.|  
 |Var|Retourne la variance statistique de toutes les valeurs du groupe. Implémente l'agrégat SQL VAR.|  
 |VarP|Retourne la variance statistique du remplissage pour toutes les valeurs du groupe. Implémente l'agrégat SQL VARP.|  
 |Avg Distinct|Retourne des moyennes uniques. Implémente une combinaison de l'agrégation AVG et du mot clé DISTINCT.|  
@@ -203,7 +201,7 @@ ms.lasthandoff: 12/05/2017
 ## <a name="text-based-query-designer"></a>Concepteur de requêtes textuel  
  Pour bénéficier d'un contrôle optimal sur votre requête, utilisez le Concepteur de requêtes textuel. Pour basculer vers le Concepteur de requêtes textuel, cliquez sur **Modifier en tant que texte**dans la barre d’outils. Une fois que vous avez modifié une requête dans le Concepteur de requêtes textuel, vous ne pouvez plus utiliser le Concepteur de requêtes relationnelles. La requête sera ensuite toujours ouverte dans le Concepteur de requêtes textuel. Pour plus d’informations, consultez [Interface utilisateur du Concepteur de requêtes textuel &#40;Générateur de rapports&#41;](../../reporting-services/report-data/text-based-query-designer-user-interface-report-builder.md).  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Concepteurs de requêtes &#40;Générateur de rapports&#41;](http://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9)  
   
   

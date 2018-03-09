@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_add_notification_TSQL
 - sp_add_notification
-dev_langs: TSQL
-helpviewer_keywords: sp_add_notification
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_add_notification
 ms.assetid: 0525e0a2-ed0b-4e69-8a4c-a9e3e3622fbd
-caps.latest.revision: "33"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c5bd95d4aee45046410211e77213fe4dcbc43fc3
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 22e6f2373ba35b24d74b7045350c7cb78a504c05
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spaddnotification-transact-sql"></a>sp_add_notification (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,23 +50,23 @@ sp_add_notification [ @alert_name = ] 'alert' ,
  [  **@alert_name=** ] **'***alerte***'**  
  Alerte pour cette notification. *alerte* est **sysname**, sans valeur par défaut.  
   
- [  **@operator_name=** ] **'***opérateur***'**  
+ [ **@operator_name=** ] **'***operator***'**  
  Opérateur à prévenir lorsque l'alerte se déclenche. *opérateur* est **sysname**, sans valeur par défaut.  
   
- [  **@notification_method=** ] *méthode_de_notification*  
+ [ **@notification_method=** ] *notification_method*  
  Méthode utilisée pour avertir l'opérateur. *méthode_de_notification* est **tinyint**, sans valeur par défaut. *méthode_de_notification* peut être une ou plusieurs des valeurs suivantes associées à un **OR** opérateur logique.  
   
 |Valeur|Description|  
 |-----------|-----------------|  
-|**1**|E-mail|  
-|**2**|Récepteur de radiomessagerie|  
+|**1**|Messagerie électronique|  
+|**2**|Radiomessagerie|  
 |**4**|**net send**|  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  **0** (réussite) ou **1** (échec)  
   
 ## <a name="result-sets"></a>Jeux de résultats  
- Aucune  
+ Aucun  
   
 ## <a name="remarks"></a>Notes  
  **sp_add_notification** doit être exécuté à partir de la **msdb** base de données.  
@@ -74,7 +77,7 @@ sp_add_notification [ @alert_name = ] 'alert' ,
   
  En cas d’échec au moment de l’envoi d’un message par e-mail ou d’une notification par radiomessagerie, l’échec est consigné dans le journal des erreurs du service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Seuls les membres de la **sysadmin** du rôle serveur fixe peuvent exécuter **sp_add_notification**.  
   
 ## <a name="examples"></a>Exemples  
@@ -94,10 +97,10 @@ GO
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [sp_delete_notification &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-delete-notification-transact-sql.md)   
- [sp_help_notification &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-help-notification-transact-sql.md)   
- [sp_update_notification &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-update-notification-transact-sql.md)   
- [sp_add_operator &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-add-operator-transact-sql.md)   
+ [sp_delete_notification &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-notification-transact-sql.md)   
+ [sp_help_notification &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-notification-transact-sql.md)   
+ [sp_update_notification &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-notification-transact-sql.md)   
+ [sp_add_operator &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-operator-transact-sql.md)   
  [Procédures stockées système &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

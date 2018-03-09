@@ -8,20 +8,20 @@ ms.service:
 ms.component: mobile-reports
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 91138ef8-ddb4-4ac5-a1e4-fa4cf1c58dcc
 caps.latest.revision: "15"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 32a7dba65a9143cf153d6218e53e035a215672bd
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 70f968be096681785a1c043992616958860daa70
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="data-for-reporting-services-mobile-reports"></a>Data for Reporting Services mobile reports
 Le modèle de données [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-long.md)] est simple. Les données sont importées dans [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] comme une collection de datasets. Des relations formelles entre les datasets ne sont pas nécessaires. Les recherches entre deux datasets fonctionnent tant que les valeurs de clé correspondent. Les agrégations de date/heure sont traitées par le composant d’exécution de rapport mobile. Elles correspondent entre différents datasets, même si la granularité des données d’horodatage varie selon les datasets.   

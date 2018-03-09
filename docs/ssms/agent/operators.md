@@ -3,8 +3,11 @@ title: "Opérateurs | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-agent
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -25,16 +28,16 @@ ms.assetid: 38e8488f-2669-4cea-b9c3-5f394a663678
 caps.latest.revision: "5"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 465ec6d532e4ee46a7c4158475b2890eccf1b0be
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: b9c8caffe4e8172585c1e17fdf9368dbbb3c87d7
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="operators"></a>Opérateurs
-Les opérateurs sont des alias pour les personnes ou les groupes qui peuvent recevoir une notification électronique à la fin des travaux ou en cas d'alertes. Le service [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent prend en charge la notification des administrateurs par le biais des opérateurs. Les opérateurs activent les fonctions de notification et de surveillance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Les opérateurs sont des alias pour les personnes ou les groupes qui peuvent recevoir une notification électronique à la fin des travaux ou en cas d’alertes. Le service [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent prend en charge la notification des administrateurs par le biais des opérateurs. Les opérateurs activent les fonctions de notification et de surveillance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent.  
   
 ## <a name="operator-attributes-and-concepts"></a>Attributs et concepts relatifs aux opérateurs  
 Les attributs principaux d'un opérateur sont les suivants :  
@@ -116,7 +119,7 @@ Un ou plusieurs des éléments suivants sont nécessaires pour avertir un opéra
   
 -   Pour utiliser **net send**, l’opérateur doit avoir ouvert une session sur l’ordinateur spécifié et ce dernier doit accepter les messages en provenance de Windows Messenger.  
   
-## <a name="related-tasks"></a>Tâches associées  
+## <a name="related-tasks"></a>Related Tasks  
   
 |||  
 |-|-|  
@@ -124,6 +127,6 @@ Un ou plusieurs des éléments suivants sont nécessaires pour avertir un opéra
 |Tâches associées à la création d'un opérateur|[Créer un opérateur](../../ssms/agent/create-an-operator.md)<br /><br />[Désigner un opérateur de prévention de défaillance](../../ssms/agent/designate-a-fail-safe-operator.md)|  
 |Tâches associées à l'affectation d'alertes|[Affecter des alertes à un opérateur](../../ssms/agent/assign-alerts-to-an-operator.md)<br /><br />[Définir la réponse à une alerte &#40;SQL Server Management Studio&#41;](../../ssms/agent/define-the-response-to-an-alert-sql-server-management-studio.md)<br /><br />[sp_add_notification (Transact-SQL)](http://msdn.microsoft.com/en-us/0525e0a2-ed0b-4e69-8a4c-a9e3e3622fbd)<br /><br />[Affecter des alertes à un opérateur](../../ssms/agent/assign-alerts-to-an-operator.md)|  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [Messagerie de base de données](http://msdn.microsoft.com/en-us/9e4563dd-4799-4b32-a78a-048ea44a44c1)  
   

@@ -2,9 +2,12 @@
 title: SQL Server, objet SQL Statistics | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance-monitor
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -13,18 +16,18 @@ helpviewer_keywords:
 - SQL Statistics object
 ms.assetid: da7dbb4b-f632-45a0-b1ab-c35cc2695c86
 caps.latest.revision: "31"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 82c9a520edf0f65e3197d43ad5ef50a8e12b7068
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 5ab8c2fa693b264707e89f4438d408f4c513e565
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sql-server-sql-statistics-object"></a>Objet SQLServer:SQL Statistics
-  L’objet **SQLServer:SQL Statistics** dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournit des compteurs pour surveiller la compilation et le type de demandes transmises à une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La surveillance du nombre de compilations et de recompilations de requêtes, ainsi que le nombre de lots reçus par une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , vous donne une idée de la rapidité avec laquelle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] traite les requêtes utilisateur et de l'efficacité avec laquelle l'optimiseur de requêtes traite les requêtes.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] L’objet **SQLServer:SQL Statistics** dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournit des compteurs pour surveiller la compilation et le type de demandes transmises à une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La surveillance du nombre de compilations et de recompilations de requêtes, ainsi que le nombre de lots reçus par une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , vous donne une idée de la rapidité avec laquelle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] traite les requêtes utilisateur et de l'efficacité avec laquelle l'optimiseur de requêtes traite les requêtes.  
   
  La compilation constitue une partie significative du délai d'exécution d'une requête. Pour économiser le coût de compilation, [!INCLUDE[ssDE](../../includes/ssde-md.md)] enregistre le plan de requête compilée dans un cache des requêtes. L'objectif du cache est de réduire la durée de compilation en conservant les requêtes compilées en vue d'une utilisation ultérieure, éliminant ainsi la nécessité de recompiler des requêtes si elles sont exécutées ultérieurement. Toutefois, chaque requête doit être compilée au moins une fois. La recompilation des requêtes peut être due aux facteurs suivants :  
   
@@ -50,7 +53,7 @@ ms.lasthandoff: 11/09/2017
 |**Recompilations SQL/s**|Nombre de recompilations d'instructions par seconde. Compte le nombre de fois où les recompilations d'instruction sont déclenchées. En général, il faut que le nombre de recompilations soit faible.|  
 |**Nombre d'autoparamétrages non sûrs/s**|Nombre de tentatives d'autoparamétrage non sûres par seconde. Par exemple, la requête possède des caractéristiques qui empêchent le partage du plan mis en cache. Elles sont qualifiées de non sûres. Ce compteur ne tient pas compte du nombre de paramétrages forcés.|  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [SQL Server - Objet Plan Cache](../../relational-databases/performance-monitor/sql-server-plan-cache-object.md)   
  [Analyser l’utilisation des ressources &#40;Moniteur système&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
   

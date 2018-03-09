@@ -2,35 +2,37 @@
 title: "Élément StorageEngineUsed (XMLA) | Documents Microsoft"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: scripting
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname: StorageEngineUsed Element
-apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
+apiname:
+- StorageEngineUsed Element
+apilocation:
+- http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 ms.assetid: 98895c10-f3c2-4d8a-be94-6128c828561d
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 83d79027913faff48098fb7e7d1daaa2fdf407ac
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: bbd6a47e68c069ca9eef8c8fe8f414d4025ebeba
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="storageengineused-element-xmla"></a>Élément StorageEngineUsed (XMLA)
-  Contient une valeur en lecture seule qui décrit le type de base de données actuel.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+Contient une valeur en lecture seule qui décrit le type de base de données actuel.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -88,9 +90,9 @@ ms.lasthandoff: 11/17/2017
   
 |Valeur| Description|  
 |-----------|-----------------|  
-|*Traditionnel*|Le modèle de base de données correspond à un mode de stockage MOLAP, ROLAP ou HOLAP.|  
-|*En mémoire*|Le modèle de base de données correspond à un mode de stockage IMBI.|  
-|*Mixte*|Le modèle de base de données combine les modes de stockage IMBI et MOLAP, ROLAP ou HOLAP.|  
+|*Traditional*|Le modèle de base de données correspond à un mode de stockage MOLAP, ROLAP ou HOLAP.|  
+|*InMemory*|Le modèle de base de données correspond à un mode de stockage IMBI.|  
+|*Mixed*|Le modèle de base de données combine les modes de stockage IMBI et MOLAP, ROLAP ou HOLAP.|  
   
  L’énumération qui correspond aux valeurs autorisées pour **StorageEngineUsed** dans l’objet d’objets AMO (Analysis Management) est modèle <xref:Microsoft.AnalysisServices.StorageEngineUsed>.  
   

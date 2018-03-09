@@ -3,10 +3,10 @@ title: "Comment créer une tâche de script qui utilise l’adaptateur de destin
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.suite: sql
 ms.custom: 
 ms.technology: mpp-data-warehouse
@@ -15,11 +15,11 @@ ms.date: 01/05/2017
 ms.topic: article
 ms.assetid: e2a9b254-5a66-44b1-863a-fa831555e7e0
 caps.latest.revision: "8"
-ms.openlocfilehash: 7d9cfb2987b05b51edc31cd0db4105ae2c12e596
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 8056c97e66147cb68d7918301515c1dc52524387
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-create-a-script-task-that-uses-the-ssis-pdw-destination-adapter"></a>Comment créer une tâche de script qui utilise l’adaptateur de destination SSIS PDW
 La tâche de Script Integration Services permet d’effectuer pratiquement n’importe quelle opération qui peut être effectuée dans une application .net dans le contexte d’un flux de contrôle SSIS. Ce code de script de package SSIS est un exemple de code pour l’utilisation de l’adaptateur de destination SSIS PDW.  

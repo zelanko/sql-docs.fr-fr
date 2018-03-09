@@ -2,9 +2,12 @@
 title: Filtrer des Traces avec SQL Server Profiler | Documents Microsoft
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: sql-server-profiler
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,18 +20,18 @@ helpviewer_keywords:
 - traces [SQL Server], filters
 ms.assetid: 34577136-a0ed-4822-94de-4a0d5f98265f
 caps.latest.revision: "22"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5bfea0295a4615a1434be9b9d52ca14f252b3430
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: ac087c079ca461875d148a9c9bedcab77fe7852b
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="filter-traces-with-sql-server-profiler"></a>Filtrer des traces avec SQL Server Profiler
-  Vous pouvez définir des filtres sur les colonnes de données des événements de trace [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] afin que les informations soient capturées uniquement pour les événements qui vous intéressent. Les filtres de trace réduisent l'impact du suivi sur les performances système car un nombre d'événements moins important est capturé dans la trace. Par ailleurs, le filtrage facilite la lisibilité du résultat, car il y a moins d'événements à consulter.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Vous pouvez définir des filtres sur les colonnes de données pour [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] événements de trace afin que les informations sont capturées uniquement pour les événements qui vous intéressez. Les filtres de trace réduisent l'impact du suivi sur les performances système car un nombre d'événements moins important est capturé dans la trace. Par ailleurs, le filtrage facilite la lisibilité du résultat, car il y a moins d'événements à consulter.  
   
  **Pour filtrer des traces avec le Générateur de profils SQL Server**  
   

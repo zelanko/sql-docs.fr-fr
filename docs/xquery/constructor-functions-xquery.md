@@ -3,28 +3,35 @@ title: Fonctions constructeur (XQuery) | Documents Microsoft
 ms.custom: 
 ms.date: 03/09/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: xquery
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-applies_to: SQL Server
-dev_langs: XML
-helpviewer_keywords: constructor functions [XQuery]
+applies_to:
+- SQL Server
+dev_langs:
+- XML
+helpviewer_keywords:
+- constructor functions [XQuery]
 ms.assetid: 98562d0e-d0e0-4f62-b001-90acbac67277
-caps.latest.revision: "27"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d5b465f9d282c3955aa41bf74c84aa7b1481136f
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 882f5ed7260a195e815482a0fb44240fda48e138
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="constructor-functions-xquery"></a>Fonctions constructeur (XQuery)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   À partir d'une entrée spécifiée, les fonctions constructeur créent des instances de n'importe quel type atomique XSD intégré ou défini par l'utilisateur.  
   
@@ -173,7 +180,7 @@ select @x.query('
  ')  
 ```  
   
- Notez les points suivants dans la requête précédente :  
+ Notez les points suivants dans la requête précédente :  
   
 -   La structure de bouclage FOR ... Structure de boucle WHERE est utilisée pour récupérer le \<ProductDescription > élément répondant à la condition spécifiée dans la clause WHERE.  
   
@@ -181,7 +188,7 @@ select @x.query('
   
 -   La requête construit ensuite le document XML obtenu. Étant donné que vous construisez une séquence d'attributs, des virgules et des parenthèses sont utilisées dans la construction XML.  
   
- Voici le résultat obtenu :  
+ Voici le résultat obtenu :  
   
 ```  
 <Product   

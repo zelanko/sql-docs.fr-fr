@@ -3,8 +3,11 @@ title: "Connexion à Sybase ASE (SybaseToSQL) | Documents Microsoft"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-sybase
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 48cd7837f5075ad4dff65aabfbf4dff73a3b5f0e
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: fc01dc51a4c3b50e77a719d9b3bab08def84f879
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="connecting-to-sybase-ase-sybasetosql"></a>Connexion à Sybase ASE (SybaseToSQL)
 Pour migrer des bases de données Sybase Adaptive Server Enterprise (ASE) [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ou SQL Azure, vous devez vous connecter au serveur adaptatif qui contient les bases de données que vous souhaitez migrer. Lorsque vous vous connectez, SSMA Obtient les métadonnées relatives à toutes les bases de données sur le serveur Adaptive et affiche les métadonnées de la base de données dans le volet Explorateur de métadonnées de Sybase. SSMA stocke des informations sur le serveur de base de données, mais ne stocke pas les mots de passe.  

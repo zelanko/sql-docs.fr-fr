@@ -8,24 +8,26 @@ ms.service:
 ms.component: smo
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords: messages [SMO]
 ms.assetid: 4037a866-4826-4c1f-890c-e7e3658adf13
 caps.latest.revision: "40"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 169f84323b90e66b78d455e1756ff670b0697ff3
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 3ed18e9b9b7f91613a23d0146b79e0da2b056618
+ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="using-messages"></a>Utilisation de messages
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Dans SMO, les messages système sont représentés par le <xref:Microsoft.SqlServer.Management.Smo.SystemMessageCollection> objet auquel appartient le **Server** objet. Comme les messages système ne peuvent pas être modifiés, les propriétés d'objet **SystemMessage** sont en lecture seule.  
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+
+  Dans SMO, les messages système sont représentés par le <xref:Microsoft.SqlServer.Management.Smo.SystemMessageCollection> objet auquel appartient le **Server** objet. Comme les messages système ne peuvent pas être modifiés, les propriétés d'objet **SystemMessage** sont en lecture seule.  
   
  Les messages définis par l'utilisateur sont représentés par programme dans SMO par l'objet <xref:Microsoft.SqlServer.Management.Smo.UserDefinedMessageCollection>. Les messages définis par l'utilisateur existants peuvent être découverts en parcourant la collection. Les nouveaux messages définis par l'utilisateur peuvent être créés par instanciation d'un nouvel objet **UserDefinedMessage** et définition des propriétés appropriées.  
   

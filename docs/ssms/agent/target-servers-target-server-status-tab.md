@@ -3,8 +3,11 @@ title: "Serveurs cibles (onglet État du serveur cible) | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-agent
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -13,16 +16,16 @@ ms.assetid: 010a4cab-d878-4889-8ac8-7d91db6345d6
 caps.latest.revision: "3"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0d6535de68b2ca39126b0a1b2c4deec49e766986
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: c6395efb0dfcb041e9ae47329d348c617df499e4
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="target-servers-target-server-status-tab"></a>Serveurs cibles (onglet État du serveur cible)
-Utilisez cette page pour afficher l'état des serveurs cibles de ce serveur maître.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Utilisez cette page pour afficher l’état des serveurs cibles de ce serveur maître.  
   
 ## <a name="options"></a>Options  
 **Serveur cible**  
@@ -55,6 +58,6 @@ Sélectionnez cette option pour actualiser automatiquement les informations affi
 **Actualiser toutes les**  
 Spécifiez la fréquence à laquelle les informations de cette page doivent être actualisées.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [Administration automatisée à l'échelle d'une entreprise](../../ssms/agent/automated-administration-across-an-enterprise.md)  
   

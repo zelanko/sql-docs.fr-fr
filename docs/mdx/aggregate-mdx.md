@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords: AGGREGATE
@@ -20,11 +20,11 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: 6e0905531658202c86ef5deac9e20d4db36fd9d6
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 9ae3eb300df4b0dccd02e6e3ec7034feaa8913e7
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="aggregate-mdx"></a>Aggregate (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -45,14 +45,14 @@ Aggregate(Set_Expression [ ,Numeric_Expression ])
  *Numeric_expression*  
  Expression numérique valide qui correspond généralement à une expression MDX (Multidimensional Expressions) des coordonnées des cellules qui retournent un nombre.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Si un jeu de tuples vides ou un jeu vide est spécifié, cette fonction retourne une valeur vide.  
   
  Le tableau suivant décrit comment la **d’agrégation** fonction se comporte avec différentes fonctions d’agrégation.  
   
-|Opérateur d'agrégation|Résultat|  
+|Opérateur d'agrégation|Résultats|  
 |--------------------------|------------|  
-|Sum|Retourne la somme des valeurs dans le jeu.|  
+|SUM|Retourne la somme des valeurs dans le jeu.|  
 |Compter|Retourne le nombre de valeurs dans le jeu.|  
 |Max|Retourne la valeur maximale dans le jeu.|  
 |Min|Retourne la valeur minimale dans le jeu.|  

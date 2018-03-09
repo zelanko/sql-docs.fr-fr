@@ -1,6 +1,6 @@
 ---
-title: "Planifier l’exécution du package SSIS sur Azure | Documents Microsoft"
-ms.date: 09/25/2017
+title: "Planifier l’exécution d’un package SSIS sur Azure | Microsoft Docs"
+ms.date: 01/16/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
@@ -14,69 +14,103 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2f28400200105e8e63f787cbcda58c183ba00da5
-ms.openlocfilehash: 2130e68d5e29671a2881d8762666cf852ff51259
-ms.contentlocale: fr-fr
-ms.lasthandoff: 10/18/2017
-
+ms.openlocfilehash: 4724d7a306e59e05d17f466643146d868f372a7f
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="schedule-the-execution-of-an-ssis-package-on-azure"></a>Planifier l’exécution d’un package SSIS sur Azure
-Vous pouvez planifier l’exécution des packages stockés dans la base de données de catalogue SSISDB sur un serveur de base de données SQL Azure en choisissant une des options de planification suivantes :
--   [Agent SQL Server](#agent)
--   [Travaux élastique de base de données SQL](#elastic)
--   [L’activité de procédure stockée Azure données fabrique SQL Server](#sproc)
+Vous pouvez planifier l’exécution de packages stockés dans la base de données de catalogues SSISDB sur un serveur Azure SQL Database en choisissant l’une des options de planification suivantes :
+-   [SQL Server Agent](#agent)
+-   [Travaux élastiques SQL Database](#elastic)
+-   [Activité de procédure stockée SQL Server Azure Data Factory](#sproc)
 
-## <a name="agent"></a>Planifier un package avec l’Agent SQL Server
+## <a name="agent"></a> Planifier un package avec SQL Server Agent
 
-### <a name="prerequisite"></a>Condition préalable
+### <a name="prerequisite---create-a-linked-server"></a>Prérequis : Créer un serveur lié
 
-Avant de pouvoir utiliser l’Agent SQL Server sur site pour planifier l’exécution des packages stockés sur un serveur de base de données SQL Azure, vous devez ajouter le serveur de base de données SQL comme serveur lié. Pour plus d’informations, consultez [créer des serveurs liés](../../relational-databases/linked-servers/create-linked-servers-sql-server-database-engine.md) et [des serveurs liés](../../relational-databases/linked-servers/linked-servers-database-engine.md).
+Avant de pouvoir utiliser SQL Server Agent localement pour planifier l’exécution des packages stockés sur un serveur Azure SQL Database, vous devez ajouter le serveur SQL Database à votre serveur SQL Server local en tant que serveur lié.
 
-### <a name="create-a-sql-server-agent-job"></a>Créer un travail de l’Agent SQL Server
-
-Pour planifier un package avec l’Agent SQL Server sur site, de créer une tâche avec une étape de travail qui appelle le catalogue SSIS procédures stockées `[catalog].[create_execution]` , puis `[catalog].[start_execution]`. Pour plus d’informations, consultez [travaux de l’Agent SQL Server pour les Packages](../packages/sql-server-agent-jobs-for-packages.md).
-
-1.  Dans SQL Server Management Studio, connectez-vous à la base de données SQL Server sur site sur lequel vous souhaitez créer le travail.
-
-2.  Avec le bouton droit sur le **l’Agent SQL Server** nœud, sélectionnez **nouveau**, puis sélectionnez **travail** pour ouvrir le **nouveau travail** boîte de dialogue.
-
-3.  Dans le **nouveau travail** boîte de dialogue, sélectionnez le **étapes** page, puis sélectionnez **nouveau** pour ouvrir le **nouvelle étape du travail** boîte de dialogue.
-
-4.  Dans le **nouvelle étape du travail** boîte de dialogue, sélectionnez `SSISDB` comme le **base de données.**
-
-5.  Dans le champ de la commande, entrez un script Transact-SQL similaire au script indiqué dans l’exemple suivant :
+1.  **Configurer le serveur lié**
 
     ```sql
+    -- Add the SSISDB database on your Azure SQL Database as a linked server to your SQL Server on premises
+    EXEC sp_addlinkedserver
+        @server='myLinkedServer', -- Name your linked server
+        @srvproduct='',     
+        @provider='sqlncli', -- Use SQL Server native client
+        @datasrc='<server_name>.database.windows.net', -- Add your Azure SQL Database server endpoint
+        @location=‘’,
+        @provstr=‘’,
+        @catalog='SSISDB'  -- Add SSISDB as the initial catalog
+    ```
+
+2.  **Configurer les informations d’identification du serveur lié**
+
+    ```sql
+    -- Add your Azure SQL DB server admin credentials
+    EXEC sp_addlinkedsrvlogin
+        @rmtsrvname = 'myLinkedServer’,
+        @useself = 'false’,
+        @rmtuser = 'myUsername', -- Add your server admin username
+        @rmtpassword = 'myPassword' -- Add your server admin password
+    ```
+
+3.  **Configurer les options du serveur lié**
+
+    ```sql
+    EXEC sp_serveroption 'myLinkedServer', 'rpc out', true;
+    ```
+
+Pour plus d’informations, consultez [Créer des serveurs liés](../../relational-databases/linked-servers/create-linked-servers-sql-server-database-engine.md) et [Serveurs liés](../../relational-databases/linked-servers/linked-servers-database-engine.md).
+
+### <a name="create-a-sql-server-agent-job"></a>Créer un travail de SQL Server Agent
+
+Pour planifier un package avec SQL Server Agent localement, créez un travail avec une étape de travail qui appelle les procédures stockées du catalogue SSIS `[catalog].[create_execution]`, puis `[catalog].[start_execution]`. Pour plus d’informations, consultez [Travaux de SQL Server Agent pour les packages](../packages/sql-server-agent-jobs-for-packages.md).
+
+1.  Dans SQL Server Management Studio, connectez-vous à la base de données SQL Server locale sur laquelle vous souhaitez créer le travail.
+
+2.  Cliquez avec le bouton droit sur le nœud **SQL Server Agent**, sélectionnez **Nouveau**, puis **Travail** pour ouvrir la boîte de dialogue **Nouveau travail**.
+
+3.  Dans la boîte de dialogue **Nouveau travail**, sélectionnez la page **Étapes**, puis **Nouveau** pour ouvrir la boîte de dialogue **Nouvelle étape du travail**.
+
+4.  Dans la boîte de dialogue **Nouvelle étape du travail**, sélectionnez `SSISDB` en tant que **Base de données**.
+
+5.  Dans le champ **Commande**, entrez un script Transact-SQL similaire au script figurant dans l’exemple suivant :
+
+    ```sql
+    -- T-SQL script to create and start SSIS package execution using SSISDB stored procedures
     DECLARE @return_value int, @exe_id bigint 
 
     EXEC @return_value = [YourLinkedServer].[SSISDB].[catalog].[create_execution] 
-    @folder_name=N'folderName', @project_name=N'projectName', 
-    @package_name=N'packageName', @use32bitruntime=0, 
-    @runinscaleout=1, @useanyworker=1, @execution_id=@exe_id OUTPUT 
- 
-    EXEC [YourLinkedServer].[SSISDB].[catalog].[start_execution] @execution_id=@exe_id
+        @folder_name=N'folderName', @project_name=N'projectName', 
+        @package_name=N'packageName', @use32bitruntime=0, @runincluster=1, @useanyworker=1,
+        @execution_id=@exe_id OUTPUT 
 
-    GO
+    EXEC [YourLinkedServer].[SSISDB].[catalog].[set_execution_parameter_value] @exe_id,
+        @object_type=50, @parameter_name=N'SYNCHRONIZED', @parameter_value=1
+
+    EXEC [YourLinkedServer].[SSISDB].[catalog].[start_execution] @execution_id=@exe_id
     ```
 
-6.  Terminer la configuration et de planification du travail.
+6.  Finissez de configurer et de planifier le travail.
 
-## <a name="elastic"></a>Planifier un package avec des travaux élastique de base de données SQL
+## <a name="elastic"></a> Planifier un package avec des travaux élastiques SQL Database
 
-Pour plus d’informations sur les tâches élastiques de base de données SQL, consultez [bases de données de gestion à grande échelle cloud](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-elastic-jobs-overview).
+Pour plus d’informations sur les travaux élastiques SQL Database, consultez [Gestion des bases de données cloud avec augmentation de la taille des instances](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-jobs-overview).
 
-### <a name="prerequisites"></a>Conditions préalables
+### <a name="prerequisites"></a>Prerequisites
 
-Avant de pouvoir utiliser les travaux élastiques pour planifier les packages SSIS stockés dans la base de données de catalogue SSISDB sur un serveur de base de données SQL Azure, vous devez effectuer les opérations suivantes :
+Pour pouvoir utiliser des travaux élastiques afin de planifier des packages SSIS stockés dans la base de données de catalogues SSISDB sur un serveur Azure SQL Database, vous devez effectuer les actions suivantes :
 
-1.  Installer et configurer les composants de tâches de base de données élastique. Pour plus d’informations, consultez [vue d’ensemble des travaux de l’installation de la base de données élastique](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-elastic-jobs-service-installation).
+1.  Installez et configurez les tâches de base de données élastique. Pour plus d’informations, consultez [Vue d’ensemble de l’installation des tâches de base de données élastique](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-jobs-service-installation).
 
-2. Créer une étendue de base de données d’informations d’identification que travaux peuvent utiliser pour envoyer des commandes à la base de données du catalogue SSIS. Pour plus d’informations, consultez [CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)](../../t-sql/statements/create-database-scoped-credential-transact-sql.md).
+2. Créez des informations d’identification au niveau de la base de données pour permettre aux travaux d’envoyer des commandes à la base de données de catalogues SSIS. Pour plus d’informations, consultez [CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)](../../t-sql/statements/create-database-scoped-credential-transact-sql.md).
 
 ### <a name="create-an-elastic-job"></a>Créer un travail élastique
 
-Créer le travail à l’aide d’un script Transact-SQL similaire au script indiqué dans l’exemple suivant :
+Créez le travail à l’aide d’un script Transact-SQL similaire au script indiqué dans l’exemple suivant :
 
 ```sql
 -- Create Elastic Jobs target group 
@@ -108,129 +142,15 @@ EXEC jobs.sp_update_job @job_name='ExecutePackageJob', @enabled=1,
     @schedule_interval_type='Minutes', @schedule_interval_count=60 
 ```
 
-## <a name="sproc"></a>Planifier un package avec l’activité de procédure stockée Azure données fabrique SQL Server
+## <a name="sproc"></a> Planifier un package avec l’activité de procédure stockée SQL Server Azure Data Factory
 
-> [!IMPORTANT]
-> Utilisez les scripts JSON dans l’exemple suivant, avec la version 1 Azure Data Factory activité de procédure stockée.
+Pour plus d’informations sur la façon de planifier un package SSIS à l’aide de l’activité de procédure stockée Azure Data Factory, consultez les articles suivants :
 
-Pour planifier un package avec l’activité de procédure stockée Azure données fabrique SQL Server, procédez comme suit :
+-   Pour Data Factory version 2 : [Appeler un package SSIS à l’aide de l’activité de procédure stockée dans Azure Data Factory](https://docs.microsoft.com/azure/data-factory/how-to-invoke-ssis-package-stored-procedure-activity)
 
-1.  Créer une fabrique de données.
-
-2.  Créer un service lié pour la base de données SQL qui héberge SSISDB.
-
-3.  Créez un dataset de sortie qui gère la planification.
-
-4.  Créer un pipeline de fabrique de données qui utilise l’activité de procédure stockée SQL Server pour exécuter le package SSIS.
-
-Cette section fournit une vue d’ensemble de ces étapes. Un didacticiel complet de la fabrique de données est dépasse le cadre de cet article. Pour plus d’informations, consultez [activité de la procédure stockée SQL Server](https://docs.microsoft.com/en-us/azure/data-factory/data-factory-stored-proc-activity).
-
-### <a name="created-a-linked-service-for-the-sql-database-that-hosts-ssisdb"></a>Création d’un service lié pour la base de données SQL qui héberge SSISDB
-Service lié Data Factory permet de se connecter à SSISDB.
-
-```json
-{
-    "name": "AzureSqlLinkedService",
-    "properties": {
-        "description": "",
-        "type": "AzureSqlDatabase",
-        "typeProperties": {
-            "connectionString": "Data Source = tcp: YourSQLDBServer.database.windows.net, 1433; Initial Catalog = SSISDB; User ID = YourUsername; Password = YourPassword; Integrated Security = False; Encrypt = True; Connect Timeout = 30"
-        }
-    }
-}
-```
-
-### <a name="create-an-output-dataset"></a>Créez un dataset de sortie
-Le dataset de sortie contient les informations de planification.
-
-```json
-{
-    "name": "sprocsampleout",
-    "properties": {
-        "type": "AzureSqlTable",
-        "linkedServiceName": "AzureSqlLinkedService",
-        "typeProperties": {
-            "tableName": "sampletable"
-        },
-        "availability": {
-            "frequency": "Hour",
-            "interval": 1
-        }
-    }
-}
-```
-### <a name="create-a-data-factory-pipeline"></a>Créer un pipeline Azure Data Factory
-Le pipeline utilise l’activité de procédure stockée SQL Server pour exécuter le package SSIS.
-
-```json
-{
-    "name": "SprocActivitySamplePipeline",
-    "properties": {
-        "activities": [{
-            "name": "SprocActivitySample",
-            "type": "SqlServerStoredProcedure",
-            "typeProperties": {
-                "storedProcedureName": "sp_executesql",
-                "storedProcedureParameters": {
-                    "stmt": "Transact-SQL script to create and start SSIS package execution using SSISDB catalog stored procedures"
-                }
-            },
-            "outputs": [{
-                "name": "sprocsampleout"
-            }],
-            "scheduler": {
-                "frequency": "Hour",
-                "interval": 1
-            }
-        }],
-        "start": "2017-10-01T00:00:00Z",
-        "end": "2017-10-01T05:00:00Z",
-        "isPaused": false
-    }
-}
-```
-
-Vous n’êtes pas obligé de créer une nouvelle procédure stockée pour encapsuler les commandes Transact-SQL nécessaires pour créer et démarrer l’exécution du package SSIS. Vous pouvez fournir la totalité du script en tant que la valeur de le `stmt` paramètre dans l’exemple précédent de JSON. Voici un exemple de script :
-
-```sql
--- T-SQL script to create and start SSIS package execution using SSISDB catalog stored procedures
-DECLARE @return_value INT,@exe_id BIGINT,@err_msg NVARCHAR(150)
-
--- Create the exectuion
-EXEC @return_value=[SSISDB].[catalog].[create_execution] @folder_name=N'folderName', @project_name=N'projectName', @package_name=N'packageName', @use32bitruntime=0, @runinscaleout=1,@useanyworker=1, @execution_id=@exe_id OUTPUT
-
--- To synchronize SSIS package execution, set the SYNCHRONIZED execution parameter
-EXEC [SSISDB].[catalog].[set_execution_parameter_value] @exe_id, @object_type=50, @parameter_name=N'SYNCHRONIZED', @parameter_value=1
-
--- Start the execution                                                         
-EXEC [SSISDB].[catalog].[start_execution] @execution_id=@exe_id,@retry_count=0
-                                          
--- Raise an error for unsuccessful package execution
--- Execution status values include the following:
--- created (1)
--- running (2)
--- canceled (3)
--- failed (4)
--- pending (5)
--- ended unexpectedly (6)
--- succeeded (7)
--- stopping (8)
--- completed (9) 
-IF(SELECT [status]
-   FROM [SSISDB].[catalog].[executions]
-   WHERE execution_id=@exe_id)<>7
-BEGIN
-    SET @err_msg=N'Your package execution did not succeed for execution ID: ' + CAST(@exe_id AS NVARCHAR(20))
-    RAISERROR(@err_msg,15,1)
-END
-GO
-```
-
-Pour plus d’informations sur le code de ce script, consultez [déployer et exécuter des Packages SSIS à l’aide de procédures stockées](../packages/deploy-integration-services-ssis-projects-and-packages.md#deploy-and-execute-ssis-packages-using-stored-procedures).
+-   Pour Data Factory version 1 : [Appeler un package SSIS à l’aide de l’activité de procédure stockée dans Azure Data Factory](https://docs.microsoft.com/azure/data-factory/v1/how-to-invoke-ssis-package-stored-procedure-activity)
 
 ## <a name="next-steps"></a>Étapes suivantes
-Pour plus d’informations sur l’Agent SQL Server, consultez [travaux de l’Agent SQL Server pour les Packages](../packages/sql-server-agent-jobs-for-packages.md).
+Pour plus d’informations sur SQL Server Agent, consultez [Travaux de SQL Server Agent pour les packages](../packages/sql-server-agent-jobs-for-packages.md).
 
-Pour plus d’informations sur les tâches élastiques de base de données SQL, consultez [bases de données de gestion à grande échelle cloud](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-elastic-jobs-overview).
-
+Pour plus d’informations sur les travaux élastiques SQL Database, consultez [Gestion des bases de données cloud avec augmentation de la taille des instances](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-jobs-overview).

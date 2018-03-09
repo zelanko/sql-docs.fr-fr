@@ -2,9 +2,12 @@
 title: "Sauvegarder la base de données, tâche (Plan de maintenance) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: maintenance-plans
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,18 +17,18 @@ f1_keywords:
 helpviewer_keywords: Back Up Database Task dialog box
 ms.assetid: ed1ef012-fa14-4ba5-bafe-d1527ba065b3
 caps.latest.revision: "52"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 5cd325a83874a12581143e7bf634c3b7348c28ce
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 49e8fb933c835ff58dbb8efb3aa91881abdbc807
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="options-in-the-back-up-database-task-for-maintenance-plan"></a>Options de la boîte de dialogue Sauvegarder la base de données pour le plan de maintenance
-  Utilisez la boîte de dialogue **Tâche Sauvegarder la base de données** pour ajouter une tâche de sauvegarde au plan de maintenance. La sauvegarde de la base de données est importante pour pallier son endommagement possible à la suite d'une défaillance matérielle ou logicielle (ou d'erreurs des utilisateurs), en permettant sa restauration à partir d'une copie de sauvegarde. Cette tâche vous permet d'effectuer des sauvegardes des journaux des transactions, des sauvegardes de groupe de fichiers et de fichiers, des sauvegardes différentielles et complètes.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Utilisez la boîte de dialogue **Tâche Sauvegarder la base de données** pour ajouter une tâche de sauvegarde au plan de maintenance. La sauvegarde de la base de données est importante pour pallier son endommagement possible à la suite d'une défaillance matérielle ou logicielle (ou d'erreurs des utilisateurs), en permettant sa restauration à partir d'une copie de sauvegarde. Cette tâche vous permet d'effectuer des sauvegardes des journaux des transactions, des sauvegardes de groupe de fichiers et de fichiers, des sauvegardes différentielles et complètes.  
   
  **Pour créer une tâche de sauvegarde de base de données**  
   
@@ -129,13 +132,13 @@ ms.lasthandoff: 11/09/2017
  **Utiliser un nom d'utilisateur et un mot de passe spécifiques**  
  Permet de se connecter à une instance du [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] en utilisant l’authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Cette option n'est pas disponible.  
   
- **Nom d'utilisateur**  
+ **User name**  
  Fournit le nom d'utilisateur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à utiliser pour l'authentification. Cette option n'est pas disponible.  
   
  **Mot de passe**  
  Fournit un mot de passe à utiliser pour l'authentification. Cette option n'est pas disponible.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)  
   
   

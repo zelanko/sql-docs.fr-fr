@@ -8,20 +8,21 @@ ms.service:
 ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 76326eeb-1144-4b9f-85db-50524c655d30
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a8803b1a18ce1a0987c9ebfcbd718345cfc3ef60
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: a0a97971dcd8a16a2ac15b1013dbbe96a43f21c0
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="data-source-wizard-screen-3"></a>3 de l’écran de l’Assistant Source de données
 
@@ -82,6 +83,10 @@ Modifie le comportement de **basculement de sous-réseaux multiples** pour perme
 ### <a name="column-encryption"></a>Chiffrement de colonne.
 
 Permet le déchiffrement automatique et le chiffrement des transferts de données vers et à partir de colonnes chiffrées avec la [Always Encrypted](../../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md) fonctionnalité disponible dans SQL Server 2016 et versions ultérieure.
+
+### <a name="use-fmtonly-metadata-discovery"></a>Utilisez la découverte des métadonnées FMTONLY :
+
+Utilisez la méthode de découverte de métadonnées SET FMTONLY héritée lors de la connexion à SQL Server 2012 ou version ultérieure. Activer cette option uniquement lorsque vous utilisez des requêtes non pris en charge par [sp_describe_first_result_set](../../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md), telles que celles contenant des tables temporaires. 
 
 ### <a name="next"></a>Suivant
 

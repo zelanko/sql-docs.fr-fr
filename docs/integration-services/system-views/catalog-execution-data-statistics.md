@@ -1,5 +1,5 @@
 ---
-title: Catalog.execution_data_statistics | Documents Microsoft
+title: catalog.execution_data_statistics | Microsoft Docs
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -13,17 +13,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 6f51407e-0e4e-4b44-af33-db14c9d40ded
-caps.latest.revision: 7
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
-ms.openlocfilehash: fa1d87489ff6d0a10d95bf160ded3d038ca39d81
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: dca56725e70ab1d73d13592faeb40f7c37674099
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="catalogexecutiondatastatistics"></a>catalog.execution_data_statistics
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +33,7 @@ ms.lasthandoff: 08/03/2017
 |-----------------|---------------|-----------------|  
 |data_stats_id|**bigint**|Identificateur (ID) unique des données.|  
 |execution_id|**bigint**|ID unique de l'instance d'exécution.|  
-|package_name|**nvarchar (260)**|Nom du premier package démarré pendant l'exécution.|  
+|package_name|**nvarchar(260)**|Nom du premier package démarré pendant l'exécution.|  
 |task_name|**nvarchar(4000)**|Nom de la tâche de flux de données.|  
 |dataflow_path_id_string|**nvarchar(4000)**|Chaîne d'identification du chemin d'accès de flux de données.|  
 |dataflow_path_name|**nvarchar(4000)**|Nom du chemin d'accès de flux de données.|  
@@ -44,7 +43,7 @@ ms.lasthandoff: 08/03/2017
 |created_time|**datatimeoffset(7)**|Heure à laquelle les valeurs ont été obtenues.|  
 |execution_path|**nvarchar(max)**|Chemin d'accès d'exécution du composant.|  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
   
 -   Lorsqu'il existe plusieurs sorties du composant, une ligne est ajoutée pour chacune d'elles.  
   
@@ -57,12 +56,11 @@ ms.lasthandoff: 08/03/2017
   
 -   Autorisation READ sur l'instance d'exécution  
   
--   L’appartenance à la **ssis_admin** rôle de base de données  
+-   Appartenance au rôle de base de données **ssis_admin**  
   
--   L’appartenance à la **sysadmin** rôle de serveur  
+-   Appartenance au rôle serveur **sysadmin**  
   
 > [!NOTE]  
 >  Lorsque vous avez l'autorisation pour effectuer une opération sur le serveur, vous avez également l'autorisation pour consulter les informations de l'opération. La sécurité au niveau de la ligne est imposée ; uniquement les lignes que vous avez l'autorisation d'afficher s'affichent.  
   
   
-

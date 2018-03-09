@@ -2,9 +2,12 @@
 title: "Configurer les propriétés d’instantané (programmation Transact-SQL de la réplication) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/17/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -12,18 +15,18 @@ dev_langs: TSQL
 helpviewer_keywords: snapshots [SQL Server replication], properties
 ms.assetid: 978d150f-8971-458a-ab2b-3beba5937b46
 caps.latest.revision: "37"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 064e9da536c4409ab8fed60a2c0e36ca8c466b15
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 66ef73aea426c3a3433072201f31b20795cc4984
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="configure-snapshot-properties-replication-transact-sql-programming"></a>Configurer les propriétés d'instantané (programmation Transact-SQL de la réplication)
-  Les propriétés d'instantané peuvent être définies et modifiées par programme à l'aide de procédures stockées de réplication qui dépendent du type de publication.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Les propriétés d’instantané peuvent être définies et modifiées par programme à l’aide de procédures stockées de réplication qui dépendent du type de publication.  
   
 ### <a name="to-configure-snapshot-properties-when-creating-a-snapshot-or-transactional-publication"></a>Pour configurer les propriétés d'instantané lors de la création d'une publication transactionnelle ou d'instantané  
   
@@ -94,12 +97,12 @@ ms.lasthandoff: 11/09/2017
   
 2.  Exécutez l' [Replication Snapshot Agent](../../../relational-databases/replication/agents/replication-snapshot-agent.md) à partir de l'invite de commandes ou démarrez le travail de l'Agent d'instantané pour générer un nouvel instantané. Pour plus d’informations, consultez [Create and Apply the Initial Snapshot](../../../relational-databases/replication/create-and-apply-the-initial-snapshot.md).  
   
-## <a name="example"></a>Exemple  
+## <a name="example"></a> Exemple  
  Cet exemple crée une publication qui utilise un dossier d'instantanés de remplacement et un instantané compressé.  
   
  [!code-sql[HowTo#sp_mergealtsnapshot](../../../relational-databases/replication/codesnippet/tsql/configure-snapshot-prope_1.sql)]  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Autres emplacements du dossier d’instantanés](../../../relational-databases/replication/alternate-snapshot-folder-locations.md)   
  [Instantanés compressés](../../../relational-databases/replication/compressed-snapshots.md)   
  [Exécuter des scripts avant et après l’application de l’instantané](../../../relational-databases/replication/execute-scripts-before-and-after-the-snapshot-is-applied.md)   

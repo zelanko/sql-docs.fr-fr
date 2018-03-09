@@ -1,5 +1,5 @@
 ---
-title: "Transformer des données avec des Transformations | Documents Microsoft"
+title: "Transformer des données avec des transformations | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -17,17 +17,16 @@ helpviewer_keywords:
 - transformations [Integration Services], about transformations
 - transforming data [Integration Services]
 ms.assetid: e1340b6f-ef75-4b14-af6f-823586eff0ed
-caps.latest.revision: 43
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 0d7feb12fd7b258fb876ff1ed554159e54a7ac33
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: c3bd6e635fb364619933d23699f99da85591df31
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="transform-data-with-transformations"></a>Transformer des données avec des transformations
   [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] inclut trois types de composants de flux de données : les sources, les transformations et les destinations.  
@@ -64,14 +63,13 @@ ms.lasthandoff: 08/03/2017
   
 ### <a name="to-set-the-properties-of-a-transformation"></a>Pour définir les propriétés d'une transformation  
   
--   [Définir les propriétés d'un composant de flux de données](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)  
+-   [Définir les propriétés d’un composant de flux de données](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [tâche de flux de données](../../../integration-services/control-flow/data-flow-task.md)   
  [Flux de données](../../../integration-services/data-flow/data-flow.md)   
- [Connecter des composants avec des chemins d’accès](http://msdn.microsoft.com/library/05633e4c-1370-4b05-802b-f36b07dd71c8)   
+ [Connecter des composants avec des chemins](http://msdn.microsoft.com/library/05633e4c-1370-4b05-802b-f36b07dd71c8)   
  [Gestion des erreurs dans les données](../../../integration-services/data-flow/error-handling-in-data.md)   
  [Flux de données](../../../integration-services/data-flow/data-flow.md)  
   
   
-

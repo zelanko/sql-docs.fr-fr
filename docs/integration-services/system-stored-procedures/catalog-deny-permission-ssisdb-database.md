@@ -1,5 +1,5 @@
 ---
-title: "Catalog.deny_permission (base de données SSISDB) | Documents Microsoft"
+title: "catalog.deny_permission (base de données SSISDB) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -13,17 +13,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: de310bac-2ddc-4ef9-8783-43dcb02a94f1
-caps.latest.revision: 14
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 689a59e92286881fa3be7ee3754a786ccb54ae6c
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: a04ae959af4c0a23b3a954e590df424aa1536949
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="catalogdenypermission-ssisdb-database"></a>catalog.deny_permission (base de données SSISDB)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -40,17 +39,17 @@ catalog.deny_permission [ @object_type = ] object_type
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [ @object_type =] *object_type*  
- Type d'objet sécurisable. Types d’objets sécurisables incluent le dossier (`1`), projet (`2`), environnement (`3`) et l’opération (`4`). Le *object_type* est **smallint***.*  
+ [ @object_type = ] *object_type*  
+ Type d'objet sécurisable. Les types d’objets sécurisables incluent le dossier (`1`), le projet (`2`), l’environnement (`3`) et l’opération (`4`). *object_type* est de type **smallint***.*  
   
- [ @object_id =] *object_id*  
- Identificateur unique (ID) ou clé primaire de l'objet sécurisable. Le *object_id* est **bigint**.  
+ [ @object_id = ] *object_id*  
+ Identificateur unique (ID) ou clé primaire de l'objet sécurisable. *object_id* est de type **bigint**.  
   
- [ @principal_id =] *principal_id*  
- ID du principal qui sera refusé. Le *principal_id* est **int**.  
+ [ @principal_id = ] *principal_id*  
+ ID du principal qui sera refusé. *principal_id* est de type **int**.  
   
- [ @permission_type =] *permission_type*  
- Type d'autorisation qui sera refusée. Le *permission_type* est **smallint**.  
+ [ @permission_type = ] *permission_type*  
+ Type d'autorisation qui sera refusée. *permission_type* est de type **smallint**.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  0 (succès)  
@@ -59,25 +58,25 @@ catalog.deny_permission [ @object_type = ] object_type
   
  2 (object_id n’existe pas)  
   
- 3 (principal n’existe pas)  
+ 3 (le principal n’existe pas)  
   
- 4 (autorisation n’est pas valide)  
+ 4 (l’autorisation n’est pas valide)  
   
  5 (autre erreur)  
   
 ## <a name="result-sets"></a>Jeux de résultats  
- Aucune  
+ None  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Cette procédure stockée requiert l'une des autorisations suivantes :  
   
 -   Autorisation MANAGE_PERMISSIONS sur l'objet  
   
--   L’appartenance à la **ssis_admin** rôle de base de données  
+-   Appartenance au rôle de base de données **ssis_admin**  
   
--   L’appartenance à la **sysadmin** rôle de serveur  
+-   Appartenance au rôle serveur **sysadmin**  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Cette procédure stockée vous permet de refuser les types d'autorisation décrits dans le tableau suivant :  
   
 |Valeur permission_type|Nom de l'autorisation|Description de l'autorisation|Types d'objet applicables|  
@@ -95,9 +94,8 @@ catalog.deny_permission [ @object_type = ] object_type
 ## <a name="errors-and-warnings"></a>Erreurs et avertissements  
  La liste suivante décrit quelques conditions qui peuvent générer une erreur ou un avertissement :  
   
--   Si permission_type est spécifié, la procédure refuse l’autorisation affectée explicitement au principal pour l’objet spécifié. Même s'il n'y a pas de telles instances, la procédure retourne toujours une valeur de code de réussite (`0`).  
+-   Si permission_type est spécifié, la procédure refuse l’autorisation affectée explicitement au principal pour l’objet. Même s'il n'y a pas de telles instances, la procédure retourne toujours une valeur de code de réussite (`0`).  
   
 -   Si permission_type est omis, la procédure refuse toutes les autorisations pour le principal spécifié à l’objet spécifié.  
   
   
-

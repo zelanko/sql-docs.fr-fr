@@ -8,9 +8,7 @@ ms.service:
 ms.component: security
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -21,15 +19,15 @@ helpviewer_keywords:
 - My Reports folder [Reporting Services]
 ms.assetid: 3b23a382-13b8-4196-9a93-7fe62d03a63c
 caps.latest.revision: "34"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ff08b3c8e78fb337a97cbdf491a745157d52fd53
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 1777c84f25373806c3aab4f1c05a0a676b78097f
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="secure-my-reports"></a>Sécuriser Mes Rapports
   La fonctionnalité Mes Rapports offre un espace géré par l'utilisateur pour utiliser des rapports. Pour remplir sa fonction, le dossier Mes Rapports nécessite des autorisations moins restrictives que d'autres dossiers d'utilisation générale. Les utilisateurs qui disposent uniquement d'autorisations d'affichage et d'exécution de rapports dans d'autres dossiers peuvent nécessiter un ensemble étendu d'autorisations pour gérer leurs dossiers Mes rapports et leurs contenus. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] offre une attribution et une définition de rôles spécialisées à cette fin.  
@@ -62,7 +60,7 @@ ms.lasthandoff: 12/05/2017
   
  Lorsque vous désactivez Mes Rapports, tout lien vers un dossier Mes Rapports est supprimé du Gestionnaire de rapports. La structure de dossiers sous-jacente qui prend en charge Mes Rapports (c'est-à-dire, le dossier Dossiers des utilisateurs et ses sous-dossiers) reste disponible et l'utilisateur peut y accéder s'il connaît le chemin d'accès au dossier. La suppression de toutes les tâches du rôle **Mes Rapports** garantit le refus de l’accès.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Sécuriser des rapports et des ressources](../../reporting-services/security/secure-reports-and-resources.md)   
  [Dossiers sécurisés](../../reporting-services/security/secure-folders.md)   
  [Octroi d'autorisations sur un serveur de rapports en mode natif](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)  

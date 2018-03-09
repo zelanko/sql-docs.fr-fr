@@ -1,103 +1,111 @@
 ---
-title: "SQL Server Integration Services (SSIS) de montée en charge pour la haute disponibilité | Documents Microsoft"
+title: "Prise en charge de SQL Server Integration Services (SSIS) Scale Out pour la haute disponibilité | Microsoft Docs"
+ms.description: This article describes how to configure SSIS Scale Out for high availability
 ms.custom: 
-ms.date: 07/18/2017
-ms.prod: sql-server-2017
+ms.date: 12/19/2017
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: scale-out
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-caps.latest.revision: 1
+caps.latest.revision: 
 author: haoqian
 ms.author: haoqian
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 2405235bcfa09d2cc49e007f4eae6975d9ebf7a5
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/03/2017
-
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: 906edbe80e7c762cdd9a271218d790edc9da8f5b
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="scale-out-support-for-high-availability"></a>Support de monter en charge pour la haute disponibilité
+# <a name="scale-out-support-for-high-availability"></a>Prise en charge de Scale Out pour la haute disponibilité
 
-Dans SSIS monter en charge, le travail côté haute disponibilité est fournie via l’exécution de packages avec mise à l’échelle de plusieurs des travailleurs.
-Master côté haute disponibilité est obtenue avec [Always On pour le catalogue SSIS](../service/ssis-catalog.md#always-on-for-ssis-catalog-ssisdb) et cluster de basculement Windows. Plusieurs instances de l’échelle des principales sont hébergés dans un cluster de basculement Windows. Lorsque le service de mise à l’échelle à Master ou SSISDB est arrêté sur le nœud principal, le service ou le SSISDB sur le nœud secondaire continue à accepter les demandes d’utilisateur et de communiquer avec montée en puissance des processus de travail. 
+Dans SSIS Scale Out, la haute disponibilité côté Scale Out Worker est fournie par l’exécution de packages avec plusieurs Scale Out Workers.
 
-Pour configurer la principale côté haute disponibilité, suivez les étapes ci-dessous.
+La haute disponibilité côté Scale Out Master est obtenue avec [Always On pour le catalogue SSIS](../catalog/ssis-catalog.md#always-on-for-ssis-catalog-ssisdb) et le clustering de basculement Windows. Dans cette solution, plusieurs instances de Scale Out Master sont hébergées dans un cluster de basculement Windows. Quand le service Scale Out Master ou SSISDB est arrêté sur le nœud principal, le service ou SSISDB sur le nœud secondaire continue d’accepter les demandes d’utilisateur et de communiquer avec les Scale Out Workers. 
 
-## <a name="1-prerequisites"></a>1. Conditions préalables
-Configurez un cluster de basculement Windows. Pour obtenir des instructions, voir le billet de blog [Installing the Failover Cluster Feature and Tools for Windows Server 2012](http://blogs.msdn.com/b/clustering/archive/2012/04/06/10291601.aspx) (Installation de la fonctionnalité de cluster de basculement et des outils pour Windows Server 2012). Vous devez installer la fonctionnalité et les outils sur tous les nœuds de cluster.
+Pour configurer la haute disponibilité côté Scale Out Master, suivez les étapes ci-dessous :
 
-## <a name="2-install-scale-out-master-on-primary-node"></a>2. Installer la mise à l’échelle des principales sur le nœud principal
-Installer les Services du moteur de base de données, Integration Services et l’échelle des principales sur le nœud principal pour l’échelle des maître. 
+## <a name="1-prerequisites"></a>1. Prerequisites
+Configurez un cluster de basculement Windows. Pour obtenir des instructions, consultez le billet de blog [Installing the Failover Cluster Feature and Tools for Windows Server 2012](http://blogs.msdn.com/b/clustering/archive/2012/04/06/10291601.aspx). Installez la fonctionnalité et les outils sur tous les nœuds de cluster.
 
-Pendant l’installation, vous devez 
-### <a name="21-set-the-account-running-scale-out-master-service-to-a-domain-account"></a>2.1 définir le compte de service de mise à l’échelle des principale en cours d’exécution à un compte de domaine.
-Ce compte doit être en mesure d’accéder à l’avenir les SSISDB sur le nœud secondaire dans un cluster de basculement Windows. Comme service de mise à l’échelle des principale et SSISDB séparément de basculement, ils ne peuvent pas être sur le même nœud.
+## <a name="2-install-scale-out-master-on-the-primary-node"></a>2. Installer Scale Out Master sur le nœud principal
+Installez les services SQL Server Moteur de base de données, Integration Services et Scale Out Master sur le nœud principal pour Scale Out Master. 
 
-![Configuration de serveur à haute disponibilité](media/ha-server-config.PNG)
+Pendant l’installation, effectuez les étapes suivantes :
 
-### <a name="22-include-scale-out-master-service-dns-host-name-in-the-cns-of-scale-out-master-certificate"></a>2.2 incluent la montée en puissance Out Master service nom d’hôte DNS dans le certificat de noms communs d’échelle Out principal.
+### <a name="21-set-the-account-running-scale-out-master-service-to-a-domain-account"></a>2.1 Définir le compte exécutant le service Scale Out Master sur un compte de domaine
+Ce compte doit pouvoir accéder ultérieurement à SSISDB sur le nœud secondaire dans le cluster de basculement Windows. Étant donné que le service Scale Out Master et SSISDB peuvent basculer séparément, ils peuvent se trouver sur des nœuds différents après le basculement.
 
-Ce nom d’hôte sera utilisé dans le point de terminaison de mise à l’échelle des Master. 
+![Configuration du serveur à haute disponibilité](media/ha-server-config.PNG)
 
-![Configuration de master à haute disponibilité](media/ha-master-config.PNG)
+### <a name="22-include-the-dns-host-name-for-the-scale-out-master-service-in-the-cns-of-the-scale-out-master-certificate"></a>2.2 Inclure le nom d’hôte DNS du service Scale Out Master dans les noms communs (CN) du certificat Scale Out Master
 
-## <a name="3-install-scale-out-master-on-secondary-node"></a>3. Installer la mise à l’échelle des principales sur le nœud secondaire
-Installer les Services du moteur de base de données, Integration Services et l’échelle des principales sur le nœud secondaire pour l’échelle des maître. 
+Ce nom d’hôte est utilisé dans le point de terminaison de Scale Out Master. 
 
-Vous devez utiliser le même certificat de mise à l’échelle des Master avec le nœud principal. Exporter le certificat de mise à l’échelle des Master SSL sur le nœud principal avec la clé privée et l’installer dans le magasin de certificats racine de l’ordinateur loacl sur le nœud secondaire. Sélectionnez ce certificat lors de l’installation de mise à l’échelle des Master.
+![Configuration de Master à haute disponibilité](media/ha-master-config.PNG)
 
-![Fichier de configuration à haute disponibilité maître 2](media/ha-master-config2.PNG)
+## <a name="3-install-scale-out-master-on-the-secondary-node"></a>3. Installer Scale Out Master sur le nœud secondaire
+Installez les services SQL Server Moteur de base de données, Integration Services et Scale Out Master sur le nœud secondaire pour Scale Out Master. 
 
-> [!Note]
-> Vous pouvez configurer plusieurs sauvegarde mise à l’échelle les masques en répétant les opérations de mise à l’échelle des maître secondaire.
+Utilisez le même certificat Scale Out Master que celui utilisé sur le nœud principal. Exportez le certificat SSL Scale Out Master sur le nœud principal avec une clé privée, puis installez-le dans le magasin de certificats racine de l’ordinateur local sur le nœud secondaire. Sélectionnez ce certificat quand vous installez Scale Out Master sur le nœud secondaire.
 
-## <a name="4-set-up-ssisdb-always-on"></a>4. Configurez toujours SSISDB sur
+![Configuration de Master à haute disponibilité 2](media/ha-master-config2.PNG)
 
-Les instructions pour définir AlwaysOn pour SSISDB peut être consulté à [Always On pour le catalogue SSIS (SSISDB)](../service/ssis-catalog.md#always-on-for-ssis-catalog-ssisdb).
+> [!NOTE]
+> Vous pouvez configurer plusieurs Scale Out Masters de sauvegarde en répétant ces opérations pour le Scale Out Master sur d’autres nœuds secondaires.
 
-En outre, vous devez créer un écouteur de gourp de disponibilité pour le groupe de disponibilité À que SSISDB ajouté. Consultez [créer ou configurer un écouteur de groupe de disponibilité](../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md).
+## <a name="4-set-up-ssisdb-always-on"></a>4. Configurer Always On pour SSISDB
 
-## <a name="5-update-scale-out-master-service-configuration-file"></a>5. Mettre à jour le fichier de configuration de service de mise à l’échelle des principale
-Fichier de configuration de service de mise à l’échelle des principale de mise à jour, \<pilote\>: \Program Files\Microsoft SQL Server\140\DTS\Binn\MasterSettings.config, sur les nœuds principaux et secondaires. Mise à jour **SqlServerName** à *[nom DNS de l’écouteur disponibilité groupe], [Port]*.
+Pour configurer Always On pour SSISDB, suivez les indications fournies dans [Always On pour le catalogue SSIS (SSISDB)](../catalog/ssis-catalog.md#always-on-for-ssis-catalog-ssisdb).
 
-## <a name="6-enable-package-execution-logging"></a>6. Activer la journalisation de l’exécution de package
+Vous devez également créer un écouteur de groupe de disponibilité pour le groupe de disponibilité auquel vous ajoutez SSISDB. Consultez [Créer ou configurer un écouteur de groupe de disponibilité](../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md).
 
-Journalisation dans SSISDB est effectuée par la connexion **MS_SSISLogDBWorkerAgentLogin ## ##**, dont un mot de passe est généré automatiquement. Pour rendre le fonctionnement de l’enregistrement pour tous les réplicas de SSISDB, procédez comme suit.
+## <a name="5-update-the-scale-out-master-service-configuration-file"></a>5. Mettre à jour le fichier de configuration du service Scale Out Master
+Mettez à jour le fichier de configuration du service Scale Out Master (`\<drive\>:\Program Files\Microsoft SQL Server\140\DTS\Binn\MasterSettings.config`) sur le nœud principal et chaque nœud secondaire. Définissez **SqlServerName** sur *nom DNS de l’écouteur de groupe de disponibilité],[port]*.
 
-### <a name="61-change-the-password-of-msssislogdbworkeragentlogin-on-primary-sql-server"></a>6.1 modifier le mot de passe de **MS_SSISLogDBWorkerAgentLogin ## ##** sur le serveur Sql principal.
-### <a name="62-add-the-login-to-secondary-sql-server"></a>6.2 ajouter la connexion au serveur Sql secondaire.
-### <a name="63-update-connection-string-of-logging"></a>6.3 mettre à jour la chaîne de connexion de la journalisation.
-Appelez la procédure stockée [catalogue]. [update_logdb_info] avec 
+## <a name="6-enable-package-execution-logging"></a>6. Activer la journalisation de l’exécution des packages
 
-@server_name= '*[Nom DNS de l’écouteur disponibilité groupe], [Port]*' 
+La journalisation dans SSISDB est effectuée par la connexion **##MS_SSISLogDBWorkerAgentLogin##**. Le mot de passe est généré automatiquement pour cette connexion. Pour effectuer la journalisation de tous les réplicas de SSISDB, effectuez les opérations suivantes
 
-et @connection_string = ' Source de données =*[nom DNS de l’écouteur disponibilité groupe]*,*[Port]*; Initial Catalog = SSISDB ; Id d’utilisateur = MS_SSISLogDBWorkerAgentLogin ## ## ; Mot de passe =*[Password]*] ;'.
+### <a name="61-change-the-password-of-msssislogdbworkeragentlogin-on-the-primary-sql-server"></a>6.1 Changer le mot de passe de **##MS_SSISLogDBWorkerAgentLogin##** sur l’instance SQL Server principale
 
-## <a name="7-congifure-scale-out-master-service-role-of-windows-failover-cluster"></a>7. Rôle du service Congifure Scale Out principale du cluster de basculement Windows
+### <a name="62-add-the-login-to-the-secondary-sql-server"></a>6.2 Ajouter la connexion au nœud SQL Server secondaire
 
-Gestionnaire du cluster de basculement, connectez-vous au cluster pour monter en charge. Sélectionnez le cluster et cliquez sur **Action** dans le menu, puis **configurer un rôle en cours...** .
+### <a name="63-update-the-connection-string-used-for-logging"></a>6.3 Mettre à jour la chaîne de connexion utilisée pour la journalisation
+Appelez la procédure stockée `[catalog].[update_logdb_info]` avec les valeurs de paramètre suivantes :
 
-Dans la liste dépilé des **Assistant haute disponibilité**, sélectionnez **Service générique** dans **sélectionner un rôle** page et choisissez SQL Server Integration Services échelle Out Master 14.0 dans **sélectionner un Service** page.
+-   `@server_name = '[Availability Group Listener DNS name],[Port]' `
 
-Dans le **Point d’accès Client** , entrez le nom d’hôte DNS échelle Out Master service.
+-   `@connection_string = 'Data Source=[Availability Group Listener DNS name],[Port];Initial Catalog=SSISDB;User Id=##MS_SSISLogDBWorkerAgentLogin##;Password=[Password]];'`
 
-![Haute disponibilité Assistant 1](media/ha-wizard1.PNG)
+## <a name="7-configure-the-scale-out-master-service-role-of-the-windows-failover-cluster"></a>7. Configurer le rôle du service Scale Out Master du cluster de basculement Windows
 
-Terminez l’Assistant.
+1.  Dans le Gestionnaire du cluster de basculement, connectez-vous au cluster pour Scale Out. Sélectionnez le cluster. Sélectionnez **Action** dans le menu, puis sélectionnez **Configurer un rôle**.
 
-## <a name="8-update-master-address-in-ssisdb"></a>8. Mettre à jour principale adresse dans SSISDB
+2.  Dans la boîte de dialogue **Assistant Haute disponibilité**, sélectionnez **Service générique** dans la page **Sélectionner un rôle**. Sélectionnez SQL Server Integration Services Scale Out Master 14.0 dans la page **Sélectionner un service**.
 
-Sur le serveur SQL principal, exécutez la procédure stockée [SSIS]. [catalogue]. [update_master_address] avec le paramètre @MasterAddress = N'https : / / [nom d’hôte de service de mise à l’échelle des maître DNS] : [Port Master]'. 
+3.  Dans la page **Point d’accès client**, entrez le nom d’hôte DNS du service Scale Out Master.
 
-## <a name="9-add-scale-out-worker"></a>9. Ajouter la montée en charge de travail
+    ![Assistant Haute disponibilité 1](media/ha-wizard1.PNG)
 
-Maintenant, vous pouvez ajouter la mise à l’échelle des travailleurs à l’aide de [échelle Out Manager](integration-services-ssis-scale-out-manager.md). Entrez *[nom DNS de l’écouteur SQL Server disponibilité groupe]*,*[Port]* dans la page de connexion.
+4.  Terminez l’Assistant.
 
+## <a name="8-update-the-scale-out-master-address-in-ssisdb"></a>8. Mettre à jour l’adresse Scale Out Master dans SSISDB
 
+Sur l’instance SQL Server principale, exécutez la procédure stockée `[catalog].[update_master_address]` avec la valeur de paramètre `@MasterAddress = N'https://[Scale Out Master service DNS host name]:[Master Port]'`. 
 
+## <a name="9-add-the-scale-out-workers"></a>9. Ajouter les Scale Out Workers
 
+Maintenant, vous pouvez ajouter des Scale Out Workers avec [Integration Services Scale Out Manager](integration-services-ssis-scale-out-manager.md). Entrez `[SQL Server Availability Group Listener DNS name],[Port]` dans la page de connexion.
 
+## <a name="next-steps"></a>Étapes suivantes
+Pour plus d’informations, consultez les articles suivants :
+-   [SSIS (SQL Server Integration Services) Scale Out Master](integration-services-ssis-scale-out-master.md)
+-   [SSIS (SQL Server Integration Services) Scale Out Worker](integration-services-ssis-scale-out-worker.md)

@@ -8,25 +8,28 @@ ms.service:
 ms.component: t-sql|spatial-geography
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords: geometry
-dev_langs: TSQL
+f1_keywords:
+- geometry
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - spatial data types [SQL Server]
 - geometry data type [SQL Server], Transact-SQL
 ms.assetid: 3fefdf7b-f931-404c-821c-82c0375eaf51
-caps.latest.revision: "20"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ec4c1036182df1ab4a9c21dff494a0a17a1bca73
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: 734a57249ce3b65a3add16a604cc4e2ed2f4180f
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="spatial-types---geometry-transact-sql"></a>Types de données spatiales - géométrie (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -45,7 +48,7 @@ ms.lasthandoff: 11/17/2017
 ### <a name="a-showing-how-to-add-and-query-geometry-data"></a>A. Illustration de l'ajout et de l'interrogation des données géométriques  
  Les deux exemples suivants montrent comment ajouter et interroger des données géométriques. Le premier exemple crée une table avec une colonne d’identité et une `geometry` colonne, `GeomCol1`. Une troisième colonne restitue la colonne `geometry` dans sa représentation OGC (Open Geospatial Consortium) WKT (Well-Known Text) et utilise la méthode `STAsText()` . Deux lignes sont ensuite insérées : une ligne contient une instance `LineString` de `geometry`et une ligne contient une instance `Polygon` .  
   
-```tsql 
+```sql 
 IF OBJECT_ID ( 'dbo.SpatialTable', 'U' ) IS NOT NULL   
     DROP TABLE dbo.SpatialTable;  
 GO  
@@ -67,7 +70,7 @@ GO
 ### <a name="b-returning-the-intersection-of-two-geometry-instances"></a>B. Retour de l'intersection de deux instances géométriques  
  Le deuxième exemple utilise la méthode `STIntersection()` pour retourner les points où les deux instances `geometry` précédemment insérées se croisent.  
   
-```tsql  
+```sql  
 DECLARE @geom1 geometry;  
 DECLARE @geom2 geometry;  
 DECLARE @result geometry;  
@@ -81,7 +84,7 @@ SELECT @result.STAsText();
 ### <a name="c-using-geometry-in-a-computed-column"></a>C. Utilisation du type géométrique dans une colonne calculée  
  L’exemple suivant crée une table avec une colonne calculée persistante à l’aide un **geometry** type.  
   
-```tsql  
+```sql  
 IF OBJECT_ID ( 'dbo.SpatialTable', 'U' ) IS NOT NULL   
     DROP TABLE dbo.SpatialTable;  
 GO  

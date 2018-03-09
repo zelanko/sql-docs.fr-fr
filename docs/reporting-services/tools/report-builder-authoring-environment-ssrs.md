@@ -8,24 +8,22 @@ ms.service:
 ms.component: tools
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 32be8fcc-e87d-4c45-a644-dff45776a981
 caps.latest.revision: "13"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 4265d5ba1e75e5436e84efd1ecff6a9af75053e4
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 46f75cd92e385c6992678444f68e9e7c1f2e2d8d
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
-# <a name="report-builder-authoring-environment-ssrs"></a>Environnement de création du Générateur de rapports (SSRS)
+# <a name="report-builder-authoring-environment-ssrs"></a>Environnement de création du Générateur de rapports (SSRS)
   Le Générateur de rapports [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] est un environnement autonome dédié à la création de rapports paginés [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en dehors de Visual Studio. Lorsque vous concevez un rapport, vous spécifiez l'emplacement des données à obtenir, leur nature et leur mode d'affichage. Au moment de l'exécution du rapport, le processeur de rapports assimile l'ensemble des informations que vous avez spécifiées, puis il récupère les données et les combine à la mise en page du rapport pour générer le rapport. Vous pouvez l’installer depuis le portail web de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ou le Centre de téléchargement Microsoft.  
   
  [Install Report Builder](../../reporting-services/install-windows/install-report-builder.md) à partir du Centre de téléchargement Microsoft.  
@@ -53,7 +51,7 @@ ms.lasthandoff: 12/05/2017
   
  Le Générateur et le Concepteur de rapports partagent de nombreuses fonctionnalités. En savoir plus sur le [Report Builder in SQL Server 2016](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md).  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Install Report Builder](../../reporting-services/install-windows/install-report-builder.md)   
  [Configurer l'accès au Générateur de rapports](../../reporting-services/report-server/configure-report-builder-access.md)   
  [Outils de Reporting Services](../../reporting-services/tools/reporting-services-tools.md)   

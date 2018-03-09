@@ -2,15 +2,13 @@
 title: "Élément ServerProperty (ASSL) | Documents Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: scripting
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: ServerProperty Element
@@ -25,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: edf7c78a2486d7e09dfb8eeb437b1215bff50bc1
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 9008e839c9182c972d2aeefbde0cc827dd1d9dd3
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="serverproperty-element-assl"></a>Élément ServerProperty (ASSL)
-  Définit une propriété de serveur associée à un [Server](../../../analysis-services/scripting/objects/server-element-assl.md) élément.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Définit une propriété de serveur associée à un [Server](../../../analysis-services/scripting/objects/server-element-assl.md) élément.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -54,8 +52,8 @@ ms.lasthandoff: 11/17/2017
   
 |Caractéristique|Description|  
 |--------------------|-----------------|  
-|Type de données et longueur|Aucune|  
-|Valeur par défaut|Aucune|  
+|Type de données et longueur|None|  
+|Valeur par défaut|None|  
 |Cardinalité|0-n : élément facultatif pouvant apparaître plusieurs fois.|  
   
 ## <a name="element-relationships"></a>Relations entre les éléments  
@@ -65,7 +63,7 @@ ms.lasthandoff: 11/17/2017
 |Éléments parents|[ServerProperties](../../../analysis-services/scripting/collections/serverproperties-element-assl.md)|  
 |Éléments enfants|[DefaultValue](../../../analysis-services/scripting/properties/defaultvalue-element-assl.md), [DisplayFlag](../../../analysis-services/scripting/properties/displayflag-element-assl.md), [nom](../../../analysis-services/scripting/properties/name-element-assl.md), [PendingValue](../../../analysis-services/scripting/properties/pendingvalue-element-assl.md), [RequiresRestart](../../../analysis-services/scripting/properties/requiresrestart-element-assl.md), [valeur](../../../analysis-services/scripting/properties/value-element-assl.md)|  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Le **ServerProperty** élément décrit les données et les métadonnées pour une propriété de serveur associée à une instance de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Contrairement aux éléments figurant dans d'autres collections dans ASSL (Analysis Services Scripting Language), l'élément **ServerProperty** utilise des paires nom/valeur à la place d'éléments portant des noms explicites pour décrire les propriétés de serveur. Les paires nom/valeur garantissent souplesse et extensibilité.  
   
  L’élément correspondant dans le modèle d’objet objets AMO (Analysis Management) est <xref:Microsoft.AnalysisServices.ServerProperty>.  

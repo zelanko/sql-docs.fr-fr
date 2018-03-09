@@ -1,1 +1,1 @@
- Groupes de disponibilité AlwaysOn 
+ Groupes de disponibilité Always On 

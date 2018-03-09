@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords: DefaultMember
@@ -20,11 +20,11 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: f50284923b5df2765717a882bc9676f77e922e0c
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 756f099281a884c168a304cf4d27dfbf8f1f03e0
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="defaultmember-mdx"></a>DefaultMember (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -42,10 +42,10 @@ Hierarchy_Expression.DefaultMember
  *Hierarchy_Expression*  
  Expression MDX (Multidimensional Expressions) valide qui retourne une hiérarchie.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Le membre par défaut d'un attribut sert à évaluer des expressions lorsqu'un attribut n'est pas inclus dans une requête.  
   
-## <a name="example"></a>Exemple  
+## <a name="example"></a> Exemple  
  L’exemple suivant utilise le **DefaultMember** fonction, conjointement avec la **nom** pour retourner le membre par défaut pour la dimension de devise de Destination dans le cube Adventure Works. L’exemple retourne **Dollar américain**. Le **nom** fonction est utilisée pour retourner le nom de la mesure plutôt que la propriété par défaut de la mesure, qui est **valeur**.  
   
 ```  

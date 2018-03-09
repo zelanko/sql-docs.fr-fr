@@ -1,5 +1,5 @@
 ---
-title: Syntaxe (SSIS) | Documents Microsoft
+title: Syntaxe (SSIS) | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -16,17 +16,16 @@ helpviewer_keywords:
 - expressions [Integration Services], syntax
 - syntax [Integration Services]
 ms.assetid: 61c053c5-1182-4ad0-b804-51cbd19aa0ba
-caps.latest.revision: 48
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 298c94c7a016e3df8bd89a11281d571f1c5b669d
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 28dc10cc407a41e8ba2ec594fdacbe293dbe53a1
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="syntax-ssis"></a>Syntaxe (SSIS)
   La syntaxe des expressions [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] est similaire à la syntaxe utilisée par les langages C et C#. Les expressions comprennent des éléments tels que des identificateurs (colonnes et variables), des littéraux, des opérateurs et des fonctions. Cette rubrique récapitule les contraintes de la syntaxe de l'évaluateur d'expression applicables aux différents éléments d'une expression.  
@@ -43,7 +42,7 @@ ms.lasthandoff: 08/03/2017
 ## <a name="identifiers"></a>Identificateurs  
  Les expressions peuvent comprendre des identificateurs de colonne et de variable. Les colonnes peuvent provenir de la source de données ou être créées par des transformations dans le flux de données. Les expressions peuvent utiliser des identificateurs de lignage pour faire référence aux colonnes. Les identificateurs de lignage sont des nombres qui identifient de manière unique les éléments du package. Les identificateurs de lignage référencés dans une expression doivent être préfixés du signe dièse ( # ). Par exemple, l'identificateur de lignage 138 est référencé sous la forme « #138 ».  
   
- Les expressions peuvent contenir les variables système fournies par [!INCLUDE[ssIS](../../includes/ssis-md.md)] , ainsi que des variables personnalisées. Les variables référencées dans une expression doivent comprendre le préfixe « @ ». Par exemple, le `Counter` variable est référencée à l’aide de @Counter. Le caractère « @ » ne fait pas partie du nom de la variable ; il indique simplement à l'évaluateur d'expression que l'identificateur est une variable. Pour plus d’informations, consultez [Identificateurs &#40;SSIS&#41;](../../integration-services/expressions/identifiers-ssis.md).  
+ Les expressions peuvent contenir les variables système fournies par [!INCLUDE[ssIS](../../includes/ssis-md.md)] , ainsi que des variables personnalisées. Les variables référencées dans une expression doivent comprendre le préfixe « @ ». Par exemple, la variable `Counter` est référencée sous la forme @Counter. Le caractère « @ » ne fait pas partie du nom de la variable ; il indique simplement à l'évaluateur d'expression que l'identificateur est une variable. Pour plus d’informations, consultez [Identificateurs &#40;SSIS&#41;](../../integration-services/expressions/identifiers-ssis.md).  
   
 ## <a name="literals"></a>Littéraux  
  Les expressions peuvent contenir des littéraux numériques, booléens et de chaîne. Les littéraux de chaîne utilisés dans les expressions doivent être placés entre guillemets. Les littéraux numériques et booléens ne prennent pas de guillemets. Le langage des expressions comprend des séquences d'échappement pour les caractères fréquemment placés en mode échappement. Pour plus d’informations, consultez [Littéraux &#40;SSIS&#41;](../../integration-services/expressions/numeric-string-and-boolean-literals.md).  
@@ -83,14 +82,13 @@ ms.lasthandoff: 08/03/2017
   
  Pour plus d’informations, consultez [Fonctions &#40;expression SSIS&#41;](../../integration-services/expressions/functions-ssis-expression.md).  
   
-## <a name="related-tasks"></a>Tâches associées  
+## <a name="related-tasks"></a>Related Tasks  
  [Utiliser une expression dans un composant de flux de données](http://msdn.microsoft.com/library/9181b998-d24a-41fb-bb3c-14eee34f910d)  
   
-## <a name="related-content"></a>Contenu connexe  
+## <a name="related-content"></a>Contenu associé  
   
 -   Article technique, [SSIS Expression Cheat Sheet](http://go.microsoft.com/fwlink/?LinkId=746575), sur pragmaticworks.com  
   
 -   Article technique, [SSIS Expression Examples](http://go.microsoft.com/fwlink/?LinkId=220761), sur social.technet.microsoft.com  
   
   
-

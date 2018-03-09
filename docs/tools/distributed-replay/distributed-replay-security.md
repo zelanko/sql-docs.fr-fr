@@ -2,26 +2,29 @@
 title: Distributed Replay Security | Documents Microsoft
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: distributed-replay
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 7e2e586d-947d-4fe2-86c5-f06200ebf139
 caps.latest.revision: "29"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 80863e36e842e5407eefec79a4e197e93c14d4a9
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 3779b55923a5fd3ac803060c0ed8990dcffcead8
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="distributed-replay-security"></a>Sécurité Distributed Replay
-  Avant d'installer et d'utiliser la fonctionnalité [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay, vous devez vérifier les informations de sécurité importantes de cette rubrique. Cette rubrique décrit les étapes de configuration de la sécurité consécutives à l'installation requises pour pouvoir utiliser Distributed Replay. Elle inclut également des considérations importantes en ce qui concerne la protection des données et les étapes de suppression importantes.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Avant d’installer et utiliser le [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fonctionnalité Distributed Replay, vous devez passer en revue les informations de sécurité importantes dans cette rubrique. Cette rubrique décrit les étapes de configuration de la sécurité consécutives à l'installation requises pour pouvoir utiliser Distributed Replay. Elle inclut également des considérations importantes en ce qui concerne la protection des données et les étapes de suppression importantes.  
   
 ## <a name="user-and-service-accounts"></a>Comptes d'utilisateur et de service  
  Le tableau suivant décrit les comptes utilisés pour Distributed Replay. Après l'installation de Distributed Replay, vous devez affecter les principaux de sécurité qui seront exécutés sous les comptes de service du contrôleur et du client. Par conséquent, il est recommandé de configurer les comptes d'utilisateur de domaine correspondants avant d'installer les fonctionnalités de Distributed Replay.  
@@ -111,12 +114,12 @@ ms.lasthandoff: 11/09/2017
   
 -   Membres du groupe Administrateurs local sur le contrôleur.  
   
--   Membres du groupe Administrateurs local sur les clients.  
+-   Membres du groupe Administrateurs local sur les clients.  
   
     > [!IMPORTANT]  
     >  Ces comptes ont entièrement accès à toutes les informations d'identification personnelle (PII) ou informations sensibles contenues dans la trace, l'intermédiaire, la distribution ou les fichiers de données de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilisés par Distributed Replay.  
   
- Nous vous recommandons d'appliquer les précautions de sécurité suivantes :  
+ Nous vous recommandons d'appliquer les précautions de sécurité suivantes :  
   
 -   Stockez les données de la trace d'entrée, les résultats de la trace de sortie et les fichiers de base de données dans un emplacement qui utilise le système de fichiers NTFS et appliquez les listes de contrôle d'accès (ACL) appropriées. Si nécessaire, chiffrez les données stockées sur l'ordinateur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Sachez que les listes de contrôle d'accès (ACL) ne sont pas appliquées aux fichiers de trace, et qu'il n'y a pas de masque de données ni de codage. Vous devez supprimer ces fichiers rapidement après utilisation.  
   

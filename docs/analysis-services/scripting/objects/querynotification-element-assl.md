@@ -2,15 +2,13 @@
 title: "Élément QueryNotification (ASSL) | Documents Microsoft"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: scripting
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: QueryNotification Element
@@ -24,14 +22,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ca66700cbe7be59397679201160ee7031ed02330
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 587c30fbfb6f2364ce1cbe9a43b82df8cfab4562
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="querynotification-element-assl"></a>Élément QueryNotification (ASSL)
-  Contient des informations pour l’élément [ProactiveCaching](../../../analysis-services/scripting/objects/proactivecaching-element-assl.md) à propos de la requête à exécuter pour déterminer si une source de données a été modifiée.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Contient des informations pour le [ProactiveCaching](../../../analysis-services/scripting/objects/proactivecaching-element-assl.md) élément sur la requête à exécuter pour déterminer si une source de données a été modifiée.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -48,8 +46,8 @@ ms.lasthandoff: 11/17/2017
   
 |Caractéristique|Description|  
 |--------------------|-----------------|  
-|Type de données et longueur|Aucune|  
-|Valeur par défaut|Aucune|  
+|Type de données et longueur|None|  
+|Valeur par défaut|None|  
 |Cardinalité|1-n : élément requis pouvant apparaître plusieurs fois.|  
   
 ## <a name="element-relationships"></a>Relations entre les éléments  
@@ -59,7 +57,7 @@ ms.lasthandoff: 11/17/2017
 |Éléments parents|[QueryNotifications](../../../analysis-services/scripting/collections/querynotifications-element-assl.md)|  
 |Éléments enfants|[Requête](../../../analysis-services/scripting/properties/query-element-assl.md)|  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  L’élément correspondant dans le modèle d’objet objets AMO (Analysis Management) est <xref:Microsoft.AnalysisServices.QueryNotification>.  
   
 ## <a name="see-also"></a>Voir aussi  

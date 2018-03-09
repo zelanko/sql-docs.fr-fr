@@ -2,15 +2,13 @@
 title: "Élément Return (XMLA) | Documents Microsoft"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: xmla
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: return Element
@@ -28,14 +26,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 6fb9f422df762c370f800cdc6f6dcef799d3fa77
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 1c4ce55f4bc63b0011d836ba6e6041f2bd72db85
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="return-element-xmla"></a>Élément return (XMLA)
-  Contient des informations retournées par une [DiscoverResponse](../../../analysis-services/xmla/xml-elements-objects-discoverresponse.md) élément en réponse à une [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md) appel de méthode ou un [ExecuteResponse](../../../analysis-services/xmla/xml-elements-objects-executeresponse.md) élément en réponse à une [Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md) appel de méthode.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]Contient des informations retournées par une [DiscoverResponse](../../../analysis-services/xmla/xml-elements-objects-discoverresponse.md) élément en réponse à une [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md) appel de méthode ou un [ExecuteResponse](../../../analysis-services/xmla/xml-elements-objects-executeresponse.md) élément en réponse à une [Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md) appel de méthode.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -54,9 +52,9 @@ ms.lasthandoff: 11/17/2017
   
 |Caractéristique|Description|  
 |--------------------|-----------------|  
-|Type de données et longueur|Aucune|  
-|Valeur par défaut|Aucune|  
-|Cardinalité|1-1 : élément requis qui apparaît une fois et une seule.|  
+|Type de données et longueur|None|  
+|Valeur par défaut|None|  
+|Cardinalité|1-1 : élément requis qui apparaît une fois et une seule.|  
   
 ## <a name="element-relationships"></a>Relations entre les éléments  
   
@@ -70,7 +68,7 @@ ms.lasthandoff: 11/17/2017
 |[DiscoverResponse](../../../analysis-services/xmla/xml-elements-objects-discoverresponse.md)|[racine](../../../analysis-services/xmla/xml-elements-properties/root-element-xmla.md)|  
 |[ExecuteResponse](../../../analysis-services/xmla/xml-elements-objects-executeresponse.md)|[racine](../../../analysis-services/xmla/xml-elements-properties/root-element-xmla.md) ou [résultats](../../../analysis-services/xmla/xml-elements-properties/results-element-xmla.md)|  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Le **retourner** élément contient les données retournées par le **Discover** et **Execute** méthodes. En règle générale, les **retourner** élément contienne un seul **racine** élément qui contient les données retournées par une réussite **Discover** ou **Execute** appel de méthode ou un XML pour l’exception de Analysis (XMLA) retournée par un appel de méthode échoue. Si le **Execute** méthode contient un **lot** commande qui effectue plusieurs opérations, le **retourner** élément contient un **résultats** élément qui, à son tour, contient un **racine** élément pour chaque commande exécutée avec succès ou non par le **lot** commande.  
   
 ## <a name="see-also"></a>Voir aussi  

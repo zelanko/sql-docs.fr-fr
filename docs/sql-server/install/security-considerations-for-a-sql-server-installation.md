@@ -2,12 +2,14 @@
 title: "Considérations sur la sécurité pour une installation SQL Server | Microsoft Docs"
 ms.custom: 
 ms.date: 08/23/2017
-ms.prod:
-- sql-server-2016
-- sql-server-2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: install
 ms.reviewer: 
-ms.suite: 
-ms.technology: setup-install
+ms.suite: sql
+ms.technology:
+- setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -27,18 +29,20 @@ helpviewer_keywords:
 - file system security [SQL Server]
 - installing SQL Server, security
 ms.assetid: cf96155f-30a8-48b7-8d6b-24ce90dafdc7
-caps.latest.revision: "48"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-ms.openlocfilehash: 9f2669116da566511273ca482f801bd2762ced09
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 65e1702f5886205858c5fc917d15837f6a3dfa8c
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="security-considerations-for-a-sql-server-installation"></a>Considérations sur la sécurité pour une installation SQL Server
- La sécurité est importante pour chaque produit et chaque activité. En respectant les recommandations les plus simples, vous pouvez éviter de nombreuses failles de sécurité. Cette rubrique traite des recommandations qu'il est conseillé de prendre en considération en matière de sécurité avant d'installer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et après l'avoir installé [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Des conseils en matière de sécurité concernant des fonctionnalités spécifiques sont inclus dans les rubriques de référence de ces fonctionnalités.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
+ La sécurité est importante pour chaque produit et chaque activité. En respectant les recommandations les plus simples, vous pouvez éviter de nombreuses failles de sécurité. Cet article traite des recommandations de sécurité qu’il est conseillé de suivre avant d’installer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et après avoir installé [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Des conseils en matière de sécurité concernant des fonctionnalités spécifiques sont inclus dans les articles de référence de ces fonctionnalités.  
   
 ## <a name="before-installing-includessnoversionincludesssnoversion-mdmd"></a>Avant d’effectuer l’installation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  Suivez ces recommandations lors de la définition de l'environnement du serveur :  
@@ -156,7 +160,7 @@ ms.lasthandoff: 11/09/2017
 > [!IMPORTANT]  
 >  Lors de l'installation de [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] une connexion est ajoutée pour le groupe BUILTIN\Users. Cela permet à tous les utilisateurs authentifiés sur l'ordinateur d'accéder à l'instance de [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] en tant que membres du rôle public. La connexion BUILTIN\Users peut être supprimée sans risque pour restreindre l'accès au [!INCLUDE[ssDE](../../includes/ssde-md.md)] aux utilisateurs de l'ordinateur qui disposent de connexions ou qui sont membres d'autres groupes Windows avec des connexions.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Configurations matérielle et logicielle requises pour l’installation de SQL Server](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)   
  [Protocoles réseau et bibliothèques réseau](../../sql-server/install/network-protocols-and-network-libraries.md)   
  [Inscrire un nom de principal du service pour les connexions Kerberos](../../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md)  

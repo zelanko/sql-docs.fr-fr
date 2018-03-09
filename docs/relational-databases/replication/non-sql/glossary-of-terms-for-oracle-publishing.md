@@ -2,27 +2,30 @@
 title: Glossaire des termes de la publication Oracle | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords: Oracle publishing [SQL Server replication], glossary
 ms.assetid: e21dfa4b-6144-4be7-9cbf-ca2709b2bd9f
 caps.latest.revision: "32"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3b0a29acf37c9e6508b244c531a4f7bb6a048b39
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 835ca9131d8484a2abe4995fb589775ba24bb953
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="glossary-of-terms-for-oracle-publishing"></a>Glossaire des termes de la publication Oracle
-  Vous devez connaître et comprendre les termes Oracle suivants pour configurer et administrer la publication Oracle. Pour une liste complète des termes Oracle, consultez la documentation en ligne d'Oracle.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Vous devez connaître et comprendre les termes Oracle suivants pour configurer et administrer la publication Oracle. Pour une liste complète des termes Oracle, consultez la documentation en ligne d'Oracle.  
   
  Table organisée en index (IOT)  
  Une table dont les données sont physiquement triées sur le disque dans l'ordre de l'index ; elle est similaire à une table [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] avec un index cluster. Une IOT est répliquée vers un Abonné sous forme de table avec un index cluster.  
@@ -56,7 +59,7 @@ ms.lasthandoff: 11/09/2017
  Schéma utilisateur  
  Un schéma utilisateur peut être vu comme un utilisateur de base de données qui détient un ensemble donné d'objets de base de données. Le schéma utilisateur d'administration de réplication détient tous les objets créés par le processus de réplication de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dans la base de données Oracle, à l'exception du synonyme public **MSSQLSERVERDISTRIBUTOR** .  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Configurer un serveur de publication Oracle](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md)   
  [Objets créés sur le serveur de publication Oracle](../../../relational-databases/replication/non-sql/objects-created-on-the-oracle-publisher.md)   
  [Serveurs de publication non SQL Server](../../../relational-databases/replication/non-sql/non-sql-server-publishers.md)   

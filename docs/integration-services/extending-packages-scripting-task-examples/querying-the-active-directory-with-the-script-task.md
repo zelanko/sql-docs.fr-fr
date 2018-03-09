@@ -1,5 +1,5 @@
 ---
-title: "Interrogation d’Active Directory avec la tâche de Script | Documents Microsoft"
+title: "Interrogation d’Active Directory avec la tâche de script | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: extending-packages-scripting-task-examples
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
@@ -22,38 +21,37 @@ helpviewer_keywords:
 - Script task [Integration Services], examples
 - Active Directory [Integration Services]
 ms.assetid: a88fefbb-9ea2-4a86-b836-e71315bac68e
-caps.latest.revision: 51
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: ee5a82829785e78554b105e1f3bf3bd24f05b778
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 9eb991a2cd5fa7da5e60d761b8618534a99c9dd6
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="querying-the-active-directory-with-the-script-task"></a>Interrogation d'Active Directory avec la tâche de script
-  Les applications de traitement des données d'entreprise, telles que les packages [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], ont souvent besoin de traiter des données différemment selon l'échelon, le poste ou d'autres caractéristiques des employés stockés dans Active Directory. Active Directory est un [!INCLUDE[msCoName](../../includes/msconame-md.md)] service d’annuaire Windows qui fournit un magasin centralisé de métadonnées, non seulement sur les utilisateurs, mais également sur d’autres ressources organisationnelles telles que les ordinateurs et les imprimantes. Le **System.DirectoryServices** espace de noms dans Microsoft .NET Framework fournit des classes pour travailler avec Active Directory, pour vous aider à direct le traitement des données de flux de travail basé sur les informations qu’elle stocke.  
+  Les applications de traitement des données d'entreprise, telles que les packages [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], ont souvent besoin de traiter des données différemment selon l'échelon, le poste ou d'autres caractéristiques des employés stockés dans Active Directory. Active Directory est un service d’annuaire [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows qui fournit un magasin centralisé de métadonnées, non seulement sur les utilisateurs, mais aussi sur d’autres ressources organisationnelles, comme les ordinateurs et les imprimantes. L’espace de noms **System.DirectoryServices** dans le Microsoft .NET Framework fournit des classes à utiliser avec Active Directory, pour vous aider à diriger le flux de travail du traitement des données en fonction des informations qu’il stocke.  
   
 > [!NOTE]  
 >  Si vous souhaitez créer une tâche plus facilement réutilisable sur plusieurs packages, envisagez d'utiliser le code indiqué dans l'exemple de tâche de script comme point de départ d'une tâche personnalisée. Pour plus d’informations, consultez [Développement d’une tâche personnalisée](../../integration-services/extending-packages-custom-objects/task/developing-a-custom-task.md).  
   
-## <a name="description"></a> Description  
- L'exemple suivant extrait le nom, le titre et le numéro de téléphone d'un employé dans Active Directory selon la valeur de la variable `email`, laquelle contient l'adresse de messagerie de l'employé. Les contraintes de précédence dans le package peuvent utiliser les informations extraites pour déterminer, par exemple, s'il faut envoyer un message électronique de priorité basse ou une page prioritaire, selon la fonction de l'employé.  
+## <a name="description"></a>Description  
+ L'exemple suivant extrait le nom, le titre et le numéro de téléphone d'un employé dans Active Directory selon la valeur de la variable `email`, laquelle contient l'adresse de messagerie de l'employé. Les contraintes de précédence dans le package peuvent utiliser les informations extraites pour déterminer, par exemple, s'il faut envoyer un message électronique de priorité basse ou une page prioritaire, selon le poste de l'employé.  
   
 #### <a name="to-configure-this-script-task-example"></a>Pour configurer cet exemple de tâche de script  
   
 1.  Créez les trois variables de chaîne `email`, `name` et `title`. Entrez une adresse de messagerie professionnelle valide en tant que valeur de la variable `email`.  
   
-2.  Sur le **Script** page de la **éditeur de tâche de Script**, ajouter le `email` variable à la **ReadOnlyVariables** propriété.  
+2.  Dans la page **Script** de l’**Éditeur de tâche de script**, ajoutez la variable `email` à la propriété **ReadOnlyVariables**.  
   
-3.  Ajouter le `name` et `title` variables à la **ReadWriteVariables** propriété.  
+3.  Ajoutez les variables `name` et `title` à la propriété **ReadWriteVariables**.  
   
-4.  Dans le projet de script, ajoutez une référence à la **System.DirectoryServices** espace de noms.  
+4.  Dans le projet de script, ajoutez une référence à l’espace de noms **System.DirectoryServices**.  
   
-5.  . Dans votre code, utilisez une **importations** statement pour importer le **DirectoryServices** espace de noms.  
+5.  . Dans votre code, utilisez une instruction **Imports** pour importer l’espace de noms **DirectoryServices**.  
   
 > [!NOTE]  
 >  Pour exécuter ce script correctement, votre entreprise doit utiliser Active Directory sur son réseau et stocker les informations sur l'employé que cet exemple utilise.  
@@ -121,4 +119,3 @@ public void Main()
 -   Article technique, [Processing Active Directory Information in SSIS](http://go.microsoft.com/fwlink/?LinkId=199588), sur social.technet.microsoft.com  
   
   
-

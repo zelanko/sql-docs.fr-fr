@@ -8,7 +8,7 @@ ms.service:
 ms.component: clr
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -16,19 +16,20 @@ helpviewer_keywords:
 - common language runtime [SQL Server], compilation process
 - performance [CLR integration]
 ms.assetid: 7ce2dfc0-4b1f-4dcb-a979-2c4f95b4cb15
-caps.latest.revision: "43"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 485a37af0cb6d9d5f7d34986f99db151e59c4628
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 327c531d44fc883afa144252dda3ba43d188682a
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="clr-integration-architecture----performance"></a>Architecture d’intégration CLR - performances
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Cette rubrique aborde certains choix de conception qui améliorent les performances de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] intégration avec le [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework common language runtime (CLR).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Cette rubrique aborde certains choix de conception qui améliorent les performances de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] intégration avec le [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework common language runtime (CLR).  
   
 ## <a name="the-compilation-process"></a>Processus de compilation  
  Pendant la compilation d'expressions SQL, en cas de référence à une routine managée, un stub MSIL ([!INCLUDE[msCoName](../../includes/msconame-md.md)] Intermediate Language) est généré. Ce stub inclut le code pour marshaler les paramètres de routine à partir de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vers le CLR, appeler la fonction et retourner le résultat. Ce code de type glue est basé sur le type de paramètre et sur la direction du paramètre (in, out ou reference).  
@@ -58,7 +59,7 @@ ms.lasthandoff: 11/17/2017
  Lorsque les curseurs [!INCLUDE[tsql](../../includes/tsql-md.md)] doivent parcourir des données qui sont plus aisément exprimées en tableau, le code managé peut être utilisé avec des gains de performance significatifs.  
   
 ### <a name="string-data"></a>Données de type chaîne  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]données de type caractère tel que **varchar**, peut être du type SqlString ou SqlChars dans les fonctions managées. Les variables SqlString créent une instance de la valeur entière en mémoire. Les variables SqlChars fournissent une interface multidiffusion qui peut être utilisée pour obtenir de meilleures performances et une meilleure évolutivité en ne créant pas d'instance de la totalité de la valeur en mémoire. Ce point est particulièrement important pour les données LOB. En outre, les données XML du serveur est accessible via une interface de diffusion en continu renvoyée par **SqlXml.CreateReader()**.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] données de type caractère tel que **varchar**, peut être du type SqlString ou SqlChars dans les fonctions managées. Les variables SqlString créent une instance de la valeur entière en mémoire. Les variables SqlChars fournissent une interface multidiffusion qui peut être utilisée pour obtenir de meilleures performances et une meilleure évolutivité en ne créant pas d'instance de la totalité de la valeur en mémoire. Ce point est particulièrement important pour les données LOB. En outre, les données XML du serveur est accessible via une interface de diffusion en continu renvoyée par **SqlXml.CreateReader()**.  
   
 ### <a name="clr-vs-extended-stored-procedures"></a>Différences entre le CLR et les Procédures stockées étendues  
  Les API Microsoft.SqlServer.Server (API) qui permettent aux procédures managées de renvoyer des jeux de résultats au client s'exécutent mieux que les API ODS (Open Data Services) utilisées par les procédures stockées étendues. En outre, les System.Data.SqlServer APIs prise en charge des types de données tels que **xml**, **varchar (max)**, **nvarchar (max)**, et **varbinary (max)**, introduite dans [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], tandis que les API ODS n’ont pas été étendues pour prendre en charge de nouveaux types de données.  

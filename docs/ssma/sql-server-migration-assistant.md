@@ -3,8 +3,11 @@ title: SQL Server Migration Assistant | Documents Microsoft
 ms.custom: 
 ms.date: 09/30/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-access
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 8c431da24d6449ce7d7ec8a5125d207828ff0b6c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 7b3e57982cc43dcee94e10198220bd4d7838589e
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sql-server-migration-assistant"></a>Assistant de migration SQL Server
 Migration Assistant Microsoft SQL Server (SSMA) est un outil conçu pour automatiser la migration de la base de données vers SQL Server à partir de Microsoft Access, DB2, MySQL, Oracle et SAP ASE.  
@@ -44,10 +47,10 @@ Pour des sources prises en charge, passez en revue les informations sur le centr
 SSMA prennent en charge les versions suivantes de la cible.
 
 - SQL Server 2008
-- SQL Server 2008 R2
+- SQL Server 2008 R2
 - SQL Server 2012
-- SQL Server 2014
-- SQL Server 2016
+- SQL Server 2014
+- SQL Server 2016
 - Azure SQL Database
 - SQL Server 2017 sur Windows et Linux (version préliminaire)
 - ** Azure SQL Data Warehouse
@@ -87,7 +90,7 @@ Sauf mention contraire, les exemples de sociétés, d’organisations, de produi
   
 Les produits mentionnés dans cette documentation peuvent faire l’objet de brevets, de dépôts de brevets en cours, de marques, de droits d’auteur ou d’autres droits de propriété intellectuelle et industrielle de Microsoft. Sauf stipulation expresse contraire d’un contrat de licence écrit de Microsoft, la fourniture de cette documentation n’a pas pour effet de vous concéder une licence sur ces brevets, marques, ni de vous céder des droits d’auteur ou autres droits de propriété intellectuelle quels qu’ils soient.  
   
-© 2017 Microsoft Corporation. Tous droits réservés.  
+© 2017 Microsoft Corporation. Tous droits réservés.  
   
 Microsoft, Windows, Windows NT, Windows Server, Active Directory, ActiveX, BackOffice, bCentral, BizTalk, DirectX, Excel, Hotmail, IntelliSense, J/Direct, Jscript, Microsoft Press, MSDN, MS-DOS, Outlook, PivotChart, PivotTable, PowerPoint, SharePoint, SQL Server, Visual Basic, Visual C#, Visual C++, Visual FoxPro, Visual InterDev, Visual J#, Visual J++, Visual SourceSafe, Visual Studio, Win32, Win32s, Windows Mobile, Windows Server System et WinFX sont soit des marques déposées de Microsoft Corporation, soit des marques de Microsoft Corporation aux États-Unis d’Amérique et/ou dans d’autres pays/régions.  
   

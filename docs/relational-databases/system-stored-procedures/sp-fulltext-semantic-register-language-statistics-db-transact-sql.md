@@ -1,5 +1,5 @@
 ---
-title: sp_fulltext_semantic_register_language_statistics_db (Transact-SQL) | Documents Microsoft
+title: sp_fulltext_semantic_register_language_statistics_db (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_fulltext_semantic_register_language_statistics_db
 - sp_fulltext_semantic_register_language_statistics_db_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sp_fulltext_semantic_register_language_statistics_db
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_fulltext_semantic_register_language_statistics_db
 ms.assetid: bef1b104-5a44-4327-9ae4-45eae3000f7e
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0d1a0820d6cafd6930eb4446267840b52aa24fd3
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 6702d9bb9773d5c4e41d84c6e57a923e9cf5ffdf
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spfulltextsemanticregisterlanguagestatisticsdb-transact-sql"></a>sp_fulltext_semantic_register_language_statistics_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +42,7 @@ ms.lasthandoff: 11/27/2017
   
 ## <a name="syntax"></a>Syntaxe  
   
-```tsql  
+```sql  
 EXEC sp_fulltext_semantic_register_language_statistics_db  
     [ @dbname = ] ‘database_name’;  
 GO  
@@ -49,7 +52,7 @@ GO
  [ @dbname =] '*nom_base_de_données*'  
  Nom de la base de données de statistiques linguistiques de sémantique à inscrire pour l'instance actuelle de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La base de données doit déjà être attachée. *database_name* est **sysname**, et ne peut pas être NULL.  
   
-## <a name="return-code-value"></a>Valeur de Code de retour  
+## <a name="return-code-value"></a>Valeur du code de retour  
  **0** (réussite) ou **1** (échec)  
   
 ## <a name="result-set"></a>Jeu de résultats  
@@ -81,13 +84,13 @@ GO
   
 ## <a name="security"></a>Sécurité  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>Autorisations  
  Nécessite l'autorisation CONTROL SERVER.  
   
 ## <a name="examples"></a>Exemples  
  L’exemple suivant montre comment inscrire la base de données de statistiques linguistiques de sémantique en appelant **sp_fulltext_semantic_register_language_statistics_db**.  
   
-```tsql  
+```sql  
 EXEC sp_fulltext_semantic_register_language_statistics_db @dbname = 'semanticsDb';  
 GO  
 ```  

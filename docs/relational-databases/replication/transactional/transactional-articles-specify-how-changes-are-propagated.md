@@ -2,27 +2,33 @@
 title: "Spécifier le mode de propagation des modifications des articles transactionnels | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
-ms.technology: replication
+ms.suite: sql
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: transactional replication, propagation methods
+helpviewer_keywords:
+- transactional replication, propagation methods
 ms.assetid: a10c5001-22cc-4667-8f0b-3d0818dca2e9
-caps.latest.revision: "48"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 27553553b3bf900a1a7207711520a2355c997941
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: d7b807d914d84a818e9ce9cccadde597a163955c
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="transactional-articles---specify-how-changes-are-propagated"></a>Articles transactionnels - Spécifier le mode de propagation des modifications
-  La réplication transactionnelle permet de préciser comment les modifications des données sont propagées entre le serveur de publication et les Abonnés. Pour chaque table publiée, vous pouvez spécifier l'une des quatre méthodes de propagation possibles d'une opération (INSERT, UPDATE ou DELETE) vers l'Abonné :  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+La réplication transactionnelle permet de préciser comment les modifications des données sont propagées entre le serveur de publication et les Abonnés. Pour chaque table publiée, vous pouvez spécifier l'une des quatre méthodes de propagation possibles d'une opération (INSERT, UPDATE ou DELETE) vers l'Abonné :  
   
 -   Spécifier que la réplication transactionnelle doit générer un script puis appeler une procédure stockée pour propager les modifications aux Abonnés (option par défaut).  
   
@@ -45,7 +51,7 @@ ms.lasthandoff: 11/09/2017
   
 -   **sp_MSdel_\<** *nomdetable* **>**, qui gère les suppressions.  
   
- Le **\<***nomdetable***>** employé dans la procédure varie en fonction de la méthode utilisée pour ajouter l’article à la publication et si la base de données d’abonnement contient une table au nom identique mais avec un propriétaire différent.  
+ Le **\<***nom de table***>** utilisé dans la procédure varie en fonction de la méthode utilisée pour ajouter l’article à la publication et si la base de données d’abonnement contient une table au nom identique mais avec un propriétaire différent.  
   
  N'importe laquelle de ces procédures peut être remplacée par une procédure personnalisée que vous spécifiez lors de l'ajout d'un article à une publication. Les procédures personnalisées sont utilisées dans le cas où l'application exige une logique personnalisée, par exemple l'insertion de données dans une table d'audit lors de la mise à jour d'une ligne sur l'Abonné. Pour plus d'informations sur la définition de procédures stockées personnalisées, reportez-vous à la liste des rubriques ci-dessus.  
   
@@ -62,7 +68,7 @@ ms.lasthandoff: 11/09/2017
   
 -   Si vous modifiez le schéma d'une table publiée, les procédures personnalisées doivent être régénérées. Pour plus d’informations, consultez [Régénérer des procédures transactionnelles personnalisées pour refléter des modifications de schéma](../../../relational-databases/replication/transactional/transactional-articles-regenerate-to-reflect-schema-changes.md).  
   
--   Si vous utilisez une valeur supérieure à 1 pour le paramètre **-SubscriptionStreams** de l’Agent de distribution, vérifiez que les mises à jour des colonnes clés primaires se sont correctement déroulées. Exemple :  
+-   Si vous utilisez une valeur supérieure à 1 pour le paramètre **-SubscriptionStreams** de l’Agent de distribution, vérifiez que les mises à jour des colonnes clés primaires se sont correctement déroulées. Exemple :  
   
     ```  
     update ... set pk = 2 where pk = 1 -- update 1  
@@ -215,7 +221,7 @@ end
 go  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Article Options for Transactional Replication](../../../relational-databases/replication/transactional/article-options-for-transactional-replication.md)  
   
   

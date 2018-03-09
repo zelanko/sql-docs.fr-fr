@@ -2,9 +2,12 @@
 title: "Création des informations d’identification | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: security
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -16,16 +19,16 @@ ms.assetid: c1e77e91-2a69-40d9-b8b3-97cffc710586
 caps.latest.revision: "17"
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 434455a3d563b0b8b24554e36e280b0e459e1663
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 100ee5ba087e151ac0c025324dc01651b1b1a3c5
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="create-a-credential"></a>Créer des informations d'identification
-  Cette rubrique explique comment créer des informations d'identification dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Cette rubrique explique comment créer des informations d’identification dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] à l’aide de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
   
  Les informations d'identification fournissent un moyen d'autoriser les utilisateurs de l'authentification [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] à avoir une identité en dehors de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Ceci sert principalement à exécuter du code dans des assemblys avec le jeu d'autorisations EXTERNAL_ACCESS. Les informations d'identification peuvent également être utilisées lorsqu'un utilisateur de l'authentification [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] a besoin d'accéder à une ressource du domaine, par exemple à un emplacement de fichier pour y stocker une sauvegarde.  
   

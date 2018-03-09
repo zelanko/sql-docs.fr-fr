@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_add_category
 - sp_add_category_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sp_add_category
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_add_category
 ms.assetid: 6cca32cd-d941-4378-aed6-a7c90cb7520a
-caps.latest.revision: "29"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a180b1719f11b19097d2599847f1167f15ce7424
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 7df42005cfd21c4030990784c7efd482c9312118
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spaddcategory-transact-sql"></a>sp_add_category (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,13 +58,13 @@ sp_add_category
 |ALERT|Ajoute une catégorie d'alertes.|  
 |OPERATOR|Ajoute une catégorie d'opérateurs.|  
   
- [  **@type =** ] **'***type***'**  
+ [ **@type =** ] **'***type***'**  
  Type de catégorie à ajouter. *type* est **varchar(12)**, avec la valeur par défaut **LOCAL**, et peut prendre l’une des valeurs suivantes.  
   
 |Valeur| Description|  
 |-----------|-----------------|  
 |LOCAL|Catégorie de travaux locaux.|  
-|PLUSIEURS SERVEURS|Une catégorie de travaux multiserveur.|  
+|MULTI-SERVER|Une catégorie de travaux multiserveur.|  
 |Aucune|Une catégorie d’une classe différente de JOB**.**|  
   
  [  **@name =** ] **'***nom***'**  
@@ -71,12 +74,12 @@ sp_add_category
  **0** (réussite) ou **1** (échec)  
   
 ## <a name="result-sets"></a>Jeux de résultats  
- Aucune  
+ Aucun  
   
 ## <a name="remarks"></a>Notes  
  **sp_add_category** doit être exécuté à partir de la **msdb** base de données.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Seuls les membres de la **sysadmin** du rôle serveur fixe peuvent exécuter **sp_add_category**.  
   
 ## <a name="examples"></a>Exemples  
@@ -94,11 +97,11 @@ GO
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [sp_delete_category &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-delete-category-transact-sql.md)   
- [sp_help_category &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-help-category-transact-sql.md)   
- [sp_update_category &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-update-category-transact-sql.md)   
+ [sp_delete_category &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-category-transact-sql.md)   
+ [sp_help_category &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-category-transact-sql.md)   
+ [sp_update_category &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-category-transact-sql.md)   
  [dbo.sysjobs &#40; Transact-SQL &#41;](../../relational-databases/system-tables/dbo-sysjobs-transact-sql.md)   
- [dbo.sysjobservers &#40; Transact-SQL &#41;](../../relational-databases/system-tables/dbo-sysjobservers-transact-sql.md)   
+ [dbo.sysjobservers &#40;Transact-SQL&#41;](../../relational-databases/system-tables/dbo-sysjobservers-transact-sql.md)   
  [Procédures stockées système &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

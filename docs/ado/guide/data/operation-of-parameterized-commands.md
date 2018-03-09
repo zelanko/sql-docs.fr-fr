@@ -3,8 +3,9 @@ title: "Fonctionnement des commandes paramétrées | Documents Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,16 +16,16 @@ helpviewer_keywords:
 - data shaping [ADO], parameterized commands
 - parameterized commands [ADO]
 ms.assetid: 4fae0d54-83b6-4ead-99cc-bcf532daa121
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5bce98fd15ac82cf9492b4f4454dba36146dd46f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 7d826d5407aabce4baa82b0952cff6c8344944e8
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="operation-of-parameterized-commands"></a>Fonctionnement des commandes paramétrées
 Si vous travaillez avec un enfant **Recordset**, en particulier par rapport à la taille du parent **Recordset**, mais avez besoin d’accéder uniquement quelques chapitres enfant, il peut s’avérer plus efficace d’utiliser un commande paramétrable.  
@@ -80,7 +81,7 @@ Rst1.MovePrevious  ' RstChild now holds cached rs, saving round trip.
   
  À l’aide d’une hiérarchie non paramétrée, il n’existe aucun moyen pour relier les tables de jeux et les équipes de sorte que l’enfant **Recordset** pour chaque équipe contienne sa planification complète. Vous pouvez créer des chapitres contenant le calendrier à domicile ou la planification de la feuille de route, mais pas les deux. Il s’agit, car la clause RELATE vous limite à des relations parent-enfant de l’écran (pc1 = cc1) AND (pc2 = pc2). Par conséquent, si votre commande inclut « RELATE team_id TO home_team, team_id TO visiting_team », vous obtiendrez uniquement les jeux où une équipe lu lui-même. Vous souhaitez "(team_id=home_team) ou (team_id = visiting_team) », mais le fournisseur Shape ne prend pas en charge la clause OR.  
   
- Pour obtenir le résultat souhaité, vous pouvez utiliser une commande paramétrée. Exemple :  
+ Pour obtenir le résultat souhaité, vous pouvez utiliser une commande paramétrée. Par exemple :  
   
 ```  
 SHAPE {SELECT * FROM teams}   

@@ -8,21 +8,23 @@ ms.reviewer:
 ms.service: sql-data-warehouse
 ms.component: t-sql|statements
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: TSQL
+dev_langs:
+- TSQL
 ms.assetid: ea21c73c-40e8-4c54-83d4-46ca36b2cf73
-caps.latest.revision: "59"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 42b3f397fa93b2134594e10476138d5d30e0015f
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: f6e639bf97ed132b6ace7128b4cbe9b6f3ce474e
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-table-azure-sql-data-warehouse"></a>CRÉER la TABLE (entrepôt de données SQL Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -104,24 +106,24 @@ CREATE TABLE [ database_name . [ schema_name ] . | schema_name. ] table_name
  *table_name*  
  Le nom de la nouvelle table. Pour créer une table temporaire locale, faites précéder le nom de table avec #.  Pour obtenir des explications et des conseils sur les tables temporaires, consultez [des tables temporaires dans Azure SQL Data Warehouse](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-temporary/). 
  
- *nom_colonne*  
+ *column_name*  
  Le nom d’une colonne de table.
    
 ### <a name="ColumnOptions"></a>Options de colonne
 
- `COLLATE`*Windows_collation_name*  
+ `COLLATE` *Windows_collation_name*  
  Spécifie le classement de l’expression. Le classement doit être un des classements Windows pris en charge par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour obtenir la liste des classements Windows pris en charge par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez [nom de classement Windows (Transact-SQL)](http://msdn.microsoft.com/library/ms188046\(v=sql11\)/).  
   
  `NULL` | `NOT NULL`  
  Spécifie si `NULL` valeurs sont autorisées dans la colonne. La valeur par défaut est `NULL`.  
   
- [ `CONSTRAINT` *constraint_name* ] `DEFAULT` *expression_constante*  
+ [ `CONSTRAINT` *constraint_name* ] `DEFAULT` *constant_expression*  
  Spécifie la valeur de colonne par défaut.  
   
  | Argument | Explication |
  | -------- | ----------- |
  | *constraint_name* | Nom facultatif de la contrainte. Le nom de la contrainte est unique dans la base de données. Le nom peut être réutilisé dans d’autres bases de données. |
- | *expression_constante* | La valeur par défaut pour la colonne. L’expression doit être une valeur littérale ou une constante. Par exemple, ces expressions constantes sont autorisées : `'CA'`, `4`. Ils ne sont pas autorisés : `2+3`, `CURRENT_TIMESTAMP`. |
+ | *constant_expression* | La valeur par défaut pour la colonne. L’expression doit être une valeur littérale ou une constante. Par exemple, ces expressions constantes sont autorisées : `'CA'`, `4`. Ils ne sont pas autorisés : `2+3`, `CURRENT_TIMESTAMP`. |
   
 
 ### <a name="TableOptions"></a>Options de structure de table
@@ -133,7 +135,7 @@ Stocke le tableau sous la forme d’un index cluster columnstore. L’index clus
  `HEAP`   
   Stocke le tableau sous la forme d’un segment de mémoire. Ceci est la valeur par défaut pour [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
   
- `CLUSTERED INDEX`( *index_column_name* [ ,...*n* ] )  
+ `CLUSTERED INDEX`( *index_column_name* [,...*n* ] )  
  Stocke le tableau sous la forme d’un index cluster avec une ou plusieurs colonnes clés. Stocke les données en ligne. Utilisez *index_column_name* pour spécifier le nom d’une ou plusieurs colonnes clés dans l’index.  Pour plus d’informations, consultez les Tables Rowstore dans les remarques d’ordre général.
  
  `LOCATION = USER_DB`   
@@ -274,7 +276,7 @@ Identique à `datetime`, sauf que vous pouvez spécifier le nombre de fractions 
  GUID sur 16 octets.  
    
 <a name="Permissions"></a>  
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Création d’une table requiert l’autorisation dans le `db_ddladmin` rôle de base de données fixe ou :
  - `CREATE TABLE`autorisation sur la base de données
  - `ALTER SCHEMA`autorisation sur le schéma qui contient la table. 
@@ -447,7 +449,7 @@ WITH
   );  
 ```  
   
-### <a name="Replicated"></a>G. Créer une table répliquée  
+### <a name="Replicated"></a> G. Créer une table répliquée  
  L’exemple suivant crée une table répliquée est similaire aux exemples précédents. Les tables répliquées sont copiées entièrement sur chaque nœud de calcul. Avec cette copie sur chaque nœud de calcul, le déplacement des données sont réduit pour les requêtes. Cet exemple est créé avec un INDEX cluster, ce qui donne une meilleure compression de données à un segment de mémoire et ne peut pas contenir suffisamment de lignes pour obtenir une bonne compression d’INDEX cluster COLUMNSTORE.  
   
 ```  
@@ -467,7 +469,7 @@ WITH
 <a name="ExTablePartitions"></a> 
 ## <a name="examples-for-table-partitions"></a>Exemples pour les partitions de table
 
-###  <a name="PartitionedTable"></a>H. Créer une table partitionnée  
+###  <a name="PartitionedTable"></a> H. Créer une table partitionnée  
  L’exemple suivant crée la même table, comme indiqué dans l’exemple A, avec l’ajout de partitionnement par plage gauche sur la `id` colonne. Il spécifie quatre valeurs limites de partition, ce qui aboutit à cinq partitions.  
   
 ```  
@@ -501,7 +503,7 @@ WITH
 -   Partition 4:30 < = col < 40   
 -   Partition 5:40 < = col  
   
-### <a name="OnePartition"></a>I. Créer une table partitionnée avec une partition  
+### <a name="OnePartition"></a> I. Créer une table partitionnée avec une partition  
  L’exemple suivant crée une table partitionnée avec une partition. Il ne spécifie pas les valeurs limites, ce qui aboutit à une partition.  
   
 ```  
@@ -517,7 +519,7 @@ WITH
 ;  
 ```  
   
-### <a name="DatePartition"></a>J. Créer une table avec le partitionnement par date  
+### <a name="DatePartition"></a> J. Créer une table avec le partitionnement par date  
  L’exemple suivant crée une nouvelle table nommée `myTable`, avec le partitionnement sur un `date` colonne. À l’aide de droite de la plage et les dates pour les valeurs limites, il place un mois de données dans chaque partition.  
   
 ```  

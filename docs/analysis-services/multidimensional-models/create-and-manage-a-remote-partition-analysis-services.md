@@ -2,35 +2,33 @@
 title: "Créer et gérer une Partition distante (Analysis Services) | Documents Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - partitions [Analysis Services], remote
 - remote partitions [Analysis Services]
 ms.assetid: 4322b5cb-af07-4e79-8ecb-59e1121a9eb8
-caps.latest.revision: "30"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: bbcff2fe14716ebb2af74430538573706f8c2475
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d5793220e57962f801573e8201688dd1c03b9c0e
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="create-and-manage-a-remote-partition-analysis-services"></a>Créer et gérer une partition distante (Analysis Services)
-  Lorsque vous partitionnez un groupe de mesures, vous pouvez configurer une base de données secondaire sur une instance distante de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] comme stockage de partition.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Lorsque vous partitionnez un groupe de mesures, vous pouvez configurer une base de données secondaire sur une instance distante de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] comme stockage de partition.  
   
  Les partitions distantes d'un cube (appelé la base de données master) sont stockées dans une base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dédiée sur l'instance distante de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] (appelée base de données secondaire).  
   
@@ -43,7 +41,7 @@ ms.lasthandoff: 11/17/2017
   
 -   Les deux instances du serveur doivent présenter la même version. Les deux bases de données doivent avoir le même niveau fonctionnel.  
   
--   Les instances doivent être configurées en vue de connexions TCP. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ne prend pas en charge la création de partitions distantes à l’aide du protocole HTTP.  
+-   Les instances doivent être configurées en vue de connexions TCP. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]ne prend pas en charge la création de partitions distantes à l’aide du protocole HTTP.  
   
 -   Les paramètres de pare-feu sur les deux ordinateurs doivent être définis de manière à accepter les connexions externes. Pour plus d’informations sur la configuration du pare-feu, consultez [Configurer le pare-feu Windows pour autoriser l’accès à Analysis Services](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md).  
   
@@ -141,6 +139,6 @@ ms.lasthandoff: 11/17/2017
 >  Bien que les bases de données dédiées au stockage des partitions distantes ne soient pas exposées aux ensembles de lignes de schéma, les applications utilisant des objets AMO (Analysis Management Objects) peuvent toujours découvrir une base de données dédiée à l'aide de XML pour la commande Analysis Discover. Toute commande CREATE ou DELETE envoyée directement à une base de données dédiée à l'aide d'un protocole TCP ou client HTTP réussit, mais le serveur retourne un avertissement indiquant que l'action peut endommager cette base de données étroitement gérée.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Partitions &#40;Analysis Services - Données multidimensionnelles&#41;](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)  
+ [Partitions &#40; Analysis Services - données multidimensionnelles &#41;](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)  
   
   

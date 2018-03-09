@@ -2,27 +2,33 @@
 title: "Déclencheurs DDL | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: triggers
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-ddl
+ms.suite: sql
+ms.technology:
+- dbe-ddl
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: DDL triggers, about DDL triggers
+helpviewer_keywords:
+- DDL triggers, about DDL triggers
 ms.assetid: 1a4a6564-9820-4a14-9305-2c0e9ea37454
-caps.latest.revision: "35"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ebc22f2c34fbfa6e45874ee90cfb1fd8344e5c31
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: fe470ea983e3f397c5afdb41a3526dd87256746e
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="ddl-triggers"></a>Déclencheurs DDL
-  Les déclencheurs DDL sont activés en réponse à différents événements DDL (Data Definition Language). Ces événements correspondent principalement à des instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] commençant par les mots clés CREATE, ALTER, DROP, GRANT, DENY, REVOKE ou UPDATE STATISTICS. Certaines procédures stockées système qui effectuent des opérations de type DDL peuvent également activer des déclencheurs DDL.  
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+Les déclencheurs DDL sont activés en réponse à différents événements DDL (Data Definition Language). Ces événements correspondent principalement à des instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] commençant par les mots clés CREATE, ALTER, DROP, GRANT, DENY, REVOKE ou UPDATE STATISTICS. Certaines procédures stockées système qui effectuent des opérations de type DDL peuvent également activer des déclencheurs DDL.  
   
  Utilisez des déclencheurs DDL dans les cas suivants :  
   
@@ -110,7 +116,7 @@ GO
   
  Pour obtenir la liste des groupes d’instructions DDL prédéfinis disponibles pour les déclencheurs DDL, connaître les instructions particulières qu’ils couvrent et les étendues selon lesquelles ces groupes d’événements peuvent être programmés, consultez [Groupes d’événements DDL](../../relational-databases/triggers/ddl-event-groups.md).  
   
-## <a name="related-tasks"></a>Tâches associées  
+## <a name="related-tasks"></a>Related Tasks  
   
 |Tâche|Rubrique|  
 |----------|-----------|  
@@ -120,7 +126,7 @@ GO
 |Décrit comment retourner des informations sur un événement qui lance un déclencheur DDL à l'aide de la fonction EVENTDATA.|[Utiliser la fonction EVENTDATA](../../relational-databases/triggers/use-the-eventdata-function.md)|  
 |Décrit comment gérer la sécurité du déclencheur.|[Gérer la sécurité des déclencheurs](../../relational-databases/triggers/manage-trigger-security.md)|  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Déclencheurs DML](../../relational-databases/triggers/dml-triggers.md)   
  [Déclencheurs de connexion](../../relational-databases/triggers/logon-triggers.md)   
  [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)  

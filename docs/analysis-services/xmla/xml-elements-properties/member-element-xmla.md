@@ -2,15 +2,13 @@
 title: "Élément Member (XMLA) | Documents Microsoft"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: xmla
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: Member Element
@@ -28,14 +26,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: be758dd6797bd399604ca20faf57904b5725d52b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 82690ec66dfcb96787ea592a8d32c3826ee8776f
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="member-element-xmla"></a>Élément Member (XMLA)
-  Représente un membre unique dans un élément [Members](../../../analysis-services/xmla/xml-elements-properties/members-element-xmla.md) ou [Tuple](../../../analysis-services/xmla/xml-elements-properties/tuple-element-xmla.md) parent.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]Représente un membre unique dans un parent [membres](../../../analysis-services/xmla/xml-elements-properties/members-element-xmla.md) ou [Tuple](../../../analysis-services/xmla/xml-elements-properties/tuple-element-xmla.md) élément.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -70,8 +68,8 @@ ms.lasthandoff: 11/17/2017
   
 |Caractéristique|Description|  
 |--------------------|-----------------|  
-|Type de données et longueur|Aucune|  
-|Valeur par défaut|Aucune|  
+|Type de données et longueur|None|  
+|Valeur par défaut|None|  
 |Cardinalité|0-n : élément facultatif pouvant apparaître plusieurs fois.|  
   
 ## <a name="element-relationships"></a>Relations entre les éléments  
@@ -83,11 +81,11 @@ ms.lasthandoff: 11/17/2017
   
 ## <a name="attributes"></a>Attributs  
   
-|Attribut|Description|  
+|Attribute|Description|  
 |---------------|-----------------|  
 |Hiérarchie|Attribut **String** requis (pour les éléments **Tuple** parents uniquement). Nom de la hiérarchie dont font partie les membres représentés par l'élément **Member** .|  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  L'élément **Member** contient les informations nécessaires pour identifier et afficher un membre dans une hiérarchie donnée. Pour les éléments **Members** parents, la hiérarchie est déjà spécifiée par l'attribut **Hierarchy** de l'élément parent. Pour les éléments **Tuple** parents, la hiérarchie est spécifiée à l'aide de l'attribut **Hierarchy** de l'élément **Member** .  
   
 ## <a name="see-also"></a>Voir aussi  

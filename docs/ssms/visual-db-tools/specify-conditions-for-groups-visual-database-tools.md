@@ -3,8 +3,11 @@ title: "Spécifier des conditions pour des groupes (Visual Database Tools) | Mic
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,16 +18,16 @@ ms.assetid: 269ad9c5-3261-4526-badf-7be3c869f229
 caps.latest.revision: "3"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: eb01fbc4f3824fa8f064e5b99b22fc7c82ba1e1d
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 643aa62419885e2708a084cb37d23c95b38305ae
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="specify-conditions-for-groups-visual-database-tools"></a>Spécifier des conditions pour des groupes (Visual Database Tools)
-Vous pouvez limiter les groupes qui apparaissent dans une requête en spécifiant une condition qui s'applique à l'ensemble des groupes, une clause HAVING. Après regroupement et agrégation des données, les conditions de la clause HAVING sont appliquées. Seuls les groupes qui répondent aux conditions apparaissent dans la requête.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Vous pouvez limiter les groupes qui apparaissent dans une requête en spécifiant une condition qui s’applique à l’ensemble des groupes, une clause HAVING. Après regroupement et agrégation des données, les conditions de la clause HAVING sont appliquées. Seuls les groupes qui répondent aux conditions apparaissent dans la requête.  
   
 Supposons que vous vouliez voir le prix moyen de tous les livres pour chaque éditeur dans une table `titles` , mais uniquement dans le cas où ce prix serait supérieur à 10 $. Dans ce cas, vous pouvez spécifier une clause HAVING avec une condition telle que `AVG(price) > 10`.  
   
@@ -52,6 +55,6 @@ Vous pouvez créer des conditions complexes pour une clause HAVING en utilisant 
   
 4.  Répétez les étapes 2 et 3 pour chaque condition supplémentaire que vous souhaitez spécifier.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [Trier et regrouper des résultats de requête &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/sort-and-group-query-results-visual-database-tools.md)  
   

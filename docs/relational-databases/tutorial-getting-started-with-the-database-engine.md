@@ -8,7 +8,8 @@ ms.service:
 ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 helpviewer_keywords:
@@ -18,18 +19,18 @@ helpviewer_keywords:
 - failure to connect [SQL Server]
 - connecting tutorial [SQL Server]
 ms.assetid: 655e709b-346b-469c-bddc-a5a0238d07e0
-caps.latest.revision: "20"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 35110508db09e7fc82fdabd4b9b77b831ad1548a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 64fca04ede55e3bf0e98c4cb62b4495fd19d576b
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
-# <a name="tutorial-getting-started-with-the-database-engine"></a>Didacticiel : Mise en route du moteur de base de données
+# <a name="tutorial-getting-started-with-the-database-engine"></a>Didacticiel : mise en route du moteur de base de données
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 Bienvenue dans le didacticiel de mise en route du [!INCLUDE[ssDE](../includes/ssde-md.md)] . Ce didacticiel est destiné aux nouveaux utilisateurs de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] disposant de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ou de [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]. Ce didacticiel sommaire vous guide dans vos premiers pas avec le [!INCLUDE[ssDE](../includes/ssde-md.md)].  
@@ -52,7 +53,7 @@ Les éléments suivants doivent cependant être installés sur votre système :
   
 -   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Pour installer [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)], consultez[Télécharger SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md).  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [Didacticiel : SQL Server Management Studio](../ssms/tutorials/tutorial-sql-server-management-studio.md)  
   
   

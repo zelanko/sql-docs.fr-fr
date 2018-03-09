@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 8f1d0a76-afed-480f-98fb-89e2d4eb09b1
 caps.latest.revision: "7"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: dc72748fdcb76e456c9c8155a5d91c83a1ad2483
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 2bf18d57ac033120507c9c2ab5df9b98bf5cc2db
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="adding-data-to-a-tablix-data-region-report-builder-and-ssrs"></a>Ajout de données à une région de données de tableau matriciel (Générateur de rapports et SSRS)
 Dans les rapports paginés [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , pour afficher les données d’un dataset de rapport dans une table ou une matrice, spécifiez dans chaque cellule de données le nom d’un champ de dataset à afficher. Vous pouvez afficher des données de détail ou des données groupées. Si vous ajoutez des groupes à une table ou à une matrice, les lignes et les colonnes des valeurs de groupe et les données de groupe sont automatiquement ajoutées. Vous pouvez ensuite ajouter des totaux et des sous-totaux pour vos données.  
@@ -58,7 +56,7 @@ Dans les rapports paginés [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion
 ## <a name="adding-an-existing-tablix-data-region-from-another-report"></a>Ajout d'une région de données de tableau matriciel existante à partir d'un autre rapport  
  Vous pouvez copier une région de données d'un autre rapport et la coller dans un nouveau rapport ou un rapport existant. Une fois la région de données collée, vous devez vérifier que le dataset utilisé par la région de données est défini et que les champs du dataset portent les mêmes noms et possèdent les mêmes types de données que dans le rapport d'origine. Vous ne pouvez pas copier de datasets d'un rapport vers un autre, mais si vos rapports utilisent des sources de données partagées, vous pouvez dupliquer rapidement le dataset dans l'autre rapport. Vous pouvez également importer le texte des requêtes qui récupèrent les données du dataset, ce qui facilite la duplication des requêtes dans les rapports. Pour plus d’informations, consultez [Datasets incorporés dans le rapport et datasets partagés &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Expressions &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
  [Paramètres de rapport &#40;Générateur de rapports et Concepteur de rapports&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   
  [Tri interactif, Explorateurs de documents et liens &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)   

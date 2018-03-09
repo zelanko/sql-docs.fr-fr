@@ -8,9 +8,7 @@ ms.service:
 ms.component: wmi-provider-library-reference
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname: GenerateDatabaseRightsScript (WMI MSReportServer_ConfigurationSetting Class)
@@ -19,15 +17,15 @@ apitype: MOFDef
 helpviewer_keywords: GenerateDatabaseRightsScript method
 ms.assetid: f2e6dcc9-978f-4c2c-bafe-36c330247fd0
 caps.latest.revision: "26"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 9f2208649450d4b9ce385da7b4653522756a575b
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 48e36e0ad8fd7e46a9ffd40b476e651b7fe5876c
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="configurationsetting-method---generatedatabaserightsscript"></a>Méthode ConfigurationSetting - GenerateDatabaseRightsScript
   Génère un script SQL pouvant être utilisé pour accorder des droits d'utilisateur à la base de données du serveur de rapports et à d'autres bases de données requises pour l'exécution d'un serveur de rapports. Il est prévu que l'appelant se connecte au serveur de base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et exécute le script.  
@@ -68,7 +66,7 @@ out Int32 HRESULT);
 ## <a name="return-value"></a>Valeur retournée  
  Retourne un paramètre *HRESULT* qui indique si l'appel de la méthode a réussi ou a échoué. Une valeur 0 indique que l'appel de méthode a réussi. Une valeur différente de zéro indique qu'une erreur s'est produite.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Si *DatabaseName* est vide, *IsRemote* est ignoré et la valeur du fichier de configuration du serveur de rapports est utilisée comme nom de base de données.  
   
  Si *IsWindowsUser* est défini sur **true**, *UserName* doit être au format \<domaine>\\<nom_utilisateur\>.  
@@ -81,10 +79,10 @@ out Int32 HRESULT);
   
 |Compte/SID converti|Nom commun|Nom distant|  
 |---------------------------------------|-----------------|-----------------|  
-|(S-1-5-18)|Système local|\<Domaine>\\<nom_ordinateur\>$|  
-|.\LocalSystem|Système local|\<Domaine>\\<nom_ordinateur\>$|  
-|ComputerName\LocalSystem|Système local|\<Domaine>\\<nom_ordinateur\>$|  
-|LocalSystem|Système local|\<Domaine>\\<nom_ordinateur\>$|  
+|(S-1-5-18)|Système Local|\<Domaine>\\<nom_ordinateur\>$|  
+|.\LocalSystem|Système Local|\<Domaine>\\<nom_ordinateur\>$|  
+|ComputerName\LocalSystem|Système Local|\<Domaine>\\<nom_ordinateur\>$|  
+|LocalSystem|Système Local|\<Domaine>\\<nom_ordinateur\>$|  
 |(S-1-5-20)|Service réseau|\<Domaine>\\<nom_ordinateur\>$|  
 |NT AUTHORITY\NetworkService|Service réseau|\<Domaine>\\<nom_ordinateur\>$|  
 |(S-1-5-19)|Service local|Erreur (voir ci-dessous)|  
@@ -96,7 +94,7 @@ out Int32 HRESULT);
   
  Quand *IsWindowsUser* a la valeur true et qu’il est nécessaire de convertir la valeur indiquée dans *UserName* , le fournisseur WMI détermine si la base de données du serveur de rapports réside sur le même ordinateur ou sur un ordinateur distant. Pour déterminer si l’installation est locale, le fournisseur WMI évalue la propriété DatabaseServerName par rapport à la liste de valeurs suivante. Si une correspondance est trouvée, la base de données est locale. Dans le cas contraire, elle est distante. La casse n'est pas prise en compte lors de la comparaison.  
   
-|Valeur de DatabaseServerName|Exemple|  
+|Valeur de DatabaseServerName| Exemple|  
 |---------------------------------|-------------|  
 |“.”||  
 |“(local)”||  
@@ -119,7 +117,7 @@ out Int32 HRESULT);
 ## <a name="requirements"></a>Spécifications  
  **Espace de noms :** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Membres MSReportServer_ConfigurationSetting](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  
   
   

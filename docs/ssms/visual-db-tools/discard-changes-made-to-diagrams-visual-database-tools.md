@@ -3,8 +3,11 @@ title: "Abandonner les modifications apportées aux schémas (Visual Database To
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -16,16 +19,16 @@ ms.assetid: a3e8e874-60f2-4d96-ae81-272c8319c3d7
 caps.latest.revision: "3"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7d8bca44d80234f7176c14edd55ead755ccba6eb
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: ea453dd39647ed7087495a05a6daa0268e0909cc
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="discard-changes-made-to-diagrams-visual-database-tools"></a>Abandonner les modifications apportées aux schémas (Visual Database Tools)
-Vous pouvez abandonner les modifications apportées à votre schéma de base de données que vous ne souhaitez pas enregistrer dans la base de données.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Vous pouvez abandonner les changements apportés à votre schéma de base de données que vous ne souhaitez pas enregistrer dans la base de données.  
   
 ### <a name="to-discard-pending-modifications"></a>Pour abandonner les modifications en attente  
   
@@ -36,7 +39,7 @@ Vous pouvez abandonner les modifications apportées à votre schéma de base de 
     > [!CAUTION]  
     > Si d'autres schémas de base de données sont ouverts ou si des fenêtres de création de table sont connectées à la même base de données, fermez-les également sans enregistrer des modifications.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [Utiliser des schémas de base de données &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md)  
 [Utiliser des tables dans les schémas de base de données &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-tables-in-database-diagram-visual-database-tools.md)  
   

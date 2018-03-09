@@ -2,9 +2,12 @@
 title: Utilitaire sqlps | Documents Microsoft
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: sqlps
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -13,18 +16,18 @@ helpviewer_keywords:
 - PowerShell [SQL Server], sqlps utility
 ms.assetid: 4b2515a6-12c3-44fb-b263-1c567681cd2b
 caps.latest.revision: "22"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: c2d6922ae966b581f29212a0e9b1d6547743e6e9
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: bd4e67397b52b3e7248ce061312517841eef38e5
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="sqlps-utility"></a>sqlps (utilitaire)
-  L’utilitaire **sqlps** démarre une session Windows PowerShell avec le fournisseur PowerShell [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] et les applets de commande chargés et inscrits. Vous pouvez entrer des scripts ou des commandes PowerShell qui utilisent les composants [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell pour travailler avec des instances de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] et leurs objets.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]Le **sqlps** utilitaire démarre une session Windows PowerShell avec le [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] fournisseur PowerShell et les applets de commande chargés et inscrits. Vous pouvez entrer des scripts ou des commandes PowerShell qui utilisent les composants [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell pour travailler avec des instances de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] et leurs objets.  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../includes/ssnotedepfutureavoid-md.md)]Utilisez le **sqlps** module PowerShell à la place. Pour plus d’informations sur le module **sqlps** , consultez [Import the SQLPS Module](../relational-databases/scripting/import-the-sqlps-module.md).  
@@ -72,7 +75,7 @@ sqlps
  Spécifie un bloc de commandes PowerShell à exécuter ; le bloc doit être placé entre accolades : {}. *Script_block* peut uniquement être spécifié quand l’utilitaire **sqlps** est appelé depuis **PowerShell** ou une autre session de l’utilitaire **sqlps** . *argument_array* est un tableau de variables PowerShell contenant les arguments pour les commandes PowerShell de *script_block*.  
   
  *string* [ *command_parameters* ]  
- Spécifie une chaîne qui contient les commandes PowerShell à exécuter. Utilisez le format **"&{***command***}"**. Les guillemets indiquent une chaîne et l’opérateur d’appel (&) entraîne l’exécution de la commande par l’utilitaire **sqlps**.  
+ Spécifie une chaîne qui contient les commandes PowerShell à exécuter. Utilisez le format **« & {***commande***} »**. Les guillemets indiquent une chaîne et l’opérateur d’appel (&) entraîne l’exécution de la commande par l’utilitaire **sqlps**.  
   
  [ **-?** | **-Help** ]  
  Affiche le résumé de la syntaxe des options de l’utilitaire **sqlps** .  

@@ -3,32 +3,38 @@ title: "Triée et non ordonnée d’Expressions (XQuery) | Documents Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: xquery
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-applies_to: SQL Server
-dev_langs: XML
+applies_to:
+- SQL Server
+dev_langs:
+- XML
 helpviewer_keywords:
 - unordered expressions [XQuery]
 - ordered expressions [XQuery]
 - expressions [XQuery], ordered
 - expressions [XQuery], unordered
 ms.assetid: 6e7b3631-38d5-4375-b565-21d2e3f36ae0
-caps.latest.revision: "13"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: db51f8e41a3b8f186d542ebbb01687742b2faced
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 817177c377690395082429c04ca6148863f5cddb
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="ordered-and-unordered-expressions-xquery"></a>Expressions triées et non triées (XQuery)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Par défaut, le mode de tri pour toutes les opérations de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] est **classés**. Par conséquent, les séquences de nœuds retournées par les expressions de chemin d’accès et les expressions FLWOR, sans le **classer par** clause, se trouvent dans l’ordre du document.  
   

@@ -2,13 +2,18 @@
 title: "Recherche de mots dans le voisinage d’autres mots avec NEAR | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: search
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-search
+ms.suite: sql
+ms.technology:
+- dbe-search
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - word searches [full-text search]
 - NEAR option [full-text search]
@@ -18,19 +23,20 @@ helpviewer_keywords:
 - full-text queries [SQL Server], proximity
 - queries [full-text search], proximity
 ms.assetid: 87520646-4865-49ae-8790-f766b80a41f3
-caps.latest.revision: "65"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 81230587be4efd864fb2ec3958a1473db8de2e53
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 74732252ddb62adc02b532a23fdfe588fbbed2b9
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="search-for-words-close-to-another-word-with-near"></a>Recherche de mots dans le voisinage d'autres mots avec NEAR
-  Vous pouvez utiliser le *terme de proximité* **NEAR** dans un prédicat [CONTAINS](../../t-sql/queries/contains-transact-sql.md) ou une fonction [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) pour rechercher des mots ou des expressions à proximité les uns des autres. 
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+Vous pouvez utiliser le *terme de proximité* **NEAR** dans un prédicat [CONTAINS](../../t-sql/queries/contains-transact-sql.md) ou une fonction [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) pour rechercher des mots ou des expressions à proximité les uns des autres. 
   
 ##  <a name="Custom_NEAR"></a> Vue d’ensemble de NEAR  
 **NEAR** offre les fonctionnalités suivantes :  
@@ -76,7 +82,7 @@ Pour plus d’informations sur la syntaxe, consultez [CONTAINS &#40;Transact-SQL
 ### <a name="example-1"></a>Exemple 1
  Par exemple, vous pourriez rechercher « John » à deux termes de distance de « Smith », comme suit :  
   
-```tsql
+```sql
 ... CONTAINS(column_name, 'NEAR((John, Smith), 2)')
 ```  
   
@@ -89,7 +95,7 @@ Pour plus d’informations sur la syntaxe, consultez [CONTAINS &#40;Transact-SQL
 ### <a name="example-2"></a>Exemple 2
  L'exemple suivant recherche dans la table `Production.Document` de l'exemple de base de données `AdventureWorks` tous les résumés de document qui contiennent le mot « reflector » dans le même document que le mot « bracket ».  
   
-```tsql
+```sql
 SELECT DocumentNode, Title, DocumentSummary  
 FROM Production.Document AS DocTable   
 INNER JOIN CONTAINSTABLE(Production.Document, Document,  
@@ -110,19 +116,19 @@ GO
  «`Cats` `enjoy` `hunting mice``, but usually avoid` `dogs``.`»  
   
 ## <a name="combine-near-with-other-terms"></a>Combiner NEAR avec d’autres termes  
- Vous pouvez combiner NEAR avec d’autres termes. Vous pouvez utiliser AND (&), OR (|) ou AND NOT (&!) pour combiner un terme de proximité personnalisé avec un autre terme de proximité personnalisé, un terme simple ou un terme de préfixe. Par exemple :  
+ Vous pouvez combiner NEAR avec d’autres termes. Vous pouvez utiliser AND (&), OR (|) ou AND NOT (&!) pour combiner un terme de proximité personnalisé avec un autre terme de proximité personnalisé, un terme simple ou un terme de préfixe. Exemple :  
   
--   CONTAINS('NEAR((*terme1*,*terme2*),5) AND *terme3*')  
+-   CONTAINS('NEAR((*terme1*, *terme2*),5) AND *terme3*')  
   
--   CONTAINS('NEAR((*terme1*,*terme2*),5) OR *terme3*')  
+-   CONTAINS('NEAR((*terme1*, *terme2*),5) OR *terme3*')  
   
--   CONTAINS('NEAR((*terme1*,*terme2*),5) AND NOT *terme3*')  
+-   CONTAINS('NEAR((*terme1*, *terme2*),5) AND NOT *terme3*')  
   
--   CONTAINS('NEAR((*terme1*,*terme2*),5) AND NEAR((*terme3*,*terme4*),2)')  
+-   CONTAINS('NEAR((*terme1*, *terme2*),5) AND NEAR((*terme3*, *terme4*),2)')  
   
--   CONTAINS('NEAR((*terme1*,*terme2*),5) OR NEAR((*terme3*,*terme4*),2, TRUE)')  
+-   CONTAINS('NEAR((*terme1*, *terme2*),5) OR NEAR((*terme3*, *terme4*),2, TRUE)')  
   
- Par exemple :  
+ Par exemple,  
   
 ```  
 CONTAINS(column_name, 'NEAR((term1, term2), 5, TRUE) AND term3')  
@@ -155,7 +161,7 @@ CONTAINS(column_name, 'NEAR((term1, term2), 5, TRUE) AND term3')
   
      La valeur de l’option **Transformer les mots parasites** influe sur la manière dont [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] traite les mots vides, s’ils sont spécifiés dans les recherches de proximité. Pour plus d’informations, voir [transform noise words Server Configuration Option](../../database-engine/configure-windows/transform-noise-words-server-configuration-option.md).   
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [CONTAINS &#40;Transact-SQL&#41;](../../t-sql/queries/contains-transact-sql.md)  
  [CONTAINSTABLE &#40;Transact-SQL&#41;](../../relational-databases/system-functions/containstable-transact-sql.md)   
  [Exécuter une requête avec une recherche en texte intégral](../../relational-databases/search/query-with-full-text-search.md)   

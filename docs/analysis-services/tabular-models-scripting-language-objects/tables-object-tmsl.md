@@ -2,15 +2,13 @@
 title: Objet de tables (TMSL) | Documents Microsoft
 ms.custom: 
 ms.date: 05/30/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 98da08fc-8744-4d0f-bc62-e63f1e9e6b08
@@ -19,17 +17,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: d681a36710cdc096739f2c4e5f6f13afeb3ac8cc
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a8da10beb14c0cf376a73cb2416af7e78d42bac4
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="tables-object-tmsl"></a>Objet de tables (TMSL)
-
-[!INCLUDE[ssas-appliesto-sql2016-later-aas](../../includes/ssas-appliesto-sql2016-later-aas.md)]
-
-  Définit les tables contenues dans un modèle. Tables d’un modèle sont soit liés à des tables dans une base de données externe à partir de laquelle les données sont importées ou interrogées ou une table calculée est construit à partir d’une expression DAX. Dans une table, un ou plusieurs **Partition** objets décrivent la source de données.  Entre les tables, un **relation** objet spécifie la cardinalité, direction du filtrage et autres propriétés de la relation.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Définit les tables contenues dans un modèle. Tables d’un modèle sont soit liés à des tables dans une base de données externe à partir de laquelle les données sont importées ou interrogées ou une table calculée est construit à partir d’une expression DAX. Dans une table, un ou plusieurs **Partition** objets décrivent la source de données.  Entre les tables, un **relation** objet spécifie la cardinalité, direction du filtrage et autres propriétés de la relation.  
   
 ## <a name="object-definition"></a>Définition d’objet  
  Tous les objets ont un ensemble commun de propriétés, y compris le nom, type, la description, une collection de propriétés et annotations. **Table** objets ont également les propriétés suivantes.  

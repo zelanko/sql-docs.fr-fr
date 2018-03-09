@@ -8,9 +8,7 @@ ms.service:
 ms.component: subscriptions
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,15 +17,15 @@ helpviewer_keywords:
 - mail [Reporting Services]
 ms.assetid: fda2f130-97b9-4258-9dbb-e93a70f4d08a
 caps.latest.revision: "45"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 89246a976a0de3c1f3c3581509cb0f71a26cd1a5
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: cbf8b0a5e84efd67ffa41c4518b6432c2d3283e5
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="e-mail-delivery-in-reporting-services"></a>Remise par courrier électronique dans Reporting Services
   SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] comprend une extension de remise par e-mail qui permet d’envoyer par e-mail des rapports à des utilisateurs individuels ou à des groupes. Pour distribuer un rapport par courrier électronique, vous devez 1) configurer le serveur de rapports pour la remise du courrier électronique et 2) définir un abonnement standard ou piloté par les données. Un abonnement unique ne permet pas de distribuer plusieurs rapports dans un seul message électronique. Toutefois, vous pouvez créer plusieurs abonnements.  
@@ -97,7 +95,7 @@ ms.lasthandoff: 12/05/2017
  Pour plus d'informations sur la configuration d'un serveur de rapports en mode SharePoint, consultez :  
   
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Tâches et autorisations](../../reporting-services/security/tasks-and-permissions.md)   
  [Abonnements et remise &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
  [Abonnements pilotés par les données](../../reporting-services/subscriptions/data-driven-subscriptions.md)   

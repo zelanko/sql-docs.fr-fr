@@ -1,5 +1,5 @@
 ---
-title: "Catalog.set_worker_agent_property (base de données SSISDB) | Documents Microsoft"
+title: "catalog.set_worker_agent_property (base de données SSISDB) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/02/2017
 ms.prod: sql-non-specified
@@ -13,22 +13,21 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ddd2a534-6925-4d66-90e7-541c14f41de7
-caps.latest.revision: 2
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: e20b96e38f798c19a74d5f3a32a25e429dc8ebeb
-ms.openlocfilehash: c1caf4a71e5802968d9471711b8206a26f9c28d5
-ms.contentlocale: fr-fr
-ms.lasthandoff: 10/20/2017
-
+ms.openlocfilehash: 89e5893e418de7bdd7041b5ec8e8193479205659
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="catalogsetworkeragentproperty-ssisdb-database"></a>Catalog.set_worker_agent_property (base de données SSISDB)
+# <a name="catalogsetworkeragentproperty-ssisdb-database"></a>catalog.set_worker_agent_property (base de données SSISDB)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-Définit la propriété d’un [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] montée en puissance des processus de travail.
+Définit la propriété d’un [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Scale Out Worker.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -38,38 +37,37 @@ catalog.set_worker_agent_property [@WorkerAgentId =] WorkerAgentId, [@PropertyNa
 
 ## <a name="arguments"></a>Arguments
 [@WorkerAgentId =] *WorkerAgentId*  
-L’agent de travailleur ID de montée en puissance des processus de travail. Le *WorkerAgentId* est **uniqueidentifier**.
+ID d’agent de Worker de Scale Out Worker. *WorkerAgentId* est de type **uniqueidentifier**.
 
 [@PropertyName =] *PropertyName*  
-Nom de la propriété. Le *PropertyName* est **nvarchar (256)**.
+Nom de la propriété. *PropertyName* est de type **nvarchar(256)**.
 
 [@PropertyValue =] *PropertyValue*  
-Valeur de la propriété. Le *PropertyValue* est **nvarchar (max)**.
+Valeur de la propriété. *PropertyValue* est de type **nvarchar(max)**.
 
-## <a name="remarks"></a>Notes
-Les noms de propriétés valides sont **DisplayName**, **Description**, **balises**.
+## <a name="remarks"></a>Notes 
+Les noms de propriété valides sont **DisplayName**, **Description** et **Tags**.
 
-## <a name="return-code-value"></a>Valeur de Code de retour  
+## <a name="return-code-value"></a>Valeur du code de retour  
  0 (succès)  
   
 ## <a name="result-sets"></a>Jeux de résultats  
- Aucune  
+ None  
 
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Cette procédure stockée requiert l'une des autorisations suivantes :  
   
--   L’appartenance à la **ssis_admin** rôle de base de données  
+-   Appartenance au rôle de base de données **ssis_admin**  
   
--   L’appartenance à la **sysadmin** rôle de serveur
+-   Appartenance au rôle serveur **sysadmin**
 
 ## <a name="errors-and-warnings"></a>Erreurs et avertissements
   La liste suivante décrit quelques conditions qui peuvent générer une erreur ou un avertissement :  
   
--   L’utilisateur ne dispose pas des autorisations appropriées 
+-   L’utilisateur n’a pas les autorisations appropriées 
 
--   L’ID de l’agent de travailleur n’est pas valide.
+-   L’ID d’agent de Worker n’est pas valide.
 
--   Le nom de propriété n’est pas valide.
+-   Le nom de la propriété n’est pas valide.
 
 -   La valeur de propriété n’est pas valide.  
-

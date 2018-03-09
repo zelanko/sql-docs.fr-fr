@@ -2,30 +2,33 @@
 title: "Objet de base de données (page Propriétés étendues) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: databases
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords: sql13.swb.common.extendedproperties.f1
 ms.assetid: caa4f4a1-fd54-466e-975d-3e7e1cc5de54
 caps.latest.revision: "24"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 398d3c8ac57fa0ffa8e66d5075b44d2363ebba66
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: a40f19346fe5c40c4c7f6aa1426d2a58081e564a
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="database-object-extended-properties-page"></a>Objet de base de données (page Propriétés étendues)
-  Les propriétés étendues vous permettent d'ajouter des propriétés personnalisées aux objets de base de données. Utilisez cette page pour afficher ou modifier les propriétés étendues de l'objet sélectionné. La page **Propriétés étendues** est la même pour tous les types d’objets de base de données.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Les propriétés étendues vous permettent d’ajouter des propriétés personnalisées aux objets de base de données. Utilisez cette page pour afficher ou modifier les propriétés étendues de l'objet sélectionné. La page **Propriétés étendues** est la même pour tous les types d’objets de base de données.  
   
 ## <a name="uielement-list"></a>Liste des éléments de l'interface utilisateur  
- **Base de données**  
+ **Sauvegarde de la base de données**  
  Affiche le nom de la base de données sélectionnée. Ce champ est en lecture seule.  
   
  **Classement**  
@@ -40,7 +43,7 @@ ms.lasthandoff: 11/09/2017
  **Supprimer**  
  Supprime la propriété étendue sélectionnée.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Vues de catalogue des propriétés étendues &#40;Transact-SQL&#41;](http://msdn.microsoft.com/library/f39fd324-efd4-4468-884c-bf77ed1a026f)  
   
   

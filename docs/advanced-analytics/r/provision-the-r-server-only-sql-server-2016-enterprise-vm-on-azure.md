@@ -2,24 +2,27 @@
 title: "Configurer un ordinateur virtuel pour l’apprentissage sur Azure | Documents Microsoft"
 ms.custom: 
 ms.date: 10/31/2017
-ms.prod: r-server
 ms.reviewer: 
-ms.suite: 
-ms.technology: r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: c8826df7-aa67-4768-baa9-bdc875c4a766
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
-ms.openlocfilehash: a57f9d0e392818ec1198f3d0a19106e9db9c7810
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+manager: cgronlund
+ms.openlocfilehash: 62e1c347a3c5ee110e6865cd8c13ade76ba62b80
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="provision-a-virtual-machine-for-machine-learning-on-azure"></a>Configurer un ordinateur virtuel pour l’apprentissage sur Azure
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Machines virtuelles sur Azure sont une option pratique pour la configuration rapidement d’un environnement de serveur complet pour les solutions d’apprentissage.
 
@@ -83,9 +86,7 @@ Pour plus d’informations, consultez [l’installation de SQL Server R Services
 
 ### <a name="using-machine-learning-in-azure-sql-database"></a>À l’aide d’apprentissage dans la base de données SQL Azure
 
-À compter de se situent 2017, base de données SQL Azure prend en charge à l’aide de R pour l’apprentissage des modèles et de les utiliser pour la prédiction. 
-
-R Services dans-base de données est disponible uniquement en version préliminaire et présente certaines limitations par rapport à l’édition locale de SQL Server. Pour plus d’informations, consultez [base de données SQL Azure](../r/using-r-in-azure-sql-database.md).
+Actuellement, la version préliminaire de la prise en charge de R dans SQL Azure est interrompue en cours de développement. Pour plus d’informations, consultez [base de données SQL Azure](../r/using-r-in-azure-sql-database.md).
 
 ### <a name="can-i-upgrade-the-sql-server-version-on-a-virtual-machine"></a>Puis-je mettre à niveau la version de SQL Server sur un ordinateur virtuel ?
 

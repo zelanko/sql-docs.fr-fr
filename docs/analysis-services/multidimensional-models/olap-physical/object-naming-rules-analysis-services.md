@@ -2,15 +2,13 @@
 title: "Règles d’affectation de noms (Analysis Services) de l’objet | Documents Microsoft"
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -21,14 +19,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 1493d5236d4c44fe4a496a67a2c435aab703daa8
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 9b489ecceb4d8aeb5716708ae680999a296b5d14
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="object-naming-rules-analysis-services"></a>Règles d'attribution de noms aux objets (Analysis Services)
-  Cette rubrique décrit les conventions d'affectation des noms d'objet et les mots et caractères réservés qui ne peuvent être utilisés dans aucun nom d'objet, dans le code ni dans le script, dans [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Cette rubrique décrit les conventions d’affectation de noms d’objet, ainsi que les mots réservés et des caractères qui ne peut pas être utilisés dans un nom d’objet, dans le code ou de script dans [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
   
 ##  <a name="bkmk_Names"></a>Conventions d’affectation de noms  
  Chaque objet possède une propriété **Name** et une propriété **ID** qui doivent être uniques dans l'étendue de la collection parente. Par exemple, deux dimensions peuvent porter le même nom dans la mesure où chacune réside dans une base de données différente.  
@@ -88,9 +86,9 @@ ms.lasthandoff: 11/17/2017
   
 |Mode serveur et niveau de compatibilité de la base de données|Caractères réservés autorisés ?|  
 |--------------------------------------------------|----------------------------------|  
-|MOLAP (toutes les versions)|Non|  
-|Tabulaire - 1050|Non|  
-|Tabulaire - 1100|Non|  
+|MOLAP (toutes les versions)|non|  
+|Tabulaire - 1050|non|  
+|Tabulaire - 1100|non|  
 |Tabulaire – 1130 et ultérieur|Oui|  
   
  Les bases de données peuvent avoir un ModelType par défaut. La valeur par défaut est équivalente à celle du mode multidimensionnel et ne prend donc pas en charge l'utilisation de caractères réservés dans les noms de colonnes.  

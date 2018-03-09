@@ -2,9 +2,12 @@
 title: "S’abonner à des publications | Microsoft Docs"
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -23,18 +26,18 @@ helpviewer_keywords:
 - transactional replication, subscribing
 ms.assetid: 088ee30a-05ab-47c4-92ed-316b93e12445
 caps.latest.revision: "44"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8c662e63ac48ad1ae3b64fdc8de428bc5090abba
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: a8f88fca63abe24ce7093d628062c4ae90b40733
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="subscribe-to-publications"></a>S'abonner à des publications
-  Un abonnement est une demande de copie de données et d'objets de base de données d'une publication. Il définit la publication qui sera reçue, où et quand elle sera reçue. Lorsque vous planifiez des abonnements, pensez à l'endroit où vous voulez qu'ait lieu le traitement de l'agent. Le type d'abonnement choisi détermine l'emplacement d'exécution de l'agent. Avec un abonnement par envoi de données (push), l'Agent de fusion ou l'Agent de distribution s'exécute sur le serveur de distribution tandis qu'avec un abonnement par extraction de données (pull), les agents s'exécutent sur les Abonnés. Il n'est plus possible de modifier le type d'un abonnement une fois celui-ci créé.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Un abonnement est une demande de copie de données et d’objets de base de données d’une publication. Il définit la publication qui sera reçue, où et quand elle sera reçue. Lorsque vous planifiez des abonnements, pensez à l'endroit où vous voulez qu'ait lieu le traitement de l'agent. Le type d'abonnement choisi détermine l'emplacement d'exécution de l'agent. Avec un abonnement par envoi de données (push), l'Agent de fusion ou l'Agent de distribution s'exécute sur le serveur de distribution tandis qu'avec un abonnement par extraction de données (pull), les agents s'exécutent sur les Abonnés. Il n'est plus possible de modifier le type d'un abonnement une fois celui-ci créé.  
   
 |Abonnement|Caractéristiques|Cas d'utilisation|  
 |------------------|---------------------|--------------|  
@@ -44,7 +47,7 @@ ms.lasthandoff: 11/09/2017
 ## <a name="merge-replication-subscription-types"></a>Types d'abonnements de réplication de fusion  
  Tous les types de réplication permettent des abonnements par envoi ou extraction de données. La réplication de fusion fait la distinction entre deux types d'abonnement : les abonnements client et les abonnements serveur. Ces deux types d'abonnement sont utilisables avec les abonnements par envoi ou extraction de données. Les abonnements client sont adaptés à la plupart des Abonnés, tandis que les abonnements serveur sont généralement utilisés pour les Abonnés qui republient des données vers d'autres Abonnés. Le choix de l'abonnement a également une incidence sur la résolution des conflits.  
   
-## <a name="non-sql-server-subscribers"></a>Abonnés non-SQL Server  
+## <a name="non-sql-server-subscribers"></a>Non-SQL Server Subscribers  
  Oracle et IBM DB2 peuvent s'abonner à des publications transactionnelles et des publications d'instantané à l'aide des abonnements par envoi de données. Pour plus d’informations, consultez [Non-SQL Server Subscribers](../../relational-databases/replication/non-sql/non-sql-server-subscribers.md).  
   
 ## <a name="creating-subscriptions"></a>Création d'abonnements  
@@ -70,7 +73,7 @@ ms.lasthandoff: 11/09/2017
   
  **Pour afficher ou modifier les propriétés d'un abonnement par envoi de données**  
   
- [Afficher et modifier les propriétés d’un abonnement par émission de données](../../relational-databases/replication/view-and-modify-push-subscription-properties.md)  
+ [Afficher et modifier les propriétés d’un abonnement par émission (push)](../../relational-databases/replication/view-and-modify-push-subscription-properties.md)  
   
  **Pour supprimer un abonnement par envoi de données**  
   
@@ -85,13 +88,13 @@ ms.lasthandoff: 11/09/2017
   
  **Pour afficher ou modifier les propriétés d'un abonnement extrait**  
   
- [Afficher et modifier les propriétés d’un abonnement par extraction](../../relational-databases/replication/view-and-modify-pull-subscription-properties.md)  
+ [Afficher et modifier les propriétés d’un abonnement par extraction (pull)](../../relational-databases/replication/view-and-modify-pull-subscription-properties.md)  
   
  **Pour supprimer un abonnement extrait**  
   
  [Supprimer un abonnement par extraction](../../relational-databases/replication/delete-a-pull-subscription.md)  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Sécuriser l’abonné](../../relational-databases/replication/security/secure-the-subscriber.md)   
  [Expiration et désactivation des abonnements](../../relational-databases/replication/subscription-expiration-and-deactivation.md)  
   

@@ -3,8 +3,11 @@ title: "Ouvrir des schémas de base de données (Visual Database Tools) | Micros
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -16,16 +19,16 @@ ms.assetid: 06d9a7d5-ef04-400c-a340-7a3e5d54f685
 caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cdc67f6f17ac210462c7ba634f3bc9a6e4b24a1e
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: d96421cdb127c87165fef692e94265ffaf2d3f51
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="open-database-diagrams-visual-database-tools"></a>Ouvrir des schémas de base de données (Visual Database Tools)
-Vous pouvez ouvrir des schémas de base de données en vue d'afficher ou de modifier la structure du schéma.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Vous pouvez ouvrir des schémas de base de données en vue d’afficher ou de modifier la structure du schéma.  
   
 ### <a name="to-open-a-database-diagram"></a>Pour ouvrir un schéma de base de données  
   
@@ -42,7 +45,7 @@ Le schéma de base de données s'ouvre dans le Concepteur de schémas de base de
 > [!NOTE]  
 > Seul le propriétaire du schéma ou un membre du rôle db_owner de la base de données peut ouvrir le schéma.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [Utiliser des schémas de base de données &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md)  
 [Comprendre la propriété du schéma de base de données &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/understand-database-diagram-ownership-visual-database-tools.md)  
   

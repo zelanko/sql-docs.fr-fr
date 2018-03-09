@@ -2,56 +2,35 @@
 title: Installer Analysis Services en Mode Power Pivot | Documents Microsoft
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: instances
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - setup-install
 - setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d3310562-82c1-454f-9c48-33a241749238
-caps.latest.revision: "40"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: ffad3e8daf95263a5c0ce8ee6607c2715defe43b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f3b10fdee9956b28273553755365b9251d073964
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="install-analysis-services-in-power-pivot-mode"></a>Installation d’Analysis Services en mode Power Pivot
-  Les procédures de cette rubrique guident à travers l'installation d'un serveur [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] en mode [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] pour un déploiement SharePoint. Ces étapes comprennent l'exécution de l'Assistant Installation de SQL Server ainsi que des tâches de configuration qui utilisent l'Administration centrale de SharePoint.  
-  
-||  
-|-|  
-|**[!INCLUDE[applies](../../../includes/applies-md.md)]** SharePoint 2016 &#124; SharePoint 2013|  
-  
- **Dans cette rubrique :**  
-  
- [Arrière-plan](#bkmk_background)  
-  
- [Configuration requise](#bkmk_prereq)  
-  
- [Étape 1 : installer Power Pivot pour SharePoint](#InstallSQL)  
-  
- [Étape 2 : configurer l'intégration SharePoint de base pour Analysis Services](#bkmk_config)  
-  
- [Étape 3 : vérifier l'intégration](#bkmk_verify)  
-  
- [Configurer le pare-feu Windows pour autoriser l'accès à Analysis Services](#bkmk_firewall)  
-  
- [Mettre à niveau les classeurs et l'actualisation planifiée des données](#bkmk_upgrade_workbook)  
-  
- [Au-delà de l'installation de serveur unique - Power Pivot pour Microsoft SharePoint](#bkmk_multiple_servers)  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+Les procédures de cette rubrique guident à travers l'installation d'un serveur [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] en mode [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] pour un déploiement SharePoint. Ces étapes comprennent l'exécution de l'Assistant Installation de SQL Server ainsi que des tâches de configuration qui utilisent l'Administration centrale de SharePoint.  
   
 ##  <a name="bkmk_background"></a> Arrière-plan  
- [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] pour SharePoint est une collection de services intermédiaires et de services principaux qui fournissent un accès aux données [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] dans une batterie de serveurs SharePoint 2016 ou SharePoint 2013.  
+ [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] pour SharePoint est une collection de services de niveau intermédiaire et principaux qui fournissent [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] accès aux données dans une batterie de serveurs SharePoint 2016 ou SharePoint 2013.  
   
 -   **Services principaux :** si vous utilisez [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] pour Excel pour créer des classeurs qui contiennent des données analytiques, vous devez disposer de [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] pour SharePoint pour accéder à ces données dans un environnement serveur. Vous pouvez exécuter le programme d'installation de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sur un ordinateur sur lequel SharePoint Server est installé ou sur un autre ordinateur sans logiciel SharePoint. [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] ne dépend pas de SharePoint.  
   
@@ -306,11 +285,11 @@ ms.lasthandoff: 11/17/2017
   
  **Redondance et charge du serveur :** l'installation d'un deuxième (ou plus) serveur [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] en mode [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] permet une redondance des fonctionnalités du serveur [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] . Les serveurs supplémentaires distribuent également la charge entre plusieurs serveurs. Pour plus d'informations, consultez les documents suivants :  
   
--   [Configuration d’Analysis Services pour traiter les modèles de données dans Excel Services (SharePoint 2013)](http://technet.microsoft.com/library/jj614437\(v=office.15\)) (http://technet.microsoft.com/library/jj614437(v=office.15)).  
+-   [Configurer Analysis Services pour le traitement des modèles de données dans Excel Services (SharePoint 2013)](http://technet.microsoft.com/library/jj614437(v=office.15)).  
   
--   [Gérer les paramètres de modèle de données Excel Services (SharePoint 2013)](http://technet.microsoft.com/library/jj219780\(v=office.15\)) (http://technet.microsoft.com/library/jj219780(v=office.15)).  
+-   [Gérer les paramètres de modèle de données Excel Services (SharePoint 2013)](http://technet.microsoft.com/library/jj219780(v=office.15)).  
   
- ![Les paramètres SharePoint](../../../analysis-services/media/as-sharepoint2013-settings-gear.gif "paramètres SharePoint") [envoyer les informations de contact et les commentaires via Microsoft SQL Server Connect](https://connect.microsoft.com/SQLServer/Feedback) (https://connect.microsoft.com/SQLServer/Feedback).  
+ ![Les paramètres SharePoint](../../../analysis-services/media/as-sharepoint2013-settings-gear.gif "paramètres SharePoint") [envoyer les informations de commentaires et de contact par le biais des commentaires de SQL Server](https://feedback.azure.com/forums/908035-sql-server).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Migrer PowerPivot vers SharePoint 2013](../../../analysis-services/instances/install-windows/migrate-power-pivot-to-sharepoint-2013.md)   

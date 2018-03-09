@@ -2,10 +2,14 @@
 title: "Définir la sérialisation des données XML | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: xml
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-xml
+ms.suite: sql
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,24 +21,25 @@ helpviewer_keywords:
 - xml data type [SQL Server], serialization
 - typed XML
 ms.assetid: 42b0b5a4-bdd6-4a60-b451-c87f14758d4b
-caps.latest.revision: "23"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cc424a86cdbb1437c705de4a719ba863770d32ca
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 02ae370490f638a0ad02d5539473c61c6c89b2b3
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="define-the-serialization-of-xml-data"></a>Définir la sérialisation des données XML
-  Lors de la conversion explicite ou implicite du type de données xml en données SQL de type chaîne ou binaire, le contenu des données de type xml sera sérialisé conformément aux règles présentées dans cette rubrique.  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+Lors de la conversion explicite ou implicite du type de données xml en données SQL de type chaîne ou binaire, le contenu des données de type xml sera sérialisé conformément aux règles présentées dans cette rubrique.  
   
 ## <a name="serialization-encoding"></a>Encodage de la sérialisation  
  Si le type cible SQL est VARBINARY, le résultat est sérialisé au format UTF-16 avec une marque d'ordre d'octet UTF-16 au début, mais sans déclaration XML. Si le type cible est trop petit, une erreur est générée.  
   
- Exemple :  
+ Exemple :  
   
 ```  
 select CAST(CAST(N'<Δ/>' as XML) as VARBINARY(MAX))  
@@ -48,7 +53,7 @@ select CAST(CAST(N'<Δ/>' as XML) as VARBINARY(MAX))
   
  Si le type cible SQL est NVARCHAR ou NCHAR, le résultat est sérialisé au format UTF-16 sans marque d'ordre d'octet au début ni déclaration XML. Si le type cible est trop petit, une erreur est générée.  
   
- Exemple :  
+ Exemple :  
   
 ```  
 select CAST(CAST(N'<Δ/>' as XML) as NVARCHAR(MAX))  
@@ -62,7 +67,7 @@ select CAST(CAST(N'<Δ/>' as XML) as NVARCHAR(MAX))
   
  Si le type cible SQL est VARCHAR ou NCHAR, le résultat est sérialisé dans l'encodage correspondant à la page de codes du classement de la base de données sans marque d'ordre d'octet ni déclaration XML. Si le type cible est trop petit ou s'il est impossible de faire correspondre la valeur à la page de codes du classement de la cible, une erreur est générée.  
   
- Exemple :  
+ Exemple :  
   
 ```  
 select CAST(CAST(N'<Δ/>' as XML) as VARCHAR(MAX))  
@@ -90,7 +95,7 @@ select CAST(CAST(N'<Δ/>' as XML) as VARCHAR(MAX))
   
 -   Pour protéger les nœuds de texte contenant des espaces, l'un des espaces (généralement le dernier) est codé par sa référence de caractère numérique. De cette façon, l'analyse préserve le nœud de texte contenant des espaces, quel que soit le mode de traitement choisi pour les espaces au cours de l'analyse.  
   
- Exemple :  
+ Exemple :  
   
 ```  
 declare @u NVARCHAR(50)  
@@ -152,7 +157,7 @@ select CAST(@x.query('1.34e1') as nvarchar(50))
   
  Cela renvoie la valeur de chaîne 13.4.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Règles de conversion de types dans XQuery](../../xquery/type-casting-rules-in-xquery.md)   
  [CAST et CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
   

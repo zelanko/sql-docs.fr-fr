@@ -2,10 +2,14 @@
 title: "Référencer la collection de schémas XML intégrée (sys) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: xml
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-xml
+ms.suite: sql
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,19 +19,20 @@ helpviewer_keywords:
 - XML schema collections [SQL Server], predefined
 - built-in XML schema collections [SQL Server]
 ms.assetid: 1e118303-5df0-4ee4-bd8d-14ced7544144
-caps.latest.revision: "18"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 94f052fe1478c26045d27f6481ccfda42ec41a17
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: f8140cdb2a53142fd48765bd4747fe3aa25244fd
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="reference-the-built-in-xml-schema-collection-sys"></a>Référencer la collection de schémas XML intégrée (sys)
-  Chaque base de données que vous créez a une collection de schémas XML **sys** prédéfinie dans le schéma relationnel **sys** . Elle réserve ces schémas prédéfinis, qui sont accessibles à toute autre collection de schémas XML créés par l'utilisateur. Les préfixes utilisés dans ces schémas prédéfinis ont une signification dans XQuery. Seul **xml** est un préfixe réservé.  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+Chaque base de données que vous créez a une collection de schémas XML **sys** prédéfinie dans le schéma relationnel **sys** . Elle réserve ces schémas prédéfinis, qui sont accessibles à toute autre collection de schémas XML créés par l'utilisateur. Les préfixes utilisés dans ces schémas prédéfinis ont une signification dans XQuery. Seul **xml** est un préfixe réservé.  
   
 ```  
 xml = http://www.w3.org/XML/1998/namespace  
@@ -152,7 +157,7 @@ GO
   
  L’expression `instance of sqltypes:varchar?` retourne TRUE, car la valeur de l’élément &lt;`root`&gt; est d’un type dérivé de **varchar`@var` d’après le schéma associé à la variable** .  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Collections de schémas XML &#40;SQL Server&#41;](../../relational-databases/xml/xml-schema-collections-sql-server.md)  
   
   

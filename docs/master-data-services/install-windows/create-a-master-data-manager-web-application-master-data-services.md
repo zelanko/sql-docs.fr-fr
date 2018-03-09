@@ -8,20 +8,21 @@ ms.service:
 ms.component: install-windows
 ms.reviewer: 
 ms.suite: sql
-ms.technology: setup-install
+ms.technology:
+- setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 241d46d7-8008-47f6-bebd-0dfff1cc856a
-caps.latest.revision: "8"
-author: smartysanthosh
-ms.author: nagavo
+caps.latest.revision: 
+author: leolimsft
+ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 41cd394454663f5656684af467b846ae7c32d823
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 475d655c3accf4c25afe13c615adc210575e2975
+ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="create-a-master-data-manager-web-application-master-data-services"></a>Créer une application Web Master Data Manager (Master Data Services)
   L’application web [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] offre une interface permettant aux utilisateurs de travailler avec des données de référence et aux administrateurs de configurer et de gérer MDS.  
@@ -36,7 +37,7 @@ ms.lasthandoff: 11/20/2017
   
  Après avoir créé l'application Web, vous l'associez à la base de données [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] .  
   
-## <a name="prerequisites"></a>Conditions préalables  
+## <a name="prerequisites"></a>Prerequisites  
   
 -   Pour plus d’informations sur la configuration requise pour l’ordinateur qui héberge l’application web, consultez [Configuration requise pour l’application Web &#40;Master Data Services&#41;](../../master-data-services/install-windows/web-application-requirements-master-data-services.md).  
   
@@ -83,7 +84,7 @@ ms.lasthandoff: 11/20/2017
   
 -   Éventuellement, configurez le site web qui héberge l’application web [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] pour qu’il utilise une liaison HTTPS si vous souhaitez chiffrer le contenu à l’aide du protocole SSL (Secure Sockets Layer). Vous devez utiliser un outil IIS, tel que IIS Manager, pour configurer le certificat du serveur Web et configurer une liaison HTTPS et les paramètres SSL pour le site. Pour plus d’informations, consultez [Sécuriser une application Web Master Data Manager](../../master-data-services/install-windows/secure-a-master-data-manager-web-application.md).  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Installer Master Data Services](../../master-data-services/install-windows/install-master-data-services.md)  
   
   

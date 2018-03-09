@@ -3,8 +3,11 @@ title: "Copier des éléments d’une solution | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-solutions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -16,16 +19,16 @@ ms.assetid: f95f084e-9f3d-4d15-90b4-1094ab2eda51
 caps.latest.revision: "3"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9124691f2d423ced6ab9fe4bc416549a7ebfdd82
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 8698de1d3a70ef122800367b1090a62eef683832
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="copy-items-in-a-solution"></a>Copier des éléments d'une solution
-Vous pouvez copier des éléments à l'aide de l'Explorateur de solutions ou de l'Explorateur Windows.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Vous pouvez copier des éléments à l’aide de l’Explorateur de solutions ou de l’Explorateur Windows.  
   
 ### <a name="to-copy-items-within-solution-explorer"></a>Pour copier des éléments dans l'Explorateur de solutions  
   
@@ -40,7 +43,7 @@ Vous pouvez copier des éléments à l'aide de l'Explorateur de solutions ou de 
 > [!NOTE]  
 > Les connexions ne peuvent pas être copiées entre projets. Lorsque vous copiez une requête avec une connexion associée dans un autre projet, la connexion associée n'est pas copiée dans le projet cible. Vous devez la créer manuellement dans le projet cible.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [Explorateur de solutions](../../ssms/solution/solution-explorer.md)  
 [Déplacer des éléments dans une solution](../../ssms/solution/move-items-in-a-solution.md)  
   

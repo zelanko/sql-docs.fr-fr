@@ -3,42 +3,44 @@ title: "Modèle de programmation des services Bureau à distance en détail | Do
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: RDS programming model [ADO], details
+helpviewer_keywords:
+- RDS programming model [ADO], details
 ms.assetid: 3e57af8d-519b-4467-a0bd-af468534cefd
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b471eb6a057e0669bd628089886cb6465598f697
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 5a2798c750ba20b03c9e423b5897575ce4d5d697
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="rds-programming-model-in-detail"></a>Modèle de programmation des services Bureau à distance en détail
 Les éléments clés du modèle de programmation des services Bureau à distance sont les suivantes :  
   
--   RDS. Espace de données  
+-   RDS.DataSpace  
   
 -   RDSServer.DataFactory  
   
--   RDS. DataControl  
+-   RDS.DataControl  
   
 -   Événement  
   
 > [!IMPORTANT]
 >  À compter de Windows 8 et Windows Server 2012, les composants de serveur Services Bureau à distance ne sont plus inclus dans le système d’exploitation Windows (consultez Windows 8 et [Cookbook de compatibilité de Windows Server 2012](https://www.microsoft.com/en-us/download/details.aspx?id=27416) pour plus de détails). Composants du client Bureau à distance seront supprimées dans une future version de Windows. Évitez d'utiliser cette fonctionnalité dans de nouveaux travaux de développement, et prévoyez de modifier les applications qui utilisent actuellement cette fonctionnalité. La migration vers les applications qui utilisent des services Bureau à distance [Service de données WCF](http://go.microsoft.com/fwlink/?LinkId=199565).  
   
-## <a name="rdsdataspace"></a>RDS. Espace de données  
+## <a name="rdsdataspace"></a>RDS.DataSpace  
  Votre application cliente doit spécifier le serveur et le programme de serveur à appeler. En retour, votre application reçoit une référence à l’application du serveur et peut traiter la référence comme s’il s’agissait du programme serveur lui-même.  
   
  Le modèle objet RDS fournit cette fonctionnalité avec le [RDS. DataSpace](../../../ado/reference/rds-api/dataspace-object-rds.md) objet.  
@@ -58,7 +60,7 @@ Les éléments clés du modèle de programmation des services Bureau à distance
   
  Le programme de serveur est parfois appelé un *objet métier*. Vous pouvez écrire votre propre objet métier personnalisé qui peut effectuer des accès aux données complexes, des contrôles de validité et ainsi de suite. Même lorsque vous écrivez un objet métier personnalisé, vous pouvez créer une instance d’un **RDSServer.DataFactory** de l’objet et utiliser certaines de ses méthodes pour réaliser vos propres tâches.  
   
-## <a name="rdsdatacontrol"></a>RDS. DataControl  
+## <a name="rdsdatacontrol"></a>RDS.DataControl  
  Services Bureau à distance permet de combiner les fonctionnalités de la **RDS. DataSpace** et **RDSServer.DataFactory**et également activer des contrôles visuels d’utiliser facilement le **Recordset** objet retourné par une requête à partir d’une source de données. Tente de services Bureau à distance, pour la plupart des cas, faire autant que possible pour accéder aux informations sur un serveur et les afficher dans un contrôle visuel automatiquement.  
   
  Le modèle objet RDS fournit cette fonctionnalité avec le [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) objet.  

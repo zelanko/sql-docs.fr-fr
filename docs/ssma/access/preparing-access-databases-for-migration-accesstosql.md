@@ -1,10 +1,13 @@
 ---
 title: "Préparation des bases de données Access de Migration (AccessToSQL) | Documents Microsoft"
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-access
 ms.custom: 
 ms.date: 08/15/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -28,11 +31,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: murato
 ms.workload: On Demand
-ms.openlocfilehash: e6c16f66c00de471ef2e576367530274257be08e
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: fb7743e870b97882ad2bcec0428b3047f28f538d
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="preparing-access-databases-for-migration-accesstosql"></a>Préparation des bases de données Access de migration (AccessToSQL)
 Avant de migrer des bases de données Access [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], vous devez déterminer les bases de données à migrer et vous assurer que ces bases de données sont prêts pour la migration.  

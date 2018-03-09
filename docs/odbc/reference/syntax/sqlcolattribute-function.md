@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: fead7415e3cb4a951a5ab2ba90b4969682905a0a
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 7470412149bf336be8d07495eab4aa9bdf449a86
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlcolattribute-function"></a>Fonction SQLColAttribute
 **Mise en conformité**  
@@ -96,7 +96,7 @@ SQLRETURN SQLColAttribute (
 ## <a name="diagnostics"></a>Diagnostics  
  Lorsque **SQLColAttribute** retourne SQL_ERROR ou SQL_SUCCESS_WITH_INFO, une valeur SQLSTATE associée peut être obtenue en appelant **SQLGetDiagRec** avec un *HandleType* de SQL_HANDLE_STMT et un *gérer* de *au paramètre StatementHandle*. Le tableau suivant répertorie les valeurs SQLSTATE généralement retournées par **SQLColAttribute** et explique chacune d’elles dans le contexte de cette fonction ; la notation « (DM) » précède les descriptions de SQLSTATE retournée par le Gestionnaire de pilotes. Le code de retour associé à chaque valeur SQLSTATE est SQL_ERROR, sauf indication contraire.  
   
-|SQLSTATE|Erreur| Description|  
+|SQLSTATE|Error|Description|  
 |--------------|-----------|-----------------|  
 |01000|Avertissement général|Message d’information de spécifiques au pilote. (La fonction retourne SQL_SUCCESS_WITH_INFO).|  
 |01004|Données de type chaîne, droite tronquées|La mémoire tampon \* *CharacterAttributePtr* n’est pas suffisamment grande pour retourner la valeur de la chaîne entière, donc la valeur de chaîne était tronquée. La longueur de la valeur de chaîne non tronqué est retournée dans **StringLengthPtr*. (La fonction retourne SQL_SUCCESS_WITH_INFO).|  
@@ -131,7 +131,7 @@ SQLRETURN SQLColAttribute (
   
  Une application ODBC 3. *x* pilote doit retourner une valeur pour chacun des champs de descripteur. Si un champ de descripteur ne s’applique pas à une source de données ou de pilote et, sauf indication contraire, le pilote retourne 0 dans \* *StringLengthPtr* ou une chaîne vide dans **CharacterAttributePtr*.  
   
-## <a name="backward-compatibility"></a>Compatibilité descendante  
+## <a name="backward-compatibility"></a>Backward Compatibility  
  ODBC 3. *x* fonction **SQLColAttribute** remplace déconseillées ODBC 2. *x* fonction **SQLColAttributes**. Lors du mappage **SQLColAttributes** à **SQLColAttribute** (quand un ODBC 2. *x* application fonctionne avec un ODBC 3. *x* pilote), ou d’un mappage **SQLColAttribute** à **SQLColAttributes** (quand un ODBC 3. *x* application fonctionne avec une API ODBC 2. *x* pilote), le Gestionnaire de pilotes passe soit la valeur de *FieldIdentifier* , mappe à une nouvelle valeur, ou retourne une erreur, comme suit :  
   
 > [!NOTE]  
@@ -147,7 +147,7 @@ SQLRETURN SQLColAttribute (
   
  Le tableau suivant répertorie les types de descripteur retournés par **SQLColAttribute**. Le type de *NumericAttributePtr* valeurs est **SQLLEN \*** .  
   
-|*FieldIdentifier*|Informations<br /><br /> retourné dans| Description|  
+|*FieldIdentifier*|Informations<br /><br /> retourné dans|Description|  
 |-----------------------|---------------------------------|-----------------|  
 |SQL_DESC_AUTO_UNIQUE_VALUE (ODBC VERSION 1.0)|*NumericAttributePtr*|SQL_TRUE si la colonne est une colonne d’auto-incrémentation.<br /><br /> SQL_FALSE si la colonne n’est pas une colonne d’auto-incrémentation ou n’est pas numérique.<br /><br /> Ce champ est valide pour les colonnes de type de données numériques uniquement. Une application peut insérer des valeurs dans une ligne contenant une colonne autoincrement, mais en général, ne peut pas mettre à jour les valeurs de la colonne.<br /><br /> Lorsqu’une instruction insert est effectué dans une colonne autoincrement, une valeur unique est insérée dans la colonne au moment de l’insertion. L’incrément n’est pas défini, mais il est spécifique à la source de données. Une application ne doit pas supposer qu’une colonne autoincrement commence à tout moment donné par incréments par une valeur particulière.|  
 |SQL_DESC_BASE_COLUMN_NAME (ODBC 3.0)|*CharacterAttributePtr*|Le nom de colonne de base pour le résultat de jeu de colonnes. Si un nom de colonne de base n’existe pas (comme dans le cas des colonnes qui sont des expressions), cette variable contient une chaîne vide.<br /><br /> Ces informations sont retournées à partir du champ d’enregistrement SQL_DESC_BASE_COLUMN_NAME de l’IRD qui est un champ en lecture seule.|  
@@ -190,7 +190,7 @@ SQLRETURN SQLColAttribute (
 |Extraction d’un bloc de données ou de défilement d’un résultat défini|[SQLFetchScroll, fonction](../../../odbc/reference/syntax/sqlfetchscroll-function.md)|  
 |Extraction de plusieurs lignes de données|[SQLFetch, fonction](../../../odbc/reference/syntax/sqlfetch-function.md)|  
   
-## <a name="example"></a>Exemple  
+## <a name="example"></a> Exemple  
  L’exemple de code suivant ne libère pas de handles et les connexions. Consultez [SQLFreeHandle, fonction](../../../odbc/reference/syntax/sqlfreehandle-function.md), [programme exemple ODBC](../../../odbc/reference/sample-odbc-program.md), et [SQLFreeStmt, fonction](../../../odbc/reference/syntax/sqlfreestmt-function.md) pour obtenir des exemples de code libérer les handles et les instructions.  
   
 ```  

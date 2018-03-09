@@ -2,9 +2,12 @@
 title: Renommer une instance de cluster de basculement SQL Server | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: failover-clusters
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -19,14 +22,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 4b8a0363fef8e795b44ce122a8e0e8c15868e5ac
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 59f761ee41f888f65960f9a58589c441419f40d0
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="rename-a-sql-server-failover-cluster-instance"></a>Renommer une instance de cluster de basculement SQL Server
-  Lorsqu'une instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] fait partie d'un cluster de basculement, le processus permettant de renommer un serveur virtuel diffère du processus permettant de renommer une instance autonome. Pour plus d’informations, consultez [Renommer un ordinateur qui héberge une instance autonome de SQL Server](../../../database-engine/install-windows/rename-a-computer-that-hosts-a-stand-alone-instance-of-sql-server.md).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Lorsqu’une instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] fait partie d’un cluster de basculement, le processus permettant de renommer un serveur virtuel diffère du processus permettant de renommer une instance autonome. Pour plus d’informations, consultez [Renommer un ordinateur qui héberge une instance autonome de SQL Server](../../../database-engine/install-windows/rename-a-computer-that-hosts-a-stand-alone-instance-of-sql-server.md).  
   
  Le nom du serveur virtuel est toujours identique au nom réseau SQL (le nom réseau du serveur virtuel SQL). Bien que vous puissiez modifier le nom du serveur virtuel, vous ne pouvez pas modifier le nom de l'instance. Par exemple, vous pouvez attribuer un autre nom à un serveur virtuel nommé VS1\instance1, tel que SQL35\instance1, mais la partie instance du nom (instance1) restera inchangée.  
   

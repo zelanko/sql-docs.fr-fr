@@ -1,14 +1,15 @@
 ---
 title: "Renommer des tables (moteur de base de données) | Microsoft Docs"
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 02/23/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: 
 ms.component: tables
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-tables
+ms.technology:
+- dbe-tables
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,22 +17,22 @@ helpviewer_keywords:
 - table names [SQL Server]
 - tables [SQL Server], Visual Database Tools
 - renaming tables
-ms.assetid: 2f5c922d-4d71-4694-9fca-28dd99375799
-caps.latest.revision: "16"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 1a341ca5d2c39c5d7c5071d135f58fd37d6b9d73
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 61aa8b3a739b03201e92cd81007bc1c43c6ab435
+ms.sourcegitcommit: 6e819406554efbd17bbf84cf210d8ebeddcf772d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/27/2018
 ---
 # <a name="rename-tables-database-engine"></a>Renommer des tables (moteur de base de données)
-[!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  Vous pouvez renommer une table dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+Renommez une table dans SQL Server ou Azure SQL Database.
+
+Pour renommer une table dans Azure SQL Data Warehouse ou Parallel Data Warehouse, utilisez l’instruction T-SQL [RENAME OBJECT](../../t-sql/statements/rename-transact-sql.md). 
   
 > [!CAUTION]  
 >  Ne renommez une table qu'après mûre réflexion. En effet, s'il existe des requêtes, des vues, des fonctions définies par l'utilisateur, des procédures stockées ou des programmes qui font référence à cette table, le changement de nom rend tous ces objets non valides.  
@@ -57,7 +58,7 @@ ms.lasthandoff: 11/17/2017
   
 ###  <a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Autorisations  
+####  <a name="Permissions"></a> Permissions  
  Requiert une autorisation ALTER sur la table.  
   
 ##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
@@ -72,13 +73,13 @@ ms.lasthandoff: 11/17/2017
   
 4.  Pour annuler cette action, appuyez sur la touche Échap avant de quitter ce champ.  
   
-5.  Dans le menu **Fichier** , choisissez **Enregistrer***nom de la table*.  
+5.  Dans le menu **Fichier**, choisissez **Enregistrer***nom de la table*.  
   
 ##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
   
 #### <a name="to-rename-a-table"></a>Pour renommer une table  
   
-1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  Dans la barre d'outils standard, cliquez sur **Nouvelle requête**.  
   

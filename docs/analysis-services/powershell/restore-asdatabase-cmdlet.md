@@ -2,13 +2,13 @@
 title: Applet de commande Restore-ASDatabase | Documents Microsoft
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: powershell
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology: analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 8ab7a2d0-679c-40e6-b9b9-042184b2dfc9
@@ -17,17 +17,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ae57bdc2a1f385e06248ab9486b7ef5fc07f7932
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 86894e5f3c0d438a5a97c45e3927e3996ee6a6ab
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="restore-asdatabase-cmdlet"></a>Applet de commande Restore-ASDatabase
-
-[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
-
-  Restaure une base de données multidimensionnelle ou tabulaire à partir d’un fichier de sauvegarde (.abf) vers une instance Analysis Services.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Restaure un fichier de sauvegarde (.abf) de base de données multidimensionnelle ou tabulaire à une instance Analysis Services.  
 
 >[!NOTE] 
 >Cet article peut contenir des exemples et des informations obsolètes. Utilisez l’applet de commande Get-Help pour la dernière version.
@@ -59,7 +56,7 @@ ms.lasthandoff: 11/17/2017
 |||  
 |-|-|  
 |Requis ?|true|  
-|Position ?|1|  
+|Position ?| 1|  
 |Valeur par défaut||  
 |Accepter l'entrée de pipeline ?|false|  
 |Accepter les caractères génériques ?|false|  

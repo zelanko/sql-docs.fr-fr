@@ -1,11 +1,11 @@
 ---
-title: Transactions Integration Services | Documents Microsoft
+title: Transactions Integration Services | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology:
@@ -18,17 +18,16 @@ helpviewer_keywords:
 - tasks [Integration Services], transactions
 - transactions [Integration Services]
 ms.assetid: 3c78bb26-ddce-4831-a5f8-09d4f4fd53cc
-caps.latest.revision: 51
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 7355d98c342052997441c2013e056b0453962c5a
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 83125af2f2f85c825aae5b594767fa421af2a656
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="integration-services-transactions"></a>Transactions Integration Services
   Les packages utilisent les transactions pour lier les actions de base de données que les tâches effectuent en unités atomiques, et maintiennent ce faisant l'intégrité des données. Tous les types de conteneurs [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] (packages, conteneurs de boucles For et Foreach et conteneurs de séquences, ainsi que les hôtes de tâches qui encapsulent chaque tâche) peuvent être configurés pour utiliser les transactions. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] offre trois options de configuration des transactions : **NotSupported**, **Supported**et **Required**.  
@@ -124,7 +123,7 @@ Il est possible qu'un package inclue des transactions non liées entre elles dan
   
  Le diagramme ci-dessous représente les cinq transactions non liées du package. Une transaction est démarrée par le conteneur de séquences et quatre transactions par les tâches d'exécution SQL.  
   
- ![Implémentation de plusieurs transactions](../integration-services/media/mw-dts-trans2.gif "implémentation de plusieurs transactions")  
+ ![Implémentation de plusieurs transactions](../integration-services/media/mw-dts-trans2.gif "Implémentation de plusieurs transactions")  
  
 ## <a name="inherited-transactions"></a>Transactions héritées
  Un package peut en exécuter un autre à l'aide de la tâche d'exécution de package. Le package enfant, qui est celui exécuté par la tâche d'exécution de package, peut créer sa propre transaction sur package, ou hériter de celle du package parent.  
@@ -148,7 +147,7 @@ Il est possible qu'un package inclue des transactions non liées entre elles dan
   
 -   **TransactionOption** a pour valeur **NotSupported** sur le package E, et sur les tâches d’exécution des packages C et E.  
   
- ![Flux de transactions héritées](../integration-services/media/mw-dts-executepack.gif "flux de transactions héritées")  
+ ![Flux de transactions héritées](../integration-services/media/mw-dts-executepack.gif "Flux de transactions héritées")  
   
  Seuls les packages B, D et F peuvent hériter des transactions de leurs packages parents.  
   
@@ -165,9 +164,8 @@ Il est possible qu'un package inclue des transactions non liées entre elles dan
   
 -   Entrée de blog, [How to Use Transactions in SQL Server Integration Services SSIS](http://go.microsoft.com/fwlink/?LinkId=157783)(Comment utiliser des transactions dans SQL Server Integration Services SSIS), sur www.mssqltips.com  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Transactions héritées](http://msdn.microsoft.com/library/90db5564-d41e-4cfe-8c9e-4e68d41eff1c)   
  [Transactions multiples](http://msdn.microsoft.com/library/c3664a94-be89-40c0-a3a0-84b74a7fedbe)  
   
   
-

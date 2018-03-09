@@ -2,10 +2,14 @@
 title: "Rechercher du texte avec des expressions régulières | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-scripting
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -17,19 +21,19 @@ helpviewer_keywords:
 - Query Editor [SQL Server Management Studio], regular expression searches
 - searches [SQL Server Management Studio], regular expressions
 ms.assetid: a057690c-d118-4159-8e4d-2ed5ccfe79d3
-caps.latest.revision: "25"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 11ac36bd42257b0be9a0b03166132f658d62431e
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: f60dd96e3a335938d99c0b0f619ce859c208e795
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="search-text-with-regular-expressions"></a>Rechercher du texte avec des expressions régulières
-  Les expressions régulières sont une notation souple et concise pour rechercher et remplacer des modèles de texte. Un ensemble spécifique d'expressions régulières peut être utilisé dans le champ **Rechercher** de la boîte de dialogue [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **de** .  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Les expressions régulières sont une notation souple et concise pour rechercher et remplacer des modèles de texte. Un ensemble spécifique d'expressions régulières peut être utilisé dans le champ **Rechercher** de la boîte de dialogue [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **de** .  
   
 #### <a name="to-find-using-regular-expressions"></a>Pour effectuer une recherche à l'aide d'expressions régulières  
   
@@ -54,7 +58,7 @@ ms.lasthandoff: 11/09/2017
 |Saut de ligne|\n|Représente un saut de ligne indépendant de la plateforme. Dans une expression Remplacer, insère un saut de ligne.|  
 |Tout caractère de l'ensemble|[]|Représente tout caractère figurant entre les crochets []. Pour spécifier une plage de caractères, répertoriez les caractères de début et de fin, en les séparant par un tiret (-) ; par exemple [a-z].|  
 |Tout caractère hors de l'ensemble|[^...]|Représente tout caractère ne figurant pas dans le jeu de caractères qui suit le signe ^.|  
-|Ou|&#124;|Représente l’expression placée avant ou après le symbole OU (&#124;). Critère surtout utilisé à l'intérieur d'un groupe. Par exemple, compte (courant&#124;rendu) retourne « compte courant » et « compte rendu ».|  
+|ou|&#124;|Représente l’expression placée avant ou après le symbole OU (&#124;). Critère surtout utilisé à l'intérieur d'un groupe. Par exemple, compte (courant&#124;rendu) retourne « compte courant » et « compte rendu ».|  
 |Caractère d'échappement|\|Représente le caractère qui suit la barre oblique inverse (\\) comme littéral. Cette syntaxe vous permet de rechercher les caractères utilisés dans les expressions régulières, tels { et ^. Par exemple, \\^ recherche le caractère ^.|  
 |Expression avec balises|{}|Représente le texte avec les balises de l'expression.|  
 |Identificateur C/C++|:i|Représente l'expression ([a-zA-Z_$][a-zA-Z0-9_$]*).|  
@@ -135,7 +139,7 @@ ms.lasthandoff: 11/09/2017
 |Katakana|:Ka|Représente les caractères Katakana.|  
 |Idéographique/Han/Kanji|:Id|Représente des caractères idéographiques tels Han et Kanji.|  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Recherche et remplacement](../../relational-databases/scripting/search-and-replace.md)   
  [Rechercher du texte avec des caractères génériques](../../relational-databases/scripting/search-text-with-wildcards.md)  
   

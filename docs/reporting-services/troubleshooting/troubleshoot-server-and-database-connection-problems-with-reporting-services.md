@@ -8,22 +8,20 @@ ms.service:
 ms.component: troubleshooting
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-native
-- reporting-services-sharepoint
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 8bbb88df-72fd-4c27-91b7-b255afedd345
 caps.latest.revision: "6"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 5dd30097deb23e911e43789e10e81685f1ce0743
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: d6544043e8925c77dc88d7d1191e8ccd690b7a00
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="troubleshoot-server-and-database-connection-problems-with-reporting-services"></a>Résoudre les problèmes de connexion à un serveur et à une base de données avec Reporting Server
 Utilisez cette rubrique pour résoudre les problèmes que vous rencontrez lors de la connexion à un serveur de rapports. En outre, elle fournit des informations sur les messages de type « Erreur inattendue ». Pour plus d’informations sur la configuration de la source de données et des informations de connexion au serveur de rapports, voir [Spécifier des informations d’identification et de connexion pour les sources de données de rapport](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md) et [Configurer une connexion à la base de données du serveur de rapports (Gestionnaire de configuration de SSRS)](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md).  
@@ -119,10 +117,10 @@ Il existe deux solutions de contournement pour ce problème.
 ## <a name="unable-to-connect-to-the-reports-and-reportserver-directories-when-the-report-server-databases-are-created-on-a-virtual-sql-server-that-runs-in-a-microsoft-cluster-services-mscs-cluster"></a>Impossible de se connecter aux répertoires /reports et /reportserver lorsque les bases de données du serveur de rapports sont créées sur un serveur SQL Server virtuel qui s'exécute dans un cluster Microsoft Cluster Services (MSCS)  
 Lorsque vous créez les bases de données du serveur de rapports, **ReportServer** et **ReportServerTempDB**, sur un serveur SQL Server virtuel s’exécutant dans un cluster MSCS, il se peut que le nom distant au format `<domain>\<computer_name>$` ne soit pas inscrit dans SQL Server en tant que connexion. Si vous avez configuré le compte de service du serveur de rapports en tant que compte nécessitant ce nom distant pour les connexions, les utilisateurs ne peuvent pas se connecter aux répertoires /reports et /reportserver dans Reporting Services. Par exemple, le compte Windows intégré NetworkService requiert ce nom distant. Pour éviter ce problème, utilisez un compte de domaine explicite ou un compte de connexion SQL Server pour vous connecter aux bases de données du serveur de rapports.  
     
-  ## <a name="see-also"></a>Voir aussi  
+  ## <a name="see-also"></a> Voir aussi  
 [Planification de la prise en charge des navigateurs pour Reporting Services et Power View (Reporting Services 2014)](../../reporting-services/browser-support-for-reporting-services-and-power-view.md)  
 [Erreurs et événements (Reporting Services)](../../reporting-services/troubleshooting/errors-and-events-reference-reporting-services.md)  
-[Dépanner des problèmes de récupération des données avec des rapports Reporting Services](../../reporting-services/troubleshooting/troubleshoot-data-retrieval-issues-with-reporting-services-reports.md)  
+[Résoudre les problèmes de récupération des données avec des rapports Reporting Services](../../reporting-services/troubleshooting/troubleshoot-data-retrieval-issues-with-reporting-services-reports.md)  
 [Résolution des problèmes d’abonnements et de remise de Reporting Services](../../reporting-services/troubleshooting/troubleshoot-reporting-services-subscriptions-and-delivery.md)  
   
   

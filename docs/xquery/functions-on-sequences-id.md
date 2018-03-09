@@ -3,30 +3,36 @@ title: ID de fonction (XQuery) | Documents Microsoft
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: xquery
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-applies_to: SQL Server
-dev_langs: XML
+applies_to:
+- SQL Server
+dev_langs:
+- XML
 helpviewer_keywords:
 - fn:id function
 - id function
 ms.assetid: de99fc60-d0ad-4117-a17d-02bdde6512b4
-caps.latest.revision: "19"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 636c10d21d84932fc4e8924bab9be3904fb347ad
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 341693aa368bc92e5176570711541ab6c217cb88
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="functions-on-sequences---id"></a>Fonctions sur les séquences - id
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Retourne la séquence de nœuds d’éléments avec des valeurs xs : ID qui correspondent aux valeurs d’un ou plusieurs des valeurs xs : IDREF fournies dans *$arg*.  
   
@@ -179,9 +185,9 @@ select @x.query('declare namespace CustOrders="Customers";
 ### <a name="implementation-limitations"></a>Limites de mise en œuvre  
  Les limitations suivantes s'appliquent :  
   
--   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]ne prend pas en charge la version à deux arguments de **id()**.  
+-   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ne prend pas en charge la version à deux arguments de **id()**.  
   
--   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]requiert le type d’argument de **id()** à être un sous-type de xs : IDREF *.  
+-   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] requiert le type d’argument de **id()** à être un sous-type de xs : IDREF *.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Fonctions sur les séquences](http://msdn.microsoft.com/library/672d2795-53ab-49c2-bf24-bc81a47ecd3f)  

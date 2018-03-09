@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ca0c5040-40bb-4cb7-bc2b-5bcbe73858bb
 caps.latest.revision: "6"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 199653df3e60e7c13c8fe96b011903e2daf0cf19
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 552c3d4f8fa7e632ccb3d35af6986157aa934191
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="add-a-border-frame-to-a-chart-report-builder-and-ssrs"></a>Ajouter un cadre de bordure à un graphique (Générateur de rapports et SSRS)
   Pour donner un impact plus visuel à un graphique, envisagez d'utiliser un cadre de bordure autour de l'extérieur du graphique. Vous pouvez sélectionner un cadre de bordure à l'aide de la boîte de dialogue **Propriétés du graphique** ou du volet Propriétés. Les cadres de bordure de graphique ne peuvent être appliqués à aucune autre région de données.  
@@ -53,7 +51,7 @@ ms.lasthandoff: 12/05/2017
   
 7.  (Facultatif) Si vous choisissez un type de cadre, spécifiez un style et une couleur pour le cadre. La liste **Couleur de remplissage du cadre** contient des couleurs courantes.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Graphiques &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
  [Mise en forme d’un graphique &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
  [Ajouter des styles de biseau, de relief et de texture à un graphique &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/chart-effects-add-bevel-emboss-or-texture-report-builder.md)  

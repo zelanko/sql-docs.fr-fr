@@ -3,8 +3,11 @@ title: "Ajouter un projet existant à une solution | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-solutions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,16 +20,16 @@ ms.assetid: 7b0c8ac0-5941-4ac6-b960-87d9830d00de
 caps.latest.revision: "3"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 52cfe3e2d40668ae0d912e4cc532f775914852e0
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: ad071db3d2a369abe5dc9161e91b837369a475f9
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="add-an-existing-project-to-a-solution"></a>Ajouter un projet existant à une solution
-Vous pouvez ajouter un ou plusieurs projets à une solution existante. Un même projet peut être associé à plusieurs solutions.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Vous pouvez ajouter un ou plusieurs projets à une solution existante. Un même projet peut être associé à plusieurs solutions.  
   
 ### <a name="to-add-an-existing-project-to-a-solution"></a>Pour ajouter un projet existant à une solution  
   
@@ -41,7 +44,7 @@ Vous pouvez ajouter un ou plusieurs projets à une solution existante. Un même 
 > [!NOTE]  
 > Avant d'ajouter un projet existant à partir d'un répertoire partagé dans un environnement multidéveloppeur, assurez-vous que vos modifications n'affectent pas ou n'écrasent pas les modifications effectuées par un autre développeur.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [Projets &#40;SQL Server Management Studio&#41;](../../ssms/solution/projects-sql-server-management-studio.md)  
 [Solutions &#40;SQL Server Management Studio&#41;](../../ssms/solution/solutions-sql-server-management-studio.md)  
   

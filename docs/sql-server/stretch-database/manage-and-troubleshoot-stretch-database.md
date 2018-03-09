@@ -2,13 +2,14 @@
 title: "Gérer Stretch Database et résoudre ses problèmes | Microsoft Docs"
 ms.custom: 
 ms.date: 06/27/2016
-ms.prod: stretch-database
-ms.prod_service: sql-non-specified
-ms.service: database-engine
-ms.component: 
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: stretch-database
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-stretch
+ms.technology:
+- dbe-stretch
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,21 +18,22 @@ helpviewer_keywords:
 - managing Stretch Database
 - troubleshooting Stretch Database
 ms.assetid: 6334db3e-9297-44df-8d53-211187a95520
-caps.latest.revision: "42"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5cd6de56cac8b9aef94cd5c8bd430db7d5dbe1c7
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 55c3cefee2008ed430e1af1fecc5162a3c165473
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="manage-and-troubleshoot-stretch-database"></a>Gérer Stretch Database et résoudre ses problèmes
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
 
-  Pour gérer Stretch Database et résoudre ses problèmes, utilisez les méthodes et outils décrits dans cette rubrique.  
+
+  Pour gérer Stretch Database et résoudre ses problèmes, utilisez les méthodes et outils décrits dans cet article.  
 ## <a name="manage-local-data"></a>Gérer des données locales  
   
 ###  <a name="LocalInfo"></a> Obtenir des informations sur les bases de données et tables locales compatibles avec Stretch Database  
@@ -135,7 +137,7 @@ GO
    
  -   **STAGE_ONLY**. Met à jour ou supprime uniquement les données de la table où Stretch Database effectue une copie intermédiaire des lignes éligibles à la migration et conserve les lignes qui ont migré pendant la période spécifiée après la migration.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Surveiller et résoudre les problèmes de migration de données &#40;Stretch Database&#41;](../../sql-server/stretch-database/monitor-and-troubleshoot-data-migration-stretch-database.md)   
 [Sauvegarder des bases de données Stretch (Stretch Database)](../../sql-server/stretch-database/backup-stretch-enabled-databases-stretch-database.md)  
 [Restaurer des bases de données Stretch (Stretch Database)](../../sql-server/stretch-database/restore-stretch-enabled-databases-stretch-database.md)  

@@ -8,7 +8,8 @@ ms.service:
 ms.component: linked-servers
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -16,18 +17,19 @@ f1_keywords:
 - sql13.swb.linkedserver.properties.security.f1
 - sql13.swb.linkedserver.properties.provider.f1
 - sql13.swb.linkedserver.properties.options.f1
-helpviewer_keywords: linked servers [SQL Server], creating
+helpviewer_keywords:
+- linked servers [SQL Server], creating
 ms.assetid: 3228065d-de8f-4ece-a9b1-e06d3dca9310
-caps.latest.revision: "18"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: ba9740868c30bcc587cae0f99411bd6a49276fc1
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: aef8e627adca014fbc9213f0a88f0588a950a4ef
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="create-linked-servers-sql-server-database-engine"></a>Créer des serveurs liés (moteur de base de données SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -207,7 +209,7 @@ ms.lasthandoff: 11/17/2017
   
 1.  Dans l'éditeur de requête, entrez la commande [!INCLUDE[tsql](../../includes/tsql-md.md)] suivante pour créer une liaison avec une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nommée `SRVR002\ACCTG`:  
   
-    ```tsql  
+    ```sql  
     USE [master]  
     GO  
     EXEC master.dbo.sp_addlinkedserver   
@@ -219,7 +221,7 @@ ms.lasthandoff: 11/17/2017
   
 2.  Exécutez le code suivant pour configurer le serveur lié de manière à utiliser les informations d'identification de domaine de la connexion qui utilise le serveur lié.  
   
-    ```tsql  
+    ```sql  
     EXEC master.dbo.sp_addlinkedsrvlogin   
         @rmtsrvname = N'SRVR002\ACCTG',   
         @locallogin = NULL ,   
@@ -234,7 +236,7 @@ ms.lasthandoff: 11/17/2017
   
 -   Exécutez le code suivant pour tester la connexion au serveur lié. Cet exemple retourne les noms des bases de données sur le serveur lié.  
   
-    ```tsql  
+    ```sql  
     SELECT name FROM [SRVR002\ACCTG].master.sys.databases ;  
     GO  
   
@@ -244,7 +246,7 @@ ms.lasthandoff: 11/17/2017
   
 -   Utilisez des noms en quatre parties pour faire référence à un objet sur un serveur lié. Exécutez le code suivant pour retourner une liste de toutes les connexions sur le serveur local avec leurs connexions correspondantes sur le serveur lié.  
   
-    ```tsql  
+    ```sql  
     SELECT local.name AS LocalLogins, linked.name AS LinkedLogins  
     FROM master.sys.server_principals AS local  
     LEFT JOIN [SRVR002\ACCTG].master.sys.server_principals AS linked  
@@ -254,7 +256,7 @@ ms.lasthandoff: 11/17/2017
   
      Lorsque NULL est retourné pour la connexion au serveur lié, cela indique que la connexion n'existe pas sur le serveur lié. Ces connexions ne seront pas en mesure d'utiliser le serveur lié, à moins que le serveur lié ne soit configuré pour passer un contexte de sécurité différent ou que le serveur lié accepte des connexions anonymes.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Serveurs liés &#40;moteur de base de données&#41;](../../relational-databases/linked-servers/linked-servers-database-engine.md)   
  [sp_addlinkedserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)   
  [sp_serveroption &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-serveroption-transact-sql.md)  

@@ -1,11 +1,11 @@
 ---
-title: "Étape 2 : Vérification de l’application de déploiement | Documents Microsoft"
+title: "Étape 2 : Vérification du bundle de déploiement | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
 ms.technology:
@@ -15,19 +15,18 @@ ms.topic: article
 applies_to:
 - SQL Server 2016
 ms.assetid: 6c13f5c9-c75e-4e52-94dc-2d2db2c578fe
-caps.latest.revision: 18
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 20d8b11e28f7e26e5b61662d8340ab6dbfcc0b95
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: af371523f3caabb44dbc036e137a74ebf06047e9
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="lesson-2-2---verifying-the-deployment-bundle"></a>Leçon 2-2-vérification de l’application de déploiement
+# <a name="lesson-2-2---verifying-the-deployment-bundle"></a>Leçon 2-2 : Vérification du bundle de déploiement
 Dans la leçon 1, vous avez créé le projet Didacticiel de déploiement et ajouté au projet les packages et les fichiers annexes ; dans la tâche précédente, vous avez créé un utilitaire de déploiement pour le projet.  
   
 Dans cette tâche, vous allez vérifier le contenu de l'application de déploiement. Elle correspond au dossier que vous allez copier sur l'ordinateur de destination et qui servira à installer des packages. Si vous avez utilisé la valeur par défaut—bin\Deployment—comme emplacement de l'utilitaire de déploiement, l'application de déploiement correspond au dossier Bin\Deployment dans le dossier du didacticiel de déploiement du projet [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
@@ -69,4 +68,3 @@ Dans cette tâche, vous allez vérifier le contenu de l'application de déploiem
   
   
   
-

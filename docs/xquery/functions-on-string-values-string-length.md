@@ -3,30 +3,36 @@ title: "longueur de chaîne, fonction (XQuery) | Documents Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: xquery
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-applies_to: SQL Server
-dev_langs: XML
+applies_to:
+- SQL Server
+dev_langs:
+- XML
 helpviewer_keywords:
 - string-length function
 - fn:string-length function
 ms.assetid: 7cd69c8b-cf2c-478c-b9a3-e0e14e1aa8aa
-caps.latest.revision: "46"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fcdc3f55fb06a5019735b93ff90e5f78b202dfb3
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: a01221907acd777eaaf41ca77d73bf561724c96c
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="functions-on-string-values---string-length"></a>Fonctions sur des valeurs de chaîne - longueur de chaîne
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Retourne la longueur de la chaîne en caractères.  
   
@@ -80,7 +86,7 @@ FROM Production.ProductModel
 WHERE CatalogDescription.value('string-length( string( (/pd:ProductDescription/pd:Summary)[1]))', 'decimal') > 200;  
 ```  
   
- Notez les points suivants dans la requête précédente :  
+ Notez les points suivants dans la requête précédente :  
   
 -   La condition de la clause WHERE extrait uniquement les lignes où la description résumée stockée dans le document XML comprend plus de 200 caractères. Elle utilise le [le méthode value() (type de données XML)](../t-sql/xml/value-method-xml-data-type.md).  
   
@@ -128,7 +134,7 @@ FROM Production.ProductModel
 WHERE CatalogDescription.exist('/pd:ProductDescription')=1;  
 ```  
   
- Notez les points suivants dans la requête précédente :  
+ Notez les points suivants dans la requête précédente :  
   
 -   **PD** et **wm** sont les préfixes d’espace de noms utilisés dans cette requête. Ils identifient les mêmes espaces de noms que ceux utilisés dans le document interrogé.  
   

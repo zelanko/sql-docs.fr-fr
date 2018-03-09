@@ -4,7 +4,9 @@ ms.custom:
 ms.date: 02/03/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod_service: drivers
+ms.component: php
 ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: abf75fb674ea8da86c84c3605dadef61db8b3913
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 4dcf9e36eb3928bc606053bdfda441520155864a
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="php-driver-for-sql-server-support-for-localdb"></a>Prise en charge de LocalDB par le pilote SQL Server pour PHP
 
@@ -26,7 +28,7 @@ ms.lasthandoff: 11/09/2017
 
 À compter de [!INCLUDE[ssSQL11](../../includes/sssql11_md.md)], une version légère de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], appelée LocalDB, sera disponible. Cette rubrique explique comment se connecter à une base de données dans une instance LocalDB.
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Notes 
 
 Pour plus d’informations sur la base de données locale, y compris comment installer LocalDB et configurer votre instance de base de données locale, consultez le [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] rubrique de la documentation en ligne sur [!INCLUDE[ssSQL11](../../includes/sssql11_md.md)] Express LocalDB.
 

@@ -2,26 +2,29 @@
 title: "Activer la sauvegarde managée SQL Server sur Microsoft Azure | Microsoft Docs"
 ms.custom: 
 ms.date: 10/03/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: backup-restore
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 68ebb53e-d5ad-4622-af68-1e150b94516e
 caps.latest.revision: "25"
-author: MightyPen
-ms.author: genemi
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 91c22016bea09269c1c9be14d8895e9319cd9de8
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: c6762af12c0b669335fbe965f85fada74d1ef3e1
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="enable-sql-server-managed-backup-to-microsoft-azure"></a>Activer la sauvegarde managée SQL Server sur Microsoft Azure
-  Cette rubrique décrit comment activer [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] avec les paramètres par défaut au niveau base de données et instance. Elle décrit également comment activer les notifications par courrier électronique et surveiller l'activité de sauvegarde.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Cette rubrique décrit comment activer [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] avec les paramètres par défaut au niveau base de données et instance. Elle décrit également comment activer les notifications par courrier électronique et surveiller l'activité de sauvegarde.  
   
  Ce didacticiel utilise Azure PowerShell. Avant de commencer ce didacticiel, [téléchargez et installez Azure PowerShell](http://azure.microsoft.com/en-us/documentation/articles/powershell-install-configure/).  
   
@@ -75,7 +78,7 @@ ms.lasthandoff: 11/09/2017
   
 1.  **Créez des informations d'identification SQL pour l'URL de SAS :** Utilisez le jeton SAS pour créer des informations d'identification SQL pour l'URL du conteneur d'objets blob. Dans SQL Server Management Studio, utilisez la requête Transact-SQL suivante pour créer les informations d'identification pour l'URL de votre conteneur d'objets blob sur la base de l'exemple suivant :  
   
-    ```tsql  
+    ```sql  
     CREATE CREDENTIAL [https://managedbackupstorage.blob.core.windows.net/backupcontainer]   
     WITH IDENTITY = 'Shared Access Signature',  
     SECRET = 'sv=2014-02-14&sr=c&sig=xM2LXVo1Erqp7LxQ%9BxqK9QC6%5Qabcd%9LKjHGnnmQWEsDf%5Q%se=2015-05-14T14%3B93%4V20X&sp=rwdl'  
@@ -90,7 +93,7 @@ ms.lasthandoff: 11/09/2017
     > [!IMPORTANT]  
     >  Pour activer la gestion de sauvegarde au niveau de l’instance, spécifiez `NULL` pour le paramètre `database_name` .  
   
-    ```tsql  
+    ```sql  
     Use msdb;  
     GO  
     EXEC msdb.managed_backup.sp_backup_config_basic   
@@ -177,7 +180,7 @@ ms.lasthandoff: 11/09/2017
   
  Les étapes de cette section sont propres à la configuration initiale de la [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] sur la base de données. Vous pouvez modifier les configurations existantes à l'aide des mêmes procédures stockées système et indiquer de nouvelles valeurs.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Sauvegarde managée SQL Server sur Microsoft Azure](../../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)  
   
   

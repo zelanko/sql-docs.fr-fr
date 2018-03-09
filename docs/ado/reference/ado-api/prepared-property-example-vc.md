@@ -3,27 +3,30 @@ title: "Préparé, propriété-Exemple (VC ++) | Documents Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
-helpviewer_keywords: Prepared property [ADO], VC++ example
+dev_langs:
+- C++
+helpviewer_keywords:
+- Prepared property [ADO], VC++ example
 ms.assetid: f697ac1a-f125-42b5-bbf6-762a7fa30ae3
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e7aef05e8cead742742c3c15ee843844cf5d3bbb
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 759a516062ea81e173690c2f55364cf32fff72a0
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="prepared-property-example-vc"></a>Exemple de propriété préparé (VC ++)
 Cet exemple illustre la [Prepared](../../../ado/reference/ado-api/prepared-property-ado.md) propriété en ouvrant deux [commande](../../../ado/reference/ado-api/command-object-ado.md) objets : un préparé et l’autre non préparé.  

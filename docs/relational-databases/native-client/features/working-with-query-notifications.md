@@ -8,7 +8,7 @@ ms.service:
 ms.component: native-client|features
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - consumer notification for rowset changes [SQL Server Native Client]
 ms.assetid: 2f906fff-5ed9-4527-9fd3-9c0d27c3dff7
 caps.latest.revision: "40"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 14cab75f3f5468259504b103bfa0a3e43e23f8ce
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 6405ed5efa051a7b8c5bb7865b9f2a469c640592
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="working-with-query-notifications"></a>Utilisation de notifications de requêtes
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -46,7 +46,7 @@ ms.lasthandoff: 11/17/2017
   
  `service=<service-name>[;(local database=<database> | broker instance=<broker instance>)]`  
   
- Exemple :  
+ Par exemple :  
   
  `service=mySSBService;local database=mydb`  
   
@@ -90,7 +90,7 @@ CREATE SERVICE myService ON QUEUE myQueue
   
  L'abonnement aux notifications est toujours validé, que l'instruction ait été exécutée dans une transaction utilisateur ou en mode de validation automatique, ou que la transaction dans laquelle l'instruction s'est exécutée ait été validée ou restaurée. La notification du serveur est déclenchée lorsque l'une des conditions de notification non valides suivantes se produit : modification des données sous-jacentes ou du schéma ou expiration du délai d'attente imparti (selon l'opération qui se produit en premier). Les inscriptions de notification sont supprimées dès qu'elles sont déclenchées. Par conséquent, lorsque l'application reçoit des notifications, l'application doit encore s'abonner au cas où elle souhaiterait obtenir d'autres mises à jour.  
   
- Une autre connexion ou un autre thread peut vérifier la file d'attente de destination pour les notifications. Exemple :  
+ Une autre connexion ou un autre thread peut vérifier la file d'attente de destination pour les notifications. Par exemple :  
   
 ```  
 WAITFOR (RECEIVE * FROM MyQueue);   // Where MyQueue is the queue name.   
@@ -130,7 +130,7 @@ RECEIVE * FROM MyQueue
 ## <a name="special-cases-and-restrictions"></a>Cas particuliers et restrictions  
  Les types de données suivants ne sont pas pris en charge pour les notifications :  
   
--   **text**  
+-   **texte**  
   
 -   **ntext**  
   

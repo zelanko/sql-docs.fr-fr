@@ -2,15 +2,13 @@
 title: "Apprentissage et jeux de données de test | Documents Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
 ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,19 +17,20 @@ helpviewer_keywords:
 - testing data mining models
 - accuracy testing [data mining]
 ms.assetid: 5798fa48-ef3c-4e97-a17c-38274970fccd
-caps.latest.revision: "27"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 880f294f82a0aaa34904d78191d41217fecc78c9
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: b85aca1abd948d42710633d65e7b79ad30d0629a
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="training-and-testing-data-sets"></a>Jeux de données d'apprentissage et de test
-  La séparation des données en jeux d'apprentissage et jeux de test correspond à une partie importante de l'évaluation des modèles d'exploration de données. En général, lorsque vous séparez un jeu de données en un jeu d'apprentissage et un jeu de test, la plupart des données sont utilisées pour l'apprentissage et une plus petite partie des données est utilisée pour les tests. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] échantillonne de manière aléatoire les données afin de s'assurer que les jeux de test et d'apprentissage sont semblables. L'utilisation de données similaires pour l'apprentissage et les tests vous permet de minimiser les effets des différences de données et de mieux comprendre les caractéristiques du modèle.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+La séparation des données en jeux d'apprentissage et jeux de test correspond à une partie importante de l'évaluation des modèles d'exploration de données. En général, lorsque vous séparez un jeu de données en un jeu d'apprentissage et un jeu de test, la plupart des données sont utilisées pour l'apprentissage et une plus petite partie des données est utilisée pour les tests. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] échantillonne de manière aléatoire les données afin de s'assurer que les jeux de test et d'apprentissage sont semblables. L'utilisation de données similaires pour l'apprentissage et les tests vous permet de minimiser les effets des différences de données et de mieux comprendre les caractéristiques du modèle.  
   
  Après le traitement d'un modèle à l'aide du jeu d'apprentissage, vous testez le modèle en effectuant des prédictions sur le jeu de test. Comme les données dans le jeu de test contiennent déjà des valeurs connues pour l'attribut que vous souhaitez prédire, il est facile de déterminer si les prédictions du modèle sont correctes.  
   
@@ -47,7 +46,7 @@ ms.lasthandoff: 11/17/2017
 -   en créant et modifiant par programmation les structures à l'aide des objets AMO (Analysis Management Objects) ou du langage de définition de données (DDL) XML.  
   
 ### <a name="using-the-data-mining-wizard-to-divide-a-mining-structure"></a>Utilisation de l'Assistant Exploration de données pour diviser une structure d'exploration de données  
- Par défaut, après avoir défini les sources de données pour une structure d'exploration de données, l'Assistant Exploration de données divise les données en deux jeux : l'un avec 70 % des données source pour l'apprentissage du modèle et l'autre avec 30 % des données source pour tester le modèle. Ces valeurs par défaut ont été choisies parce qu’un rapport 70-30 est souvent utilisé dans l’exploration de données, mais avec [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] vous pouvez modifier ce rapport en fonction de vos besoins.  
+ Par défaut, après avoir défini les sources de données pour une structure d'exploration de données, l'Assistant Exploration de données divise les données en deux jeux : l'un avec 70 % des données source pour l'apprentissage du modèle et l'autre avec 30 % des données source pour tester le modèle. Ces valeurs par défaut ont été choisies parce qu’un rapport 70-30 est souvent utilisé dans l’exploration de données, mais avec [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] vous pouvez modifier ce rapport en fonction de vos besoins.  
   
  Vous pouvez également configurer l'Assistant pour définir un nombre maximal de cas d'apprentissage ou vous pouvez associer les limites pour permettre un pourcentage maximal de cas jusqu'à un nombre maximal spécifié de cas. Lorsque vous spécifiez à la fois un pourcentage maximal de cas et un nombre maximal de cas, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] utilise la plus petite des deux limites comme taille du jeu de test. Par exemple, si vous spécifiez une exclusion de 30 % pour les scénarios de test et un nombre maximal de scénarios de test égal à 1000, la taille du jeu de test ne dépassera jamais 1 000 scénarios. Cela peut être utile si vous souhaitez garantir que la taille de votre jeu de test reste cohérente même si des données d'apprentissage supplémentaires sont ajoutées au modèle.  
   
@@ -59,7 +58,7 @@ ms.lasthandoff: 11/17/2017
 ### <a name="modifying-structure-properties-to-create-a-test-data-set"></a>Modification des propriétés de structure pour créer un jeu de données de test  
  Si vous créez et traitez une structure d'exploration de données, puis décidez ultérieurement de mettre de côté un jeu de données de test, vous pouvez modifier les propriétés de la structure d'exploration de données. Pour changer la façon dont les données sont partitionnées, modifiez les propriétés suivantes :  
   
-|Propriété|Description|  
+|Propriété| Description|  
 |--------------|-----------------|  
 |**HoldoutMaxCases**|Spécifie le nombre maximal de scénarios à inclure dans le jeu de test.|  
 |**HoldoutMaxPercent**|Spécifie le nombre de cas à inclure dans le jeu de test en tant que pourcentage du jeu de données complet. Pour n'avoir aucun jeu de données, il convient de spécifier 0.|  
@@ -110,15 +109,15 @@ SELECT * from <structure>.CASES WHERE IsTestCase() AND <structure column name> =
 |Rubriques|Liens|  
 |------------|-----------|  
 |Décrit comment les filtres sur un modèle interagissent avec les jeux de données d'apprentissage et de test.|[Filtres pour les modèles d’exploration de données &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)|  
-|Décrit comment l'utilisation des données d'apprentissage et de test affecte la validation croisée.|[Validation croisée &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/cross-validation-analysis-services-data-mining.md)|  
+|Décrit comment l'utilisation des données d'apprentissage et de test affecte la validation croisée.|[La Validation croisée &#40; Analysis Services - Exploration de données &#41;](../../analysis-services/data-mining/cross-validation-analysis-services-data-mining.md)|  
 |Fournit des informations sur les interfaces de programmation pour utiliser les jeux d'apprentissage et de test dans une structure d'exploration de données.|[Concepts et modèle objet AMO](../../analysis-services/multidimensional-models/analysis-management-objects/amo-concepts-and-object-model.md)<br /><br /> [Élément MiningStructure &#40;ASSL&#41;](../../analysis-services/scripting/objects/miningstructure-element-assl.md)|  
-|Fournit la syntaxe DMX pour créer des ensembles d'exclusion.|[CREATE MINING STRUCTURE &#40;DMX&#41;](../../dmx/create-mining-structure-dmx.md)|  
+|Fournit la syntaxe DMX pour créer des ensembles d'exclusion.|[CRÉER UNE STRUCTURE D’EXPLORATION DE DONNÉES &#40; DMX &#41;](../../dmx/create-mining-structure-dmx.md)|  
 |Récupérer des informations sur les cas dans les jeux d'apprentissage et de test.|[Ensembles de lignes de schéma d'exploration de données](../../analysis-services/schema-rowsets/data-mining/data-mining-schema-rowsets.md)<br /><br /> [Ensembles de lignes de schéma d’exploration de données &#40;SSAs&#41;](../../analysis-services/data-mining/data-mining-schema-rowsets-ssas.md)|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Outils d'exploration de données](../../analysis-services/data-mining/data-mining-tools.md)   
+ [Outils d’exploration de données](../../analysis-services/data-mining/data-mining-tools.md)   
  [Concepts d’exploration de données](../../analysis-services/data-mining/data-mining-concepts.md)   
- [Solutions d'exploration de données](../../analysis-services/data-mining/data-mining-solutions.md)   
- [Test et validation &#40;Exploration des données&#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)  
+ [Solutions d’exploration de données](../../analysis-services/data-mining/data-mining-solutions.md)   
+ [Test et Validation &#40; exploration de données &#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)  
   
   

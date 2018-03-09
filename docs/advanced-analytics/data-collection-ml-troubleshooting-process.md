@@ -2,25 +2,30 @@
 title: "Résoudre les problèmes de collecte de données pour l’apprentissage - SQL Server"
 ms.custom: 
 ms.date: 06/16/2017
-ms.prod: sql-server-2016
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology: r-services
+ms.suite: sql
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: R
-caps.latest.revision: "1"
+dev_langs:
+- R
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: f8a476372f97251ae3cf075e69cf7baf55ba0649
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: ee3b5fb649d659ade9cca22292aa5c8715f515c8
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="troubleshoot-data-collection-for-machine-learning"></a>Résoudre les problèmes de collecte de données pour l’apprentissage
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Cet article décrit le type de données que vous devez rassembler lorsque vous tentez de résoudre des problèmes avec le programme d’installation, de configuration ou de performances de l’apprentissage automatique dans SQL Server. Ces données incluent les journaux, les messages d’erreur et les informations système.
 
@@ -335,7 +340,7 @@ Si le runtime R fonctionne, mais votre script retourne des erreurs, nous vous re
 
 Nous vous recommandons également que vous passez en revue et légèrement Réécrivez le script pour corriger les problèmes liés aux types de données qui peuvent se produire lorsque vous déplacez des données entre R et le moteur de base de données. Pour plus d’informations, consultez [R bibliothèques et types de données](r/r-libraries-and-data-types.md).
 
-En outre, vous pouvez utiliser le package sqlrutils pour regrouper votre script R dans un format qui est plus simple qu’une procédure stockée. Pour plus d'informations, consultez :
+En outre, vous pouvez utiliser le package sqlrutils pour regrouper votre script R dans un format qui est plus simple qu’une procédure stockée. Pour plus d'informations, consultez :
 * [Générer une procédure stockée pour le code R à l’aide du package sqlrutils](r/generating-an-r-stored-procedure-for-r-code-using-the-sqlrutils-package.md)
 * [Créer une procédure stockée à l’aide de sqlrutils](r/how-to-create-a-stored-procedure-using-sqlrutils.md)
 

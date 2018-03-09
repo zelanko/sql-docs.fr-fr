@@ -2,29 +2,32 @@
 title: "Définition d’une relation référencée | Documents Microsoft"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tutorial
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology: analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 ms.assetid: 4a34ba52-e3b3-4e8a-8e55-73e0cd5a97bd
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: fd440e03226082527441116517bb511b25099101
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f388389edcd3546f94bc120862e8933b3f790c7c
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="lesson-5-1---defining-a-referenced-relationship"></a>Leçon 5-1-définir une relation référencée
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 Jusqu'à présent, vous avez défini dans ce didacticiel des dimensions de cube basées sur une table directement liée à la table de faits d'un groupe de mesures par une relation clé primaire/clé étrangère. Au cours des tâches de cette rubrique, vous allez lier la dimension **Geography** à la table de faits pour les ventes de revendeurs par le biais de la dimension **Reseller** , qui est appelée *dimension de référence*. Cela permet aux utilisateurs de dimensionner les ventes des revendeurs par zone géographique. Pour plus d’informations, consultez [Définir une relation référencée et des propriétés de relation référencée](../analysis-services/multidimensional-models/define-a-referenced-relationship-and-referenced-relationship-properties.md).  
   
 ## <a name="dimensioning-reseller-sales-by-geography"></a>Dimensionnement des ventes des revendeurs par zones géographiques  
@@ -128,7 +131,7 @@ Au cours de la tâche suivante, vous allez résoudre ce problème en définissan
     ![Boîte de dialogue Définir relation](../analysis-services/media/l5-referencedrelationship-5.gif "boîte de dialogue Définir une relation")  
   
 ## <a name="next-task-in-lesson"></a>Tâche suivante de la leçon  
-[Définition d'une relation de faits](../analysis-services/lesson-5-2-defining-a-fact-relationship.md)  
+[Définition d’une relation de faits](../analysis-services/lesson-5-2-defining-a-fact-relationship.md)  
   
 ## <a name="see-also"></a>Voir aussi  
 [Relations d'attributs](../analysis-services/multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md)  

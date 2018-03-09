@@ -8,9 +8,7 @@ ms.service:
 ms.component: subscriptions
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -26,15 +24,15 @@ helpviewer_keywords:
 - subscriptions [Reporting Services]
 ms.assetid: be7ec052-28e2-4558-bc09-8479e5082926
 caps.latest.revision: "56"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Active
-ms.openlocfilehash: 403303e6820196353b8365975d83ed8368d8e372
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 00bc203ff747d93febf4ac625fcc261b497bc3ff
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="subscriptions-and-delivery-reporting-services"></a>Abonnements et remise (Reporting Services)
   Un abonnement [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] est une configuration qui remet un rapport à une heure donnée ou en réponse à un événement, et dans un format de fichier que vous définissez. Par exemple, tous les mercredis, enregistrer le rapport MonthlySales.rdl au format de document Microsoft Word sur un partage de fichiers. Vous pouvez utiliser des abonnements pour planifier et automatiser la remise d'un rapport avec un ensemble de valeurs de paramètres de rapport spécifique.  
@@ -43,7 +41,7 @@ ms.lasthandoff: 12/05/2017
   
  ![exemple de flux d’abonnement ssrs](../../reporting-services/subscriptions/media/ssrs-subscription-example-flow.png "exemple de flux d’abonnement ssrs")  
   
- Les abonnements ne sont pas disponibles dans toutes les éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour obtenir la liste des fonctionnalités prises en charge par les éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez [Fonctionnalités prises en charge par les éditions de SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
+ Les abonnements ne sont pas disponibles dans toutes les éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour obtenir la liste des fonctionnalités prises en charge par les éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez [Fonctionnalités prise en charge par les éditions de SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
  **Dans cette rubrique :**  
   
@@ -109,7 +107,7 @@ ms.lasthandoff: 12/05/2017
   
 |Condition requise|Description|  
 |-----------------|-----------------|  
-|Permissions|Vous devez avoir accès au rapport. Avant de pouvoir vous abonner à un rapport, vous devez être autorisé à l'afficher.<br /><br /> Pour les serveurs de rapports en mode natif, les attributions de rôles suivantes affectent les abonnements :<br /><br /> -   La tâche « Gérer les abonnements individuels » permet aux utilisateurs de créer, de modifier et de supprimer les abonnements d’un rapport spécifique. Dans les rôles prédéfinis, cette tâche fait partie des rôles Navigateur et Générateur de rapports. Les attributions de rôles incluant cette tâche autorisent un utilisateur à gérer uniquement les abonnements qu'il crée.<br />-   La tâche « Gérer tous les abonnements » permet aux utilisateurs d’accéder à tous les abonnements pour les modifier. Cette tâche est obligatoire pour créer des abonnements pilotés par les données. Dans les rôles prédéfinis, seul le rôle Gestionnaire de contenu inclut cette tâche.|  
+|Autorisations|Vous devez avoir accès au rapport. Avant de pouvoir vous abonner à un rapport, vous devez être autorisé à l'afficher.<br /><br /> Pour les serveurs de rapports en mode natif, les attributions de rôles suivantes affectent les abonnements :<br /><br /> -   La tâche « Gérer les abonnements individuels » permet aux utilisateurs de créer, de modifier et de supprimer les abonnements d’un rapport spécifique. Dans les rôles prédéfinis, cette tâche fait partie des rôles Navigateur et Générateur de rapports. Les attributions de rôles incluant cette tâche autorisent un utilisateur à gérer uniquement les abonnements qu'il crée.<br />-   La tâche « Gérer tous les abonnements » permet aux utilisateurs d’accéder à tous les abonnements pour les modifier. Cette tâche est obligatoire pour créer des abonnements pilotés par les données. Dans les rôles prédéfinis, seul le rôle Gestionnaire de contenu inclut cette tâche.|  
 |Informations d'identification stockées|Pour créer un abonnement, il faut que le rapport utilise des informations d'identification stockées ou qu'il n'en utilise pas du tout pour être en mesure d'extraire les données au moment de l'exécution. Vous ne pouvez pas vous abonner à un rapport configuré pour utiliser les informations d'identification empruntées ou déléguées à partir de l'utilisateur actuel pour vous connecter à une source de données externe. Les informations d'identification stockées peuvent être un compte Windows ou un compte d'utilisateur de base de données. Pour plus d’informations, consultez [Spécifier des informations d’identification et de connexion pour les sources de données de rapport](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md).<br /><br /> Vous devez être autorisé à afficher le rapport et à créer des abonnements individuels. L'option**Événements programmés et remise du rapport** doit être activée sur le serveur de rapports. Pour plus d’informations, consultez [old_Créer et gérer des abonnements pour les serveurs de rapports en mode natif](http://msdn.microsoft.com/en-us/7f46cbdb-5102-4941-bca2-5e0ff9012c6b).|  
 |Valeurs dépendantes de l'utilisateur dans un rapport|Pour les abonnements standard uniquement, vous pouvez créer des abonnements à des rapports qui intègrent des informations de compte d'utilisateur dans un filtre ou sous forme de texte qui apparaît dans le rapport. Dans le rapport, le nom de compte d’utilisateur est spécifié par le biais d’une expression **User!UserID** qui correspond à l’utilisateur actuel. Lorsque vous créez un abonnement, l'utilisateur qui crée l'abonnement est considéré comme l'utilisateur actuel.|  
 |Aucune sécurité de l'élément de modèle|Vous ne pouvez pas vous abonner à un rapport du Générateur de rapports qui utilise un modèle comme source de données si le modèle contient des paramètres de sécurité de l'élément de modèle. Seuls les rapports qui utilisent la sécurité de l'élément de modèle sont inclus dans cette restriction.|  
@@ -123,7 +121,7 @@ ms.lasthandoff: 12/05/2017
 |Extension de remise|Description|  
 |------------------------|-----------------|  
 |Partage de fichiers Windows|Remet un rapport en tant que fichier d'application statique dans un dossier partagé accessible sur le réseau.|  
-|Courrier électronique|Remet une notification ou un rapport en tant que pièce jointe de message électronique ou en tant qu'URL.|  
+|Messagerie électronique|Remet une notification ou un rapport en tant que pièce jointe de message électronique ou en tant qu'URL.|  
 |Bibliothèque SharePoint|Remet un rapport en tant que fichier d'application statique dans une bibliothèque SharePoint accessible à partir d'un site SharePoint. Le site doit être intégré à un serveur de rapports qui s'exécute en mode intégré SharePoint.|  
 |Null|Le fournisseur de remise Null est une extension de remise très spécialisée qui sert à précharger un cache à l'aide de rapports paramétrables prêts à être affichés. Dans les abonnements individuels, cette méthode n'est pas accessible aux utilisateurs. Elle est utilisée par les administrateurs dans les abonnements pilotés par les données pour améliorer les performances d'un serveur de rapports en préchargeant le cache.|  
   
@@ -188,10 +186,10 @@ ms.lasthandoff: 12/05/2017
   
 -   Pour obtenir un exemple de script PowerShell permettant de répertorier l’ensemble des abonnements [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] configurés pour utiliser le **compte de partage de fichiers**, consultez [Paramètres d’abonnement et compte de partage de fichiers &#40;Gestionnaire de configuration&#41;](../../reporting-services/install-windows/subscription-settings-and-a-file-share-account-configuration-manager.md).  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Créer un abonnement piloté par les données &#40;didacticiel SSRS&#41;](../../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md)   
  [Planifications](../../reporting-services/subscriptions/schedules.md)   
  [Serveur de rapports Reporting Services &#40;mode natif&#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)   
- [Analyser les abonnements de Reporting Services](../../reporting-services/subscriptions/monitor-reporting-services-subscriptions.md)  
+ [Analyser les abonnements Reportions Services](../../reporting-services/subscriptions/monitor-reporting-services-subscriptions.md)  
   
   

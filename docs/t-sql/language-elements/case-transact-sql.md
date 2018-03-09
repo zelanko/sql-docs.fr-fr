@@ -1,5 +1,5 @@
 ---
-title: CAS (Transact-SQL) | Documents Microsoft
+title: CASE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/28/2017
 ms.prod: sql-non-specified
@@ -8,29 +8,31 @@ ms.service:
 ms.component: t-sql|language-elements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - CASE_TSQL
 - CASE
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - CASE expression [Transact-SQL]
 - simple CASE expression
 - comparing expressions
 - searched CASE expression
 ms.assetid: 658039ec-8dc2-4251-bc82-30ea23708cee
-caps.latest.revision: "59"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 4d5241ddc65de92d7588e4c8d1ddb7c2e6b08528
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: 0036e0ddf54eeef950bf81da2bf4a8997b4bef3c
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="case-transact-sql"></a>CASE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -76,16 +78,16 @@ END
 ```  
   
 ## <a name="arguments"></a>Arguments  
- *Il peut s’agir*  
+ *input_expression*  
  Expression évaluée à l'aide du format CASE simple. *Il peut s’agir* valide [expression](../../t-sql/language-elements/expressions-transact-sql.md).  
   
  Lorsque *il peut s’agir*  
  Une expression simple à laquelle *il peut s’agir* est comparé quand le format CASE simple est utilisé. *Il peut s’agir* toute expression valide. Les types de données de *il peut s’agir* et chaque *il peut s’agir* doivent être identiques ou permettre une conversion implicite.  
   
- PUIS *result_expression*  
+ THEN *result_expression*  
  Expression retournée lorsque *il peut s’agir* est égal à *il peut s’agir* a la valeur TRUE, ou *Boolean_expression* a la valeur TRUE. *expressions de résultat* valide [expression](../../t-sql/language-elements/expressions-transact-sql.md).  
   
- AUTRE *else_result_expression*  
+ ELSE *else_result_expression*  
  Expression retournée si aucune opération de comparaison n'a la valeur TRUE. Si cet argument est omis et si aucune opération de comparaison n'a la valeur TRUE, CASE retourne la valeur NULL. *else_result_expression* toute expression valide. Les types de données de *else_result_expression* et n’importe quel *result_expression* doivent être identiques ou permettre une conversion implicite.  
   
  Lorsque *Boolean_expression*  
@@ -122,7 +124,7 @@ END
   
  L'instruction CASE évalue les conditions de manière séquentielle et s'arrête à la première condition remplie. Dans certains cas, une expression est évaluée avant qu'une instruction CASE ne reçoive les résultats de l'expression en entrée. Des erreurs sont possibles lors de l'évaluation de ces expressions. Les expressions d'agrégation qui apparaissent dans les arguments WHEN d'une instruction CASE sont évaluées en premier, puis fournies à l'instruction CASE. Par exemple, la requête suivante génère une erreur de division par zéro lors de la production de la valeur de l'agrégat MAX. Cela se produit avant l'évaluation de l'expression CASE.  
   
-```tsql  
+```sql  
 WITH Data (value) AS   
 (   
 SELECT 0   
@@ -355,11 +357,11 @@ WHERE SalariedFlag = 0;
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Expressions &#40; Transact-SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
- [Fusionner &#40; Transact-SQL &#41;](../../t-sql/language-elements/coalesce-transact-sql.md)   
- [IIF &#40; Transact-SQL &#41;](../../t-sql/functions/logical-functions-iif-transact-sql.md)   
- [Choisissez &#40; Transact-SQL &#41;](../../t-sql/functions/logical-functions-choose-transact-sql.md)  
+ [COALESCE &#40;Transact-SQL&#41;](../../t-sql/language-elements/coalesce-transact-sql.md)   
+ [IIF &#40;Transact-SQL&#41;](../../t-sql/functions/logical-functions-iif-transact-sql.md)   
+ [CHOOSE &#40;Transact-SQL&#41;](../../t-sql/functions/logical-functions-choose-transact-sql.md)  
   
   
 

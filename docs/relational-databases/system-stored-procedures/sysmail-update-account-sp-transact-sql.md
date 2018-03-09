@@ -1,5 +1,5 @@
 ---
-title: sysmail_update_account_sp (Transact-SQL) | Documents Microsoft
+title: sysmail_update_account_sp (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 11/17/2016
 ms.prod: sql-non-specified
@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sysmail_update_account_sp
 - sysmail_update_account_sp_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sysmail_update_account_sp
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sysmail_update_account_sp
 ms.assetid: ba2fdccc-5ed4-40ef-a479-79497b4d61aa
-caps.latest.revision: "51"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 312d700fce5cc48950b531a2a524bfee0d56aa8e
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 4be8c0c87771f89d92cc0344c207149467c4554c
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysmailupdateaccountsp-transact-sql"></a>sysmail_update_account_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +59,7 @@ sysmail_update_account_sp [ [ @account_id = ] account_id ] [ , ] [ [ @account_na
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@account_id**  =] *account_id*  
+ [ **@account_id** = ] *account_id*  
  ID du compte à mettre à jour. *account_id* est **int**, avec NULL comme valeur par défaut. Au moins un des *account_id* ou *account_name* doit être spécifié. Si les deux arguments sont précisés, la procédure modifie le nom du compte.  
   
  [  **@account_name**  =] **'***account_name***'**  
@@ -68,19 +71,19 @@ sysmail_update_account_sp [ [ @account_id = ] account_id ] [ , ] [ [ @account_na
  [  **@display_name**  =] **'***nom_complet***'**  
  Nouveau nom complet à utiliser sur des messages électroniques à partir de ce compte. *nom_complet* est **nvarchar (128)**, sans valeur par défaut.  
   
- [  **@replyto_address**  =] **'***replyto_address***'**  
+ [ **@replyto_address** = ] **'***replyto_address***'**  
  Nouvelle adresse à utiliser dans le champ « Répondre à » des messages électroniques envoyés à partir de ce compte. *replyto_address* est **nvarchar (128)**, sans valeur par défaut.  
   
- [  **@description**  =] **'***description***'**  
+ [ **@description** = ] **'***description***'**  
  Nouvelle description du compte. *Description* est **nvarchar (256)**, avec NULL comme valeur par défaut.  
   
  [  **@mailserver_name**  =] **'***nom_serveur***'**  
  Nouveau nom de serveur de messagerie SMTP à utiliser pour ce compte. L’ordinateur qui exécute [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] doit être en mesure de résoudre la *nom_serveur* en une adresse IP. *nom_serveur* est **sysname**, sans valeur par défaut.  
   
- [  **@mailserver_type**  =] **'***server_type***'**  
+ [ **@mailserver_type** = ] **'***server_type***'**  
  Nouveau type du serveur de messagerie. *server_type* est **sysname**, sans valeur par défaut. Seule la valeur **'SMTP'** est pris en charge.  
   
- [  **@port**  =] *numéro_port*  
+ [ **@port** = ] *port_number*  
  Nouveau numéro de port du serveur de messagerie. *numéro_port* est **int**, sans valeur par défaut.  
   
  [  **@timeout**  =] **'***délai d’attente***'**  
@@ -95,7 +98,7 @@ sysmail_update_account_sp [ [ @account_id = ] account_id ] [ , ] [ [ @account_na
  [  **@use_default_credentials**  =] use_default_credentials  
  Spécifie si le courrier électronique doit être envoyé au serveur SMTP en utilisant les informations d'identification du service [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. **use_default_credentials** est de type bit, sans valeur par défaut. Lorsque la valeur de ce paramètre est définie sur 1, la messagerie de base de données utilise les informations d'identification du moteur de base de données [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Lorsque ce paramètre est 0, la messagerie de base de données utilise le  **@username**  et  **@password**  pour l’authentification sur le serveur SMTP. Si  **@username**  et  **@password**  ont la valeur NULL, puis il utilise l’authentification anonyme. Contactez votre administrateur SMTP avant de définir ce paramètre.  
   
- [  **@enable_ssl**  =] enable_ssl  
+ [ **@enable_ssl** = ] enable_ssl  
  Spécifie si la messagerie de base de données chiffre les communications à l'aide de la technologie SSL (Secure Sockets Layer). Utilisez cette option si SSL est obligatoire sur votre serveur SMTP. **enable_ssl** est de type bit, sans valeur par défaut.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
@@ -106,7 +109,7 @@ sysmail_update_account_sp [ [ @account_id = ] account_id ] [ , ] [ [ @account_na
   
  La procédure stockée **sysmail_update_account_sp** est dans le **msdb** de base de données et est détenue par le **dbo** schéma. La procédure doit être exécutée avec un nom en trois parties si la base de données actuelle n’est pas **msdb**.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l'appartenance au rôle serveur fixe **sysadmin** .  
   
 ## <a name="examples"></a>Exemples  

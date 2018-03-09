@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -30,11 +30,11 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: d065e9163a85e366dbe51f964058e8627e278be7
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 22c4cb48c762f2686f4cad86499b64cad0cc7e8b
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="mdx-data-definition---create-action"></a>Définition de données MDX - créer une ACTION
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -92,7 +92,7 @@ FOR
  *String_Expression*  
  Expression de chaîne valide.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Les applications clientes peuvent créer et exécuter des actions qui ne sont pas sûres ; elles peuvent également utiliser des fonctions peu sûres. Pour éviter ces situations, utilisez la **des Options de sécurité** propriété. Pour plus d'informations, consultez la propriété Safety Options.  
   
 > [!NOTE]  
@@ -101,7 +101,7 @@ FOR
 ## <a name="action-types"></a>Types d’action  
  Le tableau suivant décrit les différents types d’actions disponibles dans [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
   
-|Type d'action| Description|  
+|Type d'action|Description|  
 |-----------------|-----------------|  
 |**URL**|La chaîne d'action retournée est une URL qui doit être ouverte dans un navigateur Internet.<br /><br /> Remarque : Si cette action ne commence pas par `http://` ou `https://`, l’action n’est pas disponible dans le navigateur, sauf si **SafetyOptions** a la valeur **DBPROPVAL_MSMD_SAFETY_OPTIONS_ALLOW_ALL**.|  
 |**HTML**|La chaîne d'action retournée est un script HTML. Cette chaîne doit être enregistrée dans un fichier, qui devra être rendu à l'aide d'un navigateur Internet. Dans ce cas, un script entier peut être exécuté en tant que partie du fichier HTML généré.|  
@@ -114,7 +114,7 @@ FOR
 ## <a name="invocation-types"></a>Types d'invocations  
  Le tableau ci-dessous décrit les différents types d'invocations disponibles dans [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Le type d'invocation n'est utilisé que par l'application cliente pour déterminer à quel moment appeler l'action. Il ne détermine pas réellement le comportement d'invocation de l'action.  
   
-|Type d'invocation| Description|  
+|Type d'invocation|Description|  
 |---------------------|-----------------|  
 |**INTERACTIVE**|Cette action doit être appelée par l'application cliente via l'interaction de l'utilisateur.|  
 |**ON_OPEN**|Cette action doit être appelée par l'application cliente lors de l'ouverture de l'objet cible. Ce type d'invocation n'est actuellement pas implémenté.|  

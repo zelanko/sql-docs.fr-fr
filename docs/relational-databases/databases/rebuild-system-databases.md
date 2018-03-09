@@ -2,10 +2,14 @@
 title: "Reconstruire des bases de données système | Microsoft Docs"
 ms.custom: 
 ms.date: 06/06/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: databases
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,19 +18,20 @@ helpviewer_keywords:
 - rebuilding databases, master
 - system databases [SQL Server], rebuilding
 ms.assetid: af457ecd-523e-4809-9652-bdf2e81bd876
-caps.latest.revision: "39"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 69f9e085f5eb6acb749c64a7fb370deabb975e6a
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 3a1d3cd6a2cb8183acf9d4f787e9d434dcc5577d
+ms.sourcegitcommit: 7ed8c61fb54e3963e451bfb7f80c6a3899d93322
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/20/2018
 ---
 # <a name="rebuild-system-databases"></a>Reconstruire des bases de données système
-  Les bases de données système doivent être reconstruites pour résoudre des problèmes d’altération dans les bases de données système [master](../../relational-databases/databases/master-database.md), [model](../../relational-databases/databases/model-database.md), [msdb](../../relational-databases/databases/msdb-database.md)ou [resource](../../relational-databases/databases/resource-database.md) ou pour modifier le classement au niveau du serveur par défaut. Cette rubrique fournit des instructions détaillées sur la reconstruction des bases de données système dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Les bases de données système doivent être reconstruites pour résoudre des problèmes d’altération dans les bases de données système [master](../../relational-databases/databases/master-database.md), [model](../../relational-databases/databases/model-database.md), [msdb](../../relational-databases/databases/msdb-database.md)ou [resource](../../relational-databases/databases/resource-database.md) ou pour modifier le classement au niveau du serveur par défaut. Cette rubrique fournit des instructions détaillées sur la reconstruction des bases de données système dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  **Dans cette rubrique**  
   
@@ -115,7 +120,7 @@ ms.lasthandoff: 11/09/2017
     |[ /SQLTEMPDBFILEGROWTH=FileSizeInMB ]|Spécifie l’incrément de croissance de chaque fichier de données tempdb en Mo. La valeur 0 indique que la croissance automatique est désactivée et qu'aucun espace supplémentaire n'est autorisé. Le programme d’installation autorise la taille maximale de 1 024 Mo.<br /><br /> Valeur par défaut : 64|  
     |[ /SQLTEMPDBLOGFILESIZE=FileSizeInMB ]|Spécifie la taille initiale en Mo du fichier journal tempdb. Le programme d’installation autorise la taille maximale de 1 024 Mo.<br /><br /> Valeur par défaut : 8<br /><br /> Plage autorisée : Min = 8, Max = 1024|  
     |[ /SQLTEMPDBLOGFILEGROWTH=FileSizeInMB ]|Spécifie l’incrément de croissance en Mo du fichier journal tempdb. La valeur 0 indique que la croissance automatique est désactivée et qu'aucun espace supplémentaire n'est autorisé. Le programme d’installation autorise la taille maximale de 1 024 Mo.<br /><br /> Valeur par défaut : 64<br /><br /> Plage autorisée : Min = 8, Max = 1024|  
-    |[ /SQLTEMPDBDIR=Directories ]|Spécifie les répertoires des fichiers de données tempdb. Lorsque vous spécifiez plusieurs répertoires, utilisez l’espace comme séparateur. Si plusieurs répertoires sont spécifiés, les fichiers de données tempdb sont répartis entre les répertoires selon le principe du tourniquet (round robin).<br /><br /> Valeur par défaut : Répertoire des données système.|  
+    |[ /SQLTEMPDBDIR=Directories ]|Spécifie les répertoires des fichiers de données tempdb. Lorsque vous spécifiez plusieurs répertoires, utilisez l’espace comme séparateur. Si plusieurs répertoires sont spécifiés, les fichiers de données tempdb sont répartis entre les répertoires selon le principe du tourniquet (round robin).<br /><br /> Valeur par défaut : Répertoire des données système.|  
     |[ /SQLTEMPDBLOGDIR=Directory ]|Spécifie le répertoire pour les fichiers journaux tempdb.<br /><br /> Valeur par défaut : Répertoire des données système.|  
   
 3.  Lorsque le programme d'installation a terminé la reconstruction des bases de données système, il revient à l'invite de commandes sans afficher de message. Examinez le fichier journal Summary.txt pour vérifier que le processus s'est correctement déroulé. Ce fichier se trouve à l’emplacement C:\Program Files\Microsoft SQL Server\130\Setup Bootstrap\Logs.  
@@ -176,7 +181,7 @@ ms.lasthandoff: 11/09/2017
   
 5.  À l'aide du Gestionnaire de configuration [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , arrêtez et redémarrez le service [!INCLUDE[ssDE](../../includes/ssde-md.md)] normalement.  
   
-6.  Dans une fenêtre de ligne de commande, connectez-vous à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et exécutez la commande : `SQLCMD -E -S<servername> -i"C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Install\instmsdb.sql" -o" C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Install\instmsdb.out"`  
+6.  Dans une fenêtre de ligne de commande, connectez-vous à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et exécutez la commande : `SQLCMD -E -S<servername> -i"C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Install\instmsdb.sql" -o"C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Install\instmsdb.out"`  
   
      Remplacez *\<nom_serveur>* par l’instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Utilisez le chemin d'accès au système de fichiers de l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -189,7 +194,7 @@ ms.lasthandoff: 11/09/2017
 10. Sauvegardez la base de données **msdb** .  
   
 ##  <a name="Troubleshoot"></a> Corriger les erreurs liées à la reconstruction  
- Les erreurs de syntaxe et autres erreurs d'exécution sont affichées dans la fenêtre d'invite de commandes. Vérifiez que l'instruction Setup ne comporte pas les erreurs de syntaxe suivantes :  
+ Les erreurs de syntaxe et autres erreurs d'exécution sont affichées dans la fenêtre d'invite de commandes. Vérifiez que l'instruction Setup ne comporte pas les erreurs de syntaxe suivantes :  
   
 -   Barre oblique (/) manquante devant chaque nom de paramètre.  
   
@@ -201,7 +206,7 @@ ms.lasthandoff: 11/09/2017
   
  Une fois l'opération de reconstruction terminée, examinez les journaux [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour vérifier s'ils contiennent des erreurs. L’emplacement par défaut des journaux est C:\Program Files\Microsoft SQL Server\130\Setup Bootstrap\Logs. Pour localiser le fichier journal qui contient les résultats du processus de reconstruction, accédez au dossier Logs à partir d'une invite de commandes, puis exécutez `findstr /s RebuildDatabase summary*.*`. Cette recherche vous dirige vers les fichiers journaux qui contiennent les résultats de la reconstruction des bases de données système. Ouvrez les fichiers journaux et recherchez les messages d'erreur pertinents.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Bases de données système](../../relational-databases/databases/system-databases.md)  
   
   

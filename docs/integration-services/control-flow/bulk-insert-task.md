@@ -1,5 +1,5 @@
 ---
-title: "Tâche d’insertion en bloc de | Documents Microsoft"
+title: "Insertion en bloc, tâche | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -21,17 +21,16 @@ helpviewer_keywords:
 - Bulk Insert task
 - copying data [Integration Services]
 ms.assetid: c5166156-6b4c-4369-81ed-27c4ce7040ae
-caps.latest.revision: 61
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 8806c102eaec2c2540374bfaddc33b76d8f6e584
-ms.openlocfilehash: 72f40019acada98168cf425dca983154e0e2dc8f
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/11/2017
-
+ms.openlocfilehash: f0cf4aaff6e1108572000af08ad233038adf29b9
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="bulk-insert-task"></a>tâche d'insertion en bloc
   La tâche d'insertion en bloc est un moyen efficace pour copier de gros volumes de données dans une table ou une vue [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Par exemple, supposons que votre entreprise stocke la liste de ses produits d’un million de lignes sur un mainframe, mais que son système d’e-commerce utilise [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour fournir des données à des pages web. Vous devez mettre à jour la table des produits [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] toutes les nuits, à l'aide de la liste principale des produits depuis le gros ordinateur. Pour mettre à jour la table, vous enregistrez la liste des produits dans un fichier au format délimité par des tabulations, puis vous utilisez la tâche d'insertion en bloc pour copier les données directement dans la table [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -73,7 +72,7 @@ ms.lasthandoff: 08/11/2017
 -   La tâche d'insertion en bloc n'enregistre pas les lignes à l'origine d'erreurs. Si vous devez capturer ces informations, utilisez les sorties d'erreur des composants de flux de données afin de récupérer dans un fichier d'exception les lignes à l'origine des erreurs.  
   
 ## <a name="custom-log-entries-available-on-the-bulk-insert-task"></a>Entrées de journal personnalisées disponibles dans la tâche d'insertion en bloc  
- Le tableau suivant répertorie les entrées de journal personnalisées de la tâche d'insertion en bloc. Pour plus d’informations, consultez [Journalisation d’Integration Services &#40;SSIS&#41;](../../integration-services/performance/integration-services-ssis-logging.md).  
+ Le tableau suivant répertorie les entrées de journal personnalisées de la tâche d'insertion en bloc. Pour plus d’informations, consultez [Journalisation Integration Services &#40;SSIS&#41;](../../integration-services/performance/integration-services-ssis-logging.md).  
   
 |Entrée du journal|Description|  
 |---------------|-----------------|  
@@ -96,7 +95,7 @@ ms.lasthandoff: 08/11/2017
   
  Si la tâche d'insertion en bloc se sert d'un gestionnaire de connexions de fichiers plats pour accéder au fichier source, elle n'utilise pas le format spécifié dans ce gestionnaire. Elle utilise à la place le format spécifié dans un fichier de format, ou les valeurs des propriétés RowDelimiter et ColumnDelimiter de la tâche.  
   
- Vous pouvez définir des propriétés au moyen du concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] ou par programmation.  
+ Vous pouvez définir les propriétés par le biais du concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] ou par programmation.  
   
  Pour plus d'informations sur les propriétés définissables dans le concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] , cliquez sur la rubrique suivante :  
   
@@ -111,10 +110,10 @@ ms.lasthandoff: 08/11/2017
   
 -   <xref:Microsoft.SqlServer.Dts.Tasks.BulkInsertTask.BulkInsertTask>  
   
-## <a name="related-tasks"></a>Tâches associées  
- [Définir les propriétés d’une tâche ou d’un conteneur](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+## <a name="related-tasks"></a>Related Tasks  
+ [Définir les propriétés d'une tâche ou d'un conteneur](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
-## <a name="related-content"></a>Contenu connexe  
+## <a name="related-content"></a>Contenu associé  
   
 -   Article technique, [You may get "Unable to prepare the SSIS bulk insert for data insertion" error on UAC enabled systems](http://go.microsoft.com/fwlink/?LinkId=233693), sur support.microsoft.com.  
   
@@ -129,7 +128,7 @@ ms.lasthandoff: 08/11/2017
   
 ### <a name="options"></a>Options  
  **Connexion**  
- Sélectionnez un gestionnaire de connexions OLE DB dans la liste, ou cliquez sur \< **nouvelle connexion...** > pour créer une nouvelle connexion.  
+ Sélectionnez un gestionnaire de connexions OLE DB dans la liste ou cliquez sur \<**Nouvelle connexion...**> pour créer une connexion.  
   
  **Rubriques connexes :** [Gestionnaire de connexions OLE DB](../../integration-services/connection-manager/ole-db-connection-manager.md)  
   
@@ -139,19 +138,19 @@ ms.lasthandoff: 08/11/2017
  **Format**  
  Sélectionnez la source du format de l'insertion en bloc. Cette propriété dispose des options répertoriées dans le tableau suivant.  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |**Utiliser un fichier**|Sélectionnez un fichier contenant la spécification de format. Cette option affiche l'option dynamique **FormatFile**.|  
 |**Spécifier**|Spécifiez le format. Cette option affiche les options dynamiques **RowDelimiter** et **ColumnDelimiter**.|  
   
  **Fichier**  
- Sélectionnez un gestionnaire de connexions de fichiers ou de fichiers plats dans la liste, ou cliquez sur \< **nouvelle connexion...** > pour créer une nouvelle connexion.  
+ Sélectionnez un gestionnaire de connexions de fichiers ou de fichiers plats dans la liste ou cliquez sur \<**Nouvelle connexion...**> pour créer une connexion.  
   
  L'emplacement du fichier dépend du moteur de base de données SQL Server spécifié dans le gestionnaire de connexions pour cette tâche. Le fichier texte doit être accessible au moteur de base de données SQL Server situé sur un disque dur local du serveur ou via un partage ou un lecteur mappé à SQL Server. Le fichier n'est pas accessible au runtime SSIS.  
   
  Si vous accédez au fichier source en utilisant un gestionnaire de connexions de fichiers plats, la tâche d'insertion en bloc n'utilise pas le format défini dans le gestionnaire de connexions de fichiers plats. Elle utilise à la place le format spécifié dans un fichier de format, ou les valeurs des propriétés RowDelimiter et ColumnDelimiter de la tâche.  
   
- **Rubriques connexes :** [Gestionnaire de connexions File](../../integration-services/connection-manager/file-connection-manager.md), [Flat File Connection Manager](../../integration-services/connection-manager/flat-file-connection-manager.md) 
+ **Rubriques connexes :** [Gestionnaire de connexions de fichiers](../../integration-services/connection-manager/file-connection-manager.md), [Gestionnaire de connexions de fichiers plats](../../integration-services/connection-manager/flat-file-connection-manager.md) 
   
  **Actualiser les tables**  
  Actualise la liste des tables et des vues.  
@@ -221,4 +220,3 @@ ms.lasthandoff: 08/11/2017
 > [!NOTE]  
 >  Chaque ligne ne pouvant pas être importée par l'opération de chargement en masse est comptée comme une erreur.  
   
-

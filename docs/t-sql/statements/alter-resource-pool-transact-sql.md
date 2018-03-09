@@ -8,25 +8,28 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - ALTER_RESOURCE_POOL_TSQL
 - ALTER RESOURCE POOL
-dev_langs: TSQL
-helpviewer_keywords: ALTER RESOURCE POOL
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- ALTER RESOURCE POOL
 ms.assetid: 9c1c4cfb-0e3b-4f01-bf57-3fce94c7d1d4
-caps.latest.revision: "47"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 357dab163aca094928f5c417c605dcb699c922b1
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: 4edf3d8f20cc3705a6303d55f471dfa74c250f74
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="alter-resource-pool-transact-sql"></a>ALTER RESOURCE POOL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -63,7 +66,7 @@ ALTER RESOURCE POOL { pool_name | "default" }
 ```  
   
 ## <a name="arguments"></a>Arguments  
- { *pool_name* | **« default »** }  
+ { *pool_name* | **"default"** }  
  Nom d'un pool de ressources défini par l'utilisateur existant ou du pool de ressources par défaut créé lors de l'installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  Le paramètre default doit être placé entre des guillemets doubles ("") ou des crochets ([]) lorsqu'il est utilisé avec l'instruction ALTER RESOURCE POOL pour éviter tout conflit avec DEFAULT, qui est un mot réservé au système. Pour plus d'informations, consultez [Database Identifiers](../../relational-databases/databases/database-identifiers.md).  
@@ -78,7 +81,7 @@ ALTER RESOURCE POOL { pool_name | "default" }
  Spécifie la bande passante de l'UC moyenne maximale que toutes les demandes du pool de ressources recevront en cas de contention de l'UC. *valeur* est un entier dont le paramètre par défaut est 100. La plage autorisée pour *valeur* est comprise entre 1 et 100.  
   
  CAP_CPU_PERCENT =*valeur*  
- **S'applique à**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **S'applique à**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Spécifie la capacité de l’UC cible maximale pour les demandes dans le pool de ressources. *valeur* est un entier dont le paramètre par défaut est 100. La plage autorisée pour *valeur* est comprise entre 1 et 100.  
   
@@ -86,7 +89,7 @@ ALTER RESOURCE POOL { pool_name | "default" }
 >  En raison de la nature statistique de la gouvernance de l’UC, vous pouvez remarquer les pics occasionnels supérieure à la valeur spécifiée dans CAP_CPU_PERCENT.  
   
  AFFINITY {SCHEDULER = AUTO | (Scheduler_range_spec) | NUMANODE = (NUMA_node_range_spec)}  
- **S'applique à**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **S'applique à**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Attache le pool de ressources aux planificateurs spécifiques. La valeur par défaut est AUTO.  
   
@@ -102,19 +105,19 @@ INNER JOIN sys.dm_os_schedulers AS sc
       AND sc.scheduler_id < 1048576;  
 ```  
   
- MIN_MEMORY_PERCENT =*valeur*  
+ MIN_MEMORY_PERCENT =*value*  
  Spécifie la quantité de mémoire minimale réservée à ce pool de ressources qui ne peut pas être partagée avec d'autres pools de ressources. *valeur* est un entier dont la valeur par défaut 0. La plage autorisée pour *valeur* est comprise entre 0 et 100.  
   
  MAX_MEMORY_PERCENT =*valeur*  
  Spécifie la mémoire totale du serveur qui peut être utilisée par les demandes dans ce pool de ressources. *valeur* est un entier dont le paramètre par défaut est 100. La plage autorisée pour *valeur* est comprise entre 1 et 100.  
   
- MIN_IOPS_PER_VOLUME =*valeur*  
- **S'applique à**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] et [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ MIN_IOPS_PER_VOLUME =*value*  
+ **S'applique à**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Spécifie les opérations d'E/S minimales par seconde (IOPS) par volume disque à réserver au pool de ressources. La plage autorisée pour *valeur* est comprise entre 0 et 2 ^ 31-1 (2 147 483 647). Spécifiez 0 pour indiquer l'absence de seuil minimal pour le pool.  
   
- MAX_IOPS_PER_VOLUME =*valeur*  
- **S'applique à**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] et [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ MAX_IOPS_PER_VOLUME =*value*  
+ **S'applique à**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Spécifie les opérations d'E/S maximales par seconde (IOPS) par volume disque à autoriser pour le pool de ressources. La plage autorisée pour *valeur* est comprise entre 0 et 2 ^ 31-1 (2 147 483 647). Spécifiez 0 pour définir un seuil illimité pour le pool. La valeur par défaut est 0.  
   
@@ -138,7 +141,7 @@ INNER JOIN sys.dm_os_schedulers AS sc
 > [!CAUTION]  
 >  Effacement des plans mis en cache à partir d’un pool de ressources est associé à plusieurs groupes de charges de travail affectera tous les groupes de charges de travail avec le pool de ressources définis par l’utilisateur identifié par *pool_name*.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Requiert l'autorisation CONTROL SERVER.  
   
 ## <a name="examples"></a>Exemples  
@@ -155,7 +158,7 @@ GO
   
  Dans l'exemple suivant, `CAP_CPU_PERCENT` définit la limite maximale d'utilisation fixe à 80 % et `AFFINITY SCHEDULER` a une valeur individuelle de 8 et une plage de 12 à 16.  
   
-**S'applique à**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+**S'applique à**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
 ```  
 ALTER RESOURCE POOL Pool25  

@@ -1,5 +1,5 @@
 ---
-title: "Tâche de traitement de Analysis Services | Documents Microsoft"
+title: "Traitement d’Analysis Services, tâche | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -20,17 +20,16 @@ helpviewer_keywords:
 - Analysis Services Processing task
 - processing objects [Integration Services]
 ms.assetid: e5748836-b4ce-4e17-ab6b-617a336f02f4
-caps.latest.revision: 52
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 8806c102eaec2c2540374bfaddc33b76d8f6e584
-ms.openlocfilehash: 1a5107d988014807892ec405dadf61656c7606a5
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/11/2017
-
+ms.openlocfilehash: cad0ce4adcf182892b62473aacb9e1c8d310f6c4
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="analysis-services-processing-task"></a>tâche de traitement d'Analysis Services
   La tâche de traitement [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] traite les objets [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] tels que les modèles tabulaires, les cubes, les dimensions et les modèles d'exploration de données.  
@@ -49,7 +48,7 @@ ms.lasthandoff: 08/11/2017
   
 -   [Tâche DDL d'exécution de SQL Server Analysis Services](../../integration-services/control-flow/analysis-services-execute-ddl-task.md)  
   
--   [Tâche de requête d'exploration de données](../../integration-services/control-flow/data-mining-query-task.md)  
+-   [Tâche de requête d’exploration de données](../../integration-services/control-flow/data-mining-query-task.md)  
   
 ## <a name="object-processing"></a>Traitement des objets  
  Plusieurs objets peuvent être traités simultanément. Pour traiter plusieurs objets, vous définissez des paramètres qui s'appliquent au traitement de tous les objets du traitement.  
@@ -72,7 +71,7 @@ ms.lasthandoff: 08/11/2017
 ## <a name="error-handling"></a>Gestion des erreurs  
   
 ## <a name="configuration-of-the-analysis-services-processing-task"></a>Configuration de la tâche de traitement Analysis Services  
- Vous pouvez définir des propriétés au moyen du concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] ou par programmation.  
+ Vous pouvez définir les propriétés par le biais du concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] ou par programmation.  
   
  Pour plus d'informations sur les propriétés définissables dans le concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] , cliquez sur la rubrique suivante :  
   
@@ -83,7 +82,7 @@ ms.lasthandoff: 08/11/2017
 -   [Définir les propriétés d'une tâche ou d'un conteneur](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
 ## <a name="programmatic-configuration-of-the-analysis-services-processing-task"></a>Configuration par programmation de la tâche de traitement Analysis Services  
- Pour plus d'informations sur la définition par programmation de ces propriétés, cliquez sur la rubrique suivante :  
+ Pour plus d'informations sur la définition par programme de ces propriétés, cliquez sur la rubrique suivante :  
   
 -   <xref:Microsoft.DataTransformationServices.Tasks.DTSProcessingTask.DTSProcessingTask>  
   
@@ -155,4 +154,3 @@ ms.lasthandoff: 08/11/2017
   
  **Rubriques connexes :** [Boîte de dialogue Modifier les paramètres &#40;Analysis Services - Données multidimensionnelles&#41;](http://msdn.microsoft.com/library/0041e042-d7ce-48f9-a690-a6dc65471ff3)  
   
-

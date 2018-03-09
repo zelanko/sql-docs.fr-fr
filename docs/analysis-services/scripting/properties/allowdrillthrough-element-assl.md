@@ -2,15 +2,13 @@
 title: "Élément AllowDrillThrough (ASSL) | Documents Microsoft"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: scripting
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: AllowDrillThrough Element
@@ -25,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 273c96e4406af12582dd3a8a459573539a357736
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 3863648b3c8978fa8ac3b8ba981c6fa634c30ef0
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="allowdrillthrough-element-assl"></a>Élément AllowDrillThrough (ASSL)
-  Détermine si l'extraction est autorisée sur l'élément parent.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Détermine si l’extraction est autorisée sur l’élément parent.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -58,9 +56,9 @@ ms.lasthandoff: 11/17/2017
 |Relation|Élément|  
 |------------------|-------------|  
 |Éléments parents|[Élément MiningModel](../../../analysis-services/scripting/objects/miningmodel-element-assl.md), [MiningModelPermission](../../../analysis-services/scripting/objects/miningmodelpermission-element-assl.md), [MiningStructurePermission](../../../analysis-services/scripting/objects/miningstructurepermission-element-assl.md)|  
-|Éléments enfants|Aucune|  
+|Éléments enfants|None|  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Les éléments qui correspondent aux parents de **AllowDrillThrough** dans le modèle d’objet objets AMO (Analysis Management) sont <xref:Microsoft.AnalysisServices.MiningModel>, <xref:Microsoft.AnalysisServices.MiningModelPermission>, et <xref:Microsoft.AnalysisServices.MiningStructurePermission>.  
   
 ## <a name="drillthrough-on-mining-structures"></a>Extraction sur des structures d'exploration de données  
@@ -72,7 +70,7 @@ ms.lasthandoff: 11/17/2017
   
  `SELECT * FROM <structure>.CASES`  
   
- ou  
+ ou Gestionnaire de configuration  
   
  `SELECT StructureColumn('<structure-column-name>') FROM <model>.CASES`  
   

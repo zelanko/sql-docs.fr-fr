@@ -2,15 +2,13 @@
 title: "Test et Validation (exploration de données) | Documents Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
 ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -32,19 +30,20 @@ helpviewer_keywords:
 - CRISP-DM
 - accuracy testing [data mining]
 ms.assetid: 197144f5-21ed-4009-b448-fe412fb3916c
-caps.latest.revision: "61"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 38ef15322528bfae0dbd1b134d80fb7d1a56a734
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: bf43af38fc18b67c37ec5409ccb90a1d8e798259
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="testing-and-validation-data-mining"></a>Test et validation (exploration de données)
-  La validation est le processus consistant à évaluer les performances de vos modèles d'exploration de données sur des données réelles. Il est important de valider les modèles d'exploration de données en comprenant leurs qualité et caractéristiques avant de les déployer dans un environnement de production.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+La validation est le processus consistant à évaluer les performances de vos modèles d'exploration de données sur des données réelles. Il est important de valider les modèles d'exploration de données en comprenant leurs qualité et caractéristiques avant de les déployer dans un environnement de production.  
   
  Cette section présente des concepts de base liés à la qualité des modèles, et décrit les stratégies de validation de modèles fournies dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Pour obtenir une vue d’ensemble de la façon dont la validation de modèle s’adapte à des processus d’exploration de données plus importants, consultez [Solutions d’exploration de données](../../analysis-services/data-mining/data-mining-solutions.md).  
   
@@ -93,14 +92,14 @@ ms.lasthandoff: 11/17/2017
   
 |Rubriques|Liens|  
 |------------|-----------|  
-|Découvrez comment configurer un jeu de données de test à l'aide d'un Assistant ou de commandes DMX|[Jeux de données d'apprentissage et de test](../../analysis-services/data-mining/training-and-testing-data-sets.md)|  
-|Apprenez à tester la distribution et la représentativité des données dans une structure d'exploration de données|[Validation croisée &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/cross-validation-analysis-services-data-mining.md)|  
-|En savoir plus sur les types de graphique d’analyse de précision fournies.|[Graphique de courbes d’élévation &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/lift-chart-analysis-services-data-mining.md)<br /><br /> [Graphique des bénéfices &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/profit-chart-analysis-services-data-mining.md)<br /><br /> [Nuage de points &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/scatter-plot-analysis-services-data-mining.md)|  
-|Apprenez à créer une matrice de classification, parfois appelée matrice de confusion, pour évaluer le nombre d'éléments positifs et négatifs vrais ou faux.|[Matrice de classification &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/classification-matrix-analysis-services-data-mining.md)|  
+|Découvrez comment configurer un jeu de données de test à l'aide d'un Assistant ou de commandes DMX|[Apprentissage et jeux de données de test](../../analysis-services/data-mining/training-and-testing-data-sets.md)|  
+|Apprenez à tester la distribution et la représentativité des données dans une structure d'exploration de données|[La Validation croisée &#40; Analysis Services - Exploration de données &#41;](../../analysis-services/data-mining/cross-validation-analysis-services-data-mining.md)|  
+|En savoir plus sur les types de graphique d’analyse de précision fournies.|[Graphique de courbes d’élévation &#40; Analysis Services - Exploration de données &#41;](../../analysis-services/data-mining/lift-chart-analysis-services-data-mining.md)<br /><br /> [Graphique des bénéfices &#40; Analysis Services - Exploration de données &#41;](../../analysis-services/data-mining/profit-chart-analysis-services-data-mining.md)<br /><br /> [Nuage de points &#40; Analysis Services - Exploration de données &#41;](../../analysis-services/data-mining/scatter-plot-analysis-services-data-mining.md)|  
+|Apprenez à créer une matrice de classification, parfois appelée matrice de confusion, pour évaluer le nombre d'éléments positifs et négatifs vrais ou faux.|[Matrice de classification &#40; Analysis Services - Exploration de données &#41;](../../analysis-services/data-mining/classification-matrix-analysis-services-data-mining.md)|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Outils d'exploration de données](../../analysis-services/data-mining/data-mining-tools.md)   
- [Solutions d'exploration de données](../../analysis-services/data-mining/data-mining-solutions.md)   
- [Tâches de test et validation et procédures &#40;exploration de données&#41;](../../analysis-services/data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)  
+ [Outils d’exploration de données](../../analysis-services/data-mining/data-mining-tools.md)   
+ [Solutions d’exploration de données](../../analysis-services/data-mining/data-mining-solutions.md)   
+ [Test et de tâches de Validation et de procédures &#40; exploration de données &#41;](../../analysis-services/data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)  
   
   

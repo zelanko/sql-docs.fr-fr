@@ -8,20 +8,21 @@ ms.service:
 ms.component: security
 ms.reviewer: 
 ms.suite: sql
-ms.technology: powershell
+ms.technology:
+- powershell
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 074c012b-cf14-4230-bf0d-55e23d24f9c8
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0f50d2a739aace9dbe433bda79d4827020fa8cd1
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: b558ecb78086123cff3c65ae95446fb1a30f9cf4
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="configure-column-encryption-using-powershell"></a>Configurer le chiffrement de colonne à l’aide de PowerShell
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -29,7 +30,7 @@ ms.lasthandoff: 11/17/2017
 Cet article fournit les étapes de définition de la configuration d’Always Encrypted cible pour les colonnes de base de données à l’aide de l’applet de commande [Set-SqlColumnEncryption](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/set-sqlcolumnencryption) (dans le module PowerShell *SqlServer* ). L’applet de commande **Set-SqlColumnEncryption** modifie le schéma de la base de données cible et les données stockées dans les colonnes sélectionnées. Les données stockées dans une colonne peuvent être chiffrées, rechiffrées ou déchiffrées, en fonction des paramètres de chiffrement cible spécifiés pour les colonnes et de la configuration de chiffrement active.
 Pour plus d’informations sur la prise en charge d’Always Encrypted dans le module SqlServer PowerShell, consultez [Configurer Always Encrypted à l’aide de PowerShell](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md).
 
-## <a name="prerequisites"></a>Conditions préalables
+## <a name="prerequisites"></a>Prerequisites
 
 Pour définir la configuration de chiffrement cible, vous devez vérifier ce qui suit :
 - Une clé de chiffrement de colonne est configurée dans la base de données (si vous chiffrez ou rechiffrez une colonne). Pour plus d’informations, consultez [Configurer Always Encrypted à l’aide de PowerShell](../../../relational-databases/security/encryption/configure-always-encrypted-keys-using-powershell.md).
@@ -61,10 +62,10 @@ L’applet de commande **Set-SqlColumnEncryption** , qui permet de configurer le
 
 Tâche  |Article  |Accède au magasin de clés/aux clés en texte brut  |Accède à la base de données   
 ---|---|---|---
-Étape 1. Démarrer un environnement PowerShell et importer le module SQL Server. | [Importer le module SQL Server](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md#importsqlservermodule) | Non | Non
-Étape 2. Se connecter à votre serveur et à la base de données. | [Connexion à une base de données](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md#connectingtodatabase) | Non | Oui
-Étape 3. S’authentifier auprès d’Azure, si votre clé principale de colonne (qui protège la clé de chiffrement de colonne, soumise à permutation) est stockée dans Azure Key Vault. | [Add-SqlAzureAuthenticationContext](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/add-sqlazureauthenticationcontext) | Oui | Non
-Étape 4. Créer un tableau d’objets SqlColumnEncryptionSettings : un pour chaque colonne de base de données que vous souhaitez chiffrer, rechiffrer ou déchiffrer. SqlColumnMasterKeySettings est un objet qui existe en mémoire (dans PowerShell). Il spécifie le schéma de chiffrement cible pour une colonne. | [New-SqlColumnEncryptionSettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcolumnencryptionsettings) | Non | Non
+Étape 1. Démarrer un environnement PowerShell et importer le module SqlServer. | [Importer le module SQL Server](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md#importsqlservermodule) | non | non
+Étape 2. Se connecter à votre serveur et à la base de données. | [Connexion à une base de données](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md#connectingtodatabase) | non | Oui
+Étape 3. S’authentifier auprès d’Azure, si votre clé principale de colonne (qui protège la clé de chiffrement de colonne, soumise à permutation) est stockée dans Azure Key Vault. | [Add-SqlAzureAuthenticationContext](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/add-sqlazureauthenticationcontext) | Oui | non
+Étape 4. Créer un tableau d’objets SqlColumnEncryptionSettings : un pour chaque colonne de base de données que vous souhaitez chiffrer, rechiffrer ou déchiffrer. SqlColumnMasterKeySettings est un objet qui existe en mémoire (dans PowerShell). Il spécifie le schéma de chiffrement cible pour une colonne. | [New-SqlColumnEncryptionSettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcolumnencryptionsettings) | non | non
 Étape 5. Définir la configuration de chiffrement souhaitée, spécifiée dans le tableau d’objets SqlColumnMasterKeySettings que vous avez créé à l’étape précédente. Une colonne est chiffrée, rechiffrée ou déchiffrée en fonction des paramètres cible spécifiés et de la configuration de chiffrement active de la colonne.| [Set-SqlColumnEncryption](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/set-sqlcolumnencryption)<br><br>**Remarque :** cette étape peut prendre longtemps. Vos applications ne pourront pas accéder aux tables pendant toute la durée de l’opération ou pendant une partie de l’opération, en fonction de l’approche sélectionnée (en ligne ou hors ligne). | Oui | Oui
 
 ## <a name="encrypt-columns-using-offline-approach---example"></a>Chiffrer des colonnes à l’aide de l’approche hors connexion - Exemple

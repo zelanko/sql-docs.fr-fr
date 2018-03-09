@@ -2,29 +2,34 @@
 title: "Questions fréquentes (FAQ) pour les administrateurs de la réplication | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
-ms.technology: replication
+ms.suite: sql
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - administering replication, frequently asked questions
 - replication [SQL Server], administering
 ms.assetid: 5a9e4ddf-3cb1-4baf-94d6-b80acca24f64
-caps.latest.revision: "59"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 7f8734ed310e261351a30e6ce3f629ee6ef0467e
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 9c4514baae490912c82b2c8b8b34e7f5f780570a
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="frequently-asked-questions-for-replication-administrators"></a>Questions fréquentes (FAQ) pour les administrateurs de la réplication
-  Les questions et réponses suivantes fournissent des indications sur une variété de tâches auxquelles les administrateurs de bases de données répliquées sont confrontés.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Les questions et réponses suivantes fournissent des indications sur une variété de tâches auxquelles les administrateurs de bases de données répliquées sont confrontés.  
   
 ## <a name="configuring-replication"></a>Configuration d'une réplication  
   
@@ -47,7 +52,7 @@ ms.lasthandoff: 11/09/2017
   
 -   L'instantané est généré par l'Agent d'instantané. Affichez l'état de génération de l'instantané sur l'onglet **Agents** pour une publication du moniteur de réplication. Pour plus d’informations, consultez [Afficher des informations et effectuer des tâches pour les agents associés à une publication &#40;moniteur de réplication&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-publication-agents.md).  
   
--   L'instantané est appliqué par l'Agent de distribution ou par l'Agent de fusion. Affichez l'état d'application d'instantané sur la page **Agent de distribution** ou **Agent de fusion** du Moniteur de réplication. Pour plus d’informations, consultez [Afficher des informations et effectuer des tâches pour les agents associés à un abonnement &#40;moniteur de réplication&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-subscription-agents.md).  
+-   L'instantané est appliqué par l'Agent de distribution ou par l'Agent de fusion. Affichez l'état d'application d'instantané sur la page **Agent de distribution** ou **Agent de fusion** du Moniteur de réplication. Pour plus d’informations, consultez [Afficher des informations et effectuer des tâches pour les agents d’abonnement &#40;moniteur de réplication&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-subscription-agents.md).  
   
 ### <a name="what-happens-if-the-snapshot-agent-has-not-completed-when-the-distribution-or-merge-agent-starts"></a>Que se passe-t-il si l’Agent d'instantané n’a pas terminé lorsque l’Agent de distribution ou l'Agent de fusion démarre ?  
  Cela n'entraînera aucune erreur si l'Agent de distribution ou l'Agent de fusion s'exécute en même temps que l'Agent d'instantané. Vous devez cependant prendre en compte les éléments suivants :  
@@ -136,7 +141,7 @@ ms.lasthandoff: 11/09/2017
   
 -   Pour les articles de publications utilisant les instantanés en mode caractère (utilisées pour les abonnés non-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] et les abonnés [!INCLUDE[ssEW](../../../includes/ssew-md.md)] ) : le propriétaire est laissé vide par défaut. Le propriétaire prend les valeurs par défaut du propriétaire associé au compte utilisé par l'Agent de distribution ou l'Agent de fusion pour se connecter à l'Abonné.  
   
- Le propriétaire de l’objet peut être modifié par le biais de la boîte de dialogue **Propriétés de l’article - \<***Article***>** et les procédures stockées suivantes : **sp_addarticle**, **sp_addmergearticle**, **sp_changearticle** et **sp_changemergearticle**. Pour plus d’informations, consultez [Afficher et modifier les propriétés d’une publication](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md), [Définir un article](../../../relational-databases/replication/publish/define-an-article.md) et [Afficher et modifier les propriétés d’un article](../../../relational-databases/replication/publish/view-and-modify-article-properties.md).  
+ Le propriétaire de l’objet peut être changé par le biais de la boîte de dialogue **Propriétés de l’article - \<***Article***>** et les procédures stockées suivantes : **sp_addarticle**, **sp_addmergearticle**, **sp_changearticle** et **sp_changemergearticle**. Pour plus d’informations, consultez [Afficher et modifier les propriétés d’une publication](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md), [Définir un article](../../../relational-databases/replication/publish/define-an-article.md) et [Afficher et modifier les propriétés d’un article](../../../relational-databases/replication/publish/view-and-modify-article-properties.md).  
   
 ### <a name="how-can-grants-on-the-subscription-database-be-configured-to-match-grants-on-the-publication-database"></a>Comment configurer les demandes sur la base de données d'abonnement afin qu'elles correspondent aux demandes sur la base de données de publication ?  
  Par défaut, la réplication n'exécute pas d'instructions GRANT sur la base de données d'abonnement. Si vous voulez que les autorisations sur la base de données d'abonnement correspondent à celles de la base de données de publication, utilisez une des méthodes suivantes :  
@@ -221,7 +226,7 @@ ms.lasthandoff: 11/09/2017
   
 -   Délai estimé de distribution des commandes à l'Abonné. Si cette valeur est supérieure au délai nécessaire pour générer et appliquer un instantané à l'Abonné, réinitialisez l'Abonné. Pour plus d’informations, consultez [Réinitialiser des abonnements](../../../relational-databases/replication/reinitialize-subscriptions.md).  
   
- Pour plus d’informations, consultez [sp_replmonitorsubscriptionpendingcmds &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-replmonitorsubscriptionpendingcmds-transact-sql.md) et [Afficher des informations et effectuer des tâches pour les agents associés à un abonnement &#40;moniteur de réplication&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-subscription-agents.md).  
+ Pour plus d’informations, consultez [sp_replmonitorsubscriptionpendingcmds (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-replmonitorsubscriptionpendingcmds-transact-sql.md) et [Afficher des informations et effectuer des tâches pour les agents associés à un abonnement (moniteur de réplication)](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-subscription-agents.md).  
   
 ## <a name="replication-and-other-database-features"></a>Réplication et autres fonctionnalités de base de données  
   
@@ -231,7 +236,7 @@ ms.lasthandoff: 11/09/2017
 ### <a name="does-replication-work-in-conjunction-with-clustering"></a>La réplication fonctionne-t-elle conjointement avec le clustering ?  
  Oui. Aucune règle spécifique n'est nécessaire car toutes les données sont stockées sur un ensemble de disques sur le cluster.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Administration &#40;réplication&#41;](../../../relational-databases/replication/administration/administration-replication.md)   
  [Best Practices for Replication Administration](../../../relational-databases/replication/administration/best-practices-for-replication-administration.md)  
   

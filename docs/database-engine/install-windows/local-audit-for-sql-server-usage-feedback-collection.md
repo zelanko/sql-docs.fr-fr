@@ -9,32 +9,34 @@ ms.component: install-windows
 ms.reviewer: 
 ms.suite: sql
 ms.technology:
-- analysis-services
 - dbe-security
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: Local Audit
+helpviewer_keywords:
+- Local Audit
 ms.assetid: a0665916-7789-4f94-9086-879275802cf3
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 48de69218e71bb9688e6d7a3d0669b43baefe150
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 1d579ced53344bc871e640de8ab81246ed652325
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="local-audit-for-sql-server-usage-feedback-collection"></a>Audit local pour la collecte de commentaires d’utilisation de SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
 ## <a name="introduction"></a>Introduction
 
 Microsoft SQL Server contient des fonctionnalités Internet susceptibles de collecter et d’envoyer des informations sur votre ordinateur ou appareil (« informations standard sur l’ordinateur ») à Microsoft. Le composant d’audit local de la [collecte de commentaires d’utilisation de SQL Serve](http://support.microsoft.com/kb/3153756) écrit les données collectées par le service vers un dossier désigné, représentant les données (journaux) qui peuvent être envoyées à Microsoft. L’objectif de l’audit local est d’autoriser les clients à visualiser toutes les données collectées par Microsoft avec cette fonctionnalité, pour des raisons de conformité, de réglementation ou de validation de la confidentialité.  
 
 À compter de SQL Server 2016 CU2, l’audit local est configurable au niveau de l’instance de moteur de base de données SQL Server et Analysis Services (SSAS). Dans SQL Server 2016 CU4 et SQL Server 2016 SP1, l’audit local est également activé pour SQL Server Integration Services (SSIS). Les autres composants SQL Server installés pendant la configuration et les outils SQL Server qui sont téléchargés ou installés après la configuration ne possèdent pas de fonctionnalité d’audit local pour la collecte de commentaires relatifs à l’utilisation. 
 
-## <a name="prerequisites"></a>Conditions préalables 
+## <a name="prerequisites"></a>Prerequisites 
 
 Les éléments suivants sont nécessaires pour activer l’audit local sur chaque instance SQL Server : 
 
@@ -184,13 +186,13 @@ L’audit local va générer un fichier journal par jour. Les fichiers journaux 
 | Instance | instanceName, correlationID, clientVersion 
 | Session | sessionID, traceName 
 | Requête | sequence, querySetVersion, queryIdentifier, query, queryTimeInTicks 
-| data |  data 
+| data |  données 
 
 ### <a name="namevalue-pairs-definition-and-examples"></a>Définition et exemples des paires nom/valeur 
 
 Les colonnes répertoriées ci-dessous représentent l’ordre de la sortie du fichier d’audit local. Le hachage à sens unique avec SHA 256 est utilisé pour les valeurs anonymes pour certaines colonnes ci-dessous.  
 
-| Nom | Description | Exemples de valeurs
+| Nom    | Description | Exemples de valeurs
 |-------|--------| ----------|
 |hostname | Nom de la machine anonyme sur laquelle SQL Server est installé| de3b3769a63970b63981ab7a956401388962c986bfd39d371f5870d800627d11 
 |domainHash| Hachage du domaine anonyme de la machine hébergeant l’instance SQL Server | de3b3769a63970b63981ab7a956401388962c986bfd39d371f5870d800627d11 
@@ -206,7 +208,7 @@ Les colonnes répertoriées ci-dessous représentent l’ordre de la sortie du f
 | querySetVersion | Version d’un groupe de définitions de requête | 1.0.0.0 
 |traceName | Catégories de traces : (SQLServerXeQueries, SQLServerPeriodicQueries, SQLServerOneSettingsException) | SQLServerPeriodicQueries 
 |queryIdentifier | Un identificateur de la requête | SQLServerProperties.002 
-|data   | La sortie des informations collectées sur queryIdentifier en tant que sortie de requête T-SQL, de session XE ou de l’application |   [{"Collation": "SQL_Latin1_General_CP1_CI_AS","SqlFTinstalled": "0" "SqlIntSec": "1","IsSingleUser": "0","SqlFilestreamMode": "0","SqlPbInstalled": "0","SqlPbNodeRole": "","SqlVersionMajor": "13","SqlVersionMinor": "0","SqlVersionBuild": "2161","ProductBuildType": "","ProductLevel": "RTM","ProductUpdateLevel": "CU2","ProductUpdateReference": "KB3182270","ProductRevision": "3","SQLEditionId": "-1534726760","IsClustered": "0","IsHadrEnabled": "0","SqlAdvAInstalled": "0","PacketReceived": "1210","Version": "Microsoft SQL Server 2016 (RTM-CU2) (KB3182270) - 13.0.2161.3 (X64) \n\tSep  7 2016 14:24:16 \n\tCopyright (c) Microsoft Corporation\n\tÉdition Standard (64 bits) sur Windows Server 2012 R2 Datacenter 6.3 \u003cX64\u003e (Build 9600: ) (Hypervisor)\n"}],
+|données   | La sortie des informations collectées sur queryIdentifier en tant que sortie de requête T-SQL, de session XE ou de l’application |   [{"Collation": "SQL_Latin1_General_CP1_CI_AS","SqlFTinstalled": "0" "SqlIntSec": "1","IsSingleUser": "0","SqlFilestreamMode": "0","SqlPbInstalled": "0","SqlPbNodeRole": "","SqlVersionMajor": "13","SqlVersionMinor": "0","SqlVersionBuild": "2161","ProductBuildType": "","ProductLevel": "RTM","ProductUpdateLevel": "CU2","ProductUpdateReference": "KB3182270","ProductRevision": "3","SQLEditionId": "-1534726760","IsClustered": "0","IsHadrEnabled": "0","SqlAdvAInstalled": "0","PacketReceived": "1210","Version": "Microsoft SQL Server 2016 (RTM-CU2) (KB3182270) - 13.0.2161.3 (X64) \n\tSep  7 2016 14:24:16 \n\tCopyright (c) Microsoft Corporation\n\tÉdition Standard (64 bits) sur Windows Server 2012 R2 Datacenter 6.3 \u003cX64\u003e (Build 9600: ) (Hypervisor)\n"}],
 |Requête| Le cas échéant, la définition de requêtes T-SQL liée au queryIdentifier qui génère des données.        Ce composant n’est pas téléchargé par le service SQL Server CEIP. Il est inclus dans l’audit local en tant que référence pour les clients uniquement.| SELECT\n      SERVERPROPERTY(\u0027Collation\u0027) AS [Collation],\n      SERVERPROPERTY(\u0027IsFullTextInstalled\u0027) AS [SqlFTinstalled],\n      SERVERPROPERTY(\u0027IsIntegratedSecurityOnly\u0027) AS [SqlIntSec],\n      SERVERPROPERTY(\u0027IsSingleUser\u0027) AS [IsSingleUser],\n      SERVERPROPERTY (\u0027FileStreamEffectiveLevel\u0027) AS [SqlFilestreamMode],\n      SERVERPROPERTY(\u0027IsPolybaseInstalled\u0027) AS [SqlPbInstalled],\n      SERVERPROPERTY(\u0027PolybaseRole\u0027) AS [SqlPbNodeRole],\n      SERVERPROPERTY(\u0027ProductMajorVersion\u0027) AS [SqlVersionMajor],\n      SERVERPROPERTY(\u0027ProductMinorVersion\u0027) AS [SqlVersionMinor],\n      SERVERPROPERTY(\u0027ProductBuild\u0027) AS [SqlVersionBuild],\n      SERVERPROPERTY(\u0027ProductBuildType\u0027) AS ProductBuildType,\n      SERVERPROPERTY(\u0027ProductLevel\u0027) AS ProductLevel,\n      SERVERPROPERTY(\u0027ProductUpdateLevel\u0027) AS ProductUpdateLevel,\n      SERVERPROPERTY(\u0027ProductUpdateReference\u0027) AS ProductUpdateReference,\n      RIGHT(CAST(SERVERPROPERTY(\u0027ProductVersion\u0027) AS NVARCHAR(30)),CHARINDEX(\u0027.\u0027, REVERSE(CAST(SERVERPROPERTY(\u0027ProductVersion\u0027) AS NVARCHAR(30)))) - 1) AS ProductRevision,\n      SERVERPROPERTY(\u0027EditionID\u0027) AS SQLEditionId,\n      SERVERPROPERTY(\u0027IsClustered\u0027) AS IsClustered,\n      SERVERPROPERTY(\u0027IsHadrEnabled\u0027) AS IsHadrEnabled,\n      SERVERPROPERTY(\u0027IsAdvancedAnalyticsInstalled\u0027) AS [SqlAdvAInstalled],\n      @@PACK_RECEIVED AS PacketReceived,\n      @@VERSION AS Version
 |queryTimeInTicks | La durée nécessaire à l’exécution de la requête avec la catégorie de trace suivante : (SQLServerXeQueries, SQLServerPeriodicQueries) |  0 
  
@@ -390,6 +392,6 @@ FROM OPENJSON(@JSONFile)
 WHERE queryIdentifier = 'DatabaseProperties.001'
 ```
 
-## <a name="see-also"></a>Voir aussi
+## <a name="see-also"></a> Voir aussi
 [Audit local pour la collecte de commentaires d’utilisation de SSMS](https://docs.microsoft.com/sql/ssms/sql-server-management-studio-telemetry-ssms)
 

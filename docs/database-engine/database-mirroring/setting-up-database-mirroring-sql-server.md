@@ -2,9 +2,12 @@
 title: "Configuration de la mise en miroir de bases de données (SQL Server) | Microsoft Docs"
 ms.custom: 
 ms.date: 05/17/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: database-mirroring
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -13,16 +16,16 @@ ms.assetid: da45efed-55eb-4c71-be34-ac2589dfce8d
 caps.latest.revision: "62"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: c58560ad5e38c77e2c1d147fb4ab727823eba96c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 72ba23869786b5d1351279a586b51aa2ffc5d11f
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="setting-up-database-mirroring-sql-server"></a>Configuration de la mise en miroir de bases de données (SQL Server)
-  Cette section décrit les conditions préalables, les recommandations et les étapes relatives à la configuration de la mise en miroir d'une base de données. Pour une présentation de la mise en miroir de bases de données, consultez [Mise en miroir de bases de données &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Cette section décrit les conditions préalables, les recommandations et les étapes relatives à la configuration de la mise en miroir d’une base de données. Pour une présentation de la mise en miroir de bases de données, consultez [Mise en miroir de bases de données &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md).  
   
 > [!IMPORTANT]  
 >  Nous vous recommandons de configurer la mise en miroir de bases de données durant les heures creuses, car cela peut affecter les performances.  
@@ -47,7 +50,7 @@ ms.lasthandoff: 11/09/2017
   
 2.  Vérifiez que les connexions existent sur le serveur miroir pour tous les utilisateurs de base de données. Pour plus d’informations, consultez [Configurer des comptes de connexion pour la mise en miroir de bases de données ou les groupes de disponibilité Always On &#40;SQL Server&#41;](../../database-engine/database-mirroring/set-up-login-accounts-database-mirroring-always-on-availability.md).  
   
-3.  Sur l'instance de serveur qui hébergera la base de données miroir, configurez le reste de l'environnement requis pour la base de données mise en miroir. Pour plus d’informations, consultez [Gérer les métadonnées lors de la mise à disposition d’une base de données sur une autre instance de serveur &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md).  
+3.  Sur l'instance de serveur qui hébergera la base de données miroir, configurez le reste de l'environnement requis pour la base de données mise en miroir. Pour plus d’informations, consultez [Gérer les métadonnées durant la mise à disposition d’une base de données sur une autre instance de serveur &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md).  
   
 ##  <a name="EstablishUsingWinAuthentication"></a> Vue d'ensemble : établissement d'une session de mise en miroir de bases de données  
  Les étapes de base pour établir une session de mise en miroir sont les suivantes :  
@@ -65,7 +68,7 @@ ms.lasthandoff: 11/09/2017
     > [!IMPORTANT]  
     >  Exécutez les étapes de configuration restantes dès que possible après avoir effectué la sauvegarde de la base de données principale. Pour pouvoir procéder à la mise en miroir sur les partenaires, vous devez tout d'abord créer une sauvegarde du journal actif sur la base de données d'origine et le restaurer sur la future base de données miroir.  
   
-2.  Vous pouvez configurer la mise en miroir en utilisant [!INCLUDE[tsql](../../includes/tsql-md.md)] ou l'Assistant Mise en miroir de bases de données. Pour plus d'informations, consultez l'une des rubriques suivantes :  
+2.  Vous pouvez configurer la mise en miroir en utilisant [!INCLUDE[tsql](../../includes/tsql-md.md)] ou l'Assistant Mise en miroir de bases de données. Pour plus d'informations, consultez l'une des rubriques suivantes :  
   
     -   [Établir une session de mise en miroir de bases de données au moyen de l’authentification Windows &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/database-mirroring-establish-session-windows-authentication.md)  
   
@@ -153,7 +156,7 @@ ms.lasthandoff: 11/09/2017
 -   [Résoudre des problèmes de configuration de mise en miroir de bases de données &#40;SQL Server&#41;](../../database-engine/database-mirroring/troubleshoot-database-mirroring-configuration-sql-server.md)  
   
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Mise en miroir de bases de données &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)   
  [Mise en miroir de bases de données : interopérabilité et coexistence &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-interoperability-and-coexistence-sql-server.md)   
  [Sécurité du transport de la mise en miroir de bases de données et des groupes de disponibilité Always On &#40;SQL Server&#41;](../../database-engine/database-mirroring/transport-security-database-mirroring-always-on-availability.md)   

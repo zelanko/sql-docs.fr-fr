@@ -1,5 +1,5 @@
 ---
-title: sp_sequence_get_range (Transact-SQL) | Documents Microsoft
+title: sp_sequence_get_range (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/08/2015
 ms.prod: sql-non-specified
@@ -8,30 +8,32 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_sequence_get_range
 - sp_sequence_get_range_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - sequence number object, sp_sequence_get_range procedure
 - sp_sequence_get_range
 ms.assetid: 8ca6b0c6-8d9c-4eee-b02f-51ddffab4492
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2af750abc8715d2bcf2240ef08f765c6d2d7bff3
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 58c36ec947eab4fbcc9511c67efae1af858ab6d0
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spsequencegetrange-transact-sql"></a>sp_sequence_get_range (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-asdw-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-asdw-xxx-md.md)]
 
   Retourne une plage de valeurs de séquence d'un objet séquence. L'objet séquence génère et émet le nombre de valeurs demandées et fournit l'application avec les métadonnées relatives à la plage.  
   
@@ -58,25 +60,25 @@ sp_sequence_get_range [ @sequence_name = ] N'<sequence>'
  [  **@sequence_name**  =] **N**'*séquence*'  
  Nom de l'objet séquence. Le schéma est facultatif. *sequence_name* est **nvarchar(776)**.  
   
- [  **@range_size**  =] *range_size*  
+ [ **@range_size** = ] *range_size*  
  Nombre de valeurs à extraire de la séquence. **@range_size**est **bigint**.  
   
- [  **@range_first_value**  =] *range_first_value*  
+ [ **@range_first_value** = ] *range_first_value*  
  Le paramètre de sortie retourne la première valeur (minimale ou maximale) de l'objet séquence utilisée pour calculer la plage demandée. **@range_first_value**est **sql_variant** avec le même type de base que celui de l’objet séquence utilisé dans la demande.  
   
- [  **@range_last_value**  =] *range_last_value*  
+ [ **@range_last_value** = ] *range_last_value*  
  Le paramètre de sortie facultatif retourne la dernière valeur de la plage demandée. **@range_last_value**est **sql_variant** avec le même type de base que celui de l’objet séquence utilisé dans la demande.  
   
- [  **@range_cycle_count**  =] range_cycle_count  
+ [ **@range_cycle_count** = ] range_cycle_count  
  Le paramètre de sortie facultatif retourne le nombre de fois où l'objet séquence a été répété pour retourner la plage demandée. **@range_cycle_count**est **int**.  
   
  [  **@sequence_increment**  =] *sequence_increment*  
  Le paramètre de sortie facultatif retourne l'incrément de l'objet séquence utilisé pour calculer la plage demandée. **@sequence_increment**est **sql_variant** avec le même type de base que celui de l’objet séquence utilisé dans la demande.  
   
- [  **@sequence_min_value**  =] *sequence_min_value*  
+ [ **@sequence_min_value** = ] *sequence_min_value*  
  Le paramètre de sortie facultatif retourne la valeur minimale de l'objet séquence. **@sequence_min_value**est **sql_variant** avec le même type de base que celui de l’objet séquence utilisé dans la demande.  
   
- [  **@sequence_max_value**  =] *sequence_max_value*  
+ [ **@sequence_max_value** = ] *sequence_max_value*  
  Le paramètre de sortie facultatif retourne la valeur maximale de l'objet séquence. **@sequence_max_value**est **sql_variant** avec le même type de base que celui de l’objet séquence utilisé dans la demande.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
@@ -96,7 +98,7 @@ sp_sequence_get_range [ @sequence_name = ] N'<sequence>'
   
  `The requested range for sequence object '%.*ls' exceeds the maximum or minimum limit. Retry with a smaller range.`  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Requiert l'autorisation UPDATE sur l'objet séquence ou le schéma de l'objet séquence.  
   
 ## <a name="examples"></a>Exemples  
@@ -193,10 +195,10 @@ Console.WriteLine(firstValueInRange.Value);
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [CRÉER une séquence de &#40; Transact-SQL &#41;](../../t-sql/statements/create-sequence-transact-sql.md)   
- [ALTER SEQUENCE &#40; Transact-SQL &#41;](../../t-sql/statements/alter-sequence-transact-sql.md)   
- [DROP SEQUENCE &#40; Transact-SQL &#41;](../../t-sql/statements/drop-sequence-transact-sql.md)   
- [VALEUR suivante de &#40; Transact-SQL &#41;](../../t-sql/functions/next-value-for-transact-sql.md)   
+ [CREATE SEQUENCE &#40;Transact-SQL&#41;](../../t-sql/statements/create-sequence-transact-sql.md)   
+ [ALTER SEQUENCE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-sequence-transact-sql.md)   
+ [DROP SEQUENCE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-sequence-transact-sql.md)   
+ [NEXT VALUE FOR &#40;Transact-SQL&#41;](../../t-sql/functions/next-value-for-transact-sql.md)   
  [Numéros de séquence](../../relational-databases/sequence-numbers/sequence-numbers.md)  
   
   

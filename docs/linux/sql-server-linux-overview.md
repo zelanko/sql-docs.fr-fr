@@ -1,37 +1,35 @@
----
+﻿---
 title: "Vue d’ensemble de SQL Server sur Linux | Documents Microsoft"
-description: "Cette rubrique décrit comment SQL Server s’exécute sur Linux et fournit des informations sur la façon d’en savoir plus."
+description: "Cet article décrit comment SQL Server s’exécute sur Linux et fournit des informations sur la façon d’en savoir plus."
 author: rothja
 ms.author: jroth
-manager: jhubbard
-ms.date: 10/02/2017
+manager: craigg
+ms.date: 02/22/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 9dcc6a90-0add-42c2-815b-862e4e2a21ac
 ms.workload: Active
-ms.openlocfilehash: 9cf216249d8e5971eb480e79bf9d97756cb3d948
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: faa2898017347f59d415f7f5bf5bd6795a3f9de6
+ms.sourcegitcommit: f0c5e37c138be5fb2cbb93e9f2ded307665b54ea
 ms.translationtype: MT
-
-ms.sourcegitcommit: 80c1228faeaaa4012afc0fd27992a2f5cf389f6e
-ms.openlocfilehash: 48e2d1ae54100f7ea83bdd677bf4a98859825b67
-ms.contentlocale: fr-fr
-ms.lasthandoff: 10/05/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 02/24/2018
 ---
 # <a name="sql-server-on-linux"></a>SQL Server sur Linux
 
-SQL Server 2017 s’exécute désormais également sur Linux. Il s'agit du  même moteur de base de données MSSQL Server, avec ses nombreuses fonctionnalités et des services équivalents et cela quel que soit votre système d’exploitation.
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+
+SQL Server 2017 s’exécute désormais également sur Linux. C'est le même moteur de base de données que MSSQL Server, avec de nombreuses fonctionnalités et des services équivalents, quel que soit votre système d’exploitation.
 
 ## <a name="install"></a>Installation
 
-Pour commencer, installez SQL Server sur Linux à l’aide d’un des didacticiels de démarrage rapide suivants :
+Pour commencer, installez SQL Server sur Linux à l’aide d’un des Démarrages rapides suivants :
 
 - [Installer sur Red Hat Enterprise Linux](quickstart-install-connect-red-hat.md)
 - [Installer sur SUSE Linux Enterprise Server](quickstart-install-connect-suse.md)
@@ -42,14 +40,14 @@ Pour commencer, installez SQL Server sur Linux à l’aide d’un des didacticie
 > [!NOTE]
 > Docker lui-même s’exécute sur plusieurs plateformes, ce qui signifie que vous pouvez exécuter l’image Docker sur Windows, Mac ou Linux.
 
-## <a name="connect"></a>Se connecter
+## <a name="connect"></a>Connection
 
-Après l’installation, connectez-vous à l’instance de SQL Server installée sur un ordinateur Linux. Vous pouvez vous connecter localement ou à distance via un large éventail d’outils et de pilotes. Les didacticiels de démarrage rapide montrent comment utiliser l'outil en ligne de commande [sqlcmd](sql-server-linux-setup-tools.md). Les autres outils possibles sont les suivants :
+Après l’installation, connectez-vous à l’instance de SQL Server installée sur un ordinateur Linux. Vous pouvez vous connecter localement ou à distance via un large éventail d’outils et de pilotes. Les didacticiels de démarrage rapide montrent comment utiliser l'outil en ligne de commande [sqlcmd](sql-server-linux-setup-tools.md). Les autres outils possibles sont les suivants :
 
 | Outil | Didacticiel |
 |-----|-----|
 | Visual Studio Code (Code de Visual Studio) | [Utilisation de Code de Visual Studio avec SQL Server sur Linux](sql-server-linux-develop-use-vscode.md) |
-| SQL Server Management Studio (SSMS) | [Utiliser SSMS sur Windows pour se connecter à SQL Server sur Linux](sql-server-linux-develop-use-ssms.md) |
+| SQL Server Management Studio (SSMS) | [Utilisez SSMS sur Windows pour se connecter à SQL Server sur Linux](sql-server-linux-develop-use-ssms.md) |
 | Outils de données SQL Server (SSDT) | [Utiliser SSDT avec SQL Server sur Linux](sql-server-linux-develop-use-ssdt.md) |
 
 ## <a name="explore"></a>Explorer
@@ -58,11 +56,8 @@ SQL Server 2017 a le même moteur de base de données sous-jacent sur toutes les
 
 Si vous êtes déjà familiarisé avec SQL Server, passez en revue les [notes de publication](sql-server-linux-release-notes.md) pour des recommandations générales et les problèmes connus pour cette version. Observez [quelles sont les nouveautés de SQL Server sur Linux](sql-server-linux-whats-new.md) ainsi que les [Nouveautés globales à SQL Server 2017](../sql-server/what-s-new-in-sql-server-2017.md).
 
-##  <a name="infotipmediageneralinfotippng-engage-with-the-sql-server-engineering-team"></a>![info_tip](./media/general/info_tip.png) Contacter l’équipe d’ingénierie de SQL Server
+> [!TIP]
+> Pour obtenir des réponses aux questions fréquemment posées, consultez le [SQL Server sur le Forum aux questions sur Linux](sql-server-linux-faq.md).
 
-- [Stack Exchange DBA](https://dba.stackexchange.com/questions/tagged/sql-server): Poser des questions sur l’administration de base de données
-- [Stack Overflow](http://stackoverflow.com/questions/tagged/sql-server): Poser des questions sur le développement
-- [Forums MSDN](https://social.msdn.microsoft.com/Forums/en-US/home?category=sqlserver): Poser des questions techniques
-- [Microsoft Connect](https://connect.microsoft.com/SQLServer/Feedback): signaler des bogues ou demander une nouvelle fonctionnalité
-- [Reddit](https://www.reddit.com/r/SQLServer/): Discuter de SQL Server
+[!INCLUDE[Get Help Options](../includes/paragraph-content/get-help-options.md)]
 

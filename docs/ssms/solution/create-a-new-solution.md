@@ -3,8 +3,11 @@ title: "Créer une solution | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-solutions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -13,16 +16,16 @@ ms.assetid: 05a7edd9-8acc-4ccd-abc9-33ced53265de
 caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 08c16387a7b73b26a2c9448623e9a2799c04e476
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 73b2175e4ed0e47c78f957f19123a5b33354d1a3
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="create-a-new-solution"></a>Créer une solution
-Lorsque vous créez un projet, [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] crée une solution qui le contient. Vous ne pouvez ouvrir qu'une seule solution à la fois. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] ne vous autorise pas à créer des dossiers dans les projets. Pour organiser votre travail, créez plusieurs projets.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Quand vous créez un projet, [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] crée une solution qui le contient. Vous ne pouvez ouvrir qu'une seule solution à la fois. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] ne vous autorise pas à créer des dossiers dans les projets. Pour organiser votre travail, créez plusieurs projets.  
   
 Pour accéder à l’Explorateur de solutions, cliquez sur **Explorateur de solutions** dans le menu **Affichage** .  
   
@@ -40,7 +43,7 @@ Pour accéder à l’Explorateur de solutions, cliquez sur **Explorateur de solu
   
 6.  Cliquez sur **OK**.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [Explorateur de solutions](../../ssms/solution/solution-explorer.md)  
 [Ouvrir des solutions à partir du contrôle de code source](https://msdn.microsoft.com/en-us/library/ms174216.aspx)  
   

@@ -2,29 +2,30 @@
 title: "Chargement de fichier et enregistrement de catégorie d’événement | Documents Microsoft"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: trace-events
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology: analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 8051a7d8-d815-45e1-a764-a5992b07b4fd
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 94347392d1f26636f04e80b467e02351d4229f57
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 35e87b8be69035997a6ba466d45f426d6e236a9c
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="file-load-and-save-event-category"></a>Chargement de fichier et enregistrement de catégorie d'événement
-  La catégorie d'événement File Load and Save contient les classes d'événements décrites dans le tableau ci-dessous.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+La catégorie d'événement File Load and Save contient les classes d'événements décrites dans le tableau ci-dessous.  
   
 |Classe d'événements|ID d'événement|Description|  
 |-----------------|--------------|-----------------|  
@@ -40,6 +41,6 @@ ms.lasthandoff: 11/17/2017
  Pour plus d'informations sur les colonnes associées à chaque classe d'événements File Load and Save, consultez [File Load and Save Data Columns](../../analysis-services/trace-events/file-load-and-save-data-columns.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Événements de trace Analysis Services](../../analysis-services/trace-events/analysis-services-trace-events.md)  
+ [Événements de Trace Analysis Services](../../analysis-services/trace-events/analysis-services-trace-events.md)  
   
   

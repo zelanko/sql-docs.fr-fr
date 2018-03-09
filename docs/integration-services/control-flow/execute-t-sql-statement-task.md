@@ -1,5 +1,5 @@
 ---
-title: "Exécuter la tâche de l’instruction T-SQL | Documents Microsoft"
+title: "Exécuter l’instruction T-SQL, tâche | Microsoft Docs"
 ms.custom: 
 ms.date: 03/13/2017
 ms.prod: sql-non-specified
@@ -19,17 +19,16 @@ helpviewer_keywords:
 - statements [Integration Services]
 - Execute T-SQL Statement task [Integration Services]
 ms.assetid: 7e9086ca-d27e-46c0-bfad-d61333ebd55e
-caps.latest.revision: 35
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 94fd411504f1781041e8d36f3f1cf41f6082aa09
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: ec1d7b5264d880b3cec0ec8b6348441e89147d6c
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="execute-t-sql-statement-task"></a>Tâche Exécuter l'instruction T-SQL
   La tâche Exécuter l'instruction T-SQL exécute des instructions Transact-SQL. Pour plus d’informations, consultez [Référence Transact-SQL &#40;moteur de base de données&#41;](../../t-sql/transact-sql-reference-database-engine.md) et [Requêtes Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-queries.md).  
@@ -47,10 +46,9 @@ ms.lasthandoff: 08/03/2017
   
 -   [Définir les propriétés d'une tâche ou d'un conteneur](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Tâches Integration Services](../../integration-services/control-flow/integration-services-tasks.md)   
  [Flux de contrôle](../../integration-services/control-flow/control-flow.md)   
- [FUSIONNER des Packages Integration Services](../../integration-services/control-flow/merge-in-integration-services-packages.md)  
+ [MERGE dans les packages Integration Services](../../integration-services/control-flow/merge-in-integration-services-packages.md)  
   
   
-

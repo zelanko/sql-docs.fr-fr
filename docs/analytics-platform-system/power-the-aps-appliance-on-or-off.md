@@ -3,10 +3,10 @@ title: "L’alimentation de l’Appliance APS On ou Off (système de plateforme 
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.technology: mpp-data-warehouse
 ms.custom: 
 ms.date: 01/05/2017
@@ -16,11 +16,11 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 2258f8e3-e7a1-4455-8a5e-10d4d15775d6
 caps.latest.revision: "45"
-ms.openlocfilehash: 3264c3f97f765e9a62a38987638bdf2a8b13e82b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 5e96898197098556d256c46b517ea42650c4c3ac
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="power-the-aps-appliance-on-or-off"></a>Le dispositif de points d’accès de l’alimentation ou désactiver
 Cette rubrique décrit comment mettre sous tension ou hors tension votre Systemappliance de plateforme Analytique qui est en cours d’exécution Parallel Data Warehouse et éventuellement une région HDInsight en cours d’exécution. Utilisez cette rubrique lorsqu’un dispositif de système de plateforme Analytique est déplacé, ou pour mettre sur un appareil après une panne catastrophique.  

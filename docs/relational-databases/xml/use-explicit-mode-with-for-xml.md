@@ -2,10 +2,14 @@
 title: Utiliser le mode EXPLICIT avec FOR XML | Microsoft Docs
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: xml
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-xml
+ms.suite: sql
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -13,19 +17,20 @@ helpviewer_keywords:
 - FOR XML clause, EXPLICIT mode
 - FOR XML EXPLICIT mode
 ms.assetid: 8b26e8ce-5465-4e7a-b237-98d0f4578ab1
-caps.latest.revision: "33"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 4972860dbfc2eaa8d0b04da88f304a95b17a4bd6
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: a5d96f28856360f9a57b29d28086cc487f156320
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="use-explicit-mode-with-for-xml"></a>Utiliser le mode EXPLICIT avec FOR XML
-  Comme indiqué dans la rubrique traitant de la [Construction de code XML à l’aide de FOR XML](../../relational-databases/xml/for-xml-sql-server.md), les modes RAW et AUTO ne permettent pas de contrôler de façon précise la forme du document XML généré à partir du résultat d’une requête. Toutefois, le mode EXPLICIT offre la plus grande souplesse pour générer le document XML à partir du résultat d'une requête.  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+Comme indiqué dans la rubrique traitant de la [Construction de code XML à l’aide de FOR XML](../../relational-databases/xml/for-xml-sql-server.md), les modes RAW et AUTO ne permettent pas de contrôler de façon précise la forme du document XML généré à partir du résultat d’une requête. Toutefois, le mode EXPLICIT offre la plus grande souplesse pour générer le document XML à partir du résultat d'une requête.  
   
  La requête en mode EXPLICIT doit être écrite de telle sorte que les informations supplémentaires sur le document XML, telles que l'imbrication attendue dans celui-ci, soient explicitement spécifiées comme une partie de la requête. Suivant le document XML demandé, l'écriture de requêtes en mode EXPLICIT peut s'avérer peu pratique. L’ [utilisation du mode PATH](../../relational-databases/xml/use-path-mode-with-for-xml.md) avec imbrication peut vous apparaître comme une solution plus simple pour écrire des requêtes en mode EXPLICIT.  
   
@@ -170,7 +175,7 @@ ElementName!TagNumber!AttributeName!Directive
   
 -   [Exemple : spécification de la directive XMLTEXT](../../relational-databases/xml/example-specifying-the-xmltext-directive.md)  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Utiliser le mode RAW avec FOR XML](../../relational-databases/xml/use-raw-mode-with-for-xml.md)   
  [UTiliser le mode AUTO avec FOR XML](../../relational-databases/xml/use-auto-mode-with-for-xml.md)   
  [Utiliser le mode PATH avec FOR XML](../../relational-databases/xml/use-path-mode-with-for-xml.md)   

@@ -18,13 +18,13 @@ ms.assetid:
 caps.latest.revision: 
 author: allanhirt
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3ac86ebd88dd793a0da204ace0feba02f2a055fa
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: a0ed6831a89d77f60e77e012ba36febdddc88a5a
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="add-enhanced-database-failover-to-an-availability-group-sql-server"></a>Ajouter le basculement de base de données amélioré à un groupe de disponibilité (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ La configuration du groupe de disponibilité est la même que celle du scénario
 
 Un groupe de disponibilité est configuré entre l’instance A et l’instance B, contenant deux bases de données : DB1 et DB2. Le mode de disponibilité défini est la validation synchrone avec un mode de basculement automatique. Le basculement de base de données amélioré est activé. L’accès au disque contenant les données de DB2 et les fichiers journaux des transactions est perdu. Quand le problème est détecté, le groupe de disponibilité bascule automatiquement vers l’instance B.
 
-## <a name="configure-and-viewv-the-enhanced-database-failover-option"></a>Configurer et afficher l’option de basculement de base de données amélioré
+## <a name="configure-and-view-the-enhanced-database-failover-option"></a>Configurer et afficher l’option de basculement de base de données amélioré
 
 Le basculement de base de données amélioré peut être configuré à l’aide de SQL Server Management Studio ou Transact-SQL. Les applets de commande PowerShell n’ont pas cette possibilité. Par défaut, le basculement de base de données amélioré est désactivé.
 
@@ -55,11 +55,11 @@ L’activation du basculement de base de données amélioré est possible pendan
 
 *Création manuelle d’un groupe de disponibilité*
 
-Utilisez les instructions figurant dans la rubrique [Utiliser la boîte de dialogue Nouveau groupe de disponibilité (SQL Server Management Studio)](use-the-new-availability-group-dialog-box-sql-server-management-studio.md) pour créer le groupe de disponibilité. Pour permettre le basculement de base de données amélioré, cochez sa case située en regard de *Détection de l’état d’intégrité au niveau base de données*.
+Utilisez les instructions figurant dans l’article [Utiliser la boîte de dialogue Nouveau groupe de disponibilité (SQL Server Management Studio)](use-the-new-availability-group-dialog-box-sql-server-management-studio.md) pour créer le groupe de disponibilité. Pour permettre le basculement de base de données amélioré, cochez sa case située en regard de *Détection de l’état d’intégrité au niveau base de données*.
 
 *Utilisation de l’Assistant Groupe de disponibilité*
 
-Utilisez les instructions figurant dans la rubrique [Utiliser l’Assistant Groupe de disponibilité (SQL Server Management Studio)](use-the-availability-group-wizard-sql-server-management-studio.md). L’option permettant d’activer le basculement de base de données amélioré se trouve dans la boîte de dialogue Spécifier le nom du groupe de disponibilité. Pour l’activer, cochez la case située en regard de *Détection de l’état d’intégrité au niveau base de données*.
+Utilisez les instructions figurant dans l’article [Utiliser l’Assistant Groupe de disponibilité (SQL Server Management Studio)](use-the-availability-group-wizard-sql-server-management-studio.md). L’option permettant d’activer le basculement de base de données amélioré se trouve dans la boîte de dialogue Spécifier le nom du groupe de disponibilité. Pour l’activer, cochez la case située en regard de *Détection de l’état d’intégrité au niveau base de données*.
 
 ### <a name="transact-sql"></a>Transact-SQL
 
@@ -79,7 +79,7 @@ Pour désactiver ce comportement, exécutez la commande ALTER AVAILABILITY GROUP
 ALTER AVAILABILITY GROUP [AGNAME] SET (DB_FAILOVER = OFF)
 ```
 ### <a name="dynamic-management-view"></a>Vue de gestion dynamique
-Pour déterminer si le basculement de base de données amélioré est activé pour un groupe de disponibilité, interrogez la vue de gestion dynamique `sys.availablity_groups`. La colonne `db_failover` indique zéro s’il est désactivé ou 1 s’il est activé. 
+Pour déterminer si le basculement de base de données amélioré est activé pour un groupe de disponibilité, interrogez la vue de gestion dynamique `sys.availability_groups`. La colonne `db_failover` indique zéro s’il est désactivé ou 1 s’il est activé. 
 
 ## <a name="next-steps"></a>Étapes suivantes 
 

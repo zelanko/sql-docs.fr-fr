@@ -1,36 +1,44 @@
 ---
-title: "Charger des données dans la mémoire à l’aide de rxImport | Documents Microsoft"
+title: "Charger des données en mémoire à l’aide de rxImport (SQL et R approfondie) | Documents Microsoft"
 ms.custom: 
-ms.date: 05/18/2017
-ms.prod: sql-server-2016
+ms.date: 12/14/2017
 ms.reviewer: 
-ms.suite: 
-ms.technology: r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: 
+ms.technology: 
 ms.tgt_pltfrm: 
-ms.topic: article
-applies_to: SQL Server 2016
-dev_langs: R
+ms.topic: tutorial
+applies_to:
+- SQL Server 2016
+- SQL Server 2017
+dev_langs:
+- R
 ms.assetid: 47a42e9a-05a0-4a50-871d-de73253cf070
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 85d6174686be113ff9a23985b1d5b5763783c986
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 68e9533509c731b9cddff737a4db120be0dc86b8
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/11/2018
 ---
-# <a name="load-data-into-memory-using-rximport"></a>Charger des données en mémoire à l’aide de rxImport
+# <a name="load-data-into-memory-using-rximport-sql-and-r-deep-dive"></a>Charger des données dans la mémoire à l’aide de rxImport (SQL et R approfondie)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-La fonction **rxImport** peut être utilisée pour déplacer les données d’une source de données dans une trame de données située dans la mémoire de session de R, ou dans un fichier XDF sur disque. Si vous ne spécifiez pas de fichier de destination, les données sont placées en mémoire sous la forme d’une trame de données.
+Cet article fait partie du didacticiel de présentation approfondie de science des données, sur l’utilisation de [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) avec SQL Server.
 
-Dans cette étape, vous allez apprendre à obtenir des données à partir de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], puis utilisez la fonction rxImport pour placer les données d’intérêt dans un fichier local. De cette façon, vous pouvez les analyser dans le contexte de calcul local à plusieurs reprises, sans devoir réinterroger la base de données.
+Le [rxImport](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rximport) fonction peut être utilisée pour déplacer des données à partir d’une source de données dans une trame de données dans la mémoire de session, ou dans un fichier XDF sur le disque. Si vous ne spécifiez pas de fichier de destination, les données sont placées en mémoire sous la forme d’une trame de données.
 
-## <a name="extract-a-subset-of-data-from-sql-server-to-local-memory"></a>Extraire un sous-ensemble de données de SQL Server vers la mémoire locale
+Dans cette étape, vous apprenez à obtenir des données à partir de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], puis utilisez le **rxImport** afin de placer les données d’intérêt dans un fichier local. De cette façon, vous pouvez les analyser dans le contexte de calcul local à plusieurs reprises, sans devoir réinterroger la base de données.
 
-Supposons que vous souhaitez examiner plus en détail uniquement les individus à haut risque. La table source dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] étant volumineuse, vous allez récupérer uniquement les informations sur les clients à haut risque, et les charger dans une trame de données dans la mémoire de la station de travail locale.
+## <a name="extract-a-subset-of-data-from-sql-server-to-local-memory"></a>Extraire un sous-ensemble de données à partir de SQL Server vers la mémoire locale
+
+Vous avez décidé que vous souhaitez examiner uniquement les personnes risque élevé plus en détail. La table source dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est grande, vous pouvez obtenir les informations concernant uniquement les clients à haut risque. Ensuite, vous chargez les données dans une trame de données dans la mémoire de la station de travail.
 
 1. Réinitialisez le contexte de calcul sur votre station de travail locale.
 
@@ -47,15 +55,15 @@ Supposons que vous souhaitez examiner plus en détail uniquement les individus �
         connectionString = sqlConnString)
     ```
 
-3. Vous utilisez la fonction **rxImport** pour charger les données dans une trame de données située dans la session R locale.
+3. Appelez la fonction [rxImport](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rximport) pour lire les données dans une trame de données dans la session locale de R.
 
     ```R
     highRisk <- rxImport(sqlServerProbDS)
     ```
 
-    Si l’opération réussit, le message d’état suivant s’affiche : « Lignes lues : 35, Nombre total de lignes traitées : 35, Durée totale du segment : 0,036 seconde ».
+    Si l’opération a réussi, vous devez voir un message d’état comme celle-ci : « lignes lues : 35, traités lignes Total : 35, temps Total de segment : 0.036 secondes »
 
-4. Les observations sur les clients à haut risque se trouvant maintenant dans une trame de données en mémoire, vous pouvez utiliser différentes fonctions R pour manipuler cette trame de données. Pour cet exemple, vous pouvez classer les clients en fonction de leur score de risque et afficher ceux qui présentent le risque le plus élevé.
+4. Maintenant que les observations à haut risque sont d’une trame de données en mémoire, vous pouvez utiliser diverses fonctions R pour manipuler la trame de données. Par exemple, vous pouvez classer les clients par leur score de risque et imprimer la liste des clients qui présentent le risque le plus élevé.
 
     ```R
     orderedHighRisk <- highRisk[order(-highRisk$ccFraudProb),]
@@ -81,21 +89,17 @@ Supposons que vous souhaitez examiner plus en détail uniquement les individus �
 
 ## <a name="more-about-rximport"></a>En savoir plus sur rxImport
 
-Vous pouvez utiliser rxImport non seulement à déplacer les données, mais pour transformer les données en cours de lecture. Par exemple, vous pouvez spécifier le nombre de caractères pour les colonnes à largeur fixe, fournir une description des variables, définir des niveaux pour les colonnes de facteur et même créer des niveaux à utiliser après l’importation.
+Vous pouvez utiliser **rxImport** non seulement pour déplacer des données, mais aussi pour transformer les données pendant leur lecture. Par exemple, vous pouvez spécifier le nombre de caractères pour les colonnes à largeur fixe, fournir une description des variables, définir des niveaux pour les colonnes de facteur et même créer des niveaux à utiliser après l’importation.
 
-La fonction rxImport assigne des noms de variables aux colonnes pendant le processus d’importation, mais vous pouvez indiquer des noms de variables à l’aide de la *colInfo* paramètre, vous pouvez modifier les types de données à l’aide de la *colClasses* paramètre.
+Le **rxImport** fonction assigne des noms de variables aux colonnes pendant le processus d’importation, mais vous pouvez indiquer des noms de variables à l’aide de la *colInfo* paramètre, ou modifier les types de données à l’aide de la *colClasses* paramètre.
 
 En spécifiant des opérations supplémentaires dans le paramètre *transforms* , vous pouvez effectuer un traitement élémentaire sur chaque segment de données lu.
 
 ## <a name="next-step"></a>Étape suivante
 
-[Créer la nouvelle Table SQL Server à l’aide de rxDataStep](../../advanced-analytics/tutorials/deepdive-create-new-sql-server-table-using-rxdatastep.md)
+[Créer une table SQL Server à l’aide de rxDataStep](../../advanced-analytics/tutorials/deepdive-create-new-sql-server-table-using-rxdatastep.md)
 
 ## <a name="previous-step"></a>Étape précédente
 
 [Transformer des données à l’aide de R](../../advanced-analytics/tutorials/deepdive-transform-data-using-r.md)
-
-## <a name="see-also"></a>Voir aussi
-
-[Didacticiels d’apprentissage](../../advanced-analytics/tutorials/machine-learning-services-tutorials.md)
 

@@ -2,27 +2,32 @@
 title: "Planifier et tester le plan de mise à niveau du moteur de base de données | Microsoft Docs"
 ms.custom: 
 ms.date: 07/20/2016
-ms.prod:
-- sql-server-2016
-- sql-server-2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: install-windows
 ms.reviewer: 
-ms.suite: 
-ms.technology: server-general
+ms.suite: sql
+ms.technology:
+- server-general
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 19c5b725-7400-4881-af8f-fd232ca28234
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: cbe7bceca06dd5eef19b56433a8054c20d2e88d2
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+manager: craigg
+ms.openlocfilehash: a10e7d35aa5a72f9dcc7ba34b11b6486fb9ac1cf
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="plan-and-test-the-database-engine-upgrade-plan"></a>Planifier et tester le plan de mise à niveau du moteur de base de données
-  Pour effectuer une mise à niveau réussie de [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] , quelle que soit l’approche, une planification appropriée est nécessaire.  
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+  
+ Pour effectuer une mise à niveau réussie de [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] , quelle que soit l’approche, une planification appropriée est nécessaire.  
   
 ## <a name="release-notes-and-known-upgrade-issues"></a>Notes de publication et problèmes de mise à niveau connus  
  Avant d'effectuer la mise à niveau du [!INCLUDE[ssDE](../../includes/ssde-md.md)], consultez :
@@ -32,7 +37,7 @@ ms.lasthandoff: 11/09/2017
 - [Compatibilité descendante du moteur de base de données SQL Server](../../database-engine/sql-server-database-engine-backward-compatibility.md).  
   
 ## <a name="pre-upgrade-planning-checklist"></a>Liste de vérification pour la planification d’une mise à niveau  
- Avant la mise à niveau du [!INCLUDE[ssDE](../../includes/ssde-md.md)], consultez la liste de vérification suivante et les rubriques associées. Ces rubriques s’appliquent à toutes les mises à jour, quelle que soit la méthode utilisée, et vous aide à déterminer la méthode de mise à niveau la plus appropriée : mise à niveau propagée, mise à niveau de nouvelle installation ou mise à niveau sur place. Par exemple, il se peut que vous ne soyez pas en mesure d’effectuer une mise à niveau sur place ou une mise à niveau propagée si vous mettez à niveau le système d’exploitation, mettez à niveau à partir de SQL Server 2005 ou mettez à niveau à partir d’une version 32 bits de SQL Server. Pour un arbre de décision, voir [Choose a Database Engine Upgrade Method](../../database-engine/install-windows/choose-a-database-engine-upgrade-method.md).  
+ Avant la mise à niveau du [!INCLUDE[ssDE](../../includes/ssde-md.md)], consultez la liste de vérification suivante et les articles associés. Ces articles s’appliquent à toutes les mises à jour, quelle que soit la méthode utilisée, et vous aident à déterminer la méthode de mise à niveau la plus appropriée : mise à niveau propagée, mise à niveau de nouvelle installation ou mise à niveau sur place. Par exemple, il se peut que vous ne soyez pas en mesure d’effectuer une mise à niveau sur place ou une mise à niveau propagée si vous mettez à niveau le système d’exploitation, mettez à niveau à partir de SQL Server 2005 ou mettez à niveau à partir d’une version 32 bits de SQL Server. Pour un arbre de décision, voir [Choose a Database Engine Upgrade Method](../../database-engine/install-windows/choose-a-database-engine-upgrade-method.md).  
   
 -   **Configurations matérielle et logicielle requises :** consultez les configurations matérielle et logicielle requises pour l’installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Vous pouvez les trouver dans l’article suivant : [Configuration matérielle et logicielle requises pour l’installation de SQL Server](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md). Une partie du cycle de planification de toute mise à niveau consiste à prendre en compte la mise à niveau matérielle (un matériel plus récent est plus rapide et peut réduire le travail de gestion des licences, en raison soit du moindre nombre de processeurs, soit de la consolidation de la base de données et du serveur) et la mise à niveau du système d’exploitation. Ces modifications matérielles et logicielles affectent le choix de la méthode de mise à niveau.  
   
@@ -51,7 +56,7 @@ ms.lasthandoff: 11/09/2017
    >[!NOTE]
    >La liste précédente s’applique également à [!INCLUDE[sscurrent](../../includes/sscurrent-md.md)].
   
--   **Composants tiers :** déterminez la compatibilité des composants tiers, telle la sauvegarde intégrée.  
+-   **Composants tiers :** déterminez la compatibilité des composants tiers, comme la sauvegarde intégrée.  
   
 -   **Environnement cible :** vérifiez que votre environnement cible présente les configurations matérielle et logicielle requise, et peut prendre en charge le système d’origine. Par exemple, la mise à niveau peut impliquer la consolidation de plusieurs instances SQL Server en une seule instance [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] nouvelle, ou la virtualisation de votre environnement [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans un cloud privé ou public.  
   
@@ -60,7 +65,7 @@ ms.lasthandoff: 11/09/2017
     > [!NOTE]  
     >  Quand vous mettez à niveau [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] à partir d’une version antérieure de l'édition Enterprise de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], choisissez Enterprise Edition : contrat de licence selon le nombre de cœurs ou Enterprise Edition. Ces éditions Enterprise se différencient uniquement par leur mode de licences. Pour plus d’informations, voir [Compute Capacity Limits by Edition of SQL Server](../../sql-server/compute-capacity-limits-by-edition-of-sql-server.md).  
   
--   **Compatibilité descendante :** consultez la rubrique relative à la compatibilité descendante du moteur de base de données [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] pour connaître les changements de comportement entre [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] et la version de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que vous mettez à niveau. Consultez [SQL Server Database Engine Backward Compatibility](../../database-engine/sql-server-database-engine-backward-compatibility.md).  
+-   **Compatibilité descendante :** consultez l’article relatif à la compatibilité descendante du moteur de base de données [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] pour connaître les changements de comportement entre [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] et la version de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que vous mettez à niveau. Consultez [SQL Server Database Engine Backward Compatibility](../../database-engine/sql-server-database-engine-backward-compatibility.md).  
   
 -   **Conseiller de mise à niveau :**  exécutez le Conseiller de mise à niveau [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] afin de diagnostiquer d’éventuels problèmes susceptibles de bloquer le processus de mise à niveau ou de nécessiter une modification d’applications ou de scripts existants en raison d’une modification avec rupture. [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] contient une nouvelle version du Conseiller de mise à niveau pour aider les clients à préparer la mise à niveau d’un système existant.  Cet outil offre également la possibilité de vérifier vos bases de données existantes pour voir si elles peuvent tirer parti de nouvelles fonctionnalités, telles que les tables d’extension, après la mise à niveau.   
     Vous pouvez télécharger le [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)]Conseiller de mise à niveau  [ici](https://www.microsoft.com/en-us/download/details.aspx?id=48119).  

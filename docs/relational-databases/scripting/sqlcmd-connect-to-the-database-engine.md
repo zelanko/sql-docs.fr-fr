@@ -2,10 +2,14 @@
 title: "Se connecter au moteur de base de données avec sqlcmd | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-scripting
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,19 +21,19 @@ helpviewer_keywords:
 - VIA
 - client protocols [SQL Server]
 ms.assetid: 74b0fb71-7f8e-4171-9431-d07528532524
-caps.latest.revision: "20"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: mightypen
+ms.author: genemi
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 70a15e9d2c32a1a78dfe7bfa1b7452b1aec79287
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 855d0d261f5bf1f405adf2d0b257ce760c91b438
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="sqlcmd---connect-to-the-database-engine"></a>sqlcmd : se connecter au moteur de base de données
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend en charge la communication cliente par le biais du protocole réseau TCP/IP (protocole par défaut) et du protocole des canaux nommés. Le protocole de mémoire partagée est également disponible si le client se connecte à une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)] sur le même ordinateur. Il existe trois méthodes courantes de sélection du protocole. Le protocole utilisé par l’utilitaire **sqlcmd** est déterminé dans l’ordre suivant :  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend en charge la communication cliente par le biais du protocole réseau TCP/IP (protocole par défaut) et du protocole des canaux nommés. Le protocole de mémoire partagée est également disponible si le client se connecte à une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)] sur le même ordinateur. Il existe trois méthodes courantes de sélection du protocole. Le protocole utilisé par l’utilitaire **sqlcmd** est déterminé dans l’ordre suivant :  
   
 -   **sqlcmd** utilise le protocole spécifié dans la chaîne de connexion comme décrit ci-après.  
   
@@ -77,7 +81,7 @@ sqlcmd -S 127.0.0.1,1691
     sqlcmd -S tcp:127.0.0.1,1433  
     ```  
   
--   Connectez-vous à une instance nommée :  
+-   Connectez-vous à une instance nommée :  
   
     ```  
     sqlcmd -S tcp:ComputerA,1691  
@@ -86,7 +90,7 @@ sqlcmd -S 127.0.0.1,1691
   
 ### <a name="to-connect-using-named-pipes"></a>Pour établir la connexion à l'aide de canaux nommés  
   
--   Connectez-vous à l'aide de l'une des syntaxes générales suivantes :  
+-   Connectez-vous à l'aide de l'une des syntaxes générales suivantes :  
   
     ```  
     sqlcmd -S np:\\<computer name>\<pipe name>  

@@ -1,5 +1,5 @@
 ---
-title: sp_attach_single_file_db (Transact-SQL) | Documents Microsoft
+title: sp_attach_single_file_db (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_attach_single_file_db
 - sp_attach_single_file_db_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sp_attach_single_file_db
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_attach_single_file_db
 ms.assetid: 13bd1044-9497-4293-8390-1f12e6b8e952
-caps.latest.revision: "68"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: de907b1bd4a60c4b3419635c22e204af8f581d0c
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 53b3e03d87ff8efb9be90b8cd85b9ce0951c0f40
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spattachsinglefiledb-transact-sql"></a>sp_attach_single_file_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +37,7 @@ ms.lasthandoff: 11/27/2017
   Associe au serveur actif une base de données qui ne possède qu'un seul fichier de données. **sp_attach_single_file_db** ne peut pas être utilisé avec plusieurs fichiers de données.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]Nous vous recommandons d’utiliser CREATE DATABASE *nom_base_de_données* pour attacher à la place. Pour plus d’informations, consultez [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md). N'utilisez pas cette procédure sur une base de données répliquée.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Nous vous recommandons d’utiliser CREATE DATABASE *nom_base_de_données* pour attacher à la place. Pour plus d’informations, consultez [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md). N'utilisez pas cette procédure sur une base de données répliquée.  
   
 > [!IMPORTANT]  
 >  Nous vous recommandons de ne pas attacher ni restaurer de bases de données provenant de sources inconnues ou non approuvées. Ces bases de données peuvent contenir du code malveillant susceptible d'exécuter du code [!INCLUDE[tsql](../../includes/tsql-md.md)] indésirable ou de provoquer des erreurs en modifiant le schéma ou la structure physique des bases de données. Avant d’utiliser une base de données issue d’une source inconnue ou non approuvée, exécutez [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) sur la base de données sur un serveur autre qu’un serveur de production et examinez également le code, notamment les procédures stockées ou le code défini par l’utilisateur, de la base de données.  
@@ -53,7 +56,7 @@ sp_attach_single_file_db [ @dbname= ] 'dbname'
  [  **@dbname=** ] **'***dbname***'**  
  Nom de la base de données à attacher au serveur. Le nom doit être unique. *dbname* est **sysname**, avec NULL comme valeur par défaut.  
   
- [  **@physname=** ] **'***physical_name***'**  
+ [ **@physname=** ] **'***physical_name***'**  
  Nom physique, y compris le chemin d'accès, du fichier de base de données. *physical_name* est **nvarchar (260)**, avec NULL comme valeur par défaut.  
   
 > [!NOTE]  
@@ -65,7 +68,7 @@ sp_attach_single_file_db [ @dbname= ] 'dbname'
  0 (réussite) ou 1 (échec)  
   
 ## <a name="result-sets"></a>Jeux de résultats  
- Aucune  
+ Aucun  
   
 ## <a name="remarks"></a>Notes  
  Utilisez **sp_attach_single_file_db** uniquement sur les bases de données qui ont été préalablement détachées du serveur à l’aide d’explicite **sp_detach_db** opération ou sur des bases de données copiées.  
@@ -77,7 +80,7 @@ sp_attach_single_file_db [ @dbname= ] 'dbname'
   
  N'utilisez pas cette procédure sur une base de données répliquée.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Pour plus d’informations sur la gestion des autorisations lorsqu’une base de données est attachée, consultez [CREATE DATABASE &#40; SQL Server Transact-SQL &#41; ](../../t-sql/statements/create-database-sql-server-transact-sql.md).  
   
 ## <a name="examples"></a>Exemples  
@@ -94,8 +97,8 @@ N'C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Data\Adventure
   
 ## <a name="see-also"></a>Voir aussi  
  [Attacher et détacher une base de données &#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md)   
- [sp_detach_db &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-detach-db-transact-sql.md)   
- [sp_helpfile &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-helpfile-transact-sql.md)   
+ [sp_detach_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-detach-db-transact-sql.md)   
+ [sp_helpfile &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpfile-transact-sql.md)   
  [Procédures stockées système &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

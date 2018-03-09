@@ -2,9 +2,12 @@
 title: "Instantanés de base de données (SQL Server) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/08/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: databases
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,18 +21,18 @@ helpviewer_keywords:
 - database snapshots [SQL Server], about database snapshots
 ms.assetid: 00179314-f23e-47cb-a35c-da6f180f86d3
 caps.latest.revision: "54"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 69680a68ba3656f3bbbaa0515da33cd602d1473f
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: f888c404cf4342e23965d421fcb7855b918b7e25
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="database-snapshots-sql-server"></a>Instantanés de base de données (SQL Server)
-  Une capture instantanée de base de données est une vue statique en lecture seule d’une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (la *base de données source*). Au moment de sa création, l'instantané de base de données est cohérent au niveau transactionnel avec la base de données source. Un instantané de base de données réside toujours sur la même instance de serveur que sa base de données source. Lorsque la base de données source est mise à jour, l'instantané de base de données est mis à jour. Par conséquent, plus l'existence d'un instantané de base de données est longue, plus la probabilité qu'il épuise son espace disque disponible est élevée.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Un instantané de base de données est une vue statique en lecture seule d’une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (la *base de données source*). Au moment de sa création, l'instantané de base de données est cohérent au niveau transactionnel avec la base de données source. Un instantané de base de données réside toujours sur la même instance de serveur que sa base de données source. Lorsque la base de données source est mise à jour, l'instantané de base de données est mis à jour. Par conséquent, plus l'existence d'un instantané de base de données est longue, plus la probabilité qu'il épuise son espace disque disponible est élevée.  
   
  Plusieurs instantanés peuvent exister sur une base de données source donnée. Chaque instantané de base de données existe jusqu'à ce qu'il soit explicitement supprimé par le propriétaire de la base de données.  
   
@@ -109,7 +112,7 @@ ms.lasthandoff: 11/09/2017
 ##  <a name="LimitationsRequirements"></a> Conditions préalables et limitations relatives aux instantanés de base de données  
  **Dans cette section :**  
   
--   [Configuration requise](#Prerequisites)  
+-   [Conditions préalables](#Prerequisites)  
   
 -   [Limitations relatives à la base de données source](#LimitsOnSourceDb)  
   
@@ -119,7 +122,7 @@ ms.lasthandoff: 11/09/2017
   
 -   [Instantanés de base de données avec des groupes de fichiers hors ligne](#OfflineFGs)  
   
-###  <a name="Prerequisites"></a> Configuration requise  
+###  <a name="Prerequisites"></a> Conditions préalables  
  La base de données source, qui peut utiliser n'importe quel mode de récupération, doit respecter les conditions préalables suivantes :  
   
 -   L'instance de serveur doit s'exécuter sur une édition de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui prend en charge les instantanés de base de données. Pour plus d’informations, consultez [Fonctionnalités prises en charge par les éditions de SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
@@ -182,7 +185,7 @@ ms.lasthandoff: 11/09/2017
   
 -   Un instantané hérite des contraintes de sécurité de sa base de données source au moment de la création de l'instantané. Compte tenu que les instantanés sont en lecture seule, les autorisations héritées ne peuvent pas être modifiées, et les modifications d'autorisations apportées à la source ne seront pas répercutées dans les instantanés existants.  
   
--   Un instantané reflète toujours l'état de groupes de fichiers au moment de la création de l'instantané : les groupes de fichiers en ligne demeurent en ligne et les groupes de fichiers hors connexion demeurent hors connexion. Pour plus d'informations, consultez « Instantanés de base de données avec des groupes de fichiers hors ligne », plus loin dans cette rubrique.  
+-   Un instantané reflète toujours l'état de groupes de fichiers au moment de la création de l'instantané : les groupes de fichiers en ligne demeurent en ligne et les groupes de fichiers hors connexion demeurent hors connexion. Pour plus d'informations, consultez « Instantanés de base de données avec des groupes de fichiers hors ligne », plus loin dans cette rubrique.  
   
 -   Si une base de données source se voit affecter l'état RECOVERY_PENDING, ses instantanés peuvent devenir inaccessibles. Toutefois, lorsque le problème affectant la base de données source a été résolu, ses instantanés sont à nouveau accessibles.  
   
@@ -238,7 +241,7 @@ ms.lasthandoff: 11/09/2017
   
 -   [Supprimer un instantané de base de données &#40;Transact-SQL&#41;](../../relational-databases/databases/drop-a-database-snapshot-transact-sql.md)  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Mise en miroir et instantanés de bases de données &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-and-database-snapshots-sql-server.md)  
   
   

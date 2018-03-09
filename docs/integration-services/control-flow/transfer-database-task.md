@@ -1,5 +1,5 @@
 ---
-title: "Tâche de base de données de transfert | Documents Microsoft"
+title: "Transfert de bases de données, tâche | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -21,17 +21,16 @@ f1_keywords:
 helpviewer_keywords:
 - Transfer Database task [Integration Services]
 ms.assetid: b9a2e460-cdbc-458f-8df8-06b8b2de3d67
-caps.latest.revision: 26
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 8806c102eaec2c2540374bfaddc33b76d8f6e584
-ms.openlocfilehash: 29f66d1eeed7e2af0df962b62020169fb2095f6e
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/11/2017
-
+ms.openlocfilehash: 83ba4c606ccf7779f01219fcf69e90d2b3b6dea9
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="transfer-database-task"></a>Tâche de transfert de bases de données
   La tâche de transfert de bases de données transfère une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] entre deux instances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Contrairement aux autres tâches qui ne transfèrent les objets [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qu'en les copiant, la tâche de transfert de base de données peut copier ou déplacer une base de données. Cette tâche peut également servir à copier une base de données sur le même serveur.  
@@ -79,7 +78,7 @@ ms.lasthandoff: 08/11/2017
   
  À l'exécution, la tâche de transfert de base de données se connecte aux serveurs source et destination en utilisant un ou deux gestionnaires de connexions SMO. Lorsque vous créez une copie de base de données sur le même serveur, un seul gestionnaire de connexions SMO est requis. Les gestionnaires de connexions SMO sont configurés indépendamment de la tâche de transfert de bases de données, puis sont référencés dans cette tâche. Les gestionnaires de connexions SMO spécifient le serveur et le mode d'authentification à utiliser lorsque la tâche accède au serveur. Pour plus d'informations, consultez [SMO Connection Manager](../../integration-services/connection-manager/smo-connection-manager.md).  
   
- Vous pouvez définir des propriétés au moyen du concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] ou par programmation.  
+ Vous pouvez définir les propriétés par le biais du concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] ou par programmation.  
   
  Pour plus d'informations sur les propriétés définissables dans le concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] , cliquez sur la rubrique suivante :  
   
@@ -90,7 +89,7 @@ ms.lasthandoff: 08/11/2017
 -   [Définir les propriétés d'une tâche ou d'un conteneur](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
 ## <a name="programmatic-configuration-of-the-transfer-database-task"></a>Configuration par programmation de la tâche de transfert de bases de données  
- Pour plus d'informations sur la définition par programmation de ces propriétés, cliquez sur la rubrique suivante :  
+ Pour plus d'informations sur la définition par programme de ces propriétés, cliquez sur la rubrique suivante :  
   
 -   <xref:Microsoft.SqlServer.Dts.Tasks.TransferDatabaseTask.TransferDatabaseTask>  
   
@@ -112,10 +111,10 @@ ms.lasthandoff: 08/11/2017
   
 ### <a name="options"></a>Options  
  **SourceConnection**  
- Sélectionnez un gestionnaire de connexions SMO dans la liste, ou cliquez sur  **\<nouvelle connexion... >** pour créer une nouvelle connexion au serveur source.  
+ Sélectionnez un gestionnaire de connexions SMO dans la liste ou cliquez sur **\<Nouvelle connexion...>** pour créer une connexion au serveur source.  
   
  **DestinationConnection**  
- Sélectionnez un gestionnaire de connexions SMO dans la liste, ou cliquez sur  **\<nouvelle connexion... >** pour créer une nouvelle connexion au serveur de destination.  
+ Sélectionnez un gestionnaire de connexions SMO dans la liste, ou cliquez sur **\<Nouvelle connexion...>** pour créer une connexion au serveur de destination.  
   
  **DestinationDatabaseName**  
  Spécifiez le nom de la base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur le serveur de destination.  
@@ -214,4 +213,3 @@ ms.lasthandoff: 08/11/2017
  Entrez l'emplacement du partage de fichiers réseau ou cliquez sur le bouton Parcourir pour le rechercher.  
   
  Lors du transfert d'une base de données en mode hors connexion, les fichiers de base de données sont copiés dans l'emplacement du **Partage de fichiers réseau** avant d'être transférés dans l'emplacement **Dossier de destination** .  
-

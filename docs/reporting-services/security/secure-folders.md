@@ -8,9 +8,7 @@ ms.service:
 ms.component: security
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,15 +18,15 @@ helpviewer_keywords:
 - security [Reporting Services], folders
 ms.assetid: 0fd91f77-0143-476b-9af0-87293be78e44
 caps.latest.revision: "34"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ea8213ba1a174a818413d1b4fb8b3009e1e6a58a
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: e7d20035ce370e8e096963afe20083a82eed19a2
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="secure-folders"></a>Dossiers sécurisés
   La sécurité des dossiers constitue la base de la sécurisation de tout autre contenu du serveur de rapports. Étant donné que la sécurité est héritée au sein de la structure de dossiers, vous pouvez désigner de grandes ou de petites sections de la hiérarchie de dossiers afin d'autoriser certains types d'accès.  
@@ -50,7 +48,7 @@ ms.lasthandoff: 12/05/2017
 |Gérer les sources de données|Ajouter de nouveaux éléments de source de données partagée à un dossier et modifier les sources de données partagées existantes.|  
 |Définir la sécurité au niveau des éléments|Créer et modifier des attributions de rôles qui contrôlent l'accès au dossier. Cette tâche doit être utilisée avec les tâches « Afficher les dossiers » ou « Gérer les dossiers ». Si tel n'est pas le cas, elle n'aura aucun effet car l'utilisateur ne pourra pas sélectionner l'élément.|  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Sécuriser des rapports et des ressources](../../reporting-services/security/secure-reports-and-resources.md)   
  [Sécuriser les éléments de source de données partagée](../../reporting-services/security/secure-shared-data-source-items.md)   
  [Octroi d'autorisations sur un serveur de rapports en mode natif](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)  

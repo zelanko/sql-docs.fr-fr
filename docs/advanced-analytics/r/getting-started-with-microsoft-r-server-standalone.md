@@ -2,24 +2,27 @@
 title: Prise en main de Microsoft R Server (autonome) | Microsoft Docs
 ms.custom: 
 ms.date: 10/31/2017
-ms.prod: r-server
 ms.reviewer: 
-ms.suite: 
-ms.technology: r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 52347d0d-ce60-4bb8-98d2-6163e87716b0
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
-ms.openlocfilehash: a0932e10c72166bee4b674ea5df6e80b032e7964
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: b7a9ec054b512e8825bf5cf9208a0c1deb3abbb8
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="getting-started-with-machine-learning-server-standalone"></a>Prise en main de Machine Learning Server (autonome)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
  
 Dans SQL Server 2016, Microsoft R Server (autonome) a permis de mettre le langage R open source populaire dans l’entreprise, pour activer des solutions d’analytique de hautes performances et l’intégration avec d’autres applications d’entreprise.  
 

@@ -15,13 +15,13 @@ ms.assetid: 6a0c9b6a-cf71-4311-82f2-12c445f63935
 caps.latest.revision: "41"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 5d39865f0c5bf683e83cea2f85fb365f0fc9da2e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 16c41c9d1898303b58a40f6acce36968b571b299
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service"></a>Sauvegarde et restauration SQL Server avec le service de stockage d’objets blob Microsoft Azure
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -48,9 +48,9 @@ ms.lasthandoff: 11/17/2017
     > [!IMPORTANT]  
     >  Grâce à l’utilisation d’objets blob de blocs dans [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], vous pouvez distribuer votre jeu de sauvegarde pour prendre en charge des tailles de fichiers de sauvegarde jusqu’à 12,8 To.  
   
--   Archive de sauvegarde : le service de stockage d’objets blob Microsoft Azure offre une meilleure alternative à l’option de stockage sur bande souvent utilisée pour archiver les sauvegardes. Le stockage sur bande peut nécessiter le transport physique vers un emplacement hors site, ainsi que des mesures de protection des supports. En stockant vos sauvegardes dans le service de stockage d’objets blob Microsoft Azure, vous disposez d’une option d’archivage instantanée, hautement disponible et durable.  
+-   Archive de sauvegarde : le service de stockage d’objets blob Microsoft Azure offre une meilleure alternative à l’option de stockage sur bande souvent utilisée pour archiver les sauvegardes. Le stockage sur bande peut nécessiter le transport physique vers un emplacement hors site, ainsi que des mesures de protection des supports. En stockant vos sauvegardes dans le service de stockage d’objets blob Microsoft Azure, vous disposez d’une option d’archivage instantanée, hautement disponible et durable.  
   
--   Aucune surcharge de gestion du matériel avec les services Microsoft Azure. Les services Microsoft Azure gèrent le matériel et assurent la géoréplication pour la redondance et la protection contre les défaillances matérielles.  
+-   Aucune surcharge de gestion du matériel avec les services Microsoft Azure. Les services Microsoft Azure gèrent le matériel et assurent la géoréplication pour la redondance et la protection contre les défaillances matérielles.  
   
 -   Actuellement, pour les instances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] s’exécutant sur un ordinateur virtuel Microsoft Azure, la sauvegarde dans les services de stockage d’objets blob Microsoft Azure peut être réalisée en créant des disques attachés. Toutefois, le nombre de disques que vous pouvez attacher à un ordinateur virtuel Microsoft Azure est limité. Cette limite est de 16 disques pour une instance extra-large et inférieure pour les instances plus petites. En activant une sauvegarde directe dans le stockage d’objets blob Microsoft Azure, vous pouvez contourner la limite de 16 disques.  
   
@@ -67,9 +67,9 @@ ms.lasthandoff: 11/17/2017
   
  **Transferts de données :** les transferts de données entrants vers Microsoft Azure sont gratuits. Les transferts sortants sont facturés en fonction de l'utilisation de la bande passante et calculés selon une échelle graduée spécifique à la région. Pour plus d'informations, consultez la section [Transferts de données](http://go.microsoft.com/fwlink/?LinkId=277061) de l'article Détails de la tarification.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 
-[Bonnes pratiques en matière de sauvegarde SQL Server vers une URL et résolution des problèmes associés](../../relational-databases/backup-restore/sql-server-backup-to-url-best-practices-and-troubleshooting.md)   
+[Meilleures pratiques et dépannage de sauvegarde SQL Server vers une URL](../../relational-databases/backup-restore/sql-server-backup-to-url-best-practices-and-troubleshooting.md)   
 
 [Sauvegarder et restaurer des bases de données système &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md)   
 

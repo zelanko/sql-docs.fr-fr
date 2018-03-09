@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-server
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,15 +18,15 @@ helpviewer_keywords:
 - toolbar
 ms.assetid: 0e709c96-7517-4547-8ef6-5632f8118524
 caps.latest.revision: "14"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 52f17abe22cbfef7c627600081c6afb7e772de73
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 6ada6514fe7efa57bea6e6d0ac6e484d4a4a88a7
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="enable-and-disable-client-side-printing-for-reporting-services"></a>Activer et désactiver l'impression côté client pour Reporting Services
 
@@ -46,7 +44,7 @@ ms.lasthandoff: 12/05/2017
 |La première boîte de dialogue, identique pour tous les navigateurs, vous permet de modifier les propriétés de disposition de base, par exemple l'orientation. Lorsque vous cliquez sur **Imprimer**, l'expérience sera légèrement différente selon le navigateur que vous utilisez.|![ssrs_pdfprint_chrome1](../../reporting-services/report-server/media/ssrs-pdfprint-chrome1.png "ssrs_pdfprint_chrome1")|  
 |Dans Chrome, une boîte de dialogue d’impression détaillée s'ouvre dans le navigateur.   Vous pouvez modifier la configuration d'impression, imprimer et ouvrir la boîte de dialogue d'impression du système d'exploitation.|![ssrs_pdfprint_chrome2](../../reporting-services/report-server/media/ssrs-pdfprint-chrome2.png "ssrs_pdfprint_chrome2") ![ssrs_pdfprint_chrome3.png](../../reporting-services/report-server/media/ssrs-pdfprint-chrome3-png.png "ssrs_pdfprint_chrome3.png")|  
 |Si vous disposez d’une application de lecture de PDF, le bouton d'impression ouvrira une fenêtre d'aperçu du fichier PDF et vous pourrez enregistrer ou imprimer.||  
-|Si vous ne disposez pas d’une application de lecture de PDF, deux expériences utilisateur coexistent :<br /><br /> Le rapport sera affiché automatiquement et utilisera le processus de téléchargement de votre navigateur pour télécharger le fichier PDF.   **Remarque :** plus le rapport est compliqué, plus le délai est long entre le moment où vous cliquez sur **Imprimer** et celui où s’affiche la notification de téléchargement de votre navigateur. Vous pouvez également forcer à nouveau le téléchargement en cliquant sur **Cliquez ici pour afficher le fichier PDF de votre rapport.**.<br /><br /> Forcez le téléchargement PDF en cliquant sur **Cliquez ici pour afficher le fichier PDF de votre rapport.**.|![ssrs_pdfprint_firefox2](../../reporting-services/report-server/media/ssrs-pdfprint-firefox2.png "ssrs_pdfprint_firefox2")|  
+|Si vous ne disposez pas d’une application de lecture de PDF, deux expériences utilisateur coexistent :<br /><br /> Le rapport sera affiché automatiquement et utilisera le processus de téléchargement de votre navigateur pour télécharger le fichier PDF.   **Remarque :** plus le rapport est compliqué, plus le délai est long entre le moment où vous cliquez sur **Imprimer** et celui où s’affiche la notification de téléchargement de votre navigateur. Vous pouvez également forcer à nouveau le téléchargement en cliquant sur **Cliquez ici pour afficher le fichier PDF de votre rapport**.<br /><br /> Forcez le téléchargement PDF en cliquant sur **Cliquez ici pour afficher le fichier PDF de votre rapport**.|![ssrs_pdfprint_firefox2](../../reporting-services/report-server/media/ssrs-pdfprint-firefox2.png "ssrs_pdfprint_firefox2")|  
   
 ##  <a name="bkmk_troubleshoot_clientsideprinting"></a> Résolution des problèmes d'impression côté client  
  Si le bouton d'impression de la barre d'outils de la visionneuse de rapports est désactivé, vérifiez les éléments suivants :  

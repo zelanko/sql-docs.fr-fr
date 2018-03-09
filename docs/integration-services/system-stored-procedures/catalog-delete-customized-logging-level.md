@@ -1,5 +1,5 @@
 ---
-title: Catalog.delete_customized_logging_level | Documents Microsoft
+title: catalog.delete_customized_logging_level | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -13,22 +13,21 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 0aec1e34-f30b-4e5f-bba1-c26665cf2da6
-caps.latest.revision: 5
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: a2c53009bfbd2f0876d4cf0a01cf8fa2b5bc738e
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: e0247caaf6a2a14fc2d3742edbc3c8bae5a3270c
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="catalogdeletecustomizedlogginglevel"></a>Catalog.delete_customized_logging_level
+# <a name="catalogdeletecustomizedlogginglevel"></a>catalog.delete_customized_logging_level
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  Supprime un niveau de journalisation personnalisé existant. Pour plus d’informations sur les niveaux de journalisation personnalisés, consultez [Integration Services &#40; SSIS &#41; Journalisation](../../integration-services/performance/integration-services-ssis-logging.md).  
+  Supprime un niveau de journalisation personnalisée existant. Pour plus d’informations sur les niveaux de journalisation personnalisée, consultez [Journalisation Integration Services &#40;SSIS&#41;](../../integration-services/performance/integration-services-ssis-logging.md).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -38,12 +37,12 @@ delete_customized_logging_level [ @level_name = ] level_name
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [ @level_name =] *nom_niveau*  
- Le nom existants personnalisés de niveau de journalisation à supprimer.  
+ [ @level_name = ] *level_name*  
+ Nom du niveau de journalisation personnalisée existant à supprimer.  
   
- Le *nom_niveau* est **nvarchar (128)**.  
+ *level_name* est de type **nvarchar(128)**.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
   
 ## <a name="return-codes"></a>Codes de retour  
  0 (succès)  
@@ -51,9 +50,9 @@ delete_customized_logging_level [ @level_name = ] level_name
  Lorsque la procédure stockée échoue, elle génère une erreur.  
   
 ## <a name="result-set"></a>Jeu de résultats  
- Aucune  
+ None  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Cette procédure stockée requiert l'une des autorisations suivantes :  
   
 -   L’appartenance au rôle de base de données **ssis_admin**  
@@ -63,7 +62,6 @@ delete_customized_logging_level [ @level_name = ] level_name
 ## <a name="errors-and-warnings"></a>Erreurs et avertissements  
  La liste suivante décrit les conditions provoquant l'échec de la procédure stockée.  
   
--   L’utilisateur n’a pas les autorisations requises.  
+-   L’utilisateur ne dispose pas des autorisations requises.  
   
   
-

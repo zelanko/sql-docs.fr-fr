@@ -8,7 +8,8 @@ ms.service:
 ms.component: sqlxml
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-xml
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -16,19 +17,20 @@ helpviewer_keywords:
 - SQLXMLOLEDB Provider, samples
 - ClientSideXML property
 ms.assetid: fbcefac5-29c9-478b-b0e0-d510b593f446
-caps.latest.revision: "26"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3b4bceef061ed01e922c0c904e2559b812859783
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 635ef9e468c4346c5baa3c2b90a55769e0c658da
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="using-the-sqlxmloledb-provider-sqlxml-40"></a>Utilisation du fournisseur SQLXMLOLEDB (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]Les rubriques de cette section fournissent des exemples d’applications qui illustrent l’utilisation des propriétés spécifiques au fournisseur SQLXMLOLEDB ADO.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+Les rubriques de cette section présentent des exemples d'application ADO qui illustrent l'utilisation des propriétés spécifiques au fournisseur SQLXMLOLEDB.  
   
 ## <a name="application-requirements-for-sqlxmloledb-40-provider"></a>Spécifications de l'application pour le fournisseur SQLXMLOLEDB 4.0  
  Pour créer des exemples fonctionnels qui utilisent SQLXMLOLEDB 4.0, vous devez effectuer les opérations suivantes :  

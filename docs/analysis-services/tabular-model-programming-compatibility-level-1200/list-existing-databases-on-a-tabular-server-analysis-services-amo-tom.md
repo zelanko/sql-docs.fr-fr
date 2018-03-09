@@ -2,15 +2,13 @@
 title: "Liste des bases de données existantes sur un serveur tabulaire (Analysis Services AMO-TOM) | Documents Microsoft"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: ab5eb4b8-6254-442d-a42e-2372c346d260
@@ -19,17 +17,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 25b6f8ef54de536c47b3a5df4a6d8ed3b6d627de
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 3864da736ccdeca7ffa9d6c024748e5cd60b7a5a
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="list-existing-databases-on-a-tabular-server-analysis-services-amo-tom"></a>Liste des bases de données existantes sur un serveur tabulaire (Analysis Services AMO-TOM)
-
-[!INCLUDE[ssas-appliesto-sql2016-later-aas](../../includes/ssas-appliesto-sql2016-later-aas.md)]
-
-Lorsque vous avez un **Server** de l’objet qui est connecté à une instance Analysis Services, vous pouvez itérer **Server.Databases** collection pour répertorier toutes les bases de données hébergées par l’instance des Services d’analyse. 
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Lorsque vous avez un **Server** de l’objet qui est connecté à une instance Analysis Services, vous pouvez itérer **Server.Databases** collection pour répertorier toutes les bases de données hébergées par l’instance des Services d’analyse. 
 
 Le **Server.Databases** collection contient un **base de données** objet pour chaque base de données hébergée sur le serveur, quel que soit le mode de serveur (multidimensionnel ou tabulaire) ou le type de base de données (multidimensionnel, tabulaire pre-1200 ou tabulaire 1200 et versions ultérieures). 
 

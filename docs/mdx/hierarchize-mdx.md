@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords: HIERARCHIZE
@@ -20,11 +20,11 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: e7d6cb02219e05e47d8563ca4f89e3ff8076edf0
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 14719e4ec362b140cee189231f983ac772a567af
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="hierarchize-mdx"></a>Hierarchize (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -42,14 +42,14 @@ Hierarchize(Set_Expression [ , POST ] )
  *Set_Expression*  
  Une expression MDX (Multidimensional Expressions) valide qui retourne un jeu.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Le **Hierarchize** fonction organise les membres du jeu spécifié en ordre hiérarchique. La fonction conserve toujours les doublons.  
   
 -   Si **POST** n’est pas spécifié, la fonction trie les membres d’un niveau dans leur ordre naturel. Leur ordre naturel est l'ordre par défaut des membres dans la hiérarchie lorsque aucune condition de tri n'est spécifiée. Les membres enfants suivent immédiatement leurs membres parents.  
   
 -   Si **POST** est spécifié, le **Hierarchize** fonction trie les membres d’un niveau à l’aide d’un ordre post-naturel. En d'autres termes, les membres enfants précèdent leurs parents.  
   
-## <a name="example"></a>Exemple  
+## <a name="example"></a> Exemple  
  L'exemple ci-dessous remonte d'un niveau vers le membre Canada. Le **Hierarchize** fonction est utilisée pour organiser les membres du jeu spécifié dans l’ordre hiérarchique, ce qui est requis par le **DrillUpMember** (fonction).  
   
 ```  

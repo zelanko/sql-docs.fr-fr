@@ -2,26 +2,29 @@
 title: "Utiliser l’Explorateur d’utilitaire pour gérer l’utilitaire SQL Server | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: maintenance-plans
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 74012c90-b42e-4171-b27a-9c30cf69ff98
 caps.latest.revision: "10"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c14be83d174694f31f5a8cc42fea054b250daf10
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 663d8b3a7f8dbb27813ecbdd3f2aafdb64ed94d5
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="use-utility-explorer-to-manage-the-sql-server-utility"></a>Utiliser l'Explorateur de l'utilitaire pour gérer l'Utilitaire SQL Server
-  L'Explorateur de l'utilitaire, un composant de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], se connecte aux instances de [!INCLUDE[ssDE](../../includes/ssde-md.md)] pour fournir une arborescence de tous les objets dans l'utilitaire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Le volet Contenu de l'Explorateur de l'utilitaire offre plusieurs moyens de consulter les données de synthèse et détaillées sur l'état d'intégrité des instances gérées de SQL Server. L'Explorateur de l'utilitaire fournit également une interface utilisateur pour afficher et gérer des définitions des stratégies. Les fonctions de l'Explorateur de l'utilitaire varient légèrement en fonction des objets dans l'utilitaire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , mais elles comprennent en général des objets, des données et des stratégies gérés par l'utilitaire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Pour plus d’informations, consultez [Fonctionnalités et tâches de l’utilitaire SQL Server](../../relational-databases/manage/sql-server-utility-features-and-tasks.md).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] L’Explorateur de l’utilitaire, un composant de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], se connecte aux instances de [!INCLUDE[ssDE](../../includes/ssde-md.md)] pour fournir une arborescence de tous les objets dans l’utilitaire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Le volet Contenu de l'Explorateur de l'utilitaire offre plusieurs moyens de consulter les données de synthèse et détaillées sur l'état d'intégrité des instances gérées de SQL Server. L'Explorateur de l'utilitaire fournit également une interface utilisateur pour afficher et gérer des définitions des stratégies. Les fonctions de l'Explorateur de l'utilitaire varient légèrement en fonction des objets dans l'utilitaire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , mais elles comprennent en général des objets, des données et des stratégies gérés par l'utilitaire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Pour plus d’informations, consultez [Fonctionnalités et tâches de l’utilitaire SQL Server](../../relational-databases/manage/sql-server-utility-features-and-tasks.md).  
   
 ## <a name="create-utility-control-point"></a>Créer un point de contrôle d'utilitaire  
  Avant de pouvoir utiliser l'utilitaire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , vous devez créer un point de contrôle d'utilitaire. Pour plus d’informations, consultez [Fonctionnalités et tâches de l’utilitaire SQL Server](../../relational-databases/manage/sql-server-utility-features-and-tasks.md) ou [Créer un point de contrôle de l’utilitaire SQL Server &#40;utilitaire SQL Server&#41;](../../relational-databases/manage/create-a-sql-server-utility-control-point-sql-server-utility.md).  
@@ -67,9 +70,9 @@ ms.lasthandoff: 11/09/2017
   
  PowerShell n’offre pas d’aide accessible via la touche F1, mais inclut une applet de commande **Get-Help** qui fournit des informations sur l’utilisation de PowerShell. Pour plus d’informations sur l’utilisation de Get-Help, consultez [Obtenir de l’aide sur SQL Server PowerShell](../../relational-databases/scripting/get-help-sql-server-powershell.md).  
   
-## <a name="see-also"></a>Voir aussi  
- [Fonctionnalités et tâches de l’utilitaire SQL Server](../../relational-databases/manage/sql-server-utility-features-and-tasks.md)   
+## <a name="see-also"></a> Voir aussi  
+ [Fonctionnalités et tâches de l'utilitaire SQL Server](../../relational-databases/manage/sql-server-utility-features-and-tasks.md)   
  [Configurer des stratégies de contrôle d’intégrité &#40;utilitaire SQL Server&#41;](../../relational-databases/manage/configure-health-policies-sql-server-utility.md)   
- [Explorateur d’objets](http://msdn.microsoft.com/library/469ea8e2-79b9-44c8-bb6f-f0e1c5dbf0f2)  
+ [l’Explorateur d’objets](http://msdn.microsoft.com/library/469ea8e2-79b9-44c8-bb6f-f0e1c5dbf0f2)  
   
   

@@ -1,10 +1,13 @@
 ---
 title: "Référence de l’Interface utilisateur (DB2ToSQL) | Documents Microsoft"
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-db2
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 9c7e0a6e50df2e448d63be99d4aefe9bea9e3e5b
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: a5540e2c9a197145db5fbd60250b56a04b74b60e
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="user-interface-reference-db2tosql"></a>Référence de l’Interface utilisateur (DB2ToSQL)
 Cette section inclut des rubriques d’aide pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Migration Assistant (SSMA) pour DB2.  
@@ -31,7 +34,7 @@ Le tableau suivant répertorie les boîtes de dialogue SSMA :
   
 |||  
 |-|-|  
-|Rubrique| Description|  
+|Rubrique|Description|  
 |[Avancées sélection d’objets &#40; DB2ToSQL &#41;](../../ssma/db2/advanced-object-selection-db2tosql.md)|Utilisez le **avancé le sélectionnez objet** boîte de dialogue pour rechercher des objets de base de données à l’aide de critères de filtre, puis activez ou désactivez ces objets.|  
 |[Rapport d’évaluation &#40; DB2ToSQL &#41;](../../ssma/db2/assessment-report-db2tosql.md)|Utilisez le rapport d’évaluation pour afficher les résultats de la conversion d’objets DB2 à [!INCLUDE[tsql](../../includes/tsql_md.md)] syntaxe et pour estimer le temps et la complexité d’une migration vers [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].|  
 |[Connexion à la base de données DB2 &#40; DB2ToSQL &#41;](../../ssma/db2/connecting-to-db2-database-db2tosql.md)|Utilisez le **se connecter à DB2** boîte de dialogue se connecter à la base de données DB2 que vous souhaitez migrer.|  

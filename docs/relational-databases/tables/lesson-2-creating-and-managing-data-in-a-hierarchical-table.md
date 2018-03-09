@@ -2,9 +2,12 @@
 title: "Leçon 2 : Création et gestion de données dans une table hiérarchique | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: tables
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -12,18 +15,18 @@ applies_to: SQL Server 2016
 helpviewer_keywords: HierarchyID
 ms.assetid: 95f55cff-4abb-4c08-97b3-e3ae5e8b24e2
 caps.latest.revision: "10"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 36428e80f9a3b6378bc9d95c20eae0fbf64a9218
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 2650a8b35801747ae9a3b84fb048bcbeab724121
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="lesson-2-creating-and-managing-data-in-a-hierarchical-table"></a>Leçon 2 : Création et gestion de données dans une table hiérarchique
-Dans la leçon 1, vous avez modifié une table existante pour utiliser le type de données **hierarchyid** et vous avez rempli la colonne **hierarchyid** avec la représentation des données existantes. Dans cette leçon, vous allez utiliser les méthodes hiérarchiques pour créer une nouvelle table et y insérer des données. Puis, toujours à l'aide de méthodes hiérarchiques, vous interrogerez et manipulerez ces données.  
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)] Dans la leçon 1, vous avez modifié une table existante pour utiliser le type de données **hierarchyid** et vous avez rempli la colonne**hierarchyid** avec la représentation des données existantes. Dans cette leçon, vous allez utiliser les méthodes hiérarchiques pour créer une nouvelle table et y insérer des données. Puis, toujours à l'aide de méthodes hiérarchiques, vous interrogerez et manipulerez ces données.  
   
 Cette leçon contient les rubriques suivantes :  
   
@@ -40,7 +43,7 @@ Cette leçon contient les rubriques suivantes :
 ## <a name="next-task-in-lesson"></a>Tâche suivante de la leçon  
 [Création d'une table à l'aide du type de données hierarchyid](../../relational-databases/tables/lesson-2-1-creating-a-table-using-the-hierarchyid-data-type.md)  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [Leçon 1 : conversion d'une table en une structure hiérarchique](../../relational-databases/tables/lesson-1-converting-a-table-to-a-hierarchical-structure.md)  
   
   

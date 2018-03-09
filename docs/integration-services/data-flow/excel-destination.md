@@ -1,5 +1,5 @@
 ---
-title: Excel Destination | Documents Microsoft
+title: Destination Excel | Microsoft Docs
 ms.custom: 
 ms.date: 03/17/2017
 ms.prod: sql-non-specified
@@ -21,17 +21,16 @@ helpviewer_keywords:
 - destinations [Integration Services], Excel
 - Excel [Integration Services]
 ms.assetid: 37c07446-1264-4814-b4f5-9c66d333bb24
-caps.latest.revision: 49
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
-ms.openlocfilehash: 69a0a8b907fcb45cf6ecd0576fb6fba04775d237
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/17/2017
-
+ms.openlocfilehash: be3ad15259560b7b69a9a375affab2940376a22e
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="excel-destination"></a>Destination Excel
   La destination Excel charge les données dans des feuilles de calcul ou des plages au sein de classeurs [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel.  
@@ -61,7 +60,7 @@ ms.lasthandoff: 08/17/2017
   
 -   **Enregistrement des données mémo (ntext)**. Avant de pouvoir enregistrer des chaînes dépassant 255 caractères dans une colonne Excel, le pilote doit reconnaître le type de données de la colonne de destination comme **mémo** et non comme **chaîne**. Si la table de destination contient déjà des lignes de données, les premières lignes échantillonnées par le pilote doivent contenir au moins une instance d'une valeur dépassant 255 caractères dans la colonne mémo. Si la table de destination est créée pendant la conception du package ou au moment de l'exécution, l'instruction CREATE TABLE doit utiliser LONGTEXT (ou un de ses synonymes) comme type de données de la colonne mémo.  
   
--   **Types de données système**. Le pilote Excel ne reconnaît qu'un ensemble limité de types de données. Par exemple, toutes les colonnes numériques sont interprétées comme doubles (DT_R8) et toutes les colonnes de type chaîne (autres que les colonnes mémo) comme des chaînes Unicode de 255 caractères (DT_WSTR). [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] mappe les types de données Excel de la façon suivante :  
+-   **Types de données système**. Le pilote Excel ne reconnaît qu'un ensemble limité de types de données. Par exemple, toutes les colonnes numériques sont interprétées comme doubles (DT_R8) et toutes les colonnes de type chaîne (autres que les colonnes mémo) comme des chaînes Unicode de 255 caractères (DT_WSTR). [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] mappe les types de données Excel de la façon suivante :  
   
     -   Numérique    virgule flottante double précision (DT_R8)  
   
@@ -77,9 +76,9 @@ ms.lasthandoff: 08/17/2017
   
 -   **Conversions des types de données et des longueurs**. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ne convertit pas implicitement les types de données. Par conséquent, peut-être devrez-vous utiliser les transformations de conversion de données et de colonne dérivée pour convertir explicitement des données Excel avant chargement dans une destination non-Excel ou pour convertir des données non-Excel avant chargement dans une destination Excel. Dans ce cas, il peut être utile de créer le package initial à l'aide de l'Assistant Importation et Exportation, qui configure les conversions nécessaires automatiquement. Des exemples de conversions pouvant être requises sont présentées ci-dessous :  
   
-    -   conversion entre des colonnes Unicode Excel de type chaîne et des colonnes non-Unicode de type chaîne avec des pages de codes spécifiques ;  
+    -   conversion entre des colonnes Unicode Excel de type chaîne et des colonnes non-Unicode de type chaîne avec des pages de codes spécifiques ;  
   
-    -   conversion entre des colonnes Excel de type chaîne de 255 caractères et des colonnes de type chaîne de longueurs différentes ;  
+    -   conversion entre des colonnes Excel de type chaîne de 255 caractères et des colonnes de type chaîne de longueurs différentes ;  
   
     -   conversion entre des colonnes numériques Excel à double précision et des colonnes numériques d'autres types.  
   
@@ -88,25 +87,25 @@ ms.lasthandoff: 08/17/2017
   
  La destination Excel comporte une entrée normale et une sortie d'erreur.  
   
- Vous pouvez définir des propriétés au moyen du concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] ou par programmation.  
+ Vous pouvez définir les propriétés par le biais du concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] ou par programmation.  
   
  La boîte de dialogue **Éditeur avancé** reflète toutes les propriétés qui peuvent être définies par programmation. Pour plus d'informations sur les propriétés définissables dans la boîte de dialogue **Éditeur avancé** ou par programmation, cliquez sur l'une des rubriques suivantes :  
   
 -   [Propriétés communes](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
--   [Propriétés personnalisées d'Excel](../../integration-services/data-flow/excel-custom-properties.md)  
+-   [Propriétés personnalisées d’Excel](../../integration-services/data-flow/excel-custom-properties.md)  
   
  Pour plus d’informations sur la façon de définir des propriétés, consultez [Définir les propriétés d’un composant de flux de données](../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md).  
   
-## <a name="related-tasks"></a>Tâches associées  
+## <a name="related-tasks"></a>Related Tasks  
   
--   [Établir une connexion à un classeur Excel](../../integration-services/connection-manager/connect-to-an-excel-workbook.md)  
+-   [Se connecter à un classeur Excel](../../integration-services/connection-manager/connect-to-an-excel-workbook.md)  
   
 -   [Effectuer une boucle dans des fichiers et des tables Excel en utilisant un conteneur de boucles Foreach](../../integration-services/control-flow/loop-through-excel-files-and-tables-by-using-a-foreach-loop-container.md)  
   
 -   [Définir les propriétés d’un composant de flux de données](../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)  
   
-## <a name="related-content"></a>Contenu connexe  
+## <a name="related-content"></a>Contenu associé  
   
 -   Entrée de blog, [Excel in Integration Services, Part 1 of 3: Connections and Components](http://go.microsoft.com/fwlink/?LinkId=217674), sur dougbert.com  
   
@@ -143,7 +142,7 @@ ms.lasthandoff: 08/17/2017
  Cliquez sur **Nouveau** pour ouvrir la boîte de dialogue **Créer une table** . Lorsque vous cliquez sur **OK**, la boîte de dialogue crée le fichier Excel vers lequel le **Gestionnaire de connexions Excel** pointe.  
   
  **Afficher les données existantes**  
- Affiche un aperçu des résultats à l’aide de la boîte de dialogue **Visualiser les résultats de la requête** . L'aperçu peut afficher jusqu'à 200 lignes.  
+ Affichez un aperçu des résultats à l’aide de la boîte de dialogue **Visualiser les résultats de la requête** . L'aperçu peut afficher jusqu'à 200 lignes.  
   
 > [!WARNING]  
 >  Si le **Gestionnaire de connexions Excel** que vous avez sélectionné pointe vers un fichier Excel qui n’existe pas, vous voyez un message d’erreur quand vous cliquez sur ce bouton.  
@@ -165,8 +164,8 @@ ms.lasthandoff: 08/17/2017
  **Générer la requête**  
  Utilisez la boîte de dialogue **Générateur de requêtes** pour construire la requête SQL visuellement.  
   
- **Parcourir**  
- Utilisez la boîte de dialogue **Ouvrir** pour accéder au fichier contenant le texte de la requête SQL.  
+ **...**  
+ Dans la boîte de dialogue **Ouvrir** , localisez le fichier qui contient le texte de la requête SQL.  
   
  **Analyser la requête**  
  Vérifiez la syntaxe du texte de la requête.  
@@ -214,11 +213,10 @@ ms.lasthandoff: 08/17/2017
  **Appliquer**  
  Appliquez l'option de gestion des erreurs aux cellules sélectionnées.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Source Excel](../../integration-services/data-flow/excel-source.md)   
- [Integration Services &#40; SSIS &#41; Variables](../../integration-services/integration-services-ssis-variables.md)   
+ [Variables Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md)   
  [Flux de données](../../integration-services/data-flow/data-flow.md)   
- [Utilisation des fichiers Excel avec la tâche de Script](../../integration-services/extending-packages-scripting-task-examples/working-with-excel-files-with-the-script-task.md)  
+ [Utilisation de fichiers Excel avec la tâche de script](../../integration-services/extending-packages-scripting-task-examples/working-with-excel-files-with-the-script-task.md)  
   
   
-

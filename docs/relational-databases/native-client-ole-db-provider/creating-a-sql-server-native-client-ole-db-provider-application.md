@@ -8,7 +8,7 @@ ms.service:
 ms.component: native-client-ole-db-provider
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - OLE DB, creating applications
 ms.assetid: f3ae6815-f32d-4913-a1a2-2ba2f20cfd88
 caps.latest.revision: "31"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fc7e0c3b21625501b0538d03f5fbf507643e78d3
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 68fb2398633deb91e596e46170e87606345ca236
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="creating-a-sql-server-native-client-ole-db-provider-application"></a>Création d'une application de fournisseur OLE DB de SQL Server Native Client
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -44,15 +44,15 @@ ms.lasthandoff: 11/17/2017
   
 ## <a name="in-this-section"></a>Dans cette section  
   
--   [Établissement d’une connexion à une source de données](../../relational-databases/native-client-ole-db-provider/establishing-a-connection-to-a-data-source.md)  
+-   [L’établissement d’une connexion à une Source de données](../../relational-databases/native-client-ole-db-provider/establishing-a-connection-to-a-data-source.md)  
   
 -   [Exécution d’une commande](../../relational-databases/native-client-ole-db-provider/executing-a-command.md)  
   
--   [Traitement des résultats](../../relational-databases/native-client-ole-db-provider/processing-results.md)  
+-   [Le traitement des résultats](../../relational-databases/native-client-ole-db-provider/processing-results.md)  
   
--   [Présentation des propriétés OLE DB](../../relational-databases/native-client-ole-db-provider/about-ole-db-properties.md)  
+-   [À propos d’OLE DB, propriétés](../../relational-databases/native-client-ole-db-provider/about-ole-db-properties.md)  
   
--   [Utilisation de la clause OUTPUT avec OLE DB dans SQL Server Native Client](../../relational-databases/native-client-ole-db-provider/using-the-output-clause-with-ole-db-in-sql-server-native-client.md)  
+-   [À l’aide de la Clause OUTPUT avec OLE DB dans SQL Server Native Client](../../relational-databases/native-client-ole-db-provider/using-the-output-clause-with-ole-db-in-sql-server-native-client.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [SQL Server Native Client &#40;OLE DB&#41;](../../relational-databases/native-client/ole-db/sql-server-native-client-ole-db.md)  

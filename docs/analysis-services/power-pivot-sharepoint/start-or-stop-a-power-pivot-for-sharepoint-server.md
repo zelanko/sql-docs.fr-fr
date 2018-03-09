@@ -2,16 +2,13 @@
 title: "Démarrer ou arrêter un PowerPivot pour SharePoint Server | Documents Microsoft"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: power-pivot-sharepoint
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e38e6366-9f20-4db0-b2a8-da7d5adf00eb
@@ -20,14 +17,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: a262f8ac21748942f36a74773eab898ee321ae57
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 72fb8e7c0f964fe140082d9aed5748b98440fac3
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="start-or-stop-a-power-pivot-for-sharepoint-server"></a>Démarrer ou arrêter un serveur PowerPivot pour SharePoint
-  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] et une instance de [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] fonctionnent ensemble sur le même serveur d’applications local, pour assurer le traitement coordonné des données et demandes dans une batterie de serveurs SharePoint.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Service système et une [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] instance fonctionnent ensemble sur le même serveur d’applications local pour prendre en charge la demande coordonné et le traitement des données dans une batterie de serveurs SharePoint.  
   
  Cette rubrique contient les sections suivantes :  
   

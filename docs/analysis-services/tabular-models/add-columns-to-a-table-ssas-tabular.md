@@ -1,35 +1,33 @@
 ---
-title: "Ajouter des colonnes à une Table (SSAS tabulaire) | Documents Microsoft"
+title: "Ajouter des colonnes à une table | Documents Microsoft"
 ms.custom: 
-ms.date: 03/01/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.date: 02/21/2018
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5974a3cc-caf8-4558-8836-6e3c24b1ee23
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: ef9aaa80dba9212e9fb22af7a1701bb6b3f17eb5
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 5b5d09c35fcdfa2def6ec78422c1f4d40caa3ef3
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/23/2018
 ---
-# <a name="add-columns-to-a-table-ssas-tabular"></a>Ajouter des colonnes à une table (SSAS Tabulaire)
-  Cette rubrique explique comment ajouter des colonnes à une table existante.  
+# <a name="add-columns-to-a-table"></a>Ajouter des colonnes à une table
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+Cet article décrit comment ajouter des colonnes à une table existante.  
   
-## <a name="add-columns-from-the-data-source"></a>Ajouter des colonnes à partir de la source de données  
+## <a name="add-columns-from-the-datasource"></a>Ajouter des colonnes de la source de données  
  Lorsque vous utilisez l'Assistant Importation de table pour importer des données depuis une table de source de données, une table est créée dans le modèle qui inclut toutes les colonnes de la table source, ou si vous choisissez de filtrer certaines colonnes à l'aide de la fonctionnalité Afficher un aperçu et filtrer, seulement les colonnes et les données filtrées que vous sélectionnez. Vous pouvez aussi écrire une requête SQL qui spécifie uniquement certaines colonnes à importer. Vous pouvez toutefois déterminer ultérieurement si une table source possède des colonnes supplémentaires à ajouter à la table de modèle, ou si vous devez ajouter une colonne calculée avec des valeurs dérivées d'une formule DAX.  
   
  Si, par exemple, lorsque vous avez initialement effectué une importation à partir d'une source de données, vous avez utilisé la fonctionnalité Afficher un aperçu et filtrer dans l'Assistant Importation de table afin de sélectionner un nombre limité de colonnes de la table source, vous déterminez plus tard que vous devez ajouter une autre colonne qui existe au niveau de la table source, mais qui n'existe pas encore dans la table de modèle. Par exemple, une nouvelle colonne AdjustedProfit a été ajoutée à la table FactSales au niveau de la source de données, et vous souhaitez maintenant ajouter la même colonne AdjustedProfit et des données à la table Sales dans le modèle.  
@@ -49,7 +47,7 @@ ms.lasthandoff: 11/17/2017
 2.  Dans la boîte de dialogue **Modifier les propriétés de la table** , dans la fenêtre d’aperçu de la table, sélectionnez la colonne source à ajouter, puis cliquez sur OK. Les colonnes déjà incluses dans la définition de la table sont déjà activées.  
   
 ## <a name="add-a-calculated-column"></a>Ajouter une colonne calculée  
- Dans une colonne calculée, une formule DAX est utilisée pour définir une valeur pour chaque ligne. Par exemple, vous pouvez créer une colonne calculée avec une formule simple (=1) qui ajoute la valeur 1 à chaque ligne. Les colonnes calculées peuvent également avoir des formules plus complexes qui calculent des valeurs en fonction d'autres données dans le modèle. Les colonnes calculées sont couvertes plus en détail dans d'autres rubriques. Pour plus d’informations, consultez [Colonnes calculées &#40;SSAS Tabulaire&#41;](../../analysis-services/tabular-models/ssas-calculated-columns.md).  
+ Dans une colonne calculée, une formule DAX est utilisée pour définir une valeur pour chaque ligne. Par exemple, vous pouvez créer une colonne calculée avec une formule simple (=1) qui ajoute la valeur 1 à chaque ligne. Les colonnes calculées peuvent également avoir des formules plus complexes qui calculent des valeurs en fonction d'autres données dans le modèle. Les colonnes calculées sont couvertes plus en détail dans d'autres rubriques. Pour plus d’informations, consultez [Colonnes calculées](../../analysis-services/tabular-models/ssas-calculated-columns.md).  
   
 #### <a name="to-create-a-calculated-column"></a>Pour créer une colonne calculée  
   
@@ -60,7 +58,7 @@ ms.lasthandoff: 11/17/2017
 2.  Dans la barre de formule, tapez une formule DAX pour ajouter des attributs pour chaque ligne.  
   
 ## <a name="add-a-blank-column"></a>Ajouter une colonne vide  
- Vous pouvez créer une colonne nommée vide dans une table de modèle. Les colonnes vides peuvent être utiles si vous souhaitez coller des données depuis une autre source. Gardez à l'esprit que les données collées sont stockées autrement que les données importées. Pour plus d’informations, consultez [Copier et coller des données &#40;SSAS Tabulaire&#41;](../../analysis-services/tabular-models/ssas-import-data-copy-and-paste-data.md).  
+ Vous pouvez créer une colonne nommée vide dans une table de modèle. Les colonnes vides peuvent être utiles si vous souhaitez coller des données depuis une autre source. Gardez à l'esprit que les données collées sont stockées autrement que les données importées. Pour plus d’informations, consultez [copier et coller des données](../../analysis-services/tabular-models/ssas-import-data-copy-and-paste-data.md).  
   
 #### <a name="to-create-a-named-blank-column"></a>Pour créer une colonne nommée vide  
   
@@ -71,7 +69,7 @@ ms.lasthandoff: 11/17/2017
 2.  Cliquez sur la cellule supérieure, puis tapez un nom et appuyez sur ENTRÉE.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Boîte de dialogue Modifier les propriétés de la table &#40;SSAS&#41;](http://msdn.microsoft.com/library/8d913e83-7246-44cc-8fc7-31729023c0d8)   
- [Changer des mappages de filtres de lignes, de tables ou de colonnes &#40;SSAS Tabulaire&#41;](../../analysis-services/tabular-models/change-table-column-or-row-filter-mappings-ssas-tabular.md)  
+ [Modifier la boîte de dialogue Propriétés de table](http://msdn.microsoft.com/library/8d913e83-7246-44cc-8fc7-31729023c0d8)   
+ [Changer des mappages de filtres de lignes, de tables ou de colonnes](../../analysis-services/tabular-models/change-table-column-or-row-filter-mappings-ssas-tabular.md)  
   
   

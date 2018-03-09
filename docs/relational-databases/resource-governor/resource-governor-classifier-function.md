@@ -2,9 +2,12 @@
 title: Fonction classifieur de Resource Governor | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: resource-governor
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,18 +18,18 @@ helpviewer_keywords:
 - classifier function [SQL Server], overview
 ms.assetid: 64c25012-7068-476f-afa2-0b4f3adde9a4
 caps.latest.revision: "7"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 01c1a57ade59d9bf46c4c1f2f71a5b8c61fd61b5
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: dd888ee38d5afb60fc6a071af2f6e072d31ff290
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
-# <a name="resource-governor-classifier-function"></a>Fonction classifieur de Resource Governor
-  Le processus de classification de Resource Governor [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] affecte les sessions entrantes à un groupe de charge de travail en fonction des caractéristiques de la session. Vous pouvez adapter la logique de classification en entrant une fonction définie par l'utilisateur, appelée fonction classifieur.  
+# <a name="resource-governor-classifier-function"></a>Fonction classifieur du gouverneur de ressources
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Le processus de classification de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Resource Governor affecte les sessions entrantes à un groupe de charge de travail en fonction des caractéristiques de la session. Vous pouvez adapter la logique de classification en entrant une fonction définie par l'utilisateur, appelée fonction classifieur.  
   
 ## <a name="classification"></a>classification.  
  Resource Governor prend en charge la classification des sessions entrantes. La classification est basée sur un jeu de critères écrits par l'utilisateur et contenus dans une fonction. Les résultats de la logique de la fonction permettent à Resource Governor de classer des sessions en groupes de charges de travail existants.  
@@ -88,12 +91,12 @@ ms.lasthandoff: 11/09/2017
 |----------------------|-----------|  
 |Décrit comment créer et tester une fonction définie par l'utilisateur classifieur.|[Créer et tester une fonction classifieur définie par l'utilisateur](../../relational-databases/resource-governor/create-and-test-a-classifier-user-defined-function.md)|  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Resource Governor](../../relational-databases/resource-governor/resource-governor.md)   
  [Activer Resource Governor](../../relational-databases/resource-governor/enable-resource-governor.md)   
  [Pool de ressources de Resource Governor](../../relational-databases/resource-governor/resource-governor-resource-pool.md)   
  [Groupe de charge de travail de Resource Governor](../../relational-databases/resource-governor/resource-governor-workload-group.md)   
- [Configurer Resource Governor à l'aide d'un modèle](../../relational-databases/resource-governor/configure-resource-governor-using-a-template.md)   
+ [Configurer le gouverneur de ressources à l'aide d'un modèle](../../relational-databases/resource-governor/configure-resource-governor-using-a-template.md)   
  [Afficher les propriétés du gouverneur de ressources](../../relational-databases/resource-governor/view-resource-governor-properties.md)  
   
   

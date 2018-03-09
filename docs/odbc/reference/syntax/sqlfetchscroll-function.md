@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a21a5e5b390e0798ed4dd25fba164a710298af00
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: df50946b183bcd7072f12f67b8f0293ac5eef080
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlfetchscroll-function"></a>Fonction SQLFetchScroll
 **Mise en conformité**  
@@ -85,7 +85,7 @@ SQLRETURN SQLFetchScroll(
   
  Pour toutes ces SQLSTATE qui peut retourner SQL_SUCCESS_WITH_INFO ou SQL_ERROR (sauf 01xxx SQLSTATE), SQL_SUCCESS_WITH_INFO est retourné si une erreur se produit sur un ou plusieurs, mais pas toutes, les lignes d’une opération de plusieurs ligne, SQL_ERROR est retourné si une erreur se produit lors d’une opération de ligne unique.  
   
-|SQLSTATE|Erreur| Description|  
+|SQLSTATE|Error|Description|  
 |--------------|-----------|-----------------|  
 |01000|Avertissement général|Message d’information de spécifiques au pilote. (La fonction retourne SQL_SUCCESS_WITH_INFO).|  
 |01004|Données de type chaîne, droite tronquées|Retourné pour une colonne de données binary ou String a entraîné la troncation des caractères non vides ou les données binaires non NULL. S’il s’agissait d’une valeur de chaîne, il a été tronqué à la droite.|  
@@ -164,7 +164,7 @@ SQLRETURN SQLFetchScroll(
   
 |Condition|Première ligne du nouvel ensemble de lignes|  
 |---------------|-----------------------------|  
-|*Avant de démarrer*|1|  
+|*Avant de démarrer*| 1|  
 |*CurrRowsetStart + la RowsetSize*[1]  *\<= LastResultRow*|*CurrRowsetStart + la RowsetSize*[1]|  
 |*CurrRowsetStart + la RowsetSize*[1]*> LastResultRow*|*Après la fin*|  
 |*Après la fin*|*Après la fin*|  
@@ -258,7 +258,7 @@ SQLRETURN SQLFetchScroll(
   
  Si le curseur détecte les lignes ajoutées au jeu de résultats ou supprime des lignes supprimées du jeu de résultats, il apparaît comme s’il détecte ces modifications uniquement lorsqu’il extrait les données. Cela inclut le cas lorsque **SQLFetchScroll** est appelée avec FetchOrientation définie sur SQL_FETCH_RELATIVE et FetchOffset d’extraire le même ensemble de lignes à la valeur 0, mais n’inclut pas le cas lorsque SQLSetPos est appelée avec fOption défini à SQL_REFRESH. Dans ce cas, les données dans les tampons de l’ensemble de lignes sont actualisées, mais pas de nouveau extraits et supprimés les lignes ne sont pas supprimés du jeu de résultats. Par conséquent, lorsqu’une ligne est supprimée à partir d’ou insérée dans l’ensemble de lignes en cours, le curseur ne modifie pas les tampons de l’ensemble de lignes. Au lieu de cela, il détecte la modification lorsqu’il lit tout ensemble de lignes précédemment inclus la ligne supprimée ou inclut désormais la ligne insérée.  
   
- Exemple :  
+ Exemple :  
   
 ```  
 // Fetch the next rowset.  
@@ -289,9 +289,9 @@ SQLFetchScroll(hstmt, SQL_FETCH_RELATIVE, 0);
 |Insérer une ligne entre les lignes 21 et 22|PRIOR|0|11 à 20|  
 |Insérer une ligne entre les lignes 20 et 21|PRIOR|0|ligne insérée de 12 à 20,|  
 |Supprimer une ligne 21|RELATIVE|0|22 à 31<sup>[2]</sup>|  
-|Supprimer une ligne 21|RELATIVE|1|22 à 31.|  
+|Supprimer une ligne 21|RELATIVE| 1|22 à 31.|  
 |Insérer une ligne entre les lignes 21 et 22|RELATIVE|0|21, ligne insérée, 22 à 29|  
-|Insérer une ligne entre les lignes 21 et 22|RELATIVE|1|22 à 31.|  
+|Insérer une ligne entre les lignes 21 et 22|RELATIVE| 1|22 à 31.|  
 |Supprimer une ligne 21|ABSOLUTE|21|22 à 31<sup>[2]</sup>|  
 |Supprimer une ligne 22|ABSOLUTE|21|21, 23 et 31.|  
 |Insérer une ligne entre les lignes 21 et 22|ABSOLUTE|22|Ligne insérée, 22 à 29|  

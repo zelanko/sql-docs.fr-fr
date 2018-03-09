@@ -3,26 +3,28 @@ title: "Considérations de sécurité XML | Documents Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: XML security in ADO
+helpviewer_keywords:
+- XML security in ADO
 ms.assetid: fadbd38e-6e7b-4b81-96ea-85169c664374
-caps.latest.revision: "3"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 05ae3d770184ef47a8a2262dc12d207b1fe121d5
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 78a8dc232e91b07795e4e16326cb5bb3a2c8dc94
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="xml-security-considerations"></a>Considérations de sécurité XML
 Les méthodes Open sur l’objet Recordset et ADO enregistrer ne sont pas considérés comme des opérations sécurisées pour s’exécuter dans Internet Explorer. Par conséquent, si ces méthodes sont utilisées dans un code de script qui s’exécute dans une application ou un contrôle qui est hébergé dans un navigateur, la configuration de sécurité du navigateur aura un effet sur son comportement.  

@@ -2,10 +2,14 @@
 title: "Gérer la mise en forme du code | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-scripting
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -25,19 +29,19 @@ helpviewer_keywords:
 - text [SQL Server]
 - unindenting code
 ms.assetid: ddbac4d2-6bdc-4467-a352-e869ec880eed
-caps.latest.revision: "23"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ae6040d1ba9e14a4e77135a1f1f99ebf350aa33d
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 96141b7eb166d6ffd8e082890ce005a0cc52c650
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="manage-code-formatting"></a>Gérer la mise en forme du code
-  Dans l'éditeur, vous pouvez mettre en forme votre code avec des mises en retrait, du texte caché, des URL, etc. Vous pouvez également mettre en forme automatiquement votre code à l'aide de la fonction de mise en retrait intelligente.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Dans l’éditeur, vous pouvez mettre en forme votre code avec des mises en retrait, du texte masqué, des URL, etc. Vous pouvez également mettre en forme automatiquement votre code à l'aide de la fonction de mise en retrait intelligente.  
   
 ## <a name="indenting"></a>Mise en retrait  
  Vous avez le choix entre trois styles de mise en retrait du texte. Vous pouvez également spécifier le nombre d'espaces correspondant à une mise en retrait ou une tabulation, et déterminer si l'Éditeur de code applique la mise en retrait au moyen de tabulations ou d'espaces.  
@@ -54,7 +58,7 @@ ms.lasthandoff: 11/09/2017
   
 5.  Cliquez sur l'une des options suivantes :  
   
-    -   **None**. Le curseur se positionne au début de la ligne suivante.  
+    -   **Aucune**. Le curseur se positionne au début de la ligne suivante.  
   
     -   **Bloc**. Le curseur aligne la ligne suivante sur la ligne précédente.  
   

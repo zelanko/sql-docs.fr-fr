@@ -2,26 +2,30 @@
 title: Surveillance de R Services | Microsoft Docs
 ms.custom: 
 ms.date: 11/29/2016
-ms.prod: sql-server-2016
 ms.reviewer: 
-ms.suite: 
-ms.technology: r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ffbdb114-e7a5-4145-bb8f-2eb97720ea96
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: c717473de44124ae8ea1736de371069a155c6b0a
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: ffbeefeea8fd1c90a9ea09c0094cd81877a797ea
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="monitoring-r-services"></a>Surveillance de R Services
-  Cette section fournit des informations sur les tâches de surveillance suivantes que vous devez généralement effectuer quand vous utilisez [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] :  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
+Cette section fournit des informations sur les tâches de surveillance suivantes que vous devez généralement effectuer quand vous utilisez [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] :  
   
 -   Identification des ressources serveur utilisées par R  
   

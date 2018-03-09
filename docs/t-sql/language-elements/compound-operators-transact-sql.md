@@ -8,27 +8,29 @@ ms.service:
 ms.component: t-sql|language-elements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 applies_to:
 - Azure SQL Database
 - SQL Server (starting with 2008)
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - compound operators
 - compound operators, described
 ms.assetid: 5072fe91-02d3-42a7-831f-756eff714a17
-caps.latest.revision: "9"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: fb178876814b5b83f839dda1d2a266948c43d8d2
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 38aa65b196288c120dea5766fe29c64d58af0216
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="compound-operators-transact-sql"></a>Opérateurs composés (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -39,14 +41,14 @@ ms.lasthandoff: 11/18/2017
   
 |Opérateur|Lien vers des informations  supplémentaires|Action|  
 |--------------|------------------------------|------------|  
-|+=|[+= &#40; Ajouter une affectation &#41; &#40; Transact-SQL &#41;](../../t-sql/language-elements/add-equals-transact-sql.md)|Ajoute un montant à la valeur d'origine et affecte la valeur d'origine au résultat.|  
-|-=|[-= &#40; Soustraire affectation &#41; &#40; Transact-SQL &#41;](../../t-sql/language-elements/subtract-equals-transact-sql.md)|Soustrait un montant de la valeur d'origine et affecte la valeur d'origine au résultat.|  
-|*=|[&#42; = &#40; Assignation de multiplication &#41; &#40; Transact-SQL &#41;](../../t-sql/language-elements/multiply-equals-transact-sql.md)|Multiplie par un montant et affecte la valeur d'origine au résultat.|  
-|/=|[&#40; assignation de division &#41; &#40; Transact-SQL &#41;](../../t-sql/language-elements/divide-equals-transact-sql.md)|Divise par un montant et affecte la valeur d'origine au résultat.|  
+|+=|[+= &#40;Add Assignment&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/add-equals-transact-sql.md)|Ajoute un montant à la valeur d'origine et affecte la valeur d'origine au résultat.|  
+|-=|[-= &#40;Subtract Assignment&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/subtract-equals-transact-sql.md)|Soustrait un montant de la valeur d'origine et affecte la valeur d'origine au résultat.|  
+|*=|[&#42;= &#40;Multiply Assignment&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/multiply-equals-transact-sql.md)|Multiplie par un montant et affecte la valeur d'origine au résultat.|  
+|/=|[&#40;Divide Assignment&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/divide-equals-transact-sql.md)|Divise par un montant et affecte la valeur d'origine au résultat.|  
 |%=|[Assignation de modulo &#40; Transact-SQL &#41;](../../t-sql/language-elements/modulo-equals-transact-sql.md)|Divise par un montant et affecte la valeur d'origine au modulo.|  
-|&=|[& = &#40; Assignation de bits AND &#41; &#40; Transact-SQL &#41;](../../t-sql/language-elements/bitwise-and-equals-transact-sql.md)|Effectue une opération de bits AND et affecte la valeur d'origine au résultat.|  
+|&=|[&= &#40;Bitwise AND Assignment&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/bitwise-and-equals-transact-sql.md)|Effectue une opération de bits AND et affecte la valeur d'origine au résultat.|  
 |^=|[^ = &#40; Opérateur de bits OR exclusif affectation &#41; &#40; Transact-SQL &#41;](../../t-sql/language-elements/bitwise-exclusive-or-equals-transact-sql.md)|Effectue une opération de bits OR exclusive et affecte la valeur d'origine au résultat.|  
-|&#124;=|[&#124; = &#40; Opérateur de bits OR affectation &#41; &#40; Transact-SQL &#41;](../../t-sql/language-elements/bitwise-or-equals-transact-sql.md)|Effectue une opération de bits OR et affecte la valeur d'origine au résultat.|  
+|&#124;=|[&#124;= &#40;Bitwise OR Assignment&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/bitwise-or-equals-transact-sql.md)|Effectue une opération de bits OR et affecte la valeur d'origine au résultat.|  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -104,7 +106,7 @@ SELECT @x8 AS Bitwise_OR;
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Opérateurs &#40; Transact-SQL &#41;](../../t-sql/language-elements/operators-transact-sql.md)   
+ [Operators &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
  [Opérateurs de bits &#40; Transact-SQL &#41;](../../t-sql/language-elements/bitwise-operators-transact-sql.md)  
   
   

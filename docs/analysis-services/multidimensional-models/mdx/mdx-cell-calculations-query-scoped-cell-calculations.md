@@ -2,35 +2,33 @@
 title: "Création de calculs de cellules au niveau de requête (MDX) | Documents Microsoft"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - WITH keyword
 - query-scoped cell calculations [MDX]
 ms.assetid: 45987daa-4400-41e9-add7-2428fd75709b
-caps.latest.revision: "30"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: d6b38d88d6a9bf5ba180a9023a962199633a6a4b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 34ef680e855c0a6b29363923ba6984189a4e9119
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="mdx-cell-calculations---query-scoped-cell-calculations"></a>Calculs de cellules MDX - calculs de cellules d’étendue de requête
-  Pour décrire les cellules calculées au sein du contexte d’une requête, vous pouvez utiliser le mot clé **WITH** dans la syntaxe MDX (Multidimensional Expressions). La syntaxe du mot clé **WITH** est la suivante :  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+Pour décrire les cellules calculées au sein du contexte d’une requête, vous pouvez utiliser le mot clé **WITH** dans la syntaxe MDX (Multidimensional Expressions). La syntaxe du mot clé **WITH** est la suivante :  
   
 ```  
 WITH CELL CALCULATION Cube_Name.CellCalc_Identifier  String_Expression  
@@ -63,6 +61,6 @@ WITH CELL CALCULATION Cube_Name.CellCalc_Identifier  String_Expression
  Par ailleurs, la syntaxe MDX traite la formule de calcul chaque fois qu'une requête MDX impliquant les cellules comprises dans la définition de cellules calculées est adressée au cube. Ce traitement se produit quelle que soit la portée de création.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Instruction CREATE CELL CALCULATION &#40;MDX&#41;](../../../mdx/mdx-data-definition-create-cell-calculation.md)  
+ [CRÉER une instruction de calcul de cellule &#40; MDX &#41;](../../../mdx/mdx-data-definition-create-cell-calculation.md)  
   
   

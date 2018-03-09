@@ -1,5 +1,5 @@
 ---
-title: "Comment gérer un Service de capture de données modifiées à partir de la Console du Concepteur de capture de données modifiées | Documents Microsoft"
+title: "Guide pratique pour gérer un service CDC à partir de la console CDC Designer| Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -13,17 +13,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: c923348d-c6c8-4807-9081-172048e6f5e3
-caps.latest.revision: 6
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 80fc7320cb47a9fc46b331b119ff91ec0a1cdc19
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 29a2b0f8bceb00e0e7afb253d02bc0d0926f54a4
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="how-to-manage-a-cdc-service-from-the-cdc-designer-console"></a>Procédure : gérer un service de capture de données modifiées à partir de la console du concepteur CDC
   Cette procédure décrit comment utiliser la console du concepteur CDC pour gérer un service de capture de données modifiées.  
@@ -51,4 +50,3 @@ ms.lasthandoff: 08/03/2017
  D'autres tâches de service de capture de données modifiées s'effectuent à l'aide de la console de configuration du service de capture de données modifiées. Pour plus d'informations sur les tâches que vous pouvez effectuer dans la console de configuration du service, consultez l'aide en ligne fournie avec la console de configuration du service.  
   
   
-

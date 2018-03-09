@@ -1,14 +1,15 @@
 ---
 title: ORDER BY, Clause (Transact-SQL) | Documents Microsoft
 ms.custom: 
-ms.date: 08/11/2017
+ms.date: 12/13/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: 
 ms.component: t-sql|queries
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -18,7 +19,8 @@ f1_keywords:
 - BY_TSQL
 - ORDER
 - ORDER BY
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - ad-hoc query paging
 - OFFSET clause
@@ -39,16 +41,16 @@ helpviewer_keywords:
 - sort orders [SQL Server], ORDER BY clause
 - FETCH clause
 ms.assetid: bb394abe-cae6-4905-b5c6-8daaded77742
-caps.latest.revision: "68"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: ba5d93e724e11887397fef9a6e3a6a33426c88c6
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: 08805ce7f01b11d9b87c587e543f5dae91734e68
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="select---order-by-clause-transact-sql"></a>Sélectionnez - ORDER BY Clause (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -61,9 +63,12 @@ ms.lasthandoff: 11/17/2017
   
  ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
+> [!NOTE]  
+>  ORDER BY n’est pas pris en charge dans SELECT / INTO ou les instructions CREATE TABLE AS sélectionnez (SACT) [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ou [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].
+
 ## <a name="syntax"></a>Syntaxe  
   
-```tsql  
+```sql  
 -- Syntax for SQL Server and Azure SQL Database  
   
 ORDER BY order_by_expression  
@@ -101,7 +106,7 @@ ORDER BY order_by_expression
  Les noms de colonnes référencés dans la clause ORDER BY doivent correspondre à ceux de colonnes de la liste de sélection ou de colonnes définies dans une table spécifiée dans la clause FROM et ce, sans ambiguïté.  
   
  COLLATE *collation_name*  
- Spécifie que l’opération ORDER BY doit être effectuée en fonction du classement spécifié dans *collation_name*et non conformément au classement de la colonne tel que défini dans la table ou la vue. *collation_name* peut être un nom de classement Windows ou un nom de classement SQL. Pour plus d’informations, consultez [Prise en charge d’Unicode et du classement](../../relational-databases/collations/collation-and-unicode-support.md). COLLATE est applicable uniquement aux colonnes de type **char**, **varchar**, **nchar**, et **nvarchar**.  
+ Spécifie que l’opération ORDER BY doit être effectuée en fonction du classement spécifié dans *collation_name*et non conformément au classement de la colonne tel que défini dans la table ou la vue. *collation_name* peut être un nom de classement Windows ou un nom de classement SQL. Pour plus d’informations, consultez [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md). COLLATE est applicable uniquement aux colonnes de type **char**, **varchar**, **nchar**, et **nvarchar**.  
   
  **ASC** | DESC  
  Spécifie que les valeurs dans la colonne spécifiée doivent être triées par ordre croissant ou décroissant. ASC effectue le tri de la valeur la plus faible à la valeur la plus élevée. DESC effectue le tri de la valeur la plus élevée à la valeur la plus faible. ASC correspond à l'ordre de tri par défaut. Les valeurs NULL sont traitées comme les plus petites valeurs possibles.  
@@ -131,7 +136,7 @@ ORDER BY order_by_expression
  Dans les plans d’exécution de requête, la valeur du nombre de lignes du décalage est affichée dans le **lignes** ou **haut** attribut de l’opérateur de requête TOP.  
   
 ## <a name="best-practices"></a>Bonnes pratiques  
- Évitez de spécifier des entiers dans la clause ORDER BY comme représentations positionnelles des colonnes dans la liste de sélection. Par exemple, bien qu'une instruction telle que `SELECT ProductID, Name FROM Production.Production ORDER BY 2` soit valide, l'instruction n'est pas comprise aussi facilement que celles spécifiant le nom de colonne réel. De plus, les modifications à la liste de sélection, telles que la modification de l'ordre des colonnes ou l'ajout de nouvelles colonnes, requerront la modification de la clause ORDER BY pour éviter des résultats inattendus.  
+ Évitez de spécifier des entiers dans la clause ORDER BY comme représentations positionnelles des colonnes dans la liste de sélection. Par exemple, bien qu'une instruction telle que `SELECT ProductID, Name FROM Production.Production ORDER BY 2` soit valide, l'instruction n'est pas comprise aussi facilement que celles spécifiant le nom de colonne réel. En outre, les modifications apportées à la liste de sélection, telles que la modification de l’ordre des colonnes ou ajouter de nouvelles colonnes, nécessite la modification de la clause ORDER BY afin d’éviter des résultats inattendus.  
   
  Dans une commande SELECT TOP (*N*) instruction, utilisez toujours une clause ORDER BY. Il s'agit de la seule méthode permettant d'indiquer de manière prévisible les lignes qui sont affectées par TOP. Pour plus d’informations, consultez [TOP &#40; Transact-SQL &#41; ](../../t-sql/queries/top-transact-sql.md).  
   
@@ -159,9 +164,9 @@ ORDER BY order_by_expression
   
 -   SELECT DISTINCT  
   
- De plus, lorsqu'une instruction SELECT comprend un opérateur UNION, EXCEPT ou INTERSECT, les noms ou alias de colonne doivent correspondre à ceux spécifiés dans la liste de sélection de la première requête (côté gauche).  
+ En outre, lorsque l’instruction contient une UNION, EXCEPT ou INTERSECT (opérateur), les noms de colonne ou un alias de colonne doivent être spécifiés dans la liste de sélection de la première requête (gauche).  
   
- Dans une requête qui utilise des opérateurs UNION, EXCEPT ou INTERSECT, la clause ORDER BY est autorisée uniquement à la fin de l'instruction. Cette restriction ne s'applique qu'en cas de spécification des opérateurs UNION, EXCEPT et INTERSECT dans une requête de niveau supérieur, et non dans une sous-requête. Consultez la section Exemples qui suit.  
+ Dans une requête qui utilise des opérateurs UNION, EXCEPT ou INTERSECT, la clause ORDER BY est autorisée uniquement à la fin de l'instruction. Cette restriction s’applique uniquement lorsque vous spécifiez l’UNION, EXCEPT et INTERSECT dans une requête de niveau supérieur et non dans une sous-requête. Consultez la section Exemples qui suit.  
   
  La clause ORDER BY n'est pas valide dans les vues, les fonctions incluses, les tables dérivées et les sous-requêtes, sauf si les clauses TOP ou OFFSET et FETCH sont également spécifiées. Lorsque ORDER BY est utilisé dans ces objets, la clause est utilisée uniquement pour déterminer les lignes retournées par la clause TOP ou les clauses OFFSET et FETCH. La clause ORDER BY ne garantit pas des résultats classés lorsque ces constructions sont interrogées, sauf si ORDER BY est également spécifié dans la requête proprement dite.  
   
@@ -267,8 +272,8 @@ ORDER BY ProductID DESC;
   
 ```  
   
-#### <a name="b-specifying-a-ascending-order"></a>B. Spécification d'un ordre croissant  
- L'exemple suivant classe le jeu de résultats selon la colonne `Name` dans l'ordre croissant. Notez que les caractères sont triés par ordre alphabétique, et non par ordre numérique. Autrement dit, 10 arrive avant 2.  
+#### <a name="b-specifying-an-ascending-order"></a>B. Spécification d’un ordre croissant  
+ L'exemple suivant classe le jeu de résultats selon la colonne `Name` dans l'ordre croissant. Les caractères sont triés par ordre alphabétique, pas numériquement. Autrement dit, 10 arrive avant 2.  
   
 ```  
 USE AdventureWorks2012;  
@@ -313,7 +318,7 @@ ORDER BY name COLLATE Latin1_General_CS_AS;
 ```  
   
 ###  <a name="Case"></a>Spécification d’un ordre conditionnel  
- L'exemple suivant utilise l'expression CASE dans une clause ORDER BY pour déterminer de façon conditionnelle l'ordre de tri des lignes d'après la valeur d'une colonne donnée. Dans le premier exemple, la valeur de la colonne `SalariedFlag` de la table `HumanResources.Employee` est évaluée. Les employés pour lesquels `SalariedFlag` a la valeur 1 sont retournés par ordre décroissant d'`BusinessEntityID`. Les employés pour lesquels `SalariedFlag` a la valeur 0 sont retournés par ordre croissant d'`BusinessEntityID`. Dans le deuxième exemple, le jeu de résultats est classé par la colonne `TerritoryName` lorsque la colonne `CountryRegionName` est égale à « United States » et par `CountryRegionName` pour toutes les autres lignes.  
+ Les exemples suivants utilisent l’expression CASE dans une clause ORDER BY pour déterminer de manière conditionnelle l’ordre de tri des lignes en fonction de la valeur d’une colonne donnée. Dans le premier exemple, la valeur de la colonne `SalariedFlag` de la table `HumanResources.Employee` est évaluée. Les employés pour lesquels `SalariedFlag` a la valeur 1 sont retournés par ordre décroissant d'`BusinessEntityID`. Les employés pour lesquels `SalariedFlag` a la valeur 0 sont retournés par ordre croissant d'`BusinessEntityID`. Dans le deuxième exemple, le jeu de résultats est classé par la colonne `TerritoryName` lorsque la colonne `CountryRegionName` est égale à « United States » et par `CountryRegionName` pour toutes les autres lignes.  
   
 ```  
 SELECT BusinessEntityID, SalariedFlag  
@@ -544,14 +549,14 @@ ORDER BY LastName, FirstName;
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Expressions &#40; Transact-SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md)   
  [Classement des fonctions &#40; Transact-SQL &#41;](../../t-sql/functions/ranking-functions-transact-sql.md)   
- [TOP &#40; Transact-SQL &#41;](../../t-sql/queries/top-transact-sql.md)   
+ [TOP &#40;Transact-SQL&#41;](../../t-sql/queries/top-transact-sql.md)   
  [Indicateurs de requête &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md)   
  [À l’exception et INTERSECT &#40; Transact-SQL &#41;](../../t-sql/language-elements/set-operators-except-and-intersect-transact-sql.md)   
- [UNION &#40; Transact-SQL &#41;](../../t-sql/language-elements/set-operators-union-transact-sql.md)   
+ [UNION &#40;Transact-SQL&#41;](../../t-sql/language-elements/set-operators-union-transact-sql.md)   
  [CASE &#40;Transact-SQL&#41;](../../t-sql/language-elements/case-transact-sql.md)  
   
   

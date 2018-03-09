@@ -1,27 +1,31 @@
 ---
 title: "Paramètres (Type de mappage) du projet (MySQLToSQL) | Documents Microsoft"
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-mysql
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
-ms.technology: sql-ssma
+ms.suite: sql
+ms.technology:
+- sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 136fdf6d-657f-447b-af41-49bbc6e0e93e
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 445f69a6c78293f74dfea35f40ea99c380108e72
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 7ca62e82b85d401f99a6e59f6f440d9a6519e58d
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="project-settings-type-mapping-mysqltosql"></a>Paramètres (Type de mappage) du projet (MySQLToSQL)
 Les paramètres de mappage de Type de projet vous permettent de définir des mappages de type par défaut pour le projet SSMA.  
@@ -57,146 +61,146 @@ Le tableau suivant présente le mappage par défaut entre les types de données 
   
 |||  
 |-|-|  
-|**Type de données MySQL**|**Type de données SQL Server**|  
+|**MySQL Data Type**|**Type de données SQL Server**|  
 |bigint|bigint|  
-|bigint [*.. 255]|bigint|  
-|binary|binaire [1]|  
-|binaire [valeur 0.. 1]|binaire [1]|  
-|binaire [2..255]|binaire [*]|  
-|bit|binaire [1]|  
-|bits [0..8]|binaire [1]|  
-|bits [17..24]|binaire [3]|  
-|bits [25..32]|binaire [4]|  
-|bits [33..40]|binaire [5]|  
-|bits [41..48]|binaire [6]|  
-|bits [49..56]|binaire [7]|  
-|bits [57..64]|binaire [8]|  
-|bits [9..16]|binaire [2]|  
+|bigint[*..255]|bigint|  
+|binary|binary[1]|  
+|binaire [valeur 0.. 1]|binary[1]|  
+|binary[2..255]|binary[*]|  
+|bit|binary[1]|  
+|bit[0..8]|binary[1]|  
+|bit[17..24]|binary[3]|  
+|bit[25..32]|binary[4]|  
+|bit[33..40]|binary[5]|  
+|bit[41..48]|binary[6]|  
+|bit[49..56]|binary[7]|  
+|bit[57..64]|binary[8]|  
+|bit[9..16]|binary[2]|  
 |objet BLOB|varbinary(max)|  
-|objet BLOB de [valeur 0.. 1]|varbinary [1]|  
-|objet BLOB [2..8000]|varbinary [*]|  
+|objet BLOB de [valeur 0.. 1]|varbinary[1]|  
+|objet BLOB [2..8000]|varbinary[*]|  
 |objet BLOB [8001.. *]|varbinary(max)|  
 |bool|bit|  
 |boolean|bit|  
-|char|NCHAR [1]|  
-|octets de char|binaire [1]|  
-|octets de char [valeur 0.. 1]|binaire [1]|  
-|octets de char [2..255]|binaire [*]|  
-|Char [valeur 0.. 1]|NCHAR [1]|  
-|Char [2..255]|NCHAR [*]|  
-|caractère|NCHAR [1]|  
-|caractère variable la [valeur 0.. 1]|nvarchar [1]|  
+|char|nchar[1]|  
+|octets de char|binary[1]|  
+|octets de char [valeur 0.. 1]|binary[1]|  
+|octets de char [2..255]|binary[*]|  
+|char[0..1]|nchar[1]|  
+|char[2..255]|nchar[*]|  
+|caractère|nchar[1]|  
+|caractère variable la [valeur 0.. 1]|nvarchar[1]|  
 |caractère variable [2..255]|nvarchar|  
-|caractère [valeur 0.. 1]|NCHAR [1]|  
-|caractère [2..255]|NCHAR [*]|  
+|caractère [valeur 0.. 1]|nchar[1]|  
+|character[2..255]|nchar[*]|  
 |date|date|  
-|datetime|datetime2 [0]|  
-|dec|decimal|  
-|DEC [*.. 65]|Decimal [*] [0]|  
-|DEC [*.. 65][\*.. 30]|Decimal [*] [\*]|  
-|decimal|decimal|  
-|Decimal [*.. 65]|Decimal [*] [0]|  
-|Decimal [*.. 65][\*.. 30]|Decimal [*] [\*]|  
-|double|float [53]|  
-|double précision|float [53]|  
-|double précision [*.. 255][\*.. 30]|numérique [*] [\*]|  
-|double [*.. 255][\*.. 30]|numérique [*] [\*]|  
-|fixe|numeric|  
-|fixe [*.. 65][\*.. 30]|numérique [*] [\*]|  
-|float|float [24]|  
-|float [*.. 255][\*.. 30]|numérique [*] [\*]|  
-|float [*.. 53]|float [53]|  
+|datetime|datetime2[0]|  
+|dec|Décimal|  
+|DEC [*.. 65]|decimal[*][0]|  
+|dec[*..65][\*..30]|decimal[*][\*]|  
+|Décimal|Décimal|  
+|decimal[*..65]|decimal[*][0]|  
+|decimal[*..65][\*..30]|decimal[*][\*]|  
+|double|float[53]|  
+|double précision|float[53]|  
+|double précision [*.. 255][\*.. 30]|numeric[*][\*]|  
+|double[*..255][\*..30]|numeric[*][\*]|  
+|fixe|numérique|  
+|fixed[*..65][\*..30]|numeric[*][\*]|  
+|float|float[24]|  
+|float[*..255][\*..30]|numeric[*][\*]|  
+|float[*..53]|float[53]|  
 |int|int|  
-|int [*.. 255]|int|  
+|int[*..255]|int|  
 |entier|int|  
-|entier [*.. 255]|int|  
+|integer[*..255]|int|  
 |longblob|varbinary(max)|  
-|LONGTEXT|nvarchar(max)|  
+|longtext|nvarchar(max)|  
 |mediumblob|varbinary(max)|  
 |mediumint|int|  
 |mediumint [*.. 255]|int|  
 |mediumtext|nvarchar(max)|  
-|national char|NCHAR [1]|  
-|national char [valeur 0.. 1]|NCHAR [1]|  
-|national char [2..255]|NCHAR [*]|  
-|caractères nationaux|NCHAR [1]|  
-|variable de caractères nationaux|nvarchar [1]|  
-|caractères nationaux faisant varier la [valeur 0.. 1]|nvarchar [1]|  
-|caractères nationaux varying [2..4000]|nvarchar [*]|  
+|national char|nchar[1]|  
+|national char [valeur 0.. 1]|nchar[1]|  
+|national char [2..255]|nchar[*]|  
+|caractères nationaux|nchar[1]|  
+|variable de caractères nationaux|nvarchar[1]|  
+|caractères nationaux faisant varier la [valeur 0.. 1]|nvarchar[1]|  
+|caractères nationaux varying [2..4000]|nvarchar[*]|  
 |variable de caractères nationaux [4001.. *]|nvarchar(max)|  
-|caractères nationaux [valeur 0.. 1]|NCHAR [1]|  
-|caractères nationaux [2..255]|NCHAR [*]|  
-|national varchar|nvarchar [1]|  
-|varchar national [valeur 0.. 1]|nvarchar [1]|  
-|national varchar [2..4000]|nvarchar [*]|  
+|caractères nationaux [valeur 0.. 1]|nchar[1]|  
+|caractères nationaux [2..255]|nchar[*]|  
+|national varchar|nvarchar[1]|  
+|varchar national [valeur 0.. 1]|nvarchar[1]|  
+|national varchar [2..4000]|nvarchar[*]|  
 |national varchar [4001.. *]|nvarchar(max)|  
-|nchar|NCHAR [1]|  
-|NCHAR varchar|nvarchar [1]|  
-|NCHAR, varchar [valeur 0.. 1]|nvarchar [1]|  
-|NCHAR, varchar [2..4000]|nvarchar [*]|  
+|NCHAR|nchar[1]|  
+|NCHAR varchar|nvarchar[1]|  
+|NCHAR, varchar [valeur 0.. 1]|nvarchar[1]|  
+|NCHAR, varchar [2..4000]|nvarchar[*]|  
 |NCHAR varchar [4001.. *]|nvarchar(max)|  
-|NCHAR [valeur 0.. 1]|NCHAR [1]|  
-|NCHAR [2..255]|NCHAR [*]|  
-|numeric|numeric|  
-|numérique [*.. 65]|numérique [*] [0]|  
-|numérique [*.. 65][\*.. 30]|numérique [*] [\*]|  
-|nvarchar|nvarchar [1]|  
-|nvarchar [valeur 0.. 1]|nvarchar [1]|  
-|nvarchar [2..4000]|nvarchar [*]|  
-|nvarchar [4001.. *]|nvarchar(max)|  
-|real|float [53]|  
-|Real [*.. 255][\*.. 30]|numérique [*] [\*]|  
+|nchar[0..1]|nchar[1]|  
+|nchar[2..255]|nchar[*]|  
+|numérique|numérique|  
+|numérique [*.. 65]|numeric[*][0]|  
+|numeric[*..65][\*..30]|numeric[*][\*]|  
+|nvarchar|nvarchar[1]|  
+|nvarchar[0..1]|nvarchar[1]|  
+|nvarchar [2..4000]|nvarchar[*]|  
+|nvarchar[4001..*]|nvarchar(max)|  
+|real|float[53]|  
+|real[*..255][\*..30]|numeric[*][\*]|  
 |Série|bigint|  
 |smallint|smallint|  
-|smallint [*.. 255]|smallint|  
+|smallint[*..255]|smallint|  
 |texte|nvarchar(max)|  
-|texte de [valeur 0.. 1]|nvarchar [1]|  
-|texte [2..4000]|nvarchar [*]|  
-|texte [4001.. *]|nvarchar(max)|  
+|text[0..1]|nvarchar[1]|  
+|texte [2..4000]|nvarchar[*]|  
+|text[4001..*]|nvarchar(max)|  
 |time|time|  
-|timestamp|datetime|  
-|tinyblob|varbinary [255]|  
+|TIMESTAMP|datetime|  
+|tinyblob|varbinary[255]|  
 |tinyint|smallint|  
-|tinyint [*.. 255]|smallint|  
-|tinytext|nvarchar [255]|  
+|tinyint[*..255]|smallint|  
+|tinytext|nvarchar[255]|  
 |bigint non signé|bigint|  
 |bigint non signé [*.. 255]|bigint|  
-|dec non signé|decimal|  
-|non signé dec [*.. 65]|Decimal [*] [0]|  
-|non signé dec [*.. 65][\*.. 30]|Decimal [*] [\*]|  
-|décimal non signé|decimal|  
-|décimal non signé [*.. 65]|Decimal [*] [0]|  
-|décimal non signé [*.. 65][\*.. 30]|Decimal [*] [\*]|  
-|double non signé|float [53]|  
-|non signée double précision|float [53]|  
-|non signé double précision [*.. 255][\*.. 30]|numérique [*] [\*]|  
-|non signé double [*.. 255][\*.. 30]|numérique [*] [\*]|  
-|non signé fixe|numeric|  
-|non signé fixe [*.. 65][\*.. 30]|numérique [*] [\*]|  
-|float non signé|float [24]|  
-|non signé float [*.. 255][\*.. 30]|numérique [*] [\*]|  
-|non signé float [*.. 53]|float [53]|  
+|dec non signé|Décimal|  
+|non signé dec [*.. 65]|decimal[*][0]|  
+|non signé dec [*.. 65][\*.. 30]|decimal[*][\*]|  
+|décimal non signé|Décimal|  
+|décimal non signé [*.. 65]|decimal[*][0]|  
+|décimal non signé [*.. 65][\*.. 30]|decimal[*][\*]|  
+|double non signé|float[53]|  
+|non signée double précision|float[53]|  
+|non signé double précision [*.. 255][\*.. 30]|numeric[*][\*]|  
+|non signé double [*.. 255][\*.. 30]|numeric[*][\*]|  
+|non signé fixe|numérique|  
+|non signé fixe [*.. 65][\*.. 30]|numeric[*][\*]|  
+|float non signé|float[24]|  
+|non signé float [*.. 255][\*.. 30]|numeric[*][\*]|  
+|non signé float [*.. 53]|float[53]|  
 |nombre entier non signé|bigint|  
 |entier [*.. 255]|bigint|  
 |entier non signé|bigint|  
 |entier non signé [*.. 255]|bigint|  
 |mediumint non signé|int|  
 |non signé mediumint [*.. 255]|int|  
-|numérique non signé|numeric|  
-|non signé numérique [*.. 65]|numérique [*] [0]|  
-|non signé numérique [*.. 65][\*.. 30]|numérique [*] [\*]|  
-|non signé réel|float [53]|  
-|non signé réel [*.. 255[[\*.. 30]|numérique [*] [\*]|  
+|numérique non signé|numérique|  
+|non signé numérique [*.. 65]|numeric[*][0]|  
+|non signé numérique [*.. 65][\*.. 30]|numeric[*][\*]|  
+|non signé réel|float[53]|  
+|non signé réel [*.. 255[[\*.. 30]|numeric[*][\*]|  
 |smallint non signé|int|  
 |smallint non signé [*.. 255]|int|  
 |tinyint non signé|tinyint|  
 |tinyint non signée [*.. 255]|tinyint|  
-|varbinary [valeur 0.. 1]|varbinary [1]|  
-|varbinary [2..8000]|varbinary [*]|  
-|varbinary [8001.. *]|varbinary(max)|  
-|varchar [valeur 0.. 1]|nvarchar [1]|  
-|varchar [2..4000]|nvarchar [*]|  
-|varchar [4001.. *]|nvarchar(max)|  
+|varbinary [valeur 0.. 1]|varbinary[1]|  
+|varbinary [2..8000]|varbinary[*]|  
+|varbinary[8001..*]|varbinary(max)|  
+|varchar[0..1]|nvarchar[1]|  
+|varchar[2..4000]|nvarchar[*]|  
+|varchar[4001..*]|nvarchar(max)|  
 |year|smallint|  
 |année [2..2]|smallint|  
 |année [4..4]|smallint|  

@@ -8,22 +8,25 @@ ms.service:
 ms.component: t-sql|spatial-geography
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: TSQL
-helpviewer_keywords: CurveToLineWithTolerance method (geometry)
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- CurveToLineWithTolerance method (geometry)
 ms.assetid: 96871075-1998-4cd9-86b1-3fc55577aee4
-caps.latest.revision: "16"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: caa3a00f6ed962122288fa0d71a4f2d2f92bd6f7
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: 9fd46759735549e06a25544ee04a4db356464916
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="curvetolinewithtolerance-geometry-data-type"></a>CurveToLineWithTolerance (type de données geometry)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -38,10 +41,10 @@ Retourne une approximation polygonale d’une **geometry** instance qui contient
 ```  
   
 ## <a name="arguments"></a>Arguments  
- *tolérance de panne*  
+ *tolerance*  
  Est un **double** expression qui définit l’erreur maximale entre le segment d’arc de cercle d’origine et son approximation linéaire.  
   
- *relatif*  
+ *relative*  
  Est un **bool** expression qui indique s’il faut utiliser un maximum relatif pour l’écart. Lorsque la valeur relative est définie sur False (0), une valeur maximale absolue est définie pour l'écart d'une approximation linéaire. Si la valeur relative est True (1), la tolérance est calculée sous la forme d'un produit du paramètre de tolérance et du diamètre du rectangle englobant pour l'objet spatial.  
   
 ## <a name="return-types"></a>Types de retour  
@@ -62,7 +65,7 @@ Retourne une approximation polygonale d’une **geometry** instance qui contient
 |Instance géométrique vide|Vide **GeometryCollection** instance|  
 |**Point** et **MultiPoint**|**Point** instance|  
 |**MultiPoint**|**Point** ou **MultiPoint** instance|  
-|**CircularString**, **CompoundCurve**, ou **LineString**|**LineString** instance|  
+|**CircularString**, **CompoundCurve**, or **LineString**|**LineString** instance|  
 |**MultiLineString**|**LineString** ou **MultiLineString** instance|  
 |**CurvePolygon** et **polygone**|**Polygone** instance|  
 |**MultiPolygon**|**Polygone** ou **MultiPolygon** instance|  

@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_help_log_shipping_secondary_database
 - sp_help_log_shipping_secondary_database_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sp_help_log_shipping_secondary_database
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_help_log_shipping_secondary_database
 ms.assetid: 11ce42ca-d3f1-44c8-9cac-214ca8896b9a
-caps.latest.revision: "28"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 705a2600f0012716a529925f2ec97b2685e2195f
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 8bb243bd5d35293df828be305dba20cb405ad926
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sphelplogshippingsecondarydatabase-transact-sql"></a>sp_help_log_shipping_secondary_database (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,10 +50,10 @@ sp_help_log_shipping_secondary_database
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@secondary_database =** ] '*secondary_database*'  
+ [ **@secondary_database =** ] '*secondary_database*'  
  Nom de la base de données secondaire. *secondary_database* est **sysname**, sans valeur par défaut.  
   
- [  **@secondary_id =** ] '*secondary_id*'  
+ [ **@secondary_id =** ] '*secondary_id*'  
  ID du serveur secondaire dans la configuration d'envoi de journaux. *secondary_id* est **uniqueidentifier** et ne peut pas être NULL.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
@@ -79,7 +82,7 @@ sp_help_log_shipping_secondary_database
 |**buffer_count**|Nombre total de mémoires tampons utilisées par l'opération de sauvegarde ou de restauration.|  
 |**max_transfer_size**|Taille, en octets, de la demande d'entrée ou de sortie maximale émise par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à l'unité de sauvegarde.|  
 |**restore_threshold**|Nombre de minutes pouvant s'écouler entre les opérations de restauration avant qu'une alerte ne soit générée.|  
-|**l’argument threshold_alert**|L’alerte à déclencher lorsque le seuil de restauration est dépassé.|  
+|**threshold_alert**|L’alerte à déclencher lorsque le seuil de restauration est dépassé.|  
 |**threshold_alert_enabled**|Détermine si les alertes de seuil de restauration sont activées.<br /><br /> 1 = Activé.<br /><br /> 0 = Désactivées.|  
 |**last_copied_file**|Nom de fichier du dernier fichier de sauvegarde copié sur le serveur secondaire.|  
 |**last_copied_date**|Heure et date de la dernière copie sur le serveur secondaire.|  
@@ -95,12 +98,12 @@ sp_help_log_shipping_secondary_database
   
  **sp_help_log_shipping_secondary_database** doit être exécuté à partir de la **master** base de données sur le serveur secondaire.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Seuls les membres de la **sysadmin** rôle serveur fixe peut exécuter cette procédure.  
   
 ## <a name="see-also"></a>Voir aussi  
- [sp_help_log_shipping_secondary_primary &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-help-log-shipping-secondary-primary-transact-sql.md)   
- [À propos de la copie des journaux des transactions &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+ [sp_help_log_shipping_secondary_primary &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-log-shipping-secondary-primary-transact-sql.md)   
+ [À propos de journaux de transaction &#40; SQL Server &#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [Procédures stockées système &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

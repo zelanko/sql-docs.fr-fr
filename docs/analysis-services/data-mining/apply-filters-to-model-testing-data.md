@@ -2,15 +2,13 @@
 title: "Appliquer des filtres pour modéliser les données de test | Documents Microsoft"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
 ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,19 +16,20 @@ helpviewer_keywords:
 - filtering input rows [Analysis Services]
 - Mining Accuracy Chart [Analysis Services], filtering input rows
 ms.assetid: 9ccc9a23-5597-4b35-a05f-2fc8eb885147
-caps.latest.revision: "44"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 39d35b7421b9d3ddeff5cede6e1539b34b7012c2
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: bb193bb9e90d1bd2b7773c2a1bd2f237e7fa0135
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="apply-filters-to-model-testing-data"></a>Appliquer des filtres aux données de test du modèle
-  Quand vous spécifiez une source de données externe à utiliser pour tester un modèle, vous pouvez éventuellement appliquer un filtre pour restreindre les données d’entrée. Par exemple, vous pouvez tester le modèle spécifiquement pour les prédictions sur des clients dans une certaine plage de revenus.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Quand vous spécifiez une source de données externe à utiliser pour tester un modèle, vous pouvez éventuellement appliquer un filtre pour restreindre les données d’entrée. Par exemple, vous pouvez tester le modèle spécifiquement pour les prédictions sur des clients dans une certaine plage de revenus.  
   
  Par exemple, dans le scénario de publipostage ciblé AdventureWorks, vous pouvez créer une expression de filtre telle que la suivante sur ProspectiveBuyer, qui est la table contenant les données de test, et restreindre les cas de test par plage de revenus :  
   
@@ -100,6 +99,6 @@ ms.lasthandoff: 11/17/2017
 ## <a name="see-also"></a>Voir aussi  
  [Choisir et mapper les données de test du modèle](../../analysis-services/data-mining/choose-and-map-model-testing-data.md)   
  [Données de Table à l’aide d’imbriquées comme entrée pour un graphique de précision](../../analysis-services/data-mining/using-nested-table-data-as-an-input-for-an-accuracy-chart.md)   
- [Choisir un type de graphique d’analyse de précision et définir des options de graphique](../../analysis-services/data-mining/choose-an-accuracy-chart-type-and-set-chart-options.md)  
+ [Choisir un Type de graphique d’analyse de précision et le jeu de Options de graphique](../../analysis-services/data-mining/choose-an-accuracy-chart-type-and-set-chart-options.md)  
   
   

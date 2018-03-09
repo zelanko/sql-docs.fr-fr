@@ -2,9 +2,12 @@
 title: "Index de l’élément (DTA) | Documents Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: dta
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -12,18 +15,18 @@ dev_langs: XML
 helpviewer_keywords: Index element (DTA)
 ms.assetid: 447d3964-b387-40f6-9189-71386774c29e
 caps.latest.revision: "18"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3da89d41eeb2c2ce6c859e3e5e93a76eb9e5ab1c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: ca17a222eb07926c89283ce1cc2f47f9412af59d
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="index-element-dta"></a>Index, élément (Assistant Paramétrage de base de données)
-  Contient les informations sur un index que vous souhaitez créer ou supprimer pour une configuration spécifiée par l'utilisateur.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Contient des informations relatives à un index que vous souhaitez créer ou supprimer une configuration spécifiée par l’utilisateur.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -39,7 +42,7 @@ ms.lasthandoff: 11/09/2017
   
 ## <a name="element-attributes"></a>Attributs des éléments  
   
-|Attribut d'index|Type de données|Description|  
+|Attribut d'index|Type de données| Description|  
 |---------------------|---------------|-----------------|  
 |**Cluster**|**boolean**|Ce paramètre est facultatif. Spécifie un index cluster. Défini sur « true » ou « false », par exemple :<br /><br /> `<Index Clustered="true">`<br /><br /> Par défaut, cet attribut est défini sur « false ».|  
 |**Unique**|**boolean**|Ce paramètre est facultatif. Spécifie un index unique Défini sur « true » ou « false », par exemple :<br /><br /> `<Index Unique="true">`<br /><br /> Par défaut, cet attribut est défini sur « false ».|  
@@ -66,8 +69,8 @@ ms.lasthandoff: 11/09/2017
   
 |Relation|Éléments|  
 |------------------|--------------|  
-|**Élément parent**|[Create, élément &#40;Assistant Paramétrage de base de données&#41;](../../tools/dta/create-element-dta.md)<br /><br /> Élément**Drop** . Pour plus d'informations, voir le schéma de l'Assistant Paramétrage du moteur de base de données.|  
-|**Éléments enfants**|[Name, élément pour les index &#40;Assistant Paramétrage de base de données&#41;](../../tools/dta/name-element-for-index-dta.md)<br /><br /> [Column, élément pour les index &#40;Assistant Paramétrage de base de données&#41;](../../tools/dta/column-element-for-index-dta.md)<br /><br /> Élément**PartitionScheme** . Pour plus d'informations, voir le schéma de l'Assistant Paramétrage du moteur de base de données.<br /><br /> Élément**PartitionColumn** . Pour plus d'informations, voir le schéma de l'Assistant Paramétrage du moteur de base de données.<br /><br /> [Filegroup, élément pour les index &#40;Assistant Paramétrage de base de données&#41;](../../tools/dta/filegroup-element-for-index-dta.md)<br /><br /> Élément**NumberOfReferences** . Pour plus d'informations, voir le schéma de l'Assistant Paramétrage du moteur de base de données.<br /><br /> Élément**PercentUsage** . Pour plus d'informations, voir le schéma de l'Assistant Paramétrage du moteur de base de données.|  
+|**Élément parent**|[Créer, élément &#40; DTA &#41;](../../tools/dta/create-element-dta.md)<br /><br /> Élément **Drop**. Pour plus d'informations, voir le schéma de l'Assistant Paramétrage du moteur de base de données.|  
+|**Éléments enfants**|[Name, élément pour les Index &#40; DTA &#41;](../../tools/dta/name-element-for-index-dta.md)<br /><br /> [Column, élément pour les Index &#40; DTA &#41;](../../tools/dta/column-element-for-index-dta.md)<br /><br /> Élément**PartitionScheme** . Pour plus d'informations, voir le schéma de l'Assistant Paramétrage du moteur de base de données.<br /><br /> Élément**PartitionColumn** . Pour plus d'informations, voir le schéma de l'Assistant Paramétrage du moteur de base de données.<br /><br /> [Filegroup, élément pour les index &#40;Assistant Paramétrage de base de données&#41;](../../tools/dta/filegroup-element-for-index-dta.md)<br /><br /> Élément**NumberOfReferences** . Pour plus d'informations, voir le schéma de l'Assistant Paramétrage du moteur de base de données.<br /><br /> Élément**PercentUsage** . Pour plus d'informations, voir le schéma de l'Assistant Paramétrage du moteur de base de données.|  
   
 ## <a name="example"></a>Exemple  
  Pour obtenir un exemple d’utilisation de cet élément, consultez l’[Exemple de fichier d’entrée XML avec une configuration spécifiée par l’utilisateur &#40;Assistant Paramétrage de base de données&#41;](../../tools/dta/xml-input-file-sample-with-user-specified-configuration-dta.md).  

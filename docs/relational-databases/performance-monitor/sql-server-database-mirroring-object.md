@@ -2,9 +2,12 @@
 title: "SQL Server, objet Database Mirroring | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance-monitor
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,20 +18,20 @@ helpviewer_keywords:
 - Database Mirroring object
 ms.assetid: a27b51ee-7637-4525-9424-bcc16947dc13
 caps.latest.revision: "26"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d4c253139df09955ffd9e191bd7d4c8f3b5b6418
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 751d65e88be75199a2f6f6a892e5cc221b0a8006
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sql-server-database-mirroring-object"></a>SQL Server, objet Database Mirroring
-  L’objet de performance **SQLServer:Database Mirroring** contient des compteurs de performances qui font état d’informations sur la mise en miroir de bases de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Le tableau ci-dessous répertorie les compteurs inclus dans cet objet.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] L’objet de performance **SQLServer:Database Mirroring** contient des compteurs de performances qui font état d’informations sur la mise en miroir de bases de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Le tableau ci-dessous répertorie les compteurs inclus dans cet objet.  
   
-|Nom|Description|  
+|Nom   |Description|  
 |----------|-----------------|  
 |**Octets reçus/s**|Nombre d'octets reçus par seconde.|  
 |**Octets envoyés/s**|Nombre d'octets envoyés par seconde.|  
@@ -55,10 +58,10 @@ ms.lasthandoff: 11/09/2017
 > [!NOTE]  
 >  Sur chaque partenaire, certains des compteurs affichent une valeur de zéro en fonction du rôle que le partenaire détient actuellement.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Les compteurs de performances vous permettent d'analyser les performances de la mise en miroir de bases de données. Par exemple, vous pouvez examiner le compteur **Délai de transaction** pour savoir si la mise en miroir de bases de données a une incidence sur les performances du serveur principal, et vous pouvez examiner les compteurs **File d'attente de restauration par progression** et **File d'attente d'envoi du journal** pour savoir si la mise en miroir de la base de données est synchronisée avec la base de données principale. Vous pouvez examiner le compteur **Octets du journal envoyés/s** pour analyser la quantité de données de journal envoyées par seconde.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Analyser l’utilisation des ressources &#40;Moniteur système&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
   
   

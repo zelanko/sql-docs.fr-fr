@@ -2,9 +2,12 @@
 title: "Stratégies de sauvegarde et de restauration de la réplication transactionnelle et d’instantané | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -20,18 +23,18 @@ helpviewer_keywords:
 - backups [SQL Server replication], transactional replication
 ms.assetid: a8afcdbc-55db-4916-a219-19454f561f9e
 caps.latest.revision: "59"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 215580bbf9feec36fbbdb972ecb2aad6a422a196
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 5d7e9c5e24951afe3a997dce86f10b63b6fcfdf4
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="strategies-for-backing-up-and-restoring-snapshot-and-transactional-replication"></a>Stratégies de sauvegarde et de restauration de la réplication transactionnelle et d'instantané
-  Lors de la conception d'une stratégie de sauvegarde et de restauration de la réplication transactionnelle et d'instantané, vous devez identifier :  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Lors de la conception d’une stratégie de sauvegarde et de restauration de la réplication transactionnelle et d’instantané, vous devez identifier :  
   
 -   les bases de données à sauvegarder ;  
   
@@ -112,7 +115,7 @@ ms.lasthandoff: 11/09/2017
   
      Si l'option est activée, la requête `SELECT DATABASEPROPERTYEX('<PublicationDatabaseName>', 'IsSyncWithBackup')` retourne la valeur 1.  
   
-3.  La sauvegarde restaurée est-elle complète et à jour ? Si elle contient la configuration la plus récente de tous les abonnements et publications, la restauration est alors terminée. Sinon, passez à l’étape 4.  
+3.  La sauvegarde restaurée est-elle complète et à jour ? Si elle contient la configuration la plus récente de tous les abonnements et publications, la restauration est alors terminée. Sinon, passez à l’étape 4.  
   
 4.  Les informations de configuration dans la base de données de publication restaurée ne sont pas à jour. Par conséquent, vous devez vous assurer que les Abonnés ont toutes les commandes en attente dans la base de données de distribution, puis supprimer et recréer la configuration de la réplication.  
   
@@ -153,7 +156,7 @@ ms.lasthandoff: 11/09/2017
   
 #### <a name="publication-database-transactional-replication-with-updating-subscriptions"></a>Base de données de publication : réplication transactionnelle avec des abonnements mis à jour  
   
-1.  Restaurez la dernière sauvegarde de la base de données de publication. Passez à l’étape 2.  
+1.  Restaurez la dernière sauvegarde de la base de données de publication. Passez à l’étape 2.  
   
 2.  Exécutez l'Agent de distribution jusqu'à ce que tous les Abonnés soient synchronisés avec les commandes non traitées dans la base de données de distribution. Vérifiez que toutes les commandes sont remises aux Abonnés via l'onglet **Commandes non distribuées** du moniteur de réplication ou en interrogeant la vue [MSdistribution_status](../../../relational-databases/system-views/msdistribution-status-transact-sql.md) de la base de données de distribution. Passez à l’étape 3.  
   
@@ -164,7 +167,7 @@ ms.lasthandoff: 11/09/2017
 3.  Si vous utilisez les abonnements mis à jour en attente, connectez-vous à chaque Abonné et supprimez toutes les lignes de la table [MSreplication_queue &#40;Transact-SQL&#41;](../../../relational-databases/system-tables/msreplication-queue-transact-sql.md) dans la base de données d’abonnement. Passez à l’étape 4.  
   
     > [!NOTE]  
-    >  Si vous utilisez des abonnements mis à jour en attente et qu'une table quelconque contient des colonnes d'identité, vous devez vérifier que les plages d'identité correctes sont affectées après une restauration. Pour plus d’informations, consultez [Répliquer des colonnes d’identité](../../../relational-databases/replication/publish/replicate-identity-columns.md).  
+    >  Si vous utilisez des abonnements mis à jour en attente et qu'une table quelconque contient des colonnes d'identité, vous devez vérifier que les plages d'identité correctes sont affectées après une restauration. Pour plus d’informations, consultez [ Répliquer des colonnes d’identité](../../../relational-databases/replication/publish/replicate-identity-columns.md).  
   
 4.  Vous devez maintenant vous assurer que les Abonnés possèdent toutes les commandes non traitées de la base de données de distribution, puis appliquer manuellement à la base de données de publication les transactions qui ne sont pas incluses dans la sauvegarde restaurée.  
   
@@ -332,7 +335,7 @@ ms.lasthandoff: 11/09/2017
   
 #### <a name="msdb-database-subscriber"></a>Base de données msdb (Abonné)  
   
-1.  Restaurez la dernière sauvegarde de la base de données **msdb** . L'Abonné utilise-t-il les abonnements par extraction ? Si non, la restauration est terminée. S'il en contient, passez à l'étape 2.  
+1.  Restaurez la dernière sauvegarde de la base de données **msdb** . L'Abonné utilise-t-il les abonnements par extraction ? Si non, la restauration est terminée. S'il en contient, passez à l'étape 2.  
   
 2.  La sauvegarde restaurée est-elle complète et à jour ? Si elle contient la configuration la plus récente de tous les abonnements par extraction, la récupération est terminée. Sinon, passez à l'étape 3.  
   
@@ -348,7 +351,7 @@ ms.lasthandoff: 11/09/2017
   
 2.  Vérifiez que les paramètres et la configuration de réplication de la base de données et ceux de la base de données de publication sont cohérents.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Sauvegarde et restauration des bases de données SQL Server](../../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)   
  [Sauvegarder et restaurer des bases de données répliquées](../../../relational-databases/replication/administration/back-up-and-restore-replicated-databases.md)   
  [Configurer la distribution](../../../relational-databases/replication/configure-distribution.md)   

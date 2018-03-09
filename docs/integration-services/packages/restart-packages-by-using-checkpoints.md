@@ -1,5 +1,5 @@
 ---
-title: "Redémarrer les Packages à l’aide de points de contrôle | Documents Microsoft"
+title: "Redémarrer des packages à l’aide de points de contrôle | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -17,22 +17,21 @@ helpviewer_keywords:
 - restarting packages
 - starting packages
 ms.assetid: 48f2fbb7-8964-484a-8311-5126cf594bfb
-caps.latest.revision: 54
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f5acdf3ae4f27685fce7aab56aab423044491ee1
-ms.openlocfilehash: 5207ffe29852aa5ed10144a3184917704682c49e
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 5630458cf4f925ad1cce7cfab27cedbcf66bf3eb
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="restart-packages-by-using-checkpoints"></a>Redémarrer des packages à l'aide de points de contrôle
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] peut redémarrer les packages ayant échoué à partir du point d'échec, au lieu de reprendre l'exécution du package tout entier. Si un package est configuré pour utiliser des points de contrôle, des informations sur l'exécution du package sont écrites dans un fichier de point de contrôle. Lorsque le package ayant échoué est relancé, le fichier de point de contrôle est utilisé pour redémarrer le package à partir du point d'échec. Si le package est exécuté avec succès, le fichier de point de contrôle est supprimé, puis recréé à l’exécution suivante du package.  
   
- L'utilisation des points de contrôle dans un package offre les avantages suivants :  
+ L'utilisation des points de contrôle dans un package offre les avantages suivants :  
   
 -   Éviter de répéter le téléchargement ascendant et descendant de gros fichiers. Par exemple, un package qui télécharge plusieurs gros fichiers à l'aide d'une tâche FTP pour chaque téléchargement peut être redémarré après l'échec du téléchargement d'un seul fichier, puis ne reprendre le téléchargement que pour ce fichier.  
   
@@ -123,4 +122,3 @@ ms.lasthandoff: 08/03/2017
 -   Article technique, [Redémarrage automatique des packages SSIS après un basculement ou un échec](http://go.microsoft.com/fwlink/?LinkId=200407), sur social.technet.microsoft.com  
   
 -   Article du Support technique Microsoft, [Les points de contrôle SSIS ne sont pas respectés pour les éléments de conteneur de boucles For ou Foreach](http://go.microsoft.com/fwlink/?LinkId=241633), sur le site support.microsoft.com.  
-

@@ -3,32 +3,38 @@ title: pas de fonction (XQuery) | Documents Microsoft
 ms.custom: 
 ms.date: 03/09/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: xquery
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-applies_to: SQL Server
-dev_langs: XML
+applies_to:
+- SQL Server
+dev_langs:
+- XML
 helpviewer_keywords:
 - effective Boolean value [XQuery]
 - fn:not function
 - not function [XQuery]
 - EBV
 ms.assetid: 93dfc377-45f1-4384-9392-560d9331a915
-caps.latest.revision: "33"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1bb8cbe48c85a690312fbddc9f6011df9d371329
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: a0a104fb4904e5df5433de3505cdd8c4e8cf2c4b
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="functions-on-boolean-values---not-function"></a>Fonctions sur des valeurs booléennes - pas de fonction 
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Retourne la valeur TRUE si la valeur booléenne effective de *$arg* a la valeur false et retourne FALSE si la valeur booléenne effective de *$arg* a la valeur true.  
   
@@ -62,7 +68,7 @@ WHERE CatalogDescription.exist('
      ) = 0  
 ```  
   
- Notez les points suivants dans la requête précédente :  
+ Notez les points suivants dans la requête précédente :  
   
 -   Étant donné que le document utilise des espaces de noms, l'exemple recourt à l'instruction WITH NAMESPACES. Une autre option consiste à utiliser le **déclarer l’espace de noms** mot clé dans le [prologue XQuery](../xquery/modules-and-prologs-xquery-prolog.md) pour définir le préfixe.  
   
@@ -96,7 +102,7 @@ WHERE ProductModelID=7
   
 -   Dans la requête, le **pas (@MachineHours)** prédicat retourne la valeur True s’il existe aucune **MachineHours** attribut.  
   
- Voici le résultat obtenu :  
+ Voici le résultat obtenu :  
   
 ```  
 ProductModelID Result   

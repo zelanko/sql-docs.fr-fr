@@ -2,13 +2,13 @@
 title: "Catégorie d’événement notification Events | Documents Microsoft"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: trace-events
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology: analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -16,19 +16,20 @@ helpviewer_keywords:
 - Notification Events event category
 - notification events [Analysis Services]
 ms.assetid: 5f215a7a-dab8-458c-b846-2d261e957849
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 83fd0f1ac0d191cf1be87f448e0b6f0f0562a2c0
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 4359a0599078688729e69bdc033d007fbc504af0
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="notification-events-event-category"></a>Notifications d'événement, catégorie d'événement
-  La catégorie d'événement Notification Events contient les classes d'événements décrites dans le tableau ci-dessous.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+La catégorie d'événement Notification Events contient les classes d'événements décrites dans le tableau ci-dessous.  
   
 |Classe d'événements|ID d'événement|Description|  
 |-----------------|--------------|-----------------|  
@@ -38,6 +39,6 @@ ms.lasthandoff: 11/17/2017
  Pour plus d’informations sur les colonnes associées à chaque classe d’événements Notification Events, consultez [Colonnes de données des événements de notification](../../analysis-services/trace-events/notification-events-data-columns.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Événements de trace Analysis Services](../../analysis-services/trace-events/analysis-services-trace-events.md)  
+ [Événements de Trace Analysis Services](../../analysis-services/trace-events/analysis-services-trace-events.md)  
   
   

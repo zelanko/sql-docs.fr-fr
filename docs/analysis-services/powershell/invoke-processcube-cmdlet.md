@@ -2,13 +2,13 @@
 title: Applet de commande Invoke-ProcessCube | Documents Microsoft
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: powershell
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology: analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: b10ba7c1-8f10-4e72-9626-f9285e4341fd
@@ -17,17 +17,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: b9fe5420b6d226f030d1fd31dfbd42b06a6836f1
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 5564256b3953c9173f433201506204d7ca24677e
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="invoke-processcube-cmdlet"></a>Applet de commande Invoke-ProcessCube
-
-[!INCLUDE[ssas-appliesto-sqlas-all](../../includes/ssas-appliesto-sqlas-all.md)]
-
-  Traitez un cube en utilisant une variable de type de traitement spécifique.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Traitez un cube à l’aide d’une variable de type de traitement spécifique.  
   
 >[!NOTE] 
 >Cet article peut contenir des exemples et des informations obsolètes. Utilisez l’applet de commande Get-Help pour la dernière version.
@@ -59,7 +56,7 @@ ms.lasthandoff: 11/17/2017
 |||  
 |-|-|  
 |Requis ?|true|  
-|Position ?|1|  
+|Position ?| 1|  
 |Valeur par défaut||  
 |Accepter l'entrée de pipeline ?|false|  
 |Accepter les caractères génériques ?|false|  
@@ -94,8 +91,8 @@ ms.lasthandoff: 11/17/2017
   
 |||  
 |-|-|  
-|Entrées|Aucun|  
-|Sorties|Aucun|  
+|Entrées|None|  
+|Sorties|None|  
   
 ## <a name="example-1"></a>Exemple 1  
  `PS SQL SERVER:\sqlas\locahost\default\Databases\AWTEST\Cubes\Adventure Works > Get-Item .| Invoke-ProcessCube–ProcessType:ProcessDefault`  

@@ -2,33 +2,30 @@
 title: "Configurer Analysis Services et délégation contrainte Kerberos (KCD) | Documents Microsoft"
 ms.custom: 
 ms.date: 03/20/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: instances
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology: analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 0006e143-d3ba-4d10-a415-e42c45e2bb0a
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 95a002a015a94f0b6ad69bc2331403604717d778
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 9f1a5ab2c98e45d705be57658238077d88daefb5
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="configure-analysis-services-and-kerberos-constrained-delegation-kcd"></a>Configurer Analysis Services et la délégation Kerberos contrainte (KCD)
-  La délégation Kerberos contrainte (KCD) est un protocole d’authentification que vous pouvez configurer avec l’authentification Windows pour déléguer les informations d’identification du client d’un service à l’autre dans votre environnement. KCD requiert une infrastructure supplémentaire, par exemple un contrôleur de domaine, et une configuration supplémentaire de votre environnement. KCD est condition nécessaire dans certains scénarios qui impliquent des données [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] et [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] avec SharePoint 2016. Dans SharePoint 2016, Excel Services a été déplacé de la batterie de serveurs SharePoint vers un nouveau serveur séparé nommé **Office Online Server**. Le serveur Office Online Server étant séparé, il existe un besoin accru de trouver un mode de délégation les informations d’identification du client dans les scénarios classiques de deux tronçons.  
-  
-||  
-|-|  
-|**[!INCLUDE[applies](../../../includes/applies-md.md)]**  SharePoint 2016|  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+La délégation Kerberos contrainte (KCD) est un protocole d’authentification que vous pouvez configurer avec l’authentification Windows pour déléguer les informations d’identification du client d’un service à l’autre dans votre environnement. KCD requiert une infrastructure supplémentaire, par exemple un contrôleur de domaine, et une configuration supplémentaire de votre environnement. KCD est condition nécessaire dans certains scénarios qui impliquent des données [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] et [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] avec SharePoint 2016. Dans SharePoint 2016, Excel Services a été déplacé de la batterie de serveurs SharePoint vers un nouveau serveur séparé nommé **Office Online Server**. Le serveur Office Online Server étant séparé, il existe un besoin accru de trouver un mode de délégation les informations d’identification du client dans les scénarios classiques de deux tronçons.  
   
 ## <a name="overview"></a>Vue d'ensemble  
  KCD permet à un compte d’emprunter l’identité d’un autre afin de donner accès à des ressources. Le compte empruntant l’identité est un compte de service affecté à une application web ou le compte d’ordinateur d’un serveur web, tandis que le compte dont l’identité est empruntée est un compte d’utilisateur nécessitant un accès aux ressources. KCD opérant au niveau du service, les services sélectionnés sur un serveur peuvent se voir octroyer l’accès par le compte empruntant l’identité, alors que cet accès est refusé à d’autres services, sur le même serveur ou sur d’autres serveurs.  
@@ -126,7 +123,7 @@ ms.lasthandoff: 11/17/2017
   
     -   Rechercher les SPN en double : `SetSPN -X`  
   
-     Le SPN pour l’instance PowerPivot présentera la forme suivante :  
+     Le SPN pour l’instance PowerPivot présentera la forme suivante :  
   
     ```  
     MSSQLSvc.3/\<Fully Qualified Domain Name (FQDN)>:POWERPIVOT  

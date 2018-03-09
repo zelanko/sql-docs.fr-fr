@@ -2,15 +2,13 @@
 title: Objets (XMLA) | Documents Microsoft
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: xmla
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -24,19 +22,19 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 5001e7e5bf73b632432aa761c22a72440999aacc
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 9700a47dc1f2cc5ee071c0dcd78eb827b6c52e7f
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="xml-elements---objects"></a>Éléments XML - objets
-  Le protocole XML for Analysis (XMLA) utilise deux méthodes, **Discover** et **Execute**, pour offrir un moyen standard pour les applications d’accéder aux informations sur une instance de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Étant donné que ces méthodes sont appelées à l’aide du protocole SOAP Simple Object Access Protocol (), ils acceptent des entrées et affichent les sorties au format XML.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Le protocole XML for Analysis (XMLA) utilise deux méthodes, **Discover** et **Execute**, pour offrir un moyen standard pour les applications d’accéder aux informations sur une instance de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Étant donné que ces méthodes sont appelées à l’aide du protocole SOAP Simple Object Access Protocol (), ils acceptent des entrées et affichent les sorties au format XML.  
   
 ## <a name="in-this-section"></a>Dans cette section  
  Les rubriques suivantes décrivent les objets XMLA implémentés par [!INCLUDE[ssAS](../../includes/ssas-md.md)].  
   
-|Méthode| Description|  
+|Méthode|Description|  
 |------------|-----------------|  
 |[Élément DiscoverResponse &#40; XMLA &#41;](../../analysis-services/xmla/xml-elements-objects-discoverresponse.md)|Contient les informations retournées par une instance de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] en réponse à une [Discover](../../analysis-services/xmla/xml-elements-methods-discover.md) appel de méthode.|  
 |[Élément ExecuteResponse &#40; XMLA &#41;](../../analysis-services/xmla/xml-elements-objects-executeresponse.md)|Contient les informations retournées par une instance de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] en réponse à une [Execute](../../analysis-services/xmla/xml-elements-methods-execute.md) appel de méthode.|  

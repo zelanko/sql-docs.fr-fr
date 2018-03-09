@@ -1,5 +1,5 @@
 ---
-title: "Options de demande de profil colonne de modèle (tâche de profilage des données) | Documents Microsoft"
+title: "Options Demande de profil de modèle de colonne (tâche de profilage des données) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -15,17 +15,16 @@ ms.topic: article
 helpviewer_keywords:
 - Data Profiling Task Editor
 ms.assetid: 9ccb8fc5-f65e-41a2-9511-7fa55586eb8b
-caps.latest.revision: 24
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 80c1228faeaaa4012afc0fd27992a2f5cf389f6e
-ms.openlocfilehash: 5083458d015783a0bc82fcc328c7573eb62520c2
-ms.contentlocale: fr-fr
-ms.lasthandoff: 10/05/2017
-
+ms.openlocfilehash: 154dc4da51c19363cb9fd41616e9e89ea3d3ded8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="column-pattern-profile-request-options-data-profiling-task"></a>Options Demande de profil de modèle de colonne (tâche de profilage des données)
   Utilisez le volet **Propriétés de la demande** de la page **Demandes de profil** pour définir les options de la **Demande de profil de modèle de colonne** sélectionnée dans le volet Demandes. Un profil de modèle de colonne signale un ensemble d'expressions régulières qui reflètent le pourcentage spécifié des valeurs dans une colonne de chaîne. Ce profil peut vous aider à identifier des problèmes dans vos données, tels que les chaînes non valides, et peut suggérer des expressions régulières susceptibles d'être utilisées à l'avenir pour la validation de nouvelles valeurs. Par exemple, le profil de motif d’une colonne de codes postaux des États-Unis peut générer les expressions régulières \d{5}-\d{4}, \d{5} et \d{9}. Si vous rencontrez d'autres expressions régulières, il est probable que vos données contiennent des valeurs qui ne sont pas valides ou utilisent un format incorrect.  
@@ -40,7 +39,7 @@ ms.lasthandoff: 10/05/2017
   
 -   **Séparateurs** Par défaut, la liste des séparateurs contient les caractères suivants : espace, tabulation horizontale (\t), nouvelle ligne (\n) et retour chariot (\r). Vous pouvez définir d'autres séparateurs mais vous ne pouvez pas supprimer les séparateurs par défaut.  
   
--   **Symboles** par défaut, la liste des **symboles** contient les caractères suivants : `,.;:-"'~=&/@!?()<>[]{}|#*^%` , ainsi que de la graduation. Par exemple, si les symboles sont "`()-`", la valeur "(425) 123-4567" est marquée sous forme de jeton de la manière suivante : ["(", "425", ")", "123", "-", "4567", ")"].  
+-   **Symboles** Par défaut, la liste des **symboles** contient les caractères suivants : `,.;:-"'~=&/@!?()<>[]{}|#*^%`, ainsi que la coche. Par exemple, si les symboles sont "`()-`", la valeur "(425) 123-4567" est marquée sous forme de jeton de la manière suivante : ["(", "425", ")", "123", "-", "4567", ")"].  
   
  Un caractère ne peut pas être à la fois un séparateur et un symbole.  
   
@@ -150,9 +149,8 @@ ms.lasthandoff: 10/05/2017
   
  Pour plus d'informations, consultez la section « Fonctionnement de l'utilisation de la table des balises » plus haut dans cette rubrique.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Éditeur de tâche de profilage de données &#40;page Général&#41;](../../integration-services/control-flow/data-profiling-task-editor-general-page.md)   
- [Formulaire de profil rapide de Table simple &#40; &#41; de la tâche de profilage des données](../../integration-services/control-flow/single-table-quick-profile-form-data-profiling-task.md)  
+ [Formulaire de profil rapide de table simple &#40;tâche de profilage des données&#41;](../../integration-services/control-flow/single-table-quick-profile-form-data-profiling-task.md)  
   
   
-

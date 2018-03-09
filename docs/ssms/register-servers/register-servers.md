@@ -2,13 +2,18 @@
 title: Inscrire des serveurs | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-registration
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.swb.sqlserverregisteredserver.dhelp
+f1_keywords:
+- sql13.swb.sqlserverregisteredserver.dhelp
 helpviewer_keywords:
 - connections [SQL Server], registered servers
 - registering servers
@@ -16,19 +21,20 @@ helpviewer_keywords:
 - server management [SQL Server], registering servers
 - server registration [SQL Server]
 ms.assetid: c2a2513e-fa09-419c-99e7-a12d57c5a0db
-caps.latest.revision: "29"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: fb40b9101e963e3ba7c712f9911f2963178bcf82
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 4770ad54ceef6901c28a3d71bfde4370dd01e301
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="register-servers"></a>Inscrire des serveurs
-  L'inscription d'un serveur dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] vous permet de stocker les informations de connexion au serveur pour des connexions futures. Il existe trois façons d'inscrire un serveur dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+L'inscription d'un serveur dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] vous permet de stocker les informations de connexion au serveur pour des connexions futures. Il existe trois façons d'inscrire un serveur dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 1.  Les instances locales de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sont automatiquement inscrites lors du premier lancement de [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] après son installation.  
   
@@ -61,7 +67,7 @@ ms.lasthandoff: 11/09/2017
   
 -   consulter les fichiers journaux de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour les instances en ligne ou hors connexion de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-## <a name="related-tasks"></a>Tâches associées  
+## <a name="related-tasks"></a>Related Tasks  
  Utilisez les rubriques suivantes pour commencer à utiliser les serveurs inscrits :  
   
 |**Description**|**Rubrique**|  
@@ -82,7 +88,7 @@ ms.lasthandoff: 11/09/2017
 |Créer un serveur de gestion centralisée et un groupe de serveurs|[Créer un serveur d’administration centralisée et un groupe de serveurs &#40;SQL Server Management Studio&#41;](../../tools/sql-server-management-studio/create-a-central-management-server-and-server-group.md)|  
 |Exécuter des instructions sur plusieurs serveurs simultanément|[Exécuter des instructions simultanément sur plusieurs serveurs &#40;SQL Server Management Studio&#41;](../../tools/sql-server-management-studio/execute-statements-against-multiple-servers-simultaneously.md)|  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Serveurs distants](../../database-engine/configure-windows/remote-servers.md)  
   
   

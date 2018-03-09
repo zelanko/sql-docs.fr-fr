@@ -1,26 +1,30 @@
 ---
 title: "Jeu d’enregistrements, les propriétés de SourceRecordset (RDS) | Documents Microsoft"
-ms.prod: sql-non-specified
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.component: reference
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-helpviewer_keywords: Recordset property [ADO]
+helpviewer_keywords:
+- Recordset property [ADO]
 ms.assetid: a29e3fb9-306d-497a-9a59-1856a914e5e9
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: feb657674ff4d2d8c17b11246407eaf3fba142d0
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 3a59056cd579bfc3bebfdd2e33c18e733fbacd1b
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="recordset-sourcerecordset-properties-rds"></a>Jeu d’enregistrements, les propriétés de SourceRecordset (RDS)
 Indique le **Recordset** objet retourné à partir d’un objet métier personnalisé.  
@@ -42,7 +46,7 @@ Recordset = DataControl.Recordset
  *DataControl*  
  Une variable objet qui représente un [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) objet.  
   
- *Jeu d’enregistrements*  
+ *Recordset*  
  Une variable objet qui représente un **Recordset** objet.  
   
 ## <a name="remarks"></a>Notes  

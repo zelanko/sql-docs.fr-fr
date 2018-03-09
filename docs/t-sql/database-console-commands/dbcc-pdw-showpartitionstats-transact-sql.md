@@ -1,5 +1,5 @@
 ---
-title: DBCC PDW_SHOWPARTITIONSTATS (Transact-SQL) | Documents Microsoft
+title: DBCC PDW_SHOWPARTITIONSTATS (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/17/2017
 ms.prod: 
@@ -8,20 +8,22 @@ ms.reviewer:
 ms.service: sql-data-warehouse
 ms.component: t-sql|database-console-commands
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: TSQL
-caps.latest.revision: "10"
+dev_langs:
+- TSQL
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fb41140783d4c334e7ee701f44d523ec68e41435
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: fa9c4e335fddbe4851562f4aada8d55011d99b98
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="dbcc-pdwshowpartitionstats-transact-sql"></a>DBCC PDW_SHOWPARTITIONSTATS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -39,10 +41,10 @@ DBCC PDW_SHOWPARTITIONSTATS ( " [ database_name . [ schema_name ] . ] | [ schema
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [ *nom_base_de_données* . [ *schema_name* ]. | *schema_name* . ] *nom_table*  
+ [ *nom_base_de_données* . [ *schema_name* ] . | *schema_name* . ] *table_name*  
  L’une, de deux ou de nom en trois parties de la table à afficher.  Pour deux ou les noms de table en trois parties, le nom doivent être mis entre guillemets doubles ( » »). L’utilisation des guillemets autour d’un nom de table d’une partie est facultative.  
   
-## <a name="permissions"></a>Permissions
+## <a name="permissions"></a>Autorisations
 Requiert **VIEW SERVER STATE** autorisation.
   
 ## <a name="result-sets"></a>Jeux de résultats  
@@ -67,6 +69,6 @@ DBCC PDW_SHOWPARTITIONSTATS ("dbo.FactInternetSales");
 DBCC PDW_SHOWPARTITIONSTATS (FactInternetSales);  
 ```  
 ## <a name="see-also"></a>Voir aussi
-[DBCC PDW_SHOWEXECUTIONPLAN &#40; Transact-SQL &#41;](dbcc-pdw-showexecutionplan-transact-sql.md)  
-[DBCC PDW_SHOWSPACEUSED &#40; Transact-SQL &#41;](dbcc-pdw-showspaceused-transact-sql.md)  
+[DBCC PDW_SHOWEXECUTIONPLAN &#40;Transact-SQL&#41;](dbcc-pdw-showexecutionplan-transact-sql.md)  
+[DBCC PDW_SHOWSPACEUSED &#40;Transact-SQL&#41;](dbcc-pdw-showspaceused-transact-sql.md)  
   

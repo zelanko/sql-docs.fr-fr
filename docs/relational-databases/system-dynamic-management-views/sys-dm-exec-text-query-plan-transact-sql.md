@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_exec_text_query_plan (Transact-SQL) | Documents Microsoft
+title: sys.dm_exec_text_query_plan (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 10/20/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - sys.dm_exec_text_query_plan_TSQL
 - dm_exec_text_query_plan_TSQL
 - sys.dm_exec_text_query_plan
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_exec_text_query_plan dynamic management function
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_exec_text_query_plan dynamic management function
 ms.assetid: 9d5e5f59-6973-4df9-9eb2-9372f354ca57
-caps.latest.revision: "10"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 7bb3aa76b6d09b2a1c31f30c20fb4ce4374d48d9
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 38650de120ae1c7cb80be3d279de9bfa0da37434
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmexectextqueryplan-transact-sql"></a>sys.dm_exec_text_query_plan (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -41,7 +44,7 @@ ms.lasthandoff: 11/17/2017
   
 -   Les instructions individuelles dans le traitement peuvent être spécifiées.  
   
-**S’applique à**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et [version actuelle](http://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+**S’applique à**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] jusqu’à la [version actuelle](http://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
   
  ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -68,7 +71,7 @@ Le descripteur de plan peut être obtenu à partir des objets de gestion dynamiq
   
 -  [sys.dm_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)  
   
-*statement_start_offset* | 0 | PAR DÉFAUT  
+*statement_start_offset* | 0 | DEFAULT  
 Indique, en octets, la position de début de la requête que la ligne décrit dans le texte de son traitement ou de son objet persistant. *statement_start_offset* est **int**. La valeur 0 indique le début du traitement. La valeur par défaut est 0 :  
   
 Le décalage de début de l'instruction peut être obtenu à partir des objets de gestion dynamiques suivants :  
@@ -77,7 +80,7 @@ Le décalage de début de l'instruction peut être obtenu à partir des objets d
   
 -  [sys.dm_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)  
   
-*statement_end_offset* | -1 | PAR DÉFAUT  
+*statement_end_offset* | -1 | DEFAULT  
 Indique, en octets, la position de fin de la requête que la ligne décrit dans le texte de son traitement ou de son objet persistant.  
   
 *statement_start_offset* est **int**.  
@@ -89,9 +92,9 @@ La valeur -1 indique la fin du traitement. La valeur par défaut est -1.
 |Nom de colonne|Type de données| Description|  
 |-----------------|---------------|-----------------|  
 |**dbid**|**smallint**|ID de la base de données de contexte qui était en fonction lorsque l'instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] correspondant à ce plan a été compilée. Pour les instructions SQL ad hoc et préparées, l'ID de la base de données où les instructions ont été compilées.<br /><br /> Colonne acceptant la valeur NULL.|  
-|**ObjectID**|**int**|ID de l'objet (par exemple, procédure stockée ou fonction définie par l'utilisateur) pour ce plan de requête. Pour les traitements ad hoc et préparées, cette colonne est **null**.<br /><br /> Colonne acceptant la valeur NULL.|  
-|**nombre**|**smallint**|Entier servant à la numérotation des procédures stockées. Par exemple, un groupe de procédures pour le **commandes** application peut-être être appelée **orderproc ; 1**, **orderproc ; 2**, et ainsi de suite. Pour les traitements ad hoc et préparées, cette colonne est **null**.<br /><br /> Colonne acceptant la valeur NULL.|  
-|**chiffré**|**bit**|Indique si la procédure stockée correspondante est chiffrée.<br /><br /> 0 = Non chiffrée.<br /><br /> 1 = Chiffrée.<br /><br /> Colonne n'acceptant pas la valeur NULL.|  
+|**objectid**|**int**|ID de l'objet (par exemple, procédure stockée ou fonction définie par l'utilisateur) pour ce plan de requête. Pour les traitements ad hoc et préparées, cette colonne est **null**.<br /><br /> Colonne acceptant la valeur NULL.|  
+|**number**|**smallint**|Entier servant à la numérotation des procédures stockées. Par exemple, un groupe de procédures pour le **commandes** application peut-être être appelée **orderproc ; 1**, **orderproc ; 2**, et ainsi de suite. Pour les traitements ad hoc et préparées, cette colonne est **null**.<br /><br /> Colonne acceptant la valeur NULL.|  
+|**encrypted**|**bit**|Indique si la procédure stockée correspondante est chiffrée.<br /><br /> 0 = Non chiffrée.<br /><br /> 1 = Chiffrée.<br /><br /> Colonne n'acceptant pas la valeur NULL.|  
 |**query_plan**|**nvarchar(max)**|Contient la représentation sous forme de plan d’exécution lors de la compilation du plan de l’exécution de requête est spécifié avec *plan_handle*. Le Showplan est au format texte. Un plan est généré pour chaque traitement contenant par exemple des instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] ad hoc, des appels de procédures stockées et des appels de fonctions définies par l'utilisateur.<br /><br /> Colonne acceptant la valeur NULL.|  
   
 ## <a name="remarks"></a>Notes  
@@ -105,7 +108,7 @@ La valeur -1 indique la fin du traitement. La valeur par défaut est -1.
   
 Lorsqu’une requête ad hoc utilise [simple](../../relational-databases/query-processing-architecture-guide.md#SimpleParam) ou [paramétrage forcé](../../relational-databases/query-processing-architecture-guide.md#ForcedParam), le **query_plan** colonne contiendra uniquement le texte de l’instruction et pas le plan de requête. Pour retourner le plan de requête, appelez **sys.dm_exec_text_query_plan** pour le descripteur de plan de la requête paramétrable préparée. Vous pouvez déterminer si la requête a été paramétrée en référençant la **sql** colonne de la [sys.syscacheobjects](../../relational-databases/system-compatibility-views/sys-syscacheobjects-transact-sql.md) vue ou la colonne de texte de la [sys.dm_exec_sql_text](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md) vue de gestion dynamique.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Pour exécuter **sys.dm_exec_text_query_plan**, un utilisateur doit être un membre de la **sysadmin** rôle serveur fixe ou disposer de l’autorisation VIEW SERVER STATE sur le serveur.  
   
 ## <a name="examples"></a>Exemples  
@@ -118,7 +121,7 @@ Lorsqu’une requête ad hoc utilise [simple](../../relational-databases/query-p
   
  Récupérez tout d'abord à l'aide de la procédure stockée `sp_who` l'ID de processus serveur (SPID) pour le processus exécutant la requête ou le traitement.  
   
-```tsql  
+```sql  
 USE master;  
 GO  
 EXEC sp_who;  
@@ -127,7 +130,7 @@ GO
   
  Le jeu de résultats renvoyé par `sp_who` indique que le SPID est `54`. Utilisez cet identificateur avec la vue de gestion dynamique `sys.dm_exec_requests` pour récupérer le descripteur de plan via la requête suivante :  
   
-```tsql  
+```sql  
 USE master;  
 GO  
 SELECT * FROM sys.dm_exec_requests  
@@ -137,7 +140,7 @@ GO
   
  Le tableau retourné par **sys.dm_exec_requests** indique que le descripteur de plan pour la requête ou le lot à exécution lente est `0x06000100A27E7C1FA821B10600`. L'exemple suivant retourne le plan de requête pour le descripteur de plan spécifié et utilise les valeurs par défaut 0 et -1 pour retourner toutes les instructions dans la requête ou le lot.  
   
-```tsql  
+```sql  
 USE master;  
 GO  
 SELECT query_plan   
@@ -148,7 +151,7 @@ GO
 ### <a name="b-retrieving-every-query-plan-from-the-plan-cache"></a>B. Récupération de chaque plan de requête à partir de la mémoire cache des plans  
  Pour récupérer un instantané de tous les plans de requête résidant dans la mémoire cache des plans, procurez-vous les descripteurs de tous les plans de requête dans la mémoire cache via une requête dans la vue de gestion dynamique `sys.dm_exec_cached_plans`. Les descripteurs de plan sont stockés dans la colonne `plan_handle` de `sys.dm_exec_cached_plans`. Utilisez ensuite l'opérateur CROSS APPLY pour transmettre les descripteurs à `sys.dm_exec_text_query_plan` comme suit. Le plan d’exécution de sortie pour chaque plan actuellement dans le cache du plan se trouve dans le `query_plan` colonne de la table qui est retournée.  
   
-```tsql  
+```sql  
 USE master;  
 GO  
 SELECT *   
@@ -160,7 +163,7 @@ GO
 ### <a name="c-retrieving-every-query-plan-for-which-the-server-has-gathered-query-statistics-from-the-plan-cache"></a>C. La récupération de chaque plan de requête pour lequel le serveur a regroupé des statistiques de requête du cache du plan  
  Pour récupérer un instantané de tous les plans de requête pour lesquels le serveur a regroupé des statistiques actuellement dans la mémoire cache des plans, procurez-vous les descripteurs de ces plans dans la mémoire cache via une requête formulée dans la vue de gestion dynamique `sys.dm_exec_query_stats`. Les descripteurs de plan sont stockés dans la colonne `plan_handle` de `sys.dm_exec_query_stats`. Utilisez ensuite l'opérateur CROSS APPLY pour transmettre les descripteurs à `sys.dm_exec_text_query_plan` comme suit. La sortie du plan d'exécution de requêtes pour chaque plan est dans la colonne `query_plan` de la table retournée.  
   
-```tsql  
+```sql  
 USE master;  
 GO  
 SELECT * FROM sys.dm_exec_query_stats AS qs   
@@ -171,7 +174,7 @@ GO
 ### <a name="d-retrieving-information-about-the-top-five-queries-by-average-cpu-time"></a>D. Récupérer des informations sur les cinq premières requêtes par temps processeur moyen  
  L'exemple suivant retourne les plans de requête et le temps processeur moyen pour les cinq premières requêtes. Le **sys.dm_exec_text_query_plan** fonction spécifie les valeurs par défaut 0 et -1 pour retourner toutes les instructions dans le lot dans le plan de requête.  
   
-```tsql  
+```sql  
 SELECT TOP 5 total_worker_time/execution_count AS [Avg CPU Time],  
 Plan_handle, query_plan   
 FROM sys.dm_exec_query_stats AS qs  
@@ -181,4 +184,4 @@ GO
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Sys.dm_exec_query_plan &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)  
+ [sys.dm_exec_query_plan &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)  

@@ -8,7 +8,8 @@ ms.service:
 ms.component: sqlxml
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-xml
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -16,19 +17,20 @@ helpviewer_keywords:
 - W3C XPath specification
 - XPath queries [SQLXML], functionality
 ms.assetid: 01050a8e-0ccc-4a02-a4eb-b48be5c3f4f3
-caps.latest.revision: "29"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9113df3519ab212f3647b96c63620167c7913ffb
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: b08c314d50376e55d9825658aabc75385bbbe0be
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="introduction-to-using-xpath-queries-sqlxml-40"></a>Introduction à l'utilisation des requêtes XPath (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]Une requête XML Path Language (XPath) peut être spécifiée en tant que partie d’une URL ou dans un modèle. Le schéma de mappage détermine la structure de ce fragment résultant et les valeurs sont extraites de la base de données. Ce processus est conceptuellement semblable à la création de vues à l'aide de l'instruction CREATE VIEW et à l'écriture de requêtes SQL dans ces vues.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+Une requête XPath (XML Path Language) peut être spécifiée dans le cadre d'une URL ou dans un modèle. Le schéma de mappage détermine la structure de ce fragment résultant et les valeurs sont extraites de la base de données. Ce processus est conceptuellement semblable à la création de vues à l'aide de l'instruction CREATE VIEW et à l'écriture de requêtes SQL dans ces vues.  
   
 > [!NOTE]  
 >  Pour comprendre les requêtes XPath dans SQLXML 4.0, vous devez avoir une bonne connaissance des vues XML et des concepts connexes tels que les modèles et les schémas de mappage. Pour plus d’informations, consultez [Introduction aux schémas de XSD annoté &#40; SQLXML 4.0 &#41; ](../../relational-databases/sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md)et la norme XPath définie par le World Wide Web Consortium (W3C).  
@@ -101,9 +103,9 @@ ms.lasthandoff: 11/17/2017
 |Prédicats à valeurs booléennes, y compris les prédicats consécutifs et imbriqués||[Spécification d’opérateurs arithmétiques dans des requêtes XPath &#40; SQLXML 4.0 &#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-arithmetic-operators-in-xpath-queries-sqlxml-4-0.md)|  
 |Tous les opérateurs relationnels|=, !=, <, \<=, >, >=|[Spécification d’opérateurs relationnels dans des requêtes XPath &#40; SQLXML 4.0 &#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-relational-operators-in-xpath-queries-sqlxml-4-0.md)|  
 |les opérateurs arithmétiques ;|+, -, *, div|[Spécification d’opérateurs arithmétiques dans des requêtes XPath &#40; SQLXML 4.0 &#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-arithmetic-operators-in-xpath-queries-sqlxml-4-0.md)|  
-|Fonctions de conversion explicite|**Number()**, **string()**, **Boolean()**|[Spécification des fonctions de Conversion explicite dans des requêtes XPath &#40; SQLXML 4.0 &#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-explicit-conversion-functions-in-xpath-queries-sqlxml-4-0.md)|  
+|Fonctions de conversion explicite|**number()**, **string()**, **Boolean()**|[Spécification des fonctions de Conversion explicite dans des requêtes XPath &#40; SQLXML 4.0 &#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-explicit-conversion-functions-in-xpath-queries-sqlxml-4-0.md)|  
 |opérateurs booléens|AND, OR|[Spécification d’opérateurs booléens dans des requêtes XPath &#40; SQLXML 4.0 &#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-boolean-operators-in-xpath-queries-sqlxml-4-0.md)|  
-|fonctions booléennes|**True()**, **false()**, **not()**|[Spécification de fonctions booléennes dans des requêtes XPath &#40; SQLXML 4.0 &#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-boolean-functions-in-xpath-queries-sqlxml-4-0.md)|  
+|fonctions booléennes|**true()**, **false()**, **not()**|[Spécification de fonctions booléennes dans des requêtes XPath &#40; SQLXML 4.0 &#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-boolean-functions-in-xpath-queries-sqlxml-4-0.md)|  
 |variables XPath||[Spécification de Variables XPath dans des requêtes XPath &#40; SQLXML 4.0 &#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-xpath-variables-in-xpath-queries-sqlxml-4-0.md)|  
   
 ## <a name="unsupported-functionality"></a>Fonctionnalités non prises en charge  
@@ -111,13 +113,13 @@ ms.lasthandoff: 11/17/2017
   
 |Fonctionnalité|Élément|  
 |-------------|----------|  
-|Axes|**ancêtre**, **ancêtre-or-self**, **descendants**, **descendant-or-self (/ /)**, **suivant**, **frère suivant**, **espace de noms**, **précédent**, **frère précédent**|  
+|Axes|**ancestor**, **ancestor-or-self**, **descendant**, **descendant-or-self (//)**, **following**, **following-sibling**, **namespace**, **preceding**, **preceding-sibling**|  
 |Prédicats à valeurs numériques||  
 |les opérateurs arithmétiques ;|mod|  
-|Fonctions de nœuds|**ancêtre**, **ancêtre-or-self**, **descendants**, **descendant-or-self (/ /)**, **suivant**, **frère suivant**, **espace de noms**, **précédent**, **frère précédent**|  
-|Fonctions de chaînes|**String()**, **concat()**, **starts-with()**, **contains()**, **substring-before()**, **substring-after()**, **substring()**, **Length**, **normalize()**, **translate()**|  
+|Fonctions de nœuds|**ancestor**, **ancestor-or-self**, **descendant**, **descendant-or-self (//)**, **following**, **following-sibling**, **namespace**, **preceding**, **preceding-sibling**|  
+|Fonctions de chaînes|**string()**, **concat()**, **starts-with()**, **contains()**, **substring-before()**, **substring-after()**, **substring()**, **string-length()**, **normalize()**, **translate()**|  
 |fonctions booléennes|**lang()**|  
-|Fonctions Numériques|**SUM()**, **floor()**, **ceiling()**, **round()**|  
+|Fonctions Numériques|**sum()**, **floor()**, **ceiling()**, **round()**|  
 |Opérateur d'union|&#124;|  
   
  Lorsque vous spécifiez des requêtes XPath dans un modèle, notez le comportement suivant :  

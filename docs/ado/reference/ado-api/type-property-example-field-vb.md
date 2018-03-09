@@ -3,27 +3,30 @@ title: "Tapez l’exemple de propriété (champ) (VB) | Documents Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: VB
-helpviewer_keywords: Type property [field] [ADO], Visual Basic example
+dev_langs:
+- VB
+helpviewer_keywords:
+- Type property [field] [ADO], Visual Basic example
 ms.assetid: accb72f5-a3bd-4a7e-92b6-6da0783b4b75
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d52947b4401e7344af7b3edceea65b0b483a06ab
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 9741763935e0c9bafc68402c2898ee1278fec5f4
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="type-property-example-field-vb"></a>Exemple de type de propriété (champ) (VB)
 Cet exemple illustre la [Type](../../../ado/reference/ado-api/type-property-ado.md) en affichant le nom de la constante qui correspond à la valeur de propriété de la [Type](../../../ado/reference/ado-api/type-property-ado.md) propriété de tous les le [champ](../../../ado/reference/ado-api/field-object.md) des objets dans le ***Employés*** table. La fonction FieldType est requise pour exécuter cette procédure.  

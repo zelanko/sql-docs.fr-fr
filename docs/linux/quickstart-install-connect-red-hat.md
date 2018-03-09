@@ -1,38 +1,38 @@
----
+﻿---
 title: Prise en main 2017 du serveur SQL sur Red Hat Enterprise Linux | Documents Microsoft
-description: "Ce didacticiel de démarrage rapide montre comment installer SQL Server 2017 sur Red Hat Enterprise Linux puis créer et interroger une base de données avec sqlcmd."
+description: "Ce démarrage rapide montre comment installer SQL Server 2017 sur Red Hat Enterprise Linux puis créer et interroger une base de données avec sqlcmd."
 author: rothja
 ms.author: jroth
-manager: jhubbard
-ms.date: 10/02/2017
+manager: craigg
+ms.date: 02/22/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 92503f59-96dc-4f6a-b1b0-d135c43e935e
 ms.workload: Active
-ms.openlocfilehash: 213cabec248c9f293944904a1909f51484fcdf4a
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 6919cdbb506ccbe36ed3e8c167be4321b5ee2a27
+ms.sourcegitcommit: f0c5e37c138be5fb2cbb93e9f2ded307665b54ea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 02/24/2018
 ---
-# <a name="install-sql-server-and-create-a-database-on-red-hat"></a>Installer SQL Server et créer une base de données sur Red Hat
+# <a name="quickstart-install-sql-server-and-create-a-database-on-red-hat"></a>Démarrage rapide : Installer SQL Server et de créer une base de données sur Red Hat
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-Dans ce guide de démarrage rapide, vous installez d’abord SQL Server 2017 sur Red Hat Enterprise Linux (RHEL) 7.3 + puis vous vous connectez avec **sqlcmd** pour créer votre première base de données et exécuter des requêtes.
+Ce guide de démarrage rapide, vous d’abord installez SQL Server 2017 sur Red Hat Enterprise Linux (RHEL) 7.3 +. Ensuite, vous vous connectez avec **sqlcmd** pour créer votre première base de données et exécuter des requêtes.
 
 > [!TIP]
 > Ce didacticiel nécessite une saisie de la part de l’utilisateur et une connexion Internet. Si vous êtes intéressé par les procédures d'installation [sans assistance](sql-server-linux-setup.md#unattended) ou [hors connexion](sql-server-linux-setup.md#offline), consultez [aide à l’installation de SQL Server sur Linux](sql-server-linux-setup.md).
 
-## <a name="prerequisites"></a>Conditions préalables
+## <a name="prerequisites"></a>Configuration requise
 
-Vous devez avoir un 7.3 RHEL ou ordinateur 7.4 avec **au moins 3,25 Go** de mémoire.
+Vous devez avoir un 7.3 RHEL ou ordinateur 7.4 avec **au moins 2 Go** de mémoire.
 
 Pour installer Red Hat Enterprise Linux sur votre propre ordinateur, accédez à [http://access.redhat.com/products/red-hat-enterprise-linux/evaluation](http://access.redhat.com/products/red-hat-enterprise-linux/evaluation). Vous pouvez également créer des machines virtuelles RHEL dans Azure. Consultez [créer et gérer des machines virtuelles Linux avec l’interface CLI Azure](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-manage-vm) et utiliser `--image RHEL` dans l’appel à `az vm create`.
 
@@ -52,7 +52,7 @@ Pour configurer SQL Server sur RHEL, exécutez les commandes suivantes dans un t
    ```
 
    > [!NOTE]
-   > Il s’agit du référentiel de mise à jour cumulative (CU). Pour plus d’informations sur les options de votre référentiel et leurs différences, consultez [modifier les référentiels sources](sql-server-linux-setup.md#repositories).
+   > Il s’agit du référentiel de mise à jour cumulative (CU). Pour plus d’informations sur les options de votre référentiel et leurs différences, consultez [configurer des référentiels pour SQL Server sur Linux](sql-server-linux-change-repo.md).
 
 1. Exécutez les commandes suivantes pour installer SQL Server :
 
@@ -117,6 +117,11 @@ Pour créer une base de données, vous devez vous connecter avec un outil qui pe
    ```
 
 > [!TIP]
-> **SQLCMD** est un outil unique pour se connecter à SQL Server afin d'exécuter des requêtes et d'effectuer des tâches de gestion et de développement. D'autres outils incluent [SQL Server Management Studio](sql-server-linux-develop-use-ssms.md) et [Visual Studio Code](sql-server-linux-develop-use-vscode.md). 
+> **SQLCMD** est le seul outil pour la connexion à SQL Server pour exécuter des requêtes et d’effectuer les tâches de gestion et de développement. Autres outils incluent :
+>
+> * [SQL Server Operations Studio (préversion)](../sql-operations-studio/what-is.md)
+> * [SQL Server Management Studio](sql-server-linux-develop-use-ssms.md)
+> * [Code Visual Studio](sql-server-linux-develop-use-vscode.md).
+> * [mssql-cli (préversion)](https://blogs.technet.microsoft.com/dataplatforminsider/2017/12/12/try-mssql-cli-a-new-interactive-command-line-tool-for-sql-server/)
 
 [!INCLUDE [Connect, create, and query data](../includes/sql-linux-quickstart-connect-query.md)]

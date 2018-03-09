@@ -1,5 +1,5 @@
 ---
-title: "Événements consignés par le Service Integration Services | Documents Microsoft"
+title: "Événements consignés par le service Integration Services | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -17,17 +17,16 @@ helpviewer_keywords:
 - events [Integration Services], service
 - Integration Services service, events
 ms.assetid: d4122dcf-f16f-47a0-93a2-ffa3d0d4f9cf
-caps.latest.revision: 19
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
-ms.openlocfilehash: cc4cd7e190c7cd2ab7fc2bec25505ae8da6f30fe
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 9ba7f6ab3bda7bfc40acffc54fa56131ba53514b
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="events-logged-by-the-integration-services-service"></a>Événements consignés par le service Integration Services
   Le service [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] consigne différents messages dans le journal des événements des applications Windows. Le service enregistre ces messages lorsque le service démarre, lorsqu'il s'arrête et lorsque certains problèmes se produisent.  
@@ -36,7 +35,7 @@ ms.lasthandoff: 08/03/2017
   
  Pour des informations générales sur le service [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], consultez [Service Integration Services &#40;Service SSIS&#41;](../../integration-services/service/integration-services-service-ssis-service.md).  
   
-## <a name="service-status-messages"></a>Messages d’état de service
+## <a name="service-status-messages"></a>Messages d’état du service
  Quand vous sélectionnez [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] pour l’installation, le service [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] est installé et démarré, et son type de démarrage est défini sur Automatique.  
   
 |ID d'événement|Nom symbolique|Texte|Remarques|  
@@ -47,7 +46,7 @@ ms.lasthandoff: 08/03/2017
 |258|DTS_MSG_SERVER_STOPPING|Arrêt du service [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssIS](../../includes/ssis-md.md)] .% n%nArrêtez tous les packages en cours d'exécution à la fin de l'opération : %1|Le service est en cours d'arrêt et si vous configurez le service pour cela, tous les packages en cours d'exécution seront arrêtés. Vous pouvez définir une valeur vraie ou fausse dans le fichier de configuration qui détermine si le service doit cesser d'exécuter des packages lorsque le service lui-même s'arrête. Le message pour cet événement inclut la valeur de ce paramètre.|  
 |259|DTS_MSG_SERVER_STOPPED|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssIS](../../includes/ssis-md.md)] Service arrêté.%nVersion du serveur %1|Le service s'est arrêté.|  
   
-## <a name="settings-file-messages"></a>Messages de fichier de paramètres  
+## <a name="settings-file-messages"></a>Messages du fichier de paramètres  
  Les paramètres pour le service [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sont stockés dans un fichier XML que vous pouvez modifier. Pour plus d’informations, consultez [Service Integration Services &#40;Service SSIS&#41;](../../integration-services/service/integration-services-service-ssis-service.md).  
   
 |ID d'événement|Nom symbolique|Texte|Remarques|  
@@ -103,6 +102,5 @@ ms.lasthandoff: 08/03/2017
   
 9. Dans le menu **Fichier** , cliquez sur **Quitter** pour fermer la boîte de dialogue **Observateur d’événements** .  
  
-## <a name="related-tasks"></a>Tâches associées  
+## <a name="related-tasks"></a>Related Tasks  
  Pour plus d’informations sur l’affichage des entrées de journal, consultez [Événements journalisés par un package Integration Services](../../integration-services/performance/events-logged-by-an-integration-services-package.md)  
-

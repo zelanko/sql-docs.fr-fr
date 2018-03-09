@@ -2,29 +2,34 @@
 title: "Formes canoniques et restrictions de modèle | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: xml
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-xml
+ms.suite: sql
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - pattern restrictions
 - canonical forms
 ms.assetid: 088314ec-7d0b-4a05-8a33-f35da5bfe59c
-caps.latest.revision: "10"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: db1551eacf3c57127442774ff93c260a275e99a1
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 8492b7bae99daa71c801f4d32314efa51067fcfe
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="canonical-forms-and-pattern-restrictions"></a>Formes canoniques et restrictions de modèle
-  La facette de modèle XSD permet la restriction de l'espace lexical des types simples. Quand une restriction de modèle est appliquée à un type pour lequel il existe plusieurs représentations lexicales possibles, certaines valeurs peuvent entraîner un comportement inattendu lors de la validation.  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+La facette de modèle XSD permet la restriction de l'espace lexical des types simples. Quand une restriction de modèle est appliquée à un type pour lequel il existe plusieurs représentations lexicales possibles, certaines valeurs peuvent entraîner un comportement inattendu lors de la validation.  
   
  Ce comportement se produit car les représentations lexicales de ces valeurs ne sont pas stockées dans la base de données. Par conséquent, les valeurs sont converties en leurs représentations canoniques lorsqu'elles sont sérialisées pour la sortie. Si un document contient une valeur dont la forme canonique n'est pas conforme à la restriction de modèle propre à son type, il est rejeté si un utilisateur tente de réinsérer la valeur.  
   
@@ -34,7 +39,7 @@ ms.lasthandoff: 11/09/2017
   
  Une sérialisation imprécise de valeurs en virgule flottante donne lieu à un problème similaire. Du fait de l'algorithme de sérialisation en virgule flottante utilisé par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], il est possible pour des valeurs similaires de partager la même forme canonique. Quand une valeur en virgule flottante est sérialisée puis réinsérée, sa valeur peut varier légèrement. En de rares occasions, cela peut produire une valeur enfreignant l'une des facettes suivantes propres à son type au moment de sa réinsertion : **enumeration**, **minInclusive**, **minExclusive**, **maxInclusive**ou **maxExclusive**. Pour éviter ce problème, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] rejette toutes les valeurs des types dérivés de `xs:float` ou de `xs:double` ne pouvant pas être sérialisées et réinsérées.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Spécifications et limitations relatives aux collections de schémas XML sur le serveur](../../relational-databases/xml/requirements-and-limitations-for-xml-schema-collections-on-the-server.md)  
   
   

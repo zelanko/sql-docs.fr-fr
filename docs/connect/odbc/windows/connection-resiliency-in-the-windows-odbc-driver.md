@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 39532ba3a94d99ef4df7479d851348b6b179328a
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 6dda329540bd228920e88a12c69a4a6f2b8a8327
+ms.sourcegitcommit: e904c2a85347a93dcb15bb6b801afd39613d3ae7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 12/16/2017
 ---
 # <a name="connection-resiliency-in-the-windows-odbc-driver"></a>Résilience de connexion du pilote ODBC Windows
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -61,9 +61,9 @@ ms.lasthandoff: 11/18/2017
   
  Si une application établit une connexion avec SQL_DRIVER_COMPLETE_REQUIRED et essaie ultérieurement d’exécuter une instruction sur une connexion interrompue, le pilote ODBC ne réaffiche pas la boîte de dialogue. De plus, quand la récupération est en cours :  
   
--   Lors de la récupération, tout appel à **SQLGetConnectAttr (sql_copt_ss_connection_dead)**, doit retourner **SQL_CD_TRUE**.  
+-   Lors de la récupération, tout appel à **SQLGetConnectAttr (sql_copt_ss_connection_dead)**, doit retourner **SQL_CD_FALSE**.  
   
--   Si la récupération échoue, un appel à **SQLGetConnectAttr (sql_copt_ss_connection_dead)**, doit retourner **SQL_CD_FALSE**.  
+-   Si la récupération échoue, un appel à **SQLGetConnectAttr (sql_copt_ss_connection_dead)**, doit retourner **SQL_CD_TRUE**.  
   
  Les codes d’état suivants sont retournés par toute fonction qui exécute une commande sur le serveur :  
   
@@ -76,7 +76,7 @@ ms.lasthandoff: 11/18/2017
 |IMC05|La connexion est interrompue et la récupération n’est pas possible. La connexion est marquée par le serveur comme irrécupérable. Aucune tentative n’a été faite pour rétablir la connexion.|  
 |IMC06|La connexion est interrompue et la récupération n’est pas possible. La connexion est marquée par le pilote du client comme irrécupérable. Aucune tentative n’a été faite pour rétablir la connexion.|  
   
-## <a name="example"></a>Exemple  
+## <a name="example"></a> Exemple  
  L’exemple suivant contient deux fonctions. **func1** montre comment vous pouvez vous connecter avec un nom de source de données (DSN) qui utilise le pilote ODBC pour [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] sur Windows. La source de données utilise l’authentification [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] et spécifie l’ID utilisateur. **func1** récupère ensuite le nombre de tentatives de connexion avec **SQL_COPT_SS_CONNECT_RETRY_COUNT**.  
   
  **func2** utilise **SQLDriverConnect**, le mot clé de chaîne de connexion **ConnectRetryCount** et les attributs de connexion pour récupérer le paramètre pour les tentatives de connexion et l’intervalle avant nouvelle tentative.  

@@ -2,26 +2,29 @@
 title: "Déplacer un UCP d’une instance de SQL Server vers une autre (utilitaire SQL Server) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: maintenance-plans
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b402fd9e-0bea-4c38-a371-6ed7fea12e96
 caps.latest.revision: "9"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a7c5fdeab2db45330177e8d4144af5acd39dc355
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: b58b04c03860007657f7661ec564d352cb61ce81
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="move-a-ucp-from-one-instance-of-sql-server-to-another-sql-server-utility"></a>Déplacer un UCP d'une instance de SQL Server vers une autre (utilitaire SQL Server)
-  Cette rubrique explique comment déplacer un point de contrôle de l'utilitaire (UCP) d'une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vers une autre dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Cette rubrique explique comment déplacer un point de contrôle de l’utilitaire (UCP) d’une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vers une autre dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l’aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 ##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
   
@@ -45,7 +48,7 @@ ms.lasthandoff: 11/09/2017
   
 9. Pour actualiser les données, cliquez avec le bouton droit sur le nœud **Instances gérées** dans l’ **Explorateur de l’utilitaire**, puis sélectionnez **Actualiser**. Les données en mode Liste sont affichées dans le volet Contenu de l’**Explorateur de l’utilitaire**. Pour plus d’informations, consultez [Consulter les résultats d’une stratégie de contrôle d’intégrité des ressources &#40;utilitaire SQL Server&#41;](../../relational-databases/manage/view-resource-health-policy-results-sql-server-utility.md).  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Fonctionnalités et tâches de l'utilitaire SQL Server](../../relational-databases/manage/sql-server-utility-features-and-tasks.md)   
  [Inscrire une instance de SQL Server &#40;utilitaire SQL Server&#41;](../../relational-databases/manage/enroll-an-instance-of-sql-server-sql-server-utility.md)  
   

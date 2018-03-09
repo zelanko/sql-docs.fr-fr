@@ -3,8 +3,11 @@ title: "Conventions pour la combinaison de conditions de recherche dans le volet
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -21,16 +24,16 @@ ms.assetid: d4859be5-ff5b-48b2-a101-ad40c6dbcc68
 caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1b40c9f61780760655373d160e3c6c9ee52545d8
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 8d99326f7d045aff95bf753d7f1ff68826f313af
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="conventions-for-combining-search-conditions-in-the-criteria-pane-visual-database-tools"></a>Conventions pour la combinaison de conditions de recherche dans le volet Critères (Visual Database Tools)
-Vous pouvez créer des requêtes qui incluent un nombre quelconque de conditions de recherche, reliées par un nombre quelconque d'opérateurs AND et OR. Une requête avec une combinaison de clauses AND et OR peut devenir complexe ; il est donc utile de comprendre comment une telle requête est interprétée quand vous l’exécutez et comment elle est représentée dans les volets [Critères](../../ssms/visual-db-tools/criteria-pane-visual-database-tools.md) et [SQL](../../ssms/visual-db-tools/sql-pane-visual-database-tools.md).  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Vous pouvez créer des requêtes qui incluent un nombre quelconque de conditions de recherche, reliées par un nombre quelconque d’opérateurs AND et OR. Une requête avec une combinaison de clauses AND et OR peut devenir complexe ; il est donc utile de comprendre comment une telle requête est interprétée quand vous l’exécutez et comment elle est représentée dans les volets [Critères](../../ssms/visual-db-tools/criteria-pane-visual-database-tools.md) et [SQL](../../ssms/visual-db-tools/sql-pane-visual-database-tools.md).  
   
 > [!NOTE]  
 > Pour plus d’informations sur les conditions de recherche qui contiennent un seul opérateur AND ou OR, consultez [Spécifier plusieurs conditions de recherche pour une colonne &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/specify-multiple-search-conditions-for-one-column-visual-database-tools.md) et [Spécifier plusieurs conditions de recherche pour plusieurs colonnes &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/specify-multiple-search-conditions-for-multiple-columns-visual-database-tools.md).  
@@ -168,6 +171,6 @@ Le Concepteur de requêtes et de vues représente cette clause WHERE dans le vol
   
 Si vous apportez des modifications à la requête (en modifiant, par exemple, une valeur dans le volet Critères), le Concepteur de requêtes et de vues recrée l'instruction SQL dans le volet SQL. L'instruction SQL recréée ressemblera à celle qui est affichée dans le volet Critères, et non à votre instruction d'origine. Par exemple, si le volet Critères contient des clauses AND distribuées, l'instruction obtenue dans le volet SQL contiendra des clauses AND distribuées de façon explicite. Pour plus d'informations, consultez « Utilisation de AND avec plusieurs clauses OR », plus haut dans cette rubrique.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [Spécifier des critères de recherche &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md)  
   

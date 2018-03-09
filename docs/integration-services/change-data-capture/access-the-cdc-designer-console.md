@@ -1,10 +1,13 @@
 ---
-title: "Accéder à la Console du concepteur CDC | Documents Microsoft"
+title: "Accéder à la console CDC Designer | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: change-data-capture
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -12,16 +15,16 @@ ms.topic: article
 f1_keywords:
 - accMsDes
 ms.assetid: b168c64e-c1b5-42d4-a92a-84de1dd0324e
-caps.latest.revision: 9
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: e1266809582119e6316b821c54f93f4217c21316
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/03/2017
-
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: 036a9457f09587ef93fdd8409643613194d404bf
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="access-the-cdc-designer-console"></a>Accéder à la console du concepteur CDC
   Vous pouvez accéder à la console du concepteur CDC à partir de l'ordinateur sur lequel vous avez installé la console. Pour plus d'informations sur l'installation, consultez Installation.  
@@ -32,7 +35,7 @@ ms.lasthandoff: 08/03/2017
   
  Dans la boîte de dialogue Connexion à SQL Server, entrez les informations suivantes :  
   
-### <a name="server-name"></a>Nom de serveur  
+### <a name="server-name"></a>Nom du serveur  
  Tapez le nom du serveur où se trouve [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ### <a name="authentication"></a>Authentification  
@@ -61,7 +64,7 @@ ms.lasthandoff: 08/03/2017
   
  Pour plus d’informations sur la boîte de dialogue Propriétés avancées de connexion, consultez [Propriétés avancées de connexion](../../integration-services/change-data-capture/advanced-connection-properties.md).  
   
-## <a name="see-also"></a>Voir aussi  
- [Connexion SQL Server des autorisations requises pour le Concepteur de capture de données modifiées](../../integration-services/change-data-capture/sql-server-connection-required-permissions-for-the-cdc-designer.md)  
+## <a name="see-also"></a> Voir aussi  
+ [Autorisations de connexion SQL Server requises pour le concepteur CDC](../../integration-services/change-data-capture/sql-server-connection-required-permissions-for-the-cdc-designer.md)  
   
   

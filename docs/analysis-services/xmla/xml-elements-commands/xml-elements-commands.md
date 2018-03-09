@@ -2,15 +2,13 @@
 title: Commandes (XMLA) | Documents Microsoft
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: xmla
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -24,16 +22,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 19644de3ba240e417faa3d787360686d7b5c835f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 3ffde9e4cc1500ee0637225dc76153f3d81b463f
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="xml-elements---commands"></a>Éléments XML - commandes
-  Cette section de référence contient du code XML pour les éléments Analysis (XMLA) qui peuvent être utilisés dans le **commande** élément pendant une **Execute** appel de méthode.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]Cette section de référence contient du code XML pour les éléments Analysis (XMLA) qui peuvent être utilisés dans le **commande** élément pendant une **Execute** appel de méthode.  
   
-|Élément| Description|  
+|Élément|Description|  
 |-------------|-----------------|  
 |[Alter, élément (XMLA)](../../../analysis-services/xmla/xml-elements-commands/alter-element-xmla.md)|Contient des éléments d’Analysis Services Scripting Language (ASSL) utilisés par le [Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md) pour modifier les objets sur une instance de méthode [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].|  
 |[Élément Backup](../../../analysis-services/xmla/xml-elements-commands/backup-element-xmla.md)|Sauvegarde une [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] base de données à un fichier de sauvegarde.|  

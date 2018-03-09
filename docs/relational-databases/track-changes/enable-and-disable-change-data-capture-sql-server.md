@@ -2,10 +2,14 @@
 title: "Activer et désactiver la capture de données modifiées (SQL Server) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: track-changes
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,19 +18,20 @@ helpviewer_keywords:
 - change data capture [SQL Server], disabling databases
 - change data capture [SQL Server], disabling tables
 ms.assetid: b741894f-d267-4b10-adfe-cbc14aa6caeb
-caps.latest.revision: "13"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 77002b107ffcd26066850394b5d713d020919bd0
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: c19f08347185ee6ea46977df74d0317041beb020
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="enable-and-disable-change-data-capture-sql-server"></a>Activer et désactiver la capture de données modifiées (SQL Server)
-  Cette rubrique décrit l'activation et la désactivation de la capture de données modifiées pour une base de données et une table.  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+Cette rubrique décrit l'activation et la désactivation de la capture de données modifiées pour une base de données et une table.  
   
 ## <a name="enable-change-data-capture-for-a-database"></a>Activer la capture des données modifiées pour une base de données  
  Avant qu’une instance de capture puisse être créée pour des tables individuelles, un membre du rôle serveur fixe **sysadmin** doit d’abord activer la base de données pour la capture des données modifiées. Cela se fait en exécutant la procédure stockée [sys.sp_cdc_enable_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-db-transact-sql.md) dans le contexte de la base de données. Pour déterminer si une base de données est déjà activée, interrogez la colonne **is_cdc_enabled** dans l’affichage catalogue **sys.databases**.  
@@ -40,7 +45,7 @@ ms.lasthandoff: 11/09/2017
 > [!IMPORTANT]  
 >  Pour repérer les modèles dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], allez dans **Afficher**, cliquez sur **Explorateur de modèles**, puis sélectionnez **Modèles SQL Server**. **Capture de données modifiées** est un sous-dossier. Sous ce dossier, vous trouverez tous les modèles auxquels il est fait référence dans cette rubrique. On trouve également une icône **Explorateur de modèles** dans la barre d'outils [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] .  
   
-```tsql  
+```sql  
 -- ====  
 -- Enable Database for CDC template   
 -- ====  
@@ -60,7 +65,7 @@ GO
 > [!IMPORTANT]  
 >  Pour repérer les modèles dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], allez dans **Afficher**, cliquez sur **Explorateur de modèles**, puis sur **Modèles SQL Server**. **Capture de données modifiées** est un sous-dossier où vous trouverez tous les modèles qui sont référencés dans cette rubrique. On trouve également une icône **Explorateur de modèles** dans la barre d'outils [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] .  
   
-```tsql  
+```sql  
 -- =======  
 -- Disable Database for Change Data Capture template   
 -- =======  
@@ -83,7 +88,7 @@ GO
   
  Par défaut, la table de modifications se situe dans le groupe de fichiers par défaut de la base de données. Les propriétaires de base de données qui souhaitent contrôler le placement des tables de modifications individuelles peuvent utiliser le paramètre *@filegroup_name* pour spécifier un groupe de fichiers particulier pour la table de modifications associée à l’instance de capture. Le groupe de fichiers nommé doit déjà exister. En règle générale, il est recommandé de placer des tables de modifications dans un groupe de fichiers séparé des tables sources. Consultez le modèle **Activer une table en spécifiant l’option Filegroup** pour un exemple montrant l’utilisation du paramètre *@filegroup_name* .  
   
-```tsql  
+```sql  
 -- =========  
 -- Enable a Table Specifying Filegroup Option Template  
 -- =========  
@@ -105,7 +110,7 @@ GO
   
  Si vous ne souhaitez pas utiliser de rôle de régulation, affectez explicitement la valeur NULL au paramètre *@role_name* . Consultez le modèle **Activer une table sans utiliser un rôle de régulation** pour obtenir un exemple d’activation d’une table sans un rôle de régulation.  
   
-```tsql  
+```sql  
 -- =========  
 -- Enable a Table Without Using a Gating Role template   
 -- =========  
@@ -130,7 +135,7 @@ GO
   
  Consultez le modèle **Activer une table pour tous et pour les requêtes de modifications nettes** pour un exemple montrant la création d’une instance de capture avec les deux fonctions de requête.  
   
-```tsql  
+```sql  
 -- =============  
 -- Enable a Table for All and Net Changes Queries template   
 -- =============  
@@ -154,7 +159,7 @@ GO
   
  Pour un exemple de désactivation de table, consultez le modèle Désactiver une instance de capture pour une table.  
   
-```tsql  
+```sql  
 -- =====  
 -- Disable a Capture Instance for a Table template   
 -- =====  
@@ -167,7 +172,7 @@ EXEC sys.sp_cdc_disable_table
 GO  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Suivi des modifications de données &#40;SQL Server&#41;](../../relational-databases/track-changes/track-data-changes-sql-server.md)   
  [À propos de la capture de données modifiées &#40;SQL Server&#41;](../../relational-databases/track-changes/about-change-data-capture-sql-server.md)   
  [Utiliser les données modifiées &#40;SQL Server&#41;](../../relational-databases/track-changes/work-with-change-data-sql-server.md)   

@@ -2,10 +2,14 @@
 title: OPENXML (SQL Server) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: xml
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-xml
+ms.suite: sql
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -22,19 +26,20 @@ helpviewer_keywords:
 - XML [SQL Server], OPENXML statement
 - element-centric mapping [SQL Server]
 ms.assetid: 060126fc-ed0f-478f-830a-08e418d410dc
-caps.latest.revision: "43"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: e181c623bfaa6c19c2567c6a1e904b5314e327ae
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: ab0c04534f730157d6112c2428b0cd2ff4a7277f
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="openxml-sql-server"></a>OPENXML (SQL Server)
-  OPENXML, un mot clé [!INCLUDE[tsql](../../includes/tsql-md.md)] , fournit un ensemble de lignes sur des documents XML en mémoire qui est similaire à une table ou à une vue. OPENXML permet l'accès aux données XML comme s'il s'agissait d'un ensemble de lignes relationnelles. Pour cela, il fournit une vue sous forme d'un ensemble de lignes de la représentation interne d'un document XML. Les enregistrements de l'ensemble de lignes peuvent être stockés dans des tables de base de données.  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+OPENXML, un mot clé [!INCLUDE[tsql](../../includes/tsql-md.md)] , fournit un ensemble de lignes sur des documents XML en mémoire qui est similaire à une table ou à une vue. OPENXML permet l'accès aux données XML comme s'il s'agissait d'un ensemble de lignes relationnelles. Pour cela, il fournit une vue sous forme d'un ensemble de lignes de la représentation interne d'un document XML. Les enregistrements de l'ensemble de lignes peuvent être stockés dans des tables de base de données.  
   
  OPENXML peut être utilisé dans des instructions SELECT et SELECT INTO, partout où des fournisseurs d'ensemble de lignes, une vue ou OPENROWSET peuvent apparaître comme source. Pour plus d’informations sur la syntaxe d’OPENXML, consultez [OPENXML &#40;Transact-SQL&#41;](../../t-sql/functions/openxml-transact-sql.md).  
   
@@ -54,7 +59,7 @@ ms.lasthandoff: 11/09/2017
 > [!NOTE]  
 >  OpenXML permet de paramétrer sous forme de variables les modèles XPath de ligne et de colonne. Un tel paramétrage peut mener à des injections d'expressions XPath, si le programmeur expose le paramétrage à des utilisateurs extérieurs (par exemple, si les paramètres sont fournis via une procédure stockée appelée de manière externe). Pour éviter de tels problèmes potentiels de sécurité, il est conseillé de ne jamais exposer les paramètres XPath à des appelants externes.  
   
-## <a name="example"></a>Exemple  
+## <a name="example"></a> Exemple  
  L'exemple ci-dessous montre l'utilisation de `OPENXML` dans une instruction `INSERT` et une instruction `SELECT` . L'exemple de document XML comprend les éléments `<Customers>` et `<Orders>` .  
   
  D'abord, la procédure stockée `sp_xml_preparedocument` analyse le document XML. Le document analysé est une représentation sous forme d'arborescence des différents nœuds du document XML : éléments, attributs, textes, commentaires, et ainsi de suite. `OPENXML` fait ensuite référence à ce document XML analysé et fournit une vue sous forme d'ensemble de lignes de tout ou partie de ce document XML. Une instruction `INSERT` utilisant `OPENXML` peut ainsi insérer des données dans une table de base de données à partir de ce type d'ensemble de lignes. Vous pouvez utiliser plusieurs appels à `OPENXML` pour fournir une vue d'un ensemble de lignes provenant de différentes parties du document XML puis traiter celles-ci en les insérant par exemple dans différentes tables. Cette opération est également qualifiée de fragmentation de données XML dans des tables.  
@@ -144,7 +149,7 @@ EXEC sp_xml_removedocument @docHandle;
 |-----------------|---------------|-----------------|  
 |**id**|**bigint**|ID unique du nœud du document.<br /><br /> L'ID de l'élément racine a pour valeur 0. Les valeurs négatives d'ID sont réservées.|  
 |**parentid**|**bigint**|Identifie le parent du nœud. Le parent identifié par cet ID n'est pas nécessairement l'élément parent. Toutefois, cela dépend du NodeType du nœud dont le parent est identifié par cet ID. Par exemple, si le nœud est un nœud texte, son parent peut être un nœud d'attribut.<br /><br /> Si le nœud se situe au niveau supérieur du document XML, son **ParentID** a pour valeur NULL.|  
-|**node type**|**int**|Identifie le type de nœud et est un entier qui correspond à la numérotation des types de nœud XML de modèle d'objet XML (DOM).<br /><br /> Valeurs susceptibles d'apparaître dans cette colonne pour indiquer le type de nœud :<br /><br /> **1** = Nœud d’élément<br /><br /> **2** = Nœud d’attribut<br /><br /> **3** = Nœud texte<br /><br /> **4** = Nœud de section CDATA<br /><br /> **5** = Nœud de référence d’entité<br /><br /> **6** = Nœud d’entité<br /><br /> **7** = Nœud d’instructions de traitement<br /><br /> **8** = Nœud de commentaire<br /><br /> **9** = Nœud de document<br /><br /> **10** = Nœud de type de document<br /><br /> **11** = Nœud de fragment de document<br /><br /> **12** = Nœud de notation<br /><br /> Pour plus d'informations, consultez la rubrique « Propriété nodeType » dans le Kit de développement logiciel Microsoft XML (MSXML).|  
+|**node type**|**Int**|Identifie le type de nœud et est un entier qui correspond à la numérotation des types de nœud XML de modèle d'objet XML (DOM).<br /><br /> Valeurs susceptibles d'apparaître dans cette colonne pour indiquer le type de nœud :<br /><br /> **1** = Nœud d’élément<br /><br /> **2** = Nœud d’attribut<br /><br /> **3** = Nœud texte<br /><br /> **4** = Nœud de section CDATA<br /><br /> **5** = Nœud de référence d’entité<br /><br /> **6** = Nœud d’entité<br /><br /> **7** = Nœud d’instructions de traitement<br /><br /> **8** = Nœud de commentaire<br /><br /> **9** = Nœud de document<br /><br /> **10** = Nœud de type de document<br /><br /> **11** = Nœud de fragment de document<br /><br /> **12** = Nœud de notation<br /><br /> Pour plus d'informations, consultez la rubrique « Propriété nodeType » dans le Kit de développement logiciel Microsoft XML (MSXML).|  
 |**localname**|**nvarchar(max)**|Fournit le nom local de l'élément ou de l'attribut. A pour valeur NULL si l'objet DOM est dépourvu de nom.|  
 |**prefix**|**nvarchar(max)**|Préfixe de l'espace de noms du nom de nœud.|  
 |**namespaceuri**|**nvarchar(max)**|URI de l'espace de noms du nœud. Si la valeur est NULL, aucun espace de noms n'est présent.|  
@@ -199,7 +204,7 @@ EXEC sp_xml_removedocument @docHandle;
   
 -   Pour plusieurs sous-éléments du même nom, le premier nœud est retourné.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [sp_xml_preparedocument &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-xml-preparedocument-transact-sql.md)   
  [sp_xml_removedocument &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-xml-removedocument-transact-sql.md)   
  [OPENXML &#40;Transact-SQL&#41;](../../t-sql/functions/openxml-transact-sql.md)   

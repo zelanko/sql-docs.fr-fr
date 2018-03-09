@@ -2,10 +2,14 @@
 title: "ObjectType, colonne d’événements de trace | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,19 +18,20 @@ helpviewer_keywords:
 - event classes [SQL Server], Object Type column values
 - Object Type column values [SQL Server]
 ms.assetid: 42f85c50-34c9-49ca-955f-af9595e2707f
-caps.latest.revision: "17"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e497ee83d66e83a983c26938e65d75172c9ade6b
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 063bab84aeaa695ace1087df518640b611749b5f
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="objecttype-trace-event-column"></a>Colonne d'événements de trace ObjectType
-  La colonne d'événements de trace Object Type est utilisée dans divers événements de trace. Cette rubrique décrit les valeurs admises dans cette colonne, ainsi que leur définition associée.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+La colonne d'événements de trace Object Type est utilisée dans divers événements de trace. Cette rubrique décrit les valeurs admises dans cette colonne, ainsi que leur définition associée.  
   
 ## <a name="object-type-column-values"></a>Valeurs de la colonne Object Type  
   
@@ -44,10 +49,10 @@ ms.lasthandoff: 11/09/2017
 |8280|Procédure stockée étendue|  
 |16724|Déclencheur CLR|  
 |16964|Base de données|  
-|16975|Objet|  
+|16975|Object|  
 |17222|Catalogue de texte intégral|  
 |17232|Procédure stockée CLR|  
-|17235|Schéma|  
+|17235|schéma|  
 |17475|Informations d'identification|  
 |17491|Événement DDL|  
 |17741|Événement de gestion|  
@@ -66,7 +71,7 @@ ms.lasthandoff: 11/09/2017
 |19283|ObfusKey|  
 |19521|Connexion à clé asymétrique|  
 |19523|Connexion à certificat|  
-|19538|Rôle|  
+|19538|Role|  
 |19539|Connexion SQL|  
 |19543|Connexion Windows|  
 |20034|Liaisons de service distant|  
@@ -83,7 +88,7 @@ ms.lasthandoff: 11/09/2017
 |20821|Contrainte unique|  
 |21057|Rôle d'application|  
 |21059|Certificat|  
-|21075|Server|  
+|21075|Serveur|  
 |21076|Déclencheur Transact-SQL|  
 |21313|Assembly|  
 |21318|Fonction scalaire CLR|  
@@ -104,7 +109,7 @@ ms.lasthandoff: 11/09/2017
 |22611|XMLSchema|  
 |22868|Type|  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)  
   
   

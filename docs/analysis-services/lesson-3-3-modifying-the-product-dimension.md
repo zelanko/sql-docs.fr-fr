@@ -2,29 +2,32 @@
 title: Modification de la Dimension de produit | Documents Microsoft
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tutorial
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology: analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 ms.assetid: 8e3ffecd-7f40-41a8-8735-bc9858a310cb
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: fd334585da2a88fd8dbdbd5fdad9ba2d8f403cb1
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 8bbed44f2b02b0d94678513185dbf682a537e9e5
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="lesson-3-3---modifying-the-product-dimension"></a>Leçon 3-3-modification de la Dimension de produit
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 Au cours des tâches de cette rubrique, vous allez utiliser un calcul nommé pour fournir des noms plus descriptifs pour les lignes de produits, définir une hiérarchie dans la dimension Product et spécifier le nom de membre (All) pour la hiérarchie. Vous regroupez également les attributs dans des dossiers d'affichage.  
   
 ## <a name="adding-a-named-calculation"></a>Ajout d'un calcul nommé  
@@ -165,7 +168,7 @@ Si les données sous-jacentes le prennent en charge, il est également conseill�
   
 2.  Dans le diagramme, cliquez avec le bouton droit sur l’attribut **Model Name** puis sélectionnez **Nouvelle relation d’attribut**.  
   
-3.  Dans la boîte de dialogue **Créer une relation d’attribut** , **l’Attribut source** est **Model Name**. Définissez **l’Attribut associé** sur **Product Line**.  
+3.  Dans la boîte de dialogue **Créer une relation d’attribut**, **l’Attribut source** est **Model Name**. Définissez **l’Attribut associé** sur **Product Line**.  
   
     Dans la liste **Type de relation** , laissez le type de relation défini sur **Flexible** car les relations entre les membres peuvent changer au fil du temps. Par exemple, un modèle de produit peut se retrouver déplacé vers une autre ligne de produits.  
   
@@ -189,7 +192,7 @@ Si les données sous-jacentes le prennent en charge, il est également conseill�
 [Modification de la dimension Date](../analysis-services/lesson-3-4-modifying-the-date-dimension.md)  
   
 ## <a name="see-also"></a>Voir aussi  
-[Définir des calculs nommés dans une vue de source de données &#40;Analysis Services&#41;](../analysis-services/multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md)  
+[Définir des calculs nommés dans une vue de Source de données &#40; Analysis Services &#41;](../analysis-services/multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md)  
 [Créer des hiérarchies définies par l'utilisateur](../analysis-services/multidimensional-models/user-defined-hierarchies-create.md)  
 [Configurer le niveau &#40;Tous&#41; des hiérarchies d’attributs](../analysis-services/multidimensional-models/database-dimensions-configure-the-all-level-for-attribute-hierarchies.md)  
   

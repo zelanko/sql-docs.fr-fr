@@ -1,30 +1,32 @@
 ---
-title: "Catalog.update_master_address (base de données SSISDB) | Documents Microsoft"
+title: "catalog.update_master_address (base de données SSISDB) | Microsoft Docs"
 ms.custom: 
 ms.date: 07/18/2017
-ms.prod: sql-server-2017
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: system-stored-procedures
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-caps.latest.revision: 1
+caps.latest.revision: 
 author: haoqian
 ms.author: haoqian
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: e5e560d6011370b3d56ba13c86608d2be3d0dc6e
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: dd052bb7b75c3ea8002a40db3e37ca1e2a0b2788
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="catalogupdatemasteraddress-ssisdb-database"></a>Catalog.update_master_address (base de données SSISDB)
-[!INCLUDE[tsql-appliesto-ssvnxt-xxxx-xxxx-xxx.md](../../includes/tsql-appliesto-ssvnxt-xxxx-xxxx-xxx.md)]
+# <a name="catalogupdatemasteraddress-ssisdb-database"></a>catalog.update_master_address (base de données SSISDB)
+[!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 
-Mise à jour le [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] point de terminaison de mise à l’échelle des Master.
+Met à jour le point de terminaison [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Scale Out Master.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -33,20 +35,19 @@ catalog.update_master_address [@MasterAddress = ] masterAddress
 ```
 
 ## <a name="arguments"></a>Arguments
-[ @MasterAddress =] *masterAddress*  
-Le point de terminaison de mise à l’échelle des Master. Le *masterAddress* est **nvarchar**.  
+[ @MasterAddress = ] *masterAddress*  
+Point de terminaison Scale Out Master. *masterAddress* est de type **nvarchar**.  
 
- ## <a name="return-code-value"></a>Valeur de Code de retour  
+ ## <a name="return-code-value"></a>Valeur du code de retour  
  0 (succès)  
   
 ## <a name="result-sets"></a>Jeux de résultats  
- Aucun  
+ None  
 
 ## <a name="permissions"></a>Autorisations  
  Cette procédure stockée requiert l'une des autorisations suivantes :  
    
--   L’appartenance à la **ssis_admin** rôle de base de données  
+-   Appartenance au rôle de base de données **ssis_admin**  
   
--   L’appartenance à la **sysadmin** rôle de serveur  
+-   Appartenance au rôle serveur **sysadmin**  
  
-

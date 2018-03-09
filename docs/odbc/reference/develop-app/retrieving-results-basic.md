@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 54a310e3e2f13431c0963f513fb9d5c4ec4e226b
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: a0762d7f70becf8c6bdbd86bee524bc964676f59
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="retrieving-results-basic"></a>La récupération des résultats (Basic)
 A *jeu de résultats* est un ensemble de lignes dans la source de données qui correspond à certains critères. Est une table conceptuelle qui résulte d’une requête et qui est disponible pour une application dans un format tabulaire. **Sélectionnez** instructions, fonctions de catalogue et certaines procédures créent des jeux de résultats. Dans l’exemple suivant, la première instruction SQL crée un jeu de résultats contenant toutes les lignes et toutes les colonnes de la table Orders, et la deuxième instruction SQL crée un jeu de résultats contenant les colonnes OrderID, vendeur et l’état pour les lignes de la table Orders dans lequel l’état est ouvert :  

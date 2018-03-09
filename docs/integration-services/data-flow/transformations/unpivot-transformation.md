@@ -1,5 +1,5 @@
 ---
-title: Transformation UNPIVOT | Documents Microsoft
+title: Unpivot, transformation | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -21,28 +21,27 @@ helpviewer_keywords:
 - normalized data [Integration Services]
 - datasets [Integration Services], normalized data
 ms.assetid: f635c64b-a9c5-4f11-9c40-9cd9d5298c5d
-caps.latest.revision: 45
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
-ms.openlocfilehash: 62a84ccfd5fdf3e6b439388e6175804b567f4be3
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/19/2017
-
+ms.openlocfilehash: 667a8c77caa3d3cdbfe4601f1f8597ac7e6d5a11
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="unpivot-transformation"></a>Transformation Unpivot
   La transformation Unpivot convertit un dataset non normalisé en version plus normalisée en étendant les valeurs de plusieurs colonnes d'un enregistrement dans plusieurs enregistrements avec les mêmes valeurs dans une colonne unique. Par exemple, un dataset qui répertorie des noms de clients possède une ligne pour chaque client, avec les produits et la quantité achetée mentionnés dans les colonnes sur la ligne. Après que la transformation Unpivot a normalisé le dataset, celui-ci contient une ligne différente pour chaque produit que le client a acheté.  
   
  Le schéma suivant illustre un dataset avant que les données n'aient été transformées dans la colonne Product.  
   
- ![DataSet après transformation](../../../integration-services/data-flow/transformations/media/mw-dts-18.gif "Dataset après transformation")  
+ ![DataSet après transformation Unpivot](../../../integration-services/data-flow/transformations/media/mw-dts-18.gif "Dataset après transformation Unpivot")  
   
  Le schéma suivant illustre un dataset après transformation de la colonne Product.  
   
- ![Jeu de données avant qu’il soit non croisée dynamique](../../../integration-services/data-flow/transformations/media/mw-dts-17.gif "Dataset avant qu’il soit non croisée dynamique")  
+ ![DataSet avant transformation Unpivot](../../../integration-services/data-flow/transformations/media/mw-dts-17.gif "Dataset avant transformation Unpivot")  
   
  Dans certaines circonstances, les résultats de la suppression du tableau croisé dynamique peuvent contenir des lignes aux valeurs inattendues. Par exemple, si les exemples de données du diagramme qui doivent être supprimées du tableau croisé dynamique possèdent des valeurs Null dans toutes les colonnes Qty pour Fred, la sortie ne comprend qu'une ligne pour Fred, au lieu de cinq. La colonne Qty contient Null ou zéro, suivant le type de données de la colonne.  
   
@@ -51,7 +50,7 @@ ms.lasthandoff: 08/19/2017
   
  Cette transformation a une entrée et une sortie. Elle ne possède aucune sortie d'erreur.  
   
- Vous pouvez définir des propriétés au moyen du concepteur [!INCLUDE[ssIS](../../../includes/ssis-md.md)] ou par programmation.  
+ Vous pouvez définir les propriétés par le biais du concepteur [!INCLUDE[ssIS](../../../includes/ssis-md.md)] ou par programmation.  
   
  Pour plus d'informations sur les propriétés définissables dans la boîte de dialogue **Éditeur avancé** ou par programmation, cliquez sur l'une des rubriques suivantes :  
   
@@ -88,7 +87,7 @@ ms.lasthandoff: 08/19/2017
  Dans le scénario Unpivot décrit dans [Unpivot Transformation](../../../integration-services/data-flow/transformations/unpivot-transformation.md), la colonne de destination est la colonne de quantité (**Qty**).  
   
  **Valeur de clé de tableau croisé dynamique**  
- Tapez le nom de la valeur croisée dynamique. Par défaut, il s'agit du nom de la colonne d'entrée ; vous pouvez néanmoins choisir un nom unique et descriptif.  
+ Tapez le nom de la valeur croisée dynamique. Par défaut, il s'agit du nom de la colonne d'entrée ; vous pouvez néanmoins choisir un nom unique et descriptif.  
   
  Il est possible de spécifier la valeur de cette propriété en utilisant l'expression d'une propriété.  
   
@@ -99,9 +98,8 @@ ms.lasthandoff: 08/19/2017
   
  Dans le scénario Unpivot décrit dans [Unpivot Transformation](../../../integration-services/data-flow/transformations/unpivot-transformation.md), le nom de la colonne de la valeur de clé de tableau croisé dynamique est **Product** et définit la nouvelle colonne **Product** dans laquelle les colonnes **Ham**, **Soda**, **Milk**, **Beer**et **Chips** ne sont pas croisées dynamiquement.  
   
-## <a name="see-also"></a>Voir aussi  
- [Integration Services Error and Message Reference](../../../integration-services/integration-services-error-and-message-reference.md)   
+## <a name="see-also"></a> Voir aussi  
+ [Guide de référence des erreurs et des messages propres à Integration Services](../../../integration-services/integration-services-error-and-message-reference.md)   
  [Transformation de tableau croisé dynamique](../../../integration-services/data-flow/transformations/pivot-transformation.md)  
   
   
-

@@ -2,10 +2,14 @@
 title: "Créer, modifier et supprimer les index spatiaux | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: spatial
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-spatial
+ms.suite: sql
+ms.technology:
+- dbe-spatial
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,19 +20,20 @@ helpviewer_keywords:
 - indexes [SQL Server], modifying
 - spatial indexes [SQL Server], modifying
 ms.assetid: 00c1b927-8ec5-44cf-87c2-c8de59745735
-caps.latest.revision: "23"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cbd3f1726d55d3303f335d9b46b2c87c9abc1b5f
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 68f2d5d07002de55913fd8cca4166d4254f9ed90
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="create-modify-and-drop-spatial-indexes"></a>Créer, modifier et supprimer les index spatiaux
-  Un index spatial peut effectuer plus efficacement certaines opérations sur une colonne du type de données **geometry** ou **geography** (une *colonne spatiale*). Plusieurs index spatiaux peuvent être spécifiés sur une colonne spatiale. Cela peut s'avérer utile par exemple pour indexer différents paramètres de pavage dans une même colonne.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+Un index spatial peut effectuer plus efficacement certaines opérations sur une colonne du type de données **geometry** ou **geography** (une *colonne spatiale*). Plusieurs index spatiaux peuvent être spécifiés sur une colonne spatiale. Cela peut s'avérer utile par exemple pour indexer différents paramètres de pavage dans une même colonne.  
   
  Il existe plusieurs restrictions applicables à la création d'index spatiaux. Pour plus d'informations, consultez [Restrictions sur les index spatiaux](#restrictions) dans cette rubrique.  
   
@@ -66,7 +71,7 @@ ms.lasthandoff: 11/09/2017
   
 11. Dans la page **Spatial** , spécifiez les valeurs que vous souhaitez utiliser pour les propriétés spatiales de l'index.  
   
-     Quand vous créez un index sur une colonne de type **geometry** , vous devez spécifier les coordonnées **(***X-min***,***Y-min***)** et **(***X-max***,***Y-max***)** du cadre englobant. Pour un index sur une colonne de type **geography** , les champs de cadre englobant deviennent en lecture seule après que vous avez spécifié le schéma de pavage **Grille géographique** , car le pavage de la grille de géographie n’utilise pas de cadre englobant.  
+     Quand vous créez un index sur une colonne de type **geometry**, vous devez spécifier les coordonnées **(***Min. X***,***Min. Y***)** et **(***Max. X***,***Max. Y***)** du cadre englobant. Pour un index sur une colonne de type **geography** , les champs de cadre englobant deviennent en lecture seule après que vous avez spécifié le schéma de pavage **Grille géographique** , car le pavage de la grille de géographie n’utilise pas de cadre englobant.  
   
      Si vous le souhaitez, vous pouvez spécifier des valeurs autres que les valeurs par défaut pour le champ **Cellules par objet** et pour la densité de grille à tout niveau du schéma de pavage. La quantité par défaut de cellules par objet est 16 pour [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ou 8 pour [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ou les versions supérieures, et la densité de grille par défaut est **Moyenne** pour [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].  
   
@@ -135,7 +140,7 @@ ms.lasthandoff: 11/09/2017
  Un index spatial peut être créé uniquement sur une colonne de type **geometry** ou **geography**.  
   
 ### <a name="table-and-view-restrictions"></a>Restrictions sur les tables et les vues  
- Les index spatiaux peuvent être définis uniquement sur une table dotée d'une clé primaire. Le nombre maximal de colonnes clés primaires sur la table est de 15.  
+ Les index spatiaux peuvent être définis uniquement sur une table dotée d'une clé primaire. Le nombre maximal de colonnes clés primaires sur la table est de 15.  
   
  La taille maximale des enregistrements de clés d'index est de 895 octets. Les tailles supérieures génèrent une erreur.  
   
@@ -156,7 +161,7 @@ ms.lasthandoff: 11/09/2017
  Les pavages spatiaux introduits dans [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ne peuvent pas être répliqués dans [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] ou [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]. Vous devez utiliser les pavages spatiaux [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] ou [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] pour les index spatiaux lorsqu'une compatibilité descendante avec les bases de données [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] ou [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] est une condition obligatoire.  
   
   
-## <a name="see-also"></a>Voir aussi  
- [Vue d'ensemble des index spatiaux](../../relational-databases/spatial/spatial-indexes-overview.md)  
+## <a name="see-also"></a> Voir aussi  
+ [Vue d’ensemble des index spatiaux](../../relational-databases/spatial/spatial-indexes-overview.md)  
   
   

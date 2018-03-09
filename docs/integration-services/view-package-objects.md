@@ -1,11 +1,11 @@
 ---
-title: Afficher les objets de packages | Documents Microsoft
+title: Afficher des objets de packages | Microsoft Docs
 ms.custom: 
 ms.date: 03/02/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology:
@@ -22,17 +22,16 @@ helpviewer_keywords:
 - viewing package objects
 - SQL Server Integration Services packages, properties
 ms.assetid: a85c0245-0a68-4eb0-83b1-9b11df80bd10
-caps.latest.revision: 36
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 4314664538d2f3f328e0fbc48965e2541089a95c
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: fd8ac9e0e21ac4d0bc575cff199f827d4bef76ad
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="view-package-objects"></a>Afficher des objets de packages
   Dans le concepteur [!INCLUDE[ssIS](../includes/ssis-md.md)] , l'onglet **Explorateur de package** fournit un aperçu du package. Cet affichage reflète la hiérarchie de conteneur de l'architecture [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Le conteneur de packages est situé en haut de la hiérarchie et vous pouvez développer le package pour afficher les connexions, les exécutables, les gestionnaires d'événements, les fournisseurs d'informations, les contraintes de précédence et les variables du package.  
@@ -45,9 +44,9 @@ ms.lasthandoff: 09/26/2017
   
  Le schéma suivant illustre l'arborescence d'un package simple.  
   
- ![Capture d’écran de l’onglet Explorateur de Package](../integration-services/media/packageexplorer.gif "capture d’écran de l’onglet Explorateur de Package")  
+ ![Capture d’écran de l’onglet Explorateur de package](../integration-services/media/packageexplorer.gif "Capture d’écran de l’onglet Explorateur de package")  
   
-## <a name="view-the-package-structure-and-content"></a>Afficher la structure du package et le contenu  
+## <a name="view-the-package-structure-and-content"></a>Afficher la structure et le contenu d’un package  
   
 1.  Dans [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], ouvrez le projet [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] contenant le package à afficher dans l' **Explorateur de package**.  
   
@@ -61,17 +60,16 @@ ms.lasthandoff: 09/26/2017
   
 -   Cliquez avec le bouton droit sur un objet, puis cliquez sur **Propriétés** pour ouvrir la fenêtre **Propriétés** .  
   
-## <a name="delete-an-object-in-a-package"></a>Supprimer un objet dans un package  
+## <a name="delete-an-object-in-a-package"></a>Supprimer un objet d’un package  
   
 -   Cliquez avec le bouton droit sur un objet, puis cliquez sur **Supprimer**. 
  
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Tâches Integration Services](../integration-services/control-flow/integration-services-tasks.md)   
  [Conteneurs Integration Services](../integration-services/control-flow/integration-services-containers.md)   
  [Contraintes de précédence](../integration-services/control-flow/precedence-constraints.md)   
  [Variables Integration Services &#40;SSIS&#41;](../integration-services/integration-services-ssis-variables.md)   
- [Integration Services &#40; SSIS &#41; Gestionnaires d’événements](../integration-services/integration-services-ssis-event-handlers.md)   
- [Integration Services &#40; SSIS &#41; Journalisation](../integration-services/performance/integration-services-ssis-logging.md)  
+ [Gestionnaires d’événements Integration Services &#40;SSIS&#41](../integration-services/integration-services-ssis-event-handlers.md)   
+ [Journalisation Integration Services &#40;SSIS&#41;](../integration-services/performance/integration-services-ssis-logging.md)  
   
   
-

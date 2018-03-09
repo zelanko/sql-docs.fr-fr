@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -24,13 +22,13 @@ ms.assetid: 26a4baf2-7bc5-4634-b136-552687ffa477
 caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: e3dbe51460c639d7574df42ad9d0a275e80cdbd5
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 18a17ad4befad58d70db0f52f08fe9c8bea98e06
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="formatting-text-and-placeholders-report-builder-and-ssrs"></a>Mise en forme du texte et des espaces réservés (Générateur de rapports et SSRS)
   Les zones de texte peuvent être des éléments de rapport ou correspondre aux cellules individuelles d'une région de données dans lesquelles figure du texte, un champ calculé, un pointeur renvoyant au champ d'une base de données ou une combinaison de ces trois éléments. Vous pouvez associer des polices et des couleurs, ajouter des styles gras et italiques et appliquer des styles de paragraphe (par exemple, un alignement et des retraits négatifs). Vous pouvez mettre en forme une zone de texte tout entière ou bien mettre en forme un texte spécifique, des nombres, des expressions ou des champs à l'intérieur de la zone de texte.  
@@ -78,7 +76,7 @@ ms.lasthandoff: 12/05/2017
 ## <a name="aligning-horizontal-text-using-general"></a>Alignement du texte horizontal à l'aide de l'option Général  
  Dans la zone **Alignement** de la boîte de dialogue **Propriétés de la zone de texte** , vous pouvez indiquer comment le texte doit être aligné au niveau horizontal. Si vous ne spécifiez pas de valeur d’alignement, la valeur d’alignement appliquée par défaut est **Par défaut**. Cela signifie que le texte sera aligné en fonction du type de champ utilisé pour la valeur de votre espace réservé. Si vous spécifiez une expression dont la valeur n'est pas une chaîne (pas un nombre), le texte est aligné à droite. Si, en revanche, votre expression a une valeur de chaîne (un nombre, par exemple), le texte est aligné à gauche.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Expressions &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
  [Mise en forme des étiquettes des axes sur un graphique &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
  [Mise en forme des échelles sur une jauge &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/formatting-scales-on-a-gauge-report-builder-and-ssrs.md)   

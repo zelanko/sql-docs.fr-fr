@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5f5e1149-c967-454d-9a63-18ec4a33d985
 caps.latest.revision: "9"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 048cf935a981c0c86c1d11ec90c4064abea03ac9
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 4c0d92d44a11aad84fe249649ef921123f78aa0b
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="built-in-collections---built-in-globals-and-users-references-report-builder"></a>Collections intégrées - Références à des champs Globals et Users prédéfinis (Générateur de rapports)
   La collection de champs prédéfinis, qui inclut à la fois les collections **Globals** et **User** , représente les valeurs globales fournies par Reporting Services pendant le traitement d’un rapport. La collection **Globals** fournit des valeurs, telles que le nom du rapport, l'heure de début du traitement du rapport et les numéros des pages actuelles pour l'en-tête ou le pied de page du rapport. La collection **User** fournit les paramètres d'identificateur d'utilisateur et de langue. Ces valeurs peuvent être utilisées dans les expressions pour filtrer les résultats dans un rapport.  
@@ -37,14 +35,14 @@ ms.lasthandoff: 12/05/2017
 |**Membre**|**Type**|**Description**|  
 |----------------|--------------|---------------------|  
 |ExecutionTime|**DateTime**|Date et heure du début de l'exécution du rapport.|  
-|PageNumber|**Entier**|Numéro de page actuel relatif aux sauts de page qui réinitialisent le nombre de pages. Au début du traitement des rapports, la valeur initiale est 1. Le numéro de page est incrémenté pour chaque page rendue.<br /><br /> Pour numéroter les pages à l’intérieur de sauts de page pour un rectangle, une région de données, un groupe de régions de données ou une carte, dans la propriété PageBreak, attribuez à la propriété ResetPageNumber la valeur **True**. Non pris en charge dans la hiérarchie des groupes de colonnes de tableau matriciel.<br /><br /> PageNumber peut uniquement être utilisé dans une expression figurant dans un en-tête ou un pied de page.|  
-|ReportFolder|**Chaîne**|Chemin d'accès complet au dossier contenant le rapport. Ce chemin n'inclut pas l'URL du serveur de rapports.|  
-|ReportName|**Chaîne**|Nom du rapport tel qu'il est stocké dans la base de données du serveur de rapports.|  
-|ReportServerUrl|**Chaîne**|URL du serveur de rapports sur lequel le rapport est en cours d'exécution.|  
-|TotalPages|**Entier**|Nombre total de pages par rapport aux sauts de page qui réinitialisent PageNumber. Si aucun saut de page n’est défini, cette valeur est identique à celle de OverallTotalPages.<br /><br /> TotalPages peut uniquement être utilisé dans une expression figurant dans un en-tête ou un pied de page.|  
-|PageName|**Chaîne**|Nom de la page. Au début du traitement d’un rapport, la valeur initiale est celle définie pour la valeur de la propriété de rapport InitialPageName. À mesure que chaque élément de rapport est traité, cette valeur est remplacée par la valeur correspondante de PageName d’un rectangle, d’une région de données, d’un groupe de régions de données ou d’une carte. Non pris en charge dans la hiérarchie des groupes de colonnes de tableau matriciel.<br /><br /> PageName peut uniquement être utilisé dans une expression figurant dans un en-tête ou un pied de page.|  
+|PageNumber|**Integer**|Numéro de page actuel relatif aux sauts de page qui réinitialisent le nombre de pages. Au début du traitement des rapports, la valeur initiale est 1. Le numéro de page est incrémenté pour chaque page rendue.<br /><br /> Pour numéroter les pages à l’intérieur de sauts de page pour un rectangle, une région de données, un groupe de régions de données ou une carte, dans la propriété PageBreak, attribuez à la propriété ResetPageNumber la valeur **True**. Non pris en charge dans la hiérarchie des groupes de colonnes de tableau matriciel.<br /><br /> PageNumber peut uniquement être utilisé dans une expression figurant dans un en-tête ou un pied de page.|  
+|ReportFolder|**String**|Chemin d'accès complet au dossier contenant le rapport. Ce chemin n'inclut pas l'URL du serveur de rapports.|  
+|ReportName|**String**|Nom du rapport tel qu'il est stocké dans la base de données du serveur de rapports.|  
+|ReportServerUrl|**String**|URL du serveur de rapports sur lequel le rapport est en cours d'exécution.|  
+|TotalPages|**Integer**|Nombre total de pages par rapport aux sauts de page qui réinitialisent PageNumber. Si aucun saut de page n’est défini, cette valeur est identique à celle de OverallTotalPages.<br /><br /> TotalPages peut uniquement être utilisé dans une expression figurant dans un en-tête ou un pied de page.|  
+|PageName|**String**|Nom de la page. Au début du traitement d’un rapport, la valeur initiale est celle définie pour la valeur de la propriété de rapport InitialPageName. À mesure que chaque élément de rapport est traité, cette valeur est remplacée par la valeur correspondante de PageName d’un rectangle, d’une région de données, d’un groupe de régions de données ou d’une carte. Non pris en charge dans la hiérarchie des groupes de colonnes de tableau matriciel.<br /><br /> PageName peut uniquement être utilisé dans une expression figurant dans un en-tête ou un pied de page.|  
 |OverallPageNumber|**Entier**|Numéro de la page actuelle pour le rapport entier. Cette valeur n’est pas affectée par ResetPageNumber.<br /><br /> OverallPageNumber peut uniquement être utilisé dans une expression figurant dans un en-tête ou un pied de page.|  
-|OverallTotalPages|**Entier**|Nombre total de pages pour le rapport entier. Cette valeur n’est pas affectée par ResetPageNumber.<br /><br /> OverallTotalPages peut uniquement être utilisé dans une expression figurant dans un en-tête ou un pied de page.|  
+|OverallTotalPages|**Integer**|Nombre total de pages pour le rapport entier. Cette valeur n’est pas affectée par ResetPageNumber.<br /><br /> OverallTotalPages peut uniquement être utilisé dans une expression figurant dans un en-tête ou un pied de page.|  
 |RenderFormat|**RenderFormat**|Informations sur la demande de rendu actuelle.<br /><br /> Pour plus d'informations, consultez « RenderFormat » dans la section suivante.|  
   
  Les membres de la collection **Globals** retournent un type Variant. Si vous souhaitez utiliser un membre de cette collection dans une expression nécessitant un type de données spécifique, vous devez en premier lieu effectuer le cast de la variable. Par exemple, pour convertir le type Variant de temps d'exécution en format de date, utilisez `=CDate(Globals!ExecutionTime)`. Pour plus d’informations, consultez [Types de données dans les expressions &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/data-types-in-expressions-report-builder-and-ssrs.md).  
@@ -54,7 +52,7 @@ ms.lasthandoff: 12/05/2017
   
 |Membre|Type|Description|  
 |------------|----------|-----------------|  
-|Nom|**Chaîne**|Nom du convertisseur tel qu'il a été inscrit dans le fichier de configuration RSReportServer.<br /><br /> Disponible pendant des parties spécifiques du cycle de traitement/rendu des rapports.|  
+|Nom   |**String**|Nom du convertisseur tel qu'il a été inscrit dans le fichier de configuration RSReportServer.<br /><br /> Disponible pendant des parties spécifiques du cycle de traitement/rendu des rapports.|  
 |IsInteractive|**Booléen**|Indique si la demande de rendu actuelle utilise un format de rendu interactif.|  
 |DeviceInfo|Collection nom/valeur en lecture seule|Paires clé/valeur pour les paramètres deviceinfo de la demande de rendu actuelle.<br /><br /> Les valeurs de chaîne peuvent être spécifiées en utilisant la clé ou un index dans la collection.|  
   
@@ -83,7 +81,7 @@ ms.lasthandoff: 12/05/2017
 |**Membre**|**Type**|**Description**|  
 |----------------|--------------|---------------------|  
 |**Langage**|**Chaîne**|Langue de l'utilisateur qui exécute le rapport. Par exemple, `en-US`.|  
-|**UserID**|**Chaîne**|Identificateur de l'utilisateur qui exécute le rapport. Si vous utilisez l'authentification Windows, cette valeur correspond au compte de domaine de l'utilisateur actuel. La valeur est déterminée par l'extension de sécurité de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , qui peut utiliser l'authentification Windows ou une authentification personnalisée.|  
+|**UserID**|**String**|Identificateur de l'utilisateur qui exécute le rapport. Si vous utilisez l'authentification Windows, cette valeur correspond au compte de domaine de l'utilisateur actuel. La valeur est déterminée par l'extension de sécurité de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , qui peut utiliser l'authentification Windows ou une authentification personnalisée.|  
   
  Pour plus d’informations sur la prise en charge de plusieurs langues dans un rapport, consultez « Considérations sur la conception de la solution pour les déploiements multilingues ou globaux » dans la section [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] de la [documentation en ligne SQL Server](http://go.microsoft.com/fwlink/?LinkId=120955).  
   
@@ -96,7 +94,7 @@ ms.lasthandoff: 12/05/2017
 ### <a name="identifying-userid-for-snapshot-or-history-reports"></a>Identification de l'ID utilisateur pour les rapports d'historique ou d'instantané  
  Dans certains cas, les rapports qui contiennent la variable *User!UserID* ne parviennent pas à afficher les données de rapport spécifiques de l’utilisateur qui affiche le rapport.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Expressions &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
  [Boîte de dialogue Expression &#40;Générateur de rapports&#41;](http://msdn.microsoft.com/library/e89c4d97-5d41-4b55-8695-79329edac15d)   
  [Types de données dans les expressions &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/data-types-in-expressions-report-builder-and-ssrs.md)   

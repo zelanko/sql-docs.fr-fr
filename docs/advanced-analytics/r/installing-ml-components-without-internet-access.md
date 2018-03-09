@@ -1,28 +1,29 @@
 ---
 title: "Installation des composants d’apprentissage machine sans accès à internet | Documents Microsoft"
 ms.custom: 
-ms.date: 11/30/2017
-ms.prod:
-- sql-server-2016
-- sql-server-2017
+ms.date: 01/08/2018
 ms.reviewer: 
-ms.suite: 
-ms.technology: r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 0a90c438-d78b-47be-ac05-479de64378b2
-caps.latest.revision: "30"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: 065f66ca4d1e94e021b1d65b379c4a79302b1066
-ms.sourcegitcommit: ec5f7a945b9fff390422d5c4c138ca82194c3a3b
+ms.openlocfilehash: 1c4a63077cf9801a6c83502f2fdea6f88c063227
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/11/2017
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="installing-machine-learning-components-without-internet-access"></a>Installation des composants d’apprentissage machine sans accès à internet
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Étant donné que les composants R et Python fournis avec SQL Server 2016 et SQL Server 2017 sont open source, Microsoft n’installe pas les composants de R ou Python par défaut. Au lieu de cela, nous fournir les programmes d’installation connexes et fourni des packages pour des raisons pratiques du Microsoft Download Center et d’autres sites de confiance. Vous devez donner son consentement à la licence appropriée, et ensuite le programme d’installation de SQL Server installe les composants de R ou Python pour vous.
 
@@ -126,15 +127,20 @@ Microsoft R Server      |[SRS_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink
 Python de Microsoft Open     |[SPO_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851502) |
 Python de Microsoft Server    |[SPS_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851508) |
 **SQL Server 2017 CU1** |
-Microsoft R Open     |utiliser le précédent|
+Microsoft R Open     |aucune modification ; utiliser le précédent|
 Microsoft R Server      |[SRS_9.2.0.100_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851501)|
-Python de Microsoft Open     |utiliser le précédent |
+Python de Microsoft Open     |aucune modification ; utiliser le précédent |
 Python de Microsoft Server    |[SPS_9.2.0.100_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851500) |
 **SQL Server 2017 CU2** |
-Microsoft R Open     |utiliser le précédent|
-Microsoft R Server      |utiliser le précédent|
-Python de Microsoft Open     |utiliser le précédent |
-Python de Microsoft Server    |utiliser le précédent|
+Microsoft R Open     |aucune modification ; utiliser le précédent|
+Microsoft R Server      |aucune modification ; utiliser le précédent|
+Python de Microsoft Open     |aucune modification ; utiliser le précédent|
+Python de Microsoft Server    |aucune modification ; utiliser le précédent|
+**SQL Server 2017 CU3** |
+Microsoft R Open     |[SRO_3.3.3.300_1033.cab](https://go.microsoft.com/fwlink/?LinkId=863894)|
+Microsoft R Server      |[SRS_9.2.0.300_1033.cab](https://go.microsoft.com/fwlink/?LinkId=863893)|
+Python de Microsoft Open     |aucune modification ; utiliser le précédent|
+Python de Microsoft Server    |[SPS_9.2.0.300_1033.cab](https://go.microsoft.com/fwlink/?LinkId=863892)|
 
 ### <a name="bkmk_2016Installers"></a>Téléchargements pour SQL Server 2016
 
@@ -187,7 +193,7 @@ Microsoft R Server    |[SRS_8.0.3.17000_1033.cab](https://go.microsoft.com/fwlin
 Microsoft R Open     |aucune modification ; utiliser le précédent|
 Microsoft R Server    |aucune modification ; utiliser le précédent |
 
-Si vous souhaitez afficher le code source pour Microsoft R, il est disponible en téléchargement sous forme d’archive .tar format : [programmes d’installation de télécharger le serveur R](https://docs.microsoft.com/r-server/install/r-server-install-windows#download)
+Si vous souhaitez afficher le code source pour Microsoft R, il est disponible en téléchargement sous forme d’archive .tar format : [programmes d’installation de télécharger le serveur R](https://docs.microsoft.com/machine-learning-server/install/r-server-install-windows#download)
 
 ### <a name = "bkmk_OtherComponents"></a>Autres conditions préalables
 

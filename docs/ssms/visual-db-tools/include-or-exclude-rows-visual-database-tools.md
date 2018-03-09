@@ -3,8 +3,11 @@ title: Inclure ou exclure des lignes (Visual Database Tools) | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -23,16 +26,16 @@ ms.assetid: ba4e1202-31a2-444d-8365-c68a530ef223
 caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7a989f2ed661ecf6528b1ede1993522d3014255f
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 020bbbcbae62267966e9fb020e3dc0f668cc977f
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="include-or-exclude-rows-visual-database-tools"></a>Inclure ou exclure des lignes (Visual Database Tools)
-Pour limiter le nombre de lignes qu'une requête SELECT doit renvoyer, créez des conditions de recherche ou des critères de filtre. Dans SQL, les conditions de recherche apparaissent dans la clause WHERE de l'instruction ou, si vous créez une requête d'agrégation, dans la clause HAVING.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Pour limiter le nombre de lignes qu’une requête SELECT doit renvoyer, créez des conditions de recherche ou des critères de filtre. Dans SQL, les conditions de recherche apparaissent dans la clause WHERE de l'instruction ou, si vous créez une requête d'agrégation, dans la clause HAVING.  
   
 > [!NOTE]  
 > Les conditions de recherche permettent également d'indiquer quelles lignes sont affectées par une requête appartenant à un des types suivants : Update, Insert Results, Insert Values, Delete ou Make Table.  
@@ -61,7 +64,7 @@ Vous pouvez même combiner plusieurs conditions de recherche dans une seule et m
 region = 'UK' OR region = 'US'  
 ```  
   
-Pour plus de détails sur la combinaison de conditions de recherche, consultez les rubriques suivantes :  
+Pour plus de détails sur la combinaison de conditions de recherche, consultez les rubriques suivantes :  
   
 -   [Conventions pour la combinaison de conditions de recherche dans le volet Critères &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/conventions-combine-search-conditions-in-criteria-pane-visual-db-tools.md)  
   
@@ -106,7 +109,7 @@ Voici quelques exemples des requêtes utilisant plusieurs opérateurs et critèr
     WHERE sales_price > (prod_cost * 2)  
     ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [Rubriques de procédures relatives à la conception de requêtes et de vues &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
 [Spécifier des critères de recherche &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md)  
 [Requête avec des paramètres &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/query-with-parameters-visual-database-tools.md)  

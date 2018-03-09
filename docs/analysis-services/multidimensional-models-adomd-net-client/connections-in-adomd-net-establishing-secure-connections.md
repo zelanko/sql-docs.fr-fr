@@ -1,33 +1,32 @@
 ---
 title: "Établissement de connexions sécurisées dans ADOMD.NET | Documents Microsoft"
 ms.custom: 
-ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.date: 02/14/2018
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - connections [ADOMD.NET]
 - security [ADOMD.NET]
 ms.assetid: b084d447-1456-45a4-8e0e-746c07d7d6fd
-caps.latest.revision: "42"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 7a4545dc84372ae73ba90ac0c90a8586e92afe8f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 6916e57fc0135fc5688c6569eaeb8341caa23b82
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="connections-in-adomdnet---establishing-secure-connections"></a>Connexions dans ADOMD.NET - établissement de connexions sécurisées
   Lorsque vous utilisez une connexion dans ADOMD.NET, la méthode de sécurité qui est utilisée pour la connexion dépend de la valeur de la **ProtectionLevel** propriété de chaîne de connexion utilisée lorsque vous appelez le <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.Open%2A> méthode de la <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection>.  
@@ -81,9 +80,9 @@ ms.lasthandoff: 11/17/2017
   
 |Valeur de ProtectionLevel|Utilisation avec HTTP ou HTTPS|  
 |---------------------------|----------------------------|  
-|**Aucun**|Non|  
+|**Aucun**|non|  
 |**Se connecter**|HTTP|  
-|**L’intégrité de PKT** ou **PktIntegrity**|Non|  
+|**L’intégrité de PKT** ou **PktIntegrity**|non|  
 |**PKT Privacy** ou **PktPrivacy**|HTTPS|  
   
 ### <a name="opening-a-secure-http-connection"></a>Ouverture d'une connexion HTTP sécurisée  

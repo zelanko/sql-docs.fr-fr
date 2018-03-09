@@ -2,10 +2,14 @@
 title: "Configurer des règles de pare-feu avant d’exécuter le débogueur TSQL | Microsoft Docs"
 ms.custom: 
 ms.date: 10/20/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-scripting
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -20,19 +24,19 @@ helpviewer_keywords:
 - ports [SQL Server], Transact-SQL debugger
 - TCP/IP [SQL Server], port numbers
 ms.assetid: f50e0b0d-eaf0-4f4a-be83-96f5be63e7ea
-caps.latest.revision: "43"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 43a0926518f6a5f1f8751389db274f27c9da6993
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 1c1196f3195b1b54844a5420a8a9322265a1efa8
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="configure-firewall-rules-before-running-the-tsql-debugger"></a>Configurer des règles de pare-feu avant d’exécuter le débogueur TSQL
-  Vous devez configurer des règles de Pare-feu Windows pour permettre le débogage [!INCLUDE[tsql](../../includes/tsql-md.md)] en cas de connexion à une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)] qui s'exécute sur un autre ordinateur que l'Éditeur de requête du [!INCLUDE[ssDE](../../includes/ssde-md.md)] .  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Vous devez configurer des règles de Pare-feu Windows pour permettre le débogage [!INCLUDE[tsql](../../includes/tsql-md.md)] en cas de connexion à une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)] qui s’exécute sur un autre ordinateur que l’Éditeur de requête du [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 ## <a name="configuring-the-transact-sql-debugger"></a>Configuration du débogueur Transact-SQL  
  Le débogueur [!INCLUDE[tsql](../../includes/tsql-md.md)] inclut des composants côté serveur et côté client. Les composants du débogueur côté serveur sont installés avec chaque instance du moteur de base de données à partir de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 2 (SP2) ou version ultérieure. Les composants côté client du débogueur sont inclus :  
@@ -161,7 +165,7 @@ ms.lasthandoff: 11/09/2017
 
 * Le serveur doit communiquer avec le client par le biais de RPC. Le compte sous lequel le service SQL Server est exécuté doit avoir des autorisations d’authentification pour le client  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Débogueur Transact-SQL](../../relational-databases/scripting/transact-sql-debugger.md)   
  [Exécuter le débogueur Transact-SQL](../../relational-databases/scripting/run-the-transact-sql-debugger.md)   
  [Exécuter pas à pas du code Transact-SQL](../../relational-databases/scripting/step-through-transact-sql-code.md)   

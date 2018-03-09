@@ -1,11 +1,11 @@
 ---
-title: "Fonctionnalités prises en charge par les éditions de SQL Server Integration Services | Documents Microsoft"
+title: "Fonctionnalités Integration Services prises en charge par les éditions de SQL Server | Microsoft Docs"
 ms.custom: 
 ms.date: 07/26/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology:
@@ -13,24 +13,23 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e5018225-68bb-4f34-ae4a-ead79d8ad13a
-caps.latest.revision: 15
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 8cc1fcfdeae8742a93916dfb08c9db1215f88721
-ms.openlocfilehash: e9d1b8851f113fa44264230a79d0e496007ed96b
-ms.contentlocale: fr-fr
-ms.lasthandoff: 10/17/2017
-
+ms.openlocfilehash: d3286ac5f6a85b05babf3df26bb525cf18357ee5
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="integration-services-features-supported-by-the-editions-of-sql-server"></a>Fonctionnalités Integration Services pris en charge par les éditions de SQL Server
+# <a name="integration-services-features-supported-by-the-editions-of-sql-server"></a>Fonctionnalités Integration Services prises en charge par les éditions de SQL Server
  Cette rubrique fournit des détails sur les fonctionnalités de SQL Server Integration Services (SSIS) prises en charge par les différentes éditions de [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)].  
 
-Pour les fonctionnalités prises en charge par les éditions Evaluation et Developer, consultez les fonctionnalités répertoriées pour Enterprise Edition dans les tableaux suivants.
+Pour connaître les fonctionnalités prises en charge par les éditions Evaluation et Developer, consultez les fonctionnalités répertoriées pour Enterprise Edition dans les tableaux suivants.
   
-Pour les dernières notes et informations sur les nouveautés, consultez les articles suivants :
+Pour obtenir les notes de publication les plus récentes et des informations sur les nouveautés, consultez les articles suivants :
 -   [Notes de publication de SQL Server 2016](../sql-server/sql-server-2016-release-notes.md)
 -   [Nouveautés d’Integration Services dans SQL Server 2016](../integration-services/what-s-new-in-integration-services-in-sql-server-2016.md)
 -   [Nouveautés d’Integration Services dans SQL Server 2017](../integration-services/what-s-new-in-integration-services-in-sql-server-2017.md)
@@ -39,21 +38,21 @@ Pour les dernières notes et informations sur les nouveautés, consultez les art
 
 La version d’évaluation de SQL Server est disponible pendant une période d’évaluation de 180 jours.  
     
-> [![Télécharger à partir du Centre d’évaluation](../analysis-services/media/download.png)](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016) **[Télécharger SQL Server 2016 à partir du Centre d’évaluation](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016)**    
+> [![Télécharger à partir du Centre d’évaluation](../analysis-services/media/download.png)](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016) **[Télécharger SQL Server 2016 à partir du Centre d’évaluation](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)**    
     
-## <a name="ISNew"></a>Nouvelles fonctionnalités d’Integration Services dans SQL Server 2017
+## <a name="ISNew"></a> Nouvelles fonctionnalités Integration Services dans SQL Server 2017
   
 |Fonctionnalité|Enterprise|Standard|Web|Express with Advanced Services|Express|  
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|  
-|Montée en puissance parallèle principale|Oui|||||
-|Montée en charge de travail|Oui|Oui <sup>1</sup>|TBD|TBD|TBD|
-|Prise en charge pour Microsoft Dynamics AX et Microsoft Dynamics CRM dans les composants d’OData <sup>2</sup>|Oui|Oui||||
+|Scale Out Master|Oui|||||
+|Scale Out Worker|Oui|Oui <sup>1</sup>|TBD|TBD|TBD|
+|Prise en charge de Microsoft Dynamics AX et Microsoft Dynamics CRM dans les composants OData <sup>2</sup>|Oui|Oui||||
 
-<sup>1</sup> si vous exécutez des packages qui nécessitent des fonctionnalités d’entreprise uniquement de monter en charge, la mise à l’échelle des travailleurs doit également exécuter sur des instances de SQL Server Enterprise.
+<sup>1</sup> Si vous exécutez des packages qui nécessitent des fonctionnalités Entreprise uniquement dans Scale Out, les Scale Out Workers doivent également s’exécuter sur des instances de SQL Server Entreprise.
 
-<sup>2</sup> cette fonctionnalité est également pris en charge dans SQL Server 2016 avec Service Pack 1.
+<sup>2</sup> Cette fonctionnalité est également prise en charge dans SQL Server 2016 avec Service Pack 1.
 
-## <a name="IEWiz"></a>SQL Server Assistant Importation et exportation
+## <a name="IEWiz"></a> Assistant Importation et Exportation SQL Server
 
 |Fonctionnalité|Enterprise|Standard|Web|Express with Advanced Services|Express|  
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|  
@@ -65,30 +64,29 @@ La version d’évaluation de SQL Server est disponible pendant une période d�
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|  
 |Connecteurs de source de données intégrés|Oui|Oui|||| 
 |Tâches et transformations intégrées|Oui|Oui||||  
-|Source ODBC et la destination par Attunity|Oui|Oui|||| 
+|Source et destination ODBC |Oui|Oui|||| 
 |Connecteurs et tâches de sources de données Azure|Oui|Oui||||  
-|Tâches et les connecteurs Hadoop/HDFS|Oui|Oui||||  
+|Connecteurs et tâches Hadoop/HDFS|Oui|Oui||||  
 |Outils de profilage de données de base|Oui|Oui|||| 
 
-## <a name="ISAA"></a>Integration Services - Advanced sources et destinations  
+## <a name="ISAA"></a> Integration Services - sources et destinations avancées  
   
 |Fonctionnalité|Enterprise|Standard|Web|Express with Advanced Services|Express|  
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|  
-|Source d’Oracle de haute performance et de destination par Attunity|Oui|||||  
-|Source Teradata de haute performance et de destination par Attunity|Oui|||||  
+|Source et destination Oracle hautes performances par Attunity|Oui|||||  
+|Source et destination hautes performances Teradata par Attunity|Oui|||||  
 |Source et destination SAP BW|Oui|||||  
-|Destination d’apprentissage du modèle données d’exploration de données|Oui|||||  
+|Destination d’apprentissage du modèle d’exploration de données|Oui|||||  
 |Destination de traitement de dimension|Oui|||||  
 |Destination de traitement de partition|Oui|||||  
   
-## <a name="ISAT"></a>Integration Services - avancée des tâches et transformations  
+## <a name="ISAT"></a> Integration Services - Tâches et transformations avancées  
   
 |Fonctionnalité|Enterprise|Standard|Web|Express with Advanced Services|Express|  
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|  
-|Modification des composants de Capture de données par Attunity <sup>1</sup>|Oui|||||  
+|Composants de capture de données modifiées par Attunity <sup>1</sup>|Oui|||||  
 |Transformation de requête d'exploration de données|Oui|||||  
-|Regroupement probable et transformations de recherche floue|Oui|||||  
-|Extraction de terme et les transformations de recherche de terme|Oui|||||  
+|Transformations de regroupement probable et de recherche floue|Oui|||||  
+|Transformations d’extraction de terme et de recherche de terme|Oui|||||  
 
-<sup>1</sup> le de Capture de données modifiées par Attunity nécessitent Enterprise edition. Le Service de Capture de données modifiées et le Concepteur de Capture de données modifiées, toutefois, ne requièrent pas Enterprise edition. Vous pouvez utiliser le concepteur et le Service sur un ordinateur où SSIS n’est pas installé.
-
+<sup>1</sup> Les composants de capture de données modifiées par Attunity nécessitent l’édition Entreprise. Le service de capture de données modifiées et le concepteur de capture de données modifiées, toutefois, ne nécessitent pas l’édition Entreprise. Vous pouvez utiliser le concepteur et le service sur un ordinateur où SSIS n’est pas installé.

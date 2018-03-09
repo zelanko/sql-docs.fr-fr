@@ -8,7 +8,7 @@ ms.service:
 ms.component: t-sql|queries
 ms.reviewer: 
 ms.suite: sql
-ms.technology: r-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -18,12 +18,12 @@ dev_langs: TSQL
 helpviewer_keywords: PREDICT clause
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
-ms.openlocfilehash: 8cc0e51a83b4c024a25caf2fe6501438a3ef8a18
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+manager: craigg
+ms.openlocfilehash: b9aacbffa28783adf6e92d9260d2bf73d89a0cc4
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="predict-transact-sql"></a>PRÉDIRE (Transact-SQL)  
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -61,11 +61,11 @@ Le `MODEL` paramètre est utilisé pour spécifier le modèle utilisé pour calc
 
 L’objet de modèle peut être créé à l’aide de R ou Python ou un autre outil.
 
-**données**
+**data**
 
 Le paramètre de données est utilisé pour spécifier les données utilisées pour calculer les scores ou la prédiction. Données sont spécifiées sous la forme d’une source de table dans la requête. Source de table peut être une table, un alias de table, un alias de l’expression de table commune, une vue ou un fonction table.
 
-**paramètres**
+**parameters**
 
 Le paramètre de paramètres est utilisé pour spécifier des paramètres facultatifs définis par l’utilisateur utilisés pour calculer les scores ou la prédiction.
 
@@ -73,7 +73,7 @@ Le nom de chaque paramètre est spécifique au type de modèle. Par exemple, la 
 
 > [REMARQUE] Cette option n’est pas pris en charge dans la version préliminaire de SQL Server 2017 et est incluse uniquement à des fins de compatibilité avant.
 
-**AVEC ( \<result_set_definition >)**
+**WITH ( \<result_set_definition> )**
 
 La clause WITH est utilisée pour spécifier le schéma de la sortie retournée par le `PREDICT` (fonction).
 
@@ -101,7 +101,7 @@ Il n’est pas nécessaire que R, Python ou une autre machine learning langage �
 
 Le modèle que vous utilisez doit avoir été créé à l’aide d’un des algorithmes pris en charge à partir du package RevoScaleR. Pour obtenir la liste de modèles actuellement pris en charge, consultez [en temps réel de calcul de score](../../advanced-analytics/real-time-scoring.md).
 
-### <a name="permissions"></a>Permissions
+### <a name="permissions"></a>Autorisations
 
 Aucune autorisation n’est requise pour `PREDICT`; Cependant, l’utilisateur doit avoir `EXECUTE` autorisation sur la base de données et pour interroger des données qui sont utilisées en tant qu’entrées. L’utilisateur doit également être en mesure de lire le modèle à partir d’une table, si le modèle a été stocké dans une table.
 

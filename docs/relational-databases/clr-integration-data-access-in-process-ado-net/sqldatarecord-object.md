@@ -8,26 +8,27 @@ ms.service:
 ms.component: clr
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
 - SqlDataRecord object
 - custom result sets [CLR integration]
 ms.assetid: 2ed667fb-749c-4280-a8fb-650643683c8f
-caps.latest.revision: "25"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 024728944c5f8978243f42158d374f0aea0f201b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d9fa7d4465af4de1534e220ffa06d39cf854c3b8
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="sqldatarecord-object"></a>Objet SqlDataRecord
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Le **SqlDataRecord** objet représente une seule ligne de données, ainsi que ses métadonnées connexes.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+L'objet **SqlDataRecord** représente une ligne unique de données avec ses métadonnées connexes.  
   
  Les procédures stockées managées peuvent envoyer au client des jeux de résultats clients qui ne proviennent pas d'un **SqlDataReader**. La classe **SqlDataRecord** , avec les méthodes **SendResultsStart**, **SendResultsRow**et **SendResultsEnd** de l'objet **SqlPipe** , permet aux procédures stockées d'envoyer des jeux de résultats personnalisés au client.  
   

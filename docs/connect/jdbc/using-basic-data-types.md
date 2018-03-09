@@ -1,27 +1,28 @@
 ---
 title: "À l’aide des Types de base de données | Documents Microsoft"
 ms.custom: 
-ms.date: 01/19/2017
+ms.date: 01/19/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d7044936-5b8c-4def-858c-28a11ef70a97
-caps.latest.revision: "73"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 0fe716f57850c4daf3e3f319376626bee3195b6e
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 66da5301a12427ed50a212abf74a0700d89e8668
+ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="using-basic-data-types"></a>Utilisation des types de données de base
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -38,21 +39,21 @@ ms.lasthandoff: 11/18/2017
 |bit|BIT|boolean|  
 |char|CHAR|Chaîne|  
 |date|DATE|java.sql.Date|  
-|datetime|timestamp|java.sql.Timestamp|  
-|datetime2|timestamp|java.sql.Timestamp|  
+|datetime|TIMESTAMP|java.sql.Timestamp|  
+|datetime2|TIMESTAMP|java.sql.Timestamp|  
 |datetimeoffset (2)|microsoft.sql.Types.DATETIMEOFFSET|microsoft.sql.DateTimeOffset|  
-|decimal|DECIMAL|java.math.BigDecimal|  
+|Décimal|DECIMAL|java.math.BigDecimal|  
 |float|DOUBLE|double|  
 |image|LONGVARBINARY|byte[]|  
 |int|INTEGER|int|  
 |money|DECIMAL|java.math.BigDecimal|  
-|nchar|CHAR<br /><br /> NCHAR (Java SE 6.0)|Chaîne|  
+|NCHAR|CHAR<br /><br /> NCHAR (Java SE 6.0)|Chaîne|  
 |ntext|LONGVARCHAR<br /><br /> LONGNVARCHAR (Java SE 6.0)|Chaîne|  
-|numeric|NUMERIC|java.math.BigDecimal|  
+|numérique|NUMERIC|java.math.BigDecimal|  
 |nvarchar|VARCHAR<br /><br /> NVARCHAR (Java SE 6.0)|Chaîne|  
 |nvarchar(max)|VARCHAR<br /><br /> NVARCHAR (Java SE 6.0)|Chaîne|  
 |real|REAL|float|  
-|smalldatetime|timestamp|java.sql.Timestamp|  
+|smalldatetime|TIMESTAMP|java.sql.Timestamp|  
 |smallint|SMALLINT|short|  
 |smallmoney|DECIMAL|java.math.BigDecimal|  
 |texte|LONGVARCHAR|Chaîne|  
@@ -66,12 +67,11 @@ ms.lasthandoff: 11/18/2017
 |varchar|VARCHAR|Chaîne|  
 |varchar(max)|VARCHAR|Chaîne|  
 |xml|LONGVARCHAR<br /><br /> LONGNVARCHAR (Java SE 6.0)|Chaîne<br /><br /> SQLXML|  
+|sqlvariant|SQLVARIANT|Objet|  
   
  (1) pour utiliser java.sql.Time avec le temps [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] type, vous devez définir le **sendTimeAsDatetime** false à la propriété connexion.  
   
  (2) vous pouvez accéder par programmation aux valeurs de **datetimeoffset** avec [classe DateTimeOffset](../../connect/jdbc/reference/datetimeoffset-class.md).  
-  
- Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] type de données sqlvariant n’est pas actuellement pris en charge par le pilote JDBC. Si une requête est utilisée pour récupérer des données d'une table qui contient une colonne du type de données sqlvariant, une exception se produit.  
   
  Les sections suivantes proposent des exemples d'utilisation du pilote JDBC et des types de données de base. Pour obtenir un exemple plus détaillé montrant comment utiliser les types de base de données dans une application Java, consultez [exemple de Types de données de base](../../connect/jdbc/basic-data-types-sample.md).  
   

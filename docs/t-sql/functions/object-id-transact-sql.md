@@ -8,13 +8,15 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - OBJECT_ID
 - OBJECT_ID_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - objects [SQL Server], IDs
 - identification numbers [SQL Server], database objects
@@ -26,16 +28,16 @@ helpviewer_keywords:
 - viewing object IDs
 - verifying object exists
 ms.assetid: f89286db-440f-4218-a828-30881ce3077a
-caps.latest.revision: "63"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: e9abb4a4556ca8ab83e638768ac95b9d7d637935
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.openlocfilehash: 4978a07401fa33e0244a61181e29cfd6146b695e
+ms.sourcegitcommit: 60d0c9415630094a49d4ca9e4e18c3faa694f034
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="objectid-transact-sql"></a>OBJECT_ID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -62,7 +64,7 @@ OBJECT_ID ( '[ database_name . [ schema_name ] . | schema_name . ]
  Type de l'objet défini avec l'étendue du schéma. *object_type* est **varchar** ou **nvarchar**. Si *object_type* est **varchar**, il est converti implicitement en **nvarchar**. Pour obtenir la liste des types d’objets, consultez la **type** colonne [sys.objects &#40; Transact-SQL &#41; ](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md).  
   
 ## <a name="return-types"></a>Types de retour  
- **int**  
+ **Int**  
   
 ## <a name="exceptions"></a>Exceptions  
  Pour un index spatial, OBJECT_ID retourne la valeur NULL.  
@@ -71,7 +73,7 @@ OBJECT_ID ( '[ database_name . [ schema_name ] . | schema_name . ]
   
  Un utilisateur peut voir uniquement les métadonnées des éléments sécurisables qui lui appartiennent ou pour lesquels il dispose d'une autorisation. Cela signifie que les fonctions intégrées générant des métadonnées, telles que OBJECT_ID, peuvent retourner la valeur NULL si l'utilisateur ne dispose d'aucune autorisation sur l'objet. Pour plus d'informations, consultez [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Quand le paramètre d'une fonction système est facultatif, la base de données active, l'ordinateur hôte, l'utilisateur du serveur ou l'utilisateur de la base de données sont pris implicitement en considération. Les fonctions intégrées doivent toujours être suivies de parenthèses.  
   
  Lorsqu’un nom de table temporaire est spécifié, le nom de la base de données doit être placée avant le nom de la table temporaire, sauf si la base de données actuelle est **tempdb**. Par exemple : `SELECT OBJECT_ID('tempdb..#mytemptable')`.  
@@ -133,7 +135,7 @@ GO
  L'exemple suivant renvoie l'ID d'objet de la table `FactFinance` de la base de données [!INCLUDE[ssawPDW](../../includes/ssawpdw-md.md)].  
   
 ```  
-SELECT OBJECT_ID(AdventureWorksPDW2012.dbo.FactFinance') AS 'Object ID';  
+SELECT OBJECT_ID('AdventureWorksPDW2012.dbo.FactFinance') AS 'Object ID';  
 ```  
   
 ## <a name="see-also"></a>Voir aussi  

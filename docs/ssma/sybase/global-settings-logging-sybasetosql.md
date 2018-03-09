@@ -3,8 +3,11 @@ title: "Paramètres globaux (journalisation) (SybaseToSQL) | Documents Microsoft
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-sybase
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 6c7d937442b855804a3bf1ea313b0ea5ddf51a52
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 97e9648a60828b42eb9cde0c14e5ab923a08eff9
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="global-settings-logging-sybasetosql"></a>Paramètres globaux (journalisation) (SybaseToSQL)
 Utilisez le **paramètres globaux** boîte de dialogue pour spécifier les paramètres de journalisation pour SSMA. En règle générale, il faudrait modifier ces paramètres uniquement lorsque vous travaillez avec le support technique.  
@@ -32,7 +35,7 @@ Pour accéder à cette boîte de dialogue, dans le **outils** menu, sélectionne
 **Au niveau des messages**  
 Les options suivantes sont disponibles sous **au niveau des Messages**:  
   
-|Option| Description|  
+|Option|Description|  
 |----------|---------------|  
 |**[toutes les catégories]**|Utilisé pour définir le niveau de journalisation pour toutes les options suivantes.|  
 |**Collecteur**|Collecte des métadonnées sur le schéma source et l’enregistre dans le projet.|  

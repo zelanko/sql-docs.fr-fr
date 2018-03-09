@@ -8,21 +8,23 @@ ms.reviewer:
 ms.service: sql-data-warehouse
 ms.component: system-stored-procedures
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: TSQL
+dev_langs:
+- TSQL
 ms.assetid: f5ccb424-7a95-4557-b774-c69de33c1545
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e70d3a09e94a5e54f119934ec2c63ea90fa932f7
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 8e63022bd135d7c5fc78dd717b6a0bdd27dc5311
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sppdwdatabaseencryption-sql-data-warehouse"></a>sp_pdw_database_encryption pour (entrepôt de données SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -31,14 +33,14 @@ ms.lasthandoff: 11/17/2017
   
 ## <a name="syntax"></a>Syntaxe  
   
-```tsql  
+```sql  
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
   
 sp_pdw_database_encryption [ [ @enabled = ] enabled ] ;  
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- [  **@enabled=** ] *activé*  
+ [ ** @enabled=** ] *activé*  
  Détermine si le chiffrement transparent des données est activé. *activé* est **int**, et peut prendre l’une des valeurs suivantes :  
   
 -   0 = Désactivé  
@@ -53,18 +55,18 @@ sp_pdw_database_encryption [ [ @enabled = ] enabled ] ;
 ## <a name="remarks"></a>Notes  
  Lorsque la chiffrement transparent des données sont activée à l’aide de **sp_pdw_database_encryption pour**, la base de données tempdb est supprimé, recréé et chiffré. Pour cette raison, la chiffrement transparent des données ne peut pas activée sur un dispositif, tandis que les autres sessions sont actives à l’aide de tempdb. Activation ou désactivation du chiffrement transparent des données sur un dispositif est une action qui modifie l’état de l’application, dans la plupart des cas doit être effectuée qu’une seule fois dans la durée de vie du matériel et doit être exécutée lorsqu’il n’existe aucun trafic sur le matériel.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l’appartenance dans le **sysadmin** rôle de base de données fixe ou **CONTROL SERVER** autorisation.  
   
 ## <a name="example"></a>Exemple  
  L’exemple suivant active le chiffrement transparent des données sur le matériel.  
   
-```tsql  
+```sql  
 EXEC sys.sp_pdw_database_encryption 1;  
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [sp_pdw_database_encryption_regenerate_system_keys &#40; Entrepôt de données SQL &#41;](../../relational-databases/system-stored-procedures/sp-pdw-database-encryption-regenerate-system-keys-sql-data-warehouse.md)   
- [sp_pdw_log_user_data_masking &#40; Entrepôt de données SQL &#41;](../../relational-databases/system-stored-procedures/sp-pdw-log-user-data-masking-sql-data-warehouse.md)  
+ [sp_pdw_database_encryption_regenerate_system_keys &#40;SQL Data Warehouse&#41;](../../relational-databases/system-stored-procedures/sp-pdw-database-encryption-regenerate-system-keys-sql-data-warehouse.md)   
+ [sp_pdw_log_user_data_masking &#40;SQL Data Warehouse&#41;](../../relational-databases/system-stored-procedures/sp-pdw-log-user-data-masking-sql-data-warehouse.md)  
   
   

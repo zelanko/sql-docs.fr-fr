@@ -2,16 +2,13 @@
 title: "Créer des mesures et groupes de mesures dans les modèles multidimensionnels | Documents Microsoft"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords: measure groups [Analysis Services], defining
@@ -21,14 +18,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: f10c201d936a3580ca02846f43e3592ebfbacebf
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a66d433e5b96e8012e8c4c05c14d3078235db958
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="create-measures-and-measure-groups-in-multidimensional-models"></a>Création de mesures et de groupes de mesures dans les modèles multidimensionnels
-  Une *mesure* est une agrégation de valeurs de données numériques, telle qu'une somme, un décompte, un minimum, un maximum, une moyenne ou une expression MDX personnalisée que vous créez. Un *groupe de mesures* est un conteneur d'une ou de plusieurs mesures. Toutes les mesures existent dans un groupe de mesures, même s'il n'y a qu'une seule mesure. Un cube doit comporter au moins une mesure et un groupe de mesures.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]A *mesure* est une agrégation de valeurs de données numériques, telles que sum, count, minimum, maximum, moyenne ou une expression MDX personnalisée que vous créez. Un *groupe de mesures* est un conteneur d'une ou de plusieurs mesures. Toutes les mesures existent dans un groupe de mesures, même s'il n'y a qu'une seule mesure. Un cube doit comporter au moins une mesure et un groupe de mesures.  
   
  Cette rubrique comprend les sections suivantes :  
   

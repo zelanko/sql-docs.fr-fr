@@ -5,30 +5,31 @@ ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
 ms.service: 
-ms.component: master-data-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
-ms.technology: master-data-services
+ms.technology:
+- master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ff1e2566-ac8f-467d-a6d9-12c3f13879b9
-caps.latest.revision: "9"
-author: smartysanthosh
-ms.author: nagavo
+caps.latest.revision: 
+author: leolimsft
+ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 91f9472c80cc592181618bd218ee03199334e9d0
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 7f5d996cc9ccbf7f131056e7b02a7f756d048e02
+ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="subscription-view-formats-master-data-services"></a>Formats de vue d'abonnement (Master Data Services)
   Selon l'entité ou la hiérarchie dérivée sélectionnée, les formats suivants sont disponibles pour votre vue d'abonnement.  
   
 ## <a name="subscription-view-formats"></a>Formats de vue d'abonnement  
   
-|Nom|Description|  
+|Nom   |Description|  
 |----------|-----------------|  
 |**Membres feuille**|Contient des membres feuille et leurs valeurs d'attribut associées.|  
 |**Historique des membres feuille**|Contient les données historiques des membres feuille et les valeurs d’attribut qui leur sont associées. Le format d’affichage est Dimension à variation lente Type 4.|  
@@ -45,7 +46,7 @@ ms.lasthandoff: 11/20/2017
 |**Enfant de parent dérivé (vue Hiérarchie dérivée)**|Contient une structure de hiérarchie dérivée au format enfant de parent.|  
 |**Niveaux dérivés (vue Hiérarchie dérivée)**|Contient une structure de hiérarchie dérivée au format de niveau.|  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Vue d’ensemble : exportation de données &#40;Master Data Services&#41;](../master-data-services/overview-exporting-data-master-data-services.md)   
  [Créer une vue d’abonnement pour exporter des données &#40;Master Data Services&#41;](../master-data-services/create-a-subscription-view-to-export-data-master-data-services.md)  
   

@@ -2,28 +2,34 @@
 title: "Gérer les signets | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-scripting
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: VS.BookmarkWindow
-helpviewer_keywords: bookmarks [SQL Server Management Studio]
+f1_keywords:
+- VS.BookmarkWindow
+helpviewer_keywords:
+- bookmarks [SQL Server Management Studio]
 ms.assetid: 67cc3fd6-3238-4c58-a3ec-2d3b0438143a
-caps.latest.revision: "26"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0ae054743dcdf57727fd94a55ccf1ba78b0875fa
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 933f5b57a1c6a5b8516ec9ca8985c800b3fa36b7
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="manage-bookmarks"></a>Gérer les signets
-  Lorsque vous travaillez dans un éditeur de code, la fenêtre **Signets** vous permet de créer des liens vers des lignes de code spécifiques au sein de votre document. Vous pouvez afficher cette fenêtre à partir du menu **Affichage** .  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Lorsque vous travaillez dans un éditeur de code, la fenêtre **Signets** vous permet de créer des liens vers des lignes de code spécifiques au sein de votre document. Vous pouvez afficher cette fenêtre à partir du menu **Affichage** .  
   
  Pour créer des signets et naviguer parmi ceux-ci, cliquez sur les boutons situés dans la barre d’outils de l’ **Éditeur de texte** et en haut de la fenêtre **Signets** . Vous pouvez ajouter et supprimer des signets, activer ou désactiver des signets, ainsi qu'organiser les signets dans des dossiers. Certaines commandes sont également disponibles à partir du menu contextuel de la fenêtre **Signets** . Pour ajouter ou supprimer un signet, placez le point d’insertion sur la ligne de votre choix dans l’Éditeur, puis cliquez sur **Activer/Désactiver le signet**. Pour activer un signet, cochez la case correspondante dans la fenêtre **Signets** ; pour désactiver (sans supprimer) un signet, décochez sa case.  
   
@@ -72,7 +78,7 @@ ms.lasthandoff: 11/09/2017
  **Désactiver/Activer tous les signets**  
  Coche ou décoche les cases de tous les signets dans la fenêtre **Signets** . Ne supprime pas les signets et ne modifie pas les lignes de code qu'ils marquent.  
   
- **Delete**  
+ **Supprimer**  
  Supprime le signet actuellement sélectionné de la fenêtre **Signets** et du document où le signet est apparu. Ne supprime pas la ligne de code qui contenait le signet.  
   
  Cases à cocher des signets  
@@ -81,10 +87,10 @@ ms.lasthandoff: 11/09/2017
 ## <a name="bookmarks-window-shortcut-menu"></a>Menu contextuel de la fenêtre Signets  
  Lorsque vous cliquez avec le bouton droit sur une entrée dans la fenêtre **Signets** , les commandes ci-dessous sont disponibles dans le menu contextuel.  
   
- **Delete**  
+ **Supprimer**  
  Supprime le signet actuellement sélectionné de la fenêtre **Signets** et du document où le signet est apparu. Ne supprime pas la ligne de code qui contenait le signet.  
   
- **Rename**  
+ **Renommer**  
  Vous permet d'affecter un nouveau nom complet à un signet ou un dossier.  
   
  **Désactiver/Activer le signet**  
@@ -93,7 +99,7 @@ ms.lasthandoff: 11/09/2017
  **Désactiver/Activer tous les signets**  
  Coche ou décoche les cases de tous les signets dans la fenêtre **Signets** . Ne supprime pas les signets et ne modifie pas les lignes de code qu'ils marquent.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Raccourcis clavier dans SQL Server Management Studio](../../tools/sql-server-management-studio/sql-server-management-studio-keyboard-shortcuts.md)  
   
   

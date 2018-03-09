@@ -8,20 +8,20 @@ ms.component: reporting-services
 ms.reviewer: 
 ms.suite: pro-bi
 ms.custom: 
-ms.technology: reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a28cf500-6d47-4268-a248-04837e7a09eb
 caps.latest.revision: "13"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 815c9eee34a0104f08958a9bbdf01407ac601e3d
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 6a565e8722385438bddf7b4f01d93ca0be05986f
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="working-with-kpis-in-reporting-services"></a>Utilisation des indicateurs de performance clés dans Reporting Services
 
@@ -61,7 +61,7 @@ Vous pouvez assigner des valeurs statiques ou utiliser les données issues d’u
 |Champ|Description|  
 |---|---|  
 |Format de la valeur|  Permet de modifier le format de la valeur affichée.|   
-|Value|La valeur à afficher pour l’indicateur de performance clé.|  
+|Valeur|La valeur à afficher pour l’indicateur de performance clé.|  
 |Objectif|Utilisé en comparaison à une valeur numérique et présenté sous forme de différence de pourcentage.|  
 |État|Valeur numérique utilisée pour déterminer la couleur de vignette de l’indicateur de performance clé. Les valeurs valides sont 1 (vert), 0 (orange) et -1 (rouge).|  
 |Ensemble de tendances|Valeurs numériques séparées par des virgules utilisées pour la visualisation de graphique. Ceci peut également être défini sur une colonne d’un dataset avec des valeurs qui représentent la tendance.|  

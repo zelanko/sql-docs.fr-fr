@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords: ROLLUPCHILDREN
@@ -20,11 +20,11 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: b13d4e2215ac3358457e10cb62c3bb430288d003
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: e3553458eecb094ec76ecb6bf7f65691aaa1c4bd
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="rollupchildren-mdx"></a>RollupChildren (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -45,12 +45,12 @@ RollupChildren(Member_Expression, Unary_Operator)
  *Unary_Operator*  
  Expression de chaîne valide qui spécifie un opérateur unaire.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Le **RollupChildren** fonction cumule les valeurs des enfants du membre spécifié à l’aide de l’opérateur unaire spécifié.  
   
  Le tableau ci-dessous décrit les opérateurs unaires valides pour cette fonction.  
   
-|Opérateur|Résultat|  
+|Opérateur|Résultats|  
 |--------------|------------|  
 |**+**|total = total + enfant actuel|  
 |**-**|total = total - enfant actuel|  
@@ -61,7 +61,7 @@ RollupChildren(Member_Expression, Unary_Operator)
   
  Si l'opérateur dans la propriété de membre ne figure pas dans la liste, une erreur se produit. L'ordre d'évaluation est déterminé par l'ordre des frères, et non par la priorité des opérateurs.  
   
-## <a name="example"></a>Exemple  
+## <a name="example"></a> Exemple  
  L'exemple ci-dessous utilise une propriété de membre appelée « Alternate Rollup Operator » qui contient des valeurs alternatives permettant aux opérateurs unaires de cumuler les enfants de la hiérarchie Net Profit dans la dimension Account de manière alternative. Cette propriété de membre n'existe pas dans le cube Adventure Works mais peut être créée. Cette utilisation de la **RollupChildren** fonction peut être utilisée dans une application de budgétisation pour l’analyse de simulation.  
   
 ```  

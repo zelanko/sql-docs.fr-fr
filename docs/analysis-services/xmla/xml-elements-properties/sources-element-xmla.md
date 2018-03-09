@@ -2,15 +2,13 @@
 title: "Sources de l’élément (XMLA) | Documents Microsoft"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: xmla
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: Sources Element
@@ -28,14 +26,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 85d46b8d29799ec52bf3bf97fcc7f21cd6019540
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 622d8267bdbb9725ac3bc4e170f336ce34dd0ecc
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="sources-element-xmla"></a>Élément Sources (XMLA)
-  Contient une collection de [Source](../../../analysis-services/xmla/xml-elements-properties/source-element-xmla.md) éléments pour le parent [MergePartitions](../../../analysis-services/xmla/xml-elements-commands/mergepartitions-element-xmla.md) élément.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]Contient une collection de [Source](../../../analysis-services/xmla/xml-elements-properties/source-element-xmla.md) éléments pour le parent [MergePartitions](../../../analysis-services/xmla/xml-elements-commands/mergepartitions-element-xmla.md) élément.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -54,9 +52,9 @@ ms.lasthandoff: 11/17/2017
   
 |Caractéristique|Description|  
 |--------------------|-----------------|  
-|Type de données et longueur|Aucune|  
-|Valeur par défaut|Aucune|  
-|Cardinalité|1-1 : élément requis qui apparaît une fois et une seule.|  
+|Type de données et longueur|None|  
+|Valeur par défaut|None|  
+|Cardinalité|1-1 : élément requis qui apparaît une fois et une seule.|  
   
 ## <a name="element-relationships"></a>Relations entre les éléments  
   
@@ -65,9 +63,9 @@ ms.lasthandoff: 11/17/2017
 |Éléments parents|[MergePartitions](../../../analysis-services/xmla/xml-elements-commands/mergepartitions-element-xmla.md)|  
 |Éléments enfants|[Source](../../../analysis-services/xmla/xml-elements-properties/source-element-xmla.md)|  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
   
-## <a name="example"></a>Exemple  
+## <a name="example"></a> Exemple  
  L'exemple suivant associe l'ensemble des quatre partitions du groupe de mesures `Internet Sales` dans la partition cible `Internet_Sales_2004` . L'exemple utilise le cube Adventure Works DW de l'exemple de base de données [!INCLUDE[ssAWDWsp](../../../includes/ssawdwsp-md.md)] intitulé [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
   
 ```  

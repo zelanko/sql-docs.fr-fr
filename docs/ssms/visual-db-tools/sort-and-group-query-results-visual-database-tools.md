@@ -3,8 +3,11 @@ title: "Trier et regrouper des résultats de requête (Visual Database Tools) | 
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -24,16 +27,16 @@ ms.assetid: b004e1c0-cacc-4241-9426-9fd426978918
 caps.latest.revision: "3"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0fac8b9afe78f60e6cc58a84269ef7d3144da27c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: f1151b57f590a184c1152a6504949fadd1caeca3
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="sort-and-group-query-results-visual-database-tools"></a>Trier et regrouper des résultats de requête (Visual Database Tools)
-Vous pouvez créer un résultat de requête dans lequel chaque ligne de résultat correspond à tout un groupe de lignes des données d'origine.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Vous pouvez créer un résultat de requête dans lequel chaque ligne de résultat correspond à tout un groupe de lignes des données d’origine.  
   
 Pour en savoir plus sur la création de telles requêtes, consultez les rubriques répertoriées dans le tableau ci-dessous.  
   

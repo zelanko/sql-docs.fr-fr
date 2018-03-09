@@ -2,32 +2,30 @@
 title: "Configurer l’utilisation de l’espace disque (PowerPivot pour SharePoint) | Documents Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: power-pivot-sharepoint
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 201a3fda-f162-45d7-bf39-74dcb92fd0e6
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: fa14e2c53a35ba1d8abe32766c6378d637a665ba
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: cfac3c1160e6889fe51f1b93a4df87a0ed92a302
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="configure-disk-space-usage-power-pivot-for-sharepoint"></a>Configurer l’utilisation de l’espace disque (PowerPivot pour SharePoint)
-  Un déploiement de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour SharePoint utilise l’espace disque de l’ordinateur hôte pour mettre en cache des bases de données [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] et accélérer leurs rechargements. Chaque base de données [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] chargée en mémoire est d’abord mise en cache sur le disque, ce qui permet de la recharger ensuite rapidement en vue de nouvelles demandes de données. Par défaut, [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour SharePoint utilise tout l’espace disque disponible pour mettre en cache ses bases de données, mais peut modifier ce comportement à l’aide de propriétés qui limitent la quantité d’espace disque utilisée.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Un déploiement de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour SharePoint utilise l’espace disque de l’ordinateur hôte pour mettre en cache des bases de données [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] et accélérer leurs rechargements. Chaque base de données [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] chargée en mémoire est d’abord mise en cache sur le disque, ce qui permet de la recharger ensuite rapidement en vue de nouvelles demandes de données. Par défaut, [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour SharePoint utilise tout l’espace disque disponible pour mettre en cache ses bases de données, mais peut modifier ce comportement à l’aide de propriétés qui limitent la quantité d’espace disque utilisée.  
   
  Cette rubrique explique comment définir les limites sur l'utilisation de l'espace disque.  
   

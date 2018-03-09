@@ -2,28 +2,33 @@
 title: "Utiliser un fichier de format pour mapper les colonnes d’une table aux champs d’un fichier de données (SQL Server) | Microsoft Docs"
 ms.custom: 
 ms.date: 09/19/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: import-export
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-bulk-import-export
+ms.suite: sql
+ms.technology:
+- dbe-bulk-import-export
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - mapping columns to fields during import [SQL Server]
 - format files [SQL Server], mapping columns to fields
 ms.assetid: e7ee4f7e-24c4-4eb7-84d2-41e57ccc1ef1
-caps.latest.revision: "40"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: b20798245fbc18e8796887cfeff23a512ba923bc
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 238bde9c0928554b38c0f7411cf29863d6f17019
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server"></a>Utiliser un fichier de format pour mapper les colonnes d'une table aux champs d'un fichier de données (SQL Server)
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 Il se peut que les champs d'un fichier de données ne soient pas dans le même ordre que les colonnes correspondantes présentes dans la table. Cette rubrique présente les fichiers de format XML et non-XML ayant été modifiés de sorte à accepter un fichier de données dont les champs sont organisés dans un ordre différent de celui des colonnes de la table correspondante. Le fichier de format modifié permet de mapper les champs de données sur les colonnes correspondantes de la table.  Veuillez consulter [Créer un fichier de format (SQL Server)](../../relational-databases/import-export/create-a-format-file-sql-server.md) pour plus d’informations.
 
 |Contour|
@@ -70,7 +75,7 @@ Pour effectuer l’importation en bloc de données de `myRemap.bcp` dans la tabl
 La méthode la plus simple pour créer le fichier de format consiste à utiliser [bcp utility](../../tools/bcp-utility.md).  Tout d’abord, créez un fichier de format de base à partir de la table existante.  Ensuite, modifiez le fichier de format de base afin qu’il reflète le fichier de données réel.
 
 ### Création d’un fichier de format non-XML<a name="nonxml_format_file"></a>
-Veuillez consulter [Fichiers de format non-XML (SQL Server)](../../relational-databases/import-export/non-xml-format-files-sql-server.md) pour obtenir des informations détaillées. La commande suivante utilise l’ [utilitaire bcp](../../tools/bcp-utility.md) pour générer un fichier de format non-xml `myRemap.fmt`basé sur le schéma de `myRemap`.  En outre, le qualificateur `c` est utilisé pour sépcifier les données de caractère, `t,` est utilisé pour spécifier une virgule comme délimiteur de champ, et `T` est utilisé pour spécifier une connexion approuvée à l’aide de la sécurité intégrée.  À partir d'une invite de commandes, entrez la commande suivante :
+Veuillez consulter [Fichiers de format non XML (SQL Server)](../../relational-databases/import-export/non-xml-format-files-sql-server.md) pour obtenir des informations détaillées. La commande suivante utilise l’ [utilitaire bcp](../../tools/bcp-utility.md) pour générer un fichier de format non-xml `myRemap.fmt`basé sur le schéma de `myRemap`.  En outre, le qualificateur `c` est utilisé pour sépcifier les données de caractère, `t,` est utilisé pour spécifier une virgule comme délimiteur de champ, et `T` est utilisé pour spécifier une connexion approuvée à l’aide de la sécurité intégrée.  À partir d'une invite de commandes, entrez la commande suivante :
 ```
 bcp TestDatabase.dbo.myRemap format nul -c -f D:\BCP\myRemap.fmt -t, -T
 ```
@@ -249,8 +254,8 @@ SELECT * FROM TestDatabase.dbo.myRemap;
 
 
   
-## <a name="see-also"></a>Voir aussi  
-[bcp Utility](../../tools/bcp-utility.md)   
+## <a name="see-also"></a> Voir aussi  
+[Utilitaire bcp](../../tools/bcp-utility.md)   
  [Utiliser un fichier de format pour ignorer une colonne de table &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-skip-a-table-column-sql-server.md)   
  [Utiliser un fichier de format pour ignorer un champ de données &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-skip-a-data-field-sql-server.md)  
   

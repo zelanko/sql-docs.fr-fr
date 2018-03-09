@@ -3,29 +3,34 @@ title: "L’atomisation (XQuery) | Documents Microsoft"
 ms.custom: 
 ms.date: 08/01/2016
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: xquery
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: XML
+dev_langs:
+- XML
 helpviewer_keywords:
 - XQuery, atomization
 - atomization [XQuery]
 ms.assetid: e3d7cf2f-c6fb-43c2-8538-4470a6375af5
-caps.latest.revision: "16"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b6be2574663ce5b8f2cb51161033799543f4ca2e
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 266a592860894ac255f7d01647e1f4caabbe88a3
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="atomization-xquery"></a>Atomisation (XQuery)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   L'atomisation correspond au procédé d'extraction de la valeur typée d'un élément. Ce procédé s'applique cependant sous certaines conditions. Certains opérateurs XQuery, tels que les opérateurs arithmétiques et de comparaison, dépendent de ce processus. Par exemple, lorsque vous appliquez des opérateurs arithmétiques directement aux nœuds, la valeur typée d’un nœud est d’abord récupérée par l’appel implicite le [fonction données](../xquery/data-accessor-functions-data-xquery.md). Ceci permet de transférer la valeur atomique sous forme d'opérande à l'opérateur arithmétique.  
   
@@ -66,7 +71,7 @@ FROM Production.ProductModel
 where ProductModelID=7  
 ```  
   
- Voici le résultat obtenu :  
+ Voici le résultat obtenu :  
   
 ```  
 <WC OriginalLaborHours="2.5"   

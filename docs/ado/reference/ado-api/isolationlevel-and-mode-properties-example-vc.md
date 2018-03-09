@@ -3,29 +3,31 @@ title: "IsolationLevel et Mode, propriétés-exemple (VC ++) | Documents Microso
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - Mode property [ADO], VC++ example
 - IsolationLevel property [ADO], VC++ example
 ms.assetid: 92ddec5d-e3dc-4e8e-997a-c5417cceab69
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 86c0c5ac8c417a68ecde02805a7c724166c2e8a6
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: dfb9da4ee435ef3ebbf6980f6d9dfd9822c3450d
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="isolationlevel-and-mode-properties-example-vc"></a>IsolationLevel et Mode, propriétés-exemple (VC ++)
 Cet exemple utilise le [Mode](../../../ado/reference/ado-api/mode-property-ado.md) propriété pour ouvrir une connexion exclusive et le [IsolationLevel](../../../ado/reference/ado-api/isolationlevel-property.md) propriété pour ouvrir une transaction effectuée indépendamment des autres transactions.  
@@ -239,7 +241,7 @@ void PrintComError(_com_error &e) {
 **La psychologie des ordinateurs de cuisine - INCERTAIN**  
 **Mais il est convivial ? -popular_comp**  
 **Secrets de Silicon Valley - popular_comp**  
-**Étiquette NET - popular_comp**  
+**Net Etiquette -  popular_comp**  
 **Phobic de l’ordinateur et les personnes de Non-Phobic : Variations de comportement - self_help**  
 **Est donc la ? -self_help**  
 **Durée de vie sans craindre - self_help**  
@@ -247,7 +249,7 @@ void PrintComError(_com_error &e) {
 **Sécurité émotionnelle : Un nouvel algorithme - self_help**  
 **Ail Oignons et Leeks : cuisine des Secrets de Méditerranée - cui_traditio**  
 **50 ans dans Buckingham Palace cuisines - cui_traditio**  
-**Sushi, toute personne ? -cui_traditio**   
+**Sushi, Anyone? -  trad_cook**   
 ## <a name="see-also"></a>Voir aussi  
  [Propriété IsolationLevel](../../../ado/reference/ado-api/isolationlevel-property.md)   
  [Mode, propriété (ADO)](../../../ado/reference/ado-api/mode-property-ado.md)

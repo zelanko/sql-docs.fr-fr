@@ -3,27 +3,30 @@ title: "Membres de l’exemple (VBScript) | Documents Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: VB
-helpviewer_keywords: Members collection [ADO MD], VBScript example
+dev_langs:
+- VB
+helpviewer_keywords:
+- Members collection [ADO MD], VBScript example
 ms.assetid: 87bbd4ad-bb1a-4123-93ef-99ef47fd970b
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1e583363b1aeb0af736b34634a158fe6d136acde
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 828d41ee052041edd1a10445444c3a543b12436a
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="members-example-vbscript"></a>Membres de l’exemple (VBScript)
 Cet exemple utilise une chaîne de requête MDX pour récupérer des données OLAP et écrit l’ensemble de cellules résultant dans une structure de table HTML à l’aide des fonctionnalités d’étendue de colonne pour la dimension de plusieurs ensembles de cellules.  

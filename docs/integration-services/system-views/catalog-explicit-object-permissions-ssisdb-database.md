@@ -1,5 +1,5 @@
 ---
-title: "Catalog.explicit_object_permissions (base de données SSISDB) | Documents Microsoft"
+title: "catalog.explicit_object_permissions (base de données SSISDB) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -13,33 +13,32 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 49b09e0f-06e8-451f-b979-a0d91000bfe3
-caps.latest.revision: 16
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: ce92a61241cb70f5e1c6d1bab8db8264d6228bd2
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: e941a6a1f460039964579b1c58fe7011502eda5d
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="catalogexplicitobjectpermissions-ssisdb-database"></a>catalog.explicit_object_permissions (base de données SSISDB)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Affiche uniquement les autorisations affectées explicitement à l'utilisateur.  
   
-|Nom de colonne|Type de données| Description|  
+|Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |object_type|**smallint**|Type d'objet sécurisable. Les types d'objets sécurisables incluent le dossier (`1`), le projet (`2`), l'environnement (`3`) et l'opération (`4`).|  
 |object_id|**bigint**|Identificateur unique (ID) ou clé primaire de l'objet sécurisé.|  
-|principal_id|**int**|ID du principal de base de données.|  
+|principal_id|**Int**|ID du principal de base de données.|  
 |permission_type|**smallint**|Type de l'autorisation.|  
 |is_deny|**bit**|Indique si l'autorisation a été refusée ou accordée. Lorsque la valeur est `1`, l'autorisation a été refusée. Lorsque la valeur est `0`, l'autorisation n'a pas été refusée.|  
-|grantor_id|**int**|ID du principal qui a accordé l'autorisation.|  
+|grantor_id|**Int**|ID du principal qui a accordé l'autorisation.|  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Cette vue affiche les types d'autorisation répertoriés dans le tableau suivant :  
   
 |Valeur permission_type|Nom de l'autorisation|Description de l'autorisation|Types d'objet applicables|  
@@ -54,8 +53,7 @@ ms.lasthandoff: 09/26/2017
 |`103`|EXECUTE_OBJECTS|Permet au principal d'exécuter tous les packages de tous les projets dans le dossier.|Dossier|  
 |`104`|MANAGE_OBJECT_PERMISSIONS|Permet au principal de gérer des autorisations sur tous les objets dans le dossier.|Dossier|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Cette vue ne donne pas une vue complète des autorisations pour le principal actuel. L'utilisateur doit également vérifier si le principal est un membre de rôles et de groupes auxquels des autorisations sont affectées.  
   
   
-

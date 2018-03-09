@@ -1,5 +1,5 @@
 ---
-title: "Capture de données modifiées (SSIS) | Documents Microsoft"
+title: "Capture de données modifiées (SSIS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -16,17 +16,16 @@ helpviewer_keywords:
 - incremental loads [SQL Server change data capture]
 - change data capture [SQL Server], Integration Services and
 ms.assetid: c4aaba1b-73e5-4187-a97b-61c10069cc5a
-caps.latest.revision: 38
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: b9c01b948f5510a01c778648c23324155471b8ac
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: d4b1a7480113be51245c8c01a087a65ce616cb2c
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="change-data-capture-ssis"></a>Capture de données modifiées (SSIS)
   Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], la capture de données modifiées constitue une solution efficace au défi de l'optimisation des chargements incrémentiels de tables sources vers des mini-Data Warehouses et des entrepôts de données.  
@@ -37,14 +36,14 @@ ms.lasthandoff: 09/26/2017
  La fonction de capture des modifications de données de [!INCLUDE[ssDE](../../includes/ssde-md.md)] capture les activités d’insertion, de mise à jour et de suppression appliquées aux tables [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , et rend les détails des modifications disponibles dans un format relationnel simple à utiliser. Les tables de modifications utilisées par la capture de données modifiées contiennent des colonnes qui reflètent la structure de colonne des tables sources suivies, ainsi que les métadonnées nécessaires à la compréhension des modifications effectuées ligne par ligne.  
   
 > [!NOTE]  
->  La capture des modifications de données n’est pas disponible dans toutes les éditions de [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour obtenir la liste des fonctionnalités prises en charge par les éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez [Fonctionnalités prises en charge par les éditions de SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
+>  La capture des modifications de données n’est pas disponible dans toutes les éditions de [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour obtenir la liste des fonctionnalités prises en charge par les éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez [Fonctionnalités prise en charge par les éditions de SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
 ## <a name="how-change-data-capture-works-in-integration-services"></a>Fonctionnement de la capture de données modifiées dans Integration Services  
  Un package [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] peut facilement collecter les données modifiées dans les bases de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour effectuer des chargements incrémentiels efficaces dans un entrepôt de données. Toutefois, avant de pouvoir utiliser [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] pour charger des données modifiées, un administrateur doit activer la capture de données modifiées sur la base de données et les tables à partir desquelles vous souhaitez capturer les modifications. Pour plus d’informations sur la configuration de la capture des données modifiées sur une base de données, consultez [Activer et désactiver la capture de données modifiées &#40;SQL Server&#41;](../../relational-databases/track-changes/enable-and-disable-change-data-capture-sql-server.md).  
   
  Une fois qu'un administrateur a activé la capture de données modifiées sur la base de données, vous pouvez créer un package qui effectue un chargement incrémentiel des données modifiées. Le diagramme suivant montre les étapes à suivre pour créer un tel package qui effectue un chargement incrémentiel à partir d'une table individuelle :  
   
- ![Modifier les étapes de création de Package de Capture de données](../../integration-services/change-data-capture/media/cdc-package-creation.gif "modifier les étapes de création de Package de Capture de données")  
+ ![Étapes de création de package Change Data Capture](../../integration-services/change-data-capture/media/cdc-package-creation.gif "Étapes de création de package Change Data Capture")  
   
  Comme indiqué dans le diagramme précédent, la création d'un package qui effectue un chargement incrémentiel des données modifiées implique les étapes suivantes :  
   
@@ -101,13 +100,13 @@ ms.lasthandoff: 09/26/2017
  Le processus exposé précédemment fait référence à un chargement incrémentiel à partir d'une table unique. Pour effectuer un chargement incrémentiel à partir de plusieurs tables, le processus d'ensemble est le même. Toutefois, la conception du package doit être modifié pour prendre en charge le traitement de plusieurs tables. Pour plus d’informations sur la création d’un package qui effectue un chargement incrémentiel à partir de plusieurs tables, consultez [Exécuter un chargement incrémentiel de plusieurs table](../../integration-services/change-data-capture/perform-an-incremental-load-of-multiple-tables.md).  
   
 ## <a name="samples-of-change-data-capture-packages"></a>Exemples de packages de capture de données modifiées  
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] fournit deux exemples qui montrent comment utiliser la capture de données modifiées dans des packages. Pour plus d'informations, consultez les rubriques suivantes :  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] fournit deux exemples qui montrent comment utiliser la capture de données modifiées dans des packages. Pour plus d'informations, consultez les rubriques suivantes :  
   
 -   [Fichier Lisezmoi de l'exemple de package de capture de données modifiées pour l'intervalle spécifié](http://go.microsoft.com/fwlink/?LinkId=133507)  
   
 -   [Fichier Lisez-moi de l'exemple de package Change Data Capture since Last Request](http://go.microsoft.com/fwlink/?LinkId=133508)  
   
-## <a name="related-tasks"></a>Tâches associées  
+## <a name="related-tasks"></a>Related Tasks  
   
 -   [Spécifier un intervalle de données modifiées](../../integration-services/change-data-capture/specify-an-interval-of-change-data.md)  
   
@@ -121,12 +120,11 @@ ms.lasthandoff: 09/26/2017
   
 -   [Traiter les insertions, les mises à jour et les suppressions](../../integration-services/change-data-capture/process-inserts-updates-and-deletes.md)  
   
--   [Appliquer des modifications à la destination](../../integration-services/change-data-capture/apply-the-changes-to-the-destination.md)  
+-   [Appliquer les modifications à la destination](../../integration-services/change-data-capture/apply-the-changes-to-the-destination.md)  
   
 -   [Exécuter un chargement incrémentiel de plusieurs table](../../integration-services/change-data-capture/perform-an-incremental-load-of-multiple-tables.md)  
   
-## <a name="related-content"></a>Contenu connexe  
+## <a name="related-content"></a>Contenu associé  
  Entrée de blog, [SSIS Design Pattern – Incremental Load](http://go.microsoft.com/fwlink/?LinkId=217679), sur sqlblog.com  
   
   
-

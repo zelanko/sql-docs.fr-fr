@@ -3,8 +3,9 @@ title: "ConnectionString, propriété (ADO) | Documents Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,19 +13,21 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords: Connection15::ConnectionString
-helpviewer_keywords: ConnectionString property [ADO]
+f1_keywords:
+- Connection15::ConnectionString
+helpviewer_keywords:
+- ConnectionString property [ADO]
 ms.assetid: 3be75b75-4d36-4479-ab64-9a456869252a
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 590125743d78e4c583cd22011dcf40f58eed1999
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: aaf33c9a4fd5b628307195b9b9a7d1743d24d7f2
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="connectionstring-property-ado"></a>ConnectionString, propriété (ADO)
 Indique les informations utilisées pour établir une connexion à une source de données.  
@@ -39,11 +42,11 @@ Indique les informations utilisées pour établir une connexion à une source de
   
 |Argument| Description|  
 |--------------|-----------------|  
-|*Fournisseur =*|Spécifie le nom d’un fournisseur à utiliser pour la connexion.|  
+|*Provider=*|Spécifie le nom d’un fournisseur à utiliser pour la connexion.|  
 |*Nom du fichier =*|Spécifie le nom d’un fichier spécifique au fournisseur (par exemple, un objet de source de données persistantes) contenant des informations de connexion prédéfinies.|  
 |*Fournisseur distant =*|Spécifie le nom d’un fournisseur à utiliser lors de l’ouverture d’une connexion côté client. (Remote Data Service uniquement.)|  
-|*Serveur distant =*|Spécifie le nom de chemin d’accès du serveur à utiliser lors de l’ouverture d’une connexion côté client. (Remote Data Service uniquement.)|  
-|*URL =*|Spécifie la chaîne de connexion comme une URL absolue identifiant une ressource, comme un fichier ou répertoire.|  
+|*Remote Server=*|Spécifie le nom de chemin d’accès du serveur à utiliser lors de l’ouverture d’une connexion côté client. (Remote Data Service uniquement.)|  
+|*URL=*|Spécifie la chaîne de connexion comme une URL absolue identifiant une ressource, comme un fichier ou répertoire.|  
   
  Après avoir défini la **ConnectionString** propriété et ouvrez le [connexion](../../../ado/reference/ado-api/connection-object-ado.md) de l’objet, le fournisseur peut modifier le contenu de la propriété, par exemple, en mappant les noms d’arguments définis par ADO à leurs équivalents pour le fournisseur spécifique.  
   

@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 62304f435662004de941d0101b7f376fbe0e026d
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: c1520ca18c42d2efbc2822630fe7ccae9f90302a
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="explicit-data-type-conversion-function"></a>Fonction de Conversion de Type de données explicites
 Conversion de type de données explicite est spécifiée en termes de définitions de type de données SQL.  
@@ -62,7 +62,7 @@ Conversion de type de données explicite est spécifiée en termes de définitio
   
  La syntaxe ODBC pour la fonction de conversion de type de données explicite ne prend pas en charge la spécification du format de conversion. Spécification des formats explicites est prise en charge par la source de données sous-jacente, un pilote doit spécifier une valeur par défaut ou implémenter la spécification de format.  
   
- L’argument *value_exp* peut être un nom de colonne, le résultat d’une autre fonction scalaire ou une valeur numérique ou la chaîne littérale. Exemple :  
+ L’argument *value_exp* peut être un nom de colonne, le résultat d’une autre fonction scalaire ou une valeur numérique ou la chaîne littérale. Exemple :  
   
 ```  
 { fn CONVERT( { fn CURDATE() }, SQL_CHAR ) }  

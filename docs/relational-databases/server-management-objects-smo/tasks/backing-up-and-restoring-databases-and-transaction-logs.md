@@ -8,7 +8,7 @@ ms.service:
 ms.component: smo
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -22,18 +22,20 @@ helpviewer_keywords:
 - database restores [SMO]
 ms.assetid: 1d7bd180-fd6c-4b38-a87b-351496040542
 caps.latest.revision: "49"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 1a9aa5d16960e9d52bb1a6e6edac30e7be02cf64
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 12728d80dbae777438b4b9d63a2bc736d2f4ece5
+ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="backing-up-and-restoring-databases-and-transaction-logs"></a>Sauvegarde et restauration de bases de données et de journaux de transactions
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Dans SMO, le <xref:Microsoft.SqlServer.Management.Smo.Backup> classe et la <xref:Microsoft.SqlServer.Management.Smo.Restore> classe sont des classes utilitaires qui fournissent les outils pour accomplir des tâches spécifiques de sauvegarde et de restauration. A <xref:Microsoft.SqlServer.Management.Smo.Backup> objet représente une tâche de sauvegarde spécifique qui est requise au lieu d’un [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] objet sur l’instance de serveur.  
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+
+  Dans SMO, la classe <xref:Microsoft.SqlServer.Management.Smo.Backup> et la classe <xref:Microsoft.SqlServer.Management.Smo.Restore> sont des classes utilitaires qui fournissent les outils permettant d'accomplir les tâches spécifiques de sauvegarde et restauration. A <xref:Microsoft.SqlServer.Management.Smo.Backup> objet représente une tâche de sauvegarde spécifique qui est requise au lieu d’un [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] objet sur l’instance de serveur.  
   
  En cas de perte ou d'endommagement des données, la sauvegarde doit être restaurée, en totalité ou partiellement. La restauration partielle utilise la collection <xref:Microsoft.SqlServer.Management.Smo.FileGroupCollection> pour segmenter les données à restaurer. Si la sauvegarde concerne un journal des transactions, les données peuvent être restaurées jusqu'à un point particulier dans le temps à l'aide de la propriété <xref:Microsoft.SqlServer.Management.Smo.Restore.ToPointInTime%2A> de l'objet <xref:Microsoft.SqlServer.Management.Smo.Restore>. Les données peuvent également être validées à l'aide de la méthode <xref:Microsoft.SqlServer.Management.Smo.Restore.SqlVerify%2A>. La procédure de sauvegarde recommandée consiste à vérifier l'intégrité de la sauvegarde en effectuant une opération de restauration et en vérifiant régulièrement les données de la base de données.  
   

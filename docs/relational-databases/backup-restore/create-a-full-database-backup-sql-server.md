@@ -8,7 +8,8 @@ ms.service:
 ms.component: backup-restore
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-backup-restore
+ms.technology:
+- dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,16 +18,16 @@ helpviewer_keywords:
 - backups [SQL Server], creating
 - database backups [SQL Server], SQL Server Management Studio
 ms.assetid: 586561fc-dfbb-4842-84f8-204a9100a534
-caps.latest.revision: "63"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: d6049d82cb551c1614f4ea9f76528e53cd29942c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 99efc19a0379e6e4e79a9913c3fd193c219c2666
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="create-a-full-database-backup-sql-server"></a>Créer une sauvegarde complète de base de données (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +49,7 @@ ms.lasthandoff: 11/17/2017
   
 ###  <a name="Recommendations"></a> Recommandations  
   
--   À mesure que la taille d’une base de données augmente, les sauvegardes complètes de base de données nécessitent davantage de temps et d’espace de stockage. Si votre base de données est volumineuse, songez à combiner une sauvegarde complète avec une série de [sauvegardes différentielles de base de données]((../../relational-databases/backup-restore/differential-backups-sql-server.md). Pour plus d’informations, consultez [SQL Server Backup to URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md).  
+-   À mesure que la taille d’une base de données augmente, les sauvegardes complètes de base de données nécessitent davantage de temps et d’espace de stockage. Pour les bases de données volumineuses, songez à compléter les sauvegardes complètes avec une série de [sauvegardes différentielles de base de données](../../relational-databases/backup-restore/differential-backups-sql-server.md). Pour plus d’informations, consultez [SQL Server Backup to URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md).  
   
 -   Vous pouvez estimer la taille d’une sauvegarde complète de base de données en utilisant la procédure stockée système [sp_spaceused](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md) .  
   
@@ -59,7 +60,7 @@ ms.lasthandoff: 11/17/2017
   
  À compter de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] , les options **PASSWORD** et **MEDIAPASSWORD** sont suspendues pour la création de sauvegardes. Vous pouvez toujours restaurer les sauvegardes créées avec des mots de passe.  
   
-####  <a name="Permissions"></a> Autorisations  
+####  <a name="Permissions"></a> Permissions  
  Les autorisations BACKUP DATABASE et BACKUP LOG reviennent par défaut aux membres du rôle serveur fixe **sysadmin** et des rôles de base de données fixes **db_owner** et **db_backupoperator** .  
   
  Des problèmes de propriété et d'autorisations sur le fichier physique de l'unité de sauvegarde sont susceptibles de perturber une opération de sauvegarde. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] doit pouvoir lire et écrire sur l’unité. Le compte sous lequel le service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] s’exécute **doit** avoir des autorisations d’écriture. Toutefois, [sp_addumpdevice](../../relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql.md), qui ajoute une entrée pour une unité de sauvegarde dans les tables système, ne vérifie pas les autorisations d’accès au fichier. De tels problèmes pour le fichier physique de l'unité de sauvegarde peuvent n'apparaître que lorsque la ressource physique est sollicitée au moment de la sauvegarde ou de la restauration.  
@@ -152,7 +153,7 @@ ms.lasthandoff: 11/17/2017
   
      Pour plus d’informations sur les paramètres de compression de sauvegarde, consultez [Afficher ou configurer l’option de configuration du serveur valeur par défaut de compression de la sauvegarde](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md).  
   
-22. Dans la section **Chiffrement** , sélectionnez la case à cocher **Chiffrer la sauvegarde** si vous souhaitez utiliser un chiffrement pour la sauvegarde. Utilisez la liste déroulante **Algorithme** pour sélectionner un algorithme de chiffrement.  Utilisez la liste déroulante **ertificat ou clé asymétrique** pour sélectionner un certificat ou une clé asymétrique existants. Le chiffrement est pris en charge dans SQL Server 2014 ou les versions ultérieures. Pour plus d’informations sur les options de chiffrement, consultez [Sauvegarder la base de données &#40;page Options de sauvegarde&#41;](../../relational-databases/backup-restore/back-up-database-backup-options-page.md).  
+22. Dans la section **Chiffrement** , sélectionnez la case à cocher **Chiffrer la sauvegarde** si vous souhaitez utiliser un chiffrement pour la sauvegarde. Utilisez la liste déroulante **Algorithme** pour sélectionner un algorithme de chiffrement.  Utilisez la liste déroulante **ertificat ou clé asymétrique** pour sélectionner un certificat ou une clé asymétrique existants. Le chiffrement est pris en charge dans SQL Server 2014 ou les versions ultérieures. Pour plus d’informations sur les options de chiffrement, consultez [Sauvegarder la base de données &#40;page Options de sauvegarde&#41;](../../relational-databases/backup-restore/back-up-database-backup-options-page.md).  
   
   
 Vous pouvez utiliser l’ [Assistant Plan de maintenance](../maintenance-plans/use-the-maintenance-plan-wizard.md) pour créer des sauvegardes de bases de données. 
@@ -268,7 +269,7 @@ Une stratégie d’accès stockée a été créée avec des droits de lecture, �
     |Option|Description|  
     |------------|-----------------|  
     |*database*|Base de données à sauvegarder|  
-    |*unité_sauvegarde* [ **, de**...*n* ]|Spécifie une liste de 1 à 64 unités de sauvegarde à utiliser pour l'opération de sauvegarde. Vous pouvez spécifier une unité de sauvegarde physique ou une unité de sauvegarde logique correspondante, si celle-ci est déjà définie. Pour spécifier une unité de sauvegarde physique, utilisez l'option DISK ou TAPE :<br /><br /> { DISK &#124; TAPE } **=***nom_unité_sauvegarde_physique*<br /><br /> Pour plus d’informations, consultez [Unités de sauvegarde &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md).|  
+    |*unité_sauvegarde* [ **, de**...*n* ]|Spécifie une liste de 1 à 64 unités de sauvegarde à utiliser pour l'opération de sauvegarde. Vous pouvez spécifier une unité de sauvegarde physique ou une unité de sauvegarde logique correspondante, si celle-ci est déjà définie. Pour spécifier une unité de sauvegarde physique, utilisez l'option DISK ou TAPE :<br /><br /> { DISK &#124; TAPE } **=***physical_backup_device_name*<br /><br /> Pour plus d’informations, consultez [Unités de sauvegarde &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md).|  
     |WITH *options_with* [ **,**...*o* ]|Spécifie éventuellement une ou plusieurs options supplémentaires, *o*. Pour obtenir des informations de base sur les options, consultez l'étape 2.|  
   
 2.  Spécifiez éventuellement une ou plusieurs options WITH. Quelques options WITH de base sont décrites ici. Pour plus d’informations sur toutes les options WITH, consultez [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md).  
@@ -281,10 +282,10 @@ Une stratégie d’accès stockée a été créée avec des droits de lecture, �
          ENCRYPTION (ALGORITHM,  SERVER CERTIFICATE |ASYMMETRIC KEY)  
          Dans SQL Server 2014 ou les versions ultérieures, spécifiez l'algorithme de chiffrement à utiliser, ainsi que le certificat ou la clé asymétrique pour sécuriser le chiffrement.  
   
-         DESCRIPTION **=** { **’***texte***’** | **@***variable_texte* }  
+         DESCRIPTION **=** { **'***text***'** | **@***text_variable* }  
          Spécifie le texte au format libre servant à décrire le jeu de sauvegarde. La chaîne peut compter jusqu'à 255 caractères.  
   
-         NAME **=** { *nom_jeu_sauvegarde* | **@***var_nom_jeu_sauvegarde* }  
+         NAME **=** { *backup_set_name* | **@***backup_set_name_var* }  
          Spécifie le nom du jeu de sauvegarde. Les noms peuvent contenir jusqu'à 128 caractères. Si l'option NAME n'est pas spécifiée, le nom reste vide.  
   
     -   Options WITH de base relatives au jeu de sauvegarde :  
@@ -293,7 +294,7 @@ Une stratégie d’accès stockée a été créée avec des droits de lecture, �
   
          Une autre méthode pour formater le support de sauvegarde consiste à utiliser l'option FORMAT :  
   
-         FORMAT [ **,** MEDIANAME**=** { *nom_support* | **@***variable_nom_support* } ] [ **,** MEDIADESCRIPTION **=** { *texte* | **@***variable_texte* } ]  
+         FORMAT [ **,** MEDIANAME**=** { *nom_support* | **@***variable_nom_support* } ] [ **,** MEDIADESCRIPTION **=** { *text* | **@***variable_texte* } ]  
          Utilisez la clause FORMAT si vous utilisez le support pour la première fois ou si vous souhaitez écraser toutes les données existantes. Assignez éventuellement un nom et une description au nouveau support.  
   
         > [!IMPORTANT]  
@@ -304,7 +305,7 @@ Une stratégie d’accès stockée a été créée avec des droits de lecture, �
 #### <a name="a-back-up-to-a-disk-device"></a>**A. Sauvegarder sur une unité de disque**  
  L'exemple suivant sauvegarde entièrement la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] sur disque, à l'aide de `FORMAT` , pour créer une nouveau jeu de supports.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 BACKUP DATABASE AdventureWorks2012  
@@ -318,7 +319,7 @@ GO
 #### <a name="b-back-up-to-a-tape-device"></a>**B. Sauvegarder sur un périphérique à bandes**  
  L’exemple suivant sauvegarde la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] complète sur bande, en ajoutant la sauvegarde aux sauvegardes précédentes.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 BACKUP DATABASE AdventureWorks2012  
@@ -331,7 +332,7 @@ GO
 #### <a name="c-back-up-to-a-logical-tape-device"></a>**C. Sauvegarder sur un périphérique à bandes logique**  
  L'exemple suivant crée une unité de sauvegarde logique pour un périphérique à bandes. Il sauvegarde ensuite la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] complète sur ce périphérique.  
   
-```tsql  
+```sql  
 -- Create a logical backup device,   
 -- AdventureWorks2012_Bak_Tape, for tape device \\.\tape0.  
 USE master;  
@@ -372,7 +373,7 @@ Backup-SqlDatabase -ServerInstance "MyServer" –Database $database -BackupFile 
  
  **Pour configurer et utiliser le fournisseur SQL Server PowerShell**  
   
--   [fournisseur PowerShell SQL Server](../../relational-databases/scripting/sql-server-powershell-provider.md)  
+-   [Fournisseur SQL Server PowerShell](../../relational-databases/scripting/sql-server-powershell-provider.md)  
   
 ##  <a name="RelatedTasks"></a> Tâches associées  
   

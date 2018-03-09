@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_repl_articles (Transact-SQL) | Documents Microsoft
+title: sys.dm_repl_articles (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - dm_repl_articles
 - dm_repl_articles_TSQL
 - sys.dm_repl_articles
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_repl_articles dynamic management function
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_repl_articles dynamic management function
 ms.assetid: 794d514e-bacd-432e-a8ec-3a063a97a37b
-caps.latest.revision: "16"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a28b7a4e6b49427fff970bbc0a793f2fcc30d6dd
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 99ec6ab0d4feb697092002fb0c7354625dd9da83
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmreplarticles-transact-sql"></a>sys.dm_repl_articles (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,10 +40,10 @@ ms.lasthandoff: 11/17/2017
   
 |Nom de colonne|Type de données| Description|  
 |-----------------|---------------|-----------------|  
-|**artcache_db_address**|**varbinary (8)**|Adresse en mémoire de la structure de base de données du cache pour la base de données de publication.|  
-|**artcache_table_address**|**varbinary (8)**|Adresse en mémoire de la structure de table du cache pour l'article de table publié.|  
-|**artcache_schema_address**|**varbinary (8)**|Adresse en mémoire de la structure d'article du cache pour un article de table publié.|  
-|**artcache_article_address**|**varbinary (8)**|Adresse en mémoire de la structure d’article mis en cache pour un article de table publié.|  
+|**artcache_db_address**|**varbinary(8)**|Adresse en mémoire de la structure de base de données du cache pour la base de données de publication.|  
+|**artcache_table_address**|**varbinary(8)**|Adresse en mémoire de la structure de table du cache pour l'article de table publié.|  
+|**artcache_schema_address**|**varbinary(8)**|Adresse en mémoire de la structure d'article du cache pour un article de table publié.|  
+|**artcache_article_address**|**varbinary(8)**|Adresse en mémoire de la structure d’article mis en cache pour un article de table publié.|  
 |**artid**|**bigint**|Identifie sans équivoque chaque entrée de cette table.|  
 |**artfilter**|**bigint**|ID de la procédure stockée utilisée pour filtrer horizontalement l'article.|  
 |**artobjid**|**bigint**|ID de l’objet publié.|  
@@ -57,7 +60,7 @@ ms.lasthandoff: 11/17/2017
 |**cmdTypeUpd**|**int**|Syntaxe d'appel pour la procédure stockée de mise à jour, pouvant être une de ces valeurs.<br /><br /> **0** = XCALL<br /><br /> **1** = APPEL<br /><br /> **2** = SQL<br /><br /> **3** = NONE<br /><br /> **4** = MCALL<br /><br /> **5** = VCALL<br /><br /> **6** = SCALL<br /><br /> **7** = INCONNU|  
 |**wszArtpartialupdcmd**|**nvarchar(510)**|Commande ou procédure stockée utilisée pour les mises à jour partielles.|  
 |**cmdTypePartialUpd**|**int**|Syntaxe d'appel pour la procédure stockée de mise à jour partielle, pouvant être une de ces valeurs.<br /><br /> **2** = SQL|  
-|**numCol**|**int**|Nombre de colonnes dans la partition pour un article filtré verticalement.|  
+|**numcol**|**int**|Nombre de colonnes dans la partition pour un article filtré verticalement.|  
 |**artcmdtype**|**tinyint**|Type de commande actuellement répliqué, pouvant être une de ces valeurs.<br /><br /> **1** = INSERTION<br /><br /> **2** = SUPPRESSION<br /><br /> **3** = MISE À JOUR<br /><br /> **4** = UPDATETEXT<br /><br /> **5** = none<br /><br /> **6** = pour usage interne uniquement<br /><br /> **7** = pour usage interne uniquement<br /><br /> **8** = mise à jour partielle|  
 |**artgeninscmd**|**nvarchar(510)**|Modèle de commande INSERT reposant sur les colonnes incluses dans l'article.|  
 |**artgendelcmd**|**nvarchar(510)**|Modèle de commande DELETE, qui peut inclure la clé primaire ou les colonnes incluses dans l'article, selon la syntaxe d'appel utilisée.|  
@@ -70,7 +73,7 @@ ms.lasthandoff: 11/17/2017
 |**fPubAllowUpdate**|**tinyint**|Indique si la publication autorise la mise à jour d'abonnements.|  
 |**intPublicationOptions**|**bigint**|Image précisant les options de publication supplémentaires, où les valeurs des options au niveau du bit peuvent être :<br /><br /> **0 x 1** - activées pour la réplication d’égal à égal.<br /><br /> **0 x 2** -publier les modifications locales uniquement.<br /><br /> **0 x 4** - activée pour les abonnés non SQL Server.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Requiert l’autorisation VIEW DATABASE STATE sur la base de données de publication pour appeler **dm_repl_articles**.  
   
 ## <a name="remarks"></a>Notes  

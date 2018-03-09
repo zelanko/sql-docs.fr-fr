@@ -8,29 +8,31 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - Policy-Based Management, stored procedures
 - stored procedures [Policy-Based Management]
 ms.assetid: df64ab19-4e66-4702-96bd-32ad587d00f0
-caps.latest.revision: "5"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f47b4e74a47659b8428ed8b5f856a3974da27cd3
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 2b2432f9d4603408dbf4815c8ad6e8b836053ebd
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="policy-based-management-stored-procedures-transact-sql"></a>Procédures stockées de Gestion basée sur des stratégies (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]prend en charge le système suivantes procédures stockées qui sont utilisées pour la gestion basée sur des stratégies.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend en charge le système suivantes procédures stockées qui sont utilisées pour la gestion basée sur des stratégies.  
   
 > [!IMPORTANT]  
 >  Seules les procédures stockées de Gestion basée sur des stratégies documentées dans la documentation en ligne de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sont prises en charge. Les procédures stockées non documentées sont utilisées par des composants internes de la Gestion basée sur des stratégies et ne doivent pas être utilisées pour administrer la Gestion basée sur des stratégies.  

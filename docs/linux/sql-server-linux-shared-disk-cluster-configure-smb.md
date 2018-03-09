@@ -3,26 +3,26 @@ title: Configurer le stockage instance cluster de basculement SMB - SQL Server s
 description: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.date: 08/28/2017
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: Inactive
-ms.openlocfilehash: 11300c84bd7453845176d179ea69d3ea3ba0f437
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 704cb4dfb96a2293bf1a595fda781519b70183cb
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="configure-failover-cluster-instance---smb---sql-server-on-linux"></a>Configuration d’instance de cluster de basculement - SMB - SQL Server sur Linux
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 Cet article explique comment configurer le stockage SMB pour une instance de cluster de basculement (FCI) sur Linux. 
  
@@ -81,7 +81,7 @@ Voici quelques conseils et les remarques à l’utilisation de SMB :
     mkdir <TempDir>
     ```
 
-    <TempDir>est le nom du dossier. L’exemple suivant crée un dossier nommé /var/opt/mssql/tmp.
+    <TempDir> est le nom du dossier. L’exemple suivant crée un dossier nommé /var/opt/mssql/tmp.
 
     ```bash
     mkdir /var/opt/mssql/tmp
@@ -172,7 +172,7 @@ Voici quelques conseils et les remarques à l’utilisation de SMB :
     sudo systemctl status mssql-server
     ```
  
-   *    Pour tester plus, créez une base de données pour vérifier que les autorisations sont correctement. L’exemple ci-dessous utilise Transact-SQL ; Vous pouvez utiliser SSMS.
+   *    Pour tester plus, créez une base de données pour vérifier que les autorisations sont correctement. L’exemple suivant utilise Transact-SQL ; Vous pouvez utiliser SSMS.
 
     ![10_testcreatedb][2] 
   
@@ -209,7 +209,7 @@ Voici quelques conseils et les remarques à l’utilisation de SMB :
     mkdir <FolderName>
     ```
 
-    \<Nom_dossier > est le nom du dossier. Le chemin du dossier complet sera doivent être spécifiés if pas au bon emplacement. L’exemple suivant crée un dossier nommé /var/opt/mssql/userdata.
+    \<Nom_dossier > est le nom du dossier. Le chemin du dossier complet doit être spécifié sinon dans l’emplacement approprié. L’exemple suivant crée un dossier nommé /var/opt/mssql/userdata.
 
     ```bash
     mkdir /var/opt/mssql/userdata
@@ -239,7 +239,7 @@ Voici quelques conseils et les remarques à l’utilisation de SMB :
  
    * Type de sortie ne peut plus être le super utilisateur.
 
-   * Pour tester, créez une base de données dans ce dossier. L’exemple ci-dessous utilise sqlcmd pour créer une base de données, basculer vers elle, vérifiez les fichiers existent au niveau du système d’exploitation, puis supprime l’emplacement temporaire. Vous pouvez utiliser SSMS.
+   * Pour tester, créez une base de données dans ce dossier. L’exemple suivant utilise sqlcmd pour créer une base de données, basculer vers elle, vérifiez les fichiers existent au niveau du système d’exploitation, puis supprime l’emplacement temporaire. Vous pouvez utiliser SSMS.
  
    * Démontez le partage 
 

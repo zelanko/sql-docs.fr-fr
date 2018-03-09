@@ -2,25 +2,30 @@
 title: "Surveiller l’utilisation de la mémoire et résoudre les problèmes connexes | Microsoft Docs"
 ms.custom: 
 ms.date: 03/17/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: in-memory-oltp
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine-imoltp
+ms.suite: sql
+ms.technology:
+- database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 7a458b9c-3423-4e24-823d-99573544c877
-caps.latest.revision: "29"
+caps.latest.revision: 
 author: JennieHubbard
 ms.author: jhubbard
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: e08358859b04559b2ed2f010887fd4166ebc6196
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: b1e30a7ef6ebf2ee0f2a586950b50e4b1b1744b5
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="monitor-and-troubleshoot-memory-usage"></a>Surveiller l'utilisation de la mémoire et résoudre les problèmes connexes
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   [!INCLUDE[hek_1](../../includes/hek-1-md.md)] utilise la mémoire selon des modèles différents pour les tables sur disque. Analysez la quantité de mémoire allouée et utilisée par les tables et les index optimisés en mémoire dans votre base de données à l'aide des DMV ou des compteurs de performance fournis pour la mémoire et le sous-système de garbage collection.  Vous aurez ainsi la visibilité au niveau du système et de la base de données, et vous pourrez prévenir les problèmes liés à l'insuffisance de mémoire.  
   
  Cette rubrique traite de la surveillance de votre utilisation de la mémoire [!INCLUDE[hek_2](../../includes/hek-2-md.md)] .  
@@ -152,7 +157,7 @@ ms.lasthandoff: 11/09/2017
 #### <a name="memory-consumption-by-memory-optimized-tables-and-indexes"></a>Consommation de mémoire par les tables et les index optimisés en mémoire  
  Déterminez la quantité de mémoire pour toutes les tables utilisateur, index et objets système en interrogeant `sys.dm_db_xtp_table_memory_stats` comme indiqué ici.  
   
-```tsql  
+```sql  
 SELECT object_name(object_id) AS Name  
      , *  
    FROM sys.dm_db_xtp_table_memory_stats  
@@ -178,7 +183,7 @@ NULL       -2          192                           25                      16 
 #### <a name="memory-consumption-by-internal-system-structures"></a>Consommation de mémoire par les structures internes du système  
  La mémoire est également consommée par les objets système, notamment, les structures transactionnelles, les tampons pour les fichiers de données et delta, les structures de garbage collection, etc. Déterminez la mémoire utilisée pour ces objets système en interrogeant `sys.dm_xtp_system_memory_consumers` comme indiqué ici.  
   
-```tsql  
+```sql  
 SELECT memory_consumer_desc  
      , allocated_bytes/1024 AS allocated_bytes_kb  
      , used_bytes/1024 AS used_bytes_kb  
@@ -217,7 +222,7 @@ PGPOOL:  4K               0                    0                    0
 #### <a name="memory-consumption-at-run-time-when-accessing-memory-optimized-tables"></a>Consommation de mémoire à l'exécution lors de l'accès aux tables optimisées en mémoire  
  Déterminez la mémoire consommée par les structures au moment de l'exécution, notamment le cache de procédures, avec la requête suivante. Exécutez cette requête pour obtenir la mémoire utilisée par les structures d'exécution comme le cache de procédures. Toutes les structures d'exécution ont des balises XTP.  
   
-```tsql  
+```sql  
 SELECT memory_object_address  
      , pages_in_bytes  
      , bytes_used  
@@ -250,7 +255,7 @@ memory_object_address pages_ in_bytes bytes_used type
 #### <a name="memory-consumed-by-includehek2includeshek-2-mdmd-engine-across-the-instance"></a>Mémoire consommée par le moteur [!INCLUDE[hek_2](../../includes/hek-2-md.md)] sur l'instance  
  La mémoire allouée au moteur [!INCLUDE[hek_2](../../includes/hek-2-md.md)] et aux objets optimisés en mémoire est gérée de la même façon que pour tout autre consommateur de mémoire dans l'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Les régisseurs de mémoire de type MEMORYCLERK_XTP tiennent compte de toute la mémoire allouée au moteur [!INCLUDE[hek_2](../../includes/hek-2-md.md)] . Utilisez la requête suivante pour rechercher toute la mémoire utilisée par le moteur [!INCLUDE[hek_2](../../includes/hek-2-md.md)] .  
   
-```tsql  
+```sql  
 -- this DMV accounts for all memory used by the hek_2 engine  
 SELECT type  
      , name  
@@ -285,7 +290,7 @@ MEMORYCLERK_XTP      Default    64             0
   
 3.  Agissez pour atténuer les éventuels problèmes de mémoire. Pour plus d’informations, consultez [Résoudre les problèmes de mémoire insuffisante](../../relational-databases/in-memory-oltp/resolve-out-of-memory-issues.md).  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Lier une base de données avec des tables optimisées en mémoire à un pool de ressources](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md)   
  [Modifier MIN_MEMORY_PERCENT et MAX_MEMORY_PERCENT sur un pool existant](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md#bkmk_ChangeAllocation)  
   

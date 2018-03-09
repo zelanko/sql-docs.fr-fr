@@ -8,20 +8,21 @@ ms.service:
 ms.component: installing-mds-in-an-alwayson-group-environment
 ms.reviewer: 
 ms.suite: sql
-ms.technology: master-data-services
+ms.technology:
+- master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 
 caps.latest.revision: 
-author: smartysanthosh
-ms.author: nagavo
+author: leolimsft
+ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2caabcb53e4386927b4103764c8abce34ccdefcd
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: f8cd77bb7366fb1bb09d8f119a1b740bd8456344
+ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="high-availability-and-disaster-recovery-for-master-data-services"></a>Haute disponibilité et récupération d’urgence pour Master Data Services
 
@@ -96,7 +97,7 @@ Comme l’indique la figure 1 de la section précédente, la solution décrite 
 
 Le cluster WSFC est une fonctionnalité destinée à améliorer la haute disponibilité des applications et des services. Il se compose d’un groupe d’instances de Windows Server indépendantes sur lesquelles s’exécute le service de cluster de basculement Microsoft. Les instances de Windows Server (parfois appelées « nœuds ») sont connectées afin qu’elles puissent communiquer entre elles, rendant ainsi possible la détection de défaillance. Le cluster WSFC fournit des fonctionnalités de détection de défaillance et de basculement. Si un nœud ou un service échoue dans le cluster, la défaillance est détectée, puis un autre nœud commence automatiquement ou manuellement à fournir les services hébergés sur le nœud défaillant. Ainsi, les utilisateurs ne connaissent que des interruptions minimales des services, dont la disponibilité se trouve améliorée.  
 
-### <a name="prerequisites"></a>Conditions préalables
+### <a name="prerequisites"></a>Prerequisites
 
 Le système d’exploitation Windows Server est installé sur toutes les instances et toutes les mises à jour sont corrigées.
 
@@ -215,7 +216,7 @@ Le groupe de disponibilité améliore la haute disponibilité de niveau base de 
 Une instance de cluster de basculement améliore la haute disponibilité de niveau instance. Le service SQL Server et les services associés sont enregistrés en tant que ressources dans le cluster WSFC. De plus, la solution des instances de cluster de basculement requiert un stockage sur disque partagé symétrique, tel que des partages de fichiers SAN ou SMB, qui soit disponible pour tous les nœuds du cluster WFC.
 
 
-### <a name="prerequisites"></a>Conditions préalables
+### <a name="prerequisites"></a>Prerequisites
 
 -   Installez SQL Server sur tous les nœuds. Pour plus d’informations, consultez [Installer SQL Server 2016](https://docs.microsoft.com/sql/database-engine/install-windows/install-sql-server).
 
@@ -319,9 +320,9 @@ Un groupe de disponibilité ne peut être créé que sur des bases de données e
 
 8.  Dans la page **Spécifier les réplicas**, cliquez sur l’onglet **Écouteur**, puis effectuez la procédure suivante. Voir figure 18.
 
-    a.  Cliquez sur **Créer un écouteur de groupe de disponibilité** pour configurer un écouteur de groupe de disponibilité pour la connexion de base de données MDS.
+    A.  Cliquez sur **Créer un écouteur de groupe de disponibilité** pour configurer un écouteur de groupe de disponibilité pour la connexion de base de données MDS.
 
-    b.  Entrez un **Nom DNS de l’écouteur**, tel que MDSSQLServer.
+    B.  Entrez un **Nom DNS de l’écouteur**, tel que MDSSQLServer.
 
     c.  Entrez le port SQL par défaut, 1433, dans la zone de texte **Port**.
 

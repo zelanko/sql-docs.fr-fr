@@ -1,5 +1,5 @@
 ---
-title: Catalog.set_customized_logging_level_value | Documents Microsoft
+title: catalog.set_customized_logging_level_value | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -13,22 +13,21 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: d83fb763-c7c6-4e20-bd10-0f995598b198
-caps.latest.revision: 7
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 75ef405fe4550e81ec2d5178a1d3242d405755af
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 5f5cbc65822e3f105db0e210aa5bbda1e22cc332
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="catalogsetcustomizedlogginglevelvalue"></a>Catalog.set_customized_logging_level_value
+# <a name="catalogsetcustomizedlogginglevelvalue"></a>catalog.set_customized_logging_level_value
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  Modifie les statistiques ou les événements enregistrés par un niveau de journalisation personnalisé existant. Pour plus d’informations sur les niveaux de journalisation personnalisés, consultez [Integration Services &#40; SSIS &#41; Journalisation](../../integration-services/performance/integration-services-ssis-logging.md).  
+  Change les statistiques ou les événements journalisés par un niveau de journalisation personnalisée existant. Pour plus d’informations sur les niveaux de journalisation personnalisée, consultez [Journalisation Integration Services &#40;SSIS&#41;](../../integration-services/performance/integration-services-ssis-logging.md).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -39,24 +38,24 @@ catalog.set_customized_logging_level_value [ @level_name = ] level_name
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [ @level_name =] *nom_niveau*  
- Le nom d’un objet de niveau de journalisation personnalisé.  
+ [ @level_name = ] *level_name*  
+ Nom d’un niveau de journalisation personnalisée existant.  
   
- Le *nom_niveau* est **nvarchar (128)**.  
+ *level_name* est de type **nvarchar(128)**.  
   
- [ @property_name =] *property_name*  
- Le nom de la propriété à modifier. Les valeurs valides sont **profil** et **événements**.  
+ [ @property_name = ] *property_name*  
+ Nom de la propriété à changer. Les valeurs valides sont **PROFILE** et **EVENTS**.  
   
- Le *property_name* est **nvarchar (128)**.  
+ *property_name* est de type **nvarchar(128)**.  
   
- [ @property_value =] *property_value*  
- La nouvelle valeur pour la propriété spécifiée de l’objet de niveau de journalisation personnalisé.  
+ [ @property_value = ] *property_value*  
+ Nouvelle valeur de la propriété spécifiée du niveau de journalisation personnalisée spécifié.  
   
  Pour obtenir la liste des valeurs valides pour le profil et les événements, consultez [catalog.create_customized_logging_level](../../integration-services/system-stored-procedures/catalog-create-customized-logging-level.md).  
   
- Le *property_value* est un **bigint**.  
+ *property_value* est de type **bigint**.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
   
 ## <a name="return-codes"></a>Codes de retour  
  0 (succès)  
@@ -64,9 +63,9 @@ catalog.set_customized_logging_level_value [ @level_name = ] level_name
  Lorsque la procédure stockée échoue, elle génère une erreur.  
   
 ## <a name="result-set"></a>Jeu de résultats  
- Aucune  
+ None  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Cette procédure stockée requiert l'une des autorisations suivantes :  
   
 -   L’appartenance au rôle de base de données **ssis_admin**  
@@ -76,7 +75,6 @@ catalog.set_customized_logging_level_value [ @level_name = ] level_name
 ## <a name="errors-and-warnings"></a>Erreurs et avertissements  
  La liste suivante décrit les conditions provoquant l'échec de la procédure stockée.  
   
--   L’utilisateur n’a pas les autorisations requises.  
+-   L’utilisateur ne dispose pas des autorisations requises.  
   
   
-

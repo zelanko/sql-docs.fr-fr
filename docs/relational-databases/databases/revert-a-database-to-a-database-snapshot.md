@@ -2,29 +2,34 @@
 title: "Rétablir une base de données dans l’état d’un instantané de base de données | Microsoft Docs"
 ms.custom: 
 ms.date: 03/09/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: databases
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - database snapshots [SQL Server], reverting to
 - reverting databases
 ms.assetid: 8f74dd31-c9ca-4537-8760-0c7648f0787d
-caps.latest.revision: "58"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 1aff08fa0edd0f2376114478499a6ac8bec7df8c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 4a93fde67cfb08245607153afbddaffd1aca6669
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="revert-a-database-to-a-database-snapshot"></a>Rétablir une base de données dans l'état d'un instantané de base de données
-  Si les données d'une base de données en ligne sont endommagées, dans certains cas, rétablir la base de données dans l'état d'un instantané précédant le problème peut être une bonne solution plutôt que de restaurer la base de données à partir d'une sauvegarde. Par exemple, rétablir une base de données peut être utile pour annuler une grave erreur de l'utilisateur, telle que la suppression d'une table. Toutefois, toutes les modifications apportées depuis la création de l'instantané sont perdues.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Si les données d'une base de données en ligne sont endommagées, dans certains cas, rétablir la base de données dans l'état d'un instantané précédant le problème peut être une bonne solution plutôt que de restaurer la base de données à partir d'une sauvegarde. Par exemple, rétablir une base de données peut être utile pour annuler une grave erreur de l'utilisateur, telle que la suppression d'une table. Toutefois, toutes les modifications apportées depuis la création de l'instantané sont perdues.  
   
 -   **Avant de commencer :**  
   
@@ -69,7 +74,7 @@ ms.lasthandoff: 11/09/2017
   
 -   Le rétablissement supprime tous les catalogues de texte intégral.  
   
-###  <a name="Prerequisites"></a> Configuration requise  
+###  <a name="Prerequisites"></a> Conditions préalables  
  Vérifiez que la base de données source et l'instantané de base de données remplissent les conditions préalables suivantes :  
   
 -   Vérifiez que la base de données n'a pas été endommagée.  
@@ -83,7 +88,7 @@ ms.lasthandoff: 11/09/2017
   
 ###  <a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Autorisations  
+####  <a name="Permissions"></a> Permissions  
  Tout utilisateur qui dispose des autorisations RESTORE DATABASE sur la base de données source peut la rétablir dans l'état qui était le sien au moment où l'instantané a été créé.  
   
 ##  <a name="TsqlProcedure"></a> Comment rétablir une base de données dans l'état d'un instantané de base de données (à l'aide de Transact-SQL)  
@@ -102,7 +107,7 @@ ms.lasthandoff: 11/09/2017
   
      Une opération de restauration nécessite des autorisations RESTORE DATABASE sur la base de données source. Pour restaurer la base de données, utilisez l'instruction Transact-SQL suivante :  
   
-     RESTORE DATABASE *nom_base_de_données* FROM DATABASE_SNAPSHOT **=***nom_instantané_base_de_données*  
+     RESTORE DATABASE *database_name* FROM DATABASE_SNAPSHOT **=***database_snapshot_name*  
   
      Où *nom_base_de_données* est la base de données source et *nom_instantané_base_de_données* le nom de l’instantané auquel vous souhaitez rétablir la base de données. Notez que dans cette instruction, vous devez spécifier un nom d'instantané et non un périphérique de sauvegarde.  
   
@@ -168,7 +173,7 @@ GO
   
 -   [Supprimer un instantané de base de données &#40;Transact-SQL&#41;](../../relational-databases/databases/drop-a-database-snapshot-transact-sql.md)  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Instantanés de base de données &#40;SQL Server&#41;](../../relational-databases/databases/database-snapshots-sql-server.md)   
  [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
  [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   

@@ -2,10 +2,14 @@
 title: "Exemples : Utilisation de OPENXML | Microsoft Docs"
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: xml
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-xml
+ms.suite: sql
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -25,19 +29,20 @@ helpviewer_keywords:
 - element-centric mapping [SQL Server]
 - edge tables
 ms.assetid: 689297f3-adb0-4d8d-bf62-cfda26210164
-caps.latest.revision: "36"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 9817efb82a4b0cc7ec2beb2954b252513858064f
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 6e399083e8f1d12d5a762074e2f4746d452f3e75
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="examples-using-openxml"></a>Exemples : Utilisation de OPENXML
-  Les exemples de cette rubrique montrent comment utiliser OPENXML pour créer une vue d'un ensemble de lignes d'un document XML. Pour plus d’informations sur la syntaxe d’OPENXML, consultez [OPENXML &#40;Transact-SQL&#41;](../../t-sql/functions/openxml-transact-sql.md). Les exemples montrent tous les aspects de OPENXML, sauf la spécification des métapropriétés. Pour plus d’informations sur la spécification de métapropriétés dans OPENXML, consultez [Spécifier des métapropriétés dans OPENXML](../../relational-databases/xml/specify-metaproperties-in-openxml.md).  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+Les exemples de cette rubrique montrent comment utiliser OPENXML pour créer une vue d'un ensemble de lignes d'un document XML. Pour plus d’informations sur la syntaxe d’OPENXML, consultez [OPENXML &#40;Transact-SQL&#41;](../../t-sql/functions/openxml-transact-sql.md). Les exemples montrent tous les aspects de OPENXML, sauf la spécification des métapropriétés. Pour plus d’informations sur la spécification de métapropriétés dans OPENXML, consultez [Spécifier des métapropriétés dans OPENXML](../../relational-databases/xml/specify-metaproperties-in-openxml.md).  
   
 ## <a name="examples"></a>Exemples  
  Lors de l’extraction de données, *rowpattern* sert à identifier les nœuds du document XML qui déterminent les lignes. De plus, *rowpattern* est exprimé dans le langage du modèle XPath utilisé dans la mise en œuvre XPath de MSXML. Par exemple, si le modèle s’achève au niveau d’un élément ou d’un attribut, une ligne est créée pour chaque nœud d’élément ou d’attribut sélectionné par *rowpattern*.  
@@ -87,7 +92,7 @@ FROM OPENXML (@DocHandle, '/ROOT/Customer',1)
 EXEC sp_xml_removedocument @DocHandle  
 ```  
   
- Voici le résultat obtenu :  
+ Voici le résultat obtenu :  
   
 ```  
 CustomerID ContactName            
@@ -132,7 +137,7 @@ FROM      OPENXML (@XmlDocumentHandle, '/ROOT/Customer',2)
 EXEC sp_xml_removedocument @XmlDocumentHandle  
 ```  
   
- Voici le résultat obtenu :  
+ Voici le résultat obtenu :  
   
 ```  
 CustomerID ContactName            
@@ -150,7 +155,7 @@ LILAS      Carlos Gonzlez
   
  Tout d’abord, la procédure stockée **sp_xml_preparedocument** est appelée pour obtenir un descripteur de document. Ce descripteur est transmis à OPENXML.  
   
- L'instruction OPENXML contient les éléments suivants :  
+ L'instruction OPENXML contient les éléments suivants :  
   
 -   *rowpattern* (/ROOT/Customer/Order/OrderDetail) identifie les nœuds <`OrderDetail`> à traiter.  
   
@@ -291,7 +296,7 @@ LILAS      Carlos Gonzlez
   
  Tout d’abord, la procédure stockée **sp_xml_preparedocument** est appelée pour obtenir un descripteur de document. Ce descripteur est transmis à OPENXML.  
   
- L'instruction OPENXML contient les éléments suivants :  
+ L'instruction OPENXML contient les éléments suivants :  
   
 -   *rowpattern* (/root/Customer/Order) identifie les nœuds <`Order`> à traiter.  
   
@@ -350,7 +355,7 @@ O4    10000.0       NULL
   
  Tout d’abord, la procédure stockée **sp_xml_preparedocument** est appelée pour obtenir un descripteur de document. Ce descripteur est transmis à OPENXML.  
   
- L'instruction OPENXML contient les éléments suivants :  
+ L'instruction OPENXML contient les éléments suivants :  
   
 -   *rowpattern* (/root/Customer/Order) identifie les nœuds <`Order`> à traiter.  
   
@@ -445,7 +450,7 @@ FROM OPENXML (@docHandle, '/ROOT/Customer')
 EXEC sp_xml_removedocument @docHandle  
 ```  
   
- Le résultat est renvoyé sous la forme de table edge. Vous pouvez écrire des requêtes sur la table edge afin d'obtenir des informations. Par exemple :  
+ Le résultat est renvoyé sous la forme de table edge. Vous pouvez écrire des requêtes sur la table edge afin d'obtenir des informations. Exemple :  
   
 -   La requête suivante renvoie le nombre de nœuds **Customer** dans le document. Comme la clause WITH n'est pas spécifiée, OPENXML renvoie une table edge. L'instruction SELECT interroge la table edge.  
   
@@ -526,7 +531,7 @@ ProdID      Qty         OID
 ```  
   
 ### <a name="h-specifying-an-xml-document-that-has-multiple-text-nodes"></a>H. Spécification d'un document XML comprenant plusieurs nœuds de texte  
- Si vous disposez d’un document XML comprenant plusieurs nœuds de texte, une instruction SELECT avec un paramètre *ColPattern* **text()**renvoie uniquement le premier nœud de texte, et non la totalité. Par exemple :  
+ Si vous disposez d’un document XML comprenant plusieurs nœuds de texte, une instruction SELECT avec un paramètre *ColPattern* **text()**renvoie uniquement le premier nœud de texte, et non la totalité. Exemple :  
   
 ```  
 DECLARE @h int  
@@ -803,7 +808,7 @@ Col1        BinaryCol
 1           0x1234567890  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [sp_xml_preparedocument &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-xml-preparedocument-transact-sql.md)   
  [sp_xml_removedocument &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-xml-removedocument-transact-sql.md)   
  [OPENXML &#40;Transact-SQL&#41;](../../t-sql/functions/openxml-transact-sql.md)   

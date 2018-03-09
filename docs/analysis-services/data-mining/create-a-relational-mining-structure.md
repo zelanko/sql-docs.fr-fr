@@ -2,15 +2,13 @@
 title: "Créer une Structure d’exploration de données relationnelles | Documents Microsoft"
 ms.custom: 
 ms.date: 03/13/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
 ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,19 +18,20 @@ helpviewer_keywords:
 - relational mining models [Analysis Services]
 - OLAP mining models [Analysis Services]
 ms.assetid: 5547d639-377d-4ca7-88fc-ce1f9e2babc5
-caps.latest.revision: "35"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 3d58cb5bf4be5eddaa40cc13efa88b3ade9f49dd
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 6ea3691ad03e5133d14f6aa8f99324957eb0c2b4
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="create-a-relational-mining-structure"></a>Créer une structure d'exploration de données relationnelle
-  La plupart des modèles d'exploration de données sont basés sur des sources de données relationnelles. Les avantages de la création d'un modèle d'exploration de données relationnel sont que vous pouvez compiler des données ad hoc et effectuer l'apprentissage et la mise à jour d'un modèle sans entrer dans la complexité d'une création de cube.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+La plupart des modèles d'exploration de données sont basés sur des sources de données relationnelles. Les avantages de la création d'un modèle d'exploration de données relationnel sont que vous pouvez compiler des données ad hoc et effectuer l'apprentissage et la mise à jour d'un modèle sans entrer dans la complexité d'une création de cube.  
   
  Une structure d'exploration de données relationnelle peut ajouter des données provenant de sources disparates. Les données brutes peuvent être stockées dans des tables, des fichiers ou des systèmes de bases de données relationnelles, à condition que les données puissent être définies dans la vue de source de données. Par exemple, vous devez utiliser une structure d'exploration de données relationnelle si vos données se trouvent dans Excel, un entrepôt de données SQL Server ou une base de données de rapports SQL Server, ou dans des sources externes accessibles via des fournisseurs OLE DB ou ODBC.  
   
@@ -133,10 +132,10 @@ ms.lasthandoff: 11/17/2017
 >  Pour utiliser l'extraction, vous devez l'activer lors de la création de la structure d'exploration de données. Vous pouvez activer l'extraction sur les modèles ultérieurement, en définissant une propriété sur le modèle, mais les structures d'exploration de données requièrent que cette option soit définie au début. Pour plus d’informations, consultez [Requêtes d’extraction &#40;exploration de données&#41;](../../analysis-services/data-mining/drillthrough-queries-data-mining.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Concepteur d'exploration de données](../../analysis-services/data-mining/data-mining-designer.md)   
+ [Concepteur d’exploration de données](../../analysis-services/data-mining/data-mining-designer.md)   
  [Assistant exploration de données &#40; Analysis Services - Exploration de données &#41;](../../analysis-services/data-mining/data-mining-wizard-analysis-services-data-mining.md)   
  [Propriétés du modèle d’exploration de données](../../analysis-services/data-mining/mining-model-properties.md)   
  [Propriétés de Structure d’exploration de données et les colonnes de Structure](../../analysis-services/data-mining/properties-for-mining-structure-and-structure-columns.md)   
- [Tâches et procédures relatives aux structures d’exploration de données](../../analysis-services/data-mining/mining-structure-tasks-and-how-tos.md)  
+ [Tâches de la Structure d’exploration de données et procédures](../../analysis-services/data-mining/mining-structure-tasks-and-how-tos.md)  
   
   

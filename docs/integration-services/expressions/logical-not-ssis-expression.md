@@ -1,5 +1,5 @@
 ---
-title: '! (Not logique) (Expression SSIS) | Documents Microsoft'
+title: '! (Non logique) (expression SSIS) | Microsoft Docs'
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -16,23 +16,22 @@ helpviewer_keywords:
 - logical Not (!)
 - '! (logical Not)'
 ms.assetid: d5c4d1e1-7be4-4d25-bcd9-5b6ddb53b3b3
-caps.latest.revision: 35
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 003e0fcc98a267342aaf7c77bf344cdfdc71880b
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 68cee85e74159fc68783aded9f117c415d1bd15a
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="-logical-not-ssis-expression"></a>! (Non logique) (expression SSIS)
   Inverse un opérande booléen.  
   
 > [!NOTE]  
->  L'opérateur « ! » ne peut pas être utilisé en combinaison avec d'autres opérateurs. Par exemple, vous ne pouvez pas combiner les opérateurs « ! » et > pour former l'opérateur « !> » .  
+>  L'opérateur « ! » ne peut pas être utilisé en combinaison avec d'autres opérateurs. Par exemple, vous ne pouvez pas combiner les opérateurs « ! » et > pour former l'opérateur « !> » .  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -44,12 +43,12 @@ ms.lasthandoff: 08/03/2017
   
 ## <a name="arguments"></a>Arguments  
  *boolean_expression*  
- Toute expression valide qui s'évalue à une valeur booléenne. Pour plus d’informations, consultez [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).  
+ Toute expression valide qui s'évalue à une valeur booléenne. Pour plus d'informations, consultez [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).  
   
 ## <a name="result-types"></a>Types des résultats  
  DT_BOOL  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Le tableau suivant indique le résultat de l'opération « ! » publication.  
   
 |Expression booléenne initiale|Après application de l'opérateur « ! » operator|  
@@ -71,9 +70,8 @@ ms.lasthandoff: 08/03/2017
 !(@MonthNumber != MONTH(GETDATE())  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- [Opérateurs et associativité](../../integration-services/expressions/operator-precedence-and-associativity.md)   
- [Opérateurs &#40; Expression SSIS &#41;](../../integration-services/expressions/operators-ssis-expression.md)  
+## <a name="see-also"></a> Voir aussi  
+ [Priorités et associativité des opérateurs](../../integration-services/expressions/operator-precedence-and-associativity.md)   
+ [Opérateurs &#40;expression SSIS&#41;](../../integration-services/expressions/operators-ssis-expression.md)  
   
   
-

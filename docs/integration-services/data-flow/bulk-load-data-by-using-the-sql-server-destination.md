@@ -1,5 +1,5 @@
 ---
-title: "Chargement en masse données à l’aide de la Destination SQL Server | Documents Microsoft"
+title: "Charger des données en masse à l’aide de la destination SQL Server | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,20 +18,19 @@ helpviewer_keywords:
 - inserting data
 - bulk load [Integration Services]
 ms.assetid: 8f982f85-a82e-4e2d-9cd8-cd2f85402d8e
-caps.latest.revision: 30
+caps.latest.revision: "30"
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 6592de5c7bd0ca674c797d2d3e28f3adbe7dd339
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 9cdd73f56e17dbe97a2075d33a0ceefc032fc345
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 01/17/2018
 ---
-# <a name="bulk-load-data-by-using-the-sql-server-destination"></a>Charger des données en masse à l'aide de la destination SQL Server
-  Pour pouvoir ajouter et configurer une destination [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], le package doit inclure au moins une tâche de flux de données et une source de données.  
+# <a name="bulk-load-data-by-using-the-sql-server-destination"></a>Charger des données en masse à l'aide de la destination SQL Server
+  Pour pouvoir ajouter et configurer une destination [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , le package doit inclure au moins une tâche de flux de données et une source de données.  
   
 ### <a name="to-load-data-using-a-sql-server-destination"></a>Pour charger des données à l'aide d'une destination SQL Server  
   
@@ -73,11 +71,10 @@ ms.lasthandoff: 08/03/2017
   
 11. Pour enregistrer le package mis à jour, cliquez sur **Enregistrer les éléments sélectionnés** dans le menu **Fichier** .  
   
-## <a name="see-also"></a>Voir aussi  
- [Destination SQL Server](../../integration-services/data-flow/sql-server-destination.md)   
+## <a name="see-also"></a> Voir aussi  
+ [SQL Server Destination](../../integration-services/data-flow/sql-server-destination.md)   
  [Transformations Integration Services](../../integration-services/data-flow/transformations/integration-services-transformations.md)   
- [Chemins d’accès d’Integration Services](../../integration-services/data-flow/integration-services-paths.md)   
- [Tâche de flux de données](../../integration-services/control-flow/data-flow-task.md)  
+ [Chemins Integration Services](../../integration-services/data-flow/integration-services-paths.md)   
+ [tâche de flux de données](../../integration-services/control-flow/data-flow-task.md)  
   
   
-

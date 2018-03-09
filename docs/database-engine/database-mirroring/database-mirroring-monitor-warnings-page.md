@@ -2,33 +2,39 @@
 title: "Moniteur de mise en miroir de bases de données (Page Avertissements) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: database-mirroring
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-high-availability
+ms.suite: sql
+ms.technology:
+- dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.swb.dbmmonitor.warningsandalerts.f1
+f1_keywords:
+- sql13.swb.dbmmonitor.warningsandalerts.f1
 ms.assetid: 01936122-961d-436b-ba3c-5f79fefe5469
-caps.latest.revision: "31"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: da1fb8bd1af9fee7be317e940eae7fc9bc2db455
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: f150d44a28915741ffd45b4e8c4506deb41a5a51
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="database-mirroring-monitor-warnings-page"></a>Moniteur de mise en miroir de bases de données (Page Avertissements)
-  Affiche une liste, accessible en lecture seule, d'avertissements pris en charge lors d'événements de mise en miroir de bases de données, ainsi que les valeurs de seuil spécifiées pour les avertissements, si disponible.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Affiche une liste, accessible en lecture seule, d'avertissements pris en charge lors d'événements de mise en miroir de bases de données, ainsi que les valeurs de seuil spécifiées pour les avertissements, si disponible.  
   
  **Pour utiliser SQL Server Management Studio pour contrôler la mise en miroir de base de données**  
   
 -   [Démarrer le moniteur de mise en miroir de bases de données &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)  
   
-## <a name="columns"></a>Columns  
+## <a name="columns"></a>Colonnes  
  **Avertissement**  
  Les avertissements pour lesquels vous pouvez définir un seuil sont les suivants :  
   
@@ -49,8 +55,8 @@ ms.lasthandoff: 11/09/2017
   
  Pour plus d'informations, consultez la section « Remarques » plus loin dans cette rubrique.  
   
-## <a name="remarks"></a>Notes  
- Si aucune information n’est actuellement disponible pour une instance de serveur, le texte affiché dans les cellules de la colonne **Seuil à** correspondante apparaît en filigrane sur un fond gris. Si le moniteur n’est pas connecté à l’instance de serveur, chaque cellule de la grille affiche le texte **Non connecté à** *<nom_système>* ou **Non connecté à** *nom_système***\\***<nom_instance>*, selon qu’il s’agit de l’instance par défaut ou d’une instance nommée. Si le moniteur est en attente de retour d’une requête, chaque cellule de la grille affiche le texte **Attente de données** dans chaque cellule.  
+## <a name="remarks"></a>Notes   
+ Si aucune information n’est actuellement disponible pour une instance de serveur, le texte affiché dans les cellules de la colonne **Seuil à** correspondante apparaît en filigrane sur un fond gris. Si le moniteur n’est pas connecté à l’instance de serveur, chaque cellule de la grille affiche le texte **Non connecté à** *<nom_système>* ou **Non connecté à** *<nom_système>***\\***<nom_instance>*, selon qu’il s’agit de l’instance par défaut ou d’une instance nommée. Si le moniteur est en attente de retour d’une requête, chaque cellule de la grille affiche le texte **Attente de données** dans chaque cellule.  
   
  Quand des informations sont disponibles, la cellule correspondant à chaque avertissement affiche une valeur de seuil spécifique (ainsi qu’une unité de mesure) ou le texte **Non activé**.  
   
@@ -75,7 +81,7 @@ ms.lasthandoff: 11/09/2017
   
  L’appartenance au rôle **dbm_monitor** vous permet de consulter uniquement la ligne d’état la plus récente dans la page **Avertissements** .  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Démarrer le moniteur de mise en miroir de bases de données &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)   
  [Surveillance de la mise en miroir de bases de données &#40;SQL Server&#41;](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)   
  [Démarrer l’Assistant Configuration de la sécurité de mise en miroir de bases de données &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start-the-configuring-database-mirroring-security-wizard.md)  

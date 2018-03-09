@@ -1,5 +1,5 @@
 ---
-title: Catalog.check_schema_version | Documents Microsoft
+title: catalog.check_schema_version | Microsoft Docs
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -13,17 +13,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: e0d5e9f5-59c6-4118-87b5-4aa5c37a7df6
-caps.latest.revision: 5
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 56eacb6ed209f34f65ae406fe4dd520284b79e5b
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 10ec93a390173e089965e6f984c3725fb675748e
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="catalogcheckschemaversion"></a>catalog.check_schema_version
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -41,16 +40,15 @@ catalog.check_schema_version [@use32bitruntime = ] use32bitruntime
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [ @use32bitruntime=] *use32bitruntime*  
- Lorsque le paramètre a la valeur **True**, la version 32 bits de dtexec est appelée. Le *use32bitruntime* est un **Bool**.  
+ [ @use32bitruntime= ] *use32bitruntime*  
+ Quand le paramètre est défini sur **True**, la version 32 bits de dtexec est appelée. *use32bitruntime* est de type **Bool**.  
   
 ## <a name="result-set"></a>Jeu de résultats  
- Aucune  
+ None  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Cette procédure stockée requiert l'autorisation suivante :  
   
--   L’appartenance à la **ssis_admin** rôle de base de données.  
+-   Appartenance au rôle de base de données **ssis_admin**.  
   
   
-

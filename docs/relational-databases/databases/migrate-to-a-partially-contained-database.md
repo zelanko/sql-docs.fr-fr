@@ -2,27 +2,30 @@
 title: "Migrer vers une base de données partiellement à relation contenant-contenu | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: databases
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords: contained database, migrating to
 ms.assetid: 90faac38-f79e-496d-b589-e8b2fe01c562
 caps.latest.revision: "17"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bb9e9e7b1e5fc3dd47259f92314fb10c9f5fb262
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 4c2bad59ca0fb052d9adcfd15f41efc7c995db08
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
-# <a name="migrate-to-a-partially-contained-database"></a>Migrer vers une base de données partiellement à relation contenant-contenu
-  Cette rubrique explique comment se préparer à passer au modèle de base de données partiellement à relation contenant-contenu, puis indique la procédure de migration.  
+# <a name="migrate-to-a-partially-contained-database"></a>Migrate to a Partially Contained Database
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Cette rubrique explique comment se préparer à passer au modèle de base de données partiellement à relation contenant-contenu, puis indique la procédure de migration.  
   
  **Dans cette rubrique :**  
   
@@ -39,7 +42,7 @@ ms.lasthandoff: 11/09/2017
   
 -   Vous devez comprendre le modèle de base de données partiellement à relation contenant-contenu. Pour plus d’informations, consultez [Contained Databases](../../relational-databases/databases/contained-databases.md).  
   
--   Vous devez connaître les risques qui sont propres aux bases de données partiellement à relation contenant-contenu. Pour plus d'informations, consultez [Security Best Practices with Contained Databases](../../relational-databases/databases/security-best-practices-with-contained-databases.md).  
+-   Vous devez connaître les risques qui sont propres aux bases de données partiellement à relation contenant-contenu. Pour plus d'informations, consultez [Bonnes pratiques de sécurité avec les bases de données à relation contenant-contenu](../../relational-databases/databases/security-best-practices-with-contained-databases.md).  
   
 -   Les bases de données à relation contenant-contenu ne prennent pas en charge la réplication, la capture de données modifiées ou le suivi des modifications. Vérifiez que la base de données n'utilise pas ces fonctionnalités.  
   
@@ -55,7 +58,7 @@ ms.lasthandoff: 11/09/2017
 ### <a name="enabling-contained-databases-using-transact-sql"></a>Activation de bases de données à relation contenant-contenu à l'aide de Transact-SQL  
  L'exemple suivant active des bases de données à relation contenant-contenu sur l'instance du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].  
   
-```tsql  
+```sql  
 sp_configure 'contained database authentication', 1;  
 GO  
 RECONFIGURE ;  
@@ -77,7 +80,7 @@ GO
 ### <a name="converting-a-database-to-partially-contained-using-transact-sql"></a>Conversion d'une base de données au modèle partiellement à relation contenant-contenu à l'aide de Transact-SQL  
  L'exemple suivant convertit une base de données nommée `Accounting` en base de données partiellement à relation contenant-contenu.  
   
-```tsql  
+```sql  
 USE [master]  
 GO  
 ALTER DATABASE [Accounting] SET CONTAINMENT = PARTIAL  
@@ -96,7 +99,7 @@ GO
 ##  <a name="users"></a> Migration des utilisateurs vers des utilisateurs de base de données à relation contenant-contenu  
  L'exemple suivant migre tous les utilisateurs basés sur des comptes de connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vers des utilisateurs de base de données à relation contenant-contenu avec mots de passe. L'exemple exclut les comptes de connexion qui ne sont pas activés. L'exemple doit être exécuté dans la base de données à relation contenant-contenu.  
   
-```tsql  
+```sql  
 DECLARE @username sysname ;  
 DECLARE user_cursor CURSOR  
     FOR   
@@ -119,7 +122,7 @@ CLOSE user_cursor ;
 DEALLOCATE user_cursor ;  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Contained Databases](../../relational-databases/databases/contained-databases.md)   
  [sp_migrate_user_to_contained &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-migrate-user-to-contained-transact-sql.md)   
  [sys.dm_db_uncontained_entities &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-uncontained-entities-transact-sql.md)  

@@ -8,9 +8,7 @@ ms.service:
 ms.component: extensions
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -21,15 +19,15 @@ helpviewer_keywords:
 - library [Reporting Services]
 ms.assetid: e8eff470-64d6-41c3-b98b-5ec916c121c3
 caps.latest.revision: "33"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 921ccbecb3f711daba1b87a8f01a97f903935cf2
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 071e05f4fcaa35960ee7938d26306ff7ec55ade9
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="reporting-services-extension-library"></a>Bibliothèque d'extensions Reporting Services
   La bibliothèque d'extensions Reporting Services est un ensemble de classes, d'interfaces et de types de valeur inclus dans [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Cette bibliothèque fournit l’accès aux fonctionnalités du système ; elle est conçue pour servir de base sur laquelle les applications [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] peuvent être utilisées pour étendre les composants [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
@@ -46,7 +44,7 @@ ms.lasthandoff: 12/05/2017
  **Microsoft.ReportingServices.ReportRendering**  
  Contient les classes et les interfaces qui vous permettent d'étendre les fonctionnalités de rendu de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. À l'aide des membres de cet espace de noms, ainsi que des membres de l'espace de noms <xref:Microsoft.ReportingServices.Interfaces>, vous pouvez générer vos propres extensions de rendu personnalisées pour [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Extensions Reporting Services](../../reporting-services/extensions/reporting-services-extensions.md)  
   
   

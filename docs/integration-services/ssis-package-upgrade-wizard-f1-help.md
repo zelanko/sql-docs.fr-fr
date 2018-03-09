@@ -1,11 +1,11 @@
 ---
-title: "Aide (F1) d’Assistant Mise à niveau du Package SSIS | Documents Microsoft"
+title: "Aide sur l’Assistant Mise à niveau de packages SSIS via la touche F1 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology:
@@ -21,20 +21,19 @@ f1_keywords:
 - sql13.is.upgradewizard.completewizard.f1
 - sql13.is.upgradewizard.upgradingpackage.f1
 ms.assetid: 7fe886ff-1ea5-48d5-9d20-d5da36dd1cd7
-caps.latest.revision: 20
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 0e9c1eccc9a14c580ba733fc3c4f63e88db92d60
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: ff131d66dbe20fb844ba9ab3c768c6597acd62aa
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="ssis-package-upgrade-wizard-f1-help"></a>Aide sur l'Assistant Mise à niveau de packages SSIS via la touche F1
-  Utilisez l’Assistant Mise à niveau de packages SSIS pour mettre à niveau les packages créés par les versions antérieures de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] au format de package pour la version actuelle de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].  
+  Utilisez l’Assistant Mise à niveau de packages SSIS pour mettre à niveau des packages créés par des versions antérieures de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] vers le format de package utilisé par la version actuelle de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].  
   
  **Pour exécuter l'Assistant Mise à niveau de packages SSIS**  
   
@@ -46,7 +45,7 @@ ms.lasthandoff: 09/26/2017
  **Ne plus afficher cette page.**  
  Ignorer la page d'accueil lors de l'ouverture suivante de l'Assistant.  
  
-## <a name="select-source-location-page"></a>Sélectionnez la page emplacement de la Source
+## <a name="select-source-location-page"></a>Page Sélectionner l’emplacement source
  Utilisez la page **Sélectionner l’emplacement source** pour spécifier la source à partir de laquelle effectuer la mise à niveau de packages.  
   
 > [!NOTE]  
@@ -56,7 +55,7 @@ ms.lasthandoff: 09/26/2017
  **Source du package**  
  Sélectionnez l'emplacement de stockage qui contient les packages à mettre à niveau. Cette option a les valeurs répertoriées dans le tableau suivant.  
   
-|Valeur| Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |**File System**|Indique que les packages à mettre à niveau se trouvent dans un dossier sur l'ordinateur local.<br /><br /> Pour que l'Assistant sauvegarde les packages d'origine avant de les mettre à niveau, les packages d'origine doivent être stockés dans le système de fichiers. Pour plus d'informations, consultez la rubrique de procédure.|  
 |**Magasin de packages SSIS**|Indique que les packages à mettre à niveau se trouvent dans le magasin de packages. Le magasin de packages se compose de l’ensemble des dossiers du système de fichiers gérés par le service [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Pour plus d’informations, consultez [Gestion de packages &#40;Service SSIS&#41;](../integration-services/service/package-management-ssis-service.md).<br /><br /> La sélection de cette valeur affiche les options dynamiques **Source du package** correspondantes.|  
@@ -65,7 +64,7 @@ ms.lasthandoff: 09/26/2017
  **Dossier**  
  Tapez le nom d’un dossier qui contient les packages à mettre à niveau, ou cliquez sur **Parcourir** et recherchez le dossier.  
   
- **Parcourir**  
+ **...**  
  Recherchez le dossier qui contient les packages à mettre à niveau.  
   
 ### <a name="package-source-dynamic-options"></a>Options dynamiques de la source du package  
@@ -84,13 +83,13 @@ ms.lasthandoff: 09/26/2017
  **Utiliser l'authentification SQL Server**  
  Permet d’utiliser l’authentification [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] pour se connecter au serveur. Si vous utilisez l’authentification [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , vous devez fournir un nom d’utilisateur et un mot de passe.  
   
- **Nom d'utilisateur**  
+ **User name**  
  Tapez le nom d’utilisateur que l’authentification [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] utilisera pour se connecter au serveur.  
   
  **Mot de passe**  
  Tapez le mot de passe que l’authentification [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] utilisera pour se connecter au serveur.  
  
-## <a name="select-destination-location-page"></a>Sélectionnez la page emplacement de Destination
+## <a name="select-destination-location-page"></a>Page Sélectionner l’emplacement de destination
  Utilisez la page **Sélectionner l’emplacement de destination** pour spécifier la destination dans laquelle enregistrer les packages mis à niveau.  
   
 > [!NOTE]  
@@ -102,13 +101,13 @@ ms.lasthandoff: 09/26/2017
   
  Si vous voulez que l’Assistant sauvegarde les packages d’origine quand ils sont stockés dans le système de fichiers, sélectionnez l’option **Enregistrer à l’emplacement source** . Pour plus d’informations, consultez [Mettre à niveau des packages Integration Services à l’aide de l’Assistant Mise à niveau de packages SSIS](../integration-services/install-windows/upgrade-integration-services-packages-using-the-ssis-package-upgrade-wizard.md).  
   
- **Sélectionnez le nouvel emplacement de destination**  
+ **Sélectionner le nouvel emplacement de destination**  
  Enregistrez les packages mis à niveau dans l'emplacement de destination qui est spécifié sur cette page.  
   
  **Source du package**  
  Spécifiez l'emplacement où les packages de mise à niveau doivent être stockés. Cette option a les valeurs répertoriées dans le tableau suivant.  
   
-|Valeur| Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |**File System**|Indique que les packages mis à niveau doivent être enregistrés dans un dossier sur l'ordinateur local.|  
 |**Magasin de packages SSIS**|Indique que les packages mis à niveau doivent être enregistrés dans le magasin de packages Integration Services. Le magasin de packages se compose de l'ensemble des dossiers du système de fichiers gérés par Integration Services. Pour plus d’informations, consultez [Gestion de packages &#40;Service SSIS&#41;](../integration-services/service/package-management-ssis-service.md).<br /><br /> La sélection de cette valeur affiche les options dynamiques **Source du package** correspondantes.|  
@@ -117,7 +116,7 @@ ms.lasthandoff: 09/26/2017
  **Dossier**  
  Tapez le nom d’un dossier dans lequel enregistrer les packages mis à niveau, ou cliquez sur **Parcourir** et recherchez le dossier.  
   
- **Parcourir**  
+ **...**  
  Recherchez le dossier dans lequel les packages mis à niveau seront enregistrés.  
   
 ### <a name="package-source-dynamic-options"></a>Options dynamiques de la source du package  
@@ -136,13 +135,13 @@ ms.lasthandoff: 09/26/2017
  **Utiliser l'authentification SQL Server**  
  Permet d’utiliser l’authentification [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] pour se connecter au serveur. Si vous utilisez l’authentification [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , vous devez fournir un nom d’utilisateur et un mot de passe.  
   
- **Nom d'utilisateur**  
+ **User name**  
  Tapez le nom d’utilisateur à utiliser pendant l’utilisation de l’authentification [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] pour se connecter au serveur.  
   
  **Mot de passe**  
  Tapez le mot de passe à utiliser pendant l’utilisation de l’authentification [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] pour se connecter au serveur.  
  
-## <a name="select-package-management-options-page"></a>Page Sélectionnez les Options de gestion des packages
+## <a name="select-package-management-options-page"></a>Page Sélectionner les options de gestion des packages
   Utilisez la page **Sélectionner les options de gestion des packages** pour spécifier des options permettant de mettre à niveau des packages.  
   
  **Pour exécuter l'Assistant Mise à niveau de packages SSIS**  
@@ -153,49 +152,49 @@ ms.lasthandoff: 09/26/2017
  **Mettre à jour les chaînes de connexion pour l'utilisation des nouveaux noms de fournisseurs**  
  Mettez à jour les chaînes de connexion afin d'utiliser les noms des fournisseurs suivants pour la version actuelle d' [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]:  
   
--   Fournisseur OLE DB pour[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]  
+-   Fournisseur OLE DB pour [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]  
   
 -   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Native Client  
   
  L'Assistant Mise à niveau de packages [!INCLUDE[ssIS](../includes/ssis-md.md)] met à jour uniquement les chaînes de connexion qui sont stockées dans des gestionnaires de connexions. Il ne met pas à jour les chaînes de connexion qui sont construites dynamiquement à l'aide du langage d'expression [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] ou en utilisant du code dans une tâche de script.  
   
- **Valider les packages de mise à niveau**  
+ **Valider les packages mis à niveau**  
  Validez les packages de mise à niveau et enregistrez uniquement ceux dont la validation a réussi.  
   
  Si vous ne sélectionnez pas cette option, l'Assistant ne validera pas les packages de mise à niveau. Par conséquent, il les enregistrera tous, qu'ils soient valides ou non. L’Assistant enregistre les packages de mise à niveau dans la destination spécifiée dans la page **Sélectionner l’emplacement de destination** de l’Assistant.  
   
  La validation ralentit le processus de mise à niveau. Nous vous recommandons de ne pas sélectionner cette option pour les packages volumineux qui sont susceptibles d'être mis à niveau avec succès.  
   
- **Créez de nouveaux ID de package**  
+ **Créer des ID de package**  
  Créez de nouveaux ID de package pour les packages de mise à niveau.  
   
- **Continuer la mise à niveau en cas d’échec d’une mise à niveau du package**  
+ **Continuer le processus de mise à niveau lorsque la mise à niveau d’un package échoue**  
  Spécifiez que, quand un package ne peut pas être mis à niveau, l’Assistant Mise à niveau de packages [!INCLUDE[ssIS](../includes/ssis-md.md)] continue à mettre à niveau les packages restants.  
   
- **Conflits de nom de package**  
+ **Conflits de noms de packages**  
  Spécifiez la façon dont l'Assistant doit gérer les packages qui portent le même nom. Cette option a les valeurs répertoriées dans le tableau suivant.  
   
- **Remplacer les fichiers de package existants**  
+ **Remplacer les fichiers de packages existants**  
  Remplace le package existant par le package de mise à niveau du même nom.  
   
- **Ajouter des suffixes numériques pour mettre à niveau des noms de packages**  
+ **Ajouter des suffixes numériques pour mettre à niveau les noms de packages**  
  Ajoute un suffixe numérique au nom du package de mise à niveau.  
   
- **Ne mettez pas à niveau les packages**  
+ **Ne pas mettre à niveau les packages**  
  Arrête la mise à niveau des packages et affiche une erreur à la fin de l'Assistant.  
   
  Ces options ne sont pas disponibles quand vous sélectionnez l’option **Enregistrer à l’emplacement source** dans la page **Sélectionner l’emplacement de destination** de l’Assistant.  
   
- **Ignorer les Configurations**  
+ **Ignorer les configurations**  
  Ne charge pas les configurations de package pendant la mise à niveau des packages. L'activation de cette option réduit le temps requis pour mettre à niveau le package.  
   
- **Packages d’origine de sauvegarde**  
+ **Sauvegarder les packages d’origine**  
  Cette option demande à l’Assistant de sauvegarder les packages d’origine dans un dossier **SSISBackupFolder** . L’Assistant crée le dossier **SSISBackupFolder** en tant que sous-dossier du dossier qui contient les packages d’origine et les packages mis à niveau.  
   
 > [!NOTE]  
 >  Cette option est disponible uniquement lorsque vous spécifiez que les packages d'origine et les packages mis à niveau sont stockés dans le système de fichiers et dans le même dossier.  
 
-## <a name="select-packages-page"></a>Page Sélectionner les Packages
+## <a name="select-packages-page"></a>Page Sélectionner les packages
   Utilisez la page **Sélectionnez les packages** pour sélectionner les packages à mettre à niveau. Cette page répertorie les packages qui sont stockés dans l'emplacement spécifié sur la page **Sélectionner l'emplacement source** de l'Assistant.  
   
 ### <a name="options"></a>Options  
@@ -218,14 +217,14 @@ ms.lasthandoff: 09/26/2017
   Utilisez la page **Terminer l'Assistant** pour vérifier et confirmer les options de mise à niveau des packages que vous avez sélectionnées. Il s'agit de la dernière page de l'Assistant dans laquelle vous pouvez revenir aux pages précédentes et modifier les options pour cette session de l'Assistant.  
   
 ### <a name="options"></a>Options  
- **Résumé des options**  
+ **Récapitulatif des options**  
  Vérifiez les options de mise à niveau que vous avez sélectionnées dans l'Assistant. Pour modifier ces options, cliquez sur **Précédent** pour retourner aux pages précédentes de l'Assistant.
  
-## <a name="upgrading-the-packages-page"></a>La mise à niveau de la page de Packages
+## <a name="upgrading-the-packages-page"></a>Page Mise à niveau des packages
   Utilisez la page **Mise à niveau des packages** pour afficher la progression de la mise à niveau de packages et pour interrompre le processus de mise à niveau. L'Assistant Mise à niveau de packages [!INCLUDE[ssIS](../includes/ssis-md.md)] met à niveau, un par un, les packages sélectionnés.  
   
 ### <a name="options"></a>Options  
- **Volet message**  
+ **Volet Message**  
  Affiche des messages de progression et des informations de résumé pendant le processus de mise à niveau.  
   
  **Action**  
@@ -256,12 +255,11 @@ ms.lasthandoff: 09/26/2017
   
 Dans l'Explorateur d'objets de [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)], connectez-vous à l'instance locale d' [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], puis développez le nœud **Packages stockés** pour voir les packages mis à niveau.  
   
-### <a name="view-upgraded-packages-that-were-upgraded-from-sql-server-data-tools"></a>Afficher les packages mis à niveau qui ont été mis à niveau à partir de SQL Server Data Tools  
+### <a name="view-upgraded-packages-that-were-upgraded-from-sql-server-data-tools"></a>Afficher les packages mis à niveau à partir de SQL Server Data Tools  
   
 Dans l'Explorateur de solutions de [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], ouvrez le projet [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , puis développez le nœud **Packages SSIS** pour voir les packages mis à niveau.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Mettre à niveau des packages Integration Services](../integration-services/install-windows/upgrade-integration-services-packages.md)  
   
   
-

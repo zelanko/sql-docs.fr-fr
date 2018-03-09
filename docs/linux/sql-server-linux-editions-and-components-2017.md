@@ -1,11 +1,11 @@
 ---
 title: "Éditions et des fonctionnalités prises en charge de SQL Server 2017 ~ Linux | Documents Microsoft"
-ms.custom: 
+ms.custom: sql-linux
 ms.date: 09/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: linux
+ms.component: 
 ms.reviewer: 
 ms.suite: sql
 ms.technology:
@@ -31,17 +31,19 @@ helpviewer_keywords:
 - editions [SQL Server], about edition options
 - Setup [SQL Server]
 ms.assetid: 
-caps.latest.revision: "121"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: 58503277d586394e329c6232ab097a2d9d9d69cd
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+manager: craigg
+ms.openlocfilehash: cd937ab176ef7c33f6ffa99090ac36b69182968c
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="editions-and-supported-features-of-sql-server-2017-on-linux"></a>Éditions et des fonctionnalités prises en charge de 2017 du serveur SQL sur Linux
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 Cet article fournit des détails sur les fonctionnalités prises en charge par les différentes éditions de 2017 du serveur SQL sur Linux. Pour les éditions et les fonctionnalités prises en charge de SQL Server sur Windows, consultez [SQL Server 2017 - Windows](../sql-server/editions-and-components-of-sql-server-2017.md).  
   
@@ -57,15 +59,15 @@ Pour obtenir la liste des fonctionnalités de SQL Server non disponibles sur Lin
     
 [Télécharger SQL Server 2017](http://www.microsoft.com/sql-server/sql-server-2017)
 
-## <a name="includessnoversionincludesssnoversion-mdmd-editions"></a>Éditions de[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)]   
+## <a name="includessnoversionincludesssnoversion-mdmd-editions"></a>Éditions de [!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)]  
  Le tableau ci-dessous décrit les éditions de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. 
   
-|Édition de[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] |Définition|  
+|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] édition|Définition|  
 |---------------------------------------|----------------|  
 |Enterprise|Offre premium, [!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Enterprise edition offre des fonctionnalités de centre de données haut de gamme complète avec des performances ultra-rapides-fast l’activation de haut niveau de service pour les charges de travail critiques.|  
-|Standard|[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)]Standard edition propose une gestion de base de données pour les PME d’exécuter leurs applications et prend en charge des outils de développement courants pour locaux et cloud, pour une gestion efficace de la base de données avec un minimum de ressources informatiques.|  
-|Web|L'édition Web[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] est une option offrant un coût total de possession faible destinée aux hébergeurs Web et aux VAP Web, fournissant des fonctions évolutives, rentables et gérables aux propriétés Web à petite ou grande échelle.|  
-|Développeur|L'édition[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Developer permet aux développeurs de créer des applications basées sur [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Il inclut toutes les fonctionnalités de l'édition Enterprise, mais sa licence permet uniquement de l'utiliser comme un système de développement et de test, et non comme un serveur de production. L'édition [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Developer est la solution idéale pour le développement et le test d'applications.|  
+|Standard|[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Standard edition propose une gestion de base de données pour les PME d’exécuter leurs applications et prend en charge des outils de développement courants pour locaux et cloud, pour une gestion efficace de la base de données avec un minimum de ressources informatiques.|  
+|Web|[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] L’édition Web est une option offrant un coût total de possession faible, destinée aux hébergeurs Web et aux VAP Web, fournissant des fonctions évolutives, rentables et gérables aux propriétés Web à petite ou grande échelle.|  
+|Développeur|[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] L’édition Developer permet aux développeurs de créer des applications quelconques basées sur [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Il inclut toutes les fonctionnalités de l'édition Enterprise, mais sa licence permet uniquement de l'utiliser comme un système de développement et de test, et non comme un serveur de production. L'édition [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Developer est la solution idéale pour le développement et le test d'applications.|  
 |Express Edition|L’édition Express est une édition de base comprenant une base de données gratuite, idéale pour découvrir et créer des applications bureautiques et de petites applications serveur pilotées par les données. C'est la solution idéale pour les éditeurs de logiciels, les développeurs et les amateurs de création d'applications clientes. Si vous avez besoin de fonctionnalités de base de données plus évoluées, vous pouvez mettre à niveau de manière transparente [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Express vers des versions plus sophistiquées de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].|  
   
 ## <a name="using-includessnoversionincludesssnoversion-mdmd-with-clientserver-applications"></a>Utilisation de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] avec des applications client/serveur  
@@ -78,10 +80,10 @@ Vous pouvez installer uniquement les composants clients de [!INCLUDE[ssNoVersion
   
 |Composants serveur| Description|  
 |-----------------------|-----------------|  
-|[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]|[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]inclut le [!INCLUDE[ssDE](../includes/ssde-md.md)], le service principal de stockage, traitement et de sécurisation des données, réplication, recherche en texte intégral, outils de gestion relationnelles et XML et l’intégration de base de données analytique.|  
+|[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]|[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] inclut le [!INCLUDE[ssDE](../includes/ssde-md.md)], le service principal de stockage, traitement et de sécurisation des données, réplication, recherche en texte intégral, outils de gestion relationnelles et XML et l’intégration de base de données analytique.|  
 
 **Éditions Developer, Enterprise Core et d’évaluation**  
-Pour les fonctionnalités prises en charge par les principaux de l’entreprise, développeur et les éditions d’évaluation, consultez les fonctionnalités répertoriées pour l’édition de SQL Server Enterprise dans les tableaux ci-dessous.
+Pour les fonctionnalités prises en charge par les principaux de l’entreprise, développeur et les éditions d’évaluation, consultez les fonctionnalités répertoriées pour l’édition de SQL Server Enterprise dans les tableaux suivants.
 
 L’édition Developer continue à prendre en charge seulement 1 client pour [SQL Server Distributed Replay](../tools/distributed-replay/sql-server-distributed-replay.md). 
   
@@ -91,10 +93,10 @@ L’édition Developer continue à prendre en charge seulement 1 client pour [S
 |-------------|----------------|--------------|---------|------------------------|
 |Capacité maximale de calcul utilisée par une instance unique - [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]<sup>1</sup>|Maximum du système d'exploitation|Limité à moins de 4 sockets ou 24 cœurs|Limité à moins de 4 sockets ou 16 cœurs|Limité à moins de 1 socket ou 4 cœurs| 
 |Capacité maximale de calcul utilisée par une instance unique - [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ou [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]|Maximum du système d'exploitation|Limité à moins de 4 sockets ou 24 cœurs|Limité à moins de 4 sockets ou 16 cœurs|Limité à moins de 1 socket ou 4 cœurs|
-|Mémoire maximale du pool de mémoires tampons par instance du [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]|Maximum du système d’exploitation|128 Go|64 Go|1410 Mo|
-|Mémoire maximale du cache de segments columnstore par instance du [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]|Mémoire illimitée| 32 Go| 16 Go| 352 Mo|  
-|Taille maximale des données à mémoire optimisée par base de données dans le [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]|Mémoire illimitée| 32 Go| 16 Go| 352 Mo|
-|Taille maximale de la base de données relationnelle|524 Po|524 Po|524 Po|10 GB|  
+|Mémoire maximale pour le pool de mémoires tampons par instance de [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]|Maximum du système d’exploitation|128 Go|64 Go|1410 Mo|
+|Mémoire maximale pour le cache de segment Columnstore par instance de [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]|Mémoire illimitée| 32 Go| 16 Go| 352 Mo|  
+|Taille maximale des données optimisées en mémoire par base de données dans [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]|Mémoire illimitée| 32 Go| 16 Go| 352 Mo|
+|Taille maximale de la base de données relationnelle|524 Po|524 Po|524 Po|10 GB|  
   
 <sup>1</sup> Enterprise edition avec serveur + Client accès licences (CAL) (non disponible pour les nouveaux contrats) est limitée à un maximum de 20 cœurs par instance de SQL Server. Il n'existe aucune limite dans le mode de licence Serveur selon le nombre de cœurs. Pour plus d’informations, consultez [limites de capacité de calcul par l’édition de SQL Server](../sql-server/compute-capacity-limits-by-edition-of-sql-server.md).  
  
@@ -102,23 +104,23 @@ L’édition Developer continue à prendre en charge seulement 1 client pour [S
   
 |Fonctionnalité|Enterprise|Standard|Web|Express|  
 |-------------|----------------|--------------|---------|------------------------|  
-|Copie des journaux de transaction|Oui|Oui|Oui|Non|  
-|Compression de sauvegarde|Oui|Oui|Non|Non| 
-|Instantané de base de données|Oui|Non|Non|Non|
-|Instance de cluster de basculement Always On<sup>1</sup>|Oui|Oui|Non|Non| 
-|Groupes de disponibilité Always On<sup>2</sup>|Oui|Non|Non|Non|
-|Groupes de disponibilité de base <sup>3</sup>|Non|Oui|Non|Non|
-|Groupe de disponibilité à validation de réplica minimale|Oui|Oui|Non|Non|
-|Groupe de disponibilité sans cluster|Oui|Oui|Non|Non|
-|Restauration en ligne de pages et de fichiers|Oui|Non|Non|Non|
-|Indexation en ligne|Oui|Non|Non|Non|
-|Reconstructions d’index en ligne pouvant être reprises|Oui|Non|Non|Non|
-|Modification de schéma en ligne|Oui|Non|Non|Non|
-|Récupération rapide|Oui|Non|Non|Non|
-|Sauvegardes en miroir|Oui|Non|Non|Non|
-|Ajout de mémoire et de processeur à chaud|Oui|Non|Non|Non|
-|Sauvegarde chiffrée|Oui|Oui|Non|Non|
-|Sauvegarde hybride vers Windows Azure (sauvegarde vers une URL)|Oui|Oui|Non|Non|
+|Copie des journaux de transaction|Oui|Oui|Oui|non|  
+|Compression de sauvegarde|Oui|Oui|Non|non| 
+|Instantané de base de données|Oui|Non|Non|non|
+|Instance de cluster de basculement Always On<sup>1</sup>|Oui|Oui|Non|non| 
+|Groupes de disponibilité Always On<sup>2</sup>|Oui|Non|Non|non|
+|Groupes de disponibilité de base <sup>3</sup>|non|Oui|Non|non|
+|Groupe de disponibilité à validation de réplica minimale|Oui|Oui|Non|non|
+|Groupe de disponibilité sans cluster|Oui|Oui|Non|non|
+|Restauration en ligne de pages et de fichiers|Oui|Non|Non|non|
+|Indexation en ligne|Oui|Non|Non|non|
+|Reconstructions d’index en ligne pouvant être reprises|Oui|Non|Non|non|
+|Modification de schéma en ligne|Oui|Non|Non|non|
+|Récupération rapide|Oui|Non|Non|non|
+|Sauvegardes en miroir|Oui|Non|Non|non|
+|Ajout de mémoire et de processeur à chaud|Oui|Non|Non|non|
+|Sauvegarde chiffrée|Oui|Oui|Non|non|
+|Sauvegarde hybride vers Windows Azure (sauvegarde vers une URL)|Oui|Oui|Non|non|
   
 <sup>1</sup> sur Enterprise edition, le nombre de nœuds est au maximum du système d’exploitation. L’édition Standard prend en charge deux nœuds. 
 
@@ -132,19 +134,19 @@ L’édition Developer continue à prendre en charge seulement 1 client pour [S
 |-------------|----------------|--------------|---------|------------------------| 
 |Columnstore <sup>1</sup>|Oui|Oui|Oui|Oui|  
 |Fichiers binaires LOB dans les index columnstore cluster|Oui|Oui|Oui|Oui|  
-|Reconstruction d’index columnstore non cluster en ligne|Oui|Non|Non|Non|
+|Reconstruction d’index columnstore non cluster en ligne|Oui|Non|Non|non|
 |OLTP en mémoire <sup>1</sup>|Oui|Oui|Oui|Oui|
 |Mémoire principale persistante|Oui|Oui|Oui|Oui|
 |Partitionnement des tables et des index|Oui|Oui|Oui|Oui|  
 |Compression des données|Oui|Oui|Oui|Oui|
-|gouverneur de ressources|Oui|Non|Non|Non|  
-|Parallélisme de tables partitionnées|Oui|Non|Non|Non|
-|Mémoire de pages de grande taille compatible NUMA et allocation de tableau de tampons|Oui|Non|Non|Non|
-|Gouvernance des ressources d'E/S|Oui|Non|Non|Non|  
+|gouverneur de ressources|Oui|Non|Non|non|  
+|Parallélisme de tables partitionnées|Oui|Non|Non|non|
+|Mémoire de pages de grande taille compatible NUMA et allocation de tableau de tampons|Oui|Non|Non|non|
+|Gouvernance des ressources d'E/S|Oui|Non|Non|non|  
 |Durabilité différée|Oui|Oui|Oui|Oui|
-|Paramétrage automatique|Oui|Non|Non|Non|
-|Jointures adaptatives en mode batch|Oui|Non|Non|Non|
-|Retour d’allocation de mémoire en mode batch|Oui|Non|Non|Non|
+|Paramétrage automatique|Oui|Non|Non|non|
+|Jointures adaptatives en mode batch|Oui|Non|Non|non|
+|Retour d’allocation de mémoire en mode batch|Oui|Non|Non|non|
 |Exécution entrelacée pour les fonctions table à instructions multiples|Oui|Oui|Oui|Oui|
 |Améliorations de l’insertion en bloc|Oui|Oui|Oui|Oui|
 
@@ -160,10 +162,10 @@ L’édition Developer continue à prendre en charge seulement 1 client pour [S
 |Masquage dynamique des données|Oui|Oui|Oui|Oui|   
 |Audit de base|Oui|Oui|Oui|Oui| 
 |Audit de granularité fine|Oui|Oui|Oui|Oui| 
-|Chiffrement transparent de base de données|Oui|Non|Non|Non|   
+|Chiffrement transparent de base de données|Oui|Non|Non|non|   
 |Rôles définis par l’utilisateur|Oui|Oui|Oui|Oui| 
 |Bases de données à relation contenant-contenu|Oui|Oui|Oui|Oui| 
-|Chiffrement des sauvegardes|Oui|Oui|Non|Non|  
+|Chiffrement des sauvegardes|Oui|Oui|Non|non|  
 
 ##  <a name="RDBMSM"></a> Simplicité de gestion SGBDR  
   
@@ -172,17 +174,17 @@ L’édition Developer continue à prendre en charge seulement 1 client pour [S
 |Connexion administrateur dédiée|Oui|Oui|Oui|Oui avec indicateur de trace|Oui avec indicateur de trace|   
 |Prise en charge de scripts PowerShell|Oui|Oui|Oui|Oui| 
 |Prise en charge des opérations des composants d’application du niveau Données : extraction, déploiement, mise à niveau, suppression|Oui|Oui|Oui|Oui| 
-|Automation de stratégie (vérification selon la planification et sur modification)|Oui|Oui|Oui|Non|Non|   
-|Collecteur de données de performances|Oui|Oui|Oui|Non|Non| 
-|Rapports de performances standard|Oui|Oui|Oui|Non|Non| 
-|Repères de plan et gel de plan relatif|Oui|Oui|Oui|Non|Non|   
+|Automation de stratégie (vérification selon la planification et sur modification)|Oui|Oui|Oui|Non|non|   
+|Collecteur de données de performances|Oui|Oui|Oui|Non|non| 
+|Rapports de performances standard|Oui|Oui|Oui|Non|non| 
+|Repères de plan et gel de plan relatif|Oui|Oui|Oui|Non|non|   
 |Requête directe de vues d'index (à l'aide de l'indicateur NOEXPAND)|Oui|Oui|Oui|Oui| 
-|Maintenance automatique des vues indexées|Oui|Oui|Oui|Non|Non| 
-|Vues partitionnées distribuées|Oui|Non|Non|Non| 
-|Opérations d'index parallèles|Oui|Non|Non|Non|  
-|Utilisation automatique de vues indexées par l'optimiseur de requête|Oui|Non|Non|Non| 
-|Vérifications de cohérence parallèles|Oui|Non|Non|Non| 
-|Point de contrôle de l’utilitaire SQL Server|Oui|Non|Non|Non|    
+|Maintenance automatique des vues indexées|Oui|Oui|Oui|Non|non| 
+|Vues partitionnées distribuées|Oui|Non|Non|non| 
+|Opérations d'index parallèles|Oui|Non|Non|non|  
+|Utilisation automatique de vues indexées par l'optimiseur de requête|Oui|Non|Non|non| 
+|Vérifications de cohérence parallèles|Oui|Non|Non|non| 
+|Point de contrôle de l’utilitaire SQL Server|Oui|Non|Non|non|    
 
 ##  <a name="Programmability"></a> Programmability  
   
@@ -196,10 +198,10 @@ L’édition Developer continue à prendre en charge seulement 1 client pour [S
 |Fonctions MERGE & UPSERT|Oui|Oui|Oui|Oui|   
 |Types de données de date et d'heure|Oui|Oui|Oui|Oui|  
 |Support d'internationalisation|Oui|Oui|Oui|Oui| 
-|Recherche sémantique et en texte intégral|Oui|Oui|Oui|Oui|Non| 
-|Spécification d'une langue dans une requête|Oui|Oui|Oui|Oui|Non|   
+|Recherche sémantique et en texte intégral|Oui|Oui|Oui|Oui|non| 
+|Spécification d'une langue dans une requête|Oui|Oui|Oui|Oui|non|   
 |Service Broker (messagerie)|Oui|Oui|Non (client uniquement)|Non (client uniquement)|Non (client uniquement)|   
-|Transact-SQL, points de terminaison|Oui|Oui|Oui|Non|Non| 
+|Transact-SQL, points de terminaison|Oui|Oui|Oui|Non|non| 
 |Graphique|Oui|Oui|Oui|Oui|  
 
 

@@ -1,5 +1,5 @@
 ---
-title: "Se connecter au stockage d’objets Blob Azure (SQL Server Assistant Importation et exportation) | Documents Microsoft"
+title: "Se connecter à Stockage Blob Azure (Assistant Importation et Exportation SQL Server) | Microsoft Docs"
 ms.custom: 
 ms.date: 02/17/2017
 ms.prod: sql-non-specified
@@ -13,35 +13,34 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e2e482b8-5f90-48c5-93fb-b412ed52659f
-caps.latest.revision: 8
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 36b992b5141799d4e168b2e990643e6a515a8d69
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 5a31ba153a87eddb1e65daf0aebacc317e58a455
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="connect-to-azure-blob-storage-sql-server-import-and-export-wizard"></a>Se connecter au stockage d’objets Blob Azure (SQL Server Assistant Importation et exportation)
-Cette rubrique vous montre comment se connecter à un **stockage d’objets Blob Azure** de source de données à partir de la **choisir une Source de données** ou **choisir une Destination** page de l’importation de SQL Server et l’Assistant Exportation.
+# <a name="connect-to-azure-blob-storage-sql-server-import-and-export-wizard"></a>Se connecter à Stockage Blob Azure (Assistant Importation et Exportation SQL Server)
+Cette rubrique vous montre comment se connecter à une source de données **Stockage Blob Azure** à partir de la page **Choisir une source de données** ou **Choisir une destination** de l’Assistant Importation et Exportation SQL Server.
 
 >   [!NOTE]
-> Pour utiliser Azure Blob Source ou Destination, vous devez installer Azure Feature Pack pour SQL Server Integration Services.
-> - Pour télécharger le Feature Pack, consultez [Microsoft SQL Server 2016 Integration Services Feature Pack pour Azure](https://www.microsoft.com/download/details.aspx?id=49492).
+> Pour utiliser la source ou la destination des objets blob Azure, vous devez installer le Feature Pack Azure pour SQL Server Integration Services.
+> - Pour télécharger le Feature Pack, consultez [Microsoft SQL Server 2016 Integration Services Feature Pack pour Azure](https://www.microsoft.com/download/details.aspx?id=49492).
 >
 > - Pour plus d’informations, consultez [Feature Pack Azure pour Integration Services &#40;SSIS&#41;](../../integration-services/azure-feature-pack-for-integration-services-ssis.md).
 
-La capture d’écran suivante montre les options de configuration pour une connexion au stockage d’objets Blob Azure.
+La capture d’écran suivante présente les options de configuration d’une connexion à Stockage Blob Azure.
 
 ![Connexion à Azure Blob Storage](../../integration-services/import-export-data/media/azure-blob-storage-connection.png)
 
-## <a name="options-to-specify"></a>Options pour spécifier
+## <a name="options-to-specify"></a>Options à spécifier
 
 > [!NOTE]
-> Les options de connexion pour ce fournisseur de données sont identiques si le stockage d’objets Blob Azure est la source ou la destination. Autrement dit, les options sont les mêmes sur les deux le **choisir une Source de données** et **choisir une Destination** pages de l’Assistant.
+> Les options de connexion de ce fournisseur de données sont les mêmes, que Stockage Blob Azure soit la source ou la destination. Autrement dit, les options que vous voyez sont identiques dans les pages **Choisir une source de données** et **Choisir une destination** de l’Assistant.
 
  **Utiliser un compte Azure**  
  Indiquez si vous souhaitez utiliser un compte en ligne.
@@ -65,13 +64,12 @@ Entrez la clé du compte de stockage Azure.
  Sélectionnez le format de fichier Texte ou Avro.  
   
  **Caractère séparateur de colonnes**  
- Si vous avez sélectionné le format de texte, entrez le caractère délimiteur de colonne.  
+ Si vous avez sélectionné le format Texte, entrez le caractère délimiteur de colonne.  
   
  **Utiliser la première ligne comme noms de colonne**  
  Spécifiez si la première ligne de données contient des noms de colonne.  
 
 ## <a name="see-also"></a>Voir aussi
-[Choisissez une Source de données](../../integration-services/import-export-data/choose-a-data-source-sql-server-import-and-export-wizard.md)  
-[Choisir une Destination](../../integration-services/import-export-data/choose-a-destination-sql-server-import-and-export-wizard.md)
-
+[Choisir une source de données](../../integration-services/import-export-data/choose-a-data-source-sql-server-import-and-export-wizard.md)  
+[Choisir une destination](../../integration-services/import-export-data/choose-a-destination-sql-server-import-and-export-wizard.md)
 

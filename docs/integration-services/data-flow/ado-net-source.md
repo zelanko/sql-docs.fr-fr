@@ -1,5 +1,5 @@
 ---
-title: Source ADO NET | Documents Microsoft
+title: Source ADO NET | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -24,17 +24,16 @@ helpviewer_keywords:
 - .NET Framework [Integration Services]
 - DataReader source
 ms.assetid: 2a2f1750-2cda-4dda-9dca-623a96a6b3c0
-caps.latest.revision: 101
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
-ms.openlocfilehash: 9e7aade0a21f0a77d05c0550aac8aed5b1ace4d8
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/17/2017
-
+ms.openlocfilehash: 05753f3cea7979f78499dc68cb4baa784367b383
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="ado-net-source"></a>Source ADO NET
   La source ADO .NET exploite des données issues d'un fournisseur .NET et les met à la disposition du flux de données.  
@@ -86,7 +85,7 @@ ms.lasthandoff: 08/17/2017
   
  La source ADO .NET a une sortie normale et une sortie d'erreur.  
   
- Vous pouvez définir des propriétés au moyen du concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] ou par programmation.  
+ Vous pouvez définir les propriétés par le biais du concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] ou par programmation.  
   
  Pour plus d'informations sur les propriétés définissables dans la boîte de dialogue **Éditeur avancé** ou par programmation, cliquez sur l'une des rubriques suivantes :  
   
@@ -128,7 +127,7 @@ ms.lasthandoff: 08/17/2017
  Affichez un aperçu des résultats à partir de la boîte de dialogue **Vue de données** . Le mode**Aperçu** peut afficher jusqu’à 200 lignes.  
   
 > [!NOTE]  
->  Lorsque vous affichez l'aperçu des données, les colonnes ayant un type CLR défini par l'utilisateur ne contiennent pas de données. À la place les valeurs \<valeur trop grande pour être affichée > ou System.Byte [] s’affichent. La première s'affiche lorsque le fournisseur [!INCLUDE[vstecado](../../includes/vstecado-md.md)] accède à la source de données ; la seconde lorsque vous utilisez le fournisseur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+>  Lorsque vous affichez l'aperçu des données, les colonnes ayant un type CLR défini par l'utilisateur ne contiennent pas de données. Les valeurs \<valeur trop grande pour être affichée> ou System.Byte[] s’affichent à la place. La première s'affiche lorsque le fournisseur [!INCLUDE[vstecado](../../includes/vstecado-md.md)] accède à la source de données ; la seconde lorsque vous utilisez le fournisseur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ### <a name="data-access-mode-dynamic-options"></a>Options dynamiques du mode d'accès aux données  
   
@@ -140,11 +139,11 @@ ms.lasthandoff: 08/17/2017
  **Texte de la commande SQL**  
  Entrez le texte d’une requête SQL, générez la requête en cliquant sur **Générer une requête**ou recherchez le fichier qui contient le texte de la requête en cliquant sur **Parcourir**.  
   
- **Build query**  
+ **Construire une requête**  
  Utilisez la boîte de dialogue **Générateur de requêtes** pour construire la requête SQL visuellement.  
   
- **Parcourir**  
- Dans la boîte de dialogue **Ouvrir** , localisez le fichier contenant le texte de la requête SQL.  
+ **...**  
+ Dans la boîte de dialogue **Ouvrir** , localisez le fichier qui contient le texte de la requête SQL.  
   
 ## <a name="ado-net-source-editor-columns-page"></a>Éditeur de source ADO NET (page Colonnes)
   Utilisez la page **Colonnes** de la boîte de dialogue **Éditeur de source ADO NET** pour mapper une colonne de sortie à chaque colonne externe (source).  
@@ -206,10 +205,9 @@ ms.lasthandoff: 08/17/2017
  **Appliquer**  
  Appliquez l'option de gestion des erreurs aux cellules sélectionnées.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Destination DataReader](../../integration-services/data-flow/datareader-destination.md)   
  [Destination ADO NET](../../integration-services/data-flow/ado-net-destination.md)   
  [Flux de données](../../integration-services/data-flow/data-flow.md)  
   
   
-

@@ -1,5 +1,5 @@
 ---
-title: "Modifier le Concepteur de Capture de données pour Oracle par Attunity F1 Aide référence | Documents Microsoft"
+title: "Informations de référence sur l’aide (F1) de Change Data Capture Designer pour Oracle d’Attunity | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -15,62 +15,60 @@ ms.topic: reference
 f1_keywords:
 - f1Help
 ms.assetid: aa2ec095-6a32-44a8-9069-41759d087162
-caps.latest.revision: 7
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: da92c9619f8bfbfbe732fd349cac195bc4c89926
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: c9b325d98bfad926ae8832c2cc765ddfb05c8da5
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="change-data-capture-designer-for-oracle-by-attunity-f1-help-reference"></a>Aide sur le concepteur de capture de données modifiées pour Oracle par Attunity via la touche F1
   Le concepteur de capture de données modifiées pour Oracle par Attunity permet de créer et gérer une instance Oracle CDC. Les rubriques de cette section expliquent comment effectuer les tâches disponibles dans la console du concepteur CDC.  
   
-## <a name="what-do-you-want-to-do"></a>Que voulez-vous faire ?  
+## <a name="what-do-you-want-to-do"></a>Que voulez-vous faire ?  
   
--   [Accéder à la Console du Concepteur de capture de données modifiées](../../integration-services/change-data-capture/access-the-cdc-designer-console.md)  
+-   [Accéder à la console du concepteur CDC](../../integration-services/change-data-capture/access-the-cdc-designer-console.md)  
   
--   [Gérer un Service de capture de données modifiées](../../integration-services/change-data-capture/manage-a-cdc-service.md)  
+-   [Gérer un service CDC](../../integration-services/change-data-capture/manage-a-cdc-service.md)  
   
--   [Gérer une Instance de capture de données modifiées](../../integration-services/change-data-capture/manage-a-cdc-instance.md)  
+-   [Gérer une instance de capture de données modifiées](../../integration-services/change-data-capture/manage-a-cdc-instance.md)  
   
 -   [Utiliser l’Assistant Nouvelle instance](../../integration-services/change-data-capture/use-the-new-instance-wizard.md) (ou accéder directement à l’une des tâches suivantes)  
   
-    -   [Créer la base de données SQL Server modifiée](../../integration-services/change-data-capture/create-the-sql-server-change-database.md)  
+    -   [Créer la base de données de modification SQL Server](../../integration-services/change-data-capture/create-the-sql-server-change-database.md)  
   
-    -   [Se connecter à une base de données Source Oracle](../../integration-services/change-data-capture/connect-to-an-oracle-source-database.md)  
+    -   [Se connecter à une base de données source Oracle](../../integration-services/change-data-capture/connect-to-an-oracle-source-database.md)  
   
-    -   [Connexion à Oracle](../../integration-services/change-data-capture/connect-to-oracle.md)  
+    -   [Se connecter à Oracle](../../integration-services/change-data-capture/connect-to-oracle.md)  
   
-    -   [Sélectionnez les colonnes et les Tables Oracle](../../integration-services/change-data-capture/select-oracle-tables-and-columns.md)  
+    -   [Sélectionner des tables et des colonnes Oracle](../../integration-services/change-data-capture/select-oracle-tables-and-columns.md)  
   
-    -   [Sélectionner des Tables Oracle pour capturer les modifications](../../integration-services/change-data-capture/select-oracle-tables-for-capturing-changes.md)  
+    -   [Sélectionner des tables Oracle pour capturer des modifications](../../integration-services/change-data-capture/select-oracle-tables-for-capturing-changes.md)  
   
-    -   [Apporter des modifications aux Tables sélectionnées pour capturer les modifications](../../integration-services/change-data-capture/make-changes-to-the-tables-selected-for-capturing-changes.md)  
+    -   [Apporter des modifications aux tables sélectionnées pour capturer les modifications](../../integration-services/change-data-capture/make-changes-to-the-tables-selected-for-capturing-changes.md)  
   
-    -   [Générer et exécuter le Script de journalisation supplémentaire](../../integration-services/change-data-capture/generate-and-run-the-supplemental-logging-script.md)  
+    -   [Générer et exécuter le script de journalisation supplémentaire](../../integration-services/change-data-capture/generate-and-run-the-supplemental-logging-script.md)  
   
-    -   [Générer des Tables miroir et des Instances de Capture de données modifiées](../../integration-services/change-data-capture/generate-mirror-tables-and-cdc-capture-instances.md)  
+    -   [Générer des tables miroir et des instances de capture de données modifiées](../../integration-services/change-data-capture/generate-mirror-tables-and-cdc-capture-instances.md)  
   
     -   [Terminer](../../integration-services/change-data-capture/finish.md)  
   
 -   [Modifier les propriétés d’instance](../../integration-services/change-data-capture/edit-instance-properties.md)(ou accéder directement à l’une des tâches suivantes)  
   
-    -   [Modifier les propriétés de la base de données Oracle](../../integration-services/change-data-capture/edit-the-oracle-database-properties.md)  
+    -   [Modifier les propriétés d'une base de données Oracle](../../integration-services/change-data-capture/edit-the-oracle-database-properties.md)  
   
-    -   [Modifier des Tables](../../integration-services/change-data-capture/edit-tables.md)  
+    -   [Modifier des tables](../../integration-services/change-data-capture/edit-tables.md)  
   
-    -   [Ajouter des Tables à une Instance de capture de données modifiées](../../integration-services/change-data-capture/add-tables-to-a-cdc-instance.md)  
+    -   [Ajouter des tables à une instance CDC](../../integration-services/change-data-capture/add-tables-to-a-cdc-instance.md)  
   
-    -   [Modifier les propriétés de Table](../../integration-services/change-data-capture/edit-the-table-properties.md)  
+    -   [Modifier les propriétés d’une table](../../integration-services/change-data-capture/edit-the-table-properties.md)  
   
-    -   [Examiner et générer des Scripts de journalisation supplémentaires](../../integration-services/change-data-capture/review-and-generate-supplemental-logging-scripts.md)  
+    -   [Examiner et générer des scripts de journalisation supplémentaires](../../integration-services/change-data-capture/review-and-generate-supplemental-logging-scripts.md)  
   
     -   [Modifier les propriétés avancées](../../integration-services/change-data-capture/edit-the-advanced-properties.md)  
   
   
-

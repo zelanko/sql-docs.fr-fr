@@ -8,21 +8,19 @@ ms.service:
 ms.component: security
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: eb5c6f4a-3ed5-430b-a712-d5ed4b6b9b2b
-caps.latest.revision: "15"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
-ms.openlocfilehash: efcee36bb392786b5af57492e919da902f423679
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+caps.latest.revision: 
+author: markingmyname
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 6f554b9ec04d894fbcd3da37e1bd326b39508571
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="extended-protection-for-authentication-with-reporting-services"></a>Protection étendue de l'authentification avec Reporting Services
 
@@ -52,7 +50,7 @@ SSRS prend en charge et applique la protection étendue qui a été activée dan
 >   
 >  La documentation pour une technologie d'accès aux données doit disposer d'informations sur la prise en charge de la protection étendue.  
   
-### <a name="upgrade"></a>Mise à niveau  
+### <a name="upgrade"></a>UPGRADE  
   
 -   La mise à niveau d’un serveur [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] vers SQL Server 2016 ajoute des paramètres de configuration avec les valeurs par défaut au fichier **rsreportserver.config**. Si les paramètres y figurent déjà, l’installation de SQL Server 2016 les laisse dans le fichier **rsreportserver.config**.  
   
@@ -121,8 +119,8 @@ SSRS prend en charge et applique la protection étendue qui a été activée dan
   
 |Paramètre|Description|  
 |-------------|-----------------|  
-|**RSWindowsExtendedProtectionLevel**|Indique le niveau d'application de la protection étendue. Les valeurs valides sont :<br /><br /> **Off**: valeur par défaut. Indique l’absence de vérification de la liaison de canal ou de service.<br /><br /> **Allow** prend en charge la protection étendue, mais ne l’impose pas.  Spécifie les points suivants :<br /><br /> -La protection étendue est appliquée aux applications clientes qui s’exécutent sur les systèmes d’exploitation prenant en charge la protection étendue. La manière dont la protection s’applique dépend du paramètre **RsWindowsExtendedProtectionScenario**.<br /><br /> -L’authentification est autorisée pour les applications fonctionnant sur des systèmes d’exploitation qui ne prennent pas en charge la protection étendue.<br /><br /> **Require** spécifie les points suivants :<br /><br /> -La protection étendue est appliquée aux applications clientes qui s’exécutent sur les systèmes d’exploitation prenant en charge la protection étendue.<br /><br /> -L’authentification **n’est pas** autorisée pour les applications fonctionnant sur des systèmes d’exploitation qui ne prennent pas en charge la protection étendue.|  
-|**RsWindowsExtendedProtectionScenario**|Indique les formes de protection étendue validées : liaison de canal, liaison de service ou les deux à la fois. Les valeurs valides sont :<br /><br /> **Proxy**: valeur par défaut. Spécifie les points suivants :<br /><br /> -L’authentification Windows NTLM, Kerberos et Negotiate a lieu lorsqu’un jeton de liaison de canal est présent.<br /><br /> -La liaison de service est appliquée.<br /><br /> **Any** spécifie les points suivants :<br /><br /> -L’authentification Windows NTLM, Kerberos et Negotiate, ainsi qu’une liaison de canal, ne sont pas obligatoires.<br /><br /> -La liaison de service est appliquée.<br /><br /> **Direct** spécifie les points suivants :<br /><br /> -L’authentification Windows NTLM, Kerberos et Negotiate a lieu lorsqu’il existe un jeton de liaison de canal et une connexion SSL au service actuel, et lorsque le jeton de liaison de canal pour la connexion SSL correspond à celui du jeton NTLM, Kerberos ou Negotiate.<br /><br /> -La liaison de service n’est pas appliquée.<br /><br /> <br /><br /> Remarque : le paramètre **RsWindowsExtendedProtectionScenario** est ignoré si **RsWindowsExtendedProtectionLevel** est défini sur **OFF**.|  
+|**RSWindowsExtendedProtectionLevel**|Indique le niveau d'application de la protection étendue. Les valeurs valides sont :<br /><br /> **Off**: valeur par défaut. Indique l’absence de vérification de la liaison de canal ou de service.<br /><br /> **Allow** prend en charge la protection étendue, mais ne l’impose pas.  Spécifie les points suivants :<br /><br /> -La protection étendue est appliquée aux applications clientes qui s’exécutent sur les systèmes d’exploitation prenant en charge la protection étendue. La manière dont la protection s’applique dépend du paramètre **RsWindowsExtendedProtectionScenario**.<br /><br /> -L’authentification est autorisée pour les applications fonctionnant sur des systèmes d’exploitation qui ne prennent pas en charge la protection étendue.<br /><br /> **Require** spécifie les points suivants :<br /><br /> -La protection étendue est appliquée aux applications clientes qui s’exécutent sur les systèmes d’exploitation prenant en charge la protection étendue.<br /><br /> -L’authentification **n’est pas** autorisée pour les applications fonctionnant sur des systèmes d’exploitation qui ne prennent pas en charge la protection étendue.|  
+|**RsWindowsExtendedProtectionScenario**|Indique les formes de protection étendue validées : liaison de canal, liaison de service ou les deux à la fois. Les valeurs valides sont :<br /><br /> **Proxy**: valeur par défaut. Spécifie les points suivants :<br /><br /> -L’authentification Windows NTLM, Kerberos et Negotiate a lieu lorsqu’un jeton de liaison de canal est présent.<br /><br /> -La liaison de service est appliquée.<br /><br /> **Any** spécifie les points suivants :<br /><br /> -L’authentification Windows NTLM, Kerberos et Negotiate, ainsi qu’une liaison de canal, ne sont pas obligatoires.<br /><br /> -La liaison de service est appliquée.<br /><br /> **Direct** spécifie les points suivants :<br /><br /> -L’authentification Windows NTLM, Kerberos et Negotiate a lieu lorsqu’il existe un jeton de liaison de canal et une connexion SSL au service actuel, et lorsque le jeton de liaison de canal pour la connexion SSL correspond à celui du jeton NTLM, Kerberos ou Negotiate.<br /><br /> -La liaison de service n’est pas appliquée.<br /><br /> <br /><br /> Remarque : le paramètre **RsWindowsExtendedProtectionScenario** est ignoré si **RsWindowsExtendedProtectionLevel** est défini sur **OFF**.|  
   
  Exemples d'entrées dans le fichier de configuration **rsreportserver.config** :  
   

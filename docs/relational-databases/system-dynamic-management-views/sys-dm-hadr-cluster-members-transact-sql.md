@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_hadr_cluster_members (Transact-SQL) | Documents Microsoft
+title: sys.dm_hadr_cluster_members (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 01/23/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,22 +17,23 @@ f1_keywords:
 - sys.dm_hadr_cluster_members
 - dm_hadr_cluster_members_TSQL
 - dm_hadr_cluster_members
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - Availability Groups [SQL Server], monitoring
 - Availability Groups [SQL Server], WSFC clusters
 - sys.dm_hadr_cluster_members catalog view
 ms.assetid: feb20b3a-8835-41d3-9a1c-91d3117bc170
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ea85525a52734a09bc27d55e2e6b2a307be73ae4
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 535b83d9d524a500fb2faa9c38541444b0f0fb5a
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmhadrclustermembers-transact-sql"></a>sys.dm_hadr_cluster_members (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -51,14 +53,14 @@ ms.lasthandoff: 11/17/2017
   
 |Nom de colonne|Type de données| Description|  
 |-----------------|---------------|-----------------|  
-|**MEMBER_NAME**|**nvarchar (128)**|Nom de membre, qui peut être un nom d'ordinateur, une lettre de lecteur ou un chemin d'accès de partage de fichiers.|  
+|**member_name**|**nvarchar(128)**|Nom de membre, qui peut être un nom d'ordinateur, une lettre de lecteur ou un chemin d'accès de partage de fichiers.|  
 |**member_type**|**tinyint**|Type du membre. Peut prendre une des valeurs suivantes :<br /><br /> 0 = Nœud WSFC<br /><br /> 1 = Disque témoin<br /><br /> 2 = Témoin de partage de fichiers|  
 |**member_type_desc**|**nvarchar(50)**|Description de **member_type**, un des :<br /><br /> CLUSTER_NODE<br /><br /> DISK_WITNESS<br /><br /> FILE_SHARE_WITNESS|  
 |**member_state**|**tinyint**|État du membre. Peut prendre une des valeurs suivantes :<br /><br /> 0 = Hors connexion<br /><br /> 1 = En ligne|  
-|**member_state_desc**|**nvarchar (60)**|Description de **member_state**, un des :<br /><br /> UP<br /><br /> VERS LE BAS|  
+|**member_state_desc**|**nvarchar(60)**|Description de **member_state**, un des :<br /><br /> UP<br /><br /> VERS LE BAS|  
 |**number_of_quorum_votes**|**tinyint**|Nombre de votes de quorum détenus par ce membre de quorum. Pour les quorums Non majoritaire - Disque uniquement, cette valeur est par défaut 0. Pour les autres types de quorum, cette valeur est par défaut 1.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  requièrent l'autorisation VIEW SERVER STATE sur le serveur.  
   
 ## <a name="examples"></a>Exemples  
@@ -66,7 +68,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="see-also"></a>Voir aussi  
  [Vues et fonctions de gestion dynamiques de groupes de disponibilité Always On &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/always-on-availability-groups-dynamic-management-views-functions.md)   
  [Affichages catalogue des groupes de disponibilité Always On &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/always-on-availability-groups-catalog-views-transact-sql.md)   
- [Surveiller des groupes de disponibilité &#40;Transact-SQL&#41;](../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)   
+ [Surveiller les groupes de disponibilité &#40; Transact-SQL &#41;](../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)   
  [Groupes de disponibilité AlwaysOn &#40; SQL Server &#41;](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)  
   
   

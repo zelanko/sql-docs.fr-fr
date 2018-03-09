@@ -1,5 +1,5 @@
 ---
-title: "Options de demande de profil colonne valeur Distribution (tâche de profilage des données) | Documents Microsoft"
+title: "Options Demande de profil de distribution de valeurs de colonne (tâche de profilage des données) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -15,17 +15,16 @@ ms.topic: article
 helpviewer_keywords:
 - Data Profiling Task Editor
 ms.assetid: c1e5f5de-04f5-4d00-a9f0-55817186bdf9
-caps.latest.revision: 22
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 79ce587ac6e1f0da8bf0c2ae237b6b9c3ae2623f
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 861b01ee4002bb592f5fc85978a5afd08994f606
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="column-value-distribution-profile-request-options-data-profiling-task"></a>Options Demande de profil de distribution de valeurs de colonne (tâche de profilage des données)
   Utilisez le volet **Propriétés de la demande** de la page **Demandes de profil** pour définir les options de la **Demande de profil de distribution de valeurs de colonne** sélectionnée dans le volet Demandes. Un profil de distribution de valeurs de colonne permet de préciser toutes les valeurs distinctes dans la colonne sélectionnée, ainsi que le pourcentage de lignes dans la table que représente chaque valeur. Le profil peut également signaler des valeurs qui représentent beaucoup plus qu'un pourcentage de lignes spécifié dans la table. Il peut vous aider à identifier des problèmes dans vos données, tels qu'un nombre incorrect de valeurs distinctes dans une colonne. Par exemple, vous établissez le profil d'une colonne des états des États-Unis et découvrez plus de 50 valeurs distinctes.  
@@ -46,7 +45,7 @@ ms.lasthandoff: 08/03/2017
   
 ### <a name="data-options"></a>Options de données  
  **ConnectionManager**  
- Sélectionnez le gestionnaire de connexions [!INCLUDE[vstecado](../../includes/vstecado-md.md)] existant qui utilise le fournisseur de données .NET pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SqlClient) pour se connecter à la base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui contient la table ou la vue à profiler.  
+ Sélectionnez le gestionnaire de connexions [!INCLUDE[vstecado](../../includes/vstecado-md.md)] existant qui utilise le fournisseur de données .NET pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SqlClient) pour établir la connexion à la base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui contient la table ou la vue à profiler.  
   
  **TableOrView**  
  Sélectionnez la table ou la vue existante qui contient la colonne à profiler.  
@@ -78,7 +77,7 @@ ms.lasthandoff: 08/03/2017
 > [!NOTE]  
 >  Si vous utilisez le caractère générique **(\*)** pour **ColumnName**, **CompareOptions** est en lecture seule et est définie avec le paramètre **Default**.  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |**Default**|Trie et compare des données d'après le classement de la colonne dans la table source.|  
 |**BinarySort**|Trie et compare les données en fonction des modèles binaires définis pour chaque caractère. L'ordre de tri binaire respecte la casse et les accents. Il s'agit aussi de l'ordre de tri le plus rapide.|  
@@ -86,7 +85,7 @@ ms.lasthandoff: 08/03/2017
   
  Si vous sélectionnez **DictionarySort**, vous pouvez également sélectionner toutes les combinaisons d’options répertoriées dans le tableau suivant. Par défaut, aucune de ces options supplémentaires n'est sélectionnée.  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |**IgnoreCase**|Indique si la comparaison fait la distinction entre les lettres majuscules et minuscules. Si cette option est définie, la comparaison de chaînes ignore la casse. Par exemple, « ABC » est alors identique à « abc ».|  
 |**IgnoreNonSpace**|Indique si la comparaison fait la distinction entre les caractères avec espace et les caractères diacritiques. Si cette option est définie, la comparaison ignore les caractères diacritiques. Par exemple, « å » est identique à « a ».|  
@@ -101,7 +100,7 @@ ms.lasthandoff: 08/03/2017
  **ValueDistributionOption**  
  Spécifiez si la distribution est à calculer pour toutes les valeurs de colonne. La valeur par défaut de cette option est **FrequentValues**.  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |**AllValues**|La distribution est calculée pour toutes les valeurs de colonne.|  
 |**FrequentValues**|La distribution est calculée uniquement pour les valeurs dont la fréquence dépasse la valeur minimale spécifiée dans **FrequentValueThreshold**. Les valeurs qui ne correspondent pas à **FrequentValueThreshold** sont exclues du rapport de sortie.|  
@@ -109,9 +108,8 @@ ms.lasthandoff: 08/03/2017
  **FrequentValueThreshold**  
  Spécifiez le seuil (au moyen d'une valeur comprise entre 0 et 1) au-dessus duquel la valeur de colonne doit être précisée. Cette option est désactivée quand vous sélectionnez **AllValues** comme **ValueDistributionOption**. La valeur par défaut de cette option est 0,001.  
   
-## <a name="see-also"></a>Voir aussi  
- [Éditeur de tâche &#40; de profilage des données Page Général &#41;](../../integration-services/control-flow/data-profiling-task-editor-general-page.md)   
- [Formulaire de profil rapide de Table simple &#40; &#41; de la tâche de profilage des données](../../integration-services/control-flow/single-table-quick-profile-form-data-profiling-task.md)  
+## <a name="see-also"></a> Voir aussi  
+ [Éditeur de tâche de profilage de données &#40;page Général&#41;](../../integration-services/control-flow/data-profiling-task-editor-general-page.md)   
+ [Formulaire de profil rapide de table simple &#40;tâche de profilage des données&#41;](../../integration-services/control-flow/single-table-quick-profile-form-data-profiling-task.md)  
   
   
-

@@ -1,5 +1,5 @@
 ---
-title: Sys.DM_OS_SCHEDULERS (Transact-SQL) | Documents Microsoft
+title: sys.dm_os_schedulers (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/13/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - sys.dm_os_schedulers_TSQL
 - sys.dm_os_schedulers
 - dm_os_schedulers_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_os_schedulers dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_os_schedulers dynamic management view
 ms.assetid: 3a09d81b-55d5-416f-9cda-1a3a5492abe0
-caps.latest.revision: "55"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 738494bb7320248fa8616d381b4424fe0b055414
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: aa32726893d196cc4c2830e79703f5583d661793
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmosschedulers-transact-sql"></a>sys.dm_os_schedulers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -40,11 +43,11 @@ ms.lasthandoff: 11/17/2017
   
 |Nom de colonne|Type de données| Description|  
 |-----------------|---------------|-----------------|  
-|scheduler_address|**varbinary (8)**|Adresse mémoire du planificateur. N'accepte pas la valeur NULL.|  
+|scheduler_address|**varbinary(8)**|Adresse mémoire du planificateur. N'accepte pas la valeur NULL.|  
 |parent_node_id|**int**|Identificateur du nœud auquel le planificateur appartient. On parle également de nœud parent. Il s'agit d'un nœud NUMA (Nonuniform Memory Access). N'accepte pas la valeur NULL.|  
 |scheduler_id|**int**|ID du planificateur. Tous les planificateurs utilisés pour exécuter des requêtes régulières ont des numéros d'identificateur inférieurs à 1 048 576. Les planificateurs qui sont identifiés par un numéro supérieur ou égal à 1 048 576 sont utilisés en interne par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], par exemple le planificateur de connexions administrateur dédiées. N'accepte pas la valeur NULL.|  
 |cpu_id|**smallint**|ID de l'UC assigné au planificateur.<br /><br /> N'accepte pas la valeur NULL.<br /><br /> **Remarque :** 255 n’indique pas aucune affinité comme il le faisait [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Consultez [sys.dm_os_threads &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-os-threads-transact-sql.md) pour plus d’informations d’affinité supplémentaires.|  
-|status|**nvarchar (60)**|Indique l'état du planificateur. Il peut s'agir de l'une des valeurs suivantes :<br /><br /> -MASQUÉ EN LIGNE<br />-MASQUÉ EN MODE HORS CONNEXION<br />-VISIBLE EN LIGNE<br />-VISIBLE EN MODE HORS CONNEXION<br />-EN LIGNE VISIBLE (DAC)<br />-HOT_ADDED<br /><br /> N'accepte pas la valeur NULL.<br /><br /> Planificateurs masqués sont utilisés pour traiter les demandes qui sont internes à la [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Les planificateurs VISIBLE servent à traiter les requêtes des utilisateurs.<br /><br /> Les planificateurs OFFLINE se mappent avec des processeurs qui sont déconnectés dans le masque d'affinité et qui ne sont, par conséquent, pas utilisés pour traiter des requêtes. Les planificateurs ONLINE se mappent avec des processeurs qui sont connectés dans le masque d'affinité et qui sont disponibles pour traiter des threads.<br /><br /> DAC indique que le planificateur s'exécute sous une connexion administrateur dédiée (DAC, Dedicated Administrator Connection).<br /><br /> HOT ADDED indique que les planificateurs ont été ajoutés en réponse à un événement d'ajout d'un processeur à chaud.|  
+|status|**nvarchar(60)**|Indique l'état du planificateur. Il peut s'agir de l'une des valeurs suivantes :<br /><br /> -MASQUÉ EN LIGNE<br />-MASQUÉ EN MODE HORS CONNEXION<br />-VISIBLE EN LIGNE<br />-VISIBLE EN MODE HORS CONNEXION<br />-EN LIGNE VISIBLE (DAC)<br />-   HOT_ADDED<br /><br /> N'accepte pas la valeur NULL.<br /><br /> Planificateurs masqués sont utilisés pour traiter les demandes qui sont internes à la [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Les planificateurs VISIBLE servent à traiter les requêtes des utilisateurs.<br /><br /> Les planificateurs OFFLINE se mappent avec des processeurs qui sont déconnectés dans le masque d'affinité et qui ne sont, par conséquent, pas utilisés pour traiter des requêtes. Les planificateurs ONLINE se mappent avec des processeurs qui sont connectés dans le masque d'affinité et qui sont disponibles pour traiter des threads.<br /><br /> DAC indique que le planificateur s'exécute sous une connexion administrateur dédiée (DAC, Dedicated Administrator Connection).<br /><br /> HOT ADDED indique que les planificateurs ont été ajoutés en réponse à un événement d'ajout d'un processeur à chaud.|  
 |is_online|**bit**|Si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est configuré pour utiliser uniquement certains des processeurs disponibles sur le serveur, cette configuration peut indiquer que certains planificateurs sont associés à des processeurs non inclus dans le masque d'affinité. Dans ce cas, cette colonne retourne la valeur 0. Cette valeur signifie que le planificateur n'est pas utilisé pour traiter des requêtes ou des lots.<br /><br /> N'accepte pas la valeur NULL.|  
 |is_idle|**bit**|1 = Le planificateur est inactif. Aucun processus de travail n'est actuellement en cours d'exécution. N'accepte pas la valeur NULL.|  
 |preemptive_switches_count|**int**|Nombre de fois où les processus de travail opérant sur ce planificateur sont passés en mode préemptif.<br /><br /> Pour exécuter du code externe à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (par exemple, des procédures stockées étendues et des requêtes distribuées), un thread doit s'exécuter en dehors du contrôle du planificateur non préemptif. Pour ce faire, un processus de travail passe en mode préemptif.|  
@@ -60,13 +63,13 @@ ms.lasthandoff: 11/17/2017
 |yield_count|**int**|Valeur interne utilisée pour indiquer la progression du travail sur le planificateur. Cette valeur permet à la tâche système interne de déterminer si un processus de travail du planificateur ne transmet pas ses résultats aux autres processus de travail à temps. Elle n'indique pas que le processus de travail ou la tâche est passé à un nouveau processus de travail. N'accepte pas la valeur NULL.|  
 |last_timer_activity|**bigint**|Dans les cycles de l'UC, cette valeur indique à quel moment a eu lieu la dernière vérification de la file d'attente du minuteur par le planificateur. N'accepte pas la valeur NULL.|  
 |failed_to_create_worker|**bit**|Cette valeur est définie à 1 s'il a été impossible de créer un nouveau processus de travail sur le planificateur. Ce problème est souvent la conséquence de contraintes de mémoire. Autorise la valeur NULL.|  
-|active_worker_address|**varbinary (8)**|Adresse mémoire du processus de travail actuellement actif. Autorise la valeur NULL. Pour plus d’informations, consultez [sys.dm_os_workers &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-os-workers-transact-sql.md).|  
-|memory_object_address|**varbinary (8)**|Adresse mémoire de l'objet mémoire du planificateur. Cette colonne n'accepte pas la valeur NULL.|  
-|task_memory_object_address|**varbinary (8)**|Adresse mémoire de l'objet mémoire de la tâche. N'accepte pas la valeur NULL. Pour plus d’informations, consultez [sys.dm_os_memory_objects &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md).|  
+|active_worker_address|**varbinary(8)**|Adresse mémoire du processus de travail actuellement actif. Autorise la valeur NULL. Pour plus d’informations, consultez [sys.dm_os_workers &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-os-workers-transact-sql.md).|  
+|memory_object_address|**varbinary(8)**|Adresse mémoire de l'objet mémoire du planificateur. Cette colonne n'accepte pas la valeur NULL.|  
+|task_memory_object_address|**varbinary(8)**|Adresse mémoire de l'objet mémoire de la tâche. N'accepte pas la valeur NULL. Pour plus d’informations, consultez [sys.dm_os_memory_objects &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md).|  
 |quantum_length_us|**bigint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] Expose le quantum de planificateur utilisé par SQLOS.|  
-|pdw_node_id|**int**|**S’applique aux**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> L’identificateur du nœud qui se trouve sur cette distribution.|  
+|pdw_node_id|**int**|**S’applique aux**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> L’identificateur du nœud qui se trouve sur cette distribution.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
 Sur [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], nécessite `VIEW SERVER STATE` autorisation.   
 Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] niveaux Premium, nécessite le `VIEW DATABASE STATE` autorisation dans la base de données. Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Standard et les niveaux de base, nécessite le **administrateur du serveur** ou **administrateur Active Directory de Azure** compte.   
   

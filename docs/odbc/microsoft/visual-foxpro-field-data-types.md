@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: microsoft
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -20,16 +20,16 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 2b4dbb88985b114e0e2f89c4a3f57d8dae4c9210
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 8c99a094c690882c6f2877964ae19b335cff1509
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="visual-foxpro-field-data-types"></a>Types de données Visual FoxPro
 Le tableau suivant répertorie les valeurs pour le *FieldType* argument dans l’instruction ALTER TABLE et CREATE TABLE et indique si *nFieldWidth* et *nPrecision* arguments sont requis.  
   
-|*FieldType*|*NFieldWidth*|*nPrecision*| Description|  
+|*FieldType*|*NFieldWidth*|*nPrecision*|Description|  
 |-----------------|-------------------|------------------|-----------------|  
 |B|-|d|Double|  
 |C|N|-|Champ de caractères de largeur*n*|  

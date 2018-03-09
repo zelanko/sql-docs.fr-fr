@@ -21,15 +21,15 @@ helpviewer_keywords:
 - database backups [SQL Server], copying databases
 ms.assetid: b93e9701-72a0-408e-958c-dc196872c040
 caps.latest.revision: "61"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 61898f292e44da04152eeb3ebeb2e7221eb1bb68
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f5555b305edf4ac249959e77d4a68c07c72efef5
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="copy-databases-with-backup-and-restore"></a>Copier des bases de données avec la sauvegarde et la restauration
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -71,7 +71,7 @@ D’autres points sont susceptibles d’affecter cette procédure :
  Pour éviter des erreurs et des conséquences inattendues, avant l’opération de restauration, vous pouvez utiliser la table d’historique [backupfile](../../relational-databases/system-tables/backupfile-transact-sql.md) pour identifier la base de données et les fichiers journaux de la sauvegarde que vous envisagez de restaurer.  
   
 ## <a name="moving-the-database-files"></a>Déplacement des fichiers de la base de données  
- Si les fichiers figurant dans la sauvegarde de la base de données ne peuvent pas être restaurés sur l’ordinateur de destination, il est nécessaire de transférer les fichiers vers un nouvel emplacement lors de leur restauration. Par exemple :  
+ Si les fichiers figurant dans la sauvegarde de la base de données ne peuvent pas être restaurés sur l’ordinateur de destination, il est nécessaire de transférer les fichiers vers un nouvel emplacement lors de leur restauration. Exemple :  
   
 -   Vous voulez restaurer une base de données depuis des sauvegardes créées dans l'emplacement par défaut de la version antérieure.  
   
@@ -101,7 +101,7 @@ D’autres points sont susceptibles d’affecter cette procédure :
  Lorsqu'une base de données est restaurée sur un autre ordinateur, la connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou l'utilisateur [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows à l'origine de l'opération de restauration devient automatiquement le propriétaire de la nouvelle base de données. Lorsque la base de données est restaurée, l'administrateur du système ou le nouveau propriétaire de la base de données peut modifier la propriété de la base de données. Pour éviter la restauration non autorisée d’une base de données, utilisez des mots de passe de supports de sauvegarde ou de jeux de sauvegardes.  
   
 ## <a name="managing-metadata-when-restoring-to-another-server-instance"></a>Gestion de métadonnées lors de la restauration vers une autre instance de serveur  
- Lorsque vous restaurez une base de données sur une autre instance de serveur, pour garantir une expérience cohérente aux utilisateurs et aux applications, vous devrez peut-être recréer tout ou partie des métadonnées de la base de données, telles que les connexions et les travaux, sur l'autre instance de serveur. Pour plus d’informations, consultez [Gérer les métadonnées lors de la mise à disposition d’une base de données sur une autre instance de serveur &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md).  
+ Lorsque vous restaurez une base de données sur une autre instance de serveur, pour garantir une expérience cohérente aux utilisateurs et aux applications, vous devrez peut-être recréer tout ou partie des métadonnées de la base de données, telles que les connexions et les travaux, sur l'autre instance de serveur. Pour plus d’informations, consultez [Gérer les métadonnées durant la mise à disposition d’une base de données sur une autre instance de serveur &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md).  
   
  **Afficher les données et les fichiers journaux dans un jeu de sauvegarde**  
   

@@ -2,18 +2,17 @@
 title: Perspectives | Documents Microsoft
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - ready-only cube view
 - OLAP objects [Analysis Services], perspectives
@@ -23,19 +22,20 @@ helpviewer_keywords:
 - visibility [Analysis Services]
 - storage [Analysis Services], perspectives
 ms.assetid: b064171e-b1b4-4f32-95e5-59e1b831c4c9
-caps.latest.revision: "35"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 2a892a571a70b3f5bff5fb16496c2fee5d18f151
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 815d1c6d75613855d84e9bb7ab6e5c369d97bf81
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="perspectives"></a>Perspectives
-  Une perspective est une définition qui permet aux utilisateurs de consulter un cube de façon plus simple. Une perspective est un sous-ensemble des fonctionnalités d'un cube. Une perspective permet aux administrateurs de créer des vues d'un cube, aidant ainsi les utilisateurs à se concentrer sur les données les plus pertinentes pour eux. Une perspective contient les sous-ensembles de tous les objets d'un cube. Une perspective ne peut pas inclure les éléments qui ne sont pas définis dans le cube parent.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Une perspective est une définition qui permet aux utilisateurs de consulter un cube de façon plus simple. Une perspective est un sous-ensemble des fonctionnalités d'un cube. Une perspective permet aux administrateurs de créer des vues d'un cube, aidant ainsi les utilisateurs à se concentrer sur les données les plus pertinentes pour eux. Une perspective contient les sous-ensembles de tous les objets d'un cube. Une perspective ne peut pas inclure les éléments qui ne sont pas définis dans le cube parent.  
   
  Un objet <xref:Microsoft.AnalysisServices.Perspective> simple est composé d’informations de base, de dimensions, de groupes de mesures, de calculs, d’indicateurs de performance clé et d’actions. Les informations de base comprennent le nom et la mesure par défaut de la perspective. Les dimensions sont un sous-ensemble des dimensions du cube. Les groupes de mesures sont un sous-ensemble des groupes de mesures du cube. Les calculs sont un sous-ensemble des calculs du cube. Les indicateurs de performance clé sont un sous-ensemble des indicateurs de performance clé du cube. Les actions sont un sous-ensemble des actions du cube.  
   
@@ -53,7 +53,7 @@ ms.lasthandoff: 11/17/2017
   
 -   les groupes de mesures ;  
   
--   mesures  
+-   Mesures  
   
 -   les indicateurs de performance clés (KPI) ;  
   

@@ -8,24 +8,22 @@ ms.service:
 ms.component: reporting-services
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 ms.assetid: 1c1e265e-52a2-4de3-96fd-ca4abae01c02
 caps.latest.revision: "19"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 5ed1fd8ec1ddd485c51eca690ca459ef4c52d641
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 4d4a2081da55117fa6fa6b6ad84ac4ec21b84ee6
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
-# <a name="plan-for-report-design-and-report-deployment--reporting-services"></a>Planifier la conception de rapports et le déploiement de rapports| Reporting Services
+# <a name="plan-for-report-design-and-report-deployment--reporting-services"></a>Planifier la conception de rapports et le déploiement de rapports | Reporting Services
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] offre plusieurs approches pour créer et déployer des rapports paginés. Découvrez comment planifier un outil de création de rapports et un environnement de serveur de rapports qui fonctionnent ensemble.
 
 Cette rubrique offre une vue d'ensemble de la prise en charge de la définition de rapport par les composants [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . Une définition de rapport est un fichier XML écrit dans le langage RDL (Report Definition Language) ou RDLC (Report Definition Language for Clients). Chaque définition de rapport est conforme à une version de schéma spécifique qui est indiquée au début du fichier.  
@@ -70,8 +68,8 @@ Cette rubrique offre une vue d'ensemble de la prise en charge de la définition 
   
 |Version de serveur de rapports|Version de schéma RDL|  
 |---------------------------|------------------------|  
-|SQL Server 2016|2016 RDL<br /><br />RDL 2010<br /><br /> RDL 2008<br /><br /> RDL 2005<br /><br /> RDL 2000
-|[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]<br /><br /> ou<br /><br /> [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]<br /><br /> ou<br /><br /> [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|RDL 2010<br /><br /> RDL 2008<br /><br /> RDL 2005<br /><br /> RDL 2000|  
+|SQL Server 2016|2016 RDL<br /><br />RDL 2010<br /><br /> RDL 2008<br /><br /> RDL 2005<br /><br /> RDL 2000
+|[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]<br /><br /> ou<br /><br /> [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]<br /><br /> ou<br /><br /> [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|RDL 2010<br /><br /> RDL 2008<br /><br /> RDL 2005<br /><br /> RDL 2000|  
 |[!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]|RDL 2008<br /><br /> RDL 2005<br /><br /> RDL 2000|  
   
  Lorsque vous téléchargez ou publiez une définition de rapport vers le serveur de rapports ou mettez à niveau un serveur de rapports qui contient des rapports, le serveur de rapports conserve la définition de rapport dans le format d'origine. **Lors de la première utilisation**, le serveur de rapports met à niveau le rapport dans la base de données du serveur de rapports dans un format binaire qui est conservé pour les vues suivantes. La définition de rapport (.rdl) proprement dite n'est pas mise à niveau.  
@@ -89,8 +87,8 @@ Cette rubrique offre une vue d'ensemble de la prise en charge de la définition 
   
 |Environnement de création|Version RDL créée|Version RDL de déploiement|Versions de déploiement sur le serveur de rapports|  
 |---------------------------|--------------------------|------------------------|--------------------------------------|  
-|Générateur de rapports SQL Server 2016|Crée RDL 2016<br /><br /> Mettre à niveau les anciennes versions RDL vers 2016 RDL|2016 RDL|SQL Server 2016|
-|Concepteur de rapports dans SQL Server 2016 Data Tools - Business Intelligence pour Microsoft Visual Studio 2015|Crée RDL 2016<br /><br /> Mettre à niveau les anciennes versions RDL vers 2016 RDL|2016 RDL|SQL Server 2016|
+|Générateur de rapports SQL Server 2016|Crée RDL 2016<br /><br /> Mettre à niveau les anciennes versions RDL vers 2016 RDL|2016 RDL|SQL Server 2016|
+|Concepteur de rapports dans SQL Server 2016 Data Tools - Business Intelligence pour Microsoft Visual Studio 2015|Crée RDL 2016<br /><br /> Mettre à niveau les anciennes versions RDL vers 2016 RDL|2016 RDL|SQL Server 2016|
 |Concepteur de rapports dans SQL Server 2014 Data Tools - Business Intelligence pour Microsoft Visual Studio 2012<br /><br /> ou<br /><br /> Concepteur de rapports dans SQL Server 2012 Data Tools - Business Intelligence pour Microsoft Visual Studio 2012<br /><br /> ou<br /><br /> Concepteur de rapports dans [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] Data Tools, inclus dans [!INCLUDE[ssSQL11](../includes/sssql11-md.md)].|Crée RDL 2010<br /><br /> Mettra à niveau les anciennes versions RDL vers RDL 2010|RDL 2010|[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]<br /><br /> [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]<br /><br /> [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
 |Concepteur de rapports dans [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] Business Intelligence Development Studio|Crée RDL 2010<br /><br /> Mettra à niveau les anciennes versions RDL vers RDL 2010|RDL 2010|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
 |Concepteur de rapports dans [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] Business Intelligence Development Studio|Crée RDL 2008<br /><br /> Mettra à niveau les anciennes versions RDL vers RDL 2008|RDL 2008|[!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]|
@@ -117,7 +115,7 @@ Cette rubrique offre une vue d'ensemble de la prise en charge de la définition 
   
 -   [Ajout et configuration de contrôles ReportViewer](http://msdn.microsoft.com/library/ms252104.aspx)  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Rapports, parties de rapports et définitions de rapports &#40;Générateur de rapports et SSRS&#41;](../reporting-services/report-design/reports-report-parts-and-report-definitions-report-builder-and-ssrs.md)   
  [Outils de Reporting Services](../reporting-services/tools/reporting-services-tools.md)   
  [RDL (Report Definition Language) &#40;SSRS&#41;](../reporting-services/reports/report-definition-language-ssrs.md)  

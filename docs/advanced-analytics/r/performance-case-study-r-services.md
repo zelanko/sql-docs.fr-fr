@@ -2,25 +2,28 @@
 title: "Performances pour R Services - résultats et ressources | Documents Microsoft"
 ms.custom: 
 ms.date: 11/09/2017
-ms.prod: sql-server-2016
 ms.reviewer: 
-ms.suite: 
-ms.technology: r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 0e902312-ad9c-480d-b82f-b871cd1052d9
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 9c3aba17a6f70f581ded64f25d171d46570667c8
-ms.sourcegitcommit: ec5f7a945b9fff390422d5c4c138ca82194c3a3b
+ms.openlocfilehash: 83c3590714660201d7411c360958f9ff4263240b
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/11/2017
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="performance-for-r-services-results-and-resources"></a>Performances pour R Services : résultats et des ressources
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Cet article est le quatrième et dernière d’une série qui décrit l’optimisation des performances pour R Services. Cet article résume les méthodes, des résultats et des conclusions de deux études de cas qui testé différentes méthodes d’optimisation.
 
@@ -41,10 +44,10 @@ Cette étude de cas par l’équipe de développement SQL Server R Services test
 
 1. Le jeu de données compagnie aérienne compose d’une seule table de lignes de 10M. Il a été téléchargé et en bloc chargées dans SQL Server.
 2. Six copies de la table ont été apportées.
-3. Diverses modifications ont été appliquées aux copies de la table, pour tester les fonctionnalités de SQL Server comme la compression de page, la compression de ligne, l’indexation, le magasin de données en colonnes, etc..
+3. Diverses modifications ont été appliquées aux copies de la table, pour tester les fonctionnalités de SQL Server comme la compression de page, la compression de ligne, l’indexation, le magasin de données en colonnes, etc.
 4. Performances a été mesuré avant et après que chaque optimisation a été appliquée.
 
-| Nom de la table| Description|
+| Nom de la table|  Description|
 |------|------|
 | *airline* | Données converties à partir du fichier xdf d’origine à l’aide de `rxDataStep`|                          |
 | *airlineWithIntCol*   | Chaîne *DayOfWeek* convertie en entier. Colonne *rowNum* également ajoutée.|
@@ -95,7 +98,7 @@ Cette section compare avant et après les résultats pour chacun des tests.
 
 Le premier test par rapport à l’utilisation de la compression et une table en colonnes pour réduire la taille des données.
 
-| Nom de la table            | Lignes     | Réservé   | Données       | index_size | Inutilisé  | % gagné (réservé) |
+| Nom de la table            | Lignes     | Réservé   | data       | index_size | Inutilisé  | % gagné (réservé) |
 |-----------------------|----------|------------|------------|------------|---------|---------------------|
 | *airlineWithIndex*    | 10 000 000 | 2 978 816 Ko | 2 972 160 Ko | 6 128 Ko    | 528 Ko  | 0                   |
 | *airlineWithPageComp* | 10 000 000 | 625 784 Ko  | 623 744 Ko  | 1 352 Ko    | 688 Ko  | 79 %                 |
@@ -135,14 +138,14 @@ Dans cette expérience, `rxLinMod` a été utilisé avec la table *airlineWithIn
 
 | Nom du test | Exécutez \# | Temps écoulé | Temps moyen |
 |-----------|--------|--------------|--------------|
-| IntCol    |  1      | 3,57 secondes |              |
+| IntCol    | 1      | 3,57 secondes |              |
 |           | 2      | 3,45 secondes |              |
 |           | 3      | 3,45 secondes |              |
 |           | 4      | 3,55 secondes |              |
 |           | 5      | 3,55 secondes |              |
 |           | 6      | 3,45 secondes |              |
 |           |        |              | 3,475        |
-|           |  1      | 3,45 secondes |              |
+|           | 1      | 3,45 secondes |              |
 |           | 2      | 3,53 secondes |              |
 |           | 3      | 3,63 secondes |              |
 |           | 4      | 3,49 secondes |              |
@@ -154,14 +157,14 @@ Option de gestion de l’alimentation **Équilibré** :
 
 | Nom du test | Exécutez \# | Temps écoulé | Temps moyen |
 |-----------|--------|--------------|--------------|
-| IntCol    |  1      | 3,89 secondes |              |
+| IntCol    | 1      | 3,89 secondes |              |
 |           | 2      | 4,15 secondes |              |
 |           | 3      | 3,77 secondes |              |
 |           | 4      | 5 secondes    |              |
 |           | 5      | 3,92 secondes |              |
 |           | 6      | 3,8 secondes  |              |
 |           |        |              | 3,91         |
-|           |  1      | 3,82 secondes |              |
+|           | 1      | 3,82 secondes |              |
 |           | 2      | 3,84 secondes |              |
 |           | 3      | 3,86 secondes |              |
 |           | 4      | 4,07 secondes |              |
@@ -185,7 +188,7 @@ Ce test évaluer l’impact de la modification du code R pour éviter un problè
 
 | Nom de la table          | Nom du test   | Temps moyen |
 |---------------------|-------------|--------------|
-| *Billet d’avion*           | *FactorCol* | 10,72        |
+| *Airline*           | *FactorCol* | 10,72        |
 | *airlineWithIntCol* | *IntCol*    | 3,4475       |
 
 **Conclusions**
@@ -240,7 +243,7 @@ Dans la table, les facteurs *DayOfWeek* est stocké sous forme de chaîne.
 |---------------|----------------|----------|--------------|---------------------------------|
 | CubeArgEffect | `cube = F`     | 1        | 91,0725      | 9,959204                        |
 |               |                | 4        | 44,09        | 9,959204                        |
-|               | `cube = T`     |  1        | 21,1125      | 9,959204                        |
+|               | `cube = T`     | 1        | 21,1125      | 9,959204                        |
 |               |                | 4        | 8,08         | 9,959204                        |
 
 **Conclusions**
@@ -253,7 +256,7 @@ Dans cette expérience, les `rxDTree` algorithme a été utilisé pour créer un
 
 | Nom du test       | maxDepth | Temps moyen |
 |-----------------|----------|--------------|
-| TreeDepthEffect |  1        | 10,1975      |
+| TreeDepthEffect | 1        | 10,1975      |
 |                 | 2        | 13,2575      |
 |                 | 4        | 19,27        |
 |                 | 8        | 45,5775      |

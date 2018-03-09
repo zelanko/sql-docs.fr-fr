@@ -1,5 +1,5 @@
 ---
-title: "Effectuer un chargement incrémentiel de plusieurs Tables | Documents Microsoft"
+title: "Exécuter un chargement incrémentiel de plusieurs tables | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -15,19 +15,18 @@ ms.topic: article
 helpviewer_keywords:
 - incremental load [Integration Services],multiple tables
 ms.assetid: 39252dd5-09c3-46f9-a17b-15208cfd336d
-caps.latest.revision: 26
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
-ms.openlocfilehash: 293e4a68eba8fa8cbc5a01773c948d5b56de1a91
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 2ab0d346d48abf673dc783f0ff18ae781190fcae
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="perform-an-incremental-load-of-multiple-tables"></a>Exécuter un chargement incrémentiel de plusieurs tables
+# <a name="perform-an-incremental-load-of-multiple-tables"></a>Exécuter un chargement incrémentiel de plusieurs table
   Dans la rubrique [Amélioration des chargements incrémentiels avec la capture de données modifiées](../../integration-services/change-data-capture/change-data-capture-ssis.md), le diagramme illustre un package de base qui effectue un chargement incrémentiel sur une seule table. Toutefois, il est plus fréquent de devoir effectuer un chargement incrémentiel de plusieurs tables.  
   
  Dans le cadre d'un chargement incrémentiel de plusieurs tables, certaines étapes doivent être effectuées une seule fois pour toutes les tables, alors que d'autres doivent être répétées pour chaque table source. Plusieurs options s’offrent à vous pour implémenter ces étapes dans [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]:  
@@ -111,4 +110,3 @@ ms.lasthandoff: 08/03/2017
          Pour obtenir un exemple montrant comment utiliser cette transformation pour appliquer les mises à jour et les suppressions, consultez [Appliquer des modifications à la destination](../../integration-services/change-data-capture/apply-the-changes-to-the-destination.md).  
   
   
-

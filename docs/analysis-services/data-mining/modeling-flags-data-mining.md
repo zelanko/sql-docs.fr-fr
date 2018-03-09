@@ -2,15 +2,13 @@
 title: "Indicateurs de modélisation (exploration de données) | Documents Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
 ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -26,19 +24,20 @@ helpviewer_keywords:
 - MODEL_EXISTENCE_ONLY column
 - coding [Data Mining]
 ms.assetid: 8826d5ce-9ba8-4490-981b-39690ace40a4
-caps.latest.revision: "48"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 90ce08e6cf57aa2ca49aea8834b96a69aa69362e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 0b7139d1120e9b244ae4bc20e32951c52cc7f37d
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="modeling-flags-data-mining"></a>Indicateurs de modélisation (Exploration de données)
-  Vous pouvez utiliser des indicateurs de modélisation dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] pour fournir à un algorithme d’exploration de données des informations supplémentaires portant sur les données définies dans une table de cas. Ces informations permettent à l'algorithme de construire un modèle d'exploration de données plus précis.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Vous pouvez utiliser des indicateurs de modélisation dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] pour fournir à un algorithme d’exploration de données des informations supplémentaires portant sur les données définies dans une table de cas. Ces informations permettent à l'algorithme de construire un modèle d'exploration de données plus précis.  
   
  Certains indicateurs de modélisation sont définis au niveau de la structure d'exploration de données, tandis que d'autres sont définis au niveau de la colonne du modèle d'exploration de données. Par exemple, l’indicateur de modélisation **NOT NULL** est utilisé avec les colonnes de structure d’exploration de données. Vous pouvez définir des indicateurs de modélisation supplémentaires sur les colonnes du modèle d'exploration de données, en fonction de l'algorithme que vous utilisez pour créer le modèle.  
   
@@ -61,7 +60,7 @@ ms.lasthandoff: 11/17/2017
 > [!NOTE]  
 >  L'état Missing est un état spécial utilisé par l'algorithme qui diffère de la valeur de texte « Manquant » dans une colonne. Pour plus d’informations, consultez [Valeurs manquantes &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/missing-values-analysis-services-data-mining.md).  
   
- **REGRESSOR**  
+ **RÉGRESSEUR**  
  Indique que la colonne est candidate pour être utilisée comme régresseur lors du traitement. Cet indicateur est défini sur une colonne de modèle d'exploration de données et ne peut être appliqué qu'à des colonnes dont le type de données numériques continues. Pour plus d’informations sur l’utilisation de cet indicateur, consultez la section [Utilisations de l’indicateur de modélisation REGRESSOR](#bkmk_UseRegressors)plus loin dans cette rubrique.  
   
 ## <a name="viewing-and-changing-modeling-flags"></a>Affichage et modification d'indicateurs de modélisation  
@@ -112,13 +111,13 @@ WHERE MODEL_NAME = '<model name>'
   
 |Tâche|Rubrique|  
 |----------|-----------|  
-|Modifier les indicateurs de modélisation à l'aide du Concepteur d'exploration de données|[Afficher ou modifier les indicateurs de modélisation &#40;Exploration de données&#41;](../../analysis-services/data-mining/view-or-change-modeling-flags-data-mining.md)|  
+|Modifier les indicateurs de modélisation à l'aide du Concepteur d'exploration de données|[Afficher ou modifier la modélisation des indicateurs &#40; exploration de données &#41;](../../analysis-services/data-mining/view-or-change-modeling-flags-data-mining.md)|  
 |Fournir une indication à l'algorithme pour recommander des régresseurs potentiels|[Spécifier une colonne à utiliser comme régresseur dans un modèle](../../analysis-services/data-mining/specify-a-column-to-use-as-regressor-in-a-model.md)|  
-|Voir les indicateurs de modélisation pris en charge par des algorithmes spécifiques (dans la section Indicateurs de modélisation de la rubrique de référence correspondant à chaque algorithme)|[Algorithmes d’exploration de données &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)|  
+|Voir les indicateurs de modélisation pris en charge par des algorithmes spécifiques (dans la section Indicateurs de modélisation de la rubrique de référence correspondant à chaque algorithme)|[Algorithmes d’exploration de données &#40; Analysis Services - Exploration de données &#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)|  
 |En savoir plus sur les colonnes de structure d'exploration de données et les propriétés que vous pouvez définir dessus|[Colonnes de structure d'exploration de données](../../analysis-services/data-mining/mining-structure-columns.md)|  
-|En savoir plus sur les colonnes du modèle d'exploration de données et les indicateurs de modélisation qui peuvent être appliqués au niveau du modèle|[Colonnes d'un modèle d'exploration de données](../../analysis-services/data-mining/mining-model-columns.md)|  
-|Voir la syntaxe à utiliser pour travailler avec des indicateurs de modélisation dans des instructions DMX|[Indicateurs de modélisation &#40;DMX&#41;](../../dmx/modeling-flags-dmx.md)|  
-|Comprendre les valeurs manquantes et la façon de les utiliser|[Valeurs manquantes &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/missing-values-analysis-services-data-mining.md)|  
+|En savoir plus sur les colonnes du modèle d'exploration de données et les indicateurs de modélisation qui peuvent être appliqués au niveau du modèle|[Colonnes du modèle d’exploration de données](../../analysis-services/data-mining/mining-model-columns.md)|  
+|Voir la syntaxe à utiliser pour travailler avec des indicateurs de modélisation dans des instructions DMX|[Indicateurs de modélisation &#40;DMX&#41;](../../dmx/modeling-flags-dmx.md)|  
+|Comprendre les valeurs manquantes et la façon de les utiliser|[Les valeurs manquantes &#40; Analysis Services - Exploration de données &#41;](../../analysis-services/data-mining/missing-values-analysis-services-data-mining.md)|  
 |En savoir plus sur la gestion des modèles et des structures, et sur la définition de propriétés d'utilisation|[Déplacement d'objets d'exploration de données](../../analysis-services/data-mining/moving-data-mining-objects.md)|  
   
   

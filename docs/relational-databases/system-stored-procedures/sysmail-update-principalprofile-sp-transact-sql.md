@@ -1,5 +1,5 @@
 ---
-title: sysmail_update_principalprofile_sp (Transact-SQL) | Documents Microsoft
+title: sysmail_update_principalprofile_sp (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sysmail_update_principalprofile_sp
 - sysmail_update_principalprofile_sp_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sysmail_update_principalprofile_sp
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sysmail_update_principalprofile_sp
 ms.assetid: 9fe96e9a-4758-4e4a-baee-3e1217c4426c
-caps.latest.revision: "46"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b988aa656b4285218b51ce1bcd091f5381ffc411
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 7539eb785bc0ae03a68b8a734b89012a29590d3d
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysmailupdateprincipalprofilesp-transact-sql"></a>sysmail_update_principalprofile_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,10 +48,10 @@ sysmail_update_principalprofile_sp { @principal_id = principal_id | @principal_n
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@principal_id**  =] *principal_id*  
+ [ **@principal_id** = ] *principal_id*  
  L’ID de l’utilisateur de base de données ou d’un rôle dans le **msdb** base de données pour l’association à modifier. *principal_id* est **int**, avec NULL comme valeur par défaut. Soit *principal_id* ou *principal_name* doit être spécifié.  
   
- [  **@principal_name**  =] **'***principal_name***'**  
+ [ **@principal_name** = ] **'***principal_name***'**  
  Le nom de l’utilisateur de base de données ou d’un rôle dans le **msdb** base de données pour l’association à mettre à jour. *principal_name* est **sysname**, avec NULL comme valeur par défaut. Soit *principal_id* ou *principal_name* peut être spécifié.  
   
  [  **@profile_id**  =] *profile_id*  
@@ -57,14 +60,14 @@ sysmail_update_principalprofile_sp { @principal_id = principal_id | @principal_n
  [  **@profile_name**  =] **'***profile_name***'**  
  Nom du profil pour l'association à modifier. *profile_name* est **sysname**, avec NULL comme valeur par défaut. Soit *profile_id* ou *profile_name* doit être spécifié.  
   
- [  **@is_default**  =] **'***is_default***'**  
+ [ **@is_default** = ] **'***is_default***'**  
  Indique si ce profil représente le profil par défaut pour l'utilisateur de la base de données. Un utilisateur de base de données ne peut avoir plus d'un seul profil par défaut. *is_default* est **bits**, sans valeur par défaut.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  **0** (réussite) ou **1** (échec)  
   
 ## <a name="result-sets"></a>Jeux de résultats  
- Aucune  
+ Aucun  
   
 ## <a name="remarks"></a>Notes  
  Cette procédure stockée est modifiée si le profil spécifié est ou non le profil par défaut pour l'utilisateur de la base de données. Un utilisateur de base de données peut avoir uniquement un profil privé par défaut.  
@@ -75,7 +78,7 @@ sysmail_update_principalprofile_sp { @principal_id = principal_id | @principal_n
   
  La procédure stockée **sysmail_update_principalprofile_sp** est dans le **msdb** de base de données et est détenue par le **dbo** schéma. La procédure doit être exécutée avec un nom en trois parties si la base de données actuelle n’est pas **msdb**.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Autorisations d’exécution de cette procédure reviennent par défaut aux membres de la **sysadmin** rôle serveur fixe.  
   
 ## <a name="examples"></a>Exemples  

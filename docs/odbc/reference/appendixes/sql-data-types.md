@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 1b5ebc2779d005a31f9b93a1cf6ca8fb6e35b346
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: d63ef11103b88f70233f269914c54425402b1def
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sql-data-types"></a>Types de données SQL
 Chaque SGBD définit ses propres types SQL. Chaque pilote ODBC expose uniquement ces types de données SQL qui définit des SGBD associé. Plus d’informations sur la façon dont un pilote mappe les types DBMS SQL pour les identificateurs de type défini par ODBC de SQL et la façon dont un pilote mappe les types de DBMS SQL à ses propres identificateurs de type spécifiques au pilote SQL est retourné via un appel à **SQLGetTypeInfo**. Un pilote retourne également les types de données SQL lors de la description des types de données des colonnes et des paramètres via des appels de **SQLColAttribute**, **SQLColumns**, **SQLDescribeCol**, **SQLDescribeParam**, **SQLProcedureColumns**, et **SQLSpecialColumns**.  
@@ -52,7 +52,7 @@ Chaque SGBD définit ses propres types SQL. Chaque pilote ODBC expose uniquement
 |SQL_NUMERIC|NUMÉRIQUE (*p*,*s*)|Signé, valeur numérique exacte avec une précision *p* et l’échelle *s* (1 < = *p* < = 15 ; *s* <= *p*). [ 4]|  
 |SQL_SMALLINT|SMALLINT|Valeur numérique exacte avec une précision de 5 et une échelle 0 (signée : – 32 768 et < =  *n*  < = 32 767, non signé : 0 < =  *n*  < = 65 535) [3].|  
 _INTEGER|INTEGER|Valeur numérique exacte avec une précision de 10 et une échelle 0 (signée : – 2 [31] < =  *n*  < = 2 [31] – 1, non signé : 0 < =  *n*  < = 2 [32] – 1) [3].|  
-|SQL_REAL|REAL|Signé, valeur numérique approximative avec une précision binaire de 24 (zéro ou valeur absolue 10 [–38] à 10[38]).|  
+|SQL_REAL|real|Signé, valeur numérique approximative avec une précision binaire de 24 (zéro ou valeur absolue 10 [–38] à 10[38]).|  
 |SQL_FLOAT|FLOAT (*p*)|Signé, valeur numérique approximative avec une précision binaire d’au moins *p*. (La précision maximale est définie par le pilote). [5]|  
 |SQL_DOUBLE|DOUBLE PRECISION|Signé, valeur numérique approximative avec une précision binaire de 53 (zéro ou valeur absolue 10 [–308] à 10[308]).|  
 |SQL_BIT|BIT|Données binaires de transmission unique. [8]|  

@@ -17,18 +17,18 @@ helpviewer_keywords:
 - sparse columns
 ms.assetid: ea7ddb87-f50b-46b6-9f5a-acab222a2ede
 caps.latest.revision: "47"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: f387e9c2dae2da689476a4b38290569c8b5c6cc9
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 7e5f2e347053a5814bc1e00365f97c2d305cc064
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="use-sparse-columns"></a>Utiliser des colonnes éparses
-[!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Les colonnes éparses sont des colonnes ordinaires qui ont un stockage optimisé pour les valeurs NULL. Les colonnes éparses réduisent l'espace nécessaire pour les valeurs NULL, en échange d'une augmentation du coût d'extraction des valeurs autres que NULL. Envisagez d'utiliser des colonnes éparses lorsque l'espace économisé est d'au moins 20 à 40 pour cent. Les colonnes éparses et les jeux de colonnes sont définis à l'aide des instructions [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md) ou [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) .  
   
@@ -80,9 +80,9 @@ ms.lasthandoff: 11/17/2017
 |Type de données|Octets non alloués|Octets alloués|Pourcentage NULL|  
 |---------------|---------------------|------------------|---------------------|  
 |**bit**|0.125|5|98%|  
-|**tinyint**|1|5|86%|  
+|**tinyint**| 1|5|86%|  
 |**smallint**|2|6|76%|  
-|**int**|4|8|64%|  
+|**Int**|4|8|64%|  
 |**bigint**|8|12|52%|  
 |**real**|4|8|64%|  
 |**float**|8|12|52%|  
@@ -123,7 +123,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="in-memory-overhead-required-for-updates-to-sparse-columns"></a>Charge en mémoire requise pour les mises à jour de colonnes éparses  
  Lorsque vous concevez des tables comportant des colonnes éparses, gardez à l'esprit qu'une charge supplémentaire de 2 octets est requise pour chaque colonne éparse non Null dans la table lorsqu'une ligne est mise à jour. Conséquemment à cette exigence de mémoire supplémentaire, les mises à jour peuvent échouer de façon inattendue avec l'erreur 576 lorsque la taille totale de la ligne, y compris sa charge de mémoire, dépasse 8019 et qu'aucune colonne ne peut être sortie de la ligne.  
   
- Prenons l'exemple d'une table contenant 600 colonnes éparses de type bigint. S'il y a 571 colonnes non Null, alors la taille totale sur le disque est de 571 * 12 = 6852 octets. Après l'ajout de la charge de ligne supplémentaire et de l'en-tête de colonne éparse, ce chiffre augmente pour atteindre 6895 octets environ. La page dispose toujours d'environ 1124 octets disponibles sur le disque. Cela peut donner l'impression que des colonnes supplémentaires peuvent être mises à jour sans problème. Cependant, pendant la mise à jour, une charge supplémentaire en mémoire équivalente à 2\*le nombre de colonnes éparses non Null est requise. Dans cet exemple, en incluant la charge supplémentaire (2 \* 571 = 1142 octets) la taille de la ligne sur le disque atteint environ 8037 octets. Cette valeur dépasse la taille de ligne autorisée maximale de 8019 octets. Étant donné que toutes les colonnes ont un type de données de longueur fixe, elles ne peuvent pas être sorties de la ligne. En conséquence, la mise à jour échoue avec l'erreur 576.  
+ Prenons l'exemple d'une table contenant 600 colonnes éparses de type bigint. S'il y a 571 colonnes non Null, alors la taille totale sur le disque est de 571 * 12 = 6852 octets. Après l'ajout de la charge de ligne supplémentaire et de l'en-tête de colonne éparse, ce chiffre augmente pour atteindre 6895 octets environ. La page dispose toujours d'environ 1124 octets disponibles sur le disque. Cela peut donner l'impression que des colonnes supplémentaires peuvent être mises à jour sans problème. Cependant, pendant la mise à jour, une charge supplémentaire en mémoire équivalente à 2\*le nombre de colonnes éparses non Null est requise. Dans cet exemple, en incluant la charge supplémentaire (2 \* 571 = 1142 octets) la taille de la ligne sur le disque atteint environ 8037 octets. Cette valeur dépasse la taille de ligne autorisée maximale de 8019 octets. Étant donné que toutes les colonnes ont un type de données de longueur fixe, elles ne peuvent pas être sorties de la ligne. En conséquence, la mise à jour échoue avec l'erreur 576.  
   
 ## <a name="restrictions-for-using-sparse-columns"></a>Restrictions relatives à l'utilisation des colonnes éparses  
  Les colonnes éparses peuvent contenir n'importe quel type de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ; en outre, elles se comportent comme n'importe quelle autre colonne avec les restrictions suivantes :  
@@ -241,7 +241,7 @@ WHERE ProductionSpecification IS NOT NULL ;
   
  `1      Tire Spec 1  AXZZ217                  27`  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Utiliser des jeux de colonnes](../../relational-databases/tables/use-column-sets.md)   
  [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   

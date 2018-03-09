@@ -1,5 +1,5 @@
 ---
-title: sp_help_jobhistory (Transact-SQL) | Documents Microsoft
+title: sp_help_jobhistory (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_help_jobhistory_TSQL
 - sp_help_jobhistory
-dev_langs: TSQL
-helpviewer_keywords: sp_help_jobhistory
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_help_jobhistory
 ms.assetid: a944d44e-411b-4735-8ce4-73888d4262d7
-caps.latest.revision: "33"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 1c927767e00429c9ccdbe3143ade99cbe363950d
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: de1836ee52354e96341386db5dfd33297f2d9be6
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sphelpjobhistory-transact-sql"></a>sp_help_jobhistory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,37 +60,37 @@ sp_help_jobhistory [ [ @job_id = ] job_id ]
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@job_id=** ] *job_id*  
+ [ **@job_id=** ] *job_id*  
  Numéro d’identification du travail. *job_id* est **uniqueidentifier**, avec NULL comme valeur par défaut.  
   
- [  **@job_name=** ] **'***job_name***'**  
+ [ **@job_name=** ] **'***job_name***'**  
  Nom du travail. *job_name* est **sysname**, avec NULL comme valeur par défaut.  
   
- [  **@step_id=** ] *id_de_l*  
+ [ **@step_id=** ] *step_id*  
  Le numéro d’identification de l’étape. *l’argument id_étape* est **int**, avec NULL comme valeur par défaut.  
   
- [  **@sql_message_id=** ] *id_du_message_sql*  
+ [ **@sql_message_id=** ] *sql_message_id*  
  Numéro d'identification du message d'erreur retourné par Microsoft SQL Server lors de l'exécution du travail. *id_du_message_sql* est **int**, avec NULL comme valeur par défaut.  
   
- [  **@sql_severity=** ] *gravité_sql*  
+ [ **@sql_severity=** ] *sql_severity*  
  Niveau de gravité du message d'erreur renvoyé par SQL Server lors de l'exécution du travail. *gravité_sql* est **int**, avec NULL comme valeur par défaut.  
   
- [  **@start_run_date=** ] *date_de_début_d*  
+ [ **@start_run_date=** ] *start_run_date*  
  Date de début de l'exécution du travail. *date_de_début_d*est **int**, avec NULL comme valeur par défaut. *date_de_début_d* doit respecter le format AAAAMMJJ, où AAAA représente une année à quatre chiffres, MM est un nom de deux chiffres du mois et DD est un nom de jour.  
   
- [  **@end_run_date=** ] *ce paramètre*  
+ [ **@end_run_date=** ] *end_run_date*  
  Date de fin de l'exécution du travail. *Ce paramètre* est **int**, avec NULL comme valeur par défaut. *Ce paramètre*doit respecter le format AAAAMMJJ, où AAAA représente une année à quatre chiffres, MM est un nom de deux chiffres du mois et DD est un nom de jour.  
   
- [  **@start_run_time=** ] *heure_de_début_d*  
+ [ **@start_run_time=** ] *start_run_time*  
  Heure du début d'exécution du travail. *heure_de_début_d* est **int**, avec NULL comme valeur par défaut. *heure_de_début_d*doit respecter le format HHMMSS, où HH est une heure de la journée, MM est une minute de deux caractères de la journée et SS est une seconde de deux caractères de la journée.  
   
- [  **@end_run_time=** ] *heure_de_fin_d*  
+ [ **@end_run_time=** ] *end_run_time*  
  Heure de fin d'exécution du travail. *heure_de_fin_d* est **int**, avec NULL comme valeur par défaut. *heure_de_fin_d*doit respecter le format HHMMSS, où HH est une heure de la journée, MM est une minute de deux caractères de la journée et SS est une seconde de deux caractères de la journée.  
   
- [  **@minimum_run_duration=** ] *durée_d*  
+ [ **@minimum_run_duration=** ] *minimum_run_duration*  
  Durée minimale pour l'exécution du travail. *durée_d* est **int**, avec NULL comme valeur par défaut. *durée_d*doit respecter le format HHMMSS, où HH est une heure de la journée, MM est une minute de deux caractères de la journée et SS est une seconde de deux caractères de la journée.  
   
- [  **@run_status=** ] *état_de_l*  
+ [ **@run_status=** ] *run_status*  
  État de l'exécution du travail. *état_de_l* est **int**, avec NULL comme valeur par défaut et peut prendre l’une des valeurs suivantes.  
   
 |Valeur|Description|  
@@ -99,13 +102,13 @@ sp_help_jobhistory [ [ @job_id = ] job_id ]
 |**4**|Messages en cours|  
 |**5**|Unknown|  
   
- [  **@minimum_retries=** ] *minimum_de_reprises*  
+ [ **@minimum_retries=** ] *minimum_retries*  
  Nombre minimal de tentatives d'exécution d'un travail. *minimum_de_reprises* est **int**, avec NULL comme valeur par défaut.  
   
- [  **@oldest_first=** ] *le_plus_ancien_en_premier*  
+ [ **@oldest_first=** ] *oldest_first*  
  Indique s'il faut présenter en premier le résultat des travaux les plus anciens. *le_plus_ancien_en_premier* est **int**, avec une valeur par défaut **0**, laquelle présente tout d’abord les travaux les plus récents. **1** présente tout d’abord les travaux les plus anciens.  
   
- [  **@server=** ] **'***server***'**  
+ [ **@server=** ] **'***server***'**  
  Le nom du serveur sur lequel le travail a été effectué. *serveur* est **nvarchar (30)**, avec NULL comme valeur par défaut.  
   
  [  **@mode=** ] **'***mode***'**  
@@ -122,25 +125,25 @@ sp_help_jobhistory [ [ @job_id = ] job_id ]
 |**instance_id**|**int**|Numéro d'identification de l'entrée d'historique.|  
 |**job_id**|**uniqueidentifier**|Numéro d’identification du travail.|  
 |**job_name**|**sysname**|Nom du travail.|  
-|**argument id_étape**|**int**|Numéro d’identification de l’étape (seront **0** pour un historique des travaux).|  
-|**nom_de_l**|**sysname**|Nom de l'étape (NULL pour un historique des travaux).|  
-|**id_du_message_sql**|**int**|Pour une étape [!INCLUDE[tsql](../../includes/tsql-md.md)], représente le numéro d'erreur [!INCLUDE[tsql](../../includes/tsql-md.md)] le plus récent affiché pendant l'exécution de la commande.|  
-|**gravité_sql**|**int**|Pour une étape [!INCLUDE[tsql](../../includes/tsql-md.md)], représente le degré de gravité [!INCLUDE[tsql](../../includes/tsql-md.md)] le plus élevé obtenu pendant l'exécution de la commande.|  
-|**Message**|**nvarchar (1024)**|Message d'historique d'étape ou de travail.|  
-|**état_de_l**|**int**|Résultat du travail ou de l'étape.|  
+|**step_id**|**int**|Numéro d’identification de l’étape (seront **0** pour un historique des travaux).|  
+|**step_name**|**sysname**|Nom de l'étape (NULL pour un historique des travaux).|  
+|**sql_message_id**|**int**|Pour une étape [!INCLUDE[tsql](../../includes/tsql-md.md)], représente le numéro d'erreur [!INCLUDE[tsql](../../includes/tsql-md.md)] le plus récent affiché pendant l'exécution de la commande.|  
+|**sql_severity**|**int**|Pour une étape [!INCLUDE[tsql](../../includes/tsql-md.md)], représente le degré de gravité [!INCLUDE[tsql](../../includes/tsql-md.md)] le plus élevé obtenu pendant l'exécution de la commande.|  
+|**message**|**nvarchar(1024)**|Message d'historique d'étape ou de travail.|  
+|**run_status**|**int**|Résultat du travail ou de l'étape.|  
 |**run_date**|**int**|Date de début d'exécution du travail ou de l'étape.|  
 |**run_time**|**int**|Heure de début d'exécution du travail ou de l'étape.|  
 |**run_duration**|**int**|Durée, au format HHMMSS, de l'exécution du travail ou de l'étape.|  
-|**operator_emailed**|**nvarchar (20)**|Opérateur qui a reçu un courrier électronique concernant ce travail (NULL pour un historique d'étape).|  
-|**operator_netsent**|**nvarchar (20)**|Opérateur qui a reçu un message réseau concernant ce travail (NULL pour un historique d'étape).|  
-|**operator_paged**|**nvarchar (20)**|Opérateur qui a reçu un message par radiomessagerie concernant ce travail (NULL pour un historique d'étape).|  
+|**operator_emailed**|**nvarchar(20)**|Opérateur qui a reçu un courrier électronique concernant ce travail (NULL pour un historique d'étape).|  
+|**operator_netsent**|**nvarchar(20)**|Opérateur qui a reçu un message réseau concernant ce travail (NULL pour un historique d'étape).|  
+|**operator_paged**|**nvarchar(20)**|Opérateur qui a reçu un message par radiomessagerie concernant ce travail (NULL pour un historique d'étape).|  
 |**retries_attempted**|**int**|Nombre de reprises de l'étape (0 pour un historique d'étape).|  
-|**server**|**nvarchar (30)**|Serveur sur lequel est exécutée l'étape ou le travail. Est toujours (**local**).|  
+|**server**|**nvarchar(30)**|Serveur sur lequel est exécutée l'étape ou le travail. Est toujours (**local**).|  
   
 ## <a name="remarks"></a>Notes  
  **sp_help_jobhistory** renvoie un rapport contenant l’historique des travaux planifiés spécifiés. Si aucun paramètre n'est précisé, le rapport contient l'historique de tous les travaux planifiés.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Par défaut, les membres du rôle serveur fixe **sysadmin** peuvent exécuter cette procédure stockée. Les autres utilisateurs doivent disposer de l'un des rôles de base de données fixes suivants de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent dans la base de données **msdb** :  
   
 -   **SQLAgentUserRole**  
@@ -149,7 +152,7 @@ sp_help_jobhistory [ [ @job_id = ] job_id ]
   
 -   **SQLAgentOperatorRole**  
   
- Pour en savoir plus sur les autorisations de ces rôles, consultez [Rôles de base de données fixes de SQL Server Agent](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79).  
+ Pour en savoir plus sur les autorisations de ces rôles, consultez [Rôles de base de données fixes de l'Agent SQL Server](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79).  
   
  Membres de la **SQLAgentUserRole** rôle de base de données peut uniquement afficher l’historique des travaux dont ils sont propriétaires.  
   

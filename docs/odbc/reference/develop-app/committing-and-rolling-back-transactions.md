@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 5ddf51903e3c6f8f58be1ccf0fcf5f037e4adb8c
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 534c6181a1634eb4963bc4f448939f335d821e5f
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="committing-and-rolling-back-transactions"></a>Validation et annulation de Transactions
 Pour valider ou restaurer une transaction en mode de validation manuelle, une application appelle **SQLEndTran**. Pilotes pour les SGBD qui prennent en charge les transactions généralement implémentent cette fonction en exécutant un **valider** ou **restauration** instruction. Le Gestionnaire de pilotes n’appelle pas **SQLEndTran** lorsque la connexion est en mode de validation automatique ; elle retourne simplement SQL_SUCCESS, même si l’application tente de restaurer la transaction. Étant donné que les pilotes pour les SGBD qui ne prennent pas en charge les transactions sont toujours en mode de validation automatique, ils peuvent implémenter **SQLEndTran** retourne SQL_SUCCESS sans rien faire ou l’implémente pas du tout.  

@@ -2,34 +2,33 @@
 title: "Créer une requête de prédiction à l’aide du Générateur de requêtes de prédiction | Documents Microsoft"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
 ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - prediction queries [Analysis Services]
 - Mining Model Prediction [Analysis Services], prediction queries
 ms.assetid: e02836e5-dd8c-4c97-a078-840ae79d3660
-caps.latest.revision: "30"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: e788f53ac41de8cdecdfbc88f61afacc0bfbad16
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: af9277de8848136f2123b7acf476dbee80a92ce1
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="create-a-prediction-query-using-the-prediction-query-builder"></a>Créer une requête de prédiction à l'aide du Générateur de requêtes de prédiction
-  Vous pouvez créer des requêtes de prédiction soit quand vous générez une solution d’exploration de données dans BI Development Studio, soit en cliquant avec le bouton droit sur un modèle d’exploration de données existant dans SQL Server Management Studio, puis en choisissant l’option **Générer une requête de prédiction**.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Vous pouvez créer des requêtes de prédiction soit quand vous générez une solution d’exploration de données dans BI Development Studio, soit en cliquant avec le bouton droit sur un modèle d’exploration de données existant dans SQL Server Management Studio, puis en choisissant l’option **Générer une requête de prédiction**.  
   
  Le **Générateur de requêtes de prédiction** dispose des trois modes de création suivants, que vous pouvez utiliser tour à tour en cliquant sur les icônes dans l’angle supérieur gauche.  
   
@@ -99,7 +98,7 @@ ms.lasthandoff: 11/17/2017
 8.  Exécutez la requête en cliquant sur le premier bouton de la barre d’outils de l’onglet **Prévision de modèle d’exploration de données** et en sélectionnant **Résultat**.  
   
 ## <a name="see-also"></a>Voir aussi  
- [créer une requête singleton dans le Concepteur d'exploration de données](../../analysis-services/data-mining/create-a-singleton-query-in-the-data-mining-designer.md)   
- [Requêtes d'exploration de données](../../analysis-services/data-mining/data-mining-queries.md)  
+ [Créer une requête Singleton dans le Concepteur d’exploration de données](../../analysis-services/data-mining/create-a-singleton-query-in-the-data-mining-designer.md)   
+ [Requêtes d’exploration de données](../../analysis-services/data-mining/data-mining-queries.md)  
   
   

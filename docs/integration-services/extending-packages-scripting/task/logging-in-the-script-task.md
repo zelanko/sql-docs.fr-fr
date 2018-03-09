@@ -1,5 +1,5 @@
 ---
-title: "Journalisation dans la tâche de Script | Documents Microsoft"
+title: "Journalisation dans la tâche de script | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -26,25 +26,24 @@ helpviewer_keywords:
 - Script task [Integration Services], logs
 - packages [Integration Services], logs
 ms.assetid: 2e11fc15-df18-4309-bd2d-fc58aa4b9b7a
-caps.latest.revision: 57
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 98859dafe0b023954f10239fe11e8b76f36ab28b
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: e706290986acb7c7886e2f14e08c626f58448480
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="logging-in-the-script-task"></a>Journalisation dans la tâche de script
-  L’utilisation de la journalisation dans [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] permet de packages que vous enregistrez des informations détaillées sur des problèmes, les résultats et la progression de l’exécution en enregistrant des événements prédéfinis ou des messages définis par l’utilisateur pour une analyse ultérieure. La tâche de Script peut utiliser le <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Log%2A> méthode de la **Dts** objet pour enregistrer les données définies par l’utilisateur. Si la journalisation est activée et le **ScriptTaskLogEntry** événement est sélectionné pour la journalisation le **détails** onglet de la **configurer les journaux SSIS** boîte de dialogue, un seul appel à la <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Log%2A> méthode stocke les informations sur les événements de tous les modules fournisseurs d’informations configurés pour la tâche.  
+  L’utilisation de la journalisation dans les packages [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] vous permet d’enregistrer des informations détaillées sur l’avancement, les résultats et les problèmes d’exécution en enregistrant des événements prédéfinis ou des messages définis par l’utilisateur en vue d’une analyse ultérieure. La tâche de script peut utiliser la méthode <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Log%2A> de l’objet **Dts** pour enregistrer des données définies par l’utilisateur. Si la journalisation est activée et que l’événement **ScriptTaskLogEntry** est sélectionné pour la journalisation sous l’onglet **Détails** de la boîte de dialogue **Configurer les journaux SSIS**, un seul appel à la méthode <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Log%2A> stocke les informations sur l’événement dans tous les modules fournisseurs d’informations configurés pour la tâche.  
   
 > [!NOTE]  
->  Bien qu'il soit possible d'exécuter la journalisation directement à partir de la tâche de script, il peut être préférable d'implémenter des événements plutôt que la journalisation. Lors de l’utilisation des événements, non seulement vous pouvez activer la journalisation des messages d’événement, mais vous pouvez également répondre à l’événement par défaut ou les gestionnaires d’événements définis par l’utilisateur.  
+>  Bien qu'il soit possible d'exécuter la journalisation directement à partir de la tâche de script, il peut être préférable d'implémenter des événements plutôt que la journalisation. L’utilisation d’événements vous permet non seulement d’activer la journalisation des messages d’événements, mais également de répondre à un événement à l’aide de gestionnaires d’événements par défaut ou définis par l’utilisateur.  
   
- Pour plus d’informations sur la journalisation, consultez [Integration Services &#40; SSIS &#41; Journalisation](../../../integration-services/performance/integration-services-ssis-logging.md).  
+ Pour plus d’informations sur la journalisation, consultez [Journalisation Integration Services &#40;SSIS&#41;](../../../integration-services/performance/integration-services-ssis-logging.md).  
   
 ## <a name="logging-example"></a>Exemple de journalisation  
  L'exemple suivant montre la journalisation d'une valeur représentant le nombre de lignes traitées à partir de la tâche de script.  
@@ -104,10 +103,9 @@ public class ScriptMain
   
 ## <a name="external-resources"></a>Ressources externes  
   
--   Entrée de blog, [journalisation des événements personnalisés pour les tâches Integration Services](http://go.microsoft.com/fwlink/?LinkId=165644), sur dougbert.com  
+-   Entrée de blog, [Logging custom events for Integration Services tasks](http://go.microsoft.com/fwlink/?LinkId=165644), sur dougbert.com.  
   
-## <a name="see-also"></a>Voir aussi  
- [Integration Services &#40; SSIS &#41; Journalisation](../../../integration-services/performance/integration-services-ssis-logging.md)  
+## <a name="see-also"></a> Voir aussi  
+ [Journalisation Integration Services &#40;SSIS&#41;](../../../integration-services/performance/integration-services-ssis-logging.md)  
   
   
-

@@ -16,15 +16,15 @@ f1_keywords:
 - sql13.dqs.dm.rules.f1
 ms.assetid: 339fa10d-e22c-4468-b366-080c33f1a23f
 caps.latest.revision: "28"
-author: JennieHubbard
-ms.author: jhubbard
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b9bdf255f25c8b23dc4a34e882716fe87a14a1c0
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: d5c7e6f027352d3d8fbd79304d6454340a438d9b
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="create-a-domain-rule"></a>Créer une règle de domaine
   Cette rubrique décrit comment créer une règle de domaine dans [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Une règle de domaine est une condition utilisée pour valider, corriger et normaliser les valeurs de domaine. Une règle de domaine doit avoir la valeur true sur un domaine pour que les valeurs de domaine soient considérées comme exactes et conformes aux besoins de l'entreprise. Les règles de domaine peuvent comprendre les règles de validation qui sont utilisées pour valider les valeurs de domaine, mais ne sont pas utilisées pour corriger les données dans les projets de qualité des données. Les règles incluent également les règles de normalisation qui sont appliquées sur les données valides et sont utilisées dans la correction des données.  
@@ -36,7 +36,7 @@ ms.lasthandoff: 11/20/2017
   
 ###  <a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Autorisations  
+####  <a name="Permissions"></a> Permissions  
  Vous devez disposer du rôle dqs_kb_editor ou dqs_administrator sur la base de données DQS_MAIN pour créer une règle de domaine.  
   
 ##  <a name="Build"></a> Créer les règles de domaine  
@@ -115,18 +115,18 @@ ms.lasthandoff: 11/20/2017
   
  Vous avez différentes alternatives pour créer une règle de domaine. Par exemple, pour valider si les valeurs commencent par la lettre A, B, ou C, vous pouvez créer une règle simple avec une condition complexe (telle qu'une expression régulière avec des barres verticales), ou vous pouvez créer une règle complexe qui contient plusieurs conditions simples. Un exemple de la première règle est « La valeur contient l'expression régulière (^A|^B|^C) ». Un exemple de la deuxième règle est « La valeur commence par un A OR La valeur commence par un B OR La valeur commence par un C ».  
   
-|Condition|Description|Exemple|  
+|Condition|Description| Exemple|  
 |---------------|-----------------|-------------|  
 |La longueur est égale à|Seules les valeurs composées du nombre de caractères définis par l'opérande seront valides.|Exemple d'opérande : 3<br /><br /> Valeur valide : BB1<br /><br /> Valeur non valide : AA|  
 |La longueur est supérieure ou égale à|Seules les valeurs composées du nombre (ou d'un nombre supérieur) de caractères définis par l'opérande seront valides.|Exemple d'opérande : 3<br /><br /> Valeurs valides : BB1, BBAA<br /><br /> Valeur non valide : AA|  
 |La longueur est inférieure ou égale à|Seules les valeurs composées du nombre (ou d'un nombre inférieur) de caractères définis par l'opérande seront valides.|Exemple d'opérande : 3<br /><br /> Valeurs valides : BB1, AA<br /><br /> Valeur non valide : BBAA|  
 |La valeur est égale à|Seuls les valeurs identiques à l'opérande sont valides.|Exemple d'opérande : BB1<br /><br /> Valeur valide : BB1<br /><br /> Valeur non valide : BB, BB1#|  
 |La valeur n'est pas égale à|Seules les valeurs non identiques à l'opérande sont valides.|Exemple d'opérande : BB1<br /><br /> Valeur valide : BB, BB1#<br /><br /> Valeur non valide : BB1|  
-|La valeur contient|Seules les valeurs dont les caractères sont contenus dans l'opérande, dans n'importe quel ordre, sont valides.|Exemple d'opérande : A1<br /><br /> Valeurs valides : A1, AA1<br /><br /> Valeur non valide : 1A, AA|  
+|La valeur contient|Seules les valeurs dont les caractères sont contenus dans l'opérande, dans n'importe quel ordre, sont valides.|Exemple d'opérande : A1<br /><br /> Valeurs valides : A1, AA1<br /><br /> Valeur non valide : 1A, AA|  
 |La valeur ne contient pas|Seules les valeurs qui ne sont pas contenues dans l'opérande sont valides.|Exemple d'opérande : A1<br /><br /> Valeurs valides : 1A, AA<br /><br /> Valeurs non valides : A1, AA1|  
 |La valeur commence par|Seules les valeurs qui commencent par les caractères de l'opérande sont valides.|Exemple d'opérande : AA<br /><br /> Valeurs valides : AA1<br /><br /> Valeurs non valides : 1AAB|  
-|La valeur se termine par|Seules les valeurs qui se terminent par les caractères de l'opérande sont valides.|Exemple d'opérande : AA<br /><br /> Valeurs valides : 1AA<br /><br /> Valeurs non valides : 1AAB|  
-|La valeur est numérique|Seules les valeurs ayant un type de données numérique SQL Server sont valides. Cela inclut int, decimal, float, etc.|Exemple d'opérande : N/A<br /><br /> Valeurs valides : 1, 25, 345,1234<br /><br /> Valeurs non valides : 2b, bcdef|  
+|La valeur se termine par|Seules les valeurs qui se terminent par les caractères de l'opérande sont valides.|Exemple d'opérande : AA<br /><br /> Valeurs valides : 1AA<br /><br /> Valeurs non valides : 1AAB|  
+|La valeur est numérique|Seules les valeurs ayant un type de données numérique SQL Server sont valides. Cela inclut int, decimal, float, etc.|Exemple d'opérande : N/A<br /><br /> Valeurs valides : 1, 25, 345,1234<br /><br /> Valeurs non valides : 2b, bcdef|  
 |La valeur est date/heure|Seules les valeurs ayant un type de données date/heure SQL Server sont valides. Cela inclut datetime, time, date, etc.|Exemple d'opérande : N/A<br /><br /> Valeurs valides : 1916-06-04 ; 1916-06-04 18:24:24 ; 21 mars 2001, 5/18/2011 ; 18:24:24<br /><br /> Valeurs non valides : Mars 213, 2006|  
 |La valeur se trouve dans|Seules les valeurs qui sont dans l'ensemble de l'opérande sont valides.<br /><br /> Pour écrire les valeurs de l'ensemble, cliquez dans la zone de texte de l'opérande, entrez la première valeur, appuyez sur ENTRÉE, entrez la seconde valeur, répétez ces étapes pour toutes les valeurs que vous souhaitez entrer, puis cliquez de nouveau dans la zone de texte de l'opérande. DQS ajoute une virgule entre les valeurs de l'ensemble. Si vous entrez une chaîne unique avec des virgules et aucun retour chariot (par exemple, « A1, B1 »), DQS considère cette chaîne comme une valeur unique dans l'ensemble.|Exemple d'opérande : [A1, B1]<br /><br /> Valeurs valides : A1, B1<br /><br /> Valeurs non valides : AA, 11|  
 |La valeur ne se trouve pas dans|Seules les valeurs qui ne se trouvent pas dans l'ensemble de l'opérande sont valides.|Exemple d'opérande : [A1, B1]<br /><br /> Valeurs valides : AA, 11<br /><br /> Valeurs non valides : A1, B1|  

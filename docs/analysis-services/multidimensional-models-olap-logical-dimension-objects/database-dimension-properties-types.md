@@ -2,18 +2,17 @@
 title: Types de dimension | Documents Microsoft
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - time dimensions [Analysis Services]
 - quantitative dimensions [Analysis Services]
@@ -32,19 +31,20 @@ helpviewer_keywords:
 - customers dimensions [Analysis Services]
 - Type property
 ms.assetid: bd3195da-e762-4c98-b643-34c76e842343
-caps.latest.revision: "37"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 6484d74f95da6f17f2ff46554c5ca16fac38fc0a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 7e870e18ae05b3daddf9e8230079bec87bb29e2d
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="database-dimension-properties---types"></a>Propriétés de Dimension de base de données - Types
-  Le **Type** paramètre de propriété fournit des informations sur le contenu d’une dimension aux applications clientes et serveur. Dans certains cas, le **Type** uniquement fournit des conseils pour les applications clientes et est facultatif. Dans d’autres cas, tel que **comptes** ou **temps** dimensions, les **Type** des paramètres de propriété pour la dimension et ses attributs déterminent des comportements spécifiques basée sur le serveur et peuvent être nécessaires pour implémenter certains comportements dans le cube. Par exemple, le **Type** propriété d’une dimension peut être définie sur **comptes** pour indiquer aux applications clientes que la dimension standard contient des attributs de compte. Pour plus d’informations sur l’heure, le compte et les dimensions de devise, consultez [créer une Dimension de type Date](../../analysis-services/multidimensional-models/database-dimensions-create-a-date-type-dimension.md), [créer un compte Finance de Dimension de type parent-enfant](../../analysis-services/multidimensional-models/database-dimensions-finance-account-of-parent-child-type.md), et [créer une Dimension de type devise](../../analysis-services/multidimensional-models/database-dimensions-create-a-currency-type-dimension.md).  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Le **Type** paramètre de propriété fournit des informations sur le contenu d’une dimension aux applications clientes et serveur. Dans certains cas, le **Type** uniquement fournit des conseils pour les applications clientes et est facultatif. Dans d’autres cas, tel que **comptes** ou **temps** dimensions, les **Type** des paramètres de propriété pour la dimension et ses attributs déterminent des comportements spécifiques basée sur le serveur et peuvent être nécessaires pour implémenter certains comportements dans le cube. Par exemple, le **Type** propriété d’une dimension peut être définie sur **comptes** pour indiquer aux applications clientes que la dimension standard contient des attributs de compte. Pour plus d’informations sur l’heure, le compte et les dimensions de devise, consultez [créer une Dimension de type Date](../../analysis-services/multidimensional-models/database-dimensions-create-a-date-type-dimension.md), [créer un compte Finance de Dimension de type parent-enfant](../../analysis-services/multidimensional-models/database-dimensions-finance-account-of-parent-child-type.md), et [créer une Dimension de type devise](../../analysis-services/multidimensional-models/database-dimensions-create-a-currency-type-dimension.md).  
   
  Le paramètre par défaut pour le type de dimension est **régulière**, ce qui ne rend aucune hypothèse quant au contenu de la dimension. Il s’agit du paramètre par défaut pour toutes les dimensions lorsque vous définissez initialement une dimension, sauf si vous spécifiez **temps** lors de la définition de la dimension à l’aide de l’Assistant Dimension. Vous devez également laisser **régulière** comme type de dimension si l’Assistant Dimension ne répertorie pas un type approprié pour le type de Dimension.  
   
@@ -59,18 +59,18 @@ ms.lasthandoff: 11/17/2017
 |Géographie|Une dimension dont les attributs représentent des informations géographiques, telles que des villes ou des codes postaux.|  
 |BillOfMaterials|Une dimension dont les attributs représentent des informations d'inventaire ou de fabrication, telles que des listes de composants pour des produits.|  
 |Comptes (Accounts)|Une dimension dont les attributs représentent un graphique de comptes utilisé à des fins de génération de rapports financiers.|  
-|Customers|Une dimension dont les attributs représentent des informations relatives à des clients ou des contacts.|  
-|Products|Une dimension dont les attributs représentent des informations relatives à des produits.|  
+|Clients (Customers)|Une dimension dont les attributs représentent des informations relatives à des clients ou des contacts.|  
+|Produits (Products)|Une dimension dont les attributs représentent des informations relatives à des produits.|  
 |Scénario|Une dimension dont les attributs représentent des informations de planification ou d'analyse stratégique.|  
 |Quantitative|Une dimension dont les attributs représentent des informations quantitatives.|  
 |Utilitaire|Une dimension dont les attributs représentent des informations diverses.|  
 |Monétaire (Currency)|Ce type de dimension contient des données et des métadonnées monétaires.|  
-|Rates|Une dimension dont les attributs représentent des informations relatives à des taux de devises.|  
+|Taux (Rates)|Une dimension dont les attributs représentent des informations relatives à des taux de devises.|  
 |Channel|Une dimension dont les attributs représentent des informations de canaux.|  
 |Promotion|Une dimension dont les attributs représentent des informations de promotion commerciale.|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Créer une Dimension à l’aide d’une Table existante](../../analysis-services/multidimensional-models/create-a-dimension-by-using-an-existing-table.md)   
- [Dimensions &#40;Analysis Services - Données multidimensionnelles&#41;](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)  
+ [Dimensions &#40; Analysis Services - données multidimensionnelles &#41;](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)  
   
   

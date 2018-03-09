@@ -2,13 +2,14 @@
 title: "Sélectionner les lignes à migrer à l’aide d’une fonction de filtre (Stretch Database) | Microsoft Docs"
 ms.custom: 
 ms.date: 06/27/2016
-ms.prod: stretch-database
-ms.prod_service: sql-non-specified
-ms.service: database-engine
-ms.component: 
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: stretch-database
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-stretch
+ms.technology:
+- dbe-stretch
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,21 +18,22 @@ helpviewer_keywords:
 - Stretch Database, inline table-valued functions
 - inline table-valued functions for Stretch Database
 ms.assetid: 090890ee-7620-4a08-8e15-d2fbc71dd12f
-caps.latest.revision: "43"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 68a67526e9e84d62861f322b663debba754371ff
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: efb55816db5f692231b66ca53780ab26318da90c
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="select-rows-to-migrate-by-using-a-filter-function-stretch-database"></a>Sélectionner les lignes à migrer à l’aide d’une fonction de filtre (Stretch Database)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
 
-  Si vous stockez d’anciennes données dans une table séparée, vous pouvez configurer Stretch Database pour migrer la table entière. Par ailleurs, si votre table contient des données actuelles et anciennes, vous pouvez spécifier un prédicat de filtre pour sélectionner les lignes à migrer. Le prédicat de filtre est une fonction table incluse. Cette rubrique explique comment écrire une fonction table incluse pour sélectionner des lignes à migrer.  
+
+  Si vous stockez d’anciennes données dans une table séparée, vous pouvez configurer Stretch Database pour migrer la table entière. Par ailleurs, si votre table contient des données actuelles et anciennes, vous pouvez spécifier un prédicat de filtre pour sélectionner les lignes à migrer. Le prédicat de filtre est une fonction table incluse. Cet article explique comment écrire une fonction table incluse pour sélectionner des lignes à migrer.  
   
 > [!IMPORTANT]
 > Si vous fournissez une fonction de filtre qui fonctionne mal, la migration des données fonctionne mal également. Stretch Database applique la fonction de filtre à la table à l’aide de l’opérateur CROSS APPLY.  
@@ -44,7 +46,7 @@ ms.lasthandoff: 11/20/2017
   
 -   Exécutez l’instruction ALTER TABLE pour spécifier une fonction de filtre après avoir quitté l’Assistant.  
   
- La syntaxe ALTER TABLE pour ajouter une fonction est décrite plus loin dans cette rubrique.  
+ La syntaxe ALTER TABLE pour ajouter une fonction est décrite plus loin dans cet article.  
   
 ## <a name="basic-requirements-for-the-filter-function"></a>Conditions de base pour la fonction de filtre  
  La fonction table incluse requise pour un prédicat de filtre Stretch Database ressemble à l’exemple suivant.  
@@ -159,7 +161,7 @@ RETURN  SELECT 1 AS is_eligible
  Vous ne pouvez pas utiliser des sous-requêtes ou des fonctions non déterministes telles que RAND() ou GETDATE().  
   
 ## <a name="add-a-filter-function-to-a-table"></a>Ajouter une fonction de filtre à une table  
- Pour ajouter une fonction de filtre à une table, exécutez l’instruction **ALTER TABLE** et spécifiez une fonction table incluse existante comme valeur du paramètre **FILTER_PREDICATE** . Par exemple :  
+ Pour ajouter une fonction de filtre à une table, exécutez l’instruction **ALTER TABLE** et spécifiez une fonction table incluse existante comme valeur du paramètre **FILTER_PREDICATE** . Exemple :  
   
 ```sql  
 ALTER TABLE stretch_table_name SET ( REMOTE_DATA_ARCHIVE = ON (  
@@ -491,7 +493,7 @@ COMMIT ;
     ```  
   
 ## <a name="how-stretch-database-applies-the-filter-function"></a>Comment Stretch Database applique la fonction de filtre  
- Stretch Database applique la fonction de filtre à la table, et détermine les lignes pouvant être migrées à l’aide de l’opérateur CROSS APPLY. Par exemple :  
+ Stretch Database applique la fonction de filtre à la table, et détermine les lignes pouvant être migrées à l’aide de l’opérateur CROSS APPLY. Exemple :  
   
 ```sql  
 SELECT * FROM stretch_table_name CROSS APPLY fn_stretchpredicate(column1, column2)  
@@ -500,7 +502,7 @@ SELECT * FROM stretch_table_name CROSS APPLY fn_stretchpredicate(column1, column
  Si la fonction retourne un résultat non vide pour la ligne, celle-ci peut être migrée.  
   
 ## <a name="replacePredicate"></a>Remplacer une fonction de filtre existante  
- Vous pouvez remplacer une fonction de filtre spécifiée précédemment en réexécutant l’instruction **ALTER TABLE** et en spécifiant une nouvelle valeur pour le paramètre **FILTER_PREDICATE** . Par exemple :  
+ Vous pouvez remplacer une fonction de filtre spécifiée précédemment en réexécutant l’instruction **ALTER TABLE** et en spécifiant une nouvelle valeur pour le paramètre **FILTER_PREDICATE** . Exemple :  
   
 ```sql  
 ALTER TABLE stretch_table_name SET ( REMOTE_DATA_ARCHIVE = ON (  
@@ -595,7 +597,7 @@ GO
 ```  
   
 ## <a name="remove-a-filter-function-from-a-table"></a>Supprimer une fonction de filtre d’une table  
- Pour migrer la table entière plutôt que des lignes sélectionnées, supprimez la fonction existante en affectant la valeur null à **FILTER_PREDICATE**  . Par exemple :  
+ Pour migrer la table entière plutôt que des lignes sélectionnées, supprimez la fonction existante en affectant la valeur null à **FILTER_PREDICATE**  . Exemple :  
   
 ```sql  
 ALTER TABLE stretch_table_name SET ( REMOTE_DATA_ARCHIVE = ON (  
@@ -617,7 +619,7 @@ Un compte compromis avec des privilèges db_owner peut effectuer les opérations
   
 -   Créer et appliquer une fonction table qui permet de déduire le contenu d’une table pour laquelle l’accès en lecture a été explicitement refusé à l’utilisateur.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)  
   
   

@@ -2,15 +2,13 @@
 title: "Structures d’exploration de données (Analysis Services - Exploration de données) | Documents Microsoft"
 ms.custom: 
 ms.date: 03/13/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
 ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -25,19 +23,20 @@ helpviewer_keywords:
 - mining models [Analysis Services]
 - mining models [Analysis Services], about data mining models
 ms.assetid: 39748290-c32a-48e6-92a6-0c3a9223773a
-caps.latest.revision: "77"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 9d796c274172d6fdc8402c5965b6d281cc8c4e89
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 6b7467be225e2468be21603f3e40de04050dc6b4
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="mining-structures-analysis-services---data-mining"></a>Structures d'exploration de données (Analysis Services – exploration de données)
-  La structure d'exploration de données définit les données à partir desquelles les modèles d'exploration de données sont construits : elle spécifie la vue de source de données, le nombre et le type de colonnes, ainsi qu'une partition facultative en jeux d'apprentissage et en jeux de test. Une structure d'exploration de données individuelle peut prendre en charge plusieurs modèles d'exploration de données qui partagent le même domaine. Le diagramme suivant illustre la relation de la structure d'exploration de données par rapport à la source de données et à ses modèles d'exploration de données constitutifs.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+La structure d'exploration de données définit les données à partir desquelles les modèles d'exploration de données sont construits : elle spécifie la vue de source de données, le nombre et le type de colonnes, ainsi qu'une partition facultative en jeux d'apprentissage et en jeux de test. Une structure d'exploration de données individuelle peut prendre en charge plusieurs modèles d'exploration de données qui partagent le même domaine. Le diagramme suivant illustre la relation de la structure d'exploration de données par rapport à la source de données et à ses modèles d'exploration de données constitutifs.  
   
  ![Traitement des données : source à structure à modèle](../../analysis-services/data-mining/media/dmcon-modelarch.gif "traitement des données : source à structure à modèle")  
   
@@ -122,14 +121,14 @@ ms.lasthandoff: 11/17/2017
   
 |Tâches|Liens|  
 |-----------|-----------|  
-|Utiliser des structures d'exploration de données relationnelles|[créer une structure d'exploration de données relationnelle](../../analysis-services/data-mining/create-a-new-relational-mining-structure.md)<br /><br /> [ajouter une table imbriquée à une structure d'exploration de données](../../analysis-services/data-mining/add-a-nested-table-to-a-mining-structure.md)|  
+|Utiliser des structures d'exploration de données relationnelles|[créer une structure d'exploration de données relationnelle](../../analysis-services/data-mining/create-a-new-relational-mining-structure.md)<br /><br /> [Ajouter une Table imbriquée à une Structure d’exploration de données](../../analysis-services/data-mining/add-a-nested-table-to-a-mining-structure.md)|  
 |Utiliser des structures d'exploration de données basées sur des cubes OLAP|[Créer une structure d’exploration de données OLAP](../../analysis-services/data-mining/create-a-new-olap-mining-structure.md)|  
-|Utiliser des colonnes dans une structure d'exploration de données|[ajouter des colonnes à une structure d'exploration de données](../../analysis-services/data-mining/add-columns-to-a-mining-structure.md)<br /><br /> [Supprimer des colonnes d'une structure d'exploration de données](../../analysis-services/data-mining/remove-columns-from-a-mining-structure.md)|  
+|Utiliser des colonnes dans une structure d'exploration de données|[Ajouter des colonnes à une Structure d’exploration de données](../../analysis-services/data-mining/add-columns-to-a-mining-structure.md)<br /><br /> [Supprimer des colonnes d'une structure d'exploration de données](../../analysis-services/data-mining/remove-columns-from-a-mining-structure.md)|  
 |Modifier ou interroger les propriétés et les données de structure d'exploration de données|[Modifier les propriétés d'une structure d'exploration de données](../../analysis-services/data-mining/change-the-properties-of-a-mining-structure.md)|  
-|Utiliser des sources de données sous-jacentes et mettre à jour des données sources|[Modifier la vue de source de données utilisée pour une structure d'exploration de données](../../analysis-services/data-mining/edit-the-data-source-view-used-for-a-mining-structure.md)<br /><br /> [traiter une structure d'exploration de données](../../analysis-services/data-mining/process-a-mining-structure.md)|  
+|Utiliser des sources de données sous-jacentes et mettre à jour des données sources|[Modifier la vue de Source de données utilisée pour une Structure d’exploration de données](../../analysis-services/data-mining/edit-the-data-source-view-used-for-a-mining-structure.md)<br /><br /> [traiter une structure d'exploration de données](../../analysis-services/data-mining/process-a-mining-structure.md)|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Objets de bases de données &#40;Analysis Services - Données multidimensionnelles &#41;](../../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)   
- [Modèles d’exploration de données &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/mining-models-analysis-services-data-mining.md)  
+ [Les modèles d’exploration de données &#40; Analysis Services - Exploration de données &#41;](../../analysis-services/data-mining/mining-models-analysis-services-data-mining.md)  
   
   

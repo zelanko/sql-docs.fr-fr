@@ -20,14 +20,14 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 9bd08b3188bc8b7a968753c01d09dba3ecf49a7e
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 51130dcbecc1fcb3c83771d5fab680863d01b40d
+ms.sourcegitcommit: d28d9e3413b6fab26599966112117d45ec2c7045
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/11/2018
 ---
 # <a name="contained-database-users---making-your-database-portable"></a>Utilisateurs de base de données à relation contenant-contenu - Rendre votre base de données portable
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   Faites appel à des utilisateurs de base de données à relation contenant-contenu pour authentifier les connexions [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et [!INCLUDE[ssSDS](../../includes/sssds-md.md)] au niveau de la base de données. Une base de données à relation contenant-contenu est une base de données qui est isolée d'autres bases de données et de l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/[!INCLUDE[ssSDS](../../includes/sssds-md.md)] (et la base de données MASTER) qui héberge la base de données. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend en charge les utilisateurs de base de données pour Windows et l'authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Si vous utilisez [!INCLUDE[ssSDS](../../includes/sssds-md.md)], associez les utilisateurs de base de données à relation contenant-contenu à des règles de pare-feu au niveau de la base de données. Cette rubrique examine les avantages liés à l'utilisation du modèle de base de données à relation contenant-contenu et les différences qu'il présente par rapport au modèle traditionnel de connexion/utilisateur et aux règles de pare-feu Windows ou au niveau du serveur. Le recours au modèle traditionnel de connexion/utilisateur et aux règles de pare-feu au niveau du serveur peut encore s'avérer nécessaire pour mettre en œuvre une logique métier d'application, des critères de facilité de gestion ou des scénarios spécifiques.  
   
@@ -73,11 +73,11 @@ ms.lasthandoff: 11/21/2017
 |-----------------------|-----------------------------------|  
 |Si une connexion est établie à la base de données MASTER :<br /><br /> `CREATE LOGIN login_name  WITH PASSWORD = 'strong_password';`<br /><br /> Ensuite, si une connexion est établie à une base de données utilisateur :<br /><br /> `CREATE USER 'user_name' FOR LOGIN 'login_name';`|Si une connexion est établie à une base de données utilisateur :<br /><br /> `CREATE USER user_name  WITH PASSWORD = 'strong_password';`|  
   
-|Modèle traditionnel|Modèle utilisateur de base de données à relation contenant-contenu|  
+|Modèle traditionnel|Modèle d'utilisateurs de base de données à relation contenant-contenu|  
 |-----------------------|-----------------------------------|  
 |Pour modifier un mot de passe dans le contexte d'une base de données MASTER :<br /><br /> `ALTER LOGIN login_name  WITH PASSWORD = 'strong_password';`|Pour modifier un mot de passe dans le contexte d'une base de données utilisateur :<br /><br /> `ALTER USER user_name  WITH PASSWORD = 'strong_password';`|  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
   
 -   Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], les utilisateurs de base de données à relation contenant-contenu doivent être activés pour l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour plus d'informations, consultez [contained database authentication Server Configuration Option](../../database-engine/configure-windows/contained-database-authentication-server-configuration-option.md).  
   
@@ -93,7 +93,7 @@ ms.lasthandoff: 11/21/2017
   
 -   Définissez des mots de passe avec un niveau de force semblable à celui des mots de passe utilisés normalement pour les connexions.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Bases de données à relation contenant-contenu](../../relational-databases/databases/contained-databases.md)   
  [Meilleures pratiques de sécurité recommandées avec les bases de données à relation contenant-contenu](../../relational-databases/databases/security-best-practices-with-contained-databases.md)   
  [CREATE USER &#40;Transact-SQL&#41;](../../t-sql/statements/create-user-transact-sql.md)   

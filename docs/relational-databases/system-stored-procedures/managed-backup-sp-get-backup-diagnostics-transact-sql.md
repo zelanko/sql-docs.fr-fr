@@ -1,5 +1,5 @@
 ---
-title: managed_backup.sp_get_backup_diagnostics (Transact-SQL) | Documents Microsoft
+title: managed_backup.sp_get_backup_diagnostics (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,21 +17,22 @@ f1_keywords:
 - sp_get_backup_diagnostics
 - smart_admin.sp_get_backup_diagnostics_TSQL
 - smart_admin.sp_get_backup_diagnostics
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - sp_get_backup_diagnostics
 - smart_admin.sp_get_backup_diagnostics
 ms.assetid: 2266a233-6354-464b-91ec-824ca4eb9ceb
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 24353001e6b1334a6d4eed7e8bcc2cb2dd48f369
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 088d3232ef47888c0615e7b8a7638eb26f2817a2
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="managedbackupspgetbackupdiagnostics-transact-sql"></a>managed_backup.sp_get_backup_diagnostics (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +45,7 @@ ms.lasthandoff: 11/17/2017
   
 ## <a name="syntax"></a>Syntaxe  
   
-```tsql  
+```sql  
 managed_backup.sp_get_backup_diagnostics [@xevent_channel = ] 'event type' [, [@begin_time = ] 'time1' ] [, [@end_time = ] 'time2'VARCHAR(255) = 'Xevent',@begin_time DATETIME = NULL,@end_time DATETIME = NULL  
 ```  
   
@@ -65,13 +67,13 @@ managed_backup.sp_get_backup_diagnostics [@xevent_channel = ] 'event type' [, [@
 ||||  
 |-|-|-|  
 |Nom de la colonne|Type de données| Description|  
-|event_type|NVARCHAR (512)|Type d’événement étendu.|  
-|Événement|NVARCHAR (512)|Récapitulatif des journaux d'événements.|  
-|Horodateur|timestamp|Horodateur de l'événement indiquant à quel moment l'événement s'est produit.|  
+|event_type|NVARCHAR(512)|Type d’événement étendu.|  
+|Événement|NVARCHAR(512)|Récapitulatif des journaux d'événements.|  
+|Horodateur|TIMESTAMP|Horodateur de l'événement indiquant à quel moment l'événement s'est produit.|  
   
 ## <a name="security"></a>Sécurité  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>Autorisations  
  Requiert **EXECUTE** autorisations sur la procédure stockée. Elle requiert également **VIEW SERVER STATE** autorisations, car elle appelle en interne autres objets système qui nécessitent cette autorisation.  
   
 ## <a name="examples"></a>Exemples  

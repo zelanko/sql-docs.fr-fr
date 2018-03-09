@@ -2,28 +2,31 @@
 title: "À l’aide des fonctions R avec des données SQL Server (R dans démarrage rapide de SQL) | Documents Microsoft"
 ms.custom: 
 ms.date: 07/26/2017
-ms.prod: sql-server-2016
 ms.reviewer: 
-ms.suite: 
-ms.technology: r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: 
+ms.technology: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: tutorial
 dev_langs:
 - R
 - SQL
 ms.assetid: e2fe5d90-eee9-4daf-9eae-21d17b3ef320
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: 919f29c8d96324f21dde2e87bb861f3e76f8241d
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 93fb7d90ab6d1f387fe50dd63a29eda7a2ecc764
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="using-r-functions-with-sql-server-data-r-in-sql-quickstart"></a>À l’aide des fonctions R avec des données SQL Server (R dans démarrage rapide de SQL)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Maintenant que vous maîtrisez les opérations de base de R, le moment est venu de passer aux choses sérieuses. S’il peut vous paraître compliqué d’implémenter bon nombre de fonctions statistiques avancées avec T-SQL, il suffit en fait d’une seule ligne de code R.  Avec R Services, il est facile d’incorporer des scripts utilitaires R dans une procédure stockée.
 

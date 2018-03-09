@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: microsoft
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 34bcce12665dd3e0bcaa49e4c6e1ff93a807f514
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 50364dfbbebb7b16b1438e3e17e0e1bbabc30cef
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="set-deleted-command"></a>Commande SET DELETED
 Spécifie si les enregistrements marqués pour suppression sont traités et si elles sont disponibles pour une utilisation dans d’autres commandes.  
@@ -41,7 +41,7 @@ SET DELETED ON | OFF
  OFF  
  Spécifie que les enregistrements marqués pour suppression peut être accessible par les commandes qui agissent sur les enregistrements (y compris les enregistrements dans les tables associées) à l’aide d’une étendue.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Interroge que (de DELETED) pour tester le statut des enregistrements d’utilisation peut être optimisée à l’aide de la technologie Visual FoxPro Rushmore si la table est indexée sur (de supprimés).  
   
 > [!IMPORTANT]  

@@ -8,28 +8,26 @@ ms.service:
 ms.component: tools
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords: Report Designer [Reporting Services], dialog boxes
 ms.assetid: 7c1bc931-d1ec-47fc-8f82-55560ddaf776
 caps.latest.revision: "63"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: a283102f53802dabef95b289f7dcab6a96af6c34
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: bb3352a4399ff6b890c1addb3bcb8a9af4747ba1
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="report-designer-f1-help"></a>Aide sur le Concepteur de rapports via la touche F1
   Cette section décrit l’aide obtenue via la touche F1 pour l’ensemble des Assistants, des vues et des boîtes de dialogue du Concepteur de rapports [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] dans [!INCLUDE[ssBIDevStudioFull_md](../../includes/ssbidevstudiofull-md.md)]. Vous pouvez également ouvrir l'aide via la touche F1 lors de l'utilisation d'une boîte de dialogue en appuyant sur F1 ou en cliquant sur le bouton Aide affiché dans la boîte de dialogue.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 + [Installer SQL Server Data Tools - Business Intelligence pour Visual Studio](http://msdn.microsoft.com/library/68ed2924-9104-4c79-974f-0e87212ec2e1)
 + [Références relatives aux fonctionnalités (Reporting Services)](../../reporting-services/feature-reference-reporting-services.md)
 + [Rapports Reporting Services (SSRS)](../../reporting-services/reports/reporting-services-reports-ssrs.md) 

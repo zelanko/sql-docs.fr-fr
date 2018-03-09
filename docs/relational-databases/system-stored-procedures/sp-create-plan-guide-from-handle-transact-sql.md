@@ -22,11 +22,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: aab6b1bde36e0e2b84c2bacfd52baca137e894f0
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 40bcb89844fb9b5cea09dab93765a32c8dedcc90
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="spcreateplanguidefromhandle-transact-sql"></a>sp_create_plan_guide_from_handle (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +58,7 @@ sp_create_plan_guide_from_handle [ @name = ] N'plan_guide_name'
   
  Lorsque la valeur NULL est spécifiée ou qu'un décalage d'instruction n'est pas spécifié, un repère de plan est créé pour chaque instruction du lot à l'aide du plan de requête pour le descripteur de plan spécifié. Les repères de plan obtenus sont équivalents à ceux qui utilisent l'indicateur de requête USE PLAN pour forcer l'utilisation d'un plan spécifique.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Un repère de plan ne peut pas être créé pour tous les types d'instructions. Si un repère de plan ne peut pas être créé pour une instruction du lot, la procédure stockée ignore l'instruction et passe à la suivante dans le lot. Si une instruction apparaît plusieurs fois dans le même lot, le plan de la dernière occurrence est activé et les plans précédents de l'instruction sont désactivés. Si aucune instruction dans le lot ne peut être utilisée dans un repère de plan, l'erreur 10532 est générée et l'instruction échoue. Nous vous recommandons de toujours obtenir le descripteur de plan à partir de la vue de gestion dynamique sys.dm_exec_query_stats pour empêcher toute occurrence de cette erreur.  
   
 > [!IMPORTANT]  
@@ -67,7 +67,7 @@ sp_create_plan_guide_from_handle [ @name = ] N'plan_guide_name'
 ## <a name="creating-plan-guides-for-multiple-statements-within-a-query-plan"></a>Création de repères de plan pour plusieurs instructions dans un plan de requête  
  Comme l'instruction sp_create_plan_guide, l'instruction sp_create_plan_guide_from_handle supprime du cache du plan le plan de requête du lot ou module ciblé. Cette suppression permet de garantir que tous les utilisateurs commencent à utiliser le nouveau repère de plan. Lorsque vous créez un repère de plan pour plusieurs instructions dans un plan de requête unique, vous pouvez différer la suppression du plan du cache en créant tous les repères de plan dans une transaction explicite. Cette méthode permet au plan de rester dans le cache jusqu'à ce que la transaction soit terminée et qu'un repère de plan soit créé pour chaque instruction spécifiée. Voir l'exemple B.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Requiert l'autorisation VIEW SERVER STATE. De plus, des autorisations individuelles sont requises pour chaque repère de plan créé à l'aide de l'instruction sp_create_plan_guide_from_handle. Pour créer un repère de plan de type objet nécessite l’autorisation ALTER sur l’objet référencé. Pour créer un repère de plan de type SQL ou TEMPLATE, il vous faut une autorisation ALTER sur la base de données active. Pour déterminer le type de repère de plan qui sera créé, exécutez la requête suivante :  
   
 ```  
@@ -84,7 +84,7 @@ CROSS APPLY sys.dm_exec_sql_text(sql_handle) AS st;
 ### <a name="a-creating-a-plan-guide-from-a-query-plan-in-the-plan-cache"></a>A. Création d'un repère de plan à partir d'un plan de requête dans le cache du plan  
  L'exemple suivant crée un repère de plan pour une instruction SELECT unique en spécifiant un plan de requête à partir du cache du plan. L'exemple commence par exécuter une instruction `SELECT` simple pour laquelle le repère de plan sera créé. Le plan de cette requête est examiné à l'aide des vues de gestion dynamique `sys.dm_exec_sql_text` et `sys.dm_exec_text_query_plan`. Le repère de plan est ensuite créé pour la requête en spécifiant le plan de requête dans le cache du plan associé à la requête. La dernière instruction dans l'exemple vérifie que le repère de plan existe.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT WorkOrderID, p.Name, OrderQty, DueDate  

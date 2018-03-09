@@ -1,5 +1,5 @@
 ---
-title: sp_fulltext_pendingchanges (Transact-SQL) | Documents Microsoft
+title: sp_fulltext_pendingchanges (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_fulltext_pendingchanges_TSQL
 - sp_fulltext_pendingchanges
-dev_langs: TSQL
-helpviewer_keywords: sp_fulltext_pendingchanges
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_fulltext_pendingchanges
 ms.assetid: fee042fe-4781-4a33-a01b-d98fb5629f1b
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 51c7e5306a395b86b3855dd7cab345adffb00195
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: ff15f23b58c2303a3db717a3e301738df0a2bf70
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spfulltextpendingchanges-transact-sql"></a>sp_fulltext_pendingchanges (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -51,13 +54,13 @@ sp_fulltext_pendingchanges table_id
 |Nom de colonne|Type de données| Description|  
 |-----------------|---------------|-----------------|  
 |**Clé**|*|Valeur de la clé de texte intégral pour une table spécifiée.|  
-|**ID de document**|**bigint**|Colonne de l'ID interne de document (DocId) qui correspond à la valeur de la clé.|  
+|**DocId**|**bigint**|Colonne de l'ID interne de document (DocId) qui correspond à la valeur de la clé.|  
 |**État**|**int**|0 = La ligne est supprimée de l'index de texte intégral.<br /><br /> 1 = La ligne est indexée sur le texte intégral.<br /><br /> 2 = La ligne est à jour.<br /><br /> -1 = La ligne est en état de transition (traitée en lot mais non validée) ou en erreur.|  
 |**DocState**|**tinyint**|Vidage brut de la colonne d'état du mappage de l'ID interne du document (DocId).|  
   
  <sup>* Le type de données pour la clé est identique au type de données de la colonne de clé de recherche en texte intégral dans la table de base.</sup>  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l'appartenance au rôle serveur fixe **sysadmin** .  
   
 ## <a name="remarks"></a>Notes  

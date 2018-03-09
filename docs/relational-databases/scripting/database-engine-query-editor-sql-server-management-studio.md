@@ -2,14 +2,20 @@
 title: "Éditeur de requête du moteur de base de données (SQL Server Management Studio) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-scripting
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.swb.tsqlquery.f1
-dev_langs: TSQL
+f1_keywords:
+- sql13.swb.tsqlquery.f1
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - Query Editor [Database Engine]
 - Transact-SQL Editor See Query Editor [Database Engine]
@@ -19,19 +25,19 @@ helpviewer_keywords:
 - Query Editor [Database Engine], Features
 - SQL Server Management Studio [SQL Server], Database Engine Query Editor
 ms.assetid: 05cfae9b-96d5-4a35-a098-0bc3a548bcfc
-caps.latest.revision: "47"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 81d67f47cddfe48575758ec7ff3b5949a4c6f1f8
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: e6b32e0a52127becc2850e79c0d2b6828ed14aaf
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="database-engine-query-editor-sql-server-management-studio"></a>Éditeur de requête du moteur de base de données (SQL Server Management Studio)
-  Utilisez l'éditeur de requête du [!INCLUDE[ssDE](../../includes/ssde-md.md)] pour créer et exécuter des scripts contenant des instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] . L’éditeur prend également en charge l’exécution de scripts qui contiennent des commandes **sqlcmd** .  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Utilisez l’éditeur de requête du [!INCLUDE[ssDE](../../includes/ssde-md.md)] pour créer et exécuter des scripts contenant des instructions [!INCLUDE[tsql](../../includes/tsql-md.md)]. L’éditeur prend également en charge l’exécution de scripts qui contiennent des commandes **sqlcmd** .  
   
 ## <a name="transact-sql-f1-help"></a>Aide sur Transact-SQL via la touche F1  
  L'éditeur de requête du [!INCLUDE[ssDE](../../includes/ssde-md.md)] prend en charge votre liaison à la rubrique de référence pour une instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] spécifique lorsque vous sélectionnez F1. Pour ce faire, mettez en surbrillance le nom d'une instruction Transact-SQL, puis sélectionnez F1. Le moteur de recherche d'aide recherchera alors une rubrique qui a un attribut d'aide F1 qui correspond à la chaîne que vous avez mise en surbrillance.  
@@ -54,7 +60,7 @@ ms.lasthandoff: 11/09/2017
 ## <a name="sql-editor-toolbar"></a>Barre d'outils Éditeur SQL  
  Quand vous ouvrez l’éditeur de requête du [!INCLUDE[ssDE](../../includes/ssde-md.md)] , la barre d’outils Éditeur SQL s’affiche avec les boutons suivants.  
   
- **Connecter**  
+ **Se connecter**  
  Ouvre la boîte de dialogue **Se connecter au serveur** . Utilisez cette boîte de dialogue pour établir une connexion à un serveur.  
   
  **Déconnecter**  
@@ -149,7 +155,7 @@ ms.lasthandoff: 11/09/2017
  **Windows**  
  Ouvre la fenêtre **Point d’arrêt** ou la fenêtre **Immédiat** .  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Raccourcis clavier dans SQL Server Management Studio](../../tools/sql-server-management-studio/sql-server-management-studio-keyboard-shortcuts.md)  
   
   

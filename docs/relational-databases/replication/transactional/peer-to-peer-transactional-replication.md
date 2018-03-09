@@ -19,15 +19,15 @@ helpviewer_keywords:
 - peer-to-peer transactional replication
 ms.assetid: 23e7e8c1-002f-4e69-8c99-d63e4100de64
 caps.latest.revision: "71"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 7efa0d8d1176b1f58f798aed75969456e2ef998a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c7d2e0bedf8161b39323cf8260e154890032dfdb
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="peer-to-peer---transactional-replication"></a>Réplication transactionnelle d’égal à égal
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -86,7 +86,7 @@ ms.lasthandoff: 11/17/2017
   
      ![Réplication d’égal à égal, trois et quatre nœuds](../../../relational-databases/replication/transactional/media/repl-multinode-04.gif "Réplication d’égal à égal, trois et quatre nœuds")  
   
- L'illustration ci-dessus montre l'ajout d'un nœud dans la topologie qui en compte déjà trois. Un nœud pourrait être ajouté dans ce scénario pour les raisons suivantes :  
+ L'illustration ci-dessus montre l'ajout d'un nœud dans la topologie qui en compte déjà trois. Un nœud pourrait être ajouté dans ce scénario pour les raisons suivantes :  
   
 -   parce qu'un autre bureau est ouvert ;  
   
@@ -129,7 +129,7 @@ ms.lasthandoff: 11/17/2017
   
 -   filtres de lignes et de colonnes ;  
   
--   colonnes d'horodatage ;  
+-   colonnes d'horodatage ;  
   
 -   serveurs de publication et Abonnés non-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ;  
   
@@ -164,7 +164,7 @@ ms.lasthandoff: 11/17/2017
   
 ||Homologues SQL Server 2005 uniquement ou combinaison d’homologues SQL Server 2005 et d’homologues SQL Server 2008 ou version ultérieure|Homologues SQL Server 2005 uniquement ou combinaison d’homologues SQL Server 2005 et d’homologues SQL Server 2008 ou version ultérieure|Homologues SQL 2008 ou version ultérieure|Homologues SQL 2008 ou version ultérieure|  
 |-|------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------|------------------------------|------------------------------|  
-|Ajout d’un nœud à la topologie|2 nœuds dans la topologie complète : aucune suspension requise. Utilisez plutôt `sync_type = 'initialize with backup'`|Plus de 2 nœuds : suspension requise.|`sync_type = 'replication support only'`: suspension requise.|`sync_type = 'initialize with backup'` et `'initialize from lsn'`: aucune suspension requise.|  
+|Ajout d’un nœud à la topologie|2 nœuds dans la topologie complète : aucune suspension requise. Utilisez plutôt `sync_type = 'initialize with backup'`|Plus de 2 nœuds : suspension requise.|`sync_type = 'replication support only'`: suspension requise.|`sync_type = 'initialize with backup'` et `'initialize from lsn'`: aucune suspension requise.|  
   
  Les modifications de schéma de topologie (ajout ou suppression d’un article) nécessitent une suspension. Pour plus d’informations, consultez [Administrer une topologie d’égal à égal &#40;programmation Transact-SQL de la réplication&#41;](../../../relational-databases/replication/administration/administer-a-peer-to-peer-topology-replication-transact-sql-programming.md).  
   
@@ -184,7 +184,7 @@ ms.lasthandoff: 11/17/2017
   
 -   Vous ne pouvez pas réinitialiser les abonnements dans une topologie d'égal à égal. Si vous devez faire en sorte qu'un nœud dispose d'une nouvelle copie des données, restaurez une sauvegarde sur le nœud.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Administrer une topologie d’égal à égal &#40;programmation Transact-SQL de la réplication&#41;](../../../relational-databases/replication/administration/administer-a-peer-to-peer-topology-replication-transact-sql-programming.md)   
  [Stratégies de sauvegarde et de restauration de la réplication transactionnelle et d’instantané](../../../relational-databases/replication/administration/strategies-for-backing-up-and-restoring-snapshot-and-transactional-replication.md)   
  [Types de publication pour la réplication transactionnelle](../../../relational-databases/replication/transactional/publication-types-for-transactional-replication.md)  

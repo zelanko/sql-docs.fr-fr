@@ -22,11 +22,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 85bb9f9c5e389c80f3316b6a62dea8e82ac25d77
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: ab59a2912f51882954420a81514b0fe2089f9a8f
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="sphelpfilegroup-transact-sql"></a>sp_helpfilegroup (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,24 +51,24 @@ sp_helpfilegroup [ [ @filegroupname = ] 'name' ]
   
 ## <a name="result-sets"></a>Jeux de résultats  
   
-|Nom de colonne|Type de données| Description|  
+|Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**nom de groupe**|**sysname**|Nom du groupe de fichiers|  
 |**GroupID**|**smallint**|Identificateur numérique du groupe de fichiers.|  
-|**FileCount**|**int**|Nombre de fichiers appartenant au groupe de fichiers.|  
+|**FileCount**|**Int**|Nombre de fichiers appartenant au groupe de fichiers.|  
   
  Si *nom* est spécifié, une ligne pour chaque fichier dans le groupe de fichiers est retournée.  
   
-|Nom de colonne|Type de données| Description|  
+|Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**file_in_group**|**sysname**|Nom logique du fichier dans le groupe de fichiers.|  
 |**fileid**|**smallint**|Identificateur numérique du fichier.|  
 |**nom de fichier**|**NCHAR(260)**|Nom physique du fichier, y compris le chemin d'accès du répertoire.|  
-|**taille**|**nvarchar (15)**|Taille du fichier en kilo-octets.|  
+|**size**|**nvarchar (15)**|Taille du fichier en kilo-octets.|  
 |**MaxSize**|**nvarchar (15)**|Taille maximale du fichier.<br /><br /> Taille maximale que peut atteindre le fichier. La valeur UNLIMITED indique que le fichier peut augmenter jusqu'à ce que le disque soit plein.|  
 |**croissance**|**nvarchar (15)**|Incrément de croissance du fichier. Quantité d'espace ajoutée au fichier chaque fois que de l'espace supplémentaire est nécessaire.<br /><br /> 0 = La taille du fichier est fixe et n'augmente pas.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l'appartenance au rôle **public** .  
   
 ## <a name="examples"></a>Exemples  
@@ -76,7 +76,7 @@ sp_helpfilegroup [ [ @filegroupname = ] 'name' ]
 ### <a name="a-returning-all-filegroups-in-a-database"></a>A. Renvoi de tous les groupes de fichiers d'une base de données  
  L'exemple suivant renvoie des informations sur les groupes de fichiers dans la base de données exemple [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 EXEC sp_helpfilegroup;  
@@ -86,7 +86,7 @@ GO
 ### <a name="b-returning-all-files-in-a-filegroup"></a>B. Renvoi de tous les fichiers d'un groupe de fichiers  
  L'exemple suivant renvoie des informations sur tous les fichiers du groupe de fichiers `PRIMARY` dans la base de données exemple [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 EXEC sp_helpfilegroup 'PRIMARY';  

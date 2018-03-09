@@ -2,9 +2,12 @@
 title: "Spécifier le niveau de suivi et de résolution des conflits pour des articles de fusion | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,18 +17,18 @@ helpviewer_keywords:
 - conflict resolution [SQL Server replication], merge replication
 ms.assetid: 81e9ecb6-1d31-4a78-b32a-96f7f4d67077
 caps.latest.revision: "35"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 36e500ce1044dcbaff1146c29459c31e3f425cde
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 6ed947921329a02a86148756e37e6743985d4e4e
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="specify-the-conflict-tracking-and-resolution-level-for-merge-articles"></a>Spécifier le niveau de suivi et de résolution des conflits pour des articles de fusion
-  Cette rubrique explique comment spécifier le niveau de suivi et de résolution des conflits pour les articles de fusion dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Cette rubrique explique comment spécifier le niveau de suivi et de résolution des conflits pour les articles de fusion dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] à l’aide de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
   
  Lorsqu'un abonnement à une publication de fusion est synchronisé, la réplication vérifie la présence de conflits faisant suite à de la modification des mêmes données au niveau du serveur de publication et de l'Abonné. Vous pouvez spécifier si les conflits sont détectés au niveau de la ligne, auquel cas toute modification apportée à la ligne est considérée comme un conflit, ou au niveau de la colonne, auquel cas seules les modifications apportées aux mêmes ligne et colonne sont considérées comme un conflit. La résolution des conflits pour les articles est réalisée au niveau de la ligne. Pour plus d'informations sur la détection et la résolution des conflits avec des enregistrements logiques, consultez [Detecting and Resolving Conflicts in Logical Records](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-resolving-in-logical-record.md).  
   
@@ -60,7 +63,7 @@ ms.lasthandoff: 11/09/2017
   
 3.  Sous l’onglet **Propriétés** de la boîte de dialogue **Propriétés de l’article - \<Article>**, sélectionnez l’une des valeurs suivantes pour la propriété **Niveau de suivi** : **Suivi au niveau des lignes** ou **Suivi au niveau des colonnes**.  
   
-4.  Si vous êtes dans la boîte de dialogue **Propriétés de la publication - \<Publication>**, cliquez sur **OK** pour enregistrer et fermer la boîte de dialogue.  
+4.  Si vous êtes dans la boîte de dialogue **Propriétés de la publication - \<Publication>**, cliquez sur **OK** pour enregistrer et fermer la boîte de dialogue.  
   
 ##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
   
@@ -84,7 +87,7 @@ ms.lasthandoff: 11/09/2017
   
      Affectez la valeur **1** à **@force_invalidate_snapshot** et **@force_reinit_subscription**.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Advanced Merge Replication Conflict Detection and Resolution](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)   
  [Détection et résolution des conflits dans les enregistrements logiques](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-resolving-in-logical-record.md)   
  [Définir une relation d’enregistrement logique entre des articles de table de fusion](../../../relational-databases/replication/publish/define-a-logical-record-relationship-between-merge-table-articles.md)   

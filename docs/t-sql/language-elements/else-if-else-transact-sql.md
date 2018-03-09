@@ -1,5 +1,5 @@
 ---
-title: ELSE (IF... ELSE) (Transact-SQL) | Documents Microsoft
+title: ELSE (IF...ELSE) (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
@@ -8,28 +8,30 @@ ms.service:
 ms.component: t-sql|language-elements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - ELSE
 - ELSE_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - ELSE (IF...ELSE) keyword
 - ELSE keyword
 - IF keyword
 ms.assetid: 6f2b4278-0dea-4603-bbd3-7cbad602a645
-caps.latest.revision: "34"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 5d4905fee083d43190e4ef5faeac5d41a1594485
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: ca282df7272f2eeffe1afc50238a41f69c7b615f
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="else-ifelse-transact-sql"></a>ELSE (IF...ELSE) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -48,7 +50,7 @@ IF Boolean_expression
 ```  
   
 ## <a name="arguments"></a>Arguments  
- *Expression_booléenne*  
+ *Boolean_expression*  
  Expression qui renvoie TRUE ou FALSE. Si le *Boolean_expression* contient une instruction SELECT, l’instruction SELECT doit être placée entre parenthèses.  
   
  { *sql_statement* | *statement_block* }  

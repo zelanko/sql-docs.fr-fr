@@ -8,20 +8,21 @@ ms.service:
 ms.component: in-memory-oltp
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine-imoltp
+ms.technology:
+- database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 622aabe6-95c7-42cc-8768-ac2e679c5089
-caps.latest.revision: "64"
+caps.latest.revision: 
 author: JennieHubbard
 ms.author: jhubbard
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 58fd1de82d61ae008059237ad3f630a3e112c259
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 37aab4a523caee5ca5f4c3ebfc2482ca464dcf71
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="creating-and-managing-storage-for-memory-optimized-objects"></a>Création et gestion du stockage des objets mémoire optimisés
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -32,7 +33,7 @@ ms.lasthandoff: 11/17/2017
   
 -   Elles sont mappées à groupe de fichiers contenant un ou plusieurs fichiers.  
   
--   Chaque fichier est divisé en étendues de 8 pages de 8 Ko chacune.  
+-   Chaque fichier est divisé en étendues de 8 pages de 8 Ko chacune.  
   
 -   Une étendue peut être partagée entre plusieurs tables, mais il existe une correspondance univoque entre une page allouée et la table ou l’index. En d’autres termes, une page ne peut pas contenir de lignes appartenant à plusieurs tables ou index.  
   
@@ -68,7 +69,7 @@ ms.lasthandoff: 11/17/2017
   
 -   [Comparaison du stockage des tables sur disque et du stockage des tables mémoire optimisées](../../relational-databases/in-memory-oltp/comparing-disk-based-table-storage-to-memory-optimized-table-storage.md)  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [OLTP en mémoire &#40;Optimisation en mémoire&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
   
   

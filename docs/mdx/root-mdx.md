@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords: Root
@@ -20,11 +20,11 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: a444fe658eae3d84af4ee320f57a182c4d100f75
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 16e6fb8fb10816391a25d71a717cff5f4c7abe58
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="root-mdx"></a>Root (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -53,7 +53,7 @@ Root( Tuple_Expression )
  *Tuple_Expression*  
  Expression MDX (Multidimensional Expressions) valide qui retourne un tuple.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Si un nom de dimension, ni une expression de tuple est spécifiée, la **racine** fonction retourne un tuple qui contient le **tous les** membre (ou le membre par défaut si le **tous les** membre n’existe pas) de chaque hiérarchie d’attribut dans le cube. L'ordre des membres dans le tuple dépend de la séquence dans laquelle les hiérarchies d'attributs sont définies au sein du cube.  
   
  Si un nom de dimension est spécifié, le **racine** fonction retourne un tuple qui contient le **tous les** membre (ou le membre par défaut si le **tous les** membre n’existe pas) de chaque hiérarchie d’attribut dans la dimension spécifiée en fonction du contexte du membre actuel. L'ordre des membres dans le tuple dépend de la séquence dans laquelle les hiérarchies d'attributs sont définies au sein de la dimension.  

@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-server-web-service-net-framework-exception-handling
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -19,15 +17,15 @@ helpviewer_keywords:
 - try/catch blocks [Reporting Services]
 ms.assetid: a7a9ef53-e3b6-4bf7-81f3-d85615954e6f
 caps.latest.revision: "29"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ded41b7409a4b6c761f6596b3d8c30d55e5adcd4
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 23077f7767dc9051067bb4e0d0e9fa714751387d
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="using-try-and-catch-blocks"></a>Utilisation des blocs Try et Catch
   Après avoir limité les demandes non valides au serveur de rapports en ajoutant des instructions conditionnelles à votre code, vous devez fournir une gestion adéquate des exceptions à l'aide des blocs try/catch. Cette technique fournit une autre couche de protection contre les demandes qui ne sont pas valides. Si une demande faite au serveur de rapports est incluse dans un bloc try et que cette demande entraîne la levée d'une exception par le serveur de rapports, l'exception est interceptée dans le bloc catch, empêchant ainsi votre application de se terminer de façon inattendue. Une fois l'exception interceptée, vous pouvez l'utiliser soit pour instruire l'utilisateur de modifier son action, soit pour l'informer, de façon amicale, qu'une erreur s'est produite. Vous pouvez utiliser ensuite un bloc finally pour nettoyer les ressources. D'une manière idéale, vous devez élaborer un plan général de gestion des exceptions afin d'éviter une duplication inutile des blocs try/catch.  
@@ -97,7 +95,7 @@ private void PublishReport()
 }  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Présentation de la gestion des exceptions dans Reporting Services](../../../reporting-services/report-server-web-service-net-framework-exception-handling/introducing-exception-handling-in-reporting-services.md)   
  [Classe SoapException Reporting Services](../../../reporting-services/report-server-web-service-net-framework-exception-handling/soapexception-class/reporting-services-soapexception-class.md)  
   

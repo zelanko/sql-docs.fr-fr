@@ -2,27 +2,30 @@
 title: Application sqllogship | Documents Microsoft
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: sqllogship
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords: sqllogship
 ms.assetid: 8ae70041-f3d9-46e4-8fa8-31088572a9f8
 caps.latest.revision: "10"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4c712a94883ce48c321a8ccc15b766b709da7648
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: ec4a757306f0e63e2e85b70526a211667a70f6e6
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="sqllogship-application"></a>Application sqllogship
-  L’application **sqllogship** effectue une opération de sauvegarde, de copie ou de restauration, ainsi que les tâches de nettoyage associées pour une configuration d’envoi de journaux. L'opération a lieu sur une instance spécifique de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] pour une base de données spécifique.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Le **sqllogship** application effectue une sauvegarde, copie, ou opération de restauration et les tâches de nettoyage associées pour une configuration d’envoi de journaux. L'opération a lieu sur une instance spécifique de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] pour une base de données spécifique.  
   
  ![Icône de lien de rubrique](../database-engine/configure-windows/media/topic-link.gif "icône lien de rubrique") pour les conventions de syntaxe, consultez [référence utilitaire d’invite de commandes &#40; moteur de base de données &#41;](../tools/command-prompt-utility-reference-database-engine.md).  
   
@@ -55,7 +58,7 @@ sqllogship -server instance_name { -backup primary_id | -copy secondary_id | -re
  **–verboselevel** *level*  
  Spécifie le niveau des messages ajoutés à l'historique d'envoi des journaux. *level* est l'un des entiers suivants :  
   
-|level|Description|  
+|level| Description|  
 |-----------|-----------------|  
 |0|N'envoie en sortie aucun message de traçage et de débogage.|  
 |1|Envoie en sortie des messages de gestion des erreurs.|  
@@ -64,10 +67,10 @@ sqllogship -server instance_name { -backup primary_id | -copy secondary_id | -re
 |4|Envoie en sortie tous les messages de traçage et de débogage.|  
   
  **–logintimeout** *timeout_value*  
- Spécifie le délai accordé pour se connecter à l'instance de serveur avant l'expiration de la tentative. La valeur par défaut est 15 secondes. *timeout_value* a la valeur **int***.*  
+ Spécifie le délai accordé pour se connecter à l'instance de serveur avant l'expiration de la tentative. La valeur par défaut est 15 secondes. *timeout_value* est **int ***.*  
   
  **-querytimeout** *timeout_value*  
- Spécifie le délai alloué au démarrage de l'opération spécifiée avant l'expiration de la tentative. Le paramètre par défaut est l'absence de délai d'attente. *timeout_value* a la valeur **int***.*  
+ Spécifie le délai alloué au démarrage de l'opération spécifiée avant l'expiration de la tentative. Le paramètre par défaut est l'absence de délai d'attente. *timeout_value* est **int ***.*  
   
 ## <a name="remarks"></a>Notes  
  Il est recommandé d'utiliser les travaux de sauvegarde, de copie et de restauration pour effectuer les opérations correspondantes quand cela est possible. Pour démarrer ces travaux à partir d’une opération de traitement ou d’une autre application, appelez la procédure stockée [sp_start_job](../relational-databases/system-stored-procedures/sp-start-job-transact-sql.md) .  
@@ -90,11 +93,11 @@ sqllogship -server instance_name { -backup primary_id | -copy secondary_id | -re
   
 ## <a name="see-also"></a>Voir aussi  
  [À propos de la copie des journaux des transactions &#40;SQL Server&#41;](../database-engine/log-shipping/about-log-shipping-sql-server.md)   
- [log_shipping_primary_databases &#40; Transact-SQL &#41;](../relational-databases/system-tables/log-shipping-primary-databases-transact-sql.md)   
- [log_shipping_secondary &#40; Transact-SQL &#41;](../relational-databases/system-tables/log-shipping-secondary-transact-sql.md)   
- [sp_cleanup_log_shipping_history &#40; Transact-SQL &#41;](../relational-databases/system-stored-procedures/sp-cleanup-log-shipping-history-transact-sql.md)   
- [sp_help_log_shipping_primary_database &#40; Transact-SQL &#41;](../relational-databases/system-stored-procedures/sp-help-log-shipping-primary-database-transact-sql.md)   
- [sp_help_log_shipping_secondary_database &#40; Transact-SQL &#41;](../relational-databases/system-stored-procedures/sp-help-log-shipping-secondary-database-transact-sql.md)   
+ [log_shipping_primary_databases &#40;Transact-SQL&#41;](../relational-databases/system-tables/log-shipping-primary-databases-transact-sql.md)   
+ [log_shipping_secondary &#40;Transact-SQL&#41;](../relational-databases/system-tables/log-shipping-secondary-transact-sql.md)   
+ [sp_cleanup_log_shipping_history &#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/sp-cleanup-log-shipping-history-transact-sql.md)   
+ [sp_help_log_shipping_primary_database &#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/sp-help-log-shipping-primary-database-transact-sql.md)   
+ [sp_help_log_shipping_secondary_database &#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/sp-help-log-shipping-secondary-database-transact-sql.md)   
  [sp_start_job &#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/sp-start-job-transact-sql.md)  
   
   

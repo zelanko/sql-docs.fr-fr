@@ -1,5 +1,5 @@
 ---
-title: ISSAbort::Abort (OLE DB) | Documents Microsoft
+title: ISSAbort::Abort (OLE DB) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -16,15 +16,15 @@ apitype: COM
 helpviewer_keywords: Abort method
 ms.assetid: a5bca169-694b-4895-84ac-e8fba491e479
 caps.latest.revision: "17"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0ec5d868f317096ead72757d55bdfcfbf2bebecb
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 023bf3428adb186b170ddb2e3a70e5f8dd7cff18
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="issabortabort-ole-db"></a>ISSAbort::Abort (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,9 +32,9 @@ ms.lasthandoff: 11/17/2017
 
   Annule l'ensemble de lignes actuel plus toutes les commandes par lot associées à la commande actuelle.  
   
-Le **ISSAbort** interface, exposée dans le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournisseur OLE DB Native Client fournit le **ISSAbort::Abort** méthode qui est utilisée pour annuler l’ensemble de lignes actuel plus toutes les commandes regroupées par lot avec la commande ayant généré initialement l’ensemble de lignes, et qui n’ont pas terminé l’exécution.  
+L'interface **ISSAbort** , exposée dans le fournisseur OLE DB [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, fournit la méthode **ISSAbort::Abort** utilisée pour annuler l'ensemble de lignes actuel, plus les commandes regroupées par lot avec la commande ayant généré initialement l'ensemble de lignes et dont l'exécution n'est pas encore achevée.  
   
- **ISSAbort** est un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client interface spécifique au fournisseur disponible à l’aide de **QueryInterface** sur la **IMultipleResults** objet retourné par **ICommand::Execute** ou **IOpenRowset::OpenRowset**.  
+ **ISSAbort** est une interface propre au fournisseur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client disponible en utilisant **QueryInterface** sur l'objet **IMultipleResults** retourné par **ICommand::Execute** ou **IOpenRowset::OpenRowset**.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -49,7 +49,7 @@ HRESULT Abort(void);
  Dès que **ISSAbort::Abort** retourne S_OK, l'interface **IMultipleResults** associée adopte un état inutilisable et retourne DB_E_CANCELED à tous les appels de méthode (sauf pour les méthodes définies par l'interface **IUnknown** ) jusqu'à ce qu'elle soit diffusée. Si une interface **IRowset** a été obtenue à partir de l'interface **IMultipleResults** avant un appel à **à Abort**, elle adopte également un état inutilisable et retourne DB_E_CANCELED à tous les appels de méthode (sauf pour les méthodes définies par l'interface **IUnknown** et **IRowset::ReleaseRows**) jusqu'à ce qu'elle soit diffusée après l'appel en bonne et due forme de la méthode **ISSAbort::Abort**.  
   
 > [!NOTE]  
->  À partir de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], si l’état XACT_ABORT du serveur est activé, l’exécution de **ISSAbort::Abort** prendra fin et restaurer les transactions implicites ou explicites en cours lorsqu’il est connecté à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Les versions antérieures de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] n'abandonneront pas la transaction actuelle.  
+>  En commençant par [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], si l'état XACT_ABORT du serveur est défini sur ON, l'exécution de la méthode **ISSAbort::Abort** prendra fin et restaurera toutes les transactions implicites ou explicites actuelles lors de la connexion à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Les versions antérieures de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] n'abandonneront pas la transaction actuelle.  
   
 ## <a name="arguments"></a>Arguments  
  Aucun.  
@@ -65,7 +65,7 @@ HRESULT Abort(void);
  Le lot n'a pas été annulé.  
   
  E_FAIL  
- Une erreur spécifique au fournisseur s’est produite ; Pour plus d’informations, utilisez le [ISQLServerErrorInfo](http://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1) interface.  
+ Une erreur propre au fournisseur s'est produite. Pour obtenir des informations détaillées, utilisez l'interface [ISQLServerErrorInfo](http://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1) .  
   
  E_UNEXPECTED  
  L'appel à la méthode était inattendu. Par exemple, l'objet est dans un état zombie parce que la méthode **ISSAbort::Abort** a déjà été appelée.  

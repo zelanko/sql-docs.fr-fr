@@ -2,12 +2,13 @@
 title: "Mettre à niveau Analysis Services | Microsoft Docs"
 ms.custom: 
 ms.date: 09/12/2017
-ms.prod:
-- sql-server-2016
-- sql-server-2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: install-windows
 ms.reviewer: 
-ms.suite: 
-ms.technology: analysis-services
+ms.suite: sql
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -21,17 +22,20 @@ helpviewer_keywords:
 - installing Analysis Services, upgrading
 - SSAS, upgrading
 ms.assetid: a131d329-386e-4470-aaa9-ffcde4e5ec0c
-caps.latest.revision: "79"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.openlocfilehash: 7e6b4f4e6c984e8d3e6f88939e88d73dfc2d3909
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: eb0bcf7a72e59e58bdd4f980c5be175c2a0affdd
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="upgrade-analysis-services"></a>Mettre à niveau Analysis Services
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+  
   Les instances d’Analysis Services peuvent être mises à niveau vers une version SQL Server du même mode serveur pour tirer parti des fonctionnalités introduites dans la version actuelle, comme cela est décrit dans [Nouveautés d’Analysis Services](../../analysis-services/what-s-new-in-analysis-services.md).  
   
  Vous pouvez mettre à niveau chaque instance sur place, indépendamment des autres instances exécutées sur le même matériel. Toutefois, la plupart des administrateurs choisissent d’installer une nouvelle instance de la nouvelle version pour pouvoir tester l’application avant de transférer les charges de travail de production vers le nouveau serveur. Une mise à niveau sur place peut cependant être plus adaptée pour les serveurs de développement ou de test.  
@@ -75,13 +79,13 @@ ms.lasthandoff: 11/09/2017
   
  Les bases de données tabulaires et multidimensionnelles suivent des chemins d’accès de version différents. Des modèles multidimensionnels et tabulaires peuvent avoir par coïncidence un niveau de compatibilité similaire.  Les modes avancent à des vitesses différentes si les modifications de fonctionnalités n’affectent que l’un d’eux.  
   
- Le tableau suivant présente simplement les niveaux de compatibilité. Nous vous recommandons toutefois de consulter les rubriques détaillées pour savoir ce que fournit chaque niveau.  
+ Le tableau suivant présente simplement les niveaux de compatibilité. Nous vous recommandons toutefois de consulter les articles détaillés pour savoir ce que fournit chaque niveau.  
   
 ||||  
 |-|-|-|  
 |Tabulaire|1400|SQL Server 2017|
-|Tabulaire|1200|SQL Server 2016|  
-|Tabulaire|1103|SQL Server 2014|  
+|Tabulaire|1200|SQL Server 2016|  
+|Tabulaire|1103|SQL Server 2014|  
 |Tabulaire|1100|SQL Server 2012|  
 |(Multidimensionnel)|1100|SQL Server 2012 et versions ultérieures|  
 |(Multidimensionnel)|1050|SQL Server 2005, 2008, 2008 R2|  

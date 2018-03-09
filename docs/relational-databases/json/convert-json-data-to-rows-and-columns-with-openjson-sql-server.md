@@ -1,14 +1,14 @@
 ---
-title: "Conversion de données JSON en lignes et colonnes à l’aide d’OPENJSON (SQL Server) | Microsoft Docs"
+title: "Analyser et transformer des données JSON avec OPENJSON (SQL Server) | Microsoft Docs"
 ms.custom: 
 ms.date: 07/18/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: json
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-json
+ms.technology:
+- dbe-json
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,24 +16,24 @@ helpviewer_keywords:
 - JSON, importing
 - importing JSON
 ms.assetid: 0c139901-01e2-49ef-9d62-57e08e32c68e
-caps.latest.revision: "31"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: b40959b38860bc9e31bf093d7498c4391be19fce
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d6caf93638c66ff2c8c23842fafdedff1fd22fcb
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
-# <a name="convert-json-data-to-rows-and-columns-with-openjson-sql-server"></a>Conversion de données JSON en lignes et colonnes à l’aide d’OPENJSON (SQL Server)
+# <a name="parse-and-transform-json-data-with-openjson-sql-server"></a>Analyser et transformer des données JSON avec OPENJSON (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 La fonction d’ensemble de lignes **OPENJSON** convertit du texte JSON en un ensemble de lignes et de colonnes. Après avoir transformé une collection JSON en ensemble de lignes avec **OPENJSON**, vous pouvez exécuter n’importe quelle requête SQL sur les données retournées ou l’insérer dans une table SQL Server. 
   
 La fonction **OPENJSON** prend un seul objet JSON ou une collection d’objets JSON, et les transforme en une ou plusieurs lignes. Par défaut, la fonction **OPENJSON** retourne les données suivantes :
--   À partir d’un objet JSON, toutes les paires clé-valeur qu’elle trouve au premier niveau.
+-   À partir d’un objet JSON, toutes les paires clé/valeur qu’elle trouve au premier niveau.
 -   À partir d’un tableau JSON, tous les éléments du tableau avec leurs index.  
 
 Vous pouvez ajouter une clause **WITH** facultative afin de fournir un schéma qui définit explicitement la structure de la sortie.  
@@ -60,10 +60,10 @@ FROM OPENJSON(@json);
   
 **Résultats**  
   
-|Clé|valeur|type|  
+|Clé|valeur|Type|  
 |---------|-----------|----------|  
-|name|John|1|  
-|surname|Doe|1|  
+|NAME|John| 1|  
+|surname|Doe| 1|  
 |age|45|2|  
 |skills|["SQL","C#","MVC"]|4|
 
@@ -123,7 +123,7 @@ WITH (
   
 |Number|Date|Customer|Quantité|  
 |------------|----------|--------------|--------------|  
-|SO43659|2011-05-31T00:00:00|AW29825|1|  
+|SO43659|2011-05-31T00:00:00|AW29825| 1|  
 |SO43661|2011-06-01T00:00:00|AW73565|3|  
   
 Cette fonction retourne et met en forme les éléments d’un tableau JSON.  
@@ -145,10 +145,23 @@ Vous pouvez vérifier le niveau de compatibilité dans la vue `sys.databases` ou
 Vous pouvez changer le niveau de compatibilité d’une base de données à l’aide de la commande suivante :   
 `ALTER DATABASE <DatabaseName> SET COMPATIBILITY_LEVEL = 130`  
 
-## <a name="learn-more-about-the-built-in-json-support-in-sql-server"></a>En savoir plus sur la prise en charge intégrée de JSON dans SQL Server  
-Pour accéder à un grand nombre de solutions spécifiques, de cas d’usage et de recommandations, consultez les [billets de blog sur la prise en charge intégrée de JSON](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/) dans SQL Server et Azure SQL Database, écrits par Jovan Popovic (Microsoft Program Manager).
+## <a name="learn-more-about-json-in-sql-server-and-azure-sql-database"></a>En savoir plus sur JSON dans SQL Server et Azure SQL Database  
   
-## <a name="see-also"></a>Voir aussi  
+### <a name="microsoft-blog-posts"></a>Billets de blog Microsoft  
+  
+Pour accéder à un grand nombre de solutions spécifiques, de cas d’usage et de recommandations, consultez ces [billets de blog](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/) sur la prise en charge intégrée de JSON dans SQL Server et Azure SQL Database.  
+
+### <a name="microsoft-videos"></a>Vidéos Microsoft
+
+Pour obtenir une présentation visuelle de la prise en charge intégrée de JSON dans SQL Server et Azure SQL Database, consultez les vidéos suivantes :
+
+-   [SQL Server 2016 et prise en charge de JSON](https://channel9.msdn.com/Shows/Data-Exposed/SQL-Server-2016-and-JSON-Support)
+
+-   [Utilisation de JSON dans SQL Server 2016 et Azure SQL Database](https://channel9.msdn.com/Shows/Data-Exposed/Using-JSON-in-SQL-Server-2016-and-Azure-SQL-Database)
+
+-   [JSON : un pont entre les mondes relationnel et NoSQL](https://channel9.msdn.com/events/DataDriven/SQLServer2016/JSON-as-a-bridge-betwen-NoSQL-and-relational-worlds)
+  
+## <a name="see-also"></a> Voir aussi  
  [OPENJSON &#40;Transact-SQL&#41;](../../t-sql/functions/openjson-transact-sql.md)  
   
   

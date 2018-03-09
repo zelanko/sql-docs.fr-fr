@@ -2,27 +2,33 @@
 title: "Sauvegarder la base de données (page Général) | Microsoft Docs"
 ms.custom: 
 ms.date: 07/01/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: backup-restore
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-backup-restore
+ms.suite: sql
+ms.technology:
+- dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.swb.backupdatabase.general.f1
+f1_keywords:
+- sql13.swb.backupdatabase.general.f1
 ms.assetid: 5c344dfd-1ad3-41cc-98cd-732973b4a162
-caps.latest.revision: "64"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 13b0f7f81e96861fd9f18fc78cc65bce3343fed3
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: acb78ba1abb462f76dd26cd87062732b386f547e
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="back-up-database-general-page"></a>Sauvegarder la base de données (page Général)
-  La page **Général** de la boîte de dialogue **Sauvegarder la base de données** vous permet d'afficher ou de modifier les paramètres d'une opération de sauvegarde de base de données.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+La page **Général** de la boîte de dialogue **Sauvegarder la base de données** vous permet d'afficher ou de modifier les paramètres d'une opération de sauvegarde de base de données.  
   
  Pour plus d’informations sur les concepts de base de la sauvegarde, consultez [Vue d’ensemble de la sauvegarde &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-overview-sql-server.md).  
   
@@ -47,7 +53,7 @@ ms.lasthandoff: 11/09/2017
 ### <a name="source"></a>Source  
  Les options du volet **Source** identifient la base de données et spécifient le type de sauvegarde et le composant pour l'opération de sauvegarde.  
   
- **Base de données**  
+ **Sauvegarde de la base de données**  
  Sélectionnez la base de données à sauvegarder.  
   
  **Mode de récupération**  
@@ -58,7 +64,7 @@ ms.lasthandoff: 11/09/2017
   
 |Type de sauvegarde|Disponible pour|Restrictions|  
 |-----------------|-------------------|------------------|  
-|Complet|Bases de données, fichiers et groupes de fichiers|Sur la base de données **master** , seules des sauvegardes complètes sont possibles.<br /><br /> En mode de récupération simple, les sauvegardes des fichiers et des groupes de fichiers sont disponibles uniquement pour les groupes de fichiers en lecture seule.|  
+|Complète|Bases de données, fichiers et groupes de fichiers|Sur la base de données **master** , seules des sauvegardes complètes sont possibles.<br /><br /> En mode de récupération simple, les sauvegardes des fichiers et des groupes de fichiers sont disponibles uniquement pour les groupes de fichiers en lecture seule.|  
 |Différentielle|Bases de données, fichiers et groupes de fichiers|En mode de récupération simple, les sauvegardes des fichiers et des groupes de fichiers sont disponibles uniquement pour les groupes de fichiers en lecture seule.|  
 |Journal des transactions|Journaux des transactions|Les sauvegardes des journaux des transactions ne sont pas disponibles en mode de récupération simple.|  
   
@@ -66,7 +72,7 @@ ms.lasthandoff: 11/09/2017
  Permet de créer une sauvegarde de type copie uniquement. Une *sauvegarde de copie uniquement* est une sauvegarde [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] indépendante du mécanisme des sauvegardes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] conventionnelles. Pour plus d’informations, consultez [Sauvegardes de copie uniquement &#40;SQL Server&#41;](../../relational-databases/backup-restore/copy-only-backups-sql-server.md).  
   
 > [!NOTE]  
->  Quand l’option **Différentielle** est sélectionnée, vous ne pouvez pas créer de sauvegarde de copie uniquement.  
+>  Lorsque l'option **Différentielle** est sélectionnée, vous ne pouvez pas créer de sauvegarde de copie uniquement.  
   
  **Composant de sauvegarde**  
  Sélectionnez le composant de base de données à sauvegarder. Si **Journal des transactions** est sélectionné dans la liste **Type de sauvegarde** , cette option n'est pas activée.  
@@ -75,7 +81,7 @@ ms.lasthandoff: 11/09/2017
   
 |||  
 |-|-|  
-|**Base de données**|Indique que l'intégralité de la base de données doit être sauvegardée.|  
+|**Sauvegarde de la base de données**|Indique que l'intégralité de la base de données doit être sauvegardée.|  
 |**Fichiers et groupes de fichiers**|Indique que les fichiers et/ou groupes de fichiers spécifiés doivent être sauvegardés.<br /><br /> La sélection de cette option provoque l'affichage de la boîte de dialogue **Sélection de fichiers et de groupes de fichiers** . Une fois que vous avez sélectionné les fichiers ou groupes de fichiers à sauvegarder et cliqué sur **OK**, vos sélections apparaissent dans la zone **Fichiers et groupes de fichiers** .|  
   
 ### <a name="destination"></a>Destination  
@@ -131,7 +137,7 @@ Si vous avez sélectionné **URL** comme destination de la sauvegarde, les optio
   **Nouveau conteneur :**  
 Permet d’enregistrer un conteneur existant pour lequel vous n’avez pas de signature d’accès partagé.  Consultez [Se connecter à un abonnement Microsoft Azure](../../relational-databases/backup-restore/connect-to-a-microsoft-azure-subscription.md).
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Sauvegarder un journal des transactions &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)   
  [Sauvegarder des fichiers et des groupes de fichiers &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-files-and-filegroups-sql-server.md)   
  [Définir une unité de sauvegarde logique pour un fichier de disque &#40;SQL Server&#41;](../../relational-databases/backup-restore/define-a-logical-backup-device-for-a-disk-file-sql-server.md)   

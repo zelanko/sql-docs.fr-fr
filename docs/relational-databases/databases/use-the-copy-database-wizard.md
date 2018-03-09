@@ -2,9 +2,12 @@
 title: "Utiliser l’Assistant Copie de base de données | Microsoft Docs"
 ms.custom: 
 ms.date: 07/26/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: databases
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -25,18 +28,18 @@ helpviewer_keywords:
 - starting Copy Database Wizard
 ms.assetid: 7a999fc7-0a26-4a0d-9eeb-db6fc794f3cb
 caps.latest.revision: "64"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 7e53c91fb8462fb26fd5a94e20c7a6ba7e2f54d0
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 534d9cd96831bfc79475f99111580e36f3603add
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="use-the-copy-database-wizard"></a>Utiliser l'Assistant Copie de base de données
-L’Assistant Copie de base de données déplace ou copie des bases de données et certains objets serveur facilement à partir d’une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  vers une autre instance, sans temps d’arrêt du serveur. À l'aide de cet Assistant, vous pouvez effectuer les opérations suivantes : 
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] L’Assistant Copie de base de données déplace ou copie des bases de données et certains objets serveur facilement à partir d’une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vers une autre instance, sans temps d’arrêt du serveur. À l'aide de cet Assistant, vous pouvez effectuer les opérations suivantes : 
   
 -   Choisir un serveur source et un serveur de destination.  
   
@@ -95,11 +98,11 @@ L’Assistant Copie de base de données déplace ou copie des bases de données 
   
 -   Pour garantir des performances optimales de la base de données mise à niveau, exécutez [sp_updatestats (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-updatestats-transact-sql.md) (mise à jour des statistiques) sur la base de données mise à niveau.  
   
--   Lorsque vous déplacez ou copiez une base de données sur une autre instance de serveur et il est possible que vous deviez recréer sur cette autre instance de serveur une partie ou l’ensemble des métadonnées de la base de données, telles que les connexions et les travaux, afin de garantir la cohérence pour les utilisateurs et les applications. Pour plus d’informations, consultez [Gérer les métadonnées lors de la mise à disposition d’une base de données sur une autre instance de serveur &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md).  
+-   Lorsque vous déplacez ou copiez une base de données sur une autre instance de serveur et il est possible que vous deviez recréer sur cette autre instance de serveur une partie ou l’ensemble des métadonnées de la base de données, telles que les connexions et les travaux, afin de garantir la cohérence pour les utilisateurs et les applications. Pour plus d’informations, consultez [Gérer les métadonnées durant la mise à disposition d’une base de données sur une autre instance de serveur &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md).  
   
 
   
-###  <a name="Permissions"></a> Autorisations  
+###  <a name="Permissions"></a> Permissions  
  Vous devez être membre du rôle de serveur fixe **sysadmin** sur le serveur source et sur le serveur de destination.  
   
 ##  <a name="Overview"></a> Pages de l’Assistant Copie de base de données 
@@ -115,10 +118,10 @@ Utilisé pour identifier le nom du serveur sur lequel se trouvent les bases de d
 -    **Utiliser l'authentification Windows**  
 Permet à un utilisateur de se connecter par le biais d’un compte d’utilisateur Microsoft Windows.
 
--    **Utiliser l'authentification SQL Server**  
+-    **Utiliser l’authentification SQL Server**  
 Permet à un utilisateur de se connecter en fournissant un nom d’utilisateur et un mot de passe d’authentification SQL Server.
 
-     -    **Nom d'utilisateur**  
+     -    **User name**  
 Utilisé pour entrer le nom d’utilisateur avec lequel se connecter. Cette option est disponible uniquement si vous avez choisi de vous connecter via l’ **authentification SQL Server**.
 
      -    **Mot de passe**  
@@ -135,10 +138,10 @@ Utilisé pour identifier le nom du serveur sur lequel se trouvent les bases de d
 -    **Utiliser l'authentification Windows**  
 Permet à un utilisateur de se connecter par le biais d’un compte d’utilisateur Microsoft Windows.
 
--    **Utiliser l'authentification SQL Server**  
+-    **Utiliser l’authentification SQL Server**  
 Permet à un utilisateur de se connecter en fournissant un nom d’utilisateur et un mot de passe d’authentification SQL Server.
 
-     -    **Nom d'utilisateur**  
+     -    **User name**  
 Utilisé pour entrer le nom d’utilisateur avec lequel se connecter. Cette option est disponible uniquement si vous avez choisi de vous connecter via l’ **authentification SQL Server**.
 
      -    **Mot de passe**  
@@ -238,7 +241,7 @@ Répertorie les objets qui seront transférés sur le serveur de destination.  P
 ###   <a name="location-of-source-database-files"></a>Emplacement des fichiers de la base de données source
 Cette page est disponible uniquement lorsque la source et la destination correspondent à des serveurs différents.  Spécifiez un partage de système de fichiers qui contient les fichiers de base de données sur le serveur source.
   
--    **Base de données**  
+-    **Sauvegarde de la base de données**  
      Affiche le nom de chaque base de données en cours de déplacement.  
   
 -    **Emplacement du dossier**  
@@ -273,7 +276,7 @@ Spécifiez à quel moment vous voulez que l’opération de déplacement ou de c
 -    **Exécuter immédiatement**  
      Le package SSIS s’exécute une fois l’Assistant terminé.
   
--    **Planifier**  
+-    **Planification**  
      Le package SSIS s’exécute selon une planification. 
   
      -    **Modifier la planification**   

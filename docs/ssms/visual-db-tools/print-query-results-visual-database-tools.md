@@ -3,8 +3,11 @@ title: "Imprimer les résultats d’une requête (Visual Database Tools) | Micro
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,16 +20,16 @@ ms.assetid: 025497d1-54a0-402c-81d8-b8b597a0de11
 caps.latest.revision: "3"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7ba40459f019675c3975b31155cbd7f3cfbfa45e
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 60759d9fb81b6602665325dc8f5c9f5fba702d99
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="print-query-results-visual-database-tools"></a>Imprimer les résultats d'une requête (Visual Database Tools)
-Pour imprimer les résultats de votre requête, vous pouvez copier le contenu du [volet Résultats](../../ssms/visual-db-tools/results-pane-visual-database-tools.md) dans un autre programme Windows, un traitement de texte par exemple, puis le mettre en forme et l’imprimer.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Pour imprimer les résultats de votre requête, vous pouvez copier le contenu du [volet Résultats](../../ssms/visual-db-tools/results-pane-visual-database-tools.md) dans un autre programme Windows, un traitement de texte par exemple, puis le mettre en forme et l’imprimer.  
   
 Le Concepteur de requêtes et de vues met les résultats de la requête dans le Presse-papiers, où il sépare les colonnes par des tabulations et les lignes par un retour chariot/nouvelle ligne.  
   
@@ -42,6 +45,6 @@ Le Concepteur de requêtes et de vues met les résultats de la requête dans le 
   
 5.  Mettez en forme les résultats, puis imprimez-les.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [Effectuer des opérations de base concernant les requêtes &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/perform-basic-operations-with-queries-visual-database-tools.md)  
   

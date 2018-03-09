@@ -1,5 +1,5 @@
 ---
-title: "Les étapes dans le SQL Server Assistant Importation et exportation | Documents Microsoft"
+title: "Étapes de l’Assistant Importation et Exportation SQL Server | Microsoft Docs"
 ms.custom: 
 ms.date: 02/16/2017
 ms.prod: sql-non-specified
@@ -13,58 +13,56 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 816fb1bd-7bb9-450d-ad65-e4c2d02eaff8
-caps.latest.revision: 15
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 22d1f4b78fadab6d7b6659104b54a564f11da308
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/27/2017
-
+ms.openlocfilehash: b1f3defee5da1c6cc98e985cf6f8eb6bc30479b0
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="steps-in-the-sql-server-import-and-export-wizard"></a>Étapes dans SQL Server Assistant Importation et exportation
-Cette rubrique décrit la séquence d’étapes pour l’importation et exportation de données avec le SQL Server Assistant Importation et exportation. Il contient également des liens vers les différentes pages de documentation qui décrivent chaque page ou de la boîte de dialogue que s’affiche dans l’Assistant.
+# <a name="steps-in-the-sql-server-import-and-export-wizard"></a>Étapes de l’Assistant Importation et Exportation SQL Server
+Cette rubrique décrit la série d’étapes permettant d’importer et d’exporter des données avec l’Assistant Importation et Exportation SQL Server. Elle contient également des liens vers les différentes pages de documentation qui décrivent chaque page ou boîte de dialogue s’affichant dans l’Assistant.
 
-Cette rubrique décrit uniquement les **étapes** dans l’Assistant. Si vous avez besoin d’un autre élément, consultez [les tâches et contenu](#related).
+Cette rubrique décrit uniquement les **étapes** de l’Assistant. Si ce n’est pas ce que vous recherchez, consultez [Tâches et contenus connexes](#related).
 
-## <a name="steps-for-importing-and-exporting-data"></a>Étapes pour l’importation et exportation de données  
- Le tableau suivant répertorie les étapes liées à l’importation et à l’exportation des données et les pages correspondantes de l’Assistant. Selon les options que vous sélectionnez dans l’Assistant, vous n’en général, consultez toutes ces pages.  
+## <a name="steps-for-importing-and-exporting-data"></a>Étapes d’importation et d’exportation de données  
+ Le tableau suivant répertorie les étapes liées à l’importation et à l’exportation des données et les pages correspondantes de l’Assistant. En fonction des options que vous sélectionnez dans l’Assistant, il est normal que les pages ne soient pas toutes visibles.  
 
-Pour examiner rapidement les plusieurs écrans qui s’affichent dans une session normale, examinez cet exemple de bout en bout simple sur une seule page - [prise en main avec cet exemple simple de l’Assistant Importation et exportation](../../integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md).
+Pour un rapide aperçu des différents écrans qui s’affichent dans une session normale, étudiez de bout en bout cet exemple facile tenant sur une seule page : [Bien démarrer avec cet exemple simple de l’Assistant Importation et Exportation](../../integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md).
 
 |Étape|Pages de l’assistant|  
 |----------|------------------|  
 |**Bienvenue**<br />Vous n’avez aucune action à effectuer dans cette page.|[Assistant Importation et Exportation SQL Server](../../integration-services/import-export-data/welcome-to-sql-server-import-and-export-wizard.md)|  
-|**Choisissez la source** des données.|[Choisissez une Source de données](../../integration-services/import-export-data/choose-a-data-source-sql-server-import-and-export-wizard.md)|  
-|**Choisissez la destination** des données.|[Choisir une Destination](../../integration-services/import-export-data/choose-a-destination-sql-server-import-and-export-wizard.md)|  
-|**Configurer la destination**. (étapes facultatives)<br /><br /> -   Créez une base de données de destination.<br />-   Si vous copiez des données dans un fichier texte, configurer des paramètres supplémentaires.|[Créer la base de données](../../integration-services/import-export-data/create-database-sql-server-import-and-export-wizard.md)<br /><br />[Configurer la Destination de fichier plat](../../integration-services/import-export-data/configure-flat-file-destination-sql-server-import-and-export-wizard.md)|  
-|**Spécifiez ce que vous souhaitez copier.**|[Spécifier la copie de la Table ou la requête](../../integration-services/import-export-data/specify-table-copy-or-query-sql-server-import-and-export-wizard.md)<br /><br />[Sélectionner les Tables sources et des vues](../../integration-services/import-export-data/select-source-tables-and-views-sql-server-import-and-export-wizard.md)<br /><br />[Fournir une requête Source](../../integration-services/import-export-data/provide-a-source-query-sql-server-import-and-export-wizard.md)|  
-|**Configurer l’opération de copie**. (étapes facultatives)<br /><br /> -   Créer une table de destination.<br />-Décider quoi faire si l’Assistant ne sait pas comment mapper des types de données entre la source et de destination que vous avez sélectionné.<br />-   Passer en revue les mappages de colonnes entre la source et de destination.<br />-   Gérer les problèmes de conversion de types de données entre la source et la destination.<br />-   Afficher un aperçu des données à copier.|[Créer l’instruction SQL Table](../../integration-services/import-export-data/create-table-sql-statement-sql-server-import-and-export-wizard.md)<br /><br />[Convertir les Types sans vérification de la Conversion](../../integration-services/import-export-data/convert-types-without-conversion-checking-sql-server-import-and-export-wizard.md)<br /><br />[Mappages de colonnes](../../integration-services/import-export-data/column-mappings-sql-server-import-and-export-wizard.md)<br /><br />[Passez en revue le mappage de Type de données](../../integration-services/import-export-data/review-data-type-mapping-sql-server-import-and-export-wizard.md)<br /><br />[Boîte de dialogue de détails de Conversion de colonne](../../integration-services/import-export-data/column-conversion-details-dialog-box-sql-server-import-and-export-wizard.md)<br /><br />[Boîte de dialogue Aperçu données](../../integration-services/import-export-data/preview-data-dialog-box-sql-server-import-and-export-wizard.md)|  
-|**Copier les données.**<br /><br /> Si vous le souhaitez, enregistrez vos paramètres sous forme de package SQL Server Integration Services (SSIS).|[Enregistrez et exécutez le Package](../../integration-services/import-export-data/save-and-run-package-sql-server-import-and-export-wizard.md)<br /><br />[Enregistrer le package SSIS](../../integration-services/import-export-data/save-ssis-package-sql-server-import-and-export-wizard.md)<br /><br />[Terminez l’Assistant](../../integration-services/import-export-data/complete-the-wizard-sql-server-import-and-export-wizard.md)<br /><br />[Opération](../../integration-services/import-export-data/performing-operation-sql-server-import-and-export-wizard.md)|  
+|**Choisissez la source** des données.|[Choisir une source de données](../../integration-services/import-export-data/choose-a-data-source-sql-server-import-and-export-wizard.md)|  
+|**Choisissez la destination** des données.|[Choisir une destination](../../integration-services/import-export-data/choose-a-destination-sql-server-import-and-export-wizard.md)|  
+|**Configurez la destination**. (étapes facultatives)<br /><br /> -   Créez une base de données de destination.<br />-   Si vous copiez des données dans un fichier texte, configurer des paramètres supplémentaires.|[Créer une base de données](../../integration-services/import-export-data/create-database-sql-server-import-and-export-wizard.md)<br /><br />[Configurer la destination du fichier plat](../../integration-services/import-export-data/configure-flat-file-destination-sql-server-import-and-export-wizard.md)|  
+|**Spécifiez ce que vous souhaitez copier**.|[Spécifier la copie ou l’interrogation de table](../../integration-services/import-export-data/specify-table-copy-or-query-sql-server-import-and-export-wizard.md)<br /><br />[Sélectionner les tables et les vues sources](../../integration-services/import-export-data/select-source-tables-and-views-sql-server-import-and-export-wizard.md)<br /><br />[Fournir une requête source](../../integration-services/import-export-data/provide-a-source-query-sql-server-import-and-export-wizard.md)|  
+|**Configurez l’opération de copie**. (étapes facultatives)<br /><br /> -   Créer une table de destination.<br />-   Déterminer la marche à suivre si l’Assistant ne sait pas comment mapper des types de données entre la source et la destination sélectionnées.<br />-   Passer en revue les mappages de colonnes entre la source et de destination.<br />-   Gérer les problèmes de conversion de types de données entre la source et la destination.<br />-   Afficher un aperçu des données à copier.|[Instruction SQL Create Table](../../integration-services/import-export-data/create-table-sql-statement-sql-server-import-and-export-wizard.md)<br /><br />[Convertir les types sans vérifier la conversion](../../integration-services/import-export-data/convert-types-without-conversion-checking-sql-server-import-and-export-wizard.md)<br /><br />[Mappage de colonnes](../../integration-services/import-export-data/column-mappings-sql-server-import-and-export-wizard.md)<br /><br />[Vérifier le mappage de type de données](../../integration-services/import-export-data/review-data-type-mapping-sql-server-import-and-export-wizard.md)<br /><br />[Boîte de dialogue Détails de la conversion de colonne](../../integration-services/import-export-data/column-conversion-details-dialog-box-sql-server-import-and-export-wizard.md)<br /><br />[Boîte de dialogue Aperçu des données](../../integration-services/import-export-data/preview-data-dialog-box-sql-server-import-and-export-wizard.md)|  
+|**Copiez les données**.<br /><br /> Si vous le souhaitez, enregistrez vos paramètres comme package SQL Server Integration Services (SSIS).|[Enregistrer et exécuter le package](../../integration-services/import-export-data/save-and-run-package-sql-server-import-and-export-wizard.md)<br /><br />[Enregistrer le package SSIS](../../integration-services/import-export-data/save-ssis-package-sql-server-import-and-export-wizard.md)<br /><br />[Terminer l’Assistant](../../integration-services/import-export-data/complete-the-wizard-sql-server-import-and-export-wizard.md)<br /><br />[Exécution de l’opération](../../integration-services/import-export-data/performing-operation-sql-server-import-and-export-wizard.md)|  
 
 > [!TIP]
 > Pour afficher la documentation sur une page ou une boîte de dialogue déterminée de l’Assistant, appuyez sur la touche F1 à partir de cette page.
 
-## <a name="related"></a>Contenu et des tâches connexes  
-Voici quelques autres tâches de base.
--   **Voir un exemple rapide du fonctionne de l’Assistant.**
+## <a name="related"></a> Tâches et contenus connexes  
+Voici d’autres tâches élémentaires.
+-   **Consulter un exemple rapide sur le fonctionnement de l’Assistant.**
 
-    -   **Si vous préférez afficher les captures d’écran.** Examinez cet exemple de bout en bout simple sur une seule page - [prise en main avec cet exemple simple de l’Assistant Importation et exportation](../../integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md).
+    -   **Si vous préférez afficher des captures d’écran.** Jetez un œil à cet exemple simple et complet qui tient sur une seule page : [Bien démarrer avec cet exemple simple de l’Assistant Importation et Exportation](../../integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md).
 
-    -   **Si vous préférez regarder une vidéo.** Regardez cette vidéo de quatre minutes à partir de YouTube qui montre l’Assistant et explique clairement et simplement comment exporter des données vers Excel - [à l’aide du SQL Server Assistant Importation et exportation pour l’exportation vers Excel](https://go.microsoft.com/fwlink/?linkid=829049).
+    -   **Si vous préférez regarder une vidéo.** Regardez cette vidéo de quatre minutes sur YouTube qui décrit l’Assistant et explique à l’aide d’instructions claires et simples comment exporter des données vers Excel : [Using the SQL Server Import and Export Wizard to Export to Excel](https://go.microsoft.com/fwlink/?linkid=829049).
 
--   **En savoir plus sur le fonctionne de l’Assistant.**
+-   **Approfondir ses connaissances sur le fonctionnement de l’Assistant.**
 
-    -   **En savoir plus sur l’Assistant.** Si vous recherchez une vue d’ensemble de l’Assistant, consultez [Importer et exporter des données avec l’Assistant Importation et Exportation SQL Server](../../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md).
+    -   **Découvrez-en plus sur l’Assistant.** Si vous recherchez une vue d’ensemble de l’Assistant, consultez [Importer et exporter des données avec l’Assistant Importation et Exportation SQL Server](../../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md).
 
-    -   **Découvrez comment se connecter à des destinations et des sources de données.** Si vous recherchez des informations sur la façon de se connecter à vos données, sélectionnez la page à partir de la liste ici - [se connecter aux sources de données avec le SQL Server Assistant Importation et exportation](../../integration-services/import-export-data/connect-to-data-sources-with-the-sql-server-import-and-export-wizard.md). Il existe une page distincte de la documentation pour chacun de plusieurs sources de données couramment utilisées. 
+    -   **Découvrez comment se connecter à des sources et des destinations de données.** Si vous avez besoin d’informations sur la façon de vous connecter à vos données, sélectionnez la page qui vous intéresse à partir de la liste ici : [Se connecter à des sources de données avec l’Assistant Importation et Exportation SQL Server](../../integration-services/import-export-data/connect-to-data-sources-with-the-sql-server-import-and-export-wizard.md). Il existe une page de documentation propre à chacune des différentes sources de données couramment utilisées. 
 
 -   **Démarrer l’Assistant.** Si vous êtes prêt à exécuter l’Assistant et souhaitez simplement savoir comment le démarrer, consultez [Démarrer l’Assistant Importation et Exportation SQL Server](../../integration-services/import-export-data/start-the-sql-server-import-and-export-wizard.md).
 
 -     **Procurez-vous l’Assistant.** Si vous souhaitez exécuter l’Assistant, mais [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] n’est pas installé sur votre ordinateur, vous pouvez installer l’Assistant Importation et Exportation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en installant SSDT (SQL Server Data Tools). Pour plus d’informations, consultez [Télécharger SSDT (SQL Server Data Tools)](https://msdn.microsoft.com/library/mt204009.aspx).
-
 
 

@@ -19,17 +19,17 @@ helpviewer_keywords:
 - Resource Governor, backup compression
 ms.assetid: 01796551-578d-4425-9b9e-d87210f7ba72
 caps.latest.revision: "25"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 967060be06fd9b7769705aa0995ba288f9ba19f8
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 3a5cd10ed1fc52431898748772038883b3bc4851
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
-# <a name="use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql"></a>Utiliser Resource Governor pour limiter l'utilisation de l'UC par compression de la sauvegarde (Transact-SQL)
+# <a name="use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql"></a>Utiliser le gouverneur de ressources pour limiter l'utilisation de l'UC par compression de sauvegarde (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   Par défaut, sauvegarder en utilisant la compression augmente considérablement l'utilisation de l'UC et l'UC supplémentaire consommée par le processus de compression peut nuire aux opérations simultanées. Ainsi, il peut être préférable, dans une session où l’utilisation du processeur est limitée, de créer une sauvegarde compressée de priorité basse à l’aide de[Resource Governor](../../relational-databases/resource-governor/resource-governor.md) en cas de contention du processeur. Cette rubrique présente un scénario qui classifie les sessions d'un utilisateur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] particulier en les mappant à un groupe de charge de travail de Resource Governor qui limite l'utilisation de l'UC dans de tels cas.  
@@ -92,7 +92,7 @@ ms.lasthandoff: 11/17/2017
   
  Cet exemple crée une connexion pour le compte Windows *domaine_nom*`\MAX_CPU` , puis accorde l’autorisation VIEW SERVER STATE à la connexion. Cette autorisation vous permet de vérifier la classification de Resource Governor pour les sessions de la connexion. L’exemple crée ensuite un utilisateur pour *domaine_nom*`\MAX_CPU` et l’ajoute au rôle de base de données fixe db_backupoperator pour l’exemple de base de données [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] . Ce nom d'utilisateur sera utilisé par la fonction classifieur de Resource Governor.  
   
-```tsql  
+```sql  
 -- Create a SQL Server login for low-priority operations  
 USE master;  
 CREATE LOGIN [domain_name\MAX_CPU] FROM WINDOWS;  
@@ -207,7 +207,7 @@ GO
 > [!IMPORTANT]  
 >  L’exemple suivant utilise le nom d’utilisateur de l’exemple d’utilisateur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] créé dans « Exemple A : configuration d’une connexion et d’un utilisateur (Transact-SQL) », *domaine_nom*`\MAX_CPU`. Remplacez-le par le nom de l'utilisateur de la connexion que vous projetez d'utiliser pour créer les sauvegardes compressées de priorité basse.  
   
-```tsql  
+```sql  
 -- Configure Resource Governor.  
 BEGIN TRAN  
 USE master;  
@@ -249,7 +249,7 @@ GO
 ##  <a name="verifying"></a> Vérification de la classification de la session active (Transact-SQL)  
  Éventuellement, connectez-vous en tant que l’utilisateur spécifié dans votre fonction classifieur et vérifiez la classification des sessions au moyen de l’instruction [SELECT](../../t-sql/queries/select-transact-sql.md) suivante dans l’Explorateur d’objets :  
   
-```tsql  
+```sql  
 USE master;  
 SELECT sess.session_id, sess.login_name, sess.group_id, grps.name   
 FROM sys.dm_exec_sessions AS sess   
@@ -272,7 +272,7 @@ GO
 ### <a name="example-c-creating-a-compressed-backup-transact-sql"></a>Exemple C : création d'une sauvegarde compressée (Transact-SQL)  
  L’exemple [BACKUP](../../t-sql/statements/backup-transact-sql.md) suivant crée une sauvegarde complète compressée de la base de données [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] dans un fichier de sauvegarde récemment formaté, `Z:\SQLServerBackups\AdvWorksData.bak`.  
   
-```tsql  
+```sql  
 --Run backup statement in the gBackup session.  
 BACKUP DATABASE AdventureWorks2012 TO DISK='Z:\SQLServerBackups\AdvWorksData.bak'   
 WITH   
@@ -285,7 +285,7 @@ GO
   
  [&#91;Haut&#93;](#Top)  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Créer et tester une fonction classifieur définie par l’utilisateur](../../relational-databases/resource-governor/create-and-test-a-classifier-user-defined-function.md)   
  [Resource Governor](../../relational-databases/resource-governor/resource-governor.md)  
   

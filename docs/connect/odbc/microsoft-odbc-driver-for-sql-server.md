@@ -8,20 +8,21 @@ ms.service:
 ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 9f2ae91b-06af-4c9a-9d24-062df7bc4662
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 3081be03ffb4b8291a9d27c5eb2049f38d0ae4fc
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 44d62e94b53d1599a0fcfb3f5815719bdbc2986d
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="microsoft-odbc-driver-for-sql-server"></a>Pilote Microsoft ODBC pour SQL Server
 
@@ -43,13 +44,21 @@ Nous avons un fichier de petite .zip qui contient le code source d’un programm
 
 ## <a name="documentation"></a>Documentation  
 
+### <a name="features"></a>Fonctionnalités
+
+- [Fournisseurs de magasins de clés personnalisé](../../connect/odbc/custom-keystore-providers.md)
+- [Source de données et les mots clés de chaîne de connexion et les attributs](dsn-connection-string-attribute.md)
+- [SQL Server Native Client](../../relational-databases/native-client/features/sql-server-native-client-features.md) (les fonctionnalités disponibles s’appliquent également, sans OLEDB, le pilote ODBC pour SQL Server)
+- [À l’aide de toujours chiffré](../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md)
+- [À l’aide d’Azure Active Directory](../../connect/odbc/using-azure-active-directory.md)
+- [À l’aide de la résolution IP réseau Transparent](../../connect/odbc/using-transparent-network-ip-resolution.md)
+
 ### <a name="linux-and-macos"></a>Linux et Mac OS
 
 - [Installation du pilote](../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)
+- [Connexion à SQL Server](../../connect/odbc/linux-mac/connection-string-keywords-and-data-source-names-dsns.md)
 - [Connexion avec **bcp**](../../connect/odbc/linux-mac/connecting-with-bcp.md)
 - [Connexion avec **sqlcmd**](../../connect/odbc/linux-mac/connecting-with-sqlcmd.md)
-- [À l’aide de l’authentification intégrée (Kerberos)](../../connect/odbc/linux-mac/using-integrated-authentication.md)
-- [Mots clés de chaîne de connexion et les noms de Source de données](../../connect/odbc/linux-mac/connection-string-keywords-and-data-source-names-dsns.md)
 - [Suivi d’accès aux données](../../connect/odbc/linux-mac/data-access-tracing-with-the-odbc-driver-on-linux.md)
 - [Forum aux Questions](../../connect/odbc/linux-mac/frequently-asked-questions-faq-for-odbc-linux.md)
 - [Installation du Gestionnaire de pilotes](../../connect/odbc/linux-mac/installing-the-driver-manager.md)
@@ -57,6 +66,7 @@ Nous avons un fichier de petite .zip qui contient le code source d’un programm
 - [Instructions de programmation](../../connect/odbc/linux-mac/programming-guidelines.md)
 - [Notes de publication](../../connect/odbc/linux-mac/release-notes.md)
 - [Prise en charge de la haute disponibilité et récupération d’urgence](../../connect/odbc/linux-mac/odbc-driver-on-linux-support-for-high-availability-disaster-recovery.md)
+- [À l’aide de l’authentification intégrée (Kerberos)](../../connect/odbc/linux-mac/using-integrated-authentication.md)
 
 ### <a name="windows"></a>Windows
 
@@ -67,13 +77,7 @@ Nous avons un fichier de petite .zip qui contient le code source d’un programm
 - [Notes de publication](../../connect/odbc/windows/release-notes.md)
 - [Configuration système requise, installation et fichiers de pilote](../../connect/odbc/windows/system-requirements-installation-and-driver-files.md)
 
-### <a name="features"></a>Fonctionnalités
 
-- [Fournisseurs de magasins de clés personnalisé](../../connect/odbc/custom-keystore-providers.md)
-- [SQL Server Native Client](../../relational-databases/native-client/features/sql-server-native-client-features.md) (les fonctionnalités disponibles s’appliquent également, sans OLEDB, le pilote ODBC pour SQL Server)
-- [À l’aide de toujours chiffré](../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md)
-- [À l’aide d’Azure Active Directory](../../connect/odbc/using-azure-active-directory.md)
-- [À l’aide de la résolution IP réseau Transparent](../../connect/odbc/using-transparent-network-ip-resolution.md)
 
 ## <a name="community"></a>Communauté  
 - [Blog de l’équipe Microsoft ODBC Driver for SQL Server](http://blogs.msdn.com/sqlnativeclient/default.aspx)  

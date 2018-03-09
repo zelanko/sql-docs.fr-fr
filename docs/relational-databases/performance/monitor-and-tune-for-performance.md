@@ -1,10 +1,13 @@
 ---
 title: "Surveillance et réglage des performances | Microsoft Docs"
-ms.custom: SQL2016_New_Updated
+ms.custom: 
 ms.date: 07/18/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: performance
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -28,18 +31,18 @@ helpviewer_keywords:
 - monitoring server performance [SQL Server], about monitoring server performance
 ms.assetid: 87f23f03-0f19-4b2e-bfae-efa378f7a0d4
 caps.latest.revision: "35"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 28e89f06241fe44250b058e03717a30da62f308e
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 32bb41096ecb83b0a1bd5b9cd51f406788419b4d
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="monitor-and-tune-for-performance"></a>Surveiller et régler les performances
-  Le but de la surveillance des bases de données est d'évaluer le fonctionnement d'un serveur. Une surveillance efficace implique la prise d'instantanés périodiques des performances actuelles afin d'isoler les processus à l’origine des problèmes, ainsi que la collecte de données en continu pour suivre de près les tendances des performances.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Le but de la surveillance des bases de données est d’évaluer les performances d’un serveur. Une surveillance efficace implique la prise d'instantanés périodiques des performances actuelles afin d'isoler les processus à l’origine des problèmes, ainsi que la collecte de données en continu pour suivre de près les tendances des performances.  
   
  L'évaluation continue des performances de la base de données vous permet de réduire les temps de réponse et accélère le débit, ce qui optimise les performances. Un trafic réseau efficace, des E/S disque et l'utilisation de l'UC sont essentiels pour maximiser les performances. Vous devez analyser soigneusement les besoins de l'application, comprendre la structure logique et physique des données, évaluer l'utilisation de la base de données et négocier les compromis entre des utilisations conflictuelles telles que le traitement transactionnel en ligne par rapport à l'aide à la décision.  
   
@@ -74,7 +77,7 @@ La modification des conditions aboutit à un changement des performances. Dans v
 |[Établir un niveau de référence des performances](../../relational-databases/performance/establish-a-performance-baseline.md)|Comment établir un niveau de référence des performances.|  
 |[Isoler les problèmes de performance](../../relational-databases/performance/isolate-performance-problems.md)|Isoler les problèmes de performance des bases de données.|  
 |[Identifier les goulots d'étranglement](../../relational-databases/performance/identify-bottlenecks.md)|Surveiller et suivre les performances du serveur afin d’identifier les goulots d’étranglement.|  
-|[Analyse des performances et surveillance de l'activité du serveur](../../relational-databases/performance/server-performance-and-activity-monitoring.md)|Utiliser [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et les outils de surveillance de l’activité et des performances Windows.|  
+|[Analyse des performances et surveillance de l’activité du serveur](../../relational-databases/performance/server-performance-and-activity-monitoring.md)|Utiliser [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et les outils de surveillance de l’activité et des performances Windows.|  
 |[Afficher et enregistrer des plans d'exécution](../../relational-databases/performance/display-and-save-execution-plans.md)|Afficher et enregistrer des plans d’exécution dans un fichier au format XML.|  
 |[Statistiques des requêtes dynamiques](../../relational-databases/performance/live-query-statistics.md)|Afficher les statistiques en temps réel sur les étapes d’exécution des requêtes.|  
 |[Analyse des performances à l'aide du magasin de requêtes](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)|Utiliser le magasin de requêtes pour capturer automatiquement l’historique des requêtes, des plans et des statistiques d’exécution et les conserver à des fins de consultation.|  

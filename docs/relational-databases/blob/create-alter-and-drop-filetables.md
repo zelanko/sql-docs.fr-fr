@@ -2,10 +2,14 @@
 title: "Créer, modifier et supprimer des FileTables | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: blob
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-blob
+ms.suite: sql
+ms.technology:
+- dbe-blob
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -13,19 +17,20 @@ helpviewer_keywords:
 - FileTables [SQL Server], dropping
 - FileTables [SQL Server], creating
 ms.assetid: 47d69e37-8778-4630-809b-2261b5c41c2c
-caps.latest.revision: "25"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: c2409e20ab8d3944d33f09f6961cdb1d860669e5
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 5e402ae5344d8dcae116954856644d206d62f0e5
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="create-alter-and-drop-filetables"></a>Créer, modifier et supprimer des FileTables
-  Décrit la procédure de création d'un nouveau FileTable, ou de modification ou de suppression d'un FileTable existant.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Décrit la procédure de création d'un nouveau FileTable, ou de modification ou de suppression d'un FileTable existant.  
   
 ##  <a name="BasicsCreate"></a> Création d'un FileTable  
  Un FileTable est une table utilisateur spécialisée qui a un schéma prédéfini et fixe. Ce schéma stocke des données FILESTREAM, des informations de répertoire et de fichier, ainsi que des attributs de fichier. Pour plus d'informations sur le schéma de FileTable, consultez [FileTable Schema](../../relational-databases/blob/filetable-schema.md).  
@@ -70,7 +75,7 @@ ms.lasthandoff: 11/09/2017
   
  L’exemple suivant crée un FileTable et spécifie les valeurs définies par l’utilisateur pour **FILETABLE_DIRECTORY** et **FILETABLE_COLLATE_FILENAME**.  
   
-```tsql  
+```sql  
 CREATE TABLE DocumentStore AS FileTable  
     WITH (   
           FileTable_Directory = 'DocumentTable',  
@@ -81,7 +86,7 @@ GO
   
  L'exemple suivant crée également un nouveau FileTable. Étant donné que les valeurs définies par l’utilisateur ne sont pas spécifiées, la valeur de **FILETABLE_DIRECTORY** devient le nom du FileTable, la valeur de **FILETABLE_COLLATE_FILENAME** devient database_default et les contraintes uniques et de clé primaire reçoivent des noms générés par le système.  
   
-```tsql  
+```sql  
 CREATE TABLE DocumentStore AS FileTable;  
 GO  
 ```  
@@ -116,7 +121,7 @@ GO
   
  **Exemple**  
   
-```tsql  
+```sql  
 ALTER TABLE filetable_name  
     SET ( FILETABLE_DIRECTORY = N'directory_name' );  
 GO  
@@ -147,7 +152,7 @@ GO
 ##  <a name="BasicsOtherObjects"></a> D'autres objets de base de données sont créés lorsque vous créez un FileTable  
  Lorsque vous créez un nouveau FileTable, quelques contraintes et index définis par le système sont également créés. Vous ne pouvez pas modifier ou supprimer ces objets ; ils disparaissent uniquement lorsque le FileTable lui-même est supprimé. Pour consulter la liste de ces objets, interrogez l’affichage catalogue [sys.filetable_system_defined_objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-filetable-system-defined-objects-transact-sql.md).  
   
-```tsql  
+```sql  
 --View all objects for all filetables, unsorted  
 SELECT * FROM sys.filetable_system_defined_objects;  
 GO  
@@ -184,7 +189,7 @@ GO
   
 -   *\<générateur_de_nom_unique>* est une chaîne générée par le système pour rendre le nom unique. Cette chaîne peut contenir le nom du FileTable et un identificateur unique.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Gérer des FileTables](../../relational-databases/blob/manage-filetables.md)  
   
   

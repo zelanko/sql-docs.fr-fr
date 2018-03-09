@@ -3,8 +3,9 @@ title: Fournisseurs OLE DB (ADO) | Documents Microsoft
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,16 +16,16 @@ helpviewer_keywords:
 - OLE DB providers [ADO]
 - ADO, OLE DB providers
 ms.assetid: 6e0488c3-934d-4976-99dc-65c580dc7a3c
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c95c8bdcf9c4c6d93fc94f8393909cdc758c7c87
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 2d00df80315489c2579646aa4faeafff2b57d8f9
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="ole-db-providers-ado"></a>Fournisseurs OLE DB (ADO)
 OLE DB définit un ensemble d’interfaces COM qui fournissent aux applications un accès uniforme aux données stockées dans diverses sources d’informations. Cette approche permet à une source de données partager ses données via les interfaces qui prennent en charge les fonctionnalités SGBD appropriées pour la source de données. Par conception, l’architecture hautes performances d’OLE DB est basé sur son utilisation d’un modèle de services flexible, basée sur le composant. Au lieu d’avoir un nombre défini de couches intermédiaires entre l’application et les données, OLE DB requiert que le nombre de composants strictement nécessaires pour accomplir une tâche particulière.  

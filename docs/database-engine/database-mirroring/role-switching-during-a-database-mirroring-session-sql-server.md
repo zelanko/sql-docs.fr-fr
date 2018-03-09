@@ -2,9 +2,12 @@
 title: "Basculement de rôle durant une session de mise en miroir de bases de données (SQL Server) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: database-mirroring
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -21,19 +24,19 @@ ms.assetid: a782d60d-0373-4386-bd77-9ec192553700
 caps.latest.revision: "50"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 1e6c0b04fcc7b143bcdba71cb6e015f47f7f6717
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 93d9b6b359098577dfec9f7ba02b3c0e4d0de46d
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="role-switching-during-a-database-mirroring-session-sql-server"></a>Basculement de rôle durant une session de mise en miroir de bases de données (SQL Server)
-  Dans le contexte d'une session de mise en miroir de bases de données, le rôle principal et le rôle miroir sont généralement interchangeables lors d'un processus appelé *basculement de rôle*. Dans une situation de basculement de rôle, le serveur miroir est le *partenaire de basculement* du serveur principal ; il adopte le rôle principal, en récupérant sa copie de la base de données et en la mettant en ligne en tant que nouvelle base de données principale. L'ancien serveur principal (s'il est disponible) joue le rôle de serveur miroir, et sa base de données devient la nouvelle base de données miroir. Les rôles peuvent éventuellement basculer plusieurs fois, soit en réponse à plusieurs défaillances, soit pour des raisons administratives.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Dans le contexte d’une session de mise en miroir de bases de données, le rôle principal et le rôle miroir sont généralement interchangeables lors d’un processus appelé *basculement de rôle*. Dans une situation de basculement de rôle, le serveur miroir est le *partenaire de basculement* du serveur principal ; il adopte le rôle principal, en récupérant sa copie de la base de données et en la mettant en ligne en tant que nouvelle base de données principale. L'ancien serveur principal (s'il est disponible) joue le rôle de serveur miroir, et sa base de données devient la nouvelle base de données miroir. Les rôles peuvent éventuellement basculer plusieurs fois, soit en réponse à plusieurs défaillances, soit pour des raisons administratives.  
   
 > [!NOTE]  
->  Cette rubrique suppose que vous connaissez bien les modes de fonctionnement de la mise en miroir de base de données. Pour en savoir plus, voir [Database Mirroring Operating Modes](../../database-engine/database-mirroring/database-mirroring-operating-modes.md).  
+>  Cette rubrique suppose que vous connaissez bien les modes de fonctionnement de la mise en miroir de base de données. Pour plus d'informations, voir [Database Mirroring Operating Modes](../../database-engine/database-mirroring/database-mirroring-operating-modes.md).  
   
  L’illustration suivante représente des serveurs partenaires de mise en miroir, **Partner_A** et **Partner_B**, qui s’échangent les rôles de serveur principal et serveur miroir lors d’une série de basculements automatiques ou manuels.  
   
@@ -70,9 +73,9 @@ ms.lasthandoff: 11/09/2017
   
 ||Hautes performances|Mode haute performance sans témoin|Mode haute performance avec témoin|  
 |-|----------------------|-----------------------------------------|--------------------------------------|  
-|Basculement automatique|Non|Non|Oui|  
-|Basculement manuel|Non|Oui|Oui|  
-|Service forcé|Oui|Oui|Non|  
+|Basculement automatique|non|non|Oui|  
+|basculement manuel|non|Oui|Oui|  
+|Service forcé|Oui|Oui|non|  
   
  Après un basculement de rôle, certaines métadonnées doivent exister sur les deux partenaires pour garantir que tous les utilisateurs de base de données peuvent accéder à la nouvelle base de données principale. De plus, des travaux de sauvegarde doivent être créés sur le nouveau serveur principal pour garantir que la base de données continue d'être sauvegardée régulièrement. Pour plus d’informations, consultez [Gestion des connexions et des travaux après un basculement de rôle &#40;SQL Server&#41;](../../sql-server/failover-clusters/management-of-logins-and-jobs-after-role-switching-sql-server.md).  
   
@@ -151,9 +154,9 @@ ms.lasthandoff: 11/09/2017
 -   [Pour désactiver le basculement automatique (à l'aide de Transact-SQL)](#DisableAutoTsql)  
   
 ###  <a name="ConditionsForAutoFo"></a> Conditions requises pour un basculement automatique  
- Le basculement automatique nécessite les conditions suivantes :  
+ Le basculement automatique nécessite les conditions suivantes :  
   
--   La session de mise en miroir de bases de données doit s'exécuter en mode haute sécurité et doit posséder un témoin. Pour en savoir plus, voir [Database Mirroring Operating Modes](../../database-engine/database-mirroring/database-mirroring-operating-modes.md).  
+-   La session de mise en miroir de bases de données doit s'exécuter en mode haute sécurité et doit posséder un témoin. Pour plus d'informations, voir [Database Mirroring Operating Modes](../../database-engine/database-mirroring/database-mirroring-operating-modes.md).  
   
 -   La base de données miroir doit déjà être synchronisée. Ceci garantit que la totalité du journal envoyé au serveur miroir a été écrit sur le disque.  
   
@@ -313,7 +316,7 @@ ms.lasthandoff: 11/09/2017
   
 -   [Établir une session de mise en miroir de bases de données au moyen de l’authentification Windows &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/establish-database-mirroring-session-windows-authentication.md)  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Estimer l’interruption de service au cours d’un basculement de rôle &#40;mise en miroir de bases de données&#41;](../../database-engine/database-mirroring/estimate-the-interruption-of-service-during-role-switching-database-mirroring.md)   
  [Défaillances possibles pendant la mise en miroir de bases de données](../../database-engine/database-mirroring/possible-failures-during-database-mirroring.md)   
  [Connecter des clients à une session de mise en miroir de bases de données &#40;SQL Server&#41;](../../database-engine/database-mirroring/connect-clients-to-a-database-mirroring-session-sql-server.md)   

@@ -15,20 +15,20 @@ ms.assetid: 7925ebef-cdb1-4cfe-b660-a8604b9d2153
 caps.latest.revision: "23"
 author: CarlRabeler
 ms.author: carlrab
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 42d859148c12bcc83c3f6961b69385a390431f20
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 41c64af6ffe805d6b0b92ffde0c7057a7cd2abca
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="manage-retention-of-historical-data-in-system-versioned-temporal-tables"></a>Gérer la rétention des données d’historique dans les tables temporelles avec version gérée par le système
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Avec les tables temporelles avec version gérée par le système, la table d’historique peut faire croître la taille de la base de données plus que les tables normales, surtout dans les conditions suivantes :  
   
--   conservation des données d’historique sur une longue période ;  
+-   conservation des données d’historique sur une longue période ;  
   
 -   existence d’un modèle de mise à jour ou de suppression des modifications des données lourd.  
   
@@ -95,7 +95,7 @@ ms.lasthandoff: 11/17/2017
   
 > **REMARQUE :** si Activer la base de données pour Stretch échoue, consultez le journal des erreurs. Une erreur courante consiste à configurer incorrectement la règle de pare-feu.  
   
- Voir aussi :  
+ Voir aussi :  
   
 -   [Activer Stretch Database pour une base de données](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md)  
   
@@ -188,14 +188,14 @@ COMMIT ;
   
 > **REMARQUE :** consultez la section Considérations relatives aux performances du partitionnement de table ci-après pour en savoir plus sur les conséquences d’une utilisation de RANGE LEFT plutôt que RANGE RIGHT sur les performances lors de la configuration du partitionnement.  
   
- Notez que la première et la dernière partition sont toutes deux « ouvertes » au niveau des limites inférieure et supérieure, respectivement. Chaque nouvelle ligne est donc assurée de trouver une partition de destination, quelle que soit la valeur de la colonne de partitionnement.   
+ Notez que la première et la dernière partition sont toutes deux « ouvertes » au niveau des limites inférieure et supérieure, respectivement. Chaque nouvelle ligne est donc assurée de trouver une partition de destination, quelle que soit la valeur de la colonne de partitionnement.   
 Au fil du temps, les nouvelles lignes de la table d’historique atterriront dans les partitions supérieures. Quand la sixième partition sera remplie, la période de rétention ciblée aura été atteinte. C’est à ce moment-là que la tâche de maintenance périodique sera lancée pour la première fois (elle doit être planifiée pour s’exécuter périodiquement, une fois par mois dans cet exemple).  
   
  Le schéma suivant illustre les tâches de maintenance périodique de partition (voir la procédure détaillée ci-dessous).  
   
  ![Partitioning2](../../relational-databases/tables/media/partitioning2.png "Partitioning2")  
   
- Voici la procédure à suivre pour effectuer les tâches de maintenance périodique de partition :  
+ Voici la procédure à suivre pour effectuer les tâches de maintenance périodique de partition :  
   
 1.  SWITCH OUT : créez une table de mise en lots et faites un échange de partition entre la table d’historique et la table de mise en lots en utilisant l’instruction [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md) avec l’argument SWITCH PARTITION (voir l’exemple C, Échange de partitions entre des tables).  
   
@@ -347,7 +347,7 @@ COMMIT TRANSACTION
   
 -   Cas RANGE LEFT : dans le cas de RANGE LEFT, la limite inférieure appartient à la partition 1, qui est vide (après l’extraction de partition). Autrement dit, MERGE RANGE n’entraîne aucun déplacement de données.  
   
--   Cas RANGE RIGHT : dans le cas de RANGE RIGHT, la limite inférieure appartient à la partition 2, qui n’est pas vide, étant entendu que la partition 1 a été vidée par l’extraction. Dans ce cas, MERGE RANGE entraîne un déplacement de données (les données de la partition 2 sont déplacées vers la partition 1). Pour éviter cela, dans le scénario de fenêtre glissante, RANGE RIGHT doit avoir la partition 1, qui est toujours vide. Cela signifie que si nous utilisons RANGE RIGHT, nous devons créer et maintenir une partition supplémentaire par rapport au cas RANGE LEFT.  
+-   Cas RANGE RIGHT : dans le cas de RANGE RIGHT, la limite inférieure appartient à la partition 2, qui n’est pas vide, étant entendu que la partition 1 a été vidée par l’extraction. Dans ce cas, MERGE RANGE entraîne un déplacement de données (les données de la partition 2 sont déplacées vers la partition 1). Pour éviter cela, dans le scénario de fenêtre glissante, RANGE RIGHT doit avoir la partition 1, qui est toujours vide. Cela signifie que si nous utilisons RANGE RIGHT, nous devons créer et maintenir une partition supplémentaire par rapport au cas RANGE LEFT.  
   
  Conclusion : l’utilisation de RANGE LEFT dans une partition glissante facilite grandement la gestion des partitions et évite le déplacement des données. Cependant, définir les limites de partition avec RANGE RIGHT s’avère un peu plus simple, car vous n’êtes pas confronté aux problèmes de cycle datetime/time.  
   
@@ -500,7 +500,7 @@ En raison de l’excellence de la compression des données et de l’efficacité
 
 Pour plus d’informations, consultez [Gérer les données d’historique dans les tables temporelles avec une stratégie de rétention](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-temporal-tables-retention-policy).
 
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Tables temporelles](../../relational-databases/tables/temporal-tables.md)   
  [Prise en main des tables temporelles avec versions gérées par le système](../../relational-databases/tables/getting-started-with-system-versioned-temporal-tables.md)   
  [Vérifications de cohérence système des tables temporelles](../../relational-databases/tables/temporal-table-system-consistency-checks.md)   

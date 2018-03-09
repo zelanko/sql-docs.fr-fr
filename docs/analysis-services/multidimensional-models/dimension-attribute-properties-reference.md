@@ -2,37 +2,35 @@
 title: "Référence de propriétés d’attribut de dimension | Documents Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - properties [Analysis Services], attributes
 - attributes [Analysis Services], properties
 ms.assetid: 7f83d1cb-4732-424f-adc5-2449c1dd1008
-caps.latest.revision: "34"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 76a57719a0e6e5fcfe899cfcd96f3187bc11ec30
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 9b6cd10e1b2a9a76780b895ecb2325a14bd6386f
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
-# <a name="dimension-attribute-properties-reference"></a>Référence des propriétés d'attribut de dimension
-  Dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], il y a de nombreuses propriétés qui déterminent le fonctionnement des dimensions et des attributs de dimension. Le tableau suivant répertorie et décrit chacune de ces propriétés d'attribut.  
+# <a name="dimension-attribute-properties-reference"></a>Référence des propriétés d’attribut de dimension
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], il y a de nombreuses propriétés qui déterminent le fonctionnement des dimensions et des attributs de dimension. Le tableau suivant répertorie et décrit chacune de ces propriétés d'attribut.  
   
-|Propriété|Description|  
+|Propriété| Description|  
 |--------------|-----------------|  
 |**AttributeHierarchyDisplayFolder**|Identifie le dossier où afficher aux utilisateurs finaux la hiérarchie d'attribut associée.|  
 |**AttributeHierarchyEnabled**|Détermine si une hiérarchie d’attribut est générée par [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] pour l’attribut. Si la hiérarchie d'attribut n'est pas activée, l'attribut ne peut pas être utilisé dans une hiérarchie définie par l'utilisateur et la hiérarchie d'attribut ne peut pas être référencée dans des instructions MDX (Multidimensional Expressions).|  
@@ -72,6 +70,6 @@ ms.lasthandoff: 11/17/2017
 >  Le membre par défaut sur un attribut sert à évaluer les expressions lorsqu'un membre de la hiérarchie n'est pas explicitement inclus dans une requête. Le membre par défaut d’un attribut est spécifié par la propriété **DefaultMember** de l’attribut. Lorsqu'une hiérarchie de dimension est incluse dans une requête, tous les membres par défaut des attributs correspondant aux niveaux de la hiérarchie sont ignorés. Si aucune hiérarchie de dimension n'est incluse dans une requête, les membres par défaut sont alors utilisés pour tous les attributs de la dimension. Pour plus d’informations sur les membres par défaut, consultez [Définir un membre par défaut](../../analysis-services/multidimensional-models/attribute-properties-define-a-default-member.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Attributs et hiérarchies d'attributs](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md)  
+ [Attributs et hiérarchies d’attributs](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md)  
   
   

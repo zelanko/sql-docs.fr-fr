@@ -2,9 +2,12 @@
 title: "Répliquer des colonnes d’identité | Microsoft Docs"
 ms.custom: 
 ms.date: 10/04/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,18 +20,18 @@ helpviewer_keywords:
 - identity columns [SQL Server], replication
 ms.assetid: eb2f23a8-7ec2-48af-9361-0e3cb87ebaf7
 caps.latest.revision: "51"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: a41807f24128f40c645f9f75993524eacbd6d042
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 9c69e39305a23fafee8c264db3fdb315b6595d01
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="replicate-identity-columns"></a>Répliquer des colonnes d'identité
-  Quand vous attribuez la propriété IDENTITY à une colonne, [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] génère automatiquement des numéros séquentiels pour les nouvelles lignes insérées dans la table contenant la colonne d'identité. Pour plus d’informations, consultez [IDENTITY &#40;propriété&#41; &#40;Transact-SQL&#41;](../../../t-sql/statements/create-table-transact-sql-identity-property.md). Les colonnes d'identité devant être incluses comme composantes de la clé primaire, il est important d'éviter les valeurs dupliquées dans les colonnes d'identité. Pour utiliser des colonnes d'identité dans une topologie de réplication qui a des mises à jour sur plusieurs nœuds, chaque nœud de cette topologie de réplication doit avoir une plage différente de valeurs d'identité, de façon à ce qu'il n'y ait pas de valeurs dupliquées.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Quand vous attribuez la propriété IDENTITY à une colonne, [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] génère automatiquement des numéros séquentiels pour les nouvelles lignes insérées dans la table contenant la colonne d’identité. Pour plus d’informations, consultez [IDENTITY &#40;propriété&#41; &#40;Transact-SQL&#41;](../../../t-sql/statements/create-table-transact-sql-identity-property.md). Les colonnes d'identité devant être incluses comme composantes de la clé primaire, il est important d'éviter les valeurs dupliquées dans les colonnes d'identité. Pour utiliser des colonnes d'identité dans une topologie de réplication qui a des mises à jour sur plusieurs nœuds, chaque nœud de cette topologie de réplication doit avoir une plage différente de valeurs d'identité, de façon à ce qu'il n'y ait pas de valeurs dupliquées.  
   
  Par exemple, la plage 1-100 pourrait être affectée au serveur de publication, la plage 101-200 à l'abonné A et la plage 201-300 à l'abonné B. Si une ligne est insérée au niveau du serveur de publication et la valeur d'identité est, par exemple, 65, cette valeur est répliquée sur chaque abonné. Quand la réplication insère des données sur chaque Abonné, elle n'incrémente pas la valeur de la colonne d'identité dans la table de l'Abonné ; c'est au contraire la valeur littérale 65 qui est insérée. Seules les insertions des utilisateurs - et pas les insertions des agents de réplication - provoquent l'incrémentation de la valeur de la colonne d'identité.  
   
@@ -65,7 +68,7 @@ ms.lasthandoff: 11/09/2017
 |---------------|-----------|  
 |**tinyint**|Non pris en charge pour la gestion automatique|  
 |**smallint**|-2^15 (-32 768) à 2^15-1 (32 767)|  
-|**int**|-2^31 (-2 147 483 648) à 2^31-1 (2 147 483 647)|  
+|**Int**|-2^31 (-2 147 483 648) à 2^31-1 (2 147 483 647)|  
 |**bigint**|-2^63 (-9,223,372,036,854,775,808) à 2^63-1 (9,223,372,036,854,775,807)|  
 |**decimal** et **numeric**|-10^38+1 à 10^38-1|  
   
@@ -125,7 +128,7 @@ ms.lasthandoff: 11/09/2017
     > [!NOTE]  
     >  Si la valeur de la colonne d'identité est définie pour se décrémenter au lieu de s'incrémenter, enregistrez la valeur la plus faible, puis réalimentez la table avec cette valeur.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [BACKUP &#40;Transact-SQL&#41;](../../../t-sql/statements/backup-transact-sql.md)   
  [DBCC CHECKIDENT &#40;Transact-SQL&#41;](../../../t-sql/database-console-commands/dbcc-checkident-transact-sql.md)   
  [IDENT_CURRENT &#40;Transact-SQL&#41;](../../../t-sql/functions/ident-current-transact-sql.md)   

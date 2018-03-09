@@ -2,10 +2,14 @@
 title: Utiliser le mode AUTO avec FOR XML | Microsoft Docs
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: xml
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-xml
+ms.suite: sql
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,19 +18,20 @@ helpviewer_keywords:
 - FOR XML AUTO mode
 - AUTO FOR XML mode
 ms.assetid: 7140d656-1d42-4f01-a533-5251429f4450
-caps.latest.revision: "31"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 4323f476f72a437074c8cc12b657e0e05da0dca1
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 3b59c0d323b98e257118352a0563f1b0ff8dffa7
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="use-auto-mode-with-for-xml"></a>Utiliser le mode AUTO avec FOR XML
-  Comme décrit dans [FOR XML &#40;SQL Server&#41;](../../relational-databases/xml/for-xml-sql-server.md), le mode AUTO retourne des résultats de requête en tant qu’éléments XML imbriqués. Cela ne permet pas de contrôler de façon précise la forme du document XML généré à partir du résultat d'une requête. Les requêtes au mode AUTO sont utiles pour générer des hiérarchies simples. Toutefois, [Utiliser le mode EXPLICIT avec FOR XML](../../relational-databases/xml/use-explicit-mode-with-for-xml.md) et [Utiliser le mode PATH avec FOR XML](../../relational-databases/xml/use-path-mode-with-for-xml.md) fournissent davantage de contrôle et de souplesse pour déterminer la forme du XML à partir d’un résultat de requête.  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+Comme décrit dans [FOR XML &#40;SQL Server&#41;](../../relational-databases/xml/for-xml-sql-server.md), le mode AUTO retourne des résultats de requête en tant qu’éléments XML imbriqués. Cela ne permet pas de contrôler de façon précise la forme du document XML généré à partir du résultat d'une requête. Les requêtes au mode AUTO sont utiles pour générer des hiérarchies simples. Toutefois, [Utiliser le mode EXPLICIT avec FOR XML](../../relational-databases/xml/use-explicit-mode-with-for-xml.md) et [Utiliser le mode PATH avec FOR XML](../../relational-databases/xml/use-path-mode-with-for-xml.md) fournissent davantage de contrôle et de souplesse pour déterminer la forme du XML à partir d’un résultat de requête.  
   
  Chaque table de la clause FROM, dont au moins une colonne est répertoriée dans la clause SELECT, est représentée sous la forme d'un élément XML. Les colonnes répertoriées dans la clause SELECT sont mappées avec des attributs ou des sous-éléments si l'option ELEMENTS facultative est spécifiée dans la clause FOR XML.  
   
@@ -141,7 +146,7 @@ FOR XML AUTO, ELEMENTS
   
 -   [Exemples : utilisation du mode AUTO](../../relational-databases/xml/examples-using-auto-mode.md)  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [FOR XML &#40;SQL Server&#41;](../../relational-databases/xml/for-xml-sql-server.md)  
   

@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 4c7f4a796fe40327c1d3691e0178876da010130e
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 80afdd42ee17c77a44035854207812ecac3afb46
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlspecialcolumns-function"></a>Fonction SQLSpecialColumns
 **Mise en conformité**  
@@ -113,7 +113,7 @@ SQLRETURN SQLSpecialColumns(
 ## <a name="diagnostics"></a>Diagnostics  
  Lorsque **SQLSpecialColumns** retourne SQL_ERROR ou SQL_SUCCESS_WITH_INFO, une valeur SQLSTATE associée peut être obtenu en appelant **SQLGetDiagRec** avec un *HandleType* de SQL_HANDLE_STMT et un *gérer* de *au paramètre StatementHandle*. Le tableau suivant répertorie les valeurs SQLSTATE généralement retournées par **SQLSpecialColumns** et explique chacune d’elles dans le contexte de cette fonction ; la notation « (DM) » précède les descriptions de SQLSTATE retournée par le Gestionnaire de pilotes. Le code de retour associé à chaque valeur SQLSTATE est SQL_ERROR, sauf indication contraire.  
   
-|SQLSTATE|Erreur| Description|  
+|SQLSTATE|Error|Description|  
 |--------------|-----------|-----------------|  
 |01000|Avertissement général|Message d’information de spécifiques au pilote. (La fonction retourne SQL_SUCCESS_WITH_INFO).|  
 |08S01|Échec de lien de communication|Échec de la liaison de communication entre le pilote et la source de données à laquelle le pilote a été connecté avant le traitement de la fonction a été exécutée.|  
@@ -166,7 +166,7 @@ SQLRETURN SQLSpecialColumns(
   
 |Nom de colonne|Numéro de colonne|Type de données|Commentaires|  
 |-----------------|-------------------|---------------|--------------|  
-|PORTÉE (ODBC VERSION 1.0)|1|Smallint|Étendue réelle de rowid. Contient l’une des valeurs suivantes :<br /><br /> SQL_SCOPE_CURROW SQL_SCOPE_TRANSACTION SQL_SCOPE_SESSION<br /><br /> NULL est retourné lorsque *IdentifierType* est SQL_ROWVER. Pour obtenir une description de chaque valeur, consultez la description de *étendue* dans « Syntaxe », plus haut dans cette section.|  
+|PORTÉE (ODBC VERSION 1.0)| 1|Smallint|Étendue réelle de rowid. Contient l’une des valeurs suivantes :<br /><br /> SQL_SCOPE_CURROW SQL_SCOPE_TRANSACTION SQL_SCOPE_SESSION<br /><br /> NULL est retourné lorsque *IdentifierType* est SQL_ROWVER. Pour obtenir une description de chaque valeur, consultez la description de *étendue* dans « Syntaxe », plus haut dans cette section.|  
 |COLUMN_NAME (ODBC VERSION 1.0)|2|Varchar non NULL|Nom de colonne. Le pilote retourne une chaîne vide pour une colonne qui n’a pas de nom.|  
 |DATA_TYPE (ODBC 1.0)|3|Smallint non NULL|Type de données SQL. Cela peut être un type de données SQL ODBC ou un type de données SQL spécifique au pilote. Pour obtenir la liste des types de données ODBC SQL valides, consultez [les Types de données SQL](../../../odbc/reference/appendixes/sql-data-types.md). Pour plus d’informations sur les types de données spécifiques au pilote SQL, consultez la documentation du pilote.|  
 |TYPE_NAME (ODBC VERSION 1.0)|4|Varchar non NULL|Nom du type de données de dépend de la source de données ; par exemple, « CHAR », « VARCHAR », « MONEY », « LONG VARBINARY » ou « () CHAR pour les données BIT ».|  

@@ -1,10 +1,13 @@
 ---
 title: "Nouvelles fonctionnalités de l’interface graphique utilisateur de SSMA pour DB2 (DB2ToSQL) | Documents Microsoft"
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-db2
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f554b4d330054076042e94948ee8851ae1ecc90b
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 4735320bb802c86cf0e3eaa563e49fa0542b294b
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="new-gui-features-in-ssma-for-db2-db2tosql"></a>Nouvelles fonctionnalités de l’interface graphique utilisateur de SSMA pour DB2 (DB2ToSQL)
 Ce chapitre décrit les nouvelles fonctionnalités de l’Interface utilisateur SSMA.  
@@ -61,14 +64,14 @@ Vous pouvez définir/supprimer un signet comme suit :
   
 -   Cliquez sur la zone grise située à gauche de la fenêtre SQL  
   
--   Utilisez Ctrl + Maj +&lt;0..9&gt; pour définir le signet numéroté  
+-   Utilisez Ctrl + Maj +&lt;0.9&gt; pour définir le signet numéroté  
   
 ### <a name="bookmark-navigation"></a>Navigation de signet  
 Vous pouvez parcourir les signets, par le biais de plusieurs manières :  
   
 -   Utilisez les boutons signet suivant, le signet précédent en haut de la fenêtre SQL  
   
--   Utilisez Ctrl +&lt;0..9&gt; pour trouver le signet numéroté  
+-   Utilisez Ctrl +&lt;0.9&gt; pour trouver le signet numéroté  
   
 -   Utilisez les boutons Atteindre ou afficher la Source dans la boîte de dialogue Gérer les signets  
   
@@ -92,7 +95,7 @@ L’historique de l’interface graphique utilisateur objet vous permet des avan
 -   Lorsque vous à l’objet et l’onglet est SQL, vous sauvegardez à la même position de curseur que vous avez laissées  
   
 ## <a name="advanced-search-capabilities"></a>Fonctionnalités de recherche avancées  
-Fonctionnalités de recherche avancées fournissent les fonctionnalités de recherche puissantes et flexibles et permettent de trouver la déclaration de l’objet, obtenir des informations sur l’objet, effectuer une recherche rapide, effectuer des objets avancée recherche dans les catégories à l’aide de modèles, etc..  
+Fonctionnalités de recherche avancées fournissent les fonctionnalités de recherche puissantes et flexibles et permettent de trouver la déclaration de l’objet, obtenir des informations sur l’objet, effectuer une recherche rapide, effectuer des objets avancée recherche dans les catégories à l’aide de modèles, etc.  
   
 ### <a name="get-quick-information"></a>Obtenir des informations rapides  
 Vous pouvez obtenir rapidement des informations sur l’objet à la position de curseur comme suit :  

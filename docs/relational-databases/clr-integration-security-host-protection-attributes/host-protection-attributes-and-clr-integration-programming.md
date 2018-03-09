@@ -8,7 +8,7 @@ ms.service:
 ms.component: clr
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -19,19 +19,20 @@ helpviewer_keywords:
 - common language runtime [SQL Server], disallowed types and members
 - HPAs [CLR integration]
 ms.assetid: 268078df-63ca-4c03-a8e7-7108bcea9697
-caps.latest.revision: "28"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4caf403fe2fee4b43031efd387a170aae3de1353
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 40bbb7d901b54cd406b7b322fd59e8378298e9fe
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="host-protection-attributes-and-clr-integration-programming"></a>Attributs de protection de l'hôte et programmation de l'intégration CLR
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Le common language runtime (CLR) fournit un mécanisme pour annoter des interfaces de programmation d’application managée (API) qui font partie du .NET Framework avec certains attributs qui peuvent être utiles à un hôte du CLR, tels que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], en commençant par [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Voici quelques exemples d'attributs de protection de l'hôte (HPA, Host Protection Attribute) :  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Le Common Language Runtime (CLR) fournit un mécanisme pour annoter des interfaces de programmation d'applications (API) managées qui font partie du .NET Framework avec certains attributs qui peuvent intéresser un hôte du CLR, tel que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], à compter de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Voici quelques exemples d'attributs de protection de l'hôte (HPA, Host Protection Attribute) :  
   
 -   **SharedState**, qui indique si l’API expose la capacité de créer ou gérer l’état (par exemple, les champs de classe statique) partagé.  
   
@@ -52,7 +53,7 @@ ms.lasthandoff: 11/17/2017
   
 -   Susceptible de déstabiliser le processus serveur lui-même.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]n’autorise pas l’utilisation d’un type ou un membre qui a un **HostProtectionAttribute** qui spécifie un **System.Security.Permissions.HostProtectionResource** énumération avec la valeur **ExternalProcessMgmt**, **ExternalThreading**, **MayLeakOnAbort**, **SecurityInfrastructure**, **SelfAffectingProcessMgmnt**, **SelfAffectingThreading**, **SharedState**, **synchronisation**, ou **l’interface utilisateur**. Cela empêche les assemblys d'appeler des membres qui activent l'état de partage, exécutent la synchronisation, peuvent entraîner une fuite de ressources ou affectent l'intégrité du processus [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] n’autorise pas l’utilisation d’un type ou un membre qui a un **HostProtectionAttribute** qui spécifie un **System.Security.Permissions.HostProtectionResource** énumération avec la valeur  **ExternalProcessMgmt**, **ExternalThreading**, **MayLeakOnAbort**, **SecurityInfrastructure**,  **SelfAffectingProcessMgmnt**, **SelfAffectingThreading**, **SharedState**, **synchronisation**, ou **l’interface utilisateur**. Cela empêche les assemblys d'appeler des membres qui activent l'état de partage, exécutent la synchronisation, peuvent entraîner une fuite de ressources ou affectent l'intégrité du processus [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ### <a name="disallowed-types-and-members"></a>Types et membres rejetés  
  Les rubriques suivantes identifient les types et membres dont **HostProtectionResource** valeurs ne sont pas autorisées par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -61,24 +62,24 @@ ms.lasthandoff: 11/17/2017
 >  Les listes de ces rubriques ont été générées à partir des assemblys pris en charge.  Pour plus d’informations, consultez [prise en charge des bibliothèques .NET Framework](../../relational-databases/clr-integration/database-objects/supported-net-framework-libraries.md).  
   
 ## <a name="in-this-section"></a>Dans cette section  
- [Types et membres non autorisés dans Microsoft.VisualBasic.dll](../../relational-databases/clr-integration-security-host-protection-attributes/disallowed-types-and-members-in-microsoft-visualbasic-dll.md)  
+ [Types et membres dans Microsoft.VisualBasic.dll interdits](../../relational-databases/clr-integration-security-host-protection-attributes/disallowed-types-and-members-in-microsoft-visualbasic-dll.md)  
  Répertorie les types et membres dans Microsoft.VisualBasic.dll dont les valeurs HPA sont rejetées.  
   
- [Types et membres non autorisés dans mscorlib.dll](../../relational-databases/clr-integration-security-host-protection-attributes/disallowed-types-and-members-in-mscorlib-dll.md)  
+ [Types et membres dans mscorlib.dll interdits](../../relational-databases/clr-integration-security-host-protection-attributes/disallowed-types-and-members-in-mscorlib-dll.md)  
  Répertorie les types et membres dans mscorlib.dll dont les valeurs HPA sont rejetées.  
   
- [Types et membres non autorisés dans System.dll](../../relational-databases/clr-integration-security-host-protection-attributes/disallowed-types-and-members-in-system-dll.md)  
+ [Types et membres dans System.dll interdits](../../relational-databases/clr-integration-security-host-protection-attributes/disallowed-types-and-members-in-system-dll.md)  
  Répertorie les types et membres dans System.dll dont les valeurs HPA sont rejetées.  
   
- [Types et membres non autorisés dans System.Data.dll](../../relational-databases/clr-integration-security-host-protection-attributes/disallowed-types-and-members-in-system-data-dll.md)  
+ [Types et membres dans System.Data.dll interdits](../../relational-databases/clr-integration-security-host-protection-attributes/disallowed-types-and-members-in-system-data-dll.md)  
  Répertorie les types et membres dans System.Data.dll dont les valeurs HPA sont rejetées.  
   
- [Types et membres non autorisés dans System.Core.dll](../../relational-databases/clr-integration-security-host-protection-attributes/disallowed-types-and-members-in-system-core-dll.md)  
+ [Types et membres dans System.Core.dll interdits](../../relational-databases/clr-integration-security-host-protection-attributes/disallowed-types-and-members-in-system-core-dll.md)  
  Répertorie les types et membres dans System.Core.dll dont les valeurs HPA sont rejetées.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Sécurité d’accès du Code CLR Integration](../../relational-databases/clr-integration/security/clr-integration-code-access-security.md)   
  [Restrictions du modèle de programmation CLR Integration](../../relational-databases/clr-integration/database-objects/clr-integration-programming-model-restrictions.md)   
- [Création d’un assembly](../../relational-databases/clr-integration/assemblies/creating-an-assembly.md)  
+ [Création d’un Assembly](../../relational-databases/clr-integration/assemblies/creating-an-assembly.md)  
   
   

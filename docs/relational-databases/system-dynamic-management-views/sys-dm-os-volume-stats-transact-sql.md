@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_os_volume_stats (Transact-SQL) | Documents Microsoft
+title: sys.dm_os_volume_stats (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 02/02/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - dm_os_volume_stats
 - sys.dm_os_volume_stats
 - sys.dm_os_volume_stats_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_os_volume_stats dynamic management function
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_os_volume_stats dynamic management function
 ms.assetid: fa1c58ad-8487-42ad-956c-983f2229025f
-caps.latest.revision: "8"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 43d9ead206eb4f5a83d0006c3b23626346b04fe5
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 647c47f57e8f6eb7f756ec5a6263ae5d5059b674
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmosvolumestats-transact-sql"></a>sys.dm_os_volume_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +50,7 @@ sys.dm_os_volume_stats (database_id, file_id)
  *database_id*  
  ID de la base de données. *database_id* est **int**, sans valeur par défaut. Ne peut pas avoir la valeur NULL.  
   
- *FILE_ID*  
+ *file_id*  
  ID du fichier. *FILE_ID* est **int**, sans valeur par défaut. Ne peut pas avoir la valeur NULL.  
   
 ## <a name="table-returned"></a>Table retournée  
@@ -56,10 +59,10 @@ sys.dm_os_volume_stats (database_id, file_id)
 |-|-|-|  
 |**Colonne**|**Type de données**|**Description**|  
 |**database_id**|**int**|ID de la base de données. Ne peut pas avoir la valeur null.|  
-|**FILE_ID**|**int**|ID du fichier. Ne peut pas avoir la valeur null.|  
+|**file_id**|**int**|ID du fichier. Ne peut pas avoir la valeur null.|  
 |**volume_mount_point**|**nvarchar(512)**|Point de montage à la racine duquel le volume est attaché. Peut retourner une chaîne vide.|  
-|**ID_volume**|**nvarchar(512)**|Identificateur du volume du système d'exploitation. Peut retourner une chaîne vide|  
-|**nom_volume_logique**|**nvarchar(512)**|Nom du volume logique. Peut retourner une chaîne vide|  
+|**volume_id**|**nvarchar(512)**|Identificateur du volume du système d'exploitation. Peut retourner une chaîne vide|  
+|**logical_volume_name**|**nvarchar(512)**|Nom du volume logique. Peut retourner une chaîne vide|  
 |**file_system_type**|**nvarchar(512)**|Type du volume du système de fichiers (par exemple, NTFS, FAT, RAW). Peut retourner une chaîne vide|  
 |**total_bytes**|**bigint**|Taille totale (en octets) du volume. Ne peut pas avoir la valeur null.|  
 |**available_bytes**|**bigint**|Espace disponible sur le volume. Ne peut pas avoir la valeur null.|  
@@ -71,7 +74,7 @@ sys.dm_os_volume_stats (database_id, file_id)
   
 ## <a name="security"></a>Sécurité  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>Autorisations  
  Requiert l'autorisation VIEW SERVER STATE.  
   
 ## <a name="examples"></a>Exemples  
@@ -95,7 +98,7 @@ CROSS APPLY sys.dm_os_volume_stats(DB_ID(f.name), f.file_id);
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Sys.master_files &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)   
+ [sys.master_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)   
  [sys.database_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)  
   
   

@@ -8,24 +8,26 @@ ms.service:
 ms.component: smo
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords: endpoints [SMO]
 ms.assetid: f8674dbb-9bc0-488f-9def-e9e0ce1ddf86
 caps.latest.revision: "45"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 684059c8a51ea9419877eae950deb3b92232344b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a1d8ce479654f80d54c1a5aef6fb63138e13dbc6
+ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="implementing-endpoints"></a>Implémentation de points de terminaison
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Un point de terminaison est un service qui peut écouter en mode natif les demandes. SMO prend en charge différents types de points de terminaison à l’aide de la <xref:Microsoft.SqlServer.Management.Smo.Endpoint> objet. Vous pouvez créer un service de point de terminaison qui gère un type spécifique de charge utile, qui utilise un protocole spécifique, en créant une instance d'un objet <xref:Microsoft.SqlServer.Management.Smo.Endpoint> et en définissant ses propriétés.  
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+
+  Un point de terminaison est un service qui peut écouter les requêtes en mode natif. SMO prend en charge différents types de points de terminaison à l’aide de la <xref:Microsoft.SqlServer.Management.Smo.Endpoint> objet. Vous pouvez créer un service de point de terminaison qui gère un type spécifique de charge utile, qui utilise un protocole spécifique, en créant une instance d'un objet <xref:Microsoft.SqlServer.Management.Smo.Endpoint> et en définissant ses propriétés.  
   
  Le <xref:Microsoft.SqlServer.Management.Smo.Endpoint.EndpointType%2A> propriété de la <xref:Microsoft.SqlServer.Management.Smo.Endpoint> objet peut être utilisé pour spécifier sur des types de charge utile suivants :  
   

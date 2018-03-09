@@ -1,5 +1,5 @@
 ---
-title: "Comparaison de données de chaîne | Documents Microsoft"
+title: "Comparaison de données de chaînes | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -19,17 +19,16 @@ helpviewer_keywords:
 - converting string data
 - string comparisons
 ms.assetid: 93aeb5bd-e208-46b7-8979-dea2dcd37d4c
-caps.latest.revision: 39
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: ee8d749695838be53ebbb0b9de11baf722ace7e2
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 3a706839de5dd4981e09c4bc1384ee45f86c0dcb
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="comparing-string-data"></a>comparaison de données de chaînes
   Les comparaisons de chaînes représentent une partie importante des transformations réalisées par [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]et peuvent également être utilisées pour l'évaluation d'expressions dans des variables et des expressions de propriétés. Ainsi, la transformation de tri peut comparer les valeurs d'un dataset afin de trier les données dans l'ordre croissant ou décroissant.  
@@ -48,7 +47,7 @@ ms.lasthandoff: 08/03/2017
 ## <a name="processing-during-string-comparison"></a>Traitement pendant la comparaison de chaînes  
  En fonction des données et de la configuration de la transformation, le traitement suivant peut être réalisé au cours de la comparaison de données chaînes :  
   
--   conversion des données au format Unicode. Si les données sources ne sont pas au format Unicode, elles sont automatiquement converties dans ce format avant la comparaison ;  
+-   conversion des données au format Unicode. Si les données sources ne sont pas au format Unicode, elles sont automatiquement converties dans ce format avant la comparaison ;  
   
 -   utilisation de paramètres régionaux afin d'appliquer des règles spécifiques à un pays pour interpréter la date, l'heure, les données décimales et l'ordre de tri ;  
   
@@ -88,10 +87,9 @@ ms.lasthandoff: 08/03/2017
   
  La balise de comparaison **FullySensitive** s'affiche dans la boîte de dialogue **Éditeur avancé** pour les transformations de regroupement probable et de recherche floue. Le fait de sélectionner l'indicateur de comparaison **FullySensitive** signifie que toutes les options de comparaison s'appliquent.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Types de données d'Integration Services](../../integration-services/data-flow/integration-services-data-types.md)   
  [Analyse rapide](http://msdn.microsoft.com/library/6688707d-3c5b-404e-aa2f-e13092ac8d95)   
  [Analyse standard](http://msdn.microsoft.com/library/dfe835b1-ea52-4e18-a23a-5188c5b6f013)  
   
   
-

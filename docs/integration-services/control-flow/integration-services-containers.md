@@ -1,5 +1,5 @@
 ---
-title: Conteneurs Integration Services | Documents Microsoft
+title: Conteneurs Integration Services | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -19,17 +19,16 @@ helpviewer_keywords:
 - control flow [Integration Services], containers
 - SQL Server Integration Services containers
 ms.assetid: 1b725922-ec59-4a47-9d55-e079463058f3
-caps.latest.revision: 48
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 95b6e69e463bd8e3b44e55c11d308b3d5a25ce63
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 79759c7f5ec38bb2c729f092248866b87bf9e611
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="integration-services-containers"></a>Conteneurs Integration Services
   Les conteneurs sont des objets de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] qui fournissent une structure aux packages et des services aux tâches. Ils prennent en charge les flux de contrôle répétitifs dans les packages, et regroupent les tâches et les conteneurs en unités de travail significatives. Outre des tâches, les conteneurs peuvent comprendre d'autres conteneurs.  
@@ -105,8 +104,7 @@ ms.lasthandoff: 08/03/2017
 ## <a name="break-points"></a>Points d’arrêt  
  Quand vous définissez un point d’arrêt sur un conteneur et que la condition d’arrêt est **Arrêter lorsque le conteneur reçoit l’événement OnVariableValueChanged**, définissez la variable dans l’étendue du conteneur.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Flux de contrôle](../../integration-services/control-flow/control-flow.md)  
   
   
-

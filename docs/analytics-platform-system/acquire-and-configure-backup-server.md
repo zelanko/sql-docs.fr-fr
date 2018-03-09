@@ -3,10 +3,10 @@ title: "Obtenir et configurer un serveur de sauvegarde pour les points d’accè
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.suite: sql
 ms.custom: 
 ms.technology: mpp-data-warehouse
@@ -15,11 +15,11 @@ ms.date: 10/20/2016
 ms.topic: article
 caps.latest.revision: "20"
 ms.assetid: f8b769fe-c864-4d65-abcb-a9a287061702
-ms.openlocfilehash: 3540c2e43082dbdad4f267745683f33ae9b0b036
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 760537abd7e3227cc2245c429d0a0c13f7609f8b
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="acquire-and-configure-a-backup-server"></a>Obtenir et configurer un serveur de sauvegarde
 Cette rubrique décrit comment configurer un système de Windows sur le matériel non comme un serveur de sauvegarde pour une utilisation avec les fonctionnalités de sauvegarde et de restauration dans le système de plateforme Analytique (APS) et SQL Server Parallel Data Warehouse (PDW).  
@@ -94,7 +94,7 @@ PDW accéderont à la sauvegarde du serveur via un partage de fichiers UNC. Pour
   
 5.  Ajoutez les informations d’identification du compte de domaine à PDW.  
   
-    Exemple :  
+    Exemple :  
   
     ```sql  
     EXEC sp_pdw_add_network_credentials '10.192.147.63', 'seattle\david', '********';  
@@ -114,7 +114,7 @@ Pour sauvegarder des données, utilisez un client de la requête pour se connect
 > [!IMPORTANT]  
 > N’oubliez pas d’utiliser l’adresse InfiniBand IP du serveur de sauvegarde. Dans le cas contraire, les données seront copiées sur Ethernet au lieu de InfiniBand.  
   
-Exemple :  
+Exemple :  
   
 ```sql  
 BACKUP DATABASE Invoices TO DISK = '\\10.172.14.255\backups\yearly\Invoices2013Full';  

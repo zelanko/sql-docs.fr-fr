@@ -2,27 +2,33 @@
 title: "Propriétés (onglet ordre) de protocoles clients | Documents Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: configuration-manager
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: client protocols [SQL Server]
+helpviewer_keywords:
+- client protocols [SQL Server]
 ms.assetid: 64fd7135-1756-4885-bed9-9ab8997ecc6c
-caps.latest.revision: "18"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2c3e253853ebcaec3217634605e573d9a96bd063
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: b00026954339af65d3730c91a24ec4f16505c682
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="client-protocols-properties-order-tab"></a>Propriétés de protocoles clients (onglet Ordre)
-  La page **Ordre**de la boîte de dialogue **Propriétés de protocoles clients** vous permet d’afficher et d’activer les protocoles clients.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+Utilisez le **commande** page sur le **propriétés de protocoles clients** boîte de dialogue pour afficher et activer les protocoles clients.  
   
  Cliquez sur un protocole, puis sur **Activer** ou **Désactiver** pour déplacer le protocole sélectionné vers la liste **Protocoles désactivés** ou **Protocoles activés**.  
   
@@ -33,10 +39,10 @@ ms.lasthandoff: 11/09/2017
   
 ## <a name="options"></a>Options  
  **Protocoles désactivés**  
- Répertorie les protocoles installés mais actuellement non utilisés.  
+ Répertorie les protocoles qui sont installés mais ne sont pas actuellement utilisés.  
   
  **Protocoles activés**  
- Répertorie les protocoles disponibles pour les clients [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur cet ordinateur.  
+ Répertorie les protocoles disponibles pour [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] clients sur cet ordinateur.  
   
  **>**  
  Active le protocole affiché en surbrillance dans la zone **Protocoles désactivés** , en le déplaçant vers la zone **Protocoles activés** .  
@@ -57,6 +63,6 @@ ms.lasthandoff: 11/09/2017
 >  Si le protocole est spécifié par le biais d'un préfixe ou à l'intérieur de la chaîne de connexion, seul le protocole spécifié est essayé.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Choix d'un protocole réseau](http://msdn.microsoft.com/library/6565fb7d-b076-4447-be90-e10d0dec359a)  
+ [Choix d’un protocole réseau](http://msdn.microsoft.com/library/6565fb7d-b076-4447-be90-e10d0dec359a)  
   
   

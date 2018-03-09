@@ -1,15 +1,14 @@
 ---
-title: "La Documentation du développeur d’Integration Services | Documents Microsoft"
+title: "Documentation Integration Services pour les développeurs | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
@@ -23,19 +22,18 @@ helpviewer_keywords:
 - SQL Server Integration Services, programming
 - packages [Integration Services], programming
 ms.assetid: 60fe148b-a7c4-4289-ae3e-2e949fc1886c
-caps.latest.revision: 76
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: cf7d7afba8ada3f6027db3053914b1822597792c
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 718bc3b4bad9f3444f3ba47871c86bb18c45c7ac
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="integration-services-developer-documentation"></a>Guide du développeur Integration Services
+# <a name="integration-services-developer-documentation"></a>Documentation Integration Services pour les développeurs
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] inclut un modèle objet entièrement réécrit, auquel ont été ajoutées de nombreuses fonctionnalités, afin d'offrir un outil convivial, souple et puissant pour étendre et programmer des packages. Les développeurs peuvent étendre et programmer pratiquement tous les aspects des packages [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].  
   
  En tant que développeur [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], vous disposez de deux méthodes de programmation [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] fondamentales :  
@@ -56,7 +54,7 @@ ms.lasthandoff: 09/26/2017
   
 -   Charger un package existant, le reconfigurer (par exemple, spécifier une source de données différente) et l'exécuter.  
   
--   Créer un nouveau package, ajouter et configurer des composants, apporter des modifications objet par objet et propriété par propriété, enregistrez-le, puis exécutez-le.  
+-   Créer un package, ajouter et configurer des composants, apporter des modifications objet par objet et propriété par propriété, l’enregistrer, puis l’exécuter.  
   
  Ces méthodes de programmation [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] sont décrites dans cette section et illustrées par des exemples.  
   
@@ -68,10 +66,10 @@ ms.lasthandoff: 09/26/2017
  Décrit la distinction importante entre les sorties synchrones et les sorties asynchrones, ainsi que les composants qui les utilisent dans le flux de données.  
   
  [Utilisation de gestionnaires de connexions par programmation](../integration-services/working-with-connection-managers-programmatically.md)  
- Répertorie les gestionnaires de connexions que vous pouvez utiliser du code managé et les valeurs de retour les gestionnaires de connexions lorsque le code appelle la **AcquireConnection** (méthode).  
+ Répertorie les gestionnaires de connexions que vous pouvez utiliser à partir du code managé, ainsi que les valeurs que les gestionnaires de connexions retournent quand le code appelle la méthode **AcquireConnection**.  
   
  [Extension de packages avec des scripts](../integration-services/extending-packages-scripting/extending-packages-with-scripting.md)  
- Décrit comment étendre le flux de contrôle à l’aide de la tâche de Script ou le flux de données à l’aide du composant Script.  
+ Décrit comment étendre le flux de contrôle à l’aide de la tâche de script, ou le flux de données à l’aide du composant Script.  
   
  [Extension de packages avec des objets personnalisés](../integration-services/extending-packages-custom-objects/extending-packages-with-custom-objects.md)  
  Décrit comment créer et programmer des tâches personnalisées, des composants de flux de données et d'autres objets de package à utiliser dans plusieurs packages.  
@@ -94,8 +92,7 @@ ms.lasthandoff: 09/26/2017
   
 -   Exemples de code CodePlex, [Integration Services Product Samples](http://go.microsoft.com/fwlink/?LinkID=131204), sur www.codeplex.com/MSFTISProdSamples  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [SQL Server Integration Services](../integration-services/sql-server-integration-services.md)  
   
   
-

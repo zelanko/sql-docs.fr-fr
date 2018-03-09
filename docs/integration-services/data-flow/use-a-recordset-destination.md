@@ -1,5 +1,5 @@
 ---
-title: "Utiliser une Destination d’ensemble d’enregistrements | Documents Microsoft"
+title: Utiliser une destination de recordset | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -15,17 +15,16 @@ ms.topic: article
 helpviewer_keywords:
 - Recordset destination
 ms.assetid: a7b143dc-8008-404f-83b0-b45ffbca6029
-caps.latest.revision: 11
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 0e2423a1d19122a3eb13bd69c4bce495c96d81ff
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: d18d5e683bfc30270fcf83a2002350a75da9a24c
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="use-a-recordset-destination"></a>Utiliser une destination de jeu d'enregistrements
   La destination d'ensemble d'enregistrements n'enregistre pas les données sur une source de données externe. Elle enregistre les données en mémoire dans un ensemble d’enregistrements stocké dans une variable de package [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] de type **Object** . Une fois que la destination d'ensemble d'enregistrements a sauvegardé les données, vous devez en général utiliser un conteneur de boucles Foreach avec l'énumérateur ADO Foreach pour traiter une par une les lignes de l'ensemble d'enregistrements. L'énumérateur ADO Foreach enregistre la valeur de chaque colonne de la ligne actuelle dans une variable de package distincte. Ensuite, les tâches que vous configurez à l'intérieur du conteneur de boucles Foreach lisent les valeurs contenues dans ces variables et effectuent certaines actions sur ces valeurs.  
@@ -106,7 +105,7 @@ ms.lasthandoff: 08/03/2017
   
 1.  Sous l'onglet **Flux de contrôle** du concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] , ajoutez une tâche de flux de données à l'aire de conception.  
   
-2.  Sous l'onglet **Flux de données**, ajoutez une source OLE DB à la tâche de flux de données, puis ouvrez l'**Éditeur de source OLE DB.**  
+2.  Sous l'onglet **Flux de données** tab, add an OLE DB source to the Flux de données task, and then open the **Éditeur de source OLE DB.**  
   
 3.  Dans la page **Gestionnaire de connexions** de l'éditeur, configurez la source avec les paramètres suivants :  
   
@@ -182,4 +181,3 @@ ms.lasthandoff: 08/03/2017
      Si vous avez spécifié un serveur SMTP valide et avez fourni votre propre adresse de messagerie, vous recevrez des accusés de non remise pour les messages envoyés par la tâche Envoyer un message aux vendeurs fictifs de [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
   
   
-

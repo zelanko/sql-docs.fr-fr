@@ -1,5 +1,5 @@
 ---
-title: "Mapper des paramètres de requête à des Variables dans un composant de flux de données | Documents Microsoft"
+title: "Mapper des paramètres de requête à des variables dans un composant de flux de données | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -18,17 +18,16 @@ helpviewer_keywords:
 - mapping query parameters to variables [Integration Services]
 - variables [Integration Services], mapping parameters to
 ms.assetid: 5e26977c-758c-46d6-acf1-4fd9238f0950
-caps.latest.revision: 34
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: da9367a56cefbb37244d4a47543b93586e7e8870
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 306d22adf7e49ab9eb8ae2844ad0cc322c96479f
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="map-query-parameters-to-variables-in-a-data-flow-component"></a>Mapper des paramètres de requête à des variables dans un composant de flux de données
   Lorsque vous configurez la source OLE DB pour utiliser des requêtes paramétrables, vous pouvez mapper les paramètres à des variables.  
@@ -51,7 +50,7 @@ ms.lasthandoff: 08/03/2017
   
 7.  Cliquez sur **Paramètres**.  
   
-8.  Dans le **définition des paramètres de requête** boîte de dialogue zone, mappez chaque paramètre dans le **paramètres** liste à une variable dans le **Variables** liste ou créez une nouvelle variable en cliquant sur  **\<nouvelle variable >**. Cliquez sur **OK**.  
+8.  Dans la boîte de dialogue **Définition des paramètres de la requête**, mappez chaque paramètre de la liste **Paramètres** à une variable de la liste **Variables** ou créez une variable en cliquant sur **\<Nouvelle variable>**. Cliquez sur **OK**.  
   
     > [!NOTE]  
     >  Seules les variables système et les variables définies par l'utilisateur qui se trouvent dans l'étendue du package, dans un conteneur parent tel qu'une boucle Foreach ou dans la tâche de flux de données contenant le composant de flux de données, peuvent être mappées. La variable doit avoir un type de données compatible avec la colonne de la clause WHERE à laquelle le paramètre est affecté.  
@@ -60,9 +59,8 @@ ms.lasthandoff: 08/03/2017
   
 10. Pour enregistrer le package mis à jour, cliquez sur **Enregistrer les éléments sélectionnés** dans le menu **Fichier** .  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Source OLE DB](../../integration-services/data-flow/ole-db-source.md)   
  [Transformation de recherche](../../integration-services/data-flow/transformations/lookup-transformation.md)  
   
   
-

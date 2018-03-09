@@ -14,15 +14,15 @@ ms.topic: article
 helpviewer_keywords: relationships [SQL Server], creating
 ms.assetid: 867a54b8-5be4-46e6-9702-49ae6dabf67c
 caps.latest.revision: "21"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 103210e4164a9d4faf014a044a22ee13a28fcee9
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 4f90816f11420f3bef3885c66199144666e903bb
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="create-foreign-key-relationships"></a>Créer des relations de clé étrangère
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -62,14 +62,14 @@ ms.lasthandoff: 11/17/2017
     
 
     
-##   <a name="permissions"></a>Permissions    
+##   <a name="permissions"></a>Autorisations    
  La création d'une nouvelle table avec une clé étrangère nécessite une autorisation CREATE TABLE dans la base de données et une autorisation ALTER pour le schéma dans lequel la table a été créée.    
     
  La création d'une clé étrangère dans une table existante nécessite l'autorisation ALTER sur la table.    
        
     
 ## <a name="create-a-foreign-key-relationship-in-table-designer"></a>Créer une relation de clé étrangère dans le Concepteur de tables 
-####  <a name="using-sql-server-management-studio"></a>Utilisation de SQL Server Management Studio    
+####  <a name="using-sql-server-management-studio"></a>Utilisation de SQL Server Management Studio    
     
 1.  Dans l’Explorateur d’objets, cliquez avec le bouton droit sur la table qui se trouve du côté clé étrangère de la relation et cliquez sur **Conception**.    
     

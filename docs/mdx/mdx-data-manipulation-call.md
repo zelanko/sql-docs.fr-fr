@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords: CALL
@@ -23,11 +23,11 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: bac7fc523f2519813bdd893c97edb4070fa96991
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 6b3e7d095a7957c8d5af8dc497bb7a9d884005b8
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="mdx-data-manipulation---call"></a>Manipulation de données MDX - appel
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -55,7 +55,7 @@ CALL SP_Name
  *Cube_Expression*  
  Expression de cube de chaîne valide qui précise le nom du cube.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Le **appeler** instruction exécute une procédure stockée inscrite spécifiée, comprenant éventuellement un ou plusieurs arguments pour la procédure stockée spécifiée. Le **appeler** instruction doit être utilisé uniquement avec des procédures stockées qui retournent des valeurs vides. Cette instruction ne peut pas être combinée avec d'autres fonctions ou opérateurs au sein d'une expression MDX. Les procédures stockées enregistrées qui retournent des valeurs peuvent être appelées directement au sein d'expressions MDX et combinées avec d'autres fonctions et opérateurs MDX.  
   
  Si aucun cube n'est spécifié, l'instruction exécute la procédure stockée sur le cube actuel.  

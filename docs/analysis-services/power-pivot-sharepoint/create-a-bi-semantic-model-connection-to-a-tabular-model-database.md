@@ -2,32 +2,30 @@
 title: "Créer une connexion de modèle sémantique BI vers une base de données de modèle tabulaire | Documents Microsoft"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: power-pivot-sharepoint
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 69b306f6-ee8a-44d2-8f51-0cad2c0bc135
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: cad58c850f42e42791bbd57c010b48234e5640e7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 0077f3a970f872329db9c30e16ae5653a4ccb13f
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="create-a-bi-semantic-model-connection-to-a-tabular-model-database"></a>Créer une connexion de modèle sémantique BI à une base de données model tabulaire
-  Utilisez les informations de cette rubrique pour configurer une connexion de modèle sémantique BI qui redirige vers une base de données model tabulaire qui s'exécute sur une instance Analysis Services en dehors de la batterie SharePoint.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Utilisez les informations de cette rubrique pour configurer une connexion de modèle sémantique BI qui redirige vers une base de données model tabulaire qui s'exécute sur une instance Analysis Services en dehors de la batterie SharePoint.  
   
  Après avoir créé une connexion de modèle sémantique BI et configuré les autorisations SharePoint et Analysis Services, les utilisateurs peuvent l'utiliser comme source de données pour les rapports Excel ou [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] .  
   
@@ -88,7 +86,7 @@ ms.lasthandoff: 11/17/2017
 ##  <a name="bkmk_BISM"></a> Accorder les autorisations de lecture sur la base de données model tabulaire  
  Étant donné que la base de données s'exécute sur un serveur externe à la batterie, une partie de la configuration de vos connexions consiste à accorder aux utilisateurs de base de données des autorisations sur le serveur Analysis Services principal. Analysis Services utilise un modèle d'autorisation basé sur les rôles. Les utilisateurs qui se connectent aux bases de données model doivent avoir des autorisations de lecture ou supérieures, via un rôle qui accorde l'accès en lecture à ses membres.  
   
- Les rôles, et parfois l'appartenance au rôle, sont définis lorsque le modèle est créé dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Vous ne pouvez pas utiliser SQL Server Management Studio pour créer des rôles, mais vous pouvez l'utiliser pour ajouter des membres à un rôle qui est déjà défini. Pour plus d’informations sur la création de rôles, consultez [Créer et gérer des rôles &#40;SSAS Tabulaire&#41;](../../analysis-services/tabular-models/create-and-manage-roles-ssas-tabular.md).  
+ Les rôles, et parfois l'appartenance au rôle, sont définis lorsque le modèle est créé dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Vous ne pouvez pas utiliser SQL Server Management Studio pour créer des rôles, mais vous pouvez l'utiliser pour ajouter des membres à un rôle qui est déjà défini. Pour plus d’informations sur la création de rôles, consultez [créer et gérer les rôles](../../analysis-services/tabular-models/create-and-manage-roles-ssas-tabular.md).  
   
 #### <a name="assign-role-membership"></a>Assigner l'appartenance au rôle  
   

@@ -8,26 +8,28 @@ ms.service:
 ms.component: sqlxml
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-xml
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
 - XML Bulk Load [SQLXML], about XML Bulk Load
 - bulk load [SQLXML], about bulk load
 ms.assetid: c5885d14-c7c1-47b3-a389-455e99a7ece1
-caps.latest.revision: "26"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9b6abe63c911f92c661cb7ab4c56b3a2bb61fa14
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: e5d719e03cc033606ca339633d0b13cf01c3b6a2
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="guidelines-and-limitations-of-xml-bulk-load-sqlxml-40"></a>Règles et limitations du chargement en masse XML (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]Lorsque vous utilisez le chargement en masse XML, vous devez connaître les restrictions et recommandations suivantes :  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+Lorsque vous utilisez le chargement en masse XML, vous devez connaître les indications et les limitations suivantes :  
   
 -   Les schémas insérés ne sont pas pris en charge.  
   
@@ -171,7 +173,7 @@ ms.lasthandoff: 11/17/2017
   
 -   SchemaGen fournit uniquement les fonctionnalités de base pour générer le schéma relationnel à partir de XSD annotés. L'utilisateur doit modifier manuellement les tables générées, si nécessaire.  
   
--   Où plus qu’une relation existe entre les tables, SchemaGen tente de créer une relation unique qui inclut toutes les clés impliquées entre les deux tables. Cette limitation peut être à l'origine d'une erreur [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
+-   Lorsqu’il existe plus d’une relation entre les tables, SchemaGen tente de créer une relation unique qui inclut toutes les clés impliquées entre les deux tables. Cette limitation peut être à l'origine d'une erreur [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
   
 -   Lorsque vous chargez en masse des données XML dans une base de données, il doit y avoir au moins un attribut ou élément enfant dans le schéma de mappage qui est mappé à une colonne de base de données.  
   

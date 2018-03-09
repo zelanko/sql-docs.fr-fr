@@ -1,33 +1,32 @@
 ---
 title: "Fonctionnalités clientes ADOMD.NET | Documents Microsoft"
 ms.custom: 
-ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.date: 02/14/2018
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - functionality [ADOMD.NET]
 - ADOMD.NET, functionality
 ms.assetid: 0f5e16a1-dc2d-4c87-8551-985921bf069b
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 4573834d025c7afb066c4e363c476e8fb18c4ab7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 59d5086aaba3fbf1ebe8581031f30f3313a51938
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="adomdnet-client-functionality"></a>Fonctionnalités clientes ADOMD.NET
   À l'image des autres fournisseurs de données [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework, ADOMD.NET joue le rôle de lien entre une application et une source de données. Cependant, ADOMD.NET se différencie des autres fournisseurs de données .NET Framework en ce sens qu'ADOMD.NET utilise des données analytiques. Pour ce faire, ADOMD.NET prend en charge des fonctionnalités très différentes de celles des autres fournisseurs de données .NET Framework. ADOMD.NET permet non seulement de récupérer des données, mais également d'extraire des métadonnées et modifier la structure de la banque de données analytiques :  

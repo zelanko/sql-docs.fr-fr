@@ -3,30 +3,36 @@ title: Fonction Count (XQuery) | Documents Microsoft
 ms.custom: 
 ms.date: 03/09/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: xquery
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-applies_to: SQL Server
-dev_langs: XML
+applies_to:
+- SQL Server
+dev_langs:
+- XML
 helpviewer_keywords:
 - fn:count function
 - count function [XQuery]
 ms.assetid: a9f7131f-23e1-4d4d-a36c-180447543926
-caps.latest.revision: "27"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b868f88df37c18f3790cc1c9c5cd5b4ddd5fa623
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 33f4a34f7c4310fa1513bd90d3dabb9438d1fcb4
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="aggregate-functions---count"></a>Fonctions d’agrégation - nombre
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Retourne le nombre d’éléments contenus dans la séquence spécifiée par *$arg*.  
   
@@ -63,7 +69,7 @@ FROM Production.ProductModel
 WHERE Production.ProductModel.ProductModelID=7  
 ```  
   
- Notez les points suivants dans la requête précédente :  
+ Notez les points suivants dans la requête précédente :  
   
 -   Le **espace de noms** mot clé dans [prologue XQuery](../xquery/modules-and-prologs-xquery-prolog.md) définit un préfixe d’espace de noms. Le préfixe est ensuite utilisé dans le corps XQuery.  
   
@@ -71,7 +77,7 @@ WHERE Production.ProductModel.ProductModelID=7
   
 -   Le **count()** de fonction dans le corps XQuery détermine le nombre de <`Location`> éléments.  
   
- Voici le résultat obtenu :  
+ Voici le résultat obtenu :  
   
 ```  
 ProductModelID   Name                 WorkCtrCount       
@@ -94,7 +100,7 @@ FROM Production.ProductModel
 WHERE Production.ProductModel.ProductModelID= 7  
 ```  
   
- Voici le résultat obtenu :  
+ Voici le résultat obtenu :  
   
 ```  
 <NoOfWorkStations ProductModelID="7"   
@@ -112,7 +118,7 @@ FROM Production.ProductModel
 WHERE ProductModelID=7  
 ```  
   
- Voici le résultat obtenu :  
+ Voici le résultat obtenu :  
   
 ```  
 ProductModelID    Name            WorkCtrCount  

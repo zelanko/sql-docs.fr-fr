@@ -1,5 +1,5 @@
 ---
-title: sp_attach_schedule (Transact-SQL) | Documents Microsoft
+title: sp_attach_schedule (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_attach_schedule_TSQL
 - sp_attach_schedule
-dev_langs: TSQL
-helpviewer_keywords: sp_attach_schedule
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_attach_schedule
 ms.assetid: 80c80eaf-cf23-4ed8-b8dd-65fe59830dd1
-caps.latest.revision: "34"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e8359436d7e220c7bef3068ad9e73ded455ea497
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: d78d6c73d28325771460a1c055a6fb0b491c264c
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spattachschedule-transact-sql"></a>sp_attach_schedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,19 +49,19 @@ sp_attach_schedule
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@job_id=** ] *job_id*  
+ [ **@job_id=** ] *job_id*  
  Numéro d’identification du travail auquel ajouter la planification. *job_id*est **uniqueidentifier**, avec NULL comme valeur par défaut.  
   
- [  **@job_name =** ] **'***job_name***'**  
+ [ **@job_name =** ] **'***job_name***'**  
  Le nom du travail auquel ajouter la planification. *job_name*est **sysname**, avec NULL comme valeur par défaut.  
   
 > [!NOTE]  
 >  Soit *job_id* ou *job_name* doit être spécifié, mais ne peut pas être spécifiés.  
   
- [  **@schedule_id =** ] *id_de_la_planification*  
+ [ **@schedule_id =** ] *schedule_id*  
  Numéro d'identification de la planification à définir pour le travail. *id_de_la_planification*est **int**, avec NULL comme valeur par défaut.  
   
- [  **@schedule_name =** ] **'***nom_de_la_planification***'**  
+ [ **@schedule_name =** ] **'***schedule_name***'**  
  Nom de la planification à définir pour le travail. *nom_de_la_planification*est **sysname**, avec NULL comme valeur par défaut.  
   
 > [!NOTE]  
@@ -71,7 +74,7 @@ sp_attach_schedule
   
  Cette procédure stockée doit être exécutée à partir de la **msdb** base de données.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Par défaut, les membres du rôle serveur fixe **sysadmin** peuvent exécuter cette procédure stockée. Les autres utilisateurs doivent disposer de l'un des rôles de base de données fixes suivants de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent dans la base de données **msdb** :  
   
 -   **SQLAgentUserRole**  
@@ -82,9 +85,9 @@ sp_attach_schedule
   
  Notez que le propriétaire du travail peut joindre un travail à une planification et détacher un travail d'une planification sans être le propriétaire de la planification. Toutefois, une planification ne peut pas être supprimée si le détachement la conserve sans travaux, sauf si l’appelant est propriétaire de la planification.  
   
- Pour en savoir plus sur les autorisations de ces rôles, consultez [Rôles de base de données fixes de SQL Server Agent](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79).  
+ Pour en savoir plus sur les autorisations de ces rôles, consultez [Rôles de base de données fixes de l'Agent SQL Server](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79).  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vérifie si l'utilisateur détient à la fois le travail et la planification.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vérifie si l’utilisateur propriétaire de la tâche et la planification.  
   
 ## <a name="examples"></a>Exemples  
  L'exemple suivant crée une planification nommée `NightlyJobs`. Les travaux qui utilisent cette planification s'exécutent tous les jours lorsque l'heure indiquée par le serveur est `01:00`. L'exemple joint la planification au travail `BackupDatabase` et au travail `RunReports`.  
@@ -115,8 +118,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [sp_add_schedule &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)   
- [sp_detach_schedule &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-detach-schedule-transact-sql.md)   
- [sp_delete_schedule &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-delete-schedule-transact-sql.md)  
+ [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)   
+ [sp_detach_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-detach-schedule-transact-sql.md)   
+ [sp_delete_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-schedule-transact-sql.md)  
   
   

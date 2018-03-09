@@ -5,10 +5,11 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: microsoft
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,16 +18,16 @@ helpviewer_keywords:
 - keys [ODBC]
 - FoxPro ODBC driver [ODBC], registry entries
 ms.assetid: 1a63d92d-ca3a-46ae-911f-6788292c801e
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 83c2d0752cc8b786a9de84d1a5005a8bc0c5b5f5
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: b9d776df7e758f0902ca3b20a94f8c40e351e959
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="registry-entries-visual-foxpro-odbc-driver"></a>Entrées de Registre (Visual FoxPro le pilote ODBC)
 Lorsque vous installez le pilote ODBC Visual FoxPro, le programme d’installation met à jour le Registre de votre système, dans la clé de Registre HKEY_LOCAL_MACHINE\SOFTWARE\ODBC\ODBCInst.ini, pour ajouter une nouvelle clé appelée pilote Microsoft Visual FoxPro. Sous cette clé, les valeurs décrites dans le tableau suivant sont ajoutés.  
@@ -37,7 +38,7 @@ Lorsque vous installez le pilote ODBC Visual FoxPro, le programme d’installati
 |ConnectFunctions|REG_SZ|« YYN »|  
 |Pilote|REG_SZ|Chemin d’accès système au fichier vfpodbc.dll|  
 |DriverODBCVer|REG_SZ|"02.50"|  
-|FileExtns|REG_SZ|« *.dbf,\*.cdx,\*.fpt »|  
+|FileExtns|REG_SZ|"*.dbf,\*.cdx,\*.fpt"|  
 |FileUsage|REG_SZ|"1"|  
 |Programme d'installation|REG_SZ|Chemin d’accès système au fichier vfpodbc.dll|  
 |SQLLevel|REG_SZ|"0"|  
@@ -58,7 +59,7 @@ Lorsque vous installez le pilote ODBC Visual FoxPro, le programme d’installati
 |Exclusive||Oui ou Non|  
 |BackgroundFetch||Oui ou Non|  
 |SourceDB|REG_SZ|Chemin d’accès. Fichier DBC|  
-|SourceType|REG_SZ|« DBC » ou « DBF »|  
+|SourceType|REG_SZ|"DBC" or "DBF"|  
   
  Vous ne devez pas accéder à ces informations directement. toute administration du Registre est gérée par l’administrateur ODBC lorsque vous ajoutez, modifiez ou supprimez une source de données.  
   

@@ -2,27 +2,33 @@
 title: Transformer les colonnes existantes en colonnes XML | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: xml
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-xml
+ms.suite: sql
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: tables [XML]
+helpviewer_keywords:
+- tables [XML]
 ms.assetid: 0d951424-9862-41fe-bd46-127f1c059bcb
-caps.latest.revision: "10"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3b482602f2c06d6c1020824d4bb759e942545695
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: f04a60816bc02bef8ce4bb670e2ac5416608388c
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="change-existing-columns-to-xml-columns"></a>Transformer les colonnes existantes en colonnes XML
-  L'instruction ALTER TABLE prend en charge le type de données **xml** . Par exemple, vous pouvez modifier n'importe quelle colonne de type chaîne au type de données **xml** . Dans ces cas-là, les documents contenus dans la colonne doivent être corrects. En outre, si vous convertissez la colonne du type chaîne dans le type xml typé, les documents de la colonne sont validés par rapport aux schémas XSD spécifiés.  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+L'instruction ALTER TABLE prend en charge le type de données **xml** . Par exemple, vous pouvez modifier n'importe quelle colonne de type chaîne au type de données **xml** . Dans ces cas-là, les documents contenus dans la colonne doivent être corrects. En outre, si vous convertissez la colonne du type chaîne dans le type xml typé, les documents de la colonne sont validés par rapport aux schémas XSD spécifiés.  
   
 ```  
 CREATE TABLE T (Col1 int primary key, Col2 nvarchar(max))  
@@ -35,7 +41,7 @@ ALTER COLUMN Col2 xml
 GO  
 ```  
   
- Vous pouvez convertir une colonne de type `xml` non typée en colonne XML typée. Exemple :  
+ Vous pouvez convertir une colonne de type `xml` non typée en colonne XML typée. Exemple :  
   
 ```  
 CREATE TABLE T (Col1 int primary key, Col2 xml)  

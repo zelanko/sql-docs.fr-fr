@@ -2,26 +2,29 @@
 title: "Boîte de dialogue Créer une nouvelle stratégie ou Ouvrir une stratégie, page Description | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance-monitor
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 8964399b-ece9-44cd-b7f6-c5f14c295cb2
 caps.latest.revision: "9"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 929e563a804235aa6b1d5ef7ed5bf7682ce9517e
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: cc54ea269d627ce3935c307ef9f5c330c603e99d
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="create-new-policy-or-open-policy-dialog-box-description-page"></a>Boîte de dialogue Créer une nouvelle stratégie ou Ouvrir une stratégie, page Description
-  Utilisez cette boîte de dialogue pour ajouter une description et des informations supplémentaires à une stratégie de la Gestion basée sur des stratégies.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Utilisez cette boîte de dialogue pour ajouter une description et des informations supplémentaires à une stratégie de la Gestion basée sur des stratégies.  
   
 ## <a name="options"></a>Options  
  **Catégorie**  
@@ -51,7 +54,7 @@ ms.lasthandoff: 11/09/2017
  **Modifié par**  
  Connexion ayant apporté la modification la plus récente à la stratégie.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Administrer des serveurs à l'aide de la Gestion basée sur des stratégies](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)  
   
   

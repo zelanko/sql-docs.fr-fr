@@ -3,8 +3,11 @@ title: "Options (Environnement - Aide - Page Général) | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-menu
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -13,16 +16,16 @@ ms.assetid: deaf23d6-6cbe-4984-ab09-71d2a7ba06c8
 caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 043ab8f89e389dbd940ca3e34039747e2dbf2d27
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: d5b9be182f2af8ab60469591d63fb847da20f244
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="options-environment---help---general-page"></a>Options (Environnement - Aide - Page Général)
-Utilisez la boîte de dialogue **Options** pour choisir des ensembles de documentation et déterminer si les rubriques d’aide doivent être affichées à l’intérieur de [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] ou dans une fenêtre extérieure distincte. Pour y accéder, cliquez sur **Options** dans le menu **Outils** , développez **Aide** dans le nœud **Environnement** et cliquez sur **Général**.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Utilisez la boîte de dialogue **Options** pour choisir des ensembles de documentation et déterminer si les rubriques d’aide doivent être affichées à l’intérieur de [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] ou dans une fenêtre extérieure distincte. Pour y accéder, cliquez sur **Options** dans le menu **Outils** , développez **Aide** dans le nœud **Environnement** et cliquez sur **Général**.  
   
 > [!NOTE]  
 > Les changements apportés aux options de cette page ne prennent effet qu'après le redémarrage de l'environnement.  

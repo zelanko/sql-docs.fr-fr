@@ -1,5 +1,5 @@
 ---
-title: "Types de données Integration Services | Documents Microsoft"
+title: "Types de données d’Integration Services | Microsoft Docs"
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -21,17 +21,16 @@ helpviewer_keywords:
 - Integration Services, data types
 - SQL Server Integration Services, data types
 ms.assetid: 896fc3e8-3aa6-4396-ba82-5d7741cffa56
-caps.latest.revision: 98
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 272d0442798d1968a50c124e8422011c2f174718
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 2b27cb51a9b5090fc8495de50c597579eb100f6f
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="integration-services-data-types"></a>Types de données d'Integration Services
   Quand des données entrent dans un flux de données dans un package, la source qui extrait les données les convertit en type [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Les données numériques se voient attribuer le type de données numeric, les données chaînes le type de données character et les dates le type de données date. Le type de données [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] approprié est également affecté aux autres données, comme les GUID et les BLOB (Binary Large Object Blocks). Si le type des données ne peut pas être converti en un type de données [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , une erreur se produit.  
@@ -75,7 +74,7 @@ ms.lasthandoff: 09/26/2017
 ## <a name="conversion-of-data-types"></a>Conversion de types de données  
  Si les données d'une colonne n'ont pas besoin de toute la largeur qui leur est allouée par le type de données source, vous voudrez peut-être changer le type de données de la colonne. La réduction de la longueur de chaque ligne de données permet d'optimiser les performances lors du transfert de données car plus la ligne est courte, plus les données sont transférées rapidement de la source vers la destination.  
   
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] propose un jeu complet de types de données numeric afin que vous puissiez faire correspondre le type de données et la taille des données. Par exemple, si les valeurs d'une colonne dont le type de données est DT_UI8 sont toujours des entiers compris entre 0 et 3000, vous pouvez opter pour le type de données DT_UI2. De même, si une colonne dont le type de données est DT_CY pourrait se satisfaire d'un type de données integer aux vues des données du package, vous pouvez opter pour le type de données DT_I4.  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] propose un jeu complet de types de données numeric afin que vous puissiez faire correspondre le type de données et la taille des données. Par exemple, si les valeurs d'une colonne dont le type de données est DT_UI8 sont toujours des entiers compris entre 0 et 3000, vous pouvez opter pour le type de données DT_UI2. De même, si une colonne dont le type de données est DT_CY pourrait se satisfaire d'un type de données integer aux vues des données du package, vous pouvez opter pour le type de données DT_I4.  
   
  Vous pouvez modifier les types de données d'une colonne de l'une des manières suivantes :  
   
@@ -115,7 +114,7 @@ ms.lasthandoff: 09/26/2017
   
 #### <a name="converting-from-dtfiletime"></a>Conversion à partir de DT_FILETIME  
   
-|Conversion de DT_FILETIME en|Résultat|  
+|Conversion de DT_FILETIME en|Résultats|  
 |-----------------------------|------------|  
 |DT_FILETIME|Aucun changement.|  
 |DT_DATE|Convertit le type de données.|  
@@ -128,7 +127,7 @@ ms.lasthandoff: 09/26/2017
   
 #### <a name="converting-from-dtdate"></a>Conversion à partir de DT_DATE  
   
-|Conversion de DT_DATE en|Résultat|  
+|Conversion de DT_DATE en|Résultats|  
 |-------------------------|------------|  
 |DT_FILETIME|Convertit le type de données.|  
 |DT_DATE|Aucun changement.|  
@@ -141,7 +140,7 @@ ms.lasthandoff: 09/26/2017
   
 #### <a name="converting-from-dtdbdate"></a>Conversion à partir de DT_DBDATE  
   
-|Conversion de DT_DBDATE en|Résultat|  
+|Conversion de DT_DBDATE en|Résultats|  
 |---------------------------|------------|  
 |DT_FILETIME|Définit zéro pour les champs d'heure dans le type de données DT_FILETIME.|  
 |DT_DATE|Définit zéro pour les champs d'heure dans le type de données DT_DATE.|  
@@ -154,7 +153,7 @@ ms.lasthandoff: 09/26/2017
   
 #### <a name="converting-from-dtdbtime"></a>Conversion à partir de DT_DBTIME  
   
-|Conversion de DT_DBTIME en|Résultat|  
+|Conversion de DT_DBTIME en|Résultats|  
 |---------------------------|------------|  
 |DT_FILETIME|Définit la date actuelle pour le champ de date dans le type de données DT_FILETIME.|  
 |DT_DATE|Définit la date actuelle pour le champ de date dans le type de données DT_DATE.|  
@@ -167,7 +166,7 @@ ms.lasthandoff: 09/26/2017
   
 #### <a name="converting-from-dtdbtime2"></a>Conversion à partir de DT_DBTIME2  
   
-|Conversion de DT_DBTIME2 en|Résultat|  
+|Conversion de DT_DBTIME2 en|Résultats|  
 |----------------------------|------------|  
 |DT_FILETIME|Définit la date actuelle pour le champ de date dans le type de données DT_FILETIME.<br /><br /> Supprime la valeur de fraction de seconde lorsque son échelle est supérieure au nombre de chiffres de fraction de seconde que le type de données DT_FILETIME peut contenir. Après la suppression de la valeur de fraction de seconde, un rapport est généré sur cette troncation de données. Pour plus d’informations, consultez [Gestion des erreurs dans les données](../../integration-services/data-flow/error-handling-in-data.md).|  
 |DT_DATE|Définit la date actuelle pour le champ de date du type de données DT_DATE.<br /><br /> Supprime la valeur de fraction de seconde lorsque son échelle est supérieure au nombre de chiffres de fraction de seconde que le type de données DT_DATE peut contenir. Après la suppression de la valeur de fraction de seconde, un rapport est généré sur cette troncation de données. Pour plus d’informations, consultez [Gestion des erreurs dans les données](../../integration-services/data-flow/error-handling-in-data.md).|  
@@ -180,7 +179,7 @@ ms.lasthandoff: 09/26/2017
   
 #### <a name="converting-from-dtdbtimestamp"></a>Conversion à partir de DT_DBTIMESTAMP  
   
-|Conversion de DT_DBTIMESTAMP en|Résultat|  
+|Conversion de DT_DBTIMESTAMP en|Résultats|  
 |--------------------------------|------------|  
 |DT_FILETIME|Convertit le type de données.|  
 |DT_DATE|Si une valeur représentée par le type de données DT_DBTIMESTAMP dépasse la plage du type de données DT_DATE, l'erreur DB_E_DATAOVERFLOW est retournée. Pour plus d’informations, consultez [Gestion des erreurs dans les données](../../integration-services/data-flow/error-handling-in-data.md).|  
@@ -193,7 +192,7 @@ ms.lasthandoff: 09/26/2017
   
 #### <a name="converting-from-dtdbtimestamp2"></a>Conversion à partir de DT_DBTIMESTAMP2  
   
-|Conversion de DT_DBTIMESTAMP2 en|Résultat|  
+|Conversion de DT_DBTIMESTAMP2 en|Résultats|  
 |---------------------------------|------------|  
 |DT_FILETIME|Supprime la valeur de fraction de seconde lorsque son échelle est supérieure au nombre de chiffres de fraction de seconde que le type de données DT_FILETIME peut contenir. Après la suppression de la valeur de fraction de seconde, un rapport est généré sur cette troncation de données. Pour plus d’informations, consultez [Gestion des erreurs dans les données](../../integration-services/data-flow/error-handling-in-data.md).|  
 |DT_DATE|Si une valeur représentée par le type de données DT_DBTIMESTAMP2 dépasse la plage du type de données DT_DATE, l'erreur DB_E_DATAOVERFLOW est retournée. Pour plus d’informations, consultez [Gestion des erreurs dans les données](../../integration-services/data-flow/error-handling-in-data.md).<br /><br /> Supprime la valeur de fraction de seconde lorsque son échelle est supérieure au nombre de chiffres de fraction de seconde que le type de données DT_DATE peut contenir. Après la suppression de la valeur de fraction de seconde, un rapport est généré sur cette troncation de données. Pour plus d’informations, consultez [Gestion des erreurs dans les données](../../integration-services/data-flow/error-handling-in-data.md).|  
@@ -206,7 +205,7 @@ ms.lasthandoff: 09/26/2017
   
 #### <a name="converting-from-dtdbtimestampoffset"></a>Conversion à partir de DT_DBTIMESTAMPOFFSET  
   
-|Conversion de DT_DBTIMESTAMPOFFSET en|Résultat|  
+|Conversion de DT_DBTIMESTAMPOFFSET en|Résultats|  
 |--------------------------------------|------------|  
 |DT_FILETIME|Change la valeur d'heure représentée par le type de données DT_DBTIMESTAMPOFFSET en temps universel coordonné (UTC).<br /><br /> Supprime la valeur de fraction de seconde lorsque son échelle est supérieure au nombre de chiffres de fraction de seconde que le type de données DT_FILETIME peut contenir. Après la suppression de la valeur de fraction de seconde, un rapport est généré sur cette troncation de données. Pour plus d’informations, consultez [Gestion des erreurs dans les données](../../integration-services/data-flow/error-handling-in-data.md).|  
 |DT_DATE|Change la valeur d’heure représentée par le type de données DT_DBTIMESTAMPOFFSET en temps universel coordonné (UTC).<br /><br /> Si une valeur représentée par le type de données DT_DBTIMESTAMPOFFSET dépasse la plage du type de données DT_DATE, l'erreur DB_E_DATAOVERFLOW est retournée.<br /><br /> Supprime la valeur de fraction de seconde lorsque son échelle est supérieure au nombre de chiffres de fraction de seconde que le type de données DT_DATE peut contenir. Après la suppression de la valeur de fraction de seconde, un rapport est généré sur cette troncation de données.<br /><br /> Pour plus d’informations, consultez [Gestion des erreurs dans les données](../../integration-services/data-flow/error-handling-in-data.md).|  
@@ -232,24 +231,24 @@ ms.lasthandoff: 09/26/2017
 |DT_BYTES|binary, varbinary, timestamp|binary, varbinary, timestamp|BigBinary, VarBinary|RAW|||  
 |DT_CY|smallmoney, money|smallmoney, money|Monétaire (Currency)||||  
 |DT_DATE|||||||  
-|DT_DBDATE|[date &#40;Transact-SQL&#41;](../../t-sql/data-types/date-transact-sql.md)|[date &#40;Transact-SQL&#41;](../../t-sql/data-types/date-transact-sql.md)||date|date|date|  
-|DT_DBTIME||||timestamp|time|time|  
+|DT_DBDATE|[date &#40;Transact-SQL&#41;](../../t-sql/data-types/date-transact-sql.md)|[date &#40;Transact-SQL&#41;](../../t-sql/data-types/date-transact-sql.md)||Date|Date|Date|  
+|DT_DBTIME||||TIMESTAMP|time|time|  
 |DT_DBTIME2|[time &#40;Transact-SQL&#41;](../../t-sql/data-types/time-transact-sql.md)(p)|[time &#40;Transact-SQL&#41;](../../t-sql/data-types/time-transact-sql.md) (p)|||||  
 |DT_DBTIMESTAMP|[datetime &#40;Transact-SQL&#41;](../../t-sql/data-types/datetime-transact-sql.md), [smalldatetime &#40;Transact-SQL&#41;](../../t-sql/data-types/smalldatetime-transact-sql.md)|[datetime &#40;Transact-SQL&#41;](../../t-sql/data-types/datetime-transact-sql.md), [smalldatetime &#40;Transact-SQL&#41;](../../t-sql/data-types/smalldatetime-transact-sql.md)|DateTime|TIMESTAMP, DATE, INTERVAL|TIME, TIMESTAMP, DATE|TIME, TIMESTAMP, DATE|  
-|DT_DBTIMESTAMP2|[datetime2 &#40;Transact-SQL&#41;](../../t-sql/data-types/datetime2-transact-sql.md)|[datetime2 &#40;Transact-SQL&#41;](../../t-sql/data-types/datetime2-transact-sql.md)||timestamp|timestamp|timestamp|  
+|DT_DBTIMESTAMP2|[datetime2 &#40;Transact-SQL&#41;](../../t-sql/data-types/datetime2-transact-sql.md)|[datetime2 &#40;Transact-SQL&#41;](../../t-sql/data-types/datetime2-transact-sql.md)||TIMESTAMP|TIMESTAMP|TIMESTAMP|  
 |DT_DBTIMESTAMPOFFSET|[datetimeoffset &#40;Transact-SQL&#41;](../../t-sql/data-types/datetimeoffset-transact-sql.md)(p)|[datetimeoffset &#40;Transact-SQL&#41;](../../t-sql/data-types/datetimeoffset-transact-sql.md) (p)||timestampoffset|timestamp,<br /><br /> varchar|timestamp,<br /><br /> varchar|  
 |DT_DECIMAL|||||||  
 |DT_FILETIME|||||||  
-|DT_GUID|uniqueidentifier|uniqueidentifier|GUID||||  
+|DT_GUID|UNIQUEIDENTIFIER|UNIQUEIDENTIFIER|GUID||||  
 |DT_I1|||||||  
-|DT_I2|smallint|smallint|Short||smallint|smallint|  
-|DT_I4|int|int|Long||INTEGER|INTEGER|  
-|DT_I8|bigint|bigint|||bigint|bigint|  
+|DT_I2|SMALLINT|SMALLINT|Short||smallint|SMALLINT|  
+|DT_I4|INT|INT|Long||INTEGER|INTEGER|  
+|DT_I8|BIGINT|BIGINT|||BIGINT|bigint|  
 |DT_NUMERIC|decimal, numeric|decimal, numeric|Décimal|NUMBER, INT|decimal, numeric|decimal, numeric|  
-|DT_R4|real|real|Unique||real|real|  
-|DT_R8|float|float|Double|FLOAT, REAL|FLOAT, DOUBLE|FLOAT, DOUBLE|  
+|DT_R4|REAL|REAL|Unique||real|real|  
+|DT_R8|float|FLOAT|Double|FLOAT, REAL|FLOAT, DOUBLE|FLOAT, DOUBLE|  
 |DT_STR|char, varchar||varchar||char, varchar|char, varchar|  
-|DT_UI1|tinyint|tinyint|Byte||||  
+|DT_UI1|TINYINT|TINYINT|Byte||||  
 |DT_UI2|||||||  
 |DT_UI4|||||||  
 |DT_UI8|||||||  
@@ -260,11 +259,10 @@ ms.lasthandoff: 09/26/2017
   
  Pour plus d’informations sur le mappage des types de données dans le flux de données, consultez [Utilisation de types de données dans le flux de données](../../integration-services/extending-packages-custom-objects/data-flow/working-with-data-types-in-the-data-flow.md).  
   
-## <a name="related-content"></a>Contenu connexe  
+## <a name="related-content"></a>Contenu associé  
  Entrée de blog, [Performance Comparison between Data Type Conversion Techniques in SSIS 2008](http://go.microsoft.com/fwlink/?LinkId=220823), sur blogs.msdn.com.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Données dans des flux de données](../../integration-services/data-flow/data-in-data-flows.md)  
   
   
-

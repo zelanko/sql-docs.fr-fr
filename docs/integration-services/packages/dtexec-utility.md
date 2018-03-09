@@ -1,5 +1,5 @@
 ---
-title: Utilitaire DTExec | Documents Microsoft
+title: Utilitaire dtexec | Microsoft Docs
 ms.custom: 
 ms.date: 08/26/2016
 ms.prod: sql-non-specified
@@ -13,17 +13,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 7b6867fa-1039-49b3-90fb-85b84678a612
-caps.latest.revision: 30
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 0c021c5f17266bfbba65d3d364136dd0d61d74f3
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/27/2017
-
+ms.openlocfilehash: 053744fd9493aae1c4d0cb4c2235a3da5a465397
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="dtexec-utility"></a>Utilitaire dtexec
   L’utilitaire d’invite de commandes **dtexec** permet de configurer et d’exécuter des packages [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . L’utilitaire **dtexec** donne accès à toutes les fonctions de configuration et d’exécution de packages, telles que les paramètres, les connexions, les propriétés, les variables, la journalisation et les indicateurs de progression. L’utilitaire **dtexec** vous permet de charger des packages à partir des sources suivantes : le serveur [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , un fichier projet .ispac, une base de données [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , le Magasin de packages [!INCLUDE[ssIS](../../includes/ssis-md.md)] et le système de fichiers.  
@@ -63,29 +62,29 @@ ms.lasthandoff: 09/27/2017
 DTExec /ISSERVER "\SSISDB\folderB\Integration Services Project17\Package.dtsx" /SERVER "." /Envreference 2 /Par "$Project::ProjectParameter(Int32)";1 /Par "Parameter(Int32)";21 /Par "CM.sqlcldb2.SSIS_repro.InitialCatalog";ssisdb /Par "$ServerOption::SYNCHRONIZED(Boolean)";True  
 ```  
   
- Quand vous utilisez **dtexec** pour exécuter un package à partir du fichier projet .ispac, les options associées /Proj[ect] et /Pack[age] permettent de spécifier le chemin du projet et le nom de flux du package. Lorsque vous convertissez un projet en modèle de déploiement de projet en exécutant l' **Assistant Conversion de projet Integration Services** de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], l'Assistant génère un fichier projet .ispac. Pour plus d’informations, consultez [Integration Services (SSIS) déployer des projets et Packages](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md).  
+ Quand vous utilisez **dtexec** pour exécuter un package à partir du fichier projet .ispac, les options associées /Proj[ect] et /Pack[age] permettent de spécifier le chemin du projet et le nom de flux du package. Lorsque vous convertissez un projet en modèle de déploiement de projet en exécutant l' **Assistant Conversion de projet Integration Services** de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], l'Assistant génère un fichier projet .ispac. Pour plus d’informations, consultez [Déployer des projets et des packages Integration Services (SSIS)](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md).  
   
  Vous pouvez utiliser **dtexec** avec des outils de planification tiers pour planifier les packages qui sont déployés sur le serveur [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   
 ##  <a name="bit"></a> Considérations concernant l'installation sur les ordinateurs 64 bits  
  Sur un ordinateur 64 bits, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] installe une version 64 bits de l’utilitaire **dtexec** (dtexec.exe). Si vous devez exécuter certains packages en mode 32 bits, installez la version 32 bits de l’utilitaire **dtexec** . Pour installer la version 32 bits de l’utilitaire **dtexec** , vous devez sélectionner Outils clients ou [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] pendant l’installation.  
   
- Par défaut, un ordinateur 64 bits qui dispose à la fois des versions 64 bits et 32 bits d'une invite de commandes [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] doit pouvoir exécuter la version 32 bits. La version 32 bits s'exécute car le chemin d'accès au répertoire de la version 32 bits apparaît dans la variable d'environnement PATH avant le chemin d'accès au répertoire de la version 64 bits. (En général, le chemin d’accès au répertoire 32 bits est  *\<lecteur >*: \Program \Microsoft SQL Server\110\DTS\Binn fichiers (x86), alors que le chemin d’accès au répertoire 64 bits est  *\<lecteur >*: \Program Files\Microsoft SQL Server\110\DTS\Binn.)  
+ Par défaut, un ordinateur 64 bits qui dispose à la fois des versions 64 bits et 32 bits d'une invite de commandes [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] doit pouvoir exécuter la version 32 bits. La version 32 bits s'exécute car le chemin d'accès au répertoire de la version 32 bits apparaît dans la variable d'environnement PATH avant le chemin d'accès au répertoire de la version 64 bits. (En général, le chemin du répertoire 32 bits est *\<lecteur>*:\Program Files(x86)\Microsoft SQL Server\110\DTS\Binn, tandis que le chemin du répertoire 64 bits est *\<lecteur>*:\Program Files\Microsoft SQL Server\110\DTS\Binn.)  
   
 > **REMARQUE :** si vous utilisez SQL Server Agent pour exécuter l’utilitaire, il utilise automatiquement la version 64 bits de ce dernier. SQL Server Agent utilise le Registre, et non la variable d'environnement PATH, pour localiser le fichier exécutable correct de l'utilitaire.  
   
  Pour vous assurer que vous exécutez la version 64 bits de l'utilitaire à l'invite de commandes, vous pouvez effectuer l'une des actions suivantes :  
   
--   Ouvrez une fenêtre d’invite de commandes, accédez au répertoire qui contient la version 64 bits de l’utilitaire (*\<lecteur >*: \Program Files\Microsoft SQL Server\110\DTS\Binn), puis exécutez l’utilitaire à partir de cet emplacement.  
+-   Ouvrez une fenêtre d’invite de commandes, indiquez le répertoire qui contient la version 64 bits de l’utilitaire (*\<lecteur>*:\Program Files\Microsoft SQL Server\110\DTS\Binn), puis exécutez celui-ci à partir de cet emplacement.  
   
--   À l’invite de commandes, exécutez l’utilitaire en entrant le chemin d’accès complet (*\<lecteur >*: \Program Files\Microsoft SQL Server\110\DTS\Binn) à la version 64 bits de l’utilitaire.  
+-   À l’invite de commandes, exécutez l’utilitaire en entrant le chemin complet (*\<lecteur>*:\Program Files\Microsoft SQL Server\110\DTS\Binn) de la version 64 bits de l’utilitaire.  
   
--   Modifiez de manière définitive l’ordre des chemins dans la variable d’environnement PATH en plaçant le chemin d’accès de 64 bits (*\<lecteur >*: \Program Files\Microsoft SQL Server\110\DTS\Binn) avant le chemin d’accès 32 bits (*\<lecteur >*: \ Programmer des fichiers (x86) \Microsoft SQL Server\110\DTS\Binn) dans la variable.  
+-   Modifiez de manière définitive l’ordre des chemins dans la variable d’environnement PATH en plaçant le chemin 64 bits (*\<lecteur>*:\Program Files\Microsoft SQL Server\110\DTS\Binn) avant le chemin 32 bits (*\<lecteur>*:\Program Files(x86)\Microsoft SQL Server\110\DTS\Binn) dans la variable.  
   
 ##  <a name="side"></a> Remarques concernant les ordinateurs dotés d'installations côte à côte  
  Lousque [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] est installé sur un oudinateur sur lequel [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] ou [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] est installé, plusieurs versions de l'utilitaire **dtexec** sont installées.  
   
- Pour vous assurer que vous exécutez la version appropriée de l’utilitaire, à l’invite exécuter l’utilitaire en entrant le chemin d’accès complet (*\<lecteur >*: \Program Files\Microsoft SQL Server\\< version\>\DTS\Binn).  
+ Pour être certain d’exécuter la version appropriée de l’utilitaire, à l’invite de commandes, exécutez l’utilitaire en entrant le chemin complet (*\<lecteur>*:\Program Files\Microsoft SQL Server\\<version\>\DTS\Binn).  
   
 ##  <a name="phases"></a> Phases d'exécution  
  L'utilitaire s'exécute en quatre phases. Ces phases sont les suivantes :  
@@ -109,10 +108,10 @@ DTExec /ISSERVER "\SSISDB\folderB\Integration Services Project17\Package.dtsx" /
   
  Quand un package s’exécute, **dtexec** peut retourner un code de sortie. Le code de sortie est utilisé pour remplir la variable ERRORLEVEL, dont la valeur peut être testée dans des instructions conditionnelles ou la logique dans un fichier de commandes. Le tableau suivant répertorie les valeurs que l’utilitaire **dtexec** peut définir lors de la sortie.  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |0|L'exécution du package a réussi.|  
-|1|Le package a échoué.|  
+| 1|Le package a échoué.|  
 |3|Le package a été annulé par l'utilisateur.|  
 |4|L'utilitaire n'a pas pu localiser le package demandé. Le package est introuvable.|  
 |5|L'utilitaire n'a pas pu localiser le package demandé. Le package ne peut pas être chargé.|  
@@ -157,7 +156,7 @@ dtexec /option [value] [/option [value]]...
   
 -   **/?** [*option_name*] : (Facultatif). Affiche les options d’invite de commandes ou l’aide pour l’argument *option_name* spécifié, puis ferme l’utilitaire.  
   
-     Si vous spécifiez un argument *option_name* , **dtexec** ouvre la documentation en ligne [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et affiche la rubrique relative à l’utilitaire dtexec.  
+     Si vous spécifiez un argument *option_name*, **dtexec** ouvre la documentation en ligne [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et affiche la rubrique relative à l’utilitaire dtexec.  
   
 -   **/Ca[llerInfo]**: (Facultatif). Spécifie des informations supplémentaires pour l'exécution d'un package. Lorsque vous exécutez un package à l'aide de SQL Server Agent, l'agent définit cet argument afin d'indiquer que l'exécution du package est appelée par SQL Server Agent. Ce paramètre est ignoré lorsque l’utilitaire **dtexec** est exécuté à partir de la ligne de commande.  
   
@@ -221,7 +220,7 @@ dtexec /option [value] [/option [value]]...
   
      Pour afficher plusieurs exemples de l’option **/ConsoleLog** , consultez la section **Notes** .  
   
---   **/D [ts]** *package_path*: (facultatif). Charge un package à partir du magasin de packages SSIS. Les packages stockés dans le Magasin de packages SSIS sont déployés à l'aide du modèle de déploiement de package hérité. Pour exécuter les packages qui sont déployés sur le serveur [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] à l’aide du modèle de déploiement de projet, utilisez l’option **/ISServer** . Pour plus d'informations sur les modèles de déploiement de package et de projet, consultez [Deployment of Projects and Packages](https://msdn.microsoft.com/library/hh213290.aspx).  
+--   **/D [ts]** *package_path* (Facultatif). Charge un package à partir du magasin de packages SSIS. Les packages stockés dans le Magasin de packages SSIS sont déployés à l'aide du modèle de déploiement de package hérité. Pour exécuter les packages qui sont déployés sur le serveur [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] à l’aide du modèle de déploiement de projet, utilisez l’option **/ISServer**. Pour plus d'informations sur les modèles de déploiement de package et de projet, consultez [Deployment of Projects and Packages](https://msdn.microsoft.com/library/hh213290.aspx).  
   
      The *package_path* argument specifies the relative path of the [!INCLUDE[ssIS](../../includes/ssis-md.md)] package, starting at the root of the SSIS Package Store, and includes the name of the [!INCLUDE[ssIS](../../includes/ssis-md.md)] package. If the path or file name specified in the *package_path* argument contains a space, you must put quotation marks around the *package_path* argument.  
   
@@ -237,7 +236,7 @@ dtexec /option [value] [/option [value]]...
     /Dump 0xC020801C  
     ```  
   
-     **/ Dump** *code d’erreur*: par défaut, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] stocke les fichiers de vidage du débogage dans le dossier  *\<lecteur >*: \Program Files\Microsoft SQL Server\110\Shared\ErrorDumps.  
+     **/Dump** *error code* : par défaut, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] stocke les fichiers de vidage du débogage dans le dossier*\<lecteur>*:\Program Files\Microsoft SQL Server\110\Shared\ErrorDumps.  
   
     > **REMARQUE :** les fichiers de vidage du débogage peuvent contenir des informations sensibles. Utilisez une liste de contrôle d'accès (ACL, Access Control List) pour restreindre l'accès aux fichiers ou copiez ces derniers dans un dossier avec accès restreint. Par exemple, nous vous recommandons de supprimer toutes les informations sensibles ou confidentielles avant d'envoyer vos fichiers de débogage aux services de support technique de Microsoft.  
   
@@ -249,7 +248,7 @@ dtexec /option [value] [/option [value]]...
   
 -   **/DumpOnError**: (Facultatif) Crée les fichiers de vidage du débogage, .mdmp et .tmp, quand une erreur se produit pendant l’exécution du package.  
   
-     Par défaut, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] stocke les fichiers de vidage du débogage dans le dossier  *\<lecteur >*: dossier \Program Files\Microsoft SQL Server\110\Shared\ErrorDumps.  
+     Par défaut, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] stocke les fichiers de vidage du débogage dans le dossier, *\<lecteur>*:\Program Files\Microsoft SQL Server\110\Shared\ErrorDumps.  
   
     > **REMARQUE :** les fichiers de vidage du débogage peuvent contenir des informations sensibles. Utilisez une liste de contrôle d'accès (ACL, Access Control List) pour restreindre l'accès aux fichiers ou copiez ces derniers dans un dossier avec accès restreint. Par exemple, nous vous recommandons de supprimer toutes les informations sensibles ou confidentielles avant d'envoyer vos fichiers de débogage aux services de support technique de Microsoft.  
   
@@ -266,7 +265,7 @@ dtexec /option [value] [/option [value]]...
      L’option **/Env[Reference]** s’utilise avec les options **/ISServer** et **/Server** .  
   
      Ce paramètre est utilisé par SQL Server Agent.  
-  --   **/F [ile]** *filespec*: (facultatif). Charge un package qui est enregistré dans le système de fichiers. Les packages enregistrés dans le système de fichiers sont déployés à l'aide du modèle de déploiement de package hérité. Pour exécuter les packages qui sont déployés sur le serveur [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] à l’aide du modèle de déploiement de projet, utilisez l’option **/ISServer** . Pour plus d'informations sur les modèles de déploiement de package et de projet, consultez [Deployment of Projects and Packages](deploy-integration-services-ssis-projects-and-packages.md).  
+  --   **/F[ile]** *filespec* (Facultatif). Charge un package qui est enregistré dans le système de fichiers. Les packages enregistrés dans le système de fichiers sont déployés à l'aide du modèle de déploiement de package hérité. Pour exécuter les packages qui sont déployés sur le serveur [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] à l’aide du modèle de déploiement de projet, utilisez l’option **/ISServer** . Pour plus d'informations sur les modèles de déploiement de package et de projet, consultez [Deployment of Projects and Packages](deploy-integration-services-ssis-projects-and-packages.md).  
 
   L'argument *filespec* spécifie le chemin d'accès et le nom de fichier du package. Vous pouvez spécifier le chemin d'accès en tant que chemin UNC (Universal Naming Convention) ou chemin d'accès local. Si le chemin d'accès ou le nom de fichier spécifié dans l'argument *filespec* contient un espace, vous devez placer l'argument *filespec* entre guillemets.  
   
@@ -296,19 +295,19 @@ dtexec /option [value] [/option [value]]...
   
     -   Fichier texte :  
   
-        -   ProgID : DTS.LogProviderTextFile.1  
+        -   ProgID : DTS.LogProviderTextFile.1  
   
         -   ClassID : {59B2C6A5-663F-4C20-8863-C83F9B72E2EB}  
   
     -   [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]:  
   
-        -   ProgID : DTS.LogProviderSQLProfiler.1  
+        -   ProgID : DTS.LogProviderSQLProfiler.1  
   
         -   ClassID : {5C0B8D21-E9AA-462E-BA34-30FF5F7A42A1}  
   
     -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
   
-        -   ProgID : DTS.LogProviderSQLServer.1  
+        -   ProgID : DTS.LogProviderSQLServer.1  
   
         -   ClassID : {6AA833A1-E4B2-4431-831B-DE695049DC61}  
   
@@ -318,7 +317,7 @@ dtexec /option [value] [/option [value]]...
   
         -   ClassID : {97634F75-1DC7-4F1F-8A4C-DAF0E13AAA22}  
   
-    -   Fichier XML :  
+    -   Fichier XML :  
   
         -   ProgID : DTS.LogProviderXMLFile.1  
   
@@ -416,7 +415,7 @@ dtexec /option [value] [/option [value]]...
   
      L’option **Ser[ver]** est obligatoire quand l’option **/ISServer** est spécifiée.  
   
---   **/SQ [L]** *package_path*: charge un package stocké dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], dans **msdb** base de données. Les packages stockés dans la base de données **msdb** sont déployés à l'aide du modèle de déploiement de package. Pour exécuter les packages qui sont déployés sur le serveur [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] à l’aide du modèle de déploiement de projet, utilisez l’option **/ISServer** . Pour plus d'informations sur les modèles de déploiement de package et de projet, consultez [Deployment of Projects and Packages](https://msdn.microsoft.com/library/hh213290.aspx).   
+--   **/SQ[L]** *package_path* : charge un package qui est stocké dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], dans la base de données **msdb**. Les packages stockés dans la base de données **msdb** sont déployés à l'aide du modèle de déploiement de package. Pour exécuter les packages qui sont déployés sur le serveur [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] à l’aide du modèle de déploiement de projet, utilisez l’option **/ISServer** . Pour plus d'informations sur les modèles de déploiement de package et de projet, consultez [Deployment of Projects and Packages](https://msdn.microsoft.com/library/hh213290.aspx).   
   
      The *package_path* argument specifies the name of the package to retrieve. If folders are included in the path, they are terminated with backslashes ("\\"). The *package_path* value can be quoted. If the path or file name specified in the *package_path* argument contains a space, you must put quotation marks around the *package_path* argument.  
   
@@ -636,8 +635,7 @@ dtexec /isserver "\SSISDB\MyFolder\MyProject\MyPackage.dtsx" /server "."
   
 ```  
   
-## <a name="related-content"></a>Contenu connexe  
+## <a name="related-content"></a>Contenu associé  
  Entrée de blog, [Exit Codes, DTEXEC, and SSIS Catalog](http://www.mattmasson.com/2012/02/exit-codes-dtexec-and-ssis-catalog/), sur www.mattmasson.com.  
   
   
-

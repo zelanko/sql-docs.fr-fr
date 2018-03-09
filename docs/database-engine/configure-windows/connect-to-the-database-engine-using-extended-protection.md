@@ -2,9 +2,12 @@
 title: "Se connecter au moteur de base de données à l’aide de la protection étendue | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: configure-windows
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,18 +20,18 @@ helpviewer_keywords:
 - Extended Protection
 ms.assetid: ecfd783e-7dbb-4a6c-b5ab-c6c27d5dd57f
 caps.latest.revision: "22"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2e132f07a9bfa81c2eae226f2ce3d63ba3c65826
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: d5bf850e985baccb1d16d77697ea7cd2611af222
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="connect-to-the-database-engine-using-extended-protection"></a>Se connecter au moteur de base de données à l'aide de la protection étendue
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend en charge la **protection étendue** depuis [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]. La**protection étendue de l'authentification** est une fonctionnalité des composants réseau implémentée par le système d'exploitation. La**protection étendue** est prise en charge dans Windows 7 et Windows Server 2008 R2. La**protection étendue** figure dans les Service Packs pour les systèmes d'exploitation [!INCLUDE[msCoName](../../includes/msconame-md.md)] plus anciens. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est plus sécurisé lorsque les connexions sont établies à l'aide de la **protection étendue**.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend en charge la **protection étendue** depuis [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]. La**protection étendue de l'authentification** est une fonctionnalité des composants réseau implémentée par le système d'exploitation. La**protection étendue** est prise en charge dans Windows 7 et Windows Server 2008 R2. La**protection étendue** figure dans les Service Packs pour les systèmes d'exploitation [!INCLUDE[msCoName](../../includes/msconame-md.md)] plus anciens. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est plus sécurisé lorsque les connexions sont établies à l'aide de la **protection étendue**.  
   
 > [!IMPORTANT]  
 >  Windows n'active pas la **protection étendue** par défaut. Pour plus d'informations sur l'activation de la **protection étendue** dans Windows, consultez [Protection étendue de l'authentification](http://support.microsoft.com/kb/968389)  
@@ -36,7 +39,7 @@ ms.lasthandoff: 11/09/2017
 ## <a name="description-of-extended-protection"></a>Description de la protection étendue  
  La**protection étendue** utilise la liaison de canal et la liaison de service pour mieux empêcher une attaque de relais d'authentification. Dans une attaque de relais d'authentification, un client qui peut effectuer l'authentification NTLM (par exemple, l'Explorateur Windows, [!INCLUDE[msCoName](../../includes/msconame-md.md)] Outlook, une application SqlClient .NET, etc.), se connecte à une personne malveillante (par exemple, un serveur de fichiers CIFS nuisible). La personne malveillante utilise les informations d'identification du client pour se faire passer pour le client et s'authentifier auprès d'un service (par exemple, une instance du service [!INCLUDE[ssDE](../../includes/ssde-md.md)] ).  
   
- Cette attaque se présente sous deux formes :  
+ Cette attaque se présente sous deux formes :  
   
 -   Dans une attaque par ruse, le client est attiré dans un piège pour se connecter volontairement à la personne malveillante.  
   
@@ -103,7 +106,7 @@ ms.lasthandoff: 11/09/2017
   
  Lors de l'utilisation d'IIS pour accéder aux données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] à l'aide d'une connexion HTTP ou HTTPs, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] peut tirer parti de la protection étendue fournie par IIS. Pour plus d'informations sur la configuration d'IIS pour utiliser la protection étendue, consultez [Configure Extended Protection in IIS 7.5](http://go.microsoft.com/fwlink/?LinkId=181105)(en anglais).  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Configuration réseau du serveur](../../database-engine/configure-windows/server-network-configuration.md)   
  [Configuration du réseau client](../../database-engine/configure-windows/client-network-configuration.md)   
  [Extended Protection for Authentication Overview (en anglais)](http://go.microsoft.com/fwlink/?LinkID=177943)   

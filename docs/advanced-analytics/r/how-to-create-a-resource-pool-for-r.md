@@ -2,27 +2,28 @@
 title: "Créer un pool de ressources pour l’apprentissage | Documents Microsoft"
 ms.custom: 
 ms.date: 11/13/2017
-ms.prod:
-- sql-server-2016
-- sql-server-2017
 ms.reviewer: 
-ms.suite: 
-ms.technology: r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: c7f7f6e4-774d-4b45-b94a-f06c51718475
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: f56dcd77490f258afd3086a94577c443adc879c5
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: dc7a1c26f38cb63cf678f71ec6b889f6051f5387
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="create-a-resource-pool-for-machine-learning"></a>Créer un pool de ressources pour l’apprentissage
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Cette rubrique décrit comment vous pouvez créer un pool de ressources conçus spécifiquement pour gérer les charges de travail machine learning dans SQL Server. Il part du principe que vous avez déjà installé et activé les fonctionnalités d’apprentissage automatique et reconfigurer l’instance pour prendre en charge une gestion plus affinée les ressources utilisées par les processus externes tels que R ou Python.
 
@@ -34,7 +35,7 @@ Le processus comporte plusieurs étapes :
 4.  Créer une fonction de classification pour identifier les demandes de script externe.
 5.  Vérifiez que le nouveau pool de ressources externes capture des travaux R ou Python des comptes clients spécifiés.
 
-**S’applique à :** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] [!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)] et [!INCLUDE[sscurrent-md](../../includes/sscurrent-md.md)][!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]
+**S’applique à :** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] [!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)] et [!INCLUDE[sscurrent-md](../../includes/sscurrent-md.md)] [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]
 
 ##  <a name="bkmk_ReviewStatus"></a> Examiner l’état des pools de ressources existants
   
@@ -170,7 +171,7 @@ Pour vérifier que les modifications ont été apportées, vous devez vérifier 
 
     |group_id|name|importance|request_max_memory_grant_percent|request_max_cpu_time_sec|request_memory_grant_timeout_sec|max_dop|group_max_requests pool_id|pool_idd|external_pool_id|
     |-|-|-|-|-|-|-|-|-|-|
-    |1|interne|Moyenne|25|0|0|0|0| 1|2|
+    |1|interne|Moyenne|25|0|0|0|0|1|2|
     |2|par défaut|Moyenne|25|0|0|0|0|2|2|
     |256|ds_wg|Moyenne|25|0|0|0|0|2|256|
   
@@ -185,7 +186,7 @@ Pour vérifier que les modifications ont été apportées, vous devez vérifier 
     |external_pool_id|name|max_cpu_percent|max_memory_percent|max_processes|version|
     |-|-|-|-|-|-|
     |2|par défaut|100|20|0|2|
-    |256|ds_ep|100|40|0| 1|
+    |256|ds_ep|100|40|0|1|
   
      Pour plus d’informations, consultez [Affichages catalogue de Resource Governor &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/resource-governor-catalog-views-transact-sql.md).
   

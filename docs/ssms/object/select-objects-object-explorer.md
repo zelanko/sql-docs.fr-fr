@@ -3,8 +3,11 @@ title: "Sélectionner des objets (Explorateur d’objets) | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-objects
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -13,16 +16,16 @@ ms.assetid: 692477fe-dd7c-403d-acd2-bb108b6077f1
 caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5e0cabd01a513714390048fbce62fd91dd2efcaf
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 0d0caa751a54dba0f3e6d36f1d757d440c24d3ec
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="select-objects-object-explorer"></a>Sélectionner des objets (Explorateur d'objets)
-La boîte de dialogue **Sélectionner des objets** vous permet d’ajouter un objet dans une liste d’une autre boîte de dialogue. Le titre de la boîte de dialogue et les options disponibles dans cette boîte de dialogue dépendent de la manière dont elle a été ouverte. Seules les options disponibles apparaissent ; par exemple, seuls des noms de connexion sont disponibles lorsque vous sélectionnez un propriétaire pour un nouvel objet.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] La boîte de dialogue **Sélectionner des objets** vous permet d’ajouter un objet dans une liste d’une autre boîte de dialogue. Le titre de la boîte de dialogue et les options disponibles dans cette boîte de dialogue dépendent de la manière dont elle a été ouverte. Seules les options disponibles apparaissent ; par exemple, seuls des noms de connexion sont disponibles lorsque vous sélectionnez un propriétaire pour un nouvel objet.  
   
 ## <a name="options"></a>Options  
 **Sélectionnez ces types d'objets**  
@@ -37,6 +40,6 @@ Affiche une liste de types d'objets. Sélectionnez un ou plusieurs types en acti
 **Vérifier les noms**  
 Valide les noms d’objets dans la zone **Entrez les noms d’objets à sélectionner** . Si un nom d’objet non valide est répertorié, la boîte de dialogue **Nom introuvable** s’affiche. Cette boîte de dialogue permet de corriger ou supprimer le nom dans la liste des objets à sélectionner.  
   
-**Parcourir**  
+**...**  
 Affiche la boîte de dialogue **Rechercher des objets** . Celle-ci contient la liste des objets des types répertoriés dans la zone **Sélectionnez ces types d’objets** . Sélectionnez des objets dans cette liste en activant les cases à cocher correspondantes.  
   

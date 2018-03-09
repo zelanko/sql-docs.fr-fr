@@ -2,27 +2,33 @@
 title: "Exemples : utilisation du mode AUTO | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: xml
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-xml
+ms.suite: sql
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: AUTO FOR XML mode, examples
+helpviewer_keywords:
+- AUTO FOR XML mode, examples
 ms.assetid: 11e8d0e4-df8a-46f8-aa21-9602d4f26cad
-caps.latest.revision: "11"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2a164c7127585ca50190143c9372a77398edca3f
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: edb1a03183a36c6308b2b7d14253179ac52d9494
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="examples-using-auto-mode"></a>Exemples : utilisation du mode AUTO
-  Les exemples suivants illustrent l'utilisation du mode AUTO. Un grand nombre de ces requêtes sont spécifiées sur les documents XML d'instructions de fabrication de bicyclettes, stockés dans la colonne Instructions de la table ProductModel dans l'exemple de base de données [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] .  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+Les exemples suivants illustrent l'utilisation du mode AUTO. Un grand nombre de ces requêtes sont spécifiées sur les documents XML d'instructions de fabrication de bicyclettes, stockés dans la colonne Instructions de la table ProductModel dans l'exemple de base de données [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] .  
   
 ## <a name="example-retrieving-customer-order-and-order-detail-information"></a>Exemple : extraction des informations sur les clients, les commandes et les détails des commandes  
  Cette requête extrait les informations de client, de commande et de détail de commande relatives à un client spécifique.  
@@ -131,7 +137,7 @@ INNER JOIN Person.Person AS P
 FOR XML AUTO;  
 ```  
   
- Voici le résultat partiel :  
+ Voici le résultat partiel :  
   
 ```  
 <SOH Name="Jon Yang" SalesOrderID="43793" />  
@@ -271,7 +277,7 @@ SELECT * FROM [Special Chars] FOR XML AUTO;
   
 -   Si les valeurs des éléments ou des attributs contiennent un des caractères URL spéciaux ayant donc une signification particulière dans l'URL, ils sont encodés seulement dans la valeur URL DBOBJECT et uniquement lorsque le caractère spécial fait partie d'un nom de table ou de colonne. Dans le résultat, le caractère « `#` » qui fait partie du nom de table `Col#&2` est encodé sous la forme `_x0023_ in the DBOJBECT URL`.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [UTiliser le mode AUTO avec FOR XML](../../relational-databases/xml/use-auto-mode-with-for-xml.md)  
   
   

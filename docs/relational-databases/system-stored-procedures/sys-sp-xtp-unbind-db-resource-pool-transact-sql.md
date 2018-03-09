@@ -1,5 +1,5 @@
 ---
-title: Sys.sp_xtp_unbind_db_resource_pool (Transact-SQL) | Documents Microsoft
+title: sys.sp_xtp_unbind_db_resource_pool (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,21 +17,22 @@ f1_keywords:
 - sp_xtp_unbind_db_resource_pool
 - sys.sp_xtp_unbind_db_resource_pool_TSQL
 - sys.sp_xtp_unbind_db_resource_pool
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - sp_xtp_unbind_db_resource_pool
 - sys.sp_xtp_unbind_db_resource_pool
 ms.assetid: 695a796d-087e-4bc8-99d0-ddc342604c75
-caps.latest.revision: "7"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4f83721eacaed868a60b5035bd9342aaafabc04d
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 9c28c3fd5e535bfff09316c1f813760159f05d38
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysspxtpunbinddbresourcepool-transact-sql"></a>sys.sp_xtp_unbind_db_resource_pool (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +43,7 @@ ms.lasthandoff: 11/27/2017
   
 ## <a name="syntax"></a>Syntaxe  
   
-```tsql  
+```sql  
 sys.sp_xtp_unbind_db_resource_pool 'database_name'  
 ```  
   
@@ -64,7 +66,7 @@ Database 'Hekaton_DB' does not have a binding to a resource pool.
 ## <a name="example"></a>Exemple  
  Le code suivant annule la liaison de la base de données Hekaton_DB du pool de ressources [!INCLUDE[hek_2](../../includes/hek-2-md.md)] auquel elle est liée.  Si Hekaton_DB n'est pas actuellement lié à un pool de ressources [!INCLUDE[hek_2](../../includes/hek-2-md.md)], un message est fourni. La base de données doit être redémarrée pour que l'annulation de la liaison prenne effet.  
   
-```tsql  
+```sql  
 sys.sp_xtp_unbind_db_resource_pool 'Hekaton_DB'  
 ```  
   
@@ -75,7 +77,7 @@ sys.sp_xtp_unbind_db_resource_pool 'Hekaton_DB'
 -   Requiert l'autorisation CONTROL SERVER.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Lier une base de données avec des tables mémoire optimisées à un pool de ressources](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md)   
+ [Lier une base de données avec des tables optimisées en mémoire à un pool de ressources](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md)   
  [Sys.sp_xtp_bind_db_resource_pool &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-bind-db-resource-pool-transact-sql.md)  
   
   

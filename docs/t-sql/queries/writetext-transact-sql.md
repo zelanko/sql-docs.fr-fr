@@ -1,5 +1,5 @@
 ---
-title: WRITETEXT (Transact-SQL) | Documents Microsoft
+title: WRITETEXT (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 10/23/2017
 ms.prod: sql-non-specified
@@ -8,13 +8,15 @@ ms.service:
 ms.component: t-sql|queries
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - WRITETEXT_TSQL
 - WRITETEXT
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - replacing data
 - WRITETEXT statement
@@ -24,16 +26,16 @@ helpviewer_keywords:
 - overwriting data
 - data updates [SQL Server], WRITETEXT statement
 ms.assetid: 80c252fd-a8b8-4a2e-888a-059081ed4109
-caps.latest.revision: "52"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 534fa1494ec97efb8258222f512902d15efa1f36
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: fda340750c555d7e6e858ddac1a87401e215891e
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="writetext-transact-sql"></a>WRITETEXT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -64,13 +66,13 @@ WRITETEXT [BULK]
  *table* **.column**  
  Est le nom de la table et **texte**, **ntext**, ou **image** colonne à mettre à jour. Les noms de table et de colonne doivent respecter les règles de [identificateurs](../../relational-databases/databases/database-identifiers.md). La spécification des noms de la base de données et du propriétaire est facultative.  
   
- *pointeur_texte*  
+ *text_ptr*  
  Est une valeur qui stocke le pointeur vers le **texte**, **ntext**, ou **image** données. *pointeur_texte* doit être **Binary (16)**. Pour créer un pointeur de texte, exécutez une [insérer](../../t-sql/statements/insert-transact-sql.md) ou [mise à jour](../../t-sql/queries/update-transact-sql.md) instruction avec des données qui ne sont pas null pour le **texte**, **ntext**, ou **image** colonne.  
   
  WITH LOG  
  Ignoré par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. L'enregistrement dans un journal est déterminé par le mode de récupération en vigueur dans la base de données.  
   
- *données*  
+ *data*  
  Est la **texte**, **ntext** ou **image** pour stocker les données. *données* peut être un littéral ou un paramètre. La longueur maximale de texte qui peut être inséré de manière interactive au moyen de WRITETEXT est d’environ 120 Ko pour **texte**, **ntext**, et **image** données.  
   
 ## <a name="remarks"></a>Notes  
@@ -91,7 +93,7 @@ WRITETEXT [BULK]
   
  Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], en pointeurs de texte de ligne **texte**, **ntext**, ou **image** données peuvent exister, mais n’est peut-être pas valides. Pour plus d’informations sur l’option text in row, consultez [sp_tableoption &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md). Pour plus d’informations sur l’invalidation des pointeurs de texte, consultez [sp_invalidate_textptr &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-invalidate-textptr-transact-sql.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite une autorisation UPDATE sur la table spécifiée. L'autorisation est transférable lorsque l'autorisation UPDATE est transférée.  
   
 ## <a name="examples"></a>Exemples  

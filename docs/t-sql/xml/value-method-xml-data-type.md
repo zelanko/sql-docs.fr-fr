@@ -8,24 +8,26 @@ ms.service:
 ms.component: t-sql|xml
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - value method
 - value() method
 ms.assetid: 298a7361-dc9a-4902-9b1e-49a093cd831d
-caps.latest.revision: "38"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 4370076afa9255cc7e83acaa6fe4dffeb73bc958
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: 7a3822e0469836b59369eb676ece956533d4df58
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="value-method-xml-data-type"></a>value(), méthode (Type de données xml)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -90,7 +92,7 @@ WHERE CatalogDescription IS NOT NULL
 ORDER BY Result desc             
 ```  
   
- Notez les points suivants dans la requête précédente :  
+ Notez les points suivants dans la requête précédente :  
   
 -   Le mot clé `namespace` est utilisé pour définir un préfixe d'espace de noms.  
   
@@ -122,7 +124,7 @@ WHERE CatalogDescription.exist('
      /PD:ProductDescription/PD:Features/wm:Warranty ') = 1  
 ```  
   
- Notez les points suivants dans la requête précédente :  
+ Notez les points suivants dans la requête précédente :  
   
 -   La colonne `CatalogDescription` est une colonne XML typée. Cela signifie qu'une collection de schémas lui est associée. Dans le [prologue XQuery](../../xquery/modules-and-prologs-xquery-prolog.md), la déclaration d’espace de noms est utilisée pour définir le préfixe utilisé plus loin dans le corps de la requête.  
   
@@ -141,7 +143,7 @@ Result
 ```  
   
 ### <a name="d-using-the-exist-method-instead-of-the-value-method"></a>D. Utilisation de la méthode exist() au lieu de la méthode value()  
- Pour des raisons de performances, au lieu d'utiliser la méthode `value()` dans un prédicat pour comparer avec une valeur relationnelle, utilisez `exist()` avec `sql:column()`. Exemple :  
+ Pour des raisons de performances, au lieu d'utiliser la méthode `value()` dans un prédicat pour comparer avec une valeur relationnelle, utilisez `exist()` avec `sql:column()`. Par exemple :  
   
 ```  
 CREATE TABLE T (c1 int, c2 varchar(10), c3 xml)  
@@ -166,7 +168,7 @@ GO
  [Ajouter des espaces de noms aux requêtes avec WITH XMLNAMESPACES](../../relational-databases/xml/add-namespaces-to-queries-with-with-xmlnamespaces.md)   
  [Comparer du XML typé et du XML non typé](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   
  [Créer des instances de données XML](../../relational-databases/xml/create-instances-of-xml-data.md)   
- [méthodes de type de données xml](../../t-sql/xml/xml-data-type-methods.md)   
+ [Méthodes des types de données xml](../../t-sql/xml/xml-data-type-methods.md)   
  [XML Data Modification Language &#40; XML DML &#41;](../../t-sql/xml/xml-data-modification-language-xml-dml.md)  
   
   

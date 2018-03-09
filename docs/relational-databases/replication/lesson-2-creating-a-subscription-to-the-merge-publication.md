@@ -2,27 +2,34 @@
 title: "Leçon 2 : Création d’un abonnement à la publication de fusion | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
-ms.technology: replication
+ms.suite: sql
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to: SQL Server 2016
-helpviewer_keywords: replication [SQL Server], tutorials
+applies_to:
+- SQL Server 2016
+helpviewer_keywords:
+- replication [SQL Server], tutorials
 ms.assetid: 06722baa-9065-443e-b1d5-99036cf89074
-caps.latest.revision: "15"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 56379bef6879a1d5fe1e6f004cbb23ed9a23120c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 1fb890bc73be0a4d27c5ea9cafe1e2fbed930679
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="lesson-2-creating-a-subscription-to-the-merge-publication"></a>Leçon 2 : Création d'un abonnement à la publication de fusion
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 Dans cette leçon, vous allez créer l’abonnement à l’aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Puis, vous définirez les autorisations sur la base de données d'abonnement et génèrerez manuellement l'instantané filtré des données du nouvel abonnement. Pour effectuer cette leçon, vous devez avoir terminé la leçon précédente, [Leçon 1 : Publication de données à l’aide de la réplication de fusion](../../relational-databases/replication/lesson-1-publishing-data-using-merge-replication.md).  
   
 ### <a name="to-create-the-subscription"></a>Pour créer l'abonnement  
@@ -43,7 +50,7 @@ Dans cette leçon, vous allez créer l’abonnement à l’aide de [!INCLUDE[ssM
   
 7.  Dans la boîte de dialogue **Nouvelle base de données** , entrez **SalesOrdersReplica** dans la zone **Nom de la base de données** , cliquez sur **OK**, puis cliquez sur **Suivant**.  
   
-8.  Dans la page Sécurité de l’Agent de fusion, cliquez sur le bouton (**…**), entrez \<*nom_ordinateur>***\repl_merge** dans la zone **Compte de processus**, fournissez le mot de passe de ce compte, cliquez sur **OK**, sur **Suivant**, et une nouvelle fois sur **Suivant**.  
+8.  Dans la page Sécurité de l’Agent de fusion, cliquez sur le bouton de sélection (**…**), entrez \<*nom_ordinateur>\repl_merge** dans la zone **Compte de processus**, fournissez le mot de passe de ce compte, cliquez sur **OK**, sur **Suivant**, et une nouvelle fois sur **Suivant**.  
   
 9. Dans la page Initialiser les abonnements, sélectionnez **Lors de la première synchronisation** dans la liste **À quel moment** , cliquez sur **Suivant**, puis une nouvelle fois sur **Suivant** .  
   
@@ -55,13 +62,13 @@ Dans cette leçon, vous allez créer l’abonnement à l’aide de [!INCLUDE[ssM
   
 1.  Connectez-vous à l’Abonné dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], développez **Bases de données**, **SalesOrdersReplica**et **Sécurité**, cliquez avec le bouton droit sur **Utilisateurs**, puis choisissez **Nouvel utilisateur**.  
   
-2.  Dans la page **Général**, entrez \<*nom_ordinateur>***\repl_merge** dans la zone **Nom d’utilisateur**, cliquez sur le bouton (**…**), cliquez sur **Parcourir**, sélectionnez \<*nom_ordinateur>***\repl_merge**, cliquez sur **OK**, sur **Vérifier les noms**, et à nouveau sur **OK**.  
+2.  Dans la page **Général**, entrez \<*nom_ordinateur>***\repl_merge** dans la zone **Nom d’utilisateur**, cliquez sur le bouton de sélection (**…**), cliquez sur **Parcourir**, sélectionnez \<*nom_ordinateur>***\repl_merge**, cliquez sur **OK**, sur **Vérifier les noms**, et à nouveau sur **OK**.  
   
 3.  Dans **Appartenance au rôle de base de données**, sélectionnez **db_owner**, puis cliquez sur **OK** pour créer l’utilisateur.  
   
 ### <a name="to-create-the-filtered-data-snapshot-for-the-subscription"></a>Pour créer l'instantané filtré des données de l'abonnement  
   
-1.  Connectez-vous au serveur de publication dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], puis développez le nœud du serveur et le dossier **Réplication** .  
+1.  Connectez-vous au serveur de publication dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], développez le nœud du serveur, puis le dossier **Réplication** .  
   
 2.  Dans le dossier **Publications locales** , cliquez avec le bouton droit sur la publication **AdvWorksSalesOrdersMerge** , puis cliquez sur **Propriétés**.  
   
@@ -73,10 +80,10 @@ Dans cette leçon, vous allez créer l’abonnement à l’aide de [!INCLUDE[ssM
   
 5.  Sélectionnez la partition nouvellement ajoutée, cliquez sur **Générer les instantanés sélectionnés maintenant**, puis sur **OK**.  
   
-## <a name="next-steps"></a>Étapes suivantes  
+## <a name="next-steps"></a>Next Steps  
 Vous avez créé avec succès un abonnement à la publication de fusion et généré l'instantané filtré pour la partition de données du nouvel abonnement de telle sorte qu'il soit disponible lors de l'initialisation de l'abonnement. Ensuite, vous allez accorder des droits à l'Agent de fusion sur la base de données d'abonnement et exécuter l'Agent de fusion pour démarrer la synchronisation et initialiser l'abonnement. Consultez [Leçon 3 : Synchronisation de l’abonnement et de la publication de fusion](../../relational-databases/replication/lesson-3-synchronizing-the-subscription-to-the-merge-publication.md).  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [S'abonner à des publications](../../relational-databases/replication/subscribe-to-publications.md)  
 [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md)  
 [Instantanés des publications de fusion avec des filtres paramétrés](../../relational-databases/replication/snapshots-for-merge-publications-with-parameterized-filters.md)  

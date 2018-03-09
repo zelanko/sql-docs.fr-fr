@@ -8,26 +8,28 @@ ms.reviewer:
 ms.service: sql-database
 ms.component: system-catalog-views
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 keywords:
 - "Pool élastique"
 - "pool élastique, gestion"
-f1_keywords: DATABASE_SERVICE_OBJECTIVES_TSQL
+f1_keywords:
+- DATABASE_SERVICE_OBJECTIVES_TSQL
 ms.assetid: cecd8c31-06c0-4aa7-85d3-ac590e6874fa
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: CarlRabeler
 ms.author: carlrab
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4d1ccfea9f9c24312d29be192e5b6497c89e7972
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 08c801fe0f7d917de2c520e788320ec3677d8a6e
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
-# <a name="sysdatabaseserviceobjectives-azure-sql-database"></a>Sys.database_service_objectives (de base de données SQL Azure)
+# <a name="sysdatabaseserviceobjectives-azure-sql-database"></a>sys.database_service_objectives (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
 
 Retourne l’édition (niveau de service), l’objectif de service (niveau de tarification) et le nom du pool élastique, si elle existe, pour une base de données SQL Azure ou d’un entrepôt de données SQL Azure. Si vous ouvrez une session à la base de données master sur un serveur de base de données SQL Azure, retourne des informations sur toutes les bases de données. Pour l’entrepôt de données SQL Azure, vous devez être connecté à la base de données master.  
@@ -46,13 +48,13 @@ Retourne l’édition (niveau de service), l’objectif de service (niveau de ta
 |service_objective|sysname|Le niveau de tarification de la base de données. Si la base de données est dans un pool élastique, retourne **ElasticPool**.<br /><br /> Sur le **base** au niveau, retourne **base**.<br /><br /> **Base de données dans un niveau de service standard** renvoie l’une des opérations suivantes : S0, S1, S2 ou S3.<br /><br /> **La base de données unique dans un niveau premium** retourne des éléments suivants : P1, P2, P4, P6/P3 ou P11.<br /><br /> **SQL Data Warehouse** retourne DW100 via DW2000.|  
 |elastic_pool_name|sysname|Le nom de la [pool élastique](https://azure.microsoft.com/documentation/articles/sql-database-elastic-pool/) appartenant à la base de données. Retourne **NULL** si la base de données est une base de données ou un warehoue de données.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Requiert **dbManager** autorisation sur la base de données master.  Au niveau de la base de données, l’utilisateur doit être le créateur ou le propriétaire.  
   
 ## <a name="examples"></a>Exemples  
  Cet exemple peut être exécuté sur la base de données master ou sur les bases de données utilisateur. La requête retourne le nom, service et informations de niveau de performances des bases de données.  
   
-```tsql  
+```sql  
 SELECT  d.name,   
      slo.*    
 FROM sys.databases d   

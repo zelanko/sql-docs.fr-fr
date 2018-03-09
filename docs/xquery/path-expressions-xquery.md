@@ -3,31 +3,37 @@ title: "Expressions de chemin d’accès (XQuery) | Documents Microsoft"
 ms.custom: 
 ms.date: 03/17/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: xquery
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-applies_to: SQL Server
-dev_langs: XML
+applies_to:
+- SQL Server
+dev_langs:
+- XML
 helpviewer_keywords:
 - axis step [XQuery]
 - path expressions [XQuery]
 - expressions [XQuery], path
 ms.assetid: b93fa36c-bf69-46b9-b137-f597d66fd0c0
-caps.latest.revision: "27"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6ef1984885b5b35d93fa680d677321287d6daf33
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: e47b66d37e7b43f2921d8d6edf626a6b9178b7e8
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="path-expressions-xquery"></a>Expressions de chemin d'accès (XQuery)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Les expressions de chemin d'accès recherchent des nœuds, tels que des nœuds d'élément, d'attribut et de texte, dans un document. Le résultat d'une expression de chemin d'accès suit toujours l'ordre des documents et la séquence du résultat est dépourvue de nœuds dupliqués. Lorsque vous spécifiez un chemin d'accès, vous pouvez utiliser une syntaxe non abrégée ou une syntaxe abrégée. Les informations suivantes portent sur la syntaxe non abrégée. La syntaxe abrégée est décrite plus loin dans cette rubrique.  
   
@@ -53,7 +59,7 @@ ms.lasthandoff: 11/09/2017
 ## <a name="axis-step"></a>Étape d'axe  
  Une étape d'axe dans une expression de chemin d'accès est composée des parties ci-après.  
   
- [axe](../xquery/path-expressions-specifying-axis.md)  
+ [axis](../xquery/path-expressions-specifying-axis.md)  
  Définit le sens du déplacement. Étape d'axe dans une expression de chemin d'accès qui commence au nœud de contexte et navigue jusqu'aux nœuds accessibles dans le sens spécifié par l'axe.  
   
  [test de nœud](../xquery/path-expressions-specifying-node-test.md)  

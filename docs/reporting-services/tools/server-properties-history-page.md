@@ -8,23 +8,21 @@ ms.service:
 ms.component: tools
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords: sql13.swb.reportserver.serverproperties.history.f1
 ms.assetid: be9d8018-a46f-4625-9ae1-138ebe6b38ba
 caps.latest.revision: "30"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 7463a93feba9ec1d7a5828827eca8aa0b6176695
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: c3a35614725f7e3e9c4ed7ca4c9ab57624970776
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="server-properties-history-page"></a>Propriétés du serveur (page Historique)
   Utilisez cette page [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] dans [!INCLUDE[ssManStudioFull_md](../../includes/ssmanstudiofull-md.md)] pour définir le nombre de copies par défaut que l’historique de rapport doit conserver. La valeur par défaut fournit un paramètre initial qui établit les limites de l'historique de tous les rapports. Ces paramètres sont modifiables pour chaque rapport.  
@@ -48,7 +46,7 @@ ms.lasthandoff: 12/05/2017
   
  Si vous limitez l'historique de rapport ultérieurement, le serveur de rapports applique la nouvelle limite à l'historique de rapport existant dès que celui-ci la dépasse. Les instantanés de rapport les plus anciens sont supprimés en premier. Si l'historique de rapport est vide ou n'a pas atteint la limite, de nouveaux instantanés de rapport sont ajoutés. Lorsque la limite est atteinte, l'instantané le plus ancien est supprimé dès qu'un nouvel instantané est ajouté.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Définir les propriétés du serveur de rapports &#40;Management Studio&#41;](../../reporting-services/tools/set-report-server-properties-management-studio.md)   
  [Se connecter à un serveur de rapports dans Management Studio](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   
  [Aide du serveur de rapports dans Management Studio via la touche F1](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)  

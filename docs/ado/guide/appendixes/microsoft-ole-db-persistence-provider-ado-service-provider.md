@@ -3,8 +3,9 @@ title: Fournisseur de persistance Microsoft OLE DB (fournisseur de services ADO)
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,16 +17,16 @@ helpviewer_keywords:
 - persistence provider [ADO]
 - OLE DB persistence provider [ADO]
 ms.assetid: e75ef0dc-2016-4fcc-8918-23311c0d4e02
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8bcde7e61f7d49107cad0af77175778e66e828bf
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 30df806429167550cdf39f064e349e46dd692502
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="microsoft-ole-db-persistence-provider-overview"></a>Vue d’ensemble du fournisseur de persistance Microsoft OLE DB
 Le fournisseur de persistance Microsoft OLE DB vous permet d’enregistrer un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) de l’objet dans un fichier et les restaurer ultérieurement qui **Recordset** objet à partir du fichier. Informations de schéma, les données et les modifications en attente sont conservées.

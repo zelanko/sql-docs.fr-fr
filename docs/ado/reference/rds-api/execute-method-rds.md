@@ -3,8 +3,9 @@ title: "Execute (méthode) (RDS) | Documents Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,18 +13,19 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-helpviewer_keywords: Execute method [ADO]
+helpviewer_keywords:
+- Execute method [ADO]
 ms.assetid: 2d9c30e9-ab5b-4920-91b8-48454c2fb5d8
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9b42de5e1548cc7fd68c7b71182034df7e9f97f3
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: be0dfb94d6681af706d75437143dcde28e63587d
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="execute-method-rds"></a>Execute (méthode) (RDS)
 Exécute la requête et crée un jeu d’enregistrements ADO pour une utilisation dans ADO 2.5 et versions ultérieures.  
@@ -45,7 +47,7 @@ object.Execute(ConnectionString As String, HandlerString As String, QueryString 
  *HandlerString*  
  Une chaîne en deux parties qui identifie le gestionnaire à utiliser avec cette exécution. La chaîne contient deux parties. La première partie contient le nom (ProgID) du gestionnaire à utiliser. La deuxième partie contient les arguments à passer au gestionnaire. Les détails de l’interprétation de la chaîne d’arguments sont spécifiques à chaque gestionnaire. Les deux parties sont séparées par la première instance d’une virgule dans la chaîne. La chaîne d’arguments peut contenir des virgules supplémentaires. Les arguments sont facultatifs.  
   
- *Chaîne de requête*  
+ *QueryString*  
  Une commande dans le langage de commande pris en charge par le fournisseur OLE DB identifié dans la chaîne de connexion. Pour les fournisseurs SQL, *QueryString* peut contenir une instruction de commande Transact-SQL, mais les fournisseurs non-SQL (par exemple, MSDataShape) cela peut ne pas être un [!INCLUDE[tsql](../../../includes/tsql_md.md)] instruction de requête.  
   
  Si un gestionnaire est utilisé, le gestionnaire peut modifier ou remplacer la valeur spécifiée ici. Par exemple, le gestionnaire remplace généralement *QueryString* avec une chaîne de requête à partir de son fichier .ini. Par défaut, le fichier Msdfmap.ini est utilisé.  

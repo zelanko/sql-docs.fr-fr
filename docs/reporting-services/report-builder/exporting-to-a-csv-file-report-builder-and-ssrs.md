@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-builder
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 68ec746e-8c82-47f5-8c3d-dbe403a441e5
 caps.latest.revision: "9"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: a41d99b7087463d5583e9cbb194175118dcab583
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 9ff683e7c226812f8e5045464ea7f226dabb2fee
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="exporting-to-a-csv-file-report-builder-and-ssrs"></a>Exportation vers un fichier CSV (Générateur de rapports et SSRS)
   L’extension de rendu CSV (valeurs séparées par des virgules) permet de rendre les rapports paginés sous la forme d’une représentation aplatie des données d’un rapport dans un format standardisé, texte brut qui peut être facilement lu et échangé avec de nombreuses applications.  
@@ -65,7 +63,7 @@ ms.lasthandoff: 12/05/2017
   
 -   Ligne  
   
--   Image  
+-   image  
   
 -   Rectangle  
   
@@ -73,7 +71,7 @@ ms.lasthandoff: 12/05/2017
   
  Les autres éléments de rapport sont triés, de haut en bas, puis de gauche à droite. Chaque élément est ensuite rendu dans une colonne. Si le rapport comporte des éléments de données imbriqués comme des listes ou des tableaux, les éléments parents sont répétés dans chaque enregistrement.  
   
- Le tableau suivant indique l'apparence des éléments de rapport lors du rendu :  
+ Le tableau suivant indique l'apparence des éléments de rapport lors du rendu :  
   
 |Élément|Comportement de rendu|  
 |----------|------------------------|  
@@ -151,7 +149,7 @@ ms.lasthandoff: 12/05/2017
  Vous pouvez modifier certains paramètres par défaut de ce convertisseur, notamment le mode de rendu, les caractères à utiliser comme séparateurs et ceux à utiliser comme chaîne par défaut d'identificateur de texte, ce en modifiant les paramètres d'informations de périphérique. Pour plus d'informations, consultez [CSV Device Information Settings](../../reporting-services/csv-device-information-settings.md).  
   
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Pagination dans Reporting Services &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
  [Comportements de rendu &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)   
  [Fonctionnalités interactives des différentes extensions de rendu de rapport &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md)   

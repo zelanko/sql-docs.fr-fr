@@ -8,9 +8,7 @@ ms.service:
 ms.component: install-windows
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-native
-- reporting-services-sharepoint
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -24,17 +22,17 @@ helpviewer_keywords:
 - .rdl files
 ms.assetid: a1a10c67-7462-4562-9b07-a8822188a161
 caps.latest.revision: "70"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 4e254e5338ef80143d5444ea0c4b4365b957c514
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 2b4cf65845edd7a67d52bc3c593a341823f5e0c8
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
-# <a name="upgrade-reports"></a>Rapports de mise à niveau
+# <a name="upgrade-reports"></a>Mettre à niveau des rapports
 
 [!INCLUDE[ssrs-appliesto-sql2016-preview](../../includes/ssrs-appliesto-sql2016-preview.md)]
 
@@ -46,7 +44,7 @@ ms.lasthandoff: 12/05/2017
   
  Les rapports ne sont pas mis à niveau lorsque vous téléchargez un fichier de définition de rapport directement vers le serveur de rapports ou le site SharePoint. La mise à niveau d'une définition de rapport dans [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] est le seul moyen de mettre à niveau le fichier. rdl.  
   
- Après la mise à niveau d'un rapport en local ou sur le serveur de rapports, vous pouvez noter la présence d'erreurs, d'avertissements et de messages. Cette présence est liée aux améliorations apportées au modèle objet de rapport interne et aux composants de traitement. En effet, des messages apparaissent lors de la détection de problèmes sous-jacents dans le rapport. Pour plus d’informations, consultez [[Compatibilité descendante de Reporting Services]](../../reporting-services/reporting-services-backward-compatibility.md "Compatibilité descendante | Reporting Services").  
+ Après la mise à niveau d'un rapport en local ou sur le serveur de rapports, vous pouvez noter la présence d'erreurs, d'avertissements et de messages. Cette présence est liée aux améliorations apportées au modèle objet de rapport interne et aux composants de traitement. En effet, des messages apparaissent lors de la détection de problèmes sous-jacents dans le rapport. Pour plus d’informations, consultez [Compatibilité descendante de Reporting Services](../../reporting-services/reporting-services-backward-compatibility.md).  
   
  Pour plus d’informations sur les nouvelles fonctionnalités de [!INCLUDE[ssRSCurrent](../what-s-new-in-sql-server-reporting-services-ssrs.md).  
 

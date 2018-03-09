@@ -2,28 +2,33 @@
 title: "Directive TYPE dans les requêtes FOR XML | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: xml
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-xml
+ms.suite: sql
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - FOR XML clause, TYPE directive
 - TYPE directive
 ms.assetid: a3df6c30-1f25-45dc-b5a9-bd0e41921293
-caps.latest.revision: "40"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 9c7c87b5ab05ac170f9c6291c8b8147e20e71762
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 20d3894f0f2eecbf491e20f10b0258686848b401
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="type-directive-in-for-xml-queries"></a>Directive TYPE dans les requêtes FOR XML
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   La prise en charge [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de [xml &#40;Transact-SQL&#41;](../../t-sql/xml/xml-transact-sql.md) vous permet éventuellement de demander que le résultat d’une requête FOR XML soit renvoyé en tant que type de données **xml** en spécifiant la directive TYPE. Cela vous permet de traiter le résultat d'une requête FOR XML sur le serveur. Par exemple, vous pouvez spécifier une requête XQuery par rapport au résultat, affecter le résultat à une variable de type **xml** ou écrire des [requêtes FOR XML imbriquées](../../relational-databases/xml/use-nested-for-xml-queries.md).  
   
 > [!NOTE]  
@@ -150,7 +155,7 @@ SELECT (SELECT XmlCol.query('/Root')
 GO  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [FOR XML &#40;SQL Server&#41;](../../relational-databases/xml/for-xml-sql-server.md)  
   
   

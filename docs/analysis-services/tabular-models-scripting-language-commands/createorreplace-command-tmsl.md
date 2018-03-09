@@ -2,15 +2,13 @@
 title: La commande CreateOrReplace (TMSL) | Documents Microsoft
 ms.custom: 
 ms.date: 05/30/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: f77a0e04-461a-4fa8-b997-78057e410d56
@@ -19,17 +17,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 8dfbde2f776d2bcb43243b0a4c0a85485a95889b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d658378bde1e3a58f36b1137328f723ad3d380d5
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="createorreplace-command-tmsl"></a>Commande CreateOrReplace (TMSL)
-
-[!INCLUDE[ssas-appliesto-sql2016-later-aas](../../includes/ssas-appliesto-sql2016-later-aas.md)]
-
-  Crée ou remplace l’objet spécifié et tous les objets descendants sont spécifiés. Les objets inexistant sont créés. Les objets existants sont remplacés par la nouvelle définition.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Crée ou remplace l’objet spécifié et tous les objets descendants sont spécifiés. Les objets inexistant sont créés. Les objets existants sont remplacés par la nouvelle définition.  
   
  Chaque fois que vous spécifiez une propriété en lecture-écriture, assurez-vous d’inclure toutes les. L’omission d’un objet en lecture-écriture est considérée comme une suppression.  
   

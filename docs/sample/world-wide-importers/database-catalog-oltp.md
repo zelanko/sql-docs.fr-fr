@@ -1,9 +1,9 @@
 ---
 title: "Catalogue de base de données WideWorldImporters | Documents Microsoft"
-ms.prod: world-wide-importers
+ms.prod: sql-non-specified
 ms.prod_service: sql-non-specified
-ms.service: samples
-ms.component: 
+ms.service: 
+ms.component: samples
 ms.technology: samples
 ms.custom: 
 ms.date: 01/19/2017
@@ -18,11 +18,11 @@ ms.author: barbkess
 manager: jhubbard
 robots: noindex,nofollow
 ms.workload: On Demand
-ms.openlocfilehash: 4af23af22f369dc70110812b831e167b88b4885d
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 6d87a24e91f96957170671303af641c6bacc6599
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="wideworldimporters-database-catalog"></a>Catalogue de base de données WideWorldImporters
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]La base de données WideWorldImporters contient toutes les les informations sur les transactions et données quotidiennes pour les achats et, ainsi que des données de capteur des véhicules et chambres froides.
@@ -75,11 +75,11 @@ Détails des paramètres et des personnes (utilisateurs et contacts), ainsi que 
 |-----------------------------|---------------------|
 |SystemParameters|Contient les paramètres configurables à l’échelle du système.|
 |Personnes|Contient les noms d’utilisateur, informations de contact, pour tous ceux qui utilisent l’application et pour les personnes qui Wide World Importers porte sur les organisations de client. Cela inclut le personnel, les clients, fournisseurs et autres contacts. Pour les personnes qui ont reçu l’autorisation d’utiliser le système ou un site Web, les informations incluent les détails de connexion.|
-|Villes|Il existe plusieurs adresses stockées dans le système, pour les personnes, adresses de livraison client organisation collecte des adresses à des fournisseurs, etc.. Chaque fois qu’une adresse est stockée, il existe une référence à une ville dans cette table. Il existe également un emplacement spatial de chaque ville.|
+|Villes|Il existe plusieurs adresses stockées dans le système, pour les personnes, adresses de livraison client organisation collecte des adresses à des fournisseurs, etc. Chaque fois qu’une adresse est stockée, il existe une référence à une ville dans cette table. Il existe également un emplacement spatial de chaque ville.|
 |StateProvinces|Villes font partie des États ou provinces. Cette table comporte les détails d’eux, y compris les données spatiales décrivant les limites de chaque pays ou région.|
 |Pays|Les États ou Provinces font partie du pays. Cette table comporte les détails d’eux, y compris les données spatiales décrivant les limites de chaque pays.|
 |DeliveryMethods|Options pour la remise des articles en stock (par exemple, camion/van, post, collecte, expédition par courrier, etc.)|
-|PaymentMethods|Options de paiement (par exemple, espèces, chèque, EFT, etc..)|
+|PaymentMethods|Options de paiement (par exemple, espèces, chèque, EFT, etc.)|
 |TransactionTypes|Types de client, fournisseur ou les transactions de stock (par exemple, facture, note de crédit, etc.)|
 
 ### <a name="purchasing-schema"></a>Schéma d’achat

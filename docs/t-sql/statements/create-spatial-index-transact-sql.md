@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,23 +17,24 @@ f1_keywords:
 - CREATE SPATIAL INDEX
 - CREATE_SPATIAL_INDEX_TSQL
 - SPATIAL_INDEX_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - spatial indexes [SQL Server], creating
 - index creation [SQL Server], spatial indexes
 - CREATE SPATIAL INDEX statement
 - CREATE INDEX statement
 ms.assetid: ee6b9116-a7ff-463a-a9f0-b360804d8678
-caps.latest.revision: "89"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 8b1b92761aa72e4d001ddfb2845c593c3d99f79a
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.openlocfilehash: 301896001cb79b9065436ecff044fdce92e7d576
+ms.sourcegitcommit: 0e305dce04dcd1aa83c39328397524b352c96386
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="create-spatial-index-transact-sql"></a>CREATE SPATIAL INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -266,7 +268,7 @@ BOUNDING_BOX = ( {
  *table_name*  
  Nom de la table à indexer.  
   
- La Base de données SQL Windows Azure prend en charge le format de nom en trois parties nom_bd.[nom_schéma].nom_objet lorsque nom_bd est la base de données active, ou lorsque nom_bd est la base de données tempdb et nom_objet commence par #.  
+ Microsoft Azure SQL Database prend en charge le format de nom en trois parties nom_bd.[nom_schéma].nom_objet lorsque nom_bd est la base de données active, ou lorsque nom_bd est la base de données tempdb et nom_objet commence par #.  
   
 ### <a name="using-options"></a>Options USING  
  GEOMETRY_GRID  
@@ -286,8 +288,8 @@ BOUNDING_BOX = ( {
  Peut être spécifié uniquement sur une colonne du type de données geography.  Il s'agit de l'option par défaut pour ce type de données et il n'est pas nécessaire de la spécifier.  
   
 ### <a name="with-options"></a>Options WITH  
- BOUNDING_BOX  
- Spécifie un jeu de quatre tuples numérique qui définit les quatre coordonnées du rectangle englobant : les coordonnées min. x et min. y de l'angle inférieur gauche, et les coordonnées max. x et max. y de l'angle supérieur droit.  
+BOUNDING_BOX  
+Spécifie un jeu de quatre tuples numérique qui définit les quatre coordonnées du rectangle englobant : les coordonnées min. x et min. y de l'angle inférieur gauche, et les coordonnées max. x et max. y de l'angle supérieur droit.  
   
  *XMIN*  
  Spécifie la coordonnée x de l'angle inférieur gauche du rectangle englobant.  
@@ -313,13 +315,14 @@ BOUNDING_BOX = ( {
  YMAX =*ymax*  
  Spécifie le nom et la valeur de la propriété pour la coordonnée y de l'angle supérieur droit du rectangle englobant.  
   
- Les coordonnées du rectangle englobant s'appliquent uniquement dans une clause USING GEOMETRY_GRID.  
-  
- *XMAX* doit être supérieur à *xmin* et *ymax* doit être supérieur à *ymin*. Vous pouvez spécifier valide [float](../../t-sql/data-types/float-and-real-transact-sql.md) représentation, en supposant que la valeur : *xmax* > *xmin* et *ymax* > *ymin*. Sinon, les erreurs appropriées sont générées.  
-  
- Il n'y a pas de valeurs par défaut.  
-  
- Les noms de propriété du rectangle englobant ne respectent pas la casse, indépendamment du classement de base de données.  
+ > [!NOTE]
+ > Les coordonnées du rectangle englobant s'appliquent uniquement dans une clause USING GEOMETRY_GRID.  
+ >
+ > *XMAX* doit être supérieur à *xmin* et *ymax* doit être supérieur à *ymin*. Vous pouvez spécifier valide [float](../../t-sql/data-types/float-and-real-transact-sql.md) représentation, en supposant que la valeur : *xmax* > *xmin* et *ymax* > *ymin*. Sinon, les erreurs appropriées sont générées.  
+ > 
+ > Il n'y a pas de valeurs par défaut.  
+ >
+ > Les noms de propriété du rectangle englobant ne respectent pas la casse, indépendamment du classement de base de données.  
   
  Pour spécifier des noms de propriété, vous devez spécifier chacun d'entre eux une seule et unique fois. Vous pouvez les spécifier dans n'importe quel ordre. Par exemple, les clauses suivantes sont équivalentes :  
   
@@ -327,8 +330,8 @@ BOUNDING_BOX = ( {
   
 -   BOUNDING_BOX = (XMIN =*xmin*, XMAX =*xmax*, YMIN =*ymin*, YMAX =*ymax*)  
   
- GRIDS  
- Définit la densité de la grille à chaque niveau d'un schéma de pavage. Lorsque GEOMETRY_AUTO_GRID et GEOGRAPHY_AUTO_GRID sont sélectionnés, cette option est désactivée.  
+GRIDS  
+Définit la densité de la grille à chaque niveau d'un schéma de pavage. Lorsque GEOMETRY_AUTO_GRID et GEOGRAPHY_AUTO_GRID sont sélectionnés, cette option est désactivée.  
   
  Pour plus d’informations sur le pavage, consultez [vue d’ensemble des index spatiaux](../../relational-databases/spatial/spatial-indexes-overview.md).  
   
@@ -355,12 +358,14 @@ BOUNDING_BOX = ( {
  HIGH  
  Spécifie la densité la plus élevée possible pour la grille à un niveau donné. HIGH équivaut à 256 cellules (grille 16x16).  
   
- Grâce aux noms de niveau, vous pouvez spécifier les niveaux dans n'importe quel ordre et omettre des niveaux. Si vous utilisez le nom d'un niveau, vous devez utiliser le nom des autres niveaux que vous spécifiez. Si vous omettez un niveau, sa densité prend MEDIUM comme valeur par défaut.  
+> [!NOTE] 
+> Grâce aux noms de niveau, vous pouvez spécifier les niveaux dans n'importe quel ordre et omettre des niveaux. Si vous utilisez le nom d'un niveau, vous devez utiliser le nom des autres niveaux que vous spécifiez. Si vous omettez un niveau, sa densité prend MEDIUM comme valeur par défaut.  
   
- Si une densité non valide est spécifiée, une erreur est générée.  
+> [!WARNING] 
+> Si une densité non valide est spécifiée, une erreur est générée.  
   
- CELLS_PER_OBJECT =*n*  
- Spécifie le nombre de cellules de pavage par objet pouvant être utilisées pour un objet spatial unique dans l'index par le processus de pavage. *n*peut être un entier compris entre 1 et 8192 compris. Si un nombre non valide est passé ou que le nombre est supérieur au nombre maximal de cellules pour le pavage spécifié, une erreur est générée.  
+CELLS_PER_OBJECT =*n*  
+Spécifie le nombre de cellules de pavage par objet pouvant être utilisées pour un objet spatial unique dans l'index par le processus de pavage. *n*peut être un entier compris entre 1 et 8192 compris. Si un nombre non valide est passé ou que le nombre est supérieur au nombre maximal de cellules pour le pavage spécifié, une erreur est générée.  
   
  CELLS_PER_OBJECT a les valeurs par défaut suivantes :  
   
@@ -375,8 +380,8 @@ BOUNDING_BOX = ( {
   
  La valeur CELLS_PER_OBJECT est utilisée par la règle de pavage de cellules par objet. Pour plus d’informations sur les règles de pavage, consultez [vue d’ensemble des index spatiaux](../../relational-databases/spatial/spatial-indexes-overview.md).  
   
- PAD_INDEX = {ON | **OFF** }  
- **S’applique aux**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] via [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+PAD_INDEX = {ON | **OFF** }  
+**S’applique aux**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] via [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
  Spécifie le remplissage de l'index. La valeur par défaut est OFF.  
   
@@ -388,7 +393,7 @@ BOUNDING_BOX = ( {
   
  L'option PAD_INDEX est utile seulement si FILLFACTOR est spécifié, car PAD_INDEX utilise le pourcentage spécifié par FILLFACTOR. Si le pourcentage défini pour FILLFACTOR n'est pas suffisamment élevé pour autoriser une ligne, le [!INCLUDE[ssDE](../../includes/ssde-md.md)] remplace en interne le pourcentage de façon à ce qu'il autorise le minimum. Le nombre de lignes sur une page d’index intermédiaire n’est jamais inférieur à 2, quelle que soit la valeur de faible *fillfactor*.  
   
- FILLFACTOR =*facteur de remplissage*  
+FILLFACTOR =*facteur de remplissage*  
  **S’applique aux**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] via [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
  Spécifie un pourcentage indiquant le taux de remplissage appliqué par le [!INCLUDE[ssDE](../../includes/ssde-md.md)] au niveau feuille de chaque page d'index lors de la création ou de la reconstruction de l'index. *facteur de remplissage* doit être un entier compris entre 1 et 100. La valeur par défaut est 0. Si *fillfactor* est 100 ou 0, le [!INCLUDE[ssDE](../../includes/ssde-md.md)] crée des index avec des pages de niveau feuille intégralement remplies.  
@@ -399,12 +404,12 @@ BOUNDING_BOX = ( {
  La valeur FILLFACTOR s'applique uniquement lors de la création ou de la reconstruction de l'index. Le [!INCLUDE[ssDE](../../includes/ssde-md.md)] ne conserve pas dynamiquement dans les pages le pourcentage d'espace libre défini. Pour afficher le paramètre du facteur de remplissage, utilisez la [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md) vue de catalogue.  
   
 > [!IMPORTANT]  
->  La création d'un index cluster avec un facteur de remplissage FILLFACTOR inférieur à 100 affecte la quantité d'espace de stockage qu'occupent les données, car le [!INCLUDE[ssDE](../../includes/ssde-md.md)] redistribue les données lorsqu'il crée l'index cluster.  
+> La création d'un index cluster avec un facteur de remplissage FILLFACTOR inférieur à 100 affecte la quantité d'espace de stockage qu'occupent les données, car le [!INCLUDE[ssDE](../../includes/ssde-md.md)] redistribue les données lorsqu'il crée l'index cluster.  
   
  Pour plus d’informations, consultez [Spécifier un facteur de remplissage pour un index](../../relational-databases/indexes/specify-fill-factor-for-an-index.md).  
   
- SORT_IN_TEMPDB = {ON | **OFF** }  
- **S’applique aux**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] via [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+SORT_IN_TEMPDB = {ON | **OFF** }  
+**S’applique aux**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] via [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
  Spécifie si les résultats temporaires du tri doivent être stockés dans tempdb. La valeur par défaut est OFF.  
   
@@ -416,11 +421,11 @@ BOUNDING_BOX = ( {
   
  Outre l'espace nécessaire dans la base de données utilisateur pour créer l'index, tempdb doit disposer à peu près du même espace supplémentaire pour stocker les résultats de tri intermédiaires. Pour plus d’informations, consultez [Option SORT_IN_TEMPDB pour les index](../../relational-databases/indexes/sort-in-tempdb-option-for-indexes.md).  
   
- IGNORE_DUP_KEY =**OFF**  
- N'a aucun effet pour les index spatiaux, car le type d'index n'est jamais unique. N'activez pas cette option (ON), sinon une erreur est déclenchée.  
+IGNORE_DUP_KEY =**OFF**  
+N'a aucun effet pour les index spatiaux, car le type d'index n'est jamais unique. N'activez pas cette option (ON), sinon une erreur est déclenchée.  
   
- STATISTICS_NORECOMPUTE = {ON | **OFF**}  
- Spécifie si les statistiques de distribution sont recalculées. La valeur par défaut est OFF.  
+STATISTICS_NORECOMPUTE = {ON | **OFF**}  
+Spécifie si les statistiques de distribution sont recalculées. La valeur par défaut est OFF.  
   
  ON  
  Les statistiques obsolètes ne sont pas recalculées automatiquement.  
@@ -431,10 +436,10 @@ BOUNDING_BOX = ( {
  Pour restaurer la mise à jour automatique des statistiques, affectez la valeur OFF à STATISTICS_NORECOMPUTE ou exécutez UPDATE STATISTICS sans la clause NORECOMPUTE.  
   
 > [!IMPORTANT]  
->  La désactivation du recalcul automatique des statistiques de distribution peut empêcher l'optimiseur de requête de sélectionner des plans d'exécution optimaux pour les requêtes qui impliquent la table.  
+> La désactivation du recalcul automatique des statistiques de distribution peut empêcher l'optimiseur de requête de sélectionner des plans d'exécution optimaux pour les requêtes qui impliquent la table.  
   
- DROP_EXISTING = {ON | **OFF** }  
- **S’applique aux**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] via [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+DROP_EXISTING = {ON | **OFF** }  
+**S’applique aux**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] via [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
  Spécifie que l'index spatial nommé préexistant est supprimé et reconstruit. La valeur par défaut est OFF.  
   
@@ -446,16 +451,16 @@ BOUNDING_BOX = ( {
   
  Le type d'index ne peut pas être modifié à l'aide de DROP_EXISTING.  
   
- ONLINE =**OFF**  
- Indique que les tables sous-jacentes et les index associés ne sont pas disponibles pour les requêtes et la modification de données pendant l'opération d'index. Dans cette version de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], les constructions d'index en ligne ne sont pas prises en charge pour les index spatiaux. Si cette option a la valeur ON pour un index spatial, une erreur est générée. Omettez l'option ONLINE ou attribuez la valeur OFF à ONLINE.  
+ONLINE =**OFF**  
+Indique que les tables sous-jacentes et les index associés ne sont pas disponibles pour les requêtes et la modification de données pendant l'opération d'index. Dans cette version de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], les constructions d'index en ligne ne sont pas prises en charge pour les index spatiaux. Si cette option a la valeur ON pour un index spatial, une erreur est générée. Omettez l'option ONLINE ou attribuez la valeur OFF à ONLINE.  
   
  Une opération d'index hors connexion qui crée, reconstruit ou supprime un index spatial acquiert un verrou Sch-M (Modification du schéma) sur la table. Cela empêche tous les utilisateurs d'accéder à la table sous-jacente pendant la durée de l'opération.  
   
 > [!NOTE]  
->  Les opérations d'index en ligne ne sont pas disponibles dans toutes les éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour obtenir la liste des fonctionnalités prises en charge par les éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez [Fonctionnalités prise en charge par les éditions de SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
+> Les opérations d'index en ligne ne sont pas disponibles dans toutes les éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour obtenir la liste des fonctionnalités prises en charge par les éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez [Fonctionnalités prise en charge par les éditions de SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
- ALLOW_ROW_LOCKS = { **ON** | {OFF}  
- **S’applique aux**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] via [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+ALLOW_ROW_LOCKS = { **ON** | {OFF}  
+**S’applique aux**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] via [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
  Indique si les verrous de ligne sont autorisés ou non. La valeur par défaut est ON.  
   
@@ -465,8 +470,8 @@ BOUNDING_BOX = ( {
  OFF  
  Les verrous de ligne ne sont pas utilisés.  
   
- ALLOW_PAGE_LOCKS = { **ON** | {OFF}  
- **S’applique aux**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] via [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+ALLOW_PAGE_LOCKS = { **ON** | {OFF}  
+**S’applique aux**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] via [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
  Indique si les verrous de page sont autorisés. La valeur par défaut est ON.  
   
@@ -476,17 +481,17 @@ BOUNDING_BOX = ( {
  OFF  
  Les verrous de page ne sont pas utilisés.  
   
- MAXDOP =*max_degree_of_parallelism*  
- **S’applique aux**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] via [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+MAXDOP =*max_degree_of_parallelism*  
+**S’applique aux**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] via [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
  Remplace l'option de configuration `max degree of parallelism` pendant la durée de l'opération d'index. Utilisez MAXDOP pour limiter le nombre de processeurs utilisés dans une exécution de plan parallèle. Le nombre maximal de processeurs est égal à 64.  
   
 > [!IMPORTANT]  
->  Bien que l'option MAXDOP soit prise en charge syntaxiquement, CREATE SPATIAL INDEX n'utilise actuellement qu'un processeur unique.  
+> Bien que l'option MAXDOP soit prise en charge syntaxiquement, CREATE SPATIAL INDEX n'utilise actuellement qu'un processeur unique.  
   
  *max_degree_of_parallelism* peut être :  
   
- 1  
+  1  
  Supprime la création de plans parallèles.  
   
  \>1  
@@ -498,14 +503,14 @@ BOUNDING_BOX = ( {
  Pour plus d’informations, consultez [Configurer des opérations d’index parallèles](../../relational-databases/indexes/configure-parallel-index-operations.md).  
   
 > [!NOTE]  
->  Opérations d’index parallèles ne sont pas disponibles dans toutes les éditions de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour obtenir la liste des fonctionnalités prises en charge par les éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez [Fonctionnalités prise en charge par les éditions de SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
+> Opérations d’index parallèles ne sont pas disponibles dans toutes les éditions de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour obtenir la liste des fonctionnalités prises en charge par les éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez [Fonctionnalités prise en charge par les éditions de SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
- DATA_COMPRESSION = {NONE | ROW | PAGE}  
- **S’applique aux**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] via [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+DATA_COMPRESSION = {NONE | ROW | PAGE}  
+**S’applique aux**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] via [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
  Détermine le niveau de compression de données utilisé par l'index.  
   
- NONE  
+ Aucune  
  Aucune compression n'est utilisée sur les données selon l'index  
   
  ROW  
@@ -514,13 +519,13 @@ BOUNDING_BOX = ( {
  PAGE  
  Une compression de page est utilisée sur les données selon l'index  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Chaque option ne peut être spécifiée qu'une fois par instruction CREATE SPATIAL INDEX. La spécification d'un doublon de toute option génère une erreur.  
   
  Vous pouvez créer jusqu'à 249 index spatiaux sur chaque colonne spatiale dans une table. Il peut être utile de créer plusieurs index spatiaux sur une colonne spatiale spécifique, par exemple pour indexer des paramètres de pavage différents dans une même colonne.  
   
 > [!IMPORTANT]  
->  Il existe plusieurs autres restrictions applicables à la création d'un index spatial. Pour plus d’informations, consultez [vue d’ensemble des index spatiaux](../../relational-databases/spatial/spatial-indexes-overview.md).  
+> Il existe plusieurs autres restrictions applicables à la création d'un index spatial. Pour plus d’informations, consultez [vue d’ensemble des index spatiaux](../../relational-databases/spatial/spatial-indexes-overview.md).  
   
  Une construction d'index ne peut pas utiliser le parallélisme de processus disponible.  
   
@@ -548,10 +553,10 @@ BOUNDING_BOX = ( {
  [sys.spatial_index_tessellations](../../relational-databases/system-catalog-views/sys-spatial-index-tessellations-transact-sql.md)  
  Représente les informations sur le schéma de pavage et les paramètres de chaque index spatial.  
   
-## <a name="additional-remarks-about-creating-indexes"></a>Notes supplémentaires sur la création d'index  
+## <a name="additional-remarks-about-creating-indexes"></a>Remarques supplémentaires sur la création d’index  
  Pour plus d’informations sur la création d’index, consultez la section « Remarques » dans [CREATE INDEX &#40; Transact-SQL &#41; ](../../t-sql/statements/create-index-transact-sql.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  L’utilisateur doit avoir l’autorisation ALTER sur la table ou vue, ou être membre du rôle serveur fixe sysadmin ou db_ddladmin et des rôles de base de données fixé db_owner.  
   
 ## <a name="examples"></a>Exemples  
@@ -559,7 +564,7 @@ BOUNDING_BOX = ( {
 ### <a name="a-creating-a-spatial-index-on-a-geometry-column"></a>A. Création d'un index spatial sur une colonne de type geometry  
  L’exemple suivant crée une table nommée `SpatialTable` qui contient un **geometry** colonne de type `geometry_col`. L'exemple crée ensuite un index spatial, `SIndx_SpatialTable_geometry_col1`, sur la table `geometry_col`. L'exemple utilise le schéma de pavage par défaut et spécifie le rectangle englobant.  
   
-```  
+```sql  
 CREATE TABLE SpatialTable(id int primary key, geometry_col geometry);  
 CREATE SPATIAL INDEX SIndx_SpatialTable_geometry_col1   
    ON SpatialTable(geometry_col)  
@@ -569,7 +574,7 @@ CREATE SPATIAL INDEX SIndx_SpatialTable_geometry_col1
 ### <a name="b-creating-a-spatial-index-on-a-geometry-column"></a>B. Création d'un index spatial sur une colonne de type geometry  
  L'exemple suivant crée un deuxième index spatial, `SIndx_SpatialTable_geometry_col2`, sur `geometry_col` dans la table `SpatialTable`. L'exemple spécifie `GEOMETRY_GRID` comme schéma de pavage. L'exemple spécifie également le rectangle englobant, des densités différentes sur des niveaux de grille différents et 64 cellules par objet. L'exemple attribue aussi la valeur `ON` au remplissage d'index.  
   
-```  
+```sql  
 CREATE SPATIAL INDEX SIndx_SpatialTable_geometry_col2  
    ON SpatialTable(geometry_col)  
    USING GEOMETRY_GRID  
@@ -583,7 +588,7 @@ CREATE SPATIAL INDEX SIndx_SpatialTable_geometry_col2
 ### <a name="c-creating-a-spatial-index-on-a-geometry-column"></a>C. Création d'un index spatial sur une colonne de type geometry  
  L'exemple suivant crée un troisième index spatial, `SIndx_SpatialTable_geometry_col3`, sur `geometry_col` dans la table `SpatialTable`. L'exemple utilise le schéma de pavage par défaut. L'exemple spécifie le rectangle englobant et utilise des densités de cellule différentes sur les troisième et quatrième niveaux, tout en utilisant le nombre par défaut de cellules par objet.  
   
-```  
+```sql  
 CREATE SPATIAL INDEX SIndx_SpatialTable_geometry_col3  
    ON SpatialTable(geometry_col)  
    WITH (  
@@ -594,7 +599,7 @@ CREATE SPATIAL INDEX SIndx_SpatialTable_geometry_col3
 ### <a name="d-changing-an-option-that-is-specific-to-spatial-indexes"></a>D. Modification d'une option qui est spécifique aux index spatiaux  
  L'exemple suivant reconstruit l'index spatial créé dans l'exemple précédent, `SIndx_SpatialTable_geography_col3`, en spécifiant une nouvelle densité `LEVEL_3` avec DROP_EXISTING = ON.  
   
-```  
+```sql  
 CREATE SPATIAL INDEX SIndx_SpatialTable_geography_col3  
    ON SpatialTable(geography_col)  
    WITH ( BOUNDING_BOX = ( 0, 0, 500, 200 ),  
@@ -605,7 +610,7 @@ CREATE SPATIAL INDEX SIndx_SpatialTable_geography_col3
 ### <a name="e-creating-a-spatial-index-on-a-geography-column"></a>E. Création d'un index spatial sur une colonne de type geography  
  L’exemple suivant crée une table nommée `SpatialTable2` qui contient un **geography** colonne de type `geography_col`. L'exemple crée ensuite un index spatial, `SIndx_SpatialTable_geography_col1`, sur la table `geography_col`. L'exemple utilise les valeurs des paramètres par défaut du schéma de pavage GEOGRAPHY_AUTO_GRID.  
   
-```  
+```sql  
 CREATE TABLE SpatialTable2(id int primary key, object GEOGRAPHY);  
 CREATE SPATIAL INDEX SIndx_SpatialTable_geography_col1   
    ON SpatialTable2(object);  
@@ -617,7 +622,7 @@ CREATE SPATIAL INDEX SIndx_SpatialTable_geography_col1
 ### <a name="f-creating-a-spatial-index-on-a-geography-column"></a>F. Création d'un index spatial sur une colonne de type geography  
  L'exemple suivant crée un deuxième index spatial, `SIndx_SpatialTable_geography_col2`, sur `geography_col` dans la table `SpatialTable2`. L'exemple spécifie `GEOGRAPHY_GRID` comme schéma de pavage. L'exemple spécifie également des densités de grille différentes sur des niveaux différents et 64 cellules par objet. L'exemple attribue aussi la valeur `ON` au remplissage d'index.  
   
-```  
+```sql  
 CREATE SPATIAL INDEX SIndx_SpatialTable_geography_col2  
    ON SpatialTable2(object)  
    USING GEOGRAPHY_GRID  
@@ -630,7 +635,7 @@ CREATE SPATIAL INDEX SIndx_SpatialTable_geography_col2
 ### <a name="g-creating-a-spatial-index-on-a-geography-column"></a>G. Création d'un index spatial sur une colonne de type geography  
  L'exemple crée ensuite un troisième index spatial, `SIndx_SpatialTable_geography_col3`, sur `geography_col` dans la table `SpatialTable2`. L'exemple utilise le schéma de pavage par défaut, GEOGRAPHY_GRID et la valeur CELLS_PER_OBJECT par défaut (16).  
   
-```  
+```sql  
 CREATE SPATIAL INDEX SIndx_SpatialTable_geography_col3  
    ON SpatialTable2(object)  
    WITH ( GRIDS = ( LEVEL_3 = HIGH, LEVEL_2 = HIGH ) );  
@@ -651,6 +656,6 @@ CREATE SPATIAL INDEX SIndx_SpatialTable_geography_col3
  [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)   
  [Sys.spatial_index_tessellations &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-spatial-index-tessellations-transact-sql.md)   
  [Sys.spatial_indexes &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-spatial-indexes-transact-sql.md)   
- [Vue d'ensemble des index spatiaux](../../relational-databases/spatial/spatial-indexes-overview.md)  
+ [Vue d’ensemble des index spatiaux](../../relational-databases/spatial/spatial-indexes-overview.md)  
   
   

@@ -8,7 +8,8 @@ ms.service:
 ms.component: sqlxml
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-xml
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -17,19 +18,20 @@ helpviewer_keywords:
 - queries [SQLXML], XPath
 - XML views [SQLXML]
 ms.assetid: 7814d099-81ec-4fb8-894a-729cdbb5015a
-caps.latest.revision: "30"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 659c3e790a656be039586b0586f09f6ee480bd4c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: febc71c72c209fc431b9bdc3bd545dc362ce34c8
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="using-xpath-queries-in-sqlxml-40"></a>Utilisation des requêtes XPath dans SQLXML 4.0
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prise en charge des schémas XSD annotés vous permet de créer des vues XML des données relationnelles stockées dans la base de données. Vous pouvez utiliser un sous-ensemble du langage XPath pour interroger les vues XML créées par un schéma XSD annoté.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+La prise en charge par Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] des schémas XSD annotés vous permet de créer des vues XML des données relationnelles stockées dans la base de données. Vous pouvez utiliser un sous-ensemble du langage XPath pour interroger les vues XML créées par un schéma XSD annoté.  
   
 > [!NOTE]  
 >  Pour comprendre les requêtes XPath dans SQLXML 4.0, vous devez avoir une bonne connaissance des vues XML et des concepts connexes tels que les modèles et les schémas de mappage. Pour plus d’informations, consultez [Introduction aux schémas de XSD annoté &#40; SQLXML 4.0 &#41; ](../../relational-databases/sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md). Pour plus d'informations sur XPath, consultez la spécification Xpath définie par le World Wide Web Consortium (W3C) à l'adresse http://www.w3.org/TR/xpath.  

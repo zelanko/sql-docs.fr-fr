@@ -1,10 +1,13 @@
 ---
 title: "Exécuter des cas de Test (OracleToSQL) | Documents Microsoft"
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-oracle
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,11 +17,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
-ms.openlocfilehash: ff5baf3dadeee06d33f5d75f0c62a1ee339ba2b3
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 6d9e4e71813ff5b092ba1b67db207abd9b1adc44
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="running-test-cases-oracletosql"></a>Cas de Test en cours d’exécution (OracleToSQL)
 Lorsque le testeur de SSMA s’exécute à un cas de Test, il exécute les objets sélectionnés pour le test et crée un rapport sur les résultats de la vérification. Si les résultats sont identiques sur les deux plateformes, le test a réussi. La correspondance des objets entre Oracle et [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] est déterminé en fonction des paramètres de mappage de schéma pour le projet SSMA actuel.  
@@ -36,7 +39,7 @@ Lorsque le test est terminé, le rapport de cas de Test est créé. Cliquez sur 
   
 ## <a name="test-case-execution-steps"></a>Étapes d’exécution des cas de test  
   
-### <a name="prerequisites"></a>Conditions préalables  
+### <a name="prerequisites"></a>Prerequisites  
 Testeur de SSMA vérifie si toutes les conditions préalables sont remplies pour que l’exécution du test avant le début du test. Si certaines conditions ne sont pas satisfaites, un message d’erreur s’affiche.  
   
 ### <a name="initialization"></a>Initialisation  
@@ -46,7 +49,7 @@ Supposons que la table vérifiée est nommée USER_TABLE. Pour une telle table, 
   
 ||||  
 |-|-|-|  
-|Nom|Type| Description|  
+|Nom   |Type|Description|  
 |USER_TABLE$ Trg|déclencheur|Déclencheur d’audit les modifications dans la table vérifiée.|  
 |USER_TABLE$ AUD|table|Tableau dans lequel sont enregistrés les lignes supprimées et remplacées.|  
 |USER_TABLE$ AUDID|table|Tableau dans lequel les lignes nouvelles et modifiées sont enregistrés.|  
@@ -59,14 +62,14 @@ L’objet suivant est créé dans le schéma de table vérifié au niveau [!INCL
   
 ||||  
 |-|-|-|  
-|Nom|Type| Description|  
+|Nom   |Type|Description|  
 |USER_TABLE$ Trg|déclencheur|Déclencheur d’audit les modifications dans la table vérifiée.|  
   
 Et les objets suivants sont créés au [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]dans la base de données ssmatesterdb.  
   
 ||||  
 |-|-|-|  
-|Nom|Type| Description|  
+|Nom   |Type|Description|  
 |USER_TABLE$ Aud|table|Tableau dans lequel sont enregistrés les lignes supprimées et remplacées.|  
 |USER_TABLE$ AudID|table|Tableau dans lequel les lignes nouvelles et modifiées sont enregistrés.|  
 |USER_TABLE|vue|Représentation simplifiée des modifications de la table.|  

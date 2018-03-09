@@ -3,34 +3,34 @@ title: "Configurer un cluster partagé de Red Hat Enterprise Linux pour SQL Serv
 description: "Implémenter la haute disponibilité en configurant des clusters de disques partagés Red Hat Enterprise Linux pour SQL Server."
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.date: 03/17/2017
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: dcc0a8d3-9d25-4208-8507-a5e65d2a9a15
 ms.workload: On Demand
-ms.openlocfilehash: 1417e02a0a0c2ef56171a5dd99782cdbb4abe0e1
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 5263a40e37388ea9a884cafeffe2302f56f0043e
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="configure-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>Configurer des clusters de disques partagés Red Hat Enterprise Linux pour SQL Server
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 Ce guide fournit des instructions pour créer un cluster de disque partagé de deux nœuds pour SQL Server sur Red Hat Enterprise Linux. La couche de clustering basée sur Red Hat Enterprise Linux (RHEL) [module complémentaire de haute disponibilité](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/pdf/High_Availability_Add-On_Overview/Red_Hat_Enterprise_Linux-6-High_Availability_Add-On_Overview-en-US.pdf) construit sur [STIMULATEUR](http://clusterlabs.org/). L’instance de SQL Server est active sur un nœud ou l’autre.
 
 > [!NOTE] 
 > Accès à un module complémentaire Red Hat à haute disponibilité et de la documentation nécessite un abonnement. 
 
-En tant que le diagramme ci-dessous illustre le stockage est présenté à deux serveurs. Les composants clusters - Corosync et STIMULATEUR - coordonnent les communications et gestion des ressources. Un des serveurs a la connexion active pour les ressources de stockage et le serveur SQL Server. Lorsque STIMULATEUR détecte une défaillance les composants clusters gèrent le déplacement des ressources vers un autre nœud.  
+Comme le montre le diagramme suivant, le stockage est présenté à deux serveurs. Les composants clusters - Corosync et STIMULATEUR - coordonnent les communications et gestion des ressources. Un des serveurs a la connexion active pour les ressources de stockage et le serveur SQL Server. Lorsque STIMULATEUR détecte une défaillance les composants clusters gèrent le déplacement des ressources vers un autre nœud.  
 
 ![Red Hat Enterprise Linux 7 partagé de Cluster de disque SQL](./media/sql-server-linux-shared-disk-cluster-red-hat-7-configure/LinuxCluster.png) 
 
@@ -39,13 +39,13 @@ Pour plus d’informations sur la configuration du cluster, options d’agents d
 
 > [!NOTE] 
 > À ce stade, l’intégration de SQL Server avec STIMULATEUR n’est pas comme exhaustivement comme WSFC sur Windows. Dans SQL, il n’est pas connaissance de la présence du cluster, tous les l’orchestration est en dehors d’et le service est contrôlé sous la forme d’une instance autonome par STIMULATEUR. Par exemple, sys.dm_os_cluster_properties et sys.dm_os_cluster_nodes de vues de gestion dynamique de cluster ne peut aucun enregistrement.
-Pour utiliser une chaîne de connexion qui pointe vers un nom de serveur de chaîne et n’utilisez pas l’adresse IP, ils doivent inscrire dans leur serveur DNS à l’adresse IP utilisée pour créer la ressource IP virtuelle (comme expliqué ci-dessous) avec le nom du serveur choisi.
+Pour utiliser une chaîne de connexion qui pointe vers un nom de serveur de chaîne et n’utilisez pas l’adresse IP, ils doivent inscrire dans leur serveur DNS l’adresse IP utilisée pour créer la ressource IP virtuelle (comme expliqué dans les sections suivantes) avec le nom de serveur choisi.
 
 Les sections suivantes les différentes étapes pour configurer une solution de cluster de basculement. 
 
-## <a name="prerequisites"></a>Conditions préalables
+## <a name="prerequisites"></a>Configuration requise
 
-Pour terminer le scénario de bout en bout ci-dessous, vous avez besoin de deux ordinateurs pour déployer le cluster à deux nœuds et un autre serveur pour configurer le serveur NFS. Étapes ci-dessous décrivent la configuration de ces serveurs.
+Pour terminer le scénario de bout en bout suivant, vous avez besoin de deux ordinateurs pour déployer le cluster à deux nœuds et un autre serveur pour configurer le serveur NFS. Étapes ci-dessous décrivent la configuration de ces serveurs.
 
 ## <a name="setup-and-configure-the-operating-system-on-each-cluster-node"></a>Installer et configurer le système d’exploitation sur chaque nœud de cluster
 
@@ -68,7 +68,7 @@ La première étape consiste à configurer le système d’exploitation sur les 
 > [!NOTE] 
 > Au moment de l’installation, une clé principale du serveur est généré pour l’instance de SQL Server et placées à `/var/opt/mssql/secrets/machine-key`. Sur Linux, SQL Server s’exécute toujours comme un compte local nommé mssql. S’agissant d’un compte local, son identité n’est pas partagée entre les nœuds. Par conséquent, vous devez copier la clé de chiffrement à partir du nœud principal à chaque nœud secondaire pour chaque compte mssql local puisse accéder pour déchiffrer la clé principale du serveur. 
 
-1. Sur le nœud principal, créez une connexion SQL server pour STIMULATEUR et accorder l’autorisation de connexion pour exécuter `sp_server_diagnostics`. STIMULATEUR utilisera ce compte pour vérifier le nœud qui exécute SQL Server. 
+1. Sur le nœud principal, créez une connexion SQL server pour STIMULATEUR et accorder l’autorisation de connexion pour exécuter `sp_server_diagnostics`. STIMULATEUR utilise ce compte pour vérifier le nœud qui exécute SQL Server. 
 
    ```bash
    sudo systemctl start mssql-server
@@ -131,19 +131,19 @@ Sur le serveur NFS, procédez comme suit :
    sudo yum -y install nfs-utils
    ```
 
-1. Activer et démarrer`rpcbind`
+1. Activer et démarrer `rpcbind`
 
    ```bash
-   sudo systemctl enable rpcbind && systemctl start rpcbind
+   sudo systemctl enable rpcbind && sudo systemctl start rpcbind
    ```
 
-1. Activer et démarrer`nfs-server`
+1. Activer et démarrer `nfs-server`
  
    ```bash
-   systemctl enable nfs-server && systemctl start nfs-server
+   sudo systemctl enable nfs-server && sudo systemctl start nfs-server
    ```
  
-1.  Modifier `/etc/exports` pour exporter le répertoire que vous souhaitez partager. Vous devez 1 ligne pour chaque action que vous souhaitez. Exemple : 
+1.  Modifier `/etc/exports` pour exporter le répertoire que vous souhaitez partager. Vous devez 1 ligne pour chaque action que vous souhaitez. Par exemple : 
 
    ```bash
    /mnt/nfs  10.8.8.0/24(rw,sync,no_subtree_check,no_root_squash)
@@ -180,7 +180,7 @@ Sur le serveur NFS, procédez comme suit :
 
 Procédez comme suit sur tous les nœuds de cluster.
 
-1.  À partir du serveur NFS, installer`nfs-utils`
+1.  Installation de `nfs-utils`.
 
    ```bash
    sudo yum -y install nfs-utils
@@ -214,7 +214,7 @@ Pour plus d’informations sur l’utilisation de NFS, voir les ressources suiva
 1.  **Sur le nœud principal uniquement**, enregistrer les fichiers de base de données dans un emplacement temporaire. Le script suivant crée un répertoire temporaire, copie les fichiers de base de données vers le nouveau répertoire et supprime les anciens fichiers de base de données. Lorsque SQL Server s’exécute en tant qu’utilisateur local mssql, vous devez vous assurer qu’après le transfert de données pour le partage monté, utilisateur local a accès en lecture-écriture au partage. 
 
    ``` 
-   $ su mssql
+   $ sudo su mssql
    $ mkdir /var/opt/mssql/tmp
    $ cp /var/opt/mssql/data/* /var/opt/mssql/tmp
    $ rm /var/opt/mssql/data/*
@@ -233,16 +233,16 @@ Pour plus d’informations sur l’utilisation de NFS, voir les ressources suiva
    10.8.8.0:/mnt/nfs /var/opt/mssql/data nfs timeo=14,intr 
    ``` 
 > [!NOTE] 
->Si vous utilisez une ressource de système de fichiers (FS) comme indiqué ci-dessous, il n’est pas nécessaire de conserver la commande de montage dans/etc/fstab. STIMULATEUR s’occupe de montage du dossier quand il démarre la ressource FS en cluster. À l’aide de délimitation, elle dépassera le projecteur offre FS n’est jamais monté à deux reprises. 
+>Si vous utilisez une ressource de système de fichiers (FS) comme indiqué ici, il n’est pas nécessaire de conserver la commande de montage dans/etc/fstab. STIMULATEUR s’occupe de montage du dossier quand il démarre la ressource FS en cluster. À l’aide de délimitation, elle garantit que le système de fichiers n’est jamais monté à deux reprises. 
 
 1.  Exécutez `mount -a` commande pour le système mettre à jour les chemins d’accès montés.  
 
 1.  Copiez les fichiers journaux et de base de données que vous avez enregistré à `/var/opt/mssql/tmp` au partage qui vient d’être monté `/var/opt/mssql/data`. Cette opération ne doit être effectué **sur le nœud principal**. Assurez-vous que vous accordez des autorisations de lecture/écriture à l’utilisateur local de « mssql ».
 
    ``` 
-   $ chown mssql /var/opt/mssql/data
-   $ chgrp mssql /var/opt/mssql/data
-   $ su mssql
+   $ sudo chown mssql /var/opt/mssql/data
+   $ sudo chgrp mssql /var/opt/mssql/data
+   $ sudo su mssql
    $ cp /var/opt/mssql/tmp/* /var/opt/mssql/data/
    $ rm /var/opt/mssql/tmp/*
    $ exit
@@ -265,8 +265,8 @@ Pour plus d’informations sur l’utilisation de NFS, voir les ressources suiva
 
    ```bash
    sudo touch /var/opt/mssql/secrets/passwd
-   sudo echo '<loginName>' >> /var/opt/mssql/secrets/passwd
-   sudo echo '<loginPassword>' >> /var/opt/mssql/secrets/passwd
+   echo '<loginName>' | sudo tee -a /var/opt/mssql/secrets/passwd
+   echo '<loginPassword>' | sudo tee -a /var/opt/mssql/secrets/passwd
    sudo chown root:root /var/opt/mssql/secrets/passwd 
    sudo chmod 600 /var/opt/mssql/secrets/passwd    
    ```
@@ -332,10 +332,9 @@ Pour plus d’informations sur l’utilisation de NFS, voir les ressources suiva
    sudo pcs property set start-failure-is-fatal=false
    ```
 
-2. Configurer les ressources de cluster de SQL Server, système de fichiers et les ressources IP virtuels et de distribuer la configuration pour le cluster. Vous aurez besoin des informations suivantes :
+2. Configurer les ressources de cluster de SQL Server, système de fichiers et les ressources IP virtuels et de distribuer la configuration pour le cluster. Vous avez besoin des informations suivantes :
 
    - **Nom de la ressource SQL Server**: un nom pour la ressource SQL Server en cluster. 
-   - **Valeur de délai d’attente**: la valeur de délai d’attente est la durée pendant laquelle le cluster attend pendant une une ressource est mise en ligne. Pour SQL Server, cela indique l’heure que vous prévoyez de SQL Server à suivre pour mettre le `master` en ligne de base de données.  
    - **Variable de nom de la ressource IP**: un nom pour la ressource d’adresse IP virtuelle.
    - **Adresse IP**: l’adresse IP que les clients utiliseront pour se connecter à l’instance en cluster de SQL Server. 
    - **Nom de la ressource système de fichiers**: un nom pour la ressource du système de fichiers.
@@ -343,11 +342,11 @@ Pour plus d’informations sur l’utilisation de NFS, voir les ressources suiva
    - **APPAREIL**: le chemin d’accès local, qu’il est monté sur le partage
    - **(fsType)**: type de partage de fichier (par exemple, nfs)
 
-   Mettre à jour les valeurs dans le script ci-dessous pour votre environnement. Exécutez sur un nœud pour configurer et démarrer le service en cluster.  
+   Mettre à jour les valeurs dans le script suivant pour votre environnement. Exécutez sur un nœud pour configurer et démarrer le service en cluster.  
 
    ```bash
    sudo pcs cluster cib cfg 
-   sudo pcs -f cfg resource create <sqlServerResourceName> ocf:mssql:fci op defaults timeout=<timeout_in_seconds>
+   sudo pcs -f cfg resource create <sqlServerResourceName> ocf:mssql:fci
    sudo pcs -f cfg resource create <floatingIPResourceName> ocf:heartbeat:IPaddr2 ip=<ip Address>
    sudo pcs -f cfg resource create <fileShareResourceName> Filesystem device=<networkPath> directory=<localPath>         fstype=<fileShareType>
    sudo pcs -f cfg constraint colocation add <virtualIPResourceName> <sqlResourceName>
@@ -359,7 +358,7 @@ Pour plus d’informations sur l’utilisation de NFS, voir les ressources suiva
 
    ```bash
    sudo pcs cluster cib cfg
-   sudo pcs -f cfg resource create mssqlha ocf:mssql:fci op defaults timeout=60s
+   sudo pcs -f cfg resource create mssqlha ocf:mssql:fci
    sudo pcs -f cfg resource create virtualip ocf:heartbeat:IPaddr2 ip=10.0.0.99
    sudo pcs -f cfg resource create fs Filesystem device="10.8.8.0:/mnt/nfs" directory="/var/opt/mssql/data" fstype="nfs"
    sudo pcs -f cfg constraint colocation add virtualip mssqlha

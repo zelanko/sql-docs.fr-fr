@@ -8,14 +8,16 @@ ms.service:
 ms.component: t-sql|language-elements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - RAISERROR
 - RAISERROR_TSQL
 - RAISEERROR_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - sysmessages system table
 - errors [SQL Server], RAISERROR statement
@@ -29,16 +31,16 @@ helpviewer_keywords:
 - CATCH block
 - messages [SQL Server], RAISERROR statement
 ms.assetid: 483588bd-021b-4eae-b4ee-216268003e79
-caps.latest.revision: "73"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: eaebe21d731916e0ed6906e7d916df4c8cac2d90
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: af9f82f9b550ecd366c10562199c606bf8ff0c9c
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="raiserror-transact-sql"></a>RAISERROR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -71,18 +73,18 @@ RAISERROR ( { msg_str | @local_variable }
  *msg_id*  
  Un numéro de message d’erreur définis par l’utilisateur est stocké dans la vue de catalogue sys.messages à l’aide de sp_addmessage. Les numéros d'erreur des messages d'erreur définis par l'utilisateur doivent être supérieurs à 50 000. Lorsque *msg_id* n’est pas spécifié, RAISERROR génère un message d’erreur avec un numéro d’erreur 50 000.  
   
- *chaîne_du_message*  
+ *msg_str*  
  Un message défini par l’utilisateur avec mise en forme est identique à la **printf** fonction dans la bibliothèque standard C. Le message d'erreur peut compter jusqu'à 2 047 caractères. Si le message contient au moins 2 048 caractères, seuls les 2 044 premiers sont affichés et des points de suspension sont ajoutés pour indiquer que le message a été tronqué. Notez que les paramètres de substitution utilisent plus de caractères que ce que la sortie affiche en raison de son comportement de stockage interne. Par exemple, le paramètre de substitution de *%d* avec une valeur affectée de 2 produit en fait un caractère dans la chaîne de message, mais prend également jusqu'à trois caractères supplémentaires de stockage. Ce besoin de stockage réduit le nombre de caractères disponibles pour le message émis.  
   
  Lorsque *chaîne_du_message* est spécifié, RAISERROR génère un message d’erreur avec un numéro d’erreur 50 000.  
   
  *chaîne_du_message* est une chaîne de caractères avec des spécifications de conversion incorporées facultatives. Chaque spécification de conversion définit comment une valeur dans la liste d’arguments est mise en forme et placée dans un champ à l’emplacement de la spécification de conversion dans *chaîne_du_message*. Les spécifications de conversion arborent la mise en forme suivante :  
   
- % [[*indicateur*] [*largeur*] [. *précision*] [{h | l}]] *type*  
+ % [[*flag*] [*width*] [. *précision*] [{h | l}]] *type*  
   
  Les paramètres qui peuvent être utilisés dans *chaîne_du_message* sont :  
   
- *indicateur*  
+ *flag*  
   
  Code qui détermine l'espacement et la justification du message substitué.  
   
@@ -94,7 +96,7 @@ RAISERROR ( { msg_str | @local_variable }
 |# (nombre)|Préfixe 0x pour le type hexadécimal de x ou X|Lorsqu'il est utilisé avec les formats o, x ou X, le signe dièse # fait précéder n'importe quelle valeur différente de zéro respectivement de 0, 0x ou 0X. Lorsque d, i ou u sont précédés du signe dièse (#), ce dernier est ignoré.|  
 |' ' (vide)|Remplissage avec des espaces|Fait précéder la valeur de sortie d'espaces si la valeur est signée et positive. Ceci sera ignoré si un signe positif (+) est inclus dans le drapeau +.|  
   
- *Largeur*  
+ *width*  
   
  Nombre entier qui définit la largeur minimale du champ dans lequel est placée la valeur de l'argument. Si la longueur de la valeur d’argument est égale ou supérieure à *largeur*, la valeur est imprimée sans marge intérieure. Si la valeur est inférieure à *largeur*, la valeur est complétée jusqu'à la longueur spécifiée dans *largeur*.  
   
@@ -126,10 +128,10 @@ RAISERROR ( { msg_str | @local_variable }
 > [!NOTE]  
 >  Pour convertir une valeur pour le [!INCLUDE[tsql](../../includes/tsql-md.md)] **bigint** de type de données, spécifiez **% I64d**.  
   
- **@***local_variable*  
- Est une variable de tout type de données de caractères valide qui contient une chaîne mise en forme de la même manière que *chaîne_du_message*. **@***local_variable* doit être **char** ou **varchar**, ou doit pouvoir être converti implicitement à ces types de données.  
+ **@** *local_variable*  
+ Est une variable de tout type de données de caractères valide qui contient une chaîne mise en forme de la même manière que *chaîne_du_message*. **@*** local_variable* doit être **char** ou **varchar**, ou doit pouvoir être converti implicitement à ces types de données.  
   
- *niveau de gravité*  
+ *severity*  
  Représente le niveau de gravité défini par l'utilisateur associé au message en question. Lorsque vous utilisez *msg_id* pour déclencher un message défini par l’utilisateur créé à l’aide de sp_addmessage, la gravité spécifiée dans l’instruction RAISERROR remplace celui spécifié dans sp_addmessage.  
   
  Les niveaux de gravité de 0 à 18 peuvent être spécifiés par tout utilisateur. Niveaux de gravité de 19 à 25 peuvent uniquement être spécifiés par les membres du rôle sysadmin du rôle serveur fixé ou les utilisateurs avec des autorisations ALTER TRACE. Pour les niveaux de 19 à 25, l'option WITH LOG est nécessaire. Les niveaux de gravité inférieurs à 0 sont interprétés comme 0. Les niveaux de gravité supérieurs à 25 sont interprétés comme 25.  
@@ -150,7 +152,7 @@ RAISERROR (15600,-1,-1, 'mysp_CreateCustomer');
  An invalid parameter or option was specified for procedure 'mysp_CreateCustomer'.
  ```  
   
- *état*  
+ *state*  
  Entier compris entre 0 et 255. Les valeurs négatives par défaut est 1. Valeurs supérieures à 255 ne doivent pas être utilisés. 
   
  Si une même erreur définie par l'utilisateur est générée à plusieurs emplacements, l'utilisation d'un numéro d'état unique pour chaque emplacement peut vous aider à trouver la portion de code à l'origine des erreurs.  
@@ -289,10 +291,10 @@ GO
  [Fonctions intégrées &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)   
  [DECLARE @local_variable (Transact-SQL)](../../t-sql/language-elements/declare-local-variable-transact-sql.md)   
  [PRINT &#40;Transact-SQL&#41;](../../t-sql/language-elements/print-transact-sql.md)   
- [sp_addmessage &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-addmessage-transact-sql.md)   
- [sp_dropmessage &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-dropmessage-transact-sql.md)   
+ [sp_addmessage &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmessage-transact-sql.md)   
+ [sp_dropmessage &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmessage-transact-sql.md)   
  [sys.messages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/messages-for-errors-catalog-views-sys-messages.md)   
- [xp_logevent &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/xp-logevent-transact-sql.md)   
+ [xp_logevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/xp-logevent-transact-sql.md)   
  [@@ERROR &#40;Transact-SQL&#41;](../../t-sql/functions/error-transact-sql.md)   
  [ERROR_LINE &#40;Transact-SQL&#41;](../../t-sql/functions/error-line-transact-sql.md)   
  [ERROR_MESSAGE &#40;Transact-SQL&#41;](../../t-sql/functions/error-message-transact-sql.md)   

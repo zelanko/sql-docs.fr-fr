@@ -1,11 +1,11 @@
 ---
-title: "Étape 3 : Ajout de Packages et autres fichiers | Documents Microsoft"
+title: "Étape 3 : Ajout de packages et autres fichiers | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
 ms.technology:
@@ -15,19 +15,18 @@ ms.topic: article
 applies_to:
 - SQL Server 2016
 ms.assetid: a7e6ec9c-d31d-4613-9525-8947a7b358f7
-caps.latest.revision: 24
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: f8cf4eedc8930492e28f41cee67f0c25a382bacd
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: e23136a630638a04c390eeac809c7786aa5476b6
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="lesson-1-3---adding-packages-and-other-files"></a>Leçon 1-3 - Ajout de Packages et d’autres fichiers
+# <a name="lesson-1-3---adding-packages-and-other-files"></a>Leçon 1-3 : Ajout de packages et autres fichiers
 Au cours de cette tâche, vous allez ajouter des packages existants, des fichiers annexes qui prennent en charge des packages individuels et un fichier Lisezmoi pour le projet Didacticiel de déploiement que vous avez créé dans la tâche précédente. Par exemple, vous allez ajouter un fichier de données XML qui contient les données destinées à un package et un fichier texte qui fournit des informations de fichier Lisez-moi relatives à tous les packages du projet.  
   
 Lorsque vous déployez des packages dans un environnement de test ou de production, vous n'incluez généralement pas les fichiers de données dans le déploiement, mais vous utilisez à la place des configurations pour mettre à jour les chemins d'accès des sources de données afin d'accéder aux versions de test ou de production des fichiers de données ou de base de données. À des fins pédagogiques, ce didacticiel inclut des fichiers de données dans le déploiement de package.  
@@ -82,4 +81,3 @@ Au cours de la tâche suivante, vous allez ajouter des configurations aux packag
   
   
   
-

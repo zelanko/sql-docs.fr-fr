@@ -8,22 +8,20 @@ ms.service:
 ms.component: reporting-services
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 934b199c-9918-4e6b-83f4-5862b94fc904
 caps.latest.revision: "37"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: cd2500d7c1d3dff0ee0a3c41b40e6f35bb4060d5
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 048406ef86bc2442e4d065f5461f85dbbd328495
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="reporting-services-concepts-ssrs"></a>Concepts de Reporting Services (SSRS)
   Cette rubrique fournit un bref résumé des concepts de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] .  
@@ -117,7 +115,7 @@ Vous créez des rapports Reporting Services mobiles (fichiers .rsmobile) dans l�
   
 -   **Datasets incorporés.** Les datasets incorporés sont définis dans un rapport unique et sont utilisés par un seul rapport.  
   
- Pour plus d’informations, consultez [Datasets incorporés dans le rapport et datasets partagés &#40;Générateur de rapports et SSRS&#41;](../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).  
+ Pour plus d’informations, consultez [Datasets incorporés dans les rapports et datasets partagés &#40;Générateur de rapports et SSRS&#41;](../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).  
   
 ### <a name="report-parameters"></a>Paramètres du rapport 
  Les paramètres de rapport font partie d'une définition de rapport. Vous pouvez ajouter des paramètres à des rapports Reporting Services paginés et mobiles pour lier des rapports connexes, pour contrôler l'apparence d'un rapport, pour filtrer les données du rapport, ou pour limiter l'étendue d'un rapport à des utilisateurs ou des emplacements spécifiques. Lorsqu'un rapport paginé est publié sur un serveur de rapports ou un site SharePoint natif, les paramètres de rapport sont enregistrés en tant qu'élément distinct du serveur de rapports. Les paramètres peuvent être gérés indépendamment de la définition de rapport. Pour créer plusieurs jeux de paramètres pour le même rapport, créez des *rapports liés*.  
@@ -218,7 +216,7 @@ Illustration du traitement d'un rapport
  Un rapport exporté est un rapport totalement paginé enregistré dans un format de fichier spécifique. Les formats d'exportation dépendent des extensions de rendu installées et peuvent être personnalisés. Par défaut, les formats d'exportation comprennent Excel, Word, XML, PDF, TIFF et CSV. Pour plus d’informations, consultez [Export Reports &#40;Report Builder and SSRS&#41;](../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md).  
   
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Fonctionnalités et tâches Reporting Services &#40;SSRS&#41;](../reporting-services/reporting-services-features-and-tasks-ssrs.md)   
  [Informations techniques de référence &#40;SSRS&#41;](../reporting-services/technical-reference-ssrs.md)   
  [Reporting Services (SSRS)](../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)  

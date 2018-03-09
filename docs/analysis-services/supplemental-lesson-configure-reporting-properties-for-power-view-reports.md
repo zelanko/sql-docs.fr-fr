@@ -2,27 +2,28 @@
 title: "Configurer les propriétés de création de rapports pour les rapports Power View | Documents Microsoft"
 ms.custom: 
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: misc
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology: analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 ms.assetid: 0ffc5f44-17d3-42d4-bc2c-baf3b4485e2d
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 7cb95c9ee9699b888580383cfcbf70c229a99d03
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: bbc725ce1d2f5999486f46f4ab30f6e3fb98f42d
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="supplemental-lesson---configure-reporting-properties-for-power-view-reports"></a>Supplémentaires leçon - configurer les propriétés de création de rapports pour les rapports Power View
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
@@ -31,7 +32,7 @@ Dans cette leçon supplémentaire, vous allez définir les propriétés du proje
   
 Durée estimée pour effectuer cette leçon : **30 minutes**  
   
-## <a name="prerequisites"></a>Conditions préalables  
+## <a name="prerequisites"></a>Configuration requise  
 Cette leçon supplémentaire fait partie d'un didacticiel de modélisation tabulaire, qui doit être suivi dans l'ordre. Avant d'effectuer les tâches de cette leçon supplémentaire, vous devez avoir terminé toutes les leçons précédentes.  
 Pour pouvoir effectuer cette leçon supplémentaire, les composants suivants doivent également être installés :  
   
@@ -79,11 +80,11 @@ Il peut parfois s'avérer nécessaire de créer des données dans votre modèle 
 ## <a name="default-field-set"></a>Ensemble de champs par défaut  
 L’ensemble de champs par défaut est une liste prédéfinie de colonnes et des mesures pour une table qui sont automatiquement ajoutés à un canevas de rapport lorsque la table est activée dans la liste de champs du rapport. Pour l'essentiel, vous pouvez indiquer les colonnes, les mesures et l'ordre des champs par défaut qui seront affichés dans cette table visualisée dans des rapports Power View.  Pour le modèle Internet Sales, vous allez définir un ensemble de champs par défaut et l'ordre pour les tables Customer, Geography et Product. Seules sont incluses les colonnes les plus courantes qui seront affichées lors de l'analyse des données Adventure Works Internet Sales à l'aide de rapports Power View.  
   
-Pour des informations détaillées sur l’ensemble de champs par défaut, consultez [Configurer un ensemble de champs par défaut pour les rapports Power View &#40;SSAS Tabulaire&#41;](../analysis-services/tabular-models/power-view-configure-default-field-set-for-reports.md) dans la documentation en ligne de SQL Server.  
+Pour obtenir des informations détaillées sur l’ensemble de champs par défaut, consultez [configurer champ défini par défaut pour les rapports Power View](../analysis-services/tabular-models/power-view-configure-default-field-set-for-reports.md) dans la documentation en ligne de SQL Server.  
   
 #### <a name="to-set-default-field-set-for-tables"></a>Pour définir un ensemble de champs par défaut pour les tables  
   
-1.  Dans le concepteur de modèles, cliquez sur la table **Customer** (onglet).  
+1.  Dans le concepteur de modèles, cliquez sur la table (onglet) **Customer** .  
   
 2.  Dans la fenêtre **Propriétés** , sous **Propriétés de création de rapports**, dans la propriété **Ensemble de champs par défaut** , cliquez sur **Cliquer pour modifier** pour ouvrir la boîte de dialogue **Ensemble de champs par défaut** .  
   
@@ -114,11 +115,11 @@ Pour des informations détaillées sur l’ensemble de champs par défaut, consu
 ## <a name="table-behavior"></a>Comportement de la table  
 La propriété Comportement de la table, vous permet de modifier le comportement par défaut des différents types de visualisation et le comportement de regroupement des tables utilisées dans les rapports Power View. Cela produit un meilleur placement par défaut des informations d'identification, telles que les noms, photos ou titres, dans les mises en page de mosaïque, de carte et de graphique.  
   
-Pour plus d’informations sur les propriétés de comportement de table, consultez [Configurer les propriétés de comportement de table pour les rapports Power View &#40;SSAS Tabulaire&#41;](../analysis-services/tabular-models/power-view-configure-table-behavior-properties-for-reports.md) dans la documentation en ligne de SQL Server.  
+Pour plus d’informations sur les propriétés de comportement de la Table, consultez [configurer des propriétés de comportement de Table pour les rapports Power View](../analysis-services/tabular-models/power-view-configure-table-behavior-properties-for-reports.md) dans la documentation en ligne de SQL Server.  
   
 #### <a name="to-set-table-behavior"></a>Pour définir le comportement de la table 
   
-1.  Dans le concepteur de modèles, cliquez sur la table **Customer** (onglet).  
+1.  Dans le concepteur de modèles, cliquez sur la table (onglet) **Customer** .  
   
 2.  Dans la fenêtre **Propriétés** , dans la propriété **Comportement de la table** , cliquez sur **Cliquer pour modifier**pour ouvrir la boîte de dialogue **Comportement de la table** .  
   
@@ -139,11 +140,11 @@ Pour plus d’informations sur les propriétés de comportement de table, consul
 ## <a name="reporting-properties-for-columns"></a>Propriétés de création de rapports pour les colonnes  
 Il existe plusieurs propriétés de colonne de base et propriétés de création de rapports spécifiques sur les colonnes que vous pouvez définir pour améliorer l'expérience de création de rapports d'un modèle. Par exemple, il n'est peut-être pas nécessaire que toutes les colonnes s'affichent dans chacune des tables. Tout comme vous avez masqué les tables Product Category et Product Subcategory précédemment, vous pouvez masquer des colonnes spécifiques d'une table en utilisant la propriété Hidden d'une colonne. D'autres propriétés, telles que le Format de date et Trier par colonne, peuvent également affecter le mode d'affichage des données de colonne dans les rapports. Vous allez maintenant définir certaines de ces propriétés sur des colonnes spécifiques. D'autres colonnes ne nécessitent aucune intervention, et ne figurent pas ci-dessous.  
   
-Vous n'allez définir que quelques propriétés de colonne, mais il en existe de nombreuses autres. Pour des informations détaillées sur les propriétés de création de rapports d’une colonne, consultez [Propriétés de la colonne &#40;SSAS Tabulaire&#41;](../analysis-services/tabular-models/column-properties-ssas-tabular.md) dans la documentation en ligne de SQL Server.  
+Vous n'allez définir que quelques propriétés de colonne, mais il en existe de nombreuses autres. Pour plus d’informations sur les propriétés de colonne, consultez [propriétés de la colonne](../analysis-services/tabular-models/column-properties-ssas-tabular.md) dans la documentation en ligne de SQL Server.  
   
 #### <a name="to-set-properties-for-columns"></a>Pour définir les propriétés des colonnes  
   
-1.  Dans le concepteur de modèles, cliquez sur la table **Customer** (onglet).  
+1.  Dans le concepteur de modèles, cliquez sur la table (onglet) **Customer** .  
   
 2.  Cliquez sur la colonne **Customer Id** pour afficher les propriétés de la colonne dans la fenêtre **Propriétés** .  
   
@@ -155,7 +156,7 @@ Vous n'allez définir que quelques propriétés de colonne, mais il en existe de
   
     **Customer**  
   
-    |Colonne|Propriété|Value|  
+    |Colonne|Propriété|Valeur|  
     |----------|------------|---------|  
     |Geography Id|Hidden|True|  
     |Birth Date|Format de données|Date courte|  
@@ -163,9 +164,9 @@ Vous n'allez définir que quelques propriétés de colonne, mais il en existe de
     **Date**  
   
     > [!NOTE]  
-    > Étant donné que la table Date a été sélectionnée comme table de date du modèle à l'aide du paramètre Marquer en tant que table de dates, dans la leçon 7 : Marquer en tant que table de dates, et la colonne Date de la table Date comme la colonne à utiliser en tant qu'identificateur unique, la propriété Identificateur de ligne de la colonne Date se verra automatiquement affecter la valeur True, et ne pourra pas être modifiée. Lorsque vous utilisez les fonctions Time Intelligence dans des formules DAX, vous devez spécifier une table de dates. Dans ce modèle, vous avez créé plusieurs mesures à l'aide de fonctions Time Intelligence pour calculer les données de vente de plusieurs périodes, telles que les trimestres précédents et actuel, ainsi qu'à des fins d'utilisation dans des indicateurs de performance clés. Pour plus d’informations sur la spécification d’une table de dates, consultez [Spécifier la marque comme table de dates pour l’utiliser avec Time Intelligence &#40;SSAS Tabulaire&#41;](../analysis-services/tabular-models/specify-mark-as-date-table-for-use-with-time-intelligence-ssas-tabular.md) dans la documentation en ligne de SQL Server.  
+    > Étant donné que la table Date a été sélectionnée comme table de date du modèle à l'aide du paramètre Marquer en tant que table de dates, dans la leçon 7 : Marquer en tant que table de dates, et la colonne Date de la table Date comme la colonne à utiliser en tant qu'identificateur unique, la propriété Identificateur de ligne de la colonne Date se verra automatiquement affecter la valeur True, et ne pourra pas être modifiée. Lorsque vous utilisez les fonctions Time Intelligence dans des formules DAX, vous devez spécifier une table de dates. Dans ce modèle, vous avez créé plusieurs mesures à l'aide de fonctions Time Intelligence pour calculer les données de vente de plusieurs périodes, telles que les trimestres précédents et actuel, ainsi qu'à des fins d'utilisation dans des indicateurs de performance clés. Pour plus d’informations sur la spécification d’une table de dates, consultez [spécifier la marque comme Table de dates à utiliser avec Time Intelligence](../analysis-services/tabular-models/specify-mark-as-date-table-for-use-with-time-intelligence-ssas-tabular.md) dans la documentation en ligne de SQL Server.  
   
-    |Colonne|Propriété|Value|  
+    |Colonne|Propriété|Valeur|  
     |----------|------------|---------|  
     |Date|Format de données|Date courte|  
     |Day Number of Week|Hidden|True|  
@@ -173,7 +174,7 @@ Vous n'allez définir que quelques propriétés de colonne, mais il en existe de
     |Day of Week|Hidden|True|  
     |Day of Month|Hidden|True|  
     |Day of Year|Hidden|True|  
-    |Month Name|Trier par colonne|Month|  
+    |Month Name|Trier par colonne|Mois|  
     |Month|Hidden|True|  
     |Month Calendar|Hidden|True|  
     |Fiscal Quarter|Hidden|True|  
@@ -182,14 +183,14 @@ Vous n'allez définir que quelques propriétés de colonne, mais il en existe de
   
     **Geography**  
   
-    |Colonne|Propriété|Value|  
+    |Colonne|Propriété|Valeur|  
     |----------|------------|---------|  
     |Geography Id|Hidden|True|  
     |Sales Territory Id|Hidden|True|  
   
     **Product**  
   
-    |Colonne|Propriété|Value|  
+    |Colonne|Propriété|Valeur|  
     |----------|------------|---------|  
     |Product Id|Hidden|True|  
     |Product Alternate Id|Étiquette par défaut|True|  
@@ -199,7 +200,7 @@ Vous n'allez définir que quelques propriétés de colonne, mais il en existe de
   
     **Internet Sales**  
   
-    |Colonne|Propriété|Value|  
+    |Colonne|Propriété|Valeur|  
     |----------|------------|---------|  
     |Product Id|Hidden|True|  
     |Customer Id|Hidden|True|  

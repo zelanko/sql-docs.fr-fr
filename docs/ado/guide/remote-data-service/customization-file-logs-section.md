@@ -3,8 +3,9 @@ title: Section Logs du fichier de personnalisation | Documents Microsoft
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,16 +16,16 @@ helpviewer_keywords:
 - logs section in RDS [ADO]
 - customization file in RDS [ADO]
 ms.assetid: a368e264-865c-41ee-be00-d9097255c2ea
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: be0416bacdc32c272b5c88139b06e5e133e6a43a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 10f6e47bcf8cede8c59a406fef4951a11cbd56bd
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="customization-file-logs-section"></a>Section de personnalisation de fichiers journaux
 Le **journaux** section contient une entrée de fichier journal, qui spécifie le nom d’un fichier qui enregistre les erreurs pendant l’opération de le **DataFactory**.  
@@ -46,7 +47,7 @@ FileName
   
 |Élément| Description|  
 |----------|-----------------|  
-|**Err**|Une chaîne littérale qui indique qu’il est une entrée de fichier journal.|  
+|**err**|Une chaîne littérale qui indique qu’il est une entrée de fichier journal.|  
 |*FileName*|Un nom de fichier et le chemin complet. Le nom de fichier par défaut est **c:\msdfmap.log**.|  
   
  Le fichier journal contient le nom d’utilisateur, un HRESULT, une date et une heure de chaque erreur.  

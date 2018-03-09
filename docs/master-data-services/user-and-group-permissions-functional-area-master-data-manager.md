@@ -5,23 +5,24 @@ ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
 ms.service: 
-ms.component: master-data-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
-ms.technology: master-data-services
+ms.technology:
+- master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 320d417e-a370-48fc-a05b-444d85fd24c0
-caps.latest.revision: "7"
-author: smartysanthosh
-ms.author: nagavo
+caps.latest.revision: 
+author: leolimsft
+ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5f24dc8d6d08e69e144a41a96dcff1c7c81b0299
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: c4d7bcf296cc602a7a543e9af6a1f91ff9a00d8d
+ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="user-and-group-permissions-functional-area-master-data-manager"></a>Zone fonctionnelle Autorisations d'accès (Master Data Manager)
   Dans la zone fonctionnelle Autorisations d'accès, les administrateurs peuvent accorder une autorisation d'accès à des zones fonctionnelles, à des attributs (sous l'onglet Modèles), ainsi qu'à des membres (sous l'onglet Membres de hiérarchie). Les chevauchements d'autorisations sont résolus afin de déterminer l'autorisation dont dispose un utilisateur sur chaque valeur d'attribut individuelle.  
@@ -52,7 +53,7 @@ ms.lasthandoff: 11/20/2017
   
  [Résolution des problèmes de sécurité de Master Data Manager](http://social.technet.microsoft.com/wiki/contents/articles/troubleshooting-master-data-manager-security-master-data-services.aspx)  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Application Web Master Data Manager](../master-data-services/master-data-manager-web-application.md)  
   
   

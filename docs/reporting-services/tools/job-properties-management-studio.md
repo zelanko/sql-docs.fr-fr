@@ -8,23 +8,21 @@ ms.service:
 ms.component: tools
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords: sql13.swb.reportserver.jobproperties.f1
 ms.assetid: 807ffd0e-9363-4f8f-9c36-c5d746ad19fd
 caps.latest.revision: "13"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: d0e1887f5a1816df421b9c2864298e0068b72d09
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 54fd700c21148803ce21ae83ee473753de139bd6
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="job-properties-management-studio"></a>Propriétés du travail (Management Studio)
   Utilisez la page **Propriétés du travail** pour afficher des informations sur un rapport ou abonnement en cours avant de l’annuler.  
@@ -74,7 +72,7 @@ ms.lasthandoff: 12/05/2017
  **Nom d'utilisateur**  
  Pour les processus lancés par un utilisateur, cette colonne affiche le nom de l'utilisateur. Pour les travaux système, il s'agit du nom du serveur de rapports.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Aide du serveur de rapports dans Management Studio accessible par la touche F1](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   
  [Se connecter à un serveur de rapports dans Management Studio](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   
  [Gérer un processus en cours d'exécution](../../reporting-services/subscriptions/manage-a-running-process.md)  

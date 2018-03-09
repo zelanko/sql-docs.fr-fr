@@ -28,19 +28,19 @@ ms.assetid: a7f95ddc-5154-4ed5-8117-c9fcf2221f13
 caps.latest.revision: "125"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 80a2fe944fcd81eb55de368360875b47ebf5a8a0
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 019751fa1dc2775fc38206d8e98e41283a44bd72
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="database-mirroring-sql-server"></a>Mise en miroir de bases de données (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 > [!NOTE]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Utilisez à la place [!INCLUDE[ssHADR](../../includes/sshadr-md.md)].  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Utilisez plutôt [!INCLUDE[ssHADR](../../includes/sshadr-md.md)].  
   
  La*mise en miroir de bases de données* est une solution permettant d'accroître la disponibilité d'une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . La mise en miroir est implémentée individuellement pour chaque base de données et fonctionne uniquement avec les bases de données qui utilisent le mode de restauration complète.  
   
@@ -209,7 +209,7 @@ ms.lasthandoff: 11/20/2017
   
   
 ###  <a name="ConcurrentSessions"></a> Sessions simultanées  
- Une instance de serveur peut participer à plusieurs sessions simultanées de mise en miroir de bases de données (une par base de données en miroir) avec des instances de serveur identiques ou différentes. Souvent, une instance de serveur assume la fonction exclusive de partenaire ou de témoin dans toutes ses sessions de mise en miroir de bases de données. Toutefois, chaque session étant indépendante des autres sessions, une instance de serveur peut jouer le rôle de partenaire dans certaines sessions et celui de témoin dans d'autres sessions. Par exemple, considérez les quatre sessions suivantes parmi trois instances de serveur (`SSInstance_1`, `SSInstance_2`et `SSInstance_3`). Chaque instance de serveur assume le rôle de partenaire dans certaines sessions et de témoin dans d'autres :  
+ Une instance de serveur peut participer à plusieurs sessions simultanées de mise en miroir de bases de données (une par base de données en miroir) avec des instances de serveur identiques ou différentes. Souvent, une instance de serveur assume la fonction exclusive de partenaire ou de témoin dans toutes ses sessions de mise en miroir de bases de données. Toutefois, chaque session étant indépendante des autres sessions, une instance de serveur peut jouer le rôle de partenaire dans certaines sessions et celui de témoin dans d'autres sessions. Par exemple, considérez les quatre sessions suivantes parmi trois instances de serveur (`SSInstance_1`, `SSInstance_2`et `SSInstance_3`). Chaque instance de serveur assume le rôle de partenaire dans certaines sessions et de témoin dans d'autres :  
   
 |Instance de serveur|Session pour la base de données A|Session pour la base de données B|Session pour la base de données C|Session pour la base de données D|  
 |---------------------|----------------------------|----------------------------|----------------------------|----------------------------|  
@@ -348,7 +348,7 @@ ms.lasthandoff: 11/20/2017
 -   [Supprimer une mise en miroir de bases de données &#40;SQL Server&#41;](../../database-engine/database-mirroring/remove-database-mirroring-sql-server.md)  
   
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Point de terminaison de mise en miroir de bases de données &#40;SQL Server&#41;](../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)   
  [Réparation de page automatique &#40;groupes de disponibilité : mise en miroir de bases de données&#41;](../../sql-server/failover-clusters/automatic-page-repair-availability-groups-database-mirroring.md)   
  [Résolution des problèmes de configuration de mise en miroir de bases de données &#40;SQL Server&#41;](../../database-engine/database-mirroring/troubleshoot-database-mirroring-configuration-sql-server.md)   

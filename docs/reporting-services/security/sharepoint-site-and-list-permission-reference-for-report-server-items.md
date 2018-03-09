@@ -2,12 +2,13 @@
 title: "Article de référence sur les autorisations de site SharePoint et de listes pour les éléments de serveur de rapports | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: security
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,15 +18,15 @@ helpviewer_keywords:
 - permission sets [Reporting Services]
 ms.assetid: 1fcb27bd-4c4a-43f4-bfff-e42a59c87c49
 caps.latest.revision: "14"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: fa4d9916987badd552b6e2317692bd79861dfda8
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: b2f7a54c6f2cb7f404635971edd3650b2d9e92ae
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="sharepoint-site-and-list-permission-reference-for-report-server-items"></a>Article de référence sur les autorisations de site SharePoint et de listes pour les éléments de serveur de rapports
   Cette rubrique constitue une référence concernant les autorisations de SharePoint utilisables pour accorder un accès à des opérations sur un serveur de rapports qui s'exécute en mode intégré SharePoint. Si vous créez des niveaux d'autorisation personnalisés, cette rubrique peut vous aider à choisir les autorisations à utiliser.  
@@ -77,8 +78,8 @@ ms.lasthandoff: 11/09/2017
 |Utiliser les interfaces distantes|Utilisez les interfaces SOAP, Web DAV ou SharePoint Designer pour accéder au site Web.|X|X|X|Sert à appeler le point de terminaison du proxy URL vers le serveur de rapports.|  
 |Ouvrir|Ouvrez un site Web, une liste ou un dossier pour accéder aux éléments qu'il contient.|X|X|X|Consultez les planifications et les propriétés des éléments.|  
   
-## <a name="see-also"></a>Voir aussi  
- [Compare Roles and Tasks in Reporting Services to SharePoint Groups and Permissions](../../reporting-services/security/reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)   
+## <a name="see-also"></a> Voir aussi  
+ [Comparer des rôles et des tâches dans Reporting Services avec les autorisations et les groupes SharePoint](../../reporting-services/security/reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)   
  [Accord d'autorisations sur des éléments de serveur de rapports sur un site SharePoint](../../reporting-services/security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)  
   
   

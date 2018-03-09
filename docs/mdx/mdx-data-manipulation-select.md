@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords: SELECT
@@ -22,11 +22,11 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: 2a8b90fca4585047873c919c5aa90d1d6d3b8f17
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: b1cf2d78fcb8b275a899be437b85b643c2f5b6af
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="mdx-data-manipulation---select"></a>Manipulation de données MDX - SELECT
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -122,7 +122,7 @@ FROM
  *MemberProperty_Name*  
  Chaîne valide qui représente une propriété de membre.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  L'expression `<SELECT slicer axis clause>` doit contenir des membres de dimensions et de hiérarchies autres que ceux référencés dans les expressions `<SELECT query axis clause>` spécifiées.  
   
  Si un attribut du cube est omis dans les expressions `<SELECT query axis clause>` spécifiées et dans la valeur `<SELECT slicer axis clause>`, le membre par défaut de l'attribut est implicitement ajouté à l'axe de secteur.  

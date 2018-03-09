@@ -2,26 +2,30 @@
 title: Versions linguistiques locales dans SQL Server | Microsoft Docs
 ms.custom: 
 ms.date: 08/23/2017
-ms.prod:
-- sql-server-2016
-- sql-server-2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: install
 ms.reviewer: 
-ms.suite: 
-ms.technology: setup-install
+ms.suite: sql
+ms.technology:
+- setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 20b99363-0490-4aa3-9a3d-262f827d81e8
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-ms.openlocfilehash: 59bccb3bef14b779a017567211148096d2cb6c35
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 6d7de04bb83519d13cb7046b3353cf12f1b5a312
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="local-language-versions-in-sql-server"></a>Versions linguistiques locales dans SQL Server
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend en charge toutes les langues prises en charge par les systèmes d'exploitation Windows.  
   
 ## <a name="cross-language-support"></a>Prise en charge de langues différentes  
@@ -86,7 +90,7 @@ ms.lasthandoff: 11/09/2017
   
 4.  Cliquez sur **Appliquer** pour confirmer la modification et sur **OK** pour fermer la fenêtre.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Configurations matérielle et logicielle requises pour l’installation de SQL Server](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)   
  [Installer SQL Server](../../database-engine/install-windows/install-sql-server.md)  
   

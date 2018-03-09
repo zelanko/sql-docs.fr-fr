@@ -1,5 +1,5 @@
 ---
-title: "Utiliser des Services de capture de données modifiées | Documents Microsoft"
+title: Utiliser des services CDC | Microsoft Docs
 ms.custom: 
 ms.date: 03/20/2017
 ms.prod: sql-non-specified
@@ -15,17 +15,16 @@ ms.topic: article
 f1_keywords:
 - cdcServ
 ms.assetid: 4fc8edad-e16e-432f-a8ca-75f9a27444f3
-caps.latest.revision: 6
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 496eead0f37abd155b789d4ae4c40a40a64ac9f1
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: dace3763da446c75677288d15401a7c749740677
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="work-with-cdc-services"></a>Utiliser des services de capture de données modifiées
   Vous pouvez utiliser la console de configuration du service de capture de données modifiées pour créer un service de capture de données modifiées et préparer une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour la capture de données modifiées.  
@@ -47,9 +46,8 @@ ms.lasthandoff: 08/03/2017
   
  La boîte de dialogue Nouveau service de capture de données modifiées Oracle s'ouvre.  
   
-## <a name="see-also"></a>Voir aussi  
- [L’utilisation des Services de capture de données modifiées](../../integration-services/change-data-capture/how-to-work-with-cdc-services.md)   
- [Créer et modifier un Service de capture de données modifiées Oracle](../../integration-services/change-data-capture/create-and-edit-an-oracle-cdc-service.md)  
+## <a name="see-also"></a> Voir aussi  
+ [Procédure : utiliser des services de capture de données modifiées](../../integration-services/change-data-capture/how-to-work-with-cdc-services.md)   
+ [Créer et modifier un service CDC Oracle](../../integration-services/change-data-capture/create-and-edit-an-oracle-cdc-service.md)  
   
   
-

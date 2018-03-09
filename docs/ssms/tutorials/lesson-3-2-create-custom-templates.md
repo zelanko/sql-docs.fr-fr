@@ -2,30 +2,36 @@
 title: "Créer des modèles personnalisés | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-tutorial
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 helpviewer_keywords:
 - tql
 - templates [Transact-SQL], creating
 - templates [Transact-SQL]
 ms.assetid: 41098e78-b482-410e-bfe8-2ac10769ac4a
-caps.latest.revision: "31"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 7ad5f6304eb8d3e5957cf1d92cfc5a446023137a
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 770b33f7fb7fa22d1a2e86d4b5c7a9d3f8c84b35
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="lesson-3-2---create-custom-templates"></a>Leçon 3-2 - Créer des modèles personnalisés
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] est fourni avec des modèles pour de nombreuses tâches communes, mais le réel intérêt des modèles réside dans la possibilité de créer un modèle personnalisé pour les scripts complexes qui doivent être créés souvent. Au cours de cet exercice pratique, vous allez créer un script simple avec quelques paramètres, mais les modèles peuvent être utiles également pour les scripts longs et répétitifs.  
   
 ## <a name="using-custom-templates"></a>Utilisation de modèles personnalisés  
@@ -47,7 +53,7 @@ ms.lasthandoff: 11/09/2017
 7.  Dans l'Éditeur de requête, tapez le script suivant pour créer une procédure stockée qui recherche les bons d'une pièce en particulier, dans le cas présent : blade (la lame en français). (Vous pouvez copier et coller le code à partir de la fenêtre du didacticiel.)  
   
     ```  
-    USE AdventureWorks20012;  
+    USE AdventureWorks2012;  
     GO  
     IF EXISTS (  
     SELECT *   
@@ -67,11 +73,11 @@ ms.lasthandoff: 11/09/2017
   
 8.  Appuyez sur F5 pour exécuter ce script et créer la procédure **WorkOrdersForBlade** .  
   
-9. Dans l’Explorateur d’objets, cliquez avec le bouton droit sur votre serveur et choisissez **Nouvelle requête**. Une nouvelle fenêtre de l'Éditeur de requête s'ouvre.  
+9. Dans l’Explorateur d’objets, cliquez avec le bouton droit sur la base de données **AdventureWorks2012**, puis cliquez sur **Nouvelle requête**. Une nouvelle fenêtre de l'Éditeur de requête s'ouvre.  
   
 10. Dans l’Éditeur de requête, tapez **EXECUTE dbo.WorkOrdersForBlade**et appuyez sur F5 pour exécuter la requête. Vérifiez si le volet **Résultats** affiche la liste des bons de travaux pour les lames.  
   
-11. Modifiez le script du modèle (le script de l’étape 7) en remplaçant le nom du produit Blade (Lame) par le paramètre ***\<*product_name**, **nvarchar(50)**, **name*>***, en quatre endroits.  
+11. Modifiez le script du modèle (le script de l’étape 7) en remplaçant le nom du produit Blade par le paramètre **\<product_name, nvarchar(50), name>**, à quatre endroits.  
   
     > [!NOTE]  
     > Les paramètres nécessitent trois éléments : le nom du paramètre à remplacer, le type de données du paramètre et une valeur par défaut pour le paramètre.  
@@ -79,7 +85,7 @@ ms.lasthandoff: 11/09/2017
 12. Le script doit à présent ressembler à ce qui suit :  
   
     ```  
-    USE AdventureWorks20012;  
+    USE AdventureWorks2012;  
     GO  
     IF EXISTS (  
     SELECT *   

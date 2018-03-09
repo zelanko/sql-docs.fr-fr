@@ -3,8 +3,11 @@ title: "Catégories de travaux - Gérer les catégories de travaux | Microsoft D
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-agent
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,16 +17,16 @@ ms.assetid: 38276438-40b1-43ce-9aae-6805be6d9332
 caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5526919659f7d5d36943c1fd8619f9c1f5262f52
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 38e0121fb72d109225da097785c68a722f8d82f9
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="job-categories---manage-job-categories"></a>Catégories de travaux - Gérer les catégories de travaux
-Utilisez la boîte de dialogue **Catégories de travaux** pour ajouter ou supprimer des catégories de travaux. Les catégories de travaux prédéfinies ne peuvent pas être supprimées.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Utilisez la boîte de dialogue **Catégories de travaux** pour ajouter ou supprimer des catégories de travaux. Les catégories de travaux prédéfinies ne peuvent pas être supprimées.  
   
 ## <a name="options"></a>Options  
 **Nom**  
@@ -38,7 +41,7 @@ Ouvre la boîte de dialogue **Propriétés** de la catégorie sélectionnée afi
 **Ajouter**  
 Ouvre la boîte de dialogue **Nouvelle catégorie de travaux** afin d’ajouter une nouvelle catégorie de travaux.  
   
-**Delete**  
+**Supprimer**  
 Supprime la catégorie de travaux sélectionnée. Cette option est activée uniquement pour les catégories de travaux définies par l'utilisateur.  
   
 **Actualiser**  

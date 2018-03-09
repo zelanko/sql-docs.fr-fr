@@ -2,10 +2,14 @@
 title: "Insérer des extraits de code d’entourage (surround-with) Transact-SQL | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-scripting
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -13,19 +17,19 @@ helpviewer_keywords:
 - IntelliSense [SQL Server], surround with snippets
 - Transact-SQL snippets, surround with
 ms.assetid: 5b5a8c6c-968e-4361-a7f5-9e2ac186d927
-caps.latest.revision: "6"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 23dc1addf677c549e53d69c1fa8f8c15af32c3dd
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 9c1f1ec2e376c496e2b3dcdaf5ef032ba8c54745
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="insert-surround-with-transact-sql-snippets"></a>Insérer des extraits de code d'entourage (surround-with) Transact-SQL
-  Un extrait de code d'entourage est un modèle pouvant servir de point de départ lors de l'intégration d'un jeu d'instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] dans un bloc BEGIN, IF ou WHILE.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Un extrait de code d’entourage est un modèle pouvant servir de point de départ lors de l’intégration d’un jeu d’instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] dans un bloc BEGIN, IF ou WHILE.  
   
 ## <a name="inserting-surround-with-snippets"></a>Insertion d'extraits de code d'entourage  
  Les extraits de code d’entourage peuvent être lancés de trois manières : par le biais d’un raccourci clavier, du menu **Édition** et du menu contextuel.  
@@ -46,7 +50,7 @@ ms.lasthandoff: 11/09/2017
   
 3.  Sélectionnez le nom de l'extrait de code (BEGIN, IF ou WHILE) sur la liste à l'aide de la souris ou en tapant le nom de l'extrait de code et en appuyant sur TABULATION ou ENTRÉE.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Insérer des extraits de code Transact-SQL](../../relational-databases/scripting/insert-transact-sql-snippets.md)  
   
   

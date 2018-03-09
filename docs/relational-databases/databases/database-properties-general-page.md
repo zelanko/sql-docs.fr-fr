@@ -2,9 +2,12 @@
 title: "Propriétés de base de données (page Général) | Microsoft Docs"
 ms.custom: 
 ms.date: 10/27/2015
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: databases
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -13,18 +16,18 @@ f1_keywords:
 - sql13.swb.databaseproperties.segments.f1
 ms.assetid: 43080d43-8841-4807-baea-34a29b0fe663
 caps.latest.revision: "30"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ae88366757fb76d7b0c2a18b99de949b86a0e27a
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: b5239b20134c58cf828b9c35a3bd3802e4b15bf9
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="database-properties-general-page"></a>Propriétés de base de données (page Général)
-  Cette page vous permet d'afficher et de modifier les propriétés de la base de données sélectionnée.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Cette page vous permet d’afficher et de modifier les propriétés de la base de données sélectionnée.  
   
 ## <a name="options"></a>Options  
  **Dernière sauvegarde de la base de données**  
@@ -57,7 +60,7 @@ ms.lasthandoff: 11/09/2017
  **Nom du classement**  
  Affiche le classement utilisé pour la base de données. Le classement peut être modifié à la page **Options** .  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [ALTER DATABASE (Base de données Azure SQL)](../../t-sql/statements/alter-database-azure-sql-database.md)   
  [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   

@@ -1,5 +1,5 @@
 ---
-title: "ANNÉE (Expression SSIS) | Documents Microsoft"
+title: YEAR (expression SSIS) | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -16,17 +16,16 @@ helpviewer_keywords:
 - dates [Integration Services], YEAR
 - YEAR function
 ms.assetid: 9d88dead-ace8-44b9-b8e2-916c1842e155
-caps.latest.revision: 35
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a72a54b02f136f2d9acc130051e79852d72a2f1f
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 40c62cf02371f9bf1888c3df4f8d7c588aea6ab6
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="year-ssis-expression"></a>YEAR (expression SSIS)
   Renvoie un entier qui représente la partie année d'une date.  
@@ -45,10 +44,10 @@ YEAR(date)
 ## <a name="result-types"></a>Types des résultats  
  DT_I4  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  La fonction YEAR renvoie un résultat NULL si l'argument est NULL.  
   
- Un littéral de date doit être explicitement converti dans l'un des types de données date. Pour plus d’informations, consultez [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).  
+ Un littéral de date doit être explicitement converti dans l'un des types de données date. Pour plus d'informations, consultez [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).  
   
 > [!NOTE]  
 >  La validation de l'expression échoue lorsqu'un littéral de date est explicitement converti en un des types de données de date suivants : DT_DBTIMESTAMPOFFSET et DT_DBTIMESTAMP2.  
@@ -74,13 +73,12 @@ YEAR(ModifiedDate)
 YEAR(GETDATE())  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- [DATEADD &#40; Expression SSIS &#41;](../../integration-services/expressions/dateadd-ssis-expression.md)   
- [DATEDIFF &#40; Expression SSIS &#41;](../../integration-services/expressions/datediff-ssis-expression.md)   
- [DATEPART &#40; Expression SSIS &#41;](../../integration-services/expressions/datepart-ssis-expression.md)   
- [JOUR &#40; Expression SSIS &#41;](../../integration-services/expressions/day-ssis-expression.md)   
- [MOIS &#40; Expression SSIS &#41;](../../integration-services/expressions/month-ssis-expression.md)   
- [Fonctions &#40; Expression SSIS &#41;](../../integration-services/expressions/functions-ssis-expression.md)  
+## <a name="see-also"></a> Voir aussi  
+ [DATEADD &#40;expression SSIS&#41;](../../integration-services/expressions/dateadd-ssis-expression.md)   
+ [DATEDIFF &#40;expression SSIS&#41;](../../integration-services/expressions/datediff-ssis-expression.md)   
+ [DATEPART &#40;expression SSIS&#41;](../../integration-services/expressions/datepart-ssis-expression.md)   
+ [DAY &#40;expression SSIS&#41;](../../integration-services/expressions/day-ssis-expression.md)   
+ [MONTH &#40;expression SSIS&#41;](../../integration-services/expressions/month-ssis-expression.md)   
+ [Fonctions &#40;expression SSIS&#41;](../../integration-services/expressions/functions-ssis-expression.md)  
   
   
-

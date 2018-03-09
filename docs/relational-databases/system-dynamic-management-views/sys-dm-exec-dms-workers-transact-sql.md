@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_exec_dms_workers (Transact-SQL) | Documents Microsoft
+title: sys.dm_exec_dms_workers (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
@@ -8,32 +8,34 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - SYS.DM_EXEC_DMS_WORKERS_TSQL
 - DM_EXEC_DMS_WORKERS_TSQL
 - DM_EXEC_DMS_WORKERS
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - PolyBase,views
 - PolyBase
 - dm_exec_dms_workers management view
 - sys.dm_exec_dms_workers management view
 ms.assetid: f468da29-78c3-4f10-8a3c-17905bbf46f2
-caps.latest.revision: "8"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b5677eb04a9a5809c2caf25d37edd288e4b1efbc
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: ec7edcfc352e2addf3ba69d5915a11b25f483eba
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
-# <a name="sysdmexecdmsworkers-transact-sql"></a>Sys.dm_exec_dms_workers (Transact-SQL)
+# <a name="sysdmexecdmsworkers-transact-sql"></a>sys.dm_exec_dms_workers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
 
   Contient des informations sur tous les traitements étapes en DMS.  
@@ -44,10 +46,10 @@ ms.lasthandoff: 11/17/2017
 |-----------------|---------------|-----------------|-----------|  
 |execution_id|**nvarchar(32)**|Les requêtes que ce processus de travail DMS est la partie of.request_id, step_index, et dms_step_index forment la clé pour cette vue.||  
 |step_index|**int**|Étape de que ce processus de travail DMS fait partie de la requête.|Consultez les index d’étape dans [sys.dm_exec_distributed_request_steps &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-distributed-request-steps-transact-sql.md).|  
-|dms_step_index|**int**|L’étape dans le plan DMS ce processus de travail est en cours d’exécution.|Consultez [sys.dm_exec_dms_workers (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-exec-dms-workers-transact-sql.md)|  
+|dms_step_index|**int**|L’étape dans le plan DMS ce processus de travail est en cours d’exécution.|See [sys.dm_exec_dms_workers (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-exec-dms-workers-transact-sql.md)|  
 |compute_node_id|**int**|Nœud qui le processus de travail est en cours d’exécution.|Consultez [sys.dm_exec_compute_nodes &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md).|  
 |distribution_id|**int**|||  
-|Type|**nvarcha(32)**|||  
+|type|**nvarcha(32)**|||  
 |status|**nvarchar(32)**|État de cette étape.|« Suspendu », « Running », « Complète », 'Échec', 'UndoFailed', 'PendingCancel', 'annulée', 'Annuler', 'Abandonné'|  
 |bytes_per_sec|**bigint**|||  
 |bytes_processed|**bigint**|||  

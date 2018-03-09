@@ -8,7 +8,8 @@ ms.service:
 ms.component: indexes
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-indexes
+ms.technology:
+- dbe-indexes
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -22,16 +23,16 @@ helpviewer_keywords:
 - designing indexes [SQL Server], included columns
 - nonkey columns
 ms.assetid: d198648d-fea5-416d-9f30-f9d4aebbf4ec
-caps.latest.revision: "29"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: ab797826f45d019926f4e35055cc18bdece9763b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 2cea0215d55b75807b735a7028a79aa52bbbe7e4
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="create-indexes-with-included-columns"></a>Créer des index avec colonnes incluses
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -45,24 +46,8 @@ ms.lasthandoff: 11/17/2017
  Un index contenant des colonnes non-clés peut améliorer considérablement les performances des requêtes lorsque toutes les colonnes de la requête sont incluses dans l'index en tant que colonnes clés ou non-clés. Les gains de performances sont dus au fait que l'optimiseur de requête peut localiser toutes les valeurs des colonnes dans l'index ; l'accès aux données de table et d'index n'a pas lieu, produisant ainsi un nombre moindre d'opérations d'E/S sur le disque.  
   
 > [!NOTE]  
->  Quand un index contient toutes les colonnes auxquelles une requête fait référence, on dit qu’il *couvre la requête*.  
-  
- **Dans cette rubrique**  
-  
--   **Avant de commencer :**  
-  
-     [Recommandations relatives à la conception](#DesignRecs)  
-  
-     [Limitations et restrictions](#Restrictions)  
-  
-     [Sécurité](#Security)  
-  
--   **Pour créer un index avec des colonnes non-clés, utilisez :**  
-  
-     [SQL Server Management Studio](#SSMSProcedure)  
-  
-     [Transact-SQL](#TsqlProcedure)  
-  
+> Quand un index contient toutes les colonnes auxquelles une requête fait référence, on dit qu’il *couvre la requête*.  
+   
 ##  <a name="BeforeYouBegin"></a> Avant de commencer  
   
 ###  <a name="DesignRecs"></a> Recommandations relatives à la conception  
@@ -91,7 +76,7 @@ ms.lasthandoff: 11/17/2017
   
 ###  <a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Autorisations  
+####  <a name="Permissions"></a> Permissions  
  Nécessite une autorisation ALTER sur la table ou la vue. L’utilisateur doit être membre du rôle serveur fixe **sysadmin** ou des rôles de base de données fixes **db_ddladmin** et **db_owner** .  
   
 ##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
@@ -110,13 +95,13 @@ ms.lasthandoff: 11/17/2017
   
 6.  Sous l'onglet **Colonnes de clés d'index** , cliquez sur **Ajouter…**.  
   
-7.  Dans la boîte de dialogue **Sélectionnez les colonnes à partir de***nom_table* , cochez la ou les cases correspondant à la ou aux colonnes de table à ajouter à l’index.  
+7.  Dans la boîte de dialogue **Sélectionnez les colonnes à partir de***nom_table*, cochez la ou les cases correspondant à la ou aux colonnes de table à ajouter à l’index.  
   
 8.  Cliquez sur **OK**.  
   
 9. Sous l'onglet **Colonnes incluses** , cliquez sur **Ajouter…**.  
   
-10. Dans la boîte de dialogue **Sélectionnez les colonnes à partir de***nom_table* , cochez la ou les cases de la ou des colonnes de table à ajouter à l’index en tant que colonnes non-clés.  
+10. Dans la boîte de dialogue **Sélectionnez les colonnes à partir de***nom_table*, cochez la ou les cases de la ou des colonnes de table à ajouter à l’index en tant que colonnes non-clés.  
   
 11. Cliquez sur **OK**.  
   
@@ -126,13 +111,13 @@ ms.lasthandoff: 11/17/2017
   
 #### <a name="to-create-an-index-with-nonkey-columns"></a>Pour créer un index avec des colonnes non-clés  
   
-1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  Dans la barre d'outils standard, cliquez sur **Nouvelle requête**.  
   
 3.  Copiez et collez l'exemple suivant dans la fenêtre de requête, puis cliquez sur **Exécuter**.  
   
-    ```  
+    ```sql  
     USE AdventureWorks2012;  
     GO  
     -- Creates a nonclustered index on the Person.Address table with four included (nonkey) columns.   
@@ -143,7 +128,7 @@ ms.lasthandoff: 11/17/2017
     INCLUDE (AddressLine1, AddressLine2, City, StateProvinceID);  
     GO  
     ```  
-  
- Pour plus d’informations, consultez [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md).  
-  
-  
+
+## <a name="related-content"></a>Contenu connexe  
+[CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)    
+[Guide de conception d’index SQL Server](../../relational-databases/sql-server-index-design-guide.md)   

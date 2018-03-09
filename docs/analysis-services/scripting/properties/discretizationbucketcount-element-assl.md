@@ -2,15 +2,13 @@
 title: "Élément DiscretizationBucketCount (ASSL) | Documents Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: scripting
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: DiscretizationBucketCount Element
@@ -25,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 9c388580d5ec8169d7c84856c3971ace18b80507
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 01aeea0244a558189ddf0fdd4d87ad71c85c7b69
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="discretizationbucketcount-element-assl"></a>Élément DiscretizationBucketCount (ASSL)
-  Contient le nombre de compartiments où effectuer la discrétisation.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Contient le nombre de compartiments dans lesquels discrétiser.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -50,17 +48,17 @@ ms.lasthandoff: 11/17/2017
 |Caractéristique|Description|  
 |--------------------|-----------------|  
 |Type de données et longueur|Entier|  
-|Valeur par défaut|Aucune|  
-|Cardinalité|0-1: élément facultatif qui peut apparaître une fois et une seule.|  
+|Valeur par défaut|None|  
+|Cardinalité|0-1 : élément facultatif qui peut apparaître une fois et une seule.|  
   
 ## <a name="element-relationships"></a>Relations entre les éléments  
   
 |Relation|Élément|  
 |------------------|-------------|  
 |Élément parent|[DimensionAttribute](../../../analysis-services/scripting/data-type/dimensionattribute-data-type-assl.md), [ScalarMiningStructureColumn](../../../analysis-services/scripting/data-type/scalarminingstructurecolumn-data-type-assl.md)|  
-|Éléments enfants|Aucune|  
+|Éléments enfants|None|  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  La valeur de la **DiscretizationBucketCount** élément détermine le nombre de groupes ou de « buckets » sont créés lorsque les valeurs pour le **DimensionAttribute** ou **ScalarMiningStructureColumn** sont discrétisées ou organisées en un ensemble de groupes spécifique. Si l’élément n’est pas spécifié, ou si zéro est spécifié pour la valeur de l’élément, [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] crée un nombre approprié de groupes en fonction de la méthode de discrétisation. Pour plus d’informations sur les méthodes de discrétisation, consultez [méthodes de discrétisation &#40; exploration de données &#41;](../../../analysis-services/data-mining/discretization-methods-data-mining.md).  
   
  Les éléments qui correspondent aux parents de **DiscretizationBucketCount** dans le modèle d’objet objets AMO (Analysis Management) sont <xref:Microsoft.AnalysisServices.DimensionAttribute> et <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn>.  

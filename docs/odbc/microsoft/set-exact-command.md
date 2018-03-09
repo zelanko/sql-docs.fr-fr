@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: microsoft
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: fc0e46ed0050300a1310bec9d83b1c0321a634a3
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: dcb836649993ddb644006986f284f0c0a362ed81
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="set-exact-command"></a>Commande exacte de jeu
 Spécifie les règles de comparaison de deux chaînes de longueurs différentes.  
@@ -41,7 +41,7 @@ SET EXACT ON | OFF
  OFF  
  (Par défaut). Spécifie que, pour être équivalents, expressions doivent correspondre au caractère jusqu'à la fin de l’expression située à droite.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Le paramètre SET EXACT n’a aucun effet si les deux chaînes sont de même longueur.  
   
 ## <a name="string-comparisons"></a>Comparaisons de chaînes  

@@ -5,23 +5,24 @@ ms.date: 07/08/2016
 ms.prod: sql-non-specified
 ms.prod_service: mds
 ms.service: 
-ms.component: master-data-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
-ms.technology: master-data-services
+ms.technology:
+- master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ad530f60-d480-4457-ba7a-93a10c8a1695
-caps.latest.revision: "85"
-author: smartysanthosh
-ms.author: nagavo
+caps.latest.revision: 
+author: leolimsft
+ms.author: lle
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 4184ce50cbacda16e113122753b56a4e4ee682cf
-ms.sourcegitcommit: 29265ad41fbe3326c21c6908ec4275a3a38f1c09
+ms.openlocfilehash: 583d8f49803b7a9d527583644540c7d93e103cf6
+ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="what39s-new-in-master-data-services-mds"></a>Nouveautés de Master Data Services (MDS)
 [!INCLUDE[feedback-stackoverflow-msdn-connect-md](../includes/feedback-stackoverflow-msdn-connect-md.md)]
@@ -232,7 +233,7 @@ ms.lasthandoff: 12/04/2017
   
  Les exemples de packages ont été mis à jour pour prendre en charge de nouveaux scénarios. Pour plus d’informations, consultez l’article [Exemples : packages de déploiement de modèles (Master Data Services)](../master-data-services/sql-server-samples-model-deployment-packages-mds.md).  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Master Data Services et fonctionnalités de Services de qualité de données pris en charge par les éditions de SQL Server 2016](../master-data-services/master-data-services-and-data-quality-services-features-support.md)  
  [Fonctionnalités Master Data Services déconseillées](../master-data-services/deprecated-master-data-services-features.md)   
  [Fonctionnalités Master Data Services éliminées](../master-data-services/discontinued-master-data-services-features.md)  

@@ -17,15 +17,15 @@ helpviewer_keywords:
 - database restores [SQL Server], point of failure
 ms.assetid: 04106e18-bbf7-4a5e-a2e1-3d65319814d5
 caps.latest.revision: "37"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a8b3d763d3ad263b78da3c6774c07627eaa251da
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 3bbec6b0a07bbfdfa7c1d7a34bc70d66b3133270
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="restore-database-to-point-of-failure---full-recovery"></a>Restaurer la base de données au point d’échec – récupération complète
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -69,7 +69,7 @@ ms.lasthandoff: 11/17/2017
        WITH RECOVERY;  
     ```  
   
-## <a name="example"></a>Exemple  
+## <a name="example"></a> Exemple  
  Avant de pouvoir exécuter cet exemple, vous devez terminer les préparations suivantes :  
   
 1.  Le mode de récupération par défaut de la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] est le mode de récupération simple. Étant donné que ce mode de récupération ne prend pas en charge la restauration jusqu’au point de défaillance, définissez [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] pour utiliser le mode de restauration complète en exécutant l’instruction [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md) suivante :  
@@ -127,7 +127,7 @@ RESTORE DATABASE AdventureWorks2012
 GO  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   
  [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)  
   

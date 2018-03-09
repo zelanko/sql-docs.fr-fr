@@ -2,13 +2,13 @@
 title: "Propriétés OLAP | Documents Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: server-properties
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology: analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -97,19 +97,20 @@ helpviewer_keywords:
 - MemoryLimit property
 - AggregationMemoryLimitMax property
 ms.assetid: 06eb0d78-96c0-42ff-b759-f4c794597c8d
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: c0efd9b01acb4b10a8863719a8d08c43cea4401d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: cfeaedcf34ffdafdc54c0ce88ae80ecfc6190f6f
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="olap-properties"></a>Propriétés OLAP
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] prend en charge les propriétés de serveur OLAP répertoriées dans les tableaux suivants. Pour plus d’informations sur les autres propriétés de serveur et la façon de les configurer, consultez [Propriétés du serveur dans Analysis Services](../../analysis-services/server-properties/server-properties-in-analysis-services.md).  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] prend en charge les propriétés de serveur OLAP répertoriées dans les tableaux suivants. Pour plus d’informations sur les autres propriétés de serveur et sur la façon de les configurer, consultez [Propriétés du serveur dans Analysis Services](../../analysis-services/server-properties/server-properties-in-analysis-services.md).  
   
  **S'applique à :** Mode serveur multidimensionnel uniquement  
   
@@ -140,12 +141,12 @@ ms.lasthandoff: 11/17/2017
  Propriété booléenne qui spécifie si le traitement différé des agrégations est activé.  
   
  **SleepIntervalSecs**  
- Propriété dont la valeur est un entier 32 bits signé qui définit l'intervalle, en secondes, en fonction duquel le serveur vérifie s'il y a des travaux de traitement différé en attente.  
+ Propriété dont la valeur est un entier 32 bits signé qui définit l'intervalle, en secondes, en fonction duquel le serveur vérifie s'il y a des travaux de traitement différé en attente.  
   
  **MaxCPUUsage**  
  Propriété dont la valeur est un nombre 64 bits signé en virgule flottante double précision qui définit sous la forme d'un pourcentage l'utilisation maximale de l'unité centrale pour les traitements différés. Le serveur surveille l'utilisation moyenne de l'unité centrale en prenant des instantanés à intervalles réguliers. Il est normal que l'unité centrale dépasse temporairement ce seuil lors des pointes d'activité.  
   
- La valeur par défaut de cette propriété, 0,5, indique qu'un maximum de 50 % de l'unité centrale sera consacré au traitement différé.  
+ La valeur par défaut de cette propriété, 0,5, indique qu'un maximum de 50 % de l'unité centrale sera consacré au traitement différé.  
   
  **MaxObjectsInParallel**  
  Propriété dont la valeur est un entier 32 bits signé qui spécifie le nombre maximal de partitions pouvant faire l'objet d'un traitement différé en parallèle.  
@@ -230,7 +231,7 @@ ms.lasthandoff: 11/17/2017
  **BufferRecordLimit**  
  Propriété dont la valeur est un entier 32 bits signé qui définit le nombre d'enregistrements qu'il est possible de stocker en mémoire tampon durant le traitement.  
   
- La valeur par défaut de cette propriété est 1 048 576 (enregistrements).  
+ La valeur par défaut de cette propriété est 1 048 576 (enregistrements).  
   
  **CacheRecordLimit**  
  Propriété avancée que vous ne devez pas modifier, sauf si vous bénéficiez de l'assistance du support technique [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
@@ -318,9 +319,9 @@ ms.lasthandoff: 11/17/2017
  Propriété avancée que vous ne devez pas modifier, sauf si vous bénéficiez de l'assistance du support technique [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
  **DefaultDrillthroughMaxRows**  
- Propriété dont la valeur est un entier 32 bits signé qui spécifie le nombre maximal de lignes qui seront renvoyées par une requête qui effectue une extraction.  
+ Propriété dont la valeur est un entier 32 bits signé qui spécifie le nombre maximal de lignes qui seront renvoyées par une requête qui effectue une extraction.  
   
- La valeur par défaut de cette propriété est 10 000 (lignes).  
+ La valeur par défaut de cette propriété est 10 000 (lignes).  
   
  **DimensionPropertyCacheSize**  
  Propriété dont la valeur est un entier 32 bits signé qui spécifie la quantité de mémoire (en octets) utilisée pour mettre en cache les membres de dimension utilisés dans une requête.  
@@ -485,6 +486,6 @@ ms.lasthandoff: 11/17/2017
   
 ## <a name="see-also"></a>Voir aussi  
  [Propriétés du serveur dans Analysis Services](../../analysis-services/server-properties/server-properties-in-analysis-services.md)   
- [Déterminer le mode serveur d'une instance Analysis Services](../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
+ [Déterminer le mode serveur d’une instance Analysis Services](../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
   
   

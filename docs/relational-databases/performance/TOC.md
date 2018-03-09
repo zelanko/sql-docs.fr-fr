@@ -55,4 +55,8 @@
 ## [Supprimer un repère de plan](delete-a-plan-guide.md)  
 ## [Activer ou désactiver un repère de plan](enable-or-disable-a-plan-guide.md)  
 
-#[Analyser l'utilisation des ressources (Moniteur système)](../performance-monitor/monitor-resource-usage-system-monitor.md) 
+# [Analyser l'utilisation des ressources (Moniteur système)](../performance-monitor/monitor-resource-usage-system-monitor.md)    
+
+# [Joins](joins.md)   
+
+# [Subqueries](subqueries.md)    

@@ -2,10 +2,14 @@
 title: "Unités de sauvegarde (SQL Server) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/12/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: backup-restore
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-backup-restore
+ms.suite: sql
+ms.technology:
+- dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -24,19 +28,20 @@ helpviewer_keywords:
 - backing up databases [SQL Server], backup devices
 - devices [SQL Server]
 ms.assetid: 35a8e100-3ff2-4844-a5da-dd088c43cba4
-caps.latest.revision: "93"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 2decbc706e1bbc8ee6bb1057684ae0e643f129c3
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 1dbf5d00855a498782a65a3ff04e2477a2cb871d
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="backup-devices-sql-server"></a>Unités de sauvegarde (SQL Server)
-  Au cours d’une opération de sauvegarde sur une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , les données sauvegardées (la *sauvegarde*) sont écrites sur une unité de sauvegarde physique. Cette unité de sauvegarde physique est activée dès l'écriture de la première sauvegarde dans un jeu de supports. Les sauvegardes sur un jeu comprenant une ou plusieurs unités de sauvegarde constituent un seul jeu de supports.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Au cours d’une opération de sauvegarde sur une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , les données sauvegardées (la *sauvegarde*) sont écrites sur une unité de sauvegarde physique. Cette unité de sauvegarde physique est activée dès l'écriture de la première sauvegarde dans un jeu de supports. Les sauvegardes sur un jeu comprenant une ou plusieurs unités de sauvegarde constituent un seul jeu de supports.  
    
 ##  <a name="TermsAndDefinitions"></a> Termes et définitions  
  disque de sauvegarde  
@@ -46,16 +51,16 @@ ms.lasthandoff: 11/09/2017
  Ensemble ordonné de supports de sauvegarde (bandes ou fichiers disque) qui utilise un type et un nombre fixes d'unités de sauvegarde. Pour plus d’informations sur les supports de sauvegarde, consultez [Jeux de supports, familles de supports et jeux de sauvegarde &#40;SQL Server&#41;](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md).  
   
  unité de sauvegarde physique  
- Soit un lecteur de bande, soit un fichier disque fourni par le système d'exploitation. Vous pouvez réaliser une sauvegarde sur 1 à 64 unités de sauvegarde. Si une sauvegarde nécessite plusieurs unités de sauvegarde, les unités doivent toutes correspondre à un seul type d'unité (disque ou bande).  
+ Soit un lecteur de bande, soit un fichier disque fourni par le système d'exploitation. Vous pouvez réaliser une sauvegarde sur 1 à 64 unités de sauvegarde. Si une sauvegarde nécessite plusieurs unités de sauvegarde, les unités doivent toutes correspondre à un seul type d'unité (disque ou bande).  
   
- Les sauvegardes SQL Server peuvent également être écrites dans le service de stockage d'objets blob Windows Azure, en plus d'un disque ou d'une bande.  
+ Les sauvegardes SQL Server peuvent également être écrites dans le service de Stockage Blob Windows Azure, en plus d'un disque ou d'une bande.  
  
   
 ##  <a name="DiskBackups"></a> Utilisation d’unités de sauvegarde sur disque  
   
  Si un fichier disque se remplit pendant qu'une opération de sauvegarde ajoute une sauvegarde au jeu de supports, l'opération de sauvegarde échoue. La taille maximale d'un fichier de sauvegarde est fonction de l'espace libre disponible sur l'unité de disque ; la taille appropriée d'une unité de sauvegarde sur disque dépend donc de la taille de vos sauvegardes.  
   
- Une unité de sauvegarde sur disque peut être une simple unité de disque, telle qu'un lecteur ATA. Une autre solution envisageable consiste à utiliser une unité de disque échangeable à chaud qui vous permettrait de remplacer de manière transparente un disque saturé sur l'unité par un disque vide. Un disque de sauvegarde peut désigner un disque local sur le serveur ou un disque distant correspondant à une ressource réseau partagée. Pour savoir comment utiliser un disque distant, consultez la section [Sauvegarde dans un fichier sur un partage réseau](#NetworkShare), plus loin dans cette rubrique.  
+ Une unité de sauvegarde sur disque peut être une simple unité de disque, telle qu'un lecteur ATA. Une autre solution envisageable consiste à utiliser une unité de disque échangeable à chaud qui vous permettrait de remplacer de manière transparente un disque saturé sur l'unité par un disque vide. Un disque de sauvegarde peut désigner un disque local sur le serveur ou un disque distant correspondant à une ressource réseau partagée. Pour savoir comment utiliser un disque distant, consultez la section [Sauvegarde dans un fichier sur un partage réseau](#NetworkShare), plus loin dans cette rubrique.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Les outils de gestion offrent une excellente souplesse de gestion des unités de sauvegarde sur disque, car ils génèrent automatiquement un nom horodaté dans le fichier disque.  
   
@@ -68,9 +73,9 @@ ms.lasthandoff: 11/09/2017
   
  BACKUP DATABASE *nom_base_de_données*  
   
- TO DISK **=** { **’***nom_unité_sauvegarde_physique***’** | **@***nom_unité_sauvegarde_physique_var* }  
+ TO DISK **=** { **'***physical_backup_device_name***'** | **@***physical_backup_device_name_var* }  
   
- Par exemple :  
+ Exemple :  
   
 ```  
 BACKUP DATABASE AdventureWorks2012   
@@ -82,9 +87,9 @@ GO
   
  RESTORE { DATABASE | LOG } *nom_base_de_données*  
   
- FROM DISK **=** { **’***nom_unité_sauvegarde_physique***’** | **@***nom_unité_sauvegarde_physique_var* }  
+ FROM DISK **=** { **'***physical_backup_device_name***'** | **@***physical_backup_device_name_var* }  
   
- Par exemple :  
+ Par exemple,  
   
 ```  
 RESTORE DATABASE AdventureWorks2012   
@@ -113,14 +118,14 @@ GO
   
 -   Lorsque vous exécutez Sqlservr.exe en tant que service, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] s'exécute dans une autre session qui n'a aucun lien avec votre session de connexion. La session dans laquelle un service s'exécute peut avoir ses propres lecteurs mappés (bien que ce ne soit généralement pas le cas).  
   
--   Il est possible de se connecter au compte de service réseau à l'aide du compte d'ordinateur plutôt qu'avec un compte d'utilisateur de domaine. Pour autoriser des sauvegardes sur un lecteur partagé à partir d'ordinateurs spécifiques, accordez l'accès aux comptes de ces ordinateurs. Tant que le processus Sqlservr.exe chargé d'écrire la sauvegarde bénéficie d'un accès, peu importe si l'utilisateur exécutant la commande BACKUP dispose d'un accès ou non.  
+-   Il est possible de se connecter au compte de service réseau à l'aide du compte d'ordinateur plutôt qu'avec un compte d'utilisateur de domaine. Pour autoriser des sauvegardes sur un lecteur partagé à partir d'ordinateurs spécifiques, accordez l'accès aux comptes de ces ordinateurs. Tant que le processus Sqlservr.exe chargé d'écrire la sauvegarde bénéficie d'un accès, peu importe si l'utilisateur exécutant la commande BACKUP dispose d'un accès ou non.  
   
-    > **IMPORTANT !** La sauvegarde de données sur un réseau peut être sujette à des erreurs du réseau ; c'est pourquoi nous vous conseillons de vérifier l'opération de sauvegarde après l'avoir menée à terme si vous utilisez un disque distant. Pour plus d’informations, consultez [RESTORE VERIFYONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md).  
+    > **IMPORTANT !** La sauvegarde de données sur un réseau peut être sujette à des erreurs du réseau ; c'est pourquoi nous vous conseillons de vérifier l'opération de sauvegarde après l'avoir menée à terme si vous utilisez un disque distant. Pour plus d’informations, consultez [RESTORE VERIFYONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md).  
   
 ## <a name="specify-a-universal-naming-convention-unc-name"></a>Définir un nom UNC (Universal Naming Convention)  
  Pour préciser un partage réseau dans une opération de sauvegarde ou de restauration, utilisez le nom UNC (Universal Naming Convention) complet du fichier de l’unité de sauvegarde. Un nom UNC se présente sous la forme **\\\\***nom_système***\\***nom_partage***\\***chemin***\\***nom_fichier*.  
   
- Par exemple :  
+ Exemple :  
   
 ```  
 BACKUP DATABASE AdventureWorks2012   
@@ -148,9 +153,9 @@ GO
   
  BACKUP { DATABASE | LOG } *nom_base_de_données*  
   
- TO TAPE **=** { **’***nom_unité_sauvegarde_physique***’** | **@***nom_unité_sauvegarde_physique_var* }  
+ TO TAPE **=** { **'***physical_backup_device_name***'** | **@***physical_backup_device_name_var* }  
   
- Par exemple :  
+ Exemple :  
   
 ```  
 BACKUP LOG AdventureWorks2012   
@@ -162,10 +167,10 @@ GO
   
  RESTORE { DATABASE | LOG } *nom_base_de_données*  
   
- FROM TAPE **=** { **’***nom_unité_sauvegarde_physique***’** | **@***nom_unité_sauvegarde_physique* }  
+ FROM TAPE **=** { **'***physical_backup_device_name***'** | **@***physical_backup_device_name_var* }  
   
 ###  <a name="TapeOptions"></a> Options BACKUP et RESTORE propres aux bandes (Transact-SQL)  
- Pour faciliter la gestion des bandes, l'instruction BACKUP fournit les options de bande suivantes :  
+ Pour faciliter la gestion des bandes, l'instruction BACKUP fournit les options de bande suivantes :  
   
 -   { NOUNLOAD | **UNLOAD** }  
   

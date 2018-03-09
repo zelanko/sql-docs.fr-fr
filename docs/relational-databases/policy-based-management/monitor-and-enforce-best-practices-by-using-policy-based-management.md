@@ -2,27 +2,30 @@
 title: "Surveiller et appliquer les bonnes pratiques à l’aide de la gestion basée sur des stratégies | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance-monitor
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords: Best Practices [Database Engine]
 ms.assetid: 46788407-187e-4b0b-bfe4-529af8d77c60
 caps.latest.revision: "27"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 324915644f60d6ca9d5fe15dfce5aa1ab79056a7
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: f48c7d177acea6812a7b10610a2ab67930b3e9e2
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="monitor-and-enforce-best-practices-by-using-policy-based-management"></a>Surveiller et appliquer les bonnes pratiques à l'aide de la Gestion basée sur des stratégies
-  La gestion basée sur des stratégies vous permet de surveiller les bonnes pratiques relatives au [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] propose un ensemble de fichiers de stratégie que vous pouvez importer en tant que stratégies de meilleures pratiques, pour ensuite évaluer ces stratégies par rapport à un jeu de cibles qui inclut des instances, des objets d’instance, des bases de données ou des objets de base de données. Vous pouvez évaluer des stratégies manuellement, définir des stratégies pour évaluer un jeu de cibles selon une planification ou définir des stratégies pour évaluer un jeu de cibles en fonction d’un événement. Pour plus d’informations sur la gestion basée sur des stratégies, consultez [Administrer des serveurs à l’aide de la gestion basée sur des stratégies](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] La gestion basée sur des stratégies vous permet de surveiller les bonnes pratiques relatives au [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] propose un ensemble de fichiers de stratégie que vous pouvez importer en tant que stratégies de meilleures pratiques, pour ensuite évaluer ces stratégies par rapport à un jeu de cibles qui inclut des instances, des objets d’instance, des bases de données ou des objets de base de données. Vous pouvez évaluer des stratégies manuellement, définir des stratégies pour évaluer un jeu de cibles selon une planification ou définir des stratégies pour évaluer un jeu de cibles en fonction d’un événement. Pour plus d’informations sur la gestion basée sur des stratégies, consultez [Administrer des serveurs à l’aide de la gestion basée sur des stratégies](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md).  
   
 ## <a name="policy-and-rules-for-database-engine"></a>Stratégies et règles du moteur de base de données  
  Le tableau qui suit répertorie les stratégies qui sont incluses avec l’installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et fournit des informations sur les règles de meilleures pratiques qui sont évaluées par chaque stratégie. Les stratégies sont stockées sous la forme de fichiers XML et doivent être importées dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour plus d’informations sur l’importation de stratégies, consultez [Importer une stratégie de gestion basée sur des stratégies](../../relational-databases/policy-based-management/import-a-policy-based-management-policy.md).  
@@ -49,7 +52,7 @@ ms.lasthandoff: 11/09/2017
 |Mode de connexion SQL Server|[Choisir un mode d'authentification](../../relational-databases/security/choose-an-authentication-mode.md)|  
 |Degré maximal de parallélisme SQL Server|[Définir l'option max degree of parallelism pour des performances optimales](../../relational-databases/policy-based-management/set-the-max-degree-of-parallelism-option-for-optimal-performance.md)|  
 |Nombre maximal de threads de travail SQL Server pour SQL Server 2000 32 bits|[Vérifier le paramètre de l'option Max Worker Threads](../../relational-databases/policy-based-management/verify-max-worker-threads-setting.md)|  
-|Nombre maximal de threads de travail SQL Server pour SQL Server 2000 64 bits|[Vérifier le paramètre de l'option Max Worker Threads](../../relational-databases/policy-based-management/verify-max-worker-threads-setting.md)|  
+|Nombre maximal de threads de travail SQL Server pour SQL Server 2000 64 bits|[Vérifier le paramètre Nombre maximum de threads de travail](../../relational-databases/policy-based-management/verify-max-worker-threads-setting.md)|  
 |Nombre maximal de threads de travail SQL Server pour SQL Server 2005 et versions ultérieures|[Vérifier le paramètre de l'option Max Worker Threads](../../relational-databases/policy-based-management/verify-max-worker-threads-setting.md)|  
 |Taille du paquet réseau SQL Server|[La taille du paquet réseau ne doit pas dépasser 8060 octets](../../relational-databases/policy-based-management/network-packet-size-should-not-exceed-8060-bytes.md)|  
 |Expiration du mot de passe SQL Server|[Expiration du mot de passe de connexion SQL Server](../../relational-databases/policy-based-management/sql-server-login-password-expiration.md)|  
@@ -68,7 +71,7 @@ ms.lasthandoff: 11/09/2017
 |Journal des événements Windows : erreur liée à un délai d'attente d'E/S au niveau du système de stockage|[Délai d’attente d’entrée-sortie du système de stockage](../../relational-databases/policy-based-management/storage-system-input-output-time-out.md)|  
 |Journal des événements Windows : erreur liée à une défaillance du système|[Défaillances inattendues du système](../../relational-databases/policy-based-management/unexpected-system-failures.md)|  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Utiliser les facettes de la gestion basée sur des stratégies](../../relational-databases/policy-based-management/working-with-policy-based-management-facets.md)  
   
   

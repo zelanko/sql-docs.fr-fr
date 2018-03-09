@@ -2,9 +2,12 @@
 title: "Effectuez les étapes de post-installation | Documents Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: distributed-replay
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -12,16 +15,16 @@ ms.assetid: 0a788a2a-9b4f-4bfc-b1b5-83eeb1ea9ab2
 caps.latest.revision: "8"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 13be47f21e5d4be72747ccec82d1a991d3d38de7
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 397cb416c9c59482cf97be8e7554f5f2af7c2d7a
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="complete-the-post-installation-steps"></a>Suivre les étapes consécutives à l'installation
-  Après avoir installé Distributed Replay, vous devez modifier le compte de contrôleur Distributed Replay et les comptes de services clients.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Après avoir installé Distributed Replay, vous devez modifier les comptes de services clients Distributed Replay controller.  
   
 ### <a name="to-complete-the-post-installation-steps"></a>Pour suivre les étapes consécutives à l'installation  
   

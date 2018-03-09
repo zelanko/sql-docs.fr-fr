@@ -3,8 +3,11 @@ title: "Fenêtre Propriétés (Management Studio) | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,16 +20,16 @@ ms.assetid: 6a9a1389-df8d-4cfc-928b-eccbf884a22d
 caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d07665d3efb0e44d7d8314bc9be01276dbebb6e7
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 7a96f9d9eb04873cd18219a65c73e0ae705a5096
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="properties-window-management-studio"></a>Fenêtre Propriétés (Management Studio)
-Cette fenêtre vous permet d'afficher les propriétés des éléments sélectionnés. Vous pouvez également utiliser la fenêtre Propriétés pour afficher les propriétés d'un fichier, d'un projet et d'une solution. Pour accéder à cette fenêtre, cliquez dans le menu **Affichage** sur **Fenêtre Propriétés** .  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Cette fenêtre vous permet d’afficher les propriétés des éléments sélectionnés. Vous pouvez également utiliser la fenêtre Propriétés pour afficher les propriétés d'un fichier, d'un projet et d'une solution. Pour accéder à cette fenêtre, cliquez dans le menu **Affichage** sur **Fenêtre Propriétés** .  
   
 La fenêtre Propriétés affiche différents types de champs d'édition, en fonction des besoins d'une propriété particulière. Les propriétés affichées en gris sont en lecture seule.  
   
@@ -40,6 +43,6 @@ La fenêtre Propriétés affiche différents types de champs d'édition, en fonc
 |**Propriétés**|Affiche les propriétés d'un objet.|  
 |**Volet Description**|Le volet Description apparaît dans la partie inférieure de la fenêtre Propriétés et affiche le type de la propriété ainsi qu'une description succincte de celle-ci. Vous pouvez activer et désactiver la description de la propriété via la commande **Description** située dans le menu contextuel.|  
   
-## <a name="see-also"></a>Voir aussi  
-[Éléments généraux relatifs à l'interface utilisateur](../ssms/general-user-interface-elements.md)  
+## <a name="see-also"></a> Voir aussi  
+[Éléments généraux de l’interface utilisateur](../ssms/general-user-interface-elements.md)  
   

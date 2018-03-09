@@ -1,25 +1,28 @@
 ---
 title: "Services d’apprentissage Microsoft | Documents Microsoft"
 ms.date: 11/09/2017
-ms.prod: sql-server-2017
 ms.reviewer: 
-ms.suite: 
-ms.technology: r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 341e80f5-3b59-4122-bbaa-969d7904297d
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: 9735d257ce81e5b84ea19eeb70be8bef21127c13
-ms.sourcegitcommit: ec5f7a945b9fff390422d5c4c138ca82194c3a3b
+ms.openlocfilehash: 40c76cba27559c8fcc314ce4c9761ee42edacac0
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/11/2017
+ms.lasthandoff: 02/11/2018
 ---
-# <a name="microsoft-machine-learning-services"></a>Services Microsoft Machine Learning
+# <a name="microsoft-machine-learning-services"></a>Microsoft Machine Learning Services
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Microsoft Machine Learning Services vise à fournir une plateforme extensible et évolutive pour l’intégration des outils et les tâches d’apprentissage automatique avec les applications qui utilisent des services de machine learning. La plate-forme doit répondre aux besoins de tous les utilisateurs impliqués dans le processus de l’analytique et le développement de données à partir des chercheurs de données, pour les architectes et les administrateurs de base de données.
 
@@ -37,7 +40,7 @@ Principaux avantages :
 
 Dans SQL Server 2016, Microsoft a lancé deux plateformes serveur permettant d’intégrer le langage R open source populaires avec les applications d’entreprise :
 
-+ **SQL Server R Services (dans la base de données)**, pour l’intégration avec [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
++ **SQL Server R Services (de-de base de données)**, pour l’intégration avec [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 + **Microsoft R Server**, pour les déploiements de R au niveau de l’entreprise sur les serveurs Windows et Linux
 
 Dans SQL Server 2017, le nom a été modifié pour refléter la prise en charge pour le langage Python populaire.
@@ -84,7 +87,7 @@ Visual Studio fournit un environnement de développement complet pour le langage
 
 Visual Studio propose également un excellent environnement de développement Python. Il n’existe aucun moyen plus facile de travailler avec les langues d’apprentissage machine tout en continuant à accéder aux outils de développement de base de données SQL.
 
-Pour plus d'informations, consultez :
+Pour plus d'informations, consultez :
 
 + [Outils R pour Visual Studio](https://www.visualstudio.com/vs/rtvs/)
 + [Python - Visual Studio](https://www.visualstudio.com/vs/python/)

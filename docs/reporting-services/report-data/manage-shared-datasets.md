@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-data
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 2cbb1fa3-959e-4df6-9887-ebc93cc1b686
 caps.latest.revision: "7"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 946210d52bfd883e4cf26e2664fef9254f7e6086
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 9a7cc41553ca20061bebb29a5956cf48ebede673
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="manage-shared-datasets"></a>Gérer des datasets partagés
   Dans [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], les datasets partagés récupèrent des données de sources de données partagées qui se connectent à des sources de données externes. Un dataset partagé offre un moyen de partager une requête pour fournir un jeu cohérent de données pour plusieurs rapports. La requête de dataset peut inclure des paramètres de dataset. Vous pouvez configurer un dataset partagé pour mettre en cache les résultats de la requête pour des combinaisons de paramètres spécifiques lors de la première utilisation ou en spécifiant une planification. Vous pouvez utiliser la mise en cache de datasets partagés en association avec la mise en cache de rapports et les sources de données de rapports pour mieux gérer l'accès à une source de données.  
@@ -100,7 +98,7 @@ http://localhost/reportserver/?/DataSet1&rs:command=GetShareddatasetDefinition
 |Modifier les propriétés d'élément de dataset partagé.|Gestionnaire de rapports|[Page Propriétés générales, Datasets partagés &#40;Gestionnaire de rapports&#41;](http://msdn.microsoft.com/library/10798e41-24c3-4e69-893b-7ee6af7fc958)|  
 |Spécifier des propriétés de dataset partagé supplémentaires pour une instance de dataset partagé dans un rapport.|Générateur de rapports Concepteur de rapports|[Boîte de dialogue Propriétés du dataset, Requête](http://msdn.microsoft.com/library/1fa34a4b-7de0-4e92-99fa-bc28a206773f)|  
 |Créer une liaison avec une source de données partagée différente pour un dataset partagé.|Gestionnaire de rapports|[Page Sélection de la source de données &#40;Gestionnaire de rapports&#41;](http://msdn.microsoft.com/library/7f7e8b19-0c0b-4b1f-9cc1-057099aa07eb)|  
-|Vérifiez les valeurs par défaut pour les paramètres de dataset.|Ouvrez dans le Générateur de rapports ou utilisez la syntaxe de l'accès URL.|Par exemple :<br /><br /> `http://localhost/reportserver/?/DataSet1&rs:command=GetShareddatasetDefinition`|  
+|Vérifiez les valeurs par défaut pour les paramètres de dataset.|Ouvrez dans le Générateur de rapports ou utilisez la syntaxe de l'accès URL.|Exemple :<br /><br /> `http://localhost/reportserver/?/DataSet1&rs:command=GetShareddatasetDefinition`|  
 |Activer la mise en cache|Gestionnaire de rapports|[Mettre en cache les datasets partagés &#40;SSRS&#41;](../../reporting-services/report-server/cache-shared-datasets-ssrs.md)<br /><br /> [Page Mise en cache, datasets partagés &#40;Gestionnaire de rapports&#41;](http://msdn.microsoft.com/library/eac372e9-d2a1-48a8-bbe5-09d101df16ea)|  
 |Créer ou modifier un plan d'actualisation du cache|Gestionnaire de rapports|[Options d’actualisation du cache &#40;Gestionnaire de rapports&#41;](http://msdn.microsoft.com/library/227da40c-6bd2-48ec-aa9c-50ce6c1ca3a6)|  
 |Consulter le schéma de définition de dataset partagé.|Gestionnaire de rapports|`http://<reportserver>/shareddatasetdefinition.xsd`|  
@@ -127,7 +125,7 @@ http://localhost/reportserver/?/DataSet1&rs:command=GetShareddatasetDefinition
   
 -   Les datasets partagés suivent les mêmes règles pour la spécification des valeurs de paramètre que les abonnements.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Gestion du contenu du serveur de rapports &#40;SSRS en mode natif&#41;](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)   
  [Octroi d'autorisations sur un serveur de rapports en mode natif](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)  
   

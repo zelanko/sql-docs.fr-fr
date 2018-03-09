@@ -2,27 +2,32 @@
 title: "Mettre à niveau Data Quality Services | Microsoft Docs"
 ms.custom: 
 ms.date: 07/24/2017
-ms.prod:
-- sql-server-2016
-- sql-server-2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: install-windows
 ms.reviewer: 
-ms.suite: 
-ms.technology: setup-install
+ms.suite: sql
+ms.technology:
+- setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f396666b-7754-4efc-9507-0fd114cc32d5
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: 7761be949dc472e05d1f5c4cb7f7d9c2d16987e9
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+manager: craigg
+ms.openlocfilehash: d18fdc2c65408898ed5faacc255e74b7a6261d57
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="upgrade-data-quality-services"></a>Mettre à niveau Data Quality Services
-Cette rubrique fournit des informations sur la mise à niveau de votre installation existante de Data Quality Services (DQS) [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]. Dans le cadre de la mise à niveau de Data Quality Server [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)], vous devez également mettre à niveau le schéma des bases de données DQS.  
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
+Cet article fournit des informations sur la mise à niveau de votre installation existante de [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] Data Quality Services (DQS). Dans le cadre de la mise à niveau de Data Quality Server [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)], vous devez également mettre à niveau le schéma des bases de données DQS.  
   
 > [!IMPORTANT]  
 >  -   Vous devez sauvegarder vos bases de données DQS avant de mettre à niveau DQS afin d'empêcher toute perte accidentelle de données lors de la mise à niveau du schéma. Pour plus d'informations sur la sauvegarde des bases de données DQS, consultez [Sauvegarde et restauration de bases de données DQS](../../data-quality-services/backing-up-and-restoring-dqs-databases.md).  
@@ -38,7 +43,7 @@ Cette rubrique fournit des informations sur la mise à niveau de votre installat
 ##  <a name="Upgrade"></a> Mise à niveau de DQS  
  Pour mettre à niveau DQS :  
   
-1.  Sauvegardez vos bases de données DQS avant de lancer le processus de mise à niveau. Pour plus d'informations sur la sauvegarde des bases de données DQS, consultez [Backing Up and Restoring DQS Databases](../../data-quality-services/backing-up-and-restoring-dqs-databases.md).  
+1.  Sauvegardez vos bases de données DQS avant de lancer le processus de mise à niveau. Pour plus d'informations sur la sauvegarde des bases de données DQS, consultez [Sauvegarde et restauration de bases de données DQS](../../data-quality-services/backing-up-and-restoring-dqs-databases.md).  
   
 2.  Mettez à niveau l’instance de SQL Server où DQS est installé.  
   
@@ -92,12 +97,12 @@ Cette rubrique fournit des informations sur la mise à niveau de votre installat
   
 3.  La sortie indiquera une entrée pour chaque mise à niveau, avec la date correspondante. Les valeurs VERSION_ID et ASSEMBLY_VERSION maximales de la dernière date correspondent à la version actuelle. Une valeur de 2 dans la colonne STATUS indique que l'opération a réussi. Si une erreur s'est produite, elle sera indiquée dans la colonne ERROR. Exemple de sortie :  
   
-    |ID|UPGRADE_DATE|VERSION_ID|ASSEMBLY_VERSION|USER_NAME|STATUS|ERROR|  
+    |ID|UPGRADE_DATE|VERSION_ID|ASSEMBLY_VERSION|USER_NAME|STATUS|d’erreur|  
     |--------|-------------------|-----------------|-----------------------|----------------|------------|-----------|  
     |1000|2013-08-11 05:26:39.567|1200|11.0.3000.0|\<DOMAINE\nom d’utilisateur>|2||  
     |1001|2013-09-19 15:09:37.750|1600|12.0.xxxx.0|\<DOMAINE\nom d’utilisateur>|2||  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Installer Data Quality Services](../../data-quality-services/install-windows/install-data-quality-services.md)   
  [Supprimer des objets Data Quality Server](../../sql-server/install/remove-data-quality-server-objects.md)   
  [Mise à niveau vers SQL Server](../../database-engine/install-windows/upgrade-sql-server.md)  

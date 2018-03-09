@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords: GENERATE
@@ -20,11 +20,11 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 4ef13a4355c73458023c7d11663587a771d71c23
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: e78dec45044cc29e375b9116886b183013c74ef1
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="generate-mdx"></a>Generate (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -55,7 +55,7 @@ Generate( Set_Expression1 ,  String_Expression [ ,Delimiter ]  )
  *Délimiteur*  
  Délimiteur valide exprimé en tant qu'expression de chaîne.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Si un deuxième jeu est spécifié, le **générer** fonction retourne un jeu généré en appliquant les tuples du deuxième jeu à chaque tuple dans le premier jeu*,* et puis associant les jeux obtenus par union. Si **tous les** est spécifié, la fonction conserve les doublons dans le jeu résultant.  
   
  Si une expression de chaîne est spécifiée, le **générer** fonction retourne une chaîne générée en évaluant l’expression de chaîne spécifiée par rapport à chaque tuple dans le premier jeu*,* puis en concaténant les résultats. Vous pouvez éventuellement délimiter la chaîne en séparant chaque résultat dans la chaîne concaténée obtenue.  
@@ -115,7 +115,7 @@ ON 1
 FROM [Adventure Works]  
 ```  
   
-### <a name="string"></a>Chaîne  
+### <a name="string"></a>String  
  L’exemple suivant illustre l’utilisation de **générer** pour retourner une chaîne :  
   
 ```  

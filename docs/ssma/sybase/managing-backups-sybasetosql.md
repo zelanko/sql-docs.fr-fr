@@ -3,8 +3,11 @@ title: La gestion des sauvegardes (SybaseToSQL) | Documents Microsoft
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-sybase
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 4c33164e2d9516bacf4e7c36a4647cd1e7bb7e36
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 89df7322e4025ffb79f3ae2aecb2ef67fa52c8d7
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="managing-backups-sybasetosql"></a>La gestion des sauvegardes (SybaseToSQL)
 Gestion de sauvegarde Sybase vous permet de sauvegarde et restauration de données de la table avant ou après l’exécution d’un test. Vous pouvez également gérer le contenu de la sauvegarde avec la boîte de dialogue gérer du contenu de sauvegarde.  
@@ -40,7 +43,7 @@ Les boutons suivants sont disponibles dans la boîte de dialogue :
   
 -   Cliquez sur le **Annuler** pour fermer la boîte de dialogue.  
   
-### <a name="restore"></a>Restore  
+### <a name="restore"></a>Restaurer  
 Pour ouvrir la boîte de dialogue de restauration, dans le menu testeur, pointez sur la gestion de sauvegarde Sybase, puis cliquez sur restauration... Vous y trouverez une arborescence contenant les tables disponibles dans la sauvegarde. Sélectionnez une ou plusieurs tables pour restaurer ses données.  
   
 Les boutons suivants sont disponibles dans la boîte de dialogue :  
@@ -76,7 +79,7 @@ Les boutons suivants sont disponibles dans la boîte de dialogue :
   
 -   Cliquez sur le **Annuler** pour fermer la boîte de dialogue.  
   
-### <a name="restore"></a>Restore  
+### <a name="restore"></a>Restaurer  
 Pour ouvrir la boîte de dialogue de restauration, dans le menu testeur point de gestion de sauvegarde SQL Server, la restauration, cliquez sur... Vous y trouverez une arborescence contenant les tables disponibles dans la sauvegarde. Sélectionnez un ou plusieurs table pour restaurer ses données.  
   
 Les boutons suivants sont disponibles dans la boîte de dialogue :  

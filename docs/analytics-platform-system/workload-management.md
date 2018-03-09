@@ -3,10 +3,10 @@ title: Gestion de la charge de travail (SQL Server PDW)
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.technology: mpp-data-warehouse
 ms.custom: 
 ms.date: 01/12/2017
@@ -15,12 +15,12 @@ ms.suite: sql
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 69063b1a-a8f3-453a-83ab-afbe7eb4f463
-caps.latest.revision: "11"
-ms.openlocfilehash: 596fba5031e3183a9278e20384d51852cea0f2b8
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+caps.latest.revision: 
+ms.openlocfilehash: 738818a49491fbf8f8df491cac2f10ebdeedf3bf
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="workload-management"></a>Gestion de la charge de travail
 Fonctionnalités de gestion de la charge de travail de SQL Server PDW permettent aux utilisateurs et aux administrateurs d’affecter des demandes au préalable définir des configurations de mémoire et d’accès concurrentiel. Utiliser la gestion de la charge de travail pour améliorer les performances de votre charge de travail cohérent ou mixte, en permettant aux demandes pour que les ressources appropriées sans priver les demandes indéfiniment.  
@@ -67,7 +67,7 @@ Le tableau suivant décrit les classes de ressources et leurs affectations de re
 |------------------|----------------------|--------------------------|---------------------------------------|---------------|  
 |par défaut|Moyenne|400 MO|1|Par défaut, chaque connexion est autorisée une petite quantité de mémoire et des ressources d’accès concurrentiel pour ses demandes.<br /><br />Lorsqu’une connexion est ajoutée à une classe de ressource, la nouvelle classe est prioritaire. Lorsqu’une connexion est supprimée à partir de toutes les classes de ressources, la connexion revient à l’allocation de ressources par défaut.|  
 |MediumRC|Moyenne|1 200 MO|3|Exemples de requêtes nécessitant de la classe de ressources de support :<br /><br />Les opérations SACT ayant une grande des jointures de hachage.<br /><br />Sélectionnez les opérations que vous avez besoin de davantage de mémoire pour éviter la mise en cache sur le disque.<br /><br />Chargement des données dans les index columnstore en cluster.<br /><br />Génération, la reconstruction et la réorganisation des index columnstore en cluster pour les tables plus petites qui possèdent des colonnes de 10 à 15.|  
-|largerc|Élevée|2,8 GO|7|Exemples de requêtes nécessitant de la classe de ressources volumineux :<br /><br />Opérations SACT très volumineuses qui ont des jointures de hachage volumineux, ou contient les agrégations importantes, telles que les clauses ORDER BY ou GROUP BY volumineux.<br /><br />Sélectionnez les opérations qui nécessitent de très grandes quantités de mémoire pour des opérations telles que les jointures de hachage ou des agrégations telles que les clauses ORDER BY ou GROUP BY<br /><br />Chargement des données dans les index columnstore en cluster.<br /><br />Génération, la reconstruction et la réorganisation des index columnstore en cluster pour les tables plus petites qui possèdent des colonnes de 10 à 15.|  
+|Largerc|Élevée|2,8 GO|7|Exemples de requêtes nécessitant de la classe de ressources volumineux :<br /><br />Opérations SACT très volumineuses qui ont des jointures de hachage volumineux, ou contient les agrégations importantes, telles que les clauses ORDER BY ou GROUP BY volumineux.<br /><br />Sélectionnez les opérations qui nécessitent de très grandes quantités de mémoire pour des opérations telles que les jointures de hachage ou des agrégations telles que les clauses ORDER BY ou GROUP BY<br /><br />Chargement des données dans les index columnstore en cluster.<br /><br />Génération, la reconstruction et la réorganisation des index columnstore en cluster pour les tables plus petites qui possèdent des colonnes de 10 à 15.|  
 |xlargerc|Élevée|8.4 GO|22|La classe de ressource de très grande taille est pour les demandes qui peuvent nécessiter la consommation des ressources de très grande taille au moment de l’exécution.|  
   
 <sup>*</sup>Utilisation de la mémoire maximale est une approximation.  
@@ -145,7 +145,7 @@ Instructions SQL et opérations de classes de ressources :
 ## <a name="Limits"></a>Limitations et restrictions  
 Les classes de ressources régissent les allocations de mémoire et d’accès concurrentiel.  Elles ne déterminent pas les opérations d’entrée/sortie.  
   
-## <a name="Metadata"></a>Métadonnées  
+## <a name="Metadata"></a>Metadata  
 Vues de gestion dynamique qui contiennent des informations sur les classes de ressources et les membres de classe de ressource.  
   
 -   [sys.server_role_members](../relational-databases/system-catalog-views/sys-server-role-members-transact-sql.md)  
@@ -160,27 +160,27 @@ Vues de gestion dynamique qui contiennent des informations sur l’état des dem
   
 Vues système connexes exposées dans les vues de gestion dynamique SQL Server sur les nœuds de calcul. Consultez [vues de gestion dynamique SQL Server](../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md) pour des liens vers ces DMV sur MSDN.  
   
--   Sys.dm_pdw_nodes_resource_governor_resource_pools  
+-   sys.dm_pdw_nodes_resource_governor_resource_pools  
   
--   Sys.dm_pdw_nodes_resource_governor_workload_groups  
+-   sys.dm_pdw_nodes_resource_governor_workload_groups  
   
--   Sys.dm_pdw_nodes_resource_governor_resource_pools  
+-   sys.dm_pdw_nodes_resource_governor_resource_pools  
   
--   Sys.dm_pdw_nodws_resource_governor_workload_groups  
+-   sys.dm_pdw_nodws_resource_governor_workload_groups  
   
--   Sys.dm_pdw_nodes_exec_sessions  
+-   sys.dm_pdw_nodes_exec_sessions  
   
--   Sys.dm_pdw_nodes_exec_requests  
+-   sys.dm_pdw_nodes_exec_requests  
   
--   Sys.dm_pdw_nodes_exec_query_memory_grants  
+-   sys.dm_pdw_nodes_exec_query_memory_grants  
   
--   Sys.dm_pdw_nodes_exec_query_resource_semaphores  
+-   sys.dm_pdw_nodes_exec_query_resource_semaphores  
   
--   Sys.dm_pdw_nodes_os_memory_brokers  
+-   sys.dm_pdw_nodes_os_memory_brokers  
   
--   Sys.dm_pdw_nodes_os_memory_cache_entries  
+-   sys.dm_pdw_nodes_os_memory_cache_entries  
   
--   Sys.dm_pdw_nodes_exec_cached_plans  
+-   sys.dm_pdw_nodes_exec_cached_plans  
   
 ## <a name="RelatedTasks"></a>Tâches associées  
 [Tâches de gestion de la charge de travail](workload-management-tasks.md)  

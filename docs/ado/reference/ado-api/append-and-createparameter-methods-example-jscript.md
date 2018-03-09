@@ -3,29 +3,31 @@ title: "Append et CreateParameter, méthodes-exemple (JScript) | Documents Micro
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: JScript
+dev_langs:
+- JScript
 helpviewer_keywords:
 - CreateParameter method [ADO], JScript example
 - Append method [ADO], JScript example
 ms.assetid: 37000833-68f4-45f1-b2dd-7f75893d09d9
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f7048719f14ed0841fba3b221f1bbb7314d16ad2
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 9f4fb56c40cca35734a4dbc247492f8db3dd86b5
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="append-and-createparameter-methods-example-jscript"></a>Append et CreateParameter, méthodes-exemple (JScript)
 Cet exemple utilise le [Append](../../../ado/reference/ado-api/append-method-ado.md) et [CreateParameter](../../../ado/reference/ado-api/createparameter-method-ado.md) méthodes pour exécuter une procédure stockée avec un paramètre d’entrée. Coupez et collez le code suivant dans le bloc-notes ou un autre éditeur de texte et enregistrez-le sous **nom AppendJS.asp**.  

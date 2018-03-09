@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_os_workers (Transact-SQL) | Documents Microsoft
+title: sys.dm_os_workers (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/13/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - sys.dm_os_workers_TSQL
 - dm_os_workers
 - sys.dm_os_workers
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_os_workers dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_os_workers dynamic management view
 ms.assetid: 4d5d1e52-a574-4bdd-87ae-b932527235e8
-caps.latest.revision: "47"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2de361a20f4369cb79b856c265f732dc4dc8018c
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: fb27268dbfb21cf2fed3b1b7b728cd9eeb4ee495
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmosworkers-transact-sql"></a>sys.dm_os_workers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -40,7 +43,7 @@ ms.lasthandoff: 11/17/2017
   
 |Nom de colonne|Type de données| Description|  
 |-----------------|---------------|-----------------|  
-|worker_address|**varbinary (8)**|Adresse mémoire du processus de travail.|  
+|worker_address|**varbinary(8)**|Adresse mémoire du processus de travail.|  
 |status|**int**|À usage interne uniquement|  
 |is_preemptive|**bit**|1 = le processus de travail s'exécute avec une planification préemptive. Tout processus de travail qui exécute du code externe est exécuté en mode de planification préemptive.|  
 |is_fiber|**bit**|1 = le processus de travail s'exécute en mode Regroupement léger. Pour plus d'informations, consultez [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md).|  
@@ -59,39 +62,39 @@ ms.lasthandoff: 11/17/2017
 |worker_created_ms_ticks|**bigint**|Point dans le temps, dans [ms_ticks](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md), lorsqu’un processus de travail est créé.|  
 |exception_num|**int**|Numéro d'erreur de la dernière exception rencontrée par ce processus de travail.|  
 |exception_severity|**int**|Gravité de la dernière exception rencontrée par ce processus de travail.|  
-|exception_address|**varbinary (8)**|Adresse du code qui a levé l'exception.|  
+|exception_address|**varbinary(8)**|Adresse du code qui a levé l'exception.|  
 |affinité|**bigint**|Affinité de thread du processus de travail. Correspond à l’affinité du thread dans [sys.dm_os_threads &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-os-threads-transact-sql.md).|  
-|state|**nvarchar (60)**|État du processus de travail. Il peut s'agir de l'une des valeurs suivantes :<br /><br /> INIT = le processus de travail est en cours d'initialisation.<br /><br /> RUNNING = le processus de travail est en cours d'exécution, en mode non préemptif ou préemptif.<br /><br /> RUNNABLE = le processus de travail est prêt à s'exécuter sur le planificateur.<br /><br /> SUSPENDED = le processus de travail est actuellement interrompu car il attend qu'un événement lui envoie un signal.|  
+|state|**nvarchar(60)**|État du processus de travail. Il peut s'agir de l'une des valeurs suivantes :<br /><br /> INIT = le processus de travail est en cours d'initialisation.<br /><br /> RUNNING = le processus de travail est en cours d'exécution, en mode non préemptif ou préemptif.<br /><br /> RUNNABLE = le processus de travail est prêt à s'exécuter sur le planificateur.<br /><br /> SUSPENDED = le processus de travail est actuellement interrompu car il attend qu'un événement lui envoie un signal.|  
 |start_quantum|**bigint**|Temps, en millisecondes, au début de l'exécution actuelle de ce processus de travail.|  
 |end_quantum|**bigint**|Temps, en millisecondes, à la fin de l'exécution actuelle de ce processus de travail.|  
-|last_wait_type|**nvarchar (60)**|Type de la dernière attente. Pour obtenir la liste des types d’attente, consultez [sys.dm_os_wait_stats &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md).|  
+|last_wait_type|**nvarchar(60)**|Type de la dernière attente. Pour obtenir la liste des types d’attente, consultez [sys.dm_os_wait_stats &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md).|  
 |return_code|**int**|Valeur retournée par la dernière attente. Il peut s'agir de l'une des valeurs suivantes :<br /><br /> 0 =SUCCESS<br /><br /> 3 = DEADLOCK<br /><br /> 4 = PREMATURE_WAKEUP<br /><br /> 258 = TIMEOUT|  
 |quantum_used|**bigint**|À usage interne uniquement|  
 |max_quantum|**bigint**|À usage interne uniquement|  
 |boost_count|**int**|À usage interne uniquement|  
 |tasks_processed_count|**int**|Nombre de tâches traitées par ce processus de travail.|  
-|fiber_address|**varbinary (8)**|Adresse mémoire de la fibre à laquelle ce processus de travail est associé.<br /><br /> NULL = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] n'est pas configuré pour le regroupement léger.|  
-|task_address|**varbinary (8)**|Adresse mémoire de la tâche active. Pour plus d’informations, consultez [sys.dm_os_tasks &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md).|  
-|memory_object_address|**varbinary (8)**|Adresse mémoire de l'objet mémoire du processus de travail. Pour plus d’informations, consultez [sys.dm_os_memory_objects &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md).|  
-|thread_address|**varbinary (8)**|Adresse mémoire du thread associé au processus de travail. Pour plus d’informations, consultez [sys.dm_os_threads &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-os-threads-transact-sql.md).|  
-|signal_worker_address|**varbinary (8)**|Adresse mémoire du processus de travail qui a signalé cet objet en dernier lieu. Pour plus d’informations, consultez [sys.dm_os_workers](../../relational-databases/system-dynamic-management-views/sys-dm-os-workers-transact-sql.md).|  
-|scheduler_address|**varbinary (8)**|Adresse mémoire du planificateur. Pour plus d’informations, consultez [sys.dm_os_schedulers &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-os-schedulers-transact-sql.md).|  
+|fiber_address|**varbinary(8)**|Adresse mémoire de la fibre à laquelle ce processus de travail est associé.<br /><br /> NULL = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] n'est pas configuré pour le regroupement léger.|  
+|task_address|**varbinary(8)**|Adresse mémoire de la tâche active. Pour plus d’informations, consultez [sys.dm_os_tasks &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md).|  
+|memory_object_address|**varbinary(8)**|Adresse mémoire de l'objet mémoire du processus de travail. Pour plus d’informations, consultez [sys.dm_os_memory_objects &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md).|  
+|thread_address|**varbinary(8)**|Adresse mémoire du thread associé au processus de travail. Pour plus d’informations, consultez [sys.dm_os_threads &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-os-threads-transact-sql.md).|  
+|signal_worker_address|**varbinary(8)**|Adresse mémoire du processus de travail qui a signalé cet objet en dernier lieu. Pour plus d’informations, consultez [sys.dm_os_workers](../../relational-databases/system-dynamic-management-views/sys-dm-os-workers-transact-sql.md).|  
+|scheduler_address|**varbinary(8)**|Adresse mémoire du planificateur. Pour plus d’informations, consultez [sys.dm_os_schedulers &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-os-schedulers-transact-sql.md).|  
 |processor_group|**smallint**|Stocke l'ID de groupe du processeur attribué à ce thread.|  
-|pdw_node_id|**int**|**S’applique aux**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> L’identificateur du nœud qui se trouve sur cette distribution.|  
+|pdw_node_id|**int**|**S’applique aux**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> L’identificateur du nœud qui se trouve sur cette distribution.|  
   
 ## <a name="remarks"></a>Notes  
  Si le processus de travail est à l'état RUNNING et qu'il s'exécute de façon non préemptive, son adresse correspond à la valeur de active_worker_address dans sys.dm_os_schedulers.  
   
  Lorsqu'un processus de travail en attente sur un événement est signalé, il est placé en tête de la file d'attente exécutable. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autorise cette situation mille fois de suite, après quoi le processus de travail est placé à la fin de la file d'attente. Le fait de placer un processus de travail à la fin de la file d'attente a un impact sur les performances.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
 Sur [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], nécessite `VIEW SERVER STATE` autorisation.   
 Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] niveaux Premium, nécessite le `VIEW DATABASE STATE` autorisation dans la base de données. Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Standard et les niveaux de base, nécessite le **administrateur du serveur** ou **administrateur Active Directory de Azure** compte.  
   
 ## <a name="examples"></a>Exemples  
  Vous pouvez utiliser la requête suivante pour déterminer la durée d'exécution d'un processus de travail à l'état SUSPENDED ou RUNNABLE.  
   
-```tsql
+```sql
 SELECT   
     t1.session_id,  
     CONVERT(varchar(10), t1.status) AS status,  

@@ -2,10 +2,14 @@
 title: "Configurer le moteur de base de données de manière à écouter sur plusieurs ports TCP | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: configure-windows
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,19 +21,20 @@ helpviewer_keywords:
 - tabular data stream
 - multiple ports
 ms.assetid: 8e955033-06ef-403f-b813-3d8241b62f1f
-caps.latest.revision: "26"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: f14e9edb0a6cad559ab0032e3daccb3df0bc329f
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 7cde3b735d73b7e7a53948a67e77e7f7ca07da43
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="configure-the-database-engine-to-listen-on-multiple-tcp-ports"></a>Configurer le moteur de base de données de manière à écouter sur plusieurs ports TCP
-  Cette rubrique explique comment configurer le [!INCLUDE[ssDE](../../includes/ssde-md.md)] pour écouter sur plusieurs ports TCP dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide du Gestionnaire de configuration SQL Server. Lorsque TCP/IP est activé pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], le [!INCLUDE[ssDE](../../includes/ssde-md.md)] écoute les connexions entrantes sur un point de connexion composé d'une adresse IP et d'un numéro de port TCP. Les procédures suivantes créent un point de terminaison TDS (Tabular Data Stream, flux de données tabulaires), afin que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] écoute sur un port TCP supplémentaire.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Cette rubrique explique comment configurer le [!INCLUDE[ssDE](../../includes/ssde-md.md)] pour écouter sur plusieurs ports TCP dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide du Gestionnaire de configuration SQL Server. Lorsque TCP/IP est activé pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], le [!INCLUDE[ssDE](../../includes/ssde-md.md)] écoute les connexions entrantes sur un point de connexion composé d'une adresse IP et d'un numéro de port TCP. Les procédures suivantes créent un point de terminaison TDS (Tabular Data Stream, flux de données tabulaires), afin que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] écoute sur un port TCP supplémentaire.  
   
  Les raisons pouvant conduire à créer un second point de terminaison TDS sont les suivantes :  
   
@@ -77,7 +82,7 @@ ms.lasthandoff: 11/09/2017
   
 #### <a name="to-configure-the-sql-server-database-engine-to-listen-on-an-additional-tcp-port"></a>Pour configurer le moteur de base de données SQL Server de manière à écouter sur un port TCP supplémentaire  
   
-1.  Dans le Gestionnaire de configuration SQL Server, développez **Configuration du réseau SQL Server**, puis cliquez sur **Protocoles pour***<nom_instance>*.  
+1.  Dans le Gestionnaire de configuration SQL Server, développez **Configuration du réseau SQL Server**, puis cliquez sur *Protocoles pour***<nom_instance>*.  
   
 2.  Développez **Protocoles pour***<nom_instance>*, puis cliquez sur **TCP/IP**.  
   
@@ -104,7 +109,7 @@ ms.lasthandoff: 11/09/2017
     sqlcmd -SACCT,1500  
     ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [CREATE ENDPOINT &#40;Transact-SQL&#41;](../../t-sql/statements/create-endpoint-transact-sql.md)   
  [DROP ENDPOINT &#40;Transact-SQL&#41;](../../t-sql/statements/drop-endpoint-transact-sql.md)   
  [Autorisations GRANT sur point de terminaison &#40;Transact-SQL&#41;](../../t-sql/statements/grant-endpoint-permissions-transact-sql.md)   

@@ -2,15 +2,13 @@
 title: "Sécurité au niveau de l’objet de modèle tabulaire | Documents Microsoft"
 ms.custom: 
 ms.date: 06/20/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: multidimensional-tabular
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords: 
@@ -20,17 +18,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: bc44742d56d744e9d0d4c1f1697d0bcd4e40488c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 73424406508608226cbf30fa0271aa747dbf9101
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="object-level-security"></a>Sécurité au niveau de l’objet
-
-[!INCLUDE[ssas-appliesto-sql2017-later-aas](../../includes/ssas-appliesto-sql2017-later-aas.md)]
-
-Sécurité de modèle de données commence par la mise en oeuvre efficace [rôles](../../analysis-services/tabular-models/roles-ssas-tabular.md) et des filtres au niveau des lignes pour définir les autorisations utilisateur sur les objets de modèle de données et des données. À partir de modèles tabulaires de 1400, vous pouvez également définir au niveau de l’objet de sécurité, qui inclut la sécurité au niveau de la table et la sécurité au niveau de la colonne dans la [objet rôles](../../analysis-services/tabular-models-scripting-language-objects/roles-object-tmsl.md).
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Sécurité de modèle de données commence par la mise en oeuvre efficace [rôles](../../analysis-services/tabular-models/roles-ssas-tabular.md) et des filtres au niveau des lignes pour définir les autorisations utilisateur sur les objets de modèle de données et des données. À partir de modèles tabulaires de 1400, vous pouvez également définir au niveau de l’objet de sécurité, qui inclut la sécurité au niveau de la table et la sécurité au niveau de la colonne dans la [objet rôles](../../analysis-services/tabular-models-scripting-language-objects/roles-object-tmsl.md).
 
 ## <a name="table-level-security"></a>Sécurité au niveau des tables
 

@@ -1,5 +1,5 @@
 ---
-title: "Création d’un Package par programme | Documents Microsoft"
+title: "Création d’un package par programmation | Microsoft Docs"
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: building-packages-programmatically
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
@@ -23,22 +22,21 @@ helpviewer_keywords:
 - packages [Integration Services], creating
 - SQL Server Integration Services packages, creating
 ms.assetid: e44bcc70-32d3-43e8-a84b-29aef819d5d3
-caps.latest.revision: 51
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
-ms.openlocfilehash: 58a8201d68cb6d942bd98ca3c53b6cf98336284e
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: ded4a64108848b0520c31074a83360507be0693f
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="creating-a-package-programmatically"></a>Création d'un package par programme
   L'objet <xref:Microsoft.SqlServer.Dts.Runtime.Package> correspond au conteneur de niveau supérieur de tous les autres objets inclus dans une solution de projet [!INCLUDE[ssIS](../../includes/ssis-md.md)]. En tant que conteneur de niveau supérieur, le package est le premier objet créé, puis des objets suivants lui sont ajoutés, puis ils sont exécutés dans le contexte du package. Le package lui-même ne déplace pas et ne transforme pas de données. Il se repose sur les tâches qu'il contient pour effectuer le travail. Les tâches effectuent la plupart du travail d'un package et définissent ses fonctionnalités. Un package est créé et exécuté avec seulement trois lignes de code, mais différentes tâches et objets <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> sont ajoutés pour lui donner des fonctionnalités supplémentaires. Cette section décrit comment créer un package par programme. Elle ne fournit pas d'informations sur la manière de créer les tâches ou les objets <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager>. Ceux-ci sont traités dans les sections ultérieures.  
   
-## <a name="example"></a>Exemple  
+## <a name="example"></a> Exemple  
  Pour écrire du code à l'aide de l'environnement de développement intégré Visual Studio, une référence à Microsoft.SqlServer.ManagedDTS.DLL est requise afin de créer une instruction `using` (`Imports` dans Visual Basic .NET) dans Microsoft.SqlServer.Dts.Runtime. L'exemple de code suivant présente la création d'un package vide.  
   
 ```csharp  
@@ -73,15 +71,15 @@ Module Module1
 End Module  
 ```  
   
- Pour compiler et exécuter l'exemple, appuyez sur F5 dans Visual Studio. Pour générer le code à l’aide du compilateur c#, **csc.exe**, à l’invite de commandes pour compiler, utilisez la commande suivante et en remplaçant les références de fichiers la  *\<filename >* avec le nom de fichier .cs ou .vb et en lui donnant un  *\<outputfilename >* de votre choix.  
+ Pour compiler et exécuter l'exemple, appuyez sur F5 dans Visual Studio. Pour générer le code à l’aide du compilateur C#, **csc.exe**, à l’invite de commandes de compilation, utilisez la commande et les références de fichiers suivantes, en remplaçant *\<nom_fichier>* par le nom du fichier .cs ou .vb et en lui attribuant une valeur *\<nom_fichier_sortie>* de votre choix.  
   
- **csc/target : library/out : \<outputfilename > .dll \<filename > .cs /r:Microsoft.SqlServer.Managed DTS.dll « r**  
+ **csc /target:library /out: \<nom_fichier_sortie>.dll \<nom_fichier>.cs /r:Microsoft.SqlServer.Managed DTS.dll" /r:System.dll**  
   
- Pour générer le code à l’aide du compilateur Visual Basic .NET, **vbc.exe**, à l’invite de commandes pour compiler, utilisez la commande suivante et les références de fichiers.  
+ Pour générer le code à l’aide du compilateur Visual Basic .NET, **vbc.exe**, à l’invite de commandes de compilation, utilisez la commande et les références de fichiers suivantes.  
   
- **vbc/target : library/out : \<outputfilename > .dll \<filename > .vb /r:Microsoft.SqlServer.Managed DTS.dll « r**  
+ **vbc /target:library /out: \<nom_fichier_sortie>.dll \<nom_fichier>.vb /r:Microsoft.SqlServer.Managed DTS.dll" /r:System.dll**  
   
- Vous pouvez également créer un package en chargeant un package existant enregistré sur le disque, dans le système de fichiers ou dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La différence est que le <xref:Microsoft.SqlServer.Dts.Runtime.Application> objet est créé, puis l’objet de package est remplie par une des méthodes surchargées de l’Application : **LoadPackage est** pour les fichiers plats, **LoadFromSQLServer** pour les packages enregistrés dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ou <xref:Microsoft.SqlServer.Dts.Runtime.Application.LoadFromDtsServer%2A> pour les packages enregistrés dans le système de fichiers. L'exemple suivant charge un package existant à partir du disque, puis consulte plusieurs propriétés sur le package.  
+ Vous pouvez également créer un package en chargeant un package existant enregistré sur le disque, dans le système de fichiers ou dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La différence est que l’objet <xref:Microsoft.SqlServer.Dts.Runtime.Application> est d’abord créé, puis l’objet de package est renseigné par l’une des méthodes surchargées de l’application : **LoadPackage** pour les fichiers plats, **LoadFromSQLServer** pour les packages enregistrés dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou <xref:Microsoft.SqlServer.Dts.Runtime.Application.LoadFromDtsServer%2A> pour les packages enregistrés dans le système de fichiers. L'exemple suivant charge un package existant à partir du disque, puis consulte plusieurs propriétés sur le package.  
   
 ```csharp  
 using System;  
@@ -160,12 +158,11 @@ End Module
   
 ## <a name="external-resources"></a>Ressources externes  
   
--   Entrée de blog, [API Sample - OleDB source et destination d’OleDB](http://go.microsoft.com/fwlink/?LinkId=220824), sur blogs.msdn.com.  
+-   Entrée de blog, [API Sample - OleDB source and OleDB destination](http://go.microsoft.com/fwlink/?LinkId=220824), sur blogs.msdn.com.  
   
--   Entrée de blog, [EzAPI – mise à jour pour SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=243223), sur blogs.msdn.com.  
+-   Entrée de blog, [EzAPI – Updated for SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=243223), sur blogs.msdn.com.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Ajout de tâches par programmation](../../integration-services/building-packages-programmatically/adding-tasks-programmatically.md)  
   
   
-

@@ -8,26 +8,27 @@ ms.service:
 ms.component: clr
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
 - designing assemblies [SQL Server]
 - assemblies [CLR integration], designing
 ms.assetid: 9c07f706-6508-41aa-a4d7-56ce354f9061
-caps.latest.revision: "29"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ce4e2e7fb36146d9e7e84a8a5c0a1b2f3fe09f58
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d5e491f922a034a55cb65e432e0c005f6cc18fc0
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="assemblies---designing"></a>Assemblys - conception
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Cette rubrique décrit les facteurs suivants, que vous devez considérer lorsque vous concevez des assemblys :  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Cette rubrique décrit les facteurs suivants, à prendre en considération lors de la conception d'assemblys :  
   
 -   Empaqueter des assemblys  
   
@@ -63,7 +64,7 @@ ms.lasthandoff: 11/17/2017
  En outre, la spécification de UNSAFE permet au code de l'assembly de réaliser des opérations considérées comme étant de type non sécurisé par le vérificateur CLR. Ces opérations sont susceptibles d'accéder de manière incontrôlée aux zones de tampon mémoire de l'espace réservé aux processus [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Les assemblys UNSAFE peuvent également corrompre le système de sécurité de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou de CLR (Common Language Runtime). Les autorisations UNSAFE ne doivent être accordées par des administrateurs ou des développeurs expérimentés qu'aux assemblys hautement approuvés. Seuls les membres de la **sysadmin** rôle serveur fixe peut créer des assemblys UNSAFE.  
   
 ## <a name="restrictions-on-assemblies"></a>Restrictions associées aux assemblys  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] impose certaines restrictions au code managé des assemblys afin que ceux-ci puissent s'exécuter de manière fiable et évolutive. Cela signifie que certaines opérations pouvant compromettre la robustesse du serveur ne sont pas autorisées dans les assemblys SAFE et EXTERNAL_ACCESS.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] impose certaines restrictions au code managé dans les assemblys pour vous assurer qu’il peuvent s’exécuter de manière fiable et évolutive. Cela signifie que certaines opérations pouvant compromettre la robustesse du serveur ne sont pas autorisées dans les assemblys SAFE et EXTERNAL_ACCESS.  
   
 ### <a name="disallowed-custom-attributes"></a>Attributs personnalisés interdits  
  Les assemblys ne peuvent pas être annotés avec les attributs personnalisés suivants :  
@@ -124,6 +125,6 @@ System.Configuration
   
 ## <a name="see-also"></a>Voir aussi  
  [Assemblys &#40; moteur de base de données &#41;](../../relational-databases/clr-integration/assemblies-database-engine.md)   
- [Sécurité de l’intégration du CLR](../../relational-databases/clr-integration/security/clr-integration-security.md)  
+ [Sécurité d’intégration du CLR](../../relational-databases/clr-integration/security/clr-integration-security.md)  
   
   

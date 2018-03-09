@@ -3,26 +3,28 @@ title: "Octroi de privilèges invité à un serveur Web | Documents Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: guest privileges in RDS [ADO]
+helpviewer_keywords:
+- guest privileges in RDS [ADO]
 ms.assetid: e851a22d-01bc-4eb0-bc42-92b8f65d1c63
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3935d66bdd1dfb412f5410b245231036ae025823
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 4c9e1f3dace4916b7d8044a5b21f480bacb04238
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="granting-guest-privileges-to-a-web-server-computer"></a>Octroi de privilèges invité à un serveur Web
 Le compte de serveur Web anonyme (IUSR_*Nom_Ordinateur*) doit être ajouté au groupe local invités sur l’ordinateur serveur Web à utiliser RDS.  

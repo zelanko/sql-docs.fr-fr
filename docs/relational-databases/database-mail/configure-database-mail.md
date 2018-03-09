@@ -2,10 +2,14 @@
 title: "Configuration de la Messagerie de base de données | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: database-mail
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -38,19 +42,20 @@ f1_keywords:
 - sql13.swb.dbmail.manageexistingprofile.f1
 - sql13.swb.dbmail.manageprofilesecurity.principalview.f1
 ms.assetid: 7edc21d4-ccf3-42a9-84c0-3f70333efce6
-caps.latest.revision: "13"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: e6ae8ba71d1e424c4e295655d76ddfc0084a1a18
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 3d88087b9d1142919f844155c805e2284e954e54
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="configure-database-mail"></a>Configuration de la Messagerie de base de données
-  Cette rubrique explique comment activer et configurer la messagerie de base de données à l'aide de l'Assistant Configuration de la messagerie de base de données, et créer un script de configuration de la messagerie de base de données à l'aide de modèles.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Cette rubrique explique comment activer et configurer la messagerie de base de données à l'aide de l'Assistant Configuration de la messagerie de base de données, et créer un script de configuration de la messagerie de base de données à l'aide de modèles.  
   
 -   **Avant de commencer :**  [Limitations et restrictions](#Restrictions), [Sécurité](#Security)  
   
@@ -156,7 +161,7 @@ ms.lasthandoff: 11/09/2017
  Tapez l'adresse de messagerie à utiliser pour les réponses aux messages électroniques envoyés à partir de ce compte. L'adresse Répondre au courrier est facultative. Par exemple, les réponses envoyées vers un compte du service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent peuvent être adressées à l’administrateur de base de données, dont l’adresse est danw@Adventure-Works.com.  
   
  **Nom du serveur**  
- Tapez le nom ou l'adresse IP du serveur SMTP utilisé par le compte pour envoyer du courrier électronique. En général, son format est semblable à celui-ci : **smtp.***<votre_société>***.com**. Pour plus d'informations, contactez l'administrateur de messagerie.  
+ Tapez le nom ou l'adresse IP du serveur SMTP utilisé par le compte pour envoyer du courrier électronique. En général, son format est semblable à celui-ci : **smtp.***<votre_société>***.com**. Pour plus d'informations, contactez l'administrateur de messagerie.  
   
  **Numéro de port**  
  Tapez le numéro de port du serveur SMTP de ce compte. La plupart des serveurs SMTP utilisent le port 25.  
@@ -220,7 +225,7 @@ ms.lasthandoff: 11/09/2017
  **Authentification de base**  
  Spécifiez le nom d'utilisateur et le mot de passe demandés par le serveur SMTP.  
   
- **Nom d'utilisateur**  
+ **User name**  
  Affichez ou modifiez le nom d'utilisateur que la messagerie de base de données utilise pour se connecter au serveur SMTP. Ce nom est obligatoire si le serveur SMTP nécessite une authentification de base.  
   
  **Mot de passe**  
@@ -364,7 +369,7 @@ ms.lasthandoff: 11/09/2017
   
  Un profil peut être un profil par défaut. Dans ce cas, les utilisateurs ou les rôles peuvent envoyer des messages électroniques avec ce profil, sans le spécifier explicitement. Si l'utilisateur ou le rôle qui envoie ce message possède un profil privé par défaut, la messagerie de base de données utilise ce profil. Si l’utilisateur ou le rôle ne possède pas de profil privé par défaut, **sp_send_dbmail** utilise le profil public par défaut pour la base de données **msdb** . S’il n’existe ni profil privé par défaut pour l’utilisateur ou le rôle, ni profil public par défaut pour la base de données, **sp_send_dbmail** renvoie une erreur.  
   
- **Nom d'utilisateur**  
+ **User name**  
  Pour sélectionner le nom d’un utilisateur ou d’un rôle dans la base de données **msdb** .  
   
  **Accès**  
@@ -421,7 +426,7 @@ ms.lasthandoff: 11/09/2017
  [Assistant Configuration de la messagerie de base de données](#DBWizard)  
   
 ###  <a name="TestEmail"></a> Send Test E-Mail Page  
- Utilisez la page **Envoyer un message électronique de test à partir de***<nom_instance>* pour envoyer un message électronique en utilisant le profil de messagerie de base de données spécifié. Seuls les membres du rôle serveur fixe **sysadmin** peuvent envoyer des messages électroniques de test avec cette page.  
+ Utilisez la page **Envoyer un message électronique de test à partir de***<nom_instance>* pour envoyer un e-mail en utilisant le profil de messagerie de base de données spécifié. Seuls les membres du rôle serveur fixe **sysadmin** peuvent envoyer des messages électroniques de test avec cette page.  
   
  **Profil de messagerie de base de données**  
  Sélectionnez un profil de messagerie de base de données dans la liste. Ce champ est obligatoire. Si aucun profil ne s'affiche, soit il n'en existe pas, soit vous n'avez pas d'autorisation sur ces profils. Utilisez l' **Assistant Configuration de la messagerie de base de données** pour créer et configurer des profils. Si aucun profil n'est répertorié, utilisez l'Assistant Configuration de la messagerie de base de données pour créer un profil pour votre propre usage.  

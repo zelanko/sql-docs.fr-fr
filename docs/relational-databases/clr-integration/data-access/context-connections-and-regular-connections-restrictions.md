@@ -8,26 +8,27 @@ ms.service:
 ms.component: clr
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
 - context connections [CLR integration]
 - regular connections [CLR integration]
 ms.assetid: 0c6fe4cb-d846-40b5-8884-35a9c770f5e8
-caps.latest.revision: "24"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2294c9ce526f1c91c48139aea21a72b1cbab9515
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 01a520c613a93806736d8e11fd1d451fe67b4eb0
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="context-connections-and-regular-connections---restrictions"></a>Connexions de contexte et des connexions normales - Restrictions
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Cette rubrique décrit les restrictions associées à l’exécution de code dans le [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] processus via des connexions normales et contextuelles.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Cette rubrique décrit les restrictions associées à l’exécution de code dans le [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] processus via des connexions normales et contextuelles.  
   
 ## <a name="restrictions-on-context-connections"></a>Restrictions applicables aux connexions contextuelles  
  Lorsque vous développez votre application, prenez en considération les restrictions suivantes qui s'appliquent aux connexions contextuelles :  
@@ -58,6 +59,6 @@ ms.lasthandoff: 11/17/2017
 -   **SqlDependency** objet n’est pas pris en charge.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Connexion contextuelle](../../../relational-databases/clr-integration/data-access/context-connection.md)  
+ [Connexion de contexte](../../../relational-databases/clr-integration/data-access/context-connection.md)  
   
   

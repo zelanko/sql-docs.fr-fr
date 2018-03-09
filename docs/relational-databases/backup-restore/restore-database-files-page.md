@@ -2,9 +2,12 @@
 title: "Restaurer la base de données (page Fichiers) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: backup-restore
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -13,18 +16,18 @@ f1_keywords:
 - sql13.swb.restoredb.files.f1 in the code
 ms.assetid: 714c36ea-a9f9-43a4-99f9-a6f73d1baf8e
 caps.latest.revision: "16"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ba9c9c5c060122e4b0d0ee1e1bc33084951a20c3
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: dff6aada8273e1e994ce321213cee66ae0b0bbb0
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="restore-database-files-page"></a>Restaurer la base de données (page Fichiers)
-  Utilisez la page **Fichiers** de la boîte de dialogue **Restaurer la base de données** pour gérer les fichiers spécifiques que vous avez choisi de restaurer dans la base de données.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Utilisez la page **Fichiers** de la boîte de dialogue **Restaurer la base de données** pour gérer les fichiers spécifiques que vous avez choisi de restaurer dans la base de données.  
   
 ## <a name="options"></a>Options  
   
@@ -51,7 +54,7 @@ ms.lasthandoff: 11/09/2017
  **Restaurer sous**  
  Répertorie les noms de fichier sous lesquels les fichiers restaurés seront enregistrés. Entrez ou recherchez le nom de fichier approprié.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Restaurer la base de données &#40;page Général&#41;](../../relational-databases/backup-restore/restore-database-general-page.md)   
  [Restaurer la base de données &#40;page Options&#41;](../../relational-databases/backup-restore/restore-database-options-page.md)   
  [Arguments RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md)   

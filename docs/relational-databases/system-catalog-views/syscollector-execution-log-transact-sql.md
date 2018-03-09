@@ -1,5 +1,5 @@
 ---
-title: syscollector_execution_log (Transact-SQL) | Documents Microsoft
+title: syscollector_execution_log (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -8,27 +8,29 @@ ms.service:
 ms.component: system-catalog-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - syscollector_execution_log_TSQL
 - syscollector_execution_log
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - data collector view
 - syscollector_execution_log view
 ms.assetid: 11554d64-0426-42ce-b7ce-5591f67864d2
-caps.latest.revision: "18"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: df1ddcc6306078075821af7cfd1a1176a2e31861
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f5beb35aa769b1c4755481a187c765fa62068ae2
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="syscollectorexecutionlog-transact-sql"></a>syscollector_execution_log (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,13 +48,13 @@ ms.lasthandoff: 11/17/2017
 |finish_time|**datetime**|Heure de fin de l'exécution pour les packages et jeux d'éléments de collecte terminés. Autorise la valeur NULL.|  
 |runtime_execution_mode|**smallint**|Indique si l'activité du jeu d'éléments de collecte consistait à collecter ou à télécharger des données. Autorise la valeur NULL.<br /><br /> Valeurs possibles :<br /><br /> 0 = Collecte<br /><br /> 1 = Téléchargement|  
 |status|**smallint**|Indique l'état actuel du jeu d'éléments de collecte ou package. N'accepte pas la valeur NULL.<br /><br /> Valeurs possibles :<br /><br /> 0 = En cours d'exécution<br /><br /> 1 = Terminé<br /><br /> 2 = Échec|  
-|operator|**nvarchar (128)**|Identifie la personne qui a démarré le jeu d'éléments de collecte ou package. N'accepte pas la valeur NULL.|  
+|operator|**nvarchar(128)**|Identifie la personne qui a démarré le jeu d'éléments de collecte ou package. N'accepte pas la valeur NULL.|  
 |package_id|**uniqueidentifier**|Identifie le jeu d'éléments de collecte ou package qui a généré ce journal. Autorise la valeur NULL.|  
 |package_name|**nvarchar(4000)**|Nom du package qui a généré ce journal. Autorise la valeur NULL.|  
 |package_execution_id|**uniqueidentifier**|Fournit un lien vers la table de journal [!INCLUDE[ssIS](../../includes/ssis-md.md)]. Autorise la valeur NULL.|  
-|failure_message|**nvarchar (2048)**|En cas d'échec du jeu d'éléments de collecte ou du package, message d'erreur le plus récent pour ce composant. Autorise la valeur NULL. Pour obtenir plus d’informations sur l’erreur, utilisez le [fn_syscollector_get_execution_details &#40; Transact-SQL &#41; ](../../relational-databases/system-functions/fn-syscollector-get-execution-details-transact-sql.md) (fonction).|  
+|failure_message|**nvarchar(2048)**|En cas d'échec du jeu d'éléments de collecte ou du package, message d'erreur le plus récent pour ce composant. Autorise la valeur NULL. Pour obtenir plus d’informations sur l’erreur, utilisez le [fn_syscollector_get_execution_details &#40; Transact-SQL &#41; ](../../relational-databases/system-functions/fn-syscollector-get-execution-details-transact-sql.md) (fonction).|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Requiert SELECT pour dc_operator.  
   
 ## <a name="see-also"></a>Voir aussi  

@@ -1,11 +1,11 @@
 ---
-title: "Étape 2 : Activation et configuration des Configurations de Package | Documents Microsoft"
+title: "Étape 2 : Activation et configuration des configurations de package | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
 ms.technology:
@@ -15,19 +15,18 @@ ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
 ms.assetid: 005218ab-8dd5-48e9-a185-6bc60cd43a7a
-caps.latest.revision: 39
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: f5cf47715b998a7f09b6d90772a2b456872eebed
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 1a63c43606d2a27da3469c4cedb83654c79c1bf1
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="lesson-5-2---enabling-and-configuring-package-configurations"></a>Leçon 5-2 : activation et configuration des Configurations de Package
+# <a name="lesson-5-2---enabling-and-configuring-package-configurations"></a>Leçon 5-2 : Activation et configuration des configurations de package
 Au cours de cette tâche, vous allez convertir le projet en modèle de déploiement de package et activer les configurations du package à l'aide de l'Assistant Configuration de package. Vous allez utiliser cet Assistant pour générer un fichier de configuration XML qui contient les paramètres de configuration de la propriété **Directory** du conteneur de boucles Foreach. La valeur de la propriété Directory est fournie par la nouvelle variable de niveau package que vous pouvez mettre à jour au moment de l'exécution. De plus, vous allez remplir un nouveau dossier de données exemple à utiliser au cours du test.  
   
 ### <a name="to-create-a-new-package-level-variable-mapped-to-the-directory-property"></a>Pour créer une nouvelle variable de niveau package mappée à la propriété Directory  
@@ -69,7 +68,7 @@ Au cours de cette tâche, vous allez convertir le projet en modèle de déploiem
   
 2.  Cliquez sur **OK** dans la boîte de dialogue d’avertissement et, une fois la conversion terminée, cliquez sur **OK** dans la boîte de dialogue **Convertir en modèle de déploiement de package** .  
   
-3.  Cliquez sur l’arrière-plan de l’onglet **Flux de contrôle** dans le Concepteur [!INCLUDE[ssIS](../includes/ssis-md.md)] .  
+3.  Cliquez sur l’arrière-plan de l’onglet **Flux de contrôle** dans le Concepteur [!INCLUDE[ssIS](../includes/ssis-md.md)].  
   
 4.  Dans le menu **SSIS** , cliquez sur **Configurations du package**.  
   
@@ -117,4 +116,3 @@ Au cours de cette tâche, vous allez convertir le projet en modèle de déploiem
 ## <a name="next-task-in-lesson"></a>Tâche suivante de la leçon  
 [Étape 3 : modification de la valeur de configuration de la propriété Directory](../integration-services/lesson-5-3-modifying-the-directory-property-configuration-value.md)  
   
-

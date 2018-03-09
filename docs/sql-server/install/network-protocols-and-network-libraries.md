@@ -2,10 +2,14 @@
 title: "Protocoles réseau et bibliothèques réseau | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: install
 ms.reviewer: 
-ms.suite: 
-ms.technology: setup-install
+ms.suite: sql
+ms.technology:
+- setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,28 +24,30 @@ helpviewer_keywords:
 - network protocols [SQL Server], about network protocols
 - configuration options [SQL Server], libraries
 ms.assetid: 8cd437f6-9af1-44ce-9cb0-4d10c83da9ce
-caps.latest.revision: "50"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 657134dd5c6c7fe7c4ee81050c570dc14e9d23d1
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 6a89bec1046eab92432ffa53a8de3618903f7ab6
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/09/2018
 ---
-# Protocoles réseau et bibliothèques réseau
+# <a name="network-protocols-and-network-libraries"></a>Protocoles réseau et bibliothèques réseau
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   Un serveur peut être à l'écoute ou contrôler plusieurs protocoles réseau simultanément. Cependant, chaque protocole doit être configuré. Lorsqu'un protocole spécifique n'est pas configuré, le serveur ne peut pas se placer à l'écoute de ce protocole. Après l'installation, vous pouvez modifier ces configurations de protocole avec le Gestionnaire de configuration [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-## Configuration réseau par défaut de SQL Server  
+## <a name="default-sql-server-network-configuration"></a>Configuration réseau par défaut de SQL Server  
  Une instance par défaut de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est configurée pour le port TCP/IP 1433 et le canal nommé \\\\.\pipe\sql\query. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sont configurées pour des ports dynamiques TCP, avec un numéro de port attribué par le système d'exploitation.  
   
  Si vous ne pouvez pas utiliser les adresses de port dynamiques (par exemple, lorsque des connexions d' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] doivent traverser un serveur pare-feu configuré pour passer des adresses de port spécifiques), sélectionnez un numéro de port non assigné. Les affectations de numéro de port sont gérées par l’IANA (Internet Assigned Numbers Authority) et sont répertoriées à l’adresse [http://www.iana.org](http://go.microsoft.com/fwlink/?LinkId=48844).  
   
  Pour renforcer la sécurité, la connectivité réseau n'est pas entièrement activée lorsque [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est installé. Pour activer, désactiver et configurer les protocoles réseau une fois l'installation terminée, utilisez la zone Configuration du réseau [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] du Gestionnaire de configuration [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-## Protocole SMB  
+## <a name="server-message-block-protocol"></a>Protocole SMB  
  Les serveurs déployés dans le réseau de périmètre doivent avoir tous les protocoles inutilisés désactivés, y compris le protocole SMB (Server Message Block). Les serveurs Web et les serveurs DNS (Domain Name System) ne nécessitent pas SMB. Ce protocole doit être désactivé pour limiter le risque lié à l'énumération des utilisateurs.  
   
 > [!WARNING]  
@@ -51,7 +57,7 @@ ms.lasthandoff: 11/09/2017
 > -   Spécifier un partage de fichiers SMB comme répertoire de données pendant l'installation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
 > -   Créer un fichier de base de données sur un partage de fichiers SMB.  
   
-#### Pour désactiver le protocole SMB  
+#### <a name="to-disable-smb"></a>Pour désactiver le protocole SMB  
   
 1.  Dans le menu **Démarrer** , pointez sur **Paramètres**, puis cliquez sur **Connexions réseau et accès à distance**.  
   
@@ -65,11 +71,11 @@ ms.lasthandoff: 11/09/2017
   
 5.  Suivez les étapes de désinstallation.  
   
-#### Pour désactiver SMB sur les serveurs accessibles à partir d'Internet  
+#### <a name="to-disable-smb-on-servers-accessible-from-the-internet"></a>Pour désactiver SMB sur les serveurs accessibles à partir d'Internet  
   
 -   Dans les propriétés de Connexion au réseau local, utilisez la boîte de dialogue **Propriétés de Protocole Internet TCP/IP** pour supprimer **Partage de fichiers et d’imprimantes pour les réseaux Microsoft** et **Client pour les réseaux Microsoft**.  
   
-## Points de terminaison  
+## <a name="endpoints"></a>Points de terminaison  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] introduit un nouveau concept pour les connexions [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ; la connexion est représentée à l’extrémité du serveur sous la forme d’un [!INCLUDE[tsql](../../includes/tsql-md.md)]*point de terminaison*. Des autorisations peuvent être accordées, retirées et refusées pour les points de terminaison [!INCLUDE[tsql](../../includes/tsql-md.md)] . Par défaut, tous les utilisateurs ont l'autorisation d'accéder à un point de terminaison sauf si cette autorisation est refusée ou retirée par un membre du groupe sysadmin ou par le propriétaire du point de terminaison. La syntaxe GRANT, REVOKE et DENY ENDPOINT utilise un ID de point de terminaison que l'administrateur doit prendre dans l'affichage catalogue du point de terminaison.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] crée des points de terminaison [!INCLUDE[tsql](../../includes/tsql-md.md)] pour tous les protocoles réseau pris en charge, ainsi que pour la connexion administrateur dédiée.  
@@ -84,11 +90,11 @@ ms.lasthandoff: 11/09/2017
   
  Pour plus d’informations sur les points de terminaison, consultez [Configurer le moteur de base de données de manière à écouter sur plusieurs ports TCP](../../database-engine/configure-windows/configure-the-database-engine-to-listen-on-multiple-tcp-ports.md) et [Affichages catalogue de points de terminaison &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/endpoints-catalog-views-transact-sql.md).  
   
- Pour plus d'informations sur les configurations réseau [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , consultez les rubriques suivantes dans la documentation en ligne de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :  
+ Pour plus d’informations sur les configurations réseau [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez les articles suivants dans la documentation en ligne de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :  
   
 -   [Configuration réseau du serveur](../../database-engine/configure-windows/server-network-configuration.md)  
   
-## Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Configuration de la surface d'exposition](../../relational-databases/security/surface-area-configuration.md)   
  [Considérations sur la sécurité pour une installation SQL Server](../../sql-server/install/security-considerations-for-a-sql-server-installation.md)   
  [Planification d'une installation SQL Server](../../sql-server/install/planning-a-sql-server-installation.md)  

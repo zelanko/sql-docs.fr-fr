@@ -3,8 +3,11 @@ title: "Propriétés de SQL Server Agent (page Système d’alerte) | Microsoft 
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-agent
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -13,16 +16,16 @@ ms.assetid: 3e6d3bfd-20ee-4593-86cc-f65b1c08c69d
 caps.latest.revision: "5"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2645355a8d79e728a5fa6d0a5d9dabf92be0e19a
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: bbef6fd5cdc500b80da926dae50942ddf252aa68
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="sql-server-agent-properties-alert-system-page"></a>Propriétés de SQL Server Agent (page Système d'alerte)
-Cette page vous permet d’afficher et de modifier les paramètres des messages envoyés par les alertes de [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Cette page vous permet d’afficher et de modifier les paramètres des messages envoyés par les alertes de [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent.  
   
 ## <a name="options"></a>Options  
 **Session de messagerie**  
@@ -52,10 +55,10 @@ Spécifie les options relatives à la ligne **À** du message.
 **Préfixe**  
 Tapez le texte prédéfini, requis par votre système au début de la ligne **À** des messages envoyés à un récepteur de radiomessagerie.  
   
-**Récepteur de radiomessagerie**  
+**Radiomessagerie**  
 Inclut l'adresse de messagerie du message entre le préfixe et le suffixe.  
   
-**Suffixe**  
+**Suffixee**  
 Tapez le texte prédéfini, requis par votre système de radiomessagerie à la fin de la ligne **À** des messages envoyés à un récepteur de radiomessagerie.  
   
 **Ligne Cc**  
@@ -73,7 +76,7 @@ Tapez le texte prédéfini, requis par votre système de radiomessagerie à la f
 **Objet**  
 Spécifie les options relatives à l'objet du message  
   
-**Préfixe**  
+**Prefix**  
 Tapez le texte prédéfini, requis par votre système de radiomessagerie au début de la ligne **Objet** des messages envoyés à un récepteur de radiomessagerie.  
   
 **Suffixe**  
@@ -105,7 +108,7 @@ Cette section vous permet d'activer des jetons d'étapes de travail utilisables 
 **Remplacer les jetons pour toutes les réponses de travaux aux alertes**  
 Activez cette case à cocher pour permettre le remplacement des jetons pour les travaux qui sont activés par les alertes [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] .  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [Opérateurs](../../ssms/agent/operators.md)  
 [Configurer la messagerie de SQL Server Agent en vue de l'utilisation de la messagerie de base de données](http://msdn.microsoft.com/en-us/4b8b61bd-4bd1-43cd-b6e5-c6ed2e101dce)  
 [Messagerie de base de données](http://msdn.microsoft.com/en-us/9e4563dd-4799-4b32-a78a-048ea44a44c1)  

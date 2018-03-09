@@ -2,36 +2,34 @@
 title: "Créer et personnaliser la galerie PowerPivot | Documents Microsoft"
 ms.custom: 
 ms.date: 08/31/2015
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: power-pivot-sharepoint
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b5cd35e0-3d8f-4784-9172-93d60c730321
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: c8fc14fc26221bedd8d97af5e4f478de99535b74
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 11a372ebe9e40bc5800b8a38a35575aa66095dc7
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
-# <a name="create-and-customize-power-pivot-gallery"></a>Créer et personnaliser une Galerie PowerPivot
+# <a name="create-and-customize-power-pivot-gallery"></a>Create and Customize Power Pivot Gallery
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] est un type de bibliothèque de documents SharePoint qui fournit des fonctions d’aperçu et de gestion des documents pour les classeurs Excel publiés et les rapports Reporting Services contenant des données [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .  
   
 ##  <a name="bkmk_top"></a> Dans cette rubrique  
   
--   [Conditions préalables](#prereq)  
+-   [Configuration requise](#prereq)  
   
 -   [Vue d'ensemble](#overview)  
   
@@ -43,7 +41,7 @@ ms.lasthandoff: 11/17/2017
   
 -   [Passer à la vue Galerie ou Théâtre](#switch)  
   
-##  <a name="prereq"></a> Conditions préalables  
+##  <a name="prereq"></a> Configuration requise  
   
 -   Vous devez disposer de Silverlight. Silverlight peut être téléchargé et installé via Microsoft Update. Si vous affichez une bibliothèque Galerie [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] à l'aide d'un navigateur qui ne dispose pas de Silverlight, cliquez sur le lien dans la page pour l'installer. Vous devez fermer le navigateur puis le rouvrir une fois que vous avez installé Silverlight.  
   
@@ -68,7 +66,7 @@ ms.lasthandoff: 11/17/2017
   
  Les images d'aperçu reposent sur la façon dont le classeur est restitué par Excel Services. La représentation dans la Galerie [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] doit être identique à celle que vous voyez quand vous affichez un classeur [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] dans un navigateur. L'aperçu a cependant une surface d'exposition limitée. Les parties d'un classeur ou rapport peuvent être réduites de façon à s'ajuster à l'espace disponible. Vous devrez peut-être ouvrir un classeur ou un rapport pour visualiser le document dans son intégralité.  
   
- L'actualisation des données de classeurs [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] à partir de sources de données externes est pleinement prise en charge dans la Galerie [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , mais requiert une configuration supplémentaire. Un administrateur de batterie ou de service doit ajouter la Galerie [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] en tant qu'emplacement approuvé Excel Services. Pour plus d’informations, voir [Create a trusted location for Power Pivot sites in Central Administration](../../analysis-services/power-pivot-sharepoint/create-a-trusted-location-for-power-pivot-sites-in-central-administration.md).  
+ L'actualisation des données de classeurs [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] à partir de sources de données externes est pleinement prise en charge dans la Galerie [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , mais requiert une configuration supplémentaire. Un administrateur de batterie ou de service doit ajouter la Galerie [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] en tant qu'emplacement approuvé Excel Services. Pour plus d’informations, voir [Créer un emplacement approuvé pour les sites Power Pivot dans l’Administration centrale](../../analysis-services/power-pivot-sharepoint/create-a-trusted-location-for-power-pivot-sites-in-central-administration.md).  
   
 ##  <a name="createlib"></a> Créer la Galerie PowerPivot  
  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] est créée automatiquement lorsque vous installez [!INCLUDE[ssGeminiLong](../../includes/ssgeminilong-md.md)] à l'aide de l'option d'installation Nouveau serveur. Si vous avez ajouté [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] à une batterie de serveurs existante ou si vous voulez disposer d'une bibliothèque supplémentaire, vous pouvez en créer une pour votre application ou votre site.  
@@ -141,7 +139,7 @@ ms.lasthandoff: 11/17/2017
   
  Le tableau suivant décrit les différentes mises en page pour la présentation des croquis miniatures de chaque page affichée en aperçu :  
   
-|Affichage|Description|  
+|Affichage| Description|  
 |----------|-----------------|  
 |Vue Galerie (valeur par défaut)|Galerie constitue la vue par défaut pour une Galerie [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . L'aperçu s'affiche à gauche. Des miniatures plus petites de chaque feuille de calcul s'affichent en regard de celui-ci, en ordre séquentiel de gauche à droite.|  
 |Tous les documents|Il s'agit de la mise en page standard pour les bibliothèques de documents. Vous pouvez choisir cette vue pour gérer des documents individuels ou afficher le contenu de bibliothèques sous forme de liste.<br /><br /> Utilisez cette vue pour modifier des propriétés ou pour supprimer ou déplacer des documents.<br /><br /> Si vous avez activé le contrôle de version, vous devez utiliser cette vue pour archiver des documents dans la bibliothèque ou les en extraire.|  

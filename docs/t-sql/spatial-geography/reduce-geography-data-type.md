@@ -8,25 +8,28 @@ ms.service:
 ms.component: t-sql|spatial-geography
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - Reduce_TSQL
 - Reduce
-dev_langs: TSQL
-helpviewer_keywords: Reduce method
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- Reduce method
 ms.assetid: c5dfa8c1-6764-41d8-9150-f3cb30633d3e
-caps.latest.revision: "14"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 65b9276d3feea6e72f5404fa8f4d7eef963dbe78
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: a4ac2e0f44ee4d6361f0f91c47f4472de7c23756
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="reduce-geography-data-type-"></a>Reduce (type de données geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -47,7 +50,7 @@ ms.lasthandoff: 11/17/2017
 |||  
 |-|-|  
 |Terme|Définition|  
-|*tolérance de panne*|Est une valeur de type **float**. *la tolérance de panne* est la tolérance à entrer à l’algorithme de Douglas-Peucker. *la tolérance de panne* doit être un nombre positif.|  
+|*tolerance*|Est une valeur de type **float**. *la tolérance de panne* est la tolérance à entrer à l’algorithme de Douglas-Peucker. *la tolérance de panne* doit être un nombre positif.|  
   
 ## <a name="return-types"></a>Types de retour  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]type de retour : **geography**  

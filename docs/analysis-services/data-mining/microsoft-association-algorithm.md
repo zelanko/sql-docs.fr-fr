@@ -2,15 +2,13 @@
 title: Algorithme Microsoft Association | Documents Microsoft
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
 ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -34,19 +32,20 @@ helpviewer_keywords:
 - MINIMUM_ITEMSET_SIZE
 - MaximumItemsetSize property
 ms.assetid: 8b6b8247-62f9-4f6f-b1af-d01dab290e4c
-caps.latest.revision: "55"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 8b53b106e81fd161696d05d95d2669ca899a3034
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 2deac725bc544b305f9207e2538981bfdea3df46
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="microsoft-association-algorithm"></a>Algorithme Microsoft Association
-  L’algorithme [!INCLUDE[msCoName](../../includes/msconame-md.md)] Association est un algorithme qui est souvent utilisé pour les moteurs de recommandation. Un moteur de recommandation recommande des éléments aux clients en se basant sur ceux qu’ils ont déjà achetés ou pour lesquels ils ont manifesté un intérêt. L’algorithme [!INCLUDE[msCoName](../../includes/msconame-md.md)] Association est utile également pour l’analyse du panier d’achat.   
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+L’algorithme [!INCLUDE[msCoName](../../includes/msconame-md.md)] Association est un algorithme qui est souvent utilisé pour les moteurs de recommandation. Un moteur de recommandation recommande des éléments aux clients en se basant sur ceux qu’ils ont déjà achetés ou pour lesquels ils ont manifesté un intérêt. L’algorithme [!INCLUDE[msCoName](../../includes/msconame-md.md)] Association est utile également pour l’analyse du panier d’achat.   
   
  Des modèles d'association sont générés sur les jeux de données qui contiennent des identificateurs pour les cas individuels et pour les éléments que les cas contiennent. Un groupe d’éléments dans un cas est appelé un *jeu d’éléments*. Un modèle d'association se compose d'une série de jeux d'éléments et de règles qui décrivent la manière dont ces éléments sont groupés au sein des cas. Les règles que l'algorithme identifie peuvent être utilisées pour prévoir les prochains achats d'un client, en fonction des éléments déjà présents dans le panier d'achat du client. Le diagramme ci-dessous montre une série de règles dans un jeu d'éléments.  
   
@@ -78,7 +77,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="viewing-an-association-model"></a>Affichage d'un modèle d'association  
  Pour explorer le modèle, vous pouvez utiliser la **Visionneuse d’associations Microsoft**. Quand vous affichez un modèle d’association, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] présente les corrélations sous différents angles afin que vous puissiez mieux comprendre les relations et les règles qui ont été identifiées dans les données. Le volet **Jeu d’éléments** dans la visionneuse fournit une répartition détaillée des combinaisons les plus communes, ou jeux d’éléments. Le volet **Règles** présente une liste des règles qui ont été généralisées à partir des données, ajoute des calculs de probabilité et classe les règles par importance relative. La visionneuse du réseau de dépendance vous permet d'explorer visuellement les connexions entre les différents éléments individuels. Pour plus d’informations, consultez [Explorer un modèle à l’aide de Microsoft Cluster Viewer](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-cluster-viewer.md).  
   
- Si vous voulez en savoir plus sur les jeux d’éléments et les règles, vous pouvez parcourir le modèle dans la [Visionneuse de l’arborescence de contenu générique Microsoft](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-generic-content-tree-viewer.md). Le contenu stocké pour le modèle inclut la prise en charge de chaque jeu d'éléments, un score pour chaque règle et d'autres statistiques. Pour plus d’informations, consultez [Contenu du modèle d’exploration de données pour les modèles d’association &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/mining-model-content-for-association-models-analysis-services-data-mining.md).  
+ Si vous voulez en savoir plus sur les jeux d’éléments et les règles, vous pouvez parcourir le modèle dans la [Visionneuse de l’arborescence de contenu générique Microsoft](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-generic-content-tree-viewer.md). Le contenu stocké pour le modèle inclut la prise en charge de chaque jeu d'éléments, un score pour chaque règle et d'autres statistiques. Pour plus d’informations, consultez [Mining Model Content for Association Models &#40;Analysis Services - Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-for-association-models-analysis-services-data-mining.md).  
   
 ## <a name="creating-predictions"></a>Création de prédictions  
  Une fois le modèle traité, vous pouvez utiliser les règles et les jeux d'éléments pour faire des prédictions. Dans un modèle d'association, une prédiction indique quel élément est susceptible de se produire en fonction de la présence de l'élément spécifié. La prédiction peut inclure des informations telles que la probabilité, la prise en charge ou l'importance. Pour obtenir des exemples de création de requêtes sur un modèle d’association, consultez [Exemples de requêtes de modèle d’association](../../analysis-services/data-mining/association-model-query-examples.md).  
@@ -105,10 +104,10 @@ ms.lasthandoff: 11/17/2017
 -   Prend en charge la création de dimensions d'exploration de données.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Algorithmes d’exploration de données &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [Algorithmes d’exploration de données &#40; Analysis Services - Exploration de données &#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
  [Parcourir un modèle à l’aide de la visionneuse de règles Microsoft Association](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-association-rules-viewer.md)   
  [Contenu du modèle d’exploration de données pour les modèles d’Association &#40; Analysis Services - Exploration de données &#41;](../../analysis-services/data-mining/mining-model-content-for-association-models-analysis-services-data-mining.md)   
  [Référence technique d’algorithme Microsoft Association](../../analysis-services/data-mining/microsoft-association-algorithm-technical-reference.md)   
- [Exemples de requêtes de modèle d’association](../../analysis-services/data-mining/association-model-query-examples.md)  
+ [Exemples de requêtes de modèle association](../../analysis-services/data-mining/association-model-query-examples.md)  
   
   

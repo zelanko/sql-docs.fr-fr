@@ -2,26 +2,31 @@
 title: "Restauration fragmentaire de bases de données avec des tables mémoire optimisées | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: in-memory-oltp
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine-imoltp
+ms.suite: sql
+ms.technology:
+- database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 732c9721-8dd4-481d-8ff9-1feaaa63f84f
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: JennieHubbard
 ms.author: jhubbard
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 670261fb38410ae0b3b78b39d8502fcc4baae674
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: a05251d1dacc28b837dc32f7adedcd42274ffc05
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="piecemeal-restore-of-databases-with-memory-optimized-tables"></a>Restauration fragmentaire de bases de données avec des tables mémoire optimisées
-  La restauration fragmentaire est prise en charge sur les bases de données avec des tables mémoire optimisées, à l'exception d'une restriction décrite ci-dessous. Pour plus d’informations sur la sauvegarde et restauration fragmentaires, consultez [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md) et [Restaurations fragmentaires &#40;SQL Server&#41;](../../relational-databases/backup-restore/piecemeal-restores-sql-server.md).  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+La restauration fragmentaire est prise en charge sur les bases de données avec des tables mémoire optimisées, à l'exception d'une restriction décrite ci-dessous. Pour plus d’informations sur la sauvegarde et restauration fragmentaires, consultez [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md) et [Restaurations fragmentaires &#40;SQL Server&#41;](../../relational-databases/backup-restore/piecemeal-restores-sql-server.md).  
   
  Un groupe de fichiers mémoire optimisé doit être sauvegardé et restauré avec le groupe de fichiers principal.  
   
@@ -78,7 +83,7 @@ backup database imoltp filegroup='primary', filegroup='imoltp_mod' to disk='c:\d
 backup database imoltp filegroup='imoltp_secondary' to disk='c:\data\imoltp_secondary.dmp' with init  
 ```  
   
-### <a name="restore"></a>Restore  
+### <a name="restore"></a>Restaurer  
  Cet exemple montre comment restaurer le groupe de fichiers principal et le groupe de fichiers mémoire optimisé ensemble.  
   
 ```  
@@ -98,7 +103,7 @@ FROM  DISK = N'c:\data\imoltp_secondary.dmp' WITH  FILE = 1,  RECOVERY,  NOUNLOA
 GO  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Sauvegarder, restaurer et récupérer des tables optimisées en mémoire](http://msdn.microsoft.com/library/3f083347-0fbb-4b19-a6fb-1818d545e281)  
   
   

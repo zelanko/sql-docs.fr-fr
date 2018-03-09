@@ -1,5 +1,5 @@
 ---
-title: Catalog.set_execution_property_override_value | Documents Microsoft
+title: catalog.set_execution_property_override_value | Microsoft Docs
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -13,17 +13,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 37cb3c01-f4c0-4978-8e40-a975456def5a
-caps.latest.revision: 4
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 20f2c882a78f5e60931b0152d5877898e1972d0a
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 2b127fe80d88d05c3f1f56e7c355d7a24f3abd6a
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="catalogsetexecutionpropertyoverridevalue"></a>catalog.set_execution_property_override_value
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -40,31 +39,31 @@ catalog.set_execution_property_override_value [ @execution_id = execution_id
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [ @execution_id =] *execution_id*  
- Identificateur unique de l'instance d'exécution. Le *execution_id* est **bigint**.  
+ [ @execution_id = ] *execution_id*  
+ Identificateur unique de l'instance d'exécution. *execution_id* est de type **bigint**.  
   
- [ @property_path =] *property_path*  
- Chemin d'accès à la propriété dans le package. Le *property_path* est **nvarchar (4000)**.  
+ [ @property_path = ] *property_path*  
+ Chemin d'accès à la propriété dans le package. *property_path* est de type **nvarchar(4000)**.  
   
- [ @property_value =] *property_value*  
- Valeur de remplacement à affecter à la propriété. Le *property_value* est **nvarchar (max)**.  
+ [ @property_value = ] *property_value*  
+ Valeur de remplacement à affecter à la propriété. *property_value* est de type **nvarchar(max)**.  
   
- [ @sensitive =] *sensibles*  
- Lorsque la valeur est 1, la propriété est sensible et est chiffrée lorsqu'elle est stockée. Lorsque la valeur est 0, la propriété n'est pas sensible et la valeur est stockée dans en texte en clair. Le *sensibles* argument est **bits**.  
+ [ @sensitive = ] *sensitive*  
+ Lorsque la valeur est 1, la propriété est sensible et est chiffrée lorsqu'elle est stockée. Lorsque la valeur est 0, la propriété n'est pas sensible et la valeur est stockée dans en texte en clair. L’argument *sensitive* est de type **bit**.  
   
-## <a name="remarks"></a>Notes  
- Cette procédure effectue la même fonction que la **substitutions de propriété** section dans le **avancé** onglet de la **exécuter le Package** boîte de dialogue. Le chemin d’accès à la propriété est dérivée de la **chemin d’accès du Package** propriété de la tâche du package.  
+## <a name="remarks"></a>Notes   
+ Cette procédure remplit la même fonction que la section **Substitutions de propriété** sous l’onglet **Avancé** de la boîte de dialogue **Exécuter le package**. Le chemin d’accès de la propriété est dérivé de la propriété **Chemin d’accès au package** de la tâche du package.  
   
-## <a name="return-code-value"></a>Valeur de Code de retour  
+## <a name="return-code-value"></a>Valeur du code de retour  
  0 (succès)  
   
 ## <a name="result-sets"></a>Jeux de résultats  
- Aucune  
+ None  
   
 ## <a name="errors-and-warnings"></a>Erreurs et avertissements  
  La liste suivante décrit quelques conditions qui peuvent générer une erreur ou un avertissement :  
   
--   L’utilisateur ne dispose pas des autorisations appropriées  
+-   L’utilisateur n’a pas les autorisations appropriées  
   
 -   L'identificateur d'exécution n'est pas valide.  
   
@@ -72,8 +71,7 @@ catalog.set_execution_property_override_value [ @execution_id = execution_id
   
 -   Le type de données de la valeur de propriété ne correspond pas au type de propriété.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [catalog.set_execution_parameter_value &#40;base de données SSISDB&#41;](../../integration-services/system-stored-procedures/catalog-set-execution-parameter-value-ssisdb-database.md)  
   
   
-

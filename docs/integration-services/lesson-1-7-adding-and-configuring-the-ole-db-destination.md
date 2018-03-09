@@ -1,11 +1,11 @@
 ---
-title: "Étape 7 : Ajout et configuration de la Destination OLE DB | Documents Microsoft"
+title: "Étape 7 : Ajout et configuration de la destination OLE DB | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
 ms.technology:
@@ -15,19 +15,18 @@ ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
 ms.assetid: 442c841d-d528-4bf0-8724-7156f909ee50
-caps.latest.revision: 24
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: e50d2f6d1622cc124cf8b55fbd1ae14811d5cc9c
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 125045500038af764f10ec3746ade7e7069a4817
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="lesson-1-7---adding-and-configuring-the-ole-db-destination"></a>Leçon 1-7 : ajout et configuration de la Destination OLE DB
+# <a name="lesson-1-7---adding-and-configuring-the-ole-db-destination"></a>Leçon 1-7 : Ajout et configuration de la destination OLE DB
 Votre package peut maintenant extraire des données à partir de la source de fichier plat pour les transformer dans un format compatible avec la destination. La tâche suivante consiste à charger les données transformées dans la destination. Pour charger les données, vous devez ajouter une destination OLE DB au flux de données. La destination OLE DB peut utiliser une table de base de données, un affichage ou une commande SQL pour charger les données dans plusieurs bases de données compatibles OLE DB.  
   
 Au cours de cette procédure, vous allez ajouter et configurer une destination OLE DB pour utiliser le Gestionnaire de connexions OLE DB que vous avez créé précédemment.  
@@ -65,9 +64,8 @@ Au cours de cette procédure, vous allez ajouter et configurer une destination O
 ## <a name="next-task-in-lesson"></a>Tâche suivante de la leçon  
 [Étape 8 : comment rendre le package de la leçon 1 plus facile à assimiler](../integration-services/lesson-1-8-making-the-lesson-1-package-easier-to-understand.md)  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [Destination OLE DB](../integration-services/data-flow/ole-db-destination.md)  
   
   
   
-

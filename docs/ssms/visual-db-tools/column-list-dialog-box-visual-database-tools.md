@@ -3,8 +3,11 @@ title: "Liste des colonnes, boîte de dialogue (Visual Database Tools) | Microso
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -13,16 +16,16 @@ ms.assetid: 9ebd08b6-fa93-4581-bb6c-96b51d2c895c
 caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bcc0686b1d0cca66764bde9dffe7ab725fd6e50f
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 12131847bea81558f979516b413c9e6db0e2ecc7
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="column-list-dialog-box-visual-database-tools"></a>Boîte de dialogue Liste des colonnes (Visual Database Tools)
-Lors de l'écriture de requêtes, il peut être utile de consulter la liste des colonnes disponibles dans les objets tables que vous avez sélectionnés.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Lors de l’écriture de requêtes, il peut être utile de consulter la liste des colonnes disponibles dans les objets tables que vous avez sélectionnés.  
   
 Pour accéder à cette boîte de dialogue, dans le volet **Schéma** du menu Concepteur de requêtes, cliquez avec le bouton droit sur l’en-tête d’un objet table puis cliquez sur **Propriétés**. Dans la fenêtre **Propriétés** , cliquez sur le champ **Liste des colonnes** . Ensuite, cliquez sur le bouton de sélection **(...)** situé à droite du champ.  
   
@@ -38,6 +41,6 @@ Affiche les types de données de chaque colonne contenue dans l'objet table sél
 **Propriétés du type de données**  
 Affiche les propriétés du type de données de chaque colonne contenue dans l'objet table sélectionné. Vous avez le choix entre NULLABLE, IDENTITY, ROWGUID et une valeur vierge.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [Rubriques de procédures relatives à la conception de requêtes et de vues &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
   

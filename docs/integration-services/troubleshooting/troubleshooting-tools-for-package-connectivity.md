@@ -1,5 +1,5 @@
 ---
-title: "Outils de dépannage pour la connectivité des packages | Documents Microsoft"
+title: "Outils de dépannage de la connectivité des packages | Microsoft Docs"
 ms.custom: 
 ms.date: 03/02/2017
 ms.prod: sql-non-specified
@@ -20,17 +20,16 @@ helpviewer_keywords:
 - errors [Integration Services], troubleshooting
 - packages [Integration Services], troubleshooting
 ms.assetid: 08a019f5-8ba7-4527-97c1-e9846d4022ff
-caps.latest.revision: 13
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: e3799e224930806445bc1c27f37c05b95a0bbbae
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 223023cae5ba0ca6ac2fab8298334547875ab4d2
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="troubleshooting-tools-for-package-connectivity"></a>Outils de dépannage de la connectivité des packages
 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] inclut des fonctionnalités et des outils que vous pouvez utiliser pour dépanner la connectivité entre les packages et les sources de données à partir desquelles les packages extraient et chargent des données.  
@@ -42,7 +41,7 @@ ms.lasthandoff: 08/03/2017
   
     -   Gestionnaire de connexions OLE DB, source OLE DB et destination OLE DB  
   
-    -   [!INCLUDE[vstecado](../../includes/vstecado-md.md)]Gestionnaire de connexions et source ADO NET  
+    -   Gestionnaire de connexions [!INCLUDE[vstecado](../../includes/vstecado-md.md)] et source ADO NET  
   
     -   Tâche d'exécution de requêtes SQL  
   
@@ -76,9 +75,8 @@ ms.lasthandoff: 08/03/2017
     ExternalRequest_post: 'IDbConnection.Close finished'. The external request has completed."  
     ```  
   
-## <a name="see-also"></a>Voir aussi  
- [Outils de dépannage pour le développement de packages](../../integration-services/troubleshooting/troubleshooting-tools-for-package-development.md)   
- [Outils de dépannage pour l’exécution du Package](../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md)  
+## <a name="see-also"></a> Voir aussi  
+ [Outils de dépannage pour le développement des packages](../../integration-services/troubleshooting/troubleshooting-tools-for-package-development.md)   
+ [Outils de dépannage pour l’exécution des packages](../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md)  
   
   
-

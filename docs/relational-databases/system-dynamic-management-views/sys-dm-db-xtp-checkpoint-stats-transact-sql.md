@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_db_xtp_checkpoint_stats (Transact-SQL) | Documents Microsoft
+title: sys.dm_db_xtp_checkpoint_stats (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/20/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine-imoltp
+ms.technology:
+- database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - dm_db_xtp_checkpoint_stats_TSQL
 - sys.dm_db_xtp_checkpoint_stats
 - sys.dm_db_xtp_checkpoint_stats_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_db_xtp_checkpoint_stats dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_db_xtp_checkpoint_stats dynamic management view
 ms.assetid: 8d0b18ca-db4d-4376-9905-3e4457727c46
-caps.latest.revision: "26"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2a9dff499f4e0fd7182ee7d018532a386233f42c
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: a3bce2f4337894c86e251e53c9fc0546f2e69253
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmdbxtpcheckpointstats-transact-sql"></a>sys.dm_db_xtp_checkpoint_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -49,7 +52,7 @@ SELECT * FROM db.sys.dm_db_xtp_checkpoint_stats;
 |Nom de colonne|Type| Description|  
 |-----------------|----------|-----------------|  
 |last_lsn_processed|**bigint**|Dernier NSE détecté par le contrôleur.|  
-|end_of_log_lsn|**NUMERIC(38)**|Le LSN de la fin du journal.|  
+|end_of_log_lsn|**numeric(38)**|Le LSN de la fin du journal.|  
 |bytes_to_end_of_log|**bigint**|Octets non traitées par le contrôleur, correspondant à des octets entre les journal `last_lsn_processed` et `end_of_log_lsn`.|  
 |log_consumption_rate|**bigint**|Taux de consommation de journal des transactions par le contrôleur (en Ko/s).|  
 |active_scan_time_in_ms|**bigint**|Temps passé par le contrôleur d’analyser activement le journal des transactions.|  
@@ -67,10 +70,10 @@ SELECT * FROM db.sys.dm_db_xtp_checkpoint_stats;
 |xtp_log_bytes_consumed|**bigint**|Nombre total d’octets du journal utilisé depuis le redémarrage de la base de données.|  
 |checkpoints_closed|**bigint**|Nombre de points de contrôle fermés depuis le redémarrage de la base de données.|  
 |last_closed_checkpoint_ts|**bigint**|Horodatage du dernier point de contrôle fermé.|  
-|hardened_recovery_lsn|**NUMERIC(38)**|Récupération démarre à partir de LSN.|  
+|hardened_recovery_lsn|**numeric(38)**|Récupération démarre à partir de LSN.|  
 |hardened_root_file_guid|**uniqueidentifier**|GUID du fichier racine qui renforcé à la suite du dernier point de contrôle terminé.|  
 |hardened_root_file_watermark|**bigint**|**Interne uniquement**. Combien il est valide pour lire le fichier racine jusqu'à (c’est un type pertinente en interne uniquement-appelée BSN).|  
-|hardened_truncation_lsn|**NUMERIC(38)**|LSN du point de troncature.|  
+|hardened_truncation_lsn|**numeric(38)**|LSN du point de troncature.|  
 |log_bytes_since_last_close|**bigint**|Octets à partir du dernier fermer à la fin actuelle du journal.|  
 |time_since_last_close_in_ms|**bigint**|Heure depuis la dernière fermeture du point de contrôle.|  
 |current_checkpoint_id|**bigint**|Actuellement des segments ont été affectés à ce point de contrôle. Le système de point de contrôle est un pipeline. Le point de contrôle actuel est celui qui segments à partir du journal sont assignées à. Une fois qu’il a atteint une limite, le point de contrôle est libéré par le contrôleur et une création en cours.|  
@@ -80,7 +83,7 @@ SELECT * FROM db.sys.dm_db_xtp_checkpoint_stats;
 |closing_checkpoint_id|**bigint**|ID du point de contrôle de fermeture.<br /><br /> Utilisation de sérialiseurs en parallèle, par conséquent, une fois qu’ils ont fini le point de contrôle est un candidat à être fermée par le thread de fermeture. Mais le thread de fermeture peut fermer uniquement à la fois et il doit être dans l’ordre, de sorte que le point de contrôle de fermeture est celui qui travaille sur le thread de fermeture.|  
 |recovery_checkpoint_id|**bigint**|ID du point de contrôle à utiliser en mode de récupération.|  
 |recovery_checkpoint_ts|**bigint**|Horodatage du point de contrôle de la récupération.|  
-|bootstrap_recovery_lsn|**NUMERIC(38)**|LSN de récupération pour le programme d’amorçage.|  
+|bootstrap_recovery_lsn|**numeric(38)**|LSN de récupération pour le programme d’amorçage.|  
 |bootstrap_root_file_guid|**uniqueidentifier**|GUID du fichier racine pour le programme d’amorçage.|  
 |internal_error_code|**bigint**|Erreur lors de la vue par le contrôleur, le sérialiseur, fermez, et la fusion threads.|
 |bytes_of_large_data_serialized|**bigint**|La quantité de données qui a été sérialisées. |  
@@ -101,12 +104,12 @@ SELECT * FROM db.sys.dm_db_xtp_checkpoint_stats;
 |new_log_wait_time_in_ms|**bigint**|Durée cumulative d'attente du nouveau journal.|  
 |log_generated_since_last_checkpoint_in_bytes|**bigint**|Nombre d'entrées de journal générées depuis le dernier point de contrôle de l'OLTP en mémoire.|  
 |ms_since_last_checkpoint|**bigint**|Durée en millisecondes depuis le dernier point de contrôle de l'OLTP en mémoire.|  
-|checkpoint_lsn|**numérique (38)**|Numéro séquentiel dans le journal (LSN) de récupération associé au dernier point de vérification de l'OLTP en mémoire terminé.|  
-|current_lsn|**numérique (38)**|Numéro séquentiel dans le journal de l'enregistrement de journal en cours de traitement.|  
-|end_of_log_lsn|**numérique (38)**|Numéro séquentiel dans le journal à la fin du journal.|  
-|task_address|**varbinary (8)**|Adresse de SOS_Task. Jointure à sys.dm_os_tasks pour rechercher des informations supplémentaires.|  
+|checkpoint_lsn|**numeric (38)**|Numéro séquentiel dans le journal (LSN) de récupération associé au dernier point de vérification de l'OLTP en mémoire terminé.|  
+|current_lsn|**numeric (38)**|Numéro séquentiel dans le journal de l'enregistrement de journal en cours de traitement.|  
+|end_of_log_lsn|**numeric (38)**|Numéro séquentiel dans le journal à la fin du journal.|  
+|task_address|**varbinary(8)**|Adresse de SOS_Task. Jointure à sys.dm_os_tasks pour rechercher des informations supplémentaires.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l'autorisation `VIEW DATABASE STATE` sur le serveur.  
   
 ## <a name="see-also"></a>Voir aussi  

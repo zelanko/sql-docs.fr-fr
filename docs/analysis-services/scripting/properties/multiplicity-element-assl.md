@@ -2,32 +2,32 @@
 title: "Élément Multiplicity (ASSL) | Documents Microsoft"
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: scripting
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 ms.assetid: 441e3829-9009-4b32-a8c6-fa580663387f
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 2483225abebeb66fe691ee11e33f1322a3f10dc0
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 9aa018ac9f692eac5de76743fb2d74c0d9832e56
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="multiplicity-element-assl"></a>Élément Multiplicity (ASSL)
-  Indique si les attributs du RelationshipEnd sont sur le côté « un » ou sur le côté « plusieurs » d'une relation.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+Indique si les attributs du RelationshipEnd sont sur le côté « un » ou sur le côté « plusieurs » d'une relation.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -60,8 +60,8 @@ ms.lasthandoff: 11/17/2017
   
 |Valeur| Description|  
 |-----------|-----------------|  
-|*Une*|Fin de clé primaire.|  
-|*Nombreux*|Fin de clé étrangère.|  
+|*une*|Fin de clé primaire.|  
+|*Many*|Fin de clé étrangère.|  
   
  L’énumération qui correspond aux valeurs autorisées pour **rôle** dans l’objet d’objets AMO (Analysis Management) est modèle <xref:Microsoft.AnalysisServices.Multiplicity>.  
   

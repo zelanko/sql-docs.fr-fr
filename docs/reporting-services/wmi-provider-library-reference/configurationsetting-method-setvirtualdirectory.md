@@ -8,23 +8,21 @@ ms.service:
 ms.component: wmi-provider-library-reference
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords: SetVirtualDirectory method
 ms.assetid: 1a25cb1d-38d5-401a-970b-87b642a780e4
 caps.latest.revision: "11"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 7570580e2de5c85dfe600fa6ae35daf8704d9622
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: f94837f98c1b2e2b97c9acac256470d1978d873d
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="configurationsetting-method---setvirtualdirectory"></a>Méthode ConfigurationSetting - SetVirtualDirectory
   Définit le nom du répertoire virtuel pour une application donnée.  
@@ -61,7 +59,7 @@ public void SetVirtualDirectory(string Application, string VirtualDirectory,
 ## <a name="return-value"></a>Valeur retournée  
  Retourne un paramètre *HRESULT* qui indique si l'appel de la méthode a réussi ou a échoué. La valeur 0 indique que l'appel de la méthode a abouti ; un code d'erreur indique que l'appel n'a pas abouti.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Une application ne peut avoir qu'un seul nom de répertoire virtuel pour toutes les réservations d'URL.  
   
  VirtualDirectory doit être conforme aux conventions d'affectation des noms pour les répertoires virtuels. VirtualDirectory ne doit pas être une chaîne vide ou contenant uniquement un espace.  
@@ -71,7 +69,7 @@ public void SetVirtualDirectory(string Application, string VirtualDirectory,
 ## <a name="requirements"></a>Spécifications  
  **Espace de noms :** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Membres MSReportServer_ConfigurationSetting](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  
   
   

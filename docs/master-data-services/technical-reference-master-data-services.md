@@ -5,23 +5,24 @@ ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
 ms.service: 
-ms.component: master-data-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
-ms.technology: master-data-services
+ms.technology:
+- master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 54865b00-563a-4932-ad4d-cbfd36b1e6c5
-caps.latest.revision: "12"
-author: smartysanthosh
-ms.author: nagavo
+caps.latest.revision: 
+author: leolimsft
+ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 95839d7bd9ceab28a5cb4e0921b6e4e8711a69b7
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 6b1db97422c0b39f78dc3a59e2e6d44c41f7695f
+ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="technical-reference-master-data-services"></a>Référence technique (Master Data Services)
   Recherchez des informations de référence technique sur les composants [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .  
@@ -29,6 +30,6 @@ ms.lasthandoff: 11/20/2017
  
 -   [Base de données Master Data Services](../master-data-services/master-data-services-database.md)  
   
--   [Application Web Master Data Manager](../master-data-services/master-data-manager-web-application.md)  
+-   [Application web Master Data Manager](../master-data-services/master-data-manager-web-application.md)  
   
   

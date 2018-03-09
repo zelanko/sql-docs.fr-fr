@@ -8,20 +8,20 @@ ms.service:
 ms.component: install-windows
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: reporting-services-sharepoint
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: c2804a9a-08ea-4f4a-805d-a2c19c68733d
 caps.latest.revision: "15"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: f2d4daa75f8a339b1b0c83d7920b770e80f44525
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 7c5db49ed18a5c025b1f237b59ca78ca5fbdbf71
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="install-or-uninstall-the-reporting-services-add-in-for-sharepoint"></a>Installer ou désinstaller le complément Reporting Services pour SharePoint
 
@@ -81,7 +81,7 @@ Rssharepoint.msi /?
   
      `%program files%\common files\Microsoft Shared\Web Server Extensions\15\` (SharePoint 2013)
   
-     ou  
+     ou Gestionnaire de configuration  
   
      `%program files%\common files\Microsoft Shared\Web Server Extensions\16\` (SharePoint 2016)  
   
@@ -98,7 +98,7 @@ Rssharepoint.msi /?
     Msiexec.exe /i rsSharePoint.msi SKIPCA=1  
     ```  
   
- L'interface utilisateur du programme d'installation s'ouvre et s'exécute normalement et le fichier **rsCustomAction.exe** est installé. Toutefois, le fichier .exe ne sera pas exécuté à la fin de l'installation et **rsCustomAction.exe** sera conservé sur l'ordinateur.  
+ L'interface utilisateur du programme d'installation s'ouvre et s'exécute normalement et le fichier **rsCustomAction.exe** est installé. Toutefois, le fichier .exe ne sera pas exécuté à la fin de l’installation et **rsCustomAction.exe** sera conservé sur l’ordinateur.  
   
 ### <a name="use-a-two-step-installation-to-troubleshoot-installation-issues"></a>Utiliser une installation en deux étapes pour résoudre les problèmes d'installation  
  Si vous obtenez des erreurs pendant l'installation, vous pouvez exécuter le programme d'installation comme un processus en deux étapes à partir de la ligne de commande :  
@@ -248,7 +248,7 @@ Rssharepoint.msi /?
     Get-content -path C:\Users\<UserName\AppData\Local\Temp\rs_sp_0.log | select-string "ssrscustomactionerror"  
     ```  
   
-2.  La sortie ressemble à l'exemple suivant :  
+2.  La sortie ressemble à l'exemple suivant :  
   
      `2011-05-23 12:40:12: SSRSCustomActionError: SharePoint is installed, but not configured`.  
   
@@ -275,7 +275,7 @@ Rssharepoint.msi /?
 ## <a name="configuring-reporting-services"></a>configuration de Reporting Services  
  Après avoir installé le complément sur les ordinateurs appropriés, configurez le serveur de rapports à partir de l'Administration centrale de SharePoint. Les étapes nécessaires dépendent de l'ordre dans lequel les différentes technologies ont été installées. Pour plus d’informations, consultez [Installer le premier serveur de rapports en mode SharePoint](http://msdn.microsoft.com/en-us/b29d0f45-0068-4c84-bd7e-5b8a9cd1b538) and [Serveur de rapports Reporting Services &#40;mode SharePoint&#41;](../../reporting-services/report-server-sharepoint/reporting-services-report-server-sharepoint-mode.md)  
   
-## <a name="see-also"></a>Voir aussi
+## <a name="see-also"></a> Voir aussi
 
 [Installer le premier serveur de rapports en mode SharePoint](http://msdn.microsoft.com/en-us/b29d0f45-0068-4c84-bd7e-5b8a9cd1b538)   
 [Serveur de rapports Reporting Services &#40;mode SharePoint&#41;](../../reporting-services/report-server-sharepoint/reporting-services-report-server-sharepoint-mode.md)  

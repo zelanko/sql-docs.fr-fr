@@ -3,10 +3,10 @@ title: "Téléchargez et appliquez les mises à jour Microsoft (système de plat
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.technology: mpp-data-warehouse
 ms.custom: 
 ms.date: 01/05/2017
@@ -16,11 +16,11 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 4f69df44-8549-4a8a-b10c-f91908594856
 caps.latest.revision: "51"
-ms.openlocfilehash: 806b7fd790244963d878038a3c3c291c387ebb1e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 7c91a5ed97d5aedfa456fd63e16c0178c5241706
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="download-and-apply-microsoft-updates"></a>Téléchargez et appliquez les mises à jour Microsoft
 Cette rubrique explique comment télécharger les mises à jour à partir du catalogue Microsoft Update pour Windows Server Update Services (WSUS) et appliquer ces mises à jour sur les serveurs de matériel système Analytique de la plateforme. Microsoft Update va installer toutes les mises à jour pour Windows et SQL Server. WSUS est installé sur l’ordinateur virtuel VMM de l’application.  
@@ -32,7 +32,7 @@ Cette rubrique explique comment télécharger les mises à jour à partir du cat
 >   
 > N’appliquez pas de Microsoft Updates pendant que l’appareil est en cours d’utilisation. Mise à jour peut entraîner des nœuds de dispositifs de redémarrer. Les mises à jour doivent être appliquées pendant une fenêtre de maintenance lorsque l’application n’est pas utilisée.  
   
-### <a name="prerequisites"></a>Conditions préalables  
+### <a name="prerequisites"></a>Prerequisites  
 Avant d’effectuer ces étapes, vous devez :  
   
 -   Configurer WSUS sur votre appareil en suivant les instructions dans [configurer Windows Server Update Services &#40; WSUS &#41; &#40; Système de plateforme Analytique &#41; ](configure-windows-server-update-services-wsus.md).  

@@ -2,13 +2,13 @@
 title: "Didacticiels d’exploration de données (Analysis Services) | Documents Microsoft"
 ms.custom: 
 ms.date: 05/06/2016
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology: analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to: SQL Server 2016
@@ -19,13 +19,15 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 39db9f015ef3c52d5e967bdb6c45a47f8b7bd40f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 0e1c600dddc4ab87c0f5290d90fdecda49f95045
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="data-mining-tutorials-analysis-services"></a>Didacticiels sur l'exploration de données (Analysis Services)
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] facilite la création de solutions d’exploration de données à l’aide des Assistants et des visualisations intégrées. En particulier si vous ne connaissez pas le Machine Learning, les outils de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] constituent un moyen facile de concevoir, former et explorer des modèles d’exploration de données. Les données de vos modèles peuvent être stockées dans un cube, une base de données relationnelle ou tout autre support source par [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Après avoir créé un modèle, vous pouvez le mettre en production en accédant au modèle pour créer des prédictions à l’aide de plusieurs clients de prédiction, notamment [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] et ASP.NET.  
   
 > [!NOTE]  

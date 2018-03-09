@@ -2,10 +2,14 @@
 title: "Comparer du XML typé et du XML non typé | Microsoft Docs"
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: xml
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-xml
+ms.suite: sql
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -24,19 +28,20 @@ helpviewer_keywords:
 - XML [SQL Server], untyped
 - xml data type [SQL Server], parameters
 ms.assetid: 4bc50af9-2f7d-49df-bb01-854d080c72c7
-caps.latest.revision: "57"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 80233d9013231c07cb1f9236f357f2ca30622995
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: b40976e2a8efdaf0b41ede4f79786060b7e1163c
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="compare-typed-xml-to-untyped-xml"></a>Comparer du XML typé et du XML non typé
-  Vous pouvez créer des variables, des paramètres et des colonnes du type **xml** . Vous pouvez éventuellement associer une collection de schémas XML à une variable, un paramètre ou une colonne de type **xml** . Dans ce cas, l'instance de type de données **xml** est dite *typée*. Dans le cas contraire, l'instance XML est dite *non typée*.  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+Vous pouvez créer des variables, des paramètres et des colonnes du type **xml** . Vous pouvez éventuellement associer une collection de schémas XML à une variable, un paramètre ou une colonne de type **xml** . Dans ce cas, l'instance de type de données **xml** est dite *typée*. Dans le cas contraire, l'instance XML est dite *non typée*.  
   
 ## <a name="well-formed-xml-and-the-xml-data-type"></a>Code XML bien formé et le type de données xml  
  Le type de données **xml** implémente le type de données **xml** de norme ISO. Par conséquent, il peut stocker des documents bien formés en conformité avec XML version 1.0, ainsi que des fragments de contenu XML avec des nœuds de texte et un nombre arbitraire d'éléments de premier niveau dans une colonne XML non typée. Le système vérifie que les données sont bien formées, n'exige pas l'association de schémas XML avec la colonne, puis rejette les données mal formées au sens large. Il peut aussi s'agir de variables et de paramètres XML non typés.  
@@ -71,7 +76,7 @@ ms.lasthandoff: 11/09/2017
  Dans les exemples suivants, une convention d'affectation des noms en deux parties est utilisée pour spécifier le nom de la collection de schémas XML. La première partie est le nom du schéma et la deuxième est le nom de la collection de schémas XML.  
   
 ### <a name="example-associating-a-schema-collection-with-an-xml-type-variable"></a>Exemple : association d'une collection de schémas à une variable de type xml  
- L’exemple suivant crée une variable de type**xml** et lui associe une collection de schémas. La collection de schémas spécifiée dans l'exemple est déjà importée dans la base de données **AdventureWorks** .  
+ L’exemple suivant crée une variable de type **xml** et lui associe une collection de schémas. La collection de schémas spécifiée dans l'exemple est déjà importée dans la base de données **AdventureWorks** .  
   
 ```  
 DECLARE @x xml (Production.ProductDescriptionSchemaCollection);   
@@ -158,9 +163,9 @@ declare @x xml (DOCUMENT Production.ProductDescriptionSchemaCollection);
   
  Notez que vous pouvez encore utiliser une simple instruction select SQL pour extraire le type de données XML entier, même s'il contient des années négatives. Il est recommandé de remplacer les années négatives par une année comprise dans la plage nouvellement prise en charge, ou de modifier le type de l'élément ou attribut en **xs:string**.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Créer des instances de données XML](../../relational-databases/xml/create-instances-of-xml-data.md)   
- [Méthodes des types de données xml](../../t-sql/xml/xml-data-type-methods.md)   
+ [méthodes de type de données xml](../../t-sql/xml/xml-data-type-methods.md)   
  [Langage de modification de données XML &#40;XML DML&#41;](../../t-sql/xml/xml-data-modification-language-xml-dml.md)   
  [Données XML &#40;SQL Server&#41;](../../relational-databases/xml/xml-data-sql-server.md)  
   

@@ -1,33 +1,31 @@
 ---
 title: "Créez un nouveau projet de modèle tabulaire (Analysis Services) | Documents Microsoft"
 ms.custom: 
-ms.date: 03/01/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.date: 02/22/2018
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 001bed84-f50f-4961-bc25-9906728d99ec
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 7c63f5ceb89e975cf320d9e84419d34a5fe4ecfc
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 65a4f062cb8ddc70c62853a448393e21607ec0ca
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/23/2018
 ---
-# <a name="create-a-new-tabular-model-project-analysis-services"></a>Créer un projet de modèle tabulaire (Analysis Services)
-  Cette rubrique décrit la procédure de création d’un nouveau projet de modèle tabulaire vide dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Une fois que le nouveau projet de modèle a été créé, vous pouvez commencer à créer votre projet de modèle en important des données à partir de sources de données.  
+# <a name="create-a-new-tabular-model-project"></a>Créer un projet de modèle tabulaire
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+Cet article décrit comment créer un projet de modèle tabulaire vide dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Une fois que le nouveau projet de modèle a été créé, vous pouvez commencer à créer votre projet de modèle en important des données à partir de sources de données.  
   
 #### <a name="to-create-a-new-blank-tabular-model-project"></a>Pour créer un projet de modèle tabulaire vide  
   
@@ -37,10 +35,10 @@ ms.lasthandoff: 11/17/2017
   
 3.  Pour le **Nom**, tapez un nom pour le projet, puis spécifiez un emplacement et le nom de la solution et cliquez sur **OK**.  
   
- Une fois votre projet créé, il est important de définir les propriétés du projet et du modèle. Pour plus d’informations, consultez [Propriétés de projet &#40;SSAS Tabulaire&#41;](../../analysis-services/tabular-models/project-properties-ssas-tabular.md) et [Propriétés de modèle &#40;SSAS Tabulaire&#41;](../../analysis-services/tabular-models/model-properties-ssas-tabular.md).  
+ Une fois votre projet créé, il est important de définir les propriétés du projet et du modèle. Pour plus d’informations, consultez [propriétés de projet](../../analysis-services/tabular-models/project-properties-ssas-tabular.md) et [des propriétés de modèle](../../analysis-services/tabular-models/model-properties-ssas-tabular.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Propriétés de projet &#40;SSAS Tabulaire&#41;](../../analysis-services/tabular-models/project-properties-ssas-tabular.md)   
- [Propriétés de modèle &#40;SSAS Tabulaire&#41;](../../analysis-services/tabular-models/model-properties-ssas-tabular.md)  
+ [Propriétés du projet](../../analysis-services/tabular-models/project-properties-ssas-tabular.md)   
+ [Propriétés d’un modèle](../../analysis-services/tabular-models/model-properties-ssas-tabular.md)  
   
   

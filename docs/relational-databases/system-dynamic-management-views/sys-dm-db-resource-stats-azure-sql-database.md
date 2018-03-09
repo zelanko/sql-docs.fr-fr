@@ -8,7 +8,8 @@ ms.reviewer:
 ms.service: sql-database
 ms.component: dmv's
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,21 +17,22 @@ f1_keywords:
 - sys.dm_db_resource_stats_TSQL
 - dm_db_resource_stats
 - dm_db_resource_stats_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - sys.dm_db_resource_stats
 - dm_db_resource_stats
 ms.assetid: 6e76b39f-236e-4bbf-b0b5-38be190d81e8
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: CarlRabeler
 ms.author: carlrab
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 41ae9665de08068d1bfa3ed919bbf43f55151a7c
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 606b871aeac34ac99d239ec4a84757187e00855f
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmdbresourcestats-azure-sql-database"></a>sys.dm_db_resource_stats (base de données Azure SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -43,7 +45,7 @@ ms.lasthandoff: 11/17/2017
 |avg_cpu_percent|**décimale (5,2)**|Utilisation moyenne du calcul en pourcentage de la limite de la couche de service.|  
 |avg_data_io_percent|**décimale (5,2)**|Moyenne des données d’utilisation des e/s de pourcentage de la limite de la couche de service.|  
 |avg_log_write_percent|**décimale (5,2)**|Utilisation moyenne de la ressource d'écriture en pourcentage de la limite de la couche de service.|  
-|avg_memory_percent|**décimale (5,2)**|Utilisation moyenne de la mémoire en pourcentage de la limite de la couche de service.<br /><br /> Cela inclut la mémoire utilisée pour le stockage d’objets de l’OLTP en mémoire.|  
+|avg_memory_usage_percent|**décimale (5,2)**|Utilisation moyenne de la mémoire en pourcentage de la limite de la couche de service.<br /><br /> Cela inclut la mémoire utilisée pour le stockage d’objets de l’OLTP en mémoire.|  
 |xtp_storage_percent|**décimale (5,2)**|Utilisation du stockage pour l’OLTP en mémoire en pourcentage de la limite de la couche de service (à la fin de l’intervalle de création de rapports). Cela inclut la mémoire utilisée pour le stockage des objets OLTP en mémoire suivants : tables optimisées en mémoire, les index et les variables de table. Il inclut également la mémoire utilisée pour le traitement des opérations ALTER TABLE.<br /><br /> Retourne 0 si l’OLTP en mémoire n’est pas utilisé dans la base de données.|  
 |max_worker_percent|**décimale (5,2)**|Traitements simultanés maximum (demandes) en pourcentage de la limite de niveau de service de la base de données.|  
 |max_session_percent|**décimale (5,2)**|Nombre maximal de sessions simultané en pourcentage de la limite de niveau de service de la base de données.|  
@@ -52,7 +54,7 @@ ms.lasthandoff: 11/17/2017
 > [!TIP]  
 >  Pour plus d’informations sur ces limites et les niveaux de service, consultez les rubriques [niveaux de Service](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/) et [les limites et les fonctionnalités de niveau de Service](https://azure.microsoft.com/documentation/articles/sql-database-performance-guidance/).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Cette vue nécessite l'autorisation VIEW DATABASE STATE.  
   
 ## <a name="remarks"></a>Notes  
@@ -104,7 +106,7 @@ FROM sys.dm_db_resource_stats;
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Sys.resource_stats &#40; Base de données SQL Azure &#41;](../../relational-databases/system-catalog-views/sys-resource-stats-azure-sql-database.md)   
+ [sys.resource_stats &#40;Azure SQL Database&#41;](../../relational-databases/system-catalog-views/sys-resource-stats-azure-sql-database.md)   
  [Niveaux de service](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/)   
  [Limites et des fonctions de niveau de Service](https://azure.microsoft.com/documentation/articles/sql-database-performance-guidance/)  
   

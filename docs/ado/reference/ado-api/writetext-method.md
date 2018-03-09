@@ -3,8 +3,9 @@ title: "Méthode WriteText | Documents Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,18 +16,19 @@ apitype: COM
 f1_keywords:
 - _Stream::raw_WriteText
 - _Stream::WriteText
-helpviewer_keywords: WriteText method [ADO]
+helpviewer_keywords:
+- WriteText method [ADO]
 ms.assetid: 7a669048-13f4-4574-a2b1-985e089729d5
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 489e91a0ca9dcaa6c2ca59bba3117c2c409c9799
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ce6482cf6b3b640f737ced8dedda66279245a0cd
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="writetext-method"></a>WriteText, méthode
 Écrit une chaîne de texte spécifiée dans un [flux](../../../ado/reference/ado-api/stream-object-ado.md) objet.  

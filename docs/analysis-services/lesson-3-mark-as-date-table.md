@@ -2,13 +2,13 @@
 title: "Leçon 4 : Marquer en tant que Table de dates | Documents Microsoft"
 ms.custom: 
 ms.date: 03/27/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tutorial
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology: analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to: SQL Server 2016
@@ -18,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 32bb6e8ff5f6910c08ee766e57415cab47b8bc62
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: e463f148b07d8fbe7061dca0eed66bba1b0fee94
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="lesson-3-mark-as-date-table"></a>Leçon 3 : Marquer en tant que Table de dates
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
@@ -37,7 +37,7 @@ Avant de nous marquer la table de dates et une colonne de date, nous devons fair
   
 Durée estimée pour effectuer cette leçon : **3 minutes**  
   
-## <a name="prerequisites"></a>Conditions préalables  
+## <a name="prerequisites"></a>Prerequisites  
 Cette rubrique fait partie d'un didacticiel de modélisation tabulaire, qui doit être suivi dans l'ordre. Avant d’effectuer les tâches de cette leçon, vous devez avoir terminé la leçon précédente : [leçon 2 : ajouter des données](../analysis-services/lesson-2-add-data.md). 
 
 ### <a name="to-rename-the-fulldatealternatekey-column"></a>Pour renommer la colonne FullDateAlternateKey
@@ -58,6 +58,6 @@ Cette rubrique fait partie d'un didacticiel de modélisation tabulaire, qui doit
     ![en tant que tableau-lesson3-date-table](../analysis-services/media/as-tabular-lesson3-date-table.png)
   
 
-## <a name="whats-next"></a>Étape suivante
+## <a name="whats-next"></a>Quelle est l’étape suivante ?
 Accédez à la leçon suivante : [leçon 4 : créer des relations](../analysis-services/lesson-4-create-relationships.md).
   

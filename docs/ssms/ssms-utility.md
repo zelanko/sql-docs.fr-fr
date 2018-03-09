@@ -1,10 +1,13 @@
 ---
 title: Utilitaire Ssms | Microsoft Docs
 ms.custom: 
-ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.date: 12/08/2017
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -20,14 +23,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 4afda7e4549efc45b2d07fe2737326d2b38a0539
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: a69ee6a0f66529c6cfb08216643d9c2a6c2a1482
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ssms-utility"></a>Utilitaire Ssms
-  L’utilitaire **Ssms**ouvre [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Si cela est spécifié, **Ssms** établit également une connexion à un serveur et ouvre des requêtes, des scripts, des fichiers, des projets et des solutions.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)] L’utilitaire **Ssms** ouvre [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Si cela est spécifié, **Ssms** établit également une connexion à un serveur et ouvre des requêtes, des scripts, des fichiers, des projets et des solutions.  
   
  Vous pouvez spécifier des fichiers contenant des requêtes, des projets ou des solutions. Les fichiers qui contiennent des requêtes sont automatiquement connectés à un serveur si des informations de connexion sont fournies et si le type de fichier est associé à ce type de serveur. Par exemple, les fichiers .sql ouvrent une fenêtre Éditeur de requête SQL dans [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], tandis que des fichiers .mdx ouvrent une fenêtre Éditeur de requête MDX dans [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Les**solutions et projets SQL Server** s’ouvrent dans [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
   
@@ -40,7 +43,7 @@ ms.lasthandoff: 11/09/2017
   
 Ssms  
     [scriptfile] [projectfile] [solutionfile]  
-    [-S servername] [-d databasename] [-U username] [-P password]   
+    [-S servername] [-d databasename] [-G] [-U username] [-P password]   
     [-E] [-nosplash] [-log [filename]?] [-?]  
 ```  
   
@@ -55,30 +58,37 @@ Ssms
  Spécifie une solution à ouvrir. Le paramètre doit contenir le chemin d'accès complet au fichier de solution.  
   
  [**-S** *nom_serveur*]  
- Nom du serveur  
+  Nom du serveur  
   
  [**-d** *nom_base_de_données*]  
- Nom de la base de données  
+  Nom de la base de données  
+
+ [**-G**] Se connecter avec l’authentification Azure Active Directory. Le type de connexion est déterminé par la présence ou l’absence de **-P** et de **-U**.
+ - Si **-U** et **-P** ne sont *pas* précisés, **Active Directory - Intégré** est utilisé et aucune boîte de dialogue ne s’affiche.
+ - Si **-U** et **-P** sont tous deux spécifiés, **Active Directory - Mot de passe** s’applique. Cette option n’est **pas recommandée**, car vous devez spécifier un mot de passe en clair dans la ligne de commande, ce qui est déconseillé.
+ - Si **-U** est précisé, mais que **-P** n’apparaît pas, la boîte de dialogue d’authentification s’affiche, mais toutes les tentatives de connexion échouent. 
+
+  Remarque : **Active Directory - Universel avec prise en charge de l’authentification MFA** n’est pas pris en charge pour le moment. 
   
- [**-U** *nom_d_utilisateur*]  
- Nom d'utilisateur lors d'une connexion avec l'authentification [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]  
+[**-U** *nom_d_utilisateur*]  
+ Nom d’utilisateur en cas de connexion avec « Authentification SQL » ou « Active Directory - mot de passe »  
   
- [**-P** *mot de passe*]  
- Mot de passe lors d'une connexion avec l'authentification [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]  
+[**-P** *mot de passe*]  
+ Mot de passe en cas de connexion avec « Authentification SQL » ou « Active Directory - mot de passe »
   
- [**-E**]  
+[**-E**]  
  Connexion avec l'authentification Windows  
   
- [**-nosplash**]  
+[**-nosplash**]  
  Empêche [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] d'afficher le graphique de l'écran de démarrage lors de l'ouverture. Utilisez cette option lors d'une connexion à l'ordinateur exécutant [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] au moyen des services Terminal Server sur une connexion dotée d'une bande passante limitée. Cet argument ne respecte pas la casse et peut apparaître avant ou après d'autres arguments  
   
- [**-log***[nom_fichier]?*]  
+[**-log***[nom_fichier]?*]  
  Consigne l'activité de [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] dans le fichier spécifié à des fins de dépannage  
   
- [**-?**]  
+[**-?**]  
  Affiche l'aide de la ligne de commande.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Tous les commutateurs sont facultatifs et séparés par un espace à l'exception des fichiers qui sont séparés par des virgules. Si vous ne spécifiez pas de commutateur, **Ssms** ouvre [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] tel que spécifié dans les paramètres **Options** du menu **Outils** . Par exemple, si l’option **Au démarrage** de la page **Environnement/Général** spécifie **Ouvrir la fenêtre de nouvelle requête**, **Ssms** s’ouvre avec un éditeur de requête vide.  
   
  Le commutateur **-log** doit apparaître à la fin de la ligne de commande, après tous les autres commutateurs. L'argument de nom de fichier (filename) est facultatif. Si un nom de fichier est spécifié et que le fichier n'existe pas, il est créé. Si le fichier ne peut pas être créé (par exemple, en raison d'un accès en écriture insuffisant), le journal est écrit à la place à l'emplacement APPDATA non localisé (voir ci-dessous). Si l'argument du nom de fichier (filename) n'est pas spécifié, deux fichiers sont écrits dans le dossier des données d'application non localisé de l'utilisateur actuel. Le dossier de données d'application non localisé de SQL Server peut se trouver dans la variable d'environnement APPDATA. Par exemple, pour SQL Server 2012, le dossier est le suivant : \<lecteur système>:\Users\\<nom utilisateur\>\AppData\Roaming\Microsoft\AppEnv\10.0\\. Les deux fichiers sont nommés, par défaut, ActivityLog.xml et ActivityLog.xsl. Le premier contient les données du journal des activités et le deuxième est une feuille de style XML qui offre un moyen plus pratique d'afficher le fichier XML. Utilisez les étapes suivantes pour afficher le fichier journal dans votre visionneuse XML par défaut, comme Internet Explorer : cliquez sur Démarrer, sur Exécuter…, tapez « \<lecteur système>:\Users\\<nom utilisateur\>\AppData\Roaming\Microsoft\AppEnv\10.0\ActivityLog.xml » dans le champ fourni, puis appuyez sur Entrée.  
@@ -100,13 +110,21 @@ Ssms
   
 ```  
   
+ La commande suivante ouvre [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] à partir d’une invite de commandes avec *Active Directory - Intégré* :  
+  
+```  
+Ssms.exe -S servername.database.windows.net -G
+  
+``` 
+
+
  Le script suivant ouvre [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] à partir d'une invite de commandes, avec l'authentification Windows, avec l'Éditeur de code réglé sur le serveur `ACCTG and the database AdventureWorks2012,` , sans affichage de l'écran de démarrage :  
   
 ```  
 Ssms -E -S ACCTG -d AdventureWorks2012 -nosplash  
   
 ```  
-  
+
  Le script suivant ouvre [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] à partir d'une invite de commandes et ouvre le script MonthEndQuery.  
   
 ```  
@@ -127,8 +145,11 @@ Ssms "\\developer\fin\ReportProj\ReportProj\NewReportProj.ssmssqlproj"
 Ssms "C:\solutionsfolder\ReportProj\MonthlyReports.ssmssln"  
   
 ```  
-  
-## <a name="see-also"></a>Voir aussi  
+ 
+
+
+
+## <a name="see-also"></a> Voir aussi  
  [Utiliser SQL Server Management Studio](http://msdn.microsoft.com/library/f289e978-14ca-46ef-9e61-e1fe5fd593be)  
   
   

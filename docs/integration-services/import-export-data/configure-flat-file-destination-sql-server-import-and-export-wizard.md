@@ -1,5 +1,5 @@
 ---
-title: Configurer la Destination de fichier plat (SQL Server Assistant Importation et exportation) | Documents Microsoft
+title: "Configurer la destination du fichier plat (Assistant Importation et Exportation SQL Server) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -15,38 +15,37 @@ ms.topic: article
 f1_keywords:
 - sql13.dts.impexpwizard.configureflatfiledest.f1
 ms.assetid: 318e8da0-37d3-46cd-943a-fc5d66aad93a
-caps.latest.revision: 53
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 560965a241b24a09f50a23faf63ce74d0049d5a7
-ms.openlocfilehash: 93fbd5e9429d06e3f011f6f0aff03d76a3db9000
-ms.contentlocale: fr-fr
-ms.lasthandoff: 10/13/2017
-
+ms.openlocfilehash: a9384b498ea78369278261a3334504e5d1b29b58
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="configure-flat-file-destination-sql-server-import-and-export-wizard"></a>Configurer la destination du fichier plat (Assistant Importation et Exportation SQL Server)
-  Si vous avez sélectionné une destination de fichier plat, le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] montre Assistant Importation et exportation **configurer la Destination de fichier plat** une fois que vous spécifiez que vous souhaitez copier une table ou une fois que vous spécifiez une requête. Dans cette page, vous spécifiez les options de mise en forme du fichier plat de destination. Si vous le souhaitez, vous pouvez passer en revue le mappage des colonnes et afficher un aperçu des exemples de données.  
+  Si vous avez sélectionné une destination de fichier plat, l’Assistant Importation et Exportation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] affiche la page **Configurer la destination du fichier plat** une fois que vous avez spécifié que vous souhaitiez copier une table ou que vous avez fourni une requête. Dans cette page, vous spécifiez les options de mise en forme du fichier plat de destination. Si vous le souhaitez, vous pouvez passer en revue le mappage des colonnes et afficher un aperçu des exemples de données.  
   
 ## <a name="screen-shot-of-the-configure-flat-file-destination-page"></a>Capture d’écran de la page Configurer la destination du fichier plat  
- La capture d’écran suivante montre un exemple de la **configurer la Destination de fichier plat** page de l’Assistant.
+ La capture d’écran suivante montre un exemple de la page **Configurer la destination du fichier plat** de l’Assistant.
  
- Dans cet exemple, l’utilisateur a spécifié les options suivantes pour créer un fichier (valeurs séparées par des virgules) de volume partagé de cluster classique.
--   **Délimiteur de ligne**. Chaque ligne de données dans la sortie se termine par un retour chariot-ligne combinaison de flux.
--   **Délimiteur de colonne**. Colonnes de données dans chaque ligne sont séparés par des virgules.
+ Dans cet exemple, l’utilisateur a spécifié les options suivantes pour créer un fichier CSV (valeurs séparées par des virgules) classique.
+-   **Délimiteur de ligne**. Chaque ligne de données de la sortie se termine par une combinaison retour chariot-saut de ligne.
+-   **Délimiteur de colonne**. Les colonnes de données dans chaque ligne sont séparées par une virgule.
 
- ![Configurer la page de l’Assistant Importation et exportation de fichier plat](../../integration-services/import-export-data/media/flat-file.png)
+ ![Page Configurer la destination du fichier plat de l’Assistant Importation et Exportation](../../integration-services/import-export-data/media/flat-file.png)
   
-## <a name="pick-a-source-table"></a>Choisissez une table source
+## <a name="pick-a-source-table"></a>Choisir une table source
  **Vue ou table source**  
--   Si vous avez spécifié dans une page précédente que vous voulez copier une table, sélectionnez la table source ou la vue dans la liste déroulante.
+-   Si vous avez spécifié dans une page précédente que vous vouliez copier une table, sélectionnez la table ou la vue source dans la liste déroulante.
 -   Si vous avez fourni une requête, `"Query"` est sélectionné et est la seule option.  
 
-## <a name="specify-row-and-column-delimiters-for-the-output"></a>Spécifier des délimiteurs de lignes et de colonnes pour la sortie
+## <a name="specify-row-and-column-delimiters-for-the-output"></a>Spécifier des séparateurs de lignes et des délimiteurs de colonnes pour la sortie
  **Séparateur de lignes**  
- Sélectionnez dans la liste des délimiteurs pour séparer les lignes dans la sortie. Il n’existe aucune option pour spécifier un *personnalisé* séparateur de lignes.  
+ Sélectionnez dans la liste un séparateur utilisé pour séparer les lignes de la sortie. Aucune option n’est prévue pour spécifier un séparateur de ligne *personnalisé*.  
   
 |Valeur|Description|  
 |-----------|-----------------|  
@@ -60,7 +59,7 @@ ms.lasthandoff: 10/13/2017
 |**Barre verticale {&#124;}**|Délimiter les lignes avec une barre verticale.|  
   
  **Délimiteur de colonne**  
- Sélectionnez dans la liste des séparateurs pour séparer les colonnes dans la sortie. Il n’existe aucune option pour spécifier un *personnalisé* délimiteur de colonne.  
+ Sélectionnez dans la liste un délimiteur utilisé pour séparer les colonnes de la sortie. Aucune option n’est prévue pour spécifier un délimiteur de colonne *personnalisé*.  
   
 |Valeur|Description|  
 |-----------|-----------------|  
@@ -73,21 +72,20 @@ ms.lasthandoff: 10/13/2017
 |**Tabulation {t}**|Délimiter les colonnes avec une tabulation.|  
 |**Barre verticale {&#124;}**|Délimiter les colonnes avec une barre verticale.|  
 
-## <a name="optionally-review-column-mappings-and-preview-data"></a>Si vous le souhaitez, passez en revue les mappages de colonnes et afficher un aperçu des données
+## <a name="optionally-review-column-mappings-and-preview-data"></a>Éventuellement, vérifier le mappage de colonnes et afficher un aperçu des données
 
 **Modifier les mappages**   
-Si vous le souhaitez, cliquez sur **modifier les mappages** pour afficher les **mappages de colonnes** boîte de dialogue pour la table sélectionnée. Utilisez la boîte de dialogue **Mappage de colonnes** pour effectuer les opérations suivantes.
+Cliquez sur **Modifier les mappages** pour afficher la boîte de dialogue **Mappage de colonnes** de la table sélectionnée. Utilisez la boîte de dialogue **Mappage de colonnes** pour effectuer les opérations suivantes.
 -   Passer en revue le mappage des colonnes entre la source et la destination.
 -   Vous pouvez copier uniquement un sous-ensemble de colonnes en sélectionnant **ignorer** pour les colonnes que vous souhaitez ignorer.
 
 Pour plus d’informations, consultez [Mappages de colonnes](../../integration-services/import-export-data/column-mappings-sql-server-import-and-export-wizard.md).  
 
 **Aperçu**  
-Si vous le souhaitez, cliquez sur **aperçu** pour afficher un aperçu jusqu'à 200 lignes de données d’exemple dans le **aperçu des données** boîte de dialogue. Cela confirme que l’Assistant va copier les données que vous souhaitez copier. Pour plus d’informations, consultez [Aperçu des données](../../integration-services/import-export-data/preview-data-dialog-box-sql-server-import-and-export-wizard.md).  
+Cliquez sur **Aperçu** pour afficher un aperçu de 200 lignes d’exemples de données maximum dans la boîte de dialogue **Aperçu des données**. Cela confirme que l’Assistant va copier les données que vous souhaitez copier. Pour plus d’informations, consultez [Aperçu des données](../../integration-services/import-export-data/preview-data-dialog-box-sql-server-import-and-export-wizard.md).  
   
 Après avoir affiché un aperçu des données, vous souhaiterez peut-être modifier les options que vous avez sélectionnées dans les pages précédentes de l’Assistant. Pour effectuer ces modifications, retournez dans la page **Configurer la destination du fichier plat** , puis cliquez sur **Précédent** pour revenir aux pages précédentes où vous pouvez modifier vos sélections.  
 
-## <a name="whats-next"></a>Étape suivante  
- Après avoir spécifié les options de mise en forme pour le fichier plat de destination, la page suivante est **Enregistrer et exécuter le package**. Dans cette page, vous spécifiez si vous souhaitez exécuter l’opération immédiatement. Selon votre configuration, vous pouvez également être en mesure d’enregistrer vos paramètres en tant qu’un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] package afin de le personnaliser et à le réutiliser plus tard. Pour plus d’informations, consultez [Enregistrer et exécuter le package](../../integration-services/import-export-data/save-and-run-package-sql-server-import-and-export-wizard.md).  
-
+## <a name="whats-next"></a>Quelle est l’étape suivante ?  
+ Après avoir spécifié les options de mise en forme pour le fichier plat de destination, la page suivante est **Enregistrer et exécuter le package**. Dans cette page, vous spécifiez si vous souhaitez exécuter l’opération immédiatement. Selon votre configuration, vous pouvez également être en mesure d’enregistrer vos paramètres sous la forme d’un package [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] pour le personnaliser et le réutiliser ultérieurement. Pour plus d’informations, consultez [Enregistrer et exécuter le package](../../integration-services/import-export-data/save-and-run-package-sql-server-import-and-export-wizard.md).  
 

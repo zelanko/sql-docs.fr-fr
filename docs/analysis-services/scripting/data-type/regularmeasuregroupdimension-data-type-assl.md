@@ -2,15 +2,13 @@
 title: "Type de données RegularMeasureGroupDimension (ASSL) | Documents Microsoft"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: scripting
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: RegularMeasureGroupDimension Data Type
@@ -25,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: b144c665c26a56e6ad7042f066753450fd90e798
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 7e2ebc73971224e8ce6c44c192580a6436bc4521
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="regularmeasuregroupdimension-data-type-assl"></a>Type de données RegularMeasureGroupDimension (ASSL)
-  Définit un type de données dérivé représentant une relation régulière entre une dimension et un groupe de mesures.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Définit un type de données dérivé qui représente une relation régulière entre une dimension et un groupe de mesures.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -56,11 +54,11 @@ ms.lasthandoff: 11/17/2017
   
 |Relation|Élément|  
 |------------------|-------------|  
-|Éléments parents|Aucune|  
+|Éléments parents|None|  
 |Éléments enfants|[Attributs](../../../analysis-services/scripting/collections/attributes-element-assl.md), [cardinalité](../../../analysis-services/scripting/properties/cardinality-element-assl.md)|  
 |Éléments dérivés|[Dimension](../../../analysis-services/scripting/objects/dimension-element-assl.md) ([Dimensions](../../../analysis-services/scripting/collections/dimensions-element-assl.md) collection)|  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  L’élément correspondant dans le modèle d’objet objets AMO (Analysis Management) est <xref:Microsoft.AnalysisServices.RegularMeasureGroupDimension>.  
   
 ## <a name="see-also"></a>Voir aussi  

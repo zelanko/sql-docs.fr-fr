@@ -22,11 +22,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 537267b15a65dca3035ba79e6bbecb9f7bc4a51c
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 5a4b8748f024649ec2980e46d8e828afcffc553c
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="spserverdiagnostics-transact-sql"></a>sp_server_diagnostics (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -61,14 +61,14 @@ sp_server_diagnostics [@repeat_interval =] 'repeat_interval_in_seconds'
 ## <a name="result-sets"></a>Jeux de résultats  
 **sp_server_diagnostics** renvoie les informations suivantes  
   
-|Colonne|Data type| Description|  
+|colonne|Data type|Description|  
 |------------|---------------|-----------------|  
 |**creation_time**|**datetime**|Indique l'horodateur de la création de ligne. Chaque ligne dans un ensemble de lignes unique a le même horodateur.|  
 |**component_type**|**sysname**|Indique si la ligne contient des informations pour le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] au niveau du composant ou d’un groupe de disponibilité Always On de l’instance :<br /><br /> instance<br /><br /> Always On : groupe de disponibilité|  
 |**nom du composant**|**sysname**|Indique le nom du composant ou le nom du groupe de disponibilité :<br /><br /> système<br /><br /> ressource<br /><br /> query_processing<br /><br /> io_subsystem<br /><br /> événements<br /><br /> *\<nom du groupe de disponibilité >*|  
-|**état**|**int**|Indique l'état d'intégrité du composant :<br /><br /> 0<br /><br />  1<br /><br /> 2<br /><br /> 3|  
+|**state**|**Int**|Indique l'état d'intégrité du composant :<br /><br /> 0<br /><br />  1<br /><br /> 2<br /><br /> 3|  
 |**state_desc**|**sysname**|Décrit la colonne d'état. Les descriptions qui correspondent aux valeurs dans la colonne d'état sont :<br /><br /> 0 : inconnu<br /><br /> 1 : nettoyer<br /><br /> 2 : avertissement<br /><br /> 3 : erreur|  
-|**données**|**varchar (max)**|Spécifie des données spécifiques au composant.|  
+|**data**|**varchar (max)**|Spécifie des données spécifiques au composant.|  
   
  Voici les descriptions des cinq composants :  
   
@@ -84,7 +84,7 @@ sp_server_diagnostics [@repeat_interval =] 'repeat_interval_in_seconds'
   
 -   **\<nom du groupe de disponibilité >**: collecte des données pour le groupe de disponibilité spécifié (si component_type = « toujours sur : AvailabilityGroup »).  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
 Du point de vue d'un échec, les composant system, resource et query_processing seront exploités pour la détection de pannes, tandis que les composants io_subsystem et events le seront uniquement à des fins de diagnostics.  
   
 Le tableau suivant mappe les composants à leurs états d'intégrité associés.  
@@ -102,12 +102,12 @@ Le (x) dans chaque ligne représente des états d'intégrité valides pour le co
 > [!NOTE]
 > L’exécution de la procédure interne sp_server_diagnostics est implémentée sur un thread préemptif à priorité élevée.
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
 requièrent l'autorisation VIEW SERVER STATE sur le serveur.  
   
 ## <a name="examples"></a>Exemples  
 Il est recommandé d'utiliser les sessions étendues pour capturer les informations d'intégrité et de les enregistrer dans un fichier situé en dehors de SQL Server. Par conséquent, vous pouvez toujours y accéder en cas d'échec. L'exemple suivant enregistre la sortie d'une session d'événement dans un fichier :  
-```tsql  
+```sql  
 CREATE EVENT SESSION [diag]  
 ON SERVER  
            ADD EVENT [sp_server_diagnostics_component_result] (set collect_data=1)  
@@ -119,7 +119,7 @@ GO
 ```  
   
 La requête d'exemple ci-dessous lit le fichier journal de session étendue :  
-```tsql  
+```sql  
 SELECT  
     xml_data.value('(/event/@name)[1]','varchar(max)') AS Name  
   , xml_data.value('(/event/@package)[1]', 'varchar(max)') AS Package  
@@ -142,7 +142,7 @@ ORDER BY time;
 ```  
   
 L'exemple suivant capture la sortie de sp_server_diagnostics dans une table dans un mode de non-répétition :  
-```tsql  
+```sql  
 CREATE TABLE SpServerDiagnosticsResult  
 (  
       create_time DateTime,  
@@ -156,16 +156,16 @@ INSERT INTO SpServerDiagnosticsResult
 EXEC sp_server_diagnostics; 
 ```  
 
-L’exemple de requête ci-dessous lit le résumé de la table de sortie :  
-```tsql  
+L’exemple de requête ci-dessous lit la sortie sous forme de résumé de la table :  
+```sql  
 SELECT create_time,
        component_name,
        state_desc 
 FROM SpServerDiagnosticsResult;  
 ``` 
 
-L’exemple de requête ci-dessous certaines de la sortie détaillée lit à partir de chaque composant dans la table :  
-```tsql  
+L’exemple de requête ci-dessous lit une partie de la sortie détaillée de chaque composant dans la table :  
+```sql  
 -- system
 select data.value('(/system/@systemCpuUtilization)[1]','bigint') as 'System_CPU',
    data.value('(/system/@sqlCpuUtilization)[1]','bigint') as 'SQL_CPU',

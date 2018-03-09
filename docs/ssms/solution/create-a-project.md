@@ -3,8 +3,11 @@ title: "Créer un projet | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-solutions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -16,16 +19,16 @@ ms.assetid: 7897be19-365b-4b06-bcf0-8a669f67a673
 caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b0c24a12a4e8a40e41839b7974e41c0001c67f7b
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 767341628dec4f192235954aaa4eeb6ece681615
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="create-a-project"></a>Créer un projet
-Vous pouvez créer un ou plusieurs projets à l'intérieur d'une solution existante.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Vous pouvez créer un ou plusieurs projets à l’intérieur d’une solution existante.  
   
 ### <a name="to-create-a-new-project-and-add-it-to-a-solution"></a>Pour créer un projet et l'ajouter à une solution  
   
@@ -77,7 +80,7 @@ Vous pouvez créer un ou plusieurs projets à l'intérieur d'une solution exista
     **Emplacement**  
     Entrez l'emplacement dans lequel vous voulez créer votre projet ou choisissez-en un dans la liste.  
   
-    **Parcourir**  
+    **...**  
     Affiche la boîte de dialogue **Emplacement du projet** , afin que vous puissiez naviguer jusqu’au répertoire dans lequel le projet doit être enregistré.  
   
     **Solution**  
@@ -98,7 +101,7 @@ Vous pouvez créer un ou plusieurs projets à l'intérieur d'une solution exista
   
 Vous pouvez attribuer un nom au projet de script mais vous ne pouvez pas modifier les noms de dossiers qui sont attribués par [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] . Vous pouvez configurer la spécification de lecteur et de chemin d’accès pour l’ensemble commun des dossiers à l’aide de la boîte de dialogue **Ajouter un nouveau projet** . Cliquez avec le bouton droit sur l’icône de la solution dans **l’Explorateur de solutions**, puis cliquez sur **Ajouter**. L’emplacement par défaut pour les dossiers de projets de scripts est : C:\Documents and Settings\\*nom_utilisateur*\My Documents\SQL Server Management Studio\Projects\\.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [l’Explorateur de solutions](../../ssms/solution/solution-explorer.md)  
 [Ajouter un projet existant à une solution](../../ssms/solution/add-an-existing-project-to-a-solution.md)  
 [Ajouter de nouveaux éléments à un projet](../../ssms/solution/add-new-items-to-a-project.md)  

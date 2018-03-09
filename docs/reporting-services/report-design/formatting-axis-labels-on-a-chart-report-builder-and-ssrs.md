@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -33,13 +31,13 @@ ms.assetid: ddf50dd5-5314-42ff-97f4-c3a4a17cfcdd
 caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: af8006697c18785e110a4b88b1549b6587e71ba1
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: c5fd2ef17552e0f27fd2206b4a14acdb1e1231bd
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="formatting-axis-labels-on-a-chart-report-builder-and-ssrs"></a>Mise en forme des étiquettes des axes sur un graphique (Générateur de rapports et SSRS)
   Les types de graphiques basés sur les coordonnées (histogramme, graphique à barres, graphique en aires, graphique à points, graphique en courbes et graphique d'étendue) comportent deux axes qui sont utilisés pour classer des données en catégories et afficher les relations de données. Des types de mises en forme différents seront appliqués à chaque axe.  
@@ -65,7 +63,7 @@ ms.lasthandoff: 12/05/2017
   
  L'échelle des axes est liée par une valeur minimale et une valeur maximale qui définissent la plage de données à afficher le long de l'axe. Le graphique calcule la valeur minimale et la valeur maximale le long de chaque axe en fonction des valeurs de votre jeu de résultats. Sur l'axe des ordonnées, l'échelle sera toujours déterminée par le nombre le plus faible et le nombre le plus élevé du champ de valeur. Sur l'axe des abscisses, les types des valeurs minimale et maximale sont déterminés par le type de votre champ de catégorie. Tout champ d'un dataset peut être classé dans l'un des trois types de champs de catégorie. Le tableau suivant illustre ces trois types de champs de catégorie.  
   
-|Type de champ de catégorie|Description|Exemple|  
+|Type de champ de catégorie|Description| Exemple|  
 |-------------------------|-----------------|-------------|  
 |Numérique|Les catégories sont tracées par ordre numérique le long de l'axe des abscisses.|Un état des ventes par numéro d'identification des employés affiche les numéros d'identification des employés le long de l'axe des abscisses.|  
 |Date/heure|Les catégories sont tracées par ordre chronologique le long de l'axe des abscisses.|Un état des ventes par mois affiche des dates mises en forme le long de l'axe des abscisses.|  
@@ -84,7 +82,7 @@ ms.lasthandoff: 12/05/2017
 ### <a name="example-of-how-the-chart-calculates-axis-labels"></a>Exemple de calcul d'étiquettes d'axe par le graphique  
  Le tableau présenté ici contient des exemples de données de vente à tracer sur un histogramme. Le champ Name est ajouté à la zone Groupes d'abscisses et le champ Quantity est ajouté à la zone Valeurs.  
   
-|Nom|Quantity|  
+|Nom   |Quantity|  
 |----------|--------------|  
 |Michael Blythe|229|  
 |Jae Pak|112|  
@@ -132,7 +130,7 @@ ms.lasthandoff: 12/05/2017
   
  [Spécifier une échelle logarithmique &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/specify-a-logarithmic-scale-report-builder-and-ssrs.md)  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Mise en forme d’un graphique &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
  [Graphiques &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
  [Mise en forme des points de données sur un graphique &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/formatting-data-points-on-a-chart-report-builder-and-ssrs.md)  

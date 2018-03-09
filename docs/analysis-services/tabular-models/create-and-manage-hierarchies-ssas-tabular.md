@@ -1,35 +1,33 @@
 ---
-title: "Créer et gérer des hiérarchies (SSAS tabulaire) | Documents Microsoft"
+title: "Créer et gérer des hiérarchies | Documents Microsoft"
 ms.custom: 
-ms.date: 03/01/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.date: 02/22/2018
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 8dd30cd0-a831-4d25-b577-648d7f3c7fa6
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 813d48fcb964fc82c3dd9b1b72a70d0f1385f35c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 96af188d39d583c53b2520d03f6fd0962092a90f
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/23/2018
 ---
-# <a name="create-and-manage-hierarchies-ssas-tabular"></a>Créer et gérer des hiérarchies (SSAS Tabulaire)
-  Les hiérarchies peuvent être créées et gérées dans le générateur de modèles, dans la vue de diagramme. Pour afficher le concepteur de modèles dans la Vue de diagramme, dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], cliquez sur le menu **Modèle** , pointez sur **Vue du modèle**, puis cliquez sur **Vue de diagramme**.  
+# <a name="create-and-manage-hierarchies"></a>Créer et gérer des hiérarchies 
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+Les hiérarchies peuvent être créées et gérées dans le générateur de modèles, dans la vue de diagramme. Pour afficher le concepteur de modèles dans la Vue de diagramme, dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], cliquez sur le menu **Modèle** , pointez sur **Vue du modèle**, puis cliquez sur **Vue de diagramme**.  
   
- Cette rubrique inclut les tâches suivantes :  
+ Cet article comprend les tâches suivantes :  
   
 -   [Créer une hiérarchie](#bkmk_create)  
   
@@ -103,8 +101,8 @@ ms.lasthandoff: 11/17/2017
 -   Ou bien, cliquez sur le niveau de hiérarchie parent, puis appuyez sur Supprimer. Cela supprime également tous les niveaux enfants.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Générateur de modèles tabulaires &#40;SSAS&#41;](../../analysis-services/tabular-models/tabular-model-designer-ssas.md)   
- [Hiérarchies &#40; SSAS tabulaire &#41;](../../analysis-services/tabular-models/hierarchies-ssas-tabular.md)   
- [Mesures &#40;SSAS Tabulaire&#41;](../../analysis-services/tabular-models/measures-ssas-tabular.md)  
+ [Générateur de modèles tabulaires ](../../analysis-services/tabular-models/tabular-model-designer-ssas.md)   
+ [Hierarchies](../../analysis-services/tabular-models/hierarchies-ssas-tabular.md)   
+ [Mesures](../../analysis-services/tabular-models/measures-ssas-tabular.md)  
   
   

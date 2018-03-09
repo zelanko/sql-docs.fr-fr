@@ -1,5 +1,5 @@
 ---
-title: "Utilisation des Images avec la tâche de Script | Documents Microsoft"
+title: "Utilisation d’images à l’aide de la tâche de script | Microsoft Docs"
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: extending-packages-scripting-task-examples
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
@@ -28,53 +27,52 @@ helpviewer_keywords:
 - JPEG format [Integration Services]
 - .jpeg files
 ms.assetid: 74aeb7ab-51b2-4b9f-84ee-0b46a7908ab9
-caps.latest.revision: 42
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 4a28fe7c6024d8cf5669199e5f33e3532013e4d3
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 77962f05ede4b2650db4af59fdbde5ec42fdf1d5
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="working-with-images-with-the-script-task"></a>Utilisation d'images à l'aide de la tâche de script
-  Une base de données de produits ou d'utilisateurs contient généralement des images, en plus du texte et des données numériques. Le **System.Drawing** espace de noms dans Microsoft .NET Framework fournit des classes pour la manipulation d’images.  
+  Une base de données de produits ou d'utilisateurs contient généralement des images, en plus du texte et des données numériques. L’espace de noms **System.Drawing** dans le Microsoft .NET Framework fournit des classes permettant de manipuler des images.  
   
- [Exemple 1 : Convertir des Images au Format JPEG](#example1)  
+ [Exemple 1 : convertir des images au format JPEG](#example1)  
   
- [Exemple 2 : Créer et enregistrer des Images miniatures](#example2)  
+ [Exemple 2 : créer et enregistrer des images miniatures](#example2)  
   
 > [!NOTE]  
 >  Si vous souhaitez créer une tâche plus facilement réutilisable sur plusieurs packages, envisagez d'utiliser le code indiqué dans l'exemple de tâche de script comme point de départ d'une tâche personnalisée. Pour plus d’informations, consultez [Développement d’une tâche personnalisée](../../integration-services/extending-packages-custom-objects/task/developing-a-custom-task.md).  
   
-##  <a name="example1"></a>Description de l’exemple 1 : Convertir des Images au Format JPEG  
+##  <a name="example1"></a> Description de l’exemple 1 : convertir des images au format JPEG  
  L'exemple suivant ouvre un fichier image spécifié par une variable et l'enregistre sous la forme d'un fichier JPEG compressé à l'aide d'un encodeur. Le code pour extraire les informations de l'encodeur est encapsulé dans une fonction privée.  
   
 #### <a name="to-configure-this-script-task-example-for-use-with-a-single-image-file"></a>Pour configurer cet exemple de tâche de script destiné à un seul fichier image  
   
 1.  Créez une variable chaîne appelée `CurrentImageFile` et attribuez lui la valeur du chemin d'accès et du nom d'un fichier image existant.  
   
-2.  Sur le **Script** page de la **éditeur de tâche de Script**, ajouter le `CurrentImageFile` variable à la **ReadOnlyVariables** propriété.  
+2.  Dans la page **Script** de l’**Éditeur de tâche de script**, ajoutez la variable `CurrentImageFile` à la propriété **ReadOnlyVariables**.  
   
-3.  Dans le projet de script, définissez une référence à la **System.Drawing** espace de noms.  
+3.  Dans le projet de script, ajoutez une référence à l’espace de noms **System.Drawing**.  
   
-4.  Dans votre code, utilisez **importations** instructions pour importer le **System.Drawing** et **System.IO** espaces de noms.  
+4.  Dans votre code, utilisez des instructions **Imports** pour importer les espaces de noms **System.Drawing** et **System.IO**.  
   
 #### <a name="to-configure-this-script-task-example-for-use-with-multiple-image-files"></a>Pour configurer cet exemple de tâche de script destiné à plusieurs fichiers image  
   
 1.  Placez la tâche de script dans un conteneur de boucles Foreach.  
   
-2.  Sur le **Collection** page de la **éditeur de boucle Foreach**, sélectionnez le **énumérateur Foreach File** comme l’énumérateur et spécifiez le chemin d’accès et le masque des fichiers sources, telles que « *.bmp ».  
+2.  Dans la page **Collection** de l’**Éditeur de boucle Foreach**, sélectionnez l’**énumérateur Foreach File**, puis spécifiez le chemin et le masque des fichiers sources, par exemple « *.bmp ».  
   
-3.  Sur le **mappage de variables** page, mappez le `CurrentImageFile` variable à l’Index 0. Cette variable transmet le nom du fichier en cours à la tâche de script à chaque itération de l'énumérateur.  
+3.  Dans la page **Mappage de variables**, mappez la variable `CurrentImageFile` à l’index 0. Cette variable transmet le nom du fichier en cours à la tâche de script à chaque itération de l'énumérateur.  
   
     > [!NOTE]  
     >  Ces étapes s'ajoutent à celles répertoriées dans la procédure destinée à un seul fichier image.  
   
-### <a name="example-1-code"></a>Exemple 1 de Code  
+### <a name="example-1-code"></a>Code de l’exemple 1  
   
 ```vb  
 Public Sub Main()  
@@ -159,7 +157,7 @@ End Function
   
 ```  
   
-##  <a name="example2"></a>Description de l’exemple 2 : Créer et enregistrer des Images miniatures  
+##  <a name="example2"></a> Description de l’exemple 2 : Créer et enregistrer des images miniatures  
  L'exemple suivant ouvre un fichier image spécifié par une variable, crée une miniature de l'image en respectant les proportions et enregistre la miniature sous un nom de fichier modifié. Le code qui calcule la hauteur et la largeur de la miniature en préservant les proportions est encapsulé dans une sous-routine privée.  
   
 #### <a name="to-configure-this-script-task-example-for-use-with-a-single-image-file"></a>Pour configurer cet exemple de tâche de script destiné à un seul fichier image  
@@ -168,19 +166,19 @@ End Function
   
 2.  Créez également la variable de type entier `MaxThumbSize` et attribuez-lui une valeur en pixels, telle que 100.  
   
-3.  Sur le **Script** page de la **éditeur de tâche de Script**, ajoutez les deux variables à la **ReadOnlyVariables** propriété.  
+3.  Dans la page **Script** de l’**Éditeur de tâche de script**, ajoutez les deux variables à la propriété **ReadOnlyVariables**.  
   
-4.  Dans le projet de script, définissez une référence à la **System.Drawing** espace de noms.  
+4.  Dans le projet de script, ajoutez une référence à l’espace de noms **System.Drawing**.  
   
-5.  Dans votre code, utilisez **importations** instructions pour importer le **System.Drawing** et **System.IO** espaces de noms.  
+5.  Dans votre code, utilisez des instructions **Imports** pour importer les espaces de noms **System.Drawing** et **System.IO**.  
   
 #### <a name="to-configure-this-script-task-example-for-use-with-multiple-image-files"></a>Pour configurer cet exemple de tâche de script destiné à plusieurs fichiers image  
   
 1.  Placez la tâche de script dans un conteneur de boucles Foreach.  
   
-2.  Sur le **Collection** page de la **éditeur de boucle Foreach**, sélectionnez le **énumérateur Foreach File** comme le **énumérateur**et spécifiez le chemin d’accès et le masque des fichiers sources, telles que « *.jpg ».  
+2.  Dans la page **Collection** de l’**Éditeur de boucle Foreach**, sélectionnez l’**énumérateur Foreach File** comme **Énumérateur**, puis spécifiez le chemin et le masque des fichiers sources, par exemple « *.jpg ».  
   
-3.  Sur le **mappage de variables** page, mappez le `CurrentImageFile` variable à l’Index 0. Cette variable transmet le nom du fichier en cours à la tâche de script à chaque itération de l'énumérateur.  
+3.  Dans la page **Mappage de variables**, mappez la variable `CurrentImageFile` à l’index 0. Cette variable transmet le nom du fichier en cours à la tâche de script à chaque itération de l'énumérateur.  
   
     > [!NOTE]  
     >  Ces étapes s'ajoutent à celles répertoriées dans la procédure destinée à un seul fichier image.  
@@ -300,4 +298,3 @@ bool ThumbnailCallback()
 ```  
   
   
-

@@ -2,16 +2,13 @@
 title: Mesures | Documents Microsoft
 ms.custom: 
 ms.date: 04/10/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 27ec8f99-e9ef-44c9-a83f-f7c88e128ad3
@@ -20,14 +17,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: ece228053898085df6a2d95bf513c0d889cfa646
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 41834c6a734417d6851e055cc63e7e8f89aea954
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="measures"></a>mesures
-  Dans les modèles tabulaires, une mesure est un calcul créé à l'aide d'une formule DAX pour une utilisation dans un client de création de rapport. Les mesures sont évaluées en fonction des champs, des filtres, et des segments que les utilisateurs choisissent dans l'application cliente de création de rapports.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Dans les modèles tabulaires, une mesure est un calcul créé à l’aide d’une formule DAX pour une utilisation dans un client de création de rapports. Les mesures sont évaluées en fonction des champs, des filtres, et des segments que les utilisateurs choisissent dans l'application cliente de création de rapports.  
   
 ##  <a name="bkmk_understanding"></a> Avantages  
  Les mesures peuvent reposer sur des fonctions d'agrégation standard, comme AVERAGE, COUNT, ou SUM, ou vous pouvez définir votre propre formule à l'aide de DAX. Outre la formule, chaque mesure a des propriétés, définies par le type de données de mesure, tel que le nom, le détail de table, le format et les décimales.  
@@ -91,9 +88,9 @@ Sum of TotalProfit: =SUM([TotalProfit])
   
  Toute mesure peut servir de mesure de base d'un indicateur de performance clé. Pour créer un KPI, dans la grille de mesures, cliquez avec le bouton droit sur une mesure, puis sélectionnez **Créer un KPI**. La boîte de dialogue Indicateur de performance clé apparaît. Vous pouvez y spécifier une valeur cible (définie par une mesure ou une valeur absolue) et définir des seuils d'état et un type graphique. Pour plus d’informations, consultez [indicateurs de performance clés](../../analysis-services/tabular-models/kpis-ssas-tabular.md).  
   
-##  <a name="bkmk_rel_tasks"></a> Tâches associées  
+##  <a name="bkmk_rel_tasks"></a> Related tasks  
   
-|Rubrique| Description|  
+|Rubrique|Description|  
 |-----------|-----------------|  
 |[Créer et gérer des mesures](../../analysis-services/tabular-models/create-and-manage-measures-ssas-tabular.md)|Décrit comment créer et gérer des mesures à l'aide de la grille de mesures dans le générateur de modèles.|  
   

@@ -2,9 +2,12 @@
 title: "Créer une publication | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,18 +18,18 @@ helpviewer_keywords:
 - articles [SQL Server replication], adding
 ms.assetid: 52ee6de9-1d58-4cb9-8711-372bddbe7154
 caps.latest.revision: "44"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: b317a0e902d6da830afa6fc17d2c4aa47cca1d37
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: fdcb02b92d2344fa0376e07bf6903b5a82ed70ae
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="create-a-publication"></a>Créer une publication
-  Cette rubrique explique comment créer une publication dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], de [!INCLUDE[tsql](../../../includes/tsql-md.md)]ou d'objets RMO (Replication Management Objects).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Cette rubrique explique comment créer une publication dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] à l’aide de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)] ou d’objets RMO (Replication Management Objects).  
   
  **Dans cette rubrique**  
   
@@ -163,9 +166,9 @@ ms.lasthandoff: 11/09/2017
   
 #### <a name="to-create-a-snapshot-or-transactional-publication"></a>Pour créer une publication d'instantané ou une publication transactionnelle  
   
-1.  Créez une connexion au serveur de publication en utilisant la classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
+1.  Créez une connexion au serveur de publication en utilisant la classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection>.  
   
-2.  Créez une instance de la classe <xref:Microsoft.SqlServer.Replication.ReplicationDatabase> pour la base de données de publication, affectez à la propriété <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> l'instance de <xref:Microsoft.SqlServer.Management.Common.ServerConnection> créée à l'étape 1, puis appelez la méthode <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> . Si <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> retourne **false**, vérifiez que la base de données existe.  
+2.  Créez une instance de la classe <xref:Microsoft.SqlServer.Replication.ReplicationDatabase> pour la base de données de publication, affectez à la propriété <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> l'instance de <xref:Microsoft.SqlServer.Management.Common.ServerConnection> créée à l'étape 1, puis appelez la méthode <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A>. Si <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> retourne **false**, vérifiez que la base de données existe.  
   
 3.  Si la propriété <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.EnabledTransPublishing%2A> a la valeur **false**, affectez-lui la valeur **true**.  
   
@@ -174,7 +177,7 @@ ms.lasthandoff: 11/09/2017
     -   Définissez les champs <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A> et <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A> de <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.LogReaderAgentProcessSecurity%2A> afin de fournir les informations d'identification pour le compte [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows sous lequel l'Agent de lecture du journal s'exécute.  
   
         > [!NOTE]  
-        >  Il n'est pas nécessaire de définir <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.LogReaderAgentProcessSecurity%2A> lorsque la publication est créée par un membre du rôle serveur fixe **sysadmin** . Dans ce cas, l'Agent va emprunter l'identité du compte de l'Agent SQL Server. Pour plus d'informations, voir [Replication Agent Security Model](../../../relational-databases/replication/security/replication-agent-security-model.md).  
+        >  Il n'est pas nécessaire de définir <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.LogReaderAgentProcessSecurity%2A> lorsque la publication est créée par un membre du rôle serveur fixe **sysadmin** . Dans ce cas, l'Agent va emprunter l'identité du compte de l'Agent SQL Server. Pour plus d’informations, consultez [Replication Agent Security Model](../../../relational-databases/replication/security/replication-agent-security-model.md).  
   
     -   (Facultatif) Définissez les champs <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardLogin%2A> et <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardPassword%2A> ou <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SecureSqlStandardPassword%2A> de <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.LogReaderAgentPublisherSecurity%2A> lorsque vous utilisez l'authentification SQL Server pour vous connecter au serveur de publication.  
   
@@ -193,11 +196,11 @@ ms.lasthandoff: 11/09/2017
     -   Les champs <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A> et <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A> de <xref:Microsoft.SqlServer.Replication.Publication.SnapshotGenerationAgentProcessSecurity%2A> pour fournir les informations d'identification pour le compte Windows sous lequel le travail de l'Agent d'instantané s'exécute. Ce compte est également utilisé lorsque l'Agent d'instantané établit des connexions au serveur de distribution local et pour toute connexion distante lors de l'utilisation de l'authentification Windows.  
   
         > [!NOTE]  
-        >  Il n'est pas nécessaire de définir <xref:Microsoft.SqlServer.Replication.Publication.SnapshotGenerationAgentProcessSecurity%2A> lorsque la publication est créée par un membre du rôle serveur fixe **sysadmin** . Dans ce cas, l'Agent va emprunter l'identité du compte de l'Agent SQL Server. Pour plus d'informations, voir [Replication Agent Security Model](../../../relational-databases/replication/security/replication-agent-security-model.md).  
+        >  Il n'est pas nécessaire de définir <xref:Microsoft.SqlServer.Replication.Publication.SnapshotGenerationAgentProcessSecurity%2A> lorsque la publication est créée par un membre du rôle serveur fixe **sysadmin** . Dans ce cas, l'Agent va emprunter l'identité du compte de l'Agent SQL Server. Pour plus d’informations, consultez [Replication Agent Security Model](../../../relational-databases/replication/security/replication-agent-security-model.md).  
   
     -   (Facultatif) Les champs <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardLogin%2A> et <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardPassword%2A> ou <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SecureSqlStandardPassword%2A> de <xref:Microsoft.SqlServer.Replication.Publication.SnapshotGenerationAgentPublisherSecurity%2A> lorsque vous utilisez l'authentification SQL Server pour vous connecter au serveur de publication.  
   
-    -   (Facultatif) Utilisez l'opérateur OR logique inclusif (**|** en Visual C# et **Or** en Visual Basic) et l'opérateur OR logique exclusif (**^** en Visual C# et **Xor** en Visual Basic) pour définir les valeurs <xref:Microsoft.SqlServer.Replication.PublicationAttributes> de la propriété <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> .  
+    -   (Facultatif) Utilisez l’opérateur OR logique inclusif (**|** en Visual C# et **Or** en Visual Basic) et l’opérateur OR logique exclusif (**^** en Visual C# et **Xor** en Visual Basic) pour définir les valeurs <xref:Microsoft.SqlServer.Replication.PublicationAttributes> de la propriété <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A>.  
   
     -   (Facultatif) Nom du serveur de publication pour <xref:Microsoft.SqlServer.Replication.TransPublication.PublisherName%2A> lorsqu'il s'agit d'un serveur non-SQL Server.  
   
@@ -212,11 +215,11 @@ ms.lasthandoff: 11/09/2017
   
 1.  Créez une connexion au serveur de publication en utilisant la classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
-2.  Créez une instance de la classe <xref:Microsoft.SqlServer.Replication.ReplicationDatabase> pour la base de données de publication, affectez à la propriété <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> l'instance de <xref:Microsoft.SqlServer.Management.Common.ServerConnection> créée à l'étape 1, puis appelez la méthode <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> . Si <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> retourne **false**, vérifiez que la base de données existe.  
+2.  Créez une instance de la classe <xref:Microsoft.SqlServer.Replication.ReplicationDatabase> pour la base de données de publication, affectez à la propriété <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> l'instance de <xref:Microsoft.SqlServer.Management.Common.ServerConnection> créée à l'étape 1, puis appelez la méthode <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A>. Si <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> retourne **false**, vérifiez que la base de données existe.  
   
 3.  Si <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.EnabledMergePublishing%2A> Property is **false**, affectez-lui la valeur **true**et appelez <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A>.  
   
-4.  Créez une instance de la classe <xref:Microsoft.SqlServer.Replication.MergePublication> et définissez les propriétés suivantes pour cet objet :  
+4.  Créez une instance de la classe <xref:Microsoft.SqlServer.Replication.MergePublication> et définissez les propriétés suivantes pour cet objet :  
   
     -   La classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection> créée à l'étape 1 pour la propriété <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>.  
   
@@ -227,7 +230,7 @@ ms.lasthandoff: 11/09/2017
     -   Les champs <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A> et <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A> de <xref:Microsoft.SqlServer.Replication.Publication.SnapshotGenerationAgentProcessSecurity%2A> pour fournir les informations d'identification pour le compte Windows sous lequel le travail de l'Agent d'instantané s'exécute. Ce compte est également utilisé lorsque l'Agent d'instantané établit des connexions au serveur de distribution local et pour toute connexion distante lors de l'utilisation de l'authentification Windows.  
   
         > [!NOTE]  
-        >  Il n'est pas nécessaire de définir <xref:Microsoft.SqlServer.Replication.Publication.SnapshotGenerationAgentProcessSecurity%2A> lorsque la publication est créée par un membre du rôle serveur fixe **sysadmin** . Pour plus d'informations, voir [Replication Agent Security Model](../../../relational-databases/replication/security/replication-agent-security-model.md).  
+        >  Il n'est pas nécessaire de définir <xref:Microsoft.SqlServer.Replication.Publication.SnapshotGenerationAgentProcessSecurity%2A> lorsque la publication est créée par un membre du rôle serveur fixe **sysadmin** . Pour plus d’informations, consultez [Replication Agent Security Model](../../../relational-databases/replication/security/replication-agent-security-model.md).  
   
     -   (Facultatif) Utilisez l'opérateur OR logique inclusif (**|** en Visual C# et **Or** en Visual Basic) et l'opérateur OR logique exclusif (**^** en Visual C# et **Xor** en Visual Basic) pour définir les valeurs <xref:Microsoft.SqlServer.Replication.PublicationAttributes> de la propriété <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> .  
   
@@ -251,10 +254,10 @@ ms.lasthandoff: 11/09/2017
   
  [!code-vb[HowTo#rmo_vb_CreateMergePub](../../../relational-databases/replication/codesnippet/visualbasic/rmohowtovb/rmotestenv.vb#rmo_vb_createmergepub)]  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Utiliser sqlcmd avec des variables de script](../../../relational-databases/scripting/sqlcmd-use-with-scripting-variables.md)   
  [Publier des données et des objets de base de données](../../../relational-databases/replication/publish/publish-data-and-database-objects.md)   
- [Replication Management Objects Concepts](../../../relational-databases/replication/concepts/replication-management-objects-concepts.md)   
+ [Concepts liés à RMO (Replication Management Objects)](../../../relational-databases/replication/concepts/replication-management-objects-concepts.md)   
  [Define an Article](../../../relational-databases/replication/publish/define-an-article.md)   
  [Afficher et modifier les propriétés d’une publication](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)   
  [Configurer la distribution](../../../relational-databases/replication/configure-distribution.md)   

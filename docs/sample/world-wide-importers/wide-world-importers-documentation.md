@@ -1,9 +1,9 @@
 ---
 title: Documentation de Wide World Importers | Documents Microsoft
-ms.prod: world-wide-importers
+ms.prod: sql-non-specified
 ms.prod_service: sql-non-specified
-ms.service: samples
-ms.component: 
+ms.service: 
+ms.component: samples
 ms.technology: samples
 ms.custom: 
 ms.date: 01/19/2017
@@ -18,11 +18,11 @@ ms.author: barbkess
 manager: jhubbard
 robots: noindex,nofollow
 ms.workload: On Demand
-ms.openlocfilehash: 367581f176b148fe65f8fee44bfdbb7a6eb5e8ec
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: a2510ee889f57f7ab51c0f45574a8fa6e86abb47
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="wide-world-importers-documentation"></a>Documentation de Wide World Importers
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]Wide World Importers est la nouvelle base de données pour SQL Server 2016 et base de données SQL Azure. Il illustre les fonctionnalités principales de SQL Server 2016 et base de données SQL Azure, pour le traitement des transactions (OLTP), entrepôt de données et les charges de travail analytique (OLAP), ainsi que les transactions hybride et les charges de travail (HTAP) de traitement analytique.

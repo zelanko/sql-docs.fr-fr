@@ -8,28 +8,29 @@ ms.service:
 ms.component: logs
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-transaction-log
+ms.technology:
+- dbe-transaction-log
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - delayed durability
 - Lazy Commit
 ms.assetid: 3ac93b28-cac7-483e-a8ab-ac44e1cc1c76
-caps.latest.revision: "27"
+caps.latest.revision: 
 author: JennieHubbard
 ms.author: jhubbard
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 469b8008c1697f691c56f6d8893f1d637534c989
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 0f54b24d7395584a8182b607bfc491179e314336
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="control-transaction-durability"></a>Contrôler la durabilité d'une transaction
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-  Les validations de transactions[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peuvent avoir une durabilité complète, la durabilité par défaut de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou une durabilité retardée (également appelée Validation différée).    
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Les validations de transactions peuvent avoir une durabilité complète, la durabilité par défaut de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou une durabilité retardée (également appelée Validation différée).    
     
  Les validations de transactions à durabilité complète sont synchrones. Elles signalent la réussite de la validation (COMMIT) et restituent le contrôle au client uniquement lorsque les enregistrements de journal de transactions ont été écrits sur le disque. Les validations de transactions à durabilité retardée sont asynchrones. Elles signalent la réussite de la validation (COMMIT) avant que les enregistrements de journal de transactions ne soient écrits sur le disque. L'écriture des entrées du journal des transactions sur le disque est nécessaire pour qu'une transaction soit durable. Les transactions à durabilité retardée deviennent durables lorsque les enregistrements de journal de transactions sont vidés sur le disque.    
     
@@ -98,7 +99,7 @@ ms.lasthandoff: 11/17/2017
 ###  <a name="bkmk_DbControl"></a> Contrôle au niveau de la base de données    
  En tant qu'administrateur de base de données, vous pouvez contrôler si les utilisateurs peuvent utiliser la durabilité retardée des transactions sur une base de données avec l'instruction suivante. Vous devez définir le paramètre de durabilité retardée avec ALTER DATABASE.    
     
-```tsql    
+```sql    
 ALTER DATABASE … SET DELAYED_DURABILITY = { DISABLED | ALLOWED | FORCED }    
 ```    
     
@@ -114,7 +115,7 @@ ALTER DATABASE … SET DELAYED_DURABILITY = { DISABLED | ALLOWED | FORCED }
 ###  <a name="CompiledProcControl"></a> Contrôle au niveau du bloc atomique – Procédures stockées compilées en mode natif    
  Le code suivant s'insère à l'intérieur du bloc atomique.    
     
-```tsql    
+```sql    
 DELAYED_DURABILITY = { OFF | ON }    
 ```    
     
@@ -126,7 +127,7 @@ DELAYED_DURABILITY = { OFF | ON }
     
  **Exemple de code :**    
     
-```tsql    
+```sql    
 CREATE PROCEDURE <procedureName> …    
 WITH NATIVE_COMPILATION, SCHEMABINDING, EXECUTE AS OWNER    
 AS BEGIN ATOMIC WITH     
@@ -149,7 +150,7 @@ END
 ###  <a name="bkmk_T-SQLControl"></a> Contrôle au niveau de la validation (COMMIT) –[!INCLUDE[tsql](../../includes/tsql-md.md)]    
  La syntaxe de l'option COMMIT est étendue pour vous permettre de forcer la durabilité retardée des transactions. Si DELAYED_DURABILITY a la valeur DISABLED ou FORCED au niveau de la base de données (voir ci-dessus), cette option COMMIT est ignorée.    
     
-```tsql    
+```sql    
 COMMIT [ { TRAN | TRANSACTION } ] [ transaction_name | @tran_name_variable ] ] [ WITH ( DELAYED_DURABILITY = { OFF | ON } ) ]    
     
 ```    
@@ -211,7 +212,7 @@ COMMIT [ { TRAN | TRANSACTION } ] [ transaction_name | @tran_name_variable ] ] [
 ### <a name="includessnoversionincludesssnoversion-mdmd-shutdown-and-restart"></a>Arrêt et redémarrage de[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]     
  Pour une durabilité retardée, il n'y a pas de différence entre un arrêt inattendu et un arrêt/redémarrage attendu de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Comme pour les événements graves, vous devez prévoir une perte de données. Dans un arrêt/redémarrage planifié, certaines transactions qui n'ont pas été écrites sur disque peuvent tout d'abord l'être, mais vous ne pouvez pas planifier cela. La planification comme pour un arrêt/redémarrage, planifiée ou non, entraîne la perte de données comme pour un événement grave.    
     
-## <a name="see-also"></a>Voir aussi    
+## <a name="see-also"></a> Voir aussi    
  [Transactions avec tables optimisées en mémoire](../../relational-databases/in-memory-oltp/transactions-with-memory-optimized-tables.md)    
     
   

@@ -1,5 +1,5 @@
 ---
-title: EXP (Expression SSIS) | Documents Microsoft
+title: EXP (expression SSIS) | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -16,17 +16,16 @@ helpviewer_keywords:
 - exponential functions
 - EXP function
 ms.assetid: 4cd96d3c-58c9-4a67-a6f6-b72758232912
-caps.latest.revision: 34
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 6ad14b1426435034ef5f4371cc8bb6904b536798
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 7c45673700f84d108b3ed9a6f64f780e007c00d7
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="exp-ssis-expression"></a>EXP (expression SSIS)
   Renvoie l'exposant en base e d'une expression numérique. La fonction EXP est complémentaire de l'action LN et est parfois appelée « antilogarithme ».  
@@ -45,8 +44,8 @@ EXP(numeric_expression)
 ## <a name="result-types"></a>Types des résultats  
  DT_R8  
   
-## <a name="remarks"></a>Notes  
- L'expression numérique est convertie vers le type de données DT_R8 avant le calcul du l'exposant. Pour plus d’informations, consultez [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).  
+## <a name="remarks"></a>Notes   
+ L'expression numérique est convertie vers le type de données DT_R8 avant le calcul du l'exposant. Pour plus d'informations, consultez [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).  
   
  Le résultat obtenu est toujours un nombre positif.  
   
@@ -71,9 +70,8 @@ EXP(0)
   
  Renvoie 1.  
   
-## <a name="see-also"></a>Voir aussi  
- [JOURNAL &#40; Expression SSIS &#41;](../../integration-services/expressions/log-ssis-expression.md)   
- [Fonctions &#40; Expression SSIS &#41;](../../integration-services/expressions/functions-ssis-expression.md)  
+## <a name="see-also"></a> Voir aussi  
+ [LOG &#40;expression SSIS&#41;](../../integration-services/expressions/log-ssis-expression.md)   
+ [Fonctions &#40;expression SSIS&#41;](../../integration-services/expressions/functions-ssis-expression.md)  
   
   
-

@@ -3,8 +3,11 @@ title: Alertes | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-agent
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -24,16 +27,16 @@ ms.assetid: 3f57d0f0-4781-46ec-82cd-b751dc5affef
 caps.latest.revision: "5"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 6506dcef18d066ff7432d3e8ce9ee62255a82d89
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 64de30ec59f69764c5f4fe0a1f28570da2b4d0a0
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="alerts"></a>Alertes
-Les événements sont générés par [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] et entrés dans le journal des applications [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows. [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent lit le journal des applications et compare les événements qui y sont écrits aux alertes que vous avez définies. Lorsque [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent trouve une correspondance, il déclenche une alerte, qui est une réponse automatisée à un événement. Outre l'analyse des événements [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] , [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent peut aussi analyser les conditions de performance, ainsi que les événements WMI (Windows Management Instrumentation).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Les événements sont générés par [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] et entrés dans le journal des applications [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows. [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent lit le journal des applications et compare les événements qui y sont écrits aux alertes que vous avez définies. Lorsque [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent trouve une correspondance, il déclenche une alerte, qui est une réponse automatisée à un événement. Outre l'analyse des événements [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] , [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent peut aussi analyser les conditions de performance, ainsi que les événements WMI (Windows Management Instrumentation).  
   
 Pour définir une alerte, vous spécifiez :  
   
@@ -68,7 +71,7 @@ Vous pouvez préciser qu'une alerte doit avoir lieu en réponse à un ou plusieu
   
     [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent déclenche une alerte quand se produit une erreur du niveau de gravité indiqué. Ainsi, vous pouvez spécifier un niveau de gravité de 15 pour répondre aux erreurs de syntaxe dans les instructions Transact-SQL.  
   
--   **Base de données**  
+-   **Sauvegarde de la base de données**  
   
     [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent ne déclenche une alerte que si l’événement se produit dans une base de données déterminée. Cette option s'applique en plus du numéro d'erreur ou du niveau de gravité. Par exemple, si une instance contient une base de données utilisée pour la production et une autre servant à la génération de rapports, vous pouvez définir une alerte répondant aux erreurs de syntaxe rencontrées uniquement dans la base de données de production.  
   
@@ -155,6 +158,6 @@ Vous trouverez ci-dessous des liens traitant des tâches courantes :
   
 -   [Transact-SQL](http://msdn.microsoft.com/en-us/4bbaeaab-8aca-4c9e-abc1-82ce73090bd3)  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [sp_update_alert (Transact-SQL)](http://msdn.microsoft.com/en-us/bcd731b1-3c4e-4086-b58a-af7a3af904ad)  
   

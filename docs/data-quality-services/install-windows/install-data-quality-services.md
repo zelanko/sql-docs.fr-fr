@@ -13,14 +13,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 486e4216-a946-4c6e-828c-61bc905f7ec1
 caps.latest.revision: "49"
-author: JennieHubbard
-ms.author: jhubbard
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
-ms.openlocfilehash: a9b01209583c35c9ee6be01193f78c9577c20bac
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 35b865e4bcc27039a3591a8151335de8f663dbd6
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="install-data-quality-services"></a>Installer Data Quality Services
   [!INCLUDE[ssDQSnoversionLong](../../includes/ssdqsnoversionlong-md.md)] (DQS) contient les deux composants suivants : **[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]** et **[!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)]**.  
@@ -53,7 +53,7 @@ ms.lasthandoff: 11/20/2017
   
 |Composant DQS|Configuration minimale requise|  
 |-------------------|---------------------------------|  
-|[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]|Mémoire (RAM): 2 Go minimum ; mémoire recommandée : 4 Go ou plus<br /><br /> Moteur de base de données de [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)]. Pour plus d’informations, consultez [Installer le moteur de base de données SQL Server](../../database-engine/install-windows/install-sql-server-database-engine.md).|  
+|[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]|Mémoire (RAM): 2 Go minimum ; mémoire recommandée : 4 Go ou plus<br /><br /> Moteur de base de données de [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)]. Pour plus d’informations, consultez [Installer le moteur de base de données SQL Server](../../database-engine/install-windows/install-sql-server-database-engine.md).|  
 |[!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)]|.NET Framework 4.0 (installé lors de l'installation du [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)] , si ce composant n'est pas déjà installé)<br /><br /> Internet Explorer 6.0 SP1 ou version ultérieure.|  
   
 > [!IMPORTANT]  
@@ -111,12 +111,12 @@ ms.lasthandoff: 11/20/2017
     > [!NOTE]  
     >  Les trois rôles DQS ne sont pas disponibles pour les bases de données DQS_PROJECTS et DQS_STAGING_DATA.  
   
-3.  Rendez vos données disponibles pour les opérations DQS. Assurez-vous que vous avez accès à vos données sources pour les opérations DQS et que vous pouvez exporter les données traitées vers une table dans une base de données.  
+3.  Rendez vos données disponibles pour les opérations DQS. Assurez-vous que vous avez accès à vos données sources pour les opérations DQS et que vous pouvez exporter les données traitées vers une table dans une base de données.  
   
      Pour plus d’informations, consultez  
                     [Accéder aux données pour les opérations DQS](../../data-quality-services/install-windows/access-data-for-the-dqs-operations.md).  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Vidéo : Installer et configurer DQS](http://go.microsoft.com/fwlink/?LinkId=238241)   
  [Mettre à niveau des assemblys SQLCLR après une mise à jour de .NET Framework](../../data-quality-services/install-windows/upgrade-sqlclr-assemblies-after-net-framework-update.md)   
  [Exporter et importer des bases de connaissances DQS à l’aide de DQSInstaller.exe](../../data-quality-services/install-windows/export-and-import-dqs-knowledge-bases-using-dqsinstaller-exe.md)   

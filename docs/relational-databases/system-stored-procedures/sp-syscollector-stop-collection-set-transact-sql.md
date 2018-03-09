@@ -1,5 +1,5 @@
 ---
-title: sp_syscollector_stop_collection_set (Transact-SQL) | Documents Microsoft
+title: sp_syscollector_stop_collection_set (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,27 +8,29 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_syscollector_stop_collection_set_TSQL
 - sp_syscollector_stop_collection_set
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - sp_syscollector_stop_collection_set
 - data collector [SQL Server], stored procedures
 ms.assetid: 4668cfb7-462f-40d0-948c-8f740a792a4d
-caps.latest.revision: "16"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6f91cbec86a4799a6172525ba2633be9f34dcdd9
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 828d097a749fd1c0db89d24d2079fed5a5fd2ce9
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spsyscollectorstopcollectionset-transact-sql"></a>sp_syscollector_stop_collection_set (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,13 +50,13 @@ sp_syscollector_stop_collection_set
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [ @collection_set_id =] *collection_set_id*  
+ [ @collection_set_id = ] *collection_set_id*  
  Identificateur local unique pour le jeu d'éléments de collecte. *collection_set_id* est **int** avec une valeur par défaut NULL. *collection_set_id* doit avoir une valeur si *nom* est NULL.  
   
  [ @name =] '*nom*'  
  Est le nom de l’ensemble de la collection. *nom* est **sysname** avec une valeur par défaut NULL. *nom* doit avoir une valeur si *collection_set_id* a la valeur NULL.  
   
- [ @stop_collection_job =] *stop_collection_job*  
+ [ @stop_collection_job = ] *stop_collection_job*  
  Spécifie que le travail de collecte pour le jeu d'éléments de collecte doit être arrêté s'il est en cours d'exécution. *stop_collection_job* est **bits** avec 1 comme valeur par défaut.  
   
  *stop_collection_job* s’applique uniquement aux jeux d’éléments de collecte en mode mis en cache. Pour plus d’informations, consultez [sp_syscollector_create_collection_set &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-syscollector-create-collection-set-transact-sql.md).  
@@ -65,7 +67,7 @@ sp_syscollector_stop_collection_set
 ## <a name="remarks"></a>Notes  
  sp_syscollector_create_collection_set doit être exécuté dans le contexte de la base de données système msdb.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Requiert l'appartenance au rôle de base de données fixe dc_operator (avec autorisation EXECUTE) pour exécuter cette procédure.  
   
 ## <a name="examples"></a>Exemples  

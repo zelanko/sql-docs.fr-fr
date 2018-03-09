@@ -1,5 +1,5 @@
 ---
-title: ISSAsynchStatus::GetStatus (OLE DB) | Documents Microsoft
+title: ISSAsynchStatus::GetStatus (OLE DB) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -16,17 +16,17 @@ apitype: COM
 helpviewer_keywords: GetStatus method
 ms.assetid: 354b6ee4-b5a1-48f6-9403-da3bdc911067
 caps.latest.revision: "12"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bde94f855b9c5712a576ec246c02670e3e18365f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d1a6d91a0224b53a09dd35e1b8adf0f48c77d578
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/24/2018
 ---
-# <a name="issasynchstatusgetstatus-ole-db"></a>ISSAsynchStatus::GetStatus (OLE DB)
+# <a name="issasynchstatusgetstatus-ole-db"></a>ISSAsynchStatus::GetStatus (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
@@ -50,7 +50,7 @@ HRESULT GetStatus(
  Handle du chapitre. Lorsque l'objet interrogé n'est pas un objet rowset ou que l'opération ne s'applique pas à un chapitre, vous devez attribuer au handle la valeur DB_NULL_HCHAPTER, celle-ci étant ignorée par le fournisseur.  
   
  *eOperation*[in]  
- L'opération pour laquelle l'état asynchrone est demandé. Elle doit avoir la valeur suivante :  
+ L'opération pour laquelle l'état asynchrone est demandé. Elle doit avoir la valeur suivante :  
   
  DBASYNCHOP_OPEN : le consommateur demande des informations sur l'ouverture ou le remplissage asynchrone d'un ensemble de lignes ou sur l'initialisation asynchrone d'un objet source de données. Si le fournisseur est un fournisseur conforme à OLE DB 2.5 qui prend en charge la liaison d'URL directe, le consommateur demande des informations sur l'initialisation ou le remplissage asynchrone d'une source de données, d'un ensemble de lignes, d'une ligne ou d'un objet de flux.  
   
@@ -119,7 +119,7 @@ HRESULT GetStatus(
   
  En plus des valeurs de retour répertoriées, **ISSAsynchStatus::GetStatus** peut retourner tout HRESULT qui aurait été retourné par la méthode ayant initialisé l'opération asynchrone, indiquant la réussite ou l'échec de l'opération.  
   
- Certaines opérations asynchrones peuvent uniquement être en mesure de retourner des états « fini » et « non fini ». Elles doivent attribuer la valeur 1 à *pulProgressMax* pour indiquer la granularité de leur estimation (tout ou rien). Leurs réponses sont donc 0/1 ou 1/1.  
+ Certaines opérations asynchrones peuvent uniquement être en mesure de retourner des états « fini » et « non fini ». Elles doivent attribuer la valeur 1 à *pulProgressMax* pour indiquer la granularité de leur estimation (tout ou rien). Leurs réponses sont donc 0/1 ou 1/1.  
   
  Un fournisseur peut modifier *pulProgressMax* dans des appels consécutifs, et même retourner un taux inférieur à celui indiqué précédemment, si cela reflète une meilleure estimation du degré d'achèvement de la tâche.  
   

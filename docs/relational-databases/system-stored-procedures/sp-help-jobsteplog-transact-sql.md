@@ -1,5 +1,5 @@
 ---
-title: sp_help_jobsteplog (Transact-SQL) | Documents Microsoft
+title: sp_help_jobsteplog (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/09/2016
 ms.prod: sql-non-specified
@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_help_jobsteplog_TSQL
 - sp_help_jobsteplog
-dev_langs: TSQL
-helpviewer_keywords: sp_help_jobsteplog
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_help_jobsteplog
 ms.assetid: 1a0be7b1-8f31-4b4c-aadb-586c0e00ed04
-caps.latest.revision: "18"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2c6c6e778a416f6e8e5d615a435a2be6c1e6a097
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: c337559b68f6fae23e284f2c151a498af53ae88e
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sphelpjobsteplog-transact-sql"></a>sp_help_jobsteplog (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,19 +49,19 @@ sp_help_jobsteplog { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@job_id =**] **'***job_id***'**  
+ [ **@job_id =**] **'***job_id***'**  
  Numéro d'identification du travail pour lequel renvoyer des informations du journal d'étapes de travail. *job_id* est **int**, avec NULL comme valeur par défaut.  
   
- [  **@job_name =**] **'***job_name***'**  
+ [ **@job_name =**] **'***job_name***'**  
  Nom du travail. *job_name* est **sysname**, avec NULL comme valeur par défaut.  
   
 > [!NOTE]  
 >  Soit *job_id* ou *job_name* doit être spécifié, mais ne peut pas être spécifiés.  
   
- [  **@step_id =**] *id_de_l*  
+ [ **@step_id =**] *step_id*  
  Numéro d'identification de l'étape du travail. S'il n'est pas inclus, toutes les étapes du travail sont englobées. *l’argument id_étape* est **int**, avec NULL comme valeur par défaut.  
   
- [  **@step_name =**] **'***nom_de_l***'**  
+ [ **@step_name =**] **'***step_name***'**  
  Nom de l'étape du travail. *nom_de_l* est **sysname**, avec NULL comme valeur par défaut.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
@@ -70,18 +73,18 @@ sp_help_jobsteplog { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
 |-----------------|---------------|-----------------|  
 |**job_id**|**uniqueidentifier**|Identificateur unique du travail.|  
 |**job_name**|**sysname**|Nom du travail.|  
-|**argument id_étape**|**int**|Identificateur de l'étape du travail. Par exemple, si l’étape est la première étape du travail, ses *id_de_l* est 1.|  
-|**nom_de_l**|**sysname**|Nom de l’étape du travail.|  
+|**step_id**|**int**|Identificateur de l'étape du travail. Par exemple, si l’étape est la première étape du travail, ses *id_de_l* est 1.|  
+|**step_name**|**sysname**|Nom de l’étape du travail.|  
 |**step_uid**|**uniqueidentifier**|Identificateur unique de l'étape du travail (généré par le système).|  
-|**date_de_création**|**datetime**|Date de création de l'étape.|  
-|**date_de_modification**|**datetime**|Date de la dernière modification de l'étape.|  
+|**date_created**|**datetime**|Date de création de l'étape.|  
+|**date_modified**|**datetime**|Date de la dernière modification de l'étape.|  
 |**log_size**|**float**|Taille du journal d'étapes du travail, en mégaoctets (Mo).|  
-|**journal**|**nvarchar(max)**|Sortie du journal d'étapes du travail.|  
+|**log**|**nvarchar(max)**|Sortie du journal d'étapes du travail.|  
   
 ## <a name="remarks"></a>Notes  
  **sp_help_jobsteplog** est dans le **msdb** base de données.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Par défaut, les membres du rôle serveur fixe **sysadmin** peuvent exécuter cette procédure stockée. Les autres utilisateurs doivent disposer de l'un des rôles de base de données fixes suivants de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent dans la base de données **msdb** :  
   
 -   **SQLAgentUserRole**  
@@ -90,7 +93,7 @@ sp_help_jobsteplog { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
   
 -   **SQLAgentOperatorRole**  
   
- Pour en savoir plus sur les autorisations de ces rôles, consultez [Rôles de base de données fixes de SQL Server Agent](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79).  
+ Pour en savoir plus sur les autorisations de ces rôles, consultez [Rôles de base de données fixes de l'Agent SQL Server](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79).  
   
  Membres de **SQLAgentUserRole** peuvent consulter uniquement les étapes de travail qu’ils possèdent les métadonnées de journal étape du travail.  
   
@@ -122,11 +125,11 @@ GO
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [sp_add_jobstep &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql.md)   
- [sp_delete_jobstep &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-delete-jobstep-transact-sql.md)   
- [sp_help_jobstep &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-help-jobstep-transact-sql.md)   
- [sp_delete_jobstep &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-delete-jobstep-transact-sql.md)   
- [sp_delete_jobsteplog &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-delete-jobsteplog-transact-sql.md)   
+ [sp_add_jobstep &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql.md)   
+ [sp_delete_jobstep &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-jobstep-transact-sql.md)   
+ [sp_help_jobstep &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-jobstep-transact-sql.md)   
+ [sp_delete_jobstep &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-jobstep-transact-sql.md)   
+ [sp_delete_jobsteplog &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-jobsteplog-transact-sql.md)   
  [L’Agent SQL Server stockées procédures &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)  
   
   

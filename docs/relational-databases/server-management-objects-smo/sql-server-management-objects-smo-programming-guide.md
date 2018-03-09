@@ -8,7 +8,7 @@ ms.service:
 ms.component: smo
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -17,18 +17,20 @@ helpviewer_keywords:
 - programming [SMO]
 ms.assetid: 4cde2b85-2a31-4cac-8d16-7a4196066193
 caps.latest.revision: "32"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: feee5c86107bc2f706e34cfa6d0d15bce9a350bc
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 70fffdd41eecf6eff5f23ebe3620d42c4a46ade6
+ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="sql-server-management-objects-smo-programming-guide"></a>Guide de programmation SMO (SQL Server Management Objects)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects (SMO) est une collection d’objets qui sont conçues pour la programmation de tous les aspects de la gestion [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La collection d'objets RMO ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Replication Management Objects) encapsule la gestion de la réplication [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Management Objects (SMO) est une collection d’objets qui sont conçues pour la programmation de tous les aspects de la gestion [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La collection d'objets RMO ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Replication Management Objects) encapsule la gestion de la réplication [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 |Rubrique| Description|  
 |-----------|-----------------|

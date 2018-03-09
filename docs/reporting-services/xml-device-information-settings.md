@@ -8,9 +8,7 @@ ms.service:
 ms.component: reporting-services
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,15 +16,15 @@ helpviewer_keywords:
 - device information settings [Reporting Services], PDF rendering
 ms.assetid: a32e83fe-c10e-4ebd-8975-5be7dcc422e7
 caps.latest.revision: "43"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 5bb74b8da1b59adaab0f1b8f736f10c769ea2f8e
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 3f0600b91d43e8449fc00eac14a699e07121fb52
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="xml-device-information-settings"></a>Paramètres d'informations de périphérique XML
   Le tableau suivant répertorie les paramètres d'informations de périphérique qui permettent un rendu au format XML.  
@@ -39,11 +37,11 @@ ms.lasthandoff: 12/05/2017
 |**Indented**|**true**<br /><br /> **false**|Indique s'il faut générer du code XML mis en retrait. La valeur par défaut **false** génère un code XML compressé sans mise en retrait.|  
 |**OmitNamespace**|**true**<br /><br /> **false**|Indique s'il faut omettre l'espace de noms XML par défaut.<br /><br /> Si la valeur est True, le XML ne spécifie aucun espace de noms par défaut.<br /><br /> Si la valeur est False, le XML spécifie un espace de noms par défaut avec la valeur de la propriété DataSchema du rapport. La propriété DataSchema utilise par défaut le nom du rapport.<br /><br /> La valeur par défaut est**false**.|  
 |**OmitSchema**|**true**<br /><br /> **false**|Indique s'il faut omettre l'emplacement du schéma XML par défaut. L'emplacement est l'attribut SchemaLocation.<br /><br /> La valeur par défaut d'OmitSchema dépend de la valeur d'OmitNamespace :<br /><br /> Si OmitNamespace = False, OmitSchema = **False** par défaut. L'utilisateur peut remplacer la valeur par défaut en attribuant la valeur True à OmitSchema.<br /><br /> If OmitNamespace = True, OmitSchema fonctionne comme **True** indépendamment de la valeur explicitement configurée pour OmitShema.|  
-|**Encodage**|Nom IANA (Internet Assigned Numbers Authority) d'un encodage de caractères pris en charge par le .NET Framework.|La valeur par défaut est **UTF-8**. Les exemples d'autres valeurs incluent ASCII, UTF-7 et UTF-16.|  
+|**Encoding**|Nom IANA (Internet Assigned Numbers Authority) d'un encodage de caractères pris en charge par le .NET Framework.|La valeur par défaut est **UTF-8**. Les exemples d'autres valeurs incluent ASCII, UTF-7 et UTF-16.|  
 |**FileExtension**|Extension de fichier à utiliser pour le fichier généré.||  
 |**Schéma**|La valeur **true** indique qu’un schéma XML est restitué. La valeur par défaut est **false**.|Indique si la définition de schéma XML (XSD) est restituée ou si les données XML réelles sont restituées.|  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  <xref:ReportExecution2005.ReportExecutionService.Render%2A>   
  [Transmission de paramètres d'informations de périphérique aux extensions de rendu](../reporting-services/report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md)   
  [Personnaliser les paramètres d’extension de rendu dans RSReportServer.Config](../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md)   

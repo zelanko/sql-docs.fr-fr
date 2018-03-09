@@ -3,8 +3,11 @@ title: "Surveiller l’activité des travaux | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-agent
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -23,16 +26,16 @@ ms.assetid: 71cb432b-631d-4b8b-9965-e731b3d8266d
 caps.latest.revision: "6"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 469142ab52bedda92cba1650982afbc6809b77ea
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: b25b8b95fa950f7764272d2e2a47ebea4e26a78f
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="monitor-job-activity"></a>Surveiller l'activité des travaux
-Vous pouvez surveiller l'activité en cours de tous les travaux définis sur une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] à l'aide du moniteur d'activité des travaux de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Vous pouvez surveiller l’activité en cours de tous les travaux définis sur une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] à l’aide du moniteur d’activité des travaux de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent.  
   
 ## <a name="sql-server-agent-sessions"></a>Sessions de SQL Server Agent  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent crée une session à chaque démarrage du service. Quand une session est créée, la table **sysjobactivity** de la base de données **msdb** est remplie avec tous les travaux définis existants. Cette table conserve la dernière activité des travaux lorsque [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent est redémarré. Chaque session enregistre l'activité normale de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent du début à la fin du travail. Les informations relatives à ces sessions sont stockées dans la table **syssessions** de la base de données **msdb** .  
@@ -56,14 +59,14 @@ Pour ouvrir le moniteur d’activité des travaux, développez **SQL Server Agen
   
 Vous pouvez également visualiser l’activité des travaux de la session actuelle à l’aide de la procédure stockée **sp_help_jobactivity**.  
   
-## <a name="related-tasks"></a>Tâches associées  
+## <a name="related-tasks"></a>Related Tasks  
   
 |||  
 |-|-|  
 |**Description**|**Rubrique**|  
 |Explique comment afficher l'état d'exécution des travaux de l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] .|[Afficher l’activité du travail](../../ssms/agent/view-job-activity.md)|  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [Afficher l’activité du travail](../../ssms/agent/view-job-activity.md)  
 [sysjobactivity (Transact-SQL)](http://msdn.microsoft.com/en-us/fd17cac9-5d1f-4b44-b2dc-ee9346d8bf1e)  
 [syssessions (Transact-SQL)](http://msdn.microsoft.com/en-us/187819b6-c7f4-4a26-b74c-0a89e96695cf)  

@@ -2,16 +2,13 @@
 title: "Octroyer un accès personnalisé à des données de dimension (Analysis Services) | Documents Microsoft"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords: sql13.asvs.roledesignerdialog.dimensiondata.f1
@@ -32,14 +29,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 6cf115e0e7c931dd4e0b173b937a476cd08635df
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 95cd49cfac7e318e427a4944182bf21cb16f8c3b
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="grant-custom-access-to-dimension-data-analysis-services"></a>Octroyer un accès personnalisé à des données de dimension (Analysis Services)
-  Après avoir activé l'accès en lecture à un cube, vous pouvez définir des autorisations supplémentaires qui accordent ou refusent explicitement l'accès aux membres de dimension (y compris les mesures contenues dans la dimension de mesures contenant toutes les mesures utilisées dans un cube). Par exemple, étant donné plusieurs catégories de revendeurs, vous pouvez définir des autorisations pour exclure les données d'un type spécifique. L'illustration suivante est une représentation avant/après du refus de l'accès au type d'entreprise Warehouse dans la dimension Reseller.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Après avoir activé l’accès en lecture à un cube, vous pouvez définir des autorisations supplémentaires qui explicitement autoriser ou refuser l’accès aux membres de dimension (y compris les mesures contenues dans la Dimension de mesures contenant toutes les mesures utilisées dans un cube). Par exemple, étant donné plusieurs catégories de revendeurs, vous pouvez définir des autorisations pour exclure les données d'un type spécifique. L'illustration suivante est une représentation avant/après du refus de l'accès au type d'entreprise Warehouse dans la dimension Reseller.  
   
  ![Les tableaux croisés dynamiques avec et sans un membre de dimension](../../analysis-services/multidimensional-models/media/ssas-permsdimdenied.png "des tableaux croisés dynamiques avec et sans un membre de dimension")  
   
@@ -52,7 +49,7 @@ ms.lasthandoff: 11/17/2017
 > [!NOTE]  
 >  Les instructions suivantes supposent une connexion client qui émet des requêtes dans MDX. Si le client utilise DAX, comme Power View dans Power BI, la sécurité de la dimension n’est pas évidente dans les résultats de la requête. Pour plus d’informations, consultez [Présentation de Power View pour les modèles multidimensionnels](understanding-power-view-for-multidimensional-models.md) .
       
-## <a name="prerequisites"></a>Conditions préalables  
+## <a name="prerequisites"></a>Prerequisites  
  Vous ne pouvez pas utiliser toutes les mesures, ni tous les membres de dimension dans les scénarios d'accès personnalisés. Une connexion échoue si un rôle restreint l'accès à une mesure ou un membre par défaut, ou s'il restreint l'accès à des mesures qui font partie d'expressions de mesure.  
   
  **Vérifier les obstructions en matière de sécurité des dimensions : mesures par défaut, membres par défaut et mesures utilisées dans les expressions de mesure**  

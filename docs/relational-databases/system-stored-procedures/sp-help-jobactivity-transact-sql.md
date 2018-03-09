@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_help_jobactivity_TSQL
 - sp_help_jobactivity
-dev_langs: TSQL
-helpviewer_keywords: sp_help_jobactivity
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_help_jobactivity
 ms.assetid: d344864f-b4d3-46b1-8933-b81dec71f511
-caps.latest.revision: "33"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4cb0d3d344b97f0ce14e3bd156b5915a1721c8f4
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: a4b1b81a94f272ffed56c26f4ede9080f80527c7
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sphelpjobactivity-transact-sql"></a>sp_help_jobactivity (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,16 +47,16 @@ sp_help_jobactivity { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@job_id =**] *job_id*  
+ [ **@job_id =**] *job_id*  
  Numéro d’identification du travail. *job_id*est **uniqueidentifier**, avec NULL comme valeur par défaut.  
   
- [  **@job_name =**] **'***job_name***'**  
+ [ **@job_name =**] **'***job_name***'**  
  Nom du travail. *job_name*est **sysname**, avec NULL comme valeur par défaut.  
   
 > [!NOTE]  
 >  Soit *job_id* ou *job_name* doit être spécifié, mais ne peut pas être spécifiés.  
   
- [  **@session_id**  =] *session_id*  
+ [ **@session_id** = ] *session_id*  
  Identificateur de la session pour laquelle des informations doivent être rapportées. *session_id* est **int**, avec NULL comme valeur par défaut.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
@@ -76,8 +79,8 @@ sp_help_jobactivity { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 |**stop_execution_date**|**datetime**|Heure à laquelle l'exécution du travail s'est terminée.|  
 |**next_scheduled_run_date**|**datetime**|Date et heure prévues pour la prochaine exécution du travail.|  
 |**job_history_id**|**int**|Identificateur de l'historique des travaux dans la table d'historique des travaux.|  
-|**Message**|**nvarchar (1024)**|Message produit lors de la dernière exécution du travail.|  
-|**état_de_l**|**int**|État retourné de la dernière exécution du travail :<br /><br /> **0** = erreur échoué<br /><br /> **1** = a réussi<br /><br /> **3** = annulée<br /><br /> **5** = état inconnu|  
+|**message**|**nvarchar(1024)**|Message produit lors de la dernière exécution du travail.|  
+|**run_status**|**int**|État retourné de la dernière exécution du travail :<br /><br /> **0** = erreur échoué<br /><br /> **1** = a réussi<br /><br /> **3** = annulée<br /><br /> **5** = état inconnu|  
 |**operator_id_emailed**|**int**|Numéro d'identification de l'opérateur notifié par courrier électronique en fin de travail.|  
 |**operator_id_netsent**|**int**|Numéro d’identification de l’opérateur notifié par **envoi réseau** à l’achèvement du travail.|  
 |**operator_id_paged**|**int**|Numéro d'identification de l'opérateur notifié par radiomessagerie en fin de travail.|  
@@ -85,13 +88,13 @@ sp_help_jobactivity { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 ## <a name="remarks"></a>Notes  
  Cette procédure fournit un instantané de l'état actuel des travaux. Les résultats renvoyés représentent des informations correspondant au moment du traitement de la requête.  
   
- L'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] crée un ID de session chaque fois que le service SQL Agent démarre. L’id de session est stocké dans la table **msdb.dbo.syssessions**.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] L’agent crée un id de session chaque fois que le service Agent démarre. L’id de session est stocké dans la table **msdb.dbo.syssessions**.  
   
  Lorsqu’aucun *session_id* est fourni, répertorie des informations sur la session la plus récente.  
   
  Lorsqu’aucun *job_name* ou *job_id* est fourni, répertorie les informations pour tous les travaux.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Par défaut, les membres de la **sysadmin** rôle serveur fixe peut exécuter cette procédure stockée. Les autres utilisateurs doivent disposer de l'un des rôles de base de données fixes suivants de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent dans la base de données **msdb** :  
   
 -   **SQLAgentUserRole**  
@@ -100,7 +103,7 @@ sp_help_jobactivity { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
   
 -   **SQLAgentOperatorRole**  
   
- Pour en savoir plus sur les autorisations de ces rôles, consultez [Rôles de base de données fixes de SQL Server Agent](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79).  
+ Pour en savoir plus sur les autorisations de ces rôles, consultez [Rôles de base de données fixes de l'Agent SQL Server](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79).  
   
  Seuls les membres du **sysadmin** peut afficher l’activité des travaux appartenant à d’autres utilisateurs.  
   

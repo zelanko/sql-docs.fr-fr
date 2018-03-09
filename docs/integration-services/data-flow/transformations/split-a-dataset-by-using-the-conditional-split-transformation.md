@@ -1,5 +1,5 @@
 ---
-title: "Fractionner un jeu de données à l’aide de la Transformation de fractionnement conditionnel | Documents Microsoft"
+title: "Fractionner un dataset à l’aide de la transformation de fractionnement conditionnel | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -17,17 +17,16 @@ helpviewer_keywords:
 - splitting dataset
 - datasets [Integration Services], splitting
 ms.assetid: 23b3e84f-9296-4dc9-81c0-c7f06ae3f1ff
-caps.latest.revision: 40
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
-ms.openlocfilehash: 8248e068541c6bd72b21f78d121811f4851850bb
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 1dfc5673dca0a8109e02b76107ad85e8e19324cb
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="split-a-dataset-by-using-the-conditional-split-transformation"></a>Fractionner un dataset à l'aide de la transformation de fractionnement conditionnel
   Pour pouvoir ajouter et configurer une transformation de fractionnement conditionnel, le package doit inclure au moins une tâche de flux de données et une source.  
@@ -67,13 +66,12 @@ ms.lasthandoff: 08/03/2017
   
 12. Pour enregistrer le package mis à jour, cliquez sur **Enregistrer les éléments sélectionnés** dans le menu **Fichier** .  
   
-## <a name="see-also"></a>Voir aussi  
- [Transformation de fractionnement conditionnel](../../../integration-services/data-flow/transformations/conditional-split-transformation.md)   
+## <a name="see-also"></a> Voir aussi  
+ [Conditional Split Transformation](../../../integration-services/data-flow/transformations/conditional-split-transformation.md)   
  [Transformations Integration Services](../../../integration-services/data-flow/transformations/integration-services-transformations.md)   
- [Chemins d’accès d’Integration Services](../../../integration-services/data-flow/integration-services-paths.md)   
- [Types de données Integration Services](../../../integration-services/data-flow/integration-services-data-types.md)   
+ [Chemins Integration Services](../../../integration-services/data-flow/integration-services-paths.md)   
+ [Types de données d’Integration Services](../../../integration-services/data-flow/integration-services-data-types.md)   
  [Tâche de flux de données](../../../integration-services/control-flow/data-flow-task.md)   
- [Integration Services &#40; SSIS &#41; Expressions](../../../integration-services/expressions/integration-services-ssis-expressions.md)  
+ [Expressions Integration Services &#40;SSIS&#41;](../../../integration-services/expressions/integration-services-ssis-expressions.md)  
   
   
-

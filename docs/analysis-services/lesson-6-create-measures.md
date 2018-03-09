@@ -2,13 +2,13 @@
 title: "Leçon 7 : Créer des mesures | Documents Microsoft"
 ms.custom: 
 ms.date: 03/27/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tutorial
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology: analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to: SQL Server 2016
@@ -18,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 7854640d3f9ddbc829e2a9110c771816aa1aa87d
-ms.sourcegitcommit: 50e9ac6ae10bfeb8ee718c96c0eeb4b95481b892
+ms.openlocfilehash: f3eaadefd65c49f86e4081ba0547f5ca05ae0514
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/22/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="lesson-6-create-measures"></a>Leçon 6 : Créer des mesures
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
@@ -37,7 +37,7 @@ Dans cette leçon, vous allez créer des mesures en entrant une formule DAX dans
   
 Durée estimée pour effectuer cette leçon : **30 minutes**  
   
-## <a name="prerequisites"></a>Conditions préalables  
+## <a name="prerequisites"></a>Prerequisites  
 Cette rubrique fait partie d'un didacticiel de modélisation tabulaire, qui doit être suivi dans l'ordre. Avant d’effectuer les tâches de cette leçon, vous devez avoir terminé la leçon précédente : [leçon 5 : créer des colonnes calculées](../analysis-services/lesson-5-create-calculated-columns.md).  
   
 ## <a name="create-measures"></a>Créer des mesures  
@@ -92,16 +92,16 @@ Cette rubrique fait partie d'un didacticiel de modélisation tabulaire, qui doit
   
 1.  En utilisant la fonction de somme automatique, créez et nommez les mesures suivantes :  
   
-    |Nom de la mesure|Colonne|Somme automatique (∑)|Formule|  
+    |Nom de la mesure|colonne|Somme automatique (∑)|Formule|  
     |----------------|----------|-----------------|-----------|  
     |InternetOrderLinesCount|SalesOrderLineNumber|Compter|=COUNTA([SalesOrderLineNumber])|  
-    |InternetTotalUnits|OrderQuantity|Sum|=SUM([OrderQuantity])|  
-    |InternetTotalDiscountAmount|DiscountAmount|Sum|=SUM([DiscountAmount])|  
-    |InternetTotalProductCost|TotalProductCost|Sum|=SUM([TotalProductCost])|  
-    |InternetTotalSales|SalesAmount|Sum|=SUM([SalesAmount])|  
-    |InternetTotalMargin|Margin|Sum|=SUM([Margin])|  
-    |InternetTotalTaxAmt|TaxAmt|Sum|=SUM([TaxAmt])|  
-    |InternetTotalFreight|Freight|Sum|=SUM([Freight])|  
+    |InternetTotalUnits|OrderQuantity|SUM|=SUM([OrderQuantity])|  
+    |InternetTotalDiscountAmount|DiscountAmount|SUM|=SUM([DiscountAmount])|  
+    |InternetTotalProductCost|TotalProductCost|SUM|=SUM([TotalProductCost])|  
+    |InternetTotalSales|SalesAmount|SUM|=SUM([SalesAmount])|  
+    |InternetTotalMargin|Margin|SUM|=SUM([Margin])|  
+    |InternetTotalTaxAmt|TaxAmt|SUM|=SUM([TaxAmt])|  
+    |InternetTotalFreight|Freight|SUM|=SUM([Freight])|  
   
 2.  En cliquant sur une cellule vide dans la grille de mesures et à l’aide de la barre de formule, créez et nommez les mesures suivantes dans l’ordre :  
   
@@ -131,7 +131,7 @@ Cette rubrique fait partie d'un didacticiel de modélisation tabulaire, qui doit
   
 Les mesures créées pour la table FactInternetSales peuvent être utilisées pour analyser des données financières critiques telles que les ventes et les coûts, marge bénéficiaire des éléments définis par le filtre d’utilisateur sélectionné.  
   
-## <a name="whats-next"></a>Étape suivante
+## <a name="whats-next"></a>Quelle est l’étape suivante ?
 Accédez à la leçon suivante : [leçon 7 : créer des indicateurs de Performance clés](../analysis-services/lesson-7-create-key-performance-indicators.md).  
 
   

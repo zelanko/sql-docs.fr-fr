@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: microsoft
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 6c8c6d75686741d1835f46a5ad7a64ab04c6925f
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 4e4ee29a84fc739cb0f66e1e81f668c8c9598832
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="create-table---sql-command"></a>CRÉER la TABLE - commande SQL
 Crée une table comportant les champs spécifiés.  
@@ -138,7 +138,7 @@ CREATE TABLE mytable (char1 C(10), char2 C(10) NOCPTRANS,;
  À partir du tableau *nom de tableau*  
  Spécifie le nom d’un tableau existant dont le contenu est le nom, type, la précision et l’échelle pour chaque champ dans la table. Le contenu du tableau peut être défini avec la **AFIELDS**(fonction) ().  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  La nouvelle table est ouvert dans la zone la plus basse de travail disponible et est accessible par son alias. La nouvelle table est ouverte en mode exclusif, quel que soit le paramètre actuel de la valeur exclusif.  
   
  Si une base de données est ouverte et que vous n’incluez pas la clause libre, la nouvelle table est ajoutée à la base de données. Impossible de créer une nouvelle table avec le même nom qu’une table dans la base de données.  
