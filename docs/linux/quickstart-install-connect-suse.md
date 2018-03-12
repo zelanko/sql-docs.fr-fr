@@ -28,11 +28,11 @@ ms.lasthandoff: 11/20/2017
 Dans ce guide de démarrage rapide, vous installez d’abord  SQL Server 2017 sur SUSE Linux Enterprise Server (SLES) v12 SP2, puis vous vous connectez avec **sqlcmd** pour créer votre première base de données et exécuter des requêtes.
 
 > [!TIP]
-> Ce didacticiel nécessite l’entrée d’utilisateur et une connexion internet. Si vous êtes intéressé par les procédures d'installation [sans assistance](sql-server-linux-setup.md#unattended) ou [hors connexion](sql-server-linux-setup.md#offline), consultez [aide à l’Installation de SQL Server sur Linux](sql-server-linux-setup.md).
+> Ce didacticiel nécessite une saisie de la part de l’utilisateur et une connexion Internet. Si vous êtes intéressé par les procédures d'installation [sans assistance](sql-server-linux-setup.md#unattended) ou [hors connexion](sql-server-linux-setup.md#offline), consultez [Aide à l’installation de SQL Server sur Linux](sql-server-linux-setup.md). 
 
 ## <a name="prerequisites"></a>Conditions préalables
 
-Vous devez disposer d’un ordinateur de SP2 SLES v12 avec **au moins 3,25 Go** de mémoire. Le système de fichiers doit être **XFS** ou **EXT4**. D'autres systèmes de fichiers tels que **BTRFS** ne sont pas pris en charge.
+Vous devez disposer d’un ordinateur SP2 SLES v12 avec **au moins 3,25 Go** de mémoire. Le système de fichiers doit être **XFS** ou **EXT4**. D'autres systèmes de fichiers tels que **BTRFS** ne sont pas pris en charge. 
 
 Pour installer SUSE Linux Enterprise Server sur votre propre ordinateur, accédez à [https://www.suse.com/products/server](https://www.suse.com/products/server). Vous pouvez également créer des machines virtuelles SLES dans Azure. Consultez [créer et gérer des machines virtuelles Linux avec l’interface CLI Azure](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-manage-vm)et utiliser `--image SLES` dans l’appel à `az vm create`.
 
@@ -46,7 +46,7 @@ Pour les autres exigences système, consultez [configuration système requise po
 Pour configurer SQL Server sur SLES, exécutez les commandes suivantes dans un terminal pour installer le package **mssql-server** :
 
 > [!IMPORTANT]
-> Si vous avez déjà installé une version CTP ou RC de SQL Server 2017, vous devez d’abord supprimer l’ancien référentiel avant d’inscrire un des référentiels de la disponibilité générale (GA). Pour plus d’informations, consultez [passer du référentiel de version préliminaire au référentiel de disponibilité générale](sql-server-linux-change-repo.md).
+> Si vous avez déjà installé une version CTP ou RC de SQL Server 2017, vous devez d’abord supprimer l’ancien référentiel avant d’inscrire l'un des référentiels à disponibilité générale (GA). Pour plus d’informations, consultez [passer du référentiel de préversion au référentiel à disponibilité générale](sql-server-linux-change-repo.md).
 
 1. Téléchargez le fichier de configuration du référentiel de Microsoft SQL Server SLES :
 
@@ -56,7 +56,7 @@ Pour configurer SQL Server sur SLES, exécutez les commandes suivantes dans un t
    ```
 
    > [!NOTE]
-   > Il s’agit du référentiel de mise à jour Cumulative (CU). Pour plus d’informations sur les options de votre référentiel et leurs différences, consultez [modifier les référentiels sources](sql-server-linux-setup.md#repositories).
+   > Il s’agit du référentiel de mise à jour cumulative (CU). Pour plus d’informations sur les options de votre référentiel et leurs différences, consultez [modifier les référentiels sources](sql-server-linux-setup.md#repositories). 
 
 1. Exécutez les commandes suivantes pour installer SQL Server :
 
@@ -64,7 +64,7 @@ Pour configurer SQL Server sur SLES, exécutez les commandes suivantes dans un t
    sudo zypper install -y mssql-server
    ```
 
-1. Après la fin de l’installation package, exécutez le programme d’installation **mssql-conf** et suivez les invites pour définir le mot de passe SA et choisir votre édition.
+1. Après la fin de l’installation du package, exécutez le programme d’installation **mssql-conf** et suivez les invites pour définir le mot de passe SA et choisir votre édition. 
 
    ```bash
    sudo /opt/mssql/bin/mssql-conf setup
@@ -74,7 +74,7 @@ Pour configurer SQL Server sur SLES, exécutez les commandes suivantes dans un t
    > Si vous testez SQL Server 2017 avec ce didacticiel, les éditions suivantes sont concédées librement sous licence  : Evaluation, Developer et Express.
 
    > [!NOTE]
-   > Veillez à spécifier un mot de passe fort pour le compte d’administrateur système (longueur minimum 8 caractères, incluant des majuscules et minuscules, chiffres et/ou des caractères spéciaux).
+   > Veillez à spécifier un mot de passe fort pour le compte d’administrateur système (longueur minimum 8 caractères, incluant des majuscules et des minuscules, des chiffres et/ou des caractères spéciaux). 
 
 1. Une fois la configuration terminée, vérifiez que le service est en cours d’exécution :
 
@@ -82,7 +82,7 @@ Pour configurer SQL Server sur SLES, exécutez les commandes suivantes dans un t
    systemctl status mssql-server
    ```
 
-1. Si vous envisagez de vous connecter à distance, vous devrez peut-être également ouvrir le port TCP du serveur SQL (1433 par défaut) sur votre pare-feu. Si vous utilisez le pare-feu SuSE, vous devez modifier le fichier de configuration **/etc/sysconfig/SuSEfirewall2**. Modifier l'entrée **FW_SERVICES_EXT_TCP** pour inclure le numéro de port SQL Server.
+1. Si vous envisagez de vous connecter à distance, vous devrez peut-être également ouvrir le port TCP du serveur SQL (1433 par défaut) sur votre pare-feu. Si vous utilisez le pare-feu SuSE, vous devez modifier le fichier de configuration **/etc/sysconfig/SuSEfirewall2**. Modifiez l'entrée **FW_SERVICES_EXT_TCP** pour inclure le numéro de port SQL Server. 
 
    ```
    FW_SERVICES_EXT_TCP="1433"
@@ -107,7 +107,7 @@ Pour créer une base de données, vous devez vous connecter avec un outil qui pe
    sudo zypper install -y mssql-tools unixODBC-devel
    ```
 
-1. Pour plus de commodité, ajoutez `/opt/mssql-tools/bin/` à votre variable d'environnement de **chemin d’accès**. Cela vous permet d’exécuter les outils sans spécifier le chemin d’accès complet. Exécutez les commandes suivantes pour modifier le **chemin d’accès** pour les sessions interactives avec et sans login :
+1. Pour plus de commodité, ajoutez `/opt/mssql-tools/bin/` à votre variable d'environnement de **chemin d’accès**. Cela vous permet d’exécuter les outils sans spécifier le chemin d’accès complet. Exécutez les commandes suivantes pour modifier le **chemin d’accès** pour les sessions interactives avec et sans connexion : 
 
    ```bash
    echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bash_profile
@@ -116,6 +116,6 @@ Pour créer une base de données, vous devez vous connecter avec un outil qui pe
    ```
 
 > [!TIP]
-> **SQLCMD** est un unique outil pour se connecter à SQL Server afin d'exécuter des requêtes et d'effectuer les tâches de gestion et de développement. D'autres outils incluent [SQL Server Management Studio](sql-server-linux-develop-use-ssms.md) et [Visual Studio Code](sql-server-linux-develop-use-vscode.md).
+> **SQLCMD** est un outil unique pour se connecter à SQL Server afin d'exécuter des requêtes et d'effectuer les tâches de gestion et de développement. D'autres outils incluent [SQL Server Management Studio](sql-server-linux-develop-use-ssms.md) et [Visual Studio Code](sql-server-linux-develop-use-vscode.md).
 
 [!INCLUDE [Connect, create, and query data](../includes/sql-linux-quickstart-connect-query.md)]
