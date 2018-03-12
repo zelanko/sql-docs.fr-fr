@@ -85,7 +85,7 @@ SQL Server fournit des fonctionnalités OLTP en mémoire qui peuvent améliorer 
    GO
    ```
 
-2. Lorsqu'une transaction implique une table sur disque ainsi qu'une table optimisée en mémoire , il est essentiel que la partie de la transaction concernant la table optimisée en mémoire utilise le niveau d’isolation des transactions appelé SNAPSHOT.  Pour appliquer ce niveau d'isolation pour les tables optimisées en mémoire dans une transaction de ce type, exécutez la commande suivante :
+2. Lorsqu'une transaction implique une table sur disque ainsi qu'une table optimisée en mémoire, il est essentiel que la partie de la transaction concernant la table optimisée en mémoire utilise le niveau d’isolation des transactions appelé SNAPSHOT. Pour appliquer ce niveau d'isolation pour les tables optimisées en mémoire dans une transaction de ce type, exécutez la commande suivante :
 
    ```sql
    ALTER DATABASE CURRENT SET MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT=ON
@@ -168,7 +168,7 @@ Pour plus d’informations sur l’OLTP en mémoire, consultez les rubriques sui
 - [OLTP en mémoire (optimisation en mémoire)](../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)
 
 ## <a name="use-query-store"></a>Utiliser le magasin de requête
-Le magasin de requêtes (Query Store) collecte des informations détaillées sur les performances sur les requêtes, les plans d’exécution et les statistiques d’exécution.
+Le magasin de requêtes (Query Store) collecte des informations détaillées sur les performances concernant les requêtes, les plans d’exécution et les statistiques d’exécution.
 
 Le magasin de requêtes n’est pas actif par défaut et peut être activé avec ALTER DATABASE :
 
