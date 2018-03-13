@@ -42,7 +42,7 @@ La meilleure façon de démarrer et de créer des applications avec SQL Server e
 > [!TIP]
 > Si vous voulez développer pour SQL Server 2017 sur Docker, jetez un coup d'oeil aux tutoriels **macOS**.
 
-## <a name="create-new-applications"></a>Créer de nouvelles applications
+## <a name="create-new-applications"></a>Créer des applications
 
 Si vous créez une nouvelle application, jetez un coup d'oeil à la liste des [bibliothèques de connectivité](sql-server-linux-develop-connectivity-libraries.md) pour obtenir un résumé des connecteurs et des frameworks populaires disponibles pour différents langages de programmation.
 
@@ -54,7 +54,7 @@ Si vous disposez d'une application de base de données existante, vous pouvez si
 
 Les outils qui fonctionnent actuellement sous Windows tels que SSMS, SSDT et PowerShell fonctionnent également avec SQL Server 2017 sous Linux. Bien qu'ils ne fonctionnent pas nativement sous Linux, vous pouvez quand même gérer les instances SQL Server distantes sous Linux.
 
-Consultez les rubriques suivantes pour plus d'informations:
+Consultez les rubriques suivantes pour plus d’informations :
 
 - [SQL Server Management Studio (SSMS)](sql-server-linux-develop-use-ssms.md)
 - [SQL Server Data Tools (SSDT)](sql-server-linux-develop-use-ssdt.md)
