@@ -31,7 +31,7 @@ Vous pouvez utiliser `bcp` pour importer un grand nombre de lignes dans des tabl
 
 Cette rubrique vous indiquent comment à :
 - Importer des données dans une table à l’aide de la commande `bcp in` 
-- Exporter les données d’une table d’utilisant le commande `bcp out` 
+- Exporter les données d’une table d’utilisant la commande `bcp out`
 
 ## <a name="install-the-sql-server-command-line-tools"></a>Installer les outils de ligne de commande SQL Server
 
@@ -43,15 +43,15 @@ Cette rubrique vous indiquent comment à :
 
 ## <a name="import-data-with-bcp"></a>Importer des données avec bcp
 
-Dans ce didacticiel, vous allez créer une base de données exemple et une table sur l’instance de SQL Server locale (**localhost**), puis utiliser `bcp` pour charger la table d’exemple à partir d’un fichier texte sur disque.
+Dans ce didacticiel, vous allez créer un exemple de base de données et de table sur l’instance SQL Server locale (**localhost**), puis vous allez utiliser `bcp` pour charger l'exemple de table à partir d’un fichier texte sur disque. 
 
-### <a name="create-a-sample-database-and-table"></a>Créer une base de données et une table exemple
+### <a name="create-a-sample-database-and-table"></a>Créer un exemple de base de données et de table
 
 Commençons par la création d’une base de données exemple avec une table simple qui sera utilisée dans le reste de ce didacticiel.
 
 1. Ouvrez un terminal de commande sur votre ordinateur Linux.
 
-2. Copiez et collez les commandes ci-dessous dans la fenêtre de terminal. Ces commandes utilisent l'utilitaire de ligne de commande **sqlcmd**  pour créer une base de données exemple (**BcpSampleDB**) et une table (**TestEmployees**) sur l’instance de SQL Server locale (**localhost**). N’oubliez pas de remplacer le `username` et `<your_password>` si nécessaire avant d’exécuter les commandes.
+2. Copiez et collez les commandes ci-dessous dans la fenêtre de terminal. Ces commandes utilisent l'utilitaire de ligne de commande **sqlcmd** pour créer un exemple de base de données (**BcpSampleDB**) et de table (**TestEmployees**) sur l’instance SQL Server locale (**localhost**). N’oubliez pas de remplacer `username` et `<your_password>` si nécessaire avant d’exécuter les commandes.
 
 Créer la base de données **BcpSampleDB**:
 ```bash 
@@ -120,7 +120,7 @@ Id          Name                Location
 
 ## <a name="export-data-with-bcp"></a>Exporter des données avec bcp
 
-Dans ce didacticiel, vous allez utiliser `bcp` pour exporter des données à partir de la table d’exemple que nous avons créée précédemment verrs un fichier de données.
+Dans ce didacticiel, vous allez utiliser `bcp` pour exporter des données à partir de l'exemple de table que nous avons créé précédemment vers un fichier de données. 
 
 Copiez et collez les commandes ci-dessous dans la fenêtre de Terminal Server. Ces commandes utilisent l'utilitaire de ligne de commande `bcp`  pour exporter des données à partir de la table **TestEmployees** de la base de données **BcpSampleDB** vers un nouveau fichier de données appelé **~/test_export.txt**.  N’oubliez pas de remplacer le nom d’utilisateur et `<your_password>` si nécessaire avant d’exécuter la commande.
 
