@@ -1,4 +1,4 @@
----
+﻿---
 title: Planifier des packages SSIS sur Linux avec cron | Documents Microsoft
 description: "Cet article décrit comment planifier des packages SQL Server Integration Services (SSIS) sur Linux avec le service cron."
 author: leolimsft
@@ -25,13 +25,12 @@ ms.lasthandoff: 03/02/2018
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-Lorsque vous exécutez SQL Server Integration Services (SSIS) et SQL Server sur Windows, vous pouvez automatiser l’exécution de packages SSIS à l’aide de l’Agent SQL Server. Lorsque vous exécutez SQL Server et SSIS sur Linux, toutefois, l’utilitaire SQL Server Agent n’est pas disponible pour planifier des travaux sur Linux. Au lieu de cela, vous utilisez le service cron, qui est largement utilisé sur les plateformes Linux pour automatiser l’exécution du package.
 
 Cet article fournit des exemples qui montrent comment automatiser l’exécution des packages SSIS. Les exemples sont écrits pour s’exécuter sur Red Hat Enterprise. Le code est identique pour les autres distributions Linux, telles que Ubuntu.
 
 ## <a name="prerequisites"></a>Configuration requise
 
-Avant d’utiliser le service cron pour exécuter des tâches, vérifiez si elle est en cours d’exécution sur votre ordinateur.
+Avant d’utiliser le service cron pour exécuter des travaux, vérifiez s'il est en cours d'exécution sur votre ordinateur.
 
 Pour vérifier l’état du service cron, utilisez la commande suivante : `systemctl status crond.service`.
 
@@ -43,7 +42,7 @@ Une tâche cron est une tâche que vous pouvez configurer pour s’exécuter ré
 
 Pour faciliter la gestion et à des fins de maintenance, nous vous recommandons de placer vos commandes de l’exécution du package dans un script qui contient un nom descriptif.
 
-Voici un exemple d’un script shell simple pour l’exécution d’un package. Il contient uniquement une commande unique, mais vous pouvez ajouter davantage de commandes en fonction des besoins.
+Voici un exemple d’un script shell simple pour l’exécution d’un package. Il contient une commande unique, mais vous pouvez ajouter davantage de commandes en fonction des besoins.
 
 ```bash
 # A simple shell script that contains a simple package execution command
@@ -54,11 +53,11 @@ Voici un exemple d’un script shell simple pour l’exécution d’un package. 
 
 ## <a name="schedule-jobs-with-the-cron-service"></a>Planifier des tâches avec le service cron
 
-Après avoir défini vos tâches, vous pouvez planifier elles s’exécutent automatiquement à l’aide du service cron.
+Après avoir défini vos tâches, vous pouvez planifier celles-ci pour qu'elles s’exécutent automatiquement à l’aide du service cron.
 
-Pour ajouter votre travail pour cron à exécuter, d’ajouter le travail dans le fichier crontab. Pour ouvrir le fichier crontab dans un éditeur, où vous pouvez ajouter ou mettre à jour le travail, utilisez la commande suivante : `crontab -e`.
+Pour ajouter un travail à cron pour qu’il l’exécute, ajoutez-le dans le fichier crontab. Pour ouvrir le fichier crontab dans un éditeur, où vous pouvez ajouter ou mettre à jour les travaux, utilisez la commande suivante : `crontab -e`.
 
-Pour planifier le travail décrit précédemment pour exécuter tous les jours à 2 h 10, ajoutez la ligne suivante au fichier crontab :
+Pour planifier le travail décrit précédemment pour exécuter tous les jours à 2 h 10, ajoutez la ligne suivante au fichier crontab :
 
 ```
 # run <SSIS package name> at 2:10 AM every day
@@ -77,7 +76,7 @@ L’illustration suivante montre la description du format de la ligne de tâche 
 
 Pour obtenir une description plus détaillée du format de fichier crontab, utilisez la commande suivante : `man 5 crontab`.
 
-Voici un exemple partiels de la sortie qui permet d’expliquer l’exemple dans cet article :
+Voici un exemple partiel de la sortie qui permet de comprendre l’exemple contenu dans cet article :
 
 ![Description partielle détaillée du format de crontab](media/sql-server-linux-schedule-ssis-packages/ssis-linux-cron-crontab-format.png)
 

@@ -62,7 +62,7 @@ Il existe plusieurs façons de créer un fichier de sauvegarde de base de donné
 
    ![Utilisez SSMS pour créer un fichier de sauvegarde](./media/sql-server-linux-migrate-restore-database/ssms-create-backup.png)
 
-1. Dans le **sauvegarde la base de données** boîte de dialogue, vérifiez que **type de sauvegarde** est **complète** et **sauvegarde sur** est **disque**. Notez le nom et l’emplacement du fichier. Par exemple, une base de données nommée **YourDB** sur SQL Server 2016 a un chemin de sauvegarde par défaut de `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Backup\YourDB.bak`.
+1. Dans la boîte de dialogue **Sauvegarder une base de données**, vérifiez que **Type de sauvegarde** est défini sur **Complète** et **Sauvegarder vers** sur **Disque**. Notez le nom et l’emplacement du fichier. Par exemple, une base de données nommée **YourDB** sur SQL Server 2016 utilise 'C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Backup\YourDB.bak' comme chemin de sauvegarde par défaut.
 
 1. Cliquez sur **OK** pour sauvegarder votre base de données.
 
@@ -147,7 +147,7 @@ Pour restaurer la base de données, vous devez d’abord transférer le fichier 
 Pour restaurer la sauvegarde de base de données, vous pouvez utiliser la commande Transact-SQL (TQL) **RESTORE DATABASE**.
 
 > [!NOTE]
-> Les étapes suivantes utilisent le **sqlcmd** outil. Si vous n’avez pas l’installation SQL Server Tools, reportez-vous à la section [outils de ligne de commande d’installation de SQL Server sur Linux](sql-server-linux-setup-tools.md).
+> Les étapes suivantes utilisent l'outil **sqlcmd**. Si vous n’avez pas installé les outils SQL Server, reportez-vous à la section [Installation des outils de ligne de commande de SQL Server sur Linux](sql-server-linux-setup-tools.md). 
 
 1. Dans le même terminal, lancez **sqlcmd**. L’exemple suivant se connecte à l’instance locale de SQL Server avec l'utilisateur **SA** . Entrez le mot de passe lorsque vous y êtes invité, ou spécifiez le mot de passe en ajoutant le **-P** paramètre.
 
@@ -174,7 +174,7 @@ Pour restaurer la sauvegarde de base de données, vous pouvez utiliser la comman
    GO
    ```
 
-1. Exécutez d’autres requêtes sur votre base de données migrée. La commande suivante change le contexte pour le **YourDB** de base de données et sélectionne les lignes dans une table.
+1. Exécutez d’autres requêtes sur votre base de données migrée. La commande suivante change le contexte de base de données pour **YourDB** et sélectionne les lignes d'une table.
 
    ```sql
    USE YourDB
@@ -184,7 +184,7 @@ Pour restaurer la sauvegarde de base de données, vous pouvez utiliser la comman
 
 1. Lorsque vous avez terminé d'utiliser **sqlcmd**, tapez `exit`.
 
-1. Lorsque vous avez terminé dans l’élément distant **ssh** session, tapez `exit` à nouveau.
+1. Lorsque vous avez terminé avec la session distante **ssh**, tapez `exit` à nouveau.
 
 ## <a name="next-steps"></a>Étapes suivantes
 
