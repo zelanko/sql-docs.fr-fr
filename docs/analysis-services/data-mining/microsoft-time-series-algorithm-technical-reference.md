@@ -35,14 +35,14 @@ ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 40d0c34ea4bb7e95d77ff6aa37695da4080c20ac
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.sourcegitcommit: 657d18fc805512c9574b2fe7451310601b9d78cb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 03/13/2018
 ---
 # <a name="microsoft-time-series-algorithm-technical-reference"></a>Références techniques relatives à l'algorithme MTS (Microsoft Time Series)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-L'algorithme MTS (Microsoft Time Series) [!INCLUDE[msCoName](../../includes/msconame-md.md)] inclut deux algorithmes séparés pour l'analyse de la série chronologique :  
+  L'algorithme MTS (Microsoft Time Series) [!INCLUDE[msCoName](../../includes/msconame-md.md)] inclut deux algorithmes séparés pour l'analyse de la série chronologique :  
   
 -   L'algorithme ARTXP, qui a été introduit dans [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], est optimisé pour la prédiction de la valeur probable suivante d'une série.  
   
@@ -53,7 +53,7 @@ L'algorithme MTS (Microsoft Time Series) [!INCLUDE[msCoName](../../includes/msco
  Cette rubrique fournit des informations supplémentaires sur la façon dont chaque algorithme est implémenté, ainsi que sur la façon dont vous pouvez personnaliser l'algorithme en définissant des paramètres pour optimiser l'analyse et les résultats de prédiction.  
   
 ## <a name="implementation-of-the-microsoft-time-series-algorithm"></a>Implémentation de l'algorithme MTS (Microsoft Time Series)  
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] Research a développé l'algorithme d'origine ARTXP utilisé dans SQL Server 2005, en basant l'implementation sur l'algorithme MDT ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees). Par conséquent, l'algorithme ARTXP peut être décrit comme un modèle d'arborescence autoregressif pour la représentation de données de série chronologique périodiques. Cet algorithme associe un nombre variable d'éléments passés à chaque élément actuel prédit. Le nom ARTXP vient du fait que l'algorithme ART (ou la méthode d'arbre autorégressif) est appliqué à plusieurs états antérieurs inconnus. Pour obtenir des explications détaillées sur l’algorithme ARTXP, consultez [Autoregressive Tree Models for Time-Series Analysis](http://go.microsoft.com/fwlink/?LinkId=45966)(Modèles d’arbres autorégressifs pour l’analyse de série chronologique).  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)]Research a développé l’algorithme ARTXP d’origine qui a été utilisé dans SQL Server 2005, en basant l’implementation sur le [!INCLUDE[msCoName](../../includes/msconame-md.md)] algorithme des arbres de décision. Par conséquent, l'algorithme ARTXP peut être décrit comme un modèle d'arborescence autoregressif pour la représentation de données de série chronologique périodiques. Cet algorithme associe un nombre variable d'éléments passés à chaque élément actuel prédit. Le nom ARTXP vient du fait que l'algorithme ART (ou la méthode d'arbre autorégressif) est appliqué à plusieurs états antérieurs inconnus. Pour obtenir des explications détaillées sur l’algorithme ARTXP, consultez [Autoregressive Tree Models for Time-Series Analysis](http://go.microsoft.com/fwlink/?LinkId=45966)(Modèles d’arbres autorégressifs pour l’analyse de série chronologique).  
   
  L'algorithme ARIMA a été ajouté dans l'algorithme MTS (Microsoft Time Series) dans SQL Server 2008 pour améliorer la prédiction à long terme. C'est une implémentation du processus de calcul de moyennes mobiles intégrées autoregressives décrit par Box et Jenkins. La méthode ARIMA permet de déterminer les dépendances dans les observations effectuées de manière séquentielle dans le temps et peut inclure des chocs aléatoires dans le modèle. Elle prend également en charge le caractère saisonnier multiplicatif. Si vous souhaitez en savoir plus sur l'algorithme ARIMA, nous vous conseillons de lire les travaux de Box et Jenkins ; cette rubrique vise à vous fournir plus de détails sur la façon dont la méthodologie ARIMA a été implémentée dans l'algorithme MTS.  
   
