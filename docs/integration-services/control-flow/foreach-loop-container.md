@@ -39,10 +39,10 @@ ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 834bdc1febf1f066847b33f1490f076151357e98
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: HT
+ms.sourcegitcommit: 657d18fc805512c9574b2fe7451310601b9d78cb
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 03/13/2018
 ---
 # <a name="foreach-loop-container"></a>Conteneur de boucles Foreach
   Le conteneur de boucles Foreach définit un flux de contrôle répétitif dans un package. La mise en œuvre de la boucle est similaire à la structure de bouclage **Foreach** des langages de programmation. Dans un package, le bouclage repose sur l'utilisation d'un énumérateur Foreach.  Le conteneur de boucles Foreach répète le flux de contrôle pour chaque membre d'un énumérateur spécifié.  
@@ -102,7 +102,7 @@ ms.lasthandoff: 02/15/2018
 |Foreach ADLS File|Spécifiez le répertoire Azure Data Lake Store qui contient les fichiers à énumérer.|
 
 ## <a name="add-enumeration-to-a-control-flow-with-a-foreach-loop-container"></a>Ajouter une énumération à un flux de contrôle avec un conteneur de boucles Foreach
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] inclut le conteneur de boucles Foreach, élément de flux de contrôle qui facilite l’inclusion d’une construction de bouclage assurant l’énumération de fichiers et d’objets dans le flux de contrôle d’un package. Pour plus d’informations, consultez [Conteneur de boucles Foreach](../../integration-services/control-flow/foreach-loop-container.md).  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] inclut le conteneur de boucles Foreach, un élément de flux de contrôle qui permet de facilement inclure une construction de boucle énumérant les fichiers et objets du flux de contrôle d’un package. Pour plus d’informations, consultez [Conteneur de boucles Foreach](../../integration-services/control-flow/foreach-loop-container.md).  
   
  Le conteneur de boucles Foreach n'offre aucune fonctionnalité ; il ne fournit que la structure dans laquelle vous créez le flux de contrôle répété, spécifiez un type d'énumérateur et configurez l'énumérateur. Pour fournir une fonctionnalité de conteneur, vous devez inclure au moins une tâche dans le conteneur de boucles Foreach. Pour plus d’informations, consultez [Tâches Integration Services](../../integration-services/control-flow/integration-services-tasks.md).  
   
@@ -161,7 +161,7 @@ Cette procédure décrit comment configurer un conteneur de boucles Foreach, not
   
     -   Pour utiliser l’énumérateur SMO Foreach, sélectionnez une connexion ADO.NET existante ou cliquez sur **Nouvelle connexion** dans la liste **Connexion** , puis tapez la chaîne à utiliser ou cliquez sur **Parcourir**. Si vous cliquez sur **Parcourir**, dans la boîte de dialogue **Sélectionner l’énumération SMO** , sélectionnez le type d’objet à énumérer et le type d’énumération, puis cliquez sur **OK**.  
   
-6.  Si vous le souhaitez, cliquez sur le bouton Parcourir **(…)** dans la zone de texte **Expressions** de la page **Collection** pour créer des expressions qui mettent à jour les valeurs des propriétés. Pour plus d’informations, consultez [Ajouter ou modifier une Expression de propriété](../../integration-services/expressions/add-or-change-a-property-expression.md).  
+6.  Si vous le souhaitez, cliquez sur le bouton Parcourir **(…)** dans la zone de texte **Expressions** de la page **Collection** pour créer des expressions qui mettent à jour les valeurs des propriétés. Pour plus d’informations, consultez [Ajouter ou modifier une expression de propriété](../../integration-services/expressions/add-or-change-a-property-expression.md).  
   
     > [!NOTE]  
     >  Les propriétés énumérées dans la liste **Propriété** varient en fonction de l’énumérateur.  
@@ -177,7 +177,7 @@ Cette procédure décrit comment configurer un conteneur de boucles Foreach, not
         > [!NOTE]  
         >  La valeur de l'index indique quelle colonne de l'élément mapper à la variable. Seul l'énumérateur For Each Item peut utiliser une valeur d'index autre que 0.  
   
-8.  Si vous le souhaitez, cliquez sur **Expressions** et, dans la page **Expressions** , créez des expressions de propriété pour les propriétés du conteneur de boucles Foreach. Pour plus d’informations, consultez [Ajouter ou modifier une Expression de propriété](../../integration-services/expressions/add-or-change-a-property-expression.md).  
+8.  Si vous le souhaitez, cliquez sur **Expressions** et, dans la page **Expressions** , créez des expressions de propriété pour les propriétés du conteneur de boucles Foreach. Pour plus d’informations, consultez [Ajouter ou modifier une expression de propriété](../../integration-services/expressions/add-or-change-a-property-expression.md).  
   
 9. Cliquez sur **OK**.  
 
@@ -205,7 +205,7 @@ Utilisez la page **Général** de la boîte de dialogue **Éditeur de boucle For
  **Énumérateur**  
  Sélectionnez le type d'énumérateur dans la liste. Cette propriété dispose des options répertoriées dans le tableau suivant :  
   
-|Valeur|Description|  
+|Valeur| Description|  
 |-----------|-----------------|  
 |**Énumérateur ForEach File**|Permet d'énumérer les fichiers. Si cette valeur est sélectionnée, les options dynamiques s'affichent dans la section **Énumérateur Foreach File**.|  
 |**Énumérateur ForEach Item**|Permet d'énumérer les valeurs issues d'un élément. Si cette valeur d'énumérateur est sélectionnée, les options dynamiques s'affichent dans la section **Énumérateur Foreach Item**.|  
@@ -239,7 +239,7 @@ Utilisez la page **Général** de la boîte de dialogue **Éditeur de boucle For
  **Dossier**  
  Permet d'indiquer le chemin du dossier racine à énumérer.  
   
- **...**  
+ **Parcourir**  
  Permet de rechercher et de spécifier le chemin d'accès du dossier racine.  
   
  **Fichiers**  
@@ -284,7 +284,7 @@ Utilisez la page **Général** de la boîte de dialogue **Éditeur de boucle For
  **Supprimer**  
  Sélectionnez un élément, puis cliquez sur **Supprimer** pour le supprimer de la liste.  
   
- **Colonnes**  
+ **Columns**  
  Cliquez pour configurer le type de données des colonnes constituant l'élément.  
   
  **Rubriques connexes :** [Référence de l’interface utilisateur de la boîte de dialogue Colonnes For Each Item](http://msdn.microsoft.com/library/ea76aae0-8798-4677-8ab8-4a579de4957c)  
@@ -366,7 +366,7 @@ Utilisez la page **Général** de la boîte de dialogue **Éditeur de boucle For
  **EnumerationType**  
  Permet de sélectionner le type d'énumérateur dans la liste. Cette propriété dispose des options répertoriées dans le tableau suivant :  
   
-|Valeur|Description|  
+|Valeur| Description|  
 |-----------|-----------------|  
 |**Navigateur**|Permet d'énumérer par le biais d'un XPathNavigator.|  
 |**Nœud**|Permet d'énumérer les nœuds retournés par une opération XPath.|  
@@ -427,7 +427,7 @@ Utilisez la page **Général** de la boîte de dialogue **Éditeur de boucle For
  **Énumérer**  
  Permet de spécifier l'objet SMO à énumérer.  
   
- **...**  
+ **Parcourir**  
  Permet de sélectionner l'énumération SMO.  
   
  **Rubriques connexes :** [Sélectionner l’énumération SMO, boîte de dialogue](http://msdn.microsoft.com/library/64ada1fe-21a2-4675-98fc-d5c803aa32f0)  
@@ -515,7 +515,7 @@ Spécifie si la recherche doit être récursive au sein du répertoire spécifi�
 > [!NOTE]  
 >  L'index commence à 0.  
   
-**Supprimer**  
+**Delete**  
  Sélectionnez une variable, puis cliquez sur **Supprimer**.  
 
 ## <a name="schema-restrictions-dialog-box-adonet"></a>Restrictions de schéma, boîte de dialogue (ADO.NET)
@@ -537,7 +537,7 @@ Utilisez la boîte de dialogue **Restrictions de schéma** pour définir les res
 Utilisez la boîte de dialogue **Colonnes For Each Item** pour définir les colonnes des éléments énumérés par l'énumérateur Foreach Item.  
   
 ### <a name="options"></a>Options  
- **Colonne**  
+ **Column**  
  Répertorie les colonnes.  
   
  **Type de données**  
@@ -550,7 +550,7 @@ Utilisez la boîte de dialogue **Colonnes For Each Item** pour définir les colo
  Sélectionnez une colonne, puis cliquez sur **Supprimer**.  
  
  ## <a name="select-smo-enumeration-dialog-box"></a>Sélectionner l'énumération SMO, boîte de dialogue
-Utilisez la boîte de dialogue **Sélectionner l’énumération SMO** pour spécifier l’objet SMO ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Object) sur l’instance spécifiée de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à énumérer et pour sélectionner le type d’énumération.  
+Utilisez la boîte de dialogue **Sélectionner l’énumération SMO** pour spécifier l’objet SMO ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Object) sur l’instance spécifiée de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à énumérer et pour sélectionner le type d’énumération.  
   
 ### <a name="options"></a>Options  
  **Énumérer**  
@@ -565,7 +565,7 @@ Utilisez la boîte de dialogue **Sélectionner l’énumération SMO** pour spé
  **Noms**  
  Utilisez le type d'énumération Noms.  
   
- **URN**  
+ **Les noms urn**  
  Utilisez le type d'énumération URN.  
   
  **Emplacements**  
@@ -578,7 +578,7 @@ Utilisez la boîte de dialogue **Sélectionner l’énumération SMO** pour spé
   
  Pour éviter les conséquences négatives d'une synchronisation non déterminante d'une exécution parallèle de tâches dans la boucle, le package doit être configuré pour exécuter un seul exécutable à la fois. Par exemple, si un package peut exécuter plusieurs tâches simultanément, un conteneur de boucles Foreach qui énumère les fichiers dans le dossier, récupère les noms de fichiers, puis utilise une tâche d'exécution SQL pour insérer les noms de fichiers dans une table peut provoquer des conflits d'écriture lorsque deux instances de la tâche d'exécution SQL tentent d'écrire simultanément. Pour plus d’informations, consultez [Expressions de propriété dans des packages](../../integration-services/expressions/use-property-expressions-in-packages.md).  
 
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Flux de contrôle](../../integration-services/control-flow/control-flow.md)   
  [Conteneurs Integration Services](../../integration-services/control-flow/integration-services-containers.md)  
   
