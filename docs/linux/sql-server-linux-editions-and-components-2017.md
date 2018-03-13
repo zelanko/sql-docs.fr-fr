@@ -41,7 +41,7 @@ ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 11/20/2017
 ---
-# <a name="editions-and-supported-features-of-sql-server-2017-on-linux"></a>Éditions et fonctionnalités prises en charge pour serveur SQL Server 2017 sous Linux
+# <a name="editions-and-supported-features-of-sql-server-2017-on-linux"></a>Éditions et fonctionnalités prises en charge pour SQL Server 2017 sous Linux
 
 Cet article fournit des détails sur les fonctionnalités prises en charge par les différentes éditions de 2017 du serveur SQL sur Linux. Pour les éditions et les fonctionnalités prises en charge de SQL Server sur Windows, consultez [SQL Server 2017 - Windows](../sql-server/editions-and-components-of-sql-server-2017.md).  
   
@@ -78,7 +78,7 @@ SQL Server 2017 sous Linux prend en charge le moteur de base de données SQL Ser
   
 |Composants serveur| Description|  
 |-----------------------|-----------------|  
-|[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]|[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]inclut le [!INCLUDE[ssDE](../includes/ssde-md.md)], le service principal pour stocker, traiter et de sécuriser les données, la réplication, la recherche en texte intégral, les outils pour gérer les données relationnelles et XML et l’intégration de base de données analytique.|  
+|[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]|[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] inclut le [!INCLUDE[ssDE](../includes/ssde-md.md)], le service principal pour stocker, traiter et sécuriser les données, la réplication, la recherche en texte intégral, les outils pour gérer les données relationnelles et XML, et l’intégration de base de données analytique.| 
 
 **Éditions Developer, Enterprise Core et d’évaluation**  
 Pour les fonctionnalités prises en charge par l'édition Enterprise, Developer et les éditions d’évaluation, consultez les fonctionnalités répertoriées pour l’édition Enterprise de SQL Server  dans les tableaux ci-dessous.
@@ -96,7 +96,7 @@ L’édition Developer continue à prendre en charge seulement 1 client pour [S
 |Taille maximale des données à mémoire optimisée par base de données dans le [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]|Mémoire illimitée| 32 Go| 16 Go| 352 Mo|
 |Taille maximale de la base de données relationnelle|524 Po|524 Po|524 Po|10 GB|  
   
-<sup>1</sup> L'édition Enterprise avec un mode de licences serveur + CAL (Client accès licences), non disponible pour les nouveaux contrats, est limitée à un maximum de 20 cœurs par instance de SQL Server. Il n'existe aucune limite dans le mode de licence Serveur par cœurs. Pour plus d’informations, consultez [limites de capacité de calcul par l’édition de SQL Server](../sql-server/compute-capacity-limits-by-edition-of-sql-server.md).  
+<sup>1</sup> L'édition Enterprise avec un mode de licences serveur + CAL (licence d'accès client), non disponible pour les nouveaux contrats, est limitée à un maximum de 20 cœurs par instance SQL Server. Il n'existe aucune limite dans le mode de licence Serveur par cœurs. Pour plus d’informations, consultez [limites de capacité de calcul par édition de SQL Server](../sql-server/compute-capacity-limits-by-edition-of-sql-server.md). 
  
 ##  <a name="RDBMSHA"></a> Haute disponibilité SGBDR  
   
@@ -120,11 +120,11 @@ L’édition Developer continue à prendre en charge seulement 1 client pour [S
 |Sauvegarde chiffrée|Oui|Oui|Non|Non|
 |Sauvegarde hybride vers Windows Azure (sauvegarde vers une URL)|Oui|Oui|Non|Non|
   
-<sup>1</sup> sur l'édition Enterprise, le nombre de nœuds est le maximum du système d’exploitation. L’édition Standard prend en charge deux nœuds. 
+<sup>1</sup> Sur l'édition Enterprise, le nombre de nœuds correspond au maximum du système d’exploitation. L’édition Standard prend en charge deux nœuds. 
 
-<sup>2</sup> l'édition Enterprise prend en charge jusqu'à 8 réplicas secondaires - incluant 2 réplicas secondaires synchrones. 
+<sup>2</sup> L'édition Enterprise prend en charge jusqu'à 8 réplicas secondaires, notamment 2 réplicas secondaires synchrones. 
 
-<sup>3</sup> l'édition standard prend en charge les groupes de disponibilité de base. Un groupe de disponibilité de base prend en charge deux réplicas, avec une seule base de données. Pour plus d’informations sur les groupes de disponibilité de base, consultez [Groupes de disponibilité de base](../database-engine/availability-groups/windows/basic-availability-groups-always-on-availability-groups.md).    
+<sup>3</sup> L'édition standard prend en charge les groupes de disponibilité de base. Un groupe de disponibilité de base prend en charge deux réplicas, avec une seule base de données. Pour plus d’informations sur les groupes de disponibilité de base, consultez [Groupes de disponibilité de base](../database-engine/availability-groups/windows/basic-availability-groups-always-on-availability-groups.md). 
 
 ##  <a name="RDBMSSP"></a> Scalabilité et performances SGBDR  
   
