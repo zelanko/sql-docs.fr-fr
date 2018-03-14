@@ -20,11 +20,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 49cdcb7768103ba9cfd62a58bcdcbf5399ae09a1
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: b6ed067a54cc867ed091dd27f5a4af91954045f1
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="support-multi-targeting-in-your-custom-components"></a>Prendre en charge le multi-ciblage dans les composants personnalisés
  Vous pouvez désormais utiliser le concepteur SSIS dans SQL Server Data Tools (SSDT) pour créer, gérer et exécuter des packages qui ciblent SQL Server 2016, SQL Server 2014 ou SQL Server 2012. Pour obtenir SSDT pour Visual Studio 2015, consultez [Télécharger la dernière version de SQL Server Data Tools](../../ssdt/download-sql-server-data-tools-ssdt.md). 
@@ -104,7 +104,7 @@ public override void PerformDowngrade(int pipelineVersion, DTSTargetServerVersio
 
 **Message d’erreur.** Impossible d’effectuer un cast d’un objet COM de type ’System.__ComObject’ en type d’interface ’Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100’. Cette opération a échoué car l’appel QueryInterface sur le composant COM pour l’interface avec l’IID ’{BE8C48A3-155B-4810-BA5C-BDF68A659E9E}’ a échoué en raison de l’erreur suivante : interface non prise en charge (Exception de HRESULT : 0 x 80004002 (E_NOINTERFACE)). (Microsoft.SqlServer.DTSPipelineWrap).
 
-**Solution.** Si votre extension personnalisée fait référence à des assemblys d’interopérabilité SSIS comme Microsoft.SqlServer.DTSPipelineWrap ou Microsoft.SqlServer.DTSRuntimeWrap, définissez la valeur de la propriété **Incorporer les types d’interopérabilité** sur **False.
+**Solution.** Si votre extension personnalisée fait référence à des assemblys d’interopérabilité SSIS comme Microsoft.SqlServer.DTSPipelineWrap ou Microsoft.SqlServer.DTSRuntimeWrap, définissez la valeur de la propriété **Incorporer les types d’interopérabilité** sur **False**.
 
 ![Incorporer les types d’interopérabilité](../../integration-services/extending-packages-custom-objects/media/embed-interop-types.png)
 

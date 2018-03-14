@@ -1,14 +1,15 @@
 ---
 title: "Abonnés de réplication et groupes de disponibilité Always On (SQL Server) | Microsoft Docs"
 ms.custom: 
-ms.date: 05/17/2016
+ms.date: 03/08/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
 ms.component: availability-groups
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-high-availability
+ms.technology:
+- dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,16 +17,16 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], interoperability
 - replication [SQL Server], AlwaysOn Availability Groups
 ms.assetid: 0995f269-0580-43ed-b8bf-02b9ad2d7ee6
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: e868d03cfe57b78affa81b00f5f91376ae9a89e8
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 6020be0ea9568611a0e427917bc02c2a3a53cc3a
+ms.sourcegitcommit: 657d18fc805512c9574b2fe7451310601b9d78cb
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="replication-subscribers-and-always-on-availability-groups-sql-server"></a>Abonnés de réplication et groupes de disponibilité Always On (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,15 +34,7 @@ ms.lasthandoff: 01/18/2018
   Quand un groupe de disponibilité Always On contenant une base de données est un abonné de réplication et bascule, l’abonnement de réplication peut échouer. Pour les abonnés transactionnels, l'agent de distribution continue la réplication automatiquement si l'abonnement utilise le nom de l'écouteur de groupe de disponibilité de l'abonné. Pour les abonnés de fusion, un administrateur de réplication doit reconfigurer l'abonné manuellement, en recréant l'abonnement.  
   
 ## <a name="what-is-supported"></a>Ce qui est pris en charge  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] prend en charge le basculement automatique du serveur de publication, le basculement automatique des abonnés transactionnels et le basculement manuel des abonnés de fusion. Le basculement d'un serveur de distribution dans une base de données de disponibilité n'est pas pris en charge. Always On ne peut pas être associé à des scénarios Websync et ssNoVersion Compact.  
-  
- **Basculement d'un abonnement de fusion par extraction de données (pull)**  
-  
- Un abonnement par extraction échoue lors d'un basculement de groupe de disponibilité, car l'agent d'extraction de données ne trouve pas les travaux stockés dans la base de données **msdb** de l'instance de serveur qui héberge le réplica principal, qui n'est pas disponible parce que l'instance de serveur a échoué.  
-  
- **Basculement d'un abonnement de fusion par émission de données (push)**  
-  
- Un abonnement par émission de données échoue lors du basculement d'un groupe de disponibilité, car l'agent de transmission de type push ne peut plus se connecter à la base de données d'abonnement d'origine sur l'abonné d'origine.  
+ La réplication de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] prend en charge le basculement automatique du serveur de publication et le basculement automatique des abonnés. Le basculement d'un serveur de distribution dans une base de données de disponibilité n'est pas pris en charge. Les abonnés de fusion peuvent faire partie d’un groupe de disponibilité, toutefois des actions manuelles sont requises pour configurer le nouvel abonné après un basculement. Les groupes de disponibilité ne peuvent pas être associés à des scénarios Websync et ssNoVersion Compact.  
   
 ## <a name="how-to-create-transactional-subscription-in-an-always-on-environment"></a>Procédure de création d’un abonnement transactionnel dans un environnement Always On  
  Pour la réplication transactionnelle, utilisez la procédure suivante pour configurer et basculer un groupe de disponibilité d'abonné :  

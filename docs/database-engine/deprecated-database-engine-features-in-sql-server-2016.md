@@ -8,7 +8,8 @@ ms.service:
 ms.component: database-engine
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,7 +17,7 @@ helpviewer_keywords:
 - Database Engine [SQL Server], backward compatibility
 - deprecation [SQL Server], feature list
 ms.assetid: c10eeaa5-3d3c-49b4-a4bd-5dc4fb190142
-caps.latest.revision: "215"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
@@ -157,7 +158,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|ROWGUIDCOL comme nom de colonne dans les instructions DML.|Utilisez $rowguid.|ROWGUIDCOL|182|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|IDENTITYCOL comme nom de colonne dans les instructions DML.|Utilisez $identity.|IDENTITYCOL|183|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|Utilisation de #, ## comme table temporaire et noms de procédure stockée temporaires.|Utilisez au moins un caractère supplémentaire.|'#' et '##' comme nom des tables temporaires et procédures stockées|185|  
-|[!INCLUDE[tsql](../includes/tsql-md.md)]|Utilisation de @, @@ ou @@ comme identificateurs [!INCLUDE[tsql](../includes/tsql-md.md)] .|N'utilisez pas @, @@ ou des noms commençant par @@ comme identificateurs.|'@' et noms commençant par '@@' comme identificateurs [!INCLUDE[tsql](../includes/tsql-md.md)]|186.|  
+|[!INCLUDE[tsql](../includes/tsql-md.md)]|Utilisation de @, @@ ou @@ comme identificateurs [!INCLUDE[tsql](../includes/tsql-md.md)].|N'utilisez pas @, @@ ou des noms commençant par @@ comme identificateurs.|'@' et noms commençant par '@@' comme identificateurs [!INCLUDE[tsql](../includes/tsql-md.md)]|186.|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|Utilisation du mot clé DEFAULT comme valeur par défaut.|N'utilisez pas le mot DEFAULT comme valeur par défaut.|Mot clé DEFAULT comme valeur par défaut.|187|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|Utilisation d'un espace comme séparateur entre les indicateurs de table.|Utilisez une virgule pour séparer les indicateurs de table.|Indicateurs de table multiples sans virgule|168|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|La liste de sélection d'une vue indexée d'agrégation doit contenir COUNT_BIG (*) dans le mode de compatibilité 90.|Utilisez COUNT_BIG (*).|Liste de sélection de vue d'index sans COUNT_BIG (*)|2|  
