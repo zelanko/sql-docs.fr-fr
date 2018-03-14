@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bde92101af0b761df9f37171b35952fa3ab9d25b
-ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
+ms.openlocfilehash: 7b17cdd39e1eb155581d070ef659d6c34c044b4d
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/02/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="deploy-run-and-monitor-an-ssis-package-on-azure"></a>Déployer, exécuter et surveiller un package SSIS sur Azure
 Ce didacticiel vous montre comment déployer un projet SQL Server Integration Services sur la base de données de catalogues SSISDB dans Azure SQL Database, comment exécuter un package dans le runtime d’intégration Azure SSIS et comment surveiller le package en cours d’exécution.
@@ -29,9 +29,16 @@ Avant de commencer, vérifiez que vous avez la version 17.2 ou ultérieure de S
 
 Vérifiez également que vous avez configuré la base de données SSISDB et que vous avez provisionné le runtime d’intégration Azure SSIS. Pour plus d’informations sur la façon de provisionner SSIS sur Azure, consultez [Déployer des packages SSIS sur Azure](https://docs.microsoft.com/azure/data-factory/tutorial-create-azure-ssis-runtime-portal).
 
+> [!NOTE]
+> Le déploiement sur Azure prend uniquement en charge le modèle de déploiement de projet.
+
 ## <a name="connect-to-the-ssisdb-database"></a>Se connecter à la base de données SSISDB
 
-Utilisez SQL Server Management Studio pour vous connecter au catalogue SSIS sur votre serveur Azure SQL Database. Pour plus d’informations, consultez [Se connecter à la base de données de catalogues SSISDB sur Azure](ssis-azure-connect-to-catalog-database.md).
+Utilisez SQL Server Management Studio pour vous connecter au catalogue SSIS sur votre serveur Azure SQL Database. Pour obtenir plus d’informations et des captures d’écran, consultez [Se connecter à la base de données de catalogues SSISDB sur Azure](ssis-azure-connect-to-catalog-database.md).
+
+Voici les deux points les plus importants à retenir. Ces étapes sont décrites dans la procédure suivante.
+-   Entrez le nom complet du serveur Azure SQL Database au format **mysqldbserver.database.windows.net**.
+-   Sélectionnez `SSISDB` comme base de données pour la connexion.
 
 > [!IMPORTANT]
 > Un serveur Azure SQL Database écoute sur le port 1433. Si vous tentez de vous connecter à un serveur Azure SQL Database derrière un pare-feu d’entreprise, ce port doit être ouvert dans le pare-feu d’entreprise pour que vous puissiez vous connecter correctement.
@@ -56,12 +63,18 @@ Utilisez SQL Server Management Studio pour vous connecter au catalogue SSIS sur 
 
 ## <a name="deploy-a-project-with-the-deployment-wizard"></a>Déployer un projet avec l’Assistant Déploiement
 
+Pour en savoir plus sur le déploiement de packages et sur l’Assistant Déploiement, consultez [Déployer des projets et des packages Integration Services (SSIS)](../packages/deploy-integration-services-ssis-projects-and-packages.md) et [Assistant Déploiement d’Integration Services](../packages/deploy-integration-services-ssis-projects-and-packages.md#integration-services-deployment-wizard).
+
 ### <a name="start-the-integration-services-deployment-wizard"></a>Démarrer l’Assistant Déploiement d’Integration Services
 1. Dans l’Explorateur d’objets de SSMS, après avoir développé le nœud **Catalogues Integration Services** et le nœud **SSISDB**, développez un dossier de projet.
 
 2.  Sélectionnez le nœud **Projets**.
 
 3.  Cliquez avec le bouton droit sur le nœud **Projets**, puis sélectionnez **Déployer le projet**. L’Assistant Déploiement d’Integration Services s’ouvre. Vous pouvez déployer un projet à partir d’une base de données de catalogues SSIS ou du système de fichiers.
+
+    ![Déployer un projet à partir de SSMS](media/ssis-azure-deploy-run-monitor-tutorial/ssisdb-deploy-project1.png)
+
+    ![La boîte de dialogue de l’Assistant Déploiement de SSIS s’ouvre](media/ssis-azure-deploy-run-monitor-tutorial/ssisdb-deploy-project2.png)
 
 ### <a name="deploy-a-project-with-the-deployment-wizard"></a>Déployer un projet avec l’Assistant Déploiement
 1. Dans la page **Introduction** de l’Assistant Déploiement, lisez l’introduction. Sélectionnez **Suivant** pour ouvrir la page **Sélectionner la source**.
