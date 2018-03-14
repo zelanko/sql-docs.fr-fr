@@ -8,24 +8,27 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.rep.monitor.subscription.downlevelsynchhistory.f1
+f1_keywords:
+- sql13.rep.monitor.subscription.downlevelsynchhistory.f1
 ms.assetid: 0a0deab2-1c08-4371-9681-d9403e0236cc
-caps.latest.revision: "19"
-author: MikeRayMSFT
-ms.author: mikeray
+caps.latest.revision: 
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0462e11db4e712fb9e0b5b37494dacc0924e60a1
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 5f3a11814b1b7a00cb70882db920682d86437912
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="subscription-synchronization-history-merge-subscription-sql-server-2000"></a>Abonnement, Historique de synchronisation (Abonnement de fusion, SQL Server 2000)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] L’onglet **Historique de synchronisation** affiche des informations détaillées sur l’Agent de fusion, notamment sur l’état, l’historique, les messages d’informations et n’importe quel message d’erreur.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  L'onglet **Historique de synchronisation** affiche des informations détaillées sur l'Agent de fusion, notamment sur l'état, l'historique, les messages d'informations et n'importe quel message d'erreur.  
   
 ## <a name="options"></a>Options  
  Sélectionnez les sessions de l’Agent de fusion à afficher dans le menu **Afficher** , puis sélectionnez une session dans la grille **Sessions de l’Agent de fusion**. Des informations détaillées sur cette session s'affichent dans la grille étiquetée **Actions dans la session sélectionnée**. Si la session sélectionnée s'est terminée sur une erreur, la zone de texte étiquetée **Détails de l'erreur ou message de la session sélectionnée** s'affiche également.  

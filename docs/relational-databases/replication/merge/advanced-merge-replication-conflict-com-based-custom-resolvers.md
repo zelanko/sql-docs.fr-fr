@@ -8,26 +8,28 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - COM-based resolvers [SQL Server replication]
 - custom resolvers [SQL Server replication]
 ms.assetid: 94195797-ad7a-4962-a8e3-b259cd13aa38
-caps.latest.revision: "36"
-author: MikeRayMSFT
-ms.author: mikeray
+caps.latest.revision: 
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1b39f8593b86d61ad9b31884a95212d8cb7bac72
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 82fad6f34b9cdc3cc500aadb9f0ed5fdc6cb26ec
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="advanced-merge-replication-conflict---com-based-custom-resolvers"></a>Conflit de réplication de fusion avancée - Programmes de résolution personnalisés COM
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Les programmes de résolution personnalisés offrent une plus grande souplesse que le mécanisme de résolution par défaut et ils peuvent implémenter la logique métier dont ont besoin les applications qui utilisent les données répliquées. Un programme de résolution personnalisé COM est une bibliothèque de liens dynamiques (DLL) qui implémente l'interface **ICustomResolver** , ses méthodes et ses propriétés, ainsi que d'autres interfaces de prise en charge et définitions de types conçues spécifiquement pour la résolution de conflits.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Les programmes de résolution personnalisés offrent une plus grande souplesse que le mécanisme de résolution par défaut et ils peuvent implémenter la logique métier requise par les applications utilisant les données répliquées. Un programme de résolution personnalisé COM est une bibliothèque de liens dynamiques (DLL) qui implémente l'interface **ICustomResolver** , ses méthodes et ses propriétés, ainsi que d'autres interfaces de prise en charge et définitions de types conçues spécifiquement pour la résolution de conflits.  
   
 > [!NOTE]  
 >  Il est recommandé d'utiliser si possible un gestionnaire de logique métier au lieu d'un programme de résolution personnalisé COM. Pour plus d’informations sur les gestionnaires de logique métier, consultez [Exécuter la logique métier lors de la synchronisation de fusion](../../../relational-databases/replication/merge/execute-business-logic-during-merge-synchronization.md).  

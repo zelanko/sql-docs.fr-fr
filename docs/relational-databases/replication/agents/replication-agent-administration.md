@@ -8,7 +8,8 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -24,19 +25,20 @@ helpviewer_keywords:
 - replication [SQL Server], administering
 - independent agents [SQL Server replication]
 ms.assetid: f27186b8-b1b2-4da0-8b2b-91f632c2ab7e
-caps.latest.revision: "48"
-author: MikeRayMSFT
-ms.author: mikeray
+caps.latest.revision: 
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 86cebd3ab2286cc34ff25d45ec1837d75716c16f
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 23903fc135bdc5aaf539c6550a7679f42e9449aa
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="replication-agent-administration"></a>Administration de l'Agent de réplication
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Les agents de réplication accomplissent de nombreuses tâches associées à la réplication, notamment la création de copies du schéma et des données, la détection des mises à jour sur le serveur de publication ou sur l’Abonné, et la propagation des modifications entre les serveurs. Par défaut, les agents de réplication s'exécutent sous les étapes du travail de l'Agent [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Les agents sont simplement des exécutables et peuvent donc être appelés directement à partir de la ligne de commande et de scripts de commande par lot. Chaque agent de réplication prend en charge un ensemble de paramètres d'exécution utilisés pour contrôler comment il s'exécute ; ces paramètres sont spécifiés dans un profil d'agent ou sur la ligne de commande.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Les agents de réplication accomplissent de nombreuses tâches associées à la réplication, notamment la création de copies du schéma et des données, la détection des mises à jour sur le serveur de publication ou sur l'Abonné, et la propagation des modifications entre les serveurs. Par défaut, les agents de réplication s'exécutent sous les étapes du travail de l'Agent [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Les agents sont simplement des exécutables et peuvent donc être appelés directement à partir de la ligne de commande et de scripts de commande par lot. Chaque agent de réplication prend en charge un ensemble de paramètres d'exécution utilisés pour contrôler comment il s'exécute ; ces paramètres sont spécifiés dans un profil d'agent ou sur la ligne de commande.  
   
 > [!IMPORTANT]  
 >  Par défaut, le service [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent est désactivé lors de l'installation de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , sauf si vous choisissez explicitement de démarrer automatiquement le service au cours de l'installation.  

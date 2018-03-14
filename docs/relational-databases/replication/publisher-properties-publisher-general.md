@@ -8,25 +8,29 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.rep.configdistwizard.pubproperties.general.f1
-helpviewer_keywords: Publisher Properties dialog box
+f1_keywords:
+- sql13.rep.configdistwizard.pubproperties.general.f1
+helpviewer_keywords:
+- Publisher Properties dialog box
 ms.assetid: 9055bd4a-89cc-4059-9474-e213d7bcc36d
-caps.latest.revision: "19"
-author: MikeRayMSFT
-ms.author: mikeray
+caps.latest.revision: 
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 45b854fc9546ea5040ae52cfa36954bf5d8e77db
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 55b48dc39d50b8fa04fd0034dd8ed3c4c303d5e3
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="publisher-properties---publisher-general"></a>Propriétés du serveur de publication - Serveur de publication, Général
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] La page **Général** de la boîte de dialogue **Propriétés du serveur de publication** contient des informations en lecture seule sur le serveur de distribution et la base de données de distribution qu’utilise le serveur de publication. Pour changer le serveur de distribution ou la base de données de distribution d'un serveur de publication :  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  La page **Général** de la boîte de dialogue **Propriétés du serveur de publication** contient des informations en lecture seule sur le serveur de distribution et la base de données de distribution qu'utilise le serveur de publication. Pour changer le serveur de distribution ou la base de données de distribution d'un serveur de publication :  
   
 1.  Désactivez la publication sur le serveur de publication. Pour plus d’informations, consultez [Désactiver la publication et la distribution](../../relational-databases/replication/disable-publishing-and-distribution.md).  
   
