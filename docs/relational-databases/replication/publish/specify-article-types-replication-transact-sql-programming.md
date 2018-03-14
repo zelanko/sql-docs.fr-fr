@@ -8,29 +8,32 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - publishing [SQL Server replication], stored procedure execution
 - articles [SQL Server replication], transactional replication options
 - articles [SQL Server replication], merge replication options
 - stored procedures [SQL Server replication], publishing
 ms.assetid: d7effbac-c45b-423f-97ae-fd426b1050ba
-caps.latest.revision: "26"
-author: MikeRayMSFT
-ms.author: mikeray
+caps.latest.revision: 
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2fbfcc58464f73d16af3b50b93e3c9c5776d371b
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: fbc14b8551a9d3da0d52e0e4731f2831585c19ea
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="specify-article-types-replication-transact-sql-programming"></a>Spécifier les types d'articles (programmation Transact-SQL de la réplication)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Les types d’articles par défaut pour la réplication sont les articles de table. Toutefois, vous pouvez publier d’autres objets de base de données en tant qu’articles, y compris des vues, des procédures stockées, des fonctions définies par l’utilisateur et une exécution de procédures stockées. Vous pouvez utiliser les procédures stockées de réplication pour spécifier par programme un type d'article lorsque vous définissez un article. Les procédures à utiliser dépendent du type de réplication et du type d'article.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Les types d'articles par défaut pour la réplication sont les articles de table, mais vous pouvez publier d'autres objets de base de données en tant qu'articles, y compris des vues, des procédures stockées, des fonctions définies par l'utilisateur et l'exécution des procédures stockées. Vous pouvez utiliser les procédures stockées de réplication pour spécifier par programme un type d'article lorsque vous définissez un article. Les procédures à utiliser dépendent du type de réplication et du type d'article.  
   
 > [!NOTE]  
 >  La désignation de schéma uniquement, lorsque vous définissez des articles de table, de vue et de procédures stockées, indique que seule la définition des objets est répliquée.  

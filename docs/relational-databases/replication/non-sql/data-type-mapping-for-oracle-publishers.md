@@ -8,7 +8,8 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,19 +17,20 @@ helpviewer_keywords:
 - data types [SQL Server replication], Oracle publishing
 - mapping data types [SQL Server replication]
 ms.assetid: 6da0e4f4-f252-4b7e-ba60-d2e912aa278e
-caps.latest.revision: "47"
-author: MikeRayMSFT
-ms.author: mikeray
+caps.latest.revision: 
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 4078e78f9f1e8879d709ef154a11e44055e2dcd5
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 241e3a775bc00fbd1d8c9a773a75c9cf25138ae2
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="data-type-mapping-for-oracle-publishers"></a>Mappage de type de données pour les serveurs de publication Oracle
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Les types de données Oracle et [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ne correspondent pas toujours exactement. Dans la mesure du possible, le type de données correspondant est sélectionné automatiquement lors de la publication d'une table Oracle. Dans les cas où un mappage de type de données simple n'est pas clair, des mappages de type de données de remplacement sont fournis. Pour plus d'informations sur la sélection de mappages de remplacement, consultez la section « Spécification de mappages de type de données de remplacement » plus loin dans cette rubrique.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Les types de données Oracle et [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ne correspondent pas toujours exactement. Dans la mesure du possible, le type de données correspondant est sélectionné automatiquement lors de la publication d'une table Oracle. Dans les cas où un mappage de type de données simple n'est pas clair, des mappages de type de données de remplacement sont fournis. Pour plus d'informations sur la sélection de mappages de remplacement, consultez la section « Spécification de mappages de type de données de remplacement » plus loin dans cette rubrique.  
   
  Le tableau suivant indique comment les types de données sont mappés par défaut entre Oracle et [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] lorsque les données sont déplacées du serveur de publication Oracle sur le serveur de distribution [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . La colonne Alternatives indique si des mappages de remplacement sont disponibles.  
   

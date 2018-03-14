@@ -8,26 +8,28 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - transactional replication, peer-to-peer replication
 - peer-to-peer transactional replication, conflict detection
 ms.assetid: 754a1070-59bc-438d-998b-97fdd77d45ca
-caps.latest.revision: "18"
-author: MikeRayMSFT
-ms.author: mikeray
+caps.latest.revision: 
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ec8c660444c11a95896c2d3e0cfd47a7d8bc8514
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 1df7460cea4142e8f64f956a8b8dde852c47a165
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="peer-to-peer---conflict-detection-in-peer-to-peer-replication"></a>Égal à égal - Détection de conflit dans la réplication d’égal à égal
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] La réplication transactionnelle d’égal à égal vous permet d’insérer, de mettre à jour et de supprimer des données sur un nœud quelconque dans une topologie, puis de propager les modifications aux autres nœuds. Comme vous pouvez modifier des données sur un nœud quelconque, les modifications de données sur des nœuds différents peuvent être en conflit les unes avec les autres. Si une ligne est modifiée au niveau de plusieurs nœuds, elle peut provoquer un conflit, voire la perte de la mise à jour, lorsque la ligne est propagée à d'autres nœuds.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  La réplication transactionnelle d'égal à égal vous permet d'insérer, de mettre à jour et de supprimer des données sur un nœud quelconque dans une topologie, puis de propager les modifications aux autres nœuds. Comme vous pouvez modifier des données sur un nœud quelconque, les modifications de données sur des nœuds différents peuvent être en conflit les unes avec les autres. Si une ligne est modifiée au niveau de plusieurs nœuds, elle peut provoquer un conflit, voire la perte de la mise à jour, lorsque la ligne est propagée à d'autres nœuds.  
   
  Dans [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] et les versions ultérieures, la réplication d'égal à égal propose une option permettant d'activer la détection des conflits dans une topologie d'égal à égal. Cette option permet d'éviter les problèmes causés par des conflits non détectés, notamment le comportement incohérent des applications et la perte d'une mise à jour. Lorsque cette option est activée, par défaut, une modification en conflit est traitée comme une erreur critique qui provoque l'échec de l'Agent de distribution. En cas de conflit, la topologie reste dans un état incohérent jusqu'à la résolution du conflit et jusqu'au rétablissement de la cohérence des données dans la topologie.  
   
