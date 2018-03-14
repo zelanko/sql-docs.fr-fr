@@ -8,25 +8,29 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.rep.validate.validateandresynch.f1
-helpviewer_keywords: Validate Subscription dialog box
+f1_keywords:
+- sql13.rep.validate.validateandresynch.f1
+helpviewer_keywords:
+- Validate Subscription dialog box
 ms.assetid: 74bdf5e1-b886-4284-b5fb-332bf79ae083
-caps.latest.revision: "19"
-author: MikeRayMSFT
-ms.author: mikeray
+caps.latest.revision: 
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 56f04be67908f23877f38d1798e2d7c7bcb27805
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 55e94328322d1444a73fd770ff0fdcead4d5257b
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="validate-subscription"></a>Valider l'abonnement
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Utilisez la boîte de dialogue **Valider l’abonnement** pour indiquer qu’un abonnement à une publication de fusion doit être validée lors de la prochaine exécution de l’Agent de fusion de l’abonnement. Le résultat de la validation figure dans le Moniteur de réplication. Pour plus d'informations, voir [Validate Data at the Subscriber](../../relational-databases/replication/validate-data-at-the-subscriber.md).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Utilisez la boîte de dialogue **Valider l'abonnement** pour indiquer qu'un abonnement à une publication de fusion doit être validée lors de la prochaine exécution de l'Agent de fusion de l'abonnement. Le résultat de la validation figure dans le Moniteur de réplication. Pour plus d'informations, voir [Validate Data at the Subscriber](../../relational-databases/replication/validate-data-at-the-subscriber.md).  
   
  Vous pouvez également valider tous les abonnements à une publication de fusion en cliquant avec le bouton droit de la souris sur une publication dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] et en cliquant sur **Valider tous les abonnements**.  
   

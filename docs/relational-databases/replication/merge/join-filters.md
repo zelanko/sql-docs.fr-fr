@@ -8,7 +8,8 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,19 +18,20 @@ helpviewer_keywords:
 - merge replication join filters [SQL Server replication]
 - join filters
 ms.assetid: dd78fd8f-56e3-4582-9abd-6bc25c91e075
-caps.latest.revision: "38"
-author: MikeRayMSFT
-ms.author: mikeray
+caps.latest.revision: 
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 211bde4093eff61342659558e231fb29c13e5bd7
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: a4e8494e274dc8f04aac972e7dd9bdfbc4f18baa
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 03/08/2018
 ---
-# <a name="join-filters"></a>filtres de jointure
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Un filtre de jointure permet de filtrer une table en fonction du filtrage d’une table associée dans la publication. En général, une table parente est filtrée à l'aide d'un filtre paramétré ; un ou plusieurs filtres de jointure sont ensuite définis à peu près de la même façon que vous définissez une jointure entre des tables. Les filtres de jointure étendent le filtre paramétré de telle façon que les données des tables liées soient répliquées seulement si elles correspondent à la clause du filtre de jointure.  
+# <a name="join-filters"></a>Filtres de jointure
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Un filtre de jointure permet de filtrer une table en fonction du filtrage d'une table associée dans la publication. En général, une table parente est filtrée à l'aide d'un filtre paramétré ; un ou plusieurs filtres de jointure sont ensuite définis à peu près de la même façon que vous définissez une jointure entre des tables. Les filtres de jointure étendent le filtre paramétré de telle façon que les données des tables liées soient répliquées seulement si elles correspondent à la clause du filtre de jointure.  
   
  En règle générale, les filtres de jointure suivent les relations clé primaire/clé étrangère définies pour les tables auxquelles ils sont appliqués, mais ils ne sont pas strictement limités à ces relations. Le filtre de jointure peut être basé sur toute logique comparant des données associées dans deux tables.  
   

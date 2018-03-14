@@ -8,25 +8,29 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.rep.security.MA.f1
-helpviewer_keywords: Merge Agent Security dialog box
+f1_keywords:
+- sql13.rep.security.MA.f1
+helpviewer_keywords:
+- Merge Agent Security dialog box
 ms.assetid: 9b86171a-4381-4b39-869a-cdc161e7cd15
-caps.latest.revision: "24"
-author: MikeRayMSFT
-ms.author: mikeray
+caps.latest.revision: 
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d6f95cce617a490f37f4f8171ebf0e67e1d781d5
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 8480aef914536e8e705fefaf78f0d38e690a1de6
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="merge-agent-security"></a>Sécurité de l'agent de fusion
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] La boîte de dialogue **Sécurité de l’agent de fusion** vous permet de spécifier le compte [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows sous lequel l’Agent de fusion doit s’exécuter. L'Agent de fusion s'exécute sur le serveur de distribution pour les abonnements envoyés et sur l'Abonné pour les abonnements extraits. Ce compte Windows est également baptisé *compte de processus*du fait que le processus agent s'exécute sous ce compte. La boîte de dialogue propose des options supplémentaires en fonction de la façon d'y accéder :  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  La boîte de dialogue **Sécurité de l'agent de fusion** vous permet de spécifier le compte [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows sous lequel l'Agent de fusion doit s'exécuter. L'Agent de fusion s'exécute sur le serveur de distribution pour les abonnements envoyés et sur l'Abonné pour les abonnements extraits. Ce compte Windows est également baptisé *compte de processus*du fait que le processus agent s'exécute sous ce compte. La boîte de dialogue propose des options supplémentaires en fonction de la façon d'y accéder :  
   
 -   Si la boîte de dialogue est ouverte à partir de l'Assistant Nouvel abonnement, elle vous propose ainsi en plus d'indiquer le contexte dans lequel l'agent de fusion établit les connexions avec l'Abonné (dans le cas d'abonnements envoyés au serveur) ou avec le serveur de publication et le serveur de distribution (dans le cas d'abonnements extraits du serveur). La connexion peut s'établir à travers un compte Windows ou sous un compte [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que vous spécifiez.  
   

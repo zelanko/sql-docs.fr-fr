@@ -8,24 +8,27 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.rep.newpubwizard.generatefilters.f1
+f1_keywords:
+- sql13.rep.newpubwizard.generatefilters.f1
 ms.assetid: be28515c-5d6d-467b-b933-d7c8d97a45b4
-caps.latest.revision: "26"
-author: MikeRayMSFT
-ms.author: mikeray
+caps.latest.revision: 
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: caab625c0f783290f1206c832a3243d498eae349
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 8261d1194ea4f1786fbe19088cdde66ef2cc3f30
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="generate-filters"></a>Générer des filtres
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] La boîte de dialogue **Générer des filtres** permet de définir un filtre de lignes à appliquer sur une table lors d’une opération de publication de fusion. La réplication étend ensuite automatiquement le filtre aux autres tables associées, par le biais de relations de clé étrangère. Par exemple, si vous définissez un filtre portant sur une table contenant des données de clients pour ne garder que les données portant sur les clients français, la réplication étend donc ce filtre aux tables retraçant les informations propres aux commandes et à leurs détails en relation avec des clients français.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  La boîte de dialogue **Générer des filtres** permet de définir un filtre de lignes à appliquer sur une table lors d'une opération de publication de fusion. La réplication étend ensuite automatiquement le filtre aux autres tables associées par le biais de relations de clé étrangère. Par exemple, si vous définissez un filtre portant sur une table contenant des données de clients pour ne garder que les données portant sur les clients français, la réplication étend donc ce filtre aux tables retraçant les informations propres aux commandes et à leurs détails en relation avec des clients français.  
   
 ## <a name="options"></a>Options  
  Cette boîte de dialogue permet d'initier un processus en trois étapes afin de créer un filtre de lignes portant sur une table. Le filtre ainsi créé est ensuite étendu aux tables possédant une relation à la table filtrée à travers leur clé primaire et leurs relations de clé étrangère. Prenons pour exemple trois tables nommées **Customer**, **SalesOrderHeader**et **SalesOrderDetail**. Les tables **Customer** et **SalesOrderHeader**possèdent une relation entre elles et une autre existe entre **SalesOrderHeader** et **SalesOrderDetail**. Si nous appliquons un filtre de lignes à **Customer**, la réplication étend ainsi ce filtre à **SalesOrderHeader** et à **SalesOrderDetail**.  

@@ -8,25 +8,29 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: TSQL
-helpviewer_keywords: transactional replication, peer-to-peer replication
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- transactional replication, peer-to-peer replication
 ms.assetid: 4d0fa941-f9ea-4a14-aed9-34df593fc6f2
-caps.latest.revision: "39"
-author: MikeRayMSFT
-ms.author: mikeray
+caps.latest.revision: 
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d4cbdcc2ac6e8a5443bfe5890c0a7b985d08b96f
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 97d6ba982d1f3d4fb1eef62e30cd714455f82c67
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="administer-a-peer-to-peer-topology-replication-transact-sql-programming"></a>Administrer une topologie d'égal à égal (programmation Transact-SQL de la réplication)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] L’administration d’une topologie d’égal à égal est semblable à celle d’une topologie de réplication transactionnelle typique, mais plusieurs zones méritent une attention particulière. La principale différence dans l'administration d'une topologie d'égal à égal est que certaines modifications requièrent que le système soit *suspendu*. Suspendre un système revient à interrompre toute activité sur les tables publiées de tous les nœuds et à vérifier que chaque nœud a reçu toutes les modifications des autres nœuds. Pour plus d’informations, consultez [Suspendre une topologie de réplication &#40;programmation Transact-SQL de la réplication&#41;](../../../relational-databases/replication/administration/quiesce-a-replication-topology-replication-transact-sql-programming.md).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  L'administration d'une topologie d'égal à égal est semblable à celle d'une topologie de réplication transactionnelle typique, mais plusieurs zones méritent une attention particulière. La principale différence dans l'administration d'une topologie d'égal à égal est que certaines modifications requièrent que le système soit *suspendu*. Suspendre un système revient à interrompre toute activité sur les tables publiées de tous les nœuds et à vérifier que chaque nœud a reçu toutes les modifications des autres nœuds. Pour plus d’informations, consultez [Suspendre une topologie de réplication &#40;programmation Transact-SQL de la réplication&#41;](../../../relational-databases/replication/administration/quiesce-a-replication-topology-replication-transact-sql-programming.md).  
   
 > [!NOTE]  
 >  Dans une topologie d'égal à égal, le serveur de distribution ne peut pas utiliser une version antérieure de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] par rapport à celle d'un abonné à un abonnement par extraction.  

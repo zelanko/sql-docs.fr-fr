@@ -8,24 +8,27 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: replication [SQL Server], security
+helpviewer_keywords:
+- replication [SQL Server], security
 ms.assetid: d7292121-1c8e-4b8e-ac44-8eea36ae27fe
-caps.latest.revision: "38"
-author: MikeRayMSFT
-ms.author: mikeray
+caps.latest.revision: 
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2f5883fe3b649b2ad21deb3e9fde14c153df5416
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 06503486567ccc86fda076a12d4e147c9fa68fdc
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="secure-a-replication-topology"></a>Sécuriser une topologie de réplication
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Les comptes de sécurité, les connexions et les mots de passe exigés par la réplication sont fournis lors de la configuration de la réplication et lors de la création des publications et abonnements. Ces paramètres de sécurité peuvent être modifiés ultérieurement à l'aide de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], des procédures stockées de réplication et des objets RMO (Replication Management Objects). Les rubriques ci-dessous expliquent comment modifier les paramètres de sécurité de la réplication.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Les comptes de sécurité, les connexions et les mots de passe requis par la réplication sont fournis lors de la configuration de la réplication et lors de la création des publications et abonnements. Ces paramètres de sécurité peuvent être modifiés ultérieurement à l'aide de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], des procédures stockées de réplication et des objets RMO (Replication Management Objects). Les rubriques ci-dessous expliquent comment modifier les paramètres de sécurité de la réplication.  
   
 ## <a name="in-this-section"></a>Dans cette section  
   

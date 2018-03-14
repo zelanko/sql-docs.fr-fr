@@ -16,19 +16,19 @@ f1_keywords:
 - sql13.rep.newsubwizard.updatablesubscriptionslogin.f1
 ms.assetid: 301ea227-0455-40ba-9009-d38f8676b325
 caps.latest.revision: 
-author: MikeRayMSFT
-ms.author: mikeray
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bd0c4bab5c8a4474a3864df385af997febf656d9
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: 38aa63a6e51c961b99f0d1b49cce4be893da3c8c
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="login-for-updatable-subscriptions"></a>Connexion des abonnements pouvant être mis à jour
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-Pour une mise à jour immédiate, si vous avez sélectionné **Répliquer** dans la page **Abonnements pouvant être mis à jour** de cet Assistant, vous devez spécifier un compte avec l’Abonné sous lequel les connexions au serveur de publication s’effectuent. 
+  Pour une mise à jour immédiate, si vous avez sélectionné **Répliquer** dans la page **Abonnements pouvant être mis à jour** de cet Assistant, vous devez spécifier un compte avec l’Abonné sous lequel les connexions au serveur de publication s’effectuent. 
   
  Les connexions sont utilisées par les déclencheurs qui sont activés pour l’Abonné et propagent les modifications sur le serveur de publication. Ce compte est nécessaire même si vous avez sélectionné **Mettre les modifications en file d’attente et valider dès que possible** dans la page **Abonnements pouvant être mis à jour**. L’Assistant Nouvel abonnement par défaut configure la mise à jour en attente avec la possibilité de passer à une mise à jour immédiate si nécessaire.  
   

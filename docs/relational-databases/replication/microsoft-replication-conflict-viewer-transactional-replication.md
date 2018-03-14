@@ -8,24 +8,27 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.rep.replconflictviewer.cvqueued.f1
+f1_keywords:
+- sql13.rep.replconflictviewer.cvqueued.f1
 ms.assetid: eec59d8e-cadb-4623-a31f-9f42ec09c97f
-caps.latest.revision: "22"
-author: MikeRayMSFT
-ms.author: mikeray
+caps.latest.revision: 
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 110c636ba2a86f698f2955e7cb6a067885c2165f
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 84f634a20b64b754a696692ac9b860e686f2b786
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="microsoft-replication-conflict-viewer-transactional-replication"></a>Outil de résolution des conflits de réplication de Microsoft (réplication transactionnelle)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] L’Outil de résolution des conflits de réplication vous permet d’examiner les conflits qui se sont produits lors de la synchronisation pour la réplication transactionnelle d’égal à égal et la réplication transactionnelle avec des abonnements de mise à jour en attente. Pour plus d’informations, consultez [Afficher les conflits de données pour les publications transactionnelles &#40;SQL Server Management Studio&#41;](../../relational-databases/replication/view-data-conflicts-for-transactional-publications-sql-server-management-studio.md).  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+  L'Outil de résolution des conflits de réplication vous permet d'examiner les conflits qui se sont produits lors de la synchronisation pour la réplication transactionnelle d'égal à égal et la réplication transactionnelle avec des abonnements de mise à jour en attente. Pour plus d’informations, consultez [Afficher les conflits de données pour les publications transactionnelles &#40;SQL Server Management Studio&#41;](../../relational-databases/replication/view-data-conflicts-for-transactional-publications-sql-server-management-studio.md).  
   
 > [!NOTE]  
 >  L'outil de résolution des conflits de réplication affiche les conflits qui se produisent dans une réplication de fusion et dans une réplication transactionnelle. Pour la réplication transactionnelle, vous pouvez utiliser l'outil de résolution des conflits de réplication pour examiner les données de conflit, mais vous ne pouvez pas choisir une résolution différente du conflit.  

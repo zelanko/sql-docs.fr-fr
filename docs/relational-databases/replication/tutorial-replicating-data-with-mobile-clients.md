@@ -8,25 +8,29 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to: SQL Server 2016
-helpviewer_keywords: replication [SQL Server], tutorials
+applies_to:
+- SQL Server 2016
+helpviewer_keywords:
+- replication [SQL Server], tutorials
 ms.assetid: af673514-30c7-403a-9d18-d01e1a095115
-caps.latest.revision: "24"
-author: MikeRayMSFT
-ms.author: mikeray
+caps.latest.revision: 
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 445e2016c22123ecce9e12ded3688fddec63ba38
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 8a11cf12fc057aba0f014fc36014fde9a52eda2a
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="tutorial-replicating-data-with-mobile-clients"></a>Didacticiel : Réplication de données avec des clients mobiles
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] La réplication constitue une bonne solution au problème de transfert des données entre un serveur central et des clients mobiles qui ne sont connectés que de façon occasionnelle. À l'aide des Assistants de réplication, vous pouvez aisément configurer et administrer une topologie de réplication. Ce didacticiel vous explique comment configurer une topologie de réplication pour des clients mobiles.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+La réplication constitue une bonne solution au problème de transfert des données entre un serveur central et des clients mobiles qui ne sont connectés que de façon occasionnelle. À l'aide des Assistants de réplication, vous pouvez aisément configurer et administrer une topologie de réplication. Ce didacticiel vous explique comment configurer une topologie de réplication pour des clients mobiles.  
   
 ## <a name="what-you-will-learn"></a>Contenu du didacticiel  
 Dans ce didacticiel, vous allez utiliser la réplication de fusion pour publier des données à partir d'une base de données centrale vers un ou plusieurs utilisateurs mobiles afin que chaque utilisateur obtienne un sous-ensemble des données filtré de façon unique. La première leçon montre comment utiliser [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] pour créer une publication. Les leçons suivantes expliquent comment créer et synchroniser un abonnement.  

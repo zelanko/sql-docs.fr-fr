@@ -8,7 +8,8 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -23,19 +24,20 @@ helpviewer_keywords:
 - displaying alerts
 - Snapshot Agent, alerts
 ms.assetid: 8c42e523-7020-471d-8977-a0bd044b9471
-caps.latest.revision: "39"
-author: MikeRayMSFT
-ms.author: mikeray
+caps.latest.revision: 
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 000b57b9e462be4babcf15d94017fec5b5422855
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 439aa3bfc1bbe579bb82196c561567c894c08571
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="use-alerts-for-replication-agent-events"></a>Utiliser les alertes pour les événements des agents de réplication
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] et l’Agent [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] permettent de surveiller les événements, par exemple, les événements de l’Agent de réplication, à l’aide d’alertes. L'Agent[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] surveille, dans le journal des applications, des événements associés à des alertes. Si un tel événement se produit, l'Agent [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] répond automatiquement, en exécutant une tâche que vous avez définie et/ou en envoyant un e-mail ou un message par radio-messagerie à un opérateur spécifié. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] inclut un ensemble d'alertes prédéfinies d'Agents de réplication que vous pouvez configurer pour exécuter une tâche et/ou avertir un opérateur. Pour plus d'informations sur la définition d'une tâche à exécuter, consultez la section « Automatisation d'une réponse à une alerte » de la présente rubrique.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] et l'Agent [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] permettent de surveiller les événements, par exemple, les événements de l'Agent de réplication, à l'aide d'alertes. L'Agent[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] surveille, dans le journal des applications, des événements associés à des alertes. Si un tel événement se produit, l'Agent [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] répond automatiquement, en exécutant une tâche que vous avez définie et/ou en envoyant un e-mail ou un message par radio-messagerie à un opérateur spécifié. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] inclut un ensemble d'alertes prédéfinies d'Agents de réplication que vous pouvez configurer pour exécuter une tâche et/ou avertir un opérateur. Pour plus d'informations sur la définition d'une tâche à exécuter, consultez la section « Automatisation d'une réponse à une alerte » de la présente rubrique.  
   
  Les alertes suivantes sont installées lorsqu'un ordinateur est configuré en tant que serveur de distribution :  
   
