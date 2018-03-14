@@ -1,6 +1,6 @@
-﻿---
+---
 title: "Didacticiel de l’authentification Active Directory pour SQL Server sur Linux | Documents Microsoft"
-description: "Ce didacticiel fournit les étapes de configuration pour l’authentification AAD pour SQL Server sur Linux."
+description: "Ce didacticiel fournit les étapes de configuration pour l’authentification AD pour SQL Server sur Linux."
 author: meet-bhagdev
 ms.date: 02/23/2018
 ms.author: meetb
