@@ -8,7 +8,8 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,19 +17,20 @@ helpviewer_keywords:
 - articles [SQL Server replication], stored procedures and
 - transactional replication, publishing stored procedure execution
 ms.assetid: f4686f6f-c224-4f07-a7cb-92f4dd483158
-caps.latest.revision: "40"
-author: MikeRayMSFT
-ms.author: mikeray
+caps.latest.revision: 
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6c55bc119e70be951807a9abd2ee37712d14aa46
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 99e471d27c6212412e991e883bcf028ce18176d4
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="publishing-stored-procedure-execution-in-transactional-replication"></a>Publication de l'exécution de procédures stockées dans la réplication transactionnelle
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Si vous avez une ou plusieurs procédures stockées qui s’exécutent sur le serveur de publication et qui affectent des tables publiées, vous pouvez envisager d’inclure ces procédures stockées dans votre publication en tant qu’articles d’exécution de procédure stockée. La définition de la procédure (l'instruction CREATE PROCEDURE) est répliquée vers l'Abonné quand l'abonnement est initialisé ; quand la procédure est exécutée sur le serveur de publication, la réplication exécute la procédure correspondante sur l'Abonné. Cela peut apporter des performances significativement meilleures dans les cas où de grosses opérations de traitement sont effectuées, car seule l'exécution de la procédure est répliquée, ce qui élimine la nécessité de répliquer les modifications individuelles pour chaque ligne. Supposons par exemple que vous créez la procédure stockée suivante dans la base de données de publication :  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Si vous avez une ou plusieurs procédures stockées qui s'exécutent sur le serveur de publication et qui affectent des tables publiées, vous pouvez envisager d'inclure ces procédures stockées dans votre publication en tant qu'articles d'exécution de procédure stockée. La définition de la procédure (l'instruction CREATE PROCEDURE) est répliquée vers l'Abonné quand l'abonnement est initialisé ; quand la procédure est exécutée sur le serveur de publication, la réplication exécute la procédure correspondante sur l'Abonné. Cela peut apporter des performances significativement meilleures dans les cas où de grosses opérations de traitement sont effectuées, car seule l'exécution de la procédure est répliquée, ce qui élimine la nécessité de répliquer les modifications individuelles pour chaque ligne. Supposons par exemple que vous créez la procédure stockée suivante dans la base de données de publication :  
   
 ```  
 CREATE PROC give_raise AS  

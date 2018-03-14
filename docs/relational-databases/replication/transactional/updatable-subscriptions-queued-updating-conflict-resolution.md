@@ -8,7 +8,8 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,19 +19,20 @@ helpviewer_keywords:
 - queued updating subscriptions [SQL Server replication]
 - articles [SQL Server replication], conflict resolution
 ms.assetid: 084ac587-25e7-4bd0-a385-556bbe07d02f
-caps.latest.revision: "39"
-author: MikeRayMSFT
-ms.author: mikeray
+caps.latest.revision: 
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0720762973d0144393761b11b3997c4626de2088
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: e3af47060eddfcf706d84a6488aa82d6787699fd
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="updatable-subscriptions---queued-updating-conflict-resolution"></a>Abonnements pouvant être mis à jour - Résolution des conflits de mise à jour en attente
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Étant donné que les abonnements mis à jour en attente permettent d’apporter des modifications aux mêmes données à différents emplacements, des conflits sont susceptibles de se produire lors de la synchronisation des données sur le serveur de publication. La réplication détecte les éventuels conflits lors de la synchronisation des modifications avec le serveur de publication et les résout à l'aide de la stratégie de résolution que vous avez sélectionnée lors de la création de la publication. Les conflits suivants peuvent se produire :  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Étant donné que les abonnements mis à jour en attente permettent d'apporter des modifications aux mêmes données à différents emplacements, des conflits sont susceptibles de se produire lors de la synchronisation des données sur le serveur de publication. La réplication détecte les éventuels conflits lors de la synchronisation des modifications avec le serveur de publication et les résout à l'aide de la stratégie de résolution que vous avez sélectionnée lors de la création de la publication. Les conflits suivants peuvent se produire :  
   
 -   Conflits de mise à jour et d'insertion. Ce type de conflit survient lorsque les mêmes données sont modifiées dans deux endroits. L'un « gagne », l'autre « perd ».  
   
