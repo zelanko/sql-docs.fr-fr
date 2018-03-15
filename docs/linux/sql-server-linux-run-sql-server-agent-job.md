@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Créer et exécuter des travaux de SQL Server sur Linux | Documents Microsoft"
 description: "Ce didacticiel montre comment exécuter un travail de l’Agent SQL Server sur Linux."
 author: rothja
@@ -66,7 +66,7 @@ Pour utiliser l’Agent SQL Server sur Linux, vous devez d’abord activer l’A
 
 ## <a name="create-a-sample-database"></a>Créer un exemple de base de données
 
-Procédez comme suit pour créer une base de données exemple nommé **SampleDB**. Cette base de données est utilisé pour le travail de sauvegarde quotidienne.
+Procédez comme suit pour créer une base de données exemple nommée **SampleDB**. Cette base de données est utilisée pour le travail de sauvegarde quotidienne. 
 
 1. Sur l’ordinateur Linux, ouvrez une session Terminal Server d’un interpréteur de commandes.
 
