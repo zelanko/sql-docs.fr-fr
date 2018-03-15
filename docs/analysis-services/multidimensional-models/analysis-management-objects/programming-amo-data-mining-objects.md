@@ -41,7 +41,7 @@ ms.lasthandoff: 02/15/2018
   
 -   [Objets MiningModel](#MiningModel)  
   
-##  <a name="MiningStructure">Objets MiningStructure</a>  
+##  <a name="MiningStructure"></a>Objets MiningStructure  
  Une structure d'exploration de données correspond à la définition de la structure de données utilisée pour créer tous les modèles d'exploration de données. Une structure d'exploration de données contient une liaison à une vue de source de données définie dans la base de données et contient des définitions pour toutes les colonnes participant aux modèles d'exploration de données. Une structure d’exploration de données peut avoir plusieurs modèles d’exploration de données.  
   
  La création d'un objet <xref:Microsoft.AnalysisServices.MiningStructure> passe par les étapes suivantes :  
@@ -94,7 +94,7 @@ public static MiningStructure CreateSalesForecastingMiningStructure(Database db)
 }  
 ```  
   
-##  <a name="MiningModel">Objets MiningModel</a>  
+##  <a name="MiningModel"></a>Objets MiningModel  
  Un modèle d'exploration de données est une base de données de référentiel pour toutes les colonnes et définitions de colonne vouées à être utilisées dans un algorithme d'exploration de données.  
   
  La création d'un objet <xref:Microsoft.AnalysisServices.MiningModel> passe par les étapes suivantes :  

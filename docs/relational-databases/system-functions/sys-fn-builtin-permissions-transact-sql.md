@@ -34,16 +34,16 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 41e53169a20ff3082afc0e4b8f10ab76e79ca87d
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: f0aeedb143b94958e949466ea84def760614478c
+ms.sourcegitcommit: 6b1618aa3b24bf6759b00a820e09c52c4996ca10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="sysfnbuiltinpermissions-transact-sql"></a>sys.fn_builtin_permissions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Retourne une description de la hiérarchie des autorisations intégrées du serveur. `sys.fn_builtin_permissions`peut uniquement être appelée sur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], et il retourne toutes les autorisations, quelle que soit la si elles sont prises en charge sur la plateforme actuelle. La plupart des autorisations s’appliquent à toutes les plates-formes, mais ce n’est pas le cas pour certaines d’entre elles. Par exemple, les autorisations de niveau serveur ne peut pas être accordées sur la base de données SQL. Pour plus d’informations sur les plateformes prennent en charge chaque autorisation, consultez [autorisations &#40; moteur de base de données &#41;](../../relational-databases/security/permissions-database-engine.md).  
+  Retourne une description de la hiérarchie des autorisations intégrées du serveur. `sys.fn_builtin_permissions` peut uniquement être appelée sur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], et il retourne toutes les autorisations, quelle que soit la si elles sont prises en charge sur la plateforme actuelle. La plupart des autorisations s’appliquent à toutes les plates-formes, mais ce n’est pas le cas pour certaines d’entre elles. Par exemple, les autorisations de niveau serveur ne peut pas être accordées sur la base de données SQL. Pour plus d’informations sur les plateformes prennent en charge chaque autorisation, consultez [autorisations &#40;moteur de base de données&#41;](../../relational-databases/security/permissions-database-engine.md).  
   
  ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -169,7 +169,7 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
 |CL|CONTROL|CERTIFICATE|  
 |CL|CONTROL|CONTRACT|  
 |CL|CONTROL|DATABASE|  
-|CL|CONTROL<br /> **S’applique aux**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] et [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]. |DATABASE SCOPED CREDENTIAL|
+|CL|CONTROL<br /> **S’applique à**  : [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] et [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]. |DATABASE SCOPED CREDENTIAL|
 |CL|CONTROL|ENDPOINT|  
 |CL|CONTROL|FULLTEXT CATALOG|  
 |CL|CONTROL|FULLTEXT STOPLIST|  
@@ -248,7 +248,7 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
 |RF|REFERENCES|CERTIFICATE|  
 |RF|REFERENCES|CONTRACT|  
 |RF|REFERENCES|DATABASE|  
-|RF|REFERENCES<br /> **S’applique aux**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] et [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]. |DATABASE SCOPED CREDENTIAL|
+|RF|REFERENCES<br /> **S’applique à**  : [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] et [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]. |DATABASE SCOPED CREDENTIAL|
 |RF|REFERENCES|FULLTEXT CATALOG|  
 |RF|REFERENCES|FULLTEXT STOPLIST|  
 |RF|REFERENCES|SEARCH PROPERTY LIST|  
@@ -272,7 +272,7 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
 |TO|TAKE OWNERSHIP|CERTIFICATE|  
 |TO|TAKE OWNERSHIP|CONTRACT|  
 |TO|TAKE OWNERSHIP|DATABASE|  
-|TO|TAKE OWNERSHIP<br /> **S’applique aux**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] et [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]. |DATABASE SCOPED CREDENTIAL|
+|TO|TAKE OWNERSHIP<br /> **S’applique à**  : [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] et [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]. |DATABASE SCOPED CREDENTIAL|
 |TO|TAKE OWNERSHIP|ENDPOINT|  
 |TO|TAKE OWNERSHIP|FULLTEXT CATALOG|  
 |TO|TAKE OWNERSHIP|FULLTEXT STOPLIST|  
@@ -299,7 +299,7 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
 |VW|VIEW DEFINITION|CERTIFICATE|  
 |VW|VIEW DEFINITION|CONTRACT|  
 |VW|VIEW DEFINITION|DATABASE|  
-|VW|VIEW DEFINITION<br /> **S’applique aux**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] et [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]. |DATABASE SCOPED CREDENTIAL|
+|VW|VIEW DEFINITION<br /> **S’applique à**  : [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] et [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]. |DATABASE SCOPED CREDENTIAL|
 |VW|VIEW DEFINITION|ENDPOINT|  
 |VW|VIEW DEFINITION|FULLTEXT CATALOG|  
 |VW|VIEW DEFINITION|FULLTEXT STOPLIST|  
@@ -340,7 +340,7 @@ Le graphique suivant illustre les autorisations et leurs relations. Certaines de
 ![Autorisations des moteurs de base de données](../../relational-databases/security/media/database-engine-permissions.PNG) 
 
 >[!NOTE]
-> Dans cette rubrique, le poster est trop petit pour être lu correctement. Téléchargez le poster des autorisations du moteur de base de données à partir de [http://go.microsoft.com/fwlink/?LinkId=229142](http://go.microsoft.com/fwlink/?LinkId=229142).  
+> Dans cette rubrique, le poster est trop petit pour être lu correctement. Téléchargez le Poster des autorisations du moteur de base de données à partir de [ https://aka.ms/sql-permissions-poster ](https://aka.ms/sql-permissions-poster).  
    
   
 ## <a name="permissions"></a>Autorisations  

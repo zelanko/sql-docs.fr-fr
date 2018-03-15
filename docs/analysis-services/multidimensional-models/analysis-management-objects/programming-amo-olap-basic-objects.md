@@ -265,7 +265,7 @@ foreach (Cube cube in db.Cubes)
      }  
 ```  
   
-##  <a name="MG">Objets MeasureGroup</a>  
+##  <a name="MG"></a>Objets MeasureGroup  
  Pour gérer ou traiter un groupe de mesures, vous devez programmer l'objet <xref:Microsoft.AnalysisServices.MeasureGroup>.  
   
 ### <a name="creating-dropping-and-finding-a-measuregroup"></a>Création, suppression et recherche d'un groupe de mesures  

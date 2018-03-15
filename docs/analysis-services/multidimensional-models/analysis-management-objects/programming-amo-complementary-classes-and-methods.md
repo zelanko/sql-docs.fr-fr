@@ -45,7 +45,7 @@ ms.lasthandoff: 02/15/2018
   
 -   [Classe CaptureLog et attribut CaptureXML](#CL)  
   
-##  <a name="Assembly">Assembly (classe)</a>  
+##  <a name="Assembly"></a>Assembly (classe)  
  Assemblys permettent aux utilisateurs d’étendre les fonctionnalités de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] en ajoutant de nouvelles procédures stockées ou les fonctions MDX (Multidimensional Expressions). Pour plus d’informations, consultez [méthodes et Classes autres AMO](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-other-classes-and-methods.md).  
   
  L'ajout et la suppression d'assemblys est simple et peut être effectuée en ligne. Vous devez être administrateur de base de données pour ajouter un assembly à la base de données ou administrateur de serveur pour ajouter l'assembly à l'objet serveur.  
@@ -106,7 +106,7 @@ static public void RestoreAdventureWorks(Server svr)
 }  
 ```  
   
-##  <a name="TRC">Trace (classe)</a>  
+##  <a name="TRC"></a>Trace (classe)  
  L'analyse de l'activité serveur nécessite l'utilisation de deux types de traces : les traces de session et les traces de serveur. Le traçage du serveur peut fournir une indication sur le niveau de performance de la tâche en cours sur le serveur (traces de session). De même, les traces peuvent vous renseigner sur l'activité générale du serveur sans même y être connecté (traces de serveur).  
   
  Lors du traçage de l'activité en cours (traces de session), le serveur envoie des notifications à l'application active à propos des événements qui se produisent dans le serveur et qui sont le fait de l'application. Les événements sont capturés au moyen de gestionnaires d'événements dans l'application active. Vous devez en premier lieu affecter les routines de gestion d'événements à l'objet <xref:Microsoft.AnalysisServices.SessionTrace> puis démarrer la trace de session.  

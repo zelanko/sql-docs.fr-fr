@@ -73,7 +73,7 @@ ms.lasthandoff: 02/15/2018
   
  Pour plus d'informations sur les méthodes et les propriétés disponibles, consultez <xref:Microsoft.AnalysisServices.Database> dans <xref:Microsoft.AnalysisServices>.  
   
-##  <a name="DSandDSV">Objets DataSource et DataSourceView</a>  
+##  <a name="DSandDSV"></a>Objets DataSource et DataSourceView  
  Les sources de données sont gérées à l'aide de l'objet <xref:Microsoft.AnalysisServices.DataSourceCollection> de la classe Database. Il est possible de créer une instance de <xref:Microsoft.AnalysisServices.DataSource> en utilisant la méthode Add d'un objet <xref:Microsoft.AnalysisServices.DataSourceCollection>. Une instance de <xref:Microsoft.AnalysisServices.DataSource> peut être supprimée en utilisant la méthode Remove d'un objet <xref:Microsoft.AnalysisServices.DataSourceCollection>.  
   
  Les objets <xref:Microsoft.AnalysisServices.DataSourceView> sont gérés à partir de l'objet <xref:Microsoft.AnalysisServices.DataSourceViewCollection> de la classe Database.  

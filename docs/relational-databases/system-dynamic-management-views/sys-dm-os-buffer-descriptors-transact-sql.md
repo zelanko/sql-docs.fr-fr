@@ -27,11 +27,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6e35b3cd5c0b10bce5ed66f8c68babcebc96ae95
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 1c03bbdbe271500ecf417fe3b5c125304001a05e
+ms.sourcegitcommit: 6b1618aa3b24bf6759b00a820e09c52c4996ca10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="sysdmosbufferdescriptors-transact-sql"></a>sys.dm_os_buffer_descriptors (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ ms.lasthandoff: 02/03/2018
  Lorsqu'une page de données est lue à partir du disque, cette page est copiée dans le pool de mémoires tampons de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et mise en cache en vue de sa réutilisation. Chaque page de données mise en cache est associée à un descripteur de mémoire tampon. Les descripteurs de mémoire tampon identifient de manière unique chaque page de données actuellement mise en cache dans une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. sys.dm_os_buffer_descriptors retourne les pages mises en cache pour toutes les bases de données utilisateur et système. Cela inclut les pages qui sont associées à la base de données Resource.  
   
 > **Remarque :** à appeler à partir [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ou [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], utilisez le nom **sys.dm_pdw_nodes_os_buffer_descriptors**.  
-  
+
 |Nom de colonne|Type de données| Description|  
 |-----------------|---------------|-----------------|  
 |database_id|**int**|Identificateur de la base de données associée à la page dans le pool de mémoires tampons. Autorise la valeur NULL.|  
@@ -120,7 +120,7 @@ ORDER BY cached_pages_count DESC;
 ## <a name="see-also"></a>Voir aussi  
  [sys.allocation_units &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)   
  
- [Système d’exploitation de serveur SQL relatives des vues de gestion dynamique &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)   
+ [Vues de gestion dynamique liées à système d’exploitation SQL Server &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)   
  [Base de données Resource](../../relational-databases/databases/resource-database.md)   
  [Sys.dm_os_buffer_pool_extension_configuration &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-buffer-pool-extension-configuration-transact-sql.md)  
   
