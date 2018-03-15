@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Restaurer une base de données SQL Server dans Docker | Documents Microsoft"
 description: "Ce didacticiel montre comment restaurer une sauvegarde de base de données SQL Server dans un conteneur Linux Docker."
 author: rothja
@@ -28,10 +28,10 @@ Ce didacticiel montre comment déplacer et de restaurer un fichier de sauvegarde
 
 > [!div class="checklist"]
 > * Extraire et exécuter la dernière image de conteneur de SQL Server 2017 Linux.
-> * Copier le fichier de base de données wideworldimporters dans le conteneur.
-> * Restaurer la base de données dans le conteneur.
+> * Restaurer la base de données dans le conteneur. 
+> * Restaurez la base de données dans le conteneur.
 > * Exécuter les instructions Transact-SQL pour afficher et modifier la base de données.
-> * Sauvegarder la base de données modifiée.
+> * Sauvegardre la base de données modifiée.
 
 ## <a name="prerequisites"></a>Configuration requise
 
@@ -73,7 +73,7 @@ Ce didacticiel montre comment déplacer et de restaurer un fichier de sauvegarde
        -d microsoft/mssql-server-linux:2017-latest
     ```
 
-    Cette commande crée un conteneur de SQL Server 2017 avec l’édition développeur (par défaut). Le port SQL Server **1433** est exposé sur l’ordinateur hôte esur le port **1401**. Le paramètre facultatif `-v sql1data:/var/opt/mssql` crée un conteneur de volume de données nommé **sql1ddata**. Cela permet de conserver les données créées par SQL Server.
+    Cette commande crée un conteneur de SQL Server 2017 avec l’édition développeur (par défaut). Port SQL Server **1433** est exposée sur l’ordinateur hôte en tant que port **1401**. Le paramètre facultatif `-v sql1data:/var/opt/mssql` paramètre crée un conteneur de volume de données nommé **sql1ddata**. Cela permet de conserver les données créées par SQL Server.
 
    > [!NOTE]
    > Le processus d’exécution des éditions de SQL Server de production dans des conteneurs est légèrement différent. Pour plus d’informations, consultez [exécuter des images de conteneur de production](sql-server-linux-configure-docker.md#production). Si vous utilisez les mêmes noms de conteneur et ports, le reste de cette procédure pas à pas fonctionne toujours avec des conteneurs de production.
@@ -141,7 +141,7 @@ Ce didacticiel utilise la [base de donnéesd'exemple Wide World Importers](../sa
 Le fichier de sauvegarde se trouve désormais dans le conteneur. Avant de restaurer la sauvegarde, il est important de connaître les noms de fichiers logiques et les types de fichiers à l’intérieur de la sauvegarde. Les commandes Transact-SQL suivantes inspectent la sauvegarde et effectuent la restauration à l’aide de **sqlcmd** dans le conteneur.
 
 > [!TIP]
-> Ce didacticiel utilise **sqlcmd** à l’intérieur du conteneur, car le conteneur est fourni avec cet outil préinstallé. Toutefois, vous pouvez également exécuter les instructions Transact-SQL avec un autre client outils en dehors du conteneur, tel que [Visual Studio Code](sql-server-linux-develop-use-vscode.md) ou [SQL Server Management Studio](sql-server-linux-develop-use-ssms.md). Pour vous connecter, utilisez le port de l’hôte qui a été mappé au port 1433 dans le conteneur. Dans cet exemple, c'est **localhost, 1401** sur l’ordinateur hôte et **Host_IP_Address, 1401** à distance.
+> Ce didacticiel utilise **sqlcmd** à l’intérieur du conteneur, car le conteneur est fourni avec cet outil préinstallé. Toutefois, vous pouvez également exécuter les instructions Transact-SQL avec un autre client outils en dehors du conteneur, tel que [Visual Studio Code](sql-server-linux-develop-use-vscode.md) ou [SQL Server Management Studio](sql-server-linux-develop-use-ssms.md). Pour vous connecter, utilisez le port de l’hôte qui a été mappé au port 1433 dans le conteneur. Dans cet exemple, qui est **localhost, 1401** sur l’ordinateur hôte et **Host_IP_Address, 1401** à distance.
 
 1. Exécutez **sqlcmd** dans le conteneur à la liste des noms de fichiers logiques et les chemins d’accès à l’intérieur de la sauvegarde. Cette opération s’effectue avec l'instruction Transact-SQL **RESTORE FILELISTONLY**.
 
@@ -233,7 +233,7 @@ Vous devez voir **WideWorldImporters** dans la liste des bases de données.
 
 Les étapes suivantes apporter une modification dans la base de données.
 
-1. Exécuter une requête pour afficher les premiers 10 éléments dans la table **Warehouse.StockItems**.
+1. Exécuter une requête pour afficher les 10 premiers éléments de la table **Warehouse.StockItems**.
 
    ```bash
    sudo docker exec -it sql1 /opt/mssql-tools/bin/sqlcmd \
@@ -264,7 +264,7 @@ Les étapes suivantes apporter une modification dans la base de données.
             10 USB food flash drive - chocolate bar
    ```
 
-1. Mettre à jour la description du premier élément par le code suivant l'instruction **UPDATE** :
+1. Mettre à jour la description du premier élément par le code suivant l'instruction **UPDATE** : 
 
    ```bash
    sudo docker exec -it sql1 /opt/mssql-tools/bin/sqlcmd \
@@ -291,7 +291,7 @@ Les étapes suivantes apporter une modification dans la base de données.
 
 Une fois que vous avez restauré la base de données dans un conteneur, vous souhaiterez également créer régulièrement des sauvegardes de base de données à l’intérieur du conteneur en cours d’exécution. Les étapes suivent un modèle semblable à la procédure précédente, mais en sens inverse.
 
-1. Utilisez le **sauvegarde de base de données** commande Transact-SQL pour créer une sauvegarde de base de données dans le conteneur. Ce didacticiel crée un nouveau fichier de sauvegarde, **wwi_2.bak**, dans le répertoire précédemment créé **/var/opt/mssql/backup**.
+1. Utilisez la commande Transact-SQL **sauvegarde de base de données** pour créer une sauvegarde de base de données dans le conteneur. Ce didacticiel crée un nouveau fichier de sauvegarde,**wwi_2.bak**, dans le répertoire précédemment créé **/var/opt/mssql/backup**.
 
    ```bash
    sudo docker exec -it sql1 /opt/mssql-tools/bin/sqlcmd \
@@ -362,7 +362,7 @@ En plus des sauvegardes de base de données pour protéger vos données, vous po
    docker rm sql1
    ```
 
-1. Créer un nouveau conteneur, **sql2** et réutiliser le conteneur de volumes de données**sql1data**.
+1. Créer un nouveau conteneur, **sql2** et réutiliser le conteneur de volumes de données **sql1data**.
 
     ```bash
     sudo docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' \
@@ -376,7 +376,7 @@ En plus des sauvegardes de base de données pour protéger vos données, vous po
        -v sql1data:/var/opt/mssql -d microsoft/mssql-server-linux:2017-latest
     ```
 
-1. La base de données de Wide World Importers est présente dans le nouveau conteneur. Exécuter une requête pour vérifier la modification précédente que vous avez apportées.
+1. La base de données de Wide World Importers est présente dans le nouveau conteneur.  Exécutez une requête pour vérifier la modification précédente que vous avez apportée.
 
    ```bash
    sudo docker exec -it sql2 /opt/mssql-tools/bin/sqlcmd \
@@ -391,7 +391,7 @@ En plus des sauvegardes de base de données pour protéger vos données, vous po
    ```
 
    > [!NOTE]
-   > Le mot de passe SA n’est pas le mot de passe que vous avez spécifié pour le **sql2** conteneur, `MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>`. Toutes les données de SQL Server ont été restauréés à partir de **sql1**, y compris le mot de passe modifié à partir de précédemment dans le didacticiel. En effet, certaines options sont ainsi ignorées en raison de la restauration des données dans /var/opt/mssql. Pour cette raison, le mot de passe est `<YourNewStrong!Passw0rd>` comme indiqué ici.
+   > Le mot de passe SA n’est pas le mot de passe que vous avez spécifié pour le conteur **sql2**, `MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>`. Toutes les données de SQL Server ont été restaurées à partir de **sql1**, y compris le mot de passe modifié à partir de précédemment dans le didacticiel. En effet, certaines options sont ainsi ignorées en raison de la restauration des données dans /var/opt/mssql. Pour cette raison, le mot de passe est `<YourNewStrong!Passw0rd>` comme indiqué ici.
 
 ## <a name="next-steps"></a>Étapes suivantes
 
