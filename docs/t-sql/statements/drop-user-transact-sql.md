@@ -1,5 +1,5 @@
 ---
-title: DROP USER (Transact-SQL) | Documents Microsoft
+title: DROP USER (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 05/12/2017
 ms.prod: sql-non-specified
@@ -58,15 +58,15 @@ DROP USER user_name
 ```  
   
 ## <a name="arguments"></a>Arguments  
- *S’IL EXISTE*  
- **S’applique aux**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] via [version actuelle](http://go.microsoft.com/fwlink/p/?LinkId=299658), [!INCLUDE[sssds](../../includes/sssds-md.md)]).  
+ *IF EXISTS*  
+ **S’applique à**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] jusqu’à la [version actuelle](http://go.microsoft.com/fwlink/p/?LinkId=299658), [!INCLUDE[sssds](../../includes/sssds-md.md)]).  
   
- Conditionnellement supprime l’utilisateur uniquement s’il existe déjà.  
+ Supprime, de manière conditionnelle, l’utilisateur uniquement s’il existe déjà.  
   
- *nom_utilisateur*  
+ *USER_NAME*  
  Spécifie le nom qui identifie l'utilisateur dans cette base de données.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Vous ne pouvez pas supprimer de la base de données des utilisateurs qui possèdent des éléments sécurisables. Avant de supprimer un utilisateur de base de données propriétaire d'éléments sécurisables, vous devez supprimer ou transférer la propriété de ces éléments sécurisables.  
   
  Vous ne pouvez pas supprimer l'utilisateur invité, mais vous pouvez le désactiver en révoquant son autorisation CONNECT. Pour ce faire, vous devez exécuter REVOKE CONNECT FROM GUEST dans toute base de données autre que la base master ou tempdb.  
@@ -74,7 +74,7 @@ DROP USER user_name
 > [!CAUTION]  
 >  [!INCLUDE[ssCautionUserSchema](../../includes/sscautionuserschema-md.md)]  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l'autorisation ALTER ANY USER sur la base de données.  
   
 ## <a name="examples"></a>Exemples  
@@ -85,7 +85,7 @@ DROP USER AbolrousHazem;
 GO  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [CREATE USER &#40;Transact-SQL&#41;](../../t-sql/statements/create-user-transact-sql.md)   
  [ALTER USER &#40;Transact-SQL&#41;](../../t-sql/statements/alter-user-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  

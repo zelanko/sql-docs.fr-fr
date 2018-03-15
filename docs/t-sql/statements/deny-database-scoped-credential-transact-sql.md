@@ -1,5 +1,5 @@
 ---
-title: "REFUSER l’étendue de la base de données d’informations d’identification (Transact-SQL) | Documents Microsoft"
+title: "DENY – Refuser des autorisations sur des informations d’identification délimitées à la base de données (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 12/16/2016
 ms.prod: sql-non-specified
@@ -32,10 +32,10 @@ ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="deny-database-scoped-credential-transact-sql"></a>REFUSER l’étendue de la base de données d’informations d’identification (Transact-SQL)
+# <a name="deny-database-scoped-credential-transact-sql"></a>DENY – Refuser des autorisations sur des informations d’identification délimitées à la base de données (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
 
-  Refuse des autorisations sur les informations d’identification d’une étendue de la base de données.  
+  Permet de refuser des autorisations sur des informations d’identification délimitées à la base de données.  
 
   
  ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
@@ -52,18 +52,18 @@ DENY permission  [ ,...n ]
 ```  
   
 ## <a name="arguments"></a>Arguments  
- *autorisation*  
- Spécifie une autorisation qui peut être refusée sur une information d’identification de la portée de la base de données. Voir ci-dessous.  
+ *permission*  
+ Spécifie une autorisation qui peut être refusée sur des informations d’identification délimitées à la base de données. Voir ci-dessous.  
   
- SUR les informations d’identification de base de données d’une étendue **::***credential_name*  
- Spécifie les informations d’identification de la portée de la base de données sur lequel l’autorisation est refusée. Le qualificateur d'étendue "::" est indispensable.  
+ ON DATABASE SCOPED CREDENTIAL **::***credential_name*  
+ Spécifie les informations d’identification délimitées à la base de données sur lesquelles l’autorisation est refusée. Le qualificateur d'étendue "::" est indispensable.  
   
- *principal_base_de_données*  
+ *database_principal*  
  Spécifie le principal auquel l'autorisation est refusée. Il peut s'agir :  
   
 -   d'un utilisateur de base de données ;  
   
--   d'un rôle de base de données ;  
+-   d'un rôle de base de données ;  
   
 -   d'un rôle d'application ;  
   
@@ -85,7 +85,7 @@ DENY permission  [ ,...n ]
   
 -   d'un utilisateur de base de données ;  
   
--   d'un rôle de base de données ;  
+-   d'un rôle de base de données ;  
   
 -   d'un rôle d'application ;  
   
@@ -99,10 +99,10 @@ DENY permission  [ ,...n ]
   
 -   d'un utilisateur de base de données qui n'est pas mappé sur le principal d'un serveur.  
   
-## <a name="remarks"></a>Notes  
- Informations d’identification d’une étendue de la base de données sont un base de données au niveau élément sécurisable contenu dans la base de données qui est son parent dans la hiérarchie des autorisations. Les autorisations plus spécifiques et limitées qui peuvent être refusées sur une information d’identification de la portée de la base de données sont répertoriées ci-dessous, ainsi que les autorisations plus générales qui les incluent de manière implicite.  
+## <a name="remarks"></a>Notes   
+ Les informations d’identification délimitées à la base de données sont des éléments sécurisables au niveau base de données inclus dans la base de données qui est son parent dans la hiérarchie des autorisations. Les autorisations les plus spécifiques et limitées qui peuvent être refusées sur des informations d’identification incluses dans l’étendue de base de données sont indiquées ci-dessous, avec les autorisations plus générales qui les incluent implicitement.  
   
-|Autorisation des informations d’identification d’une étendue de base de données|Impliquée par une autorisation d’informations d’identification de base de données d’une étendue|Impliquée par une autorisation de base de données|  
+|Autorisation sur des informations d’identification délimitées à la base de données|Implicite avec l’autorisation sur les informations d’identification délimitées à la base de données|Impliquée par une autorisation de base de données|  
 |----------------------------|---------------------------------------|------------------------------------|  
 |CONTROL|CONTROL|CONTROL|  
 |TAKE OWNERSHIP|CONTROL|CONTROL|  
@@ -110,13 +110,13 @@ DENY permission  [ ,...n ]
 |REFERENCES|CONTROL|REFERENCES|  
 |VIEW DEFINITION|CONTROL|VIEW DEFINITION|  
   
-## <a name="permissions"></a>Permissions  
- Requiert l’autorisation de contrôle sur les informations d’identification de la portée de la base de données. Si la clause AS est utilisée, le principal spécifié doit posséder les informations d’identification de la portée de la base de données.  
+## <a name="permissions"></a>Autorisations  
+ Nécessite l’autorisation CONTROL sur les informations d’identification délimitées à la base de données. Si la clause AS est utilisée, le principal spécifié doit être le propriétaire des informations d’identification délimitées à la base de données.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [DENY &#40;Transact-SQL&#41;](../../t-sql/statements/deny-transact-sql.md)   
- [Base de données de l’octroi d’une étendue d’informations d’identification (Transact-SQL)](../../t-sql/statements/grant-database-scoped-credential-transact-sql.md)   
- [RÉVOQUER les informations d’identification de la portée de la base de données (Transact-SQL)](../../t-sql/statements/revoke-database-scoped-credential-transact-sql.md)   
+ [GRANT – Accorder des autorisations sur les informations d’identification délimitées à la base de données (Transact-SQL)](../../t-sql/statements/grant-database-scoped-credential-transact-sql.md)   
+ [REVOKE – Révoquer des autorisations sur les informations d’identification délimitées à la base de données (Transact-SQL)](../../t-sql/statements/revoke-database-scoped-credential-transact-sql.md)   
  [Autorisations &#40;moteur de base de données&#41;](../../relational-databases/security/permissions-database-engine.md)   
  [Principaux &#40;moteur de base de données&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
  [Hiérarchie de chiffrement](../../relational-databases/security/encryption/encryption-hierarchy.md)  

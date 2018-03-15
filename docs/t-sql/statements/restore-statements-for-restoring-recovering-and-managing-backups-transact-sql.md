@@ -1,5 +1,5 @@
 ---
-title: "Instructions de restauration pour la restauration, la récupération, la gestion des sauvegardes (T-SQL) | Documents Microsoft"
+title: "Instructions RESTORE pour la restauration, la récupération et la gestion des sauvegardes (T-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/17/2017
 ms.prod: sql-non-specified
@@ -45,7 +45,7 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="in-this-section"></a>Dans cette section  
   
-|.| Description|  
+|.|Description|  
 |---------------|-----------------|  
 |[RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)|Décrit les instructions Transact-SQL, RESTORE DATABASE et RESTORE LOG, qui sont utilisées pour restaurer et récupérer une base de données à partir des sauvegardes réalisées via la commande BACKUP. RESTORE DATABASE s'utilise pour les bases de données avec tous les modes de récupération, tandis que RESTORE LOG s'utilise uniquement en mode de récupération complète utilisant les journaux de transactions. RESTORE DATABASE permet également de rétablir une base de données en instantané de base de données.|  
 |[Arguments RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md)|Obtient des informations sur les arguments décrits dans les sections « Syntaxe » de l'instruction RESTORE et du jeu associé d'instructions auxiliaires : RESTORE FILELISTONLY, RESTORE HEADERONLY, RESTORE LABELONLY, RESTORE REWINDONLY et RESTORE VERIFYONLY. La plupart des arguments sont pris en charge seulement par un sous-ensemble de ces six instructions. Cette prise en charge est précisée dans la description de chacun des arguments.|  
@@ -55,7 +55,7 @@ ms.lasthandoff: 01/25/2018
 |[RESTORE REWINDONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-rewindonly-transact-sql.md)|Décrit l'instruction RESTORE REWINDONLY de Transact-SQL, qui est utilisée pour rembobiner et fermer les périphériques à bandes laissés ouverts par les instructions BACKUP ou RESTORE qui ont été exécutées par l'intermédiaire de l'option NOREWIND.|  
 |[RESTORE VERIFYONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)|Décrit l'instruction RESTORE VERIFYONLY de Transact-SQL, qui est utilisée d'une part pour vérifier la sauvegarde sans toutefois la restaurer, et d'autre part pour vérifier que le jeu de sauvegarde est complet et que l'ensemble de la sauvegarde est lisible ; elle ne tente pas de vérifier la structure des données.|  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Sauvegarde et restauration des bases de données SQL Server](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)  
   
   

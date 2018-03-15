@@ -1,5 +1,5 @@
 ---
-title: SET DEADLOCK_PRIORITY (Transact-SQL) | Documents Microsoft
+title: SET DEADLOCK_PRIORITY (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -63,13 +63,13 @@ SET DEADLOCK_PRIORITY { LOW | NORMAL | HIGH | <numeric-priority> | @deadlock_var
  HIGH  
  Indique que la session active sera la victime du blocage si la valeur de la priorité des autres sessions impliquées dans la chaîne de blocage est un entier supérieur à 5, ou qu'elle est éligible pour être la victime du stockage si la priorité d'une autre session est également définie sur HIGH ou sur une valeur entière égale à 5.  
   
- \<priorité numérique >  
+ \<numeric-priority>  
  Plage de valeurs entières (-10 à 10) pour fournir 21 niveaux de priorité de blocage. Indique que la session active sera la victime du blocage si la valeur de la priorité de blocage des autres sessions de la chaîne de blocage est supérieure et qu'elle ne sera pas la victime du blocage si la valeur de la priorité de blocage des autres sessions est inférieure. Indique également que la session active est éligible pour être la victime du blocage si la valeur de la priorité d'une autre session est identique. LOW correspond à -5, NORMAL à 0 et HIGH à 5.  
   
- **@***deadlock_var*  
+ **@** *deadlock_var*  
  Variable de type chaîne de caractères spécifiant la priorité du blocage. La valeur de la variable doit être définie sur « LOW' », « NORMAL » ou « HIGH ». Elle doit être suffisamment importante pour contenir toute la chaîne.  
   
- **@***deadlock_intvar*  
+ **@** *deadlock_intvar*  
  Variable de type entier spécifiant la priorité du blocage. Elle doit être définie sur une valeur entière comprise dans la plage (-10 - 10)  
   
 ## <a name="remarks"></a>Notes   
@@ -77,7 +77,7 @@ SET DEADLOCK_PRIORITY { LOW | NORMAL | HIGH | <numeric-priority> | @deadlock_var
   
  La session choisie comme victime du blocage varie en fonction de la priorité de blocage des deux sessions :  
   
--   Si la valeur de la priorité de blocage des deux sessions est identique, l'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] choisit la session pour laquelle l'annulation est la moins onéreuse comme victime du blocage. Par exemple, si la priorité des deux sessions est définie sur HIGH, l'instance choisit comme victime la session pour laquelle l'annulation est la moins coûteuse (estimation). Le coût est déterminé en comparant le nombre d’octets du journal écrit à ce stade dans chaque transaction. (Vous pouvez voir cette valeur comme « Utilisé du journal » dans un graphique de blocage).
+-   Si la valeur de la priorité de blocage des deux sessions est identique, l'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] choisit la session pour laquelle l'annulation est la moins onéreuse comme victime du blocage. Par exemple, si la priorité des deux sessions est définie sur HIGH, l'instance choisit comme victime la session pour laquelle l'annulation est la moins coûteuse (estimation). Le coût est déterminé en comparant le nombre d’octets du journal écrit à ce stade dans chaque transaction. (Cette valeur est indiquée par « Journal utilisé » dans un graphique de blocage.)
   
 -   Si les priorités de blocage des sessions sont différentes, la session dont la priorité de blocage est inférieure est choisie comme victime du blocage.  
   
@@ -104,9 +104,9 @@ SET DEADLOCK_PRIORITY NORMAL;
 GO  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [@@LOCK_TIMEOUT &#40;Transact-SQL&#41;](../../t-sql/functions/lock-timeout-transact-sql.md)   
  [Instructions SET &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)   
- [SET LOCK_TIMEOUT &#40; Transact-SQL &#41;](../../t-sql/statements/set-lock-timeout-transact-sql.md)  
+ [SET LOCK_TIMEOUT &#40;Transact-SQL&#41;](../../t-sql/statements/set-lock-timeout-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: "STCentroid (Type de données geometry) | Documents Microsoft"
+title: "STCentroid (type de données geometry) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stcentroid-geometry-data-type"></a>STCentroid (type de données geometry)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-Retourne le centre géométrique d’une **geometry** instance se compose d’un ou plusieurs polygones.
+Retourne le centre géométrique d’une instance **geometry** qui comprend un ou plusieurs polygones.
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -44,19 +44,19 @@ Retourne le centre géométrique d’une **geometry** instance se compose d’un
 ```  
   
 ## <a name="return-types"></a>Types de retour  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]type de retour : **geometry**  
+ Type de retour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] : **geometry**  
   
  Type de retour CLR : **SqlGeometry**  
   
- Type Open Geospatial Consortium (OGC) : **Point**  
+ Type OGC (Open Geospatial Consortium) : **Point**  
   
-## <a name="remarks"></a>Notes  
- `STCentroid()`Retourne null si le **geometry** instance n’est pas un **Polygon, CurvePolygon**, ou **MultiPolygon** type.  
+## <a name="remarks"></a>Notes   
+ `STCentroid()` retourne une valeur Null si l’instance **geometry** n’est pas de type **Polygon, CurvePolygon** ou **MultiPolygon**.  
   
 ## <a name="examples"></a>Exemples  
   
 ### <a name="a-computing-the-centroid-of-a-polygon-instance"></a>A. Calcul du centroïde d'une instance Polygon  
- L’exemple suivant utilise `STCentroid()` pour calculer le centroïde d’une `polygon``geometry` instance :  
+ L’exemple suivant utilise `STCentroid()` pour calculer le centroïde d’une instance `polygon``geometry` :  
   
 ```  
 DECLARE @g geometry;  
@@ -72,7 +72,7 @@ SELECT @g.STCentroid().ToString();
  SELECT @g.STCentroid().ToString() AS Centroid
  ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Méthodes OGC sur des instances geography](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   
   

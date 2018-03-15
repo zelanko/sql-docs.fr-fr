@@ -1,5 +1,5 @@
 ---
-title: SET NUMERIC_ROUNDABORT (Transact-SQL) | Documents Microsoft
+title: SET NUMERIC_ROUNDABORT (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 12/04/2017
 ms.prod: sql-non-specified
@@ -51,7 +51,7 @@ ms.lasthandoff: 12/05/2017
 SET NUMERIC_ROUNDABORT { ON | OFF }
 ```
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Si l'option SET NUMERIC_ROUNDABORT est définie à ON (activée), une erreur se produit dès qu'une perte de précision survient dans une expression. Lorsqu'elle est désactivée (OFF), les pertes de précision ne génèrent pas de messages d'erreur et le résultat est arrondi en fonction de la précision de la colonne ou de la variable contenant le résultat.  
   
  Une perte de précision peut se produire lorsque vous tentez de stocker une valeur avec une précision fixe dans une colonne ou une variable dont la précision est moindre.  
@@ -65,7 +65,7 @@ SET NUMERIC_ROUNDABORT { ON | OFF }
 
  L'option SET NUMERIC_ROUNDABORT est définie lors de l'exécution, et non pas au moment de l'analyse.
 
- SET NUMERIC_ROUNDABORT doit être désactivée (valeur OFF) lors de la création ou de la modification d'index sur des colonnes calculées ou des vues indexées. Si SET NUMERIC_ROUNDABORT est activé, créer, les instructions UPDATE, INSERT et DELETE sur les tables comportant des index sur des colonnes calculées ou des vues indexées échouent. Pour plus d’informations sur les paramètres des options SET requises avec les vues indexées et des index sur des colonnes calculées, consultez « Considérations lorsque vous utilisez des instructions SET » dans [instructions SET &#40; Transact-SQL &#41; ](../../t-sql/statements/set-statements-transact-sql.md).
+ SET NUMERIC_ROUNDABORT doit être désactivée (valeur OFF) lors de la création ou de la modification d'index sur des colonnes calculées ou des vues indexées. Si l’option SET NUMERIC_ROUNDABORT est activée (ON), les instructions CREATE, UPDATE, INSERT et DELETE sur des tables comportant des index sur des colonnes calculées ou des vues indexées échouent. Pour plus d’informations sur les paramètres de l’option SET obligatoire avec les vues indexées et les index sur des colonnes calculées, consultez « Remarques sur l’utilisation des instructions SET » dans [Instructions SET &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md).
   
  Pour afficher la valeur actuelle de ce paramètre, exécutez la requête suivante :
   
@@ -76,7 +76,7 @@ SELECT @NUMERIC_ROUNDABORT AS NUMERIC_ROUNDABORT;
   
 ```  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l'appartenance au rôle **public** .  
   
 ## <a name="examples"></a>Exemples  
@@ -146,9 +146,9 @@ SELECT @result;
 GO  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Types de données &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
  [Instructions SET &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)   
- [SET ARITHABORT &#40; Transact-SQL &#41;](../../t-sql/statements/set-arithabort-transact-sql.md)  
+ [SET ARITHABORT &#40;Transact-SQL&#41;](../../t-sql/statements/set-arithabort-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: "CRÉER l’INDEX XML sélectif (Transact-SQL) | Documents Microsoft"
+title: CREATE SELECTIVE XML INDEX (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/10/2017
 ms.prod: sql-non-specified
@@ -29,7 +29,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="create-selective-xml-index-transact-sql"></a>CREATE SELECTIVE XML INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-  Crée un index XML sélectif sur la table et la colonne XML spécifiées. Les index XML sélectifs améliorent les performances de l'indexation XML et l'interrogation en indexant uniquement un sous-ensemble de nœuds généralement interrogés. Vous pouvez également créer des index XML secondaires sélectifs. Pour plus d’informations, consultez [Create, Alter et Drop des index XML secondaires sélectifs](../../relational-databases/xml/create-alter-and-drop-secondary-selective-xml-indexes.md).  
+  Crée un index XML sélectif sur la table et la colonne XML spécifiées. Les index XML sélectifs améliorent les performances de l'indexation XML et l'interrogation en indexant uniquement un sous-ensemble de nœuds généralement interrogés. Vous pouvez également créer des index XML secondaires sélectifs. Pour plus d’informations, consultez [Créer, modifier ou supprimer des index XML secondaires sélectifs](../../relational-databases/xml/create-alter-and-drop-secondary-selective-xml-indexes.md).  
   
  ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -103,9 +103,9 @@ identifier
   
 ##  <a name="Arguments"></a> Arguments  
  *index_name*  
- Nom de l'index à créer. Les noms d’index doivent être uniques dans une table, mais n’ont pas à être unique au sein d’une base de données. Les noms d’index doivent respecter les règles de [identificateurs](../../relational-databases/databases/database-identifiers.md).  
+ Nom de l'index à créer. Les noms d’index doivent être uniques dans une table, mais pas dans une base de données. Les noms d’index doivent se conformer aux règles régissant les [identificateurs](../../relational-databases/databases/database-identifiers.md).  
   
- *\<table_object >* est la table qui contient la colonne XML à indexer. Utilisez l'un des éléments suivants :  
+ *\<table_object>* Table contenant la colonne XML à indexer. Utilisez l'un des éléments suivants :  
   
 -   `database_name.schema_name.table_name`  
   
@@ -118,11 +118,11 @@ identifier
  *xml_column_name*  
  Nom de la colonne XML qui contient les chemins d'accès à indexer.  
   
- [WITH XMLNAMESPACES **(**\<xmlnamespace_list >**)**] est la liste des espaces de noms utilisés par les chemins d’accès à indexer. Pour plus d’informations sur la syntaxe de la clause WITH XMLNAMESPACES, consultez [WITH XMLNAMESPACES &#40; Transact-SQL &#41; ](../../t-sql/xml/with-xmlnamespaces.md).  
+ [WITH XMLNAMESPACES **(**\<xmlnamespace_list>**)**] Liste des espaces de noms utilisés par les chemins à indexer. Pour plus d’informations sur la syntaxe de la clause WITH XMLNAMESPACES, consultez [WITH XMLNAMESPACES &#40;Transact-SQL&#41;](../../t-sql/xml/with-xmlnamespaces.md).  
   
- POUR **(**\<promoted_node_path_list >**)** correspond à la liste des chemins d’accès à indexer avec des indicateurs facultatifs d’optimisation. Pour plus d’informations sur les chemins d’accès et les indicateurs d’optimisation que vous pouvez spécifier dans l’instruction CREATE ou ALTER, consultez [spécifier les chemins d’accès et les indicateurs d’optimisation pour les index XML sélectifs](../../relational-databases/xml/specify-paths-and-optimization-hints-for-selective-xml-indexes.md).  
+ FOR **(**\<promoted_node_path_list>**)** Liste des chemins à indexer avec des indicateurs d’optimisation facultatifs. Pour plus d’informations sur les chemins et les indicateurs d’optimisation que vous pouvez spécifier dans l’instruction CREATE ou ALTER, consultez [Spécifier les chemins d’accès et les indicateurs d’optimisation des index XML sélectifs](../../relational-databases/xml/specify-paths-and-optimization-hints-for-selective-xml-indexes.md).  
   
- AVEC  *\<index_options >* pour plus d’informations sur les options d’index, consultez [CREATE XML INDEX &#40; Index XML sélectifs &#41; ](../../t-sql/statements/create-xml-index-selective-xml-indexes.md).  
+ WITH *\<index_options>* Pour plus d’informations sur les options d’index, consultez [CREATE XML INDEX &#40;Index XML sélectifs&#41;](../../t-sql/statements/create-xml-index-selective-xml-indexes.md).  
   
 ## <a name="best-practices"></a>Bonnes pratiques  
  Créez un index XML sélectif au lieu d'un index XML ordinaire dans la plupart des cas pour obtenir de meilleures performances et un stockage plus efficace. Toutefois, un index XML sélectif n'est pas recommandé lorsque l'une des conditions suivantes est remplie :  
@@ -132,7 +132,7 @@ identifier
 -   Vous devez prendre en charge des requêtes d'éléments inconnus ou des éléments d'un emplacement inconnu.  
   
 ## <a name="limitations-and-restrictions"></a>Limitations et restrictions  
- Pour plus d’informations sur les limitations et restrictions, consultez [Selective XML Indexes &#40; SXI &#41; ](../../relational-databases/xml/selective-xml-indexes-sxi.md).  
+ Pour plus d’informations sur les limitations et les restrictions, consultez [Index XML sélectifs &#40;SXI&#41;](../../relational-databases/xml/selective-xml-indexes-sxi.md).  
   
 ## <a name="security"></a>Sécurité  
   
@@ -163,10 +163,10 @@ WITH XMLNAMESPACES ('http://www.tempuri.org/' as myns)
 FOR ( path1 = '/myns:book/myns:author/text()' );  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Index XML sélectifs &#40;SXI&#41;](../../relational-databases/xml/selective-xml-indexes-sxi.md)   
- [Créer, modifier et supprimer des index XML sélectif](../../relational-databases/xml/create-alter-and-drop-selective-xml-indexes.md)   
- [Spécifier les chemins d'accès et les indicateurs d'optimisation des index XML sélectifs](../../relational-databases/xml/specify-paths-and-optimization-hints-for-selective-xml-indexes.md)  
+ [Créer, modifier et supprimer des index XML sélectifs](../../relational-databases/xml/create-alter-and-drop-selective-xml-indexes.md)   
+ [Spécifier les chemins d’accès et les indicateurs d’optimisation des index XML sélectifs](../../relational-databases/xml/specify-paths-and-optimization-hints-for-selective-xml-indexes.md)  
   
   
 

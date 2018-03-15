@@ -1,5 +1,5 @@
 ---
-title: "Clause de l’OPTION (Transact-SQL) | Documents Microsoft"
+title: OPTION, clause (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -74,7 +74,7 @@ OPTION ( <query_option> [ ,...n ] )
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-using-an-option-clause-with-a-group-by-clause"></a>A. À l’aide d’une clause OPTION avec une clause GROUP BY  
+### <a name="a-using-an-option-clause-with-a-group-by-clause"></a>A. Utilisation d’une clause OPTION avec une clause GROUP BY  
  L'exemple suivant montre comment la clause `OPTION` est utilisée avec une clause `GROUP BY`.  
   
 ```  
@@ -89,10 +89,10 @@ OPTION (HASH GROUP, FAST 10);
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemples : [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] et[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemples : [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] et [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="b-select-statement-with-a-label-in-the-option-clause"></a>B. Instruction SELECT avec une étiquette dans la clause OPTION  
- L’exemple suivant montre un simple [!INCLUDE[ssDW](../../includes/ssdw-md.md)] instruction SELECT avec une étiquette dans la clause OPTION.  
+ L’exemple suivant montre une instruction SELECT [!INCLUDE[ssDW](../../includes/ssdw-md.md)] simple avec une étiquette dans la clause OPTION.  
   
 ```  
 -- Uses AdventureWorks  
@@ -114,7 +114,7 @@ OPTION (HASH JOIN);
 ```  
   
 ### <a name="d-select-statement-with-a-label-and-multiple-query-hints-in-the-option-clause"></a>D. Instruction SELECT avec une étiquette et plusieurs indicateurs de requête dans la clause OPTION  
- L’exemple suivant est un [!INCLUDE[ssDW](../../includes/ssdw-md.md)] instruction SELECT qui contient une étiquette et plusieurs indicateurs de requête. Lorsque la requête est exécutée sur les nœuds de calcul, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] appliquera une jointure de hachage ou une jointure de fusion, en fonction de la stratégie qui [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] décide est le plus approprié.  
+ L’exemple suivant est une instruction SELECT [!INCLUDE[ssDW](../../includes/ssdw-md.md)] qui contient une étiquette et plusieurs indicateurs de requête. Quand la requête est exécutée sur les nœuds de calcul, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] applique une jointure de hachage ou une jointure de fusion, selon la stratégie optimale déterminée par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ```  
 -- Uses AdventureWorks  
@@ -125,8 +125,8 @@ ON (a.CustomerKey = b.CustomerKey)
 OPTION ( Label = 'CustJoin', HASH JOIN, MERGE JOIN);  
 ```  
   
-### <a name="e-using-a-query-hint-when-querying-a-view"></a>E. À l’aide d’un indicateur de requête lors de l’interrogation d’une vue  
- L’exemple suivant crée une vue nommée CustomerView et utilise ensuite un indicateur de requête HASH JOIN dans une requête qui fait référence à une vue et une table.  
+### <a name="e-using-a-query-hint-when-querying-a-view"></a>E. Utilisation d’un indicateur de requête pour interroger un affichage  
+ L’exemple suivant crée un affichage nommé CustomerView, puis utilise un indicateur de requête HASH JOIN dans une requête qui fait référence à un affichage et une table.  
   
 ```  
 -- Uses AdventureWorks  
@@ -144,8 +144,8 @@ DROP VIEW CustomerView;
   
 ```  
   
-### <a name="f-query-with-a-subselect-and-a-query-hint"></a>F. Requête avec une instruction de sous-sélection et un indicateur de requête  
- L’exemple suivant montre une requête qui contient une instruction de sous-sélection et un indicateur de requête. L’indicateur de requête est appliqué globalement. Indicateurs de requête ne sont pas autorisés à ajouter à l’instruction de sous-sélection.  
+### <a name="f-query-with-a-subselect-and-a-query-hint"></a>F. Requête avec une sous-sélection et un indicateur de requête  
+ L’exemple suivant montre une requête qui contient une sous-sélection et un indicateur de requête. L’indicateur de requête est appliqué globalement. Les indicateurs de requête ne doivent pas être ajoutés à l’instruction de sous-sélection.  
   
 ```  
 -- Uses AdventureWorks  
@@ -160,8 +160,8 @@ ON ( a.CustomerKey = b.CustomerKey )) AS t
 OPTION (HASH JOIN);  
 ```  
   
-### <a name="g-force-the-join-order-to-match-the-order-in-the-query"></a>G. Forcer l’ordre de jointure à l’ordre dans la requête  
- L’exemple suivant utilise l’indicateur ORDER de FORCE pour forcer le plan de requête pour utiliser l’ordre de jointure spécifié par la requête. Cela permet d’améliorer les performances de certaines requêtes ; toutes les requêtes.  
+### <a name="g-force-the-join-order-to-match-the-order-in-the-query"></a>G. Forcer la correspondance entre l’ordre de jointure et l’ordre dans la requête  
+ L’exemple suivant utilise l’indicateur FORCE ORDER pour forcer le plan de requête à utiliser l’ordre de jointure spécifié par la requête. Cela permet d’améliorer les performances de certaines requêtes, mais pas de toutes les requêtes.  
   
 ```  
 -- Uses AdventureWorks  
@@ -181,8 +181,8 @@ OPTION ( FORCE ORDER )
 ;  
 ```  
   
-### <a name="h-using-externalpushdown"></a>H. À l’aide de EXTERNALPUSHDOWN  
- L’exemple suivant force la poussée vers le bas de la clause WHERE à la tâche MapReduce sur la table Hadoop externe.  
+### <a name="h-using-externalpushdown"></a>H. Utilisation de l’indicateur EXTERNALPUSHDOWN  
+ L’exemple suivant force l’envoi (pushdown) de la clause WHERE au travail MapReduce sur la table Hadoop externe.  
   
 ```  
 SELECT ID FROM External_Table_AS A   
@@ -190,7 +190,7 @@ WHERE ID < 1000000
 OPTION (FORCE EXTERNALPUSHDOWN);  
 ```  
   
- L’exemple suivant empêche la poussée vers le bas de la clause WHERE à la tâche MapReduce sur la table Hadoop externe. Toutes les lignes sont retournées à PDW où la clause WHERE est appliquée.  
+ L’exemple suivant empêche l’envoi (pushdown) de la clause WHERE au travail MapReduce sur la table Hadoop externe. Toutes les lignes sont retournées à PDW où la clause WHERE est appliquée.  
   
 ```  
 SELECT ID FROM External_Table_AS A   
@@ -198,8 +198,8 @@ WHERE ID < 10
 OPTION (DISABLE EXTERNALPUSHDOWN);  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- [Hints &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql.md)   
+## <a name="see-also"></a> Voir aussi  
+ [Indicateurs &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [UPDATE &#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md)   
  [MERGE &#40;Transact-SQL&#41;](../../t-sql/statements/merge-transact-sql.md)   

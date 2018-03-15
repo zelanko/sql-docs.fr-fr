@@ -1,5 +1,5 @@
 ---
-title: ALTER WORKLOAD GROUP (Transact-SQL) | Documents Microsoft
+title: ALTER WORKLOAD GROUP (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 01/04/2018
 ms.prod: sql-non-specified
@@ -34,9 +34,9 @@ ms.lasthandoff: 01/25/2018
 # <a name="alter-workload-group-transact-sql"></a>ALTER WORKLOAD GROUP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Modifie une configuration de groupe de charge de travail du gouverneur de ressources existante et éventuellement l’assigne à un à un pool de ressources du gouverneur de ressources.  
+  Modifie une configuration de groupe de charge de travail Resource Governor existante, et éventuellement l’assigne à un pool de ressources Resource Governor.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "icône lien de rubrique") [Conventions de syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
+ ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -84,13 +84,13 @@ ALTER WORKLOAD GROUP { group_name | "default" }
 > [!NOTE]  
 > La quantité spécifiée fait uniquement référence à la mémoire allouée à l'exécution de la requête.  
   
- *valeur* doit être 0 ou un entier positif. La plage autorisée pour *valeur* est comprise entre 0 et 100. La valeur par défaut *valeur* est 25.  
+ *value* doit être égal à 0 ou un entier positif. La plage autorisée pour *value* est comprise entre 0 et 100. La valeur par défaut de *value* est 25.  
   
- Notez les points suivants :  
+ Notez les points suivants :  
   
--   Paramètre *valeur* 0 empêche les requêtes des opérations SORT et HASH JOIN dans les groupes de charges de travail définis par l’utilisateur en cours d’exécution.  
+-   L’affectation de la valeur 0 à *value* empêche l’exécution de requêtes avec les opérations SORT et HASH JOIN dans les groupes de charges de travail définis par l’utilisateur.  
   
--   Nous ne recommandons pas de paramètre *valeur* supérieure à 70, car le serveur peut être impossible de réserver suffisamment de mémoire si d’autres requêtes simultanées sont en cours d’exécution. Cela risque de provoquer l'erreur de délai d'attente de requête 8645.  
+-   Il est déconseillé d’affecter à *value* une valeur supérieure à 70, car le serveur risque de ne pas pouvoir mettre de côté suffisamment de mémoire disponible si d’autres requêtes simultanées s’exécutent. Cela risque de provoquer l'erreur de délai d'attente de requête 8645.  
   
 > [!NOTE]  
 >  Si les besoins en mémoire de la requête dépassent la limite spécifiée par ce paramètre, le serveur effectue les opérations suivantes :  
@@ -102,13 +102,13 @@ ALTER WORKLOAD GROUP { group_name | "default" }
 >  Sachez toutefois que dans les deux cas, l'erreur de délai d'attente 8645 se produit si le serveur dispose d'une mémoire physique insuffisante.  
   
  REQUEST_MAX_CPU_TIME_SEC =*value*  
- Spécifie la quantité maximale de temps processeur, en secondes, qu'une demande peut utiliser. *valeur* doit être 0 ou un entier positif. La valeur par défaut *valeur* est 0, ce qui signifie illimité.  
+ Spécifie la quantité maximale de temps processeur, en secondes, qu'une demande peut utiliser. *value* doit être égal à 0 ou un entier positif. La valeur par défaut de *value* est 0, ce qui signifie illimité.  
   
 > [!NOTE]  
-> Par défaut, le gouverneur de ressources n’empêche pas une demande de se poursuivre si la durée maximale est dépassée. Toutefois, un événement sera généré. Pour plus d’informations, consultez [seuil UC dépassé classe d’événements](../../relational-databases/event-classes/cpu-threshold-exceeded-event-class.md). 
+> Par défaut, Resource Governor n’empêche pas une demande de continuer si le temps maximal est dépassé. Toutefois, un événement sera généré. Pour plus d’informations, consultez [Classe d’événements CPU Threshold Exceeded](../../relational-databases/event-classes/cpu-threshold-exceeded-event-class.md). 
 
 > [!IMPORTANT]
-> En commençant par [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 et à l’aide de [2422 d’indicateur de trace](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md), le gouverneur de ressources va être abandonné une demande lorsque la durée maximale est dépassée.
+> À compter de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 et quand l’[indicateur de trace 2422](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) est utilisé, Resource Governor abandonne une demande en cas de dépassement de la durée maximale.
   
  REQUEST_MEMORY_GRANT_TIMEOUT_SEC =*value*  
  Spécifie la durée maximale, en secondes, pendant laquelle une requête peut attendre que l'allocation de mémoire (mémoire tampon de travail) devienne disponible.  
@@ -116,13 +116,13 @@ ALTER WORKLOAD GROUP { group_name | "default" }
 > [!NOTE]  
 >  Une requête n'échoue pas toujours lorsque le délai d'expiration d'allocation mémoire est atteint. Une requête échoue seulement si le nombre de requêtes exécutées simultanément est trop élevé. Autrement, la requête risque d'obtenir uniquement l'allocation mémoire minimale, d'où une dégradation des performances.  
   
- *valeur* doit être un entier positif. La valeur par défaut *valeur*, 0, utilise un calcul interne basé sur le coût de requête pour déterminer la durée maximale.  
+ *value* doit être un entier positif. La valeur par défaut de *value*, 0, utilise un calcul interne basé sur le coût de requête pour déterminer le délai maximal.  
   
  MAX_DOP =*value*  
- Spécifie le degré maximal de parallélisme (DOP) pour les demandes parallèles. *valeur* doit être 0 ou un entier positif, 1 et 255. Lorsque *valeur* est 0, le serveur choisit le degré maximal de parallélisme. Ceci est la valeur par défaut et recommandée.  
+ Spécifie le degré maximal de parallélisme (DOP) pour les demandes parallèles. *value* doit être égal à 0 ou un entier positif compris entre 1 et 255. Quand *value* a la valeur 0, le serveur choisit le degré maximal de parallélisme. Il s’agit de la valeur par défaut et recommandée.  
   
 > [!NOTE]  
->  La valeur réelle définie par le [!INCLUDE[ssDE](../../includes/ssde-md.md)] pour MAX_DOP peut être inférieure à la valeur spécifiée. La valeur finale est déterminée par la formule min (255, *nombre d’unités centrales)*.  
+>  La valeur réelle définie par le [!INCLUDE[ssDE](../../includes/ssde-md.md)] pour MAX_DOP peut être inférieure à la valeur spécifiée. La valeur finale est déterminée par la formule min(255, *nombre d’unités centrales)*.  
   
 > [!CAUTION]  
 >  La modification de MAX_DOP peut affecter de façon négative les performances d'un serveur. Si vous devez modifier MAX_DOP, nous recommandons qu'il soit défini sur une valeur inférieure ou égale au nombre maximal de planificateurs matériels présents dans un nœud NUMA unique. Nous vous recommandons de ne pas affecter à MAX_DOP une valeur supérieure à 8.  
@@ -140,33 +140,33 @@ ALTER WORKLOAD GROUP { group_name | "default" }
  Une fois le degré maximal de parallélisme (DOP) configuré, il ne peut être diminué que sous la sollicitation de l'allocation de mémoire. La reconfiguration du groupe de charges de travail n'est pas visible lors de l'attente dans la file d'attente d'allocation de mémoire.  
   
  GROUP_MAX_REQUESTS =*value*  
- Spécifie le nombre maximal de demandes simultanées autorisées à s'exécuter dans le groupe de charges de travail. *valeur* doit être 0 ou un entier positif. La valeur par défaut *valeur*(0) autorise les demandes illimités. Lorsque le nombre maximal de requêtes est atteint, un utilisateur de ce groupe peut se connecter, mais est placé dans un état d'attente jusqu'à ce que le nombre de requêtes simultanées soit inférieur à la valeur spécifiée.  
+ Spécifie le nombre maximal de demandes simultanées autorisées à s'exécuter dans le groupe de charges de travail. *value* doit être égal à 0 ou un entier positif. La valeur par défaut de *value*, 0, autorise un nombre illimité de demandes. Lorsque le nombre maximal de requêtes est atteint, un utilisateur de ce groupe peut se connecter, mais est placé dans un état d'attente jusqu'à ce que le nombre de requêtes simultanées soit inférieur à la valeur spécifiée.  
   
  USING { *pool_name* | "**default**" }  
- Associe le groupe de charges de travail avec le pool de ressources définis par l’utilisateur identifié par *pool_name*, qui met en vigueur le groupe de charges de travail dans le pool de ressources. Si *pool_name* n’est pas fourni ou si l’argument USING n’est pas utilisé, le groupe de charge de travail est placé dans le pool par défaut du gouverneur de ressources prédéfini.  
+ Associe le groupe de charge de travail au pool de ressources défini par l’utilisateur et identifié par *pool_name*, ce qui revient en fait à placer le groupe de charge de travail dans le pool de ressources. Si *pool_name* n’est pas fourni, ou si l’argument USING n’est pas utilisé, le groupe de charges de travail est placé dans le pool par défaut Resource Governor prédéfini.  
   
  L'option "default" doit être placée entre des guillemets doubles ("") ou des crochets ([]) lorsqu'elle est utilisée avec l'instruction ALTER WORKLOAD GROUP pour éviter tout conflit avec DEFAULT, qui est un mot réservé au système. Pour plus d'informations, consultez [Database Identifiers](../../relational-databases/databases/database-identifiers.md).  
   
 > [!NOTE]  
 >  L'option "default" respecte la casse.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  L'instruction ALTER WORKLOAD GROUP est autorisée sur le groupe par défaut.  
   
- Les modifications apportées à la configuration du groupe de charge de travail ne sont pas appliquées tant que l'instruction ALTER RESOURCE GOVERNOR RECONFIGURE n'est pas exécutée. Lorsque vous modifiez un plan qui affectent les paramètres, les nouveaux paramètres prendront effet que dans les plans mis en cache précédemment après l’exécution de DBCC FREEPROCCACHE (*pool_name*), où *pool_name* est le nom d’un pool de ressources du gouverneur de ressources sur lequel le groupe de charge de travail est associé.  
+ Les modifications apportées à la configuration du groupe de charge de travail ne sont pas appliquées tant que l'instruction ALTER RESOURCE GOVERNOR RECONFIGURE n'est pas exécutée. Quand vous modifiez un paramètre qui affecte le plan, le nouveau paramètre prend effet uniquement dans les plans précédemment mis en cache après l’exécution de DBCC FREEPROCCACHE (*pool_name*), où *pool_name* est le nom d’un pool de ressources Resource Governor avec lequel le groupe de charges de travail est associé.  
   
--   Si vous modifiez MAX_DOP à 1, l’exécution de DBCC FREEPROCCACHE n’est pas requis, car des plans parallèles peuvent s’exécuter en mode série. Toutefois, il ne peut pas être aussi efficace que d’un plan compilé sous la forme d’un plan en série.  
+-   Si vous affectez la valeur 1 à MAX_DOP, l’exécution de DBCC FREEPROCCACHE n’est pas obligatoire, car des plans parallèles peuvent s’exécuter en mode série. Toutefois, cela risque de ne pas être aussi efficace qu’un plan compilé en tant que plan en série.  
   
--   Si vous modifiez MAX_DOP à partir de 1 à 0 ou une valeur supérieure à 1, l’exécution de DBCC FREEPROCCACHE n’est pas requise. Toutefois, les plans en série ne peut pas s’exécuter en parallèle, afin de l’effacement du cache respectif autorise de nouveaux plans potentiellement être compilé à l’aide de parallélisme.  
+-   Si vous modifiez MAX_DOP de 1 à 0 ou une valeur supérieure à 1, l’exécution de DBCC FREEPROCCACHE n’est pas obligatoire. Toutefois, les plans en série ne pouvant pas s’exécuter en parallèle, l’effacement du cache respectif permettra aux nouveaux plans d’être compilés à l’aide du parallélisme.  
   
 > [!CAUTION]  
->  Effacement des plans mis en cache à partir d’un pool de ressources est associé à plusieurs groupes de charges de travail affectera tous les groupes de charges de travail avec le pool de ressources définis par l’utilisateur identifié par *pool_name*.  
+>  L’effacement des plans mis en cache à partir d’un pool de ressources associé à plusieurs groupes de charges de travail affecte tous les groupes de charges de travail contenant le pool de ressources défini par l’utilisateur identifié par *pool_name*.  
   
- Lorsque vous exécutez des instructions DDL, nous vous recommandons de connaître les états du gouverneur de ressources. Pour plus d’informations, consultez [du gouverneur de ressources](../../relational-databases/resource-governor/resource-governor.md).  
+ Lorsque vous exécutez des instructions DDL, nous vous recommandons de connaître les états du gouverneur de ressources. Pour plus d’informations, consultez [Resource Governor](../../relational-databases/resource-governor/resource-governor.md).  
   
  REQUEST_MEMORY_GRANT_PERCENT : dans [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], la création d'index est autorisée à utiliser une mémoire d'espace de travail supérieure à celle qui lui a été initialement allouée, en vue d'améliorer les performances. Cette gestion spéciale est prise en charge par le Gouverneur de ressources dans les versions ultérieures, toutefois, l'allocation initiale et toute allocation de mémoire supplémentaire sont limitées par les paramètres du pool de ressources et du groupe de charge de travail.  
   
- **Création d’index sur une Table partitionnée**  
+ **Création d’un index sur une table partitionnée**  
   
  La mémoire consommée par la création d'index sur une table partitionnée non alignée est proportionnelle au nombre de partitions impliquées.  Si la mémoire totale requise dépasse la limite par requête (REQUEST_MAX_MEMORY_GRANT_PERCENT) imposée par le paramètre du groupe de charges de travail du Gouverneur de ressources, cette création d'index peut ne pas s'exécuter. Étant donné que le groupe de charge de travail "default" permet à une requête de dépasser la limite par requête avec la mémoire minimale requise pour démarrer la compatibilité [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], l'utilisateur peut être en mesure d'exécuter la même création d'index dans le groupe de charge de travail "default", si le pool de ressources "default" possède assez de mémoire totale configurée pour exécuter cette requête.  
   
@@ -194,7 +194,7 @@ ALTER RESOURCE GOVERNOR RECONFIGURE;
 GO  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Resource Governor](../../relational-databases/resource-governor/resource-governor.md)   
  [CREATE WORKLOAD GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/create-workload-group-transact-sql.md)   
  [DROP WORKLOAD GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/drop-workload-group-transact-sql.md)   

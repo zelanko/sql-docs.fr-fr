@@ -1,5 +1,5 @@
 ---
-title: ENCRYPTBYPASSPHRASE (Transact-SQL) | Documents Microsoft
+title: ENCRYPTBYPASSPHRASE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
@@ -51,17 +51,17 @@ EncryptByPassPhrase ( { 'passphrase' | @passphrase }
 ```  
   
 ## <a name="arguments"></a>Arguments  
- *phrase secrète*  
+ *passphrase*  
  Expression relative au mot de passe à partir de laquelle générer une clé symétrique.  
   
  @passphrase  
- Une variable de type **nvarchar**, **char**, **varchar**, **binaire**, **varbinary**, ou **nchar** contenant une phrase secrète à partir de laquelle générer une clé symétrique.  
+ Variable de type **nvarchar**, **char**, **varchar**, **binary**, **varbinary** ou **nchar** qui contient une phrase secrète à partir de laquelle générer une clé symétrique.  
   
- *texte clair*  
+ *cleartext*  
  Texte clair à chiffrer.  
   
  @cleartext  
- Une variable de type **nvarchar**, **char**, **varchar**, **binaire**, **varbinary**, ou **nchar** contenant le texte en clair. Sa taille maximale est de 8 000 octets.  
+ Variable de type **nvarchar**, **char**, **varchar**, **binary**, **varbinary** ou **nchar** contenant le texte en clair. Sa taille maximale est de 8 000 octets.  
   
  *add_authenticator*  
  Indique si un authentificateur sera chiffré avec le texte en clair. 1 si un authentificateur est ajouté. **int**.  
@@ -69,16 +69,16 @@ EncryptByPassPhrase ( { 'passphrase' | @passphrase }
  @add_authenticator  
  Indique si un hachage est chiffré avec le texte clair.  
   
- *authentificateur*  
+ *authenticator*  
  Données dont l'authentificateur est dérivé. **sysname**.  
   
  @authenticator  
  Variable qui contient les données dont l'authentificateur est dérivé.  
   
 ## <a name="return-types"></a>Types de retour  
- **varbinary** avec une taille maximale de 8 000 octets.  
+ **varbinary** d’une taille maximale de 8 000 octets.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Une expression relative au mot de passe est un mot de passe qui comporte des espaces. L'avantage d'utiliser une expression relative au mot de passe est qu'il est plus facile de mémoriser une phrase qui a un sens plutôt qu'une longue chaîne de caractères.  
   
  Cette fonction ne vérifie pas la complexité des mots de passe.  
@@ -107,8 +107,8 @@ WHERE CreditCardID = '3681';
 GO  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- [DECRYPTBYPASSPHRASE &#40; Transact-SQL &#41;](../../t-sql/functions/decryptbypassphrase-transact-sql.md)   
+## <a name="see-also"></a> Voir aussi  
+ [DECRYPTBYPASSPHRASE &#40;Transact-SQL&#41;](../../t-sql/functions/decryptbypassphrase-transact-sql.md)   
  [Hiérarchie de chiffrement](../../relational-databases/security/encryption/encryption-hierarchy.md)  
   
   

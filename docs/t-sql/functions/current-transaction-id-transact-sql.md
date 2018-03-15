@@ -1,5 +1,5 @@
 ---
-title: CURRENT_TRANSACTION_ID (Transact-SQL) | Documents Microsoft
+title: CURRENT_TRANSACTION_ID (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="currenttransactionid-transact-sql"></a>CURRENT_TRANSACTION_ID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-Retourne l’ID de transaction de la transaction actuelle dans la session active.
+Renvoie l’ID de transaction de la transaction actuelle dans la session en cours.
   
 ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -49,23 +49,23 @@ CURRENT_TRANSACTION_ID( )
 **bigint**
   
 ## <a name="return-value"></a>Valeur retournée  
-ID de transaction de la transaction en cours de la session active, extraite de [sys.dm_tran_current_transaction &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-tran-current-transaction-transact-sql.md).
+ID de transaction de la transaction actuelle dans la session en cours, extraite de [sys.dm_tran_current_transaction &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-current-transaction-transact-sql.md).
   
-## <a name="permissions"></a>Permissions  
-Un utilisateur peut retourner l’ID de transaction de la session active.
+## <a name="permissions"></a>Autorisations  
+Un utilisateur quelconque peut renvoyer l’ID de transaction de la session en cours.
   
 ## <a name="examples"></a>Exemples  
-L’exemple suivant retourne l’ID de transaction de la session active :
+L’exemple suivant renvoie l’ID de transaction de la session en cours :
   
 ```sql
 SELECT CURRENT_TRANSACTION_ID();  
 ```  
   
 ## <a name="see-also"></a>Voir aussi
-[sp_set_session_context &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-set-session-context-transact-sql.md)  
-[SESSION_CONTEXT &#40; Transact-SQL &#41;](../../t-sql/functions/session-context-transact-sql.md)  
+[sp_set_session_context &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-set-session-context-transact-sql.md)  
+[SESSION_CONTEXT &#40;Transact-SQL&#41;](../../t-sql/functions/session-context-transact-sql.md)  
 [Sécurité au niveau des lignes](../../relational-databases/security/row-level-security.md)  
-[CONTEXT_INFO &#40; Transact-SQL &#41;](../../t-sql/functions/context-info-transact-sql.md)  
-[SET CONTEXT_INFO &#40; Transact-SQL &#41;](../../t-sql/statements/set-context-info-transact-sql.md)
+[CONTEXT_INFO  &#40;Transact-SQL&#41;](../../t-sql/functions/context-info-transact-sql.md)  
+[SET CONTEXT_INFO &#40;Transact-SQL&#41;](../../t-sql/statements/set-context-info-transact-sql.md)
   
   

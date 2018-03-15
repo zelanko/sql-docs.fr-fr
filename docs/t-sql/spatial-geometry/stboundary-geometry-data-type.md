@@ -1,5 +1,5 @@
 ---
-title: "STBoundary (Type de données geometry) | Documents Microsoft"
+title: "STBoundary (type de données geometry) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stboundary-geometry-data-type"></a>STBoundary (type de données geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Retourne la limite d’un **geometry** instance.  
+  Retourne la limite d’une instance **geometry**.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -44,17 +44,17 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>Types de retour  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]type de retour : **geometry**  
+ Type de retour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] : **geometry**  
   
  Type de retour CLR : **SqlGeometry**  
   
-## <a name="remarks"></a>Notes  
- `STBoundary()`Retourne une **GeometryCollection** lorsque les points de terminaison pour un **LineString**, **CircularString**, ou **CompoundCurve** de l’instance sont les mêmes.  
+## <a name="remarks"></a>Notes   
+ `STBoundary()` retourne un **GeometryCollection** vide quand les points de terminaison d’une instance **LineString**, **CircularString** ou **CompoundCurve** sont identiques.  
   
 ## <a name="examples"></a>Exemples  
   
 ### <a name="a-using-stboundary-on-a-linestring-instance-with-different-endpoints"></a>A. Utilisation de STBoundary() sur une instance LineString avec des points de terminaison différents  
- L’exemple suivant crée un `LineString``geometry` instance. `STBoundary()`Retourne la limite de la `LineString`.  
+ L’exemple suivant crée une instance `LineString``geometry`. `STBoundary()` retourne la limite de `LineString`.  
   
 ```  
 DECLARE @g geometry;  
@@ -80,7 +80,7 @@ SELECT @g.STBoundary().ToString();
  SELECT @g.STBoundary().ToString();
  ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Méthodes OGC sur des instances geography](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   
   

@@ -29,12 +29,12 @@ ms.lasthandoff: 01/25/2018
 # <a name="create-diagnostics-session-transact-sql"></a>CREATE DIAGNOSTICS SESSION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
 
-  Les sessions de diagnostic permettent d’enregistrer les informations de diagnostic détaillées, défini par l’utilisateur sur les performances du système ou de la requête.  
+  Les sessions de diagnostic vous permettent d’enregistrer des informations de diagnostic détaillées et définies par l’utilisateur sur les performances du système ou de la requête.  
   
- Les sessions de diagnostic sont généralement utilisées pour déboguer des performances d’une requête spécifique, ou pour surveiller le comportement d’un composant matériel spécifique au cours de l’opération de l’appliance.  
+ Elles sont généralement utilisées pour déboguer les performances d’une requête spécifique ou pour surveiller le comportement d’un composant d’appliance spécifique au cours d’une opération d’appliance.  
   
 > [!NOTE]  
->  Vous devez être familiarisé avec XML pour pouvoir utiliser les sessions de diagnostic.  
+>  Vous devez connaître le langage XML pour pouvoir utiliser les sessions de diagnostic.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -64,52 +64,52 @@ DROP DIAGNOSTICS SESSION diagnostics_name ;
   
 ## <a name="arguments"></a>Arguments  
  *diagnostics_name*  
- Le nom de la session de diagnostic. Nom de session de diagnostics peut inclure des caractères a-z, A-Z et 0-9. En outre, les noms de session de diagnostics doivent commencer par un caractère. *diagnostics_name* est limitée à 127 caractères.  
+ Nom de la session de diagnostic. Les noms des sessions de diagnostic peuvent uniquement inclure des caractères a-z, A-Z et 0-9. De plus, ils doivent commencer par un caractère. *diagnostics_name* est limité à 127 caractères.  
   
  *max_item_count_num*  
- Le nombre d’événements devant être persistantes dans une vue. Par exemple, si 100 est spécifié, les 100 derniers événements correspondant aux critères de filtre sont rendues persistantes dans la session de diagnostic. Si moins de 100 événements sont trouvés, la session de diagnostic contient moins de 100 événements. *max_item_count_num* doit être au moins 100 et inférieur ou égal à 100 000.  
+ Nombre d’événements devant être persistants dans une vue. Par exemple, si 100 est spécifié, les 100 derniers événements correspondant aux critères de filtrage sont rendus persistants dans la session de diagnostic. Si moins de 100 événements sont trouvés, la session de diagnostic contient moins de 100 événements. *max_item_count_num* doit être au moins égal à 100 et inférieur ou égal à 100 000.  
   
  *event_name*  
- Définit les événements réels à recueillir dans la session de diagnostic.  *nom_événement* est un des événements répertoriés dans [sys.pdw_diag_events](http://msdn.microsoft.com/en-us/d813aac0-cea1-4f53-b8e8-d26824bc2587) où `sys.pdw_diag_events.is_enabled='True'`.  
+ Définit les événements réels à collecter dans la session de diagnostic.  *event_name* est l’un des événements répertoriés dans [sys.pdw_diag_events](http://msdn.microsoft.com/en-us/d813aac0-cea1-4f53-b8e8-d26824bc2587) où `sys.pdw_diag_events.is_enabled='True'`.  
   
  *filter_property_name*  
- Le nom de la propriété auquel limiter les résultats. Par exemple, si vous souhaitez limiter en fonction de l’id de session, *filter_property_name* doit être *SessionId*. Consultez *property_name* ci-dessous pour obtenir la liste de valeurs potentielles pour *filter_property_name*.  
+ Nom de la propriété sur laquelle restreindre les résultats. Par exemple, si vous voulez limiter par ID de session, *filter_property_name* doit avoir la valeur *SessionId*. Consultez *property_name* ci-dessous pour obtenir la liste de valeurs potentielles de *filter_property_name*.  
   
  *valeur*  
- Une valeur à évaluer par rapport à *filter_property_name*. Le type de valeur doit correspondre au type de propriété. Par exemple, si le type de propriété est de type decimal, type de *valeur* doit être décimale.  
+ Valeur à évaluer par rapport à *filter_property_name*. Le type de la valeur et le type de la propriété doivent être identiques. Par exemple, si le type de la propriété est décimal, celui de la *valeur* doit l’être aussi.  
   
  *comp_type*  
- Le type de comparaison. Potentiels valeurs sont : égal à, EqualsOrGreaterThan, EqualsOrLessThan, GreaterThan, LessThan, NotEquals, Contains, expression régulière  
+ Type de comparaison. Les valeurs possibles sont : Equals, EqualsOrGreaterThan, EqualsOrLessThan, GreaterThan, LessThan, NotEquals, Contains, RegEx  
   
  *property_name*  
- Une propriété associée à l’événement.  Noms de propriété peuvent faire partie de la balise de capture ou utilisées dans le cadre des critères de filtrage.  
+ Propriété associée à l’événement.  Les noms de propriété peuvent faire partie de la balise de capture ou être utilisées dans le cadre des critères de filtrage.  
   
-|Nom de la propriété| Description|  
+|Nom de la propriété|Description|  
 |-------------------|-----------------|  
-|UserName|Un nom d’utilisateur (connexion).|  
-|SessionId|Un ID de session.|  
-|QueryId|Un ID de requête.|  
-|CommandType|Un type de commande.|  
-|CommandText|Texte dans une commande de traitement.|  
-|OperationType|Le type d’opération pour l’événement.|  
-|Duration|La durée de l’événement.|  
-|SPID|L’ID de processus de Service.|  
+|UserName|Nom d’utilisateur (ID de connexion).|  
+|SessionId|ID de session.|  
+|QueryId|ID de requête.|  
+|CommandType|Type de commande.|  
+|CommandText|Texte dans une commande traitée.|  
+|OperationType|Type d’opération de l’événement.|  
+|Duration|Durée de l’événement.|  
+|SPID|ID de processus de service.|  
   
-## <a name="remarks"></a>Notes  
- Chaque utilisateur est autorisé à un maximum de 10 sessions simultanées de diagnostics. Consultez [sys.pdw_diag_sessions](http://msdn.microsoft.com/en-us/ca111ddc-2787-4205-baf0-1a242c0257a9) pour obtenir la liste des sessions actives et les inutiles des sessions à l’aide de drop `DROP DIAGNOSTICS SESSION`.  
+## <a name="remarks"></a>Notes   
+ Chaque utilisateur a droit à un maximum de 10 sessions de diagnostic simultanées. Consultez [sys.pdw_diag_sessions](http://msdn.microsoft.com/en-us/ca111ddc-2787-4205-baf0-1a242c0257a9) pour obtenir la liste des sessions actives et supprimer toutes les sessions inutiles à l’aide de `DROP DIAGNOSTICS SESSION`.  
   
- Les sessions de diagnostic continue à collecter les métadonnées jusqu'à ce que supprimée.  
+ Les sessions de diagnostic continuent à collecter des métadonnées jusqu’à ce qu’elles soient supprimées.  
   
 ## <a name="permissions"></a>Autorisations  
- Requiert le **ALTER SERVER STATE** autorisation.  
+ Nécessite l’autorisation **ALTER SERVER STATE**.  
   
 ## <a name="locking"></a>Verrouillage  
- Acquiert un verrou partagé sur la table des Sessions de Diagnostic.  
+ Accepte un verrou partagé sur la table des sessions de diagnostic.  
   
 ## <a name="examples"></a>Exemples  
   
 ### <a name="a-creating-a-diagnostics-session"></a>A. Création d’une session de diagnostic  
- Cet exemple crée une session de diagnostic pour enregistrer des métriques de performances du moteur de base de données. L’exemple crée une session de diagnostic qui écoute les événements en cours d’exécution et de fin de requête de moteur et un événement de blocage de DMS. Ce qui est retourné est le texte de commande, nom de l’ordinateur, id de demande (id de requête) et l’événement a été créé sur la session.  
+ Cet exemple crée une session de diagnostic permettant d’enregistrer des métriques des performances du moteur de base de données. L’exemple crée une session de diagnostic qui écoute les événements en cours d’exécution/de fin de requête de moteur et un événement DMS de blocage. Le texte de la commande, le nom de l’ordinateur, l’ID de la requête et la session sur laquelle l’événement a été créé sont ainsi retournés.  
   
 ```  
 CREATE DIAGNOSTICS SESSION MYDIAGSESSION AS N'  
@@ -133,23 +133,23 @@ CREATE DIAGNOSTICS SESSION MYDIAGSESSION AS N'
 </Session>';  
 ```  
   
- Après la création de la session de diagnostic, exécutez une requête.  
+ Après avoir créé la session de diagnostic, exécutez une requête.  
   
 ```  
 SELECT COUNT(EmployeeKey) FROM AdventureWorksPDW2012..FactSalesQuota;  
 ```  
   
- Puis affichez les résultats de la session de diagnostic en sélectionnant à partir du schéma sysdiag.  
+ Ensuite, affichez les résultats de la session de diagnostic en faisant une sélection à partir du schéma sysdiag.  
   
 ```  
 SELECT * FROM master.sysdiag.MYDIAGSESSION;  
 ```  
   
- Notez que le schéma sysdiag contient une vue qui porte le nom de votre session de diagnostic.  
+ Remarquez que le schéma sysdiag contient une vue qui porte le nom de votre session de diagnostic.  
   
- Pour afficher uniquement l’activité de votre connexion, ajoutez le `Session.SPID` propriété et ajoutez `WHERE [Session.SPID] = @@spid;` à la requête.  
+ Pour afficher uniquement l’activité de votre connexion, ajoutez la propriété `Session.SPID` et ajoutez `WHERE [Session.SPID] = @@spid;` à la requête.  
   
- Lorsque vous avez terminé avec la session de diagnostic, la supprimer à l’aide de la **supprimer les DIAGNOSTICS** commande.  
+ Lorsque vous avez terminé avec la session de diagnostic, supprimez-la à l’aide de la commande **DROP DIAGNOSTICS**.  
   
 ```  
 DROP DIAGNOSTICS SESSION MYDIAGSESSION;  
@@ -187,7 +187,7 @@ CREATE DIAGNOSTICS SESSION PdwOptimizationDiagnostics AS N'
 </Session>';  
 ```  
   
- Exécutez une requête, telles que :  
+ Exécutez une requête, comme :  
   
 ```  
 USE ssawPDW;  
@@ -203,7 +203,7 @@ FROM master.sysdiag.PdwOptimizationDiagnostics
 ORDER BY DateTimePublished;  
 ```  
   
- Lorsque vous avez terminé avec la session de diagnostic, la supprimer à l’aide de la **supprimer les DIAGNOSTICS** commande.  
+ Lorsque vous avez terminé avec la session de diagnostic, supprimez-la à l’aide de la commande **DROP DIAGNOSTICS**.  
   
 ```  
 DROP DIAGNOSTICS SESSION PdwOptimizationDiagnostics;  

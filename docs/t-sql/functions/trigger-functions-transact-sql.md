@@ -1,5 +1,5 @@
 ---
-title: "Fonctions (Transact-SQL) de déclenchement | Documents Microsoft"
+title: "Fonctions de déclencheurs (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/08/2017
 ms.prod: sql-non-specified

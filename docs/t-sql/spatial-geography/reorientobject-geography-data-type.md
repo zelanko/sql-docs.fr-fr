@@ -1,5 +1,5 @@
 ---
-title: "ReorientObject (Type de données geography) | Documents Microsoft"
+title: "ReorientObject (type de données geography) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,9 +34,9 @@ ms.lasthandoff: 01/25/2018
 # <a name="reorientobject-geography-data-type"></a>ReorientObject (type de données geography)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-  Retourne un **geography** instance avec l’échange des régions intérieures et des régions.  
+  Retourne une instance **geography** avec des régions intérieures et des régions extérieures interchangées.  
   
- Cela **geography** prend en charge de la méthode de type de données **FullGlobe** instances ou les instances spatiales qui sont plus grandes qu’un hémisphère.  
+ Cette méthode de type de données **geography** prend en charge les instances **FullGlobe** ou les instances spatiales qui sont plus grandes qu’un hémisphère.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -47,17 +47,17 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="arguments"></a>Arguments  
  *geography*  
- Une autre **geography** instance sur laquelle `ReorientObject()` est appelé.  
+ Autre instance **geography** sur laquelle `ReorientObject()` est appelé.  
   
 ## <a name="return-value"></a>Valeur retournée  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]type de retour : **geography**  
+ Type de retour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] : **geography**  
   
  Type de retour CLR : **SqlGeography**  
   
-## <a name="remarks"></a>Notes  
- Cette méthode modifie l’orientation d’anneau de tous les **polygones** dans un **GeometryCollection** mais ne supprime ne pas ni ne modifie aucun **Points** ou **Linestrings** dans la collection donnée.  
+## <a name="remarks"></a>Notes   
+ Cette méthode change l’orientation de l’anneau de tous les **Polygons** dans **GeometryCollection** mais ne supprime ou ne change aucun des **Points** ou **Linestrings** de la collection donnée.  
   
- Si un **GeometryCollection** est passé à cette méthode, chaque instance de la collection est réorientée, mais la collection dans son ensemble n’est pas réorientée dans son intégralitée.  
+ Si **GeometryCollection** est passé à cette méthode, chaque instance de la collection est réorientée, mais la collection dans son ensemble n’est pas réorientée.  
   
 ## <a name="examples"></a>Exemples  
   
@@ -67,7 +67,7 @@ SELECT @R.ReorientObject().STAsText();
 --Result: POLYGON ((10 10, -10 10, -10 -10, 10 -10, 10 10))  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Méthodes étendues sur des instances geography](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)  
   
   

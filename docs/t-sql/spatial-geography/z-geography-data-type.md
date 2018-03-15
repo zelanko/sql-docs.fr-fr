@@ -1,5 +1,5 @@
 ---
-title: "Z (Type de données geography) | Documents Microsoft"
+title: "Z (type de données geography) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -44,12 +44,12 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>Types de retour  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]type : **float**  
+ Type [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] : **float**  
   
  Type CLR : **SqlDouble**  
   
-## <a name="remarks"></a>Notes  
- La valeur de cette propriété est null si la **geography** instance n’est pas un point, ainsi que pour toute **Point** de l’instance pour laquelle il n’est pas définie.  
+## <a name="remarks"></a>Notes   
+ La valeur de cette propriété est Null si l’instance **geography** n’est pas un point, ainsi que pour toute instance **Point** pour laquelle elle n’est pas définie.  
   
  Cette propriété est en lecture seule.  
   
@@ -64,9 +64,9 @@ SET @g = geography::STGeomFromText('POINT(-122.34900 47.65100 10.3 12)', 4326);
 SELECT @g.Z;  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- [Méthodes étendues sur les Instances Geography](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)   
- [M &#40; Type de données geography &#41;](../../t-sql/spatial-geography/m-geography-data-type.md)   
+## <a name="see-also"></a> Voir aussi  
+ [Méthodes étendues sur des instances Geography](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)   
+ [M &#40;type de données geography&#41;](../../t-sql/spatial-geography/m-geography-data-type.md)   
  [AsTextZM &#40;type de données geography&#41;](../../t-sql/spatial-geography/astextzm-geography-data-type.md)  
   
   

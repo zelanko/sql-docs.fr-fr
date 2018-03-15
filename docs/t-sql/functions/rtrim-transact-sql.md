@@ -37,7 +37,7 @@ ms.lasthandoff: 01/18/2018
 # <a name="rtrim-transact-sql"></a>RTRIM (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Retourne une chaîne de caractères après troncature de tous les espaces de fin.  
+  Retourne une chaîne de caractères après avoir tronqué tous les espaces à droite.  
   
  ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -48,10 +48,10 @@ RTRIM ( character_expression )
 ```  
   
 ## <a name="arguments"></a>Arguments  
- *character_expression*  
- Est un [expression](../../t-sql/language-elements/expressions-transact-sql.md) des données de caractères. *character_expression* peut être une constante, une variable ou une colonne de données binaire ou caractère.  
+ *expression_caractère*  
+ [Expression](../../t-sql/language-elements/expressions-transact-sql.md) de données caractères. *character_expression* peut être une constante, une variable ou une colonne de données binaires ou caractères.  
   
- *character_expression* doit être de type de données qui est implicitement convertible en **varchar**. Sinon, utilisez [CAST](../../t-sql/functions/cast-and-convert-transact-sql.md) pour convertir explicitement *character_expression*.  
+ *character_expression* doit appartenir à un type de données pouvant être implicitement converti en **varchar**. Sinon, utilisez la fonction [CAST](../../t-sql/functions/cast-and-convert-transact-sql.md) pour convertir explicitement *character_expression*.  
   
 ## <a name="return-types"></a>Types de retour  
  **varchar** ou **nvarchar**  
@@ -69,8 +69,8 @@ SELECT RTRIM('Removes trailing spaces.   ');
   
   `Removes trailing spaces.`  
   
-### <a name="b-simple-example"></a>B : exemple  
- L’exemple suivant montre comment utiliser `RTRIM` pour supprimer les espaces. Ce temps il est une autre chaîne concaténée à la première chaîne à afficher que les espaces ont disparu.  
+### <a name="b-simple-example"></a>B. Exemple simple  
+ L’exemple suivant illustre l’utilisation de `RTRIM` pour supprimer les espaces à droite. Cette fois, une autre chaîne est concaténée à la première chaîne pour montrer que les espaces ont disparu.  
   
 ```  
 SELECT RTRIM('Four spaces are after the period in this sentence.    ') + 'Next string.';  
@@ -107,7 +107,7 @@ GO
   
 
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [LEFT &#40;Transact-SQL&#41;](../../t-sql/functions/left-transact-sql.md)  
  [LTRIM &#40;Transact-SQL&#41;](../../t-sql/functions/ltrim-transact-sql.md)  
  [RIGHT &#40;Transact-SQL&#41;](../../t-sql/functions/right-transact-sql.md)  
@@ -116,7 +116,7 @@ GO
  [TRIM &#40;Transact-SQL&#41;](../../t-sql/functions/trim-transact-sql.md)  
  [CAST et CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)   
  [Types de données &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
- [Fonctions de chaîne &#40; Transact-SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)  
+ [Fonctions de chaîne &#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)  
   
   
 

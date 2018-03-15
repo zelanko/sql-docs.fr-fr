@@ -1,5 +1,5 @@
 ---
-title: "MODIFIER la SOURCE de données externe (Transact-SQL) | Documents Microsoft"
+title: ALTER EXTERNAL DATA SOURCE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 01/09/2018
 ms.prod: sql-non-specified
@@ -32,10 +32,10 @@ ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="alter-external-data-source-transact-sql"></a>MODIFIER la SOURCE de données externe (Transact-SQL)
+# <a name="alter-external-data-source-transact-sql"></a>ALTER EXTERNAL DATA SOURCE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  Modifie la source de données externe utilisée pour créer une table externe. La source de données externe peut être le stockage d’objets blob Hadoop ou Azure (WASB).
+  Modifie une source de données externe utilisée pour créer une table externe. La source de données externe peut être Hadoop ou le stockage Blob Azure (WASB).
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -61,32 +61,32 @@ ALTER EXTERNAL DATA SOURCE data_source_name
 ```  
   
 ## <a name="arguments"></a>Arguments  
- data_source_name Spécifie le nom défini par l’utilisateur pour la source de données. Le nom doit être unique.
+ data_source_name Spécifie le nom défini par l’utilisateur de la source de données. Le nom doit être unique.
   
- EMPLACEMENT = 'server_name_or_IP' Spécifie le nom du serveur ou une adresse IP.
+ LOCATION = 'server_name_or_IP' Spécifie le nom du serveur ou une adresse IP.
   
- RESOURCE_MANAGER_LOCATION = '\<adresse IP ; Port >' Spécifie l’emplacement du Gestionnaire de ressources Hadoop. Si spécifié, l’optimiseur de requête peut choisir pré-traiter les données d’une requête PolyBase à l’aide des fonctionnalités de calcul de Hadoop. Il s’agit d’une décision basée sur les coûts. Appelé des prédicats, cela peut considérablement réduire le volume de données transférées entre SQL et Hadoop et par conséquent, améliorer les performances des requêtes.
+ RESOURCE_MANAGER_LOCATION = '\<IP address;Port>' Spécifie l’emplacement du Gestionnaire de ressources Hadoop. S’il est spécifié, l’optimiseur de requête peut choisir de prétraiter les données d’une requête PolyBase en utilisant les fonctionnalités de calcul d’Hadoop. C’est une décision basée sur les coûts. Appelée pushdown de prédicats, cette opération peut considérablement réduire le volume des données transférées entre Hadoop et SQL, et donc améliorer les performances des requêtes.
   
- Informations d’identification = Credential_Name spécifie les informations d’identification nommée. Consultez [CREATE DATABASE SCOPED CREDENTIAL &#40; Transact-SQL &#41; ](../../t-sql/statements/create-database-scoped-credential-transact-sql.md).
+ CREDENTIAL = Credential_Name Spécifie les informations d’identification nommées. Consultez [CREATE DATABASE SCOPED CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/create-database-scoped-credential-transact-sql.md).
 
 TYPE = BLOB_STORAGE   
 **S’applique à :** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)].
-Pour les opérations en bloc uniquement, `LOCATION` doit être valide l’URL vers le stockage d’objets Blob Azure. Ne placez pas  **/** , nom de fichier ou partage les paramètres de signature d’accès à la fin de la `LOCATION` URL.
-Les informations d’identification utilisées, doivent être créés à l’aide de `SHARED ACCESS SIGNATURE` comme identité. Pour plus d’informations sur les signatures d’accès partagé, consultez [Utilisation des signatures d’accès partagé (SAP)](https://docs.microsoft.com/azure/storage/storage-dotnet-shared-access-signature-part-1).
+Pour les opérations en bloc uniquement, `LOCATION` doit être valide dans l’URL vers le stockage Blob Azure. Ne placez pas **/**, le nom du fichier ou les paramètres de signature d’accès partagé à la fin de l’URL `LOCATION`.
+Les informations d’identification utilisées doivent être créées avec `SHARED ACCESS SIGNATURE` comme identité. Pour plus d’informations sur les signatures d’accès partagé, consultez [Utilisation des signatures d’accès partagé (SAP)](https://docs.microsoft.com/azure/storage/storage-dotnet-shared-access-signature-part-1).
 
   
   
-## <a name="remarks"></a>Notes
- Uniquement une source unique peut être modifiée à la fois. Les demandes simultanées de la même source de provoquent une seule instruction d’attente. Toutefois, différentes sources peuvent être modifiés en même temps. Cette instruction peut s’exécuter en même temps que les autres instructions.
+## <a name="remarks"></a>Notes 
+ Une seule une source peut être modifiée à la fois. Des demandes simultanées de modifications de la même source provoquent l’attente d’une instruction. Toutefois, différentes sources peuvent être modifiés en même temps. Cette instruction peut s’exécuter en même temps que d’autres instructions.
   
 ## <a name="permissions"></a>Autorisations  
- Nécessite l’autorisation ALTER ANY EXTERNAL DATA SOURCE.
+ Exige l’autorisation ALTER ANY EXTERNAL DATA SOURCE.
  > [!IMPORTANT]  
- >  L’autorisation ALTER ANY EXTERNAL DATA SOURCE accorde à n’importe quel principal de la possibilité de créer et modifier n’importe quel objet de source de données externe, et par conséquent, elle autorise également la possibilité d’accéder à toutes les informations d’identification de base de données d’une étendue sur la base de données. Cette autorisation doit être considérée comme des privilèges très élevés et doit donc être accordé uniquement aux entités de confiance dans le système.
+ >  L’autorisation ALTER ANY EXTERNAL DATA SOURCE accorde à n’importe quel principal la possibilité de créer et de modifier tout objet de source de données externe. Par conséquent, elle permet également d’accéder à toutes les informations d’identification délimitées à la base de données sur la base de données. Cette autorisation doit être considérée comme fournissant des privilèges très élevés, et doit donc être accordée uniquement aux principaux approuvés du système.
 
   
 ## <a name="examples"></a>Exemples  
- L’exemple suivant modifie l’emplacement et l’emplacement de gestionnaire de ressources d’une source de données existante.
+ L’exemple suivant modifie l’emplacement d’une source de données existante ainsi que l’emplacement de son gestionnaire de ressources.
   
 ```  
 ALTER EXTERNAL DATA SOURCE hadoop_eds SET
@@ -96,7 +96,7 @@ ALTER EXTERNAL DATA SOURCE hadoop_eds SET
   
 ```  
 
- L’exemple suivant modifie les informations d’identification pour se connecter à une source de données existante.
+ L’exemple suivant modifie les informations d’identification permettant de se connecter à une source de données existante.
   
 ```  
 ALTER EXTERNAL DATA SOURCE hadoop_eds SET

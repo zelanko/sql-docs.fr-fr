@@ -1,5 +1,5 @@
 ---
-title: "Réduire (Type de données geography) | Documents Microsoft"
+title: "Reduce (type de données geography) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,9 +34,9 @@ ms.lasthandoff: 01/25/2018
 # <a name="reduce-geography-data-type-"></a>Reduce (type de données geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Retourne une approximation de la donnée **geography** instance générés par l’exécution de l’algorithme de Douglas-Peucker sur l’instance avec la tolérance donnée.  
+  Retourne une approximation de l’instance **geography** donnée en exécutant l’algorithme de Douglas-Peucker sur l’instance, avec la tolérance donnée.  
   
- Cela **geography** prend en charge de la méthode de type de données **FullGlobe** instances ou les instances spatiales qui sont plus grandes qu’un hémisphère.  
+ Cette méthode de type de données **geography** prend en charge les instances **FullGlobe** ou les instances spatiales qui sont plus grandes qu’un hémisphère.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -50,23 +50,23 @@ ms.lasthandoff: 01/25/2018
 |||  
 |-|-|  
 |Terme|Définition|  
-|*tolerance*|Est une valeur de type **float**. *la tolérance de panne* est la tolérance à entrer à l’algorithme de Douglas-Peucker. *la tolérance de panne* doit être un nombre positif.|  
+|*tolerance*|Valeur de type **float**. *tolerance* est la tolérance à entrer pour l’algorithme Douglas-Peucker. *tolerance* doit être un nombre positif.|  
   
 ## <a name="return-types"></a>Types de retour  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]type de retour : **geography**  
+ Type de retour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] : **geography**  
   
  Type de retour CLR : **SqlGeography**  
   
-## <a name="remarks"></a>Notes  
- Pour les types de collection, cet algorithme fonctionne indépendamment sur chaque **geography** contenus dans l’instance. Cet algorithme ne modifie pas **Point** instances.  
+## <a name="remarks"></a>Notes   
+ Pour les types de collection, cet algorithme fonctionne indépendamment sur chaque **geography** contenu dans l’instance. Cet algorithme ne modifie pas les instances **Point**.  
   
- Cette méthode tente de conserver les points de terminaison de **LineString** instances, mais risque d’échouer afin de préserver un résultat valide.  
+ Cette méthode tente de conserver les points de terminaison des instances **LineString**, mais elle peut ne pas y parvenir si elle a pour but de conserver un résultat valide.  
   
- Si `Reduce()` est appelée avec une valeur négative, cette méthode produira un **ArgumentException**. Les tolérances utilisées dans `Reduce()` doivent être des nombres positifs.  
+ Si `Reduce()` est appelé avec une valeur négative, cette méthode lève **ArgumentException**. Les tolérances utilisées dans `Reduce()` doivent être des nombres positifs.  
   
- L’algorithme de Douglas-Peucker fonctionne sur chaque courbe ou anneau dans le **geography** instance en supprimant tous les points à l’exception du point de départ et le point de terminaison. Chaque point supprimé est ensuite rajouté, en commençant par le point excentré le plus lointain, aucun point ne soit plus de *la tolérance de panne* à partir du résultat. Le résultat est ensuite rendu valide si nécessaire, dans la mesure où un résultat valide est garanti.  
+ L’algorithme Douglas-Peucker fonctionne sur chaque courbe ou anneau de l’instance **geography** en supprimant tous les points, à l’exception du point de départ et du point de terminaison. Chaque point supprimé est ensuite rajouté, en commençant par le point excentré le plus lointain, jusqu’à ce qu’aucun point ne soit à plus de la valeur *tolerance* du résultat. Le résultat est ensuite rendu valide si nécessaire, dans la mesure où un résultat valide est garanti.  
   
- Dans [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], cette méthode a été étendue aux **FullGlobe** instances.  
+ Dans [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], cette méthode a été étendue aux instances **FullGlobe**.  
   
  Cette méthode n'est pas précise.  
   
@@ -78,7 +78,7 @@ DECLARE @g geography = 'LineString(120 45, 120.1 45.1, 199.9 45.2, 120 46)'
 SELECT @g.Reduce(10000).ToString()  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Méthodes étendues sur des instances geography](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)  
   
   

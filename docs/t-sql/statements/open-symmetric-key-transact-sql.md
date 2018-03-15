@@ -1,5 +1,5 @@
 ---
-title: "OUVRIR la clé symétrique (Transact-SQL) | Documents Microsoft"
+title: OPEN SYMMETRIC KEY (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -56,36 +56,36 @@ OPEN SYMMETRIC KEY Key_name DECRYPTION BY <decryption_mechanism>
 ```  
   
 ## <a name="arguments"></a>Arguments  
- *Key_name*  
+ *KEY_NAME*  
  Nom de la clé symétrique à ouvrir.  
   
- CERTIFICAT *nom_certificat*  
+ CERTIFICATE *certificate_name*  
  Nom du certificat dont la clé privée sera utilisée pour déchiffrer la clé symétrique.  
   
- CLÉ asymétrique *asym_key_name*  
+ ASYMMETRIC KEY *asym_key_name*  
  Nom de la clé asymétrique dont la clé privée sera utilisée pour déchiffrer la clé symétrique.  
   
- AVEC le mot de passe ='*mot de passe*'  
+ WITH PASSWORD ='*password*'  
  Mot de passe utilisé pour chiffrer la clé privée du certificat ou la clé asymétrique.  
   
- CLÉ symétrique *decrypting_key_name*  
+ SYMMETRIC KEY *decrypting_key_name*  
  Nom de la clé symétrique qui sera utilisée pour déchiffrer la clé symétrique en cours d'ouverture.  
   
- Mot de passe ='*mot de passe*'  
+ PASSWORD ='*password*'  
  Mot de passe utilisé pour protéger la clé symétrique.  
   
-## <a name="remarks"></a>Notes  
- Les clés symétriques ouvertes sont liées à la session et non au contexte de sécurité. Une clé ouverte est disponible tant qu'elle n'a pas été explicitement fermée ou que la session n'a pas été arrêtée. Si vous ouvrez une clé symétrique puis vous changez de contexte, la clé reste ouverte et disponible dans le contexte de substitution. Informations relatives aux clés symétriques ouvertes sont visibles dans le [sys.openkeys &#40; Transact-SQL &#41; ](../../relational-databases/system-catalog-views/sys-openkeys-transact-sql.md) affichage catalogue.  
+## <a name="remarks"></a>Notes   
+ Les clés symétriques ouvertes sont liées à la session et non au contexte de sécurité. Une clé ouverte est disponible tant qu'elle n'a pas été explicitement fermée ou que la session n'a pas été arrêtée. Si vous ouvrez une clé symétrique puis vous changez de contexte, la clé reste ouverte et disponible dans le contexte de substitution. Des informations relatives aux clés symétriques ouvertes sont consultables dans la vue de catalogue [sys.openkeys &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-openkeys-transact-sql.md).  
   
  Si la clé symétrique a été chiffrée avec une autre clé, celle-ci doit être ouverte d'abord.  
   
- Si la clé symétrique est déjà ouverte, la requête est un **NO_OP**.  
+ Si la clé symétrique est déjà ouverte, la requête est **NO_OP**.  
   
  Si le mot de passe, le certificat ou la clé fournie pour déchiffrer la clé symétrique est incorrecte, la requête échoue.  
   
- Les clés symétriques créées à partir d'un fournisseur de chiffrement ne peuvent pas être ouvertes. Les opérations de chiffrement et le déchiffrement à l’aide de ce type de clé symétrique réussissent sans le **ouvrir** instruction, car le fournisseur de chiffrement est ouverture et fermeture de la clé.  
+ Les clés symétriques créées à partir d'un fournisseur de chiffrement ne peuvent pas être ouvertes. Les opérations de chiffrement et déchiffrement utilisant ce type de clé symétrique s’exécutent sans l’instruction **OPEN** car le fournisseur de chiffrement ouvre et ferme la clé.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  L'appelant doit disposer d'une autorisation sur la clé, et l'autorisation VIEW DEFINITION ne doit pas lui avoir été refusée sur la clé. D'autres conditions existent qui dépendent du mode de déchiffrement :  
   
 -   DECRYPTION BY CERTIFICATE : autorisation CONTROL sur le certificat et connaissance du mot de passe qui chiffre la clé privée.  
@@ -120,10 +120,10 @@ OPEN SYMMETRIC KEY MarketingKey11
 GO   
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [CREATE SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-symmetric-key-transact-sql.md)   
  [ALTER SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-symmetric-key-transact-sql.md)   
- [CLOSE SYMMETRIC KEY &#40; Transact-SQL &#41;](../../t-sql/statements/close-symmetric-key-transact-sql.md)   
+ [CLOSE SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/close-symmetric-key-transact-sql.md)   
  [DROP SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-symmetric-key-transact-sql.md)   
  [Hiérarchie de chiffrement](../../relational-databases/security/encryption/encryption-hierarchy.md)   
  [Gestion de clés extensible &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md)  

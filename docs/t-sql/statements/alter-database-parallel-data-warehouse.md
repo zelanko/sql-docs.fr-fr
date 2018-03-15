@@ -1,5 +1,5 @@
 ---
-title: ALTER DATABASE (Parallel Data Warehouse) | Documents Microsoft
+title: ALTER DATABASE (Parallel Data Warehouse) | Microsoft Docs
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
@@ -24,12 +24,12 @@ ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="alter-database-parallel-data-warehouse"></a>MODIFIER la base de données (Parallel Data Warehouse)
+# <a name="alter-database-parallel-data-warehouse"></a>ALTER DATABASE (Parallel Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
 
-  Modifie les options de taille maximale de la base de données pour les tables répliquées, tables distribuées et le journal des transactions dans [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]. Cette instruction permet de gérer les allocations d’espace disque pour une base de données augmente ou diminue la taille.  
+  Modifie les options de taille de base de données maximale pour les tables répliquées, les tables distribuées et le journal des transactions dans [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]. Cette instruction permet de gérer les allocations de l’espace disque à mesure que la taille d’une base de données augmente ou diminue.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "icône lien de rubrique") [Conventions de syntaxe Transact-SQL &#40; Transact-SQL &#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône Lien de rubrique") [Conventions de la syntaxe Transact-SQL &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -53,42 +53,42 @@ ALTER DATABASE database_name
   
 ## <a name="arguments"></a>Arguments  
  *database_name*  
- Le nom de la base de données à modifier. Pour afficher une liste des bases de données sur le matériel, utilisez [sys.databases &#40; Transact-SQL &#41; ](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).  
+ Nom de la base de données à modifier. Pour afficher une liste des bases de données sur l’appliance, utilisez [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).  
   
- CROISSANCE AUTOMATIQUE = {ON | {OFF}  
- L’option de croissance automatique des mises à jour. Lors de la croissance automatique est activée, [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] augmente automatiquement l’espace alloué pour les tables répliquées, tables distribuées et le journal des transactions que nécessaire pour prendre en charge la croissance des besoins de stockage. Lors de la croissance automatique est désactivée, [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] retourne une erreur si des tables, répliquées distribuées tables, ou le journal des transactions dépasse le paramètre de taille maximale.  
+ AUTOGROW = { ON | OFF }  
+ Met à jour l’option AUTOGROW. Quand AUTOGROW est défini sur ON, [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] augmente automatiquement l’espace alloué pour les tables répliquées, les tables distribuées et le journal des transactions en fonction des besoins pour s’adapter à la croissance des besoins de stockage. Quand AUTOGROW est défini sur OFF, [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] retourne une erreur si des tables, répliquées, des tables distribuées ou le journal des transactions dépasse le paramètre de taille maximale.  
   
- REPLICATED_SIZE = *taille* [Go]  
- Spécifie les nouveau gigaoctets maximales par nœud de calcul pour le stockage de toutes les tables répliquées dans la base de données qui est modifiée. Si vous envisagez d’espace de stockage de matériel, vous devez multiplier REPLICATED_SIZE par le nombre de nœuds de calcul dans l’appliance.  
+ REPLICATED_SIZE = *size* [GB]  
+ Spécifie le nouveau nombre maximal de gigaoctets par nœud de calcul pour le stockage de toutes les tables répliquées dans la base de données en cours de modification. Si vous planifiez l’espace de stockage de l’appliance, vous devez multiplier REPLICATED_SIZE par le nombre de nœuds de calcul dans l’appliance.  
   
- DISTRIBUTED_SIZE = *taille* [Go]  
- Spécifie les nouveau gigaoctets maximales par base de données pour le stockage de toutes les tables distribuées dans la base de données qui est modifiée. La taille est répartie sur tous les nœuds de calcul dans l’appliance.  
+ DISTRIBUTED_SIZE = *size* [GB]  
+ Spécifie le nouveau nombre maximal de gigaoctets par base de données pour le stockage de toutes les tables distribuées dans la base de données en cours de modification. La taille est répartie entre tous les nœuds de calcul dans l’appliance.  
   
  LOG_SIZE = *size* [GB]  
- Spécifie les nouveau gigaoctets maximales par base de données pour le stockage de tous les journaux des transactions dans la base de données qui est modifiée. La taille est répartie sur tous les nœuds de calcul dans l’appliance.  
+ Spécifie le nouveau nombre maximal de gigaoctets par base de données pour le stockage de tous les journaux des transactions dans la base de données en cours de modification. La taille est répartie entre tous les nœuds de calcul dans l’appliance.  
   
- CHIFFREMENT {ON | {OFF}  
- Spécifie si la base de données doit être chiffrée (ON) ou non chiffrée (OFF). Le chiffrement peut être configuré que pour [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] lorsque [sp_pdw_database_encryption pour](http://msdn.microsoft.com/5011bb7b-1793-4b2b-bd9c-d4a8c8626b6e) a été défini sur **1**. Une clé de chiffrement de base de données doit être créée avant de pouvoir configurer le chiffrement transparent des données. Pour plus d’informations sur le chiffrement de base de données, consultez [Transparent Data Encryption &#40; Chiffrement transparent des données &#41; ](../../relational-databases/security/encryption/transparent-data-encryption.md).  
+ ENCRYPTION { ON | OFF }  
+ Spécifie si la base de données doit être chiffrée (ON) ou non chiffrée (OFF). Le chiffrement peut être configuré uniquement pour [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] quand [sp_pdw_database_encryption](http://msdn.microsoft.com/5011bb7b-1793-4b2b-bd9c-d4a8c8626b6e) a été défini sur **1**. Une clé de chiffrement de base de données doit être créée avant de pouvoir configurer le chiffrement transparent des données. Pour plus d’informations sur le chiffrement des bases de données, consultez [Chiffrement transparent des données &#40;TDE&#41;](../../relational-databases/security/encryption/transparent-data-encryption.md).  
   
 ## <a name="permissions"></a>Autorisations  
- Requiert l’autorisation ALTER sur la base de données.  
+ Nécessite l’autorisation ALTER sur la base de données.  
   
 ## <a name="general-remarks"></a>Remarques d'ordre général  
- Les valeurs de REPLICATED_SIZE, DISTRIBUTED_SIZE et LOG_SIZE peuvent être supérieur à, égal à, inférieur ou les valeurs actuelles de la base de données.  
+ Les valeurs de REPLICATED_SIZE, DISTRIBUTED_SIZE et LOG_SIZE peuvent être supérieures, égales ou inférieures aux valeurs actuelles de la base de données.  
   
 ## <a name="limitations-and-restrictions"></a>Limitations et restrictions  
- Croissance et les opérations de compactage sont approximatives. Les tailles réelles qui en résulte peuvent varier selon les paramètres de taille.  
+ Les opérations d’augmentation et de réduction sont approximatives. Les tailles réelles obtenues peuvent varier en fonction des paramètres de taille.  
   
- [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]n’effectue pas l’instruction ALTER DATABASE comme une opération atomique. Si l’instruction est abandonnée pendant l’exécution, les modifications qui ont eu lieu restera.  
+ [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] n’exécute pas l’instruction ALTER DATABASE comme une opération atomique. Si l’instruction est interrompue pendant l’exécution, les modifications qui ont déjà eu lieu sont conservées.  
   
 ## <a name="locking-behavior"></a>Comportement de verrouillage  
- Acquiert un verrou partagé sur l’objet de base de données. Vous ne pouvez pas modifier une base de données est en cours d’utilisation par un autre utilisateur pour la lecture ou l’écriture. Cela inclut les sessions qui ont émis un [utilisez](http://msdn.microsoft.com/158ec56b-b822-410f-a7c4-1a196d4f0e15) instruction sur la base de données.  
+ Prend un verrou partagé sur l’objet DATABASE. Vous ne pouvez pas modifier une base de données qui est en cours d’utilisation par un autre utilisateur pour une opération de lecture ou d’écriture. Cela inclut les sessions qui ont émis une instruction [USE](http://msdn.microsoft.com/158ec56b-b822-410f-a7c4-1a196d4f0e15) sur la base de données.  
   
-## <a name="performance"></a>Performance  
- Réduction d’une base de données peut prendre beaucoup de temps et des ressources système, selon la taille des données réelles dans la base de données et la quantité de fragmentation sur le disque. Par exemple, la réduction d’une base de données peut prendre plusieurs heures ou plus.  
+## <a name="performance"></a>Performances  
+ La réduction de la taille d’une base de données peut prendre beaucoup de temps et consommer beaucoup de ressources système, en fonction de la taille des données réelles contenues dans la base de données et du volume de fragmentation sur le disque. Par exemple, la réduction de la taille d’une base de données peut prendre plusieurs heures ou plus.  
   
-## <a name="determining-encryption-progress"></a>Déterminer la progression du chiffrement  
- Pour déterminer la progression du chiffrement transparent des données de base de données sous forme de pourcentage, utilisez la requête suivante :  
+## <a name="determining-encryption-progress"></a>Détermination de la progression du chiffrement  
+ Pour déterminer la progression du chiffrement transparent des données de base de données sous la forme d’un pourcentage, utilisez la requête suivante :  
   
 ```  
 WITH  
@@ -132,44 +132,44 @@ INNER JOIN dek_percent_complete
 WHERE type = 'CONTROL';  
 ```  
   
- Pour obtenir un exemple complet qui montre toutes les étapes de l’implémentation de chiffrement transparent des données, consultez [Transparent Data Encryption &#40; Chiffrement transparent des données &#41; ](../../relational-databases/security/encryption/transparent-data-encryption.md).  
+ Pour obtenir un exemple complet illustrant toutes les étapes de l’implémentation de TDE, consultez [Chiffrement transparent des données &#40;TDE&#41;](../../relational-databases/security/encryption/transparent-data-encryption.md).  
   
-## <a name="examples-includesspdwincludessspdw-mdmd"></a>Exemples :[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesspdwincludessspdw-mdmd"></a>Exemples : [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="a-altering-the-autogrow-setting"></a>A. Modification du paramètre de croissance automatique  
- Activée croissance automatique pour la base de données `CustomerSales`.  
+### <a name="a-altering-the-autogrow-setting"></a>A. Modification du paramètre AUTOGROW  
+ Définissez AUTOGROW sur ON pour la base de données `CustomerSales`.  
   
 ```  
 ALTER DATABASE CustomerSales  
     SET ( AUTOGROW = ON );  
 ```  
   
-### <a name="b-altering-the-maximum-storage-for-replicated-tables"></a>B. Modifier le stockage maximal pour les tables répliquées  
- L’exemple suivant définit la limite de stockage de table répliqué à 1 Go pour la base de données `CustomerSales`. Il s’agit de la limite de stockage par nœud de calcul.  
+### <a name="b-altering-the-maximum-storage-for-replicated-tables"></a>B. Modification du stockage maximal pour les tables répliquées  
+ L’exemple suivant définit la limite de stockage des tables répliquées sur 1 Go pour la base de données `CustomerSales`. Il s’agit de la limite de stockage par nœud de calcul.  
   
 ```  
 ALTER DATABASE CustomerSales  
     SET ( REPLICATED_SIZE = 1 GB );  
 ```  
   
-### <a name="c-altering-the-maximum-storage-for-distributed-tables"></a>C. Modifier le stockage maximal pour les tables distribuées  
- L’exemple suivant définit la limite de stockage de table distribuée à 1 000 Go (un téraoctet) pour la base de données `CustomerSales`. Il s’agit de la limite de stockage combiné pour l’application pour tous les nœuds de calcul, pas la limite de stockage par nœud de calcul.  
+### <a name="c-altering-the-maximum-storage-for-distributed-tables"></a>C. Modification du stockage maximal pour les tables distribuées  
+ L’exemple suivant définit la limite de stockage des tables distribuées sur 1 000 GB (un téraoctet) pour la base de données `CustomerSales`. Il s’agit de la limite de stockage combiné sur l’ensemble de l’appliance pour tous les nœuds de calcul, et non pas la limite de stockage par nœud de calcul.  
   
 ```  
 ALTER DATABASE CustomerSales  
     SET ( DISTRIBUTED_SIZE = 1000 GB );  
 ```  
   
-### <a name="d-altering-the-maximum-storage-for-the-transaction-log"></a>D. Modifier le stockage maximal pour le journal des transactions  
- L’exemple suivant met à jour la base de données `CustomerSales` pour avoir un maximum [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] taille de journal de transactions de 10 Go pour l’application.  
+### <a name="d-altering-the-maximum-storage-for-the-transaction-log"></a>D. Modification du stockage maximal pour le journal des transactions  
+ L’exemple suivant met à jour la base de données `CustomerSales` pour avoir une taille maximale du journal de transactions [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de 10 Go pour l’appliance.  
   
 ```  
 ALTER DATABASE CustomerSales  
     SET ( LOG_SIZE = 10 GB );  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- [CRÉER une base de données &#40; Parallel Data Warehouse &#41;](../../t-sql/statements/create-database-parallel-data-warehouse.md)   
+## <a name="see-also"></a> Voir aussi  
+ [CREATE DATABASE &#40;Parallel Data Warehouse&#41;](../../t-sql/statements/create-database-parallel-data-warehouse.md)   
  [DROP DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-database-transact-sql.md)  
   
   

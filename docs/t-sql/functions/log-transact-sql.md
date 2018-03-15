@@ -1,5 +1,5 @@
 ---
-title: LOG (Transact-SQL) | Documents Microsoft
+title: LOG (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/29/2017
 ms.prod: sql-non-specified
@@ -36,7 +36,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="log-transact-sql"></a>LOG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Retourne le logarithme népérien de l’objet **float** expression dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  Renvoie le logarithme népérien de l’expression **float** spécifiée dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -55,28 +55,28 @@ LOG ( float_expression )
 ```  
   
 ## <a name="arguments"></a>Arguments  
- *expression*  
- Est un [expression](../../t-sql/language-elements/expressions-transact-sql.md) de type **float** ou d’un type qui peut être implicitement converti en **float**.  
+ *float_expression*  
+ [Expression](../../t-sql/language-elements/expressions-transact-sql.md) de type **float** ou dont le type peut être implicitement converti en type **float**.  
   
  *base*  
  Argument entier facultatif qui définit la base du logarithme.  
   
-**S’applique aux**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] via[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**S’applique à** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] jusqu’à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
 ## <a name="return-types"></a>Types de retour  
  **float**  
   
-## <a name="remarks"></a>Notes  
- Par défaut, **LOG()** renvoie le logarithme népérien. En commençant par [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], vous pouvez modifier la base du logarithme une autre valeur à l’aide de l’option *base* paramètre.  
+## <a name="remarks"></a>Notes   
+ Par défaut, **LOG()** renvoie le logarithme népérien. À partir de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], vous pouvez changer la base du logarithme à l’aide du paramètre facultatif *base*.  
   
- Le logarithme népérien est le logarithme de base **e**, où **e** est une constante irrationnelle approximativement égale à 2,718281828.  
+ Le logarithme népérien est le logarithme en base **e**, où **e** est une constante irrationnelle environ égale à 2,718281828.  
   
- Le logarithme naturel de la valeur exponentielle d’un nombre est le nombre lui-même : journal (EXP (  *n*  )) =  *n* . La valeur exponentielle du logarithme naturel d’un nombre est le nombre lui-même : EXP (journal (  *n*  )) =  *n* .  
+ Le logarithme népérien de l’exponentiel d’un nombre est le nombre lui-même : LOG( EXP( *n* ) ) = *n*. De même, l’exponentiel du logarithme népérien d’un nombre est le nombre lui-même : EXP( LOG( *n* ) ) = *n*.  
   
 ## <a name="examples"></a>Exemples  
   
 ### <a name="a-calculating-the-logarithm-for-a-number"></a>A. Calcul du logarithme d'un nombre  
- L’exemple suivant calcule le `LOG` spécifié **float** expression.  
+ L’exemple suivant calcule le `LOG` de l’expression **float** spécifiée.  
   
 ```  
 DECLARE @var float = 10;  
@@ -109,10 +109,10 @@ SELECT LOG (EXP (10));
 (1 row(s) affected)  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemples : [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] et[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemples : [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] et [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="c-calculating-the-logarithm-for-a-number"></a>C. Calcul du logarithme d’un nombre  
- L’exemple suivant calcule le `LOG` spécifié **float** expression.  
+ L’exemple suivant calcule le `LOG` de l’expression **float** spécifiée.  
   
 ```  
 SELECT LOG(10);  
@@ -126,10 +126,10 @@ SELECT LOG(10);
  2.30
  ```  
   
-## <a name="see-also"></a>Voir aussi  
- [Fonctions mathématiques &#40; Transact-SQL &#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)   
- [EXP &#40; Transact-SQL &#41;](../../t-sql/functions/exp-transact-sql.md)   
- [LOG10 &#40; Transact-SQL &#41;](../../t-sql/functions/log10-transact-sql.md)  
+## <a name="see-also"></a> Voir aussi  
+ [Fonctions mathématiques &#40;Transact-SQL&#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)   
+ [EXP &#40;Transact-SQL&#41;](../../t-sql/functions/exp-transact-sql.md)   
+ [LOG10 &#40;Transact-SQL&#41;](../../t-sql/functions/log10-transact-sql.md)  
   
   
 

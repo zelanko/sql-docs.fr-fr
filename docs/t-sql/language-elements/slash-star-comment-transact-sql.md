@@ -1,5 +1,5 @@
 ---
-title: "Barre oblique étoile (bloc de commentaire) (Transact-SQL) | Documents Microsoft"
+title: "Barre oblique étoile (bloc de commentaire) (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 07/27/2017
 ms.prod: sql-non-specified
@@ -39,7 +39,7 @@ ms.lasthandoff: 01/25/2018
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 
-  Indique un texte défini par l'utilisateur. Le texte entre les / * et \*/ n’est pas évalué par le serveur.  
+  Indique un texte défini par l'utilisateur. Le texte placé entre /* et \*/ n’est pas évalué par le serveur.  
   
  ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -56,12 +56,12 @@ text_of_comment
  *text_of_comment*  
  Texte du commentaire. Correspond à une ou plusieurs chaînes de caractères.  
   
-## <a name="remarks"></a>Notes  
- Il est possible d'insérer des commentaires sur une ligne distincte ou à l'intérieur d'une instruction [!INCLUDE[tsql](../../includes/tsql-md.md)]. Commentaires de plusieurs lignes doivent être signalés par / * et \*/. Une convention de style alternatifs souvent utilisée pour les commentaires de plusieurs lignes consiste à commencer la première ligne avec /\*, les lignes avec \* \*et se terminer par \*/.  
+## <a name="remarks"></a>Notes   
+ Il est possible d'insérer des commentaires sur une ligne distincte ou à l'intérieur d'une instruction [!INCLUDE[tsql](../../includes/tsql-md.md)]. Les commentaires de plusieurs lignes doivent être signalés par /* et \*/. Par convention, les commentaires de plusieurs lignes utilisent souvent /\* au début de la première ligne, \*\* au début des lignes suivantes et \*/ pour signaler la fin du commentaire.  
   
  Il n'y a pas de longueur maximale pour les commentaires.  
   
- Les commentaires imbriqués ne sont pas pris en charge. Si le / * modèle de caractère situé n’importe où dans un commentaire existant, il est traité comme le début d’un commentaire imbriqué et nécessite donc une fermeture \*/ marque de commentaire. En l'absence de marque de commentaire de fermeture, une erreur est générée.  
+ Les commentaires imbriqués ne sont pas pris en charge. Un modèle de caractère /* situé n’importe où dans un commentaire existant est traité comme le début d’un commentaire imbriqué et nécessite dès lors une marque de commentaire de fermeture \*/. En l'absence de marque de commentaire de fermeture, une erreur est générée.  
   
  Par exemple, le code suivant génère une erreur.  
   
@@ -108,9 +108,9 @@ JOIN Person.Address AS a ON ea.AddressID = a.AddressID;
 GO  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [-- &#40;Comment&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/comment-transact-sql.md)   
- [Langage de contrôle de flux &#40; Transact-SQL &#41;](~/t-sql/language-elements/control-of-flow.md)  
+ [Langage de contrôle de flux &#40;Transact-SQL&#41;](~/t-sql/language-elements/control-of-flow.md)  
   
   
 

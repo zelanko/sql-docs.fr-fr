@@ -1,5 +1,5 @@
 ---
-title: "STGeomFromText (Type de données geography) | Documents Microsoft"
+title: "STGeomFromText (type de données geography) | Microsoft Docs"
 ms.custom: 
 ms.date: 07/30/2017
 ms.prod: sql-non-specified
@@ -35,9 +35,9 @@ ms.lasthandoff: 01/25/2018
 # <a name="stgeomfromtext-geography-data-type"></a>STGeomFromText (type de données geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Retourne un **geography** instance à partir d’une représentation de la réplication continue en cluster (WKT, Open Geospatial Consortium (OGC) Well-Known Text) augmentée des Z (élévation) et les valeurs M (mesure) apportées par l’instance.
+Retourne une instance **geography** à partir d’une représentation OGC (Open Geospatial Consortium) WKT (Well-Known Text), à laquelle s’ajoutent les valeurs Z (élévation) et M (mesure) apportées par l’instance.
   
-Cela **geography** prend en charge de la méthode de type de données **FullGlobe** instances ou les instances spatiales qui sont plus grandes qu’un hémisphère.
+Cette méthode de type de données **geography** prend en charge les instances **FullGlobe** ou les instances spatiales qui sont plus grandes qu’un hémisphère.
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -48,20 +48,20 @@ STGeomFromText ( 'geography_tagged_text' , SRID )
   
 ## <a name="arguments"></a>Arguments  
  *geography_tagged_text*  
- Est la représentation WKT de le **geography** instance à retourner. *geography_tagged_text* est un **nvarchar (max)** expression.  
+ Représentation WKT de l’instance **geography** à retourner. *geography_tagged_text* est une expression **nvarchar(max)**.  
   
  *SRID*  
- Est un **int** expression représentant les données spatiales ID de référence (SRID) de la **geography** instance à retourner.  
+ Expression **int** qui représente le SRID (ID de référence spatiale) de l’instance **geography** à retourner.  
   
 ## <a name="return-types"></a>Types de retour  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]type de retour : **geography**  
+ Type de retour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] : **geography**  
   
  Type de retour CLR : **SqlGeography**  
   
-## <a name="remarks"></a>Notes  
- Le type OGC de le **geography** instance retourné par STGeomFromText() est définie sur l’entrée WKT correspondante.  
+## <a name="remarks"></a>Notes   
+ Le type OGC de l’instance **geography** retournée par STGeomFromText() a comme valeur l’entrée WKT correspondante.  
   
- Cette méthode lève un **ArgumentException** si l’entrée contient un contour antipode.  
+ Cette méthode lève **ArgumentException** si l’entrée contient une arête antipodale.  
   
 ## <a name="examples"></a>Exemples  
  L'exemple suivant utilise la méthode `STGeomFromText()` pour créer une instance `geography`.  
@@ -72,7 +72,7 @@ SET @g = geography::STGeomFromText('LINESTRING(-122.360 47.656, -122.343 47.656)
 SELECT @g.ToString();  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Méthodes geography statiques de l’OGC](../../t-sql/spatial-geography/ogc-static-geography-methods.md)  
   
   

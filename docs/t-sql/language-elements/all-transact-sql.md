@@ -51,13 +51,13 @@ scalar_expression { = | <> | != | > | >= | !> | < | <= | !< } ALL ( subquery )
   
 ## <a name="arguments"></a>Arguments  
  *scalar_expression*  
- Valide [expression](../../t-sql/language-elements/expressions-transact-sql.md).  
+ Toute [expression](../../t-sql/language-elements/expressions-transact-sql.md) valide.  
   
  { = | <> | != | > | >= | !> | < | <= | !< }  
- Est un opérateur de comparaison.  
+ Opérateur de comparaison.  
   
  *subquery*  
- Sous-requête dont le jeu de résultats est une colonne. Le type de données de la colonne renvoyée doit être le même type de données en tant que type de données de *scalar_expression*.  
+ Sous-requête dont le jeu de résultats est une colonne. Le type de données de la colonne retournée doit être le même que celui de *scalar_expression*.  
   
  Instruction SELECT limitée, dans laquelle les clauses ORDER BY et le mot clé INTO ne sont pas autorisés.  
   
@@ -65,17 +65,17 @@ scalar_expression { = | <> | != | > | >= | !> | < | <= | !< } ALL ( subquery )
  **Booléen**  
   
 ## <a name="result-value"></a>Valeur des résultats  
- Retourne la valeur TRUE lorsque la comparaison spécifiée est vraie pour toutes les paires (*scalar_expression***,***x)*, lorsque *x* est une valeur dans le jeu de colonnes uniques ; sinon, retourne FALSE.  
+ Retourne la valeur TRUE lorsque la comparaison spécifiée a la valeur TRUE pour toutes les paires (*scalar_expression***,***x)*, quand *x* est une valeur du jeu de valeurs de la colonne ; dans le cas contraire, la valeur FALSE est retournée.  
   
-## <a name="remarks"></a>Notes  
- ALL requiert le *scalar_expression* corresponde à toutes les valeurs retournées par la sous-requête. Par exemple, si la sous-requête retourne les valeurs 2 et 3, *scalar_expression* < = ALL (sous-requête) serait équivalente à TRUE pour une *scalar_expression* 2. Si la sous-requête retourne les valeurs 2 et 3, *scalar_expression* = ALL (sous-requête) donne FALSE comme résultat, car certaines valeurs de la sous-requête (la valeur 3) ne répondent pas aux critères de l’expression.  
+## <a name="remarks"></a>Notes   
+ ALL requiert que l’argument *scalar_expression* corresponde à toutes les valeurs retournées par la sous-requête. Par exemple, si la sous-requête retourne les valeurs 2 et 3, *scalar_expression* < = ALL (sous-requête) a la valeur TRUE pour une *scalar_expression* égale à 2. Si la sous-requête retourne les valeurs 2 et 3, l’instruction *scalar_expression* = ALL (sous-requête) donne FALSE comme résultat étant donné que certaines des valeurs de la sous-requête (à savoir 3) ne répondent pas aux critères de l’expression.  
   
- Pour les instructions qui nécessitent le *scalar_expression* corresponde à une seule valeur est retournée par la sous-requête, consultez [certaines &#124; &#40; Transact-SQL &#41; ](../../t-sql/language-elements/some-any-transact-sql.md).  
+ Pour les instructions qui demandent que l’argument *scalar_expression* corresponde à seulement une des valeurs retournées par la sous-requête, consultez [SOME &#124; ANY &#40;Transact-SQL&#41;](../../t-sql/language-elements/some-any-transact-sql.md).  
   
- Cette rubrique fait référence à l'instruction ALL lorsqu'elle est utilisée avec une sous-requête. ALL peut également être utilisé avec [UNION](../../t-sql/language-elements/set-operators-union-transact-sql.md) et [sélectionnez](../../t-sql/queries/select-transact-sql.md).  
+ Cette rubrique fait référence à l'instruction ALL lorsqu'elle est utilisée avec une sous-requête. ALL peut aussi être utilisé avec [UNION](../../t-sql/language-elements/set-operators-union-transact-sql.md) et [SELECT](../../t-sql/queries/select-transact-sql.md).  
   
 ## <a name="examples"></a>Exemples  
- L’exemple suivant crée une procédure stockée qui détermine si tous les composants d’un `SalesOrderID` dans les [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] base de données peut être fabriqué dans le nombre de jours spécifié. L'exemple utilise une sous-requête pour créer une liste du nombre de `DaysToManufacture` pour tous les composants du `SalesOrderID` spécifié, puis vérifie que toutes les valeurs `DaysToManufacture` sont inférieures ou égales au nombre de jours spécifié.  
+ L’exemple suivant crée une procédure stockée qui détermine si tous les composants d’un `SalesOrderID` spécifié de la base de données [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] peuvent être fabriqués dans le nombre de jours spécifié. L'exemple utilise une sous-requête pour créer une liste du nombre de `DaysToManufacture` pour tous les composants du `SalesOrderID` spécifié, puis vérifie que toutes les valeurs `DaysToManufacture` sont inférieures ou égales au nombre de jours spécifié.  
   
 ```  
 -- Uses AdventureWorks  
@@ -115,12 +115,12 @@ EXECUTE DaysToBuild 49080, 1 ;
   
  `Some items for this order cannot be manufactured in specified number of days or less.`  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [CASE &#40;Transact-SQL&#41;](../../t-sql/language-elements/case-transact-sql.md)   
  [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
  [Fonctions intégrées &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)   
  [LIKE &#40;Transact-SQL&#41;](../../t-sql/language-elements/like-transact-sql.md)   
- [Operators &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
+ [Opérateurs &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [WHERE &#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md)   
  [IN &#40;Transact-SQL&#41;](../../t-sql/language-elements/in-transact-sql.md)  

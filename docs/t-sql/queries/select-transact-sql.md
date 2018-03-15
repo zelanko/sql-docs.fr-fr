@@ -41,21 +41,21 @@ ms.lasthandoff: 01/25/2018
 # <a name="select-transact-sql"></a>SELECT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Récupère des lignes de la base de données et permet de sélectionner une ou plusieurs lignes ou colonnes à partir d’une ou plusieurs tables dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La syntaxe complète de l'instruction SELECT est complexe mais en voici les principales clauses :  
+  Récupère des lignes de la base de données et permet de sélectionner une ou plusieurs lignes ou colonnes d’une ou de plusieurs tables dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La syntaxe complète de l'instruction SELECT est complexe mais en voici les principales clauses :  
   
-[Avec {[XMLNAMESPACES], [ \<common_table_expression >]}]
+[ WITH { [ XMLNAMESPACES ,] [ \<common_table_expression> ] } ]
   
  SELECT *select_list* [ INTO *new_table* ]  
   
- [À partir de *table_source* ] [où *search_condition* ]  
+ [ FROM *table_source* ] [ WHERE *search_condition* ]  
   
  [ GROUP BY *group_by_expression* ]  
   
- [Ayant *search_condition* ]  
+ [ HAVING *search_condition* ]  
   
- [ORDER BY *expression_trier_par* [ASC | DESC]]  
+ [ ORDER BY *order_expression* [ ASC | DESC ] ]  
   
- L’UNION, EXCEPT et INTERSECT opérateurs peuvent être utilisés entre les requêtes pour combiner ou comparer leurs résultats dans le jeu de résultats.  
+ Les opérateurs UNION, EXCEPT et INTERSECT peuvent être utilisés entre plusieurs requêtes pour combiner ou comparer leurs résultats dans un seul jeu de résultats.  
   
  ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -106,28 +106,28 @@ SELECT <select_criteria>
   
 ```  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  En raison de la complexité de l'instruction SELECT, les éléments et les arguments de la syntaxe sont détaillés par clause :  
   
 |||  
 |-|-|  
-|[WITH XMLNAMESPACES](../../t-sql/xml/with-xmlnamespaces.md)<br /><br /> [WITH common_table_expression](../../t-sql/queries/with-common-table-expression-transact-sql.md)|[AVOIR](../../t-sql/queries/select-having-transact-sql.md)|  
+|[WITH XMLNAMESPACES](../../t-sql/xml/with-xmlnamespaces.md)<br /><br /> [WITH common_table_expression](../../t-sql/queries/with-common-table-expression-transact-sql.md)|[HAVING](../../t-sql/queries/select-having-transact-sql.md)|  
 |[SELECT (Clause)](../../t-sql/queries/select-clause-transact-sql.md)|[UNION](../../t-sql/language-elements/set-operators-union-transact-sql.md)|  
 |[Clause INTO](../../t-sql/queries/select-into-clause-transact-sql.md)|[EXCEPT et INTERSECT](../../t-sql/language-elements/set-operators-except-and-intersect-transact-sql.md)|  
-|[FROM](../../t-sql/queries/from-transact-sql.md)|[TRIER PAR](../../t-sql/queries/select-order-by-clause-transact-sql.md)|  
+|[FROM](../../t-sql/queries/from-transact-sql.md)|[ORDER BY](../../t-sql/queries/select-order-by-clause-transact-sql.md)|  
 |[WHERE](../../t-sql/queries/where-transact-sql.md)|[Clause FOR](../../t-sql/queries/select-for-clause-transact-sql.md)|  
-|[REGROUPER PAR](../../t-sql/queries/select-group-by-transact-sql.md)|[OPTION, clause](../../t-sql/queries/option-clause-transact-sql.md)|  
+|[GROUP BY](../../t-sql/queries/select-group-by-transact-sql.md)|[OPTION, clause](../../t-sql/queries/option-clause-transact-sql.md)|  
   
  L'ordre des clauses dans une instruction SELECT est de première importance. Vous pouvez omettre n'importe quelle clause facultative mais, lorsque vous employez les clauses facultatives, elles doivent apparaître dans l'ordre adéquat.  
   
  Les instructions SELECT sont autorisées dans les fonctions définies par l'utilisateur uniquement si les listes de sélection de ces instructions contiennent des expressions qui attribuent des valeurs aux variables qui sont locales aux fonctions.  
   
- Un nom en quatre parties est construit avec la fonction OPENDATASOURCE comme la partie nom de serveur peut être utilisé comme source de table, partout où un nom de table peut apparaître dans une instruction SELECT. Impossible de spécifier un nom en quatre parties pour [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+ Un nom en quatre parties, dont la partie nom de serveur est établie avec la fonction OPENDATASOURCE, peut être utilisé comme source de table dans tous les cas où il est possible d’inclure un nom de table dans une instruction SELECT. Un nom en quatre parties ne peut pas être spécifié pour [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
  Certaines restrictions syntaxiques s'appliquent aux instructions SELECT impliquant des tables distantes.  
   
 ## <a name="logical-processing-order-of-the-select-statement"></a>Ordre de traitement logique de l'instruction SELECT  
- Les étapes suivantes indiquent l'ordre de traitement logique, ou ordre de liaison, d'une instruction SELECT. Cet ordre détermine à quel moment les objets définis au cours d'une étape deviennent disponibles pour les clauses des étapes suivantes. Par exemple, si le processeur de requêtes peut se lier (accéder) aux tables ou vues définies dans la clause FROM, ces objets et leurs colonnes deviennent disponibles pour toutes les étapes suivantes. À l'inverse, puisque la clause SELECT correspond à l'étape 8, aucun alias de colonne ni aucune colonne dérivée défini(e) dans cette clause ne peut être référencé(e) par les clauses précédentes. Cependant, ils peuvent être référencés par les clauses suivantes telles que la clause ORDER BY. L’exécution physique réelle de l’instruction est déterminée par le processeur de requêtes et l’ordre peut différer de cette liste.  
+ Les étapes suivantes indiquent l'ordre de traitement logique, ou ordre de liaison, d'une instruction SELECT. Cet ordre détermine à quel moment les objets définis au cours d'une étape deviennent disponibles pour les clauses des étapes suivantes. Par exemple, si le processeur de requêtes peut se lier (accéder) aux tables ou vues définies dans la clause FROM, ces objets et leurs colonnes deviennent disponibles pour toutes les étapes suivantes. À l'inverse, puisque la clause SELECT correspond à l'étape 8, aucun alias de colonne ni aucune colonne dérivée défini(e) dans cette clause ne peut être référencé(e) par les clauses précédentes. Cependant, ils peuvent être référencés par les clauses suivantes telles que la clause ORDER BY. L’exécution physique réelle de l’instruction est déterminée par le processeur de requêtes, et l’ordre peut différer de cette liste.  
   
 1.  FROM  
 2.  ON  
@@ -139,21 +139,21 @@ SELECT <select_criteria>
 8.  SELECT  
 9. DISTINCT  
 10. ORDER BY  
-11. Haut de la page  
+11. TOP  
 
 > [!WARNING]
-> La séquence précédente est généralement la valeur true. Toutefois, il existe des cas rares où la séquence peut-être différer.
+> La séquence précédente est généralement celle qui est appliquée. Toutefois, dans certains cas rares, la séquence peut s’exécuter différemment.
 >
-> Par exemple, supposons que vous avez un index cluster sur une vue et la vue exclut certaines lignes de la table, et liste de sélection des colonnes de la vue utilise une conversion qui modifie un type de données à partir de *varchar* à *entier*. Dans ce cas, la conversion peut s’exécuter avant la clause WHERE s’exécute. En effet rare. Il existe souvent un moyen de modifier votre vue pour éviter la séquence différents, si cela est important dans votre cas. 
+> Par exemple, supposons qu’un index cluster est appliqué à un affichage qui exclut certaines lignes de la table, et que la liste de colonnes SELECT dans l’affichage utilise une clause CONVERT qui convertit un type de données *varchar* en *integer*. Dans ce cas, la clause CONVERT peut s’exécuter avant la clause WHERE. Ce cas se produit rarement. Il y a souvent un moyen de modifier votre affichage pour éviter tout changement de la séquence, si cela est important dans votre cas. 
 
 ## <a name="permissions"></a>Autorisations  
- La sélection de données requiert l'autorisation **SELECT** sur la table ou la vue, qui pourrait être héritée d'une étendue supérieure telle que l'autorisation **SELECT** sur le schéma ou l'autorisation **CONTROL** sur la table. Ou nécessite l’appartenance dans le **db_datareader** ou **db_owner** rôles de base de données fixes ou le **sysadmin** rôle serveur fixe. Création d’une table à l’aide **SELECTINTO** requiert également le **CREATETABLE** autorisation et la **ALTERSCHEMA** autorisation sur le schéma qui possède la nouvelle table.  
+ La sélection de données requiert l'autorisation **SELECT** sur la table ou la vue, qui pourrait être héritée d'une étendue supérieure telle que l'autorisation **SELECT** sur le schéma ou l'autorisation **CONTROL** sur la table. La sélection peut également nécessiter l’appartenance au rôle de base de données fixe **db_datareader** ou **db_owner**, ou au rôle de serveur fixe **sysadmin**. La création d’une table à l’aide de **SELECTINTO** nécessite également l’autorisation **CREATETABLE** et l’autorisation **ALTERSCHEMA** sur le schéma propriétaire de la nouvelle table.  
   
 ## <a name="examples"></a>Exemples :   
 Les exemples suivants utilisent la base de données [!INCLUDE[ssawPDW](../../includes/ssawpdw-md.md)].
   
 ### <a name="a-using-select-to-retrieve-rows-and-columns"></a>A. Utilisation de SELECT pour extraire des lignes et des colonnes  
- Cette section présente trois exemples de code. Ce premier exemple de code retourne toutes les lignes (aucune clause WHERE n’est spécifié) et toutes les colonnes (à l’aide de la `*`) à partir de la `DimEmployee` table.  
+ Cette section présente trois exemples de code. Le premier exemple de code retourne toutes les lignes (aucune clause WHERE n’est définie) et toutes les colonnes (en utilisant `*`) de la table `DimEmployee`.  
   
 ```sql  
 SELECT *  
@@ -161,7 +161,7 @@ FROM DimEmployee
 ORDER BY LastName;  
 ```  
   
- Exemple suivant à l’aide d’alias de table pour obtenir le même résultat.  
+ L’exemple suivant donne le même résultat, mais en utilisant des alias de table.  
   
 ```sql  
 SELECT e.*  
@@ -169,7 +169,7 @@ FROM DimEmployee AS e
 ORDER BY LastName;  
 ```  
   
- Cet exemple retourne toutes les lignes (aucune clause WHERE n’est spécifié) et un sous-ensemble des colonnes (`FirstName`, `LastName`, `StartDate`) à partir de la `DimEmployee` de table dans le `AdventureWorksPDW2012` base de données. La troisième colonne est renommée `FirstDay`.  
+ Cet exemple retourne toutes les lignes (aucune clause WHERE n’est définie) et un sous-ensemble des colonnes (`FirstName`, `LastName`, `StartDate`) de la table `DimEmployee` dans la base de données `AdventureWorksPDW2012`. L’en-tête de la troisième colonne est renommé `FirstDay`.  
   
 ```sql  
 SELECT FirstName, LastName, StartDate AS FirstDay  
@@ -177,7 +177,7 @@ FROM DimEmployee
 ORDER BY LastName;  
 ```  
   
- Cet exemple retourne uniquement les lignes de `DimEmployee` qui ont un `EndDate` qui n’est pas NULL et une `MaritalStatus` d’am » (marié).  
+ Cet exemple retourne uniquement les lignes de la table `DimEmployee` qui ont une valeur `EndDate` non NULL et une valeur `MaritalStatus` égale à « M » (marié).  
   
 ```sql  
 SELECT FirstName, LastName, StartDate AS FirstDay  
@@ -188,7 +188,7 @@ ORDER BY LastName;
 ```  
   
 ### <a name="b-using-select-with-column-headings-and-calculations"></a>B. Utilisation de SELECT avec des en-têtes de colonne et des calculs  
- L’exemple suivant retourne toutes les lignes de la `DimEmployee` table et calcule le salaire brut de chaque employé en fonction de leur `BaseRate` et une semaine de 40 heures de travail.  
+ L’exemple suivant retourne toutes les lignes de la table `DimEmployee`, et calcule le salaire brut de chaque employé sur la base de la valeur `BaseRate` et d’une semaine de 40 heures de travail.  
   
 ```sql  
 SELECT FirstName, LastName, BaseRate, BaseRate * 40 AS GrossPay  
@@ -197,7 +197,7 @@ ORDER BY LastName;
 ```  
   
 ### <a name="c-using-distinct-with-select"></a>C. Utilisation de DISTINCT avec SELECT  
- L’exemple suivant utilise `DISTINCT` pour générer une liste de tous les titres uniques dans le `DimEmployee` table.  
+ L’exemple suivant utilise `DISTINCT` pour générer une liste de tous les titres uniques figurant dans la table `DimEmployee`.  
   
 ```sql  
 SELECT DISTINCT Title  
@@ -206,7 +206,7 @@ ORDER BY Title;
 ```  
   
 ### <a name="d-using-group-by"></a>D. Utilisation de GROUP BY  
- L’exemple suivant recherche la quantité totale de toutes les ventes chaque jour.  
+ L’exemple suivant calcule le montant total des ventes réalisées par jour.  
   
 ```sql  
 SELECT OrderDateKey, SUM(SalesAmount) AS TotalSales  
@@ -215,10 +215,10 @@ GROUP BY OrderDateKey
 ORDER BY OrderDateKey;  
 ```  
   
- Raison de le `GROUP BY` clause, qu’une seule ligne contenant la somme de toutes les ventes est retournée pour chaque jour.  
+ Comme la clause `GROUP BY` est utilisée, une seule ligne contenant la somme de toutes les ventes est retournée pour chaque jour.  
   
 ### <a name="e-using-group-by-with-multiple-groups"></a>E. Utilisation de GROUP BY avec plusieurs groupes  
- L’exemple suivant recherche le prix moyen et la somme des ventes sur Internet pour chaque jour, regroupées par date de commande et la clé de la promotion.  
+ L’exemple suivant calcule le prix moyen et la somme des ventes sur Internet pour chaque jour, en regroupant les résultats en fonction de la date de commande et de la clé de promotion.  
   
 ```sql  
 
@@ -229,7 +229,7 @@ ORDER BY OrderDateKey;
 ```  
   
 ### <a name="f-using-group-by-and-where"></a>F. Utilisation de GROUP BY et WHERE  
- L’exemple suivant place les résultats en groupes après n’avoir extrait uniquement les lignes avec des dates de commande au plus tard le 1er août 2002.  
+ L’exemple suivant regroupe les résultats après avoir récupéré uniquement les lignes dont les dates de commande sont postérieures au 1er août 2002.  
   
 ```sql  
 SELECT OrderDateKey, SUM(SalesAmount) AS TotalSales  
@@ -249,7 +249,7 @@ GROUP BY (OrderDateKey * 10);
 ```  
   
 ### <a name="h-using-group-by-with-order-by"></a>H. Utilisation de GROUP BY avec ORDER BY  
- L’exemple suivant calcule la somme des ventes par jour et les commandes en fonction du jour.  
+ L’exemple suivant calcule la somme des ventes par jour, en triant les résultats par date.  
   
 ```sql  
 SELECT OrderDateKey, SUM(SalesAmount) AS TotalSales  
@@ -259,7 +259,7 @@ ORDER BY OrderDateKey;
 ```  
   
 ### <a name="i-using-the-having-clause"></a>I. Utilisation de la clause HAVING  
- Cette requête utilise le `HAVING` clause pour limiter les résultats.  
+ Cette requête utilise la clause `HAVING` pour limiter les résultats.  
   
 ```sql  
 SELECT OrderDateKey, SUM(SalesAmount) AS TotalSales  
@@ -269,8 +269,8 @@ HAVING OrderDateKey > 20010000
 ORDER BY OrderDateKey;  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- [SELECT Examples &#40;Transact-SQL&#41;](../../t-sql/queries/select-examples-transact-sql.md)  
- [Hints &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql.md)
+## <a name="see-also"></a> Voir aussi  
+ [Exemples SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-examples-transact-sql.md)  
+ [Indicateurs &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql.md)
   
 

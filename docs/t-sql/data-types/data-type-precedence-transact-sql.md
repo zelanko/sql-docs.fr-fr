@@ -1,5 +1,5 @@
 ---
-title: "Type de données (Transact-SQL) de priorité | Documents Microsoft"
+title: "Priorité des types de données (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 7/23/2017
 ms.prod: sql-non-specified
@@ -54,21 +54,21 @@ Lorsqu'un opérateur combine deux expressions de type de données différents, l
 1. **money**  
 1. **smallmoney**  
 1. **bigint**  
-1. **int**  
+1. **Int**  
 1. **smallint**  
 1. **tinyint**  
 1. **bit**  
 1. **ntext**  
-1. **text**  
+1. **texte**  
 1. **image**  
 1. **timestamp**  
 1. **uniqueidentifier**  
-1. **nvarchar** (y compris **nvarchar (max)** )  
+1. **nvarchar** (dont **nvarchar(max)** )  
 1. **nchar**  
-1. **varchar** (y compris **varchar (max)** )  
+1. **varchar** (dont **varchar(max)** )  
 1. **char**  
-1. **varbinary** (y compris **varbinary (max)** )  
-1. **binaire** (minimum)  
+1. **varbinary** (dont **varbinary(max)** )  
+1. **binary** (minimum)  
   
 ## <a name="see-also"></a>Voir aussi
 [Types de données &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)  

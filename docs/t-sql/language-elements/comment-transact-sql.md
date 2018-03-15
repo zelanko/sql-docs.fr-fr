@@ -1,5 +1,5 @@
 ---
-title: --(Commentaire) (Transact-SQL) | Documents Microsoft
+title: -- (Comment) (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
@@ -53,7 +53,7 @@ ms.lasthandoff: 01/25/2018
  *text_of_comment*  
  Chaîne de caractères contenant le texte du commentaire.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Utilisez deux tirets (--) pour un commentaire d'une seule ligne ou imbriqué. Les commentaires insérés à l'aide de -- se terminent par le caractère de saut de ligne. Il n'y a pas de longueur maximale pour les commentaires. Le tableau suivant répertorie les raccourcis clavier que vous pouvez utiliser pour commenter du texte ou annuler les marques de commentaire de ce dernier.  
   
 |Action|Standard|  
@@ -61,9 +61,9 @@ ms.lasthandoff: 01/25/2018
 |Mettre le texte sélectionné en commentaire|Ctrl+K, Ctrl+C|  
 |Ne pas commenter le texte sélectionné|Ctrl+K, Ctrl+U|  
   
- Pour plus d’informations sur les raccourcis clavier, consultez [SQL Server Management Studio Keyboard Shortcuts](../../tools/sql-server-management-studio/sql-server-management-studio-keyboard-shortcuts.md).  
+ Pour plus d’informations sur les raccourcis clavier, consultez [Raccourcis clavier dans SQL Server Management Studio](../../tools/sql-server-management-studio/sql-server-management-studio-keyboard-shortcuts.md).  
   
- Pour les commentaires multilignes, consultez [étoile de barre oblique &#40; Commentaire de bloc &#41; &#40; Transact-SQL &#41; ](../../t-sql/language-elements/slash-star-comment-transact-sql.md).  
+ Pour les commentaires multilignes, consultez [Barre oblique étoile &#40;bloc de commentaire&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/slash-star-comment-transact-sql.md).  
   
 ## <a name="examples"></a>Exemples  
  L'exemple suivant utilise les caractères d'indication de commentaire --.  
@@ -80,7 +80,7 @@ ORDER BY PostalCode ASC; -- We do not have to specify ASC because
 GO  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- [Langage de contrôle de flux &#40; Transact-SQL &#41;](~/t-sql/language-elements/control-of-flow.md)  
+## <a name="see-also"></a> Voir aussi  
+ [Langage de contrôle de flux &#40;Transact-SQL&#41;](~/t-sql/language-elements/control-of-flow.md)  
   
   

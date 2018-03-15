@@ -49,22 +49,22 @@ STR ( float_expression [ , length [ , decimal ] ] )
   
 ## <a name="arguments"></a>Arguments  
  *float_expression*  
- Est une expression numérique approximative (**float**) type de données avec une virgule décimale.  
+ Expression de type de données numérique approché (**float**) avec une virgule décimale.  
   
  *length*  
  Longueur totale. Inclut la virgule décimale, le signe, les chiffres et les espaces. La valeur par défaut est 10.  
   
  *decimal*  
- Représente le nombre de décimales à droite de la virgule décimale. *décimal* doit être inférieur ou égal à 16. Si *décimal* est supérieure à 16, le résultat est tronqué à seize places à droite de la virgule décimale.  
+ Représente le nombre de décimales à droite de la virgule décimale. La valeur *decimal* doit être inférieure ou égale à 16. Si la valeur *decimal* est supérieure à 16, le résultat est tronqué à seize chiffres à droite de la virgule décimale.  
   
 ## <a name="return-types"></a>Types de retour  
  **varchar**  
   
-## <a name="remarks"></a>Notes  
- Si spécifié, les valeurs de *longueur* et *décimal* paramètres str doivent être positifs. Le nombre est arrondi par défaut à un entier ou si le paramètre décimal est 0. La longueur spécifiée doit être supérieure ou égale à la partie du nombre située avant la virgule décimale plus le signe du nombre (le cas échéant). Short *expression* est aligné à droite dans la longueur spécifiée et un long *expression* est tronquée au nombre spécifié de décimales. Par exemple, STR (12**,**10) donne un résultat de 12. Il est justifié à droite dans le jeu de résultats. Toutefois, STR (1223**,**2) tronque le jeu de résultats à **. Il est possible d'imbriquer des fonctions de chaîne.  
+## <a name="remarks"></a>Notes   
+ Si elles sont spécifiées, les valeurs des paramètres *length* et *decimal* dans STR doivent être positives. Le nombre est arrondi par défaut à un entier ou si le paramètre décimal est 0. La longueur spécifiée doit être supérieure ou égale à la partie du nombre située avant la virgule décimale plus le signe du nombre (le cas échéant). Un argument *float_expression* court est justifié à droite selon la longueur spécifiée, et un argument *float_expression* long est tronqué au nombre spécifié de décimales. Par exemple, STR(12**,**10) donne 12 comme résultat. Il est justifié à droite dans le jeu de résultats. Toutefois, STR(1223**,**2) tronque le jeu de résultats à **. Il est possible d'imbriquer des fonctions de chaîne.  
   
 > [!NOTE]  
->  Pour convertir les données Unicode, utilisez STR dans une conversion ou [CAST](../../t-sql/functions/cast-and-convert-transact-sql.md) fonction de conversion.  
+>  Pour convertir en données Unicode, utilisez STR dans une fonction de conversion CONVERT ou [CAST](../../t-sql/functions/cast-and-convert-transact-sql.md).  
   
 ## <a name="examples"></a>Exemples  
  L'exemple suivant convertit une expression constituée de cinq chiffres et d'une virgule décimale en chaîne de caractères à six positions. La partie fractionnaire du nombre est arrondie à une décimale.  
@@ -115,10 +115,10 @@ GO
 (1 row(s) affected)  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [CAST et CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
  [FORMAT &#40;Transact-SQL&#41;](../../t-sql/functions/format-transact-sql.md)  
- [Fonctions de chaîne &#40; Transact-SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)  
+ [Fonctions de chaîne &#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)  
   
   
 

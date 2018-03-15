@@ -1,5 +1,5 @@
 ---
-title: SET TRANSACTION ISOLATION LEVEL (Transact-SQL) | Documents Microsoft
+title: SET TRANSACTION ISOLATION LEVEL (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 12/04/2017
 ms.prod: sql-non-specified
@@ -71,20 +71,20 @@ SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED
  READ UNCOMMITTED  
  Spécifie que les instructions peuvent lire des lignes qui ont été modifiées par d'autres transactions, mais pas encore validées.  
   
- Les transactions en cours d’exécution au niveau READ UNCOMMITTED ne génèrent pas de verrous partagés pour empêcher d’autres transactions de modifier les données lues par la transaction actuelle. Par ailleurs, les transactions READ UNCOMMITTED ne sont pas bloquées par des verrous exclusifs qui empêcheraient la transaction active de lire des lignes modifiées, mais non validées, par d'autres transactions. Lorsque cette option est définie, vous avez la possibilité de lire des modifications non validées, appelées lectures incorrectes. Les valeurs peuvent changer dans les données et des lignes peuvent apparaître ou disparaître dans le dataset avant la fin de la transaction. Cette option a le même effet que l'activation de l'option NOLOCK dans toutes les tables de toutes les instructions SELECT d'une transaction. Il s'agit du niveau d'isolement le moins restrictif.  
+ Les transactions qui s’exécutent au niveau READ UNCOMMITTED ne génèrent pas de verrous partagés pour empêcher d’autres transactions de modifier des données lues par la transaction en cours. Par ailleurs, les transactions READ UNCOMMITTED ne sont pas bloquées par des verrous exclusifs qui empêcheraient la transaction active de lire des lignes modifiées, mais non validées, par d'autres transactions. Lorsque cette option est définie, vous avez la possibilité de lire des modifications non validées, appelées lectures incorrectes. Les valeurs peuvent changer dans les données et des lignes peuvent apparaître ou disparaître dans le dataset avant la fin de la transaction. Cette option a le même effet que l'activation de l'option NOLOCK dans toutes les tables de toutes les instructions SELECT d'une transaction. Il s'agit du niveau d'isolement le moins restrictif.  
   
  Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vous pouvez également limiter les contentions de verrouillage tout en protégeant les transactions de lectures erronées de modifications de données non validées en utilisant :  
   
--   Le niveau d’isolation READ COMMITTED avec l’option de base de données READ_COMMITTED_SNAPSHOT a la valeur ON.  
+-   Le niveau d’isolation READ COMMITTED avec l’option de base de données READ_COMMITTED_SNAPSHOT activée (ON)  
   
--   le niveau d'isolement SNAPSHOT.  
+-   Le niveau d'isolement SNAPSHOT  
   
  READ COMMITTED  
  Spécifie que les instructions ne peuvent pas lire les données modifiées mais non validées par d'autres transactions. Cela permet d'éviter les lectures incorrectes. Les données peuvent être modifiées par d'autres transactions entre deux instructions au sein de la transaction active, ce qui aboutit à des lectures non renouvelables ou à des données fantômes. Il s'agit de l'option par défaut dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  Le comportement de READ COMMITTED dépend de la valeur affectée à l'option de base de données READ_COMMITTED_SNAPSHOT :  
   
--   Si l'option READ_COMMITTED_SNAPSHOT a la valeur OFF (valeur par défaut), le [!INCLUDE[ssDE](../../includes/ssde-md.md)] utilise des verrous partagés pour empêcher d'autres transactions de modifier des lignes pendant que la transaction active exécute une opération de lecture. Les verrous partagés empêchent également l'instruction de lire des lignes modifiées par d'autres transactions, tant que celles-ci ne sont pas terminées. Le type du verrou partagé détermine quand il sera levé. Les verrous de ligne sont levés avant que la ligne suivante ne soit traitée. Les verrous de page sont libérés lorsque la page suivante est lue et les verrous sont libérés lorsque l’instruction se termine.  
+-   Si l'option READ_COMMITTED_SNAPSHOT a la valeur OFF (valeur par défaut), le [!INCLUDE[ssDE](../../includes/ssde-md.md)] utilise des verrous partagés pour empêcher d'autres transactions de modifier des lignes pendant que la transaction active exécute une opération de lecture. Les verrous partagés empêchent également l'instruction de lire des lignes modifiées par d'autres transactions, tant que celles-ci ne sont pas terminées. Le type du verrou partagé détermine quand il sera levé. Les verrous de ligne sont levés avant que la ligne suivante ne soit traitée. Les verrous de page sont levés quand la page suivante est lue et les verrous de table sont levés quand l’exécution de l’instruction se termine.  
   
     > [!NOTE]  
     >  Si READ_COMMITTED_SNAPSHOT a la valeur ON, le [!INCLUDE[ssDE](../../includes/ssde-md.md)] utilise le contrôle de version de ligne pour présenter à chaque instruction un instantané cohérent des données (du point de vue transactionnel) telles qu'elles étaient au début de l'instruction. Les verrous ne sont pas utilisés pour protéger les données des mises à jour par d'autres transactions.  
@@ -102,7 +102,7 @@ SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED
  Des verrous partagés sont placés sur toutes les données lues par chaque instruction de la transaction et maintenus jusqu'à la fin de la transaction. Cela évite que d'autres transactions modifient des lignes qui ont été lues par la transaction active. D'autres transactions peuvent insérer de nouvelles lignes lorsque celles-ci correspondent aux conditions de recherche des instructions émises par la transaction active. Si par la suite la transaction active réexécute l'instruction, elle récupère les nouvelles lignes, ce qui aboutit à des lectures fantômes. Comme les verrous partagés sont maintenus jusqu'à la fin d'une transaction au lieu d'être débloqués à la fin de chaque instruction, l'accès concurrentiel est moindre qu'avec le niveau d'isolation READ COMMITTED par défaut. Utilisez cette option uniquement si c'est nécessaire.  
   
  SNAPSHOT  
- Spécifie que les données lues par n’importe quelle instruction dans une transaction représenteront la version cohérente des données qui existaient au début de la transaction. La transaction peut seulement reconnaître les modifications de données qui ont été validées avant qu'elle ne commence. Autrement dit, les modifications de données effectuées par d'autres transactions après le début de la transaction active ne sont pas visibles pour les instructions qui s'exécutent dans le cadre de ladite transaction. Tout se passe comme si les instructions d'une transaction obtenaient un instantané des données validées telles qu'elles existaient au début de cette transaction.  
+ Spécifie que les données lues par n’importe quelle instruction d’une transaction représentent la version cohérente d’un point de vue transactionnel des données qui existaient au début de la transaction. La transaction peut seulement reconnaître les modifications de données qui ont été validées avant qu'elle ne commence. Autrement dit, les modifications de données effectuées par d'autres transactions après le début de la transaction active ne sont pas visibles pour les instructions qui s'exécutent dans le cadre de ladite transaction. Tout se passe comme si les instructions d'une transaction obtenaient un instantané des données validées telles qu'elles existaient au début de cette transaction.  
   
  Sauf lors de la récupération d'une base de données, les transactions SNAPSHOT ne demandent pas de verrouillage lors de la lecture des données. Les transactions SNAPSHOT qui lisent des données n'empêchent pas d'autres transactions d'écrire des données. De même, les transactions qui écrivent des données n'empêchent pas des transactions SNAPSHOT de lire des données.  
   
@@ -128,7 +128,7 @@ SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED
   
  Des verrous de groupes sont placés dans les groupes de valeurs de clés qui correspondent aux conditions de recherche de chaque instruction exécutée dans une transaction. Cela empêche les autres transactions de mettre à jour ou d'insérer des lignes qui pourraient intervenir dans les instructions exécutées par la transaction active. Autrement dit, si l'une ou l'autre des instructions d'une transaction est exécutée une seconde fois, elle lira le même groupe de lignes. Les verrous de groupes sont conservés jusqu'au terme de la transaction. C'est le plus restrictif des niveaux d'isolation, parce qu'il verrouille des groupes de clés entiers et laisse les verrous en place jusqu'à la fin de la transaction. Comme l'accès concurrentiel est plus limité, utilisez cette option uniquement lorsque cela s'avère nécessaire. Cette option a le même effet que l'utilisation de l'option HOLDLOCK dans toutes les tables de toutes les instructions SELECT d'une transaction.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Une seule des options de niveau d'isolation peut être définie à la fois, et elle reste en vigueur durant cette connexion tant qu'elle n'est pas explicitement modifiée. Toutes les opérations de lecture effectuées au sein de la transaction obéissent aux règles du niveau d'isolation spécifié, sauf si un indicateur de table de la clause FROM d'une instruction spécifie un autre verrouillage ou un autre comportement de contrôle de version pour une table.  
   
  Les niveaux d'isolation des transactions définissent le type de verrous placés sur les opérations de lecture. Les verrous partagés placés pour READ COMMITTED ou REPEATABLE READ sont généralement des verrous de ligne, bien que ceux-ci puissent être promus au rang de verrous de page ou de table si la lecture fait référence à un nombre important de lignes d'une page ou d'une table. Si une ligne est modifiée par la transaction après avoir été lue, la transaction acquiert un verrou exclusif pour protéger cette ligne et ce verrou est maintenu jusqu'à la fin de la transaction. Par exemple, si une transaction REPEATABLE READ utilise un verrou partagé sur une ligne et qu'elle modifie ensuite cette ligne, le verrou partagé est converti en verrou exclusif de ligne.  
@@ -154,17 +154,17 @@ SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED
   
 -   READ COMMITTED avec le contrôle de version de ligne  
   
- Inversement, les requêtes exécutées sous ces niveaux d'isolation bloquent les opérations de chargement en masse optimisées portant sur des segments. Pour plus d’informations sur les opérations de chargement en bloc, consultez [importation et exportation de données &#40; SQL Server &#41; ](../../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md).  
+ Inversement, les requêtes exécutées sous ces niveaux d'isolation bloquent les opérations de chargement en masse optimisées portant sur des segments. Pour plus d’informations sur les opérations de chargement en bloc, consultez [Importation et exportation en bloc de données &#40;SQL Server&#41;](../../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md).  
   
  Les bases de données compatibles FILESTREAM prennent en charge les niveaux d'isolement des transactions suivants.  
   
-|Niveau d'isolation|Transact SQL l’accès|Accès au système de fichiers|  
+|Niveau d'isolation|Accès Transact SQL|Accès au système de fichiers|  
 |---------------------|-------------------------|------------------------|  
 |Lecture non validée|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]|Non pris en charge|  
 |Lecture validée|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]|  
 |Lecture renouvelable|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]|Non pris en charge|  
 |Sérialisable|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]|Non pris en charge|  
-|Instantané Read committed|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]|  
+|Capture instantanée Read Committed|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]|  
 |Snapshot|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]|  
   
 ## <a name="examples"></a>Exemples  
@@ -187,9 +187,9 @@ COMMIT TRANSACTION;
 GO  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
- [DBCC USEROPTIONS &#40; Transact-SQL &#41;](../../t-sql/database-console-commands/dbcc-useroptions-transact-sql.md)   
+ [DBCC USEROPTIONS &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-useroptions-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [Instructions SET &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)   
  [Indicateurs de table &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md)  

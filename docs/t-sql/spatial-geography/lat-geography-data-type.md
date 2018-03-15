@@ -1,5 +1,5 @@
 ---
-title: "LAT (Type de données geography) | Documents Microsoft"
+title: "Lat (type de données geography) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="lat-geography-data-type"></a>Lat (type de données geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  La propriété de latitude de la **geography** instance.  
+  Propriété de latitude de l’instance **geography**.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -43,12 +43,12 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>Types de retour  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]type : **float**  
+ Type [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] : **float**  
   
  Type CLR : **SqlDouble**  
   
-## <a name="remarks"></a>Notes  
- Dans le modèle OpenGIS, Lat est défini uniquement sur **geography** instances composé d’un point unique. Cette propriété retourne NULL si **geography** instances contiennent plus d’un point unique. Cette propriété est précise et en lecture seule.  
+## <a name="remarks"></a>Notes   
+ Dans le modèle OpenGIS, Lat est défini uniquement sur les instances **geography** composées d’un seul point. Cette propriété retourne NULL si les instances **geography** contiennent plusieurs points. Cette propriété est précise et en lecture seule.  
   
 ## <a name="examples"></a>Exemples  
  Cet exemple crée un point et retourne la latitude du point.  
@@ -59,7 +59,7 @@ SET @g = geography::STGeomFromText('POINT(-122.34900 47.65100)', 4326);
 SELECT @g.Lat;  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Méthodes étendues sur des instances geography](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)  
   
   

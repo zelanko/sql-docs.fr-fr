@@ -50,25 +50,25 @@ REPLACE ( string_expression , string_pattern , string_replacement )
   
 ## <a name="arguments"></a>Arguments  
  *string_expression*  
- La chaîne [expression](../../t-sql/language-elements/expressions-transact-sql.md) à rechercher. *string_expression* peut être de type binaire ou caractère.  
+ [Expression](../../t-sql/language-elements/expressions-transact-sql.md) de chaîne à rechercher. *string_expression* peut être de type de données binaire ou caractère.  
   
  *string_*pattern  
- Est la sous-chaîne à rechercher. *string_pattern* peuvent être de type binaire ou caractère. *string_pattern* ne peut pas être une chaîne vide («) et ne doit pas dépasser le nombre maximal d’octets pouvant tenir sur une page.  
+ Sous-chaîne à rechercher. *string_pattern* peut être de type de données binaire ou caractère. *string_pattern* ne peut pas être une chaîne vide ('') et ne doit pas dépasser le nombre maximal d’octets tenant sur une page.  
   
  *string_*replacement  
- Est la chaîne de remplacement. *string_replacement* peuvent être de type binaire ou caractère.  
+ Chaîne de remplacement. *string_replacement* peut être de type de données binaire ou caractère.  
   
 ## <a name="return-types"></a>Types de retour  
- Retourne **nvarchar** si un des arguments d’entrée est de le **nvarchar** de type de données ; sinon, REPLACE retourne **varchar**.  
+ Retourne **nvarchar** si l’un des arguments d’entrée est de type de données **nvarchar** ; dans le cas contraire, REPLACE retourne **varchar**.  
   
  Retourne NULL si n'importe lequel des arguments a pour valeur NULL.  
   
- Si *string_expression* n’est pas de type **varchar (max)** ou **nvarchar (max), remplacer** tronque la valeur de retour à 8 000 octets. Pour retourner des valeurs supérieures à 8 000 octets, *string_expression* doit être explicitement converti en un type de données de grande valeur.  
+ Si *string_expression* n’est pas de type **varchar(max)** ou **nvarchar(max), REPLACE** tronque la valeur de retour à 8 000 octets. Pour retourner des valeurs supérieures à 8 000 octets, il est nécessaire d’effectuer explicitement le transtypage de *string_expression* vers un type de données de valeur de grande taille.  
   
-## <a name="remarks"></a>Notes  
- REPLACE effectue des comparaisons basées sur le classement de l'entrée. Pour effectuer une comparaison dans un classement spécifique, vous pouvez utiliser [COLLATE](~/t-sql/statements/collations.md) pour appliquer un classement explicite à l’entrée.  
+## <a name="remarks"></a>Notes   
+ REPLACE effectue des comparaisons basées sur le classement de l'entrée. Pour effectuer une comparaison dans un classement donné, vous pouvez utiliser [COLLATE](~/t-sql/statements/collations.md) pour appliquer à l’entrée un classement explicite.  
   
- 0 x 0000 (**char(0)**) est un caractère indéfini dans les classements Windows et ne peut pas être inclus dans REPLACE.  
+ 0x0000 (**char(0)**) est un caractère non défini dans les classements Windows et ne peut pas être inclus dans REPLACE.  
   
 ## <a name="examples"></a>Exemples  
  L'exemple suivant remplace la chaîne `cde` dans `abcdefghi` par `xxx`.  
@@ -103,7 +103,7 @@ This is a desk
 ```  
 
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [CONCAT &#40;Transact-SQL&#41;](../../t-sql/functions/concat-transact-sql.md)  
  [CONCAT_WS &#40;Transact-SQL&#41;](../../t-sql/functions/concat-ws-transact-sql.md)  
  [FORMATMESSAGE &#40;Transact-SQL&#41;](../../t-sql/functions/formatmessage-transact-sql.md)  
@@ -114,5 +114,5 @@ This is a desk
  [STUFF &#40;Transact-SQL&#41;](../../t-sql/functions/stuff-transact-sql.md)  
  [TRANSLATE &#40;Transact-SQL&#41;](../../t-sql/functions/translate-transact-sql.md)  
  [Types de données &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
- [Fonctions de chaîne &#40; Transact-SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)  
+ [Fonctions de chaîne &#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)  
   

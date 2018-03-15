@@ -1,5 +1,5 @@
 ---
-title: "ToString (moteur de base de données) | Documents Microsoft"
+title: "ToString (moteur de base de données) | Microsoft Docs"
 ms.custom: 
 ms.date: 7/23/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="tostring-database-engine"></a>ToString (moteur de base de données)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Retourne une chaîne avec la représentation logique de *cela*. ToString est appelée implicitement lorsqu’une conversion de **hierarchyid** à une chaîne de type se produit. Agit comme l’opposé de [Parse &#40; moteur de base de données &#41;](../../t-sql/data-types/parse-database-engine.md).
+Retourne une chaîne avec la représentation logique de *this*. ToString est appelée implicitement quand une conversion de **hierarchyid** en un type chaîne se produit. Agit comme l’opposé de [Parse &#40;Database Engine&#41;](../../t-sql/data-types/parse-database-engine.md).
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -52,12 +52,12 @@ string ToString  ( )
 ```  
   
 ## <a name="return-types"></a>Types de retour
-**Type:nvarchar(4000) de retour SQL Server**
+**Type de retour SQL Server : nvarchar(4000)**
   
-**Type : chaîne retour CLR**
+**Type de retour CLR : String** 
   
-## <a name="remarks"></a>Notes  
-Retourne l'emplacement logique dans la hiérarchie. Par exemple, `/2/1/` représente la quatrième ligne ([!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]) dans la structure hiérarchique suivante d’un système de fichiers :
+## <a name="remarks"></a>Notes   
+Retourne l'emplacement logique dans la hiérarchie. Par exemple, `/2/1/` représente la quatrième ligne ([!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]) de la structure hiérarchique suivante d’un système de fichiers :
   
 ```sql
 /        C:\  
@@ -71,7 +71,7 @@ Retourne l'emplacement logique dans la hiérarchie. Par exemple, `/2/1/` représ
 ## <a name="examples"></a>Exemples  
   
 ### <a name="a-transact-sql-example-in-a-table"></a>A. Exemple Transact-SQL dans une table  
-L’exemple suivant retourne le `OrgNode` colonne à la fois comme le **hierarchyid** type de données et dans le format de chaîne plus lisible :
+L’exemple suivant retourne la colonne `OrgNode` à la fois comme un type de données **hierarchyid** et sous un format de chaîne plus lisible :
   
 ```sql
 SELECT OrgNode,  
@@ -95,7 +95,7 @@ OrgNode   Node
 ```  
   
 ### <a name="b-converting-transact-sql-values-without-a-table"></a>B. Conversion de valeurs Transact-SQL sans table  
-Le de code suivant montre comment utiliser `ToString` pour convertir un **hierarchyid** valeur à une chaîne, et `Parse` pour convertir une valeur de chaîne en un **hierarchyid**.
+L’exemple de code suivant utilise `ToString` pour convertir une valeur **hierarchyid** en une chaîne et `Parse` pour convertir une valeur de chaîne en **hierarchyid**.
   
 ```sql
 DECLARE @StringValue AS nvarchar(4000), @hierarchyidValue AS hierarchyid  
@@ -116,7 +116,7 @@ hierarchyidRepresentation    StringRepresentation
 ```
   
 ### <a name="c-clr-example"></a>C. Exemple CLR  
-L’extrait de code suivant appelle la méthode ToString() :
+L’extrait de code suivant appelle la méthode ToString() :
   
 ```sql
 this.ToString()  

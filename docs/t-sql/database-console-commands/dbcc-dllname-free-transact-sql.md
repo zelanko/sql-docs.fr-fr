@@ -41,7 +41,7 @@ ms.contentlocale: fr-FR
 ms.lasthandoff: 01/25/2018
 ---
 # <a name="dbcc-dllname-free-transact-sql"></a>DBCC dllname (FREE) (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]Décharge la procédure stockée étendue spécifiées DLL de la mémoire.
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] Décharge la DLL de procédure stockée étendue spécifiée de la mémoire.
   
 ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -57,11 +57,11 @@ DBCC <dllname> ( FREE ) [ WITH NO_INFOMSGS ]
  WITH NO_INFOMSGS  
  Supprime tous les messages d'information.  
   
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Notes 
 Lorsqu'une procédure stockée étendue est exécutée, la DLL reste chargée par l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] jusqu'à l'arrêt du serveur. Cette instruction permet de décharger une DLL de la mémoire sans arrêter [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour afficher les fichiers DLL actuellement chargés par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], exécutez **sp_helpextendedproc**
   
 ## <a name="result-sets"></a>Jeux de résultats  
-Lorsqu’une DLL valide est spécifiée, DBCC *dllname* (FREE) renvoie :
+Quand une DLL valide est spécifiée, DBCC *dllname* (FREE) retourne :
   
 ```sql
 DBCC execution completed. If DBCC printed error messages, contact your system administrator.  
@@ -71,13 +71,13 @@ DBCC execution completed. If DBCC printed error messages, contact your system ad
 Nécessite l’appartenance au rôle de serveur fixe **sysadmin** ou au rôle de base de données fixe **db_owner** .
   
 ## <a name="examples"></a>Exemples  
-L’exemple suivant suppose que `xp_sample` est implémenté en tant que fichier xp_sample.dll et a été exécutée. DBCC \< *dllname*> décharge (FREE) le fichier xp_sample.dll associé le `xp_sample` procédure étendue.
+L’exemple suivant suppose que `xp_sample` est implémenté en tant que fichier xp_sample.dll et a été exécuté. DBCC \<*dllname*> (FREE) décharge le fichier xp_sample.dll associé à la procédure étendue `xp_sample`.
   
 ```sql  
 DBCC xp_sample (FREE);  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)  
 [Caractéristiques d'exécution des procédures stockées étendues](../../relational-databases/extended-stored-procedures-programming/execution-characteristics-of-extended-stored-procedures.md)  
 [sp_addextendedproc &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addextendedproc-transact-sql.md)  

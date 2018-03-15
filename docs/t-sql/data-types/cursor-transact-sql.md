@@ -1,5 +1,5 @@
 ---
-title: curseur (Transact-SQL) | Documents Microsoft
+title: cursor (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 7/23/2017
 ms.prod: sql-non-specified
@@ -33,26 +33,26 @@ ms.lasthandoff: 11/21/2017
 
 Type de données pour les variables ou les paramètres OUTPUT des procédures stockées contenant une référence à un curseur.
   
-## <a name="remarks"></a>Notes  
-Les opérations qui peuvent référencer des variables et des paramètres ayant un **curseur** sont de type de données :
--   DECLARE  *@local_variable*  et  *@local_variable*  instructions.  
+## <a name="remarks"></a>Notes   
+Les opérations suivantes peuvent référencer des variables et des paramètres ayant un type de données **cursor** :
+-   les instructions DECLARE *@local_variable* et SET *@local_variable* ;  
 -   les instructions de curseur OPEN, FETCH, CLOSE et DEALLOCATE ;  
 -   les paramètres de sortie des procédures stockées ;  
 -   la fonction CURSOR_STATUS ;  
--   Le **sp_cursor_list**, **sp_describe_cursor**, **sp_describe_cursor_tables**, et **sp_describe_cursor_columns** procédures stockées système.  
+-   les procédures stockées système **sp_cursor_list**, **sp_describe_cursor**, **sp_describe_cursor_tables** et **sp_describe_cursor_columns**.  
   
-Le **cursor_name** colonne de sortie de **sp_cursor_list** et **sp_describe_cursor** retourne le nom de la variable de curseur.
+La colonne de sortie **cursor_name** de **sp_cursor_list** et **sp_describe_cursor** retourne le nom de la variable de curseur.
   
-Toutes les variables créées avec la **curseur** type de données sont nullables.
+Toutes les variables créées avec le type de données **cursor** acceptent la valeur Null.
   
-Le **curseur** type de données ne peut pas être utilisé pour une colonne dans une instruction CREATE TABLE.
+Il n’est pas possible d’utiliser le type de données **cursor** dans une colonne d’une instruction CREATE TABLE.
   
 ## <a name="see-also"></a>Voir aussi
 [CAST et CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
-[CURSOR_STATUS &#40; Transact-SQL &#41;](../../t-sql/functions/cursor-status-transact-sql.md)  
-[Conversion de Type de données &#40; moteur de base de données &#41;](../../t-sql/data-types/data-type-conversion-database-engine.md)  
+[CURSOR_STATUS &#40;Transact-SQL&#41;](../../t-sql/functions/cursor-status-transact-sql.md)  
+[Conversion de type de données &#40;moteur de base de données&#41;](../../t-sql/data-types/data-type-conversion-database-engine.md)  
 [Types de données &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)  
-[Déclarez le curseur &#40; Transact-SQL &#41;](../../t-sql/language-elements/declare-cursor-transact-sql.md)  
+[DECLARE CURSOR &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-cursor-transact-sql.md)  
 [DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)  
 [SET @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/set-local-variable-transact-sql.md)
   

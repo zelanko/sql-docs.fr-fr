@@ -1,5 +1,5 @@
 ---
-title: ALTER MASTER KEY (Transact-SQL) | Documents Microsoft
+title: ALTER MASTER KEY (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -98,21 +98,21 @@ ALTER MASTER KEY <alter_option>
 ```  
   
 ## <a name="arguments"></a>Arguments  
- Mot de passe ='*mot de passe*'  
- Spécifie un mot de passe avec lequel chiffrer ou déchiffrer la clé principale de la base de données. *mot de passe* doit remplir les conditions de stratégie de mot de passe Windows de l’ordinateur qui exécute l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ PASSWORD ='*password*'  
+ Spécifie un mot de passe avec lequel chiffrer ou déchiffrer la clé principale de la base de données. *password* doit satisfaire aux critères de la stratégie de mot de passe Windows de l’ordinateur qui exécute l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  L'option REGENERATE permet de créer de nouveau la clé principale de base de données et toutes les clés qu'elle protège. Les clés sont déchiffrées au préalable au moyen de l'ancienne clé principale, puis chiffrées au moyen de la nouvelle clé principale. Cette opération gourmande en ressources doit être planifiée au cours d'une période de faible demande, à moins que la clé principale ait été compromise.  
   
- [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] utilise l’algorithme de chiffrement AES pour protéger la clé principale du service (SMK) et la clé principale de base de données (DMK). AES est un algorithme de chiffrement plus récent que 3DES, qui était utilisé dans les versions antérieures. Au terme de la mise à niveau d'une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)] vers [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], les clés SMK et DMK doivent être régénérées pour mettre à niveau les clés principales vers AES. Pour plus d’informations sur la régénération de la clé SMK, consultez [ALTER SERVICE MASTER KEY &#40; Transact-SQL &#41; ](../../t-sql/statements/alter-service-master-key-transact-sql.md).  
+ [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] utilise l’algorithme de chiffrement AES pour protéger la clé principale du service (SMK) et la clé principale de base de données (DMK). AES est un algorithme de chiffrement plus récent que 3DES, qui était utilisé dans les versions antérieures. Au terme de la mise à niveau d'une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)] vers [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], les clés SMK et DMK doivent être régénérées pour mettre à niveau les clés principales vers AES. Pour plus d’informations sur la régénération de la clé SMK, consultez [ALTER SERVICE MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-service-master-key-transact-sql.md).  
   
- Lorsque l'option FORCE est utilisée, la régénération de clé continue même si la clé principale n'est pas disponible ou si le serveur ne peut pas déchiffrer toutes les clés privées chiffrées. Si la clé principale ne peut pas être ouvert, utilisez la [RESTORE MASTER KEY](../../t-sql/statements/restore-master-key-transact-sql.md) instruction pour restaurer la clé principale à partir d’une sauvegarde. Utilisez l'option FORCE seulement si la clé principale ne peut pas être récupérée ou si le déchiffrement échoue. Les données chiffrées uniquement à l'aide d'une clé irrécupérable sont perdues.  
+ Lorsque l'option FORCE est utilisée, la régénération de clé continue même si la clé principale n'est pas disponible ou si le serveur ne peut pas déchiffrer toutes les clés privées chiffrées. Si la clé principale ne peut pas être ouverte, utilisez l’instruction [RESTORE MASTER KEY](../../t-sql/statements/restore-master-key-transact-sql.md) pour restaurer la clé principale à partir d’une sauvegarde. Utilisez l'option FORCE seulement si la clé principale ne peut pas être récupérée ou si le déchiffrement échoue. Les données chiffrées uniquement à l'aide d'une clé irrécupérable sont perdues.  
   
  L'option DROP ENCRYPTION BY SERVICE MASTER KEY permet de supprimer le chiffrement de la clé principale de base de données au moyen de la clé principale du service.  
   
  ADD ENCRYPTION BY SERVICE MASTER KEY entraîne le chiffrement d'une copie de la clé principale au moyen de la clé principale du service et le stockage de cette copie dans la base de données en cours et dans master.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Requiert l'autorisation CONTROL sur la base de données. Si la clé principale de base de données a été chiffrée à l'aide d'un mot de passe, ce mot de passe doit également être connu.  
   
 ## <a name="examples"></a>Exemples  
@@ -124,8 +124,8 @@ ALTER MASTER KEY REGENERATE WITH ENCRYPTION BY PASSWORD = 'dsjdkflJ435907NnmM#sX
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemples : [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] et[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- L’exemple suivant crée une nouvelle clé principale de base de données pour `AdventureWorksPDW2012` et rechiffre les clés en dessous dans la hiérarchie de chiffrement.  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemples : [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] et [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+ Dans l’exemple suivant, une clé principale de base de données est créée pour `AdventureWorksPDW2012` et les clés placées sous cette clé dans la hiérarchie de chiffrement sont de nouveau chiffrées.  
   
 ```  
 USE master;  
@@ -133,13 +133,13 @@ ALTER MASTER KEY REGENERATE WITH ENCRYPTION BY PASSWORD = 'dsjdkflJ435907NnmM#sX
 GO  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [CREATE MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-master-key-transact-sql.md)   
- [Ouvrez MASTER KEY &#40; Transact-SQL &#41;](../../t-sql/statements/open-master-key-transact-sql.md)   
- [CLOSE MASTER KEY &#40; Transact-SQL &#41;](../../t-sql/statements/close-master-key-transact-sql.md)   
- [BACKUP MASTER KEY &#40; Transact-SQL &#41;](../../t-sql/statements/backup-master-key-transact-sql.md)   
- [RESTORE MASTER KEY &#40; Transact-SQL &#41;](../../t-sql/statements/restore-master-key-transact-sql.md)   
- [DROP MASTER KEY &#40; Transact-SQL &#41;](../../t-sql/statements/drop-master-key-transact-sql.md)   
+ [OPEN MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/open-master-key-transact-sql.md)   
+ [CLOSE MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/close-master-key-transact-sql.md)   
+ [BACKUP MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/backup-master-key-transact-sql.md)   
+ [RESTORE MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-master-key-transact-sql.md)   
+ [DROP MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-master-key-transact-sql.md)   
  [Hiérarchie de chiffrement](../../relational-databases/security/encryption/encryption-hierarchy.md)   
  [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)   
  [Attacher et détacher une base de données &#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md)  

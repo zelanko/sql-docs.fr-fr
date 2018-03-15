@@ -56,10 +56,10 @@ END
  { *sql_statement* | *statement_block* }  
  Représente toute instruction ou tout groupe d'instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] valide tel que défini dans un bloc d'instructions.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Les blocs BEGIN...END peuvent être imbriqués.  
   
- Bien que tous les [!INCLUDE[tsql](../../includes/tsql-md.md)] instructions sont valides dans un BEGIN... FIN bloquer certains [!INCLUDE[tsql](../../includes/tsql-md.md)] instructions ne doivent pas être regroupées dans le même lot, ou le bloc d’instructions.  
+ Bien que toutes les instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] soient valides à l’intérieur d’un bloc BEGIN…END, certaines instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] ne doivent pas être regroupées à l’intérieur d’un même lot ou bloc d’instructions.  
   
 ## <a name="examples"></a>Exemples  
  Dans l'exemple suivant, `BEGIN` et `END` délimitent une série d'instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] qui sont exécutées ensemble. Si le bloc `BEGIN...END` ne figurait pas dans l'exemple, les deux instructions `ROLLBACK TRANSACTION` seraient exécutées et les deux messages `PRINT` seraient renvoyés.  
@@ -84,8 +84,8 @@ Rolled back the transaction.
 */  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemples : [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] et[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- Dans l’exemple suivant, `BEGIN` et `END` définir une série de [!INCLUDE[DWsql](../../includes/dwsql-md.md)] les instructions qui s’exécutent ensemble. Si le `BEGIN...END` bloc ne sont pas inclus, l’exemple suivant sera dans une boucle continue.  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemples : [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] et [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+ Dans l’exemple suivant, `BEGIN` et `END` définissent une série d’instructions [!INCLUDE[DWsql](../../includes/dwsql-md.md)] qui s’exécutent ensemble. Si le bloc `BEGIN...END` n’est pas inclus, l’exemple suivant est dans une boucle continue.  
   
 ```  
 -- Uses AdventureWorks  
@@ -100,9 +100,9 @@ END;
   
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [ALTER TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/alter-trigger-transact-sql.md)   
- [Langage de contrôle de flux &#40; Transact-SQL &#41;](~/t-sql/language-elements/control-of-flow.md)   
+ [Langage de contrôle de flux &#40;Transact-SQL&#41;](~/t-sql/language-elements/control-of-flow.md)   
  [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)   
  [END &#40;BEGIN...END&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/end-begin-end-transact-sql.md)  
   

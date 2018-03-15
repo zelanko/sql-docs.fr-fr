@@ -1,5 +1,5 @@
 ---
-title: "SUPPRIMER le rôle de serveur (Transact-SQL) | Documents Microsoft"
+title: DROP SERVER ROLE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -48,19 +48,19 @@ DROP SERVER ROLE role_name
 ```  
   
 ## <a name="arguments"></a>Arguments  
- *nom_rôle*  
+ *role_name*  
  Spécifie le rôle de serveur défini par l'utilisateur à supprimer du serveur.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Les rôles de serveur définis par l'utilisateur qui possèdent leurs propres éléments sécurisables ne peuvent pas être supprimés du serveur. Pour supprimer un rôle de serveur défini par l'utilisateur qui possède des éléments sécurisables, vous devez tout d'abord transférer la propriété de ces éléments ou supprimer ces derniers.  
   
- Les rôles de serveur définis par l'utilisateur qui comportent des membres ne peuvent pas être supprimés. Pour supprimer un rôle de serveur défini par l’utilisateur qui a des membres, vous devez d’abord supprimer les membres du rôle à l’aide de [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md).  
+ Les rôles de serveur définis par l'utilisateur qui comportent des membres ne peuvent pas être supprimés. Pour supprimer un rôle serveur défini par l’utilisateur qui comporte des membres, vous devez d’abord supprimer les membres du rôle à l’aide de l’instruction [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md).  
   
  Les rôles serveur fixes ne peuvent pas être supprimés.  
   
- Vous pouvez afficher des informations sur l’appartenance au rôle en interrogeant le [sys.server_role_members](../../relational-databases/system-catalog-views/sys-server-role-members-transact-sql.md) affichage catalogue.  
+ Vous pouvez afficher des informations sur l’appartenance à des rôles en interrogeant la vue de catalogue [sys.server_role_members](../../relational-databases/system-catalog-views/sys-server-role-members-transact-sql.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Requiert l'autorisation CONTROL sur le rôle de serveur ou l'autorisation ALTER ANY SERVER ROLE.  
   
 ## <a name="examples"></a>Exemples  
@@ -74,7 +74,7 @@ GO
 ```  
   
 ### <a name="b-to-view-role-membership"></a>B. Pour consulter l'appartenance à un rôle  
- Pour afficher l’appartenance au rôle, utilisez la **rôle de serveur (membres**) dans la page [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou exécutez la requête suivante :  
+ Pour afficher l’appartenance à un rôle, utilisez la page **Rôle serveur (Membres**) dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou exécutez la requête suivante :  
   
 ```  
 SELECT SRM.role_principal_id, SP.name AS Role_Name,   
@@ -98,11 +98,11 @@ JOIN sys.server_principals AS SP2
 ORDER BY SP1.name ;  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- [ALTER ROLE &#40; Transact-SQL &#41;](../../t-sql/statements/alter-role-transact-sql.md)   
- [CRÉER un rôle &#40; Transact-SQL &#41;](../../t-sql/statements/create-role-transact-sql.md)   
+## <a name="see-also"></a> Voir aussi  
+ [ALTER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-role-transact-sql.md)   
+ [CREATE ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-role-transact-sql.md)   
  [Principaux &#40;moteur de base de données&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
- [DROP ROLE &#40; Transact-SQL &#41;](../../t-sql/statements/drop-role-transact-sql.md)   
+ [DROP ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-role-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   
  [sp_addrolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md)   
  [sys.database_role_members &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-role-members-transact-sql.md)   

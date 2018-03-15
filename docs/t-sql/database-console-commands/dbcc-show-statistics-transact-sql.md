@@ -51,7 +51,7 @@ ms.lasthandoff: 01/25/2018
 
 DBCC SHOW_STATISTICS affiche les statistiques d'optimisation de la requête actuelle pour une table ou une vue indexée. L'optimiseur de requête utilise des statistiques pour estimer le nombre de lignes, également appelé cardinalité, dans le résultat de la requête, ce qui lui permet de créer un plan de requête de haute qualité. Par exemple, l'optimiseur de requête pourrait utiliser des estimations de cardinalité afin de choisir l'opérateur de recherche d'index plutôt que l'opérateur d'analyse d'index dans le plan de requête. Cela permettrait d'améliorer les performances des requêtes car le recours à une analyse d'index monopolisant de nombreuses ressources serait ainsi évité.
   
-L'optimiseur de requête stocke des statistiques pour une table ou vue indexée dans un objet des statistiques. Pour une table, l'objet des statistiques est créé sur un index ou sur une liste de colonnes de table. L'objet des statistiques inclut un en-tête contenant des métadonnées sur les statistiques, un histogramme indiquant la distribution des valeurs dans la première colonne clé de l'objet des statistiques, et un vecteur de densité destiné à mesurer la corrélation entre les colonnes. Le [!INCLUDE[ssDE](../../includes/ssde-md.md)] peut calculer des estimations de cardinalité avec les données dans l’objet de statistiques.
+L'optimiseur de requête stocke des statistiques pour une table ou vue indexée dans un objet des statistiques. Pour une table, l'objet des statistiques est créé sur un index ou sur une liste de colonnes de table. L'objet des statistiques inclut un en-tête contenant des métadonnées sur les statistiques, un histogramme indiquant la distribution des valeurs dans la première colonne clé de l'objet des statistiques, et un vecteur de densité destiné à mesurer la corrélation entre les colonnes. Le [!INCLUDE[ssDE](../../includes/ssde-md.md)] peut calculer des estimations de cardinalité avec n’importe laquelle des données de l’objet des statistiques.
   
 DBCC SHOW_STATISTICS affiche l'en-tête, l'histogramme et le vecteur de densité en fonction des données stockées dans l'objet des statistiques. La syntaxe vous permet de spécifier une table ou une vue indexée ainsi qu’un nom d'index cible, un nom de statistique ou un nom de colonne. Cette rubrique explique comment afficher les statistiques et comment comprendre les résultats affichés.
   
@@ -86,13 +86,13 @@ DBCC SHOW_STATISTICS ( table_name , target )
  Nom de la table qui contient les statistiques à afficher. La table ne peut pas être une table externe.  
   
  *cible*  
- Nom de l'index, de la statistique ou de la colonne dont les informations statistiques doivent être affichées. *cible* est placé entre crochets, unique guillemets doubles, des guillemets ou des guillemets non. Si *cible* est un nom d’un index existant ou des statistiques sur une table ou une vue indexée, les informations statistiques concernant cette cible sont retournée. Si *cible* est le nom d’une colonne existante, et il existe un statistiques créées automatiquement sur cette colonne, plus d’informations sur cette statistique créée automatiquement sont retournés. S'il n'existe pas de statistique créée automatiquement pour une cible de colonne, le message d'erreur 2767 est retourné.  
- Dans [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] et [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], *cible* ne peut pas être un nom de colonne.  
+ Nom de l'index, de la statistique ou de la colonne dont les informations statistiques doivent être affichées. *target* est placé entre crochets, guillemets simples, guillemets doubles, ou se présente tel quel. Si *target* est le nom d’une statistique ou d’un index existant dans une table ou une vue indexée, les informations statistiques concernant cette cible sont retournées. Si *target* est le nom d’une colonne existante et que celle-ci contient une statistique créée automatiquement, les informations sur cette dernière sont retournées. S'il n'existe pas de statistique créée automatiquement pour une cible de colonne, le message d'erreur 2767 est retourné.  
+ Dans [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] et [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], *target* ne peut pas être un nom de colonne.  
   
  NO_INFOMSGS  
  Supprime tous les messages d'information dont les niveaux de gravité sont compris entre 0 et 10.  
   
- STAT_HEADER | DENSITY_VECTOR | HISTOGRAMME | STATS_STREAM [**, *** n* ]  
+ STAT_HEADER | DENSITY_VECTOR | HISTOGRAM | STATS_STREAM [ **,***n* ]  
  La spécification d'une ou de plusieurs de ces options limite les jeux de résultats retournés par l'instruction aux options spécifiées. Si aucune option n'est spécifiée, toutes les informations statistiques sont retournées.  
   
  STATS_STREAM est [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
@@ -100,41 +100,41 @@ DBCC SHOW_STATISTICS ( table_name , target )
 ## <a name="result-sets"></a>Jeux de résultats  
 Le tableau suivant décrit les colonnes retournées dans le jeu de résultats lorsque STAT_HEADER est spécifié.
   
-|Nom de colonne| Description|  
+|Nom de colonne|Description|  
 |-----------------|-----------------|  
-|Nom|Nom de l'objet de statistiques.|  
-|Mis à jour|Date et heure de la dernière mise à jour des statistiques. Le [STATS_DATE](../../t-sql/functions/stats-date-transact-sql.md) fonction est une autre manière de récupérer ces informations. Pour plus d’informations, consultez la [notes](#Remarks) section dans cette page.|  
-|Lignes|Nombre total de lignes dans la table ou la vue indexée au moment de la dernière mise à jour des statistiques. Si les statistiques sont filtrées ou correspondent à un index filtré, le nombre de lignes peut être inférieur à celui de la table. Pour plus d’informations, consultez[statistiques](../../relational-databases/statistics/statistics.md).|  
+|Nom   |Nom de l'objet de statistiques.|  
+|Mis à jour|Date et heure de la dernière mise à jour des statistiques. La fonction [STATS_DATE](../../t-sql/functions/stats-date-transact-sql.md) offre une autre manière de récupérer ces informations. Pour plus d’informations, consultez la section [Notes](#Remarks) dans cette page.|  
+|Lignes|Nombre total de lignes dans la table ou la vue indexée au moment de la dernière mise à jour des statistiques. Si les statistiques sont filtrées ou correspondent à un index filtré, le nombre de lignes peut être inférieur à celui de la table. Pour plus d’informations, consultez [Statistiques](../../relational-databases/statistics/statistics.md).|  
 |Lignes échantillonnées|Nombre total de lignes échantillonnées pour le calcul des statistiques. Si Rows Sampled < Rows, l'histogramme et les résultats de densité affichés sont des estimations basées sur les lignes échantillonnées.|  
 |Étapes|Nombre d'étapes dans l'histogramme. Chaque étape couvre une plage de valeurs de colonnes suivie d'une valeur de colonne de limite supérieure. Les étapes d'histogramme sont définies sur la première colonne clé des statistiques. Le nombre maximal d'étapes est 200.|  
 |Densité|La formule 1 / *valeurs distinctes* est utilisée pour toutes les valeurs de la première colonne clé de l’objet de statistiques, à l’exception des valeurs limites de l’histogramme. Cette valeur Density n'est pas utilisée par l'optimiseur de requête ; elle est affichée pour la compatibilité descendante avec les versions antérieures à [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].|  
 |Longueur moyenne d'une clé|Nombre moyen d'octets par valeur pour toutes les colonnes clés de l'objet de statistiques.|  
-|String Index|La valeur Yes indique que l'objet de statistiques contient des statistiques de résumé de chaîne pour améliorer les estimations de cardinalité des prédicats de requête qui utilisent l'opérateur LIKE ; c'est le cas par exemple de `WHERE ProductName LIKE '%Bike'`. Chaîne des statistiques de synthèse sont stockés séparément à partir de l’histogramme et sont créées sur la première colonne de clé de l’objet de statistiques lorsqu’il est de type **char**, **varchar**, **nchar**, **nvarchar**, **varchar (max)**, **nvarchar (max)**, **texte**, ou **ntext.**.|  
-|Expression de filtre|Prédicat pour le sous-ensemble des lignes de table incluses dans l'objet de statistiques. NULL = statistiques non filtrées. Pour plus d’informations sur les prédicats filtrés, consultez [Create Filtered Indexes](../../relational-databases/indexes/create-filtered-indexes.md). Pour plus d’informations sur les statistiques filtrées, consultez [statistiques](../../relational-databases/statistics/statistics.md).|  
+|String Index|La valeur Yes indique que l'objet de statistiques contient des statistiques de résumé de chaîne pour améliorer les estimations de cardinalité des prédicats de requête qui utilisent l'opérateur LIKE ; c'est le cas par exemple de `WHERE ProductName LIKE '%Bike'`. Les statistiques de résumé de chaîne sont stockées à l’écart de l’histogramme et créées sur la première colonne clé de l’objet des statistiques quand il est de type **char**, **varchar**, **nchar**, **nvarchar**, **varchar(max)**, **nvarchar(max)**, **text** ou **ntext**.|  
+|Expression de filtre|Prédicat pour le sous-ensemble des lignes de table incluses dans l'objet de statistiques. NULL = statistiques non filtrées. Pour plus d’informations sur les prédicats filtrés, consultez [Créer des index filtrés](../../relational-databases/indexes/create-filtered-indexes.md). Pour plus d’informations sur les statistiques filtrées, consultez [Statistiques](../../relational-databases/statistics/statistics.md).|  
 |Lignes non filtrées|Nombre total de lignes dans la table avant l'application de l'expression de filtre. Si Expression de filtre a la valeur NULL, Lignes non filtrées est égal à Lignes.|  
-|Rendu persistant pour cent d’exemple|Persistante pourcentage d’échantillonnage destinée mises à jour des statistiques qui ne spécifient pas explicitement un pourcentage d’échantillonnage. Si la valeur est zéro, aucun pourcentage exemple persistante n’est définie pour cette statistique.<br /><br /> **S’applique à :** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 CU4| 
+|Pourcentage d’échantillon persistant|Pourcentage d’échantillon persistant utilisé pour les mises à jour des statistiques qui ne spécifient pas explicitement un pourcentage d’échantillonnage. Si la valeur est zéro, aucun pourcentage d’échantillon persistant n’est défini pour cette statistique.<br /><br /> **S’applique à :** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1, mise à jour cumulative 4| 
   
 Le tableau suivant décrit les colonnes retournées dans le jeu de résultats lorsque DENSITY_VECTOR est spécifié.
   
-|Nom de colonne| Description|  
+|Nom de colonne|Description|  
 |-----------------|-----------------|  
 |Toutes les densités|La densité est calculée selon la formule 1 / *valeurs distinctes*. Les résultats affichent la densité pour chaque préfixe des colonnes de l'objet de statistiques, à raison d'une ligne par densité. Une valeur distincte est une liste distincte des valeurs de colonnes par ligne et par préfixe de colonne. Par exemple, si l'objet de statistiques contient des colonnes clés (A, B, C), les résultats affichent la densité des listes distinctes de valeurs dans chacun des préfixes de colonnes suivants : (A), (A,B) et (A, B, C). Avec le préfixe (A, B, C), chacune des listes suivantes est une liste de valeurs distincte : (3, 5, 6), (4, 4, 6), (4, 5, 6), (4, 5, 7). Avec le préfixe (A, B), les listes de valeurs distinctes suivantes sont associées aux mêmes valeurs de colonnes : (3, 5), (4, 4) et (4, 5)|  
 |Longueur moyenne|Longueur moyenne, en octets, pour le stockage d'une liste des valeurs de colonnes pour le préfixe de colonne. Par exemple, si les valeurs dans la liste (3, 5, 6) nécessitent 4 octets chacune, la longueur est égale à 12 octets.|  
-|Columns|Noms des colonnes dans le préfixe dont les valeurs Toutes les densités et Longueur moyenne sont affichées.|  
+|Colonnes|Noms des colonnes dans le préfixe dont les valeurs Toutes les densités et Longueur moyenne sont affichées.|  
   
 Le tableau suivant décrit les colonnes retournées dans le jeu de résultats lorsque l'option HISTOGRAM est spécifiée.
   
-|Nom de colonne| Description|  
+|Nom de colonne|Description|  
 |---|---|
 |RANGE_HI_KEY|Valeur de colonne de limite supérieure pour une étape d'histogramme. La valeur de colonne est également appelée « valeur de clé ».|  
 |RANGE_ROWS|Nombre estimé de lignes dont la valeur de colonne est comprise dans une étape d'histogramme, à l'exception de la limite supérieure.|  
 |EQ_ROWS|Nombre estimé de lignes dont la valeur de colonne est égale à la limite supérieure de l'étape d'histogramme.|  
 |DISTINCT_RANGE_ROWS|Nombre estimé de lignes ayant une valeur de colonne distincte dans une étape d'histogramme, à l'exception de la limite supérieure.|  
-|AVG_RANGE_ROWS|Nombre moyen de lignes ayant des valeurs de colonnes dupliquées dans une étape d'histogramme, à l'exception de la limite supérieure (RANGE_ROWS / DISTINCT_RANGE_ROWS pour DISTINCT_RANGE_ROWS > 0).| 
+|AVG_RANGE_ROWS|Nombre moyen de lignes ayant des valeurs de colonnes dupliquées dans une étape d'histogramme, à l'exception de la limite supérieure (RANGE_ROWS / DISTINCT_RANGE_ROWS pour DISTINCT_RANGE_ROWS > 0).| 
   
 ## <a name="Remarks"></a> Notes 
 
-Date de mise à jour des statistiques est stocké dans le [objet blob de statistiques](../../relational-databases/statistics/statistics.md#DefinitionQOStatistics) avec la [histogramme](#histogram) et [vecteur de densité](#density), et non dans les métadonnées. Lorsqu’aucune donnée n’est en lecture pour générer des données de statistiques, l’objet blob de statistiques n’est pas créé, la date n’est pas disponible et le *mise à jour* colonne est NULL. C’est le cas pour les statistiques filtrées pour le prédicat ne retourne pas des lignes, ou pour les nouveaux tableaux vides.
+La date de mise à jour des statistiques est stockée dans [l’objet blob des statistiques](../../relational-databases/statistics/statistics.md#DefinitionQOStatistics) avec [l’histogramme](#histogram) et le [vecteur de densité](#density), et non dans les métadonnées. Quand aucune donnée n’est lue pour générer des données de statistiques, l’objet blob des statistiques n’est pas créé, la date n’est pas disponible et la colonne *mise à jour* a la valeur Null. C’est le cas pour les statistiques filtrées pour lesquelles le prédicat ne retourne aucune ligne, ou pour les nouvelles tables vides.
   
 ## <a name="histogram"></a> Histogramme  
 Un histogramme mesure la fréquence des occurrences de chaque valeur distincte dans un jeu de données. L'optimiseur de requête calcule un histogramme sur les valeurs de colonnes de la première colonne clé de l'objet de statistiques, en sélectionnant les valeurs de colonnes au moyen d'un échantillonnage statistique des lignes ou d'une analyse complète de toutes les lignes dans la table ou la vue. Si l'histogramme est créé à partir d'un jeu de lignes échantillonnées, les totaux stockés pour le nombre de lignes et le nombre de valeurs distinctes sont des estimations et ne doivent pas nécessairement être des nombres entiers.
@@ -164,30 +164,30 @@ L'optimiseur de requête utilise des densités afin d'améliorer les estimations
 ## <a name="restrictions"></a>Restrictions  
  DBCC SHOW_STATISTICS ne fournit pas de statistiques pour les index spatiaux ou columnstore optimisés en mémoire xVelocity.  
   
-## <a name="permissions-for-includessnoversionincludesssnoversion-mdmd-and-includesssdsincludessssds-mdmd"></a>Autorisations pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et[!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
-Afin d’afficher l’objet de statistiques, l’utilisateur doit posséder la table ou de l’utilisateur doit être un membre de la `sysadmin` rôle serveur fixe le `db_owner` rôle de base de données fixe ou la `db_ddladmin` rôle de base de données fixe.
+## <a name="permissions-for-includessnoversionincludesssnoversion-mdmd-and-includesssdsincludessssds-mdmd"></a>Autorisations pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et [!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
+Pour afficher l’objet des statistiques, l’utilisateur doit être propriétaire de la table ou être membre du rôle serveur fixe `sysadmin`, du rôle de base de données fixe `db_owner` ou du rôle de base de données fixe `db_ddladmin`.
   
-[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]SP1 modifie les restrictions d’autorisation et permet aux utilisateurs avec l’autorisation SELECT pour utiliser cette commande. Remarquez que les conditions suivantes doivent être remplies pour que les autorisations SELECT permettent d'exécuter la commande :
+[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 modifie les limites liées aux autorisations et permet aux utilisateurs avec l’autorisation SELECT d’utiliser cette commande. Remarquez que les conditions suivantes doivent être remplies pour que les autorisations SELECT permettent d'exécuter la commande :
 -   Les utilisateurs doivent posséder des autorisations sur toutes les colonnes dans l'objet de statistiques.  
 -   Les utilisateurs doivent posséder une autorisation sur toutes les colonnes dans une condition de filtre (le cas échéant).  
 -   La table ne peut pas avoir une stratégie de sécurité de niveau ligne.  
   
 Pour désactiver ce comportement, utilisez traceflag 9485.
   
-## <a name="permissions-for-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>Autorisations pour [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] et[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
-DBCC SHOW_STATISTICS requiert l’autorisation SELECT sur la table ou l’appartenance de l’une des opérations suivantes :
+## <a name="permissions-for-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>Autorisations pour [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] et [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+DBCC SHOW_STATISTICS nécessite l’autorisation SELECT sur la table ou l’appartenance à l’un des rôles suivants :
 -   rôle serveur fixe sysadmin  
 -   rôle de base de données fixe db_owner  
 -   rôle de base de données fixe db_ddladmin  
   
-## <a name="limitations-and-restrictions-for-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>Limitations et Restrictions pour [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] et[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
-DBCC SHOW_STATISTICS affiche les statistiques stockées dans la base de données de l’interpréteur de commandes au niveau du nœud de contrôle. Il n’affiche pas les statistiques sont créées automatiquement par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur les nœuds de calcul.
+## <a name="limitations-and-restrictions-for-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>Limitations et restrictions pour [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] et [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+DBCC SHOW_STATISTICS affiche les statistiques stockées dans la base de données shell au niveau du nœud de contrôle. Il n’affiche pas les statistiques créées automatiquement par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur les nœuds de calcul.
   
 DBCC SHOW_STATISTICS n’est pas pris en charge sur les tables externes.
   
-## <a name="examples-includessnoversionincludesssnoversion-mdmd-and-includesssdsincludessssds-mdmd"></a>Exemples : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et[!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
+## <a name="examples-includessnoversionincludesssnoversion-mdmd-and-includesssdsincludessssds-mdmd"></a>Exemples : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et [!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
 ### <a name="a-returning-all-statistics-information"></a>A. Retour de toutes les informations statistiques  
-L’exemple suivant affiche toutes les informations statistiques relatives à la `AK_Address_rowguid` index de la `Person.Address` de table dans le [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] base de données.
+L’exemple suivant affiche toutes les informations statistiques relatives à l’index `AK_Address_rowguid` de la table `Person.Address` dans la base de données [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].
   
 ```sql
 DBCC SHOW_STATISTICS ("Person.Address", AK_Address_rowguid);  
@@ -195,15 +195,15 @@ GO
 ```  
   
 ### <a name="b-specifying-the-histogram-option"></a>B. Utilisation de l'option HISTOGRAM  
-Cela limite les informations statistiques affichées pour Customer_LastName pour les données d’histogramme.
+Cela limite les informations statistiques affichées pour Customer_LastName aux données HISTOGRAM.
   
 ```sql
 DBCC SHOW_STATISTICS ("dbo.DimCustomer",Customer_LastName) WITH HISTOGRAM;  
 GO  
 ```  
   
-## <a name="examples-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemples : [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] et[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
-### <a name="c-display-the-contents-of-one-statistics-object"></a>C. Afficher le contenu de l’objet de statistiques d’un  
+## <a name="examples-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemples : [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] et [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+### <a name="c-display-the-contents-of-one-statistics-object"></a>C. Afficher le contenu d’un objet des statistiques  
  L’exemple suivant affiche le contenu des statistiques Customer_LastName sur la table DimCustomer.  
   
 ```sql
@@ -216,11 +216,11 @@ DBCC SHOW_STATISTICS ("dbo.DimCustomer",Customer_LastName);
 GO  
 ```  
   
-Les résultats indiquent l’en-tête, le vecteur de densité et la partie de l’histogramme.
+Les résultats indiquent l’en-tête, le vecteur de densité et une partie de l’histogramme.
   
-![DBCC SHOW_STATISTICS (résultats)](../../t-sql/database-console-commands/media/aps-sql-dbccshow-statistics.JPG "DBCC SHOW_STATISTICS (résultats)")
+![Résultats de DBCC SHOW_STATISTICS](../../t-sql/database-console-commands/media/aps-sql-dbccshow-statistics.JPG "Résultats de DBCC SHOW_STATISTICS")
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [Statistiques](../../relational-databases/statistics/statistics.md)  
 [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)  
 [CREATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/create-statistics-transact-sql.md)  

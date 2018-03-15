@@ -37,10 +37,10 @@ ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="alter-database-transact-sql-set-hadr"></a>ALTER HADR d’ensemble de la base de données (Transact-SQL) 
+# <a name="alter-database-transact-sql-set-hadr"></a>ALTER DATABASE (Transact-SQL) SET HADR 
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Cette rubrique contient la syntaxe ALTER DATABASE pour le paramètre [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] options sur une base de données secondaire. Seule une option SET HADR est autorisée par instruction ALTER DATABASE. Ces options sont prises en charge uniquement sur les réplicas secondaires.  
+  Cette rubrique contient la syntaxe ALTER DATABASE pour la définition des options [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] sur une base de données secondaire. Une seule option SET HADR est autorisée par instruction ALTER DATABASE. Ces options sont prises en charge uniquement sur les réplicas secondaires.  
   
  ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -64,7 +64,7 @@ ALTER DATABASE database_name
  SET HADR  
  Exécute la commande [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] spécifiée sur le serveur spécifié.  
   
- {Le groupe de disponibilité **= *** nom_groupe* | {OFF}  
+ { AVAILABILITY GROUP **=***group_name* | OFF }  
  Joint ou supprime la base de données de disponibilité dans le groupe de disponibilité spécifié, comme suit :  
   
  *group_name*  
@@ -74,24 +74,24 @@ ALTER DATABASE database_name
   
 -   La base de données doit déjà avoir été ajoutée au groupe de disponibilité sur le réplica principal.  
   
--   Le réplica principal doit être actif. Pour plus d’informations sur la façon de dépanner un réplica principal inactif, consultez [dépannage toujours sur les groupes de Configuration de disponibilité (SQL Server)](http://go.microsoft.com/fwlink/?LinkId=225834).  
+-   Le réplica principal doit être actif. Pour plus d’informations sur la façon de dépanner un réplica principal inactif, consultez [Résolution des problèmes de configuration des groupes de disponibilité AlwaysOn (SQL Server)](http://go.microsoft.com/fwlink/?LinkId=225834).  
   
 -   Le réplica principal doit être en ligne et le réplica secondaire doit être connecté au réplica principal.  
   
 -   La base de données secondaire doit avoir été restaurée à l'aide de WITH NORECOVERY à partir de sauvegardes de base de données et de fichiers journaux récente de la base de données primaire, avec une dernière sauvegarde de fichier journal suffisamment récente pour permettre à la base de données secondaire de rattraper la base de données primaire.  
   
     > [!NOTE]  
-    >  Pour ajouter une base de données au groupe de disponibilité, connectez-vous à l’instance de serveur qui héberge le réplica principal et utilisez la [ALTER AVAILABILITY GROUP](../../t-sql/statements/alter-availability-group-transact-sql.md)*nom_groupe* ADD DATABASE *nom_base_de_données* instruction.  
+    >  Pour ajouter une base de données au groupe de disponibilité, connectez-vous à l’instance de serveur qui héberge le réplica principal, puis utilisez l’instruction [ALTER AVAILABILITY GROUP](../../t-sql/statements/alter-availability-group-transact-sql.md)*group_name* ADD DATABASE *database_name*.  
   
  Pour plus d’informations, consultez [Joindre une base de données secondaire à un groupe de disponibilité &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/join-a-secondary-database-to-an-availability-group-sql-server.md).  
   
  OFF  
  Supprime la base de données secondaire spécifiée du groupe de disponibilité spécifié.  
   
- La suppression d'une base de données secondaire peut être utile si elle est trop éloignée de la base de données primaire et que vous ne souhaitez pas attendre que la base de données secondaire rattrape son retard. Après la suppression de la base de données secondaire, vous pouvez mettre à jour par la restauration d’une séquence de sauvegardes se terminant par une sauvegarde récente du journal (à l’aide de restauration... WITH NORECOVERY).  
+ La suppression d'une base de données secondaire peut être utile si elle est trop éloignée de la base de données primaire et que vous ne souhaitez pas attendre que la base de données secondaire rattrape son retard. Après avoir supprimé la base de données secondaire, vous pouvez la mettre à jour en restaurant une séquence de sauvegardes se terminant par une sauvegarde récente des fichiers journaux (à l’aide de RESTORE… WITH NORECOVERY).  
   
 > [!IMPORTANT]  
->  Pour supprimer complètement une base de données de disponibilité d’un groupe de disponibilité, connectez-vous à l’instance de serveur qui héberge le réplica principal et utiliser le [ALTER AVAILABILITY GROUP](../../t-sql/statements/alter-availability-group-transact-sql.md)*nom_groupe* supprimer la base de données *nom_base_de_données_de_disponibilité* instruction. Pour plus d’informations, consultez [supprimer une base de données principal à partir d’un groupe de disponibilité &#40; SQL Server &#41; ](../../database-engine/availability-groups/windows/remove-a-primary-database-from-an-availability-group-sql-server.md).  
+>  Pour supprimer complètement une base de données d’un groupe de disponibilité, connectez-vous à l’instance de serveur qui héberge le réplica principal, puis utilisez l’instruction [ALTER AVAILABILITY GROUP](../../t-sql/statements/alter-availability-group-transact-sql.md)*group_name* REMOVE DATABASE *availability_database_name*. Pour plus d’informations, consultez [Supprimer une base de données primaire d’un groupe de disponibilité &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/remove-a-primary-database-from-an-availability-group-sql-server.md).  
   
  SUSPEND  
  Suspend le déplacement des données sur une base de données secondaire. Une commande SUSPEND retourne dès qu'elle est acceptée par le réplica qui héberge la base de données cible, mais en réalité, l'interruption de la base de données se produit de façon asynchrone.  
@@ -100,7 +100,7 @@ ALTER DATABASE database_name
   
 -   Si vous suspendez une base de données secondaire sur un réplica secondaire, seule la base de données secondaire locale est suspendue. Les connexions existantes sur le réplica secondaire accessible en lecture restent utilisables. Les nouvelles connexions à la base de données suspendue sur le réplica secondaire accessible en lecture ne sont pas autorisées tant que le déplacement des données n'a pas repris.  
   
--   Si vous suspendez une base de données sur le réplica principal, le déplacement des données est suspendu vers les bases de données secondaires correspondantes sur chaque réplica secondaire. Les connexions existantes sur un réplica secondaire accessible en lecture restent utilisables et les nouvelles connexions d’intention de lecture ne se connectent pas à des réplicas secondaires lisibles.  
+-   Si vous suspendez une base de données sur le réplica principal, le déplacement des données est suspendu vers les bases de données secondaires correspondantes sur chaque réplica secondaire. Les connexions existantes sur un réplica secondaire accessible en lecture restent utilisables, et les nouvelles connexions de tentative de lecture ne se connecteront pas aux réplicas secondaires accessibles en lecture.  
   
 -   Lorsque le déplacement des données est suspendu en raison d'un basculement manuel forcé, les connexions au nouveau réplica secondaire ne sont pas autorisées pendant que le déplacement des données est suspendu.  
   
@@ -110,9 +110,9 @@ ALTER DATABASE database_name
 >  Lorsqu'une base de données secondaire est suspendue, la file d'attente d'envoi de la base de données primaire correspondante accumule des enregistrements du journal des transactions non envoyés. Les connexions au réplica secondaire retournent des données qui étaient disponibles lorsque le déplacement des données a été suspendu.  
   
 > [!NOTE]  
->  Suspension et reprise d’une toujours sur base de données secondaire n’affectent pas directement la disponibilité de la base de données principale, bien que la suspension d’une base de données secondaire peut affecter les capacités de redondance et de basculement pour la base de données primaire, jusqu'à la reprise de la base de données secondaire interrompue. Ce comportement diffère de la mise en miroir de bases de données dans laquelle l'état de mise en miroir est interrompu à la fois sur la base de données miroir et la base de données principale tant que la mise en miroir n'a pas repris. L’interruption d’une base de données principale Always On interrompt le déplacement des données sur toutes les bases de données secondaires correspondantes, et les capacités de redondance et de basculement cessent pour cette base de données tant que la base de données principale n’a pas repris.  
+>  L’interruption et la reprise d’une base de données secondaire Always On n’affectent pas directement la disponibilité de la base de données primaire, bien que l’interruption d’une base de données secondaire puisse avoir une incidence sur les capacités de redondance et de basculement de la base de données primaire, tant que la base de données secondaire interrompue n’a pas repris. Ce comportement diffère de la mise en miroir de bases de données dans laquelle l'état de mise en miroir est interrompu à la fois sur la base de données miroir et la base de données principale tant que la mise en miroir n'a pas repris. L’interruption d’une base de données principale Always On interrompt le déplacement des données sur toutes les bases de données secondaires correspondantes, et les capacités de redondance et de basculement cessent pour cette base de données tant que la base de données principale n’a pas repris.  
   
- Pour plus d’informations, consultez [interrompre une base de données de disponibilité &#40; SQL Server &#41; ](../../database-engine/availability-groups/windows/suspend-an-availability-database-sql-server.md).  
+ Pour plus d’informations, consultez [Suspendre une base de données de disponibilité &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/suspend-an-availability-database-sql-server.md).  
   
  RESUME  
  Reprend le déplacement des données suspendu sur la base de données secondaire spécifiée. Une commande RESUME retourne dès qu'elle est acceptée par le réplica qui héberge la base de données cible, mais en réalité, la reprise de la base de données se produit de façon asynchrone.  
@@ -136,7 +136,7 @@ ALTER DATABASE database_name
 ## <a name="security"></a>Sécurité  
   
 ### <a name="permissions"></a>Autorisations  
- Nécessite l'autorisation ALTER sur la base de données. Jointure d’une base de données à un groupe de disponibilité nécessite le **db_owner** rôle de base de données fixe.  
+ Nécessite l'autorisation ALTER sur la base de données. La jointure d’une base de données à un groupe de disponibilité nécessite l’appartenance au rôle de base de données fixe **db_owner**.  
   
 ## <a name="examples"></a>Exemples  
  L'exemple suivant joint la base de données secondaire, `AccountsDb1`, au réplica secondaire local du groupe de disponibilité `AccountsAG`.  
@@ -148,10 +148,10 @@ ALTER DATABASE AccountsDb1 SET HADR AVAILABILITY GROUP = AccountsAG;
 > [!NOTE]  
 >  Pour consulter cette instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] utilisée en contexte, consultez [Créer un groupe de disponibilité &#40;Transact-SQL&#41;](../../database-engine/availability-groups/windows/create-an-availability-group-transact-sql.md).  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/alter-availability-group-transact-sql.md)   
  [CREATE AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/create-availability-group-transact-sql.md)   
- [Vue d’ensemble des groupes de disponibilité AlwaysOn &#40; SQL Server &#41; ](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md) [Résoudre les problèmes de Configuration des groupes de disponibilité AlwaysOn &#40; SQL Server &#41;](../../database-engine/availability-groups/windows/troubleshoot-always-on-availability-groups-configuration-sql-server.md) 
+ [Vue d’ensemble des groupes de disponibilité AlwaysOn &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md) [Résoudre des problèmes de configuration des groupes de disponibilité AlwaysOn &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/troubleshoot-always-on-availability-groups-configuration-sql-server.md) 
   
   

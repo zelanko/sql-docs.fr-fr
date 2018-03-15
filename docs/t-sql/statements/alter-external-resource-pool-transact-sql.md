@@ -1,5 +1,5 @@
 ---
-title: MODIFIER le POOL de ressources externes (Transact-SQL) | Documents Microsoft
+title: ALTER EXTERNAL RESOURCE POOL (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 11/13/2017
 ms.prod: sql-non-specified
@@ -30,17 +30,17 @@ ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="alter-external-resource-pool-transact-sql"></a>MODIFIER le POOL de ressources externes (Transact-SQL)
+# <a name="alter-external-resource-pool-transact-sql"></a>ALTER EXTERNAL RESOURCE POOL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
-**S’applique à :** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] [!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)] et [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)][!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]
+**S’applique à : ** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] [!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)] et [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]
 
-Modifie un pool externe du gouverneur de ressources qui spécifie les ressources qui peuvent être utilisées par les processus externes. 
+Change un pool externe Resource Governor qui spécifie quelles ressources peuvent être utilisées par les processus externes. 
 
-+ Pour [!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)] dans [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], le pool externe régit `rterm.exe`, `BxlServer.exe`et les autres processus engendrés par ces derniers.
++ Pour [!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)] dans [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], le pool externe gouverne `rterm.exe`, `BxlServer.exe` et les autres processus engendrés par ces derniers.
 
-+ Pour [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)] dans SQL Server 2017, le pool externe régit les processus R répertoriées pour la version précédente, ainsi que `python.exe`, `BxlServer.exe`et les autres processus engendrés par ces derniers.
++ Pour [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)] dans SQL Server 2017, le pool externe gouverne les processus R pour la version précédente, ainsi que `python.exe`, `BxlServer.exe` et les autres processus engendrés par ces derniers.
 
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "icône lien de rubrique") [Conventions de syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).
+ ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône de lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -66,42 +66,42 @@ ALTER EXTERNAL RESOURCE POOL { pool_name | "default" }
   
 ## <a name="arguments"></a>Arguments
 
-{ *pool_name* | « default »}  
-Est le nom d’un pool de ressources externes définis par l’utilisateur existant ou le pool de ressources externes par défaut qui est créé lorsque [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est installé.
-« default » doit être placé entre guillemets (« ») ou des crochets ([]) lorsqu’il est utilisé avec `ALTER EXTERNAL RESOURCE POOL` pour éviter tout conflit avec `DEFAULT`, qui est un système de mot réservé.
+{ *pool_name* | "default" }  
+Nom d’un pool de ressources externe existant défini par l'utilisateur ou du pool de ressources externe par défaut créé au moment de l’installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
+Quand il est utilisé avec l’instruction `ALTER EXTERNAL RESOURCE POOL`, le paramètre default doit être placé entre des guillemets doubles ("") ou des crochets ([]) pour éviter tout conflit avec `DEFAULT`, qui est un mot réservé au système.
 
 
-MAX_CPU_PERCENT =*valeur*  
-Spécifie la processeur bande passante moyenne maximale que toutes les demandes dans le pool de ressources externes peuvent recevoir des cas de contention du processeur. *valeur* est un entier dont le paramètre par défaut est 100. La plage autorisée pour *valeur* est comprise entre 1 et 100.
+MAX_CPU_PERCENT =*value*  
+Spécifie la bande passante de l’UC moyenne maximale que toutes les demandes du pool de ressources externe peuvent recevoir en cas de contention de l’UC. *value* est un entier, qui est défini par défaut à 100. *value* peut être compris entre 1 et 100.
 
 
-AFFINITÉ {UC = AUTO | ( \<CPU_range_spec >) | NUMANODE = (\<NUMA_node_range_spec >)}  
-Attachez le pool de ressources externes à des processeurs spécifiques. La valeur par défaut est AUTO.
+AFFINITY {CPU = AUTO | ( \<CPU_range_spec> ) | NUMANODE = (\<NUMA_node_range_spec>)}  
+Joint le pool de ressources externe aux UC spécifiées. La valeur par défaut est AUTO.
 
-Affinité du processeur = **(** \<CPU_range_spec > **)** mappe le pool de ressources externes à la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unités centrales identifiés par le CPU_IDs donné. Lorsque vous utilisez AFFINITY NUMANODE = **(** \<NUMA_node_range_spec > **)**, le pool de ressources externe est possède une affinité avec le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] UC physiques correspondant au nœud NUMA donné ou de la plage de nœuds.
-
-
-MAX_MEMORY_PERCENT =*valeur*  
-Spécifie la mémoire totale du serveur qui peut être utilisée par les demandes dans ce pool de ressources externes. *valeur* est un entier dont le paramètre par défaut est 100. La plage autorisée pour *valeur* est comprise entre 1 et 100.
+AFFINITY CPU = **(** \<CPU_range_spec> **)** mappe le pool de ressources externe aux UC [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] identifiées par les valeurs CPU_ID données. Quand vous utilisez AFFINITY NUMANODE = **(** \<NUMA_node_range_spec> **)**, le pool de ressources externe est associé par affinité aux UC physiques [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] correspondant au nœud NUMA ou à la plage de nœuds spécifique.
 
 
-MAX_PROCESSES =*valeur*  
-Spécifie le nombre maximal de processus autorisé pour le pool de ressources externes. Spécifiez 0 pour définir un seuil illimité pour le pool, ce qui est lié par la suite uniquement par les ressources de l’ordinateur. La valeur par défaut est 0.
+MAX_MEMORY_PERCENT =*value*  
+Spécifie la mémoire totale du serveur qui peut être utilisée par les demandes dans ce pool de ressources externe. *value* est un entier, qui est défini par défaut à 100. *value* peut être compris entre 1 et 100.
 
-## <a name="remarks"></a>Notes
 
-Le [!INCLUDE[ssDE](../../includes/ssde-md.md)] implémente le pool de ressources lorsque vous exécutez le [ALTER RESOURCE GOVERNOR RECONFIGURE](../../t-sql/statements/alter-resource-governor-transact-sql.md) instruction.
+MAX_PROCESSES =*value*  
+Spécifie le nombre maximal de processus autorisés pour le pool de ressources externe. Spécifiez 0 pour définir un seuil illimité pour le pool, qui est alors limité uniquement par les ressources de l’ordinateur. La valeur par défaut est 0.
 
-Pour obtenir des informations générales sur les pools de ressources, consultez [Pool de ressources du gouverneur de ressources](../../relational-databases/resource-governor/resource-governor-resource-pool.md), [sys.resource_governor_external_resource_pools &#40; Transact-SQL &#41; ](../../relational-databases/system-catalog-views/sys-resource-governor-external-resource-pools-transact-sql.md), et [sys.dm_resource_governor_external_resource_pool_affinity &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pool-affinity-transact-sql.md).  
+## <a name="remarks"></a>Notes 
 
-Pour plus d’informations spécifiques à l’utilisation de pools de ressources externes pour gérer les tâches de machine learning, consultez [la gouvernance de ressources pour l’apprentissage dans SQL Server](../../advanced-analytics/r/resource-governance-for-r-services.md)...
-## <a name="permissions"></a>Permissions
+[!INCLUDE[ssDE](../../includes/ssde-md.md)] implémente le pool de ressources quand vous exécutez l’instruction [ALTER RESOURCE GOVERNOR RECONFIGURE](../../t-sql/statements/alter-resource-governor-transact-sql.md).
+
+Pour obtenir des informations générales sur les pools de ressources, consultez [Pool de ressources du gouverneur de ressources](../../relational-databases/resource-governor/resource-governor-resource-pool.md), [sys.resource_governor_external_resource_pools &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-resource-governor-external-resource-pools-transact-sql.md) et [sys.dm_resource_governor_external_resource_pool_affinity &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pool-affinity-transact-sql.md).  
+
+Pour plus d’informations sur l’utilisation de pools de ressources externes pour gouverner les travaux de Machine Learning, consultez [Gouvernance des ressources de Machine Learning dans SQL Server](../../advanced-analytics/r/resource-governance-for-r-services.md).
+## <a name="permissions"></a>Autorisations
 
 Nécessite l'autorisation `CONTROL SERVER`.
 
 ## <a name="examples"></a>Exemples
 
-L’instruction suivante modifie un pool externe, en limitant l’utilisation du processeur à 50 pour cent et la mémoire maximale de 25 pour cent de la mémoire disponible sur l’ordinateur.
+L’instruction suivante change un pool externe, en limitant l’utilisation de l’UC à 50 % et la mémoire maximale à 25 % de la mémoire disponible sur l’ordinateur.
   
 ```sql
 ALTER EXTERNAL RESOURCE POOL ep_1
@@ -117,17 +117,17 @@ GO
 
 ## <a name="see-also"></a>Voir aussi
 
-[Gouvernance de ressources pour l’apprentissage dans SQL Server](../../advanced-analytics/r/resource-governance-for-r-services.md)
+[Gouvernance des ressources de Machine Learning dans SQL Server](../../advanced-analytics/r/resource-governance-for-r-services.md)
 
 [external scripts enabled (option de configuration de serveur)](../../database-engine/configure-windows/external-scripts-enabled-server-configuration-option.md)
 
 [CREATE EXTERNAL RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-resource-pool-transact-sql.md)
 
-[SUPPRIMER le POOL de ressources externes &#40; Transact-SQL &#41;](../../t-sql/statements/drop-external-resource-pool-transact-sql.md)
+[DROP EXTERNAL RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/drop-external-resource-pool-transact-sql.md)
 
-[ALTER RESOURCE POOL &#40; Transact-SQL &#41;](../../t-sql/statements/alter-resource-pool-transact-sql.md)
+[ALTER RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/alter-resource-pool-transact-sql.md)
 
-[CRÉER un groupe de charges de travail &#40; Transact-SQL &#41;](../../t-sql/statements/create-workload-group-transact-sql.md)
+[CREATE WORKLOAD GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/create-workload-group-transact-sql.md)
 
 [Pool de ressources de Resource Governor](../../relational-databases/resource-governor/resource-governor-resource-pool.md)
 

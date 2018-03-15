@@ -1,5 +1,5 @@
 ---
-title: IIF (Transact-SQL) | Documents Microsoft
+title: IIF (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -52,16 +52,16 @@ IIF ( boolean_expression, true_value, false_value )
  Si cet argument n'est pas une expression booléenne, une erreur de syntaxe est générée.  
   
  *true_value*  
- Valeur à retourner si *boolean_expression* a la valeur true.  
+ Valeur à renvoyer si *boolean_expression* a la valeur true.  
   
  *false_value*  
- Valeur à retourner si *boolean_expression* a la valeur false.  
+ Valeur à renvoyer si *boolean_expression* a la valeur false.  
   
 ## <a name="return-types"></a>Types de retour  
- Retourne le type de données avec la priorité la plus élevée parmi les types dans *true_value* et *false_value*. Pour plus d’informations, consultez [Priorités des types de données &#40;Transact-SQL&#41;](../../t-sql/data-types/data-type-precedence-transact-sql.md).  
+ Renvoie le type de données ayant la priorité la plus élevée parmi les types dans *true_value* et *false_value*. Pour plus d’informations, consultez [Priorités des types de données &#40;Transact-SQL&#41;](../../t-sql/data-types/data-type-precedence-transact-sql.md).  
   
-## <a name="remarks"></a>Notes  
- IIF est un moyen rapide d'écrire une expression CASE. Elle évalue l'expression booléenne passée comme premier argument, puis retourne l'un des deux autres arguments selon le résultat de l'évaluation. Autrement dit, le *true_value* est retourné si l’expression booléenne est true et le *false_value* est retourné si l’expression booléenne est false ou unknown. *true_value* et *false_value* peut être de n’importe quel type. Les règles qui s'appliquent à l'expression CASE pour les expressions booléennes, la gestion de la valeur NULL et les types de retour s'appliquent également à IIF. Pour plus d’informations, consultez [cas &#40; Transact-SQL &#41; ](../../t-sql/language-elements/case-transact-sql.md).  
+## <a name="remarks"></a>Notes   
+ IIF est un moyen rapide d'écrire une expression CASE. Elle évalue l'expression booléenne passée comme premier argument, puis retourne l'un des deux autres arguments selon le résultat de l'évaluation. Autrement dit, *true_value* est renvoyé si l’expression booléenne a pour valeur true, et *false_value* est retourné si l’expression booléenne a pour valeur false ou une valeur inconnue. *true_value* et *false_value* peuvent être de n’importe quel type. Les règles qui s'appliquent à l'expression CASE pour les expressions booléennes, la gestion de la valeur NULL et les types de retour s'appliquent également à IIF. Pour plus d’informations, consultez [CASE &#40;Transact-SQL&#41;](../../t-sql/language-elements/case-transact-sql.md).  
   
  Le fait que IIF soit convertie en CASE a également un impact sur d'autres aspects du comportement de cette fonction. Étant donné que les expressions CASE peuvent être imbriquées seulement jusqu'à un niveau de 10, les instructions IIF peuvent également être imbriquées uniquement jusqu'à un niveau maximal de 10. En outre, IIF est exécutée à distance sur d'autres serveurs en tant qu'expression CASE sémantiquement équivalente, avec tous les comportements d'une expression CASE exécutée à distance.  
   
@@ -109,8 +109,8 @@ NULL
 (1 row(s) affected)  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- [CAS &#40; Transact-SQL &#41;](../../t-sql/language-elements/case-transact-sql.md)   
- [Choisissez &#40; Transact-SQL &#41;](../../t-sql/functions/logical-functions-choose-transact-sql.md)  
+## <a name="see-also"></a> Voir aussi  
+ [CASE &#40;Transact-SQL&#41;](../../t-sql/language-elements/case-transact-sql.md)   
+ [CHOOSE &#40;Transact-SQL&#41;](../../t-sql/functions/logical-functions-choose-transact-sql.md)  
   
   

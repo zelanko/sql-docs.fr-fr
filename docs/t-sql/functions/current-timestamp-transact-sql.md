@@ -1,5 +1,5 @@
 ---
-title: CURRENT_TIMESTAMP (Transact-SQL) | Documents Microsoft
+title: CURRENT_TIMESTAMP (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
@@ -47,14 +47,14 @@ ms.lasthandoff: 11/21/2017
 # <a name="currenttimestamp-transact-sql"></a>CURRENT_TIMESTAMP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-Retourne l’horodateur système de base de données actuel en tant qu’un **datetime** valeur sans le décalage de fuseau horaire de base de données. Cette valeur est dérivée du système d'exploitation de l'ordinateur sur lequel l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] s'exécute.
+Renvoie l’horodateur système de base de données actuel en tant que valeur **datetime** sans le décalage de fuseau horaire de la base de données. Cette valeur est dérivée du système d'exploitation de l'ordinateur sur lequel l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] s'exécute.
   
 > [!NOTE]  
 >  SYSDATETIME et SYSUTCDATE ont plus de précision en fractions de seconde que GETDATE et GETUTCDATE. SYSDATETIMEOFFSET inclut le décalage de fuseau horaire système. SYSDATETIME, SYSUTCDATE et SYSDATETIMEOFFSET peuvent être assignés à une variable de chacun des types de date et d'heure.  
   
 Cette fonction est l’équivalent SQL ANSI de [GETDATE](../../t-sql/functions/getdate-transact-sql.md).
   
-Pour une vue d’ensemble de tous les [!INCLUDE[tsql](../../includes/tsql-md.md)] les types de données date et heure et les fonctions, consultez [Date et les Types de données et les fonctions](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md).
+Pour obtenir une vue d’ensemble de tous les types de données et fonctions de date et d’heure [!INCLUDE[tsql](../../includes/tsql-md.md)], consultez [Types de données et fonctions de date et d’heure](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md).
   
 ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -70,13 +70,13 @@ Ne nécessite aucun argument.
 ## <a name="return-type"></a>Type de retour  
 **datetime**
   
-## <a name="remarks"></a>Notes  
-[!INCLUDE[tsql](../../includes/tsql-md.md)]les instructions peuvent faire référence à CURRENT_TIMESTAMP partout où ils peuvent faire référence à un **datetime** expression.
+## <a name="remarks"></a>Notes   
+Les instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] peuvent faire référence à CURRENT_TIMESTAMP partout où elles peuvent faire référence à une expression **datetime**.
   
 CURRENT_TIMESTAMP est une fonction non déterministe. Les vues et les expressions qui référencent cette colonne ne peuvent pas être indexées.
   
 ## <a name="examples"></a>Exemples  
-Les exemples suivants utilisent les six [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fonctions système qui retournent la date du jour et heure pour retourner la date, l’heure ou les deux. Les valeurs sont retournées dans la série, leurs fractions de seconde peuvent donc être différentes.
+Les exemples suivants utilisent les six fonctions système [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui renvoient les date et heure actuelles pour retourner la date, l’heure ou les deux. Les valeurs sont retournées en séries et leurs fractions de seconde peuvent différer.
   
 ### <a name="a-get-the-current-system-date-and-time"></a>A. Obtention des date et heure système actuelles  
   
@@ -96,7 +96,7 @@ GETDATE()          2007-04-30 13:10:02.047
 GETUTCDATE()       2007-04-30 20:10:02.047  
 ```  
   
-### <a name="b-get-the-current-system-date"></a>B. Obtenir la Date système actuelle  
+### <a name="b-get-the-current-system-date"></a>B. Obtention de la date système actuelle  
   
 ```sql
 SELECT CONVERT (date, SYSDATETIME())  
@@ -136,7 +136,7 @@ GETUTCDATE()       20:18:45.3470000
 */  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemples : [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] et[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemples : [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] et [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ```sql
 SELECT CURRENT_TIMESTAMP;  

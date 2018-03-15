@@ -1,5 +1,5 @@
 ---
-title: DROP XML SCHEMA COLLECTION (Transact-SQL) | Documents Microsoft
+title: DROP XML SCHEMA COLLECTION (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 11/25/2015
 ms.prod: sql-non-specified
@@ -57,12 +57,12 @@ DROP XML SCHEMA COLLECTION [ relational_schema. ]sql_identifier
  *sql_identifier*  
  Nom de la collection de schémas XML à supprimer.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  La suppression d'une collection de schémas XML est une opération transactionnelle. Cela signifie que, lorsque vous supprimez une collection de schémas XML dans une transaction et que vous annulez cette transaction par la suite, la collection n'est pas supprimée.  
   
  Vous ne pouvez pas supprimer une collection de schémas XML en cours d'utilisation. Cela signifie que la collection à supprimer ne peut pas être :  
   
--   Associée à un **xml** paramètre ou une colonne de type.  
+-   associée à un paramètre ou à une colonne de type **xml** ;  
   
 -   spécifiée dans des contraintes de table ;  
   
@@ -91,9 +91,9 @@ DROP XML SCHEMA COLLECTION ManuInstructionsSchemaCollection;
 GO  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- [CRÉER une COLLECTION de schémas XML &#40; Transact-SQL &#41;](../../t-sql/statements/create-xml-schema-collection-transact-sql.md)   
- [ALTER XML SCHEMA COLLECTION &#40; Transact-SQL &#41;](../../t-sql/statements/alter-xml-schema-collection-transact-sql.md)   
+## <a name="see-also"></a> Voir aussi  
+ [CREATE XML SCHEMA COLLECTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-xml-schema-collection-transact-sql.md)   
+ [ALTER XML SCHEMA COLLECTION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-xml-schema-collection-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   
  [Comparer du XML typé et du XML non typé](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   
  [Spécifications et limitations relatives aux collections de schémas XML sur le serveur](../../relational-databases/xml/requirements-and-limitations-for-xml-schema-collections-on-the-server.md)  

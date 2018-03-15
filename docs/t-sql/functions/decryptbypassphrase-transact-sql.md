@@ -1,5 +1,5 @@
 ---
-title: DECRYPTBYPASSPHRASE (Transact-SQL) | Documents Microsoft
+title: DECRYPTBYPASSPHRASE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
@@ -51,17 +51,17 @@ DecryptByPassPhrase ( { 'passphrase' | @passphrase }
 ```  
   
 ## <a name="arguments"></a>Arguments  
- *phrase secrète*  
+ *passphrase*  
  Expression relative au mot de passe utilisée pour générer la clé de déchiffrement.  
   
  @passphrase  
- Est une variable de type **nvarchar**, **char**, **varchar**, ou **nchar** qui contient la phrase secrète qui permet de générer la clé de déchiffrement.  
+ Variable de type **nvarchar**, **char**, **varchar** ou **nchar** qui contient la phrase secrète qui sera utilisée pour générer la clé de déchiffrement.  
   
- '*texte chiffré*'  
+ '*ciphertext*'  
  Texte à déchiffrer.  
   
  @ciphertext  
- Est une variable de type **varbinary** qui contient le texte chiffré. La taille maximale est de 8 000 octets.  
+ Variable de type **varbinary** qui contient le texte chiffré. La taille maximale est de 8 000 octets.  
   
  *add_authenticator*  
  Indique si un authentificateur a été chiffré en même temps que le texte en clair. La valeur est 1 si un authentificateur a été utilisé. **int**.  
@@ -69,16 +69,16 @@ DecryptByPassPhrase ( { 'passphrase' | @passphrase }
  @add_authenticator  
  Indique si un authentificateur a été chiffré en même temps que le texte en clair. La valeur est 1 si un authentificateur a été utilisé. **int**.  
   
- *authentificateur*  
+ *authenticator*  
  Données de l'authentificateur. **sysname**.  
   
  @authenticator  
  Variable contenant les données à partir desquelles l'authentificateur sera dérivé.  
   
 ## <a name="return-types"></a>Types de retour  
- **varbinary** avec une taille maximale de 8 000 octets.  
+ **varbinary** d’une taille maximale de 8 000 octets.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Aucune autorisation n'est requise pour cette fonction.  
   
  Renvoie NULL si les informations de l'authentificateur ou de l'expression relative au mot de passe sont incorrectes.  
@@ -107,7 +107,7 @@ SELECT CardNumber, CardNumber_EncryptedbyPassphrase
 GO  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Choisir un algorithme de chiffrement](../../relational-databases/security/encryption/choose-an-encryption-algorithm.md)   
  [ENCRYPTBYPASSPHRASE &#40;Transact-SQL&#41;](../../t-sql/functions/encryptbypassphrase-transact-sql.md)  
   

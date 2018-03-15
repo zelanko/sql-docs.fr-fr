@@ -1,5 +1,5 @@
 ---
-title: "AsGml (Type de données geometry) | Documents Microsoft"
+title: "AsGml (type de données geometry) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -36,9 +36,9 @@ ms.lasthandoff: 01/25/2018
 # <a name="asgml-geometry-data-type"></a>AsGml (type de données geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Retourne la représentation de langage GML (Geography Markup) d’un **geometry** instance.
+Retourne la représentation GML (Geography Markup Language) d’une instance **geometry**.
   
-Pour plus d’informations sur le langage GML, consultez la spécification Open Geospatial Consortium suivante :[OGC Specifications, Geography Markup Language.](http://go.microsoft.com/fwlink/?LinkId=93629)
+Pour plus d’informations sur le langage GML, consultez la spécification OGC (Open Geospatial Consortium) suivante : [OGC Specifications, Geography Markup Language.](http://go.microsoft.com/fwlink/?LinkId=93629)
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -48,11 +48,11 @@ Pour plus d’informations sur le langage GML, consultez la spécification Open 
 ```  
   
 ## <a name="return-types"></a>Types de retour  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]type de retour : **xml**  
+ Type de retour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] : **xml**  
   
  Type de retour CLR : **SqlXml**  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
   
 ## <a name="examples"></a>Exemples  
  L'exemple suivant crée une instance `LineString` et utilise `AsGML()` pour retourner la description GML de l'instance.  
@@ -70,7 +70,7 @@ SELECT @g.AsGml();
 <posList>0 0 0 1 1 0</posList></LineString>  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Méthodes étendues sur des instances geometry](../../t-sql/spatial-geometry/extended-methods-on-geometry-instances.md)  
   
   

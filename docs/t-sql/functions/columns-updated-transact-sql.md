@@ -1,5 +1,5 @@
 ---
-title: COLUMNS_UPDATED (Transact-SQL) | Documents Microsoft
+title: COLUMNS_UPDATED (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
@@ -37,7 +37,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="columnsupdated-transact-sql"></a>COLUMNS_UPDATED (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Retourne un **varbinary** modèle binaire qui indique les colonnes d’une table ou une vue qui ont été insérées ou mises à jour. COLUMNS_UPDATED est utilisé à n'importe quel endroit du corps d'un déclencheur INSERT ou UPDATE [!INCLUDE[tsql](../../includes/tsql-md.md)] pour tester si celui-ci doit exécuter certaines actions.
+Renvoie un modèle binaire de type **varbinary** qui indique les colonnes d’une table ou d’une vue qui ont été insérées ou mises à jour. COLUMNS_UPDATED est utilisé à n'importe quel endroit du corps d'un déclencheur INSERT ou UPDATE [!INCLUDE[tsql](../../includes/tsql-md.md)] pour tester si celui-ci doit exécuter certaines actions.
   
 ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -50,12 +50,12 @@ COLUMNS_UPDATED ( )
 ## <a name="return-types"></a>Types de retour
 **varbinary**
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
 COLUMNS_UPDATED effectue un test pour déterminer si des actions UPDATE ou INSERT sont réalisées sur plusieurs colonnes. Pour tester des tentatives UPDATE ou INSERT sur une colonne, utilisez [UPDATE()](../../t-sql/functions/update-trigger-functions-transact-sql.md).
   
 COLUMNS_UPDATED retourne un ou plusieurs octets classés de la gauche vers la droite, dans chacun desquels le bit le moins significatif est le bit le plus à droite. Le bit le plus à droite de l'octet le plus à gauche représente la première colonne de la table, le suivant à gauche la deuxième colonne, et ainsi de suite. COLUMNS_UPDATED retourne plusieurs octets si la table sur laquelle le déclencheur est créé contient plus de huit colonnes, l'octet le moins significatif étant celui le plus à gauche. COLUMNS_UPDATED retourne TRUE pour toutes les colonnes des actions INSERT car les valeurs insérées dans ces colonnes sont explicites ou implicites (NULL).
   
-Pour tester l'existence de mises à jour ou d'insertions dans des colonnes spécifiques, indiquez, dans la syntaxe, un opérateur au niveau du bit et un masque de bits d'entier couvrant ces colonnes. Par exemple, la table **t1** contient les colonnes **C1**, **C2**, **C3**, **C4**, et **C5**. Pour vérifier que les colonnes **C2**, **C3**, et **C4** sont tous mis à jour (avec la table **t1** possède un déclencheur UPDATE), suivent la syntaxe avec **& 14**. Pour tester si la seule colonne **C2** est mis à jour, spécifiez **& 2**.
+Pour tester l'existence de mises à jour ou d'insertions dans des colonnes spécifiques, indiquez, dans la syntaxe, un opérateur au niveau du bit et un masque de bits d'entier couvrant ces colonnes. Par exemple, la table **t1** contient les colonnes **C1**, **C2**, **C3**, **C4** et **C5**. Pour vérifier que les colonnes **C2**, **C3** et **C4** sont toutes mises à jour (en supposant que la table **t1** possède un déclencheur UPDATE), indiquez dans la syntaxe **& 14**. Pour vérifier si seule la colonne **C2** est mise à jour, spécifiez **& 2**.
   
 COLUMNS_UPDATED peut être utilisé à n'importe quel endroit d'un déclencheur [!INCLUDE[tsql](../../includes/tsql-md.md)] INSERT ou UPDATE.
   
@@ -188,7 +188,7 @@ GO
 ```  
   
 ### <a name="b-using-columnsupdated-to-test-more-than-eight-columns"></a>B. Utilisation de COLUMNS_UPDATED pour tester plus de huit colonnes  
-Pour tester l'existence de mises à jour affectant des colonnes autres que les huit premières colonnes d'une table, utilisez la fonction `SUBSTRING` afin de tester le bit adéquat retourné par `COLUMNS_UPDATED`. L’exemple suivant vérifie les mises à jour les colonnes `3`, `5`, et `9` dans le `AdventureWorks2012.Person.Person` table.
+Pour tester l'existence de mises à jour affectant des colonnes autres que les huit premières colonnes d'une table, utilisez la fonction `SUBSTRING` afin de tester le bit adéquat retourné par `COLUMNS_UPDATED`. L’exemple suivant teste l’existence de mises à jour affectant les colonnes `3`, `5` et `9` de la table `AdventureWorks2012.Person.Person`.
   
 ```sql
 USE AdventureWorks2012;  
@@ -211,8 +211,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>Voir aussi
-[Opérateurs de bits &#40; Transact-SQL &#41;](../../t-sql/language-elements/bitwise-operators-transact-sql.md)  
+[Opérateurs au niveau du bit &#40;Transact-SQL&#41;](../../t-sql/language-elements/bitwise-operators-transact-sql.md)  
 [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)  
-[Mise à jour &#40; &#41; &#40; Transact-SQL &#41;](../../t-sql/functions/update-trigger-functions-transact-sql.md)
+[UPDATE&#40;&#41; &#40;Transact-SQL&#41;](../../t-sql/functions/update-trigger-functions-transact-sql.md)
   
   

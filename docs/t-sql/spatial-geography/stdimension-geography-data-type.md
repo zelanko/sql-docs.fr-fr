@@ -1,5 +1,5 @@
 ---
-title: "STDimension (Type de données geography) | Documents Microsoft"
+title: "STDimension (type de données geography) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stdimension-geography-data-type"></a>STDimension (type de données geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Retourne la dimension maximale d’un **geography** instance.  
+  Retourne la dimension maximale d’une instance **geography**.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -44,15 +44,15 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>Types de retour  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]type de retour : **int**  
+ Type de retour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] : **int**  
   
  Type de retour CLR : **SqlInt32**  
   
-## <a name="remarks"></a>Notes  
- STDimension() retourne -1 si le **geography** instance est vide.  
+## <a name="remarks"></a>Notes   
+ STDimension() retourne -1 si l’instance **geography** est vide.  
   
 ## <a name="examples"></a>Exemples  
- L’exemple suivant utilise `STDimension()` pour créer une variable de table pour contenir `geography` les instances et insère un `Point`, un `LineString`et un `Polygon`.  
+ L’exemple suivant utilise `STDimension()` pour créer une variable de table destinée à contenir des instances `geography`, et insère `Point`, `LineString`, ainsi que `Polygon`.  
   
 ```  
 DECLARE @temp table ([name] varchar(10), [geom] geography);  
@@ -65,15 +65,15 @@ SELECT [name], [geom].STDimension() as [dim]
 FROM @temp;  
 ```  
   
- L’exemple retourne ensuite les dimensions de chaque `geography`instance.  
+ L’exemple retourne ensuite les dimensions de chaque instance `geography`.  
   
-|name|dim|  
+|NAME|dim|  
 |----------|---------|  
 |Point|0|  
-|LineString|1|  
-|Polygone|2|  
+|LineString| 1|  
+|Polygon|2|  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Méthodes OGC sur des instances geography](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
   
   

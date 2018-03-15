@@ -1,5 +1,5 @@
 ---
-title: ENCRYPTBYKEY (Transact-SQL) | Documents Microsoft
+title: ENCRYPTBYKEY (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -52,32 +52,32 @@ EncryptByKey ( key_GUID , { 'cleartext' | @cleartext }
   
 ## <a name="arguments"></a>Arguments  
  *key_GUID*  
- Est le GUID de la clé doit être utilisé pour chiffrer le *en texte clair*. **uniqueidentifier**.  
+ GUID de la clé à utiliser pour chiffrer *cleartext*. **uniqueidentifier**.  
   
- '*en texte clair*'  
+ '*cleartext*'  
  Données à chiffrer à l'aide de la clé.  
   
  @cleartext  
- Est une variable de type **nvarchar**, **char**, **varchar**, **binaire**, **varbinary**, ou **nchar** qui contient les données qui doivent être chiffrées avec la clé.  
+ Variable de type **nvarchar**, **char**, **varchar**, **binary**, **varbinary** ou **nchar** qui contient des données à chiffrer avec la clé.  
   
  *add_authenticator*  
- Indique si un authentificateur sera chiffré avec la *en texte clair*. Sa valeur doit être égale à 1 si vous utilisez un authentificateur. **int**.  
+ Indique si un authentificateur sera chiffré avec *cleartext*. Sa valeur doit être égale à 1 si vous utilisez un authentificateur. **int**.  
   
  @add_authenticator  
- Indique si un authentificateur sera chiffré avec la *en texte clair*. Sa valeur doit être égale à 1 si vous utilisez un authentificateur. **int**.  
+ Indique si un authentificateur sera chiffré avec *cleartext*. Sa valeur doit être égale à 1 si vous utilisez un authentificateur. **int**.  
   
- *authentificateur*  
+ *authenticator*  
  Données à partir desquelles un authentificateur peut être dérivé. **sysname**.  
   
  @authenticator  
  Variable contenant les données à partir desquelles l'authentificateur sera dérivé.  
   
 ## <a name="return-types"></a>Types de retour  
- **varbinary** avec une taille maximale de 8 000 octets.  
+ **varbinary** d’une taille maximale de 8 000 octets.  
   
  Retourne NULL si la clé n'est pas ouverte, si elle n'existe pas ou s'il s'agit d'une clé RC4 déconseillée et que la base de données n'est pas au niveau de compatibilité 110 ou supérieur.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  EncryptByKey utilise une clé symétrique. Cette clé doit être ouverte. Si la clé symétrique est déjà ouverte dans la session en cours, il n'est pas nécessaire de l'ouvrir à nouveau dans le contexte de la requête.  
   
  L'authentificateur vous permet d'empêcher la substitution en valeurs entières des champs chiffrés. Par exemple, considérons la table suivante des données de salaires du personnel :  
@@ -97,10 +97,10 @@ EncryptByKey ( key_GUID , { 'cleartext' | @cleartext }
  Le chiffrement et le déchiffrement symétriques sont relativement rapides et adaptés à la manipulation de grandes quantités de données.  
   
 > [!IMPORTANT]  
->  L'utilisation des fonctions de chiffrement [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] conjointement au paramètre ANSI_PADDING OFF peut entraîner la perte de données en raison de conversions implicites. Pour plus d’informations sur ANSI_PADDING, consultez [SET ANSI_PADDING &#40; Transact-SQL &#41; ](../../t-sql/statements/set-ansi-padding-transact-sql.md).  
+>  L'utilisation des fonctions de chiffrement [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] conjointement au paramètre ANSI_PADDING OFF peut entraîner la perte de données en raison de conversions implicites. Pour plus d’informations sur ANSI_PADDING, consultez [SET ANSI_PADDING &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-padding-transact-sql.md).  
   
 ## <a name="examples"></a>Exemples  
- La fonctionnalité illustrée dans les exemples suivants utilise les clés et les certificats créés dans [Comment : chiffrer une colonne de données](../../relational-databases/security/encryption/encrypt-a-column-of-data.md).  
+ La fonctionnalité illustrée dans les exemples suivants utilise les clés et les certificats créés dans [Guide pratique pour chiffrer une colonne de données](../../relational-databases/security/encryption/encrypt-a-column-of-data.md).  
   
 ### <a name="a-encrypting-a-string-with-a-symmetric-key"></a>A. Chiffrer une chaîne à l'aide d'une clé symétrique  
  L'exemple de code suivant ajoute une colonne à la table `Employee`, puis chiffre la valeur du numéro de sécurité sociale stockée dans la colonne `NationalIDNumber`.  
@@ -149,12 +149,12 @@ SET CardNumber_Encrypted = EncryptByKey(Key_GUID('CreditCards_Key11'),
 GO  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- [DECRYPTBYKEY &#40; Transact-SQL &#41;](../../t-sql/functions/decryptbykey-transact-sql.md)   
+## <a name="see-also"></a> Voir aussi  
+ [DECRYPTBYKEY &#40;Transact-SQL&#41;](../../t-sql/functions/decryptbykey-transact-sql.md)   
  [CREATE SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-symmetric-key-transact-sql.md)   
  [ALTER SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-symmetric-key-transact-sql.md)   
  [DROP SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-symmetric-key-transact-sql.md)   
  [Hiérarchie de chiffrement](../../relational-databases/security/encryption/encryption-hierarchy.md)   
- [HASHBYTES &#40; Transact-SQL &#41;](../../t-sql/functions/hashbytes-transact-sql.md)  
+ [HASHBYTES &#40;Transact-SQL&#41;](../../t-sql/functions/hashbytes-transact-sql.md)  
   
   

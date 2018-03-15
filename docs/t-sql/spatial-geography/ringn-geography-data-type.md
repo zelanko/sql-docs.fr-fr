@@ -1,5 +1,5 @@
 ---
-title: "RingN (Type de données geography) | Documents Microsoft"
+title: "RingN (type de données geography) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="ringn-geography-data-type"></a>RingN (type de données geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Retourne l’anneau spécifié de la **geography** instance : `1 ≤ n ≤ NumRings()`.  
+  Retourne l’anneau spécifié de l’instance **geography** : `1 ≤ n ≤ NumRings()`.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -45,15 +45,15 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="arguments"></a>Arguments  
  *expression*  
- Est un **int** expression comprise entre 1 et le nombre d’anneaux dans une **polygone** instance.  
+ Expression **int** comprise entre 1 et le nombre d’anneaux d’une instance **polygon**.  
   
 ## <a name="return-value"></a>Valeur retournée  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]type de retour : **geography**  
+ Type de retour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] : **geography**  
   
  Type de retour CLR : **SqlGeography**  
   
-## <a name="remarks"></a>Notes  
- Si la valeur de l’index d’anneau  **n**  est inférieur à 1, cette méthode lève un **l’exception ArgumentOutOfRangeException.** La valeur d’index en anneau doit être supérieur ou égal à 1 et doit être inférieur ou égal au nombre retourné par `NumRings()`.  
+## <a name="remarks"></a>Notes   
+ Si la valeur de l’index de l’anneau **n** est inférieure à 1, cette méthode lève **ArgumentOutOfRangeException.** La valeur de l’index de l’anneau doit être supérieure ou égale à 1, et doit être inférieure ou égale au nombre retourné par `NumRings()`.  
   
 ## <a name="examples"></a>Exemples  
  Cet exemple crée une instance `Polygon` avec deux anneaux et retourne le deuxième anneau.  
@@ -64,8 +64,8 @@ SET @g = geography::STGeomFromText('POLYGON((-122.358 47.653, -122.348 47.649, -
 SELECT @g.RingN(2).ToString();  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- [Méthodes étendues sur les Instances Geography](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)   
+## <a name="see-also"></a> Voir aussi  
+ [Méthodes étendues sur des instances Geography](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)   
  [NumRings &#40;type de données geography&#41;](../../t-sql/spatial-geography/numrings-geography-data-type.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: "Opérateurs au niveau du bit (Transact-SQL) | Documents Microsoft"
+title: "Opérateurs au niveau du bit (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 09/07/2017
 ms.prod: sql-non-specified
@@ -34,39 +34,39 @@ ms.lasthandoff: 01/25/2018
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Les opérateurs au niveau du bit exécutent des manipulations de bits entre deux expressions de tout type de données de la catégorie entier.  
-  Opérateurs de bits convertir bits binaires des deux valeurs entières, effectuez l’opération AND, OR, ou pas d’opération sur chaque bit, un résultat. Convertit ensuite le résultat en un entier.  
+  Les opérateurs au niveau du bit permettent de convertir deux valeurs entières en bits binaires, d’effectuer l’opération AND, OR, ou NOT sur chaque bit et de produire un résultat. Ils convertissent ensuite le résultat en entier.  
   
-  Par exemple, l’entier 170 convertit en binaire 1010 1010.
-Convertit l’entier 75 0100 1011 binaire.
+  Par exemple, l’entier 170 se convertit en binaire 1010 1010.
+L’entier 75 se convertit en binaire 0100 1011.
 
 |operator|mathématiques au niveau du bit|
 |---- |---- |
-|AND <br> Si bits à n’importe quel emplacement 1, le résultat est 1. |1010 1010 = 170 <br>0100 1011 =  75 <br>-----------------  <br> 0000 1010 =  10 |
-|- ou - <br> Si des bits à n’importe quel emplacement sont 1, le résultat est 1. |1010 1010 = 170 <br>0100 1011 =  75 <br>-----------------  <br> 1110 1011 = 235|
-|NOT  <br> Inverse la valeur du bit à chaque emplacement de bit. |1010 1010 = 170 <br>----------------- <br>  0101 0101 =   85 |
+|AND <br> Si les bits, quel que soit leur emplacement, égalent tous les deux 1, le résultat est 1. |1010 1010 = 170 <br>0100 1011 = 75 <br>-----------------  <br> 0000 1010 = 10 |
+|- ou - <br> Si l’un ou l’autre des bits, quel que soit son emplacement, égale 1, le résultat est 1. |1010 1010 = 170 <br>0100 1011 = 75 <br>-----------------  <br> 1110 1011 = 235|
+|NOT  <br> Inverse la valeur de bit à chaque emplacement de bit. |1010 1010 = 170 <br>----------------- <br>  0101 0101 = 85 |
   
 Consultez les rubriques suivantes :   
-* [& &#40; Opération de bits AND &#41;](../../t-sql/language-elements/bitwise-and-transact-sql.md)  
-* [& = &#40; Assignation de bits AND &#41;](../../t-sql/language-elements/bitwise-and-equals-transact-sql.md)   
-* [&#124; &#40; Opérateur de bits OR &#41;](../../t-sql/language-elements/bitwise-or-transact-sql.md)  
-* [&#124; = &#40; Opérateur de bits OR affectation &#41;](../../t-sql/language-elements/bitwise-or-equals-transact-sql.md)   
-* [^ &#40; Opérateur de bits OR exclusif &#41;](../../t-sql/language-elements/bitwise-exclusive-or-transact-sql.md)  
-* [^ = &#40; Opérateur de bits OR exclusif affectation &#41;](../../t-sql/language-elements/bitwise-exclusive-or-equals-transact-sql.md)  
-* [~ &#40; Opération de bits NOT &#41;](../../t-sql/language-elements/bitwise-not-transact-sql.md)  
+* [& &#40;Opérateur AND au niveau du bit&#41;](../../t-sql/language-elements/bitwise-and-transact-sql.md)  
+* [& = &#40;Affectation après AND au niveau du bit&#41;](../../t-sql/language-elements/bitwise-and-equals-transact-sql.md)   
+* [&#124; &#40;Opérateur OR au niveau du bit&#41;](../../t-sql/language-elements/bitwise-or-transact-sql.md)  
+* [&#124;= &#40;Affectation après OR au niveau du bit&#41;](../../t-sql/language-elements/bitwise-or-equals-transact-sql.md)   
+* [^ &#40;Opérateur OR exclusif au niveau du bit&#41;](../../t-sql/language-elements/bitwise-exclusive-or-transact-sql.md)  
+* [^= &#40;Affectation après OR exclusif au niveau du bit&#41;](../../t-sql/language-elements/bitwise-exclusive-or-equals-transact-sql.md)  
+* [~ &#40;Opérateur NOT au niveau du bit&#41;](../../t-sql/language-elements/bitwise-not-transact-sql.md)  
   
- Les opérandes des opérateurs au niveau du bit peuvent être l’un des types de données de l’entier ou les catégories de types de données de chaîne binaire (à l’exception de la **image** type de données), sauf que les deux opérandes ne peut pas être l’un des types de données de la catégorie de type de données de chaîne binaire. Ce tableau indique les types de données d'opérandes pris en charge.  
+ Les opérandes des opérateurs au niveau du bit peuvent être de tout type de données des catégories chaîne binaire ou entier (à l’exception du type de données **image**), mais les deux opérandes ne peuvent être de n’importe quel type de données de la catégorie chaîne binaire. Ce tableau indique les types de données d'opérandes pris en charge.  
   
 |Opérande de gauche|Opérande de droite|  
 |------------------|-------------------|  
-|[binaire](../../t-sql/data-types/binary-and-varbinary-transact-sql.md)|**int**, **smallint**, ou **tinyint**|  
-|[bit](../../t-sql/data-types/bit-transact-sql.md)|**int**, **smallint**, **tinyint**, ou **bits**|  
-|[int](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)|**int**, **smallint**, **tinyint**, **binaire**, ou **varbinary**|  
-|[smallint](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)|**int**, **smallint**, **tinyint**, **binaire**, ou **varbinary**|  
-|[tinyint](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)|**int**, **smallint**, **tinyint**, **binaire**, ou **varbinary**|  
-|[varbinary](../../t-sql/data-types/binary-and-varbinary-transact-sql.md)|**int**, **smallint**, ou **tinyint**|  
+|[binaire](../../t-sql/data-types/binary-and-varbinary-transact-sql.md)|**int**, **smallint** ou **tinyint**|  
+|[bit](../../t-sql/data-types/bit-transact-sql.md)|**int**, **smallint**, **tinyint** ou **bit**|  
+|[Int](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)|**int**, **smallint**, **tinyint**, **binary** ou **varbinary**|  
+|[smallint](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)|**int**, **smallint**, **tinyint**, **binary** ou **varbinary**|  
+|[tinyint](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)|**int**, **smallint**, **tinyint**, **binary** ou **varbinary**|  
+|[varbinary](../../t-sql/data-types/binary-and-varbinary-transact-sql.md)|**int**, **smallint** ou **tinyint**|  
   
-## <a name="see-also"></a>Voir aussi  
- [Operators &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
+## <a name="see-also"></a> Voir aussi  
+ [Opérateurs &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
  [Types de données &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
- [Compound, opérateurs &#40; Transact-SQL &#41;](../../t-sql/language-elements/compound-operators-transact-sql.md)   
+ [Opérateurs composés &#40;Transact-SQL&#41;](../../t-sql/language-elements/compound-operators-transact-sql.md)   
   

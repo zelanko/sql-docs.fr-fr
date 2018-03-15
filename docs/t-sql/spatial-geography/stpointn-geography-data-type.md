@@ -1,5 +1,5 @@
 ---
-title: "STPointN (Type de données geography) | Documents Microsoft"
+title: "STPointN (type de données geography) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stpointn-geography-data-type"></a>STPointN (type de données geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Retourne le point spécifié dans un **geography** instance.  
+  Retourne le point spécifié dans une instance **geography**.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -45,21 +45,21 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="arguments"></a>Arguments  
  *expression*  
- Est un **int** expression comprise entre 1 et le nombre de points dans le **geography** instance.  
+ Expression **int** comprise entre 1 et le nombre de points de l’instance **geography**.  
   
 ## <a name="return-types"></a>Types de retour  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]type de retour : **geography**  
+ Type de retour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] : **geography**  
   
  Type de retour CLR : **SqlGeography**  
   
- Type Open Geospatial Consortium (OGC) : **Point**  
+ Type OGC (Open Geospatial Consortium) : **Point**  
   
-## <a name="remarks"></a>Notes  
- Si un **geography** instance est créée par l’utilisateur, STPointN() retourne le point spécifié par *expression* en classant les points dans l’ordre dans lequel ils ont été entrés à l’origine.  
+## <a name="remarks"></a>Notes   
+ Si une instance **geography** est créée par l’utilisateur, STPointN() retourne le point spécifié par *expression* en classant les points dans l’ordre dans lequel ils ont été entrés à l’origine.  
   
- Si un **geography** instance est construite par le système, STPointN() retourne le point spécifié par *expression* en classant tous les points dans le même ordre qu’ils seraient sortis : premier par **geography** instance, ensuite par anneau dans l’instance (le cas échéant), puis par point dans l’anneau. Cet ordre est déterministe.  
+ Si une instance **geography** est construite par le système, STPointN() retourne le point spécifié par *expression* en classant tous les points dans le même ordre que celui de leur sortie : d’abord par instance **geography**, puis par anneau dans l’instance (le cas échéant), puis par point dans l’anneau. Cet ordre est déterministe.  
   
- Si cette méthode est appelée avec une valeur inférieure à 1, elle lève une **ArgumentOutOfRangeException**.  
+ Si cette méthode est appelée avec une valeur inférieure à 1, elle lève **ArgumentOutOfRangeException**.  
   
  Si cette méthode est appelée avec une valeur supérieure au nombre de points dans l'instance, elle retourne Null.  
   
@@ -72,7 +72,7 @@ SET @g = geography::STGeomFromText('LINESTRING(-122.360 47.656, -122.343 47.656)
 SELECT @g.STPointN(2).ToString();  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Méthodes OGC sur des instances geography](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
   
   

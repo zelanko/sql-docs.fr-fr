@@ -1,5 +1,5 @@
 ---
-title: BEGIN DISTRIBUTED TRANSACTION (Transact-SQL) | Documents Microsoft
+title: BEGIN DISTRIBUTED TRANSACTION (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 11/29/2016
 ms.prod: sql-non-specified
@@ -59,12 +59,12 @@ BEGIN DISTRIBUTED { TRAN | TRANSACTION }
   
 ## <a name="arguments"></a>Arguments  
  *transaction_name*  
- Nom de transaction, défini par l'utilisateur, qui est utilisé pour suivre la transaction distribuée dans les utilitaires MS DTC. *argument* doit être conforme aux règles des identificateurs et doivent être \<= 32 caractères.  
+ Nom de transaction, défini par l'utilisateur, qui est utilisé pour suivre la transaction distribuée dans les utilitaires MS DTC. *transaction_name* doit suivre les règles applicables aux identificateurs et comporter un nombre \<= à 32 caractères.  
   
  @*tran_name_variable*  
- Nom d'une variable définie par l'utilisateur qui contient un nom de transaction utilisé pour suivre la transaction distribuée dans les utilitaires MS DTC. La variable doit être déclarée avec un **char**, **varchar**, **nchar**, ou **nvarchar** type de données.  
+ Nom d'une variable définie par l'utilisateur qui contient un nom de transaction utilisé pour suivre la transaction distribuée dans les utilitaires MS DTC. La variable doit être déclarée avec un type de données **char**, **varchar**, **nchar** ou **nvarchar**.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  L'instance de [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] exécutant l'instruction BEGIN DISTRIBUTED TRANSACTION est le créateur de la transaction et contrôle également l'exécution jusqu'à son terme. Si une instruction COMMIT TRANSACTION ou ROLLBACK TRANSACTION est ensuite émise pour la session, l'instance de contrôle demande à MS DTC de gérer l'exécution de la transaction distribuée sur toutes les instances concernées.  
   
  L'isolement d'instantané au niveau de la transaction ne prend pas en charge les transactions distribuées.  
@@ -75,11 +75,11 @@ BEGIN DISTRIBUTED { TRAN | TRANSACTION }
   
  Les sessions intervenant dans les transactions [!INCLUDE[tsql](../../includes/tsql-md.md)] distribuées n'obtiennent pas d'objet de transaction qu'elles peuvent transmettre à une autre session pour que celle-ci soit explicitement inscrite dans la transaction distribuée. La seule façon pour un serveur distant de s'inscrire dans une transaction est d'être la cible d'une requête distribuée ou d'un appel de procédure stockée distante.  
   
- Lorsqu’une requête distribuée est exécutée dans une transaction locale, la transaction est automatiquement promue en transaction distribuée si la source de données OLE DB cible prend en charge ITransactionLocal. Si la source de données OLE DB cible ne prend pas en charge ITransactionLocal, seules les opérations en lecture seule sont autorisées dans la requête distribuée.  
+ Quand une requête distribuée est exécutée dans une transaction locale, celle-ci est automatiquement promue en transaction distribuée si la source de données OLE DB cible prend en charge ITransactionLocal. Si la source de données OLE DB cible ne prend pas en charge ITransactionLocal, seules les opérations de lecture sont autorisées dans la requête distribuée.  
   
  Une session déjà inscrite dans la transaction distribuée effectue un appel de procédure distante faisant référence à un serveur distant.  
   
- Le **distantes sp_configure** option contrôle si les appels aux procédures stockées distantes dans une transaction locale entraînent automatiquement la transaction locale être promue en transaction distribuée gérée par MS DTC. L’option SET de niveau connexion REMOTE_PROC_TRANSACTIONS peut servir à remplacer la valeur par défaut de l’instance établie par **distantes sp_configure**. Quand cette option est activée, un appel de procédure stockée à distance entraîne la promotion de la transaction locale en une transaction distribuée. Le serveur qui crée la transaction MS DTC devient l'émetteur de la transaction. COMMIT TRANSACTION déclenche une validation coordonnée MS DTC. Si le **distantes sp_configure** option est activée, les appels de procédure stockée distante dans les transactions locales sont automatiquement protégés dans le cadre des transactions distribuées sans avoir à réécrire les applications pour définir explicitement un BEGIN DISTRIBUTED TRANSACTION au lieu de BEGIN TRANSACTION.  
+ L’option **sp_configure remote proc trans** détermine si les appels aux procédures stockées distantes dans une transaction locale entraînent automatiquement la promotion de celle-ci en transaction distribuée gérée par MS DTC. REMOTE_PROC_TRANSACTIONS est une option SET au niveau de la connexion utilisable pour remplacer la valeur par défaut de l’instance définie par **sp_configure remote proc trans**. Quand cette option est activée, un appel de procédure stockée à distance entraîne la promotion de la transaction locale en une transaction distribuée. Le serveur qui crée la transaction MS DTC devient l'émetteur de la transaction. COMMIT TRANSACTION déclenche une validation coordonnée MS DTC. Si l’option **sp_configure remote proc trans** est activée, les appels de procédures stockées à distance contenus dans les transactions locales sont automatiquement protégés dans le cadre des transactions distribuées, et cela sans qu’il soit nécessaire de réécrire les applications pour définir explicitement un BEGIN DISTRIBUTED TRANSACTION à la place d’un BEGIN TRANSACTION.  
   
  Pour plus d'informations sur l'environnement et le traitement des transactions distribuées, consultez la documentation de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Distributed Transaction Coordinator (MSDTC).  
   
@@ -106,7 +106,7 @@ COMMIT TRANSACTION;
 GO  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [BEGIN TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/begin-transaction-transact-sql.md)   
  [COMMIT TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/commit-transaction-transact-sql.md)   
  [COMMIT WORK &#40;Transact-SQL&#41;](../../t-sql/language-elements/commit-work-transact-sql.md)   

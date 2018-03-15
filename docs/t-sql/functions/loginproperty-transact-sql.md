@@ -1,5 +1,5 @@
 ---
-title: LOGINPROPERTY (Transact-SQL) | Documents Microsoft
+title: LOGINPROPERTY (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -64,16 +64,16 @@ LOGINPROPERTY ( 'login_name' , 'property_name' )
  *login_name*  
  Nom d'une connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour laquelle l'état des propriétés de connexion est retourné.  
   
- *PropertyName*  
- Expression contenant les informations de propriétés à retourner pour le compte de connexion. *PropertyName* peut prendre l’une des valeurs suivantes.  
+ *propertyname*  
+ Expression contenant les informations de propriétés à retourner pour le compte de connexion. *propertyname* peut avoir l’une des valeurs suivantes.  
   
-|Valeur| Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |**BadPasswordCount**|Retourne le nombre de tentatives de connexion consécutives effectuées avec un mot de passe incorrect.|  
 |**BadPasswordTime**|Retourne l'heure de la dernière tentative de connexion effectuée avec un mot de passe incorrect.|  
 |**DaysUntilExpiration**|Retourne le nombre de jours avant l'expiration du mot de passe.|  
-|**DefaultDatabase**|Retourne le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] base de données par défaut de connexion stockées dans les métadonnées ou **master** si aucune base de données n’est spécifié. Retourne la valeur NULL non -[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] configuré les utilisateurs (par exemple, les utilisateurs authentifiés Windows).|  
-|**DefaultLanguage**|Retourne la langue par défaut de connexion telle que stockée dans les métadonnées. Retourne la valeur NULL non -[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilisateurs fournis, par exemple, Windows des utilisateurs authentifiés.|  
+|**DefaultDatabase**|Retourne la base de données par défaut de la connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] telle que stockée dans les métadonnées ou **master** si aucune base de données n’est spécifiée. Retourne NULL pour les utilisateurs fournis non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (par exemple, les utilisateurs authentifiés Windows).|  
+|**DefaultLanguage**|Retourne la langue par défaut de connexion telle que stockée dans les métadonnées. Retourne NULL pour les utilisateurs fournis non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], par exemple les utilisateurs authentifiés Windows.|  
 |**HistoryLength**|Retourne le nombre de mots de passe faisant l'objet d'un suivi pour le compte de connexion à l'aide du mécanisme d'application des stratégies de mot de passe. Si la valeur est 0, la stratégie de mot de passe n'est pas appliquée. La reprise de l'application de la stratégie du mot de passe redémarre à 1.|  
 |**IsExpired**|Indique si le compte de connexion a expiré.|  
 |**IsLocked**|Indique si le compte de connexion est verrouillé.|  
@@ -86,7 +86,7 @@ LOGINPROPERTY ( 'login_name' , 'property_name' )
 ## <a name="returns"></a>Valeur renvoyée  
  Le type de données dépend de la valeur demandée.  
   
- **IsLocked**, **IsExpired**, et **IsMustChange** sont de type **int**.  
+ **IsLocked**, **IsExpired** et **IsMustChange** sont de type **int**.  
   
 -   1 si la connexion est dotée de l'état spécifié.  
   
@@ -112,22 +112,22 @@ LOGINPROPERTY ( 'login_name' , 'property_name' )
   
 -   0 pour un hachage SQL7.0  
   
--   1 si un hachage SHA-1  
+-   1 pour un hachage SHA-1  
   
 -   2 pour un hachage SHA-2  
   
 -   NULL si le compte de connexion n'est pas un compte de connexion SQL Server valide.  
   
-## <a name="remarks"></a>Notes  
- Cette fonction intégrée retourne des informations sur les paramètres de stratégie de mot de passe d'une connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Les noms des propriétés ne sont pas la casse, les noms de propriété, tel que **BadPasswordCount** et **badpasswordcount** sont équivalents. Les valeurs de la **PasswordHash, PasswordHashAlgorithm**, et **PasswordLastSetTime** propriétés sont disponibles sur toutes les configurations prises en charge de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], mais les autres propriétés sont disponibles uniquement quand [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est en cours d’exécution [!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)] et que CHECK_POLICY et CHECK_EXPIRATION sont activés. Pour plus d'informations, consultez [Password Policy](../../relational-databases/security/password-policy.md).  
+## <a name="remarks"></a>Notes   
+ Cette fonction intégrée retourne des informations sur les paramètres de stratégie de mot de passe d'une connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Étant donné que les noms des propriétés ne respectent pas la casse, les noms de propriété tels que **BadPasswordCount** et **badpasswordcount** sont équivalents. Les valeurs des propriétés **PasswordHash, PasswordHashAlgorithm** et **PasswordLastSetTime** sont disponibles sur toutes les configurations de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prises en charge, mais les autres propriétés ne sont disponibles que si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est en cours d’exécution sous [!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)] et que CHECK_POLICY et CHECK_EXPIRATION sont tous les deux activés. Pour plus d'informations, consultez [Password Policy](../../relational-databases/security/password-policy.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Requiert l'autorisation VIEW sur la connexion. Pour la demande du hachage de mot de passe, requiert en outre l'autorisation CONTROL SERVER.  
   
 ## <a name="examples"></a>Exemples  
   
 ### <a name="a-checking-whether-a-login-must-change-its-password"></a>A. Détermination de la nécessité de modifier le mot de passe d'un compte de connexion  
- L’exemple suivant vérifie si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connexion `John3` doit modifier son mot de passe la prochaine fois qu’il se connecte à une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ L’exemple suivant vérifie si la connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `John3` doit changer son mot de passe la prochaine fois qu’elle se connecte à une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ```  
 SELECT LOGINPROPERTY('John3', 'IsMustChange');  
@@ -142,7 +142,7 @@ SELECT LOGINPROPERTY('John3', 'IsLocked');
 GO  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md)   
  [sys.server_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)  
   

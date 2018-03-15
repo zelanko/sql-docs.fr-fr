@@ -50,8 +50,8 @@ LOWER ( character_expression )
 ```  
   
 ## <a name="arguments"></a>Arguments  
- *character_expression*  
- Est un [expression](../../t-sql/language-elements/expressions-transact-sql.md) de type binaire ou caractère. *character_expression* peut être une constante, une variable ou une colonne. *character_expression* doit être de type de données qui est implicitement convertible en **varchar**. Sinon, utilisez [CAST](../../t-sql/functions/cast-and-convert-transact-sql.md) pour convertir explicitement *character_expression*.  
+ *expression_caractère*  
+ [Expression](../../t-sql/language-elements/expressions-transact-sql.md) de données binaires ou caractères. *character_expression* peut être une constante, une variable ou une colonne. *character_expression* doit appartenir à un type de données pouvant être implicitement converti en **varchar**. Sinon, utilisez la fonction [CAST](../../t-sql/functions/cast-and-convert-transact-sql.md) pour convertir explicitement *character_expression*.  
   
 ## <a name="return-types"></a>Types de retour  
  **varchar** ou **nvarchar**  
@@ -79,9 +79,9 @@ minipump              MINIPUMP               minipump
 taillights – battery  TAILLIGHTS – BATTERY   taillights - battery
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Types de données &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
- [Fonctions de chaîne &#40; Transact-SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)  
+ [Fonctions de chaîne &#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)  
  [UPPER &#40;Transact-SQL&#41;](../../t-sql/functions/upper-transact-sql.md)  
   
   

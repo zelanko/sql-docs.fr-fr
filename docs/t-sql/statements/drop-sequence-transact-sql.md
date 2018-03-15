@@ -1,5 +1,5 @@
 ---
-title: "SÉQUENCE de dépôt (Transact-SQL) | Documents Microsoft"
+title: DROP SEQUENCE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 05/11/2017
 ms.prod: sql-non-specified
@@ -47,10 +47,10 @@ DROP SEQUENCE [ IF EXISTS ] { [ database_name . [ schema_name ] . | schema_name.
 ```  
   
 ## <a name="arguments"></a>Arguments  
- *S’IL EXISTE*  
- **S’applique à**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] jusqu’à [version actuelle](http://go.microsoft.com/fwlink/p/?LinkId=299658)).  
+ *IF EXISTS*  
+ **S’applique à**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] jusqu’à la [version actuelle](http://go.microsoft.com/fwlink/p/?LinkId=299658)).  
   
- Conditionnellement supprime la séquence uniquement s’il existe déjà.  
+ Supprime, de manière conditionnelle, la séquence uniquement si elle existe déjà.  
   
  *database_name*  
  Nom de la base de données dans laquelle l'objet séquence a été créé.  
@@ -59,9 +59,9 @@ DROP SEQUENCE [ IF EXISTS ] { [ database_name . [ schema_name ] . | schema_name.
  Nom du schéma auquel appartient l'objet séquence.  
   
  *sequence_name*  
- Nom de la séquence à supprimer. Est de type **sysname**.  
+ Nom de la séquence à supprimer. Le type est **sysname**.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Après avoir généré un nombre, un objet séquence n'a aucune relation continue au nombre qu'il a généré ; par conséquent, l'objet séquence peut être supprimé, bien que le nombre généré soit encore en cours d'utilisation.  
   
  Un objet séquence peut être supprimé alors qu'il est référencé par une procédure stockée ou un déclencheur, car il n'est pas lié au schéma. Un objet séquence ne peut pas être supprimé s'il est référencé en tant que valeur par défaut dans une table. Le message d'erreur indiquera l'objet qui référence la séquence.  
@@ -78,11 +78,11 @@ GO
   
 ## <a name="security"></a>Sécurité  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>Autorisations  
  Requiert l'autorisation ALTER ou CONTROL sur le schéma.  
   
 ### <a name="audit"></a>Audit  
- Pour auditer **DROP SEQUENCE**, analyse le **SCHEMA_OBJECT_CHANGE_GROUP**.  
+ Pour auditer **DROP SEQUENCE**, surveillez **SCHEMA_OBJECT_CHANGE_GROUP**.  
   
 ## <a name="examples"></a>Exemples  
  L'exemple ci-dessous supprime un objet séquence nommé `CountBy1` dans la base de données actuelle.  
@@ -92,10 +92,10 @@ DROP SEQUENCE CountBy1 ;
 GO  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- [ALTER SEQUENCE &#40; Transact-SQL &#41;](../../t-sql/statements/alter-sequence-transact-sql.md)   
- [CRÉER une séquence de &#40; Transact-SQL &#41;](../../t-sql/statements/create-sequence-transact-sql.md)   
- [VALEUR suivante de &#40; Transact-SQL &#41;](../../t-sql/functions/next-value-for-transact-sql.md)   
+## <a name="see-also"></a> Voir aussi  
+ [ALTER SEQUENCE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-sequence-transact-sql.md)   
+ [CREATE SEQUENCE &#40;Transact-SQL&#41;](../../t-sql/statements/create-sequence-transact-sql.md)   
+ [NEXT VALUE FOR &#40;Transact-SQL&#41;](../../t-sql/functions/next-value-for-transact-sql.md)   
  [Numéros de séquence](../../relational-databases/sequence-numbers/sequence-numbers.md)  
   
   

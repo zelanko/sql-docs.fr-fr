@@ -1,5 +1,5 @@
 ---
-title: DANS la clause for (Transact-SQL) | Documents Microsoft
+title: INTO, clause (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 05/23/2017
 ms.prod: sql-non-specified
@@ -42,10 +42,10 @@ ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="select---into-clause-transact-sql"></a>-Clause SELECT INTO (Transact-SQL)
+# <a name="select---into-clause-transact-sql"></a>SELECT - Clause INTO (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  SELECT…INTO crée une table dans le groupe de fichiers par défaut et y insère les lignes résultant de la requête. Pour afficher la syntaxe SELECT complète, consultez [SELECT &#40; Transact-SQL &#41; ](../../t-sql/queries/select-transact-sql.md).  
+  SELECT…INTO crée une table dans le groupe de fichiers par défaut et y insère les lignes résultant de la requête. Pour afficher la syntaxe SELECT complète, consultez [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md).  
   
  ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -62,16 +62,16 @@ ms.lasthandoff: 01/25/2018
  
   *filegroup*
  
- Spécifie le nom du groupe de fichiers dans lequel la nouvelle table sera créée. Le groupe de fichiers spécifié doit exister sur la base de données reste le moteur SQL Server lève une erreur. Cette option est uniquement prise en charge avec [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)].
+ Spécifie le nom du groupe de fichiers dans lequel créer la table. Si le groupe de fichiers spécifié n’existe pas dans la base de données, le moteur SQL Server lève une erreur. Cette option est prise en charge uniquement à partir de [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)].
  
- Le format de *nouvelle_table* est déterminé par l’évaluation des expressions dans la liste de sélection. Les colonnes de *nouvelle_table* sont créés dans l’ordre spécifié par la liste de sélection. Chaque colonne de *nouvelle_table* a le même nom, type de données, possibilité de valeur null et une valeur que l’expression correspondante dans la liste de sélection. La propriété IDENTITY d'une colonne est transférée sauf dans les conditions définies dans « Utilisation des colonnes d'identité » dans la section Remarques.  
+ Le format de *new_table* est déterminé par l’évaluation des expressions de la liste de sélection. Les colonnes de *new_table* sont créées dans l’ordre spécifié par la liste de sélection. Chaque colonne de *new_table* a le même nom, le même type de données, la même possibilité de valeur Null et la même valeur que l’expression correspondante dans la liste de sélection. La propriété IDENTITY d'une colonne est transférée sauf dans les conditions définies dans « Utilisation des colonnes d'identité » dans la section Remarques.  
   
- Pour créer la table dans une autre base de données sur la même instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], spécifiez *nouvelle_table* comme un nom complet sous la forme *database.schema.table_name*.  
+ Pour créer la table dans une autre base de données de la même instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], spécifiez *new_table* comme nom complet sous la forme *database.schema.table_name*.  
   
- Vous ne pouvez pas créer *nouvelle_table* sur un serveur distant ; Toutefois, vous pouvez remplir *nouvelle_table* à partir d’une source de données distante. Pour créer *nouvelle_table* à partir d’une table source distante, spécifiez la table source à l’aide d’un nom en quatre parties sous la forme *linked_server*. *catalogue*. *schéma*. *objet* dans la clause FROM de l’instruction SELECT. Vous pouvez également utiliser le [OPENQUERY](../../t-sql/functions/openquery-transact-sql.md) fonction ou le [OPENDATASOURCE](../../t-sql/functions/opendatasource-transact-sql.md) fonction dans la clause FROM pour spécifier la source de données distante.  
+ Vous ne pouvez pas créer *new_table* sur un serveur distant, mais vous pouvez remplir *new_table* à partir d’une source de données distante. Pour créer *new_table* à partir d’une table source distante, spécifiez la table source par un nom en quatre parties sous la forme *linked_server*.*catalog*.*schema*.*object* dans la clause FROM de l’instruction SELECT. Vous pouvez aussi utiliser la fonction [OPENQUERY](../../t-sql/functions/openquery-transact-sql.md) ou la fonction [OPENDATASOURCE](../../t-sql/functions/opendatasource-transact-sql.md) dans la clause FROM pour spécifier la source de données distante.  
   
 ## <a name="data-types"></a>Types de données  
- L'attribut FILESTREAM n'est pas transféré dans la nouvelle table. Objets BLOB FILESTREAM sont copiés et stockés dans la nouvelle table en tant que **varbinary (max)** objets BLOB. Sans l’attribut FILESTREAM, le **varbinary (max)** type de données a une limite de 2 Go. Si un objet BLOB FILESTREAM dépasse cette valeur, l'erreur 7119 se déclenche et l'instruction s'arrête.  
+ L'attribut FILESTREAM n'est pas transféré dans la nouvelle table. Les objets BLOB FILESTREAM sont copiés et stockés dans la nouvelle table en tant qu’objets BLOB **varbinary(max)**. Sans l’attribut FILESTREAM, le type de données **varbinary(max)** est limité à 2 Go. Si un objet BLOB FILESTREAM dépasse cette valeur, l'erreur 7119 se déclenche et l'instruction s'arrête.  
   
  Lorsque vous sélectionnez une colonne d'identité existante dans une nouvelle table, la nouvelle colonne hérite de la propriété IDENTITY sauf si l'une des conditions suivantes est vraie :  
   
@@ -101,7 +101,7 @@ Si l'une de ces conditions est vérifiée, la colonne est créée avec l'attribu
  Lorsqu'une colonne calculée est comprise dans la liste de sélection, la colonne correspondante de la nouvelle table n'est pas une colonne calculée. Les valeurs de la nouvelle colonne sont les valeurs calculées au moment de l'exécution de l'instruction SELECT … INTO.  
   
 ## <a name="logging-behavior"></a>Comportement de journalisation  
- L'importance de la journalisation pour SELECT INTO dépend du mode de récupération en vigueur pour la base de données. En mode de récupération simple ou en mode de récupération utilisant les journaux de transactions, les opérations de chargement en masse font l'objet d'une journalisation minimale. Avec une journalisation minimale, à l’aide de l’instruction SELECT... DANS l’instruction peut être plus efficace que la création d’une table puis en remplissant la table avec une instruction INSERT. Pour plus d’informations, consultez [Journal des transactions &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md).  
+ L'importance de la journalisation pour SELECT INTO dépend du mode de récupération en vigueur pour la base de données. En mode de récupération simple ou en mode de récupération utilisant les journaux de transactions, les opérations de chargement en masse font l'objet d'une journalisation minimale. Avec une journalisation minimale, l’utilisation de l’instruction SELECT… INTO peut s’avérer plus efficace que la création d’une table et son remplissage à l’aide d’une instruction INSERT. Pour plus d'informations, consultez [Journal des transactions &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md).  
   
 ## <a name="permissions"></a>Autorisations  
  Requiert l'autorisation CREATE TABLE dans la base de données de destination.  
@@ -171,9 +171,9 @@ WHERE name = 'AddressID';
 ```  
   
 ### <a name="d-creating-a-table-by-specifying-columns-from-a-remote-data-source"></a>D. Création d'une table en spécifiant des colonnes provenant d'une source de données distante  
- L'exemple suivant illustre l'utilisation de trois méthodes de création d'une table sur le serveur local à partir d'une source de données distante. L'exemple commence par créer un lien vers la source de données distante. Le nom du serveur lié, `MyLinkServer,` est spécifié dans la clause FROM de la première instruction SELECT... DANS l’instruction et dans la fonction OPENQUERY de la deuxième instruction SELECT... DANS l’instruction. La troisième instruction SELECT...INTO utilise la fonction OPENDATASOURCE, qui spécifie directement la source de données distante au lieu d'utiliser le nom du serveur lié.  
+ L'exemple suivant illustre l'utilisation de trois méthodes de création d'une table sur le serveur local à partir d'une source de données distante. L'exemple commence par créer un lien vers la source de données distante. Le nom du serveur lié, `MyLinkServer,`, est ensuite spécifié dans la clause FROM de la première instruction SELECT...INTO, ainsi que dans la fonction OPENQUERY de la deuxième instruction SELECT...INTO. La troisième instruction SELECT...INTO utilise la fonction OPENDATASOURCE, qui spécifie directement la source de données distante au lieu d'utiliser le nom du serveur lié.  
   
- **S’applique à :** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] via [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **S’applique à** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] jusqu’à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
 ```sql
 USE master;  
@@ -213,8 +213,8 @@ FROM OPENDATASOURCE('SQLNCLI',
 GO  
 ```  
   
-### <a name="e-import-from-an-external-table-created-with--polybase"></a>E. Importer à partir d’une table externe créée avec PolyBase  
- Importez des données de Hadoop ou d’Azure Storage dans SQL Server à des fins de stockage permanent. Utilisez `SELECT INTO` pour importer des données référencées par une table externe pour le stockage persistant dans SQL Server. Créez une table relationnelle à la volée, puis créez un index column-store en plus de la table.  
+### <a name="e-import-from-an-external-table-created-with--polybase"></a>E. Importation à partir d’une table externe créée avec PolyBase  
+ Importez des données de Hadoop ou d’Azure Storage dans SQL Server à des fins de stockage permanent. Utilisez `SELECT INTO` pour importer des données référencées par une table externe en vue de leur stockage permanent dans SQL Server. Créez une table relationnelle à la volée, puis créez un index column-store en plus de la table.  
   
  **S’applique à :** [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
@@ -231,10 +231,10 @@ ON Insured_Customers.CustomerKey = SensorD.CustomerKey
 ORDER BY YearlyIncome  
   
 ```  
-### <a name="f-creating-a-new-table-as-a-copy-of-another-table-and-loading-it-a-specified-filegroup"></a>F. Création d’une table en tant que copie d’une autre table et de son chargement un groupe de fichiers spécifié
-L’exemple suivant illustre la création d’une table en tant que copie d’une autre table et de son chargement dans un groupe de fichiers spécifié diffère dans le groupe de fichiers par défaut de l’utilisateur.
+### <a name="f-creating-a-new-table-as-a-copy-of-another-table-and-loading-it-a-specified-filegroup"></a>F. Création d’une table en tant que copie d’une autre table et chargement de la table dans un groupe de fichiers spécifié
+L’exemple suivant illustre la création d’une table en tant que copie d’une autre table et son chargement dans un autre groupe de fichiers que le groupe de fichiers par défaut de l’utilisateur.
 
- **S’applique à :**[!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]
+ **S’applique à** : [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]
 
 ```sql
 ALTER DATABASE [AdventureWorksDW2016] ADD FILEGROUP FG2;
@@ -249,10 +249,10 @@ GO
 SELECT *  INTO [dbo].[FactResellerSalesXL] ON FG2 from [dbo].[FactResellerSales]
 ```
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
- [SELECT Examples &#40;Transact-SQL&#41;](../../t-sql/queries/select-examples-transact-sql.md)   
- [INSÉRER une &#40; Transact-SQL &#41;](../../t-sql/statements/insert-transact-sql.md)   
- [IDENTITY &#40;Function&#41; &#40;Transact-SQL&#41;](../../t-sql/functions/identity-function-transact-sql.md)  
+ [Exemples SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-examples-transact-sql.md)   
+ [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
+ [IDENTITY, fonction &#40;Transact-SQL&#41;](../../t-sql/functions/identity-function-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: ERROR_LINE (Transact-SQL) | Documents Microsoft
+title: ERROR_LINE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -51,7 +51,7 @@ ERROR_LINE ( )
 ```  
   
 ## <a name="return-type"></a>Type de retour  
- **int**  
+ **Int**  
   
 ## <a name="return-value"></a>Valeur retournée  
  Lors de l'appel d'un bloc CATCH :  
@@ -62,10 +62,10 @@ ERROR_LINE ( )
   
  Retourne NULL si l'appel a lieu en dehors de l'étendue d'un bloc CATCH.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Cette fonction peut être appelée n'importe où dans l'étendue d'un bloc CATCH.  
   
- ERROR_LINE retourne le numéro de la ligne erronée, quel que soit le nombre d'appels ou leur emplacement dans le bloc CATCH. Cela contraste avec les fonctions, telles que@ERROR, qui retournent un numéro d’erreur dans l’instruction qui suit celle qui a causé une erreur ou dans la première instruction d’un bloc CATCH.  
+ ERROR_LINE retourne le numéro de la ligne erronée, quel que soit le nombre d'appels ou leur emplacement dans le bloc CATCH. Ceci contraste avec les fonctions, telles que @@ERROR, qui renvoient un numéro d’erreur dans l’instruction immédiatement après celui qui a causé une erreur ou dans la première instruction d’un bloc CATCH.  
   
  Dans les blocs CATCH imbriqués, ERROR_LINE retourne le numéro de la ligne erronée spécifique du bloc CATCH référencé. Par exemple, le bloc CATCH d'une construction TRY…CATCH peut inclure une construction TRY…CATCH imbriquée. Dans un bloc CATCH imbriqué, ERROR_LINE retourne le numéro de ligne pour l'erreur qui a appelé le bloc CATCH imbriqué. Si ERROR_LINE est exécuté dans le bloc CATCH externe, il retourne le numéro de ligne pour l'erreur qui a appelé le bloc CATCH.  
   
@@ -131,14 +131,14 @@ END CATCH;
 GO  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [TRY...CATCH &#40;Transact-SQL&#41;](../../t-sql/language-elements/try-catch-transact-sql.md)   
  [sys.messages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/messages-for-errors-catalog-views-sys-messages.md)   
  [ERROR_NUMBER &#40;Transact-SQL&#41;](../../t-sql/functions/error-number-transact-sql.md)   
  [ERROR_MESSAGE &#40;Transact-SQL&#41;](../../t-sql/functions/error-message-transact-sql.md)   
  [ERROR_PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/functions/error-procedure-transact-sql.md)   
  [ERROR_SEVERITY &#40;Transact-SQL&#41;](../../t-sql/functions/error-severity-transact-sql.md)   
- [ERROR_STATE &#40; Transact-SQL &#41;](../../t-sql/functions/error-state-transact-sql.md)   
+ [ERROR_STATE &#40;Transact-SQL&#41;](../../t-sql/functions/error-state-transact-sql.md)   
  [RAISERROR &#40;Transact-SQL&#41;](../../t-sql/language-elements/raiserror-transact-sql.md)   
  [@@ERROR &#40;Transact-SQL&#41;](../../t-sql/functions/error-transact-sql.md)  
   

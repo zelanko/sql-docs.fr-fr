@@ -1,5 +1,5 @@
 ---
-title: ENVOI (Transact-SQL) | Documents Microsoft
+title: SEND (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/26/2017
 ms.prod: sql-non-specified
@@ -57,16 +57,16 @@ SEND
 ```  
   
 ## <a name="arguments"></a>Arguments  
- SUR la CONVERSATION *conversation_handle [... @conversation_handle_n]*  
- Spécifie les conversations auxquelles appartient le message. Le *conversation_handle* doit contenir un identificateur de conversation valide. Le même descripteur de conversation ne peut pas être utilisé plus d'une fois.  
+ ON CONVERSATION *conversation_handle [.. @conversation_handle_n]*  
+ Spécifie les conversations auxquelles appartient le message. *conversation_handle* doit contenir un identificateur de conversation valide. Le même descripteur de conversation ne peut pas être utilisé plus d'une fois.  
   
- TYPE DE MESSAGE *message_type_name*  
+ MESSAGE TYPE *message_type_name*  
  Spécifie le type du message envoyé. Ce type de message doit être inclus dans les contrats de service qu'utilisent ces conversations. Ces contrats doivent autoriser l'envoi de ce type de message depuis cette partie de la conversation. Par exemple, les services cibles des conversations ne peuvent envoyer que les messages spécifiés dans le contrat comme SENT BY TARGET ou SENT BY ANY. Si cette clause est omise, le message est du type DEFAULT.  
   
  *message_body_expression*  
- Fournit une expression représentant le corps du message. Le *message_body_expression* est facultatif. Toutefois, si le *message_body_expression* figure l’expression doit être d’un type qui peut être converti en **varbinary (max)**. Cette expression ne peut pas avoir la valeur NULL. Si cette clause est omise, le corps du message est vide.  
+ Fournit une expression représentant le corps du message. *message_body_expression* est facultatif. Toutefois, si *message_body_expression* est présent, le type d’expression doit pouvoir être converti vers le type **varbinary(max)**. Cette expression ne peut pas avoir la valeur NULL. Si cette clause est omise, le corps du message est vide.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
   
 > [!IMPORTANT]  
 >  Si l'instruction SEND n'est pas la première instruction d'un lot ou d'une procédure stockée, l'instruction qui précède doit se terminer par un point-virgule (;).  
@@ -79,9 +79,9 @@ SEND
   
 -   Lorsque vous envoyez un message qui est une réponse à un message reçu précédemment d'un autre service, utilisez le descripteur de conversation retourné par l'instruction RECEIVE qui a retourné le message d'origine.  
   
- Dans de nombreux cas, le code qui contient l’instruction SEND est distinct du code qui contient des instructions BEGIN DIALOG ou de réception en fournissant le descripteur de conversation. Dans ces cas, le descripteur de conversation doit être l'un des éléments de données inclus dans les informations d'état passées au code qui contient l'instruction SEND.  
+ Dans de nombreux cas, le code qui contient l’instruction SEND est distinct du code qui contient l’instruction BEGIN DIALOG ou RECEIVE qui fournit le descripteur de conversation. Dans ces cas, le descripteur de conversation doit être l'un des éléments de données inclus dans les informations d'état passées au code qui contient l'instruction SEND.  
   
- Les messages sont envoyés aux services dans d’autres instances de la [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] sont stockées dans une file d’attente de transmission dans la base de données en cours jusqu'à ce qu’ils puissent être transmis les files d’attente de service dans les instances distantes. Les messages envoyés aux services dans la même instance de la [!INCLUDE[ssDE](../../includes/ssde-md.md)] sont placés directement dans les files d’attente associées à ces services. Si une condition empêche un message local d'être placé directement dans la file d'attente du service cible, il peut être stocké dans la file d'attente de transmission jusqu'à ce que la condition soit résolue. Cela peut se produire, par exemple, pour certains types d'erreurs ou lorsque la file d'attente du service cible est inactive. Vous pouvez utiliser la **sys.transmission_queue** vue système pour afficher les messages dans la file d’attente de transmission.  
+ Les messages qui sont envoyés aux services dans d’autres instances du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] sont stockés dans une file d’attente de transmission dans la base de données actuelle jusqu’à ce qu’ils puissent être transmis aux files d’attente de service dans les instances distantes. Les messages envoyés aux services dans la même instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)] sont placés directement dans les files d’attente associées à ces services. Si une condition empêche un message local d'être placé directement dans la file d'attente du service cible, il peut être stocké dans la file d'attente de transmission jusqu'à ce que la condition soit résolue. Cela peut se produire, par exemple, pour certains types d'erreurs ou lorsque la file d'attente du service cible est inactive. Vous pouvez utiliser la vue système **sys.transmission_queue** pour consulter les messages dans la file d’attente de transmission.  
   
  SEND est une instruction atomique, autrement dit, si une instruction SEND qui envoie un message sur plusieurs conversations échoue, par exemple si une conversation se trouve dans un état d'erreur, aucun message ne sera stocké dans la file d'attente de transmission ni mis dans une file d'attente de service cible.  
   
@@ -93,17 +93,17 @@ SEND
   
 -   dans un même niveau de priorité, leur ordre d'envoi dans la conversation.  
   
- Les niveaux de priorité spécifiés dans les priorités de conversation ne sont appliqués aux messages dans la file d'attente de transmission que si l'option de base de données HONOR_BROKER_PRIORITY a la valeur ON. Si HONOR_BROKER_PRIORITY a la valeur OFF, le niveau de priorité par défaut 5 est attribué à tous les messages placés dans la file d'attente de transmission pour cette base de données. Niveaux de priorité ne sont pas appliquées à un envoi où les messages sont placés directement dans une file d’attente de service dans la même instance de la [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+ Les niveaux de priorité spécifiés dans les priorités de conversation ne sont appliqués aux messages dans la file d'attente de transmission que si l'option de base de données HONOR_BROKER_PRIORITY a la valeur ON. Si HONOR_BROKER_PRIORITY a la valeur OFF, le niveau de priorité par défaut 5 est attribué à tous les messages placés dans la file d'attente de transmission pour cette base de données. Les niveaux de priorité ne sont pas appliqués à une instruction SEND dans laquelle les messages sont placés directement dans une file d’attente de service dans la même instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
  L'instruction SEND verrouille séparément chaque conversation sur laquelle un message est envoyé pour garantir la remise ordonnée par conversation.  
   
  L'instruction SEND n'est pas valide dans une fonction définie par l'utilisateur.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Pour envoyer un message, l'utilisateur actuel doit avoir l'autorisation RECEIVE sur la file d'attente de chaque service qui envoie le message.  
   
 ## <a name="examples"></a>Exemples  
- L'exemple ci-dessous illustre le début d'un dialogue et l'envoi d'un message XML dans le cadre du dialogue. Pour envoyer le message, l’exemple convertit l’objet xml **varbinary (max)**.  
+ L'exemple ci-dessous illustre le début d'un dialogue et l'envoi d'un message XML dans le cadre du dialogue. Pour envoyer le message, l’exemple convertit l’objet xml au format **varbinary(max)**.  
   
 ```  
 DECLARE @dialog_handle UNIQUEIDENTIFIER,  
@@ -151,10 +151,10 @@ SEND ON CONVERSATION (@dialog_handle1, @dialog_handle2, @dialog_handle3)
     (@OrderMsg) ;  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- [BEGIN DIALOG CONVERSATION &#40; Transact-SQL &#41;](../../t-sql/statements/begin-dialog-conversation-transact-sql.md)   
- [CONVERSATION de fin &#40; Transact-SQL &#41;](../../t-sql/statements/end-conversation-transact-sql.md)   
- [RÉCEPTION &#40; Transact-SQL &#41;](../../t-sql/statements/receive-transact-sql.md)   
- [Sys.transmission_queue &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-transmission-queue-transact-sql.md)  
+## <a name="see-also"></a> Voir aussi  
+ [BEGIN DIALOG CONVERSATION &#40;Transact-SQL&#41;](../../t-sql/statements/begin-dialog-conversation-transact-sql.md)   
+ [END CONVERSATION &#40;Transact-SQL&#41;](../../t-sql/statements/end-conversation-transact-sql.md)   
+ [RECEIVE &#40;Transact-SQL&#41;](../../t-sql/statements/receive-transact-sql.md)   
+ [sys.transmission_queue &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-transmission-queue-transact-sql.md)  
   
   

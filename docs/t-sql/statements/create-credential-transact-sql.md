@@ -1,5 +1,5 @@
 ---
-title: "CRÉER des informations d’identification (Transact-SQL) | Documents Microsoft"
+title: CREATE CREDENTIAL (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 01/09/2017
 ms.prod: sql-non-specified
@@ -40,10 +40,10 @@ ms.lasthandoff: 11/21/2017
 # <a name="create-credential-transact-sql"></a>CREATE CREDENTIAL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Crée une information d’identification au niveau du serveur. Informations d’identification sont un enregistrement qui contient les informations d’authentification qui sont requis pour se connecter à une ressource en dehors de SQL Server. La plupart des informations d'identification incluent un utilisateur et un mot de passe Windows. Par exemple, l’enregistrement d’une sauvegarde de base de données à un emplacement peut nécessiter SQL Server fournir des informations d’identification spéciale pour accéder à cet emplacement. Pour plus d’informations, consultez [informations d’identification (moteur de base de données)](../../relational-databases/security/authentication-access/credentials-database-engine.md).
+  Crée des informations d’identification au niveau du serveur. Les informations d’identification sont un enregistrement qui contient les informations d’authentification requises pour la connexion à une ressource en dehors de SQL Server. La plupart des informations d'identification incluent un utilisateur et un mot de passe Windows. Par exemple, pour enregistrer une sauvegarde de base de données à un certain emplacement, il peut être nécessaire que SQL Server fournisse des informations d’identification spéciales afin d’accéder à cet emplacement. Pour plus d’informations, consultez [Informations d’identification (moteur de base de données)](../../relational-databases/security/authentication-access/credentials-database-engine.md).
   
 > [!NOTE]  
->  Pour rendre les informations d’identification lors de l’utilisation du niveau de la base de données [CREATE DATABASE SCOPED CREDENTIAL &#40; Transact-SQL &#41; ](../../t-sql/statements/create-database-scoped-credential-transact-sql.md). Utiliser les informations d’identification au niveau du serveur lorsque vous avez besoin d’utiliser les mêmes informations d’identification pour plusieurs bases de données sur le serveur. Une information d’identification de l’étendue de base de données permet de rendre la base de données plus portable. Lorsqu’une base de données est déplacé vers un nouveau serveur, les informations d’identification de base de données applique seront déplacent avec elle. Informations d’identification d’une étendue de base de données utilisez sur [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
+>  Pour créer les informations d’identification au niveau de la base de données, utilisez [CREATE DATABASE SCOPED CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/create-database-scoped-credential-transact-sql.md). Utilisez des informations d’identification au niveau du serveur quand vous avez besoin d’utiliser les mêmes informations d’identification pour plusieurs bases de données sur le serveur. Utilisez des informations d’identification délimitées à la base de données afin d’accroître la portabilité de la base de données. Quand une base de données est déplacée vers un nouveau serveur, les informations d’identification délimitées à la base de données le sont également. Utilisez des informations d’identification délimitées à la base de données sur [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
  ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -59,33 +59,33 @@ WITH IDENTITY = 'identity_name'
   
 ## <a name="arguments"></a>Arguments  
  *credential_name*  
- Spécifie le nom des informations d'identification créées. *credential_name* ne peut pas commencer par le signe dièse (#). Les informations d'identification système commencent avec ##.  Lorsque vous utilisez une signature d’accès partagé (SAS), ce nom doit correspondre le chemin d’accès du conteneur, commencer par https et ne doit pas contenir une barre oblique. Consultez l’exemple D ci-dessous.  
+ Spécifie le nom des informations d'identification créées. *credential_name* ne peut pas commencer par le signe dièse (#). Les informations d'identification système commencent avec ##.  Quand vous utilisez une signature d’accès partagé (SAP), ce nom doit correspondre au chemin du conteneur, commencer par https, et ne pas contenir de barre oblique. Consultez l’exemple D ci-dessous.  
   
- IDENTITÉ **='***identity_name***'**  
- Spécifie le nom du compte à utiliser lors d'une connexion en dehors du serveur. Lorsque les informations d’identification sont utilisée pour accéder au coffre de clés Azure, le **identité** est le nom de l’archivage de clé. Consultez l'exemple C ci-dessous. Lorsque les informations d’identification à l’aide de signature d’accès partagé (SAS), le **identité** est *la SIGNATURE d’accès partagé*. Consultez l’exemple D ci-dessous.  
+ IDENTITY **='***identity_name***'**  
+ Spécifie le nom du compte à utiliser lors d'une connexion en dehors du serveur. Quand les informations d’identification sont utilisées pour accéder à Azure Key Vault, **IDENTITY** est le nom du coffre de clés. Consultez l'exemple C ci-dessous. Quand les informations d’identification utilisent une signature d’accès partagé, **identité** est *SHARED ACCESS SIGNATURE*. Consultez l’exemple D ci-dessous.  
   
  SECRET **='***secret***'**  
  Spécifie le secret requis pour l'authentification sortante.  
   
- Lorsque les informations d’identification sont utilisée pour accéder au coffre de clés Azure à le **SECRET** argument de **CREATE CREDENTIAL** requiert le  *\<ID Client >* (sans tirets) et  *\<Secret >* d’un **Principal du Service** dans Azure Active Directory soient passés ensemble sans espace entre eux. Consultez l'exemple C ci-dessous. Lorsque les informations d’identification à l’aide de signature d’accès partagé, le **SECRET** est le jeton de signature d’accès partagé. Consultez l’exemple D ci-dessous.  Pour plus d’informations sur la création d’une stratégie d’accès stockée et une signature d’accès partagé sur un conteneur Azure, consultez [leçon 1 : créer une stratégie d’accès stockée et une signature d’accès partagé sur un conteneur Azure](../../relational-databases/lesson-1-create-stored-access-policy-and-shared-access-signature.md).  
+ Quand les informations d’identification sont utilisées pour accéder à Azure Key Vault, l’argument **SECRET** de **CREATE CREDENTIAL** exige que le *\<Client ID>* (sans tirets) et le *\<Secret>* d’un **principal du service** dans Azure Active Directory soient passés ensemble sans espace les séparant. Consultez l'exemple C ci-dessous. Quand les informations d’identification utilisent une signature d’accès partagé, **SECRET** est le jeton de signature d’accès partagé. Consultez l’exemple D ci-dessous.  Pour plus d’informations sur la création d’une stratégie d’accès stockée et d’une signature d’accès partagé sur un conteneur Azure, consultez [Leçon 1 : Créer une stratégie d’accès stockée et une signature d’accès partagé sur un conteneur Azure](../../relational-databases/lesson-1-create-stored-access-policy-and-shared-access-signature.md).  
   
- POUR le fournisseur de services cryptographiques *cryptographic_provider_name*  
- Spécifie le nom d’un *entreprise fournisseur EKM (Key Management)*. Pour plus d’informations sur la gestion de clés, consultez [gestion de clés Extensible &#40; Gestion de clés extensible &#41; ](../../relational-databases/security/encryption/extensible-key-management-ekm.md).  
+ FOR CRYPTOGRAPHIC PROVIDER *cryptographic_provider_name*  
+ Spécifie le nom d’un *Fournisseur EKM (Gestion de clés extensible)*. Pour plus d’informations sur la gestion des clés, consultez [Gestion de clés extensible &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md).  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
 
  Lorsque IDENTITY correspond à un utilisateur Windows, le secret peut être le mot de passe. Le secret est chiffré à l'aide de la clé principale de service. Si la clé principale de service est régénérée, le secret est chiffré de nouveau au moyen de la nouvelle clé principale de service.  
   
- Après avoir créé une information d’identification, vous pouvez mapper à un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connexion à l’aide de [CREATE LOGIN](../../t-sql/statements/create-login-transact-sql.md) ou [ALTER LOGIN](../../t-sql/statements/alter-login-transact-sql.md). A [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connexion peut être mappée à une seule information d’identification, mais une seule information d’identification peut être mappée à plusieurs [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connexions. Pour plus d’informations, consultez [informations d’identification &#40; moteur de base de données &#41;](../../relational-databases/security/authentication-access/credentials-database-engine.md). Informations d’identification au niveau du serveur ne peuvent pas être mappée à une connexion, pas à un utilisateur de base de données. 
+ Une fois les informations d’identification créées, vous pouvez les mapper à une connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en utilisant [CREATE LOGIN](../../t-sql/statements/create-login-transact-sql.md) ou [ALTER LOGIN](../../t-sql/statements/alter-login-transact-sql.md). Une connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut être mappée à un seul ensemble d’informations d’identification, mais des informations d’identification peuvent être mappées à plusieurs connexions [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour plus d’informations, consultez [Informations d’identification &#40;moteur de base de données&#41;](../../relational-databases/security/authentication-access/credentials-database-engine.md). Des informations d’identification au niveau du serveur peuvent être mappées uniquement à une connexion, et pas à un utilisateur de base de données. 
   
- Informations d’identification sont visibles dans le [sys.credentials](../../relational-databases/system-catalog-views/sys-credentials-transact-sql.md) affichage catalogue.  
+ Des informations sur les informations d’identification sont consultables dans la vue de catalogue [sys.credentials](../../relational-databases/system-catalog-views/sys-credentials-transact-sql.md).  
   
  En l'absence d'une information d'identification mappée à une connexion pour le fournisseur, l'information d'identification mappée au compte de service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est utilisée.  
   
  Une connexion peut avoir plusieurs informations d'identification mappées à elle, à condition qu'elles soient utilisées avec des fournisseurs distinctifs. Il ne doit y avoir qu'une seule information d'identification mappée par fournisseur par connexion. La même information d'identification peut être mappée à d'autres connexions.  
   
-## <a name="permissions"></a>Permissions  
- Requiert **ALTER ANY CREDENTIAL** autorisation.  
+## <a name="permissions"></a>Autorisations  
+ Nécessite l’autorisation **ALTER ANY CREDENTIAL**.  
   
 ## <a name="examples"></a>Exemples  
   
@@ -99,7 +99,7 @@ GO
 ```  
   
 ### <a name="b-creating-a-credential-for-ekm"></a>B. Création d'informations d'identification pour EKM  
- L'exemple suivant utilise un compte précédemment créé, `User1OnEKM`, sur un module EKM au moyen des outils d'administration EKM, avec un type de compte de base et un mot de passe. Le **sysadmin** compte sur le serveur crée des informations d’identification sont utilisée pour se connecter au compte de gestion de clés extensible et l’affecte à la `User1` [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] compte :  
+ L'exemple suivant utilise un compte précédemment créé, `User1OnEKM`, sur un module EKM au moyen des outils d'administration EKM, avec un type de compte de base et un mot de passe. Le compte **sysadmin** sur le serveur crée des informations d’identification utilisées pour se connecter au compte EKM, et les attribue au compte `User1`[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :  
   
 ```  
 CREATE CREDENTIAL CredentialForEKM  
@@ -118,10 +118,10 @@ GO
 ```  
   
 ### <a name="c-creating-a-credential-for-ekm-using-the-azure-key-vault"></a>C. Création d'informations d'identification pour EKM à l'aide d’Azure Key Vault  
- L’exemple suivant crée un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] des informations d’identification pour le [!INCLUDE[ssDE](../../includes/ssde-md.md)] à utiliser lors de l’accès le coffre de clés Azure à l’aide de la **connecteur SQL Server pour Microsoft Azure Key Vault**. Pour obtenir un exemple complet de l’utilisation de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connecteur, consultez [Extensible Key Management à l’aide de Azure Key Vault &#40; SQL Server &#41; ](../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md).  
+ L’exemple suivant crée des informations d’identification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilisables par le [!INCLUDE[ssDE](../../includes/ssde-md.md)] lors de l’accès à Azure Key Vault à l’aide du **connecteur SQL Server pour Microsoft Azure Key Vault**. Pour obtenir un exemple complet d’utilisation du connecteur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez [Gestion de clés extensible à l’aide d’Azure Key Vault &#40;SQL Server&#41;](../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md).  
   
 > [!IMPORTANT]  
->  L'argument **IDENTITY** de **CREATE CREDENTIAL** nécessite le nom du coffre de clés. Le **SECRET** argument de **CREATE CREDENTIAL** requiert le  *\<ID Client >* (sans tirets) et  *\<Secret >* soient passés ensemble sans espace entre eux.  
+>  L'argument **IDENTITY** de **CREATE CREDENTIAL** nécessite le nom du coffre de clés. Concernant l’argument **SECRET** de **CREATE CREDENTIAL**, *\<Client ID>* (sans tirets) et *\<Secret>* doivent être passés ensemble sans espace les séparant.  
   
  Dans l'exemple suivant, l' **ID client** (`EF5C8E09-4D2A-4A76-9998-D93440D8115D`) est débarrassé des tirets et entré comme chaîne `EF5C8E094D2A4A769998D93440D8115D` , tandis que la **clé secrète** est représentée par la chaîne *SECRET_DBEngine*.  
   
@@ -133,7 +133,7 @@ CREATE CREDENTIAL Azure_EKM_TDE_cred
     FOR CRYPTOGRAPHIC PROVIDER AzureKeyVault_EKM_Prov ;  
 ```  
   
- L’exemple suivant crée les mêmes informations d’identification à l’aide de variables pour le **ID Client** et **Secret** chaînes, qui sont ensuite concaténées pour former le **SECRET** argument. Le **remplacer** fonction est utilisée pour supprimer les tirets de l’ID Client.  
+ L’exemple suivant crée les mêmes informations d’identification à l’aide de variables pour les chaînes **Client ID** et **Secret**, qui sont ensuite concaténées pour former l’argument **SECRET**. La fonction **REPLACE** est utilisée pour supprimer les tirets de l’ID client.  
   
 ```  
 DECLARE @AuthClientId uniqueidentifier = 'EF5C8E09-4D2A-4A76-9998-D93440D8115D';  
@@ -145,13 +145,13 @@ EXEC ('CREATE CREDENTIAL Azure_EKM_TDE_cred
     FOR CRYPTOGRAPHIC PROVIDER AzureKeyVault_EKM_Prov ;');  
 ```  
   
-### <a name="d-creating-a-credential-using-a-sas-token"></a>D. Création d’une information d’identification à l’aide d’un jeton SAS  
- **S’applique aux**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] via [version actuelle](http://go.microsoft.com/fwlink/p/?LinkId=299658).  
+### <a name="d-creating-a-credential-using-a-sas-token"></a>D. Création d’informations d’identification à l’aide d’un jeton SAP  
+ **S’applique à** : [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] jusqu’à la [version actuelle](http://go.microsoft.com/fwlink/p/?LinkId=299658).  
   
- L’exemple suivant crée une information d’identification d’accès partagé signature à l’aide d’un jeton SAP.  Pour un didacticiel sur la création d’une stratégie d’accès stockée et une signature d’accès partagé sur un conteneur Azure, puis en créant une information d’identification à l’aide de la signature d’accès partagé, consultez [didacticiel : à l’aide du service de stockage d’objets Blob Microsoft Azure avec les bases de données SQL Server 2016](Tutorial:%20Using%20the%20Microsoft%20Azure%20Blob%20storage%20service%20with%20SQL%20Server%202016%20databases.md).  
+ L’exemple suivant crée des informations d’identification avec signature d’accès partagé à l’aide d’un jeton SAP.  Pour un tutoriel montrant comment créer une stratégie d’accès stockée et une signature d’accès partagé sur un conteneur Azure, puis créer des informations d’identification à l’aide de la signature d’accès partagé, consultez [Tutoriel : Utiliser le service Stockage Blob Azure avec SQL Server 2016](Tutorial:%20Using%20the%20Microsoft%20Azure%20Blob%20storage%20service%20with%20SQL%20Server%202016%20databases.md).  
   
 > [!IMPORTANT]  
->  LE **nom d’identification** argument requiert que le nom correspond le chemin d’accès du conteneur, commencer par https et ne contient pas une barre oblique. Le **identité** argument requiert le nom, *SIGNATURE d’accès partagé*. Le **SECRET** argument requiert le jeton de signature d’accès partagé.  
+>  L’argument **CREDENTIAL NAME** exige que le nom corresponde au chemin du conteneur, commence par https et ne se termine pas par une barre oblique. L’argument **IDENTITY** nécessite le nom, *SHARED ACCESS SIGNATURE*. L’argument **SECRET** nécessite le jeton de signature d’accès partagé.  
   
 ```  
 USE master  
@@ -161,15 +161,15 @@ CREATE CREDENTIAL [https://<mystorageaccountname>.blob.core.windows.net/<mystora
 GO    
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- [Informations d’identification &#40; moteur de base de données &#41;](../../relational-databases/security/authentication-access/credentials-database-engine.md)   
- [ALTER CREDENTIAL &#40; Transact-SQL &#41;](../../t-sql/statements/alter-credential-transact-sql.md)   
- [SUPPRIMER les informations d’identification &#40; Transact-SQL &#41;](../../t-sql/statements/drop-credential-transact-sql.md)   
- [CRÉER des informations d’identification inclus dans l’étendue de base de données &#40; Transact-SQL &#41;](../../t-sql/statements/create-database-scoped-credential-transact-sql.md)   
+## <a name="see-also"></a> Voir aussi  
+ [Informations d’identification &#40;moteur de base de données&#41;](../../relational-databases/security/authentication-access/credentials-database-engine.md)   
+ [ALTER CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/alter-credential-transact-sql.md)   
+ [DROP CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/drop-credential-transact-sql.md)   
+ [CREATE DATABASE SCOPED CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/create-database-scoped-credential-transact-sql.md)   
  [CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md)   
  [ALTER LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/alter-login-transact-sql.md)   
  [sys.credentials &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-credentials-transact-sql.md)   
- [Leçon 2 : Créer des informations d’identification SQL Server à l’aide d’une signature d’accès partagé](../../relational-databases/lesson-2-create-a-sql-server-credential-using-a-shared-access-signature.md)   
- [Signatures d’accès partagé](https://azure.microsoft.com/en-us/documentation/articles/storage-dotnet-shared-access-signature-part-1/)  
+ [Leçon 2 : créer des informations d’identification SQL Server à l’aide d’une signature d’accès partagé](../../relational-databases/lesson-2-create-a-sql-server-credential-using-a-shared-access-signature.md)   
+ [Signature d’accès partagé](https://azure.microsoft.com/en-us/documentation/articles/storage-dotnet-shared-access-signature-part-1/)  
   
   

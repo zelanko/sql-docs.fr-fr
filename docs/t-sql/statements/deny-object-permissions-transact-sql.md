@@ -1,5 +1,5 @@
 ---
-title: "REFUSER des autorisations d’objet (Transact-SQL) | Documents Microsoft"
+title: "DENY - Refuser des autorisations sur un objet (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -29,7 +29,7 @@ ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="deny-object-permissions-transact-sql"></a>DENY – refus d'autorisations d'objet (Transact-SQL)
+# <a name="deny-object-permissions-transact-sql"></a>DENY - Refuser des autorisations sur un objet (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Refuse des autorisations à un membre de la classe OBJECT d'éléments sécurisables. Il s'agit des membres de la classe OBJECT : tables, vues, fonctions table, procédures stockées, procédures stockées étendues, fonctions scalaires, fonctions d'agrégation, files d'attente de service et synonymes.  
@@ -61,7 +61,7 @@ DENY <permission> [ ,...n ] ON
 ```  
   
 ## <a name="arguments"></a>Arguments  
- *autorisation*  
+ *permission*  
  Spécifie une autorisation qui peut être refusée sur un objet contenu dans un schéma. Pour obtenir la liste des autorisations, consultez la section Notes plus loin dans cette rubrique.  
   
  ALL  
@@ -76,22 +76,22 @@ DENY <permission> [ ,...n ] ON
 PRIVILEGES  
  Inclus pour la conformité à ANSI-92. Ne change pas le comportement de l'option ALL.  
   
-*colonne*  
- Spécifie le nom d'une colonne dans une table, une vue ou une fonction table, pour laquelle l'autorisation doit être refusée. Les parenthèses **()** sont requis. Seules les autorisations SELECT, REFERENCES et UPDATE peuvent être refusées sur une colonne. *colonne* peut être spécifié dans la clause des autorisations ou après le nom de l’élément sécurisable.  
+*column*  
+ Spécifie le nom d'une colonne dans une table, une vue ou une fonction table, pour laquelle l'autorisation doit être refusée. Les parenthèses **( )** sont obligatoires. Seules les autorisations SELECT, REFERENCES et UPDATE peuvent être refusées sur une colonne. *column* peut être spécifié dans la clause des autorisations ou après le nom de l’élément sécurisable.  
   
 > [!CAUTION]  
 >  Une instruction DENY de niveau table n'a pas la priorité sur une instruction GRANT de niveau colonne. Cette incohérence dans la hiérarchie des autorisations a été conservée pour des raisons de compatibilité descendante.  
   
- ON [objet **::** ] [ *nom_schéma* ] **.** *object_name*  
- Spécifie l’objet sur lequel l’autorisation est refusée. L’expression OBJECT est facultative si *schema_name* est spécifié. Si l’expression OBJECT est utilisée, le qualificateur d’étendue (**::**) est requis. Si *nom_schéma* n’est pas spécifié, le schéma par défaut est utilisé. Si *nom_schéma* est spécifié, le qualificateur d’étendue de schéma (**.**) est requis.  
+ ON [ OBJECT **::** ] [ *schema_name* ] **.** *object_name*  
+ Spécifie l’objet sur lequel l’autorisation doit être refusée. L’expression OBJECT est facultative si *schema_name* est spécifié. Si l’expression OBJECT est utilisée, le qualificateur d’étendue (**::**) est obligatoire. Si *schema_name* n’est pas spécifié, le schéma par défaut est utilisé. Si *schema_name* est spécifié, le qualificateur d’étendue de schéma (**.**) est obligatoire.  
   
- POUR \<principal_base_de_données >  
+ TO \<database_principal>  
  Spécifie le principal auquel l'autorisation est refusée.  
   
  CASCADE  
  Indique que l'autorisation à refuser est également refusée pour les autres principaux auxquels elle a été accordée par ce principal.  
   
- En tant que \<principal_base_de_données >  
+ AS \<database_principal>  
  Spécifie un principal dont le principal qui exécute cette requête dérive son droit de refuser l'autorisation.  
   
  *Database_user*  
@@ -118,8 +118,8 @@ PRIVILEGES
  *Database_user_with_no_login*  
  Spécifie un utilisateur de base de données sans principal au niveau serveur correspondant.  
   
-## <a name="remarks"></a>Notes  
- Des informations sur les objets sont consultables dans différents affichages catalogue. Pour plus d’informations, consultez [affichages catalogue d’objets &#40; Transact-SQL &#41; ](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md).  
+## <a name="remarks"></a>Notes   
+ Des informations sur les objets sont consultables dans différentes vues de catalogue. Pour plus d’informations, consultez [Vues de catalogue d’objets &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md).  
   
  Un objet est un élément sécurisable de niveau schéma inclus dans le schéma qui est son parent dans la hiérarchie des autorisations. Les autorisations les plus spécifiques et limitées qu'il est possible de refuser sur un objet sont répertoriées dans le tableau ci-dessous, avec les autorisations plus générales qui les incluent de manière implicite.  
   
@@ -127,7 +127,7 @@ PRIVILEGES
 |-----------------------|----------------------------------|----------------------------------|  
 |ALTER|CONTROL|ALTER|  
 |CONTROL|CONTROL|CONTROL|  
-|DELETE|CONTROL|DELETE|  
+|Suppression|CONTROL|Suppression|  
 |Exécutez|CONTROL|Exécutez|  
 |INSERT|CONTROL|INSERT|  
 |RECEIVE|CONTROL|CONTROL|  
@@ -138,7 +138,7 @@ PRIVILEGES
 |VIEW CHANGE TRACKING|CONTROL|VIEW CHANGE TRACKING|  
 |VIEW DEFINITION|CONTROL|VIEW DEFINITION|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Requiert l'autorisation CONTROL sur l'objet.  
   
  Si vous utilisez la clause AS, le principal spécifié doit posséder l'objet sur lequel les autorisations doivent être refusées.  
@@ -147,7 +147,7 @@ PRIVILEGES
 Les exemples suivants utilisent la base de données AdventureWorks.
   
 ### <a name="a-denying-select-permission-on-a-table"></a>A. Refus d'une autorisation SELECT sur une table  
- L’exemple suivant refuse `SELECT` autorisation à l’utilisateur `RosaQdM` sur la table `Person.Address`.  
+ Dans l’exemple ci-dessous, l’autorisation `SELECT` est refusée à l’utilisateur `RosaQdM` sur la table `Person.Address`.  
   
 ```  
 DENY SELECT ON OBJECT::Person.Address TO RosaQdM;  
@@ -172,15 +172,15 @@ DENY REFERENCES (BusinessEntityID) ON OBJECT::HumanResources.vEmployee
 GO  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- [GRANT – octroi d’autorisations d’objet &#40;Transact-SQL&#41;](../../t-sql/statements/grant-object-permissions-transact-sql.md)   
- [RÉVOQUER des autorisations d’objet &#40; Transact-SQL &#41;](../../t-sql/statements/revoke-object-permissions-transact-sql.md)   
- [Affichages catalogue d’objets &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
+## <a name="see-also"></a> Voir aussi  
+ [GRANT – Octroyer des autorisations sur un objet &#40;Transact-SQL&#41;](../../t-sql/statements/grant-object-permissions-transact-sql.md)   
+ [REVOKE - Révoquer des autorisations sur un objet &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-object-permissions-transact-sql.md)   
+ [Vues de catalogue d’objets &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [Autorisations &#40;moteur de base de données&#41;](../../relational-databases/security/permissions-database-engine.md)   
  [Principaux &#40;moteur de base de données&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
  [Securables](../../relational-databases/security/securables.md)   
  [sys.fn_builtin_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md)   
  [HAS_PERMS_BY_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/has-perms-by-name-transact-sql.md)   
- [Sys.fn_my_permissions &#40; Transact-SQL &#41;](../../relational-databases/system-functions/sys-fn-my-permissions-transact-sql.md)  
+ [sys.fn_my_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-my-permissions-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: "Éléments de langage (Transact-SQL) | Documents Microsoft"
+title: "Éléments du langage (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -34,13 +34,13 @@ ms.lasthandoff: 01/25/2018
 ## <a name="in-this-section"></a>Dans cette section  
 [-- &#40;Comment&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/comment-transact-sql.md)  
   
-[Barre oblique étoile &#40; Commentaire de bloc &#41; &#40; Transact-SQL &#41;](../../t-sql/language-elements/slash-star-comment-transact-sql.md)  
+[Barre oblique étoile &#40;bloc de commentaire&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/slash-star-comment-transact-sql.md)  
  
 [CREATE DIAGNOSTICS SESSION (Transact-SQL)](../../t-sql/language-elements/create-diagnostics-session-transact-sql.md)  
 
 [NULL et UNKNOWN (Transact-SQL)](../../t-sql/language-elements/null-and-unknown-transact-sql.md)
 
-[Transactions (entrepôt de données SQL)](../../t-sql/language-elements/transactions-sql-data-warehouse.md)
+[Transactions (SQL Data Warehouse)](../../t-sql/language-elements/transactions-sql-data-warehouse.md)
   
 [USE &#40;Transact-SQL&#41;](../../t-sql/language-elements/use-transact-sql.md)  
   

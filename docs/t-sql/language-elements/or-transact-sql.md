@@ -48,7 +48,7 @@ boolean_expression OR boolean_expression
   
 ## <a name="arguments"></a>Arguments  
  *boolean_expression*  
- Valide [expression](../../t-sql/language-elements/expressions-transact-sql.md) qui retourne la valeur TRUE, FALSE ou UNKNOWN.  
+ Toute [expression](../../t-sql/language-elements/expressions-transact-sql.md) valide retournant la valeur TRUE, FALSE ou UNKNOWN.  
   
 ## <a name="result-types"></a>Types des résultats  
  **Booléen**  
@@ -56,7 +56,7 @@ boolean_expression OR boolean_expression
 ## <a name="result-value"></a>Valeur des résultats  
  OR retourne la valeur TRUE lorsque l'une ou l'autre des conditions est TRUE.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Le tableau suivant indique les résultats de l'opérateur OR.  
   
 ||TRUE|FALSE|UNKNOWN|  
@@ -86,8 +86,8 @@ WHERE Department = 'Quality Assurance'
  Sootha       Charncherngkha   Night
  ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemples : [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] et[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- L’exemple suivant récupère les noms des employés qui soit gagner un `BaseRate` moins de 20 ou avoir un `HireDate` le 1er janvier 2001 ou version ultérieure.  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemples : [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] et [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+ L’exemple suivant récupère les noms des employés qui dont le taux de base `BaseRate` est inférieur à 20 ou dont la date d’embauche `HireDate` remonte au maximum au 1er janvier 2001.  
   
 ```  
 -- Uses AdventureWorks  
@@ -97,10 +97,10 @@ FROM DimEmployee
 WHERE BaseRate < 10 OR HireDate >= '2001-01-01';  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
  [Fonctions intégrées &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)   
- [Operators &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
+ [Opérateurs &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [WHERE &#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md)  
   

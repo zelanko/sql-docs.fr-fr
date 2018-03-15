@@ -1,5 +1,5 @@
 ---
-title: ALTER APPLICATION ROLE (Transact-SQL) | Documents Microsoft
+title: ALTER APPLICATION ROLE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -58,16 +58,16 @@ ALTER APPLICATION ROLE application_role_name
  *application_role_name*  
  Nom du rôle d'application à modifier.  
   
- NOM =*new_application_role_name*  
+ NAME =*new_application_role_name*  
  Spécifie le nouveau nom du rôle d'application. Ce nom ne doit pas être déjà utilisé pour référencer un principal dans la base de données.  
   
- Mot de passe ='*mot de passe*'  
- Spécifie le mot de passe du rôle d'application. *mot de passe* doit remplir les conditions de stratégie de mot de passe Windows de l’ordinateur qui exécute l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Vous devez toujours utiliser des mots de passe forts.  
+ PASSWORD ='*password*'  
+ Spécifie le mot de passe du rôle d'application. *password* doit satisfaire aux critères de la stratégie de mot de passe Windows de l’ordinateur qui exécute l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Vous devez toujours utiliser des mots de passe forts.  
   
  DEFAULT_SCHEMA =*schema_name*  
  Indique le premier schéma dans lequel le serveur doit effectuer des recherches lorsqu'il résout les noms des objets. *schema_name* peut être un schéma qui n’existe pas dans la base de données.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Si le nouveau nom du rôle d'application existe déjà dans la base de données, l'instruction échoue. Lorsque le nom, le mot de passe ou le schéma par défaut d'un rôle d'application est modifié, l'ID associé au rôle ne l'est pas.  
   
 > [!IMPORTANT]  
@@ -76,9 +76,9 @@ ALTER APPLICATION ROLE application_role_name
  Les rôles d'application sont visibles dans l'affichage de catalogue sys.database_principals.  
   
 > [!CAUTION]  
->  Dans [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]le comportement des schémas diffère du comportement dans les versions antérieures de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Un code qui suppose que les schémas sont équivalents aux utilisateurs de base de données peut retourner des résultats incorrects. Anciens affichages catalogue, notamment sysobjects, ne doivent pas être utilisés dans une base de données où une des DDL suivantes instructions a été utilisée : CREATE SCHEMA, ALTER SCHEMA, DROP SCHEMA, CREATE USER, ALTER USER, DROP USER, CREATE ROLE, ALTER ROLE, DROP ROLE, CREATE APPROLE, ALTER APPROLE, DROP APPROLE, ALTER AUTHORIZATION. Dans une base de données où une de ces instructions a été utilisée, vous devez recourir aux nouveaux affichages catalogue. Les nouveaux affichages catalogue prennent en compte la séparation des principaux et des schémas introduite dans [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Pour plus d’informations sur les affichages catalogue, consultez [Affichages catalogue &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md).  
+>  Dans [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], le comportement des schémas n’est pas le même que dans les versions antérieures de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Un code qui suppose que les schémas sont équivalents aux utilisateurs de base de données peut retourner des résultats incorrects. Vous ne devez pas recourir aux anciennes vues de catalogue, notamment sysobjects, dans une base de données où une des instructions DDL suivantes a été utilisée : CREATE SCHEMA, ALTER SCHEMA, DROP SCHEMA, CREATE USER, ALTER USER, DROP USER, CREATE ROLE, ALTER ROLE, DROP ROLE, CREATE APPROLE, ALTER APPROLE, DROP APPROLE, ALTER AUTHORIZATION. Dans une base de données où une de ces instructions a été utilisée, vous devez recourir aux nouvelles vues de catalogue. Les nouvelles vues de catalogue prennent en compte la séparation des principaux et des schémas introduite dans [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Pour plus d’informations sur les vues de catalogue, consultez [Vues de catalogue &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l'autorisation ALTER ANY APPLICATION ROLE sur la base de données. Pour modifier le schéma par défaut, l'utilisateur doit également bénéficier de l'autorisation ALTER sur le rôle d'application. Un rôle d'application peut modifier son schéma par défaut, mais pas son nom ni son mot de passe.  
   
 ## <a name="examples"></a>Exemples  
@@ -117,10 +117,10 @@ ALTER APPLICATION ROLE receipts_ledger
 GO  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Rôles d’application](../../relational-databases/security/authentication-access/application-roles.md)   
- [CRÉER un rôle d’APPLICATION &#40; Transact-SQL &#41;](../../t-sql/statements/create-application-role-transact-sql.md)   
- [DROP APPLICATION ROLE &#40; Transact-SQL &#41;](../../t-sql/statements/drop-application-role-transact-sql.md)   
+ [CREATE APPLICATION ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-application-role-transact-sql.md)   
+ [DROP APPLICATION ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-application-role-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: "REFUSER des autorisations de recherche en texte intégral (Transact-SQL) | Documents Microsoft"
+title: "DENY - Autorisations relatives au texte intégral | Microsoft Docs"
 ms.custom: 
 ms.date: 05/15/2017
 ms.prod: sql-non-specified
@@ -58,11 +58,11 @@ DENY permission [ ,...n ] ON
  *permission*  
  Nom d'une autorisation. Les mappages valides des autorisations des éléments sécurisables sont décrits dans la section « Notes », plus loin dans cette rubrique.  
   
- DANS le catalogue de texte intégral **:: *** intégral-text_catalog_name*  
- Indique le catalogue de texte intégral pour lequel l'autorisation est refusée. Le qualificateur d’étendue **::** est requis.  
+ ON FULLTEXT CATALOG **::***full-text_catalog_name*  
+ Indique le catalogue de texte intégral pour lequel l'autorisation est refusée. Le qualificateur d’étendue **::** est obligatoire.  
   
  ON FULLTEXT STOPLIST **::***full-text_stoplist_name*  
- Indique la liste de mots vides de texte intégral pour laquelle l'autorisation est refusée. Le qualificateur d’étendue **::** est requis.  
+ Indique la liste de mots vides de texte intégral pour laquelle l'autorisation est refusée. Le qualificateur d’étendue **::** est obligatoire.  
   
  *database_principal*  
  Spécifie le principal auquel l'autorisation est refusée. Il peut s'agir :  
@@ -131,16 +131,16 @@ DENY permission [ ,...n ] ON
 ## <a name="permissions"></a>Autorisations  
  Nécessite l'autorisation CONTROL sur le catalogue de texte intégral. Si vous utilisez l'option AS, le principal spécifié doit être propriétaire du catalogue de texte intégral.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [CREATE APPLICATION ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-application-role-transact-sql.md)   
  [CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-asymmetric-key-transact-sql.md)   
  [CREATE CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/create-certificate-transact-sql.md)   
- [CRÉER le catalogue de texte intégral &#40; Transact-SQL &#41;](../../t-sql/statements/create-fulltext-catalog-transact-sql.md)   
- [CRÉER une liste de mots vides de texte intégral &#40; Transact-SQL &#41;](../../t-sql/statements/create-fulltext-stoplist-transact-sql.md)   
+ [CREATE FULLTEXT CATALOG &#40;Transact-SQL&#41;](../../t-sql/statements/create-fulltext-catalog-transact-sql.md)   
+ [CREATE FULLTEXT STOPLIST &#40;Transact-SQL&#41;](../../t-sql/statements/create-fulltext-stoplist-transact-sql.md)   
  [DENY &#40;Transact-SQL&#41;](../../t-sql/statements/deny-transact-sql.md)   
  [Hiérarchie de chiffrement](../../relational-databases/security/encryption/encryption-hierarchy.md)   
  [sys.fn_my_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-my-permissions-transact-sql.md)   
- [Les autorisations GRANT recherche en texte intégral &#40; Transact-SQL &#41;](../../t-sql/statements/grant-full-text-permissions-transact-sql.md)   
+ [GRANT - Octroyer des autorisations sur un catalogue de texte intégral &#40;Transact-SQL&#41;](../../t-sql/statements/grant-full-text-permissions-transact-sql.md)   
  [HAS_PERMS_BY_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/has-perms-by-name-transact-sql.md)   
  [Autorisations &#40;moteur de base de données&#41;](../../relational-databases/security/permissions-database-engine.md)   
  [Principaux &#40;moteur de base de données&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   

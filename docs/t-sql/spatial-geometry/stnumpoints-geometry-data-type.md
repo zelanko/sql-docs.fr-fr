@@ -1,5 +1,5 @@
 ---
-title: "STNumPoints (Type de données geometry) | Documents Microsoft"
+title: "STNumPoints (type de données geometry) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stnumpoints-geometry-data-type"></a>STNumPoints (type de données geometry)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-  Retourne la somme du nombre de points dans chacune des figures dans une **geometry** instance.  
+  Retourne la somme du nombre de points de chacune des figures d’une instance **geometry**.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -44,12 +44,12 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>Types de retour  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]type de retour : **int**  
+ Type de retour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] : **int**  
   
  Type de retour CLR : **SqlInt32**  
   
-## <a name="remarks"></a>Notes  
- Cette méthode compte les points dans la description d’un **geometry** instance. Les points dupliqués sont comptés. Si cette instance est un **collection** type, cette méthode retourne la somme des points dans chacun de ses éléments.  
+## <a name="remarks"></a>Notes   
+ Cette méthode compte les points dans la description d’une instance **geometry**. Les points dupliqués sont comptés. Si cette instance est de type **collection**, cette méthode retourne la somme des points de chacun de ses éléments.  
   
 ## <a name="examples"></a>Exemples  
  L'exemple suivant crée une instance `LineString` et utilise `STNumPoints()` pour déterminer combien de points ont été utilisés dans la description de l'instance.  
@@ -60,7 +60,7 @@ SET @g = geometry::STGeomFromText('LINESTRING(0 0, 2 2, 1 0)', 0);
 SELECT @g.STNumPoints();  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Méthodes OGC sur des instances geography](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   
   

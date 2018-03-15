@@ -1,5 +1,5 @@
 ---
-title: "CRÉER la valeur par défaut (Transact-SQL) | Documents Microsoft"
+title: CREATE DEFAULT (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 11/25/2015
 ms.prod: sql-non-specified
@@ -58,21 +58,21 @@ AS constant_expression [ ; ]
  Nom du schéma auquel appartient la valeur par défaut.  
   
  *default_name*  
- Nom de la valeur par défaut. Les noms par défaut doivent être conforme aux règles des [identificateurs](../../relational-databases/databases/database-identifiers.md). Vous n'êtes pas obligé de spécifier le nom du propriétaire par défaut.  
+ Nom de la valeur par défaut. Le nom des valeurs par défaut doit respecter les règles applicables aux [identificateurs](../../relational-databases/databases/database-identifiers.md). Vous n'êtes pas obligé de spécifier le nom du propriétaire par défaut.  
   
- *expression_constante*  
- Est un [expression](../../t-sql/language-elements/expressions-transact-sql.md) ne contenant que des valeurs constantes (il ne peut pas inclure les noms de colonnes ou d’autres objets de base de données). Toute constante, fonction intégrée ou expression mathématique peut être utilisée, à l'exception de celles contenant des types d'alias. Fonctions définies par l’utilisateur ne peut pas être utilisées... Placez les constantes caractère et date de guillemets simples (**'**) ; monétaires, entières et constantes à virgule flottante ne nécessitent pas entre guillemets. Les données binaires doivent être précédées de 0x et les données monétaires du signe dollar ($). La valeur par défaut doit être compatible avec le type de données de la colonne.  
+ *constant_expression*  
+ [Expression](../../t-sql/language-elements/expressions-transact-sql.md) qui ne contient que des valeurs constantes (ne peut pas inclure les noms de colonnes ou d’autres objets de base de données). Toute constante, fonction intégrée ou expression mathématique peut être utilisée, à l'exception de celles contenant des types d'alias. Les fonctions définies par l’utilisateur ne peuvent pas être utilisées. Placez les constantes de caractère et de date entre guillemets simples (**'**) ; les constantes monétaires, entières et à virgule flottante ne nécessitent pas de guillemets. Les données binaires doivent être précédées de 0x et les données monétaires du signe dollar ($). La valeur par défaut doit être compatible avec le type de données de la colonne.  
   
 ## <a name="remarks"></a>Notes   
- Un nom de valeur par défaut ne peut être créé que dans la base de données active. Au sein d'une base de données, les noms de valeurs par défaut doivent être uniques pour chaque schéma. Lorsqu’une valeur par défaut est créé, utilisez **sp_bindefault** pour le lier à une colonne ou à un type de données alias.  
+ Un nom de valeur par défaut ne peut être créé que dans la base de données active. Au sein d'une base de données, les noms de valeurs par défaut doivent être uniques pour chaque schéma. Quand une valeur par défaut est créée, utilisez **sp_bindefault** pour la lier à une colonne ou à un type de données alias.  
   
- En cas d'incompatibilité entre la valeur par défaut et la colonne à laquelle elle est liée, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] génère un message d'erreur lors d'une tentative d'insertion de la valeur par défaut. Par exemple, n/a ne peut pas être utilisé comme valeur par défaut pour un **numérique** colonne.  
+ En cas d'incompatibilité entre la valeur par défaut et la colonne à laquelle elle est liée, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] génère un message d'erreur lors d'une tentative d'insertion de la valeur par défaut. Par exemple, vous ne pouvez pas utiliser N/A comme valeur par défaut pour une colonne de type **numérique**.  
   
  Si la valeur par défaut est trop longue pour la colonne à laquelle elle est liée, la valeur est tronquée.  
   
  L'instruction CREATE DEFAULT ne peut pas s'utiliser conjointement avec d'autres instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] dans un même traitement d'instructions.  
   
- Une valeur par défaut doit être supprimé avant de créer une nouvelle portant le même nom et la valeur par défaut doit être délié en exécutant **sp_unbindefault** avant sa suppression.  
+ Une valeur par défaut doit être supprimée avant d’en créer une nouvelle du même nom, et il faut également supprimer sa liaison en exécutant **sp_unbindefault** avant de la supprimer.  
   
  Si une colonne possède à la fois une valeur par défaut et une règle qui lui est associée, la valeur par défaut ne peut pas enfreindre la règle. Une valeur par défaut qui est en conflit avec une règle n'est jamais insérée et [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] génère un message d'erreur à chaque tentative d'insertion de la valeur par défaut.  
   
@@ -89,7 +89,7 @@ AS constant_expression [ ; ]
 |**NULL**|NULL|par défaut|NULL|NULL|  
 |**NOT NULL**|Error|par défaut|erreur|erreur|  
   
- Pour renommer une valeur par défaut, utilisez **sp_rename**. Pour un rapport sur une valeur par défaut, utilisez **sp_help**.  
+ Pour renommer une valeur par défaut, utilisez **sp_rename**. Pour obtenir un rapport sur une valeur par défaut, utilisez **sp_help**.  
   
 ## <a name="permissions"></a>Autorisations  
  Pour exécuter CREATE DEFAULT, un utilisateur doit posséder, au minimum, une autorisation CREATE DEFAULT sur la base de données active et une autorisation ALTER sur le schéma dans lequel la valeur par défaut est créée.  
@@ -116,18 +116,18 @@ GO
 sp_bindefault 'phonedflt', 'Person.PersonPhone.PhoneNumber';  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
  [CREATE RULE &#40;Transact-SQL&#41;](../../t-sql/statements/create-rule-transact-sql.md)   
  [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
- [SUPPRIMER la valeur par défaut &#40; Transact-SQL &#41;](../../t-sql/statements/drop-default-transact-sql.md)   
- [DROP RULE &#40; Transact-SQL &#41;](../../t-sql/statements/drop-rule-transact-sql.md)   
- [Expressions &#40; Transact-SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [DROP DEFAULT &#40;Transact-SQL&#41;](../../t-sql/statements/drop-default-transact-sql.md)   
+ [DROP RULE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-rule-transact-sql.md)   
+ [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
  [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
- [sp_bindefault &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-bindefault-transact-sql.md)   
+ [sp_bindefault &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-bindefault-transact-sql.md)   
  [sp_help &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-transact-sql.md)   
  [sp_helptext &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helptext-transact-sql.md)   
  [sp_rename &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-rename-transact-sql.md)   
- [sp_unbindefault &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-unbindefault-transact-sql.md)  
+ [sp_unbindefault &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-unbindefault-transact-sql.md)  
   
   

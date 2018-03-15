@@ -1,5 +1,5 @@
 ---
-title: App_name (Transact-SQL) | Documents Microsoft
+title: APP_NAME (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
@@ -53,12 +53,12 @@ APP_NAME  ( )
 ```  
   
 ## <a name="return-types"></a>Types de retour  
-**nvarchar (128)**
+**nvarchar(128)**
   
-## <a name="remarks"></a>Notes  
-Utilisez **APP_NAME** lorsque vous souhaitez exécuter des actions différentes pour différentes applications. Par exemple, pour mettre en forme une date de plusieurs façons pour différentes applications ou pour retourner un message d'informations à certaines applications.
+## <a name="remarks"></a>Notes   
+Utilisez **APP_NAME** quand vous souhaitez effectuer différentes actions pour différentes applications. Par exemple, pour mettre en forme une date de plusieurs façons pour différentes applications ou pour retourner un message d'informations à certaines applications.
   
-Pour définir un nom d’application dans [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], dans le **se connecter au moteur de base de données** boîte de dialogue, cliquez sur **Options**. Sur le **paramètres de connexion supplémentaires** onglet, fournissez un **application** attribut dans le format`;app='application_name'`
+Pour définir un nom d’application dans [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], dans la boîte de dialogue **Se connecter au moteur de base de données**, cliquez sur **Options**. Sous l’onglet **Paramètres de connexion supplémentaires**, spécifiez un attribut **app** au format `;app='application_name'`
   
 ## <a name="examples"></a>Exemples  
 L'exemple suivant vérifie si l'application cliente qui a lancé ce traitement est une session `SQL Server Management Studio` et fournit une date au format US ou ANSI.
@@ -74,7 +74,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Voir aussi
-[Fonctions système &#40; Transact-SQL &#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)  
+[Fonctions système &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)  
 [Fonctions](../../t-sql/functions/functions.md)
   
   

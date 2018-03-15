@@ -1,5 +1,5 @@
 ---
-title: DBCC CLEANTABLE (Transact-SQL) | Documents Microsoft
+title: DBCC CLEANTABLE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 11/14/2017
 ms.prod: sql-non-specified
@@ -41,7 +41,7 @@ ms.contentlocale: fr-FR
 ms.lasthandoff: 01/25/2018
 ---
 # <a name="dbcc-cleantable-transact-sql"></a>DBCC CLEANTABLE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]Récupère la quantité d’espace entre les colonnes de longueur variable supprimées dans les tables ou vues indexées.
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)] Récupère l’espace des colonnes de longueur variable supprimées dans les tables ou les vues indexées.
 ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Syntaxe  
@@ -59,7 +59,7 @@ DBCC CLEANTABLE
   
 ## <a name="arguments"></a>Arguments  
  *database_name* | *database_id* | 0  
- Base de données à laquelle la table à nettoyer appartient. Si 0 est spécifié, la base de données active est utilisée. Les noms de base de données doivent respecter les règles pour [identificateurs](../../relational-databases/databases/database-identifiers.md).  
+ Base de données à laquelle la table à nettoyer appartient. Si 0 est spécifié, la base de données active est utilisée. Les noms de base de données doivent suivre les règles applicables aux [identificateurs](../../relational-databases/databases/database-identifiers.md).  
   
  *table_name* | *table_id* | *view_name*| *view_id*  
  Table ou vue indexée à nettoyer.  
@@ -70,8 +70,8 @@ DBCC CLEANTABLE
  WITH NO_INFOMSGS  
  Supprime tous les messages d'information.  
   
-## <a name="remarks"></a>Notes  
-DBCC CLEANTABLE récupère l'espace consécutif à la suppression d'une colonne de longueur variable. Une colonne de longueur variable peut être un des types de données suivants : **varchar**, **nvarchar**, **varchar (max)**, **nvarchar (max)**, **varbinary**, **varbinary (max)**, **texte**, **ntext**, **image**, **sql_variant**, et **xml**. La commande ne récupère pas l'espace résultant de la suppression d'une colonne de longueur fixe.
+## <a name="remarks"></a>Notes   
+DBCC CLEANTABLE récupère l'espace consécutif à la suppression d'une colonne de longueur variable. Une colonne de longueur variable peut être l’un des types de données suivants : **varchar**, **nvarchar**, **varchar(max)**, **nvarchar(max)**, **varbinary**, **varbinary(max)**, **text**, **ntext**, **image**, **sql_variant** et **xml**. La commande ne récupère pas l'espace résultant de la suppression d'une colonne de longueur fixe.
 Si les colonnes supprimées étaient stockées en ligne, DBCC CLEANTABLE récupère l'espace à partir de l'unité d'allocation IN_ROW_DATA de la table. Si les colonnes étaient stockées hors ligne, l'espace est récupéré à partir de l'unité d'allocation ROW_OVERFLOW_DATA ou LOB_DATA, suivant le type de données de la colonne supprimée. Si la récupération de l'espace à partir d'une page ROW_OVERFLOW_DATA ou LOB_DATA aboutit à une page vide, DBCC CLEANTABLE supprime la page.
 DBCC CLEANTABLE s'exécute en une ou plusieurs transactions. Si aucune taille de traitement n'est spécifiée, la commande traite la totalité de la table dans une seule transaction et la table est verrouillée exclusivement au cours de l'opération. Pour certaines tables volumineuses, la longueur de la transaction unique et l'espace journal requis peuvent être trop importants. Si une taille de traitement est spécifiée, la commande s'exécute dans une série de transactions, dont chacune inclut le nombre de lignes spécifié. DBCC CLEANTABLE ne peut pas être exécuté en tant que transaction à l'intérieur d'une autre transaction.
 Cette opération est entièrement journalisée.
@@ -88,7 +88,7 @@ DBCC execution completed. If DBCC printed error messages, contact your system ad
 ```  
   
 ## <a name="permissions"></a>Autorisations  
- L’appelant doit posséder la table ou vue indexée ou être membre du **sysadmin** rôle serveur fixe le **db_owner** rôle de base de données fixe ou la **db_ddladmin** rôle de base de données fixe.  
+ L’appelant doit être propriétaire de la table ou de la vue indexée, ou être membre du rôle serveur fixe **sysadmin**, du rôle de base de données fixe **db_owner** ou du rôle de base de données fixe **db_ddladmin**.  
   
 ## <a name="examples"></a>Exemples  
 ### <a name="a-using-dbcc-cleantable-to-reclaim-space"></a>A. Utilisation de DBCC CLEANTABLE pour récupérer de l'espace  
@@ -165,7 +165,7 @@ FROM sys.dm_db_index_physical_stats(@db_id, @object_id, NULL, NULL , 'Detailed')
 GO  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)  
  [sys.allocation_units &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)  
   

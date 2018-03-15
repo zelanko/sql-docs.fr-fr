@@ -1,5 +1,5 @@
 ---
-title: DROP SIGNATURE (Transact-SQL) | Documents Microsoft
+title: DROP SIGNATURE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -56,19 +56,19 @@ DROP [ COUNTER ] SIGNATURE FROM module_name
 ```  
   
 ## <a name="arguments"></a>Arguments  
- *nom_module*  
+ *module_name*  
  Nom d'une procédure stockée, d'une fonction, d'un assembly ou d'un déclencheur.  
   
- CERTIFICAT *cert_name*  
+ CERTIFICATE *cert_name*  
  Nom d'un certificat dont la procédure stockée, la fonction, l'assembly ou le déclencheur porte la signature.  
   
- CLÉ asymétrique *Asym_key_name*  
+ ASYMMETRIC KEY *Asym_key_name*  
  Nom d'une clé asymétrique dont la procédure stockée, la fonction, l'assembly ou le déclencheur porte la signature.  
   
-## <a name="remarks"></a>Notes  
- Des informations sur les signatures sont visibles dans l'affichage catalogue sys.crypt_properties.  
+## <a name="remarks"></a>Notes   
+ Des informations sur les signatures sont visibles dans la vue de catalogue sys.crypt_properties.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l'autorisation ALTER sur l'objet et l'autorisation CONTROL sur le certificat ou la clé asymétrique. Si une clé privée associée est protégée par un mot de passe, l'utilisateur doit également disposer de ce mot de passe.  
   
 ## <a name="examples"></a>Exemples  
@@ -81,8 +81,8 @@ DROP SIGNATURE FROM HumanResources.uspUpdateEmployeeLogin
 GO  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- [Sys.crypt_properties &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-crypt-properties-transact-sql.md)   
- [Ajouter une SIGNATURE &#40; Transact-SQL &#41;](../../t-sql/statements/add-signature-transact-sql.md)  
+## <a name="see-also"></a> Voir aussi  
+ [sys.crypt_properties &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-crypt-properties-transact-sql.md)   
+ [ADD SIGNATURE &#40;Transact-SQL&#41;](../../t-sql/statements/add-signature-transact-sql.md)  
   
   

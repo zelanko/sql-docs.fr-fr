@@ -1,5 +1,5 @@
 ---
-title: "CRÉER la séquence (Transact-SQL) | Documents Microsoft"
+title: CREATE SEQUENCE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 04/11/2017
 ms.prod: sql-non-specified
@@ -41,7 +41,7 @@ ms.lasthandoff: 11/21/2017
 
   Crée un objet séquence et spécifie ses propriétés. Une séquence est un objet lié par schéma défini par l'utilisateur qui génère une séquence de valeurs numériques d'après la spécification avec laquelle la séquence a été créée. La séquence de valeurs numériques est générée dans un ordre croissant ou décroissant à un intervalle défini et peut être configurée pour redémarrer (cycle) lorsque épuisée. Les séquences, contrairement aux colonnes d'identité, ne sont pas associées aux tables spécifiques. Les applications font référence à un objet séquence pour extraire sa valeur suivante. La relation entre les séquences et les tables est contrôlée par l'application. Les applications utilisateur peuvent référencer un objet séquence et coordonner les valeurs sur plusieurs lignes et tables.  
   
- Contrairement aux valeurs de colonnes d’identité qui sont générés lorsque des lignes sont insérées, une application peut obtenir le numéro séquentiel suivant sans insérer la ligne en appelant le [fonction NEXT VALUE FOR](../../t-sql/functions/next-value-for-transact-sql.md). Utilisez [sp_sequence_get_range](../../relational-databases/system-stored-procedures/sp-sequence-get-range-transact-sql.md) pour obtenir plusieurs numéros séquentiels à la fois.  
+ Contrairement aux valeurs de colonnes d’identité générées lors de l’insertion de lignes, une application peut obtenir le numéro séquentiel suivant sans insérer la ligne en appelant la [fonction NEXT VALUE FOR](../../t-sql/functions/next-value-for-transact-sql.md). Utilisez [sp_sequence_get_range](../../relational-databases/system-stored-procedures/sp-sequence-get-range-transact-sql.md) pour obtenir plusieurs numéros séquentiels à la fois.  
   
  Pour obtenir des informations et des scénarios qui utilisent à la fois **CREATE SEQUENCE** et la fonction **NEXT VALUE FOR** , consultez [Numéros de séquence](../../relational-databases/sequence-numbers/sequence-numbers.md).  
   
@@ -63,75 +63,75 @@ CREATE SEQUENCE [schema_name . ] sequence_name
   
 ## <a name="arguments"></a>Arguments  
  *sequence_name*  
- Spécifie le nom unique sous lequel la séquence est connue dans la base de données. Est de type **sysname**.  
+ Spécifie le nom unique sous lequel la séquence est connue dans la base de données. Le type est **sysname**.  
   
  [ built_in_integer_type | user-defined_integer_type  
  Une séquence peut être définie comme tout type entier. Les types suivants sont autorisés.  
   
--   **tinyint** -plage comprise entre 0 et 255  
+-   **tinyint** : plage comprise entre 0 et 255  
   
--   **smallint** -plage de-32 768 à 32 767  
+-   **smallint** : plage comprise entre -32 768 et 32 767  
   
--   **int** -plage allant de -2,147,483,648 à 2 147 483 647  
+-   **int** : plage comprise entre -2 147 483 648 et 2 147 483 647  
   
--   **bigint** -plage de -9,223,372,036,854,775,808 à 9,223,372,036,854,775,807  
+-   **bigint** : plage comprise entre -9 223 372 036 854 775,808 et 9 223 372 036 854 775 807  
   
 -   **décimal** et **numérique** avec une échelle de 0.  
   
 -   Tout type de données défini par l'utilisateur (type d'alias) basé sur l'un des types autorisés.  
   
- Si aucun type de données n’est fourni, le **bigint** type de données est utilisé en tant que la valeur par défaut.  
+ Si aucun type de données n’est fourni, le type de données **bigint** est utilisé comme valeur par défaut.  
   
- START WITH \<constante >  
- Première valeur retournée par l'objet séquence. Le **Démarrer** valeur doit être une valeur inférieure ou égale à la valeur maximale et supérieure ou égale à la valeur minimale de l’objet séquence. La valeur de début par défaut d'un nouvel objet séquence correspond à la valeur minimale pour un objet séquence croissant et à la valeur maximale pour un objet séquence décroissant.  
+ START WITH \<constant>  
+ Première valeur retournée par l'objet séquence. La valeur **START** doit être une valeur inférieure ou égale à la valeur maximale et supérieure ou égale à la valeur minimale de l’objet séquence. La valeur de début par défaut d'un nouvel objet séquence correspond à la valeur minimale pour un objet séquence croissant et à la valeur maximale pour un objet séquence décroissant.  
   
- INCREMENT BY \<constante >  
- Valeur utilisée pour incrémenter (ou décrémenter le cas de valeurs négatives) la valeur de l’objet de séquence pour chaque appel à la **NEXT VALUE FOR** (fonction). Si l'incrément est une valeur négative, l'objet séquence décroît ; sinon, il croît. L'incrément ne peut pas avoir la valeur 0. L'incrément par défaut pour un nouvel objet séquence est 1.  
+ INCREMENT BY \<constant>  
+ Valeur utilisée pour incrémenter (ou décrémenter si la valeur est négative) la valeur de l’objet séquence pour chaque appel à la fonction **NEXT VALUE FOR**. Si l'incrément est une valeur négative, l'objet séquence décroît ; sinon, il croît. L'incrément ne peut pas avoir la valeur 0. L'incrément par défaut pour un nouvel objet séquence est 1.  
   
- [MINVALUE \<constante > | **Aucun MINVALUE** ]  
+ [ MINVALUE \<constant> | **NO MINVALUE** ]  
  Spécifie les limites de l'objet séquence. La valeur minimale par défaut d'un nouvel objet séquence correspond à la valeur minimale du type de données de l'objet séquence. Il s’agit de zéro pour le type de données **tinyint** et d’un nombre négatif pour tous les autres types de données.  
   
- [MAXVALUE \<constante > | **Aucun MAXVALUE**  
+ [ MAXVALUE \<constant> | **NO MAXVALUE**  
  Spécifie les limites de l'objet séquence. La valeur maximale par défaut d'un nouvel objet séquence correspond à la valeur maximale du type de données de l'objet séquence.  
   
- [CYCLE | **AUCUN CYCLE** ]  
+ [ CYCLE | **NO CYCLE** ]  
  Propriété qui spécifie si l'objet séquence doit redémarrer de la valeur minimale (ou maximale pour les objets de séquence décroissante) ou générer une exception lorsque sa valeur minimale ou maximale est dépassée. L'option de cycle par défaut pour les nouveaux objets séquences est NO CYCLE.  
   
  Notez que l'itération redémarre à partir de la valeur minimale ou maximale, et non de la valeur de début.  
   
- [ **CACHE** [\<constante >] | AUCUN CACHE]  
+ [ **CACHE** [\<constant> ] | NO CACHE ]  
  Augmente la performance des applications qui utilisent des objets séquences en réduisant le nombre d'E/S sur le disque requises pour générer des numéros séquentiels. Paramètres par défaut sur CACHE.  
   
- Par exemple, si vous choisissez une taille de cache de 50, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne conserve pas 50 valeurs individuelles en cache. Il met uniquement en cache la valeur actuelle et le nombre de valeurs restées dans le cache. Cela signifie que la quantité de mémoire requise pour stocker le cache correspond toujours à deux instances du type de données de l'objet séquence.  
+ Par exemple, si une taille de cache de 50 est choisie, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne conserve pas 50 valeurs individuelles en cache. Il met uniquement en cache la valeur actuelle et le nombre de valeurs restées dans le cache. Cela signifie que la quantité de mémoire requise pour stocker le cache correspond toujours à deux instances du type de données de l'objet séquence.  
   
 > [!NOTE]  
 >  Si l'option de cache est activée sans spécifier une taille du cache, le moteur de base de données en sélectionne une automatiquement. Toutefois, les utilisateurs ne doivent pas compter sur une sélection cohérente. [!INCLUDE[msCoName](../../includes/msconame-md.md)] peut modifier la méthode de calcul de la taille du cache sans préavis.  
   
- Lors de la création avec le **CACHE** option, un arrêt inattendu (par exemple, une panne de courant) peut entraîner la perte des numéros séquentiels qui restent dans le cache.  
+ En cas de création avec l’option **CACHE**, un arrêt inattendu (tel qu’une panne de courant) peut provoquer la perte des numéros séquentiels qui restent dans le cache.  
   
 ## <a name="general-remarks"></a>Remarques d'ordre général  
  Les numéros séquentiels sont générés à l'extérieur de l'étendue de la transaction actuelle. Ils sont utilisés si la transaction à l'aide du numéro séquentiel est validée ou restaurée.  
   
 ### <a name="cache-management"></a>Gestion du cache  
- Pour améliorer les performances, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pré-alloue le nombre de numéros de séquence spécifiés par le **CACHE** argument.  
+ Pour améliorer les performances, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pré-alloue le nombre de numéros séquentiels spécifié par l’argument **CACHE**.  
   
  Par exemple, une nouvelle séquence est créée avec une valeur de départ de 1 et une taille du cache de 15. Lorsque la première valeur est exigée, les valeurs 1 à 15 sont rendues disponibles à partir de la mémoire. La dernière valeur mise en cache (15) est écrite dans les tables système sur le disque. Lorsque les 15 nombres sont utilisés, la demande suivante (pour le nombre 16) entraînera une nouvelle allocation du cache. La nouvelle et dernière valeur mise en cache (30) sera écrite dans les tables système.  
   
- Si la [!INCLUDE[ssDE](../../includes/ssde-md.md)] est arrêtée après avoir utilisé 22 nombres, la prochaine destiné numéro de séquence en mémoire (23) est écrit dans les tables système, en remplaçant le nombre précédemment stocké.  
+ Si le [!INCLUDE[ssDE](../../includes/ssde-md.md)] est arrêté après que vous avez utilisé 22 numéros, le numéro séquentiel prévu suivant en mémoire (23) est écrit dans les tables système, remplaçant ainsi le nombre précédemment stocké.  
   
- Après le redémarrage de SQL Server, un numéro séquentiel est exigé ; le nombre initial est lu à partir des tables système (23). Le montant de cache de 15 nombres (23-38) est alloué à la mémoire et le numéro de non-cache suivant (39) est écrit dans les tables système.  
+ Après le redémarrage de SQL Server, un numéro séquentiel est exigé ; le numéro initial est lu à partir des tables système (23). Le montant de cache de 15 nombres (23-38) est alloué à la mémoire et le numéro de non-cache suivant (39) est écrit dans les tables système.  
   
- Si le [!INCLUDE[ssDE](../../includes/ssde-md.md)] s’arrête anormalement pour un événement tel qu’une panne de courant, la séquence redémarre avec le nombre lu à partir des tables système (39). N’importe quelle séquence numéros alloués à la mémoire (mais jamais demandés par un utilisateur ou une application) sont perdues. Cette fonctionnalité peut laisser des espaces vides, mais garantit que la même valeur ne sera jamais émise deux fois pour un objet séquence unique, sauf si elle est définie comme **CYCLE** ou est redémarré manuellement.  
+ Si le [!INCLUDE[ssDE](../../includes/ssde-md.md)] s’arrête de manière anormale suite à un événement tel qu’une panne de courant, la séquence redémarre avec le numéro lu à partir des tables système (39). Tous les numéros séquentiels alloués à la mémoire (mais jamais demandés par un utilisateur ou une application) sont perdus. Cette fonctionnalité peut laisser des espaces vides, mais garantit que la même valeur ne sera jamais émise deux fois pour un objet séquence unique, sauf s’il est défini comme **CYCLE** ou qu’il est redémarré manuellement.  
   
  Le cache est maintenu en mémoire en suivant la valeur actuelle (la dernière valeur émise) et le nombre de valeurs restées dans le cache. Par conséquent, la quantité de mémoire utilisée par le cache correspond toujours à deux instances du type de données de l'objet séquence.  
   
- Si l’argument de cache **NO CACHE** écrit la valeur de la séquence actuelle dans les tables système chaque fois qu’une séquence est utilisée. Cela peut ralentir les performances en augmentant l'accès au disque, mais réduit les risques d'espaces vides non désirés. Intervalles peuvent encore se produire si les nombres sont demandés à l’aide de la **NEXT VALUE FOR** ou **sp_sequence_get_range** fonctions, mais les numéros ne sont pas utilisés ou sont utilisés dans les transactions non validées.  
+ La définition de l’argument de cache sur **NO CACHE** écrit la valeur de séquence actuelle dans les tables système chaque fois qu’une séquence est utilisée. Cela peut ralentir les performances en augmentant l'accès au disque, mais réduit les risques d'espaces vides non désirés. Des espaces vides peuvent encore se produire si les nombres sont demandés à l’aide des fonctions **NEXT VALUE FOR** ou **sp_sequence_get_range** ; en revanche, les nombres ne sont pas utilisés du tout ou sont utilisés dans des transactions non validées.  
   
- Lorsqu’un objet séquence utilise le **CACHE** option, si vous redémarrez l’objet séquence, ou modifiez la **INCRÉMENT**, **CYCLE**, **MINVALUE**, **MAXVALUE**, ou les propriétés de taille du cache, elle entraîne le cache d’écriture sur les tables système avant le changement se produit. Puis, le cache est rechargé en commençant par la valeur actuelle (autrement dit, aucun nombre n'est ignoré). Toute modification apportée à la taille du cache prend effet immédiatement.  
+ Quand un objet séquence utilise l’option **CACHE**, si vous redémarrez l’objet séquence ou modifiez la valeur **INCREMENT**, **CYCLE**, **MINVALUE**, **MAXVALUE** ou les propriétés de taille du cache, le cache est écrit dans les tables système avant que la modification ait lieu. Puis, le cache est rechargé en commençant par la valeur actuelle (autrement dit, aucun nombre n'est ignoré). Toute modification apportée à la taille du cache prend effet immédiatement.  
   
- **Option CACHE lorsque les valeurs mises en cache sont disponibles**  
+ **Option CACHE quand les valeurs mises en cache sont disponibles**  
   
- Le processus suivant se produit chaque fois qu’un objet séquence est demandé pour générer la valeur suivante de la **CACHE** option si les valeurs inutilisées sont disponibles dans le cache en mémoire pour l’objet séquence.  
+ Le processus suivant se produit chaque fois qu’un objet séquence est demandé pour générer la valeur suivante de l’option **CACHE** si des valeurs inutilisées sont disponibles dans le cache interne pour l’objet séquence.  
   
 1.  La valeur suivante de l'objet séquence est calculée.  
   
@@ -139,9 +139,9 @@ CREATE SEQUENCE [schema_name . ] sequence_name
   
 3.  La valeur calculée est retournée à l'instruction appelante.  
   
- **Option CACHE lorsque le cache est épuisé**  
+ **Option CACHE quand le cache est épuisé**  
   
- Le processus suivant se produit chaque fois qu’un objet séquence est demandé pour générer la valeur suivante de la **CACHE** option si le cache est épuisé :  
+ Le processus suivant se produit chaque fois qu’un objet séquence est demandé pour générer la valeur suivante de l’option **CACHE** si le cache est épuisé :  
   
 1.  La valeur suivante de l'objet séquence est calculée.  
   
@@ -149,9 +149,9 @@ CREATE SEQUENCE [schema_name . ] sequence_name
   
 3.  La ligne de table système pour l'objet séquence est verrouillée, et la valeur calculée à l'étape 2 (dernière valeur) est écrite dans la table système. Un xevent de cache épuisé est déclenché pour notifier l'utilisateur de la nouvelle valeur rendue persistante.  
   
- **AUCUNE option de CACHE**  
+ **Option NO CACHE**  
   
- Le processus suivant se produit chaque fois qu’un objet séquence est demandé pour générer la valeur suivante de la **NO CACHE** option :  
+ Le processus suivant se produit chaque fois qu’un objet séquence est demandé pour générer la valeur suivante de l’option **NON CACHE** :  
   
 1.  La valeur suivante de l'objet séquence est calculée.  
   
@@ -164,32 +164,32 @@ CREATE SEQUENCE [schema_name . ] sequence_name
   
 ## <a name="security"></a>Sécurité  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>Autorisations  
  Nécessite l’autorisation **CREATE SEQUENCE**, **ALTER**ou **CONTROL** sur le SCHEMA.  
   
--   Membres de db_owner et db_ddladmin de base de données fixé peuvent créer, modifier et supprimer des objets de la séquence.  
+-   Les membres des rôles de base de données fixe db_owner et db_ddladmin peuvent créer, modifier et supprimer des objets séquences.  
   
--   Membres de db_owner et db_datawriter, rôle de base de données fixé peuvent mettre à jour les objets séquences en leur faisant générer des nombres.  
+-   Les membres des rôles de base de données fixe db_owner et db_datawriter peuvent mettre à jour des objets séquences en leur faisant générer des nombres.  
   
- L’exemple suivant accorde l’autorisation AdventureWorks\Larry pour créer des séquences dans le schéma de Test de l’utilisateur.  
+ L’exemple suivant accorde à l’utilisateur AdventureWorks\Larry l’autorisation de créer des séquences dans le schéma Test.  
   
 ```  
 GRANT CREATE SEQUENCE ON SCHEMA::Test TO [AdventureWorks\Larry]  
 ```  
   
- La propriété d’un objet séquence peut être transférée à l’aide de la **ALTER AUTHORIZATION** instruction.  
+ La propriété d’un objet séquence peut être transférée à l’aide de l’instruction **ALTER AUTHORIZATION**.  
   
  Si une séquence utilise un type de données défini par l'utilisateur, le créateur de la séquence doit avoir l'autorisation REFERENCES sur le type.  
   
 ### <a name="audit"></a>Audit  
- Pour auditer **créer une séquence**, analyse le **SCHEMA_OBJECT_CHANGE_GROUP**.  
+ Pour auditer **CREATE SEQUENCE**, surveillez **SCHEMA_OBJECT_CHANGE_GROUP**.  
   
 ## <a name="examples"></a>Exemples  
- Pour obtenir des exemples de création de séquences et à l’aide de la **NEXT VALUE FOR** afin de générer des numéros de séquence, consultez [numéros de séquence](../../relational-databases/sequence-numbers/sequence-numbers.md).  
+ Pour obtenir des exemples de création de séquences et d’utilisation de la fonction **NEXT VALUE FOR** pour générer des numéros séquentiels, consultez [Numéros séquentiels](../../relational-databases/sequence-numbers/sequence-numbers.md).  
   
  La plupart des exemples suivants créent des objets séquences dans un schéma nommé Test.  
   
- Pour créer le schéma de Test, exécutez l’instruction suivante.  
+ Pour créer le schéma Test, exécutez l’instruction suivante.  
   
 ```  
 CREATE SCHEMA Test ;  
@@ -197,7 +197,7 @@ GO
 ```  
   
 ### <a name="a-creating-a-sequence-that-increases-by-1"></a>A. Création d'une séquence qui augmente de 1  
- Dans l’exemple suivant, Thierry crée une séquence nommée CountBy1 qui augmente d’une unité chaque fois qu’elle est utilisée.  
+ Dans l’exemple suivant, Thierry crée une séquence nommée CountBy1 qui augmente de une unité chaque fois qu’elle est utilisée.  
   
 ```  
 CREATE SEQUENCE Test.CountBy1  
@@ -262,7 +262,7 @@ SELECT * FROM sys.sequences WHERE name = 'TestSequence' ;
 |`current_value`|`-9223372036854775808`|  
   
 ### <a name="f-creating-a-sequence-with-a-specific-data-type"></a>F. Création d'une séquence avec un type de données spécifique  
- L’exemple suivant crée une séquence à l’aide de la **smallint** type de données, avec une plage comprise entre-32 768 à 32 767.  
+ L’exemple suivant crée une séquence à l’aide du type de données **smallint**, avec une plage comprise entre -32 768 et 32 767.  
   
 ```  
 CREATE SEQUENCE SmallSeq  
@@ -270,7 +270,7 @@ CREATE SEQUENCE SmallSeq
 ```  
   
 ### <a name="g-creating-a-sequence-using-all-arguments"></a>G. Création d'une séquence à l'aide de tous les arguments  
- L’exemple suivant crée une séquence nommée à l’aide de DecSeq les **décimal** type de données, avec une plage comprise entre 0 et 255. La séquence démarre à 125 et est incrémentée de 25 chaque fois qu'un nombre est généré. Étant donné que la séquence est configurée pour se répéter lorsque la valeur dépasse la valeur maximale de 200, la séquence redémarre à la valeur minimale de 100.  
+ L’exemple suivant crée une séquence nommée DecSeq à l’aide du type de données **decimal**, avec une plage comprise entre 0 et 255. La séquence démarre à 125 et est incrémentée de 25 chaque fois qu'un nombre est généré. Étant donné que la séquence est configurée pour se répéter lorsque la valeur dépasse la valeur maximale de 200, la séquence redémarre à la valeur minimale de 100.  
   
 ```  
 CREATE SEQUENCE Test.DecSeq  
@@ -302,10 +302,10 @@ FROM sys.sequences
 WHERE name = 'DecSeq' ;  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- [ALTER SEQUENCE &#40; Transact-SQL &#41;](../../t-sql/statements/alter-sequence-transact-sql.md)   
- [DROP SEQUENCE &#40; Transact-SQL &#41;](../../t-sql/statements/drop-sequence-transact-sql.md)   
- [VALEUR suivante de &#40; Transact-SQL &#41;](../../t-sql/functions/next-value-for-transact-sql.md)   
+## <a name="see-also"></a> Voir aussi  
+ [ALTER SEQUENCE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-sequence-transact-sql.md)   
+ [DROP SEQUENCE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-sequence-transact-sql.md)   
+ [NEXT VALUE FOR &#40;Transact-SQL&#41;](../../t-sql/functions/next-value-for-transact-sql.md)   
  [Numéros de séquence](../../relational-databases/sequence-numbers/sequence-numbers.md)  
   
   

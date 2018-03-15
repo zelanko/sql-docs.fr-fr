@@ -1,5 +1,5 @@
 ---
-title: "Création de vues et procédures stockées | Documents Microsoft"
+title: "Création des vues et des procédures stockées | Microsoft Docs"
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -28,8 +28,8 @@ ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="lesson-2-3---creating-views-and-stored-procedures"></a>Leçon 2-3 - Création de vues et procédures stockées
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]Maintenant que Mary peut accéder à la **TestData** base de données, vous souhaiterez créer certains objets de base de données, tels qu’une vue et une procédure stockée et ensuite accorder Mary l’accès à. Une vue est une instruction SELECT stockée, et une procédure stockée correspond à une ou plusieurs instructions [!INCLUDE[tsql](../includes/tsql-md.md)] qui s'exécutent comme un traitement.  
+# <a name="lesson-2-3---creating-views-and-stored-procedures"></a>Leçon 2-3 - Création des vues et des procédures stockées
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)] Dans la mesure où Mary peut accéder à la base de données **TestData**, vous pouvez créer des objets de base de données, tels qu’une vue et une procédure stockée, puis autoriser Mary à y accéder. Une vue est une instruction SELECT stockée, et une procédure stockée correspond à une ou plusieurs instructions [!INCLUDE[tsql](../includes/tsql-md.md)] qui s'exécutent comme un traitement.  
   
 Les vues peuvent être interrogées comme des tables et n'acceptent pas de paramètres. Les procédures stockées sont plus complexes que les vues. Elles peuvent contenir des paramètres d'entrée et de sortie et peuvent contenir des instructions pour contrôler le flux du code, comme les instructions IF et WHILE. Il est recommandé de faire appel aux procédures stockées pour coder toutes les actions répétitives dans la base de données  
   
@@ -88,7 +88,7 @@ Pour cet exemple, vous allez utiliser CREATE VIEW pour créer une vue qui sélec
 ## <a name="next-task-in-lesson"></a>Tâche suivante de la leçon  
 [Octroi de l'accès à un objet de base de données](../t-sql/lesson-2-4-granting-access-to-a-database-object.md)  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [CREATE VIEW &#40;Transact-SQL&#41;](../t-sql/statements/create-view-transact-sql.md)  
 [CREATE PROCEDURE &#40;Transact-SQL&#41;](../t-sql/statements/create-procedure-transact-sql.md)  
   

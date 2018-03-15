@@ -1,5 +1,5 @@
 ---
-title: DBCC OUTPUTBUFFER (Transact-SQL) | Documents Microsoft
+title: DBCC OUTPUTBUFFER (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/16/2017
 ms.prod: sql-non-specified
@@ -38,7 +38,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="dbcc-outputbuffer-transact-sql"></a>DBCC OUTPUTBUFFER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-Renvoie le tampon de sortie actuel dans le format hexadécimal et ASCII spécifié *session_id*.
+Retourne le tampon de sortie actif au format hexadécimal et ASCII pour l’argument *session_id* spécifié.
   
 ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -54,7 +54,7 @@ DBCC OUTPUTBUFFER ( session_id [ , request_id ])
   
  *request_id*  
  Demande exacte (traitement) de recherche dans la session active.  
- La requête suivante renvoie *request_id*:  
+ La requête suivante retourne *request_id* :  
   
 ```sql
 SELECT request_id   
@@ -62,13 +62,13 @@ FROM sys.dm_exec_requests
 WHERE session_id = @@spid;  
 ```  
   
- WITH  
+ par  
  Permet de spécifier des options.  
   
  NO_INFOMSGS  
  Supprime tous les messages d'information dont les niveaux de gravité sont compris entre 0 et 10.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
 DBCC OUTPUTBUFFER affiche les résultats envoyés au client spécifié (*session_id*). Pour les processus qui ne possèdent pas de flux de sortie, un message d'erreur est renvoyé.
   
 Pour afficher l'instruction exécutée qui a renvoyé les résultats affichés par DBCC OUTPUTBUFFER, exécutez DBCC INPUTBUFFER.
@@ -100,7 +100,7 @@ L'exemple suivant renvoie les informations du tampon de sortie actif pour l'ID d
 DBCC OUTPUTBUFFER (52);  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)  
 [sp_who &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-who-transact-sql.md)  
 [Indicateurs de trace &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)

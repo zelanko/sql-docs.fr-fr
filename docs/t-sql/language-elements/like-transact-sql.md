@@ -67,12 +67,12 @@ match_expression [ NOT ] LIKE pattern
   
 ## <a name="arguments"></a>Arguments  
  *match_expression*  
- Valide [expression](../../t-sql/language-elements/expressions-transact-sql.md) du type de données caractère.  
+ Toute [expression](../../t-sql/language-elements/expressions-transact-sql.md) valide d’un type de données caractères.  
   
  *pattern*  
- Chaîne spécifique de caractères à rechercher dans *match_expression*et peut inclure les caractères génériques valides suivants. *modèle* peut comporter un maximum de 8 000 octets.  
+ Chaîne de caractères spécifique à rechercher dans *match_expression*. Peut inclure les caractères génériques valides suivants. *pattern* peut faire au maximum 8 000 octets.  
   
-|Caractère générique| Description|Exemple|  
+|Caractère générique|Description| Exemple|  
 |------------------------|-----------------|-------------|  
 |%|Toute chaîne de zéro caractère ou plus.|WHERE title LIKE '%computer%' trouve tous les titres de livres comportant le terme « computer ».|  
 |_ (souligné)|N'importe quel caractère.|WHERE au_fname LIKE '_ean' trouve tous les prénoms en quatre lettres terminant par « ean » (Dean, Sean, etc.).|  
@@ -80,18 +80,18 @@ match_expression [ NOT ] LIKE pattern
 |[^]|Tout caractère en dehors de l'intervalle ([^a-f]) ou de l'ensemble spécifié ([^abcdef]).|WHERE au_lname LIKE 'de[^l]%' trouve tous les noms d'auteurs commençant par « de » et dont la lettre suivante n'est pas « l ».|  
   
  *escape_character*  
- Caractère placé devant un caractère générique pour indiquer que celui-ci doit être interprété en tant que caractère régulier et non en tant que caractère générique. *escape_character* est une expression de caractères sans valeur par défaut et doit correspondre à un seul caractère.  
+ Caractère placé devant un caractère générique pour indiquer que celui-ci doit être interprété en tant que caractère régulier et non en tant que caractère générique. *escape_character* est une expression de caractères qui n’a pas de valeur par défaut et qui doit être évaluée à un seul caractère.  
   
 ## <a name="result-types"></a>Types des résultats  
  **Booléen**  
   
 ## <a name="result-value"></a>Valeur des résultats  
- LIKE renvoie TRUE si le *match_expression* correspond à l’élément spécifié *modèle*.  
+ LIKE renvoie TRUE si *match_expression* correspond au *pattern* spécifié.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Lors de la comparaison de chaînes à l'aide de l'argument LIKE, tous les caractères de la chaîne modèle sont importants, y compris les espaces de début ou de fin. Si vous demandez une comparaison qui renvoie toutes les lignes contenant une chaîne LIKE « abc  » (abc suivi d'un seul espace), une ligne dont la valeur pour cette colonne est « abc » (abc sans espace) ne sera pas renvoyée. Les espaces à droite dont le profil correspond à l'expression ne sont pas pris en compte. Si vous demandez une comparaison qui renvoie toutes les lignes contenant une chaîne LIKE « abc » (abc sans espace), toutes les lignes commençant par la chaîne « abc », qu'elles contiennent ou non des espaces à droite, seront renvoyées.  
   
- Une comparaison de chaînes à l’aide d’un modèle contenant **char** et **varchar** données peuvent échouer lors d’une comparaison LIKE en raison de la façon dont les données sont stockées. Vous devez comprendre le stockage de chaque type de données et la cause possible de l'échec d'une comparaison LIKE. L’exemple suivant passe une variable locale **char** variable à une procédure stockée, puis recherche générique pour trouver tous les employés dont le nom commence avec un jeu de caractères spécifié.  
+ Une comparaison de chaînes utilisant un modèle contenant des données de type **char** et **varchar** risque d’échouer lors d’une comparaison LIKE en raison du mode de stockage des données. Vous devez comprendre le stockage de chaque type de données et la cause possible de l'échec d'une comparaison LIKE. Dans l’exemple suivant, une variable locale de type **char** est transmise à une procédure stockée, puis une recherche générique s’effectue pour trouver tous les employés dont le nom commence par un jeu de caractères donné.  
   
 ```sql
 -- Uses AdventureWorks  
@@ -107,9 +107,9 @@ EXEC FindEmployee @EmpLName = 'Barb';
 GO  
 ```  
   
- Dans le `FindEmployee` procédure, ne retourne aucune ligne, car le **char** variable (`@EmpLName`) contient les espaces de fin de chaque nom comprenant moins de 20 caractères. Étant donné que la `LastName` colonne est **varchar**, il n’y pas les espaces à droite. Cette procédure échouera car les espaces de droite sont significatifs.  
+ Dans la procédure `FindEmployee`, aucune ligne n’est retournée car la variable **char** (`@EmpLName`) contient des espaces à droite en fin de chaîne pour chaque nom comprenant moins de 20 caractères. Comme la colonne `LastName` est de type **varchar**, elle ne contient aucun espace à droite. Cette procédure échouera car les espaces de droite sont significatifs.  
   
- Toutefois, l’exemple ci-dessous aboutit, car les espaces de fin ne sont pas ajoutés à un **varchar** variable.  
+ L’exemple suivant réussit car les espaces à droite en fin de chaîne ne sont pas ajoutés à une variable **varchar**.  
   
 ```sql
 -- Uses AdventureWorks  
@@ -135,7 +135,7 @@ EXEC FindEmployee @EmpLName = 'Barb';
  ``` 
  
 ## <a name="pattern-matching-by-using-like"></a>Recherche générique à l'aide de LIKE  
- Le mot clé LIKE prend en charge la recherche générique ASCII ainsi que la recherche générique Unicode. Lorsque tous les arguments (*match_expression*, *modèle*, et *escape_character*, le cas échéant) sont des types de données de caractères ASCII, générique ASCII est effectuée. Si l'un des arguments est de type de données Unicode, tous les arguments sont convertis en Unicode et une recherche générique Unicode est effectuée. Lorsque vous utilisez des données Unicode (**nchar** ou **nvarchar** des types de données) avec LIKE, les espaces à droite sont significatifs ; Toutefois, pour les données non-Unicode, les espaces de fin ne sont pas significatifs. Unicode LIKE est compatible avec la version standard de ISO. ASCII LIKE est compatible avec les versions antérieures de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Le mot clé LIKE prend en charge la recherche générique ASCII ainsi que la recherche générique Unicode. Lorsque tous les arguments (*match_expression*, *pattern* et *escape_character*, le cas échéant) sont des types de données caractères ASCII, une correspondance de modèles ASCII est effectuée. Si l'un des arguments est de type de données Unicode, tous les arguments sont convertis en Unicode et une recherche générique Unicode est effectuée. Lors de l’utilisation des données Unicode (types de données **nchar** ou **nvarchar**) avec LIKE, les espaces à droite sont significatifs ; pour les autres données, cependant, ils ne le sont pas. Unicode LIKE est compatible avec la version standard de ISO. ASCII LIKE est compatible avec les versions antérieures de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  Voici une série d'exemples illustrant les différences dans les lignes renvoyées entre une recherche générique ASCII LIKE et une recherche générique Unicode LIKE.  
   
@@ -202,7 +202,7 @@ GO
   
  Si le modèle LIKE ne contient aucun caractère après un caractère d'échappement, il n'est pas valide et le mot clé LIKE renvoie la valeur FALSE. Si le caractère se trouvant après un caractère d'échappement n'est pas un caractère générique, le caractère d'échappement est annulé et le caractère suivant est traité comme un caractère normal. Il s'agit notamment du signe de pourcentage (%), du trait de soulignement (_) et du crochet gauche ([) lorsqu'ils sont placés entre deux crochets ([ ]). En outre, à l'intérieur des doubles crochets ([ ]), les caractères d'échappement peuvent être utilisés et l'accent circonflexe (^), le trait d'union (-) et le crochet (]) droit peuvent être transformés en caractères d'échappement.  
   
- 0 x 0000 (**char(0)**) est un caractère indéfini dans les classements Windows et ne peut pas être inclus dans LIKE.  
+ 0x0000 (**char(0)**) est un caractère non défini dans les classements Windows et ne peut pas être inclus dans LIKE.  
   
 ## <a name="examples"></a>Exemples  
   
@@ -297,7 +297,7 @@ GO
 ```  
   
 ### <a name="d-using-the---wildcard-characters"></a>D. Utilisation des caractères génériques [ ]  
- L’exemple suivant recherche les employés sur le `Person` table dont le prénom de `Cheryl` ou `Sheryl`.  
+ L’exemple suivant recherche les employés figurant dans la table `Person` dont le prénom est `Cheryl` ou `Sheryl`.  
   
 ```sql  
 -- Uses AdventureWorks  
@@ -320,10 +320,10 @@ ORDER BY LastName ASC, FirstName ASC;
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemples : [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] et[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemples : [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] et [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="e-using-like-with-the--wildcard-character"></a>E. Utilisation de LIKE avec le caractère générique %  
- L’exemple suivant recherche tous les employés de la `DimEmployee` table avec des numéros de téléphone qui commencent par `612`.  
+ L’exemple suivant recherche tous les employés figurant dans la table `DimEmployee` dont le numéro de téléphone commence par `612`.  
   
 ```sql  
 -- Uses AdventureWorks  
@@ -335,7 +335,7 @@ ORDER by LastName;
 ```  
   
 ### <a name="f-using-not-like-with-the--wildcard-character"></a>F. Utilisation de NOT LIKE avec le caractère générique %  
- L’exemple suivant recherche tous les numéros de téléphone dans le `DimEmployee` table qui ne commencent pas par `612`.  .  
+ L’exemple suivant recherche tous les numéros de téléphone figurant dans la table `DimEmployee` qui ne commencent pas par `612`.  .  
   
 ```sql  
 -- Uses AdventureWorks  
@@ -347,7 +347,7 @@ ORDER by LastName;
 ```  
   
 ### <a name="g-using-like-with-the--wildcard-character"></a>G. Utilisation de LIKE avec le caractère générique _  
- L’exemple suivant recherche tous les numéros de téléphone qui ont un code de zone en commençant par `6` et se terminant par `2` dans le `DimEmployee` table. Notez que le caractère générique % est également inclus à la fin du modèle de recherche, car le code de région est la première partie du numéro de téléphone et contient des caractères supplémentaires après la valeur de colonne.  
+ L’exemple suivant recherche tous les numéros de téléphone dont l’indicatif commence par `6` et se termine par `2` dans la table `DimEmployee`. Notez que le caractère générique % est également inclus à la fin du modèle de recherche, car l’indicatif est la première partie du numéro de téléphone et il existe d’autres caractères après dans la valeur de colonne.  
   
 ```sql  
 -- Uses AdventureWorks  
@@ -358,7 +358,7 @@ WHERE phone LIKE '6_2%'
 ORDER by LastName;   
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
  [Fonctions intégrées &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   

@@ -1,5 +1,5 @@
 ---
-title: OPENQUERY (Transact-SQL) | Documents Microsoft
+title: OPENQUERY (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -53,7 +53,7 @@ OPENQUERY ( linked_server ,'query' )
  *linked_server*  
  ID représentant le nom du serveur lié.  
   
- **'** *requête* **'**  
+ **'** *query* **'**  
  Chaîne de requête exécutée dans le serveur lié. La longueur maximale de la chaîne est limitée à 8 Ko.  
   
 ## <a name="remarks"></a>Notes   
@@ -96,23 +96,23 @@ DELETE OPENQUERY (OracleSvr, 'SELECT name FROM joe.titles WHERE name = ''NewTitl
 ```  
   
 ### <a name="d-executing-a-select-pass-through-query"></a>D. Exécution d'une requête SELECT directe  
- L’exemple suivant utilise direct `SELECT` requête pour sélectionner la ligne insérée dans l’exemple C.  
+ L’exemple suivant exécute une requête directe `SELECT` pour sélectionner la ligne insérée dans l’exemple C.  
   
 ```sql  
 SELECT * FROM OPENQUERY (OracleSvr, 'SELECT name FROM joe.titles WHERE name = ''NewTitle''');  
 ```  
     
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)   
  [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md)   
  [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
  [OPENDATASOURCE &#40;Transact-SQL&#41;](../../t-sql/functions/opendatasource-transact-sql.md)   
  [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)   
- [Fonctions rowset &#40; Transact-SQL &#41;](../../t-sql/functions/rowset-functions-transact-sql.md)   
+ [Fonctions d’ensemble de lignes &#40;Transact-SQL&#41;](../../t-sql/functions/rowset-functions-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [sp_addlinkedserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)   
- [sp_serveroption &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-serveroption-transact-sql.md)   
+ [sp_serveroption &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-serveroption-transact-sql.md)   
  [UPDATE &#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md)   
- [OÙ &#40; Transact-SQL &#41;](../../t-sql/queries/where-transact-sql.md)  
+ [WHERE &#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: "Filtre (Type de données geometry) | Documents Microsoft"
+title: "Filter (type de données geometry) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -35,11 +35,11 @@ ms.lasthandoff: 01/25/2018
 # <a name="filter-geometry-data-type"></a>Filter (type de données geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Une méthode qui offre une méthode rapide index uniquement d’intersection pour déterminer si un **geometry** instance croise une autre **geometry** instance, en supposant un index est disponible.
+Méthode rapide d’intersection d’index uniquement, qui permet de déterminer si une instance **geometry** entre en intersection avec une autre instance **geometry**, en supposant qu’un index soit disponible.
   
-Retourne 1 si une **geometry** instance potentiellement entre en intersection avec une autre **geometry** instance. Cette méthode peut produire un retour de faux positif, et le résultat exact peut être dépendant du plan. Retourne une valeur 0 exacte (retour négatif vrai) s’il n’existe aucune intersection de **geometry** instance a été trouvée.
+Retourne 1 si une instance **geometry** entre potentiellement en intersection avec une autre instance **geometry**. Cette méthode peut produire un retour de faux positif, et le résultat exact peut être dépendant du plan. Retourne une valeur 0 précise (retour négatif vrai) si aucune intersection d’instances **geometry** n’est détectée.
   
-Dans le cas où un index n’est pas disponible ou n’est pas utilisé, la méthode retourne les mêmes valeurs que **STIntersects()** lorsqu’elle est appelée avec les mêmes paramètres.
+Dans les cas où un index n’est pas disponible ou n’est pas utilisé, la méthode retourne les mêmes valeurs que **STIntersects()** quand elle est appelée avec les mêmes paramètres.
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -50,14 +50,14 @@ Dans le cas où un index n’est pas disponible ou n’est pas utilisé, la mét
   
 ## <a name="arguments"></a>Arguments  
  *other_geometry*  
- Une autre **geometry** instance à comparer à l’instance sur laquelle Filter() est appelée.  
+ Autre instance **geometry** à comparer à l’instance sur laquelle Filter() est appelé.  
   
 ## <a name="return-types"></a>Types de retour  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]type de retour : **bits**  
+ Type de retour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] : **bit**  
   
  Type de retour CLR : **SqlBoolean**  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Cette méthode n'est pas déterministe et n'est pas précise.  
   
 ## <a name="examples"></a>Exemples  
@@ -81,8 +81,8 @@ FROM sample
 WHERE g.Filter(geometry::Parse('POLYGON((-1 -1, 1 -1, 1 1, -1 1, -1 -1))')) = 1;  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- [Méthodes étendues sur les Instances géométriques](../../t-sql/spatial-geometry/extended-methods-on-geometry-instances.md)   
+## <a name="see-also"></a> Voir aussi  
+ [Méthodes étendues sur des instances Geometry](../../t-sql/spatial-geometry/extended-methods-on-geometry-instances.md)   
  [STIntersects &#40;type de données geometry&#41;](../../t-sql/spatial-geometry/stintersects-geometry-data-type.md)  
   
   

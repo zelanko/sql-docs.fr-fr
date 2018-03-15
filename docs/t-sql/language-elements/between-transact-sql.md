@@ -1,5 +1,5 @@
 ---
-title: ENTRE (Transact-SQL) | Documents Microsoft
+title: BETWEEN (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/28/2017
 ms.prod: sql-non-specified
@@ -51,35 +51,35 @@ test_expression [ NOT ] BETWEEN begin_expression AND end_expression
   
 ## <a name="arguments"></a>Arguments  
  *test_expression*  
- Est la [expression](../../t-sql/language-elements/expressions-transact-sql.md) à tester dans la plage définie par *début_expression*et *fin_expression*. *test_expression* doit être le même type de données à la fois comme *début_expression* et *fin_expression*.  
+ Correspond à l’[expression](../../t-sql/language-elements/expressions-transact-sql.md) à tester dans la plage définie par *begin_expression* et *end_expression*. *test_expression* doit être du même type de données que *begin_expression* et *end_expression*.  
   
  NOT  
  Indique la négation du résultat du prédicat.  
   
  *begin_expression*  
- Toute expression valide. *début_expression* doit être le même type de données à la fois comme *test_expression* et *fin_expression*.  
+ Toute expression valide. *begin_expression* doit être du même type de données que *test_expression* et *end_expression*.  
   
  *end_expression*  
- Toute expression valide. *fin_expression* doit être le même type de données à la fois comme *test_expression*et *début_expression*.  
+ Toute expression valide. *end_expression* doit être du même type de données que *test_expression* et *begin_expression*.  
   
  AND  
- Espace réservé qui indique que *test_expression* doit se trouver dans la plage indiquée par *début_expression* et *fin_expression*.  
+ Agit en tant qu’espace réservé qui indique que *test_expression* doit se trouver dans la plage indiquée par *begin_expression* et *end_expression*.  
   
 ## <a name="result-types"></a>Types des résultats  
  **Booléen**  
   
 ## <a name="result-value"></a>Valeur des résultats  
- BETWEEN renvoie **TRUE** si la valeur de *test_expression* est supérieure ou égale à la valeur de *début_expression* et inférieur ou égal à la valeur de *fin_expression*.  
+ BETWEEN retourne **TRUE** si la valeur de *test_expression* est supérieure ou égale à la valeur de *begin_expression* et inférieure ou égale à la valeur de *end_expression*.  
   
- PAS entre retourne **TRUE** si la valeur de *test_expression* est inférieure à la valeur de *début_expression* ou supérieur à la valeur de *fin_expression*.  
+ NOT BETWEEN retourne **TRUE** si la valeur de *test_expression* est inférieure à la valeur de *begin_expression* ou supérieure à la valeur de *end_expression*.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Pour spécifier un intervalle exclusif, employez les opérateurs « supérieur à » (>) et « inférieur à » (<). Si l'un des paramètres fournis avec le prédicat BETWEEN ou NOT BETWEEN a la valeur NULL, le résultat est UNKNOWN.  
   
 ## <a name="examples"></a>Exemples  
   
 ### <a name="a-using-between"></a>A. Utilisation de BETWEEN  
- L’exemple suivant retourne des informations sur les rôles de base de données dans une base de données. La première requête retourne tous les rôles. Le deuxième exemple utilise la `BETWEEN` clause pour limiter les rôles spécifié `database_id` valeurs.  
+ L’exemple suivant retourne des informations sur les rôles de base de données dans une base de données. La première requête retourne tous les rôles. Le deuxième exemple utilise la clause `BETWEEN` pour limiter les rôles aux valeurs `database_id` spécifiées.  
   
 ```sql  
 SELECT principal_id, name 
@@ -165,7 +165,7 @@ GO
 ```  
   
 ### <a name="d-using-between-with-datetime-values"></a>D. Utilisation de BETWEEN avec des valeurs datetime  
- L’exemple suivant récupère des lignes dans lesquelles **datetime** valeurs sont comprises entre `'20011212'` et `'20020105'`(inclus).  
+ L’exemple suivant récupère les lignes dans lesquelles les valeurs **datetime** sont situées entre `'20011212'` et `'20020105'` incluses.  
   
 ```sql  
 -- Uses AdventureWorks  
@@ -184,15 +184,15 @@ WHERE RateChangeDate BETWEEN '20011212' AND '20020105';
  4           2002-01-05 00:00:00.000  
  ```  
  
- La requête extrait les lignes attendues car les valeurs de date dans la requête et le **datetime** valeurs stockées dans les `RateChangeDate` colonne ont été spécifiées sans la partie heure de la date. Lorsque la partie heure n'est pas spécifiée, la valeur par défaut est 12:00 A.M. Notez qu'une ligne qui contient une heure ultérieure à 12h00 le 5 janvier 2002 ne serait pas retournée par cette requête car cette date se situe hors de la plage.  
+ La requête récupère les lignes attendues car les valeurs de date dans la requête et les valeurs **datetime** stockées dans la colonne `RateChangeDate` ont été spécifiées sans la partie heure de la date. Lorsque la partie heure n'est pas spécifiée, la valeur par défaut est 12:00 A.M. Notez qu'une ligne qui contient une heure ultérieure à 12h00 le 5 janvier 2002 ne serait pas retournée par cette requête car cette date se situe hors de la plage.  
   
   
-## <a name="see-also"></a>Voir aussi  
- [&#62; &#40;Greater Than&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/greater-than-transact-sql.md)   
- [&#60; &#40;Less Than&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/less-than-transact-sql.md)   
+## <a name="see-also"></a> Voir aussi  
+ [&#62; &#40;Supérieur à&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/greater-than-transact-sql.md)   
+ [&#60; &#40;Inférieur à&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/less-than-transact-sql.md)   
  [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
  [Fonctions intégrées &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)   
- [Operators &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
+ [Opérateurs &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [WHERE &#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md)  
   

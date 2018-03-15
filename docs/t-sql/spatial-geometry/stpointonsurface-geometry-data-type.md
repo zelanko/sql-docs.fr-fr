@@ -1,5 +1,5 @@
 ---
-title: "STPointOnSurface (Type de données geometry) | Documents Microsoft"
+title: "STPointOnSurface (type de données geometry) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stpointonsurface-geometry-data-type"></a>STPointOnSurface (type de données geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Retourne un point arbitraire situé à l’intérieur d’un **geometry** instance.
+Retourne un point arbitraire situé à l’intérieur d’une instance **geometry**.
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -44,13 +44,13 @@ Retourne un point arbitraire situé à l’intérieur d’un **geometry** instan
 ```  
   
 ## <a name="return-types"></a>Types de retour  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]type de retour : **geometry**  
+ Type de retour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] : **geometry**  
   
  Type de retour CLR : **SqlGeometry**  
   
- Type Open Geospatial Consortium (OGC) : **Point**  
+ Type OGC (Open Geospatial Consortium) : **Point**  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Cette méthode retourne la valeur Null si l'instance est vide.  
   
 ## <a name="examples"></a>Exemples  
@@ -62,7 +62,7 @@ SET @g = geometry::STGeomFromText('POLYGON((0 0, 3 0, 3 3, 0 3, 0 0),(2 2, 2 1, 
 SELECT @g.STPointOnSurface().ToString();  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Méthodes OGC sur des instances geography](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   
   

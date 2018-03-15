@@ -1,5 +1,5 @@
 ---
-title: "STPolyFromText (Type de données geography) | Documents Microsoft"
+title: "STPolyFromText (type de données geography) | Microsoft Docs"
 ms.custom: 
 ms.date: 07/30/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stpolyfromtext-geography-data-type"></a>STPolyFromText (type de données geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Retourne un **geography** instance à partir d’une représentation de la réplication continue en cluster (WKT, Open Geospatial Consortium (OGC) Well-Known Text) augmentée des Z (élévation) et les valeurs M (mesure) apportées par l’instance.
+Retourne une instance **geography** à partir d’une représentation OGC (Open Geospatial Consortium) WKT (Well-Known Text), à laquelle s’ajoutent les valeurs Z (élévation) et M (mesure) apportées par l’instance.
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -45,20 +45,20 @@ STPolyFromText ( 'polygon_tagged_text' , SRID )
   
 ## <a name="arguments"></a>Arguments  
  *polygon_tagged_text*  
- Est la représentation WKT de le **geographyPolygon** instance à retourner. *polygon_tagged_text* est un **nvarchar (max)** expression.  
+ Représentation WKT de l’instance **geographyPolygon** à retourner. *polygon_tagged_text* est une expression **nvarchar(max)**.  
   
  *SRID*  
- Est un **int** expression représentant les données spatiales ID de référence (SRID) de la **geographyPolygon** instance à retourner.  
+ Expression **int** qui représente le SRID (ID de référence spatiale) de l’instance **geographyPolygon** à retourner.  
   
 ## <a name="return-types"></a>Types de retour  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]type de retour : **geography**  
+ Type de retour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] : **geography**  
   
  Type de retour CLR : **SqlGeography**  
   
- Type OGC : **polygone**  
+ Type OGC : **Polygon**  
   
-## <a name="remarks"></a>Notes  
- Cette méthode lève un **FormatException** si l’entrée n’est pas correctement mise en forme.  
+## <a name="remarks"></a>Notes   
+ Cette méthode lève **FormatException** si l’entrée n’est pas au format approprié.  
   
 ## <a name="examples"></a>Exemples  
  L'exemple suivant utilise la méthode `STPolyFromText()` pour créer une instance `geography`.  
@@ -69,7 +69,7 @@ SET @g = geography::STPolyFromText('POLYGON((-122.358 47.653, -122.348 47.649, -
 SELECT @g.ToString();  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Méthodes geography statiques de l’OGC](../../t-sql/spatial-geography/ogc-static-geography-methods.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: ALTER MESSAGE TYPE (Transact-SQL) | Documents Microsoft
+title: ALTER MESSAGE TYPE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -70,15 +70,15 @@ ALTER MESSAGE TYPE message_type_name
  Le corps du message doit contenir un document XML bien formé.  
   
  VALID_XML_WITH_SCHEMA = *schema_collection_name*  
- Le corps du message doit contenir du code XML conforme à un schéma de la collection de schémas spécifiée. Le *schema_collection_name* doit être le nom d’une collection de schémas XML existante.  
+ Le corps du message doit contenir du code XML conforme à un schéma de la collection de schémas spécifiée. *schema_collection_name* doit être le nom d’une collection de schémas XML existante.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Modifier la validation d'un type de message n'a aucun impact sur les messages qui ont déjà été remis à une file d'attente.  
   
  L'instruction ALTER AUTHORIZATION permet de modifier l'AUTORISATION pour un type de message.  
   
 ## <a name="permissions"></a>Autorisations  
- L’autorisation de modification d’un type de message par défaut est le propriétaire du type de message, les membres de la **db_ddladmin** ou **db_owner** fixe des rôles de base de données et les membres de la **sysadmin** rôle serveur fixe.  
+ Par défaut, l’autorisation de modification d’un type de message est octroyée au propriétaire du type de message, aux membres des rôles de base de données fixes **db_ddladmin** ou **db_owner**, ainsi qu’aux membres du rôle serveur fixe **sysadmin**.  
   
  Si l'instruction ALTER MESSAGE TYPE indique une collections de schémas, l'utilisateur qui exécute cette instruction doit disposer de l'autorisation REFERENCES sur la collection de schémas spécifiée.  
   
@@ -91,8 +91,8 @@ ALTER MESSAGE TYPE
     VALIDATION = WELL_FORMED_XML ;  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- [ALTER AUTHORIZATION &#40; Transact-SQL &#41;](../../t-sql/statements/alter-authorization-transact-sql.md)   
+## <a name="see-also"></a> Voir aussi  
+ [ALTER AUTHORIZATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-authorization-transact-sql.md)   
  [CREATE MESSAGE TYPE &#40;Transact-SQL&#41;](../../t-sql/statements/create-message-type-transact-sql.md)   
  [DROP MESSAGE TYPE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-message-type-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  

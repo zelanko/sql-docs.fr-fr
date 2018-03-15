@@ -1,5 +1,5 @@
 ---
-title: CURSOR_STATUS (Transact-SQL) | Documents Microsoft
+title: CURSOR_STATUS (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
@@ -56,7 +56,7 @@ CURSOR_STATUS
 Spécifie une constante indiquant que la source du curseur est un nom de curseur local.
   
 '*cursor_name*'  
-Est le nom du curseur. Un nom de curseur doit suivre les règles applicables aux identificateurs.
+Nom du curseur. Un nom de curseur doit suivre les règles applicables aux identificateurs.
   
 'global'  
 Spécifie une constante indiquant que la source du curseur est un nom de curseur global.
@@ -64,15 +64,15 @@ Spécifie une constante indiquant que la source du curseur est un nom de curseur
 'variable'  
 Spécifie une constante indiquant que la source du curseur est une variable locale.
   
-'*variable_de_curseur*'  
-Nom de la variable de curseur. Une variable de curseur doit être définie à l’aide de la **curseur** type de données.
+'*cursor_variable*'  
+Nom de la variable de curseur. Une variable de curseur doit être définie à l’aide du type de données **cursor**.
   
 ## <a name="return-types"></a>Types de retour
 **smallint**
   
 |Valeur retournée|Nom du curseur|Variable du curseur|  
 |---|---|---|
-|1|L'ensemble de résultats du curseur comprend au moins une ligne.<br /><br /> Pour les curseurs INSENSITIVE et pilotés par jeux de clés, l'ensemble de résultats comprend au moins une ligne.<br /><br /> Pour les curseurs dynamiques, l'ensemble de résultats peut être vide, ou contenir une ou plusieurs lignes.|Le curseur affecté à cette variable est ouvert.<br /><br /> Pour les curseurs INSENSITIVE et pilotés par jeux de clés, l'ensemble de résultats comprend au moins une ligne.<br /><br /> Pour les curseurs dynamiques, l'ensemble de résultats peut être vide, ou contenir une ou plusieurs lignes.|  
+| 1|L'ensemble de résultats du curseur comprend au moins une ligne.<br /><br /> Pour les curseurs INSENSITIVE et pilotés par jeux de clés, l'ensemble de résultats comprend au moins une ligne.<br /><br /> Pour les curseurs dynamiques, l'ensemble de résultats peut être vide, ou contenir une ou plusieurs lignes.|Le curseur affecté à cette variable est ouvert.<br /><br /> Pour les curseurs INSENSITIVE et pilotés par jeux de clés, l'ensemble de résultats comprend au moins une ligne.<br /><br /> Pour les curseurs dynamiques, l'ensemble de résultats peut être vide, ou contenir une ou plusieurs lignes.|  
 |0|L'ensemble de résultats du curseur est vide.*|Le curseur affecté à cette variable est ouvert mais l'ensemble de résultats est vide.*|  
 |-1|Le curseur est fermé.|Le curseur affecté à cette variable est fermé.|  
 |-2|Non applicable.|Valeurs possibles :<br /><br /> Aucun curseur n'a été affecté à cette variable OUTPUT lors du précédent appel de la procédure.<br /><br /> Un curseur a été affecté à cette variable OUTPUT lors du précédent appel de la procédure mais il était fermé pendant le déroulement de celle-ci. C'est la raison pour laquelle le curseur est désaffecté et qu'il n'est pas retourné à la procédure d'appel.<br /><br /> Aucun curseur n'est affecté à une variable de curseur déclarée.|  
@@ -134,7 +134,7 @@ After Close
 ```  
   
 ## <a name="see-also"></a>Voir aussi
-[Fonctions de curseur &#40; Transact-SQL &#41;](../../t-sql/functions/cursor-functions-transact-sql.md)  
+[Fonctions de curseur &#40;Transact-SQL&#41;](../../t-sql/functions/cursor-functions-transact-sql.md)  
 [Types de données &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)
   
   

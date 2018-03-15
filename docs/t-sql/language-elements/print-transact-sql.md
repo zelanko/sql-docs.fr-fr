@@ -1,5 +1,5 @@
 ---
-title: PRINT (Transact-SQL) | Documents Microsoft
+title: PRINT (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -51,16 +51,16 @@ PRINT msg_str | @local_variable | string_expr
   
 ## <a name="arguments"></a>Arguments  
  *msg_str*  
- Chaîne de caractères ou constante de chaîne Unicode. Pour plus d’informations, consultez [constantes &#40; Transact-SQL &#41; ](../../t-sql/data-types/constants-transact-sql.md).  
+ Chaîne de caractères ou constante de chaîne Unicode. Pour plus d’informations, consultez [Constantes &#40;Transact-SQL&#41;](../../t-sql/data-types/constants-transact-sql.md).  
   
  **@** *local_variable*  
- Variable de tout type de données caractères valide. **@*** local_variable* doit être **char**, **nchar**, **varchar**, ou **nvarchar**, ou il doit pouvoir être implicitement converti dans ces types.  
+ Variable de tout type de données caractères valide. **@*** local_variable* doit être de type **char**, **nchar**, **varchar** ou **nvarchar**, ou il doit pouvoir être implicitement converti dans ces types de données.  
   
  *string_expr*  
  Expression qui retourne une chaîne. Cet argument peut inclure des valeurs littérales concaténées, des fonctions et des variables. Pour plus d’informations, consultez [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md).  
   
-## <a name="remarks"></a>Notes  
- Une chaîne de message peut contenir jusqu'à 8 000 caractères s'il s'agit d'une chaîne non-Unicode, et 4 000 caractères s'il s'agit d'une chaîne Unicode. Les chaînes plus longues sont tronquées. Le **varchar (max)** et **nvarchar (max)** des types de données sont tronqués en types de données qui ne dépassent pas **varchar(8000)** et **nvarchar (4000)**.  
+## <a name="remarks"></a>Notes   
+ Une chaîne de message peut contenir jusqu'à 8 000 caractères s'il s'agit d'une chaîne non-Unicode, et 4 000 caractères s'il s'agit d'une chaîne Unicode. Les chaînes plus longues sont tronquées. Les types de données **varchar(max)** et **nvarchar(max)** sont tronqués en types de données qui ne dépassent pas **varchar(8000)** et **nvarchar(4000)**.  
   
  L'instruction RAISERROR peut également être utilisée pour retourner des messages. Elle présente trois avantages par rapport à l'instruction PRINT :  
   
@@ -104,9 +104,9 @@ PRINT @PrintMessage;
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemples : [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] et[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemples : [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] et [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="c-conditionally-executing-print"></a>C. L’exécution conditionnelle d’impression  
+### <a name="c-conditionally-executing-print"></a>C. Impression sous condition  
  L'exemple suivant utilise l'instruction `PRINT` pour retourner un message sous condition.  
   
 ```  
@@ -117,10 +117,10 @@ ELSE
 GO  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Types de données &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
  [DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)   
- [RAISERROR &#40; Transact-SQL &#41;](../../t-sql/language-elements/raiserror-transact-sql.md)  
+ [RAISERROR &#40;Transact-SQL&#41;](../../t-sql/language-elements/raiserror-transact-sql.md)  
   
   
 

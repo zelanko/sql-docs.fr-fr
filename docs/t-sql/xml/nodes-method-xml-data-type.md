@@ -1,5 +1,5 @@
 ---
-title: "Méthode (Type de données xml) Nodes() | Documents Microsoft"
+title: "Méthode nodes() (type de données xml) | Microsoft Docs"
 ms.custom: 
 ms.date: 07/26/2017
 ms.prod: sql-non-specified
@@ -32,13 +32,13 @@ ms.lasthandoff: 01/25/2018
 # <a name="nodes-method-xml-data-type"></a>Méthode nodes() (type de données xml)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Le **nodes()** méthode est utile lorsque vous souhaitez fragmenter un **xml** instance de type de données en données relationnelles. Elle vous permet d'identifier les nœuds à mapper dans une nouvelle ligne.  
+  La méthode **nodes()** s’avère utile pour éclater une instance de type de données **xml** en données relationnelles. Elle vous permet d'identifier les nœuds à mapper dans une nouvelle ligne.  
   
- Chaque **xml** instance de type de données possède un nœud de contexte fourni implicitement. Pour l'instance XML stockée dans une colonne ou variable, il s'agit du nœud de document. Le nœud du document est le nœud implicite situé en haut de chaque **xml** instance de type de données.  
+ Chaque instance de type de données **xml** possède un nœud de contexte fourni implicitement. Pour l'instance XML stockée dans une colonne ou variable, il s'agit du nœud de document. Le nœud de document est le nœud implicite situé en haut de chaque instance de type de données **xml**.  
   
- Le résultat de la **nodes()** méthode est un ensemble de lignes qui contient des copies logiques des instances XML d’origine. Dans ces copies logiques, le nœud de contexte de chaque instance de ligne correspond à l'un des nœuds identifiés avec l'expression de requête, ce qui permet aux requêtes ultérieures de naviguer par rapport à ces nœuds de contexte.  
+ Le résultat de la méthode **nodes()** est un ensemble de lignes qui contient des copies logiques des instances XML d’origine. Dans ces copies logiques, le nœud de contexte de chaque instance de ligne correspond à l'un des nœuds identifiés avec l'expression de requête, ce qui permet aux requêtes ultérieures de naviguer par rapport à ces nœuds de contexte.  
   
- Vous pouvez extraire plusieurs valeurs de l'ensemble de lignes. Par exemple, vous pouvez appliquer la **value()** méthode à l’ensemble de lignes retourné par **nodes()** et récupérer plusieurs valeurs à partir de l’instance XML d’origine. Notez que la **value()** lorsqu’elle est appliquée à l’instance XML, méthode retourne une seule valeur.  
+ Vous pouvez extraire plusieurs valeurs de l'ensemble de lignes. Par exemple, vous pouvez appliquer la méthode **value()** à l’ensemble de lignes renvoyé par **nodes()**, puis extraire plusieurs valeurs de l’instance XML d’origine. Remarquez qu’appliquée à l’instance XML, la méthode **value()** ne renvoie qu’une seule valeur.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -54,7 +54,7 @@ nodes (XQuery) as Table(Column)
  *Table*(*Column*)  
  Nom de table et nom de colonne de l'ensemble de lignes obtenu.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Prenons par exemple la table suivante :  
   
 ```  
@@ -96,7 +96,7 @@ ModelID      Instructions
              </root>  
 ```  
   
- Vous pouvez alors interroger cet ensemble de lignes à l’aide de **xml** méthodes du type de données. La requête suivante extrait la sous-arborescence de l'élément de contexte pour chaque ligne générée :  
+ Vous pouvez alors interroger cet ensemble de lignes à l’aide de méthodes de type de données **xml**. La requête suivante extrait la sous-arborescence de l'élément de contexte pour chaque ligne générée :  
   
 ```  
 SELECT T2.Loc.query('.')  
@@ -104,7 +104,7 @@ FROM   T
 CROSS APPLY Instructions.nodes('/root/Location') as T2(Loc)   
 ```  
   
- Voici le résultat obtenu :  
+ Voici le résultat obtenu :  
   
 ```  
 ProductModelID  Instructions  
@@ -114,15 +114,15 @@ ProductModelID  Instructions
 1        <Location LocationID="30" .../>  
 ```  
   
- L'ensemble de lignes renvoyé a conservé les informations de type. Vous pouvez appliquer **xml** de type de données méthodes, telles que **query()**, **value()**, **exist()**, et **nodes()**, le résultat d’une **nodes()** (méthode). Toutefois, vous ne pouvez pas appliquer le **modify()** méthode permettant de modifier l’instance XML.  
+ L'ensemble de lignes renvoyé a conservé les informations de type. Vous pouvez appliquer des méthodes de type de données **xml**, comme **query()**, **value()**, **exist()** et **nodes()**, au résultat d’une méthode **nodes()**. Toutefois, vous ne pouvez pas appliquer la méthode **modify()** pour modifier l’instance XML.  
   
  En outre, le nœud de contexte figurant dans l'ensemble de lignes ne peut pas être matérialisé. Vous ne pouvez donc pas l'utiliser dans une instruction SELECT. Toutefois, vous pouvez l'utiliser dans IS NULL et COUNT(*).  
   
- Scénarios d’utilisation de la **nodes()** méthode sont les mêmes que ceux [OPENXML &#40; Transact-SQL &#41; ](../../t-sql/functions/openxml-transact-sql.md). qui fournit une vue d'ensemble de lignes du document XML. Toutefois, il est inutile d’utiliser les curseurs lorsque vous utilisez la **nodes()** méthode sur une table qui contient plusieurs lignes de documents XML.  
+ Les scénarios d’utilisation des méthodes **nodes()** sont les mêmes que ceux de [OPENXML &#40;Transact-SQL&#41;](../../t-sql/functions/openxml-transact-sql.md). qui fournit une vue d'ensemble de lignes du document XML. Toutefois, vous n’avez pas besoin de recourir à des curseurs lorsque vous utilisez la méthode **nodes()** sur une table qui contient plusieurs lignes de documents XML.  
   
- Notez que l’ensemble de lignes retourné par la **nodes()** méthode est un ensemble de lignes sans nom. Par conséquent, il doit être explicitement nommé à l'aide d'alias.  
+ Remarquez que l’ensemble de lignes renvoyé par la méthode **nodes()** est un ensemble de lignes sans nom. Par conséquent, il doit être explicitement nommé à l'aide d'alias.  
   
- Le **nodes()** fonction ne peut pas être appliquée directement aux résultats d’une fonction définie par l’utilisateur. Pour utiliser le **nodes()** fonction avec le résultat d’une fonction scalaire définie par l’utilisateur, vous pouvez assigner le résultat de la fonction définie par l’utilisateur à une variable ou utiliser une table dérivée pour assigner une colonne un alias à la valeur de retour de fonction définie par l’utilisateur puis utiliser CROSS APPLY pour sélectionner à partir de l’alias.  
+ La fonction **nodes()** ne peut pas s’appliquer directement aux résultats d’une fonction définie par l’utilisateur. Pour utiliser la fonction **nodes()** avec le résultat d’une fonction scalaire définie par l’utilisateur, vous pouvez soit attribuer le résultat à une variable, soit exploiter une table dérivée pour affecter un alias de colonne à la valeur retournée de la fonction définie par l’utilisateur, puis utiliser CROSS APPLY qui effectue une sélection à partir de l’alias.  
   
  L'exemple suivant illustre une utilisation de `CROSS APPLY` permettant d'opérer une sélection à partir du résultat d'une fonction définie par l'utilisateur.  
   
@@ -183,7 +183,7 @@ FROM   @x.nodes('/Root/row') T(c)
 go  
 ```  
   
- Voici le résultat obtenu :  
+ Voici le résultat obtenu :  
   
 ```  
 <Root>  
@@ -204,9 +204,9 @@ go
 ```  
   
 ### <a name="specifying-the-nodes-method-against-a-column-of-xml-type"></a>Spécification de la méthode nodes() par rapport à une colonne de type xml  
- Les instructions de fabrication des bicyclettes sont utilisées dans cet exemple et sont stockées dans les Instructions **xml** colonne de type de la **ProductModel** table.  
+ Cet exemple utilise les instructions de fabrication de vélo, stockées dans la colonne Instructions de type **xml** de la table **ProductModel**.  
   
- Dans l’exemple suivant, la `nodes()` méthode est spécifiée sur le `Instructions` colonne de **xml** de type dans le `ProductModel` table.  
+ Dans l’exemple suivant, la méthode `nodes()` est spécifiée par rapport à la colonne `Instructions` de type **xml** de la table `ProductModel`.  
   
  La méthode `nodes()` définit les éléments <`Location`> en tant que nœuds de contexte en spécifiant le chemin d'accès `/MI:root/MI:Location`. L'ensemble de lignes obtenu comprend une copie logique du document d'origine par nœud <`Location`> du document et le nœud de contexte a pour valeur l'élément <`Location`>. Par conséquent, la fonction `nodes()` fournit un ensemble de nœuds de contexte <`Location`>.  
   
@@ -214,13 +214,13 @@ go
   
  Dans cet exemple, la requête définit chaque élément <`Location`> en tant que nœud de contexte du document d'instructions de fabrication d'un modèle de produit spécifique. Ces nœuds de contexte vous permettent d'effectuer les opérations d'extraction suivantes :  
   
--   Rechercher les codes d’emplacement de chaque <`Location`>  
+-   Rechercher les ID d’emplacement dans chaque élément <`Location`>  
   
--   Récupérer les étapes de fabrication (<`step`> des éléments enfants) dans chaque <`Location`>  
+-   Récupérer les étapes de fabrication (éléments enfants <`step`>) dans chaque <`Location`>  
   
  Cette requête renvoie l'élément de contexte, dans lequel est spécifiée la syntaxe abrégée `'.'` de `self::node()`, dans la méthode `query()`.  
   
- Notez les points suivants :  
+ Notez les points suivants :  
   
 -   La méthode `nodes()` est appliquée à la colonne Instructions et renvoie l'ensemble de lignes `T (C)`. Cet ensemble de lignes contient des copies logiques du document d'origine des instructions de fabrication et indique `/root/Location` en guise d'élément de contexte.  
   
@@ -235,7 +235,7 @@ go
     WHERE ProductModelID=7  
     ```  
   
-     Voici le résultat partiel :  
+     Voici le résultat partiel :  
   
     ```  
     <MI:Location LocationID="10"  ...>  
@@ -252,7 +252,7 @@ go
 ### <a name="applying-nodes-to-the-rowset-returned-by-another-nodes-method"></a>Application de la méthode nodes() à l'ensemble de lignes renvoyé par une autre méthode nodes()  
  Le code suivant interroge les documents XML des instructions de fabrication stockés dans la colonne `Instructions` de la table `ProductModel`. La requête renvoie un ensemble de lignes qui contient l'ID du modèle de produit, ainsi que les sites et les étapes de fabrication.  
   
- Notez les points suivants :  
+ Notez les points suivants :  
   
 -   La méthode `nodes()` est appliquée à la colonne `Instructions` et renvoie l'ensemble de lignes `T1 (Locations)`. Cet ensemble de lignes contient des copies logiques du document d'origine des instructions de fabrication et indique `/root/Location` en guise de contexte d'élément.  
   
@@ -272,7 +272,7 @@ WHERE ProductModelID=7
 GO         
 ```  
   
- Voici le résultat obtenu :  
+ Voici le résultat obtenu :  
   
 ```  
 ProductModelID LocID Step         
@@ -303,7 +303,7 @@ WHERE ProductModelID=7
 GO    
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Ajouter des espaces de noms aux requêtes avec WITH XMLNAMESPACES](../../relational-databases/xml/add-namespaces-to-queries-with-with-xmlnamespaces.md)   
  [Créer des instances de données XML](../../relational-databases/xml/create-instances-of-xml-data.md)   
  [Méthodes de type de données xml](../../t-sql/xml/xml-data-type-methods.md)  

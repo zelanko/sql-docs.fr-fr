@@ -1,5 +1,5 @@
 ---
-title: COL_LENGTH (Transact-SQL) | Documents Microsoft
+title: COL_LENGTH (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
@@ -51,8 +51,8 @@ COL_LENGTH ( 'table' , 'column' )
 **'** *table* **'**  
 Nom de la table dont les informations de longueur de colonne doivent être déterminées. *table* est une expression de type **nvarchar**.
   
-**'** *colonne* **'**  
-Nom de la colonne dont la longueur doit être déterminée. *colonne* est une expression de type **nvarchar**.
+**'** *column* **'**  
+Nom de la colonne dont la longueur doit être déterminée. *column* est une expression de type **nvarchar**.
   
 ## <a name="return-type"></a>Type de retour
 **smallint**
@@ -62,8 +62,8 @@ Retourne la valeur NULL en cas d'erreur ou si un appelant n'est pas autorisé à
   
 Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], un utilisateur peut voir uniquement les métadonnées des éléments sécurisables qui lui appartiennent ou pour lesquels il dispose d'un droit d'accès. Cela signifie que les fonctions intégrées générant des métadonnées, telles que COL_LENGTH, peuvent retourner la valeur NULL si l'utilisateur ne dispose d'aucune autorisation sur l'objet. Pour plus d'informations, consultez [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).
   
-## <a name="remarks"></a>Notes  
-Pour les colonnes de type **varchar** déclaré avec le **max** spécificateur (**varchar (max)**), COL_LENGTH retourne la valeur – 1.
+## <a name="remarks"></a>Notes   
+Pour les colonnes de type **varchar**, déclarées avec le spécificateur **max** (**varchar(max)**), COL_LENGTH renvoie la valeur –1.
   
 ## <a name="examples"></a>Exemples  
 L'exemple suivant montre les valeurs renvoyées pour une colonne de type `varchar(40)` et pour une colonne de type `nvarchar(40)`.
@@ -88,8 +88,8 @@ VarChar     NVarChar
   
 ## <a name="see-also"></a>Voir aussi
 [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)  
-[Fonctions de métadonnées &#40; Transact-SQL &#41;](../../t-sql/functions/metadata-functions-transact-sql.md)  
-[COL_NAME &#40; Transact-SQL &#41;](../../t-sql/functions/col-name-transact-sql.md)  
+[Fonctions de métadonnées &#40;Transact-SQL&#41;](../../t-sql/functions/metadata-functions-transact-sql.md)  
+[COL_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/col-name-transact-sql.md)  
 [COLUMNPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/columnproperty-transact-sql.md)
   
   

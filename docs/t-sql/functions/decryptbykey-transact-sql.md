@@ -1,5 +1,5 @@
 ---
-title: DECRYPTBYKEY (Transact-SQL) | Documents Microsoft
+title: DECRYPTBYKEY (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -50,31 +50,31 @@ DecryptByKey ( { 'ciphertext' | @ciphertext }
 ```  
   
 ## <a name="arguments"></a>Arguments  
- *texte chiffré*  
- Données chiffrées avec la clé. *texte chiffré* est **varbinary**.  
+ *ciphertext*  
+ Données chiffrées avec la clé. *ciphertext* est de type **varbinary**.  
   
  **@ciphertext**  
- Est une variable de type **varbinary** qui contient les données qui ont été chiffrées avec la clé.  
+ Variable de type **varbinary** contenant des données qui ont été chiffrées avec la clé.  
   
  *add_authenticator*  
- Indique si un authentificateur a été chiffré en même temps que le texte en clair. Doit avoir la même valeur que celle passée à EncryptByKey lors du chiffrement des données. *add_authenticator* est **int**.  
+ Indique si un authentificateur a été chiffré en même temps que le texte en clair. Doit avoir la même valeur que celle passée à EncryptByKey lors du chiffrement des données. *add_authenticator* est de type **int**.  
   
- *authentificateur*  
- Données à partir desquelles produire un authentificateur. Doit correspondre à la valeur qui a été fournie à EncryptByKey. *l’authentificateur* est **sysname**.  
+ *authenticator*  
+ Données à partir desquelles produire un authentificateur. Doit correspondre à la valeur qui a été fournie à EncryptByKey. *authenticator* est de type **sysname**.  
   
  **@authenticator**  
  Variable contenant les données à partir desquelles l'authentificateur sera généré. Doit correspondre à la valeur qui a été fournie à EncryptByKey.  
   
 ## <a name="return-types"></a>Types de retour  
- **varbinary** avec une taille maximale de 8 000 octets.  
+ **varbinary** d’une taille maximale de 8 000 octets.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  DecryptByKey utilise une clé symétrique. Cette clé symétrique doit déjà être ouverte dans la base de données. Plusieurs clés peuvent être ouvertes en même temps. Vous n'avez pas besoin d'ouvrir la clé tout de suite avant de déchiffrer le texte chiffré.  
   
  Le chiffrement et le déchiffrement symétriques sont relativement rapides et adaptés à la manipulation de grandes quantités de données.  
   
-## <a name="permissions"></a>Permissions  
- Requiert l'ouverture de la clé symétrique dans la session en cours. Pour plus d’informations, consultez [OPEN SYMMETRIC KEY &#40; Transact-SQL &#41; ](../../t-sql/statements/open-symmetric-key-transact-sql.md).  
+## <a name="permissions"></a>Autorisations  
+ Requiert l'ouverture de la clé symétrique dans la session en cours. Pour plus d’informations, consultez [OPEN SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/open-symmetric-key-transact-sql.md).  
   
 ## <a name="examples"></a>Exemples  
   
@@ -119,8 +119,8 @@ GO
   
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- [ENCRYPTBYKEY &#40; Transact-SQL &#41;](../../t-sql/functions/encryptbykey-transact-sql.md)   
+## <a name="see-also"></a> Voir aussi  
+ [ENCRYPTBYKEY &#40;Transact-SQL&#41;](../../t-sql/functions/encryptbykey-transact-sql.md)   
  [CREATE SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-symmetric-key-transact-sql.md)   
  [ALTER SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-symmetric-key-transact-sql.md)   
  [DROP SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-symmetric-key-transact-sql.md)   

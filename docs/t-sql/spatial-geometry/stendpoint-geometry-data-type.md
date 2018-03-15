@@ -1,5 +1,5 @@
 ---
-title: "STEndpoint (Type de données geometry) | Documents Microsoft"
+title: "STEndpoint (type de données geometry) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stendpoint-geometry-data-type"></a>STEndpoint (type de données geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Retourne le point de terminaison d’un **geometry** instance.
+Retourne le point de terminaison d’une instance **geometry**.
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -44,16 +44,16 @@ Retourne le point de terminaison d’un **geometry** instance.
 ```  
   
 ## <a name="return-types"></a>Types de retour  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]type de retour : **geometry**  
+ Type de retour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] : **geometry**  
   
  Type de retour CLR : **SqlGeometry**  
   
- Type Open Geospatial Consortium (OGC) : **Point**  
+ Type OGC (Open Geospatial Consortium) : **Point**  
   
-## <a name="remarks"></a>Notes  
- `STEndPoint()`est l’équivalent de [STPointN](../../t-sql/spatial-geometry/stpointn-geometry-data-type.md) (x.NumPoints()).  
+## <a name="remarks"></a>Notes   
+ `STEndPoint()` équivaut à [STPointN](../../t-sql/spatial-geometry/stpointn-geometry-data-type.md) (x.NumPoints()).  
   
- Cette méthode retourne null si elle est appelée sur vide **geometry** instance.  
+ Cette méthode retourne une valeur Null si elle est appelée sur une instance **geometry** vide.  
   
 ## <a name="examples"></a>Exemples  
  L'exemple suivant crée une instance `LineString` avec `STGeomFromText()` et utilise `STEndpoint()` pour extraire le point de terminaison du `LineString`.  
@@ -64,7 +64,7 @@ SET @g = geometry::STGeomFromText('LINESTRING(0 0, 2 2, 1 0)', 0);
 SELECT @g.STEndPoint().ToString();  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Méthodes OGC sur des instances geography](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Autorisations de Principal de serveur REVOKE (Transact-SQL) | Documents Microsoft
+title: "REVOKE – Révoquer des autorisations de principal de serveur (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/10/2017
 ms.prod: sql-non-specified
@@ -33,7 +33,7 @@ ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="revoke-server-principal-permissions-transact-sql"></a>REVOKE – révocation d'autorisations de principal de serveur (Transact-SQL)
+# <a name="revoke-server-principal-permissions-transact-sql"></a>REVOKE – Révoquer des autorisations de principal de serveur (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Permet de révoquer des autorisations accordées et refusées sur une connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -61,16 +61,16 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] }
 ```  
   
 ## <a name="arguments"></a>Arguments  
- *autorisation*  
+ *permission*  
  Spécifie une autorisation qui peut être révoquée sur une connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour obtenir la liste des autorisations, consultez la section Notes plus loin dans cette rubrique.  
   
- CONNEXION **::** *SQL_Server_login*  
- Spécifie le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connexion sur lequel l’autorisation est révoquée. Le qualificateur d’étendue (**::**) est requis.  
+ LOGIN **::** *SQL_Server_login*  
+ Spécifie la connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur laquelle l’autorisation doit être révoquée. Le qualificateur d’étendue (**::**) est obligatoire.  
   
- RÔLE de serveur **::** *server_role*  
- Spécifie le rôle de serveur sur lequel l'autorisation est révoquée. Le qualificateur d’étendue (**::**) est requis.  
+ SERVER ROLE **::** *server_role*  
+ Spécifie le rôle de serveur sur lequel l'autorisation est révoquée. Le qualificateur d’étendue (**::**) est obligatoire.  
   
- {À PARTIR DE | À} \<principal_de_serveur > Spécifie le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connexion ou rôle serveur à partir de laquelle l’autorisation est révoquée.  
+ { FROM | TO } \<server_principal> spécifie le rôle serveur ou la connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur lequel l’autorisation est révoquée.  
   
  *SQL_Server_login*  
  Spécifie le nom d'une connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -99,10 +99,10 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] }
 > [!CAUTION]  
 >  Une révocation en cascade d'une autorisation accordée avec l'option WITH GRANT OPTION entraîne la révocation des deux options GRANT et DENY de cette autorisation.  
   
- En tant que *SQL_Server_login*  
+ AS *SQL_Server_login*  
  Spécifie la connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à partir de laquelle le principal qui exécute cette requête dérive son droit de révoquer l'autorisation.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Les comptes de connexion et les rôles de serveur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sont des éléments sécurisables au niveau du serveur. Les autorisations les plus spécifiques et limitées qu'il est possible de révoquer pour un rôle de serveur ou un compte de connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sont répertoriées dans le tableau ci-dessous, avec les autorisations plus générales qui les incluent de manière implicite.  
   
 |Compte de connexion SQL Server ou autorisation de rôle de serveur|Déduite d'une autorisation de rôle de serveur ou de compte de connexion SQL Server|Déduite d'une autorisation de serveur|  
@@ -112,7 +112,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] }
 |VIEW DEFINITION|CONTROL|VIEW ANY DEFINITION|  
 |ALTER|CONTROL|ALTER ANY LOGIN<br /><br /> ALTER ANY SERVER ROLE|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Pour les comptes de connexion, requiert l'autorisation CONTROL sur le compte de connexion ou l'autorisation ALTER ANY LOGIN sur le serveur.  
   
  Pour les rôles de serveur, requiert l'autorisation CONTROL sur le rôle de serveur ou l'autorisation ALTER ANY SERVER ROLE sur le serveur.  
@@ -120,7 +120,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] }
 ## <a name="examples"></a>Exemples  
   
 ### <a name="a-revoking-impersonate-permission-on-a-login"></a>A. Révocation d'une autorisation IMPERSONATE sur une connexion  
- L’exemple suivant révoque `IMPERSONATE` l’autorisation sur le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connexion `WanidaBenshoof` à partir d’un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connexion créée à partir de l’utilisateur Windows `AdvWorks\YoonM`.  
+ Dans l’exemple ci-dessous, l’autorisation `IMPERSONATE` sur la connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `WanidaBenshoof` est révoquée sur une connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] créée à partir du compte d’utilisateur Windows `AdvWorks\YoonM`.  
   
 ```  
 USE master;  
@@ -147,7 +147,7 @@ REVOKE VIEW DEFINITION ON SERVER ROLE::Sales TO Auditors ;
 GO   
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [sys.server_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)   
  [sys.server_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md)   
  [Autorisations du principal du serveur GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-server-principal-permissions-transact-sql.md)   

@@ -1,5 +1,5 @@
 ---
-title: Le travail de restauration (Transact-SQL) | Documents Microsoft
+title: ROLLBACK WORK (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -52,15 +52,15 @@ ROLLBACK [ WORK ]
 [ ; ]  
 ```  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Cette instruction fonctionne comme ROLLBACK TRANSACTION, sauf que ROLLBACK TRANSACTION accepte un nom de transaction défini par l'utilisateur. Avec ou sans le mot clé facultatif WORK, cette syntaxe ROLLBACK est compatible avec ISO.  
   
- Lors de l’imbrication de transactions, ROLLBACK WORK annule toujours l’instruction BEGIN TRANSACTION plus extérieure et décrémente le @@TRANCOUNT fonction système à 0.  
+ En cas d’imbrication de transactions, ROLLBACK WORK annule toujours les transactions jusqu’à l’instruction BEGIN TRANSACTION la plus extérieure et décrémente la fonction système @@TRANCOUNT à 0.  
   
 ## <a name="permissions"></a>Autorisations  
  Les autorisations ROLLBACK WORK reviennent par défaut à tout utilisateur valide.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [BEGIN DISTRIBUTED TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/begin-distributed-transaction-transact-sql.md)   
  [BEGIN TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/begin-transaction-transact-sql.md)   
  [COMMIT TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/commit-transaction-transact-sql.md)   

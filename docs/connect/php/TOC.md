@@ -54,6 +54,7 @@
 ### [Guide pratique pour spécifier des types de données SQL Server (pilote SQLSRV)](how-to-specify-sql-server-data-types-when-using-the-sqlsrv-driver.md)
 ### [Guide pratique pour spécifier des types de données PHP](how-to-specify-php-data-types.md)
 ### [Guide pratique pour envoyer et récupérer des données UTF-8 à l’aide de la prise en charge UTF-8 intégrée](how-to-send-and-retrieve-utf-8-data-using-built-in-utf-8-support.md)
+### [Guide pratique pour envoyer et récupérer des données ASCII dans Linux et macOS](how-to-send-and-retrieve-ascii-data-in-linux-mac.md)
 ## [Gestion des erreurs et des avertissements](handling-errors-and-warnings.md)
 ### [Guide pratique pour configurer la gestion des erreurs et des avertissements à l’aide du pilote SQLSRV](how-to-configure-error-and-warning-handling-using-the-sqlsrv-driver.md)
 ### [Guide pratique pour gérer les erreurs et les avertissements à l’aide du pilote SQLSRV](how-to-handle-errors-and-warnings-using-the-sqlsrv-driver.md)

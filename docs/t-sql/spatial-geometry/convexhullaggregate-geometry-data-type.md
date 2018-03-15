@@ -1,5 +1,5 @@
 ---
-title: "ConvexHullAggregate (Type de données geometry) | Documents Microsoft"
+title: "ConvexHullAggregate (type de données geometry) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -31,7 +31,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="convexhullaggregate-geometry-data-type"></a>ConvexHullAggregate (type de données geometry)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-Retourne une forme convexe pour un ensemble donné de **geometry** objets.
+Retourne une enveloppe convexe pour un ensemble donné d’objets **geometry**.
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -42,21 +42,21 @@ ConvexHullAggregate ( geometry_operand )
   
 ## <a name="arguments"></a>Arguments  
  *geometry_operand*  
- Est un **geometry** colonne de table de type qui représente un ensemble d’objets géométriques.  
+ Colonne de table de type **geometry** qui représente un ensemble d’objets geometry.  
   
 ## <a name="return-types"></a>Types de retour  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]type de retour : **geometry**  
+ Type de retour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] : **geometry**  
   
 ## <a name="exception"></a>Exception  
- Lève un `FormatException` en présence de valeurs d'entrée qui ne sont pas valides. Consultez [STIsValid &#40; Type de données geometry &#41;](../../t-sql/spatial-geometry/stisvalid-geometry-data-type.md)  
+ Lève un `FormatException` en présence de valeurs d'entrée qui ne sont pas valides. Consultez [STIsValid &#40;type de données geometry&#41;](../../t-sql/spatial-geometry/stisvalid-geometry-data-type.md)  
   
-## <a name="remarks"></a>Notes  
- Méthode renvoie **null** lorsque l’entrée est vide ou l’entrée a des SRID différents. Consultez [identificateurs de référence spatiale &#40; SRID &#41;](../../relational-databases/spatial/spatial-reference-identifiers-srids.md)  
+## <a name="remarks"></a>Notes   
+ La méthode retourne **null** quand l’entrée est vide ou que ses SRID sont différents. Consultez [Identificateurs de référence spatiale &#40;SRID&#41;](../../relational-databases/spatial/spatial-reference-identifiers-srids.md)  
   
- Méthode ignore **null** entrées.  
+ La méthode ignore les entrées **null**.  
   
 > [!NOTE]  
->  Méthode renvoie **null** si toutes les valeurs entrées sont **null**.  
+>  La méthode retourne **null** si toutes les valeurs entrées sont **null**.  
   
 ## <a name="examples"></a>Exemples  
  L'exemple suivant retourne une forme convexe du jeu d'objets géométriques dans une colonne de variable de table.  
@@ -75,7 +75,7 @@ ConvexHullAggregate ( geometry_operand )
  FROM @Geom;
  ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Méthodes geometry statiques étendues](../../t-sql/spatial-geometry/extended-static-geometry-methods.md)  
   
   

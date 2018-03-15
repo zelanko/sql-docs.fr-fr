@@ -1,5 +1,5 @@
 ---
-title: ISNUMERIC (Transact-SQL) | Documents Microsoft
+title: ISNUMERIC (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/13/2017
 ms.prod: sql-non-specified
@@ -51,24 +51,24 @@ ISNUMERIC ( expression )
   
 ## <a name="arguments"></a>Arguments  
  *expression*  
- Est la [expression](../../t-sql/language-elements/expressions-transact-sql.md) à évaluer.  
+ [Expression](../../t-sql/language-elements/expressions-transact-sql.md) à évaluer.  
   
 ## <a name="return-types"></a>Types de retour  
- **int**  
+ **Int**  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  ISNUMERIC retourne 1 lorsque l'expression entrée correspond à un type de données numérique valide ; dans le cas contraire, ISNUMERIC retourne 0. Les types de données numériques valides sont les suivants :  
   
 |||  
 |-|-|  
-|**int**|**numeric**|  
+|**Int**|**numeric**|  
 |**bigint**|**money**|  
 |**smallint**|**smallmoney**|  
 |**tinyint**|**float**|  
 |**decimal**|**real**|  
   
 > [!NOTE]  
->  ISNUMERIC retourne 1 pour certains caractères qui ne sont pas des nombres, tels que les signes plus (+) et moins (-), et les symboles monétaires valides tels que le symbole dollar ($). Pour obtenir une liste complète des symboles monétaires, consultez [money et smallmoney &#40; Transact-SQL &#41; ](../../t-sql/data-types/money-and-smallmoney-transact-sql.md).  
+>  ISNUMERIC retourne 1 pour certains caractères qui ne sont pas des nombres, tels que les signes plus (+) et moins (-), et les symboles monétaires valides tels que le symbole dollar ($). Pour obtenir la liste complète des symboles monétaires, consultez [money et smallmoney &#40;Transact-SQL&#41;](../../t-sql/data-types/money-and-smallmoney-transact-sql.md).  
   
 ## <a name="examples"></a>Exemples  
  L'exemple suivant utilise `ISNUMERIC` pour retourner tous les codes postaux qui ne sont pas des valeurs numériques.  
@@ -82,7 +82,7 @@ WHERE ISNUMERIC(PostalCode)<> 1;
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemples : [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] et[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemples : [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] et [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  L'exemple suivant utilise `ISNUMERIC` pour retourner tous les codes postaux qui ne sont pas des valeurs numériques.  
   
 ```  
@@ -93,8 +93,8 @@ FROM sys.databases;
 GO  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- [Expressions &#40; Transact-SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
+## <a name="see-also"></a> Voir aussi  
+ [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
  [Fonctions système &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)   
  [Types de données &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)  
   

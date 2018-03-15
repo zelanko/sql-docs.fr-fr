@@ -1,5 +1,5 @@
 ---
-title: "CRÉER un SYNONYME (Transact-SQL) | Documents Microsoft"
+title: CREATE SYNONYM (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 04/11/2017
 ms.prod: sql-non-specified
@@ -70,28 +70,28 @@ CREATE SYNONYM [ schema_name_1. ] synonym_name FOR < object >
   
 ## <a name="arguments"></a>Arguments  
  *schema_name_1*  
- Spécifie le schéma dans lequel est créé le synonyme. Si *schéma* n’est pas spécifié, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilise le schéma par défaut de l’utilisateur actuel.  
+ Spécifie le schéma dans lequel est créé le synonyme. Si la valeur *schema* n’est pas spécifiée, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilise le schéma par défaut de l’utilisateur actuel.  
   
  *synonym_name*  
  Nom du nouveau synonyme.  
   
- *nom_serveur*  
- **S'applique à**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ *server_name*  
+ **S'applique à**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Nom du serveur contenant l'objet de base.  
   
  *database_name*  
- Nom de la base de données contenant l'objet de base. Si *nom_base_de_données* n’est pas spécifié, le nom de la base de données en cours est utilisé.  
+ Nom de la base de données contenant l'objet de base. Si la valeur *database_name* n’est pas spécifiée, le nom de la base de données active est utilisé.  
   
  *schema_name_2*  
- Nom du schéma pour l'objet de base. Si *nom_schéma* n’est pas spécifié le schéma par défaut de l’utilisateur actuel est utilisé.  
+ Nom du schéma pour l'objet de base. Si la valeur *schema_name* n’est pas spécifiée, le schéma par défaut de l’utilisateur actuel est utilisé.  
   
  *object_name*  
  Nom de l'objet de base auquel fait référence le synonyme.  
   
  Microsoft Azure SQL Database prend en charge le format de nom en trois parties nom_bd.[nom_schéma].nom_objet lorsque nom_bd est la base de données active, ou lorsque nom_bd est la base de données tempdb et nom_objet commence par #.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  L'objet de base ne doit pas exister lors de la création du synonyme. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vérifie l'existence de l'objet de base au cours de l'exécution.  
   
  Vous pouvez créer des synonymes pour les types d'objets suivants :  
@@ -99,19 +99,19 @@ CREATE SYNONYM [ schema_name_1. ] synonym_name FOR < object >
 |||  
 |-|-|  
 |Procédure stockée d’assembly (CLR)|Fonction table d’assembly (CLR)|  
-|Fonction scalaire d’assembly (CLR)|Fonctions d’agrégation d’assembly d’agrégation (CLR)|  
+|Fonction scalaire d’assembly (CLR)|Fonctions d’agrégation d’assembly (CLR)|  
 |Procédure de réplication et de filtrage|Procédure stockée étendue|  
-|Fonction scalaire SQL|Fonction Table SQL|  
-|Fonction table de table Inline SQL|Procédure stockée SQL|  
-|Affichage|Table<sup>1</sup> (défini par l’utilisateur)|  
+|Fonction scalaire SQL|Fonction table SQL|  
+|Fonction table inline SQL|Procédure stockée SQL|  
+|View|Table<sup>1</sup> (définie par l’utilisateur)|  
   
- <sup>1 comprend des tables temporaires locales et globales</sup>  
+ <sup>1 Inclut les tables temporaires locales et globales</sup>  
   
  Les noms en quatre parties des objets de base de fonction ne sont pas pris en charge.  
   
  Vous pouvez créer, supprimer et référencer des synonymes dans des instructions SQL dynamiques.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Pour créer un synonyme dans un schéma donné, un utilisateur doit disposer de l'autorisation CREATE SYNONYM, et il doit posséder le schéma ou bénéficier de l'autorisation ALTER SCHEMA.  
   
  L'autorisation CREATE SYNONYM est octroyable.  
@@ -154,7 +154,7 @@ GO
 ### <a name="b-creating-a-synonym-to-remote-object"></a>B. Création d'un synonyme pour un objet distant  
  Dans l'exemple suivant, l'objet de base `Contact` se trouve sur un serveur distant appelé `Server_Remote`.  
   
-**S'applique à**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+**S'applique à**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
 ```  
 EXEC sp_addlinkedserver Server_Remote;  
@@ -199,8 +199,8 @@ SET @Amt = 15;
 SELECT @Amt AS OriginalOrder, dbo.CorrectOrder(@Amt) AS ModifiedOrder;  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- [DROP SYNONYM &#40; Transact-SQL &#41;](../../t-sql/statements/drop-synonym-transact-sql.md)   
+## <a name="see-also"></a> Voir aussi  
+ [DROP SYNONYM &#40;Transact-SQL&#41;](../../t-sql/statements/drop-synonym-transact-sql.md)   
  [GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
   

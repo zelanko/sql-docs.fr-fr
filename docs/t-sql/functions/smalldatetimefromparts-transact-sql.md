@@ -1,5 +1,5 @@
 ---
-title: SMALLDATETIMEFROMPARTS (Transact-SQL) | Documents Microsoft
+title: SMALLDATETIMEFROMPARTS (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="smalldatetimefromparts-transact-sql"></a>SMALLDATETIMEFROMPARTS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
-  Retourne un **smalldatetime** valeur pour la date et heure spécifiées.  
+  Renvoie une valeur **smalldatetime** pour la date et l’heure spécifiées.  
   
  ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -45,16 +45,16 @@ SMALLDATETIMEFROMPARTS ( year, month, day, hour, minute )
 ```  
   
 ## <a name="arguments"></a>Arguments  
- *année*  
+ *year*  
  Expression entière spécifiant une année.  
   
- *mois*  
+ *month*  
  Expression entière spécifiant un mois.  
   
- *jour*  
+ *day*  
  Expression entière spécifiant un jour.  
   
- *heure*  
+ *hour*  
  Expression entière spécifiant des heures.  
   
  *minute*  
@@ -63,10 +63,10 @@ SMALLDATETIMEFROMPARTS ( year, month, day, hour, minute )
 ## <a name="return-types"></a>Types de retour  
  **smalldatetime**  
   
-## <a name="remarks"></a>Notes  
- Cette fonction agit comme un constructeur pour complètement initialisée **smalldatetime** valeur. Si les arguments ne sont pas valides, une erreur est générée. Si les arguments obligatoires sont NULL, la valeur NULL est retournée.  
+## <a name="remarks"></a>Notes   
+ Cette fonction agit comme un constructeur pour une valeur **smalldatetime** complètement initialisée. Si les arguments ne sont pas valides, une erreur est générée. Si les arguments obligatoires sont NULL, la valeur NULL est retournée.  
   
- Cette fonction peut être exécutée à distance sur des serveurs [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] et versions ultérieures. Il n’est pas exécutée à distance sur les serveurs disposant d’une version antérieure [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ Cette fonction peut être exécutée à distance sur des serveurs [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] et versions ultérieures. Elle ne peut pas être exécutée à distance sur des serveurs dont la version est antérieure à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
 ## <a name="examples"></a>Exemples  
   

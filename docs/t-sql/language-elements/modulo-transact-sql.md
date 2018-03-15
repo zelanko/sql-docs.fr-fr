@@ -1,5 +1,5 @@
 ---
-title: '% (Modulo) (Transact-SQL) | Documents Microsoft'
+title: '% (Reste) (Transact-SQL) | Microsoft Docs'
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
@@ -38,7 +38,7 @@ ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="-modulus-transact-sql"></a>% (Modulus) (Transact-SQL)
+# <a name="-modulus-transact-sql"></a>% (Reste) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Renvoie le reste d'un nombre divisé par un autre.  
@@ -53,21 +53,21 @@ dividend % divisor
   
 ## <a name="arguments"></a>Arguments  
  *dividend*  
- Expression numérique à diviser. *dividende* doit être un [expression](../../t-sql/language-elements/expressions-transact-sql.md) de l’un des types de données dans les catégories de types de données monétaires, entier ou **numérique** type de données.  
+ Expression numérique à diviser. *dividend* doit être une [expression](../../t-sql/language-elements/expressions-transact-sql.md) valide de l’un des types de données des catégories entier et monétaire, ou bien du type de données **numeric**.  
   
  *divisor*  
- Est l’expression numérique par laquelle diviser le dividende. *diviseur* doit être toute expression valide de l’un des types de données dans les catégories de types de données monétaires, entier ou **numérique** type de données.  
+ Expression numérique par laquelle diviser le dividende. *divisor* doit être une expression valide de l’un des types de données des catégories entier et monétaire, ou bien du type de données **numeric**.  
   
 ## <a name="result-types"></a>Types des résultats  
  Déterminés par les types de données des deux arguments.  
   
-## <a name="remarks"></a>Notes  
- Vous pouvez utiliser l’opérateur arithmétique modulo dans la liste de sélection de l’instruction SELECT avec n’importe quelle combinaison de noms de colonnes, de constantes numériques ou toute expression valide de l’entier et les données monétaires type catégories ou **numérique** type de données.  
+## <a name="remarks"></a>Notes   
+ Vous pouvez utiliser l’opérateur arithmétique modulo dans la liste de sélection de l’instruction SELECT, avec toute combinaison de noms de colonnes, de constantes numériques ou toute expression valide de l’un des types de données des catégories entier et monétaire, ou bien du type **numeric**.  
   
 ## <a name="examples"></a>Exemples  
   
 ### <a name="a-simple-example"></a>A. Exemple simple  
- L'exemple suivant divise le nombre 38 par 5. Ce résultat est la partie entière du résultat de 7 et montre comment modulo retourne le reste de 3.  
+ L'exemple suivant divise le nombre 38 par 5. Cette opération produit le nombre 7 comme partie entière du résultat, et montre comment le modulo retourne le reste 3.  
   
 ```  
 SELECT 38 / 5 AS Integer, 38 % 5 AS Remainder ;  
@@ -86,10 +86,10 @@ FROM Sales.SalesOrderDetail;
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemples : [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] et[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemples : [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] et [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="c-simple-example"></a>C: exemple simple  
- L’exemple suivant montre les résultats de la `%` opérateur de division de 3 par 2.  
+### <a name="c-simple-example"></a>C. Exemple simple  
+ L’exemple suivant montre les résultats de l’opérateur `%` lors d’une division de 3 par 2.  
   
 ```  
 -- Uses AdventureWorks  
@@ -104,13 +104,13 @@ SELECT TOP(1) 3%2 FROM dimEmployee;
 1         
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Fonctions intégrées &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)   
  [LIKE &#40;Transact-SQL&#41;](../../t-sql/language-elements/like-transact-sql.md)   
- [Operators &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
+ [Opérateurs &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
- [%= &#40;Modulus Assignment&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/modulo-equals-transact-sql.md)   
- [Compound, opérateurs &#40; Transact-SQL &#41;](../../t-sql/language-elements/compound-operators-transact-sql.md)  
+ [%= &#40;Affectation du reste&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/modulo-equals-transact-sql.md)   
+ [Opérateurs composés &#40;Transact-SQL&#41;](../../t-sql/language-elements/compound-operators-transact-sql.md)  
   
   
 

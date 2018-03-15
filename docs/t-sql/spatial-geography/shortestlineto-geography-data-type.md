@@ -1,5 +1,5 @@
 ---
-title: "ShortestLineTo (Type de données geography) | Documents Microsoft"
+title: "ShortestLineTo (type de données geography) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="shortestlineto-geography-data-type"></a>ShortestLineTo (type de données geography)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-  Retourne un **LineString** instance avec deux points qui représentent la distance la plus courte entre les deux **geography** instances. La longueur de la **LineString** instance retournée est la distance entre les deux **geography** instances.  
+  Retourne une instance **LineString** avec deux points qui représentent la distance la plus courte entre les deux instances **geography**. La longueur de l’instance **LineString** retournée correspond à la distance entre les deux instances **geography**.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -45,15 +45,15 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="arguments"></a>Arguments  
  *geography_other*  
- Spécifie le deuxième **geography** de l’instance qui l’appelle **geography** instance essaie de déterminer la distance la plus courte.  
+ Spécifie la deuxième instance **geography** dont l’instance **geography** appelante tente de déterminer la distance la plus courte.  
   
 ## <a name="return-types"></a>Types de retour  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]type de retour : **geography**  
+ Type de retour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] : **geography**  
   
  Type de retour CLR : **SqlGeography**  
   
-## <a name="remarks"></a>Notes  
- La méthode retourne un **LineString** instance avec les points de terminaison sur les bordures des deux planifications **geography** instances comparées. La longueur de la **LineString** retournée est égale à la distance la plus courte entre les deux **geography** instances. Vide **LineString** instance est retournée lorsque les deux **geography** instances croisent.  
+## <a name="remarks"></a>Notes   
+ La méthode retourne une instance **LineString** avec des points de terminaison situés sur les bordures des deux instances **geography** sans intersection qui sont comparées. La longueur du **LineString** retourné est égale à la distance la plus courte entre les deux instances **geography**. Une instance **LineString** vide est retournée quand les deux instances **geography** se croisent.  
   
 ## <a name="examples"></a>Exemples  
   
@@ -75,7 +75,7 @@ ms.lasthandoff: 01/25/2018
  SELECT @g1.ShortestLineTo(@g2).ToString();
 ``` 
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Méthodes étendues sur des instances geography](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)  
   
   

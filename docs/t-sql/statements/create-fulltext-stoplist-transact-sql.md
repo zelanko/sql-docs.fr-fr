@@ -1,5 +1,5 @@
 ---
-title: "CRÉER la liste de mots vides de texte intégral (Transact-SQL) | Documents Microsoft"
+title: CREATE FULLTEXT STOPLIST (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
@@ -44,10 +44,10 @@ ms.lasthandoff: 11/21/2017
 
   Crée une nouvelle liste de mots vides de texte intégral dans la base de données actuelle.  
   
- Les mots vides sont gérés dans les bases de données à l’aide d’objets appelés *listes de mots vides*. Une liste de mots vides est une liste qui, associée à un index de texte intégral, s'applique aux requêtes de texte intégral sur cet index. Pour plus d’informations, consultez [Configurer et gérer les mots vides et listes de mots vides pour la recherche en texte intégral](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md).  
+ Les mots vides sont gérés dans des bases de données à l’aide d’objets appelés des *liste de mots vides*. Une liste de mots vides est une liste qui, associée à un index de texte intégral, s'applique aux requêtes de texte intégral sur cet index. Pour plus d’informations, consultez [Configurer et gérer les mots vides et listes de mots vides pour la recherche en texte intégral](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md).  
   
 > [!IMPORTANT]  
->  CREATE FULLTEXT STOPLIST, ALTER FULLTEXT STOPLIST, and DROP FULLTEXT STOPLIST sont uniquement pris en charge avec le niveau de compatibilité 100. Elles ne le sont pas avec un niveau de compatibilité égal à 80 ou 90. Toutefois, quel que soit le niveau de compatibilité, la liste de mots vides système est automatiquement associée aux nouveaux index de recherche en texte intégral.  
+>  CREATE FULLTEXT STOPLIST, ALTER FULLTEXT STOPLIST et DROP FULLTEXT STOPLIST sont uniquement pris en charge avec le niveau de compatibilité 100. Elles ne le sont pas avec un niveau de compatibilité égal à 80 ou 90. Toutefois, quel que soit le niveau de compatibilité, la liste de mots vides système est automatiquement associée aux nouveaux index de recherche en texte intégral.  
   
  ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -63,26 +63,26 @@ CREATE FULLTEXT STOPLIST stoplist_name
   
 ## <a name="arguments"></a>Arguments  
  *stoplist_name*  
- Nom de la liste de mots vides. *stoplist_name* peut comporter un maximum de 128 caractères. *stoplist_name* doit être unique parmi toutes les listes de mots vides dans la base de données actuelle et sont conformes aux règles des identificateurs.  
+ Nom de la liste de mots vides. *stoplist_name* peut avoir un maximum de 128 caractères. *stoplist_name* doit être unique parmi toutes les listes de mots vides de la base de données active et doit respecter les règles applicables aux identificateurs.  
   
- *stoplist_name* sera utilisé lors de la création de l’index de recherche en texte intégral.  
+ *stoplist_name* est utilisé une fois que l’index de recherche en texte intégral est créé.  
   
  *database_name*  
- Nom de la base de données dans laquelle la liste de mots vides spécifiée par *source_stoplist_name* se trouve. Si non spécifié, *nom_base_de_données* par défaut, la base de données actuelle.  
+ Nom de la base de données dans laquelle se trouve la liste de mots vides spécifiée par *source_stoplist_name*. Si aucun nom n’est spécifié, *database_name* est par défaut le nom de la base de données active.  
   
  *source_stoplist_name*  
- Spécifie que la nouvelle liste de mots vides est créée en copiant une liste de mots vides existante. Si *source_stoplist_name* n’existe pas, ou l’utilisateur de base de données n’a pas les autorisations appropriées, CREATE FULLTEXT STOPLIST échoue avec une erreur. Si des langues spécifiées dans les mots vides de la liste de mots vides source ne sont pas inscrits dans la base de données actuelle, l'exécution de CREATE FULLTEXT STOPLIST réussit, mais des avertissements sont retournés et les mots vides correspondants ne sont pas ajoutés.  
+ Spécifie que la nouvelle liste de mots vides est créée en copiant une liste de mots vides existante. Si *source_stoplist_name* n’existe pas ou si l’utilisateur de la base de données ne dispose pas des autorisations appropriées, CREATE FULLTEXT STOPLIST échoue avec une erreur. Si des langues spécifiées dans les mots vides de la liste de mots vides source ne sont pas inscrits dans la base de données actuelle, l'exécution de CREATE FULLTEXT STOPLIST réussit, mais des avertissements sont retournés et les mots vides correspondants ne sont pas ajoutés.  
   
  SYSTEM STOPLIST  
- Spécifie que la nouvelle liste de mots vides est créée à partir de la liste de mots vides qui existe par défaut dans le [base de données Resource](../../relational-databases/databases/resource-database.md).  
+ Spécifie que la nouvelle liste de mots vides est créée à partir de la liste de mots vides qui existe par défaut dans la [base de données Resource](../../relational-databases/databases/resource-database.md).  
   
- AUTORISATION *owner_name*  
- Spécifie le nom d'un principal de base de données comme propriétaire de la liste de mots vides. *owner_name* doit être le nom d’un principal dont l’utilisateur actuel est membre, ou l’utilisateur actuel doit avoir l’autorisation IMPERSONATE *owner_name*. En l'absence de spécification, la propriété revient à l'utilisateur actuel.  
+ AUTHORIZATION *owner_name*  
+ Spécifie le nom d'un principal de base de données comme propriétaire de la liste de mots vides. *owner_name* doit être le nom d’un principal dont l’utilisateur actuel est membre ou l’utilisateur actuel doit avoir l’autorisation IMPERSONATE sur *owner_name*. En l'absence de spécification, la propriété revient à l'utilisateur actuel.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Le créateur d'une liste de mots vides est son propriétaire.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  La création d'une liste de mots vides requiert les autorisations CREATE FULLTEXT CATALOG. Le propriétaire d'une liste de mots vides peut accorder explicitement l'autorisation CONTROL sur une liste de mots vides pour autoriser les utilisateurs à ajouter et supprimer des mots et à supprimer la liste de mots vides.  
   
 > [!NOTE]  
@@ -114,12 +114,12 @@ CREATE FULLTEXT STOPLIST myStoplist3 FROM SYSTEM STOPLIST;
 GO  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- [ALTER FULLTEXT STOPLIST &#40; Transact-SQL &#41;](../../t-sql/statements/alter-fulltext-stoplist-transact-sql.md)   
- [DROP FULLTEXT STOPLIST &#40; Transact-SQL &#41;](../../t-sql/statements/drop-fulltext-stoplist-transact-sql.md)   
- [Configurer et gérer des mots vides et listes de mots vides pour la recherche en texte intégral](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)   
- [Sys.fulltext_stoplists &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-fulltext-stoplists-transact-sql.md)   
- [Sys.fulltext_stopwords &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-fulltext-stopwords-transact-sql.md)   
+## <a name="see-also"></a> Voir aussi  
+ [ALTER FULLTEXT STOPLIST &#40;Transact-SQL&#41;](../../t-sql/statements/alter-fulltext-stoplist-transact-sql.md)   
+ [DROP FULLTEXT STOPLIST &#40;Transact-SQL&#41;](../../t-sql/statements/drop-fulltext-stoplist-transact-sql.md)   
+ [Configurer et gérer les mots vides et listes de mots vides pour la recherche en texte intégral](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)   
+ [sys.fulltext_stoplists &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-stoplists-transact-sql.md)   
+ [sys.fulltext_stopwords &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-stopwords-transact-sql.md)   
  [Configurer et gérer les mots vides et listes de mots vides pour la recherche en texte intégral](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)  
   
   

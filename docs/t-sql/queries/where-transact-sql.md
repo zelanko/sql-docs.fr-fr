@@ -49,7 +49,7 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="arguments"></a>Arguments  
-\<*search_condition* > définit la condition à remplir pour les lignes à retourner. Le nombre de prédicats inclus dans une condition de recherche est illimité. Pour plus d’informations sur les conditions de recherche et les prédicats, consultez [Condition de recherche &#40; Transact-SQL &#41; ](../../t-sql/queries/search-condition-transact-sql.md).  
+\< *search_condition* > définit les conditions que doivent remplir les lignes retourner. Le nombre de prédicats inclus dans une condition de recherche est illimité. Pour plus d’informations sur les prédicats et conditions de recherche, consultez [Condition de recherche &#40;Transact-SQL&#41;](../../t-sql/queries/search-condition-transact-sql.md).  
   
 ## <a name="examples"></a>Exemples  
  Les exemples suivants montrent comment utiliser certaines conditions de recherche usuelles dans la clause `WHERE`.  
@@ -64,7 +64,7 @@ FROM DimEmployee
 WHERE LastName = 'Smith' ;  
 ```  
   
-### <a name="b-finding-rows-that-contain-a-value-as-part-of-a-string"></a>B. Recherche de lignes qui contiennent une valeur faisant partie d’une chaîne  
+### <a name="b-finding-rows-that-contain-a-value-as-part-of-a-string"></a>B. Recherche de lignes qui contiennent une valeur incluse dans une chaîne  
   
 ```  
 -- Uses AdventureWorks  
@@ -124,10 +124,10 @@ FROM DimEmployee
 WHERE EmployeeKey Between 100 AND 200;  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)   
- [Predicates &#40;Transact-SQL&#41;](~/t-sql/queries/predicates.md)   
- [Condition de recherche &#40; Transact-SQL &#41;](../../t-sql/queries/search-condition-transact-sql.md)   
+ [Prédicats &#40;Transact-SQL&#41;](~/t-sql/queries/predicates.md)   
+ [Condition de recherche &#40;Transact-SQL&#41;](../../t-sql/queries/search-condition-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [UPDATE &#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md)   
  [MERGE &#40;Transact-SQL&#41;](../../t-sql/statements/merge-transact-sql.md)  

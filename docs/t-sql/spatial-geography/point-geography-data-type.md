@@ -1,5 +1,5 @@
 ---
-title: "Point (Type de données geography) | Documents Microsoft"
+title: "Point (type de données geography) | Microsoft Docs"
 ms.custom: 
 ms.date: 07/30/2017
 ms.prod: sql-non-specified
@@ -35,7 +35,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="point-geography-data-type"></a>Point (type de données geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Construit un **geography** instance représentant un **Point** instance à partir d’une référence spatiale (SRID) ID et de ses valeurs de latitude et longitude.
+Construit une instance **geography** qui représente une instance **Point** à partir de ses valeurs de latitude et de longitude, et d’un SRID (ID de référence spatiale).
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -45,17 +45,17 @@ Point ( Lat, Long, SRID )
 ```  
   
 ## <a name="arguments"></a>Arguments  
- *Table d’adresses locales*  
- Est un **float** expression qui représente la coordonnée x de la **Point** en cours de génération.  
+ *Lat*  
+ Expression **float** qui représente la coordonnée x du **Point** généré.  
   
  *Long*  
- Est un **float** expression qui représente la coordonnée y de la **Point** en cours de génération. Pour plus d’informations sur les valeurs de longitude et de latitude valide, consultez [Point](../../relational-databases/spatial/point.md).  
+ Expression **float** qui représente la coordonnée y du **Point** généré. Pour plus d’informations sur les valeurs de latitude et de longitude valides, consultez [Point](../../relational-databases/spatial/point.md).  
   
  *SRID*  
- Est un **int** expression qui représente le SRID de le **geography** instance à retourner.  
+ Expression **int** qui représente le SRID de l’instance **geography** à retourner.  
   
 ## <a name="return-types"></a>Types de retour  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]type de retour : **geography**  
+ Type de retour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] : **geography**  
   
  Type de retour CLR : **SqlGeography**  
   
@@ -71,7 +71,7 @@ SET @g = geography::Point(47.65100, -122.34900, 4326)
 SELECT @g.ToString();  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Méthodes geography statiques étendues](../../t-sql/spatial-geography/extended-static-geography-methods.md)  
   
   

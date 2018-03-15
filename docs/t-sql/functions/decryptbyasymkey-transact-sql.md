@@ -1,5 +1,5 @@
 ---
-title: DECRYPTBYASYMKEY (Transact-SQL) | Documents Microsoft
+title: DECRYPTBYASYMKEY (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -50,28 +50,28 @@ DecryptByAsymKey (Asym_Key_ID , { 'ciphertext' | @ciphertext }
   
 ## <a name="arguments"></a>Arguments  
  *Asym_Key_ID*  
- ID d'une clé asymétrique dans la base de données. *Asym_Key_ID* est **int**.  
+ ID d'une clé asymétrique dans la base de données. *Asym_Key_ID* est de type **int**.  
   
- *texte chiffré*  
+ *ciphertext*  
  Chaîne de données chiffrée avec la clé asymétrique.  
   
  @ciphertext  
- Est une variable de type **varbinary** qui contient les données qui ont été chiffrées avec la clé asymétrique.  
+ Variable de type **varbinary** contenant des données qui ont été chiffrées avec la clé asymétrique.  
   
  *Asym_Key_Password*  
  Mot de passe utilisé pour chiffrer la clé asymétrique dans la base de données.  
   
 ## <a name="return-types"></a>Types de retour  
- **varbinary** avec une taille maximale de 8 000 octets.  
+ **varbinary** d’une taille maximale de 8 000 octets.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Le chiffrement et le déchiffrement avec une clé asymétrique sont coûteux par rapport au chiffrement et au déchiffrement avec une clé symétrique. Il n'est pas recommandé d'utiliser une clé asymétrique avec des ensembles de données volumineux par exemple, avec des données utilisateur issues de tables.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l'autorisation CONTROL sur la clé asymétrique.  
   
 ## <a name="examples"></a>Exemples  
- Le code exemple suivant déchiffre le texte chiffré avec la clé asymétrique `JanainaAsymKey02`, stockée dans `AdventureWorks2012.ProtectedData04`. Les données renvoyées sont déchiffrées à l'aide de la clé asymétrique `JanainaAsymKey02`, qui a été déchiffrée avec le mot de passe `pGFD4bb925DGvbd2439587y`. Le texte en clair est converti en type **nvarchar**.  
+ Le code exemple suivant déchiffre le texte chiffré avec la clé asymétrique `JanainaAsymKey02`, stockée dans `AdventureWorks2012.ProtectedData04`. Les données renvoyées sont déchiffrées à l'aide de la clé asymétrique `JanainaAsymKey02`, qui a été déchiffrée avec le mot de passe `pGFD4bb925DGvbd2439587y`. Le texte brut est converti en type **nvarchar**.  
   
 ```  
 SELECT CONVERT(nvarchar(max),  
@@ -83,8 +83,8 @@ WHERE Description = N'encrypted by asym key''JanainaAsymKey02''';
 GO  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- [ENCRYPTBYASYMKEY &#40; Transact-SQL &#41;](../../t-sql/functions/encryptbyasymkey-transact-sql.md)   
+## <a name="see-also"></a> Voir aussi  
+ [ENCRYPTBYASYMKEY &#40;Transact-SQL&#41;](../../t-sql/functions/encryptbyasymkey-transact-sql.md)   
  [CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-asymmetric-key-transact-sql.md)   
  [ALTER ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-asymmetric-key-transact-sql.md)   
  [DROP ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-asymmetric-key-transact-sql.md)   

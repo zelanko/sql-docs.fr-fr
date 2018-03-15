@@ -1,5 +1,5 @@
 ---
-title: Supprimez le fournisseur de services de chiffrement (Transact-SQL) | Documents Microsoft
+title: DROP CRYPTOGRAPHIC PROVIDER (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -46,17 +46,17 @@ DROP CRYPTOGRAPHIC PROVIDER provider_name
 ```  
   
 ## <a name="arguments"></a>Arguments  
- *Nom_Fournisseur*  
+ *provider_name*  
  Nom du fournisseur EKM (Extensible Key Management)  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Pour supprimer un fournisseur EKM (Extensible Key Management), toutes les sessions qui utilisent le fournisseur doivent être arrêtées.  
   
  Un fournisseur EKM ne peut être supprimé que si aucune information d'identification ne lui correspond.  
   
  Si des clés sont mappées à un fournisseur EKM lorsque celui-ci est supprimé, les GUID des clés restent stockées dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si un fournisseur est créé ultérieurement avec les mêmes GUID de clé, les clés sont réutilisées.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Requiert l'autorisation CONTROL sur la clé symétrique.  
   
 ## <a name="examples"></a>Exemples  
@@ -73,7 +73,7 @@ DROP CRYPTOGRAPHIC PROVIDER SecurityProvider;
 GO  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Gestion de clés extensible &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md)   
  [CREATE CRYPTOGRAPHIC PROVIDER &#40;Transact-SQL&#41;](../../t-sql/statements/create-cryptographic-provider-transact-sql.md)   
  [ALTER CRYPTOGRAPHIC PROVIDER &#40;Transact-SQL&#41;](../../t-sql/statements/alter-cryptographic-provider-transact-sql.md)   

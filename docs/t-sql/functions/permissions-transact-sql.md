@@ -1,5 +1,5 @@
 ---
-title: AUTORISATIONS (Transact-SQL) | Documents Microsoft
+title: PERMISSIONS (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -43,7 +43,7 @@ ms.lasthandoff: 11/21/2017
 
   Retourne une valeur contenant un fichier bitmap qui indique les autorisations d'instruction, d'objet ou de colonne de l'utilisateur actuel.  
   
- **Important** [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] utilisez [fn_my_permissions](../../relational-databases/system-functions/sys-fn-my-permissions-transact-sql.md) et [Has_Perms_By_Name](../../t-sql/functions/has-perms-by-name-transact-sql.md) à la place. L'utilisation continue de la fonction PERMISSIONS peut entraîner une baisse des performances.  
+ **Important** [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Utilisez plutôt [fn_my_permissions](../../relational-databases/system-functions/sys-fn-my-permissions-transact-sql.md) et [Has_Perms_By_Name](../../t-sql/functions/has-perms-by-name-transact-sql.md). L'utilisation continue de la fonction PERMISSIONS peut entraîner une baisse des performances.  
   
  ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -55,23 +55,23 @@ PERMISSIONS ( [ objectid [ , 'column' ] ] )
 ```  
   
 ## <a name="arguments"></a>Arguments  
- *ObjectID*  
- Identificateur d'un élément sécurisable. Si *objectid* est ne pas spécifié, la valeur de l’image bitmap contient les autorisations d’instruction pour l’utilisateur actuel ; sinon, l’image bitmap contient les autorisations sur l’élément sécurisable pour l’utilisateur actuel. L'élément sécurisable spécifié doit se trouver dans la base de données active. Utilisez le [OBJECT_ID](../../t-sql/functions/object-id-transact-sql.md) afin de déterminer la *objectid* valeur.  
+ *objectid*  
+ Identificateur d'un élément sécurisable. Si l’argument *objectid* n’est pas spécifié, la valeur de fichier bitmap contient les autorisations d’instruction de l’utilisateur actuel ; dans le cas contraire, la bitmap contient les autorisations sur l’élément sécurisable pour l’utilisateur actuel. L'élément sécurisable spécifié doit se trouver dans la base de données active. Utilisez la fonction [OBJECT_ID](../../t-sql/functions/object-id-transact-sql.md) pour déterminer la valeur *objectid*.  
   
- **'** *colonne* **'**  
+ **'** *column* **'**  
  Nom facultatif de la colonne dont les informations sur les autorisations sont renvoyées. La colonne doit être un nom de colonne valide dans la table spécifiée par *objectid*.  
   
 ## <a name="return-types"></a>Types de retour  
- **int**  
+ **Int**  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  La fonction PERMISSIONS peut servir à déterminer si l'utilisateur actuel possède les autorisations nécessaires pour exécuter une instruction ou pour accorder une autorisation (GRANT) à un autre utilisateur.  
   
  Les informations sur les autorisations sont renvoyées sous forme d'un fichier bitmap 32 bits.  
   
- Les 16 bits de poids faible correspondent aux autorisations accordées à l'utilisateur, mais aussi aux autorisations qui sont appliquées aux groupes Windows ou aux rôles serveur fixes auxquels l'utilisateur appartient. Par exemple, une valeur retournée 66 (valeur hexadécimale 0 x 42), lorsqu’aucun *objectid* est spécifié, indique que l’utilisateur a l’autorisation d’exécuter CREATE TABLE (valeur décimale 2) et les instructions de la base de données de sauvegarde (valeur décimale 64).  
+ Les 16 bits de poids faible correspondent aux autorisations accordées à l'utilisateur, mais aussi aux autorisations qui sont appliquées aux groupes Windows ou aux rôles serveur fixes auxquels l'utilisateur appartient. Par exemple, la valeur renvoyée 66 (valeur hexadécimale 0x42), lorsqu’aucun argument *objectid* n’est spécifié, indique que l’utilisateur a le droit d’exécuter les instructions CREATE TABLE (valeur décimale 2) et BACKUP DATABASE (valeur décimale 64).  
   
- Les 16 bits de poids fort correspondent aux autorisations que l'utilisateur peut accorder (GRANT) à d'autres utilisateurs. Ils sont interprétés exactement comme les 16 bits de poids faible décrits dans les tables ci-dessous, à ceci près qu'ils sont décalés de 16 bits vers la gauche (il faut multiplier par 65 536). Par exemple, 0 x 8 (valeur décimale 8) est le bit qui indique les autorisations INSERT lorsqu’un *objectid* est spécifié. En revanche, 0x80000 (valeur décimale 524288) indique que l'autorisation INSERT peut être accordée (GRANT), parce que 524288 = 8 x 65536.  
+ Les 16 bits de poids fort correspondent aux autorisations que l'utilisateur peut accorder (GRANT) à d'autres utilisateurs. Ils sont interprétés exactement comme les 16 bits de poids faible décrits dans les tables ci-dessous, à ceci près qu'ils sont décalés de 16 bits vers la gauche (il faut multiplier par 65 536). Par exemple, 0x8 (valeur décimale 8) est le bit qui indique l’autorisation INSERT lorsqu’un argument *objectid* est spécifié. En revanche, 0x80000 (valeur décimale 524288) indique que l'autorisation INSERT peut être accordée (GRANT), parce que 524288 = 8 x 65536.  
   
  Du fait de l'appartenance aux rôles, un utilisateur qui n'a pas l'autorisation d'exécuter une instruction peut toutefois être en mesure d'accorder cette autorisation à un autre utilisateur.  
   
@@ -79,7 +79,7 @@ PERMISSIONS ( [ objectid [ , 'column' ] ] )
   
 |Bit (dec)|Bit (hex)|Autorisation d'instruction|  
 |-----------------|-----------------|--------------------------|  
-|1|0x1|CREATE DATABASE (base de données master uniquement)|  
+| 1|0x1|CREATE DATABASE (base de données master uniquement)|  
 |2|0x2|CREATE TABLE|  
 |4|0x4|CREATE PROCEDURE|  
 |8|0x8|CREATE VIEW|  
@@ -89,29 +89,29 @@ PERMISSIONS ( [ objectid [ , 'column' ] ] )
 |128|0x80|BACKUP LOG|  
 |256|0x100|Réservé|  
   
- Le tableau suivant indique les bits utilisés pour les autorisations d’objet sont retournées lorsque seul *objectid* est spécifié.  
+ Le tableau suivant indique les bits utilisés pour les autorisations d’objet renvoyées lorsque seul l’argument *objectid* est spécifié.  
   
 |Bit (dec)|Bit (hex)|Autorisation d'instruction|  
 |-----------------|-----------------|--------------------------|  
-|1|0x1|SELECT ALL|  
+| 1|0x1|SELECT ALL|  
 |2|0x2|UPDATE ALL|  
 |4|0x4|REFERENCES ALL|  
 |8|0x8|INSERT|  
-|16|0x10|DELETE|  
+|16|0x10|Suppression|  
 |32|0x20|EXECUTE (procédures uniquement)|  
 |4096|0x1000|SELECT ANY (une colonne minimum)|  
 |8192|0x2000|UPDATE ANY|  
 |16384|0x4000|REFERENCES ANY|  
   
- Le tableau suivant indique les bits utilisés pour les autorisations d’objet de niveau de la colonne sont retournées lorsque les deux *objectid* et de colonne sont spécifiés.  
+ Le tableau ci-dessous indique les bits utilisés pour les autorisations d’objet renvoyées (au niveau des colonnes) lorsque l’argument *objectid* et la colonne sont tous deux spécifiés.  
   
 |Bit (dec)|Bit (hex)|Autorisation d'instruction|  
 |-----------------|-----------------|--------------------------|  
-|1|0x1|SELECT|  
+| 1|0x1|SELECT|  
 |2|0x2|UPDATE|  
 |4|0x4|REFERENCES|  
   
- Une valeur NULL est renvoyée lorsqu’un paramètre spécifié est NULL ou non valide (par exemple, un *objectid* ou une colonne qui n’existe pas). Les valeurs des bits des autorisations qui ne s'appliquent pas (par exemple l'autorisation EXECUTE sur une table, bit 0x20) ne sont pas définies.  
+ Une valeur NULL est renvoyée si l’un des paramètres spécifiés est NULL ou non valide (par exemple, un argument *objectid* ou une colonne n’existe pas). Les valeurs des bits des autorisations qui ne s'appliquent pas (par exemple l'autorisation EXECUTE sur une table, bit 0x20) ne sont pas définies.  
   
  Pour déterminer chaque bit défini dans le fichier bitmap retourné par la fonction PERMISSIONS, utilisez l'opérateur de bits AND (&).  
   
@@ -149,12 +149,12 @@ ELSE
    PRINT 'You may not GRANT INSERT permissions on Person.Address.';  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [DENY &#40;Transact-SQL&#41;](../../t-sql/statements/deny-transact-sql.md)   
  [GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md)   
- [Object_id &#40; Transact-SQL &#41;](../../t-sql/functions/object-id-transact-sql.md)   
+ [OBJECT_ID &#40;Transact-SQL&#41;](../../t-sql/functions/object-id-transact-sql.md)   
  [REVOKE &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-transact-sql.md)   
- [sp_helprotect &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-helprotect-transact-sql.md)   
- [Fonctions système &#40; Transact-SQL &#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)  
+ [sp_helprotect &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helprotect-transact-sql.md)   
+ [Fonctions système &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)  
   
   

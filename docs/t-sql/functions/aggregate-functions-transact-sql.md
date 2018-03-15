@@ -1,5 +1,5 @@
 ---
-title: "Fonctions d’agrégation (Transact-SQL) | Documents Microsoft"
+title: "Fonctions d’agrégation (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 01/16/2018
 ms.prod: sql-non-specified
@@ -36,7 +36,7 @@ ms.lasthandoff: 01/18/2018
 
 Les fonctions d'agrégation effectuent un calcul sur un ensemble de valeurs et retournent une valeur unique. À l'exception de COUNT, les fonctions d'agrégation ignorent les valeurs NULL. Les fonctions d'agrégation sont souvent utilisées avec la clause GROUP BY de l'instruction SELECT.
   
-Toutes les fonctions d'agrégation sont déterministes. Les fonctions sont déterministes lorsqu’elles retournent toujours le même résultat à chaque fois qu’elles sont appelées en utilisant un ensemble de valeurs d’entrée spécifique. Pour plus d’informations sur le déterminisme des fonctions, consultez [fonctions déterministes et non déterministes](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md). Le [la clause OVER](../../t-sql/queries/select-over-clause-transact-sql.md) peut suivre toutes les fonctions d’agrégation sauf GROUPING et GROUPING_ID.
+Toutes les fonctions d'agrégation sont déterministes. Les fonctions sont déterministes lorsqu’elles retournent toujours le même résultat à chaque fois qu’elles sont appelées en utilisant un ensemble de valeurs d’entrée spécifique. Pour plus d’informations sur le déterminisme des fonctions, consultez [Fonctions déterministes et non déterministes](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md). La [clause OVER](../../t-sql/queries/select-over-clause-transact-sql.md) peut suivre toutes les fonctions d’agrégation sauf GROUPING et GROUPING_ID.
   
 Les fonctions d'agrégation peuvent être utilisées comme expressions uniquement dans les cas suivants :
 -   la liste de sélection d'une instruction SELECT (une sous-requête ou une requête externe) ;  
@@ -56,6 +56,6 @@ Les fonctions d'agrégation peuvent être utilisées comme expressions uniquemen
   
 ## <a name="see-also"></a>Voir aussi
 [Fonctions intégrées &#40;Transact-SQL&#41;](../../t-sql/functions/functions.md)  
-[OVER Clause &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)
+[OVER, clause &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)
   
   

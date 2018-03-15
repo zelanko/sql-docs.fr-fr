@@ -1,5 +1,5 @@
 ---
-title: DBCC TRACESTATUS (Transact-SQL) | Documents Microsoft
+title: DBCC TRACESTATUS (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/17/2017
 ms.prod: sql-non-specified
@@ -54,13 +54,13 @@ DBCC TRACESTATUS ( [ [ trace# [ ,...n ] ] [ , ] [ -1 ] ] )
   
 ## <a name="arguments"></a>Arguments  
 *trace#*  
-Numéro d'indicateur de trace dont l'état est affiché. Si *trace #*et -1 ne sont pas spécifiés, tous les indicateurs de trace activés pour la session sont affichés.
+Numéro d'indicateur de trace dont l'état est affiché. Si *trace#* et -1 ne sont pas spécifiés, tous les indicateurs de trace activés pour la session sont affichés.
   
 *n*  
 Espace réservé précisant qu'il est possible de spécifier plusieurs indicateurs de trace.
   
 -1  
-Affiche l'état des indicateurs de trace activés globalement. Si -1 est spécifié sans *trace #*, tous les indicateurs de trace globaux activés sont affichés.
+Affiche l'état des indicateurs de trace activés globalement. Si -1 est spécifié sans *trace#*, tous les indicateurs de trace globaux activés sont affichés.
   
 WITH NO_INFOMSGS  
 Supprime tous les messages d'information dont les niveaux de gravité sont compris entre 0 et 10.
@@ -68,16 +68,16 @@ Supprime tous les messages d'information dont les niveaux de gravité sont compr
 ## <a name="result-sets"></a>Jeux de résultats  
 Le tableau suivant décrit les informations du jeu de résultats.
   
-|Nom de colonne| Description|  
+|Nom de colonne|Description|  
 |---|---|
 |**TraceFlag**|Nom de l'indicateur de trace|  
-|**État**|Indique si l'indicateur de trace est activé ou désactivé, globalement ou pour la session.<br /><br /> 1 = ON<br /><br /> 0 = désactivé|  
+|**État**|Indique si l'indicateur de trace est activé ou désactivé, globalement ou pour la session.<br /><br /> 1 = activé<br /><br /> 0 = désactivé|  
 |**Global**|Indique si l'indicateur de trace est défini globalement<br /><br /> 1 = True<br /><br /> 0 = False|  
 |**Session**|Indique si l'indicateur de trace est défini pour la session<br /><br /> 1 = True<br /><br /> 0 = False|  
   
-DBCC TRACESTATUS retourne une colonne correspondant au numéro de l'indicateur de trace et une colonne pour l'état. Celle-ci précise si l'indicateur de trace est activé (1) ou non (0). L’en-tête de colonne pour le numéro d’indicateur de trace est **l’indicateur de Trace Global** ou **Session Trace Flag**, selon que vous vérifiez l’état d’une liste globale ou un indicateur de trace de session.
+DBCC TRACESTATUS retourne une colonne correspondant au numéro de l'indicateur de trace et une colonne pour l'état. Celle-ci précise si l'indicateur de trace est activé (1) ou non (0). L’en-tête de colonne du numéro d’indicateur de trace est **Global Trace Flag** ou **Session Trace Flag**, selon que vous vérifiez l’état d’un indicateur de trace global ou de session.
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
 Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], il existe deux types d'indicateurs de trace : les indicateurs de trace de session et les indicateurs de trace globaux. Les indicateurs de trace de session sont actifs pour une connexion et visibles uniquement pour celle-ci. Les indicateurs de trace globaux sont définis au niveau du serveur et sont visibles pour chaque connexion sur celui-ci.
   
 ## <a name="permissions"></a>Autorisations  
@@ -112,7 +112,7 @@ DBCC TRACESTATUS();
 GO  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)  
 [DBCC TRACEOFF &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceoff-transact-sql.md)  
 [DBCC TRACEON &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceon-transact-sql.md)  

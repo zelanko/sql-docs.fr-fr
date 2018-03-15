@@ -1,5 +1,5 @@
 ---
-title: "RÉVOQUER les autorisations de liste de propriétés de recherche (Transact-SQL) | Documents Microsoft"
+title: "REVOKE - Révoquer des autorisations sur une liste de propriétés de recherche (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -31,7 +31,7 @@ ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="revoke-search-property-list-permissions-transact-sql"></a>Autorisations de liste des propriétés de recherche REVOKE (Transact-SQL)
+# <a name="revoke-search-property-list-permissions-transact-sql"></a>REVOKE - Révoquer les autorisations de liste des propriétés de recherche (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Révoque des autorisations dans une liste de propriétés de recherche.  
@@ -56,18 +56,18 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON
 > [!IMPORTANT]  
 >  Si le principal possède l'autorisation spécifiée sans l'option GRANT, l'autorisation elle-même sera révoquée.  
   
- *autorisation*  
+ *permission*  
  Nom d'une autorisation. Les mappages valides des autorisations des éléments sécurisables sont décrits dans la section « Notes », plus loin dans cette rubrique.  
   
- DANS la liste de propriétés de recherche **::***search_property_list_name*  
- Indique la liste de propriétés de recherche pour laquelle l'autorisation est révoquée. Le qualificateur d’étendue **::** est requis.  
+ ON SEARCH PROPERTY LIST **::***search_property_list_name*  
+ Indique la liste de propriétés de recherche pour laquelle l'autorisation est révoquée. Le qualificateur d’étendue **::** est obligatoire.  
   
- *principal_base_de_données*  
+ *database_principal*  
  Spécifie le principal pour lequel l'autorisation est révoquée. Le principal peut prendre l'une des valeurs suivantes :  
   
 -   d'un utilisateur de base de données ;  
   
--   d'un rôle de base de données ;  
+-   d'un rôle de base de données ;  
   
 -   d'un rôle d'application ;  
   
@@ -87,12 +87,12 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON
 > [!CAUTION]  
 >  Une révocation en cascade d'une autorisation accordée avec l'option WITH GRANT OPTION entraîne la révocation des deux options GRANT et DENY de cette autorisation.  
   
- En tant que *revoking_principal*  
+ AS *revoking_principal*  
  Spécifie un principal dont le principal qui exécute cette requête dérive son droit de révoquer l'autorisation. Le principal peut prendre l'une des valeurs suivantes :  
   
 -   d'un utilisateur de base de données ;  
   
--   d'un rôle de base de données ;  
+-   d'un rôle de base de données ;  
   
 -   d'un rôle d'application ;  
   
@@ -106,7 +106,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON
   
 -   d'un utilisateur de base de données qui n'est pas mappé sur le principal d'un serveur.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
   
 ## <a name="search-property-list-permissions"></a>Autorisations SEARCH PROPERTY LIST  
  Une liste de propriétés de recherche est un élément sécurisable au niveau base de données inclus dans la base de données qui est son parent dans la hiérarchie des autorisations. Les autorisations les plus spécifiques et limitées qu'il est possible de révoquer pour une liste de propriétés de recherche sont répertoriées dans le tableau ci-dessous, avec les autorisations plus générales qui les incluent de manière implicite.  
@@ -119,23 +119,23 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON
 |TAKE OWNERSHIP|CONTROL|CONTROL|  
 |VIEW DEFINITION|CONTROL|VIEW DEFINITION|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l'autorisation CONTROL sur le catalogue de texte intégral.  
   
-## <a name="see-also"></a>Voir aussi  
- [CRÉER un rôle d’APPLICATION &#40; Transact-SQL &#41;](../../t-sql/statements/create-application-role-transact-sql.md)   
+## <a name="see-also"></a> Voir aussi  
+ [CREATE APPLICATION ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-application-role-transact-sql.md)   
  [CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-asymmetric-key-transact-sql.md)   
  [CREATE CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/create-certificate-transact-sql.md)   
- [CRÉER une liste de propriétés de recherche &#40; Transact-SQL &#41;](../../t-sql/statements/create-search-property-list-transact-sql.md)   
- [REFUSER des autorisations de liste de propriétés de recherche &#40; Transact-SQL &#41;](../../t-sql/statements/deny-search-property-list-permissions-transact-sql.md)   
+ [CREATE SEARCH PROPERTY LIST &#40;Transact-SQL&#41;](../../t-sql/statements/create-search-property-list-transact-sql.md)   
+ [DENY - Refuser des autorisations sur une liste de propriétés de recherche &#40;Transact-SQL&#41;](../../t-sql/statements/deny-search-property-list-permissions-transact-sql.md)   
  [Hiérarchie de chiffrement](../../relational-databases/security/encryption/encryption-hierarchy.md)   
- [Sys.fn_my_permissions &#40; Transact-SQL &#41;](../../relational-databases/system-functions/sys-fn-my-permissions-transact-sql.md)   
- [Autorisations de liste de propriétés de recherche GRANT &#40; Transact-SQL &#41;](../../t-sql/statements/grant-search-property-list-permissions-transact-sql.md)   
+ [sys.fn_my_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-my-permissions-transact-sql.md)   
+ [GRANT - Accorder des autorisations sur une liste de propriétés de recherche &#40;Transact-SQL&#41;](../../t-sql/statements/grant-search-property-list-permissions-transact-sql.md)   
  [HAS_PERMS_BY_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/has-perms-by-name-transact-sql.md)   
  [Principaux &#40;moteur de base de données&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
  [REVOKE &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-transact-sql.md)   
  [sys.fn_builtin_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md)   
- [Sys.registered_search_property_lists &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-registered-search-property-lists-transact-sql.md)   
+ [sys.registered_search_property_lists &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-registered-search-property-lists-transact-sql.md)   
  [Rechercher les propriétés du document à l’aide des listes de propriétés de recherche](../../relational-databases/search/search-document-properties-with-search-property-lists.md)   
  [Rechercher les propriétés du document à l’aide des listes des propriétés de recherche](../../relational-databases/search/search-document-properties-with-search-property-lists.md)  
   

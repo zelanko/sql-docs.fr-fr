@@ -1,5 +1,5 @@
 ---
-title: LAST_VALUE (Transact-SQL) | Documents Microsoft
+title: LAST_VALUE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 10/20/2015
 ms.prod: sql-non-specified
@@ -49,15 +49,15 @@ LAST_VALUE ( [scalar_expression )
   
 ## <a name="arguments"></a>Arguments  
  *scalar_expression*  
- Valeur à renvoyer. *scalar_expression* peut être une colonne, une sous-requête ou toute autre expression qui aboutit à une valeur unique. Les autres fonctions analytiques ne sont pas autorisées.  
+ Valeur à renvoyer. *scalar_expression* peut être une colonne, une sous-requête ou une autre expression qui aboutit à une valeur unique. Les autres fonctions analytiques ne sont pas autorisées.  
   
- SUR **(** [ *partition_by_clause* ] *order_by_clause* [ *rows_range_clause* ] **)**  
+ OVER **(** [ *partition_by_clause* ] *order_by_clause* [ *rows_range_clause* ] **)**  
  *partition_by_clause* divise le jeu de résultats généré par la clause FROM en partitions auxquelles la fonction est appliquée. S'il n'est pas spécifié, la fonction gère toutes les lignes du jeu de résultats de la requête en un seul groupe.  
   
- *order_by_clause* détermine l’ordre des données avant que la fonction est appliquée. Le *order_by_clause* est requis. *rows_range_clause* limite davantage les lignes dans la partition en spécifiant des points de début et fin. Pour plus d’informations, consultez [la Clause OVER &#40; Transact-SQL &#41; ](../../t-sql/queries/select-over-clause-transact-sql.md).  
+ *order_by_clause* détermine l’ordre des données avant que la fonction soit appliquée. *order_by_clause* est requis. *rows_range_clause* limite davantage les lignes dans la partition en spécifiant les points de départ et de terminaison. Pour plus d’informations, consultez [OVER, clause &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md).  
   
 ## <a name="return-types"></a>Types de retour  
- Est du même type que *scalar_expression*.  
+ Type similaire à celui de *scalar_expression*.  
   
 ## <a name="general-remarks"></a>Remarques d'ordre général  
  LAST_VALUE n'est pas déterministe. Pour plus d’informations, consultez [Fonctions déterministes et non déterministes](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md).  
@@ -108,7 +108,7 @@ Information Services        Trenary                 50.4808      2003-01-12   20
 ### <a name="b-using-firstvalue-and-lastvalue-in-a-computed-expression"></a>B. Utilisation de FIRST_VALUE et LAST_VALUE dans une expression calculée  
  L'exemple suivant utilise les fonctions FIRST_VALUE et LAST_VALUE dans des expressions calculées pour afficher la différence entre la valeur de quota de ventes pour le trimestre actuel et, respectivement, le premier trimestre et le dernier trimestre de l'année pour un nombre donné d'employés. La fonction FIRST_VALUE retourne la valeur du quota de ventes pour le premier trimestre de l'année et la soustrait de la valeur du quota de ventes du trimestre en cours. Elle est retournée dans la colonne dérivée intitulée DifferenceFromFirstQuarter. Pour le premier trimestre d'une année, la valeur de la colonne DifferenceFromFirstQuarter est 0. La fonction LAST_VALUE retourne la valeur de quota de ventes pour le dernier trimestre de l'année et la soustrait de la valeur actuelle de quota de ventes du trimestre actuel. Elle est retournée dans la colonne dérivée intitulée DifferenceFromLastQuarter. Pour le dernier trimestre de l'année, la valeur de la colonne DifferenceFromLastQuarter est 0.  
   
- La clause RANGE BETWEEN CURRENT ROW AND UNBOUNDED FOLLOWING est requise dans cet exemple pour les valeurs non nulles à retourner dans la colonne DifferenceFromLastQuarter, comme illustré ci-dessous. La plage par défaut est RANGE BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW. Dans cet exemple, l'utilisation de la plage par défaut (ou le fait de ne pas inclure de plage, ce qui entraînerait l'utilisation de la plage par défaut) provoquerait le renvoi de valeurs nulles dans la colonne DifferenceFromLastQuarter. Pour plus d’informations, consultez [la Clause OVER &#40; Transact-SQL &#41; ](../../t-sql/queries/select-over-clause-transact-sql.md).  
+ La clause RANGE BETWEEN CURRENT ROW AND UNBOUNDED FOLLOWING est requise dans cet exemple pour les valeurs non nulles à retourner dans la colonne DifferenceFromLastQuarter, comme illustré ci-dessous. La plage par défaut est RANGE BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW. Dans cet exemple, l'utilisation de la plage par défaut (ou le fait de ne pas inclure de plage, ce qui entraînerait l'utilisation de la plage par défaut) provoquerait le renvoi de valeurs nulles dans la colonne DifferenceFromLastQuarter. Pour plus d’informations, consultez [OVER, clause &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md).  
   
 ```  
 USE AdventureWorks2012;  

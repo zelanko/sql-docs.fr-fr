@@ -1,5 +1,5 @@
 ---
-title: CERTENCODED (Transact-SQL) | Documents Microsoft
+title: CERTENCODED (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="certencoded-transact-sql"></a>CERTENCODED (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-Retourne la partie publique d'un certificat au format binaire. Cette fonction accepte un ID de certificat et retourne le certificat encodé. Le résultat binaire peut être passé à **créer un certificat... AVEC binaire** pour créer un nouveau certificat.
+Retourne la partie publique d'un certificat au format binaire. Cette fonction accepte un ID de certificat et retourne le certificat encodé. Le résultat binaire peut être transmis à **CREATE CERTIFICATE … WITH BINARY** pour créer un nouveau certificat.
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -44,21 +44,21 @@ CERTENCODED ( cert_id )
   
 ## <a name="arguments"></a>Arguments  
 *cert_id*  
-Est la **id_certificat** du certificat. Cette option est disponible à partir de sys.certificates ou à l’aide de la [CERT_ID &#40; Transact-SQL &#41; ](../../t-sql/functions/cert-id-transact-sql.md) (fonction). *cert_id* est de type **int**
+**ID de certificat** du certificat. Il est disponible à partir de sys.certificates ou à l’aide de la fonction [CERT_ID &#40;Transact-SQL&#41;](../../t-sql/functions/cert-id-transact-sql.md). *cert_id* est de type **int**
   
 ## <a name="return-types"></a>Types de retour
 **varbinary**
   
-## <a name="remarks"></a>Notes  
-**CERTENCODED** et **CERTPRIVATEKEY** sont utilisés ensemble pour retourner les différentes parties d’un certificat sous forme binaire.
+## <a name="remarks"></a>Notes   
+Les fonctions **CERTENCODED** et **CERTPRIVATEKEY** sont utilisées ensemble pour renvoyer les différentes parties d’un certificat sous forme binaire.
   
-## <a name="permissions"></a>Permissions  
-**CERTENCODED** est disponible au public.
+## <a name="permissions"></a>Autorisations  
+**CERTENCODED** est accessible publiquement.
   
 ## <a name="examples"></a>Exemples  
   
 ### <a name="simple-example"></a>Exemple simple  
-L’exemple suivant crée un certificat nommé `Shipping04` , puis utilise le **CERTENCODED** fonction pour retourner l’encodage binaire du certificat.
+L’exemple suivant crée un certificat nommé `Shipping04` puis utilise la fonction **CERTENCODED** pour renvoyer l’encodage binaire du certificat.
   
 ```sql
 CREATE DATABASE TEST1;  
@@ -162,7 +162,7 @@ GO
 ## <a name="see-also"></a>Voir aussi
 [Fonctions de sécurité &#40;Transact-SQL&#41;](../../t-sql/functions/security-functions-transact-sql.md)  
 [CREATE CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/create-certificate-transact-sql.md)  
-[CERTPRIVATEKEY &#40; Transact-SQL &#41;](../../t-sql/functions/certprivatekey-transact-sql.md)  
+[CERTPRIVATEKEY &#40;Transact-SQL&#41;](../../t-sql/functions/certprivatekey-transact-sql.md)  
 [sys.certificates &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-certificates-transact-sql.md)
   
   

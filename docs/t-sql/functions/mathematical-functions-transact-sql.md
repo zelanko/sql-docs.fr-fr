@@ -1,5 +1,5 @@
 ---
-title: "Fonctions mathématiques (Transact-SQL) | Documents Microsoft"
+title: "Fonctions mathématiques (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 07/06/2017
 ms.prod: sql-non-specified
@@ -47,12 +47,12 @@ ms.lasthandoff: 11/21/2017
 |[COT](../../t-sql/functions/cot-transact-sql.md)|[RADIANS](../../t-sql/functions/radians-transact-sql.md)||  
   
 > [!NOTE]  
->  Les fonctions arithmétiques telles que ABS, CEILING, DEGREES, FLOOR, POWER, RADIANS et SIGN retournent une valeur du même type que la valeur d'entrée. Fonctions trigonométriques et autres fonctions, y compris EXP, LOG, LOG10, SQUARE et SQRT, effectuer un cast de leurs valeurs d’entrée à **float** et renvoyer un **float** valeur.  
+>  Les fonctions arithmétiques telles que ABS, CEILING, DEGREES, FLOOR, POWER, RADIANS et SIGN retournent une valeur du même type que la valeur d'entrée. Les fonctions trigonométriques et autres, y compris EXP, LOG, LOG10, SQUARE et SQRT, convertissent leurs valeurs d’entrée en valeurs **float** et renvoient une valeur **float**.  
   
- Toutes les fonctions mathématiques, à l'exception de RAND, sont déterministes. En d'autres termes, elles retournent le même résultat chaque fois qu'elles sont appelées avec un ensemble spécifique de valeurs d'entrée. RAND est déterministe uniquement lorsqu'une valeur de départ est spécifiée. Pour plus d’informations sur le déterminisme des fonctions, consultez [fonctions déterministes et non déterministes](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md).  
+ Toutes les fonctions mathématiques, à l'exception de RAND, sont déterministes. En d'autres termes, elles retournent le même résultat chaque fois qu'elles sont appelées avec un ensemble spécifique de valeurs d'entrée. RAND est déterministe uniquement lorsqu'une valeur de départ est spécifiée. Pour plus d’informations sur le déterminisme des fonctions, consultez [Fonctions déterministes et non déterministes](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md).  
   
-## <a name="see-also"></a>Voir aussi  
-  [Opérateurs arithmétiques &#40; Transact-SQL &#41;](../../t-sql/language-elements/arithmetic-operators-transact-sql.md)  
+## <a name="see-also"></a> Voir aussi  
+  [Opérateurs arithmétiques &#40;Transact-SQL&#41;](../../t-sql/language-elements/arithmetic-operators-transact-sql.md)  
   [Fonctions intégrées &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)  
   
   

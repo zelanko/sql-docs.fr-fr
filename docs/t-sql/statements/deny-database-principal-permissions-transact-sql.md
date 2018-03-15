@@ -1,5 +1,5 @@
 ---
-title: "REFUSER des autorisations de Principal de base de données (Transact-SQL) | Documents Microsoft"
+title: "DENY - Refuser des autorisations sur un principal de base de données (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 05/15/2017
 ms.prod: sql-non-specified
@@ -40,7 +40,7 @@ ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="deny-database-principal-permissions-transact-sql"></a>DENY – refus d'autorisations de principal de base de données (Transact-SQL)
+# <a name="deny-database-principal-permissions-transact-sql"></a>DENY - Refuser des autorisations sur un principal de base de données (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Permet de refuser des autorisations sur un utilisateur de base de données, un rôle de base de données ou un rôle d'application dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -73,24 +73,24 @@ DENY permission [ ,...n ]
 ```  
   
 ## <a name="arguments"></a>Arguments  
- *autorisation*  
+ *permission*  
  Spécifie une autorisation qui peut être refusée sur le principal de base de données. Pour obtenir la liste des autorisations, consultez la section Notes plus loin dans cette rubrique.  
   
- UTILISATEUR ::*database_user*  
- Spécifie la classe et le nom de l'utilisateur sur lequel l'autorisation doit être refusée. Le qualificateur d’étendue (**::**) est requis.  
+ USER ::*database_user*  
+ Spécifie la classe et le nom de l'utilisateur sur lequel l'autorisation doit être refusée. Le qualificateur d’étendue (**::**) est obligatoire.  
   
- RÔLE ::*database_role*  
- Spécifie la classe et le nom du rôle sur lequel l'autorisation doit être refusée. Le qualificateur d’étendue (**::**) est requis.  
+ ROLE ::*database_role*  
+ Spécifie la classe et le nom du rôle sur lequel l'autorisation doit être refusée. Le qualificateur d’étendue (**::**) est obligatoire.  
   
- RÔLE d’APPLICATION ::*application_role*  
- **S’applique aux**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] via [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+ APPLICATION ROLE ::*application_role*  
+ **S’applique à** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] jusqu’à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
- Spécifie la classe et le nom du rôle d'application sur lequel l'autorisation doit être refusée. Le qualificateur d’étendue (**::**) est requis.  
+ Spécifie la classe et le nom du rôle d'application sur lequel l'autorisation doit être refusée. Le qualificateur d’étendue (**::**) est obligatoire.  
   
  CASCADE  
  Indique que l'autorisation à refuser est également refusée pour les autres principaux auxquels elle a été accordée par ce principal.  
   
- En tant que \<principal_base_de_données >  
+ AS \<database_principal>  
  Spécifie un principal dont le principal qui exécute cette requête dérive son droit de révoquer l'autorisation.  
   
  *Database_user*  
@@ -100,7 +100,7 @@ DENY permission [ ,...n ]
  Spécifie un rôle de base de données.  
   
  *Application_role*  
- **S’applique aux**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] via [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+ **S’applique à** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] jusqu’à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
  Spécifie un rôle d'application.  
   
@@ -119,7 +119,7 @@ DENY permission [ ,...n ]
  *Database_user_with_no_login*  
  Spécifie un utilisateur de base de données sans principal au niveau serveur correspondant.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
   
 ## <a name="database-user-permissions"></a>Autorisations d'un utilisateur de base de données  
  Un utilisateur de base de données est un élément sécurisable au niveau base de données inclus dans la base de données qui est son parent dans la hiérarchie des autorisations. Les autorisations les plus spécifiques et limitées qu'il est possible de refuser sur un utilisateur de base de données sont répertoriées dans le tableau ci-dessous, avec les autorisations plus générales qui les incluent de manière implicite.  
@@ -150,7 +150,7 @@ DENY permission [ ,...n ]
 |ALTER|CONTROL|ALTER ANY APPLICATION ROLE|  
 |VIEW DEFINITION|CONTROL|VIEW DEFINITION|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Requiert l'autorisation CONTROL sur le principal spécifié ou une autorisation plus élevée qui implique l'autorisation CONTROL.  
   
  Les bénéficiaires de l'autorisation CONTROL sur une base de données, tels que les membres du rôle de base de données fixe db_owner, peuvent refuser une autorisation quelconque sur tout élément sécurisable inclus dans la base de données.  
@@ -179,7 +179,7 @@ GO
 ### <a name="c-denying-impersonate-permission-on-a-user-to-an-application-role"></a>C. Refus de l'autorisation IMPERSONATE sur un utilisateur à un rôle d'application  
  Dans l'exemple ci-dessous, l'autorisation `IMPERSONATE` sur l'utilisateur `HamithaL` est refusée au rôle d'application [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] `AccountsPayable17`.  
   
-**S’applique aux**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] via [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+**S’applique à** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] jusqu’à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
 ```  
 USE AdventureWorks2012;  
@@ -187,14 +187,14 @@ DENY IMPERSONATE ON USER::HamithaL TO AccountsPayable17;
 GO    
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- [ACCORDER des autorisations de Principal de base de données &#40; Transact-SQL &#41;](../../t-sql/statements/grant-database-principal-permissions-transact-sql.md)   
- [RÉVOQUER les autorisations de Principal de base de données &#40; Transact-SQL &#41;](../../t-sql/statements/revoke-database-principal-permissions-transact-sql.md)   
+## <a name="see-also"></a> Voir aussi  
+ [GRANT - Octroyer des autorisations sur un principal de base de données &#40;Transact-SQL&#41;](../../t-sql/statements/grant-database-principal-permissions-transact-sql.md)   
+ [REVOKE - Révoquer des autorisations sur un principal de base de données &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-database-principal-permissions-transact-sql.md)   
  [sys.database_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)   
- [Sys.database_permissions &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md)   
+ [sys.database_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md)   
  [CREATE USER &#40;Transact-SQL&#41;](../../t-sql/statements/create-user-transact-sql.md)   
- [CRÉER un rôle d’APPLICATION &#40; Transact-SQL &#41;](../../t-sql/statements/create-application-role-transact-sql.md)   
- [CRÉER un rôle &#40; Transact-SQL &#41;](../../t-sql/statements/create-role-transact-sql.md)   
+ [CREATE APPLICATION ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-application-role-transact-sql.md)   
+ [CREATE ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-role-transact-sql.md)   
  [GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md)   
  [Autorisations &#40;moteur de base de données&#41;](../../relational-databases/security/permissions-database-engine.md)   
  [Principaux &#40;moteur de base de données&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)  

@@ -1,5 +1,5 @@
 ---
-title: NCHAR (Transact-SQL) | Documents Microsoft
+title: NCHAR (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/13/2017
 ms.prod: sql-non-specified
@@ -47,16 +47,16 @@ NCHAR ( integer_expression )
   
 ## <a name="arguments"></a>Arguments  
  *integer_expression*  
- Lorsque le classement de la base de données ne contient pas d'indicateur de caractère supplémentaire (SC) , il s'agit d'un nombre entier positif compris entre 0 et 65535 (0 à 0xFFFF). Si une valeur à l'extérieur de cette plage est spécifiée, NULL est retourné. Pour plus d’informations sur les caractères supplémentaires, consultez [prise en charge Unicode et du classement](../../relational-databases/collations/collation-and-unicode-support.md).  
+ Lorsque le classement de la base de données ne contient pas d'indicateur de caractère supplémentaire (SC) , il s'agit d'un nombre entier positif compris entre 0 et 65535 (0 à 0xFFFF). Si une valeur à l'extérieur de cette plage est spécifiée, NULL est retourné. Pour plus d’informations sur les caractères supplémentaires, consultez [Prise en charge d’Unicode et du classement](../../relational-databases/collations/collation-and-unicode-support.md).  
   
  Lorsque le classement de base de données prend en charge l'indicateur de caractère supplémentaire (SC), c'est un nombre entier positif compris entre 0 et 1114111 (0 à 0x10FFFF). Si une valeur à l'extérieur de cette plage est spécifiée, NULL est retourné.  
   
 ## <a name="return-types"></a>Types de retour  
- **NCHAR (1)** lorsque le classement de base de données par défaut ne prend pas en charge les caractères supplémentaires.  
+ **nchar(1)** lorsque le classement de base de données par défaut ne prend pas en charge les caractères supplémentaires.  
   
  **nvarchar(2)** lorsque le classement de base de données par défaut prend en charge les caractères supplémentaires.  
   
- Si le paramètre *expression_entier* se trouve dans la plage 0 - 0xFFFF, qu’un seul caractère est retourné. Pour les valeurs plus élevées, NCHAR retourne la paire de substitution correspondante. Ne construisez pas de paire de substitution à l'aide de `NCHAR(<High surrogate>) + NCHAR(\<Low Surrogate>)`. À la place, utilisez un classement de base de données qui prend en charge les caractères supplémentaires, puis spécifiez le point de code Unicode pour la paire de substitution. L'exemple suivant illustre la méthode classique de construction d'une paire de substitution et la méthode recommandée pour spécifier le point de code Unicode.  
+ Si le paramètre *integer_expression* se trouve dans la plage 0 - 0xFFFF, un seul caractère est renvoyé. Pour les valeurs plus élevées, NCHAR retourne la paire de substitution correspondante. Ne construisez pas de paire de substitution à l'aide de `NCHAR(<High surrogate>) + NCHAR(\<Low Surrogate>)`. À la place, utilisez un classement de base de données qui prend en charge les caractères supplémentaires, puis spécifiez le point de code Unicode pour la paire de substitution. L'exemple suivant illustre la méthode classique de construction d'une paire de substitution et la méthode recommandée pour spécifier le point de code Unicode.  
   
 ```  
 CREATE DATABASE test COLLATE Finnish_Swedish_100_CS_AS_SC;  
@@ -218,12 +218,12 @@ Character # Unicode Character UNICODE Value
 (1 row(s) affected)  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [ASCII &#40;Transact-SQL&#41;](../../t-sql/functions/ascii-transact-sql.md)  
  [CHAR &#40;Transact-SQL&#41;](../../t-sql/functions/char-transact-sql.md)  
  [UNICODE &#40;Transact-SQL&#41;](../../t-sql/functions/unicode-transact-sql.md)  
  [Types de données &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
- [Fonctions de chaîne &#40; Transact-SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)   
+ [Fonctions de chaîne &#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)   
   
   
 

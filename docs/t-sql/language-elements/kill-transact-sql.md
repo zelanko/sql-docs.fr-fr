@@ -50,7 +50,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="kill-transact-sql"></a>KILL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Arrête un processus utilisateur basé sur l'ID de session ou sur l'unité de travail (UOW). Si la session spécifiée, ID ou l’UOW a la quantité de travail à annuler, l’instruction KILL peut prendre du temps, en particulier quand il implique la restauration d’une transaction longue.  
+  Arrête un processus utilisateur basé sur l'ID de session ou sur l'unité de travail (UOW). Si l’ID de session ou l’UOW spécifié implique l’annulation de nombreuses tâches, l’instruction KILL peut mettre du temps s’exécuter, notamment en cas de restauration d’une longue transaction.  
   
  KILL peut être utilisé pour mettre fin à une connexion normale, ce qui met fin en interne aux transactions associées à l'ID de session spécifié. L'instruction peut également servir à mettre fin à des transactions distribuées orphelines et incertaines lorsque le Coordinateur de transactions distribuées [!INCLUDE[msCoName](../../includes/msconame-md.md)] est utilisé.  
   
@@ -73,8 +73,8 @@ KILL 'session_id'
   
 ## <a name="arguments"></a>Arguments  
  *session ID*  
- ID de session du processus à interrompre. *ID de session* est un entier unique (**int**) affecté à chaque connexion utilisateur lors de la connexion est établie. La valeur de l'ID de session est liée à la connexion pendant la durée de la connexion. Lorsque la connexion se termine, la valeur entière est libérée et peut être réaffectée à une nouvelle connexion.  
-La requête suivante peut vous aider à identifier le `session_id` que vous souhaitez supprimer :  
+ ID de session du processus à interrompre. *session ID* est un entier unique (**int**) affecté à chaque connexion utilisateur lors de l’établissement de la connexion. La valeur de l'ID de session est liée à la connexion pendant la durée de la connexion. Lorsque la connexion se termine, la valeur entière est libérée et peut être réaffectée à une nouvelle connexion.  
+La requête suivante peut vous aider à identifier quel `session_id` tuer :  
  ```sql  
  SELECT conn.session_id, host_name, program_name,
      nt_domain, login_name, connect_time, last_request_end_time 
@@ -84,19 +84,19 @@ JOIN sys.dm_exec_connections AS conn
 ```  
   
 *UOW*  
-**S’applique aux**: ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] via[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**S’applique à** : ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
- Identifie l'ID de l'UOW (Unit of Work) des transactions distribuées. *UOW* est un GUID qui peut être obtenu à partir de la colonne request_owner_guid de la vue de gestion dynamique sys.dm_tran_locks. *UOW* peut également être obtenu à partir du journal des erreurs ou par le biais du moniteur MS DTC. Pour plus d'informations sur la surveillance des transactions distribuées, reportez-vous à la documentation de MS DTC.  
+ Identifie l'ID de l'UOW (Unit of Work) des transactions distribuées. *UOW* est un GUID qui peut être obtenu à partir de la colonne request_owner_guid de la vue de gestion dynamique sys.dm_tran_locks. *UOW* peut également être obtenu à partir du journal des erreurs ou par le biais du moniteur MS DTC. Pour plus d'informations sur la surveillance des transactions distribuées, reportez-vous à la documentation de MS DTC.  
   
  Utilisez KILL *UOW* pour arrêter les transactions distribuées orphelines. Ces transactions ne sont associées à aucun ID de session réel mais artificiellement associées à l'ID de session = « -2 ». Cet ID de session facilite l'identification des transactions orphelines par l'interrogation de la colonne d'ID de session dans les vues de gestion dynamique sys.dm_tran_locks, sys.dm_exec_sessions ou sys.dm_exec_requests.  
   
  WITH STATUSONLY  
- Génère un rapport de progression sur un *ID de session* ou *UOW* qui est en cours de restauration en raison d’une instruction KILL préalable. KILL WITH STATUSONLY n’interrompt ni restaurer le *ID de session* ou *UOW*; la commande affiche uniquement la progression actuelle de la restauration.  
+ Génère un rapport de progression sur un *ID de session* ou *UOW* spécifié qui est restauré en raison d’une instruction KILL préalable. KILL WITH STATUSONLY ne termine pas ou ne restaure pas *session ID* ou *UOW* ; la commande affiche uniquement la progression actuelle de la restauration.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  KILL est habituellement utilisé pour arrêter un processus qui bloque d'autres processus importants ayant des verrous ou un processus exécutant une requête qui utilise des ressources système nécessaires. Il n'est pas possible de mettre fin aux processus système et aux processus exécutant une procédure stockée étendue.  
   
- Utilisez KILL avec précaution, particulièrement lorsque les processus critiques sont en cours d’exécution. Vous ne pouvez pas arrêter votre propre processus. D’autres processus, que vous ne devez pas kill sont les suivantes :  
+ Utilisez l’instruction KILL avec précaution, particulièrement lorsque des processus critiques sont en cours d’exécution. Vous ne pouvez pas arrêter votre propre processus. Les autres processus à ne pas tuer sont les suivants :  
   
 -   AWAITING COMMAND  
 -   CHECKPOINT SLEEP  
@@ -104,32 +104,32 @@ JOIN sys.dm_exec_connections AS conn
 -   LOCK MONITOR  
 -   SIGNAL HANDLER  
   
-Utilisez @@SPID pour afficher la valeur d’ID de session pour la session active.  
+Utilisez @@SPID pour afficher la valeur de l’ID de la session en cours.  
   
- Pour obtenir un rapport des valeurs d'ID de session active, vous pouvez interroger la colonne session_id des vues de gestion dynamique sys.dm_tran_locks, sys.dm_exec_sessions et sys.dm_exec_requests. Vous pouvez également visualiser la colonne SPID renvoyée par la procédure stockée système sp_who. Si une restauration est en cours d’exécution pour un SPID spécifique, la colonne cmd dans le résultat de sp_who définie pour que le SPID indique KILLED/ROLLBACK.  
+ Pour obtenir un rapport des valeurs d'ID de session active, vous pouvez interroger la colonne session_id des vues de gestion dynamique sys.dm_tran_locks, sys.dm_exec_sessions et sys.dm_exec_requests. Vous pouvez également visualiser la colonne SPID renvoyée par la procédure stockée système sp_who. Si une restauration est en cours pour un SPID spécifique, la colonne cmd associée à celui-ci dans le jeu de résultats sp_who indique « KILLED/ROLLBACK ».  
   
  Lorsqu'une connexion particulière possède un verrou sur une ressource de base de données et qu'elle bloque le déroulement d'une autre connexion, l'ID de session de la connexion bloquante apparaît dans la colonne `blocking_session_id` de `sys.dm_exec_requests` ou dans la colonne `blk` retournée par `sp_who`.  
   
- La commande KILL permet de résoudre des transactions distribuées incertaines. Ce sont des transactions distribuées non résolues dues à des démarrages non planifiés du serveur de base de données ou du coordinateur MS DTC. Pour plus d’informations sur les transactions incertaines, consultez la section « Validation à deux phases » dans [utiliser les Transactions marquées pour récupérer des bases de données associées uniformément &#40; Mode de récupération complète &#41; ](../../relational-databases/backup-restore/use-marked-transactions-to-recover-related-databases-consistently.md).  
+ La commande KILL permet de résoudre des transactions distribuées incertaines. Ce sont des transactions distribuées non résolues dues à des démarrages non planifiés du serveur de base de données ou du coordinateur MS DTC. Pour plus d’informations sur les transactions incertaines, consultez la section « Validation en deux phases » dans [Utiliser les transactions marquées pour récupérer des bases de données associées uniformément &#40;mode de récupération complète&#41;](../../relational-databases/backup-restore/use-marked-transactions-to-recover-related-databases-consistently.md).  
   
 ## <a name="using-with-statusonly"></a>Utilisation de WITH STATUSONLY  
- KILL WITH STATUSONLY ne génère un rapport uniquement si l’ID de session ou l’UOW est actuellement en cours de restauration en raison d’une instruction KILL *ID de session*|*UOW* instruction. Le rapport de progression indique la proportion d'annulation réalisée (en pourcentage) et le temps restant estimé (en secondes), sous la forme suivante :  
+ KILL WITH STATUSONLY ne génère un rapport que si l’ID de session ou l’UOW est en cours de restauration en raison d’une instruction KILL *session ID*|*UOW* antérieure. Le rapport de progression indique la proportion d'annulation réalisée (en pourcentage) et le temps restant estimé (en secondes), sous la forme suivante :  
   
  `Spid|UOW <xxx>: Transaction rollback in progress. Estimated rollback completion: <yy>% Estimated time left: <zz> seconds`  
   
- Si la restauration de l’ID de session ou l’UOW était achevée au moment le KILL *ID de session*|*UOW* instruction WITH STATUSONLY, ou si aucun ID de session ou aucune UOW est en cours de restauration, KILL *ID de session*|*UOW* WITH STATUSONLY renvoie l’erreur suivante :  
+ Si la restauration de l’ID de session ou de l’UOW était achevée au moment de l’exécution de l’instruction KILL *session ID*|*UOW* WITH STATUSONLY, ou qu’aucun ID de session ni aucune UOW n’est en cours de restauration, KILL *session ID*|*UOW* WITH STATUSONLY renvoie l’erreur suivante :  
   
  ```
 "Msg 6120, Level 16, State 1, Line 1"  
 "Status report cannot be obtained. Rollback operation for Process ID <session ID> is not in progress."
 ```  
   
- Le rapport d’état peut être obtenu en répétant la même instruction KILL *ID de session*|*UOW* instruction sans l’aide de l’option WITH STATUSONLY ; Toutefois, nous ne recommandons pas cette opération. Répéter un KILL *ID de session* instruction peut mettre fin à un nouveau processus si la restauration a été achevée et l’ID de session a été réaffecté à une nouvelle tâche avant l’exécution de la nouvelle instruction KILL. Ceci peut être évité en spécifiant WITH STATUSONLY.  
+ Le même rapport d’état peut être obtenu en répétant la même instruction KILL *session ID*|*UOW* sans utiliser l’option WITH STATUSONLY ; toutefois, ceci n’est pas recommandé. La répétition d’une instruction KILL *session ID* peut terminer un nouveau processus si la restauration a été achevée et si l’ID de session a été réaffecté à une nouvelle tâche avant l’exécution de la nouvelle instruction KILL. Ceci peut être évité en spécifiant WITH STATUSONLY.  
   
 ## <a name="permissions"></a>Autorisations  
- **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:** Requiert l’autorisation ALTER ANY CONNECTION. ALTER ANY CONNECTION est incluse avec appartenance au rôle de serveur fixe sysadmin ou processadmin.  
+ **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :** Nécessite l’autorisation ALTER ANY CONNECTION. ALTER ANY CONNECTION est incluse avec appartenance au rôle de serveur fixe sysadmin ou processadmin.  
   
- **[!INCLUDE[ssSDS](../../includes/sssds-md.md)]:** Requiert l’autorisation de supprimer la connexion de base de données. La connexion du principal au niveau du serveur a la connexion de base de données KILL.  
+ **[!INCLUDE[ssSDS](../../includes/sssds-md.md)] :** Nécessite l’autorisation KILL DATABASE CONNECTION. La connexion du principal au niveau du serveur a l’autorisation KILL DATABASE CONNECTION.  
   
 ## <a name="examples"></a>Exemples  
   
@@ -154,16 +154,16 @@ spid 54: Transaction rollback in progress. Estimated rollback completion: 80% Es
 ```  
   
 ### <a name="c-using-kill-to-terminate-an-orphaned-distributed-transaction"></a>C. Utilisation de KILL pour arrêter une transaction distribuée orpheline  
- L’exemple suivant montre comment arrêter une transaction distribuée orpheline (ID de session = -2) avec un *UOW* de `D5499C66-E398-45CA-BF7E-DC9C194B48CF`.  
+ L’exemple suivant indique comment terminer une transaction distribuée orpheline (ID de session = -2) avec un *UOW* de valeur `D5499C66-E398-45CA-BF7E-DC9C194B48CF`.  
   
 ```sql  
 KILL 'D5499C66-E398-45CA-BF7E-DC9C194B48CF';  
 ```  
 
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [KILL STATS JOB &#40;Transact-SQL&#41;](../../t-sql/language-elements/kill-stats-job-transact-sql.md)   
- [KILL QUERY NOTIFICATION SUBSCRIPTION &#40; Transact-SQL &#41;](../../t-sql/language-elements/kill-query-notification-subscription-transact-sql.md)   
+ [KILL QUERY NOTIFICATION SUBSCRIPTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/kill-query-notification-subscription-transact-sql.md)   
  [Fonctions intégrées &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)   
  [SHUTDOWN &#40;Transact-SQL&#41;](../../t-sql/language-elements/shutdown-transact-sql.md)   
  [@@SPID &#40;Transact-SQL&#41;](../../t-sql/functions/spid-transact-sql.md)   

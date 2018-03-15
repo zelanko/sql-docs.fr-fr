@@ -1,5 +1,5 @@
 ---
-title: DROP TRIGGER (Transact-SQL) | Documents Microsoft
+title: DROP TRIGGER (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 05/12/2017
 ms.prod: sql-non-specified
@@ -66,52 +66,52 @@ ON ALL SERVER
 
   
 ## <a name="arguments"></a>Arguments  
- *S’IL EXISTE*  
- **S’applique aux**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] via [version actuelle](http://go.microsoft.com/fwlink/p/?LinkId=299658), [!INCLUDE[sssds](../../includes/sssds-md.md)]).  
+ *IF EXISTS*  
+ **S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] jusqu’à la [version actuelle](http://go.microsoft.com/fwlink/p/?LinkId=299658), [!INCLUDE[sssds](../../includes/sssds-md.md)]).  
   
- Conditionnellement supprime le déclencheur uniquement s’il existe déjà.  
+ Supprime, de manière conditionnelle, le déclencheur uniquement s’il existe déjà.  
   
  *schema_name*  
- Nom du schéma auquel appartient le déclencheur DML. La portée des déclencheurs DML se limite au schéma de la table ou de la vue sur laquelle ils sont créés. *schema_name* ne peut pas être spécifié pour les déclencheurs DDL ou logon.  
+ Nom du schéma auquel appartient le déclencheur DML. La portée des déclencheurs DML se limite au schéma de la table ou de la vue sur laquelle ils sont créés. Vous ne pouvez pas spécifier *schema_name* pour des déclencheurs DDL ou de connexion.  
   
  *trigger_name*  
- Indique le nom du déclencheur à supprimer. Pour afficher une liste des déclencheurs, utilisez [sys.server_assembly_modules](../../relational-databases/system-catalog-views/sys-triggers-transact-sql.md) ou [sys.server_triggers](../../relational-databases/system-catalog-views/sys-server-triggers-transact-sql.md).  
+ Indique le nom du déclencheur à supprimer. Pour obtenir une liste des déclencheurs créés actuellement, utilisez [sys.server_assembly_modules](../../relational-databases/system-catalog-views/sys-triggers-transact-sql.md) ou [sys.server_triggers](../../relational-databases/system-catalog-views/sys-server-triggers-transact-sql.md).  
   
  DATABASE  
  Indique que l'étendue du déclencheur DDL s'applique à la base de données active. L'argument DATABASE doit être spécifié s'il a également été indiqué lors de la création ou de la modification du déclencheur.  
   
  ALL SERVER  
- **S'applique à**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **S'applique à**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Indique que l'étendue du déclencheur DDL s'applique au serveur actif. L'argument ALL SERVER doit être spécifié s'il a également été indiqué lors de la création ou de la modification du déclencheur. ALL SERVER s'applique également aux déclencheurs de connexion.  
   
 > [!NOTE]  
 >  Cette option n'est pas disponible dans une base de données à relation contenant-contenu.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Vous pouvez éliminer un déclencheur DML en le supprimant ou en supprimant sa table. Lorsqu'une table est supprimée, tous les déclencheurs associés sont également supprimés.  
   
- Lorsqu’un déclencheur est supprimé, les informations sur le déclencheur sont supprimées de la **sys.objects**, **sys.triggers** et **sys.sql_modules** affichages catalogue.  
+ Quand un déclencheur est supprimé, les informations le concernant sont supprimées des vues de catalogue **sys.objects**, **sys.triggers** et **sys.sql_modules**.  
   
  Il est possible de supprimer plusieurs déclencheurs DDL avec une seule instruction DROP TRIGGER, uniquement s'ils ont tous été créés à l'aide de clauses ON identiques.  
   
  Pour renommer un déclencheur, utilisez DROP TRIGGER et CREATE TRIGGER. Pour modifier la définition d'un déclencheur, utilisez ALTER TRIGGER.  
   
- Pour plus d’informations sur la définition des dépendances d’un déclencheur spécifique, consultez [sys.sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md), [sys.dm_sql_referenced_entities &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referenced-entities-transact-sql.md), et [sys.dm_sql_referencing_entities &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referencing-entities-transact-sql.md).  
+ Pour plus d’informations sur la détermination des dépendances d’un déclencheur spécifique, consultez [sys.sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md), [sys.dm_sql_referenced_entities &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referenced-entities-transact-sql.md) et [sys.dm_sql_referencing_entities &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referencing-entities-transact-sql.md).  
   
- Pour plus d’informations sur l’affichage du texte du déclencheur, consultez [sp_helptext &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-helptext-transact-sql.md) et [sys.sql_modules &#40; Transact-SQL &#41; ](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md).  
+ Pour plus d’informations sur l’affichage du texte du déclencheur, consultez [sp_helptext &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helptext-transact-sql.md) et [sys.sql_modules &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md).  
   
- Pour plus d’informations sur l’affichage d’une liste des déclencheurs existants, consultez [sys.triggers &#40; Transact-SQL &#41; ](../../relational-databases/system-catalog-views/sys-triggers-transact-sql.md) et [sys.server_triggers &#40; Transact-SQL &#41; ](../../relational-databases/system-catalog-views/sys-server-triggers-transact-sql.md).  
+ Pour plus d’informations sur l’affichage d’une liste des déclencheurs existants, consultez [sys.triggers &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-triggers-transact-sql.md) et [sys.server_triggers &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-triggers-transact-sql.md).  
   
-## <a name="permissions"></a>Permissions  
- Pour supprimer un DML trigger nécessite l’autorisation ALTER sur la table ou vue sur laquelle le déclencheur est défini.  
+## <a name="permissions"></a>Autorisations  
+ La suppression d’un déclencheur DML nécessite une autorisation ALTER sur la table ou la vue sur laquelle le déclencheur est défini.  
   
  La suppression d'un déclencheur DDL défini avec une étendue de serveur (ON ALL SERVER) ou d'un déclencheur de connexion nécessite l'autorisation CONTROL SERVER sur le serveur. La suppression d'un déclencheur DDL défini avec une étendue de base de données (ON DATABASE) nécessite une autorisation ALTER ANY DATABASE DDL TRIGGER sur la base de données active.  
   
 ## <a name="examples"></a>Exemples  
   
 ### <a name="a-dropping-a-dml-trigger"></a>A. Suppression d'un déclencheur DML  
- L'exemple suivant supprime le déclencheur `employee_insupd` de la base de données [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]. (À partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] vous pouvez utiliser la syntaxe DROP TRIGGER IF EXISTS.)  
+ L'exemple suivant supprime le déclencheur `employee_insupd` de la base de données [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]. (À compter de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], vous pouvez utiliser la syntaxe DROP TRIGGER IF EXISTS.)  
   
 ```  
 IF OBJECT_ID ('employee_insupd', 'TR') IS NOT NULL  
@@ -122,14 +122,14 @@ IF OBJECT_ID ('employee_insupd', 'TR') IS NOT NULL
  L'exemple suivant supprime le déclencheur DDL `safety`.  
   
 > [!IMPORTANT]  
->  Étant donné que les déclencheurs DDL ne sont pas étendus aux schémas et, par conséquent, n’apparaissent pas dans le **sys.objects** catalogue vue, la fonction OBJECT_ID ne peut pas être utilisée pour déterminer s’ils existent dans la base de données. Les objets qui ne sont pas compris dans l'étendue du schéma doivent être interrogés à l'aide de l'affichage catalogue approprié. Pour les déclencheurs DDL, utilisez **sys.triggers**.  
+>  Étant donné que les déclencheurs DDL ne sont pas compris dans l’étendue du schéma et qu’ils n’apparaissent donc pas dans la vue de catalogue **sys.objects**, la fonction OBJECT_ID ne peut pas être utilisée pour déterminer s’ils existent dans la base de données. Les objets qui ne sont pas délimités au schéma doivent être interrogés à l'aide de la vue de catalogue appropriée. Pour les déclencheurs DDL, utilisez **sys.triggers**.  
   
 ```  
 DROP TRIGGER safety  
 ON DATABASE;  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [ALTER TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/alter-trigger-transact-sql.md)   
  [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)   
  [ENABLE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/enable-trigger-transact-sql.md)   

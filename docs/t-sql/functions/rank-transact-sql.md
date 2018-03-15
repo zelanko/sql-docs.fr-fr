@@ -1,5 +1,5 @@
 ---
-title: RANG (Transact-SQL) | Documents Microsoft
+title: RANK (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 10/25/2016
 ms.prod: sql-non-specified
@@ -39,10 +39,10 @@ ms.lasthandoff: 11/21/2017
 
   Retourne le rang de chaque ligne au sein de la partition d'un jeu de résultats. Le rang d'une ligne est un, plus le nombre de rangs précédant la ligne en question.  
 
-  ROW_NUMBER et classement sont similaires. Nombres ROW_NUMBER toutes les lignes séquentiellement (par exemple 1, 2, 3, 4, 5). RANG fournit la même valeur numérique pour les liens (par exemple 1, 2, 2, 4, 5).   
+  Les fonctions ROW_NUMBER et RANK sont similaires. ROW_NUMBER numérote toutes les lignes dans l’ordre (par exemple 1, 2, 3, 4, 5). RANK fournit la même valeur numérique pour les liens (par exemple 1, 2, 2, 4, 5).   
   
 > [!NOTE]
-> Le rang est qu'une valeur temporaire calculés lorsque la requête est exécutée. Pour conserver les nombres dans un tableau, consultez [propriété IDENTITY](../../t-sql/statements/create-table-transact-sql-identity-property.md) et [séquence](../../t-sql/statements/create-sequence-transact-sql.md). 
+> Le rang est une valeur temporaire calculée lorsque la requête est exécutée. Pour conserver les nombres dans un tableau, consultez [IDENTITY (propriété)](../../t-sql/statements/create-table-transact-sql-identity-property.md) et [SEQUENCE](../../t-sql/statements/create-sequence-transact-sql.md). 
    
  ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -53,13 +53,13 @@ RANK ( ) OVER ( [ partition_by_clause ] order_by_clause )
 ```  
   
 ## <a name="arguments"></a>Arguments  
- SUR **(** [ *partition_by_clause* ] *order_by_clause***)**  
- *partition_by_clause* divise le jeu de résultats généré par la clause FROM en partitions auxquelles la fonction est appliquée. S'il n'est pas spécifié, la fonction gère toutes les lignes du jeu de résultats de la requête en un seul groupe. *order_by_clause* détermine l’ordre des données avant que la fonction est appliquée. Le *order_by_clause* est requis. Le \<lignes ou la clause de la plage > de la clause ne peut pas être spécifiée pour la fonction RANK. Pour plus d’informations, consultez [la Clause OVER &#40; Transact-SQL &#41; ](../../t-sql/queries/select-over-clause-transact-sql.md).  
+ OVER **(** [ *partition_by_clause* ] *order_by_clause***)**  
+ *partition_by_clause* divise le jeu de résultats généré par la clause FROM en partitions auxquelles la fonction est appliquée. S'il n'est pas spécifié, la fonction gère toutes les lignes du jeu de résultats de la requête en un seul groupe. *order_by_clause* détermine l’ordre des données avant que la fonction soit appliquée. *order_by_clause* est requis. La \<clause ROWS ou RANGE> de la clause OVER ne peut pas être spécifiée pour la fonction RANK. Pour plus d’informations, consultez [OVER, clause &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md).  
   
 ## <a name="return-types"></a>Types de retour  
  **bigint**  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Si au moins deux lignes sont liées pour un rang, chacune d'entre elles reçoit le même rang. Par exemple, si les deux meilleurs vendeurs ont la même valeur SalesYTD, leur rang à tous deux est un. Le rang du vendeur qui suit dans la hiérarchie SalesYTD est trois, car il existe deux lignes au rang supérieur. Par conséquent, la fonction RANK ne retourne pas toujours des entiers consécutifs.  
   
  L'ordre de tri utilisé pour toute la requête détermine l'ordre d'apparition des lignes dans un jeu de résultats.  
@@ -135,10 +135,10 @@ BusinessEntityID Rate                  RankBySalary
 10               42.4808               9  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemples : [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] et[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemples : [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] et [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="c-ranking-rows-within-a-partition"></a>C : classement des lignes d’une partition  
- L’exemple suivant indique les représentants commerciaux dans chaque secteur de vente en fonction de leurs ventes totales. L'ensemble de lignes est partitionné par `SalesTerritoryGroup` et trié par `SalesAmountQuota`.  
+### <a name="c-ranking-rows-within-a-partition"></a>C. Classement des lignes d’une partition  
+ L’exemple suivant classe par rang les représentants commerciaux dans chaque secteur de vente en fonction de leurs ventes totales. L'ensemble de lignes est partitionné par `SalesTerritoryGroup` et trié par `SalesAmountQuota`.  
   
 ```  
 -- Uses AdventureWorks  
@@ -173,11 +173,11 @@ Ito               7804000.0000   Southwest            2
 Pak               10514000.0000  United Kingdom       1
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- [DENSE_RANK &#40; Transact-SQL &#41;](../../t-sql/functions/dense-rank-transact-sql.md)   
- [ROW_NUMBER &#40; Transact-SQL &#41;](../../t-sql/functions/row-number-transact-sql.md)   
- [NTILE &#40; Transact-SQL &#41;](../../t-sql/functions/ntile-transact-sql.md)   
- [Classement des fonctions &#40; Transact-SQL &#41;](../../t-sql/functions/ranking-functions-transact-sql.md)   
+## <a name="see-also"></a> Voir aussi  
+ [DENSE_RANK &#40;Transact-SQL&#41;](../../t-sql/functions/dense-rank-transact-sql.md)   
+ [ROW_NUMBER &#40;Transact-SQL&#41;](../../t-sql/functions/row-number-transact-sql.md)   
+ [NTILE &#40;Transact-SQL&#41;](../../t-sql/functions/ntile-transact-sql.md)   
+ [Fonctions de classement &#40;Transact-SQL&#41;](../../t-sql/functions/ranking-functions-transact-sql.md)   
  [Fonctions intégrées &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)  
   
   

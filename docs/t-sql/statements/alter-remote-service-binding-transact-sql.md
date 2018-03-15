@@ -1,5 +1,5 @@
 ---
-title: MODIFIER les liaisons de SERVICE distant (Transact-SQL) | Documents Microsoft
+title: ALTER REMOTE SERVICE BINDING (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -53,17 +53,17 @@ ALTER REMOTE SERVICE BINDING binding_name
  *binding_name*  
  Nom des liaisons de service distant à modifier. Les noms du serveur, de la base de données et du schéma ne peuvent pas être spécifiés.  
   
- AVEC utilisateur = \< *nom_utilisateur >*  
+ WITH USER = \<*user_name>*  
  Spécifie l'utilisateur de base de données qui détient le certificat associé au service distant pour ces liaisons. La clé publique de ce certificat est utilisée pour le chiffrement et l'authentification des messages échangés avec le service distant.  
   
  ANONYMOUS  
  Spécifie si l'authentification anonyme est utilisée lors des communications avec le service distant. Si ANONYMOUS = ON, l'authentification anonyme est utilisée et les informations d'identification de l'utilisateur local ne sont pas transférées au service distant. Si ANONYMOUS = OFF (désactivé), les informations d'identification de l'utilisateur sont transférées. Lorsque cette clause est omise, la valeur par défaut est OFF.  
   
-## <a name="remarks"></a>Notes  
- La clé publique dans le certificat associé *nom_utilisateur* est utilisé pour authentifier les messages envoyés au service distant et pour chiffrer une clé de session qui est ensuite utilisée pour chiffrer la conversation. Le certificat pour *nom_utilisateur* doit correspondre au certificat d’une connexion dans la base de données qui héberge le service distant.  
+## <a name="remarks"></a>Notes   
+ La clé publique du certificat associé à *user_name* est utilisée pour authentifier les messages envoyés au service distant et pour chiffrer une clé de session qui sert ensuite à chiffrer la conversation. Le certificat de *user_name* doit correspondre au certificat d’une connexion dans la base de données qui héberge le service distant.  
   
-## <a name="permissions"></a>Permissions  
- L’autorisation de modification d’une liaison de service distant par défaut au propriétaire de la liaison, les membres du service distant le **db_owner** fixe du rôle de base de données et les membres de la **sysadmin** rôle serveur fixe.  
+## <a name="permissions"></a>Autorisations  
+ Les autorisations de modification des liaisons de service distant sont accordées par défaut au propriétaire de ces liaisons, aux membres du rôle de base de données fixe **db_owner** et aux membres du rôle serveur fixe **sysadmin**.  
   
  L'utilisateur qui exécute l'instruction ALTER REMOTE SERVICE BINDING doit disposer de l'autorisation d'emprunt d'identité pour l'utilisateur spécifié dans l'instruction.  
   
@@ -77,9 +77,9 @@ ALTER REMOTE SERVICE BINDING APBinding
     WITH USER = SecurityAccount ;  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [CREATE REMOTE SERVICE BINDING &#40;Transact-SQL&#41;](../../t-sql/statements/create-remote-service-binding-transact-sql.md)   
- [SUPPRIMER les liaisons de SERVICE distant &#40; Transact-SQL &#41;](../../t-sql/statements/drop-remote-service-binding-transact-sql.md)   
+ [DROP REMOTE SERVICE BINDING &#40;Transact-SQL&#41;](../../t-sql/statements/drop-remote-service-binding-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
   
   

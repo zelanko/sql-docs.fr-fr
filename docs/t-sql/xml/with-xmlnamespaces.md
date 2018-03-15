@@ -1,5 +1,5 @@
 ---
-title: WITH XMLNAMESPACES (Transact-SQL) | Documents Microsoft
+title: WITH XMLNAMESPACES (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -73,9 +73,9 @@ DEFAULT <xml_namespace_uri>
  URI (Uniform Resource Identifier) identifiant l'espace de noms XML déclaré. *xml_namespace_uri* est une chaîne SQL.  
   
  *xml_namespace_prefix*  
- Spécifie un préfixe à associer avec la valeur URI d’espace de noms spécifiée dans *xml_namespace_uri*. *xml_namespace_prefix* doit être un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] identificateur.  
+ Spécifie un préfixe à mapper sur l’URI de l’espace de noms associé indiqué dans *xml_namespace_uri*. *xml_namespace_prefix* doit être un identificateur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Lorsque vous utilisez la clause WITH XMLNAMESPACES dans une instruction qui comprend également une expression de table commune, la clause doit précéder l'expression dans l'instruction.  
   
  Les règles générales de syntaxe suivantes s'appliquent lorsque vous utilisez la clause WITH XMLNAMESPACES :  
@@ -96,7 +96,7 @@ DEFAULT <xml_namespace_uri>
   
 -   Les valeurs des chaînes URI sont encodées conformément à la page de codes de classement de la base de données actuelle et elles sont converties au format Unicode.  
   
--   L’espace de noms XML URI sera espace réduit suivant l’espace blanc XSD réduire les règles qui sont utilisées pour **xs : anyURI**. Notez également que les valeurs des URI d'espace de noms ne subissent ni décomposition en entités, ni regroupement des entités.  
+-   L’URI de l’espace de noms XML est soumis aux règles de réduction des blancs XSD utilisées pour **xs:anyURI**. Notez également que les valeurs des URI d'espace de noms ne subissent ni décomposition en entités, ni regroupement des entités.  
   
 -   Une vérification de l'URI d'espace de noms XML permet de repérer les caractères XML 1.0 qui ne sont pas valides et de générer une erreur le cas échéant (par exemple, si le caractère U+0007 est détecté).  
   
@@ -105,9 +105,9 @@ DEFAULT <xml_namespace_uri>
 -   Le mot clé XMLNAMESPACES est réservé dans le contexte de la clause WITH.  
   
 ## <a name="examples"></a>Exemples  
- Pour obtenir des exemples, consultez [espaces de noms à ajouter à des requêtes avec WITH XMLNAMESPACES](../../relational-databases/xml/add-namespaces-to-queries-with-with-xmlnamespaces.md).  
+ Pour obtenir des exemples, consultez [Ajouter des espaces de noms aux requêtes avec WITH XMLNAMESPACES](../../relational-databases/xml/add-namespaces-to-queries-with-with-xmlnamespaces.md).  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Références relatives au langage Xquery &#40;SQL Server&#41;](../../xquery/xquery-language-reference-sql-server.md)  
   
   

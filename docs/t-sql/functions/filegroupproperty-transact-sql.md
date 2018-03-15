@@ -1,5 +1,5 @@
 ---
-title: FILEGROUPPROPERTY (Transact-SQL) | Documents Microsoft
+title: FILEGROUPPROPERTY (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
@@ -49,23 +49,23 @@ FILEGROUPPROPERTY ( filegroup_name , property )
 ```  
   
 ## <a name="arguments"></a>Arguments  
- *FILEGROUP_NAME*  
- Est une expression de type **sysname** qui représente le nom du groupe de fichiers pour lequel retourner les informations de propriété nommée.  
+ *filegroup_name*  
+ Expression de type **sysname** représentant le nom du groupe de fichiers dont les informations relatives à la propriété nommée doivent être renvoyées.  
   
- *propriété*  
- Est une expression de type **varchar (128)** contient le nom de la propriété de groupe de fichiers à retourner. *propriété* peut prendre l’une des valeurs suivantes.  
+ *property*  
+ Expression de type **varchar(128)** qui contient le nom de la propriété du groupe de fichiers à retourner. *property* peut avoir l’une des valeurs suivantes.  
   
-|Valeur| Description|Valeur retournée|  
+|Valeur|Description|Valeur renvoyée|  
 |-----------|-----------------|--------------------|  
 |**IsReadOnly**|Groupe de fichiers en lecture seule.|1 = True<br /><br /> 0 = False<br /><br /> NULL = Entrée non valide.|  
 |**IsUserDefinedFG**|Groupe de fichiers défini par l'utilisateur.|1 = True<br /><br /> 0 = False<br /><br /> NULL = Entrée non valide.|  
 |**IsDefault**|Groupe de fichiers par défaut.|1 = True<br /><br /> 0 = False<br /><br /> NULL = Entrée non valide.|  
   
 ## <a name="return-types"></a>Types de retour  
- **int**  
+ **Int**  
   
-## <a name="remarks"></a>Notes  
- *FILEGROUP_NAME* correspond à la **nom** colonne dans la **sys.filegroups** affichage catalogue.  
+## <a name="remarks"></a>Notes   
+ *filegroup_name* correspond à la colonne **name** de la vue de catalogue **sys.filegroups**.  
   
 ## <a name="examples"></a>Exemples  
  Cet exemple retourne le paramètre de la propriété `IsDefault` relatif au groupe de fichiers principal de la base de données [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
@@ -86,11 +86,11 @@ Default Filegroup
 (1 row(s) affected)  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- [FILEGROUP_ID &#40; Transact-SQL &#41;](../../t-sql/functions/filegroup-id-transact-sql.md)   
- [FILEGROUP_NAME &#40; Transact-SQL &#41;](../../t-sql/functions/filegroup-name-transact-sql.md)   
- [Fonctions de métadonnées &#40; Transact-SQL &#41;](../../t-sql/functions/metadata-functions-transact-sql.md)   
+## <a name="see-also"></a> Voir aussi  
+ [FILEGROUP_ID &#40;Transact-SQL&#41;](../../t-sql/functions/filegroup-id-transact-sql.md)   
+ [FILEGROUP_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/filegroup-name-transact-sql.md)   
+ [Fonctions de métadonnées &#40;Transact-SQL&#41;](../../t-sql/functions/metadata-functions-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
- [Sys.FileGroups &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-filegroups-transact-sql.md)  
+ [sys.filegroups &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-filegroups-transact-sql.md)  
   
   

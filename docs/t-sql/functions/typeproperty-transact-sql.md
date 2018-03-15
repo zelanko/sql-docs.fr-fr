@@ -1,5 +1,5 @@
 ---
-title: TYPEPROPERTY (Transact-SQL) | Documents Microsoft
+title: TYPEPROPERTY (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -48,21 +48,21 @@ TYPEPROPERTY (type , property)
   
 ## <a name="arguments"></a>Arguments  
  *type*  
- Est le nom du type de données.  
+ Nom du type de données.  
   
- *propriété*  
- Type d'informations à renvoyer pour le type de données. *propriété* peut prendre l’une des valeurs suivantes.  
+ *property*  
+ Type d'informations à renvoyer pour le type de données. *property* peut avoir l’une des valeurs suivantes.  
   
-|Propriété| Description|Valeur retournée|  
+|Propriété|Description|Valeur renvoyée|  
 |--------------|-----------------|--------------------|  
 |**AllowsNull**|Type de données autorisant les valeurs NULL.|1 = True<br /><br /> 0 = False<br /><br /> NULL = Type de données introuvable.|  
 |**OwnerId**|Propriétaire du type.<br /><br /> Remarque : Le propriétaire du schéma n’est pas nécessairement le propriétaire du type.|Non NULL = ID utilisateur de base de données du propriétaire du type.<br /><br /> NULL = Type non pris en charge, ou ID de type non valide.|  
-|**Précision**|Précision du type de données.|Nombre de chiffres ou de caractères.<br /><br /> -1 = **xml** ou type de données de valeur élevée<br /><br /> NULL = Type de données introuvable.|  
-|**Échelle**|Échelle du type de données.|Nombre de décimales pour le type de données.<br /><br /> NULL = type de données non **numérique** ou introuvable.|  
+|**Précision**|Précision du type de données.|Nombre de chiffres ou de caractères.<br /><br /> -1 = **xml** ou type de données de valeur de grande taille<br /><br /> NULL = Type de données introuvable.|  
+|**Échelle**|Échelle du type de données.|Nombre de décimales pour le type de données.<br /><br /> NULL = Le type de données n’est pas **numeric** ou est introuvable.|  
 |**UsesAnsiTrim**|Le paramètre de remplissage ANSI était activé lors de la création du type de données.|1 = True<br /><br /> 0 = False<br /><br /> NULL = Type de données introuvable ou différent d'un type de données binaire ou chaîne.|  
   
 ## <a name="return-types"></a>Types de retour  
- **int**  
+ **Int**  
   
 ## <a name="exceptions"></a>Exceptions  
  Retourne la valeur NULL en cas d'erreur ou si un appelant n'est pas autorisé à afficher l'objet.  
@@ -86,14 +86,14 @@ FROM sys.types;
 SELECT TYPEPROPERTY( 'tinyint', 'PRECISION');  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- [TYPE_ID &#40; Transact-SQL &#41;](../../t-sql/functions/type-id-transact-sql.md)   
- [TYPE_NAME &#40; Transact-SQL &#41;](../../t-sql/functions/type-name-transact-sql.md)   
- [COLUMNPROPERTY &#40; Transact-SQL &#41;](../../t-sql/functions/columnproperty-transact-sql.md)   
- [Fonctions de métadonnées &#40; Transact-SQL &#41;](../../t-sql/functions/metadata-functions-transact-sql.md)   
+## <a name="see-also"></a> Voir aussi  
+ [TYPE_ID &#40;Transact-SQL&#41;](../../t-sql/functions/type-id-transact-sql.md)   
+ [TYPE_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/type-name-transact-sql.md)   
+ [COLUMNPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/columnproperty-transact-sql.md)   
+ [Fonctions de métadonnées &#40;Transact-SQL&#41;](../../t-sql/functions/metadata-functions-transact-sql.md)   
  [OBJECTPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/objectproperty-transact-sql.md)   
- [ALTER AUTHORIZATION &#40; Transact-SQL &#41;](../../t-sql/statements/alter-authorization-transact-sql.md)   
- [Sys.types &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-types-transact-sql.md)  
+ [ALTER AUTHORIZATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-authorization-transact-sql.md)   
+ [sys.types &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-types-transact-sql.md)  
   
   
 

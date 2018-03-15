@@ -1,5 +1,5 @@
 ---
-title: "Méthodes globales statiques Geography | Documents Microsoft"
+title: "Méthodes globales statiques Geography | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -42,22 +42,22 @@ ms.lasthandoff: 01/25/2018
   
  [OGC Specifications, Simple Feature Access Part 2 – SQL Options (en anglais)](http://go.microsoft.com/fwlink/?LinkId=93628)  
   
- [OGC Specifications, Geography Markup Language](http://go.microsoft.com/fwlink/?LinkId=93629)  
+ [Spécifications OGC, Geography Markup Language](http://go.microsoft.com/fwlink/?LinkId=93629)  
   
 ## <a name="in-this-section"></a>Dans cette section  
   
--   [CollectionAggregate &#40; Type de données geography &#41;](../../t-sql/spatial-geography/collectionaggregate-geography-data-type.md)  
+-   [CollectionAggregate &#40;type de données geography&#41;](../../t-sql/spatial-geography/collectionaggregate-geography-data-type.md)  
   
--   [ConvexHullAggregate &#40; Type de données geography &#41;](../../t-sql/spatial-geography/convexhullaggregate-geography-data-type.md)  
+-   [ConvexHullAggregate &#40;type de données geography&#41;](../../t-sql/spatial-geography/convexhullaggregate-geography-data-type.md)  
   
--   [EnvelopeAggregate &#40; Type de données geography &#41;](../../t-sql/spatial-geography/envelopeaggregate-geography-data-type.md)  
+-   [EnvelopeAggregate &#40;type de données geography&#41;](../../t-sql/spatial-geography/envelopeaggregate-geography-data-type.md)  
   
--   [UnionAggregate &#40; Type de données geography &#41;](../../t-sql/spatial-geography/unionaggregate-geography-data-type.md)  
+-   [UnionAggregate &#40;type de données geography&#41;](../../t-sql/spatial-geography/unionaggregate-geography-data-type.md)  
   
-## <a name="see-also"></a>Voir aussi  
- [Méthodes étendues sur les Instances Geography](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)   
- [Méthodes géographiques statiques étendues](../../t-sql/spatial-geography/extended-static-geography-methods.md)   
- [Méthodes OGC sur les Instances géographiques](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)   
+## <a name="see-also"></a> Voir aussi  
+ [Méthodes étendues sur des instances Geography](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)   
+ [Méthodes geography statiques étendues](../../t-sql/spatial-geography/extended-static-geography-methods.md)   
+ [Méthodes OGC sur des instances Geography](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)   
  [Méthodes geography statiques de l’OGC](../../t-sql/spatial-geography/ogc-static-geography-methods.md)  
   
   

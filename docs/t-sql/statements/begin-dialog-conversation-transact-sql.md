@@ -1,5 +1,5 @@
 ---
-title: BEGIN DIALOG CONVERSATION (Transact-SQL) | Documents Microsoft
+title: BEGIN DIALOG CONVERSATION (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/26/2017
 ms.prod: sql-non-specified
@@ -76,12 +76,12 @@ BEGIN DIALOG [ CONVERSATION ] @dialog_handle
  Spécifie le service qui initie le dialogue. Le nom spécifié doit être le nom d'un service de la base de données active. La file d'attente spécifiée pour le service initiateur reçoit les messages retournés par le service cible et les messages créés par Service Broker pour cette conversation.  
   
  TO SERVICE **'***target_service_name***'**  
- Spécifie le service cible avec lequel le dialogue doit être initialisé. Le *target_service_name* est de type **nvarchar (256)**. [!INCLUDE[ssSB](../../includes/sssb-md.md)]utilise une comparaison octet par octet pour faire correspondre le *target_service_name* chaîne. La comparaison est donc sensible à la casse et ne tient pas compte du classement actuel.  
+ Spécifie le service cible avec lequel le dialogue doit être initialisé. *target_service_name* est de type **nvarchar(256)**. [!INCLUDE[ssSB](../../includes/sssb-md.md)] utilise une comparaison octet par octet pour la concordance avec la chaîne *target_service_name*. La comparaison est donc sensible à la casse et ne tient pas compte du classement actuel.  
   
  *service_broker_guid*  
- Spécifie la base de données qui héberge le service cible. Lorsque plusieurs bases de données héberge une instance du service cible, vous pouvez communiquer avec une base de données spécifique en fournissant un *service_broker_guid*.  
+ Spécifie la base de données qui héberge le service cible. Quand plusieurs bases de données hébergent une instance du service cible, vous pouvez communiquer avec une base de données spécifique en spécifiant un *service_broker_guid*.  
   
- Le *service_broker_guid* est de type **nvarchar (128)**. Pour rechercher la *service_broker_guid* pour une base de données, exécutez la requête suivante dans la base de données :  
+ *service_broker_guid* est de type **nvarchar(128)**. Pour rechercher la chaîne *service_broker_guid* pour une base de données, exécutez la requête ci-dessous dans la base de données :  
   
 ```  
 SELECT service_broker_guid  
@@ -92,28 +92,28 @@ WHERE database_id = DB_ID() ;
 > [!NOTE]  
 >  Cette option n'est pas disponible dans une base de données à relation contenant-contenu.  
   
- **'**BASE DE DONNÉES ACTUELLE**'**  
- Spécifie que la conversation utilise la *service_broker_guid* pour la base de données actuelle.  
+ **'**CURRENT DATABASE**'**  
+ Spécifie que la conversation utilise l’identificateur *service_broker_guid* pour la base de données actuelle.  
   
- ON CONTRACT *nom_contract*  
- Spécifie le contrat suivi par cette conversation. Le contrat doit déjà exister dans la base de données active. Si le service cible n'accepte pas de nouvelles conversations dans le contrat spécifié, [!INCLUDE[ssSB](../../includes/sssb-md.md)] retourne un message d'erreur sur la conversation. Lorsque cette clause est omise, la conversation suit le contrat nommé **par défaut**.  
+ ON CONTRACT *contract_name*  
+ Spécifie le contrat suivi par cette conversation. Le contrat doit déjà exister dans la base de données active. Si le service cible n'accepte pas de nouvelles conversations dans le contrat spécifié, [!INCLUDE[ssSB](../../includes/sssb-md.md)] retourne un message d'erreur sur la conversation. Si cette clause est omise, la conversation suit le contrat nommé **DEFAULT**.  
   
  RELATED_CONVERSATION **=***related_conversation_handle*  
- Spécifie le groupe de conversations existant auquel le nouveau dialogue est ajouté. Lorsque cette clause est spécifiée, le nouveau dialogue appartient au même groupe de conversations comme spécifié par la boîte de dialogue *related_conversation_handle*. Le *related_conversation_handle*doit être d’un type implicitement convertible en type **uniqueidentifier**. L’instruction échoue si le *related_conversation_handle* ne fait pas référence à une boîte de dialogue existant.  
+ Spécifie le groupe de conversations existant auquel le nouveau dialogue est ajouté. Si cette clause est spécifiée, le nouveau dialogue appartient au même groupe de conversations que le dialogue spécifié par *related_conversation_handle*. *related_conversation_handle* doit être d’un type implicitement convertible en type **uniqueidentifier**. L’instruction échoue si *related_conversation_handle* ne référence pas un dialogue existant.  
   
  RELATED_CONVERSATION_GROUP **=***related_conversation_group_id*  
- Spécifie le groupe de conversations existant auquel le nouveau dialogue est ajouté. Lorsque cette clause est spécifiée, le nouveau dialogue sera ajouté au groupe de conversations spécifié par *related_conversation_group_id*. Le *related_conversation_group_id*doit être d’un type implicitement convertible en type **uniqueidentifier**. Si *related_conversation_group_id*non référence un groupe de conversations existant, le service broker crée un nouveau groupe de conversation avec l’objet *related_conversation_group_id* et sa relation avec la boîte de dialogue Nouveau groupe de conversations.  
+ Spécifie le groupe de conversations existant auquel le nouveau dialogue est ajouté. Si cette clause est spécifiée, le nouveau dialogue sera ajouté au groupe de conversations spécifié par *related_conversation_group_id*. *related_conversation_group_id* doit être d’un type implicitement convertible en type **uniqueidentifier**. Si *related_conversation_group_id* ne référence pas un groupe de conversations existant, Service Broker crée un groupe de conversations à l’aide de la chaîne *related_conversation_group_id* spécifiée et met en relation le nouveau dialogue avec ce groupe de conversations.  
   
- Durée de vie **= *** dialog_lifetime*  
- Spécifie la durée maximale pendant laquelle le dialogue restera ouvert. Pour que le dialogue s'achève avec succès, les deux points de terminaison doivent explicitement se terminer avant l'expiration de la durée de vie. Le *dialog_lifetime* valeur doit être exprimée en secondes. Durée de vie est de type **int**. Lorsque la clause LIFETIME n’est spécifié, la durée de vie de boîte de dialogue est la valeur maximale de la **int** type de données.  
+ LIFETIME **=***dialog_lifetime*  
+ Spécifie la durée maximale pendant laquelle le dialogue restera ouvert. Pour que le dialogue s'achève avec succès, les deux points de terminaison doivent explicitement se terminer avant l'expiration de la durée de vie. La valeur *dialog_lifetime* doit être exprimée en secondes. La durée de vie est de type **int**. Si la clause LIFETIME n’est pas spécifiée, la durée de vie du dialogue correspond à la valeur maximale du type de données **int**.  
   
  ENCRYPTION  
- Spécifie si les messages envoyés et reçus sur cette boîte de dialogue doivent être chiffrés lorsqu’ils sont envoyés en dehors d’une instance de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Une boîte de dialogue qui doivent être chiffrées un *dialogue sécurisé*. Si ENCRYPTION = ON et que les certificats nécessaires au chiffrement ne sont pas configurés, [!INCLUDE[ssSB](../../includes/sssb-md.md)] retourne un message d'erreur sur la conversation. Si ENCRYPTION = OFF, le chiffrement est utilisé si une liaison de service distant est configurée pour le *target_service_name*; dans le cas contraire, les messages sont envoyés non chiffrés. Si cette clause est omise, la valeur par défaut est ON.  
+ Spécifie si les messages envoyés et reçus dans ce dialogue doivent être chiffrés quand ils sont envoyés hors d’une instance de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Un dialogue qui doit être chiffré est un *dialogue sécurisé*. Si ENCRYPTION = ON et que les certificats nécessaires au chiffrement ne sont pas configurés, [!INCLUDE[ssSB](../../includes/sssb-md.md)] retourne un message d'erreur sur la conversation. Si ENCRYPTION = OFF, le chiffrement est utilisé si une liaison de service distant est configurée pour *target_service_name* ; sinon, les messages sont envoyés sans être chiffrés. Si cette clause est omise, la valeur par défaut est ON.  
   
 > [!NOTE]  
 >  Les messages échangés avec les services dans la même instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne sont jamais chiffrés. Cependant, la clé principale de base de données et les certificats nécessaires au chiffrement sont requis pour les conversations qui utilisent le chiffrement si les services de la conversation se trouvent dans des bases de données distinctes. Cela permet la poursuite des conversations dans le cas où une des bases de données est déplacée vers une autre instance au cours de la conversation.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Tous les messages font partie intégrante d'une conversation. Par conséquent, un service initiateur doit commencer une conversation avec le service cible avant d'envoyer un message à ce dernier. Les informations spécifiées dans l'instruction BEGIN DIALOG CONVERSATION sont identiques à celles spécifiées dans l'adresse d'une lettre ; [!INCLUDE[ssSB](../../includes/sssb-md.md)] utilise ces informations pour remettre les messages au service approprié. Le service spécifié dans la clause TO SERVICE est l'adresse à laquelle les messages sont envoyés. Le service spécifié dans la clause FROM SERVICE est l'adresse de l'expéditeur utilisée pour les messages de réponse.  
   
  La cible d'une conversation n'a pas besoin d'appeler l'instruction BEGIN DIALOG CONVERSATION. [!INCLUDE[ssSB](../../includes/sssb-md.md)] crée une conversation dans la base de données cible lorsque le premier message de la conversation est reçu de l'initiateur.  
@@ -124,7 +124,7 @@ WHERE database_id = DB_ID() ;
   
  [!INCLUDE[ssSB](../../includes/sssb-md.md)] n'autorise aucun regroupement arbitraire des conversations. Pour toutes les conversations d'un groupe de conversations, le service doit être spécifié dans la clause FROM en tant qu'initiateur ou cible de la conversation.  
   
- La commande BEGIN DIALOG CONVERSATION verrouille le groupe de conversations qui contient le *dialog_handle* retourné. Lorsque la commande inclut une clause RELATED_CONVERSATION_GROUP, le groupe de conversations pour *dialog_handle* est le groupe de conversations spécifié dans le *related_conversation_group_id* paramètre. Lorsque la commande inclut une clause RELATED_CONVERSATION, le groupe de conversations pour *dialog_handle* est le groupe de conversations associé le *related_conversation_handle* spécifié.  
+ La commande BEGIN DIALOG CONVERSATION verrouille le groupe de conversations qui contient le *dialog_handle* retourné. Quand la commande comporte une clause RELATED_CONVERSATION_GROUP, le groupe de conversations pour *dialog_handle* est le groupe de conversations spécifié dans le paramètre *related_conversation_group_id*. Quand la commande comporte une clause RELATED_CONVERSATION, le groupe de conversations pour *dialog_handle* est le groupe de conversations associé au *related_conversation_handle* spécifié.  
   
  BEGIN DIALOG CONVERSATION n'est pas valide dans une fonction définie par l'utilisateur.  
   
@@ -217,8 +217,8 @@ BEGIN DIALOG CONVERSATION @dialog_handle
    WITH ENCRYPTION = OFF ;  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- [BEGIN CONVERSATION TIMER &#40; Transact-SQL &#41;](../../t-sql/statements/begin-conversation-timer-transact-sql.md)   
+## <a name="see-also"></a> Voir aussi  
+ [BEGIN CONVERSATION TIMER &#40;Transact-SQL&#41;](../../t-sql/statements/begin-conversation-timer-transact-sql.md)   
  [END CONVERSATION &#40;Transact-SQL&#41;](../../t-sql/statements/end-conversation-transact-sql.md)   
  [MOVE CONVERSATION &#40;Transact-SQL&#41;](../../t-sql/statements/move-conversation-transact-sql.md)   
  [sys.conversation_endpoints &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-conversation-endpoints-transact-sql.md)  

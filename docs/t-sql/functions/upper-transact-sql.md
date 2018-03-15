@@ -1,5 +1,5 @@
 ---
-title: UPPER (Transact-SQL) | Documents Microsoft
+title: UPPER (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/13/2017
 ms.prod: sql-non-specified
@@ -50,16 +50,16 @@ UPPER ( character_expression )
 ```  
   
 ## <a name="arguments"></a>Arguments  
- *character_expression*  
- Est un [expression](../../t-sql/language-elements/expressions-transact-sql.md) des données de caractères. *character_expression* peut être une constante, une variable ou une colonne de données binaire ou caractère.  
+ *expression_caractère*  
+ [Expression](../../t-sql/language-elements/expressions-transact-sql.md) de données caractères. *character_expression* peut être une constante, une variable ou une colonne de données de type caractère ou binaire.  
   
- *character_expression* doit être de type de données qui est implicitement convertible en **varchar**. Sinon, utilisez [CAST](../../t-sql/functions/cast-and-convert-transact-sql.md) pour convertir explicitement *character_expression*.  
+ *character_expression* doit appartenir à un type de données pouvant être implicitement converti en **varchar**. Sinon, utilisez la fonction [CAST](../../t-sql/functions/cast-and-convert-transact-sql.md) pour convertir explicitement *character_expression*.  
   
 ## <a name="return-types"></a>Types de retour  
  **varchar** ou **nvarchar**  
   
 ## <a name="examples"></a>Exemples  
- L’exemple suivant utilise le `UPPER` et `RTRIM` fonctions pour retourner le nom des personnes dans la `dbo.DimEmployee` afin qu’il soit en majuscules, tronqué et concaténé avec le premier nom de table.  
+ L’exemple suivant utilise les fonctions `UPPER` et `RTRIM` afin de renvoyer le nom de famille des personnes dans la table `dbo.DimEmployee` en majuscules, tronqué et concaténé avec le prénom.  
   
 ```  
 -- Uses AdventureWorks  
@@ -79,9 +79,9 @@ ABERCROMBIE, Kim
 ABOLROUS, Hazem
  ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Types de données &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
- [Fonctions de chaîne &#40; Transact-SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)  
+ [Fonctions de chaîne &#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)  
  [LOWER &#40;Transact-SQL&#41;](../../t-sql/functions/lower-transact-sql.md)  
   
   

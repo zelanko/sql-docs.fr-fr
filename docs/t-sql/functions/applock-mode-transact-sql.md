@@ -1,5 +1,5 @@
 ---
-title: APPLOCK_MODE (Transact-SQL) | Documents Microsoft
+title: APPLOCK_MODE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
@@ -48,14 +48,14 @@ APPLOCK_MODE( 'database_principal' , 'resource_name' , 'lock_owner' )
 ```  
   
 ## <a name="arguments"></a>Arguments  
-'*principal_base_de_données*'  
-Utilisateur, rôle ou rôle d'application qui peut se voir octroyer des autorisations sur des objets dans la base de données. L’appelant de la fonction doit être un membre du *principal_base_de_données*, dbo ou db_owner fixe le rôle de base de données afin d’appeler la fonction.
+'*database_principal*'  
+Utilisateur, rôle ou rôle d'application qui peut se voir octroyer des autorisations sur des objets dans la base de données. L’appelant de la fonction doit être membre du rôle de base de données fixe *database_principal*, dbo ou db_owner pour pouvoir appeler la fonction.
   
-'*nom_ressource*'  
-Nom de ressource de verrou spécifié par l'application cliente. L'application doit vérifier que le nom de ressource est unique. Le nom spécifié est haché en interne en une valeur qui peut être stockée dans le gestionnaire de verrous [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *resource_name*est **nvarchar (255)** sans valeur par défaut. *resource_name* est binaire et respecte la casse, indépendamment des paramètres de classement de la base de données actuelle.
+'*resource_name*'  
+Nom de ressource de verrou spécifié par l'application cliente. L'application doit vérifier que le nom de ressource est unique. Le nom spécifié est haché en interne en une valeur qui peut être stockée dans le gestionnaire de verrous [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *resource_name* est de type **nvarchar(255)**, sans valeur par défaut. L’argument *resource_name* est évalué en binaire et respecte la casse, quels que soient les paramètres de classement de la base de données active.
   
 '*lock_owner*'  
-Est le propriétaire du verrou, qui est la *lock_owner* valeur lorsque le verrou a été demandé. *lock_owner* est **nvarchar(32)**, la valeur peut être **Transaction** (la valeur par défaut) ou **Session**.
+Propriétaire du verrou, qui est la valeur de *lock_owner* lorsque le verrou a été demandé. *lock_owner* est de type **nvarchar(32)** et sa valeur peut être **Transaction** (valeur par défaut) ou **Session**.
   
 ## <a name="return-types"></a>Types de retour
 **nvarchar(32)**
@@ -67,16 +67,16 @@ Renvoie le mode de verrouillage détenu par le propriétaire du verrou sur une r
 |-|-|-|  
 |**NoLock**|**Update**|**\*SharedIntentExclusive**|  
 |**IntentShared**|**IntentExclusive**|**\*UpdateIntentExclusive**|  
-|**Partagé**|**Exclusive**||  
+|**Shared**|**Exclusive**||  
   
 *Ce mode de verrouillage est une combinaison d'autres modes de verrouillage ; il n'est pas possible de l'acquérir explicitement en utilisant sp_getapplock.
   
 ## <a name="function-properties"></a>Propriétés de la fonction
-**Non déterministes**
+**Non déterministe**
   
 **Non indexable**
   
-**Non Parallélisable**
+**Non parallélisable**
   
 ## <a name="examples"></a>Exemples  
 Deux utilisateurs (A et B) exécutent la suite d'instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] suivante dans des sessions différentes.
@@ -137,8 +137,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>Voir aussi
-[APPLOCK_TEST &#40; Transact-SQL &#41;](../../t-sql/functions/applock-test-transact-sql.md)  
-[sp_getapplock &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-getapplock-transact-sql.md)  
-[sp_releaseapplock &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-releaseapplock-transact-sql.md)
+[APPLOCK_TEST &#40;Transact-SQL&#41;](../../t-sql/functions/applock-test-transact-sql.md)  
+[sp_getapplock &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-getapplock-transact-sql.md)  
+[sp_releaseapplock &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-releaseapplock-transact-sql.md)
   
   

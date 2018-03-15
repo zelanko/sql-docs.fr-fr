@@ -1,5 +1,5 @@
 ---
-title: "Fonctions de chaîne (Transact-SQL) | Documents Microsoft"
+title: "Fonctions de chaîne (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/15/2016
 ms.prod: sql-non-specified
@@ -52,11 +52,11 @@ ms.lasthandoff: 11/21/2017
 
 
   
- Chaîne intégrées toutes les fonctions sauf `FORMAT` sont déterministes. Cela signifie qu'elles renvoient la même valeur chaque fois qu'elles sont appelées par un ensemble spécifique de valeurs d'entrée. Pour plus d’informations sur le déterminisme des fonctions, consultez [fonctions déterministes et non déterministes](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md).  
+ Toutes les fonctions de chaîne intégrées sauf `FORMAT` sont déterministes. Cela signifie qu'elles renvoient la même valeur chaque fois qu'elles sont appelées par un ensemble spécifique de valeurs d'entrée. Pour plus d’informations sur le déterminisme des fonctions, consultez [Fonctions déterministes et non déterministes](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md).  
   
- Lorsque des arguments qui ne correspondent pas à des valeurs de chaîne sont passés à des fonctions de chaîne, le type d'entrée est converti implicitement en type de données texte. Pour plus d’informations, consultez [Conversion de Type de données &#40; moteur de base de données &#41;](../../t-sql/data-types/data-type-conversion-database-engine.md).  
+ Lorsque des arguments qui ne correspondent pas à des valeurs de chaîne sont passés à des fonctions de chaîne, le type d'entrée est converti implicitement en type de données texte. Pour plus d’informations, consultez [Conversion de types de données &#40;moteur de base de données&#41;](../../t-sql/data-types/data-type-conversion-database-engine.md).  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Fonctions intégrées &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)  
   
   

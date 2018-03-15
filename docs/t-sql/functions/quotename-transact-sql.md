@@ -50,10 +50,10 @@ QUOTENAME ( 'character_string' [ , 'quote_character' ] )
   
 ## <a name="arguments"></a>Arguments  
  '*character_string*'  
- Représente une chaîne de caractères au format Unicode. *Chaîne_de_caractères* est **sysname** et est limité à 128 caractères. Les entrées de plus de 128 caractères retournent une valeur NULL.  
+ Représente une chaîne de caractères au format Unicode. *character_string* est de type **sysname** et est limité à 128 caractères. Les entrées de plus de 128 caractères retournent une valeur NULL.  
   
  '*quote_character*'  
- Représente une chaîne d'un seul caractère à utiliser en tant que délimiteur. Peut être un guillemet simple ( **'** ), un crochet gauche ou droit ( **[]** ), ou un guillemet double ( **»** ). Si *caractère guillemet ne* n’est pas spécifié, les crochets sont utilisés.  
+ Représente une chaîne d'un seul caractère à utiliser en tant que délimiteur. Il peut s’agir d’une apostrophe ( **'**), d’un crochet droit ou gauche ( **[]**) ou d’un guillemet double ( **"**). Si *quote_character* n’est pas spécifié, les crochets sont utilisés.  
   
 ## <a name="return-types"></a>Types de retour  
  **nvarchar(258)**  
@@ -75,7 +75,7 @@ SELECT QUOTENAME('abc[]def');
   
  Vous remarquerez que dans la chaîne `abc[]def`, le crochet de droite est doublé pour indiquer un caractère d'échappement.  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemples : [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] et[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemples : [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] et [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  L'exemple suivant prend la chaîne de caractères `abc def` et utilise les caractères `[` `]` pour créer un identificateur délimité [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] valide.  
   
 ```  
@@ -90,7 +90,7 @@ SELECT QUOTENAME('abc def');
 (1 row(s) affected)  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [PARSENAME &#40;Transact-SQL&#41;](../../t-sql/functions/parsename-transact-sql.md)  
  [CONCAT &#40;Transact-SQL&#41;](../../t-sql/functions/concat-transact-sql.md)  
  [CONCAT_WS &#40;Transact-SQL&#41;](../../t-sql/functions/concat-ws-transact-sql.md)  
@@ -101,7 +101,7 @@ SELECT QUOTENAME('abc def');
  [STRING_ESCAPE &#40;Transact-SQL&#41;](../../t-sql/functions/string-escape-transact-sql.md)  
  [STUFF &#40;Transact-SQL&#41;](../../t-sql/functions/stuff-transact-sql.md)  
  [TRANSLATE &#40;Transact-SQL&#41;](../../t-sql/functions/translate-transact-sql.md)  
- [Fonctions de chaîne &#40; Transact-SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)  
+ [Fonctions de chaîne &#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)  
   
   
 

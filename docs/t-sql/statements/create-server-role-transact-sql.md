@@ -58,21 +58,21 @@ CREATE SERVER ROLE role_name [ AUTHORIZATION server_principal ]
  AUTHORIZATION *server_principal*  
  Compte de connexion qui détiendra le nouveau rôle de serveur. Si aucun compte de connexion n'est spécifié, le rôle de serveur appartient au compte qui exécute CREATE SERVER ROLE.  
   
-## <a name="remarks"></a>Notes  
- Les rôles de serveur sont des éléments sécurisables au niveau du serveur. Lorsque vous avez créé un rôle de serveur, configurez les autorisations au niveau serveur à l'aide des instructions GRANT, DENY et REVOKE. Pour ajouter des connexions à ou supprimer des connexions à partir d’un rôle de serveur, utilisez [ALTER SERVER ROLE &#40; Transact-SQL &#41; ](../../t-sql/statements/alter-server-role-transact-sql.md). Pour supprimer un rôle de serveur, utilisez [DROP SERVER ROLE &#40; Transact-SQL &#41; ](../../t-sql/statements/drop-server-role-transact-sql.md). Pour plus d’informations, consultez [sys.server_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md).  
+## <a name="remarks"></a>Notes   
+ Les rôles de serveur sont des éléments sécurisables au niveau du serveur. Lorsque vous avez créé un rôle de serveur, configurez les autorisations au niveau serveur à l'aide des instructions GRANT, DENY et REVOKE. Pour supprimer ou ajouter des connexions à un rôle serveur, utilisez [ALTER SERVER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-role-transact-sql.md). Pour supprimer un rôle serveur, utilisez [DROP SERVER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-server-role-transact-sql.md). Pour plus d’informations, consultez [sys.server_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md).  
   
- Vous pouvez afficher les rôles de serveur en interrogeant le [sys.server_role_members](../../relational-databases/system-catalog-views/sys-server-role-members-transact-sql.md) et [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md) affichages catalogue.  
+ Vous pouvez consulter les rôles serveur en interrogeant les vues de catalogue [sys.server_role_members](../../relational-databases/system-catalog-views/sys-server-role-members-transact-sql.md) et [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md).  
   
  L'autorisation sur les éléments sécurisables au niveau de la base de données ne peut pas être accordée aux rôles de serveur. Pour créer des rôles de base de données, consultez [CREATE ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-role-transact-sql.md).  
   
- Pour plus d’informations sur la conception d’un système d’autorisations, voir [Getting Started with Database Engine Permissions](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md).  
+ Pour plus d’informations sur la conception d’un système d’autorisations, consultez [Prise en main des autorisations du moteur de base de données](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md).  
   
 ## <a name="permissions"></a>Autorisations  
  Requiert l’autorisation CREATE SERVER ROLE ou l’appartenance au rôle serveur fixe sysadmin.  
   
  Requiert également IMPERSONATE sur *server_principal* pour les connexions, l’autorisation ALTER pour les rôles serveur utilisés comme *server_principal*ou l’appartenance à un groupe Windows utilisé comme server_principal.  
   
- Cela déclenche l’événement d’Audit Server Principal Management avec le type défini sur le rôle de serveur et le type d’événement à ajouter.  
+ Cela déclenche l’événement Audit Server Principal Management avec le type d’objet défini sur le rôle serveur et le type d’événement à ajouter.  
   
  Lorsque vous utilisez l'option AUTHORIZATION pour affecter la propriété de rôle de serveur, les autorisations suivantes sont également requises :  
   
@@ -100,7 +100,7 @@ CREATE SERVER ROLE auditors AUTHORIZATION securityadmin;
 GO  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [DROP SERVER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-server-role-transact-sql.md)   
  [Principaux &#40;moteur de base de données&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   

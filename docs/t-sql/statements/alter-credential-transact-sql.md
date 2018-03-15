@@ -1,5 +1,5 @@
 ---
-title: "Informations d’identification de ALTER (Transact-SQL) | Documents Microsoft"
+title: ALTER CREDENTIAL (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/19/2015
 ms.prod: sql-non-specified
@@ -54,20 +54,20 @@ ALTER CREDENTIAL credential_name WITH IDENTITY = 'identity_name'
  *credential_name*  
  Spécifie le nom d'une information d'identification à modifier.  
   
- IDENTITÉ **='***identity_name***'**  
+ IDENTITY **='***identity_name***'**  
  Spécifie le nom du compte à utiliser lors d'une connexion en dehors du serveur.  
   
  SECRET **='***secret***'**  
  Spécifie le secret requis pour l'authentification sortante. *secret* est facultatif.  
   
-## <a name="remarks"></a>Notes  
- Lorsqu’une information d’identification est modifiée, les valeurs des deux *identity_name* et *secret* sont réinitialisés. Si l'argument facultatif SECRET n'est pas spécifié, sa valeur stockée est NULL.  
+## <a name="remarks"></a>Notes   
+ Quand des informations d’identification sont modifiées, les valeurs d’*identity_name* et de *secret* sont réinitialisées. Si l'argument facultatif SECRET n'est pas spécifié, sa valeur stockée est NULL.  
   
  Le secret est chiffré au moyen de la clé principale du service. Si cette clé est regénérée, le secret est à nouveau chiffré à l'aide de la nouvelle clé principale du service.  
   
- Informations d’identification sont visibles dans le **sys.credentials** affichage catalogue.  
+ Des informations sur les informations d’identification sont consultables dans la vue de catalogue **sys.credentials**.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Requiert l'autorisation ALTER ANY CREDENTIAL. Si l'information d'identification est une information d'identification système, l'autorisation CONTROL SERVER est requise.  
   
 ## <a name="examples"></a>Exemples  
@@ -89,11 +89,11 @@ ALTER CREDENTIAL Frames WITH IDENTITY = 'Aboulrus8';
 GO  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- [Informations d’identification &#40; moteur de base de données &#41;](../../relational-databases/security/authentication-access/credentials-database-engine.md)   
+## <a name="see-also"></a> Voir aussi  
+ [Informations d’identification &#40;moteur de base de données&#41;](../../relational-databases/security/authentication-access/credentials-database-engine.md)   
  [CREATE CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/create-credential-transact-sql.md)   
- [SUPPRIMER les informations d’identification &#40; Transact-SQL &#41;](../../t-sql/statements/drop-credential-transact-sql.md)   
- [MODIFIER les informations d’identification inclus dans l’étendue de base de données &#40; Transact-SQL &#41;](../../t-sql/statements/alter-database-scoped-credential-transact-sql.md)   
+ [DROP CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/drop-credential-transact-sql.md)   
+ [ALTER DATABASE SCOPED CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-credential-transact-sql.md)   
  [CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md)   
  [sys.credentials &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-credentials-transact-sql.md)  
   

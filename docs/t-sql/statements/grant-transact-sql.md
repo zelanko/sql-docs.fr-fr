@@ -1,5 +1,5 @@
 ---
-title: GRANT (Transact-SQL) | Documents Microsoft
+title: GRANT (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/12/2017
 ms.prod: sql-non-specified
@@ -41,7 +41,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="grant-transact-sql"></a>GRANT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Accorde des autorisations à un principal sur un élément sécurisable.  Le concept général consiste à accorder \<des autorisations > ON \<un objet > à \<certains utilisateurs, la connexion ou le groupe >. Pour obtenir une présentation générale d’autorisations, consultez [autorisations &#40; moteur de base de données &#41;](../../relational-databases/security/permissions-database-engine.md).  
+  Accorde des autorisations à un principal sur un élément sécurisable.  Le concept général est d’ACCORDER \<une autorisation> SUR \<un objet> À \<un utilisateur, une connexion ou un groupe>. Pour obtenir une présentation générale des autorisations, consultez [Autorisations &#40;moteur de base de données&#41;](../../relational-databases/security/permissions-database-engine.md).  
   
  ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -100,32 +100,32 @@ GRANT
 PRIVILEGES  
  Inclus pour la conformité aux normes ISO. Ne change pas le comportement de l'option ALL.  
   
-*autorisation*  
+*permission*  
  Nom d'une autorisation. Les mappages valides des autorisations des éléments sécurisables sont décrits dans les sous-rubriques qui suivent.  
   
-*colonne*  
+*column*  
  Spécifie le nom de la colonne d'une table à laquelle les autorisations s'appliquent. Les parenthèses () sont requises.  
   
-*classe*  
- Indique la classe de l'élément sécurisable sur laquelle l'autorisation est accordée. Le qualificateur d’étendue **::** est requis.  
+*class*  
+ Indique la classe de l'élément sécurisable sur laquelle l'autorisation est accordée. Le qualificateur d’étendue **::** est obligatoire.  
   
-*élément sécurisable*  
+*securable*  
  Indique l'élément sécurisable sur lequel l'autorisation est accordée.  
   
-POUR *principal*  
- Est le nom d’un principal. Les principaux auxquels il est possible d'accorder des autorisations sur un élément sécurisable varient en fonction de l'élément sécurisable. Voir les sous-rubriques ci-dessous pour connaître les combinaisons acceptées.  
+TO *principal*  
+ Nom d’un principal. Les principaux auxquels il est possible d'accorder des autorisations sur un élément sécurisable varient en fonction de l'élément sécurisable. Voir les sous-rubriques ci-dessous pour connaître les combinaisons acceptées.  
   
 GRANT OPTION  
  Indique que le détenteur de l'autorisation a également la possibilité d'accorder l'autorisation spécifiée à d'autres principaux.  
   
 AS *principal*  
- Utilisez la clause principale pour indiquer que le principal enregistrées en tant que la personne qui accorde l’autorisation doit être un principal de la personne qui exécute l’instruction. Par exemple, supposons qu’utilisateur Marie est principal_id 12 et utilisateur Raul est 15 principal. Mary exécute `GRANT SELECT ON OBJECT::X TO Steven WITH GRANT OPTION AS Raul;` maintenant la table sys.database_permissions indique que le grantor_prinicpal_id a 15 (Raul), même si l’instruction a été réellement exécutée par l’utilisateur 13 (Mary).
+ Utilisez la clause AS principal pour indiquer que le principal enregistré comme entité accordant l’autorisation doit être un principal autre que la personne qui exécute l’instruction. Supposez par exemple que l’utilisateur Mary est le principal_id 12 et que l’utilisateur Raul est le principal 15. Mary exécute `GRANT SELECT ON OBJECT::X TO Steven WITH GRANT OPTION AS Raul;`. Maintenant, la table sys.database_permissions indique que le grantor_prinicpal_id était 15 (Raul), même si l’instruction a été exécutée par l’utilisateur 13 (Mary).
 
-À l’aide de la clause AS n’est généralement pas recommandé, sauf si vous devez définir explicitement la chaîne d’autorisation. Pour plus d’informations, consultez la **résumé de l’algorithme de vérification d’autorisation** section de [autorisations (moteur de base de données)](../../relational-databases/security/permissions-database-engine.md).
+L’utilisation de la clause AS n’est généralement pas recommandé, sauf si vous devez définir explicitement la chaîne d’autorisation. Pour plus d’informations, consultez la section **Synthèse sur l’algorithme de vérification des autorisations** de la rubrique [Autorisations (moteur de base de données)](../../relational-databases/security/permissions-database-engine.md).
 
-L’utilisation de, comme dans cette instruction n’implique pas la possibilité d’emprunter l’identité d’un autre utilisateur. 
+L’utilisation de AS dans cette instruction n’implique pas la possibilité d’emprunter l’identité d’un autre utilisateur. 
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  La syntaxe complète de l'instruction GRANT est complexe. Le diagramme de syntaxe ci-dessus a été simplifié pour attirer l'attention sur sa structure. La syntaxe complète d'accord des autorisations sur des éléments sécurisables particuliers est décrite dans les rubriques ci-dessous.  
   
  L'instruction REVOKE peut s'utiliser pour supprimer des autorisations accordées et l'instruction DENY pour empêcher un principal d'obtenir une autorisation particulière au moyen d'une instruction GRANT.  
@@ -140,7 +140,7 @@ L’utilisation de, comme dans cette instruction n’implique pas la possibilit�
  La procédure système stockée sp_helprotect répertorie les autorisations sur un élément sécurisable au niveau base de données.  
   
 ## <a name="with-grant-option"></a>WITH GRANT OPTION  
- Le **GRANT** ... **AVEC l’OPTION GRANT** précise que le principal de sécurité reçoit l’autorisation est la possibilité d’accorder l’autorisation spécifiée à d’autres comptes de sécurité. Lorsque l’entité qui reçoit l’autorisation est un rôle ou un groupe Windows, le **AS** clause doit être utilisée lors de l’autorisation de l’objet doit être accordée aux utilisateurs qui ne sont pas membres du groupe ou du rôle. Étant donné que seul un utilisateur, au lieu d’un groupe ou du rôle peut exécuter un **GRANT** instruction, un membre spécifique du groupe ou du rôle doit utiliser le **AS** clause pour appeler explicitement l’appartenance de groupe ou de rôle lorsque vous accordez l’autorisation. L’exemple suivant montre comment la **WITH GRANT OPTION** est utilisé quand accordé à un rôle ou un groupe Windows.  
+ **GRANT** ... **WITH GRANT OPTION** spécifie que le principal de sécurité qui reçoit l’autorisation peut accorder l’autorisation spécifiée à d’autres comptes de sécurité. Quand le principal qui reçoit l’autorisation est un rôle ou un groupe Windows, la clause **AS** doit être utilisée si l’autorisation d’objet doit être accordée à des utilisateurs qui ne sont pas membres du groupe ou du rôle. Étant donné que seul un utilisateur, et non un groupe ou un rôle, peut exécuter une instruction **GRANT**, un membre spécifique du groupe ou du rôle doit utiliser la clause **AS** pour appeler explicitement l’appartenance au rôle ou au groupe quand il accorde l’autorisation. L’exemple suivant montre comment la clause **WITH GRANT OPTION** est utilisée quand elle est accordée à un rôle ou à un groupe Windows.  
   
 ```  
 -- Execute the following as a database owner  
@@ -156,7 +156,7 @@ GRANT EXECUTE ON TestMe TO User2 AS TesterRole;
 ## <a name="chart-of-sql-server-permissions"></a>Graphique des autorisations SQL Server  
  Pour obtenir un graphique de la taille d’une affiche de toutes les autorisations du [!INCLUDE[ssDE](../../includes/ssde-md.md)] au format PDF, consultez [http://go.microsoft.com/fwlink/?LinkId=229142](http://go.microsoft.com/fwlink/?LinkId=229142).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Le fournisseur d'autorisations (ou le principal spécifié avec l'option AS) doit posséder l'autorisation elle-même avec l'option GRANT OPTION ou une autorisation plus élevée qui implique l'autorisation accordée. En cas d'utilisation de l'option AS, d'autres critères s'appliquent. Pour plus d'informations, consultez la rubrique sur les éléments sécurisables.  
   
  Les propriétaires d'objets peuvent accorder des autorisations sur les objets qu'ils possèdent. Les principaux ayant l'autorisation CONTROL sur un élément sécurisable peuvent accorder une autorisation sur cet élément.  
@@ -164,51 +164,51 @@ GRANT EXECUTE ON TestMe TO User2 AS TesterRole;
  Les détenteurs de l'autorisation CONTROL SERVER, tels que les membres du rôle serveur fixe sysadmin, peuvent accorder une autorisation sur n'importe quel élément sécurisable du serveur. Les bénéficiaires de l'autorisation CONTROL sur une base de données, tels que les membres du rôle de base de données fixe db_owner, peuvent accorder une autorisation quelconque sur tout élément sécurisable inclus dans la base de données. Les détenteurs de l'autorisation CONTROL sur un schéma peuvent accorder une autorisation sur n'importe quel objet dans ce schéma.  
   
 ## <a name="examples"></a>Exemples  
- Le tableau suivant répertorie les éléments sécurisables et les rubriques qui décrivent la syntaxe spécifique à l’élément sécurisable.  
+ Le tableau suivant répertorie les éléments sécurisables et les rubriques qui décrivent leur syntaxe.  
   
 |||  
 |-|-|  
-|Rôle d'application|[ACCORDER des autorisations de Principal de base de données &#40; Transact-SQL &#41;](../../t-sql/statements/grant-database-principal-permissions-transact-sql.md)|  
-|Assembly|[ACCORDER des autorisations sur un Assembly &#40; Transact-SQL &#41;](../../t-sql/statements/grant-assembly-permissions-transact-sql.md)|  
-|Clé asymétrique|[ACCORDER des autorisations de clé asymétrique &#40; Transact-SQL &#41;](../../t-sql/statements/grant-asymmetric-key-permissions-transact-sql.md)|  
-|Groupe de disponibilité|[Autorisations de groupe de disponibilité GRANT &#40; Transact-SQL &#41;](../../t-sql/statements/grant-availability-group-permissions-transact-sql.md)|  
-|Certificat|[Autorisations de certificat GRANT &#40; Transact-SQL &#41;](../../t-sql/statements/grant-certificate-permissions-transact-sql.md)|  
-|Contrat|[Autorisations GRANT Service Broker &#40; Transact-SQL &#41;](../../t-sql/statements/grant-service-broker-permissions-transact-sql.md)|  
-|Base de données|[Les autorisations de base de données GRANT &#40; Transact-SQL &#41;](../../t-sql/statements/grant-database-permissions-transact-sql.md)|
-|Étendue de la base de données d’informations d’identification|[Base de données de l’octroi d’une étendue d’informations d’identification (Transact-SQL)](../../t-sql/statements/grant-database-scoped-credential-transact-sql.md)|  
-|Point de terminaison|[ACCORDER des autorisations de point de terminaison &#40; Transact-SQL &#41;](../../t-sql/statements/grant-endpoint-permissions-transact-sql.md)|  
-|Catalogue de texte intégral|[Les autorisations GRANT recherche en texte intégral &#40; Transact-SQL &#41;](../../t-sql/statements/grant-full-text-permissions-transact-sql.md)|  
-|Liste de mots vides de texte intégral|[Les autorisations GRANT recherche en texte intégral &#40; Transact-SQL &#41;](../../t-sql/statements/grant-full-text-permissions-transact-sql.md)|  
-|Fonction|[ACCORDER des autorisations d’objet &#40; Transact-SQL &#41;](../../t-sql/statements/grant-object-permissions-transact-sql.md)|  
-|Connexion|[ACCORDER des autorisations de Principal de serveur &#40; Transact-SQL &#41;](../../t-sql/statements/grant-server-principal-permissions-transact-sql.md)|  
-|Type de message|[Autorisations GRANT Service Broker &#40; Transact-SQL &#41;](../../t-sql/statements/grant-service-broker-permissions-transact-sql.md)|  
-|Objet|[ACCORDER des autorisations d’objet &#40; Transact-SQL &#41;](../../t-sql/statements/grant-object-permissions-transact-sql.md)|  
-|File d'attente|[ACCORDER des autorisations d’objet &#40; Transact-SQL &#41;](../../t-sql/statements/grant-object-permissions-transact-sql.md)|  
-|Liaisons de service distant|[Autorisations GRANT Service Broker &#40; Transact-SQL &#41;](../../t-sql/statements/grant-service-broker-permissions-transact-sql.md)|  
-|Rôle|[ACCORDER des autorisations de Principal de base de données &#40; Transact-SQL &#41;](../../t-sql/statements/grant-database-principal-permissions-transact-sql.md)|  
-|Itinéraire|[Autorisations GRANT Service Broker &#40; Transact-SQL &#41;](../../t-sql/statements/grant-service-broker-permissions-transact-sql.md)|  
-|schéma|[ACCORDER des autorisations sur les schémas &#40; Transact-SQL &#41;](../../t-sql/statements/grant-schema-permissions-transact-sql.md)|  
-|Liste de propriétés de recherche|[Autorisations de liste de propriétés de recherche GRANT &#40; Transact-SQL &#41;](../../t-sql/statements/grant-search-property-list-permissions-transact-sql.md)|  
-|Server|[Autorisations de serveur GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-server-permissions-transact-sql.md)|  
-|Service|[Autorisations GRANT Service Broker &#40; Transact-SQL &#41;](../../t-sql/statements/grant-service-broker-permissions-transact-sql.md)|  
-|Procédure stockée|[ACCORDER des autorisations d’objet &#40; Transact-SQL &#41;](../../t-sql/statements/grant-object-permissions-transact-sql.md)|  
-|Clé symétrique|[ACCORDER des autorisations de clé symétrique &#40; Transact-SQL &#41;](../../t-sql/statements/grant-symmetric-key-permissions-transact-sql.md)|  
-|Synonyme|[ACCORDER des autorisations d’objet &#40; Transact-SQL &#41;](../../t-sql/statements/grant-object-permissions-transact-sql.md)|  
-|Objets système|[GRANT – octroi d’autorisations d’objet système &#40;Transact-SQL&#41;](../../t-sql/statements/grant-system-object-permissions-transact-sql.md)|  
-|Table|[ACCORDER des autorisations d’objet &#40; Transact-SQL &#41;](../../t-sql/statements/grant-object-permissions-transact-sql.md)|  
-|Type|[Type d’octroi des autorisations &#40; Transact-SQL &#41;](../../t-sql/statements/grant-type-permissions-transact-sql.md)|  
-|Utilisateur|[ACCORDER des autorisations de Principal de base de données &#40; Transact-SQL &#41;](../../t-sql/statements/grant-database-principal-permissions-transact-sql.md)|  
-|Affichage|[ACCORDER des autorisations d’objet &#40; Transact-SQL &#41;](../../t-sql/statements/grant-object-permissions-transact-sql.md)|  
-|Collection de schémas XML|[ACCORDER des autorisations de Collection de schémas XML &#40; Transact-SQL &#41;](../../t-sql/statements/grant-xml-schema-collection-permissions-transact-sql.md)|  
+|Rôle d'application|[GRANT - Octroyer des autorisations à un principal de base de données &#40;Transact-SQL&#41;](../../t-sql/statements/grant-database-principal-permissions-transact-sql.md)|  
+|Assembly|[GRANT - Accorder des autorisations sur un assembly &#40;Transact-SQL&#41;](../../t-sql/statements/grant-assembly-permissions-transact-sql.md)|  
+|Clé asymétrique|[GRANT - Octroyer des autorisations sur une clé asymétrique &#40;Transact-SQL&#41;](../../t-sql/statements/grant-asymmetric-key-permissions-transact-sql.md)|  
+|Groupe de disponibilité|[GRANT - Octroyer des autorisations sur un groupe de disponibilité &#40;Transact-SQL&#41;](../../t-sql/statements/grant-availability-group-permissions-transact-sql.md)|  
+|Certificat|[GRANT - Octroyer des autorisations sur un certificat &#40;Transact-SQL&#41;](../../t-sql/statements/grant-certificate-permissions-transact-sql.md)|  
+|Contrat|[GRANT - Octroyer des autorisations dans Service Broker &#40;Transact-SQL&#41;](../../t-sql/statements/grant-service-broker-permissions-transact-sql.md)|  
+|Base de données|[GRANT - Octroyer des autorisations sur une base de données &#40;Transact-SQL&#41;](../../t-sql/statements/grant-database-permissions-transact-sql.md)|
+|Informations d’identification délimitées à la base de données|[GRANT - Octroyer des autorisations sur les informations d’identification délimitées à la base de données (Transact-SQL)](../../t-sql/statements/grant-database-scoped-credential-transact-sql.md)|  
+|Point de terminaison|[GRANT - Octroyer des autorisations sur un point de terminaison &#40;Transact-SQL&#41;](../../t-sql/statements/grant-endpoint-permissions-transact-sql.md)|  
+|Catalogue de texte intégral|[GRANT - Octroyer des autorisations sur un catalogue de texte intégral &#40;Transact-SQL&#41;](../../t-sql/statements/grant-full-text-permissions-transact-sql.md)|  
+|Liste de mots vides de texte intégral|[GRANT - Octroyer des autorisations sur un catalogue de texte intégral &#40;Transact-SQL&#41;](../../t-sql/statements/grant-full-text-permissions-transact-sql.md)|  
+|Fonction|[GRANT – Octroyer des autorisations sur un objet &#40;Transact-SQL&#41;](../../t-sql/statements/grant-object-permissions-transact-sql.md)|  
+|Connexion|[GRANT – Octroyer des autorisations à un principal de serveur &#40;Transact-SQL&#41;](../../t-sql/statements/grant-server-principal-permissions-transact-sql.md)|  
+|Type de message|[GRANT - Octroyer des autorisations dans Service Broker &#40;Transact-SQL&#41;](../../t-sql/statements/grant-service-broker-permissions-transact-sql.md)|  
+|Object|[GRANT – Octroyer des autorisations sur un objet &#40;Transact-SQL&#41;](../../t-sql/statements/grant-object-permissions-transact-sql.md)|  
+|File d'attente|[GRANT – Octroyer des autorisations sur un objet &#40;Transact-SQL&#41;](../../t-sql/statements/grant-object-permissions-transact-sql.md)|  
+|Liaisons de service distant|[GRANT - Octroyer des autorisations dans Service Broker &#40;Transact-SQL&#41;](../../t-sql/statements/grant-service-broker-permissions-transact-sql.md)|  
+|Role|[GRANT - Octroyer des autorisations à un principal de base de données &#40;Transact-SQL&#41;](../../t-sql/statements/grant-database-principal-permissions-transact-sql.md)|  
+|Itinéraire|[GRANT - Octroyer des autorisations dans Service Broker &#40;Transact-SQL&#41;](../../t-sql/statements/grant-service-broker-permissions-transact-sql.md)|  
+|schéma|[GRANT - Octroyer des autorisations sur un schéma &#40;Transact-SQL&#41;](../../t-sql/statements/grant-schema-permissions-transact-sql.md)|  
+|Liste de propriétés de recherche|[GRANT - Accorder des autorisations sur une liste de propriétés de recherche &#40;Transact-SQL&#41;](../../t-sql/statements/grant-search-property-list-permissions-transact-sql.md)|  
+|Serveur|[GRANT Octroyer des autorisations sur un serveur &#40;Transact-SQL&#41;](../../t-sql/statements/grant-server-permissions-transact-sql.md)|  
+|Service|[GRANT - Octroyer des autorisations dans Service Broker &#40;Transact-SQL&#41;](../../t-sql/statements/grant-service-broker-permissions-transact-sql.md)|  
+|Procédure stockée|[GRANT – Octroyer des autorisations sur un objet &#40;Transact-SQL&#41;](../../t-sql/statements/grant-object-permissions-transact-sql.md)|  
+|Clé symétrique|[GRANT - Octroyer des autorisations sur une clé symétrique &#40;Transact-SQL&#41;](../../t-sql/statements/grant-symmetric-key-permissions-transact-sql.md)|  
+|Synonyme|[GRANT – Octroyer des autorisations sur un objet &#40;Transact-SQL&#41;](../../t-sql/statements/grant-object-permissions-transact-sql.md)|  
+|Objets système|[GRANT - Octroyer des autorisations sur un objet système &#40;Transact-SQL&#41;](../../t-sql/statements/grant-system-object-permissions-transact-sql.md)|  
+|Table de charge de travail|[GRANT – Octroyer des autorisations sur un objet &#40;Transact-SQL&#41;](../../t-sql/statements/grant-object-permissions-transact-sql.md)|  
+|Type|[GRANT – Octroyer des autorisations sur un type &#40;Transact-SQL&#41;](../../t-sql/statements/grant-type-permissions-transact-sql.md)|  
+|Utilisateur|[GRANT - Octroyer des autorisations à un principal de base de données &#40;Transact-SQL&#41;](../../t-sql/statements/grant-database-principal-permissions-transact-sql.md)|  
+|Affichage|[GRANT – Octroyer des autorisations sur un objet &#40;Transact-SQL&#41;](../../t-sql/statements/grant-object-permissions-transact-sql.md)|  
+|Collection de schémas XML|[GRANT – Octroyer des autorisations sur une collection de schémas XML &#40;Transact-SQL&#41;](../../t-sql/statements/grant-xml-schema-collection-permissions-transact-sql.md)|  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [DENY &#40;Transact-SQL&#41;](../../t-sql/statements/deny-transact-sql.md)   
  [REVOKE &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-transact-sql.md)   
  [sp_addlogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlogin-transact-sql.md)   
  [sp_adduser &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adduser-transact-sql.md)   
- [sp_changedbowner &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-changedbowner-transact-sql.md)   
+ [sp_changedbowner &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changedbowner-transact-sql.md)   
  [sp_dropuser &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropuser-transact-sql.md)   
- [sp_helprotect &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-helprotect-transact-sql.md)   
- [sp_helpuser &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-helpuser-transact-sql.md)  
+ [sp_helprotect &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helprotect-transact-sql.md)   
+ [sp_helpuser &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpuser-transact-sql.md)  
   
   

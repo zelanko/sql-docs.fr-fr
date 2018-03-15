@@ -1,5 +1,5 @@
 ---
-title: CORRESPONDANCE (graphique SQL) | Documents Microsoft
+title: MATCH (SQL Graph) | Microsoft Docs
 ms.custom: 
 ms.date: 05/05/2017
 ms.prod: sql-non-specified
@@ -35,7 +35,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="match-transact-sql"></a>MATCH (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 
-  Spécifie une condition de recherche pour un graphique. CORRESPONDANCE peut être utilisée uniquement avec graphique nœud bord tables et, dans l’instruction SELECT dans le cadre de la clause WHERE. 
+  Indique une condition de recherche pour un graphique. L’indicateur MATCH peut être utilisé uniquement avec des tables d’arêtes et de nœuds d’un graphique, avec la clause WHERE dans l’instruction SELECT. 
   
  ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -63,24 +63,24 @@ MATCH (<graph_search_pattern>)
 
 ## <a name="arguments"></a>Arguments  
 *graph_search_pattern*  
-Spécifie le modèle à rechercher ou chemin d’accès doit parcourir dans le graphique. Ce modèle utilise la syntaxe d’art ASCII pour parcourir un chemin d’accès dans le graphique. Le modèle s’opère à partir d’un nœud à un autre via un bord, dans la direction de la flèche fournie. Bord noms ou alias sont fournies à l’intérieur de parantheses. Noms des nœuds ou des alias apparaissent aux deux extrémités de la flèche. La flèche peut aller dans les deux sens dans le modèle.
+Spécifie le modèle à rechercher ou le chemin à parcourir dans le graphique. Ce modèle utilise la syntaxe d’art ASCII pour parcourir un chemin dans le graphique. Le modèle passe d’un nœud à un autre par une arête, dans la direction de la flèche fournie. Les noms ou alias des arêtes sont spécifiés entre parenthèses. Les noms ou alias des nœuds sont spécifiés à chaque extrémité de la flèche. La flèche peut aller dans les deux directions dans le modèle.
 
 *node_alias*  
-Nom ou l’alias d’une table de nœud fournie dans la clause FROM.
+Nom ou alias d’une table de nœuds fourni dans la clause FROM.
 
 *edge_alias*  
-Nom ou l’alias d’une table du bord fournie dans la clause FROM.
+Nom ou alias d’une table d’arêtes fourni dans la clause FROM.
 
 
-## <a name="remarks"></a>Notes  
-Les noms des nœuds à l’intérieur de correspondance peuvent être répétés.  En d’autres termes, un nœud peut être parcouru un nombre arbitraire de fois dans la même requête.  
-Un nom de session ne peut pas être répété à l’intérieur de correspondance.  
-Un bord peut pointer dans les deux sens, mais il doit avoir un sens explicite.  
-OU et pas les opérateurs ne sont pas pris en charge dans le modèle de correspondance. CORRESPONDANCE peut être combinée avec d’autres expressions à l’aide d’et dans la clause WHERE. Toutefois, l’association avec d’autres expressions à l’aide d’ou ou pas ne prend pas en charge. 
+## <a name="remarks"></a>Notes   
+Un nom de nœud peut être répété dans un indicateur MATCH.  En d’autres termes, un nœud peut être parcouru un nombre de fois arbitraire dans la même requête.  
+Un nom d’arête ne peut pas être répété dans un indicateur MATCH.  
+Une arête peut pointer dans les deux directions, mais elle doit avoir une direction explicite.  
+Les opérateurs OR et NOT ne sont pas pris en charge dans le modèle MATCH. Vous pouvez combiner MATCH avec d’autres expressions en ajoutant l’opérateur AND dans la clause WHERE. En revanche, il n’est pas possible de combiner MATCH avec d’autres expressions à l’aide des opérateurs OR et NOT. 
 
 ## <a name="examples"></a>Exemples  
 ### <a name="a--find-a-friend"></a>A.  Rechercher un ami 
- L’exemple suivant crée une table de nœud de personne et le tableau de bord de vos amis, insère des données et utilise ensuite la correspondance pour rechercher les amis d’Alice, une personne dans le graphique.
+ L’exemple suivant crée une table de nœuds Person et une table d’arêtes friends, insère des données, puis utilise MATCH pour rechercher des amis d’Alice, une personne figurant dans le graphique.
 
  ```
  -- Create person node table
@@ -110,8 +110,8 @@ AND Person1.name = 'Alice';
 
  ```
 
- ### <a name="b--find-friend-of-a-friend"></a>B.  Trouver la fonction friend d’une fonction friend
- L’exemple suivant tente de trouver la fonction friend d’une fonction friend d’Alice. 
+ ### <a name="b--find-friend-of-a-friend"></a>B.  Rechercher l’ami d’un ami
+ L’exemple suivant recherche l’ami d’un ami d’Alice. 
 
  ```
 SELECT Person3.name AS FriendName 
@@ -121,8 +121,8 @@ AND Person1.name = 'Alice';
 
  ```
 
-### <a name="c--more-match-patterns"></a>C.  Plus `MATCH` modèles
- Voici quelques-unes des plus dans lequel un modèle peut être spécifié à l’intérieur de correspondance.
+### <a name="c--more-match-patterns"></a>C.  Autres modèles `MATCH`
+ Voici d’autres façons de spécifier un modèle dans MATCH.
 
  ```
  -- Find a friend
@@ -152,7 +152,7 @@ AND Person1.name = 'Alice';
  ```
  
 
-## <a name="see-also"></a>Voir aussi  
- [CRÉER une TABLE &#40; Graphique SQL &#41;](../../t-sql/statements/create-table-sql-graph.md)   
+## <a name="see-also"></a> Voir aussi  
+ [CREATE TABLE &#40;SQL Graph&#41;](../../t-sql/statements/create-table-sql-graph.md)   
  [INSERT (SQL Graph)](../../t-sql/statements/insert-sql-graph.md)]  
- [Graphique de traitement avec SQL Server 2017](../../relational-databases/graphs/sql-graph-overview.md)  
+ [Traitement des graphiques avec SQL Server 2017](../../relational-databases/graphs/sql-graph-overview.md)  

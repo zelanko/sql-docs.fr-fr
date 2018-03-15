@@ -1,5 +1,5 @@
 ---
-title: Ajouter une SIGNATURE (Transact-SQL) | Documents Microsoft
+title: ADD SIGNATURE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 05/15/2017
 ms.prod: sql-non-specified
@@ -61,22 +61,22 @@ ADD [ COUNTER ] SIGNATURE TO module_class::module_name
  *module_class*  
  Classe du module auquel la signature est ajoutée. Valeur par défaut pour les modules dont l'étendue concerne le schéma OBJECT.  
   
- *nom_module*  
+ *module_name*  
  Nom d'une procédure stockée, d'une fonction, d'un assembly ou d'un déclencheur à signer ou à contre-signer.  
   
- CERTIFICAT *cert_name*  
+ CERTIFICATE *cert_name*  
  Nom d'un certificat avec lequel signer ou contre-signer la procédure stockée, la fonction, l'assembly ou le déclencheur.  
   
- AVEC le mot de passe ='*mot de passe*'  
+ WITH PASSWORD ='*password*'  
  Mot de passe requis pour déchiffrer la clé privée du certificat ou de la clé asymétrique. Cette clause n'est requise que si la clé privée n'est pas protégée par la clé principale de la base de données.  
   
  SIGNATURE =*signed_blob*  
- Spécifie le BLOB (Binary Large Object) signé du module. Cette clause est utile si vous souhaitez livrer un module sans fournir la clé privée. Dans ce cas, seuls le module, la signature et la clé publique sont nécessaires pour ajouter l'objet BLOB signé à une base de données. *signed_blob* est l’objet blob proprement dit au format hexadécimal.  
+ Spécifie le BLOB (Binary Large Object) signé du module. Cette clause est utile si vous souhaitez livrer un module sans fournir la clé privée. Dans ce cas, seuls le module, la signature et la clé publique sont nécessaires pour ajouter l'objet BLOB signé à une base de données. *signed_blob* est l’objet BLOB proprement dit au format hexadécimal.  
   
- CLÉ asymétrique *Asym_Key_Name*  
+ ASYMMETRIC KEY *Asym_Key_Name*  
  Nom d'une clé asymétrique avec laquelle signer ou contresigner la procédure stockée, la fonction, l'assembly ou le déclencheur.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Le module signé ou contresigné et le certificat ou la clé asymétrique utilisés pour la signature doivent déjà exister. Chaque caractère du module est inclus dans le calcul de la signature, y compris les retours chariot et les sauts de ligne.  
   
  Un module peut être signé et contresigné par n'importe quel nombre de certificats et de clés asymétriques.  
@@ -90,15 +90,15 @@ ADD [ COUNTER ] SIGNATURE TO module_class::module_name
   
  Les fonctions table inline ne peuvent pas être signées.  
   
- Des informations sur les signatures sont visibles dans l'affichage catalogue sys.crypt_properties.  
+ Des informations sur les signatures sont visibles dans la vue de catalogue sys.crypt_properties.  
   
 > [!WARNING]  
 >  Lorsqu'on recrée une procédure pour la signature, toutes les instructions du traitement d'origine doivent correspondre au traitement de recréation. Si une partie du traitement est différée, même au niveau des espaces ou des commentaires, la signature obtenue sera différente.  
   
 ## <a name="countersignatures"></a>Contre-signatures  
- Lors de l’exécution d’un module signé, les signatures sont ajoutées temporairement au jeton SQL, mais les signatures sont perdues si le module exécute un autre module, ou si le module termine l’exécution. Une contre-signature est une forme spéciale de signature. Une contre-signature seule n'accorde pas d'autorisations, mais elle permet de conserver les signatures effectuées par le même certificat ou la même clé asymétrique pendant la durée de l'appel passé à l'objet contresigné.  
+ Lors de l’exécution d’un module signé, les signatures sont ajoutées temporairement au jeton SQL, mais elles sont perdues si le module exécute un autre module ou si l’exécution du module se termine. Une contre-signature est une forme spéciale de signature. Une contre-signature seule n'accorde pas d'autorisations, mais elle permet de conserver les signatures effectuées par le même certificat ou la même clé asymétrique pendant la durée de l'appel passé à l'objet contresigné.  
   
- Par exemple, supposons que l'utilisateur Alice appelle la procédure ProcSelectT1ForAlice, qui appelle la procédure procSelectT1, qui effectue une sélection dans la table T1. Alice a l'autorisation EXECUTE sur ProcSelectT1ForAlice et procSelectT1, mais elle n'a pas d'autorisation SELECT sur T1, et aucun chaînage des propriétés n'est impliqué dans cette chaîne entière. Alice ne peut pas accéder à la table T1, que ce soit directement ou via l'utilisation de ProcSelectT1ForAlice et procSelectT1. Étant donné que nous voulons qu’Alice utilise toujours ProcSelectT1ForAlice pour l’accès, nous ne souhaitons lui accorder l’autorisation d’exécuter procSelectT1. Comment pouvons-nous effectuer cette opération ?  
+ Par exemple, supposons que l'utilisateur Alice appelle la procédure ProcSelectT1ForAlice, qui appelle la procédure procSelectT1, qui effectue une sélection dans la table T1. Alice a l'autorisation EXECUTE sur ProcSelectT1ForAlice et procSelectT1, mais elle n'a pas d'autorisation SELECT sur T1, et aucun chaînage des propriétés n'est impliqué dans cette chaîne entière. Alice ne peut pas accéder à la table T1, que ce soit directement ou via l'utilisation de ProcSelectT1ForAlice et procSelectT1. Dans la mesure où nous voulons qu’Alice utilise toujours ProcSelectT1ForAlice pour l’accès, nous ne souhaitons pas lui accorder l’autorisation d’exécuter procSelectT1. Comment pouvons-nous effectuer cette opération ?  
   
 -   Si nous signons procSelectT1, afin que procSelectT1 puisse accéder à T1, Alice peut appeler procSelectT1 directement et elle n'a pas à appeler ProcSelectT1ForAlice.  
   
@@ -106,9 +106,9 @@ ADD [ COUNTER ] SIGNATURE TO module_class::module_name
   
 -   La signature de ProcSelectT1ForAlice ne fonctionne pas seule, parce qu'elle est perdue dans l'appel à procSelectT1.  
   
-Toutefois, en contresignant procSelectT1 avec le même certificat utilisé pour signer ProcSelectT1ForAlice, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] conserve la signature sur la chaîne d’appel et autorise l’accès à T1. Si Alice essaie d'appeler procSelectT1 directement, elle ne peut pas accéder à T1, parce que la contre-signature n'accorde pas de droits. L'exemple C ci-dessous affiche le code [!INCLUDE[tsql](../../includes/tsql-md.md)] pour cet exemple.  
+Toutefois, en contresignant procSelectT1 avec le même certificat que celui utilisé pour signer ProcSelectT1ForAlice, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] conserve la signature sur la chaîne d’appel et autorise l’accès à T1. Si Alice essaie d'appeler procSelectT1 directement, elle ne peut pas accéder à T1, parce que la contre-signature n'accorde pas de droits. L'exemple C ci-dessous affiche le code [!INCLUDE[tsql](../../includes/tsql-md.md)] pour cet exemple.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l'autorisation ALTER sur l'objet et l'autorisation CONTROL sur le certificat ou la clé asymétrique. Si une clé privée associée est protégée par un mot de passe, l'utilisateur doit également disposer de ce mot de passe.  
   
 ## <a name="examples"></a>Exemples  
@@ -255,8 +255,8 @@ DROP LOGIN Alice;
   
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- [Sys.crypt_properties &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-crypt-properties-transact-sql.md)   
- [DROP SIGNATURE &#40; Transact-SQL &#41;](../../t-sql/statements/drop-signature-transact-sql.md)  
+## <a name="see-also"></a> Voir aussi  
+ [sys.crypt_properties &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-crypt-properties-transact-sql.md)   
+ [DROP SIGNATURE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-signature-transact-sql.md)  
   
   

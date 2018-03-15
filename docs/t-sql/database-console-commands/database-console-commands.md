@@ -1,5 +1,5 @@
 ---
-title: "Commandes de la Console de base de données | Documents Microsoft"
+title: Commandes DBCC (Database Console Command) | Microsoft Docs
 ms.custom: 
 ms.date: 07/16/2017
 ms.prod: sql-non-specified

@@ -1,5 +1,5 @@
 ---
-title: "RÉVOQUER des autorisations d’objet (Transact-SQL) | Documents Microsoft"
+title: "REVOKE - Révoquer des autorisations sur un objet (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/10/2017
 ms.prod: sql-non-specified
@@ -31,7 +31,7 @@ ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="revoke-object-permissions-transact-sql"></a>REVOKE – révocation d'autorisations d'objet (Transact-SQL)
+# <a name="revoke-object-permissions-transact-sql"></a>REVOKE - Révoquer des autorisations sur un objet (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Permet de révoquer des autorisations sur une table, une vue, une fonction table, une procédure stockée, une procédure stockée étendue, une fonction scalaire, une fonction d'agrégation, une file d'attente de service ou un synonyme. 
@@ -63,7 +63,7 @@ REVOKE [ GRANT OPTION FOR ] <permission> [ ,...n ] ON
 ```  
   
 ## <a name="arguments"></a>Arguments  
- *autorisation*  
+ *permission*  
  Spécifie une autorisation qui peut être révoquée sur un objet contenu dans un schéma. Pour obtenir la liste des autorisations, consultez la section Notes plus loin dans cette rubrique.  
   
  ALL  
@@ -82,13 +82,13 @@ REVOKE [ GRANT OPTION FOR ] <permission> [ ,...n ] ON
  PRIVILEGES  
  Inclus pour la compatibilité [!INCLUDE[vcpransi](../../includes/vcpransi-md.md)]-92. Ne change pas le comportement de l'option ALL.  
   
- *colonne*  
- Spécifie le nom d'une colonne dans une table, une vue ou une fonction table, pour laquelle l'autorisation doit être révoquée. Les parenthèses sont requis. Seules les autorisations SELECT, REFERENCES et UPDATE peuvent être refusées sur une colonne. *colonne* peut être spécifié dans la clause des autorisations ou après le nom de l’élément sécurisable.  
+ *column*  
+ Spécifie le nom d'une colonne dans une table, une vue ou une fonction table, pour laquelle l'autorisation doit être révoquée. Les parenthèses ( ) sont obligatoires. Seules les autorisations SELECT, REFERENCES et UPDATE peuvent être refusées sur une colonne. *column* peut être spécifié dans la clause des autorisations ou après le nom de l’élément sécurisable.  
   
- ON [objet ::] [ *schema_name* ]. *object_name*  
- Spécifie l’objet sur lequel l’autorisation est révoquée. L’expression OBJECT est facultative si *schema_name* est spécifié. Si l'expression OBJECT est utilisée, l'identificateur d'étendue (::) est requis. Si *nom_schéma* n’est pas spécifié, le schéma par défaut est utilisé. Si *schema_name* est spécifié, le qualificateur d’étendue de schéma (.) est requis.  
+ ON [ OBJECT :: ] [ *schema_name* ] . *object_name*  
+ Spécifie l’objet sur lequel l’autorisation doit être révoquée. L’expression OBJECT est facultative si *schema_name* est spécifié. Si l'expression OBJECT est utilisée, l'identificateur d'étendue (::) est requis. Si *schema_name* n’est pas spécifié, le schéma par défaut est utilisé. Si *schema_name* est spécifié, le qualificateur d’étendue de schéma (.) est obligatoire.  
   
- {À PARTIR DE | À} \<principal_base_de_données > Spécifie le principal à partir de laquelle l’autorisation est révoquée.  
+ { FROM | TO } \<database_principal> Spécifie le principal pour lequel l’autorisation est révoquée.  
   
  GRANT OPTION  
  Indique que le droit d'accorder l'autorisation spécifiée à d'autres principaux sera révoqué. L'autorisation elle-même ne sera pas révoquée.  
@@ -102,7 +102,7 @@ REVOKE [ GRANT OPTION FOR ] <permission> [ ,...n ] ON
 > [!CAUTION]  
 >  Une révocation en cascade d'une autorisation accordée avec l'option WITH GRANT OPTION entraîne la révocation des deux options GRANT et DENY de cette autorisation.  
   
- En tant que \<principal_base_de_données > Spécifie un principal à partir duquel le principal qui exécute cette requête dérive son droit de révoquer l’autorisation.  
+ AS \<database_principal> Spécifie un principal duquel le principal qui exécute cette requête dérive son droit de révoquer l’autorisation.  
   
  *Database_user*  
  Spécifie un utilisateur de base de données.  
@@ -128,8 +128,8 @@ REVOKE [ GRANT OPTION FOR ] <permission> [ ,...n ] ON
  *Database_user_with_no_login*  
  Spécifie un utilisateur de base de données sans principal au niveau serveur correspondant.  
   
-## <a name="remarks"></a>Notes  
- Des informations sur les objets sont consultables dans différents affichages catalogue. Pour plus d’informations, consultez [affichages catalogue d’objets &#40; Transact-SQL &#41; ](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md).  
+## <a name="remarks"></a>Notes   
+ Des informations sur les objets sont consultables dans différentes vues de catalogue. Pour plus d’informations, consultez [Vues de catalogue d’objets &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md).  
   
  Un objet est un élément sécurisable de niveau schéma inclus dans le schéma qui est son parent dans la hiérarchie des autorisations. Les autorisations les plus spécifiques et limitées qu'il est possible de révoquer sur un objet sont répertoriées dans le tableau ci-dessous, avec les autorisations plus générales qui les incluent de manière implicite.  
   
@@ -137,7 +137,7 @@ REVOKE [ GRANT OPTION FOR ] <permission> [ ,...n ] ON
 |-----------------------|----------------------------------|----------------------------------|  
 |ALTER|CONTROL|ALTER|  
 |CONTROL|CONTROL|CONTROL|  
-|DELETE|CONTROL|DELETE|  
+|Suppression|CONTROL|Suppression|  
 |Exécutez|CONTROL|Exécutez|  
 |INSERT|CONTROL|INSERT|  
 |RECEIVE|CONTROL|CONTROL|  
@@ -148,7 +148,7 @@ REVOKE [ GRANT OPTION FOR ] <permission> [ ,...n ] ON
 |VIEW CHANGE TRACKING|CONTROL|VIEW CHANGE TRACKING|  
 |VIEW DEFINITION|CONTROL|VIEW DEFINITION|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Requiert l'autorisation CONTROL sur l'objet.  
   
  Si vous utilisez la clause AS, le principal spécifié doit posséder l'objet sur lequel les autorisations doivent être révoquées.  
@@ -184,16 +184,16 @@ REVOKE REFERENCES (BusinessEntityID) ON OBJECT::HumanResources.vEmployee
 GO  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- [GRANT – octroi d’autorisations d’objet &#40;Transact-SQL&#41;](../../t-sql/statements/grant-object-permissions-transact-sql.md)   
- [DENY – refus d’autorisations d’objet &#40;Transact-SQL&#41;](../../t-sql/statements/deny-object-permissions-transact-sql.md)   
- [Affichages catalogue d’objets &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
+## <a name="see-also"></a> Voir aussi  
+ [GRANT – Octroyer des autorisations sur un objet &#40;Transact-SQL&#41;](../../t-sql/statements/grant-object-permissions-transact-sql.md)   
+ [DENY - Refuser des autorisations sur un objet &#40;Transact-SQL&#41;](../../t-sql/statements/deny-object-permissions-transact-sql.md)   
+ [Vues de catalogue d’objets &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [Autorisations &#40;moteur de base de données&#41;](../../relational-databases/security/permissions-database-engine.md)   
  [Principaux &#40;moteur de base de données&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
  [Securables](../../relational-databases/security/securables.md)   
  [sys.fn_builtin_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md)   
  [HAS_PERMS_BY_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/has-perms-by-name-transact-sql.md)   
- [Sys.fn_my_permissions &#40; Transact-SQL &#41;](../../relational-databases/system-functions/sys-fn-my-permissions-transact-sql.md)  
+ [sys.fn_my_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-my-permissions-transact-sql.md)  
   
   
 

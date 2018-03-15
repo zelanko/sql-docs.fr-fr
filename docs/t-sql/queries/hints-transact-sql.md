@@ -1,5 +1,5 @@
 ---
-title: Indicateurs (Transact-SQL) | Documents Microsoft
+title: Indicateurs (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/09/2017
 ms.prod: sql-non-specified
@@ -40,7 +40,7 @@ ms.lasthandoff: 01/25/2018
   Les indicateurs sont des options ou des stratégies appliquées par le processeur de requêtes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aux instructions SELECT, INSERT, UPDATE ou DELETE. Les indicateurs remplacent tout plan d'exécution pouvant être sélectionné par l'optimiseur de requête pour une requête.  
   
 > [!CAUTION]  
->  Étant donné que la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] optimiseur de requête sélectionne généralement le meilleur plan d’exécution pour une requête, nous vous recommandons \<indicateurs join_hint >, \<query_hint >, et \<indicateur de table > être utilisé qu’en dernier recours par les développeurs expérimentés et aux administrateurs de base de données.
+>  Étant donné que l’optimiseur de requête [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sélectionne généralement le meilleur plan d’exécution pour une requête, nous vous recommandons d’utiliser les indicateurs \<join_hint>, \<query_hint> et \<table_hint> uniquement en dernier recours et si vous êtes un administrateur de base de données ou un développeur expérimenté.
   
  Les indicateurs décrits dans cette section sont les suivants :  
   

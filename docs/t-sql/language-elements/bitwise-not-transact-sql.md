@@ -1,5 +1,5 @@
 ---
-title: ~ (NOT au niveau du bit) (Transact-SQL) | Documents Microsoft
+title: ~ (NOT au niveau du bit) (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 01/10/2017
 ms.prod: sql-non-specified
@@ -51,10 +51,10 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="arguments"></a>Arguments  
  *expression*  
- Valide [expression](../../t-sql/language-elements/expressions-transact-sql.md) de l’un des types de données de la catégorie de type de données entier, le **bits**, ou **binaire** ou **varbinary** des types de données. *expression* est traité comme un nombre binaire pour l’opération au niveau du bit.  
+ Toute [expression](../../t-sql/language-elements/expressions-transact-sql.md) valide de tout type de données de la catégorie entier, ou de type **bit**, **binary** ou **varbinary**. L’*expression* est traitée comme un nombre binaire pour l’opération au niveau du bit.  
   
 > [!NOTE]  
->  Seul *expression* peut être du type **binaire** ou **varbinary** type de données dans une opération au niveau du bit.  
+>  Une seule *expression* peut être de type **binary** ou **varbinary** dans une opération au niveau du bit.  
   
 ## <a name="result-types"></a>Types des résultats  
  **int** si les valeurs d’entrée sont **int**.  
@@ -63,16 +63,16 @@ ms.lasthandoff: 01/25/2018
   
  **tinyint** si les valeurs d’entrée sont **tinyint**.  
   
- **bit** si les valeurs d’entrée sont **bits**.  
+ **bit** si les valeurs d’entrée sont **bit**.  
   
-## <a name="remarks"></a>Notes  
- Le  **~**  opérateur au niveau du bit exécute un NOT logique au niveau du bit pour le *expression*, en évaluant chaque bit. Si *expression* a la valeur 0, dans le jeu de résultats, les bits sont définis sur 1 ; sinon, le bit du résultat est mis à la valeur 0. En d'autres termes, les uns sont changés en zéros et les zéros sont changés en uns.  
+## <a name="remarks"></a>Notes   
+ L’opérateur au niveau du bit **~** exécute une opération NOT logique au niveau du bit sur cette *expression*, en évaluant chaque bit. Si l’*expression* a la valeur 0, les bits du jeu de résultats prennent la valeur 1 ; sinon, le bit résultant est mis à 0. En d'autres termes, les uns sont changés en zéros et les zéros sont changés en uns.  
   
 > [!IMPORTANT]  
->  Quelle que soit l'opération au niveau du bit que vous effectuez, la longueur d'enregistrement de l'expression sur laquelle porte l'opération est importante. Il est recommandé d'utiliser le même nombre d'octets lors du stockage des valeurs. Par exemple, stocker la valeur décimale 5 en un **tinyint**, **smallint**, ou **int** produit une valeur stockée avec différents nombres d’octets : **tinyint** stocke des données à l’aide de 1 octet ; **smallint** stocke des données à l’aide de 2 octets, et **int** stocke des données à l’aide de 4 octets. Par conséquent, effectuant une opération au niveau du bit sur une **int** valeur décimale peut produire des résultats différents de ceux à l’aide d’une conversion directe de binaire ou en hexadécimale, en particulier lorsque le  **~**  (NOT au niveau du bit) opérateur est utilisé. L'opération NOT au niveau du bit peut se produire sur une variable plus courte. Dans ce cas, lorsque la variable plus courte est convertie en un type de données plus long, les bits des 8 bits de gauche risquent d'avoir une valeur imprévue. Nous vous recommandons de convertir d'abord la variable de type de données courte dans le type de données plus long, et d'exécuter ensuite l'opération NOT sur le résultat.  
+>  Quelle que soit l'opération au niveau du bit que vous effectuez, la longueur d'enregistrement de l'expression sur laquelle porte l'opération est importante. Il est recommandé d'utiliser le même nombre d'octets lors du stockage des valeurs. Par exemple, le stockage de la valeur décimale 5 en tant que **tinyint**, **smallint** ou **int** produit une valeur stockée avec des nombres d’octets différents : **tinyint** stocke les données sur un 1 octet, **smallint** sur 2 octets et **int** sur 4 octets. En conséquence, l’exécution d’une opération au niveau du bit sur une valeur décimale **int** peut produire des résultats différents de ceux de la même opération sur la même valeur traduite directement en binaire ou en hexadécimal, en particulier avec l’opérateur **~** (NOT au niveau du bit). L'opération NOT au niveau du bit peut se produire sur une variable plus courte. Dans ce cas, lorsque la variable plus courte est convertie en un type de données plus long, les bits des 8 bits de gauche risquent d'avoir une valeur imprévue. Nous vous recommandons de convertir d'abord la variable de type de données courte dans le type de données plus long, et d'exécuter ensuite l'opération NOT sur le résultat.  
   
 ## <a name="examples"></a>Exemples  
- L’exemple suivant crée une table à l’aide de la **int** type pour stocker les valeurs de données et insère les deux valeurs dans une ligne.  
+ Cet exemple crée une table en utilisant le type de données **int** pour stocker les valeurs et insère les deux valeurs dans une ligne.  
   
 ```  
 CREATE TABLE bitwise  
@@ -115,10 +115,10 @@ FROM bitwise;
 ```  
   
  
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
- [Operators &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
- [Opérateurs de bits &#40; Transact-SQL &#41;](../../t-sql/language-elements/bitwise-operators-transact-sql.md)  
+ [Opérateurs &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
+ [Opérateurs au niveau du bit &#40;Transact-SQL&#41;](../../t-sql/language-elements/bitwise-operators-transact-sql.md)  
   
   
 

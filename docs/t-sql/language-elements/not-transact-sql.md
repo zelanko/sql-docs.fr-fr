@@ -49,7 +49,7 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="arguments"></a>Arguments  
  *boolean_expression*  
- Est un booléen valide [expression](../../t-sql/language-elements/expressions-transact-sql.md).  
+ Toute [expression](../../t-sql/language-elements/expressions-transact-sql.md) booléenne valide.  
   
 ## <a name="result-types"></a>Types des résultats  
  **Booléen**  
@@ -57,7 +57,7 @@ ms.lasthandoff: 01/25/2018
 ## <a name="result-value"></a>Valeur des résultats  
  NOT inverse la valeur d'une expression booléenne.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  NOT inverse une expression.  
   
  Le tableau suivant indique le résultat de la comparaison des valeurs TRUE et FALSE avec l'opérateur NOT.  
@@ -93,8 +93,8 @@ GO
  (6 row(s) affected)
  ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemples : [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] et[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- L’exemple suivant limite les résultats à `SalesOrderNumber` en commençant par les valeurs `SO6` et `ProductKeys` supérieur ou égal à 400.  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemples : [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] et [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+ L’exemple suivant limite les résultats aux `SalesOrderNumber` dont les valeurs commencent par `SO6` et dont la valeur `ProductKeys` est supérieure ou égale à 400.  
   
 ```  
 -- Uses AdventureWorks  
@@ -104,10 +104,10 @@ FROM FactInternetSales
 WHERE SalesOrderNumber LIKE 'SO6%' AND NOT ProductKey < 400;  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
  [Fonctions intégrées &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)   
- [Operators &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
+ [Opérateurs &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [WHERE &#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md)  
   

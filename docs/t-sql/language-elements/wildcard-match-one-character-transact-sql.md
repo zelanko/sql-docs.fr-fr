@@ -1,5 +1,5 @@
 ---
-title: "_ (Caractère générique - représente un caractère) (Transact-SQL) | Documents Microsoft"
+title: "_ (Caractère générique - Recherche d’un seul caractère) (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 12/06/2016
 ms.prod: sql-non-specified
@@ -41,13 +41,13 @@ ms.lasthandoff: 01/25/2018
 # <a name="-wildcard---match-one-character-transact-sql"></a>_ (Caractère générique - recherche de correspondance d'un seul caractère) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Utilisez le caractère de soulignement _ pour correspondre à n’importe quel caractère unique dans une opération de comparaison de chaînes qui inclut des critères spéciaux, tels que `LIKE` et `PATINDEX`.  
+Utilisez le trait de soulignement _ pour recherche un caractère unique dans une opération de comparaison de chaînes qui inclut des critères spéciaux, comme `LIKE` et `PATINDEX`.  
   
 ## <a name="examples"></a>Exemples  
 
-## <a name="a-simple-example"></a>R : exemple simple de   
+## <a name="a-simple-example"></a>A. Exemple simple   
 
-L’exemple suivant retourne tous les noms qui commencent par la lettre de la base de données `m` et avoir la lettre `d` la troisième lettre. Le caractère de soulignement Spécifie que le deuxième caractère du nom peut être n’importe quelle lettre. Le `model` et `msdb` bases de données répondent à ces critères. Le `master` n’est pas le cas de base de données.
+L’exemple suivant retourne tous les noms de base de données qui commencent par la lettre `m` et dont la troisième lettre est `d`. Le caractère de soulignement indique que le deuxième caractère du nom peut être n’importe quelle lettre. Les bases de données `model` et `msdb` répondent à ces critères. La base de données `master` n’y répond pas.
 
 ```sql
 SELECT name FROM sys.databases
@@ -60,12 +60,12 @@ name
 model
 msdb
 ```   
-Vous pouvez avoir des bases de données supplémentaires qui répondent à ces critères.
+Vous pouvez avoir d’autres bases de données qui répondent à ces critères.
 
-Vous pouvez utiliser plusieurs traits de soulignement pour représenter plusieurs caractères. Modification de la `LIKE` critères pour inclure les deux traits de soulignement `'m__%` inclut la base de données master dans le résultat.
+Vous pouvez utiliser plusieurs traits de soulignement pour représenter plusieurs caractères. Si vous modifiez les critères `LIKE` de sorte à inclure deux traits de soulignement `'m__%`, alors la base de données MASTER est incluse dans les résultats.
 
-### <a name="b-more-complex-example"></a>B : exemple plus complexe.
- L’exemple suivant utilise l’opérateur _ pour rechercher tous les habitants de la `Person` table, qui ont un prénom de trois lettres se terminant par `an`.  
+### <a name="b-more-complex-example"></a>B. Exemple plus complexe
+ Cet exemple utilise l’opérateur _ pour rechercher toutes les personnes figurant dans la table `Person` qui ont un prénom en trois lettres se terminant par `an`.  
   
 ```sql  
 -- USE AdventureWorks2012
@@ -75,21 +75,21 @@ FROM Person.Person
 WHERE FirstName LIKE '_an'  
 ORDER BY FirstName;  
 ```  
-## <a name="c-escaping-the-underscore-character"></a>C: échappement le caractère de soulignement   
-L’exemple suivant retourne les noms des rôles de base de données fixe comme `db_owner` et `db_ddladmin`, mais elle retourne également la `dbo` utilisateur. 
+## <a name="c-escaping-the-underscore-character"></a>C. Échappement du caractère de soulignement   
+L’exemple suivant retourne les noms des rôles de base de données fixes comme `db_owner` et `db_ddladmin`, mais elle retourne également l’utilisateur `dbo`. 
 
 ```sql
 SELECT name FROM sys.database_principals
 WHERE name LIKE 'db_%';
 ```
 
-Le trait de soulignement en troisième position de caractère est considéré comme un caractère générique et n’est pas le filtrage pour seulement les entités en commençant par les lettres `db_`. Pour échapper le caractère de soulignement entre crochets `[_]`. 
+Le trait de soulignement en troisième position de caractère est considéré comme un caractère générique et ne permet pas de filtrer seulement les principaux qui commencent par les lettres `db_`. Pour échapper le trait de soulignement, placez-le entre crochets `[_]`. 
 
 ```sql
 SELECT name FROM sys.database_principals
 WHERE name LIKE 'db[_]%';
 ```   
-Maintenant le `dbo` utilisateur est exclu.   
+Maintenant, l’utilisateur `dbo` est exclu.   
 [!INCLUDE[ssResult_md](../../includes/ssresult-md.md)]   
 ```
 name
@@ -101,10 +101,10 @@ db_securityadmin
 ```
 
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [LIKE &#40;Transact-SQL&#41;](../../t-sql/language-elements/like-transact-sql.md)   
  [PATINDEX &#40;Transact-SQL&#41;](../../t-sql/functions/patindex-transact-sql.md)   
-  [% (Caractère générique - caractères à comparer)](../../t-sql/language-elements/percent-character-wildcard-character-s-to-match-transact-sql.md)   
-  [&#91; &#93; (Caractère générique - caractères à comparer)](../../t-sql/language-elements/wildcard-character-s-to-match-transact-sql.md)   
- [&#91; ^ &#93; (Caractère générique - caractères à ne pas faire correspondre)](../../t-sql/language-elements/wildcard-character-s-not-to-match-transact-sql.md)     
+  [% (Caractère générique - Caractères à rechercher)](../../t-sql/language-elements/percent-character-wildcard-character-s-to-match-transact-sql.md)   
+  [&#91; &#93; (Caractère générique - Caractères à rechercher)](../../t-sql/language-elements/wildcard-character-s-to-match-transact-sql.md)   
+ [&#91;^&#93; (Caractère générique - Caractères à exclure)](../../t-sql/language-elements/wildcard-character-s-not-to-match-transact-sql.md)     
   

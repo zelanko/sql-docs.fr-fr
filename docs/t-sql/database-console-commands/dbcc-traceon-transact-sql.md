@@ -60,14 +60,14 @@ Active globalement les indicateurs de trace spécifiés.
 WITH NO_INFOMSGS  
 Supprime tous les messages d'information.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
 Sur un serveur de production, pour éviter un comportement imprévisible, il est recommandé d'activer uniquement les indicateurs de trace à l'échelle du serveur à l'aide de l'une des méthodes suivantes :
--   Utilisez le **-T** option de démarrage de ligne de commande de Sqlservr.exe. Cette pratique est recommandée car elle garantit que toutes les instructions sont exécutées avec l'indicateur de trace activé. Celles-ci comprennent les commandes des scripts de démarrage. Pour plus d’informations, consultez [sqlservr Application](../../tools/sqlservr-application.md).  
--   Utilisez DBCC TRACEON  **(*** trace #* [**,**... *.n*]**, -1)** uniquement pendant que les utilisateurs ou applications sont simultanément exécute pas les instructions sur le système.  
+-   Utilisez l’option de démarrage de ligne de commande **-T** de Sqlservr.exe. Cette pratique est recommandée car elle garantit que toutes les instructions sont exécutées avec l'indicateur de trace activé. Celles-ci comprennent les commandes des scripts de démarrage. Pour plus d’informations, consultez [sqlservr Application](../../tools/sqlservr-application.md).  
+-   Utilisez DBCC TRACEON **(***trace#* [**,** ...*.n*]**,-1)** uniquement quand des utilisateurs ou des applications ne sont pas simultanément en train d’exécuter des instructions sur le système.  
 
 Les indicateurs de trace permettent de personnaliser certaines caractéristiques en contrôlant le fonctionnement de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Les indicateurs de trace, une fois activés, le restent sur le serveur jusqu'à ce qu'ils soient désactivés lors de l'exécution de l'instruction DBCC TRACEOFF. Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], il existe deux types d'indicateurs de trace : les indicateurs de trace de session et les indicateurs de trace globaux. Les indicateurs de trace de session sont actifs pour une connexion et visibles uniquement pour celle-ci. Les indicateurs de trace globaux sont définis au niveau du serveur et sont visibles pour chaque connexion sur celui-ci. Pour déterminer l'état des indicateurs de trace, utilisez l'instruction DBCC TRACESTATUS. Pour désactiver certains indicateurs de trace, exécutez DBCC TRACEOFF.
   
-Après avoir activé un indicateur de trace qui affecte les plans de requête, exécutez `DBCC FREEPROCCACHE;` afin que les plans mis en cache sont recompilées à l’aide du nouveau comportement affectant le plan.
+Après avoir activé un indicateur de trace qui affecte les plans de requête, exécutez `DBCC FREEPROCCACHE;` afin que les plans mis en cache soient recompilés à l’aide du nouveau comportement affectant le plan.
   
 ## <a name="result-sets"></a>Jeux de résultats  
  DBCC TRACEON retourne le jeu de résultats suivant (message) :  
@@ -101,11 +101,11 @@ DBCC TRACEON (3205, 260, -1);
 GO  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)  
 [DBCC TRACEOFF &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceoff-transact-sql.md)  
 [DBCC TRACESTATUS &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-tracestatus-transact-sql.md)  
 [Indicateurs de trace &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)  
-[Activer affectant le plan requête optimiseur comportement de SQL Server qui peut être contrôlé par des indicateurs de trace différents à un niveau de requête spécifiques](https://support.microsoft.com/kb/2801413)
+[Activer un comportement de l’optimiseur de requête SQL Server affectant le plan qui peut être contrôlé par différents indicateurs de trace à un niveau de requête spécifique](https://support.microsoft.com/kb/2801413)
   
   

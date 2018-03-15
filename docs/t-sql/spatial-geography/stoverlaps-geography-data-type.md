@@ -1,5 +1,5 @@
 ---
-title: "STOverlaps (Type de données geography) | Documents Microsoft"
+title: "STOverlaps (type de données geography) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -31,7 +31,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stoverlaps-geography-data-type"></a>STOverlaps (type de données geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Retourne 1 si une **geography** instance en chevauche une autre SPATIALEMENT **geography** instance, ou 0 s’il n’existe pas.  
+  Retourne 1 si une instance **geography** chevauche une autre instance **geography** de manière spatiale, ou 0 dans le cas contraire.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -42,18 +42,18 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="arguments"></a>Arguments  
  *other_geography*  
- Une autre **geography** instance à comparer à l’instance sur laquelle `STOverlaps()` est appelé.  
+ Autre instance **geography** à comparer à l’instance sur laquelle `STOverlaps()` est appelé.  
   
 ## <a name="return-types"></a>Types de retour  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]type de retour : **bits**  
+ Type de retour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] : **bit**  
   
  Type de retour CLR : **SqlBoolean**  
   
-## <a name="remarks"></a>Notes  
- Cette méthode retourne toujours null si l’ID de référence spatiale (SRID) de la **geography** instances ne correspondent pas.  
+## <a name="remarks"></a>Notes   
+ Cette méthode retourne toujours une valeur Null si les SRID (ID de référence spatiale) des instances **geography** ne correspondent pas.  
   
 ## <a name="examples"></a>Exemples  
- L’exemple suivant utilise `STOverlaps()` pour tester deux **geography** instances se chevauchent.  
+ L’exemple suivant utilise `STOverlaps()` pour tester si deux instances **geography** se chevauchent.  
   
 ```  
 DECLARE @g geography;  

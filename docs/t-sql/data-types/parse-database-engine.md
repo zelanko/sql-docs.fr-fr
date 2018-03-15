@@ -1,5 +1,5 @@
 ---
-title: "Parse (moteur de base de données) | Documents Microsoft"
+title: "Parse (moteur de base de données) | Microsoft Docs"
 ms.custom: 
 ms.date: 7/22/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="parse-database-engine"></a>Parse (moteur de base de données)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-Parse convertit la représentation sous forme de chaîne canonique d’un **hierarchyid** à un **hierarchyid** valeur. L’analyse est appelée implicitement lorsqu’une conversion d’un type chaîne en **hierarchyid** se produit. Agit comme l’opposé de [ToString](../../t-sql/data-types/tostring-database-engine.md). Parse() est une méthode statique.
+Parse convertit la représentation de chaîne canonique d’un **hierarchyid** en valeur **hierarchyid**. Parse est appelée implicitement quand une conversion d’un type chaîne en **hierarchyid** se produit. Agit comme l’opposé de [ToString](../../t-sql/data-types/tostring-database-engine.md). Parse() est une méthode statique.
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -52,23 +52,23 @@ static SqlHierarchyId Parse ( SqlString input )
 ```  
   
 ## <a name="arguments"></a>Arguments  
-*entrée*  
+*input*  
 [!INCLUDE[tsql](../../includes/tsql-md.md)] : valeur du type de données character converti.
   
 CLR : valeur de chaîne évaluée.
   
 ## <a name="return-types"></a>Types de retour  
-**SQL Server de type de retour : hierarchyid**
+**Type de retour SQL Server : hierarchyid**
   
-**CLR de type de retour : SqlHierarchyId**
+**Type de retour CLR : SqlHierarchyId**
   
-## <a name="remarks"></a>Notes  
-Si l’analyse reçoit une valeur qui n’est pas une représentation sous forme de chaîne valide d’un **hierarchyid**, une exception est levée. Par exemple, si **char** contiennent des types de données des espaces de fin, une exception est levée.
+## <a name="remarks"></a>Notes   
+Si Parse reçoit une valeur qui n’est pas une représentation de chaîne valide d’un **hierarchyid**, une exception est levée. Par exemple, si les types de données **char** contiennent des espaces de fin, une exception est levée.
   
 ## <a name="examples"></a>Exemples  
   
 ### <a name="a-converting-transact-sql-values-without-a-table"></a>A. Conversion de valeurs Transact-SQL sans table  
-Le de code suivant montre comment utiliser `ToString` pour convertir un **hierarchyid** valeur à une chaîne, et `Parse` pour convertir une valeur de chaîne en un **hierarchyid**.
+L’exemple de code suivant utilise `ToString` pour convertir une valeur **hierarchyid** en une chaîne et `Parse` pour convertir une valeur de chaîne en **hierarchyid**.
   
 ```sql
 DECLARE @StringValue AS nvarchar(4000), @hierarchyidValue AS hierarchyid  
@@ -89,7 +89,7 @@ hierarchyidRepresentation    StringRepresentation
 ```
   
 ### <a name="b-clr-example"></a>B. Exemple CLR  
-L’extrait de code suivant appelle la méthode Parse() :
+L’extrait de code suivant appelle la méthode Parse() :
   
 ```sql
 string input = “/1/2/”;  

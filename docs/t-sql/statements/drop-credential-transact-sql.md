@@ -1,5 +1,5 @@
 ---
-title: "Informations d’identification de dépôt (Transact-SQL) | Documents Microsoft"
+title: DROP CREDENTIAL (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/19/2015
 ms.prod: sql-non-specified
@@ -54,15 +54,15 @@ DROP CREDENTIAL credential_name
  *credential_name*  
  Nom des informations d'identification à supprimer du serveur.  
   
-## <a name="remarks"></a>Notes  
- Pour supprimer le secret associé aux informations d’identification sans supprimer les informations d’identification lui-même, utilisez [ALTER CREDENTIAL](../../t-sql/statements/alter-credential-transact-sql.md).  
+## <a name="remarks"></a>Notes   
+ Pour supprimer le secret associé aux informations d’identification sans supprimer les informations d’identification elles-mêmes, utilisez [ALTER CREDENTIAL](../../t-sql/statements/alter-credential-transact-sql.md).  
   
- Informations d’identification sont visibles dans le **sys.credentials** affichage catalogue.  
+ Des informations sur les informations d’identification sont consultables dans la vue de catalogue **sys.credentials**.  
   
 > [!WARNING]  
->  Les proxies sont associés à des informations d'identification. La suppression d'informations d'identification utilisées par un proxy rend le proxy associé inutilisable. Lorsque vous supprimez les informations d’identification utilisées par un proxy, supprimez le proxy (à l’aide de [sp_delete_proxy &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-delete-proxy-transact-sql.md) et recréez le proxy associé à l’aide de [sp_add_proxy &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-add-proxy-transact-sql.md).  
+>  Les proxies sont associés à des informations d'identification. La suppression d'informations d'identification utilisées par un proxy rend le proxy associé inutilisable. Quand vous supprimez des informations d’identification utilisées par un proxy, supprimez le proxy (à l’aide de [sp_delete_proxy &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-proxy-transact-sql.md)) et recréez le proxy associé à l’aide de [sp_add_proxy &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-proxy-transact-sql.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Requiert l'autorisation ALTER ANY CREDENTIAL. Pour la suppression d'informations d'identification système, l'autorisation CONTROL SERVER est requise.  
   
 ## <a name="examples"></a>Exemples  
@@ -73,11 +73,11 @@ DROP CREDENTIAL Saddles;
 GO  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- [Informations d’identification &#40; moteur de base de données &#41;](../../relational-databases/security/authentication-access/credentials-database-engine.md)   
+## <a name="see-also"></a> Voir aussi  
+ [Informations d’identification &#40;moteur de base de données&#41;](../../relational-databases/security/authentication-access/credentials-database-engine.md)   
  [CREATE CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/create-credential-transact-sql.md)   
- [ALTER CREDENTIAL &#40; Transact-SQL &#41;](../../t-sql/statements/alter-credential-transact-sql.md)   
- [SUPPRIMER les informations d’identification inclus dans l’étendue de base de données &#40; Transact-SQL &#41;](../../t-sql/statements/drop-database-scoped-credential-transact-sql.md)   
+ [ALTER CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/alter-credential-transact-sql.md)   
+ [DROP DATABASE SCOPED CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/drop-database-scoped-credential-transact-sql.md)   
  [sys.credentials &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-credentials-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: NOMBRE (Transact-SQL) | Documents Microsoft
+title: COUNT (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
@@ -39,7 +39,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="count-transact-sql"></a>COUNT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-Retourne le nombre d'éléments figurant dans un groupe. COUNT fonctionne comme le [COUNT_BIG](../../t-sql/functions/count-big-transact-sql.md) (fonction). Elles diffèrent uniquement au niveau des valeurs renvoyées : COUNT renvoie toujours une **int** valeur de type de données. COUNT_BIG retourne toujours un **bigint** valeur de type de données.
+Retourne le nombre d'éléments figurant dans un groupe. COUNT fonctionne comme la fonction [COUNT_BIG](../../t-sql/functions/count-big-transact-sql.md). Elles diffèrent uniquement au niveau des valeurs renvoyées : COUNT renvoie toujours une valeur de type de données **int**. COUNT_BIG renvoie toujours une valeur de type de données **bigint**.
   
 ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -74,23 +74,23 @@ DISTINCT
 Précise que la fonction COUNT doit renvoyer le nombre de valeurs non nulles uniques.
   
 *expression*  
-Est un [expression](../../t-sql/language-elements/expressions-transact-sql.md) de n’importe quel type sauf **texte**, **image**, ou **ntext**. Les fonctions d'agrégation et les sous-requêtes ne sont pas autorisées.
+[Expression](../../t-sql/language-elements/expressions-transact-sql.md) de tout type, sauf **text**, **image** et **ntext**. Les fonctions d'agrégation et les sous-requêtes ne sont pas autorisées.
   
 \*  
-Spécifie que toutes les lignes doivent être comptées pour renvoyer le nombre total de lignes de la table. NOMBRE (\*) ne prend aucun paramètre et ne peut pas être utilisé avec DISTINCT. NOMBRE (\*) ne nécessite pas une *expression* paramètre car, par définition, elle n’utilise pas d’informations sur une colonne particulière. COUNT(*) calcule le nombre de lignes de la table spécifiée sans supprimer les doublons. Il compte chaque ligne séparément, y compris les lignes qui contiennent des valeurs NULL.
+Spécifie que toutes les lignes doivent être comptées pour renvoyer le nombre total de lignes de la table. La fonction COUNT(\*) ne requiert aucun paramètre et ne peut pas être utilisée avec la fonction DISTINCT. COUNT(\*) ne nécessite pas de paramètre *expression* puisque, par définition, elle n’utilise les données d’aucune colonne en particulier. COUNT(*) calcule le nombre de lignes de la table spécifiée sans supprimer les doublons. Il compte chaque ligne séparément, y compris les lignes qui contiennent des valeurs NULL.
   
-SUR **(** [ *partition_by_clause* ] [ *order_by_clause* ] [ *ROW_or_RANGE_clause* ] **)**  
-*partition_by_clause* divise le jeu de résultats généré par la clause FROM en partitions auxquelles la fonction est appliquée. S'il n'est pas spécifié, la fonction gère toutes les lignes du jeu de résultats de la requête en un seul groupe. *order_by_clause* détermine l’ordre logique dans lequel l’opération est effectuée. Pour plus d’informations, consultez [la Clause OVER &#40; Transact-SQL &#41; ](../../t-sql/queries/select-over-clause-transact-sql.md).
+OVER **(** [ *partition_by_clause* ] [ *order_by_clause* ] [ *ROW_or_RANGE_clause* ] **)**  
+*partition_by_clause* divise le jeu de résultats généré par la clause FROM en partitions auxquelles la fonction est appliquée. S'il n'est pas spécifié, la fonction gère toutes les lignes du jeu de résultats de la requête en un seul groupe. *order_by_clause* détermine l’ordre logique dans lequel l’opération est effectuée. Pour plus d’informations, consultez [OVER, clause &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md).
   
 ## <a name="return-types"></a>Types de retour
- **int**  
+ **Int**  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
 COUNT(*) renvoie le nombre d'éléments figurant dans un groupe. y compris les valeurs NULL et les doublons.
   
-NOMBRE (tous les *expression*) prend la valeur *expression* pour chaque ligne d’un groupe et renvoie le nombre de valeurs non null.
+COUNT(ALL *expression*) évalue l’argument *expression* pour chaque ligne d’un groupe et renvoie le nombre de valeurs non-NULL.
   
-COUNT (DISTINCT *expression*) prend la valeur *expression* pour chaque ligne d’un groupe et renvoie le nombre de valeurs uniques, non nulles.
+COUNT(DISTINCT *expression*) évalue l’argument *expression* pour chaque ligne d’un groupe et renvoie le nombre de valeurs non-NULL uniques.
   
 Pour des valeurs renvoyées supérieures à 2^31-1, COUNT produit une erreur. Utilisez COUNT_BIG à la place.
   
@@ -196,10 +196,10 @@ Tool Design                   8.62                  29.8462               23.505
 (16 row(s) affected)
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemples : [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] et[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemples : [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] et [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="e-using-count-and-distinct"></a>E. Utilisation de COUNT et DISTINCT  
-L’exemple suivant répertorie le nombre de titres différents qu’un employé qui travaille dans une société spécifique peut contenir.
+L’exemple suivant répertorie le nombre de titres différents qu’un employé d’une société spécifique peut détenir.
   
 ```sql
 USE ssawPDW;  
@@ -216,7 +216,7 @@ FROM dbo.DimEmployee;
 ```  
   
 ### <a name="f-using-count"></a>F. Utilisation de COUNT(*)  
-L’exemple suivant retourne le nombre total de lignes dans la `dbo.DimEmployee` table.
+L’exemple suivant renvoie le nombre total de lignes dans la table `dbo.DimEmployee`.
   
 ```sql
 USE ssawPDW;  
@@ -233,7 +233,7 @@ FROM dbo.DimEmployee;
 ```  
   
 ### <a name="g-using-count-with-other-aggregates"></a>G. Utilisation de COUNT(*) avec d'autres fonctions d'agrégation  
-L’exemple suivant combine `COUNT(*)` avec d’autres fonctions d’agrégation dans la liste de sélection. La requête retourne le nombre de représentants commerciaux avec un quota de ventes annuel est supérieur à 500 000 $ et le quota de ventes moyenne.
+L’exemple suivant associe `COUNT(*)` et d’autres fonctions d’agrégation dans la liste SELECT. La requête renvoie le nombre de représentants commerciaux avec un quota de ventes annuel supérieur à 500 000 $ et le quota de ventes moyen.
   
 ```sql
 USE ssawPDW;  
@@ -252,8 +252,8 @@ TotalCount  Average Sales Quota
 10          683800.0000
 ```
   
-### <a name="h-using-count-with-having"></a>H. À l’aide de COUNT avec HAVING  
-L’exemple suivant utilise le nombre avec la clause HAVING pour retourner les départements de l’entreprise qui ont plus de 15 employés.
+### <a name="h-using-count-with-having"></a>H. Utilisation de COUNT avec HAVING  
+L’exemple suivant utilise COUNT avec la clause HAVING pour renvoyer les départements de plus de 15 employés d’une entreprise.
   
 ```sql
 USE ssawPDW;  
@@ -274,8 +274,8 @@ Sales           18
 Production      179
 ```
   
-### <a name="i-using-count-with-over"></a>I. À l’aide de COUNT avec basculement  
-L’exemple suivant utilise le nombre avec la clause OVER pour retourner le nombre de produits qui sont contenus dans chacune des commandes client spécifiés.
+### <a name="i-using-count-with-over"></a>I. Utilisation de COUNT avec OVER  
+L’exemple suivant utilise COUNT avec la clause OVER pour renvoyer le nombre de produits qui sont contenus dans chacune des commandes client spécifiées.
   
 ```sql
 USE ssawPDW;  
@@ -296,9 +296,9 @@ ProductCount   SalesOrderID`
 ```
   
 ## <a name="see-also"></a>Voir aussi
-[Fonctions d’agrégation &#40; Transact-SQL &#41;](../../t-sql/functions/aggregate-functions-transact-sql.md)  
-[COUNT_BIG &#40; Transact-SQL &#41;](../../t-sql/functions/count-big-transact-sql.md)  
-[SUR la clause for &#40; Transact-SQL &#41;](../../t-sql/queries/select-over-clause-transact-sql.md)
+[Fonctions d’agrégation &#40;Transact-SQL&#41;](../../t-sql/functions/aggregate-functions-transact-sql.md)  
+[COUNT_BIG &#40;Transact-SQL&#41;](../../t-sql/functions/count-big-transact-sql.md)  
+[OVER, clause &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)
   
   
 

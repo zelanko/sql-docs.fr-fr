@@ -1,5 +1,5 @@
 ---
-title: "géométrie (Transact-SQL) | Documents Microsoft"
+title: geometry (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -31,14 +31,14 @@ ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="spatial-types---geometry-transact-sql"></a>Types de données spatiales - géométrie (Transact-SQL)
+# <a name="spatial-types---geometry-transact-sql"></a>Types spatiaux - geometry (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Le type de données spatiales PLANAIRE **geometry**, est implémenté comme un type de données common language runtime (CLR) dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Ce type représente des données dans un système de coordonnées euclidien (plat).  
+  Le type de données spatiales planaire, **geometry**, est implémenté en tant que type de données CLR (Common Language Runtime) dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Ce type représente des données dans un système de coordonnées euclidien (plat).  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]prend en charge un ensemble de méthodes pour la **geometry** type de données spatiales. Ces méthodes incluent des méthodes sur **geometry** qui sont définies par la norme Open Geospatial Consortium (OGC) et un ensemble de [!INCLUDE[msCoName](../../includes/msconame-md.md)] extensions de cette norme.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend en charge un ensemble de méthodes pour le type de données spatiales **geometry**. Ces méthodes incluent des méthodes sur **geometry**, définies par la norme OGC (Open Geospatial Consortium), et un ensemble d’extensions [!INCLUDE[msCoName](../../includes/msconame-md.md)] de cette norme.  
  
- La tolérance d’erreur pour les méthodes de géométrie peut être aussi volumineux que 1.0E-7 * étendues. Les extensions de faire référence à la distance maximale approximative entre les points de la **geometry**objet.
+ La tolérance d’erreur des méthodes geometry peut aller jusqu’à 1e-7 * étendues. Les étendues font référence à la distance maximale approximative entre les points de l’objet **geometry**.
   
 ## <a name="registering-the-geometry-type"></a>Inscription du type geometry  
  Le type **geometry** est prédéfini et disponible dans chaque base de données. Vous pouvez créer des colonnes de table de type **geometry** et opérer sur les données **geometry** comme vous le feriez avec d'autres types CLR. Peut être utilisé dans les colonnes calculées persistantes et non persistantes.  
@@ -46,7 +46,7 @@ ms.lasthandoff: 01/25/2018
 ## <a name="examples"></a>Exemples  
   
 ### <a name="a-showing-how-to-add-and-query-geometry-data"></a>A. Illustration de l'ajout et de l'interrogation des données géométriques  
- Les deux exemples suivants montrent comment ajouter et interroger des données géométriques. Le premier exemple crée une table avec une colonne d’identité et une `geometry` colonne, `GeomCol1`. Une troisième colonne restitue la colonne `geometry` dans sa représentation OGC (Open Geospatial Consortium) WKT (Well-Known Text) et utilise la méthode `STAsText()` . Deux lignes sont ensuite insérées : une ligne contient une instance `LineString` de `geometry`et une ligne contient une instance `Polygon` .  
+ Les deux exemples suivants montrent comment ajouter et interroger des données géométriques. Le premier exemple crée une table avec une colonne d’identité et une colonne `geometry`, `GeomCol1`. Une troisième colonne restitue la colonne `geometry` dans sa représentation OGC (Open Geospatial Consortium) WKT (Well-Known Text) et utilise la méthode `STAsText()` . Deux lignes sont ensuite insérées : une ligne contient une instance `LineString` de `geometry`et une ligne contient une instance `Polygon` .  
   
 ```sql 
 IF OBJECT_ID ( 'dbo.SpatialTable', 'U' ) IS NOT NULL   
@@ -82,7 +82,7 @@ SELECT @result.STAsText();
 ```  
   
 ### <a name="c-using-geometry-in-a-computed-column"></a>C. Utilisation du type géométrique dans une colonne calculée  
- L’exemple suivant crée une table avec une colonne calculée persistante à l’aide un **geometry** type.  
+ L’exemple suivant crée une table avec une colonne calculée persistante à l’aide d’un type **geometry**.  
   
 ```sql  
 IF OBJECT_ID ( 'dbo.SpatialTable', 'U' ) IS NOT NULL   
@@ -97,7 +97,7 @@ CREATE TABLE SpatialTable
 )  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
   [Données spatiales &#40;SQL Server&#41;](../../relational-databases/spatial/spatial-data-sql-server.md)  
   
   

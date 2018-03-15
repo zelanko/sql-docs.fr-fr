@@ -1,5 +1,5 @@
 ---
-title: DBCC CHECKCONSTRAINTS (Transact-SQL) | Documents Microsoft
+title: DBCC CHECKCONSTRAINTS (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 11/14/2017
 ms.prod: sql-non-specified
@@ -61,10 +61,10 @@ DBCC CHECKCONSTRAINTS
   
 ## <a name="arguments"></a>Arguments  
  *table_name* | *table_id* | *constraint_name* | *constraint_id*  
- Table ou contrainte à vérifier. Lorsque *table_name* ou *table_id* est spécifié, toutes les contraintes activées sur cette table sont vérifiées. Lorsque *constraint_name* ou *constraint_id* est spécifié, seule cette contrainte est vérifiée. Si aucun identificateur de table ni aucun identificateur de contrainte n'est spécifié, toutes les contraintes activées sur toutes les tables de la base de données actuelle sont vérifiées.  
+ Table ou contrainte à vérifier. Quand *table_name* ou *table_id* est spécifié, toutes les contraintes activées sur cette table sont vérifiées. Quand *constraint_name* ou *constraint_id* est spécifié, seule cette contrainte est vérifiée. Si aucun identificateur de table ni aucun identificateur de contrainte n'est spécifié, toutes les contraintes activées sur toutes les tables de la base de données actuelle sont vérifiées.  
  Un nom de contrainte identifie de manière unique la table à laquelle la contrainte appartient. Pour plus d'informations, consultez [Database Identifiers](../../relational-databases/databases/database-identifiers.md).  
   
- WITH  
+ par  
  Permet de spécifier des options.  
   
  ALL_CONSTRAINTS  
@@ -76,7 +76,7 @@ DBCC CHECKCONSTRAINTS
  NO_INFOMSGS  
  Supprime tous les messages d'information.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
 DBCC CHECKCONSTRAINTS crée et exécute une requête pour toutes les contraintes FOREIGN KEY et les contraintes CHECK sur une table.
   
 Par exemple, une requête de clé étrangère se présente comme suit :
@@ -93,26 +93,26 @@ WHERE <table_being_checked.fkey1> IS NOT NULL
 ```  
   
 Les données de la requête sont stockées dans une table temporaire. Une fois que toutes les tables ou les contraintes demandées ont été vérifiées, le jeu de résultats est renvoyé.
-DBCC CHECKCONSTRAINTS vérifie l'intégrité des contraintes FOREIGN KEY et CHECK, mais ne vérifie pas celle des structures de données sur disque d'une table. Ces contrôles de structure de données peuvent être effectuées à l’aide de [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) et [DBCC CHECKTABLE](../../t-sql/database-console-commands/dbcc-checktable-transact-sql.md).
+DBCC CHECKCONSTRAINTS vérifie l'intégrité des contraintes FOREIGN KEY et CHECK, mais ne vérifie pas celle des structures de données sur disque d'une table. Ces vérifications de structures de données peuvent être effectuées à l’aide de [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) et de [DBCC CHECKTABLE](../../t-sql/database-console-commands/dbcc-checktable-transact-sql.md).
   
-**S’applique aux**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] via[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**S’applique à** : [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] jusqu’à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
-Si *table_name* ou *table_id* est spécifié et il est activé pour le contrôle de version système, DBCC CHECKCONSTRAINTS effectue également les vérifications de cohérence des données temporelles sur la table spécifiée. Lorsque *NO_INFOMSGS* n’est pas spécifié, cette commande renvoie chaque violation de la cohérence dans la sortie sur une ligne distincte. Le format de la sortie sera ([pkcol1], [pkcol2]...) = (\<pkcol1_value >, \<pkcol2_value >...) ET \<quel est le problème avec l’enregistrement de la table temporelle >.
+Si *table_name* ou *table_id* est spécifié et activé pour la gestion système des versions, DBCC CHECKCONSTRAINTS effectue également des vérifications de cohérence des données temporelles sur la table spécifiée. Quand *NO_INFOMSGS* n’est pas spécifié, cette commande retourne chaque violation de cohérence dans la sortie sur une ligne distincte. Le format de la sortie sera ([pkcol1], [pkcol2]..) = (\<pkcol1_value>, \<pkcol2_value>…) ET \<le problème avec l’enregistrement de la table temporelle>.
   
-|Vérifier|Dans la sortie en cas d’échec de la vérification des informations supplémentaires|  
+|Vérifier|Informations supplémentaires dans la sortie en cas d’échec de la vérification|  
 |-----------|-----------------------------------------------|  
-|PeriodEndColumn ≥ PeriodStartColumn (current)|[sys_end] = '{0}' et MAX(DATETIME2) = ' 9999-12-31 23:59:59.99999'|  
-|PeriodEndColumn ≥ PeriodStartColumn (actuel, l’historique)|[sys_start] = '{0}' et [sys_end] = « {{1} »|  
-|PeriodStartColumn < current_utc_time (actuel)|[sys_start] = '{0}' et SYSUTCTIME|  
-|PeriodEndColumn < current_utc_time (historique)|[sys_end] = '{0}' et SYSUTCTIME|  
-|Chevauchements|(sys_start1, sys_end1), (sys_start2, sys_end2) pour deux les enregistrements qui se chevauchent.<br /><br /> S’il y a plus de 2 qui se chevauchent des enregistrements, contient plusieurs lignes indiquant chacun une paire des chevauchements.|  
+|PeriodEndColumn ≥ PeriodStartColumn (en cours)|[sys_end] = '{0}' ET MAX(DATETIME2) = '9999-12-31 23:59:59.99999'|  
+|PeriodEndColumn ≥ PeriodStartColumn (en cours, historique)|[sys_start] = '{0}' ET [sys_end] = '{1}'|  
+|PeriodStartColumn < current_utc_time (en cours)|[sys_start] = '{0}' ET SYSUTCTIME|  
+|PeriodEndColumn < current_utc_time (historique)|[sys_end] = '{0}' ET SYSUTCTIME|  
+|Chevauchements|(sys_start1, sys_end1), (sys_start2, sys_end2) pour deux enregistrements qui se chevauchent.<br /><br /> S’il existe plus de 2 enregistrements qui se chevauchent, la sortie affiche plusieurs lignes indiquant chacune une paire de chevauchements.|  
   
-Il n’existe aucun moyen de spécifier constraint_name ou constraint_id afin d’exécuter des vérifications de cohérence temporelle uniquement.
+Il n’existe aucun moyen de spécifier constraint_name ni constraint_id afin d’exécuter uniquement des vérifications de cohérence temporelle.
   
 ## <a name="result-sets"></a>Jeux de résultats  
 DBCC CHECKCONSTRAINTS retourne un ensemble de lignes comportant les colonnes suivantes.
   
-|Nom de colonne|Type de données| Description|  
+|Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |Nom de la table|**varchar**|Nom de la table.|  
 |Constraint Name (Nom de la contrainte)|**varchar**|Nom de la contrainte qui n'est pas respectée.|  
@@ -157,7 +157,7 @@ DBCC CHECKCONSTRAINTS WITH ALL_CONSTRAINTS;
 GO  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [DBCC CHECKDB &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)  
 [DBCC CHECKTABLE &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-checktable-transact-sql.md)  
 [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)

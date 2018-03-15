@@ -1,5 +1,5 @@
 ---
-title: "Mots clés (Transact-SQL) réservés | Documents Microsoft"
+title: "Mots clés réservés (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -84,13 +84,13 @@ ms.lasthandoff: 01/25/2018
 |DEALLOCATE|OF|TRUNCATE|  
 |DECLARE|OFF|TRY_CONVERT|  
 |DEFAULT|OFFSETS|TSEQUAL|  
-|DELETE|ON|UNION|  
+|Suppression|ON|UNION|  
 |DENY|OPEN|UNIQUE|  
 |DESC|OPENDATASOURCE|UNPIVOT|  
 |DISK|OPENQUERY|UPDATE|  
 |DISTINCT|OPENROWSET|UPDATETEXT|  
 |DISTRIBUTED|OPENXML|USE|  
-|DOUBLE|OPTION|USER|  
+|DOUBLE|OPTION|Utilisateur|  
 |DROP|- ou -|VALUES|  
 |DUMP|ORDER|VARYING|  
 |ELSE|OUTER|VIEW|  
@@ -98,15 +98,15 @@ ms.lasthandoff: 01/25/2018
 |ERRLVL|PERCENT|WHEN|  
 |ESCAPE|PIVOT|WHERE|  
 |EXCEPT|PLAN|WHILE|  
-|EXEC|PRECISION|WITH|  
-|EXECUTE|PRIMARY|WITHIN GROUP|  
+|EXEC|PRECISION|par|  
+|Exécutez|PRIMARY|WITHIN GROUP|  
 |EXISTS|PRINT|WRITETEXT|  
 |EXIT|PROC||  
   
  De plus, la norme ISO définit une liste de mots clés réservés. Évitez d'utiliser des mots clés réservés ISO pour des identificateurs et des noms d'objets. La liste des mots clés réservés ODBC figurant dans le tableau ci-dessous est identique à celle des mots clés réservés ISO.  
   
 > [!NOTE]  
->  La liste des mots clés réservés de norme ISO peut être parfois plus et parfois moins restrictive que la liste [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Par exemple, la liste de mots clés réservés ISO contient **INT**. que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] n'a pas besoin d'établir comme mot clé.  
+>  La liste des mots clés réservés de norme ISO peut être parfois plus et parfois moins restrictive que la liste [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Par exemple, la liste des mots clés réservés ISO contient **INT**. que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] n'a pas besoin d'établir comme mot clé.  
   
  Les mots clés réservés [!INCLUDE[tsql](../../includes/tsql-md.md)] sont utilisables comme identificateurs ou comme noms de bases de données ou d'objets de base de données, tels que des tables, des colonnes, des vues, etc. Utilisez des identificateurs délimités ou entre guillemets. L'utilisation de mots clés réservés comme noms de variables et de paramètres de procédures stockées ne fait pas l'objet de restrictions.  
   
@@ -119,80 +119,80 @@ ms.lasthandoff: 01/25/2018
 |-|-|-|  
 |**ABSOLUTE**|**EXEC**|**OVERLAPS**|  
 |**ACTION**|**EXECUTE**|**PAD**|  
-|**ADA**|**EXISTS**|**PARTIELLE**|  
+|**ADA**|**EXISTS**|**PARTIAL**|  
 |**ADD**|**EXTERNAL**|**PASCAL**|  
 |**ALL**|**EXTRACT**|**POSITION**|  
 |**ALLOCATE**|**FALSE**|**PRECISION**|  
-|**ALTER**|**FETCH**|**PRÉPARER**|  
+|**ALTER**|**FETCH**|**PREPARE**|  
 |**AND**|**FIRST**|**PRESERVE**|  
 |**ANY**|**FLOAT**|**PRIMARY**|  
-|**SONT**|**FOR**|**PRIOR**|  
-|**AS**|**ÉTRANGÈRE**|**PRIVILÈGES**|  
+|**ARE**|**FOR**|**PRIOR**|  
+|**AS**|**FOREIGN**|**PRIVILEGES**|  
 |**ASC**|**FORTRAN**|**PROCEDURE**|  
-|**ASSERTION**|**TROUVÉ**|**PUBLIC**|  
+|**ASSERTION**|**FOUND**|**PUBLIC**|  
 |**AT**|**FROM**|**READ**|  
-|**AUTHORIZATION**|**FULL**|**RÉEL**|  
+|**AUTHORIZATION**|**FULL**|**REAL**|  
 |**AVG**|**GET**|**REFERENCES**|  
-|**BEGIN**|**GLOBAL**|**RELATIF**|  
+|**BEGIN**|**GLOBAL**|**RELATIVE**|  
 |**BETWEEN**|**GO**|**RESTRICT**|  
 |**BIT**|**GOTO**|**REVOKE**|  
 |**BIT_LENGTH**|**GRANT**|**RIGHT**|  
-|**LES DEUX**|**GROUP**|**ROLLBACK**|  
-|**BY**|**AVOIR**|**ROWS**|  
-|**CASCADE**|**HEURE**|**SCHEMA**|  
-|**CASCADED**|**IDENTITÉ**|**SCROLL**|  
+|**BOTH**|**GROUP**|**ROLLBACK**|  
+|**BY**|**HAVING**|**ROWS**|  
+|**CASCADE**|**HOUR**|**SCHEMA**|  
+|**CASCADED**|**IDENTITY**|**SCROLL**|  
 |**CASE**|**IMMEDIATE**|**SECOND**|  
 |**CAST**|**IN**|**SECTION**|  
 |**CATALOG**|**INCLUDE**|**SELECT**|  
 |**CHAR**|**INDEX**|**SESSION**|  
 |**CHAR_LENGTH**|**INDICATOR**|**SESSION_USER**|  
-|**CARACTÈRE**|**AU DÉPART**|**SET**|  
+|**CHARACTER**|**INITIALLY**|**SET**|  
 |**CHARACTER_LENGTH**|**INNER**|**SIZE**|  
-|**VÉRIFICATION**|**INPUT**|**SMALLINT**|  
-|**CLOSE**|**NON-RESPECT DE LA**|**SOME**|  
+|**CHECK**|**INPUT**|**SMALLINT**|  
+|**CLOSE**|**INSENSITIVE**|**SOME**|  
 |**COALESCE**|**INSERT**|**SPACE**|  
 |**COLLATE**|**INT**|**SQL**|  
 |**COLLATION**|**INTEGER**|**SQLCA**|  
 |**COLUMN**|**INTERSECT**|**SQLCODE**|  
 |**COMMIT**|**INTERVAL**|**SQLERROR**|  
 |**CONNECT**|**INTO**|**SQLSTATE**|  
-|**CONNEXION**|**EST**|**SQLWARNING**|  
-|**CONTRAINTE**|**ISOLATION**|**SUBSTRING**|  
-|**CONTRAINTES**|**JOIN**|**SUM**|  
+|**CONNECTION**|**IS**|**SQLWARNING**|  
+|**CONSTRAINT**|**ISOLATION**|**SUBSTRING**|  
+|**CONSTRAINTS**|**JOIN**|**SUM**|  
 |**CONTINUE**|**KEY**|**SYSTEM_USER**|  
 |**CONVERT**|**LANGUAGE**|**TABLE**|  
-|**CORRESPONDING**|**LAST**|**TEMPORAIRE**|  
-|**COUNT**|**DÉBUT**|**PUIS**|  
-|**CRÉER**|**LEFT**|**TIME**|  
-|**CROSS**|**NIVEAU**|**TIMESTAMP**|  
-|**EN COURS**|**LIKE**|**TIMEZONE_HOUR**|  
+|**CORRESPONDING**|**LAST**|**TEMPORARY**|  
+|**COUNT**|**LEADING**|**THEN**|  
+|**CREATE**|**LEFT**|**TIME**|  
+|**CROSS**|**LEVEL**|**TIMESTAMP**|  
+|**CURRENT**|**LIKE**|**TIMEZONE_HOUR**|  
 |**CURRENT_DATE**|**LOCAL**|**TIMEZONE_MINUTE**|  
 |**CURRENT_TIME**|**LOWER**|**TO**|  
-|**CURRENT_TIMESTAMP**|**MATCH**|**DE FIN**|  
+|**CURRENT_TIMESTAMP**|**MATCH**|**TRAILING**|  
 |**CURRENT_USER**|**MAX**|**TRANSACTION**|  
 |**CURSOR**|**MIN**|**TRANSLATE**|  
-|**DATE**|**MINUTE**|**TRADUCTION**|  
+|**DATE**|**MINUTE**|**TRANSLATION**|  
 |**DAY**|**MODULE**|**TRIM**|  
 |**DEALLOCATE**|**MONTH**|**TRUE**|  
 |**DEC**|**NAMES**|**UNION**|  
 |**DECIMAL**|**NATIONAL**|**UNIQUE**|  
 |**DECLARE**|**NATURAL**|**UNKNOWN**|  
 |**DEFAULT**|**NCHAR**|**UPDATE**|  
-|**PEUT ÊTRE DIFFÉRÉE**|**NEXT**|**UPPER**|  
-|**DIFFÉRÉE**|**NO**|**USAGE**|  
+|**DEFERRABLE**|**NEXT**|**UPPER**|  
+|**DEFERRED**|**NO**|**USAGE**|  
 |**DELETE**|**NONE**|**USER**|  
-|**DESC**|**NOT**|**À L’AIDE DE**|  
+|**DESC**|**NOT**|**USING**|  
 |**DESCRIBE**|**NULL**|**VALUE**|  
 |**DESCRIPTOR**|**NULLIF**|**VALUES**|  
 |**DIAGNOSTICS**|**NUMERIC**|**VARCHAR**|  
-|**DISCONNECT**|**OCTET_LENGTH**|**VARIABLE**|  
+|**DISCONNECT**|**OCTET_LENGTH**|**VARYING**|  
 |**DISTINCT**|**OF**|**VIEW**|  
-|**DOMAIN**|**ON**|**LORSQUE**|  
-|**DOUBLE**|**ONLY**|**CHAQUE FOIS QUE**|  
+|**DOMAIN**|**ON**|**WHEN**|  
+|**DOUBLE**|**ONLY**|**WHENEVER**|  
 |**DROP**|**OPEN**|**WHERE**|  
-|**ELSE**|**OPTION**|**AVEC**|  
-|**END**|**- ou -**|**TRAVAIL**|  
-|**END-EXEC**|**COMMANDE**|**WRITE**|  
+|**ELSE**|**OPTION**|**WITH**|  
+|**END**|**OR**|**WORK**|  
+|**END-EXEC**|**ORDER**|**WRITE**|  
 |**ESCAPE**|**OUTER**|**YEAR**|  
 |**EXCEPT**|**OUTPUT**|**ZONE**|  
 |**EXCEPTION**|||  
@@ -246,10 +246,10 @@ ms.lasthandoff: 01/25/2018
 |COVAR_POP|NATURAL|TERMINATE|  
 |COVAR_SAMP|NCHAR|THAN|  
 |CUBE|NCLOB|TIME|  
-|CUME_DIST|NEW|TIMESTAMP|  
+|CUME_DIST|NEW|timestamp|  
 |CURRENT_CATALOG|NEXT|TIMEZONE_HOUR|  
 |CURRENT_DEFAULT_TRANSFORM_GROUP|Non|TIMEZONE_MINUTE|  
-|CURRENT_PATH|NONE|TRAILING|  
+|CURRENT_PATH|Aucune|TRAILING|  
 |CURRENT_ROLE|NORMALIZE|TRANSLATE_REGEX|  
 |CURRENT_SCHEMA|NUMERIC|TRANSLATION|  
 |CURRENT_TRANSFORM_GROUP_FOR_TYPE|OBJECT|TREAT|  
@@ -260,9 +260,9 @@ ms.lasthandoff: 01/25/2018
 |DEC|ORDINALITY|UNNEST|  
 |DECIMAL|OUT|USAGE|  
 |DEFERRABLE|OVERLAY|USING|  
-|DEFERRED|OUTPUT|VALUE|  
+|DEFERRED|OUTPUT|Value|  
 |DEPTH|PAD|VAR_POP|  
-|DEREF|PARAMETER|VAR_SAMP|  
+|DEREF|Paramètre|VAR_SAMP|  
 |DESCRIBE|PARAMETERS|VARCHAR|  
 |DESCRIPTOR|PARTIAL|VARIABLE|  
 |DESTROY|PARTITION|WHENEVER|  
@@ -280,7 +280,7 @@ ms.lasthandoff: 01/25/2018
 |EVERY|PRIVILEGES|XMLCONCAT|  
 |EXCEPTION|RANGE|XMLDOCUMENT|  
 |FALSE|READS|XMLELEMENT|  
-|FILTER|REAL|XMLEXISTS|  
+|FILTER|real|XMLEXISTS|  
 |FIRST|RECURSIVE|XMLFOREST|  
 |FLOAT|REF|XMLITERATE|  
 |FOUND|REFERENCING|XMLNAMESPACES|  
@@ -294,8 +294,8 @@ ms.lasthandoff: 01/25/2018
 |GROUPING|REGR_SXY|YEAR|  
 |HOLD|REGR_SYY|ZONE|  
   
-## <a name="see-also"></a>Voir aussi  
- [SET QUOTED_IDENTIFIER &#40; Transact-SQL &#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md)   
+## <a name="see-also"></a> Voir aussi  
+ [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md)   
  [Niveau de compatibilité ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)  
   
   

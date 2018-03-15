@@ -1,5 +1,5 @@
 ---
-title: VALIDER la TRANSACTION (Transact-SQL) | Documents Microsoft
+title: COMMIT TRANSACTION (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 09/09/2016
 ms.prod: sql-non-specified
@@ -45,7 +45,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="commit-transaction-transact-sql"></a>COMMIT TRANSACTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
 
-  Marque la fin d'une transaction implicite ou explicite réussie. If @@TRANCOUNT est 1, COMMIT TRANSACTION les rend toutes les modifications de données effectuées depuis le début de la partie intégrante de la base de données de transaction libère les ressources détenues par la transaction et décrémente @@TRANCOUNT à 0. If @@TRANCOUNT est supérieur à 1 décrémente COMMIT TRANSACTION @@TRANCOUNT uniquement par 1 et la transaction reste active.  
+  Marque la fin d'une transaction implicite ou explicite réussie. Si @@TRANCOUNT a la valeur 1, COMMIT TRANSACTION rend permanentes les modifications de données effectuées dans la base de données depuis le début de la transaction, libère les ressources détenues par la transaction et décrémente @@TRANCOUNT à 0. Si @@TRANCOUNT est supérieur à 1, COMMIT TRANSACTION décrémente @@TRANCOUNT de 1 seulement et la transaction reste active.  
   
  ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -68,28 +68,28 @@ COMMIT [ TRAN | TRANSACTION ]
   
 ## <a name="arguments"></a>Arguments  
  *transaction_name*  
- **S’applique à :** SQL Server et la base de données SQL Azure
+ **S’APPLIQUE À :** SQL Server et Azure SQL Database
  
- Ignoré par le [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. *argument* spécifie un nom de transaction attribué par une instruction BEGIN TRANSACTION antérieure. *argument*doit être conforme aux règles des identificateurs, mais ne peut pas dépasser 32 caractères. *argument* peut servir de faciliter la lecture en indiquant aux programmeurs imbriqués BEGIN TRANSACTION, COMMIT TRANSACTION est associée.  
+ Ignoré par le [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. *transaction_name* spécifie un nom de transaction attribué par une instruction BEGIN TRANSACTION antérieure. *transaction_name* doit être conforme aux règles applicables aux identificateurs, mais ne doit pas comporter plus de 32 caractères. *transaction_name* peut faciliter la lecture aux programmeurs en indiquant à quelle instruction BEGIN TRANSACTION imbriquée est associée l’instruction COMMIT TRANSACTION.  
   
  *@tran_name_variable*  
- **S’applique à :** SQL Server et la base de données SQL Azure  
+ **S’APPLIQUE À :** SQL Server et Azure SQL Database  
  
 Nom d'une variable définie par l'utilisateur et contenant un nom de transaction valide. La variable doit être déclarée avec un type de données char, varchar, nchar ou nvarchar. Si plus de 32 caractères sont passés à la variable, seuls 32 caractères sont utilisés ; les autres caractères sont tronqués.  
   
  DELAYED_DURABILITY  
- **S’applique à :** SQL Server et la base de données SQL Azure   
+ **S’APPLIQUE À :** SQL Server et Azure SQL Database   
 
- Option qui demande que cette transaction soit validée avec durabilité différée. La demande est ignorée si la base de données a été modifiée avec `DELAYED_DURABILITY = DISABLED` ou `DELAYED_DURABILITY = FORCED`. Consultez la rubrique [contrôle la durabilité des transactions](../../relational-databases/logs/control-transaction-durability.md) pour plus d’informations.  
+ Option qui demande que cette transaction soit validée avec durabilité différée. La demande est ignorée si la base de données a été modifiée avec `DELAYED_DURABILITY = DISABLED` ou `DELAYED_DURABILITY = FORCED`. Consultez la rubrique [Contrôler la durabilité d’une transaction](../../relational-databases/logs/control-transaction-durability.md) pour plus d’informations.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Il est de la responsabilité des programmeurs [!INCLUDE[tsql](../../includes/tsql-md.md)] d'émettre une instruction COMMIT TRANSACTION seulement à un moment où toutes les données référencées par la transaction sont logiquement correctes.  
   
  Si la transaction validée est une transaction [!INCLUDE[tsql](../../includes/tsql-md.md)] distribuée, COMMIT TRANSACTION déclenche MS DTC pour utiliser un protocole de validation en deux phases qui valide tous les serveurs concernés par la transaction. Si une transaction locale affecte deux bases de données ou plus sur une même instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)], celle-ci utilise une validation interne en deux phases pour valider toutes les bases de données concernées par la transaction.  
   
- Dans les transactions imbriquées, la validation des transactions internes ne libère pas les ressources et ne rend pas leurs modifications permanentes. Les modifications de données sont rendues permanentes et les ressources ne sont libérées que lorsque la transaction externe est validée. Chaque instruction COMMIT TRANSACTION émise lorsque @@TRANCOUNT est supérieur à 1 décrémente simplement @@TRANCOUNT par 1. Lorsque @@TRANCOUNT est enfin décrémenté à 0, l’intégralité de la transaction externe est validée. Étant donné que *argument* est ignoré par le [!INCLUDE[ssDE](../../includes/ssde-md.md)], émettre une instruction COMMIT TRANSACTION faisant référence au nom d’une transaction externe lorsqu’il existe encore des transactions internes réduit seulement @@TRANCOUNT par 1.  
+ Dans les transactions imbriquées, la validation des transactions internes ne libère pas les ressources et ne rend pas leurs modifications permanentes. Les modifications de données sont rendues permanentes et les ressources ne sont libérées que lorsque la transaction externe est validée. Chaque instruction COMMIT TRANSACTION exécutée quand @@TRANCOUNT est supérieur à 1 décrémente simplement @@TRANCOUNT de 1. Quand @@TRANCOUNT atteint 0, la totalité de la transaction externe est validée. L’argument *transaction_name* étant ignoré par [!INCLUDE[ssDE](../../includes/ssde-md.md)], l’émission d’une instruction COMMIT TRANSACTION faisant référence au nom d’une transaction externe, tandis que des transactions internes sont en attente, réduit seulement @@TRANCOUNT de 1.  
   
- Émission d’une instruction COMMIT TRANSACTION lorsque @@TRANCOUNT est égal à 0 génère une erreur ; Il n’existe pas de BEGIN TRANSACTION correspondante.  
+ L’émission d’une instruction COMMIT TRANSACTION lorsque @@TRANCOUNT est égal à 0 génère un message d’erreur indiquant qu’il n’y a aucune instruction BEGIN TRANSACTION correspondante.  
   
  Il n'est plus possible d'annuler une transaction une fois l'instruction COMMIT TRANSACTION émise, car les modifications de données ont été enregistrées de manière permanente dans la base de données.  
   
@@ -101,7 +101,7 @@ Nom d'une variable définie par l'utilisateur et contenant un nom de transaction
 ## <a name="examples"></a>Exemples  
   
 ### <a name="a-committing-a-transaction"></a>A. Validation d’une transaction  
-**S’applique à :** SQL Server, base de données SQL Azure, entrepôt de données SQL Azure et Parallel Data Warehouse   
+**S’APPLIQUE À :** SQL Server, Azure SQL Database, Azure SQL Data Warehouse et Parallel Data Warehouse   
 
 L'exemple suivant supprime un candidat à un emploi. Il utilise AdventureWorks. 
   
@@ -113,9 +113,9 @@ COMMIT TRANSACTION;
 ```  
   
 ### <a name="b-committing-a-nested-transaction"></a>B. Validation d'une transaction imbriquée  
-**S’applique à :** SQL Server et la base de données SQL Azure    
+**S’APPLIQUE À :** SQL Server et Azure SQL Database    
 
-L’exemple suivant crée une table, génère trois niveaux de transactions imbriquées, puis valide la transaction imbriquée. Bien que chaque `COMMIT TRANSACTION` instruction comporte une *argument* paramètre, il n’existe aucune relation entre la `COMMIT TRANSACTION` et `BEGIN TRANSACTION` instructions. Le *argument* paramètres sont simplement des aides de lisibilité pour aider le programmeur à vérifier que le nombre correct de validations a été codé pour décrémenter `@@TRANCOUNT` jusqu'à 0, ce qui valide la transaction externe. 
+L’exemple suivant crée une table, génère trois niveaux de transactions imbriquées, puis valide la transaction imbriquée. Bien que chaque instruction `COMMIT TRANSACTION` comporte un paramètre *transaction_name*, il n’existe aucune relation entre les instructions `COMMIT TRANSACTION` et `BEGIN TRANSACTION`. Les paramètres *transaction_name* aident simplement le programmeur à vérifier que le nombre correct de validations a été codé pour décrémenter `@@TRANCOUNT` jusqu’à 0, ce qui valide la transaction externe. 
   
 ```   
 IF OBJECT_ID(N'TestTran',N'U') IS NOT NULL  
@@ -169,7 +169,7 @@ PRINT N'Transaction count after COMMIT OuterTran = '
     + CAST(@@TRANCOUNT AS nvarchar(10));  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [BEGIN DISTRIBUTED TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/begin-distributed-transaction-transact-sql.md)   
  [BEGIN TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/begin-transaction-transact-sql.md)   
  [COMMIT WORK &#40;Transact-SQL&#41;](../../t-sql/language-elements/commit-work-transact-sql.md)   

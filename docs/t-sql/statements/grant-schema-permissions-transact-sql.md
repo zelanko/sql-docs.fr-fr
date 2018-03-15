@@ -1,5 +1,5 @@
 ---
-title: "Autorisations de schéma de GRANT (Transact-SQL) | Documents Microsoft"
+title: "GRANT - Octroyer des autorisations sur un schéma (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 06/19/2017
 ms.prod: sql-non-specified
@@ -31,7 +31,7 @@ ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="grant-schema-permissions-transact-sql"></a>GRANT - Autorisations sur un schéma (Transact-SQL)
+# <a name="grant-schema-permissions-transact-sql"></a>GRANT - Octroyer des autorisations sur un schéma (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Accorde des autorisations sur un schéma.  
@@ -48,17 +48,17 @@ GRANT permission  [ ,...n ] ON SCHEMA :: schema_name
 ```  
   
 ## <a name="arguments"></a>Arguments  
- *autorisation*  
- Spécifie une autorisation qu'il est possible d'accorder sur un schéma. Pour obtenir la liste des autorisations, consultez la section Notes plus loin dans cette rubrique...  
+ *permission*  
+ Spécifie une autorisation qu'il est possible d'accorder sur un schéma. Pour obtenir la liste des autorisations, consultez la section Notes, plus loin dans cette rubrique.  
   
- ON SCHEMA **::** schéma*_ordinateur*  
- Indique le schéma sur lequel l'autorisation est accordée. Le qualificateur d’étendue **::** est requis.  
+ ON SCHEMA **::** schema*_name*  
+ Indique le schéma sur lequel l'autorisation est accordée. Le qualificateur d’étendue **::** est obligatoire.  
   
- *principal_base_de_données*  
+ *database_principal*  
  Spécifie le principal auquel l'autorisation est accordée. Il peut s'agir :  
   
 -   d'un utilisateur de base de données ;  
--   d'un rôle de base de données ;  
+-   d'un rôle de base de données ;  
 -   d'un rôle d'application ;  
 -   d'un utilisateur de base de données mappé sur une connexion Windows ;  
 -   d'un utilisateur de base de données mappé sur un groupe Windows ;  
@@ -69,11 +69,11 @@ GRANT permission  [ ,...n ] ON SCHEMA :: schema_name
 GRANT OPTION  
  Indique que le principal a également la possibilité d'accorder l'autorisation spécifiée à d'autres principaux.  
   
-En tant que *granting_principal*  
+AS *granting_principal*  
  Spécifie un principal dont le principal qui exécute cette requête dérive son droit d'accorder l'autorisation. Il peut s'agir :  
   
 -   d'un utilisateur de base de données ;  
--   d'un rôle de base de données ;  
+-   d'un rôle de base de données ;  
 -   d'un rôle d'application ;  
 -   d'un utilisateur de base de données mappé sur une connexion Windows ;  
 -   d'un utilisateur de base de données mappé sur un groupe Windows ;  
@@ -81,7 +81,7 @@ En tant que *granting_principal*
 -   d'un utilisateur de base de données mappé à une clé asymétrique ;  
 -   d'un utilisateur de base de données qui n'est pas mappé sur le principal d'un serveur.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
   
 > [!IMPORTANT]  
 >  Dans certains cas, une combinaison d'autorisations ALTER et REFERENCE pourrait autoriser le bénéficiaire des autorisations à afficher des données ou à exécuter des fonctions non autorisées. Exemple : un utilisateur avec une autorisation ALTER sur une table et une autorisation REFERENCE sur une fonction peut créer une colonne calculée sur une fonction et l'exécuter. Dans ce cas, l'utilisateur doit également disposer d'une autorisation SELECT sur la colonne calculée.  
@@ -93,7 +93,7 @@ En tant que *granting_principal*
 |ALTER|CONTROL|ALTER ANY SCHEMA|  
 |CONTROL|CONTROL|CONTROL|  
 |CREATE SEQUENCE|ALTER|ALTER ANY SCHEMA|  
-|DELETE|CONTROL|DELETE|  
+|Suppression|CONTROL|Suppression|  
 |Exécutez|CONTROL|Exécutez|  
 |INSERT|CONTROL|INSERT|  
 |REFERENCES|CONTROL|REFERENCES|  
@@ -114,14 +114,14 @@ En tant que *granting_principal*
   
  L'utilisateur U1 bénéficie de l'autorisation CREATE VIEW sur la base de données et de l'autorisation SELECT sur le schéma S1. Par conséquent, l'utilisateur U1 peut créer une vue dans le schéma S1 pour interroger les données de l'objet refusé T1, puis accéder à cet objet à l'aide de la vue.  
   
- Pour plus d'informations, consultez l'article 914847de la Base de connaissances Microsoft.  
+ Pour plus d'informations, consultez l'article 914847 de la Base de connaissances Microsoft.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Le fournisseur d'autorisations (ou le principal spécifié avec l'option AS) doit posséder l'autorisation elle-même avec l'option GRANT OPTION ou une autorisation plus élevée qui implique l'autorisation accordée.  
   
  En cas d'utilisation de l'option AS, ces critères s'appliquent.  
   
-|En tant que *granting_principal*|Autres autorisations nécessaires|  
+|AS *granting_principal*|Autres autorisations nécessaires|  
 |------------------------------|------------------------------------|  
 |Utilisateur de base de données|Autorisation IMPERSONATE sur l'utilisateur, appartenance au rôle de base de données fixe db_securityadmin, appartenance au rôle de base de données fixe db_owner ou appartenance au rôle serveur fixe sysadmin.|  
 |Utilisateur de base de données mappé à une connexion Windows|Autorisation IMPERSONATE sur l'utilisateur, appartenance au rôle de base de données fixe db_securityadmin, appartenance au rôle de base de données fixe db_owner ou appartenance au rôle serveur fixe sysadmin.|  
@@ -150,18 +150,18 @@ GRANT INSERT ON SCHEMA :: HumanResources TO guest;
 GRANT SELECT ON SCHEMA :: Person TO WilJo WITH GRANT OPTION;  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- [REFUSER des autorisations sur les schémas &#40; Transact-SQL &#41;](../../t-sql/statements/deny-schema-permissions-transact-sql.md)   
- [RÉVOQUER des autorisations sur les schémas &#40; Transact-SQL &#41;](../../t-sql/statements/revoke-schema-permissions-transact-sql.md)   
+## <a name="see-also"></a> Voir aussi  
+ [DENY - Refuser des autorisations sur un schéma &#40;Transact-SQL&#41;](../../t-sql/statements/deny-schema-permissions-transact-sql.md)   
+ [REVOKE - Révoquer des autorisations sur un schéma &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-schema-permissions-transact-sql.md)   
  [GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md)   
  [Autorisations &#40;moteur de base de données&#41;](../../relational-databases/security/permissions-database-engine.md)   
  [Principaux &#40;moteur de base de données&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
  [CREATE CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/create-certificate-transact-sql.md)   
  [CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-asymmetric-key-transact-sql.md)   
- [CRÉER un rôle d’APPLICATION &#40; Transact-SQL &#41;](../../t-sql/statements/create-application-role-transact-sql.md)   
+ [CREATE APPLICATION ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-application-role-transact-sql.md)   
  [Hiérarchie de chiffrement](../../relational-databases/security/encryption/encryption-hierarchy.md)   
  [sys.fn_builtin_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md)   
- [Sys.fn_my_permissions &#40; Transact-SQL &#41;](../../relational-databases/system-functions/sys-fn-my-permissions-transact-sql.md)   
+ [sys.fn_my_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-my-permissions-transact-sql.md)   
  [HAS_PERMS_BY_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/has-perms-by-name-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: "CRÉER (fonction) (entrepôt de données SQL) | Documents Microsoft"
+title: CREATE FUNCTION (SQL Data Warehouse) | Microsoft Docs
 ms.custom: 
 ms.date: 08/10/2017
 ms.prod: sql-non-specified
@@ -26,10 +26,10 @@ ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="create-function-sql-data-warehouse"></a>CRÉER (fonction) (entrepôt de données SQL)
+# <a name="create-function-sql-data-warehouse"></a>CREATE FUNCTION (SQL Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
-  Crée une fonction définie par l'utilisateur dans [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]. Une fonction définie par l’utilisateur est un [!INCLUDE[tsql](../../includes/tsql-md.md)] routine qui accepte des paramètres, exécute une action, par exemple un calcul complexe et retourne le résultat de cette action en tant que valeur. La valeur de retour doit être une valeur scalaire (unique). Utilisez cette instruction pour créer une routine réutilisable, exploitable :  
+  Crée une fonction définie par l'utilisateur dans [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]. Une fonction définie par l’utilisateur est une routine [!INCLUDE[tsql](../../includes/tsql-md.md)] qui accepte des paramètres, exécute une action, par exemple un calcul complexe, et retourne le résultat de cette action sous forme de valeur. La valeur de retour doit être une valeur scalaire (unique). Utilisez cette instruction pour créer une routine réutilisable, exploitable :  
   
 -   dans des instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] telles que SELECT ;  
   
@@ -75,7 +75,7 @@ RETURNS return_data_type
  Nom du schéma auquel appartient la fonction définie par l'utilisateur.  
   
  *function_name*  
- Nom de la fonction définie par l'utilisateur. Les noms de fonctions doivent être conformes aux règles des identificateurs et doivent être uniques au sein de la base de données et son schéma.  
+ Nom de la fonction définie par l'utilisateur. Les noms de fonctions doivent respecter les règles applicables aux identificateurs et doivent être uniques dans la base de données et pour son schéma.  
   
 > [!NOTE]  
 >  Les parenthèses sont requises après le nom de fonction même si aucun paramètre n'est spécifié.  
@@ -88,23 +88,23 @@ RETURNS return_data_type
  Spécifiez un nom de paramètre en plaçant le signe @ comme premier caractère. Le nom de paramètre doit suivre les règles applicables aux identificateurs. Un paramètre étant local à une fonction, vous pouvez utiliser le même nom dans d'autres fonctions. Les paramètres ne peuvent que prendre la place de constantes ; ils ne peuvent pas être utilisés à la place de noms de tables, de colonnes ou d'autres objets de base de données.  
   
 > [!NOTE]  
->  ANSI_WARNINGS n'est pas honoré lorsque vous transmettez des paramètres dans une procédure stockée, dans une fonction définie par l'utilisateur ou lorsque vous déclarez et définissez des variables dans une instruction par lot. Par exemple, si une variable est définie en tant que **char (3)**, puis définissez une valeur supérieure à trois caractères, les données sont tronquées à la taille définie et l’insertion ou instruction de mise à jour réussit.  
+>  ANSI_WARNINGS n'est pas honoré lorsque vous transmettez des paramètres dans une procédure stockée, dans une fonction définie par l'utilisateur ou lorsque vous déclarez et définissez des variables dans une instruction par lot. Par exemple, si une variable est définie comme **char(3)**, puis réglée sur une valeur supérieure à trois caractères, les données sont tronquées à la taille définie et l’instruction INSERT ou UPDATE réussit.  
   
  *parameter_data_type*  
- Est le type de données de paramètre. Pour [!INCLUDE[tsql](../../includes/tsql-md.md)] fonctions, tous les types de données scalaires pris en charge dans [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] sont autorisées. Le type de données d’horodatage (rowversion) n’est pas un type pris en charge.  
+ Type de données du paramètre. Pour les fonctions [!INCLUDE[tsql](../../includes/tsql-md.md)], tous les types de données scalaires pris en charge dans [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] sont autorisés. Le type de données timestamp (rowversion) n’est pas un type pris en charge.  
   
  [ =*default* ]  
- Valeur par défaut pour le paramètre. Si un *par défaut* la valeur est définie, la fonction peut être exécutée sans spécifier de valeur pour ce paramètre.  
+ Valeur par défaut pour le paramètre. Si une valeur *default* est définie, la fonction peut être exécutée sans spécifier de valeur pour ce paramètre.  
   
  Lorsque l'un des paramètres de la fonction possède une valeur par défaut, le mot clé DEFAULT doit être spécifié lors de l'appel de la fonction afin de récupérer la valeur par défaut. Ce comportement est différent de l'utilisation de paramètres avec des valeurs par défaut dans des procédures stockées pour lesquelles l'omission du paramètre implique également la prise en compte de la valeur par défaut.  
   
  *return_data_type*  
- Valeur de retour d'une fonction scalaire définie par l'utilisateur. Pour [!INCLUDE[tsql](../../includes/tsql-md.md)] fonctions, tous les types de données scalaires pris en charge dans [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] sont autorisées. Le type de données d’horodatage (rowversion) n’est pas un type pris en charge. Les types non scalaires du curseur et la table ne sont pas autorisés.  
+ Valeur de retour d'une fonction scalaire définie par l'utilisateur. Pour les fonctions [!INCLUDE[tsql](../../includes/tsql-md.md)], tous les types de données scalaires pris en charge dans [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] sont autorisés. Le type de données timestamp (rowversion) n’est pas un type pris en charge. Les types non scalaires cursor et table ne sont pas autorisés.  
   
  *function_body*  
- Série de [!INCLUDE[tsql](../../includes/tsql-md.md)] instructions.  Le function_body ne peut pas contenir une instruction SELECT et ne peut pas référencer les données de la base de données.  Le function_body ne peut pas référencer des tables ou des vues. Le corps de la fonction peut appeler d’autres fonctions déterministes mais ne peut pas appeler les fonctions non déterministes. 
+ Série d’instructions [!INCLUDE[tsql](../../includes/tsql-md.md)].  function_body ne peut pas contenir d’instruction SELECT et ne peut pas référencer des données de la base de données.  function_body ne peut pas référencer des tables ou des vues. Le corps de la fonction peut appeler d’autres fonctions déterministes, mais ne peut pas appeler de fonctions non déterministes. 
   
- Dans les fonctions scalaires, *function_body* est une série de [!INCLUDE[tsql](../../includes/tsql-md.md)] instructions ensemble, retournent une valeur scalaire.  
+ Dans les fonctions scalaires, *function_body* est une série d’instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] qui, ensemble, prennent une valeur scalaire.  
   
  *scalar_expression*  
  Indique la valeur scalaire retournée par la fonction scalaire.  
@@ -124,18 +124,18 @@ RETURNS return_data_type
   
  Une fonction peut être liée au schéma uniquement si les conditions suivantes sont vérifiées :  
   
--   Toutes les fonctions définies par l’utilisateur référencées par la fonction sont également liées au schéma.  
+-   Toute fonction définie par l’utilisateur référencée par la fonction est également liée au schéma.  
   
--   Les fonctions et les autres fonctions référencées par la fonction sont référencées à l’aide d’un nom d’une ou deux parties.  
+-   Les fonctions et autres fonctions définies par l’utilisateur référencées par la fonction sont référencées à l’aide d’un nom en une ou deux parties.  
   
--   Uniquement les fonctions intégrées et les autres fonctions dans la même base de données peuvent être référencées dans le corps de l’UDF.  
+-   Seules les fonctions intégrées et les autres fonctions définies par l’utilisateur dans la même base de données peuvent être référencées dans le corps des fonctions définies par l’utilisateur.  
   
 -   L'utilisateur qui exécute l'instruction CREATE FUNCTION dispose de l'autorisation REFERENCES pour les objets de base de données auxquels la fonction fait référence.  
   
- Pour supprimer SCHEMABINDING utiliser ALTER  
+ Pour supprimer SCHEMABINDING, utilisez ALTER  
   
- RETOURNE LA VALEUR NULL EN ENTRÉE NULL | **APPELÉE SUR UNE ENTRÉE NULL**  
- Spécifie le **OnNULLCall** attribut d’une fonction scalaire. S'il n'est pas spécifié, l'argument CALLED ON NULL INPUT est implicite par défaut. Cela signifie que le corps de la fonction est exécuté même si la valeur NULL est transmise comme argument.  
+ RETURNS NULL ON NULL INPUT | **CALLED ON NULL INPUT**  
+ Spécifie l’attribut **OnNULLCall** d’une fonction scalaire. S'il n'est pas spécifié, l'argument CALLED ON NULL INPUT est implicite par défaut. Cela signifie que le corps de la fonction est exécuté même si la valeur NULL est transmise comme argument.  
   
 ## <a name="best-practices"></a>Bonnes pratiques  
  Si une fonction définie par l'utilisateur n'est pas créée avec la clause SCHEMABINDING, les modifications apportées aux objets sous-jacents peuvent affecter la définition de la fonction et produire des résultats inattendus en cas d'appel. Nous vous recommandons d'implémenter l'une des méthodes suivantes pour vous assurer que la fonction ne devient pas obsolète en raison des modifications apportées à ses objets sous-jacents :  
@@ -157,9 +157,9 @@ RETURNS return_data_type
  Les fonctions définies par l'utilisateur peuvent être imbriquées ; en d'autres termes, une fonction définie par l'utilisateur peut en appeler une autre. Le niveau d'imbrication est incrémenté lorsque la fonction appelée commence à s'exécuter, et décrémenté lorsque l'exécution est terminée. Les fonctions définies par l'utilisateur peuvent être imbriquées jusqu'à 32 niveaux. Le dépassement des niveaux d'imbrication maximum autorisés, provoque l'échec de la totalité de la chaîne de fonctions appelantes.   
   
 ## <a name="metadata"></a>Métadonnées  
- Cette section répertorie les affichages catalogue système que vous pouvez utiliser pour retourner des métadonnées sur les fonctions définies par l’utilisateur.  
+ Cette section répertorie les vues de catalogue système que vous pouvez utiliser pour retourner des métadonnées sur les fonctions définies par l’utilisateur.  
   
- [Sys.sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md) : affiche la définition de [!INCLUDE[tsql](../../includes/tsql-md.md)] fonctions définies par l’utilisateur. Par exemple :  
+ [sys.sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md) : affiche la définition des fonctions définies par l’utilisateur [!INCLUDE[tsql](../../includes/tsql-md.md)]. Exemple :  
   
 ```  
 SELECT definition, type   
@@ -171,17 +171,17 @@ GO
   
 ```  
   
- [Sys.Parameters](../../relational-databases/system-catalog-views/sys-parameters-transact-sql.md) : affiche des informations sur les paramètres définis dans les fonctions définies par l’utilisateur.  
+ [sys.parameters](../../relational-databases/system-catalog-views/sys-parameters-transact-sql.md) : affiche des informations sur les paramètres définis dans les fonctions définies par l’utilisateur.  
   
- [Sys.sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md) : affiche les objets sous-jacents référencés par une fonction.  
+ [Sys.sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md) : affiche les objets sous-jacents référencés par une fonction.  
   
 ## <a name="permissions"></a>Autorisations  
  Nécessite l'autorisation CREATE FUNCTION dans la base de données et l'autorisation ALTER sur le schéma dans lequel la fonction est en cours de création.  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemples : [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] et[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemples : [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] et [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="a-using-a-scalar-valued-user-defined-function-to-change-a-data-type"></a>A. À l’aide d’une fonction scalaire de défini par l’utilisateur pour modifier un type de données  
- Cette fonction simple prend un **int** de type de données comme entrée et retourne un **Decimal (10,2)** type de données comme sortie.  
+### <a name="a-using-a-scalar-valued-user-defined-function-to-change-a-data-type"></a>A. Utilisation d’une fonction scalaire définie par l’utilisateur pour changer un type de données  
+ Cette fonction simple prend un type de données **int** comme entrée et retourne un type de données **decimal(10,2)** comme sortie.  
   
 ```  
 CREATE FUNCTION dbo.ConvertInput (@MyValueIn int)  
@@ -197,9 +197,9 @@ GO
 SELECT dbo.ConvertInput(15) AS 'ConvertedValue';  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [ALTER FUNCTION (SQL Server PDW)](http://msdn.microsoft.com/en-us/25ff3798-eb54-4516-9973-d8f707a13f6c)   
- [SUPPRIMER la fonction (SQL Server PDW)](http://msdn.microsoft.com/en-us/1792a90d-0d06-4852-9dec-6de1b9cd229e)  
+ [DROP FUNCTION (SQL Server PDW)](http://msdn.microsoft.com/en-us/1792a90d-0d06-4852-9dec-6de1b9cd229e)  
   
   
 

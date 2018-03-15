@@ -1,5 +1,5 @@
 ---
-title: COMPRESSER (Transact-SQL) | Documents Microsoft
+title: COMPRESS (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
@@ -29,10 +29,10 @@ ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="compress-transact-sql"></a>COMPRESSER (Transact-SQL)
+# <a name="compress-transact-sql"></a>COMPRESS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-Compresse l’expression d’entrée à l’aide de l’algorithme GZIP. Le résultat de la compression est de type tableau d’octets **varbinary (max)**.
+Compresse l’expression d’entrée à l’aide de l’algorithme GZIP. Le résultat de la compression est un tableau d’octets de type **varbinary(max)**.
   
 ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -44,20 +44,20 @@ COMPRESS ( expression )
   
 ## <a name="arguments"></a>Arguments  
 *expression*  
-Est un **nvarchar (***n***)**, **nvarchar (max)**, **varchar (***n***)**, **varchar (max)**, **varbinary (***n***)**, **varbinary (max)**, **char (***n***)**, **nchar (***n***)**, ou **binaire (***n***)** expression. Pour plus d’informations, consultez [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md).
+Expression **nvarchar(***n***)**, **nvarchar(max)**, **varchar(***n***)**, **varchar(max)**, **varbinary(***n***)**, **varbinary(max)**, **char(***n***)**, **nchar(***n***)** ou **binary(***n***)**. Pour plus d’informations, consultez [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md).
   
 ## <a name="return-types"></a>Types de retour
-Retourne le type de données **varbinary (max)** qui représente le contenu compressé d’entrée.
+Retourne le type de données **varbinary(max)** qui représente le contenu compressé d’entrée.
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
 Les données compressées ne peuvent pas être indexées.
   
-La fonction COMPRESS compresse les données fournies en tant que l’expression d’entrée et doit être appelée pour chaque section de données doit être compressé. Pour la compression au niveau de la ligne ou de page automatique pendant le stockage, consultez [la Compression des données](../../relational-databases/data-compression/data-compression.md).
+La fonction COMPRESS compresse les données fournies en tant qu’expression d’entrée et doit être appelée pour chaque section de données à compresser. Pour une compression automatique au niveau de la ligne ou de la page pendant le stockage, consultez [Compression des données](../../relational-databases/data-compression/data-compression.md).
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-compress-data-during-the-table-insert"></a>A. Compresser les données durant l’insertion de la Table  
-L’exemple suivant montre comment compresser les données insérées dans la table :
+### <a name="a-compress-data-during-the-table-insert"></a>A. Compresser les données durant l’insertion dans la table  
+L’exemple suivant montre comment compresser les données insérées dans une table :
   
 ```sql
 INSERT INTO player (name, surname, info )  
@@ -69,7 +69,7 @@ VALUES (N'Michael', N'Raheem', compress(@info));
 ```  
   
 ### <a name="b-archive-compressed-version-of-deleted-rows"></a>B. Archiver la version compressée des lignes supprimées  
-L’instruction suivante supprime les anciens enregistrements de lecteur à partir de la `player` table et stocke les enregistrements dans la `inactivePlayer` table dans un format compressé pour économiser de l’espace.
+L’instruction suivante supprime les anciens enregistrements de lecteur de la table `player` et stocke les enregistrements dans la table `inactivePlayer`, dans un format compressé pour économiser de l’espace.
   
 ```sql
 DELETE player  
@@ -79,7 +79,7 @@ INTO dbo.inactivePlayers ;
 ```  
   
 ## <a name="see-also"></a>Voir aussi
-[Fonctions de chaîne &#40; Transact-SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)  
-[DÉCOMPRESSER &#40; Transact-SQL &#41;](../../t-sql/functions/decompress-transact-sql.md)
+[Fonctions de chaîne &#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)  
+[DECOMPRESS &#40;Transact-SQL&#41;](../../t-sql/functions/decompress-transact-sql.md)
   
   

@@ -1,5 +1,5 @@
 ---
-title: GETANSINULL (Transact-SQL) | Documents Microsoft
+title: GETANSINULL (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
@@ -49,18 +49,18 @@ GETANSINULL ( [ 'database' ] )
 ```  
   
 ## <a name="arguments"></a>Arguments  
- '*base de données*'  
- Nom de la base de données pour laquelle retourner des informations sur les possibilités de valeur NULL. *base de données*est **char** ou **nchar**. Si **char**, *base de données* est implicitement converti en **nchar**.  
+ '*database*'  
+ Nom de la base de données pour laquelle retourner des informations sur les possibilités de valeur NULL. *database* est de type **char** ou **nchar**. Si son type est **char**, *database* est implicitement converti en **nchar**.  
   
 ## <a name="return-types"></a>Types de retour  
- **int**  
+ **Int**  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Lorsque la possibilité de valeur NULL de la base de données précisée autorise les valeurs NULL et que la possibilité de valeur NULL de la colonne et du type de données n'est pas définie explicitement, GETANSINULL retourne 1. Il s'agit de la valeur par défaut ANSI NULL.  
   
  Pour activer le comportement par défaut de ANSI NULL, l'une des conditions suivantes doit être définie :  
   
--   ALTER DATABASE *nom_base_de_données* SET des ON ANSI_NULL_DEFAULT  
+-   ALTER DATABASE *database_name* SET ANSI_NULL_DEFAULT ON  
   
 -   SET ANSI_NULL_DFLT_ON ON  
   
@@ -85,7 +85,7 @@ GO
 (1 row(s) affected)
  ```  
   
-## <a name="see-also"></a>Voir aussi  
- [Fonctions système &#40; Transact-SQL &#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)  
+## <a name="see-also"></a> Voir aussi  
+ [Fonctions système &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)  
   
   

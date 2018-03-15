@@ -1,5 +1,5 @@
 ---
-title: "STNumGeometries (Type de données geography) | Documents Microsoft"
+title: "STNumGeometries (type de données geography) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stnumgeometries-geography-data-type"></a>STNumGeometries (type de données geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Retourne le nombre de **géométries** qui composent un **geography** instance.  
+  Retourne le nombre de **géométries** qui composent une instance **geography**.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -44,15 +44,15 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>Types de retour  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]type de retour : **int**  
+ Type de retour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] : **int**  
   
  Type de retour CLR : **SqlInt32**  
   
-## <a name="remarks"></a>Notes  
- Cette méthode retourne 1 si le **geography** instance n’est pas un **MultiPoint**, **MultiLineString**, **MultiPolygon**, ou **GeometryCollection** instance, ou 0 si le **geography** instance est vide.  
+## <a name="remarks"></a>Notes   
+ Cette méthode retourne 1 si l’instance **geography** n’est pas une instance **MultiPoint**, **MultiLineString**, **MultiPolygon** ou **GeometryCollection**, ou 0 si l’instance **geography** est vide.  
   
 ## <a name="examples"></a>Exemples  
- L’exemple suivant crée un `MultiPoint` instance et utilise `STNumGeometries()` pour en savoir plus nombreux **géométries** contient de l’instance.  
+ L’exemple suivant crée une instance `MultiPoint` et utilise `STNumGeometries()` pour déterminer le nombre de **géométries** contenues dans l’instance.  
   
 ```  
 DECLARE @g geography;  
@@ -60,7 +60,7 @@ SET @g = geography::STGeomFromText('MULTIPOINT((-122.360 47.656), (-122.343 47.6
 SELECT @g.STNumGeometries();  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Méthodes OGC sur des instances geography](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
   
   

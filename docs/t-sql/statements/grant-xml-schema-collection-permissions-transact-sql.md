@@ -1,5 +1,5 @@
 ---
-title: "Autorisations de Collection de schémas XML de GRANT (Transact-SQL) | Documents Microsoft"
+title: "GRANT – octroi d’autorisations de collection de schémas XML (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/10/2017
 ms.prod: sql-non-specified
@@ -64,15 +64,15 @@ GRANT permission  [ ,...n ] ON
  *permission*  
  Spécifie une autorisation qui peut être accordée sur une collection de schémas XML. Pour obtenir la liste des autorisations, consultez la section Notes plus loin dans cette rubrique.  
   
- COLLECTION de schémas XML ON :: [ *nom_schéma*. ] *XML_schema_collection_name*  
- Spécifie la collection de schémas XML sur laquelle l'autorisation doit être accordée. L'identificateur d'étendue (::) est requis. Si *nom_schéma* n’est pas spécifié, le schéma par défaut est utilisé. Si *schema_name* est spécifié, le qualificateur d’étendue de schéma (.) est requis.  
+ ON XML SCHEMA COLLECTION :: [ *schema_name*. ] *XML_schema_collection_name*  
+ Spécifie la collection de schémas XML sur laquelle l'autorisation doit être accordée. L'identificateur d'étendue (::) est requis. Si *schema_name* n’est pas spécifié, le schéma par défaut est utilisé. Si *schema_name* est spécifié, le qualificateur d’étendue de schéma (.) est obligatoire.  
   
- \<principal_base_de_données > Spécifie le principal auquel l’autorisation est accordée.  
+ \<database_principal> Spécifie le principal auquel l’autorisation est accordée.  
   
  WITH GRANT OPTION  
  Indique que le principal a également la possibilité d'accorder l'autorisation spécifiée à d'autres principaux.  
   
- En tant que \<principal_base_de_données > Spécifie un principal à partir duquel le principal qui exécute cette requête dérive son droit d’accorder l’autorisation.  
+ AS \<database_principal> Spécifie un principal dont le principal qui exécute cette requête dérive son droit d’octroyer l’autorisation.  
   
  *Database_user*  
  Spécifie un utilisateur de base de données.  
@@ -98,8 +98,8 @@ GRANT permission  [ ,...n ] ON
  *Database_user_with_no_login*  
  Spécifie un utilisateur de base de données sans principal au niveau serveur correspondant.  
   
-## <a name="remarks"></a>Notes  
- Informations sur les collections de schémas XML sont visibles dans le [sys.xml_schema_collections](../../relational-databases/system-catalog-views/sys-xml-schema-collections-transact-sql.md) affichage catalogue.  
+## <a name="remarks"></a>Notes   
+ Des informations sur les collections de schémas XML sont visibles dans la vue de catalogue [sys.xml_schema_collections](../../relational-databases/system-catalog-views/sys-xml-schema-collections-transact-sql.md).  
   
  Une collection de schémas XML est un élément sécurisable de niveau schéma inclus dans le schéma qui est son parent dans la hiérarchie des autorisations. Les autorisations les plus spécifiques et limitées qu'il est possible d'accorder sur une collection de schémas XML sont répertoriées dans le tableau ci-dessous, avec les autorisations plus générales qui les incluent de manière implicite.  
   
@@ -137,11 +137,11 @@ GRANT permission  [ ,...n ] ON
  GO
  ```  
   
-## <a name="see-also"></a>Voir aussi  
- [REFUSER des autorisations de Collection de schémas XML &#40; Transact-SQL &#41;](../../t-sql/statements/deny-xml-schema-collection-permissions-transact-sql.md)   
- [RÉVOQUER les autorisations de Collection de schémas XML &#40; Transact-SQL &#41;](../../t-sql/statements/revoke-xml-schema-collection-permissions-transact-sql.md)   
+## <a name="see-also"></a> Voir aussi  
+ [DENY – Refuser des autorisations sur une collection de schémas &#40;Transact-SQL&#41;](../../t-sql/statements/deny-xml-schema-collection-permissions-transact-sql.md)   
+ [REVOKE – Révoquer des autorisations sur une collection de schémas XML &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-xml-schema-collection-permissions-transact-sql.md)   
  [sys.xml_schema_collections &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-xml-schema-collections-transact-sql.md)   
- [CRÉER une COLLECTION de schémas XML &#40; Transact-SQL &#41;](../../t-sql/statements/create-xml-schema-collection-transact-sql.md)   
+ [CREATE XML SCHEMA COLLECTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-xml-schema-collection-transact-sql.md)   
  [Autorisations &#40;moteur de base de données&#41;](../../relational-databases/security/permissions-database-engine.md)   
  [Principaux &#40;moteur de base de données&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)  
   

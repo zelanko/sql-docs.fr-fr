@@ -1,5 +1,5 @@
 ---
-title: '@@PACK_RECEIVED (Transact-SQL) | Documents Microsoft'
+title: '@@PACK_RECEIVED (Transact-SQL) | Microsoft Docs'
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -33,7 +33,7 @@ ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="x40x40packreceived-transact-sql"></a>& #x 40 ; & #x 40 ; PACK_RECEIVED (Transact-SQL)
+# <a name="x40x40packreceived-transact-sql"></a>&#x40;&#x40;PACK_RECEIVED (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Retourne le nombre de paquets entrants lus du réseau par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] depuis son dernier démarrage.  
@@ -49,8 +49,8 @@ ms.lasthandoff: 11/21/2017
 ## <a name="return-types"></a>Types de retour  
  **entier**  
   
-## <a name="remarks"></a>Notes  
- Pour afficher un rapport contenant plusieurs [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] des statistiques, notamment les paquets envoyés et reçus, exécutez **sp_monitor**.  
+## <a name="remarks"></a>Notes   
+ Pour afficher un rapport contenant plusieurs statistiques [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], notamment les paquets envoyés et reçus, exécutez **sp_monitor**.  
   
 ## <a name="examples"></a>Exemples  
  L’exemple suivant illustre l’utilisation de `@@PACK_RECEIVED`.  
@@ -67,7 +67,7 @@ Packets Received
 128  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [@@PACK_SENT](../../t-sql/functions/pack-sent-transact-sql.md)   
  [sp_monitor](../../relational-databases/system-stored-procedures/sp-monitor-transact-sql.md)   
  [Fonctions statistiques système](../../t-sql/functions/system-statistical-functions-transact-sql.md)  

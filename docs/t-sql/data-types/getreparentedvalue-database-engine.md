@@ -1,5 +1,5 @@
 ---
-title: "GetReparentedValue (moteur de base de données) | Documents Microsoft"
+title: "GetReparentedValue (moteur de base de données) | Microsoft Docs"
 ms.custom: 
 ms.date: 7/22/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="getreparentedvalue-database-engine"></a>GetReparentedValue (moteur de base de données)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Retourne un nœud dont le chemin de la racine est le chemin d’accès à *newRoot*, suivi par le chemin d’accès à partir de *oldRoot* à *cela*.
+Retourne un nœud dont le chemin depuis la racine est celui vers *newRoot*, suivi du chemin entre *oldRoot* et *this*.
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -50,23 +50,23 @@ SqlHierarchyId GetReparentedValue ( SqlHierarchyId oldRoot , SqlHierarchyId newR
   
 ## <a name="arguments"></a>Arguments  
 *oldRoot*  
-A **hierarchyid** qui est le nœud qui représente le niveau de la hiérarchie qui doit être modifié.
+**hierarchyid** qui est le nœud représentant le niveau de la hiérarchie à modifier.
   
 *newRoot*  
-A **hierarchyid** qui représente le nœud qui remplacera le *oldRoot* section du nœud actuel afin de le déplacer.
+**hierarchyid** représentant le nœud qui remplacera la section *oldRoot* du nœud actuel afin de le déplacer.
   
 ## <a name="return-types"></a>Types de retour  
-**SQL Server de type de retour : hierarchyid**
+**Type de retour SQL Server : hierarchyid**
   
-**CLR de type de retour : SqlHierarchyId**
+**Type de retour CLR : SqlHierarchyId**
   
-## <a name="remarks"></a>Notes  
-Peut être utilisé pour modifier l’arborescence en déplaçant des nœuds de *oldRoot* à *newRoot*. GetReparentedValue peut être utilisé pour déplacer un nœud d'une hiérarchie vers un nouvel emplacement de la hiérarchie. Le **hierarchyid** représente le type de données, mais n’applique pas la structure hiérarchique. Les utilisateurs doivent s'assurer que la structure hierarchyid convient au nouvel emplacement. Un index unique sur la **hierarchyid** type de données peut permettre d’éviter les entrées en double. Pour obtenir un exemple de déplacement d’une sous-arborescence entière, consultez [hiérarchique de données &#40; SQL Server &#41; ](../../relational-databases/hierarchical-data-sql-server.md).
+## <a name="remarks"></a>Notes   
+Peut être utilisé pour modifier l’arborescence en déplaçant des nœuds depuis *oldRoot* vers *newRoot*. GetReparentedValue peut être utilisé pour déplacer un nœud d'une hiérarchie vers un nouvel emplacement de la hiérarchie. Le type de données **hierarchyid** représente, mais n’applique pas la structure hiérarchique. Les utilisateurs doivent s'assurer que la structure hierarchyid convient au nouvel emplacement. Un index unique sur le type de données **hierarchyid** peut éviter la duplication des entrées. Pour obtenir un exemple de déplacement d’une sous-arborescence entière, consultez [Données hiérarchiques &#40;SQL Server&#41;](../../relational-databases/hierarchical-data-sql-server.md).
   
 ## <a name="examples"></a>Exemples  
   
 ### <a name="a-comparing-two-node-locations"></a>A. Comparaison de deux emplacements de nœuds  
-L'exemple suivant montre le hierarchyid actuel d'un nœud. Il montre également que le **hierarchyid** du nœud est si le nœud était déplacé pour devenir un descendant de la  **@NewParent**  nœud. Il utilise la méthode `ToString()` pour afficher les relations hiérarchiques.
+L'exemple suivant montre le hierarchyid actuel d'un nœud. Il montre également ce que serait le **hierarchyid** du nœud si le nœud était déplacé pour devenir un descendant du nœud **@NewParent**. Il utilise la méthode `ToString()` pour afficher les relations hiérarchiques.
   
 ```sql
 DECLARE @SubjectEmployee hierarchyid , @OldParent hierarchyid, @NewParent hierarchyid  
@@ -110,7 +110,7 @@ WHERE LoginID = 'adventure-works\gail0' ; -- Now node /2/3/2/
 ```  
   
 ### <a name="c-clr-example"></a>C. Exemple CLR  
-L’extrait de code suivant appelle la méthode GetReparentedValue :
+L’extrait de code suivant appelle la méthode GetReparentedValue () :
   
 ```sql
 this. GetReparentedValue(oldParent, newParent)  

@@ -1,5 +1,5 @@
 ---
-title: "UnionAggregate (Type de données geography) | Documents Microsoft"
+title: "UnionAggregate (type de données geography) | Microsoft Docs"
 ms.custom: 
 ms.date: 07/30/2017
 ms.prod: sql-non-specified
@@ -45,21 +45,21 @@ UnionAggregate ( geography_operand )
   
 ## <a name="arguments"></a>Arguments  
  *geography_operand*  
- Est un **geography** colonne de table de type qui conserve le jeu de **geography** objets sur lesquels effectuer une opération d’union.  
+ Colonne de table de type **geography** qui contient l’ensemble d’objets **geography** sur lequel effectuer une opération d’union.  
   
 ## <a name="return-types"></a>Types de retour  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]type de retour : **geography**  
+ Type de retour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] : **geography**  
   
-## <a name="remarks"></a>Notes  
- Méthode renvoie **null** si l’entrée a des SRID différents. Consultez [identificateurs de référence spatiale &#40; SRID &#41; ](../../relational-databases/spatial/spatial-reference-identifiers-srids.md).  
+## <a name="remarks"></a>Notes   
+ La méthode retourne **null** si l’entrée a des SRID différents. Consultez [Identificateurs de référence spatiale &#40;SRID&#41;](../../relational-databases/spatial/spatial-reference-identifiers-srids.md).  
   
- Méthode ignore **null** entrées.  
+ La méthode ignore les entrées **null**.  
   
 > [!NOTE]  
->  Méthode renvoie **null** si toutes les valeurs entrées sont **null**.  
+>  La méthode retourne **null** si toutes les valeurs entrées sont **null**.  
   
 ## <a name="examples"></a>Exemples  
- L’exemple suivant effectue une `UnionAggregate` sur un ensemble de **geography** points d’emplacement au sein d’une ville.  
+ L’exemple suivant effectue un `UnionAggregate` sur un ensemble de points d’emplacement **geography** dans une ville.  
   
  ```
  USE AdventureWorks2012  
@@ -71,7 +71,7 @@ UnionAggregate ( geography_operand )
  GROUP BY City;
  ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Méthodes geography statiques étendues](../../t-sql/spatial-geography/extended-static-geography-methods.md)  
   
   

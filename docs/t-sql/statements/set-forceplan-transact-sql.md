@@ -1,5 +1,5 @@
 ---
-title: SET FORCEPLAN (Transact-SQL) | Documents Microsoft
+title: SET FORCEPLAN (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/26/2017
 ms.prod: sql-non-specified
@@ -51,14 +51,14 @@ ms.lasthandoff: 11/21/2017
 SET FORCEPLAN { ON | OFF }  
 ```  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  SET FORCEPLAN a priorité sur la logique utilisée par l'optimiseur pour traiter une instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT. Les données renvoyées par l'instruction SELECT sont identiques, que cette option soit ou non utilisée. La seule différence est la façon dont [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] traite les tables durant l'exécution de la requête.  
   
  Les indicateurs de l'optimiseur de requête peuvent également être utilisés dans les requêtes pour modifier la façon dont [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] traite l'instruction SELECT.  
   
  L'option SET FORCEPLAN est appliquée lors de l'exécution et non pas au moment de l'analyse.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Les autorisations SET FORCEPLAN sont octroyées par défaut à tous les utilisateurs.  
   
 ## <a name="examples"></a>Exemples  
@@ -107,10 +107,10 @@ SET FORCEPLAN OFF;
 GO  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [Instructions SET &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)   
- [SET SHOWPLAN_ALL &#40; Transact-SQL &#41;](../../t-sql/statements/set-showplan-all-transact-sql.md)   
- [SET SHOWPLAN_TEXT &#40; Transact-SQL &#41;](../../t-sql/statements/set-showplan-text-transact-sql.md)  
+ [SET SHOWPLAN_ALL &#40;Transact-SQL&#41;](../../t-sql/statements/set-showplan-all-transact-sql.md)   
+ [SET SHOWPLAN_TEXT &#40;Transact-SQL&#41;](../../t-sql/statements/set-showplan-text-transact-sql.md)  
   
   

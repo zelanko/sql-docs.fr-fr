@@ -1,5 +1,5 @@
 ---
-title: ALTER SERVICE (Transact-SQL) | Documents Microsoft
+title: ALTER SERVICE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -55,25 +55,25 @@ ALTER SERVICE service_name
 ```  
   
 ## <a name="arguments"></a>Arguments  
- *SERVICE_NAME*  
+ *service_name*  
  Nom du service à modifier. Les noms du serveur, de la base de données et du schéma ne peuvent pas être spécifiés.  
   
- File d’attente ON [ *nom_schéma***.** ] *nom_file_attente*  
+ ON QUEUE [ *schema_name***.** ] *queue_name*  
  Spécifie la nouvelle file d'attente de ce service. [!INCLUDE[ssSB](../../includes/sssb-md.md)] déplace tous les messages destinés à ce service de la file d'attente actuelle vers la nouvelle file d'attente.  
   
- Ajouter un contrat *nom_contract*  
+ ADD CONTRACT *contract_name*  
  Spécifie un contrat à ajouter à l'ensemble de contrats exposé par ce service.  
   
- DROP CONTRACT *nom_contract*  
+ DROP CONTRACT *contract_name*  
  Spécifie un contrat à supprimer de l'ensemble de contrats exposé par ce service. [!INCLUDE[ssSB](../../includes/sssb-md.md)] envoie un message d'erreur sur toutes les conversations existantes avec ce service qui utilisent ce contrat.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Lorsque l'instruction ALTER SERVICE supprime un contrat d'un service, ce dernier ne peut plus être la destination des conversations qui utilisent ce contrat. Par conséquent, [!INCLUDE[ssSB](../../includes/sssb-md.md)] n'autorise aucune nouvelle conversation avec le service sur ce contrat. Les conversations existantes qui utilisent le contrat ne sont pas affectées.  
   
  L'instruction ALTER AUTHORIZATION permet de modifier l'AUTORISATION pour un service.  
   
-## <a name="permissions"></a>Permissions  
- L’autorisation de modification d’un service par défaut est le propriétaire du service, les membres de la **db_ddladmin** ou **db_owner** fixe des rôles de base de données et les membres de la **sysadmin** rôle serveur fixe.  
+## <a name="permissions"></a>Autorisations  
+ Par défaut, l’autorisation de modification d’un service est octroyée au propriétaire de ce service, aux membres des rôles de base de données fixes **db_ddladmin** ou **db_owner** et aux membres du rôle serveur fixe **sysadmin**.  
   
 ## <a name="examples"></a>Exemples  
   
@@ -102,9 +102,9 @@ ALTER SERVICE [//Adventure-Works.com/Expenses]
      DROP CONTRACT [//Adventure-Works.com/Expenses/ExpenseSubmission]) ;  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [CREATE SERVICE &#40;Transact-SQL&#41;](../../t-sql/statements/create-service-transact-sql.md)   
- [DROP SERVICE &#40; Transact-SQL &#41;](../../t-sql/statements/drop-service-transact-sql.md)   
+ [DROP SERVICE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-service-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
   
   

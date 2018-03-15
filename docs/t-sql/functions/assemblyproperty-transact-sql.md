@@ -1,5 +1,5 @@
 ---
-title: ASSEMBLYPROPERTY (Transact-SQL) | Documents Microsoft
+title: ASSEMBLYPROPERTY (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
@@ -50,9 +50,9 @@ ASSEMBLYPROPERTY('assembly_name', 'property_name')
 Nom de l'assembly.
   
 *property_name*  
-Nom de la propriété sur laquelle des informations doivent être extraites. *property_name* peut prendre l’une des valeurs suivantes.
+Nom de la propriété sur laquelle des informations doivent être extraites. *property_name* peut avoir l’une des valeurs suivantes.
   
-|Valeur| Description|  
+|Valeur|Description|  
 |---|---|
 |**CultureInfo**|Paramètres régionaux de l'assembly.|  
 |**PublicKey**|Clé publique ou jeton de clé publique de l'assembly.|  
@@ -69,7 +69,7 @@ Nom de la propriété sur laquelle des informations doivent être extraites. *pr
 **sql_variant**
   
 ## <a name="examples"></a>Exemples  
-L'exemple suivant suppose qu'un assembly `HelloWorld` est enregistré dans la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]. Pour plus d’informations, consultez [exemple Hello World](http://msdn.microsoft.com/library/fed6c358-f5ee-4d4c-9ad6-089778383ba7).
+L'exemple suivant suppose qu'un assembly `HelloWorld` est enregistré dans la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]. Pour plus d’informations, consultez [Exemple Hello World](http://msdn.microsoft.com/library/fed6c358-f5ee-4d4c-9ad6-089778383ba7).
   
 ```sql
 USE AdventureWorks2012;  

@@ -1,5 +1,5 @@
 ---
-title: "CRÉER l’INDEX COLUMNSTORE (Transact-SQL) | Documents Microsoft"
+title: CREATE COLUMNSTORE INDEX (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/10/2017
 ms.prod: sql-non-specified
@@ -45,25 +45,25 @@ ms.lasthandoff: 01/25/2018
 # <a name="create-columnstore-index-transact-sql"></a>CREATE COLUMNSTORE INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
-Convertir une table rowstore en un index columnstore en cluster ou créer un index non cluster. Utilisez un index columnstore pour exécuter efficacement analytique opérationnelle en temps réel sur une charge de travail OLTP ou pour améliorer les performances de compression et de requête de données pour les charges de travail d’entreposage de données.  
+Convertissez une table rowstore en index cluster columnstore ou créez un index columnstore non-cluster. Utilisez un index columnstore pour procéder efficacement à une analytique opérationnelle en temps réel sur une charge de travail OLTP ou pour améliorer les performances de compression et de requête de données pour les charges de travail d’entreposage de données.  
   
 > [!NOTE]  
-> En commençant par [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], vous pouvez créer la table en tant qu’un index cluster columnstore.   Il n’est plus nécessaire de créer au préalable une table rowstore, puis le convertir en un index cluster columnstore.  
+> Depuis [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], vous pouvez créer la table en tant qu’index cluster columnstore.   Il n’est plus nécessaire de créer d’abord une table rowstore, puis de la convertir en index cluster columnstore.  
 
 > [!TIP]
-> Pour plus d’informations sur les règles de conception d’index, reportez-vous à la [Guide de conception de SQL Server Index](../../relational-databases/sql-server-index-design-guide.md).
+> Pour des informations sur les règles de conception d’index, consultez le [Guide de conception d’index SQL Server](../../relational-databases/sql-server-index-design-guide.md).
 
 Passez aux exemples :  
 -   [Exemples de conversion d’une table rowstore en columnstore](../../t-sql/statements/create-columnstore-index-transact-sql.md#convert)  
--   [Exemples pour les index non cluster columnstore](../../t-sql/statements/create-columnstore-index-transact-sql.md#nonclustered)  
+-   [Exemples d’index columnstore non-cluster](../../t-sql/statements/create-columnstore-index-transact-sql.md#nonclustered)  
   
-Accédez aux scénarios :  
--   [Index ColumnStore pour l’analytique opérationnelle en temps réel](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md)  
--   [Index ColumnStore pour l’entreposage des données](../../relational-databases/indexes/columnstore-indexes-data-warehouse.md)  
+Passez aux scénarios :  
+-   [Index columnstore pour l’analytique opérationnelle en temps réel](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md)  
+-   [Index columnstore pour l’entreposage des données](../../relational-databases/indexes/columnstore-indexes-data-warehouse.md)  
   
-Pour en savoir plus :  
--   [Guide des index ColumnStore](../../relational-databases/indexes/columnstore-indexes-overview.md)  
--   [Récapitulatif des fonctionnalités des index ColumnStore](../../relational-databases/indexes/columnstore-indexes-what-s-new.md)  
+En savoir plus :  
+-   [Guide des index columnstore](../../relational-databases/indexes/columnstore-indexes-overview.md)  
+-   [Synthèse des fonctionnalités des index columnstore](../../relational-databases/indexes/columnstore-indexes-what-s-new.md)  
   
 ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -118,158 +118,158 @@ CREATE CLUSTERED COLUMNSTORE INDEX index_name
   
 ## <a name="arguments"></a>Arguments  
 CREATE CLUSTERED COLUMNSTORE INDEX  
-Créer un index columnstore cluster dans lequel toutes les données sont compressées et stockées par colonne. L'index inclut toutes les colonnes de la table et stocke la table entière. Si la table existante est un segment de mémoire ou un index ordonné en clusters, la table est convertie en un index cluster columnstore. Si la table est déjà stockée en tant qu’un index cluster columnstore, l’index existant est supprimé et reconstruit.  
+Crée un index cluster columnstore dans lequel toutes les données sont compressées et stockées en colonne. L'index inclut toutes les colonnes de la table et stocke la table entière. Si la table existante est un segment ou un index cluster, elle est convertie en index cluster columnstore. Si la table est déjà stockée en tant qu’index cluster columnstore, l’index existant est supprimé et recréé.  
   
 *index_name*  
 Spécifie le nom du nouvel index.  
   
-Si la table possède déjà un index cluster columnstore, vous pouvez spécifier le même nom que l’index existant, ou vous pouvez utiliser l’option pour spécifier un nouveau nom.  
+Si la table a déjà un index cluster columnstore, vous pouvez spécifier le même nom que l’index existant, ou vous pouvez utiliser l’option DROP EXISTING pour spécifier un nouveau nom.  
   
-ON [*nom_base_de_données*. [*schema_name* ] . | *schema_name* . ] *table_name*  
-   Spécifie le nom à une, deux ou trois parties de la table à stocker en tant qu'index columnstore cluster. Si la table est un segment de mémoire ou index ordonné en clusters de la table est converti de rowstore en columnstore. Si la table est déjà un index columnstore, cette instruction permet de reconstruire l’index columnstore cluster.  
+ON [*database_name*. [*schema_name* ] . | *schema_name* . ] *table_name*  
+   Spécifie le nom à une, deux ou trois parties de la table à stocker en tant qu'index columnstore cluster. Si la table est un segment ou un index cluster, elle est convertie de rowstore en columnstore. Si la table est déjà un index columnstore, cette instruction reconstruit l’index cluster columnstore.  
   
-par  
+WITH  
 DROP_EXISTING = [OFF] | ON  
-   DROP_EXISTING = ON spécifie pour supprimer l’index columnstore cluster existant et créer un nouvel index columnstore.  
+   DROP_EXISTING = ON spécifie de supprimer l’index cluster columnstore existant et de créer un nouvel index columnstore.  
 
-   La valeur par défaut, DROP_EXISTING = OFF attend le nom de l’index est le même que le nom existant. Une erreur se produit est le nom de l’index spécifié existe déjà.  
+   La valeur par défaut, DROP_EXISTING = OFF attend que le nom de l’index soit le même que le nom existant. Une erreur se produit si le nom d’index spécifié existe déjà.  
   
 MAXDOP = *max_degree_of_parallelism*  
    Remplace la configuration de serveur « max degree of parallelism » existante pendant la durée de l'opération d'index. Utilisez MAXDOP pour limiter le nombre de processeurs utilisés dans une exécution de plan parallèle. Le nombre maximal de processeurs est égal à 64.  
   
-   *max_degree_of_parallelism* les valeurs peuvent être :  
+   Les valeurs de *max_degree_of_parallelism* peuvent être :  
    - 1 - Supprime la génération de plan parallèle.  
-   - \>1 - limiter le nombre maximal de processeurs utilisés dans une opération d’index en parallèle au nombre spécifié ou inférieur en fonction de la charge système actuelle. Par exemple, lorsque MAXDOP = 4, le nombre de processeurs utilisés est inférieur ou égal à 4.  
+   - \>1 - Limite le nombre maximal de processeurs utilisés dans l’indexation parallèle au nombre défini ou à un nombre inférieur en fonction de la charge de travail actuelle du système. Par exemple, si MAXDOP = 4, le nombre de processeurs utilisés est inférieur ou égal à 4.  
    - 0 (valeur par défaut) - Utilise le nombre réel de processeurs ou un nombre de processeurs inférieur en fonction de la charge de travail actuelle du système.  
   
-   Pour plus d’informations, consultez [configurer le degré maximal de parallélisme Server Configuration Option](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md), et [configurer des opérations d’Index parallèles](../../relational-databases/indexes/configure-parallel-index-operations.md).  
+   Pour plus d’informations, consultez [Configurer l’option de configuration du serveur Degré maximal de parallélisme](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) et [Configurer des opérations d’index parallèles](../../relational-databases/indexes/configure-parallel-index-operations.md).  
  
-COMPRESSION_DELAY = **0** | *délai* [Minutes]  
-   S’applique à : [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] via [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
+COMPRESSION_DELAY = **0** | *delay* [ Minutes ]  
+   S’applique à : [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] jusqu’à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
 
-   Pour une table basée sur disque, *délai* Spécifie le nombre minimal de minutes pendant lesquelles un rowgroup delta à l’état CLOSED doit rester dans le rowgroup delta avant que SQL Server peut compresser dans le rowgroup compressé. Étant donné que les tables sur disque ne suivre insérer et mettre à jour heures sur des lignes individuelles, SQL Server s’applique le délai d’attente pour les groupes de lignes delta à l’état CLOSED.  
+   Pour une table sur disque, le *délai* spécifie le nombre minimal de minutes pendant lesquelles un rowgroup delta à l’état CLOSED doit rester dans le rowgroup delta avant que SQL Server puisse le compresser dans le rowgroup compressé. Étant donné que les tables sur disque ne surveillent pas les durées d’insertion et de mise à jour sur chaque ligne, SQL Server applique le délai aux rowgroups delta à l’état CLOSED.  
    La valeur par défaut est 0 minute.  
-   Pour savoir à quel moment utiliser COMPRESSION_DELAY, consultez [prise en main Columnstore pour les analytique opérationnelle en temps réel](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md).  
+   Pour obtenir des recommandations concernant l’utilisation de COMPRESSION_DELAY, consultez [Prise en main de Columnstore pour l’analytique opérationnelle en temps réel](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md).  
   
 DATA_COMPRESSION = COLUMNSTORE | COLUMNSTORE_ARCHIVE  
-   S’applique à : [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] via [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
+   S’applique à : [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] jusqu’à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
 Spécifie l'option de compression de données pour la table, le numéro de partition ou la plage de partitions spécifiés. Les options disponibles sont les suivantes :   
 COLUMNSTORE  
-   COLUMNSTORE est la valeur par défaut et spécifie les compresser avec la compression de columnstore plus performant. Il s’agit du choix par défaut.  
+   COLUMNSTORE est la valeur par défaut et indique qu’il faut compresser avec la compression columnstore la plus performante. Il s’agit de l’option généralement choisie.  
   
 COLUMNSTORE_ARCHIVE  
-   COLUMNSTORE_ARCHIVE davantage compresse la table ou la partition à une taille plus petite. Utilisez cette option pour des situations telles qu’archivage qui nécessitent une plus petite taille de stockage et supportent plus de temps pour le stockage et la récupération.  
+   COLUMNSTORE_ARCHIVE compresse la partition ou la table en une taille encore plus petite. Utilisez cette option dans des cas où l’archivage nécessite un stockage plus petit et peut supporter une durée de stockage et de récupération plus longue.  
   
-   Pour plus d’informations sur la compression, consultez [la Compression des données](../../relational-databases/data-compression/data-compression.md).  
+   Pour plus d’informations sur la compression, consultez [Compression des données](../../relational-databases/data-compression/data-compression.md).  
 
 ON  
-   Avec les options ON, spécifiez des options pour le stockage des données, par exemple, un schéma de partition, un groupe de fichiers spécifique, ou le groupe de fichiers par défaut. Si l’option ON n’est pas spécifiée, l’index utilise les paramètres de partition ou groupe de fichiers de paramètres de la table existante.  
+   Avec les options ON, spécifiez des options pour le stockage des données, par exemple, un schéma de partition, un groupe de fichiers spécifique, ou le groupe de fichiers par défaut. Si l'option ON n'est pas spécifiée, l’index utilise les paramètres de la partition ou du groupe de fichiers de la table existante.  
   
    *partition_scheme_name* **(** *column_name* **)**  
    Spécifie le schéma de partition de la table. Le schéma de partition doit déjà exister dans la base de données. Pour créer le schéma de partition, consultez [CREATE PARTITION SCHEME](../../t-sql/statements/create-partition-scheme-transact-sql.md).  
  
-   *column_name* spécifie la colonne sur laquelle un index partitionné est partitionné. Cette colonne doit correspondre au type de données, longueur, et la précision de l’argument de la partition de fonction qui *partition_scheme_name* est à l’aide.  
+   *column_name* désigne la colonne sur laquelle un index partitionné est partitionné. Cette colonne doit correspondre au type de données, à la longueur et à la précision de l’argument de la fonction de partition que *partition_scheme_name* utilise.  
 
    *filegroup_name*  
    Spécifie le groupe de fichiers pour le stockage de l'index columnstore cluster. Si aucun emplacement n'est défini et que la table n'est pas partitionnée, l'index utilise le même groupe de fichiers que la table ou vue sous-jacente. Le groupe de fichiers doit déjà exister.  
 
    **"**default**"**  
-   Pour créer l’index sur le groupe de fichiers par défaut, utilisez « default » ou [default].  
+   Pour créer l’index sur le groupe de fichiers par défaut, utilisez la valeur "default" ou [ default ].  
   
    Si "default" est spécifié, l'option QUOTED_IDENTIFIER doit être activée (ON) pour la session active. QUOTED_IDENTIFIER est activé par défaut. Pour plus d’informations, consultez [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md).  
   
-CRÉER DES INDEX NON [CLUSTER]  
-Créer un index non cluster en mémoire sur une table rowstore stockées sous forme d’un segment de mémoire ou un index ordonné en clusters. L’index peut avoir une condition filtrée et n’avez pas besoin d’inclure toutes les colonnes de la table sous-jacente. L’index columnstore nécessite suffisamment d’espace pour stocker une copie des données. Il est modifiable et est mis à jour la table sous-jacente est modifiée. L’index non cluster sur un index cluster permet l’analytique en temps réel.  
+CREATE [NONCLUSTERED] COLUMNSTORE INDEX  
+Créez un index columnstore non-cluster en mémoire sur une table rowstore stockée sous forme de segment ou d’index cluster. L’index peut avoir une condition filtrée et n’a pas besoin d’inclure toutes les colonnes de la table sous-jacente. L’index columnstore nécessite suffisamment d’espace pour stocker une copie des données. Il peut être mis à jour, et il l’est dès que la table sous-jacente est modifiée. L’index columnstore non-cluster sur un index cluster permet une analytique en temps réel.  
   
 *index_name*  
-   Spécifie le nom de l'index. *index_name* doit être unique dans la table, mais pas nécessairement être unique au sein de la base de données. Les noms d’index doivent respecter les règles de [identificateurs](../../relational-databases/databases/database-identifiers.md).  
+   Spécifie le nom de l'index. *index_name* doit être unique dans la table, mais ne doit pas nécessairement l’être dans la base de données. Les noms d’index doivent suivre les règles des [identificateurs](../../relational-databases/databases/database-identifiers.md).  
   
- **(** *colonne* [ **,**... *n* ] **)**  
-    Spécifie les colonnes à stocker. Un index non cluster est limité à 1 024 colonnes.  
-   Chaque colonne doit appartenir à un type de données pris en charge pour les index columnstore. Consultez [Limitations et Restrictions](../../t-sql/statements/create-columnstore-index-transact-sql.md#LimitRest) pour obtenir la liste des types de données pris en charge.  
+ **(** *column*  [ **,**...*n* ] **)**  
+    Spécifie les colonnes à stocker. Un index columnstore non-cluster est limité à 1 024 colonnes.  
+   Chaque colonne doit appartenir à un type de données pris en charge pour les index columnstore. Pour obtenir la liste des types de données pris en charge, consultez [Limitations et Restrictions](../../t-sql/statements/create-columnstore-index-transact-sql.md#LimitRest).  
 
-ON [*nom_base_de_données*. [*schema_name* ] . | *schema_name* . ] *table_name*  
-   Spécifie un, deux ou nom en trois parties de la table qui contient l’index.  
+ON [*database_name*. [*schema_name* ] . | *schema_name* . ] *table_name*  
+   Spécifie un nom en une, deux ou trois parties pour la table qui contient l’index.  
 
 WITH DROP_EXISTING = [OFF] | ON  
-   DROP_EXISTING = ON, l’index existant est supprimé et reconstruit. Le nom d'index défini doit être identique à celui de l'index existant. Toutefois, la définition de l'index peut être modifiée. Par exemple, vous pouvez spécifier différentes colonnes, ou options d'index.
+   DROP_EXISTING = ON L’index existant est supprimé et recréé. Le nom d'index défini doit être identique à celui de l'index existant. Toutefois, la définition de l'index peut être modifiée. Par exemple, vous pouvez spécifier différentes colonnes, ou options d'index.
   
-   DROP_EXISTING = OFF, une erreur s’affiche si le nom de l’index spécifié existe déjà. Le type d'index ne peut pas être modifié à l'aide de DROP_EXISTING. Dans la syntaxe de compatibilité descendante, WITH DROP_EXISTING est équivalent à WITH DROP_EXISTING = ON.  
+   DROP_EXISTING = OFF Une erreur s’affiche si le nom d’index spécifié existe déjà. Le type d'index ne peut pas être modifié à l'aide de DROP_EXISTING. Dans la syntaxe de compatibilité descendante, WITH DROP_EXISTING est équivalent à WITH DROP_EXISTING = ON.  
 
 MAXDOP = *max_degree_of_parallelism*  
-   Remplace le [configurer le degré maximal de parallélisme Server Configuration Option](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) option de configuration pour la durée de l’opération d’index. Utilisez MAXDOP pour limiter le nombre de processeurs utilisés dans une exécution de plan parallèle. Le nombre maximal de processeurs est égal à 64.  
+   Remplace l’option de configuration [Configurer l’option de configuration du serveur Degré maximal de parallélisme](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) pendant la durée de l’opération d’index. Utilisez MAXDOP pour limiter le nombre de processeurs utilisés dans une exécution de plan parallèle. Le nombre maximal de processeurs est égal à 64.  
   
-   *max_degree_of_parallelism* les valeurs peuvent être :  
+   Les valeurs de *max_degree_of_parallelism* peuvent être :  
    - 1 - Supprime la génération de plan parallèle.  
-   - \>1 - limiter le nombre maximal de processeurs utilisés dans une opération d’index en parallèle au nombre spécifié ou inférieur en fonction de la charge système actuelle. Par exemple, lorsque MAXDOP = 4, le nombre de processeurs utilisés est inférieur ou égal à 4.  
+   - \>1 - Limite le nombre maximal de processeurs utilisés dans l’indexation parallèle au nombre défini ou à un nombre inférieur en fonction de la charge de travail actuelle du système. Par exemple, si MAXDOP = 4, le nombre de processeurs utilisés est inférieur ou égal à 4.  
    - 0 (valeur par défaut) - Utilise le nombre réel de processeurs ou un nombre de processeurs inférieur en fonction de la charge de travail actuelle du système.  
   
    Pour plus d’informations, consultez [Configurer des opérations d’index parallèles](../../relational-databases/indexes/configure-parallel-index-operations.md).  
   
 > [!NOTE]  
->  Opérations d’index parallèles ne sont pas disponibles dans toutes les éditions de [!INCLUDE[msC](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour obtenir la liste des fonctionnalités prises en charge par les éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez [Fonctionnalités prises en charge par les éditions de SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
+>  Les opérations d’index parallèles ne sont pas disponibles dans toutes les éditions de [!INCLUDE[msC](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour obtenir la liste des fonctionnalités prises en charge par les éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez [Fonctionnalités prises en charge par les éditions de SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
 ONLINE = [ON | OFF]   
-   S’applique à : [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)], dans les index columnstore non cluster uniquement.
-ON indique que l’index non cluster reste en ligne et disponibles lors de la nouvelle copie de l’index sont en cours de génération.
+   S’applique à : [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] dans les index columnstore non-cluster uniquement.
+ON indique que l’index columnstore non-cluster reste en ligne et disponible pendant que la nouvelle copie de l’index est en cours de création.
 
-   INACTIF Spécifie que l’index n’est pas disponible pour une utilisation pendant la nouvelle copie est générée. Comme il s’agit d’un index non cluster uniquement, le reste de la table de base disponible, qu'uniquement l’index non cluster n’est pas utilisé pour satisfaire les requêtes jusqu'à ce que le nouvel index est terminé. 
+   OFF indique que l’index n’est pas disponible pendant que la nouvelle copie est en cours de création. Comme il s’agit d’un index non-cluster uniquement, la table de base reste disponible. Seul l’index columnstore non-cluster n’est pas utilisé pour satisfaire les requêtes tant que le nouvel index n’est pas terminé. 
 
-COMPRESSION_DELAY = **0** | \<délai > [Minutes]  
-   S’applique à : [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] via [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. 
+COMPRESSION_DELAY = **0** | \<delay>[Minutes]  
+   S’applique à : [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] jusqu’à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. 
   
-   Spécifie une limite inférieure sur la durée pendant laquelle une ligne doit rester dans un rowgroup delta avant qu’il soit éligible pour la migration vers un rowgroup compressé. Par exemple, un client peut dire que si une ligne est inchangée pendant 120 minutes, qu’elle puisse être compression dans le format de stockage en colonnes. Pour les index columnstore sur les tables sur disque, nous ne pas suivre le temps lorsqu’une ligne a été insérée ou mise à jour, nous utilisons le temps de rowgroup fermé delta en tant que proxy pour la ligne à la place. La durée par défaut est 0 minute. Une ligne est migrée vers le stockage en colonnes une fois que 1 million de lignes qui ont été accumulées dans un rowgroup delta et il a été marqué comme fermé.  
+   Spécifie une durée minimale pendant laquelle une ligne doit rester dans un rowgroup delta avant qu’elle ne soit éligible pour la migration vers un rowgroup compressé. Par exemple, un client peut décider que si une ligne reste inchangée pendant 120 minutes, elle est éligible à la compression dans le format de stockage en colonnes. Pour les index columnstore des tables sur disque, nous ne suivons pas l’heure à laquelle une ligne a été insérée ou mise à jour, mais nous utilisons plutôt l’heure de fermeture du rowgroup delta comme proxy pour la ligne. La durée par défaut est de 0 minute. Une ligne est migrée vers un stockage en colonnes après l’accumulation de 1 million de lignes dans un rowgroup delta et après avoir été marquée comme fermée.  
   
 DATA_COMPRESSION  
    Spécifie l'option de compression de données pour la table, le numéro de partition ou la plage de partitions spécifiés. Les options disponibles sont les suivantes :  
 COLUMNSTORE  
-   S’applique à : [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] via [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. S'applique uniquement aux index columnstore, y compris aux index columnstore non cluster et cluster. COLUMNSTORE est la valeur par défaut et spécifie les compresser avec la compression de columnstore plus performant. Il s’agit du choix par défaut.  
+   S’applique à : [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] jusqu’à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. S'applique uniquement aux index columnstore, y compris aux index columnstore non-cluster et cluster. COLUMNSTORE est la valeur par défaut et indique qu’il faut compresser avec la compression columnstore la plus performante. Il s’agit de l’option généralement choisie.  
   
 COLUMNSTORE_ARCHIVE  
-   S’applique à : [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] via [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
-S'applique uniquement aux index columnstore, y compris aux index columnstore non cluster et cluster. COLUMNSTORE_ARCHIVE davantage compresse la table ou la partition à une taille plus petite. Peut être utilisé pour l'archivage, ou d'autres situations qui nécessitent moins de stockage et supportent plus de temps pour le stockage et la récupération.  
+   S’applique à : [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] jusqu’à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
+S'applique uniquement aux index columnstore, y compris aux index columnstore non-cluster et cluster. COLUMNSTORE_ARCHIVE compresse la partition ou la table en une taille encore plus petite. Peut être utilisé pour l'archivage, ou d'autres situations qui nécessitent moins de stockage et supportent plus de temps pour le stockage et la récupération.  
   
- Pour plus d’informations sur la compression, consultez [la Compression des données](../../relational-databases/data-compression/data-compression.md).  
+ Pour plus d’informations sur la compression, consultez [Compression des données](../../relational-databases/data-compression/data-compression.md).  
   
-OÙ \<filter_expression > [AND \<filter_expression >] s’applique à : [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] via [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
+WHERE \<filter_expression> [ AND \<filter_expression> ] S’applique à : [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] jusqu’à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
   
-   Appelée un prédicat de filtre, spécifie les lignes à inclure dans l’index. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]crée des statistiques filtrées sur les lignes de données dans l’index filtré.  
+   Appelé prédicat de filtre, spécifie les lignes à inclure dans l’index. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] crée des statistiques filtrées sur les lignes de données de l’index filtré.  
   
-   Le prédicat de filtre utilise la logique de comparaison simple. Les comparaisons à l'aide de littéraux NULL ne sont pas autorisées avec les opérateurs de comparaison. Utilisez les opérateurs IS NULL et IS NOT NULL à la place.  
+   Le prédicat de filtre utilise une logique de comparaison simple. Les comparaisons à l'aide de littéraux NULL ne sont pas autorisées avec les opérateurs de comparaison. Utilisez les opérateurs IS NULL et IS NOT NULL à la place.  
   
    Voici quelques exemples de prédicats de filtre pour la table `Production.BillOfMaterials` :  
    `WHERE StartDate > '20000101' AND EndDate <= '20000630'`    
    `WHERE ComponentID IN (533, 324, 753)`  
    `WHERE StartDate IN ('20000404', '20000905') AND EndDate IS NOT NULL`  
    
-   Pour obtenir des conseils sur les index filtrés, consultez [Create Filtered Indexes](../../relational-databases/indexes/create-filtered-indexes.md).  
+   Pour des conseils sur les index filtrés, consultez [Créer des index filtrés](../../relational-databases/indexes/create-filtered-indexes.md).  
   
 ON  
-   Ces options spécifient les groupes de fichiers sur lequel l’index est créé.  
+   Ces options spécifient les groupes de fichiers sur lesquels l’index est créé.  
   
 *partition_scheme_name* **(** *column_name* **)**  
-   Spécifie le schéma de partition qui définit les groupes de fichiers sur lequel les partitions d’un index partitionné est mappé. Le schéma de partition doit exister dans la base de données en exécutant [CREATE PARTITION SCHEME](../../t-sql/statements/create-partition-scheme-transact-sql.md). 
-   *column_name* spécifie la colonne sur laquelle un index partitionné est partitionné. Cette colonne doit correspondre au type de données, longueur, et la précision de l’argument de la partition de fonction qui *partition_scheme_name* est à l’aide. *column_name* n’est pas limité aux colonnes dans la définition d’index. Lors du partitionnement d'un index columnstore, le [!INCLUDE[ssDE](../../includes/ssde-md.md)] ajoute la colonne de partitionnement en tant que colonne de l'index, si elle n'a pas déjà été spécifiée.  
-   Si *partition_scheme_name* ou *groupe de fichiers* n’est pas spécifié et que la table est partitionnée, l’index est placé dans le même schéma de partition à l’aide de la même colonne de partitionnement que la table sous-jacente.  
+   Spécifie le schéma de partition qui définit les groupes de fichiers auxquels les partitions d’un index partitionné sont mappées. Le schéma de partition doit exister dans la base de données en exécutant [CREATE PARTITION SCHEME](../../t-sql/statements/create-partition-scheme-transact-sql.md). 
+   *column_name* désigne la colonne sur laquelle un index partitionné est partitionné. Cette colonne doit correspondre au type de données, à la longueur et à la précision de l’argument de la fonction de partition que *partition_scheme_name* utilise. *column_name* ne se limite pas aux colonnes dans la définition de l’index. Lors du partitionnement d'un index columnstore, le [!INCLUDE[ssDE](../../includes/ssde-md.md)] ajoute la colonne de partitionnement en tant que colonne de l'index, si elle n'a pas déjà été spécifiée.  
+   Si *partition_scheme_name* ou *filegroup* n’est pas spécifié et que la table est partitionnée, l’index est placé dans le même schéma de partition que la table sous-jacente, en utilisant la même colonne de partitionnement.  
    Un index columnstore sur une table partitionnée doit être aligné sur les partitions.  
-   Pour plus d’informations sur le partitionnement des index, consultez [Partitioned Tables and Indexes](../../relational-databases/partitions/partitioned-tables-and-indexes.md).  
+   Pour plus d’informations sur les index de partitionnement, consultez [Tables et index partitionnés](../../relational-databases/partitions/partitioned-tables-and-indexes.md).  
 
 *filegroup_name*  
-   Spécifie un nom de groupe de fichiers sur lequel créer l'index. Si *filegroup_name* n’est pas spécifié et que la table n’est pas partitionnée, l’index utilise le même groupe de fichiers que la table sous-jacente. Le groupe de fichiers doit déjà exister.  
+   Spécifie un nom de groupe de fichiers sur lequel créer l'index. Si *flegroup_name* n’est pas défini et que la table n’est pas partitionnée, l’index utilise le même groupe de fichiers que la table sous-jacente. Le groupe de fichiers doit déjà exister.  
  
 **"**default**"**  
 Crée l'index spécifié sur le groupe de fichiers par défaut.  
   
-Le terme « default », dans ce contexte, n'est pas un mot clé. Il est un identificateur pour le groupe de fichiers par défaut et doit être délimité, comme dans ON **»**par défaut**»** ou ON **[**par défaut**]**. Si "default" est spécifié, l'option QUOTED_IDENTIFIER doit être activée (ON) pour la session active. Il s'agit du paramètre par défaut. Pour plus d’informations, consultez [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md).  
+Le terme « default », dans ce contexte, n'est pas un mot clé. Il s’agit de l’identificateur du groupe de fichiers par défaut et il doit être délimité, comme dans ON **"**default**"** ou ON **[**default**]**. Si "default" est spécifié, l'option QUOTED_IDENTIFIER doit être activée (ON) pour la session active. Il s'agit du paramètre par défaut. Pour plus d’informations, consultez [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md).  
   
-##  <a name="Permissions"></a> Autorisations  
+##  <a name="Permissions"></a> Permissions  
  Requiert une autorisation ALTER sur la table.  
   
-##  <a name="GenRemarks"></a>Remarques d’ordre général  
- Un index columnstore peut être créé sur une table temporaire. Lorsque la table est supprimée ou que la session prend fin, l'index est également supprimé.  
+##  <a name="GenRemarks"></a> Remarques d’ordre général  
+ Créez un index columnstore sur une table temporaire. Lorsque la table est supprimée ou que la session prend fin, l'index est également supprimé.  
  
 ## <a name="filtered-indexes"></a>Index filtrés  
-Un index filtré est un index non cluster optimisé, approprié pour les requêtes qui sélectionnent un faible pourcentage de lignes d'une table. Il utilise un prédicat de filtre pour indexer une partie des données de la table. Un index filtré bien conçu peut améliorer les performances des requêtes, réduire les coûts de stockage et réduire les coûts de maintenance.  
+Un index filtré est un index non-cluster optimisé, approprié pour les requêtes qui sélectionnent un faible pourcentage de lignes d'une table. Il utilise un prédicat de filtre pour indexer une partie des données de la table. Un index filtré bien conçu peut améliorer les performances des requêtes, réduire les coûts de stockage et réduire les coûts de maintenance.  
   
 ### <a name="required-set-options-for-filtered-indexes"></a>Options SET requises pour les index filtrés  
 Les options SET figurant dans la colonne Valeur requise sont requises chaque fois qu'une des conditions suivantes est vérifiée :  
@@ -277,7 +277,7 @@ Les options SET figurant dans la colonne Valeur requise sont requises chaque foi
 - L'opération INSERT, UPDATE, DELETE ou MERGE modifie les données dans un index filtré.  
 - L’index filtré est utilisé par l’optimiseur de requête pour générer le plan de requête.  
   
-    |Options SET|Valeur requise|Valeur de serveur par défaut|Valeur par défaut<br /><br /> Valeur OLE DB et ODBC|Valeur par défaut<br /><br /> Valeur DB-Library|  
+    |Options définies|Valeur requise|Valeur de serveur par défaut|Valeur par défaut<br /><br /> Valeur OLE DB et ODBC|Valeur par défaut<br /><br /> Valeur DB-Library|  
     |-----------------|--------------------|--------------------------|---------------------------------------|-----------------------------------|  
     |ANSI_NULLS|ON|ON|ON|OFF|  
     |ANSI_PADDING|ON|ON|ON|OFF|  
@@ -297,78 +297,78 @@ Les options SET figurant dans la colonne Valeur requise sont requises chaque foi
   
 -   L'optimiseur de requête ne prend en compte l'index dans le plan d'exécution pour aucune instruction Transact-SQL.  
   
- Pour plus d’informations sur les index filtrés, consultez [Create Filtered Indexes](../../relational-databases/indexes/create-filtered-indexes.md). 
+ Pour plus d’informations sur les index filtrés, consultez [Créer des index filtrés](../../relational-databases/indexes/create-filtered-indexes.md). 
   
 ##  <a name="LimitRest"></a> Limitations et restrictions  
 
-**Chaque colonne dans un index columnstore doit être l’un des types de données métier courantes suivantes :** 
+**Chaque colonne dans un index columnstore doit appartenir à l’un des types de données métier courants suivants :** 
 -   datetimeoffset [ ( *n* ) ]  
 -   datetime2 [ ( *n* ) ]  
--   datetime  
+-   DATETIME  
 -   smalldatetime  
--   date  
+-   Date  
 -   time [ ( *n* ) ]  
--   float [(  *n*  )]  
--   Real [(  *n*  )]  
+-   float [ ( *n* ) ]  
+-   real [ ( *n* ) ]  
 -   decimal [ ( *precision* [ *, scale* ] **)** ]
--   numérique [( *précision* [ *, échelle* ] **)** ]    
+-   numeric [ ( *precision* [ *, scale* ] **)** ]    
 -   money  
--   smallmoney  
--   bigint  
--   int  
+-   SMALLMONEY  
+-   BIGINT  
+-   INT  
 -   smallint  
--   tinyint  
+-   TINYINT  
 -   bit  
 -   nvarchar [ ( *n* ) ] 
--   nvarchar (max) (s’applique aux [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] et de la base de données SQL Azure Premium tarification, dans l’index cluster columnstore uniquement)   
+-   nvarchar(max)  (S’applique à [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] et à Azure SQL Database avec le niveau tarifaire Premium, dans les index cluster columnstore uniquement)   
 -   nchar [ ( *n* ) ]  
 -   varchar [ ( *n* ) ]  
--   varchar (max) (s’applique aux [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] et de la base de données SQL Azure Premium tarification, dans l’index cluster columnstore uniquement)
+-   varchar(max)  (S’applique à [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] et à Azure SQL Database avec le niveau tarifaire Premium, dans les index cluster columnstore uniquement)
 -   char [ ( *n* ) ]  
--   varbinary [(  *n*  )] 
--   varbinary (max) (s’applique aux [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] et de la base de données SQL Azure Premium tarification, dans l’index cluster columnstore uniquement)
--   binaire [(  *n*  )]  
--   uniqueidentifier (s’applique aux [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] et versions ultérieures)
+-   varbinary [ ( *n* ) ] 
+-   varbinary (max)  (S’applique à [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] et à Azure SQL Database avec le niveau tarifaire Premium, dans les index cluster columnstore uniquement)
+-   binary [ ( *n* ) ]  
+-   uniqueidentifier  (S’applique à [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] et ultérieur)
   
-Si la table sous-jacente possède une colonne de type de données qui n’est pas prise en charge pour les index columnstore, vous devez omettre cette colonne à partir de l’index non cluster.  
+Si la table sous-jacente a une colonne d’un type de données non pris en charge pour les index columnstore, vous devez omettre cette colonne dans l’index columnstore non-cluster.  
   
-**Les colonnes qui utilisent un des types de données suivants ne peuvent pas être inclus dans un index columnstore :**
+**Les colonnes qui utilisent l’un des types de données suivants ne peuvent pas être incluses dans un index columnstore :**
 -   ntext, text et image  
--   nvarchar (max), varchar (max) et varbinary (max) (s’applique aux [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] et les versions antérieures et non cluster) 
+-   nvarchar(max), varchar(max) et varbinary(max) (S’applique à [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] et antérieur, ainsi qu’aux index columnstore non-cluster) 
 -   rowversion (et timestamp)  
 -   sql_variant  
 -   Types CLR (hierarchyid et types spatiaux)  
 -   xml  
--   uniqueidentifier (s’applique à [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)])  
+-   uniqueidentifier (S’applique à [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)])  
 
-**Index non cluster columnstore :**
+**Index columnstore non-cluster :**
 -   Ne peut pas avoir plus de 1 024 colonnes.  
--   Une table comportant un index non cluster columnstore peut avoir des contraintes uniques, des contraintes de clés primaires ou des contraintes de clés étrangères, mais les contraintes ne peuvent pas être incluses dans l'index non cluster columnstore.  
+-   Une table avec un index columnstore non-cluster peut avoir des contraintes uniques, des contraintes de clés primaires ou des contraintes de clés étrangères, mais les contraintes ne peuvent pas être incluses dans l’index columnstore non-cluster.  
 -   Ne peut pas être créé sur une vue ou une vue indexée.  
 -   Ne peut pas inclure de colonne éparse.  
--   Ne peut pas être modifié à l’aide de la **ALTER INDEX** instruction. Pour modifier l'index non cluster, vous devez plutôt supprimer et recréer l'index columnstore. Vous pouvez utiliser **ALTER INDEX** pour désactiver et reconstruire un index columnstore.  
--   Ne peut pas être créé à l’aide de la **INCLUDE** (mot clé).  
--   Ne peut pas inclure le **ASC** ou **DESC** mots clés de tri de l’index. Les index columnstore sont triés en fonction des algorithmes de compression. Le tri éliminerait beaucoup des avantages en termes de performances.  
--   Ne peut pas inclure les colonnes LOB (large object) de type nvarchar (max), varchar (max) et varbinary (max) dans les index non cluster ColumnStore. Seuls les index columnstore cluster prennent en charge les types LOB, à compter de [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] version et la base de données SQL Azure configuré au niveau tarifaire premium. Notez que les versions antérieures ne gèrent pas les types LOB dans des index columnstore cluster et non-cluster.
+-   Ne peut pas être modifié en utilisant l’instruction **ALTER INDEX**. Pour modifier l’index non-cluster, vous devez plutôt supprimer et recréer l’index columnstore. Vous pouvez utiliser **ALTER INDEX** pour désactiver et reconstruire un index columnstore.  
+-   Ne peut pas être créé en utilisant le mot clé **INCLUDE**.  
+-   Ne peut pas inclure les mots clés **ASC** ou **DESC** pour le tri de l’index. Les index columnstore sont triés en fonction des algorithmes de compression. Le tri éliminerait beaucoup des avantages en termes de performances.  
+-   Ne peut pas inclure les colonnes LOB (large object) de type nvarchar(max), varchar(max) et varbinary(max) dans les index columnstore non-cluster. Seuls les index cluster columnstore prennent en charge les types LOB depuis la version [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] et Azure SQL Database configuré au niveau tarifaire Premium. Notez que les versions antérieures ne prennent pas en charge les types LOB dans des index columnstore cluster et non-cluster.
 
 
- **Index ColumnStore ne peut pas être combinés avec les fonctionnalités suivantes :**  
--   Colonnes calculées À partir de SQL Server 2017, un index columnstore cluster peut contenir une colonne calculée non persistante. Toutefois, dans SQL Server 2017, les index cluster columnstore ne peut pas contenir de colonnes calculées persistantes, et vous ne pouvez pas créer des index non cluster sur des colonnes calculées. 
--   La compression de page et de ligne, et **vardecimal** le format de stockage (un index columnstore est déjà compressé dans un format différent.)  
+ **Les index columnstore ne peuvent pas être combinés avec les fonctionnalités suivantes :**  
+-   Colonnes calculées Depuis SQL Server 2017, un index cluster columnstore peut contenir une colonne calculée non persistante. Toutefois, dans SQL Server 2017, les index cluster columnstore ne peuvent pas contenir de colonnes calculées persistantes, et vous ne pouvez pas créer d’index non-cluster sur des colonnes calculées. 
+-   Compression de pages et de lignes et format de stockage **vardecimal** (Un index columnstore est déjà compressé dans un autre format.)  
 -   Réplication  
 -   Filestream
 
-Vous ne pouvez pas utiliser les curseurs ou les déclencheurs sur une table avec un index cluster columnstore. Cette restriction ne s’applique pas aux index de cluster ; Vous pouvez utiliser les curseurs et les déclencheurs sur une table avec un index non cluster.
+Vous ne pouvez pas utiliser de curseurs ou de déclencheurs sur une table avec un index cluster columnstore. Cette restriction ne s’applique pas aux index columnstore non-cluster. En effet, vous pouvez utiliser des curseurs et des déclencheurs sur une table avec un index columnstore non-cluster.
 
-**Limitations spécifiques de SQL Server 2014**  
-Ces limitations s’appliquent uniquement à SQL Server 2014. Dans cette version, nous avons introduit les index columnstore cluster actualisable. Index columnstore non cluster étaient toujours en lecture seule.  
+**Limitations spécifiques à SQL Server 2014**  
+Ces limitations s’appliquent uniquement à SQL Server 2014. Dans cette version, nous avions introduit des index cluster columnstore qui pouvaient être mis à jour. Seuls les index columnstore non-cluster étaient toujours en lecture seule.  
 
--   Suivi des modifications. Vous ne pouvez pas utiliser le suivi des modifications avec des index non cluster columnstore (NCCI), car ils sont en lecture seule. Il ne fonctionne pas pour les index cluster columnstore (CCI).  
--   Capture de données modifiées. Vous ne pouvez pas utiliser les modifications de capture de données pour les index non cluster columnstore (NCCI), car ils sont en lecture seule. Il ne fonctionne pas pour les index cluster columnstore (CCI).  
--   Secondaire accessible en lecture. Impossible d’accéder à un index cluster columnstore en cluster (CCI) à partir d’une base de données secondaire accessible en lecture toujours OnReadable groupe de disponibilité.  Vous pouvez accéder à un index non cluster columnstore (NCCI) à partir d’une base de données secondaire accessible en lecture.  
--   Jeux de résultats actifs multiples (MARS). SQL Server 2014 utilise MARS pour les connexions en lecture seule à des tables avec un index columnstore.    Toutefois, SQL Server 2014 ne prend pas en charge MARS pour les opérations de langage (DML) de manipulation de données simultanées sur une table avec un index columnstore. Lorsque cela se produit, SQL Server met fin aux connexions et annule les transactions.  
+-   Suivi des modifications. Vous ne pouvez pas utiliser le suivi des modifications avec des index columnstore non-cluster (NCCI), car ils sont en lecture seule. Par contre, vous le pouvez dans les index cluster columnstore (CCI).  
+-   Capture des modifications de données. Vous ne pouvez pas utiliser la capture des modifications de données avec des index columnstore non-cluster (NCCI), car ils sont en lecture seule. Par contre, vous le pouvez dans les index cluster columnstore (CCI).  
+-   Secondaire accessible en lecture. Vous ne pouvez pas accéder à un index cluster columnstore (CCI) à partir d’un secondaire accessible en lecture d’un groupe de disponibilité Always OnReadable.  Par contre, vous pouvez accéder à un index columnstore non-cluster (NCCI) à partir d’un secondaire accessible en lecture.  
+-   MARS (Multiple Active Result Sets). SQL Server 2014 utilise MARS pour les connexions en lecture seule à des tables avec un index columnstore.    Toutefois, SQL Server 2014 ne prend pas en charge MARS pour les opérations de langage de manipulation de données (DML) simultanées sur une table avec un index columnstore. Quand ce cas se produit, SQL Server met fin aux connexions et annule les transactions.  
   
- Pour plus d’informations sur les avantages et les limitations des index columnstore, consultez [vue d’ensemble des index Columnstore](../../relational-databases/indexes/columnstore-indexes-overview.md).
+ Pour des informations sur les avantages au niveau des performances et sur les limitations des index columnstore, consultez [Vue d’ensemble des index columnstore](../../relational-databases/indexes/columnstore-indexes-overview.md).
   
 ##  <a name="Metadata"></a> Métadonnées  
  Toutes les colonnes dans un index columnstore sont stockées dans les métadonnées en tant que colonnes incluses. L'index columnstore n'a pas de colonnes clés. Ces vues système fournissent des informations sur les index columnstore.  
@@ -380,7 +380,7 @@ Ces limitations s’appliquent uniquement à SQL Server 2014. Dans cette version
 -   [sys.column_store_dictionaries &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-store-dictionaries-transact-sql.md)  
 -   [sys.column_store_row_groups &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-store-row-groups-transact-sql.md)  
 
-##  <a name="convert"></a>Exemples de conversion d’une table rowstore en columnstore  
+##  <a name="convert"></a> Exemples de conversion d’une table rowstore en columnstore  
   
 ### <a name="a-convert-a-heap-to-a-clustered-columnstore-index"></a>A. Convertir un segment dans un index cluster columnstore  
  Cet exemple crée une table en tant que segment puis la convertit en un index columnstore cluster nommé cci_Simple. Cela modifie le stockage de la table entière qui change de rowstore en columnstore.  
@@ -413,12 +413,12 @@ WITH (DROP_EXISTING = ON);
 GO  
 ```  
   
-### <a name="c-handle-nonclustered-indexes-when-converting-a-rowstore-table-to-a-columnstore-index"></a>C. Gérer les index non cluster lors de la conversion d’une table rowstore en un index columnstore.  
- Cet exemple montre comment gérer les index non cluster lors de la conversion d’une table rowstore en un index columnstore. En fait, à partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] aucune action spéciale n’est requise ; [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] définit et reconstruit les index non cluster sur le nouvel index columnstore cluster automatiquement.  
+### <a name="c-handle-nonclustered-indexes-when-converting-a-rowstore-table-to-a-columnstore-index"></a>C. Gérer les index non-cluster lors de la conversion d’une table rowstore en index columnstore.  
+ Cet exemple montre comment gérer les index non-cluster lors de la conversion d’une table rowstore en index columnstore. En fait, depuis [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], aucune action n’est requise en particulier ; [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] définit et reconstruit automatiquement les index non-cluster sur le nouvel index cluster columnstore.  
   
- Si vous souhaitez supprimer les index non ordonnés en clusters, utilisez l’instruction DROP INDEX avant de créer l’index columnstore. L’option supprime uniquement l’index cluster est en cours de conversion. Elle ne supprime pas les index non cluster.  
+ Si vous souhaitez supprimer les index non-cluster, utilisez l’instruction DROP INDEX avant de créer l’index columnstore. L’option DROP EXISTING supprime uniquement l’index cluster en cours de conversion. Elle ne supprime pas les index non-cluster.  
   
- Dans [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], vous ne pouvez pas créer un index non cluster sur un index columnstore. Cet exemple montre comment dans les versions précédentes vous devez supprimer les index non cluster avant de créer l’index columnstore.  
+ Dans [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], vous ne pouviez pas créer un index non-cluster sur un index columnstore. Cet exemple montre comment vous devez supprimer les index non-cluster avant de créer l’index columnstore dans les versions précédentes.  
   
 ```  
   
@@ -470,19 +470,19 @@ GO
     CREATE INDEX my_index ON MyFactTable ( ProductKey, OrderDateKey );  
     ```  
   
-2.  Supprimez tous les index non cluster de la table rowstore.  
+2.  Supprimez tous les index non-cluster de la table rowstore.  
   
     ```  
     --Drop all non-clustered indexes  
     DROP INDEX my_index ON MyFactTable;  
     ```  
   
-3.  supprimer l'index cluster ;  
+3.  Supprimez l’index cluster.  
   
-    -   Effectuez cette opération uniquement si vous souhaitez spécifier un nouveau pour l'index lorsqu'il est converti en un index columnstore cluster. Si vous ne pas supprimez l’index cluster, le nouvel index columnstore cluster a le même nom.  
+    -   Effectuez cette opération uniquement si vous souhaitez spécifier un nouveau pour l'index lorsqu'il est converti en un index columnstore cluster. Si vous ne supprimez pas l’index cluster, le nouvel index cluster columnstore porte le même nom.  
   
         > [!NOTE]  
-        >  Le nom de l'index peut être plus facile à mémoriser si vous utilisez votre propre nom. Tous les index clusterisé rowstore utilisent le nom par défaut qui est « ClusteredIndex_\<GUID > ».  
+        >  Le nom de l'index peut être plus facile à mémoriser si vous utilisez votre propre nom. Tous les index cluster rowstore utilisent le nom par défaut qui est 'ClusteredIndex_\<GUID>'.  
   
     ```  
     --Process for dropping a clustered index.  
@@ -539,13 +539,13 @@ ON MyFactTable;
 ```  
   
 
-### <a name="g-defragment-by-rebuilding-the-entire-clustered-columnstore-index"></a>G. Défragmenter en reconstruisant l’index columnstore cluster entier  
-   S’applique à : SQL Server 2014  
+### <a name="g-defragment-by-rebuilding-the-entire-clustered-columnstore-index"></a>G. Défragmenter en reconstruisant l’index cluster columnstore en entier  
+   S’applique à : SQL Server 2014  
   
- Il existe deux façons de reconstruire l'index cluster columnstore complet. Vous pouvez utiliser CREATE CLUSTERED COLUMNSTORE INDEX, ou [ALTER INDEX &#40; Transact-SQL &#41; ](../../t-sql/statements/alter-index-transact-sql.md) et l’option REBUILD. Les deux méthodes permettent d'obtenir le même résultat.  
+ Il existe deux façons de recréer l’index cluster columnstore complet. Vous pouvez utiliser CREATE CLUSTERED COLUMNSTORE INDEX ou [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md) et l’option REBUILD. Les deux méthodes permettent d'obtenir le même résultat.  
   
 > [!NOTE]  
->  À compter de SQL Server 2016, utilisez ALTER INDEX REORGANIZE au lieu de reconstruire avec les méthodes décrites dans cet exemple.  
+>  Depuis SQL Server 2016, utilisez ALTER INDEX REORGANIZE au lieu de reconstruire avec les méthodes décrites dans cet exemple.  
   
 ```  
 --Determine the Clustered Columnstore Index name of MyDimTable.  
@@ -568,10 +568,10 @@ WITH ( DROP_EXISTING = ON );
   
 ```  
   
-##  <a name="nonclustered"></a>Exemples pour les index non cluster columnstore  
+##  <a name="nonclustered"></a> Exemples d’index columnstore non-cluster  
   
-### <a name="a-create-a-columnstore-index-as-a-secondary-index-on-a-rowstore-table"></a>A. Créer un index columnstore en tant qu’un index secondaire sur une table rowstore  
- Cet exemple crée un index non cluster sur une table rowstore. Un seul index columnstore peut être créé dans cette situation. L’index columnstore nécessite un stockage supplémentaire, car il contient une copie des données dans la table rowstore. Cet exemple crée une table simple et un index cluster, puis illustre la syntaxe de création d’un index non cluster.  
+### <a name="a-create-a-columnstore-index-as-a-secondary-index-on-a-rowstore-table"></a>A. Créer un index columnstore comme index secondaire sur une table rowstore  
+ Cet exemple crée un index columnstore non-cluster sur une table rowstore. Un seul index columnstore peut être créé dans ce cas de figure. L’index columnstore nécessite un stockage supplémentaire, car il contient une copie des données dans la table rowstore. Cet exemple crée une table simple et un index cluster, puis montre la syntaxe de création d'un index columnstore non-cluster.  
   
 ```  
 CREATE TABLE SimpleTable  
@@ -588,8 +588,8 @@ ON SimpleTable
 GO  
 ```  
   
-### <a name="b-create-a-simple-nonclustered-columnstore-index-using-all-options"></a>B. Créer un index non cluster simple à l’aide de toutes les options  
- L'exemple suivant illustre la syntaxe de création d'un index columnstore non cluster à l'aide de toutes les options.  
+### <a name="b-create-a-simple-nonclustered-columnstore-index-using-all-options"></a>B. Créer un index columnstore non-cluster simple à l’aide de toutes les options  
+ L'exemple suivant illustre la syntaxe de création d'un index columnstore non-cluster à l'aide de toutes les options.  
   
 ```  
 CREATE NONCLUSTERED COLUMNSTORE INDEX csindx_simple  
@@ -601,10 +601,10 @@ ON "default"
 GO  
 ```  
   
- Pour obtenir un exemple plus complexe à l’aide de tables partitionnées, consultez [vue d’ensemble des index Columnstore](../../relational-databases/indexes/columnstore-indexes-overview.md).  
+ Pour un exemple plus complexe avec des tables partitionnées, consultez [Vue d’ensemble des index columnstore](../../relational-databases/indexes/columnstore-indexes-overview.md).  
   
-### <a name="c-create-a-nonclustered-columnstore-index-with-a-filtered-predicate"></a>C. Créer un index non cluster avec un prédicat filtré  
- L’exemple suivant crée un index non cluster filtré sur la table Production.BillOfMaterials dans la [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] base de données. Le prédicat de filtre peut inclure des colonnes qui ne sont pas des colonnes clés dans l'index filtré. Dans cet exemple, le prédicat sélectionne uniquement les lignes où EndDate n'est pas NULL.  
+### <a name="c-create-a-nonclustered-columnstore-index-with-a-filtered-predicate"></a>C. Créer un index columnstore non-cluster avec un prédicat filtré  
+ L’exemple suivant crée un index columnstore non-cluster filtré sur la table Production.BillOfMaterials de la base de données [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]. Le prédicat de filtre peut inclure des colonnes qui ne sont pas des colonnes clés dans l'index filtré. Dans cet exemple, le prédicat sélectionne uniquement les lignes où EndDate n'est pas NULL.  
   
 ```  
 IF EXISTS (SELECT name FROM sys.indexes  
@@ -619,12 +619,12 @@ CREATE NONCLUSTERED COLUMNSTORE INDEX "FIBillOfMaterialsWithEndDate"
   
 ```  
   
-###  <a name="ncDML"></a> D. Modifier les données dans un index non cluster  
-   S’applique à : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] via [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)].
+###  <a name="ncDML"></a> D. Changer les données dans un index columnstore non-cluster  
+   S’applique à : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] jusqu’à [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)].
   
- Une fois que vous avez créé un index columnstore non cluster sur une table, vous ne pouvez pas modifier directement les données dans cette table. Une requête avec INSERT, UPDATE, DELETE ou MERGE échoue et retourne un message d’erreur. Pour ajouter ou modifier les données de la table, effectuez les tâches suivantes :  
+ Une fois que vous avez créé un index columnstore non-cluster sur une table, vous ne pouvez pas modifier directement les données dans cette table. Une requête avec INSERT, UPDATE, DELETE ou MERGE échoue et retourne un message d’erreur. Pour ajouter ou modifier les données de la table, effectuez les tâches suivantes :  
   
--   Désactivez ou supprimez l'index columnstore. Vous pourrez ensuite mettre à jour les données de la table. Si vous désactivez l'index columnstore, vous pouvez le reconstruire lorsque vous avez fini de mettre à jour les données. Par exemple :  
+-   Désactivez ou supprimez l'index columnstore. Vous pourrez ensuite mettre à jour les données de la table. Si vous désactivez l'index columnstore, vous pouvez le reconstruire lorsque vous avez fini de mettre à jour les données. Par exemple,  
   
     ```  
     ALTER INDEX mycolumnstoreindex ON mytable DISABLE;  
@@ -636,16 +636,16 @@ CREATE NONCLUSTERED COLUMNSTORE INDEX "FIBillOfMaterialsWithEndDate"
   
 -   Basculez une partition de la table avec l'index columnstore dans une table intermédiaire vide. S'il existe un index columnstore sur la table intermédiaire, désactivez-le. Effectuez toutes les mises à jour. Créez (ou reconstruisez) l'index columnstore. Rebasculez la table intermédiaire dans la partition (maintenant vide) de la table principale.  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemples : [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] et[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemples : [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] et [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="a-change-a-clustered-index-to-a-clustered-columnstore-index"></a>A. Modifier un index cluster en un index cluster columnstore  
- À l’aide de l’instruction CREATE CLUSTERED COLUMNSTORE INDEX with DROP_EXISTING = ON, vous pouvez :  
+### <a name="a-change-a-clustered-index-to-a-clustered-columnstore-index"></a>A. Changer un index cluster en index cluster columnstore  
+ En utilisant l’instruction CREATE CLUSTERED COLUMNSTORE INDEX avec DROP_EXISTING = ON, vous pouvez :  
   
--   Modifier un index cluster dans un index columnstore en cluster.  
+-   Changer un index cluster en index cluster columnstore.  
   
 -   Reconstruire un index cluster columnstore.  
   
- Cet exemple crée la table xDimProduct comme une table rowstore avec un index cluster et utilise ensuite créer un INDEX cluster COLUMNSTORE pour modifier la table à partir d’une table rowstore en une table columnstore.  
+ Cet exemple crée la table xDimProduct comme table rowstore avec un index cluster, puis utilise CREATE CLUSTERED COLUMNSTORE INDEX pour changer la table d’une table rowstore en table columnstore.  
   
 ```  
 -- Uses AdventureWorks  
@@ -669,8 +669,8 @@ ON xdimProduct
 WITH ( DROP_EXISTING = ON );  
 ```  
   
-### <a name="b-rebuild-a-clustered-columnstore-index"></a>B. Reconstruire un index ordonné en clusters  
- Générez l’exemple précédent, cet exemple utilise CREATE CLUSTERED COLUMNSTORE INDEX pour reconstruire l’index columnstore cluster existant appelé cci_xDimProduct.  
+### <a name="b-rebuild-a-clustered-columnstore-index"></a>B. Reconstruire un index cluster columnstore  
+ S’appuyant sur l’exemple précédent, cet exemple utilise CREATE CLUSTERED COLUMNSTORE INDEX pour reconstruire l’index cluster columnstore existant appelé cci_xDimProduct.  
   
 ```  
 --Rebuild the existing clustered columnstore index.  
@@ -679,12 +679,12 @@ ON xdimProduct
 WITH ( DROP_EXISTING = ON );  
 ```  
   
-### <a name="c-change-the-name-of-a-clustered-columnstore-index"></a>C. Modifier le nom d’un index cluster columnstore  
- Pour modifier le nom d’un index cluster columnstore, supprimez l’index columnstore cluster existant, puis recréez l’index avec un nouveau nom.  
+### <a name="c-change-the-name-of-a-clustered-columnstore-index"></a>C. Changer le nom d’un index cluster columnstore  
+ Pour changer le nom d’un index cluster columnstore, supprimez l’index cluster columnstore existant, puis recréez l’index avec un nouveau nom.  
   
- Nous vous recommandons d’uniquement effectuer cette opération avec une petite table ou une table vide. Il prend beaucoup de temps pour supprimer un index columnstore cluster volumineux et régénérez avec un autre nom.  
+ Nous vous recommandons d’effectuer cette opération avec une petite table ou une table vide uniquement. La suppression d’un index cluster columnstore volumineux et la reconstruction avec un autre nom prennent beaucoup de temps.  
   
- À l’aide de l’index cluster columnstore cci_xDimProduct à partir de l’exemple précédent, cet exemple supprime l’index cluster columnstore cci_xDimProduct et puis recrée l’index cluster columnstore avec le nom mycci_xDimProduct.  
+ En prenant l’index cluster columnstore cci_xDimProduct de l’exemple précédent, cet exemple supprime l’index cluster columnstore cci_xDimProduct et recrée l’index cluster columnstore avec le nom mycci_xDimProduct.  
   
 ```  
 --For illustration purposes, drop the clustered columnstore index.   
@@ -698,7 +698,7 @@ WITH ( DROP_EXISTING = OFF );
 ```  
   
 ### <a name="d-convert-a-columnstore-table-to-a-rowstore-table-with-a-clustered-index"></a>D. Convertir une table columnstore en une table rowstore avec un index cluster  
- Il peut y avoir une situation pour lequel vous souhaitez supprimer un index columnstore en cluster et créer un index cluster. Stocke la table au format rowstore. Cet exemple convertit une table columnstore en une table rowstore avec un index cluster portant le même nom. Aucune des données sont perdue. Les données passent à la table rowstore, et les colonnes répertoriées devient les colonnes clés dans l’index cluster.  
+ Il peut arriver que vous souhaitiez supprimer un index cluster columnstore et créer un index cluster. Dans ce cas, la table est stockée au format rowstore. Cet exemple convertit une table columnstore en table rowstore avec un index cluster du même nom. Aucune des données n’est perdue. Les données vont toutes dans la table rowstore, tandis que les colonnes listées deviennent les colonnes clés de l’index cluster.  
   
 ```  
 --Drop the clustered columnstore index and create a clustered rowstore index.   
@@ -710,8 +710,8 @@ WITH ( DROP_EXISTING = ON);
   
 ```  
   
-### <a name="e-convert-a-columnstore-table-back-to-a-rowstore-heap"></a>E. Convertir une table columnstore en un segment de mémoire  
- Utilisez [DROP INDEX (SQL Server PDW)](http://msdn.microsoft.com/en-us/f59cab43-9f40-41b4-bfdb-d90e80e9bf32) pour supprimer l’index cluster columnstore et de convertir la table à un segment de mémoire. Cet exemple convertit la table cci_xDimProduct pour un segment de mémoire. La table continue d’être distribués, mais est stocké en tant que segment.  
+### <a name="e-convert-a-columnstore-table-back-to-a-rowstore-heap"></a>E. Reconvertir une table columnstore en segment rowstore  
+ Utilisez [DROP INDEX (SQL Server PDW)](http://msdn.microsoft.com/en-us/f59cab43-9f40-41b4-bfdb-d90e80e9bf32) pour supprimer l’index cluster columnstore et convertir la table en segment rowstore. Cet exemple convertit la table cci_xDimProduct en segment rowstore. La table continue d’être distribuée, mais est stockée en tant que segment.  
   
 ```  
 --Drop the clustered columnstore index. The table continues to be distributed, but changes to a heap.  

@@ -1,5 +1,5 @@
 ---
-title: "N’importe quel (Transact-SQL) | Documents Microsoft"
+title: ANY (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
@@ -38,6 +38,6 @@ ms.lasthandoff: 01/25/2018
 # <a name="any-transact-sql"></a>ANY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Compare une valeur scalaire avec un ensemble de valeurs appartenant à une seule colonne. Pour plus d’informations, consultez [certaines &#124; &#40; Transact-SQL &#41; ](../../t-sql/language-elements/some-any-transact-sql.md).  
+  Compare une valeur scalaire avec un ensemble de valeurs appartenant à une seule colonne. Pour plus d’informations, consultez [SOME &#124; ANY &#40;Transact-SQL&#41;](../../t-sql/language-elements/some-any-transact-sql.md).  
   
   

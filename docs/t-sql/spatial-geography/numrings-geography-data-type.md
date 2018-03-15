@@ -1,5 +1,5 @@
 ---
-title: "NumRings (Type de données geography) | Documents Microsoft"
+title: "NumRings (type de données geography) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="numrings-geography-data-type"></a>NumRings (type de données geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Retourne le nombre total d’anneaux dans une **polygone** instance. Dans le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **geography** type, externe et internes anneaux ne sont pas distinguées, comme tout anneau peut être accepté comme étant l’anneau externe.  
+  Retourne le nombre total d’anneaux d’une instance **Polygon**. Dans le type [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **geography**, aucune distinction n’est faite entre les anneaux externes et internes, car n’importe quel anneau peut être considéré en tant qu’anneau externe.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -44,12 +44,12 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-type"></a>Type de retour  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]type de retour : **int**  
+ Type de retour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] : **int**  
   
  Type de retour CLR : **SqlInt32**  
   
-## <a name="remarks"></a>Notes  
- Cette méthode retourne NULL si ce n’est pas un **polygone** d’instance et retourne 0 si l’instance est vide. Cette méthode est précise.  
+## <a name="remarks"></a>Notes   
+ Cette méthode retourne NULL s’il ne s’agit pas d’une instance **Polygon**, et retourne 0 si l’instance est vide. Cette méthode est précise.  
   
 ## <a name="examples"></a>Exemples  
  Cet exemple crée une instance `Polygon` avec deux anneaux et confirme qu'elle a deux anneaux.  
@@ -60,7 +60,7 @@ SET @g = geography::STGeomFromText('POLYGON((-122.358 47.653, -122.348 47.649, -
 SELECT @g.NumRings();  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Méthodes étendues sur des instances geography](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)  
   
   

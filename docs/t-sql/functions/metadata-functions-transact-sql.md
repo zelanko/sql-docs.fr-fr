@@ -1,5 +1,5 @@
 ---
-title: "Fonctions de métadonnées (Transact-SQL) | Documents Microsoft"
+title: "Fonctions de métadonnées (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -60,7 +60,7 @@ ms.lasthandoff: 11/21/2017
   
  Toutes les fonctions de métadonnées sont non déterministes. Cela signifie qu'elles ne renvoient pas toujours les mêmes résultats chaque fois qu'elles sont appelées, même avec un ensemble identique de valeurs d'entrée.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Fonctions intégrées &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)  
   
   

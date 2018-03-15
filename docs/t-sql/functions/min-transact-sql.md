@@ -1,5 +1,5 @@
 ---
-title: MIN (Transact-SQL) | Documents Microsoft
+title: MIN (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/13/2017
 ms.prod: sql-non-specified
@@ -36,7 +36,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="min-transact-sql"></a>MIN (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Retourne la valeur minimale de l'expression. Peut être suivie par le [la clause OVER](../../t-sql/queries/select-over-clause-transact-sql.md).  
+  Retourne la valeur minimale de l'expression. Cette fonction peut être suivie par la [clause OVER](../../t-sql/queries/select-over-clause-transact-sql.md).  
   
  ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -67,17 +67,17 @@ MIN ( expression ) OVER ( [ <partition_by_clause> ] [ <order_by_clause> ] )
  Spécifie que chaque valeur unique est prise en considération. DISTINCT n'a pas d'effet avec MIN et n'est disponible que pour la compatibilité ISO.  
   
  *expression*  
- Constante, nom de colonne ou fonction, et toute combinaison d'opérateurs arithmétiques, de type chaîne ou binaire. MIN peut être utilisé avec **numérique**, **char**, **varchar**, **uniqueidentifier**, ou **datetime** colonnes, mais pas avec **bits** colonnes. Les fonctions d'agrégation et les sous-requêtes ne sont pas autorisées.  
+ Constante, nom de colonne ou fonction, et toute combinaison d'opérateurs arithmétiques, de type chaîne ou binaire. La fonction MIN peut être utilisée avec des colonnes **numeric**, **char**, **varchar**, **uniqueidentifier** ou **datetime**, mais pas avec des colonnes **bit**. Les fonctions d'agrégation et les sous-requêtes ne sont pas autorisées.  
   
  Pour plus d’informations, consultez [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md).  
   
- SUR **(** [ *partition_by_clause* ] *order_by_clause***)**  
- *partition_by_clause* divise le jeu de résultats généré par la clause FROM en partitions auxquelles la fonction est appliquée. S'il n'est pas spécifié, la fonction gère toutes les lignes du jeu de résultats de la requête en un seul groupe. *order_by_clause* détermine l’ordre logique dans lequel l’opération est effectuée. *order_by_clause* est requis. Pour plus d’informations, consultez [la Clause OVER &#40; Transact-SQL &#41; ](../../t-sql/queries/select-over-clause-transact-sql.md).  
+ OVER **(** [ *partition_by_clause* ] *order_by_clause***)**  
+ *partition_by_clause* divise le jeu de résultats généré par la clause FROM en partitions auxquelles la fonction est appliquée. S'il n'est pas spécifié, la fonction gère toutes les lignes du jeu de résultats de la requête en un seul groupe. *order_by_clause* détermine l’ordre logique dans lequel l’opération est effectuée. *order_by_clause* est requis. Pour plus d’informations, consultez [OVER, clause &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md).  
   
 ## <a name="return-types"></a>Types de retour  
- Retourne une valeur identique *expression*.  
+ Retourne une valeur comme *expression*.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  MIN ignore toutes les valeurs NULL.  
   
  Avec des colonnes de données caractères, MIN recherche la valeur la plus faible dans l'ordre de tri.  
@@ -148,10 +148,10 @@ Tool Design                   8.62                  29.8462               23.505
  (16 row(s) affected)  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemples : [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] et[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemples : [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] et [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="c-using-min"></a>C. À l’aide de MIN  
- L’exemple suivant utilise la fonction d’agrégation MIN pour retourner le prix du produit (minimum) moins coûteux dans un jeu spécifié de commandes.  
+### <a name="c-using-min"></a>C. Utilisation de MIN  
+ L’exemple suivant utilise la fonction d’agrégation MIN pour retourner le prix du produit (minimum) le moins coûteux dans un ensemble spécifié de commandes.  
   
 ```  
 -- Uses AdventureWorks  
@@ -168,8 +168,8 @@ WHERE SalesOrderNumber IN (N'SO43659', N'SO43660', N'SO43664');
  5.1865
  ```  
   
-### <a name="d-using-min-with-over"></a>D. À l’aide de MIN avec basculement  
- Les exemples suivants utilisent la fonction analytique MIN OVER() pour retourner le prix du produit moins coûteux dans chaque commande client. Le jeu de résultats est partitionné par le `SalesOrderID` colonne.  
+### <a name="d-using-min-with-over"></a>D. Utilisation de MIN avec OVER  
+ Les exemples suivants utilisent la fonction analytique MIN OVER() pour retourner le prix du produit le moins coûteux dans chaque commande. Le jeu de résultats est partitionné par la colonne `SalesOrderID`.  
   
 ```  
 -- Uses AdventureWorks  
@@ -191,10 +191,10 @@ LeastExpensiveProduct SalesOrderID
 28.8404               SO43664
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- [Fonctions d’agrégation &#40; Transact-SQL &#41;](../../t-sql/functions/aggregate-functions-transact-sql.md)   
- [MAX &#40; Transact-SQL &#41;](../../t-sql/functions/max-transact-sql.md)   
- [SUR la clause for &#40; Transact-SQL &#41;](../../t-sql/queries/select-over-clause-transact-sql.md)  
+## <a name="see-also"></a> Voir aussi  
+ [Fonctions d’agrégation &#40;Transact-SQL&#41;](../../t-sql/functions/aggregate-functions-transact-sql.md)   
+ [MAX &#40;Transact-SQL&#41;](../../t-sql/functions/max-transact-sql.md)   
+ [OVER, clause &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)  
   
   
 

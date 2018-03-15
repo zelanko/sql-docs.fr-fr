@@ -1,5 +1,5 @@
 ---
-title: "RESTAURATION de base de données (Parallel Data Warehouse) | Documents Microsoft"
+title: RESTORE DATABASE (Parallel Data Warehouse) | Microsoft Docs
 ms.custom: 
 ms.date: 03/17/2017
 ms.prod: sql-non-specified
@@ -24,17 +24,17 @@ ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="restore-database-parallel-data-warehouse"></a>RESTAURER la base de données (Parallel Data Warehouse)
+# <a name="restore-database-parallel-data-warehouse"></a>RESTORE DATABASE (Parallel Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
 
-  Restaure un [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] base de données utilisateur à partir d’une sauvegarde de base de données à un [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] appliance. La base de données est restaurée à partir d’une sauvegarde qui a été créée précédemment par le [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] [sauvegarde de base de données &#40; Parallel Data Warehouse &#41; ](../../t-sql/statements/backup-database-parallel-data-warehouse.md) commande. Utilisez la sauvegarde et de restauration des opérations pour créer un plan de récupération d’urgence, ou pour déplacer des bases de données à partir d’une application vers un autre.  
+  Restaure une base de données utilisateur [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] à partir d’une sauvegarde de base de données dans une appliance [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]. La base de données est restaurée à partir d’une sauvegarde créée précédemment par la commande [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] [BACKUP DATABASE &#40;Parallel Data Warehouse&#41;](../../t-sql/statements/backup-database-parallel-data-warehouse.md). Les opérations de sauvegarde et de restauration vous permettent d’établir un plan de récupération d’urgence ou de déplacer des bases de données d’une appliance vers une autre.  
   
 > [!NOTE]  
->  Restauration de master inclut la restauration des informations de connexion d’application. Pour restaurer master, utilisez le [restaurer la base de données master &#40; Transact-SQL &#41; ](../../relational-databases/backup-restore/restore-the-master-database-transact-sql.md) page dans le **Configuration Manager** outil. Un administrateur ayant accès au nœud de contrôle peut effectuer cette opération.  
+>  La restauration de la base de données MASTER inclut la restauration des informations de connexion d’appliance. Pour restaurer la base de données MASTER, accédez à la page [Restaurer la base de données MASTER &#40;Transact-SQL&#41; ](../../relational-databases/backup-restore/restore-the-master-database-transact-sql.md) dans l’outil **Gestionnaire de configuration**. Un administrateur ayant accès au nœud de contrôle peut effectuer cette opération.  
   
- Pour plus d’informations sur [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] les sauvegardes de base de données, consultez « Sauvegarde et restauration » dans le [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)].  
+ Pour plus d’informations sur les sauvegardes de bases de données [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], consultez la section relative à la sauvegarde et à la restauration dans la [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)].  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "icône lien de rubrique") [Conventions de syntaxe Transact-SQL &#40; Transact-SQL &#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône Lien de rubrique") [Conventions de la syntaxe Transact-SQL &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -61,13 +61,13 @@ RESTORE HEADERONLY
 ```  
   
 ## <a name="arguments"></a>Arguments  
- RESTAURER la base de données *nom_base_de_données*  
- Spécifie pour restaurer une base de données utilisateur à une base de données appelée *nom_base_de_données*. La base de données restaurée peut avoir un nom différent de la base de données source qui a été sauvegardée. *database_name* ne peut pas déjà exister en tant que base de données sur l’application de destination. Pour plus d’informations sur autorisées des noms de base de données, consultez « Règles d’affectation de noms d’objet » dans le [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)].  
+ RESTORE DATABASE *database_name*  
+ Spécifie la restauration d’une base de données utilisateur dans une base de données appelée *database_name*. La base de données restaurée peut avoir un nom différent du nom de la base de données source qui a été sauvegardée. *database_name* ne peut pas déjà exister comme base de données dans l’appliance de destination. Pour plus d’informations sur les noms de base de données autorisés, consultez les règles de nommage d’objets dans la [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)].  
   
- Restauration d’une base de données utilisateur restaure une sauvegarde complète de la base de données et restaure ensuite éventuellement une sauvegarde différentielle à l’appliance. Restauration d’une base de données utilisateur inclut la restauration de base de données et les rôles de base de données.  
+ La restauration d’une base de données utilisateur a pour effet de restaurer une sauvegarde complète de base de données et éventuellement de restaurer une sauvegarde différentielle dans l’appliance. La restauration d’une base de données utilisateur inclut la restauration des utilisateurs de la base de données, ainsi que les rôles de base de données.  
   
- À partir du disque = '\\\\*UNC_path*\\*Répertoire_Sauvegarde*'  
- Le chemin d’accès réseau et le répertoire à partir de laquelle [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] restaure les fichiers de sauvegarde. Par exemple, à partir du disque = '\\\xxx.xxx.xxx.xxx\backups\2012\Monthly\08.2012.Mybackup'.  
+ FROM DISK = '\\\\*UNC_path*\\*backup_directory*'  
+ Chemin réseau et répertoire à partir duquel [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] restaure les fichiers de sauvegarde. Par exemple, FROM DISK = « \\\xxx.xxx.xxx.xxx\backups\2012\Monthly\08.2012.Mybackup» .  
   
  *backup_directory*  
  Spécifie le nom d’un répertoire qui contient la sauvegarde complète ou différentielle. Par exemple, vous pouvez effectuer une opération RESTORE HEADERONLY sur une sauvegarde complète ou différentielle.  
@@ -78,81 +78,81 @@ RESTORE HEADERONLY
  *differential_backup_directory*  
  Spécifie le nom du répertoire qui contient la sauvegarde différentielle.  
   
--   Le répertoire de sauvegarde et de chemin d’accès doit déjà exister et doit être spécifié comme chemin d’accès UNC universal qualifié complet.  
+-   Le chemin et le répertoire de sauvegarde doivent déjà exister et être spécifiés comme chemin UNC (Universal Naming Convention).  
   
--   Le chemin d’accès au répertoire de sauvegarde ne peut pas être un chemin d’accès local et il ne peut pas être un emplacement sur n’importe quel le [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] nœuds de l’appliance.  
+-   Le chemin du répertoire de sauvegarde ne peut pas être un chemin local ni un emplacement sur un nœud d’appliance [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
   
--   La longueur maximale du chemin d’accès UNC et du nom du répertoire de sauvegarde est de 200 caractères.  
+-   La longueur maximale du chemin UNC et du nom du répertoire de sauvegarde est de 200 caractères.  
   
--   Le serveur ou l’hôte doit être spécifié en tant qu’une adresse IP.  
+-   Le serveur ou l’hôte doit être spécifié avec une adresse IP.  
   
  RESTORE HEADERONLY  
- Spécifie pour retourner uniquement les informations d’en-tête pour la sauvegarde de base de données d’un utilisateur. Parmi les autres champs, l’en-tête inclut la description de la sauvegarde et le nom de la sauvegarde. Le nom de la sauvegarde n’a pas besoin être le même que le nom du répertoire où sont stockés les fichiers de sauvegarde.  
+ Spécifie le retour des seules informations d’en-tête d’une sauvegarde de base de données utilisateur unique. L’en-tête comprend différents champs, notamment le texte descriptif de la sauvegarde et le nom de la sauvegarde. Le nom de la sauvegarde ne doit pas nécessairement être le même que celui du répertoire où sont stockés les fichiers de sauvegarde.  
   
- Les résultats RESTORE HEADERONLY sont modélisées après le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] RESTORE HEADERONLY des résultats. Le résultat contient plus de 50 colonnes qui sont pas tous utilisés par [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]. Pour obtenir une description des colonnes dans le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] des résultats RESTORE HEADERONLY, consultez [RESTORE HEADERONLY &#40; Transact-SQL &#41; ](../../t-sql/statements/restore-statements-headeronly-transact-sql.md).  
+ Les résultats de RESTORE HEADERONLY sont modélisés d’après les résultats de RESTORE HEADERONLY de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Les résultats comportent plus de 50 colonnes, qui ne sont pas toutes utilisées par [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]. Pour une description des colonnes présentes dans les résultats de RESTORE HEADERONLY de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez [RESTORE HEADERONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-headeronly-transact-sql.md).  
   
 ## <a name="permissions"></a>Autorisations  
- Requiert le **CREATE ANY DATABASE** autorisation.  
+ Nécessite l’autorisation **CREATE ANY DATABASE**.  
   
- Nécessite un compte Windows qui a l’autorisation d’accéder à et lire à partir du répertoire de sauvegarde. Vous devez également stocker le nom de compte Windows et le mot de passe dans [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
+ Nécessite un compte Windows doté d’un droit d’accès et de lecture à partir du répertoire de sauvegarde. Vous devez aussi stocker le nom de compte et le mot de passe Windows dans [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
   
-1.  Pour vérifier les informations d’identification sont déjà, utilisez [sys.dm_pdw_network_credentials &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-network-credentials-transact-sql.md).  
+1.  Pour vérifier si les informations d’identification s’y trouvent déjà, utilisez [sys.dm_pdw_network_credentials &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-network-credentials-transact-sql.md).  
   
-2.  Pour ajouter ou mettre à jour les informations d’identification, utilisez [sp_pdw_add_network_credentials &#40; Entrepôt de données SQL &#41; ](../../relational-databases/system-stored-procedures/sp-pdw-add-network-credentials-sql-data-warehouse.md).  
+2.  Pour ajouter ou mettre à jour les informations d’identification, utilisez [sp_pdw_add_network_credentials &#40;SQL Data Warehouse&#41;](../../relational-databases/system-stored-procedures/sp-pdw-add-network-credentials-sql-data-warehouse.md).  
   
-3.  Pour supprimer les informations d’identification à partir de [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], utilisez [sp_pdw_remove_network_credentials &#40; Entrepôt de données SQL &#41; ](../../relational-databases/system-stored-procedures/sp-pdw-remove-network-credentials-sql-data-warehouse.md).  
+3.  Pour supprimer les informations d’identification de [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], utilisez [sp_pdw_remove_network_credentials &#40;SQL Data Warehouse&#41;](../../relational-databases/system-stored-procedures/sp-pdw-remove-network-credentials-sql-data-warehouse.md).  
   
 ## <a name="error-handling"></a>Gestion des erreurs  
- La commande de restauration de la base de données provoque des erreurs dans les conditions suivantes :  
+ La commande RESTORE DATABASE génère des erreurs dans les cas suivants :  
   
--   Le nom de la base de données à restaurer déjà existe sur l’appareil cible. Pour éviter ce problème, choisissez un nom de base de données unique, ou supprimer la base de données existante avant d’exécuter la restauration.  
+-   Le nom de la base de données à restaurer existe déjà dans l’appliance cible. Pour éviter cela, choisissez un nom de base de données unique ou supprimez la base de données existante avant d’exécuter la restauration.  
   
--   Il existe un ensemble non valide de fichiers de sauvegarde dans le répertoire de sauvegarde.  
+-   Le répertoire de sauvegarde contient un ensemble de fichiers de sauvegarde non valide.  
   
 -   Les autorisations de connexion ne sont pas suffisantes pour restaurer une base de données.  
   
--   [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]n’a pas les autorisations appropriées à l’emplacement réseau où se trouvent les fichiers de sauvegarde.  
+-   [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] ne dispose pas des autorisations appropriées pour accéder à l’emplacement réseau où se trouvent les fichiers de sauvegarde.  
   
--   L’emplacement réseau pour le répertoire de sauvegarde n’existe pas ou n’est pas disponible.  
+-   L’emplacement réseau du répertoire de sauvegarde n’existe pas ou n’est pas disponible.  
   
--   Il existe un espace disque insuffisant sur les nœuds de calcul ou d’un nœud de contrôle. [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]ne confirme pas que suffisamment d’espace disque existe sur l’appareil avant le lancement de la restauration. Par conséquent, il est possible de générer une erreur d’espace disque lors de l’exécution de l’instruction RESTORE DATABASE. En cas d’espace disque insuffisant, [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] restaure la restauration.  
+-   Les nœuds de calcul ou le nœud de contrôle n’ont pas suffisamment d’espace disque. [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] ne confirme pas que l’appliance dispose d’une quantité d’espace disque suffisante avant le lancement de la restauration. De ce fait, il est possible qu’une erreur d’espace disque insuffisant soit générée pendant l’exécution de l’instruction RESTORE DATABASE. Quand l’espace disque est insuffisant, [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] annule la restauration.  
   
--   L’application cible dans lequel la base de données est restaurée a moins de nœuds de calcul à l’application de la source à partir de laquelle la base de données a été sauvegardée.  
+-   L’appliance cible dans laquelle la base de données est restaurée compte moins de nœuds de calcul que l’appliance source à partir de laquelle la base de données a été sauvegardée.  
   
--   La restauration de la base de données est tentée à partir d’une transaction.  
+-   La tentative de restauration de la base de données a pour cadre une transaction.  
   
 ## <a name="general-remarks"></a>Remarques d'ordre général  
- [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]effectue le suivi de la réussite de la restauration de la base de données. Avant de restaurer une sauvegarde différentielle de base de données, [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] vérifie la restauration de la base de données complète est terminée.  
+ [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] suit la bonne réalisation des restaurations de base de données. Avant de restaurer une sauvegarde différentielle de base de données, [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] vérifie que la restauration complète de base de données a abouti correctement.  
   
- Après une restauration, la base de données utilisateur aura le niveau de compatibilité de base de données 120. Cela est vrai pour toutes les bases de données, quelle que soit leur niveau de compatibilité d’origine.  
+ Après une restauration, la base de données utilisateur présente le niveau de compatibilité de base de données 120. Cela vaut pour toutes les bases de données, quel que soit leur niveau de compatibilité d’origine.  
   
- **Restauration vers un appareil avec un plus grand nombre de nœuds de calcul**  
-Exécutez [DBCC SHRINKLOG (Azure SQL Data Warehouse)](../../t-sql/database-console-commands/dbcc-shrinklog-azure-sql-data-warehouse.md) après la restauration d’une base de données à partir d’un équipement plus petit au plus grand, car la redistribution augmentera le journal des transactions.  
+ **Restauration dans une appliance dotée d’un plus grand nombre de nœuds de calcul**  
+Exécutez [DBCC SHRINKLOG (Azure SQL Data Warehouse)](../../t-sql/database-console-commands/dbcc-shrinklog-azure-sql-data-warehouse.md) après avoir restauré une base de données d’une appliance vers une autre de plus grande taille, car la redistribution fera croître le journal des transactions.  
 
-Restauration d’une sauvegarde vers un appareil avec un plus grand nombre de nœuds de calcul s’agrandit la taille de la base de données alloué proportionnellement au nombre de nœuds de calcul.  
+Le fait de restaurer une sauvegarde dans une appliance dotée d’un plus grand nombre de nœuds de calcul a pour effet d’accroître la taille de la base de données allouée de façon proportionnelle au nombre de nœuds de calcul.  
   
-Par exemple, lorsque restauration 60 Go de base de données à partir d’un équipement de 2 nœuds (30 Go par nœud) à un matériel 6-nœud, [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] crée une base de données 180 Go (6 nœuds avec 30 Go par nœud) sur le dispositif de 6 nœuds. [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]initialement restaure la base de données à 2 nœuds correspondant à la configuration de la source, puis redistribue les données à tous les nœuds de 6.  
+Par exemple, si vous restaurez une base de données de 60 Go d’une appliance à 2 nœuds (30 Go par nœud) vers une appliance à 6 nœuds, [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] crée une base de données de 180 Go (6 nœuds à raison de 30 Go par nœud) dans l’appliance à 6 nœuds. [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] commence par restaurer la base de données sur 2 nœuds pour être en adéquation avec la configuration source, puis redistribue les données aux 6 nœuds.  
   
- Après la redistribution de chaque nœud de calcul contient moins de données réelles et davantage d’espace libre que chaque nœud de calcul sur l’appareil source plus petit. L’espace supplémentaire permet d’ajouter des données à la base de données. Si la taille de la base de données restaurée est plus grande que vous avez besoin, vous pouvez utiliser [ALTER DATABASE &#40; Parallel Data Warehouse &#41; ](../../t-sql/statements/alter-database-parallel-data-warehouse.md) pour réduire la taille des fichiers de base de données.  
+ À l’issue de la redistribution, chaque nœud de calcul contient moins de données réelles et plus d’espace libre que chaque nœud de calcul de l’appliance source de plus petite taille. Profitez de l’espace supplémentaire pour ajouter davantage de données à la base de données. Si la taille de la base de données restaurée est plus grande qu’il ne faut, vous pouvez utiliser [ALTER DATABASE &#40;Parallel Data Warehouse&#41; ](../../t-sql/statements/alter-database-parallel-data-warehouse.md) pour réduire la taille des fichiers de base de données.  
   
 ## <a name="limitations-and-restrictions"></a>Limitations et restrictions  
- Pour obtenir ces limitations et restrictions, l’application source est l’application à partir de laquelle la sauvegarde de base de données a été créée, et l’application cible est l’application vers laquelle la base de données sera restaurée.  
+ Dans le cadre de ces limitations et restrictions, l’appliance source est celle à partir de laquelle la sauvegarde de base de données a été créée, tandis que l’appliance cible est celle sur laquelle la base de données est restaurée.  
   
- Restauration d’une base de données ne régénère pas automatiquement les statistiques.  
+ À l’occasion d’une restauration de base de données, les statistiques ne sont pas régénérées automatiquement.  
   
- Instruction qu’une seule de restaurer la base de données ou de sauvegarde de base de données peut être en cours d’exécution sur le matériel à un moment donné. Si plusieurs instructions de sauvegarde et de restauration sont envoyées simultanément, elle les placer dans une file d’attente, puis les traiter un à la fois.  
+ Seule une instruction RESTORE DATABASE ou BACKUP DATABASE peut s’exécuter dans l’appliance à un moment donné. Si plusieurs instructions de sauvegarde et de restauration sont envoyées simultanément, l’appliance les met en file d’attente et les traite l’une après l’autre.  
   
- Vous pouvez uniquement restaurer une sauvegarde de base de données à un [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] équipement cible qui a le même nombre ou plusieurs nœuds de calcul à l’application source. L’appareil cible ne peut pas avoir moins de nœuds de calcul à l’application source.  
+ Vous ne pouvez restaurer une sauvegarde de base de données que dans une appliance cible [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] qui compte au moins le même nombre de nœuds de calcul que l’appliance source. L’appliance cible ne peut pas contenir moins de nœuds de calcul que l’appliance source.  
   
- Vous ne pouvez pas restaurer une sauvegarde qui a été créée sur un matériel qui possède un matériel de SQL Server 2012 PDW vers un appareil qui possède un matériel de SQL Server 2008 R2. Cela est vrai même si l’application a été achetée avec le matériel de PDW de SQL Server 2008 R2 et est en cours d’exécution des logiciels de SQL Server 2012 PDW.  
+ Une sauvegarde qui a été créée dans une appliance basée sur du matériel SQL Server 2012 PDW ne pas être restaurée dans une appliance basée sur du matériel SQL Server 2008 R2. Cela est vrai même si l’appliance a été acquise à l’origine avec du matériel SQL Server 2008 R2 PDW et exécute maintenant un logiciel SQL Server 2012 PDW.  
   
 ## <a name="locking"></a>Verrouillage  
- Accepte un verrou exclusif sur l’objet de base de données.  
+ Applique un verrou exclusif sur l’objet DATABASE.  
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-simple-restore-examples"></a>A. Exemples de restauration simples  
- L’exemple suivant restaure une sauvegarde complète sur le `SalesInvoices2013` base de données. Les fichiers de sauvegarde sont stockés dans le \\\xxx.xxx.xxx.xxx\backups\yearly\Invoices2013Full active. La base de données SalesInvoices2013 ne peut pas déjà exister sur l’appareil cible, ou cette commande échoue avec une erreur.  
+### <a name="a-simple-restore-examples"></a>A. Exemples simples RESTORE  
+ L’exemple suivant restaure une sauvegarde complète dans la base de données `SalesInvoices2013`. Les fichiers de sauvegarde sont stockés dans le répertoire \\\xxx.xxx.xxx.xxx\backups\yearly\Invoices2013Full. La base de données SalesInvoices2013 ne doit pas déjà se trouver dans l’appliance cible, car cette commande échouerait avec une erreur.  
   
 ```  
 RESTORE DATABASE SalesInvoices2013  
@@ -160,9 +160,9 @@ FROM DISK = '\\xxx.xxx.xxx.xxx\backups\yearly\Invoices2013Full';
 ```  
   
 ### <a name="b-restore-a-full-and-differential-backup"></a>B. Restaurer une sauvegarde complète et différentielle  
- L’exemple suivant restaure un complet, puis une sauvegarde différentielle de la base de données SalesInvoices2013  
+ L’exemple suivant restaure une sauvegarde complète, puis une sauvegarde différentielle dans la base de données SalesInvoices2013.  
   
- La sauvegarde complète de la base de données est restaurée à partir de la sauvegarde complète qui est stockée dans le '\\\xxx.xxx.xxx.xxx\backups\yearly\Invoices2013Full' active. Si la restauration est terminée avec succès, la sauvegarde différentielle est restaurée dans la base de données SalesInvoices2013.  La sauvegarde différentielle est stockée dans le '\\\xxx.xxx.xxx.xxx\backups\yearly\Invoices2013Diff' active.  
+ La sauvegarde complète de la base de données est restaurée à partir de la sauvegarde complète, qui est stockée dans le répertoire « \\\xxx.xxx.xxx.xxx\backups\yearly\Invoices2013Full ». Si la restauration aboutit, la sauvegarde différentielle est restaurée dans la base de données SalesInvoices2013.  La sauvegarde différentielle est stockée dans le répertoire « \\\xxx.xxx.xxx.xxx\backups\yearly\Invoices2013Diff ».  
   
 ```  
 RESTORE DATABASE SalesInvoices2013  
@@ -173,7 +173,7 @@ RESTORE DATABASE SalesInvoices2013
 ```  
   
 ### <a name="c-restoring-the-backup-header"></a>C. Restauration de l’en-tête de sauvegarde  
- Cet exemple restaure les informations d’en-tête pour la sauvegarde de base de données '\\\xxx.xxx.xxx.xxx\backups\yearly\Invoices2013Full'. Les résultats de la commande dans une ligne d’informations pour la sauvegarde Invoices2013Full.  
+ Cet exemple restaure les informations d’en-tête pour la sauvegarde de base de données « \\\xxx.xxx.xxx.xxx\backups\yearly\Invoices2013Full ». La commande génère une ligne d’informations pour la sauvegarde Invoices2013Full.  
   
 ```  
 RESTORE HEADERONLY  
@@ -181,9 +181,9 @@ RESTORE HEADERONLY
 [;]  
 ```  
   
- Vous pouvez utiliser les informations d’en-tête pour vérifier le contenu d’une sauvegarde, ou vérifiez que le matériel de restauration cible est compatible avec l’application de sauvegarde source avant de tenter de restaurer la sauvegarde.  
+ Vous pouvez vous servir des informations d’en-tête pour vérifier le contenu d’une sauvegarde ou pour vous assurer que l’appliance de restauration cible est compatible avec l’appliance de sauvegarde source avant d’entreprendre la restauration de la sauvegarde.  
   
-## <a name="see-also"></a>Voir aussi  
- [Base de données de sauvegarde &#40; Parallel Data Warehouse &#41;](../../t-sql/statements/backup-database-parallel-data-warehouse.md)  
+## <a name="see-also"></a> Voir aussi  
+ [BACKUP DATABASE &#40;Parallel Data Warehouse&#41;](../../t-sql/statements/backup-database-parallel-data-warehouse.md)  
   
   

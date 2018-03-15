@@ -1,5 +1,5 @@
 ---
-title: "GRANT-autorisations texte intégral (Transact-SQL) | Documents Microsoft"
+title: "GRANT - Autorisations relatives au texte intégral | Microsoft Docs"
 ms.custom: 
 ms.date: 06/17/2017
 ms.prod: sql-non-specified
@@ -60,11 +60,11 @@ GRANT permission [ ,...n ] ON
  *permission*  
  Nom d'une autorisation. Les mappages valides des autorisations des éléments sécurisables sont décrits dans la section « Notes », plus loin dans cette rubrique.  
   
- DANS le catalogue de texte intégral **:: *** intégral-text_catalog_name*  
- Indique le catalogue de texte intégral pour lequel l'autorisation est accordée. Le qualificateur d’étendue **::** est requis.  
+ ON FULLTEXT CATALOG **::***full-text_catalog_name*  
+ Indique le catalogue de texte intégral pour lequel l'autorisation est accordée. Le qualificateur d’étendue **::** est obligatoire.  
   
  ON FULLTEXT STOPLIST **::***full-text_stoplist_name*  
- Indique la liste de mots vides de texte intégral pour laquelle l'autorisation est accordée. Le qualificateur d’étendue **::** est requis.  
+ Indique la liste de mots vides de texte intégral pour laquelle l'autorisation est accordée. Le qualificateur d’étendue **::** est obligatoire.  
   
  *database_principal*  
  Spécifie le principal auquel l'autorisation est accordée. Il peut s'agir :  
@@ -93,7 +93,7 @@ AS *granting_principal*
 -   d'un utilisateur de base de données mappé à une clé asymétrique ;  
 -   d'un utilisateur de base de données qui n'est pas mappé sur le principal d'un serveur.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
   
 ## <a name="fulltext-catalog-permissions"></a>Autorisations FULLTEXT CATALOG  
  Un catalogue de texte intégral est un élément sécurisable au niveau base de données contenu dans la base de données parente dans la hiérarchie des autorisations. Les autorisations les plus spécifiques et limitées qu'il est possible d'accorder pour un catalogue de texte intégral sont répertoriées dans le tableau ci-dessous, avec les autorisations plus générales qui les incluent de manière implicite.  
@@ -157,12 +157,12 @@ GRANT VIEW DEFINITION
     TO Mary ;  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [CREATE APPLICATION ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-application-role-transact-sql.md)   
  [CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-asymmetric-key-transact-sql.md)   
  [CREATE CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/create-certificate-transact-sql.md)   
- [CRÉER le catalogue de texte intégral &#40; Transact-SQL &#41;](../../t-sql/statements/create-fulltext-catalog-transact-sql.md)   
- [CRÉER une liste de mots vides de texte intégral &#40; Transact-SQL &#41;](../../t-sql/statements/create-fulltext-stoplist-transact-sql.md)   
+ [CREATE FULLTEXT CATALOG &#40;Transact-SQL&#41;](../../t-sql/statements/create-fulltext-catalog-transact-sql.md)   
+ [CREATE FULLTEXT STOPLIST &#40;Transact-SQL&#41;](../../t-sql/statements/create-fulltext-stoplist-transact-sql.md)   
  [Hiérarchie de chiffrement](../../relational-databases/security/encryption/encryption-hierarchy.md)   
  [sys.fn_my_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-my-permissions-transact-sql.md)   
  [GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md)   

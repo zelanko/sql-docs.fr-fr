@@ -1,5 +1,5 @@
 ---
-title: IDENT_CURRENT (Transact-SQL) | Documents Microsoft
+title: IDENT_CURRENT (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -50,22 +50,22 @@ IDENT_CURRENT( 'table_name' )
   
 ## <a name="arguments"></a>Arguments  
  *table_name*  
- Nom de la table dont la valeur d'identité est retournée. *nom_table* est **varchar**, sans valeur par défaut.  
+ Nom de la table dont la valeur d'identité est retournée. *table_name* est de type **varchar**, sans valeur par défaut.  
   
 ## <a name="return-types"></a>Types de retour  
- **NUMERIC(38,0)**  
+ **numeric(38,0)**  
   
 ## <a name="exceptions"></a>Exceptions  
  Retourne la valeur NULL en cas d'erreur ou si un appelant n'est pas autorisé à afficher l'objet.  
   
  Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], un utilisateur peut voir uniquement les métadonnées des éléments sécurisables qui lui appartiennent ou pour lesquels il dispose d'un droit d'accès. Cela signifie que les fonctions intégrées générant des métadonnées, telles que IDENT_CURRENT, peuvent retourner la valeur NULL si l'utilisateur ne dispose d'aucune autorisation sur l'objet. Pour plus d'informations, consultez [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
-## <a name="remarks"></a>Notes  
- IDENT_CURRENT est similaire à la [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] fonctions d’identité SCOPE_IDENTITY et @@IDENTITY. Ces trois fonctions renvoient les dernières valeurs d'identité générées. Toutefois, la portée et la session sur laquelle *dernière* est défini dans chacune de ces fonctions sont différents :  
+## <a name="remarks"></a>Notes   
+ IDENT_CURRENT est similaire aux fonctions d’identité SCOPE_IDENTITY et @@IDENTITY de [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]. Ces trois fonctions renvoient les dernières valeurs d'identité générées. Toutefois, l’étendue et la session dans lesquelles le paramètre *last* est défini diffèrent pour chacune de ces fonctions :  
   
 -   IDENT_CURRENT renvoie la dernière valeur d'identité générée pour une table spécifique dans n'importe quelles session et étendue.  
   
--   @@IDENTITY renvoie la dernière valeur d’identité générée pour n’importe quelle table dans la session active, sur toutes les étendues.  
+-   @@IDENTITY renvoie la dernière valeur d’identité générée pour n’importe quelle table dans la session en cours, sur l’ensemble des étendues.  
   
 -   SCOPE_IDENTITY renvoie la dernière valeur d'identité générée pour n'importe quelle table dans la session et l'étendue en cours.  
   
@@ -87,7 +87,7 @@ SELECT IDENT_CURRENT ('Person.Address') AS Current_Identity;
 GO  
 ```  
   
-### <a name="b-comparing-identity-values-returned-by-identcurrent-identity-and-scopeidentity"></a>B. Comparaison des valeurs d’identité retournée par IDENT_CURRENT, @@IDENTITY et SCOPE_IDENTITY  
+### <a name="b-comparing-identity-values-returned-by-identcurrent-identity-and-scopeidentity"></a>B. Comparaison des valeurs d’identité renvoyées par IDENT_CURRENT, @@IDENTITY et SCOPE_IDENTITY  
  L'exemple suivant affiche les valeurs d'identité différentes renvoyées par `IDENT_CURRENT`, `@@IDENTITY` et `SCOPE_IDENTITY`.  
   
 ```  
@@ -144,12 +144,12 @@ SELECT IDENT_CURRENT('t7');
 /* Returns the last value inserted into t7.*/  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [@@IDENTITY &#40;Transact-SQL&#41;](../../t-sql/functions/identity-transact-sql.md)   
  [SCOPE_IDENTITY &#40;Transact-SQL&#41;](../../t-sql/functions/scope-identity-transact-sql.md)   
- [IDENT_INCR &#40; Transact-SQL &#41;](../../t-sql/functions/ident-incr-transact-sql.md)   
- [IDENT_SEED &#40; Transact-SQL &#41;](../../t-sql/functions/ident-seed-transact-sql.md)   
- [Expressions &#40; Transact-SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
- [Fonctions système &#40; Transact-SQL &#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)  
+ [IDENT_INCR &#40;Transact-SQL&#41;](../../t-sql/functions/ident-incr-transact-sql.md)   
+ [IDENT_SEED &#40;Transact-SQL&#41;](../../t-sql/functions/ident-seed-transact-sql.md)   
+ [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [Fonctions système &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)  
   
   

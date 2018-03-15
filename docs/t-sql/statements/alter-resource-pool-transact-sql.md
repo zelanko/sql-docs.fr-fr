@@ -1,5 +1,5 @@
 ---
-title: ALTER RESOURCE POOL (Transact-SQL) | Documents Microsoft
+title: ALTER RESOURCE POOL (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 05/01/2017
 ms.prod: sql-non-specified
@@ -36,7 +36,7 @@ ms.lasthandoff: 01/25/2018
 
   Modifie une configuration de pool de ressources du gouverneur de ressources existante dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "icône lien de rubrique") [Conventions de syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
+ ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -74,26 +74,26 @@ ALTER RESOURCE POOL { pool_name | "default" }
 > [!NOTE]  
 >  Les groupes de charges de travail et les pools de ressources prédéfinis utilisent tous des noms en minuscule, tels que « default ». Ce facteur doit être pris en considération pour les serveurs qui utilisent un classement qui respecte la casse. Les serveurs avec un classement qui ne respecte pas la casse, tel que SQL_Latin1_General_CP1_CI_AS, traitent "default" et "Default" comme identiques.  
   
- MIN_CPU_PERCENT =*valeur*  
- Spécifie la bande passante de l'UC moyenne garantie pour toutes les demandes dans le pool de ressources en cas de contention de l'UC. *valeur* est un entier dont la valeur par défaut 0. La plage autorisée pour *valeur* est comprise entre 0 et 100.  
+ MIN_CPU_PERCENT =*value*  
+ Spécifie la bande passante de l'UC moyenne garantie pour toutes les demandes dans le pool de ressources en cas de contention de l'UC. *value* est un entier dont la valeur par défaut est 0. La plage autorisée pour *value* est comprise entre 0 et 100.  
   
- MAX_CPU_PERCENT =*valeur*  
- Spécifie la bande passante de l'UC moyenne maximale que toutes les demandes du pool de ressources recevront en cas de contention de l'UC. *valeur* est un entier dont le paramètre par défaut est 100. La plage autorisée pour *valeur* est comprise entre 1 et 100.  
+ MAX_CPU_PERCENT =*value*  
+ Spécifie la bande passante de l'UC moyenne maximale que toutes les demandes du pool de ressources recevront en cas de contention de l'UC. *value* est un entier dont la valeur par défaut est 100. La plage autorisée pour *value* est comprise entre 1 et 100.  
   
- CAP_CPU_PERCENT =*valeur*  
+ CAP_CPU_PERCENT =*value*  
  **S'applique à**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- Spécifie la capacité de l’UC cible maximale pour les demandes dans le pool de ressources. *valeur* est un entier dont le paramètre par défaut est 100. La plage autorisée pour *valeur* est comprise entre 1 et 100.  
+ Spécifie la capacité maximale cible de l’UC pour les requêtes dans le pool de ressources. *value* est un entier dont la valeur par défaut est 100. La plage autorisée pour *value* est comprise entre 1 et 100.  
   
 > [!NOTE]  
->  En raison de la nature statistique de la gouvernance de l’UC, vous pouvez remarquer les pics occasionnels supérieure à la valeur spécifiée dans CAP_CPU_PERCENT.  
+>  En raison de la nature statistique de la gouvernance de l’UC, vous pouvez remarquer des pics occasionnels supérieurs à la valeur spécifiée dans CAP_CPU_PERCENT.  
   
  AFFINITY {SCHEDULER = AUTO | (Scheduler_range_spec) | NUMANODE = (NUMA_node_range_spec)}  
  **S'applique à**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Attache le pool de ressources aux planificateurs spécifiques. La valeur par défaut est AUTO.  
   
- AFFINITY SCHEDULER = (Scheduler_range_spec) mappe le pool de ressources aux planifications [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] identifiées par les ID donnés. Ces ID mappage aux valeurs dans la colonne scheduler_id [sys.dm_os_schedulers &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-os-schedulers-transact-sql.md).  
+ AFFINITY SCHEDULER = (Scheduler_range_spec) mappe le pool de ressources aux planifications [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] identifiées par les ID donnés. Ces ID correspondent aux valeurs de la colonne scheduler_id dans [sys.dm_os_schedulers &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-schedulers-transact-sql.md).  
   
  Lorsque vous utilisez AFFINITY NAMANODE = (NUMA_node_range_spec), le pool de ressources possède une affinité avec les planificateurs [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui mappent aux UC physiques correspondant au nœud NUMA ou à la plage de nœuds donnée. Vous pouvez utiliser la requête Transact-SQL ci-après pour découvrir le mappage entre la configuration NUMA physique et les ID du planificateur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -106,40 +106,40 @@ INNER JOIN sys.dm_os_schedulers AS sc
 ```  
   
  MIN_MEMORY_PERCENT =*value*  
- Spécifie la quantité de mémoire minimale réservée à ce pool de ressources qui ne peut pas être partagée avec d'autres pools de ressources. *valeur* est un entier dont la valeur par défaut 0. La plage autorisée pour *valeur* est comprise entre 0 et 100.  
+ Spécifie la quantité de mémoire minimale réservée à ce pool de ressources qui ne peut pas être partagée avec d'autres pools de ressources. *value* est un entier dont la valeur par défaut est 0. La plage autorisée pour *value* est comprise entre 0 et 100.  
   
- MAX_MEMORY_PERCENT =*valeur*  
- Spécifie la mémoire totale du serveur qui peut être utilisée par les demandes dans ce pool de ressources. *valeur* est un entier dont le paramètre par défaut est 100. La plage autorisée pour *valeur* est comprise entre 1 et 100.  
+ MAX_MEMORY_PERCENT =*value*  
+ Spécifie la mémoire totale du serveur qui peut être utilisée par les demandes dans ce pool de ressources. *value* est un entier dont la valeur par défaut est 100. La plage autorisée pour *value* est comprise entre 1 et 100.  
   
  MIN_IOPS_PER_VOLUME =*value*  
  **S'applique à**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- Spécifie les opérations d'E/S minimales par seconde (IOPS) par volume disque à réserver au pool de ressources. La plage autorisée pour *valeur* est comprise entre 0 et 2 ^ 31-1 (2 147 483 647). Spécifiez 0 pour indiquer l'absence de seuil minimal pour le pool.  
+ Spécifie les opérations d'E/S minimales par seconde (IOPS) par volume disque à réserver au pool de ressources. La plage autorisée pour *value* est comprise entre 0 et 2^31-1 (2 147 483 647). Spécifiez 0 pour indiquer l'absence de seuil minimal pour le pool.  
   
  MAX_IOPS_PER_VOLUME =*value*  
  **S'applique à**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- Spécifie les opérations d'E/S maximales par seconde (IOPS) par volume disque à autoriser pour le pool de ressources. La plage autorisée pour *valeur* est comprise entre 0 et 2 ^ 31-1 (2 147 483 647). Spécifiez 0 pour définir un seuil illimité pour le pool. La valeur par défaut est 0.  
+ Spécifie les opérations d'E/S maximales par seconde (IOPS) par volume disque à autoriser pour le pool de ressources. La plage autorisée pour *value* est comprise entre 0 et 2^31-1 (2 147 483 647). Spécifiez 0 pour définir un seuil illimité pour le pool. La valeur par défaut est 0.  
   
  Si le MAX_IOPS_PER_VOLUME pour un pool a la valeur 0, le pool n'est pas régi du tout et peut prendre toutes les E/S par seconde dans le système même si MIN_IOPS_PER_VOLUME est défini pour d'autres pools. Dans ce cas, nous vous recommandons de définir la valeur MAX_IOPS_PER_VOLUME de ce pool sur un nombre élevé (par exemple, la valeur maximale 2^31-1) si vous voulez que ce pool soit régi pour les E/S.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  MAX_CPU_PERCENT et MAX_MEMORY_PERCENT doivent respectivement être supérieurs ou égaux à MIN_CPU_PERCENT et MIN_MEMORY_PERCENT.  
   
- MAX_CPU_PERCENT pouvez utiliser la capacité de l’UC au-dessus de la valeur de MAX_CPU_PERCENT si elle est disponible. Bien qu’il peut y avoir des pointes périodiques ci-dessus CAP_CPU_PERCENT, les charges de travail ne doivent pas dépasser CAP_CPU_PERCENT pendant de longues périodes de temps, même lorsque la capacité d’UC supplémentaire est disponible.  
+ MAX_CPU_PERCENT peut utiliser une capacité d’UC supérieure à la valeur de MAX_CPU_PERCENT si elle est disponible. Bien qu’il puisse y avoir des pics périodiques au-dessus de CAP_CPU_PERCENT, les charges de travail ne doivent pas dépasser CAP_CPU_PERCENT pendant de longues périodes, même quand une capacité d’UC supplémentaire est disponible.  
   
  Le pourcentage de l'UC total pour chaque composant d'affinité (planificateur(s) ou nœud(s) NUMA) ne doit pas dépasser 100 %.  
   
- Lorsque vous exécutez des instructions DDL, nous vous recommandons de connaître les états du gouverneur de ressources. Pour plus d’informations, consultez [du gouverneur de ressources](../../relational-databases/resource-governor/resource-governor.md).  
+ Lorsque vous exécutez des instructions DDL, nous vous recommandons de connaître les états du gouverneur de ressources. Pour plus d’informations, consultez [Resource Governor](../../relational-databases/resource-governor/resource-governor.md).  
   
- Lorsque vous modifiez un plan qui affectent les paramètres, les nouveaux paramètres prendront effet que dans les plans mis en cache précédemment après l’exécution de DBCC FREEPROCCACHE (*pool_name*), où *pool_name* est le nom d’un pool de ressources du gouverneur de ressources.  
+ Quand vous modifiez un paramètre qui affecte le plan, le nouveau paramètre prend effet uniquement dans les plans précédemment mis en cache après l’exécution de DBCC FREEPROCCACHE (*pool_name*), où *pool_name* est le nom d’un pool de ressources Resource Governor.  
   
--   Si vous modifiez l’affinité à partir de plusieurs planificateurs à un planificateur unique, l’exécution de DBCC FREEPROCCACHE n’est pas requis, car des plans parallèles peuvent s’exécuter en mode série. Toutefois, il ne peut pas être aussi efficace que d’un plan compilé sous la forme d’un plan en série.  
+-   Si vous changez AFFINITY de plusieurs planificateurs à un planificateur unique, l’exécution de DBCC FREEPROCCACHE n’est pas obligatoire, car des plans parallèles peuvent s’exécuter en mode série. Toutefois, cela risque de ne pas être aussi efficace qu’un plan compilé en tant que plan en série.  
   
--   Si vous modifiez d’affinité d’un planificateur unique à plusieurs planificateurs, l’exécution de DBCC FREEPROCCACHE n’est pas nécessaire. Toutefois, les plans en série ne peut pas s’exécuter en parallèle, afin de l’effacement du cache respectif autorise de nouveaux plans potentiellement être compilé à l’aide de parallélisme.  
+-   Si vous changez AFFINITY d’un planificateur unique à plusieurs planificateurs, l’exécution de DBCC FREEPROCCACHE n’est pas obligatoire. Toutefois, les plans en série ne pouvant pas s’exécuter en parallèle, l’effacement du cache respectif permettra aux nouveaux plans d’être compilés à l’aide du parallélisme.  
   
 > [!CAUTION]  
->  Effacement des plans mis en cache à partir d’un pool de ressources est associé à plusieurs groupes de charges de travail affectera tous les groupes de charges de travail avec le pool de ressources définis par l’utilisateur identifié par *pool_name*.  
+>  L’effacement des plans mis en cache à partir d’un pool de ressources associé à plusieurs groupes de charges de travail affecte tous les groupes de charges de travail contenant le pool de ressources défini par l’utilisateur identifié par *pool_name*.  
   
 ## <a name="permissions"></a>Autorisations  
  Requiert l'autorisation CONTROL SERVER.  
@@ -177,7 +177,7 @@ GO
   
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Resource Governor](../../relational-databases/resource-governor/resource-governor.md)   
  [CREATE RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/create-resource-pool-transact-sql.md)   
  [DROP RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/drop-resource-pool-transact-sql.md)   

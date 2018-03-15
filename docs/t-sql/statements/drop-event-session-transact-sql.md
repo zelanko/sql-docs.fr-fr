@@ -1,5 +1,5 @@
 ---
-title: "SUPPRIMER la SESSION d’événements (Transact-SQL) | Documents Microsoft"
+title: DROP EVENT SESSION (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -51,10 +51,10 @@ ON SERVER
  *event_session_name*  
  Nom d'une session d'événements existante.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Lorsque vous supprimez une session d'événements, toutes les informations de configuration, telles que les cibles et les paramètres de session, sont totalement supprimées.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Requiert l'autorisation ALTER ANY EVENT SESSION.  
   
 ## <a name="examples"></a>Exemples  
@@ -65,7 +65,7 @@ DROP EVENT SESSION evt_spin_lock_diagnosis
 ON SERVER;  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [CREATE EVENT SESSION &#40;Transact-SQL&#41;](../../t-sql/statements/create-event-session-transact-sql.md)   
  [ALTER EVENT SESSION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-event-session-transact-sql.md)   
  [sys.server_event_sessions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-event-sessions-transact-sql.md)  

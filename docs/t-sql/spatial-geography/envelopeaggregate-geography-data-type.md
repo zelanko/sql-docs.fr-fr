@@ -1,5 +1,5 @@
 ---
-title: "EnvelopeAggregate (Type de données geography) | Documents Microsoft"
+title: "EnvelopeAggregate (type de données geography) | Microsoft Docs"
 ms.custom: 
 ms.date: 07/30/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="envelopeaggregate-geography-data-type"></a>EnvelopeAggregate (type de données geography)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-Retourne un objet englobant pour un ensemble donné de **geography** objets. Résultant **geography** objet contient plusieurs segments d’arc de cercle.
+Retourne un objet englobant pour un ensemble donné d’objets **geography**. L’objet **geography** résultant contient plusieurs segments d’arc de cercle.
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -45,23 +45,23 @@ EnvelopeAggregate ( geography_operand )
   
 ## <a name="arguments"></a>Arguments  
  *geography_operand*  
- Est un **geography** colonne de table de type qui conserve le jeu de **geography** opération d’agrégation des objets sur lesquels effectuer une enveloppe.  
+ Colonne de table de type **geography** qui contient l’ensemble d’objets **geography** sur lequel effectuer une opération d’agrégation d’enveloppe.  
   
 ## <a name="return-types"></a>Types de retour  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]type de retour : **geography**  
+ Type de retour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] : **geography**  
   
-## <a name="remarks"></a>Notes  
- A **FullGlobe** est retourné lorsque l’objet englobant obtenu est plus grand qu’un hémisphère. Cette méthode n'est pas précise.  
+## <a name="remarks"></a>Notes   
+ Un objet **FullGlobe** est retourné quand l’objet englobant résultant est plus grand qu’un hémisphère. Cette méthode n'est pas précise.  
   
- Méthode renvoie **null** si l’entrée a des SRID différents. Consultez [identificateurs de référence spatiale &#40; SRID &#41; ](../../relational-databases/spatial/spatial-reference-identifiers-srids.md).  
+ La méthode retourne **null** si l’entrée a des SRID différents. Consultez [Identificateurs de référence spatiale &#40;SRID&#41;](../../relational-databases/spatial/spatial-reference-identifiers-srids.md).  
   
- Méthode ignore **null** entrées.  
+ La méthode ignore les entrées **null**.  
   
 > [!NOTE]  
->  Méthode renvoie **null** si toutes les valeurs entrées sont **null**.  
+>  La méthode retourne **null** si toutes les valeurs entrées sont **null**.  
   
 ## <a name="examples"></a>Exemples  
- L’exemple suivant effectue une `EnvelopeAggregate` sur un ensemble de **geography** points d’emplacement au sein d’une ville.  
+ L’exemple suivant effectue un `EnvelopeAggregate` sur un ensemble de points d’emplacement **geography** dans une ville.  
   
  ```
  USE AdventureWorks2012  
@@ -73,7 +73,7 @@ EnvelopeAggregate ( geography_operand )
  GROUP BY City;
  ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Méthodes geography statiques étendues](../../t-sql/spatial-geography/extended-static-geography-methods.md)  
   
   

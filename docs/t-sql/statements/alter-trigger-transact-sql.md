@@ -1,5 +1,5 @@
 ---
-title: ALTER TRIGGER (Transact-SQL) | Documents Microsoft
+title: ALTER TRIGGER (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 05/08/2017
 ms.prod: sql-non-specified
@@ -38,7 +38,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="alter-trigger-transact-sql"></a>ALTER TRIGGER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Modifie la définition d'un déclencheur DML, DDL ou de connexion précédemment créé à l'aide de l'instruction CREATE TRIGGER. Les déclencheurs sont créés à l'aide de la commande CREATE TRIGGER. Ils peuvent être créés directement à partir de [!INCLUDE[tsql](../../includes/tsql-md.md)] instructions ou de méthodes d’assemblys qui sont créés dans le [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] common language runtime (CLR) et téléchargées vers une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour plus d’informations sur les paramètres qui sont utilisés dans l’instruction ALTER TRIGGER, consultez [CREATE TRIGGER &#40; Transact-SQL &#41; ](../../t-sql/statements/create-trigger-transact-sql.md).  
+  Modifie la définition d'un déclencheur DML, DDL ou de connexion précédemment créé à l'aide de l'instruction CREATE TRIGGER. Les déclencheurs sont créés à l'aide de la commande CREATE TRIGGER. Ils peuvent être créés directement à partir d’instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] ou de méthodes d’assembly créées dans le CLR (Common Language Runtime) [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] et chargées dans une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour plus d’informations sur les paramètres utilisés dans l’instruction ALTER TRIGGER, consultez [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md).  
   
  ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -144,26 +144,26 @@ AS { sql_statement
   
 ## <a name="arguments"></a>Arguments  
  *schema_name*  
- Nom du schéma auquel appartient le déclencheur DML. La portée des déclencheurs DML se limite au schéma de la table ou de la vue sur laquelle ils sont créés. *schéma**_name* est facultatif uniquement si le déclencheur DML et sa table ou vue correspondante appartiennent au schéma par défaut. *schema_name* ne peut pas être spécifié pour les déclencheurs DDL ou logon.  
+ Nom du schéma auquel appartient le déclencheur DML. La portée des déclencheurs DML se limite au schéma de la table ou de la vue sur laquelle ils sont créés. *schema**_name* est facultatif uniquement si le déclencheur DML et sa table ou vue correspondante appartiennent au schéma par défaut. Vous ne pouvez pas spécifier *schema_name* pour des déclencheurs DDL ou de connexion.  
   
  *trigger_name*  
  Déclencheur existant à modifier.  
   
- *table* | *affichage*  
+ *table* | *view*  
  Table ou vue sur laquelle le déclencheur DML est exécuté. La spécification du nom qualifié complet de la table ou de la vue est facultative.  
   
  DATABASE  
- Applique l'étendue d'un déclencheur DDL à la base de données active. Si spécifié, le déclencheur est activé chaque fois que *event_type* ou *event_group* se produit dans la base de données actuelle.  
+ Applique l'étendue d'un déclencheur DDL à la base de données active. S’il est spécifié, le déclencheur est activé chaque fois qu’*event_type* ou *event_group* se produit dans la base de données active.  
   
  ALL SERVER  
- **S'applique à**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **S'applique à**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- Applique l'étendue d'un déclencheur DDL ou de connexion au serveur actif. Si spécifié, le déclencheur est activé chaque fois que *event_type* ou *event_group* se produit dans le serveur actuel.  
+ Applique l'étendue d'un déclencheur DDL ou de connexion au serveur actif. S’il est spécifié, le déclencheur est activé chaque fois qu’*event_type* ou *event_group* se produit à un endroit quelconque sur le serveur actif.  
   
  WITH ENCRYPTION  
- **S'applique à**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **S'applique à**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- Chiffre les entrées sys.syscommentssys.sql_modules qui contiennent le texte de l’instruction ALTER TRIGGER. L'utilisation de l'argument WITH ENCRYPTION évite la publication du déclencheur dans le cadre de la réplication [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Il n'est pas possible de spécifier WITH ENCRYPTION pour les déclencheurs CLR.  
+ Chiffre les entrées de sys.syscomments sys.sql_modules contenant le texte de l’instruction ALTER TRIGGER. L'utilisation de l'argument WITH ENCRYPTION évite la publication du déclencheur dans le cadre de la réplication [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Il n'est pas possible de spécifier WITH ENCRYPTION pour les déclencheurs CLR.  
   
 > [!NOTE]  
 >  Si un déclencheur est créé en utilisant WITH ENCRYPTION, il doit être spécifié de nouveau dans l'instruction ALTER TRIGGER pour que cette option reste activée.  
@@ -176,12 +176,12 @@ AS { sql_statement
  NATIVE_COMPILATION  
  Indique que le déclencheur est compilé en mode natif.  
   
- Cette option est requise pour les déclencheurs sur les tables optimisées en mémoire.  
+ Cette option est obligatoire pour les déclencheurs sur les tables optimisées en mémoire.  
   
  SCHEMABINDING  
- Garantit que les tables qui sont référencées par un déclencheur ne peut pas être supprimés ou modifiés.  
+ Garantit que les tables référencées par un déclencheur ne peuvent pas être supprimées ou modifiées.  
   
- Cette option est requise pour les déclencheurs sur les tables mémoire optimisées et n’est pas prise en charge pour les déclencheurs sur des tables traditionnelles.  
+ Cette option est obligatoire pour les déclencheurs sur les tables optimisées en mémoire et n’est pas prise en charge pour les déclencheurs sur des tables traditionnelles.  
   
  AFTER  
  Spécifie que le déclencheur est activé uniquement après l'exécution normale de l'instruction SQL de déclenchement. Toutes les actions CASCADE et les vérifications des contraintes de référence doivent également avoir été exécutées sans erreur pour que ce déclencheur puisse être exécuté.  
@@ -203,28 +203,28 @@ AS { sql_statement
  Dans le cas des déclencheurs INSTEAD OF, l'option DELETE n'est pas autorisée sur les tables dont la relation référentielle spécifie une action en cascade ON DELETE. De même, l'option UPDATE n'est pas autorisée sur les tables dont la relation référentielle spécifie une action en cascade ON UPDATE. Pour plus d’informations, consultez [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md).  
   
  *event_type*  
- Nom de l'événement du langage [!INCLUDE[tsql](../../includes/tsql-md.md)] qui, après l'exécution, provoque l'exécution d'un déclencheur DDL. Les événements valides pour les déclencheurs DDL sont répertoriés dans [événements DDL](../../relational-databases/triggers/ddl-events.md).  
+ Nom de l'événement du langage [!INCLUDE[tsql](../../includes/tsql-md.md)] qui, après l'exécution, provoque l'exécution d'un déclencheur DDL. Les événements valides pour les déclencheurs DDL sont répertoriés dans [Événements DDL](../../relational-databases/triggers/ddl-events.md).  
   
  *event_group*  
- Nom d'un groupe prédéfini d'événements du langage [!INCLUDE[tsql](../../includes/tsql-md.md)]. L’activation du déclencheur DDL après l’exécution de n’importe quel [!INCLUDE[tsql](../../includes/tsql-md.md)] événement de langage qui appartienne à *event_group*. Groupes d’événement valide pour les déclencheurs DDL sont répertoriés dans [groupes d’événements DDL](../../relational-databases/triggers/ddl-event-groups.md). Fin de ALTER TRIGGER, *event_group* agit comme une macro en ajoutant les types d’événements qu’il couvre à l’affichage catalogue sys.trigger_events.  
+ Nom d'un groupe prédéfini d'événements du langage [!INCLUDE[tsql](../../includes/tsql-md.md)]. Le déclencheur DDL est activé après l’exécution de n’importe quel événement du langage [!INCLUDE[tsql](../../includes/tsql-md.md)] appartenant à *event_group*. Les groupes d’événements valides pour les déclencheurs DDL sont répertoriés dans [Groupes d’événements DDL](../../relational-databases/triggers/ddl-event-groups.md). Une fois l’exécution d’ALTER TRIGGER terminée, *event_group* fait aussi office de macro en ajoutant les types d’événements qu’il couvre à la vue de catalogue sys.trigger_events.  
   
  NOT FOR REPLICATION  
- **S'applique à**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **S'applique à**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Indique que le déclencheur ne doit pas être exécuté lorsqu'un agent de réplication modifie la table impliquée dans le déclencheur.  
   
  *sql_statement*  
  Conditions et actions du déclencheur.  
   
- Pour les déclencheurs sur les tables optimisées en mémoire, la seule *sql_statement* autorisés au niveau supérieur est un bloc ATOMIC. Le T-SQL autorisé dans le bloc atomique est limité par le T-SQL autorisé dans les procédures natives.  
+ Pour les déclencheurs sur les tables optimisées en mémoire, la seule instruction *sql_statement* autorisée au niveau supérieur est un bloc ATOMIC. Le code T-SQL autorisé dans le bloc ATOMIC est limité par le code T-SQL autorisé dans les procédures natives.  
   
- NOM externe \<method_specifier >  
- **S'applique à**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ EXTERNAL NAME \<method_specifier>  
+ **S'applique à**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- Spécifie les méthodes d'un assembly à lier avec le déclencheur. La méthode ne doit prendre aucun argument et retourner une valeur vide. *CLASS_NAME* doit être valide [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] identificateur et doit exister en tant que classe dans l’assembly avec une visibilité de l’assembly. La classe ne peut pas être imbriquée.  
+ Spécifie les méthodes d'un assembly à lier avec le déclencheur. La méthode ne doit prendre aucun argument et retourner une valeur vide. *class_name* doit être un identificateur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] valide et doit exister comme classe dans l’assembly avec une visibilité de l’assembly. La classe ne peut pas être imbriquée.  
   
-## <a name="remarks"></a>Notes  
- Pour plus d’informations sur ALTER TRIGGER, consultez la section Notes dans [CREATE TRIGGER &#40; Transact-SQL &#41; ](../../t-sql/statements/create-trigger-transact-sql.md).  
+## <a name="remarks"></a>Notes   
+ Pour plus d’informations sur ALTER TRIGGER, consultez la section Notes dans [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md).  
   
 > [!NOTE]  
 >  Les options EXTERNAL_NAME et ON_ALL_SERVER ne sont pas disponibles dans une base de données à relation contenant-contenu.  
@@ -241,18 +241,18 @@ AS { sql_statement
  Lorsqu'une action DELETE sur une table enfant ou une table de référence résulte d'une instruction DELETE en cascade depuis une table parente, et qu'un déclencheur INSTEAD OF est défini sur DELETE dans la table enfant, le déclencheur est ignoré et l'action DELETE est exécutée.  
   
 ## <a name="ddl-triggers"></a>Déclencheurs DDL  
- À la différence des déclencheurs DML, le champ d'action des déclencheurs DDL ne correspond pas aux schémas. OBJECT_ID, OBJECT_NAME, OBJECTPROPERTY et OBJECTPROPERTY(EX) ne peuvent donc pas être utilisés lors de requêtes sur les métadonnées concernant les déclencheurs DDL. Utilisez plutôt les affichages catalogue. Pour plus d’informations, consultez [obtenir plus d’informations sur les déclencheurs DDL](../../relational-databases/triggers/get-information-about-ddl-triggers.md).  
+ À la différence des déclencheurs DML, le champ d'action des déclencheurs DDL ne se limitent pas aux schémas. OBJECT_ID, OBJECT_NAME, OBJECTPROPERTY et OBJECTPROPERTY(EX) ne peuvent donc pas être utilisés lors de requêtes sur les métadonnées concernant les déclencheurs DDL. Utilisez plutôt les vues de catalogue. Pour plus d’informations, consultez [Obtenir des informations sur les déclencheurs DDL](../../relational-databases/triggers/get-information-about-ddl-triggers.md).  
   
 ## <a name="logon-triggers"></a>Déclencheurs de connexion  
  [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] ne prend pas en charge les déclencheurs sur les événements de connexion.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  La modification d'un déclencheur DML nécessite une autorisation ALTER sur la table ou la vue sur laquelle le déclencheur est défini.  
   
  La modification d'un déclencheur DDL défini avec une étendue de serveur (ON ALL SERVER) ou d'un déclencheur de connexion nécessite l'autorisation CONTROL SERVER sur le serveur. Modifier un déclencheur DDL défini avec une étendue de base de données (ON DATABASE) nécessite une autorisation ALTER ANY DATABASE DDL TRIGGER sur la base de données active.  
   
 ## <a name="examples"></a>Exemples  
- L’exemple suivant crée un déclencheur DML dans la base de données AdventureWorks 2012, qui imprime un message défini par l’utilisateur au client lorsqu’un utilisateur tente d’ajouter ou modifier des données dans le `SalesPersonQuotaHistory` table. Le déclencheur est ensuite modifié à l'aide de l'instruction `ALTER TRIGGER` pour n'appliquer le déclencheur qu'aux activités `INSERT`. Ce déclencheur est utile car il rappelle à l'utilisateur qui met à jour ou insère des lignes dans cette table de notifier également le département `Compensation` .  
+ L’exemple suivant crée un déclencheur DML dans la base de données AdventureWorks 2012. Ce déclencheur envoie un message défini par l’utilisateur au client quand un utilisateur tente d’ajouter ou de changer les données de la table `SalesPersonQuotaHistory`. Le déclencheur est ensuite modifié à l'aide de l'instruction `ALTER TRIGGER` pour n'appliquer le déclencheur qu'aux activités `INSERT`. Ce déclencheur est utile car il rappelle à l'utilisateur qui met à jour ou insère des lignes dans cette table de notifier également le département `Compensation` .  
   
 ```  
 CREATE TRIGGER Sales.bonus_reminder  
@@ -270,14 +270,14 @@ AS RAISERROR ('Notify Compensation', 16, 10);
 GO  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [DROP TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/drop-trigger-transact-sql.md)   
  [ENABLE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/enable-trigger-transact-sql.md)   
  [DISABLE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/disable-trigger-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   
  [sp_helptrigger &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helptrigger-transact-sql.md)   
  [Créer une procédure stockée](../../relational-databases/stored-procedures/create-a-stored-procedure.md)   
- [sp_addmessage &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-addmessage-transact-sql.md)   
+ [sp_addmessage &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmessage-transact-sql.md)   
  [Transactions](../../relational-databases/native-client-ole-db-transactions/transactions.md)   
  [Obtenir des informations sur les déclencheurs DML](../../relational-databases/triggers/get-information-about-dml-triggers.md)   
  [Obtenir des informations sur les déclencheurs DDL](../../relational-databases/triggers/get-information-about-ddl-triggers.md)   

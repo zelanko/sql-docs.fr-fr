@@ -1,5 +1,5 @@
 ---
-title: EXECUTE AS (Transact-SQL) | Documents Microsoft
+title: EXECUTE AS (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/10/2017
 ms.prod: sql-non-specified
@@ -41,7 +41,7 @@ ms.lasthandoff: 11/21/2017
 
   Définit le contexte d'exécution d'une session.  
   
- Par défaut, une session commence lorsqu'un utilisateur se connecte et se termine lorsqu'il se déconnecte. Au cours d'une session, toutes les opérations sont soumises à des vérifications d'autorisations pour cet utilisateur. Lorsqu’un **EXECUTE AS** instruction est exécutée, le contexte d’exécution de la session bascule vers le nom de connexion ou un utilisateur spécifié. Après le changement de contexte, les autorisations sont vérifiées sur les jetons de sécurité de connexion et l’utilisateur pour ce compte au lieu de la personne qui appelle le **EXECUTE AS** instruction. L'identité du compte d'utilisateur ou de connexion est naturellement empruntée pour toute la durée de la session ou de l'exécution du module, ou le changement de contexte est explicitement annulé.  
+ Par défaut, une session commence lorsqu'un utilisateur se connecte et se termine lorsqu'il se déconnecte. Au cours d'une session, toutes les opérations sont soumises à des vérifications d'autorisations pour cet utilisateur. Quand une instruction **EXECUTE AS** est exécutée, le contexte d’exécution de la session change vers le nom de connexion ou d’utilisateur spécifié. Suite au changement de contexte, les autorisations sont vérifiées par rapport aux jetons de sécurité de connexion et d’utilisateur relatifs à ce compte au lieu de la personne qui appelle l’instruction **EXECUTE AS**. L'identité du compte d'utilisateur ou de connexion est naturellement empruntée pour toute la durée de la session ou de l'exécution du module, ou le changement de contexte est explicitement annulé.  
   
 
   
@@ -61,47 +61,47 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="arguments"></a>Arguments  
  Connexion  
- **S'applique à**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **S'applique à**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Spécifie que le contexte d'exécution dont l'identité est empruntée est une connexion. L'étendue de l'emprunt d'identité est au niveau du serveur.  
   
 > [!NOTE]  
->  Cette option n’est pas disponible dans une base de données ou dans la base de données SQL.  
+>  Cette option n’est pas disponible dans une base de données à relation contenant-contenu, ni dans SQL Database.  
   
  Utilisateur  
  Spécifie que le contexte dont l'identité doit être empruntée est un utilisateur de la base de données active. L'étendue de l'emprunt d'identité est limitée à la base de données active. Le changement de contexte vers un utilisateur de base de données n'hérite pas des autorisations de cet utilisateur au niveau serveur.  
   
 > [!IMPORTANT]  
->  Tant que le changement de contexte en faveur d'un utilisateur de base de données est en vigueur, toute tentative d'accès à des ressources situées en dehors de la base de données causera l'échec de l'instruction. Cela inclut l’utilisation *base de données* , les requêtes distribuées, requêtes et instructions qui font référence à une autre base de données qui utilise des identificateurs de trois ou quatre parties.  
+>  Tant que le changement de contexte en faveur d'un utilisateur de base de données est en vigueur, toute tentative d'accès à des ressources situées en dehors de la base de données causera l'échec de l'instruction. Cela inclut les instructions USE *database*, les requêtes distribuées et les requêtes qui référencent une autre base de données utilisant des identificateurs en trois ou quatre parties.  
   
- **'** *nom* **'**  
- Nom d'utilisateur ou de connexion valide. *nom* doit être un membre de la **sysadmin** rôle serveur fixe, ou exister en tant que principal dans [sys.database_principals](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md) ou [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md), respectivement.  
+ **'** *name* **'**  
+ Nom d'utilisateur ou de connexion valide. *name* doit être membre du rôle serveur fixe **sysadmin**, ou exister comme principal respectivement dans [sys.database_principals](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md) ou [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md).  
   
- *nom* peut être spécifié comme une variable locale.  
+ *name* peut être spécifié sous forme de variable locale.  
   
- *nom* doit être un compte singleton et ne peut pas être un groupe, un rôle, un certificat, une clé ou un compte intégré, tel que NT AUTHORITY\LocalService, NT AUTHORITY\NetworkService ou NT AUTHORITY\LocalSystem.  
+ *name* doit être un compte singleton. Ce ne peut pas être un groupe, un rôle, un certificat, une clé ni un compte intégré, tel que NT AUTHORITY\LocalService, NT AUTHORITY\NetworkService ou NT AUTHORITY\LocalSystem.  
   
- Pour plus d’informations, consultez [spécifiant un utilisateur ou un nom de connexion](#_user) plus loin dans cette rubrique.  
+ Pour plus d’informations, consultez [Spécification d’un nom d’utilisateur ou de connexion](#_user), plus loin dans cette rubrique.  
   
  NO REVERT  
- Spécifie qu'il n'est pas possible de restaurer le changement de contexte pour revenir au contexte précédent. Le **NO REVERT** option ne peut être utilisée qu’au niveau approprié.  
+ Spécifie qu'il n'est pas possible de restaurer le changement de contexte pour revenir au contexte précédent. L’option **NO REVERT** peut uniquement être utilisée au niveau adhoc.  
   
- Pour plus d’informations sur le retour au contexte précédent, consultez [REVERT &#40; Transact-SQL &#41; ](../../t-sql/statements/revert-transact-sql.md).  
+ Pour plus d’informations sur la restauration du contexte précédent, consultez [REVERT &#40;Transact-SQL&#41;](../../t-sql/statements/revert-transact-sql.md).  
   
- COOKIE dans  **@**  *varbinary_variable*  
- Spécifie le contexte d’exécution ne peut être restauré vers le contexte précédent que si l’instruction REVERT WITH COOKIE appelante contienne la bonne  **@**  *varbinary_variable* valeur. Le [!INCLUDE[ssDE](../../includes/ssde-md.md)] passe le cookie à  **@**  *varbinary_variable*. Le **COOKIE dans** option ne peut être utilisée qu’au niveau approprié.  
+ COOKIE INTO **@***varbinary_variable*  
+ Spécifie que le contexte d’exécution peut être restauré vers le contexte précédent uniquement si l’instruction REVERT WITH COOKIE appelante contient la valeur **@***varbinary_variable* correcte. [!INCLUDE[ssDE](../../includes/ssde-md.md)] passe le cookie à **@***varbinary_variable*. L’option **COOKIE INTO** peut uniquement être utilisée au niveau adhoc.  
   
- **@***varbinary_variable* est **varbinary (8000)**.  
+ **@** *varbinary_variable* est **varbinary(8000)**.  
   
 > [!NOTE]  
->  Le cookie **sortie** paramètre est actuellement documenté comme **varbinary (8000)** qui est la longueur maximale correcte. Toutefois, l’implémentation actuelle retourne **varbinary(100)**. Applications doivent réserver **varbinary (8000)** afin que l’application continue à fonctionner correctement si le cookie de taille de retour augmente dans une version ultérieure.  
+>  Le paramètre **OUTPUT** de cookie est actuellement documenté comme **varbinary(8000)**, ce qui correspond à la longueur maximale correcte. Cependant, l’implémentation actuelle retourne **varbinary(100)**. Les applications doivent réserver **varbinary(8000)** pour continuer à fonctionner correctement si la taille de retour des cookies augmente dans une version ultérieure.  
   
  CALLER  
  Dans un module, il spécifie que les instructions de ce module sont exécutées dans le contexte de l'appelant du module.  
   
  En dehors d'un module, cette instruction n'a pas d'effet.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Le changement dans le contexte d'exécution reste en vigueur jusqu'à ce que se produise l'une des actions suivantes :  
   
 -   Une autre instruction EXECUTE AS s'exécute.  
@@ -112,18 +112,18 @@ ms.lasthandoff: 11/21/2017
   
 -   La procédure stockée ou le déclencheur où la commande exécutée se termine.  
   
-Vous pouvez créer une pile de contextes d'exécution en appelant l'instruction EXECUTE AS plusieurs fois sur plusieurs principaux. Lorsqu'elle est appelée, l'instruction REVERT bascule le contexte vers la connexion ou l'utilisateur du niveau supérieur dans la pile de contexte. Pour une démonstration de ce comportement, consultez [exemple A](#_exampleA).  
+Vous pouvez créer une pile de contextes d'exécution en appelant l'instruction EXECUTE AS plusieurs fois sur plusieurs principaux. Lorsqu'elle est appelée, l'instruction REVERT bascule le contexte vers la connexion ou l'utilisateur du niveau supérieur dans la pile de contexte. Pour avoir une démonstration de ce comportement, consultez [Exemple A](#_exampleA).  
   
-##  <a name="_user"></a>Spécification d’un utilisateur ou un nom de connexion  
- Le nom d’utilisateur ou de connexion spécifié dans EXECUTE AS \<context_specification > doit exister en tant que principal dans **sys.database_principals** ou **sys.server_principals**, respectivement, ou l’instruction EXECUTE AS échoue. De plus, les autorisations IMPERSONATE doivent être accordées sur le principal. À moins que l’appelant est le propriétaire de la base de données, ou un membre de la **sysadmin** rôle serveur fixe, le principal doit exister même lorsque l’utilisateur accède à la base de données ou l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] via une fenêtre de l’appartenance au groupe. Par exemple, supposons les conditions suivantes : 
+##  <a name="_user"></a> Spécification d’un nom d’utilisateur ou de connexion  
+ Le nom d’utilisateur ou de connexion spécifié dans EXECUTE AS \<context_specification> doit exister comme principal respectivement dans **sys.database_principals** ou **sys.server_principals**. Sinon, l’instruction EXECUTE AS échoue. De plus, les autorisations IMPERSONATE doivent être accordées sur le principal. Sauf si l’appelant est le propriétaire de la base de données, ou un membre du rôle serveur fixe **sysadmin**, le principal doit exister même quand l’utilisateur a accès à la base de données ou l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] du fait de son appartenance à un groupe Windows. Par exemple, supposons les conditions suivantes : 
   
--   **CompanyDomain\SQLUsers** groupe a accès à la **Sales** base de données.  
+-   Le groupe **CompanyDomain\SQLUsers** a accès à la base de données **Sales**.  
   
--   **CompanyDomain\SqlUser1** est un membre de **SQLUsers** et, par conséquent, a un accès implicite à la **Sales** base de données.  
+-   **CompanyDomain\SqlUser1** est membre de **SQLUsers** et bénéficie donc d’un accès implicite à la base de données **Sales**.  
   
- Bien que **CompanyDomain\SqlUser1** a accès à la base de données via l’appartenance à la **SQLUsers** groupe, l’instruction `EXECUTE AS USER = 'CompanyDomain\SqlUser1'` échoue car `CompanyDomain\SqlUser1` n’existe pas en tant que principal dans la base de données.  
+ **CompanyDomain\SqlUser1** a accès à la base de données du fait de son appartenance au groupe **SQLUsers**, mais l’instruction `EXECUTE AS USER = 'CompanyDomain\SqlUser1'` échoue parce que `CompanyDomain\SqlUser1` n’existe pas comme principal dans la base de données.  
   
-Si l’utilisateur est orphelin (la connexion associée n’existe plus), et l’utilisateur n’a pas été créé avec **sans connexion**, **EXECUTE AS** ne fonctionnera pas pour l’utilisateur.  
+Si l’utilisateur est orphelin (la connexion associée n’existant plus) et qu’il n’a pas été créé avec la clause **WITHOUT LOGIN**, l’instruction **EXECUTE AS** échoue pour cet utilisateur.  
   
 ## <a name="best-practice"></a>Bonne pratique  
  Spécifiez une connexion ou un utilisateur bénéficiant du minimum de privilèges indispensable pour effectuer les opérations dans la session. Par exemple, ne spécifiez pas de nom de connexion avec des autorisations de niveau serveur, si seules les autorisations de niveau base de données sont requises ; ne spécifiez pas non plus un compte de propriétaire de base de données à moins que ces autorisations ne soient nécessaires.  
@@ -134,15 +134,15 @@ Si l’utilisateur est orphelin (la connexion associée n’existe plus), et l�
 ## <a name="using-with-no-revert"></a>Utilisation de WITH NO REVERT  
  Lorsque l'instruction EXECUTE AS comporte la clause WITH NO REVERT facultative, le contexte d'exécution d'une session ne peut pas être réinitialisé à l'aide de REVERT ou en exécutant une autre instruction EXECUTE AS. Le contexte défini par l'instruction reste en vigueur jusqu'à ce que la session soit supprimée.  
   
- Lorsque le WITH NO REVERT COOKIE = @*varbinary_variabl*e clause est spécifiée, la [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] transmet la valeur du cookie à @*varbinary_variabl*e. Le contexte d’exécution définie par cette instruction ne peut être restauré au contexte précédent si l’instruction REVERT WITH COOKIE = @*varbinary_variable* instruction contient la même  *@varbinary_variable*  valeur.  
+ Quand la clause WITH NO REVERT COOKIE = @*varbinary_variable* est spécifiée, [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] passe la valeur de cookie à @*varbinary_variable*. Le contexte d’exécution défini par cette instruction peut être restauré vers le contexte précédent uniquement si l’instruction REVERT WITH COOKIE = @*varbinary_variable* appelante contient la même valeur *@varbinary_variable*.  
   
- Cette option est utile dans un environnement où le groupement de connexions est utilisé. Le groupement de connexions est la maintenance d'un groupe de connexions de base de données à réutiliser par des applications sur un serveur d'applications. Étant donné que la valeur passée à  *@varbinary_variable*  est connue uniquement de l’appelant de la clause EXECUTE AS instruction, l’appelant peut garantir que le contexte d’exécution qu’il établit ne peut pas être modifié par quelqu'un d’autre.  
+ Cette option est utile dans un environnement où le groupement de connexions est utilisé. Le groupement de connexions est la maintenance d'un groupe de connexions de base de données à réutiliser par des applications sur un serveur d'applications. Comme la valeur passée à *@varbinary_variable* n’est connue que de l’appelant de l’instruction EXECUTE AS, celui-ci peut garantir que le contexte d’exécution qu’il établit ne sera pas modifié par un autre utilisateur.  
   
 ## <a name="determining-the-original-login"></a>Identification de la connexion originale  
- Utilisez le [ORIGINAL_LOGIN](../../t-sql/functions/original-login-transact-sql.md) fonction pour retourner le nom de la connexion connecté à l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Vous pouvez utiliser cette fonction pour renvoyer l'identité de la connexion d'origine dans les sessions où il y a un grand nombre de changements de contexte implicites ou explicites.  
+ Utilisez la fonction [ORIGINAL_LOGIN](../../t-sql/functions/original-login-transact-sql.md) pour retourner le nom de la connexion utilisée pour se connecter à l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Vous pouvez utiliser cette fonction pour renvoyer l'identité de la connexion d'origine dans les sessions où il y a un grand nombre de changements de contexte implicites ou explicites.  
   
-## <a name="permissions"></a>Permissions  
- Pour spécifier **EXECUTE AS** sur une connexion, l’appelant doit avoir **emprunter l’identité** autorisation sur la connexion spécifiée nommer et ne doit pas être refusé le **IMPERSONATE ANY LOGIN** autorisation. Pour spécifier **EXECUTE AS** sur un utilisateur de base de données, l’appelant doit avoir **IMPERSONATE** autorisations sur le nom d’utilisateur spécifié. Lorsque **EXECUTE AS CALLER** est spécifié, **IMPERSONATE** autorisations ne sont pas requises.  
+## <a name="permissions"></a>Autorisations  
+ Pour spécifier **EXECUTE AS** sur une connexion, l’appelant doit avoir l’autorisation **IMPERSONATE** sur le nom de connexion spécifié et l’autorisation **IMPERSONATE ANY LOGIN** ne doit pas lui être refusée. Pour spécifier **EXECUTE AS** sur un utilisateur de base de données, l’appelant doit avoir les autorisations **IMPERSONATE** sur le nom d’utilisateur spécifié. Quand **EXECUTE AS CALLER** est spécifié, les autorisations **IMPERSONATE** ne sont pas nécessaires.  
   
 ## <a name="examples"></a>Exemples  
   
@@ -191,7 +191,7 @@ GO
 ```  
   
 ### <a name="b-using-the-with-cookie-clause"></a>B. Utilisation de la clause WITH COOKIE  
- L’exemple suivant définit le contexte d’exécution d’une session à un utilisateur spécifié et spécifie le WITH NO REVERT COOKIE = @*varbinary_variabl*clause de e. L'instruction `REVERT` doit spécifier la valeur passée à la variable `@cookie` dans l'instruction `EXECUTE AS` pour ramener le contexte à l'appelant. Pour exécuter cet exemple, la connexion `login1` et l'utilisateur `user1` créés dans l'exemple A doivent exister.  
+ L’exemple suivant définit le contexte d’exécution d’une session sur un utilisateur spécifié et précise la clause WITH NO REVERT COOKIE = @*varbinary_variable*. L'instruction `REVERT` doit spécifier la valeur passée à la variable `@cookie` dans l'instruction `EXECUTE AS` pour ramener le contexte à l'appelant. Pour exécuter cet exemple, la connexion `login1` et l'utilisateur `user1` créés dans l'exemple A doivent exister.  
   
 ```  
 DECLARE @cookie varbinary(8000);  
@@ -212,9 +212,9 @@ SELECT SUSER_NAME(), USER_NAME();
 GO  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- [Rétablir &#40; Transact-SQL &#41;](../../t-sql/statements/revert-transact-sql.md)   
- [EXÉCUTER en tant que la clause for &#40; Transact-SQL &#41;](../../t-sql/statements/execute-as-clause-transact-sql.md)  
+## <a name="see-also"></a> Voir aussi  
+ [REVERT &#40;Transact-SQL&#41;](../../t-sql/statements/revert-transact-sql.md)   
+ [Clause EXECUTE AS &#40;Transact-SQL&#41;](../../t-sql/statements/execute-as-clause-transact-sql.md)  
   
   
 

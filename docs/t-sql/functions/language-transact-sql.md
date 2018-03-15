@@ -1,5 +1,5 @@
 ---
-title: '@@LANGUAGE (Transact-SQL) | Documents Microsoft'
+title: '@@LANGUAGE (Transact-SQL) | Microsoft Docs'
 ms.custom: 
 ms.date: 09/18/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="x40x40language-transact-sql"></a>& #x 40 ; & #x 40 ; LANGAGE (Transact-SQL)
+# <a name="x40x40language-transact-sql"></a>&#x40;&#x40;LANGUAGE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Retourne le nom de la langue actuellement utilisée.  
@@ -50,8 +50,8 @@ ms.lasthandoff: 11/21/2017
 ## <a name="return-types"></a>Types de retour  
  **nvarchar**  
   
-## <a name="remarks"></a>Notes  
- Pour afficher plus d’informations sur les paramètres de langue, y compris les noms de langue officielle valide, exécutez **sp_helplanguage** sans aucun paramètre.  
+## <a name="remarks"></a>Notes   
+ Pour consulter les informations relatives aux paramètres de langue, y compris les noms de langue officielle valides, exécutez **sp_helplanguage** sans aucun paramètre.  
   
 ## <a name="examples"></a>Exemples  
  L'exemple suivant retourne le nom de la langue utilisée dans la session en cours.  
@@ -68,10 +68,10 @@ Language Name
 us_english                      
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Fonctions de configuration &#40;Transact-SQL&#41;](../../t-sql/functions/configuration-functions-transact-sql.md)   
- [SET LANGUAGE &#40; Transact-SQL &#41;](../../t-sql/statements/set-language-transact-sql.md)   
- [sp_helplanguage &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-helplanguage-transact-sql.md)  
+ [SET LANGUAGE &#40;Transact-SQL&#41;](../../t-sql/statements/set-language-transact-sql.md)   
+ [sp_helplanguage &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helplanguage-transact-sql.md)  
   
   
 

@@ -1,5 +1,5 @@
 ---
-title: "HasZ (Type de données geography) | Documents Microsoft"
+title: "HasZ (type de données geography) | Microsoft Docs"
 ms.custom: 
 ms.date: 05/04/2017
 ms.prod: sql-non-specified
@@ -44,11 +44,11 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>Types de retour  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]type de retour : **bits**  
+ Type de retour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] : **bit**  
   
- Type de retour CLR : **booléenne**  
+ Type de retour CLR : **Boolean**  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
   
 ## <a name="examples"></a>Exemples  
   
@@ -58,8 +58,8 @@ SELECT @p.HasZ
 --Returns: 1 (true)  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- [Méthodes étendues sur les Instances Geography](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)   
- [Z &#40; Type de données geography &#41;](../../t-sql/spatial-geography/z-geography-data-type.md)  
+## <a name="see-also"></a> Voir aussi  
+ [Méthodes étendues sur des instances Geography](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)   
+ [Z &#40;type de données geography&#41;](../../t-sql/spatial-geography/z-geography-data-type.md)  
   
   

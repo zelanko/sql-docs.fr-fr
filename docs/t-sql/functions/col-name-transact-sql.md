@@ -1,5 +1,5 @@
 ---
-title: COL_NAME (Transact-SQL) | Documents Microsoft
+title: COL_NAME (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
@@ -52,7 +52,7 @@ COL_NAME ( table_id , column_id )
 Numéro d'identification de la table contenant la colonne. *table_id* est de type **int**.
   
 *column_id*  
-Numéro d'identification de la colonne. *column_id* paramètre est de type **int**.
+Numéro d'identification de la colonne. Le paramètre *column_id* est de type **int**.
   
 ## <a name="return-types"></a>Types de retour
 **sysname**
@@ -62,13 +62,13 @@ Retourne la valeur NULL en cas d'erreur ou si un appelant n'est pas autorisé à
   
 Un utilisateur peut voir uniquement les métadonnées des éléments sécurisables qui lui appartiennent ou pour lesquels il dispose d'une autorisation. Cela signifie que les fonctions intégrées générant des métadonnées, telles que COL_NAME, peuvent retourner la valeur NULL si l'utilisateur ne dispose d'aucune autorisation sur l'objet. Pour plus d'informations, consultez [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).
   
-## <a name="remarks"></a>Notes  
-Le *table_id* et *column_id* paramètres produisent une chaîne de nom de colonne.
+## <a name="remarks"></a>Notes   
+Les paramètres *table_id* et *column_id* génèrent ensemble une chaîne de nom de colonne.
   
-Pour plus d’informations sur l’obtention des numéros d’identification de table et de colonne, consultez [OBJECT_ID &#40; Transact-SQL &#41; ](../../t-sql/functions/object-id-transact-sql.md).
+Pour plus d’informations sur l’obtention des numéros d’identification de table et de colonne, consultez [OBJECT_ID &#40;Transact-SQL&#41;](../../t-sql/functions/object-id-transact-sql.md).
   
 ## <a name="examples"></a>Exemples  
-L’exemple suivant retourne le nom de la première colonne dans un exemple `Employee` table.
+L’exemple suivant renvoie le nom de la première colonne d’un exemple de table `Employee`.
   
 ```sql
 -- Uses AdventureWorks  
@@ -87,9 +87,9 @@ BusinessEntityID
   
 ## <a name="see-also"></a>Voir aussi
 [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)  
-[Fonctions de métadonnées &#40; Transact-SQL &#41;](../../t-sql/functions/metadata-functions-transact-sql.md)  
+[Fonctions de métadonnées &#40;Transact-SQL&#41;](../../t-sql/functions/metadata-functions-transact-sql.md)  
 [COLUMNPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/columnproperty-transact-sql.md)  
-[COL_LENGTH &#40; Transact-SQL &#41;](../../t-sql/functions/col-length-transact-sql.md)
+[COL_LENGTH &#40;Transact-SQL&#41;](../../t-sql/functions/col-length-transact-sql.md)
   
   
 

@@ -50,28 +50,28 @@ PATINDEX ( '%pattern%' , expression )
   
 ## <a name="arguments"></a>Arguments  
  *pattern*  
- Expression de caractères qui contient la séquence à rechercher. Caractères génériques peuvent être utilisés ; Toutefois, le caractère % doit précéder et suivre *modèle* (sauf lorsque vous recherchez des premiers ou derniers caractères). *modèle* est une expression de la catégorie de type données de chaîne de caractères. *modèle* est limité à 8 000 caractères.  
+ Expression de caractères qui contient la séquence à rechercher. Les caractères génériques peuvent être utilisés ; toutefois, le caractère « % » doit précéder et suivre *pattern* (sauf lorsque vous recherchez les premiers ou derniers caractères). *pattern* est une expression de la catégorie de type de données chaîne de caractères. *pattern* est limité à 8 000 caractères.  
   
  *expression*  
- Est un [expression](../../t-sql/language-elements/expressions-transact-sql.md), généralement une colonne qui est recherchée dans le modèle spécifié. *expression* est de catégorie de type données de chaîne de caractères.  
+ [Expression](../../t-sql/language-elements/expressions-transact-sql.md), en général une colonne dans laquelle le modèle spécifié est recherché. *expression* est de la catégorie de type de données chaîne de caractères.  
   
 ## <a name="return-types"></a>Types de retour  
- **bigint** si *expression* est de le **varchar (max)** ou **nvarchar (max)** des types de données ; sinon **int**.  
+ **bigint** si *expression* est du type **varchar(max)** ou **nvarchar(max)** ; sinon, **int**.  
   
-## <a name="remarks"></a>Notes  
- Si le paramètre *modèle* ou *expression* est NULL, PATINDEX retourne NULL.  
+## <a name="remarks"></a>Notes   
+ Si l’argument *pattern* ou *expression* est NULL, PATINDEX retourne NULL.  
   
  PATINDEX exécute ses comparaisons en se basant sur le classement de l'entrée. Pour exécuter une comparaison selon un classement spécifié, vous pouvez utiliser COLLATE pour appliquer à l'entrée un classement explicite.  
   
 ## <a name="supplementary-characters-surrogate-pairs"></a>Caractères supplémentaires (paires de substitution)  
- Lors de l’utilisation de classements SC, la valeur de retour compte toutes les paires de substitution UTF-16 les *expression* paramètre comme un caractère unique. Pour plus d’informations, consultez [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md).  
+ Lors de l’utilisation de classements SC, la valeur de retour compte toutes les paires de substitution UTF-16 dans le paramètre *expression* comme un caractère unique. Pour plus d’informations, consultez [Prise en charge d’Unicode et du classement](../../relational-databases/collations/collation-and-unicode-support.md).  
   
- 0 x 0000 (**char(0)**) est un caractère indéfini dans les classements Windows et ne peut pas être inclus dans PATINDEX.  
+ 0x0000 (**char(0)**) est un caractère non défini dans les classements Windows et ne peut pas être inclus dans PATINDEX.  
   
 ## <a name="examples"></a>Exemples  
   
 ### <a name="a-simple-patindex-example"></a>A. Exemple simple de la fonction PATINDEX  
- L’exemple suivant montre une chaîne de caractères courte (`interesting data`) pour l’emplacement de départ des caractères `ter`.  
+ L’exemple suivant vérifie une courte chaîne de caractères (`interesting data`) pour trouver l’emplacement de départ des caractères `ter`.  
   
 ```  
 SELECT PATINDEX('%ter%', 'interesting data');  
@@ -130,7 +130,7 @@ GO
 ```  
   
 ### <a name="e-using-a-variable-to-specify-the-pattern"></a>E. Utilisation d'une variable pour spécifier le modèle  
- L’exemple suivant utilise une variable pour transmettre une valeur pour le *modèle* paramètre. Cet exemple utilise le [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] base de données.  
+ L’exemple suivant utilise une variable pour transmettre une valeur au paramètre *pattern*. Cet exemple utilise la base de données [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
   
 ```  
 DECLARE @MyValue varchar(10) = 'safety';   
@@ -148,15 +148,15 @@ WHERE DocumentNode = 0x7B40;
   
 
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [CHARINDEX &#40;Transact-SQL&#41;](../../t-sql/functions/charindex-transact-sql.md)  
  [LEN &#40;Transact-SQL&#41;](../../t-sql/functions/len-transact-sql.md)  
  [Types de données &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
- [Fonctions de chaîne &#40; Transact-SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)   
- [&#40; Caractère générique - caractères &#40; s &#41; Correspondance &#41; &#40; Transact-SQL &#41;](../../t-sql/language-elements/wildcard-character-s-to-match-transact-sql.md)   
- [&#40; Caractère générique - caractères &#40; s &#41; Pas de correspondance &#41; &#40; Transact-SQL &#41;](../../t-sql/language-elements/wildcard-character-s-not-to-match-transact-sql.md)   
- [_ &#40;Wildcard - Match One Character&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/wildcard-match-one-character-transact-sql.md)   
- [Caractère de pourcentage &#40; Caractère générique - caractères &#40; s &#41; Correspondance &#41; &#40; Transact-SQL &#41;](../../t-sql/language-elements/percent-character-wildcard-character-s-to-match-transact-sql.md)  
+ [Fonctions de chaîne &#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)   
+ [&#40;Caractère générique - Caractère&#40;s&#41; à inclure&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/wildcard-character-s-to-match-transact-sql.md)   
+ [&#40;Caractère générique - Caractère&#40;s&#41; à exclure&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/wildcard-character-s-not-to-match-transact-sql.md)   
+ [_ &#40;Caractère générique - Recherche de correspondance d’un seul caractère&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/wildcard-match-one-character-transact-sql.md)   
+ [Caractère de pourcentage &#40;Caractère générique - Caractère&#40;s&#41; à inclure&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/percent-character-wildcard-character-s-to-match-transact-sql.md)  
   
   
 

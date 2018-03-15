@@ -54,9 +54,9 @@ GOTO label
   
 ## <a name="arguments"></a>Arguments  
  *label*  
- Point après lequel le traitement reprend si une instruction GOTO pointe sur cette étiquette. Les étiquettes doivent respecter les règles pour [identificateurs](../../relational-databases/databases/database-identifiers.md). Une étiquette peut servir à insérer des commentaires et ce, qu'il existe ou non une instruction GOTO.  
+ Point après lequel le traitement reprend si une instruction GOTO pointe sur cette étiquette. Les étiquettes doivent se conformer aux règles en vigueur pour les [identificateurs](../../relational-databases/databases/database-identifiers.md). Une étiquette peut servir à insérer des commentaires et ce, qu'il existe ou non une instruction GOTO.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Une instruction GOTO peut exister au sein d'instructions conditionnelles de contrôle de flux, de blocs d'instructions ou de procédures mais ne peut pas pointer sur une étiquette située en dehors du traitement d'instructions. Le branchement GOTO peut pointer sur une étiquette dont la définition se trouve avant ou après l'instruction GOTO.  
   
 ## <a name="permissions"></a>Autorisations  
@@ -84,8 +84,8 @@ Branch_Three:
     SELECT 'Jumping To Branch Three.';  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- [Langage de contrôle de flux &#40; Transact-SQL &#41;](~/t-sql/language-elements/control-of-flow.md)   
+## <a name="see-also"></a> Voir aussi  
+ [Langage de contrôle de flux &#40;Transact-SQL&#41;](~/t-sql/language-elements/control-of-flow.md)   
  [BEGIN...END &#40;Transact-SQL&#41;](../../t-sql/language-elements/begin-end-transact-sql.md)   
  [BREAK &#40;Transact-SQL&#41;](../../t-sql/language-elements/break-transact-sql.md)   
  [CONTINUE &#40;Transact-SQL&#41;](../../t-sql/language-elements/continue-transact-sql.md)   

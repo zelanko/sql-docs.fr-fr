@@ -1,5 +1,5 @@
 ---
-title: "SUPPRIMER la bibliothèque externe (Transact-SQL) | Documents Microsoft"
+title: DROP EXTERNAL LIBRARY (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/17/2017
 ms.prod: sql-non-specified
@@ -27,7 +27,7 @@ ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="drop-external-library-transact-sql"></a>SUPPRIMER la bibliothèque externe (Transact-SQL)  
+# <a name="drop-external-library-transact-sql"></a>DROP EXTERNAL LIBRARY (Transact-SQL)  
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 
 Supprime une bibliothèque de package existante.
@@ -45,32 +45,32 @@ DROP EXTERNAL LIBRARY library_name
 
 Spécifie le nom d’une bibliothèque de package existante.
 
-Les bibliothèques sont limités à l’utilisateur. Autrement dit, les noms de bibliothèque sont considérées comme uniques dans le contexte d’un utilisateur spécifique ou un propriétaire.
+Les bibliothèques sont limitées à l’utilisateur. Autrement dit, les noms de bibliothèques sont considérés comme uniques dans le contexte d’un utilisateur ou d’un propriétaire.
 
 **owner_name**
 
-Spécifie le nom de l’utilisateur ou le rôle de propriétaire de la bibliothèque externe.
+Spécifie le nom de l’utilisateur ou du rôle propriétaire de la bibliothèque externe.
 
-Les propriétaires de base de données peuvent supprimer des bibliothèques créées par d’autres utilisateurs.
+Les propriétaires de base de données peuvent supprimer les bibliothèques créées par les autres utilisateurs.
 
 ### <a name="return-values"></a>Valeurs retournées
 
 Un message d’information est retourné si l’instruction a réussi.
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Notes 
 
-Contrairement à d’autres `DROP` instructions dans SQL Server, cette instruction prend en charge la spécification d’une clause authorization facultatif. Cela permet de **dbo** ou des utilisateurs dans le **db_owner** rôle pour supprimer une bibliothèque de package téléchargé par un utilisateur standard dans la base de données.
+Contrairement à d’autres instructions `DROP` de SQL Server, cette instruction prend en charge la spécification d’une clause d’autorisation facultative. Cela permet au **propriétaire de la base de données** et aux utilisateurs disposant du rôle **db_owner** de supprimer une bibliothèque de package chargée par un utilisateur standard dans la base de données.
 
 ## <a name="examples"></a>Exemples
 
-Ajouter un package R personnalisé, nommé `customPackage`, à une base de données :
+Ajoutez un package R personnalisé, nommé `customPackage`, à une base de données :
 
 ```sql
 CREATE EXTERNAL LIBRARY customPackage 
 FROM 'C:\Users\Username\CustomPackages\customPackage.zip';
 ```
 
-Supprimer le `customPackage` bibliothèque.
+Supprimez la bibliothèque `customPackage`.
 
 ```sql
 DROP EXTERNAL LIBRARY customPackage <user_name>;

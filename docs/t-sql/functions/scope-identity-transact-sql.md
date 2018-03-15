@@ -1,5 +1,5 @@
 ---
-title: SCOPE_IDENTITY (Transact-SQL) | Documents Microsoft
+title: SCOPE_IDENTITY (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/06/2017
 ms.prod: sql-non-specified
@@ -37,7 +37,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="scopeidentity-transact-sql"></a>SCOPE_IDENTITY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Renvoie la dernière valeur d'identité insérée dans une colonne d'identité dans la même étendue. Une étendue est un module : procédure stockée, déclencheur, fonction ou lot. Par conséquent, si les deux instructions sont dans la même procédure stockée, une fonction ou un lot, ils sont dans la même portée.  
+  Renvoie la dernière valeur d'identité insérée dans une colonne d'identité dans la même étendue. Une étendue est un module : procédure stockée, déclencheur, fonction ou lot. Par conséquent, deux instructions sont dans la même étendue si elles se trouvent dans la même procédure stockée ou fonction, ou dans le même lot.  
   
  ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -48,24 +48,24 @@ SCOPE_IDENTITY()
 ```  
   
 ## <a name="return-types"></a>Types de retour  
- **NUMERIC(38,0)**  
+ **numeric(38,0)**  
   
-## <a name="remarks"></a>Notes  
- SCOPE_IDENTITY, IDENT_CURRENT et @@IDENTITY sont des fonctions similaires car elles retournent des valeurs qui sont insérées dans les colonnes d’identité.  
+## <a name="remarks"></a>Notes   
+ SCOPE_IDENTITY, IDENT_CURRENT et @@IDENTITY sont des fonctions similaires car elles renvoient des valeurs insérées dans des colonnes d’identité.  
   
- IDENT_CURRENT n'est pas limitée par l'étendue et par la session ; elle est limitée à une table spécifiée. IDENT_CURRENT renvoie la valeur générée pour une table spécifique dans n'importe quelle session et n'importe quelle étendue. Pour plus d’informations, consultez [IDENT_CURRENT &#40; Transact-SQL &#41; ](../../t-sql/functions/ident-current-transact-sql.md).  
+ IDENT_CURRENT n'est pas limitée par l'étendue et par la session ; elle est limitée à une table spécifiée. IDENT_CURRENT renvoie la valeur générée pour une table spécifique dans n'importe quelle session et n'importe quelle étendue. Pour plus d’informations, consultez [IDENT_CURRENT &#40;Transact-SQL&#41;](../../t-sql/functions/ident-current-transact-sql.md).  
   
- SCOPE_IDENTITY et @@IDENTITY retourner les dernières valeurs d’identité générées dans n’importe quelle table dans la session active. Toutefois, SCOPE_IDENTITY renvoie les valeurs insérées uniquement dans la portée actuelle ; @@IDENTITY n’est pas limité à une étendue spécifique.  
+ SCOPE_IDENTITY et @@IDENTITY renvoient les dernières valeurs d’identité générées dans une table de la session en cours. Toutefois, SCOPE_IDENTITY renvoie les valeurs insérées uniquement dans l’étendue actuelle. @@IDENTITY n’est pas limitée à une étendue spécifique.  
   
  Par exemple, deux tables T1 et T2 et un déclencheur INSERT sont définis sur T1. Lorsqu'une ligne est insérée dans T1, le déclencheur est activé et insère une ligne dans T2. Ce scénario met en œuvre deux étendues : l'insertion dans T1 et l'insertion dans T2 par le déclencheur.  
   
- En supposant que T1 et T2 contient des colonnes d’identité, @@IDENTITY et SCOPE_IDENTITY renvoient des valeurs différentes à la fin d’une instruction INSERT dans T1. @@IDENTITY renvoie la dernière valeur de colonne d’identité insérée dans toute étendue dans la session active. Il s'agit de la valeur insérée dans T2. SCOPE_IDENTITY() renvoie la valeur IDENTITY insérée dans T1. Il s'agit de la dernière insertion qui s'est produite dans la même étendue. La fonction SCOPE_IDENTITY() renvoie la valeur null si la fonction est appelée avant toute instruction INSERT dans une colonne d’identité se produire dans l’étendue.  
+ Supposons que T1 et T2 comportent des colonnes d’identité, @@IDENTITY et SCOPE_IDENTITY renvoient des valeurs différentes à la fin d’une instruction INSERT dans T1. @@IDENTITY renvoie la dernière valeur de la colonne d’identité insérée dans toutes les étendues au cours de la session en cours. Il s'agit de la valeur insérée dans T2. SCOPE_IDENTITY() renvoie la valeur IDENTITY insérée dans T1. Il s'agit de la dernière insertion qui s'est produite dans la même étendue. La fonction SCOPE_IDENTITY() renvoie la valeur NULL si la fonction est appelée avant qu’une instruction INSERT dans une colonne d’identité soit exécutée dans l’étendue.  
   
  Les instructions et les transactions en échec peuvent modifier l'identité actuelle d'une table et créer des trous dans les valeurs des colonnes d'identité. La valeur d'identité n'est jamais annulée, même si la transaction qui a essayé d'insérer la valeur dans la table n'est pas validée. Par exemple, si une instruction INSERT échoue à cause d'une violation d'identité IGNORE_DUP_KEY, la valeur d'identité actuelle de la table augmente quand même d'une unité.  
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-using-identity-and-scopeidentity-with-triggers"></a>A. À l’aide de@IDENTITY et SCOPE_IDENTITY avec des déclencheurs  
+### <a name="a-using-identity-and-scopeidentity-with-triggers"></a>A. Utilisation des fonctions @@IDENTITY et SCOPE_IDENTITY avec des déclencheurs  
  L'exemple suivant crée deux tables, `TZ` et `TY`, ainsi qu'un déclencheur INSERT sur `TZ`. Lorsqu'une ligne est insérée dans la table `TZ`, le déclencheur (`Ztrig`) est activé et insère une ligne dans `TY`.  
   
 ```sql  
@@ -80,7 +80,7 @@ INSERT TZ
   
 SELECT * FROM TZ;  
 ```     
-Jeu de résultats : Voici à quoi ressemble la table TZ.  
+Jeu de résultats : Voici à quoi ressemble la table TZ :  
   
 ```  
 Z_id   Z_name  
@@ -117,7 +117,7 @@ FOR INSERT AS
    INSERT TY VALUES ('')  
    END;  
 ```  
-Activer le déclencheur et que vous obtenez avec les valeurs identité le @@IDENTITY et SCOPE_IDENTITY fonctions.   
+Activez le déclencheur et déterminez quelles valeurs d’identité vous obtenez avec les fonctions @@IDENTITY et SCOPE_IDENTITY.   
 ```sql
 INSERT TZ VALUES ('Rosalie');  
   
@@ -139,10 +139,10 @@ SCOPE_IDENTITY
 115  
 ```  
   
-### <a name="b-using-identity-and-scopeidentity-with-replication"></a>B. À l’aide de@IDENTITY et SCOPE_IDENTITY() avec la réplication  
+### <a name="b-using-identity-and-scopeidentity-with-replication"></a>B. Utilisation des fonctions @@IDENTITY et SCOPE_IDENTITY() avec la réplication  
  Les exemples suivants indiquent comment utiliser `@@IDENTITY` et `SCOPE_IDENTITY()` pour des insertions dans une base de données qui est publiée pour la réplication de fusion. Les deux tables mentionnées à titre d'exemple appartiennent à la base de données exemple [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] : `Person.ContactType` n'est pas publiée et `Sales.Customer` est publiée. La réplication de fusion ajoute des déclencheurs aux tables qui sont publiées. Par conséquent, `@@IDENTITY` peut retourner la valeur de l'insertion dans une table système de réplication au lieu de l'insertion dans une table utilisateur.  
   
- Le `Person.ContactType` table possède une valeur d’identité maximale de 20. Si vous insérez une ligne dans la table, `@@IDENTITY` et `SCOPE_IDENTITY()` retournent la même valeur.  
+ La table `Person.ContactType` a une valeur d’identité maximale de 20. Si vous insérez une ligne dans la table, `@@IDENTITY` et `SCOPE_IDENTITY()` retournent la même valeur.  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -182,7 +182,7 @@ GO
  89
  ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [@@IDENTITY &#40;Transact-SQL&#41;](../../t-sql/functions/identity-transact-sql.md)  
   
   

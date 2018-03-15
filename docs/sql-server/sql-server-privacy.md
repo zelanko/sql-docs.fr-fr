@@ -1,6 +1,6 @@
 ---
 title: "Supplément de confidentialité de SQL Server | Microsoft Docs"
-ms.date: 2/19/2018
+ms.date: 2/22/2018
 ms.prod: sql-non-specified
 ms.prod_service: sql-non-specified
 ms.service: 
@@ -17,11 +17,11 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 4ab0d870af9ca795562c1bc9382540e95dfea119
-ms.sourcegitcommit: 03021482208259e6c67599b47df23fbbe8f3a393
+ms.openlocfilehash: 70b44fdd6b00473fe08c234a83eb55a99e7d55aa
+ms.sourcegitcommit: f0c5e37c138be5fb2cbb93e9f2ded307665b54ea
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 02/24/2018
 ---
 # <a name="sql-server-privacy-supplement"></a>Supplément de confidentialité de SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -105,7 +105,7 @@ Données nécessaires pour fournir des services Internet, d’après le CLUF de 
 - Nom/version du navigateur
 - Version de SQL Server
 - Code de langue
-- Adresse IP avec des octets spécifiques supprimés
+- Adresse IP avec certains octets supprimés
 - Données cartographiques
 
 ### <a name="permitted-usage-scenarios"></a>Scénarios d’usages autorisés

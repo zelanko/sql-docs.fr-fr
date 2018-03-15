@@ -1,5 +1,5 @@
 ---
-title: Decimal et numeric (Transact-SQL) | Documents Microsoft
+title: decimal et numeric (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 7/23/2017
 ms.prod: sql-non-specified
@@ -39,44 +39,44 @@ ms.lasthandoff: 11/21/2017
 # <a name="decimal-and-numeric-transact-sql"></a>decimal et numeric (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-Types de données numériques ayant une précision et une échelle fixes. Decimal et numeric sont synonymes et peuvent être utilisées indifféremment.
+Types de données numériques ayant une précision et une échelle fixes. Les types decimal et numeric sont synonymes et peuvent être utilisés indifféremment.
   
 ## <a name="arguments"></a>Arguments  
-**décimal**[ **(***p*[ **,***s*] **)**] et **numérique**[ **(***p*[ **,***s*] **)**]  
-Valeurs de précision et d'échelle fixes. Lorsque la précision maximale est utilisée, les valeurs valides sont comprises entre - 10^38 +1 et 10^38 - 1. Les synonymes ISO de **décimal** sont **dec** et **dec (***p*, *s***)**. **numérique** est fonctionnellement équivalent à **décimal**.
+**decimal**[ **(***p*[ **,***s*] **)**] et **numeric**[ **(***p*[ **,***s*] **)**]  
+Valeurs de précision et d'échelle fixes. Lorsque la précision maximale est utilisée, les valeurs valides sont comprises entre - 10^38 +1 et 10^38 - 1. Les synonymes ISO de **decimal** sont **dec** et **dec(***p*, *s***)**. **numeric** est fonctionnellement équivalent à **decimal**.
   
 p (précision)  
 Nombre maximal de chiffres décimaux à gauche et à droite de la virgule. La précision doit être une valeur comprise entre 1 et la précision maximale de 38. La précision par défaut est 18.
   
 > [!NOTE]  
->  Informatica prend uniquement en charge 16 chiffres significatifs, quel que soit la précision et l’échelle spécifiée.  
+>  Informatica prend uniquement en charge 16 chiffres significatifs, quelles que soient la précision et l’échelle spécifiées.  
   
 *s* (échelle)  
-Nombre de chiffres décimaux à droite de la virgule. Ce nombre est soustrait de *p* pour déterminer le nombre maximal de chiffres à gauche de la virgule décimale. Nombre maximal de chiffres décimaux à droite de la virgule. L’échelle doit être une valeur comprise entre 0 et *p*. L'échelle ne peut être spécifiée que si la précision l'est également. L’échelle par défaut est 0 ; Par conséquent, 0 < = *s* \< =  *p*. Les tailles de stockage maximales varient en fonction de la précision.
+Nombre de chiffres décimaux à droite de la virgule. Ce nombre est soustrait de *p* afin de déterminer le nombre maximal de chiffres à gauche de la virgule décimale. Nombre maximal de chiffres décimaux à droite de la virgule. La valeur de l’échelle doit être comprise entre 0 et *p*. L'échelle ne peut être spécifiée que si la précision l'est également. La valeur par défaut de l’échelle est 0 ; par conséquent, 0 <= *s* \<= *p*. Les tailles de stockage maximales varient en fonction de la précision.
   
 |Précision|Taille de stockage (octets)|  
 |---|---|
-|1 - 9|5|  
+|1-9|5|  
 |10-19|9|  
 |20-28|13|  
 |29-38|17|  
   
 > [!NOTE]  
->  Informatica (connecté via le connecteur SQL Server PDW Informatica) prend uniquement en charge 16 chiffres significatifs, quel que soit la précision et l’échelle spécifiée.  
+>  Informatica (connecté via le connecteur Informatica SQL Server PDW) prend uniquement en charge 16 chiffres significatifs, quelles que soient la précision et l’échelle spécifiées.  
   
-## <a name="converting-decimal-and-numeric-data"></a>Conversion de données décimales et numériques
-Pour le **décimal** et **numérique** des types de données, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] considère chaque combinaison de précision et d’échelle comme un type de données différent. Par exemple, **decimal(5,5)** et **decimal(5,0)** sont considérés comme des types de données différents.
+## <a name="converting-decimal-and-numeric-data"></a>Conversion de données decimal et numeric
+Pour les types de données **decimal** et **numeric**, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] considère chaque combinaison de précision et d’échelle comme un type de données différent. Par exemple, **decimal(5,5)** et **decimal(5,0)** sont considérés comme des types de données différents.
   
-Dans [!INCLUDE[tsql](../../includes/tsql-md.md)] instructions, une constante avec une virgule est automatiquement convertie en un **numérique** à l’aide de la précision minimale de la valeur de données et l’échelle requises. Par exemple, la constante 12,345 est convertie en un **numérique** valeur avec une précision de 5 et une échelle de 3.
+Dans les instructions [!INCLUDE[tsql](../../includes/tsql-md.md)], une constante avec une virgule décimale est automatiquement convertie en valeur de donnée **numeric**, en utilisant la précision et l’échelle requises minimales. Par exemple, la constante 12,345 est convertie en valeur **numeric** avec une précision de 5 et une échelle de 3.
   
-Conversion à partir de **décimal** ou **numérique** à **float** ou **réel** peut entraîner une perte de précision. Conversion à partir de **int**, **smallint**, **tinyint**, **float**, **réel**, **money**, ou **smallmoney** soit **décimal** ou **numérique** risque de dépassement de capacité.
+La conversion de **decimal** ou **numeric** en **float** ou **real** peut entraîner une certaine perte de précision. La conversion de **int**, **smallint**, **tinyint**, **float**, **real**, **money** ou **smallmoney** en **decimal** ou **numeric** peut entraîner un dépassement de capacité.
   
-Par défaut, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilise l’arrondi lors de la conversion d’un nombre à un **décimal** ou **numérique** valeur avec une précision et une échelle inférieure. Toutefois, si l'option SET ARITHABORT a la valeur ON, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] déclenche une erreur lors du dépassement de capacité. Perdre uniquement la précision et l'échelle ne suffit pas à engendrer une erreur.
+Par défaut, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilise les arrondis lors de la conversion d’un nombre en valeur **decimal** ou **numeric** avec une précision et une échelle plus faibles. Toutefois, si l'option SET ARITHABORT a la valeur ON, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] déclenche une erreur lors du dépassement de capacité. Perdre uniquement la précision et l'échelle ne suffit pas à engendrer une erreur.
   
 Lors de la conversion de valeurs flottantes ou réelles en valeurs décimales ou numériques, la valeur décimale n'aura jamais plus de 17 décimales. Toute valeur flottante < 5E-18 sera toujours convertie en 0.
   
 ## <a name="examples"></a>Exemples  
-L’exemple suivant crée une table à l’aide de la **décimal** et **numérique** des types de données.  Les valeurs sont insérées dans chaque colonne et les résultats retournés à l'aide de l'instruction SELECT.
+L’exemple suivant crée une table à l’aide des types de données **decimal** et **numeric**.  Les valeurs sont insérées dans chaque colonne et les résultats retournés à l'aide de l'instruction SELECT.
   
 ```sql
 CREATE TABLE dbo.MyTable  
@@ -111,6 +111,6 @@ MyDecimalColumn                         MyNumericColumn
 [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)  
 [DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)  
 [SET @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/set-local-variable-transact-sql.md)  
-[Sys.types &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-types-transact-sql.md)
+[sys.types &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-types-transact-sql.md)
   
   

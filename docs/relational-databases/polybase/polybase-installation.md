@@ -1,7 +1,7 @@
 ---
 title: Installation de PolyBase | Microsoft Docs
 ms.custom: 
-ms.date: 08/31/2016
+ms.date: 02/23/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
@@ -14,30 +14,28 @@ ms.tgt_pltfrm:
 ms.topic: article
 helpviewer_keywords:
 - PolyBase, installation
-ms.assetid: 3a1e64be-9bfc-4408-accd-35990e1a6b52
-caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 6a207474995eb36fbda4b446949bdf188f959edd
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 4aefc608d16245a2cb28245a87beb6b165489fab
+ms.sourcegitcommit: f0c5e37c138be5fb2cbb93e9f2ded307665b54ea
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 02/24/2018
 ---
 # <a name="polybase-installation"></a>Installation de PolyBase
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   Pour installer une version d'évaluation de SQL Server, accédez à [Versions d’évaluation de SQL Server](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016). 
   
-## <a name="prerequisites"></a>Prérequis  
+## <a name="prerequisites"></a>Prerequisites  
   
 -   Version d’évaluation de SQL Server 64 bits  
   
 -   Microsoft .NET Framework 4.5  
   
--   Oracle SE Java RunTime Environment (JRE), version 7.51 ou ultérieure (64 bits) ( [JRE](http://www.oracle.com/technetwork/java/javase/downloads/jre8-downloads-2133155.html) ou [Server JRE](http://www.oracle.com/technetwork/java/javase/downloads/server-jre8-downloads-2133154.html) fonctionne). Accédez à [Java SE downloads](http://www.oracle.com/technetwork/java/javase/downloads/index.html)(Téléchargements Java SE). Le programme d’installation échoue si JRE n’est pas présent.  
+-   Oracle SE Java RunTime Environment (JRE), version 7.51 ou 8 (64 bits) ( [JRE](http://www.oracle.com/technetwork/java/javase/downloads/jre8-downloads-2133155.html) ou [Server JRE](http://www.oracle.com/technetwork/java/javase/downloads/server-jre8-downloads-2133154.html) fonctionne). Accédez à [Java SE downloads](http://www.oracle.com/technetwork/java/javase/downloads/index.html)(Téléchargements Java SE). Le programme d’installation échoue si JRE n’est pas présent. JRE 9 ou version ultérieure ne fonctionne pas, sauf si vous disposez de la mise à jour cumulative 4 ou ultérieure pour SQL Server 2017. Vous pouvez installer JRE 8, installer PolyBase, puis effectuer la mise à niveau vers JRE 9. 
   
 -   Mémoire minimale : 4 Go  
   

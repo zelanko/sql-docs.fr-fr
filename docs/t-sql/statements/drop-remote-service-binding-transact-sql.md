@@ -1,5 +1,5 @@
 ---
-title: SUPPRIMER les liaisons de SERVICE distant (Transact-SQL) | Documents Microsoft
+title: "DROP REMOTE SERVICE BINDING (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -54,7 +54,7 @@ DROP REMOTE SERVICE BINDING binding_name
  *binding_name*  
  Nom de la liaison de service distant à supprimer. Les noms du serveur, de la base de données et du schéma ne peuvent pas être spécifiés.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Par défaut, l'autorisation de suppression d'une liaison de service distant est octroyée au propriétaire de cette liaison, aux membres du rôle de base de données fixe db_owner et aux membres du rôle serveur fixe sysadmin.  
   
 ## <a name="examples"></a>Exemples  
@@ -64,9 +64,9 @@ DROP REMOTE SERVICE BINDING binding_name
 DROP REMOTE SERVICE BINDING APBinding ;  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [CREATE REMOTE SERVICE BINDING &#40;Transact-SQL&#41;](../../t-sql/statements/create-remote-service-binding-transact-sql.md)   
- [MODIFIER les liaisons de SERVICE distant &#40; Transact-SQL &#41;](../../t-sql/statements/alter-remote-service-binding-transact-sql.md)   
+ [ALTER REMOTE SERVICE BINDING &#40;Transact-SQL&#41;](../../t-sql/statements/alter-remote-service-binding-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
   
   

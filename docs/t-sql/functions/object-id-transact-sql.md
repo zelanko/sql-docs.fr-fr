@@ -1,5 +1,5 @@
 ---
-title: Object_id (Transact-SQL) | Documents Microsoft
+title: OBJECT_ID (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -45,7 +45,7 @@ ms.lasthandoff: 01/09/2018
   Renvoie le numéro d'identification d'un objet de la base de données pour un objet défini avec l'étendue d'un schéma.  
   
 > [!IMPORTANT]  
->  Il n'est pas possible d'exécuter des requêtes sur des objets qui ne sont pas définis avec l'étendue d'un schéma, tels que des déclencheurs DDL, en utilisant OBJECT_ID. Pour les objets qui ne figurent pas dans le [sys.objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md) affichage catalogue, obtenir les numéros d’identification en interrogeant l’affichage catalogue approprié. Par exemple, pour retourner le numéro d’identification d’un déclencheur DDL, utilisez `SELECT OBJECT_ID FROM sys.triggers WHERE name = 'DatabaseTriggerLog``'`.  
+>  Il n'est pas possible d'exécuter des requêtes sur des objets qui ne sont pas définis avec l'étendue d'un schéma, tels que des déclencheurs DDL, en utilisant OBJECT_ID. Pour les objets qui ne figurent pas dans la vue de catalogue [sys.objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md), vous pouvez obtenir leurs numéros d’identification en interrogeant la vue de catalogue appropriée. Par exemple, pour renvoyer le numéro d’identification d’un déclencheur DDL, utilisez `SELECT OBJECT_ID FROM sys.triggers WHERE name = 'DatabaseTriggerLog``'`.  
   
  ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -57,11 +57,11 @@ OBJECT_ID ( '[ database_name . [ schema_name ] . | schema_name . ]
 ```  
   
 ## <a name="arguments"></a>Arguments  
- **'** *nom_objet* **'**  
- Est l’objet à utiliser. *nom_objet* est **varchar** ou **nvarchar**. Si *nom_objet* est **varchar**, il est converti implicitement en **nvarchar**. La spécification des noms de la base de données et du schéma est facultative.  
+ **'** *object_name* **'**  
+ Objet à utiliser. *object_name* est de type **varchar** ou **nvarchar**. Si *object_name* est de type **varchar**, il est converti implicitement en **nvarchar**. La spécification des noms de la base de données et du schéma est facultative.  
   
  **'** *object_type* **'**  
- Type de l'objet défini avec l'étendue du schéma. *object_type* est **varchar** ou **nvarchar**. Si *object_type* est **varchar**, il est converti implicitement en **nvarchar**. Pour obtenir la liste des types d’objets, consultez la **type** colonne [sys.objects &#40; Transact-SQL &#41; ](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md).  
+ Type de l'objet défini avec l'étendue du schéma. *object_type* est de type **varchar** ou **nvarchar**. Si *object_type* est de type **varchar**, il est converti implicitement en **nvarchar**. Pour obtenir la liste des types d’objets, consultez la colonne **type** de [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md).  
   
 ## <a name="return-types"></a>Types de retour  
  **Int**  
@@ -76,9 +76,9 @@ OBJECT_ID ( '[ database_name . [ schema_name ] . | schema_name . ]
 ## <a name="remarks"></a>Notes   
  Quand le paramètre d'une fonction système est facultatif, la base de données active, l'ordinateur hôte, l'utilisateur du serveur ou l'utilisateur de la base de données sont pris implicitement en considération. Les fonctions intégrées doivent toujours être suivies de parenthèses.  
   
- Lorsqu’un nom de table temporaire est spécifié, le nom de la base de données doit être placée avant le nom de la table temporaire, sauf si la base de données actuelle est **tempdb**. Par exemple : `SELECT OBJECT_ID('tempdb..#mytemptable')`.  
+ Lorsqu’un nom de table temporaire est spécifié, le nom de la base de données doit figurer avant le nom de la table temporaire, à moins que la base de données active soit **tempdb**. Par exemple : `SELECT OBJECT_ID('tempdb..#mytemptable')`.  
   
- Les fonctions système peuvent être utilisées dans la liste de sélection, dans une clause WHERE, et partout où une expression est autorisée. Pour plus d’informations, consultez [Expressions &#40; Transact-SQL &#41; ](../../t-sql/language-elements/expressions-transact-sql.md) et [où &#40; Transact-SQL &#41; ](../../t-sql/queries/where-transact-sql.md).  
+ Les fonctions système peuvent être utilisées dans la liste de sélection, dans une clause WHERE, et partout où une expression est autorisée. Pour plus d’informations, consultez [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md) et [WHERE &#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md).  
   
 ## <a name="examples"></a>Exemples  
   
@@ -104,10 +104,10 @@ GO
 ```  
   
 ### <a name="c-using-objectid-to-specify-the-value-of-a-system-function-parameter"></a>C. Utilisation de OBJECT_ID pour spécifier la valeur d'un paramètre d'une fonction système  
- L’exemple suivant retourne des informations pour tous les index et partitions de la `Person.Address` de table dans le [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] base de données à l’aide de la [sys.dm_db_index_operational_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-operational-stats-transact-sql.md) (fonction).  
+ L’exemple suivant retourne des informations pour tous les index et partitions de la table `Person.Address` dans la base de données [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] à l’aide de la fonction [sys.dm_db_index_operational_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-operational-stats-transact-sql.md).  
   
 > [!IMPORTANT]  
->  Lorsque vous utilisez les fonctions [!INCLUDE[tsql](../../includes/tsql-md.md)] DB_ID et OBJECT_ID pour obtenir la valeur d'un paramètre, assurez-vous toujours que l'ID retourné est valide. Si le nom de la base de données ou de l'objet est introuvable, par exemple s'il n'existe pas ou n'est pas correctement orthographié, les deux fonctions retournent la valeur NULL. Le **sys.dm_db_index_operational_stats** fonction interprète NULL comme une valeur générique qui spécifie toutes les bases de données ou de tous les objets. Comme il peut s'agir d'une opération non intentionnelle, les exemples fournis dans cette section présentent une méthode sûre pour déterminer les ID de base de données et d'objet.  
+>  Lorsque vous utilisez les fonctions [!INCLUDE[tsql](../../includes/tsql-md.md)] DB_ID et OBJECT_ID pour obtenir la valeur d'un paramètre, assurez-vous toujours que l'ID retourné est valide. Si le nom de la base de données ou de l'objet est introuvable, par exemple s'il n'existe pas ou n'est pas correctement orthographié, les deux fonctions retournent la valeur NULL. La fonction **sys.dm_db_index_operational_stats** interprète la valeur NULL comme une valeur générique qui désigne toutes les bases de données ou tous les objets. Comme il peut s'agir d'une opération non intentionnelle, les exemples fournis dans cette section présentent une méthode sûre pour déterminer les ID de base de données et d'objet.  
   
 ```  
 DECLARE @db_id int;  
@@ -129,21 +129,21 @@ ELSE
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemples : [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] et[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemples : [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] et [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="d-returning-the-object-id-for-a-specified-object"></a>D : retour de l’ID d’objet pour un objet spécifié  
+### <a name="d-returning-the-object-id-for-a-specified-object"></a>D. Renvoi de l’identificateur d’un objet spécifié  
  L'exemple suivant renvoie l'ID d'objet de la table `FactFinance` de la base de données [!INCLUDE[ssawPDW](../../includes/ssawpdw-md.md)].  
   
 ```  
 SELECT OBJECT_ID('AdventureWorksPDW2012.dbo.FactFinance') AS 'Object ID';  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- [Fonctions de métadonnées &#40; Transact-SQL &#41;](../../t-sql/functions/metadata-functions-transact-sql.md)   
- [Sys.Objects &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
- [Sys.dm_db_index_operational_stats &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-operational-stats-transact-sql.md)   
+## <a name="see-also"></a> Voir aussi  
+ [Fonctions de métadonnées &#40;Transact-SQL&#41;](../../t-sql/functions/metadata-functions-transact-sql.md)   
+ [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
+ [sys.dm_db_index_operational_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-operational-stats-transact-sql.md)   
  [OBJECT_DEFINITION &#40;Transact-SQL&#41;](../../t-sql/functions/object-definition-transact-sql.md)   
- [Nom_objet &#40; Transact-SQL &#41;](../../t-sql/functions/object-name-transact-sql.md)  
+ [OBJECT_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/object-name-transact-sql.md)  
   
   
 

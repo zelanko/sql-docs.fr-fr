@@ -49,32 +49,32 @@ COLLATE { <collation_name> | database_default }
   
 ## <a name="arguments"></a>Arguments  
  *collation_name*  
- Nom du classement à appliquer à l'expression, à la définition de colonne ou à la définition de base de données. *collation_name* peut être uniquement spécifiée *Windows_collation_name* ou un *SQL_collation_name*. *collation_name* doit être une valeur littérale. *collation_name* ne peut pas être représenté par une variable ou une expression.  
+ Nom du classement à appliquer à l'expression, à la définition de colonne ou à la définition de base de données. *collation_name* peut uniquement être un *Windows_collation_name* ou un *SQL_collation_name*. *collation_name* doit être une valeur littérale. *collation_name* ne peut pas être représenté par une variable ou une expression.  
   
- *Windows_collation_name* est le nom de classement pour un [nom de classement Windows](../../t-sql/statements/windows-collation-name-transact-sql.md).  
+ *Windows_collation_name* est le nom de classement d’un [Windows Collation Name](../../t-sql/statements/windows-collation-name-transact-sql.md).  
   
- *SQL_collation_name* est le nom de classement pour un [nom du classement SQL Server](../../t-sql/statements/sql-server-collation-name-transact-sql.md).  
+ *SQL_collation_name* est le nom de classement d’un [SQL Server Collation Name](../../t-sql/statements/sql-server-collation-name-transact-sql.md).  
   
  Lors de l'application d'un classement au niveau de la définition de la base de données, les classements Windows Unicode seulement ne peuvent pas être utilisés avec la clause COLLATE.  
   
  **database_default**  
  Oblige la clause COLLATE à hériter du classement de la base de données active.  
   
-## <a name="remarks"></a>Notes  
- La clause COLLATE peut être spécifiée à plusieurs niveaux, Ces options en question sont les suivantes :  
+## <a name="remarks"></a>Notes   
+ La clause COLLATE peut être spécifiée à plusieurs niveaux. Ces options en question sont les suivantes :  
   
 1.  la création ou modification d'une base de données ;  
   
      Vous pouvez utiliser la clause COLLATE de l'instruction CREATE DATABASE ou ALTER DATABASE pour spécifier le classement par défaut de la base de données. Vous pouvez également spécifier un classement lorsque vous créez une base de données à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Si vous ne spécifiez pas de classement, le classement par défaut de l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sera appliqué à la base de données.  
   
     > [!NOTE]  
-    >  Classements Windows Unicode seulement peuvent uniquement être utilisée avec la clause COLLATE pour appliquer des classements pour les **nchar**, **nvarchar**, et **ntext** des types de données sur les données au niveau des colonnes et de niveau expression ; ils ne peut pas être utilisés avec la clause COLLATE pour modifier le classement d’une instance de serveur ou de base de données.  
+    >  Les classements Windows Unicode seulement ne peuvent être utilisés qu’avec la clause COLLATE pour appliquer des classements aux types de données **nchar**, **nvarchar**, et **ntext** sur des données au niveau des colonnes et au niveau de l’expression ; ils ne peuvent pas être utilisés avec la clause COLLATE pour changer le classement d’une base de données ou d’une instance de serveur.  
   
 2.  la création ou modification d'une colonne dans une table ;  
   
      Vous pouvez spécifier des classements pour chaque colonne de chaîne de caractères à l'aide de la clause COLLATE de l'instruction CREATE TABLE ou ALTER TABLE. Vous pouvez également spécifier un classement lorsque vous créez une table à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Si vous ne spécifiez pas de classement, le classement par défaut de la base de données sera appliqué à la colonne.  
   
-     Vous pouvez également utiliser le `database_default` option dans la clause COLLATE pour spécifier qu’une colonne dans une table temporaire utilise le classement par défaut de la base de données utilisateur actuel pour la connexion à la place de **tempdb**.  
+     Vous pouvez également utiliser l’option `database_default` dans la clause COLLATE pour spécifier qu’une colonne d’une table temporaire utilise le classement par défaut de la base de données utilisateur active pour la connexion au lieu de la base de données **tempdb**.  
   
 3.  la conversion du classement d'une expression.  
   
@@ -84,13 +84,13 @@ COLLATE { <collation_name> | database_default }
   
  Les variables, étiquettes GOTO, procédures stockées temporaires et tables temporaires peuvent être créées lorsque le contexte de la connexion est associé à une base de données, puis référencées lorsque le contexte est associé à une autre base de données. Les identificateurs des variables, étiquettes GOTO, procédures stockées temporaires et tables temporaires se trouvent dans le classement par défaut de l'instance du serveur.  
   
- La clause COLLATE peut être appliquée uniquement pour le **char**, **varchar**, **texte**, **nchar**, **nvarchar**, et **ntext** des types de données.  
+ La clause COLLATE peut être appliquée uniquement pour les types de données **char**, **varchar**, **text**, **nchar**, **nvarchar** et **ntext**.  
   
- COLLATE utilise *collate_name* pour faire référence au nom de classement SQL Server ou le classement Windows à appliquer à l’expression, la définition de colonne ou la définition de la base de données. *collation_name* peut être uniquement spécifiée *Windows_collation_name* ou un *SQL_collation_name* et le paramètre doit contenir une valeur littérale. *collation_name* ne peut pas être représenté par une variable ou une expression.  
+ COLLATE utilise *collate_name* pour faire référence au nom du classement SQL Server ou du classement Windows à appliquer à l’expression, à la définition de colonne ou à la définition de base de données. *collation_name* peut uniquement être un *Windows_collation_name* ou un *SQL_collation_name*, et le paramètre doit contenir une valeur littérale. *collation_name* ne peut pas être représenté par une variable ou une expression.  
   
- Les classements sont généralement identifiés par un nom de classement, hormis dans le programme d'installation. Dans le programme d’installation, vous spécifiez à la place de l’indicateur de classement (le paramètres régionaux de classement) racine pour les classements Windows, puis spécifiez les options de tri qui respectent ou non la casse et les accents.  
+ Les classements sont généralement identifiés par un nom de classement, hormis dans le programme d'installation. Dans le programme d’installation, vous spécifiez à la place l’indicateur du classement de la racine (les paramètres régionaux de classement) pour les classements Windows, puis vous spécifiez des options de tri qui respectent, ou non, la casse et les accents.  
   
- Vous pouvez exécuter la fonction système [fn_helpcollations](../../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md) pour récupérer une liste de tous les noms de classement valide pour les classements Windows et SQL Server :  
+ Vous pouvez exécuter la fonction système [fn_helpcollations](../../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md) pour récupérer la liste de tous les noms de classement valides pour les classements Windows et les classements SQL Server autorisés :  
   
 ```sql  
 SELECT name, description  
@@ -103,13 +103,13 @@ FROM fn_helpcollations();
   
 -   l'indication d'un classement d'une colonne lorsque vous créez ou modifiez une table ;  
   
--   Lors de la restauration ou attachement d’une base de données, le classement par défaut de la base de données et le classement de n’importe quel **char**, **varchar**, et **texte** colonnes ou des paramètres dans la base de données doivent être pris en charge par le système d’exploitation.  
+-   Lors de la restauration ou de l’attachement d’une base de données, le classement par défaut de cette dernière et le classement de colonnes ou paramètres **char**, **varchar** et **text** de la base de données doivent être pris en charge par le système d’exploitation.  
   
 > [!NOTE]
-> Traductions de page de codes sont prises en charge pour **char** et **varchar** des types de données, mais pas pour **texte** type de données. La perte de données lors de la traduction d'une page de codes n'est pas mentionnée.  
+> Les traductions de pages de codes sont prises en charge pour les types de données **char** et **varchar**, mais pas pour **text**. La perte de données lors de la traduction d'une page de codes n'est pas mentionnée.  
   
 > [!NOTE]
-> Si le classement spécifié ou le classement utilisé par l’objet référencé utilise une page de codes non prise en charge par Windows, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] affiche une erreur.  
+> Si le classement spécifié ou utilisé par l’objet référencé utilise une page de codes qui n’est pas prise en charge par Windows, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] affiche une erreur.  
   
 ## <a name="examples"></a>Exemples  
   
@@ -157,14 +157,14 @@ Colima
 Chiapas
 ```  
   
-### <a name="b-additional-examples"></a>B. Exemples supplémentaires  
- Pour obtenir des exemples supplémentaires qui utilisent **COLLATE**, consultez [CREATE DATABASE &#40; SQL Server Transact-SQL &#41; ](../../t-sql/statements/create-database-sql-server-transact-sql.md#examples) exemple **g. création d’une base de données et en spécifiant un nom de classement et les options**, et [ALTER TABLE &#40; Transact-SQL &#41; ](../../t-sql/statements/alter-table-transact-sql.md#alter_column) exemple **V. modification de classement de colonne**.  
+### <a name="b-additional-examples"></a>B. Autres exemples  
+ Pour obtenir d’autres exemples qui utilisent **COLLATE**, consultez l’exemple **G. Création d’une base de données et spécification d’un nom de classement et d’options** de la rubrique [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md#examples) et l’exemple **V. Modification du classement des colonnes** de la rubrique [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md#alter_column).  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)    
- [Prise en charge d'Unicode et du classement](../../relational-databases/collations/collation-and-unicode-support.md)    
+ [Prise en charge d’Unicode et du classement](../../relational-databases/collations/collation-and-unicode-support.md)    
  [Priorité de classement &#40;Transact-SQL&#41;](../../t-sql/statements/collation-precedence-transact-sql.md)     
- [Constants &#40;Transact-SQL&#41;](../../t-sql/data-types/constants-transact-sql.md)     
+ [Constantes &#40;Transact-SQL&#41;](../../t-sql/data-types/constants-transact-sql.md)     
  [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)     
  [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)     
  [DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)     

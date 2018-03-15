@@ -1,5 +1,5 @@
 ---
-title: DROP EVENT NOTIFICATION (Transact-SQL) | Documents Microsoft
+title: DROP EVENT NOTIFICATION (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -53,7 +53,7 @@ ON { SERVER | DATABASE | QUEUE queue_name }
   
 ## <a name="arguments"></a>Arguments  
  *notification_name*  
- Nom de la notification d'événement à supprimer. Plusieurs notifications d'événement peuvent être spécifiées. Pour afficher une liste des notifications d’événements actuellement créées, utilisez [sys.event_notifications &#40; Transact-SQL &#41; ](../../relational-databases/system-catalog-views/sys-event-notifications-transact-sql.md).  
+ Nom de la notification d'événement à supprimer. Plusieurs notifications d'événement peuvent être spécifiées. Pour afficher la liste des notifications d’événements actuellement créées, utilisez [sys.event_notifications &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-event-notifications-transact-sql.md).  
   
  SERVER  
  Indique que l'étendue de la notification d'événement s'applique au serveur actif. L'argument SERVER doit être spécifié s'il a été indiqué lors de la création de la notification d'événement.  
@@ -61,21 +61,21 @@ ON { SERVER | DATABASE | QUEUE queue_name }
  DATABASE  
  Indique que l'étendue de la notification d'événement s'applique à la base de données active. L'argument DATABASE doit être spécifié s'il a été indiqué lors de la création de la notification d'événement.  
   
- File d’attente *nom_file_attente*  
- Indique l’étendue de la notification d’événement s’applique à la file d’attente spécifié par *nom_file_attente*. L'argument QUEUE doit être spécifié s'il a été indiqué lors de la création de la notification d'événement. *nom_file_attente* est le nom de la file d’attente et doit également être spécifié.  
+ QUEUE *queue_name*  
+ Indique que l’étendue de la notification d’événement s’applique à la file d’attente spécifiée par *queue_name*. L'argument QUEUE doit être spécifié s'il a été indiqué lors de la création de la notification d'événement. *queue_name* est le nom de la file d’attente et doit également être spécifié.  
   
 ## <a name="remarks"></a>Notes   
  Si une notification d'événement se déclenche dans une transaction et est supprimée dans la même transaction, l'instance de notification d'événement est envoyée, puis la notification d'événement est supprimée.  
   
 ## <a name="permissions"></a>Autorisations  
- Pour supprimer une notification d'événement qui s'étend au niveau de la base de données, un utilisateur doit, au minimum, être propriétaire de la notification d'événement ou posséder une autorisation ALTER ANY DATABASE EVENT NOTIFICATION sur la base de données active.  
+ Pour supprimer une notification d'événement qui est délimitée au niveau de la base de données, un utilisateur doit, au minimum, être propriétaire de la notification d'événement ou posséder une autorisation ALTER ANY DATABASE EVENT NOTIFICATION sur la base de données active.  
   
- Pour supprimer une notification d'événement étendue au niveau du serveur, un utilisateur doit, au minimum, être propriétaire de la notification d'événement ou posséder une autorisation ALTER ANY EVENT NOTIFICATION sur le serveur.  
+ Pour supprimer une notification d'événement délimitée au niveau du serveur, un utilisateur doit, au minimum, être propriétaire de la notification d'événement ou posséder une autorisation ALTER ANY EVENT NOTIFICATION sur le serveur.  
   
  Pour supprimer une notification d'événement portant sur une file d'attente spécifique, un utilisateur doit, au minimum, être propriétaire de la notification d'événement ou posséder une autorisation ALTER sur la file d'attente parent.  
   
 ## <a name="examples"></a>Exemples  
- L'exemple suivant crée une notification d'événement étendue au niveau de la base de données, puis la supprime :  
+ L'exemple suivant crée une notification d'événement délimitée au niveau de la base de données, puis la supprime :  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -90,10 +90,10 @@ DROP EVENT NOTIFICATION NotifyALTER_T1
 ON DATABASE;  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- [CRÉER une NOTIFICATION d’événements &#40; Transact-SQL &#41;](../../t-sql/statements/create-event-notification-transact-sql.md)   
+## <a name="see-also"></a> Voir aussi  
+ [CREATE EVENT NOTIFICATION &#40;Transact-SQL&#41;](../../t-sql/statements/create-event-notification-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   
- [Sys.event_notifications &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-event-notifications-transact-sql.md)   
- [Sys.Events &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-events-transact-sql.md)  
+ [sys.event_notifications &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-event-notifications-transact-sql.md)   
+ [sys.events &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-events-transact-sql.md)  
   
   

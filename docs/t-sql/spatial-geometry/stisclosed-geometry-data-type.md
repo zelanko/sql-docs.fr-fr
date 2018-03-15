@@ -1,5 +1,5 @@
 ---
-title: "STIsClosed (Type de données geometry) | Documents Microsoft"
+title: "STIsClosed (type de données geometry) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stisclosed-geometry-data-type"></a>STIsClosed (type de données geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Retourne 1 si le début et points de terminaison de la donnée **geometry** instance sont les mêmes. Retourne 1 pour **geometrycollection** types si tous contenus **geometry** instance est fermée. Retourne 0 si l'instance n'est pas fermée.
+Retourne 1 si les points de début et de fin de l’instance **geometry** donnée sont identiques. Retourne 1 pour les types de collection **geometrycollection** si chaque instance **geometry** contenue est fermée. Retourne 0 si l'instance n'est pas fermée.
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -44,14 +44,14 @@ Retourne 1 si le début et points de terminaison de la donnée **geometry** inst
 ```  
   
 ## <a name="return-types"></a>Types de retour  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]type de retour : **bits**  
+ Type de retour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] : **bit**  
   
  Type de retour CLR : **SqlBoolean**  
   
-## <a name="remarks"></a>Notes  
- Cette méthode retourne 0 si des figures d’une **geometry** instance sont des points, ou si l’instance est vide.  
+## <a name="remarks"></a>Notes   
+ Cette méthode retourne 0 si les figures d’une instance **geometry** sont des points, ou si l’instance est vide.  
   
- Tous les **polygone** instances sont considérées comme fermées.  
+ Toutes les instances **Polygon** sont considérées comme fermées.  
   
 ## <a name="examples"></a>Exemples  
  L'exemple suivant crée une instance `LineString` et utilise `STIsClosed()` pour tester si le `LineString` est fermé.  
@@ -62,7 +62,7 @@ SET @g = geometry::STGeomFromText('LINESTRING(0 0, 2 2, 1 0)', 0);
 SELECT @g.STIsClosed();  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Méthodes OGC sur des instances geography](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: TRIGGER_NESTLEVEL (Transact-SQL) | Documents Microsoft
+title: TRIGGER_NESTLEVEL (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
@@ -49,18 +49,18 @@ TRIGGER_NESTLEVEL ( [ object_id ] , [ 'trigger_type' ] , [ 'trigger_event_catego
   
 ## <a name="arguments"></a>Arguments  
  *object_id*  
- Identificateur d'objet d'un déclencheur. Si *object_id* est spécifié, le nombre d’exécutions du déclencheur spécifié pour l’instruction est retournée. Si *object_id* n’est pas spécifié, le nombre de fois que tous les déclencheurs exécutés pour l’instruction est retournée.  
+ Identificateur d'objet d'un déclencheur. Si l’argument *object_id* est spécifié, la valeur renvoyée est le nombre d’exécutions du déclencheur indiqué pour l’instruction. Si *object_id* n’est pas spécifié, c'est le nombre d’exécutions de tous les déclencheurs pour l’instruction qui est renvoyé.  
   
  **'** *trigger_type* **'**  
- Spécifie si TRIGGER_NESTLEVEL doit s'appliquer aux déclencheurs AFTER ou aux déclencheurs INSTEAD OF. Spécifiez **AFTER** pour les déclencheurs AFTER. Spécifiez **IOT** pour des déclencheurs INSTEAD OF. Si *trigger_type* est spécifié, *trigger_event_category* doit également être spécifié.  
+ Spécifie si TRIGGER_NESTLEVEL doit s'appliquer aux déclencheurs AFTER ou aux déclencheurs INSTEAD OF. Spécifiez **AFTER** pour les déclencheurs AFTER. Spécifiez **IOT** pour les déclencheurs INSTEAD OF. Si *trigger_type* est spécifié, *trigger_event_category* doit également être spécifié.  
   
  **'** *trigger_event_category* **'**  
- Spécifie si TRIGGER_NESTLEVEL doit s'appliquer aux déclencheurs DML ou DDL. Spécifiez **DML** pour les déclencheurs DML. Spécifiez **DDL** pour les déclencheurs DDL. Si *trigger_event_category* est spécifié, *trigger_type* doit également être spécifié. Notez que seul **AFTER** peut être spécifié avec **DDL**, car les déclencheurs DDL peuvent uniquement être déclencheurs AFTER.  
+ Spécifie si TRIGGER_NESTLEVEL doit s'appliquer aux déclencheurs DML ou DDL. Spécifiez **DML** pour les déclencheurs DML. Spécifiez **DDL** pour les déclencheurs DDL. Si *trigger_event_category* est spécifié, *trigger_type* doit également être spécifié. Notez que seule la valeur **AFTER** peut être spécifiée avec **DDL**, car les déclencheurs DDL ne peuvent être que des déclencheurs AFTER.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Si aucun paramètre n'est spécifié, TRIGGER_NESTLEVEL renvoie le nombre total de déclencheurs sur la pile des appels. Elle est comprise elle-même dans ce décompte. Les paramètres peuvent être omis lorsqu'un déclencheur exécute des commandes entraînant l'activation d'un autre déclencheur ou provoque l'activation d'une succession de déclencheurs.  
   
- Pour retourner le nombre total de déclencheurs sur la pile des appels pour une catégorie de type et événement déclencheur particulier, spécifiez *object_id* = 0.  
+ Pour retourner le nombre total de déclencheurs sur la pile des appels pour un type de déclencheur et une catégorie d’événement déterminés, spécifiez *object_id* = 0.  
   
  TRIGGER_NESTLEVEL renvoie la valeur 0 si son exécution se produit à l'extérieur d'un déclencheur et si aucun paramètre n'a la valeur NULL.  
   
@@ -91,7 +91,7 @@ IF ( (SELECT trigger_nestlevel() ) > 5 )
       ('This statement nested over 5 levels of triggers.',16,-1)  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)  
   
   

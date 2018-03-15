@@ -1,5 +1,5 @@
 ---
-title: SET IDENTITY_INSERT (Transact-SQL) | Documents Microsoft
+title: SET IDENTITY_INSERT (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -52,7 +52,7 @@ SET IDENTITY_INSERT [ database_name . [ schema_name ] . ] table { ON | OFF }
   
 ## <a name="arguments"></a>Arguments  
  *database_name*  
- Est le nom de la base de données dans laquelle réside la table spécifiée.  
+ Nom de la base de données qui contient la table spécifiée.  
   
  *schema_name*  
  Nom du schéma auquel appartient la table.  
@@ -60,14 +60,14 @@ SET IDENTITY_INSERT [ database_name . [ schema_name ] . ] table { ON | OFF }
  *table*  
  Nom de la table comportant une colonne d'identité.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  À n'importe quel moment, seule une table de la session peut avoir la propriété IDENTITY_INSERT activée (ON). Si la propriété d'une table est déjà activée lorsqu'une instruction SET IDENTITY_INSERT ON est émise pour une autre table, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retourne un message d'erreur signalant que la propriété SET IDENTITY_INSERT est déjà activée, en spécifiant la table correspondante.  
   
  Si la valeur insérée est supérieure à la valeur d'identité actuelle de la table, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilise automatiquement la nouvelle valeur comme valeur d'identité actuelle.  
   
  L'option SET IDENTITY_INSERT est définie lors de l'exécution, et non pas durant l'analyse.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  L'utilisateur doit posséder la table ou l'autorisation ALTER sur la table.  
   
 ## <a name="examples"></a>Exemples  
@@ -119,7 +119,7 @@ DROP TABLE dbo.Tool;
 GO  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
  [IDENTITY, propriété &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql-identity-property.md)   
  [SCOPE_IDENTITY &#40;Transact-SQL&#41;](../../t-sql/functions/scope-identity-transact-sql.md)   

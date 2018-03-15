@@ -1,5 +1,5 @@
 ---
-title: "Méthodes de géométrie statiques étendues | Documents Microsoft"
+title: "Méthodes Geometry statiques étendues | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -39,22 +39,22 @@ ms.lasthandoff: 01/25/2018
   
  [OGC Specifications, Simple Feature Access Part 2 – SQL Options (en anglais)](http://go.microsoft.com/fwlink/?LinkId=93628)  
   
- [OGC Specifications, Geography Markup Language](http://go.microsoft.com/fwlink/?LinkId=93629)  
+ [Spécifications OGC, Geography Markup Language](http://go.microsoft.com/fwlink/?LinkId=93629)  
   
 ## <a name="in-this-section"></a>Dans cette section  
   
 -   [GeomFromGML](../../t-sql/spatial-geometry/geomfromgml-geometry-data-type.md)  
   
--   [Valeur null](../../t-sql/spatial-geometry/null-geometry-data-type.md)  
+-   [Null](../../t-sql/spatial-geometry/null-geometry-data-type.md)  
   
 -   [Analyser](../../t-sql/spatial-geometry/parse-geometry-data-type.md)  
   
 -   [Point](../../t-sql/spatial-geometry/point-geometry-data-type.md)  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Méthodes globales statiques Geometry](../../t-sql/spatial-geometry/static-aggregate-geometry-methods.md)   
- [Méthodes étendues sur les Instances géométriques](../../t-sql/spatial-geometry/extended-methods-on-geometry-instances.md)   
- [Méthodes OGC sur les Instances géométriques](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)   
+ [Méthodes étendues sur des instances Geometry](../../t-sql/spatial-geometry/extended-methods-on-geometry-instances.md)   
+ [Méthodes OGC sur des instances Geometry](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)   
  [Méthodes geometry statiques de l’OGC](../../t-sql/spatial-geometry/ogc-static-geometry-methods.md)  
   
   

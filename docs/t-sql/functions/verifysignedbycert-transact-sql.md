@@ -1,5 +1,5 @@
 ---
-title: VERIFYSIGNEDBYCERT (Transact-SQL) | Documents Microsoft
+title: VERIFYSIGNEDBYCERT (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -53,29 +53,29 @@ VerifySignedByCert( Cert_ID , signed_data , signature )
   
 ## <a name="arguments"></a>Arguments  
  *Cert_ID*  
- Identificateur d'un certificat dans la base de données. *Cert_ID* est **int**.  
+ Identificateur d'un certificat dans la base de données. *Cert_ID* est de type **int**.  
   
  *signed_data*  
- Est une variable de type **nvarchar**, **char**, **varchar**, ou **nchar** qui contient les données qui a été signées avec un certificat.  
+ Variable de type **nvarchar**, **char**, **varchar** ou **nchar** qui contient des données qui ont été signées avec un certificat.  
   
  *signature*  
- Signature attachée aux données signées. *signature* est **varbinary**.  
+ Signature attachée aux données signées. *signature* est de type **varbinary**.  
   
 ## <a name="return-types"></a>Types de retour  
- **int**  
+ **Int**  
   
  Retourne 1 lorsque les données signées n'ont pas changé, sinon 0.  
   
-## <a name="remarks"></a>Notes  
- **VerifySignedBycert** déchiffre la signature des données à l’aide de la clé publique du certificat spécifié et compare la valeur déchiffrée à un hachage MD5 calculée qui vient d’être des données. Si les valeurs correspondent, la validité de la signature est confirmée.  
+## <a name="remarks"></a>Notes   
+ **VerifySignedBycert** déchiffre la signature des données à l’aide de la clé publique du certificat spécifié, puis compare la valeur déchiffrée à un hachage MD5 des données récemment calculé. Si les valeurs correspondent, la validité de la signature est confirmée.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l'autorisation VIEW DEFINITION sur le certificat.  
   
 ## <a name="examples"></a>Exemples  
   
 ### <a name="a-verifying-that-signed-data-has-not-been-tampered-with"></a>A. Vérification de la non-falsification des données signées  
- L'exemple suivant vérifie si les informations contenues dans `Signed_Data` ont été modifiées depuis leur signature à l'aide du certificat `Shipping04`. La signature est stockée dans `DataSignature`. Le certificat, `Shipping04`, est transmis à `Cert_ID` qui retourne l'ID du certificat dans la base de données. Si `VerifySignedByCert` retourne la valeur 1, la signature est correcte. Si `VerifySignedByCert` retourne la valeur 0, les données de `Signed_Data` sont différentes de celles utilisées pour générer `DataSignature`. Dans ce cas, soit `Signed_Data` a été modifié depuis qu’il a été signé ou `Signed_Data` a été signé avec un certificat différent.  
+ L'exemple suivant vérifie si les informations contenues dans `Signed_Data` ont été modifiées depuis leur signature à l'aide du certificat `Shipping04`. La signature est stockée dans `DataSignature`. Le certificat, `Shipping04`, est transmis à `Cert_ID` qui retourne l'ID du certificat dans la base de données. Si `VerifySignedByCert` retourne la valeur 1, la signature est correcte. Si `VerifySignedByCert` retourne la valeur 0, les données de `Signed_Data` sont différentes de celles utilisées pour générer `DataSignature`. Dans ce cas, soit les données de `Signed_Data` ont été modifiées depuis leur signature, soit les données de `Signed_Data` ont été signées avec un certificat différent.  
   
 ```  
 SELECT Data, VerifySignedByCert( Cert_Id( 'Shipping04' ),  
@@ -96,12 +96,12 @@ AND Description = N'data signed by certificate ''Shipping04''';
 GO  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- [CERT_ID &#40; Transact-SQL &#41;](../../t-sql/functions/cert-id-transact-sql.md)   
- [SIGNBYCERT &#40; Transact-SQL &#41;](../../t-sql/functions/signbycert-transact-sql.md)   
+## <a name="see-also"></a> Voir aussi  
+ [CERT_ID &#40;Transact-SQL&#41;](../../t-sql/functions/cert-id-transact-sql.md)   
+ [SIGNBYCERT &#40;Transact-SQL&#41;](../../t-sql/functions/signbycert-transact-sql.md)   
  [CREATE CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/create-certificate-transact-sql.md)   
- [ALTER CERTIFICATE &#40; Transact-SQL &#41;](../../t-sql/statements/alter-certificate-transact-sql.md)   
- [DROP CERTIFICATE &#40; Transact-SQL &#41;](../../t-sql/statements/drop-certificate-transact-sql.md)   
+ [ALTER CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-certificate-transact-sql.md)   
+ [DROP CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-certificate-transact-sql.md)   
  [BACKUP CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/backup-certificate-transact-sql.md)   
  [Hiérarchie de chiffrement](../../relational-databases/security/encryption/encryption-hierarchy.md)  
   

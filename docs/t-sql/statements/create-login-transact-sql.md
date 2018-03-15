@@ -1,5 +1,5 @@
 ---
-title: "CRÉER une connexion (Transact-SQL) | Documents Microsoft"
+title: CREATE LOGIN (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/15/2017
 ms.prod: sql-non-specified
@@ -103,14 +103,14 @@ CREATE LOGIN loginName { WITH <option_list1> | FROM WINDOWS }
   
 ## <a name="arguments"></a>Arguments  
  *login_name*  
- Spécifie le nom de la connexion créée. Il existe quatre types de connexions : connexions [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], connexions Windows, connexions mappées par certificat et connexions mappées par clé asymétrique. Lorsque vous créez des connexions qui sont mappées à partir d’un compte de domaine Windows, vous devez utiliser le nom d’ouverture de session d’utilisateur antérieur à Windows 2000 dans le format [\<nom_domaine >\\< login_name >]. Vous ne pouvez pas utiliser un nom UPN au format login_name@DomainName. Consultez l'exemple D plus loin dans cette rubrique. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]connexions d’authentification sont de type **sysname** et doivent être conformes aux règles des [identificateurs](http://msdn.microsoft.com/library/ms175874.aspx) et ne peut pas contenir un '**\\**'. Les connexions Windows peuvent contenir une barre oblique inverse (**\\**). Connexions basées sur les utilisateurs Active Directory, sont limitées aux noms de moins de 21 caractères.  
+ Spécifie le nom de la connexion créée. Il existe quatre types de connexions : connexions [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], connexions Windows, connexions mappées par certificat et connexions mappées par clé asymétrique. Quand vous créez des connexions mappées à partir d’un compte de domaine Windows, vous devez utiliser le nom d’ouverture de session de l’utilisateur antérieur à Windows 2000 en respectant le format [\<domainName>\\<login_name>]. Vous ne pouvez pas utiliser un nom UPN au format login_name@DomainName. Consultez l'exemple D plus loin dans cette rubrique. Les connexions d’authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sont de type **sysname** et doivent se conformer aux règles applicables aux [identificateurs](http://msdn.microsoft.com/library/ms175874.aspx) et ne peuvent pas contenir de barre oblique inverse (**\\**). Les connexions Windows peuvent contenir une barre oblique inverse (**\\**). Les connexions basées sur les utilisateurs Active Directory sont limitées aux noms de moins de 21 caractères.  
   
- Mot de passe **='***mot de passe***'**  
- S’applique à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connexion uniquement. Spécifie le mot de passe de la connexion à créer. Il est recommandé d'utiliser un mot de passe fort. Pour plus d’informations, consultez [mots de passe forts](../../relational-databases/security/strong-passwords.md) et [stratégie de mot de passe](../../relational-databases/security/password-policy.md). À partir de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], stockées les informations de mot de passe sont calculées à l’aide du mot de passe salt SHA-512.  
+ PASSWORD **='***password***'**  
+ S’applique uniquement aux connexions [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Spécifie le mot de passe de la connexion à créer. Il est recommandé d'utiliser un mot de passe fort. Pour plus d’informations, consultez [Mots de passe forts](../../relational-databases/security/strong-passwords.md) et [Stratégie de mot de passe](../../relational-databases/security/password-policy.md). À partir de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], les informations de mot de passe stockées sont calculées à l’aide de la valeur salt salt SHA-512 du mot de passe.  
   
- Les mots de passe respectent la casse. Les mots de passe doivent comporter au moins 8 caractères, et ne peuvent pas dépasser 128 caractères.  Les mots de passe peuvent inclure les caractères de A à Z, en minuscules ou en majuscules, les chiffres de 0 à 9 et la plupart des caractères non alphanumériques. Les mots de passe ne peut pas contenir de guillemets simples, ou le *login_name*.  
+ Les mots de passe respectent la casse. Les mots de passe doivent comporter au moins 8 caractères, et ne peuvent pas dépasser 128 caractères.  Les mots de passe peuvent inclure les caractères de A à Z, en minuscules ou en majuscules, les chiffres de 0 à 9 et la plupart des caractères non alphanumériques. Les mots de passe ne peuvent pas contenir de guillemets simples, ni le *login_name*.  
   
- Mot de passe  **=**  *hashed_password*  
+ PASSWORD **=***hashed_password*  
  **S'applique à**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  S'applique uniquement au mot clé HASHED. Spécifie la valeur hachée du mot de passe de la connexion créée.  
@@ -118,44 +118,44 @@ CREATE LOGIN loginName { WITH <option_list1> | FROM WINDOWS }
  HASHED  
  **S'applique à**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- S’applique à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connexion uniquement. Spécifie que le mot de passe entré après l'argument PASSWORD est déjà haché. Si cette option n'est pas sélectionnée, la chaîne de caractères entrée comme mot de passe est hachée avant d'être stockée dans la base de données. Cette option doit être utilisée uniquement pour effectuer une migration de bases de données d'un serveur vers un autre. N'utilisez pas l'option HASHED pour créer des connexions. L'option HASHED ne peut pas être utilisée avec des hachages créés par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7 ou antérieur,  
+ S’applique uniquement aux connexions [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Spécifie que le mot de passe entré après l'argument PASSWORD est déjà haché. Si cette option n'est pas sélectionnée, la chaîne de caractères entrée comme mot de passe est hachée avant d'être stockée dans la base de données. Cette option doit être utilisée uniquement pour effectuer une migration de bases de données d'un serveur vers un autre. N'utilisez pas l'option HASHED pour créer des connexions. L'option HASHED ne peut pas être utilisée avec des hachages créés par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7 ou antérieur,  
   
  MUST_CHANGE  
  **S'applique à**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- S’applique à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connexion uniquement. Si vous incluez cette option, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] demande à l'utilisateur un nouveau mot de passe lors de la première utilisation de la nouvelle connexion.  
+ S’applique uniquement aux connexions [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si vous incluez cette option, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] demande à l'utilisateur un nouveau mot de passe lors de la première utilisation de la nouvelle connexion.  
   
- Informations d’identification  **=**  *credential_name*  
+ CREDENTIAL **=***credential_name*  
  **S'applique à**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- Nom des informations d'identification à associer à la nouvelle connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Les informations d'identification doivent déjà exister sur le serveur. À l'heure actuelle, cette option lie uniquement l'information d'authentification à une connexion. Informations d’identification ne peut pas être mappée à la connexion de l’administrateur système (sa).  
+ Nom des informations d'identification à associer à la nouvelle connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Les informations d'identification doivent déjà exister sur le serveur. À l'heure actuelle, cette option lie uniquement l'information d'authentification à une connexion. Les informations d’identification ne peuvent pas être mappées à la connexion de l’administrateur système.  
   
  SID = *sid*  
- Utilisé pour recréer une connexion. S’applique aux [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connexions d’authentification uniquement, pas aux connexions d’authentification Windows. Spécifie le SID du nouveau [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connexion d’authentification. Si cette option n’est pas utilisée, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] attribue automatiquement un SID. La structure SID varie selon le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] version.  
+ Utilisé pour recréer une connexion. S’applique aux connexions d’authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] uniquement, et non aux connexions d’authentification Windows. Spécifie le SID de la nouvelle connexion d’authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si cette option n’est pas sélectionnée, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] attribue automatiquement un SID. La structure SID dépend de la version [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]SID de connexion : 16 octets (**Binary (16)**) valeur littérale basée sur un GUID. Par exemple, `SID = 0x14585E90117152449347750164BA00A7`.  
+-   SID de connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] : valeur littérale 16 octets (**binary(16)**) basée sur un GUID. Par exemple, `SID = 0x14585E90117152449347750164BA00A7`.  
   
--   [!INCLUDE[ssSDS](../../includes/sssds-md.md)]SID de connexion : structure SID valide pour [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Il s’agit en général un 32 octets (**binary(32)**) littéral composé de `0x01060000000000640000000000000000` plus 16 octets représentant un GUID. Par exemple, `SID = 0x0106000000000064000000000000000014585E90117152449347750164BA00A7`.  
+-   SID de connexion [!INCLUDE[ssSDS](../../includes/sssds-md.md)] : structure SID valide pour [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Il s’agit généralement d’un littéral 32 octets (**binary(32)**) composé de `0x01060000000000640000000000000000` plus 16 octets représentant un GUID. Par exemple, `SID = 0x0106000000000064000000000000000014585E90117152449347750164BA00A7`.  
   
-DEFAULT_DATABASE  **=**  *base de données*  
+DEFAULT_DATABASE **=***database*  
  **S'applique à**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Spécifie la base de données par défaut à affecter à la connexion. Si cette option est omise, la base de données par défaut est master.  
   
-DEFAULT_LANGUAGE  **=**  *language*  
+DEFAULT_LANGUAGE **=***language*  
  **S'applique à**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Spécifie la langue par défaut à affecter à la connexion. Si cette option est omise, la langue par défaut est la langue par défaut actuellement définie pour le serveur. Si la langue par défaut du serveur est changée par la suite, la langue par défaut de la connexion reste la même.  
   
-CHECK_EXPIRATION  **=**  {ON | **OFF** }  
+CHECK_EXPIRATION **=** { ON | **OFF** }  
  **S'applique à**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- S’applique à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connexion uniquement. Spécifie si les règles d'expiration des mots de passe doivent être imposées sur cette connexion. La valeur par défaut est OFF.  
+ S’applique uniquement aux connexions [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Spécifie si les règles d'expiration des mots de passe doivent être imposées sur cette connexion. La valeur par défaut est OFF.  
   
-CHECK_POLICY  **=**  { **ON** | {OFF}  
+CHECK_POLICY **=** { **ON** | OFF }  
  **S'applique à**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- S’applique à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connexion uniquement. Spécifie que les stratégies de mot de passe Windows de l'ordinateur sur lequel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] s'exécute doivent être imposées sur cette connexion. La valeur par défaut est ON.  
+ S’applique uniquement aux connexions [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Spécifie que les stratégies de mot de passe Windows de l'ordinateur sur lequel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] s'exécute doivent être imposées sur cette connexion. La valeur par défaut est ON.  
   
  Si la stratégie windows requiert des mots de passe forts, les mots de passe doivent avoir au moins trois des quatre caractéristiques suivantes :  
   
@@ -169,12 +169,12 @@ WINDOWS
   
  Spécifie que la connexion doit être mappée sur une connexion Windows.  
   
-CERTIFICAT *certname*  
+CERTIFICATE *certname*  
  **S'applique à**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Spécifie le nom d'un certificat à associer à cette connexion. Ce certificat doit déjà se trouver dans la base de données master.  
   
-CLÉ asymétrique *asym_key_name*  
+ASYMMETRIC KEY *asym_key_name*  
  **S'applique à**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Spécifie le nom d'une clé asymétrique à associer à cette connexion. Cette clé doit déjà se trouver dans la base de données master.  
@@ -188,7 +188,7 @@ CLÉ asymétrique *asym_key_name*
   
  La combinaison CHECK_POLICY = OFF et CHECK_EXPIRATION = ON n'est pas prise en charge.  
   
- Lorsque CHECK_POLICY a la valeur OFF, *lockout_time* est réinitialisé et CHECK_EXPIRATION prend la valeur OFF.  
+ Quand CHECK_POLICY a la valeur OFF, *lockout_time* est réinitialisé et CHECK_EXPIRATION prend la valeur OFF.  
   
 > [!IMPORTANT]  
 >  CHECK_EXPIRATION et CHECK_POLICY sont imposés uniquement sur [!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)] et les versions ultérieures. Pour plus d'informations, consultez [Password Policy](../../relational-databases/security/password-policy.md).  
@@ -199,40 +199,40 @@ CLÉ asymétrique *asym_key_name*
   
  La création d'une connexion active automatiquement la nouvelle connexion et accorde à la connexion l'autorisation **CONNECT SQL** au niveau du serveur.  
  
- Le serveur [mode d’authentification](../../relational-databases/security/choose-an-authentication-mode.md) doit correspondre au type de connexion pour autoriser l’accès.
+ Le [mode d’authentification](../../relational-databases/security/choose-an-authentication-mode.md) du serveur doit correspondre au type de connexion pour autoriser l’accès.
   
  Pour plus d’informations sur la conception d’un système d’autorisations, voir [Getting Started with Database Engine Permissions](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md).  
   
-## <a name="includesssdsfullincludessssdsfull-mdmd-and-includesssdwincludessssdw-mdmd-logins"></a>[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]et [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] connexions  
- Dans [!INCLUDE[ssSDS](../../includes/sssds-md.md)], le **CREATE LOGIN** instruction doit être la seule instruction dans un lot.  
+## <a name="includesssdsfullincludessssdsfull-mdmd-and-includesssdwincludessssdw-mdmd-logins"></a>Connexions [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] et [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]  
+ Dans [!INCLUDE[ssSDS](../../includes/sssds-md.md)], l’instruction **CREATE LOGIN** doit être la seule instruction d’un traitement.  
   
- Dans certaines méthodes de connexion à [!INCLUDE[ssSDS](../../includes/sssds-md.md)], tel que **sqlcmd**, vous devez ajouter le [!INCLUDE[ssSDS](../../includes/sssds-md.md)] nom du serveur pour le nom de connexion dans la chaîne de connexion à l’aide de la  *\<connexion >*@*\<server >* notation. Par exemple, si votre connexion est `login1` et le nom qualifié complet de le [!INCLUDE[ssSDS](../../includes/sssds-md.md)] serveur est `servername.database.windows.net`, le *nom d’utilisateur* paramètre de la chaîne de connexion doit être `login1@servername`. Étant donné que la longueur totale de la *nom d’utilisateur* paramètre est de 128 caractères, *login_name* est limitée à 127 caractères moins la longueur du nom du serveur. Dans l'exemple, `login_name` peut contenir seulement 117 caractères car `servername` inclut 10 caractères.  
+ Dans certaines méthodes de connexion à [!INCLUDE[ssSDS](../../includes/sssds-md.md)], comme **sqlcmd**, vous devez ajouter le nom du serveur [!INCLUDE[ssSDS](../../includes/sssds-md.md)] au nom de connexion dans la chaîne de connexion à l’aide de la notation *\<connexion>*@*\<serveur>*. Par exemple, si votre connexion est `login1` et que le nom complet du serveur [!INCLUDE[ssSDS](../../includes/sssds-md.md)] est `servername.database.windows.net`, le paramètre *username* de la chaîne de connexion doit être `login1@servername`. Puisque la longueur totale du paramètre *username* est de 128 caractères, *login_name* est limité à 127 caractères moins la longueur du nom du serveur. Dans l'exemple, `login_name` peut contenir seulement 117 caractères car `servername` inclut 10 caractères.  
   
- Dans [!INCLUDE[ssSDS](../../includes/sssds-md.md)] et [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] vous devez être connecté à la base de données master pour créer une connexion.  
+ Dans [!INCLUDE[ssSDS](../../includes/sssds-md.md)] et [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], vous devez être connecté à la base de données master pour créer une connexion.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]les règles vous permettent de créer un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connexion d’authentification dans le format \<nom_connexion > @\<nom_serveur >. Si votre [!INCLUDE[ssSDS](../../includes/sssds-md.md)] serveur est **myazureserver** et votre connexion est  **myemail@live.com** , vous devez fournir votre nom d’utilisateur en tant que  **myemail@live.com @myazureserver** .  
+ Les règles [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permettent de créer une connexion d’authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] au format \<nom_connexion>@\<nom_serveur>. Si votre serveur [!INCLUDE[ssSDS](../../includes/sssds-md.md)] est **myazureserver** et que l’identifiant de connexion est **myemail@live.com**, vous devez fournir votre identifiant de connexion comme suit : **myemail@live.com@myazureserver**.  
   
- Dans [!INCLUDE[ssSDS](../../includes/sssds-md.md)], les données de connexion requises pour authentifier une connexion et les règles de pare-feu de niveau serveur sont temporairement mis en cache dans chaque base de données. Ce cache est actualisé régulièrement. Pour forcer une actualisation du cache d’authentification et assurez-vous qu’une base de données a la version la plus récente de la table de connexions, exécutez [DBCC FLUSHAUTHCACHE &#40; Transact-SQL &#41; ](../../t-sql/database-console-commands/dbcc-flushauthcache-transact-sql.md).  
+ Dans [!INCLUDE[ssSDS](../../includes/sssds-md.md)], les données de connexion exigées pour authentifier une connexion et les règles de pare-feu de niveau serveur sont temporairement mises en cache dans chaque base de données. Ce cache est régulièrement actualisé. Pour forcer une actualisation du cache d’authentification et garantir qu’une base de données a la version la plus récente de la table de connexions, exécutez [DBCC FLUSHAUTHCACHE &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-flushauthcache-transact-sql.md).  
   
- Pour plus d’informations sur [!INCLUDE[ssSDS](../../includes/sssds-md.md)] connexions, consultez [gérer les bases de données et des connexions dans base de données SQL Windows Azure](http://msdn.microsoft.com/library/ee336235.aspx).  
+ Pour plus d’informations sur les connexions [!INCLUDE[ssSDS](../../includes/sssds-md.md)], consultez [Gestion des bases de données et des connexions dans Microsoft Azure SQL Database](http://msdn.microsoft.com/library/ee336235.aspx).  
   
 ## <a name="permissions"></a>Autorisations  
- Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], nécessite **ALTER ANY LOGIN** autorisation sur le serveur ou l’appartenance dans le **securityadmin** rôle serveur fixe.  
+ Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], nécessite l’autorisation **ALTER ANY LOGIN** sur le serveur ou l’appartenance au rôle serveur fixe **securityadmin**.  
   
  Dans [!INCLUDE[ssSDS](../../includes/sssds-md.md)], seule la connexion principale au niveau du serveur (créée par le processus de configuration) ou les membres du rôle de base de données `loginmanager` dans la base de données master peuvent créer de nouvelles connexions.  
   
  Si l'option **CREDENTIAL** est utilisée, l'autorisation **ALTER ANY CREDENTIAL** est également exigée sur le serveur.  
   
 ## <a name="next-steps"></a>Next Steps  
- Après avoir créé un compte de connexion, celle-ci peut se connecter à la [!INCLUDE[ssDE](../../includes/ssde-md.md)] ou [!INCLUDE[ssSDS](../../includes/sssds-md.md)] mais dispose uniquement des autorisations accordées à la **public** rôle. Envisagez d'effectuer certaines des activités suivantes.  
+ Après la création d’une connexion, celle-ci peut se connecter au [!INCLUDE[ssDE](../../includes/ssde-md.md)] ou à [!INCLUDE[ssSDS](../../includes/sssds-md.md)], mais dispose uniquement des autorisations accordées au rôle **public**. Envisagez d'effectuer certaines des activités suivantes.  
   
 -   Pour vous connecter à une base de données, créez un utilisateur de base de données pour la connexion. Pour plus d’informations, consultez [CREATE USER &#40;Transact-SQL&#41;](../../t-sql/statements/create-user-transact-sql.md).  
   
--   Créer un rôle de serveur défini par l’utilisateur à l’aide de [CREATE SERVER ROLE &#40; Transact-SQL &#41; ](../../t-sql/statements/create-server-role-transact-sql.md). Utilisez **ALTER SERVER ROLE** ... **Ajouter un membre** pour ajouter le compte de connexion pour le rôle de serveur défini par l’utilisateur. Pour plus d’informations, consultez [CREATE SERVER ROLE &#40; Transact-SQL &#41; ](../../t-sql/statements/create-server-role-transact-sql.md) et [ALTER SERVER ROLE &#40; Transact-SQL &#41; ](../../t-sql/statements/alter-server-role-transact-sql.md).  
+-   Créez un rôle serveur défini par l’utilisateur à l’aide de [CREATE SERVER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-server-role-transact-sql.md). Utilisez **ALTER SERVER ROLE** ... **ADD MEMBER** pour ajouter la nouvelle connexion au rôle serveur défini par l’utilisateur. Pour plus d’informations, consultez [CREATE SERVER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-server-role-transact-sql.md) et [ALTER SERVER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-role-transact-sql.md).  
   
--   Utilisez **sp_addsrvrolemember** pour ajouter la connexion à un rôle de serveur fixe. Pour plus d’informations, consultez [les rôles au niveau du serveur](../../relational-databases/security/authentication-access/server-level-roles.md) et [sp_addsrvrolemember &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-addsrvrolemember-transact-sql.md).  
+-   Utilisez **sp_addsrvrolemember** pour ajouter la connexion à un rôle serveur fixe. Pour plus d’informations, consultez [Rôles de niveau serveur](../../relational-databases/security/authentication-access/server-level-roles.md) et [sp_addsrvrolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsrvrolemember-transact-sql.md).  
   
--   Utilisez le **GRANT** instruction, pour accorder des autorisations au niveau du serveur à la nouvelle connexion ou à un rôle qui contient la connexion. Pour plus d’informations, consultez [GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md).  
+-   Utilisez l’instruction **GRANT** pour accorder des autorisations au niveau du serveur à la nouvelle connexion ou à un rôle qui contient la connexion. Pour plus d’informations, consultez [GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md).  
   
 ## <a name="examples"></a>Exemples  
   
@@ -266,7 +266,7 @@ GO
 ```  
   
 ### <a name="d-creating-a-login-from-a-certificate"></a>D. Création d'une connexion à partir d'un certificat  
- L’exemple suivant crée une connexion pour un utilisateur particulier à partir d’un certificat dans master.  
+ L’exemple suivant crée la connexion pour un utilisateur particulier à partir d’un certificat dans master.  
   
 **S'applique à**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
@@ -291,7 +291,7 @@ GO
 ```  
   
 ### <a name="f-creating-a-login-from-a-sid"></a>F. Création d'une connexion à partir d'un SID  
- L’exemple suivant crée d’abord une [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connexion d’authentification et détermine le SID de la connexion.  
+ L’exemple suivant crée d’abord une connexion d’authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et détermine le SID de la connexion.  
   
 ```  
 CREATE LOGIN TestLogin WITH PASSWORD = 'SuperSecret52&&';  
@@ -313,17 +313,17 @@ SELECT * FROM sys.sql_logins WHERE name = 'TestLogin';
 GO  
 ```  
   
-## <a name="examples-includesspdwincludessspdw-mdmd"></a>Exemples :[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesspdwincludessspdw-mdmd"></a>Exemples : [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="g-creating-a-sql-server-authentication-login-with-a-password"></a>G. Création d’une connexion d’authentification SQL Server avec un mot de passe  
- L’exemple suivant crée la connexion `Mary7` avec mot de passe `A2c3456`.  
+ L’exemple suivant crée la connexion `Mary7` avec le mot de passe `A2c3456`.  
   
 ```sql  
 CREATE LOGIN Mary7 WITH PASSWORD = 'A2c3456$#' ;  
 ```  
   
-### <a name="h-using-options"></a>H. À l’aide des Options  
- L’exemple suivant crée la connexion `Mary8` avec le mot de passe et d’autres arguments facultatifs.  
+### <a name="h-using-options"></a>H. Utilisation d’options  
+ L’exemple suivant crée la connexion `Mary8` avec le mot de passe et certains arguments facultatifs.  
   
 ```  
 CREATE LOGIN Mary8 WITH PASSWORD = 'A2c3456$#' MUST_CHANGE,  
@@ -332,19 +332,19 @@ CHECK_POLICY = ON;
 ```  
   
 ### <a name="i-creating-a-login-from-a-windows-domain-account"></a>I. Création d'une connexion à partir d'un compte de domaine Windows  
- L’exemple suivant crée une connexion à partir d’un compte de domaine Windows nommé `Mary` dans le `Contoso` domaine.  
+ L’exemple suivant crée une connexion à partir d’un compte de domaine Windows nommé `Mary` dans le domaine `Contoso`.  
   
 ```  
 CREATE LOGIN [Contoso\Mary] FROM WINDOWS;  
 GO  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Prise en main des autorisations du moteur de base de données](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md)   
  [Principaux &#40;moteur de base de données&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
  [Stratégie de mot de passe](../../relational-databases/security/password-policy.md)   
  [ALTER LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/alter-login-transact-sql.md)   
- [DROP LOGIN &#40; Transact-SQL &#41;](../../t-sql/statements/drop-login-transact-sql.md)   
+ [DROP LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/drop-login-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   
  [Créer un compte de connexion](../../relational-databases/security/authentication-access/create-a-login.md)  
   

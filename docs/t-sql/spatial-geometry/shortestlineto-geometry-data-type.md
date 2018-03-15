@@ -1,5 +1,5 @@
 ---
-title: "ShortestLineTo (Type de données geometry) | Documents Microsoft"
+title: "ShortestLineTo (type de données geometry) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -31,7 +31,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="shortestlineto-geometry-data-type"></a>ShortestLineTo (type de données geometry)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-Retourne un **LineString** instance avec deux points qui représentent la distance la plus courte entre les deux **geometry** instances. La longueur de la **LineString** instance retournée est la distance entre les deux **geometry** instances.
+Retourne une instance **LineString** avec deux points qui représentent la distance la plus courte entre les deux instances **geometry**. La longueur de l’instance **LineString** retournée correspond à la distance entre les deux instances **geometry**.
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -42,15 +42,15 @@ Retourne un **LineString** instance avec deux points qui représentent la distan
   
 ## <a name="arguments"></a>Arguments  
  *geometry_other*  
- La seconde **geometry** de l’instance qui l’appelle **geometry** instance essaie de déterminer la distance la plus courte.  
+ Deuxième instance **geometry** dont l’instance **geometry** appelante tente de déterminer la distance la plus courte.  
   
 ## <a name="return-types"></a>Types de retour  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]type de retour : **geometry**  
+ Type de retour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] : **geometry**  
   
  Type de retour CLR : **SqlGeometry**  
   
-## <a name="remarks"></a>Notes  
- La méthode retourne un **LineString** instance avec les points de terminaison sur les bordures des deux planifications **geometry** instances comparées. La longueur de la **LineString** retournée est égale à la distance la plus courte entre les deux **geometry** instances. Vide **LineString** instance est retournée lorsque les deux **geometry** instances croisent.  
+## <a name="remarks"></a>Notes   
+ La méthode retourne une instance **LineString** avec des points de terminaison situés sur les bordures des deux instances **geometry** sans intersection qui sont comparées. La longueur du **LineString** retourné est égale à la distance la plus courte entre les deux instances **geometry**. Une instance **LineString** vide est retournée quand les deux instances **geometry** se croisent.  
   
 ## <a name="examples"></a>Exemples  
   
@@ -72,8 +72,8 @@ Retourne un **LineString** instance avec deux points qui représentent la distan
  SELECT @g1.ShortestLineTo(@g2).ToString();
  ```  
   
-## <a name="see-also"></a>Voir aussi  
- [ShortestLineTo &#40; Type de données geography &#41;](../../t-sql/spatial-geography/shortestlineto-geography-data-type.md)  
+## <a name="see-also"></a> Voir aussi  
+ [ShortestLineTo &#40;type de données geography&#41;](../../t-sql/spatial-geography/shortestlineto-geography-data-type.md)  
   
   
 

@@ -1,5 +1,5 @@
 ---
-title: "Null (Type de données geometry) | Documents Microsoft"
+title: "Null (type de données geometry) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -33,7 +33,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="null-geometry-data-type"></a>Null (type de données geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Une propriété en lecture seule qui fournit une instance null de la **geometry** type.
+Propriété en lecture seule qui fournit une instance ayant une valeur Null du type **geometry**.
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -45,11 +45,11 @@ Null
 ## <a name="arguments"></a>Arguments  
   
 ## <a name="return-types"></a>Types de retour  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]type : **geometry**  
+ Type [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] : **geometry**  
   
  Type CLR : **SqlGeometry**  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
   
 ## <a name="examples"></a>Exemples  
  L'exemple suivant extrait une instance `geometry` Null.  
@@ -60,7 +60,7 @@ SET @g = geometry::[Null];
 SELECT @g  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Méthodes geometry statiques étendues](../../t-sql/spatial-geometry/extended-static-geometry-methods.md)  
   
   

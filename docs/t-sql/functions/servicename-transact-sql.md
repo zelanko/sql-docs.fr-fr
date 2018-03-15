@@ -1,5 +1,5 @@
 ---
-title: '@@SERVICENAME (Transact-SQL) | Documents Microsoft'
+title: '@@SERVICENAME (Transact-SQL) | Microsoft Docs'
 ms.custom: 
 ms.date: 09/18/2017
 ms.prod: sql-non-specified
@@ -33,10 +33,10 @@ ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="x40x40servicename-transact-sql"></a>& #x 40 ; & #x 40 ; SERVICENAME (Transact-SQL)
+# <a name="x40x40servicename-transact-sql"></a>&#x40;&#x40;SERVICENAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Renvoie le nom de la clé de registre sous laquelle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est en cours d'exécution. @@SERVICENAME renvoie 'MSSQLSERVER' Si l’instance actuelle est l’instance par défaut ; cette fonction retourne le nom d’instance si l’instance actuelle est une instance nommée.  
+  Renvoie le nom de la clé de registre sous laquelle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est en cours d'exécution. @@SERVICENAME renvoie 'MSSQLSERVER' si l’instance en cours est l’instance par défaut ; cette fonction renvoie le nom de l’instance si l’instance en cours est une instance nommée.  
   
  ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -49,7 +49,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="return-types"></a>Types de retour  
  **nvarchar**  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] s'exécute en tant que service nommé MSSQLServer.  
   
 ## <a name="examples"></a>Exemples  
@@ -67,7 +67,7 @@ Service Name
 MSSQLSERVER                     
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Fonctions de configuration &#40;Transact-SQL&#41;](../../t-sql/functions/configuration-functions-transact-sql.md)   
  [Gérer les services du moteur de base de données](../../database-engine/configure-windows/manage-the-database-engine-services.md)  
   

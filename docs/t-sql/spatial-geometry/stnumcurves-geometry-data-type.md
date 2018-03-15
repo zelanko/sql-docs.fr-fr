@@ -1,5 +1,5 @@
 ---
-title: "STNumCurves (Type de données geometry) | Documents Microsoft"
+title: "STNumCurves (type de données geometry) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -31,7 +31,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stnumcurves-geometry-data-type"></a>STNumCurves (type de données geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Cette méthode retourne le nombre de courbes dans une **geometry** instance lorsque l’instance est un type de données spatiales unidimensionnelles. Types de données spatiales unidimensionnelles incluent **LineString**, **CircularString**, et **CompoundCurve**. `STNumCurves`() fonctionne uniquement sur les types simples ; Il ne fonctionne pas avec **geometry** comme des collections **MultiLineString**.
+Cette méthode retourne le nombre de courbes d’une instance **geometry** quand l’instance est d’un type de données spatiales unidimensionnel. Les types de données spatiales unidimensionnels incluent **LineString**, **CircularString** et **CompoundCurve**. `STNumCurves`() fonctionne uniquement sur les types simples. Il ne fonctionne pas avec les collections **geometry** telles que **MultiLineString**.
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -41,12 +41,12 @@ Cette méthode retourne le nombre de courbes dans une **geometry** instance lors
 ```  
   
 ## <a name="return-types"></a>Types de retour  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]type de retour : **geometry**  
+ Type de retour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] : **geometry**  
   
  Type de retour CLR : **SqlGeometry**  
   
-## <a name="remarks"></a>Notes  
- Unidimensionnel vide **geometry** instance retourne 0. **NULL** est retourné lorsque la **geometry** instance n’est pas une instance unidimensionnelle ou est une instance non initialisée.  
+## <a name="remarks"></a>Notes   
+ Une instance **geometry** unidimensionnelle vide retourne 0. **NULL** est retourné quand l’instance **geometry** n’est pas une instance unidimensionnelle ou une instance initialisée.  
   
 ## <a name="examples"></a>Exemples  
   
@@ -68,7 +68,7 @@ Cette méthode retourne le nombre de courbes dans une **geometry** instance lors
  SELECT @g.STNumCurves();
  ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Présentation des types de données spatiales](../../relational-databases/spatial/spatial-data-types-overview.md)   
  [Méthodes OGC sur des instances geography](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   

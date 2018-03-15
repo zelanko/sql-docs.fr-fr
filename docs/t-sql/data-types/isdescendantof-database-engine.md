@@ -1,5 +1,5 @@
 ---
-title: "IsDescendantOf (moteur de base de données) | Documents Microsoft"
+title: "IsDescendantOf (moteur de base de données) | Microsoft Docs"
 ms.custom: 
 ms.date: 7/22/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="isdescendantof-database-engine"></a>IsDescendantOf (moteur de base de données)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Retourne true si *cela* est un descendant de parent.
+Retourne la valeur True si *this* est un descendant de parent.
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -50,14 +50,14 @@ SqlHierarchyId IsDescendantOf (SqlHierarchyId parent )
   
 ## <a name="arguments"></a>Arguments  
 *parent*  
-Le **hierarchyid** nœud pour lequel le test IsDescendantOf doit être effectué.
+Nœud **hierarchyid** pour lequel le test IsDescendantOf doit être effectué.
   
 ## <a name="return-types"></a>Types de retour  
-**SQL Server de type de retour : bits**
+**Type de retour SQL Server : bit**
   
-**CLR de type de retour : SqlBoolean**
+**Type de retour CLR : SqlBoolean**
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
 Retourne la valeur true pour tous les nœuds de la sous-arborescence dont la racine est le parent, et false pour tous les autres nœuds.
   
 Le parent est considéré comme étant son propre descendant.

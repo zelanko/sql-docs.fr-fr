@@ -1,5 +1,5 @@
 ---
-title: "&lt;= (Inférieur ou égal à) (Transact-SQL) | Documents Microsoft"
+title: "&lt;= (Inférieur ou égal à) (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/13/2017
 ms.prod: sql-non-specified
@@ -53,14 +53,14 @@ expression <= expression
   
 ## <a name="arguments"></a>Arguments  
  *expression*  
- Valide [expression](../../t-sql/language-elements/expressions-transact-sql.md). Les deux expressions doivent avoir des types de données implicitement convertibles. La conversion dépend des règles de [priorité des types de données](../../t-sql/data-types/data-type-precedence-transact-sql.md).  
+ Toute [expression](../../t-sql/language-elements/expressions-transact-sql.md) valide. Les deux expressions doivent avoir des types de données implicitement convertibles. La conversion dépend des règles de [priorité des types de données](../../t-sql/data-types/data-type-precedence-transact-sql.md).  
   
 ## <a name="result-types"></a>Types des résultats  
  **Booléen**  
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-using--in-a-simple-query"></a>A. À l’aide de < = dans une requête simple  
+### <a name="a-using--in-a-simple-query"></a>A. Utilisation de <= dans une requête simple  
  L'exemple suivant retourne toutes les lignes de la table `HumanResources.Department` qui ont une valeur dans `DepartmentID` inférieure ou égale à la valeur 3.  
   
 ```  
@@ -86,8 +86,8 @@ DepartmentID Name
   
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Types de données &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
- [Operators &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)  
+ [Opérateurs &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)  
   
   

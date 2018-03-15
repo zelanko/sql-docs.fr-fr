@@ -1,5 +1,5 @@
 ---
-title: SUSER_NAME (Transact-SQL) | Documents Microsoft
+title: SUSER_NAME (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -52,16 +52,16 @@ SUSER_NAME ( [ server_user_id ] )
 ```  
   
 ## <a name="arguments"></a>Arguments  
- *id_utilisateur_serveur*  
- Correspond au numéro d'identification de la connexion de l'utilisateur. *id_utilisateur_serveur*, qui est facultatif, est **int**. *id_utilisateur_serveur* peut être le numéro d’identification de n’importe quel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connexion ou [!INCLUDE[msCoName](../../includes/msconame-md.md)] utilisateur ou groupe qui a l’autorisation de se connecter à une instance de Windows [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si *id_utilisateur_serveur* est ne pas spécifié, le nom d’identification de l’utilisateur actuel est retourné. Si le paramètre contient le mot NULL, retourne NULL.  
+ *server_user_id*  
+ Correspond au numéro d'identification de la connexion de l'utilisateur. *server_user_id*, facultatif, est de type **int**. *server_user_id* peut être le numéro d’identification d’une connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou d’un utilisateur ou d’un groupe Windows [!INCLUDE[msCoName](../../includes/msconame-md.md)] quelconque qui a l’autorisation de se connecter à une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si *server_user_id* n’est pas spécifié, le nom d’identification de connexion de l’utilisateur actuel est renvoyé. Si le paramètre contient le mot NULL, retourne NULL.  
   
 ## <a name="return-types"></a>Types de retour  
- **nvarchar (128)**  
+ **nvarchar(128)**  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0, le numéro d'identification de sécurité (SID, Security Identification Number) remplace le numéro d'identification de l'utilisateur du serveur (SUID, Server User Identification Number).  
   
- SUSER_NAME retourne un nom de connexion uniquement pour une connexion qui a une entrée dans le **syslogins** (table système).  
+ La fonction SUSER_NAME renvoie un nom de connexion seulement pour une connexion comportant une entrée dans la table système **syslogins**.  
   
  SUSER_NAME peut être utilisée dans la liste de sélection, au sein d'une clause WHERE et n'importe où une expression est autorisée, et doit toujours être suivie par des parenthèses (même si aucun paramètre n'est indiqué).  
   
@@ -72,8 +72,8 @@ SUSER_NAME ( [ server_user_id ] )
 SELECT SUSER_NAME(1);  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- [SUSER_ID &#40; Transact-SQL &#41;](../../t-sql/functions/suser-id-transact-sql.md)   
+## <a name="see-also"></a> Voir aussi  
+ [SUSER_ID &#40;Transact-SQL&#41;](../../t-sql/functions/suser-id-transact-sql.md)   
  [Principaux &#40;moteur de base de données&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)  
   
   

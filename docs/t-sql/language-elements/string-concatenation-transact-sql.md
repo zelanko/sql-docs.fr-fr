@@ -1,5 +1,5 @@
 ---
-title: "+ (Concaténation de chaînes) (Transact-SQL) | Documents Microsoft"
+title: "+ (Concaténation de chaînes) (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 12/06/2016
 ms.prod: sql-non-specified
@@ -37,7 +37,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="-string-concatenation-transact-sql"></a>+ (Concaténation de chaîne) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Opérateur dans une expression de chaîne qui concatène des chaînes binaires ou des chaînes de deux caractères ou plus, des colonnes ou une combinaison de chaînes et de noms de colonnes, pour former une seule expression (un opérateur chaîne).  Par exemple `SELECT 'book'+'case';` retourne `bookcase`.
+  Opérateur dans une expression de chaîne qui concatène des chaînes binaires ou des chaînes de deux caractères ou plus, des colonnes ou une combinaison de chaînes et de noms de colonnes, pour former une seule expression (un opérateur chaîne).  L’exemple `SELECT 'book'+'case';` retourne `bookcase`.
   
  ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -49,9 +49,9 @@ expression + expression
   
 ## <a name="arguments"></a>Arguments  
  *expression*  
- Valide [expression](../../t-sql/language-elements/expressions-transact-sql.md) de tout des données de type de caractère ou de la catégorie de type de données binaires, sauf le **image**, **ntext**, ou **texte** des types de données. Les deux expressions doivent être de même type de données, ou l'une des expressions doit pouvoir être implicitement convertie dans le type de données de l'autre expression.  
+ Toute [Expression](../../t-sql/language-elements/expressions-transact-sql.md) valide de tout type de données dans la catégorie caractères et binaire, à l’exception des types de données **image**, **ntext** ou **text**. Les deux expressions doivent être de même type de données, ou l'une des expressions doit pouvoir être implicitement convertie dans le type de données de l'autre expression.  
   
- Pour concaténer des chaînes binaires et tout caractère compris entre ces chaînes, il faut utiliser une conversion explicite en données de type caractère. L’exemple suivant montre quand `CONVERT`, ou `CAST`, doit être utilisé avec une concaténation binaire et à quel moment `CONVERT`, ou `CAST`, ne doit pas être utilisé.  
+ Pour concaténer des chaînes binaires et tout caractère compris entre ces chaînes, il faut utiliser une conversion explicite en données de type caractère. L’exemple suivant illustre dans quel cas utiliser `CONVERT` ou `CAST` avec une concaténation binaire et dans quel cas il n’est pas nécessaire d’utiliser `CONVERT` ou `CAST`.  
   
 ```  
 DECLARE @mybin1 varbinary(5), @mybin2 varbinary(5)  
@@ -73,8 +73,8 @@ SELECT CAST(@mybin1 AS varchar(5)) + ' '
 ## <a name="result-types"></a>Types des résultats  
  Retourne le type de données de l'argument dont la priorité est la plus élevée. Pour plus d’informations, consultez [Priorités des types de données &#40;Transact-SQL&#41;](../../t-sql/data-types/data-type-precedence-transact-sql.md).  
   
-## <a name="remarks"></a>Notes  
- L'opérateur + (Concaténation de chaîne) se comporte différemment selon qu'il est utilisé avec une chaîne vide et de longueur nulle ou avec des valeurs NULL. Une chaîne de caractères de longueur nulle peut être spécifiée par deux guillemets simples sans caractères à l'intérieur. Une chaîne binaire de longueur nulle peut être spécifiée par 0x sans aucune valeur d'octet dans la constante hexadécimale. La concaténation d'une chaîne de longueur nulle concatène toujours deux chaînes spécifiées. Lorsque vous opérez avec des chaînes dont la valeur est NULL, le résultat de la concaténation est fonction des paramètres de la session. De même que pour les opérations arithmétiques réalisées sur des valeurs NULL, l'ajout d'une valeur NULL à une valeur connue se solde généralement par une valeur inconnue. Une concaténation de chaînes effectuée avec une valeur NULL doit produire un résultat du même type. Toutefois, vous pouvez modifier ce comportement en modifiant le paramètre de `CONCAT_NULL_YIELDS_NULL` pour la session active. Pour plus d’informations, consultez [SET CONCAT_NULL_YIELDS_NULL &#40;Transact-SQL&#41;](../../t-sql/statements/set-concat-null-yields-null-transact-sql.md).  
+## <a name="remarks"></a>Notes   
+ L'opérateur + (Concaténation de chaîne) se comporte différemment selon qu'il est utilisé avec une chaîne vide et de longueur nulle ou avec des valeurs NULL. Une chaîne de caractères de longueur nulle peut être spécifiée par deux guillemets simples sans caractères à l'intérieur. Une chaîne binaire de longueur nulle peut être spécifiée par 0x sans aucune valeur d'octet dans la constante hexadécimale. La concaténation d'une chaîne de longueur nulle concatène toujours deux chaînes spécifiées. Lorsque vous opérez avec des chaînes dont la valeur est NULL, le résultat de la concaténation est fonction des paramètres de la session. De même que pour les opérations arithmétiques réalisées sur des valeurs NULL, l'ajout d'une valeur NULL à une valeur connue se solde généralement par une valeur inconnue. Une concaténation de chaînes effectuée avec une valeur NULL doit produire un résultat du même type. Vous pouvez toutefois modifier ce comportement en changeant le paramètre de `CONCAT_NULL_YIELDS_NULL` pour la session actuelle. Pour plus d’informations, consultez [SET CONCAT_NULL_YIELDS_NULL &#40;Transact-SQL&#41;](../../t-sql/statements/set-concat-null-yields-null-transact-sql.md).  
   
  Si le résultat de la concaténation de chaînes dépasse la limite des 8 000 octets, il sera tronqué. Néanmoins, si au moins une des chaînes concaténées est de type valeur élevée, le résultat n'est pas tronqué.  
   
@@ -92,7 +92,7 @@ ORDER BY LastName ASC, FirstName ASC;
 ```  
   
 ### <a name="b-combining-numeric-and-date-data-types"></a>B. Combinaison des types de données numérique et date  
- L’exemple suivant utilise le `CONVERT` (fonction) pour concaténer **numérique** et **date** des types de données.  
+ L’exemple suivant utilise la fonction `CONVERT` pour concaténer des types de données **numeric** et **date**.  
   
 ```  
 -- Uses AdventureWorks  
@@ -138,8 +138,8 @@ GO
  (3 row(s) affected)
  ```  
  
-### <a name="d-using-large-strings-in-concatenation"></a>D. À l’aide de chaînes de grande taille dans la concaténation
-L’exemple suivant concatène plusieurs chaînes pour former une chaîne longue et tente ensuite de calculer la longueur de la chaîne finale. La longueur finale du jeu de résultats est 16000, car l’expression d’évaluation commence gauche qui plus est, @x + @z + @y = > (@x + @z) + @y. Dans ce cas, le résultat de (@x + @z) est tronquée à 8 000 octets, puis @y est ajouté au jeu de résultats, ce qui rend la longueur de la chaîne finale 16000. Étant donné que @y est une chaîne de type de valeur élevée, la troncation n’a pas lieu.
+### <a name="d-using-large-strings-in-concatenation"></a>D. Utilisation de longues chaînes dans la concaténation
+L’exemple suivant concatène plusieurs chaînes pour former une seule et même longue chaîne, puis essaie de calculer la longueur de la chaîne finale. La longueur finale du jeu de résultats est 16 000, car l’évaluation de l’expression commence à gauche, autrement dit, @x + @z + @y = > (@x + @z) + @y. Dans cet exemple, le résultat de (@x + @z) est tronqué à 8 000 octets, puis @y est ajouté au jeu de résultats, ce qui permet d’obtenir une longueur de chaîne finale de 16 000. Étant donné que @y est une chaîne de type de valeur élevée, la troncation n’a pas lieu.
 
 ```
 DECLARE @x varchar(8000) = replicate('x', 8000)
@@ -159,10 +159,10 @@ GO
   
  (1 row(s) affected)
  ```  
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemples : [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] et[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemples : [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] et [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="e-using-multiple-string-concatenation"></a>E. Utilisation de la concaténation de plusieurs chaînes  
- L’exemple suivant concatène plusieurs chaînes pour former une chaîne longue pour afficher le nom et l’initiale des vice-présidents au sein d’une base de données exemple. Le nom de famille est suivi d'une virgule ; l'initiale est suivie d'un point.  
+ L’exemple suivant concatène plusieurs chaînes pour constituer une seule longue chaîne permettant d’afficher le nom de famille et la première initiale des vice-présidents issus d’un exemple de base de données. Le nom de famille est suivi d'une virgule ; l'initiale est suivie d'un point.  
   
 ```  
 -- Uses AdventureWorks  
@@ -183,15 +183,15 @@ Hamilton, J.       Vice President of Production
 Welcker, B.        Vice President of Sales  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- [+= &#40; Assignation de concaténation de chaîne &#41; &#40; Transact-SQL &#41;](../../t-sql/language-elements/string-concatenation-equal-transact-sql.md)   
+## <a name="see-also"></a> Voir aussi  
+ [+= &#40;Affectation après concaténation de chaînes&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/string-concatenation-equal-transact-sql.md)   
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [CAST et CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)   
- [Conversion de Type de données &#40; moteur de base de données &#41;](../../t-sql/data-types/data-type-conversion-database-engine.md)   
+ [Conversion de type de données &#40;moteur de base de données&#41;](../../t-sql/data-types/data-type-conversion-database-engine.md)   
  [Types de données &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
  [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
  [Fonctions intégrées &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)   
- [Operators &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
+ [Opérateurs &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [Instructions SET &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)   
   

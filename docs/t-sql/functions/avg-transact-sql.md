@@ -1,5 +1,5 @@
 ---
-title: AVG (Transact-SQL) | Documents Microsoft
+title: AVG (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
@@ -57,26 +57,26 @@ DISTINCT
 Spécifie que la fonction AVG doit uniquement être appliquée à chaque instance unique d'une valeur, quel que soit le nombre d'occurrences de la valeur.
   
 *expression*  
-Est un [expression](../../t-sql/language-elements/expressions-transact-sql.md) de la catégorie, de type de données numérique approximatives ou à l’exception de la **bits** type de données. Les fonctions d'agrégation et les sous-requêtes ne sont pas autorisées.
+[Expression](../../t-sql/language-elements/expressions-transact-sql.md) de la catégorie de type de données numérique exacte ou approximative, à l’exception du type de données **bit**. Les fonctions d'agrégation et les sous-requêtes ne sont pas autorisées.
   
-SUR **(** [ *partition_by_clause* ] *order_by_clause***)**  
-*partition_by_clause* divise le jeu de résultats généré par la clause FROM en partitions auxquelles la fonction est appliquée. S'il n'est pas spécifié, la fonction gère toutes les lignes du jeu de résultats de la requête en un seul groupe. *order_by_clause* détermine l’ordre logique dans lequel l’opération est effectuée. *order_by_clause* est requis. Pour plus d’informations, consultez [la Clause OVER &#40; Transact-SQL &#41; ](../../t-sql/queries/select-over-clause-transact-sql.md).
+OVER **(** [ *partition_by_clause* ] *order_by_clause***)**  
+*partition_by_clause* divise le jeu de résultats généré par la clause FROM en partitions auxquelles la fonction est appliquée. S'il n'est pas spécifié, la fonction gère toutes les lignes du jeu de résultats de la requête en un seul groupe. *order_by_clause* détermine l’ordre logique dans lequel l’opération est effectuée. *order_by_clause* est requis. Pour plus d’informations, consultez [OVER, clause &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md).
   
 ## <a name="return-types"></a>Types de retour
-Le type de retour est déterminé par le type de résultat de le *expression*.
+Le type de retour est déterminé par le type du résultat évalué de l’*expression*.
   
 |Résultat de l'expression|Type de retour|  
 |---|---|
-|**tinyint**|**int**|  
-|**smallint**|**int**|  
-|**int**|**int**|  
+|**tinyint**|**Int**|  
+|**smallint**|**Int**|  
+|**Int**|**Int**|  
 |**bigint**|**bigint**|  
-|**décimal** catégorie (p, s)|**Decimal (38, s)** divisé par **décimale (10, 0)**|  
-|**Money** et **smallmoney** catégorie|**money**|  
-|**float** et **réel** catégorie|**float**|  
+|Catégorie **decimal** (p, s)|**decimal(38, s)** divisé par **decimal(10, 0)**|  
+|Catégorie **money** et **smallmoney**|**money**|  
+|Catégorie **float** et **real**|**float**|  
   
-## <a name="remarks"></a>Notes  
-Si le type de données de *expression* est un alias de données type, le type de retour est également du type de données alias. Toutefois, si le type de données de base de type de données alias est promu, par exemple à partir de **tinyint** à **int**, la valeur de retour de données promues n’est pas le type de données d’alias et de type.
+## <a name="remarks"></a>Notes   
+Si le type de données d’*expression* est un type de données alias, le type de retour est également du type de données alias. Cependant, si le type de données de base du type de données alias est promu, par exemple de **tinyint** à **int**, la valeur renvoyée est du type de données promu et non pas du type de données alias.
   
 AVG() calcule la moyenne d'un jeu de valeurs en divisant la somme de ces valeurs par le nombre de valeurs non nulles. Si la somme dépasse la valeur maximale pour le type de données de la valeur de retour, une erreur est renvoyée.
   
@@ -240,7 +240,7 @@ BusinessEntityID TerritoryID SalesYear   SalesYTD             MovingAvg         
 ```  
   
 ## <a name="see-also"></a>Voir aussi
-[Fonctions d’agrégation &#40; Transact-SQL &#41;](../../t-sql/functions/aggregate-functions-transact-sql.md)  
-[SUR la clause for &#40; Transact-SQL &#41;](../../t-sql/queries/select-over-clause-transact-sql.md)
+[Fonctions d’agrégation &#40;Transact-SQL&#41;](../../t-sql/functions/aggregate-functions-transact-sql.md)  
+[OVER, clause &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)
   
   

@@ -1,5 +1,5 @@
 ---
-title: GET CONVERSATION GROUP (Transact-SQL) | Documents Microsoft
+title: GET CONVERSATION GROUP (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/26/2017
 ms.prod: sql-non-specified
@@ -72,21 +72,21 @@ ms.lasthandoff: 01/25/2018
  Spécifie la file d'attente à partir de laquelle le groupe de conversations doit être extrait.  
   
  *database_name*  
- Nom de la base de données qui contient la file d'attente à partir de laquelle le groupe de conversations doit être extrait. Lorsqu’aucun *nom_base_de_données* est fourni, les valeurs par défaut pour la base de données actuelle.  
+ Nom de la base de données qui contient la file d'attente à partir de laquelle le groupe de conversations doit être extrait. Quand aucun argument *database_name* n’est fourni, la base de données active est utilisée par défaut.  
   
  *schema_name*  
- Nom du schéma auquel appartient la file d'attente à partir de laquelle le groupe de conversations doit être extrait. Lorsqu’aucun *schema_name* est fourni, les valeurs par défaut pour le schéma par défaut pour l’utilisateur actuel.  
+ Nom du schéma auquel appartient la file d'attente à partir de laquelle le groupe de conversations doit être extrait. Quand aucun argument *schema_name* n’est fourni, le schéma par défaut de l’utilisateur actif est utilisé par défaut.  
   
  *queue_name*  
  Nom de la file d'attente à partir de laquelle le groupe de conversations doit être extrait.  
   
- Délai d’attente *délai d’attente*  
- Spécifie la durée en millisecondes pendant laquelle Service Broker attend l'arrivée d'un message dans la file d'attente. Cette clause peut uniquement être utilisée avec la clause WAITFOR. Si une instruction utilisant WAITFOR ne comprend pas cette clause ou *délai d’attente* est -1, le délai d’attente est illimité. Si le délai d’attente expire, GET CONVERSATION GROUP affecte le  *@conversation_group_id*  variable avec la valeur NULL.  
+ TIMEOUT *timeout*  
+ Spécifie la durée en millisecondes pendant laquelle Service Broker attend l'arrivée d'un message dans la file d'attente. Cette clause ne peut être utilisée qu’avec la clause WAITFOR. Si une instruction utilisant WAITFOR ne comprend pas cette clause ou si la valeur de *timeout* est -1, le temps d’attente est illimité. Si le délai expire, GET CONVERSATION GROUP affecte à la variable *@conversation_group_id* la valeur NULL.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
   
 > [!IMPORTANT]  
->  Si l’instruction GET CONVERSATION GROUP n’est pas la première instruction dans un lot ou une procédure stockée, l’instruction précédente doit se terminer par un point-virgule (**;**), le [!INCLUDE[tsql](../../includes/tsql-md.md)] terminateur d’instruction.  
+>  Si l’instruction GET CONVERSATION GROUP n’est pas la première d’un lot ou d’une procédure stockée, l’instruction qui précède doit se terminer par un point-virgule (**;**), le terminateur d’instruction [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  Si l'instruction GET CONVERSATION GROUP spécifie une file d'attente indisponible, cette instruction échoue et une erreur [!INCLUDE[tsql](../../includes/tsql-md.md)] se produit.  
   
@@ -143,8 +143,8 @@ GET CONVERSATION GROUP @conversation_group_id
 FROM AdventureWorks.dbo.ExpenseQueue ;  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- [BEGIN DIALOG CONVERSATION &#40; Transact-SQL &#41;](../../t-sql/statements/begin-dialog-conversation-transact-sql.md)   
+## <a name="see-also"></a> Voir aussi  
+ [BEGIN DIALOG CONVERSATION &#40;Transact-SQL&#41;](../../t-sql/statements/begin-dialog-conversation-transact-sql.md)   
  [MOVE CONVERSATION &#40;Transact-SQL&#41;](../../t-sql/statements/move-conversation-transact-sql.md)  
   
   

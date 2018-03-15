@@ -1,5 +1,5 @@
 ---
-title: RESPONSABLE (Transact-SQL) | Documents Microsoft
+title: LEAD (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 11/09/2017
 ms.prod: sql-non-specified
@@ -35,9 +35,9 @@ ms.lasthandoff: 01/02/2018
 # <a name="lead-transact-sql"></a>LEAD (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
-  Accède aux données à partir d’une ligne ultérieure dans le même jeu de résultats sans l’utilisation d’une jointure réflexive partant [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. LEAD permet d'accéder à une ligne à un décalage physique donné qui suit la ligne actuelle. Utilisez cette fonction analytique dans une instruction SELECT pour comparer des valeurs sur la ligne actuelle avec des valeurs sur une ligne ultérieure.  
+  Accède aux données à partir d’une ligne ultérieure dans le même jeu de résultats sans recourir à une jointure réflexive, à compter de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. LEAD permet d'accéder à une ligne à un décalage physique donné qui suit la ligne actuelle. Utilisez cette fonction analytique dans une instruction SELECT pour comparer des valeurs sur la ligne actuelle avec des valeurs sur une ligne ultérieure.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "icône lien de rubrique") [Conventions de syntaxe Transact-SQL &#40; Transact-SQL &#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône Lien de rubrique") [Conventions de la syntaxe Transact-SQL &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -50,24 +50,24 @@ LEAD ( scalar_expression [ ,offset ] , [ default ] )
  *scalar_expression*  
  Valeur à retourner en fonction du décalage spécifié. Il s'agit d'une expression de tout type qui retourne une valeur (scalaire) unique. *scalar_expression* ne peut pas être une fonction analytique.  
   
- *décalage*  
- Nombre de lignes en avant de la ligne actuelle à partir de laquelle obtenir une valeur. Si cet argument n'est pas spécifié, la valeur par défaut est 1. *décalage* peut être une colonne, une sous-requête ou toute autre expression qui correspond à un entier positif ou peut être converti implicitement en **bigint**. *décalage* ne peut pas être une valeur négative ou une fonction analytique.  
+ *offset*  
+ Nombre de lignes en avant de la ligne actuelle à partir de laquelle obtenir une valeur. Si cet argument n'est pas spécifié, la valeur par défaut est 1. *offset* peut être une colonne, une sous-requête ou une autre expression qui aboutit à un entier positif ou peut être converti en **bigint**. *offset* ne peut pas être une valeur négative ou une fonction analytique.  
   
- *par défaut*  
- La valeur à retourner lorsque *scalar_expression* à *offset* a la valeur NULL. Si aucune valeur par défaut n'est spécifiée, la valeur NULL est renvoyée. *par défaut* peut être une colonne, une sous-requête ou toute autre expression, mais il ne peut pas être une fonction analytique. *par défaut* doit être compatible avec *scalar_expression*.  
+ *default*  
+ Valeur à renvoyer lorsque *scalar_expression* pour *offset* a la valeur NULL. Si aucune valeur par défaut n'est spécifiée, la valeur NULL est renvoyée. *default* peut être une colonne, une sous-requête ou une autre expression, mais ne peut pas être une fonction analytique. *default* doit être compatible en matière de type avec *scalar_expression*.  
   
- SUR **(** [ *partition_by_clause* ] *order_by_clause***)**  
- *partition_by_clause* divise le jeu de résultats généré par la clause FROM en partitions auxquelles la fonction est appliquée. S'il n'est pas spécifié, la fonction gère toutes les lignes du jeu de résultats de la requête en un seul groupe. *order_by_clause* détermine l’ordre des données avant que la fonction est appliquée. Lorsque *partition_by_clause* est spécifié, il détermine l’ordre des données dans chaque partition. Le *order_by_clause* est requis. Pour plus d’informations, consultez [la Clause OVER &#40; Transact-SQL &#41; ](../../t-sql/queries/select-over-clause-transact-sql.md).  
+ OVER **(** [ *partition_by_clause* ] *order_by_clause***)**  
+ *partition_by_clause* divise le jeu de résultats généré par la clause FROM en partitions auxquelles la fonction est appliquée. S'il n'est pas spécifié, la fonction gère toutes les lignes du jeu de résultats de la requête en un seul groupe. *order_by_clause* détermine l’ordre des données avant que la fonction soit appliquée. Quand *partition_by_clause* est spécifié, il détermine l’ordre des données dans chaque partition. *order_by_clause* est requis. Pour plus d’informations, consultez [OVER, clause &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md).  
   
 ## <a name="return-types"></a>Types de retour  
- Le type de données spécifié *scalar_expression*. Valeur NULL est retournée si *scalar_expression* est nullable ou *par défaut* est définie sur NULL.  
+ Type de données de l’argument *scalar_expression* spécifié. La valeur NULL est renvoyée si *scalar_expression* est de type nullable ou si *default* est défini sur NULL.  
   
  LEAD n'est pas déterministe. Pour plus d’informations, consultez [Fonctions déterministes et non déterministes](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md).  
   
 ## <a name="examples"></a>Exemples  
   
 ### <a name="a-compare-values-between-years"></a>A. Comparer des valeurs entre des années  
- La requête utilise la fonction LEAD pour retourner la différence entre des quotas de ventes pour un employé spécifique sur plusieurs années. Notez que, car aucune valeur de tête n’est disponible pour la dernière ligne, la valeur par défaut de zéro (0) est retournée.  
+ La requête utilise la fonction LEAD pour retourner la différence entre des quotas de ventes pour un employé spécifique sur plusieurs années. Notez que la valeur par défaut zéro (0) est renvoyée en raison de l’absence d’une valeur de tête pour la dernière ligne.  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -143,10 +143,10 @@ b           c           i
 1           5           -2  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemples : [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] et[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemples : [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] et [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="d-compare-values-between-quarters"></a>D: comparer des valeurs entre les trimestres  
- L’exemple suivant illustre la fonction LEAD. La requête obtient la différence entre les valeurs de quota de ventes pour un employé spécifique sur trimestres calendaires suivants. Notez que, comme il n’existe aucune valeur de prospect après la dernière ligne, la valeur par défaut de zéro (0) est utilisée.  
+### <a name="d-compare-values-between-quarters"></a>D. Comparer des valeurs entre des trimestres  
+ L’exemple suivant illustre la fonction LEAD. La requête obtient la différence entre les valeurs de quota de ventes pour un employé spécifique sur des trimestres calendaires consécutifs. Notez que la valeur par défaut zéro (0) est renvoyée en raison de l’absence de valeur de tête disponible après la dernière ligne.  
   
 ```sql  
 -- Uses AdventureWorks  
@@ -172,8 +172,8 @@ Year Quarter  SalesQuota  NextQuota  Diff
 2002 4       154000.0000      0.0000  154000.0000
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- [Décalage &#40; Transact-SQL &#41;](../../t-sql/functions/lag-transact-sql.md)  
+## <a name="see-also"></a> Voir aussi  
+ [LAG &#40;Transact-SQL&#41;](../../t-sql/functions/lag-transact-sql.md)  
   
   
 

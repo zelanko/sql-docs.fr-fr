@@ -1,4 +1,4 @@
-﻿---
+---
 title: Installer les outils de ligne de commande de SQL Server sur Linux | Documents Microsoft
 description: "Cet article décrit comment installer les outils SQL Server sur Linux."
 author: rothja
@@ -25,10 +25,10 @@ ms.lasthandoff: 02/23/2018
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-Les étapes suivantes installent les outils de ligne de commande, les pilotes ODBC de Microsoft et leurs dépendances. Le package **mssql-tools** contient :
+Les étapes suivantes installent les outils de ligne de commande, les pilotes ODBC de Microsoft et leurs dépendances. Le package **mssql-tools** contient :
 
 - **SQLCMD**: Utilitaire de requêtage en ligne de commande.
-- **bcp**: Utilitaire d’importation/exportation en bloc.
+- **bcp**: utilitaire d’importation et exportation de données en bloc.
 
 Installer les outils pour votre plateforme :
 
@@ -81,15 +81,15 @@ Utilisez les étapes suivantes pour installer le **mssql-tools** sur Red Hat Ent
    >   sudo yum update mssql-tools
    >   ```
 
-1. **Facultatif**: ajouter `/opt/mssql-tools/bin/` à votre variable d’environnement **PATH** dans un interpréteur de commandes bash.
+1. **Facultatif**: ajouter `/opt/mssql-tools/bin/` à votre variable d’environnement **path** dans un interpréteur de commandes bash.
 
-   Pour rendre **sqlcmd/bcp** accessible à partir de l’interface de l’interpréteur de commandes pour les sessions de connexion, modifiez votre **PATH** dans les **~/.bash_profile** fichier avec la commande suivante :
+   Pour rendre **sqlcmd/bcp** accessible à partir de l’interface de l’interpréteur de commandes pour les sessions de connexion, modifiez votre **path** dans le fichier **~/.bash_profile** avec la commande suivante :
 
    ```bash
    echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bash_profile
    ```
 
-   Pour rendre **sqlcmd/bcp** accessible à partir de l’interface de l’interpréteur de commandes pour les sessions/non-connexion interactive, modifiez le **PATH** dans le **~/.bashrc** fichier avec la commande suivante :
+   Pour rendre **sqlcmd/bcp** accessible à partir de l’interface de l’interpréteur de commandes pour les sessions/non-connexion interactive, modifiez le **path** dans le **~/.bashrc** fichier avec la commande suivante :
 
    ```bash
    echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bashrc
@@ -126,15 +126,15 @@ Utilisez les étapes suivantes pour installer le **mssql-tools** sur Ubuntu.
    >   sudo apt-get install mssql-tools 
    >   ```
 
-1. **Facultatif**: ajouter `/opt/mssql-tools/bin/` à votre variable d’environnement **PATH** dans un interpréteur de commandes bash.
+1. **Facultatif**: ajouter `/opt/mssql-tools/bin/` à votre variable d’environnement **path** dans un interpréteur de commandes bash.
 
-   Pour rendre **sqlcmd/bcp** accessible à partir de l’interface de l’interpréteur de commandes pour les sessions de connexion, modifiez votre **PATH** dans les **~/.bash_profile** fichier avec la commande suivante :
+   Pour rendre **sqlcmd/bcp** accessible à partir de l’interface de l’interpréteur de commandes pour les sessions de connexion, modifiez votre **path** dans le fichier **~/.bash_profile** avec la commande suivante :
 
    ```bash
    echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bash_profile
    ```
 
-   Pour rendre **sqlcmd/bcp** accessible à partir de l’interface de l’interpréteur de commandes pour les sessions/non-connexion interactive, modifiez le **PATH** dans le **~/.bashrc** fichier avec la commande suivante :
+   Pour rendre **sqlcmd/bcp** accessible à partir de l’interface de l’interpréteur de commandes pour les sessions/non-connexion interactive, modifiez le **path** dans le **~/.bashrc** fichier avec la commande suivante :
 
    ```bash
    echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bashrc
@@ -165,15 +165,15 @@ Utilisez les étapes suivantes pour installer le **mssql-tools** sur SUSE Linux 
    >   sudo zypper update mssql-tools
    >   ```
 
-1. **Facultatif**: ajouter `/opt/mssql-tools/bin/` à votre variable d’environnement **PATH** dans un interpréteur de commandes bash.
+1. **Facultatif**: ajouter `/opt/mssql-tools/bin/` à votre variable d’environnement **path** dans un interpréteur de commandes bash.
 
-   Pour rendre **sqlcmd/bcp** accessible à partir de l’interface de l’interpréteur de commandes pour les sessions de connexion, modifiez votre **PATH** dans les **~/.bash_profile** fichier avec la commande suivante :
+   Pour rendre **sqlcmd/bcp** accessible à partir de l’interface de l’interpréteur de commandes pour les sessions de connexion, modifiez votre **path** dans le fichier **~/.bash_profile** avec la commande suivante :
 
    ```bash
    echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bash_profile
    ```
 
-   Pour rendre **sqlcmd/bcp** accessible à partir de l’interface de l’interpréteur de commandes pour les sessions/non-connexion interactive, modifiez le **PATH** dans le **~/.bashrc** fichier avec la commande suivante :
+   Pour rendre **sqlcmd/bcp** accessible à partir de l’interface de l’interpréteur de commandes pour les sessions/non-connexion interactive, modifiez le **path** dans le **~/.bashrc** fichier avec la commande suivante :
 
    ```bash
    echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bashrc
@@ -246,7 +246,7 @@ Pour installer manuellement ces packages, procédez comme suit :
     rpm -qpR mssql-tools-14.0.5.0-1.x86_64.rpm
     ```
 
-    Pour les packages Debian, si vous avez accès à des référentiels approuvées contenant ces dépendances, la solution la plus simple consiste à utiliser la commande **apt-get**  :
+    Pour les packages Debian, si vous avez accès à des référentiels approuvés contenant ces dépendances, la solution la plus simple consiste à utiliser la commande **apt-get** :
 
     ```bash
     sudo apt-get -f install
@@ -264,7 +264,7 @@ Pour installer manuellement ces packages, procédez comme suit :
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-Pour obtenir un exemple montrant comment utiliser **sqlcmd** pour se connecter à SQL Server et créer une base de données, consultez une des Démarrages rapides suivants :
+Pour obtenir un exemple montrant comment utiliser **sqlcmd** pour se connecter à SQL Server et créer une base de données, consultez les didacticiels de démarrage rapide suivants :
 
 - [Installer sur Red Hat Enterprise Linux](quickstart-install-connect-red-hat.md)
 - [Installer sur SUSE Linux Enterprise Server](quickstart-install-connect-suse.md)

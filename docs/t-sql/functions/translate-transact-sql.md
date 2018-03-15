@@ -32,7 +32,7 @@ ms.lasthandoff: 01/18/2018
 # <a name="translate-transact-sql"></a>TRANSLATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 
-Retourne la chaîne fournie comme premier argument une fois que des caractères spécifiés dans le deuxième argument sont traduites en un jeu de destination de caractères.
+Renvoie la chaîne fournie comme premier argument une fois que des caractères spécifiés dans le deuxième argument sont traduits en un jeu de caractères de destination.
 
 ## <a name="syntax"></a>Syntaxe   
 ```
@@ -42,29 +42,29 @@ TRANSLATE ( inputString, characters, translations)
 ## <a name="arguments"></a>Arguments   
 
 inputString   
-Est un [expression](../../t-sql/language-elements/expressions-transact-sql.md) de n’importe quel type de caractère (nvarchar, varchar, nchar, char).
+[Expression](../../t-sql/language-elements/expressions-transact-sql.md) de n’importe quel type de caractère (nvarchar, varchar, nchar, char).
 
 caractères   
-Est un [expression](../../t-sql/language-elements/expressions-transact-sql.md) de n’importe quel type de caractère contenant des caractères qui doivent être remplacés.
+[Expression](../../t-sql/language-elements/expressions-transact-sql.md) de n’importe quel type de caractère contenant des caractères à remplacer.
 
 traductions   
-Est un caractère [expression](../../t-sql/language-elements/expressions-transact-sql.md) correspondant au deuxième argument de type et de longueur.
+[Expression](../../t-sql/language-elements/expressions-transact-sql.md) de caractères qui correspond au deuxième argument en type et en longueur.
 
 ## <a name="return-types"></a>Types de retour   
-Retourne une expression de caractères du même type que `inputString` où les caractères du deuxième argument sont remplacés par les caractères correspondants à partir du troisième argument.
+Renvoie une expression de caractères du même type que `inputString` où les caractères du deuxième argument sont remplacés par les caractères correspondants issus du troisième argument.
 
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes    
 
-`TRANSLATE`fonction retournera une erreur si des caractères et des traductions ont des longueurs différentes. `TRANSLATE`fonction doit retourner l’entrée inchangée si les valeurs null sont fournies en tant que caractères ou des arguments de remplacement. Le comportement de la `TRANSLATE` fonction doit être identique à la [remplacer](../../t-sql/functions/replace-transact-sql.md) (fonction).   
+La fonction `TRANSLATE` renvoie une erreur si des caractères et des traductions ont des longueurs différentes. La fonction `TRANSLATE` doit renvoyer l’entrée inchangée si des valeurs NULL sont fournies comme caractères ou arguments de remplacement. Le comportement de la fonction `TRANSLATE` doit être identique à la fonction [REPLACE](../../t-sql/functions/replace-transact-sql.md).   
 
-Le comportement de la `TRANSLATE` fonction est équivalente à l’utilisation de plusieurs `REPLACE` fonctions.
+Le comportement de la fonction `TRANSLATE` est équivalent à l’utilisation de plusieurs fonctions `REPLACE`.
 
-`TRANSLATE`est toujours classement SC prenant en charge.
+`TRANSLATE` est toujours conscient du classement SC.
 
 ## <a name="examples"></a>Exemples   
 
-### <a name="a-replace-square-and-curly-braces-with-regular-braces"></a>A. Remplacez le carré et des accolades régulière entre accolades    
-La requête suivante remplace le carré et des accolades dans la chaîne d’entrée entre parenthèses :
+### <a name="a-replace-square-and-curly-braces-with-regular-braces"></a>A. Remplacer les crochets et les accolades par des parenthèses    
+La requête suivante remplace les crochets et les accolades dans la chaîne d’entrée par des parenthèses :
 ```
 SELECT TRANSLATE('2*[3+4]/{7-2}', '[]{}', '()()');
 ```
@@ -74,11 +74,11 @@ SELECT TRANSLATE('2*[3+4]/{7-2}', '[]{}', '()()');
 ```
 
 >  [!NOTE]
->  Le `TRANSLATE` fonction dans cet exemple est équivalent à mais beaucoup plus simple que l’instruction suivante en utilisant `REPLACE`:`SELECT REPLACE(REPLACE(REPLACE(REPLACE('2*[3+4]/{7-2}','[','('), ']', ')'), '{', '('), '}', ')');` 
+>  La fonction `TRANSLATE` de cet exemple est équivalente à l’instruction suivante utilisant `REPLACE`, mais beaucoup plus simple : `SELECT REPLACE(REPLACE(REPLACE(REPLACE('2*[3+4]/{7-2}','[','('), ']', ')'), '{', '('), '}', ')');` 
 
 
-###  <a name="b-convert-geojson-points-into-wkt"></a>B. Convertir les points GeoJSON WKT    
-GeoJSON est un format d’encodage de diverses structures de données géographiques. Avec la `TRANSLATE` (fonction), les développeurs peuvent facilement convertir les points GeoJSON au format WKT et vice versa. La requête suivante remplace le carré et des accolades dans l’entrée régulière entre accolades :   
+###  <a name="b-convert-geojson-points-into-wkt"></a>B. Convertir les points GeoJSON en WKT    
+GeoJSON est un format d’encodage de diverses structures de données géographiques. Avec la fonction `TRANSLATE`, les développeurs peuvent facilement convertir les points GeoJSON au format WKT et vice versa. La requête suivante remplace les crochets et les accolades dans l’entrée par des parenthèses :   
 ```sql
 SELECT TRANSLATE('[137.4, 72.3]' , '[,]', '( )') AS Point,
     TRANSLATE('(137.4 72.3)' , '( )', '[,]') AS Coordinates;
@@ -92,7 +92,7 @@ SELECT TRANSLATE('[137.4, 72.3]' , '[,]', '( )') AS Point,
 (137.4  72.3) |[137.4,72.3] |
 
 
-## <a name="see-also"></a>Voir aussi
+## <a name="see-also"></a> Voir aussi
  [CONCAT &#40;Transact-SQL&#41;](../../t-sql/functions/concat-transact-sql.md)  
  [CONCAT_WS &#40;Transact-SQL&#41;](../../t-sql/functions/concat-ws-transact-sql.md)  
  [FORMATMESSAGE &#40;Transact-SQL&#41;](../../t-sql/functions/formatmessage-transact-sql.md)  

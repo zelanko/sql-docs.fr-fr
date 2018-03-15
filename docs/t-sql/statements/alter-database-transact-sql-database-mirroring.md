@@ -1,5 +1,5 @@
 ---
-title: "MODIFIER la base de données de base de données mise en miroir (Transact-SQL) | Documents Microsoft"
+title: "Mise en miroir de bases de données ALTER DATABASE (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/17/2017
 ms.prod: sql-non-specified
@@ -31,19 +31,19 @@ ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="alter-database-transact-sql-database-mirroring"></a>ALTER DATABASE (Transact-SQL) base de données mise en miroir 
+# <a name="alter-database-transact-sql-database-mirroring"></a>Mise en miroir de bases de données ALTER DATABASE (Transact-SQL) 
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
     
 > [!NOTE]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]Utilisez [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] à la place.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Utilisez plutôt [!INCLUDE[ssHADR](../../includes/sshadr-md.md)].  
   
- Contrôle la mise en miroir d'une base de données. Les valeurs spécifiées avec les options de mise en miroir de bases de données s'appliquent aux deux copies de la base de données et à l'ensemble de la session de mise en miroir de bases de données. Seul \<database_mirroring_option > est autorisée par instruction ALTER DATABASE.  
+ Contrôle la mise en miroir d'une base de données. Les valeurs spécifiées avec les options de mise en miroir de bases de données s'appliquent aux deux copies de la base de données et à l'ensemble de la session de mise en miroir de bases de données. Une seule \<database_mirroring_option> est autorisée par instruction ALTER DATABASE.  
   
 > [!NOTE]  
->  Nous vous recommandons de configurer de base de données mise en miroir durant les heures creuses, car la configuration peut affecter les performances.  
+>  Nous vous recommandons de configurer la mise en miroir de la base de données pendant les heures creuses car l’opération de configuration peut avoir une incidence sur les performances.  
   
- Pour plus d’options ALTER DATABASE, consultez [ALTER DATABASE &#40; Transact-SQL &#41; ](../../t-sql/statements/alter-database-transact-sql.md). Pour plus d’options ALTER DATABASE SET, consultez [Options ALTER DATABASE SET &#40; Transact-SQL &#41; ](../../t-sql/statements/alter-database-transact-sql-set-options.md).  
+ Pour plus d’informations sur les options ALTER DATABASE, consultez [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md). Pour plus d’informations sur les options ALTER DATABASE SET, consultez [ALTER DATABASE SET &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md).  
   
  ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -81,10 +81,10 @@ SET { <partner_option> | <witness_option> }
  *database_name*  
  Nom de la base de données à modifier.  
   
- PARTENAIRE \<partner_option >  
+ PARTNER \<partner_option>  
  Contrôle les propriétés de base de données qui définissent les partenaires de basculement d'une session de mise en miroir de bases de données ainsi que leur comportement. Certaines options de SET PARTNER peuvent être définies sur l'un et l'autre des serveurs partenaires tandis que d'autres sont réservées au serveur principal ou au serveur miroir. Pour plus d'informations, consultez les options PARTNER individuelles décrites ci-dessous. Une clause SET PARTNER affecte les deux copies de la base de données, indépendamment du serveur partenaire sur lequel elle est spécifiée.  
   
- Pour exécuter une instruction SET PARTNER, le paramètre STATE des points de terminaison des deux partenaires doit avoir la valeur STARTED. Notez par ailleurs que l'option ROLE du point de terminaison de mise en miroir de chaque instance de serveur partenaire doit avoir la valeur PARTNER ou ALL. Pour plus d’informations sur la spécification d’un point de terminaison, consultez [créer une base de données mise en miroir de point de terminaison pour l’authentification Windows &#40; Transact-SQL &#41; ](../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md). Pour connaître le rôle et l'état du point de terminaison de mise en miroir de bases de données d'une instance de serveur, utilisez l'instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] suivante sur cette instance :  
+ Pour exécuter une instruction SET PARTNER, le paramètre STATE des points de terminaison des deux partenaires doit avoir la valeur STARTED. Notez par ailleurs que l'option ROLE du point de terminaison de mise en miroir de chaque instance de serveur partenaire doit avoir la valeur PARTNER ou ALL. Pour plus d’informations sur la façon de spécifier un point de terminaison, consultez [Créer un point de terminaison de mise en miroir de bases de données pour l’authentification Windows &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md). Pour connaître le rôle et l'état du point de terminaison de mise en miroir de bases de données d'une instance de serveur, utilisez l'instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] suivante sur cette instance :  
   
 ```  
 SELECT role_desc, state_desc FROM sys.database_mirroring_endpoints  
@@ -93,26 +93,26 @@ SELECT role_desc, state_desc FROM sys.database_mirroring_endpoints
  **\<partner_option> ::=**  
   
 > [!NOTE]  
->  Seul \<partner_option > est autorisée par clause SET PARTNER.  
+>  Une seule \<partner_option> est autorisée par clause SET PARTNER.  
   
  **'** *partner_server* **'**  
  Spécifie l'adresse réseau de serveur d'une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sélectionnée comme partenaire de basculement dans une nouvelle session de mise en miroir de bases de données. Chaque session requiert deux serveurs partenaires : l'un démarre comme serveur principal et l'autre démarre comme serveur miroir. Les deux serveurs partenaires doivent de préférence résider sur des ordinateurs différents.  
   
- Cette option est spécifiée une seule fois par session sur chaque serveur partenaire. Lancer une session de mise en miroir de base de données requiert deux ALTER DATABASE *base de données* SET PARTNER **='***serveur_partenaire***'** instructions. Leur ordre est important. Tout d’abord, se connecter au serveur miroir et spécifiez l’instance de serveur principal en tant que *serveur_partenaire* (SET PARTNER **='***principal_server***'**). Ensuite, vous connecter au serveur principal et spécifiez l’instance de serveur miroir en tant que *serveur_partenaire* (SET PARTNER **='***mirror_server***'**) ; cette opération démarre une base de données mise en miroir de la session entre ces deux partenaires. Pour plus d'informations, consultez [Configuration de la mise en miroir d’une base de données &#40;SQL Server&#41;](../../database-engine/database-mirroring/setting-up-database-mirroring-sql-server.md).  
+ Cette option est spécifiée une seule fois par session sur chaque serveur partenaire. L’initialisation d’une session de mise en miroir de bases de données exige deux instructions ALTER DATABASE *database* SET PARTNER **='***partner_server***'**. Leur ordre est important. Commencez par vous connecter au serveur miroir et spécifiez *partner_server* (SET PARTNER **='***principal_server***'**) comme instance de serveur principal. Ensuite, connectez-vous au serveur principal et spécifiez *partner_server* (SET PARTNER **='***mirror_server***'**) comme instance de serveur miroir. Cette opération démarre une session de mise en miroir de bases de données entre ces deux serveurs partenaires. Pour plus d'informations, consultez [Configuration de la mise en miroir d’une base de données &#40;SQL Server&#41;](../../database-engine/database-mirroring/setting-up-database-mirroring-sql-server.md).  
   
- La valeur de *serveur_partenaire* est une adresse réseau du serveur. La syntaxe est la suivante :  
+ La valeur de *partner_server* est une adresse réseau de serveur. La syntaxe est la suivante :  
   
  TCP**://***\<system-address>***:***\<port>*  
   
  où  
   
--   *\<adresse-système >* est une chaîne, comme un nom système, un nom de domaine complet ou une adresse IP, qui identifie sans ambiguïté le système d’ordinateur de destination.  
+-   *\<system-address>* est une chaîne, telle qu’un nom de système, un nom de domaine complet ou une adresse IP, qui identifie de manière unique l’ordinateur de destination.  
   
--   *\<port >* est un numéro de port qui est associé au point de terminaison de mise en miroir de l’instance de serveur partenaire.  
+-   *\<port>* est un numéro de port associé au point de terminaison de mise en miroir de l’instance du serveur partenaire.  
   
  Pour plus d’informations, consultez [Spécifier une adresse réseau de serveur &#40;mise en miroir de bases de données&#41;](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md).  
   
- L’exemple suivant illustre la SET PARTNER **='***serveur_partenaire***'** clause :  
+ L’exemple suivant illustre la clause SET PARTNER **='***partner_server***'** :  
   
 ```  
 'TCP://MYSERVER.mydomain.Adventure-Works.com:7777'  
@@ -124,7 +124,7 @@ SELECT role_desc, state_desc FROM sys.database_mirroring_endpoints
  FAILOVER  
  Bascule manuellement le serveur principal vers le serveur miroir. Vous ne pouvez spécifier l'option FAILOVER que sur le serveur principal. Cette option est valide dans le seul cas où le paramètre SAFETY a la valeur FULL (valeur par défaut).  
   
- L’option FAILOVER requiert **master** comme contexte de base de données.  
+ L’option FAILOVER nécessite **master** comme contexte de base de données.  
   
  FORCE_SERVICE_ALLOW_DATA_LOSS  
  Force le service de base de données vers la base de données miroir après la défaillance du serveur principal avec la base de données dans un état non synchronisé ou dans un état synchronisé si le basculement automatique ne se produit pas.  
@@ -142,7 +142,7 @@ SELECT role_desc, state_desc FROM sys.database_mirroring_endpoints
  Lorsque vous forcez le service, la session est interrompue ; toutes les données sont conservées temporairement dans la base de données principale d'origine. Une fois que le principal d'origine est en service et en mesure de communiquer avec le nouveau serveur principal, l'administrateur de base de données peut réactiver le service. Lors d'une reprise de la session, tous les enregistrements de journal non envoyés et les mises à jour correspondantes sont perdus.  
   
  OFF  
- Supprime une session de mise en miroir de bases de données et supprime la mise en miroir de la base de données. Vous pouvez définir la valeur OFF sur l'un et l'autre des serveurs partenaires. Pour plus d’informations, sur l’impact de la suppression de la mise en miroir, consultez [suppression de la mise en miroir de la base de données &#40; SQL Server &#41; ](../../database-engine/database-mirroring/removing-database-mirroring-sql-server.md).  
+ Supprime une session de mise en miroir de bases de données et supprime la mise en miroir de la base de données. Vous pouvez définir la valeur OFF sur l'un et l'autre des serveurs partenaires. Pour plus d’informations sur l’impact de la suppression d’une mise en miroir de bases de données, consultez [Suppression d’une mise en miroir des bases de données &#40;SQL Server&#41;](../../database-engine/database-mirroring/removing-database-mirroring-sql-server.md).  
   
  RESUME  
  Reprend une session de mise en miroir de bases de données interrompue. Vous ne pouvez spécifier l'option RESUME que sur le serveur principal.  
@@ -150,11 +150,11 @@ SELECT role_desc, state_desc FROM sys.database_mirroring_endpoints
  SAFETY { FULL | OFF }  
  Définit le niveau de sécurité des transactions. Vous ne pouvez spécifier l'option SAFETY que sur le serveur principal.  
   
- La valeur par défaut est FULL. Avec la sécurité complète, la session de mise en miroir de base de données exécute de façon synchrone (dans *mode haute sécurité*). Si la sécurité est définie sur OFF, la session de mise en miroir de base de données s’exécute de façon asynchrone (dans *mode hautes performances*).  
+ La valeur par défaut est FULL. Avec la sécurité complète, la session de mise en miroir de bases de données s’exécute de façon synchrone (*mode haute sécurité*). Si l’option SAFETY est désactivée (OFF), la session de mise en miroir de bases de données s’exécute de façon asynchrone (*mode hautes performances*).  
   
  Le comportement du mode haute sécurité dépend en partie du témoin :  
   
--   Lorsque SAFETY a la valeur FULL et qu'un témoin est défini pour la session, la session s'exécute en mode haute sécurité avec basculement automatique. En cas de perte du serveur principal, la session bascule automatiquement si la base de données est synchronisée et si l'instance du serveur miroir et le témoin sont toujours connectés l'un à l'autre (en d'autres termes, ils ont un quorum). Pour plus d’informations, consultez [Quorum : effets d’un témoin sur la disponibilité de la base de données &#40;Mise en miroir de bases de données&#41;](../../database-engine/database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md).  
+-   Lorsque SAFETY a la valeur FULL et qu'un témoin est défini pour la session, la session s'exécute en mode haute sécurité avec basculement automatique. En cas de perte du serveur principal, la session bascule automatiquement si la base de données est synchronisée et si l'instance du serveur miroir et le témoin sont toujours connectés l'un à l'autre (en d'autres termes, ils ont un quorum). Pour plus d’informations, consultez [Quorum : effets d’un témoin sur la disponibilité de la base de données &#40;mise en miroir de bases de données&#41;](../../database-engine/database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md).  
   
      Si un témoin est défini pour la session mais qu'il est déconnecté à ce moment-là, la perte du serveur miroir provoque l'arrêt du serveur principal.  
   
@@ -170,7 +170,7 @@ SELECT role_desc, state_desc FROM sys.database_mirroring_endpoints
   
  Vous pouvez définir la valeur SUSPEND sur l'un et l'autre des serveurs partenaires.  
   
- Délai d’attente *entier*  
+ TIMEOUT *integer*  
  Spécifie le délai d'attente en secondes. Le délai d'attente est la durée maximale pendant laquelle une instance de serveur attend de recevoir un message PING d'une autre instance de la session de mise en miroir avant de considérer que cette dernière est déconnectée.  
   
  Vous ne pouvez spécifier l'option TIMEOUT que sur le serveur principal. Si vous ne précisez pas de valeur, le délai défini par défaut est 10 secondes. Si vous spécifiez 5 ou une valeur supérieure, le délai d'attente correspond au nombre de secondes indiqué. Si vous spécifiez une valeur comprise entre 0 et 4 secondes, le délai d'attente est automatiquement de 5 secondes.  
@@ -181,11 +181,11 @@ SELECT role_desc, state_desc FROM sys.database_mirroring_endpoints
  Pour plus d’informations, consultez [Défaillances possibles pendant la mise en miroir d’une base de données](../../database-engine/database-mirroring/possible-failures-during-database-mirroring.md).  
   
  WITNESS \<witness_option>  
- Contrôle les propriétés de base de données qui définissent un témoin de mise en miroir de bases de données. Une clause SET WITNESS affecte les deux copies de la base de données, mais vous ne pouvez la spécifier que sur le serveur principal. Si un témoin est défini pour une session, le quorum est requis pour traiter la base de données, quel que soit le paramètre de sécurité ; Pour plus d’informations, consultez [Quorum : effets d’un témoin affecte la base de données de disponibilité &#40; mise en miroir de base de données &#41;](../../database-engine/database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md).  
+ Contrôle les propriétés de base de données qui définissent un témoin de mise en miroir de bases de données. Une clause SET WITNESS affecte les deux copies de la base de données, mais vous ne pouvez la spécifier que sur le serveur principal. Si un témoin est défini pour une session, le quorum est obligatoire pour servir la base de données, quelle que soit l’option SAFETY. Pour plus d’informations, consultez [Quorum : effets d’un témoin sur la disponibilité de la base de données &#40;Mise en miroir de bases de données&#41;](../../database-engine/database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md).  
   
- Les partenaires de basculement et témoins doivent de préférence résider sur des ordinateurs différents. Pour plus d’informations sur le serveur témoin, consultez [témoin de mise en miroir de base de données](../../database-engine/database-mirroring/database-mirroring-witness.md).  
+ Les partenaires de basculement et témoins doivent de préférence résider sur des ordinateurs différents. Pour plus d’informations sur le témoin, consultez [Témoin de mise en miroir de base de données](../../database-engine/database-mirroring/database-mirroring-witness.md).  
   
- Pour exécuter une instruction SET WITNESS, l'option STATE des points de terminaison des instances de serveur principal et de serveur témoin doit avoir la valeur STARTED. Notez par ailleurs que l'option ROLE du point de terminaison de mise en miroir de bases de données d'une instance de serveur témoin doit avoir la valeur WITNESS ou ALL. Pour plus d’informations sur la spécification d’un point de terminaison, consultez [la terminaison de mise en miroir de base de données &#40; SQL Server &#41; ](../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md).  
+ Pour exécuter une instruction SET WITNESS, l'option STATE des points de terminaison des instances de serveur principal et de serveur témoin doit avoir la valeur STARTED. Notez par ailleurs que l'option ROLE du point de terminaison de mise en miroir de bases de données d'une instance de serveur témoin doit avoir la valeur WITNESS ou ALL. Pour plus d’informations sur la spécification d’un point de terminaison, consultez [Point de terminaison de mise en miroir de bases de données &#40;SQL Server&#41;](../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md).  
   
  Pour connaître le rôle et l'état du point de terminaison de mise en miroir de bases de données d'une instance de serveur, utilisez l'instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] suivante sur cette instance :  
   
@@ -199,22 +199,22 @@ SELECT role_desc, state_desc FROM sys.database_mirroring_endpoints
  **\<witness_option> ::=**  
   
 > [!NOTE]  
->  Seul \<witness_option > est autorisée par clause SET WITNESS.  
+>  Une seule \<witness_option> est autorisée par clause SET WITNESS.  
   
  **'** *witness_server* **'**  
  Spécifie une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)] qui doit servir de serveur témoin pour une session de mise en miroir de bases de données. Vous ne pouvez spécifier d'instructions SET WITNESS que sur le serveur principal.  
   
- Dans une commande SET WITNESS **='***witness_server***'** instruction, la syntaxe de *witness_server* est identique à la syntaxe de *serveur_partenaire*.  
+ Dans une instruction SET WITNESS **='***witness_server***'**, la syntaxe de *witness_server* est identique à celle de *partner_server*.  
   
  OFF  
  Supprime le témoin d'une session de mise en miroir de bases de données. Si le témoin a la valeur OFF, le basculement automatique est désactivé. Lorsque la base de données est configurée avec l'option FULL SAFETY et le témoin avec la valeur OFF, une défaillance du serveur miroir conduit le serveur principal à rendre la base de données inaccessible.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
   
 ## <a name="examples"></a>Exemples  
   
 ### <a name="a-creating-a-database-mirroring-session-with-a-witness"></a>A. Création d'une session de mise en miroir de bases de données avec un témoin  
- Pour configurer la mise en miroir de bases de données avec un témoin, vous devez configurer la sécurité, préparer la base de données miroir et utiliser ALTER DATABASE pour définir les serveurs partenaires. Pour obtenir un exemple de la procédure d’installation complète, consultez [paramètre de base de données mise en miroir &#40; SQL Server &#41; ](../../database-engine/database-mirroring/setting-up-database-mirroring-sql-server.md).  
+ Pour configurer la mise en miroir de bases de données avec un témoin, vous devez configurer la sécurité, préparer la base de données miroir et utiliser ALTER DATABASE pour définir les serveurs partenaires. Pour obtenir un exemple illustrant la procédure d’installation complète, consultez [Configuration de la mise en miroir de bases de données &#40;SQL Server&#41;](../../database-engine/database-mirroring/setting-up-database-mirroring-sql-server.md).  
   
 ### <a name="b-manually-failing-over-a-database-mirroring-session"></a>B. Basculement manuel d'une session de mise en miroir de bases de données  
  Le basculement manuel peut être débuté par l'un ou l'autre des serveurs partenaires de mise en miroir de bases de données. Avant le basculement, assurez-vous que le serveur considéré comme serveur principal est effectivement le serveur principal. Par exemple, pour la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)], sur l'instance de serveur représentant, selon vous, le serveur principal, exécutez la requête suivante :  
@@ -252,7 +252,7 @@ GO
   
      La valeur actuelle de `mirroring_role_desc` est désormais `Mirror`.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)   
  [DATABASEPROPERTYEX &#40;Transact-SQL&#41;](../../t-sql/functions/databasepropertyex-transact-sql.md)   
  [sys.database_mirroring_witnesses &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/database-mirroring-witness-catalog-views-sys-database-mirroring-witnesses.md)  

@@ -1,5 +1,5 @@
 ---
-title: CERTPRIVATEKEY (Transact-SQL) | Documents Microsoft
+title: CERTPRIVATEKEY (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
@@ -53,8 +53,8 @@ CERTPRIVATEKEY
 ```  
   
 ## <a name="arguments"></a>Arguments  
-*id_certificat*  
-Est la **id_certificat** du certificat. Cette option est disponible à partir de sys.certificates ou à l’aide de la [CERT_ID &#40; Transact-SQL &#41; ](../../t-sql/functions/cert-id-transact-sql.md) (fonction). *cert_id* est de type **int**
+*certificate_ID*  
+**ID de certificat** du certificat. Il est disponible à partir de sys.certificates ou à l’aide de la fonction [CERT_ID &#40;Transact-SQL&#41;](../../t-sql/functions/cert-id-transact-sql.md). *cert_id* est de type **int**
   
 *encryption_password*  
 Mot de passe utilisé pour chiffrer la valeur binaire retournée.
@@ -65,11 +65,11 @@ Mot de passe utilisé pour déchiffrer la valeur binaire retournée.
 ## <a name="return-types"></a>Types de retour
 **varbinary**
   
-## <a name="remarks"></a>Notes  
-**CERTENCODED** et **CERTPRIVATEKEY** sont utilisés ensemble pour retourner les différentes parties d’un certificat sous forme binaire.
+## <a name="remarks"></a>Notes   
+Les fonctions **CERTENCODED** et **CERTPRIVATEKEY** sont utilisées ensemble pour renvoyer les différentes parties d’un certificat sous forme binaire.
   
-## <a name="permissions"></a>Permissions  
-**CERTPRIVATEKEY** est disponible au public.
+## <a name="permissions"></a>Autorisations  
+**CERTPRIVATEKEY** est accessible publiquement.
   
 ## <a name="examples"></a>Exemples  
   
@@ -86,12 +86,12 @@ GO
 SELECT CERTPRIVATEKEY(CERT_ID('Shipping04'), 'jklalkaa/; uia3dd');  
 ```  
   
-Pour obtenir un exemple plus complexe qui utilise **CERTPRIVATEKEY** et **CERTENCODED** pour copier un certificat à une autre base de données, consultez l’exemple B dans la rubrique [CERTENCODED &#40; Transact-SQL &#41; ](../../t-sql/functions/certencoded-transact-sql.md).
+Pour obtenir un exemple plus complexe qui utilise **CERTPRIVATEKEY** et **CERTENCODED** afin de copier un certificat dans une autre base de données, consultez l’exemple B de la rubrique [CERTENCODED &#40;Transact-SQL&#41;](../../t-sql/functions/certencoded-transact-sql.md).
   
 ## <a name="see-also"></a>Voir aussi
 [Fonctions de sécurité &#40;Transact-SQL&#41;](../../t-sql/functions/security-functions-transact-sql.md)  
-[CRÉER un certificat &#40; Transact-SQL &#41; ](../../t-sql/statements/create-certificate-transact-sql.md) 
- [Fonctions de sécurité &#40; Transact-SQL &#41; ](../../t-sql/functions/security-functions-transact-sql.md) 
- [sys.certificates &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-certificates-transact-sql.md)
+[CREATE CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/create-certificate-transact-sql.md)
+[Fonctions de sécurité &#40;Transact-SQL&#41;](../../t-sql/functions/security-functions-transact-sql.md)
+[sys.certificates &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-certificates-transact-sql.md)
   
   

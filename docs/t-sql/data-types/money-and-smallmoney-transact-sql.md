@@ -1,5 +1,5 @@
 ---
-title: Money et smallmoney (Transact-SQL) | Documents Microsoft
+title: money et smallmoney (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 7/22/2017
 ms.prod: sql-non-specified
@@ -42,14 +42,14 @@ ms.lasthandoff: 11/21/2017
 
 Types de données représentant des valeurs monétaires ou des devises.
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
   
 |Type de données|Plage|Stockage|  
 |---|---|---|
-|**money**|-922,337,203,685,477.5808 à 922,337,203,685,477.5807 (-922,337,203,685,477.58<br />pour 922,337,203,685,477.58 pour Informatica.  Informatica prend uniquement en charge deux décimales, quatre pas.)|8 octets|  
+|**money**|-922 337 203 685 477,5808 à 922 337 203 685 477,5807 (-922 337 203 685 477,58<br />à 922 337 203 685 477,58 pour Informatica.  Informatica prend uniquement en charge deux décimales, et non quatre.)|8 octets|  
 |**smallmoney**|-214 748,3648 à 214 748,3647|4 octets|  
   
-Le **money** et **smallmoney** types de données sont précis à un dix millième près des unités monétaires qu’ils représentent. Pour Informatica, le **money** et **smallmoney** types de données sont précis à un centième des unités monétaires qu’ils représentent.
+Les types de données **money** et **smallmoney** sont précis à un dix millième près des unités monétaires qu’ils représentent. Pour Informatica, les types de données **money** et **smallmoney** sont précis à un centième près des unités monétaires qu’ils représentent.
   
 Utilisez un point pour séparer les unités monétaires partielles, comme les centimes, des unités monétaires entières. Par exemple, 2.15 signifie 2 dollars et 15 cents.
   
@@ -60,9 +60,9 @@ Ces types de données peuvent utiliser n'importe lequel des symboles monétaires
 Les valeurs de devise ou les données monétaires ne doivent pas être mises entre guillemets simples ('). Il est important de garder en mémoire que bien que vous puissiez spécifier des valeurs monétaires précédées d'un symbole de devise, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne stocke pas les informations de devise associées au symbole, mais uniquement la valeur numérique.
   
 ## <a name="converting-money-data"></a>Conversion de données money
-Lorsque vous convertissez **money** à partir de types de données integer, les unités sont supposées pour être des unités monétaires. Par exemple, la valeur entière 4 est convertie vers le **money** équivalent de 4 unités monétaires.
+Lors de la conversion de types de données integer en **money**, les unités sont supposées être des unités monétaires. Par exemple, la valeur entière 4 est convertie en équivalent **money** de 4 unités monétaires.
   
-L’exemple suivant convertit **smallmoney** et **money** valeurs **varchar** et **décimal** types de données, respectivement.
+L’exemple suivant convertit les valeurs **smallmoney** et **money** respectivement en types de données **varchar** et **decimal**.
   
 ```sql
 DECLARE @mymoney_sm smallmoney = 3148.29,  
@@ -81,12 +81,12 @@ SM_MONEY VARCHAR               MONEY DECIMAL
 ```  
   
 ## <a name="see-also"></a>Voir aussi
-[ALTER TABLE &#40; Transact-SQL &#41; ](../../t-sql/statements/alter-table-transact-sql.md) 
- [CAST et CONVERT &#40; Transact-SQL &#41; ](../../t-sql/functions/cast-and-convert-transact-sql.md) 
- [CREATE TABLE &#40; Transact-SQL &#41; ](../../t-sql/statements/create-table-transact-sql.md) 
- [Des Types de données &#40; Transact-SQL &#41; ](../../t-sql/data-types/data-types-transact-sql.md) 
- [DECLARE @local_variable &#40; Transact-SQL &#41; ](../../t-sql/language-elements/declare-local-variable-transact-sql.md) 
- [Définir @local_variable &#40; Transact-SQL &#41; ](../../t-sql/language-elements/set-local-variable-transact-sql.md) 
- [sys.types &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-types-transact-sql.md)
+[ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)
+[CAST et CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)
+[CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)
+[Types de données &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)
+[DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)
+[SET @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/set-local-variable-transact-sql.md)
+[sys.types &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-types-transact-sql.md)
   
   

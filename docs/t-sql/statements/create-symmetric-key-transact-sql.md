@@ -1,5 +1,5 @@
 ---
-title: "CRÉER la clé symétrique (Transact-SQL) | Documents Microsoft"
+title: CREATE SYMMETRIC KEY (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 09/12/2017
 ms.prod: sql-non-specified
@@ -77,18 +77,18 @@ CREATE SYMMETRIC KEY key_name
   
 ## <a name="arguments"></a>Arguments  
  *Key_name*  
- Spécifie le nom unique sous lequel la clé symétrique est connue dans la base de données. Les noms des clés temporaires doivent commencer par un dièse (#). Par exemple, **#temporarykey900007**. Vous ne pouvez pas créer une clé symétrique dont le nom commence par plusieurs #. Vous ne pouvez pas créer de clé symétrique temporaire à l'aide d'un fournisseur EKM.  
+ Spécifie le nom unique sous lequel la clé symétrique est connue dans la base de données. Les noms des clés temporaires doivent commencer par un dièse (#). Par exemple, **#temporaryKey900007**. Vous ne pouvez pas créer une clé symétrique dont le nom commence par plusieurs #. Vous ne pouvez pas créer de clé symétrique temporaire à l'aide d'un fournisseur EKM.  
   
- AUTORISATION *owner_name*  
+ AUTHORIZATION *owner_name*  
  Spécifie le nom de l'utilisateur de base de données ou du rôle d'application auquel appartiendra la clé.  
   
- À partir du fournisseur *Nom_Fournisseur*  
- Spécifie un fournisseur EKM (Extensible Key Management) et un nom. La clé n'est pas exportée à partir du périphérique EKM. Le fournisseur doit d'abord être défini à l'aide de l'instruction CREATE PROVIDER. Pour plus d’informations sur la création de fournisseurs de clés externes, consultez [gestion de clés Extensible &#40; Gestion de clés extensible &#41; ](../../relational-databases/security/encryption/extensible-key-management-ekm.md).  
+ FROM PROVIDER *provider_name*  
+ Spécifie un fournisseur EKM (Extensible Key Management) et un nom. La clé n'est pas exportée à partir du périphérique EKM. Le fournisseur doit d'abord être défini à l'aide de l'instruction CREATE PROVIDER. Pour plus d’informations sur la création de fournisseurs de clés externes, consultez [Gestion de clés extensible &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md).  
   
 > [!NOTE]  
 >  Cette option n'est pas disponible dans une base de données à relation contenant-contenu.  
   
- KEY_SOURCE **='***phrase_de_passe***'**  
+ KEY_SOURCE **='***pass_phrase***'**  
  Spécifie une phrase secrète à partir de laquelle la clé doit être dérivée.  
   
  IDENTITY_VALUE **='***identity_phrase***'**  
@@ -100,34 +100,34 @@ CREATE SYMMETRIC KEY key_name
 > [!NOTE]  
 >  Cette option n'est pas disponible dans une base de données à relation contenant-contenu.  
   
- CREATION_DISPOSITION  **=**  CREATE_NEW  
+ CREATION_DISPOSITION **=** CREATE_NEW  
  Crée une clé sur le périphérique EKM (Extensible Key Management).  S'il existe déjà une clé sur le périphérique, l'instruction échoue et génère une erreur.  
   
- CREATION_DISPOSITION  **=**  OPEN_EXISTING  
+ CREATION_DISPOSITION **=** OPEN_EXISTING  
  Mappe une clé symétrique [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à une clé EKM (Extensible Key Management) existante. Si CREATION_DISPOSITION = OPEN_EXISTING n'est pas spécifié, la valeur par défaut est CREATE_NEW.  
   
- *nom_certificat*  
+ *certificate_name*  
  Spécifie le nom du certificat qui sera utilisé pour chiffrer la clé symétrique. Le certificat doit déjà exister dans la base de données.  
   
- **'** *mot de passe* **'**  
- Spécifie un mot de passe à partir duquel dériver une clé TRIPLE_DES avec laquelle sécuriser la clé symétrique. *mot de passe* doit remplir les conditions de stratégie de mot de passe Windows de l’ordinateur qui exécute l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Utilisez toujours des mots de passe forts.  
+ **'** *password* **'**  
+ Spécifie un mot de passe à partir duquel dériver une clé TRIPLE_DES avec laquelle sécuriser la clé symétrique. *password* doit satisfaire aux critères de la stratégie de mot de passe Windows de l’ordinateur qui exécute l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Utilisez toujours des mots de passe forts.  
   
  *symmetric_key_name*  
- Spécifie une clé symétrique, utilisé pour chiffrer la clé est créée. La clé spécifiée doit déjà exister dans la base de données et elle doit être ouverte.  
+ Spécifie une clé symétrique utilisée pour chiffrer la clé en cours de création. La clé spécifiée doit déjà exister dans la base de données et elle doit être ouverte.  
   
  *asym_key_name*  
- Spécifie une clé asymétrique, utilisé pour chiffrer la clé est créée. Cette clé asymétrique doit déjà exister dans la base de données.  
+ Spécifie une clé asymétrique utilisée pour chiffrer la clé en cours de création. Cette clé asymétrique doit déjà exister dans la base de données.  
   
- \<algorithme >  
-Spécifier l’algorithme de chiffrement.   
+ \<algorithm>  
+Spécifiez l’algorithme de chiffrement.   
 > [!WARNING]  
-> À partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], tous les algorithmes autres que AES_128, AES_192 et AES_256 sont déconseillés. Pour utiliser des algorithmes plus anciens (non recommandés), vous devez définir le niveau de compatibilité de la base de données à la base de données inférieur ou égal à 120.  
+> À partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], tous les algorithmes autres que AES_128, AES_192 et AES_256 sont déconseillés. Pour utiliser des algorithmes plus anciens (ce qui n’est pas recommandé), vous devez affecter le niveau de compatibilité 120 ou un niveau inférieur à la base de données.  
   
 ## <a name="remarks"></a>Notes   
  Lorsqu'une clé symétrique est créée, elle doit être chiffrée à l'aide de l'un des éléments suivants au moins : certificat, mot de passe, clé symétrique, clé asymétrique ou PROVIDER. La clé peut être soumise à plusieurs chiffrements de chaque type. En d'autres termes, une clé symétrique unique peut être chiffrée à l'aide de plusieurs certificats, mots de passe, clés symétriques et clés asymétriques à la fois.  
   
 > [!CAUTION]  
->  Lorsqu’une clé symétrique est chiffrée avec un mot de passe au lieu d’un certificat (ou une autre clé), l’algorithme de chiffrement TRIPLE DES est utilisé pour chiffrer le mot de passe. Pour cette raison, les clés créées à l'aide d'un algorithme de chiffrement renforcé, tel qu'AES, sont elles-mêmes sécurisées par un algorithme plus faible.  
+>  Quand une clé symétrique est chiffrée avec un mot de passe au lieu d’un certificat (ou une autre clé), l’algorithme de chiffrement TRIPLE DES est utilisé pour chiffrer le mot de passe. Pour cette raison, les clés créées à l'aide d'un algorithme de chiffrement renforcé, tel qu'AES, sont elles-mêmes sécurisées par un algorithme plus faible.  
   
  Un mot de passe facultatif peut être utilisé pour chiffrer la clé symétrique avant de la distribuer à plusieurs utilisateurs.  
   
@@ -140,7 +140,7 @@ Spécifier l’algorithme de chiffrement.
 > [!IMPORTANT]  
 >  Nous vous déconseillons d'utiliser les chiffrements de flux RC4 et RC4_128 pour protéger les données sensibles. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] n'ajoute pas d'encodage supplémentaire au chiffrement effectué à l'aide de ces clés.  
   
- Informations sur les clés symétriques sont consultables dans le [sys.symmetric_keys](../../relational-databases/system-catalog-views/sys-symmetric-keys-transact-sql.md) affichage catalogue.  
+ Des informations sur les clés symétriques sont consultables dans la vue de catalogue [sys.symmetric_keys](../../relational-databases/system-catalog-views/sys-symmetric-keys-transact-sql.md).  
   
  Les clés symétriques ne peuvent pas être chiffrées par les clés symétriques créées à partir du fournisseur de chiffrement.  
   
@@ -150,9 +150,9 @@ Spécifier l’algorithme de chiffrement.
 -   Les clés symétriques créées avec ALGORITHM = TRIPLE_DES_3KEY utilisent TRIPLE DES avec une clé de 192 bits.  
 -   Les clés symétriques créées avec ALGORITHM = TRIPLE_DES utilisent TRIPLE DES avec une clé de 128 bits.  
   
- **Abandon de l’algorithme RC4 :**  
+ **Dépréciation de l’algorithme RC4 :**  
   
- Une utilisation répétée du même RC4 ou RC4_128 les KEY_GUID sur différents blocs de données, des résultats dans la même clé RC4 car [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne fournit pas automatiquement de salt. L'utilisation répétée de la même clé RC4 est une erreur connue qui entraîne un chiffrement très faible. Par conséquent, les mots clés RC4 et RC4_128 sont déconseillés. [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]  
+ L’utilisation répétée du même KEY_GUID RC4 ou RC4_128 sur différents blocs de données génère la même clé RC4 car [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne fournit pas automatiquement de salt. L'utilisation répétée de la même clé RC4 est une erreur connue qui entraîne un chiffrement très faible. Par conséquent, les mots clés RC4 et RC4_128 sont déconseillés. [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]  
   
 > [!WARNING]  
 >  L'algorithme RC4 est uniquement pris en charge pour des raisons de compatibilité descendante. Le nouveau matériel ne peut être chiffré à l'aide de RC4 ou de RC4_128 que lorsque la base de données se trouve dans le niveau de compatibilité 90 ou 100. (Non recommandé.) Utilisez à la place un algorithme plus récent, tel qu'un des algorithmes AES. Dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], le matériel chiffré à l'aide de RC4 ou de RC4_128 peut être déchiffré dans n'importe quel niveau de compatibilité.  
@@ -199,12 +199,12 @@ CREATION_DISPOSITION=OPEN_EXISTING;
 GO  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Choisir un algorithme de chiffrement](../../relational-databases/security/encryption/choose-an-encryption-algorithm.md)   
  [ALTER SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-symmetric-key-transact-sql.md)   
  [DROP SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-symmetric-key-transact-sql.md)   
  [Hiérarchie de chiffrement](../../relational-databases/security/encryption/encryption-hierarchy.md)   
- [Sys.symmetric_keys &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-symmetric-keys-transact-sql.md)   
+ [sys.symmetric_keys &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-symmetric-keys-transact-sql.md)   
  [Gestion de clés extensible &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md)   
  [Gestion de clés extensible à l’aide d’Azure Key Vault &#40;SQL Server&#41;](../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: "CREATE TABLE AS SELECT (entrepôt de données SQL Azure) | Documents Microsoft"
+title: CREATE TABLE AS SELECT (Azure SQL Data Warehouse) | Microsoft Docs
 ms.custom: 
 ms.date: 10/07/2016
 ms.prod: 
@@ -26,20 +26,20 @@ ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="create-table-as-select-azure-sql-data-warehouse"></a>CREATE TABLE AS SELECT (entrepôt de données SQL Azure)
+# <a name="create-table-as-select-azure-sql-data-warehouse"></a>CREATE TABLE AS SELECT (Azure SQL Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
-CREATE TABLE AS sélectionnez (SACT) est une des fonctionnalités de T-SQL plus importantes. Il s’agit d’une opération entièrement parallélisée qui crée une table basée sur la sortie d’une instruction SELECT. SACT est le moyen le plus rapide pour créer une copie d’une table.   
+CREATE TABLE AS SELECT (CTAS) est l’une des fonctionnalités de T-SQL les plus importantes. Il s’agit d’une opération entièrement parallélisée qui crée une table en fonction de la sortie d’une instruction SELECT. CTAS offre le moyen le plus simple et le plus rapide de créer une copie de table.   
  
- Par exemple, utilisez SACT pour :  
+ Par exemple, CTAS vous permet d’effectuer les opérations suivantes :  
   
--   Recréez la table avec une colonne de distribution de hachage différent.
--   Recréez la table comme étant répliqués.   
--   Créer un index columnstore sur certaines colonnes de la table.  
--   Requête ou importer des données externes.  
+-   Recréer une table avec une colonne de distribution de hachage différente.
+-   Recréer une table comme étant répliquée.   
+-   Créer un index columnstore uniquement sur certaines colonnes de la table.  
+-   Interroger ou importer des données externes.  
 
 > [!NOTE]  
-> Étant donné que SACT ajoute des fonctionnalités de création d’une table, cette rubrique tente ne pas répéter la rubrique CREATE TABLE. Au lieu de cela, il décrit les différences entre les instructions SACT et CREATE TABLE. Pour plus d’informations CREATE TABLE, consultez [CREATE TABLE (Azure SQL Data Warehouse)](https://msdn.microsoft.com/library/mt203953/) instruction. 
+> CTAS s’ajoute aux fonctionnalités de création de table. Ainsi, au lieu de répéter le contenu de la rubrique CREATE TABLE, cette rubrique décrit les différences entre les instructions CTAS et CREATE TABLE. Pour plus d’informations sur l’instruction CREATE TABLE, consultez [CREATE TABLE (Azure SQL Data Warehouse)](https://msdn.microsoft.com/library/mt203953/). 
   
  ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -82,92 +82,92 @@ CREATE TABLE [ database_name . [ schema_name ] . | schema_name. ] table_name
 <a name="arguments-bk"></a>
   
 ## <a name="arguments"></a>Arguments  
-Pour plus d’informations, consultez la [section Arguments](https://msdn.microsoft.com/library/mt203953/#Arguments) dans CREATE TABLE.  
+Pour plus d’informations, consultez la [section Arguments](https://msdn.microsoft.com/library/mt203953/#Arguments) de la rubrique CREATE TABLE.  
 
 <a name="column-options-bk"></a>
 
 ### <a name="column-options"></a>Options de colonne
 `column_name` [ ,...`n` ]   
- Noms de colonnes n’autorisent pas les [options de colonne](https://msdn.microsoft.com/library/mt203953/#ColumnOptions) mentionné dans CREATE TABLE.  Au lieu de cela, vous pouvez fournir une liste facultative d’un ou plusieurs noms de colonne pour la nouvelle table. Les colonnes de la nouvelle table utilisera les noms que vous spécifiez. Lorsque vous spécifiez des noms de colonnes, le nombre de colonnes dans la liste des colonnes doit correspondre au nombre de colonnes dans les résultats de select. Si vous ne spécifiez pas des noms de colonnes, la nouvelle table cible utilise les noms de colonnes dans les résultats de l’instruction select. 
+ Les noms de colonne n’autorisent pas les [options de colonne](https://msdn.microsoft.com/library/mt203953/#ColumnOptions) mentionnées dans CREATE TABLE.  À la place, vous pouvez fournir une liste facultative d’un ou plusieurs noms de colonne pour la nouvelle table. Les colonnes de la nouvelle table prennent alors les noms que vous spécifiez. Quand vous spécifiez des noms de colonne, le nombre de colonnes figurant dans la liste de colonnes doit correspondre au nombre de colonnes figurant dans les résultats de l’instruction select. Si vous ne spécifiez pas de noms de colonne, la nouvelle table cible utilise les noms de colonne figurant dans les résultats de l’instruction select. 
   
- Vous ne pouvez pas spécifier d’autres options de colonne telles que les types de données, classement ou possibilité de valeur null. Chacun de ces attributs est dérivée à partir des résultats de la `SELECT` instruction. Toutefois, vous pouvez utiliser l’instruction SELECT pour modifier les attributs. Pour obtenir un exemple, consultez [SACT d’utilisation pour modifier les attributs de colonne](#ctas-change-column-attributes-bk).   
+ Vous ne pouvez spécifier aucune autre option de colonne comme les types de données, le classement ou la possibilité de valeur NULL. Chacun de ces attributs est dérivé des résultats de l’instruction `SELECT`. Cependant, vous pouvez utiliser l’instruction SELECT pour modifier les attributs. Pour obtenir un exemple, consultez [Utiliser CTAS pour modifier des attributs de colonne](#ctas-change-column-attributes-bk).   
 
 <a name="table-distribution-options-bk"></a>
 
 ### <a name="table-distribution-options"></a>Options de distribution de table
 
-`DISTRIBUTION` = `HASH`( *distribution_column_name* ) | ROUND_ROBIN | RÉPLIQUER      
-L’instruction SACT requiert une option de distribution et n’a pas de valeurs par défaut. Cela est différent de CREATE TABLE qui a des valeurs par défaut. 
+`DISTRIBUTION` = `HASH` ( *distribution_column_name* ) | ROUND_ROBIN | REPLICATE      
+L’instruction CTAS nécessite une option de distribution et n’a pas de valeurs par défaut. Elle se distingue en cela de CREATE TABLE qui en possède. 
 
-Pour plus d’informations et pour comprendre comment choisir la meilleure colonne de distribution, consultez le [options de distribution de la Table](https://msdn.microsoft.com/library/mt203953/#TableDistributionOptions) section dans CREATE TABLE. 
+Pour savoir comment choisir la colonne de distribution la plus appropriée, consultez la section [Options de distribution de table](https://msdn.microsoft.com/library/mt203953/#TableDistributionOptions) de la rubrique CREATE TABLE. 
 
 <a name="table-partition-options-bk"></a>
 
 ### <a name="table-partition-options"></a>Options de partition de table
-L’instruction SACT crée une table non partitionnée par défaut, même si la table source est partitionnée. Pour créer une table partitionnée avec l’instruction SACT, vous devez spécifier l’option de partition. 
+L’instruction CTAS crée par défaut une table non partitionnée, même si la table source est partitionnée. Pour créer une table partitionnée avec l’instruction CTAS, vous devez spécifier l’option de partition. 
 
-Pour plus d’informations, consultez la [les options de partition de Table](https://msdn.microsoft.com/library/mt203953/#TablePartitionOptions) section dans CREATE TABLE.
+Pour plus d’informations, consultez la section [Options de partition de table](https://msdn.microsoft.com/library/mt203953/#TablePartitionOptions) de la rubrique CREATE TABLE.
 
 <a name="select-options-bk"></a>
 
-### <a name="select-options"></a>Sélectionnez les options
-L’instruction select est la différence fondamentale entre SACT et CREATE TABLE.  
+### <a name="select-options"></a>Options select
+L’instruction select représente la différence fondamentale entre CTAS et CREATE TABLE.  
 
  `WITH` *common_table_expression*  
- Spécifie un jeu de résultats nommé temporaire, désigné par le terme d'expression de table commune (CTE, Common Table Expression). Pour plus d’informations, consultez [avec common_table_expression &#40; Transact-SQL &#41; ](../../t-sql/queries/with-common-table-expression-transact-sql.md).  
+ Spécifie un jeu de résultats nommé temporaire, désigné par le terme d'expression de table commune (CTE, Common Table Expression). Pour plus d’informations, consultez [WITH common_table_expression &#40;Transact-SQL&#41;](../../t-sql/queries/with-common-table-expression-transact-sql.md).  
   
  `SELECT` *select_criteria*  
- Remplit la nouvelle table avec les résultats d’une instruction SELECT. *select_criteria* est le corps de l’instruction SELECT qui détermine les données à copier vers la nouvelle table. Pour plus d’informations sur les instructions SELECT, consultez [SELECT &#40; Transact-SQL &#41; ](../../t-sql/queries/select-transact-sql.md).  
+ Remplit la nouvelle table avec les résultats d’une instruction SELECT. *select_criteria* correspond au corps de l’instruction SELECT qui détermine les données qui sont copiées dans la nouvelle table. Pour plus d’informations sur les instructions SELECT, consultez [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md).  
   
 <a name="permissions-bk"></a>  
   
 ## <a name="permissions"></a>Autorisations  
-SACT requiert `SELECT` autorisation sur les objets référencés dans les *select_criteria*.
+CTAS exige une autorisation `SELECT` sur les objets référencés dans *select_criteria*.
 
-Pour les autorisations créer une table, consultez [autorisations](https://msdn.microsoft.com/library/mt203953/#Permissions) dans CREATE TABLE. 
+Pour plus d’informations sur les autorisations permettant de créer une table, consultez [Autorisations](https://msdn.microsoft.com/library/mt203953/#Permissions) dans la rubrique CREATE TABLE. 
   
 <a name="general-remarks-bk"></a>
   
 ## <a name="general-remarks"></a>Remarques d'ordre général
-Pour plus d’informations, consultez [Remarques d’ordre général](https://msdn.microsoft.com/library/mt203953/#GeneralRemarks) dans CREATE TABLE.
+Pour plus d’informations, consultez [Remarques d’ordre général](https://msdn.microsoft.com/library/mt203953/#GeneralRemarks) dans la rubrique CREATE TABLE.
 
 <a name="limitations-bk"></a>
 
 ## <a name="limitations-and-restrictions"></a>Limitations et restrictions  
-Azure SQL Data Warehouse effectue pas encore prise en charge automatique créer ou automatiquement les statistiques de mise à jour.  Pour obtenir les meilleures performances de vos requêtes, il est important créer des statistiques sur toutes les colonnes de toutes les tables après l’exécution de SACT et toutes les modifications importantes se produisent dans les données. Pour plus d’informations, consultez [CREATE STATISTICS (Transact-SQL)](../../t-sql/statements/create-statistics-transact-sql.md).
+Azure SQL Data Warehouse ne prend pas encore en charge la création ou la mise à jour automatiques des statistiques.  Pour optimiser les performances de vos requêtes, il est important de créer des statistiques sur toutes les colonnes de toutes les tables après avoir exécuté CTAS et après que les données ont subi des modifications importantes. Pour plus d’informations, consultez [CREATE STATISTICS (Transact-SQL)](../../t-sql/statements/create-statistics-transact-sql.md).
 
-[SET ROWCOUNT &#40; Transact-SQL &#41; ](../../t-sql/statements/set-rowcount-transact-sql.md) n’a aucun effet sur SACT. Pour obtenir un comportement similaire, utilisez [TOP &#40; Transact-SQL &#41; ](../../t-sql/queries/top-transact-sql.md).  
+[SET ROWCOUNT &#40;Transact-SQL&#41;](../../t-sql/statements/set-rowcount-transact-sql.md) ne produit aucun effet sur CTAS. Pour obtenir un comportement similaire, utilisez [TOP &#40;Transact-SQL&#41;](../../t-sql/queries/top-transact-sql.md).  
  
-Pour plus d’informations, consultez [Limitations et Restrictions](https://msdn.microsoft.com/library/mt203953/#LimitationsRestrictions) dans CREATE TABLE.
+Pour plus d’informations, consultez [Limitations et restrictions](https://msdn.microsoft.com/library/mt203953/#LimitationsRestrictions) dans la rubrique CREATE TABLE.
 
 <a name="locking-behavior-bk"></a>
   
 ## <a name="locking-behavior"></a>Comportement de verrouillage  
- Pour plus d’informations, consultez [comportement de verrouillage](https://msdn.microsoft.com/library/mt203953/#LockingBehavior) dans CREATE TABLE.
+ Pour plus d’informations, consultez [Comportement de verrouillage](https://msdn.microsoft.com/library/mt203953/#LockingBehavior) dans la rubrique CREATE TABLE.
  
 <a name="performance-bk"></a>
  
- ## <a name="performance"></a>Performance 
+ ## <a name="performance"></a>Performances 
 
-Pour une table de hachage distribué, vous pouvez utiliser SACT pour choisir une colonne différente de distribution pour obtenir de meilleures performances pour les jointures et agrégations. Si vous choisissez qu'une colonne de distribution différent n’est pas votre objectif, vous devez les meilleurs SACT si vous spécifiez la même colonne de distribution dans la mesure où cela évitera de redistribution de manière unique les lignes. 
+Pour une table de hachage distribuée, CTAS vous permet de choisir une colonne de distribution différente pour bénéficier de meilleures performances pour les jointures et les agrégations. Si votre objectif n’est pas de choisir une colonne de distribution différente, vous bénéficierez de meilleures performances avec CTAS si vous spécifiez la même colonne de distribution, car vous éviterez ainsi une redistribution des lignes. 
 
-Si vous utilisez SACT pour créer la table et de performances ne sont pas un facteur, vous pouvez spécifier `ROUND_ROBIN` pour éviter d’avoir à choisir une colonne de distribution.
+Si vous utilisez CTAS pour créer une table et que les performances ne sont pas un facteur déterminant, vous pouvez spécifier `ROUND_ROBIN` pour éviter d’avoir à choisir une colonne de distribution.
 
-Pour éviter le déplacement des données dans les requêtes suivantes, vous pouvez spécifier `REPLICATE` au prix de stockage pour le chargement d’une copie complète de la table sur chaque nœud de calcul.  
+Pour éviter un déplacement de données dans les requêtes suivantes, vous pouvez spécifier `REPLICATE` au prix d’un stockage accru pour charger une copie complète de la table sur chaque nœud de calcul.  
 
 
 <a name="examples-copy-table-bk"></a>
 
-## <a name="examples-for-copying-a-table"></a>Exemples pour la copie d’une table
+## <a name="examples-for-copying-a-table"></a>Exemples de copie d’une table
 
 <a name="ctas-copy-table-bk"></a>
 
-### <a name="a-use-ctas-to-copy-a-table"></a>A. Utilisez SACT pour copier une table 
+### <a name="a-use-ctas-to-copy-a-table"></a>A. Utiliser CTAS pour copier une table 
 S’applique à : Azure SQL Data Warehouse et Parallel Data Warehouse
 
-Par exemple le plus souvent utilisé pour `CTAS` crée une copie d’une table afin que vous puissiez modifier le DDL. Si par exemple vous avez créé votre table en tant que `ROUND_ROBIN` et maintenant que vous souhaitez modifier dans une table distribuée sur une colonne, `CTAS` est la façon de modifier la colonne de distribution. `CTAS`peut également être utilisé pour modifier les types de partitionnement, l’indexation ou de colonne.
+L’une des utilisations les plus courantes de `CTAS` est peut-être celle qui consiste à créer une copie d’une table dans le but de pouvoir modifier le langage de définition de données (DDL). Si par exemple vous avez créé au départ une table de type `ROUND_ROBIN` et que vous voulez maintenant la modifier pour en faire une table distribuée sur une colonne, `CTAS` est la méthode qui vous permettra de modifier la colonne de distribution. `CTAS` permet aussi de modifier le partitionnement, l’indexation ou les types de colonnes.
 
-Supposons que vous avez créé cette table en utilisant le type de distribution par défaut de `ROUND_ROBIN` distribuées car aucune colonne de distribution a été spécifié dans le `CREATE TABLE`.
+Supposons que vous avez créé cette table en utilisant le type de distribution par défaut `ROUND_ROBIN` sachant qu’aucune colonne de distribution n’était spécifiée dans l’instruction `CREATE TABLE`.
 
 ```sql
 CREATE TABLE FactInternetSales
@@ -198,7 +198,7 @@ CREATE TABLE FactInternetSales
 );
 ```
 
-Maintenant, vous souhaitez créer une copie de cette table avec un index columnstore en cluster afin que vous pouvez tirer parti des performances de tables columnstore en cluster. Également, vous souhaitez distribuer cette table sur ProductKey dans la mesure où vous comptez jointures sur cette colonne et que vous souhaitez éviter le déplacement des données au cours des jointures sur ProductKey. Enfin, vous souhaitez également ajouter le partitionnement sur OrderDateKey afin que vous pouvez rapidement supprimer les anciennes données en supprimant les anciennes partitions. Voici l’instruction SACT copiez votre ancienne table dans une nouvelle table.
+Maintenant, vous voulez créer une copie de cette table avec un index cluster columnstore de façon à profiter des performances offertes par les tables cluster columnstore. Vous voulez aussi distribuer cette table sur ProductKey, car des jointures sont prévues dans cette colonne et vous souhaitez éviter que des données soient déplacées à ces occasions. En dernier lieu, vous souhaitez aussi ajouter le partitionnement à OrderDateKey de façon à pouvoir supprimer rapidement les anciennes données en éliminant les anciennes partitions. Voici l’instruction CTAS permettant de copier l’ancienne table dans une nouvelle.
 
 ```sql
 CREATE TABLE FactInternetSales_new
@@ -219,7 +219,7 @@ WITH
 AS SELECT * FROM FactInternetSales;
 ```
 
-Enfin, vous pouvez renommer vos tables pour l’échange dans votre nouvelle table et puis supprimez votre ancienne table.
+Enfin, vous pouvez renommer vos tables pour spécifier la nouvelle table et supprimer l’ancienne.
 
 ```sql
 RENAME OBJECT FactInternetSales TO FactInternetSales_old;
@@ -234,10 +234,10 @@ DROP TABLE FactInternetSales_old;
 
 <a name="ctas-change-column-attributes-bk"></a>
 
-### <a name="b-use-ctas-to-change-column-attributes"></a>B. SACT permet de modifier les attributs de colonne 
+### <a name="b-use-ctas-to-change-column-attributes"></a>B. Utiliser CTAS pour modifier des attributs de colonne 
 S’applique à : Azure SQL Data Warehouse et Parallel Data Warehouse
 
-Cet exemple utilise SACT pour modifier les types de données, possibilité de valeur null et le classement de plusieurs colonnes dans la table DimCustomer2.  
+Cet exemple utilise CTAS pour modifier des types de données, la possibilité de valeur NULL et le classement pour plusieurs colonnes de la table DimCustomer2.  
   
 ```  
 -- Original table 
@@ -280,7 +280,7 @@ CREATE TABLE [dbo].[test] (
 WITH (DISTRIBUTION = ROUND_ROBIN);
 ```
  
-Dans la dernière étape, vous pouvez utiliser [renommer &#40; Transact-SQL &#41; ](../../t-sql/statements/rename-transact-sql.md) pour basculer les noms de table. Cela rend DimCustomer2 être la nouvelle table.
+En dernier lieu, vous pouvez utiliser [RENAME &#40;Transact-SQL&#41; ](../../t-sql/statements/rename-transact-sql.md) pour permuter les noms de tables. DimCustomer2 devient ainsi la nouvelle table.
 
 ```
 RENAME OBJECT DimCustomer2 TO DimCustomer2_old;
@@ -291,18 +291,18 @@ DROP TABLE DimCustomer2_old;
 
 <a name="examples-table-distribution-bk"></a>
 
-## <a name="examples-for-table-distribution"></a>Exemples pour la distribution de la table
+## <a name="examples-for-table-distribution"></a>Exemples de distribution de table
 
 <a name="ctas-change-distribution-method-bk"></a>
 
-### <a name="c-use-ctas-to-change-the-distribution-method-for-a-table"></a>C. Utilisez SACT pour modifier la méthode de distribution pour une table
+### <a name="c-use-ctas-to-change-the-distribution-method-for-a-table"></a>C. Utiliser CTAS pour modifier la méthode de distribution d’une table
 S’applique à : Azure SQL Data Warehouse et Parallel Data Warehouse
 
-Cet exemple montre comment modifier la méthode de distribution pour une table. Pour afficher les mécanismes de la procédure à suivre, il devient une table de hachage distribué alternée et puis modifications à la table alternée hachage distribué. La table finale correspond à la table d’origine. 
+Cet exemple simple montre comment modifier la méthode de distribution d’une table. Pour détailler la procédure, il transforme une table de hachage distribuée en table round robin (tourniquet), puis reconvertit cette dernière en table de hachage distribuée. La table finale correspond à la table d’origine. 
 
-Dans la plupart des cas vous n’avez pas besoin de modifier une table de hachage distribué à une table de tourniquet. Plus souvent, vous devrez peut-être modifier une table de tourniquet pour une table de hachage distribuée. Par exemple, vous pouvez initialement charger une nouvelle table en tant qu’alternée et déplacer ultérieurement à une table de hachage distribué pour obtenir de meilleures performances de jointure.
+Dans la plupart des cas, il n’est pas nécessaire de transformer une table de hachage distribuée en table round robin. En revanche, vous serez plus souvent amené à transformer une table round robin en table de hachage distribuée. Par exemple, vous pouvez décider dans un premier temps de charger une nouvelle table sous forme de table round robin pour dans un second temps la convertir en table de hachage distribuée pour bénéficier de meilleures performances de jointure.
 
-Cet exemple utilise la base de données AdventureWorksDW. Pour charger la version de l’entrepôt de données SQL, consultez [charger des exemples de données dans l’entrepôt de données SQL](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-load-sample-databases/)
+Cet exemple utilise l’exemple de base de données AdventureWorks. Pour charger la version SQL Data Warehouse, consultez [Charger des exemples de données dans SQL Data Warehouse](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-load-sample-databases/)
  
 ```
 -- DimSalesTerritory is hash-distributed.
@@ -323,7 +323,7 @@ RENAME OBJECT [dbo].[myTable] TO [DimSalesTerritory];
 DROP TABLE [dbo].[DimSalesTerritory_old];
 
 ```  
-Ensuite, modifiez à une table de hachage distribuée.
+Ensuite, reconvertissez-la en table de hachage distribuée.
 
 ```
 -- You just made DimSalesTerritory a round-robin table.
@@ -346,10 +346,10 @@ DROP TABLE [dbo].[DimSalesTerritory_old];
  
 <a name="ctas-change-to-replicated-bk"></a>
 
-### <a name="d-use-ctas-to-convert-a-table-to-a-replicated-table"></a>D. Permet de convertir une table à une table répliquée SACT  
+### <a name="d-use-ctas-to-convert-a-table-to-a-replicated-table"></a>D. Utiliser CTAS pour convertir une table en table répliquée  
 S’applique à : Azure SQL Data Warehouse et Parallel Data Warehouse 
 
-Cet exemple s’applique pour la conversion des tables de hachage distribué ou de tourniquet à une table répliquée. Cet exemple utilise la méthode précédente de la modification de la distribution type plus loin.  DimSalesTerritory étant une dimension et probablement une plus petite table, vous pouvez choisir de recréer la table comme étant répliqués pour éviter le déplacement des données lors de la jointure à d’autres tables. 
+Cet exemple vaut pour la conversion de tables round robin ou de hachage distribuées en table répliquée. Cet exemple précis va encore plus loin que la méthode précédente de modification du type de distribution.  DimSalesTerritory étant une dimension et probablement une table de plus petite taille, vous pouvez choisir de la recréer sous forme de table répliquée pour éviter que des données soient déplacées au moment de la joindre à d’autres tables. 
 
 ```
 -- DimSalesTerritory is hash-distributed.
@@ -370,10 +370,10 @@ RENAME OBJECT [dbo].[myTable] TO [DimSalesTerritory];
 DROP TABLE [dbo].[DimSalesTerritory_old];
 ```
  
-### <a name="e-use-ctas-to-create-a-table-with-fewer-columns"></a>E. SACT permet de créer une table avec moins de colonnes
+### <a name="e-use-ctas-to-create-a-table-with-fewer-columns"></a>E. Utiliser CTAS pour créer une table avec moins de colonnes
 S’applique à : Azure SQL Data Warehouse et Parallel Data Warehouse 
 
-L’exemple suivant crée une table distribuée alternée nommée `myTable (c, ln)`. La nouvelle table contient uniquement deux colonnes. Il utilise les alias de colonne dans l’instruction SELECT pour les noms des colonnes.  
+L’exemple suivant crée une table distribuée de type round robin nommée `myTable (c, ln)`. La nouvelle table contient seulement deux colonnes. Elle utilise les alias des colonnes dans l’instruction SELECT à la place des noms des colonnes.  
   
 ```  
 CREATE TABLE myTable  
@@ -393,10 +393,10 @@ AS SELECT CustomerKey AS c, LastName AS ln
 
 <a name="ctas-query-hint-bk"></a>
 
-### <a name="f-use-a-query-hint-with-create-table-as-select-ctas"></a>F. Utilisez un indicateur de requête avec CREATE TABLE AS sélectionnez (SACT)  
+### <a name="f-use-a-query-hint-with-create-table-as-select-ctas"></a>F. Utiliser un indicateur de requête avec CREATE TABLE AS SELECT (CTAS)  
 S’applique à : Azure SQL Data Warehouse et Parallel Data Warehouse
   
-Cette requête affiche la syntaxe de base pour l’utilisation d’un indicateur de jointure de requête avec l’instruction SACT. Une fois la requête est envoyée, [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] s’applique la stratégie de jointure de hachage lorsqu’il génère le plan de requête pour chaque point de distribution individuel. Pour plus d’informations sur l’indicateur de requête de jointure de hachage, consultez [Clause OPTION &#40; Transact-SQL &#41; ](../../t-sql/queries/option-clause-transact-sql.md).  
+Cette requête présente la syntaxe de base pour utiliser un indicateur de jointure de requête avec l’instruction CTAS. Une fois la requête envoyée, [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] applique la stratégie de jointure hachée au moment de générer le plan de requête pour chaque distribution individuelle. Pour plus d’informations sur l’indicateur de requête de jointure hachée, consultez [Clause OPTION &#40;Transact-SQL&#41;](../../t-sql/queries/option-clause-transact-sql.md).  
   
 ```  
 CREATE TABLE dbo.FactInternetSalesNew  
@@ -412,16 +412,16 @@ OPTION ( HASH JOIN );
 
 <a name="examples-external-tables"></a>
 
-## <a name="examples-for-external-tables"></a>Exemples pour les tables externes
+## <a name="examples-for-external-tables"></a>Exemples de tables externes
 
 <a name="ctas-azure-blob-storage-bk"></a>
 
-### <a name="g-use-ctas-to-import-data-from-azure-blob-storage"></a>G. Utilisez SACT pour importer des données à partir du stockage d’objets Blob Azure  
+### <a name="g-use-ctas-to-import-data-from-azure-blob-storage"></a>G. Utiliser CTAS pour importer des données à partir du stockage Blob Azure  
 S’applique à : Azure SQL Data Warehouse et Parallel Data Warehouse  
 
-Pour importer des données à partir d’une table externe, utilisez simplement CREATE TABLE AS SELECT pour sélectionner à partir de la table externe. La syntaxe permettant de sélectionner des données dans une table externe en [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] est identique à la syntaxe de sélection des données à partir d’une table normale.  
+Pour importer des données à partir d’une table externe, utilisez simplement CREATE TABLE AS SELECT pour effectuer une sélection dans la table externe. La syntaxe à utiliser pour sélectionner des données dans une table externe à destination de [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] est la même que celle permettant de sélectionner des données dans une table normale.  
   
- L’exemple suivant définit une table externe des données dans un compte de stockage d’objets blob Azure. Il utilise ensuite le CREATE TABLE AS SELECT pour sélectionner à partir de la table externe. Il importe les données à partir des fichiers de texte délimité de stockage blob Azure et stocke les données dans un nouveau [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] table.  
+ L’exemple suivant définit une table externe parmi des données situées dans un compte de stockage Blob Azure. Il utilise ensuite CREATE TABLE AS SELECT pour effectuer une sélection dans la table externe. Les données sont alors importées à partir de fichiers délimités par du texte dans le stockage Blob Azure, puis stockées dans une nouvelle table [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].  
   
 ```  
 --Use your own processes to create the text-delimited files on Azure blob storage.  
@@ -451,12 +451,12 @@ AS SELECT * FROM ClickStreamExt
 
 <a name="ctas-import-Hadoop-bk"></a>
   
-### <a name="h-use-ctas-to-import-hadoop-data-from-an-external-table"></a>H. Utilisez SACT pour importer des données Hadoop à partir d’une table externe  
-S’applique à :[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+### <a name="h-use-ctas-to-import-hadoop-data-from-an-external-table"></a>H. Utiliser CTAS pour importer des données Hadoop à partir d’une table externe  
+S’applique à : [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-Pour importer des données à partir d’une table externe, utilisez simplement CREATE TABLE AS SELECT pour sélectionner à partir de la table externe. La syntaxe permettant de sélectionner des données dans une table externe en [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] est identique à la syntaxe de sélection des données à partir d’une table normale.  
+Pour importer des données à partir d’une table externe, utilisez simplement CREATE TABLE AS SELECT pour effectuer une sélection dans la table externe. La syntaxe à utiliser pour sélectionner des données dans une table externe à destination de [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] est la même que celle permettant de sélectionner des données dans une table normale.  
   
- L’exemple suivant définit une table externe sur un cluster Hadoop. Il utilise ensuite le CREATE TABLE AS SELECT pour sélectionner à partir de la table externe. Il importe les données à partir des fichiers de texte délimité Hadoop et stocke les données dans un nouveau [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] table.  
+ L’exemple suivant définit une table externe sur un cluster Hadoop. Il utilise ensuite CREATE TABLE AS SELECT pour effectuer une sélection dans la table externe. Les données sont alors importées à partir de fichiers délimités par du texte Hadoop, puis stockées dans une nouvelle table [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
   
 ```  
 -- Create the external table called ClickStream.  
@@ -488,20 +488,20 @@ AS SELECT * FROM ClickStreamExt
  
 <a name="examples-workarounds-bk"></a>
  
-## <a name="examples-using-ctas-to-replace-sql-server-code"></a>Exemples d’utilisation de SACT pour remplacer le code de SQL Server
+## <a name="examples-using-ctas-to-replace-sql-server-code"></a>Exemples d’utilisation de CTAS pour remplacer du code SQL Server
 
-SACT permet de contourner certaines fonctionnalités non prises en charge. En plus de pouvoir exécuter votre code dans l’entrepôt de données, une réécriture du code existant pour utiliser SACT généralement améliore les performances. Il s’agit d’un résultat de sa conception entièrement parallélisée. 
+CTAS permet de pallier l’absence de prise en charge de certaines fonctionnalités. En plus de permettre l’exécution de votre code dans l’entrepôt de données, le fait de réécrire le code existant pour utiliser CTAS aura généralement pour effet d’améliorer les performances. C’est le résultat de sa conception entièrement parallélisée. 
 
 > [!NOTE]
-> Essayez de vous demander « SACT premier ». Si vous pensez que vous pouvez résoudre un problème à l’aide `CTAS` puis qui est généralement la meilleure approche, même si vous écrivez des données en conséquence.
+> Essayez de penser à CTAS en priorité. Si vous pensez que vous pouvez résoudre un problème avec `CTAS`, c’est qu’il s’agit généralement de la meilleure façon de l’aborder, même si cela sous-entend d’écrire plus de données.
 >
 
 <a name="ctas-replace-select-into-bk"></a>
 
-### <a name="i-use-ctas-instead-of-selectinto"></a>I. Utilisez SACT au lieu de sélectionner... DANS  
+### <a name="i-use-ctas-instead-of-selectinto"></a>I. Utiliser CTAS plutôt que SELECT..INTO  
 S’applique à : Azure SQL Data Warehouse et Parallel Data Warehouse
 
-Code de SQL Server utilise généralement SELECT... INTO pour remplir une table avec les résultats d’une instruction SELECT. Il s’agit d’un exemple d’un serveur SQL SELECT... DANS l’instruction.
+Le code SQL Server utilise généralement SELECT..INTO pour remplir une table avec les résultats d’une instruction SELECT. Voici un exemple d’instruction SQL Server SELECT..INTO.
 
 ```sql
 SELECT *
@@ -509,7 +509,7 @@ INTO    #tmp_fct
 FROM    [dbo].[FactInternetSales]
 ```
 
-Cette syntaxe n’est pas pris en charge dans SQL Data Warehouse et Parallel Data Warehouse. Cet exemple montre comment réécrivez l’instruction SELECT précédente... DANS l’instruction comme une instruction SACT. Vous pouvez choisir l’une des options de DISTRIBUTION décrites dans la syntaxe SACT. Cet exemple utilise la méthode de distribution ROUND_ROBIN.
+Cette syntaxe n’est pas prise en charge dans SQL Data Warehouse et Parallel Data Warehouse. Cet exemple montre comment réécrire l’instruction SELECT..INTO précédente pour en faire une instruction CTAS. Vous pouvez choisir l’une des options DISTRIBUTION décrites dans la syntaxe CTAS. Cet exemple utilise la méthode de distribution ROUND_ROBIN.
 
 ```sql
 CREATE TABLE #tmp_fct
@@ -525,12 +525,12 @@ FROM    [dbo].[FactInternetSales]
 
 <a name="ctas-replace-implicit-joins-bk"></a>
 
-### <a name="j-use-ctas-and-implicit-joins-to-replace-ansi-joins-in-the-from-clause-of-an-update-statement"></a>J. Permet de remplacer des jointures ANSI dans SACT et jointures implicites le `FROM` clause d’une `UPDATE` instruction  
+### <a name="j-use-ctas-and-implicit-joins-to-replace-ansi-joins-in-the-from-clause-of-an-update-statement"></a>J. Utiliser CTAS et des jointures implicites pour remplacer des jointures ANSI dans la clause `FROM` d’une instruction `UPDATE`  
 S’applique à : Azure SQL Data Warehouse et Parallel Data Warehouse  
 
-Vous pouvez trouver qu'une mise à jour complexes qui s’attache à l’aide de ANSI syntaxe de jointure pour effectuer la mise à jour ou la suppression de plus de deux tables.
+Imaginez que vous êtes en présence d’une mise à jour complexe qui joint plus de deux tables et exécute l’instruction UPDATE ou DELETE à l’aide de la syntaxe de jointure ANSI.
 
-Imaginez que vous deviez mettre à jour cette table :
+Vous devez mettre à jour cette table :
 
 ```sql
 CREATE TABLE [dbo].[AnnualCategorySales]
@@ -545,7 +545,7 @@ WITH
 ;
 ```
 
-La requête d’origine peut avoir recherché quelque chose comme ceci :
+La requête initiale peut se présenter comme suit :
 
 ```sql
 UPDATE  acs
@@ -570,9 +570,9 @@ AND [acs].[CalendarYear]                = [fis].[CalendarYear]
 ;
 ```
 
-Étant donné que l’entrepôt de données SQL ne prend pas en charge les jointures de ANSI dans les `FROM` clause d’une `UPDATE` instruction, vous ne pouvez pas utiliser ce code de SQL Server sur sans quelques modifications apportées.
+Sachant que SQL Data Warehouse ne prend pas en charge les jointures ANSI dans la clause `FROM` d’une instruction `UPDATE`, vous ne pouvez pas utiliser ce code SQL Server sans le modifier légèrement.
 
-Vous pouvez utiliser une combinaison d’un `CTAS` et une jointure implicite pour remplacer ce code :
+Vous pouvez remplacer ce code en combinant `CTAS` et une jointure implicite :
 
 ```sql
 -- Create an interim table
@@ -608,12 +608,12 @@ DROP TABLE CTAS_acs
 
 <a name="ctas-replace-ansi-joins-bk"></a>
 
-### <a name="k-use-ctas-to-specify-which-data-to-keep-instead-of-using-ansi-joins-in-the-from-clause-of-a-delete-statement"></a>K. SACT permet de spécifier les données à conserver au lieu d’utiliser ANSI joint dans la clause FROM d’une instruction DELETE  
+### <a name="k-use-ctas-to-specify-which-data-to-keep-instead-of-using-ansi-joins-in-the-from-clause-of-a-delete-statement"></a>K. Utiliser CTAS pour spécifier les données à conserver au lieu d’utiliser des jointures ANSI dans la clause FROM d’une instruction DELETE  
 S’applique à : Azure SQL Data Warehouse et Parallel Data Warehouse  
 
-Parfois, la meilleure approche pour la suppression des données consiste à utiliser `CTAS`. Au lieu de simplement la suppression des données, sélectionnez les données que vous souhaitez conserver. Cette particulièrement vrai pour `DELETE` instructions qui utilisent ansi jointures de la syntaxe de jointure depuis l’entrepôt de données SQL ne prend pas en charge ANSI dans les `FROM` clause d’un `DELETE` instruction.
+Parfois, la meilleure approche pour supprimer des données est d’utiliser `CTAS`. Au lieu de supprimer les données, sélectionnez simplement les données que vous voulez conserver. Cela est particulièrement vrai pour les instructions `DELETE` qui utilisent la syntaxe de jointure ANSI, car SQL Data Warehouse ne prend pas en charge les jointures ANSI dans la clause `FROM` d’une instruction `DELETE`.
 
-Un exemple d’une instruction DELETE converti est le suivant :
+Voici un exemple d’instruction DELETE convertie :
 
 ```sql
 CREATE TABLE dbo.DimProduct_upsert
@@ -636,12 +636,12 @@ RENAME OBJECT dbo.DimProduct_upsert TO DimProduct;
 
 <a name="ctas-simplify-merge-bk"></a>
 
-### <a name="l-use-ctas-to-simplify-merge-statements"></a>L. Permet de simplifier les instructions merge SACT  
+### <a name="l-use-ctas-to-simplify-merge-statements"></a>L. Utiliser CTAS pour simplifier les instructions merge  
 S’applique à : Azure SQL Data Warehouse et Parallel Data Warehouse  
 
-Instructions de fusion peuvent être remplacées, au moins en partie, à l’aide de `CTAS`. Vous pouvez consolider les `INSERT` et `UPDATE` dans une instruction unique. Tous les enregistrements supprimés doit être clôturé dans une deuxième instruction.
+Les instructions merge peuvent être remplacées, du moins en partie, à l’aide de `CTAS`. Vous pouvez regrouper `INSERT` et `UPDATE` dans une même instruction. Les enregistrements supprimés doivent être fermés dans une deuxième instruction.
 
-Un exemple d’un `UPSERT` est le suivant :
+Voici un exemple avec `UPSERT` :
 
 ```sql
 CREATE TABLE dbo.[DimProduct_upsert]
@@ -675,10 +675,10 @@ RENAME OBJECT dbo.[DimpProduct_upsert]  TO [DimProduct];
 
 <a name="ctas-data-type-and-nullability-bk"></a>
 
-### <a name="m-explicitly-state-data-type-and-nullability-of-output"></a>M. Déclarer explicitement le type de données et la possibilité de valeur null de sortie  
+### <a name="m-explicitly-state-data-type-and-nullability-of-output"></a>M. Déclarer explicitement un type de données et la possibilité de valeur NULL de la sortie  
 S’applique à : Azure SQL Data Warehouse et Parallel Data Warehouse  
 
-Lorsque vous migrez le code SQL Server à SQL Data Warehouse, vous constaterez que vous exécutez sur ce type de modèle de codage :
+Au moment de migrer du code SQL Server vers SQL Data Warehouse, il se peut que vous rencontriez un modèle de codage de ce type :
 
 ```sql
 DECLARE @d decimal(7,2) = 85.455
@@ -694,9 +694,9 @@ SELECT @d*@f
 ;
 ```
 
-Vous pensez instinctivement vous devez migrer ce code à un SACT et vous serait correcte. Toutefois, il existe un masqué problème ici.
+Vous pourriez penser instinctivement que ce code doit être migré vers CTAS, et vous auriez raison. Or, il y a un problème caché.
 
-Le code suivant ne génère pas le même résultat :
+Le code suivant NE produit PAS le même résultat :
 
 ```sql
 DECLARE @d decimal(7,2) = 85.455
@@ -710,9 +710,9 @@ SELECT @d*@f as result
 ;
 ```
 
-Notez que la colonne « result » reprend les valeurs de type et la possibilité de valeur NULL des données de l’expression. Cela peut entraîner subtiles écarts dans les valeurs si vous ne faites pas attention.
+Notez que la colonne « result » reprend le type de données et la possibilité de valeur NULL de l’expression. Cela peut occasionner de légers écarts dans les valeurs si vous ne faites pas attention.
 
-Essayez ce qui suit comme exemple :
+Faites un essai avec l’exemple suivant :
 
 ```sql
 SELECT result,result*@d
@@ -724,17 +724,17 @@ from ctas_r
 ;
 ```
 
-La valeur stockée pour le résultat est différente. L’erreur devient importante, plus la valeur persistante dans la colonne de résultats est utilisée dans d’autres expressions.
+Les valeurs de résultats enregistrées sont différentes. Comme la valeur persistante dans la colonne « result » est utilisée dans d’autres expressions, l’erreur devient plus significative.
 
 ![Résultats de CREATE TABLE AS SELECT](../../t-sql/statements/media/create-table-as-select-results.png)
 
-Cela est particulièrement important pour les migrations de données. Bien que la seconde requête est sans doute plus précise, il existe un problème. Les données doivent être différentes par rapport au système source et qui mène aux questions de l’intégrité de la migration. Il s’agit d’une des ces rares cas où la réponse « incorrecte » est réellement celui qui convient !
+Cela est particulièrement important pour les migrations de données. Même si la deuxième requête est sans doute plus précise, il y a un problème. Les données sont différentes par rapport au système source, ce qui soulève la question de l’intégrité de la migration. Il s’agit de l’un des rares cas où la « mauvaise » réponse est en fait la bonne réponse !
 
-La raison pour laquelle que nous voir cette disparité entre les deux résultats est à effectuer un cast de type implicite. Dans le premier exemple, le tableau définit la définition de colonne. Lorsque la ligne est insérée une conversion de type implicite se produit. Dans le deuxième exemple il n’existe aucune conversion de type implicite comme l’expression définit le type de données de la colonne. Notez également que la colonne dans le deuxième exemple a été définie comme une colonne acceptant les valeurs NULL, tandis que dans le premier exemple il n’a pas. Lorsque la table a été créée dans les valeurs de colonne NULL premier exemple a été définie explicitement. Dans le deuxième exemple qu'il simplement était à l’expression et, par défaut cela aurait pour résultat dans une définition de valeur NULL.  
+Cette différence entre les deux résultats est liée à la conversion de type (transtypage) implicite. Dans le premier exemple, la table spécifie la définition de colonne. Au moment où la ligne est insérée, une conversion de type implicite se produit. Dans le deuxième exemple, il n’y a pas de conversion de type implicite, car l’expression définit le type de données de la colonne. Il est aussi à noter que la colonne dans le deuxième exemple a été définie en tant que colonne pouvant accepter les valeurs NULL, ce qui n’est pas le cas dans le premier exemple. Quand la table a été créée dans le premier exemple, la possibilité de valeur NULL dans la colonne était définie explicitement. Dans le deuxième exemple, elle a juste été laissée dans l’expression ce qui, par défaut, donne une définition NULL.  
 
-Pour résoudre ces problèmes vous devez définir explicitement la conversion de type et la possibilité de valeur NULL dans le `SELECT` partie de la `CTAS` instruction. Vous ne pouvez pas définir ces propriétés dans la partie de la table create.
+Pour éviter ce type de problème, vous devez définir explicitement la conversion de type et la possibilité de valeur NULL dans la partie `SELECT` de l’instruction `CTAS`. Vous ne pouvez pas définir ces propriétés dans la partie « create table ».
 
-L’exemple ci-dessous montre comment la corriger le code :
+L’exemple ci-dessous montre comment corriger le code :
 
 ```sql
 DECLARE @d decimal(7,2) = 85.455
@@ -746,16 +746,16 @@ AS
 SELECT ISNULL(CAST(@d*@f AS DECIMAL(7,2)),0) as result
 ```
 
-Notez les points suivants :
-- CAST ou CONVERT pourrait avoir été utilisé
-- ISNULL est utilisée pour forcer la possibilité de valeur null pas COALESCE
-- ISNULL est la fonction externe
-- La deuxième partie de la ISNULL est une constante c'est-à-dire 0
+Notez les points suivants :
+- CAST ou CONVERT aurait pu être utilisé
+- ISNULL est utilisé pour forcer la possibilité de valeur NULL et non COALESCE
+- ISNULL est la fonction la plus à l’extérieur
+- La deuxième partie de ISNULL est une constante, c’est-à-dire 0
 
 > [!NOTE]
-> La possibilité de valeur null à définir correctement il est essentiel d’utiliser `ISNULL` et non `COALESCE`. `COALESCE`n’est pas une fonction déterministe et par conséquent, le résultat de l’expression sera toujours NULLable. `ISNULL`est différent. Elle est déterministe. Par conséquent, lors de la deuxième partie de la `ISNULL` la fonction est une constante ou un littéral, la valeur résultante est non NULL.
+> Pour que la possibilité de valeur NULL soit correctement définie, il est indispensable d’utiliser `ISNULL` et non `COALESCE`. `COALESCE` n’est pas une fonction déterministe. De ce fait, le résultat de l’expression peut toujours prendre la valeur NULL. La fonction `ISNULL` est différente. Elle est déterministe. Par conséquent, quand la deuxième partie de la fonction `ISNULL` est une constante ou un littéral, la valeur obtenue n’est pas NULL.
 
-Ce Conseil n’est pas seulement utile pour assurer l’intégrité de vos calculs. Il est également important pour le basculement de partition de table. Imaginez que vous disposez de cette table définie en tant que votre fait :
+Ce conseil n’est pas seulement utile pour assurer l’intégrité de vos calculs. Il est aussi important pour le basculement de partition de table. Imaginez que vous avez défini cette table :
 
 ```sql
 CREATE TABLE [dbo].[Sales]
@@ -778,9 +778,9 @@ WITH
 ;
 ```
 
-Toutefois, le champ de valeur est une expression calculée, il n’est pas partie de la source de données.
+Or, il s’avère que le champ de valeur est une expression calculée ; il ne fait pas partie des données sources.
 
-Pour créer votre jeu de données partitionné, vous pouvez souhaiter procéder :
+Pour créer un jeu de données partitionné, voici ce que vous devez faire :
 
 ```sql
 CREATE TABLE [dbo].[Sales_in]
@@ -804,7 +804,7 @@ OPTION (LABEL = 'CTAS : Partition IN table : Create')
 ;
 ```
 
-La requête s’exécute parfaitement. Un problème se pose lorsque vous essayez d’effectuer le basculement de partition. Les définitions de table ne correspondent pas. Pour rendre les définitions de table correspond à la SACT doit être modifiée.
+La requête s’exécuterait parfaitement, mais le problème se manifesterait quand vous tenteriez de procéder au basculement de partition. Les définitions de table ne correspondent pas. Pour que les définitions de table correspondent, CTAS doit être modifié.
 
 ```sql
 CREATE TABLE [dbo].[Sales_in]
@@ -827,14 +827,14 @@ FROM [stg].[source]
 OPTION (LABEL = 'CTAS : Partition IN table : Create');
 ```
 
-Par conséquent, vous pouvez voir que la cohérence des types et la gestion des propriétés de la possibilité de valeur NULL sur un SACT est meilleure ingénierie recommandé. Il vous aide à maintenir l’intégrité de vos calculs et garantit également que le basculement de partition est possible.
+Comme vous pouvez le remarquer, la cohérence des types et le maintien des propriétés de possibilité de valeur NULL au niveau de CTAS constituent une bonne pratique d’ingénierie. Elle vous permet de préserver l’intégrité de vos calculs et garantit aussi la possibilité d’un basculement de partition.
  
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [CREATE EXTERNAL DATA SOURCE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-data-source-transact-sql.md)   
  [CREATE EXTERNAL FILE FORMAT &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-file-format-transact-sql.md)   
  [CREATE EXTERNAL TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-table-transact-sql.md)   
- [CREATE EXTERNAL TABLE AS SELECT &#40; Transact-SQL &#41;](../../t-sql/statements/create-external-table-as-select-transact-sql.md)   
- [CRÉER une TABLE &#40; Entrepôt de données SQL Azure &#41; ](../../t-sql/statements/create-table-azure-sql-data-warehouse.md) [DROP TABLE &#40; Transact-SQL &#41;](../../t-sql/statements/drop-table-transact-sql.md)   
+ [CREATE EXTERNAL TABLE AS SELECT &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-table-as-select-transact-sql.md)   
+ [CREATE TABLE &#40;Azure SQL Data Warehouse&#41;](../../t-sql/statements/create-table-azure-sql-data-warehouse.md) [DROP TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-table-transact-sql.md)   
  [DROP EXTERNAL TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-external-table-transact-sql.md)   
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
  [ALTER EXTERNAL TABLE &#40;Transact-SQL&#41;](http://msdn.microsoft.com/library/4ae1b23c-67f6-41d0-b614-7a8de914d145)  

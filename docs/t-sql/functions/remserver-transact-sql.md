@@ -1,5 +1,5 @@
 ---
-title: '@@REMSERVER (Transact-SQL) | Documents Microsoft'
+title: '@@REMSERVER (Transact-SQL) | Microsoft Docs'
 ms.custom: 
 ms.date: 09/18/2017
 ms.prod: sql-non-specified
@@ -33,7 +33,7 @@ ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="x40x40remserver-transact-sql"></a>& #x 40 ; & #x 40 ; REMSERVER (Transact-SQL)
+# <a name="x40x40remserver-transact-sql"></a>&#x40;&#x40;REMSERVER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
     
@@ -51,10 +51,10 @@ ms.lasthandoff: 11/21/2017
 ```  
   
 ## <a name="return-types"></a>Types de retour  
- **nvarchar (128)**  
+ **nvarchar(128)**  
   
-## <a name="remarks"></a>Notes  
- @@REMSERVER permet à une procédure stockée vérifier le nom du serveur de base de données à partir de laquelle la procédure est exécutée.  
+## <a name="remarks"></a>Notes   
+ @@REMSERVER permet à une procédure stockée de vérifier le nom du serveur de base de données sur lequel la procédure s’exécute.  
   
 ## <a name="examples"></a>Exemples  
  Cet exemple crée la procédure `usp_CheckServer` qui retourne le nom du serveur distant.  
@@ -78,7 +78,7 @@ EXEC SEATTLE1...usp_CheckServer;
 LONDON2  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Fonctions de configuration &#40;Transact-SQL&#41;](../../t-sql/functions/configuration-functions-transact-sql.md)   
  [Serveurs distants](../../database-engine/configure-windows/remote-servers.md)  
   

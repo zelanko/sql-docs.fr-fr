@@ -1,5 +1,5 @@
 ---
-title: "Créez l’agrégat (Transact-SQL) | Documents Microsoft"
+title: CREATE AGGREGATE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -38,7 +38,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="create-aggregate-transact-sql"></a>CREATE AGGREGATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Crée une fonction d'agrégation définie par l'utilisateur dont l'implémentation est définie dans une classe d'un assembly dans le [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. Pour le [!INCLUDE[ssDE](../../includes/ssde-md.md)] pour lier la fonction d’agrégation à son implémentation, la [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] assembly qui contient l’implémentation doit d’abord être téléchargé dans une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à l’aide d’une instruction CREATE ASSEMBLY.  
+  Crée une fonction d'agrégation définie par l'utilisateur dont l'implémentation est définie dans une classe d'un assembly dans le [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. Pour que le [!INCLUDE[ssDE](../../includes/ssde-md.md)] lie la fonction d’agrégation à son implémentation, vous devez d’abord charger l’assembly [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] qui contient cette implémentation dans une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à l’aide d’une instruction CREATE ASSEMBLY.  
   
  ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -68,13 +68,13 @@ EXTERNAL NAME assembly_name [ .class_name ]
  Nom de la fonction d'agrégation que vous voulez créer.  
   
  **@** *param_name*  
- Un ou plusieurs paramètres dans l'agrégat défini par l'utilisateur. L'utilisateur doit fournir la valeur d'un paramètre lors de l'exécution de la fonction d'agrégation. Spécifiez un nom de paramètre à l’aide d’un signe « at » (**@**) comme premier caractère. Le nom du paramètre doit respecter les règles de [identificateurs](../../relational-databases/databases/database-identifiers.md). Les paramètres sont locaux à la fonction.  
+ Un ou plusieurs paramètres dans l'agrégat défini par l'utilisateur. L'utilisateur doit fournir la valeur d'un paramètre lors de l'exécution de la fonction d'agrégation. Spécifiez un nom de paramètre en plaçant le signe **@** comme premier caractère. Le nom du paramètre doit respecter les règles applicables aux [identificateurs](../../relational-databases/databases/database-identifiers.md). Les paramètres sont locaux à la fonction.  
   
  *system_scalar_type*  
- Un des types de données scalaires système de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui contiennent la valeur du paramètre d'entrée ou la valeur de retour. Tous les types de données scalaires peuvent être utilisés en tant que paramètre pour un agrégat défini par l’utilisateur, sauf **texte**, **ntext**, et **image**. Types non scalaires, tels que **curseur** et **table**, ne peut pas être spécifié.  
+ Un des types de données scalaires système de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui contiennent la valeur du paramètre d'entrée ou la valeur de retour. Tous les types de données scalaires peuvent être utilisés comme paramètre d’une agrégation définie par l’utilisateur, à l’exception de **text**, de **ntext** et d’**image**. Les types non scalaires, tels que **cursor** et **table**, ne peuvent pas être spécifiés.  
   
  *udt_schema_name*  
- Nom du schéma auquel appartient le type CLR défini par l'utilisateur. Si non spécifié, le [!INCLUDE[ssDE](../../includes/ssde-md.md)] références *udt_type_name* dans l’ordre suivant :  
+ Nom du schéma auquel appartient le type CLR défini par l'utilisateur. S’il n’est pas spécifié, le [!INCLUDE[ssDE](../../includes/ssde-md.md)] fait référence à *udt_type_name* dans l’ordre suivant :  
   
 -   l'espace de noms de type SQL natif ;  
   
@@ -83,21 +83,21 @@ EXTERNAL NAME assembly_name [ .class_name ]
 -   Schéma **dbo** dans la base de données active.  
   
  *udt_type_name*  
- Nom d'un type CLR défini par l'utilisateur et déjà créé dans la base de données active. Si *udt_schema_name* n’est pas spécifié, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] suppose que le type appartient au schéma de l’utilisateur actuel.  
+ Nom d'un type CLR défini par l'utilisateur et déjà créé dans la base de données active. Si le paramètre *udt_schema_name* n’est pas spécifié, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] suppose que le type appartient au schéma de l’utilisateur actuel.  
   
  *assembly_name* [ **.***class_name* ]  
- Spécifie l'assembly à lier à la fonction d'agrégation définie par l'utilisateur et, éventuellement, le nom du schéma auquel appartient l'assembly et le nom de la classe d'assembly qui met en œuvre l'agrégation définie par l'utilisateur. L'assembly doit avoir été déjà créé dans la base de données à l'aide de l'instruction CREATE ASSEMBLY. *CLASS_NAME* doit être valide [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] identificateur et mise en correspondance le nom d’une classe qui existe dans l’assembly. *CLASS_NAME* peut être un nom qualifié d’espace de noms si le langage de programmation utilisé pour écrire la classe utilise des espaces de noms, tel que c#. Si *class_name* n’est pas spécifié, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] suppose qu’il est identique *aggregate_name*.  
+ Spécifie l'assembly à lier à la fonction d'agrégation définie par l'utilisateur et, éventuellement, le nom du schéma auquel appartient l'assembly et le nom de la classe d'assembly qui met en œuvre l'agrégation définie par l'utilisateur. L'assembly doit avoir été déjà créé dans la base de données à l'aide de l'instruction CREATE ASSEMBLY. Le paramètre *class_name* doit être un identificateur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] valide et doit correspondre au nom d’une classe qui existe dans l’assembly. *class_name* peut être un nom qualifié par l’espace de noms, si le langage de programmation utilisé pour écrire la classe utilise des espaces de noms, comme C#. Si le paramètre *class_name* n’est pas spécifié, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] suppose qu’il est identique à *aggregate_name*.  
   
-## <a name="remarks"></a>Notes  
- Par défaut, la possibilité de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] d'exécuter du code CLR est désactivée. Vous pouvez créer, modifier et supprimer des objets de base de données qui référencent des modules de code managé, mais le code dans ces modules ne s’exécutera pas dans une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , sauf si le [option clr enabled](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md) est activé à l’aide de [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md).  
+## <a name="remarks"></a>Notes   
+ Par défaut, la possibilité de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] d'exécuter du code CLR est désactivée. Vous pouvez créer, modifier et supprimer des objets de base de données qui font référence à des modules de code managé. Cependant, le code de ces modules ne s’exécute pas dans une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], sauf si l’[option clr enabled](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md) est activée à l’aide de l’argument [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md).  
   
- La classe de l’assembly référencé dans *assembly_name* et ses méthodes doivent répondre à la configuration requise pour l’implémentation d’une fonction d’agrégation définie par l’utilisateur dans une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour plus d’informations, consultez [les agrégats](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-aggregates.md).  
+ La classe de l’assembly référencé dans *assembly_name* et ses méthodes doivent répondre à toutes les exigences en matière d’implémentation d’une fonction d’agrégation définie par l’utilisateur dans une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour plus d’informations, consultez [Agrégats CLR définis par l’utilisateur](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-aggregates.md).  
   
 ## <a name="permissions"></a>Autorisations  
  Nécessite les autorisations CREATE AGGREGATE et REFERENCES pour l'assembly mentionné dans la clause EXTERNAL NAME.  
   
 ## <a name="examples"></a>Exemples  
- L'exemple suivant suppose qu'un exemple d'application windows StringUtilities.csproj est compilé. Pour plus d’informations, consultez [exemple de fonctions de chaîne Utility](http://msdn.microsoft.com/library/9623013f-15f1-4614-8dac-1155e57c880c).  
+ L'exemple suivant suppose qu'un exemple d'application windows StringUtilities.csproj est compilé. Pour plus d’informations, consultez [Exemple de fonctions d’utilitaire de chaîne](http://msdn.microsoft.com/library/9623013f-15f1-4614-8dac-1155e57c880c).  
   
  L'exemple crée une agrégation `Concatenate`. Avant la création de celle-ci, l'assembly `StringUtilities.dll` est enregistré dans la base de données locale.  
   
@@ -122,7 +122,7 @@ EXTERNAL NAME [StringUtilities].[Microsoft.Samples.SqlServer.Concatenate];
 GO  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [DROP AGGREGATE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-aggregate-transact-sql.md)  
   
   

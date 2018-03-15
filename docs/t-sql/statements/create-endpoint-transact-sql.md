@@ -48,7 +48,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="create-endpoint-transact-sql"></a>CREATE ENDPOINT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Permet de créer des points de terminaison et de définir leurs propriétés, ainsi que les méthodes à la disposition des applications clientes. Pour plus d’informations des autorisations, consultez [accorder des autorisations de point de terminaison &#40; Transact-SQL &#41; ](../../t-sql/statements/grant-endpoint-permissions-transact-sql.md).  
+  Permet de créer des points de terminaison et de définir leurs propriétés, ainsi que les méthodes à la disposition des applications clientes. Pour plus d’informations, consultez [GRANT - Octroyer des autorisations sur un point de terminaison &#40;Transact-SQL&#41;](../../t-sql/statements/grant-endpoint-permissions-transact-sql.md).  
   
  La syntaxe de l'instruction CREATE ENDPOINT peut être logiquement subdivisée en deux parties :  
   
@@ -60,7 +60,7 @@ ms.lasthandoff: 01/25/2018
   
      Dans cette partie, vous définissez la charge utile prise en charge sur le point de terminaison. La charge utile peut être de divers types parmi ceux pris en charge : [!INCLUDE[tsql](../../includes/tsql-md.md)], Service Broker, mise en miroir de bases de données. Dans cette partie, vous préciserez également des informations propres à la langue.  
   
-> **Remarque :** les Services de Web XML natifs (points de terminaison SOAP/HTTP) a été supprimée dans [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].  
+> **REMARQUE :** Les services Web XML natifs (points de terminaison SOAP/HTTP) ont été supprimés dans [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].  
   
  ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -118,14 +118,14 @@ FOR DATABASE_MIRRORING (
  *endPointName*  
  Correspond au nom affecté au point de terminaison que vous créez. À utiliser lors de la mise à jour ou la suppression du point de terminaison.  
   
- AUTORISATION *connexion*  
+ AUTHORIZATION *login*  
  Indique une connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou Windows valide qui détient l'objet de point de terminaison qui vient d'être créé. Si l'argument AUTHORIZATION n'est pas spécifié, l'appelant devient, par défaut, le propriétaire de l'objet qui vient d'être créé.  
   
- Pour affecter la propriété en spécifiant d’autorisation, l’appelant doit avoir l’autorisation IMPERSONATE sur le *connexion*.  
+ Pour affecter la propriété en spécifiant l’argument AUTHORIZATION, l’appelant doit bénéficier de la permission IMPERSONATE sur le *login* concerné.  
   
- Pour réaffecter la propriété, consultez [ALTER ENDPOINT &#40; Transact-SQL &#41; ](../../t-sql/statements/alter-endpoint-transact-sql.md).  
+ Pour réaffecter la propriété, consultez [ALTER ENDPOINT &#40;Transact-SQL&#41;](../../t-sql/statements/alter-endpoint-transact-sql.md).  
   
- ÉTAT  **=**  {DÉMARRÉ | **ARRÊTÉ** | DÉSACTIVÉ}  
+ STATE **=** { STARTED | **STOPPED** | DISABLED }  
  Correspond à l'état du point de terminaison lors de sa création. Si l'état n'est pas précisé lors de la création du point de terminaison, STOPPED est la valeur par défaut.  
   
  STARTED  
@@ -137,7 +137,7 @@ FOR DATABASE_MIRRORING (
  **STOPPED**  
  Le point de terminaison est arrêté. Dans cet état, le serveur n'écoute pas le port du point de terminaison et ne répond à aucune tentative de requête visant l'utilisation du point de terminaison.  
   
- Pour modifier l’état, utilisez [ALTER ENDPOINT &#40; Transact-SQL &#41; ](../../t-sql/statements/alter-endpoint-transact-sql.md).  
+ Pour changer l’état, utilisez [ALTER ENDPOINT &#40;Transact-SQL&#41;](../../t-sql/statements/alter-endpoint-transact-sql.md).  
   
  AS { TCP }  
  Spécifie le protocole de transport à utiliser.  
@@ -166,7 +166,7 @@ FOR DATABASE_MIRRORING (
 > [!NOTE]  
 >  Pour les options propres à SERVICE_BROKER, consultez la section « Options SERVICE_BROKER » ci-dessous. Pour les options propres à DATABASE_MIRRORING, consultez la section « Options DATABASE_MIRRORING » ci-dessous.  
   
- AUTHENTIFICATION  **=**  \<authentication_options > Spécifie les conditions d’authentification TCP/IP pour les connexions pour ce point de terminaison. Le paramètre par défaut est WINDOWS.  
+ AUTHENTICATION **=** \<authentication_options> Indique les exigences d’authentification TCP/IP pour les connexions à ce point de terminaison. Le paramètre par défaut est WINDOWS.  
   
  Parmi les méthodes d'authentification prises en charge figurent NTLM et/ou Kerberos.  
   
@@ -175,21 +175,21 @@ FOR DATABASE_MIRRORING (
   
  **\<authentication_options> ::=**  
   
- **WINDOWS** [{NTLM | KERBEROS | **NEGOTIATE** }]  
+ **WINDOWS** [ { NTLM | KERBEROS | **NEGOTIATE** } ]  
  Indique que le point de terminaison doit se connecter à l'aide du protocole d'authentification Windows pour authentifier les points de terminaison. Il s'agit du paramètre par défaut.  
   
  Si vous spécifiez une méthode d'autorisation (NTLM ou KERBEROS), cette méthode est utilisée en tant que protocole d'authentification. Avec la valeur par défaut, NEGOTIATE, le point de terminaison utilise le protocole de négociation Windows pour choisir NTLM ou Kerberos.  
   
  CERTIFICATE *certificate_name*  
- Spécifie que le point de terminaison doit authentifier la connexion à l’aide du certificat spécifié par *nom_certificat* pour établir l’identité d’autorisation. Le point de terminaison éloigné doit disposer d'un certificat dont la clé publique correspond à la clé privée du certificat spécifié.  
+ Indique que le point de terminaison doit authentifier la connexion à l’aide du certificat spécifié par l’argument *certificate_name* afin de déterminer l’identité requise pour l’autorisation. Le point de terminaison éloigné doit disposer d'un certificat dont la clé publique correspond à la clé privée du certificat spécifié.  
   
- WINDOWS [{NTLM | KERBEROS | **NEGOTIATE** }] CERTIFICAT *nom_certificat*  
+ WINDOWS [ { NTLM | KERBEROS | **NEGOTIATE** } ] CERTIFICATE *certificate_name*  
  Indique que le point de terminaison doit essayer de se connecter à l'aide de l'authentification Windows et qu'en cas d'échec, il doit essayer en utilisant le certificat spécifié.  
   
- CERTIFICAT *nom_certificat* WINDOWS [{NTLM | KERBEROS | **NEGOTIATE** }]  
+ CERTIFICATE *certificate_name* WINDOWS [ { NTLM | KERBEROS | **NEGOTIATE** } ]  
  Indique que le point de terminaison doit essayer de se connecter à l'aide du certificat spécifié et qu'en cas d'échec, il doit essayer en utilisant l'authentification Windows.  
   
- CHIFFREMENT = {DÉSACTIVÉ | PRISE EN CHARGE | **REQUIRED** } [ALGORITHME { **AES** | RC4 | AES RC4 | RC4 AES}]  
+ ENCRYPTION = { DISABLED | SUPPORTED | **REQUIRED** } [ALGORITHM { **AES** | RC4 | AES RC4 | RC4 AES } ]  
  Spécifie si le chiffrement est utilisé dans le processus. La valeur par défaut est REQUIRED.  
   
  DISABLED  
@@ -204,13 +204,13 @@ FOR DATABASE_MIRRORING (
  Vous pouvez éventuellement utiliser l'argument ALGORITHM pour spécifier le type de chiffrement utilisé par le point de terminaison, comme suit :  
   
  **AES**  
- Indique que le point de terminaison doit utiliser l'algorithme AES. Ceci est la valeur par défaut dans [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] et versions ultérieures.  
+ Indique que le point de terminaison doit utiliser l'algorithme AES. Cette option est utilisée par défaut dans [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] et versions ultérieures.  
   
  RC4  
- Indique que le point de terminaison doit utiliser l'algorithme RC4. Ceci est la valeur par défaut via [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)].  
+ Indique que le point de terminaison doit utiliser l'algorithme RC4. Il s’agit de l’option par défaut jusqu’à [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)].  
   
 > [!NOTE]  
->  L'algorithme RC4 est uniquement pris en charge pour des raisons de compatibilité descendante. Le nouveau matériel ne peut être chiffré à l'aide de RC4 ou de RC4_128 que lorsque la base de données se trouve dans le niveau de compatibilité 90 ou 100. (Non recommandé.) Utilisez à la place un algorithme plus récent, tel qu'un des algorithmes AES. Dans [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et versions ultérieures, le matériel chiffré à l’aide de RC4 ou RC4_128 peut être déchiffré dans n’importe quel niveau de compatibilité.  
+>  L'algorithme RC4 est uniquement pris en charge pour des raisons de compatibilité descendante. Le nouveau matériel ne peut être chiffré à l'aide de RC4 ou de RC4_128 que lorsque la base de données se trouve dans le niveau de compatibilité 90 ou 100. (Non recommandé.) Utilisez à la place un algorithme plus récent, tel qu'un des algorithmes AES. Dans [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et versions ultérieures, le matériel chiffré à l’aide de RC4 ou de RC4_128 peut être déchiffré dans n’importe quel niveau de compatibilité.  
   
  AES RC4  
  Indique que les deux points de terminaison négocieront un algorithme de chiffrement avec ce point de terminaison, en donnant la préférence à l'algorithme AES.  
@@ -227,7 +227,7 @@ FOR DATABASE_MIRRORING (
   
  Les arguments suivants sont propres à l'option SERVICE_BROKER.  
   
- MESSAGE_FORWARDING  **=**  {ACTIVÉ | **DÉSACTIVÉ** }  
+ MESSAGE_FORWARDING **=** { ENABLED | **DISABLED** }  
  Détermine si les messages reçus par ce point de terminaison qui sont destinés à des services situés ailleurs seront transférés.  
   
  ENABLED  
@@ -243,7 +243,7 @@ FOR DATABASE_MIRRORING (
   
  L'argument suivant est propre à l'option DATABASE_MIRRORING.  
   
- RÔLE  **=**  {TÉMOIN | PARTENAIRE | TOUS LES}  
+ ROLE **=** { WITNESS | PARTNER | ALL }  
  Spécifie le ou les rôles de mise en miroir de bases de données pris en charge par le point de terminaison.  
   
  WITNESS  
@@ -258,26 +258,26 @@ FOR DATABASE_MIRRORING (
  ALL  
  Permet au point de terminaison de remplir le rôle de témoin et de partenaire dans le processus de mise en miroir de bases de données.  
   
- Pour plus d’informations sur ces rôles, consultez [mise en miroir de base de données &#40; SQL Server &#41; ](../../database-engine/database-mirroring/database-mirroring-sql-server.md).  
+ Pour plus d’informations sur ces rôles, consultez [Mise en miroir de bases de données &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md).  
   
 > [!NOTE]  
 >  Aucun port par défaut n'est associé à DATABASE_MIRRORING.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Les instructions ENDPOINT DDL ne peuvent pas être exécutées au sein d'une transaction utilisateur. Les instructions ENDPOINT DDL n'échouent pas, même si une transaction active au niveau d'isolement d'instantané utilise le point de terminaison faisant l'objet d'une modification.  
   
  Les requêtes peuvent être exécutées sur un ENDPOINT par :  
   
--   Membres de **sysadmin** rôle serveur fixe  
+-   Les membres du rôle serveur fixe **sysadmin**.  
   
--   le propriétaire du point de terminaison ;  
+-   Le propriétaire du point de terminaison.  
   
--   les utilisateurs ou groupes disposant de l'autorisation CONNECT sur le point de terminaison.  
+-   Les utilisateurs ou groupes disposant de l'autorisation CONNECT sur le point de terminaison.  
   
 ## <a name="permissions"></a>Autorisations  
  Requiert l'autorisation CREATE ENDPOINT ou l'appartenance au rôle serveur fixe **sysadmin** . Pour plus d’informations, consultez [Autorisations de point de terminaison GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-endpoint-permissions-transact-sql.md).  
   
-## <a name="example"></a>Exemple  
+## <a name="example"></a> Exemple  
   
 ### <a name="creating-a-database-mirroring-endpoint"></a>Création d'un point de terminaison pour la mise en miroir de bases de données  
  L'exemple suivant crée un point de terminaison pour la mise en miroir de bases de données. Le point de terminaison utilise le port numéro `7022`, bien que tout numéro de port disponible convienne. Ce point est configuré en vue d'utiliser l'authentification Windows associée uniquement à Kerberos. L'option `ENCRYPTION` est paramétrée sur la valeur non définie par défaut `SUPPORTED` afin de prendre en charge les données chiffrées ou non. Le point de terminaison est configuré pour prendre en charge les rôles de partenaire et de témoin.  
@@ -295,8 +295,8 @@ GO
   
 ## <a name="see-also"></a>Voir aussi  
  [ALTER ENDPOINT &#40;Transact-SQL&#41;](../../t-sql/statements/alter-endpoint-transact-sql.md)   
- [Choisissez un algorithme de chiffrement](../../relational-databases/security/encryption/choose-an-encryption-algorithm.md)   
- [SUPPRIMER le point de terminaison &#40; Transact-SQL &#41;](../../t-sql/statements/drop-endpoint-transact-sql.md)   
+ [Choisir un algorithme de chiffrement](../../relational-databases/security/encryption/choose-an-encryption-algorithm.md)   
+ [DROP ENDPOINT &#40;Transact-SQL&#41;](../../t-sql/statements/drop-endpoint-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
   
   

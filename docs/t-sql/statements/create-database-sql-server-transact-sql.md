@@ -1,5 +1,5 @@
 ---
-title: "CRÉER la base de données (SQL Server Transact-SQL) | Documents Microsoft"
+title: CREATE DATABASE (SQL Server Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/10/2017
 ms.prod: sql-non-specified
@@ -58,7 +58,7 @@ ms.lasthandoff: 01/22/2018
   
 ## <a name="syntax"></a>Syntaxe  
 
-création d'une base de données ;    
+Créer une base de données    
 
 ```  
 CREATE DATABASE database_name   
@@ -148,101 +148,101 @@ CREATE DATABASE database_snapshot_name
   
 ## <a name="arguments"></a>Arguments  
  *database_name*  
- Est le nom de la base de données. Les noms de base de données doivent être uniques au sein d’une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et respecter les règles pour [identificateurs](../../relational-databases/databases/database-identifiers.md).  
+ Nom de la nouvelle base de données. Les noms de base de données doivent être uniques au sein d’une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et respecter les règles applicables aux [identificateurs](../../relational-databases/databases/database-identifiers.md).  
   
- *database_name* peut être un maximum de 128 caractères, sauf si un nom logique n’est pas spécifié pour le fichier journal. Si un nom de fichier journal logique n’est pas spécifié, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] génère le *nom_fichier_logique* et *nom_fichier_se* pour le journal en ajoutant un suffixe à *nom_base_de_données*. Cela limite *nom_base_de_données* à 123 caractères de sorte que le nom de fichier logique généré n’est pas plus de 128 caractères.  
+ *database_name* peut comporter 128 caractères maximum, à moins qu’aucun nom logique ne soit spécifié pour le fichier journal. Si aucun nom logique de fichier journal n’est spécifié, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] génère *logical_file_name* et the *os_file_name* pour le journal en ajoutant un suffixe à *database_name*. Cela limite la taille de *database_name* à 123 caractères de sorte que le nom logique du fichier généré ne comporte pas plus de 128 caractères.  
   
- Si le nom de fichier de données n’est pas spécifié, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilise *nom_base_de_données* à la fois comme le *nom_fichier_logique* et en tant que le *nom_fichier_se*. Le chemin d'accès par défaut est obtenu à partir du Registre. Le chemin d’accès par défaut peut être modifié à l’aide de la **propriétés du serveur (Page Paramètres de base de données)** dans [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. La modification du chemin d'accès par défaut requiert le redémarrage de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Si le nom de fichier de données n’est pas spécifié, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilise *database_name* à la fois comme *logical_file_name* et comme *os_file_name*. Le chemin par défaut est obtenu à partir du Registre. Le chemin par défaut peut être modifié à l’aide de **Propriétés du serveur (page Paramètres de base de données)** dans [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. La modification du chemin d'accès par défaut requiert le redémarrage de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  CONTAINMENT = { NONE | PARTIAL }  
 
-**S’applique aux**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] via[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**S’applique à**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] jusqu’à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
   
  Spécifie l'état de la relation contenant-contenu de la base de données. NONE = base de données sans relation contenant-contenu. PARTIAL = Base de données à relation contenant-contenu partielle.  
   
  ON  
- Spécifie que les fichiers disque servant à stocker les parties données de la base de données (fichiers des données) sont définis de manière explicite. ON est requis lorsque le suivi d’une liste séparée par des virgules de \<filespec > des éléments qui définissent les fichiers de données pour le groupe de fichiers principal. La liste des fichiers dans le groupe de fichiers primaire peut être suivie d’une liste séparée par des virgules facultatif de \<groupe de fichiers > des éléments qui définissent des groupes de fichiers utilisateur et leurs fichiers.  
+ Spécifie que les fichiers disque servant à stocker les parties données de la base de données (fichiers des données) sont définis de manière explicite. ON est nécessaire s’il est suivi d’une liste d’éléments \<filespec> séparés par des virgules, définissant les fichiers de données du groupe de fichiers primaire. La liste des fichiers du groupe de fichiers primaire peut être suivie d’une liste facultative d’éléments \<filegroup> séparés par des virgules, définissant les groupes de fichiers utilisateur et leurs fichiers.  
   
  PRIMARY  
- Spécifie que le texte associé \<filespec > liste définit le fichier primaire. Le premier fichier spécifié dans le \<filespec > entrée dans le groupe de fichiers primaire devient le fichier primaire. Une base de données peut avoir qu’un seul fichier primaire. Pour plus d'informations, consultez [Database Files and Filegroups](../../relational-databases/databases/database-files-and-filegroups.md).  
+ Spécifie que la liste \<filespec> associée définit le fichier primaire. Le premier fichier spécifié dans l’entrée \<filespec> du groupe de fichiers primaire devient le fichier primaire. Une base de données ne peut avoir qu’un seul fichier primaire. Pour plus d'informations, consultez [Groupes de fichiers et fichiers de base de données](../../relational-databases/databases/database-files-and-filegroups.md).  
   
  Si vous ne précisez pas PRIMARY, le premier fichier spécifié dans l'instruction CREATE DATABASE devient le fichier primaire.  
   
  LOG ON  
- Spécifie que les fichiers disque servant à stocker le journal de la base de données (fichiers journaux) sont définis de manière explicite. LOG ON est suivi d’une liste séparée par des virgules de \<filespec > des éléments qui définissent les fichiers journaux. Si LOG ON n’est pas spécifié, un fichier journal est automatiquement créé, qui a une taille de 25 pour cent de la somme des tailles de tous les fichiers de données pour la base de données, ou 512 Ko, selon la plus grande. Ce fichier est placé à l'emplacement de fichier journal par défaut. Pour plus d’informations sur cet emplacement, consultez [afficher ou modifier les emplacements par défaut pour les données et fichiers journaux &#40; SQL Server Management Studio &#41; ](../../database-engine/configure-windows/view-or-change-the-default-locations-for-data-and-log-files.md).  
+ Spécifie que les fichiers disque servant à stocker le journal de la base de données (fichiers journaux) sont définis de manière explicite. LOG ON est suivi d’une liste d’éléments \<filespec> séparés par des virgules, définissant les fichiers journaux. Si vous ne spécifiez pas LOG ON, un fichier journal est automatiquement créé, dont la taille correspond à 512 Ko, ou, si ce volume est plus élevé, à 25 pour cent de la somme des tailles de tous les fichiers de données de la base de données. Ce fichier est placé à l'emplacement de fichier journal par défaut. Pour plus d’informations sur cet emplacement, consultez [Afficher ou modifier les emplacements par défaut des fichiers de données et des fichiers journaux &#40;SQL Server Management Studio&#41;](../../database-engine/configure-windows/view-or-change-the-default-locations-for-data-and-log-files.md).  
   
  LOG ON ne peut pas être spécifié sur un instantané de base de données.  
   
  COLLATE *collation_name*  
  Indique le classement par défaut de la base de données. Le nom du classement peut être un nom de classement Windows ou SQL. S'il n'est pas spécifié, la base de données est affectée au classement par défaut de l'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Un nom de classement ne peut pas être spécifié sur un instantané de base de données.  
   
- Un nom de classement ne peut pas être spécifié pour les clauses FOR ATTACH ou FOR ATTACH_REBUILD_LOG. Pour plus d’informations sur la façon de modifier le classement d’une base de données attachée, visitez ce [site Web de Microsoft](http://go.microsoft.com/fwlink/?linkid=16419&kbid=325335).  
+ Un nom de classement ne peut pas être spécifié pour les clauses FOR ATTACH ou FOR ATTACH_REBUILD_LOG. Pour plus d’informations sur la façon de changer le classement d’une base de données attachée, visitez ce [site web de Microsoft](http://go.microsoft.com/fwlink/?linkid=16419&kbid=325335).  
   
- Pour plus d’informations sur les noms de classements Windows et SQL, consultez [COLLATE &#40; Transact-SQL &#41; ](~/t-sql/statements/collations.md).  
+ Pour plus d’informations sur les noms de classements Windows et SQL, consultez [COLLATE &#40;Transact-SQL&#41;](~/t-sql/statements/collations.md).  
   
 > [!NOTE]  
->  Les bases de données à relation contenant-contenu sont classées différemment des bases de données sans relation contenant-contenu. Consultez [Contained Database Collations](../../relational-databases/databases/contained-database-collations.md) pour plus d’informations.  
+>  Les bases de données à relation contenant-contenu sont classées différemment des bases de données sans relation contenant-contenu. Pour plus d’informations, consultez [Classements de base de données à relation contenant-contenu](../../relational-databases/databases/contained-database-collations.md).  
   
- AVEC \<option >  
+ WITH \<option>  
  -   **\<filestream_options>** 
   
-     NON_TRANSACTED_ACCESS = { **OFF** | READ_ONLY | COMPLÈTE}  
+     NON_TRANSACTED_ACCESS = { **OFF** | READ_ONLY | FULL }  
 **S'applique à**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
   
      Spécifie le niveau d'accès FILESTREAM non transactionnel à la base de données.  
   
-    |Valeur| Description|  
+    |Valeur|Description|  
     |-----------|-----------------|  
     |OFF|L'accès non transactionnel est désactivé.|  
     |READONLY|Les données FILESTREAM de cette base de données peuvent être lues par des processus non transactionnels.|  
     |FULL|L'accès non transactionnel complet aux FileTables FILESTREAM est activé.|  
   
-     DIRECTORY_NAME = \<nom_répertoire > **s’applique aux**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] via[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+     DIRECTORY_NAME = \<directory_name> **S’applique à** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] jusqu’à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
      Nom de répertoire compatible avec Windows. Ce nom doit être unique parmi tous les noms Database_Directory dans l'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La comparaison d'unicité n'est pas sensible à la casse, indépendamment des paramètres de classement [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Cette option doit être définie avant de créer un FileTable dans cette base de données.  
   
  Les options suivantes sont autorisées uniquement lorsque CONTAINMENT a été défini sur PARTIAL. Si CONTAINMENT est défini sur NONE, des erreurs se produiront.  
   
--   **DEFAULT_FULLTEXT_LANGUAGE = \<lcid > | \<nom de la langue > | \<alias de langue >**  
+-   **DEFAULT_FULLTEXT_LANGUAGE = \<lcid> | \<language name> | \<language alias>**  
   
-**S’applique aux**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] via[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**S’applique à**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] jusqu’à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
   
      See [Configure the default full-text language Server Configuration Option](../../database-engine/configure-windows/configure-the-default-full-text-language-server-configuration-option.md) for a full description of this option.  
   
--   **DEFAULT_LANGUAGE = \<lcid > | \<nom de la langue > | \<alias de langue >**  
+-   **DEFAULT_LANGUAGE = \<lcid> | \<language name> | \<language alias>**  
   
-**S’applique aux**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] via[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**S’applique à**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] jusqu’à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
   
      See [Configure the default language Server Configuration Option](../../database-engine/configure-windows/configure-the-default-language-server-configuration-option.md) for a full description of this option.  
   
--   **NESTED_TRIGGERS = {OFF | ON}**  
+-   **NESTED_TRIGGERS = { OFF | ON}**  
   
-**S’applique aux**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] via[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**S’applique à**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] jusqu’à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
   
      See [Configure the nested triggers Server Configuration Option](../../database-engine/configure-windows/configure-the-nested-triggers-server-configuration-option.md) for a full description of this option.  
   
--   **TRANSFORM_NOISE_WORDS = {OFF | ON}**  
+-   **TRANSFORM_NOISE_WORDS = { OFF | ON}**  
   
-**S’applique aux**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] via[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**S’applique à**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] jusqu’à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
   
      See [transform noise words Server Configuration Option](../../database-engine/configure-windows/transform-noise-words-server-configuration-option.md)for a full description of this option.  
   
--   **TWO_DIGIT_YEAR_CUTOFF = {2049 | \<toute année comprise entre 1753 et 9999 >}**  
+-   **TWO_DIGIT_YEAR_CUTOFF = { 2049 | \<toute année comprise entre 1753 et 9999> }**  
   
-     Quatre chiffres qui représente une année. 2049 est la valeur par défaut. Consultez [configurer l’année à deux chiffres cutoff Server Configuration Option](../../database-engine/configure-windows/configure-the-two-digit-year-cutoff-server-configuration-option.md) pour obtenir une description complète de cette option.  
+     Quatre chiffres qui représente une année. 2049 est la valeur par défaut. Pour obtenir une description complète de cette option, consultez [Configurer l’option de configuration du serveur two digit year cutoff](../../database-engine/configure-windows/configure-the-two-digit-year-cutoff-server-configuration-option.md).  
   
--   **DB_CHAINING {OFF | ON}**  
+-   **DB_CHAINING { OFF | ON }**  
   
      Si ON est spécifié, la base de données peut être la source ou la cible d'un chaînage des propriétés des bases de données croisées.  
   
      Lorsque OFF est spécifié, la base de données ne peut pas participer au chaînage des propriétés des bases de données croisées. La valeur par défaut est OFF.  
   
     > [!IMPORTANT]  
-    >  L'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] reconnaît ce paramètre lorsque l'option de serveur cross db ownership chaining a la valeur 0 (OFF). Lorsque cross db ownership chaining a la valeur 1 (ON), toutes les bases de données utilisateur peuvent participer aux chaînages des propriétés des bases de données croisées, quelle que soit la valeur de cette option. Cette option est définie à l’aide de [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md).  
+    >  L'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] reconnaît ce paramètre lorsque l'option de serveur cross db ownership chaining a la valeur 0 (OFF). Lorsque cross db ownership chaining a la valeur 1 (ON), toutes les bases de données utilisateur peuvent participer aux chaînages des propriétés des bases de données croisées, quelle que soit la valeur de cette option. Cette option est configurée à l’aide de [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md).  
   
-     Pour définir cette option, l'appartenance au rôle serveur fixe sysadmin est nécessaire. L’option DB_CHAINING ne peut pas être définie sur ces bases de données système : master, model et tempdb.  
+     Pour définir cette option, l'appartenance au rôle serveur fixe sysadmin est nécessaire. L’option DB_CHAINING ne peut pas être définie sur les bases de données système suivantes : master, model et tempdb.  
   
--   **DIGNE DE CONFIANCE {OFF | ON}**  
+-   **TRUSTWORTHY { OFF | ON }**  
   
      Si ON est spécifié, les modules de base de données (par exemple les vues, les fonctions définies par l'utilisateur ou les procédures stockées) utilisant le contexte d'emprunt d'identité peuvent accéder à des ressources en dehors de la base de données.  
   
@@ -254,7 +254,7 @@ CREATE DATABASE database_snapshot_name
   
      Pour définir cette option, l'appartenance au rôle serveur fixe sysadmin est nécessaire.  
   
- FOR ATTACH [WITH \< attach_database_option >] indique que la base de données est créé par [attachement](../../relational-databases/databases/database-detach-and-attach-sql-server.md) un ensemble existant de fichiers du système d’exploitation. Il doit y avoir un \<filespec > entrée qui spécifie le fichier primaire. Le seul autre \<filespec > entrées requises sont celles pour tous les fichiers qui ont un autre chemin d’accès à partir de la base de données lors de la première création ou dernière attachement. A \<filespec > entrée doit être spécifiée pour ces fichiers.  
+ FOR ATTACH [ WITH \< attach_database_option > ] Spécifie que la base de données est créée en [joignant](../../relational-databases/databases/database-detach-and-attach-sql-server.md) un ensemble existant de fichiers du système d’exploitation. Il doit exister une entrée \<filespec> spécifiant le premier fichier primaire. Les seules autres entrées \<filespec> nécessaires sont celles relatives aux fichiers dont le chemin est différent de celui existant lors de la première création de la base de données ou de son dernier attachement. Vous devez spécifier une entrée \<filespec> pour ces fichiers.  
   
  FOR ATTACH exige les conditions suivantes :  
   
@@ -269,18 +269,18 @@ CREATE DATABASE database_snapshot_name
   
  Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], tous les fichiers de texte intégral appartenant à la base de données qui est attachée seront attachés avec la base de données. Pour spécifier un nouveau chemin d'accès pour le catalogue de texte intégral, spécifiez le nouvel emplacement sans le nom de fichier du système d'exploitation en texte intégral. Pour plus d’informations, consultez la section Exemples.  
   
- Attachement d’une base de données qui contient une option FILESTREAM de « Nom de répertoire », dans un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance invitera [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour vérifier que le nom Database_Directory est unique. Si elle n’est pas le cas, l’opération d’attachement échoue avec l’erreur, « FILESTREAM Database_Directory name \<nom > n’est pas unique dans cette instance SQL Server ». Pour éviter cette erreur, le paramètre facultatif, *directory_name*, doit être passé à cette opération.  
+ Le fait d’attacher une base de données qui contient une option FILESTREAM de « nom de répertoire », dans une instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] invitera [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à vérifier que le nom Database_Directory est unique. Si ce n’est pas le cas, l’opération d’attachement échoue avec l’erreur, « FILESTREAM Database_Directory name \<name> n’est pas unique dans cette instance SQL Server ». Pour éviter cette erreur, le paramètre facultatif, *directory_name*, doit être passé à cette opération.  
   
  FOR ATTACH ne peut pas être spécifié sur un instantané de base de données.  
   
  FOR ATTACH peut spécifier l'option RESTRICTED_USER. RESTRICTED_USER permet uniquement aux membres du rôle de base de données fixe db_owner et aux rôles serveurs fixes dbcreator et sysadmin de se connecter à la base de données, mais il n'en limite pas le nombre. Les tentatives par des utilisateurs non qualifiés sont refusées.  
   
- Si la base de données utilise [!INCLUDE[ssSB](../../includes/sssb-md.md)], utilisez WITH \<service_broker_option > dans votre clause FOR ATTACH : 
+ Si la base de données utilise [!INCLUDE[ssSB](../../includes/sssb-md.md)], utilisez WITH \<service_broker_option> dans la clause de votre FOR ATTACH : 
   
- \<service_broker_option > contrôles [!INCLUDE[ssSB](../../includes/sssb-md.md)] remise de messages et le [!INCLUDE[ssSB](../../includes/sssb-md.md)] identificateur de la base de données. Les options [!INCLUDE[ssSB](../../includes/sssb-md.md)] peuvent être spécifiées uniquement quand la clause FOR ATTACH est utilisée.  
+ \<service_broker_option> Contrôle la remise des messages [!INCLUDE[ssSB](../../includes/sssb-md.md)] et l’identificateur [!INCLUDE[ssSB](../../includes/sssb-md.md)] pour la base de données. Les options [!INCLUDE[ssSB](../../includes/sssb-md.md)] peuvent être spécifiées uniquement quand la clause FOR ATTACH est utilisée.  
   
  ENABLE_BROKER  
- Spécifie que [!INCLUDE[ssSB](../../includes/sssb-md.md)] est activé pour la base de données spécifiée. Autrement dit, la remise de message est démarrée et is_broker_enabled a la valeur true dans l’affichage catalogue sys.databases. La base de données conserve l'identificateur [!INCLUDE[ssSB](../../includes/sssb-md.md)] existant.  
+ Spécifie que [!INCLUDE[ssSB](../../includes/sssb-md.md)] est activé pour la base de données spécifiée. Autrement dit, la remise des messages est démarrée et is_broker_enabled a la valeur True dans la vue de catalogue sys.databases. La base de données conserve l'identificateur [!INCLUDE[ssSB](../../includes/sssb-md.md)] existant.  
   
  NEW_BROKER  
  Crée une nouvelle valeur service_broker_guid dans sys.databases et les bases restaurées, et termine tous les points de terminaison de conversation avec un nettoyage. Service Broker est activé, mais aucun message n'est envoyé aux points de terminaison de conversation distants. Tout itinéraire qui fait référence à l'ancien identificateur [!INCLUDE[ssSB](../../includes/sssb-md.md)] doit être recréé avec le nouvel identificateur.  
@@ -292,23 +292,23 @@ CREATE DATABASE database_snapshot_name
   
 -   Si vous attachez la base de données à la même version et à la même instance de serveur que celles de la base de données d'origine, aucune opération supplémentaire n'est nécessaire.  
   
--   Si vous attachez la base de données à la même instance de serveur, mais avec une version mise à niveau, vous devez exécuter [sp_vupgrade_replication](../../relational-databases/system-stored-procedures/sp-vupgrade-replication-transact-sql.md) pour mettre à niveau de la réplication après l’opération d’attachement est terminée.  
+-   Si vous attachez la base de données à la même instance de serveur alors que sa version a été mise à niveau, vous devez exécuter [sp_vupgrade_replication](../../relational-databases/system-stored-procedures/sp-vupgrade-replication-transact-sql.md) pour mettre à jour la réplication à la fin de l’opération de rattachement.  
   
--   Si vous attachez la base de données à une autre instance de serveur, quelle que soit la version, vous devez exécuter [sp_removedbreplication](../../relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md) pour supprimer la réplication une fois l’opération d’attachement terminée.  
+-   Si vous attachez la base de données à une instance de serveur différente, sans tenir compte de la version, vous devez exécuter [sp_removedbreplication](../../relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md) pour supprimer la réplication, une fois l’opération de rattachement effectuée.  
   
 > [!NOTE]  
-> Attachement fonctionne avec la **vardecimal** le format de stockage, mais la [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] doit être mis à niveau au moins [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SP2. Vous ne pouvez pas attacher une base de données à l'aide du format de stockage vardecimal à une version antérieure de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour plus d’informations sur la **vardecimal** le format de stockage, consultez [la Compression des données](../../relational-databases/data-compression/data-compression.md).  
+> L’attachement fonctionne avec le format de stockage **vardecimal**, mais le [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] doit être mis à niveau au minimum vers [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SP2. Vous ne pouvez pas attacher une base de données à l'aide du format de stockage vardecimal à une version antérieure de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour plus d’informations sur le format de stockage **vardecimal**, consultez [Compression des données](../../relational-databases/data-compression/data-compression.md).  
   
- Lorsqu'une base de données est attachée ou restaurée pour la première fois à une nouvelle instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], une copie de la clé principale de la base de données (chiffrée par la clé principale du service) n'est pas encore stockée sur le serveur. Vous devez utiliser l’instruction **OPEN MASTER KEY** pour déchiffrer la clé principale de la base de données. Une fois la clé principale de la base de données déchiffrée, vous avez la possibilité d’activer le déchiffrement automatique dans le futur en exécutant l’instruction **ALTER MASTER KEY REGENERATE** pour fournir au serveur une copie de la clé principale de la base de données chiffrée avec la clé principale du service. Lorsqu'une base de données a été mise à niveau à partir d'une version antérieure, la clé DMK doit être régénérée de façon à utiliser le nouvel algorithme AES. Pour plus d’informations sur la régénération de la clé DMK, consultez [ALTER MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-master-key-transact-sql.md). La durée nécessaire pour régénérer la clé DMK à mettre à niveau vers AES dépend du nombre d'objets protégés par la clé DMK. La régénération de la clé DMK à mettre à niveau vers AES est nécessaire une seule fois et n'a aucune incidence sur les régénérations ultérieures effectuées dans le cadre d'une stratégie de rotation de clés. Pour plus d’informations sur la mise à niveau une base de données à l’aide de liaison, consultez [mettre à niveau une base de données à l’aide d’attacher et détacher &#40; Transact-SQL &#41; ](../../relational-databases/databases/upgrade-a-database-using-detach-and-attach-transact-sql.md).  
+ Lorsqu'une base de données est attachée ou restaurée pour la première fois à une nouvelle instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], une copie de la clé principale de la base de données (chiffrée par la clé principale du service) n'est pas encore stockée sur le serveur. Vous devez utiliser l’instruction **OPEN MASTER KEY** pour déchiffrer la clé principale de la base de données. Une fois la clé principale de la base de données déchiffrée, vous avez la possibilité d’activer le déchiffrement automatique dans le futur en exécutant l’instruction **ALTER MASTER KEY REGENERATE** pour fournir au serveur une copie de la clé principale de la base de données chiffrée avec la clé principale du service. Lorsqu'une base de données a été mise à niveau à partir d'une version antérieure, la clé DMK doit être régénérée de façon à utiliser le nouvel algorithme AES. Pour plus d’informations sur la régénération de la clé DMK, consultez [ALTER MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-master-key-transact-sql.md). La durée nécessaire pour régénérer la clé DMK à mettre à niveau vers AES dépend du nombre d'objets protégés par la clé DMK. La régénération de la clé DMK à mettre à niveau vers AES est nécessaire une seule fois et n'a aucune incidence sur les régénérations ultérieures effectuées dans le cadre d'une stratégie de rotation de clés. Pour plus d’informations sur la façon de mettre à niveau une base de données à l’aide de l’attachement, consultez [Mettre à niveau une base de données avec Detach et Attach &#40;Transact-SQL&#41;](../../relational-databases/databases/upgrade-a-database-using-detach-and-attach-transact-sql.md).  
   
 > [!IMPORTANT]  
-> Nous vous recommandons de ne pas attacher des bases de données issues de sources inconnues ou non approuvées. Ces bases de données peuvent contenir du code malveillant susceptible d'exécuter du code [!INCLUDE[tsql](../../includes/tsql-md.md)] indésirable ou de provoquer des erreurs en modifiant le schéma ou la structure physique des bases de données. Avant d’utiliser une base de données à partir d’une source inconnue ou non approuvée, exécutez [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) sur la base de données sur un serveur de production et examinez également le code, notamment les procédures stockées ou autre code défini par l’utilisateur, dans la base de données.  
+> Nous vous recommandons de ne pas attacher des bases de données issues de sources inconnues ou non approuvées. Ces bases de données peuvent contenir du code malveillant susceptible d'exécuter du code [!INCLUDE[tsql](../../includes/tsql-md.md)] indésirable ou de provoquer des erreurs en modifiant le schéma ou la structure physique des bases de données. Avant d’utiliser une base de données issue d’une source inconnue ou non approuvée, exécutez [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) sur la base de données sur un serveur autre qu’un serveur de production et examinez également le code, notamment les procédures stockées ou le code défini par l’utilisateur, de la base de données.  
   
 > [!NOTE]  
-> Le **TRUSTWORTHY** et **DB_CHAINING** options n’ont aucun effet lors de l’attachement d’une base de données.  
+> Les options **TRUSTWORTHY** et **DB_CHAINING** n’ont aucun effet lors de l’attachement d’une base de données.  
   
  FOR ATTACH_REBUILD_LOG  
- Spécifie que la base de données est créée en joignant un ensemble existant de fichiers du système d'exploitation. Cette option est limitée aux bases de données en lecture/écriture. Il doit y avoir un  *\<filespec >* entrée spécifiant le fichier primaire. S'il manque un ou plusieurs fichiers du journal des transactions, le fichier journal est reconstruit. ATTACH_REBUILD_LOG crée automatiquement un fichier journal 1 Mo. Ce fichier est placé à l'emplacement de fichier journal par défaut. Pour plus d’informations sur cet emplacement, consultez [afficher ou modifier les emplacements par défaut pour les données et fichiers journaux &#40; SQL Server Management Studio &#41; ](../../database-engine/configure-windows/view-or-change-the-default-locations-for-data-and-log-files.md).  
+ Spécifie que la base de données est créée en joignant un ensemble existant de fichiers du système d'exploitation. Cette option est limitée aux bases de données en lecture/écriture. Il doit exister une entrée *\<filespec>* spécifiant le fichier primaire. S'il manque un ou plusieurs fichiers du journal des transactions, le fichier journal est reconstruit. ATTACH_REBUILD_LOG crée automatiquement un nouveau fichier journal de 1 Mo. Ce fichier est placé à l'emplacement de fichier journal par défaut. Pour plus d’informations sur cet emplacement, consultez [Afficher ou modifier les emplacements par défaut des fichiers de données et des fichiers journaux &#40;SQL Server Management Studio&#41;](../../database-engine/configure-windows/view-or-change-the-default-locations-for-data-and-log-files.md).  
   
 > [!NOTE]  
 >  Si les fichiers journaux sont disponibles, le [!INCLUDE[ssDE](../../includes/ssde-md.md)] utilise ces fichiers au lieu de reconstruire les fichiers journaux.  
@@ -326,7 +326,7 @@ CREATE DATABASE database_snapshot_name
   
  FOR ATTACH_REBUILD_LOG ne peut pas être spécifié sur un instantané de base de données.  
   
- Pour plus d’informations sur l’attachement et détachement des bases de données, consultez [de base de données attacher et détacher &#40; SQL Server &#41; ](../../relational-databases/databases/database-detach-and-attach-sql-server.md).  
+ Pour plus d’informations sur l’attachement et le détachement de base de données, consultez [Attacher et détacher une base de données &#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md).  
   
  \<filespec>  
  Contrôle les propriétés des fichiers.  
@@ -335,7 +335,7 @@ CREATE DATABASE database_snapshot_name
  Spécifie le nom logique du fichier. NAME est requis lorsque FILENAME est spécifié, sauf lors de la spécification d'une des clauses FOR ATTACH. Un groupe de fichiers FILESTREAM ne peut pas être nommé PRIMARY.  
   
  *logical_file_name*  
- Nom logique utilisé pour référencer le fichier dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *Nom_fichier_logique* doit être unique dans la base de données et respecter les règles pour [identificateurs](../../relational-databases/databases/database-identifiers.md). Le nom peut être une constante de type caractère ou Unicode, un identificateur régulier ou un identificateur délimité.  
+ Nom logique utilisé pour référencer le fichier dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *Logical_file_name* doit être unique dans la base de données et doit respecter les règles relatives aux [identificateurs](../../relational-databases/databases/database-identifiers.md). Le nom peut être une constante de type caractère ou Unicode, un identificateur régulier ou un identificateur délimité.  
   
  FILENAME { **'***os_file_name***'** | **'***filestream_path***'** }  
  Spécifie un nom de fichier du système d'exploitation (physique).  
@@ -345,7 +345,7 @@ CREATE DATABASE database_snapshot_name
   
  Les paramètres SIZE, MAXSIZE et FILEGROWTH peuvent être définis lorsqu'un chemin d'accès UNC est spécifié pour le fichier.  
   
- Si le fichier se trouve sur une partition brute, *nom_fichier_se* doit spécifier uniquement la lettre de lecteur d’une partition brute existante. Un seul fichier de données peut être créé sur chaque partition brute.  
+ Si le fichier se trouve sur une partition brute, *os_file_name* doit spécifier uniquement la lettre d’une unité correspondant à une partition brute existante. Un seul fichier de données peut être créé sur chaque partition brute.  
   
  Les fichiers de données ne doivent pas être placés sur des systèmes de fichiers compressés, sauf si les fichiers sont des fichiers secondaires en lecture seule ou si la base de données est en en lecture seule. Les fichiers journaux ne doivent jamais être placés sur des systèmes de fichiers compressés.  
   
@@ -356,23 +356,23 @@ CREATE DATABASE database_snapshot_name
   
  Les propriétés SIZE et FILEGROWTH ne s'appliquent pas à un groupe de fichiers FILESTREAM.  
   
- TAILLE *taille*  
+ SIZE *size*  
  Précise la taille du fichier.  
   
- TAILLE ne peut pas être spécifié quand le *nom_fichier_se* est spécifié comme un chemin d’accès UNC. SIZE ne s'applique pas à un groupe de fichiers FILESTREAM.  
+ SIZE ne peut pas être spécifié quand *os_file_name* est spécifié en tant que chemin UNC. SIZE ne s'applique pas à un groupe de fichiers FILESTREAM.  
   
  *size*  
  Taille initiale du fichier.  
   
- Lorsque *taille* n’est pas fourni pour le fichier primaire, la [!INCLUDE[ssDE](../../includes/ssde-md.md)] utilise la taille du fichier primaire de la base de données model. La taille par défaut du modèle est de 8 Mo (commençant par [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]) ou 1 Mo (pour les versions antérieures). Lorsqu’un fichier journal ou un fichier de données secondaire est spécifié, mais *taille* n’est pas spécifié pour le fichier, le [!INCLUDE[ssDE](../../includes/ssde-md.md)] rend le fichier de 8 Mo (commençant par [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]) ou 1 Mo (pour les versions antérieures). La taille spécifiée pour le fichier primaire doit être au moins égale à la taille du fichier primaire de la base de données model.  
+ Quand *size* n’est pas spécifié pour le fichier primaire, le [!INCLUDE[ssDE](../../includes/ssde-md.md)] utilise la taille du fichier primaire dans la base de données model. La taille par défaut de la base de données model est de 8 Mo (à partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]) ou de 1 Mo (pour les versions antérieures). Quand vous spécifiez un fichier de données secondaire ou un fichier journal, mais que *size* n’est pas spécifié pour le fichier, le [!INCLUDE[ssDE](../../includes/ssde-md.md)] lui donne une taille de 8 Mo (à partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]) ou de 1 Mo (pour les versions antérieures). La taille spécifiée pour le fichier primaire doit être au moins égale à la taille du fichier primaire de la base de données model.  
   
- Les suffixes kilo-octet (Ko), mégaoctet (Mo), gigaoctet (Go) ou téraoctet (To) peuvent être utilisés. La valeur par défaut est Mo. Indiquez un nombre entier sans aucune décimale. *Taille* est une valeur entière. Pour les valeurs supérieures à 2147483647, utilisez des unités plus grandes.  
+ Les suffixes kilo-octet (Ko), mégaoctet (Mo), gigaoctet (Go) ou téraoctet (To) peuvent être utilisés. La valeur par défaut est Mo. Indiquez un nombre entier sans aucune décimale. *Size* est une valeur entière. Pour les valeurs supérieures à 2147483647, utilisez des unités plus grandes.  
   
  MAXSIZE *max_size*  
- Spécifie la taille maximale que peut atteindre le fichier. MAXSIZE ne peut pas être spécifié quand le *nom_fichier_se* est spécifié comme un chemin d’accès UNC.  
+ Spécifie la taille maximale que peut atteindre le fichier. MAXSIZE ne peut pas être spécifié quand *os_file_name* est spécifié en tant que chemin UNC.  
   
  *max_size*  
- Est la taille de fichier maximale. Les indications Ko, Mo, Go et To peuvent être utilisées. La valeur par défaut est Mo. Indiquez un nombre entier sans aucune décimale. Si *max_size* n’est pas spécifié, le fichier augmente jusqu'à ce que le disque est plein. *Max_size* est une valeur entière. Pour les valeurs supérieures à 2147483647, utilisez des unités plus grandes.  
+ Taille de fichier maximale. Les indications Ko, Mo, Go et To peuvent être utilisées. La valeur par défaut est Mo. Indiquez un nombre entier sans aucune décimale. Si vous ne spécifiez pas *max_size*, le fichier peut s’accroître jusqu’à occuper tout l’espace disque disponible. *Max_size* est une valeur entière. Pour les valeurs supérieures à 2147483647, utilisez des unités plus grandes.  
   
  UNLIMITED  
  Précise que la taille du fichier peut croître jusqu'à ce que le disque soit saturé. Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], un fichier journal spécifié avec une croissance illimitée a une taille maximale de 2 To et un fichier de données une taille maximale de 16 To.  
@@ -381,21 +381,21 @@ CREATE DATABASE database_snapshot_name
 > Aucune taille maximale n'est définie lorsque cette option est spécifiée pour un conteneur FILESTREAM. Il continue à grandir jusqu'à ce que le disque soit saturé.  
   
  FILEGROWTH *growth_increment*  
- Spécifie l'incrément de croissance automatique du fichier. Le paramètre FILEGROWTH d'un fichier ne peut dépasser le paramètre MAXSIZE. FILEGROWTH ne peut pas être spécifié quand le *nom_fichier_se* est spécifié comme un chemin d’accès UNC. FILEGROWTH ne s'applique pas à un groupe de fichiers FILESTREAM.  
+ Spécifie l'incrément de croissance automatique du fichier. Le paramètre FILEGROWTH d'un fichier ne peut dépasser le paramètre MAXSIZE. FILEGROWTH ne peut pas être spécifié quand *os_file_name* est spécifié en tant que chemin UNC. FILEGROWTH ne s'applique pas à un groupe de fichiers FILESTREAM.  
   
  *growth_increment*  
- Représente la quantité d’espace ajoutée au fichier chaque fois qu’un espace supplémentaire est requis.  
+ Quantité d’espace ajoutée au fichier chaque fois qu’un espace supplémentaire s’avère nécessaire.  
   
- La valeur peut être exprimée en Mo, Ko, Go, To ou pourcentage (%). Si un nombre est mentionné sans spécifier Mo, Ko ou %, la valeur par défaut est Mo. Lorsque % est spécifié, la taille de l'incrément de croissance est le pourcentage choisi de la taille du fichier au moment où l'incrémentation a lieu. La taille spécifiée est arrondie aux 64 Ko plus proche, et la valeur minimale est de 64 Ko.  
+ La valeur peut être exprimée en Mo, Ko, Go, To ou pourcentage (%). Si un nombre est mentionné sans spécifier Mo, Ko ou %, la valeur par défaut est Mo. Lorsque % est spécifié, la taille de l'incrément de croissance est le pourcentage choisi de la taille du fichier au moment où l'incrémentation a lieu. La taille spécifiée est arrondie à la valeur multiple de 64 Ko la plus proche, et la valeur minimale est de 64 Ko.  
   
  La valeur 0 indique que la croissance automatique est désactivée et qu'aucun espace supplémentaire n'est autorisé.  
   
- Si la croissance du fichier n’est pas spécifié, les valeurs par défaut sont :  
+ Si FILEGROWTH n’est pas spécifié, les valeurs par défaut sont :  
   
-|Version|Valeurs par défaut|  
+|Options de version|Valeurs par défaut|  
 |-------------|--------------------|  
-|Début[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]|64 Mo de données. 64 Mo de fichiers journaux.|  
-|Début[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|1 Mo de données. 10 % de fichiers journaux.|  
+|À partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]|64 Mo de données. 64 Mo de fichiers journaux.|  
+|À partir de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|1 Mo de données. 10 % de fichiers journaux.|  
 |Avant [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|10 % de données. 10 % de fichiers journaux.|  
   
  \<filegroup>  
@@ -405,44 +405,44 @@ CREATE DATABASE database_snapshot_name
  Nom logique du groupe de fichiers.  
   
  *filegroup_name*  
- *FILEGROUP_NAME* doit être unique dans la base de données et ne peut pas être les fournie par le système noms PRIMARY et PRIMARY_LOG. Le nom peut être une constante de type caractère ou Unicode, un identificateur régulier ou un identificateur délimité. Le nom doit respecter les règles de [identificateurs](../../relational-databases/databases/database-identifiers.md).  
+ *filegroup_name* doit être unique dans la base de données et ne peut pas être les noms PRIMARY et PRIMARY_LOG fournis par le système. Le nom peut être une constante de type caractère ou Unicode, un identificateur régulier ou un identificateur délimité. Le nom doit respecter les règles applicables aux [identificateurs](../../relational-databases/databases/database-identifiers.md).  
   
  CONTAINS FILESTREAM  
  Spécifie que le groupe de fichiers stocke des objets BLOB (binary large objects) FILESTREAM dans le système de fichiers.  
   
  CONTAINS MEMORY_OPTIMIZED_DATA  
 
-**S’applique aux**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] via[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**S’applique à**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] jusqu’à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
- Spécifie que le groupe de fichiers stocke des données optimisées en mémoire dans le système de fichiers. Pour plus d’informations, consultez [OLTP en mémoire &#40;optimisation en mémoire&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md). Un seul groupe de fichiers MEMORY_OPTIMIZED_DATA est autorisé par base de données. Pour obtenir des exemples de code que vous créez un groupe de fichiers pour stocker les données mémoire optimisé, consultez [création d’une Table optimisée en mémoire et une en mode natif procédure stockée compilée](../../relational-databases/in-memory-oltp/creating-a-memory-optimized-table-and-a-natively-compiled-stored-procedure.md).  
+ Spécifie que le groupe de fichiers stocke des données optimisées en mémoire dans le système de fichiers. Pour plus d’informations, consultez [OLTP en mémoire &#40;optimisation en mémoire&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md). Un seul groupe de fichiers MEMORY_OPTIMIZED_DATA est autorisé par base de données. Pour obtenir des exemples de code qui créent un groupe de fichiers pour stocker des données à mémoire optimisée, consultez [Création d’une table optimisée en mémoire et d’une procédure stockée compilée en mode natif](../../relational-databases/in-memory-oltp/creating-a-memory-optimized-table-and-a-natively-compiled-stored-procedure.md).  
   
  DEFAULT  
  Spécifie le groupe de fichiers nommé qui est le groupe de fichiers par défaut de la base de données.  
   
  *database_snapshot_name*  
- Nom du nouvel instantané de base de données. Les noms des instantanés de bases de données doivent être uniques au sein d'une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et respecter les règles applicables aux identificateurs. *nom_instantané_base_de_données* peut comporter un maximum de 128 caractères.  
+ Nom du nouvel instantané de base de données. Les noms des instantanés de bases de données doivent être uniques au sein d'une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et respecter les règles applicables aux identificateurs. *database_snapshot_name* peut avoir un maximum de 128 caractères.  
   
- ON **(** nom  **= ***nom_fichier_logique***,** nom de fichier **='***nom_fichier_se***')** [ **,**... *n* ]  
+ ON **(** NAME **=***logical_file_name***,** FILENAME **='***os_file_name***')** [ **,**... *n* ]  
  Pour créer un instantané de base de données, spécifie une liste de fichiers dans la base de données source. Pour que l'instantané fonctionne, tous les fichiers de données doivent être spécifiés individuellement. Cependant, les fichiers journaux ne sont pas autorisés pour les instantanés de base de données. Les groupes de fichiers FILESTREAM ne sont pas pris en charge par les instantanés de base de données. Si un fichier de données FILESTREAM est inclus dans une clause CREATE DATABASE ON, l'instruction échoue et une erreur est levée.  
   
- Pour obtenir une description des NAME et FILENAME et leurs valeurs, consultez les descriptions de l’équivalent \<filespec > valeurs.  
+ Pour obtenir des descriptions de NAME et FILENAME et leurs valeurs, consultez les descriptions des valeurs \<filespec> équivalentes.  
   
 > [!NOTE]  
-> Lorsque vous créez un instantané de base de données, l’autre \<filespec > options et le mot clé PRIMARY ne sont pas autorisées.  
+> Quand vous créez un instantané de base de données, les autres options \<filespec> et le mot clé PRIMARY ne sont pas autorisés.  
   
  AS SNAPSHOT OF *nom_base_de_données_source*  
- Spécifie que la base de données en cours de création est un instantané de base de données de la base de données source spécifiée par *nom_base_de_données_source*. Les bases de données d'instantané et source doivent se trouver sur la même instance.  
+ Spécifie que la base de données créée est un instantané de la base de données source spécifiée par *source_database_name*. Les bases de données d'instantané et source doivent se trouver sur la même instance.  
   
  Pour plus d'informations, consultez le paragraphe « Instantanés de base de données » dans la section Remarques.  
   
-## <a name="remarks"></a>Notes  
- Le [base de données master](../../relational-databases/databases/master-database.md) doit être sauvegardée chaque fois qu’une base de données utilisateur est créé, modifié ou supprimé.  
+## <a name="remarks"></a>Notes   
+ La [base de données master](../../relational-databases/databases/master-database.md) doit être sauvegardée chaque fois qu’une base de données utilisateur est créée, modifiée ou supprimée.  
   
  L'instruction CREATE DATABASE doit être exécutée en mode de validation automatique (mode de gestion des transactions par défaut) et n'est pas autorisée dans une transaction explicite ou implicite.  
   
  Vous pouvez utiliser une instruction CREATE DATABASE pour créer une base de données et les fichiers qui stockent la base de données. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] implémente l'instruction CREATE DATABASE à l'aide des étapes suivantes :  
   
-1.  Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilise une copie de la [base de données model](../../relational-databases/databases/model-database.md) pour initialiser la base de données et ses métadonnées.  
+1.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilise une copie de la [base de données model](../../relational-databases/databases/model-database.md) pour initialiser la base de données et ses métadonnées.  
   
 2.  Un GUID Service Broker est affecté à la base de données.  
   
@@ -450,46 +450,46 @@ CREATE DATABASE database_snapshot_name
   
  Vous pouvez spécifier un maximum de 32 767 bases de données sur une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- Chaque base de données appartient à un propriétaire qui peut réaliser des activités spéciales dans la base de données. Le propriétaire est l'utilisateur qui crée la base de données. Le propriétaire de la base de données peut être modifié à l’aide de [sp_changedbowner](../../relational-databases/system-stored-procedures/sp-changedbowner-transact-sql.md).  
+ Chaque base de données appartient à un propriétaire qui peut réaliser des activités spéciales dans la base de données. Le propriétaire est l'utilisateur qui crée la base de données. Le propriétaire de base de données peut être changé à l’aide de [sp_changedbowner](../../relational-databases/system-stored-procedures/sp-changedbowner-transact-sql.md).  
 
-Certaines fonctionnalités de base de données dépendent de fonctionnalités ou les fonctionnalités présentent dans le système de fichiers pour les fonctionnalités complètes de base de données. Voici quelques exemples des fonctionnalités qui dépendent de jeu de fonctionnalités de système de fichiers :
+Certaines fonctionnalités de base de données dépendent de fonctionnalités ou de capacités présentes dans le système de fichiers. Voici quelques exemples des fonctionnalités qui dépendent de jeux de fonctionnalités du système de fichiers :
 - DBCC CHECKDB
 - FileStream
-- Sauvegardes en ligne à l’aide d’instantanés VSS et le fichier
-- Création d’instantanés de base de données
-- Le groupe de fichiers mémoire optimisé de données
+- Sauvegardes en ligne à l’aide de VSS et d’instantanés de fichiers
+- Création d’instantané de base de données
+- Groupe de fichiers de données à mémoire optimisée
    
 ## <a name="database-files-and-filegroups"></a>Groupes de fichiers et fichiers de base de données  
- Chaque base de données comporte au moins deux fichiers, un *fichier primaire* et un *fichier journal des transactions*et au moins un groupe de fichiers. Un maximum de 32 767 fichiers et 32 767 groupes de fichiers peut être spécifié pour chaque base de données.  
+ Chaque base de données comprend au moins deux fichiers, un *fichier primaire* et un *fichier journal des transactions*, et au moins un groupe de fichiers. Un maximum de 32 767 fichiers et 32 767 groupes de fichiers peut être spécifié pour chaque base de données.  
   
- Lorsque vous créez une base de données, vérifiez les fichiers de données aussi grand que possible en fonction de la quantité maximale de données attendues dans la base de données  
+ Quand vous créez une base de données, attribuez aux fichiers une taille aussi grande que possible, en tenant compte du volume maximal de données qu’est censée contenir la base de données.  
   
  Nous vous recommandons d'utiliser un réseau de zone de stockage (SAN, Storage Area Network), un réseau basé sur iSCSI ou un disque attaché localement pour le stockage de vos fichiers de base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], car cette configuration optimise les performances et la fiabilité de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="database-snapshots"></a>Instantanés de base de données  
- Vous pouvez utiliser l’instruction CREATE DATABASE pour créer une vue en lecture seule, statique, un *instantané de base de données* de la *base de données source*. Chaque instantané de base de données est transactionnellement cohérent avec la base de données source existante au moment de la création de l'instantané. Une base de données source peut posséder plusieurs instantanés.  
+ Vous pouvez utiliser l’instruction CREATE DATABASE pour créer une vue en lecture seule statique, un *instantané de base de données* de la *base de données source*. Chaque instantané de base de données est transactionnellement cohérent avec la base de données source existante au moment de la création de l'instantané. Une base de données source peut posséder plusieurs instantanés.  
   
 > [!NOTE]  
 > Lorsque vous créez un instantané de base de données, l'instruction CREATE DATABASE ne peut pas faire référence à des fichiers journaux, hors connexion, de restauration ou anciens.  
   
- Si la création d'un instantané de base de données échoue, l'instantané devient suspect et doit être supprimé. Pour plus d’informations, consultez [DROP DATABASE &#40; Transact-SQL &#41; ](../../t-sql/statements/drop-database-transact-sql.md).  
+ Si la création d'un instantané de base de données échoue, l'instantané devient suspect et doit être supprimé. Pour plus d’informations, consultez [DROP DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-database-transact-sql.md).  
   
  Chaque instantané est conservé jusqu'à ce qu'il soit supprimé par DROP DATABASE.  
   
  Pour plus d’informations, consultez [Instantanés de base de données &#40;SQL Server&#41;](../../relational-databases/databases/database-snapshots-sql-server.md).  
   
 ## <a name="database-options"></a>Options de base de données  
- Plusieurs options de base de données sont définies automatiquement chaque fois que vous créez une base de données. Pour obtenir la liste de ces options, consultez [Options ALTER DATABASE SET &#40; Transact-SQL &#41; ](../../t-sql/statements/alter-database-transact-sql-set-options.md).  
+ Plusieurs options de base de données sont définies automatiquement chaque fois que vous créez une base de données. Pour obtenir la liste de ces options, consultez [Options ALTER DATABASE SET &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md).  
   
 ## <a name="the-model-database-and-creating-new-databases"></a>Base de données model et création de nouvelles bases de données  
- Tous les objets définis par l’utilisateur dans le [base de données model](../../relational-databases/databases/model-database.md) sont copiés dans toutes les bases de données nouvellement créés. Vous pouvez ajouter dans la base de données model tous les objets, tels que tables, vues, procédures stockées ou types de données, à inclure dans toutes les bases de données nouvellement créées.  
+ Les objets définis par l’utilisateur dans la [base de données model](../../relational-databases/databases/model-database.md) sont copiés dans toutes les nouvelles bases de données. Vous pouvez ajouter dans la base de données model tous les objets, tels que tables, vues, procédures stockées ou types de données, à inclure dans toutes les bases de données nouvellement créées.  
   
- Lorsqu’une base de données créer *nom_base_de_données* instruction est spécifié sans paramètre de taille supplémentaire, le fichier de données principal est la même taille que le fichier primaire dans la base de données model.  
+ Quand une instruction CREATE DATABASE *database_name* est spécifiée sans paramètre de taille supplémentaire, le fichier de données primaire a la même taille que celui de la base de données model.  
   
- Sauf si FOR ATTACH est spécifié, chaque nouvelle base de données hérite des paramètres d'option de base de données de la base de données model. Par exemple, l’option de réduction automatique de base de données a la valeur **true** dans le modèle et dans toutes les nouvelles bases de données que vous créez. Si vous modifiez les options de la base de données model, ces nouveaux paramètres d'options sont valables pour toutes les nouvelles bases de données que vous créez. Les opérations de modification dans la base de données model n'affectent pas les bases de données existantes. Si vous avez précisé FOR ATTACH dans l'instruction CREATE DATABASE, la nouvelle base de données héritera des paramètres d'option de la base de données originale.  
+ Sauf si FOR ATTACH est spécifié, chaque nouvelle base de données hérite des paramètres d'option de base de données de la base de données model. Par exemple, l’option de base de données auto shrink a la valeur **true** dans model et dans toutes les nouvelles bases de données que vous créez. Si vous modifiez les options de la base de données model, ces nouveaux paramètres d'options sont valables pour toutes les nouvelles bases de données que vous créez. Les opérations de modification dans la base de données model n'affectent pas les bases de données existantes. Si vous avez précisé FOR ATTACH dans l'instruction CREATE DATABASE, la nouvelle base de données héritera des paramètres d'option de la base de données originale.  
   
 ## <a name="viewing-database-information"></a>Affichage des informations de bases de données  
- Vous pouvez utiliser les affichages catalogue, les fonctions système et les procédures stockées du système pour retourner des informations sur les bases de données, les fichiers et les groupes de fichiers. Pour plus d’informations, consultez [Vues système &#40;Transact-SQL&#41;](http://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90).  
+ Vous pouvez utiliser les vues de catalogue, les fonctions système et les procédures stockées du système pour retourner des informations sur les bases de données, les fichiers et les groupes de fichiers. Pour plus d’informations, consultez [Vues système &#40;Transact-SQL&#41;](http://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90).  
   
 ## <a name="permissions"></a>Autorisations  
  L'autorisation CREATE DATABASE, CREATE ANY DATABASE ou ALTER ANY DATABASE est obligatoire.  
@@ -522,7 +522,7 @@ GO
 ## <a name="examples"></a>Exemples  
   
 ### <a name="a-creating-a-database-without-specifying-files"></a>A. Création d'une base de données sans spécifier de fichiers  
- Cet exemple crée une base de données appelée `mytest` et crée un fichier primaire et un fichier de journal des transactions correspondants. Étant donné que l’instruction n’a aucun \<filespec >, le fichier de base de données primaire est la taille du fichier primaire de base de données de modèle. Le journal des transactions est défini à la plus grande de ces valeurs : 512 Ko ou 25 % de la taille du fichier de données primaire. Puisque MAXSIZE n'est pas spécifié, la taille des fichiers peut s'accroître jusqu'à occuper tout l'espace disque disponible. Cet exemple montre également comment supprimer la base de données nommée `mytest`, si elle existe, avant de créer la base de données `mytest`.  
+ Cet exemple crée une base de données appelée `mytest` et crée un fichier primaire et un fichier de journal des transactions correspondants. L’instruction ne disposant pas d’éléments \<filespec>, le fichier primaire de la base de données a la taille du fichier primaire de la base de données model. Le journal des transactions est défini à la plus grande de ces valeurs : 512 Ko ou 25 % de la taille du fichier de données primaire. Puisque MAXSIZE n'est pas spécifié, la taille des fichiers peut s'accroître jusqu'à occuper tout l'espace disque disponible. Cet exemple montre également comment supprimer la base de données nommée `mytest`, si elle existe, avant de créer la base de données `mytest`.  
   
 ```sql  
 USE master;  
@@ -835,7 +835,7 @@ TO FILEGROUP [FS];
 GO  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [Attacher et détacher une base de données &#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md)   
  [DROP DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-database-transact-sql.md)   

@@ -1,5 +1,5 @@
 ---
-title: "STInteriorRingN (Type de données geometry) | Documents Microsoft"
+title: "STInteriorRingN (type de données geometry) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stinteriorringn-geometry-data-type"></a>STInteriorRingN (type de données geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Retourne l’anneau intérieur spécifié d’un **Polygongeometry** instance.
+Retourne l’anneau intérieur spécifié d’une instance **Polygongeometry**.
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -45,20 +45,20 @@ Retourne l’anneau intérieur spécifié d’un **Polygongeometry** instance.
   
 ## <a name="arguments"></a>Arguments  
  *expression*  
- Est un **int** expression comprise entre 1 et le nombre d’anneaux intérieurs dans le **geometry** instance.  
+ Expression **int** comprise entre 1 et le nombre d’anneaux intérieurs de l’instance **geometry**.  
   
 ## <a name="return-types"></a>Types de retour  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]type de retour : **geometry**  
+ Type de retour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] : **geometry**  
   
  Type de retour CLR : **SqlGeometry**  
   
- Type Open Geospatial Consortium (OGC) : **LineString**  
+ Type OGC (Open Geospatial Consortium) : **LineString**  
   
-## <a name="remarks"></a>Notes  
- Cette méthode retourne **null** si le **geometry** instance n’est pas un polygone. Cette méthode lève également une **ArgumentOutOfRangeException** si l’expression est supérieure au nombre d’anneaux. Le nombre d’anneaux peut être retourné à l’aide de `STNumInteriorRing``()`.  
+## <a name="remarks"></a>Notes   
+ Cette méthode retourne **null** si l’instance **geometry** n’est pas un polygone. Cette méthode lève également **ArgumentOutOfRangeException** si l’expression est plus grande que le nombre d’anneaux. Le nombre d’anneaux peut être retourné à l’aide de `STNumInteriorRing``()`.  
   
 ## <a name="examples"></a>Exemples  
- L’exemple suivant crée un `Polygon` instance et utilise `STInteriorRingN()` pour retourner l’anneau intérieur du polygone en tant qu’un **LineString**.  
+ L’exemple suivant crée une instance `Polygon` et utilise `STInteriorRingN()` pour retourner l’anneau intérieur du polygone en tant que **LineString**.  
   
 ```  
 DECLARE @g geometry;  
@@ -66,7 +66,7 @@ SET @g = geometry::STGeomFromText('POLYGON((0 0, 3 0, 3 3, 0 3, 0 0),(2 2, 2 1, 
 SELECT @g.STInteriorRingN(1).ToString();  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Méthodes OGC sur des instances geography](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   
   

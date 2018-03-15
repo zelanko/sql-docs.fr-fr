@@ -1,5 +1,5 @@
 ---
-title: REFUSER des autorisations de Service Broker (Transact-SQL) | Documents Microsoft
+title: Autorisations DENY dans Service Broker (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/09/2017
 ms.prod: sql-non-specified
@@ -64,20 +64,20 @@ DENY permission  [ ,...n ] ON
  *permission*  
  Spécifie une autorisation qui peut être refusée sur un élément sécurisable [!INCLUDE[ssSB](../../includes/sssb-md.md)]. Pour obtenir la liste des autorisations, consultez la section Notes plus loin dans cette rubrique.  
   
- CONTRAT **:: *** nom_contract*  
- Spécifie le contrat sur lequel l'autorisation est refusée. Le qualificateur d’étendue **::** est requis.  
+ CONTRACT **::***contract_name*  
+ Spécifie le contrat sur lequel l'autorisation est refusée. Le qualificateur d’étendue **::** est obligatoire.  
   
  MESSAGE TYPE **::***message_type_name*  
- Spécifie le type de message sur lequel l'autorisation est refusée. Le qualificateur d’étendue **::** est requis.  
+ Spécifie le type de message sur lequel l'autorisation est refusée. Le qualificateur d’étendue **::** est obligatoire.  
   
- REMOTE SERVICE BINDING **:: *** remote_binding_name*  
- Spécifie la liaison de service distant sur laquelle l'autorisation est refusée. Le qualificateur d’étendue **::** est requis.  
+ REMOTE SERVICE BINDING **::***remote_binding_name*  
+ Spécifie la liaison de service distant sur laquelle l'autorisation est refusée. Le qualificateur d’étendue **::** est obligatoire.  
   
- ITINÉRAIRE **:: *** route_name*  
- Spécifie l'itinéraire sur lequel l'autorisation est refusée. Le qualificateur d’étendue **::** est requis.  
+ ROUTE **::***route_name*  
+ Spécifie l'itinéraire sur lequel l'autorisation est refusée. Le qualificateur d’étendue **::** est obligatoire.  
   
  SERVICE **::***message_type_name*  
- Spécifie le service sur lequel l'autorisation est refusée. Le qualificateur d’étendue **::** est requis.  
+ Spécifie le service sur lequel l'autorisation est refusée. Le qualificateur d’étendue **::** est obligatoire.  
   
  *database_principal*  
  Spécifie le principal auquel l'autorisation est refusée. Il peut s'agir :  
@@ -106,10 +106,10 @@ CASCADE
 -   Utilisateur de base de données mappé à une clé asymétrique  
 -   Utilisateur de base de données mappé à un principal de serveur  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
   
 ## <a name="service-broker-contracts"></a>Contrats Service Broker  
- Un contrat [!INCLUDE[ssSB](../../includes/sssb-md.md)] est un élément sécurisable du niveau base de données, contenu par la base de données qui est son parent dans la hiérarchie des autorisations. Les autorisations les plus spécifiques et limitées qui peuvent être refusées sur une [!INCLUDE[ssSB](../../includes/sssb-md.md)] contrat sont répertoriées dans le tableau ci-dessous, ainsi que les autorisations plus générales qui les incluent de manière implicite.  
+ Un contrat [!INCLUDE[ssSB](../../includes/sssb-md.md)] est un élément sécurisable du niveau base de données, contenu par la base de données qui est son parent dans la hiérarchie des autorisations. Les autorisations les plus spécifiques et limitées qui peuvent être refusées sur un contrat [!INCLUDE[ssSB](../../includes/sssb-md.md)] sont indiquées dans le tableau suivant, avec les autorisations plus générales, qui les incluent naturellement.  
   
 |Autorisation d'un contrat Service Broker|Impliquée par une autorisation d'un contrat Service Broker|Impliquée par une autorisation de base de données|  
 |----------------------------------------|---------------------------------------------------|------------------------------------|  
@@ -141,7 +141,7 @@ CASCADE
 |VIEW DEFINITION|CONTROL|VIEW DEFINITION|  
   
 ## <a name="service-broker-routes"></a>Itinéraires Service Broker  
- Un itinéraire [!INCLUDE[ssSB](../../includes/sssb-md.md)] est un élément sécurisable du niveau base de données, contenu par la base de données qui est son parent dans la hiérarchie des autorisations. Les autorisations les plus spécifiques et limitées qui peuvent être refusées sur un [!INCLUDE[ssSB](../../includes/sssb-md.md)] itinéraire sont répertoriées dans le tableau ci-dessous, ainsi que les autorisations plus générales qui les incluent de manière implicite.  
+ Un itinéraire [!INCLUDE[ssSB](../../includes/sssb-md.md)] est un élément sécurisable du niveau base de données, contenu par la base de données qui est son parent dans la hiérarchie des autorisations. Les autorisations les plus spécifiques et limitées qui peuvent être refusées sur un itinéraire [!INCLUDE[ssSB](../../includes/sssb-md.md)] sont indiquées dans le tableau suivant, avec les autorisations plus générales, qui les incluent naturellement.  
   
 |Autorisation d'un itinéraire Service Broker|Impliquée par une autorisation d'un itinéraire Service Broker|Impliquée par une autorisation de base de données|  
 |-------------------------------------|------------------------------------------------|------------------------------------|  
@@ -151,7 +151,7 @@ CASCADE
 |VIEW DEFINITION|CONTROL|VIEW DEFINITION|  
   
 ### <a name="service-broker-services"></a>Services Service Broker  
- Un service [!INCLUDE[ssSB](../../includes/sssb-md.md)] est un élément sécurisable du niveau base de données, contenu par la base de données qui est son parent dans la hiérarchie des autorisations. Les autorisations les plus spécifiques et limitées qui peuvent être refusées sur un [!INCLUDE[ssSB](../../includes/sssb-md.md)] service sont répertoriés dans le tableau ci-dessous, ainsi que les autorisations plus générales qui les incluent de manière implicite.  
+ Un service [!INCLUDE[ssSB](../../includes/sssb-md.md)] est un élément sécurisable du niveau base de données, contenu par la base de données qui est son parent dans la hiérarchie des autorisations. Les autorisations les plus spécifiques et limitées qui peuvent être refusées sur un service [!INCLUDE[ssSB](../../includes/sssb-md.md)] sont indiquées dans le tableau suivant, avec les autorisations plus générales, qui les incluent naturellement.  
   
 |Autorisation d'un service Service Broker|Impliquée par une autorisation d'un service Service Broker|Impliquée par une autorisation de base de données|  
 |---------------------------------------|--------------------------------------------------|------------------------------------|  
@@ -162,12 +162,12 @@ CASCADE
 |VIEW DEFINITION|CONTROL|VIEW DEFINITION|  
   
 ## <a name="permissions"></a>Autorisations  
- Requiert l’autorisation CONTROL sur la [!INCLUDE[ssSB](../../includes/sssb-md.md)] contrat, type de message, liaison de service distant, itinéraire ou service. Si vous utilisez la clause AS, le principal spécifié doit être propriétaire de l'élément sécurisable auquel les autorisations sont refusées.  
+ Nécessite une autorisation CONTROL sur le contrat, le type de message, la liaison de service distant, l’itinéraire ou le service [!INCLUDE[ssSB](../../includes/sssb-md.md)]. Si vous utilisez la clause AS, le principal spécifié doit être propriétaire de l'élément sécurisable auquel les autorisations sont refusées.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Principaux &#40;moteur de base de données&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
- [RÉVOQUER des autorisations au Service Broker &#40; Transact-SQL &#41;](../../t-sql/statements/revoke-service-broker-permissions-transact-sql.md)   
+ [Autorisations REVOKE dans Service Broker &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-service-broker-permissions-transact-sql.md)   
  [DENY &#40;Transact-SQL&#41;](../../t-sql/statements/deny-transact-sql.md)   
- [Autorisations &#40; moteur de base de données &#41;](../../relational-databases/security/permissions-database-engine.md)  
+ [Autorisations &#40;Moteur de base de données&#41;](../../relational-databases/security/permissions-database-engine.md)  
   
   

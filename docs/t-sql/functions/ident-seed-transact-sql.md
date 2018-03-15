@@ -1,5 +1,5 @@
 ---
-title: IDENT_SEED (Transact-SQL) | Documents Microsoft
+title: IDENT_SEED (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -36,7 +36,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="identseed-transact-sql"></a>IDENT_SEED (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Retourne la valeur de départ d’origine (retourné en tant que **numérique**(**@@**MAXPRECISION, 0)) spécifiée lors de la création d’une colonne d’identité dans une table ou une vue. La modification de la valeur actuelle d'une colonne d'identité en utilisant DBCC CHECKIDENT ne modifie pas la valeur retournée par cette fonction.  
+  Renvoie la valeur de départ d’origine (sous la forme **numeric**(**@@**MAXPRECISION,0)) spécifiée lors de la création d’une colonne d’identité dans une table ou une vue. La modification de la valeur actuelle d'une colonne d'identité en utilisant DBCC CHECKIDENT ne modifie pas la valeur retournée par cette fonction.  
   
  ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -48,8 +48,8 @@ IDENT_SEED ( 'table_or_view' )
 ```  
   
 ## <a name="arguments"></a>Arguments  
- **'** *table_ou_vue* **'**  
- Est un [expression](../../t-sql/language-elements/expressions-transact-sql.md) qui spécifie la table ou la vue dont vous recherchez une valeur de départ d’identité. *table_ou_vue* peut être une constante de chaîne de caractères placée entre guillemets, une variable, une fonction ou un nom de colonne. *table_ou_vue* est **char**, **nchar**, **varchar**, ou **nvarchar**.  
+ **'** *table_or_view* **'**  
+ [Expression](../../t-sql/language-elements/expressions-transact-sql.md) qui spécifie la table ou la vue dans laquelle rechercher une valeur de départ d’identité. *table_or_view* peut être une constante de type chaîne de caractères entre guillemets, une variable, une fonction ou un nom de colonne. *table_or_view* est de type **char**, **nchar**, **varchar** ou **nvarchar**.  
   
 ## <a name="return-types"></a>Types de retour  
  **numeric**  
@@ -98,12 +98,12 @@ Person             vAdditionalContactInfo                 1
 dbo                AWBuildVersion                         1
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- [Expressions &#40; Transact-SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
+## <a name="see-also"></a> Voir aussi  
+ [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
  [Fonctions système &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)   
  [IDENT_CURRENT &#40;Transact-SQL&#41;](../../t-sql/functions/ident-current-transact-sql.md)   
- [IDENT_INCR &#40; Transact-SQL &#41;](../../t-sql/functions/ident-incr-transact-sql.md)   
+ [IDENT_INCR &#40;Transact-SQL&#41;](../../t-sql/functions/ident-incr-transact-sql.md)   
  [DBCC CHECKIDENT &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-checkident-transact-sql.md)   
- [Sys.identity_columns &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-identity-columns-transact-sql.md)  
+ [sys.identity_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-identity-columns-transact-sql.md)  
   
   

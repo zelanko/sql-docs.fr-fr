@@ -1,5 +1,5 @@
 ---
-title: '@@NESTLEVEL (Transact-SQL) | Documents Microsoft'
+title: '@@NESTLEVEL (Transact-SQL) | Microsoft Docs'
 ms.custom: 
 ms.date: 09/17/2017
 ms.prod: sql-non-specified
@@ -33,7 +33,7 @@ ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="x40x40nestlevel-transact-sql"></a>& #x 40 ; & #x 40 ; NESTLEVEL (Transact-SQL)
+# <a name="x40x40nestlevel-transact-sql"></a>&#x40;&#x40;NESTLEVEL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Retourne le niveau d'imbrication de la procédure stockée en cours d'exécution (initialement 0) sur le serveur local.  
@@ -47,16 +47,16 @@ ms.lasthandoff: 11/21/2017
 ```  
   
 ## <a name="return-types"></a>Types de retour  
- **int**  
+ **Int**  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Chaque fois qu'une procédure stockée appelle une autre procédure stockée ou exécute du code managé en référençant une agrégation, un type ou une routine CLR (Common Language Runtime), le niveau d'imbrication est incrémenté. En cas de dépassement du maximum autorisé (32), la transaction s'arrête.  
   
- Lorsque @@NESTLEVEL est exécutée dans un [!INCLUDE[tsql](../../includes/tsql-md.md)] chaîne, la valeur retournée est 1 + actuel niveau d’imbrication. Lorsque @@NESTLEVEL est exécuté dynamiquement à l’aide de sp_executesql la valeur renvoyée est 2 + niveau d’imbrication actuel.  
+ Lorsque la fonction @@NESTLEVEL est exécutée dans une chaîne [!INCLUDE[tsql](../../includes/tsql-md.md)], la valeur renvoyée est 1, augmentée du niveau d’imbrication actuel. Lorsque la fonction @@NESTLEVEL est exécutée dynamiquement à l’aide de sp_executesql, la valeur renvoyée est 2, augmentée du niveau d’imbrication actuel.  
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-using-nestlevel-in-a-procedure"></a>A. À l’aide de@NESTLEVEL dans une procédure  
+### <a name="a-using-nestlevel-in-a-procedure"></a>A. Utilisation de @@NESTLEVEL dans une procédure  
  L'exemple suivant crée deux procédures : une qui appelle l'autre et une qui affiche le paramètre `@@NESTLEVEL` de chacune d'entre elles.  
   
 ```  
@@ -92,7 +92,7 @@ Inner Level
 ```  
   
 ### <a name="b-calling-nestlevel"></a>B. Appel de @@NESTLEVEL  
- L’exemple suivant montre la différence entre les valeurs retournées par `SELECT`, `EXEC`, et `sp_executesql` lorsque chacune d’elles appelle `@@NESTLEVEL`.  
+ L’exemple suivant montre la différence entre les valeurs renvoyées par les commandes `SELECT`, `EXEC` et `sp_executesql` lorsque chacune d’elles appelle `@@NESTLEVEL`.  
   
 ```  
 CREATE PROC usp_NestLevelValues AS  
@@ -126,7 +126,7 @@ TwoGreater
 (1 row(s) affected)
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Fonctions de configuration &#40;Transact-SQL&#41;](../../t-sql/functions/configuration-functions-transact-sql.md)   
  [Créer une procédure stockée](../../relational-databases/stored-procedures/create-a-stored-procedure.md)   
  [@@TRANCOUNT &#40;Transact-SQL&#41;](../../t-sql/functions/trancount-transact-sql.md)  

@@ -1,5 +1,5 @@
 ---
-title: '@@PROCID (Transact-SQL) | Documents Microsoft'
+title: '@@PROCID (Transact-SQL) | Microsoft Docs'
 ms.custom: 
 ms.date: 09/18/2017
 ms.prod: sql-non-specified
@@ -38,10 +38,10 @@ ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="x40x40procid-transact-sql"></a>& #x 40 ; & #x 40 ; PROCID (Transact-SQL)
+# <a name="x40x40procid-transact-sql"></a>&#x40;&#x40;PROCID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Retourne l'identificateur (ID) d'objet du module [!INCLUDE[tsql](../../includes/tsql-md.md)] en cours. Un module [!INCLUDE[tsql](../../includes/tsql-md.md)] peut consister en une procédure stockée, une fonction définie par l'utilisateur ou un déclencheur. @@PROCID ne peut pas être spécifié dans les modules CLR ou les données in-process fournisseur d’accès.  
+  Retourne l'identificateur (ID) d'objet du module [!INCLUDE[tsql](../../includes/tsql-md.md)] en cours. Un module [!INCLUDE[tsql](../../includes/tsql-md.md)] peut consister en une procédure stockée, une fonction définie par l'utilisateur ou un déclencheur. @@PROCID ne peut pas être spécifié dans des modules CLR ou dans le fournisseur d’accès aux données en cours de traitement.  
   
  ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -52,7 +52,7 @@ ms.lasthandoff: 11/21/2017
 ```  
   
 ## <a name="return-types"></a>Types de retour  
- **int**  
+ **Int**  
   
 ## <a name="examples"></a>Exemples  
  L'exemple suivant utilise `@@PROCID` comme paramètre d'entrée dans la fonction `OBJECT_NAME` pour retourner le nom de la procédure stockée dans le message `RAISERROR`.  
@@ -79,13 +79,13 @@ GO
 EXECUTE dbo.usp_FindName 'P%', 'A%';  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [CREATE FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-function-transact-sql.md)   
  [CREATE PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/create-procedure-transact-sql.md)   
  [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)   
- [Fonctions de métadonnées &#40; Transact-SQL &#41;](../../t-sql/functions/metadata-functions-transact-sql.md)   
- [Sys.Objects &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
+ [Fonctions de métadonnées &#40;Transact-SQL&#41;](../../t-sql/functions/metadata-functions-transact-sql.md)   
+ [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
  [sys.sql_modules &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)   
- [RAISERROR &#40; Transact-SQL &#41;](../../t-sql/language-elements/raiserror-transact-sql.md)  
+ [RAISERROR &#40;Transact-SQL&#41;](../../t-sql/language-elements/raiserror-transact-sql.md)  
   
   
