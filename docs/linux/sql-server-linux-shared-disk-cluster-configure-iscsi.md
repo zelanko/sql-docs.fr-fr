@@ -202,7 +202,7 @@ Pour plus d’informations sur l’initiateur iSCSI pour les distributions de pr
 
     ![45-CopyMove][8]
  
-   *    Type `exit` pour revenir à l’utilisateur racine.
+   *    Tapez `exit` pour revenir à l’utilisateur racine.
 
    *    Monter le volume logique iSCSI dans le dossier de données SQL Server. Vous ne recevrez pas tout accusé de réception en cas de réussite.
 
