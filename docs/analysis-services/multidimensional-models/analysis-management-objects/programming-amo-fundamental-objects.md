@@ -196,7 +196,7 @@ static Database ProcessDatabase(Database db, ProcessType pt)
 }  
 ```  
   
-##  <a name="DataSource">Objets de source de données</a>  
+##  <a name="DataSource"></a>Objets de source de données  
  Un objet <xref:Microsoft.AnalysisServices.DataSource> est le lien entre [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] et la base de données où résident les données. Le schéma qui représente le modèle sous-jacent pour [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] est défini par l'objet <xref:Microsoft.AnalysisServices.DataSourceView>. Un objet <xref:Microsoft.AnalysisServices.DataSource> peut être envisagé comme une chaîne de connexion à la base de données où résident les données.  
   
  L'exemple de code suivant montre comment créer un objet <xref:Microsoft.AnalysisServices.DataSource>. L'exemple vérifie que le serveur existe toujours, que l'objet <xref:Microsoft.AnalysisServices.Server> est connecté et que la base de données existe. Si l'objet <xref:Microsoft.AnalysisServices.DataSource> existe, il est supprimé et recréé. L'objet <xref:Microsoft.AnalysisServices.DataSource> est créé avec les mêmes nom et ID interne. Dans cet exemple, aucune vérification n'est effectuée au niveau de la chaîne de connexion.  

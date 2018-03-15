@@ -53,7 +53,7 @@ ms.lasthandoff: 02/15/2018
   
  [Automatisation des tâches administratives avec AMO](#AutomatingAdministrativeTaskswithAMO)  
   
-##  <a name="AMOintheAnalysisServicesArchitecture">AMO dans l’Architecture Analysis Services</a>  
+##  <a name="AMOintheAnalysisServicesArchitecture"></a>AMO dans l’Architecture Analysis Services  
  De par sa conception, AMO se prédestine uniquement à la gestion d'objets et non à l'interrogation de données. Si l’utilisateur a besoin de requête [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] de données à partir d’une application cliente, l’application cliente doit utiliser [développement avec ADOMD.NET](../../../analysis-services/multidimensional-models/adomd-net/developing-with-adomd-net.md).  
   
 ##  <a name="AMOArchitecture"></a> AMO Architecture  
@@ -86,7 +86,7 @@ ms.lasthandoff: 02/15/2018
 |[Classes de sécurité AMO](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-security-classes.md)|Classes permettant de contrôler l'accès aux autres objets et de maintenir la sécurité.|  
 |[Autres classes et méthodes AMO](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-other-classes-and-methods.md)|Classes et méthodes permettant aux administrateurs OLAP ou d'exploration de données de réaliser leurs tâches quotidiennes.|  
   
-##  <a name="bkmk_UsingAMO">À l’aide d’AMO</a>  
+##  <a name="bkmk_UsingAMO"></a>À l’aide d’AMO  
  AMO s'avère particulièrement utile pour automatiser les tâches répétitives, telles que la création de nouvelles partitions dans un groupe de mesures sur la base de nouvelles données dans la table de faits, ou le réapprentissage d'un modèle d'exploration de données sur la base de nouvelles données. Ces tâches qui créent de nouveaux objets sont généralement effectuées tous les mois, toutes les semaines ou tous les trimestres, et les nouveaux objets peuvent être facilement nommés par l'application sur la base des nouvelles données.  
   
 ##### <a name="analysis-services-administrators"></a>Administrateurs Analysis Services  
@@ -103,7 +103,7 @@ ms.lasthandoff: 02/15/2018
 ##### <a name="data-mining-advanced-users"></a>Utilisateurs expérimentés de l'exploration de données  
  Pour les utilisateurs expérimentés de l'exploration de données, AMO est particulièrement utile lorsque des ensembles importants de modèles doivent faire l'objet d'un réapprentissage régulier.  
   
-##  <a name="AutomatingAdministrativeTaskswithAMO">Automatisation des tâches administratives avec AMO</a>  
+##  <a name="AutomatingAdministrativeTaskswithAMO"></a>Automatisation des tâches administratives avec AMO  
  La plupart des tâches répétitives sont conçues, déployées et gérées dans de meilleures conditions si elles sont développées à l'aide d'[!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] que si elles sont développées en tant qu'application dans un langage de votre choix. Toutefois, pour les tâches répétitives qui ne peuvent pas être automatisées à l'aide d'[!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)], vous pouvez utiliser AMO. AMO s'avère également utile lorsque vous souhaitez développer une application spécialisée décisionnelle au moyen d'[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
   
 ##### <a name="automatic-object-management"></a>Gestion automatique des objets  

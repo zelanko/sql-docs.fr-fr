@@ -82,24 +82,24 @@ ms.lasthandoff: 02/15/2018
   
  Pour plus d'informations sur les méthodes et les propriétés disponibles, consultez <xref:Microsoft.AnalysisServices.Cube> dans <xref:Microsoft.AnalysisServices>.  
   
-###  <a name="MeasureGroups">Objets MeasureGroup</a>  
+###  <a name="MeasureGroups"></a>Objets MeasureGroup  
  Pour créer un groupe de mesures, il convient de l'ajouter à la collection de groupes de mesures du cube, puis de mettre à jour l'objet <xref:Microsoft.AnalysisServices.MeasureGroup> sur le serveur à l'aide de sa propre méthode Update. Pour supprimer un objet <xref:Microsoft.AnalysisServices.MeasureGroup>, il convient d'utiliser sa propre méthode Drop.  
   
  Un objet <xref:Microsoft.AnalysisServices.MeasureGroup> peut être traité après avoir été créé. Le <xref:Microsoft.AnalysisServices.MeasureGroup> peuvent être traités à l’aide de sa propre méthode Process ou elle peut être traitée lorsqu’un objet parent lui-même traite avec sa propre méthode Process.  
   
  Pour plus d'informations sur les méthodes et les propriétés disponibles, consultez <xref:Microsoft.AnalysisServices.MeasureGroup> dans <xref:Microsoft.AnalysisServices>.  
   
-###  <a name="Partition">Objets de partition</a>  
+###  <a name="Partition"></a>Objets de partition  
  Pour créer un objet <xref:Microsoft.AnalysisServices.Partition>, il convient de l'ajouter à la collection de partitions du groupe de mesures parent, puis de mettre à jour l'objet <xref:Microsoft.AnalysisServices.Partition> sur le serveur à l'aide de la méthode Update. Pour supprimer un objet <xref:Microsoft.AnalysisServices.Partition>, il convient d'utiliser la méthode Drop.  
   
  Pour plus d'informations sur les méthodes et les propriétés disponibles, consultez <xref:Microsoft.AnalysisServices.Partition> dans <xref:Microsoft.AnalysisServices>.  
   
-###  <a name="AggregationDesign">Objets AggregationDesign</a>  
+###  <a name="AggregationDesign"></a>Objets AggregationDesign  
  Les conceptions d'agrégation sont construites à l'aide de la méthode AggregationDesign d'un objet <xref:Microsoft.AnalysisServices.AggregationDesign>.  
   
  Pour plus d'informations sur les méthodes et les propriétés disponibles, consultez <xref:Microsoft.AnalysisServices.AggregationDesign> dans <xref:Microsoft.AnalysisServices>.  
   
-###  <a name="Aggregation">Objets d’agrégation</a>  
+###  <a name="Aggregation"></a>Objets d’agrégation  
  Pour créer un objet <xref:Microsoft.AnalysisServices.Aggregation>, il convient de l'ajouter à la collection de conceptions d'agrégation du groupe de mesures parent, puis de mettre à jour l'objet groupe de mesures parent sur le serveur à l'aide de la méthode Update. Pour supprimer une agrégation de l'objet <xref:Microsoft.AnalysisServices.AggregationCollection>, il est nécessaire d'utiliser la méthode Remove ou la méthode RemoveAt.  
   
  Pour plus d'informations sur les méthodes et les propriétés disponibles, consultez <xref:Microsoft.AnalysisServices.Aggregation> dans <xref:Microsoft.AnalysisServices>.  
@@ -137,7 +137,7 @@ ms.lasthandoff: 02/15/2018
   
  Pour plus d'informations sur les méthodes et les propriétés disponibles, consultez <xref:Microsoft.AnalysisServices.Kpi> dans <xref:Microsoft.AnalysisServices>.  
   
-###  <a name="Perspective">Objets de perspective</a>  
+###  <a name="Perspective"></a>Objets de perspective  
  Pour créer un objet <xref:Microsoft.AnalysisServices.Perspective>, il convient de l'ajouter à la collection de perspectives du cube, puis de mettre à jour l'objet <xref:Microsoft.AnalysisServices.Cube> sur le serveur à l'aide de la méthode Update. La méthode Update du cube peut inclure le paramètre UpdateOptions.ExpandFull, qui garantit que tous les objets du cube qui ont été modifiés seront mis à jour sur le serveur dans le cadre de cette action de mise à jour.  
   
  Pour supprimer un objet <xref:Microsoft.AnalysisServices.Perspective>, il doit être supprimé de la collection et le cube parent doit être mis à jour.  
@@ -146,14 +146,14 @@ ms.lasthandoff: 02/15/2018
   
  Pour plus d'informations sur les méthodes et les propriétés disponibles, consultez <xref:Microsoft.AnalysisServices.Perspective> dans <xref:Microsoft.AnalysisServices>.  
   
-###  <a name="Translation">Objets Translation</a>  
+###  <a name="Translation"></a>Objets Translation  
  Pour créer un objet <xref:Microsoft.AnalysisServices.Translation>, il convient de l'ajouter à la collection de traductions de l'objet souhaité, puis de mettre à jour l'objet parent principal le plus proche sur le serveur à l'aide de la méthode Update. La méthode Update de l'objet parent le plus proche peut inclure le paramètre UpdateOptions.ExpandFull, qui garantit que tous les objets enfants qui ont été modifiés seront mis à jour sur le serveur dans le cadre de cette action de mise à jour.  
   
  Pour supprimer un objet <xref:Microsoft.AnalysisServices.Translation>, il doit être supprimé de la collection et l'objet parent le plus proche doit être mis à jour.  
   
  Pour plus d'informations sur les méthodes et les propriétés disponibles, consultez <xref:Microsoft.AnalysisServices.Translation> dans <xref:Microsoft.AnalysisServices>.  
   
-###  <a name="ProactiveCaching">Objets ProactiveCaching</a>  
+###  <a name="ProactiveCaching"></a>Objets ProactiveCaching  
  Pour créer un objet <xref:Microsoft.AnalysisServices.ProactiveCaching>, il convient de l'ajouter à la collection d'objets de mise en cache proactive de la dimension ou de la partition, puis de mettre à l'objet dimension ou partition sur le serveur à l'aide de la méthode Update.  
   
  Pour supprimer un objet <xref:Microsoft.AnalysisServices.ProactiveCaching>, il doit être supprimé de la collection et l'objet parent doit être mis à jour.  

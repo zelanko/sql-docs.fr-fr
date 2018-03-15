@@ -43,7 +43,7 @@ ms.lasthandoff: 02/15/2018
   
 -   [Objets Translation](#Transl)  
   
-##  <a name="Action">Objets action</a>  
+##  <a name="Action"></a>Objets action  
  Les classes Action sont utilisées pour créer une réponse active lors de l'exploration de certaines zones du cube. Les objets Action peuvent être définis à l'aide d'objets AMO, mais ils sont utilisés à partir de l'application cliente qui explore les données. Les actions peuvent être de différents types et doivent être créées en fonction de leur type. Les actions peuvent être :  
   
 -   Des actions d'extraction, qui retournent l'ensemble de lignes qui représente les données sous-jacentes des cellules sélectionnées du cube où l'action se produit.  
@@ -350,7 +350,7 @@ static public void CreateKPIs(Cube cube)
 }.  
 ```  
   
-##  <a name="Persp">Objets de perspective</a>  
+##  <a name="Persp"></a>Objets de perspective  
  Les objets <xref:Microsoft.AnalysisServices.Perspective> peuvent être définis par AMO, mais ils sont utilisés à partir de l'application cliente qui explore les données.  
   
  La création d'un objet <xref:Microsoft.AnalysisServices.Perspective> passe par les étapes suivantes :  
@@ -413,7 +413,7 @@ static public void CreatePerspectives(Cube cube)
 }  
 ```  
   
-##  <a name="PC">Objets ProactiveCaching</a>  
+##  <a name="PC"></a>Objets ProactiveCaching  
  Les objets <xref:Microsoft.AnalysisServices.ProactiveCaching> peuvent être définis par AMO.  
   
  La création d'un objet <xref:Microsoft.AnalysisServices.ProactiveCaching> passe par les étapes suivantes :  
@@ -470,7 +470,7 @@ static public void SetProactiveCachingSettings(Database db)
 }  
 ```  
   
-##  <a name="Transl">Objets Translation</a>  
+##  <a name="Transl"></a>Objets Translation  
  Les objets Translation peuvent être définis par AMO, mais ils sont utilisés à partir de l'application cliente qui explore les données. Les objets Translation sont des objets simples à coder. Les traductions de légendes d'objets sont fournies par les paires Identificateur de paramètres régionaux et Légende traduite. Plusieurs traductions peuvent être activées pour une même légende. Des traductions peuvent être fournies pour la plupart des objets [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], tels que les dimensions, les attributs, les hiérarchies, les cubes, les groupes de mesures, les mesures, etc.  
   
  L'exemple de code suivant fournit une traduction espagnole pour le nom de l'attribut Product Name.  
