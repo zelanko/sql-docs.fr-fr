@@ -1,5 +1,5 @@
 ---
-title: Le constructeur de valeurs (Transact-SQL) de la table | Documents Microsoft
+title: Constructeur de valeurs de table (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/15/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="table-value-constructor-transact-sql"></a>Constructeur de valeurs de table (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Spécifie un ensemble d'expressions de valeurs de ligne à créer dans une table. Le constructeur de valeurs de table [!INCLUDE[tsql](../../includes/tsql-md.md)] permet de spécifier plusieurs lignes de données dans une seule instruction DML. Le constructeur de valeurs de table peut être spécifié dans la clause VALUES de l’instruction INSERT, dans la \<table source > clause de l’instruction MERGE et dans la définition d’une table dérivée dans la clause FROM.  
+  Spécifie un ensemble d'expressions de valeurs de ligne à créer dans une table. Le constructeur de valeurs de table [!INCLUDE[tsql](../../includes/tsql-md.md)] permet de spécifier plusieurs lignes de données dans une seule instruction DML. Le constructeur de valeurs de table peut être spécifié dans la clause VALUES de l’instruction INSERT, dans la clause USING \<source table> de l’instruction MERGE et dans la définition d’une table dérivée dans la clause FROM.  
   
  ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -58,19 +58,19 @@ VALUES ( <row value expression list> ) [ ,...n ]
  Le nombre de valeurs spécifiées doit être identique dans chaque liste et les valeurs doivent être dans le même ordre que les colonnes de la table. Une valeur doit être spécifiée pour chaque colonne de la table ou la liste de colonnes doit spécifier explicitement les colonnes pour chaque valeur entrante.  
   
  DEFAULT  
- Force le [!INCLUDE[ssDE](../../includes/ssde-md.md)] pour insérer la valeur par défaut définie pour une colonne. S'il n'existe pas de valeur par défaut pour la colonne et si celle-ci autorise les valeurs NULL, NULL est inséré. DEFAULT n'est pas valide pour une colonne d'identité. Lorsqu'il est spécifié dans un constructeur de valeurs de table, DEFAULT est autorisé uniquement dans une instruction INSERT.  
+ Force le [!INCLUDE[ssDE](../../includes/ssde-md.md)] à insérer la valeur par défaut définie pour une colonne. S'il n'existe pas de valeur par défaut pour la colonne et si celle-ci autorise les valeurs NULL, NULL est inséré. DEFAULT n'est pas valide pour une colonne d'identité. Lorsqu'il est spécifié dans un constructeur de valeurs de table, DEFAULT est autorisé uniquement dans une instruction INSERT.  
   
  *expression*  
  Constante, variable ou expression. L'expression ne peut pas contenir d'instruction EXECUTE.  
   
 ## <a name="limitations-and-restrictions"></a>Limitations et restrictions  
- Constructeurs de valeurs de table peuvent être utilisés de deux façons : directement dans la liste VALUES d’une instruction INSERT... Les valeurs d’instruction, ou qu’une table dérivée partout où des tables dérivées sont autorisées. Erreur 10738 est retournée si le nombre de lignes dépasse le maximum. Pour insérer plus de lignes que la limite autorisée, utilisez une des méthodes suivantes :  
+ Les constructeurs de valeurs de table peuvent être utilisés de deux façons : directement dans la liste VALUES d’une instruction INSERT... VALUES, ou en tant que table dérivée quand les tables dérivées sont autorisées. L’erreur 10738 est retournée si le nombre de lignes dépasse la valeur maximale. Pour insérer plus de lignes que le nombre limite, utilisez une des méthodes suivantes :  
   
 -   Créer plusieurs instructions INSERT  
   
 -   Utiliser une table dérivée  
   
--   Les données d’importation de bloc à l’aide de la **bcp** utilitaire ou l’instruction BULK INSERT  
+-   Importer les données en bloc à l’aide de l’utilitaire **bcp** ou de l’instruction BULK INSERT  
   
  Seules les valeurs scalaires uniques sont autorisées en tant qu'expression de valeurs de ligne. Une sous-requête qui implique plusieurs colonnes n'est pas autorisée en tant qu'expression de valeurs de ligne. Par exemple, le code suivant génère une erreur de syntaxe car la troisième liste d'expressions de valeurs de ligne contient une sous-requête avec plusieurs colonnes.  
   
@@ -101,7 +101,7 @@ GO
 ```  
   
 ## <a name="data-types"></a>Types de données  
- Les valeurs spécifiées dans une instruction INSERT portant sur plusieurs lignes respectent les propriétés de conversion de type de données de la syntaxe UNION ALL. Cela entraîne la conversion implicite des types sans correspondance dans le type de la plus élevée [priorité](../../t-sql/data-types/data-type-precedence-transact-sql.md). Si la conversion n'est pas prise en charge en tant que conversion implicite, une erreur est renvoyée. Par exemple, l’instruction suivante insère une valeur entière et une valeur de caractère dans une colonne de type **char**.  
+ Les valeurs spécifiées dans une instruction INSERT portant sur plusieurs lignes respectent les propriétés de conversion de type de données de la syntaxe UNION ALL. Par conséquent, les types incompatibles sont convertis implicitement vers le type ayant la [précédence](../../t-sql/data-types/data-type-precedence-transact-sql.md) la plus élevée. Si la conversion n'est pas prise en charge en tant que conversion implicite, une erreur est renvoyée. Par exemple, l’instruction suivante insère un nombre entier et un caractère dans une colonne de type **char**.  
   
 ```  
 CREATE TABLE dbo.t (a int, b char);  
@@ -188,8 +188,8 @@ GROUP BY Change;
   
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- [INSÉRER une &#40; Transact-SQL &#41;](../../t-sql/statements/insert-transact-sql.md)   
+## <a name="see-also"></a> Voir aussi  
+ [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
  [MERGE &#40;Transact-SQL&#41;](../../t-sql/statements/merge-transact-sql.md)   
  [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md)  
   

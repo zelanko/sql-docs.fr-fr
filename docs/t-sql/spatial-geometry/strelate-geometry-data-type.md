@@ -1,5 +1,5 @@
 ---
-title: "STRelate (Type de données geometry) | Documents Microsoft"
+title: "STRelate (type de données geometry) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="strelate-geometry-data-type"></a>STRelate (type de données geometry)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-  Retourne 1 si une **geometry** instance est liée à un autre **geometry** instance, où la relation est définie par une valeur de matrice de modèle Dimensionally Extended 9 Intersection Model (DE-9IM) ; sinon, retourne 0.  
+  Retourne 1 si une instance **geometry** est associée à une autre instance **geometry**, où la relation est définie par une valeur de matrice de modèle DE-9IM (Dimensionally Extended 9 Intersection Model) ; sinon, retourne 0.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -45,21 +45,21 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="arguments"></a>Arguments  
  *other_geometry*  
- Une autre **geometry** instance à comparer à l’instance sur laquelle `STRelate()` est appelé.  
+ Autre instance **geometry** à comparer à l’instance sur laquelle `STRelate()` est appelé.  
   
  *intersection_pattern_matrix*  
- Est une chaîne de type **nchar(9)** codage des valeurs acceptables pour le périphérique de matrice de modèle de-9IM entre les deux **geometry** instances.  
+ Chaîne de type **nchar (9)** qui code des valeurs acceptables pour l’appareil de matrice de modèle DE-9IM entre les deux instances **geometry**.  
   
-## <a name="remarks"></a>Notes  
- Cette méthode retourne toujours null si l’ID de référence spatiale (SRID) de la **geometry** instances ne correspondent pas. Cette méthode lève un **ArgumentException** si la matrice n’est pas bien formée.  
+## <a name="remarks"></a>Notes   
+ Cette méthode retourne toujours une valeur Null si les SRID (ID de référence spatiale) des instances **geometry** ne correspondent pas. Cette méthode lève **ArgumentException** si la matrice n’est pas bien formée.  
   
 ## <a name="return-types"></a>Types de retour  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]type de retour : **bits**  
+ Type de retour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] : **bit**  
   
  Type de retour CLR : **SqlBoolean**  
   
 ## <a name="examples"></a>Exemples  
- L’exemple suivant utilise `STRelate()` pour tester deux **geometry** instances spatiales disjoint à l’aide un modèle DE-9IM explicit.  
+ L’exemple suivant utilise `STRelate()` pour tester la disjointure spatiale de deux instances **geometry** à l’aide d’un modèle DE-9IM explicite.  
   
 ```  
 DECLARE @g geometry;  
@@ -69,7 +69,7 @@ SET @h = geometry::STGeomFromText('POINT(5 5)', 0);
 SELECT @g.STRelate(@h, 'FF*FF****');  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Méthodes OGC sur des instances geography](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   
   

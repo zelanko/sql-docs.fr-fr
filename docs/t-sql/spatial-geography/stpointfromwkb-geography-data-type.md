@@ -1,5 +1,5 @@
 ---
-title: "STPointFromWKB (Type de données geography) | Documents Microsoft"
+title: "STPointFromWKB (type de données geography) | Microsoft Docs"
 ms.custom: 
 ms.date: 07/30/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stpointfromwkb-geography-data-type"></a>STPointFromWKB (type de données geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Retourne un **geographyPoint** instance à partir d’une représentation de l’Open Geospatial Consortium (OGC) WKB Well-Known Binary ().
+Retourne une instance **geographyPoint** à partir d’une représentation OGC (Open Geospatial Consortium) WKB (Well-Known Binary).
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -45,20 +45,20 @@ STPointFromWKB ( 'WKB_point' , SRID )
   
 ## <a name="arguments"></a>Arguments  
  *WKB_point*  
- Est la représentation WKB de le **geographyPoint** instance à retourner. *WKB_point* est un **varbinary (max)** expression.  
+ Représentation WKB de l’instance **geographyPoint** à retourner. *WKB_point* est une expression **varbinary(max)**.  
   
  *SRID*  
- Est un **int** expression représentant les données spatiales ID de référence (SRID) de la **geographyPoint** instance à retourner.  
+ Expression **int** qui représente le SRID (ID de référence spatiale) de l’instance **geographyPoint** à retourner.  
   
 ## <a name="return-types"></a>Types de retour  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]type de retour : **geography**  
+ Type de retour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] : **geography**  
   
  Type de retour CLR : **SqlGeography**  
   
  Type OGC : **Point**  
   
-## <a name="remarks"></a>Notes  
- Cette méthode lève un **FormatException** si l’entrée n’est pas correctement mise en forme.  
+## <a name="remarks"></a>Notes   
+ Cette méthode lève **FormatException** si l’entrée n’est pas au format approprié.  
   
 ## <a name="examples"></a>Exemples  
  L'exemple suivant utilise la méthode `STPointFromWKB()` pour créer une instance `geography`.  
@@ -69,7 +69,7 @@ SET @g = geography::STPointFromWKB(0x010100000017D9CEF753D347407593180456965EC0,
 SELECT @g.ToString();  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Méthodes geography statiques de l’OGC](../../t-sql/spatial-geography/ogc-static-geography-methods.md)  
   
   

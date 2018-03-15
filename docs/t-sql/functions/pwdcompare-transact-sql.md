@@ -1,5 +1,5 @@
 ---
-title: PWDCOMPARE (Transact-SQL) | Documents Microsoft
+title: PWDCOMPARE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -51,28 +51,28 @@ PWDCOMPARE ( 'clear_text_password'
   
 ## <a name="arguments"></a>Arguments  
  **'** *clear_text_password* **'**  
- Mot de passe non chiffré. *clear_text_password* est **sysname** (**nvarchar (128)**).  
+ Mot de passe non chiffré. *clear_text_password* est de type **sysname** (**nvarchar(128)**).  
   
  *password_hash*  
- Hachage de chiffrement d'un mot de passe. *password_hash* est **varbinary (128)**.  
+ Hachage de chiffrement d'un mot de passe. *password_hash* est de type **varbinary(128)**.  
   
- *Version*  
- Paramètre obsolète auquel la peut être définie sur 1, si *password_hash* représente une valeur d’une connexion antérieure à [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] qui a été migrée vers [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ou une version ultérieure, mais jamais été converti vers le [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] système. *version* est **int**.  
+ *version*  
+ Paramètre obsolète auquel la valeur 1 peut être affectée si *password_hash* représente une valeur d’un compte de connexion antérieur à [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] qui a été migrée vers [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ou version ultérieure, mais n’a jamais été converti vers le système [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]. *version* est de type **int**.  
   
 > [!CAUTION]  
 >  Ce paramètre est fourni pour des raisons de compatibilité descendante, mais est ignoré car les objets blob de hachage de mot de passe contiennent maintenant leurs propres descriptions de version. [!INCLUDE[ssNoteDepNextDontUse](../../includes/ssnotedepnextdontuse-md.md)]  
   
 ## <a name="return-types"></a>Types de retour  
- **int**  
+ **Int**  
   
- Retourne 1 si le hachage de la *clear_text_password* correspond à la *password_hash* paramètre et la valeur 0 si elle n’est pas le cas.  
+ Renvoie 1 si le hachage de *clear_text_password* correspond au paramètre *password_hash*, et 0 si ce n’est pas le cas.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  La fonction PWDCOMPARE ne constitue pas une menace pour la force des hachages de mot de passe car le même test pourrait être effectué en essayant de se connecter à l'aide du mot de passe fourni en tant que premier paramètre.  
   
- **PWDCOMPARE** ne peut pas être utilisé avec les mots de passe des utilisateurs de base de données. Il n'existe aucun équivalent de base de données à relation contenant-contenu.  
+ **PWDCOMPARE** ne peut pas être utilisé avec les mots de passe des utilisateurs de bases de données à relation contenant-contenu. Il n'existe aucun équivalent de base de données à relation contenant-contenu.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  PWDENCRYPT est accessible publiquement.  
   
  L'autorisation CONTROL SERVER est requise pour examiner la colonne password_hash de sys.sql_logins.  
@@ -95,8 +95,8 @@ SELECT name FROM sys.sql_logins
 WHERE PWDCOMPARE('password', password_hash) = 1 ;  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- [PWDENCRYPT &#40; Transact-SQL &#41;](../../t-sql/functions/pwdencrypt-transact-sql.md)   
+## <a name="see-also"></a> Voir aussi  
+ [PWDENCRYPT &#40;Transact-SQL&#41;](../../t-sql/functions/pwdencrypt-transact-sql.md)   
  [Fonctions de sécurité &#40;Transact-SQL&#41;](../../t-sql/functions/security-functions-transact-sql.md)  
   
   

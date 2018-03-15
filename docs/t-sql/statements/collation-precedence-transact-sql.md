@@ -1,5 +1,5 @@
 ---
-title: "Priorité de classement (Transact-SQL) | Documents Microsoft"
+title: "Priorité de classement (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
@@ -48,7 +48,7 @@ ms.lasthandoff: 11/21/2017
   
 -   le classement utilisé par certains opérateurs, tels que LIKE et IN, qui utilisent des entrées de chaînes de caractères, mais ne renvoient pas une chaîne de caractères.  
   
- Les règles de priorité de classement s’appliquent uniquement aux types de données de chaînes de caractères : **char**, **varchar**, **texte**, **nchar**, **nvarchar**, et **ntext**. Les objets comportant d'autres types de données n'interviennent pas dans les évaluations de classement.  
+ Les règles de priorité de classement s’appliquent uniquement aux types de données de chaînes de caractères : **char**, **varchar**, **text**, **nchar**, **nvarchar** et **ntext**. Les objets comportant d'autres types de données n'interviennent pas dans les évaluations de classement.  
   
 ## <a name="collation-labels"></a>Étiquettes de classement  
  Le tableau suivant répertorie et décrit les quatre catégories de classement des objets. Le nom de chaque catégorie est identifié par une étiquette de classement.  
@@ -102,7 +102,7 @@ ms.lasthandoff: 11/21/2017
   
      `WHERE ColumnA = ( 'abc' COLLATE French_CI_AS) COLLATE French_CS_AS`  
   
--   Pour les conversions de page de code **texte** types de données ne sont pas autorisés. Vous ne pouvez pas convertir un **texte** expression d’un classement à un autre s’ils ont les pages de codes différentes. L'opérateur d'affectation ne peut pas attribuer de valeurs si le classement de l'opérande texte de droite utilise une page de codes différente de l'opérande texte de gauche.  
+-   Les conversions de pages de codes pour les types de données **text** ne sont pas autorisées. Vous ne pouvez pas effectuer un cast d’une expression de type **texte** d’un classement à l’autre si les pages de codes de ces derniers sont différentes. L'opérateur d'affectation ne peut pas attribuer de valeurs si le classement de l'opérande texte de droite utilise une page de codes différente de l'opérande texte de gauche.  
   
  La priorité de classement est déterminée après la conversion du type de données. L'opérande qui détermine le classement résultant peut être différent de l'opérande qui fournit le type de données du résultat final. Par exemple, étudiez le traitement ci-dessous :  
   
@@ -151,7 +151,7 @@ Msg 448, Level 16, State 9, Line 2
 Cannot resolve collation conflict between 'Latin1_General_CS_AS' and 'Greek_CI_AS' in equal to operation.  
 ```  
   
-#### <a name="explicit-label-vs-implicit-label"></a>Étiquettes Explicite et Étiquette implicite  
+#### <a name="explicit-label-vs-implicit-label"></a>Étiquettes Explicite et étiquette Implicite  
  Dans la requête suivante, le prédicat est analysé dans le classement `greek_ci_as`, car l'expression de droite comporte l'étiquette Explicite. Celle-ci est prioritaire par rapport à l'étiquette Implicite de l'expression de gauche.  
   
 ```  
@@ -228,7 +228,7 @@ a
  L'opérateur de concaténation de chaînes respecte le classement, les deux opérandes de chaînes et le résultat se voient attribuer l'étiquette de classement de l'opérande comportant la priorité de classement la plus élevée. Les opérateurs UNION ALL et CASE respectent également le classement, et tous les opérandes de chaînes et résultats finaux se voient attribuer l'étiquette de classement de l'opérande doté du degré de priorité le plus élevé. La priorité de classement des opérandes UNION ALL et du résultat est évaluée par colonne.  
   
 ### <a name="functions-and-collation"></a>Fonctions et classement  
- LES fonctions CAST, CONVERT et COLLATE sont respectent le classement pour **char**, **varchar**, et **texte** des types de données. Si l'entrée et la sortie des fonctions CAST et CONVERT sont des chaînes de caractères, la chaîne résultante a l'étiquette de classement de la chaîne d'entrée. Si l'entrée n'est pas une chaîne de caractères, la chaîne résultante est une contrainte par défaut et se voit attribuer le classement de la base de données actuelle pour la connexion, ou de celle contenant la fonction définie par l'utilisateur, la procédure stockée ou le déclencheur dans lequel la fonction CAST ou CONVERT est référencée.  
+ Les fonctions CAST, CONVERT et COLLATE respectent le classement pour les types de données **char**, **varchar** et **text**. Si l'entrée et la sortie des fonctions CAST et CONVERT sont des chaînes de caractères, la chaîne résultante a l'étiquette de classement de la chaîne d'entrée. Si l'entrée n'est pas une chaîne de caractères, la chaîne résultante est une contrainte par défaut et se voit attribuer le classement de la base de données actuelle pour la connexion, ou de celle contenant la fonction définie par l'utilisateur, la procédure stockée ou le déclencheur dans lequel la fonction CAST ou CONVERT est référencée.  
   
  Pour les fonctions intégrées qui renvoient une chaîne, mais qui n'acceptent pas une chaîne en entrée, la chaîne résultante est une contrainte par défaut et se voit attribuer le classement de la base de données actuelle ou celui de la base de données contenant la fonction définie par l'utilisateur, la procédure stockée ou le déclencheur dans lequel la fonction est référencée.  
   
@@ -244,10 +244,10 @@ a
 |LOWER|SUBSTRING|  
 |PATINDEX|UPPER|  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [COLLATE &#40;Transact-SQL&#41;](~/t-sql/statements/collations.md)   
- [Conversion de Type de données &#40; moteur de base de données &#41;](../../t-sql/data-types/data-type-conversion-database-engine.md)   
- [Opérateurs &#40; Transact-SQL &#41;](../../t-sql/language-elements/operators-transact-sql.md)   
+ [Conversion de type de données &#40;moteur de base de données&#41;](../../t-sql/data-types/data-type-conversion-database-engine.md)   
+ [Opérateurs &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
  [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)  
   
   

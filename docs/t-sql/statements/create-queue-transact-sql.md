@@ -1,5 +1,5 @@
 ---
-title: "CRÉER la file d’attente (Transact-SQL) | Documents Microsoft"
+title: CREATE QUEUE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 04/10/2017
 ms.prod: sql-non-specified
@@ -81,10 +81,10 @@ CREATE QUEUE <object>
   
 ## <a name="arguments"></a>Arguments  
  *database_name* (objet)  
- Nom de la base de données dans laquelle la file d'attente doit être créée. *database_name* doit spécifier le nom de la base de données existante. Lorsque *nom_base_de_données* n’est pas fourni, la file d’attente est créée dans la base de données actuelle.  
+ Nom de la base de données dans laquelle la file d'attente doit être créée. *database_name* doit spécifier le nom d’une base de données existante. Quand *database_name* n’est pas fourni, la file d’attente est créée dans la base de données active.  
   
- *schema_name* (object)  
- Nom du schéma auquel la nouvelle file d'attente appartient. Le schéma par défaut est le schéma par défaut de l'utilisateur exécutant l'instruction. Si l’instruction CREATE QUEUE est exécutée par un membre du rôle serveur fixe sysadmin ou membre db_dbowner ou db_ddladmin base de données fixe dans la base de données spécifiée par *nom_base_de_données*, *nom_schéma* peut spécifier un schéma autre que celui associé au nom de la connexion actuelle. Dans le cas contraire, *schema_name* doit être le schéma par défaut pour l’utilisateur qui exécute l’instruction.  
+ *schema_name* (objet)  
+ Nom du schéma auquel la nouvelle file d'attente appartient. Le schéma par défaut est le schéma par défaut de l'utilisateur exécutant l'instruction. *schema_name* peut indiquer un autre schéma que celui associé au nom de la connexion active si l’instruction CREATE QUEUE est exécutée par un membre du rôle serveur fixe sysadmin ou par un membre du rôle de base de données fixe db_dbowner ou db_ddladmin dans la base de données spécifiée par *database_name*. Sinon, *schema_name* doit être le schéma par défaut de l’utilisateur qui exécute l’instruction.  
   
  *queue_name*  
  Nom de la file d'attente à créer. Ce nom doit respecter les règles définies pour les identificateurs [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -102,22 +102,22 @@ CREATE QUEUE <object>
  Spécifie des informations sur la procédure stockée à démarrer pour traiter les messages dans cette file d'attente.  
   
  STATUS (Activation)  
- Spécifie si [!INCLUDE[ssSB](../../includes/sssb-md.md)] démarre ou non la procédure stockée. Lorsque STATUS = ON, la file d'attente lance la procédure stockée spécifiée avec PROCEDURE_NAME, quand le nombre de procédures actuellement en cours d'exécution est inférieur à la valeur de MAX_QUEUE_READERS et que la réception des messages dans la file d'attente est plus rapide que la réception des messages par les procédures stockées. Lorsque STATUS = OFF, la file d'attente ne démarre pas la procédure stockée. Si cette clause n’est pas spécifiée, la valeur par défaut est ON.  
+ Spécifie si [!INCLUDE[ssSB](../../includes/sssb-md.md)] démarre ou non la procédure stockée. Lorsque STATUS = ON, la file d'attente lance la procédure stockée spécifiée avec PROCEDURE_NAME, quand le nombre de procédures actuellement en cours d'exécution est inférieur à la valeur de MAX_QUEUE_READERS et que la réception des messages dans la file d'attente est plus rapide que la réception des messages par les procédures stockées. Lorsque STATUS = OFF, la file d'attente ne démarre pas la procédure stockée. Quand cette clause est omise, la valeur par défaut est ON.  
   
- Nom_procédure = \<procédure >  
+ PROCEDURE_NAME = \<procedure>  
  Spécifie le nom de la procédure stockée à démarrer pour traiter les messages dans cette file d'attente. Cette valeur doit être un identificateur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- *database_name*(procedure)  
+ *database_name* (procédure)  
  Nom de la base de données contenant la procédure stockée.  
   
- *schema_name*(procedure)  
+ *schema_name* (procédure)  
  Nom du schéma qui contient la procédure stockée.  
   
  *procedure_name*  
- Est le nom de la procédure stockée.  
+ Nom de la procédure stockée.  
   
  MAX_QUEUE_READERS =*max_readers*  
- Spécifie le nombre maximal d'instances de la procédure stockée d'activation lancées simultanément par la file d'attente. La valeur de *max_readers* doit être un nombre compris entre **0** et **32767**.  
+ Spécifie le nombre maximal d'instances de la procédure stockée d'activation lancées simultanément par la file d'attente. La valeur de *max_readers* doit être comprise entre **0** et **32 767**.  
   
  EXECUTE AS  
  Spécifie le compte d'utilisateur de la base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sous lequel la procédure stockée d'activation s'exécute. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] doit être en mesure de contrôler les autorisations de cet utilisateur au moment où la file d'attente démarre la procédure stockée. Pour un utilisateur de domaine, le serveur doit être connecté au domaine lorsque la procédure est démarrée, sinon l'activation échoue. Pour un utilisateur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], le serveur peut toujours vérifier les autorisations.  
@@ -126,7 +126,7 @@ CREATE QUEUE <object>
  Spécifie que la procédure stockée s'exécute en tant qu'utilisateur actuel. (Le principal de la base de données exécutant cette instruction CREATE QUEUE.)  
   
  '*user_name*'  
- Nom de l'utilisateur sous lequel la procédure stockée s'exécute. Le *nom_utilisateur* le paramètre doit être valide [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilisateur spécifié comme un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] identificateur. L’utilisateur actuel doit avoir l’autorisation IMPERSONATE pour la *nom_utilisateur* spécifié.  
+ Nom de l'utilisateur sous lequel la procédure stockée s'exécute. Le paramètre *user_name* doit être un utilisateur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] valide spécifié en tant qu’identificateur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. L’utilisateur actuel doit disposer de l’autorisation IMPERSONATE pour la valeur *user_name* spécifiée.  
   
  OWNER  
  Spécifie que la procédure stockée s'exécute en tant que propriétaire de la file d'attente.  
@@ -136,13 +136,13 @@ CREATE QUEUE <object>
   
  Une file d'attente dont la gestion des messages incohérents a la valeur OFF ne sera pas désactivée après cinq restaurations de transactions consécutives. L'application peut ainsi définir un système personnalisé de gestion des messages incohérents.  
   
- ON *groupe de fichiers |* [**Par défaut**]  
- Spécifie le groupe de fichiers [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur lequel créer cette file d'attente. Vous pouvez utiliser la *groupe de fichiers* paramètre pour identifier un groupe de fichiers ou utilisez l’identificateur de la valeur par défaut à utiliser le groupe de fichiers par défaut pour la base de données de service broker. Dans le contexte de cette clause, DEFAULT n'est pas un mot clé et il doit être délimité comme un identificateur. Quand aucun groupe de fichiers n'est spécifié, la file d'attente utilise le groupe de fichiers par défaut pour la base de données.  
+ ON *filegroup |* [**DEFAULT**]  
+ Spécifie le groupe de fichiers [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur lequel créer cette file d'attente. Vous pouvez utiliser ce paramètre *filegroup* pour identifier un groupe de fichiers ou utiliser l’identificateur DEFAULT pour utiliser le groupe de fichiers par défaut pour la base de données Service Broker. Dans le contexte de cette clause, DEFAULT n'est pas un mot clé et il doit être délimité comme un identificateur. Quand aucun groupe de fichiers n'est spécifié, la file d'attente utilise le groupe de fichiers par défaut pour la base de données.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Une file d'attente peut être la cible d'une instruction SELECT. Toutefois, le contenu d'une file d'attente est uniquement modifiable par le biais d'instructions s'exécutant sur des conversations [!INCLUDE[ssSB](../../includes/sssb-md.md)], par exemple SEND, RECEIVE et END CONVERSATION. Une file d'attente ne peut pas être la cible d'une instruction INSERT, UPDATE, DELETE ou TRUNCATE.  
   
- Une file d'attente ne peut pas être un objet temporaire. Par conséquent, les noms commençant par la file d’attente  **#**  ne sont pas valides.  
+ Une file d'attente ne peut pas être un objet temporaire. Les noms de file d’attente commençant par **#** ne sont donc pas valides.  
   
  La création d'une file d'attente inactive permet de mettre en place l'infrastructure d'un service avant d'autoriser la réception de messages dans cette file d'attente.  
   
@@ -150,27 +150,27 @@ CREATE QUEUE <object>
   
  Les autorisations correspondant à la procédure stockée d'activation sont vérifiées lorsque [!INCLUDE[ssSB](../../includes/sssb-md.md)] démarre la procédure stockée et non lorsque la file d'attente est créée. L'instruction CREATE QUEUE ne vérifie pas si l'utilisateur spécifié dans la clause EXECUTE AS dispose de l'autorisation d'exécution de la procédure stockée spécifiée dans la clause PROCEDURE NAME.  
   
- Lorsqu'une file d'attente est indisponible, [!INCLUDE[ssSB](../../includes/sssb-md.md)] conserve les messages destinés aux services qui utilisent cette file dans la file d'attente de transmission de la base de données. L'affichage catalogue sys.transmission_queue donne une vue de la file d'attente de transmission.  
+ Lorsqu'une file d'attente est indisponible, [!INCLUDE[ssSB](../../includes/sssb-md.md)] conserve les messages destinés aux services qui utilisent cette file dans la file d'attente de transmission de la base de données. La vue de catalogue sys.transmission_queue donne une vue de la file d'attente de transmission.  
   
- Une file d'attente est un objet appartenant à un schéma. Les files d'attente apparaissent dans l'affichage catalogue sys.objects.  
+ Une file d'attente est un objet appartenant à un schéma. Les files d'attente apparaissent dans la vue de catalogue sys.objects.  
   
  Le tableau suivant donne la liste des colonnes d'une file d'attente.  
   
-|Nom de colonne|Type de données| Description|  
+|Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|status|**tinyint**|État du message. L’instruction RECEIVE retourne tous les messages qui ont un état de **1**. Si la rétention des messages est activée, status a la valeur 0. Si la rétention des messages est désactivée, le message est supprimé de la file d'attente. Messages dans la file d’attente peuvent contenir une des valeurs suivantes :<br /><br /> **0**= message reçu conservé<br /><br /> **1**= prêt à recevoir<br /><br /> **2**ne = pas encore terminé<br /><br /> **3**= message envoyé conservé|  
+|status|**tinyint**|État du message. L’instruction RECEIVE retourne tous les messages pour lesquels status est égal à **1**. Si la rétention des messages est activée, status a la valeur 0. Si la rétention des messages est désactivée, le message est supprimé de la file d'attente. Dans la file d’attente, les messages peuvent contenir l’une des valeurs suivantes :<br /><br /> **0** = Message reçu conservé<br /><br /> **1** = Prêt à recevoir<br /><br /> **2** = Pas encore terminé<br /><br /> **3** = Message envoyé conservé|  
 |priority|**tinyint**|Niveau de priorité assigné à ce message.|  
 |queuing_order|**bigint**|Numéro d'ordre du message dans la file d'attente.|  
 |conversation_group_id|**uniqueidentifier**|Identificateur du groupe de conversations auquel ce message appartient.|  
 |conversation_handle|**uniqueidentifier**|Descripteur de conversation dont ce message fait partie.|  
 |message_sequence_number|**bigint**|Numéro de séquence du message dans la conversation.|  
 |service_name|**nvarchar(512)**|Nom du service auquel la conversation est destinée.|  
-|service_id|**int**|Identificateur d'objet [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] du service auquel la conversation est destinée.|  
+|service_id|**Int**|Identificateur d'objet [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] du service auquel la conversation est destinée.|  
 |service_contract_name|**nvarchar (256)**|Nom du contrat suivi par la conversation.|  
-|service_contract_id|**int**|Identificateur d'objet [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] du contrat suivi par la conversation.|  
+|service_contract_id|**Int**|Identificateur d'objet [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] du contrat suivi par la conversation.|  
 |message_type_name|**nvarchar (256)**|Nom du type de message décrivant le message.|  
-|message_type_id|**int**|Identificateur d'objet [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] du type de message décrivant le message.|  
-|Validation|**nchar(2)**|Validation utilisée pour le message.<br /><br /> E=Vide<br /><br /> N=Aucune<br /><br /> X=XML|  
+|message_type_id|**Int**|Identificateur d'objet [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] du type de message décrivant le message.|  
+|validation|**nchar(2)**|Validation utilisée pour le message.<br /><br /> E=Vide<br /><br /> N=Aucune<br /><br /> X=XML|  
 |message_body|**varbinary(max)**|Contenu du message.|  
 |message_id|**uniqueidentifier**|Identificateur unique du message.|  
   
@@ -218,7 +218,7 @@ CREATE QUEUE ExpenseQueue
 ```  
   
 ### <a name="e-creating-a-queue-with-multiple-parameters"></a>E. Création d'une file d'attente avec plusieurs paramètres  
- L’exemple suivant crée une file d’attente sur le `DEFAULT` groupe de fichiers. La file d'attente n'est pas disponible. Les messages sont conservés dans la file d'attente jusqu'à ce que la conversation dont ils font partie se termine. Lorsque la file d'attente est rendue disponible via l'instruction ALTER QUEUE, elle démarre la procédure stockée `2008R2.dbo.expense_procedure` pour traiter les messages. La procédure stockée s'exécute sous l'utilisateur qui a lancé l'instruction `CREATE QUEUE`. La file d'attente démarre au maximum `10` instances de la procédure stockée.  
+ L’exemple suivant crée une file d’attente dans le groupe de fichiers `DEFAULT`. La file d'attente n'est pas disponible. Les messages sont conservés dans la file d'attente jusqu'à ce que la conversation dont ils font partie se termine. Lorsque la file d'attente est rendue disponible via l'instruction ALTER QUEUE, elle démarre la procédure stockée `2008R2.dbo.expense_procedure` pour traiter les messages. La procédure stockée s'exécute sous l'utilisateur qui a lancé l'instruction `CREATE QUEUE`. La file d'attente démarre au maximum `10` instances de la procédure stockée.  
   
 ```  
 CREATE QUEUE ExpenseQueue  
@@ -231,7 +231,7 @@ CREATE QUEUE ExpenseQueue
     ON [DEFAULT] ;  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [ALTER QUEUE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-queue-transact-sql.md)   
  [CREATE SERVICE &#40;Transact-SQL&#41;](../../t-sql/statements/create-service-transact-sql.md)   
  [DROP QUEUE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-queue-transact-sql.md)   

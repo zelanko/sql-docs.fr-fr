@@ -1,5 +1,5 @@
 ---
-title: CRYPT_GEN_RANDOM (Transact-SQL) | Documents Microsoft
+title: CRYPT_GEN_RANDOM (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
@@ -46,15 +46,15 @@ CRYPT_GEN_RANDOM ( length [ , seed ] )
   
 ## <a name="arguments"></a>Arguments  
 *length*  
-Longueur du nombre créé. La valeur maximale est 8 000. *longueur* est de type **int**.
+Longueur du nombre créé. La valeur maximale est 8 000. *length* est de type **int**.
   
-*valeur initiale*  
-Données facultatives à utiliser comme valeur de départ aléatoire.  Il doit y avoir au moins *longueur* octets de données. *valeur initiale* est **varbinary (8000)**.
+*seed*  
+Données facultatives à utiliser comme valeur de départ aléatoire.  Le nombre d’octets de données doit être supérieur ou égal à *length*. *seed* est de type **varbinary(8000)**.
   
 ## <a name="returned-types"></a>Types retournés  
-**varbinary (8000)**
+**varbinary(8000)**
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
 Cette fonction est publique et ne requiert pas d'autorisation spéciale.
   
 ## <a name="examples"></a>Exemples  
@@ -73,6 +73,6 @@ SELECT CRYPT_GEN_RANDOM(4, 0x25F18060) ;
 ```  
   
 ## <a name="see-also"></a>Voir aussi
-[RAND &#40; Transact-SQL &#41;](../../t-sql/functions/rand-transact-sql.md)
+[RAND &#40;Transact-SQL&#41;](../../t-sql/functions/rand-transact-sql.md)
   
   

@@ -1,5 +1,5 @@
 ---
-title: "ALTER INDEX (index XML sélectifs) | Documents Microsoft"
+title: ALTER INDEX (Selective XML Indexes) | Microsoft Docs
 ms.custom: 
 ms.date: 05/01/2017
 ms.prod: sql-non-specified
@@ -37,7 +37,7 @@ ms.lasthandoff: 01/02/2018
   
 -   Les options d'index (clause WITH).  
   
- Vous ne pouvez pas modifier des index XML secondaires sélectifs. Pour plus d’informations, consultez [Create, Alter et Drop des index XML secondaires sélectifs](../../relational-databases/xml/create-alter-and-drop-secondary-selective-xml-indexes.md).  
+ Vous ne pouvez pas modifier des index XML secondaires sélectifs. Pour plus d’informations, consultez [Créer, modifier ou supprimer des index XML secondaires sélectifs](../../relational-databases/xml/create-alter-and-drop-secondary-selective-xml-indexes.md).  
   
  ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -120,7 +120,7 @@ identifier
  *index_name*  
  Nom de l'index existant à modifier.  
   
- *\<table_object >*  
+ *\<table_object>*  
  Table contenant la colonne XML à indexer. Utilisez l'un des éléments suivants :  
   
 -   `database_name.schema_name.table_name`  
@@ -131,18 +131,18 @@ identifier
   
 -   `table_name`  
   
- [WITH XMLNAMESPACES **(** \<xmlnamespace_list > **)**]  
- Liste des espaces de noms utilisés par les chemins d'accès à indexer. Pour plus d’informations sur la syntaxe de la clause WITH XMLNAMESPACES, consultez [WITH XMLNAMESPACES &#40; Transact-SQL &#41; ](../../t-sql/xml/with-xmlnamespaces.md).  
+ [WITH XMLNAMESPACES **(** \<xmlnamespace_list> **)**]  
+ Liste des espaces de noms utilisés par les chemins d'accès à indexer. Pour plus d’informations sur la syntaxe de la clause WITH XMLNAMESPACES, consultez [WITH XMLNAMESPACES &#40;Transact-SQL&#41;](../../t-sql/xml/with-xmlnamespaces.md).  
   
- POUR **(** \<promoted_node_path_action_list > **)**  
+ FOR **(** \<promoted_node_path_action_list> **)**  
  Liste des chemins d'accès indexés à ajouter ou à supprimer.  
   
--   **Ajoutez un chemin d’accès.** Lorsque vous AJOUTEZ un chemin d'accès, vous utilisez la même syntaxe que celle qui est utilisée pour créer des chemins d'accès à l'aide de l'instruction CREATE SELECTIVE XML INDEX. Pour plus d’informations sur les chemins d’accès que vous pouvez spécifier dans l’instruction CREATE ou ALTER, consultez [spécifier les chemins d’accès et les indicateurs d’optimisation pour les index XML sélectifs](../../relational-databases/xml/specify-paths-and-optimization-hints-for-selective-xml-indexes.md).  
+-   **Ajouter (ADD) un chemin.** Lorsque vous AJOUTEZ un chemin d'accès, vous utilisez la même syntaxe que celle qui est utilisée pour créer des chemins d'accès à l'aide de l'instruction CREATE SELECTIVE XML INDEX. Pour plus d’informations sur les chemins que vous pouvez spécifier dans l’instruction CREATE ou ALTER, consultez [Spécifier les chemins d’accès et les indicateurs d’optimisation des index XML sélectifs](../../relational-databases/xml/specify-paths-and-optimization-hints-for-selective-xml-indexes.md).  
   
--   **SUPPRIMER un chemin d’accès.** Lorsque vous SUPPRIMEZ un chemin d'accès, vous devez fournir le nom qui a été donné au chemin d'accès au moment de sa création.  
+-   **Supprimer (REMOVE) un chemin.** Lorsque vous SUPPRIMEZ un chemin d'accès, vous devez fournir le nom qui a été donné au chemin d'accès au moment de sa création.  
   
- [Avec **(** \<index_options > **)**]  
- Vous ne pouvez spécifier \<index_options > lorsque vous utilisez ALTER INDEX sans la clause FOR. Lorsque vous utilisez ALTER INDEX pour ajouter ou supprimer des chemins d'accès dans l'index, les options d'index ne sont pas des arguments valides. Pour plus d’informations sur les options d’index, consultez [CREATE XML INDEX &#40; Index XML sélectifs &#41; ](../../t-sql/statements/create-xml-index-selective-xml-indexes.md).  
+ [WITH **(** \<index_options> **)**]  
+ Vous pouvez spécifier \<index_options> uniquement quand vous utilisez ALTER INDEX sans la clause FOR. Lorsque vous utilisez ALTER INDEX pour ajouter ou supprimer des chemins d'accès dans l'index, les options d'index ne sont pas des arguments valides. Pour plus d’informations sur les options d’index, consultez [CREATE XML INDEX &#40;Selective XML Indexes&#41;](../../t-sql/statements/create-xml-index-selective-xml-indexes.md).  
   
 ## <a name="remarks"></a>Notes   
   
@@ -175,9 +175,9 @@ ON Tbl
 PAD_INDEX = ON;  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Index XML sélectifs &#40;SXI&#41;](../../relational-databases/xml/selective-xml-indexes-sxi.md)   
- [Créer, modifier et supprimer des index XML sélectif](../../relational-databases/xml/create-alter-and-drop-selective-xml-indexes.md)   
+ [Créer, modifier ou supprimer des index XML sélectifs](../../relational-databases/xml/create-alter-and-drop-selective-xml-indexes.md)   
  [Spécifier les chemins d’accès et les indicateurs d’optimisation des index XML sélectifs](../../relational-databases/xml/specify-paths-and-optimization-hints-for-selective-xml-indexes.md)  
   
   

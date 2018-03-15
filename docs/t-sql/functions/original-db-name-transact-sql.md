@@ -1,5 +1,5 @@
 ---
-title: ORIGINAL_DB_NAME (Transact-SQL) | Documents Microsoft
+title: ORIGINAL_DB_NAME (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="originaldbname-transact-sql"></a>ORIGINAL_DB_NAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Retourne le nom de base de données spécifié par l'utilisateur dans la chaîne de connexion de base de données. C’est la base de données est spécifié à l’aide de la **sqlcmd-d** option (utilisez *base de données*) ou de l’expression de source de données ODBC (catalogue initial =*databasename*).  
+  Retourne le nom de base de données spécifié par l'utilisateur dans la chaîne de connexion de base de données. Il s’agit de la base de données spécifiée à l’aide de l’option **sqlcmd-d** (USE *database*) ou de l’expression de source de données ODBC (initial catalog =*databasename*).  
   
  Il ne s'agit pas de la base de données utilisateur par défaut.  
   
@@ -47,12 +47,12 @@ ms.lasthandoff: 11/21/2017
 ORIGINAL_DB_NAME ()  
 ```  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Si la base de données initiale n'est pas spécifiée, la fonction retourne une chaîne vide.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Utilitaire sqlcmd](../../tools/sqlcmd-utility.md)   
  [Utilitaire osql](../../tools/osql-utility.md)   
- [SQL Server Native Client &#40; ODBC &#41;](../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)  
+ [SQL Server Native Client &#40;ODBC&#41;](../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)  
   
   

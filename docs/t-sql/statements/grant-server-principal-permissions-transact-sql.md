@@ -1,5 +1,5 @@
 ---
-title: ACCORDER des autorisations de serveur Principal (Transact-SQL) | Documents Microsoft
+title: "GRANT - Accorder des autorisations de principal de serveur (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/10/2017
 ms.prod: sql-non-specified
@@ -35,7 +35,7 @@ ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="grant-server-principal-permissions-transact-sql"></a>GRANT – octroi d'autorisations de principal de serveur (Transact-SQL)
+# <a name="grant-server-principal-permissions-transact-sql"></a>GRANT – Accorder des autorisations de principal de serveur (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Permet d'accorder des autorisations sur un compte de connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -63,16 +63,16 @@ GRANT permission [ ,...n ] }
 ```  
   
 ## <a name="arguments"></a>Arguments  
- *autorisation*  
+ *permission*  
  Spécifie une autorisation qui peut être accordée sur une connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour obtenir la liste des autorisations, consultez la section Notes plus loin dans cette rubrique.  
   
- CONNEXION **::** *SQL_Server_login*  
- Spécifie la connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur laquelle l'autorisation est accordée. Le qualificateur d’étendue (**::**) est requis.  
+ LOGIN **::** *SQL_Server_login*  
+ Spécifie la connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur laquelle l'autorisation est accordée. Le qualificateur d’étendue (**::**) est obligatoire.  
   
- RÔLE de serveur **::** *server_role*  
- Spécifie le rôle de serveur défini par l'utilisateur sur lequel l'autorisation est accordée. Le qualificateur d’étendue (**::**) est requis.  
+ SERVER ROLE **::** *server_role*  
+ Spécifie le rôle de serveur défini par l'utilisateur sur lequel l'autorisation est accordée. Le qualificateur d’étendue (**::**) est obligatoire.  
   
- POUR \<principal_de_serveur > Spécifie le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connexion ou rôle serveur à laquelle l’autorisation est accordée.  
+ TO \<server_principal> spécifie le rôle serveur ou la connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auquel accorder l’autorisation.  
   
  *SQL_Server_login*  
  Spécifie le nom d'une connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -92,13 +92,13 @@ GRANT permission [ ,...n ] }
  WITH GRANT OPTION  
  Indique que le principal a également la possibilité d'accorder l'autorisation spécifiée à d'autres principaux.  
   
- En tant que *SQL_Server_login*  
+ AS *SQL_Server_login*  
  Spécifie la connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à partir de laquelle le principal qui exécute cette requête dérive son droit d'accorder l'autorisation.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Les autorisations dans l'étendue du serveur peuvent être accordées seulement lorsque la base de données en cours est master.  
   
- Pour plus d’informations sur les autorisations de serveur sont visibles dans le [sys.server_permissions](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md) affichage catalogue. Informations sur les principaux de serveur sont visibles dans le [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md) vue de catalogue.  
+ Les informations sur les autorisations de serveur sont consultables dans la vue de catalogue [sys.server_permissions](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md). Les informations sur les principaux de serveur sont consultables dans la vue de catalogue [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md).  
   
  Les comptes de connexion et les rôles de serveur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sont des éléments sécurisables au niveau du serveur. Les autorisations les plus spécifiques et limitées qu'il est possible d'accorder sur un rôle de serveur ou un compte de connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sont répertoriées dans le tableau ci-dessous, avec les autorisations plus générales qui les incluent de manière implicite.  
   
@@ -109,7 +109,7 @@ GRANT permission [ ,...n ] }
 |VIEW DEFINITION|CONTROL|VIEW ANY DEFINITION|  
 |ALTER|CONTROL|ALTER ANY LOGIN<br /><br /> ALTER ANY SERVER ROLE|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Pour les comptes de connexion, requiert l'autorisation CONTROL sur le compte de connexion ou l'autorisation ALTER ANY LOGIN sur le serveur.  
   
  Pour les rôles de serveur, requiert l'autorisation CONTROL sur le rôle de serveur ou l'autorisation ALTER ANY SERVER ROLE sur le serveur.  
@@ -117,7 +117,7 @@ GRANT permission [ ,...n ] }
 ## <a name="examples"></a>Exemples  
   
 ### <a name="a-granting-impersonate-permission-on-a-login"></a>A. Octroi d'une autorisation IMPERSONATE sur une connexion  
- L’exemple suivant accorde `IMPERSONATE` l’autorisation sur le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connexion `WanidaBenshoof` à un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connexion créée à partir de l’utilisateur Windows `AdvWorks\YoonM`.  
+ Dans l’exemple ci-dessous, l’autorisation `IMPERSONATE` sur la connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `WanidaBenshoof` est accordée à une connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] créée à partir du compte d’utilisateur Windows `AdvWorks\YoonM`.  
   
 ```  
 USE master;  
@@ -144,7 +144,7 @@ GRANT VIEW DEFINITION ON SERVER ROLE::Sales TO Auditors ;
 GO   
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [sys.server_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)   
  [sys.server_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md)   
  [CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md)   

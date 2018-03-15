@@ -1,5 +1,5 @@
 ---
-title: '@@SPID (Transact-SQL) | Documents Microsoft'
+title: '@@SPID (Transact-SQL) | Microsoft Docs'
 ms.custom: 
 ms.date: 09/18/2017
 ms.prod: sql-non-specified
@@ -37,7 +37,7 @@ ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="x40x40spid-transact-sql"></a>& #x 40 ; & #x 40 ; SPID (Transact-SQL)
+# <a name="x40x40spid-transact-sql"></a>&#x40;&#x40;SPID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Renvoie l'ID de session du processus utilisateur actuel.  
@@ -53,8 +53,8 @@ ms.lasthandoff: 11/21/2017
 ## <a name="return-types"></a>Types de retour  
  **smallint**  
   
-## <a name="remarks"></a>Notes  
- @@SPID peut être utilisé pour identifier le processus utilisateur en cours dans la sortie de **sp_who**.  
+## <a name="remarks"></a>Notes   
+ @@SPID permet d’identifier le processus utilisateur actuel dans la sortie de **sp_who**.  
   
 ## <a name="examples"></a>Exemples  
  Cet exemple renvoie l'identificateur de session, le nom de connexion et le nom de l'utilisateur pour le processus utilisateur actuel.  
@@ -71,16 +71,16 @@ ID     Login Name                     User Name
 54     SEATTLE\joanna                 dbo                             
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemples : [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] et[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- Cet exemple retourne le [!INCLUDE[ssDW](../../includes/ssdw-md.md)] ID de session, le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contrôler l’ID de session de nœud, nom de connexion et nom d’utilisateur pour le processus utilisateur actuel.  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemples : [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] et [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+ Cet exemple renvoie l’ID de session [!INCLUDE[ssDW](../../includes/ssdw-md.md)], l’ID de session du nœud de contrôle de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], le nom de connexion et le nom d’utilisateur du processus utilisateur actuel.  
   
 ```  
 SELECT SESSION_ID() AS ID, @@SPID AS 'Control ID', SYSTEM_USER AS 'Login Name', USER AS 'User Name';  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Fonctions de configuration](../../t-sql/functions/configuration-functions-transact-sql.md)   
- [sp_lock &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-lock-transact-sql.md)   
+ [sp_lock &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-lock-transact-sql.md)   
  [sp_who](../../relational-databases/system-stored-procedures/sp-who-transact-sql.md)  
   
   

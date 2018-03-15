@@ -1,5 +1,5 @@
 ---
-title: "STCrosses (Type de données geometry) | Documents Microsoft"
+title: "STCrosses (type de données geometry) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stcrosses-geometry-data-type"></a>STCrosses (type de données geometry)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-Retourne 1 si une **geometry** instance croise une autre **geometry** instance. Retourne 0 dans le cas contraire.
+Retourne 1 si une instance **geometry** croise une autre instance **geometry**. Retourne 0 dans le cas contraire.
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -45,21 +45,21 @@ Retourne 1 si une **geometry** instance croise une autre **geometry** instance. 
   
 ## <a name="arguments"></a>Arguments  
  *other_geometry*  
- Une autre **geometry** instance à comparer à l’instance sur laquelle `STCrosses()` est appelé.  
+ Autre instance **geometry** à comparer à l’instance sur laquelle `STCrosses()` est appelé.  
   
 ## <a name="return-types"></a>Types de retour  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]type de retour : **bits**  
+ Type de retour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] : **bit**  
   
  Type de retour CLR : **SqlBoolean**  
   
-## <a name="remarks"></a>Notes  
- Deux **geometry** instances se croisent si les deux conditions suivantes sont remplies :  
+## <a name="remarks"></a>Notes   
+ Deux instances **geometry** se croisent si les deux conditions suivantes sont vraies :  
   
--   L’intersection des deux **geometry** génère une géométrie dont les dimensions sont inférieures à la dimension maximale de la source des instances **geometry** instances.  
+-   L’intersection des deux instances **geometry** génère une géométrie dont les dimensions sont inférieures à la dimension maximale des instances **geometry** source.  
   
--   Le jeu d’intersection est intérieur aux deux sources **geometry** instances.  
+-   L’ensemble d’intersections est intérieur aux deux instances **geometry** sources.  
   
- Cette méthode retourne toujours null si l’ID de référence spatiale (SRID) de la **geometry** instances ne correspondent pas.  
+ Cette méthode retourne toujours une valeur Null si les SRID (ID de référence spatiale) des instances **geometry** ne correspondent pas.  
   
 ## <a name="examples"></a>Exemples  
  L'exemple suivant utilise `STCrosses()` pour tester deux instances `geometry` afin de savoir si elles se croisent.  
@@ -72,7 +72,7 @@ SET @h = geometry::STGeomFromText('LINESTRING(0 0, 2 2)', 0);
 SELECT @g.STCrosses(@h);  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Méthodes OGC sur des instances geography](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   
   

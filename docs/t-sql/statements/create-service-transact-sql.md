@@ -1,5 +1,5 @@
 ---
-title: "CRÉER le SERVICE (Transact-SQL) | Documents Microsoft"
+title: CREATE SERVICE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -54,37 +54,37 @@ CREATE SERVICE service_name
 ```  
   
 ## <a name="arguments"></a>Arguments  
- *SERVICE_NAME*  
- Nom du service à créer. Un nouveau service est créé dans la base de données active et il appartient au principal spécifié dans la clause AUTHORIZATION. Les noms du serveur, de la base de données et du schéma ne peuvent pas être spécifiés. Le *service_name* doit être un **sysname**.  
+ *service_name*  
+ Nom du service à créer. Un nouveau service est créé dans la base de données active et il appartient au principal spécifié dans la clause AUTHORIZATION. Les noms du serveur, de la base de données et du schéma ne peuvent pas être spécifiés. *service_name* doit être un **sysname** valide.  
   
 > [!NOTE]  
->  Ne créez pas un service qui utilise le mot clé ANY pour le *service_name*. Lorsque vous spécifiez ANY pour un nom de service dans CREATE BROKER PRIORITY, la priorité est considérée pour tous les services. Elle n'est pas limitée à un service dont le nom est ANY.  
+>  Ne créez pas de service qui utilise le mot clé ANY pour *service_name*. Lorsque vous spécifiez ANY pour un nom de service dans CREATE BROKER PRIORITY, la priorité est considérée pour tous les services. Elle n'est pas limitée à un service dont le nom est ANY.  
   
- AUTORISATION *owner_name*  
- Définit le propriétaire du service comme étant l'utilisateur ou le rôle de la base de données spécifié. Lorsque l’utilisateur actuel est **dbo** ou **sa**, *owner_name* peut être le nom de n’importe quel utilisateur ou rôle valide. Dans le cas contraire, *owner_name* doit être le nom de l’utilisateur actuel, le nom d’un utilisateur de l’utilisateur actuel possède l’autorisation IMPERSONATE ou le nom d’un rôle auquel appartient l’utilisateur actuel.  
+ AUTHORIZATION *owner_name*  
+ Définit le propriétaire du service comme étant l'utilisateur ou le rôle de la base de données spécifié. Quand l’utilisateur actuel est **dbo** ou **sa**, l’argument *owner_name* peut être le nom de n’importe quel utilisateur ou rôle valide. Sinon, *owner_name* doit être le nom de l’utilisateur actuel, le nom d’un utilisateur pour lequel l’utilisateur actuel a l’autorisation IMPERSONATE ou le nom d’un rôle auquel appartient l’utilisateur actuel.  
   
- File d’attente ON [ *nom_schéma***.** ] *nom_file_attente*  
- Spécifie la file d'attente qui reçoit les messages pour le service. Cette file d'attente doit exister dans la même base de données que celle du service. Si aucun *schema_name* est fourni, le schéma est le schéma par défaut pour l’utilisateur qui exécute l’instruction.  
+ ON QUEUE [ *schema_name***.** ] *queue_name*  
+ Spécifie la file d'attente qui reçoit les messages pour le service. Cette file d'attente doit exister dans la même base de données que celle du service. Si aucun argument *schema_name* n’est fourni, le schéma est le schéma par défaut de l’utilisateur qui exécute l’instruction.  
   
- *nom_contract*  
+ *contract_name*  
  Spécifie un contrat pour lequel ce service peut être une cible. Les programmes de service initient des conversations avec le service à l'aide des contrats spécifiés. Si aucun contrat n'est précisé, le service peut seulement initier des conversations.  
   
- **[**PAR DÉFAUT**]**  
+ **[**DEFAULT**]**  
  Indique que le service peut être une cible pour des conversations respectant le contrat DEFAULT. Dans le contexte de cette clause, DEFAULT n'est pas un mot clé et il doit être délimité comme un identificateur. Le contrat DEFAULT autorise les deux côtés de la conversation à envoyer des messages de type DEFAULT. Le type de message DEFAULT utilise la validation NONE.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Un service expose les fonctionnalités fournies par les contrats avec lesquels il est associé, pour qu'ils puissent être utilisés par d'autres services. L'instruction CREATE SERVICE spécifie les contrats pour lesquels ce service est la cible. Un service est une cible exclusivement pour les conversations qui utilisent les contrats spécifiés par le service. Un service qui ne spécifie aucun contrat n'expose aucune fonctionnalité aux autres services.  
   
  Les conversations lancées à partir de ce service peuvent utiliser n'importe quel contrat. Vous créez un service sans spécifier de contrat lorsque le service initie seulement des conversations.  
   
  Lorsque [!INCLUDE[ssSB](../../includes/sssb-md.md)] accepte une nouvelle conversation d'un service distant, le nom du service cible détermine la file d'attente où Service Broker place les messages dans la conversation.  
   
-## <a name="permissions"></a>Permissions  
- L’autorisation de création d’un service par défaut aux membres de la **db_ddladmin** ou **db_owner** des rôles de base de données fixes et **sysadmin** rôle serveur fixe. L'utilisateur exécutant l'instruction CREATE SERVICE doit disposer de l'autorisation REFERENCES pour la file d'attente et tous les contrats spécifiés.  
+## <a name="permissions"></a>Autorisations  
+ L’autorisation de création d’un service est accordée par défaut aux membres du rôle de base de données fixe **db_ddladmin** ou **db_owner** et aux membres du rôle serveur fixe **sysadmin**. L'utilisateur exécutant l'instruction CREATE SERVICE doit disposer de l'autorisation REFERENCES pour la file d'attente et tous les contrats spécifiés.  
   
- L’autorisation REFERENCES pour un service par défaut est le propriétaire du service, les membres de la **db_ddladmin** ou **db_owner** fixe des rôles de base de données et les membres de la **sysadmin** rôle serveur fixe. Autorisations SEND pour un paramètre par défaut au propriétaire du service, les membres du **db_owner** fixe du rôle de base de données et les membres de la **sysadmin** rôle serveur fixe.  
+ L’autorisation REFERENCES pour un service est accordée par défaut au propriétaire du service, aux membres du rôle de base de données fixe **db_ddladmin** ou **db_owner** et aux membres du rôle serveur fixe **sysadmin**. Les autorisations SEND pour un service sont accordées par défaut au propriétaire du service, aux membres du rôle de base de données fixe **db_owner** et aux membres du rôle de serveur fixe **sysadmin**.  
   
- Un service ne peut pas être un objet temporaire. Service de noms commençant par  **#**  sont autorisées, mais sont des objets permanents.  
+ Un service ne peut pas être un objet temporaire. Les noms de service commençant par **#** sont autorisés, mais ce sont des objets permanents.  
   
 ## <a name="examples"></a>Exemples  
   
@@ -107,15 +107,15 @@ CREATE SERVICE [//Adventure-Works.com/Expenses] ON QUEUE ExpenseQueue
 ```  
   
 ### <a name="c-creating-a-service-with-no-contracts"></a>C. Création d'un service sans contrat  
- L’exemple suivant crée le service `//Adventure-Works.com/Expenses on the ExpenseQueue` file d’attente. Ce service ne possède pas d'informations de contrat. Par conséquent, il ne peut être que l'initiateur d'un dialogue.  
+ L’exemple suivant crée la file d’attente `//Adventure-Works.com/Expenses on the ExpenseQueue` du service. Ce service ne possède pas d'informations de contrat. Par conséquent, il ne peut être que l'initiateur d'un dialogue.  
   
 ```  
 CREATE SERVICE [//Adventure-Works.com/Expenses] ON QUEUE ExpenseQueue ;  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- [ALTER SERVICE &#40; Transact-SQL &#41;](../../t-sql/statements/alter-service-transact-sql.md)   
- [DROP SERVICE &#40; Transact-SQL &#41;](../../t-sql/statements/drop-service-transact-sql.md)   
+## <a name="see-also"></a> Voir aussi  
+ [ALTER SERVICE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-service-transact-sql.md)   
+ [DROP SERVICE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-service-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
   
   

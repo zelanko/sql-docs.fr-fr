@@ -1,5 +1,5 @@
 ---
-title: "STMLineFromText (Type de données geometry) | Documents Microsoft"
+title: "STMLineFromText (type de données geometry) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stmlinefromtext-geometry-data-type"></a>STMLineFromText (type de données geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Retourne un **geometry** instance à partir d’une représentation de la réplication continue en cluster (WKT, Open Geospatial Consortium (OGC) Well-Known Text) augmentée des Z (élévation) et les valeurs M (mesure) apportées par l’instance.
+Retourne une instance **geometry** à partir d’une représentation OGC (Open Geospatial Consortium) WKT (Well-Known Text), à laquelle s’ajoutent les valeurs Z (élévation) et M (mesure) apportées par l’instance.
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -45,20 +45,20 @@ STMLineFromText ( 'multilinestring_tagged_text' , SRID )
   
 ## <a name="arguments"></a>Arguments  
  *multilinestring_tagged_text*  
- Est la représentation WKT de le **geometryMultiLineString** instance à retourner. *multilinestring_tagged_text* est un **nvarchar (max)** expression.  
+ Représentation WKT de l’instance **geometryMultiLineString** à retourner. *multilinestring_tagged_text* est une expression **nvarchar(max)**.  
   
  *SRID*  
- Est un **int** expression représentant les données spatiales ID de référence (SRID) de la **geometryMultiLineString** instance à retourner.  
+ Expression **int** qui représente le SRID (ID de référence spatiale) de l’instance **geometryMultiLineString** à retourner.  
   
 ## <a name="return-types"></a>Types de retour  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]type de retour : **geometry**  
+ Type de retour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] : **geometry**  
   
  Type de retour CLR : **SqlGeometry**  
   
  Type OGC : **MultiLineString**  
   
-## <a name="remarks"></a>Notes  
- Cette méthode lève un **FormatException** si l’entrée n’est pas correctement mise en forme.  
+## <a name="remarks"></a>Notes   
+ Cette méthode lève **FormatException** si l’entrée n’est pas au format approprié.  
   
 ## <a name="examples"></a>Exemples  
  L'exemple suivant utilise la méthode `STMLineFromText()` pour créer une instance `geometry`.  
@@ -70,7 +70,7 @@ SET @g = geometry::STMLineFromText('MULTILINESTRING ((100 100, 200 200), (3 4, 7
   
  `SELECT @g.ToString();`  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Méthodes geometry statiques de l’OGC](../../t-sql/spatial-geometry/ogc-static-geometry-methods.md)  
   
   

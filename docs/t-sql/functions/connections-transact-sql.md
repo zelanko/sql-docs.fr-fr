@@ -1,5 +1,5 @@
 ---
-title: '@@CONNECTIONS (Transact-SQL) | Documents Microsoft'
+title: '@@CONNECTIONS (Transact-SQL) | Microsoft Docs'
 ms.custom: 
 ms.date: 09/18/2017
 ms.prod: sql-non-specified
@@ -35,7 +35,7 @@ ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="x40x40connections-transact-sql"></a>&#x40;&#x40;CONNEXIONS (Transact-SQL)
+# <a name="x40x40connections-transact-sql"></a>&#x40;&#x40;CONNECTIONS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
 Renvoie le nombre de tentatives de connexion, réussies ou non, depuis le dernier démarrage de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
@@ -51,12 +51,12 @@ Renvoie le nombre de tentatives de connexion, réussies ou non, depuis le dernie
 ## <a name="return-types"></a>Types de retour
 **entier**
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
 Les connexions sont différentes des utilisateurs. Des applications, par exemple, peuvent très bien ouvrir plusieurs connexions au serveur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à l'insu de l'utilisateur.
   
-Pour afficher un rapport contenant plusieurs [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] des statistiques, notamment les tentatives de connexion, exécutez **sp_monitor**.
+Pour afficher un rapport contenant plusieurs statistiques [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], notamment les tentatives de connexion, exécutez **sp_monitor**.
   
-@@MAX_CONNECTIONS est le nombre maximal de connexions autorisées simultanément sur le serveur. @@CONNECTIONS est incrémenté à chaque tentative de connexion, par conséquent, @@CONNECTIONS peut être supérieur à @@MAX_CONNECTIONS .
+@@MAX_CONNECTIONS est le nombre maximal de connexions au serveur autorisées en simultané. @@CONNECTIONS est incrémenté à chaque tentative de connexion ; par conséquent, @@CONNECTIONS peut être supérieur à @@MAX_CONNECTIONS.
   
 ## <a name="examples"></a>Exemples  
 Cet exemple affiche le nombre de tentatives de connexion enregistrées à la date et à l'heure actuelles.
@@ -76,7 +76,7 @@ Today's Date and Time  Login Attempts
 ```  
   
 ## <a name="see-also"></a>Voir aussi
-[Fonctions statistiques système &#40;Transact-SQL&#41;1 ;](../../t-sql/functions/system-statistical-functions-transact-sql.md)  
-[sp_monitor &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-monitor-transact-sql.md)
+[Fonctions statistiques système &#40;Transact-SQL&#41;](../../t-sql/functions/system-statistical-functions-transact-sql.md)  
+[sp_monitor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-monitor-transact-sql.md)
   
   

@@ -1,5 +1,5 @@
 ---
-title: "STPolyFromWKB (Type de données geometry) | Documents Microsoft"
+title: "STPolyFromWKB (type de données geometry) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stpolyfromwkb-geometry-data-type"></a>STPolyFromWKB (type de données geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Retourne un **geometryPolygon** instance à partir d’une représentation de l’Open Geospatial Consortium (OGC) WKB Well-Known Binary ().
+Retourne une instance **geometryPolygon** à partir d’une représentation OGC (Open Geospatial Consortium) WKB (Well-Known Binary).
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -45,20 +45,20 @@ STPolyFromWKB ( 'WKB_polygon' , SRID )
   
 ## <a name="arguments"></a>Arguments  
  *WKB_polygon*  
- Est la représentation WKB de le **geometryPolygon** instance à retourner. *WKB_polygon* est un **varbinary (max)** expression.  
+ Représentation WKB de l’instance **geometryPolygon** à retourner. *WKB_polygon* est une expression **varbinary(max)**.  
   
  *SRID*  
- Est un **int** expression représentant les données spatiales ID de référence (SRID) de la **geometryPolygon** instance à retourner.  
+ Expression **int** qui représente le SRID (ID de référence spatiale) de l’instance **geometryPolygon** à retourner.  
   
 ## <a name="return-types"></a>Types de retour  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]type de retour : **geometry**  
+ Type de retour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] : **geometry**  
   
  Type de retour CLR : **SqlGeometry**  
   
- Type OGC : **polygone**  
+ Type OGC : **Polygon**  
   
-## <a name="remarks"></a>Notes  
- Cette méthode lève un **FormatException** si l’entrée n’est pas correctement mise en forme.  
+## <a name="remarks"></a>Notes   
+ Cette méthode lève **FormatException** si l’entrée n’est pas au format approprié.  
   
 ## <a name="examples"></a>Exemples  
  L'exemple suivant utilise la méthode `STPolyFromWKB()` pour créer une instance `geometry`.  
@@ -69,7 +69,7 @@ SET @g = geometry::STPolyFromWKB(0x010300000001000000040000000000000000001440000
 SELECT @g.STAsText();  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Méthodes geometry statiques de l’OGC](../../t-sql/spatial-geometry/ogc-static-geometry-methods.md)  
   
   

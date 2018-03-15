@@ -1,5 +1,5 @@
 ---
-title: ALTER FULLTEXT CATALOG (Transact-SQL) | Documents Microsoft
+title: ALTER FULLTEXT CATALOG (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -56,7 +56,7 @@ ALTER FULLTEXT CATALOG catalog_name
   
 ## <a name="arguments"></a>Arguments  
  *catalog_name*  
- Spécifie le nom du catalogue à modifier. Si un catalogue avec le nom spécifié n’existe pas, [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retourne une erreur et n’effectue pas l’opération de modification.  
+ Spécifie le nom du catalogue à modifier. S’il n’existe pas de catalogue portant le nom spécifié, [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retourne une erreur et n’exécute pas l’opération ALTER.  
   
  REBUILD  
  Indique à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de reconstruire tout le catalogue. Dans ce cas, le catalogue existant est supprimé et un autre catalogue est créé à sa place. Toutes les tables qui comportent des références d'indexation de texte intégral sont associées au nouveau catalogue. La reconstruction redéfinit les métadonnées de texte intégral des tables système de la base de données.  
@@ -64,12 +64,12 @@ ALTER FULLTEXT CATALOG catalog_name
  WITH ACCENT_SENSITIVITY = {ON|OFF}  
  Indique si le catalogue à modifier respecte les accents ou non pour l'indexation et l'exécution de requêtes de texte intégral.  
   
- Pour déterminer le paramètre de propriété respect des accents en cours d’un catalogue de texte intégral, utilisez la fonction FULLTEXTCATALOGPROPERTY avec la **accentsensitivity** valeur de propriété par rapport à *catalog_name*. Si cette fonction retourne « 1 », le catalogue de texte intégral respecte les accents ; si elle retourne « 0 », il n'en tient pas compte.  
+ Pour déterminer si un catalogue de texte intégral respecte, ou non, les accents, utilisez la fonction FULLTEXTCATALOGPROPERTY avec la valeur de propriété **accentsensitivity** sur *catalog_name*. Si cette fonction retourne « 1 », le catalogue de texte intégral respecte les accents ; si elle retourne « 0 », il n'en tient pas compte.  
   
  Le catalogue et la base de données ont par défaut le même comportement quant au respect des accents.  
   
  REORGANIZE  
- Indique à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour effectuer une *la fusion principale*, qui consiste à fusionner les plus petits index créés lors de l’indexation dans un index de grande taille. Fusionner les fragments d’index de recherche en texte intégral peut améliorer les performances et libérer des ressources disque et de mémoire. Si le catalogue de texte intégral fait l'objet de modifications fréquentes, utilisez cette commande régulièrement pour le réorganiser.  
+ Indique à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] d’effectuer une *fusion principale*, qui consiste à fusionner les plus petits index créés lors de l’indexation afin de constituer un seul grand index. La fusion des fragments d’index de recherche en texte intégral peut améliorer les performances, et libérer des ressource de disque et des ressources mémoire. Si le catalogue de texte intégral fait l'objet de modifications fréquentes, utilisez cette commande régulièrement pour le réorganiser.  
   
  REORGANIZE optimise également les structures d'index et de catalogue internes.  
   
@@ -78,8 +78,8 @@ ALTER FULLTEXT CATALOG catalog_name
  AS DEFAULT  
  Spécifie que ce catalogue est le catalogue par défaut. Lorsque des index de recherche en texte intégral sont créés sans qu'aucun catalogue n'ait été spécifié, c'est le catalogue par défaut qui est utilisé. S'il existe un catalogue de texte intégral par défaut, l'utilisation de l'argument AS DEFAULT pour ce catalogue remplace le catalogue par défaut existant.  
   
-## <a name="permissions"></a>Permissions  
- Utilisateur doit avoir l’autorisation ALTER sur le catalogue de texte intégral, ou être un membre de la **db_owner**, **db_ddladmin** fixe des rôles de base de données ou rôle de serveur fixe sysadmin.  
+## <a name="permissions"></a>Autorisations  
+ L’utilisateur doit disposer de l’autorisation ALTER sur le catalogue de texte intégral, ou bien être membre du rôle serveur fixe sysadmin ou membre des rôles de base de données fixes **db_owner** ou **db_ddladmin**.  
   
 > [!NOTE]  
 >  Pour utiliser ALTER FULLTEXT CATALOG AS DEFAULT, l'utilisateur doit disposer de l'autorisation ALTER sur le catalogue de texte intégral et de l'autorisation CREATE FULLTEXT CATALOG sur la base de données.  
@@ -100,10 +100,10 @@ GO
 --Returned 0, which means the catalog is not accent sensitive.  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- [Sys.fulltext_catalogs &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-fulltext-catalogs-transact-sql.md)   
- [CRÉER le catalogue de texte intégral &#40; Transact-SQL &#41;](../../t-sql/statements/create-fulltext-catalog-transact-sql.md)   
- [DROP FULLTEXT CATALOG &#40; Transact-SQL &#41;](../../t-sql/statements/drop-fulltext-catalog-transact-sql.md)   
+## <a name="see-also"></a> Voir aussi  
+ [sys.fulltext_catalogs &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-catalogs-transact-sql.md)   
+ [CREATE FULLTEXT CATALOG &#40;Transact-SQL&#41;](../../t-sql/statements/create-fulltext-catalog-transact-sql.md)   
+ [DROP FULLTEXT CATALOG &#40;Transact-SQL&#41;](../../t-sql/statements/drop-fulltext-catalog-transact-sql.md)   
  [Recherche en texte intégral](../../relational-databases/search/full-text-search.md)  
   
   

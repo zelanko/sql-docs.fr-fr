@@ -1,5 +1,5 @@
 ---
-title: '- (Soustraction) (Transact-SQL) | Documents Microsoft'
+title: '- (Soustraction) (Transact-SQL) | Microsoft Docs'
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
@@ -35,7 +35,7 @@ ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="--subtraction-transact-sql"></a>- (Subtraction) (Transact-SQL)
+# <a name="--subtraction-transact-sql"></a>- (Soustraction) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Effectue une soustraction entre deux nombres (opérateur de soustraction arithmétique). Peut également soustraire un nombre de jours d'une date.  
@@ -50,7 +50,7 @@ expression - expression
   
 ## <a name="arguments"></a>Arguments  
  *expression*  
- Valide [expression](../../t-sql/language-elements/expressions-transact-sql.md) de l’un des types de données de numérique catégorie, type de données à l’exception de la **bits** type de données. Ne peut pas être utilisé avec **date**, **temps**, **datetime2**, ou **datetimeoffset** des types de données.  
+ Toute [expression](../../t-sql/language-elements/expressions-transact-sql.md) valide de tout type de données de la catégorie numérique, à l’exception du type de données **bit**. Non utilisable avec les types de données **date**, **time**, **datetime2** ou **datetimeoffset**.  
   
 ## <a name="result-types"></a>Types des résultats  
  Retourne le type de données de l'argument ayant la priorité la plus élevée. Pour plus d’informations, consultez [Priorités des types de données &#40;Transact-SQL&#41;](../../t-sql/data-types/data-type-precedence-transact-sql.md).  
@@ -60,7 +60,7 @@ expression - expression
 ### <a name="a-using-subtraction-in-a-select-statement"></a>A. Utilisation de la soustraction dans une instruction SELECT  
  L'exemple suivant calcule la différence de taux de taxe entre l'État ou la province ayant le taux de taxe le plus élevé et l'État ou la province ayant le taux de taxe le plus bas.  
   
- **S’applique aux**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
+ **S’applique à**  : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
 ```  
 -- Uses AdventureWorks  
@@ -96,10 +96,10 @@ SELECT @altstartdate - 1.5 AS 'Subtract Date';
  (1 row(s) affected)
  ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemples : [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] et[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemples : [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] et [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="c-using-subtraction-in-a-select-statement"></a>C : utilisation de la soustraction dans une instruction SELECT  
- L’exemple suivant calcule la différence de taux de base entre l’employé dont le taux de base plus élevé et de l’employé dont le taux d’imposition le plus bas, à partir de la `dimEmployee` table.  
+### <a name="c-using-subtraction-in-a-select-statement"></a>C. Utilisation de la soustraction dans une instruction SELECT  
+ L’exemple suivant calcule la différence de taux de base entre l’employé dont le taux de base est le plus élevé et l’employé dont le taux de base est le plus faible, à partir de la table `dimEmployee`.  
   
 ```  
 -- Uses AdventureWorks  
@@ -108,10 +108,10 @@ SELECT MAX(BaseRate) - MIN(BaseRate) AS BaseRateDifference
 FROM DimEmployee;  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- [-= &#40;Subtraction Assignment&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/subtract-equals-transact-sql.md)   
- [Compound, opérateurs &#40; Transact-SQL &#41;](../../t-sql/language-elements/compound-operators-transact-sql.md)  
- [Opérateurs arithmétiques &#40; Transact-SQL &#41;](../../t-sql/language-elements/arithmetic-operators-transact-sql.md)   
+## <a name="see-also"></a> Voir aussi  
+ [-= &#40;Affectation après soustraction&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/subtract-equals-transact-sql.md)   
+ [Opérateurs composés &#40;Transact-SQL&#41;](../../t-sql/language-elements/compound-operators-transact-sql.md)  
+ [Opérateurs arithmétiques &#40;Transact-SQL&#41;](../../t-sql/language-elements/arithmetic-operators-transact-sql.md)   
  [- &#40;Negative&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/unary-operators-negative.md)   
  [Types de données &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
  [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   

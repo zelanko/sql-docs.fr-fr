@@ -39,9 +39,9 @@ ms.lasthandoff: 01/25/2018
 # <a name="dbcc-sqlperf-transact-sql"></a>DBCC SQLPERF (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-Fournit des statistiques sur le taux d'utilisation de l'espace du journal des transactions pour toutes les bases de données. Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] il peut également être utilisé pour réinitialiser les statistiques des verrous et d’attente.
+Fournit des statistiques sur le taux d'utilisation de l'espace du journal des transactions pour toutes les bases de données. Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], permet également de réinitialiser les statistiques des verrous et d’attente.
   
-**S’applique aux**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] via [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ([Aperçu dans certaines régions](http://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag))
+**S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] jusqu’à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ([préversion dans certaines régions](http://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag))
   
  ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -59,16 +59,16 @@ DBCC SQLPERF
   
 ## <a name="arguments"></a>Arguments  
 LOGSPACE  
-Retourne la taille actuelle du journal des transactions et le pourcentage d'espace du journal utilisé pour chaque base de données. Ces informations permettent de surveiller la quantité d’espace utilisée dans un journal des transactions.
+Retourne la taille actuelle du journal des transactions et le pourcentage d'espace du journal utilisé pour chaque base de données. Utilisez ces informations pour surveiller la quantité d’espace utilisée dans un journal des transactions.
 
 > [!IMPORTANT]
-> Pour plus d’informations sur les informations d’utilisation d’espace pour le journal des transactions en commençant par [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], reportez-vous à la [notes](#Remarks) dans cette rubrique.
+> Pour plus d’informations sur l’utilisation de l’espace pour le journal des transactions à compter de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], consultez la section [Notes](#Remarks) dans cette rubrique.
   
 **"sys.dm_os_latch_stats"**, CLEAR  
-Réinitialise les statistiques des verrous. Pour plus d’informations, consultez [sys.dm_os_latch_stats &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-os-latch-stats-transact-sql.md). Cette option n'est pas disponible dans [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
+Réinitialise les statistiques des verrous. Pour plus d’informations, consultez [sys.dm_os_latch_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-latch-stats-transact-sql.md). Cette option n'est pas disponible dans [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
 **"sys.dm_os_wait_stats"**, CLEAR  
-Réinitialise les statistiques d'attente. Pour plus d’informations, consultez [sys.dm_os_wait_stats &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md). Cette option n'est pas disponible dans [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
+Réinitialise les statistiques d'attente. Pour plus d’informations, consultez [sys.dm_os_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md). Cette option n'est pas disponible dans [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
 WITH NO_INFOMSGS  
 Supprime tous les messages d'information dont les niveaux de gravité sont compris entre 0 et 10.  
@@ -78,20 +78,20 @@ Supprime tous les messages d'information dont les niveaux de gravité sont compr
   
 |Nom de colonne|Définition|  
 |---|---|
-|**Nom de la base de données**|Nom de la base de données pour les statistiques du journal affichées.|  
+|**Database Name**|Nom de la base de données pour les statistiques du journal affichées.|  
 |**Taille du journal (Mo)**|Taille actuelle allouée au journal. Cette valeur est toujours inférieure à la quantité initialement allouée pour l’espace du journal, car le [!INCLUDE[ssDE](../../includes/ssde-md.md)] réserve une petite quantité d’espace disque pour les informations d’en-tête internes.|  
 |**Espace journal utilisé (%)**|Pourcentage du fichier journal en cours d’utilisation pour stocker les informations du journal des transactions.|  
 |**État**|État du fichier journal. Toujours 0.|  
   
 ## <a name="Remarks"></a> Notes  
-En commençant par [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], utilisez le [sys.dm_db_log_space_usage](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-space-usage-transact-sql.md) DMV à la place de `DBCC SQLPERF(LOGSPACE)`, afin de retourner des informations sur l’utilisation de l’espace pour le journal des transactions par base de données.    
+À compter de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], utilisez la vue de gestion dynamique [sys.dm_db_log_space_usage](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-space-usage-transact-sql.md) à la place de `DBCC SQLPERF(LOGSPACE)` afin de retourner des informations sur l’utilisation de l’espace pour le journal des transactions par base de données.    
  
-Le journal de transactions enregistre chaque transaction effectuée dans une base de données. Pour plus d’informations, consultez [du journal des transactions &#40; SQL Server &#41; ](../../relational-databases/logs/the-transaction-log-sql-server.md) et [Architecture du journal des transactions SQL Server et le Guide d’administration](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md).
+Le journal de transactions enregistre chaque transaction effectuée dans une base de données. Pour plus d’informations, consultez [Journal des transactions &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md) et [Guide d’architecture et gestion du journal des transactions SQL Server](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md).
   
 ## <a name="permissions"></a>Autorisations  
-Sur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour exécuter `DBCC SQLPERF(LOGSPACE)` requiert `VIEW SERVER STATE` autorisation sur le serveur. Pour réinitialiser les statistiques des verrous et d’attente nécessite `ALTER SERVER STATE` autorisation sur le serveur.
+Sur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], l’exécution de `DBCC SQLPERF(LOGSPACE)` nécessite l’autorisation `VIEW SERVER STATE` sur le serveur. La réinitialisation des statistiques des verrous et d’attente nécessite l’autorisation `ALTER SERVER STATE` sur le serveur.
   
-Sur [!INCLUDE[ssSDS](../../includes/sssds-md.md)] niveaux Premium requiert le `VIEW DATABASE STATE` autorisation dans la base de données. Sur [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Standard et les niveaux de base nécessite le [!INCLUDE[ssSDS](../../includes/sssds-md.md)] compte d’administrateur. La réinitialisation des statistiques de verrous et d’attente n’est pas prise en charge.
+Sur les niveaux [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Premium, l’autorisation `VIEW DATABASE STATE` est requise dans la base de données. Sur les niveaux [!INCLUDE[ssSDS](../../includes/sssds-md.md)] standard et de base, le compte administrateur [!INCLUDE[ssSDS](../../includes/sssds-md.md)] est requis. La réinitialisation des statistiques de verrous et d’attente n’est pas prise en charge.
   
 ## <a name="examples"></a>Exemples  
   
@@ -122,7 +122,7 @@ L'exemple suivant réinitialise les statistiques d'attente pour l'instance de [!
 DBCC SQLPERF("sys.dm_os_wait_stats",CLEAR);  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)   
 [sys.dm_os_latch_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-latch-stats-transact-sql.md)    
 [sys.dm_os_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)     

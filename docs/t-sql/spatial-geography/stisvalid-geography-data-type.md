@@ -1,5 +1,5 @@
 ---
-title: "STIsValid (Type de données geography) | Documents Microsoft"
+title: "STIsValid (type de données geography) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -31,9 +31,9 @@ ms.lasthandoff: 01/25/2018
 # <a name="stisvalid-geography-data-type"></a>STIsValid (type de données geography)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-  Retourne true si un **geography** instance est correct et reconnue comme objet geography valide selon son type Open Geospatial Consortium (OGC). Retourne false si un **geography** instance n’est pas bien formée. Cette méthode est précise.  
+  Retourne true si une instance **geography** est bien formée et reconnue en tant qu’objet geography valide, en fonction de son type OGC (Open Geospatial Consortium). Retourne false si une instance **geography** n’est pas bien formée. Cette méthode est précise.  
   
- Ces données geography type prend en charge de la méthode **FullGlobe** instances ou les instances spatiales qui sont plus grandes qu’un hémisphère.  
+ Cette méthode de type de données geography prend en charge les instances **FullGlobe** ou les instances spatiales qui sont plus grandes qu’un hémisphère.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -43,14 +43,14 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>Types de retour  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]type de retour : **bits**  
+ Type de retour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] : **bit**  
   
  Type de retour CLR : **SqlBoolean**  
   
-## <a name="remarks"></a>Notes  
- Le type OGC d’un **geography** instance peut être déterminée en appelant [STGeometryType()](../../t-sql/spatial-geography/stgeometrytype-geography-data-type.md).  
+## <a name="remarks"></a>Notes   
+ Vous pouvez déterminer le type OGC d’une instance **geography** en appelant [STGeometryType()](../../t-sql/spatial-geography/stgeometrytype-geography-data-type.md).  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]génère uniquement valide **geography** instances, mais permet le stockage et la récupération d’instances non valides. Une instance valide qui représente le même ensemble de points d'une instance non valide peut être récupérée à l'aide de la méthode `MakeValid()`.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] produit uniquement des instances **geography** valides, mais permet le stockage et la récupération d’instances non valides. Une instance valide qui représente le même ensemble de points d'une instance non valide peut être récupérée à l'aide de la méthode `MakeValid()`.  
   
 ## <a name="examples"></a>Exemples  
  L'exemple suivant crée une instance `geography` et utilise `STIsValid()` pour tester si l'instance est valide.  
@@ -61,8 +61,8 @@ SELECT @g.STIsValid();
 DECLARE @g geography  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- [STGeometryType &#40; Type de données geography &#41;](../../t-sql/spatial-geography/stgeometrytype-geography-data-type.md)   
+## <a name="see-also"></a> Voir aussi  
+ [STGeometryType &#40;type de données geography&#41;](../../t-sql/spatial-geography/stgeometrytype-geography-data-type.md)   
  [MakeValid &#40;type de données geography&#41;](../../t-sql/spatial-geography/makevalid-geography-data-type.md)   
  [Méthodes OGC sur des instances geography](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
   

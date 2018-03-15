@@ -1,5 +1,5 @@
 ---
-title: ALTER SERVER AUDIT (Transact-SQL) | Documents Microsoft
+title: ALTER SERVER AUDIT (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/10/2017
 ms.prod: sql-non-specified
@@ -36,7 +36,7 @@ ms.lasthandoff: 01/02/2018
 # <a name="alter-server-audit--transact-sql"></a>ALTER SERVER AUDIT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Modifie un objet d'audit du serveur à l'aide de la fonctionnalité [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Audit. Pour plus d’informations, consultez [SQL Server Audit &#40moteur de base de données&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
+  Modifie un objet d'audit du serveur à l'aide de la fonctionnalité [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Audit. Pour plus d’informations, consultez [SQL Server Audit &#40;moteur de base de données&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
   
  ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -87,36 +87,36 @@ ALTER SERVER AUDIT audit_name
  FILEPATH **= '***os_file_path***'**  
  Chemin d'accès de la piste d'audit. Le nom de fichier est généré en fonction du nom d'audit et du GUID d'audit.  
   
- MAXSIZE  **=**  *max_size*  
- Taille maximale que peut atteindre le fichier d'audit. Le *max_size* valeur doit être un entier suivi **Mo**, **Go**, **to**, ou **illimité**. La taille minimale que vous pouvez spécifier pour *max_size* est 2 **Mo** et la valeur maximale est 2 147 483 647 **to**. Lorsque **illimité** est spécifié, le fichier augmente jusqu'à ce que le disque est plein. Spécification d’une valeur inférieure à 2 Mo génère MSG_MAXSIZE_TOO_SMALL l’erreur. La valeur par défaut est **illimité**.  
+ MAXSIZE **=***max_size*  
+ Taille maximale que peut atteindre le fichier d'audit. La valeur *max_size* doit être un entier suivi de **MB**, **GB**, **TB** ou **UNLIMITED**. La taille minimale que vous pouvez spécifier pour *max_size* est 2 **MB** et la taille maximale est 2 147 483 647 **TB**. Quand **UNLIMITED** est spécifié, la taille du fichier croît jusqu’à ce que le disque soit saturé. La spécification d’une valeur inférieure à 2 Mo génère l’erreur MSG_MAXSIZE_TOO_SMALL. La valeur par défaut est **UNLIMITED**.  
   
- MAX_ROLLOVER_FILES  **=**  *entier* | **illimité**  
- Spécifie le nombre maximal de fichiers à conserver dans le système de fichiers. Lorsque le paramètre MAX_ROLLOVER_FILES = 0, aucune limite n’est imposée quant au nombre de fichiers de substitution qui sont créés. La valeur par défaut est 0 : Le nombre maximal de fichiers qui peuvent être spécifiés est 2 147 483 647.  
+ MAX_ROLLOVER_FILES **=***integer* | **UNLIMITED**  
+ Spécifie le nombre maximal de fichiers à conserver dans le système de fichiers. Quand le paramètre MAX_ROLLOVER_FILES=0 est défini, aucune limite n’est imposée quant au nombre de fichiers de substitution créés. La valeur par défaut est 0 : Le nombre maximal de fichiers qui peuvent être spécifiés est 2 147 483 647.  
   
- MAX_FILES =*entier*  
- Spécifie le nombre maximal de fichiers d'audit qui peuvent être créés. Ne sont pas reportées sur le premier fichier lorsque la limite est atteinte. Lorsque la limite MAX_FILES est atteinte, toute action qui entraîne la génération d’événements d’audit supplémentaires échoue avec une erreur.  
+ MAX_FILES =*integer*  
+ Spécifie le nombre maximal de fichiers d'audit qui peuvent être créés. N’effectue pas de substitution par le premier fichier quand la limite est atteinte. Quand la limite MAX_FILES est atteinte, toute action qui entraîne la génération d’événements d’audit supplémentaires échoue avec une erreur.  
 **S'applique à**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- RESERVE_DISK_SPACE  **=**  {ON | {OFF}  
+ RESERVE_DISK_SPACE **=** { ON | OFF }  
  Cette option pré-alloue la valeur MAXSIZE au fichier sur le disque. S'applique uniquement si MAXSIZE n'est pas égal à UNLIMITED. La valeur par défaut est OFF.  
   
- QUEUE_DELAY  **=**  *entier*  
- Détermine la durée, en millisecondes, qui peut s'écouler avant que le traitement des actions d'audit soit forcé. Une valeur de 0 indique la remise synchrone. La valeur minimale du délai de requête définissable est 1000 (1 seconde), qui est la valeur par défaut. Le maximum est 2 147 483 647 (2 147 483,647 secondes ou 24 jours, 20 heures, 31 minutes, 23,647 secondes). Spécifiez un nombre non valide, déclenche l’erreur MSG_INVALID_QUEUE_DELAY.  
+ QUEUE_DELAY **=***integer*  
+ Détermine la durée, en millisecondes, qui peut s'écouler avant que le traitement des actions d'audit soit forcé. Une valeur de 0 indique la remise synchrone. La valeur minimale du délai de requête définissable est 1000 (1 seconde), qui est la valeur par défaut. Le maximum est 2 147 483 647 (2 147 483,647 secondes ou 24 jours, 20 heures, 31 minutes, 23,647 secondes). La spécification d’un nombre non valide génère l’erreur MSG_INVALID_QUEUE_DELAY.  
   
- ON_FAILURE  **=**  {CONTINUER | ARRÊT | FAIL_OPERATION}  
+ ON_FAILURE **=** { CONTINUE | SHUTDOWN | FAIL_OPERATION}  
  Indique si l'instance qui écrit dans la cible doit échouer, continuer ou s'arrêter si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne peut pas écrire dans le journal d'audit.  
   
  CONTINUE  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Les opérations continuent. Les enregistrements d'audit ne sont pas conservés. L’audit continue de se connecter les événements et reprend si le problème est résolu. En sélectionnant l’option Continuer permet à une activité non auditée susceptible d’enfreindre vos stratégies de sécurité. Utilisez cette option, lors de la poursuite de l’opération de le [!INCLUDE[ssDE](../../includes/ssde-md.md)] est plus importante que la conservation d’un audit complet.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Les opérations continuent. Les enregistrements d'audit ne sont pas conservés. L’audit poursuit sa tentative de journalisation des événements et reprend les opérations d’enregistrement une fois la condition d’échec résolue. La sélection de l’option CONTINUE peut permettre l’exécution d’une activité non auditée susceptible d’enfreindre vos stratégies de sécurité. Utilisez cette option quand la poursuite de l’opération du [!INCLUDE[ssDE](../../includes/ssde-md.md)] est plus importante que la conservation d’un audit complet.  
   
 SHUTDOWN  
-Force l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour l’arrêter, if [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne parvient pas à écrire des données dans la cible d’audit pour une raison quelconque. La connexion exécutant le `ALTER` instruction doit avoir le `SHUTDOWN` autorisation dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Le comportement d’arrêt persiste même si le `SHUTDOWN` autorisation est révoquée ultérieurement à partir de la connexion en cours d’exécution. Si l’utilisateur n’a pas cette autorisation, puis l’instruction échoue et l’audit n’est pas modifiée. Utilisez cette option si une défaillance de l'audit risque de compromettre la sécurité ou l'intégrité du système. Pour plus d’informations, consultez [arrêt](../../t-sql/language-elements/shutdown-transact-sql.md). 
+Force l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à s’arrêter, si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne parvient pas à écrire des données dans la cible d’audit pour une raison quelconque. Le compte de connexion exécutant l’instruction `ALTER` doit disposer de l’autorisation `SHUTDOWN` dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Le comportement d’arrêt persiste même si l’autorisation `SHUTDOWN` est révoquée ultérieurement du compte de connexion en cours d’exécution. Si l’utilisateur ne dispose pas de cette autorisation, l’instruction échoue et l’audit n’est pas modifié. Utilisez cette option si une défaillance de l'audit risque de compromettre la sécurité ou l'intégrité du système. Pour plus d’informations, consultez [SHUTDOWN](../../t-sql/language-elements/shutdown-transact-sql.md). 
   
  FAIL_OPERATION  
- Les actions de base de données échouent si elles entraînent des événements audités. Les actions qui n’entraînent pas les événements audités peuvent continuer, mais aucun événement audité ne peut se produire. L’audit continue de se connecter les événements et reprend si le problème est résolu. Utilisez cette option lorsqu'il est plus important de conserver un audit complet que de disposer d'un accès complet au [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+ Les actions de base de données échouent si elles entraînent des événements audités. Les actions qui n’entraînent pas d’événements audités peuvent continuer, mais aucun événement audité ne peut se produire. L’audit poursuit sa tentative de journalisation des événements et reprend les opérations d’enregistrement une fois la condition d’échec résolue. Utilisez cette option lorsqu'il est plus important de conserver un audit complet que de disposer d'un accès complet au [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
  **S'applique à**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].   
   
- ÉTAT  **=**  {ON | {OFF}  
+ STATE **=** { ON | OFF }  
  Active ou désactive la collecte d'enregistrements d'audit. La modification de l'état d'un audit en cours d'exécution (de ON à OFF) crée une entrée d'audit signalant que l'audit a été arrêté et indiquant le principal qui a arrêté l'audit et l'heure d'arrêt de l'audit.  
   
  MODIFY NAME = *new_audit_name*  
@@ -127,11 +127,11 @@ Force l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 
  **S'applique à**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  event_field_name  
- Nom du champ d'événement qui identifie la source de prédicat. Les champs d’audit sont décrits dans [sys.fn_get_audit_file &#40; Transact-SQL &#41; ](../../relational-databases/system-functions/sys-fn-get-audit-file-transact-sql.md). Tous les champs peuvent être audités sauf `file_name` et `audit_file_offset`.  
+ Nom du champ d'événement qui identifie la source de prédicat. Les champs d’audit sont décrits dans [sys.fn_get_audit_file &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-get-audit-file-transact-sql.md). Tous les champs peuvent être audités sauf `file_name` et `audit_file_offset`.  
  **S'applique à**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  nombre  
- Est de n’importe quel type numérique, y compris **décimal**. Le manque de mémoire physique ou un nombre trop grand pour être représenté sous forme d'entier 64 bits sont les seules limitations.  
+ Tout type numérique, dont **decimal**. Le manque de mémoire physique ou un nombre trop grand pour être représenté sous forme d'entier 64 bits sont les seules limitations.  
  **S'applique à**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  ' string '  
@@ -141,7 +141,7 @@ Force l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 
 ## <a name="remarks"></a>Notes   
  Vous devez spécifier au moins l'une des clauses TO, WITH ou MODIFY NAME lorsque vous appelez ALTER AUDIT.  
   
- Vous devez définir l'état d'un audit sur l'option OFF pour apporter des modifications à un audit. Si ALTER AUDIT est exécuté lorsqu’un audit est activé avec des options autres que STATE = OFF, vous recevez un message d’erreur MSG_NEED_AUDIT_DISABLED.  
+ Vous devez définir l'état d'un audit sur l'option OFF pour apporter des modifications à un audit. Si ALTER AUDIT est exécuté pendant qu’un audit est activé avec des options autres que STATE=OFF, un message d’erreur MSG_NEED_AUDIT_DISABLED s’affiche.  
   
  Vous pouvez ajouter, modifier et supprimer des spécifications d'audit sans arrêter un audit.  
   
@@ -191,7 +191,7 @@ GO
 ```  
   
 ### <a name="c-changing-a-server-audit-where-clause"></a>C. Modification d'une clause WHERE d'audit du serveur  
- L’exemple suivant modifie le where clause créée dans l’exemple C de [CREATE SERVER AUDIT &#40; Transact-SQL &#41; ](../../t-sql/statements/create-server-audit-transact-sql.md). La nouvelle clause WHERE filtre pour l’événement défini par l’utilisateur 27.  
+ L’exemple suivant modifie la clause WHERE créée dans l’exemple C de [CREATE SERVER AUDIT &#40;Transact-SQL&#41;](../../t-sql/statements/create-server-audit-transact-sql.md). La nouvelle clause WHERE applique un filtre basé sur l’ID d’événement défini par l’utilisateur 27.  
   
 ```sql  
 ALTER SERVER AUDIT [FilterForSensitiveData] WITH (STATE = OFF)  
@@ -216,7 +216,7 @@ ALTER SERVER AUDIT [FilterForSensitiveData] WITH (STATE = ON);
 GO  
 ```  
   
-### <a name="e-renaming-a-server-audit"></a>E. Modification du nom d’un audit du serveur  
+### <a name="e-renaming-a-server-audit"></a>E. Renommage d’un audit du serveur  
  L'exemple suivant renomme l'audit de serveur `FilterForSensitiveData` en `AuditDataAccess`.  
   
 ```sql  
@@ -229,24 +229,24 @@ ALTER SERVER AUDIT [AuditDataAccess] WITH (STATE = ON);
 GO  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- [DROP SERVER AUDIT &#40; Transact-SQL &#41;](../../t-sql/statements/drop-server-audit-transact-sql.md)   
- [CREATE SERVER AUDIT SPECIFICATION &#40; Transact-SQL &#41;](../../t-sql/statements/create-server-audit-specification-transact-sql.md)   
- [ALTER SERVER AUDIT SPECIFICATION &#40; Transact-SQL &#41;](../../t-sql/statements/alter-server-audit-specification-transact-sql.md)   
- [DROP SERVER AUDIT SPECIFICATION &#40; Transact-SQL &#41;](../../t-sql/statements/drop-server-audit-specification-transact-sql.md)   
- [CRÉER une spécification d’AUDIT de base de données &#40; Transact-SQL &#41;](../../t-sql/statements/create-database-audit-specification-transact-sql.md)   
- [ALTER DATABASE AUDIT SPECIFICATION &#40; Transact-SQL &#41;](../../t-sql/statements/alter-database-audit-specification-transact-sql.md)   
- [DROP DATABASE AUDIT SPECIFICATION &#40; Transact-SQL &#41;](../../t-sql/statements/drop-database-audit-specification-transact-sql.md)   
- [ALTER AUTHORIZATION &#40; Transact-SQL &#41;](../../t-sql/statements/alter-authorization-transact-sql.md)   
- [Sys.fn_get_audit_file &#40; Transact-SQL &#41;](../../relational-databases/system-functions/sys-fn-get-audit-file-transact-sql.md)   
- [Sys.server_audits &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-server-audits-transact-sql.md)   
- [Sys.server_file_audits &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-server-file-audits-transact-sql.md)   
- [Sys.server_audit_specifications &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-server-audit-specifications-transact-sql.md)   
- [Sys.server_audit_specification_details &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-server-audit-specification-details-transact-sql.md)   
- [Sys.Database audit_specifications &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-database-audit-specifications-transact-sql.md)   
- [Sys.database_audit_specification_details &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-database-audit-specification-details-transact-sql.md)   
- [Sys.dm_server_audit_status &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-server-audit-status-transact-sql.md)   
- [Sys.dm_audit_actions &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-audit-actions-transact-sql.md)   
+## <a name="see-also"></a> Voir aussi  
+ [DROP SERVER AUDIT &#40;Transact-SQL&#41;](../../t-sql/statements/drop-server-audit-transact-sql.md)   
+ [CREATE SERVER AUDIT SPECIFICATION &#40;Transact-SQL&#41;](../../t-sql/statements/create-server-audit-specification-transact-sql.md)   
+ [ALTER SERVER AUDIT SPECIFICATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-audit-specification-transact-sql.md)   
+ [DROP SERVER AUDIT SPECIFICATION &#40;Transact-SQL&#41;](../../t-sql/statements/drop-server-audit-specification-transact-sql.md)   
+ [CREATE DATABASE AUDIT SPECIFICATION &#40;Transact-SQL&#41;](../../t-sql/statements/create-database-audit-specification-transact-sql.md)   
+ [ALTER DATABASE AUDIT SPECIFICATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-audit-specification-transact-sql.md)   
+ [DROP DATABASE AUDIT SPECIFICATION &#40;Transact-SQL&#41;](../../t-sql/statements/drop-database-audit-specification-transact-sql.md)   
+ [ALTER AUTHORIZATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-authorization-transact-sql.md)   
+ [sys.fn_get_audit_file &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-get-audit-file-transact-sql.md)   
+ [sys.server_audits &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-audits-transact-sql.md)   
+ [sys.server_file_audits &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-file-audits-transact-sql.md)   
+ [sys.server_audit_specifications &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-audit-specifications-transact-sql.md)   
+ [sys.server_audit_specification_details &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-audit-specification-details-transact-sql.md)   
+ [sys.database_audit_specifications &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-audit-specifications-transact-sql.md)   
+ [sys.database_audit_specification_details &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-audit-specification-details-transact-sql.md)   
+ [sys.dm_server_audit_status &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-server-audit-status-transact-sql.md)   
+ [sys.dm_audit_actions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-audit-actions-transact-sql.md)   
  [Créer un audit du serveur et une spécification d’audit du serveur](../../relational-databases/security/auditing/create-a-server-audit-and-server-audit-specification.md)  
   
   

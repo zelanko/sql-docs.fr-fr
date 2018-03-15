@@ -1,5 +1,5 @@
 ---
-title: INDEX_COL (Transact-SQL) | Documents Microsoft
+title: INDEX_COL (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -57,14 +57,14 @@ INDEX_COL ( '[ database_name . [ schema_name ] .| schema_name ]
  *schema_name*  
  Nom du schéma auquel appartient l'index.  
   
- *nom_table_ou_vue*  
- Nom de la table ou vue indexée. *nom_table_ou_vue* doit être délimité par des guillemets simples et peut être qualifié par le nom de la base de données et le nom de schéma.  
+ *table_or_view_name*  
+ Nom de la table ou vue indexée. *table_or_view_name* doit être délimité par des guillemets simples et peut être pleinement qualifié par un nom de base de données et un nom de schéma.  
   
  *index_id*  
- Est l’ID de l’index. *index_id* est **int**.  
+ Identificateur de l’index. *index_ID* est de type **int**.  
   
- *ID*  
- Position de la colonne clé d'index. *key_ID* est **int**.  
+ *key_id*  
+ Position de la colonne clé d'index. *key_ID* est de type **int**.  
   
 ## <a name="return-types"></a>Types de retour  
  **nvarchar (128** **)**  
@@ -99,9 +99,9 @@ Index Column 1      Index Column 2
 SalesOrderID        SalesOrderDetailID  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- [Expressions &#40; Transact-SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
- [Fonctions de métadonnées &#40; Transact-SQL &#41;](../../t-sql/functions/metadata-functions-transact-sql.md)   
+## <a name="see-also"></a> Voir aussi  
+ [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [Fonctions de métadonnées &#40;Transact-SQL&#41;](../../t-sql/functions/metadata-functions-transact-sql.md)   
  [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)   
  [sys.index_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md)  
   

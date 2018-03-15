@@ -1,5 +1,5 @@
 ---
-title: FILEPROPERTY (Transact-SQL) | Documents Microsoft
+title: FILEPROPERTY (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
@@ -51,13 +51,13 @@ FILEPROPERTY ( file_name , property )
 ```  
   
 ## <a name="arguments"></a>Arguments  
- *nom_fichier*  
- Expression composée du nom du fichier associé à celui de la base de données actuelle dont les informations de propriété doivent être retournées. *file_name* est **nchar(128)**.  
+ *file_name*  
+ Expression composée du nom du fichier associé à celui de la base de données actuelle dont les informations de propriété doivent être retournées. *file_name* est de type **nchar(128)**.  
   
- *propriété*  
- Expression contenant le nom de la propriété de fichier à renvoyer. *propriété* est **varchar (128)**, et peut prendre l’une des valeurs suivantes.  
+ *property*  
+ Expression contenant le nom de la propriété de fichier à renvoyer. *property* est de type **varchar(128)** et peut prendre l’une des valeurs suivantes.  
   
-|Valeur| Description|Valeur retournée|  
+|Valeur|Description|Valeur renvoyée|  
 |-----------|-----------------|--------------------|  
 |**IsReadOnly**|Groupe de fichiers en lecture seule.|1 = True<br /><br /> 0 = False<br /><br /> NULL = Entrée non valide.|  
 |**IsPrimaryFile**|Le fichier est le fichier principal.|1 = True<br /><br /> 0 = False<br /><br /> NULL = Entrée non valide.|  
@@ -65,10 +65,10 @@ FILEPROPERTY ( file_name , property )
 |**SpaceUsed**|Quantité d'espace occupé par le fichier spécifié.|Nombre de pages allouées dans le fichier.|  
   
 ## <a name="return-types"></a>Types de retour  
- **int**  
+ **Int**  
   
-## <a name="remarks"></a>Notes  
- *file_name* correspond à la **nom** colonne dans la **sys.master_files** ou **sys.database_files** vue de catalogue.  
+## <a name="remarks"></a>Notes   
+ *file_name* correspond à la colonne **name** de la vue de catalogue **sys.master_files** ou **sys.database_files**.  
   
 ## <a name="examples"></a>Exemples  
  Cet exemple retourne la valeur de la propriété `IsPrimaryFile` pour le nom du fichier `AdventureWorks_Data` dans la base de données [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
@@ -88,9 +88,9 @@ Primary File
 (1 row(s) affected)  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- [FILEGROUPPROPERTY &#40; Transact-SQL &#41;](../../t-sql/functions/filegroupproperty-transact-sql.md)   
- [Fonctions de métadonnées &#40; Transact-SQL &#41;](../../t-sql/functions/metadata-functions-transact-sql.md)   
+## <a name="see-also"></a> Voir aussi  
+ [FILEGROUPPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/filegroupproperty-transact-sql.md)   
+ [Fonctions de métadonnées &#40;Transact-SQL&#41;](../../t-sql/functions/metadata-functions-transact-sql.md)   
  [sp_spaceused &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md)   
  [sys.database_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)   
  [sys.master_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)  

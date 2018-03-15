@@ -1,5 +1,5 @@
 ---
-title: ROUND (Transact-SQL) | Documents Microsoft
+title: ROUND (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 12/14/2017
 ms.prod: sql-non-specified
@@ -48,13 +48,13 @@ ROUND ( numeric_expression , length [ ,function ] )
   
 ## <a name="arguments"></a>Arguments  
  *numeric_expression*  
- Est un [expression](../../t-sql/language-elements/expressions-transact-sql.md) de la catégorie, de type de données numérique approximatives ou à l’exception de la **bits** type de données.  
+ [Expression](../../t-sql/language-elements/expressions-transact-sql.md) de la catégorie de type de données numérique exacte ou approximative, à l’exception du type de données **bit**.  
   
  *length*  
- Indique la précision avec laquelle *numeric_expression* doit être arrondie. *longueur* doit être une expression de type **tinyint**, **smallint**, ou **int**. Lorsque *longueur* est un nombre positif, *numeric_expression* est arrondi au nombre de décimales indiqué par *longueur*. Lorsque *longueur* est un nombre négatif, *numeric_expression* est arrondi à gauche de la virgule décimale, comme spécifié par *longueur*.  
+ Précision avec laquelle l’expression *numeric_expression* doit être arrondie. *length* doit être une expression de type **tinyint**, **smallint** ou **int**. Quand *length* est un nombre positif, l’expression *numeric_expression* est arrondie au nombre de décimales indiqué par *length*. Quand *length* est un nombre négatif, l’expression *numeric_expression* est arrondie à gauche de la virgule décimale, comme indiqué par *length*.  
   
  *function*  
- Type d'opération à effectuer. *fonction* doit être **tinyint**, **smallint**, ou **int**. Lorsque *fonction* est omis ou a la valeur 0 (valeur par défaut), *numeric_expression* est arrondi. Lorsqu’une valeur autre que 0 est spécifiée, *numeric_expression* est tronqué.  
+ Type d'opération à effectuer. *function* doit être de type **tinyint**, **smallint** ou **int**. Lorsque *function* est omis ou a la valeur 0 (valeur par défaut), l’expression *numeric_expression* est arrondie. Lorsqu’une valeur autre que 0 est spécifiée, l’expression *numeric_expression* est tronquée.  
   
 ## <a name="return-types"></a>Types de retour  
  Retourne les types de données suivants.  
@@ -65,23 +65,23 @@ ROUND ( numeric_expression , length [ ,function ] )
 |**smallint**|**Int**|  
 |**Int**|**Int**|  
 |**bigint**|**bigint**|  
-|**décimal** et **numérique** catégorie (p, s)|**Decimal (p, s)**|  
-|**Money** et **smallmoney** catégorie|**money**|  
-|**float** et **réel** catégorie|**float**|  
+|Catégorie **decimal** et **numeric** (p, s)|**decimal(p, s)**|  
+|Catégorie **money** et **smallmoney**|**money**|  
+|Catégorie **float** et **real**|**float**|  
   
 ## <a name="remarks"></a>Notes   
- ROUND retourne toujours une valeur. Si *longueur* est négative et supérieur au nombre de chiffres avant la virgule décimale, ROUND retourne 0.  
+ ROUND retourne toujours une valeur. Si *length* est une valeur négative supérieure au nombre de chiffres placés avant la virgule décimale, ROUND retourne 0.  
   
 | Exemple|Résultats|  
 |-------------|------------|  
-|ROUND (748.58, -4)|0|  
+|ROUND(748.58, -4)|0|  
   
- La fonction ROUND renvoie un arrondi *numeric_expression*, quel que soit le type de données, lors de la *longueur* est un nombre négatif.  
+ ROUND retourne une expression *numeric_expression* arrondie, quel que soit le type de données, lorsque *length* est un nombre négatif.  
   
 |Exemples|Résultats|  
 |--------------|------------|  
-|ROUND (748.58, -1)|750.00|  
-|ROUND (748.58, -2)|700.00|  
+|ROUND(748.58, -1)|750.00|  
+|ROUND(748.58, -2)|700.00|  
 |ROUND(748.58, -3)|Le résultat est un dépassement arithmétique car la valeur par défaut de 748.58 est une décimale (5,2) qui ne peut pas retourner 1000.00.|  
 |Pour arrondir jusqu'à 4 chiffres, modifiez le type de données de l'entrée. Exemple :<br /><br /> `SELECT ROUND(CAST (748.58 AS decimal (6,2)),-3);`|1000.00|  
   
@@ -140,9 +140,9 @@ GO
 (1 row(s) affected)  
 ```
   
-## <a name="see-also"></a>Voir aussi  
- [PLAFOND & #40 ; Transact-SQL & #41 ;](../../t-sql/functions/ceiling-transact-sql.md)   
+## <a name="see-also"></a> Voir aussi  
+ [CEILING &#40;Transact-SQL&#41;](../../t-sql/functions/ceiling-transact-sql.md)   
  [Types de données &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
- [Expressions & #40 ; Transact-SQL & #41 ;](../../t-sql/language-elements/expressions-transact-sql.md)   
- [FLOOR & #40 ; Transact-SQL & #41 ;](../../t-sql/functions/floor-transact-sql.md)   
- [Fonctions mathématiques & #40 ; Transact-SQL & #41 ;](../../t-sql/functions/mathematical-functions-transact-sql.md)
+ [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [FLOOR &#40;Transact-SQL&#41;](../../t-sql/functions/floor-transact-sql.md)   
+ [Fonctions mathématiques &#40;Transact-SQL&#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)

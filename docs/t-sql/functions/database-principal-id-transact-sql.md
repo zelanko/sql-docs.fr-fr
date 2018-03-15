@@ -1,5 +1,5 @@
 ---
-title: DATABASE_PRINCIPAL_ID (Transact-SQL) | Documents Microsoft
+title: DATABASE_PRINCIPAL_ID (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/29/2017
 ms.prod: sql-non-specified
@@ -37,7 +37,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="databaseprincipalid-transact-sql"></a>DATABASE_PRINCIPAL_ID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Retourne le numéro d'ID d'un principal dans la base de données active. Pour plus d’informations sur les principaux, consultez [principaux &#40; moteur de base de données &#41;](../../relational-databases/security/authentication-access/principals-database-engine.md).
+Retourne le numéro d'ID d'un principal dans la base de données active. Pour plus d’informations sur les principaux, consultez [Principaux &#40;moteur de base de données&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md).
   
 ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -49,14 +49,14 @@ DATABASE_PRINCIPAL_ID ( 'principal_name' )
   
 ## <a name="arguments"></a>Arguments  
 *principal_name*  
-Est une expression de type **sysname** qui représente le principal.  
-Lorsque *principal_name* est omis, l’ID de l’utilisateur actuel est retourné. Les parenthèses sont obligatoires.
+Expression de type **sysname** qui représente le principal.  
+Lorsque *principal_name* est omis, l’ID de l’utilisateur actuel est renvoyé. Les parenthèses sont obligatoires.
   
 ## <a name="return-types"></a>Types de retour
-**int**  
+**Int**  
 NULL lorsque le principal de la base de données n'existe pas
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
 DATABASE_PRINCIPAL_ID peut être utilisé dans une liste de sélection, une clause WHERE ou partout où une expression est autorisée. Pour plus d’informations, consultez [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md).
   
 ## <a name="examples"></a>Exemples  

@@ -1,5 +1,5 @@
 ---
-title: ALTER CERTIFICATE (Transact-SQL) | Documents Microsoft
+title: ALTER CERTIFICATE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 04/12/2017
 ms.prod: sql-non-specified
@@ -72,26 +72,26 @@ ALTER CERTIFICATE certificate_name
 ```  
   
 ## <a name="arguments"></a>Arguments  
- *nom_certificat*  
+ *certificate_name*  
  Nom unique sous lequel le certificat est connu dans la base de données.  
   
- FICHIER **='***path_to_private_key***'**  
+ FILE **='***path_to_private_key***'**  
  Spécifie le chemin d'accès complet, y compris le nom du fichier, à la clé privée. Ce paramètre peut être un chemin d'accès local ou un chemin d'accès UNC à un emplacement réseau. L'accès au fichier a lieu dans le contexte de sécurité du compte de service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Lorsque vous utilisez cette option, vous devez vérifier que le compte de service a accès au fichier spécifié.  
   
  DECRYPTION BY PASSWORD **='***key_password***'**  
  Spécifie le mot de passe exigé pour déchiffrer la clé privée.  
   
- CHIFFREMENT par mot de passe **='***mot de passe***'**  
- Spécifie le mot de passe utilisé pour chiffrer la clé privée du certificat dans la base de données. *mot de passe* doit remplir les conditions de stratégie de mot de passe Windows de l’ordinateur qui exécute l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour plus d'informations, consultez [Password Policy](../../relational-databases/security/password-policy.md).  
+ ENCRYPTION BY PASSWORD **='***password***'**  
+ Spécifie le mot de passe utilisé pour chiffrer la clé privée du certificat dans la base de données. *password* doit satisfaire aux critères de la stratégie de mot de passe Windows de l’ordinateur qui exécute l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour plus d'informations, consultez [Password Policy](../../relational-databases/security/password-policy.md).  
   
  REMOVE PRIVATE KEY  
  Spécifie que la clé privée ne doit plus être conservée dans la base de données.  
   
- ACTIVE FOR BEGIN_DIALOG  **=**  {ON | {OFF}  
+ ACTIVE FOR BEGIN_DIALOG **=** { ON | OFF }  
  Met le certificat à disposition de l'initiateur d'une conversation [!INCLUDE[ssSB](../../includes/sssb-md.md)].  
   
-## <a name="remarks"></a>Notes  
- La clé privée doit correspondre à la clé publique spécifiée par *nom_certificat*.  
+## <a name="remarks"></a>Notes   
+ La clé privée doit correspondre à la clé publique spécifiée par *certificate_name*.  
   
  Vous pouvez omettre la clause DECRYPTION BY PASSWORD si le mot de passe dans le fichier est protégé par un mot de passe vide.  
   
@@ -106,7 +106,7 @@ ALTER CERTIFICATE certificate_name
   
  L'option WITH PRIVATE KEY n'est pas disponible dans une base de données à relation contenant-contenu.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l'autorisation ALTER sur le certificat.  
   
 ## <a name="examples"></a>Exemples  
@@ -146,9 +146,9 @@ ALTER CERTIFICATE Shipping15
 GO  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [CREATE CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/create-certificate-transact-sql.md)   
- [DROP CERTIFICATE &#40; Transact-SQL &#41;](../../t-sql/statements/drop-certificate-transact-sql.md)   
+ [DROP CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-certificate-transact-sql.md)   
  [BACKUP CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/backup-certificate-transact-sql.md)   
  [Hiérarchie de chiffrement](../../relational-databases/security/encryption/encryption-hierarchy.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  

@@ -1,5 +1,5 @@
 ---
-title: "Leçon 2 : Configuration des autorisations sur les objets de base de données | Documents Microsoft"
+title: "Leçon 2 : Configuration des autorisations sur des objets de base de données | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -29,7 +29,7 @@ ms.contentlocale: fr-FR
 ms.lasthandoff: 11/21/2017
 ---
 # <a name="lesson-2-configuring-permissions-on-database-objects"></a>Leçon 2 : Configuration des autorisations sur des objets de base de données
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]L’octroi à un utilisateur l’accès à une base de données implique trois étapes. Commencez par créer une connexion. La connexion permet à l’utilisateur de se connecter au [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]. Puis, configurez la connexion en tant qu'utilisateur dans la base de données spécifiée. Enfin, accordez à cet utilisateur l'autorisation sur les objets de base de données. Cette leçon illustre ces trois étapes et vous montre comment créer une vue et une procédure stockée comme objet.  
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)] L’octroi à un utilisateur de l’accès à une base de données implique trois étapes. Commencez par créer une connexion. La connexion permet à l’utilisateur de se connecter au [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]. Puis, configurez la connexion en tant qu'utilisateur dans la base de données spécifiée. Enfin, accordez à cet utilisateur l'autorisation sur les objets de base de données. Cette leçon illustre ces trois étapes et vous montre comment créer une vue et une procédure stockée comme objet.  
   
 Cette leçon contient les rubriques suivantes :  
   

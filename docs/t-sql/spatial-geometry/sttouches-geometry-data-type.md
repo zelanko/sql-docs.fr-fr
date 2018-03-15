@@ -1,5 +1,5 @@
 ---
-title: "STTouches (Type de données geometry) | Documents Microsoft"
+title: "STTouches (type de données geometry) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="sttouches-geometry-data-type"></a>STTouches (type de données geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Retourne 1 si une **geometry** instance touche spatialement une autre **geometry** instance. Retourne 0 dans le cas contraire.
+Retourne 1 si une instance **geometry** touche spatialement une autre instance **geometry**. Retourne 0 dans le cas contraire.
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -45,17 +45,17 @@ Retourne 1 si une **geometry** instance touche spatialement une autre **geometry
   
 ## <a name="arguments"></a>Arguments  
  *other_geometry*  
- Une autre **geometry** instance à comparer à l’instance sur laquelle `STTouches()` est appelé.  
+ Autre instance **geometry** à comparer à l’instance sur laquelle `STTouches()` est appelé.  
   
 ## <a name="return-types"></a>Types de retour  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]type de retour : **bits**  
+ Type de retour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] : **bit**  
   
  Type de retour CLR : **SqlBoolean**  
   
-## <a name="remarks"></a>Notes  
- Deux **geometry** instances se touchent si leurs ensembles de points se croisent, mais leurs intérieurs ne se croisent pas.  
+## <a name="remarks"></a>Notes   
+ Deux instances **geometry** se touchent si leurs ensembles de points se croisent, mais que leurs intérieurs ne se croisent pas.  
   
- Cette méthode retourne toujours null si l’ID de référence spatiale (SRID) de la **geometry** instances ne correspondent pas.  
+ Cette méthode retourne toujours une valeur Null si les SRID (ID de référence spatiale) des instances **geometry** ne correspondent pas.  
   
 ## <a name="examples"></a>Exemples  
  L'exemple suivant utilise `STTouches()` pour tester deux instances `geometry` afin de savoir si elles se touchent.  
@@ -68,7 +68,7 @@ SET @h = geometry::STGeomFromText('POINT(1 1)', 0);
 SELECT @g.STTouches(@h);  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Vue d’ensemble des index spatiaux](../../relational-databases/spatial/spatial-indexes-overview.md)   
  [Méthodes OGC sur des instances geography](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   

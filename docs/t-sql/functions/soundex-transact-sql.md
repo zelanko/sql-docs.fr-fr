@@ -1,5 +1,5 @@
 ---
-title: SOUNDEX (Transact-SQL) | Documents Microsoft
+title: SOUNDEX (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -49,14 +49,14 @@ SOUNDEX ( character_expression )
 ```  
   
 ## <a name="arguments"></a>Arguments  
- *character_expression*  
- Est un caractère alphanumérique [expression](../../t-sql/language-elements/expressions-transact-sql.md) des données de caractères. *character_expression* peut être une constante, une variable ou une colonne.  
+ *expression_caractère*  
+ [Expression](../../t-sql/language-elements/expressions-transact-sql.md) alphanumérique de données caractères. *character_expression* peut être une constante, une variable ou une colonne.  
   
 ## <a name="return-types"></a>Types de retour  
  **varchar**  
   
-## <a name="remarks"></a>Notes  
- SOUNDEX convertit une chaîne alphanumérique en un code à quatre caractères basé sur la façon dont la chaîne est énoncée. Le premier caractère du code est le premier caractère de *character_expression*, convertie en majuscules. Les deuxième et quatrième caractères de ce code sont des chiffres qui représentent des lettres dans l'expression. Les lettres A, E, I, O, U, H, W et Y sont ignorées sauf s'il s'agit de la première lettre de la chaîne. Les zéros sont ajoutés à la fin si nécessaire pour produire un code à quatre caractères. Pour plus d’informations sur le code SOUNDEX, consultez [système d’indexation Soundex](https://www.archives.gov/research/census/soundex.html).  
+## <a name="remarks"></a>Notes   
+ SOUNDEX convertit une chaîne alphanumérique en un code à quatre caractères basé sur la façon dont la chaîne est énoncée. Le premier caractère du code est le premier caractère de *character_expression*, converti en majuscules. Les deuxième et quatrième caractères de ce code sont des chiffres qui représentent des lettres dans l'expression. Les lettres A, E, I, O, U, H, W et Y sont ignorées sauf s'il s'agit de la première lettre de la chaîne. Les zéros sont ajoutés à la fin si nécessaire pour produire un code à quatre caractères. Pour plus d’informations sur le code SOUNDEX, consultez le [Système d’indexation Soundex](https://www.archives.gov/research/census/soundex.html).  
   
  Les codes SOUNDEX de chaînes individuelles peuvent être comparés pour voir comment sont énoncées les chaînes similaires. La fonction DIFFERENCE effectue un SOUNDEX sur deux chaînes, et retourne un entier qui représente le degré de similitude des codes SOUNDEX pour ces chaînes.  
   
@@ -81,7 +81,7 @@ SOUNDEX ( character_expression )
 SELECT SOUNDEX ('Smith'), SOUNDEX ('Smythe');  
 ```  
   
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]Valide pour un classement Latin1_General.  
+ [!INCLUDE[ssResult](../../includes/ssresult-md.md)] Valide pour un classement Latin1_General.  
   
 ```  
   
@@ -99,7 +99,7 @@ SELECT DIFFERENCE('Smithers', 'Smythers');
 GO  
 ```  
   
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]Valide pour un classement Latin1_General.  
+ [!INCLUDE[ssResult](../../includes/ssresult-md.md)] Valide pour un classement Latin1_General.  
   
 ```  
 -----------   
@@ -115,7 +115,7 @@ SELECT DIFFERENCE('Anothers', 'Brothers');
 GO  
 ```  
   
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]Valide pour un classement Latin1_General.  
+ [!INCLUDE[ssResult](../../includes/ssresult-md.md)] Valide pour un classement Latin1_General.  
   
 ```  
 -----------   
@@ -124,9 +124,9 @@ GO
 (1 row(s) affected)  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- [DIFFÉRENCE &#40; Transact-SQL &#41;](../../t-sql/functions/difference-transact-sql.md)   
- [Fonctions de chaîne &#40; Transact-SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)   
+## <a name="see-also"></a> Voir aussi  
+ [DIFFERENCE &#40;Transact-SQL&#41;](../../t-sql/functions/difference-transact-sql.md)   
+ [Fonctions de chaîne &#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)   
  [Niveau de compatibilité ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)  
   
   

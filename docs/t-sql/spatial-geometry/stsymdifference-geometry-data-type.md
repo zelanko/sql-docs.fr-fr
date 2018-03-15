@@ -1,5 +1,5 @@
 ---
-title: "STSymDifference (Type de données geometry) | Documents Microsoft"
+title: "STSymDifference (type de données geometry) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stsymdifference-geometry-data-type"></a>STSymDifference (type de données geometry)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-  Retourne un objet qui représente tous les points qui sont dans une **geometry** instance ou un autre **geometry** instance, mais pas ceux qui se trouvent dans les deux instances.  
+  Retourne un objet qui représente tous les points situés dans une instance **geometry** particulière ou toute autre instance **geometry**, mais pas les points situés dans les deux instances à la fois.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -45,15 +45,15 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="arguments"></a>Arguments  
  *other_geometry*  
- Une autre **geometry** instance en plus de l’instance sur laquelle `STSymDistance()` est appelé.  
+ Autre instance **geometry** en plus de l’instance sur laquelle `STSymDistance()` est appelé.  
   
 ## <a name="return-types"></a>Types de retour  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]type de retour : **geometry**  
+ Type de retour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] : **geometry**  
   
  Type de retour CLR : **SqlGeometry**  
   
-## <a name="remarks"></a>Notes  
- Cette méthode retourne toujours null si l’ID de référence spatiale (SRID) de la **geometry** instances ne correspondent pas. Le résultat peut contenir des segments d'arc de cercle uniquement si les instances d'entrée contiennent des segments d'arc de cercle.  
+## <a name="remarks"></a>Notes   
+ Cette méthode retourne toujours une valeur Null si les SRID (ID de référence spatiale) des instances **geometry** ne correspondent pas. Le résultat peut contenir des segments d'arc de cercle uniquement si les instances d'entrée contiennent des segments d'arc de cercle.  
   
 ## <a name="examples"></a>Exemples  
   
@@ -86,7 +86,7 @@ SELECT @g.STSymDifference(@h).ToString();
  SELECT @h.STSymDifference(@g).ToString();
  ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Méthodes OGC sur des instances geography](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: "IsValidDetailed (type de données de géométrie) | Documents Microsoft"
+title: "IsValidDetailed (type de données geometry) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -41,14 +41,14 @@ Retourne un message qui peut aider à identifier les problèmes concernant un ob
 ```  
   
 ## <a name="return-types"></a>Types de retour  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]type de retour : **nvarchar (max)**  
+ Type de retour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] : **nvarchar(max)**  
   
- Type de retour CLR : **chaîne**  
+ Type de retour CLR : **string**  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Le tableau suivant contient les valeurs de retour possibles :  
   
-|Valeur retournée| Description|  
+|Valeur retournée|Description|  
 |------------------|-----------------|  
 |24400|Valide|  
 |24401|Non valide pour une raison inconnue.|  
@@ -57,19 +57,19 @@ Retourne un message qui peut aider à identifier les problèmes concernant un ob
 |24404|Non valide, car l'anneau polygonal ({0}) entre en intersection avec lui-même ou un autre anneau.|  
 |24405|Non valide, car un anneau polygonal entre en intersection avec lui-même ou un autre anneau.|  
 |24406|Non valide, car la courbe {0} dégénère en un point.|  
-|24407|Non valide, car {0} en anneau de polygone est réduit à une ligne à {{1} du point.|  
+|24407|Non valide, car l’anneau de polygone {0} devient linéaire au point {1}.|  
 |24408|Non valide, car l'anneau polygonal {0} n'est pas fermé.|  
 |24409|Non valide, car une partie de l'anneau polygonal {0} se trouve à l'intérieur d'un polygone.|  
 |24410|Non valide, car l'anneau {0} est le premier anneau d'un polygone dont il n'est pas l'anneau extérieur.|  
-|24411|Non valide, car {0} anneau se trouve en dehors de la {{1} de l’anneau extérieur de son polygone.|  
-|24412|Non valide, car l’intérieur d’un polygone avec {0} anneaux et {{1} n’est pas connecté.|  
+|24411|Non valide, car l’anneau {0} se trouve en dehors de l’anneau extérieur {1} de son polygone.|  
+|24412|Non valide, car l’intérieur d’un polygone avec les anneaux {0} et {1} n’est pas connecté.|  
 |24413|Non valide, car deux bords se chevauchent dans la courbe {0}.|  
-|24414|Non valide, car un bord de {0} courbe chevauche un bord de {{1} de la courbe.|  
+|24414|Non valide, car une arête de la courbe {0} chevauche une arête de la courbe {1}.|  
 |24415|Non valide, car un polygone a une structure d'anneau non valide.|  
-|24416|Non valide, car dans {0} de la courbe du bord qui commence au point {{1} est une ligne ou un arc dégénéré avec des points de terminaison antipodes.|  
+|24416|Non valide, car dans la courbe {0}, l’arête qui commence au point {1} est soit une ligne, soit un arc dégénéré avec des points de terminaison antipodaux.|  
   
 ## <a name="examples"></a>Exemples  
- Un objet spatial non valide l’exemple suivant illustre comment la **IsValidDetailed()** se comporte des méthodes.  
+ L’exemple suivant d’un objet spatial non valide illustre le comportement de la méthode **IsValidDetailed()**.  
   
 ```sql  
 DECLARE @p GEOMETRY = 'Polygon((2 2, 4 4, 4 2, 2 4, 2 2))'  
@@ -77,7 +77,7 @@ SELECT @p.IsValidDetailed()
 --Returns: 24404: Not valid because polygon ring (1) intersects itself or some other ring.  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Méthodes étendues sur des instances geometry](../../t-sql/spatial-geometry/extended-methods-on-geometry-instances.md)  
   
   

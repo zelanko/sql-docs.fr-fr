@@ -1,5 +1,5 @@
 ---
-title: "GetDescendant (moteur de base de données) | Documents Microsoft"
+title: "GetDescendant (moteur de base de données) | Microsoft Docs"
 ms.custom: 
 ms.date: 7/22/2017
 ms.prod: sql-non-specified
@@ -49,18 +49,18 @@ SqlHierarchyId GetDescendant ( SqlHierarchyId child1 , SqlHierarchyId child2 )
 ```  
   
 ## <a name="arguments"></a>Arguments  
-*Child1*  
-NULL ou **hierarchyid** d’un enfant du nœud actuel.
+*child1*  
+Null ou **hierarchyid** d’un enfant du nœud actuel.
   
-*Enfant2*  
-NULL ou **hierarchyid** d’un enfant du nœud actuel.
+*child2*  
+Null ou **hierarchyid** d’un enfant du nœud actuel.
   
 ## <a name="return-types"></a>Types de retour  
-**SQL Server de type de retour : hierarchyid**
+**Type de retour SQL Server : hierarchyid**
   
-**CLR de type de retour : SqlHierarchyId**
+**Type de retour CLR : SqlHierarchyId**
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
 Retourne un nœud enfant qui est un descendant du parent.
 -   Si le parent est NULL, retourne NULL.  
 -   Si parent n'est pas NULL et que enfant1 et enfant2 sont NULL, retourne un enfant du parent.  
@@ -71,12 +71,12 @@ Retourne un nœud enfant qui est un descendant du parent.
 -   Si enfant2 n'est pas NULL et n'est pas un enfant du parent, une exception est levée.  
 -   Si enfant1 >= enfant2, une exception est levée.  
   
-GetDescendant est déterministe. Par conséquent, si GetDescendant est appelée avec les mêmes entrées, elle produit toujours le même résultat. Toutefois, l'identité exacte de l'enfant produite peut varier en fonction de sa relation avec les autres nœuds, comme cela est indiqué dans l'exemple C.
+GetDescendant est déterministe. Par conséquent, si GetDescendant est appelée avec les mêmes entrées, elle produit toujours la même sortie. Toutefois, l'identité exacte de l'enfant produite peut varier en fonction de sa relation avec les autres nœuds, comme cela est indiqué dans l'exemple C.
   
 ## <a name="examples"></a>Exemples  
   
 ### <a name="a-inserting-a-row-as-the-least-descendant-node"></a>A. Insertion d'une ligne comme nœud le moins descendant  
-Un nouvel employé est embauché, dont le responsable est un employé existant au nœud `/3/1/`. Exécutez le code suivant pour insérer la nouvelle ligne à l’aide de la méthode GetDescendant sans arguments pour spécifier le nouveau nœud de lignes comme `/3/1/1/`:
+Un nouvel employé est embauché, dont le responsable est un employé existant au nœud `/3/1/`. Exécutez le code suivant pour insérer la nouvelle ligne en utilisant la méthode GetDescendant sans arguments pour spécifier le nouveau nœud de lignes comme `/3/1/1/` :
   
 ```sql
 DECLARE @Manager hierarchyid;   
@@ -89,7 +89,7 @@ VALUES
 ```  
   
 ### <a name="b-inserting-a-row-as-a-greater-descendant-node"></a>B. Insertion d'une ligne comme nœud descendant supérieur  
-Un autre nouvel employé est embauché, avec le même responsable que dans exemple A. Exécutez le code suivant pour insérer la nouvelle ligne à l’aide de la méthode GetDescendant à l’aide de l’argument Child1 afin de spécifier que le nœud de la nouvelle ligne suit le nœud dans l’exemple A et devient `/3/1/2/`:
+Un autre nouvel employé est embauché, avec le même responsable que dans l’exemple A. Exécutez le code suivant pour insérer la nouvelle ligne en utilisant la méthode GetDescendant à l’aide de l’argument child1 afin de spécifier que le nœud de la nouvelle ligne suit le nœud dans l’exemple A et devient `/3/1/2/` :
   
 ```sql
 DECLARE @Manager hierarchyid, @Child1 hierarchyid;  
@@ -104,7 +104,7 @@ VALUES
 ```  
   
 ### <a name="c-inserting-a-row-between-two-existing-nodes"></a>C. Insertion d'une ligne entre deux nœuds existants  
-Un troisième employé est embauché, avec le même responsable que dans l’exemple A. Cet exemple insère la nouvelle ligne à un nœud supérieur à la `FirstNewEmployee` dans l’exemple A, et inférieur à `SecondNewEmployee` dans l’exemple B. Exécutez le code suivant à l’aide de la méthode GetDescendant. Utilisez l'argument child1 et l'argument child2 pour spécifier que le nœud de la nouvelle ligne devient le nœud `/3/1/1.1/` :
+Un troisième employé est embauché, avec le même responsable que dans l’exemple A. Cet exemple insère la nouvelle ligne à un nœud supérieur au `FirstNewEmployee` de l’exemple A, et inférieur au `SecondNewEmployee` de l’exemple B. Exécutez le code suivant en utilisant la méthode GetDescendant. Utilisez l'argument child1 et l'argument child2 pour spécifier que le nœud de la nouvelle ligne devient le nœud `/3/1/1.1/` :
   
 ```sql
 DECLARE @Manager hierarchyid, @Child1 hierarchyid, @Child2 hierarchyid;  
@@ -120,7 +120,7 @@ VALUES
   
 ```  
   
-Après avoir effectué les exemples A, B et C, les nœuds ajoutés à la table seront des homologues par le code suivant **hierarchyid** valeurs :
+Après l’exécution des exemples A, B, et C, les nœuds ajoutés à la table seront des homologues avec les valeurs **hierarchyid** suivantes :
   
 `/3/1/1/`
   
@@ -131,7 +131,7 @@ Après avoir effectué les exemples A, B et C, les nœuds ajoutés à la table s
 Le nœud `/3/1/1.1/` est supérieur à au nœud `/3/1/1/` mais au même niveau dans la hiérarchie.
   
 ### <a name="d-scalar-examples"></a>D. Exemples scalaires  
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]prend en charge les insertions et suppressions de n’importe quel arbitraires **hierarchyid** nœuds. À l’aide de GetDescendant(), il est toujours possible de générer un nœud entre deux **hierarchyid** nœuds. Exécutez le code suivant pour générer des exemples de nœuds à l'aide de `GetDescendant` :
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend en charge les insertions et suppressions arbitraires de tous les nœuds **hierarchyid**. En utilisant GetDescendant(), il est toujours possible de générer un nœud entre deux nœuds **hierarchyid** quelconques. Exécutez le code suivant pour générer des exemples de nœuds à l'aide de `GetDescendant` :
   
 ```sql
 DECLARE @h hierarchyid = hierarchyid::GetRoot();  

@@ -1,5 +1,5 @@
 ---
-title: "Sélectionnez @local_variable (Transact-SQL) | Documents Microsoft"
+title: SELECT @local_variable (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 09/06/2017
 ms.prod: sql-non-specified
@@ -38,12 +38,12 @@ ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="select-localvariable-transact-sql"></a>Sélectionnez @local_variable (Transact-SQL)
+# <a name="select-localvariable-transact-sql"></a>SELECT @local_variable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Définit une variable locale à la valeur d’une expression.  
+  Affecte à une variable locale la valeur d’une expression.  
   
- Pour affecter les variables, nous vous recommandons d’utiliser [définir @local_variable ](../../t-sql/language-elements/set-local-variable-transact-sql.md) au lieu de SELECT @*local_variable*.  
+ Pour affecter des valeurs aux variables, il est recommandé d’utiliser [SET @local_variable](../../t-sql/language-elements/set-local-variable-transact-sql.md) à la place de SELECT @*local_variable*.  
   
  ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -64,23 +64,23 @@ Assignez la valeur située à droite à la variable située à gauche.
 Opérateur d'assignation composé :  
   |operator |action |   
   |-----|-----|  
-  | = | Affecte l’expression qui suit, à la variable. |  
-  | += | Ajouter et attribuer |   
-  | -= | Soustraire et attribuer |  
-  | \*= | Multiplier et attribuer |  
-  | /= | Diviser et attribuer |  
-  | %= | Modulo et attribuer |  
-  | &= | AND au niveau du bit et attribuer |  
-  | ^= | Opérations de bits XOR et attribuer |  
-  | \|= | OR au niveau du bit et attribuer |  
+  | = | Affecte à la variable l’expression qui suit. |  
+  | += | Additionner et assigner |   
+  | -= | Soustraire et assigner |  
+  | \*= | Multiplier et assigner |  
+  | /= | Diviser et assigner |  
+  | %= | Modulo et assigner |  
+  | &= | AND au niveau du bit et assigner |  
+  | ^= | XOR au niveau du bit et assigner |  
+  | \|= | OR au niveau du bit et assigner |  
   
  *expression*  
- Valide [expression](../../t-sql/language-elements/expressions-transact-sql.md). Cela comprend une sous-requête scalaire.  
+ Toute [expression](../../t-sql/language-elements/expressions-transact-sql.md) valide. Cela comprend une sous-requête scalaire.  
   
-## <a name="remarks"></a>Notes  
- Sélectionnez @*local_variable* est généralement utilisé pour retourner une valeur unique dans la variable. Toutefois, lorsque *expression* est le nom d’une colonne, elle peut retourner plusieurs valeurs. Si l'instruction SELECT retourne plusieurs valeurs, la dernière valeur retournée est affectée à la variable.  
+## <a name="remarks"></a>Notes   
+ L’instruction SELECT @*local_variable* est généralement utilisée pour retourner une valeur unique vers la variable. Toutefois, quand *expression* correspond au nom d’une colonne, plusieurs valeurs peuvent être retournées. Si l'instruction SELECT retourne plusieurs valeurs, la dernière valeur retournée est affectée à la variable.  
   
- Si l'instruction SELECT ne retourne aucune ligne, la variable conserve sa valeur actuelle. Si *expression* est une sous-requête scalaire qui ne retourne aucune valeur, la variable n’est définie sur NULL.  
+ Si l'instruction SELECT ne retourne aucune ligne, la variable conserve sa valeur actuelle. Si *expression* est une sous-requête scalaire qui ne retourne aucune valeur, la valeur affectée à la variable est NULL.  
   
  Une instruction SELECT peut initialiser plusieurs variables locales.  
   
@@ -89,7 +89,7 @@ Opérateur d'assignation composé :
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-use-select-localvariable-to-return-a-single-value"></a>A. Utilisation de SELECT @local_variable pour retourner une valeur unique  
+### <a name="a-use-select-localvariable-to-return-a-single-value"></a>A. Utiliser SELECT @local_variable pour retourner une valeur unique  
  Dans l'exemple suivant, la variable `@var1` reçoit la valeur `Generic Name`. La requête sur la table `Store` ne retourne aucune ligne car la valeur spécifiée pour `CustomerID` n'existe pas dans la table. La variable conserve la valeur `Generic Name`.  
   
 ```sql  
@@ -111,7 +111,7 @@ SELECT @var1 AS 'Company Name';
  Generic Name  
  ```  
   
-### <a name="b-use-select-localvariable-to-return-null"></a>B. Utilisation de SELECT @local_variable pour retourner une valeur null  
+### <a name="b-use-select-localvariable-to-return-null"></a>B. Utiliser SELECT @local_variable pour retourner une valeur Null  
  Dans l'exemple suivant, une sous-requête est utilisée pour affecter une valeur à `@var1`. Comme la valeur demandée pour `CustomerID` n'existe pas, la sous-requête ne retourne pas de valeur et la variable se voit affecter la valeur `NULL`.  
   
 ```sql  
@@ -133,10 +133,10 @@ Company Name
 NULL  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)   
  [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
- [Compound, opérateurs &#40; Transact-SQL &#41;](../../t-sql/language-elements/compound-operators-transact-sql.md)   
+ [Opérateurs composés &#40;Transact-SQL&#41;](../../t-sql/language-elements/compound-operators-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)  
   
   

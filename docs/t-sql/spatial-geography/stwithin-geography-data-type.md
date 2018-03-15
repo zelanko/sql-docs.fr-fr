@@ -1,5 +1,5 @@
 ---
-title: "STWithin (Type de données geography) | Documents Microsoft"
+title: "STWithin (type de données geography) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -31,7 +31,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stwithin-geography-data-type"></a>STWithin (type de données geography)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-  Retourne 1 si une **geography** instance est SPATIALEMENT dans une autre **geography** instance ; sinon, retourne 0.  
+  Retourne 1 si une instance **geography** est située spatialement dans une autre instance **geography** ; sinon, retourne 0.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -42,15 +42,15 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="arguments"></a>Arguments  
  *other_geography*  
- Une autre **geography** instance à comparer à l’instance sur laquelle `STWithin()` est appelé.  
+ Autre instance **geography** à comparer à l’instance sur laquelle `STWithin()` est appelé.  
   
 ## <a name="return-types"></a>Types de retour  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]type de retour : **bits**  
+ Type de retour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] : **bit**  
   
  Type de retour CLR : **SqlBoolean**  
   
-## <a name="remarks"></a>Notes  
- Cette méthode retourne toujours null si l’ID de référence spatiale (SRID) de la **geography** instances ne correspondent pas.  
+## <a name="remarks"></a>Notes   
+ Cette méthode retourne toujours une valeur Null si les SRID (ID de référence spatiale) des instances **geography** ne correspondent pas.  
   
 ## <a name="examples"></a>Exemples  
  L'exemple suivant utilise `STWithin()` pour tester deux instances `geography` pour voir si la première instance est complètement dans la deuxième instance.  

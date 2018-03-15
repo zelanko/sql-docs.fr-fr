@@ -1,5 +1,5 @@
 ---
-title: HAS_DBACCESS (Transact-SQL) | Documents Microsoft
+title: HAS_DBACCESS (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 10/23/2017
 ms.prod: sql-non-specified
@@ -52,20 +52,20 @@ HAS_DBACCESS ( 'database_name' )
 ```  
   
 ## <a name="arguments"></a>Arguments  
- '*nom_base_de_données*'  
- Nom de la base de données sur laquelle l'utilisateur veut obtenir des informations d'accès. *database_name* est **sysname**.  
+ '*database_name*'  
+ Nom de la base de données sur laquelle l'utilisateur veut obtenir des informations d'accès. *database_name* est de type **sysname**.  
   
 ## <a name="return-types"></a>Types de retour  
- **int**  
+ **Int**  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  HAS_DBACCESS retourne la valeur 1 si l'utilisateur a accès à la base de données, la valeur 0 si l'utilisateur n'a pas accès à la base de données et la valeur NULL si le nom de la base de données n'est pas valide.  
   
  HAS_DBACCESS retourne 0 si la base de données est hors connexion ou dans un état suspect.  
   
  HAS_DBACCESS retourne 0 si la base de données est en mode mono-utilisateur et qu'elle est en cours d'utilisation par un autre utilisateur.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l'appartenance au rôle public.  
   
 ## <a name="examples"></a>Exemples  
@@ -76,7 +76,7 @@ SELECT HAS_DBACCESS('AdventureWorks2012');
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemples : [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] et[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemples : [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] et [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  L'exemple suivant vérifie si l'utilisateur actif a accès à la base de données `AdventureWorksPDW2012`.  
   
 ```  
@@ -84,8 +84,8 @@ SELECT HAS_DBACCESS('AdventureWorksPDW2012');
 GO  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- [IS_MEMBER &#40; Transact-SQL &#41;](../../t-sql/functions/is-member-transact-sql.md)   
+## <a name="see-also"></a> Voir aussi  
+ [IS_MEMBER &#40;Transact-SQL&#41;](../../t-sql/functions/is-member-transact-sql.md)   
  [IS_SRVROLEMEMBER &#40;Transact-SQL&#41;](../../t-sql/functions/is-srvrolemember-transact-sql.md)  
   
   

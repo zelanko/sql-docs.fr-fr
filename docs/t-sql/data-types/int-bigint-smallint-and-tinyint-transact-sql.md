@@ -1,5 +1,5 @@
-﻿---
-title: int, bigint, smallint et tinyint (Transact-SQL) | Documents Microsoft
+---
+title: int, bigint, smallint et tinyint (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 9/8/2017
 ms.prod: sql-non-specified
@@ -44,33 +44,33 @@ ms.lasthandoff: 11/21/2017
 # <a name="int-bigint-smallint-and-tinyint-transact-sql"></a>int, bigint, smallint et tinyint (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-Types de données représentant des valeurs numériques exactes qui utilisent des entiers. Pour économiser de l’espace dans la base de données, utilisez le plus petit type de données qui peut contenir toutes les valeurs possibles. Par exemple, un tinyint peut suffire pour la durée de vie d’une personne, car aucune personne ne vit plus de 255 ans. Mais un tinyint ne serait pas suffisant pour la durée de vie d’une génération, car une génération peut durer plus de 255 ans.
+Types de données représentant des valeurs numériques exactes qui utilisent des entiers. Pour économiser de l’espace dans la base de données, utilisez le plus petit type de données qui peut contenir de manière fiable toutes les valeurs possibles. Par exemple, tinyint peut suffire pour l’âge d’une personne, car personne ne vit plus de 255 ans. En revanche, tinyint ne serait pas suffisant pour dater un bâtiment, car il peut durer plus de 255 ans.
   
 |Type de données|Plage|Stockage|  
 |---|---|---|
 |**bigint**|-2^63 (-9,223,372,036,854,775,808) à 2^63-1 (9,223,372,036,854,775,807)|Huit octets|  
-|**int**|-2^31 (-2 147 483 648) à 2^31-1 (2 147 483 647)|Quatre octets|  
+|**Int**|-2^31 (-2 147 483 648) à 2^31-1 (2 147 483 647)|Quatre octets|  
 |**smallint**|-2^15 (-32 768) à 2^15-1 (32 767)|Deux octets|  
 |**tinyint**|0 à 255|Un octet|  
   
-## <a name="remarks"></a>Notes  
-Le **int** (type de données) est le type de données integer principal dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Le **bigint** (type de données) est destiné à être utilisé lorsque les valeurs entières peuvent dépasser la plage prise en charge par le **int** (type de données).
+## <a name="remarks"></a>Notes   
+Le type de données **int** est le type de données integer principal dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Le type de données **bigint** est destiné à être utilisé quand les valeurs entières sont susceptibles de ne pas appartenir à la plage prise en charge par le type de données **int**.
   
-Un **bigint** s’insère entre un **smallmoney** et un **int** dans le graphique de priorité de type de données.
+**bigint** s’insère entre **smallmoney** et **int** dans le graphique de priorité des types de données.
   
-Les Fonctions retournent **bigint** uniquement si l’expression du paramètre est un **bigint** (type de données). [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne promeut pas automatiquement les autres types de données integer (**tinyint**, **smallint**, et **int**) à **bigint**.
+Les fonctions retournent **bigint** uniquement si l’expression de paramètre est un type de données **bigint**. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne promeut pas automatiquement les autres types de données integer (**tinyint**, **smallint** et **int**) en **bigint**.
   
 > [!CAUTION]  
->  Lorsque vous utilisez le +, -, \*, /, ou % des opérateurs arithmétiques pour effectuer une conversion implicite ou explicite de **int**, **smallint**, **tinyint**, ou **bigint** des valeurs de constante pour le **float**, **réel**, **décimal** ou **numérique** les types de données, les règles qui [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] s’applique lorsqu’il calcule le type de données et la précision des résultats des expressions diffèrent selon que la requête est automatiquement paramétrable ou non.  
+>  Quand vous utilisez les opérateurs arithmétiques +, -, \*, / ou % pour réaliser une conversion implicite ou explicite de valeurs constantes **int**, **smallint**, **tinyint** ou **bigint** en types de données **float**, **real**, **decimal** ou **numeric**, les règles appliquées par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour calculer le type de données et la précision des résultats des expressions varient selon que la requête est automatiquement paramétrable ou non.  
 >   
->  Par conséquent, des expressions similaires dans les requêtes peuvent parfois produire des résultats différents. Lorsqu’une requête n’est pas automatiquement paramétrable, la valeur de constante est d’abord convertie à **numérique**, dont la précision est suffisamment grande pour contenir la valeur de la constante, avant de convertir le type de données spécifié. Par exemple, la valeur de constante 1 est convertie pour **numérique (1, 0)**, et la valeur de constante 250 est convertie en **numérique (3, 0)**.  
+>  Par conséquent, des expressions similaires dans les requêtes peuvent parfois produire des résultats différents. Quand une requête n’est pas automatiquement paramétrable, la valeur constante est d’abord convertie en type de données **numeric**, dont la précision est juste suffisante pour contenir la valeur de la constante, avant la conversion dans le type de données spécifié. Par exemple, la valeur constante 1 est convertie en **numeric (1, 0)** et la valeur constante 250 est convertie en **numeric (3, 0)**.  
 >   
->  Lorsqu’une requête est automatiquement paramétrable, la valeur de constante est toujours convertie en **numérique (10, 0)** avant de convertir le type de données final. Lorsque l'opérateur / est impliqué, outre la précision du type de résultat, la valeur de résultat peut aussi différer parmi des requêtes similaires. Par exemple, la valeur de résultat d’une requête paramétrée automatiquement qui comprend l’expression `SELECT CAST (1.0 / 7 AS float)`, diffère de la valeur de résultat de la même requête qui n’est pas paramétrée automatiquement, car les résultats de la requête paramétrée automatiquement, sont tronquées pour contenir dans le **numérique (10, 0)** type de données.  
+>  Quand une requête est automatiquement paramétrable, la valeur constante est toujours convertie en **numeric (10, 0)** avant la conversion dans le type de données final. Lorsque l'opérateur / est impliqué, outre la précision du type de résultat, la valeur de résultat peut aussi différer parmi des requêtes similaires. Par exemple, la valeur du résultat d’une requête automatiquement paramétrable qui comprend l’expression `SELECT CAST (1.0 / 7 AS float)` diffère de la valeur du résultat de la même requête non paramétrable automatiquement, car le résultat de la requête automatiquement paramétrable est tronqué afin qu’il puisse être contenu dans le type de données **numeric (10, 0)**.  
   
 ## <a name="converting-integer-data"></a>Conversion de données integer
 Lorsque les entiers sont convertis implicitement en un type de données character, si l'entier est trop grand pour le champ de caractère, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] affiche le caractère ASCII 42, l'astérisque (*).
   
-Constantes entières supérieures à 2 147 483 647 sont converties en la **décimal** de type de données, pas le **bigint** type de données. L’exemple suivant montre que lorsque la valeur de seuil est dépassée, le type de données du résultat de la passe d’un **int** à un **décimal**.
+Les constantes entières supérieures à 2 147 483 647 sont converties en type de données **decimal**, et non **bigint**. L’exemple suivant montre que, quand la valeur de seuil est dépassée, le type de données du résultat passe de **int** à **decimal**.
   
 ```sql
 SELECT 2147483647 / 2 AS Result1, 2147483649 / 2 AS Result2 ;  
@@ -84,7 +84,7 @@ Result1      Result2
 ```  
   
 ## <a name="examples"></a>Exemples  
-L’exemple suivant crée une table à l’aide de la **bigint**, **int**, **smallint**, et **tinyint** des types de données. Les valeurs sont insérées dans chaque colonne et retournées dans l'instruction SELECT.
+L’exemple suivant crée une table à l’aide des types de données **bigint**, **int**, **smallint** et **tinyint**. Les valeurs sont insérées dans chaque colonne et retournées dans l'instruction SELECT.
   
 ```sql
 CREATE TABLE dbo.MyTable  
@@ -119,6 +119,6 @@ MyBigIntColumn       MyIntColumn MySmallIntColumn MyTinyIntColumn
 [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)  
 [DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)  
 [SET @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/set-local-variable-transact-sql.md)  
-[Sys.types &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-types-transact-sql.md)
+[sys.types &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-types-transact-sql.md)
   
   

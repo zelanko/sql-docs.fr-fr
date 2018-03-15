@@ -1,5 +1,5 @@
 ---
-title: "SUPPRIMER la clé de chiffrement de base de données (Transact-SQL) | Documents Microsoft"
+title: DROP DATABASE ENCRYPTION KEY (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/20/2017
 ms.prod: sql-non-specified
@@ -35,7 +35,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="drop-database-encryption-key-transact-sql"></a>DROP DATABASE ENCRYPTION KEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
 
-  Supprime une clé de chiffrement de base de données utilisée dans un chiffrement transparent de bases de données. Pour plus d’informations sur le chiffrement transparent de la base de données, consultez [Transparent Data Encryption &#40; Chiffrement transparent des données &#41; ](../../relational-databases/security/encryption/transparent-data-encryption.md).  
+  Supprime une clé de chiffrement de base de données utilisée dans un chiffrement transparent de bases de données. Pour plus d’informations sur le chiffrement transparent de bases de données, consultez [Chiffrement transparent des données &#40;TDE, Transparent Data Encryption&#41;](../../relational-databases/security/encryption/transparent-data-encryption.md).  
   
 > [!IMPORTANT]  
 >  La sauvegarde du certificat qui protégeait la clé de chiffrement de la base de données doit être conservée même si le chiffrement n'est plus activé sur une base de données. Même si la base de données n'est plus chiffrée, des parties du journal des transactions peuvent toujours être protégées, et le certificat peut être nécessaire pour certaines opérations tant que la sauvegarde complète de la base de données n'a pas été effectuée.  
@@ -48,10 +48,10 @@ ms.lasthandoff: 11/21/2017
 DROP DATABASE ENCRYPTION KEY  
 ```  
   
-## <a name="remarks"></a>Notes  
- Si la base de données est chiffrée, vous devez d'abord supprimer le chiffrement de la base de données en exécutant l'instruction ALTER DATABASE. Attendez la fin du déchiffrement avant de supprimer la clé de chiffrement de base de données. Pour plus d’informations sur l’instruction ALTER DATABASE, consultez [Options ALTER DATABASE SET &#40; Transact-SQL &#41; ](../../t-sql/statements/alter-database-transact-sql-set-options.md). Pour afficher l’état de la base de données, utilisez la [sys.dm_database_encryption_keys](../../relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql.md) vue de gestion dynamique.  
+## <a name="remarks"></a>Notes   
+ Si la base de données est chiffrée, vous devez d'abord supprimer le chiffrement de la base de données en exécutant l'instruction ALTER DATABASE. Attendez la fin du déchiffrement avant de supprimer la clé de chiffrement de base de données. Pour plus d’informations sur l’instruction ALTER DATABASE, consultez [ALTER DATABASE SET (Options) &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md). Pour voir l’état de la base de données, utilisez la vue de gestion dynamique [sys.dm_database_encryption_keys](../../relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Requiert l'autorisation CONTROL sur la base de données.  
   
 ## <a name="examples"></a>Exemples  
@@ -72,8 +72,8 @@ DROP DATABASE ENCRYPTION KEY;
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemples : [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] et[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- L’exemple suivant supprime le chiffrement TDE et supprime la clé de chiffrement de base de données.  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemples : [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] et [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+ L’exemple suivant supprime le chiffrement transparent des données, puis la clé de chiffrement de la base de données.  
   
 ```  
 ALTER DATABASE AdventureWorksPDW2012  
@@ -104,14 +104,14 @@ DROP DATABASE ENCRYPTION KEY;
 GO  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Chiffrement transparent des données &#40;TDE&#41;](../../relational-databases/security/encryption/transparent-data-encryption.md)   
  [Chiffrement SQL Server](../../relational-databases/security/encryption/sql-server-encryption.md)   
  [SQL Server et clés de chiffrement de base de données &#40;moteur de base de données&#41;](../../relational-databases/security/encryption/sql-server-and-database-encryption-keys-database-engine.md)   
  [Hiérarchie de chiffrement](../../relational-databases/security/encryption/encryption-hierarchy.md)   
  [Options ALTER DATABASE SET &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)   
- [CRÉER une clé de chiffrement de base de données &#40; Transact-SQL &#41;](../../t-sql/statements/create-database-encryption-key-transact-sql.md)   
- [MODIFIER la clé de chiffrement de base de données &#40; Transact-SQL &#41;](../../t-sql/statements/alter-database-encryption-key-transact-sql.md)   
+ [CREATE DATABASE ENCRYPTION KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-database-encryption-key-transact-sql.md)   
+ [ALTER DATABASE ENCRYPTION KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-encryption-key-transact-sql.md)   
  [sys.dm_database_encryption_keys &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql.md)  
   
   

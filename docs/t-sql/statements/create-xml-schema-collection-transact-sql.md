@@ -1,5 +1,5 @@
 ---
-title: CREATE XML SCHEMA COLLECTION (Transact-SQL) | Documents Microsoft
+title: CREATE XML SCHEMA COLLECTION (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 11/25/2015
 ms.prod: sql-non-specified
@@ -55,18 +55,18 @@ CREATE XML SCHEMA COLLECTION [ <relational_schema>. ]sql_identifier AS Expressio
   
 ## <a name="arguments"></a>Arguments  
  *relational_schema*  
- Identifie le nom du schéma relationnel. Si non spécifié, le schéma relationnel par défaut est supposé.  
+ Identifie le nom du schéma relationnel. Si cet argument n’est pas spécifié, le schéma relationnel par défaut est utilisé.  
   
  *sql_identifier*  
  ID SQL de la collection de schémas XML.  
   
  *Expression*  
- Constante de type chaîne ou variable scalaire. Est **varchar**, **varbinary**, **nvarchar**, ou **xml** type.  
+ Constante de type chaîne ou variable scalaire. Est de type **varchar**, **varbinary**, **nvarchar** ou **xml**.  
   
-## <a name="remarks"></a>Notes  
- Vous pouvez également ajouter de nouveaux espaces de noms à la collection ou ajouter de nouveaux composants aux espaces de noms existant dans la collection à l’aide de [ALTER XML SCHEMA COLLECTION](../../t-sql/statements/alter-xml-schema-collection-transact-sql.md).  
+## <a name="remarks"></a>Notes   
+ Vous pouvez également ajouter des espaces de noms à la collection ou ajouter des composants aux espaces de noms existants de la collection, à l’aide de l’instruction [ALTER XML SCHEMA COLLECTION](../../t-sql/statements/alter-xml-schema-collection-transact-sql.md).  
   
- Pour supprimer des collections, utilisez [DROP XML SCHEMA COLLECTION &#40; Transact-SQL &#41; ](../../t-sql/statements/drop-xml-schema-collection-transact-sql.md).  
+ Pour supprimer des collections, utilisez [DROP XML SCHEMA COLLECTION &#40;Transact-SQL&#41;](../../t-sql/statements/drop-xml-schema-collection-transact-sql.md).  
   
 ## <a name="permissions"></a>Autorisations  
  CREATE XML SCHEMA COLLECTION nécessite au moins l'un des groupes d'autorisations suivants :  
@@ -165,20 +165,20 @@ Set @MySchemaCollection  = N' copy the schema collection here'
 CREATE XML SCHEMA COLLECTION MyCollection AS @MySchemaCollection   
 ```  
   
- La variable de l'exemple est de type `nvarchar(max)`. La variable peut également être de **xml** de type de données, dans ce cas, il est converti implicitement en une chaîne.  
+ La variable de l'exemple est de type `nvarchar(max)`. Elle peut être également de type **xml**, auquel cas elle est implicitement convertie en chaîne de caractères.  
   
  Pour plus d’informations, consultez [Afficher une collection de schémas XML stockée](../../relational-databases/xml/view-a-stored-xml-schema-collection.md).  
   
- Vous pouvez stocker des collections de schémas dans un **xml** colonne de type. Dans ce cas, procédez comme suit pour créer la collection de schémas XML :  
+ Vous pouvez stocker des collections de schémas dans une colonne de type **xml**. Dans ce cas, procédez comme suit pour créer la collection de schémas XML :  
   
-1.  Récupérer la collection de schémas à partir de la colonne à l’aide d’une instruction SELECT et l’assigner à une variable de **xml** type, ou un **varchar** type.  
+1.  Extrayez la collection de schémas de la colonne à l’aide d’une instruction SELECT et affectez-la à une variable de type **xml** ou **varchar**.  
   
 2.  Spécifiez le nom de la variable dans l'instruction CREATE XML SCHEMA COLLECTION.  
   
  CREATE XML SCHEMA COLLECTION stocke uniquement les composants de schéma que SQL Server comprend ; tous les éléments du schéma XML ne sont pas stockés dans la base de données. Par conséquent, si vous voulez récupérer la collection de schémas XML exactement comme elle a été fournie, il est recommandé d'enregistrer vos schémas XML dans une colonne de la base de données ou dans un autre dossier de votre ordinateur.  
   
 ### <a name="b-specifying-multiple-schema-namespaces-in-a-schema-collection"></a>B. Spécification de plusieurs espaces de noms de schémas dans une collection de schémas  
- Vous pouvez spécifier plusieurs schémas XML lorsque vous créez une collection de schémas XML. Par exemple :  
+ Vous pouvez spécifier plusieurs schémas XML lorsque vous créez une collection de schémas XML. Exemple :  
   
 ```  
 CREATE XML SCHEMA COLLECTION MyCollection AS N'  
@@ -236,7 +236,7 @@ GO
 ```  
   
 ### <a name="c-importing-a-schema-that-does-not-specify-a-target-namespace"></a>C. Importation d'un schéma qui ne spécifie aucun espace de noms cible  
- Si un schéma qui ne contient-elle pas un **targetNamespace** attribut est importé dans une collection, ses composants sont associés à l’espace de noms cible vide, comme indiqué dans l’exemple suivant. Notez que si vous n'associez pas au moins un schéma importé dans la collection, plusieurs composants de schéma (éventuellement non liés entre eux) seront associés à l'espace de noms de la chaîne vide par défaut.  
+ Si un schéma qui ne contient pas d’attribut **targetNamespace** est importé dans une collection, ses composants sont associés à l’espace de noms cible composé d’une chaîne de caractères vide (voir l’exemple ci-dessous). Notez que si vous n'associez pas au moins un schéma importé dans la collection, plusieurs composants de schéma (éventuellement non liés entre eux) seront associés à l'espace de noms de la chaîne vide par défaut.  
   
 ```  
 -- Create a collection that contains a schema with no target namespace.  
@@ -269,12 +269,12 @@ CREATE TABLE T (Col1 xml (mySC));
 GO  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- [ALTER XML SCHEMA COLLECTION &#40; Transact-SQL &#41;](../../t-sql/statements/alter-xml-schema-collection-transact-sql.md)   
- [DROP XML SCHEMA COLLECTION &#40; Transact-SQL &#41;](../../t-sql/statements/drop-xml-schema-collection-transact-sql.md)   
+## <a name="see-also"></a> Voir aussi  
+ [ALTER XML SCHEMA COLLECTION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-xml-schema-collection-transact-sql.md)   
+ [DROP XML SCHEMA COLLECTION &#40;Transact-SQL&#41;](../../t-sql/statements/drop-xml-schema-collection-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   
  [Comparer du XML typé et du XML non typé](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   
- [DROP XML SCHEMA COLLECTION &#40; Transact-SQL &#41;](../../t-sql/statements/drop-xml-schema-collection-transact-sql.md)   
+ [DROP XML SCHEMA COLLECTION &#40;Transact-SQL&#41;](../../t-sql/statements/drop-xml-schema-collection-transact-sql.md)   
  [Spécifications et limitations relatives aux collections de schémas XML sur le serveur](../../relational-databases/xml/requirements-and-limitations-for-xml-schema-collections-on-the-server.md)  
   
   

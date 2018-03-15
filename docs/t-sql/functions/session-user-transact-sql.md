@@ -1,5 +1,5 @@
 ---
-title: SESSION_USER (Transact-SQL) | Documents Microsoft
+title: SESSION_USER (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -50,9 +50,9 @@ SESSION_USER
 ```  
   
 ## <a name="return-types"></a>Types de retour  
- **nvarchar (128)**  
+ **nvarchar(128)**  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Utilisez SESSION_USER comme une fonction standard ou avec les contraintes DEFAULT dans les instructions CREATE TABLE ou ALTER TABLE. La fonction SESSION_USER peut être insérée dans une table quand aucune valeur par défaut n'est spécifiée. Cette fonction ne prend pas d'arguments. SESSION_USER peut s'utiliser dans des requêtes.  
   
  Si un appel à SESSION_USER intervient après un commutateur de contexte, cette fonction retourne le nom d'utilisateur du nouveau contexte.  
@@ -143,24 +143,24 @@ Order #   Customer #  When Delivered       Received By
 (5 row(s) affected)
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemples : [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] et[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemples : [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] et [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="c-using-sessionuser-to-return-the-user-name-of-the-current-session"></a>C : utilisation de SESSION_USER pour retourner le nom d’utilisateur de la session active  
- L’exemple suivant renvoie l’utilisateur de session pour la session active.  
+### <a name="c-using-sessionuser-to-return-the-user-name-of-the-current-session"></a>C. Utilisation de SESSION_USER pour obtenir le nom d’utilisateur de la session en cours  
+ L’exemple suivant renvoie l’utilisateur de la session en cours.  
   
 ```  
 SELECT SESSION_USER;  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
  [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
- [CURRENT_TIMESTAMP &#40; Transact-SQL &#41;](../../t-sql/functions/current-timestamp-transact-sql.md)   
- [CURRENT_USER &#40; Transact-SQL &#41;](../../t-sql/functions/current-user-transact-sql.md)   
- [SYSTEM_USER &#40; Transact-SQL &#41;](../../t-sql/functions/system-user-transact-sql.md)   
+ [CURRENT_TIMESTAMP &#40;Transact-SQL&#41;](../../t-sql/functions/current-timestamp-transact-sql.md)   
+ [CURRENT_USER &#40;Transact-SQL&#41;](../../t-sql/functions/current-user-transact-sql.md)   
+ [SYSTEM_USER &#40;Transact-SQL&#41;](../../t-sql/functions/system-user-transact-sql.md)   
  [Fonctions système &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)   
- [UTILISATEUR &#40; Transact-SQL &#41;](../../t-sql/functions/user-transact-sql.md)   
- [User_name &#40; Transact-SQL &#41;](../../t-sql/functions/user-name-transact-sql.md)  
+ [USER &#40;Transact-SQL&#41;](../../t-sql/functions/user-transact-sql.md)   
+ [USER_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/user-name-transact-sql.md)  
   
   
 

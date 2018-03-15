@@ -1,5 +1,5 @@
 ---
-title: '| (OR au niveau du bit) (Transact-SQL) | Documents Microsoft'
+title: "| (Opérateur OR au niveau du bit) (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 01/10/2017
 ms.prod: sql-non-specified
@@ -51,21 +51,21 @@ expression | expression
   
 ## <a name="arguments"></a>Arguments  
  *expression*  
- Valide [expression](../../t-sql/language-elements/expressions-transact-sql.md) de la catégorie de type de données entier, ou le **bits**, **binaire**, ou **varbinary** des types de données. *expression* est traité comme un nombre binaire pour l’opération au niveau du bit.  
+ Toute [expression](../../t-sql/language-elements/expressions-transact-sql.md) valide de la catégorie de type de données entier ou des types de données **bit**, **binary** ou **varbinary**. L’*expression* est traitée comme un nombre binaire pour l’opération au niveau du bit.  
   
 > [!NOTE]  
->  Seul *expression* peut être du type **binaire** ou **varbinary** type de données dans une opération au niveau du bit.  
+>  Une seule *expression* peut être de type **binary** ou **varbinary** dans une opération au niveau du bit.  
   
 ## <a name="result-types"></a>Types des résultats  
- Retourne un **int** si les valeurs d’entrée sont **int**, un **smallint** si les valeurs d’entrée sont **smallint**, ou un **tinyint** si les valeurs d’entrée sont **tinyint**.  
+ Retourne un type **int** si les valeurs d’entrée sont **int**, un type **smallint** si les valeurs d’entrée sont **smallint** ou un type **tinyint** si les valeurs d’entrée sont **tinyint**.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  L'opérateur | au niveau du bit exécute un OR logique au niveau du bit entre les deux expressions, évaluant chaque bit se correspondant dans les deux expressions. Dans le résultat, les bits prennent la valeur 1 si l'un des bits ou les deux (pour la position en cours d'évaluation) des expressions d'entrées ont la valeur 1 ; si aucun des deux bits des deux expressions d'entrée ne vaut 1, le bit du résultat est mis à 0.  
   
- Si les expressions de gauche et droite ont des types de données entiers différents (par exemple, sur la gauche *expression* est **smallint** et du droit *expression* est **int**), l’argument du type de données plus petit est converti au type de données plus volumineux. Dans cet exemple, le **smallint *** expression* est converti en un **int**.  
+ Si les expressions de droite et de gauche ont des types de données integer (entier) différents (par exemple, l’*expression* de gauche est de type **smallint** et l’*expression* de droite est de type **int**), l’argument du type de données le plus petit est converti dans le type de données plus grand. Dans cet exemple, l’*expression *smallint**** est convertie en **int**.  
   
 ## <a name="examples"></a>Exemples  
- L’exemple suivant crée une table avec **int** types pour afficher les valeurs d’origine et place la table dans une ligne.  
+ L’exemple suivant crée une table avec des types de données **int** pour afficher les valeurs d’origine et présenter la table sur une seule ligne.  
   
 ```sql  
 CREATE TABLE bitwise  
@@ -78,7 +78,7 @@ INSERT bitwise VALUES (170, 75);
 GO  
 ```  
   
- La requête suivante effectue l’opération de bits OR sur les **a_int_value** et **b_int_value** colonnes.  
+ Cette requête exécute l’opération OR au niveau du bit sur les colonnes **a_int_value** et **b_int_value**.  
   
 ```  
 SELECT a_int_value | b_int_value  
@@ -95,7 +95,7 @@ GO
 (1 row(s) affected)  
 ```  
   
- La représentation binaire de 170 (**a_int_value** ou `A`, ci-dessous) est `0000 0000 1010 1010`. La représentation binaire de 75 (**b_int_value** ou `B`, ci-dessous) est `0000 0000 0100 1011`. L'exécution de l'opération OR au niveau du bit entre ces deux valeurs produit le résultat binaire `0000 0000 1110 1011`, c'est-à-dire 235 en décimal.  
+ La représentation binaire de 170 (**a_int_value** ou `A` ci-dessous) est `0000 0000 1010 1010`. La représentation binaire de 75 (**b_int_value** ou `B` ci-dessous) est `0000 0000 0100 1011`. L'exécution de l'opération OR au niveau du bit entre ces deux valeurs produit le résultat binaire `0000 0000 1110 1011`, c'est-à-dire 235 en décimal.  
   
 ```  
 (A | B)  
@@ -105,11 +105,11 @@ GO
 0000 0000 1110 1011  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- [Operators &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
- [Opérateurs de bits &#40; Transact-SQL &#41;](../../t-sql/language-elements/bitwise-operators-transact-sql.md)   
- [&#124; = &#40; Opérateur de bits OR affectation &#41; &#40; Transact-SQL &#41;](../../t-sql/language-elements/bitwise-or-equals-transact-sql.md)   
- [Compound, opérateurs &#40; Transact-SQL &#41;](../../t-sql/language-elements/compound-operators-transact-sql.md)  
+## <a name="see-also"></a> Voir aussi  
+ [Opérateurs &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
+ [Opérateurs au niveau du bit &#40;Transact-SQL&#41;](../../t-sql/language-elements/bitwise-operators-transact-sql.md)   
+ [&#124;= &#40;Affectation après OR au niveau du bit&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/bitwise-or-equals-transact-sql.md)   
+ [Opérateurs composés &#40;Transact-SQL&#41;](../../t-sql/language-elements/compound-operators-transact-sql.md)  
   
   
 

@@ -63,7 +63,7 @@ DBCC OPENTRAN
   
 ## <a name="arguments"></a>Arguments  
  *database_name* | *database_id*| 0  
- Nom ou ID de la base de données pour laquelle les informations de transaction les plus anciennes sont affichées. En l'absence de spécification, ou si 0 est spécifié, la base de données actuelle est utilisée. Les noms de base de données doivent être conformes aux règles des [identificateurs](../../relational-databases/databases/database-identifiers.md).  
+ Nom ou ID de la base de données pour laquelle les informations de transaction les plus anciennes sont affichées. En l'absence de spécification, ou si 0 est spécifié, la base de données actuelle est utilisée. Les noms de base de données doivent suivre les règles applicables aux [identificateurs](../../relational-databases/databases/database-identifiers.md).  
   
  TABLERESULTS  
  Spécifie les résultats sous le format d'un tableau qui peut être chargé dans une table. Vous devez utiliser cette option pour créer une table de résultats pouvant être insérée dans une table à des fins de comparaison. Lorsque cette option n'est pas précisée, les résultats sont formatés pour pouvoir être lus.  
@@ -71,7 +71,7 @@ DBCC OPENTRAN
  NO_INFOMSGS  
  Supprime tous les messages d'information.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
 Vous devez utiliser DBCC OPENTRAN pour déterminer l'existence d'une transaction ouverte dans le journal des transactions. L'instruction BACKUP LOG ne permet de vider que la partie inactive du journal. Une transaction ouverte peut empêcher la troncature complète du journal. Pour identifier une transaction ouverte, utilisez sp_who pour obtenir l'ID du processus système.
   
 ## <a name="result-sets"></a>Jeux de résultats  
@@ -137,7 +137,7 @@ SELECT * FROM #OpenTranStatus;
 GO  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [BEGIN TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/begin-transaction-transact-sql.md)  
 [COMMIT TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/commit-transaction-transact-sql.md)  
 [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)  

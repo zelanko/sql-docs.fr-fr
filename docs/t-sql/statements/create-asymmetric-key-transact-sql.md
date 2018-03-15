@@ -1,5 +1,5 @@
 ---
-title: "CRÉER une clé asymétrique (Transact-SQL) | Documents Microsoft"
+title: CREATE ASYMMETRIC KEY (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/07/2017
 ms.prod: sql-non-specified
@@ -77,19 +77,19 @@ CREATE ASYMMETRIC KEY Asym_Key_Name
 ```  
   
 ## <a name="arguments"></a>Arguments  
- À partir de *Asym_Key_Source*  
+ FROM *Asym_Key_Source*  
  Spécifie la source à partir de laquelle la paire de clés asymétriques doit être chargée.  
   
- AUTORISATION *database_principal_name*  
+ AUTHORIZATION *database_principal_name*  
  Spécifie le propriétaire de la clé asymétrique. Le propriétaire ne peut pas être un rôle ni un groupe. Si cette option n'est pas spécifiée, le propriétaire sera l'utilisateur en cours.  
   
- FICHIER ='*path_to_strong-name_file*'  
+ FILE ='*path_to_strong-name_file*'  
  Spécifie le chemin d'accès du fichier de nom à partir duquel il convient de charger la paire de clés.  
   
 > [!NOTE]  
 >  Cette option n'est pas disponible dans une base de données à relation contenant-contenu.  
   
- FICHIER exécutable ='*path_to_executable_file*'  
+ EXECUTABLE FILE ='*path_to_executable_file*'  
  Spécifie un fichier d'assembly à partir duquel il convient de charger la clé publique. Limité à 260 caractères par MAX_PATH dans l'API Windows.  
   
 > [!NOTE]  
@@ -98,34 +98,34 @@ CREATE ASYMMETRIC KEY Asym_Key_Name
  ASSEMBLY *Assembly_Name*  
  Spécifie le nom d'un assembly à partir duquel il convient de charger la clé publique.  
   
-CHIFFREMENT par  *\<key_name_in_provider >* spécifie comment la clé est chiffrée. Un certificat, un mot de passe ou une clé asymétrique peut être utilisé.  
+ENCRYPTION BY *\<key_name_in_provider>* Spécifie la façon dont la clé est chiffrée. Un certificat, un mot de passe ou une clé asymétrique peut être utilisé.  
   
  KEY_NAME ='*key_name_in_provider*'  
- Spécifie le nom de la clé à partir du fournisseur externe. Pour plus d’informations sur la gestion de clés externe, consultez [gestion de clés Extensible &#40; Gestion de clés extensible &#41; ](../../relational-databases/security/encryption/extensible-key-management-ekm.md).  
+ Spécifie le nom de la clé à partir du fournisseur externe. Pour plus d’informations sur la gestion des clés externes, consultez [Gestion de clés extensible &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md).  
   
  CREATION_DISPOSITION = CREATE_NEW  
  Crée une clé sur le périphérique EKM (Extensible Key Management). La clause PROV_KEY_NAME doit être utilisée pour spécifier le nom de la clé sur le périphérique. Si une clé existe déjà sur le périphérique l'instruction échoue et génère une erreur.  
   
  CREATION_DISPOSITION = OPEN_EXISTING  
- Mappe un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] une clé asymétrique à une clé de gestion de clés Extensible existante. La clause PROV_KEY_NAME doit être utilisée pour spécifier le nom de la clé sur le périphérique. Si CREATION_DISPOSITION = OPEN_EXISTING n'est pas spécifié, la valeur par défaut est CREATE_NEW.  
+ Mappe une clé asymétrique [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à une clé EKM existante. La clause PROV_KEY_NAME doit être utilisée pour spécifier le nom de la clé sur le périphérique. Si CREATION_DISPOSITION = OPEN_EXISTING n'est pas spécifié, la valeur par défaut est CREATE_NEW.  
   
- ALGORITHME = \<algorithme >  
- Cinq algorithmes peuvent être fournis ; RSA_4096, RSA_3072, RSA_2048, RSA_1024 et RSA_512.  
+ ALGORITHM = \<algorithm>  
+ Cinq algorithmes peuvent être fournis : RSA_4096, RSA_3072, RSA_2048, RSA_1024 et RSA_512.  
   
- RSA_1024 et RSA_512 sont déconseillés. Pour utiliser RSA_1024 ou RSA_512 (non recommandé) vous devez définir le niveau de compatibilité de la base de données à la base de données inférieur ou égal à 120.  
+ RSA_1024 et RSA_512 sont dépréciés. Pour utiliser RSA_1024 ou RSA_512 (ce qui est déconseillé), vous devez affecter le niveau de compatibilité 120 ou un niveau inférieur à la base de données.  
   
- Mot de passe = '*mot de passe*'  
- Spécifie le mot de passe utilisé pour chiffrer la clé privée. Si cette clause n'est pas présente, la clé privée sera chiffrée à l'aide de la clé principale de la base de données. *mot de passe* est un maximum de 128 caractères. *mot de passe* doit remplir les conditions de stratégie de mot de passe Windows de l’ordinateur qui exécute l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ PASSWORD = '*password*'  
+ Spécifie le mot de passe utilisé pour chiffrer la clé privée. Si cette clause n'est pas présente, la clé privée sera chiffrée à l'aide de la clé principale de la base de données. *password* comporte au maximum 128 caractères. *password* doit satisfaire aux critères de la stratégie de mot de passe Windows de l’ordinateur qui exécute l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-## <a name="remarks"></a>Notes  
- Un *clé asymétrique* est une entité sécurisable au niveau de la base de données. Dans sa forme par défaut, cette entité contient à la fois une clé publique et une clé privée. Lorsqu'elle est exécutée sans la clause FROM, l'instruction CREATE ASYMMETRIC KEY génère une nouvelle paire de clés. Lorsqu'elle est exécutée avec la clause FROM, l'instruction CREATE ASYMMETRIC KEY importe une paire de clés à partir d'un fichier ou importe une clé publique à partir d'un assembly.  
+## <a name="remarks"></a>Notes   
+ Une *clé asymétrique* est une entité sécurisable au niveau base de données. Dans sa forme par défaut, cette entité contient à la fois une clé publique et une clé privée. Lorsqu'elle est exécutée sans la clause FROM, l'instruction CREATE ASYMMETRIC KEY génère une nouvelle paire de clés. Lorsqu'elle est exécutée avec la clause FROM, l'instruction CREATE ASYMMETRIC KEY importe une paire de clés à partir d'un fichier ou importe une clé publique à partir d'un assembly.  
   
  Par défaut, la clé privée est protégée par la clé principale de base de données. Si aucune clé principale de base de données n'a été créée, un mot de passe est requis pour protéger la clé privée. Si une clé principale de base de données existe, le mot de passe est facultatif.  
   
  La clé privée peut compter 512, 1 024 ou 2 048 bits.  
   
-## <a name="permissions"></a>Permissions  
- Requiert l'autorisation CREATE ASYMMETRIC KEY sur la base de données. Si la clause AUTHORIZATION est spécifiée, l'autorisation IMPERSONATE sur le principal de base de données ou l'autorisation ALTER sur le rôle d'application est requise. Seules les connexions Windows, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connexions et rôles d’application peuvent posséder des clés asymétriques. Les groupes et les rôles ne peuvent pas posséder de clés asymétriques.  
+## <a name="permissions"></a>Autorisations  
+ Requiert l'autorisation CREATE ASYMMETRIC KEY sur la base de données. Si la clause AUTHORIZATION est spécifiée, l'autorisation IMPERSONATE sur le principal de base de données ou l'autorisation ALTER sur le rôle d'application est requise. Les connexions Windows, les connexions [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et les rôles d’application sont les seuls à pouvoir posséder des clés asymétriques. Les groupes et les rôles ne peuvent pas posséder de clés asymétriques.  
   
 ## <a name="examples"></a>Exemples  
   
@@ -162,7 +162,7 @@ CREATE ASYMMETRIC KEY EKM_askey1
 GO  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Choisir un algorithme de chiffrement](../../relational-databases/security/encryption/choose-an-encryption-algorithm.md)   
  [ALTER ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-asymmetric-key-transact-sql.md)   
  [DROP ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-asymmetric-key-transact-sql.md)   

@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="xml-transact-sql"></a>xml (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Type de données qui stocke les données XML. Vous pouvez stocker **xml** les instances dans une colonne ou une variable de **xml** type.  
+  Type de données qui stocke les données XML. Vous pouvez stocker des instances **xml** dans une colonne ou une variable de type **xml**.  
   
  ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -47,20 +47,20 @@ xml ( [ CONTENT | DOCUMENT ] xml_schema_collection )
   
 ## <a name="arguments"></a>Arguments  
  CONTENT  
- Restreint la **xml** instance soit un fragment XML correctement formé. Les données XML peuvent contenir zéro ou plusieurs éléments au niveau supérieur. Les nœuds de texte sont également autorisés au niveau supérieur.  
+ Limite l’instance **xml** pour qu’elle corresponde à un fragment XML correctement formé. Les données XML peuvent contenir zéro ou plusieurs éléments au niveau supérieur. Les nœuds de texte sont également autorisés au niveau supérieur.  
   
  Il s'agit du comportement par défaut.  
   
  DOCUMENT  
- Restreint la **xml** instance soit un document XML bien formé. Les données XML doivent posséder un et un seul élément racine. Les nœuds de texte ne sont pas autorisés au niveau supérieur.  
+ Limite l’instance **xml** pour qu’elle corresponde à un document XML correctement formé. Les données XML doivent posséder un et un seul élément racine. Les nœuds de texte ne sont pas autorisés au niveau supérieur.  
   
  *xml_schema_collection*  
- Nom d'une collection de schémas XML. Pour créer un typé **xml** colonne ou une variable, vous pouvez éventuellement spécifier le nom de collection de schémas XML. Pour plus d’informations sur le XML typé et, consultez [comparer du XML au format XML non typé](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md).  
+ Nom d'une collection de schémas XML. Pour créer une colonne ou variable **xml** typée, vous pouvez éventuellement spécifier le nom de la collection de schémas XML. Pour plus d’informations sur le XML typé et non typé, consultez [Comparer du XML typé et du XML non typé](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md).  
   
-## <a name="remarks"></a>Notes  
- La représentation stockée de **xml** les instances de type de données ne peut pas dépasser 2 gigaoctets (Go).  
+## <a name="remarks"></a>Notes   
+ La représentation stockée des instances de types de données **xml** ne peut pas excéder une taille de 2 gigaoctets (Go).  
   
- Les facettes CONTENT et DOCUMENT s'appliquent uniquement aux variables typées XML. Pour plus d’informations, consultez [comparer du XML au format XML non typé](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md).  
+ Les facettes CONTENT et DOCUMENT s'appliquent uniquement aux variables typées XML. Pour plus d’informations, consultez [Comparer du XML typé et du XML non typé](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md).  
   
 ## <a name="examples"></a>Exemples  
   
@@ -73,10 +73,10 @@ SELECT @y;
 GO  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- [Conversion de Type de données &#40; moteur de base de données &#41;](../../t-sql/data-types/data-type-conversion-database-engine.md)   
+## <a name="see-also"></a> Voir aussi  
+ [Conversion de type de données &#40;moteur de base de données&#41;](../../t-sql/data-types/data-type-conversion-database-engine.md)   
  [Types de données &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
- [Méthodes des types de données xml](../../t-sql/xml/xml-data-type-methods.md)   
+ [méthodes de type de données xml](../../t-sql/xml/xml-data-type-methods.md)   
  [Références relatives au langage Xquery &#40;SQL Server&#41;](../../xquery/xquery-language-reference-sql-server.md)  
   
   

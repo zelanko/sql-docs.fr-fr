@@ -1,5 +1,5 @@
 ---
-title: "La file d’attente de suppression (Transact-SQL) | Documents Microsoft"
+title: DROP QUEUE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -58,29 +58,29 @@ DROP QUEUE <object>
   
 ## <a name="arguments"></a>Arguments  
  *database_name*  
- Nom de la base de données qui contient la file d'attente à supprimer. Lorsqu’aucun *nom_base_de_données* est fourni, les valeurs par défaut pour la base de données actuelle.  
+ Nom de la base de données qui contient la file d'attente à supprimer. Quand aucun argument *database_name* n’est fourni, la base de données active est utilisée par défaut.  
   
  *schema_name (object)*  
- Nom du schéma auquel appartient la file d'attente à supprimer. Lorsqu’aucun *schema_name* est fourni, les valeurs par défaut pour le schéma par défaut pour l’utilisateur actuel.  
+ Nom du schéma auquel appartient la file d'attente à supprimer. Quand aucun argument *schema_name* n’est fourni, le schéma par défaut de l’utilisateur actif est utilisé par défaut.  
   
  *queue_name*  
  Nom de la file d'attente à supprimer.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Il est impossible de supprimer une file d'attente si un service y fait référence.  
   
 ## <a name="permissions"></a>Autorisations  
- L’autorisation de suppression d’une file d’attente par défaut au propriétaire de la file d’attente, les membres de la **db_ddladmin** ou **db_owner** fixe des rôles de base de données et les membres de la **sysadmin** rôle serveur fixe.  
+ L’autorisation de supprimer une file d’attente est accordée par défaut à son propriétaire, aux membres des rôles de base de données fixes **db_ddladmin** ou **db_owner** et aux membres du rôle serveur fixe **sysadmin**.  
   
 ## <a name="examples"></a>Exemples  
- L’exemple suivant supprime le **ExpenseQueue** file d’attente à partir de la base de données actuelle.  
+ Dans l’exemple ci-dessous, la file d’attente **ExpenseQueue** est supprimée de la base de données active.  
   
 ```  
 DROP QUEUE ExpenseQueue ;  
   
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [CREATE QUEUE &#40;Transact-SQL&#41;](../../t-sql/statements/create-queue-transact-sql.md)   
  [ALTER QUEUE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-queue-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  

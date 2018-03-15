@@ -1,5 +1,5 @@
 ---
-title: "STIsSimple (Type de données geometry) | Documents Microsoft"
+title: "STIsSimple (type de données geometry) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stissimple-geometry-data-type"></a>STIsSimple (type de données geometry)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-Retourne 1 si une **geometry** instance est simple, tel que défini par l’OGC Open Geospatial Consortium (). Retourne 0 si une **geometry** instance n’est pas simple.
+Retourne 1 si une instance **geometry** est simple, tel que le définit l’OGC (Open Geospatial Consortium). Retourne 0 si une instance **geometry** n’est pas simple.
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -44,12 +44,12 @@ Retourne 1 si une **geometry** instance est simple, tel que défini par l’OGC 
 ```  
   
 ## <a name="return-types"></a>Types de retour  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]type de retour : **bits**  
+ Type de retour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] : **bit**  
   
  Type de retour CLR : **SqlBoolean**  
   
-## <a name="remarks"></a>Notes  
- Pour être simple, un **geometry** instance doit satisfaire toutes les conditions suivantes :  
+## <a name="remarks"></a>Notes   
+ Pour être simple, une instance **geometry** doit répondre à toutes les exigences suivantes :  
   
 -   Chaque graphique de l'instance ne doit pas se croiser lui-même, sauf à ses points de terminaison.  
   
@@ -64,7 +64,7 @@ SET @g = geometry::STGeomFromText('LINESTRING(0 0, 2 2, 0 2, 2 0)', 0);
 SELECT @g.STIsSimple();  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Méthodes OGC sur des instances geography](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   
   

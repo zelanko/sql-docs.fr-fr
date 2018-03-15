@@ -1,5 +1,5 @@
 ---
-title: "STMPolyFromWKB (Type de données geography) | Documents Microsoft"
+title: "STMPolyFromWKB (type de données geography) | Microsoft Docs"
 ms.custom: 
 ms.date: 07/30/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stmpolyfromwkb-geography-data-type"></a>STMPolyFromWKB (type de données geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Retourne un **geographyMultiPolygon** instance à partir d’une représentation de l’Open Geospatial Consortium (OGC) WKB Well-Known Binary ().
+Retourne une instance **geographyMultiPolygon** à partir d’une représentation OGC (Open Geospatial Consortium) WKB (Well-Known Binary).
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -45,13 +45,13 @@ STMPolyFromWKB ( 'WKB_multipolygon' , SRID )
   
 ## <a name="arguments"></a>Arguments  
  *WKB_multipolygon*  
- Est la représentation WKB de le **geographyMultiPolygon** instance à retourner. *WKB_multipolygon* est un **varbinary (max)** expression.  
+ Représentation WKB de l’instance **geographyMultiPolygon** à retourner. *WKB_multipolygon* est une expression **varbinary(max)**.  
   
  *SRID*  
- Est un **int** expression représentant les données spatiales ID de référence (SRID) de la **geographyMultiPolygon** instance à retourner.  
+ Expression **int** qui représente le SRID (ID de référence spatiale) de l’instance **geographyMultiPolygon** à retourner.  
   
 ## <a name="return-types"></a>Types de retour  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]type de retour : **geography**  
+ Type de retour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] : **geography**  
   
  Type de retour CLR : **SqlGeography**  
   
@@ -66,7 +66,7 @@ SET @g = geography::STMPolyFromWKB(0x0106000000020000000103000000010000000400000
 SELECT @g.ToString();  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Méthodes geography statiques de l’OGC](../../t-sql/spatial-geography/ogc-static-geography-methods.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: "La propriété INDEXKEY_PROPERTY (Transact-SQL) | Documents Microsoft"
+title: INDEXKEY_PROPERTY (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -41,7 +41,7 @@ ms.lasthandoff: 01/02/2018
   Retourne des informations concernant la clé d'index. Retourne la valeur NULL pour les index XML.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]Au lieu de cela, utilisez [sys.index_columns &#40; Transact-SQL &#41; ](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md).  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Utilisez plutôt [sys.index_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md).  
   
  ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -54,21 +54,21 @@ INDEXKEY_PROPERTY ( object_ID ,index_ID ,key_ID ,property )
   
 ## <a name="arguments"></a>Arguments  
  *object_ID*  
- Numéro d'identification de l'objet de la table ou de la vue indexée. *object_ID* est **int**.  
+ Numéro d'identification de l'objet de la table ou de la vue indexée. *object_ID* est de type **int**.  
   
- *index_id*  
- Numéro d'identification de l'index. *index_id* est **int**.  
+ *index_ID*  
+ Numéro d'identification de l'index. *index_ID* est de type **int**.  
   
- *ID*  
- Position de la colonne clé d'index. *key_ID* est **int**.  
+ *key_ID*  
+ Position de la colonne clé d'index. *key_ID* est de type **int**.  
   
- *propriété*  
- Nom de la propriété pour laquelle des informations sont retournées. *propriété* est une chaîne de caractères et peut prendre l’une des valeurs suivantes.  
+ *property*  
+ Nom de la propriété pour laquelle des informations sont retournées. *property* est une chaîne de caractères qui peut avoir l’une des valeurs suivantes.  
   
 |Valeur|Description|  
 |-----------|-----------------|  
-|**ColumnId**|ID de colonne à la *key_ID* position de l’index.|  
-|**Décroissant**|Ordre de stockage de la colonne d'index<br /><br /> 1 = décroissant 0 = croissant|  
+|**ColumnId**|Identificateur de colonne à la position *key_ID* de l’index.|  
+|**IsDescending**|Ordre de stockage de la colonne d'index<br /><br /> 1 = décroissant 0 = croissant|  
   
 ## <a name="return-types"></a>Types de retour  
  **Int**  
@@ -101,10 +101,10 @@ Column ID   Asc or Desc order
 (1 row(s) affected)  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- [INDEX_COL &#40; Transact-SQL &#41;](../../t-sql/functions/index-col-transact-sql.md)   
+## <a name="see-also"></a> Voir aussi  
+ [INDEX_COL &#40;Transact-SQL&#41;](../../t-sql/functions/index-col-transact-sql.md)   
  [INDEXPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/indexproperty-transact-sql.md)   
- [Sys.Objects &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
+ [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
  [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)   
  [sys.index_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md)  
   

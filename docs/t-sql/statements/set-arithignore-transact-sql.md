@@ -1,5 +1,5 @@
 ---
-title: SET ARITHIGNORE (Transact-SQL) | Documents Microsoft
+title: SET ARITHIGNORE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 12/04/2017
 ms.prod: sql-non-specified
@@ -57,8 +57,8 @@ SET ARITHIGNORE { ON | OFF }
 SET ARITHIGNORE OFF
 ```
 
-## <a name="remarks"></a>Notes  
- Le paramètre SET ARITHIGNORE contrôle uniquement la situation où un message d'erreur est renvoyé. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] renvoie une valeur NULL dans un calcul qui comprend une erreur de dépassement de capacité ou de division par zéro, indépendamment de ce paramètre. Le paramètre SET ARITHABORT peut être utilisée pour déterminer si la requête est achevée. Cette valeur n'affecte pas les erreurs survenant durant des instructions INSERT, UPDATE et DELETE.  
+## <a name="remarks"></a>Notes   
+ Le paramètre SET ARITHIGNORE contrôle uniquement la situation où un message d'erreur est renvoyé. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] renvoie une valeur NULL dans un calcul qui comprend une erreur de dépassement de capacité ou de division par zéro, indépendamment de ce paramètre. Le paramètre SET ARITHABORT peut être utilisé pour déterminer si la requête est achevée. Cette valeur n'affecte pas les erreurs survenant durant des instructions INSERT, UPDATE et DELETE.  
   
  Si la valeur de SET ARITHABORT ou de SET ARITHIGNORE est définie à OFF et que SET ANSI_WARNINGS a la valeur ON, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] renvoie malgré tout un message d'erreur quand il rencontre une erreur de division par zéro ou de dépassement de capacité.  
   
@@ -73,7 +73,7 @@ SELECT @ARITHIGNORE AS ARITHIGNORE;
   
 ```  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l'appartenance au rôle public.  
   
 ## <a name="examples"></a>Exemples  
@@ -105,8 +105,8 @@ SELECT CAST(256 AS TINYINT) AS Overflow;
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemples : [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] et[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- L’exemple suivant montre la division par zéro et les erreurs de dépassement de capacité. Cet exemple ne retourne pas d’un message d’erreur pour ces erreurs car ARITHIGNORE a la valeur OFF.  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemples : [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] et [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+ L’exemple suivant illustre les erreurs de dépassement et de division par zéro. Cet exemple ne retourne pas de message d’erreur pour ces erreurs, car ARITHIGNORE a la valeur OFF.  
   
 ```  
 -- SET ARITHIGNORE OFF and testing.  
@@ -116,9 +116,9 @@ SELECT CAST(256 AS TINYINT) AS Overflow;
   
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Instructions SET &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)   
- [SET ARITHABORT &#40; Transact-SQL &#41;](../../t-sql/statements/set-arithabort-transact-sql.md)  
+ [SET ARITHABORT &#40;Transact-SQL&#41;](../../t-sql/statements/set-arithabort-transact-sql.md)  
   
   
 

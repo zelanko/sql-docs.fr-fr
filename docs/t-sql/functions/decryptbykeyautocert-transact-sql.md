@@ -1,5 +1,5 @@
 ---
-title: DECRYPTBYKEYAUTOCERT (Transact-SQL) | Documents Microsoft
+title: DECRYPTBYKEYAUTOCERT (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 09/09/2015
 ms.prod: sql-non-specified
@@ -50,36 +50,36 @@ DecryptByKeyAutoCert ( cert_ID , cert_password
   
 ## <a name="arguments"></a>Arguments  
  *cert_ID*  
- ID du certificat servant à protéger la clé symétrique. *cert_ID* est **int**.  
+ ID du certificat servant à protéger la clé symétrique. *cert_ID* est de type **int**.  
   
  *cert_password*  
- Mot de passe qui protège la clé privée du certificat. Peut être NULL si la clé privée est protégée par la clé principale de la base de données. *cert_password* est **nvarchar**.  
+ Mot de passe qui protège la clé privée du certificat. Peut être NULL si la clé privée est protégée par la clé principale de la base de données. *cert_password* est de type **nvarchar**.  
   
- '*texte chiffré*'  
- Données chiffrées avec la clé. *texte chiffré* est **varbinary**.  
+ '*ciphertext*'  
+ Données chiffrées avec la clé. *ciphertext* est de type **varbinary**.  
   
  @ciphertext  
- Est une variable de type **varbinary** qui contient les données chiffrées avec la clé.  
+ Variable de type **varbinary** contenant des données qui ont été chiffrées avec la clé.  
   
  *add_authenticator*  
- Indique si un authentificateur a été chiffré en même temps que le texte en clair. Doit être la même valeur transmise à EncryptByKey lors du chiffrement des données. Est **1** si un authentificateur a été utilisé. *add_authenticator* est **int**.  
+ Indique si un authentificateur a été chiffré en même temps que le texte en clair. Il doit s’agir de la valeur transmise à EncryptByKey lors du chiffrement des données. Égale à **1** si un authentificateur a été utilisé. *add_authenticator* est de type **int**.  
   
  @add_authenticator  
  Indique si un authentificateur a été chiffré en même temps que le texte en clair. Il doit s'agir de la valeur transmise à EncryptByKey lors du chiffrement des données.  
   
- *authentificateur*  
- Données à partir desquelles un authentificateur peut être généré. Doit correspondre à la valeur qui a été fournie à EncryptByKey. *l’authentificateur* est **sysname**.  
+ *authenticator*  
+ Données à partir desquelles un authentificateur peut être généré. Doit correspondre à la valeur qui a été fournie à EncryptByKey. *authenticator* est de type **sysname**.  
   
  @authenticator  
  Variable contenant les données à partir desquelles l'authentificateur sera généré. Doit correspondre à la valeur qui a été fournie à EncryptByKey.  
   
 ## <a name="return-types"></a>Types de retour  
- **varbinary** avec une taille maximale de 8 000 octets.  
+ **varbinary** d’une taille maximale de 8 000 octets.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  DecryptByKeyAutoCert combine les fonctionnalités de OPEN SYMMETRIC KEY et de DecryptByKey. Dans une même opération, il déchiffre une clé symétrique et l'utilise pour déchiffrer le texte chiffré.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Requiert l'autorisation VIEW DEFINITION sur la clé symétrique et CONTROL sur le certificat.  
   
 ## <a name="examples"></a>Exemples  
@@ -132,10 +132,10 @@ SELECT NationalIDNumber, EncryptedNationalIDNumber
     FROM HumanResources.Employee;  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [OPEN SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/open-symmetric-key-transact-sql.md)   
- [ENCRYPTBYKEY &#40; Transact-SQL &#41;](../../t-sql/functions/encryptbykey-transact-sql.md)   
- [DECRYPTBYKEY &#40; Transact-SQL &#41;](../../t-sql/functions/decryptbykey-transact-sql.md)   
+ [ENCRYPTBYKEY &#40;Transact-SQL&#41;](../../t-sql/functions/encryptbykey-transact-sql.md)   
+ [DECRYPTBYKEY &#40;Transact-SQL&#41;](../../t-sql/functions/decryptbykey-transact-sql.md)   
  [Hiérarchie de chiffrement](../../relational-databases/security/encryption/encryption-hierarchy.md)  
   
   

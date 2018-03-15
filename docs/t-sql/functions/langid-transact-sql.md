@@ -1,5 +1,5 @@
 ---
-title: '@@LANGID (Transact-SQL) | Documents Microsoft'
+title: '@@LANGID (Transact-SQL) | Microsoft Docs'
 ms.custom: 
 ms.date: 09/18/2017
 ms.prod: sql-non-specified
@@ -35,7 +35,7 @@ ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="x40x40langid-transact-sql"></a>& #x 40 ; & #x 40 ; ID de langue (Transact-SQL)
+# <a name="x40x40langid-transact-sql"></a>&#x40;&#x40;LANGID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Retourne l'identificateur local de la langue actuellement utilisée.  
@@ -51,8 +51,8 @@ ms.lasthandoff: 11/21/2017
 ## <a name="return-types"></a>Types de retour  
  **smallint**  
   
-## <a name="remarks"></a>Notes  
- Pour afficher plus d’informations sur les paramètres de langue, y compris les numéros d’ID de langue, exécutez **sp_helplanguage** sans aucun paramètre.  
+## <a name="remarks"></a>Notes   
+ Pour consulter les informations relatives aux paramètres de langue, y compris les numéros d’identificateur de langue, exécutez **sp_helplanguage** sans aucun paramètre.  
   
 ## <a name="examples"></a>Exemples  
  L'exemple suivant définit `Italian` comme langue de la session en cours, puis utilise `@@LANGID` pour retourner l'identificateur correspondant à Italian.  
@@ -71,9 +71,9 @@ Language ID
 6            
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Fonctions de configuration &#40;Transact-SQL&#41;](../../t-sql/functions/configuration-functions-transact-sql.md)   
- [SET LANGUAGE &#40; Transact-SQL &#41;](../../t-sql/statements/set-language-transact-sql.md)   
- [sp_helplanguage &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-helplanguage-transact-sql.md)  
+ [SET LANGUAGE &#40;Transact-SQL&#41;](../../t-sql/statements/set-language-transact-sql.md)   
+ [sp_helplanguage &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helplanguage-transact-sql.md)  
   
   

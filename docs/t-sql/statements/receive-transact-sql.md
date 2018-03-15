@@ -1,5 +1,5 @@
 ---
-title: "RÉCEPTION (Transact-SQL) | Documents Microsoft"
+title: RECEIVE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/26/2017
 ms.prod: sql-non-specified
@@ -74,13 +74,13 @@ ms.lasthandoff: 11/21/2017
  WAITFOR  
  Indique que l'instruction RECEIVE attend qu'un message arrive dans la file d'attente, si aucun message n'est actuellement présent.  
   
- HAUT (  *n*  )  
+ TOP( *n* )  
  Indique le nombre maximal de messages à retourner. Si cette clause n'est pas spécifiée, tous les messages qui satisfont aux critères de l'instruction sont retournés.  
   
  \*  
  Indique que le jeu de résultats contient toutes les colonnes de la file d'attente.  
   
- *nom_colonne*  
+ *column_name*  
  Nom de la colonne à inclure dans le jeu de résultats.  
   
  *expression*  
@@ -93,51 +93,51 @@ ms.lasthandoff: 11/21/2017
  Spécifie la file d'attente qui contient les messages à récupérer.  
   
  *database_name*  
- Nom de la base de données qui contient la file d'attente à partir de laquelle les messages sont envoyés. Lorsqu’aucun *nom de la base de données* est fourni, les valeurs par défaut pour la base de données actuelle.  
+ Nom de la base de données qui contient la file d'attente à partir de laquelle les messages sont envoyés. Quand aucun argument *database_name* n’est fourni, la base de données active est utilisée par défaut.  
   
  *schema_name*  
- Nom du schéma propriétaire de la file d'attente à partir de laquelle les messages sont envoyés. Lorsqu’aucun *nom de schéma* est fourni, les valeurs par défaut pour le schéma par défaut pour l’utilisateur actuel.  
+ Nom du schéma propriétaire de la file d'attente à partir de laquelle les messages sont envoyés. Quand aucun argument *schema_name* n’est fourni, le schéma par défaut de l’utilisateur actif est utilisé par défaut.  
   
- *nom_file_attente*  
+  *queue_name*  
  Nom de la file d'attente à partir de laquelle les messages sont envoyés.  
   
- DANS *table_variable*  
+ INTO *table_variable*  
  Spécifie la variable de table dans laquelle RECEIVE place les messages. La variable de table doit avoir un nombre de colonnes égal à celui présent dans les messages. Le type de données de chaque colonne dans la variable de table doit pouvoir être converti implicitement vers le type de données de la colonne correspondante dans les messages. Si INTO n'est pas spécifié, les messages sont retournés sous la forme d'un jeu de résultats.  
   
  WHERE  
  Indique la conversation ou le groupe de conversations des messages reçus. Si cette clause est omise, retourne les messages du groupe de conversations suivant disponible.  
   
  conversation_handle = *conversation_handle*  
- Indique la conversation pour les messages reçus. Le *descripteur de conversation* fourni doit être un **uniqueidentifer**, ou un type convertible en **uniqueidentifier**.  
+ Indique la conversation pour les messages reçus. Le *handle de conversation* fourni doit être un **uniqueidentifer** ou un type convertible en **uniqueidentifier**.  
   
  conversation_group_id = *conversation_group_id*  
- Spécifie le groupe de conversations pour les messages reçus. Le *ID de groupe de conversation est* fourni doit être un **uniqueidentifier**, ou un type convertible en **uniqueidentifier**.  
+ Indique le groupe de conversation pour les messages reçus. L’*ID de groupe de conversations* fourni doit être un **uniqueidentifier** ou un type convertible en **uniqueidentifier**.  
   
- Délai d’attente *délai d’attente*  
- Indique le temps, en millisecondes, pendant lequel l'instruction attend un message. Cette clause ne peut être utilisée qu'avec la clause WAITFOR. Si cette clause n’est pas spécifiée, ou si le délai d’attente est -**1**, le temps d’attente est illimité. Si le délai expire, l'instruction RECEIVE retourne un jeu de résultats vide.  
+ TIMEOUT *timeout*  
+ Indique le temps, en millisecondes, pendant lequel l'instruction attend un message. Cette clause ne peut être utilisée qu'avec la clause WAITFOR. Si cette clause n’est pas spécifiée ou si le délai d’expiration a la valeur -**1**, le délai d’attente est illimité. Si le délai expire, l'instruction RECEIVE retourne un jeu de résultats vide.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
   
 > [!IMPORTANT]  
 >  Si l'instruction RECEIVE n'est pas la première instruction dans un lot ou une procédure stockée, l'instruction précédente doit se terminer par un point-virgule (;).  
   
- L'instruction RECEIVE lit les messages d'une file d'attente et retourne un jeu de résultats. Le jeu de résultats ne comporte aucune ligne ou comporte plusieurs lignes, chacune contenant un message unique. Si la clause INTO n’est pas utilisée, et *column_specifier* n’affecte pas les valeurs aux variables locales, l’instruction retourne un jeu de résultats pour le programme appelant.  
+ L'instruction RECEIVE lit les messages d'une file d'attente et retourne un jeu de résultats. Le jeu de résultats ne comporte aucune ligne ou comporte plusieurs lignes, chacune contenant un message unique. Si la clause INTO n’est pas utilisée et que l’argument *column_specifier* n’affecte pas les valeurs des variables locales, l’instruction retourne un jeu de résultats au programme appelant.  
   
- Les messages retournés par l'instruction RECEIVE peuvent être de types différents. Les applications peuvent utiliser le **message_type_name** colonne pour router chaque message vers du code qui gère le type de message associé. Il existe deux classes de types de messages :  
+ Les messages retournés par l'instruction RECEIVE peuvent être de types différents. Les applications peuvent utiliser la colonne **message_type_name** pour acheminer chaque message vers du code qui gère le type de message associé. Il existe deux classes de types de messages :  
   
 -   Les types de messages définis par l'application, qui ont été créés à l'aide de l'instruction CREATE MESSAGE TYPE. L'ensemble de types de messages définis par l'application autorisés dans une conversation est défini par le contrat [!INCLUDE[ssSB](../../includes/sssb-md.md)] spécifié pour la conversation.  
   
 -   Messages système [!INCLUDE[ssSB](../../includes/sssb-md.md)] qui retournent des informations d'état ou d'erreur.  
   
- L'instruction RECEIVE supprime les messages reçus de la file d'attente, sauf si la file d'attente spécifie une période de rétention des messages. Lorsque le paramètre de rétention pour la file d’attente est activée, l’instruction RECEIVE met à jour la **état** colonne **0** et conserve les messages dans la file d’attente. Quand une transaction qui contient une instruction RECEIVE est restaurée, toutes les modifications apportées à la file d'attente dans la transaction sont également restaurées et les messages retournent dans la file d'attente.  
+ L'instruction RECEIVE supprime les messages reçus de la file d'attente, sauf si la file d'attente spécifie une période de rétention des messages. Si la valeur ON est affectée au paramètre RETENTION, l’instruction RECEIVE met à jour la colonne **status** avec la valeur **0** et conserve les messages dans la file d’attente. Quand une transaction qui contient une instruction RECEIVE est restaurée, toutes les modifications apportées à la file d'attente dans la transaction sont également restaurées et les messages retournent dans la file d'attente.  
   
- Tous les messages retournés par une instruction RECEIVE appartiennent au même groupe de conversations. L'instruction RECEIVE verrouille le groupe de conversations pour les messages qui sont retournés jusqu'à ce que la transaction qui contient l'instruction se termine. Une instruction RECEIVE retourne les messages ayant un **état** de **1.** Le jeu de résultats retourné par une instruction RECEIVE est trié implicitement :  
+ Tous les messages retournés par une instruction RECEIVE appartiennent au même groupe de conversations. L'instruction RECEIVE verrouille le groupe de conversations pour les messages qui sont retournés jusqu'à ce que la transaction qui contient l'instruction se termine. Une instruction RECEIVE retourne des messages qui ont un **état** égal à **1**. Le jeu de résultats retourné par une instruction RECEIVE est trié implicitement :  
   
 -   Si des messages de plusieurs conversations rencontrent les conditions de clause WHERE, l'instruction RECEIVE retourne tous les messages d'une conversation avant de retourner les messages pour toute autre conversation. Les conversations sont traitées dans l'ordre descendant des niveaux de priorité.  
   
--   Pour une conversation donnée, une instruction RECEIVE retourne les messages dans l’ordre croissant **message_sequence_number** ordre.  
+-   Pour une conversation donnée, une instruction RECEIVE retourne les messages dans l’ordre croissant de l’argument **message_sequence_number**.  
   
- La clause WHERE de l’instruction RECEIVE peut contenir uniquement une condition de recherche qui utilise **conversation_handle** ou **conversation_group_id**. La condition de recherche ne peut pas contenir d'autres colonnes de la file d'attente. Le **conversation_handle** ou **conversation_group_id** ne peut pas être une expression. Le jeu de messages retourné dépend des conditions spécifiées dans la clause WHERE :  
+ La clause WHERE de l’instruction RECEIVE peut contenir seulement une condition de recherche, qui utilise **conversation_handle** ou **conversation_group_id**. La condition de recherche ne peut pas contenir d'autres colonnes de la file d'attente. **conversation_handle** ou **conversation_group_id** ne peut pas être une expression. Le jeu de messages retourné dépend des conditions spécifiées dans la clause WHERE :  
   
 -   Si **conversation_handle** est spécifié, RECEIVE retourne tous les messages de la conversation spécifiée qui sont disponibles dans la file d’attente.  
   
@@ -166,24 +166,24 @@ ms.lasthandoff: 11/21/2017
 ## <a name="queue-columns"></a>Colonnes de la file d'attente  
  Le tableau suivant répertorie les colonnes d'une file d'attente :  
   
-|Nom de colonne|Type de données| Description|  
+|Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**status**|**tinyint**|État du message. Pour les messages retournés par la commande RECEIVE, l’état est toujours **0**. Dans la file d'attente, les messages peuvent contenir l'une des valeurs suivantes :<br /><br /> **0**= prêt**1**= message reçu**2**ne = pas encore terminé**3**= message envoyé conservé|  
-|**priorité**|**tinyint**|Niveau de priorité de conversation appliqué au message.|  
+|**status**|**tinyint**|État du message. Pour les messages retournés par la commande RECEIVE, l’état a toujours la valeur **0**. Dans la file d'attente, les messages peuvent contenir l'une des valeurs suivantes :<br /><br /> **0**= Prêt**1**= Message reçu**2**= Pas encore terminé**3**= Message envoyé conservé|  
+|**priority**|**tinyint**|Niveau de priorité de conversation appliqué au message.|  
 |**queuing_order**|**bigint**|Numéro d'ordre du message dans la file d'attente.|  
 |**conversation_group_id**|**uniqueidentifier**|Identificateur du groupe de conversations auquel ce message appartient.|  
 |**conversation_handle**|**uniqueidentifier**|Descripteur de conversation dont ce message fait partie.|  
 |**message_sequence_number**|**bigint**|Numéro de séquence du message dans la conversation.|  
-|**SERVICE_NAME**|**nvarchar(512)**|Nom du service auquel la conversation est destinée.|  
-|**service_id**|**int**|Identificateur d'objet [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] du service auquel la conversation est destinée.|  
+|**service_name**|**nvarchar(512)**|Nom du service auquel la conversation est destinée.|  
+|**service_id**|**Int**|Identificateur d'objet [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] du service auquel la conversation est destinée.|  
 |**service_contract_name**|**nvarchar (256)**|Nom du contrat suivi par la conversation.|  
-|**service_contract_id**|**int**|Identificateur d'objet [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] du contrat suivi par la conversation.|  
+|**service_contract_id**|**Int**|Identificateur d'objet [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] du contrat suivi par la conversation.|  
 |**message_type_name**|**nvarchar (256)**|Nom du type de message qui décrit le format du message. Les messages peuvent être des types de messages d'application ou des messages système Service Broker.|  
-|**message_type_id**|**int**|Identificateur d'objet [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] du type de message décrivant le message.|  
-|**validation**|**NCHAR(2)**|Validation utilisée pour le message.<br /><br /> **E**= vide**N**= None**X**= XML|  
-|**message_body**|**varbinary (max)**|Contenu du message.|  
+|**message_type_id**|**Int**|Identificateur d'objet [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] du type de message décrivant le message.|  
+|**validation**|**nchar(2)**|Validation utilisée pour le message.<br /><br /> **E**=Empty**N**=None**X**=XML|  
+|**message_body**|**varbinary(MAX)**|Contenu du message.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Pour recevoir un message, l'utilisateur en cours doit disposer de l'autorisation RECEIVE sur la file d'attente.  
   
 ## <a name="examples"></a>Exemples  
@@ -270,7 +270,7 @@ WHERE conversation_group_id = @conversation_group_id ;
 ```  
   
 ### <a name="g-receiving-messages-and-waiting-indefinitely"></a>G. Réception des messages et délai d'attente indéfini  
- L’exemple suivant reçoit tous les messages disponibles pour le groupe de conversations disponible suivant dans la `ExpenseQueue` file d’attente. L'instruction attend qu'au moins un message soit disponible, puis retourne un jeu de résultats qui contient toutes les colonnes des messages.  
+ L’exemple suivant montre comment recevoir tous les messages disponibles du groupe de conversations suivant disponible dans la file d’attente `ExpenseQueue`. L'instruction attend qu'au moins un message soit disponible, puis retourne un jeu de résultats qui contient toutes les colonnes des messages.  
   
 ```  
 WAITFOR (  
@@ -279,7 +279,7 @@ WAITFOR (
 ```  
   
 ### <a name="h-receiving-messages-and-waiting-for-a-specified-interval"></a>H. Réception des messages et intervalle d'attente spécifié  
- L’exemple suivant reçoit tous les messages disponibles pour le groupe de conversations disponible suivant dans la `ExpenseQueue` file d’attente. L'instruction attend 60 secondes ou qu'au moins un message soit disponible, selon ce qui se produit en premier. L'instruction retourne un jeu de résultats qui contient toutes les colonnes des messages, si au moins un message est disponible. Dans le cas contraire, l'instruction retourne un jeu de résultats vide.  
+ L’exemple suivant montre comment recevoir tous les messages disponibles du groupe de conversations suivant disponible dans la file d’attente `ExpenseQueue`. L'instruction attend 60 secondes ou qu'au moins un message soit disponible, selon ce qui se produit en premier. L'instruction retourne un jeu de résultats qui contient toutes les colonnes des messages, si au moins un message est disponible. Dans le cas contraire, l'instruction retourne un jeu de résultats vide.  
   
 ```  
 WAITFOR (  
@@ -289,7 +289,7 @@ TIMEOUT 60000 ;
 ```  
   
 ### <a name="i-receiving-messages-modifying-the-type-of-a-column"></a>I. Réception de messages, modification du type d'une colonne  
- L’exemple suivant reçoit tous les messages disponibles pour le groupe de conversations disponible suivant dans la `ExpenseQueue` file d’attente. Si le type de message indique que le message contient un document XML, l'instruction convertit le corps du message en document XML.  
+ L’exemple suivant montre comment recevoir tous les messages disponibles du groupe de conversations suivant disponible dans la file d’attente `ExpenseQueue`. Si le type de message indique que le message contient un document XML, l'instruction convertit le corps du message en document XML.  
   
 ```  
 WAITFOR (  
@@ -338,15 +338,15 @@ WAITFOR(
 ), TIMEOUT 60000 ;  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- [BEGIN DIALOG CONVERSATION &#40; Transact-SQL &#41;](../../t-sql/statements/begin-dialog-conversation-transact-sql.md)   
- [BEGIN CONVERSATION TIMER &#40; Transact-SQL &#41;](../../t-sql/statements/begin-conversation-timer-transact-sql.md)   
- [CONVERSATION de fin &#40; Transact-SQL &#41;](../../t-sql/statements/end-conversation-transact-sql.md)   
- [CRÉER un contrat &#40; Transact-SQL &#41;](../../t-sql/statements/create-contract-transact-sql.md)   
- [CRÉER un TYPE DE MESSAGE &#40; Transact-SQL &#41;](../../t-sql/statements/create-message-type-transact-sql.md)   
- [ENVOI &#40; Transact-SQL &#41;](../../t-sql/statements/send-transact-sql.md)   
+## <a name="see-also"></a> Voir aussi  
+ [BEGIN DIALOG CONVERSATION &#40;Transact-SQL&#41;](../../t-sql/statements/begin-dialog-conversation-transact-sql.md)   
+ [BEGIN CONVERSATION TIMER &#40;Transact-SQL&#41;](../../t-sql/statements/begin-conversation-timer-transact-sql.md)   
+ [END CONVERSATION &#40;Transact-SQL&#41;](../../t-sql/statements/end-conversation-transact-sql.md)   
+ [CREATE CONTRACT &#40;Transact-SQL&#41;](../../t-sql/statements/create-contract-transact-sql.md)   
+ [CREATE MESSAGE TYPE &#40;Transact-SQL&#41;](../../t-sql/statements/create-message-type-transact-sql.md)   
+ [SEND &#40;Transact-SQL&#41;](../../t-sql/statements/send-transact-sql.md)   
  [CREATE QUEUE &#40;Transact-SQL&#41;](../../t-sql/statements/create-queue-transact-sql.md)   
- [ALTER QUEUE &#40; Transact-SQL &#41;](../../t-sql/statements/alter-queue-transact-sql.md)   
- [SUPPRIMER la file d’attente &#40; Transact-SQL &#41;](../../t-sql/statements/drop-queue-transact-sql.md)  
+ [ALTER QUEUE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-queue-transact-sql.md)   
+ [DROP QUEUE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-queue-transact-sql.md)  
   
   

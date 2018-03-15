@@ -36,7 +36,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="else-ifelse-transact-sql"></a>ELSE (IF...ELSE) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Impose les conditions d'exécution d'une instruction [!INCLUDE[tsql](../../includes/tsql-md.md)]. Le [!INCLUDE[tsql](../../includes/tsql-md.md)] instruction (*sql_statement*) suivant le *Boolean_expression*est exécutée si la *Boolean_expression* a la valeur TRUE. Le mot clé facultatif ELSE est un autre [!INCLUDE[tsql](../../includes/tsql-md.md)] instruction est exécutée lorsque *Boolean_expression* prend la valeur FALSE ou NULL.  
+  Impose les conditions d'exécution d'une instruction [!INCLUDE[tsql](../../includes/tsql-md.md)]. L’instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] (*sql_statement*) qui suit *Boolean_expression* est exécutée si *Boolean_expression* a la valeur TRUE. Le mot clé facultatif ELSE est une instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] alternative exécutée lorsque la valeur renvoyée par *Boolean_expression* est FALSE ou NULL.  
   
  ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -51,10 +51,10 @@ IF Boolean_expression
   
 ## <a name="arguments"></a>Arguments  
  *Boolean_expression*  
- Expression qui renvoie TRUE ou FALSE. Si le *Boolean_expression* contient une instruction SELECT, l’instruction SELECT doit être placée entre parenthèses.  
+ Expression qui renvoie TRUE ou FALSE. Si *Boolean_expression* contient une instruction SELECT, cette dernière doit être mise entre parenthèses.  
   
  { *sql_statement* | *statement_block* }  
- Toute instruction ou tout groupe d'instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] valide tel que défini dans un bloc d'instructions. Pour définir un bloc (traitement) d'instructions, utilisez les mots clé BEGIN et END du langage de contrôle de flux. Bien que tous les [!INCLUDE[tsql](../../includes/tsql-md.md)] instructions sont valides dans un BEGIN... FIN bloquer certains [!INCLUDE[tsql](../../includes/tsql-md.md)] instructions ne doivent pas être regroupées dans le même lot (bloc d’instructions).  
+ Toute instruction ou tout groupe d'instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] valide tel que défini dans un bloc d'instructions. Pour définir un bloc (traitement) d'instructions, utilisez les mots clé BEGIN et END du langage de contrôle de flux. Bien que toutes les instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] soient valides à l’intérieur d’un bloc BEGIN…END, certaines instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] ne doivent pas être regroupées dans un même lot (bloc d’instructions).  
   
 ## <a name="result-types"></a>Types des résultats  
  **Booléen**  
@@ -123,7 +123,7 @@ GO
 ```  
   
 ### <a name="d-using-nested-ifelse-statements"></a>D. Utilisation d'instructions IF...ELSE imbriquées  
- L’exemple suivant montre comment une instruction IF... Instruction ELSE peut être imbriquée dans une autre. Définissez la variable `@Number` à `5`, `50` et `500` pour tester chaque instruction.  
+ L’exemple suivant montre comment une instruction IF … ELSE peut s’imbriquer dans une autre. Définissez la variable `@Number` à `5`, `50` et `500` pour tester chaque instruction.  
   
 ```  
 DECLARE @Number int;  
@@ -140,10 +140,10 @@ ELSE
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemples : [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] et[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemples : [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] et [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="e-using-a-query-as-part-of-a-boolean-expression"></a>E : utilisation d’une requête en tant que partie d’une expression booléenne  
- L’exemple suivant utilise `IF…ELSE` pour déterminer lequel des deux réponses permettant à l’utilisateur, en fonction du poids d’un élément dans le `DimProduct` table.  
+### <a name="e-using-a-query-as-part-of-a-boolean-expression"></a>E. Utilisation d’une requête dans le cadre d’une expression booléenne  
+ L’exemple suivant utilise `IF…ELSE` pour déterminer quelle réponse donner à l’utilisateur entre deux réponses, en fonction du poids d’un élément dans la table `DimProduct`.  
   
 ```  
 -- Uses AdventureWorks  
@@ -157,9 +157,9 @@ ELSE
     (SELECT @productKey, EnglishDescription, Weight, 'This product is available for shipping or pickup.' FROM DimProduct WHERE ProductKey=@productKey)  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [ALTER TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/alter-trigger-transact-sql.md)   
- [Langage de contrôle de flux &#40; Transact-SQL &#41;](~/t-sql/language-elements/control-of-flow.md)   
+ [Langage de contrôle de flux &#40;Transact-SQL&#41;](~/t-sql/language-elements/control-of-flow.md)   
  [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)   
  [IF...ELSE &#40;Transact-SQL&#41;](../../t-sql/language-elements/if-else-transact-sql.md)  
   

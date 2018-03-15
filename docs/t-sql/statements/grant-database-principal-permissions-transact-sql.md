@@ -1,5 +1,5 @@
 ---
-title: "ACCORDER des autorisations de Principal de base de données (Transact-SQL) | Documents Microsoft"
+title: "GRANT - Octroyer des autorisations sur un principal de base de données (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/12/2017
 ms.prod: sql-non-specified
@@ -38,7 +38,7 @@ ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="grant-database-principal-permissions-transact-sql"></a>GRANT – octroi d'autorisations de principal de base de données (Transact-SQL)
+# <a name="grant-database-principal-permissions-transact-sql"></a>GRANT - Octroyer des autorisations sur un principal de base de données (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Permet d'accorder des autorisations sur un utilisateur de base de données, un rôle de base de données ou un rôle d'application dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -71,23 +71,23 @@ GRANT permission [ ,...n ]
 ```  
   
 ## <a name="arguments"></a>Arguments  
- *autorisation*  
+ *permission*  
  Spécifie une autorisation qui peut être accordée sur le principal de base de données. Pour obtenir la liste des autorisations, consultez la section Notes plus loin dans cette rubrique.  
   
- UTILISATEUR ::*database_user*  
+ USER ::*database_user*  
  Spécifie la classe et le nom de l'utilisateur sur lequel l'autorisation est accordée. L'identificateur d'étendue (::) est requis.  
   
- RÔLE ::*database_role*  
+ ROLE ::*database_role*  
  Spécifie la classe et le nom du rôle sur lequel l'autorisation est accordée. L'identificateur d'étendue (::) est requis.  
   
- RÔLE d’APPLICATION ::*application_role*  
+ APPLICATION ROLE ::*application_role*  
    
  Spécifie la classe et le nom du rôle d'application sur lequel l'autorisation est accordée. L'identificateur d'étendue (::) est requis.  
   
  WITH GRANT OPTION  
  Indique que le principal a également la possibilité d'accorder l'autorisation spécifiée à d'autres principaux.  
   
- En tant que \<principal_base_de_données >  
+ AS \<database_principal>  
  Spécifie un principal dont le principal qui exécute cette requête dérive son droit d'accorder l'autorisation.  
   
  *Database_user*  
@@ -97,7 +97,7 @@ GRANT permission [ ,...n ]
  Spécifie un rôle de base de données.  
   
  *Application_role*  
- **S’applique aux**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] via [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+ **S’applique à** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] jusqu’à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
  Spécifie un rôle d'application.  
   
@@ -119,8 +119,8 @@ GRANT permission [ ,...n ]
  *Database_user_with_no_login*  
  Spécifie un utilisateur de base de données sans principal au niveau serveur correspondant.  
   
-## <a name="remarks"></a>Notes  
- Pour plus d’informations sur les entités de base de données sont visibles dans le [sys.database_principals](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md) affichage catalogue. Pour plus d’informations sur les autorisations de niveau base de données sont visibles dans le [sys.database_permissions](../../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md) affichage catalogue.  
+## <a name="remarks"></a>Notes   
+ Des informations sur les principaux de base de données sont consultables dans la vue de catalogue [sys.database_principals](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md). Des informations sur les autorisations au niveau base de données sont consultables dans la vue de catalogue [sys.database_permissions](../../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md).  
   
 ## <a name="database-user-permissions"></a>Autorisations d'un utilisateur de base de données  
  Un utilisateur de base de données est un élément sécurisable au niveau base de données inclus dans la base de données qui est son parent dans la hiérarchie des autorisations. Les autorisations les plus spécifiques et limitées qu'il est possible d'accorder sur un utilisateur de base de données sont répertoriées dans le tableau ci-dessous, avec les autorisations plus générales qui les incluent de manière implicite.  
@@ -151,20 +151,20 @@ GRANT permission [ ,...n ]
 |ALTER|CONTROL|ALTER ANY APPLICATION ROLE|  
 |VIEW DEFINITION|CONTROL|VIEW DEFINITION|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Le fournisseur d'autorisations (ou le principal spécifié avec l'option AS) doit posséder l'autorisation elle-même avec l'option GRANT OPTION ou une autorisation plus élevée qui implique l'autorisation accordée.  
   
  Si vous utilisez l'option AS, les conditions supplémentaires ci-dessous s'appliquent.  
   
-|En tant que *granting_principal*|Autres autorisations nécessaires|  
+|AS *granting_principal*|Autres autorisations nécessaires|  
 |------------------------------|------------------------------------|  
 |Utilisateur de base de données|Autorisation IMPERSONATE sur l'utilisateur, appartenance au rôle de base de données fixe db_securityadmin, appartenance au rôle de base de données fixe db_owner ou appartenance au rôle serveur fixe sysadmin.|  
 |Utilisateur de base de données mappé à un utilisateur Windows|Autorisation IMPERSONATE sur l'utilisateur, appartenance au rôle de base de données fixe db_securityadmin, appartenance au rôle de base de données fixe db_owner ou appartenance au rôle serveur fixe sysadmin.|  
 |Utilisateur de base de données mappé à un groupe Windows|Appartenance au groupe Windows, appartenance aux rôles de base de données fixe db_securityadmin ou db_owner ou appartenance au rôle serveur fixe sysadmin.|  
 |Utilisateur de base de données mappé à un certificat|Appartenance aux rôles de base de données fixe db_securityadmin ou db_owner ou appartenance au rôle serveur fixe sysadmin.|  
-|Utilisateur de base de données mappé à une clé asymétrique|Appartenance au rôle de base de données db_securityadminfixed, l’appartenance au rôle db_owner fixe rôle de base de données, ou l’appartenance dans le rôle de serveur fixe sysadmin.|  
+|Utilisateur de base de données mappé à une clé asymétrique|Appartenance aux rôles de base de données fixe db_securityadmin ou db_owner, ou appartenance au rôle serveur fixe sysadmin.|  
 |Utilisateur de base de données qui n'est mappé sur aucun principal d'un serveur|Autorisation IMPERSONATE sur l'utilisateur, appartenance au rôle de base de données fixe db_securityadmin, appartenance au rôle de base de données fixe db_owner ou appartenance au rôle serveur fixe sysadmin.|  
-|Rôle de base de données|Autorisation ALTER sur le rôle, appartenance au rôle de base de données db_securityadminfixed, l’appartenance au rôle de base de données fixe db_owner ou l’appartenance au rôle de serveur fixe sysadmin.|  
+|Rôle de base de données|Autorisation ALTER sur le rôle, appartenance au rôle de base de données fixe db_securityadmin, appartenance au rôle de base de données fixe db_owner ou appartenance au rôle serveur fixe sysadmin.|  
 |Rôle d'application|Autorisation ALTER sur le rôle, appartenance au rôle de base de données fixe db_securityadmin, appartenance au rôle de base de données fixe db_owner ou appartenance au rôle serveur fixe sysadmin.|  
   
  Les principaux qui possèdent l'autorisation CONTROL sur un élément sécurisable peuvent accorder une autorisation sur cet élément sécurisable.  
@@ -193,21 +193,21 @@ GO
 ### <a name="c-granting-impersonate-permission-on-a-user-to-an-application-role"></a>C. Octroi de l'autorisation IMPERSONATE sur un utilisateur à un rôle d'application  
  Dans l'exemple ci-dessous, l'autorisation `IMPERSONATE` sur l'utilisateur `HamithaL` est accordée au rôle d'application `AdventureWorks2012` `AccountsPayable17`.  
   
-**S’applique aux**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] via [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+**S’applique à** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] jusqu’à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
 ```  
 GRANT IMPERSONATE ON USER::HamithaL TO AccountsPayable17;  
 GO    
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- [REFUSER des autorisations de Principal de base de données &#40; Transact-SQL &#41;](../../t-sql/statements/deny-database-principal-permissions-transact-sql.md)   
- [RÉVOQUER les autorisations de Principal de base de données &#40; Transact-SQL &#41;](../../t-sql/statements/revoke-database-principal-permissions-transact-sql.md)   
+## <a name="see-also"></a> Voir aussi  
+ [DENY - Refuser des autorisations sur un principal de base de données &#40;Transact-SQL&#41;](../../t-sql/statements/deny-database-principal-permissions-transact-sql.md)   
+ [REVOKE - Révoquer des autorisations sur un principal de base de données &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-database-principal-permissions-transact-sql.md)   
  [sys.database_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)   
- [Sys.database_permissions &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md)   
+ [sys.database_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md)   
  [CREATE USER &#40;Transact-SQL&#41;](../../t-sql/statements/create-user-transact-sql.md)   
- [CRÉER un rôle d’APPLICATION &#40; Transact-SQL &#41;](../../t-sql/statements/create-application-role-transact-sql.md)   
- [CRÉER un rôle &#40; Transact-SQL &#41;](../../t-sql/statements/create-role-transact-sql.md)   
+ [CREATE APPLICATION ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-application-role-transact-sql.md)   
+ [CREATE ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-role-transact-sql.md)   
  [GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md)   
  [Autorisations &#40;moteur de base de données&#41;](../../relational-databases/security/permissions-database-engine.md)   
  [Principaux &#40;moteur de base de données&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)  

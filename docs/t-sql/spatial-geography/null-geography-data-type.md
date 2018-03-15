@@ -1,5 +1,5 @@
 ---
-title: "Null (Type de données geography) | Documents Microsoft"
+title: "Null (type de données geography) | Microsoft Docs"
 ms.custom: 
 ms.date: 07/30/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="null-geography-data-type"></a>Null (type de données geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Une propriété en lecture seule qui fournit une instance null de la **geography** type.
+Propriété en lecture seule qui fournit une instance ayant une valeur Null du type **geography**.
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -46,11 +46,11 @@ Null
 ## <a name="arguments"></a>Arguments  
   
 ## <a name="return-types"></a>Types de retour  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]type : **geography**  
+ Type [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] : **geography**  
   
  Type CLR : **SqlGeography**  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
   
 ## <a name="examples"></a>Exemples  
  L'exemple suivant extrait une instance `geography` Null.  
@@ -61,7 +61,7 @@ SET @g = geography::[Null];
 SELECT @g  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Méthodes geography statiques étendues](../../t-sql/spatial-geography/extended-static-geography-methods.md)  
   
   

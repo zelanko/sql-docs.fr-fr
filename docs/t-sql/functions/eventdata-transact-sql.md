@@ -1,5 +1,5 @@
 ---
-title: EVENTDATA (Transact-SQL) | Documents Microsoft
+title: EVENTDATA (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -52,7 +52,7 @@ ms.lasthandoff: 11/21/2017
 EVENTDATA( )  
 ```  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  La fonction EVENTDATA renvoie des données uniquement si elle est référencée directement au sein d'un déclencheur DDL ou de connexion. Cette fonction retourne la valeur NULL si elle est appelée par d'autres routines, même si ces routines sont appelées par un déclencheur DDL ou d'ouverture de session.  
   
  Les données retournées par EVENTDATA ne sont pas valides après qu'une transaction qui a appelé EVENTDATA, implicitement ou explicitement, est validée ou restaurée.  
@@ -75,9 +75,9 @@ EVENTDATA( )
  Pour protéger la sécurité des connexions, les mots de passe ne sont pas affichés lors de l'exécution des instructions CREATE LOGIN ou ALTER LOGIN.  
   
 ## <a name="schemas-returned"></a>Schémas retournés  
- EVENTDATA retourne une valeur de type **xml**. Par défaut, la définition de schéma pour tous les événements est installée dans le répertoire suivant : [!INCLUDE[ssInstallPath](../../includes/ssinstallpath-md.md)]Tools\Binn\schemas\sqlserver\2006\11\events\events .xsd.  
+ EVENTDATA renvoie une valeur de type **xml**. Par défaut, la définition de schéma pour tous les événements est installée dans le répertoire suivant : [!INCLUDE[ssInstallPath](../../includes/ssinstallpath-md.md)]Tools\Binn\schemas\sqlserver\2006\11\events\events .xsd.  
   
- Vous pouvez également le schéma d’événement est publié à le [Microsoft SQL Server XML Schemas](http://go.microsoft.com/fwlink/?LinkID=31850) page Web.  
+ Le schéma d’événement est également publié sur la page web [Microsoft SQL Server XML Schemas](http://go.microsoft.com/fwlink/?LinkID=31850).  
   
  Pour extraire le schéma pour un événement particulier, recherchez dans le schéma le type complexe `EVENT_INSTANCE_\<event_type>`. Par exemple, pour extraire le schéma pour l'événement DROP_TABLE, recherchez dans le schéma `EVENT_INSTANCE_DROP_TABLE`.  
   
@@ -87,7 +87,7 @@ EVENTDATA( )
  Cet exemple crée un déclencheur DDL pour empêcher la création de nouvelles tables dans la base de données. L'instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] qui active le déclencheur est capturée à utilisant XQuery sur les données XML qui sont générées par EVENTDATA. Pour plus d’informations, consultez [Informations de référence sur le langage XQuery &#40;SQL Server&#41;](../../xquery/xquery-language-reference-sql-server.md).  
   
 > [!NOTE]  
->  Lorsque vous interrogez le `\<TSQLCommand>` élément à l’aide de **résultats dans des grilles** dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], sauts de ligne dans le texte de commande n’apparaissent pas. Utilisez **résultats dans du texte** à la place.  
+>  Lorsque vous interrogez l’élément `\<TSQLCommand>` à l’aide de **Résultats dans des grilles** dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], les sauts de ligne n’apparaissent pas dans le texte de commande. Utilisez plutôt l’option **Résultats dans du texte**.  
   
 ```  
 USE AdventureWorks2012;  
@@ -113,7 +113,7 @@ GO
 ```  
   
 > [!NOTE]  
->  Lorsque vous souhaitez retourner les données d’événement, nous vous recommandons d’utiliser la fonction XQuery **value()** méthode au lieu du **query()** (méthode). Le **query()** méthode retourne XML et transport de séquence d’échappement perluète et instances (CR/LF) de saut de ligne dans la sortie, tandis que la **value()** méthode restitue des instances CR/LF invisibles à la sortie.  
+>  Lorsque vous voulez renvoyer des données d’événement, nous vous recommandons d’utiliser la méthode XQuery **value()** plutôt que la méthode **query()**. La méthode **query()** renvoie des instances XML et CR/LF (retour chariot/saut de ligne) à séquence d’échappement perluète dans la sortie, tandis que la méthode **value()** retourne des instances CR/LF invisibles dans la sortie.  
   
 ### <a name="b-creating-a-log-table-with-event-data-in-a-ddl-trigger"></a>B. Création d'une table de journal avec données d'événements dans un déclencheur DDL  
  Cet exemple crée une table pour stocker des informations sur tous les événements de niveau base de données, et remplit la table avec un déclencheur DDL. Le type d'événement et l'instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] sont capturés en utilisant XQuery sur les données XML générées par `EVENTDATA`.  
@@ -152,8 +152,8 @@ DROP TABLE ddl_log;
 GO  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- [Utilisez la fonction EVENTDATA](../../relational-databases/triggers/use-the-eventdata-function.md)   
+## <a name="see-also"></a> Voir aussi  
+ [Utiliser la fonction EVENTDATA](../../relational-databases/triggers/use-the-eventdata-function.md)   
  [Déclencheurs DDL](../../relational-databases/triggers/ddl-triggers.md)   
  [Notifications d'événements](../../relational-databases/service-broker/event-notifications.md)   
  [Déclencheurs de connexion](../../relational-databases/triggers/logon-triggers.md)  

@@ -1,5 +1,5 @@
 ---
-title: "Prédicats | Documents Microsoft"
+title: "Prédicats | Microsoft Docs"
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -38,7 +38,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="predicates"></a>Prédicats
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Expression qui s'évalue à TRUE, FALSE ou UNKNOWN. Les prédicats sont utilisés dans la condition de recherche de [où](../../t-sql/queries/where-transact-sql.md) clauses et [HAVING](../../t-sql/queries/select-having-transact-sql.md) , dans les conditions de jointure de [FROM](../../t-sql/queries/from-transact-sql.md) clauses et autres constructions où une valeur booléenne est requise.  
+  Expression qui s'évalue à TRUE, FALSE ou UNKNOWN. Les prédicats sont utilisés dans la condition de recherche des clauses [WHERE](../../t-sql/queries/where-transact-sql.md) et [HAVING](../../t-sql/queries/select-having-transact-sql.md), dans les conditions de jointure des clauses [FROM](../../t-sql/queries/from-transact-sql.md) ainsi que dans d’autres constructions où une valeur booléenne est nécessaire.  
   
 ## <a name="in-this-section"></a>Dans cette section  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournit les prédicats suivants.  
@@ -47,13 +47,13 @@ ms.lasthandoff: 01/25/2018
 |-|  
 |[CONTAINS](../../t-sql/queries/contains-transact-sql.md)|  
 |[FREETEXT](../../t-sql/queries/freetext-transact-sql.md)|  
-|[EST &#91; PAS &#93; VALEUR NULL](../../t-sql/queries/is-null-transact-sql.md)|  
+|[IS &#91;NOT&#93; NULL](../../t-sql/queries/is-null-transact-sql.md)|  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [BETWEEN &#40;Transact-SQL&#41;](../../t-sql/language-elements/between-transact-sql.md)   
  [EXISTS &#40;Transact-SQL&#41;](../../t-sql/language-elements/exists-transact-sql.md)   
  [IN &#40;Transact-SQL&#41;](../../t-sql/language-elements/in-transact-sql.md)   
  [LIKE &#40;Transact-SQL&#41;](../../t-sql/language-elements/like-transact-sql.md)   
- [Condition de recherche &#40; Transact-SQL &#41;](../../t-sql/queries/search-condition-transact-sql.md)  
+ [Condition de recherche &#40;Transact-SQL&#41;](../../t-sql/queries/search-condition-transact-sql.md)  
   
   

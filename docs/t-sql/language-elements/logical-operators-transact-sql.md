@@ -1,5 +1,5 @@
 ---
-title: "Opérateurs logiques (Transact-SQL) | Documents Microsoft"
+title: "Opérateurs logiques (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -36,7 +36,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="logical-operators-transact-sql"></a>Opérateurs logiques (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Les opérateurs logiques testent le caractère vrai ou faux d'une condition. Opérateurs logiques, comme les opérateurs de comparaison, retournent un **booléenne** de type de données avec la valeur TRUE, FALSE ou UNKNOWN.  
+  Les opérateurs logiques testent le caractère vrai ou faux d'une condition. Les opérateurs logiques, comme les opérateurs de comparaison, retournent un type de données **booléen** de valeur TRUE, FALSE ou UNKNOWN.  
   
 |Opérateur|Signification|  
 |--------------|-------------|  
@@ -48,10 +48,10 @@ ms.lasthandoff: 01/25/2018
 |[IN](../../t-sql/language-elements/in-transact-sql.md)|TRUE si l'opérande est égal à un élément d'une liste d'expressions.|  
 |[LIKE](../../t-sql/language-elements/like-transact-sql.md)|TRUE si l'opérande correspond à un modèle.|  
 |[NOT](../../t-sql/language-elements/not-transact-sql.md)|Inverse la valeur de tout autre opérateur booléen.|  
-|[- ou -](../../t-sql/language-elements/or-transact-sql.md)|TRUE si l'une ou l'autre expression booléenne est TRUE.|  
+|[OU](../../t-sql/language-elements/or-transact-sql.md)|TRUE si l'une ou l'autre expression booléenne est TRUE.|  
 |[SOME](../../t-sql/language-elements/some-any-transact-sql.md)|TRUE si certains éléments d'un jeu de comparaisons sont TRUE.|  
   
-## <a name="see-also"></a>Voir aussi  
- [Priorité des opérateurs &#40; Transact-SQL &#41;](../../t-sql/language-elements/operator-precedence-transact-sql.md)  
+## <a name="see-also"></a> Voir aussi  
+ [Priorité des opérateurs &#40;Transact-SQL&#41;](../../t-sql/language-elements/operator-precedence-transact-sql.md)  
   
   

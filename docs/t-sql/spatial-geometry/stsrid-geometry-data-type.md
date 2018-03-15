@@ -1,5 +1,5 @@
 ---
-title: "STSrid (Type de données geometry) | Documents Microsoft"
+title: "STSrid (type de données geometry) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -46,12 +46,12 @@ STSrid
 ```  
   
 ## <a name="return-types"></a>Types de retour  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]type : **int**  
+ Type [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] : **int**  
   
  Type CLR : **SqlInt32**  
   
 ## <a name="examples"></a>Exemples  
- Le premier exemple crée un **geometry** de l’instance avec la valeur de SRID 13 et utilise `STSrid` pour confirmer le SRID.  
+ Le premier exemple crée une instance **geometry** avec la valeur de SRID 13 et utilise `STSrid` pour confirmer le SRID.  
   
 ```  
 DECLARE @g geometry;  
@@ -66,7 +66,7 @@ SET @g.STSrid = 23;
 SELECT @g.STSrid;  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [STX &#40;type de données geometry&#41;](../../t-sql/spatial-geometry/stx-geometry-data-type.md)   
  [STY &#40;type de données geometry&#41;](../../t-sql/spatial-geometry/sty-geometry-data-type.md)   
  [Méthodes OGC sur des instances geography](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  

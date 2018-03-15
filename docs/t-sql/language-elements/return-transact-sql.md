@@ -57,12 +57,12 @@ RETURN [ integer_expression ]
  Valeur entière qui est retournée. Les procédures stockées peuvent retourner une valeur entière à une procédure appelante ou à une application.  
   
 ## <a name="return-types"></a>Types de retour  
- Renvoie facultativement **int**.  
+ Retourne éventuellement **int**.  
   
 > [!NOTE]  
 >  Sauf spécification contraire, toutes les procédures stockées système retournent la valeur 0. Celle-ci indique la réussite d'une procédure ; une valeur différente de zéro indique un échec.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Utilisée avec une procédure stockée, l'instruction RETURN ne peut pas retourner de valeur Null. Si une procédure tente de retourner une valeur Null (par exemple à l'aide de RETURN @status alors que @status est NULL), un avertissement est généré et une valeur de 0 est retournée.  
   
  Il est possible d'inclure la valeur de l'état retourné dans des instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] suivantes du lot ou de la procédure ayant exécuté la procédure en cours, mais il convient dans ce cas de respecter la forme suivante : `EXECUTE @return_status = <procedure_name>`.  
@@ -159,7 +159,7 @@ GO
  2
  ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [ALTER PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-procedure-transact-sql.md)   
  [CREATE PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/create-procedure-transact-sql.md)   
  [DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)   

@@ -1,5 +1,5 @@
 ---
-title: "STDistance (Type de données geography) | Documents Microsoft"
+title: "STDistance (type de données geography) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,10 +34,10 @@ ms.lasthandoff: 01/25/2018
 # <a name="stdistance-geography-data-type"></a>STDistance (type de données geography)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-  Retourne la distance la plus courte entre un point dans un **geography** instance et un point dans un autre **geography** instance.  
+  Retourne la distance la plus courte entre un point d’une instance **geography** et un point d’une autre instance **geography**.  
   
 > [!NOTE]  
->  `STDistance()`Retourne le plus court **LineString** entre deux types geography. Il s'agit d'une approximation proche de la distance géodésique. L’écart de `STDistance()` sur les modèles à partir de la distance géodésique exacte n’est pas plus de. 25 %. Cela évite toute confusion quant aux subtiles différences entre longueur et distance dans les types géodésiques.  
+>  `STDistance()` retourne le **LineString** le plus court entre deux types geography. Il s'agit d'une approximation proche de la distance géodésique. L’écart de `STDistance()` sur les modèles terrestres courants par rapport à la distance géodésique exacte ne dépasse pas 0,25 %. Cela évite toute confusion quant aux subtiles différences entre longueur et distance dans les types géodésiques.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -48,21 +48,21 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="arguments"></a>Arguments  
  *other_geography*  
- Une autre **geography** instance à partir de laquelle mesurer la distance entre l’instance sur laquelle STDistance() est appelée. Si *other_geography* STDistance() vide est défini, retourne null.  
+ Autre instance **geography** à partir de laquelle mesurer la distance par rapport à l’instance sur laquelle STDistance() est appelé. Si *other_geography* est un ensemble vide, STDistance() retourne une valeur Null.  
   
 ## <a name="return-types"></a>Types de retour  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]type de retour : **float**  
+ Type de retour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] : **float**  
   
  Type de retour CLR : **SqlDouble**  
   
-## <a name="remarks"></a>Notes  
- STDistance() renvoie toujours la valeur null si l’ID de référence spatiale (SRID) de la **geography** instances ne correspondent pas.  
+## <a name="remarks"></a>Notes   
+ STDistance() retourne toujours une valeur Null si les SRID (ID de référence spatiale) des instances **geography** ne correspondent pas.  
   
 > [!NOTE]  
->  Les méthodes sur le **geography** type de données qui calculent une zone ou une distance retournent des résultats différents selon le SRID de l’instance utilisée dans la méthode.   Pour plus d’informations sur les SRID, consultez [des identificateurs de référence spatiale &#40; SRID &#41; ](../../relational-databases/spatial/spatial-reference-identifiers-srids.md).  
+>  Les méthodes du type de données **geography** qui calculent une aire ou une distance retournent des résultats distincts selon le SRID de l’instance utilisée dans la méthode.   Pour plus d’informations sur les SRID, consultez [Identificateurs de référence spatiale &#40;SRID&#41;](../../relational-databases/spatial/spatial-reference-identifiers-srids.md).  
   
 ## <a name="examples"></a>Exemples  
- L’exemple suivant recherche la distance entre deux **geography** instances.  
+ L’exemple suivant trouve la distance entre deux instances **geography**.  
   
 ```  
 DECLARE @g geography;  
@@ -72,7 +72,7 @@ SET @h = geography::STGeomFromText('POINT(-122.34900 47.65100)', 4326);
 SELECT @g.STDistance(@h);  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Méthodes OGC sur des instances geography](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
   
   

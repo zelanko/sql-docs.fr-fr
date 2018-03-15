@@ -1,5 +1,5 @@
 ---
-title: "Le contrat de dépôt (Transact-SQL) | Documents Microsoft"
+title: DROP CONTRACT (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -54,7 +54,7 @@ DROP CONTRACT contract_name
  *contract_name*  
  Nom du contrat à supprimer. Les noms du serveur, de la base de données et du schéma ne peuvent pas être spécifiés.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Il est impossible de supprimer un contrat si des services ou des priorités de conversation y font référence.  
   
  Lorsque vous supprimez un contrat, [!INCLUDE[ssSB](../../includes/sssb-md.md)] met fin à toute conversation en cours qui utilise ce contrat et signale une erreur.  
@@ -70,11 +70,11 @@ DROP CONTRACT
     [//Adventure-Works.com/Expenses/ExpenseSubmission] ;  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- [ALTER BROKER PRIORITY &#40; Transact-SQL &#41;](../../t-sql/statements/alter-broker-priority-transact-sql.md)   
+## <a name="see-also"></a> Voir aussi  
+ [ALTER BROKER PRIORITY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-broker-priority-transact-sql.md)   
  [ALTER SERVICE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-service-transact-sql.md)   
  [CREATE CONTRACT &#40;Transact-SQL&#41;](../../t-sql/statements/create-contract-transact-sql.md)   
- [DROP BROKER PRIORITY &#40; Transact-SQL &#41;](../../t-sql/statements/drop-broker-priority-transact-sql.md)   
+ [DROP BROKER PRIORITY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-broker-priority-transact-sql.md)   
  [DROP SERVICE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-service-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
   

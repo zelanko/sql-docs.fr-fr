@@ -1,5 +1,5 @@
 ---
-title: "Opérateurs (Transact-SQL) | Documents Microsoft"
+title: "Opérateurs (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 06/02/2016
 ms.prod: sql-non-specified
@@ -37,12 +37,12 @@ ms.lasthandoff: 01/25/2018
 |||  
 |-|-|  
 |[Opérateurs arithmétiques](../../t-sql/language-elements/arithmetic-operators-transact-sql.md)|[Opérateurs logiques](../../t-sql/language-elements/logical-operators-transact-sql.md)|  
-|[Opérateur d’assignation](../../t-sql/language-elements/assignment-operator-transact-sql.md)|[Opérateur de résolution de portée](../../t-sql/language-elements/scope-resolution-operator-transact-sql.md)|  
+|[Opérateur d’assignation](../../t-sql/language-elements/assignment-operator-transact-sql.md)|[Opérateur de résolution d’étendue](../../t-sql/language-elements/scope-resolution-operator-transact-sql.md)|  
 |[Opérateurs au niveau du bit](../../t-sql/language-elements/bitwise-operators-transact-sql.md)|[Opérateurs de jeu](http://msdn.microsoft.com/library/1aa4c424-b92c-4409-a1c7-34a0264ee107)|  
-|[Opérateurs de comparaison](../../t-sql/language-elements/comparison-operators-transact-sql.md)|[Opérateur de concaténation de chaîne](../../t-sql/language-elements/string-operators-transact-sql.md)|  
+|[Opérateurs de comparaison](../../t-sql/language-elements/comparison-operators-transact-sql.md)|[Opérateur de concaténation de chaînes](../../t-sql/language-elements/string-operators-transact-sql.md)|  
 |[Opérateurs composés](../../t-sql/language-elements/compound-operators-transact-sql.md)|[Opérateurs unaires](http://msdn.microsoft.com/library/c4748146-4049-4040-8826-56c464410878)|  
   
-## <a name="see-also"></a>Voir aussi  
- [Priorité des opérateurs &#40; Transact-SQL &#41;](../../t-sql/language-elements/operator-precedence-transact-sql.md)  
+## <a name="see-also"></a> Voir aussi  
+ [Priorité des opérateurs &#40;Transact-SQL&#41;](../../t-sql/language-elements/operator-precedence-transact-sql.md)  
   
   

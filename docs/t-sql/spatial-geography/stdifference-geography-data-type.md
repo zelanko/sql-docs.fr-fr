@@ -1,5 +1,5 @@
 ---
-title: "STDifference (Type de données geography) | Documents Microsoft"
+title: "STDifference (type de données geography) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stdifference-geography-data-type"></a>STDifference (type de données geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Retourne un objet qui représente le jeu de points d’une **geography** instance se trouve en dehors d’un autre **geography** instance.  
+  Retourne un objet qui représente l’ensemble de points d’une instance **geography** située en dehors d’une autre instance **geography**.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -45,25 +45,25 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="arguments"></a>Arguments  
  *other_geography*  
- Une autre **geography** instance qui indique quels points pour supprimer de l’instance sur laquelle STDifference() est appelé.  
+ Autre instance **geography** qui indique les points à supprimer de l’instance sur laquelle STDifference() est appelé.  
   
 ## <a name="return-types"></a>Types de retour  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]type de retour : **geography**  
+ Type de retour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] : **geography**  
   
  Type de retour CLR : **SqlGeography**  
   
 ## <a name="exceptions"></a>Exceptions  
- Cette méthode lève un **ArgumentException** si l’instance contient un contour antipode.  
+ Cette méthode lève **ArgumentException** si l’instance contient une arête antipodale.  
   
-## <a name="remarks"></a>Notes  
- Cette méthode retourne toujours null si les identificateurs de référence spatiale (SRID) de la **geography** instances ne correspondent pas.  
+## <a name="remarks"></a>Notes   
+ Cette méthode retourne toujours une valeur Null si les SRID (identificateurs de référence spatiale) des instances **geography** ne correspondent pas.  
   
- Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], le jeu de résultats possibles retourné sur le serveur a été étendu aux **FullGlobe** instances. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend en charge des instances spatiales qui sont plus grandes qu'un hémisphère. Le résultat peut contenir des segments d'arc de cercle uniquement si les instances d'entrée contiennent des segments d'arc de cercle. Cette méthode n'est pas précise.  
+ Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], le jeu de résultats possibles retourné sur le serveur a été étendu aux instances **FullGlobe**. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend en charge des instances spatiales qui sont plus grandes qu'un hémisphère. Le résultat peut contenir des segments d'arc de cercle uniquement si les instances d'entrée contiennent des segments d'arc de cercle. Cette méthode n'est pas précise.  
   
 ## <a name="examples"></a>Exemples  
   
 ### <a name="a-computing-the-difference-between-two-geography-instances"></a>A. Calcul de la différence entre deux instances géographiques  
- L’exemple suivant utilise `STDifference()` pour calculer la différence entre deux **geography** instances.  
+ L’exemple suivant utilise `STDifference()` pour calculer la différence entre deux instances **geography**.  
   
 ```  
 DECLARE @g geography;  
@@ -83,7 +83,7 @@ SELECT @g.STDifference(@h).ToString();
  @h.STDifference(@g).ToString();
  ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Méthodes OGC sur des instances geography](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
   
   

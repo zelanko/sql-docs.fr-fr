@@ -1,5 +1,5 @@
 ---
-title: "GetAncestor (moteur de base de données) | Documents Microsoft"
+title: "GetAncestor (moteur de base de données) | Microsoft Docs"
 ms.custom: 
 ms.date: 7/22/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="getancestor-database-engine"></a>GetAncestor (moteur de base de données)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Retourne un **hierarchyid** représentant le  *n* ième ancêtre de *cela*.
+Retourne un **hierarchyid** qui représente le *n*ième ancêtre de *this*.
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -50,17 +50,17 @@ SqlHierarchyId GetAncestor ( int n )
   
 ## <a name="arguments"></a>Arguments  
 *n*  
-Un **int**, représentant le nombre de niveaux à remonter dans la hiérarchie.
+**int** représentant le nombre de niveaux à remonter dans la hiérarchie.
   
 ## <a name="return-types"></a>Types de retour
-**SQL Server de type de retour : hierarchyid**
+**Type de retour SQL Server : hierarchyid**
   
-**CLR de type de retour : SqlHierarchyId**
+**Type de retour CLR : SqlHierarchyId**
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
 Utilisé pour tester si chaque nœud de la sortie a pour ancêtre le nœud actuel au niveau spécifié.
   
-Si un nombre supérieur à [GetLevel()](../../t-sql/data-types/getlevel-database-engine.md) est transmis, la valeur NULL est retournée.
+Si un nombre supérieur à [GetLevel()](../../t-sql/data-types/getlevel-database-engine.md) est passé, la valeur Null est retournée.
   
 Si un nombre négatif est passé, une exception est levée.
   
@@ -93,7 +93,7 @@ WHERE OrgNode.GetAncestor(2) = @CurrentEmployee ;
 ```  
   
 ### <a name="c-returning-the-current-row"></a>C. Retour de la ligne actuelle  
-Pour retourner le nœud actuel à l’aide de `GetAncestor(0)`, exécutez le code suivant.
+Pour retourner le nœud actuel en utilisant `GetAncestor(0)`, exécutez le code suivant.
   
 ```sql
 DECLARE @CurrentEmployee hierarchyid  
@@ -124,7 +124,7 @@ this.GetAncestor(1)
 ```  
   
 ## <a name="see-also"></a>Voir aussi
-[IsDescendantOf &#40; moteur de base de données &#41;](../../t-sql/data-types/isdescendantof-database-engine.md)  
+[IsDescendantOf &#40;moteur de base de données&#41;](../../t-sql/data-types/isdescendantof-database-engine.md)  
 [Référence de méthodes de type de données hierarchyid](http://msdn.microsoft.com/library/01a050f5-7580-4d5f-807c-7f11423cbb06)  
 [Données hiérarchiques &#40;SQL Server&#41;](../../relational-databases/hierarchical-data-sql-server.md)  
 [hierarchyid &#40;Transact-SQL&#41;](../../t-sql/data-types/hierarchyid-data-type-method-reference.md)

@@ -66,7 +66,7 @@ DBCC UPDATEUSAGE
   
 ## <a name="arguments"></a>Arguments  
 *database_name* | *database_id* | 0  
-Nom ou identificateur de la base de données pour laquelle les statistiques d'utilisation de l'espace doivent être consignées et corrigées. Si 0 est spécifié, la base de données active est utilisée. Les noms de base de données doivent être conformes aux règles des [identificateurs](../../relational-databases/databases/database-identifiers.md).  
+Nom ou identificateur de la base de données pour laquelle les statistiques d'utilisation de l'espace doivent être consignées et corrigées. Si 0 est spécifié, la base de données active est utilisée. Les noms de base de données doivent suivre les règles applicables aux [identificateurs](../../relational-databases/databases/database-identifiers.md).  
   
 *table_name* | *table_id* | *view_name* | *view_id*  
 Nom ou identificateur de la table ou de la vue indexée dont les statistiques d'utilisation de l'espace doivent être consignées et corrigées. Les noms des tables et des vues doivent suivre les règles applicables aux identificateurs.  
@@ -74,7 +74,7 @@ Nom ou identificateur de la table ou de la vue indexée dont les statistiques d'
 *index_id* | *index_name*  
 Identificateur ou nom de l'index à utiliser. Si aucun index n'est spécifié, l'instruction traite tous les index pour la table ou la vue indiquée.  
   
-WITH  
+par  
 Permet d'indiquer des options.  
   
 NO_INFOMSGS  
@@ -83,13 +83,13 @@ Supprime tous les messages d'information.
 COUNT_ROWS  
 Spécifie que la colonne row_count est mise à jour à l'aide du nombre actuel de lignes dans la table ou la vue.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
 DBCC UPDATEUSAGE corrige le nombre de lignes, de pages utilisées, de pages réservées, de pages de feuilles et de pages de données pour chaque partition d'une table ou d'un index. S'il n'y a pas d'imprécisions dans les tables système, DBCC UPDATEUSAGE ne retourne aucune donnée. Si des imprécisions sont trouvées et corrigées et si l'option WITH NO_INFOMSGS n'est pas utilisée, DBCC UPDATEUSAGE retourne les lignes et les colonnes mises à jour dans les tables système.
   
 DBCC CHECKDB a été amélioré pour détecter le moment où les nombres de pages ou de lignes deviennent négatifs. Une fois cette détection effectuée, la sortie de DBCC CHECKDB contient un avertissement et une recommandation relatifs à l'exécution de DBCC UPDATEUSAGE afin de régler le problème.
   
 ## <a name="best-practices"></a>Bonnes pratiques  
-Nous recommandons ce qui suit :
+Nous recommandons ce qui suit :
 -   N'exécutez pas DBCC UPDATEUSAGE de manière régulière. Dans la mesure où DBCC UPDATEUSAGE peut prendre un certain temps pour s'exécuter sur les tables ou bases de données de grande taille, ne l'utilisez que si vous pensez que des valeurs incorrectes sont retournées par sp_spaceused.
 -   Envisagez d'exécuter DBCC UPDATEUSAGE de manière régulière (chaque semaine, par exemple) uniquement si la base de données subit de fréquentes modifications du langage de définition de données (DDL), par exemple avec les instructions CREATE, ALTER ou DROP.  
   
@@ -120,7 +120,7 @@ GO
 ```  
   
 ### <a name="c-updating-page-or-row-counts-or-both-for-the-employee-table"></a>C. Mise à jour du nombre de pages ou de lignes, ou les deux, pour la table Employee  
-L’exemple suivant signale les informations mises à jour nombre de pages ou de lignes pour le `Employee` de table dans le [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] base de données.
+L’exemple suivant retourne des informations mises à jour sur le nombre de pages ou de lignes dans la table `Employee`de la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].
   
 ```sql
 DBCC UPDATEUSAGE (AdventureWorks2012,'HumanResources.Employee');  
@@ -135,7 +135,7 @@ DBCC UPDATEUSAGE (AdventureWorks2012, 'HumanResources.Employee', IX_Employee_Org
 GO  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)  
 [sp_spaceused &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md)  
 [UPDATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/update-statistics-transact-sql.md)

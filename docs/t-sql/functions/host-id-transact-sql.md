@@ -1,5 +1,5 @@
 ---
-title: HOST_ID (Transact-SQL) | Documents Microsoft
+title: HOST_ID (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -49,9 +49,9 @@ HOST_ID ()
 ```  
   
 ## <a name="return-types"></a>Types de retour  
- **char (10)**  
+ **char(10)**  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Quand le paramètre d'une fonction système est facultatif, la base de données active, l'ordinateur hôte, l'utilisateur du serveur ou l'utilisateur de la base de données sont pris implicitement en considération. Les fonctions intégrées doivent toujours être suivies de parenthèses.  
   
  Les fonctions système peuvent être utilisées dans la liste de sélection, dans une clause WHERE, et partout où une expression est autorisée.  
@@ -70,8 +70,8 @@ CREATE TABLE Orders
 GO  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- [Expressions &#40; Transact-SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
- [Fonctions système &#40; Transact-SQL &#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)  
+## <a name="see-also"></a> Voir aussi  
+ [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [Fonctions système &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)  
   
   

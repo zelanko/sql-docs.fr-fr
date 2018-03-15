@@ -1,5 +1,5 @@
 ---
-title: "SUPPRIMER l’abonnement aux notifications de requête (Transact-SQL) | Documents Microsoft"
+title: KILL QUERY NOTIFICATION SUBSCRIPTION (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/27/2017
 ms.prod: sql-non-specified
@@ -54,17 +54,17 @@ KILL QUERY NOTIFICATION SUBSCRIPTION
  Supprime tous les abonnements de l'instance.  
   
  *subscription_id*  
- Supprime l’abonnement avec l’id d’abonnement *ID_ABONNEMENT*.  
+ Supprime l’abonnement doté de l’identificateur *subscription_id*.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  L'instruction KILL QUERY NOTIFICATION SUBSCRIPTION supprime les abonnements aux notifications de requêtes sans produire de message de notification.  
   
- *subscription_id* est l’id de l’abonnement, comme indiqué dans la vue de gestion dynamique [sys.dm_qn_subscriptions &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/query-notifications-sys-dm-qn-subscriptions.md).  
+ *subscription_id* est l’ID de l’abonnement, comme indiqué dans la vue de gestion dynamique [sys.dm_qn_subscriptions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/query-notifications-sys-dm-qn-subscriptions.md).  
   
  Si l'identificateur d'abonnement spécifié n'existe pas, l'instruction aboutit à une erreur.  
   
 ## <a name="permissions"></a>Autorisations  
- Autorisation d’exécuter cette instruction est limitée aux membres de la **sysadmin** rôle serveur fixe.  
+ Les autorisations d’exécution de cette instruction sont limitées aux membres du rôle serveur fixe **sysadmin**.  
   
 ## <a name="examples"></a>Exemples  
   
@@ -82,7 +82,7 @@ KILL QUERY NOTIFICATION SUBSCRIPTION ALL ;
 KILL QUERY NOTIFICATION SUBSCRIPTION 73 ;  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [sys.dm_qn_subscriptions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/query-notifications-sys-dm-qn-subscriptions.md)  
   
   

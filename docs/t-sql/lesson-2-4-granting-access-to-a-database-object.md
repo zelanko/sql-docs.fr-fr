@@ -1,5 +1,5 @@
 ---
-title: "Accorder l’accès à un objet de base de données | Documents Microsoft"
+title: "Octroi de l’accès à un objet de base de données | Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -28,8 +28,8 @@ ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="lesson-2-4---granting-access-to-a-database-object"></a>Leçon 2-4-accorder l’accès à un objet de base de données
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]En tant qu’administrateur, vous pouvez exécuter l’instruction SELECT à partir de la **produits** table et la **vw_Names** afficher et exécuter le **pr_Names** procédure ; Cependant, Mary ne peut pas. Pour lui octroyer les autorisations nécessaires, utilisez l'instruction GRANT.  
+# <a name="lesson-2-4---granting-access-to-a-database-object"></a>Leçon 2-4 - Octroi de l’accès à un objet de base de données
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)] En tant qu’administrateur, vous pouvez exécuter l’instruction SELECT à partir de la table **Products** et de la vue **vw_Names**, puis vous pouvez exécuter la procédure **pr_Names**. Toutefois, Mary ne peut pas le faire. Pour lui octroyer les autorisations nécessaires, utilisez l'instruction GRANT.  
   
 ### <a name="procedure-title"></a>Titre de la procédure  
   
@@ -51,7 +51,7 @@ Vous devez avoir l'autorisation EXECUTE pour exécuter une procédure stockée. 
 ## <a name="next-task-in-lesson"></a>Tâche suivante de la leçon  
 [Résumé : configuration des autorisations sur des objets de base de données](../t-sql/lesson-2-5-summary-configuring-permissions-on-database-objects.md)  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [GRANT &#40;Transact-SQL&#41;](../t-sql/statements/grant-transact-sql.md)  
 [REVOKE &#40;Transact-SQL&#41;](../t-sql/statements/revoke-transact-sql.md)  
   

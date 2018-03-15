@@ -1,5 +1,5 @@
 ---
-title: ALTER XML SCHEMA COLLECTION (Transact-SQL) | Documents Microsoft
+title: ALTER XML SCHEMA COLLECTION (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -63,13 +63,13 @@ ALTER XML SCHEMA COLLECTION [ relational_schema. ]sql_identifier ADD 'Schema Com
  *sql_identifier*  
  ID SQL de la collection de schémas XML.  
   
- **'** *Composant de schéma* **'**  
+ **'** *Schema Component* **'**  
  Composant de schéma à insérer.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Utilisez ALTER XML SCHEMA COLLECTION pour ajouter de nouveaux schémas XML dont les espaces de noms ne se trouvent pas déjà dans la collection de schémas XML ou pour ajouter de nouveaux composants aux espaces de noms existants dans la collection.  
   
- L’exemple suivant ajoute un nouveau \<élément > à l’espace de noms existant `http://MySchema/test_xml_schema` dans la collection `MyColl`.  
+ Le code exemple suivant ajoute un nouvel \<element> à l’espace de noms existant `http://MySchema/test_xml_schema` dans la collection `MyColl`.  
   
 ```  
 -- First create an XML schema collection.  
@@ -91,9 +91,9 @@ ALTER XML SCHEMA COLLECTION MyColl ADD '
   
  Remarquez que si certains composants que vous voulez ajouter à la collection font référence à des composants déjà présents dans cette collection, vous devez utiliser `<import namespace="referenced_component_namespace" />`. Il n'est cependant pas accepté d'utiliser l'espace de noms du schéma actif dans `<xsd:import>` ; par conséquent, les composants du même espace de noms cible que l'espace de noms du schéma actif sont automatiquement importés.  
   
- Pour supprimer des collections, utilisez [DROP XML SCHEMA COLLECTION &#40; Transact-SQL &#41; ](../../t-sql/statements/drop-xml-schema-collection-transact-sql.md).  
+ Pour supprimer des collections, utilisez [DROP XML SCHEMA COLLECTION &#40;Transact-SQL&#41;](../../t-sql/statements/drop-xml-schema-collection-transact-sql.md).  
   
- Si la collection de schémas contient un caractère générique de validation de type lax ou un élément de type **xs : anyType**, ajout d’un nouvel élément global, un type ou une déclaration d’attribut à la collection de schémas entraînera la revalidation de toutes les données stockées qui est contraint par la collection de schémas.  
+ Si la collection de schémas contient déjà un caractère générique de validation lax ou un élément de type **xs:anyType**, l’ajout d’un nouvel élément global, d’un nouveau type ou d’une nouvelle déclaration d’attribut à la collection de schémas entraîne la revalidation de toutes les données stockées qui sont conditionnées par la collection de schémas.  
   
 ## <a name="permissions"></a>Autorisations  
  La modification d'une collection de schémas XML nécessite l'autorisation ALTER sur la collection.  
@@ -181,20 +181,20 @@ SET @MySchemaCollection  = N' copy the schema collection here';
 CREATE XML SCHEMA COLLECTION AS @MySchemaCollection;   
 ```  
   
- La variable de l'exemple est de type `nvarchar(max)`. La variable peut également être de **xml** de type de données, dans ce cas, il est converti implicitement en une chaîne.  
+ La variable de l'exemple est de type `nvarchar(max)`. Elle peut être également de type **xml**, auquel cas elle est implicitement convertie en chaîne de caractères.  
   
  Pour plus d’informations, consultez [Afficher une collection de schémas XML stockée](../../relational-databases/xml/view-a-stored-xml-schema-collection.md).  
   
- Vous pouvez stocker des collections de schémas dans un **xml** colonne de type. Dans ce cas, pour créer une collection de schémas XML, procédez comme suit :  
+ Vous pouvez stocker les collections de schémas dans une colonne de type **xml**. Dans ce cas, pour créer une collection de schémas XML, procédez comme suit :  
   
-1.  Récupérer la collection de schémas à partir de la colonne à l’aide d’une instruction SELECT et l’assigner à une variable de **xml** type, ou un **varchar** type.  
+1.  Extrayez la collection de schémas de la colonne à l’aide d’une instruction SELECT et affectez-la à une variable de type **xml** ou **varchar**.  
   
 2.  Spécifiez le nom de la variable dans l'instruction CREATE XML SCHEMA COLLECTION.  
   
  L'instruction CREATE XML SCHEMA COLLECTION stocke uniquement les composants de schéma que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut interpréter ; tous les éléments du schéma XML ne sont pas stockés dans la base de données. Par conséquent, si vous voulez récupérer la collection de schémas XML exactement comme elle a été fournie, il est recommandé d'enregistrer vos schémas XML dans une colonne de la base de données ou dans un autre dossier de votre ordinateur.  
   
 ### <a name="b-specifying-multiple-schema-namespaces-in-a-schema-collection"></a>B. Spécification de plusieurs espaces de noms de schémas dans une collection de schémas  
- Vous pouvez spécifier plusieurs schémas XML lorsque vous créez une collection de schémas XML. Par exemple :  
+ Vous pouvez spécifier plusieurs schémas XML lorsque vous créez une collection de schémas XML. Exemple :  
   
 ```  
 CREATE XML SCHEMA COLLECTION N'  
@@ -249,7 +249,7 @@ GO
 ```  
   
 ### <a name="c-importing-a-schema-that-does-not-specify-a-target-namespace"></a>C. Importation d'un schéma qui ne spécifie aucun espace de noms cible  
- Si un schéma qui ne contient-elle pas un **targetNamespace** attribut est importé dans une collection, ses composants sont associés à l’espace de noms cible vide, comme indiqué dans l’exemple suivant. Remarquez que si vous n'associez pas un ou plusieurs schémas importés dans la collection, plusieurs composants de schéma (potentiellement sans relation) sont associés à l'espace de noms composé d'une chaîne de caractères vide.  
+ Si un schéma qui ne contient pas d’attribut **targetNamespace** est importé dans une collection, ses composants sont associés à l’espace de noms cible composé d’une chaîne de caractères vide (voir l’exemple ci-dessous). Remarquez que si vous n'associez pas un ou plusieurs schémas importés dans la collection, plusieurs composants de schéma (potentiellement sans relation) sont associés à l'espace de noms composé d'une chaîne de caractères vide.  
   
 ```  
 -- Create a collection that contains a schema with no target namespace.  
@@ -268,9 +268,9 @@ ON     sys.xml_schema_collections.xml_collection_id =
 WHERE  sys.xml_schema_namespaces.name='';  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- [CRÉER une COLLECTION de schémas XML &#40; Transact-SQL &#41;](../../t-sql/statements/create-xml-schema-collection-transact-sql.md)   
- [DROP XML SCHEMA COLLECTION &#40; Transact-SQL &#41;](../../t-sql/statements/drop-xml-schema-collection-transact-sql.md)   
+## <a name="see-also"></a> Voir aussi  
+ [CREATE XML SCHEMA COLLECTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-xml-schema-collection-transact-sql.md)   
+ [DROP XML SCHEMA COLLECTION &#40;Transact-SQL&#41;](../../t-sql/statements/drop-xml-schema-collection-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   
  [Comparer du XML typé et du XML non typé](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   
  [Spécifications et limitations relatives aux collections de schémas XML sur le serveur](../../relational-databases/xml/requirements-and-limitations-for-xml-schema-collections-on-the-server.md)  

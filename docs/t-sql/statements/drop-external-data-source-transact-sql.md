@@ -1,5 +1,5 @@
 ---
-title: "SUPPRIMER la SOURCE de données externe (Transact-SQL) | Documents Microsoft"
+title: DROP EXTERNAL DATA SOURCE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
@@ -26,7 +26,7 @@ ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="drop-external-data-source-transact-sql"></a>SUPPRIMER la SOURCE de données externe (Transact-SQL)
+# <a name="drop-external-data-source-transact-sql"></a>DROP EXTERNAL DATA SOURCE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
 
   Supprime une source de données externe PolyBase.  
@@ -43,33 +43,33 @@ DROP EXTERNAL DATA SOURCE external_data_source_name
   
 ## <a name="arguments"></a>Arguments  
  *external_data_source_name*  
- Le nom de la source de données externes à supprimer.  
+ Nom de la source de données externe à supprimer.  
   
 ## <a name="metadata"></a>Métadonnées  
- Pour afficher une liste de données externes sources utilisent la vue système sys.external_data_sources.  
+ Pour afficher la liste des sources de données externes, utilisez la vue système sys.external_data_sources.  
   
 ```  
 SELECT * FROM sys.external_data_sources;  
 ```  
   
 ## <a name="permissions"></a>Autorisations  
- Requiert modifier n’importe quelle SOURCE de données externe.  
+ Nécessite ALTER ANY EXTERNAL DATA SOURCE.  
   
 ## <a name="locking"></a>Verrouillage  
- Acquiert un verrou partagé sur l’objet de source de données externe.  
+ Prend un verrou partagé sur l’objet de la source de données externe.  
   
 ## <a name="general-remarks"></a>Remarques d'ordre général  
- Suppression d’une source de données ne supprime pas les données externes.  
+ La suppression d’une source de données externe ne supprime pas les données externes.  
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-using-basic-syntax"></a>A. À l’aide de la syntaxe de base  
+### <a name="a-using-basic-syntax"></a>A. Utilisation de la syntaxe de base  
   
 ```  
 DROP EXTERNAL DATA SOURCE mydatasource;  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [CREATE EXTERNAL DATA SOURCE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-data-source-transact-sql.md)  
   
   

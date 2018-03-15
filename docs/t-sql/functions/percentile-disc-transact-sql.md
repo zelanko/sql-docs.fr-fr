@@ -1,5 +1,5 @@
 ---
-title: PERCENTILE_DISC (Transact-SQL) | Documents Microsoft
+title: PERCENTILE_DISC (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 10/20/2015
 ms.prod: sql-non-specified
@@ -35,9 +35,9 @@ ms.lasthandoff: 11/21/2017
 # <a name="percentiledisc-transact-sql"></a>PERCENTILE_DISC (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
-  Calcule un percentile spécifique pour des valeurs triées dans un ensemble de lignes entier ou dans des partitions distinctes d'un ensemble de lignes dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour une valeur de percentile donnée *P*, PERCENTILE_DISC trie les valeurs de l’expression dans la clause ORDER BY et retourne la valeur ayant la plus petite valeur CUME_DIST (en ce qui concerne la même spécification de classement) est supérieur ou égal à *P*. Par exemple, PERCENTILE_DISC (0,5) calcule le cinquantième percentile (autrement dit, la valeur médiane) d'une expression. PERCENTILE_DISC calcule le percentile selon une répartition discrète des valeurs de la colonne ; le résultat est égal à une valeur spécifique dans la colonne.  
+  Calcule un percentile spécifique pour des valeurs triées dans un ensemble de lignes entier ou dans des partitions distinctes d'un ensemble de lignes dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour une valeur de percentile donnée *P*, PERCENTILE_DISC trie les valeurs de l’expression dans la clause ORDER BY et renvoie la valeur ayant la plus petite valeur CUME_DIST (par rapport à la même spécification de tri) supérieure ou égale à *P*. Par exemple, PERCENTILE_DISC (0,5) calcule le cinquantième percentile (autrement dit, la valeur médiane) d'une expression. PERCENTILE_DISC calcule le percentile selon une répartition discrète des valeurs de la colonne ; le résultat est égal à une valeur spécifique dans la colonne.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "icône lien de rubrique") [Conventions de syntaxe Transact-SQL &#40; Transact-SQL &#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône Lien de rubrique") [Conventions de la syntaxe Transact-SQL &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -47,17 +47,17 @@ PERCENTILE_DISC ( numeric_literal ) WITHIN GROUP ( ORDER BY order_by_expression 
 ```  
   
 ## <a name="arguments"></a>Arguments  
- *littéral*  
+ *literal*  
  Percentile à calculer. Il doit être compris entre 0.0 et 1.0.  
   
- DANS le groupe **(** ORDER BY *order_by_expression* [ **ASC** | DESC]**)**  
- Spécifie une liste de valeurs permet de trier et de calculer le centile. Seul *order_by_expression* est autorisée. L’ordre de tri par défaut est croissant. La liste de valeurs peut être d’un des types de données qui sont valides pour l’opération de tri.  
+ WITHIN GROUP **(** ORDER BY *order_by_expression* [ **ASC** | DESC ]**)**  
+ Spécifie la liste des valeurs à trier et sur lesquelles calculer le percentile. Un seul argument *order_by_expression* est autorisé. L’ordre de tri par défaut est croissant. La liste des valeurs peut être d’un des types de données qui sont valides pour l’opération de tri.  
   
- SUR **(** \<partition_by_clause > **)**  
- Divise le jeu de résultats généré par la clause FROM en partitions auxquelles la fonction percentile est appliquée. Pour plus d’informations, consultez [la Clause OVER &#40; Transact-SQL &#41; ](../../t-sql/queries/select-over-clause-transact-sql.md). Le \<clause ORDER BY > et \<lignes ou la clause range > ne peut pas être spécifié dans une fonction PERCENTILE_DISC.  
+ OVER **(** \<partition_by_clause> **)**  
+ Divise le jeu de résultats généré par la clause FROM en partitions auxquelles la fonction percentile est appliquée. Pour plus d’informations, consultez [OVER, clause &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md). La \<clause ORDER BY> et la \<clause ROWS ou RANGE> ne peuvent pas être spécifiées dans une fonction PERCENTILE_DISC.  
   
 ## <a name="return-types"></a>Types de retour  
- Le type de retour est déterminé par le *order_by_expression* type.  
+ Le type de retour est déterminé par le type *order_by_expression*.  
   
 ## <a name="compatibility-support"></a>Prise en charge de la compatibilité  
  Lorsque le niveau de compatibilité est 110 et supérieur, WITHIN GROUP est un mot clé réservé. Pour plus d’informations, consultez [Niveau de compatibilité ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
@@ -99,7 +99,7 @@ Executive              54.32695     48.5577
 Human Resources        17.427850    16.5865
 ```
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemples : [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] et[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemples : [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] et [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="b-basic-syntax-example"></a>B. Exemple de syntaxe de base  
  L'exemple suivant utilise PERCENTILE_CONT et PERCENTILE_DISC pour rechercher le salaire moyen d'un employé dans chaque service. Notez que ces fonctions peuvent ne pas retourner la même valeur. Cela est dû au fait que PERCENTILE_CONT interpole la valeur appropriée, qu'elle existe ou non dans le jeu de données, alors que PERCENTILE_DISC retourne toujours une valeur réelle à partir du jeu.  
@@ -127,8 +127,8 @@ Human Resources        17.427850    16.5865
 Shipping and Receiving  9.250000     9.0000
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- [PERCENTILE_CONT &#40; Transact-SQL &#41;](../../t-sql/functions/percentile-cont-transact-sql.md)  
+## <a name="see-also"></a> Voir aussi  
+ [PERCENTILE_CONT &#40;Transact-SQL&#41;](../../t-sql/functions/percentile-cont-transact-sql.md)  
   
   
 

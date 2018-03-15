@@ -69,31 +69,31 @@ DBCC SHRINKFILE
 Nom logique du fichier dont la taille doit être réduite.
   
 *file_id*  
-Numéro d'identification (ID) du fichier à réduire. Pour obtenir un ID de fichier, utilisez le [FILE_IDEX](../../t-sql/functions/file-idex-transact-sql.md) fonction système ou une requête le [sys.database_files](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md) vue dans la base de données de catalogue.
+Numéro d'identification (ID) du fichier à réduire. Pour obtenir un ID de fichier, utilisez la fonction système [FILE_IDEX](../../t-sql/functions/file-idex-transact-sql.md) ou interrogez l’affichage catalogue [sys.database_files](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md) dans la base de données actuelle.
   
 *target_size*  
 Taille en octets du fichier, exprimée sous la forme d'un entier. Si ce paramètre n'est pas spécifié, DBCC SHRINKFILE réduit la taille à la taille de fichier par défaut. La taille par défaut est la taille spécifiée lors de la création du fichier.
   
 > [!NOTE]  
->  Vous pouvez réduire la taille par défaut d’un fichier vide à l’aide de DBCC SHRINKFILE *target_size*. Par exemple, si vous créez un fichier de 5 Mo, puis que vous le réduisez à 3 Mo pendant que le fichier est encore vide, la taille de fichier par défaut est fixée à 3 Mo. Cela s'applique uniquement aux fichiers vides qui n'ont jamais contenu des données.  
+>  Vous pouvez réduire la taille par défaut d’un fichier vide en utilisant DBCC SHRINKFILE *target_size*. Par exemple, si vous créez un fichier de 5 Mo, puis que vous le réduisez à 3 Mo pendant que le fichier est encore vide, la taille de fichier par défaut est fixée à 3 Mo. Cela s'applique uniquement aux fichiers vides qui n'ont jamais contenu des données.  
   
 Cette option n'est pas prise en charge pour les conteneurs de groupe de fichiers FILESTREAM.  
-Si *target_size* est spécifié, DBCC SHRINKFILE tente de réduire le fichier à la taille spécifiée. Les pages utilisées dans la partie du fichier à libérer sont transférées vers un espace libre disponible dans la partie du fichier conservée. Par exemple, s’il existe un fichier de données de 10 Mo, opérations DBCC SHRINKFILE avec un *target_size* 8 causes toutes les pages utilisées dans les 2 derniers Mo du fichier à être réaffectés dans les pages non allouées dans les 8 premiers Mo du fichier. DBCC SHRINKFILE ne réduit pas un fichier au-delà de la taille nécessaire pour stocker les données dans le fichier. Par exemple, si 7 Mo d’un fichier de données de 10 Mo est utilisé, une instruction DBCC SHRINKFILE avec un *target_size* 6 réduit le fichier à 7 Mo et non pas 6 Mo.
+Si *target_size* est spécifié, DBCC SHRINKFILE tente de réduire le fichier à la taille spécifiée. Les pages utilisées dans la partie du fichier à libérer sont transférées vers un espace libre disponible dans la partie du fichier conservée. Par exemple, s’il s’agit d’un fichier de données de 10 Mo et que vous affectez la valeur 8 à *target_size* pour les opérations DBCC SHRINKFILE, toutes les pages utilisées dans les 2 derniers Mo du fichier sont transférées dans les pages non allouées des 8 premiers Mo du fichier. DBCC SHRINKFILE ne réduit pas un fichier au-delà de la taille nécessaire pour stocker les données dans le fichier. De fait, s’il s’agit d’un fichier de 10 Mo et que 7 Mo sont utilisés, l’instruction DBCC SHRINKFILE avec une valeur de 6 pour *target_size* réduit la taille à 7 Mo et non pas à 6 Mo.
   
 EMPTYFILE  
-Migre toutes les données à partir du fichier spécifié vers d’autres fichiers dans le **même groupe de fichiers**. En d’autres termes, EmptyFile sera migrer les données à partir du fichier spécifié vers d’autres fichiers dans le même groupe de fichiers. EMPTYFILE vous permet de garantir qu’aucune nouvelle donnée ne figurera dans le fichier. Le fichier peut être supprimé à l’aide de la [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md) instruction.
-Pour les conteneurs de groupe de fichiers FILESTREAM, le fichier ne peut pas être supprimé à l'aide d'ALTER DATABASE tant que le Garbage collector FILESTREAM n'a pas été exécuté pour supprimer tous les fichiers conteneurs de groupe de fichiers inutiles qu'EMPTYFILE a copiés vers un autre conteneur. Pour plus d’informations, consultez [sp_filestream_force_garbage_collection &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/filestream-and-filetable-sp-filestream-force-garbage-collection.md)
+Permet la migration de toutes les données du fichier spécifié vers d’autres fichiers dans le **même groupe de fichiers**. En d’autres mots, EmptyFile effectue la migration des données du fichier spécifié vers d’autres fichiers dans le même groupe de fichiers. Emptyfile vous garantit qu’aucune nouvelle donnée ne sera ajoutée au fichier. Le fichier peut être supprimé en utilisant l’instruction [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md).
+Pour les conteneurs de groupe de fichiers FILESTREAM, le fichier ne peut pas être supprimé à l'aide d'ALTER DATABASE tant que le Garbage collector FILESTREAM n'a pas été exécuté pour supprimer tous les fichiers conteneurs de groupe de fichiers inutiles qu'EMPTYFILE a copiés vers un autre conteneur. Pour plus d’informations, consultez [sp_filestream_force_garbage_collection &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/filestream-and-filetable-sp-filestream-force-garbage-collection.md)
   
 > [!NOTE]  
->  Pour plus d’informations sur la suppression d’un conteneur FILESTREAM, consultez la section correspondante de [modifier le fichier de base de données et les Options de groupe de fichiers &#40; Transact-SQL &#41;](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)  
+>  Pour plus d’informations sur la suppression d’un conteneur FILESTREAM, consultez la section correspondante dans [Options de fichiers et de groupes de fichiers ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)  
   
 NOTRUNCATE  
-Déplace des pages allouées à partir de la fin d’un fichier de données vers les pages non allouées du début du fichier avec ou sans *target_size*. L'espace libre à la fin du fichier n'est pas restitué au système d'exploitation et la taille physique du fichier ne change pas. Ainsi, lorsque l'option NOTRUNCATE est spécifiée, le fichier ne paraît pas être réduit.
+Déplace des pages allouées depuis la fin d’un fichier de données vers les pages non allouées du début du fichier, avec ou sans spécification de *target_percent*. L'espace libre à la fin du fichier n'est pas restitué au système d'exploitation et la taille physique du fichier ne change pas. Ainsi, lorsque l'option NOTRUNCATE est spécifiée, le fichier ne paraît pas être réduit.
 NOTRUNCATE n'est applicable qu'aux fichiers de données. Les fichiers journaux ne sont pas affectés.   Cette option n'est pas prise en charge pour les conteneurs de groupe de fichiers FILESTREAM.
   
 TRUNCATEONLY  
 Libère pour le système d'exploitation tout l'espace libre à la fin du fichier, mais n'effectue aucun déplacement de page au sein du fichier. Le fichier de données est réduit seulement jusqu'à la dernière extension allouée.
-*target_size* est ignorée si spécifiée avec TRUNCATEONLY.  
+*target_size* est ignoré si spécifié avec TRUNCATEONLY.  
 L'option TRUNCATEONLY ne déplace pas d'informations dans le journal, mais supprime les fichiers journaux virtuels inactifs de la fin du fichier journal. Cette option n'est pas prise en charge pour les conteneurs de groupe de fichiers FILESTREAM.
   
 WITH NO_INFOMSGS  
@@ -102,26 +102,26 @@ Supprime tous les messages d'information.
 ## <a name="result-sets"></a>Jeux de résultats  
 Le tableau suivant décrit les colonnes du jeu de résultats.
   
-|Nom de colonne| Description|  
+|Nom de colonne|Description|  
 |---|---|
-|**DbId**|Numéro d’identification du fichier de base de données la [!INCLUDE[ssDE](../../includes/ssde-md.md)] a tenté de réduction.|  
-|**FileId**|Le numéro d’identification du fichier de la [!INCLUDE[ssDE](../../includes/ssde-md.md)] a tenté de réduction.|  
+|**DbId**|Numéro d'identification de base de données du fichier que le [!INCLUDE[ssDE](../../includes/ssde-md.md)] tente de réduire.|  
+|**FileId**|Numéro d’identification du fichier que le [!INCLUDE[ssDE](../../includes/ssde-md.md)] a tenté de réduire.|  
 |**CurrentSize**|Nombre de pages de 8 Ko que le fichier occupe actuellement.|  
 |**MinimumSize**|Nombre de pages de 8 Ko que le fichier pourrait occuper au minimum. Ceci correspond à la taille minimale ou à la taille de création d'un fichier.|  
 |**UsedPages**|Nombre de pages de 8 Ko que le fichier utilise actuellement.|  
-|**EstimatedPages**|Nombre de 8 Ko de pages qui le [!INCLUDE[ssDE](../../includes/ssde-md.md)] le fichier peut être réduit à des estimations.|  
+|**EstimatedPages**|Nombre de pages de 8 Ko estimé par le [!INCLUDE[ssDE](../../includes/ssde-md.md)] auquel la taille du fichier peut être ramenée.|  
   
-## <a name="remarks"></a>Notes  
-DBCC SHRINKFILE s'applique aux fichiers de la base de données active. Pour plus d’informations sur la modification de la base de données actuelle, consultez [utiliser &#40; Transact-SQL &#41; ](../../t-sql/language-elements/use-transact-sql.md).
+## <a name="remarks"></a>Notes   
+DBCC SHRINKFILE s'applique aux fichiers de la base de données active. Pour plus d’informations sur le changement de base de données active, consultez [USE &#40;Transact-SQL&#41;](../../t-sql/language-elements/use-transact-sql.md).
   
 Les opérations DBCC SHRINKFILE peuvent être arrêtées à n'importe quel stade du processus, chaque travail terminé étant conservé.
   
-Lorsqu’une opération DBCC SHRINKFILE échoue, une erreur est générée.
+Une erreur est générée quand une opération DBCC SHRINKFILE échoue.
   
  Il n'est pas nécessaire que la base de données à réduire soit en mode mono-utilisateur ; d'autres utilisateurs peuvent travailler dans la base de données lorsque la taille du fichier est réduite. Il n'est pas nécessaire d'exécuter l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en mode mono-utilisateur pour réduire les bases de données système.  
   
 ## <a name="shrinking-a-log-file"></a>Réduction d'un fichier journal  
-Pour les fichiers journaux, le [!INCLUDE[ssDE](../../includes/ssde-md.md)] utilise *target_size* pour calculer la taille cible pour l’ensemble du journal ; par conséquent, *target_size* est la quantité d’espace libre dans le journal après l’opération de réduction. La taille cible de l'ensemble du journal est ensuite convertie dans la taille cible de chaque fichier journal. DBCC SHRINKFILE tente de ramener immédiatement la taille de chaque fichier journal physique à la taille cible. Toutefois, si la partie du journal logique se trouve dans les journaux virtuels au-delà de la taille cible, le [!INCLUDE[ssDE](../../includes/ssde-md.md)] libère autant d’espace que possible et émet alors un message d’information. Le message décrit les actions à effectuer pour déplacer le journal logique à partir des journaux virtuels à la fin du fichier. Lorsque les actions sont effectuées, DBCC SHRINKFILE peut être utilisé pour libérer l'espace restant.
+Pour les fichiers journaux, le [!INCLUDE[ssDE](../../includes/ssde-md.md)] utilise *target_size* pour calculer la taille cible du journal complet. *target_size* correspond donc à la quantité d’espace libre dans le journal après l’opération de réduction. La taille cible de l'ensemble du journal est ensuite convertie dans la taille cible de chaque fichier journal. DBCC SHRINKFILE tente de ramener immédiatement la taille de chaque fichier journal physique à la taille cible. Toutefois, si une partie du journal logique se trouve dans les journaux virtuels au-delà de la taille cible, le [!INCLUDE[ssDE](../../includes/ssde-md.md)] libère autant d'espace que possible, puis envoie un message d'information. Le message décrit les actions à effectuer pour déplacer le journal logique à partir des journaux virtuels à la fin du fichier. Lorsque les actions sont effectuées, DBCC SHRINKFILE peut être utilisé pour libérer l'espace restant.
   
 Comme un fichier journal ne peut être réduit que jusqu'à une limite virtuelle, il arrive qu'il ne soit pas possible de réduire un fichier journal à une taille inférieure à celle d'un fichier journal virtuel, même s'il n'est pas utilisé. La taille du fichier journal virtuel est choisie dynamiquement par le [!INCLUDE[ssDE](../../includes/ssde-md.md)] au moment de la création ou de l'extension des fichiers journaux.
   
@@ -144,13 +144,13 @@ SELECT name ,size/128.0 - CAST(FILEPROPERTY(name, 'SpaceUsed') AS int)/128.0 AS 
 FROM sys.database_files;
 ```
 
--   Exécutez le [DBCC SQLPERF](../../t-sql/database-console-commands/dbcc-sqlperf-transact-sql.md) commande pour retourner l’espace utilisé dans le journal des transactions.  
+-   Exécutez la commande [DBCC SQLPERF](../../t-sql/database-console-commands/dbcc-sqlperf-transact-sql.md) pour restituer l’espace utilisé dans le journal des transactions.  
 Si l'espace disponible est insuffisant, l'opération de réduction ne peut pas réduire davantage la taille du fichier.
   
 En règle générale, c'est la taille du fichier journal qui semble impossible à réduire. Ceci est généralement dû à un fichier journal qui n'a pas été tronqué. Vous pouvez tronquer le journal en attribuant la valeur SIMPLE au mode de récupération de base de données, ou en sauvegardant le journal et en réexécutant l'opération DBCC SHRINKFILE.
   
 ### <a name="the-shrink-operation-is-blocked"></a>L'opération de réduction est bloquée  
-Il est possible pour les opérations de réduction soient bloquées par une transaction qui s’exécute sous un [niveau d’isolement basé sur le contrôle de version de ligne](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md). Par exemple, si une importante opération de suppression exécutée sous un niveau d'isolation basé sur le contrôle de version de ligne se déroule parallèlement à une opération DBCC SHRINK DATABASE, l'opération de réduction attendra la fin de l'opération de suppression pour réduire la taille des fichiers. Dans ce cas, les opérations DBCC SHRINKFILE et DBCC SHRINKDATABASE envoient un message d'information (5202 pour SHRINKDATABASE et 5203 pour SHRINKFILE) dans le journal des erreurs de SQL Server toutes les cinq minutes au cours de la première heure, puis toutes les heures. Par exemple, si le journal des erreurs contient le message d'erreur suivant, l'erreur suivante se produit :
+Les opérations de réduction peuvent être bloquées par une transaction en cours d'exécution sous un [niveau d'isolation basé sur le contrôle de version de ligne](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md). Par exemple, si une importante opération de suppression exécutée sous un niveau d'isolation basé sur le contrôle de version de ligne se déroule parallèlement à une opération DBCC SHRINK DATABASE, l'opération de réduction attendra la fin de l'opération de suppression pour réduire la taille des fichiers. Dans ce cas, les opérations DBCC SHRINKFILE et DBCC SHRINKDATABASE envoient un message d'information (5202 pour SHRINKDATABASE et 5203 pour SHRINKFILE) dans le journal des erreurs de SQL Server toutes les cinq minutes au cours de la première heure, puis toutes les heures. Par exemple, si le journal des erreurs contient le message d'erreur suivant, l'erreur suivante se produit :
   
 ```sql
 DBCC SHRINKFILE for file ID 1 is waiting for the snapshot   
@@ -158,7 +158,7 @@ transaction with timestamp 15 and other snapshot transactions linked to
 timestamp 15 or with timestamps older than 109 to finish.  
 ```  
   
-cela signifie que l'opération de réduction est bloquée par des transactions d'instantané ayant des valeurs d'horodateur plus anciennes que 109, qui est le numéro de la dernière transaction que l'opération de réduction a effectuée. Il indique également que le **transaction_sequence_num**, ou **first_snapshot_sequence_num** colonnes dans le [sys.dm_tran_active_snapshot_database_transactions](../../relational-databases/system-dynamic-management-views/sys-dm-tran-active-snapshot-database-transactions-transact-sql.md) vue de gestion dynamique contient une valeur de 15. Si le **transaction_sequence_num**, ou **first_snapshot_sequence_num** colonnes dans la vue contient un nombre qui est inférieur à la dernière transaction effectuée par une opération de réduction (109), l’opération de réduction attendra que ces transactions soient terminées.
+cela signifie que l'opération de réduction est bloquée par des transactions d'instantané ayant des valeurs d'horodateur plus anciennes que 109, qui est le numéro de la dernière transaction que l'opération de réduction a effectuée. Cela indique également que les colonnes **transaction_sequence_num** ou **first_snapshot_sequence_num** dans la vue de gestion dynamique [sys.dm_tran_active_snapshot_database_transactions](../../relational-databases/system-dynamic-management-views/sys-dm-tran-active-snapshot-database-transactions-transact-sql.md) contiennent la valeur 15. Si les colonnes **transaction_sequence_num** ou **first_snapshot_sequence_num** dans la vue contiennent un numéro inférieur à la dernière transaction effectuée par une opération de réduction (109), l'opération de réduction attend que ces transactions soient terminées.
   
 Pour résoudre ce problème, vous pouvez effectuer l'une des opérations suivantes :
 -   Achevez la transaction qui bloque l'opération de réduction.
@@ -171,7 +171,7 @@ Nécessite l’appartenance au rôle de serveur fixe **sysadmin** ou au rôle de
 ## <a name="examples"></a>Exemples  
   
 ### <a name="a-shrinking-a-data-file-to-a-specified-target-size"></a>A. Réduction d'un fichier de données à une taille cible spécifiée  
-L’exemple suivant réduit la taille d’un fichier de données nommé `DataFile1` dans les `UserDB` base de données utilisateur à 7 Mo.
+L’exemple suivant ramène la taille d’un fichier de données nommé `DataFile1` de la base de données utilisateur `UserDB` à 7 Mo.
   
 ```sql  
 USE UserDB;  
@@ -234,7 +234,7 @@ REMOVE FILE Test1data;
 GO  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)  
 [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)  
 [DBCC SHRINKDATABASE &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md)  

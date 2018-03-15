@@ -1,5 +1,5 @@
 ---
-title: "! = (Différent de) (Transact-SQL) | Documents Microsoft"
+title: "!= (Différent de) (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -35,13 +35,13 @@ ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="not-equal-to-transact-sql---exclamation"></a>Différent de (Transact SQL) - d’exclamation
+# <a name="not-equal-to-transact-sql---exclamation"></a>Différent de (Transact SQL) - exclamation
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Teste si une expression est différente d'une autre expression (opérateur de comparaison). Si un des deux opérandes, ou les deux, ont la valeur NULL, NULL est renvoyé. Fonctionne comme le [<> (différent de)](../../t-sql/language-elements/not-equal-to-transact-sql-traditional.md) opérateur de comparaison.  
+  Teste si une expression est différente d'une autre expression (opérateur de comparaison). Si un des deux opérandes, ou les deux, ont la valeur NULL, NULL est renvoyé. Fonctionne comme l’opérateur de comparaison[<> (Différent de)](../../t-sql/language-elements/not-equal-to-transact-sql-traditional.md).  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
- [Operators &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)  
+ [Opérateurs &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)  
   
   

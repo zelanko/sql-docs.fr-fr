@@ -1,5 +1,5 @@
 ---
-title: CHAR (Transact-SQL) | Documents Microsoft
+title: CHAR (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
@@ -43,7 +43,7 @@ ms.lasthandoff: 01/18/2018
 # <a name="char-transact-sql"></a>CHAR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-Convertit un **int** code ASCII pour un caractère.
+Convertit un code ASCII **int** en un caractère.
   
 ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -55,18 +55,18 @@ CHAR ( integer_expression )
   
 ## <a name="arguments"></a>Arguments  
 *integer_expression*  
-Entier compris entre 0 et 255. `NULL`est retourné si l’expression d’entier n’est pas dans cette plage.
+Entier compris entre 0 et 255. `NULL` est renvoyé si l’expression entière ne se situe pas dans cette plage.
   
 ## <a name="return-types"></a>Types de retour
 **char(1)**
   
-## <a name="remarks"></a>Notes  
-`CHAR`peut être utilisé pour insérer des caractères de contrôle dans les chaînes de caractères. Le tableau suivant répertorie quelques-uns des caractères de contrôle les plus utilisés.
+## <a name="remarks"></a>Notes   
+`CHAR` permet également d’insérer des caractères de contrôle dans des chaînes de caractères. Le tableau suivant répertorie quelques-uns des caractères de contrôle les plus utilisés.
   
 |Caractère de contrôle|Valeur|  
 |---|---|
 |Onglet|**char(9)**|  
-|saut de ligne|**char(10)**|  
+|Saut de ligne|**char(10)**|  
 |Retour chariot|**char(13)**|  
   
 ## <a name="examples"></a>Exemples  
@@ -132,10 +132,10 @@ ken0@adventure-works.com
 (1 row(s) affected)
 ```
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemples : [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] et[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemples : [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] et [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="c-using-ascii-and-char-to-print-ascii-values-from-a-string"></a>C. Utilisation d'ASCII et CHAR pour imprimer les valeurs ASCII d'une chaîne  
-L’exemple suivant suppose un caractère ASCII définie et retourne la valeur de caractère pour les nombres de caractères ASCII 6.
+L’exemple suivant suppose un jeu de caractères ASCII et renvoie la valeur de caractère pour 6 nombres de caractère ASCII.
   
 ```sql
 SELECT CHAR(65) AS [65], CHAR(66) AS [66],   
@@ -152,7 +152,7 @@ A    B    a    b    1    2
 ```
   
 ### <a name="d-using-char-to-insert-a-control-character"></a>D. Utilisation de CHAR pour l'insertion d'un caractère de contrôle  
-L’exemple suivant utilise `CHAR(13)` pour renvoyer des informations sur les bases de données sur des lignes distinctes lorsque les résultats sont retournés dans le texte.
+L’exemple suivant utilise `CHAR(13)` pour renvoyer des informations sur les bases de données sur des lignes distinctes, lorsque les résultats sont renvoyés sous forme de texte.
   
 ```sql
 SELECT name, 'was created on ', create_date, CHAR(13), name, 'is currently ', state_desc   
@@ -177,8 +177,8 @@ AdventureWorksPDW2012    is currently  ONLINE
  [ASCII &#40;Transact-SQL&#41;](../../t-sql/functions/ascii-transact-sql.md)  
  [NCHAR &#40;Transact-SQL&#41;](../../t-sql/functions/nchar-transact-sql.md)  
  [UNICODE &#40;Transact-SQL&#41;](../../t-sql/functions/unicode-transact-sql.md)  
- [+ &#40;String Concatenation&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/string-concatenation-transact-sql.md)  
- [Fonctions de chaîne &#40; Transact-SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)
+ [+ &#40;Concaténation de chaînes&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/string-concatenation-transact-sql.md)  
+ [Fonctions de chaîne &#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)
   
   
 

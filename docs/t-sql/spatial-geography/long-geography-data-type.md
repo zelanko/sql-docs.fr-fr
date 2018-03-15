@@ -1,5 +1,5 @@
 ---
-title: "Long (Type de données geography) | Documents Microsoft"
+title: "Long (type de données geography) | Microsoft Docs"
 ms.custom: 
 ms.date: 06/02/2016
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="long-geography-data-type"></a>Long (type de données geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  La propriété de longitude de le **geography** instance.  
+  Propriété de longitude de l’instance **geography**.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -44,15 +44,15 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-value"></a>Valeur retournée  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]type : **float**  
+ Type [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] : **float**  
   
  Type CLR : **SqlDouble**  
   
-## <a name="remarks"></a>Notes  
- Dans le modèle OpenGIS, durée pendant laquelle est défini uniquement sur **geography** instances composé d’un point unique. Cette propriété retourne NULL si **geography** instances contiennent plus d’un point unique. Cette propriété est précise et en lecture seule.  
+## <a name="remarks"></a>Notes   
+ Dans le modèle OpenGIS, Long est défini uniquement sur les instances **geography** composées d’un seul point. Cette propriété retourne NULL si les instances **geography** contiennent plusieurs points. Cette propriété est précise et en lecture seule.  
   
 ## <a name="examples"></a>Exemples  
- Cet exemple crée un **Point** de l’instance et extrait la longitude du point.  
+ Cet exemple crée une instance **Point** et récupère la longitude du point.  
   
 ```  
 DECLARE @g geography;  
@@ -60,7 +60,7 @@ SET @g = geography::STGeomFromText('POINT(-122.34900 47.65100)', 4326);
 SELECT @g.Long;  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Méthodes étendues sur des instances geography](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)  
   
   

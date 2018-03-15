@@ -1,5 +1,5 @@
 ---
-title: PERCENTILE_CONT (Transact-SQL) | Documents Microsoft
+title: PERCENTILE_CONT (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 10/20/2015
 ms.prod: sql-non-specified
@@ -37,7 +37,7 @@ ms.lasthandoff: 11/21/2017
 
   Calcule un percentile basé sur une distribution continue de la valeur de colonne dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Le résultat est interpolé et peut ne pas être égale aux valeurs spécifiques de la colonne.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "icône lien de rubrique") [Conventions de syntaxe Transact-SQL &#40; Transact-SQL &#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône Lien de rubrique") [Conventions de la syntaxe Transact-SQL &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -51,11 +51,11 @@ PERCENTILE_CONT ( numeric_literal )
  *numeric_literal*  
  Percentile à calculer. Il doit être compris entre 0.0 et 1.0.  
   
- DANS le groupe **(** ORDER BY *order_by_expression* [ **ASC** | DESC]**)**  
- Spécifie une liste de valeurs numériques à trier et sur lesquelles calculer le percentile. Seul *order_by_expression* est autorisée. L’expression doit correspondre à un type numérique exact (**int**, **bigint**, **smallint**, **tinyint**, **numérique**, **bits**, **décimal**, **smallmoney**, **money**) ou un type numérique approché (**float**, **réel**). Il n'autorise pas d'autres types de données. L’ordre de tri par défaut est croissant.  
+ WITHIN GROUP **(** ORDER BY *order_by_expression* [ **ASC** | DESC ]**)**  
+ Spécifie une liste de valeurs numériques à trier et sur lesquelles calculer le percentile. Un seul argument *order_by_expression* est autorisé. L’expression doit correspondre à un type numérique exact (**int**, **bigint**, **smallint**, **tinyint**, **numeric**, **bit**, **decimal**, **smallmoney**, **money**) ou à un type numérique approché (**float**, **real**). Il n'autorise pas d'autres types de données. L’ordre de tri par défaut est croissant.  
   
- SUR **(** \<partition_by_clause > **)**  
- Divise le jeu de résultats généré par la clause FROM en partitions auxquelles la fonction percentile est appliquée. Pour plus d’informations, consultez [la Clause OVER &#40; Transact-SQL &#41; ](../../t-sql/queries/select-over-clause-transact-sql.md). Le \<clause ORDER BY > et \<lignes ou la clause de la plage > de la syntaxe OVER ne peuvent pas être spécifiées dans une fonction PERCENTILE_CONT.  
+ OVER **(** \<partition_by_clause> **)**  
+ Divise le jeu de résultats généré par la clause FROM en partitions auxquelles la fonction percentile est appliquée. Pour plus d’informations, consultez [OVER, clause &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md). La \<clause ORDER BY> et la \<clause ROWS ou RANGE> de la syntaxe OVER ne peuvent pas être spécifiées dans une fonction PERCENTILE_CONT.  
   
 ## <a name="return-types"></a>Types de retour  
  **float(53)**  
@@ -100,7 +100,7 @@ Executive              54.32695     48.5577
 Human Resources        17.427850    16.5865
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemples : [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] et[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemples : [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] et [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="b-basic-syntax-example"></a>B. Exemple de syntaxe de base  
  L'exemple suivant utilise PERCENTILE_CONT et PERCENTILE_DISC pour rechercher le salaire moyen d'un employé dans chaque service. Notez que ces fonctions peuvent ne pas retourner la même valeur. Cela est dû au fait que PERCENTILE_CONT interpole la valeur appropriée, qu'elle existe ou non dans le jeu de données, alors que PERCENTILE_DISC retourne toujours une valeur réelle à partir du jeu.  
@@ -128,8 +128,8 @@ Human Resources        17.427850    16.5865
 Shipping and Receiving 9.250000      9.0000
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- [PERCENTILE_DISC &#40; Transact-SQL &#41;](../../t-sql/functions/percentile-disc-transact-sql.md)  
+## <a name="see-also"></a> Voir aussi  
+ [PERCENTILE_DISC &#40;Transact-SQL&#41;](../../t-sql/functions/percentile-disc-transact-sql.md)  
   
   
 

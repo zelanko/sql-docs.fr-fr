@@ -1,5 +1,5 @@
 ---
-title: "STIntersects (Type de données geometry) | Documents Microsoft"
+title: "STIntersects (type de données geometry) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stintersects-geometry-data-type"></a>STIntersects (type de données geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Retourne 1 si une **geometry** instance croise une autre **geometry** instance. Retourne 0 dans le cas contraire.
+Retourne 1 si une instance **geometry** entre en intersection avec une autre instance **geometry**. Retourne 0 dans le cas contraire.
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -45,15 +45,15 @@ Retourne 1 si une **geometry** instance croise une autre **geometry** instance. 
   
 ## <a name="arguments"></a>Arguments  
  *other_geometry*  
- Une autre **geometry** instance à comparer à l’instance sur laquelle `STIntersects()` est appelé.  
+ Autre instance **geometry** à comparer à l’instance sur laquelle `STIntersects()` est appelé.  
   
 ## <a name="return-types"></a>Types de retour  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]type de retour : **bits**  
+ Type de retour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] : **bit**  
   
  Type de retour CLR : **SqlBoolean**  
   
-## <a name="remarks"></a>Notes  
- Cette méthode retourne toujours null si l’ID de référence spatiale (SRID) de la **geometry** instances ne correspondent pas.  
+## <a name="remarks"></a>Notes   
+ Cette méthode retourne toujours une valeur Null si les SRID (ID de référence spatiale) des instances **geometry** ne correspondent pas.  
   
 ## <a name="examples"></a>Exemples  
  L'exemple suivant utilise `STIntersects()` pour déterminer si deux instances `geometry` entrent en intersection.  
@@ -66,7 +66,7 @@ SET @h = geometry::STGeomFromText('POINT(1 1)', 0);
 SELECT @g.STIntersects(@h);  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Vue d’ensemble des index spatiaux](../../relational-databases/spatial/spatial-indexes-overview.md)   
  [Méthodes OGC sur des instances geography](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   

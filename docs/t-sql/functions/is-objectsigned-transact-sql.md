@@ -1,5 +1,5 @@
 ---
-title: IS_OBJECTSIGNED (Transact-SQL) | Documents Microsoft
+title: IS_OBJECTSIGNED (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/10/2016
 ms.prod: sql-non-specified
@@ -52,7 +52,7 @@ IS_OBJECTSIGNED (
  Type de la classe sécurisable.  
   
  *@object_id*  
- ID de l'objet testé. *@object_id*est de type **int**.  
+ ID de l'objet testé. *@object_id* est de type **int**.  
   
  *@class*  
  Classe de l'objet :  
@@ -61,30 +61,30 @@ IS_OBJECTSIGNED (
   
 -   'asymmetric key'  
   
- *@class*est **sysname**.  
+ *@class* est de type **sysname**.  
   
  *@thumbprint*  
- Empreinte numérique SHA de l'objet. *@thumbprint*est de type **varbinary(32)**.  
+ Empreinte numérique SHA de l'objet. *@thumbprint* est de type **varbinary(32)**.  
   
 ## <a name="returned-types"></a>Types retournés  
- **int**  
+ **Int**  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  IS_OBJECTSIGNED retourne les valeurs suivantes :  
   
-|Valeur retournée| Description|  
+|Valeur retournée|Description|  
 |------------------|-----------------|  
-|NULL|L’objet n’est pas signé, ou l’objet n’est pas valide.|  
+|NULL|L’objet n’est pas signé ou n’est pas valide.|  
 |0|L’objet est signé, mais la signature n’est pas valide.|  
-|1|L'objet est signé.|  
+| 1|L'objet est signé.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l'autorisation VIEW DEFINITION sur le certificat ou la clé asymétrique.  
   
 ## <a name="examples"></a>Exemples  
   
 ### <a name="a-displaying-extended-properties-on-a-database"></a>A. Affichage des propriétés étendues d'une base de données  
- L’exemple suivant teste si la table spt_fallback_db dans la **master** base de données est signé par le certificat de signature de schéma.  
+ L’exemple suivant teste si la table spt_fallback_db dans la base de données **master** est signée par le certificat de signature de schéma.  
   
 ```  
 USE master;  
@@ -107,7 +107,7 @@ IS_OBJECTSIGNED(
 ) AS [Is the object signed?] ;  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- [Sys.fn_check_object_signatures &#40; Transact-SQL &#41;](../../relational-databases/system-functions/sys-fn-check-object-signatures-transact-sql.md)  
+## <a name="see-also"></a> Voir aussi  
+ [sys.fn_check_object_signatures &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-check-object-signatures-transact-sql.md)  
   
   

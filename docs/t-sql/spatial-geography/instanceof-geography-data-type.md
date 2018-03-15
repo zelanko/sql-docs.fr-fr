@@ -1,5 +1,5 @@
 ---
-title: "InstanceOf (Type de données geography) | Documents Microsoft"
+title: "InstanceOf (type de données geography) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="instanceof-geography-data-type"></a>InstanceOf (type de données geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Teste si le **geography** instance est le même que le type spécifié.  
+  Teste si l’instance **geography** est du même type que l’instance spécifiée.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -45,19 +45,19 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="arguments"></a>Arguments  
  *geography_type*  
- Est un **nvarchar (4000)** chaîne spécifiant l’une des 16 types exposés dans le **geography** hiérarchie de type.  
+ Chaîne **nvarchar(4000)** spécifiant l’un des 16 types exposés dans la hiérarchie de type **geography**.  
   
 ## <a name="return-types"></a>Types de retour  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]type de retour : **bits**  
+ Type de retour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] : **bit**  
   
  Type de retour CLR : **SqlBoolean**  
   
-## <a name="remarks"></a>Notes  
- Retourne 1 si le type d’un **geography** instance est le même que le type spécifié, ou si le type spécifié est un ancêtre du type d’instance ; sinon, retourne 0.  
+## <a name="remarks"></a>Notes   
+ Retourne 1 si le type d’une instance **geography** est identique au type spécifié, ou si le type spécifié est un ancêtre du type d’instance ; sinon, retourne 0.  
   
- Cela **geography** prend en charge de la méthode de type de données **FullGlobe** instances ou les instances spatiales qui sont plus grandes qu’un hémisphère.  
+ Cette méthode de type de données **geography** prend en charge les instances **FullGlobe** ou les instances spatiales qui sont plus grandes qu’un hémisphère.  
   
- L’entrée de la méthode doit être une des valeurs suivantes : Geometry, Point, courbe, LineString, CircularString, Surface, Polygon, CurvePolygon, **GeometryCollection**, **MultiSurface**, **MultiPolygon, MultiCurve, MultiLineString**, **MultiPoint**, ou **FullGlobe**.  
+ L’entrée de la méthode doit correspondre à l’une des instances suivantes : Geometry, Point, Curve, LineString, CircularString, Surface, Polygon, CurvePolygon, **GeometryCollection**, **MultiSurface**, **MultiPolygon, MultiCurve, MultiLineString**, **MultiPoint** ou **FullGlobe**.  
   
  Cette méthode lève un `ArgumentException` si d'autres chaînes sont utilisées pour l'entrée.  
   
@@ -72,7 +72,7 @@ SET @g = geography::STGeomFromText('MULTIPOINT(-122.360 47.656, -122.343 47.656)
 SELECT @g.InstanceOf('GEOMETRYCOLLECTION');  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Méthodes étendues sur des instances geography](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)  
   
   

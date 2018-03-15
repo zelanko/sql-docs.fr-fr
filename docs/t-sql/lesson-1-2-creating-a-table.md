@@ -1,5 +1,5 @@
 ---
-title: "Création d’une Table (didacticiel) | Documents Microsoft"
+title: "Création d’une table (tutoriel) | Microsoft Docs"
 ms.custom: 
 ms.date: 04/18/2016
 ms.prod: sql-non-specified
@@ -26,7 +26,7 @@ ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="lesson-1-2---creating-a-table"></a>Leçon 1-2-Création d’une Table
+# <a name="lesson-1-2---creating-a-table"></a>Leçon 1-2 - Création d’une table
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]
 
 Pour créer une table, vous devez fournir un nom pour la table et les noms et les types de données de chaque colonne dans la table. Il est aussi recommandé d'indiquer si les valeurs Null sont autorisées dans chaque colonne. Pour créer une table, vous devez avoir les autorisations `CREATE TABLE` et `ALTER SCHEMA` sur le schéma qui contiendra la table. Le rôle fixe de base de données `db_ddladmin` dispose de ces autorisations.  
@@ -82,7 +82,7 @@ Pour obtenir une liste des types de données et des liens contenant une descript
 ## <a name="next-task-in-lesson"></a>Tâche suivante de la leçon  
 [Insertion et mise à jour des données dans une table &#40;Didacticiel&#41;](../t-sql/lesson-1-3-inserting-and-updating-data-in-a-table.md)  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [CREATE TABLE &#40;Transact-SQL&#41;](../t-sql/statements/create-table-transact-sql.md)  
   
   

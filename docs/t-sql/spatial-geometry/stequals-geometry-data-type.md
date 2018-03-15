@@ -1,5 +1,5 @@
 ---
-title: "STEquals (Type de données geometry) | Documents Microsoft"
+title: "STEquals (type de données geometry) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stequals-geometry-data-type"></a>STEquals (type de données geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Retourne 1 si une **geometry** instance représente le même ensemble de points qu’une autre **geometry** instance. Retourne 0 dans le cas contraire.
+Retourne 1 si une instance **geometry** représente le même ensemble de points qu’une autre instance **geometry**. Retourne 0 dans le cas contraire.
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -45,18 +45,18 @@ Retourne 1 si une **geometry** instance représente le même ensemble de points 
   
 ## <a name="arguments"></a>Arguments  
  *other_geometry*  
- Une autre **geometry** instance à comparer à l’instance sur laquelle `STEquals()` est appelé.  
+ Autre instance **geometry** à comparer à l’instance sur laquelle `STEquals()` est appelé.  
   
 ## <a name="return-types"></a>Types de retour  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]type de retour : **bits**  
+ Type de retour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] : **bit**  
   
  Type de retour CLR : **SqlBoolean**  
   
-## <a name="remarks"></a>Notes  
- Cette méthode retourne toujours null si l’ID de référence spatiale (SRID) de la **geometry** instances ne correspondent pas.  
+## <a name="remarks"></a>Notes   
+ Cette méthode retourne toujours une valeur Null si les SRID (ID de référence spatiale) des instances **geometry** ne correspondent pas.  
   
 ## <a name="examples"></a>Exemples  
- L’exemple suivant crée deux `geometry` instances avec `STGeomFromText()` qui sont égales, mais pas plus simplement égale et utilise `STEquals()` pour tester leur égalité.  
+ L’exemple suivant crée deux instances `geometry` avec `STGeomFromText()` qui sont égales mais pas de façon triviale, et utilise `STEquals()` pour tester leur égalité.  
   
 ```  
 DECLARE @g geometry  
@@ -66,7 +66,7 @@ SET @h = geometry::STGeomFromText('MULTILINESTRING((4 2, 2 0), (0 2, 2 0))', 0);
 SELECT @g.STEquals(@h);  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Vue d’ensemble des index spatiaux](../../relational-databases/spatial/spatial-indexes-overview.md)   
  [Méthodes OGC sur des instances geography](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   

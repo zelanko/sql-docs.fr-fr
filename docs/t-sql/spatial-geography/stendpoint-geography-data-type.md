@@ -1,5 +1,5 @@
 ---
-title: "STEndpoint (Type de données geography) | Documents Microsoft"
+title: "STEndpoint (type de données geography) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stendpoint-geography-data-type"></a>STEndpoint (type de données geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Retourne le point de terminaison d’un **geography** instance.  
+  Retourne le point de terminaison d’une instance **geography**.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -44,16 +44,16 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>Types de retour  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]type de retour : **geography**  
+ Type de retour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] : **geography**  
   
  Type de retour CLR : **SqlGeography**  
   
- Type Open Geospatial Consortium (OGC) : **Point**  
+ Type OGC (Open Geospatial Consortium) : **Point**  
   
-## <a name="remarks"></a>Notes  
- STEndPoint() est l’équivalent de [STPointN](../../t-sql/spatial-geography/stpointn-geography-data-type.md)`(x.STNumPoints``())`.  
+## <a name="remarks"></a>Notes   
+ STEndPoint() équivaut à [STPointN](../../t-sql/spatial-geography/stpointn-geography-data-type.md)`(x.STNumPoints``())`.  
   
- Cette méthode retourne null si elle est appelée sur vide **geography** instance.  
+ Cette méthode retourne une valeur Null si elle est appelée sur une instance **geography** vide.  
   
 ## <a name="examples"></a>Exemples  
  L'exemple suivant crée une instance `LineString` avec `STGeomFromText()` et utilise `STEndpoint()` pour extraire le point de terminaison du `LineString`.  
@@ -64,7 +64,7 @@ SET @g = geography::STGeomFromText('LINESTRING(-122.360 47.656, -122.343 47.656)
 SELECT @g.STEndPoint().ToString();  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Méthodes OGC sur des instances geography](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
   
   

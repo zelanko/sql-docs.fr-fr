@@ -1,5 +1,5 @@
 ---
-title: (Assignation de division) (Transact-SQL) | Documents Microsoft
+title: "(Affectation après division) (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 09/12/2017
 ms.prod: sql-non-specified
@@ -34,10 +34,10 @@ ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="-division-assignment-transact-sql"></a>/ = (Assignation de division) (Transact-SQL)
+# <a name="-division-assignment-transact-sql"></a>/= (Affectation après division) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Divise un nombre par un autre et affecte une valeur au résultat de l'opération. Par exemple, si une variable @x égal à 34, puis `@x /= 2` prend la valeur d’origine de @x, divise par 2 et affecte @x cette nouvelle valeur (17).  
+  Divise un nombre par un autre et affecte une valeur au résultat de l'opération. Par exemple, si une variable @x est égale à 34, alors `@x /= 2` 2 prend la valeur d’origine de @x, la divise par 2 et affecte à @x cette nouvelle valeur (17).  
   
  ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -49,16 +49,16 @@ expression /= expression
   
 ## <a name="arguments"></a>Arguments  
  *expression*  
- Valide [expression](../../t-sql/language-elements/expressions-transact-sql.md) de tout des données de type de catégorie numérique, à l’exception du **bits** type de données.  
+ Toute [expression](../../t-sql/language-elements/expressions-transact-sql.md) valide de l’un des types de données de la catégorie numérique, à l’exception du type de données **bit**.  
   
 ## <a name="result-types"></a>Types des résultats  
  Retourne le type de données de l'argument ayant la priorité la plus élevée. Pour plus d’informations, consultez [Priorités des types de données &#40;Transact-SQL&#41;](../../t-sql/data-types/data-type-precedence-transact-sql.md).  
   
-## <a name="remarks"></a>Notes  
- Pour plus d’informations, consultez [&#40; Division &#41; &#40; Transact-SQL &#41; ](../../t-sql/language-elements/divide-transact-sql.md).  
+## <a name="remarks"></a>Notes   
+ Pour plus d’informations, consultez [ &#40;Division&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/divide-transact-sql.md).  
 
 ## <a name="examples"></a>Exemples  
-L’exemple suivant, définit une variable à 17. Utilise ensuite le `/=` opérateur de définir la variable à la moitié de sa valeur d’origine.  
+L’exemple suivant affecte la valeur 17 à une variable. Il utilise ensuite l’opérateur `/=` pour définir la variable à la moitié de sa valeur d’origine.  
 ```sql  
 DECLARE @myVariable decimal(5,2);
 SET @myVariable = 17.5;
@@ -71,9 +71,9 @@ SELECT @myVariable AS ResultVariable;
 |--- |
 |8.75 |
 
-## <a name="see-also"></a>Voir aussi  
- [Compound, opérateurs &#40; Transact-SQL &#41;](../../t-sql/language-elements/compound-operators-transact-sql.md)   
+## <a name="see-also"></a> Voir aussi  
+ [Opérateurs composés &#40;Transact-SQL&#41;](../../t-sql/language-elements/compound-operators-transact-sql.md)   
  [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
- [Operators &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)  
+ [Opérateurs &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)  
   
   

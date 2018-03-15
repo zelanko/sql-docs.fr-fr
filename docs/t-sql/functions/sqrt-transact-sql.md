@@ -1,5 +1,5 @@
 ---
-title: SQRT (Transact-SQL) | Documents Microsoft
+title: SQRT (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
@@ -46,8 +46,8 @@ SQRT ( float_expression )
 ```  
   
 ## <a name="arguments"></a>Arguments  
- *expression*  
- Est un [expression](../../t-sql/language-elements/expressions-transact-sql.md) de type **float** ou d’un type qui peut être implicitement converti en float.  
+ *float_expression*  
+ [Expression](../../t-sql/language-elements/expressions-transact-sql.md) de type **float** ou dont le type peut être implicitement converti en type float.  
   
 ## <a name="return-types"></a>Types de retour  
  **float**  
@@ -89,8 +89,8 @@ GO
 3.0  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemples : [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] et[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- L’exemple suivant retourne la racine carrée des nombres `1.00` et `10.00`.  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemples : [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] et [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+ L’exemple suivant renvoie la racine carrée des nombres `1.00` et `10.00`.  
   
 ```  
 SELECT SQRT(1.00), SQRT(10.00);  
@@ -103,8 +103,8 @@ SELECT SQRT(1.00), SQRT(10.00);
 1.00        3.16
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- [Fonctions mathématiques &#40; Transact-SQL &#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)  
+## <a name="see-also"></a> Voir aussi  
+ [Fonctions mathématiques &#40;Transact-SQL&#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)  
   
   
 

@@ -1,5 +1,5 @@
 ---
-title: "HasM (type de données de géométrie) | Documents Microsoft"
+title: "HasM (type de données geometry) | Microsoft Docs"
 ms.custom: 
 ms.date: 05/05/2017
 ms.prod: sql-non-specified
@@ -41,11 +41,11 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>Types de retour  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]type de retour : **bits**  
+ Type de retour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] : **bit**  
   
- Type de retour CLR : **booléenne**  
+ Type de retour CLR : **Boolean**  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
   
 ## <a name="examples"></a>Exemples  
   
@@ -55,8 +55,8 @@ SELECT @p.HasM
 --Returns: 1 (true)  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- [Méthodes étendues sur les Instances géométriques](../../t-sql/spatial-geometry/extended-methods-on-geometry-instances.md)   
- [M &#40; Type de données geometry &#41;](../../t-sql/spatial-geometry/m-geometry-data-type.md)  
+## <a name="see-also"></a> Voir aussi  
+ [Méthodes étendues sur des instances Geometry](../../t-sql/spatial-geometry/extended-methods-on-geometry-instances.md)   
+ [M &#40;type de données geometry&#41;](../../t-sql/spatial-geometry/m-geometry-data-type.md)  
   
   

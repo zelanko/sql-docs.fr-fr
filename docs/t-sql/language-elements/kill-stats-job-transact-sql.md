@@ -1,5 +1,5 @@
 ---
-title: KILL STATS JOB (Transact-SQL) | Documents Microsoft
+title: KILL STATS JOB (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/27/2017
 ms.prod: sql-non-specified
@@ -54,7 +54,7 @@ KILL STATS JOB job_id
  *job_id*  
  Champ job_id renvoyé par la vue de gestion dynamique sys.dm_exec_background_job_queue du travail.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  L'argument job_id n'est pas lié à session_id ou à l'unité de travail utilisée dans d'autres formes de l'instruction KILL.  
   
 ## <a name="permissions"></a>Autorisations  
@@ -63,16 +63,16 @@ KILL STATS JOB job_id
  Les autorisations de l'instruction KILL STATS JOB sont octroyées par défaut aux membres des rôles de base de données fixes sysadmin et processadmin et ne sont pas transmissibles.  
   
 ## <a name="examples"></a>Exemples  
- L’exemple suivant montre comment mettre fin à la mise à jour des statistiques associée à un travail dans lequel le *job_id* = `53`.  
+ L’exemple suivant montre comment mettre fin à la mise à jour des statistiques associée à un travail où *job_id* = `53`.  
   
 ```  
 KILL STATS JOB 53;  
 GO  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [KILL &#40;Transact-SQL&#41;](../../t-sql/language-elements/kill-transact-sql.md)   
- [KILL QUERY NOTIFICATION SUBSCRIPTION &#40; Transact-SQL &#41;](../../t-sql/language-elements/kill-query-notification-subscription-transact-sql.md)   
+ [KILL QUERY NOTIFICATION SUBSCRIPTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/kill-query-notification-subscription-transact-sql.md)   
  [sys.dm_exec_background_job_queue &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-background-job-queue-transact-sql.md)   
  [Statistiques](../../relational-databases/statistics/statistics.md)  
   

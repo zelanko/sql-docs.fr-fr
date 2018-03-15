@@ -1,5 +1,5 @@
 ---
-title: "REFUSER des autorisations de clé asymétrique (Transact-SQL) | Documents Microsoft"
+title: "DENY - Refuser des autorisations sur une clé asymétrique (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -33,7 +33,7 @@ ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="deny-asymmetric-key-permissions-transact-sql"></a>DENY - Autorisations de clé asymétrique (Transact-SQL)
+# <a name="deny-asymmetric-key-permissions-transact-sql"></a>DENY - Refuser des autorisations sur une clé asymétrique (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Refuse des autorisations sur une clé asymétrique.  
@@ -53,18 +53,18 @@ DENY { permission  [ ,...n ] }
 ```  
   
 ## <a name="arguments"></a>Arguments  
- *autorisation*  
+ *permission*  
  Spécifie une autorisation qu'il est possible de refuser sur une clé asymétrique. Voir ci-dessous.  
   
- SUR la clé asymétrique **::***asymmetric_key_name*  
+ ON ASYMMETRIC KEY **::***asymmetric_key_name*  
  Indique la clé asymétrique sur laquelle l'autorisation est refusée. Le qualificateur d'étendue "::" est indispensable.  
   
- *principal_base_de_données*  
+ *database_principal*  
  Spécifie le principal auquel l'autorisation est refusée. Il peut s'agir :  
   
 -   d'un utilisateur de base de données ;  
   
--   d'un rôle de base de données ;  
+-   d'un rôle de base de données ;  
   
 -   d'un rôle d'application ;  
   
@@ -86,7 +86,7 @@ DENY { permission  [ ,...n ] }
   
 -   d'un utilisateur de base de données ;  
   
--   d'un rôle de base de données ;  
+-   d'un rôle de base de données ;  
   
 -   d'un rôle d'application ;  
   
@@ -100,7 +100,7 @@ DENY { permission  [ ,...n ] }
   
 -   d'un utilisateur de base de données qui n'est pas mappé sur le principal d'un serveur.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Une clé asymétrique est un élément sécurisable au niveau base de données contenu dans la base de données parente dans la hiérarchie des autorisations. Les autorisations les plus particulières et les plus limitées qu'il est possible d'accorder sur une clé asymétrique sont mentionnées ci-dessous, ainsi que les autorisations plus générales qui les englobent implicitement.  
   
 |Autorisation de clé asymétrique|Impliquée par une autorisation de clé asymétrique|Impliquée par une autorisation de base de données|  
@@ -111,10 +111,10 @@ DENY { permission  [ ,...n ] }
 |REFERENCES|CONTROL|REFERENCES|  
 |VIEW DEFINITION|CONTROL|VIEW DEFINITION|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l'autorisation CONTROL sur la clé asymétrique. Si vous utilisez l'option AS, le principal spécifié doit être propriétaire de la clé asymétrique.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [DENY &#40;Transact-SQL&#41;](../../t-sql/statements/deny-transact-sql.md)   
  [Autorisations &#40;moteur de base de données&#41;](../../relational-databases/security/permissions-database-engine.md)   
  [Principaux &#40;moteur de base de données&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   

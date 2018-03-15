@@ -53,10 +53,10 @@ PARSENAME ( 'object_name' , object_piece )
   
 ## <a name="arguments"></a>Arguments  
  '*object_name*'  
- Nom de l'objet contenant la partie d'objet spécifiée à extraire. *nom_objet* est **sysname**. Ce paramètre représente un nom d'objet éventuellement qualifié. Si toutes les parties du nom de l'objet sont qualifiées, ce nom peut se composer de quatre parties : le nom du serveur, le nom de la base de données, le nom du propriétaire et le nom de l'objet.  
+ Nom de l'objet contenant la partie d'objet spécifiée à extraire. *object_name* est de type **sysname**. Ce paramètre représente un nom d'objet éventuellement qualifié. Si toutes les parties du nom de l'objet sont qualifiées, ce nom peut se composer de quatre parties : le nom du serveur, le nom de la base de données, le nom du propriétaire et le nom de l'objet.  
   
  *object_piece*  
- Partie de l'objet à retourner. *object_piece* est de type **int**et peut prendre les valeurs suivantes :  
+ Partie de l'objet à retourner. *object_piece* est de type **int** et peut prendre les valeurs suivantes :  
   
  1 = Nom de l'objet  
   
@@ -69,14 +69,14 @@ PARSENAME ( 'object_name' , object_piece )
 ## <a name="return-types"></a>Types de retour  
  **nchar**  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  La fonction PARSENAME retourne NULL si l'une des conditions suivantes est vraie :  
   
--   Soit *nom_objet* ou *object_piece* a la valeur NULL.  
+-   *object_name* ou *object_piece* a la valeur NULL.  
   
 -   une erreur de syntaxe s'est produite.  
   
- La partie d’objet recherchée a une longueur de 0 et n’est pas valide [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] identificateur. Un nom d'objet d'une longueur égale à 0 invalide la totalité du nom qualifié.  
+ La partie d’objet recherchée a une longueur égale à 0 et n’est pas un identificateur [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] valide. Un nom d'objet d'une longueur égale à 0 invalide la totalité du nom qualifié.  
   
 ## <a name="examples"></a>Exemples  
  L'exemple suivant utilise `PARSENAME` pour retourner des informations sur la table `Person` de la base de données `AdventureWorks2012`.  
@@ -118,11 +118,11 @@ Server Name
 (1 row(s) affected)
 ```
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [QUOTENAME &#40;Transact-SQL&#41;](../../t-sql/functions/quotename-transact-sql.md)  
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
  [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
- [Fonctions système &#40; Transact-SQL &#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)  
+ [Fonctions système &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)  
   
   
 

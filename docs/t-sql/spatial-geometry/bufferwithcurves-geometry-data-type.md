@@ -1,5 +1,5 @@
 ---
-title: "BufferWithCurves (Type de données geometry) | Documents Microsoft"
+title: "BufferWithCurves (type de données geometry) | Microsoft Docs"
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -31,7 +31,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="bufferwithcurves-geometry-data-type"></a>BufferWithCurves (type de données geometry)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
-  Retourne un **geometry** instance qui représente le jeu de tous les points dont la distance à partir de l’appel **geometry** instance est inférieure ou égale à la *distance* paramètre.  
+  Retourne une instance **geometry** qui représente l’ensemble de tous les points dont la distance par rapport à l’instance **geometry** appelante est inférieure ou égale au paramètre *distance*.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -42,23 +42,23 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="arguments"></a>Arguments  
  *distance*  
- Est un **float** indiquant la distance maximale qui pointe forment la mémoire tampon peut être à partir de la **geometry** instance.  
+ Expression **float** indiquant la distance maximale à laquelle les points qui forment la mémoire tampon peuvent se trouver par rapport à l’instance **geometry**.  
   
 ## <a name="return-types"></a>Types de retour  
-Type de retour de SQL Server : **geometry**  
+Type de retour SQL Server : **geometry**  
   
  Type de retour CLR : **SqlGeometry**  
   
 ## <a name="exceptions"></a>Exceptions  
- Les critères suivants lèveront un **ArgumentException**.  
+ Les critères suivants lèvent **ArgumentException**.  
   
--   Aucun paramètre n’est passé à la méthode, telles que`@g.BufferWithCurves()`  
+-   Aucun paramètre n’est passé à la méthode, par exemple `@g.BufferWithCurves()`  
   
--   Un paramètre non numérique est passé à la méthode, telles que`@g.BufferWithCurves('a')`  
+-   Un paramètre non numérique est passé à la méthode, par exemple `@g.BufferWithCurves('a')`  
   
--   **NULL** est passé à la méthode, telles que`@g.BufferWithCurves(NULL)`  
+-   **NULL** est passé à la méthode, par exemple `@g.BufferWithCurves(NULL)`  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  L'illustration suivante montre un exemple d'une instance géométrique retournée par cette méthode.  
   
  ![BufferedCurve](../../t-sql/spatial-geometry/media/bufferedcurve.gif)
@@ -67,17 +67,17 @@ Type de retour de SQL Server : **geometry**
   
 |Valeur de distance|Dimensions de type|Type spatial retourné|  
 |--------------------|---------------------|---------------------------|  
-|distance < 0|Zéro ou un|Vide **GeometryCollection** instance|  
-|distance < 0|Deux ou plus|A **CurvePolygon** ou **GeometryCollection** instance avec une mémoire tampon négative. **Remarque :** une mémoire tampon négative peut créer vide **GeometryCollection**|  
-|distance = 0|Toutes les dimensions|Copie de l’appel de **geometry** instance|  
-|distance > 0|Toutes les dimensions|**CurvePolygon** ou **GeometryCollection** instance|  
+|distance < 0|Zéro ou une|Instance **GeometryCollection** vide|  
+|distance < 0|Deux ou plus|Instance **CurvePolygon** ou **GeometryCollection** avec une mémoire tampon négative. **Remarque :** Une mémoire tampon négative peut créer un **GeometryCollection** vide|  
+|distance = 0|Toutes les dimensions|Copie de l’instance **geometry** appelante|  
+|distance > 0|Toutes les dimensions|Instance **CurvePolygon** ou **GeometryCollection**|  
   
 > [!NOTE]  
->  Étant donné que *distance* est un **float**, une valeur très petite peut être équivalente à zéro dans les calculs. Lorsque cela produit ensuite une copie de l’appel **geometry** instance est retournée. Consultez [float et real &#40; Transact-SQL &#41; ](../../t-sql/data-types/float-and-real-transact-sql.md).  
+>  Dans la mesure où *distance* est de type **float**, une valeur très petite peut être équivalente à zéro dans les calculs. Quand cela se produit, une copie de l’instance **geometry** appelante est retournée. Consultez [float et real &#40;Transact-SQL&#41;](../../t-sql/data-types/float-and-real-transact-sql.md).  
   
  Une mémoire tampon négative supprime tous les points compris dans la distance donnée de la limite de la géométrie. L'illustration suivante montre une mémoire tampon négative sous la forme d'une zone hachurée plus claire du cercle. Le trait en pointillé représente la limite du polygone d'origine et la ligne continue la limite du polygone obtenu.  
   
- Si un **chaîne** paramètre est passé à la méthode, puis elle sera convertie en un **float** ou il lèvera un `ArgumentException`.  
+ Si un paramètre **string** est passé à la méthode, il est converti en **float** ou lève `ArgumentException`.  
   
 ## <a name="examples"></a>Exemples  
   
@@ -98,17 +98,17 @@ Type de retour de SQL Server : **geometry**
  ```  
   
 ### <a name="c-calling-bufferwithcurves-with-a-parameter-value--0-that-returns-an-empty-geometrycollection"></a>C. Appel de BufferWithCurves() avec une valeur de paramètre < 0 qui retourne un GeometryCollection vide  
- L’exemple suivant montre ce qui se produit lorsque le *distance* paramètre est égal à -2 :  
+ L’exemple suivant montre ce qui se passe quand le paramètre *distance* est égal à -2 :  
   
 ```
  DECLARE @g geometry = 'CURVEPOLYGON(COMPOUNDCURVE(CIRCULARSTRING(0 4, 4 0, 8 4), (8 4, 0 4)))'; 
  SELECT @g.BufferWithCurves(-2).ToString();
  ```  
   
- Cela **sélectionnez** retourne d’instruction`GEOMETRYCOLLECTION EMPTY`  
+ Cette instruction **SELECT** retourne `GEOMETRYCOLLECTION EMPTY`  
   
 ### <a name="d-calling-bufferwithcurves-with-a-parameter-value--0"></a>D. Appel de BufferWithCurves() avec une valeur de paramètre = 0  
- L’exemple suivant retourne une copie de l’appel **geometry** instance :  
+ L’exemple suivant retourne une copie de l’instance **geometry** appelante :  
   
 ```
  DECLARE @g geometry = 'LINESTRING(3 4, 8 11)'; 
@@ -116,7 +116,7 @@ Type de retour de SQL Server : **geometry**
  ```  
   
 ### <a name="e-calling-bufferwithcurves-with-a-non-zero-parameter-value-that-is-extremely-small"></a>E. Appel de BufferWithCurves() avec une valeur de paramètre non nulle extrêmement petite  
- L’exemple suivant retourne également une copie de l’appel **geometry** instance :  
+ L’exemple suivant retourne également une copie de l’instance **geometry** appelante :  
   
 ```
  DECLARE @g geometry = 'LINESTRING(3 4, 8 11)'; 
@@ -160,8 +160,8 @@ Type de retour de SQL Server : **geometry**
  SELECT @g.BufferWithCurves(1.6).ToString();
  ```  
   
- Les deux premières **sélectionnez** instructions retournent un `GeometryCollection` de l’instance, car le paramètre *distance* est inférieure ou égale à 1/2 la distance entre les deux points (1 1) et (1 4). La troisième **sélectionnez** instruction retourne un `CurvePolygon` de l’instance, car les instances mises en mémoire tampon des deux points (1 1) et (1 4) se chevauchent.  
+ Les deux premières instructions **SELECT** retournent une instance `GeometryCollection`, car le paramètre *distance* est inférieur ou égal à 1/2 de la distance entre les deux points (1 1) et (1 4). La troisième instruction **SELECT** retourne une instance `CurvePolygon`, car les instances mises en mémoire tampon des deux points (1 1) et (1 4) se chevauchent.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Méthodes étendues sur des instances geometry](../../t-sql/spatial-geometry/extended-methods-on-geometry-instances.md)  
  

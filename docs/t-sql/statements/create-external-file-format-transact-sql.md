@@ -1,7 +1,7 @@
 ---
-title: "CRÉER un FORMAT de fichier externe (Transact-SQL) | Documents Microsoft"
+title: CREATE EXTERNAL FILE FORMAT (Transact-SQL) | Microsoft Docs
 ms.custom: 
-ms.date: 12/08/2017
+ms.date: 2/20/2018
 ms.prod: sql-non-specified
 ms.prod_service: sql-data-warehouse, pdw, sql-database
 ms.service: 
@@ -27,28 +27,28 @@ author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 8fd2fa33a8a9107c86cfda7e0a628ab282efa534
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
-ms.translationtype: MT
+ms.openlocfilehash: fadf030c271888e071ab05e7289c87db57269449
+ms.sourcegitcommit: 7e9380e53341755df13fce130ab3287918a8e44c
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 02/21/2018
 ---
-# <a name="create-external-file-format-transact-sql"></a>CRÉER un FORMAT de fichier externe (Transact-SQL)
+# <a name="create-external-file-format-transact-sql"></a>CREATE EXTERNAL FILE FORMAT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
 
-  Crée une définition de format de fichier externe PolyBase pour données externes stockées dans Hadoop, le stockage d’objets blob Azure ou Azure Data Lake Store. Création d’un format de fichier externe est un composant requis pour la création d’une table externe PolyBase. En créant un format de fichier externe, vous spécifiez la disposition réelle des données référencées par une table externe.  
+  Crée un objet de format de fichier externe qui définit des données externes stockées dans Hadoop, dans le Stockage Blob Azure ou dans Azure Data Lake Store. La création d’un format de fichier externe est un prérequis à la création d’une table externe. En créant un format de fichier externe, vous spécifiez la disposition des données référencées par une table externe.  
   
- PolyBase prend en charge les formats de fichier suivants :
+ PolyBase prend en charge les formats de fichier suivants :
   
 -   Texte délimité  
   
--   La ruche RCFile  
+-   Hive RCFile  
   
--   La ruche ORC
+-   Hive ORC
   
 -   Parquet  
   
- Pour créer une table externe, consultez [CREATE EXTERNAL TABLE &#40; Transact-SQL &#41; ](../../t-sql/statements/create-external-table-transact-sql.md).
+Pour créer une table externe, consultez [CREATE EXTERNAL TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-table-transact-sql.md).
   
  ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -97,7 +97,8 @@ WITH (
 <format_options> ::=  
 {  
     FIELD_TERMINATOR = field_terminator  
-    | STRING_DELIMITER = string_delimiter  
+    | STRING_DELIMITER = string_delimiter 
+    | First_Row = integer -- ONLY AVAILABLE SQL DW
     | DATE_FORMAT = datetime_format  
     | USE_TYPE_DEFAULT = { TRUE | FALSE } 
     | Encoding = {'UTF8' | 'UTF16'} 
@@ -108,200 +109,210 @@ WITH (
  *file_format_name*  
  Spécifie un nom pour le format de fichier externe.
   
- FORMAT_TYPE = [PARQUET | ORC | RCFILE | PARQUET] Spécifie le format des données externes.
+ FORMAT_TYPE = [ PARQUET | ORC | RCFILE | PARQUET] Spécifie le format des données externes.
   
-   -   PARQUET spécifie un format Parquet.
+   -   PARQUET Spécifie un format Parquet.
   
    -   ORC  
-   Spécifie un format optimisé lignes en colonnes (ORC). Cette option requiert la ruche version 0,11 ou une version ultérieure sur le cluster Hadoop externe. Dans Hadoop, le format de fichier ORC offre une meilleure compression et performances que le format de fichier RCFILE.
+   Spécifie un format ORC. Cette option nécessite Hive version 0.11 ou version ultérieure dans le cluster Hadoop externe. Dans Hadoop, le format de fichier ORC offre une meilleure compression et de meilleures performances que le format de fichier RCFILE.
 
-   -   RCFILE (en association avec SERDE_METHOD = *SERDE_method*) spécifie un format de fichier (RcFile) enregistrement en colonnes. Cette option nécessite que vous permet de spécifier un sérialiseur de la ruche et la méthode de désérialiseur (SerDe). Cette exigence est le même si vous utilisez Hive/HiveQL dans Hadoop pour interroger les fichiers RC. Notez que la méthode SerDe respecte la casse.
+   -   RCFILE (en association avec SERDE_METHOD = *SERDE_method*) Spécifie un format de fichier RcFile. Cette option nécessite que vous spécifiiez un sérialiseur Hive et la méthode de désérialiseur (SerDe). Cette exigence est la même si vous utilisez Hive/HiveQL dans Hadoop pour interroger les fichiers RC. Notez que la méthode SerDe respecte la casse.
 
-   Exemples de spécification RCFile avec les deux méthodes de SerDe PolyBase prend en charge.
+   Exemples de spécification RCFile avec les deux méthodes SerDe prises en charge par PolyBase :
 
     -   FORMAT_TYPE = RCFILE, SERDE_METHOD = 'org.apache.hadoop.hive.serde2.columnar.LazyBinaryColumnarSerDe'
 
     -   FORMAT_TYPE = RCFILE, SERDE_METHOD = 'org.apache.hadoop.hive.serde2.columnar.ColumnarSerDe'
 
-   -   DELIMITEDTEXT spécifie un format de texte avec des séparateurs de colonnes, appelé également terminateurs de champ.
+   -   DELIMITEDTEXT spécifie un format de texte avec des délimiteurs de colonne, également appelés « marques de fin de champ ».
   
- Indicateur_fin_de_champ = *indicateur_fin_de_champ* s’applique uniquement à des fichiers texte délimités. La marque de fin de champ spécifie un ou plusieurs caractères marquant la fin de chaque champ (colonne) dans le fichier texte délimité. La valeur par défaut est le ꞌ de caractère de canal | ꞌ. Prise en charge garantie, nous vous recommandons d’à l’aide d’un ou plusieurs caractères ascii.
+ FIELD_TERMINATOR = *field_terminator*  
+S’applique uniquement aux fichiers texte délimité. La marque de fin de champ spécifie un ou plusieurs caractères qui indiquent la fin de chaque champ (colonne) dans le fichier texte délimité. La valeur par défaut est le caractère ꞌ|ꞌ. Pour une prise en charge garantie, nous vous recommandons d’utiliser un ou plusieurs caractères ASCII.
   
   
  Exemples :  
   
--   INDICATEUR_FIN_DE_CHAMP = ' |'  
+-   FIELD_TERMINATOR = '|'  
   
--   INDICATEUR_FIN_DE_CHAMP = ' '  
+-   FIELD_TERMINATOR = ' '  
   
--   Indicateur_fin_de_champ = ꞌ\tꞌ  
+-   FIELD_TERMINATOR = ꞌ\tꞌ  
   
--   INDICATEUR_FIN_DE_CHAMP = ' ~ | ~'  
+-   FIELD_TERMINATOR = '~|~'  
   
  STRING_DELIMITER = *string_delimiter*  
- Spécifie l’indicateur de fin de champ pour les données de type chaîne dans le fichier texte délimité. Le délimiteur de chaîne est un ou plusieurs caractères et est encadré par des guillemets simples. La valeur par défaut est une chaîne vide « ». Prise en charge garantie, nous vous recommandons d’à l’aide d’un ou plusieurs caractères ascii.
+Spécifie la marque de fin de champ pour les données de type chaîne du fichier texte délimité. Le délimiteur de chaîne est constitué d’un ou plusieurs caractères, et est entouré de guillemets simples. La valeur par défaut est la chaîne vide "". Pour une prise en charge garantie, nous vous recommandons d’utiliser un ou plusieurs caractères ASCII.
  
   
  Exemples :  
 
--   STRING_DELIMITER = ' » '
+-   STRING_DELIMITER = '"'
 
--   STRING_DELIMITER = '0 x 22'--hex de guillemets doubles
+-   STRING_DELIMITER = '0 x 22'-- valeur hexadécimale de guillemets doubles
   
--   STRING_DELIMITER = ' *'  
+-   STRING_DELIMITER = '*'  
   
--   STRING_DELIMITER = Ꞌ, Ꞌ  
+-   STRING_DELIMITER = ꞌ,ꞌ  
   
--   STRING_DELIMITER = '0x7E0x7E'--deux tildes (par exemple, ~ ~)
-  
-DATE\_FORMAT = *datetime_format* spécifie un format personnalisé pour toutes les données de date et d’heure qui peuvent apparaître dans un fichier texte délimité. Si le fichier source utilise des formats de date/heure par défaut, cette option n’est pas nécessaire. Un seul format de date/heure personnalisé est autorisé par fichier. Vous ne pouvez pas spécifier plusieurs formats de date/heure personnalisé par fichier. Toutefois, vous pouvez utiliser plusieurs formats de date/heure, si chacun d’eux est le format par défaut pour son type de données respectifs dans la définition de table externe.
+-   STRING_DELIMITER = '0x7E0x7E'--deux tildes (par exemple, ~~)
+ 
+ FIRST_ROW = *First_row_int*  
+Spécifie le numéro de la ligne qui est lue en premier dans tous les fichiers lors d’un chargement PolyBase. Ce paramètre peut prendre les valeurs allant de 1 à 15. Si la valeur est définie sur 2, la première ligne de chaque fichier (ligne d’en-tête) est ignorée lorsque les données sont chargées. Les lignes sont ignorées en présence de marques de fin de ligne (/r/n, /r, /n). Lorsque cette option est utilisée pour l’exportation, les lignes sont ajoutées aux données pour garantir que le fichier pourra être lu sans perte de données. Si la valeur est définie sur > 2, la première ligne exportée est celle des noms de colonnes de la table externe.
 
-PolyBase utilise uniquement le format de date personnalisée pour l’importation des données. Il n’utilise pas le format personnalisé pour l’écriture de données dans un fichier externe.
+ DATE\_FORMAT = *datetime_format*  
+Spécifie un format personnalisé pour toutes les données de date et d’heure qui peuvent apparaître dans un fichier texte délimité. Si le fichier source utilise des formats DateHeure par défaut, cette option n’est pas nécessaire. Un seul format DateHeure personnalisé est autorisé par fichier. Vous ne pouvez pas spécifier plusieurs formats DateHeure personnalisés dans un même fichier. Toutefois, vous pouvez utiliser plusieurs formats DateHeure si chacun d’eux est le format par défaut de son type de données dans la définition de la table externe.
 
- Lorsque DATE_FORMAT n’est pas spécifié ou est une chaîne vide, PolyBase utilise les formats par défaut suivantes :
+PolyBase utilise uniquement le format de date personnalisé pour l’importation des données. Il n’utilise pas le format personnalisé pour l’écriture de données dans un fichier externe.
+
+ Lorsque DATE_FORMAT n’est pas spécifié ou est une chaîne vide, PolyBase utilise les formats par défaut suivants :
   
--   Date et heure : « AAAA-MM-JJ HH : mm : »  
+-   DateTime : 'yyyy-MM-dd HH:mm:ss'  
   
--   SmallDateTime : « AAAA-MM-JJ HH : mm'  
+-   SmallDateTime : 'yyyy-MM-dd HH:mm'  
   
--   Date : « AAAA-MM-jj'  
+-   Date : 'yyyy-MM-dd'  
   
--   DateTime2 : « AAAA-MM-JJ HH : mm : »  
+-   DateTime2 : 'yyyy-MM-dd HH:mm:ss'  
   
--   DateTimeOffset : « AAAA-MM-JJ HH : mm : »  
+-   DateTimeOffset : 'yyyy-MM-dd HH:mm:ss'  
   
--   Durée : « hh : mm : »  
+-   Time : 'HH:mm:ss'  
   
- **Exemples de formats de date** se trouvent dans le tableau suivant.  
+Des **exemples de formats de date** se trouvent dans le tableau suivant :
   
- Remarques sur la table :  
+Remarques sur ce tableau :  
   
--   Année, mois et jour peuvent avoir une variété de formats et de commandes. Le tableau présente uniquement les **ymd** format. Mois peut avoir les chiffres de 1 ou 2 ou 3 caractères. Jour peut avoir 1 ou 2 chiffres. Année peut comporter 2 ou 4 chiffres.
+-   Les années, les mois et les jours peuvent avoir de nombreux formats et ordres différents. Le tableau présente uniquement le format **ymd**. Les mois peuvent avoir un ou deux chiffres, ou trois caractères. Les jours peuvent avoir un ou deux chiffres. Les années peuvent comporter deux ou quatre chiffres.
   
--   Millisecondes (fffffff) n’est pas nécessaire.
+-   Les millisecondes (fffffff) ne sont pas obligatoires.
   
--   AM, pm (tt) n’est pas obligatoire. La valeur par défaut est AM.
+-   La mention du matin ou de l’après-midi (tt) n’est pas obligatoire. Par défaut, l’heure du matin (AM) est utilisée.
   
-|Type de date|Exemple| Description|  
+|Type de date| Exemple|Description|  
 |---------------|-------------|-----------------|  
-|DateTime|Date_format = 'AAAA-MM-JJ HH:mm:ss.fff'|Outre l’année, mois et jour, ce format de date inclut 00-24 heures, de 00 à 59 minutes, de 00 à 59 secondes et 3 chiffres pour les millisecondes.|  
-|DateTime|Date_format = 'AAAA-MM-JJ hh:mm:ss.ffftt'|Outre l’année, mois et jour, ce format de date inclut 00-12 heures, de 00 à 59 minutes, de 00 à 59 secondes, 3 chiffres pour les millisecondes et AM, am, PM ou pm. |  
-|SmallDateTime|Date_format = « AAAA-MM-JJ HH : mm »|Outre l’année, mois et jour, ce format de date inclut entre 00 et 23 heures, de 00 à 59 minutes.|  
-|SmallDateTime|Date_format = 'AAAA-MM-JJ hh:mmtt'|Outre l’année, mois et jour, ce format de date inclut 11 : 00 heures, 00 à 59 minutes, aucun secondes et AM, le am, PM ou pm.|  
-|Date|Date_format = « AAAA-MM-JJ »|Année, mois et jour. Aucun élément d’heure n’est inclus.|  
-|Date|Date_format = « AAAA-MMM-JJ »|Année, mois et jour. Lorsque le mois est spécifiée avec de 3 M, la valeur d’entrée est une ou les chaînes de janvier, février, Mar, avril, mai, juin, juillet, août, septembre, octobre, novembre ou décembre.|  
-|datetime2|Date_format = 'AAAA-MM-JJ ss.fffffff'|Outre l’année, mois et jour, ce format de date inclut entre 00 et 23 heures, de 00 à 59 minutes, de 00 à 59 secondes et 7 chiffres pour les millisecondes.|  
-|datetime2|Date_format = 'AAAA-MM-JJ hh:mm:ss.ffffffftt'|Outre l’année, mois et jour, ce format de date inclut 11 : 00 heures, de 00 à 59 minutes, de 00 à 59 secondes, 7 chiffres pour les millisecondes et AM, am, PM ou pm.|  
-|DateTimeOffset|Date_format = 'AAAA-MM-JJ : ss.fffffff zzz'|Outre l’année, mois et jour, ce format de date inclut entre 00 et 23 heures, de 00 à 59 minutes, de 00 à 59 secondes et 7 chiffres de millisecondes et le décalage de fuseau horaire qui vous placer dans le fichier d’entrée en tant que `{+&#124;-}HH:ss`. Par exemple, depuis l’heure à Los Angeles sans l’heure d’été épargne est de 8 heures après l’heure UTC, une valeur de -08:00, dans le fichier d’entrée spécifie le fuseau horaire de Los Angeles.|  
-|DateTimeOffset|Date_format = 'AAAA-MM-JJ hh:mm:ss.ffffffftt zzz'|Outre l’année, mois et jour, ce format de date inclut 11 : 00 heures, de 00 à 59 minutes, de 00 à 59 secondes, 7 chiffres pour les millisecondes, (AM, am, PM ou pm) et le décalage de fuseau horaire. Consultez la description de la ligne précédente.|  
-|Time|Date_format = 'HH : mm :'|Il n’existe aucune valeur de date, uniquement de 00 à 23 heures, de 00 à 59 minutes, de 00 à 59 secondes.|  
+|DateTime|DATE_FORMAT = 'yyyy-MM-dd HH:mm:ss.fff'|Outre l’année, le mois et le jour, ce format de date inclut de 00 à 24 heures, de 00 à 59 minutes, de 00 à 59 secondes, ainsi que 3 chiffres pour les millisecondes.|  
+|DateTime|DATE_FORMAT = 'yyyy-MM-dd hh:mm:ss.ffftt'|Outre l’année, le mois et le jour, ce format de date inclut de 00 à 12 heures, de 00 à 59 minutes, de 00 à 59 secondes, 3 chiffres pour les millisecondes, ainsi que la mention AM, am, PM ou pm. |  
+|SmallDateTime|DATE_FORMAT =  'yyyy-MM-dd HH:mm'|Outre l’année, le mois et le jour, ce format de date inclut de 00 à 23 heures et de 00 à 59 minutes.|  
+|SmallDateTime|DATE_FORMAT =  'yyyy-MM-dd hh:mmtt'|Outre l’année, le mois et le jour, ce format de date inclut de 00 à 11 heures, de 00 à 59 minutes, pas de secondes, et la mention AM, am, PM ou pm.|  
+|Date|DATE_FORMAT =  'yyyy-MM-dd'|L’année, le mois et le jour. Aucun élément d’heure n’est inclus.|  
+|Date|DATE_FORMAT = 'yyyy-MMM-dd'|L’année, le mois et le jour. Lorsque le mois est spécifié avec 3 M, la valeur d’entrée est l’une des chaînes suivantes : Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov ou Dec.|  
+|datetime2|DATE_FORMAT = 'yyyy-MM-dd HH:mm:ss.fffffff'|Outre l’année, le mois et le jour, ce format de date inclut de 00 à 23 heures, de 00 à 59 minutes, de 00 à 59 secondes, ainsi que 7 chiffres pour les millisecondes.|  
+|datetime2|DATE_FORMAT = 'yyyy-MM-dd hh:mm:ss.ffffffftt'|Outre l’année, le mois et le jour, ce format de date inclut de 00 à 11 heures, de 00 à 59 minutes, de 00 à 59 secondes, 7 chiffres pour les millisecondes, ainsi que la mention AM, am, PM ou pm.|  
+|DateTimeOffset|DATE_FORMAT = 'yyyy-MM-dd HH:mm:ss.fffffff zzz'|Outre l’année, le mois et le jour, ce format de date inclut de 00 à 23 heures, de 00 à 59 minutes, de 00 à 59 secondes, 7 chiffres pour les millisecondes, ainsi que le décalage des fuseaux horaires que vous placez dans le fichier ainsi : `{+&#124;-}HH:ss`. Par exemple, étant donné que l’heure de Los Angeles, sans l’heure d’été, est en retard de 8 heures par rapport à l’heure UTC, la valeur -08:00, dans le fichier d’entrée va spécifier le fuseau horaire de Los Angeles.|  
+|DateTimeOffset|DATE_FORMAT = 'yyyy-MM-dd hh:mm:ss.ffffffftt zzz'|Outre l’année, le mois et le jour, ce format de date inclut de 00 à 11 heures, de 00 à 59 minutes, de 00 à 59 secondes, 7 chiffres pour les millisecondes, la mention AM, am, PM ou pm, et le décalage des fuseaux horaires. Voir la description à la ligne précédente.|  
+|Time|DATE_FORMAT = 'HH:mm:ss'|Il n’existe aucune valeur de date, seulement de 00 à 23 heures, de 00 à 59 minutes et de 00 à 59 secondes.|  
   
- Tous les formats de date pris en charge :
+ Voici tous les formats de date pris en charge :
   
-|datetime|smalldatetime|date|datetime2|datetimeoffset|  
+|DATETIME|smalldatetime|Date|datetime2|datetimeoffset|  
 |--------------|-------------------|----------|---------------|--------------------|  
-|[M [M]] M-[d] [aa] d-yy HH : mm : [.fff]|[M [M]] M-[d] [aa] d-yy HH : mm [ : 00]|[M[M]]M-[d]d-[yy]yy|[M [M]] M-[d] [aa] d-yy HH : mm : [.fffffff]|[M [M]] M-[d] [aa] d-yy HH : mm : [.fffffff] zzz|  
-|[M [M]] M-[d] [aa] d-yy HH : mm : [.fff] [tt]|[M [M]] M-[d] [aa] d-yy HH : mm [ : 00] [tt]||[M [M]] M-[d] [aa] d-yy HH : mm : [.fffffff] [tt]|[M [M]] M-[d] [aa] d-yy HH : mm : [.fffffff] [tt] zzz|  
+|[M[M]]M-[d]d-[yy]yy HH:mm:ss[.fff]|[M[M]]M-[d]d-[yy]yy HH:mm[:00]|[M[M]]M-[d]d-[yy]yy|[M[M]]M-[d]d-[yy]yy HH:mm:ss[.fffffff]|[M[M]]M-[d]d-[yy]yy HH:mm:ss[.fffffff] zzz|  
+|[M[M]]M-[d]d-[yy]yy hh:mm:ss[.fff][tt]|[M[M]]M-[d]d-[yy]yy hh:mm[:00][tt]||[M[M]]M-[d]d-[yy]yy hh:mm:ss[.fffffff][tt]|[M[M]]M-[d]d-[yy]yy hh:mm:ss[.fffffff][tt] zzz|  
 |[M[M]]M-[yy]yy-[d]d HH:mm:ss[.fff]|[M[M]]M-[yy]yy-[d]d HH:mm[:00]|[M[M]]M-[yy]yy-[d]d|[M[M]]M-[yy]yy-[d]d HH:mm:ss[.fffffff]|[M[M]]M-[yy]yy-[d]d HH:mm:ss[.fffffff] zzz|  
-|[M [M]] M-[aa] AA-[d] HH : mm : d [.fff] [tt]|[M[M]]M-[yy]yy-[d]d hh:mm[:00][tt]||[M [M]] M-[aa] AA-[d] HH : mm : d [.fffffff] [tt]|[M [M]] M-[aa] AA-[d] HH : mm : d [.fffffff] [tt] zzz|  
+|[M[M]]M-[yy]yy-[d]d hh:mm:ss[.fff][tt]|[M[M]]M-[yy]yy-[d]d hh:mm[:00][tt]||[M[M]]M-[yy]yy-[d]d hh:mm:ss[.fffffff][tt]|[M[M]]M-[yy]yy-[d]d hh:mm:ss[.fffffff][tt] zzz|  
 |[yy]yy-[M[M]]M-[d]d HH:mm:ss[.fff]|[yy]yy-[M[M]]M-[d]d HH:mm[:00]|[yy]yy-[M[M]]M-[d]d|[yy]yy-[M[M]]M-[d]d HH:mm:ss[.fffffff]|[yy]yy-[M[M]]M-[d]d HH:mm:ss[.fffffff]  zzz|  
-|[aa] AA-[M [M]] [d] M-d hh : mm : [.fff] [tt]|[aa] AA-[M [M]] [d] M-d hh : mm [ : 00] [tt]||[aa] AA-[M [M]] [d] M-d hh : mm : [.fffffff] [tt]|[aa] AA-[M [M]] [d] M-d hh : mm : [.fffffff] [tt] zzz|  
+|[yy]yy-[M[M]]M-[d]d hh:mm:ss[.fff][tt]|[yy]yy-[M[M]]M-[d]d hh:mm[:00][tt]||[yy]yy-[M[M]]M-[d]d hh:mm:ss[.fffffff][tt]|[yy]yy-[M[M]]M-[d]d hh:mm:ss[.fffffff][tt] zzz|  
 |[yy]yy-[d]d-[M[M]]M HH:mm:ss[.fff]|[yy]yy-[d]d-[M[M]]M HH:mm[:00]|[yy]yy-[d]d-[M[M]]M|[yy]yy-[d]d-[M[M]]M HH:mm:ss[.fffffff]|[yy]yy-[d]d-[M[M]]M HH:mm:ss[.fffffff]  zzz|  
-|[aa] AA-[d] [M [M]] d-M hh : mm : [.fff] [tt]|[yy]yy-[d]d-[M[M]]M hh:mm[:00][tt]||[aa] AA-[d] [M [M]] d-M hh : mm : [.fffffff] [tt]|[aa] AA-[d] [M [M]] d-M hh : mm : [.fffffff] [tt] zzz|  
-|[d] [M [M]] d-M-[aa] AA HH : mm : [.fff]|[d]d-[M[M]]M-[yy]yy HH:mm[:00]|[d]d-[M[M]]M-[yy]yy|[d] [M [M]] d-M-[aa] AA HH : mm : [.fffffff]|[d] [M [M]] d-M-[aa] AA HH : mm : [.fffffff] zzz|  
-|[d] [M [M]] d-M-[aa] AA HH : mm : [.fff] [tt]|[d] [M [M]] d-M-[aa] AA HH : mm [ : 00] [tt]||[d] [M [M]] d-M-[aa] AA HH : mm : [.fffffff] [tt]|[d] [M [M]] d-M-[aa] AA HH : mm : [.fffffff] [tt] zzz|  
+|[yy]yy-[d]d-[M[M]]M hh:mm:ss[.fff][tt]|[yy]yy-[d]d-[M[M]]M hh:mm[:00][tt]||[yy]yy-[d]d-[M[M]]M hh:mm:ss[.fffffff][tt]|[yy]yy-[d]d-[M[M]]M hh:mm:ss[.fffffff][tt] zzz|  
+|[d]d-[M[M]]M-[yy]yy HH:mm:ss[.fff]|[d]d-[M[M]]M-[yy]yy HH:mm[:00]|[d]d-[M[M]]M-[yy]yy|[d]d-[M[M]]M-[yy]yy HH:mm:ss[.fffffff]|[d]d-[M[M]]M-[yy]yy HH:mm:ss[.fffffff] zzz|  
+|[d]d-[M[M]]M-[yy]yy hh:mm:ss[.fff][tt]|[d]d-[M[M]]M-[yy]yy hh:mm[:00][tt]||[d]d-[M[M]]M-[yy]yy hh:mm:ss[.fffffff][tt]|[d]d-[M[M]]M-[yy]yy hh:mm:ss[.fffffff][tt] zzz|  
 |[d]d-[yy]yy-[M[M]]M HH:mm:ss[.fff]|[d]d-[yy]yy-[M[M]]M HH:mm[:00]|[d]d-[yy]yy-[M[M]]M|[d]d-[yy]yy-[M[M]]M HH:mm:ss[.fffffff]|[d]d-[yy]yy-[M[M]]M HH:mm:ss[.fffffff]  zzz|  
-|[d] d-[aa] AA-[M [M]] M hh : mm : [.fff] [tt]|[d]d-[yy]yy-[M[M]]M hh:mm[:00][tt]||[d] d-[aa] AA-[M [M]] M hh : mm : [.fffffff] [tt]|[d] d-[aa] AA-[M [M]] M hh : mm : [.fffffff] [tt] zzz|  
+|[d]d-[yy]yy-[M[M]]M hh:mm:ss[.fff][tt]|[d]d-[yy]yy-[M[M]]M hh:mm[:00][tt]||[d]d-[yy]yy-[M[M]]M hh:mm:ss[.fffffff][tt]|[d]d-[yy]yy-[M[M]]M hh:mm:ss[.fffffff][tt] zzz|  
   
  Détails :  
   
--   Pour séparer les valeurs mois, jour et année, vous pouvez utiliser ':', '/' ou '. '. Par souci de simplicité, la table utilise uniquement le séparateur ':'.
+-   Pour séparer le mois, du jour et de l’année, vous pouvez utiliser les caractères « – », « / » ou « . ». Par souci de simplicité, le tableau utilise uniquement le séparateur « – ».
   
--   Pour spécifier le mois sous forme de texte, utilisez les trois caractères ou plus. Mois avec 1 ou 2 caractères sont interprétés en tant que nombre.
+-   Pour spécifier le mois sous forme de texte, utilisez les trois caractères (ou plus). Les mois constitués d’un ou deux caractères sont interprétés comme des nombres.
   
--   Pour séparer les valeurs d’heure, utilisez le ' : ' symbole.
+-   Pour séparer les valeurs d’heure, utilisez le symbole « : ».
   
--   Lettres entourés crochets sont facultatifs.
+-   Les lettres entre crochets sont facultatives.
   
--   Les lettres « tt » désigner [AM | PM | am | pm]. AM est la valeur par défaut. Lorsque « tt » est spécifié, la valeur d’heure (hh) doit être dans la plage de 0 à 12.
+-   Les lettres « tt » correspondent aux mentions [AM|PM|am|pm]. AM est la valeur par défaut. Lorsque « tt » est spécifié, la valeur d’heure (hh) doit être comprise entre 0 et 12.
   
--   Les lettres « zzz » désigne le décalage de fuseau horaire pour fuseau horaire du système dans le format {+ |-} HH:ss].
+-   Les lettres « zzz » désignent le décalage par rapport au fuseau horaire du système, au format {+|-}HH:ss].
   
- USE_TYPE_DEFAULT = {TRUE | **FALSE** } spécifie comment gérer les valeurs manquantes dans les fichiers texte délimités lorsque PolyBase récupère les données à partir du fichier texte.
+ USE_TYPE_DEFAULT = { TRUE | **FALSE** }  
+ Spécifie comment gérer les valeurs manquantes dans les fichiers texte délimité lorsque PolyBase récupère les données à partir du fichier texte.
   
- La valeur est TRUE lorsque la récupération des données à partir du fichier texte, stocker chaque valeur manquante à l’aide de la valeur par défaut pour le type de données de la colonne correspondante dans la définition de table externe. Par exemple, remplacez une valeur manquante avec :  
+ TRUE  
+ Lors de la récupération des données à partir du fichier texte, stockez chaque valeur manquante à l’aide de la valeur par défaut du type de données de la colonne correspondante dans la définition de la table externe. Par exemple, remplacez une valeur manquante par :  
   
 -   0 si la colonne est définie comme une colonne numérique.
   
--   Une chaîne vide « » si la colonne est une colonne de chaîne.
+-   Une chaîne vide «» si la colonne est une colonne de chaîne.
   
 -   1900-01-01 si la colonne est une colonne de date.
   
- Stockent FALSE tous manquants des valeurs NULL. Les valeurs NULL sont stockées en utilisant le mot NULL dans le fichier texte délimité sont importés en tant que la chaîne « NULL ».
+ FALSE  
+ Stockez toutes les valeurs manquantes en tant que valeurs NULL. Toutes les valeurs NULL qui sont stockées à l’aide du mot NULL dans le fichier texte délimité sont importées en tant que chaînes NULL.
   
-   Encodage = {'UTF8' | 'UTF16}' dans Azure SQL Data Warehouse, PolyBase peut lire fichiers texte délimités, UTF8 et UTF16-LE encodé. Dans SQL Server et PDW, PolyBase ne prend pas en charge la lecture UTF16 fichiers codés.
+   Encodage = {'UTF8' | 'UTF16'}  
+ Dans Azure SQL Data Warehouse, PolyBase peut lire les fichiers texte délimité aux formats UTF8 et UTF16-LE. Dans SQL Server et PDW, PolyBase ne prend pas en charge la lecture des fichiers UTF16.
   
- DATA_COMPRESSION = *data_compression_method* spécifie la méthode de compression de données pour les données externes. Lorsque DATA_COMPRESSION n’est pas spécifié, la valeur par défaut est données non compressées.
- Afin de fonctionner correctement, les fichiers Gzip compressée doivent avoir l’extension de fichier « .gz ».
+ DATA_COMPRESSION = *data_compression_method*  
+ Spécifie la méthode de compression appliquée aux données externes. Lorsque DATA_COMPRESSION n’est pas spécifié, par défaut, les données ne sont pas compressées.
+ Pour fonctionner correctement, les fichiers compressés avec Gzip doivent avoir l’extension de fichier « .gz ».
  
- Le type de format DELIMITEDTEXT prend en charge ces méthodes de compression :
+ Le type de format DELIMITEDTEXT prend en charge les méthodes de compression suivantes :
   
--   La COMPRESSION de données = 'org.apache.hadoop.io.compress.DefaultCodec'
+-   DATA COMPRESSION = 'org.apache.hadoop.io.compress.DefaultCodec'
   
--   La COMPRESSION de données = 'org.apache.hadoop.io.compress.GzipCodec'
+-   DATA COMPRESSION = 'org.apache.hadoop.io.compress.GzipCodec'
 
- Le type de format RCFILE prend en charge cette méthode de compression :
+ Le type de format RCFILE prend en charge la méthode de compression suivante :
   
--   La COMPRESSION de données = 'org.apache.hadoop.io.compress.DefaultCodec'
+-   DATA COMPRESSION = 'org.apache.hadoop.io.compress.DefaultCodec'
   
- Le type de format de fichier ORC prend en charge ces méthodes de compression :
+ Le type de format ORC prend en charge les méthodes de compression suivantes :
   
--   La COMPRESSION de données = 'org.apache.hadoop.io.compress.DefaultCodec'
+-   DATA COMPRESSION = 'org.apache.hadoop.io.compress.DefaultCodec'
   
--   La COMPRESSION de données = 'org.apache.hadoop.io.compress.SnappyCodec'
+-   DATA COMPRESSION = 'org.apache.hadoop.io.compress.SnappyCodec'
   
- Le type de format de fichier PARQUET prend en charge les méthodes de compression folliwing :
+ Le type de format PARQUET prend en charge les méthodes de compression suivantes :
   
--   La COMPRESSION de données = 'org.apache.hadoop.io.compress.GzipCodec'
+-   DATA COMPRESSION = 'org.apache.hadoop.io.compress.GzipCodec'
   
--   La COMPRESSION de données = 'org.apache.hadoop.io.compress.SnappyCodec'
+-   DATA COMPRESSION = 'org.apache.hadoop.io.compress.SnappyCodec'
   
 ## <a name="permissions"></a>Autorisations  
  Nécessite l’autorisation ALTER ANY EXTERNAL FILE FORMAT.
   
 ## <a name="general-remarks"></a>Remarques d'ordre général
- Le format de fichier externe est étendue de base de données dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]. Il est à portée de serveur dans [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
+ Le format de fichier externe est limité à la base de données dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]. Il est limité au serveur dans [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
   
- Les options de format sont tous facultatifs et s’appliquent uniquement aux fichiers texte délimités.  
+ Les options de format sont toutes facultatives et s’appliquent uniquement aux fichiers texte délimité.  
   
- Lorsque les données sont stockées dans un des formats compressés, PolyBase décompresse tout d’abord les données avant de retourner les enregistrements de données.
+ Lorsque les données sont stockées dans l’un des formats compressés, PolyBase décompresse d’abord les données avant de retourner les enregistrements de données.
   
 ## <a name="limitations-and-restrictions"></a>Limitations et restrictions
   
- Le séparateur de lignes dans les fichiers texte délimités doit les prendre en charge LineRecordReader de Hadoop. Autrement dit, il doit être soit '\r', '\n' ou '\r\n'. Ces délimiteurs ne sont pas configurables par l’utilisateur.
+ Dans les fichiers texte délimité, le séparateur de lignes doit être pris en charge par LineRecordReader de Hadoop. Il doit donc être « \r », « \n » ou « \r\n ». Ces délimiteurs ne sont pas configurables par l’utilisateur.
   
- Les combinaisons de méthodes SerDe prises en charge avec RCFiles et les méthodes de compression de données pris en charge sont répertoriés précédemment dans cet article. Toutes les combinaisons ne sont pris en charge.
+ Les combinaisons de méthodes SerDe prises en charge par RCFile et les méthodes de compression de données prises en charge sont répertoriées plus haut dans cet article. Toutes les combinaisons ne sont pas prises en charge.
   
- Le nombre maximal de requêtes simultanées de PolyBase est 32. Lorsque 32 requêtes simultanées sont en cours d’exécution, chaque requête peut lire un maximum de 33 000 fichiers à partir de l’emplacement du fichier externe. Le dossier racine et chaque sous-dossier comptent également en tant que fichier. Si le degré de concurrence est inférieure à 32, l’emplacement du fichier externe peut contenir plus de 33 000 fichiers.
+ Le nombre maximal de requêtes PolyBase simultanées est de 32. Lorsque 32 requêtes sont exécutées simultanément, chaque requête peut lire un maximum de 33 000 fichiers à partir de l’emplacement de fichier externe. Le dossier racine et chaque sous-dossier comptent également comme un fichier. Si le degré de concurrence est inférieur à 32, l’emplacement de fichier externe peut contenir plus de 33 000 fichiers.
   
- En raison de la limitation sur le nombre de fichiers dans la table externe, nous vous recommandons de stockage inférieur à 30 000 fichiers à la racine et les sous-dossiers de l’emplacement de fichier externe. En outre, nous vous recommandons de conserver le nombre de sous-dossiers dans le répertoire racine pour un petit nombre. Lorsque trop de fichiers sont référencés, une exception d’insuffisance de mémoire de Machine virtuelle Java peut se produire.
+ En raison de la limitation concernant le nombre de fichiers de la table externe, nous vous recommandons de stocker moins de 30 000 fichiers à la racine et dans les sous-dossiers de l’emplacement de fichier externe. En outre, nous vous recommandons de limiter au maximum le nombre de sous-dossiers dans le répertoire racine. Lorsque trop de fichiers sont référencés, une exception d’insuffisance de mémoire Java Virtual Machine peut être levée.
   
-  Lorsque l’exportation de données vers Hadoop ou Azure Blob Storage via PolyBase, seules les données est exporté, pas names(metadata) à la colonne tel que défini dans la commande CREATE EXTERNAL TABLE.
+  En cas d’exportation de données vers Hadoop ou vers le Stockage Blob Azure via PolyBase, seules les données sont exportées, et non les noms de colonnes (métadonnées), comme le définit la commande CREATE EXTERNAL TABLE.
 
 ## <a name="locking"></a>Verrouillage  
- Acquiert un verrou partagé sur l’objet de FORMAT de fichier externe.
+ Prend un verrou partagé sur l’objet EXTERNAL FILE FORMAT.
   
-## <a name="performance"></a>Performance
- À l’aide de fichiers compressés toujours s’accompagne le compromis entre le transfert moins de données entre la source de données externe et SQL Server, tout en augmentant l’utilisation du processeur pour compresser et décompresser les données.
+## <a name="performance"></a>Performances
+ L’utilisation de fichiers compressés présente l’inconvénient de devoir transférer moins de données entre la source de données externe et SQL Server, tout en augmentant l’utilisation du processeur pour compresser et décompresser les données.
   
- GZip compressées des fichiers texte ne sont pas partageables. Pour améliorer les performances pour les fichiers de texte Gzip compressées, nous vous recommandons de générer plusieurs fichiers sont stockés dans le même répertoire au sein de la source de données externe. Cela permet à PolyBase de lire et de décompresser les données plus rapides à l’aide de plusieurs processus du lecteur et la décompression. Le nombre idéal de fichiers compressés est le nombre maximal de processus du lecteur de données par nœud de calcul. Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], le nombre maximal de processus du lecteur de données est 8 par nœud dans la version actuelle. Dans [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], le nombre maximal de processus du lecteur de données par nœud varie selon les objectifs du contrat. Consultez [Azure SQL Data Warehouse lors du chargement des modèles et stratégies](https://blogs.msdn.microsoft.com/sqlcat/2016/02/06/azure-sql-data-warehouse-loading-patterns-and-strategies/) pour plus d’informations.  
+ Les fichiers texte compressés avec GZip ne sont pas fractionnables. Pour améliorer les performances des fichiers texte compressés avec Gzip, nous vous recommandons de générer plusieurs fichiers et de les stocker dans le même répertoire de la source de données externe. Cette structure de fichiers permet à PolyBase de lire et de décompresser les données plus rapidement à l’aide de plusieurs processus de lecture et de décompression. Le nombre idéal de fichiers compressés correspond au nombre maximal de processus de lecteur de données par nœud de calcul. Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], le nombre maximal de processus de lecteur de données est de 8 par nœud dans la version actuelle. Dans [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], le nombre maximal de processus de lecteur de données par nœud varie selon les objectifs du contrat. Pour plus d’informations, consultez [Azure SQL Data Warehouse loading patterns and strategies](https://blogs.msdn.microsoft.com/sqlcat/2016/02/06/azure-sql-data-warehouse-loading-patterns-and-strategies/).  
   
 ## <a name="examples"></a>Exemples  
   
 ### <a name="a-create-a-delimitedtext-external-file-format"></a>A. Créer un format de fichier externe DELIMITEDTEXT  
- Cet exemple crée un format de fichier externe nommé *textdelimited1* pour un fichier délimité par du texte. Les options répertoriées pour le FORMAT\_OPTIONS spécifient que les champs dans le fichier doivent être séparés à l’aide d’une barre verticale « | ». Le fichier texte est également compressé avec le codec Gzip. Si données\_la COMPRESSION n’est pas spécifiée, le fichier texte est décompressé.
+ Cet exemple crée un format de fichier externe nommé *textdelimited1* pour un fichier texte délimité. Les options répertoriées pour FORMAT\_OPTIONS spécifient que les champs du fichier doivent être séparés par le caractère « | ». Le fichier texte est également compressé avec le codec Gzip. Si DATA\_COMPRESSION n’est pas spécifié, le fichier texte est décompressé.
   
- Pour un fichier texte délimité, la méthode de compression de données peut être la valeur par défaut du Codec, 'org.apache.hadoop.io.compress.DefaultCodec' ou le Gzip Codec, 'org.apache.hadoop.io.compress.GzipCodec'.
+ Pour un fichier texte délimité, la méthode de compression des données peut être le Codec par défaut, « org.apache.hadoop.io.compress.DefaultCodec », ou le Codec Gzip « org.apache.hadoop.io.compress.GzipCodec ».
   
 ```  
 CREATE EXTERNAL FILE FORMAT textdelimited1  
@@ -315,7 +326,7 @@ WITH (
 ```  
   
 ### <a name="b-create-an-rcfile-external-file-format"></a>B. Créer un format de fichier externe RCFile  
- Cet exemple crée un format de fichier externe pour un RCFile qui utilise le org.apache.hadoop.hive.serde2.columnar.LazyBinaryColumnarSerDe de méthode de sérialisation/désérialisation. Il spécifie également pour utiliser le Codec par défaut pour la méthode de compression de données. Si DATA_COMPRESSION n’est pas spécifié, la valeur par défaut n’est aucune compression.
+ Cet exemple crée un format de fichier externe pour un RCFile qui utilise la méthode de sérialisation/désérialisation org.apache.hadoop.hive.serde2.columnar.LazyBinaryColumnarSerDe. Il spécifie également l’utilisation du Codec par défaut pour la méthode de compression des données. Si DATA_COMPRESSION n’est pas spécifié, par défaut, les données ne sont pas compressées.
   
 ```  
 CREATE EXTERNAL FILE FORMAT rcfile1  
@@ -327,7 +338,7 @@ WITH (
 ```  
   
 ### <a name="c-create-an-orc-external-file-format"></a>C. Créer un format de fichier externe ORC  
- Cet exemple crée un format de fichier externe pour un fichier ORC qui compresse les données avec la méthode de compression de données org.apache.io.compress.SnappyCodec. Si DATA_COMPRESSION n’est pas spécifié, la valeur par défaut n’est aucune compression.
+ Cet exemple crée un format de fichier externe pour un fichier ORC qui compresse les données avec la méthode de compression des données org.apache.io.compress.SnappyCodec. Si DATA_COMPRESSION n’est pas spécifié, par défaut, les données ne sont pas compressées.
   
 ```  
 CREATE EXTERNAL FILE FORMAT orcfile1  
@@ -338,7 +349,7 @@ WITH (
 ```  
   
 ### <a name="d-create-a-parquet-external-file-format"></a>D. Créer un format de fichier externe PARQUET  
- Cet exemple crée un format de fichier externe pour un fichier Parquet qui compresse les données avec la méthode de compression de données org.apache.io.compress.SnappyCodec. Si DATA_COMPRESSION n’est pas spécifié, la valeur par défaut n’est aucune compression.  
+ Cet exemple crée un format de fichier externe pour un fichier PARQUET qui compresse les données avec la méthode de compression des données org.apache.io.compress.SnappyCodec. Si DATA_COMPRESSION n’est pas spécifié, par défaut, les données ne sont pas compressées.  
   
 ```  
 CREATE EXTERNAL FILE FORMAT parquetfile1  
@@ -347,10 +358,23 @@ WITH (
     DATA_COMPRESSION = 'org.apache.hadoop.io.compress.SnappyCodec'  
 );  
 ```  
+### <a name="e-create-a-delimited-text-file-skipping-header-row-azure-sql-dw-only"></a>E. Créer un fichier texte délimité qui ignore la ligne d’en-tête (Azure SQL DW uniquement)
+ Cet exemple crée un format de fichier externe pour un fichier CSV avec une seule ligne d’en-tête. 
   
-## <a name="see-also"></a>Voir aussi
+```  
+CREATE EXTERNAL FILE FORMAT skipHeader_CSV
+WITH (FORMAT_TYPE = DELIMITEDTEXT,
+      FORMAT_OPTIONS(
+          FIELD_TERMINATOR = ',',
+          STRING_DELIMITER = '"',
+          FIRST_ROW = 2, 
+          USE_TYPE_DEFAULT = True)
+)
+```   
+
+## <a name="see-also"></a> Voir aussi
  [CREATE EXTERNAL DATA SOURCE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-data-source-transact-sql.md)   
  [CREATE EXTERNAL TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-table-transact-sql.md)   
- [CREATE EXTERNAL TABLE AS SELECT &#40; Transact-SQL &#41;](../../t-sql/statements/create-external-table-as-select-transact-sql.md)   
- [CREATE TABLE AS SELECT &#40; Entrepôt de données SQL Azure &#41;](../../t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md)   
+ [CREATE EXTERNAL TABLE AS SELECT &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-table-as-select-transact-sql.md)   
+ [CREATE TABLE AS SELECT &#40;Azure SQL Data Warehouse&#41;](../../t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md)   
  [sys.external_file_formats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-external-file-formats-transact-sql.md)  

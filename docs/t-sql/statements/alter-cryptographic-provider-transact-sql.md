@@ -1,5 +1,5 @@
 ---
-title: ALTER CRYPTOGRAPHIC PROVIDER (Transact-SQL) | Documents Microsoft
+title: ALTER CRYPTOGRAPHIC PROVIDER (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 04/20/2017
 ms.prod: sql-non-specified
@@ -49,7 +49,7 @@ ALTER CRYPTOGRAPHIC PROVIDER provider_name
 ```  
   
 ## <a name="arguments"></a>Arguments  
- *Nom_Fournisseur*  
+ *provider_name*  
  Nom du fournisseur EKM (Gestion de clés extensible).  
   
  *Path_of_DLL*  
@@ -58,7 +58,7 @@ ALTER CRYPTOGRAPHIC PROVIDER provider_name
  ENABLE | DISABLE  
  Active ou désactive un fournisseur.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Si le fournisseur modifie le fichier .dll utilisé pour implémenter la gestion de clés extensible dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vous devez utiliser l'instruction ALTER CRYPTOGRAPHIC PROVIDER.  
   
  Lorsque le chemin d'accès du fichier .dll est mis à jour à l'aide de l'instruction ALTER CRYPTOGRAPHIC PROVIDER, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] effectue les actions suivantes :  
@@ -79,34 +79,34 @@ Lorsque le fichier d'en-tête utilisé pour créer la DLL de fournisseur EKM est
   
  `SQL Crypto API version '%02d.%02d' implemented by provider is not supported. Supported version is '%02d.%02d'.`  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l'autorisation CONTROL sur le fournisseur de services de chiffrement.  
   
 ## <a name="examples"></a>Exemples  
- L’exemple suivant modifie un fournisseur de services de chiffrement, appelé `SecurityProvider` dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vers une version plus récente d’un fichier .dll. Cette nouvelle version est nommée `c:\SecurityProvider\SecurityProvider_v2.dll` et est installé sur le serveur. Le certificat du fournisseur doit être installé sur le serveur.  
+ L’exemple suivant modifie un fournisseur de services de chiffrement, appelé `SecurityProvider` dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], en ajoutant une version plus récente d’un fichier .dll. Cette nouvelle version est nommée `c:\SecurityProvider\SecurityProvider_v2.dll` et est installée sur le serveur. Le certificat du fournisseur doit être installé sur le serveur.  
   
-1. Désactiver le fournisseur pour effectuer la mise à niveau. Cela mettra fin à toutes les sessions de services de chiffrement.  
+1. Désactivez le fournisseur pour effectuer la mise à niveau. Cela met fin à toutes les sessions de chiffrement ouvertes.  
 ```  
 ALTER CRYPTOGRAPHIC PROVIDER SecurityProvider   
 DISABLE;  
 GO  
 ```  
 
-2. Mettre à niveau le fichier .dll du fournisseur. Le GUID doit être identique à la version précédente, mais la version peut être différente.  
+2. Mettez à niveau le fichier .dll du fournisseur. Le GUID doit être identique à celui de la version précédente, mais la version peut être différente.  
 ```  
 ALTER CRYPTOGRAPHIC PROVIDER SecurityProvider  
 FROM FILE = 'c:\SecurityProvider\SecurityProvider_v2.dll';  
 GO  
 ```  
 
-3. Activer le fournisseur mis à niveau.   
+3. Activez le fournisseur mis à niveau.   
 ```  
 ALTER CRYPTOGRAPHIC PROVIDER SecurityProvider   
 ENABLE;  
 GO  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Gestion de clés extensible &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md)   
  [CREATE CRYPTOGRAPHIC PROVIDER &#40;Transact-SQL&#41;](../../t-sql/statements/create-cryptographic-provider-transact-sql.md)   
  [DROP CRYPTOGRAPHIC PROVIDER &#40;Transact-SQL&#41;](../../t-sql/statements/drop-cryptographic-provider-transact-sql.md)   

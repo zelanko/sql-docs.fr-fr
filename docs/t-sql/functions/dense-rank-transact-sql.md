@@ -1,5 +1,5 @@
 ---
-title: DENSE_RANK (Transact-SQL) | Documents Microsoft
+title: DENSE_RANK (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -48,16 +48,16 @@ DENSE_RANK ( ) OVER ( [ <partition_by_clause> ] < order_by_clause > )
 ```  
   
 ## <a name="arguments"></a>Arguments  
- \<partition_by_clause >  
- Divise le jeu de résultats généré par le [FROM](../../t-sql/queries/from-transact-sql.md) clause en partitions auxquelles la fonction DENSE_RANK est appliquée. Pour la syntaxe de la PARTITION BY, consultez [la Clause OVER &#40; Transact-SQL &#41; ](../../t-sql/queries/select-over-clause-transact-sql.md).  
+ \<partition_by_clause>  
+ Divise le jeu de résultats généré par la clause [FROM](../../t-sql/queries/from-transact-sql.md) en partitions auxquelles la fonction DENSE_RANK est appliquée. Pour la syntaxe de PARTITION BY, consultez [OVER, clause &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md).  
   
- \<order_by_clause >  
+ \<order_by_clause>  
  Détermine l'ordre dans lequel la fonction DENSE_RANK est appliquée aux lignes dans une partition.  
   
 ## <a name="return-types"></a>Types de retour  
  **bigint**  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Si au moins deux lignes sont liées à un rang de la même partition, elles reçoivent le même rang. Par exemple, si les deux meilleurs vendeurs ont la même valeur SalesYTD, leur rang à tous deux est un. Le commercial dont la valeur SalesYTD est immédiatement inférieure reçoit le rang deux. Cela correspond à un rang de plus que le nombre de lignes distinctes précédant cette ligne. Par conséquent, les nombres retournés par la fonction DENSE_RANK ne comportent pas de vides et définissent toujours des rangs consécutifs.  
   
  L'ordre de tri utilisé pour l'ensemble de la requête détermine l'ordre d'apparition des lignes dans un résultat. Cela implique qu'une ligne ayant le rang numéro un n'est pas nécessairement la première ligne de la partition.  
@@ -132,7 +132,7 @@ BusinessEntityID Rate                  RankBySalary
 ```  
   
 ## <a name="c-four-ranking-functions-used-in-the-same-query"></a>C. Quatre fonctions de classement utilisées dans la même requête  
- Dans l'exemple suivant, les quatre fonctions de classement sont utilisées dans la même requête. Pour des exemples spécifiques de la fonction, consultez chaque fonction de classement.  
+ Dans l'exemple suivant, les quatre fonctions de classement sont utilisées dans la même requête. Pour consulter des exemples spécifiques à ces fonctions, consultez les rubriques consacrées à chacune d’elles.  
   
 ```  
 USE AdventureWorks2012;  
@@ -156,25 +156,25 @@ WHERE TerritoryID IS NOT NULL AND SalesYTD <> 0;
   
 |FirstName|LastName|Row Number|Rank|Dense Rank|Quartile|SalesYTD|PostalCode|  
 |---------------|--------------|----------------|----------|----------------|--------------|--------------|----------------|  
-|Michael|Blythe|1|1|1|1|4557045.0459|98027|  
-|Linda|Mitchell|2|1|1|1|5200475.2313|98027|  
-|Jillian|Carson|3|1|1|1|3857163.6332|98027|  
-|Garrett|Vargas|4|1|1|1|1764938.9859|98027|  
-|Tsvi|Reiter|5|1|1|2|2811012.7151|98027|  
-|Shu|Ito|6|6|2|2|3018725.4858|98055|  
-|José|Saraiva|7|6|2|2|3189356.2465|98055|  
-|David|Campbell|8|6|2|3|3587378.4257|98055|  
-|Tete|Mensa-Annan|9|6|2|3|1931620.1835|98055|  
-|Lynn|Tsoflias|10|6|2|3|1758385.926|98055|  
-|Rachel|Valdez|11|6|2|4|2241204.0424|98055|  
-|Jae|Pak|12|6|2|4|5015682.3752|98055|  
-|Ranjit|Varkey Chudukatil|13|6|2|4|3827950.238|98055| 
+|Michael|Blythe| 1| 1| 1| 1|4557045,0459|98027|  
+|Linda|Mitchell|2| 1| 1| 1|5200475,2313|98027|  
+|Jillian|Carson|3| 1| 1| 1|3857163,6332|98027|  
+|Garrett|Vargas|4| 1| 1| 1|1764938,9859|98027|  
+|Tsvi|Reiter|5| 1| 1|2|2811012,7151|98027|  
+|Shu|Ito|6|6|2|2|3018725,4858|98055|  
+|José|Saraiva|7|6|2|2|3189356,2465|98055|  
+|David|Campbell|8|6|2|3|3587378,4257|98055|  
+|Tete|Mensa-Annan|9|6|2|3|1931620,1835|98055|  
+|Lynn|Tsoflias|10|6|2|3|1758385,926|98055|  
+|Rachel|Valdez|11|6|2|4|2241204,0424|98055|  
+|Jae|Pak|12|6|2|4|5015682,3752|98055|  
+|Ranjit|Varkey Chudukatil|13|6|2|4|3827950,238|98055| 
 
 
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemples : [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] et[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemples : [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] et [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="d-ranking-rows-within-a-partition"></a>D : classement des lignes d’une partition  
- L’exemple suivant indique les représentants commerciaux dans chaque secteur de vente en fonction de leurs ventes totales. L'ensemble de lignes est partitionné par `SalesTerritoryGroup` et trié par `SalesAmountQuota`.  
+### <a name="d-ranking-rows-within-a-partition"></a>D. Classement des lignes dans une partition  
+ L’exemple suivant classe par rang les représentants commerciaux dans chaque secteur de vente en fonction de leurs ventes totales. L'ensemble de lignes est partitionné par `SalesTerritoryGroup` et trié par `SalesAmountQuota`.  
   
 ```  
 -- Uses AdventureWorks  
@@ -209,11 +209,11 @@ Mensa-Annan        2753000.0000  North America        10
 Tsoflias           1687000.0000  Pacific              1 
 ```  
 
-## <a name="see-also"></a>Voir aussi  
- [CLASSEMENT &#40; Transact-SQL &#41;](../../t-sql/functions/rank-transact-sql.md)   
- [ROW_NUMBER &#40; Transact-SQL &#41;](../../t-sql/functions/row-number-transact-sql.md)   
- [NTILE &#40; Transact-SQL &#41;](../../t-sql/functions/ntile-transact-sql.md)   
- [Classement des fonctions &#40; Transact-SQL &#41;](../../t-sql/functions/ranking-functions-transact-sql.md)   
+## <a name="see-also"></a> Voir aussi  
+ [RANK &#40;Transact-SQL&#41;](../../t-sql/functions/rank-transact-sql.md)   
+ [ROW_NUMBER &#40;Transact-SQL&#41;](../../t-sql/functions/row-number-transact-sql.md)   
+ [NTILE &#40;Transact-SQL&#41;](../../t-sql/functions/ntile-transact-sql.md)   
+ [Fonctions de classement &#40;Transact-SQL&#41;](../../t-sql/functions/ranking-functions-transact-sql.md)   
  [Fonctions](../../t-sql/functions/functions.md)  
   
   

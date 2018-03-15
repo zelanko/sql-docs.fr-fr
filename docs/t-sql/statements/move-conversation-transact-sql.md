@@ -1,5 +1,5 @@
 ---
-title: MOVE CONVERSATION (Transact-SQL) | Documents Microsoft
+title: MOVE CONVERSATION (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/26/2017
 ms.prod: sql-non-specified
@@ -60,13 +60,13 @@ MOVE CONVERSATION conversation_handle
  TO *conversation_group_id*  
  Variable ou constante contenant l'identificateur du groupe de conversations destinataire. *conversation_group_id* doit être de type **uniqueidentifier**.  
   
-## <a name="remarks"></a>Notes  
- L’instruction MOVE CONVERSATION déplace la conversation spécifiée par *conversation_handle* au groupe de conversations identifié par *conversation_group_id*. Les dialogues ne peuvent être redirigés qu'entre des groupes de conversation associés à la même file d'attente.  
+## <a name="remarks"></a>Notes   
+ L’instruction MOVE CONVERSATION déplace la conversation spécifiée par *conversation_handle* vers le groupe de conversations identifié par *conversation_group_id*. Les dialogues ne peuvent être redirigés qu'entre des groupes de conversations associés à la même file d'attente.  
   
 > [!IMPORTANT]  
->  Si l’instruction MOVE CONVERSATION n’est pas la première instruction dans un lot ou une procédure stockée, l’instruction précédente doit se terminer par un point-virgule (**;**), le [!INCLUDE[tsql](../../includes/tsql-md.md)] terminateur d’instruction.  
+>  Si l’instruction MOVE CONVERSATION n’est pas la première d’un lot ou d’une procédure stockée, l’instruction qui précède doit se terminer par un point-virgule (**;**), le terminateur d’instruction [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
- L’instruction MOVE CONVERSATION verrouille le groupe de conversation associé *conversation_handle* et le groupe de conversations spécifié par *conversation_group_id* jusqu'à ce que la transaction contenant l’instruction est validée ou restaurée.  
+ L’instruction MOVE CONVERSATION verrouille le groupe de conversations associé à *conversation_handle* et celui spécifié par *conversation_group_id* jusqu’à la validation ou la restauration de la transaction contenant cette instruction.  
   
  MOVE CONVERSATION n'est pas valide dans une fonction définie par l'utilisateur.  
   
@@ -88,9 +88,9 @@ SET @conversation_group_id =
 MOVE CONVERSATION @conversation_handle TO @conversation_group_id ;  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- [BEGIN DIALOG CONVERSATION &#40; Transact-SQL &#41;](../../t-sql/statements/begin-dialog-conversation-transact-sql.md)   
- [GET CONVERSATION GROUP &#40; Transact-SQL &#41;](../../t-sql/statements/get-conversation-group-transact-sql.md)   
+## <a name="see-also"></a> Voir aussi  
+ [BEGIN DIALOG CONVERSATION &#40;Transact-SQL&#41;](../../t-sql/statements/begin-dialog-conversation-transact-sql.md)   
+ [GET CONVERSATION GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/get-conversation-group-transact-sql.md)   
  [END CONVERSATION &#40;Transact-SQL&#41;](../../t-sql/statements/end-conversation-transact-sql.md)   
  [sys.conversation_groups &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-conversation-groups-transact-sql.md)   
  [sys.conversation_endpoints &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-conversation-endpoints-transact-sql.md)  

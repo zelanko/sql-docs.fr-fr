@@ -1,5 +1,5 @@
 ---
-title: "&lt;(Inférieur à) (Transact-SQL) | Documents Microsoft"
+title: "&lt; (Inférieur à) (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/13/2017
 ms.prod: sql-non-specified
@@ -36,10 +36,10 @@ ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="lt-less-than-transact-sql"></a>&lt;(Inférieur à) (Transact-SQL)
+# <a name="lt-less-than-transact-sql"></a>&lt; (Inférieur à) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Compare deux expressions (opérateur de comparaison). Lorsque vous comparez des expressions non nulles, le résultat est TRUE si l'opérande de gauche a une valeur inférieure à celui de droite ; sinon le résultat est FALSE. Si un ou les deux opérandes ont la valeur NULL, consultez la rubrique [SET ANSI_NULLS &#40; Transact-SQL &#41; ](../../t-sql/statements/set-ansi-nulls-transact-sql.md).  
+  Compare deux expressions (opérateur de comparaison). Lorsque vous comparez des expressions non nulles, le résultat est TRUE si l'opérande de gauche a une valeur inférieure à celui de droite ; sinon le résultat est FALSE. Si l’une des opérandes ou les deux ont la valeur NULL, consultez la rubrique [SET ANSI_NULLS &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-nulls-transact-sql.md).  
   
  ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -51,7 +51,7 @@ expression < expression
   
 ## <a name="arguments"></a>Arguments  
  *expression*  
- Valide [expression](../../t-sql/language-elements/expressions-transact-sql.md). Les deux expressions doivent avoir des types de données implicitement convertibles. La conversion dépend des règles de [priorité des types de données](../../t-sql/data-types/data-type-precedence-transact-sql.md).  
+ Toute [expression](../../t-sql/language-elements/expressions-transact-sql.md) valide. Les deux expressions doivent avoir des types de données implicitement convertibles. La conversion dépend des règles de [priorité des types de données](../../t-sql/data-types/data-type-precedence-transact-sql.md).  
   
 ## <a name="result-types"></a>Types des résultats  
  **Booléen**  
@@ -102,9 +102,9 @@ FALSE
   
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [IIF &#40;Transact-SQL&#41;](../../t-sql/functions/logical-functions-iif-transact-sql.md)   
  [Types de données &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
- [Operators &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)  
+ [Opérateurs &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)  
   
   

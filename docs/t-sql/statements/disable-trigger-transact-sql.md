@@ -1,5 +1,5 @@
 ---
-title: DISABLE TRIGGER (Transact-SQL) | Documents Microsoft
+title: DISABLE TRIGGER (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 05/10/2017
 ms.prod: sql-non-specified
@@ -53,7 +53,7 @@ ON { object_name | DATABASE | ALL SERVER } [ ; ]
   
 ## <a name="arguments"></a>Arguments  
  *schema_name*  
- Nom du schéma auquel appartient le déclencheur. *schema_name* ne peut pas être spécifié pour les déclencheurs DDL ou logon.  
+ Nom du schéma auquel appartient le déclencheur. Vous ne pouvez pas spécifier *schema_name* pour des déclencheurs DDL ou de connexion.  
   
  *trigger_name*  
  Nom du déclencheur à désactiver.  
@@ -65,25 +65,25 @@ ON { object_name | DATABASE | ALL SERVER } [ ; ]
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] crée des déclencheurs dans des bases de données qui sont publiées pour la réplication de fusion. Le fait de spécifier ALL dans les bases de données publiées désactive ces déclencheurs, ce qui interrompt la réplication. Vérifiez que la base de données active n'est pas publiée pour la réplication de fusion avant de spécifier ALL.  
   
  *object_name*  
- Nom de la table ou vue sur laquelle le déclencheur DML *trigger_name* a été créé pour s’exécuter.  
+ Nom de la table ou de la vue sur laquelle le déclencheur DML *trigger_name* a été créé pour s’exécuter.  
   
  DATABASE  
- Pour un déclencheur DDL, indique que *trigger_name* a été créé ou modifié pour s’exécuter avec une étendue de base de données.  
+ Pour un déclencheur DDL, indique que *trigger_name* a été créé ou modifié pour s’exécuter sur l’étendue de la base de données.  
   
  ALL SERVER  
- **S'applique à**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **S'applique à**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- Pour un déclencheur DDL, indique que *trigger_name* a été créé ou modifié pour s’exécuter avec l’étendue du serveur. ALL SERVER s'applique également aux déclencheurs de connexion.  
+ Pour un déclencheur DDL, indique que *trigger_name* a été créé ou modifié pour s’exécuter sur l’étendue du serveur. ALL SERVER s'applique également aux déclencheurs de connexion.  
   
 > [!NOTE]  
 >  Cette option n'est pas disponible dans une base de données à relation contenant-contenu.  
   
-## <a name="remarks"></a>Notes  
- Les déclencheurs sont activés par défaut lors de leur création. La désactivation d'un déclencheur ne le supprime pas. Le déclencheur existe toujours en tant qu'objet dans la base de données actuelle. Cependant, il ne se déclenche pas lorsque des instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] sur lesquelles il a été programmé sont exécutées. Les déclencheurs peuvent être réactivées à l’aide de [ENABLE TRIGGER](../../t-sql/statements/enable-trigger-transact-sql.md). Les déclencheurs DML définis sur des tables peuvent être également être désactivée ou activée à l’aide de [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md).  
+## <a name="remarks"></a>Notes   
+ Les déclencheurs sont activés par défaut lors de leur création. La désactivation d'un déclencheur ne le supprime pas. Le déclencheur existe toujours en tant qu'objet dans la base de données actuelle. Cependant, il ne se déclenche pas lorsque des instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] sur lesquelles il a été programmé sont exécutées. Il est possible de réactiver des déclencheurs à l’aide de [ENABLE TRIGGER](../../t-sql/statements/enable-trigger-transact-sql.md). Il est également possible d’activer ou de désactiver les déclencheurs DML définis sur des tables au moyen de la commande [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md).  
   
- Modifier le déclencheur à l’aide de la **ALTER TRIGGER** instruction active le déclencheur.  
+ Le fait de modifier le déclencheur à l’aide de l’instruction **ALTER TRIGGER** active le déclencheur.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Pour désactiver un déclencheur DML, un utilisateur doit avoir au minimum l'autorisation ALTER pour la table ou la vue sur laquelle le déclencheur a été créé.  
   
  La désactivation d'un déclencheur DDL avec une étendue de serveur (ON ALL SERVER) ou d'un déclencheur de connexion nécessite l'autorisation CONTROL SERVER sur le serveur. Pour désactiver un déclencheur DDL sur l'étendue d'une base de données (ON DATABASE), un utilisateur doit avoir au minimum l'autorisation ALTER ANY DATABASE DDL TRIGGER pour la base de données active.  
@@ -122,7 +122,7 @@ DISABLE Trigger ALL ON ALL SERVER;
 GO  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [ENABLE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/enable-trigger-transact-sql.md)   
  [ALTER TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/alter-trigger-transact-sql.md)   
  [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)   

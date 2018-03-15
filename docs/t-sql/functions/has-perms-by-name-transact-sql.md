@@ -1,5 +1,5 @@
 ---
-title: HAS_PERMS_BY_NAME (Transact-SQL) | Documents Microsoft
+title: HAS_PERMS_BY_NAME (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/29/2017
 ms.prod: sql-non-specified
@@ -52,34 +52,34 @@ HAS_PERMS_BY_NAME ( securable , securable_class , permission
 ```  
   
 ## <a name="arguments"></a>Arguments  
- *élément sécurisable*  
- Indique le nom de l'élément sécurisable. Si l'élément sécurisable est le serveur lui-même, cette valeur doit être définie avec NULL. *élément sécurisable* est une expression scalaire de type **sysname**. Il n'y a pas de valeur par défaut.  
+ *securable*  
+ Indique le nom de l'élément sécurisable. Si l'élément sécurisable est le serveur lui-même, cette valeur doit être définie avec NULL. *securable* est une expression scalaire de type **sysname**. Il n'y a pas de valeur par défaut.  
   
  *securable_class*  
- Nom de la classe de l'élément sécurisable sur lequel l'autorisation est testée. *securable_class* est une expression scalaire de type **nvarchar (60)**.  
+ Nom de la classe de l'élément sécurisable sur lequel l'autorisation est testée. *securable_class* est une expression scalaire de type **nvarchar(60)**.  
   
- Dans [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], l’argument securable_class doit être définie à une des opérations suivantes : **base de données**, **objet**, **rôle**, **schéma**, ou **utilisateur**.  
+ Dans [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], l’argument securable_class doit avoir l’une des valeurs suivantes : **DATABASE**, **OBJECT**, **ROLE**, **SCHEMA** ou **USER**.  
   
- *autorisation*  
- Une expression scalaire non nulle de type **sysname** qui représente le nom de l’autorisation doit être vérifiée. Il n'y a pas de valeur par défaut. Le nom d'autorisation ANY représente une autorisation générique.  
+ *permission*  
+ Expression scalaire non-NULL de type **sysname** qui représente le nom de l’autorisation à vérifier. Il n'y a pas de valeur par défaut. Le nom d'autorisation ANY représente une autorisation générique.  
   
- *des éléments sécurisables*  
- Expression scalaire facultative de type **sysname** qui représente le nom de la sous-entité sécurisable sur lequel l’autorisation est testée. La valeur par défaut est NULL.  
+ *sub-securable*  
+ Expression scalaire facultative de type **sysname** qui représente le nom de la sous-entité sécurisable sur laquelle l’autorisation est testée. La valeur par défaut est NULL.  
   
 > [!NOTE]  
->  Dans les versions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] via [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], les éléments sécurisables sub ne peuvent pas utiliser des crochets sous la forme **' [***nom sub***]'**. Utilisez **'***nom sub***'** à la place.  
+>  Dans les versions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], les éléments sécurisables sub ne peuvent pas utiliser des crochets sous la forme **'[***sub name***]'**. Utilisez **'***sub name***'** à la place.  
   
- *Sub-securable_class*  
- Expression scalaire facultative de type **nvarchar (60)** qui représente la classe sous-entité sécurisable sur lequel l’autorisation est testée. La valeur par défaut est NULL.  
+ *sub-securable_class*  
+ Expression scalaire facultative de type **nvarchar(60)** qui représente la classe de la sous-entité sécurisable sur laquelle l’autorisation est testée. La valeur par défaut est NULL.  
   
- Dans [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], l’argument sub-securable_class est valide uniquement si l’argument securable_class a la valeur **objet**. Si l’argument securable_class a la valeur **objet**, l’argument sub-securable_class doit être définie **colonne**.  
+ Dans [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], l’argument sub-securable_class est valide uniquement si l’argument securable_class a la valeur **OBJECT**. Si l’argument securable_class a la valeur **OBJECT**, l’argument sub-securable_class doit être défini sur **COLUMN**.  
   
 ## <a name="return-types"></a>Types de retour  
- **int**  
+ **Int**  
   
  Renvoie NULL lorsque la requête échoue.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Cette fonction intégrée teste si le principal actif a une autorisation effective sur un élément sécurisable spécifié. HAS_PERMS_BY_NAME retourne 1 lorsque l'utilisateur dispose d'autorisation effective sur l'élément sécurisable, 0 lorsque l'utilisateur n'a pas cette autorisation et NULL si la classe sécurisable ou l'autorisation n'est pas valide. Une autorisation effective peut être :  
   
 -   une autorisation accordée directement au principal et non refusée ;  
@@ -112,7 +112,7 @@ SELECT class_desc FROM sys.fn_builtin_permissions(default);
   
 ### <a name="a-do-i-have-the-server-level-view-server-state-permission"></a>A. Ai-je l'autorisation VIEW SERVER STATE au niveau serveur ?  
   
-**S’applique aux**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] via[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**S’applique à** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] jusqu’à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
 ```  
 SELECT HAS_PERMS_BY_NAME(null, null, 'VIEW SERVER STATE');  
@@ -120,7 +120,7 @@ SELECT HAS_PERMS_BY_NAME(null, null, 'VIEW SERVER STATE');
   
 ### <a name="b-am-i-able-to-impersonate-server-principal-ps"></a>B. Puis-je emprunter l'identité du principal du serveur Ps ?  
   
-**S’applique aux**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] via[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**S’applique à** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] jusqu’à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
 ```  
 SELECT HAS_PERMS_BY_NAME('Ps', 'LOGIN', 'IMPERSONATE');  
@@ -186,11 +186,11 @@ SELECT name AS column_name,
     WHERE c.object_id=object_id('T');  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Autorisations &#40;moteur de base de données&#41;](../../relational-databases/security/permissions-database-engine.md)   
  [Securables](../../relational-databases/security/securables.md)   
  [Hiérarchie des autorisations &#40;Moteur de base de données&#41;](../../relational-databases/security/permissions-hierarchy-database-engine.md)   
  [sys.fn_builtin_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md)   
- [Affichages catalogue de sécurité &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)  
+ [Vues de catalogue de sécurité &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)  
   
   

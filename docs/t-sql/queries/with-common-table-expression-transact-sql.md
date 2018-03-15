@@ -1,5 +1,5 @@
 ---
-title: "AVEC l’expression de table commune (Transact-SQL) | Documents Microsoft"
+title: WITH common_table_expression (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/09/2017
 ms.prod: sql-non-specified
@@ -60,17 +60,17 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="arguments"></a>Arguments  
  *expression_name*  
-Est un identificateur valide pour l’expression de table commune. *expression_name* doit être différent de celui de toute autre expression de table commune définie dans le même WITH \<common_table_expression > clause, mais *expression_name* peut être le même que le nom d’une table de base ou une vue. Toute référence à *expression_name* dans la requête utilise l’expression de table commune et pas l’objet de base.
+Identificateur valide pour l’expression de table commune. *expression_name* doit être différent du nom de toutes les autres expressions de table communes définies dans la même clause WITH \<common_table_expression>, mais *expression_name* peut être identique au nom d’une table de base ou d’une vue. Toute référence à *expression_name* dans la requête utilise l’expression de table commune à la place de l’objet de base.
   
  *column_name*  
- Spécifie un nom de colonne dans l'expression de table commune. Les noms dupliqués ne sont pas autorisés au sein d'une définition d'expression de table commune unique (CTE, Common Table Expression). Le nombre de noms de colonnes spécifié doit correspondre au nombre de colonnes du jeu de résultats de la *définitions de requêtes cet*. La liste des noms de colonnes n'est facultative que si des noms distincts pour toutes les colonnes résultants sont fournis dans la définition de la requête.  
+ Spécifie un nom de colonne dans l'expression de table commune. Les noms dupliqués ne sont pas autorisés au sein d'une définition d'expression de table commune unique (CTE, Common Table Expression). Le nombre de noms de colonnes spécifiés doit correspondre au nombre de colonnes dans le jeu de résultats de *CTE_query_definition*. La liste des noms de colonnes n'est facultative que si des noms distincts pour toutes les colonnes résultants sont fournis dans la définition de la requête.  
   
  *CTE_query_definition*  
- Spécifie une instruction SELECT dont le jeu de résultats remplit l'expression de table commune. L’instruction SELECT pour *définitions de requêtes cet* doit présenter la même configuration que pour la création d’une vue, mais une expression de table commune ne peut pas définir une autre. Pour plus d’informations, consultez la section Notes et [CREATE VIEW &#40; Transact-SQL &#41; ](../../t-sql/statements/create-view-transact-sql.md).  
+ Spécifie une instruction SELECT dont le jeu de résultats remplit l'expression de table commune. L’instruction SELECT de *CTE_query_definition* doit remplir les mêmes conditions que celles requises pour la création d’une vue, mis à part qu’une expression de table commune ne peut pas en définir une autre. Pour plus d’informations, consultez la section Notes et [CREATE VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md).  
   
- Si plusieurs *définitions de requêtes cet* est défini, les définitions de requête doivent être jointes par un de ces opérateurs de jeu : UNION ALL, UNION, EXCEPT ou INTERSECT.  
+ Si plusieurs arguments *CTE_query_definition* sont définis, les définitions de requêtes doivent être jointes par l’un de ces opérateurs : UNION ALL, UNION, EXCEPT ou INTERSECT.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
   
 ## <a name="guidelines-for-creating-and-using-common-table-expressions"></a>Principes de création et d'utilisation des expressions de table communes  
  Les principes suivants s'appliquent à des expressions de table communes non récursives. Pour obtenir les instructions qui s'appliquent à des expressions de table communes récursives, consultez « Principes de définition et d'utilisation des expressions de table communes récursives » à suivre.  
@@ -81,9 +81,9 @@ Est un identificateur valide pour l’expression de table commune. *expression_n
   
 -   Une expression de table commune peut faire référence à elle-même ou à des expressions de table communes définies précédemment dans la même clause WITH. Les références à des éléments ultérieurs ne sont pas autorisées.  
   
--   La spécification de plusieurs clauses WITH dans une expression de table commune n'est pas autorisée. Par exemple, si un *définitions de requêtes cet* contient une sous-requête, celle-ci ne peut pas contenir une liste imbriquée avec une clause qui définit une autre expression de table commune.  
+-   La spécification de plusieurs clauses WITH dans une expression de table commune n'est pas autorisée. Par exemple, si un argument *CTE_query_definition* contient une sous-requête, celle-ci ne peut pas contenir de clause WITH imbriquée qui définit une autre expression de table commune.  
   
--   Les clauses suivantes ne peuvent pas être utilisées dans les *définitions de requêtes cet*:  
+-   Les clauses suivantes ne peuvent pas être utilisées dans l’argument *CTE_query_definition* :  
   
     -   ORDER BY (sauf si une clause TOP est spécifiée)  
   
@@ -112,15 +112,15 @@ Est un identificateur valide pour l’expression de table commune. *expression_n
   
 -   Le type de données d'une colonne du membre récursif doit également être identique au type de données de la colonne correspondante du membre d'ancrage.  
   
--   La clause FROM d’un membre récursif doit faire référence qu’une seule fois à l’expression CTE *expression_name*.  
+-   La clause FROM d’un membre récursif doit référencer une seule fois l’argument *expression_name* de l’expression de table commune.  
   
--   Les éléments suivants ne sont pas autorisés dans les *définitions de requêtes cet* d’un membre récursif :  
+-   Les éléments suivants ne sont pas autorisés dans l’argument *CTE_query_definition* d’un membre récursif :  
   
     -   SELECT DISTINCT  
   
     -   GROUP BY  
   
-    -   PIVOT (lorsque le niveau de compatibilité de la base de données est de 110 ou supérieur. Consultez [changements essentiels apportés aux fonctionnalités du moteur de base de données dans SQL Server 2016](../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md).)  
+    -   PIVOT (lorsque le niveau de compatibilité de la base de données est de 110 ou supérieur. Consultez [Changements essentiels dans les fonctionnalités du moteur de base de données de SQL Server 2016](../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md).)  
   
     -   HAVING  
   
@@ -132,7 +132,7 @@ Est un identificateur valide pour l’expression de table commune. *expression_n
   
     -   Sous-requêtes  
   
-    -   Indicateur appliqué à une référence récursive à une expression de table commune à l’intérieur d’un *définitions de requêtes cet*.  
+    -   Indicateur appliqué à une référence récursive à une expression de table commune à l’intérieur d’un argument *CTE_query_definition*.  
   
  Les principes suivants s'appliquent à l'utilisation d'une expression de table commune récursive :  
   
@@ -142,42 +142,42 @@ Est un identificateur valide pour l’expression de table commune. *expression_n
   
 -   Une vue contenant une expression de table commune récursive ne peut pas être utilisée pour mettre à jour des données.  
   
--   Les curseurs peuvent être définis sur des requêtes à l'aide d'expressions de table communes. L’expression CTE est la *select_statement* argument qui définit le jeu de résultats du curseur. Seuls les curseurs d'avance rapide uniquement et statiques (instantané) sont autorisés pour les expressions de table communes récursives. Si un autre type de curseur est spécifié dans une expression de table commune récursive, ce type est converti en statique.  
+-   Les curseurs peuvent être définis sur des requêtes à l'aide d'expressions de table communes. L’expression de table commune est l’argument *select_statement* qui définit le jeu de résultats du curseur. Seuls les curseurs d'avance rapide uniquement et statiques (instantané) sont autorisés pour les expressions de table communes récursives. Si un autre type de curseur est spécifié dans une expression de table commune récursive, ce type est converti en statique.  
   
 -   Les tables de serveurs distants peuvent être référencées dans l'expression de table commune. Si le serveur distant est référencé dans le membre récursif de l'expression de table commune récursive, un spouleur est créé pour chaque table distante afin que les tables soient accessibles localement de manière répétée. S'il s'agit d'une requête d'expression de table commune, Index Spool/Lazy Spools est affiché dans le plan de requête avec le prédicat WITH STACK supplémentaire. Il s'agit de l'une des méthodes permettant de confirmer la récursivité appropriée.  
   
--   Les fonctions analytiques et d'agrégation dans la partie récursive de l'expression CTE sont appliquées à l'ensemble du niveau de récursivité actuel et non à l'ensemble de l'expression CTE. Les fonctions telles que ROW_NUMBER s'appliquent uniquement au sous-ensemble de données qui leur est transmis par le niveau de récursivité actuel et non à l'ensemble entier de données transmis à la partie récursive de l'expression CTE. Pour plus d’informations, consultez exemple K. Utilisation de fonctions analytiques dans une expression de table commune qui suit récursive.  
+-   Les fonctions analytiques et d'agrégation dans la partie récursive de l'expression CTE sont appliquées à l'ensemble du niveau de récursivité actuel et non à l'ensemble de l'expression CTE. Les fonctions telles que ROW_NUMBER s'appliquent uniquement au sous-ensemble de données qui leur est transmis par le niveau de récursivité actuel et non à l'ensemble entier de données transmis à la partie récursive de l'expression CTE. Pour plus d’informations, consultez « K. Utilisation de fonctions analytiques dans une expression de table commune récursive », plus loin dans cet article.  
   
-## <a name="features-and-limitations-of-common-table-expressions-in-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>Fonctionnalités et Limitations commun dans les Expressions de Table [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] et[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- L’implémentation actuelle des expressions de table communes dans [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] et [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] ont les fonctionnalités et les limitations suivantes :  
+## <a name="features-and-limitations-of-common-table-expressions-in-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>Fonctionnalités et limitations des expressions de table commune dans [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] et [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+ L’implémentation actuelle des expressions de table communes dans [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] et [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] présente les fonctionnalités et limitations suivantes :  
   
--   Une expression de table commune peut être spécifiée dans un **sélectionnez** instruction.  
+-   Une expression de table commune peut être spécifiée dans une instruction **SELECT**.  
   
--   Une expression de table commune peut être spécifiée dans un **CREATE VIEW** instruction.  
+-   Une expression de table commune peut être spécifiée dans une instruction **CREATE VIEW**.  
   
--   Une expression de table commune peut être spécifiée dans un **CREATE TABLE AS SELECT** instruction de (SACT).  
+-   Une expression de table commune peut être spécifiée dans une instruction **CREATE TABLE AS SELECT** (CTAS).  
   
--   Une expression de table commune peut être spécifiée dans un **CREATE distant TABLE AS SELECT** instruction de (CRTAS).  
+-   Une expression de table commune peut être spécifiée dans une instruction **CREATE REMOTE TABLE AS SELECT** (CRTAS).  
   
--   Une expression de table commune peut être spécifiée dans un **CREATE EXTERNAL TABLE AS SELECT** instruction de (CETAS).  
+-   Une expression de table commune peut être spécifiée dans une instruction **CREATE EXTERNAL TABLE AS SELECT** (CETAS).  
   
 -   Une table distante peut être référencée à partir d’une expression de table commune.  
   
 -   Une table externe peut être référencée à partir d’une expression de table commune.  
   
--   Plusieurs définitions de requête d’expression de table commune peuvent être définies dans une expression de table commune.  
+-   Plusieurs définitions de requête d’expression de table commune peuvent être définies dans une même expression de table commune.  
   
--   Une expression de table commune doit être suivie d’un seul **sélectionnez** instruction. **Insérer**, **mise à jour**, **supprimer**, et **fusion** instructions ne sont pas prises en charge.  
+-   Une expression de table commune doit être suivie d’une seule instruction **SELECT**. Les instructions **INSERT**, **UPDATE**, **DELETE** et **MERGE** ne sont pas prises en charge.  
   
--   Une expression de table commune qui inclut des références à elle-même (expression de table commune récursive) n’est pas pris en charge.  
+-   Une expression de table commune qui contient des références à elle-même (expression de table commune récursive) n’est pas prise en charge.  
   
--   Spécification de plusieurs **WITH** clause dans une expression de table commune n’est pas autorisée. Par exemple, si un définitions de requêtes cet contient une sous-requête, celle-ci ne peut pas contenir une liste imbriquée **WITH** clause qui définit une autre expression de table commune.  
+-   La spécification de plusieurs clauses **WITH** dans une expression de table commune n’est pas autorisée. Par exemple, si un argument CTE_query_definition contient une sous-requête, celle-ci ne peut pas contenir de clause **WITH** imbriquée qui définit une autre expression de table commune.  
   
--   Un **ORDER BY** clause ne peut pas être utilisée dans les définitions de requêtes cet, sauf quand un **haut** clause est spécifiée.  
+-   Une clause **ORDER BY** ne peut pas être utilisée dans l’argument CTE_query_definition, sauf si elle est accompagnée d’une clause **TOP**.  
   
 -   Lorsqu'une expression de table commune est utilisée dans une instruction faisant partie d'un traitement, l'instruction qui la précède doit être suivie d'un point-virgule.  
   
--   Lorsqu’il est utilisé dans les instructions préparées par **sp_prepare**, CTE seront comporte de la même façon que d’autres **sélectionnez** instructions dans PDW. Toutefois, si les expressions de table communes sont utilisées dans le cadre de CETAS préparée par **sp_prepare**, le comportement peut différer de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et autres instructions PDW en raison de la liaison bidirectionnelle est implémentée pour **sp_prepare**. Si **sélectionnez** que références CTE utilise une mauvaise colonne qui n’existe pas dans l’expression de table commune, les **sp_prepare** transmettra sans détection de l’erreur, mais l’erreur est levée pendant **sp_execute** à la place.  
+-   Quand elles sont utilisées dans des instructions préparées par **sp_prepare**, les expressions de table communes se comportent de la même façon que les autres instructions **SELECT** dans PDW. Toutefois, si elles sont utilisées dans des instructions CETAS préparées par **sp_prepare**, leur comportement peut différer entre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et d’autres instructions PDW en raison du mode de liaison implémenté pour **sp_prepare**. Si l’instruction **SELECT** qui référence une expression de table commune utilise une colonne incorrecte qui n’existe pas dans cette expression, l’erreur n’est pas détectée quand **sp_prepare** est passé, mais elle est levée durant **sp_execute**.  
   
 ## <a name="examples"></a>Exemples  
   
@@ -456,7 +456,7 @@ GO
 ```  
   
 ### <a name="i-using-a-recursive-cte-in-an-update-statement"></a>I. Utilisation d'une expression de table commune récursive dans une instruction UPDATE  
- L’exemple suivant met à jour la `PerAssemblyQty` valeur pour toutes les parties qui sont utilisés pour générer le produit 'Road-550-W Yellow, 44' `(ProductAssemblyID``800`). L'expression de table commune retourne une liste hiérarchique des parties utilisées pour générer `ProductAssemblyID 800` et des composants utilisés pour créer ces parties, et ainsi de suite. Seules les lignes renvoyées par l'expression de table commune récursive sont modifiées.  
+ L’exemple suivant met à jour la valeur `PerAssemblyQty` pour tous les composants du produit 'Road-550-W Yellow, 44' `(ProductAssemblyID``800`). L'expression de table commune retourne une liste hiérarchique des parties utilisées pour générer `ProductAssemblyID 800` et des composants utilisés pour créer ces parties, et ainsi de suite. Seules les lignes renvoyées par l'expression de table commune récursive sont modifiées.  
   
 ```  
 USE AdventureWorks2012;  
@@ -601,10 +601,10 @@ Lvl  N
   
  `N` retourne la valeur 1 à chaque passage de la partie récursive de l'expression CTE, car seul le sous-ensemble de données de ce niveau de récursivité est transmis à `ROWNUMBER`. Pour chacune des itérations de la partie récursive de la requête, une seule ligne est passée à `ROWNUMBER`.  
   
-## <a name="examples-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemples : [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] et[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemples : [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] et [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="l-using-a-common-table-expression-within-a-ctas-statement"></a>L. À l’aide d’une expression de table commune au sein d’une instruction SACT  
- L’exemple suivant crée une nouvelle table qui contient le nombre total de commandes par an pour chaque commercial chez [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)].  
+### <a name="l-using-a-common-table-expression-within-a-ctas-statement"></a>L. Utilisation d’une expression de table commune dans une instruction CTAS  
+ L’exemple suivant crée une table qui contient le nombre total de commandes client réalisées par chaque représentant commercial chez [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)].  
   
 ```  
 -- Uses AdventureWorks  
@@ -632,8 +632,8 @@ AS
 GO  
 ```  
   
-### <a name="m-using-a-common-table-expression-within-a-cetas-statement"></a>M. À l’aide d’une expression de table commune au sein d’une instruction CETAS  
- L’exemple suivant crée une nouvelle table externe qui contient le nombre total de commandes par an pour chaque commercial chez [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)].  
+### <a name="m-using-a-common-table-expression-within-a-cetas-statement"></a>M. Utilisation d’une expression de table commune dans une instruction CETAS  
+ L’exemple suivant crée une table externe qui contient le nombre total de commandes client réalisées par chaque représentant commercial chez [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)].  
   
 ```  
 -- Uses AdventureWorks  
@@ -662,8 +662,8 @@ AS
 GO  
 ```  
   
-### <a name="n-using-multiple-comma-separated-ctes-in-a-statement"></a>N. À l’aide de virgules plusieurs séparées par des expressions de table communes dans une instruction  
- L’exemple suivant montre comment inclure des deux expressions de table communes dans une instruction unique. Les expressions de table communes ne peut pas être imbriqué (aucune récursivité).  
+### <a name="n-using-multiple-comma-separated-ctes-in-a-statement"></a>N. Utilisation de plusieurs expressions de table communes, séparées par des virgules, dans une instruction  
+ L’exemple suivant montre comment inclure deux expressions de table communes dans la même instruction. Les expressions de table communes ne peuvent pas être imbriquées (pas de récursivité).  
   
 ```  
 WITH   
@@ -680,11 +680,11 @@ UNION ALL
 SELECT TableName, TotalAvg FROM CountCustomer;  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [CREATE VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md)   
  [DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)   
- [À l’exception et INTERSECT &#40; Transact-SQL &#41;](../../t-sql/language-elements/set-operators-except-and-intersect-transact-sql.md)   
- [INSÉRER une &#40; Transact-SQL &#41;](../../t-sql/statements/insert-transact-sql.md)   
+ [EXCEPT et INTERSECT &#40;Transact-SQL&#41;](../../t-sql/language-elements/set-operators-except-and-intersect-transact-sql.md)   
+ [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [UPDATE &#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md)  
   

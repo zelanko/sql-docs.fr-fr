@@ -1,5 +1,5 @@
 ---
-title: "STArea (Type de données geography) | Documents Microsoft"
+title: "STArea (type de données geography) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="starea-geography-data-type"></a>STArea (type de données geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Retourne la surface d’exposition totale d’un **geography** instance. Les résultats de STArea() sont renvoyés dans le carré de l’unité de mesure utilisée par l’identificateur de référence spatiale de la **geography** instance ; par exemple, si le SRID de l’instance est 4326, STArea() retourne des résultats en mètres carrés.  
+  Retourne la surface d’exposition totale d’une instance **geography**. Les résultats de STArea() sont retournés dans le carré de l’unité de mesure utilisée par l’identificateur de référence spatiale de l’instance **geography**. Par exemple, si le SRID de l’instance est 4326, STArea() retourne les résultats en mètres carrés.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -44,18 +44,18 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>Types de retour  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]type de retour : **float**  
+ Type de retour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] : **float**  
   
  Type de retour CLR : **SqlDouble**  
   
-## <a name="remarks"></a>Notes  
- STArea() retourne 0 si une **geography** instance contient uniquement des figures à 0 et 1-dimension, ou si elle est vide.  
+## <a name="remarks"></a>Notes   
+ STArea() retourne 0 si une instance **geography** contient uniquement des figures à 0 et 1 dimension, ou si elle est vide.  
   
 > [!NOTE]  
->  Les méthodes sur le **geography** qui produisent une mesure de retourner la valeur aura des résultats différents selon le SRID de l’instance utilisée dans la méthode de type de données. Pour plus d’informations sur les SRID, consultez [des identificateurs de référence spatiale &#40; SRID &#41; ](../../relational-databases/spatial/spatial-reference-identifiers-srids.md).  
+>  Les méthodes du type de données **geography** qui produisent une valeur de retour métrique ont des résultats distincts selon le SRID de l’instance utilisée dans la méthode. Pour plus d’informations sur les SRID, consultez [Identificateurs de référence spatiale &#40;SRID&#41;](../../relational-databases/spatial/spatial-reference-identifiers-srids.md).  
   
 ## <a name="examples"></a>Exemples  
- L’exemple suivant utilise `STArea()` pour créer un `Polygon``geography` de l’instance et calcule la surface du polygone.  
+ L’exemple suivant utilise `STArea()` pour créer une instance `Polygon``geography` et calcule la surface du polygone.  
   
 ```  
 DECLARE @g geography;  
@@ -63,7 +63,7 @@ SET @g = geography::STGeomFromText('POLYGON((-122.358 47.653, -122.348 47.649, -
 SELECT @g.STArea();  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Méthodes OGC sur des instances geography](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
   
   

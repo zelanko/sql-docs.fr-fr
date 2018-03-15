@@ -1,5 +1,5 @@
 ---
-title: DROP SYNONYM (Transact-SQL) | Documents Microsoft
+title: DROP SYNONYM (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/26/2017
 ms.prod: sql-non-specified
@@ -50,23 +50,23 @@ DROP SYNONYM [ IF EXISTS ] [ schema. ] synonym_name
 ```  
   
 ## <a name="arguments"></a>Arguments  
- *S’IL EXISTE*  
-**S’applique aux**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] via [version actuelle](http://go.microsoft.com/fwlink/p/?LinkId=299658))
+ *IF EXISTS*  
+**S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] jusqu’à la [version actuelle](http://go.microsoft.com/fwlink/p/?LinkId=299658))
   
- Conditionnellement supprime le synonyme uniquement s’il existe déjà.  
+ Supprime, de manière conditionnelle, le synonyme uniquement s’il existe déjà.  
   
- *schéma*  
+ *schema*  
  Spécifie le schéma dans lequel le synonyme existe. Si le schéma n'est pas spécifié, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilise le schéma par défaut de l'utilisateur actuel.  
   
  *synonym_name*  
  Nom du synonyme à supprimer.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Les références aux synonymes ne sont pas liées aux schémas ; vous pouvez supprimer un synonyme à n'importe quel moment. Les références aux synonymes supprimés ne se rencontrent que lors de l'exécution.  
   
  Vous pouvez créer, supprimer et référencer des synonymes dans des instructions SQL dynamiques.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Pour supprimer un synonyme, un utilisateur doit satisfaire au moins l'une des conditions suivantes. L'utilisateur doit être :  
   
 -   Le propriétaire actuel d'un synonyme.  
@@ -92,8 +92,8 @@ DROP SYNONYM MyProduct;
 GO  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- [CRÉER un SYNONYME &#40; Transact-SQL &#41;](../../t-sql/statements/create-synonym-transact-sql.md)   
+## <a name="see-also"></a> Voir aussi  
+ [CREATE SYNONYM &#40;Transact-SQL&#41;](../../t-sql/statements/create-synonym-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
   
   

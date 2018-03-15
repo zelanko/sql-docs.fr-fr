@@ -53,7 +53,7 @@ ms.lasthandoff: 01/23/2018
 SET STATISTICS IO { ON | OFF }  
 ```  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Si STATISTICS IO est défini sur ON, des informations statistiques sont affichées. Si l'option est désactivée (OFF), ces informations ne sont pas affichées.  
   
  Une fois l'option activée, toutes les instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] suivantes renvoient des informations statistiques, jusqu'à ce que l'option soit de nouveau désactivée.  
@@ -63,13 +63,13 @@ SET STATISTICS IO { ON | OFF }
 |Élément de sortie|Signification|  
 |-----------------|-------------|  
 |**Table**|Nom de la table.|  
-|**Nombre d’analyses**|Nombre de recherches/analyses démarrées après avoir atteint le niveau feuille dans n'importe quelle direction afin de récupérer toutes les valeurs pour construire le dataset final de la sortie.<br /><br /> Le nombre d'analyses est 0 si l'index utilisé est un index unique ou un index cluster sur une clé principale et que vous recherchez une seule valeur. Par exemple, `WHERE Primary_Key_Column = <value>`.<br /><br /> Nombre d’analyses est 1 lorsque vous recherchez une valeur à l’aide d’un index cluster non unique qui est défini sur une colonne de clé non primaire. Cela permet de rechercher les valeurs en double de la valeur clé que vous recherchez. Par exemple, `WHERE Clustered_Index_Key_Column = <value>`.<br /><br /> Le nombre d'analyses est N lorsque N correspond au nombre de recherches/analyses différentes à gauche ou à droite au niveau feuille après avoir recherché une valeur clé à l'aide de la clé d'index.|  
-|**lectures logiques**|Nombre de pages lues à partir du cache de données.|  
-|**lectures physiques**|Nombre de pages lues depuis le disque.|  
-|**lectures anticipées**|Nombre de pages placées dans le cache pour la requête.|  
-|**lectures logiques métier**|Nombre de **texte**, **ntext**, **image**, ou le type de valeur élevée (**varchar (max)**, **nvarchar (max)**, **varbinary (max)**) pages lues à partir du cache de données.|  
-|**lectures physiques métier**|Nombre de **texte**, **ntext**, **image** ou lire des pages de type de valeur élevée à partir du disque.|  
-|**lectures anticipées LOB**|Nombre de **texte**, **ntext**, **image** ou pages placées dans le cache pour la requête de type de valeur élevée.|  
+|**Nombre d’analyses**|Nombre de recherches/analyses démarrées après avoir atteint le niveau feuille dans n'importe quelle direction afin de récupérer toutes les valeurs pour construire le dataset final de la sortie.<br /><br /> Le nombre d'analyses est 0 si l'index utilisé est un index unique ou un index cluster sur une clé principale et que vous recherchez une seule valeur. Par exemple, `WHERE Primary_Key_Column = <value>`.<br /><br /> Le nombre d’analyses est 1 quand vous recherchez une valeur à l’aide d’un index cluster non unique qui est défini sur une colonne de clé non primaire. Cela permet de rechercher les valeurs en double de la valeur clé que vous recherchez. Par exemple, `WHERE Clustered_Index_Key_Column = <value>`.<br /><br /> Le nombre d'analyses est N lorsque N correspond au nombre de recherches/analyses différentes à gauche ou à droite au niveau feuille après avoir recherché une valeur clé à l'aide de la clé d'index.|  
+|**Lectures logiques**|Nombre de pages lues à partir du cache de données.|  
+|**Lectures physiques**|Nombre de pages lues depuis le disque.|  
+|**Lectures anticipées**|Nombre de pages placées dans le cache pour la requête.|  
+|**Lectures logiques LOB**|Nombre de pages **text**, **ntext**, **image** ou de type grande valeur (**varchar(max)**, **nvarchar(max)**, **varbinary(max)**) lues à partir du cache de données.|  
+|**Lectures physiques LOB**|Nombre de pages **text**, **ntext**, **image** ou de type grande valeur lues à partir du disque.|  
+|**Lectures anticipées LOB**|Nombre de pages **text**, **ntext**, **image** ou de type grande valeur placées dans le cache pour la requête.|  
   
  L'option SET STATISTICS IO est définie lors de l'exécution, et non pas durant l'analyse.  
   
@@ -103,7 +103,7 @@ reads 0, read-ahead reads 0, lob logical reads 0, lob physical reads 0,
 lob read-ahead reads 0.  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Instructions SET &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)   
  [SET SHOWPLAN_ALL &#40;Transact-SQL&#41;](../../t-sql/statements/set-showplan-all-transact-sql.md)   
  [SET STATISTICS TIME &#40;Transact-SQL&#41;](../../t-sql/statements/set-statistics-time-transact-sql.md)  

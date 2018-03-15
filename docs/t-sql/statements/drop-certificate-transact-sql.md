@@ -1,5 +1,5 @@
 ---
-title: DROP CERTIFICATE (Transact-SQL) | Documents Microsoft
+title: DROP CERTIFICATE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -52,13 +52,13 @@ DROP CERTIFICATE certificate_name
 ```  
   
 ## <a name="arguments"></a>Arguments  
- *nom_certificat*  
+ *certificate_name*  
  Nom unique sous lequel le certificat est connu dans la base de données.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Les certificats ne peuvent être supprimés que si aucune entité ne leur est associée.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l'autorisation CONTROL sur le certificat.  
   
 ## <a name="examples"></a>Exemples  
@@ -69,7 +69,7 @@ USE AdventureWorks2012;
 DROP CERTIFICATE Shipping04;  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemples : [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] et[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemples : [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] et [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  L’exemple suivant supprime le certificat `Shipping04`.  
   
 ```  
@@ -77,10 +77,10 @@ USE master;
 DROP CERTIFICATE Shipping04;  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [BACKUP CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/backup-certificate-transact-sql.md)   
  [CREATE CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/create-certificate-transact-sql.md)   
- [ALTER CERTIFICATE &#40; Transact-SQL &#41;](../../t-sql/statements/alter-certificate-transact-sql.md)   
+ [ALTER CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-certificate-transact-sql.md)   
  [Hiérarchie de chiffrement](../../relational-databases/security/encryption/encryption-hierarchy.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
   

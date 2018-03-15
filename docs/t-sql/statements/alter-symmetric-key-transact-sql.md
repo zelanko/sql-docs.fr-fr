@@ -1,5 +1,5 @@
 ---
-title: "MODIFIER la clé symétrique (Transact-SQL) | Documents Microsoft"
+title: ALTER SYMMETRIC KEY (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -72,31 +72,31 @@ ALTER SYMMETRIC KEY Key_name <alter_option>
  DROP ENCRYPTION BY  
  Permet de supprimer le chiffrement utilisant la méthode spécifiée. Vous ne pouvez pas supprimer tous les chiffrements d'une clé symétrique.  
   
- CERTIFICAT *nom_certificat*  
+ CERTIFICATE *Certificate_name*  
  Spécifie le certificat utilisé pour chiffrer la clé symétrique. Ce certificat doit déjà exister dans la base de données.  
   
- Mot de passe **='***mot de passe***'**  
- Spécifie le mot de passe utilisé pour chiffrer la clé symétrique. *mot de passe* doit remplir les conditions de stratégie de mot de passe Windows de l’ordinateur qui exécute l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ PASSWORD **='***password***'**  
+ Spécifie le mot de passe utilisé pour chiffrer la clé symétrique. *password* doit satisfaire aux critères de la stratégie de mot de passe Windows de l’ordinateur qui exécute l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- CLÉ symétrique *Symmetric_Key_Name*  
+ SYMMETRIC KEY *Symmetric_Key_Name*  
  Spécifie la clé symétrique utilisée pour chiffrer la clé symétrique en cours de modification. Cette clé symétrique doit déjà exister dans la base de données et doit être ouverte.  
   
- CLÉ asymétrique *Asym_Key_Name*  
+ ASYMMETRIC KEY *Asym_Key_Name*  
  Spécifie la clé asymétrique utilisée pour chiffrer la clé symétrique en cours de modification. Cette clé asymétrique doit déjà exister dans la base de données.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
   
 > [!CAUTION]  
 >  Lorsqu'une clé symétrique est chiffrée à l'aide d'un mot de passe à la place de la clé publique de la clé principale de base de données, l'algorithme de chiffrement TRIPLE_DES est utilisé. Pour cette raison, les clés créées à l'aide d'un algorithme de chiffrement renforcé, tel qu'AES, sont elles-mêmes sécurisées par un algorithme plus faible.  
   
  Pour modifier le chiffrement de la clé symétrique, utilisez les expressions ADD ENCRYPTION et DROP ENCRYPTION. Il est impossible qu'une clé ne présente aucun chiffrement. Pour cette raison, la méthode recommandée consiste à ajouter le nouveau type de chiffrement avant de supprimer l'ancien.  
   
- Pour modifier le propriétaire d’une clé symétrique, utilisez [ALTER AUTHORIZATION](../../t-sql/statements/alter-authorization-transact-sql.md).  
+ Pour changer le propriétaire d’une clé symétrique, utilisez [ALTER AUTHORIZATION](../../t-sql/statements/alter-authorization-transact-sql.md).  
   
 > [!NOTE]  
 >  L'algorithme RC4 est uniquement pris en charge pour des raisons de compatibilité descendante. Le nouveau matériel ne peut être chiffré à l'aide de RC4 ou de RC4_128 que lorsque la base de données se trouve dans le niveau de compatibilité 90 ou 100. (Non recommandé.) Utilisez à la place un algorithme plus récent, tel qu'un des algorithmes AES. Dans [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], le matériel chiffré à l'aide de RC4 ou de RC4_128 peut être déchiffré dans n'importe quel niveau de compatibilité.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Requiert l'autorisation ALTER sur la clé symétrique. En cas d'ajout d'un chiffrement par certificat ou clé asymétrique, l'autorisation VIEW DEFINITION est requise sur le certificat ou la clé asymétrique. En cas de suppression d'un chiffrement par certificat ou clé asymétrique, l'autorisation CONTROL est requise sur le certificat ou la clé asymétrique.  
   
 ## <a name="examples"></a>Exemples  
@@ -117,10 +117,10 @@ ALTER SYMMETRIC KEY JanainaKey043
 CLOSE SYMMETRIC KEY JanainaKey043;  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [CREATE SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-symmetric-key-transact-sql.md)   
  [OPEN SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/open-symmetric-key-transact-sql.md)   
- [CLOSE SYMMETRIC KEY &#40; Transact-SQL &#41;](../../t-sql/statements/close-symmetric-key-transact-sql.md)   
+ [CLOSE SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/close-symmetric-key-transact-sql.md)   
  [DROP SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-symmetric-key-transact-sql.md)   
  [Hiérarchie de chiffrement](../../relational-databases/security/encryption/encryption-hierarchy.md)  
   

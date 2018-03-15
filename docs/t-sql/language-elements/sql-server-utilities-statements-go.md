@@ -38,9 +38,9 @@ ms.lasthandoff: 01/25/2018
 # <a name="sql-server-utilities-statements---go"></a>Instructions d’utilitaires SQL Server - GO
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Fournit des commandes qui ne sont pas [!INCLUDE[tsql](../../includes/tsql-md.md)] instructions, mais sont reconnues par le **sqlcmd** et **osql** utilitaires et [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] éditeur de Code. Ces commandes facilitent la lisibilité et l'exécution de lots et de scripts.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournit des commandes qui ne sont pas des instructions [!INCLUDE[tsql](../../includes/tsql-md.md)], mais qui sont reconnues par les utilitaires **sqlcmd** et **osql**, ainsi que l’éditeur de code [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Ces commandes facilitent la lisibilité et l'exécution de lots et de scripts.  
   
-  GO indique la fin d’un lot de [!INCLUDE[tsql](../../includes/tsql-md.md)] instructions pour le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilitaires.  
+  GO signale la fin d’un lot d’instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] aux utilitaires [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -55,8 +55,8 @@ GO [count]
  *nombre*  
  Entier positif. Le lot qui précède GO sera exécuté le nombre spécifié de fois.  
   
-## <a name="remarks"></a>Notes  
- GO n’est pas un [!INCLUDE[tsql](../../includes/tsql-md.md)] instruction ; il est une commande reconnue par le **sqlcmd** et **osql** utilitaires et [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] éditeur de Code.  
+## <a name="remarks"></a>Notes   
+ GO n’est pas une instruction [!INCLUDE[tsql](../../includes/tsql-md.md)], mais une commande reconnue par les utilitaires **sqlcmd** et **osql**, ainsi que l’éditeur de code [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
  Les utilitaires [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] interprètent GO comme le signal qu'ils doivent envoyer le lot actuel d'instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] à une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Le traitement en cours se compose de toutes les transactions entrées depuis la dernière commande GO ou depuis le début de la session ou du script approprié s'il s'agit de la première commande GO.  
   
@@ -98,7 +98,7 @@ GO;
 ```  
   
 ## <a name="examples"></a>Exemples  
- L'exemple suivant crée deux traitements. Le premier lot contient uniquement un `USE``AdventureWorks2012` instruction pour définir le contexte de base de données. Les autres instructions utilisent une variable locale. Ainsi, toutes les déclarations de variables locales doivent être groupées en un seul traitement. Pour cela, aucune commande `GO` n'est utilisée avant la dernière instruction qui fait référence à la variable.  
+ L'exemple suivant crée deux traitements. Le premier lot contient uniquement une instruction `USE``AdventureWorks2012` pour définir le contexte de la base de données. Les autres instructions utilisent une variable locale. Ainsi, toutes les déclarations de variables locales doivent être groupées en un seul traitement. Pour cela, aucune commande `GO` n'est utilisée avant la dernière instruction qui fait référence à la variable.  
   
 ```  
 USE AdventureWorks2012;  

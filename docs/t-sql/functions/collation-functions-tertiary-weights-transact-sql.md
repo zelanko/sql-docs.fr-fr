@@ -1,5 +1,5 @@
 ---
-title: TERTIARY_WEIGHTS (Transact-SQL) | Documents Microsoft
+title: TERTIARY_WEIGHTS (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
@@ -48,13 +48,13 @@ TERTIARY_WEIGHTS( non_Unicode_character_string_expression )
   
 ## <a name="arguments"></a>Arguments  
 *non_Unicode_character_string_expression*  
-Est une chaîne [expression](../../t-sql/language-elements/expressions-transact-sql.md) de type **char**, **varchar**, ou **varchar (max)** définies sur un classement SQL tertiaire. Pour obtenir la liste de ces classements, consultez Remarques.
+[Expression](../../t-sql/language-elements/expressions-transact-sql.md) de chaîne de type **char**, **varchar** ou **varchar(max)**, définie sur un classement SQL tertiaire. Pour obtenir la liste de ces classements, consultez Remarques.
   
 ## <a name="return-types"></a>Types de retour
-TERTIARY_WEIGHTS retourne **varbinary** lorsque *non_Unicode_character_string_expression* est **char** ou **varchar**et retourne **varbinary (max)** lorsque *non_Unicode_character_string_expression* est **varchar (max)**.
+TERTIARY_WEIGHTS retourne **varbinary** lorsque *non_Unicode_character_string_expression* est de type **char** ou **varchar**, et retourne **varbinary(max)** lorsque *non_Unicode_character_string_expression* est de type **varchar(max)**.
   
-## <a name="remarks"></a>Notes  
-TERTIARY_WEIGHTS retourne NULL lorsque *non_Unicode_character_string_expression* n’est pas défini avec un classement SQL tertiaire. Le tableau suivant montre les classements SQL tertiaires.
+## <a name="remarks"></a>Notes   
+TERTIARY_WEIGHTS retourne la valeur NULL quand *non_Unicode_character_string_expression* n’est pas défini avec un classement SQL tertiaire. Le tableau suivant montre les classements SQL tertiaires.
   
 |ID d'ordre de tri|classement SQL|  
 |---|---|
@@ -91,7 +91,7 @@ TERTIARY_WEIGHTS retourne NULL lorsque *non_Unicode_character_string_expression*
 |185|SQL_SwedishStd_Pref_CP1_CI_AS|  
 |186.|SQL_Icelandic_Pref_CP1_CI_AS|  
   
-TERTIARY_WEIGHTS est destiné à utiliser dans la définition d’une colonne calculée qui est définie sur les valeurs d’une **char**, **varchar**, ou **varchar (max)** colonne. Définition d’un index sur la colonne calculée et **char**, **varchar**, ou **varchar (max)** colonne peut améliorer les performances lors de la **char**, **varchar**, ou **varchar (max)** colonne est spécifiée dans la clause ORDER BY d’une requête.
+La fonction TERTIARY_WEIGHTS est destinée à être utilisée dans la définition d’une colonne calculée sur les valeurs d’une colonne de type **char**, **varchar** ou **varchar(max)**. La définition d’un index sur la colonne calculée et sur la colonne de type **char**, **varchar** ou **varchar(max)** peut améliorer les performances lorsque la colonne de type **char**, **varchar** ou **varchar(max)** est spécifiée dans la clause ORDER BY d’une requête.
   
 ## <a name="examples"></a>Exemples  
 L'exemple suivant crée, dans une table, une colonne calculée qui applique la fonction `TERTIARY_WEIGHTS` aux valeurs d'une colonne de type `char`.
@@ -104,6 +104,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>Voir aussi
-[ORDER BY, clause for &#40; Transact-SQL &#41;](../../t-sql/queries/select-order-by-clause-transact-sql.md)
+[ORDER BY, clause &#40;Transact-SQL&#41;](../../t-sql/queries/select-order-by-clause-transact-sql.md)
   
   

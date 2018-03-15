@@ -1,5 +1,5 @@
 ---
-title: "STEnvelope (Type de données geometry) | Documents Microsoft"
+title: "STEnvelope (type de données geometry) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -44,7 +44,7 @@ STEnvelope ( )
 ```  
   
 ## <a name="return-types"></a>Types de retour  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]type de retour : **geometry**  
+ Type de retour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] : **geometry**  
   
  Type de retour CLR : **SqlGeometry**  
   
@@ -57,7 +57,7 @@ SET @g = geometry::STGeomFromText('LINESTRING(0 0, 2 3)', 0);
 SELECT @g.STEnvelope().ToString();  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Méthodes OGC sur des instances geography](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   
   

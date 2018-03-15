@@ -1,5 +1,5 @@
 ---
-title: "STIntersects (Type de données geography) | Documents Microsoft"
+title: "STIntersects (type de données geography) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stintersects-geography-data-type"></a>STIntersects (type de données geography)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-asdw-xxx-md.md)]
 
-  Retourne 1 si une **geography** instance croise une autre **geography** instance. Retourne 0 dans le cas contraire.  
+  Retourne 1 si une instance **geography** entre en intersection avec une autre instance **geography**. Retourne 0 dans le cas contraire.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -45,15 +45,15 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="arguments"></a>Arguments  
  *other_geography*  
- Une autre **geography** instance à comparer à l’instance sur laquelle `STIntersects()` est appelé.  
+ Autre instance **geography** à comparer à l’instance sur laquelle `STIntersects()` est appelé.  
   
 ## <a name="return-types"></a>Types de retour  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]type de retour : **bits**  
+ Type de retour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] : **bit**  
   
  Type de retour CLR : **SqlBoolean**  
   
-## <a name="remarks"></a>Notes  
- Cette méthode retourne toujours **NULL** si les ID de référence spatiale (SRID) de la **geography** instances ne correspondent pas.  
+## <a name="remarks"></a>Notes   
+ Cette méthode retourne toujours **NULL** si les SRID (ID de référence spatiale) des instances **geography** ne correspondent pas.  
   
 ## <a name="examples"></a>Exemples  
  L'exemple suivant utilise `STIntersects()` pour déterminer si deux instances `geography` se croisent.  
@@ -72,7 +72,7 @@ ms.lasthandoff: 01/25/2018
  END;
  ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Méthodes OGC sur des instances geography](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
   
   

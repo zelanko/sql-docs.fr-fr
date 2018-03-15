@@ -1,5 +1,5 @@
 ---
-title: "Filtre (Type de données geography) | Documents Microsoft"
+title: "Filter (type de données geography) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -35,11 +35,11 @@ ms.lasthandoff: 01/25/2018
 # <a name="filter-geography-data-type"></a>Filter (type de données geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Une méthode qui offre une méthode rapide index uniquement d’intersection pour déterminer si un **geography** instance croise une autre **geography** instance, en supposant un index est disponible.  
+  Méthode rapide d’intersection d’index uniquement, qui permet de déterminer si une instance **geography** entre en intersection avec une autre instance **geography**, en supposant qu’un index soit disponible.  
   
- Retourne 1 si une **geography** instance potentiellement entre en intersection avec une autre **geography** instance. Cette méthode peut produire un retour de faux positif, et le résultat exact peut dépendre du plan. Retourne une valeur 0 exacte (retour négatif vrai) s’il n’existe aucune intersection de **geography** instance a été trouvée.  
+ Retourne 1 si une instance **geography** entre potentiellement en intersection avec une autre instance **geography**. Cette méthode peut produire un retour de faux positif, et le résultat exact peut dépendre du plan. Retourne une valeur 0 précise (retour négatif vrai) si aucune intersection d’instances **geography** n’est détectée.  
   
- Dans le cas où un index n’est pas disponible ou n’est pas utilisé, la méthode retourne les mêmes valeurs que **STIntersects()** lorsqu’elle est appelée avec les mêmes paramètres.  
+ Dans les cas où un index n’est pas disponible ou n’est pas utilisé, la méthode retourne les mêmes valeurs que **STIntersects()** quand elle est appelée avec les mêmes paramètres.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -50,14 +50,14 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="arguments"></a>Arguments  
  *other_geography*  
- Une autre **geography** instance à comparer à l’instance sur laquelle Filter() est appelée.  
+ Autre instance **geography** à comparer à l’instance sur laquelle Filter() est appelé.  
   
 ## <a name="return-types"></a>Types de retour  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]type de retour : **bits**  
+ Type de retour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] : **bit**  
   
  Type de retour CLR : **SqlBoolean**  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Cette méthode n'est pas déterministe et n'est pas précise.  
   
 ## <a name="examples"></a>Exemples  
@@ -79,8 +79,8 @@ WHERE g.Filter(geography::Parse(
    'POLYGON((-120.1 44.9, -119.9 44.9, -119.9 45.1, -120.1 45.1, -120.1 44.9))')) = 1;  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- [Méthodes étendues sur les Instances Geography](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)   
- [STIntersects &#40; Type de données geography &#41;](../../t-sql/spatial-geography/stintersects-geography-data-type.md)  
+## <a name="see-also"></a> Voir aussi  
+ [Méthodes étendues sur des instances Geography](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)   
+ [STIntersects &#40;type de données geography&#41;](../../t-sql/spatial-geography/stintersects-geography-data-type.md)  
   
   

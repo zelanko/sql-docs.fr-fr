@@ -67,23 +67,23 @@ Les instructions de la console de base de données sont regroupées selon les ca
 Les commandes DBCC prennent des paramètres d'entrée et renvoient des valeurs. Tous les paramètres des commandes DBCC acceptent les littéraux de type Unicode et DBCS.
   
 ## <a name="dbcc-internal-database-snapshot-usage"></a>Utilisation de l'instantané de base de données interne DBCC  
-Les commandes DBCC suivantes fonctionnent sur une base de données en lecture seule interne de capture instantanée qui le [!INCLUDE[ssDE](../../includes/ssde-md.md)] crée. Ceci évite les problèmes de blocage et d'accès simultané lors de l'exécution de ces commandes. Pour plus d’informations, consultez [Instantanés de base de données &#40;SQL Server&#41;](../../relational-databases/databases/database-snapshots-sql-server.md).
+Les commandes DBCC suivantes fonctionnent sur un instantané de base de données en lecture seule interne créé par le [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Ceci évite les problèmes de blocage et d'accès simultané lors de l'exécution de ces commandes. Pour plus d’informations, consultez [Instantanés de base de données &#40;SQL Server&#41;](../../relational-databases/databases/database-snapshots-sql-server.md).
 - DBCC CHECKALLOC
 - DBCC CHECKCATALOG
 - DBCC CHECKDB
 - DBCC CHECKFILEGROUP
 - DBCC CHECKTABLE
 
-Lorsque vous exécutez une de ces commandes DBCC, le [!INCLUDE[ssDE](../../includes/ssde-md.md)] crée un instantané de base de données et la remet en dans un état cohérent au niveau transactionnel. La commande DBCC exécute alors les vérifications sur cet instantané. Lorsque la commande DBCC a terminé, cet instantané est supprimé.
+Quand vous exécutez l’une de ces commandes DBCC, le [!INCLUDE[ssDE](../../includes/ssde-md.md)] crée un instantané de base de données dont l’état est cohérent d’un point de vue transactionnel. La commande DBCC exécute alors les vérifications sur cet instantané. Lorsque la commande DBCC a terminé, cet instantané est supprimé.
   
 Parfois, l'instantané de base de données interne n'est pas nécessaire ou n'est pas possible. Dans ce cas, la commande DBCC s'exécute sur la base de données réelle. Si la base de données est en ligne, la commande DBCC a recours au verrouillage des tables pour garantir la cohérence des objets qu'elle est en train de vérifier. Ce comportement serait identique si l'option WITH TABLOCK était spécifiée.
   
 Aucun instantané de base de données interne n'est créé lors de l'exécution d'une commande DBCC :
--   Contre **master**et l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est en cours d’exécution en mode utilisateur unique.  
--   Par rapport à une base de données autre que **master**, mais la base de données a été placée en mode mono-utilisateur à l’aide de l’instruction ALTER DATABASE.  
+-   Sur une base de données **master**, si l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] s’exécute en mode mono-utilisateur.  
+-   Sur une base de données autre que **master**, si cette base de données a été placée en mode mono-utilisateur à l’aide de l’instruction ALTER DATABASE.  
 -   Sur une base de données en lecture seule.  
 -   Sur une base de données qui a été placée en mode urgence à l'aide de la commande ALTER DATABASE.  
--   Contre **tempdb**. Dans ce cas, l'instantané de base de données ne peut pas être créé, en raison de restrictions internes.  
+-   Sur une base de données **tempdb**. Dans ce cas, l'instantané de base de données ne peut pas être créé, en raison de restrictions internes.  
 -   Si l'option WITH TABLOCK est utilisée. Dans ce cas, DBCC satisfait la demande en ne créant pas d'instantané de la base de données.  
   
 Les commandes DBCC utilisent des verrous de table au lieu d'instantanés internes de base de données lorsque la commande est exécutée sur les bases de données suivantes :
@@ -93,26 +93,26 @@ Les commandes DBCC utilisent des verrous de table au lieu d'instantanés interne
 -   un volume qui ne prend pas en charge les « flux de remplacement ».  
   
 > [!NOTE]  
->  Pour tenter d'exécuter DBCC CHECKALLOC, ou la partie équivalente de DBCC CHECKDB, à l'aide de l'option WITH TABLOCK, il faut utiliser un verrou X (exclusif) de base de données. Ce verrou de base de données ne peut pas être défini sur **tempdb** ou **master** et risque d’échouer sur toutes les autres bases de données.  
+>  Pour tenter d'exécuter DBCC CHECKALLOC, ou la partie équivalente de DBCC CHECKDB, à l'aide de l'option WITH TABLOCK, il faut utiliser un verrou X (exclusif) de base de données. Ce verrou de base de données ne peut pas être défini sur des bases de données **tempdb** ni **master** et risque d’échouer sur toutes les autres bases de données.  
   
 > [!NOTE]  
->  DBCC CHECKDB échoue lorsqu’elle est exécutée sur **master** si un instantané de base de données interne ne peut pas être créé.  
+>  DBCC CHECKDB échoue quand il est exécuté sur une base de données **master** s’il n’est pas possible de créer d’instantané de base de données interne.  
   
 ## <a name="progress-reporting-for-dbcc-commands"></a>Rapport de progression pour les commandes DBCC  
-Le **sys.dm_exec_requests** affichage catalogue contient des informations sur la progression et la phase en cours d’exécution des commandes DBCC CHECKDB, checkfilegroupet CHECKTABLE. Le **percent_complete** colonne indique le pourcentage d’achèvement de la commande et le **commande** colonne indique la phase actuelle de l’exécution de la commande.
+La vue de catalogue **sys.dm_exec_requests** contient des informations sur la progression et la phase d’exécution en cours des commandes DBCC CHECKDB, CHECKFILEGROUP et CHECKTABLE. La colonne **percent_complete** indique le pourcentage d’exécution de la commande, et la colonne **command** indique la phase d’exécution en cours de cette commande.
   
 La définition d'une unité de progression dépend de la phase en cours d'exécution de la commande DBCC. La progression est parfois indiquée avec un niveau de granularité correspondant à une page de base de données, alors que pour d'autres phases elle est indiquée avec un niveau de granularité correspondant à une seule réparation de base de données ou d'allocation. Le tableau qui suit décrit chaque phase de l'exécution, et le niveau de granularité utilisé par la commande pour indiquer la progression.
   
-|Phase d'exécution| Description|Granularité du rapport de progression|  
+|Phase d'exécution|Description|Granularité du rapport de progression|  
 |---------------------|-----------------|------------------------------------|  
-|DBCC TABLE CHECK|Durant cette phase, la cohérence logique et physique des objets de la base de données est vérifiée.|La progression est indiquée au niveau de la page de base de données.<br /><br /> La valeur de progression est mise à jour pour chaque base de données de 1000 pages qui sont vérifiées.|  
+|DBCC TABLE CHECK|Durant cette phase, la cohérence logique et physique des objets de la base de données est vérifiée.|La progression est indiquée au niveau de la page de base de données.<br /><br /> La valeur de rapport de progression est actualisée toutes les 1 000 pages de base de données vérifiées.|  
 |DBCC TABLE REPAIR|Durant cette phase, les réparations de base de données sont exécutées si REPAIR_FAST, REPAIR_REBUILD ou REPAIR_ALLOW_DATA_LOSS est spécifié, et s'il existe des erreurs à réparer sur les objets.|La progression est indiquée au niveau de la réparation.<br /><br /> Le compteur est mis à jour pour chaque réparation terminée.|  
-|DBCC ALLOC CHECK|Durant cette phase, les structures d'allocation de la base de données sont vérifiées.<br /><br /> Remarque : DBCC CHECKALLOC exécute les mêmes vérifications.|Progression n’est pas signalée.|  
+|DBCC ALLOC CHECK|Durant cette phase, les structures d'allocation de la base de données sont vérifiées.<br /><br /> Remarque : DBCC CHECKALLOC exécute les mêmes vérifications.|La progression n’est pas indiquée|  
 |DBCC ALLOC REPAIR|Durant cette phase, les réparations de base de données sont exécutées si REPAIR_FAST, REPAIR_REBUILD ou REPAIR_ALLOW_DATA_LOSS est spécifié, et s'il existe des erreurs d'allocation à réparer.|La progression n'est pas indiquée.|  
 |DBCC SYS CHECK|Durant cette phase, les tables système de la base de données sont vérifiées.|La progression est indiquée au niveau de la page de base de données.<br /><br /> La valeur de progression est actualisée toutes les 1 000 pages de base de données vérifiées.|  
 |DBCC SYS REPAIR|Durant cette phase, les réparations de base de données sont exécutées si REPAIR_FAST, REPAIR_REBUILD ou REPAIR_ALLOW_DATA_LOSS est spécifié, et s'il existe des erreurs de tables système à réparer.|La progression est indiquée au niveau de la réparation.<br /><br /> Le compteur est mis à jour pour chaque réparation terminée.|  
-|DBCC SSB CHECK|Durant cette phase, les objets [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Service Broker sont vérifiés.<br /><br /> Remarque : Cette phase n’est pas exécutée lors de l’exécution de DBCC CHECKTABLE.|La progression n'est pas indiquée.|  
-|DBCC CHECKCATALOG|Durant cette phase, la cohérence des catalogues de la base de données est vérifiée.<br /><br /> Remarque : Cette phase n’est pas exécutée lors de l’exécution de DBCC CHECKTABLE.|La progression n'est pas indiquée.|  
+|DBCC SSB CHECK|Durant cette phase, les objets [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Service Broker sont vérifiés.<br /><br /> Remarque : Cette phase n’est pas réalisée lors de l’exécution de DBCC CHECKTABLE.|La progression n'est pas indiquée.|  
+|DBCC CHECKCATALOG|Durant cette phase, la cohérence des catalogues de la base de données est vérifiée.<br /><br /> Remarque : Cette phase n’est pas réalisée lors de l’exécution de DBCC CHECKTABLE.|La progression n'est pas indiquée.|  
 |DBCC IVIEW CHECK|Durant cette phase, la cohérence logique des vues indexées présentes dans la base de données est vérifiée.|La progression est indiquée au niveau de chaque vue de base de données vérifiée.|  
   
 ## <a name="informational-statements"></a>Instructions d’information  
@@ -150,6 +150,6 @@ La définition d'une unité de progression dépend de la phase en cours d'exécu
 |[DBCC dllname (FREE)](../../t-sql/database-console-commands/dbcc-dllname-free-transact-sql.md)|[DBCC HELP](../../t-sql/database-console-commands/dbcc-help-transact-sql.md)|  
 |[DBCC FLUSHAUTHCACHE](../../t-sql/database-console-commands/dbcc-flushauthcache-transact-sql.md)|[DBCC TRACEOFF](../../t-sql/database-console-commands/dbcc-traceoff-transact-sql.md)|  
 |[DBCC FREESESSIONCACHE](../../t-sql/database-console-commands/dbcc-freesessioncache-transact-sql.md)|[DBCC TRACEON](../../t-sql/database-console-commands/dbcc-traceon-transact-sql.md)|  
-|[DBCC FREESYSTEMCACHE](../../t-sql/database-console-commands/dbcc-freesystemcache-transact-sql.md)|[DBCC CLONEDATABASE](https://support.microsoft.com/en-us/kb/3177838) <br /><br /> **S’applique aux**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Service Pack 2.|  
+|[DBCC FREESYSTEMCACHE](../../t-sql/database-console-commands/dbcc-freesystemcache-transact-sql.md)|[DBCC CLONEDATABASE](https://support.microsoft.com/en-us/kb/3177838) <br /><br /> **S’applique à** : [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Service Pack 2.|  
   
   

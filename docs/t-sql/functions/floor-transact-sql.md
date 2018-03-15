@@ -1,5 +1,5 @@
 ---
-title: FLOOR (Transact-SQL) | Documents Microsoft
+title: FLOOR (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
@@ -48,7 +48,7 @@ FLOOR ( numeric_expression )
   
 ## <a name="arguments"></a>Arguments  
  *numeric_expression*  
- Est une expression de la catégorie de type de données numérique exact ou approché, à l’exception de la **bits** type de données.  
+ Expression de la catégorie de type de données numérique exacte ou approximative, à l’exception du type de données **bit**.  
   
 ## <a name="return-types"></a>Types de retour  
  Retourne le même type que *numeric_expression*.  
@@ -60,21 +60,21 @@ FLOOR ( numeric_expression )
 SELECT FLOOR(123.45), FLOOR(-123.45), FLOOR($123.45);  
 ```  
   
- Le résultat est la partie entière de la valeur calculée dans le même type de données en tant que *numeric_expression*.  
+ Le résultat est la partie entière de la valeur calculée dans le même type de données que *numeric_expression*.  
   
 ```  
 ---------      ---------     -----------  
 123            -124          123.0000     
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemples : [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] et[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- L’exemple suivant montre négatif numérique, positive numérique et les valeurs avec le `FLOOR` (fonction).  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemples : [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] et [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+ L’exemple suivant montre des valeurs numériques positives et négatives, ainsi que des valeurs avec la fonction `FLOOR`.  
   
 ```  
 SELECT FLOOR(123.45), FLOOR(-123.45), FLOOR($123.45);  
 ```  
   
- Le résultat est la partie entière de la valeur calculée dans le même type de données en tant que *numeric_expression*.  
+ Le résultat est la partie entière de la valeur calculée dans le même type de données que *numeric_expression*.  
   
  ```
  -----   ---------    -----------  
@@ -82,8 +82,8 @@ SELECT FLOOR(123.45), FLOOR(-123.45), FLOOR($123.45);
  123     -124         123
  ```  
   
-## <a name="see-also"></a>Voir aussi  
- [Fonctions mathématiques &#40; Transact-SQL &#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)  
+## <a name="see-also"></a> Voir aussi  
+ [Fonctions mathématiques &#40;Transact-SQL&#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)  
   
   
 

@@ -62,7 +62,7 @@ WHILE Boolean_expression
   
 ## <a name="arguments"></a>Arguments  
  *Boolean_expression*  
- Est un [expression](../../t-sql/language-elements/expressions-transact-sql.md) qui retourne **TRUE** ou **FALSE**. Si l'expression booléenne contient une instruction SELECT, cette dernière doit être mise entre parenthèses.  
+ [Expression](../../t-sql/language-elements/expressions-transact-sql.md) qui renvoie **TRUE** ou **FALSE**. Si l'expression booléenne contient une instruction SELECT, cette dernière doit être mise entre parenthèses.  
   
  {*sql_statement* | *statement_block*}  
  Toute instruction ou tout groupe d'instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] tels que définis dans un bloc d'instructions. Pour définir un bloc d'instructions, utilisez les mots clés de contrôle de flux BEGIN et END.  
@@ -73,7 +73,7 @@ WHILE Boolean_expression
  CONTINUE  
  Provoque le redémarrage de la boucle WHILE, en ignorant toutes les instructions qui suivent le mot clé CONTINUE.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Si plusieurs boucles WHILE sont imbriquées, le BREAK à l'intérieur de la boucle provoque le retour à la boucle précédente. Avant que la boucle précédente ne prenne le relais, toutes les instructions situées après la fin de la boucle intérieure sont d'abord exécutées.  
   
 ## <a name="examples"></a>Exemples  
@@ -116,10 +116,10 @@ DEALLOCATE Employee_Cursor;
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemples : [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] et[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemples : [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] et [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="c-simple-while-loop"></a>C: simple boucle While  
- Dans l'exemple suivant, si le prix moyen d'un produit est inférieur à `$300`, la boucle `WHILE` double les prix puis sélectionne le prix maximum. Si le prix maximum est inférieur ou égal à `$500`, la boucle `WHILE` redémarre et double de nouveau les prix. Cette boucle continue à doubler les prix jusqu'à ce que le prix maximum soit supérieur à `$500`et se termine le `WHILE` boucle.  
+### <a name="c-simple-while-loop"></a>C. Boucle While simple  
+ Dans l'exemple suivant, si le prix moyen d'un produit est inférieur à `$300`, la boucle `WHILE` double les prix puis sélectionne le prix maximum. Si le prix maximum est inférieur ou égal à `$500`, la boucle `WHILE` redémarre et double de nouveau les prix. Cette boucle continue à doubler les prix jusqu’à ce que le prix maximal soit supérieur à `$500`, puis le programme sort de la boucle `WHILE`.  
   
 ```  
 -- Uses AdventureWorks  
@@ -135,9 +135,9 @@ END
   
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [ALTER TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/alter-trigger-transact-sql.md)   
- [Langage de contrôle de flux &#40; Transact-SQL &#41;](~/t-sql/language-elements/control-of-flow.md)   
+ [Langage de contrôle de flux &#40;Transact-SQL&#41;](~/t-sql/language-elements/control-of-flow.md)   
  [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)   
  [Curseurs &#40;Transact-SQL&#41;](../../t-sql/language-elements/cursors-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)  

@@ -1,5 +1,5 @@
 ---
-title: "Chaîne des opérateurs (Transact-SQL) | Documents Microsoft"
+title: "Opérateurs de chaîne (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -43,9 +43,9 @@ ms.lasthandoff: 01/25/2018
   
  [% (Caractère générique, caractère(s) à inclure)](../../t-sql/language-elements/percent-character-wildcard-character-s-to-match-transact-sql.md)  
   
- [&#91; &#93; (Caractère générique - caractères à comparer)](../../t-sql/language-elements/wildcard-character-s-to-match-transact-sql.md)  
+ [&#91; &#93; (Caractère générique - Caractères à rechercher)](../../t-sql/language-elements/wildcard-character-s-to-match-transact-sql.md)  
   
- [&#91; ^ &#93; (Caractère générique - caractères à ne pas faire correspondre)](../../t-sql/language-elements/wildcard-character-s-not-to-match-transact-sql.md)  
+ [&#91;^&#93; (Caractère générique - Caractères à exclure)](../../t-sql/language-elements/wildcard-character-s-not-to-match-transact-sql.md)  
   
  [_ (Caractère générique, représente un caractère)](../../t-sql/language-elements/wildcard-match-one-character-transact-sql.md)  
   

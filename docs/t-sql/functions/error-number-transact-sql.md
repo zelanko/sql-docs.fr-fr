@@ -1,5 +1,5 @@
 ---
-title: ERROR_NUMBER (Transact-SQL) | Documents Microsoft
+title: ERROR_NUMBER (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -49,17 +49,17 @@ ERROR_NUMBER ( )
 ```  
   
 ## <a name="return-types"></a>Types de retour  
- **int**  
+ **Int**  
   
 ## <a name="return-value"></a>Valeur retournée  
  Lorsqu'il est appelé dans un bloc CATCH, renvoie le numéro d'erreur de l'erreur qui a causé l'exécution du bloc CATCH.  
   
  Retourne NULL si l'appel a lieu en dehors de l'étendue d'un bloc CATCH.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Cette fonction peut être appelée n'importe où dans l'étendue d'un bloc CATCH.  
   
- ERROR_NUMBER renvoie le numéro d'erreur, quel que soit le nombre d'exécutions de la fonction, ou l'endroit où elle est exécutée au sein de l'étendue du bloc CATCH. Ceci est le contraire de@ERROR, qui retourne uniquement le numéro d’erreur dans l’instruction immédiatement après celle qui provoque une erreur ou la première instruction d’un bloc CATCH bloquer.  
+ ERROR_NUMBER renvoie le numéro d'erreur, quel que soit le nombre d'exécutions de la fonction, ou l'endroit où elle est exécutée au sein de l'étendue du bloc CATCH. Au contraire, @@ERROR ne renvoie que le numéro d’erreur dans l’instruction immédiatement après celle qui a causé une erreur, ou la première instruction d’un bloc CATCH.  
   
  Dans des blocs CATCH imbriqués, ERROR_NUMBER renvoie le numéro d'erreur spécifique à l'étendue du bloc CATCH dans lequel il est référencé. Par exemple, le bloc CATCH d'une construction TRY...CATCH externe peut comporter une construction TRY...CATCH imbriquée. Avec le bloc CATCH imbriqué, ERROR_NUMBER renvoie le numéro de l'erreur qui a invoqué le bloc CATCH imbriqué. Si ERROR_NUMBER est exécuté dans le bloc CATCH externe, il renvoie le numéro de l'erreur qui a invoqué le bloc CATCH imbriqué.  
   
@@ -100,7 +100,7 @@ END CATCH;
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemples : [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] et[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemples : [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] et [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="c-using-errornumber-in-a-catch-block-with-other-error-handling-tools"></a>C. Utilisation de ERROR_NUMBER dans un bloc CATCH avec d'autres outils de traitement des erreurs  
  L'exemple de code suivant montre une instruction `SELECT` qui génère une erreur de division par zéro. Outre le numéro de l'erreur, des informations relatives à l'erreur sont également renvoyées.  
@@ -122,14 +122,14 @@ END CATCH;
 GO  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [sys.messages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/messages-for-errors-catalog-views-sys-messages.md)   
  [TRY...CATCH &#40;Transact-SQL&#41;](../../t-sql/language-elements/try-catch-transact-sql.md)   
  [ERROR_LINE &#40;Transact-SQL&#41;](../../t-sql/functions/error-line-transact-sql.md)   
  [ERROR_MESSAGE &#40;Transact-SQL&#41;](../../t-sql/functions/error-message-transact-sql.md)   
  [ERROR_PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/functions/error-procedure-transact-sql.md)   
  [ERROR_SEVERITY &#40;Transact-SQL&#41;](../../t-sql/functions/error-severity-transact-sql.md)   
- [ERROR_STATE &#40; Transact-SQL &#41;](../../t-sql/functions/error-state-transact-sql.md)   
+ [ERROR_STATE &#40;Transact-SQL&#41;](../../t-sql/functions/error-state-transact-sql.md)   
  [RAISERROR &#40;Transact-SQL&#41;](../../t-sql/language-elements/raiserror-transact-sql.md)   
  [@@ERROR &#40;Transact-SQL&#41;](../../t-sql/functions/error-transact-sql.md)  
   

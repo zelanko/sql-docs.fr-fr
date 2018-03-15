@@ -1,5 +1,5 @@
 ---
-title: XACT_STATE (Transact-SQL) | Documents Microsoft
+title: XACT_STATE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -52,16 +52,16 @@ XACT_STATE()
 ## <a name="return-type"></a>Type de retour  
  **smallint**  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  La fonction XACT_STATE renvoie les valeurs suivantes :  
   
 |Valeur retournée|Signification|  
 |------------------|-------------|  
-|1|Il existe une transaction utilisateur active pour la demande en cours. La demande peut exécuter toutes les actions, y compris l'écriture de données et la validation de la transaction.|  
+| 1|Il existe une transaction utilisateur active pour la demande en cours. La demande peut exécuter toutes les actions, y compris l'écriture de données et la validation de la transaction.|  
 |0|Il n'existe aucune transaction utilisateur active pour la demande en cours.|  
-|-1|Il existe une transaction utilisateur active pour la demande en cours, mais une erreur a entraîné le classement de la transaction comme non validable. La demande ne peut pas valider la transaction ou revenir à un point d'enregistrement ; elle peut seulement demander une annulation complète de la transaction. La demande ne peut effectuer aucune opération d'écriture tant qu'elle n'a pas annulé la transaction. La demande peut effectuer uniquement des opérations de lecture tant qu'elle n'a pas annulé la transaction. Lorsque la transaction est annulée, la demande peut effectuer des opérations de lecture et d'écriture et commencer une nouvelle transaction.<br /><br /> Lorsqu’un lot a terminé son exécution, le [!INCLUDE[ssDE](../../includes/ssde-md.md)] automatiquement annule toutes les transactions non validables actives. Si aucun message d'erreur n'a été envoyé lorsque la transaction est passée dans un état non validable, une erreur est envoyée à l'application cliente lorsque le traitement se termine. Ce message indique qu'une transaction non validable a été détectée et restaurée.|  
+|-1|Il existe une transaction utilisateur active pour la demande en cours, mais une erreur a entraîné le classement de la transaction comme non validable. La demande ne peut pas valider la transaction ou revenir à un point d'enregistrement ; elle peut seulement demander une annulation complète de la transaction. La demande ne peut effectuer aucune opération d'écriture tant qu'elle n'a pas annulé la transaction. La demande peut effectuer uniquement des opérations de lecture tant qu'elle n'a pas annulé la transaction. Lorsque la transaction est annulée, la demande peut effectuer des opérations de lecture et d'écriture et commencer une nouvelle transaction.<br /><br /> À la fin de l’exécution d’un lot, le [!INCLUDE[ssDE](../../includes/ssde-md.md)] restaure automatiquement toutes les transactions non validables actives. Si aucun message d'erreur n'a été envoyé lorsque la transaction est passée dans un état non validable, une erreur est envoyée à l'application cliente lorsque le traitement se termine. Ce message indique qu'une transaction non validable a été détectée et restaurée.|  
   
- Les deux le XACT_STATE et @@TRANCOUNT fonctions peuvent être utilisées pour détecter si la requête actuelle a une transaction utilisateur active. @@TRANCOUNT ne peut pas être utilisée pour déterminer si cette transaction a été classée comme une transaction non validable. XACT_STATE ne permet pas de déterminer s'il existe des transactions imbriquées.  
+ Les fonctions XACT_STATE et @@TRANCOUNT permettent de détecter s’il existe une transaction utilisateur active pour la demande en cours. @@TRANCOUNT ne permet pas de déterminer si cette transaction a été classée comme transaction non validable. XACT_STATE ne permet pas de déterminer s'il existe des transactions imbriquées.  
   
 ## <a name="examples"></a>Exemples  
  L'exemple suivant utilise `XACT_STATE` dans le bloc `CATCH` d'une construction `TRY…CATCH` pour déterminer si une transaction doit être validée ou annulée. L'option `SET XACT_ABORT` étant active (`ON`), l'erreur de violation de contrainte place la transaction dans un état non validable.  
@@ -112,7 +112,7 @@ END CATCH;
 GO  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [@@TRANCOUNT &#40;Transact-SQL&#41;](../../t-sql/functions/trancount-transact-sql.md)   
  [BEGIN TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/begin-transaction-transact-sql.md)   
  [COMMIT TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/commit-transaction-transact-sql.md)   

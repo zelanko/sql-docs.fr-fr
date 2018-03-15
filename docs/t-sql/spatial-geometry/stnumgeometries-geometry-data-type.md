@@ -1,5 +1,5 @@
 ---
-title: "STNumGeometries (Type de données geometry) | Documents Microsoft"
+title: "STNumGeometries (type de données geometry) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stnumgeometries-geometry-data-type"></a>STNumGeometries (type de données geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Retourne le nombre de géométries qui composent un **geometry** instance.
+Retourne le nombre de géométries qui composent une instance **geometry**.
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -44,15 +44,15 @@ Retourne le nombre de géométries qui composent un **geometry** instance.
 ```  
   
 ## <a name="return-types"></a>Types de retour  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]type de retour : **int**  
+ Type de retour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] : **int**  
   
  Type de retour CLR : **SqlInt32**  
   
-## <a name="remarks"></a>Notes  
- Cette méthode retourne 1 si le **geometry** instance n’est pas un **MultiPoint**, **MultiLineString**, **MultiPolygon**, ou **GeometryCollection** instance et 0 si le **geometry** instance est vide.  
+## <a name="remarks"></a>Notes   
+ Cette méthode retourne 1 si l’instance **geometry** n’est pas une instance **MultiPoint**, **MultiLineString**, **MultiPolygon** ou **GeometryCollection**, et 0 si l’instance **geometry** est vide.  
   
 > [!NOTE]  
->  Si un **GeometryCollection** a imbriqué des éléments vides, `STNumGeometries()` ne retournera pas 0. Bien que les éléments dans le **GeometryCollection** instance sont vides, l’instance elle-même n’est pas un ensemble vide.  
+>  Si **GeometryCollection** contient des éléments imbriqués vides, `STNumGeometries()` ne retourne pas 0. Bien que les éléments de l’instance **GeometryCollection** soient vides, l’instance elle-même n’est pas un ensemble vide.  
   
   
 

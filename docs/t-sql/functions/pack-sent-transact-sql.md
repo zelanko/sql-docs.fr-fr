@@ -1,5 +1,5 @@
 ---
-title: '@@PACK_SENT (Transact-SQL) | Documents Microsoft'
+title: '@@PACK_SENT (Transact-SQL) | Microsoft Docs'
 ms.custom: 
 ms.date: 09/18/2017
 ms.prod: sql-non-specified
@@ -36,7 +36,7 @@ ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="x40x40packsent-transact-sql"></a>& #x 40 ; & #x 40 ; PACK_SENT (Transact-SQL)
+# <a name="x40x40packsent-transact-sql"></a>&#x40;&#x40;PACK_SENT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Retourne le nombre de paquets en sortie écrits sur le réseau par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] depuis son dernier démarrage.  
@@ -52,8 +52,8 @@ ms.lasthandoff: 11/21/2017
 ## <a name="return-types"></a>Types de retour  
  **entier**  
   
-## <a name="remarks"></a>Notes  
- Pour afficher un rapport contenant plusieurs [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] des statistiques, notamment les paquets envoyés et reçus, exécutez **sp_monitor**.  
+## <a name="remarks"></a>Notes   
+ Pour afficher un rapport contenant plusieurs statistiques [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], notamment les paquets envoyés et reçus, exécutez **sp_monitor**.  
   
 ## <a name="examples"></a>Exemples  
  L’exemple suivant illustre l’utilisation de `@@PACK_SENT`.  
@@ -70,9 +70,9 @@ Pack Sent
 291  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [@@PACK_RECEIVED &#40;Transact-SQL&#41;](../../t-sql/functions/pack-received-transact-sql.md)   
  [sp_monitor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-monitor-transact-sql.md)   
- [Fonctions statistiques système &#40;Transact-SQL&#41;1 ;](../../t-sql/functions/system-statistical-functions-transact-sql.md)  
+ [Fonctions statistiques système &#40;Transact-SQL&#41;](../../t-sql/functions/system-statistical-functions-transact-sql.md)  
   
   

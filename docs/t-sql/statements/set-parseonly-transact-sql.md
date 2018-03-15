@@ -1,5 +1,5 @@
 ---
-title: SET PARSEONLY (Transact-SQL) | Documents Microsoft
+title: SET PARSEONLY (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 11/27/2017
 ms.prod: sql-non-specified
@@ -52,18 +52,18 @@ ms.lasthandoff: 12/01/2017
 SET PARSEONLY { ON | OFF }  
 ```  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Si SET PARSEONLY est défini sur ON, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se contente d'analyser l'instruction. Si SET PARSEONLY est défini sur OFF, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] compile et exécute l'instruction.  
   
  L'option SET PARSEONLY est définie au moment de l'analyse, et non pas lors de l'exécution.  
   
  N'utilisez pas PARSEONLY dans une procédure stockée ou un déclencheur. SET PARSEONLY renvoie des décalages si l'option OFFSETS est activée (ON) et qu'aucune erreur ne se produit.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l'appartenance au rôle **public** .  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Instructions SET &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)   
- [SET OFFSETS &#40; Transact-SQL &#41;](../../t-sql/statements/set-offsets-transact-sql.md)  
+ [SET OFFSETS &#40;Transact-SQL&#41;](../../t-sql/statements/set-offsets-transact-sql.md)  
   
   

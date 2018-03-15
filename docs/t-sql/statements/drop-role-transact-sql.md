@@ -1,5 +1,5 @@
 ---
-title: DROP ROLE (Transact-SQL) | Documents Microsoft
+title: DROP ROLE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 05/11/2017
 ms.prod: sql-non-specified
@@ -58,18 +58,18 @@ DROP ROLE role_name
 ```  
   
 ## <a name="arguments"></a>Arguments  
- *S’IL EXISTE*  
- **S’applique à**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] jusqu’à [version actuelle](http://go.microsoft.com/fwlink/p/?LinkId=299658)).  
+ *IF EXISTS*  
+ **S’applique à**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] jusqu’à la [version actuelle](http://go.microsoft.com/fwlink/p/?LinkId=299658)).  
   
- Conditionnellement supprime le rôle uniquement s’il existe déjà.  
+ Supprime, de manière conditionnelle, le rôle uniquement s’il existe déjà.  
   
- *nom_rôle*  
+ *role_name*  
  Spécifie le rôle à supprimer de la base de données.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Les rôles qui possèdent des éléments sécurisables ne peuvent pas être supprimés de la base de données. Pour supprimer un rôle de base de données qui possède des éléments sécurisables, vous devez tout d'abord transférer la propriété de ces éléments ou supprimer ces derniers de la base de données. Les rôles qui comprennent des membres ne peuvent pas être supprimés de la base de données. Pour supprimer un rôle qui comprend des membres, vous devez au préalable supprimer les membres du rôle.  
   
- Pour supprimer des membres d’un rôle de base de données, utilisez [ALTER ROLE &#40; Transact-SQL &#41; ](../../t-sql/statements/alter-role-transact-sql.md).  
+ Pour supprimer des membres d’un rôle de base de données, utilisez [ALTER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-role-transact-sql.md).  
   
  Vous ne pouvez pas utiliser DROP ROLE pour supprimer un rôle de base de données fixe.  
   
@@ -78,13 +78,13 @@ DROP ROLE role_name
 > [!CAUTION]  
 >  [!INCLUDE[ssCautionUserSchema](../../includes/sscautionuserschema-md.md)]  
   
- Pour supprimer un rôle de serveur, utilisez [DROP SERVER ROLE &#40; Transact-SQL &#41; ](../../t-sql/statements/drop-server-role-transact-sql.md).  
+ Pour supprimer un rôle serveur, utilisez [DROP SERVER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-server-role-transact-sql.md).  
   
-## <a name="permissions"></a>Permissions  
- Requiert **ALTER ANY ROLE** sur la base de données, ou **contrôle** l’autorisation sur le rôle, ou l’appartenance à la **db_securityadmin**.  
+## <a name="permissions"></a>Autorisations  
+ Nécessite l’autorisation **ALTER ANY ROLE** sur la base de données, ou l’autorisation **CONTROL** sur le rôle, ou l’appartenance au rôle **db_securityadmin**.  
   
 ## <a name="examples"></a>Exemples  
- L’exemple suivant supprime le rôle de base de données `purchasing` à partir de la `AdventureWorks2012` base de données.  
+ L’exemple suivant supprime le rôle de base de données `purchasing` de la base de données `AdventureWorks2012`.  
   
 ```  
 DROP ROLE purchasing;  
@@ -92,9 +92,9 @@ GO
 ```  
   
   
-## <a name="see-also"></a>Voir aussi  
- [CRÉER un rôle &#40; Transact-SQL &#41;](../../t-sql/statements/create-role-transact-sql.md)   
- [ALTER ROLE &#40; Transact-SQL &#41;](../../t-sql/statements/alter-role-transact-sql.md)   
+## <a name="see-also"></a> Voir aussi  
+ [CREATE ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-role-transact-sql.md)   
+ [ALTER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-role-transact-sql.md)   
  [Principaux &#40;moteur de base de données&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   
  [sp_addrolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md)   

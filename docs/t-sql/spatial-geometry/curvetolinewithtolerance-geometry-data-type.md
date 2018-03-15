@@ -1,5 +1,5 @@
 ---
-title: "CurveToLineWithTolerance (Type de données geometry) | Documents Microsoft"
+title: "CurveToLineWithTolerance (type de données geometry) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -31,7 +31,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="curvetolinewithtolerance-geometry-data-type"></a>CurveToLineWithTolerance (type de données geometry)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-Retourne une approximation polygonale d’une **geometry** instance qui contient les segments d’arc de cercle.
+Retourne une approximation polygonale d’une instance **geometry** contenant des segments d’arc de cercle.
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -42,44 +42,44 @@ Retourne une approximation polygonale d’une **geometry** instance qui contient
   
 ## <a name="arguments"></a>Arguments  
  *tolerance*  
- Est un **double** expression qui définit l’erreur maximale entre le segment d’arc de cercle d’origine et son approximation linéaire.  
+ Expression **double** qui définit l’erreur maximale entre le segment d’arc de cercle d’origine et son approximation linéaire.  
   
  *relative*  
- Est un **bool** expression qui indique s’il faut utiliser un maximum relatif pour l’écart. Lorsque la valeur relative est définie sur False (0), une valeur maximale absolue est définie pour l'écart d'une approximation linéaire. Si la valeur relative est True (1), la tolérance est calculée sous la forme d'un produit du paramètre de tolérance et du diamètre du rectangle englobant pour l'objet spatial.  
+ Expression **bool** qui indique s’il est nécessaire d’utiliser une valeur maximale relative pour l’écart. Lorsque la valeur relative est définie sur False (0), une valeur maximale absolue est définie pour l'écart d'une approximation linéaire. Si la valeur relative est True (1), la tolérance est calculée sous la forme d'un produit du paramètre de tolérance et du diamètre du rectangle englobant pour l'objet spatial.  
   
 ## <a name="return-types"></a>Types de retour  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]type de retour : **geometry**  
+ Type de retour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] : **geometry**  
   
  Type de retour CLR : **SqlGeometry**  
   
 ## <a name="exceptions"></a>Exceptions  
  La définition d'une tolérance <= 0 lève une exception `ArgumentOutOfRange`.  
   
-## <a name="remarks"></a>Notes  
- Cette méthode peut spécifier une valeur de tolérance d’erreur la résultante de **LineString**.  
+## <a name="remarks"></a>Notes   
+ Cette méthode peut spécifier une valeur de tolérance d’erreur pour le **LineString** résultant.  
   
  Le tableau affiche le type d'instance retourné par `CurveToLineWithTolerance()` pour différents types.  
   
 |Appel du type d'instance|Type spatial retourné|  
 |----------------------------|---------------------------|  
-|Instance géométrique vide|Vide **GeometryCollection** instance|  
-|**Point** et **MultiPoint**|**Point** instance|  
-|**MultiPoint**|**Point** ou **MultiPoint** instance|  
-|**CircularString**, **CompoundCurve**, or **LineString**|**LineString** instance|  
-|**MultiLineString**|**LineString** ou **MultiLineString** instance|  
-|**CurvePolygon** et **polygone**|**Polygone** instance|  
-|**MultiPolygon**|**Polygone** ou **MultiPolygon** instance|  
-|**GeometryCollection** avec une seule instance qui ne contient-elle pas un segment d’arc de cercle|L’instance qui est contenue dans le **GeometryCollection** détermine le type de l’instance retournée.|  
-|**GeometryCollection** avec une instance de segment d’arc de cercle unidimensionnelle unique (**CircularString**, **CompoundCurve**)|**LineString** instance|  
-|**GeometryCollection** avec une instance de segment d’arc de cercle bidimensionnelle unique (**CurvePolygon**)|**Polygone** instance|  
-|**GeometryCollection** avec plusieurs instances unidimensionnelles|**MultiLineString** instance|  
-|**GeometryCollection** avec plusieurs instances bidimensionnelles|**MultiPolygon** instance|  
-|**GeometryCollection** avec plusieurs instances de différentes dimensions|**GeometryCollection** instance|  
+|Instance géométrique vide|Instance **GeometryCollection** vide|  
+|**Point** et **MultiPoint**|Instance **Point**|  
+|**MultiPoint**|Instance **Point** ou **MultiPoint**|  
+|**CircularString**, **CompoundCurve** ou **LineString**|Instance **LineString**|  
+|**MultiLineString**|Instance **LineString** ou **MultiLineString**|  
+|**CurvePolygon** et **Polygon**|Instance **Polygon**|  
+|**MultiPolygon**|Instance **Polygon** ou **MultiPolygon**|  
+|**GeometryCollection** avec une instance unique qui ne contient pas de segment d’arc de cercle|L’instance contenue dans **GeometryCollection** détermine le type d’instance retourné.|  
+|**GeometryCollection** avec une seule instance de segment d’arc de cercle unidimensionnelle (**CircularString**, **CompoundCurve**)|Instance **LineString**|  
+|**GeometryCollection** avec une seule instance de segment d’arc de cercle bidimensionnelle (**CurvePolygon**)|Instance **Polygon**|  
+|**GeometryCollection** avec plusieurs instances unidimensionnelles|Instance **MultiLineString**|  
+|**GeometryCollection** avec plusieurs instances bidimensionnelles|Instance **MultiPolygon**|  
+|**GeometryCollection** avec plusieurs instances de différentes dimensions|Instance **GeometryCollection**|  
   
 ## <a name="examples"></a>Exemples  
   
 ### <a name="a-using-different-tolerance-values-on-a-circularstring-instance"></a>A. Utilisation de valeurs de tolérance différentes sur une instance CircularString  
- L’exemple suivant montre comment la définition de la tolérance affecte le `LineString`instance retournée par un `CircularString` instance :  
+ L’exemple suivant montre comment la définition de la tolérance affecte l’instance `LineString` retournée par une instance `CircularString` :  
   
 ```
  DECLARE @g geometry; 
@@ -106,7 +106,7 @@ Retourne une approximation polygonale d’une **geometry** instance qui contient
  ```  
   
 ### <a name="d-setting-relative-to-true-for-an-invoking-curvepolygon-instance"></a>D. Définition d'une valeur relative sur True pour appeler une instance CurvePolygon  
- L’exemple suivant utilise un `CurvePolygon` instance pour appeler `CurveToLineWithTolerance()` avec *relatif* défini sur true :  
+ L’exemple suivant utilise une instance `CurvePolygon` pour appeler `CurveToLineWithTolerance()` avec *relative* qui a la valeur true :  
   
 ```
  DECLARE @g geometry = 'CURVEPOLYGON(COMPOUNDCURVE(CIRCULARSTRING(0 4, 4 0, 8 4), (8 4, 0 4)))'; 
@@ -122,9 +122,9 @@ Retourne une approximation polygonale d’une **geometry** instance qui contient
  SELECT @g.CurveToLineWithTolerance(0.1,0).STNumPoints(), @g.CurveToLineWithTolerance(0.1, 0).ToString();
  ```  
   
-## <a name="see-also"></a>Voir aussi  
- [CurveToLineWithTolerance &#40; Type de données geography &#41;](../../t-sql/spatial-geography/curvetolinewithtolerance-geography-data-type.md)   
- [STCurveToLine &#40; Type de données geometry &#41;](../../t-sql/spatial-geometry/stcurvetoline-geometry-data-type.md)  
+## <a name="see-also"></a> Voir aussi  
+ [CurveToLineWithTolerance &#40;type de données geography&#41;](../../t-sql/spatial-geography/curvetolinewithtolerance-geography-data-type.md)   
+ [STCurveToLine &#40;type de données geometry&#41;](../../t-sql/spatial-geometry/stcurvetoline-geometry-data-type.md)  
   
   
 

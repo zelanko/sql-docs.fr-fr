@@ -1,5 +1,5 @@
 ---
-title: "MODIFIER les informations d’identification inclus dans l’étendue de base de données (Transact-SQL) | Documents Microsoft"
+title: ALTER DATABASE SCOPED CREDENTIAL (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 02/27/2017
 ms.prod: sql-non-specified
@@ -30,10 +30,10 @@ ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 02/01/2018
 ---
-# <a name="alter-database-scoped-credential-transact-sql"></a>Informations d’identification des inclus dans l’étendue de la base de données ALTER (Transact-SQL)
+# <a name="alter-database-scoped-credential-transact-sql"></a>ALTER DATABASE SCOPED CREDENTIAL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
 
-  Modifie les propriétés d’une base de données d’une étendue d’informations d’identification.  
+  Modifie les propriétés d’informations d’identification délimitées à la base de données.  
   
  ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -47,31 +47,31 @@ ALTER DATABASE SCOPED CREDENTIAL credential_name WITH IDENTITY = 'identity_name'
   
 ## <a name="arguments"></a>Arguments  
  *credential_name*  
- Spécifie le nom de l’information d’identification de base de données applique en cours de modification.  
+ Spécifie le nom des informations d’identification délimitées à la base de données à modifier.  
   
- IDENTITÉ **='***identity_name***'**  
- Spécifie le nom du compte à utiliser lors d'une connexion en dehors du serveur. Pour importer un fichier à partir du stockage d’objets Blob Azure, le nom de l’identité doit être `SHARED ACCESS SIGNATURE`.  Pour plus d’informations sur les signatures d’accès partagé, consultez [à l’aide d’accès partagé des Signatures (SAS)](https://docs.microsoft.com/azure/storage/storage-dotnet-shared-access-signature-part-1).  
+ IDENTITY **='***identity_name***'**  
+ Spécifie le nom du compte à utiliser lors d'une connexion en dehors du serveur. Pour importer un fichier à partir du stockage Blob Azure, il faut que le nom de l’identité soit `SHARED ACCESS SIGNATURE`.  Pour plus d’informations sur les signatures d’accès partagé, consultez [Utilisation des signatures d’accès partagé (SAP)](https://docs.microsoft.com/azure/storage/storage-dotnet-shared-access-signature-part-1).  
     
   
  SECRET **='***secret***'**  
- Spécifie le secret requis pour l'authentification sortante. *secret* est requis pour importer un fichier à partir du stockage d’objets Blob Azure. *secret* peut être facultative à d’autres fins.   
+ Spécifie le secret requis pour l'authentification sortante. *secret* est obligatoire pour importer un fichier à partir du stockage Blob Azure. *secret* peut être facultatif à d’autres fins.   
 >  [!WARNING]
->  La valeur de clé SAS pourrait commencer par un ' ?' (point d’interrogation). Lorsque vous utilisez la clé SAS, vous devez supprimer l’interligne ' ?'. Dans le cas contraire, vos efforts risque d’être bloqués.    
+>  La valeur de clé SAP peut commencer par un point d’interrogation (« ? »). Quand vous utilisez la clé SAP, vous devez supprimer le caractère « ? » initial. Sinon, vos efforts risquent d’être vains.    
   
-## <a name="remarks"></a>Notes  
- Lorsqu’une base de données d’une étendue informations d’identification est modifié, les valeurs des deux *identity_name* et *secret* sont réinitialisés. Si l'argument facultatif SECRET n'est pas spécifié, sa valeur stockée est NULL.  
+## <a name="remarks"></a>Notes   
+ Quand des informations d’identification délimitées à la base de données sont modifiées, les valeurs *identity_name* et *secret* sont réinitialisées. Si l'argument facultatif SECRET n'est pas spécifié, sa valeur stockée est NULL.  
   
  Le secret est chiffré au moyen de la clé principale du service. Si cette clé est regénérée, le secret est à nouveau chiffré à l'aide de la nouvelle clé principale du service.  
   
- Informations d’identification de base de données d’une étendue sont visibles dans le [sys.database_scoped_credentials](../../relational-databases/system-catalog-views/sys-database-scoped-credentials-transact-sql.md) affichage catalogue.  
+ Des détails sur les informations d’identification délimitées à la base de données sont consultables dans la vue de catalogue [sys.database_scoped_credentials](../../relational-databases/system-catalog-views/sys-database-scoped-credentials-transact-sql.md).  
   
 ## <a name="permissions"></a>Autorisations  
- Requiert `ALTER` autorisation sur les informations d’identification.  
+ Exige l’autorisation `ALTER` sur les informations d’identification.  
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-changing-the-password-of-a-database-scoped-credential"></a>A. Modifier le mot de passe d’une base de données d’une étendue d’informations d’identification  
- L’exemple suivant modifie le secret stocké dans les informations d’identification d’une étendue de la base de données appelée `Saddles`. Les informations d’identification de la portée de la base de données contient le nom de connexion Windows `RettigB` et son mot de passe. Le nouveau mot de passe est ajouté à l’aide de la clause SECRET des informations d’identification d’une étendue de la base de données.  
+### <a name="a-changing-the-password-of-a-database-scoped-credential"></a>A. Modification du mot de passe d’informations d’identification délimitées à la base de données  
+ L’exemple suivant modifie le secret stocké dans les informations d’identification délimitées à la base de données nommées `Saddles`. Les informations d’identification délimitées à la base de données contiennent la connexion Windows `RettigB` et son mot de passe. Le nouveau mot de passe est ajouté aux informations d’identification délimitées à la base de données à l’aide de la clause SECRET.  
   
 ```  
 ALTER DATABASE SCOPED CREDENTIAL AppCred WITH IDENTITY = 'RettigB',   
@@ -80,15 +80,15 @@ GO
 ```  
   
 ### <a name="b-removing-the-password-from-a-credential"></a>B. Suppression du mot de passe d'une information d'identification  
- L’exemple suivant supprime le mot de passe à partir d’une information d’identification de base de données d’une étendue nommée `Frames`. Contient les informations d’identification de base de données applique la connexion Windows `Aboulrus8` et un mot de passe. Une fois que l’instruction est exécutée, les informations d’identification de la portée de la base de données aura un mot de passe NULL, car l’option SECRET n’est pas spécifiée.  
+ Le code exemple suivant supprime le mot de passe des informations d’identification délimitées à la base de données nommées `Frames`. Les informations d’identification délimitées à la base de données contiennent la connexion Windows `Aboulrus8` et un mot de passe. Après l’exécution de l’instruction, le mot de passe des informations d’identification délimitées à la base de données a la valeur NULL car l’option SECRET n’est pas spécifiée.  
   
 ```  
 ALTER DATABASE SCOPED CREDENTIAL Frames WITH IDENTITY = 'Aboulrus8';  
 GO  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- [Informations d’identification &#40; moteur de base de données &#41;](../../relational-databases/security/authentication-access/credentials-database-engine.md)   
+## <a name="see-also"></a> Voir aussi  
+ [Informations d’identification &#40;moteur de base de données&#41;](../../relational-databases/security/authentication-access/credentials-database-engine.md)   
  [CREATE DATABASE SCOPED CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/create-database-scoped-credential-transact-sql.md)   
  [DROP DATABASE SCOPED CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/drop-database-scoped-credential-transact-sql.md)   
  [sys.database_scoped_credentials](../../relational-databases/system-catalog-views/sys-database-scoped-credentials-transact-sql.md)   

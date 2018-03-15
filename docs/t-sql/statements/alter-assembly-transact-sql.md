@@ -1,5 +1,5 @@
 ---
-title: "MODIFICATION de l’ASSEMBLY (Transact-SQL) | Documents Microsoft"
+title: ALTER ASSEMBLY (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 04/19/2017
 ms.prod: sql-non-specified
@@ -40,7 +40,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="alter-assembly-transact-sql"></a>ALTER ASSEMBLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Modifie un assembly en changeant les propriétés de catalogue [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] d'un assembly. ALTER ASSEMBLY le réactualise avec la dernière copie de la [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] modules qui contiennent sa mise en œuvre et ajoutent ou supprime les fichiers associés. Les assemblys sont créés à l’aide de [CREATE ASSEMBLY](../../t-sql/statements/create-assembly-transact-sql.md).  
+  Modifie un assembly en changeant les propriétés de catalogue [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] d'un assembly. ALTER ASSEMBLY le réactualise avec la dernière copie des modules [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] qui contiennent son implémentation, et ajoute ou supprime les fichiers qui lui sont associés. Les assemblys sont créés à l’aide de [CREATE ASSEMBLY](../../t-sql/statements/create-assembly-transact-sql.md).  
 
 >  [!WARNING]
 >  CLR utilise la sécurité d’accès du code (CAS) dans le .NET Framework, qui n’est plus pris en charge comme limite de sécurité. Un assembly CLR créé avec `PERMISSION_SET = SAFE` peut être en mesure d’accéder à des ressources système externes, d’appeler du code non managé et d’acquérir des privilèges sysadmin. À compter de [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)], une option de `sp_configure` appelée `clr strict security` est introduite pour renforcer la sécurité des assemblys CLR. `clr strict security` est activée par défaut et traite les assemblys `SAFE` et `EXTERNAL_ACCESS` comme s’ils étaient marqués `UNSAFE`. L’option `clr strict security` peut être désactivée pour assurer une compatibilité descendante, mais ceci n’est pas recommandé. Microsoft recommande que tous les assemblys soient signés par un certificat ou une clé asymétrique avec une connexion correspondante à laquelle a été accordée l’autorisation `UNSAFE ASSEMBLY` dans la base de données master. Pour plus d’informations, consultez [CLR strict security](../../database-engine/configure-windows/clr-strict-security.md).  
@@ -76,60 +76,60 @@ ALTER ASSEMBLY assembly_name
   
 ## <a name="arguments"></a>Arguments  
  *assembly_name*  
- Nom de l'assembly à modifier. *ASSEMBLY_NAME* doit déjà exister dans la base de données.  
+ Nom de l'assembly à modifier. *assembly_name* doit déjà exister dans la base de données.  
   
  FROM \<client_assembly_specifier> | \<assembly_bits>  
  Met à jour un assembly avec la dernière copie des modules [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] qui contiennent sa mise en œuvre. Cette option ne peut être utilisée que s'il n'existe aucun fichier associé avec l'assembly spécifié.  
   
- \<client_assembly_specifier > Spécifie l’emplacement réseau ou local où se trouve l’assembly en cours d’actualisation. L'emplacement réseau inclut le nom de l'ordinateur, le nom de partage et un chemin d'accès au sein de ce partage. *manifest_file_name* Spécifie le nom du fichier qui contient le manifeste de l’assembly.  
+ \<client_assembly_specifier> spécifie l’emplacement réseau ou local où se trouve l’assembly actuellement réactualisé. L'emplacement réseau inclut le nom de l'ordinateur, le nom de partage et un chemin d'accès au sein de ce partage. *manifest_file_name* spécifie le nom du fichier qui contient le manifeste de l’assembly.  
   
- \<assembly_bits > est la valeur binaire de l’assembly.  
+ \<assembly_bits> est la valeur binaire de l’assembly.  
   
  Des instructions ALTER ASSEMBLY distinctes doivent être émises pour tous les assemblys dépendants qui requièrent aussi une mise à jour.  
   
  PERMISSION_SET = { SAFE | EXTERNAL_ACCESS | UNSAFE }   
 >  [!IMPORTANT]  
->  Le `PERMISSION_SET` option est affectée par la `clr strict security` option, décrite dans l’avertissement lors de l’ouverture. Lorsque `clr strict security` est activé, tous les assemblys sont traités en tant que `UNSAFE`.  
- Spécifie la propriété de l'ensemble d'autorisation du code d'accès [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] de l'assembly. Pour plus d’informations sur cette propriété, consultez [CREATE ASSEMBLY &#40; Transact-SQL &#41; ](../../t-sql/statements/create-assembly-transact-sql.md).  
+>  L’option `PERMISSION_SET` est affectée par l’option `clr strict security`, qui est décrite dans l’avertissement d’ouverture. Quand `clr strict security` est activé, tous les assemblys sont traités en tant que `UNSAFE`.  
+ Spécifie la propriété de l'ensemble d'autorisation du code d'accès [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] de l'assembly. Pour plus d’informations sur cette propriété, consultez [CREATE ASSEMBLY &#40;Transact-SQL&#41;](../../t-sql/statements/create-assembly-transact-sql.md).  
   
 > [!NOTE]  
 >  Les options EXTERNAL_ACCESS et UNSAFE ne sont pas disponibles dans une base de données à relation contenant-contenu.  
   
  VISIBILITY = { ON | OFF }  
- Indique si l'assembly est visible pour créer des fonctions, des procédures stockées, des déclencheurs, des types et des fonctions d'agrégation définis par l'utilisateur CLR (Common Language Runtime). Avec la valeur OFF, l'assembly ne peut être appelé que par d'autres assemblys. S'il existe des objets de base de données CLR créés sur l'assembly, sa visibilité ne peut pas être modifiée. Tous les assemblys référencés par *assembly_name* sont téléchargés en tant que n’est pas visible par défaut.  
+ Indique si l'assembly est visible pour créer des fonctions, des procédures stockées, des déclencheurs, des types et des fonctions d'agrégation définis par l'utilisateur CLR (Common Language Runtime). Avec la valeur OFF, l'assembly ne peut être appelé que par d'autres assemblys. S'il existe des objets de base de données CLR créés sur l'assembly, sa visibilité ne peut pas être modifiée. Tout assembly référencé par *assembly_name* est chargé par défaut comme n’étant pas visible.  
   
  UNCHECKED DATA  
  Par défaut, ALTER ASSEMBLY échoue si elle doit vérifier la cohérence de lignes individuelles d'une table. Cette option permet de reporter les vérifications à une date ultérieure à l'aide de DBCC CHECKTABLE. Si cette option est spécifiée, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] exécute l'instruction ALTER ASSEMBLY même si des tables de la base de données contiennent les éléments suivants :  
   
--   des colonnes calculées persistantes qui référencent directement ou indirectement des méthodes dans l'assembly, par le biais de fonctions ou de méthodes [!INCLUDE[tsql](../../includes/tsql-md.md)] ;  
+-   Des colonnes calculées persistantes qui référencent directement ou indirectement des méthodes dans l'assembly, par le biais de fonctions ou de méthodes [!INCLUDE[tsql](../../includes/tsql-md.md)]  
   
--   des contraintes CHECK qui référencent directement ou indirectement des méthodes de l'assembly ;  
+-   Des contraintes CHECK qui référencent directement ou indirectement des méthodes de l'assembly  
   
--   Colonnes de type CLR défini par l’utilisateur qui dépendent de l’assembly et le type implémente une **UserDefined** (non -**natif**) format de sérialisation.  
+-   Des colonnes d’un type CLR défini par l’utilisateur dépendant de l’assembly, ce type implémentant un format de sérialisation **UserDefined** (non-**Native**).  
   
--   des colonnes d'un type CLR défini par l'utilisateur qui font référence à des vues créées à l'aide de WITH SCHEMABINDING.  
+-   Des colonnes d'un type CLR défini par l'utilisateur qui font référence à des vues créées à l'aide de WITH SCHEMABINDING  
   
  S'il y a des contraintes CHECK, elles sont désactivées et signalées comme étant non approuvées. Les tables qui contiennent des colonnes dépendant de l'assembly sont signalées comme contenant des données non vérifiées jusqu'à ce que ces tables soient explicitement vérifiées.  
   
- Seuls les membres de la **db_owner** et **db_ddlowner** des rôles de base de données fixe peuvent spécifier cette option.  
+ Seuls les membres des rôles de base de données fixes **db_owner** et **db_ddlowner** peuvent spécifier cette option.  
   
- Requiert le **ALTER ANY SCHEMA** autorisation pour spécifier cette option.  
+ Nécessite l’autorisation **ALTER ANY SCHEMA** pour spécifier cette option.  
   
- Pour plus d’informations, consultez [mise en œuvre des assemblys](../../relational-databases/clr-integration/assemblies-implementing.md).  
+ Pour plus d’informations, consultez [Implémentation de points de terminaison](../../relational-databases/clr-integration/assemblies-implementing.md).  
   
- [DROP FILE { *nom_fichier*[**, ***.. .n*] | ALL}]  
+ [ DROP FILE { *file_name*[ **,***...n*] | ALL } ]  
  Supprime le nom de fichier associé à l'assembly ou tous les fichiers associés à l'assembly, de la base de données. Si DROP FILE est utilisé avec ADD FILE qui suit, il s'exécute en premier. Cela vous permet de remplacer un fichier avec le même nom de fichier.  
   
 > [!NOTE]  
 >  Cette option n'est pas disponible dans une base de données à relation contenant-contenu.  
   
- [ADD FILE FROM { *client_file_specifier* [AS *nom_fichier*] | *file_bits*AS *nom_fichier*}  
- Télécharge un fichier à associer à l’assembly, par exemple de code source, les fichiers de débogage ou d’autres informations apparentées, sur le serveur et visibles dans le **sys.assembly_files** vue de catalogue. *client_file_specifier* Spécifie l’emplacement à partir duquel charger le fichier. *file_bits* peut être utilisé pour spécifier la liste des valeurs binaires qui composent le fichier. *file_name* Spécifie le nom sous lequel le fichier doit être stocké dans l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *file_name* doit être spécifié si *file_bits* est spécifié et est facultatif si *client_file_specifier* est spécifié. Si *nom_fichier* n’est pas spécifié, la partie nom_fichier de *client_file_specifier* est utilisé en tant que *nom_fichier*.  
+ [ ADD FILE FROM { *client_file_specifier* [ AS *file_name*] | *file_bits*AS *file_name*}  
+ Charge un fichier à associer à l’assembly, par exemple du code source, des fichiers de débogage ou d’autres informations apparentées, sur le serveur et l’affiche dans la vue de catalogue **sys.assembly_files**. *client_file_specifier* spécifie l’emplacement à partir duquel le fichier est chargé. *file_bits* peut être utilisé à la place pour spécifier la liste des valeurs binaires qui constituent le fichier. *file_name* spécifie le nom sous lequel le fichier doit être stocké dans l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *file_name* doit être spécifié si *file_bits* est spécifié, et est facultatif si *client_file_specifier* est spécifié. Si *file_name* n’est pas spécifié, la partie file_name de *client_file_specifier* est utilisée comme *file_name*.  
   
 > [!NOTE]  
 >  Cette option n'est pas disponible dans une base de données à relation contenant-contenu.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  ALTER ASSEMBLY n'interrompt pas les sessions en cours qui exécutent du code dans l'assembly modifié. Ces sessions se terminent en utilisant les bits non modifiés de l'assembly.  
   
  Si la clause FROM est spécifiée, ALTER ASSEMBLY met à jour l'assembly par rapport aux dernières copies des modules fournis. Comme il peut y avoir dans l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] des fonctions, des procédures stockées, des déclencheurs, des types de données et des fonctions d'agrégation définies par l'utilisateur CLR qui sont déjà définis dans l'assembly, l'instruction ALTER ASSEMBLY les réassocie à la dernière mise en œuvre de l'assembly. Pour cela, les méthodes qui effectuent le mappage avec les fonctions, les procédures stockées et les déclencheurs CLR doivent toujours exister dans l'assembly modifié, avec les mêmes signatures. Les classes qui mettent en œuvre des types et des fonctions d'agrégation CLR définis par l'utilisateur doivent toutefois satisfaire aux exigences inhérentes aux types ou agrégations définis par l'utilisateur.  
@@ -145,17 +145,17 @@ ALTER ASSEMBLY assembly_name
   
 -   Les signatures des méthodes de l'assembly qui sont appelées depuis d'autres assemblys.  
   
--   La liste des assemblys qui dépendent de l’assembly, tel qu’il est référencé dans le **DependentList** propriété de l’assembly.  
+-   La liste des assemblys qui dépendent de l’assembly, référencés dans la propriété **DependentList** de l’assembly.  
   
 -   La capacité d'indexation d'une méthode, à moins qu'il n'existe pas d'index ni de colonnes calculées persistantes dépendant de cette méthode, que ce soit directement ou indirectement.  
   
--   Le **FillRow** attribut de nom de méthode pour les fonctions table CLR.  
+-   L’attribut du nom de méthode **FillRow** pour les fonctions table CLR.  
   
--   Le **Accumulate** et **Terminate** signature de méthode pour les agrégats définis par l’utilisateur.  
+-   La signature de méthode **Accumulate** et **Terminate** pour les agrégations définies par l’utilisateur.  
   
 -   Assemblys système.  
   
--   Appartenance de l'assembly. Utilisez [ALTER AUTHORIZATION &#40; Transact-SQL &#41; ](../../t-sql/statements/alter-authorization-transact-sql.md) à la place.  
+-   Appartenance de l'assembly. Utilisez plutôt [ALTER AUTHORIZATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-authorization-transact-sql.md).  
   
  Qui plus est, dans le cas des assemblys qui mettent en œuvre des types définis par l'utilisateur, vous pouvez utiliser ALTER ASSEMBLY pour apporter les modifications suivantes uniquement :  
   
@@ -174,19 +174,19 @@ ALTER ASSEMBLY assembly_name
 ## <a name="permissions"></a>Autorisations  
  Nécessite l'autorisation ALTER sur l'assembly. Il y a d'autres exigences :  
   
--   Pour modifier un assembly existante dont l’autorisation, jeu est EXTERNAL_ACCESS, requiert**EXTERNAL ACCESS ASSEMBLY**autorisation sur le serveur.  
+-   Pour modifier un assembly dont le jeu d’autorisations existant est EXTERNAL_ACCESS, vous devez avoir l’autorisation **EXTERNAL ACCESS ASSEMBLY** sur le serveur.  
   
--   Pour modifier un assembly existante dont l’autorisation, jeu est UNSAFE requiert **UNSAFE ASSEMBLY** autorisation sur le serveur.  
+-   Pour modifier un assembly dont le jeu d’autorisations existant est UNSAFE, vous devez avoir l’autorisation **UNSAFE ASSEMBLY** sur le serveur.  
   
--   Pour modifier le jeu d’autorisations d’un assembly en faveur de EXTERNAL_ACCESS, nécessite**EXTERNAL ACCESS ASSEMBLY** autorisation sur le serveur.  
+-   Pour changer le jeu d’autorisations d’un assembly et le définir sur EXTERNAL_ACCESS, vous devez avoir l’autorisation **EXTERNAL ACCESS ASSEMBLY** sur le serveur.  
   
--   Pour modifier le jeu d’autorisations d’un assembly en faveur de UNSAFE, nécessite **UNSAFE ASSEMBLY** autorisation sur le serveur.  
+-   Pour changer le jeu d’autorisations d’un assembly et le définir sur UNSAFE, vous devez avoir l’autorisation **UNSAFE ASSEMBLY** sur le serveur.  
   
--   Spécification de la clause WITH UNCHECKED DATA, nécessite **ALTER ANY SCHEMA** autorisation.  
+-   La spécification de la clause WITH UNCHECKED DATA nécessite l’autorisation **ALTER ANY SCHEMA**.  
 
 
-### <a name="permissions-with-clr-strict-security"></a>Autorisations de sécurité stricte de CLR    
-Les autorisations suivantes requises pour modifier un assembly CLR lorsque `CLR strict security` est activé :
+### <a name="permissions-with-clr-strict-security"></a>Autorisations avec sécurité CLR stricte    
+Les autorisations suivantes sont nécessaires pour modifier un assembly CLR quand `CLR strict security` est activée :
 
 - L’utilisateur doit avoir l’autorisation `ALTER ASSEMBLY`.  
 - Et une des conditions suivantes doit également être remplie :  
@@ -194,7 +194,7 @@ Les autorisations suivantes requises pour modifier un assembly CLR lorsque `CLR 
   - La base de données a la propriété `TRUSTWORTHY` définie sur `ON`, et elle est détenue par une connexion qui a l’autorisation `UNSAFE ASSEMBLY` sur le serveur. Cette option n’est pas recommandée.  
   
   
- Pour plus d’informations sur l’ensemble des jeux d’autorisations, consultez [Designing Assemblies](../../relational-databases/clr-integration/assemblies-designing.md).  
+ Pour plus d’informations sur les jeux d’autorisations des assemblys, consultez [Conception d’assemblys](../../relational-databases/clr-integration/assemblies-designing.md).  
   
 ## <a name="examples"></a>Exemples  
   
@@ -202,7 +202,7 @@ Les autorisations suivantes requises pour modifier un assembly CLR lorsque `CLR 
  L'exemple suivant met à jour l'assembly `ComplexNumber` avec la dernière copie des modules [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] qui conservent son implémentation.  
   
 > [!NOTE]  
->  L'assembly `ComplexNumber` peut être créé en exécutant les scripts d'exemple UserDefinedDataType. Pour plus d’informations, consultez [User Defined Type](http://msdn.microsoft.com/library/a9b75f36-d7f5-47f7-94d6-b4448c6a2191).  
+>  L'assembly `ComplexNumber` peut être créé en exécutant les scripts d'exemple UserDefinedDataType. Pour plus d’informations, consultez [Type défini par l’utilisateur](http://msdn.microsoft.com/library/a9b75f36-d7f5-47f7-94d6-b4448c6a2191).  
   
  ```
  ALTER ASSEMBLY ComplexNumber 
@@ -223,7 +223,7 @@ ADD FILE FROM 'C:\MyClassProject\Class1.cs';
 ALTER ASSEMBLY ComplexNumber WITH PERMISSION_SET = EXTERNAL_ACCESS;  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [CREATE ASSEMBLY &#40;Transact-SQL&#41;](../../t-sql/statements/create-assembly-transact-sql.md)   
  [DROP ASSEMBLY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-assembly-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  

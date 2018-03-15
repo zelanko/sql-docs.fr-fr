@@ -1,5 +1,5 @@
 ---
-title: char et varchar (Transact-SQL) | Documents Microsoft
+title: char et varchar (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 7/23/2017
 ms.prod: sql-non-specified
@@ -42,46 +42,46 @@ ms.lasthandoff: 11/21/2017
 Ces types de données sont de longueur fixe ou de longueur variable.  
   
 ## <a name="arguments"></a>Arguments  
-**char** [(  *n*  )] à longueur fixe, les données de chaîne non-Unicode. *n*définit la longueur de chaîne et doit être une valeur comprise entre 1 et 8 000 caractères. La taille de stockage est  *n*  octets. Le synonyme ISO de **char** est **caractère**.
+**char** [ ( *n* ) ] Données de type chaîne non-Unicode de longueur fixe. *n* définit la longueur de chaîne et doit être une valeur comprise entre 1 et 8 000. La taille de stockage est égale à *n* octets. Le synonyme ISO de **char** est **character**.
   
-**varchar** [(  *n*   |  **max** )] longueur Variable, les données de chaîne non-Unicode. *n*définit la longueur de chaîne et peut être une valeur comprise entre 1 et 8 000 caractères. **max** indique que la taille de stockage maximale est de 2 ^ 31-1 octets (2 Go). La taille mémoire est la longueur réelle des données entrées, plus deux octets. Les synonymes ISO de **varchar** sont **charvarying** ou **charactervarying**.
+**varchar** [ ( *n* | **max** ) ] Données de type chaîne non-Unicode de longueur variable. *n* définit la longueur de chaîne et peut être une valeur comprise entre 1 et 8 000. **max** indique que la taille de stockage maximale est de 2^31-1 octets (2 Go). La taille mémoire est la longueur réelle des données entrées, plus deux octets. Les synonymes ISO de **varchar** sont **charvarying** ou **charactervarying**.
   
-## <a name="remarks"></a>Notes  
-Lorsque  *n*  n’est pas spécifié dans une définition de données ou d’une instruction de déclaration de variable, la longueur par défaut est 1. Lorsque  *n*  n’est pas spécifié lorsque vous utilisez les fonctions CAST et CONVERT, la longueur par défaut est 30.
+## <a name="remarks"></a>Notes   
+Quand la valeur de *n* n’est spécifiée ni dans une définition de données ni dans une instruction de déclaration de variable, la longueur par défaut est 1. Quand la valeur de *n* n’est pas précisée avec les fonctions CAST et CONVERT, la longueur par défaut est 30.
   
-Objets qui utilisent **char** ou **varchar** reçoivent le classement par défaut de la base de données, sauf si un classement spécifique est affecté à l’aide de la clause COLLATE. Le classement contrôle la page de codes utilisée pour stocker les données de caractères.
+Les objets qui utilisent **char** ou **varchar** reçoivent le classement par défaut de la base de données, sauf si un classement spécifique est affecté à l’aide de la clause COLLATE. Le classement contrôle la page de codes utilisée pour stocker les données de caractères.
   
-Si vous avez des sites qui prennent en charge plusieurs langues, envisagez d’utiliser Unicode **nchar** ou **nvarchar** des types de données afin de réduire les problèmes de conversion de caractères. Si vous utilisez **char** ou **varchar**, nous vous recommandons ce qui suit :
-- Utilisez **char** lorsque les tailles des entrées de données de colonne sont cohérentes.  
-- Utilisez **varchar** lorsque les tailles des entrées de données de colonne varient considérablement.  
-- Utilisez **varchar (max)** lorsque les tailles des entrées de données de colonne varient considérablement, et la taille peut dépasser 8 000 octets.  
+Afin de limiter les problèmes de conversion de caractères si vos sites prennent en charge plusieurs langues, envisagez d’utiliser les types de données Unicode **nchar** ou **nvarchar**. Si vous utilisez **char** ou **varchar**, nous vous recommandons de suivre les instructions suivantes :
+- Utilisez **char** quand les tailles des entrées de données de la colonne sont cohérentes.  
+- Utilisez **varchar** quand les tailles des entrées de données de la colonne varient considérablement.  
+- Utilisez **varchar(max)** quand les tailles des entrées de données de la colonne varient considérablement et que la taille peut dépasser 8 000 octets.  
   
-Si SET ANSI_PADDING est désactivé lorsque CREATE TABLE ou ALTER TABLE est exécutée, un **char** colonne définie comme NULL est considérée comme **varchar**.
+Si SET ANSI_PADDING a la valeur OFF lors de l’exécution de CREATE TABLE ou d’ALTER TABLE, une colonne de type **char** définie comme Null est gérée comme une colonne de type **varchar**.
   
-Lorsque la page de codes du classement utilise des caractères codés sur deux octets, la taille de stockage est toujours  *n*  octets. En fonction de la chaîne de caractères, la taille de stockage  *n*  octets peut être inférieure à  *n*  caractères.
+Quand la page de codes du classement utilise des caractères sur deux octets, la taille de stockage est toujours de *n* octets. En fonction de la chaîne de caractères, la taille de stockage de *n* octets peut être inférieure à *n* caractères.
 
 > [!WARNING]
-> Chaque varchar (max) non null ou une colonne de nvarchar (max) requiert 24 octets d’allocation fixe supplémentaire calculée par rapport à la limite de 8 060 octets par ligne pendant une opération de tri. Cela peut créer une limite implicite au nombre de colonnes nvarchar (max) qui peuvent être créés dans une table ou de varchar (max) non null.  
+> Chaque colonne varchar(max) ou nvarchar(max) non Null demande 24 octets d’allocation fixe supplémentaire calculée par rapport à la limite de 8 060 octets par ligne pendant une opération de tri. Cela peut produire une limite implicite du nombre de colonnes varchar(max) ou nvarchar(max) non Null pouvant être créées dans une table.  
 Aucune erreur spéciale n'est fournie quand la table est créée (mis à part l’avertissement habituel indiquant que la taille maximale de ligne dépasse la taille maximale autorisée de 8 060 octets) ou quand les données sont insérées. Cette grande taille de ligne peut provoquer des erreurs (comme l’erreur 512) au cours des opérations normales, telles que la mise à jour de la clé d’index cluster ou le tri de l’intégralité des colonnes, que les utilisateurs ne peuvent pas anticiper tant qu’elles n’ont pas été effectuées.
   
-##  <a name="_character"></a>Conversion de données de type caractère  
-Lorsque des expressions de caractères sont converties en type caractère de taille différente, les valeurs trop longues pour le nouveau type de données sont tronquées. Le **uniqueidentifier** type est considéré comme un type de caractère dans le cadre de la conversion à partir d’une expression de caractères et est donc soumis aux règles de troncation pour la conversion en un type de caractère. Consultez la section Exemples qui suit.
+##  <a name="_character"></a> Conversion de données caractères  
+Lorsque des expressions de caractères sont converties en type caractère de taille différente, les valeurs trop longues pour le nouveau type de données sont tronquées. Le type **uniqueidentifier** est considéré comme un type caractère pour les besoins de la conversion à partir d’une expression de caractères ; il est par conséquent soumis aux règles de troncation pour la conversion en un type caractère. Consultez la section Exemples qui suit.
   
-Lorsqu’une expression de caractères est convertie en une expression de caractères d’un autre type de données ou la taille, par exemple à partir de **char (5)** à **varchar (5)**, ou **char (20)** à **char (15)**, le classement de la valeur d’entrée est affecté à la valeur convertie. Si une expression de type non caractère est convertie en un type de données caractère, le classement par défaut de la base de données active est affecté à la valeur convertie. Dans les deux cas, vous pouvez affecter un classement spécifique à l’aide de la [COLLATE](http://msdn.microsoft.com/library/4ba6b7d8-114a-4f4e-bb38-fe5697add4e9) clause.
+Quand une expression de caractères est convertie en une expression de caractères de taille ou de type de données différent (par exemple, de **char(5)** en **varchar(5)**, ou **char(20)** en **char(15)**), le classement de la valeur d’entrée est affecté à la valeur convertie. Si une expression de type non caractère est convertie en un type de données caractère, le classement par défaut de la base de données active est affecté à la valeur convertie. Dans les deux cas, vous pouvez affecter un classement spécifique à l’aide de la clause [COLLATE](http://msdn.microsoft.com/library/4ba6b7d8-114a-4f4e-bb38-fe5697add4e9).
   
 > [!NOTE]  
->  Traductions de page de codes sont prises en charge pour **char** et **varchar** des types de données, mais pas pour **texte** type de données. De manière identique aux versions antérieures de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], la perte de données lors de l'interprétation d'une page de codes n'est pas mentionnée.  
+>  Les traductions de pages de codes sont prises en charge pour les types de données **char** et **varchar**, mais pas pour **text**. De manière identique aux versions antérieures de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], la perte de données lors de l'interprétation d'une page de codes n'est pas mentionnée.  
   
-Les expressions qui sont en cours de conversion à un nombre approximatif de caractères **numérique** type de données peut inclure une notation exponentielle facultative (un e minuscule ou un E majuscule suivi d’un signe facultatif plus (+) ou moins (-) signe, puis un nombre).
+Les expressions de caractères converties en un type de données **numeric** approximatif peuvent éventuellement inclure une indication exponentielle (un « e » majuscule ou minuscule éventuellement suivi d’un plus (+) ou d’un moins (-) et du nombre).
   
-Les expressions qui sont en cours de conversion à un texte exact de caractères **numérique** type de données doit se composer de chiffres, une virgule décimale et d’un signe plus (+) ou moins (-). Les espaces à gauche sont ignorés. Les séparateurs virgule (séparateurs de milliers en notation anglaise comme dans 123,456.00) ne sont pas autorisés dans la chaîne.
+Les expressions de caractères converties en un type de données **numeric** exact doivent être composées de chiffres, d’une virgule décimale et éventuellement d’un plus (+) ou d’un moins (-). Les espaces à gauche sont ignorés. Les séparateurs virgule (séparateurs de milliers en notation anglaise comme dans 123,456.00) ne sont pas autorisés dans la chaîne.
   
-Expressions de caractères converties à **money** ou **smallmoney** des types de données peuvent également inclure un séparateur décimal facultatif et le signe dollar ($). Les séparateurs virgule (séparateurs de milliers en notation anglaise comme dans $123,456.00) sont autorisés.
+Les expressions de caractères converties en types de données **money** ou **smallmoney** peuvent également comprendre une virgule décimale et le symbole du dollar ($). Les séparateurs virgule (séparateurs de milliers en notation anglaise comme dans $123,456.00) sont autorisés.
   
 ## <a name="examples"></a>Exemples  
   
 ### <a name="a-showing-the-default-value-of-n-when-used-in-variable-declaration"></a>A. Affichage de la valeur par défaut de n utilisée dans une déclaration de variable.  
-L’exemple suivant montre la valeur par défaut  *n*  est 1 pour le `char` et `varchar` les types de données lorsqu’ils sont utilisés dans la déclaration de variable.
+L’exemple suivant montre que la valeur par défaut de *n* est 1 pour les types de données `char` et `varchar` quand ils sont utilisés dans une déclaration de variable.
   
 ```sql
 DECLARE @myVariable AS varchar = 'abc';  
@@ -92,7 +92,7 @@ GO
 ```  
   
 ### <a name="b-showing-the-default-value-of-n-when-varchar-is-used-with-cast-and-convert"></a>B. Affichage de la valeur par défaut de n lorsque varchar est utilisé dans CAST et CONVERT.  
-L’exemple suivant montre que la valeur par défaut  *n*  est 30 lorsque les `char` ou `varchar` les types de données sont utilisés avec la `CAST` et `CONVERT` fonctions.
+L’exemple suivant montre que la valeur par défaut de *n* est 30 quand les types de données `char` ou `varchar` sont utilisés avec les fonctions `CAST` et `CONVERT`.
   
 ```sql
 DECLARE @myVariable AS varchar(40);  
@@ -104,7 +104,7 @@ SELECT DATALENGTH(CONVERT(char, @myVariable)) AS 'VarcharDefaultLength';
 ```  
   
 ### <a name="c-converting-data-for-display-purposes"></a>C. Conversion de données à des fins d'affichage  
-L'exemple suivant convertit deux colonnes en types caractères et applique un style qui applique un format spécifique aux données affichées. A **money** type est converti en données de type caractère et le style 1 est appliqué, qui affiche les valeurs par des virgules de tous les trois chiffres à gauche du séparateur décimal et deux chiffres à droite de la virgule décimale. A **datetime** type est converti en données de type caractère et le style 3 est appliqué, qui affiche les données dans le format mm/jj/aa. Dans la clause WHERE, une **money** type est converti en un type de caractère pour effectuer une opération de comparaison de chaînes.
+L'exemple suivant convertit deux colonnes en types caractères et applique un style qui applique un format spécifique aux données affichées. Un type **money** est converti en données caractères et le style 1 est appliqué, ce qui affiche les valeurs avec une virgule tous les trois chiffres à gauche de la virgule décimale et deux chiffres à droite de la virgule décimale. Un type **datetime** est converti en données caractères et le style 3 est appliqué, ce qui affiche les données au format jj/mm/aa. Dans la clause WHERE, un type **money** est converti en un type caractère pour effectuer une opération de comparaison de chaînes.
   
 ```sql
 USE AdventureWorks2012;  
@@ -140,7 +140,7 @@ DECLARE @myid uniqueidentifier = NEWID();
 SELECT CONVERT(char(255), @myid) AS 'char';  
 ```  
   
-L'exemple suivant illustre la troncation des données lorsque la valeur est trop longue pour le type de données vers lequel la conversion est effectuée. Étant donné que la **uniqueidentifier** type est limité à 36 caractères, les caractères qui dépassent cette longueur sont tronqués.
+L'exemple suivant illustre la troncation des données lorsque la valeur est trop longue pour le type de données vers lequel la conversion est effectuée. Étant donné que le type **uniqueidentifier** est limité à 36 caractères, les caractères qui dépassent cette longueur sont tronqués.
   
 ```sql
 DECLARE @ID nvarchar(max) = N'0E984725-C51C-4BF4-9960-E1C80E27ABA0wrong';  
@@ -160,9 +160,9 @@ String                                       TruncatedValue
 ## <a name="see-also"></a>Voir aussi
 [nchar et nvarchar &#40;Transact-SQL&#41;](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md)  
 [CAST et CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
-[COLLATE &#40; Transact-SQL &#41;](http://msdn.microsoft.com/library/4ba6b7d8-114a-4f4e-bb38-fe5697add4e9)  
-[Conversion de Type de données &#40; moteur de base de données &#41;](../../t-sql/data-types/data-type-conversion-database-engine.md)  
+[COLLATE &#40;Transact-SQL&#41;](http://msdn.microsoft.com/library/4ba6b7d8-114a-4f4e-bb38-fe5697add4e9)  
+[Conversion de type de données &#40;moteur de base de données&#41;](../../t-sql/data-types/data-type-conversion-database-engine.md)  
 [Types de données &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)  
-[Estimer la taille d’une base de données](../../relational-databases/databases/estimate-the-size-of-a-database.md)
+[Estimer la taille d'une base de données](../../relational-databases/databases/estimate-the-size-of-a-database.md)
   
   

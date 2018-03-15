@@ -1,5 +1,5 @@
 ---
-title: "STAsText (Type de données geometry) | Documents Microsoft"
+title: "STAsText (type de données geometry) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stastext-geometry-data-type"></a>STAsText (type de données geometry)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-Retourne la représentation de la réplication continue en cluster (WKT, Open Geospatial Consortium (OGC) Well-Known Text) d’un **geometry** instance. Ce texte ne contiendra aucune valeur Z (élévation) ou M (mesure) apportée par l'instance.
+Retourne la représentation OGC (Open Geospatial Consortium) WKT (Well-Known Text) d’une instance **geometry**. Ce texte ne contiendra aucune valeur Z (élévation) ou M (mesure) apportée par l'instance.
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -44,7 +44,7 @@ Retourne la représentation de la réplication continue en cluster (WKT, Open Ge
 ```  
   
 ## <a name="return-types"></a>Types de retour  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]type de retour : **nvarchar (max)**  
+ Type de retour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] : **nvarchar(max)**  
   
  Type de retour CLR : **SqlChars**  
   
@@ -57,7 +57,7 @@ SET @g = geometry::STGeomFromText('LINESTRING(0 0, 2 3)', 0);
 SELECT @g.STAsText();  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Méthodes OGC sur des instances geography](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   
   

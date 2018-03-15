@@ -1,5 +1,5 @@
 ---
-title: '@@TOTAL_WRITE (Transact-SQL) | Documents Microsoft'
+title: '@@TOTAL_WRITE (Transact-SQL) | Microsoft Docs'
 ms.custom: 
 ms.date: 09/18/2017
 ms.prod: sql-non-specified
@@ -35,10 +35,10 @@ ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="x40x40totalwrite-transact-sql"></a>& #x 40 ; & #x 40 ; TOTAL_WRITE (Transact-SQL)
+# <a name="x40x40totalwrite-transact-sql"></a>&#x40;&#x40;TOTAL_WRITE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Retourne le numéro du disque écrit par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] depuis [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dernier démarrage.  
+  Renvoie le nombre d’écritures sur le disque effectuées par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] depuis que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a été démarré pour la dernière fois.  
   
  ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -52,8 +52,8 @@ ms.lasthandoff: 11/21/2017
 ## <a name="return-types"></a>Types de retour  
  **entier**  
   
-## <a name="remarks"></a>Notes  
- Pour afficher un rapport contenant plusieurs [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] des statistiques, notamment de lire et d’opérations d’écriture, exécutent **sp_monitor**.  
+## <a name="remarks"></a>Notes   
+ Pour afficher un rapport contenant plusieurs statistiques [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], notamment les activités de lecture et d’écriture, exécutez **sp_monitor**.  
   
 ## <a name="examples"></a>Exemples  
  L'exemple suivant montre le renvoi du nombre total de lectures et d'écritures sur le disque à la date et à l'heure courantes.  
@@ -70,9 +70,9 @@ Reads       Writes      As of
 7760        97263       12/5/2006 10:23:00 PM   
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [sp_monitor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-monitor-transact-sql.md)   
- [Fonctions statistiques système &#40; Transact-SQL &#41;](../../t-sql/functions/system-statistical-functions-transact-sql.md)   
+ [Fonctions statistiques système &#40;Transact-SQL&#41;](../../t-sql/functions/system-statistical-functions-transact-sql.md)   
  [@@TOTAL_READ &#40;Transact-SQL&#41;](../../t-sql/functions/total-read-transact-sql.md)  
   
   

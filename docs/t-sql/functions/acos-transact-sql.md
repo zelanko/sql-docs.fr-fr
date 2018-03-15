@@ -1,5 +1,5 @@
 ---
-title: ACOS (Transact-SQL) | Documents Microsoft
+title: ACOS (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
@@ -36,7 +36,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="acos-transact-sql"></a>ACOS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-Fonction mathématique qui renvoie l’angle, en radians, dont le cosinus est spécifié **float** expression ; également appelé arc cosinus.
+Fonction mathématique qui renvoie l’angle en radians dont le cosinus est l’expression **float** spécifiée, également appelée arc cosinus.
   
 ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -47,8 +47,8 @@ ACOS ( float_expression )
 ```  
   
 ## <a name="arguments"></a>Arguments  
-*expression*  
-Est une expression de type **float** ou d’un type qui peut être implicitement converti en **float**, avec une valeur comprise entre -1 et 1. Les valeurs non comprises dans cette plage renvoient la valeur NULL et rapportent une erreur de domaine.
+*float_expression*  
+Expression de type **float** ou d’un type qui peut être implicitement converti en **float**, dont la valeur est comprise entre -1 et 1. Les valeurs non comprises dans cette plage renvoient la valeur NULL et rapportent une erreur de domaine.
   
 ## <a name="return-types"></a>Types de retour  
 **float**
@@ -72,7 +72,7 @@ The ACOS of the number is: 3.14159
 (1 row(s) affected)  
 ```  
   
-### <a name="includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]et[!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 
+### <a name="includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] et [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 
 
 L'exemple suivant renvoie l'ACOS du nombre spécifié.
   
@@ -92,7 +92,7 @@ The ACOS of the number is: 3.14159
 ```  
   
 ## <a name="see-also"></a>Voir aussi
-[Fonctions mathématiques &#40; Transact-SQL &#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)  
+[Fonctions mathématiques &#40;Transact-SQL&#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)  
 [Fonctions](../../t-sql/functions/functions.md)
   
   

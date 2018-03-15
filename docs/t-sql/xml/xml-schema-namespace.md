@@ -51,23 +51,23 @@ xml_schema_namespace( Relational_schema , XML_schema_collection_name , [ Namespa
   
 ## <a name="arguments"></a>Arguments  
  *Relational_schema*  
- Nom du schéma relationnel. *Relational_schema* est **sysname**.  
+ Nom du schéma relationnel. *Relational_schema* est de type **sysname**.  
   
  *XML_schema_collection_name*  
- Nom de la collection de schémas XML à reconstruire. *XML_schema_collection_name* est **sysname**.  
+ Nom de la collection de schémas XML à reconstruire. *XML_schema_collection_name* est de type **sysname**.  
   
  *Espace de noms*  
- Espace de noms URI du schéma XML que vous voulez reconstruire. Il est limité à 1 000 caractères. Si cet argument n'est pas fourni, l'ensemble de la collection de schémas XML est reconstruit. *Namespace* est **nvarchar (4000)**.  
+ Espace de noms URI du schéma XML que vous voulez reconstruire. Il est limité à 1 000 caractères. Si cet argument n'est pas fourni, l'ensemble de la collection de schémas XML est reconstruit. *Namespace* est de type **nvarchar(4000)**.  
   
 ## <a name="return-types"></a>Types de retour  
  **xml**  
   
-## <a name="remarks"></a>Notes  
- Lorsque vous importez des composants de schéma XML dans la base de données à l’aide de [CREATE XML SCHEMA COLLECTION](../../t-sql/statements/create-xml-schema-collection-transact-sql.md) ou [ALTER XML SCHEMA COLLECTION](../../t-sql/statements/alter-xml-schema-collection-transact-sql.md), les aspects du schéma utilisé pour la validation sont conservés. Par conséquent, le schéma reconstruit peut être lexicalement différent du document du schéma d'origine. En particulier, les commentaires, les espaces et les annotations sont perdus ; les informations de type implicite deviennent explicites. Par exemple, \<xs : element name = « e1 » / > devient \<xs : element name = « e1 » type = « xs : anyType » / >. Également, les préfixes des espaces de noms ne sont pas conservés.  
+## <a name="remarks"></a>Notes   
+ Lorsque vous importez des composants de schéma XML dans la base de données à l’aide de [CREATE XML SCHEMA COLLECTION](../../t-sql/statements/create-xml-schema-collection-transact-sql.md) ou [ALTER XML SCHEMA COLLECTION](../../t-sql/statements/alter-xml-schema-collection-transact-sql.md), les aspects du schéma utilisé pour la validation sont conservés. Par conséquent, le schéma reconstruit peut être lexicalement différent du document du schéma d'origine. En particulier, les commentaires, les espaces et les annotations sont perdus ; les informations de type implicite deviennent explicites. Par exemple, \<xs:element name="e1" /> devient \<xs:element name="e1" type="xs:anyType"/>. Également, les préfixes des espaces de noms ne sont pas conservés.  
   
  Si vous spécifiez un paramètre d'espace de noms, le document du schéma résultant contient les définitions de tous les composants de schéma dans cet espace de noms, même s'ils ont été ajoutés dans des documents de schémas différents ou dans des étapes DDL, ou dans les deux.  
   
- Vous ne pouvez pas utiliser cette fonction pour construire des documents de schéma XML à partir de la **sys.sys** collection de schémas XML.  
+ Vous ne pouvez pas utiliser cette fonction pour construire des documents de schémas XML à partir de la collection de schémas XML **sys.sys**.  
   
 ## <a name="examples"></a>Exemples  
  Le code exemple suivant extrait la collection de schémas XML `ProductDescriptionSchemaCollection` du schéma relationnel de production dans la base de données `AdventureWorks2012`.  
@@ -79,7 +79,7 @@ SELECT xml_schema_namespace(N'production',N'ProductDescriptionSchemaCollection')
 GO  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Afficher une collection de schémas XML stockée](../../relational-databases/xml/view-a-stored-xml-schema-collection.md)   
  [Collections de schémas XML &#40;SQL Server&#41;](../../relational-databases/xml/xml-schema-collections-sql-server.md)  
   

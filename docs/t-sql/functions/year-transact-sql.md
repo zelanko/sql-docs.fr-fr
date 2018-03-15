@@ -1,5 +1,5 @@
 ---
-title: "ANNÉE (Transact-SQL) | Documents Microsoft"
+title: YEAR (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -39,9 +39,9 @@ ms.lasthandoff: 11/21/2017
 # <a name="year-transact-sql"></a>YEAR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Retourne un entier qui représente l’année de l’objet *date*.  
+  Renvoie un entier qui représente l’année de la *date* spécifiée.  
   
- Pour une vue d’ensemble de tous les [!INCLUDE[tsql](../../includes/tsql-md.md)] les types de données date et heure et les fonctions, consultez [Date et fonctions et Types de données &#40; Transact-SQL &#41; ](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md).  
+ Pour obtenir une vue d’ensemble de tous les types de données et fonctions de date et d’heure [!INCLUDE[tsql](../../includes/tsql-md.md)], consultez [Types de données et fonctions de date et d’heure &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md).  
   
  ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -53,15 +53,15 @@ YEAR ( date )
   
 ## <a name="arguments"></a>Arguments  
  *date*  
- Est une expression qui peut être résolue en un **temps**, **date**, **smalldatetime**, **datetime**, **datetime2**, ou **datetimeoffset** valeur. Le *date* argument peut être une expression, l’expression de colonne, la variable définie par l’utilisateur ou le littéral de chaîne.  
+ Expression qui peut être résolue en une valeur **time**, **date**, **smalldatetime**, **datetime**, **datetime2** ou **datetimeoffset**. L’argument *date* peut être une expression, une expression de colonne, une variable définie par l’utilisateur ou un littéral de chaîne.  
   
 ## <a name="return-types"></a>Types de retour  
- **int**  
+ **Int**  
   
 ## <a name="return-value"></a>Valeur retournée  
- La fonction YEAR renvoie la même valeur que [DATEPART](../../t-sql/functions/datepart-transact-sql.md) (**année**, *date*).  
+ YEAR renvoie la même valeur que [DATEPART](../../t-sql/functions/datepart-transact-sql.md) (**year**, *date*).  
   
- Si *date* contient uniquement une partie heure, la valeur de retour est 1900, l’année de base.  
+ Si *date* contient uniquement une partie heure, la valeur renvoyée est 1900, l’année de base.  
   
 ## <a name="examples"></a>Exemples  
  L'instruction suivante retourne `2010`. Il s'agit du numéro de l'année.  
@@ -70,20 +70,20 @@ YEAR ( date )
 SELECT YEAR('2010-04-30T01:01:01.1234567-07:00');  
 ```  
   
- L'instruction suivante retourne `1900, 1, 1`. L’argument pour *date* est le nombre `0`. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] interprète `0` comme le 1er janvier 1900.  
+ L'instruction suivante retourne `1900, 1, 1`. L’argument pour *date* est le chiffre `0`. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] interprète `0` comme le 1er janvier 1900.  
   
 ```  
 SELECT YEAR(0), MONTH(0), DAY(0);  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemples : [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] et[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- L'instruction suivante retourne `1900, 1, 1`. L’argument pour *date* est le nombre `0`. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] interprète `0` comme le 1er janvier 1900.  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemples : [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] et [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+ L'instruction suivante retourne `1900, 1, 1`. L’argument pour *date* est le chiffre `0`. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] interprète `0` comme le 1er janvier 1900.  
   
 ```  
 SELECT TOP 1 YEAR(0), MONTH(0), DAY(0);  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [CAST et CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
   
   

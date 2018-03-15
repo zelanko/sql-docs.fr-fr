@@ -1,5 +1,5 @@
 ---
-title: SET NOEXEC (Transact-SQL) | Documents Microsoft
+title: SET NOEXEC (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -50,14 +50,14 @@ ms.lasthandoff: 11/21/2017
 SET NOEXEC { ON | OFF }  
 ```  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Si SET NOEXEC est défini sur ON, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] compile chaque lot d'instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] sans les exécuter. Si SET NOEXEC est défini sur OFF, tous les traitements sont exécutés après compilation.  
   
  L'exécution des instructions dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se déroule en deux temps : compilation et exécution. Ainsi, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut valider la syntaxe et les noms d'objets dans le code [!INCLUDE[tsql](../../includes/tsql-md.md)] au moment de l'exécution. Ceci permet par ailleurs de déboguer les instructions qui font généralement partie d'un traitement d'instructions beaucoup plus important.  
   
  L'option SET NOEXEC est définie lors de l'exécution, et non pas durant l'analyse.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l'appartenance au rôle public.  
   
 ## <a name="examples"></a>Exemples  
@@ -115,9 +115,9 @@ SET NOEXEC OFF;
 GO  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Instructions SET &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)   
- [SET SHOWPLAN_ALL &#40; Transact-SQL &#41;](../../t-sql/statements/set-showplan-all-transact-sql.md)   
- [SET SHOWPLAN_TEXT &#40; Transact-SQL &#41;](../../t-sql/statements/set-showplan-text-transact-sql.md)  
+ [SET SHOWPLAN_ALL &#40;Transact-SQL&#41;](../../t-sql/statements/set-showplan-all-transact-sql.md)   
+ [SET SHOWPLAN_TEXT &#40;Transact-SQL&#41;](../../t-sql/statements/set-showplan-text-transact-sql.md)  
   
   

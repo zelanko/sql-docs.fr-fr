@@ -1,5 +1,5 @@
 ---
-title: CHECKSUM_AGG (Transact-SQL) | Documents Microsoft
+title: CHECKSUM_AGG (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
@@ -36,7 +36,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="checksumagg-transact-sql"></a>CHECKSUM_AGG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Renvoie la somme de contrôle des valeurs d'un groupe. Les valeurs NULL sont ignorées. Peut être suivi par le [la clause OVER](../../t-sql/queries/select-over-clause-transact-sql.md).
+Renvoie la somme de contrôle des valeurs d'un groupe. Les valeurs NULL sont ignorées. Cette fonction peut être suivie par la [clause OVER](../../t-sql/queries/select-over-clause-transact-sql.md).
   
 ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -54,19 +54,19 @@ DISTINCT
 Spécifie que CHECKSUM_AGG renvoie la somme de contrôle de valeurs uniques.
   
 *expression*  
-Est un entier [expression](../../t-sql/language-elements/expressions-transact-sql.md). Les fonctions d'agrégation et les sous-requêtes ne sont pas autorisées.
+[Expression](../../t-sql/language-elements/expressions-transact-sql.md) entière. Les fonctions d'agrégation et les sous-requêtes ne sont pas autorisées.
   
 ## <a name="return-types"></a>Types de retour
-Retourne la somme de contrôle de toutes les *expression* valeurs sous la forme **int**.
+Renvoie la somme de contrôle de toutes les valeurs d’*expression* en tant que **int**.
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
 CHECKSUM_AGG peut être utilisé pour détecter les modifications effectuées dans une table.
   
 L'ordre des lignes dans la table n'influe pas sur le résultat de CHECKSUM_AGG. Les fonctions CHECKSUM_AGG peuvent être également utilisées avec le mot clé DISTINCT et la clause GROUP BY.
   
 Si l'une des valeurs de la liste d'expressions change, en général, la somme de contrôle de la liste change également. Il existe toutefois une faible probabilité pour que la somme de contrôle ne change pas.
   
-CHECKSUM_AGG a des fonctionnalités similaires à celles des autres fonctions d'agrégation. Pour plus d’informations, consultez [les fonctions d’agrégation &#40; Transact-SQL &#41; ](../../t-sql/functions/aggregate-functions-transact-sql.md).
+CHECKSUM_AGG a des fonctionnalités similaires à celles des autres fonctions d'agrégation. Pour plus d’informations, consultez les [fonctions d’agrégation &#40;Transact-SQL&#41;](../../t-sql/functions/aggregate-functions-transact-sql.md).
   
 ## <a name="examples"></a>Exemples  
 L'exemple suivant utilise `CHECKSUM_AGG` pour détecter des modifications dans la colonne `Quantity` de la table `ProductInventory` de la base de données [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].
@@ -103,7 +103,7 @@ FROM Production.ProductInventory;
 ```  
   
 ## <a name="see-also"></a>Voir aussi
-[Somme de contrôle &#40; Transact-SQL &#41;](../../t-sql/functions/checksum-transact-sql.md)  
-[SUR la clause for &#40; Transact-SQL &#41;](../../t-sql/queries/select-over-clause-transact-sql.md)
+[CHECKSUM &#40;Transact-SQL&#41;](../../t-sql/functions/checksum-transact-sql.md)  
+[OVER, clause &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)
   
   

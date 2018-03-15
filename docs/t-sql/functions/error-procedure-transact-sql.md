@@ -1,5 +1,5 @@
 ---
-title: ERROR_PROCEDURE (Transact-SQL) | Documents Microsoft
+title: ERROR_PROCEDURE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -51,7 +51,7 @@ ERROR_PROCEDURE ( )
 ```  
   
 ## <a name="return-types"></a>Types de retour  
- **nvarchar (128)**  
+ **nvarchar(128)**  
   
 ## <a name="return-value"></a>Valeur retournée  
  Lors de l'appel d'un bloc CATCH, retourne le nom de la procédure stockée où l'erreur s'est produite.  
@@ -60,10 +60,10 @@ ERROR_PROCEDURE ( )
   
  Retourne NULL si l'appel a lieu en dehors de l'étendue d'un bloc CATCH.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  ERROR_PROCEDURE peut être appelé n'importe où dans l'étendue d'un bloc CATCH.  
   
- ERROR_PROCEDURE retourne le nom de la procédure stockée ou du déclencheur où l'erreur s'est produite, indépendamment du nombre de fois qu'il ou qu'elle a été appelé ou de l'origine de l'appel dans l'étendue du bloc CATCH. Cela contraste avec les fonctions, telles que@ERROR, qui retournent le numéro d’erreur dans l’instruction qui suit celle qui a provoqué l’erreur ou dans la première instruction du bloc CATCH.  
+ ERROR_PROCEDURE retourne le nom de la procédure stockée ou du déclencheur où l'erreur s'est produite, indépendamment du nombre de fois qu'il ou qu'elle a été appelé ou de l'origine de l'appel dans l'étendue du bloc CATCH. Ce comportement contraste avec celui des fonctions, telles que @@ERROR, qui renvoient le code d’erreur dans l’instruction suivant immédiatement celle ayant provoqué l’erreur ou dans la première instruction du bloc CATCH.  
   
  Dans les blocs CATCH imbriqués, ERROR_PROCEDURE retourne le nom de la procédure stockée ou du déclencheur propre à l'étendue du bloc CATCH dans lequel la procédure ou le déclencheur est référencé. Par exemple, le bloc CATCH d'une construction TRY…CATCH peut inclure un bloc TRY…CATCH imbriqué. Dans le bloc CATCH imbriqué, ERROR_PROCEDURE retourne le nom de la procédure stockée ou du déclencheur erroné qui a appelé le bloc CATCH imbriqué. Si ERROR_PROCEDURE s'exécute dans le bloc CATCH externe, l'instruction retourne le nom de la procédure stockée erronée qui a appelé ce bloc CATCH.  
   
@@ -128,7 +128,7 @@ BEGIN CATCH
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemples : [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] et[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemples : [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] et [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="c-using-errorprocedure-in-a-catch-block"></a>C. Utilisation d'ERROR_PROCEDURE dans un bloc CATCH  
  L'exemple de code ci-dessous illustre une procédure stockée générant une erreur de division par zéro. `ERROR_PROCEDURE` retourne le nom de la procédure stockée dans laquelle l'erreur s'est produite.  
@@ -188,14 +188,14 @@ BEGIN CATCH
 GO  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [sys.messages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/messages-for-errors-catalog-views-sys-messages.md)   
  [TRY...CATCH &#40;Transact-SQL&#41;](../../t-sql/language-elements/try-catch-transact-sql.md)   
  [ERROR_LINE &#40;Transact-SQL&#41;](../../t-sql/functions/error-line-transact-sql.md)   
  [ERROR_MESSAGE &#40;Transact-SQL&#41;](../../t-sql/functions/error-message-transact-sql.md)   
  [ERROR_NUMBER &#40;Transact-SQL&#41;](../../t-sql/functions/error-number-transact-sql.md)   
  [ERROR_SEVERITY &#40;Transact-SQL&#41;](../../t-sql/functions/error-severity-transact-sql.md)   
- [ERROR_STATE &#40; Transact-SQL &#41;](../../t-sql/functions/error-state-transact-sql.md)   
+ [ERROR_STATE &#40;Transact-SQL&#41;](../../t-sql/functions/error-state-transact-sql.md)   
  [RAISERROR &#40;Transact-SQL&#41;](../../t-sql/language-elements/raiserror-transact-sql.md)   
  [@@ERROR &#40;Transact-SQL&#41;](../../t-sql/functions/error-transact-sql.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: "STNumCurves (Type de données geography) | Documents Microsoft"
+title: "STNumCurves (type de données geography) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stnumcurves-geography-data-type"></a>STNumCurves (type de données geography)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-  Retourne le nombre de courbes dans une dimension **geography** instance.  
+  Retourne le nombre de courbes d’une instance **geography** unidimensionnelle.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -44,16 +44,16 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>Types de retour  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]type de retour : **geography**  
+ Type de retour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] : **geography**  
   
  Type de retour CLR : **SqlGeography**  
   
-## <a name="remarks"></a>Notes  
- Types de données spatiales unidimensionnelles incluent **LineString**, **CircularString**, et **CompoundCurve**. Unidimensionnel vide **geography** instance retourne 0.  
+## <a name="remarks"></a>Notes   
+ Les types de données spatiales unidimensionnels incluent **LineString**, **CircularString** et **CompoundCurve**. Une instance **geography** unidimensionnelle vide retourne 0.  
   
- `STNumCurves`() fonctionne uniquement sur les types simples ; Il ne fonctionne pas avec **geography** comme des collections **MultiLineString**. **NULL** est retourné lorsque la **geography** instance n’est pas un type de données unidimensionnel.  
+ `STNumCurves`() fonctionne uniquement sur les types simples. Il ne fonctionne pas avec les collections **geography** telles que **MultiLineString**. **NULL** est retourné quand l’instance **geography** ne correspond pas à un type de données unidimensionnel.  
   
- **Null** est retourné pour non initialisé **geography** instances.  
+ **Null** est retourné pour les instances **geography** non initialisées.  
   
 ## <a name="examples"></a>Exemples  
   
@@ -75,7 +75,7 @@ ms.lasthandoff: 01/25/2018
  SELECT @g.STNumCurves();
  ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Présentation des types de données spatiales](../../relational-databases/spatial/spatial-data-types-overview.md)   
  [Méthodes OGC sur des instances geography](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
   

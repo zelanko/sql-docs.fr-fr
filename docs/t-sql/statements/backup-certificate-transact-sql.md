@@ -1,5 +1,5 @@
 ---
-title: CERTIFICAT de sauvegarde (Transact-SQL) | Documents Microsoft
+title: BACKUP CERTIFICATE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -75,26 +75,26 @@ BACKUP CERTIFICATE certname TO FILE ='path_to_file'
 ```  
   
 ## <a name="arguments"></a>Arguments  
- *chemin_fichier*  
- Spécifie le chemin d'accès complet, y compris le nom de fichier, du fichier dans lequel le certificat doit être enregistré. Il peut s’agir d’un chemin d’accès local ou un chemin d’accès UNC vers un emplacement réseau. La valeur par défaut est le chemin d'accès au dossier DATA de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ *path_to_file*  
+ Spécifie le chemin d'accès complet, y compris le nom de fichier, du fichier dans lequel le certificat doit être enregistré. Cela peut être un chemin local ou un chemin UNC d’un emplacement réseau. La valeur par défaut est le chemin d'accès au dossier DATA de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  *path_to_private_key_file*  
- Spécifie le chemin d'accès complet, y compris le nom de fichier, du fichier dans lequel la clé privée doit être enregistrée. Il peut s’agir d’un chemin d’accès local ou un chemin d’accès UNC vers un emplacement réseau. La valeur par défaut est le chemin d'accès au dossier DATA de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Spécifie le chemin d'accès complet, y compris le nom de fichier, du fichier dans lequel la clé privée doit être enregistrée. Cela peut être un chemin local ou un chemin UNC d’un emplacement réseau. La valeur par défaut est le chemin d'accès au dossier DATA de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  *encryption_password*  
- Mot de passe utilisé pour chiffrer la clé privée avant de l'enregistrer dans le fichier de sauvegarde. Le mot de passe est sujet à des vérifications de complexité.  
+ Mot de passe utilisé pour chiffrer la clé privée avant de l'enregistrer dans le fichier de sauvegarde. Le mot de passe est sujet à des vérifications de la complexité.  
   
  *decryption_password*  
  Mot de passe utilisé pour déchiffrer la clé privée avant de sauvegarder la clé.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Si la clé privée est chiffrée au moyen d'un mot de passe dans la base de données, le mot de passe de déchiffrement doit être spécifié.  
   
  Lorsque vous sauvegardez la clé privée dans un fichier, un chiffrement est nécessaire. Le mot de passe utilisé pour protéger le certificat sauvegardé est différent de celui utilisé pour chiffrer la clé privée du certificat.  
   
- Pour restaurer une sauvegarde de certificat, utilisez le [CREATE CERTIFICATE](../../t-sql/statements/create-certificate-transact-sql.md)instruction.  
+ Pour restaurer un certificat sauvegardé, utilisez l’instruction [CREATE CERTIFICATE](../../t-sql/statements/create-certificate-transact-sql.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Requiert l'autorisation CONTROL sur le certificat et la connaissance du mot de passe utilisé pour chiffrer la clé privée. Si seule la partie publique du certificat est sauvegardée, l'opération requiert une autorisation sur le certificat et l'autorisation VIEW sur le certificat ne doit pas avoir été refusée à l'appelant.  
   
 ## <a name="examples"></a>Exemples  
@@ -128,10 +128,10 @@ BACKUP CERTIFICATE sales09 TO FILE = 'c:\storedcerts\sales09cert'
 GO  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [CREATE CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/create-certificate-transact-sql.md)   
- [ALTER CERTIFICATE &#40; Transact-SQL &#41;](../../t-sql/statements/alter-certificate-transact-sql.md)   
- [DROP CERTIFICATE &#40; Transact-SQL &#41;](../../t-sql/statements/drop-certificate-transact-sql.md)  
+ [ALTER CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-certificate-transact-sql.md)   
+ [DROP CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-certificate-transact-sql.md)  
   
   
 

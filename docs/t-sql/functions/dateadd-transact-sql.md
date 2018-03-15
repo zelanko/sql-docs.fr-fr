@@ -1,5 +1,5 @@
 ---
-title: DATEADD (Transact-SQL) | Documents Microsoft
+title: DATEADD (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/29/2017
 ms.prod: sql-non-specified
@@ -42,9 +42,9 @@ ms.lasthandoff: 01/18/2018
 # <a name="dateadd-transact-sql"></a>DATEADD (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-Retourne un *date* avec l’objet *nombre* intervalle (entier signé) ajouté à un *datepart* de qui *date*.
+Renvoie une *date* spécifiée avec l’intervalle *number* spécifié (entier signé) ajouté à une partie *datepart* spécifiée de cette *date*.
   
-Pour une vue d’ensemble de tous les [!INCLUDE[tsql](../../includes/tsql-md.md)] les types de données date et heure et les fonctions, consultez [Date et fonctions et Types de données &#40; Transact-SQL &#41; ](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md).
+Pour obtenir une vue d’ensemble de tous les types de données et fonctions de date et d’heure [!INCLUDE[tsql](../../includes/tsql-md.md)], consultez [Types de données et fonctions de date et d’heure &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md).
   
 ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -56,13 +56,13 @@ DATEADD (datepart , number , date )
   
 ## <a name="arguments"></a>Arguments  
 *datepart*  
-Est la partie de *date* auquel un **entier *** nombre* est ajouté. Le tableau suivant répertorie toutes valides *datepart* arguments. Les équivalents de variables définis par l'utilisateur ne sont pas valides.
+Partie de *date* à laquelle un **nombre***entier* est ajouté. Le tableau suivant répertorie tous les arguments *datepart* valides. Les équivalents de variables définis par l'utilisateur ne sont pas valides.
   
 |*datepart*|Abréviations|  
 |---|---|
 |**year**|**yy**, **yyyy**|  
 |**quarter**|**qq**, **q**|  
-|**mois**|**mm**, **m**|  
+|**month**|**mm**, **m**|  
 |**dayofyear**|**dy**, **y**|  
 |**day**|**dd**, **d**|  
 |**week**|**wk**, **ww**|  
@@ -74,25 +74,25 @@ Est la partie de *date* auquel un **entier *** nombre* est ajouté. Le tableau s
 |**microsecond**|**mcs**|  
 |**nanosecond**|**ns**|  
   
-*number*  
-Est une expression qui peut être résolue en un [int](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md) qui est ajouté à un *datepart* de *date*. Les variables définies par l'utilisateur sont valides.  
+*nombre*  
+Expression qui peut être résolue en une valeur [int](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md) qui est ajoutée à une valeur *datepart* de *date*. Les variables définies par l'utilisateur sont valides.  
 Si vous spécifiez une valeur avec une fraction décimale, la fraction est tronquée et n'est pas arrondie.
   
 *date*  
-Est une expression qui peut être résolue en un **temps**, **date**, **smalldatetime**, **datetime**, **datetime2**, ou **datetimeoffset** valeur. *date* peut être une expression, une expression de colonne, une variable définie par l’utilisateur ou une chaîne littérale. Si l’expression est un littéral de chaîne, il doit correspondre à un **datetime**. Pour éviter toute ambiguïté, représentez les années à l'aide de quatre chiffres. Pour plus d’informations sur les années à deux chiffres, consultez [configurer l’année à deux chiffres cutoff Server Configuration Option](../../database-engine/configure-windows/configure-the-two-digit-year-cutoff-server-configuration-option.md).
+Expression qui peut être résolue en valeur **time**, **date**, **smalldatetime**, **datetime**, **datetime2** ou **datetimeoffset**. *date* peut être une expression, une expression de colonne, une variable définie par l’utilisateur ou un littéral de chaîne. Si l’expression est un littéral de chaîne, elle doit être résolue en **datetime**. Pour éviter toute ambiguïté, représentez les années à l'aide de quatre chiffres. Pour obtenir des informations sur les années à deux chiffres, consultez [Configurer l’option de configuration de serveur d’année de coupure à deux chiffres](../../database-engine/configure-windows/configure-the-two-digit-year-cutoff-server-configuration-option.md).
   
 ## <a name="return-types"></a>Types de retour
-Le type de données de retour est le type de données de la *date* argument, à l’exception des littéraux de chaîne.
-Les données de retournées de type pour un littéral de chaîne est **datetime**. Une erreur sera déclenchée si l'échelle des secondes du littéral de chaîne comprend plus de trois positions (.nnn) ou contient la partie du décalage de fuseau horaire.
+Le type des données renvoyées est le type de données de l’argument *date*, à l’exception des littéraux de chaîne.
+Le type des données renvoyées pour un littéral de chaîne est **datetime**. Une erreur sera déclenchée si l'échelle des secondes du littéral de chaîne comprend plus de trois positions (.nnn) ou contient la partie du décalage de fuseau horaire.
   
 ## <a name="return-value"></a>Valeur retournée  
   
 ## <a name="datepart-argument"></a>Argument datepart  
-**DAYOFYEAR**, **jour**, et **semaine** retournent la même valeur.
+**dayofyear**, **day** et **weekday** renvoient la même valeur.
   
-Chaque *datepart* et ses abréviations retournent la même valeur.
+Chaque *datepart* et ses abréviations renvoient la même valeur.
   
-Si *datepart* est **mois** et *date* mois a plus de jours que le mois et le *date* jour n’existe pas dans le mois retourné, le dernier jour du mois est retourné. Par exemple, septembre compte 30 jours ; par conséquent, les deux instructions suivantes retournent 2006-09-30 00:00:00.000:
+Si *datepart* est **month** et que le mois de *date* comprend plus de jours que le mois renvoyé et que le jour de *date* n’existe pas dans le mois renvoyé, le dernier jour du mois renvoyé est renvoyé. Par exemple, septembre compte 30 jours ; par conséquent, les deux instructions suivantes retournent 2006-09-30 00:00:00.000:
   
 ```sql
 SELECT DATEADD(month, 1, '20060830');
@@ -100,7 +100,7 @@ SELECT DATEADD(month, 1, '20060831');
 ```
   
 ## <a name="number-argument"></a>Argument number  
-Le *nombre* argument ne peut pas dépasser la plage de **int**. Dans les instructions suivantes, l’argument de *nombre* dépasse la plage de **int** par 1. Le message d'erreur suivant est retourné :`Msg 8115, Level 16, State 2, Line 1. Arithmetic overflow error converting expression to data type int."`
+L’argument *number* ne peut pas dépasser la plage des **int**. Dans les instructions suivantes, l’argument pour *number* dépasse la plage des **int** de 1. Le message d'erreur suivant est retourné :`Msg 8115, Level 16, State 2, Line 1. Arithmetic overflow error converting expression to data type int."`
   
 ```sql
 SELECT DATEADD(year,2147483648, '20060731');  
@@ -108,7 +108,7 @@ SELECT DATEADD(year,-2147483649, '20060731');
 ```  
   
 ## <a name="date-argument"></a>Argument date  
-Le *date* argument ne peut pas être incrémenté à une valeur en dehors de la plage de son type de données. Dans les instructions suivantes, le *nombre* valeur qui est ajoutée à la *date* valeur dépasse la plage de la *date* type de données. Le message d'erreur suivant est retourné :`Msg 517, Level 16, State 1, Line 1 Adding a value to a 'datetime' column caused overflow`.
+L’argument *date* ne peut pas être incrémenté à une valeur située hors de la plage de son type de données. Dans les instructions suivantes, la valeur *number* qui est ajoutée à la valeur *date* dépasse la plage du type de données *date*. Le message d'erreur suivant est retourné :`Msg 517, Level 16, State 1, Line 1 Adding a value to a 'datetime' column caused overflow`.
   
 ```sql
 SELECT DATEADD(year,2147483647, '20060731');  
@@ -116,21 +116,21 @@ SELECT DATEADD(year,-2147483647, '20060731');
 ```  
   
 ## <a name="return-values-for-a-smalldatetime-date-and-a-second-or-fractional-seconds-datepart"></a>Valeurs retournées pour une date smalldatetime et une partie de date seconde ou fractions de seconde  
-La partie secondes d’une [smalldatetime](../../t-sql/data-types/smalldatetime-transact-sql.md) valeur est toujours 00. Si *date* est **smalldatetime**, les remarques suivantes s’appliquent :
--   Si *datepart* est **deuxième** et *nombre* est comprise entre-30 et +29, aucun ajout n’est effectuée.  
--   Si *datepart* est **deuxième** et *nombre* est inférieure à 30 ou plus de +29, ajout est effectué en commençant à une minute.  
--   Si *datepart* est **milliseconde** et *nombre* est comprise entre-30001 et + 29998, aucun ajout n’est effectuée.  
--   Si *datepart* est **milliseconde** et *nombre* est inférieur à -30001 ou supérieur à + 29998, ajout est effectué en commençant à une minute.  
+La partie des secondes d’une valeur [smalldatetime](../../t-sql/data-types/smalldatetime-transact-sql.md) est toujours 00. Si *date* est de type **smalldatetime**, les remarques suivantes s’appliquent :
+-   Si *datepart* est **second** et que *number* est compris entre-30 et +29, aucun ajout n’est effectué.  
+-   Si *datepart* est **second** et que *number* est inférieur à -30 ou supérieur à +29, l’ajout est effectué en commençant à une minute.  
+-   Si *datepart* est **millisecond** et que *number* est compris entre-30001 et +29998, aucun ajout n’est effectué.  
+-   Si *datepart* est **millisecond** et que *number* est inférieur à -30001 ou supérieur à +29998, l’ajout est effectué en commençant à une minute.  
   
-## <a name="remarks"></a>Notes  
-DATEADD peut être utilisé dans l’instruction SELECT \<liste >, où, HAVING, les clauses GROUP BY et ORDER BY.
+## <a name="remarks"></a>Notes   
+DATEADD peut être utilisé dans les clauses SELECT \<list>, WHERE, HAVING, GROUP BY et ORDER BY.
   
 ## <a name="fractional-seconds-precision"></a>Précision en fractions de seconde
-Ajout d’un *datepart* de **microsecondes** ou **nanosecondes** pour *date* des types de données **smalldatetime**, **date**, et **datetime** n’est pas autorisée.
+L’ajout n’est pas autorisé pour une valeur *datepart* égale à **microsecond** ou **nanosecond** pour une valeur *date* de type de données **smalldatetime**, **date** ou **datetime**.
   
-Les millisecondes ont une échelle de 3 (0,123). Les microsecondes ont une échelle de 6 (0,123456). Les nanosecondes ont une échelle de 9 (0,123456789). Le **temps**, **datetime2**, et **datetimeoffset** des types de données ont une échelle maximale de 7 (. 1234567). Si *datepart* est **nanosecondes**, *nombre* doit être 100 avant que les fractions de *date* augmenter. A *nombre* compris entre 1 et 49 est arrondi à 0 et de nombre compris entre 50 et 99 est arrondi à 100.
+Les millisecondes ont une échelle de 3 (0,123). Les microsecondes ont une échelle de 6 (0,123456). Les nanosecondes ont une échelle de 9 (0,123456789). Les types de données **time**, **datetime2** et **datetimeoffset** ont une échelle maximale de 7 (.1234567). Si *datepart* est **nanosecond**, *number* doit être 100 avant que les fractions de seconde de *date* augmentent. Une valeur *number* comprise entre 1 et 49 est arrondie à 0 et une valeur comprise entre 50 et 99 est arrondie à 100.
   
-Les instructions suivantes ajoutent un *datepart* de **milliseconde**, **microsecondes**, ou **nanosecondes**.
+Les instructions suivantes ajoutent une valeur *datepart* égale à **millisecond**, **microsecond** ou **nanosecond**.
   
 ```sql
 DECLARE @datetime2 datetime2 = '2007-01-01 13:10:10.1111111';  
@@ -167,7 +167,7 @@ L'ajout n'est pas autorisé pour le décalage de fuseau horaire.
 ## <a name="examples"></a>Exemples  
 
 ### <a name="a-incrementing-datepart-by-an-interval-of-1"></a>A. Incrémentation d'une partie de date d'un intervalle de 1  
-Chacune des instructions suivantes incrémente *datepart* par un intervalle de 1.
+Chacune des instructions suivantes incrémente *datepart* d’un intervalle de 1.
   
 ```sql
 DECLARE @datetime2 datetime2 = '2007-01-01 13:10:10.1111111';  
@@ -217,7 +217,7 @@ nanosecond   2007-01-01 13:10:10.1111111
 ```  
   
 ### <a name="b-incrementing-more-than-one-level-of-datepart-in-one-statement"></a>B. Incrémentation de plusieurs niveaux d'une partie de date dans une instruction  
-Chacune des instructions suivantes incrémente *datepart* par un *nombre* suffisamment grand pour incrémenter également la prochaine supérieur *datepart* de *date*.
+Chacune des instructions suivantes incrémente *datepart* d’une valeur *number* assez grande pour incrémenter également la valeur *datepart* immédiatement supérieure de *date*.
   
 ```sql
 DECLARE @datetime2 datetime2;  
@@ -237,7 +237,7 @@ SELECT DATEADD(millisecond,1,@datetime2); --2007-01-01 01:01:01.110
 ```  
   
 ### <a name="c-using-expressions-as-arguments-for-the-number-and-date-parameters"></a>C. Utilisation d'expressions comme arguments pour les paramètres de date et numériques  
-Les exemples suivants utilisent différents types d’expressions comme arguments pour le *nombre* et *date* paramètres. Les exemples utilisent la base de données AdventureWorks.
+Les exemples suivants utilisent différents types d’expressions comme arguments pour les paramètres *number* et *date*. Ces exemples utilisent la base de données AdventureWorks.
   
 #### <a name="specifying-a-column-as-date"></a>Spécification d'une colonne comme date  
 L'exemple suivant ajoute `2` jours à chaque valeur figurant dans la colonne `OrderDate` pour dériver une nouvelle colonne nommée `PromisedShipDate`.
@@ -273,7 +273,7 @@ SalesOrderID OrderDate               PromisedShipDate
 ```  
   
 #### <a name="specifying-user-defined-variables-as-number-and-date"></a>Spécification de variables définies par l'utilisateur comme nombre et date  
-L’exemple suivant spécifie les variables définies par l’utilisateur en tant qu’arguments pour *nombre* et *date*.
+L’exemple suivant spécifie des variables définies par l’utilisateur comme arguments pour *number* et *date*.
   
 ```sql
 DECLARE @days int = 365,   
@@ -307,7 +307,7 @@ SELECT DATEADD(month, 1, SYSDATETIME());
 ```  
   
 #### <a name="specifying-scalar-subqueries-and-scalar-functions-as-number-and-date"></a>Spécification de sous-requêtes scalaires et de fonctions scalaires comme nombre et date  
-L’exemple suivant utilise des sous-requêtes scalaires, `MAX(ModifiedDate)`, comme arguments pour *nombre* et *date*. `(SELECT TOP 1 BusinessEntityID FROM Person.Person)`est un argument artificiel pour le paramètre numérique montrer comment sélectionner un *nombre* argument à partir d’une liste de valeurs.
+L’exemple suivant utilise des sous-requêtes scalaires, `MAX(ModifiedDate)`, comme arguments pour *number* et *date*. `(SELECT TOP 1 BusinessEntityID FROM Person.Person)` est un argument artificiel pour le paramètre number, utilisé pour illustrer la sélection d’un argument *number* dans une liste de valeurs.
   
 ```sql
 SELECT DATEADD(month,(SELECT TOP 1 BusinessEntityID FROM Person.Person),  
@@ -315,14 +315,14 @@ SELECT DATEADD(month,(SELECT TOP 1 BusinessEntityID FROM Person.Person),
 ```  
   
 #### <a name="specifying-numeric-expressions-and-scalar-system-functions-as-number-and-date"></a>Spécification d'expressions numériques et de fonctions système scalaires comme nombre et date  
-L’exemple suivant utilise une expression numérique (-`(10/2))`, [opérateurs unaires](../../mdx/unary-operators.md) (`-`), un [opérateur arithmétique](../../mdx/arithmetic-operators.md) (`/`) et des fonctions système scalaires (`SYSDATETIME`) en tant qu’arguments pour *nombre* et *date*.
+L’exemple suivant utilise une expression numérique (-`(10/2))`, des [opérateurs unaires](../../mdx/unary-operators.md) (`-`), un [opérateur arithmétique](../../mdx/arithmetic-operators.md) (`/`) et des fonctions système scalaires (`SYSDATETIME`) comme arguments pour *number* et *date*.
   
 ```sql
 SELECT DATEADD(month,-(10/2), SYSDATETIME());  
 ```  
   
 #### <a name="specifying-ranking-functions-as-number"></a>Spécification de fonctions de classement comme nombre  
-L’exemple suivant utilise une fonction de classement comme arguments pour *nombre*.
+L’exemple suivant utilise une fonction de classement comme arguments pour *number*.
   
 ```sql
 SELECT p.FirstName, p.LastName  
@@ -338,7 +338,7 @@ WHERE TerritoryID IS NOT NULL
 ```  
   
 #### <a name="specifying-an-aggregate-window-function-as-number"></a>Spécification d'une fonction d'agrégation comme nombre  
-L’exemple suivant utilise une fonction d’agrégation en tant qu’argument pour *nombre*.
+L’exemple suivant utilise une fonction d’agrégation comme argument pour *number*.
   
 ```sql
 SELECT SalesOrderID, ProductID, OrderQty  

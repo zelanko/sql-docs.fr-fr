@@ -1,5 +1,5 @@
 ---
-title: IDENTITY (fonction) (Transact-SQL) | Documents Microsoft
+title: IDENTITY (fonction) (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -38,7 +38,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="identity-function-transact-sql"></a>IDENTITY (Fonction) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Est utilisé uniquement dans une instruction SELECT avec une INTO *table* clause pour insérer une colonne d’identité dans une nouvelle table. Bien qu'elles soient similaires, la fonction IDENTITY n'est pas identique à la propriété IDENTITY qui est utilisée avec CREATE TABLE et ALTER TABLE.  
+  S’utilise uniquement dans une instruction SELECT avec une clause INTO *table* pour insérer une colonne d’identité dans une nouvelle table. Bien qu'elles soient similaires, la fonction IDENTITY n'est pas identique à la propriété IDENTITY qui est utilisée avec CREATE TABLE et ALTER TABLE.  
   
 > [!NOTE]  
 >  Pour créer un numéro à incrémentation automatique qui peut être utilisé dans plusieurs tables ou être appelé par des applications sans faire référence à une table, consultez [Numéros de séquence](../../relational-databases/sequence-numbers/sequence-numbers.md).  
@@ -54,21 +54,21 @@ IDENTITY (data_type [ , seed , increment ] ) AS column_name
   
 ## <a name="arguments"></a>Arguments  
  *data_type*  
- Type de données de la colonne d'identité. Types de données valides pour une colonne d’identité sont des types de données de la catégorie de type de données entier, à l’exception de la **bits** type de données, ou **décimal** type de données.  
+ Type de données de la colonne d'identité. Tous les types de données de la catégorie de type entier sont valides pour une colonne d’identité, à l’exception des types de données **bit** et **decimal**.  
   
- *valeur initiale*  
- Entier à affecter à la première ligne de la table. Chaque ligne suivante est affectée à la valeur d’identité suivante, qui est égale à la dernière valeur IDENTITY plus la *incrément* valeur. Si ni *seed* ni *incrément* est spécifié, par défaut la valeur 1.  
+ *seed*  
+ Entier à affecter à la première ligne de la table. La valeur d’identité suivante est affectée à chaque ligne suivante. Cette valeur est égale à la dernière valeur IDENTITY augmentée de la valeur *increment*. Si vous ne spécifiez ni *seed* ni *increment*, les deux arguments reçoivent par défaut la valeur 1.  
   
- *incrément*  
- Valeur entière à ajouter à la *seed* valeur pour les lignes de la table.  
+ *increment*  
+ Entier à ajouter à la valeur *seed* pour les lignes successives de la table.  
   
- *nom_colonne*  
+ *column_name*  
  Nom de la colonne qui doit être insérée dans la nouvelle table.  
   
 ## <a name="return-types"></a>Types de retour  
- Retourne le même que *data_type*.  
+ Retourne le même type que *data_type*.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Étant donné que cette fonction crée une colonne dans une table, vous devez spécifier pour la colonne un nom figurant dans la liste de sélection de l'une des manières suivantes :  
   
 ```  
@@ -108,12 +108,12 @@ GO
   
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
  [@@IDENTITY &#40;Transact-SQL&#41;](../../t-sql/functions/identity-transact-sql.md)   
  [IDENTITY, propriété &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql-identity-property.md)   
- [Sélectionnez @local_variable &#40; Transact-SQL &#41;](../../t-sql/language-elements/select-local-variable-transact-sql.md)   
+ [SELECT @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/select-local-variable-transact-sql.md)   
  [DBCC CHECKIDENT &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-checkident-transact-sql.md)   
- [Sys.identity_columns &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-identity-columns-transact-sql.md)  
+ [sys.identity_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-identity-columns-transact-sql.md)  
   
   

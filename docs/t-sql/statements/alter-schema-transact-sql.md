@@ -1,5 +1,5 @@
 ---
-title: ALTER SCHEMA (Transact-SQL) | Documents Microsoft
+title: ALTER SCHEMA (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 01/09/2018
 ms.prod: sql-non-specified
@@ -67,28 +67,28 @@ ALTER SCHEMA schema_name
   
 ## <a name="arguments"></a>Arguments  
  *schema_name*  
- Est le nom d’un schéma de base de données active, où l’élément sécurisable doit être transféré. Ne peut pas être SYS ou INFORMATION_SCHEMA.  
+ Nom d’un schéma de la base de données active où l’élément sécurisable doit être déplacé. Ne peut pas être SYS ou INFORMATION_SCHEMA.  
   
  \<entity_type>  
  Classe de l'entité pour laquelle il y a un changement de propriétaire. Object est la valeur par défaut.  
   
  *securable_name*  
- Est le nom d’une ou deux parties d’une portée de schéma sécurisable dans le schéma.  
+ Nom en une ou deux parties d’un élément sécurisable délimité aux schémas à transférer dans le schéma.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Les utilisateurs et les schémas sont complètement distincts.  
   
  L'instruction ALTER SCHEMA ne peut être utilisée que pour transférer des éléments sécurisables entre des schémas de la même base de données. Pour modifier ou supprimer un élément sécurisable au sein du même schéma, utilisez l'instruction ALTER ou DROP propre à cet élément sécurisable.  
   
- Si un nom en une partie est utilisé pour *securable_name*, les règles de résolution de noms actuellement en vigueur seront utilisés pour localiser l’élément sécurisable.  
+ Si un nom en une seule partie est utilisé pour *securable_name*, les règles de résolution de noms en vigueur s’appliquent pour identifier l’emplacement de l’élément sécurisable.  
   
  Toutes les autorisations associées à cet élément sécurisable sont supprimées après le transfert de l'élément sécurisable vers le nouveau schéma. Si le propriétaire de l'élément sécurisable a été défini explicitement, il reste inchangé. Si la valeur SCHEMA OWNER a été attribuée au propriétaire de l'élément sécurisable, celui-ci reste SCHEMA OWNER ; une fois le transfert effectué, la valeur de SCHEMA OWNER est le propriétaire du nouveau schéma. L'identification principal_id du nouveau propriétaire sera NULL.  
   
- Déplacement d’une procédure stockée, fonction, vue ou au déclencheur ne modifie pas le nom de schéma, si présent, correspondantes de l’objet dans la colonne de définition de la [sys.sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md) affichage catalogue ou obtenus à l’aide du [ OBJECT_DEFINITION](../../t-sql/functions/object-definition-transact-sql.md) fonction intégrée. Par conséquent, nous vous recommandons de ne pas être utilisé ALTER SCHEMA pour déplacer ces types d’objets. Au lieu de cela, supprimer et recréer l’objet dans son nouveau schéma.  
+ Le fait de déplacer une procédure stockée, une fonction, une vue ou un déclencheur ne change pas le nom de schéma, le cas échéant, de l’objet correspondant présent dans la colonne de définition de la vue de catalogue[sys.sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md) ou obtenu à l’aide de la fonction intégrée [OBJECT_DEFINITION](../../t-sql/functions/object-definition-transact-sql.md). Par conséquent, il est déconseillé d’utiliser ALTER SCHEMA pour renommer ces types d’objets. À la place, supprimez puis recréez l’objet dans son nouveau schéma.  
   
- Déplacement d’un objet tel qu’une table ou d’un synonyme ne met pas automatiquement à jour les références à cet objet. Vous devez modifier les objets qui font référence à l’objet transféré manuellement. Par exemple, si vous déplacez une table et que la table est référencée dans un déclencheur, vous devez modifier le déclencheur pour refléter le nouveau nom de schéma. Utilisez [sys.sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md) pour répertorier les dépendances sur l’objet avant de le déplacer.  
+ Le fait de déplacer un objet tel qu’une table ou un synonyme ne met pas automatiquement à jour les références à cet objet. Vous devez modifier manuellement tout objet qui référence l’objet transféré. Par exemple, si vous déplacez une table et que cette table est référencée dans un déclencheur, vous devez modifier le déclencheur pour refléter le nom du nouveau schéma. Utilisez [sys.sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md) pour répertorier les dépendances de l’objet avant de le déplacer.  
 
- Pour modifier le schéma d’une table à l’aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], dans l’Explorateur d’objets, cliquez sur la table, puis sur **conception**. Appuyez sur **F4** pour ouvrir la fenêtre Propriétés. Dans le **schéma** , sélectionnez un nouveau schéma.  
+ Pour changer le schéma d’une table à l’aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], dans l’Explorateur d’objets, cliquez avec le bouton droit sur la table, puis sélectionnez **Conception**. Appuyez sur **F4** pour ouvrir la fenêtre Propriétés. Dans la zone **Schéma**, sélectionnez un nouveau schéma.  
   
 > [!CAUTION]  
 >  [!INCLUDE[ssCautionUserSchema](../../includes/sscautionuserschema-md.md)]  
@@ -96,7 +96,7 @@ ALTER SCHEMA schema_name
 ## <a name="permissions"></a>Autorisations  
  Pour transférer un élément sécurisable provenant d'un autre schéma, l'utilisateur actuel doit bénéficier de l'autorisation CONTROL sur l'élément sécurisable (et non sur le schéma) et de l'autorisation ALTER sur le schéma cible.  
   
- Si l’élément sécurisable a une spécification EXECUTE AS OWNER sur celui-ci et le propriétaire est défini sur le propriétaire du schéma, l’utilisateur doit disposer également de l’autorisation IMPERSONATE sur le propriétaire du schéma cible.  
+ Si l’élément sécurisable est soumis à une spécification EXECUTE AS OWNER et que le propriétaire est défini sur SCHEMA OWNER, l’utilisateur doit également bénéficier de l’autorisation IMPERSONATE sur le propriétaire du schéma cible.  
   
  Toutes les autorisations associées à l'élément sécurisable soumis à un transfert sont supprimées lors du déplacement de cet élément.  
   
@@ -141,10 +141,10 @@ SELECT sys.types.name, sys.types.schema_id, sys.schemas.name
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemples : [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] et[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemples : [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] et [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="c-transferring-ownership-of-a-table"></a>C. Transfert de la propriété d'une table  
- L’exemple suivant crée une table `Region` dans les `dbo` crée de schéma, un `Sales` schéma, puis déplace le `Region` de table à partir de la `dbo` schéma à la `Sales` schéma.  
+ L’exemple suivant crée une table `Region` dans le schéma `dbo`, crée un schéma `Sales`, puis déplace la table `Region` du schéma `dbo` vers le schéma `Sales`.  
   
 ```  
 CREATE TABLE dbo.Region   
@@ -160,7 +160,7 @@ ALTER SCHEMA Sales TRANSFER OBJECT::dbo.Region;
 GO  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [CREATE SCHEMA &#40;Transact-SQL&#41;](../../t-sql/statements/create-schema-transact-sql.md)   
  [DROP SCHEMA &#40;Transact-SQL&#41;](../../t-sql/statements/drop-schema-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  

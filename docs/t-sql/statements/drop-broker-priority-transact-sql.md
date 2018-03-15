@@ -1,5 +1,5 @@
 ---
-title: "SUPPRIMER la priorité de service BROKER (Transact-SQL) | Documents Microsoft"
+title: DROP BROKER PRIORITY (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
@@ -50,7 +50,7 @@ DROP BROKER PRIORITY ConversationPriorityName
  *ConversationPriorityName*  
  Spécifie le nom de la priorité de conversation à supprimer.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Lorsque vous supprimez une priorité de conversation, toutes les conversations existantes continuent de fonctionner avec les niveaux de priorité qui leur ont été attribués par la priorité de conversation.  
   
 ## <a name="permissions"></a>Autorisations  
@@ -64,9 +64,9 @@ DROP BROKER PRIORITY InitiatorAToTargetPriority;
   
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- [ALTER BROKER PRIORITY &#40; Transact-SQL &#41;](../../t-sql/statements/alter-broker-priority-transact-sql.md)   
- [CRÉER une priorité de service BROKER &#40; Transact-SQL &#41;](../../t-sql/statements/create-broker-priority-transact-sql.md)   
+## <a name="see-also"></a> Voir aussi  
+ [ALTER BROKER PRIORITY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-broker-priority-transact-sql.md)   
+ [CREATE BROKER PRIORITY &#40;Transact-SQL&#41;](../../t-sql/statements/create-broker-priority-transact-sql.md)   
  [sys.conversation_priorities &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-conversation-priorities-transact-sql.md)  
   
   

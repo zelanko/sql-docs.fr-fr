@@ -1,5 +1,5 @@
 ---
-title: TIMEFROMPARTS (Transact-SQL) | Documents Microsoft
+title: TIMEFROMPARTS (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/02/2018
 # <a name="timefromparts-transact-sql"></a>TIMEFROMPARTS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
-  Retourne un **temps** valeur pour l’heure spécifiée et avec la précision spécifiée.  
+  Renvoie une valeur **time** pour l’heure spécifiée et avec la précision spécifiée.  
   
  ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -45,7 +45,7 @@ TIMEFROMPARTS ( hour, minute, seconds, fractions, precision )
 ```  
   
 ## <a name="arguments"></a>Arguments  
- *heure*  
+ *hour*  
  Expression entière spécifiant des heures.  
   
  *minute*  
@@ -58,15 +58,15 @@ TIMEFROMPARTS ( hour, minute, seconds, fractions, precision )
  Expression entière spécifiant des fractions.  
   
  *precision*  
- Littéral entier spécifiant la précision de la **temps** valeur à retourner.  
+ Littéral entier spécifiant la précision de la valeur **time** à renvoyer.  
   
 ## <a name="return-types"></a>Types de retour  
- **heure (** *précision* **)**  
+ **time(** *precision* **)**  
   
 ## <a name="remarks"></a>Notes   
- TIMEROMPARTS retourne une valeur temporelle complètement initialisée. Si les arguments ne sont pas valides, une erreur est générée. Si l'un des paramètres est NULL, la valeur NULL est retournée. Toutefois, si le *précision* argument est null, une erreur est générée.  
+ TIMEROMPARTS retourne une valeur temporelle complètement initialisée. Si les arguments ne sont pas valides, une erreur est générée. Si l'un des paramètres est NULL, la valeur NULL est retournée. Toutefois, si l’argument *precision* est NULL, une erreur est générée.  
   
- Le *fractions* argument varie selon le *précision* argument. Par exemple, si *précision* est 7, chaque fraction représente 100 nanosecondes ; si *précision* est 3, alors chaque fraction représente une milliseconde. Si la valeur de *précision* est zéro, la valeur de *fractions* doit également être égal à zéro ; sinon, une erreur est générée.  
+ L’argument *fractions* dépend de l’argument *precision*. Par exemple, si *precision* a pour valeur 7, chaque fraction représente 100 nanosecondes ; si *precision* a pour valeur 3, chaque fraction représente une milliseconde. Si la valeur de *precision* est zéro, la valeur de *fractions* doit également être zéro ; sinon, une erreur est générée.  
   
  Cette fonction peut être exécutée à distance sur les serveurs [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et versions ultérieures. Elle ne peut pas être exécutée à distance sur des serveurs exécutant une version antérieure à [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].  
   
@@ -89,13 +89,13 @@ Result
 ```  
   
 ### <a name="b-example-with-fractions-of-a-second"></a>B. Exemple avec fractions de seconde  
- L’exemple suivant illustre l’utilisation de la *fractions* et *précision* paramètres :  
+ L’exemple suivant illustre l’utilisation des paramètres *fractions* et *precision* :  
   
-1.  Lorsque *fractions* a la valeur 5 et *précision* a la valeur 1, puis la valeur de *fractions* représente 5 à 10 de seconde.  
+1.  Lorsque *fractions* a la valeur 5 et *precision* la valeur 1, la valeur de *fractions* représente 5/10 de seconde.  
   
-2.  Lorsque *fractions* a la valeur 50 et *précision* a la valeur 2, puis la valeur de *fractions* représente 50/100 de seconde.  
+2.  Lorsque *fractions* a la valeur 50 et *precision* la valeur 2, la valeur de *fractions* représente 50/100 de seconde.  
   
-3.  Lorsque *fractions* a la valeur 500 et *précision* a la valeur 3, puis la valeur de *fractions* représente 500/1000 de seconde.  
+3.  Lorsque *fractions* a la valeur 500 et *precision* la valeur 3, la valeur de *fractions* représente 500/1000 de seconde.  
   
 ```sql  
 SELECT TIMEFROMPARTS ( 14, 23, 44, 5, 1 );  

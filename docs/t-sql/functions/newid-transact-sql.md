@@ -1,5 +1,5 @@
 ---
-title: NEWID (Transact-SQL) | Documents Microsoft
+title: NEWID (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/29/2017
 ms.prod: sql-non-specified
@@ -49,13 +49,13 @@ NEWID ( )
 ## <a name="return-types"></a>Types de retour  
  **uniqueidentifier**  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  `NEWID()` compatible avec RFC4122.  
   
 ## <a name="examples"></a>Exemples  
   
 ### <a name="a-using-the-newid-function-with-a-variable"></a>A. Utilisation de la fonction NEWID avec une variable  
- L’exemple suivant utilise `NEWID()` pour affecter une valeur à une variable déclarée en tant que le **uniqueidentifier** type de données. La valeur de la **uniqueidentifier** variable de type de données est imprimée avant que la valeur est testée.  
+ L’exemple suivant utilise `NEWID()` pour attribuer une valeur à une variable déclarée de type **uniqueidentifier**. La valeur de la variable de type **uniqueidentifier** est imprimée avant d’être testée.  
   
 ```  
 -- Creating a local variable with DECLARE/SET syntax.  
@@ -75,9 +75,9 @@ Value of @myid is: 6F9619FF-8B86-D011-B42D-00C04FC964FF
   
 ### <a name="b-using-newid-in-a-create-table-statement"></a>B. Utilisation de NEWID dans une instruction CREATE TABLE  
   
-**S’applique à**:[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
+**S’applique à** :  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
   
- L’exemple suivant crée la `cust` table avec un **uniqueidentifier** type de données et utilise NEWID pour remplir la table avec une valeur par défaut. Lorsque vous affectez la valeur par défaut de `NEWID()`, chaque ligne nouvelle ou existante de la colonne `CustomerID` a une valeur unique.  
+ L’exemple suivant crée la table `cust` avec un type **uniqueidentifier** et utilise NEWID pour remplir la table avec une valeur par défaut. Lorsque vous affectez la valeur par défaut de `NEWID()`, chaque ligne nouvelle ou existante de la colonne `CustomerID` a une valeur unique.  
   
 ```  
 -- Creating a table using NEWID for uniqueidentifier data type.  
@@ -115,7 +115,7 @@ GO
 ```  
   
 ### <a name="c-using-uniqueidentifier-and-variable-assignment"></a>C. Utilisation de uniqueidentifier et affectation d'une variable  
- L’exemple suivant déclare une variable locale appelée `@myid` en tant que variable de **uniqueidentifier** type de données. Une valeur est ensuite affectée à la variable à l'aide de l'instruction `SET`.  
+ L’exemple suivant déclare une variable locale appelée `@myid` en lui attribuant le type **uniqueidentifier**. Une valeur est ensuite affectée à la variable à l'aide de l'instruction `SET`.  
   
 ```  
 DECLARE @myid uniqueidentifier ;  
@@ -124,14 +124,14 @@ SELECT @myid;
 GO  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- [NEWSEQUENTIALID &#40; Transact-SQL &#41;](../../t-sql/functions/newsequentialid-transact-sql.md)   
+## <a name="see-also"></a> Voir aussi  
+ [NEWSEQUENTIALID &#40;Transact-SQL&#41;](../../t-sql/functions/newsequentialid-transact-sql.md)   
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
- [CAST et CONVERT &#40; Transact-SQL &#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)   
+ [CAST et CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)   
  [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
  [Types de données &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
  [Fonctions système &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)   
- [uniqueidentifier &#40; Transact-SQL &#41;](../../t-sql/data-types/uniqueidentifier-transact-sql.md)   
+ [uniqueidentifier &#40;Transact-SQL&#41;](../../t-sql/data-types/uniqueidentifier-transact-sql.md)   
  [Numéros de séquence](../../relational-databases/sequence-numbers/sequence-numbers.md)  
   
   

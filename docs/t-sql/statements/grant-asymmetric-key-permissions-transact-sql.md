@@ -1,5 +1,5 @@
 ---
-title: "ACCORDER des autorisations Clées asymétriques (Transact-SQL) | Documents Microsoft"
+title: "GRANT - Autorisations de clé asymétrique (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 06/12/2017
 ms.prod: sql-non-specified
@@ -49,17 +49,17 @@ GRANT { permission  [ ,...n ] }
 ```  
   
 ## <a name="arguments"></a>Arguments  
- *autorisation*  
+ *permission*  
  Spécifie une autorisation qu'il est possible d'accorder sur une clé asymétrique. Voir ci-dessous.  
   
- SUR la clé asymétrique **::***asymmetric_key_name*  
+ ON ASYMMETRIC KEY **::***asymmetric_key_name*  
  Indique la clé asymétrique sur laquelle l'autorisation est accordée. Le qualificateur d'étendue "::" est indispensable.  
   
- *principal_base_de_données*  
+ *database_principal*  
  Spécifie le principal auquel l'autorisation est accordée. Il peut s'agir :  
   
 -   d'un utilisateur de base de données ;  
--   d'un rôle de base de données ;  
+-   d'un rôle de base de données ;  
 -   d'un rôle d'application ;  
 -   d'un utilisateur de base de données mappé sur une connexion Windows ;  
 -   d'un utilisateur de base de données mappé sur un groupe Windows ;  
@@ -70,11 +70,11 @@ GRANT { permission  [ ,...n ] }
 GRANT OPTION  
  Indique que le principal a également la possibilité d'accorder l'autorisation spécifiée à d'autres principaux.  
   
-En tant que *granting_principal*  
+AS *granting_principal*  
  Spécifie un principal dont le principal qui exécute cette requête dérive son droit d'accorder l'autorisation. Il peut s'agir :  
   
 -   d'un utilisateur de base de données ;  
--   d'un rôle de base de données ;  
+-   d'un rôle de base de données ;  
 -   d'un rôle d'application ;  
 -   d'un utilisateur de base de données mappé sur une connexion Windows ;  
 -   d'un utilisateur de base de données mappé sur un groupe Windows ;  
@@ -82,7 +82,7 @@ En tant que *granting_principal*
 -   d'un utilisateur de base de données mappé à une clé asymétrique ;  
 -   d'un utilisateur de base de données qui n'est pas mappé sur le principal d'un serveur.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Une clé asymétrique est un élément sécurisable au niveau base de données contenu dans la base de données parente dans la hiérarchie des autorisations. Les autorisations les plus particulières et les plus limitées qu'il est possible d'accorder sur une clé asymétrique sont mentionnées ci-dessous, ainsi que les autorisations plus générales qui les englobent implicitement.  
   
 |Autorisation de clé asymétrique|Impliquée par une autorisation de clé asymétrique|Impliquée par une autorisation de base de données|  
@@ -93,32 +93,32 @@ En tant que *granting_principal*
 |REFERENCES|CONTROL|REFERENCES|  
 |VIEW DEFINITION|CONTROL|VIEW DEFINITION|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Le fournisseur d'autorisations (ou le principal spécifié avec l'option AS) doit posséder l'autorisation elle-même avec l'option GRANT OPTION ou une autorisation plus élevée qui implique l'autorisation accordée.  
   
  En cas d'utilisation de l'option AS, ces critères s'appliquent.  
   
-|En tant que *granting_principal*|Autres autorisations nécessaires|  
+|AS *granting_principal*|Autres autorisations nécessaires|  
 |------------------------------|------------------------------------|  
-|Utilisateur de base de données|L’autorisation IMPERSONATE sur l’utilisateur, l’appartenance à la **db_securityadmin** des rôles de base de données fixe le **db_owner** fixe, un rôle de base de données ou l’appartenance au **sysadmin** rôle serveur fixe.|  
-|Utilisateur de base de données mappé à une connexion Windows|L’autorisation IMPERSONATE sur l’utilisateur, l’appartenance à la **db_securityadmin** des rôles de base de données fixe le **db_owner** fixe, un rôle de base de données ou l’appartenance au **sysadmin** rôle serveur fixe.|  
-|Utilisateur de base de données mappé à un groupe Windows|L’appartenance au groupe Windows, l’appartenance à la **db_securityadmin** des rôles de base de données fixe le **db_owner** fixe, un rôle de base de données ou l’appartenance au **sysadmin** rôle serveur fixe.|  
-|Utilisateur de base de données mappé à un certificat|L’appartenance au **db_securityadmin** des rôles de base de données fixe le **db_owner** fixe, un rôle de base de données ou l’appartenance à la **sysadmin** rôle serveur fixe.|  
-|Utilisateur de base de données mappé à une clé asymétrique|L’appartenance au **db_securityadmin** des rôles de base de données fixe le **db_owner** fixe, un rôle de base de données ou l’appartenance à la **sysadmin** rôle serveur fixe.|  
-|Utilisateur de base de données qui n'est mappé sur aucun principal d'un serveur|L’autorisation IMPERSONATE sur l’utilisateur, l’appartenance à la **db_securityadmin** des rôles de base de données fixe le **db_owner** fixe, un rôle de base de données ou l’appartenance au **sysadmin** rôle serveur fixe.|  
-|Rôle de base de données|L’autorisation ALTER sur le rôle, l’appartenance à la **db_securityadmin** des rôles de base de données fixe le **db_owner** fixe, un rôle de base de données ou l’appartenance au **sysadmin** rôle serveur fixe.|  
-|Rôle d'application|L’autorisation ALTER sur le rôle, l’appartenance à la **db_securityadmin** des rôles de base de données fixe le **db_owner** fixe, un rôle de base de données ou l’appartenance au **sysadmin** rôle serveur fixe.|  
+|Utilisateur de base de données|Autorisation IMPERSONATE sur l’utilisateur, appartenance au rôle de base de données fixe **db_securityadmin**, appartenance au rôle de base de données fixe **db_owner** ou appartenance au rôle serveur fixe **sysadmin**.|  
+|Utilisateur de base de données mappé à une connexion Windows|Autorisation IMPERSONATE sur l’utilisateur, appartenance au rôle de base de données fixe **db_securityadmin**, appartenance au rôle de base de données fixe **db_owner** ou appartenance au rôle serveur fixe **sysadmin**.|  
+|Utilisateur de base de données mappé à un groupe Windows|Appartenance au groupe Windows, appartenance aux rôles de base de données fixe **db_securityadmin** ou **db_owner**, ou appartenance au rôle serveur fixe **sysadmin**.|  
+|Utilisateur de base de données mappé à un certificat|Appartenance aux rôles de base de données fixe **db_securityadmin** ou **db_owner**, ou appartenance au rôle serveur fixe **sysadmin**.|  
+|Utilisateur de base de données mappé à une clé asymétrique|Appartenance aux rôles de base de données fixe **db_securityadmin** ou **db_owner**, ou appartenance au rôle serveur fixe **sysadmin**.|  
+|Utilisateur de base de données qui n'est mappé sur aucun principal d'un serveur|Autorisation IMPERSONATE sur l’utilisateur, appartenance au rôle de base de données fixe **db_securityadmin**, appartenance au rôle de base de données fixe **db_owner** ou appartenance au rôle serveur fixe **sysadmin**.|  
+|Rôle de base de données|Autorisation ALTER sur le rôle, appartenance au rôle de base de données fixe **db_securityadmin**, appartenance au rôle de base de données fixe **db_owner** ou appartenance au rôle serveur fixe **sysadmin**.|  
+|Rôle d'application|Autorisation ALTER sur le rôle, appartenance au rôle de base de données fixe **db_securityadmin**, appartenance au rôle de base de données fixe **db_owner** ou appartenance au rôle serveur fixe **sysadmin**.|  
   
  Les propriétaires d'objets peuvent accorder des autorisations sur les objets qu'ils possèdent. Les principaux ayant l'autorisation CONTROL sur un élément sécurisable peuvent accorder une autorisation sur cet élément.  
   
- Les détenteurs de l’autorisation CONTROL SERVER, tels que les membres de la **sysadmin** rôle serveur fixe, peuvent accorder une autorisation sur n’importe quel élément sécurisable du serveur. Les détenteurs de l’autorisation CONTROL sur une base de données, tels que les membres de la **db_owner** rôle de base de données fixe, peuvent accorder une autorisation sur n’importe quel élément sécurisable dans la base de données. Les détenteurs de l'autorisation CONTROL sur un schéma peuvent accorder une autorisation sur n'importe quel objet dans ce schéma.  
+ Les détenteurs de l’autorisation CONTROL SERVER, tels que les membres du rôle serveur fixe **sysadmin**, peuvent accorder une autorisation sur n’importe quel élément sécurisable du serveur. Les détenteurs de l’autorisation CONTROL sur une base de données, tels que les membres du rôle de base de données fixe **db_owner**, peuvent accorder une autorisation sur n’importe quel élément sécurisable de la base de données. Les détenteurs de l'autorisation CONTROL sur un schéma peuvent accorder une autorisation sur n'importe quel objet dans ce schéma.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md)   
  [Autorisations &#40;moteur de base de données&#41;](../../relational-databases/security/permissions-database-engine.md)   
  [Principaux &#40;moteur de base de données&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
  [CREATE CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/create-certificate-transact-sql.md)   
  [CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-asymmetric-key-transact-sql.md)   
- [CRÉER un rôle d’APPLICATION &#40; Transact-SQL &#41;](../../t-sql/statements/create-application-role-transact-sql.md)  
+ [CREATE APPLICATION ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-application-role-transact-sql.md)  
   
   

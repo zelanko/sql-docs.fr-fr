@@ -1,5 +1,5 @@
 ---
-title: Curseurs (Transact-SQL) | Documents Microsoft
+title: Curseurs (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -33,7 +33,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="cursors-transact-sql"></a>Curseurs (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instructions produisent un jeu de résultats complet mais il arrive que les résultats soient mieux traités ligne par ligne à la fois. L'ouverture d'un curseur sur un jeu de résultats permet de traiter celui-ci ligne par ligne. Vous pouvez affecter un curseur à une variable ou un paramètre avec un **curseur** type de données.  
+  Les instructions [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] produisent un jeu de résultats complet mais il arrive que les résultats soient mieux traités ligne par ligne. L'ouverture d'un curseur sur un jeu de résultats permet de traiter celui-ci ligne par ligne. Vous pouvez affecter un curseur à une variable ou un paramètre à l’aide du type de données **curseur**.  
   
  Les opérations curseurs sont prises en charges dans les instructions suivantes :  
   
@@ -73,7 +73,7 @@ ms.lasthandoff: 01/25/2018
   
  [sp_describe_cursor_tables](../../relational-databases/system-stored-procedures/sp-describe-cursor-tables-transact-sql.md)  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Curseurs](../../relational-databases/cursors.md)  
   
   

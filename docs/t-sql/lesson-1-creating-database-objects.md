@@ -1,5 +1,5 @@
 ---
-title: "Leçon 1 : Création d’objets de base de données | Documents Microsoft"
+title: "Leçon 1 : Création des objets de base de données | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -27,7 +27,7 @@ ms.contentlocale: fr-FR
 ms.lasthandoff: 11/21/2017
 ---
 # <a name="lesson-1-creating-database-objects"></a>Leçon 1 : Création des objets de base de données
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]Cette leçon vous montre comment créer une base de données, créer une table dans la base de données et ensuite accéder et modifier les données dans la table. Étant donné que cette leçon est une introduction à l’utilisation de [!INCLUDE[tsql](../includes/tsql-md.md)], elle n’utilise pas ni ne décrit les nombreuses options disponibles pour ces instructions.  
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)] Cette leçon vous montre comment créer une base de données, comment créer une table dans la base de données, puis comment accéder aux données de la table pour les changer. Étant donné que cette leçon est une introduction à l’utilisation de [!INCLUDE[tsql](../includes/tsql-md.md)], elle n’utilise pas ni ne décrit les nombreuses options disponibles pour ces instructions.  
   
 [!INCLUDE[tsql](../includes/tsql-md.md)] les instructions peuvent être écrites et soumises au [!INCLUDE[ssDE](../includes/ssde-md.md)] comme suit :  
   

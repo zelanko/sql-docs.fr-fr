@@ -1,5 +1,5 @@
 ---
-title: EOMONTH (Transact-SQL) | Documents Microsoft
+title: EOMONTH (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -49,15 +49,15 @@ EOMONTH ( start_date [, month_to_add ] )
  Expression de date qui spécifie la date pour laquelle retourner le dernier jour du mois.  
   
  *month_to_add*  
- Expression entière facultative spécifiant le nombre de mois à ajouter au *start_date*.  
+ Expression entière facultative spécifiant le nombre de mois à ajouter à *start_date*.  
   
- Si cet argument est spécifié, puis **EOMONTH** ajoute le nombre spécifié de mois à *start_date*, puis retourne le dernier jour du mois de la date résultante. Si cet addition dépasse la plage de dates valide, une erreur est générée.  
+ Si cet argument est spécifié, **EOMONTH** ajoute le nombre spécifié de mois à *start_date*, puis renvoie le dernier jour du mois de la date résultante. Si cet addition dépasse la plage de dates valide, une erreur est générée.  
   
 ## <a name="return-type"></a>Type de retour  
  **date**  
   
 ## <a name="remarks"></a>Notes   
- Cette fonction peut être exécutée à distance sur les serveurs [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et versions ultérieures. Il ne peut pas être exécutée à distance avec une version inférieure à [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].  
+ Cette fonction peut être exécutée à distance sur les serveurs [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et versions ultérieures. Elle ne peut pas être exécutée à distance sur des serveurs dotés d’une version antérieure à [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].  
   
 ## <a name="examples"></a>Exemples  
   

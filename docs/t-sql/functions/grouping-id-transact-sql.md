@@ -1,5 +1,5 @@
 ---
-title: GROUPING_ID (Transact-SQL) | Documents Microsoft
+title: GROUPING_ID (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
@@ -35,7 +35,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="groupingid-transact-sql"></a>GROUPING_ID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Fonction qui calcule le niveau de regroupement. GROUPING_ID peut être utilisé uniquement dans l’instruction SELECT \<sélectionnez > répertorier, HAVING, ou de clauses ORDER BY Lorsque GROUP BY est spécifié.  
+  Fonction qui calcule le niveau de regroupement. GROUPING_ID peut être utilisé uniquement dans les clauses SELECT \<list>, HAVING et ORDER BY lorsque GROUP BY est spécifié.  
   
  ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -47,17 +47,17 @@ GROUPING_ID ( <column_expression>[ ,...n ] )
 ```  
   
 ## <a name="arguments"></a>Arguments  
- \<column_expression >  
- Est un *column_expression* dans un [GROUP BY](../../t-sql/queries/select-group-by-transact-sql.md) clause.  
+ \<column_expression>  
+ *column_expression* dans une clause [GROUP BY](../../t-sql/queries/select-group-by-transact-sql.md).  
   
 ## <a name="return-type"></a>Type de retour  
- **int**  
+ **Int**  
   
-## <a name="remarks"></a>Notes  
- Le GROUPING_ID \<column_expression > doit correspondre exactement à l’expression dans la liste GROUP BY. Par exemple, si vous groupez par DATEPART (yyyy, \< *nom de la colonne*>), utilisez GROUPING_ID (DATEPART (yyyy, \< *nom de la colonne*>)) ; ou si vous effectuez le regroupement \< *nom de la colonne*>, utilisez GROUPING_ID (\<*nom de la colonne*>).  
+## <a name="remarks"></a>Notes   
+ L’argument \<column_expression> de GROUPING_ID doit correspondre exactement à l’expression dans la liste GROUP BY. Par exemple, si vous groupez par DATEPART (yyyy, \<*column name*>), utilisez GROUPING_ID (DATEPART (yyyy, \<*column name*>)) ; ou si vous groupez par \<*column name*>, utilisez GROUPING_ID (\<*column name*>).  
   
 ## <a name="comparing-groupingid--to-grouping-"></a>Comparaison de GROUPING_ID () à GROUPING ()  
- GROUPING_ID (\<column_expression > [ **,**...  *n*  ]) entrées l’équivalent du regroupement (\<column_expression >) pour chaque colonne dans sa liste de colonnes dans chaque ligne de sortie sous forme de chaîne d’uns et zéros. GROUPING_ID interprète cette chaîne comme nombre de base 2 et retourne l'entier équivalent. Par exemple, considérez l’instruction suivante : `SELECT a, b, c, SUM(d),``GROUPING_ID(a,b,c)``FROM T GROUP BY <group by list>`. Le tableau suivant indique les valeurs d'entrée et de sortie de GROUPING_ID ().  
+ GROUPING_ID (\<column_expression> [ **,**...*n* ]) entre l’équivalent du retour de GROUPING (\<column_expression>) pour chaque colonne dans sa liste de colonnes dans chaque ligne de sortie en tant que chaîne de uns et de zéros. GROUPING_ID interprète cette chaîne comme nombre de base 2 et retourne l'entier équivalent. Par exemple, considérez l’instruction suivante : `SELECT a, b, c, SUM(d),``GROUPING_ID(a,b,c)``FROM T GROUP BY <group by list>`. Le tableau suivant indique les valeurs d'entrée et de sortie de GROUPING_ID ().  
   
 |Colonnes agrégées|Entrée GROUPING_ID (a, b, c) = GROUPING(a) + GROUPING(b) + GROUPING(c)|Sortie GROUPING_ID ()|  
 |------------------------|---------------------------------------------------------------------------------------|------------------------------|  
@@ -70,14 +70,14 @@ GROUPING_ID ( <column_expression>[ ,...n ] )
 |`abc`|`111`|`7`|  
   
 ## <a name="technical-definition-of-groupingid-"></a>Définition technique de GROUPING_ID ()  
- Chaque argument GROUPING_ID doit être un élément de la liste GROUP BY. GROUPING_ID () retourne une **entier** bitmap dont les N bits le plus bas peuvent être activés. Une liste **bits** indique l’argument correspondant n’est pas une colonne de regroupement pour la ligne de sortie donné. L’ordre le plus bas **bits** correspond à l’argument N et le n-1<sup>th</sup> ordre le plus bas **bits** correspond à l’argument 1.  
+ Chaque argument GROUPING_ID doit être un élément de la liste GROUP BY. GROUPING_ID () retourne une bitmap **integer** dont les N bits les plus bas peuvent être activés. Un **bit** activé indique que l’argument correspondant n’est pas une colonne de regroupement pour la ligne de sortie donnée. Le **bit** d’ordre le plus bas correspond à l’argument N, et le **bit** d’ordre le plus bas N-1<sup>e</sup> correspond à l’argument 1.  
   
 ## <a name="groupingid--equivalents"></a>Équivalents de GROUPING_ID ()  
- Pour une requête de regroupement unique, de regroupement (\<column_expression >) est équivalent à GROUPING_ID (\<column_expression >), et tous deux retournent 0.  
+ Pour une requête de regroupement unique, GROUPING (\<column_expression>) est équivalent à GROUPING_ID (\<column_expression>), et les deux fonctions retournent 0.  
   
  Par exemple, les instructions suivantes sont équivalentes :  
   
- Instruction r :  
+ Déclaration A :  
   
 ```  
 SELECT GROUPING_ID(A,B)  
@@ -85,7 +85,7 @@ FROM T
 GROUP BY CUBE(A,B)   
 ```  
   
- Instruction b :  
+ Déclaration B :  
   
 ```  
 SELECT 3 FROM T GROUP BY ()  
@@ -145,17 +145,17 @@ GROUP BY ROLLUP(D.Name, E.JobTitle)
   
  Voici le jeu de résultats non filtré.  
   
-|Nom|Title|Grouping Level|Employee Count|Nom|  
+|Nom   |Titre|Grouping Level|Employee Count|Nom   |  
 |----------|-----------|--------------------|--------------------|----------|  
 |Document Control|Control Specialist|0|2|Document Control|  
 |Document Control|Document Control Assistant|0|2|Document Control|  
-|Document Control|Document Control Manager|0|1|Document Control|  
-|Document Control|NULL|1|5|Document Control|  
-|Facilities and Maintenance|Facilities Administrative Assistant|0|1|Facilities and Maintenance|  
-|Facilities and Maintenance|Facilities Manager|0|1|Facilities and Maintenance|  
+|Document Control|Document Control Manager|0| 1|Document Control|  
+|Document Control|NULL| 1|5|Document Control|  
+|Facilities and Maintenance|Facilities Administrative Assistant|0| 1|Facilities and Maintenance|  
+|Facilities and Maintenance|Facilities Manager|0| 1|Facilities and Maintenance|  
 |Facilities and Maintenance|Janitor|0|4|Facilities and Maintenance|  
-|Facilities and Maintenance|Maintenance Supervisor|0|1|Facilities and Maintenance|  
-|Facilities and Maintenance|NULL|1|7|Facilities and Maintenance|  
+|Facilities and Maintenance|Maintenance Supervisor|0| 1|Facilities and Maintenance|  
+|Facilities and Maintenance|NULL| 1|7|Facilities and Maintenance|  
 |NULL|NULL|3|12|NULL|  
   
 #### <a name="complex-example"></a>Exemple complexe  
@@ -245,7 +245,7 @@ ORDER BY
 ### <a name="c-using-groupingid--with-rollup-and-cube-to-identify-grouping-levels"></a>C. Utilisation de GROUPING_ID () avec ROLLUP et CUBE pour identifier des niveaux de regroupement  
  Le code des exemples suivants illustre l'utilisation de `GROUPING()` pour calculer la colonne `Bit Vector(base-2)`. `GROUPING_ID()` est utilisé pour calculer la colonne `Integer Equivalent` correspondante. L'ordre des colonnes dans la fonction `GROUPING_ID()` est l'inverse de celui des colonnes concaténées par la fonction `GROUPING()`.  
   
- Dans ces exemples, `GROUPING_ID()` est utilisé pour créer une valeur pour chaque ligne dans la colonne `Grouping Level` afin d'identifier le niveau de regroupement. Niveaux de regroupement ne sont pas toujours une liste consécutive d’entiers commençant à 1 (0, 1, 2... *n*).  
+ Dans ces exemples, `GROUPING_ID()` est utilisé pour créer une valeur pour chaque ligne dans la colonne `Grouping Level` afin d'identifier le niveau de regroupement. Les niveaux de regroupement ne sont pas toujours une liste consécutive d’entiers commençant à 1 (0, 1, 2,...*n*).  
   
 > [!NOTE]  
 >  GROUPING et GROUPING_ID peuvent être utilisés dans une clause HAVING pour filtrer un jeu de résultats.  
@@ -311,23 +311,23 @@ ORDER BY GROUPING_ID(DATEPART(mm,OrderDate)
   
  Voici un jeu de résultats partiel.  
   
-|Année|Mois|Jour|Total Due|Bit Vector (base-2)|Integer Equivalent|Grouping Level|  
+|Année|Month|Jour|Total Due|Bit Vector (base-2)|Integer Equivalent|Grouping Level|  
 |----------|-----------|---------|---------------|----------------------------|------------------------|--------------------|  
-|2007|1|1|1497452.6066|000|0|Year Month Day|  
-|2007|1|2|21772.3494|000|0|Year Month Day|  
-|2007|2|1|2705653.5913|000|0|Year Month Day|  
-|2007|2|2|21684.4068|000|0|Year Month Day|  
-|2008|1|1|1908122.0967|000|0|Year Month Day|  
-|2008|1|2|46458.0691|000|0|Year Month Day|  
-|2008|2|1|3108771.9729|000|0|Year Month Day|  
-|2008|2|2|54598.5488|000|0|Year Month Day|  
-|2007|1|NULL|1519224.956|100|1|Year Month|  
-|2007|2|NULL|2727337.9981|100|1|Year Month|  
-|2008|1|NULL|1954580.1658|100|1|Year Month|  
-|2008|2|NULL|3163370.5217|100|1|Year Month|  
-|2007|NULL|NULL|4246562.9541|110|3|Année|  
-|2008|NULL|NULL|5117950.6875|110|3|Année|  
-|NULL|NULL|NULL|9364513.6416|111|7|Total général|  
+|2007| 1| 1|1497452,6066|000|0|Year Month Day|  
+|2007| 1|2|21772,3494|000|0|Year Month Day|  
+|2007|2| 1|2705653,5913|000|0|Year Month Day|  
+|2007|2|2|21684,4068|000|0|Year Month Day|  
+|2008| 1| 1|1908122,0967|000|0|Year Month Day|  
+|2008| 1|2|46458,0691|000|0|Year Month Day|  
+|2008|2| 1|3108771,9729|000|0|Year Month Day|  
+|2008|2|2|54598,5488|000|0|Year Month Day|  
+|2007| 1|NULL|1519224,956|100| 1|Year Month|  
+|2007|2|NULL|2727337,9981|100| 1|Year Month|  
+|2008| 1|NULL|1954580,1658|100| 1|Year Month|  
+|2008|2|NULL|3163370,5217|100| 1|Year Month|  
+|2007|NULL|NULL|4246562,9541|110|3|Année|  
+|2008|NULL|NULL|5117950,6875|110|3|Année|  
+|NULL|NULL|NULL|9364513,6416|111|7|Total général|  
   
 #### <a name="cube-example"></a>Exemple CUBE  
  Dans cet exemple, la fonction `GROUPING_ID()` est utilisée pour créer une valeur pour chaque ligne dans la colonne `Grouping Level` afin d'identifier le niveau de regroupement.  
@@ -392,38 +392,38 @@ ORDER BY GROUPING_ID(DATEPART(yyyy,OrderDate)
   
  Voici un jeu de résultats partiel.  
   
-|Année|Mois|Jour|Total Due|Bit Vector (base-2)|Integer Equivalent|Grouping Level|  
+|Année|Month|Jour|Total Due|Bit Vector (base-2)|Integer Equivalent|Grouping Level|  
 |----------|-----------|---------|---------------|----------------------------|------------------------|--------------------|  
-|2007|1|1|1497452.6066|000|0|Year Month Day|  
-|2007|1|2|21772.3494|000|0|Year Month Day|  
-|2007|2|1|2705653.5913|000|0|Year Month Day|  
-|2007|2|2|21684.4068|000|0|Year Month Day|  
-|2008|1|1|1908122.0967|000|0|Year Month Day|  
-|2008|1|2|46458.0691|000|0|Year Month Day|  
-|2008|2|1|3108771.9729|000|0|Year Month Day|  
-|2008|2|2|54598.5488|000|0|Year Month Day|  
-|2007|1|NULL|1519224.956|100|1|Year Month|  
-|2007|2|NULL|2727337.9981|100|1|Year Month|  
-|2008|1|NULL|1954580.1658|100|1|Year Month|  
-|2008|2|NULL|3163370.5217|100|1|Year Month|  
-|2007|NULL|1|4203106.1979|010|2|Year Day|  
-|2007|NULL|2|43456.7562|010|2|Year Day|  
-|2008|NULL|1|5016894.0696|010|2|Year Day|  
-|2008|NULL|2|101056.6179|010|2|Year Day|  
-|2007|NULL|NULL|4246562.9541|110|3|Année|  
-|2008|NULL|NULL|5117950.6875|110|3|Année|  
-|NULL|1|1|3405574.7033|001|4|Month Day|  
-|NULL|1|2|68230.4185|001|4|Month Day|  
-|NULL|2|1|5814425.5642|001|4|Month Day|  
-|NULL|2|2|76282.9556|001|4|Month Day|  
-|NULL|1|NULL|3473805.1218|101|5|Mois|  
-|NULL|2|NULL|5890708.5198|101|5|Mois|  
-|NULL|NULL|1|9220000.2675|011|6|Jour|  
-|NULL|NULL|2|144513.3741|011|6|Jour|  
-|NULL|NULL|NULL|9364513.6416|111|7|Total général|  
+|2007| 1| 1|1497452,6066|000|0|Year Month Day|  
+|2007| 1|2|21772,3494|000|0|Year Month Day|  
+|2007|2| 1|2705653,5913|000|0|Year Month Day|  
+|2007|2|2|21684,4068|000|0|Year Month Day|  
+|2008| 1| 1|1908122,0967|000|0|Year Month Day|  
+|2008| 1|2|46458,0691|000|0|Year Month Day|  
+|2008|2| 1|3108771,9729|000|0|Year Month Day|  
+|2008|2|2|54598,5488|000|0|Year Month Day|  
+|2007| 1|NULL|1519224,956|100| 1|Year Month|  
+|2007|2|NULL|2727337,9981|100| 1|Year Month|  
+|2008| 1|NULL|1954580,1658|100| 1|Year Month|  
+|2008|2|NULL|3163370,5217|100| 1|Year Month|  
+|2007|NULL| 1|4203106,1979|010|2|Year Day|  
+|2007|NULL|2|43456,7562|010|2|Year Day|  
+|2008|NULL| 1|5016894,0696|010|2|Year Day|  
+|2008|NULL|2|101056,6179|010|2|Year Day|  
+|2007|NULL|NULL|4246562,9541|110|3|Année|  
+|2008|NULL|NULL|5117950,6875|110|3|Année|  
+|NULL| 1| 1|3405574,7033|001|4|Month Day|  
+|NULL| 1|2|68230,4185|001|4|Month Day|  
+|NULL|2| 1|5814425,5642|001|4|Month Day|  
+|NULL|2|2|76282,9556|001|4|Month Day|  
+|NULL| 1|NULL|3473805,1218|101|5|Month|  
+|NULL|2|NULL|5890708,5198|101|5|Month|  
+|NULL|NULL| 1|9220000,2675|011|6|Jour|  
+|NULL|NULL|2|144513,3741|011|6|Jour|  
+|NULL|NULL|NULL|9364513,6416|111|7|Total général|  
   
-## <a name="see-also"></a>Voir aussi  
- [REGROUPEMENT &#40; Transact-SQL &#41;](../../t-sql/functions/grouping-transact-sql.md)   
- [GROUP BY &#40; Transact-SQL &#41;](../../t-sql/queries/select-group-by-transact-sql.md)  
+## <a name="see-also"></a> Voir aussi  
+ [GROUPING &#40;Transact-SQL&#41;](../../t-sql/functions/grouping-transact-sql.md)   
+ [GROUP BY &#40;Transact-SQL&#41;](../../t-sql/queries/select-group-by-transact-sql.md)  
   
   

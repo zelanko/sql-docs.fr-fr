@@ -1,5 +1,5 @@
 ---
-title: "ToString (Type de données geometry) | Documents Microsoft"
+title: "ToString (type de données geometry) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -43,17 +43,17 @@ Retourne la représentation OGC (Open Geospatial Consortium) WKT (Well-Known Tex
 ```  
   
 ## <a name="return-types"></a>Types de retour  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]type de retour : **nvarchar (max)**  
+ Type de retour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] : **nvarchar(max)**  
   
  Type de retour CLR : **SqlString**  
   
-## <a name="remarks"></a>Notes  
- Cette méthode retourne la chaîne « Null » lorsqu’elle est appelée sur les instances null.  
+## <a name="remarks"></a>Notes   
+ Cette méthode retourne la chaîne « Null » quand elle est appelée sur des instances ayant une valeur Null.  
   
  Sur les instances non Null, cette méthode est équivalente à `AsTextZM().`  
   
 ## <a name="examples"></a>Exemples  
- L’exemple suivant crée un `LineString` instance et utilise `ToString()` pour obtenir la description textuelle de l’instance.  
+ L’exemple suivant crée une instance `LineString` et utilise `ToString()` pour extraire la description textuelle de l’instance.  
   
 ```  
 DECLARE @g geometry;  
@@ -61,8 +61,8 @@ SET @g = geometry::STGeomFromText('LINESTRING(0 0, 0 1, 1 0)', 0);
 SELECT @g.ToString();  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- [STAsText &#40; Type de données geometry &#41;](../../t-sql/spatial-geometry/stastext-geometry-data-type.md)   
+## <a name="see-also"></a> Voir aussi  
+ [STAsText &#40;type de données geometry&#41;](../../t-sql/spatial-geometry/stastext-geometry-data-type.md)   
  [Méthodes étendues sur des instances geometry](../../t-sql/spatial-geometry/extended-methods-on-geometry-instances.md)  
   
   

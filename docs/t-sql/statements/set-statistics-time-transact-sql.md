@@ -1,5 +1,5 @@
 ---
-title: "DÉFINIR STATISTICS TIME (Transact-SQL) | Documents Microsoft"
+title: SET STATISTICS TIME (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -52,18 +52,18 @@ ms.lasthandoff: 11/21/2017
 SET STATISTICS TIME { ON | OFF }  
 ```  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Si SET STATISTICS TIME est défini à ON, les statistiques se rapportant à la durée d'une instruction sont affichées. Si l'option est désactivée (OFF), elles ne sont pas affichées.  
   
  L'option SET STATISTICS TIME est appliquée lors de l'exécution, et non pas lors de l'analyse.  
   
- Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne parvient pas à fournir des statistiques exactes en mode fibre, qui est activé lorsque vous activez le **le regroupement léger** option de configuration.  
+ Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne peut pas fournir de statistiques précises en mode fibre. Ce mode est activé à l’aide de l’option de configuration de **regroupement léger**.  
   
- Le **processeur** colonne dans la **sysprocesses** est uniquement mise à jour lors de l’exécution d’une requête avec SET STATISTICS TIME ON. Lorsque SET STATISTICS TIME est désactivé, **0** est retourné.  
+ La colonne **cpu** de la table **sysprocesses** est mise à jour uniquement si une requête s’exécute avec l’option SET STATISTICS TIME définie sur ON (activée). Quand l’option SET STATISTICS TIME est définie sur OFF (désactivée), la valeur **0** est retournée.  
   
  L'activation ou la désactivation de cette option a également une incidence sur la colonne CPU de la vue Informations sur le processus pour l'activité en cours dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Pour utiliser SET STATISTICS TIME, les utilisateurs doivent disposer des autorisations appropriées pour exécuter l'instruction [!INCLUDE[tsql](../../includes/tsql-md.md)]. L'autorisation SHOWPLAN n'est pas nécessaire.  
   
 ## <a name="examples"></a>Exemples  
@@ -99,8 +99,8 @@ SQL Server parse and compile time:
   
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Instructions SET &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)   
- [SET STATISTICS IO &#40; Transact-SQL &#41;](../../t-sql/statements/set-statistics-io-transact-sql.md)  
+ [SET STATISTICS IO &#40;Transact-SQL&#41;](../../t-sql/statements/set-statistics-io-transact-sql.md)  
   
   

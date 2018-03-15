@@ -1,5 +1,5 @@
 ---
-title: "RÉVOQUER les autorisations de Collection de schémas XML (Transact-SQL) | Documents Microsoft"
+title: "REVOKE - révocation d’autorisations de collection de schémas XML (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/10/2017
 ms.prod: sql-non-specified
@@ -63,8 +63,8 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON
  *permission*  
  Spécifie une autorisation qui peut être révoquée sur une collection de schémas XML. Pour obtenir la liste des autorisations, consultez la section Notes plus loin dans cette rubrique.  
   
- COLLECTION de schémas XML ON :: [ *schema_name ***.* *] *XML_schema_collection_name*  
- Spécifie la collection de schémas XML sur laquelle l'autorisation doit être révoquée. L'identificateur d'étendue (::) est requis. Si *nom_schéma* n’est pas spécifié, le schéma par défaut est utilisé. Si *schema_name* est spécifié, le qualificateur d’étendue de schéma (.) est requis.  
+ ON XML SCHEMA COLLECTION :: [ *schema_name***.** ] *XML_schema_collection_name*  
+ Spécifie la collection de schémas XML sur laquelle l'autorisation doit être révoquée. L'identificateur d'étendue (::) est requis. Si *schema_name* n’est pas spécifié, le schéma par défaut est utilisé. Si *schema_name* est spécifié, le qualificateur d’étendue de schéma (.) est obligatoire.  
   
  GRANT OPTION  
  Indique que le droit d'accorder l'autorisation spécifiée à d'autres principaux sera révoqué. L'autorisation elle-même ne sera pas révoquée.  
@@ -81,7 +81,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON
  { TO | FROM } \<*database_principal*>  
  Spécifie le principal pour lequel l'autorisation est révoquée.  
   
- En tant que \<principal_base_de_données > Spécifie un principal à partir duquel le principal qui exécute cette requête dérive son droit de révoquer l’autorisation.  
+ AS \<database_principal> Spécifie un principal duquel le principal qui exécute cette requête dérive son droit de révoquer l’autorisation.  
   
  *Database_user*  
  Spécifie un utilisateur de base de données.  
@@ -107,8 +107,8 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON
  *Database_user_with_no_login*  
  Spécifie un utilisateur de base de données sans principal au niveau serveur correspondant.  
   
-## <a name="remarks"></a>Notes  
- Informations sur les collections de schémas XML sont visibles dans le [sys.xml_schema_collections](../../relational-databases/system-catalog-views/sys-xml-schema-collections-transact-sql.md) affichage catalogue.  
+## <a name="remarks"></a>Notes   
+ Des informations sur les collections de schémas XML sont consultables dans la vue de catalogue [sys.xml_schema_collections](../../relational-databases/system-catalog-views/sys-xml-schema-collections-transact-sql.md).  
   
  L'instruction échoue si l'option CASCADE n'est pas spécifiée lorsque vous révoquez une autorisation à partir d'un principal auquel cette autorisation a été accordée avec l'option GRANT OPTION.  
   
@@ -124,7 +124,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON
 |VIEW DEFINITION|CONTROL|VIEW DEFINITION|  
   
 ## <a name="permissions"></a>Autorisations  
- Requiert l’autorisation CONTROL sur la collection de schémas XML. Si vous utilisez l'option AS, le principal spécifié doit posséder la collection de schémas XML.  
+ Nécessite l’autorisation CONTROL sur la collection de schémas XML. Si vous utilisez l'option AS, le principal spécifié doit posséder la collection de schémas XML.  
   
 ## <a name="examples"></a>Exemples  
  Dans l'exemple ci-dessous, l'autorisation `EXECUTE` sur la collection de schémas XML `Invoices4` est révoquée pour l'utilisateur `Wanida`. La collection de schémas XML `Invoices4` se trouve à l'intérieur du schéma `Sales` de la base de données `AdventureWorks2012`.  
@@ -135,11 +135,11 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON
  GO
  ```  
   
-## <a name="see-also"></a>Voir aussi  
- [ACCORDER des autorisations de Collection de schémas XML &#40; Transact-SQL &#41;](../../t-sql/statements/grant-xml-schema-collection-permissions-transact-sql.md)   
- [REFUSER des autorisations de Collection de schémas XML &#40; Transact-SQL &#41;](../../t-sql/statements/deny-xml-schema-collection-permissions-transact-sql.md)   
+## <a name="see-also"></a> Voir aussi  
+ [GRANT – Accorder des autorisations sur une collection de schémas XML &#40;Transact-SQL&#41;](../../t-sql/statements/grant-xml-schema-collection-permissions-transact-sql.md)   
+ [DENY – Refuser des autorisations sur une collection de schémas &#40;Transact-SQL&#41;](../../t-sql/statements/deny-xml-schema-collection-permissions-transact-sql.md)   
  [sys.xml_schema_collections &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-xml-schema-collections-transact-sql.md)   
- [CRÉER une COLLECTION de schémas XML &#40; Transact-SQL &#41;](../../t-sql/statements/create-xml-schema-collection-transact-sql.md)   
+ [CREATE XML SCHEMA COLLECTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-xml-schema-collection-transact-sql.md)   
  [Autorisations &#40;moteur de base de données&#41;](../../relational-databases/security/permissions-database-engine.md)   
  [Principaux &#40;moteur de base de données&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)  
   

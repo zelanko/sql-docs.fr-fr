@@ -1,5 +1,5 @@
 ---
-title: VERIFYSIGNEDBYASYMKEY (Transact-SQL) | Documents Microsoft
+title: VERIFYSIGNEDBYASYMKEY (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -58,17 +58,17 @@ VerifySignedByAsymKey( Asym_Key_ID , clear_text , signature )
  Texte en clair en cours de vérification.  
   
  *signature*  
- Signature attachée aux données signées. *signature* est **varbinary**.  
+ Signature attachée aux données signées. *signature* est de type **varbinary**.  
   
 ## <a name="return-types"></a>Types de retour  
- **int**  
+ **Int**  
   
  Retourne 1 lorsque les signatures correspondent, sinon 0.  
   
-## <a name="remarks"></a>Notes  
- **VerifySignedByAsymKey** déchiffre la signature des données à l’aide de la clé publique de la clé asymétrique spécifiée et compare la valeur déchiffrée à un hachage MD5 calculée qui vient d’être des données. Si les valeurs correspondent, la validité de la signature est confirmée.  
+## <a name="remarks"></a>Notes   
+ **VerifySignedByAsymKey** déchiffre la signature des données à l’aide de la clé publique de la clé asymétrique spécifiée, puis compare la valeur déchiffrée à un hachage MD5 des données récemment calculé. Si les valeurs correspondent, la validité de la signature est confirmée.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l'autorisation VIEW DEFINITION sur la clé asymétrique.  
   
 ## <a name="examples"></a>Exemples  
@@ -98,9 +98,9 @@ AND Description = N'data encrypted by asymmetric key ''WillisKey74''';
 GO  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- [ASYMKEY_ID &#40; Transact-SQL &#41;](../../t-sql/functions/asymkey-id-transact-sql.md)   
- [SIGNBYASYMKEY &#40; Transact-SQL &#41;](../../t-sql/functions/signbyasymkey-transact-sql.md)   
+## <a name="see-also"></a> Voir aussi  
+ [ASYMKEY_ID &#40;Transact-SQL&#41;](../../t-sql/functions/asymkey-id-transact-sql.md)   
+ [SIGNBYASYMKEY &#40;Transact-SQL&#41;](../../t-sql/functions/signbyasymkey-transact-sql.md)   
  [CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-asymmetric-key-transact-sql.md)   
  [ALTER ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-asymmetric-key-transact-sql.md)   
  [DROP ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-asymmetric-key-transact-sql.md)   

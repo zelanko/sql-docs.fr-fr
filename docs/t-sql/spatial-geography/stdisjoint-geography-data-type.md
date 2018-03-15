@@ -1,5 +1,5 @@
 ---
-title: "STDisjoint (Type de données geography) | Documents Microsoft"
+title: "STDisjoint (type de données geography) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stdisjoint-geography-data-type"></a>STDisjoint (type de données geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Retourne 1 si une **geography** instance est SPATIALEMENT disjointe d’une autre **geography** instance. Retourne 0 dans le cas contraire.  
+  Retourne 1 si une instance **geography** est disjointe spatialement d’une autre instance **geography**. Retourne 0 dans le cas contraire.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -45,17 +45,17 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="arguments"></a>Arguments  
  *other_geography*  
- Une autre **geography** instance à comparer à l’instance sur laquelle STDisjoint() est appelée.  
+ Autre instance **geography** à comparer à l’instance sur laquelle STDisjoint() est appelé.  
   
 ## <a name="return-types"></a>Types de retour  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]type de retour : **bits**  
+ Type de retour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] : **bit**  
   
  Type de retour CLR : **SqlBoolean**  
   
-## <a name="remarks"></a>Notes  
- Deux **geography** instances sont disjointes si l’intersection de leurs ensembles de points est vide.  
+## <a name="remarks"></a>Notes   
+ Deux instances **geography** sont disjointes si l’intersection de leurs ensembles de points est vide.  
   
- Cette méthode retourne toujours null si l’ID de référence spatiale (SRID) de la **geography** instances ne correspondent pas.  
+ Cette méthode retourne toujours une valeur Null si les SRID (ID de référence spatiale) des instances **geography** ne correspondent pas.  
   
 ## <a name="examples"></a>Exemples  
  L'exemple suivant utilise `STDisjoint()` pour tester deux instances `geography` afin de savoir si elles sont spatialement disjointes.  
@@ -68,7 +68,7 @@ SET @h = geography::STGeomFromText('POINT(-122.34900 47.65100)', 4326);
 SELECT @g.STDisjoint(@h);  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Méthodes OGC sur des instances geography](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
   
   

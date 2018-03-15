@@ -1,5 +1,5 @@
 ---
-title: "Niveaux d’Isolation des transactions | Documents Microsoft"
+title: "Niveaux d’isolement | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -32,25 +32,25 @@ ms.lasthandoff: 01/25/2018
 # <a name="transaction-isolation-levels"></a>Niveaux d'isolement des transactions
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne garantit pas que les indicateurs de verrou sont respectés dans les requêtes ayant accès aux métadonnées à partir d'affichages catalogue, de vues de compatibilité, de vues de schémas d'informations et de fonctions intégrées générant des métadonnées.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne garantit pas que les indicateurs de verrou sont respectés dans les requêtes ayant accès aux métadonnées à partir de vues de catalogue, de vues de compatibilité, de vues de schémas d'informations et de fonctions intégrées générant des métadonnées.  
   
  En interne, le [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] ne respecte que le niveau d'isolement READ COMMITTED pour l'accès aux métadonnées. Quand une transaction a un niveau d'isolement correspondant, par exemple, à SERIALIZABLE et qu'un accès aux métadonnées est tenté dans le cadre de cette transaction à partir de vues de catalogue ou de fonctions intégrées générant des métadonnées, les requêtes sont exécutées jusqu'à ce qu'elles soient achevées en tant que READ COMMITTED. Dans le cas d'un isolement d'instantané, l'accès aux métadonnées peut toutefois échouer à cause d'opérations DDL simultanées. Étant donné que les métadonnées sont dépourvues de version, l'accès aux éléments suivants peut échouer en cas d'isolement d'instantané :  
   
--   vues de catalogue ;  
+-   Vues de catalogue  
   
--   vues de compatibilité ;  
+-   Vues de compatibilité  
   
 -   Vues des schémas d'informations  
   
--   fonctions intégrées générant des métadonnées ;  
+-   Fonctions intégrées générant des métadonnées  
   
--   **sp_help** groupe de procédures stockées  
+-   Groupe **sp_help** de procédures stockées  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Procédures de catalogue natives Client  
+-   Procédures de catalogue [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client  
   
--   vues et fonctions de gestion dynamique.  
+-   Vues et fonctions de gestion dynamique  
   
- Pour plus d’informations sur les niveaux d’isolation, consultez [SET TRANSACTION ISOLATION LEVEL &#40; Transact-SQL &#41; ](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md).  
+ Pour plus d’informations sur les niveaux d’isolement, consultez [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md).  
   
  Le tableau suivant comporte une synthèse d'accès aux métadonnées pour les différents niveaux d'isolement.  
   

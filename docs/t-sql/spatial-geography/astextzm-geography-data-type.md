@@ -1,5 +1,5 @@
 ---
-title: "AsTextZM (Type de données geography) | Documents Microsoft"
+title: "AsTextZM (type de données geography) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -36,7 +36,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="astextzm-geography-data-type"></a>AsTextZM (type de données geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Retourne la représentation de la réplication continue en cluster (WKT, Open Geospatial Consortium (OGC) Well-Known Text) d’un **geography** instance augmentée des **Z** (élévation) et **M** les valeurs (mesure) apportées par l’instance.  
+  Retourne la représentation OGC (Open Geospatial Consortium) WKT (Well-Known Text) d’une instance **geography**, à laquelle s’ajoutent les valeurs **Z** (élévation) et **M** (mesure) apportées par l’instance.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -46,14 +46,14 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>Types de retour  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]type de retour : **nvarchar (max)**  
+ Type de retour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] : **nvarchar(max)**  
   
  Type de retour CLR : **SqlChars**  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
   
 ## <a name="examples"></a>Exemples  
- L’exemple suivant crée un `Point` instance qui contient **Z** (élévation) et **M** les valeurs (mesure). `STAsText()`Sélectionne les valeurs WKT, (-122.34900 47.65100) ; `AsTextZM()` sélectionne les mêmes valeurs WKT et retourne également les valeurs de **Z** et **M**, ce qui (-122.34900 47.65100 10.3 12).  
+ L’exemple suivant crée une instance `Point` qui contient les valeurs **Z** (élévation) et **M** (mesure). `STAsText()` sélectionne les valeurs WKT (-122.34900 47.65100) ; `AsTextZM()` sélectionne les mêmes valeurs WKT et retourne également les valeurs pour **Z** et **M**, ce qui donne (-122.34900 47.65100 10.3 12).  
   
 ```  
 DECLARE @g geography;  
@@ -62,9 +62,9 @@ SELECT @g.STAsText();
 SELECT @g.AsTextZM();  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- [Méthodes étendues sur les Instances Geography](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)   
- [M &#40; Type de données geography &#41;](../../t-sql/spatial-geography/m-geography-data-type.md)   
- [Z &#40; Type de données geography &#41;](../../t-sql/spatial-geography/z-geography-data-type.md)  
+## <a name="see-also"></a> Voir aussi  
+ [Méthodes étendues sur des instances Geography](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)   
+ [M &#40;type de données geography&#41;](../../t-sql/spatial-geography/m-geography-data-type.md)   
+ [Z &#40;type de données geography&#41;](../../t-sql/spatial-geography/z-geography-data-type.md)  
   
   

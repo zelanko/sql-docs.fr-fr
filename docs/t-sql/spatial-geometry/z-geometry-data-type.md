@@ -1,5 +1,5 @@
 ---
-title: "Z (Type de données geometry) | Documents Microsoft"
+title: "Z (type de données geometry) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -44,16 +44,16 @@ Valeur Z (élévation) de l'instance. La sémantique de la valeur d'élévation 
 ```  
   
 ## <a name="return-types"></a>Types de retour  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]type : **float**  
+ Type [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] : **float**  
   
  Type CLR : **SqlDouble**  
   
-## <a name="remarks"></a>Notes  
- La valeur de cette propriété sera null si l’instance géométrique n’est pas un point, ainsi que pour toute **Point** de l’instance pour laquelle il n’est pas définie.  
+## <a name="remarks"></a>Notes   
+ La valeur de cette propriété est Null si l’instance geometry n’est pas un point, ainsi que pour toute instance **Point** pour laquelle elle n’est pas définie.  
   
  Cette propriété est en lecture seule.  
   
- Les coordonnées Z ne sont pas utilisées dans aucun calcul effectué par la bibliothèque et n’est pas reportées dans aucun calcul de bibliothèque.  
+ Les coordonnées Z ne sont pas utilisées dans les calculs effectués par la bibliothèque et ne sont pas reportées dans les calculs de bibliothèque.  
   
 ## <a name="examples"></a>Exemples  
  L'exemple suivant crée une instance `Point` avec des valeurs Z (élévation) et M (mesure) et utilise `Z` pour extraire la valeur Z de l'instance.  
@@ -64,9 +64,9 @@ SET @g = geometry::STGeomFromText('POINT(1 2 3 4)', 0);
 SELECT @g.Z;  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- [M &#40; Type de données geometry &#41;](../../t-sql/spatial-geometry/m-geometry-data-type.md)   
- [AsTextZM &#40; Type de données geometry &#41;](../../t-sql/spatial-geometry/astextzm-geometry-data-type.md)   
+## <a name="see-also"></a> Voir aussi  
+ [M &#40;type de données geometry&#41;](../../t-sql/spatial-geometry/m-geometry-data-type.md)   
+ [AsTextZM &#40;type de données geometry&#41;](../../t-sql/spatial-geometry/astextzm-geometry-data-type.md)   
  [Méthodes étendues sur des instances geometry](../../t-sql/spatial-geometry/extended-methods-on-geometry-instances.md)  
   
   

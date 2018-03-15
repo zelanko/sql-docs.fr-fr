@@ -1,5 +1,5 @@
 ---
-title: "CLÉ principale du SERVICE de restauration (Transact-SQL) | Documents Microsoft"
+title: RESTORE SERVICE MASTER KEY (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -53,16 +53,16 @@ RESTORE SERVICE MASTER KEY FROM FILE = 'path_to_file'
 ```  
   
 ## <a name="arguments"></a>Arguments  
- FICHIER **='***chemin_fichier***'**  
- Spécifie le chemin d'accès complet, y compris le nom de fichier, de la clé principale de service stockée. *chemin_fichier* peut être un chemin d’accès local ou un chemin d’accès UNC vers un emplacement réseau.  
+ FILE **='***path_to_file***'**  
+ Spécifie le chemin d'accès complet, y compris le nom de fichier, de la clé principale de service stockée. *path_to_file* peut être un chemin local ou un chemin UNC d’un emplacement réseau.  
   
- Mot de passe **='***mot de passe***'**  
+ PASSWORD **='***password***'**  
  Spécifie le mot de passe requis pour déchiffrer la clé principale de service à importer à partir d'un fichier.  
   
  FORCE  
  Impose le remplacement de la clé principale de service, même au risque de perdre des données.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Lorsque la clé principale de service est restaurée, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] déchiffre toutes les clés et les secrets qui ont été chiffrés au moyen de la clé principale de service en cours, puis les chiffre au moyen de la clé principale de service chargée à partir du fichier de sauvegarde.  
   
  Si l'un des déchiffrements échoue, la restauration échoue. Vous pouvez utiliser l'option FORCE pour ignorer les erreurs, mais cette option entraîne la perte de toutes les données ne pouvant pas être déchiffrées.  
@@ -72,7 +72,7 @@ RESTORE SERVICE MASTER KEY FROM FILE = 'path_to_file'
   
  La régénération de la hiérarchie de chiffrement est une opération qui consomme beaucoup de ressources. Par conséquent, vous devez planifier cette opération au cours d'une période de faible demande.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Requiert l'autorisation CONTROL SERVER sur le serveur.  
   
 ## <a name="examples"></a>Exemples  
@@ -85,10 +85,10 @@ RESTORE SERVICE MASTER KEY
 GO  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Clé principale du service](../../relational-databases/security/encryption/service-master-key.md)   
- [ALTER SERVICE MASTER KEY &#40; Transact-SQL &#41;](../../t-sql/statements/alter-service-master-key-transact-sql.md)   
- [BACKUP SERVICE MASTER KEY &#40; Transact-SQL &#41;](../../t-sql/statements/backup-service-master-key-transact-sql.md)   
+ [ALTER SERVICE MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-service-master-key-transact-sql.md)   
+ [BACKUP SERVICE MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/backup-service-master-key-transact-sql.md)   
  [Hiérarchie de chiffrement](../../relational-databases/security/encryption/encryption-hierarchy.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Insert (DML XML) | Documents Microsoft
+title: insert (DML XML) | Microsoft Docs
 ms.custom: 
 ms.date: 07/26/2017
 ms.prod: sql-non-specified
@@ -49,24 +49,24 @@ insert
   
 ## <a name="arguments"></a>Arguments  
  *Expression1*  
- Identifie un ou plusieurs nœuds à insérer. Cela peut être une instance XML constante ; une référence à une instance de type de données XML typée de la même collection de schémas XML à laquelle la méthode de modification est appliquée ; une instance de type de données XML non typée à l’aide d’une manière autonome **SQL :Column()**/**SQL :variable()** fonction ; ou une expression XQuery. L'expression peut résulter en un nœud, un nœud de texte ou une séquence ordonnée de nœuds. Le résultat ne peut pas être le nœud racine (/). Si l'expression a pour résultat une valeur ou une séquence de valeurs, ces valeurs sont insérées en tant que nœud de texte unique avec un espace séparant chaque valeur dans la séquence. Si vous spécifiez plusieurs nœuds sous la forme d'une constante, les nœuds sont inclus entre parenthèses et sont séparés par des virgules. Vous ne pouvez pas insérer des séquences hétérogènes telles qu'une séquence d'éléments, d'attributs ou de valeurs. Si *Expression1* correspond à une séquence vide, aucune insertion n’a lieu et aucune erreur est retournée.  
+ Identifie un ou plusieurs nœuds à insérer. Il peut s’agir d’une instance XML constante, d’une référence à une instance de type de données XML typée de la même collection de schémas XML à laquelle la méthode modify est appliquée, d’une instance de type de données XML non typée à l’aide d’une fonction **sql:column()**/**sql:variable()** autonome ou encore d’une expression de requête Xml. L'expression peut résulter en un nœud, un nœud de texte ou une séquence ordonnée de nœuds. Le résultat ne peut pas être le nœud racine (/). Si l'expression a pour résultat une valeur ou une séquence de valeurs, ces valeurs sont insérées en tant que nœud de texte unique avec un espace séparant chaque valeur dans la séquence. Si vous spécifiez plusieurs nœuds sous la forme d'une constante, les nœuds sont inclus entre parenthèses et sont séparés par des virgules. Vous ne pouvez pas insérer des séquences hétérogènes telles qu'une séquence d'éléments, d'attributs ou de valeurs. Si *Expression1* est une séquence vide, aucune insertion n’a lieu et aucune erreur n’est retournée.  
   
  en  
- Nœuds identifiés par *Expression1* sont insérés en tant que descendants directs (nœuds enfants) du nœud identifié par *Expression2*. Si le nœud dans *Expression2* dispose déjà d’un ou plusieurs nœuds enfants, vous devez utiliser soit **en tant que premier** ou **en dernier** pour spécifier où vous souhaitez que le nouveau nœud ajouté. Par exemple, respectivement au début et à la fin de la liste des enfants. Le **en tant que premier** et **en dernier** sont ignorées lors de l’insertion d’attributs.  
+ Les nœuds identifiés par *Expression1* sont insérés en tant que descendants directs (nœuds enfants) du nœud identifié par *Expression2*. Si le nœud dans *Expression2* a déjà un ou plusieurs nœuds enfants, vous devez utiliser **as first** ou **as last** pour spécifier où le nouveau nœud doit être ajouté. Par exemple, respectivement au début et à la fin de la liste des enfants. Les mots clés **as first** et **as last** sont ignorés lorsque des attributs sont insérés.  
   
  after  
- Nœuds identifiés par *Expression1* sont insérés en tant que frères directement après le nœud identifié par *Expression2*. Le **après** mot clé ne peut pas être utilisé pour insérer des attributs. Par exemple, il ne peut pas être utilisé pour insérer un constructeur d'attribut ou pour retourner un attribut à partir d'une requête XQuery.  
+ Les nœuds identifiés par *Expression1* sont insérés en tant que frères directement après le nœud identifié par *Expression2*. Le mot clé **after** ne peut pas être utilisé pour insérer des attributs. Par exemple, il ne peut pas être utilisé pour insérer un constructeur d'attribut ou pour retourner un attribut à partir d'une requête XQuery.  
   
  before  
- Nœuds identifiés par *Expression1* sont insérés en tant que frères directement avant le nœud identifié par *Expression2*. Le **avant** mot clé ne peut pas être utilisé lors de l’insertion d’attributs. Par exemple, il ne peut pas être utilisé pour insérer un constructeur d'attribut ou pour retourner un attribut à partir d'une requête XQuery.  
+ Les nœuds identifiés par *Expression1* sont insérés en tant que frères directement avant le nœud identifié par *Expression2*. Le mot clé **before** ne peut pas être utilisé pour l’insertion d’attributs. Par exemple, il ne peut pas être utilisé pour insérer un constructeur d'attribut ou pour retourner un attribut à partir d'une requête XQuery.  
   
  *Expression2*  
- Identifie un nœud. Les nœuds identifiés dans *Expression1* sont insérés par rapport au nœud identifié par *Expression2*. Il peut s'agir d'une expression XQuery qui retourne une référence à un nœud qui existe dans le document actuellement référencé. Si plusieurs nœuds sont retournés, l'insertion échoue. Si *Expression2* retourne une séquence vide, aucune insertion n’a lieu et aucune erreur est retournées. Si *Expression2* est statiquement pas un singleton, une erreur statique est retournée. *Expression2* ne peut pas être une instruction de traitement, un commentaire ou un attribut. Notez que *Expression2* doit être une référence à un nœud existant dans le document et pas un nœud construit.  
+ Identifie un nœud. Les nœuds identifiés dans *Expression1* sont insérés par rapport au nœud identifié par *Expression2*. Il peut s'agir d'une expression XQuery qui retourne une référence à un nœud qui existe dans le document actuellement référencé. Si plusieurs nœuds sont retournés, l'insertion échoue. Si *Expression2* retourne une séquence vide, aucune insertion n’a lieu et aucune erreur n’est retournée. Si *Expression2* n’est statiquement pas un singleton, une erreur statique est générée. *Expression2* ne peut pas être une instruction, un commentaire ni un attribut de traitement. Notez que *Expression2* doit être une référence à un nœud existant dans le document et pas un nœud construit.  
   
 ## <a name="examples"></a>Exemples  
   
 ### <a name="a-inserting-element-nodes-into-the-document"></a>A. Insertion de nœuds d'élément dans le document  
- L'exemple suivant illustre l'insertion d'éléments dans un document. Tout d’abord, un document XML est attribué à une variable de **xml** type. Ensuite, plusieurs **insérer** instructions XML DML, l’exemple illustre la façon dont les nœuds d’élément sont insérés dans le document. Après chaque insertion, l'instruction SELECT affiche le résultat.  
+ L'exemple suivant illustre l'insertion d'éléments dans un document. En premier lieu, un document XML est affecté à une variable de type **xml**. Ensuite, par l’intermédiaire de plusieurs instructions DML XML **insert**, l’exemple illustre l’insertion des nœuds d’élément dans le document. Après chaque insertion, l'instruction SELECT affiche le résultat.  
   
 ```  
 USE AdventureWorks;  
@@ -113,7 +113,7 @@ GO
  Notez que des expressions de chemin d'accès différentes dans cet exemple spécifient "[1]" comme exigence par type statique. Cela garantit l'unicité du nœud cible.  
   
 ### <a name="b-inserting-multiple-elements-into-the-document"></a>B. Insertion de plusieurs éléments dans le document  
- Dans l’exemple suivant, un document est affecté à une variable de **xml** type. Ensuite, une séquence de deux éléments, qui représente les fonctionnalités du produit, est attribuée à une deuxième variable de **xml** type. Cette séquence est alors insérée dans la première variable.  
+ Dans l’exemple suivant, un document est affecté au préalable à une variable de type **xml**. Ensuite, une séquence de deux éléments, représentant les caractéristiques du produit, est affectée à une deuxième variable de type **xml**. Cette séquence est alors insérée dans la première variable.  
   
 ```  
 USE AdventureWorks;  
@@ -136,7 +136,7 @@ GO
 ```  
   
 ### <a name="c-inserting-attributes-into-a-document"></a>C. Insertion d'attributs dans un document  
- L’exemple suivant illustre la façon dont les attributs sont insérés dans un document. Tout d’abord, un document est affecté à un **xml** variable de type. Ensuite, une série de **insérer** instructions XML DML est utilisé pour insérer des attributs dans le document. Après chaque insertion d'attribut, l'instruction SELECT affiche le résultat.  
+ L’exemple suivant montre comment insérer des attributs dans un document. En premier lieu, un document est affecté à une variable de type **xml**. Ensuite, une série d’instructions DML XML **insert** est utilisée pour insérer les attributs dans le document. Après chaque insertion d'attribut, l'instruction SELECT affiche le résultat.  
   
 ```  
 USE AdventureWorks;  
@@ -175,7 +175,7 @@ GO
 ```  
   
 ### <a name="d-inserting-a-comment-node"></a>D. Insertion d'un nœud de commentaire  
- Dans cette requête, un document XML est affecté à une variable de **xml** type. Ensuite, XML DML est utilisé pour insérer un nœud de commentaire après le premier élément <`step`>.  
+ Dans cette requête, un document XML est d’abord affecté à une variable de type **xml**. Ensuite, XML DML est utilisé pour insérer un nœud de commentaire après le premier élément <`step`>.  
   
 ```  
 USE AdventureWorks;  
@@ -197,7 +197,7 @@ GO
 ```  
   
 ### <a name="e-inserting-a-processing-instruction"></a>E. Insertion d'une instruction de traitement  
- Dans la requête suivante, un document XML est affecté à une variable de **xml** type. Ensuite, le mot clé XML DML est utilisé pour insérer une instruction de traitement au début du document.  
+ Dans la requête suivante, un document XML est d’abord affecté à une variable de type **xml**. Ensuite, le mot clé XML DML est utilisé pour insérer une instruction de traitement au début du document.  
   
 ```  
 USE AdventureWorks;  
@@ -219,7 +219,7 @@ GO
 ```  
   
 ### <a name="f-inserting-data-using-a-cdata-section"></a>F. Insertion de données à l'aide d'une section CDATA  
- Lorsque vous insérez du texte qui inclut des caractères non valides en XML, tels que < ou >, vous pouvez utiliser des sections CDATA pour insérer les données comme cela est illustré dans la requête ci-dessous. La requête spécifie une section CDATA, mais elle est ajoutée comme nœud de texte avec les caractères non valides convertis en entités. Par exemple, ' <' est enregistré sous la forme &lt;.  
+ Lorsque vous insérez du texte qui inclut des caractères non valides en XML, tels que < ou >, vous pouvez utiliser des sections CDATA pour insérer les données comme cela est illustré dans la requête ci-dessous. La requête spécifie une section CDATA, mais elle est ajoutée comme nœud de texte avec les caractères non valides convertis en entités. Par exemple, '<' est enregistré sous la forme &lt;.  
   
 ```  
 USE AdventureWorks;  
@@ -250,7 +250,7 @@ GO
 ```  
   
 ### <a name="g-inserting-text-node"></a>G. Insertion d'un nœud de texte  
- Dans cette requête, un document XML est affecté à une variable de **xml** type. Ensuite, XML DML est utilisé pour insérer un nœud de texte comme premier enfant de l'élément <`Root`>. Le constructeur de texte est utilisé pour spécifier le texte.  
+ Dans cette requête, un document XML est d’abord affecté à une variable de type **xml**. Ensuite, XML DML est utilisé pour insérer un nœud de texte comme premier enfant de l'élément <`Root`>. Le constructeur de texte est utilisé pour spécifier le texte.  
   
 ```  
 USE AdventureWorks;  
@@ -272,7 +272,7 @@ SELECT @myDoc;
 ```  
   
 ### <a name="h-inserting-a-new-element-into-an-untyped-xml-column"></a>H. Insertion d'un nouvel élément dans une colonne xml non typée  
- L’exemple suivant applique XML DML pour mettre à jour une instance XML stockée dans une **xml** colonne de type :  
+ L’exemple suivant applique une instruction DML XML pour mettre à jour une instance XML stockée dans une colonne de type **xml** :  
   
 ```  
 USE AdventureWorks;  
@@ -306,7 +306,7 @@ GO
 ```  
   
 ### <a name="i-inserting-based-on-an-if-condition-statement"></a>I. Insertion basée sur une instruction de condition if  
- Dans l’exemple suivant, une condition IF est spécifiée dans Expression1 dans le **insérer** instruction XML DML. Si la condition a la valeur True, un attribut est ajouté à l'élément <`WorkCenter`>.  
+ Dans l’exemple suivant, une condition IF est spécifiée dans le cadre d’Expression1, dans l’instruction DML XML **insert**. Si la condition a la valeur True, un attribut est ajouté à l'élément <`WorkCenter`>.  
   
 ```  
 USE AdventureWorks;  
@@ -330,7 +330,7 @@ SELECT @myDoc;
 GO  
 ```  
   
- L’exemple suivant est similaire, à ceci près que le **insérer** instruction XML DML insère un élément dans le document si la condition est True. C'est-à-dire, si l'élément <`WorkCenter`> possède deux ou moins de deux éléments enfants <`step`>.  
+ L’exemple suivant est similaire, si ce n’est que l’instruction DML XML **insert** insère un élément dans le document si la condition a la valeur True. C'est-à-dire, si l'élément <`WorkCenter`> possède deux ou moins de deux éléments enfants <`step`>.  
   
 ```  
 USE AdventureWorks;  
@@ -354,7 +354,7 @@ SELECT @myDoc;
 GO  
 ```  
   
- Voici le résultat obtenu :  
+ Voici le résultat obtenu :  
   
 ```  
 <Root>  
@@ -366,9 +366,9 @@ GO
 ```  
   
 ### <a name="j-inserting-nodes-in-a-typed-xml-column"></a>J. Insertion de nœuds dans une colonne xml typée  
- Cet exemple insère un élément et un attribut dans une instructions de fabrication XML stockée dans un typé **xml** colonne.  
+ Dans cet exemple, un élément et un attribut sont insérés dans un document XML d’instructions de fabrication, stocké dans une colonne **xml** typée.  
   
- Dans l’exemple, vous créez une table (T) avec un typé **xml** colonne, dans la base de données AdventureWorks. Ensuite, vous copiez une instance XML des instructions de fabrication de la colonne Instructions dans la table ProductModel vers la table T. Les insertions sont ensuite appliquées à l'instance XML dans la table T.  
+ Vous créez d’abord une table (T) avec une colonne **xml** typée dans la base données AdventureWorks. Ensuite, vous copiez une instance XML des instructions de fabrication de la colonne Instructions dans la table ProductModel vers la table T. Les insertions sont ensuite appliquées à l'instance XML dans la table T.  
   
 ```  
 USE AdventureWorks;  
@@ -415,10 +415,10 @@ DROP TABLE T ;
 GO             
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Comparer du XML typé et du XML non typé](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   
  [Créer des instances de données XML](../../relational-databases/xml/create-instances-of-xml-data.md)   
- [Méthodes des types de données xml](../../t-sql/xml/xml-data-type-methods.md)   
- [XML Data Modification Language &#40; XML DML &#41;](../../t-sql/xml/xml-data-modification-language-xml-dml.md)  
+ [méthodes de type de données xml](../../t-sql/xml/xml-data-type-methods.md)   
+ [Langage de manipulation de données XML &#40;DML XML&#41;](../../t-sql/xml/xml-data-modification-language-xml-dml.md)  
   
   

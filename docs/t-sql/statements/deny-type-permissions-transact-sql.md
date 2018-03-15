@@ -1,5 +1,5 @@
 ---
-title: REFUSER des autorisations de Type (Transact-SQL) | Documents Microsoft
+title: "DENY – Refuser des autorisations sur un type (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 06/09/2017
 ms.prod: sql-non-specified
@@ -31,7 +31,7 @@ ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="deny-type-permissions-transact-sql"></a>DENY – refus d'autorisations de type (Transact-SQL)
+# <a name="deny-type-permissions-transact-sql"></a>DENY – Refuser des autorisations sur un type (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Permet de refuser des autorisations sur un type dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -58,19 +58,19 @@ DENY permission  [ ,...n ] ON TYPE :: [ schema_name . ] type_name
 ```  
   
 ## <a name="arguments"></a>Arguments  
- *autorisation*  
+ *permission*  
  Spécifie une autorisation qui peut être refusée sur un type. Pour obtenir la liste des autorisations, consultez la section Notes plus loin dans cette rubrique.  
   
- SUR le TYPE **::** [ *nom_schéma***.** ] *type_name*  
- Spécifie le type sur lequel l'autorisation doit être refusée. Le qualificateur d’étendue (**::**) est requis. Si *nom_schéma* n’est pas spécifié, le schéma par défaut est utilisé. Si *nom_schéma* est spécifié, le qualificateur d’étendue de schéma (**.**) est requis.  
+ ON TYPE **::** [ *schema_name***.** ] *type_name*  
+ Spécifie le type sur lequel l'autorisation doit être refusée. Le qualificateur d’étendue (**::**) est obligatoire. Si *schema_name* n’est pas spécifié, le schéma par défaut est utilisé. Si *schema_name* est spécifié, le qualificateur d’étendue de schéma (**.**) est obligatoire.  
   
- POUR \<principal_base_de_données >  
+ TO \<database_principal>  
  Spécifie le principal auquel l'autorisation est refusée.  
   
  CASCADE  
  Indique que l'autorisation à refuser est également refusée pour les autres principaux auxquels elle a été accordée par ce principal.  
   
- En tant que \<principal_base_de_données >  
+ AS \<database_principal>  
  Spécifie un principal dont le principal qui exécute cette requête dérive son droit de refuser l'autorisation.  
   
  *Database_user*  
@@ -102,11 +102,11 @@ DENY permission  [ ,...n ] ON TYPE :: [ schema_name . ] type_name
  *Database_user_with_no_login*  
  Spécifie un utilisateur de base de données sans principal au niveau serveur correspondant.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Un type est un élément sécurisable de niveau schéma inclus dans le schéma qui est son parent dans la hiérarchie des autorisations.  
   
 > [!IMPORTANT]  
->  **GRANT**, **DENY,** et **RÉVOQUER** autorisations ne s’appliquent pas aux types système. Des autorisations peuvent être accordées aux types définis par l'utilisateur. Pour plus d’informations sur les types définis par l’utilisateur, consultez [utilisation des Types définis par l’utilisateur dans SQL Server](../../relational-databases/clr-integration-database-objects-user-defined-types/working-with-user-defined-types-in-sql-server.md).  
+>  Les autorisations **GRANT**, **DENY** et **REVOKE** ne s’appliquent pas aux types système. Des autorisations peuvent être accordées aux types définis par l'utilisateur. Pour plus d’informations sur les types définis par l’utilisateur, consultez [Utilisation des types définis par l’utilisateur dans SQL Server](../../relational-databases/clr-integration-database-objects-user-defined-types/working-with-user-defined-types-in-sql-server.md).  
   
  Les autorisations les plus spécifiques et limitées qu'il est possible de refuser sur un type sont répertoriées dans le tableau ci-dessous, avec les autorisations plus générales qui les incluent de manière implicite.  
   
@@ -118,7 +118,7 @@ DENY permission  [ ,...n ] ON TYPE :: [ schema_name . ] type_name
 |TAKE OWNERSHIP|CONTROL|CONTROL|  
 |VIEW DEFINITION|CONTROL|VIEW DEFINITION|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Requiert l'autorisation CONTROL sur le type. Si vous utilisez la clause AS, le principal spécifié doit posséder le type sur lequel les autorisations doivent être refusées.  
   
 ## <a name="examples"></a>Exemples  
@@ -130,9 +130,9 @@ DENY VIEW DEFINITION ON TYPE::Telemarketing.PhoneNumber
 GO  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- [Type d’octroi des autorisations &#40; Transact-SQL &#41;](../../t-sql/statements/grant-type-permissions-transact-sql.md)   
- [RÉVOQUER les autorisations de Type &#40; Transact-SQL &#41;](../../t-sql/statements/revoke-type-permissions-transact-sql.md)   
+## <a name="see-also"></a> Voir aussi  
+ [GRANT – Accorder des autorisations sur un type &#40;Transact-SQL&#41;](../../t-sql/statements/grant-type-permissions-transact-sql.md)   
+ [REVOKE – Révoquer des autorisations sur un type &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-type-permissions-transact-sql.md)   
  [CREATE TYPE &#40;Transact-SQL&#41;](../../t-sql/statements/create-type-transact-sql.md)   
  [Principaux &#40;moteur de base de données&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
  [Autorisations &#40;moteur de base de données&#41;](../../relational-databases/security/permissions-database-engine.md)   

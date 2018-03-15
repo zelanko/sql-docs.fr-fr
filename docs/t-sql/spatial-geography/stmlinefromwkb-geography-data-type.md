@@ -1,5 +1,5 @@
 ---
-title: "STMLineFromWKB (Type de données geography) | Documents Microsoft"
+title: "STMLineFromWKB (type de données geography) | Microsoft Docs"
 ms.custom: 
 ms.date: 07/30/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stmlinefromwkb-geography-data-type"></a>STMLineFromWKB (type de données geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Retourne un **geographyMultiLineString** instance à partir d’une représentation de l’Open Geospatial Consortium (OGC) WKB Well-Known Binary ().
+Retourne une instance **geographyMultiLineString** à partir d’une représentation OGC (Open Geospatial Consortium) WKB (Well-Known Binary).
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -45,23 +45,23 @@ STMLineFromWKB ( 'WKB_multilinestring' , SRID )
   
 ## <a name="arguments"></a>Arguments  
  *WKB_multilinestring*  
- Est la représentation WKB de le **geographyMultiLineString** instance à retourner. *WKB_multilinestring* est un **varbinary (max)** expression.  
+ Représentation WKB de l’instance **geographyMultiLineString** à retourner. *WKB_multilinestring* est une expression **varbinary(max)**.  
   
  *SRID*  
- Est un **int** expression représentant les données spatiales ID de référence (SRID) de la **geographyMultiLineString** instance à retourner.  
+ Expression **int** qui représente le SRID (ID de référence spatiale) de l’instance **geographyMultiLineString** à retourner.  
   
 ## <a name="return-types"></a>Types de retour  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]type de retour : **geography**  
+ Type de retour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] : **geography**  
   
  Type de retour CLR : **SqlGeography**  
   
  Type OGC : **MultiLineString**  
   
-## <a name="remarks"></a>Notes  
- Cette méthode lève un **FormatException** si l’entrée n’est pas correctement mise en forme.  
+## <a name="remarks"></a>Notes   
+ Cette méthode lève **FormatException** si l’entrée n’est pas au format approprié.  
   
 ## <a name="examples"></a>Exemples  
- L’exemple suivant utilise `STMLineFromWKB()` pour créer un `geography`instance.  
+ L’exemple suivant utilise `STMLineFromWKB()` pour créer une instance `geography`.  
   
 ```  
 DECLARE @g geography;  
@@ -69,7 +69,7 @@ SET @g = geography::STMLineFromWKB(0x010500000002000000010200000005000000F4FDD47
 SELECT @g.ToString();  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Méthodes geography statiques de l’OGC](../../t-sql/spatial-geography/ogc-static-geography-methods.md)  
   
   

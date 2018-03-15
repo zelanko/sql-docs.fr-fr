@@ -1,5 +1,5 @@
 ---
-title: "STBuffer (Type de données geometry) | Documents Microsoft"
+title: "STBuffer (type de données geometry) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stbuffer-geometry-data-type"></a>STBuffer (type de données geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Retourne un objet géométrique qui représente l’union de tous les points dont la distance d’un **geometry** instance est inférieure ou égale à une valeur spécifiée.
+Retourne un objet géométrique qui représente l’union de tous les points dont la distance par rapport à une instance **geometry** est inférieure ou égale à une valeur spécifique.
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -45,35 +45,35 @@ Retourne un objet géométrique qui représente l’union de tous les points don
   
 ## <a name="arguments"></a>Arguments  
  *distance*  
- Est une valeur de type **float** (**double** dans le .NET Framework) qui spécifie la distance à partir de l’instance géométrique autour de laquelle calculer la mémoire tampon.  
+ Valeur de type **float** (**double** dans le .NET Framework), qui spécifie la distance de l’instance geometry autour de laquelle calculer la mémoire tampon.  
   
 ## <a name="return-types"></a>Types de retour  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]type de retour : **geometry**  
+ Type de retour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] : **geometry**  
   
  Type de retour CLR : **SqlGeometry**  
   
-## <a name="remarks"></a>Notes  
- `STBuffer()`calcule une mémoire tampon comme [BufferWithTolerance](../../t-sql/spatial-geometry/bufferwithtolerance-geometry-data-type.md), en spécifiant *la tolérance de panne* = distance \* .001 et *relatif* = **false**.  
+## <a name="remarks"></a>Notes   
+ `STBuffer()` calcule une mémoire tampon de la même manière que [BufferWithTolerance](../../t-sql/spatial-geometry/bufferwithtolerance-geometry-data-type.md), en spécifiant *tolerance* = distance \* 0,001, et *relative* = **false**.  
   
- Lorsque *distance* > 0, puis un **polygone** ou **MultiPolygon** instance est retournée.  
+ Quand *distance* > 0, une instance **Polygon** ou **MultiPolygon** est retournée.  
   
 > [!NOTE]  
->  Puisque la distance est un **float**, une valeur très petite peut être équivalente à zéro dans les calculs.  Dans ce cas, une copie de l’appel **geometry** instance est retournée.  Consultez [float et real &#40; Transact-SQL &#41;](../../t-sql/data-types/float-and-real-transact-sql.md)  
+>  Dans la mesure où distance est de type **float**, une valeur très petite peut être équivalente à zéro dans les calculs.  Quand cela se produit, une copie de l’instance **geometry** appelante est retournée.  Consultez [float et real &#40;Transact-SQL&#41;](../../t-sql/data-types/float-and-real-transact-sql.md)  
   
- Lorsque *distance* = 0, une copie de l’appel **geometry** instance est retournée.  
+ Quand *distance* = 0, une copie de l’instance **geometry** appelante est retournée.  
   
- Lorsque *distance* < 0, puis  
+ Quand *distance* < 0, alors  
   
--   Vide **GeometryCollection** instance est retournée lorsque les dimensions de l’instance sont 0 ou 1.  
+-   une instance **GeometryCollection** vide est retournée quand les dimensions de l’instance sont 0 ou 1.  
   
 -   une mémoire tampon négative est retournée lorsque les dimensions de l'instance sont de 2 ou plus.  
   
     > [!NOTE]  
-    >  Une mémoire tampon négative peut également créer vide **GeometryCollection** instance.  
+    >  Une mémoire tampon négative peut également créer une instance **GeometryCollection** vide.  
   
  Une mémoire tampon négative supprime tous les points situés dans la distance donnée de la limite de la géométrie.  
   
- L’erreur entre la mémoire tampon théorique et la mémoire tampon calculée est max (la tolérance de panne, les extensions * 1.E-7) où la tolérance de panne = distance \* .001. Pour plus d’informations sur les étendues, consultez [référence de méthode de Type de données geometry](http://msdn.microsoft.com/library/d88e632b-6b2f-4466-a15f-9fbef1a347a7).  
+ L’erreur entre la mémoire tampon théorique et la mémoire tampon calculée correspond à max (tolerance, étendues * 1E-7), où tolerance = distance \* 0,001. Pour plus d’informations sur les étendues, consultez [Référence de méthodes de type de données geometry](http://msdn.microsoft.com/library/d88e632b-6b2f-4466-a15f-9fbef1a347a7).  
   
 ## <a name="examples"></a>Exemples  
   
@@ -102,17 +102,17 @@ Retourne un objet géométrique qui représente l’union de tous les points don
  ```  
   
 > [!NOTE]  
->  Une instance `Polygon` est retournée au lieu d'une instance `CurvePolygon`.  Pour retourner un `CurvePolygon` une instance, consultez [BufferWithCurves &#40; Type de données geometry &#41;](../../t-sql/spatial-geometry/bufferwithcurves-geometry-data-type.md)  
+>  Une instance `Polygon` est retournée au lieu d'une instance `CurvePolygon`.  Pour retourner une instance `CurvePolygon`, consultez [BufferWithCurves &#40;type de données geometry&#41;](../../t-sql/spatial-geometry/bufferwithcurves-geometry-data-type.md)  
   
 ### <a name="d-calling-stbuffer-with-a-negative-parameter-value-that-returns-an-empty-instance"></a>D. Appel de STBuffer() avec une valeur de paramètre négative qui retourne une instance vide  
- L’exemple suivant montre ce qui se produit lorsque le *distance* paramètre est égal à -2 pour l’exemple précédent.  
+ L’exemple suivant montre ce qui se passe quand le paramètre *distance* est égal à -2 pour l’exemple précédent.  
   
 ```
  DECLARE @g geometry = 'CURVEPOLYGON(COMPOUNDCURVE(CIRCULARSTRING(0 4, 4 0, 8 4), (8 4, 0 4)))'; 
  SELECT @g.STBuffer(-2).ToString();
  ```  
   
- Cela **sélectionnez** instruction retourne un`GEOMETRYCOLLECTION EMPTY.`  
+ Cette instruction **SELECT** retourne `GEOMETRYCOLLECTION EMPTY.`  
   
 ### <a name="e-calling-stbuffer-with-parametervalue--0"></a>E. Appel de STBuffer() avec parameter_value = 0  
  L'exemple suivant retourne une copie de l'instance `geometry` appelante :  
@@ -167,10 +167,10 @@ Retourne un objet géométrique qui représente l’union de tous les points don
  SELECT @g.STBuffer(1.6).ToString();
  ```  
   
- Les deux premières **sélectionnez** instructions retournent un `MultiPolygon` de l’instance, car le paramètre *distance* est inférieure ou égale à 1/2 la distance entre les deux points (1 1) et (1 4). La troisième **sélectionnez** instruction retourne un `Polygon` de l’instance, car les instances mises en mémoire tampon des deux points (1 1) et (1 4) se chevauchent.  
+ Les deux premières instructions **SELECT** retournent une instance `MultiPolygon`, car le paramètre *distance* est inférieur ou égal à 1/2 de la distance entre les deux points (1 1) et (1 4). La troisième instruction **SELECT** retourne une instance `Polygon`, car les instances mises en mémoire tampon des deux points (1 1) et (1 4) se chevauchent.  
   
-## <a name="see-also"></a>Voir aussi  
- [BufferWithTolerance &#40; Type de données geometry &#41;](../../t-sql/spatial-geometry/bufferwithtolerance-geometry-data-type.md)   
+## <a name="see-also"></a> Voir aussi  
+ [BufferWithTolerance &#40;type de données geometry&#41;](../../t-sql/spatial-geometry/bufferwithtolerance-geometry-data-type.md)   
  [Méthodes OGC sur des instances geography](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   
   

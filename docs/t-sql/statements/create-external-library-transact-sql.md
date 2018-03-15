@@ -1,7 +1,7 @@
 ---
-title: "CRÉER la bibliothèque externe (Transact-SQL) | Documents Microsoft"
+title: CREATE EXTERNAL LIBRARY (Transact-SQL) | Microsoft Docs
 ms.custom: 
-ms.date: 10/05/2017
+ms.date: 02/25/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
@@ -16,28 +16,32 @@ f1_keywords:
 - CREATE_EXTERNAL_LIBRARY_TSQL
 - EXTERNAL LIBRARY
 - EXTERNAL_LIBRARY_TSQL
-dev_langs: TSQL
-helpviewer_keywords: CREATE EXTERNAL LIBRARY
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- CREATE EXTERNAL LIBRARY
 author: jeannt
 ms.author: jeannt
 manager: craigg
-ms.openlocfilehash: fe1cb90bce5717d194defd2c684d7b20fc29a061
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.openlocfilehash: e28716314837225586cf4bd1f80a37c5c6b824ab
+ms.sourcegitcommit: 6e819406554efbd17bbf84cf210d8ebeddcf772d
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/27/2018
 ---
-# <a name="create-external-library-transact-sql"></a>CRÉER la bibliothèque externe (Transact-SQL)  
+# <a name="create-external-library-transact-sql"></a>CREATE EXTERNAL LIBRARY (Transact-SQL)  
 
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]  
 
-Télécharge des packages R sur une base de données à partir du chemin de flux ou un fichier spécifié d’octets.
+Charge des packages R vers une base de données à partir du chemin de fichier ou du flux d’octets spécifié.
 
-Cette instruction sert un mécanisme générique de l’administrateur de base de données de téléchargement des artefacts nécessaires pour tout nouveau runtime de langage externe (R, Python, Java, etc.) et les plateformes de système d’exploitation pris en charge par [!INCLUDE[ssnoversion](../../includes/ssnoversion.md)]. Actuellement seules la langue de R et de la plateforme Windows sont pris en charge.
+Cette instruction sert de mécanisme générique permettant à l’administrateur de base de données de charger des artefacts nécessaires pour tout nouveau runtime de langage externe (R, Python, Java, etc.) et plateformes de système d’exploitation pris en charge par [!INCLUDE[ssnoversion](../../includes/ssnoversion.md)]. 
+
+Actuellement, seul le langage R et la plateforme Windows sont pris en charge. La prise en charge de Python et de Linux est prévue pour une version ultérieure.
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```text
 CREATE EXTERNAL LIBRARY library_name  
     [ AUTHORIZATION owner_name ]  
 FROM <file_spec> [,…2]  
@@ -63,131 +67,151 @@ WITH ( LANGUAGE = 'R' )
 
 **library_name**
 
-Bibliothèques sont ajoutées à la base de données d’une étendue à l’utilisateur. Autrement dit, les noms de bibliothèque sont considérés comme étant uniques dans le contexte d’un utilisateur spécifique ou un propriétaire et les noms de bibliothèque doivent être uniques pour chaque utilisateur. Par exemple, deux utilisateurs **RUser1** et **RUser2** peuvent à la fois individuellement et séparément le téléchargement de la bibliothèque R `ggplot2`.
+Les bibliothèques sont ajoutées à la base de données étendue à l’utilisateur. Autrement dit, les noms des bibliothèques sont considérés comme uniques dans le contexte d’un utilisateur ou d’un propriétaire spécifique, et ils doivent être uniques pour chaque utilisateur. Par exemple, deux utilisateurs **RUser1** et **RUser2** peuvent chacun charger la bibliothèque R `ggplot2` individuellement et séparément.
+
+Les noms de bibliothèques ne peuvent pas être assignés arbitrairement. Le nom de la bibliothèque doit être identique au nom requis pour charger la bibliothèque R à partir de R.
 
 **owner_name**
 
-Spécifie le nom de l’utilisateur ou le rôle de propriétaire de la bibliothèque externe. En l'absence de spécification, la propriété revient à l'utilisateur actuel.
+Spécifie le nom de l’utilisateur ou du rôle propriétaire de la bibliothèque externe. En l'absence de spécification, la propriété revient à l'utilisateur actuel.
 
-Les bibliothèques appartenant au propriétaire de la base de données sont considérés comme globales pour la base de données et d’exécution. En d’autres termes, les propriétaires de base de données peuvent créer des bibliothèques qui contiennent un ensemble commun de bibliothèques ou les packages qui sont partagés par de nombreux utilisateurs. Lorsqu’une bibliothèque externe est créée par un utilisateur autre que le `dbo` , la bibliothèque externe est privée pour cet utilisateur uniquement.
+Les bibliothèques appartenant au propriétaire de la base de données sont considérées comme globales pour la base de données et le runtime. En d’autres termes, les propriétaires de bases de données peuvent créer des bibliothèques qui contiennent un ensemble commun de bibliothèques ou de packages partagés par de nombreux utilisateurs. Quand une bibliothèque externe est créée par un utilisateur autre que l’utilisateur `dbo`, la bibliothèque externe est privée pour cet utilisateur uniquement.
 
-Lorsque l’utilisateur **RUser1** exécute un script R, la valeur de `libPath` peut contenir plusieurs chemins d’accès. Le premier chemin d’accès est toujours le chemin d’accès à la bibliothèque partagée créée par le propriétaire de la base de données. La deuxième partie de `libPath` Spécifie le chemin d’accès contenant les packages téléchargés individuellement par **RUser1**.
+Quand l’utilisateur **RUser1** exécute un script R, la valeur de `libPath` peut contenir plusieurs chemins. Le premier est toujours le chemin de la bibliothèque partagée créée par le propriétaire de la base de données. La deuxième partie de `libPath` spécifie le chemin contenant les packages chargés individuellement par **RUser1**.
 
 **file_spec**
 
-Spécifie le contenu du package pour une plateforme spécifique. Artefact qu’un seul fichier par la plateforme est pris en charge.
+Spécifie le contenu du package pour une plateforme spécifique. Un seul artefact de fichier par plateforme est pris en charge.
 
-Le fichier peut être spécifié sous la forme d’un chemin d’accès local ou un chemin d’accès réseau.
+Le fichier peut être spécifié sous la forme d’un chemin local ou d’un chemin réseau.
 
-Si vous le souhaitez, une plateforme de système d’exploitation pour le fichier peut être spécifiée. Les artefacts qu’un seul fichier ou le contenu est autorisé pour chaque plate-forme de système d’exploitation pour une langue spécifique ou d’un runtime.
+Si vous le souhaitez, vous pouvez spécifier une plateforme de système d’exploitation pour le fichier. Un seul artefact de fichier ou contenu est autorisé pour chaque plateforme de système d’exploitation pour un langage ou un runtime spécifique.
 
 **library_bits**
 
-Spécifie le contenu du package comme un littéral hexadécimal, similaire aux assemblys. Cette option permet aux utilisateurs de créer une bibliothèque pour modifier la bibliothèque s’ils ont l’autorisation requise, mais que vous n’ont pas de chemins d’accès de fichier à n’importe quel dossier sur que le serveur peut accéder.
+Spécifie le contenu du package en tant que littéral hexadécimal, similaire aux assemblys. 
 
-**PLATEFORME = WINDOWS**
+Cette option est utile si vous devez créer une bibliothèque ou modifier une bibliothèque existante (et que vous disposez des autorisations nécessaires), mais que le système de fichiers sur le serveur est restreint et vous ne pouvez pas copier les fichiers de bibliothèque vers un emplacement accessible au serveur.
 
-Spécifie la plateforme pour le contenu de la bibliothèque. La valeur par défaut est la plateforme hôte sur lequel SQL Server est en cours d’exécution. Par conséquent, l’utilisateur ne doit spécifier la valeur. Il est obligatoire en cas où plusieurs plateformes sont prises en charge, ou l’utilisateur doit spécifier une autre plateforme. Windows est la seule plateforme prise en charge.
+**PLATFORM = WINDOWS**
 
-## <a name="remarks"></a>Notes
+Spécifie la plateforme pour le contenu de la bibliothèque. La valeur par défaut est la plateforme hôte sur laquelle SQL Server est en cours d’exécution. Par conséquent, l’utilisateur n’a pas à spécifier la valeur. Elle est obligatoire dans le cas où plusieurs plateformes sont prises en charge, ou quand l’utilisateur a besoin de spécifier une autre plateforme. 
 
-Pour le langage R, lors de l’utilisation d’un fichier, les packages doivent être préparées sous la forme de fichiers d’archive ZIP avec le. Extension ZIP pour Windows. Actuellement, seule la plate-forme Windows est prise en charge
+Dans SQL Server 2017, Windows est la seule plateforme prise en charge.
 
-La `CREATE EXTERNAL LIBRARY` instruction télécharge uniquement les bits de la bibliothèque à la base de données. La bibliothèque n’est pas installée jusqu'à ce qu’un utilisateur exécute un script externe par la suite, en exécutant [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).  
+## <a name="remarks"></a>Notes 
 
-Bibliothèques téléchargées vers l’instance peuvent être public ou privé. Si la bibliothèque est créée par un membre de `dbo`, la bibliothèque est publique et peut être partagée avec tous les utilisateurs. Dans le cas contraire, la bibliothèque est privée pour cet utilisateur uniquement.
+Pour le langage R, lors de l’utilisation d’un fichier, les packages doivent être préparés sous la forme de fichiers d’archives compressés avec l’extension .ZIP pour Windows. Actuellement, seule la plateforme Windows est prise en charge. 
 
-Vous ne pouvez pas utiliser des objets BLOB comme source de données dans la version de SQL Server 2017.
+L’instruction `CREATE EXTERNAL LIBRARY` charge les bits de la bibliothèque vers la base de données. La bibliothèque est installée quand un utilisateur exécute un script externe à l’aide de [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) et appelle le package ou la bibliothèque.
+
+Les bibliothèques chargées vers l’instance peuvent être publiques ou privées. Si la bibliothèque est créée par un membre de `dbo`, elle est publique et peut être partagée avec tous les utilisateurs. Dans le cas contraire, la bibliothèque est privée pour cet utilisateur uniquement.
+
+Vous ne pouvez pas utiliser des objets blob comme source de données dans SQL Server 2017.
 
 ## <a name="permissions"></a>Autorisations
 
-Nécessite le `CREATE ANY EXTERNAL LIBRARY` autorisation.
+Nécessite l’autorisation `CREATE ANY EXTERNAL LIBRARY`.
 
-Pour modifier une bibliothèque requiert l’autorisation séparée, `ALTER ANY EXTERNAL LIBRARY`.
+La modification d’une bibliothèque nécessite l’autorisation distincte `ALTER ANY EXTERNAL LIBRARY`.
 
 ## <a name="examples"></a>Exemples
 
 ### <a name="a-add-an-external-library-to-a-database"></a>A. Ajouter une bibliothèque externe à une base de données  
 
-L’exemple suivant ajoute une bibliothèque externe appelée customPackage à une base de données.
+L’exemple suivant ajoute une bibliothèque externe nommée `customPackage` à une base de données.
 
 ```sql
-CREATE EXTERNAL LIBRARY customPackage 
-FROM 
-  (CONTENT = 'C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\customPackage.zip')
-WITH (LANGUAGE = 'R');
+CREATE EXTERNAL LIBRARY customPackage
+FROM (CONTENT = 'C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\customPackage.zip') WITH (LANGUAGE = 'R');
 ```  
 
-Une fois la bibliothèque a été téléchargée à l’instance, un utilisateur exécute la `sp_execute_external_script` procédure pour installer la bibliothèque.
+Une fois la bibliothèque chargée vers l’instance, un utilisateur exécute la procédure `sp_execute_external_script` pour installer la bibliothèque.
 
 ```sql
 EXEC sp_execute_external_script 
 @language =N'R', 
-@script=N'
-# load customPackage
-library(customPackage)
-'
+@script=N'library(customPackage)'
 ```
 
 ### <a name="b-installing-packages-with-dependencies"></a>B. Installation de packages avec des dépendances
 
-Si `packageB` a une dépendance sur `packageA`, puis suivez ces principes généraux :
+Si le package que vous souhaitez installer a des dépendances, vous devez impérativement analyser les dépendances de premier niveau et de deuxième niveau, et vérifier que tous les packages nécessaires sont disponibles _avant_ d’essayer d’installer le package cible.
 
-+ Téléchargez le package cible et ses dépendances.
+Par exemple, supposez que vous souhaitez installer un nouveau package, `packageA` :
 
-    Les deux packages doivent être dans un dossier qui est accessible au serveur.
++ `packageA` a une dépendance envers `packageB`.
++ `packageB` a une dépendance envers `packageC`.
+
+Pour que l’installation de `packageA` réussisse, vous devez créer des bibliothèques pour `packageB` et `packageC` en même temps que vous ajoutez `packageA` à SQL Server. Veillez à vérifier également les versions de package nécessaires.
+
+Dans la pratique, les dépendances de package pour les packages populaires sont généralement beaucoup plus compliquées que cet exemple simple. Par exemple, ggplot2 peut nécessiter plus de 30 packages, et ces packages peuvent nécessiter des packages supplémentaires qui ne sont pas disponibles sur le serveur. Tout package manquant ou dont la version est incorrecte peut provoquer l’échec de l’installation.
+
+Comme il peut être difficile de déterminer toutes les dépendances uniquement en examinant le manifeste du package, nous vous recommandons d’utiliser un package tel que [miniCRAN](https://cran.r-project.org/web/packages/miniCRAN/index.html) ou [iGraph](http://igraph.org/redirect.html) afin d’identifier tous les packages susceptibles d’être nécessaires à la réussite de l’installation.
+
++ Chargez le package cible et ses dépendances. Tous les fichiers doivent être dans un dossier accessible au serveur.
 
     ```sql
     CREATE EXTERNAL LIBRARY packageA 
     FROM (CONTENT = 'C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\packageA.zip') 
     WITH (LANGUAGE = 'R'); 
-    
+    GO
+
     CREATE EXTERNAL LIBRARY packageB FROM (CONTENT = 'C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\packageB.zip') 
     WITH (LANGUAGE = 'R');
+    GO
+
+    CREATE EXTERNAL LIBRARY packageC FROM (CONTENT = 'C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\packageC.zip') 
+    WITH (LANGUAGE = 'R');
+    GO
     ```
 
-+ Dépendances sont installées en premier.
++ Installez d’abord les packages nécessaires.
 
-    Si un package requis `packageA` a déjà été chargé à l’instance, il ne peut-être pas installé séparément. Le package requis `packageA` sera installé lorsque `sp_execute_external_script` est tout d’abord exécuter pour installer le package `packageB`.
+    Si un package nécessaire a déjà été chargé vers l’instance, vous n’avez pas besoin de l’ajouter à nouveau. Vérifiez simplement si le package existant est la version correcte. 
+    
+    Les packages nécessaires `packageC` et `packageB` sont installés dans l’ordre correct, quand `sp_execute_external_script` est exécuté pour la première fois afin d’installer le package `packageA`.
 
-    Toutefois, si le package requis, `packageA`, n’est pas disponible, l’installation du package cible `packageB` échoue.
+    Toutefois, si un package nécessaire n’est pas disponible, l’installation du package cible `packageA` échoue.
 
     ```sql
     EXEC sp_execute_external_script 
     @language =N'R', 
     @script=N'
-    # load packageB
-    library(packageB)
-    # call customPackageBFunc
-    OutputDataSet <- customPackageBFunc()
+    # load the desired package packageA
+    library(packageA)
+    # call function from package
+    OutputDataSet <- packageA.function()
     '
     with result sets (([result] int));    
     ```
 
 ### <a name="c-create-a-library-from-a-byte-stream"></a>C. Créer une bibliothèque à partir d’un flux d’octets
 
-L’exemple suivant crée une bibliothèque en passant des mises à jour de bits comme un littéral de hexadécimal.
+Si vous ne pouvez pas enregistrer les fichiers de package à un emplacement sur le serveur, vous pouvez également passer le contenu du package dans une variable. L’exemple suivant crée une bibliothèque en passant les bits sous forme de littéral hexadécimal.
 
 ```SQL
 CREATE EXTERNAL LIBRARY customLibrary FROM (CONTENT = 0xabc123) WITH (LANGUAGE = 'R');
 ```
 
-### <a name="d-change-an-existing-package-library"></a>D. Modifier une bibliothèque de package existante
+Ici, les valeurs hexadécimales ont été tronquées pour une meilleure lisibilité.
 
-La `ALTER EXTERNAL LIBRARY` instruction DDL peut être utilisée pour ajouter un nouveau contenu de la bibliothèque ou de modifier le contenu existant de la bibliothèque. Pour modifier une bibliothèque existante nécessite le `ALTER ANY EXTERNAL LIBRARY` autorisation.
+### <a name="d-change-an-existing-package-library"></a>D. Changer une bibliothèque de package existante
 
-Pour plus d’informations, consultez [ALTER une bibliothèque externe](alter-external-library-transact-sql.md).
+Vous pouvez utiliser l’instruction DDL `ALTER EXTERNAL LIBRARY` pour ajouter du nouveau contenu à la bibliothèque ou modifier le contenu existant de la bibliothèque. La modification d’une bibliothèque existante nécessite l’autorisation `ALTER ANY EXTERNAL LIBRARY`.
+
+Pour plus d’informations, consultez [ALTER EXTERNAL LIBRARY](alter-external-library-transact-sql.md).
 
 ### <a name="e-delete-a-package-library"></a>E. Supprimer une bibliothèque de package
 
-Pour supprimer une bibliothèque de package à partir de la base de données, exécutez l’instruction :
+Pour supprimer une bibliothèque de package de la base de données, exécutez l’instruction suivante :
 
 ```sql
 DROP EXTERNAL LIBRARY customPackage <user_name>;
 ```
 
 > [!NOTE]
-> Contrairement à d’autres `DROP` instructions dans [!INCLUDE[ssnoversion](../../includes/ssnoversion.md)], cette instruction prend en charge un paramètre facultatif qui spécifie l’autorisation de l’utilisateur. Cette option permet aux utilisateurs avec des rôles de la propriété à supprimer les bibliothèques téléchargés par les utilisateurs normaux.
+> Contrairement à d’autres instructions `DROP` dans [!INCLUDE[ssnoversion](../../includes/ssnoversion.md)], cette instruction prend en charge un paramètre facultatif qui spécifie l’autorité de l’utilisateur. Cette option permet aux utilisateurs détenant des rôles de propriétaire de supprimer des bibliothèques chargées par des utilisateurs ordinaires.
 
 ## <a name="see-also"></a>Voir aussi
 

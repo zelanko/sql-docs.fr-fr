@@ -43,9 +43,9 @@ ms.lasthandoff: 01/25/2018
 Défragmente les index de la table ou de la vue spécifiée.
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]Utilisez [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md) à la place.  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Utilisez à la place [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md).  
   
-**S’applique aux**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] via [version actuelle](http://go.microsoft.com/fwlink/p/?LinkId=299658))
+**S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] jusqu’à la [version actuelle](http://go.microsoft.com/fwlink/p/?LinkId=299658))
   
 ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -63,7 +63,7 @@ DBCC INDEXDEFRAG
   
 ## <a name="arguments"></a>Arguments  
  *database_name* | *database_id* | 0  
- Base de données contenant l'index à défragmenter. Si 0 est spécifié, la base de données active est utilisée. Les noms de base de données doivent être conformes aux règles des [identificateurs](../../relational-databases/databases/database-identifiers.md).  
+ Base de données contenant l'index à défragmenter. Si 0 est spécifié, la base de données active est utilisée. Les noms de base de données doivent suivre les règles applicables aux [identificateurs](../../relational-databases/databases/database-identifiers.md).  
   
  *table_name* | *table_id* | *view_name* | *view_id*  
  Table ou vue contenant l'index à défragmenter. Les noms des tables et des vues doivent suivre les règles applicables aux identificateurs.  
@@ -77,7 +77,7 @@ DBCC INDEXDEFRAG
  WITH NO_INFOMSGS  
  Supprime tous les messages d'information dont les niveaux de gravité sont compris entre 0 et 10.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
 DBCC INDEXDEFRAG défragmente un index au niveau feuille afin que l'ordre physique des pages corresponde à l'ordre logique (de gauche à droite) des nœuds feuilles, améliorant ainsi les performances d'analyse de l'index.
   
 > [!NOTE]  
@@ -116,11 +116,11 @@ DBCC execution completed. If DBCC printed error messages, contact your system ad
 ```  
   
 ## <a name="permissions"></a>Autorisations  
-L’appelant doit posséder la table ou être membre du **sysadmin** rôle serveur fixe le **db_owner** rôle de base de données fixe ou **db_ddladmin** rôle de base de données fixe.
+L’appelant doit être propriétaire de la table ou être membre du rôle serveur fixe **sysadmin**, du rôle de base de données fixe **db_owner** ou du rôle de base de données fixe **db_ddladmin**.
   
 ## <a name="examples"></a>Exemples  
 ### <a name="a-using-dbcc-indexdefrag-to-defragment-an-index"></a>A. Utilisation de DBCC INDEXDEFRAG pour défragmenter un index  
-L’exemple suivant défragmente toutes les partitions de la `PK_Product_ProductID` de l’index dans le `Production.Product` de table dans le `AdventureWorks` base de données.
+L’exemple suivant défragmente toutes les partitions de l’index `PK_Product_ProductID` dans la table `Production.Product` de la base de données `AdventureWorks`.
   
 ```sql  
 DBCC INDEXDEFRAG (AdventureWorks2012, 'Production.Product', PK_Product_ProductID);  
@@ -234,7 +234,7 @@ DROP TABLE #fraglist;
 GO  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)  
 [sys.dm_db_index_physical_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)  
 [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)  

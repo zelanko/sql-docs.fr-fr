@@ -1,5 +1,5 @@
 ---
-title: CREATE ASSEMBLY (Transact-SQL) | Documents Microsoft
+title: CREATE ASSEMBLY (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 8/07/2017
 ms.prod: sql-non-specified
@@ -64,15 +64,15 @@ FROM { <client_assembly_specifier> | <assembly_bits> [ ,...n ] }
   
 ## <a name="arguments"></a>Arguments  
  *assembly_name*  
- Nom de l'assembly. Le nom doit être unique au sein de la base de données et valide [identificateur](../../relational-databases/databases/database-identifiers.md).  
+ Nom de l'assembly. Ce nom doit être unique dans la base de données et correspondre à un [identificateur](../../relational-databases/databases/database-identifiers.md) valide.  
   
- AUTORISATION *owner_name*  
- Spécifie le nom d'un utilisateur ou d'un rôle comme propriétaire de l'assembly. *owner_name* doit être le nom d’un rôle dont l’utilisateur actuel est membre ou l’utilisateur actuel doit avoir l’autorisation IMPERSONATE *owner_name*. En l'absence de spécification, la propriété revient à l'utilisateur actuel.  
+ AUTHORIZATION *owner_name*  
+ Spécifie le nom d'un utilisateur ou d'un rôle comme propriétaire de l'assembly. *owner_name* doit être le nom d’un rôle dont l’utilisateur actuel est membre, ou l’utilisateur actuel doit disposer de l’autorisation IMPERSONATE sur *owner_name*. En l'absence de spécification, la propriété revient à l'utilisateur actuel.  
   
  \<client_assembly_specifier>  
-Spécifie le chemin d'accès local ou l'emplacement sur le réseau où se trouve l'assembly en cours de téléchargement, et également le nom du fichier de manifeste qui correspond à l'assembly.  \<client_assembly_specifier > peut être exprimée comme une chaîne fixe ou de l’évaluation d’expression en une chaîne fixe, avec des variables. CREATE ASSEMBLY ne prend pas en charge le chargement d'assemblys multimodules. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] recherche au même emplacement les assemblys dépendants de cet assembly et les télécharge avec le même propriétaire en tant qu'assembly au niveau racine. Si ces assemblys dépendants sont introuvables et s'ils ne sont pas déjà chargés dans la base de données active, l'instruction CREATE ASSEMBLY échoue. Si les assemblys dépendants sont déjà chargés dans la base de données active, leur propriétaire doit être identique à celui de l'assembly créé.
+Spécifie le chemin d'accès local ou l'emplacement sur le réseau où se trouve l'assembly en cours de téléchargement, et également le nom du fichier de manifeste qui correspond à l'assembly.  \<client_assembly_specifier> peut s’exprimer sous forme de chaîne de caractères fixe ou d’une expression qui correspond à une chaîne de caractères fixe, avec des variables. CREATE ASSEMBLY ne prend pas en charge le chargement d'assemblys multimodules. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] recherche au même emplacement les assemblys dépendants de cet assembly et les télécharge avec le même propriétaire en tant qu'assembly au niveau racine. Si ces assemblys dépendants sont introuvables et s'ils ne sont pas déjà chargés dans la base de données active, l'instruction CREATE ASSEMBLY échoue. Si les assemblys dépendants sont déjà chargés dans la base de données active, leur propriétaire doit être identique à celui de l'assembly créé.
   
- \<client_assembly_specifier > ne peut pas être spécifié si l’utilisateur connecté est empruntée.  
+ Vous ne pouvez pas spécifier \<client_assembly_specifier> si l’identité de l’utilisateur connecté a été empruntée.  
   
  \<assembly_bits>  
  Liste des valeurs binaires qui composent l'assembly et ses assemblys dépendants. La première valeur de la liste est considérée comme l'assembly de niveau racine. Les valeurs correspondant aux assemblys dépendants peuvent être fournies dans n'importe quel ordre. Toutes les valeurs qui ne correspondent pas à des dépendances de l'assembly racine sont ignorées.  
@@ -81,14 +81,14 @@ Spécifie le chemin d'accès local ou l'emplacement sur le réseau où se trouve
 >  Cette option n'est pas disponible dans une base de données à relation contenant-contenu.  
   
  *varbinary_literal*  
- Est un **varbinary** littéral.  
+ Est un littéral **varbinary**.  
   
  *varbinary_expression*  
  Est une expression de type **varbinary**.  
   
  PERMISSION_SET { **SAFE** | EXTERNAL_ACCESS | UNSAFE }  
  >  [!IMPORTANT]  
- >  Le `PERMISSION_SET` option est affectée par la `clr strict security` option, décrite dans l’avertissement lors de l’ouverture. Lorsque `clr strict security` est activé, tous les assemblys sont traités en tant que `UNSAFE`.
+ >  L’option `PERMISSION_SET` est affectée par l’option `clr strict security`, qui est décrite dans l’avertissement d’ouverture. Lorsque `clr strict security` est activé, tous les assemblys sont traités en tant que `UNSAFE`.
  
  Spécifie un ensemble d'autorisations d'accès accordées à l'assembly lorsque [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y accède. Si cet argument n'est pas défini, la valeur SAFE est appliquée par défaut.  
   
@@ -107,22 +107,22 @@ Spécifie le chemin d'accès local ou l'emplacement sur le réseau où se trouve
 > [!IMPORTANT]  
 >  SAFE est le paramètre recommandé pour les autorisations des assemblys qui effectuent des calculs et des tâches de gestion des données sans accéder à des ressources extérieures à une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
 >   
->  Il est recommandé d'utiliser EXTERNAL_ACCESS pour les assemblys qui accèdent à des ressources extérieures à une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Les assemblys EXTERNAL_ACCESS sont dotés des protections de fiabilité et d'évolutivité des assemblys SAFE, mais sont identiques aux assemblys UNSAFE du point de vue sécurité. Cela est dû au fait que le code des assemblys EXTERNAL_ACCESS s'exécute par défaut sous le compte de service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et accède aux ressources externes sous ce compte, excepté si le compte emprunte explicitement l'identité de l'appelant. Par conséquent, l'autorisation de créer des assemblys EXTERNAL_ACCESS doit être accordée uniquement aux connexions approuvées pour exécuter du code sous le compte de service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour plus d’informations sur l’emprunt d’identité, consultez [sécurité de l’intégration CLR](../../relational-databases/clr-integration/security/clr-integration-security.md).  
+>  Il est recommandé d'utiliser EXTERNAL_ACCESS pour les assemblys qui accèdent à des ressources extérieures à une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Les assemblys EXTERNAL_ACCESS sont dotés des protections de fiabilité et d'évolutivité des assemblys SAFE, mais sont identiques aux assemblys UNSAFE du point de vue sécurité. Cela est dû au fait que le code des assemblys EXTERNAL_ACCESS s'exécute par défaut sous le compte de service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et accède aux ressources externes sous ce compte, excepté si le compte emprunte explicitement l'identité de l'appelant. Par conséquent, l'autorisation de créer des assemblys EXTERNAL_ACCESS doit être accordée uniquement aux connexions approuvées pour exécuter du code sous le compte de service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour plus d’informations sur l’emprunt d’identité, consultez [Sécurité de l’intégration du CLR](../../relational-databases/clr-integration/security/clr-integration-security.md).  
 >   
->  UNSAFE permet au code de l'assembly d'effectuer sans restriction des opérations dans l'espace du processus [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ce qui peut nuire potentiellement à la fiabilité de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Les assemblys UNSAFE peuvent également corrompre le système de sécurité de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou de CLR (Common Language Runtime). Les autorisations UNSAFE doivent être accordées uniquement aux assemblys dont le niveau d'approbation est très élevé. Seuls les membres de la **sysadmin** rôle serveur fixe peut créer et modifier des assemblys non sécurisés.  
+>  UNSAFE permet au code de l'assembly d'effectuer sans restriction des opérations dans l'espace du processus [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ce qui peut nuire potentiellement à la fiabilité de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Les assemblys UNSAFE peuvent également corrompre le système de sécurité de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou de CLR (Common Language Runtime). Les autorisations UNSAFE doivent être accordées uniquement aux assemblys dont le niveau d'approbation est très élevé. Seuls les membres du rôle serveur fixe **sysadmin** peuvent créer et modifier les assemblys UNSAFE.  
   
- Pour plus d’informations sur l’ensemble des jeux d’autorisations, consultez [Designing Assemblies](../../relational-databases/clr-integration/assemblies-designing.md).  
+ Pour plus d’informations sur les jeux d’autorisations des assemblys, consultez [Conception d’assemblys](../../relational-databases/clr-integration/assemblies-designing.md).  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  CREATE ASSEMBLY télécharge un assembly préalablement compilé sous forme d'un fichier .dll à partir de code managé pour l'utilisation dans une instance de SQL Server.  
  
 Quand elle est activée, l’option `PERMISSION_SET` dans les instructions `CREATE ASSEMBLY` et `ALTER ASSEMBLY` est ignorée au moment de l’exécution, mais les options `PERMISSION_SET` sont conservées dans les métadonnées. Ignorer cette option réduit les risques de rupture des instructions de code existantes.
  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] n'autorise pas l'inscription de différentes versions d'un assembly avec le même nom, la même culture et la même clé publique.  
   
-Lorsque vous tentez d’accéder à l’assembly spécifié dans \<client_assembly_specifier >, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] emprunte l’identité du contexte de sécurité de la connexion Windows actuel. Si \<client_assembly_specifier > Spécifie un emplacement réseau (chemin UNC), l’emprunt d’identité de la connexion active n’est pas transmis à l’emplacement réseau en raison des limitations de délégation. Dans ce cas, l'accès a lieu en utilisant le contexte de sécurité du compte de service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour plus d’informations, consultez [informations d’identification &#40; moteur de base de données &#41;](../../relational-databases/security/authentication-access/credentials-database-engine.md).
+Lors d’une tentative d’accès à l’assembly spécifié dans \<client_assembly_specifier>, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] emprunte l’identité du contexte de sécurité de la connexion Windows active. Si \<client_assembly_specifier> spécifie un emplacement réseau (chemin UNC), l’emprunt d’identité de la connexion active n’est pas transféré à l’emplacement réseau en raison des restrictions de délégation. Dans ce cas, l'accès a lieu en utilisant le contexte de sécurité du compte de service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour plus d’informations, consultez [Informations d’identification &#40;moteur de base de données&#41;](../../relational-databases/security/authentication-access/credentials-database-engine.md).
   
- Outre l’assembly racine spécifié par *assembly_name*, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tente de charger tous les assemblys qui sont référencés par l’assembly racine en cours de téléchargement. Si un assembly référencé est déjà téléchargé dans une base de données du fait d'une précédente instruction CREATE ASSEMBLY, cet assembly n'est pas téléchargé, mais il est disponible pour l'assembly racine. Si un assembly dépendant n'a pas été téléchargé auparavant et si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne trouve pas son fichier de manifeste dans le répertoire source, CREATE ASSEMBLY renvoie une erreur.  
+ Outre l’assembly racine spécifié par *assembly_name*, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tente de charger les assemblys référencés par l’assembly racine en cours de chargement. Si un assembly référencé est déjà téléchargé dans une base de données du fait d'une précédente instruction CREATE ASSEMBLY, cet assembly n'est pas téléchargé, mais il est disponible pour l'assembly racine. Si un assembly dépendant n'a pas été téléchargé auparavant et si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne trouve pas son fichier de manifeste dans le répertoire source, CREATE ASSEMBLY renvoie une erreur.  
   
  Si des assemblys dépendants référencés par l'assembly racine ne se trouvent pas déjà dans la base de données et sont chargés implicitement avec ce dernier, ils ont le même ensemble d'autorisations que l'assembly de niveau racine. Si les assemblys dépendants doivent être créés en utilisant un autre ensemble d'autorisations que celui de l'assembly racine, ils doivent être téléchargés explicitement avant l'assembly de niveau racine avec l'ensemble d'autorisations approprié.  
   
@@ -141,24 +141,24 @@ Lorsque vous tentez d’accéder à l’assembly spécifié dans \<client_assemb
   
     -   Les classes de l'assembly ne peuvent pas contenir de finaliseur.  
   
-    -   Les classes ou méthodes de l'assembly doivent être annotées uniquement avec des attributs de code autorisés. Pour plus d’informations, consultez [les attributs personnalisés pour les Routines CLR](../../relational-databases/clr-integration/database-objects/clr-integration-custom-attributes-for-clr-routines.md).  
+    -   Les classes ou méthodes de l'assembly doivent être annotées uniquement avec des attributs de code autorisés. Pour plus d’informations, consultez [Attributs personnalisés pour les routines CLR](../../relational-databases/clr-integration/database-objects/clr-integration-custom-attributes-for-clr-routines.md)  
   
  Outre les vérifications précédentes effectuées pendant l'exécution de CREATE ASSEMBLY, d'autres vérifications ont lieu au moment de l'exécution du code dans l'assembly :  
   
--   Appel de certaines [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] API qui requièrent une autorisation d’accès de Code spécifique peuvent échouer si le jeu d’autorisations de l’assembly n’inclut pas cette autorisation.  
+-   L’appel à certaines API [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] qui nécessitent une autorisation d’accès au code risque d’échouer si l’ensemble d’autorisations de l’assembly ne comprend pas cette autorisation.  
   
 -   Pour les assemblys SAFE et EXTERNAL_ACCESS, tout appel aux API [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] annotées avec certains attributs HostProtectionAttributes échoue.  
   
- Pour plus d’informations, consultez [Designing Assemblies](../../relational-databases/clr-integration/assemblies-designing.md).  
+ Pour plus d’informations, consultez [Conception d’assemblys](../../relational-databases/clr-integration/assemblies-designing.md).  
   
 ## <a name="permissions"></a>Autorisations  
  Nécessite l'autorisation CREATE ASSEMBLY.  
   
- Si PERMISSION_SET = EXTERNAL_ACCESS est spécifié, nécessite**EXTERNAL ACCESS ASSEMBLY** autorisation sur le serveur. Si PERMISSION_SET = UNSAFE est spécifié, nécessite **UNSAFE ASSEMBLY** autorisation sur le serveur.  
+ Si PERMISSION_SET = EXTERNAL_ACCESS est spécifié, nécessite l’autorisation **EXTERNAL ACCESS ASSEMBLY** sur le serveur. Si PERMISSION_SET = UNSAFE est spécifié, nécessite l’autorisation **UNSAFE ASSEMBLY** sur le serveur.  
   
- L'utilisateur doit être propriétaire des assemblys référencés par l'assembly qui doivent être téléchargés s'ils existent déjà dans la base de données. Pour charger un assembly à l’aide d’un chemin d’accès de fichier, l’utilisateur actuel doit être une connexion authentifiée Windows ou un membre de la **sysadmin** rôle serveur fixe. La connexion Windows de l'utilisateur qui exécute l'instruction CREATE ASSEMBLY doit avoir l'autorisation de lecture sur le partage et sur les fichiers chargés dans l'instruction.  
+ L'utilisateur doit être propriétaire des assemblys référencés par l'assembly qui doivent être téléchargés s'ils existent déjà dans la base de données. Pour charger un assembly à l’aide d’un chemin de fichier, l’utilisateur actuel doit utiliser une connexion Windows authentifiée ou être membre du rôle serveur fixe **sysadmin**. La connexion Windows de l'utilisateur qui exécute l'instruction CREATE ASSEMBLY doit avoir l'autorisation de lecture sur le partage et sur les fichiers chargés dans l'instruction.  
 
-### <a name="permissions-with-clr-strict-security"></a>Autorisations de sécurité stricte de CLR    
+### <a name="permissions-with-clr-strict-security"></a>Autorisations avec sécurité CLR stricte    
 Les autorisations suivantes sont requises pour créer un assembly CLR quand `CLR strict security` est activée :
 
 - L’utilisateur doit avoir l’autorisation `CREATE ASSEMBLY`.  
@@ -166,15 +166,15 @@ Les autorisations suivantes sont requises pour créer un assembly CLR quand `CLR
   - L’assembly est signé avec un certificat ou une clé asymétrique qui a une connexion correspondante avec l’autorisation `UNSAFE ASSEMBLY` sur le serveur. Signer l’assembly est recommandé.  
   - La base de données a la propriété `TRUSTWORTHY` définie sur `ON`, et elle est détenue par une connexion qui a l’autorisation `UNSAFE ASSEMBLY` sur le serveur. Cette option n’est pas recommandée.  
   
- Pour plus d’informations sur l’ensemble des jeux d’autorisations, consultez [Designing Assemblies](../../relational-databases/clr-integration/assemblies-designing.md).  
+ Pour plus d’informations sur les jeux d’autorisations des assemblys, consultez [Conception d’assemblys](../../relational-databases/clr-integration/assemblies-designing.md).  
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="example-a-creating-an-assembly-from-a-dll"></a>Exemple a : création d’un assembly à partir d’une dll  
+### <a name="example-a-creating-an-assembly-from-a-dll"></a>Exemple A : Création d’un assembly à partir d’une dll  
   
 **S'applique à**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- L’exemple suivant suppose que le [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] exemples sont installés à l’emplacement par défaut de l’ordinateur local et l’application exemple HelloWorld.csproj est compilée. Pour plus d’informations, consultez [exemple Hello World](http://msdn.microsoft.com/library/fed6c358-f5ee-4d4c-9ad6-089778383ba7).  
+ L’exemple suivant suppose que les exemples du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] sont installés à l’emplacement par défaut de l’ordinateur local et que l’exemple d’application HelloWorld.csproj est compilé. Pour plus d’informations, consultez [Exemple Hello World](http://msdn.microsoft.com/library/fed6c358-f5ee-4d4c-9ad6-089778383ba7).  
   
 ```  
 CREATE ASSEMBLY HelloWorld   
@@ -182,11 +182,11 @@ FROM <system_drive>:\Program Files\Microsoft SQL Server\100\Samples\HelloWorld\C
 WITH PERMISSION_SET = SAFE;  
 ```  
   
-### <a name="example-b-creating-an-assembly-from-assembly-bits"></a>Exemple b : création d’un assembly à partir des bits d’assembly  
+### <a name="example-b-creating-an-assembly-from-assembly-bits"></a>Exemple B : Création d’un assembly à partir de bits d’assembly  
   
 **S'applique à**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- Remplacez les bits d’exemple (qui sont terminée ou non valides) par vos bits d’assembly.  
+ Remplacez les exemples de bits (qui ne sont pas terminés ou valides) par vos bits d’assembly.  
   
 ```  
 CREATE ASSEMBLY HelloWorld  
@@ -194,8 +194,8 @@ CREATE ASSEMBLY HelloWorld
 WITH PERMISSION_SET = SAFE;  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- [ALTER ASSEMBLY &#40; Transact-SQL &#41;](../../t-sql/statements/alter-assembly-transact-sql.md)   
+## <a name="see-also"></a> Voir aussi  
+ [ALTER ASSEMBLY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-assembly-transact-sql.md)   
  [DROP ASSEMBLY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-assembly-transact-sql.md)   
  [CREATE FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-function-transact-sql.md)   
  [CREATE PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/create-procedure-transact-sql.md)   
@@ -203,6 +203,6 @@ WITH PERMISSION_SET = SAFE;
  [CREATE TYPE &#40;Transact-SQL&#41;](../../t-sql/statements/create-type-transact-sql.md)   
  [CREATE AGGREGATE &#40;Transact-SQL&#41;](../../t-sql/statements/create-aggregate-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   
- [Scénarios d’utilisation et des exemples pour le Common Language Runtime &#40; CLR &#41; Intégration](http://msdn.microsoft.com/library/33aac25f-abb4-4f29-af88-4a0dacd80ae7)  
+ [Scénarios et exemples d’utilisation pour l’intégration du CLR &#40;Common Language Runtime&#41;](http://msdn.microsoft.com/library/33aac25f-abb4-4f29-af88-4a0dacd80ae7)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: "MakeValid (Type de données geography) | Documents Microsoft"
+title: "MakeValid (type de données geography) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -31,11 +31,11 @@ ms.lasthandoff: 01/25/2018
 # <a name="makevalid-geography-data-type"></a>MakeValid (type de données geography)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-  Convertit un **geography** instance qui n’est pas valide dans une commande valide **geography** instance avec un type Open Geospatial Consortium (OGC) valide.  
+  Convertit une instance **geography** non valide en instance **geography** valide avec un type OGC (Open Geospatial Consortium) valide.  
   
- Si un objet d’entrée retourne False pour STIsValid(), `MakeValid()` convertit l’instance qui n’est pas valide pour une instance valide.  
+ Si un objet d’entrée retourne False pour STIsValid(), `MakeValid()` convertit l’instance non valide en instance valide.  
   
- Ces données geography type prend en charge de la méthode **FullGlobe** instances ou les instances spatiales qui sont plus grandes qu’un hémisphère.  
+ Cette méthode de type de données geography prend en charge les instances **FullGlobe** ou les instances spatiales qui sont plus grandes qu’un hémisphère.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -45,17 +45,17 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>Types de retour  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]type de retour : **geography**  
+ Type de retour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] : **geography**  
   
  Type de retour CLR : **SqlGeography**  
   
-## <a name="remarks"></a>Notes  
- Cette méthode peut modifier le type de la **geography** instance. En outre, les points d’un **geography** instance peut-être bouger légèrement. Résultats de certaines méthodes, telles que NumPoint() peuvent changer.  
+## <a name="remarks"></a>Notes   
+ Cette méthode peut changer le type de l’instance **geography**. De plus, les points d’une instance **geography** peuvent se déplacer légèrement. Les résultats de certaines méthodes telles que NumPoint() peuvent changer.  
   
- Dans les cas où l’instance spatiale non valide croise l’Équateur et a une EnvelopeAngle() = 180, une **FullGlobe** instance sera retournée. Le `MakeValid()` **geography** méthode de type de données rendent la meilleure tentative à retourner des instances valides, mais les résultats ne sont pas garantis pour être précis ou précise.  
+ Dans les cas où l’instance spatiale non valide croise l’équateur et où EnvelopeAngle() = 180, une instance **FullGlobe** est retournée. La méthode de type de données de `MakeValid()`**geography** tente de retourner des instances valides, mais l’exactitude ou la précision des résultats n’est pas garantie.  
   
 > [!NOTE]  
->  Les objets qui ne sont pas valides peuvent être stockés dans la base de données. Les méthodes qui peuvent être exécutés sur des instances non valides (ces instances pour les STIsValid() retournent False) sont des méthodes qui vérifient la validité ou permettent l’exportation : STIsValid(), MakeValid(), STAsText(), STAsBinary(), ToString(), AsTextZM() et AsGml().  
+>  Les objets qui ne sont pas valides peuvent être stockés dans la base de données. Les méthodes qui peuvent être exécutées sur des instances non valides (les instances pour lesquelles STIsValid() retourne False) sont des méthodes qui vérifient la validité ou permettent l’exportation : STIsValid(), MakeValid(), STAsText(), STAsBinary(), ToString(), AsTextZM() et AsGml().  
   
  Cette méthode n'est pas précise.  
   
@@ -87,8 +87,8 @@ SELECT @g.ToString();
 MULTILINESTRING ((0 2, 1 1, 2 2), (1 1, 1 0))  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- [STIsValid &#40;type de données geometry&#41;](../../t-sql/spatial-geometry/stisvalid-geometry-data-type.md)   
+## <a name="see-also"></a> Voir aussi  
+ [STIsValid &#40;Type de données geometry&#41;](../../t-sql/spatial-geometry/stisvalid-geometry-data-type.md)   
  [Méthodes étendues sur des instances geography](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)  
   
   

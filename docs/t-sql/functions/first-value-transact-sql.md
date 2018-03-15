@@ -1,5 +1,5 @@
 ---
-title: FIRST_VALUE (Transact-SQL) | Documents Microsoft
+title: FIRST_VALUE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 11/10/2016
 ms.prod: sql-non-specified
@@ -49,13 +49,13 @@ FIRST_VALUE ( [scalar_expression ] )
   
 ## <a name="arguments"></a>Arguments  
  *scalar_expression*  
- Valeur à renvoyer. *scalar_expression* peut être une colonne, une sous-requête ou toute autre expression arbitraire qui aboutit à une valeur unique. Les autres fonctions analytiques ne sont pas autorisées.  
+ Valeur à renvoyer. *scalar_expression* peut être une colonne, une sous-requête ou une autre expression arbitraire qui aboutit à une valeur unique. Les autres fonctions analytiques ne sont pas autorisées.  
   
- SUR **(** [ *partition_by_clause* ] *order_by_clause* [ *rows_range_clause* ] **)**  
- *partition_by_clause* divise le jeu de résultats généré par la clause FROM en partitions auxquelles la fonction est appliquée. S'il n'est pas spécifié, la fonction gère toutes les lignes du jeu de résultats de la requête en un seul groupe. *order_by_clause* détermine l’ordre logique dans lequel l’opération est effectuée. *order_by_clause* est requis. *rows_range_clause* limite davantage les lignes dans la partition en spécifiant des points de début et fin. Pour plus d’informations, consultez [la Clause OVER &#40; Transact-SQL &#41; ](../../t-sql/queries/select-over-clause-transact-sql.md).  
+ OVER **(** [ *partition_by_clause* ] *order_by_clause* [ *rows_range_clause* ] **)**  
+ *partition_by_clause* divise le jeu de résultats généré par la clause FROM en partitions auxquelles la fonction est appliquée. S'il n'est pas spécifié, la fonction gère toutes les lignes du jeu de résultats de la requête en un seul groupe. *order_by_clause* détermine l’ordre logique dans lequel l’opération est effectuée. *order_by_clause* est requis. *rows_range_clause* limite davantage les lignes dans la partition en spécifiant les points de départ et de terminaison. Pour plus d’informations, consultez [OVER, clause &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md).  
   
 ## <a name="return-types"></a>Types de retour  
- Est du même type que *scalar_expression*.  
+ Type similaire à celui de *scalar_expression*.  
   
 ## <a name="general-remarks"></a>Remarques d'ordre général  
  FIRST_VALUE n'est pas déterministe. Pour plus d’informations, consultez [Fonctions déterministes et non déterministes](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md).  
@@ -95,7 +95,7 @@ HL Mountain Tire        35.00                 Patch Kit/8 Patches
 ```  
   
 ### <a name="b-using-firstvalue-over-partitions"></a>B. Utilisation de FIRST_VALUE sur les partitions  
- L'exemple suivant utilise FIRST_VALUE pour retourner l'employé ayant le nombre d'heures de congé le moins élevé, comparé à d'autres employés avec la même fonction. La clause PARTITION BY décompose les employés par fonction et la fonction FIRST_VALUE est appliquée à chaque partition indépendamment. La clause ORDER BY spécifiée dans la clause OVER détermine l'ordre logique dans lequel la fonction FIRST_VALUE est appliquée aux lignes dans chaque partition. La clause ROWS UNBOUNDED PRECEDING spécifie le point de départ de la fenêtre comme première ligne de chaque partition.  
+ L'exemple suivant utilise FIRST_VALUE pour retourner l'employé ayant le nombre d'heures de congé le moins élevé, comparé à d'autres employés avec le même poste. La clause PARTITION BY décompose les employés par poste et la fonction FIRST_VALUE est appliquée à chaque partition indépendamment. La clause ORDER BY spécifiée dans la clause OVER détermine l'ordre logique dans lequel la fonction FIRST_VALUE est appliquée aux lignes dans chaque partition. La clause ROWS UNBOUNDED PRECEDING spécifie le point de départ de la fenêtre comme première ligne de chaque partition.  
   
 ```  
 USE AdventureWorks2012;   
@@ -127,7 +127,7 @@ Accounts Receivable Specialist      Spoon                     61            Poe
 Accounts Receivable Specialist      Walton                    62            Poe  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- [SUR la clause for &#40; Transact-SQL &#41;](../../t-sql/queries/select-over-clause-transact-sql.md)  
+## <a name="see-also"></a> Voir aussi  
+ [OVER, clause &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)  
   
   

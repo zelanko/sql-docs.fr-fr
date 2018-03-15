@@ -1,5 +1,5 @@
 ---
-title: SET ROWCOUNT (Transact-SQL) | Documents Microsoft
+title: SET ROWCOUNT (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -54,13 +54,13 @@ SET ROWCOUNT { number | @number_var }
 ```  
   
 ## <a name="arguments"></a>Arguments  
- *nombre* | @*var_nombre*  
+ *number* | @*number_var*  
  Nombre (entier) de lignes à traiter avant l'arrêt de la requête spécifiée.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
   
 > [!IMPORTANT]  
->  L'utilisation de SET ROWCOUNT n'affectera en rien les instructions DELETE, INSERT et UPDATE dans la version ultérieure de SQL Server. Évitez d’utiliser SET ROWCOUNT avec les instructions DELETE, INSERT et UPDATE dans tout nouveau développement et prévoyez de modifier les applications qui l’utilisent actuellement. Pour un comportement semblable, utilisez la syntaxe TOP. Pour plus d’informations, consultez [TOP &#40; Transact-SQL &#41; ](../../t-sql/queries/top-transact-sql.md).  
+>  L'utilisation de SET ROWCOUNT n'affectera en rien les instructions DELETE, INSERT et UPDATE dans la version ultérieure de SQL Server. Évitez d’utiliser SET ROWCOUNT avec les instructions DELETE, INSERT et UPDATE dans les nouvelles tâches de développement et pensez à modifier les applications qui l’utilisent actuellement. Pour un comportement semblable, utilisez la syntaxe TOP. Pour plus d’informations, consultez [TOP &#40;Transact-SQL&#41;](../../t-sql/queries/top-transact-sql.md).  
   
  Pour désactiver cette option de manière à renvoyer toutes les lignes, utilisez SET ROWCOUNT 0.  
   
@@ -70,7 +70,7 @@ SET ROWCOUNT { number | @number_var }
   
  L'option SET ROWCOUNT est définie lors de l'exécution, et non pas durant l'analyse.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l'appartenance au rôle public.  
   
 ## <a name="examples"></a>Exemples  
@@ -107,8 +107,8 @@ GO
 (4 row(s) affected)
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemples : [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] et[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- SET ROWCOUNT arrête le traitement après le nombre de lignes spécifié. Dans l’exemple suivant, notez que plus de 20 lignes répondent aux critères de `AccountType = 'Assets'`. Toutefois, après avoir appliqué SET ROWCOUNT, vous pouvez remarquer que toutes les lignes n'ont pas été retournées.  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemples : [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] et [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+ SET ROWCOUNT arrête le traitement après le nombre de lignes spécifié. Dans cet exemple, notez que plus de 20 lignes répondent aux critères de `AccountType = 'Assets'`. Toutefois, après avoir appliqué SET ROWCOUNT, vous pouvez remarquer que toutes les lignes n'ont pas été retournées.  
   
 ```  
 -- Uses AdventureWorks  
@@ -118,7 +118,7 @@ SELECT * FROM [dbo].[DimAccount]
 WHERE AccountType = 'Assets';  
 ```  
   
- Pour retourner toutes les lignes, set ROWCOUNT 0.  
+ Pour retourner toutes les lignes, affectez la valeur 0 à ROWCOUNT.  
   
 ```  
 -- Uses AdventureWorks  
@@ -128,7 +128,7 @@ SELECT * FROM [dbo].[DimAccount]
 WHERE AccountType = 'Assets';  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Instructions SET &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)  
   
   

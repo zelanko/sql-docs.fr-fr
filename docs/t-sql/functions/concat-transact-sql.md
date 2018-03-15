@@ -34,7 +34,7 @@ ms.lasthandoff: 01/18/2018
 # <a name="concat-transact-sql"></a>CONCAT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
-Retourne une chaîne qui est le résultat de la concaténation de plusieurs valeurs de chaîne. (Pour ajouter une valeur de séparation lors de la concaténation, consultez [CONCAT_WS](../../t-sql/functions/concat-ws-transact-sql.md).)
+Retourne une chaîne qui est le résultat de la concaténation de plusieurs valeurs de chaîne. (Pour ajouter une valeur de séparation durant la concaténation, consultez [CONCAT_WS](../../t-sql/functions/concat-ws-transact-sql.md).)
   
 ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -51,23 +51,23 @@ Valeur de chaîne à concaténer aux autres valeurs.
 ## <a name="return-types"></a>Types de retour
 Chaîne, dont la longueur et le type dépendent de l'entrée.
   
-## <a name="remarks"></a>Notes  
-**CONCAT** prend un nombre variable d’arguments de chaîne et les concatène en une seule chaîne. Elle nécessite un minimum de deux valeurs d'entrée ; sinon, une erreur est générée. Tous les arguments sont implicitement convertis en types chaîne et ensuite concaténés. Les valeurs NULL sont implicitement converties en chaîne vide. Si tous les arguments sont null, une chaîne vide de type **varchar**(1) est retournée. La conversion implicite en chaînes respecte les règles existantes de conversion de type de données. Pour plus d’informations sur les conversions de type de données, consultez [CAST et CONVERT &#40; Transact-SQL &#41; ](../../t-sql/functions/cast-and-convert-transact-sql.md).
+## <a name="remarks"></a>Notes   
+**CONCAT** accepte un nombre variable d’arguments de chaîne et les concatène en une chaîne unique. Elle nécessite un minimum de deux valeurs d'entrée ; sinon, une erreur est générée. Tous les arguments sont implicitement convertis en types chaîne et ensuite concaténés. Les valeurs NULL sont implicitement converties en chaîne vide. Si tous les arguments sont NULL, une chaîne vide de type **varchar**(1) est renvoyée. La conversion implicite en chaînes respecte les règles existantes de conversion de type de données. Pour plus d’informations sur les conversions de type de données, consultez [CAST et CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md).
   
 Le type de retour dépend du type des arguments. Le tableau ci-dessous illustre le mappage.
   
 |Type d'entrée|Type de sortie et longueur|  
 |---|---|
 |Si un argument est un type système SQL-CLR, un type défini par l'utilisateur SQL-CLR ou `nvarchar(max)`|**nvarchar(max)**|  
-|Sinon, si un argument est **varbinary (max)** ou **varchar (max)**|**varchar (max)** , sauf si l’un des paramètres est un **nvarchar** d’une longueur quelconque. Si, par conséquent, le résultat est **nvarchar (max)**.|  
-|Sinon, si un argument est **nvarchar**(< = 4000)|**nvarchar**(< = 4000)|  
-|Sinon, dans tous les autres cas|**varchar**(< = 8000) sauf si l’un des paramètres est de type nvarchar d’une longueur quelconque. Si, par conséquent, le résultat est **nvarchar (max)**.|  
+|Sinon, si un argument est de type **varbinary(max)** ou **varchar(max)**|**varchar(max)** à moins qu’un des paramètres soit de type **nvarchar** d’une longueur quelconque. Dans ce cas, le résultat est de type **nvarchar(max)**.|  
+|Sinon, si un argument est de type **nvarchar**(<= 4000)|**nvarchar**(<= 4000)|  
+|Sinon, dans tous les autres cas|**varchar**(<= 8000) à moins qu’un des paramètres soit de type nvarchar d’une longueur quelconque. Dans ce cas, le résultat est de type **nvarchar(max)**.|  
   
-Lorsque les arguments sont < = 4000 pour **nvarchar**, ou < = 8000 pour **varchar**, les conversions implicites peuvent affecter la longueur du résultat. D'autres types de données ont différentes longueurs lorsqu'ils sont implicitement convertis en chaînes. Par exemple, un **int** (14) a une longueur de chaîne de 12, pendant un **float** a une longueur de 32. Par conséquent, le résultat de la concaténation de deux entiers a une longueur non inférieure à 24.
+Lorsque les arguments sont <= 4000 pour **nvarchar** ou <= 8000 pour **varchar**, les conversions implicites peuvent affecter la longueur du résultat. D'autres types de données ont différentes longueurs lorsqu'ils sont implicitement convertis en chaînes. Par exemple, une valeur **int** (14) a une longueur de chaîne de 12, alors qu’une valeur **float** a une longueur de 32. Par conséquent, le résultat de la concaténation de deux entiers a une longueur non inférieure à 24.
   
 Si aucun des arguments d'entrée n'est d'un type d'objet (LOB) pris en charge, le type de retour est tronqué à une longueur de 8000, quel que soit le type de retour. Cette troncation préserve l'espace et prend en charge l'efficacité de la génération du plan.
   
-La fonction CONCAT peut être exécutée à distance sur un serveur lié qui est la version [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et versions ultérieures. Pour les anciens serveurs liés, l’opération CONCAT sera exécutée localement après que les valeurs non concaténées sont retournées à partir du serveur lié.
+La fonction CONCAT peut être exécutée à distance sur un serveur lié de version [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ou ultérieure. Pour les serveurs liés plus anciens, l’opération CONCAT est exécutée localement après le renvoi des valeurs non concaténées à partir du serveur lié.
   
 ## <a name="examples"></a>Exemples  
   
@@ -120,7 +120,7 @@ NameLastname
  [STRING_ESCAPE &#40;Transact-SQL&#41;](../../t-sql/functions/string-escape-transact-sql.md)  
  [STUFF &#40;Transact-SQL&#41;](../../t-sql/functions/stuff-transact-sql.md)  
  [TRANSLATE &#40;Transact-SQL&#41;](../../t-sql/functions/translate-transact-sql.md)  
- [Fonctions de chaîne &#40; Transact-SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)  
+ [Fonctions de chaîne &#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)  
   
 
 

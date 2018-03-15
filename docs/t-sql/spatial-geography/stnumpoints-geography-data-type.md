@@ -1,5 +1,5 @@
 ---
-title: "STNumPoints (Type de données geography) | Documents Microsoft"
+title: "STNumPoints (type de données geography) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stnumpoints-geography-data-type"></a>STNumPoints (type de données geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Retourne le nombre total de points dans chacune des figures dans une **geography** instance.  
+  Retourne le nombre total de points de chacune des figures d’une instance **geography**.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -44,12 +44,12 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>Types de retour  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]type de retour : **int**  
+ Type de retour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] : **int**  
   
  Type de retour CLR : **SqlInt32**  
   
-## <a name="remarks"></a>Notes  
- Cette méthode compte les points dans la description d’un **geography** instance. Les points en double sont comptés ; toutefois, les points de connexion entre les segments ne sont comptés qu'une seule fois. Si cette instance est une collection, cette méthode retourne le nombre total de points dans la collection.  
+## <a name="remarks"></a>Notes   
+ Cette méthode compte les points dans la description d’une instance **geography**. Les points en double sont comptés ; toutefois, les points de connexion entre les segments ne sont comptés qu'une seule fois. Si cette instance est une collection, cette méthode retourne le nombre total de points dans la collection.  
   
 ## <a name="examples"></a>Exemples  
   
@@ -79,7 +79,7 @@ SELECT @g.STNumPoints();
  SELECT @g.STNumPoints();
  ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Méthodes OGC sur des instances geography](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
   
   

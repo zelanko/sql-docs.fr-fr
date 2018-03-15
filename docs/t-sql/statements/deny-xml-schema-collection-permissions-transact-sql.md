@@ -1,5 +1,5 @@
 ---
-title: "REFUSER des autorisations de Collection de schémas XML (Transact-SQL) | Documents Microsoft"
+title: "DENY – refus d’autorisations de collection de schémas XML (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 06/09/2017
 ms.prod: sql-non-specified
@@ -67,8 +67,8 @@ DENY permission  [ ,...n ] ON
  *permission*  
  Spécifie une autorisation qui peut être refusée sur une collection de schémas XML. Pour obtenir la liste des autorisations, consultez la section Notes plus loin dans cette rubrique.  
   
- COLLECTION de schémas XML ON :: [ *schema_name ***.* *] *XML_schema_collection_name*  
- Spécifie la collection de schémas XML sur laquelle l'autorisation doit être refusée. L'identificateur d'étendue (::) est requis. Si *nom_schéma* n’est pas spécifié, le schéma par défaut est utilisé. Si *schema_name* est spécifié, le qualificateur d’étendue de schéma (.) est requis.  
+ ON XML SCHEMA COLLECTION :: [ *schema_name***.** ] *XML_schema_collection_name*  
+ Spécifie la collection de schémas XML sur laquelle l'autorisation doit être refusée. L'identificateur d'étendue (::) est requis. Si *schema_name* n’est pas spécifié, le schéma par défaut est utilisé. Si *schema_name* est spécifié, le qualificateur d’étendue de schéma (.) est obligatoire.  
   
  TO \<database_principal>  
  Spécifie le principal auquel l'autorisation est refusée.  
@@ -103,8 +103,8 @@ DENY permission  [ ,...n ] ON
  *Database_user_with_no_login*  
  Spécifie un utilisateur de base de données sans principal au niveau serveur correspondant.  
   
-## <a name="remarks"></a>Notes  
- Informations sur les collections de schémas XML sont visibles dans le [sys.xml_schema_collections](../../relational-databases/system-catalog-views/sys-xml-schema-collections-transact-sql.md) affichage catalogue.  
+## <a name="remarks"></a>Notes   
+ Des informations sur les collections de schémas XML sont visibles dans la vue de catalogue [sys.xml_schema_collections](../../relational-databases/system-catalog-views/sys-xml-schema-collections-transact-sql.md).  
   
  Une collection de schémas XML est un élément sécurisable de niveau schéma inclus dans le schéma qui est son parent dans la hiérarchie des autorisations. Les autorisations les plus spécifiques et limitées qu'il est possible de refuser sur une collection de schémas XML sont répertoriées dans le tableau ci-dessous, avec les autorisations plus générales qui les incluent de manière implicite.  
   
@@ -129,11 +129,11 @@ DENY EXECUTE ON XML SCHEMA COLLECTION::Sales.Invoices4 TO Wanida;
 GO  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- [ACCORDER des autorisations de Collection de schémas XML &#40; Transact-SQL &#41;](../../t-sql/statements/grant-xml-schema-collection-permissions-transact-sql.md)   
- [RÉVOQUER les autorisations de Collection de schémas XML &#40; Transact-SQL &#41;](../../t-sql/statements/revoke-xml-schema-collection-permissions-transact-sql.md)   
+## <a name="see-also"></a> Voir aussi  
+ [GRANT – Accorder des autorisations sur une collection de schémas XML &#40;Transact-SQL&#41;](../../t-sql/statements/grant-xml-schema-collection-permissions-transact-sql.md)   
+ [REVOKE – Révoquer des autorisations sur une collection de schémas XML &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-xml-schema-collection-permissions-transact-sql.md)   
  [sys.xml_schema_collections &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-xml-schema-collections-transact-sql.md)   
- [CRÉER une COLLECTION de schémas XML &#40; Transact-SQL &#41;](../../t-sql/statements/create-xml-schema-collection-transact-sql.md)   
+ [CREATE XML SCHEMA COLLECTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-xml-schema-collection-transact-sql.md)   
  [Autorisations &#40;moteur de base de données&#41;](../../relational-databases/security/permissions-database-engine.md)   
  [Principaux &#40;moteur de base de données&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)  
   

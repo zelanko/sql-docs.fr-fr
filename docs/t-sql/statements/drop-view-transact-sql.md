@@ -1,5 +1,5 @@
 ---
-title: DROP VIEW (Transact-SQL) | Documents Microsoft
+title: DROP VIEW (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 05/12/2017
 ms.prod: sql-non-specified
@@ -59,10 +59,10 @@ DROP VIEW [ schema_name . ] view_name
 ```  
   
 ## <a name="arguments"></a>Arguments  
- *S’IL EXISTE*  
- **S’applique aux**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] via [version actuelle](http://go.microsoft.com/fwlink/p/?LinkId=299658), [!INCLUDE[sssds](../../includes/sssds-md.md)]). |  
+ *IF EXISTS*  
+ **S’applique à**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] jusqu’à la [version actuelle](http://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[sssds](../../includes/sssds-md.md)].  
   
- Conditionnellement supprime la vue uniquement s’il existe déjà.  
+ Supprime, de manière conditionnelle, la vue uniquement si elle existe déjà.  
   
  *schema_name*  
  Nom du schéma auquel appartient la vue.  
@@ -70,21 +70,21 @@ DROP VIEW [ schema_name . ] view_name
  *view_name*  
  Nom de la vue à supprimer  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Lorsque vous supprimez une vue, sa définition et d'autres informations la concernant sont supprimées du catalogue système. Toutes les autorisations pour la vue sont également supprimées.  
   
  Toute vue d'une table qui est supprimée au moyen de DROP TABLE doit être supprimée de manière explicite à l'aide de DROP VIEW.  
   
- Lorsqu'elle est exécutée sur une vue indexée, l'instruction DROP VIEW supprime automatiquement tous les index de la vue. Pour afficher tous les index sur une vue, utilisez [sp_helpindex](../../relational-databases/system-stored-procedures/sp-helpindex-transact-sql.md).  
+ Lorsqu'elle est exécutée sur une vue indexée, l'instruction DROP VIEW supprime automatiquement tous les index de la vue. Pour afficher tous les index d’une vue, utilisez la procédure stockée [sp_helpindex](../../relational-databases/system-stored-procedures/sp-helpindex-transact-sql.md).  
   
  Lorsque vous effectuez une requête par l'intermédiaire d'une vue, le [!INCLUDE[ssDE](../../includes/ssde-md.md)] vérifie que tous les objets de base de données référencés dans l'instruction existent, qu'ils sont valides dans le contexte de l'instruction, et que les instructions de modification de données ne violent pas les règles d'intégrité des données. Si une vérification échoue, le système retourne un message d'erreur. Si la vérification réussit, l'action est transformée en une action applicable dans la ou les tables sous-jacentes. Si les tables ou les vues sous-jacentes ont été modifiées depuis la création initiale de la vue, il peut être utile de supprimer puis de recréer la vue.  
   
- Pour plus d’informations sur la définition des dépendances d’une vue spécifique, consultez [sys.sql_dependencies &#40; Transact-SQL &#41; ](../../relational-databases/system-catalog-views/sys-sql-dependencies-transact-sql.md).  
+ Pour plus d’informations sur la définition des dépendances d’une vue spécifique, consultez [sys.sql_dependencies &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-dependencies-transact-sql.md).  
   
- Pour plus d’informations sur l’affichage du texte de la vue, consultez [sp_helptext &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-helptext-transact-sql.md).  
+ Pour plus d’informations sur l’affichage du texte d’une vue, consultez [sp_helptext &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helptext-transact-sql.md).  
   
-## <a name="permissions"></a>Permissions  
- Requiert **contrôle** autorisation sur la vue, **ALTER** autorisation sur le schéma contenant la vue, ou l’appartenance à la **db_ddladmin** rôle serveur fixe.  
+## <a name="permissions"></a>Autorisations  
+ Nécessite l’autorisation **CONTROL** sur la vue, l’autorisation **ALTER** sur le schéma contenant la vue, ou l’appartenance au rôle serveur fixe **db_ddladmin**.  
   
 ## <a name="examples"></a>Exemples  
   
@@ -96,12 +96,12 @@ DROP VIEW dbo.Reorder ;
 GO  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [ALTER VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/alter-view-transact-sql.md)   
  [CREATE VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   
  [sys.columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)   
- [Sys.Objects &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
- [UTILISER &#40; Transact-SQL &#41;](../../t-sql/language-elements/use-transact-sql.md)   
+ [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
+ [USE &#40;Transact-SQL&#41;](../../t-sql/language-elements/use-transact-sql.md)   
  [sys.sql_expression_dependencies &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md)  
  

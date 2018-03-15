@@ -1,5 +1,5 @@
 ---
-title: "CRÉER la clé de chiffrement de base de données (Transact-SQL) | Documents Microsoft"
+title: CREATE DATABASE ENCRYPTION KEY (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/24/2016
 ms.prod: sql-non-specified
@@ -44,7 +44,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="create-database-encryption-key-transact-sql"></a>CREATE DATABASE ENCRYPTION KEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
 
- Crée une clé de chiffrement permettant de chiffrer une base de données de façon transparente. Pour plus d’informations sur le chiffrement transparent de la base de données, consultez [Transparent Data Encryption &#40; Chiffrement transparent des données &#41; ](../../relational-databases/security/encryption/transparent-data-encryption.md).  
+ Crée une clé de chiffrement permettant de chiffrer une base de données de façon transparente. Pour plus d’informations sur le chiffrement transparent de bases de données, consultez [Chiffrement transparent des données &#40;TDE, Transparent Data Encryption&#41;](../../relational-databases/security/encryption/transparent-data-encryption.md).  
   
 ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -76,16 +76,16 @@ CREATE DATABASE ENCRYPTION KEY
 WITH ALGORITHM = { AES_128 | AES_192 | AES_256 | TRIPLE_DES_3KEY  }  
 Spécifie l'algorithme de chiffrement utilisé pour la clé de chiffrement.   
 >  [!NOTE]
->    À partir de SQL Server 2016, tous les algorithmes autres que AES_128, AES_192 et AES_256 sont déconseillés. Pour utiliser des algorithmes plus anciens (ce qui n’est pas recommandé), vous devez affecter le niveau de compatibilité 120 ou un niveau inférieur à la base de données.  
+>    Depuis SQL Server 2016, tous les algorithmes autres que AES_128, AES_192 et AES_256 sont dépréciés. Pour utiliser des algorithmes plus anciens (ce qui n’est pas recommandé), vous devez affecter le niveau de compatibilité 120 ou un niveau inférieur à la base de données.  
   
-CHIFFREMENT par Encryptor_Name de certificat de serveur  
+ENCRYPTION BY SERVER CERTIFICATE Encryptor_Name  
 Spécifie le nom du chiffreur utilisé pour chiffrer la clé de chiffrement de base de données.  
   
-CHIFFREMENT par Encryptor_Name clé asymétrique de serveur  
+ENCRYPTION BY SERVER ASYMMETRIC KEY Encryptor_Name  
 Spécifie le nom de la clé asymétrique utilisée pour chiffrer la clé de chiffrement de base de données. Afin de chiffrer la clé de chiffrement de base de données avec une clé asymétrique, la clé asymétrique doit résider sur un fournisseur de gestion de clés extensible.  
   
-## <a name="remarks"></a>Notes  
-Une clé de chiffrement de base de données est requise avant d’une base de données peut être chiffrée à l’aide de *chiffrement Transparent de base de données* (TDE). Lorsqu'une base de données est chiffrée de façon transparente, elle l'est entièrement au niveau des fichiers, sans aucune modification de code spéciale. Le certificat ou la clé asymétrique utilisé pour chiffrer la clé de chiffrement de base de données doit se trouver dans la base de données système principale.  
+## <a name="remarks"></a>Notes   
+Une clé de chiffrement de base de données est nécessaire avant qu’une base de données puisse être chiffrée en utilisant le *chiffrement transparent des données* (TDE). Lorsqu'une base de données est chiffrée de façon transparente, elle l'est entièrement au niveau des fichiers, sans aucune modification de code spéciale. Le certificat ou la clé asymétrique utilisé pour chiffrer la clé de chiffrement de base de données doit se trouver dans la base de données système principale.  
   
 Les instructions de chiffrement de base de données ne sont autorisées que sur les bases de données utilisateur.  
   
@@ -93,13 +93,13 @@ La clé de chiffrement de base de données ne peut pas être exportée de la bas
   
 La clé de chiffrement de base de données n'a pas besoin d'être régénérée lorsqu'un propriétaire de base de données (dbo) est modifié.  
   
-Une clé de chiffrement de base de données est automatiquement créée pour un [!INCLUDE[ssSDS](../../includes/sssds-md.md)] base de données. Vous n’avez pas besoin de créer une clé à l’aide de l’instruction CREATE DATABASE ENCRYPTION KEY.  
+Une clé de chiffrement de base de données est automatiquement créée pour une base de données [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. Vous n’avez pas besoin de créer une clé à l’aide de l’instruction CREATE DATABASE ENCRYPTION KEY.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
 Nécessite l'autorisation CONTROL sur la base de données et l'autorisation VIEW DEFINITION sur le certificat ou la clé asymétrique permettant de chiffrer la clé de chiffrement de base de données.  
   
 ## <a name="examples"></a>Exemples  
-Pour obtenir des exemples supplémentaires à l’aide du chiffrement transparent des données, consultez [Transparent Data Encryption &#40; Chiffrement transparent des données &#41; ](../../relational-databases/security/encryption/transparent-data-encryption.md), [Activer le chiffrement transparent des données sur SQL Server à l’aide de la gestion de clés extensible](../../relational-databases/security/encryption/enable-tde-on-sql-server-using-ekm.md), et [gestion de clés Extensible à l’aide d’Azure Key Vault &#40; SQL Server &#41; ](../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md).  
+Pour obtenir des exemples supplémentaires utilisant TDE, consultez [Chiffrement transparent des données &#40;TDE&#41;](../../relational-databases/security/encryption/transparent-data-encryption.md), [Activer le chiffrement transparent des données à l’aide de la gestion de clés extensible (EKM)](../../relational-databases/security/encryption/enable-tde-on-sql-server-using-ekm.md) et [Gestion de clés extensible à l’aide d’Azure Key Vault &#40;SQL Server&#41;](../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md).  
   
 Dans l'exemple suivant, une clé de chiffrement de base de données est créée à l'aide de l'algorithme `AES_256`, et protège la clé privée à l'aide d'un certificat nommé `MyServerCert`.  
   
@@ -112,13 +112,13 @@ ENCRYPTION BY SERVER CERTIFICATE MyServerCert;
 GO  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [Chiffrement transparent des données &#40;TDE&#41;](../../relational-databases/security/encryption/transparent-data-encryption.md)   
 [Chiffrement SQL Server](../../relational-databases/security/encryption/sql-server-encryption.md)   
 [SQL Server et clés de chiffrement de base de données &#40;moteur de base de données&#41;](../../relational-databases/security/encryption/sql-server-and-database-encryption-keys-database-engine.md)   
 [Hiérarchie de chiffrement](../../relational-databases/security/encryption/encryption-hierarchy.md)   
 [Options ALTER DATABASE SET &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)   
-[MODIFIER la clé de chiffrement de base de données &#40; Transact-SQL &#41;](../../t-sql/statements/alter-database-encryption-key-transact-sql.md)   
-[SUPPRIMER la clé de chiffrement de base de données &#40; Transact-SQL &#41;](../../t-sql/statements/drop-database-encryption-key-transact-sql.md)   
+[ALTER DATABASE ENCRYPTION KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-encryption-key-transact-sql.md)   
+[DROP DATABASE ENCRYPTION KEY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-database-encryption-key-transact-sql.md)   
 [sys.dm_database_encryption_keys &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql.md)  
     

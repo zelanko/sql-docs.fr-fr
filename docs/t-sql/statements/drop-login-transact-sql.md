@@ -1,5 +1,5 @@
 ---
-title: DROP LOGIN (Transact-SQL) | Documents Microsoft
+title: DROP LOGIN (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 05/11/2017
 ms.prod: sql-non-specified
@@ -52,19 +52,19 @@ DROP LOGIN login_name
  *login_name*  
  Spécifie le nom de la connexion à supprimer.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Il n'est pas possible de supprimer une connexion en cours. Une connexion qui possède un élément sécurisable, un objet au niveau serveur ou un travail SQL Server Agent ne peut pas être supprimée.  
   
  Vous pouvez supprimer une connexion sur laquelle des utilisateurs de base de données sont mappés ; cependant, cela génère des utilisateurs orphelins. Pour plus d’informations, consultez [Dépanner des utilisateurs orphelins &#40;SQL Server&#41;](../../sql-server/failover-clusters/troubleshoot-orphaned-users-sql-server.md).  
   
- Dans [!INCLUDE[ssSDS](../../includes/sssds-md.md)], les données de connexion requises pour authentifier une connexion et les règles de pare-feu de niveau serveur sont temporairement mis en cache dans chaque base de données. Ce cache est actualisé régulièrement. Pour forcer une actualisation du cache d’authentification et assurez-vous qu’une base de données a la version la plus récente de la table de connexions, exécutez [DBCC FLUSHAUTHCACHE &#40; Transact-SQL &#41; ](../../t-sql/database-console-commands/dbcc-flushauthcache-transact-sql.md).  
+ Dans [!INCLUDE[ssSDS](../../includes/sssds-md.md)], les données de connexion exigées pour authentifier une connexion et les règles de pare-feu de niveau serveur sont temporairement mises en cache dans chaque base de données. Ce cache est régulièrement actualisé. Pour forcer une actualisation du cache d’authentification et garantir qu’une base de données a la version la plus récente de la table de connexions, exécutez [DBCC FLUSHAUTHCACHE &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-flushauthcache-transact-sql.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l'autorisation ALTER ANY LOGIN sur le serveur.  
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-dropping-a-login"></a>A. Suppression d’un compte de connexion  
+### <a name="a-dropping-a-login"></a>A. Suppression d’une connexion  
  Le code exemple suivant supprime la connexion `WilliJo`.  
   
 ```  
@@ -73,7 +73,7 @@ GO
 ```  
  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md)   
  [ALTER LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/alter-login-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  

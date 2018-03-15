@@ -1,5 +1,5 @@
 ---
-title: "IDENTITY (propriété) (Transact-SQL) | Documents Microsoft"
+title: "IDENTITY (propriété) (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,13 +34,13 @@ ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="create-table-transact-sql-identity-property"></a>CRÉER la TABLE (Transact-SQL) IDENTITY (propriété)
+# <a name="create-table-transact-sql-identity-property"></a>CREATE TABLE (Transact-SQL) IDENTITY (propriété)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
 
   Crée une colonne d'identité dans une table. Cette propriété est utilisée avec les instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] CREATE TABLE et ALTER TABLE.  
   
 > [!NOTE]  
->  La propriété IDENTITY diffère de SQL-DMO **identité** propriété qui expose la propriété d’identité de lignes d’une colonne.  
+>  La propriété IDENTITY diffère de la propriété SQL-DMO **Identity** qui expose la propriété d’identité de lignes d’une colonne.  
   
  ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -52,15 +52,15 @@ IDENTITY [ (seed , increment) ]
 ```  
   
 ## <a name="arguments"></a>Arguments  
- *valeur initiale*  
+ *seed*  
  Valeur utilisée pour la toute première ligne chargée dans la table.  
   
- *incrément*  
+ *increment*  
  Valeur d'incrément ajoutée à la valeur d'identité de la ligne précédemment chargée.  
   
  Vous devez spécifier à la fois la valeur initiale et l'incrément, ou aucun des deux. Si vous n'en spécifiez aucun, la valeur par défaut est (1,1).  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Les colonnes d'identité peuvent être utilisées pour générer des valeurs de clé. La propriété d'identité sur une colonne garantit ce qui suit :  
   
 -   Chaque nouvelle valeur est générée en fonction de la valeur et de l'incrément actuels.  
@@ -69,13 +69,13 @@ IDENTITY [ (seed , increment) ]
   
  La propriété d'identité sur une colonne ne garantit pas ce qui suit :  
   
--   **L’unicité de la valeur** – l’unicité doit être appliquée à l’aide un **clé primaire** ou **UNIQUE** contrainte ou **UNIQUE** index.  
+-   **Unicité de la valeur** – L’unicité doit être appliquée à l’aide d’une contrainte **PRIMARY KEY** ou **UNIQUE** , ou d’un index **UNIQUE**.  
   
--   **Valeurs consécutives au sein d’une transaction** – une insertion de plusieurs lignes de transaction n’est pas garantie pour obtenir les valeurs consécutives pour les lignes, car les autres insertions simultanées peuvent se produire sur la table. Si les valeurs doivent être consécutives, la transaction doit utiliser un verrou exclusif sur la table ou utiliser le **SERIALIZABLE** niveau d’isolation.  
+-   **Valeurs consécutives dans une transaction** – Il n’est pas garanti qu’une transaction qui insère plusieurs lignes obtienne des valeurs consécutives pour les lignes car d’autres insertions simultanées peuvent se produire sur la table. Si les valeurs doivent être consécutives, alors la transaction doit utiliser un verrou sur la table ou le niveau d’isolation **SERIALIZABLE**.  
   
--   **Valeurs consécutives après le redémarrage du serveur ou d’autres défaillances** –[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut mettre en cache les valeurs d’identité pour des raisons de performances et de certaines valeurs affectées peuvent être perdues lors d’un redémarrage du serveur ou d’échec de la base de données. Cela peut entraîner des intervalles de valeur d'identité à l'insertion. Si les intervalles ne sont pas acceptables, alors l'application doit utiliser son propre mécanisme pour générer des valeurs clés. À l’aide d’un générateur de séquence avec le **NOCACHE** option peut limiter les intervalles pour les transactions qui ne sont jamais validées.  
+-   **Valeurs consécutives après le redémarrage du serveur ou d’autres échecs** – [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut mettre en cache les valeurs d’identité pour garantir les performances, et certaines valeurs affectées peuvent être perdues lors d’un échec de base de données ou du redémarrage du serveur. Cela peut entraîner des intervalles de valeur d'identité à l'insertion. Si les intervalles ne sont pas acceptables, alors l'application doit utiliser son propre mécanisme pour générer des valeurs clés. L’utilisation d’un générateur de séquence avec l’option **NOCACHE** peut limiter les intervalles pour les transactions qui ne sont jamais validées.  
   
--   **Réutilisation des valeurs** – pour une propriété d’identité donnée avec valeur initiale/incrément spécifique, l’identité de valeurs ne sont pas réutilisés par le moteur. Si une instruction d'insertion donnée échoue, ou si l'instruction d'insertion est restaurée, alors les valeurs d'identité consommées sont perdues et ne peuvent plus être générées. Cela peut entraîner des intervalles lorsque les valeurs d'identité ultérieures sont générées.  
+-   **Réutilisation des valeurs** – Pour une propriété d’identité donnée, avec une valeur/un incrément spécifique, les valeurs d’identité ne sont pas réutilisées par le moteur. Si une instruction d'insertion donnée échoue, ou si l'instruction d'insertion est restaurée, alors les valeurs d'identité consommées sont perdues et ne peuvent plus être générées. Cela peut entraîner des intervalles lorsque les valeurs d'identité ultérieures sont générées.  
   
  Ces restrictions sont dues à la conception et visent à améliorer les performances, car elles sont acceptables dans la plupart des situations. Si vous ne pouvez pas utiliser les valeurs d'identité en raison de ces restrictions, créez une table distincte contenant une valeur actuelle et gérez l'accès à la table et l'affectation de numéro dans votre application.  
   
@@ -83,7 +83,7 @@ IDENTITY [ (seed , increment) ]
   
  Une seule colonne d'identité peut être créée par table.  
   
- Pour les tables optimisées en mémoire, la valeur initiale et l'incrément doivent être définis à « 1,1 ». Définition de la valeur de départ ou incrément sur une valeur autre que 1 provoque l’erreur suivante : l’utilisation de départ et d’incrément valeurs autres que 1 n’est pas pris en charge avec tables optimisées en mémoire.  
+ Pour les tables optimisées en mémoire, la valeur initiale et l'incrément doivent être définis à « 1,1 ». L’affectation d’une valeur de départ ou d’incrément autre que 1 provoque l’erreur suivante : L’utilisation de valeurs de départ ou d’incrément autres que 1 n’est pas prise en charge avec les tables à mémoire optimisée.  
   
 ## <a name="examples"></a>Exemples  
   
@@ -173,16 +173,16 @@ SELECT @minidentval = MIN($IDENTITY) FROM img
 SET IDENTITY_INSERT img OFF;  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
  [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
  [DBCC CHECKIDENT &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-checkident-transact-sql.md)   
- [IDENT_INCR &#40; Transact-SQL &#41;](../../t-sql/functions/ident-incr-transact-sql.md)   
+ [IDENT_INCR &#40;Transact-SQL&#41;](../../t-sql/functions/ident-incr-transact-sql.md)   
  [@@IDENTITY &#40;Transact-SQL&#41;](../../t-sql/functions/identity-transact-sql.md)   
- [IDENTITÉ &#40; Fonction &#41; &#40; Transact-SQL &#41;](../../t-sql/functions/identity-function-transact-sql.md)   
- [IDENT_SEED &#40; Transact-SQL &#41;](../../t-sql/functions/ident-seed-transact-sql.md)   
+ [IDENTITY &#40;fonction&#41; &#40;Transact-SQL&#41;](../../t-sql/functions/identity-function-transact-sql.md)   
+ [IDENT_SEED &#40;Transact-SQL&#41;](../../t-sql/functions/ident-seed-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
- [SET IDENTITY_INSERT &#40; Transact-SQL &#41;](../../t-sql/statements/set-identity-insert-transact-sql.md)   
+ [SET IDENTITY_INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/set-identity-insert-transact-sql.md)   
  [Répliquer des colonnes d’identité](../../relational-databases/replication/publish/replicate-identity-columns.md)  
   
   

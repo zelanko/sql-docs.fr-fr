@@ -1,5 +1,5 @@
 ---
-title: "CollectionAggregate (Type de données geography) | Documents Microsoft"
+title: "CollectionAggregate (type de données geography) | Microsoft Docs"
 ms.custom: 
 ms.date: 07/30/2017
 ms.prod: sql-non-specified
@@ -31,7 +31,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="collectionaggregate-geography-data-type"></a>CollectionAggregate (type de données geography)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-Crée un **GeometryCollection** instance à partir d’un ensemble de **geography** objets.
+Crée une instance **GeometryCollection** à partir d’un ensemble d’objets **geography**.
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -42,24 +42,24 @@ ConvexHullAggregate ( geography_operand )
   
 ## <a name="arguments"></a>Arguments  
  *geography_operand*  
- Est un **geography** colonne de table de type qui représente un ensemble de **geography** objets à répertorier dans le **GeometryCollection** instance.  
+ Colonne de table de type **geography** qui représente un ensemble d’objets **geography** à lister dans l’instance **GeometryCollection**.  
   
 ## <a name="return-types"></a>Types de retour  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]type de retour : **geography**  
+ Type de retour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] : **geography**  
   
 ## <a name="exception"></a>Exception  
- Lève un `FormatException` en présence de valeurs d'entrée qui ne sont pas valides. Consultez [STIsValid &#40; Type de données geography &#41;](../../t-sql/spatial-geography/stisvalid-geography-data-type.md)  
+ Lève un `FormatException` en présence de valeurs d'entrée qui ne sont pas valides. Consultez [STIsValid &#40;type de données geography&#41;](../../t-sql/spatial-geography/stisvalid-geography-data-type.md)  
   
-## <a name="remarks"></a>Notes  
- Méthode renvoie **null** lorsque l’entrée est vide ou l’entrée a des SRID différents. Consultez [identificateurs de référence spatiale &#40; SRID &#41;](../../relational-databases/spatial/spatial-reference-identifiers-srids.md)  
+## <a name="remarks"></a>Notes   
+ La méthode retourne **null** quand l’entrée est vide ou que ses SRID sont différents. Consultez [Identificateurs de référence spatiale &#40;SRID&#41;](../../relational-databases/spatial/spatial-reference-identifiers-srids.md)  
   
- Méthode ignore **null** entrées.  
+ La méthode ignore les entrées **null**.  
   
 > [!NOTE]  
->  Méthode renvoie **null** si toutes les valeurs entrées sont **null**.  
+>  La méthode retourne **null** si toutes les valeurs entrées sont **null**.  
   
 ## <a name="examples"></a>Exemples  
- L’exemple suivant retourne un `GeometryCollection` instance qui contient un ensemble de **geography** objets.  
+ L’exemple suivant retourne une instance `GeometryCollection` qui contient un ensemble d’objets **geography**.  
   
  ```
  USE AdventureWorks2012  
@@ -69,7 +69,7 @@ ConvexHullAggregate ( geography_operand )
  WHERE City LIKE ('Bothell')
  ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Méthodes geography statiques étendues](../../t-sql/spatial-geography/extended-static-geography-methods.md)  
   
   

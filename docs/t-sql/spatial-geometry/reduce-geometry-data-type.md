@@ -1,5 +1,5 @@
 ---
-title: "Réduire (Type de données geometry) | Documents Microsoft"
+title: "Reduce (type de données geometry) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="reduce-geometry-data-type"></a>Reduce (type de données geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Retourne une approximation de la donnée **geometry** instance générés par l’exécution d’une extension de l’algorithme de Douglas-Peucker sur l’instance avec la tolérance donnée.
+Retourne une approximation de l’instance **geometry** donnée en exécutant une extension de l’algorithme de Douglas-Peucker sur l’instance, avec la tolérance donnée.
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -45,23 +45,23 @@ Retourne une approximation de la donnée **geometry** instance générés par l�
   
 ## <a name="arguments"></a>Arguments  
  *tolerance*  
- Est une valeur de type **float**. *la tolérance de panne* est la tolérance à entrer pour l’algorithme d’approximation.  
+ Valeur de type **float**. *tolerance* est la tolérance à entrer pour l’algorithme d’approximation.  
   
 ## <a name="return-types"></a>Types de retour  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]type de retour : **geometry**  
+ Type de retour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] : **geometry**  
   
  Type de retour CLR : **SqlGeometry**  
   
-## <a name="remarks"></a>Notes  
- Pour les types de collection, cet algorithme fonctionne indépendamment sur chaque **geometry** contenus dans l’instance.  
+## <a name="remarks"></a>Notes   
+ Pour les types de collection, cet algorithme fonctionne indépendamment sur chaque **geometry** contenu dans l’instance.  
   
- Cet algorithme ne modifie pas **Point** instances.  
+ Cet algorithme ne modifie pas les instances **Point**.  
   
- Sur **LineString**, **CircularString**, et **CompoundCurve** instances, l’algorithme d’approximation conserve le début et points de terminaison de l’instance d’origine et il rajoute de manière itérative le point à partir de l’instance d’origine qui dévie plus de résultat jusqu'à ce qu’aucun point dévie plus que la tolérance donnée.  
+ Sur les instances **LineString**, **CircularString** et **CompoundCurve**, l’algorithme d’approximation conserve les points de début et de fin d’origine de l’instance. Il rajoute ensuite de manière itérative le point de l’instance d’origine qui dévie le plus du résultat, jusqu’à ce qu’il n’existe plus aucun point déviant de la tolérance donnée.  
   
- `Reduce()`Retourne un **LineString**, **CircularString**, ou **CompoundCurve** instance **CircularString** instances.  `Reduce()`Retourne un **CompoundCurve** ou **LineString** instance **CompoundCurve** instances.  
+ `Reduce()` retourne une instance **LineString**, **CircularString** ou **CompoundCurve** pour les instances **CircularString**.  `Reduce()` retourne une instance **CompoundCurve** ou **LineString** pour les instances **CompoundCurve**.  
   
- Sur **polygone** instances, l’algorithme d’approximation est appliqué indépendamment à chaque anneau. La méthode produira un `FormatException` si retourné **polygone** instance n’est pas valide ; par exemple, un non valide **MultiPolygon** instance est créée si `Reduce()` est appliquée pour simplifier chaque anneau dans l’instance et l’anneaux résultants se chevauchent.  Sur **CurvePolygon** instances avec un anneau extérieur et sans anneau intérieur, `Reduce()` retourne un **CurvePolygon**, **LineString**, ou **Point** instance.  Si le **CurvePolygon** comporte des anneaux intérieurs un **CurvePolygon** ou **MultiPoint** instance est retournée.  
+ Sur les instances **Polygon**, l’algorithme d’approximation est appliqué indépendamment à chaque anneau. La méthode produit `FormatException` si l’instance **Polygon** retournée est non valide. Par exemple, une instance **MultiPolygon** non valide est créée si `Reduce()` est appliquée pour simplifier chaque anneau de l’instance et si les anneaux résultants se chevauchent.  Sur les instances **CurvePolygon** avec un anneau extérieur et sans anneau intérieur, `Reduce()` retourne une instance **CurvePolygon**, **LineString** ou **Point**.  Si **CurvePolygon** a des anneaux intérieurs, une instance **CurvePolygon** ou **MultiPoint** est retournée.  
   
  Lorsqu'un segment d'arc de cercle est rencontré, l'algorithme d'approximation vérifie si l'arc peut se rapprocher par sa pression simultanée dans la moitié de la tolérance donnée.  Si la pression simultanée satisfait à ce critère, l'arc circulaire est remplacé dans les calculs par la pression simultanée. S'il ne respecte pas ce critère, l'arc circulaire est conservé et l'algorithme d'approximation est appliqué aux segments restants.  
   
@@ -77,7 +77,7 @@ SELECT @g.Reduce(.75).ToString();
 ```  
   
 ### <a name="b-using-reduce-with-varying-tolerance-levels-on-a-circularstring"></a>B. Utilisation de Reduce() avec variation de niveaux de tolérance sur un CircularString  
- L’exemple suivant utilise `Reduce()` avec trois niveaux de tolérance sur un **CircularString** instance :  
+ L’exemple suivant utilise `Reduce()` avec trois niveaux de tolérance sur une instance **CircularString** :  
   
 ```
  DECLARE @g geometry = 'CIRCULARSTRING(0 0, 8 8, 16 0, 20 -4, 24 0)'; 
@@ -97,7 +97,7 @@ SELECT @g.Reduce(.75).ToString();
  Chacune des instances retournées contient les points de terminaison (0 0) et (24 0).  
   
 ### <a name="c-using-reduce-with-varying-tolerance-levels-on-a-compoundcurve"></a>C. Utilisation de Reduce() avec variation des niveaux de tolérance sur un CompoundCurve  
- L’exemple suivant utilise `Reduce()` avec deux niveaux de tolérance sur un **CompoundCurve** instance :  
+ L’exemple suivant utilise `Reduce()` avec deux niveaux de tolérance sur une instance **CompoundCurve** :  
   
 ```
  DECLARE @g geometry = 'COMPOUNDCURVE(CIRCULARSTRING(0 0, 8 8, 16 0, 20 -4, 24 0),(24 0, 20 4, 16 0))';  
@@ -105,10 +105,10 @@ SELECT @g.Reduce(.75).ToString();
  SELECT @g.Reduce(16).ToString();
  ```  
   
- Dans cet exemple, notez que la seconde **sélectionnez** instruction renvoie la **LineString** instance : `LineString(0 0, 16 0)`.  
+ Dans cet exemple, notez que la deuxième instruction **SELECT** retourne l’instance **LineString** : `LineString(0 0, 16 0)`.  
   
 ### <a name="showing-an-example-where-the-original-start-and-end-points-are-lost"></a>Affichage d'un exemple où les points de début et de fin d'origine sont perdus  
- L'exemple suivant affiche comment les points de début et de fin d'origine peuvent ne pas être conservés par l'instance résultante. En effet, en conservant le début d’origine et de points de terminaison non valide se traduirait **LineString** instance.  
+ L'exemple suivant affiche comment les points de début et de fin d'origine peuvent ne pas être conservés par l'instance résultante. Cela se produit, car la conservation des points de début et de fin d’origine donne lieu à une instance **LineString** non valide.  
   
 ```  
 DECLARE @g geometry = 'LINESTRING(0 0, 4 0, 2 .01, 1 0)';  
@@ -117,7 +117,7 @@ SELECT @g.STIsValid() AS Valid
 SELECT @g.ToString() AS Original, @h.ToString() AS Reduced;  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Méthodes geometry statiques étendues](../../t-sql/spatial-geometry/extended-static-geometry-methods.md)  
   
   

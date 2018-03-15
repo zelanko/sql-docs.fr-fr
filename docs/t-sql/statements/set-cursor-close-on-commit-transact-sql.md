@@ -1,5 +1,5 @@
 ---
-title: SET CURSOR_CLOSE_ON_COMMIT (Transact-SQL) | Documents Microsoft
+title: SET CURSOR_CLOSE_ON_COMMIT (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/26/2017
 ms.prod: sql-non-specified
@@ -51,7 +51,7 @@ ms.lasthandoff: 11/21/2017
 SET CURSOR_CLOSE_ON_COMMIT { ON | OFF }  
 ```  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Lorsque SET CURSOR_CLOSE_ON_COMMIT a la valeur ON, ce paramètre ferme tous les curseurs ouverts lors de la validation ou de l'annulation conformément à ISO. Lorsque SET CURSOR_CLOSE_ON_COMMIT a la valeur OFF, le curseur n'est pas fermé lorsqu'une transaction est validée.  
   
 > [!NOTE]  
@@ -59,9 +59,9 @@ SET CURSOR_CLOSE_ON_COMMIT { ON | OFF }
   
  Si SET CURSOR_CLOSE_ON_COMMIT est défini sur OFF, une instruction ROLLBACK ferme uniquement les curseurs ouverts asynchrones dont le remplissage n'est pas total. Les curseurs statiques et non sensitifs ouverts après des modifications ne reflètent plus l'état des données si les modifications sont ensuite annulées.  
   
- SET CURSOR_CLOSE_ON_COMMIT contrôle le même comportement que l'option de base de données CURSOR_CLOSE_ON_COMMIT. Si CURSOR_CLOSE_ON_COMMIT est défini sur ON ou OFF, cette option est utilisée pour la connexion. Si SET CURSOR_CLOSE_ON_COMMIT n’a pas été spécifié, la valeur de la **is_cursor_close_on_commit_on** colonne dans la **sys.databases** vue de catalogue s’applique.  
+ SET CURSOR_CLOSE_ON_COMMIT contrôle le même comportement que l'option de base de données CURSOR_CLOSE_ON_COMMIT. Si CURSOR_CLOSE_ON_COMMIT est défini sur ON ou OFF, cette option est utilisée pour la connexion. Si SET CURSOR_CLOSE_ON_COMMIT n’est pas spécifié, la valeur de la colonne **is_cursor_close_on_commit_on** de la vue de catalogue **sys.databases** est appliquée.  
   
- Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournisseur Native Client OLE DB pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pilote ODBC Native Client à la fois valeur OFF à CURSOR_CLOSE_ON_COMMIT lorsqu’ils se connectent. DB-Library n'affecte pas automatiquement de valeur à CURSOR_CLOSE_ON_COMMIT.  
+ Le fournisseur OLE DB [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et le pilote ODBC [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client attribuent la valeur OFF à CURSOR_CLOSE_ON_COMMIT lors de la connexion. DB-Library n'affecte pas automatiquement de valeur à CURSOR_CLOSE_ON_COMMIT.  
   
  Lorsque SET ANSI_DEFAULTS est défini sur ON, l'option SET CURSOR_CLOSE_ON_COMMIT est activée.  
   
@@ -75,7 +75,7 @@ IF ( (4 & @@OPTIONS) = 4 ) SET @CURSOR_CLOSE = 'ON';
 SELECT @CURSOR_CLOSE AS CURSOR_CLOSE_ON_COMMIT;  
 ```  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l'appartenance au rôle **public** .  
   
 ## <a name="examples"></a>Exemples  
@@ -131,13 +131,13 @@ DROP TABLE t1;
 GO  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [BEGIN TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/begin-transaction-transact-sql.md)   
- [Fermer &#40; Transact-SQL &#41;](../../t-sql/language-elements/close-transact-sql.md)   
+ [CLOSE &#40;Transact-SQL&#41;](../../t-sql/language-elements/close-transact-sql.md)   
  [COMMIT TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/commit-transaction-transact-sql.md)   
  [ROLLBACK TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/rollback-transaction-transact-sql.md)   
  [Instructions SET &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)   
- [SET ANSI_DEFAULTS &#40; Transact-SQL &#41;](../../t-sql/statements/set-ansi-defaults-transact-sql.md)  
+ [SET ANSI_DEFAULTS &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-defaults-transact-sql.md)  
   
   

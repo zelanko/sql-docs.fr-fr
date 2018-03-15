@@ -1,5 +1,5 @@
 ---
-title: "AsGml (Type de données geography) | Documents Microsoft"
+title: "AsGml (type de données geography) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -33,12 +33,12 @@ ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 01/25/2018
 ---
-#  <a name="asgml---geography-data-type"></a>AsGml - Type de données geography
+#  <a name="asgml---geography-data-type"></a>AsGml - type de données geography
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Retourne la représentation de langage GML (Geography Markup) d’un **geography** instance.  
+  Retourne la représentation GML (Geography Markup Language) d’une instance **geography**.  
   
- Pour plus d’informations sur le langage GML, consultez la spécification Open Geospatial Consortium : [OGC Specifications, Geography Markup Language.](http://go.microsoft.com/fwlink/?LinkId=93629)  
+ Pour plus d’informations sur le langage GML, consultez la spécification OGC (Open Geospatial Consortium) : [OGC Specifications, Geography Markup Language.](http://go.microsoft.com/fwlink/?LinkId=93629)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -48,11 +48,11 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>Types de retour  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]type de retour : **xml**  
+ Type de retour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] : **xml**  
   
  Type de retour CLR : **SqlXml**  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
   
 ## <a name="examples"></a>Exemples  
  L'exemple suivant crée une instance `LineString` et utilise `AsGML()` pour retourner la description GML de l'instance.  
@@ -69,7 +69,7 @@ SELECT @g.AsGml();
 <LineString xmlns="http://www.opengis.net/gml"><posList>47.656 -122.36 47.656 -122.343</posList></LineString>  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Méthodes étendues sur des instances geography](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: "STOverlaps (Type de données geometry) | Documents Microsoft"
+title: "STOverlaps (type de données geometry) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stoverlaps-geometry-data-type"></a>STOverlaps (type de données geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Retourne 1 si une **geometry** instance en chevauche une autre **geometry** instance. Retourne 0 dans le cas contraire.
+Retourne 1 si une instance **geometry** chevauche une autre instance **geometry**. Retourne 0 dans le cas contraire.
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -45,22 +45,22 @@ Retourne 1 si une **geometry** instance en chevauche une autre **geometry** inst
   
 ## <a name="arguments"></a>Arguments  
  *other_geometry*  
- Une autre **geometry** instance à comparer à l’instance sur laquelle `STOverlaps()` est appelé.  
+ Autre instance **geometry** à comparer à l’instance sur laquelle `STOverlaps()` est appelé.  
   
 ## <a name="return-types"></a>Types de retour  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]type de retour : **bits**  
+ Type de retour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] : **bit**  
   
  Type de retour CLR : **SqlBoolean**  
   
-## <a name="remarks"></a>Notes  
- Deux **geometry** instances se chevauchent si la région qui représente leur intersection a la même dimension que les instances et la région est différent de l’instance.  
+## <a name="remarks"></a>Notes   
+ Deux instances **geometry** se chevauchent si la région qui représente leur intersection a la même dimension que les instances, et si elle n’équivaut à aucune de ces instances.  
   
- `STOverlaps()`Retourne toujours 0 si les points où les **geometry** instances se croisent ne sont pas la même dimension.  
+ `STOverlaps()` retourne toujours 0 si les points d’intersection des instances **geometry** ne correspondent pas à la même dimension.  
   
- Cette méthode retourne toujours null si l’ID de référence spatiale (SRID) de la **geometry** instances ne correspondent pas.  
+ Cette méthode retourne toujours une valeur Null si les SRID (ID de référence spatiale) des instances **geometry** ne correspondent pas.  
   
 ## <a name="examples"></a>Exemples  
- L’exemple suivant utilise `STOverlaps()` pour tester deux **geometry** instances se chevauchent.  
+ L’exemple suivant utilise `STOverlaps()` pour tester si deux instances **geometry** se chevauchent.  
   
 ```  
 DECLARE @g geometry;  
@@ -70,7 +70,7 @@ SET @h = geometry::STGeomFromText('POLYGON((1 1, 3 1, 3 3, 1 3, 1 1))', 0);
 SELECT @g.STOverlaps(@h);  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Méthodes OGC sur des instances geography](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   
   

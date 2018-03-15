@@ -1,5 +1,5 @@
 ---
-title: Clause de sortie (Transact-SQL) | Documents Microsoft
+title: OUTPUT, clause (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/09/2017
 ms.prod: sql-non-specified
@@ -52,7 +52,7 @@ ms.lasthandoff: 01/25/2018
 > [!NOTE]  
 >  Une instruction UPDATE, INSERT ou DELETE qui a une clause OUTPUT retourne des lignes au client même si l'instruction rencontre des erreurs et est annulée. Le résultat ne doit pas être utilisé si des erreurs se produisent lorsque vous exécutez l'instruction.  
   
- **Utilisé dans :**  
+ **Utilisation dans :**  
   
  [DELETE](../../t-sql/statements/delete-transact-sql.md)  
   
@@ -84,18 +84,18 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="arguments"></a>Arguments  
  @*table_variable*  
- Spécifie un **table** variable les lignes retournées sont insérées au lieu d’être retournées à l’appelant. @*table_variable* doit être déclaré avant l’instruction INSERT, UPDATE, DELETE ou MERGE.  
+ Spécifie une variable **table** dans laquelle les lignes retournées sont insérées au lieu d’être retournées à l’appelant. @*table_variable* doit être déclaré avant les instructions INSERT, UPDATE, DELETE et MERGE.  
   
- Si *column_list* n’est pas spécifié, le **table** variable doit avoir le même nombre de colonnes que le jeu de résultats de sortie. Les exceptions sont des colonnes calculées et des colonnes d'identité qui doivent être ignorées. Si *column_list* est spécifié, toutes les colonnes ignorées doivent autoriser les valeurs null ou avoir la valeur par défaut des valeurs.  
+ Si *column_list* n’est pas spécifié, la variable **table** doit contenir le même nombre de colonnes que le jeu de résultats OUTPUT. Les exceptions sont des colonnes calculées et des colonnes d'identité qui doivent être ignorées. Si *column_list* est spécifié, toutes les colonnes ignorées doivent autoriser des valeurs NULL ou avoir des valeurs par défaut.  
   
- Pour plus d’informations sur **table** variables, consultez [table &#40; Transact-SQL &#41; ](../../t-sql/data-types/table-transact-sql.md).  
+ Pour plus d’informations sur les variables **table**, consultez [table &#40;Transact-SQL&#41;](../../t-sql/data-types/table-transact-sql.md).  
   
  *output_table*  
  Spécifie une table dans laquelle les lignes retournées sont insérées au lieu d'être retournées à l'appelant. *output_table* peut être une table temporaire.  
   
- Si *column_list* n’est pas spécifié, la table doit avoir le même nombre de colonnes que le jeu de résultats de sortie. Les exceptions sont des colonnes calculées et des colonnes d'identité. Elles doivent être ignorées. Si *column_list* est spécifié, toutes les colonnes ignorées doivent autoriser les valeurs null ou avoir la valeur par défaut des valeurs.  
+ Si *column_list* n’est pas spécifié, la table doit contenir le même nombre de colonnes que le jeu de résultats OUTPUT. Les exceptions sont des colonnes calculées et des colonnes d'identité. Elles doivent être ignorées. Si *column_list* est spécifié, toutes les colonnes ignorées doivent autoriser des valeurs NULL ou avoir des valeurs par défaut.  
   
- *output_table* ne peut pas :  
+ *output_table* ne peut pas :  
   
 -   Avoir de déclencheurs activés.  
   
@@ -104,10 +104,10 @@ ms.lasthandoff: 01/25/2018
 -   Avoir des contraintes CHECK ou des règles activées.  
   
 *column_list*  
- Liste facultative de noms de colonne sur la table cible de la clause INTO. Elle est analogue à la liste de colonnes autorisée dans le [insérer](../../t-sql/statements/insert-transact-sql.md) instruction.  
+ Liste facultative de noms de colonne sur la table cible de la clause INTO. Elle est analogue à la liste de colonnes autorisée dans l’instruction [INSERT](../../t-sql/statements/insert-transact-sql.md).  
   
  *scalar_expression*  
- Combinaison de symboles et d'opérateurs qui a pour résultat une seule valeur. Fonctions d’agrégation ne sont pas autorisées dans *scalar_expression*.  
+ Combinaison de symboles et d'opérateurs qui a pour résultat une seule valeur. Les fonctions d’agrégation ne sont pas autorisées dans *scalar_expression*.  
   
  Toute référence aux colonnes dans la table en cours de modification doit être qualifiée avec le préfixe INSERTED ou DELETED.  
   
@@ -140,20 +140,20 @@ DELETE Sales.ShoppingCartItem
 ```  
   
  *column_name*  
- Référence de colonne explicite. Toute référence à la table en cours de modification doit être qualifiée correctement par soit le le préfixe INSERTED ou DELETED selon le cas, par exemple : INSERTED **. *** column_name*.  
+ Référence de colonne explicite. Toutes les références à la table en cours de modification doivent être qualifiées correctement par le préfixe INSERTED ou DELETED approprié, comme ceci : INSERTED**.***column_name*.  
   
  $action  
- Disponible uniquement pour l'instruction MERGE. Spécifie une colonne de type **nvarchar (10)** dans la clause OUTPUT dans une instruction MERGE qui renvoie un des trois valeurs pour chaque ligne : 'INSERT', 'UPDATE' ou 'DELETE', en fonction de l’action qui a été effectuée sur cette ligne.  
+ Disponible uniquement pour l'instruction MERGE. Spécifie une colonne de type **nvarchar(10)** dans la clause OUTPUT d’une instruction MERGE qui retourne l’une des trois valeurs suivantes pour chaque ligne : INSERT, UPDATE ou DELETE, en fonction de l’action effectuée sur cette ligne.  
   
-## <a name="remarks"></a>Notes  
- La sortie \<dml_select_list > clause et la sortie \<dml_select_list > INTO {**@*** table_variable* | *output_table* } peuvent être définies dans une seule instruction INSERT, UPDATE, DELETE ou MERGE.  
+## <a name="remarks"></a>Notes   
+ Les clauses OUTPUT \<dml_select_list> et OUTPUT \<dml_select_list> INTO { **@***table_variable* | *output_table* } peuvent être définies dans une seule instruction INSERT, UPDATE, DELETE ou MERGE.  
   
 > [!NOTE]  
 >  Sauf indication contraire, les références à la clause OUTPUT sont relatives aux clauses OUTPUT et OUTPUT INTO.  
   
  La clause OUTPUT est utile pour extraire la valeur d'identité ou les colonnes calculées après une opération INSERT ou UPDATE  
   
- Lorsqu’une colonne calculée est incluse dans le \<dml_select_list >, la colonne correspondante dans la table de sortie ou une variable de table n’est pas une colonne calculée. Les valeurs de la nouvelle colonne sont les valeurs calculées lors de l'exécution de l'instruction.  
+ Quand une colonne calculée est incluse dans \<dml_select_list>, la colonne correspondante dans la table de sortie ou la variable de table n’est pas une colonne calculée. Les valeurs de la nouvelle colonne sont les valeurs calculées lors de l'exécution de l'instruction.  
   
  Vous n'avez aucune garantie que l'ordre d'application des modifications dans la table et l'ordre d'insertion des lignes dans la table de sortie ou la variable de table correspondent.  
   
@@ -171,7 +171,7 @@ DELETE Sales.ShoppingCartItem
   
 -   La clause OUTPUT INTO ne peut pas être utilisée pour insérer une vue ou une fonction d'ensemble de lignes.  
   
--   Une fonction définie par l’utilisateur ne peut pas être créée si elle contient une clause OUTPUT INTO avec une table comme cible.  
+-   Une fonction définie par l’utilisateur ne peut pas être créée si elle contient une clause OUTPUT INTO ayant une table comme cible.  
   
  Pour empêcher tout comportement non déterministe, la clause OUTPUT ne peut pas contenir les références suivantes :  
   
@@ -185,12 +185,12 @@ DELETE Sales.ShoppingCartItem
   
     -   Une colonne calculée qui contient une fonction définie par l’utilisateur qui effectue un accès aux données utilisateur ou système dans sa définition.  
   
-     Lorsque [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] détecte une telle colonne dans la clause OUTPUT, l’erreur 4186 est générée.   
+     Quand [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] détecte une telle colonne dans la clause OUTPUT, l’erreur 4186 est générée.   
   
 ## <a name="inserting-data-returned-from-an-output-clause-into-a-table"></a>Insertion de données retournées à partir d'une clause OUTPUT dans une table  
  Lorsque vous capturez les résultats d'une clause OUTPUT dans une instruction INSERT, UPDATE, DELETE ou MERGE imbriquée et insérez ces résultats dans une table cible, n'oubliez pas les informations suivantes :  
   
--   L'opération entière est atomique. L’instruction INSERT et l’instruction DML imbriquée qui contient la clause OUTPUT s’exécutent, ou l’instruction entière échoue.  
+-   L'opération entière est atomique. Soit l’instruction INSERT et l’instruction DML imbriquée qui contient la clause OUTPUT s’exécutent toutes les deux, soit l’instruction entière échoue.  
   
 -   Les restrictions suivantes s'appliquent à la cible de l'instruction INSERT externe :  
   
@@ -198,7 +198,7 @@ DELETE Sales.ShoppingCartItem
   
     -   La cible ne peut pas avoir de contrainte FOREIGN KEY ou être référencée par une contrainte FOREIGN KEY.  
   
-    -   Les déclencheurs ne peuvent pas être définis sur la cible.  
+    -   Il n’est pas possible de définir des déclencheurs sur la cible.  
   
     -   La cible ne peut pas participer à la réplication de fusion ou à des abonnements pouvant être mis à jour pour la réplication transactionnelle.  
   
@@ -206,22 +206,22 @@ DELETE Sales.ShoppingCartItem
   
     -   La cible ne peut pas être une table distante ou une vue partitionnée.  
   
-    -   La source elle-même ne peut pas contenir un \<dml_table_source > clause.  
+    -   La source elle-même ne peut pas contenir de clause \<dml_table_source>.  
   
--   La clause OUTPUT INTO n’est pas pris en charge dans les instructions INSERT qui contiennent un \<dml_table_source > clause.  
+-   La clause OUTPUT INTO n’est pas prise en charge dans les instructions INSERT qui contiennent une clause \<dml_table_source>.  
   
--   @@ROWCOUNT renvoie les lignes insérées uniquement par l’instruction INSERT externe.  
+-   @@ROWCOUNT retourne uniquement les lignes insérées par l’instruction INSERT externe.  
   
--   @@IDENTITY, SCOPE_IDENTITY et IDENT_CURRENT retournent des valeurs d’identité générées uniquement par l’instruction DML imbriquée et non celles générées par l’instruction INSERT externe.  
+-   @@IDENTITY, SCOPE_IDENTITY et IDENT_CURRENT retournent les valeurs d’identité générées par l’instruction DML imbriquée, mais pas celles générées par l’instruction INSERT externe.  
   
 -   Les notifications de requête traitent l'instruction comme une entité unique, et le type de tout message créé sera le type de l'instruction DML imbriquée, même si la modification significative provient de l'instruction INSERT externe elle-même.  
   
--   Dans le \<dml_table_source > clause, l’instruction SELECT et WHERE clauses ne peut pas inclure de sous-requêtes, fonctions d’agrégation, les fonctions de classement, les prédicats de recherche en texte intégral, les fonctions définies par l’utilisateur qui a accès aux données de la fonction TEXTPTR.  
+-   Dans la clause \<dml_table_source>, les clauses SELECT et WHERE ne peuvent pas inclure de sous-requêtes, de fonctions d’agrégation, de fonctions de classement, de prédicats de texte intégral, de fonctions définies par l’utilisateur pour l’accès aux données ou la fonction TEXTPTR.  
 
-## <a name="parallelism"></a>Parallélisme
- Une clause OUTPUT qui retourne des résultats au client utilisent toujours un plan en série.
+## <a name="parallelism"></a>Parallelism
+ Une clause OUTPUT qui retourne des résultats au client utilise toujours un plan en série.
 
-Dans le contexte d’une base de données définie au niveau de compatibilité 130 ou une version ultérieure, si une instruction INSERT... Opération SELECT utilise un indicateur WITH (TABLOCK) pour l’instruction SELECT et sortie... INTO pour insérer dans une table temporaire ou un utilisateur, puis la table cible pour l’instruction INSERT... Sélectionnez seront éligibles pour le parallélisme en fonction de la sous-arborescence de coût.  La table cible référencée dans la clause OUTPUT INTO ne seront pas éligible pour le parallélisme. 
+Dans le contexte d’une base de données définie à un niveau de compatibilité de 130 ou supérieur, si une opération INSERT...SELECT utilise un indicateur WITH (TABLOCK) pour l’instruction SELECT et utilise également l’instruction OUTPUT…INTO pour insérer les résultats dans une table temporaire ou une table utilisateur, la table cible pour l’instruction INSERT…SELECT est éligible pour le parallélisme en fonction du coût des sous-arborescences.  La table cible référencée dans la clause OUTPUT INTO n’est pas éligible pour le parallélisme. 
  
 ## <a name="triggers"></a>Déclencheurs  
  Les colonnes retournées depuis l'instruction OUTPUT illustrent les données, telles qu'elles sont après la fin de l'instruction INSERT, UPDATE ou DELETE mais avant l'exécution des déclencheurs.  
@@ -233,7 +233,7 @@ Dans le contexte d’une base de données définie au niveau de compatibilité 1
  Si l'option d'interdiction des résultats des déclencheurs sp_configure est définie, une clause OUTPUT sans clause INTO provoque l'échec de l'instruction lors de son appel à partir d'un déclencheur.  
   
 ## <a name="data-types"></a>Types de données  
- La clause OUTPUT prend en charge les types de données LOB : **nvarchar (max)**, **varchar (max)**, **varbinary (max)**, **texte**, **ntext**, **image**, et **xml**. Lorsque vous utilisez le. Clause d’écriture dans l’instruction de mise à jour pour modifier un **nvarchar (max)**, **varchar (max)**, ou **varbinary (max)** colonne, la version complète avant et après les images des valeurs sont retournées si elles sont référencées. La fonction TEXTPTR () ne peut pas apparaître dans le cadre d’une expression sur une **texte**, **ntext**, ou **image** colonne dans la clause OUTPUT.  
+ La clause OUTPUT prend en charge les types d’objets LOB suivants : **nvarchar(max)**, **varchar(max)**, **varbinary(max)**, **text**, **ntext**, **image** et **xml**. Quand vous utilisez la clause .WRITE dans l’instruction UPDATE pour modifier une colonne **nvarchar(max)**, **varchar(max)** ou **varbinary(max)**, les images complètes avant et après les valeurs sont retournées si elles sont référencées. La fonction TEXTPTR( ) ne peut pas être utilisée dans une expression sur une colonne **text**, **ntext** ou **image** dans la clause OUTPUT.  
   
 ## <a name="queues"></a>Files d'attente  
  Vous pouvez utiliser OUTPUT dans les applications utilisant les tables comme files d'attente ou garder les jeux de résultats intermédiaires. En d'autres termes, l'application ajoute ou supprime constamment des lignes de la table. L'exemple suivant utilise la clause OUTPUT dans une instruction DELETE afin de retourner la ligne supprimée à l'application appelante.  
@@ -311,17 +311,17 @@ DROP TABLE dbo.table1;
 ```  
   
 > [!NOTE]  
->  Utilisez l'indicateur de table READPAST dans les instructions UPDATE et DELETE si votre scénario permet à plusieurs applications d'exécuter une lecture destructive à partir d'une table. Ce cas de figure empêche les problèmes de verrouillage qui peuvent survenir si une autre application est déjà entrain de lire le premier enregistrement dans la table.  
+>  Utilisez l'indicateur de table READPAST dans les instructions UPDATE et DELETE si votre scénario permet à plusieurs applications d'exécuter une lecture destructive à partir d'une table. Ce cas de figure empêche les problèmes de verrouillage qui peuvent survenir si une autre application est déjà en train de lire le premier enregistrement dans la table.  
   
 ## <a name="permissions"></a>Autorisations  
- Sélectionner les autorisations sont requises sur toutes les colonnes récupérés via \<dml_select_list > ou utilisées dans \<scalar_expression >.  
+ Les autorisations SELECT sont obligatoires sur toutes les colonnes récupérées par le biais de \<dml_select_list> et celles utilisées dans \<scalar_expression>.  
   
- Autorisations INSERT sont obligatoires sur toutes les tables spécifiées dans \<output_table >.  
+ Les autorisations INSERT sont obligatoires sur toutes les tables spécifiées dans \<output_table>.  
   
 ## <a name="examples"></a>Exemples  
   
 ### <a name="a-using-output-into-with-a-simple-insert-statement"></a>A. Utilisation de OUTPUT INTO avec une instruction INSERT simple  
- L’exemple suivant insère une ligne dans le `ScrapReason` table et utilise le `OUTPUT` clause pour retourner les résultats de l’instruction à le `@MyTableVar``table` variable. Étant donné que la colonne `ScrapReasonID` est définie avec une propriété IDENTITY, aucune valeur n'est spécifiée dans l'instruction `INSERT` pour cette colonne. Cependant, notez que la valeur générée par le [!INCLUDE[ssDE](../../includes/ssde-md.md)] pour cette colonne est retournée dans la clause `OUTPUT` de la colonne `inserted.ScrapReasonID`.  
+ L’exemple suivant insère une ligne dans la table `ScrapReason` et utilise la clause `OUTPUT` pour retourner les résultats de l’instruction à la variable `@MyTableVar``table`. Étant donné que la colonne `ScrapReasonID` est définie avec une propriété IDENTITY, aucune valeur n'est spécifiée dans l'instruction `INSERT` pour cette colonne. Cependant, notez que la valeur générée par le [!INCLUDE[ssDE](../../includes/ssde-md.md)] pour cette colonne est retournée dans la clause `OUTPUT` de la colonne `inserted.ScrapReasonID`.  
   
 ```  
 USE AdventureWorks2012;  
@@ -360,7 +360,7 @@ GO
 ```  
   
 ### <a name="c-using-output-into-with-an-update-statement"></a>C. Utilisation de OUTPUT INTO avec une instruction UPDATE  
- L'exemple suivant met à jour la colonne `VacationHours` à hauteur de 25 % pour 10 premières lignes aléatoires dans la table `Employee`. Le `OUTPUT` clause retourne le `VacationHours` valeur existe avant d’appliquer le `UPDATE` instruction dans la colonne `deleted.VacationHours`et la valeur mise à jour dans la colonne `inserted.VacationHours` à la `@MyTableVar``table` variable.  
+ L'exemple suivant met à jour la colonne `VacationHours` à hauteur de 25 % pour 10 premières lignes aléatoires dans la table `Employee`. La clause `OUTPUT` retourne la valeur `VacationHours` existante avant l’application de l’instruction `UPDATE` dans la colonne `deleted.VacationHours` et la valeur mise à jour dans la colonne `inserted.VacationHours` à la variable `@MyTableVar``table`.  
   
  Deux instructions `SELECT` suivent ; elles retournent les valeurs dans `@MyTableVar`, ainsi que les résultats de la mise à jour dans la table `Employee`.  
   
@@ -395,7 +395,7 @@ GO
 ```  
   
 ### <a name="d-using-output-into-to-return-an-expression"></a>D. Utilisation de OUTPUT INTO pour retourner une expression  
- L'exemple suivant reprend l'exemple C en définissant une expression dans la clause `OUTPUT` comme étant la différence entre la valeur mise à jour `VacationHours` et la valeur `VacationHours` avant sa mise à jour. La valeur de cette expression est retournée à la `@MyTableVar``table` variable dans la colonne `VacationHoursDifference`.  
+ L'exemple suivant reprend l'exemple C en définissant une expression dans la clause `OUTPUT` comme étant la différence entre la valeur mise à jour `VacationHours` et la valeur `VacationHours` avant sa mise à jour. La valeur de cette expression est retournée à la variable `@MyTableVar``table` dans la colonne `VacationHoursDifference`.  
   
 ```  
 USE AdventureWorks2012;  
@@ -429,7 +429,7 @@ GO
 ```  
   
 ### <a name="e-using-output-into-with-fromtablename-in-an-update-statement"></a>E. Utilisation de OUTPUT INTO avec from_table_name dans une instruction UPDATE  
- L’exemple suivant met à jour la `ScrapReasonID` colonne dans la `WorkOrder` table pour toutes les commandes de travail avec `ProductID` et `ScrapReasonID`. La clause `OUTPUT INTO` retourne les valeurs depuis la table en cours de mise à jour (`WorkOrder`) ainsi que de la table `Product`. La table `Product` est utilisée dans la clause `FROM` pour spécifier les lignes à mettre à jour. Étant donné qu'un déclencheur `WorkOrder` est défini sur la table `AFTER UPDATE`, le mot clé `INTO` est obligatoire.  
+ L’exemple suivant met à jour la colonne `ScrapReasonID` dans la table `WorkOrder` pour toutes les commandes avec les valeurs `ProductID` et `ScrapReasonID` spécifiées. La clause `OUTPUT INTO` retourne les valeurs depuis la table en cours de mise à jour (`WorkOrder`) ainsi que de la table `Product`. La table `Product` est utilisée dans la clause `FROM` pour spécifier les lignes à mettre à jour. Étant donné qu'un déclencheur `WorkOrder` est défini sur la table `AFTER UPDATE`, le mot clé `INTO` est obligatoire.  
   
 ```  
 USE AdventureWorks2012;  
@@ -494,7 +494,7 @@ GO
 ```  
   
 ### <a name="g-using-output-into-with-a-large-object-data-type"></a>G. Utilisation de OUTPUT INTO avec un type de données d'objets volumineux  
- L'exemple suivant met à jour une valeur partielle dans `DocumentSummary`, une colonne `nvarchar(max)` de la table `Production.Document`, à l'aide de la clause `.WRITE`. Le mot `components` est remplacé par le mot `features` en spécifiant le mot de remplacement, l’emplacement où commence (offset) le mot à remplacer dans les données existantes et le nombre de caractères à remplacer (length). L’exemple utilise le `OUTPUT` clause pour retourner l’avant et après les images de la `DocumentSummary` colonne à la `@MyTableVar``table` variable. Notez que les images complètes avant et après la colonne `DocumentSummary` sont retournées.  
+ L'exemple suivant met à jour une valeur partielle dans `DocumentSummary`, une colonne `nvarchar(max)` de la table `Production.Document`, à l'aide de la clause `.WRITE`. Le terme `components` est remplacé par le terme `features`, en spécifiant le terme de remplacement, la position de départ (décalage) du terme à remplacer dans les données existantes et le nombre de caractères à remplacer (longueur). L’exemple utilise la clause `OUTPUT` pour retourner les images avant et après de la colonne `DocumentSummary` à la variable `@MyTableVar``table`. Notez que les images complètes avant et après la colonne `DocumentSummary` sont retournées.  
   
 ```  
 USE AdventureWorks2012;  
@@ -517,7 +517,7 @@ GO
 ```  
   
 ### <a name="h-using-output-in-an-instead-of-trigger"></a>H. Utilisation de OUTPUT dans un déclencheur INSTEAD OF  
- L'exemple suivant utilise la clause `OUTPUT` dans un déclencheur pour retourner les résultats de l'opération de celui-ci. Tout d'abord, une vue est créée sur la table `ScrapReason`, puis un déclencheur `INSTEAD OF INSERT` est défini sur la vue qui ne permet qu'à la colonne `Name` de la table de base d'être modifiée par l'utilisateur. Étant donné que la colonne `ScrapReasonID` est une colonne `IDENTITY` de la table de base, le déclencheur ignore la valeur fournie par l'utilisateur. Cela permet la [!INCLUDE[ssDE](../../includes/ssde-md.md)] pour générer automatiquement la valeur correcte. De plus, la valeur fournie par l'utilisateur pour `ModifiedDate` est ignorée et définie sur la date actuelle. La clause `OUTPUT` retourne les valeurs insérées dans la table `ScrapReason`.  
+ L'exemple suivant utilise la clause `OUTPUT` dans un déclencheur pour retourner les résultats de l'opération de celui-ci. Tout d'abord, une vue est créée sur la table `ScrapReason`, puis un déclencheur `INSTEAD OF INSERT` est défini sur la vue qui ne permet qu'à la colonne `Name` de la table de base d'être modifiée par l'utilisateur. Étant donné que la colonne `ScrapReasonID` est une colonne `IDENTITY` de la table de base, le déclencheur ignore la valeur fournie par l'utilisateur. Ceci permet au [!INCLUDE[ssDE](../../includes/ssde-md.md)] de générer automatiquement la valeur correcte. De plus, la valeur fournie par l'utilisateur pour `ModifiedDate` est ignorée et définie sur la date actuelle. La clause `OUTPUT` retourne les valeurs insérées dans la table `ScrapReason`.  
   
 ```  
 USE AdventureWorks2012;  
@@ -604,7 +604,7 @@ GO
 ```  
   
 ### <a name="j-using-output-and-output-into-in-a-single-statement"></a>J. Utilisation de OUTPUT et OUTPUT INTO dans une instruction unique  
- L'exemple suivant supprime les lignes dans la table `ProductProductPhoto` en fonction des critères de recherche définis dans la clause `FROM` de l'instruction `DELETE`. Le `OUTPUT INTO` clause retourne les colonnes de la table en cours de suppression (`deleted.ProductID`, `deleted.ProductPhotoID`) et les colonnes à partir de la `Product` de la table vers le `@MyTableVar``table` variable. La table `Product` est utilisée dans la clause `FROM` pour spécifier les lignes à supprimer. La clause `OUTPUT` retourne à l'application appelante `deleted.ProductID`, les colonnes `deleted.ProductPhotoID`, la date et l'heure de suppression de la ligne de la table `ProductProductPhoto`.  
+ L'exemple suivant supprime les lignes dans la table `ProductProductPhoto` en fonction des critères de recherche définis dans la clause `FROM` de l'instruction `DELETE`. La clause `OUTPUT INTO` retourne les colonnes de la table en cours de suppression (`deleted.ProductID`, `deleted.ProductPhotoID`), ainsi que les colonnes de la table `Product` à la variable `@MyTableVar``table`. La table `Product` est utilisée dans la clause `FROM` pour spécifier les lignes à supprimer. La clause `OUTPUT` retourne à l'application appelante `deleted.ProductID`, les colonnes `deleted.ProductPhotoID`, la date et l'heure de suppression de la ligne de la table `ProductProductPhoto`.  
   
 ```  
 USE AdventureWorks2012;  
@@ -670,9 +670,9 @@ SELECT DeletedProductID, RemovedOnDate FROM Production.ZeroInventory;
   
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)   
- [INSÉRER une &#40; Transact-SQL &#41;](../../t-sql/statements/insert-transact-sql.md)   
+ [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
  [UPDATE &#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md)   
  [table &#40;Transact-SQL&#41;](../../t-sql/data-types/table-transact-sql.md)   
  [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)   

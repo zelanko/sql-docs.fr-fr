@@ -1,5 +1,5 @@
 ---
-title: "RÉVOQUER les autorisations de Principal de base de données (Transact-SQL) | Documents Microsoft"
+title: "REVOKE - Révoquer des autorisations sur un principal de base de données (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/10/2017
 ms.prod: sql-non-specified
@@ -32,7 +32,7 @@ ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="revoke-database-principal-permissions-transact-sql"></a>REVOKE – révocation d'autorisations de principal de base de données (Transact-SQL)
+# <a name="revoke-database-principal-permissions-transact-sql"></a>REVOKE - Révoquer des autorisations sur un principal de base de données (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Permet de révoquer des autorisations accordées ou refusées sur un utilisateur de base de données, un rôle de base de données ou un rôle d'application.  
@@ -65,19 +65,19 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
 ```  
   
 ## <a name="arguments"></a>Arguments  
- *autorisation*  
+ *permission*  
  Spécifie une autorisation qui peut être révoquée sur le principal de base de données. Pour obtenir la liste des autorisations, consultez la section Notes plus loin dans cette rubrique.  
   
- UTILISATEUR ::*database_user*  
- Spécifie la classe et le nom de l'utilisateur sur lequel l'autorisation doit être révoquée. Le qualificateur d’étendue (**::**) est requis.  
+ USER ::*database_user*  
+ Spécifie la classe et le nom de l'utilisateur sur lequel l'autorisation doit être révoquée. Le qualificateur d’étendue (**::**) est obligatoire.  
   
- RÔLE ::*database_role*  
- Spécifie la classe et le nom du rôle sur lequel l'autorisation doit être révoquée. Le qualificateur d’étendue (**::**) est requis.  
+ ROLE ::*database_role*  
+ Spécifie la classe et le nom du rôle sur lequel l'autorisation doit être révoquée. Le qualificateur d’étendue (**::**) est obligatoire.  
   
- RÔLE d’APPLICATION ::*application_role*  
-**S’applique aux**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] via [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)],[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]
+ APPLICATION ROLE ::*application_role*  
+**S’applique à**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] jusqu’à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].
   
- Spécifie la classe et le nom du rôle d'application sur lequel l'autorisation doit être révoquée. Le qualificateur d’étendue (**::**) est requis.  
+ Spécifie la classe et le nom du rôle d'application sur lequel l'autorisation doit être révoquée. Le qualificateur d’étendue (**::**) est obligatoire.  
   
  GRANT OPTION  
  Indique que le droit d'accorder l'autorisation spécifiée à d'autres principaux sera révoqué. L'autorisation elle-même ne sera pas révoquée.  
@@ -91,7 +91,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
 > [!CAUTION]  
 >  Une révocation en cascade d'une autorisation accordée avec l'option WITH GRANT OPTION entraîne la révocation des deux options GRANT et DENY de cette autorisation.  
   
- En tant que \<principal_base_de_données > Spécifie un principal à partir duquel le principal qui exécute cette requête dérive son droit de révoquer l’autorisation.  
+ AS \<database_principal> Spécifie un principal duquel le principal qui exécute cette requête dérive son droit de révoquer l’autorisation.  
   
  *Database_user*  
  Spécifie un utilisateur de base de données.  
@@ -100,34 +100,34 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
  Spécifie un rôle de base de données.  
   
  *Application_role*  
-**S’applique aux**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] via [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)],[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]
+**S’applique à**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] jusqu’à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].
   
  Spécifie un rôle d'application.  
   
  *Database_user_mapped_to_Windows_User*  
-**S’applique aux**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] via[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**S’applique à**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] jusqu’à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
   
  Spécifie un utilisateur de base de données mappé sur un utilisateur Windows.  
   
  *Database_user_mapped_to_Windows_Group*  
-**S’applique aux**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] via[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**S’applique à**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] jusqu’à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
   
  Spécifie un utilisateur de base de données mappé à un groupe Windows.  
   
  *Database_user_mapped_to_certificate*  
-**S’applique aux**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] via[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**S’applique à**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] jusqu’à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
   
  Spécifie un utilisateur de base de données mappé sur un certificat.  
   
  *Database_user_mapped_to_asymmetric_key*  
-**S’applique aux**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] via[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**S’applique à**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] jusqu’à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
   
  Spécifie un utilisateur de base de données mappé à une clé asymétrique.  
   
  *Database_user_with_no_login*  
  Spécifie un utilisateur de base de données sans principal au niveau serveur correspondant.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
   
 ## <a name="database-user-permissions"></a>Autorisations d'un utilisateur de base de données  
  Un utilisateur de base de données est un élément sécurisable au niveau base de données inclus dans la base de données qui est son parent dans la hiérarchie des autorisations. Les autorisations les plus spécifiques et limitées qu'il est possible de révoquer sur un utilisateur de base de données sont répertoriées dans le tableau ci-dessous, avec les autorisations plus générales qui les incluent de manière implicite.  
@@ -158,10 +158,10 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
 |ALTER|CONTROL|ALTER ANY APPLICATION ROLE|  
 |VIEW DEFINITION|CONTROL|VIEW DEFINITION|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Requiert l'autorisation CONTROL sur le principal spécifié ou une autorisation plus élevée qui implique l'autorisation CONTROL.  
   
- Les détenteurs de l’autorisation CONTROL sur une base de données, tels que les membres de la **db_owner** rôle de base de données fixe, peuvent accorder une autorisation sur n’importe quel élément sécurisable dans la base de données.  
+ Les détenteurs de l’autorisation CONTROL sur une base de données, tels que les membres du rôle de base de données fixe **db_owner**, peuvent accorder une autorisation sur n’importe quel élément sécurisable de la base de données.  
   
 ## <a name="examples"></a>Exemples  
   
@@ -187,7 +187,7 @@ GO
 ### <a name="c-revoking-impersonate-permission-on-a-user-from-an-application-role"></a>C. Révocation d'une autorisation IMPERSONATE sur un utilisateur à partir d'un rôle d'application  
  Dans l'exemple ci-dessous, l'autorisation `IMPERSONATE` sur l'utilisateur `HamithaL` est révoquée pour le rôle d'application [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] `AccountsPayable17`.  
   
-**S’applique aux**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] via [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)],[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]
+**S’applique à**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] jusqu’à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].
   
 ```  
 USE AdventureWorks2012;  
@@ -195,14 +195,14 @@ REVOKE IMPERSONATE ON USER::HamithaL FROM AccountsPayable17;
 GO    
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- [ACCORDER des autorisations de Principal de base de données &#40; Transact-SQL &#41;](../../t-sql/statements/grant-database-principal-permissions-transact-sql.md)   
- [REFUSER des autorisations de Principal de base de données &#40; Transact-SQL &#41;](../../t-sql/statements/deny-database-principal-permissions-transact-sql.md)   
+## <a name="see-also"></a> Voir aussi  
+ [GRANT - Octroyer des autorisations sur un principal de base de données &#40;Transact-SQL&#41;](../../t-sql/statements/grant-database-principal-permissions-transact-sql.md)   
+ [DENY - Refuser des autorisations sur un principal de base de données &#40;Transact-SQL&#41;](../../t-sql/statements/deny-database-principal-permissions-transact-sql.md)   
  [sys.database_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)   
- [Sys.database_permissions &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md)   
+ [sys.database_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md)   
  [CREATE USER &#40;Transact-SQL&#41;](../../t-sql/statements/create-user-transact-sql.md)   
- [CRÉER un rôle d’APPLICATION &#40; Transact-SQL &#41;](../../t-sql/statements/create-application-role-transact-sql.md)   
- [CRÉER un rôle &#40; Transact-SQL &#41;](../../t-sql/statements/create-role-transact-sql.md)   
+ [CREATE APPLICATION ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-application-role-transact-sql.md)   
+ [CREATE ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-role-transact-sql.md)   
  [GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md)   
  [Autorisations &#40;moteur de base de données&#41;](../../relational-databases/security/permissions-database-engine.md)   
  [Principaux &#40;moteur de base de données&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)  

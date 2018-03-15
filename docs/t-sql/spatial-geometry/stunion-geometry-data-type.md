@@ -1,5 +1,5 @@
 ---
-title: "STUnion (Type de données geometry) | Documents Microsoft"
+title: "STUnion (type de données geometry) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stunion-geometry-data-type"></a>STUnion (type de données geometry)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-Retourne un objet qui représente l’union entre un **geometry** instance avec un autre **geometry** instance.
+Retourne un objet qui représente l’union entre une instance **geometry** et une autre instance **geometry**.
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -45,15 +45,15 @@ Retourne un objet qui représente l’union entre un **geometry** instance avec 
   
 ## <a name="arguments"></a>Arguments  
  *other_geometry*  
- Une autre **geometry** instance former une union avec l’instance sur laquelle `STUnion()` est appelé.  
+ Autre instance **geometry** qui permet de former une union avec l’instance sur laquelle `STUnion()` est appelé.  
   
 ## <a name="return-types"></a>Types de retour  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]type de retour : **geometry**  
+ Type de retour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] : **geometry**  
   
  Type de retour CLR : **SqlGeometry**  
   
-## <a name="remarks"></a>Notes  
- Cette méthode retourne toujours null si l’ID de référence spatiale (SRID) de la **geometry** instances ne correspondent pas. Le résultat peut contenir des segments d'arc de cercle uniquement si les instances d'entrée contiennent des segments d'arc de cercle.  
+## <a name="remarks"></a>Notes   
+ Cette méthode retourne toujours une valeur Null si les SRID (ID de référence spatiale) des instances **geometry** ne correspondent pas. Le résultat peut contenir des segments d'arc de cercle uniquement si les instances d'entrée contiennent des segments d'arc de cercle.  
   
 ## <a name="examples"></a>Exemples  
   
@@ -79,7 +79,7 @@ SELECT @g.STUnion(@h).ToString();
   
  `STUnion()` retourne un résultat qui contient un segment d'arc de cercle car l'instance qui a appelé `STUnion()` contient un segment d'arc de cercle.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Méthodes OGC sur des instances geography](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   
   

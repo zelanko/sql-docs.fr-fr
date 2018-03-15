@@ -1,5 +1,5 @@
 ---
-title: "InstanceOf (Type de données geometry) | Documents Microsoft"
+title: "InstanceOf (type de données geometry) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="instanceof-geometry-data-type"></a>InstanceOf (type de données geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Une méthode qui vérifie si le **geometry** instance est le même que le type spécifié. Retourne 1 si le type d’un **geometry** instance est le même que le type spécifié, ou si le type spécifié est un ancêtre du type d’instance ; sinon, retourne 0.
+Méthode qui teste si l’instance **geometry** est du même type que l’instance spécifiée. Retourne 1 si le type d’une instance **geometry** est identique au type spécifié, ou si le type spécifié est un ancêtre du type d’instance ; sinon, retourne 0.
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -45,15 +45,15 @@ Une méthode qui vérifie si le **geometry** instance est le même que le type s
   
 ## <a name="arguments"></a>Arguments  
  *geometry_type*  
- Est un **nvarchar (4000)** chaîne spécifiant un des 15 types exposés dans le **geometry** hiérarchie de type.  
+ Chaîne **nvarchar(4000)** spécifiant l’un des 15 types exposés dans la hiérarchie de type **geometry**.  
   
 ## <a name="return-types"></a>Types de retour  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]type de retour : **bits**  
+ Type de retour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] : **bit**  
   
  Type de retour CLR : **SqlBoolean**  
   
-## <a name="remarks"></a>Notes  
- L’entrée de la méthode doit être une des valeurs suivantes : **Geometry**, **Point**, **courbe**, **LineString**, **CircularString**, **CompoundCurve**, **Surface**, **polygone**, **CurvePolygon**, **GeometryCollection**, **MultiSurface**, **MultiPolygon**, **MultiCurve**, **MultiLineString**, et **MultiPoint**. Cette méthode lève un **ArgumentException** si toutes les autres chaînes sont utilisées pour l’entrée.  
+## <a name="remarks"></a>Notes   
+ L’entrée de la méthode doit correspondre à l’une des instances suivantes : **Geometry**, **Point**, **Curve**, **LineString**, **CircularString**, **CompoundCurve**, **Surface**, **Polygon**, **CurvePolygon**, **GeometryCollection**, **MultiSurface**, **MultiPolygon**, **MultiCurve**, **MultiLineString** et **MultiPoint**. Cette méthode lève **ArgumentException** si d’autres chaînes sont utilisées en entrée.  
   
 ## <a name="examples"></a>Exemples  
  L'exemple suivant crée une instance `MultiPoint` et utilise `InstanceOf()` pour voir si l'instance est un `GeometryCollection`.  
@@ -64,7 +64,7 @@ SET @g = geometry::STGeomFromText('MULTIPOINT(0 0, 13.5 2, 7 19)', 0);
 SELECT @g.InstanceOf('GEOMETRYCOLLECTION');  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Méthodes étendues sur des instances geometry](../../t-sql/spatial-geometry/extended-methods-on-geometry-instances.md)  
   
   

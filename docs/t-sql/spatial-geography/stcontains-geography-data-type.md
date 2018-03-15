@@ -1,5 +1,5 @@
 ---
-title: "STContains (Type de données geography) | Documents Microsoft"
+title: "STContains (type de données geography) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -28,10 +28,10 @@ ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="stcontains--geography-data-type"></a>STContains (Type de données geography)
+# <a name="stcontains--geography-data-type"></a>STContains (type de données geography)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-  Spécifie si l’appel **geography** instance contient SPATIALEMENT le **geography** instance passée à la méthode.  
+  Spécifie si l’instance **geography** appelante contient spatialement l’instance **geography** passée à la méthode.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -42,15 +42,15 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="arguments"></a>Arguments  
  *other_geography*  
- Une autre **geography** instance à comparer à l’instance sur laquelle `STContains()` est appelé.  
+ Autre instance **geography** à comparer à l’instance sur laquelle `STContains()` est appelé.  
   
 ## <a name="return-types"></a>Types de retour  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]type de retour : **bits**  
+ Type de retour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] : **bit**  
   
  Type de retour CLR : **SqlBoolean**  
   
-## <a name="remarks"></a>Notes  
- Retourne 1 si l’appel **geography** instance contient SPATIALEMENT le **geography** instance passée à la méthode et retourne 0 si elle n’est pas le cas. Retourne **null** si le SRID des deux **geography** instances ne sont pas identiques.  
+## <a name="remarks"></a>Notes   
+ Retourne 1 si l’instance **geography** appelante contient spatialement l’instance **geography** passée à la méthode, et retourne 0 si ce n’est pas le cas. Retourne **null** si le SRID des deux instances **geography** n’est pas le même.  
   
 ## <a name="examples"></a>Exemples  
  L'exemple suivant utilise `STContains()` pour tester deux instances `geography` afin de déterminer si la première instance contient la deuxième.  

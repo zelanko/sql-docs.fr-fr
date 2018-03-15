@@ -1,5 +1,5 @@
 ---
-title: "STCurveToLine (Type de données geometry) | Documents Microsoft"
+title: "STCurveToLine (type de données geometry) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -31,7 +31,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stcurvetoline-geometry-data-type"></a>STCurveToLine (type de données geometry)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-Retourne une approximation polygonale d’une **geometry** instance qui contient les segments d’arc de cercle.
+Retourne une approximation polygonale d’une instance **geometry** contenant des segments d’arc de cercle.
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -41,27 +41,27 @@ Retourne une approximation polygonale d’une **geometry** instance qui contient
 ```  
   
 ## <a name="return-types"></a>Types de retour  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]type de retour : **geometry**  
+ Type de retour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] : **geometry**  
   
  Type de retour CLR : **SqlGeometry**  
   
-## <a name="remarks"></a>Notes  
- Retourne une **GeometryCollection**instance vides **geometry** variables et retourne l’instance **NULL** pour non initialisé **geometry** variables.  
+## <a name="remarks"></a>Notes   
+ Retourne une instance **GeometryCollection** vide pour les variables d’instance **geometry** vides, et retourne **NULL** pour les variables **geometry** non initialisées.  
   
- Dépend de l’approximation polygonale que la méthode retourne la **geometry** instance que vous utilisez pour appeler la méthode :  
+ L’approximation polygonale que la méthode retourne dépend de l’instance **geometry** que vous utilisez pour appeler la méthode :  
   
--   Retourne un **LineString** d’instance pour un **CircularString** ou **CompoundCurve** instance.  
+-   Retourne une instance **LineString** pour une instance **CircularString** ou **CompoundCurve**.  
   
--   Retourne un **polygone** d’instance pour un **CurvePolygon** instance.  
+-   Retourne une instance **Polygon** pour une instance **CurvePolygon**.  
   
--   Retourne une copie de la **geometry** de l’instance si cette instance n’est pas un **CircularString**, **CompoundCurve**, ou **CurvePolygon** instance. Par exemple, le `STCurveToLine` méthode retourne un **Point** d’instance pour un **geometry** instance qui est un **Point** instance.  
+-   Retourne une copie de l’instance **geometry** si cette instance n’est pas une instance **CircularString**, **CompoundCurve** ou **CurvePolygon**. Par exemple, la méthode `STCurveToLine` retourne une instance **Point** pour une instance **geometry** qui est une instance **Point**.  
   
- Contrairement à la spécification SQL/MM, la `STCurveToLine` méthode n’utilise pas les valeurs de coordonnée z pour calculer l’approximation polygonale. La méthode ignore toutes les valeurs de coordonnée z présentes dans l’appel **geometry** instance.  
+ Contrairement à la spécification SQL/MM, la méthode `STCurveToLine` n’utilise pas de valeurs de coordonnées z pour calculer l’approximation polygonale. La méthode ignore les valeurs de coordonnées z présentes dans l’instance **geometry** appelante.  
   
 ## <a name="examples"></a>Exemples  
   
 ### <a name="a-using-an-uninitialized-geometry-variable-and-empty-instance"></a>A. Utilisation d'une variable Geometry non initialisée et d'une instance vide  
- Dans l’exemple suivant, la première **sélectionnez** instruction utilise un sans être initialisé **geometry** instance pour appeler le `STCurveToLine` (méthode) et le second **sélectionnez** instruction utilise vide **geometry** instance. Par conséquent, la méthode retourne **NULL** à la première instruction et un **GeometryCollection** collection de la deuxième instruction.  
+ Dans l’exemple suivant, la première instruction **SELECT** utilise une instance non initialisée de **geometry** pour appeler la méthode `STCurveToLine`, alors que la seconde instruction **SELECT** utilise une instance **geometry** vide. Ainsi, la méthode retourne **NULL** pour la première instruction et une collection **GeometryCollection** pour la seconde instruction.  
   
 ```
  DECLARE @g geometry; 
@@ -72,7 +72,7 @@ Retourne une approximation polygonale d’une **geometry** instance qui contient
  ```  
   
 ### <a name="b-using-a-linestring-instance"></a>B. Utilisation d'une instance LineString  
- Le **sélectionnez** instruction dans l’exemple suivant utilise un **LineString** instance pour appeler la méthode STCurveToLine. Par conséquent, la méthode retourne un **LineString** instance.  
+ L’instruction **SELECT** de l’exemple suivant utilise une instance **LineString** pour appeler la méthode STCurveToLine. Ainsi, la méthode retourne une instance **LineString**.  
   
 ```
  DECLARE @g geometry; 
@@ -82,7 +82,7 @@ Retourne une approximation polygonale d’une **geometry** instance qui contient
  ```  
   
 ### <a name="c-using-a-circularstring-instance"></a>C. Utilisation d'une instance CircularString  
- La première **sélectionnez** instruction dans l’exemple suivant utilise un **CircularString** instance pour appeler la méthode STCurveToLine. Par conséquent, la méthode retourne un **LineString** instance. Cela **sélectionnez** instruction compare également les longueurs des deux instances, qui sont approximativement identiques.  Enfin, la seconde **sélectionnez** instruction renvoie le nombre de points pour chaque instance.  Elle retourne uniquement 5 points pour la **CircularString** instance, mais 65 points pour les **LineString**instance.  
+ La première instruction **SELECT** de l’exemple suivant utilise une instance **CircularString** pour appeler la méthode STCurveToLine. Ainsi, la méthode retourne une instance **LineString**. Cette instruction **SELECT** compare également les longueurs des deux instances, qui sont approximativement les mêmes.  Enfin, la seconde instruction **SELECT** retourne le nombre de points pour chaque instance.  Elle retourne seulement 5 points pour l’instance **CircularString**, mais 65 points pour l’instance **LineString**.  
   
 ```
  DECLARE @g1 geometry, @g2 geometry; 
@@ -93,7 +93,7 @@ Retourne une approximation polygonale d’une **geometry** instance qui contient
  ```  
   
 ### <a name="d-using-a-curvepolygon-instance"></a>D. Utilisation d'une instance CurvePolygon  
- Le **sélectionnez** instruction dans l’exemple suivant utilise un **CurvePolygon** instance pour appeler la méthode STCurveToLine. Par conséquent, la méthode retourne un **polygone** instance.  
+ L’instruction **SELECT** de l’exemple suivant utilise une instance **CurvePolygon** pour appeler la méthode STCurveToLine. Ainsi, la méthode retourne une instance **Polygon**.  
   
 ```
  DECLARE @g1 geometry, @g2 geometry; 
@@ -102,7 +102,7 @@ Retourne une approximation polygonale d’une **geometry** instance qui contient
  SELECT @g1.STGeometryType() AS [G1 Type], @g2.STGeometryType() AS [G2 Type];
  ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Présentation des types de données spatiales](../../relational-databases/spatial/spatial-data-types-overview.md)   
  [STLength &#40;type de données geometry&#41;](../../t-sql/spatial-geometry/stlength-geometry-data-type.md)   
  [STNumPoints &#40;type de données geometry&#41;](../../t-sql/spatial-geometry/stnumpoints-geometry-data-type.md)   

@@ -1,5 +1,5 @@
 ---
-title: "STY (Type de données geometry) | Documents Microsoft"
+title: "STY (type de données geometry) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="sty-geometry-data-type"></a>STY (type de données geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-La propriété de coordonnée Y d’un **Point** instance.
+Propriété de coordonnée Y d’une instance **Point**.
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -44,12 +44,12 @@ La propriété de coordonnée Y d’un **Point** instance.
 ```  
   
 ## <a name="return-types"></a>Types de retour  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]type : **float**  
+ Type [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] : **float**  
   
  Type CLR : **SqlDouble**  
   
-## <a name="remarks"></a>Notes  
- La valeur de cette propriété sera null si le **geometry** instance est un point. Cette propriété est en lecture seule.  
+## <a name="remarks"></a>Notes   
+ La valeur de cette propriété est Null si l’instance **geometry** est un point. Cette propriété est en lecture seule.  
   
 ## <a name="examples"></a>Exemples  
  L'exemple suivant crée une instance `Point` et utilise `STY` pour extraire la coordonnée Y de l'instance.  
@@ -60,9 +60,9 @@ SET @g = geometry::STGeomFromText('POINT(3 8)', 0);
 SELECT @g.STY;  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [STX &#40;type de données geometry&#41;](../../t-sql/spatial-geometry/stx-geometry-data-type.md)   
- [STSrid &#40; Type de données geometry &#41;](../../t-sql/spatial-geometry/stsrid-geometry-data-type.md)   
+ [STSrid &#40;type de données geometry&#41;](../../t-sql/spatial-geometry/stsrid-geometry-data-type.md)   
  [Méthodes OGC sur des instances geography](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   
   

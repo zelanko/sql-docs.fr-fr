@@ -52,16 +52,16 @@ SUBSTRING ( expression ,start , length )
   
 ## <a name="arguments"></a>Arguments  
  *expression*  
- Est un **caractère**, **binaire**, **texte**, **ntext**, ou **image**[expression](../../t-sql/language-elements/expressions-transact-sql.md).  
+ [Expression](../../t-sql/language-elements/expressions-transact-sql.md) de type **character**, **binary**, **text**, **ntext** ou **image**.  
   
  *start*  
- Est un entier ou **bigint** expression qui spécifie où les caractères renvoyés commencent. (La numérotation est la signification de base, 1 que le premier caractère de l’expression est 1). Si *Démarrer* est inférieur à 1, l’expression retournée commence au premier caractère qui est spécifié dans *expression*. Dans ce cas, le nombre de caractères retournés est la plus grande valeur de la somme de *Démarrer* + *longueur*- 1 ou 0. Si *Démarrer* est supérieur au nombre de caractères dans l’expression de valeur, une expression de longueur nulle est retournée.  
+ Expression entière ou **bigint** qui spécifie où les caractères retournés commencent. (La numérotation est basée sur 1, ce qui signifie que le premier caractère de l’expression est 1). Si *start* est inférieur à 1, l’expression retournée commence au premier caractère spécifié dans *expression*. Dans ce cas, le nombre de caractères retournés correspond à la valeur la plus grande entre la somme de *start* + *length*- 1 et 0. Si *start* est supérieur au nombre de caractères dans l’expression de valeur, une expression de longueur nulle est retournée.  
   
  *length*  
- Est un entier positif ou **bigint** expression qui spécifie le nombre de caractères de la *expression* sera retourné. Si *longueur* est négatif, une erreur est générée et l’instruction est terminée. Si la somme des *Démarrer* et *longueur* est supérieur au nombre de caractères dans *expression*, l’expression de valeur d’entier commençant à *Démarrer* est retourné.  
+ Expression **bigint** ou entière positive qui spécifie le nombre de caractères d’*expression* à retourner. Si *length* est négatif, une erreur est générée et l’instruction est arrêtée. Si la somme de *start* et *length* est supérieure au nombre de caractères dans *expression*, l’expression de valeur entière qui commence à *start* est retournée.  
   
 ## <a name="return-types"></a>Types de retour  
- Données de type caractère si *expression* est un des types de données caractères pris en charge. Retourne des données binaires si *expression* est un des prises en charge **binaire** des types de données. La chaîne retournée est du même type que l'expression spécifiée, sauf pour les exceptions énumérées dans le tableau suivant :  
+ Retourne des données de type caractère si *expression* correspond à l’un des types de données caractères pris en charge. Retourne des données binaires si *expression* correspond à l’un des types de données **binary** pris en charge. La chaîne retournée est du même type que l'expression spécifiée, sauf pour les exceptions énumérées dans le tableau suivant :  
   
 |Expression spécifiée|Type de retour|  
 |--------------------------|-----------------|  
@@ -69,18 +69,18 @@ SUBSTRING ( expression ,start , length )
 |**nchar**/**nvarchar**/**ntext**|**nvarchar**|  
 |**binary**/**varbinary**/**image**|**varbinary**|  
   
-## <a name="remarks"></a>Notes  
- Les valeurs de *Démarrer* et *longueur* doit être spécifié en nombre de caractères pour **ntext**, **char**, ou **varchar** des types de données et octets pour **texte**, **image**, **binaire**, ou **varbinary** des types de données.  
+## <a name="remarks"></a>Notes   
+ Les valeurs de *start* et *length* doivent être spécifiées en nombre de caractères pour les types de données **ntext**, **char** ou **varchar** et en octets pour les types de données **text**, **image**, **binary** ou **varbinary**.  
   
- Le *expression* doit être **varchar (max)** ou **varbinary (max)** lors de la *Démarrer* ou *longueur* contient une valeur supérieure à 2147483647.  
+ *expression* doit être de type **varchar(max)** ou **varbinary(max)** lorsque *start* ou *length* contient une valeur supérieure à 2147483647.  
   
 ## <a name="supplementary-characters-surrogate-pairs"></a>Caractères supplémentaires (paires de substitution)  
- Lors de l’utilisation de classements de caractères supplémentaires (SC), les deux *Démarrer* et *longueur* comptent chaque paire de substitution dans *expression* comme un caractère unique. Pour plus d’informations, consultez [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md).  
+ Lors de l’utilisation des classements de caractères supplémentaires (SC), les arguments *start* et *length* comptent chaque paire de substitution dans *expression* comme un caractère unique. Pour plus d’informations, consultez [Prise en charge d’Unicode et du classement](../../relational-databases/collations/collation-and-unicode-support.md).  
   
 ## <a name="examples"></a>Exemples  
   
 ### <a name="a-using-substring-with-a-character-string"></a>A. Utilisation de SUBSTRING avec une chaîne de caractères  
- L'exemple suivant illustre la manière de retourner uniquement une partie d'une chaîne de caractères. À partir de la `sys.databases` table, cette requête renvoie le système de noms de base de données dans la première colonne, la première lettre de la base de données dans la deuxième colonne et les troisième et quatrième caractères dans la dernière colonne.  
+ L'exemple suivant illustre la manière de retourner uniquement une partie d'une chaîne de caractères. À partir de la table `sys.databases`, cette requête retourne les noms de base de données système dans la première colonne, la première lettre de la base de données dans la deuxième colonne et les troisième et quatrième caractères dans la colonne finale.  
   
 ```  
 SELECT name, SUBSTRING(name, 1, 1) AS Initial ,
@@ -91,7 +91,7 @@ WHERE database_id < 5;
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
 
-|name |Initial |ThirdAndFourthCharacters|
+|NAME |Initial |ThirdAndFourthCharacters|
 |---|--|--|
 |master  |m  |st |
 |tempdb  |t  |mp |
@@ -119,9 +119,9 @@ bcd
 ### <a name="b-using-substring-with-text-ntext-and-image-data"></a>B. Utilisation de SUBSTRING avec des données text, ntext et image  
   
 > [!NOTE]  
->  Pour exécuter les exemples suivants, vous devez installer le **pubs** base de données.  
+>  Pour exécuter les exemples suivants, vous devez installer la base de données **pubs**.  
   
- L’exemple suivant montre comment retourner les 10 premiers caractères de chaque d’un **texte** et **image** colonne de données dans le `pub_info` table de la `pubs` base de données. **texte** données sont retournées en tant que **varchar**, et **image** données sont retournées en tant que **varbinary**.  
+ L’exemple suivant montre comment retourner les 10 premiers caractères de chaque colonne de données **text** et **image** de la table `pub_info` de la base de données `pubs`. Les données **text** sont retournées en tant que données **varchar** et les données **image** sont retournées en tant que **varbinary**.  
   
 ```  
 USE pubs;  
@@ -141,7 +141,7 @@ WHERE pub_id = '1756';
 (1 row(s) affected)
 ```  
   
- L’exemple suivant montre l’effet de SUBSTRING sur les deux **texte** et **ntext** données. D'abord, cet exemple crée, dans la base de données `pubs`, une nouvelle table nommée `npub_info`. Ensuite, l'exemple crée la colonne `pr_info` dans la table `npub_info` à partir des 80 premiers caractères de la colonne `pub_info.pr_info` puis ajoute le caractère `ü` en guise de premier caractère. Enfin, un `INNER JOIN` récupère tous les numéros d’identification de serveur de publication et la `SUBSTRING` des deux le **texte** et **ntext** colonnes d’informations de serveur de publication.  
+ L’exemple suivant illustre l’effet de SUBSTRING sur les données **text** et **ntext**. D'abord, cet exemple crée, dans la base de données `pubs`, une nouvelle table nommée `npub_info`. Ensuite, l'exemple crée la colonne `pr_info` dans la table `npub_info` à partir des 80 premiers caractères de la colonne `pub_info.pr_info` puis ajoute le caractère `ü` en guise de premier caractère. Pour finir, une opération `INNER JOIN` extrait tous les numéros d’identification de serveur de publication et le `SUBSTRING` des deux colonnes d’informations de serveur de publication **text** et **ntext**.  
   
 ```  
 IF EXISTS (SELECT table_name FROM INFORMATION_SCHEMA.TABLES   
@@ -183,7 +183,7 @@ FROM pub_info pr INNER JOIN npub_info npr
 ORDER BY pr.pub_id ASC;  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemples : [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] et[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemples : [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] et [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="c-using-substring-with-a-character-string"></a>C. Utilisation de SUBSTRING avec une chaîne de caractères  
  L'exemple suivant illustre la manière de retourner uniquement une partie d'une chaîne de caractères. À partir de la table `dbo.DimEmployee`, cette requête retourne les noms de famille dans une colonne avec seulement la première initiale des prénoms dans la seconde colonne.  
@@ -207,7 +207,7 @@ Barber               D
 Barreto de Mattos    P
 ```  
   
- L’exemple suivant montre comment retourner le deuxième, troisième et quatrième caractères de la constante de chaîne `abcdef`.  
+ L’exemple suivant montre comment retourner les deuxième, troisième et quatrième caractères de la constante chaîne `abcdef`.  
   
 ```  
 USE ssawPDW;  
@@ -223,14 +223,14 @@ x
 bcd
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [LEFT &#40;Transact-SQL&#41;](../../t-sql/functions/left-transact-sql.md)  
  [LTRIM &#40;Transact-SQL&#41;](../../t-sql/functions/ltrim-transact-sql.md)  
  [RIGHT &#40;Transact-SQL&#41;](../../t-sql/functions/right-transact-sql.md)  
  [RTRIM &#40;Transact-SQL&#41;](../../t-sql/functions/rtrim-transact-sql.md)  
  [STRING_SPLIT &#40;Transact-SQL&#41;](../../t-sql/functions/string-split-transact-sql.md)  
  [TRIM &#40;Transact-SQL&#41;](../../t-sql/functions/trim-transact-sql.md)  
- [Fonctions de chaîne &#40; Transact-SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)  
+ [Fonctions de chaîne &#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)  
   
   
 

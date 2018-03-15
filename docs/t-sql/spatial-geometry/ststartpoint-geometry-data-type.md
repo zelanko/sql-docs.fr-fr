@@ -1,5 +1,5 @@
 ---
-title: "STStartPoint (Type de données geometry) | Documents Microsoft"
+title: "STStartPoint (type de données geometry) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="ststartpoint-geometry-data-type"></a>STStartPoint (type de données geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Retourne le point de départ d’un **geometry** instance.
+Retourne le point de départ d’une instance **geometry**.
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -44,14 +44,14 @@ Retourne le point de départ d’un **geometry** instance.
 ```  
   
 ## <a name="return-types"></a>Types de retour  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]type de retour : **geometry**  
+ Type de retour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] : **geometry**  
   
  Type de retour CLR : **SqlGeometry**  
   
- Type Open Geospatial Consortium (OGC) : **Point**  
+ Type OGC (Open Geospatial Consortium) : **Point**  
   
-## <a name="remarks"></a>Notes  
- `STStartPoint()`est l’équivalent de [STPointN](../../t-sql/spatial-geometry/stpointn-geometry-data-type.md) (1).  
+## <a name="remarks"></a>Notes   
+ `STStartPoint()` équivaut à [STPointN](../../t-sql/spatial-geometry/stpointn-geometry-data-type.md) (1).  
   
 ## <a name="examples"></a>Exemples  
  L'exemple suivant crée une instance `LineString` et utilise `STStartPoint()` pour extraire le point de départ de l'instance.  
@@ -62,7 +62,7 @@ SET @g = geometry::STGeomFromText('LINESTRING(0 0, 2 2, 1 0)', 0;
 SELECT @g.STStartPoint().ToString();  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [STPointN &#40;type de données geometry&#41;](../../t-sql/spatial-geometry/stpointn-geometry-data-type.md)   
  [Méthodes OGC sur des instances geography](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   

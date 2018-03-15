@@ -1,5 +1,5 @@
 ---
-title: "STGeometryType (Type de données geometry) | Documents Microsoft"
+title: "STGeometryType (type de données geometry) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stgeometrytype-geometry-data-type"></a>STGeometryType (type de données geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Retourne le nom de type Open Geospatial Consortium (OGC) représenté par un **geometry** instance.
+Retourne le nom de type OGC (Open Geospatial Consortium) représenté par une instance **geometry**.
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -44,12 +44,12 @@ Retourne le nom de type Open Geospatial Consortium (OGC) représenté par un **g
 ```  
   
 ## <a name="return-types"></a>Types de retour  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]type de retour : **nvarchar (4000)**  
+ Type de retour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] : **nvarchar(4000)**  
   
  Type de retour CLR : **SqlString**  
   
-## <a name="remarks"></a>Notes  
- Les noms de type OGC qui peuvent être retournées par `STGeometryType()` sont **Point**, **LineString**, **CircularString**, **CompoundCurve**, **Polygon, CurvePolygon**, **GeometryCollection**, **MultiPoint**, **MultiLineString**, et **MultiPolygon**.  
+## <a name="remarks"></a>Notes   
+ Les noms de types OGC qui peuvent être retournés par `STGeometryType()` sont **Point**, **LineString**, **CircularString**, **CompoundCurve**, **Polygon, CurvePolygon**, **GeometryCollection**, **MultiPoint**, **MultiLineString** et **MultiPolygon**.  
   
 ## <a name="examples"></a>Exemples  
  L'exemple suivant crée une instance `Polygon` et utilise `STGeometryType()` pour confirmer qu'il s'agit d'un polygone.  
@@ -60,7 +60,7 @@ SET @g = geometry::STGeomFromText('POLYGON((0 0, 3 0, 3 3, 0 3, 0 0))', 0);
 SELECT @g.STGeometryType();  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Méthodes OGC sur des instances geography](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   
   

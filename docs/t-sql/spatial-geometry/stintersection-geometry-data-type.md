@@ -1,5 +1,5 @@
 ---
-title: "STIntersection (Type de données geometry) | Documents Microsoft"
+title: "STIntersection (type de données geometry) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stintersection-geometry-data-type"></a>STIntersection (type de données geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Retourne un objet qui représente les points où une **geometry** instance croise une autre **geometry** instance.
+Retourne un objet qui représente les points où une instance **geometry** entre en intersection avec une autre instance **geometry**.
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -45,15 +45,15 @@ Retourne un objet qui représente les points où une **geometry** instance crois
   
 ## <a name="arguments"></a>Arguments  
  *other_geometry*  
- Une autre **geometry** instance à comparer avec l’instance sur laquelle `STIntersection()` est appelée, afin de déterminer où elles se croisent.  
+ Autre instance **geometry** à comparer à l’instance sur laquelle `STIntersection()` est appelé, pour déterminer leur intersection.  
   
 ## <a name="return-types"></a>Types de retour  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]type de retour : **geometry**  
+ Type de retour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] : **geometry**  
   
  Type de retour CLR : **SqlGeometry**  
   
-## <a name="remarks"></a>Notes  
- `STIntersection()`Retourne toujours null si l’ID de référence spatiale (SRID) de la **geometry** instances ne correspondent pas. Le résultat peut contenir des segments d'arc de cercle uniquement si les instances d'entrée les contiennent.  
+## <a name="remarks"></a>Notes   
+ `STIntersection()` retourne toujours une valeur Null si les SRID (ID de référence spatiale) des instances **geometry** ne correspondent pas. Le résultat peut contenir des segments d'arc de cercle uniquement si les instances d'entrée les contiennent.  
   
 ## <a name="examples"></a>Exemples  
   
@@ -77,7 +77,7 @@ SELECT @g.STIntersection(@h).ToString();
  SELECT @h.STIntersection(@g).ToString();
  ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Méthodes OGC sur des instances geography](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   
   

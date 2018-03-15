@@ -1,5 +1,5 @@
 ---
-title: OBJECT_DEFINITION (Transact-SQL) | Documents Microsoft
+title: OBJECT_DEFINITION (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -50,7 +50,7 @@ OBJECT_DEFINITION ( object_id )
   
 ## <a name="arguments"></a>Arguments  
  *object_id*  
- ID de l'objet à utiliser. *object_id* est **int**et est censé représenter un objet dans le contexte actuel de la base de données.  
+ ID de l'objet à utiliser. *object_id* est de type **int** et est censé représenter un objet dans le contexte de la base de données active.  
   
 ## <a name="return-types"></a>Types de retour  
  **nvarchar(max)**  
@@ -60,8 +60,8 @@ OBJECT_DEFINITION ( object_id )
   
  Un utilisateur peut voir uniquement les métadonnées des éléments sécurisables qui lui appartiennent ou pour lesquels il dispose d'une autorisation. Cela signifie que les fonctions intégrées générant des métadonnées, telles que OBJECT_DEFINITION, peuvent retourner la valeur NULL si l'utilisateur ne dispose d'aucune autorisation sur l'objet. Pour plus d'informations, consultez [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
-## <a name="remarks"></a>Notes  
- Le [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] suppose que *object_id* est dans le contexte actuel de la base de données. Le classement de la définition de l'objet correspond toujours au contexte de la base de données d'appel.  
+## <a name="remarks"></a>Notes   
+ Le [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] considère que *object_id* se situe dans le contexte de la base de données active. Le classement de la définition de l'objet correspond toujours au contexte de la base de données d'appel.  
   
  OBJECT_DEFINITION s'applique aux types d'objets suivants :  
   
@@ -69,7 +69,7 @@ OBJECT_DEFINITION ( object_id )
   
 -   D = Valeur par défaut (contrainte ou autonome)  
   
--   P = procédure stockée SQL  
+-   P = Procédure stockée SQL  
   
 -   FN = Fonction scalaire SQL  
   
@@ -85,7 +85,7 @@ OBJECT_DEFINITION ( object_id )
   
 -   V = Vue  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Les définitions de l'objet système sont visibles publiquement. La définition des objets utilisateur est visible par le propriétaire de l'objet ou les bénéficiaires de l'une des autorisations suivantes : ALTER, CONTROL, TAKE OWNERSHIP ou VIEW DEFINITION. Ces autorisations sont implicitement possédées par des membres des rôles de base de données fixes **db_owner**, **db_ddladmin**et **db_securityadmin** .  
   
 ## <a name="examples"></a>Exemples  
@@ -110,10 +110,10 @@ SELECT OBJECT_DEFINITION (OBJECT_ID(N'sys.sp_columns')) AS [Object Definition];
 GO  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- [Fonctions de métadonnées &#40; Transact-SQL &#41;](../../t-sql/functions/metadata-functions-transact-sql.md)   
- [Nom_objet &#40; Transact-SQL &#41;](../../t-sql/functions/object-name-transact-sql.md)   
- [Object_id &#40; Transact-SQL &#41;](../../t-sql/functions/object-id-transact-sql.md)   
+## <a name="see-also"></a> Voir aussi  
+ [Fonctions de métadonnées &#40;Transact-SQL&#41;](../../t-sql/functions/metadata-functions-transact-sql.md)   
+ [OBJECT_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/object-name-transact-sql.md)   
+ [OBJECT_ID &#40;Transact-SQL&#41;](../../t-sql/functions/object-id-transact-sql.md)   
  [sp_helptext &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helptext-transact-sql.md)   
  [sys.sql_modules &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)   
  [sys.server_sql_modules &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-sql-modules-transact-sql.md)  

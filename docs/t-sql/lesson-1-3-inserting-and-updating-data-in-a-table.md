@@ -1,5 +1,5 @@
 ---
-title: "Insertion et mise à jour des données dans une Table (didacticiel) | Documents Microsoft"
+title: "Insertion et mise à jour des données dans une table (tutoriel) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -28,12 +28,12 @@ ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="lesson-1-3---inserting-and-updating-data-in-a-table"></a>Leçon 1-3-Insertion et de mise à jour des données dans une Table
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]Maintenant que vous avez créé le **produits** table, vous êtes prêt à insérer des données dans la table à l’aide de l’instruction INSERT. Une fois les données insérées, vous allez modifier le contenu d'une ligne à l'aide d'une l'instruction UPDATE. Vous allez utiliser la clause WHERE de l'instruction UPDATE pour restreindre la mise à jour à une seule ligne. Les quatre instructions entrent les données suivantes.  
+# <a name="lesson-1-3---inserting-and-updating-data-in-a-table"></a>Leçon 1-3 - Insertion et mise à jour des données dans une table
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)] Une fois que vous avez créé la table **Products**, vous pouvez insérer des données dans la table à l’aide de l’instruction INSERT. Une fois les données insérées, vous allez modifier le contenu d'une ligne à l'aide d'une l'instruction UPDATE. Vous allez utiliser la clause WHERE de l'instruction UPDATE pour restreindre la mise à jour à une seule ligne. Les quatre instructions entrent les données suivantes.  
   
 |ProductID|ProductName|Price|ProductDescription|  
 |-------------|---------------|---------|----------------------|  
-|1|Clamp|12.48|Workbench clamp|  
+| 1|Clamp|12.48|Workbench clamp|  
 |50|Screwdriver|3.17|Flat head|  
 |75|Tire Bar||Outil pour changer des pneus.|  
 |3000|3mm Bracket|52||  
@@ -95,7 +95,7 @@ La syntaxe de base est la suivante : INSERT, nom de table, liste de colonnes, VA
 ## <a name="next-task-in-lesson"></a>Tâche suivante de la leçon  
 [Lecture des données dans une table &#40;Didacticiel&#41;](../t-sql/lesson-1-4-reading-the-data-in-a-table.md)  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [INSERT &#40;Transact-SQL&#41;](../t-sql/statements/insert-transact-sql.md)  
 [UPDATE &#40;Transact-SQL&#41;](../t-sql/queries/update-transact-sql.md)  
   

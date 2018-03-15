@@ -1,5 +1,5 @@
 ---
-title: MIN_ACTIVE_ROWVERSION (Transact-SQL) | Documents Microsoft
+title: MIN_ACTIVE_ROWVERSION (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
@@ -34,10 +34,10 @@ ms.lasthandoff: 11/21/2017
 # <a name="minactiverowversion-transact-sql"></a>MIN_ACTIVE_ROWVERSION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Retourne la valeur **rowversion** active la plus basse dans la base de données active. Une valeur **rowversion** est active si elle est utilisée dans une transaction qui n'a pas encore été validée. Pour plus d’informations, consultez [rowversion &#40; Transact-SQL &#41; ](../../t-sql/data-types/rowversion-transact-sql.md).  
+  Retourne la valeur **rowversion** active la plus basse dans la base de données active. Une valeur **rowversion** est active si elle est utilisée dans une transaction qui n'a pas encore été validée. Pour plus d’informations, consultez [rowversion &#40;Transact-SQL&#41;](../../t-sql/data-types/rowversion-transact-sql.md).  
   
 > [!NOTE]  
->  Le **rowversion** type de données est également appelé **timestamp**.  
+>  Le type de données **rowversion** est aussi appelé **timestamp**.  
   
  ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -49,17 +49,17 @@ MIN_ACTIVE_ROWVERSION
 ```  
   
 ## <a name="return-types"></a>Types de retour  
- Retourne un **Binary (8)** valeur.  
+ Retourne une valeur **binary(8)**.  
   
-## <a name="remarks"></a>Notes  
- MIN_ACTIVE_ROWVERSION est une fonction non déterministe qui retourne l’active la plus basse **rowversion** valeur dans la base de données actuelle. Une nouvelle valeur **rowversion** est générée en règle générale lorsqu'une insertion ou une mise à jour est effectuée sur une table qui contient une colonne de type **rowversion**. S’il n’y a pas de valeurs actives dans la base de données, MIN_ACTIVE_ROWVERSION retourne la même valeur que @@DBTS + 1.  
+## <a name="remarks"></a>Notes   
+ MIN_ACTIVE_ROWVERSION est une fonction non déterministe qui retourne la valeur **rowversion** active la plus basse dans la base de données active. Une nouvelle valeur **rowversion** est générée en règle générale lorsqu'une insertion ou une mise à jour est effectuée sur une table qui contient une colonne de type **rowversion**. S’il n’y a pas de valeurs actives dans la base de données, MIN_ACTIVE_ROWVERSION retourne la même valeur que @@DBTS + 1.  
   
- MIN_ACTIVE_ROWVERSION est utile pour les scénarios tels que la synchronisation des données qui utilisent **rowversion** valeurs à des ensembles de modifications. Si une application utilise@DBTS au lieu de MIN_ACTIVE_ROWVERSION, il est possible d’absence dans les modifications qui sont actives lors de la synchronisation se produit.  
+ MIN_ACTIVE_ROWVERSION est utile dans certains scénarios, par exemple dans le cadre de la synchronisation de données qui utilise des valeurs **rowversion** pour grouper des jeux de modifications. Si une application utilise @@DBTS au lieu de MIN_ACTIVE_ROWVERSION, il est possible de manquer des modifications qui sont actives au moment de la synchronisation.  
   
  La fonction MIN_ACTIVE_ROWVERSION n'est pas affectée par les modifications apportées aux niveaux d'isolation des transactions.  
   
 ## <a name="examples"></a>Exemples  
- L’exemple suivant renvoie **rowversion** valeurs à l’aide de `MIN_ACTIVE_ROWVERSION` et `@@DBTS`. Notez que les valeurs diffèrent lorsqu'il n'y a pas de transactions actives dans la base de données.  
+ L’exemple suivant retourne des valeurs **rowversion** à l’aide de `MIN_ACTIVE_ROWVERSION` et `@@DBTS`. Notez que les valeurs diffèrent lorsqu'il n'y a pas de transactions actives dans la base de données.  
   
 ```  
 -- Create a table that has a ROWVERSION column in it.  
@@ -141,7 +141,7 @@ GO
 --0x00000000000007E5  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [@@DBTS &#40;Transact-SQL&#41;](../../t-sql/functions/dbts-transact-sql.md)   
  [rowversion &#40;Transact-SQL&#41;](../../t-sql/data-types/rowversion-transact-sql.md)  
   

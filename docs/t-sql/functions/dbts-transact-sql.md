@@ -1,5 +1,5 @@
 ---
-title: '@@DBTS (Transact-SQL) | Documents Microsoft'
+title: '@@DBTS (Transact-SQL) | Microsoft Docs'
 ms.custom: 
 ms.date: 09/18/2017
 ms.prod: sql-non-specified
@@ -48,13 +48,13 @@ Retourne la valeur du type de données actuel **timestamp** pour la base de donn
 ## <a name="return-types"></a>Types de retour
 **varbinary**
   
-## <a name="remarks"></a>Notes  
-@@DBTS renvoie la valeur timestamp utilisée en dernier de la base de données actuelle. Une nouvelle valeur est générée lors de l'insertion ou de la mise à jour d'une ligne comprenant une colonne **timestamp** .
+## <a name="remarks"></a>Notes   
+@@DBTS renvoie la dernière valeur timestamp utilisée de la base de données active. Une nouvelle valeur est générée lors de l'insertion ou de la mise à jour d'une ligne comprenant une colonne **timestamp** .
   
-Le @@DBTS fonction n’est pas affectée par les modifications apportées dans les niveaux d’isolation des transactions.
+La fonction @@DBTS n’est pas affectée par les modifications apportées aux niveaux d’isolation des transactions.
   
 ## <a name="examples"></a>Exemples  
-L’exemple suivant renvoie l’actuel **timestamp** à partir de la [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] base de données.
+L’exemple suivant renvoie la valeur **timestamp** actuelle de la base de données [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].
   
 ```sql
 USE AdventureWorks2012;  
@@ -63,9 +63,9 @@ SELECT @@DBTS;
 ```  
   
 ## <a name="see-also"></a>Voir aussi
-[Fonctions de configuration &#40; Transact-SQL &#41;](../../t-sql/functions/configuration-functions-transact-sql.md)  
-[Accès concurrentiel au curseur &#40; ODBC &#41;](../../relational-databases/native-client-odbc-cursors/properties/cursor-concurrency-odbc.md)  
+[Fonctions de configuration &#40;Transact-SQL&#41;](../../t-sql/functions/configuration-functions-transact-sql.md)  
+[Accès concurrentiel au curseur &#40;ODBC&#41;](../../relational-databases/native-client-odbc-cursors/properties/cursor-concurrency-odbc.md)  
 [Types de données &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)  
-[MIN_ACTIVE_ROWVERSION &#40; Transact-SQL &#41;](../../t-sql/functions/min-active-rowversion-transact-sql.md)
+[MIN_ACTIVE_ROWVERSION &#40;Transact-SQL&#41;](../../t-sql/functions/min-active-rowversion-transact-sql.md)
   
   

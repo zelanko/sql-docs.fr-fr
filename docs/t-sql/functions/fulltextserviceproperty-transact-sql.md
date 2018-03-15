@@ -1,5 +1,5 @@
 ---
-title: FULLTEXTSERVICEPROPERTY (Transact-SQL) | Documents Microsoft
+title: FULLTEXTSERVICEPROPERTY (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -49,11 +49,11 @@ FULLTEXTSERVICEPROPERTY ('property')
 ```  
   
 ## <a name="arguments"></a>Arguments  
- *propriété*  
+ *property*  
  Expression contenant le nom de la propriété du niveau de service de recherche en texte intégral. Le tableau donne la liste des propriétés et fournit les descriptions des informations renvoyées.  
   
 > [!NOTE]  
->  Les propriétés suivantes seront supprimées dans une future version de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **ConnectTimeout**, **DataTimeout**, et **ResourceUsage**. Évitez par conséquent d'utiliser ces propriétés dans un nouveau travail de développement et prévoyez la modification des applications qui les utilisent actuellement.  
+>  Les propriétés suivantes seront supprimées dans une version ultérieure de [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] : **ConnectTimeout**, **DataTimeout** et **ResourceUsage**. Évitez par conséquent d'utiliser ces propriétés dans un nouveau travail de développement et prévoyez la modification des applications qui les utilisent actuellement.  
   
 |Propriété|Valeur|  
 |--------------|-----------|  
@@ -61,11 +61,11 @@ FULLTEXTSERVICEPROPERTY ('property')
 |**ConnectTimeout**|Retourne 0. Pris en charge pour la compatibilité descendante uniquement.|  
 |**IsFulltextInstalled**|Composant de texte intégral installé avec l'instance actuelle de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> 0 = Texte intégral non installé.<br /><br /> 1 = Texte intégral installé.<br /><br /> NULL = Entrée non valide ou erreur.|  
 |**DataTimeout**|Retourne 0. Pris en charge pour la compatibilité descendante uniquement.|  
-|**LoadOSResources**|Indique si les analyseurs lexicaux et les filtres du système d'exploitation sont enregistrés et utilisés avec cette instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Par défaut, cette propriété est désactivée de façon à éviter tout changement de comportement intempestif suite à des mises à jour du système d'exploitation. Le fait d'utiliser les ressources du système d'exploitation permet d'accéder aux ressources associées aux langues et types de document enregistrés avec le service d'indexation [!INCLUDE[msCoName](../../includes/msconame-md.md)], mais cela n'implique pas l'installation des ressources propres à l'instance. Si vous activez le chargement des ressources du système d’exploitation, assurez-vous que les ressources du système d’exploitation sont les fichiers binaires signés approuvés ; dans le cas contraire, ils ne peuvent pas être chargées lorsque **VerifySignature** est défini sur 1.<br /><br /> 0 = Utiliser uniquement les filtres et les analyseurs lexicaux propres à cette instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> 1 = Charger les filtres et les analyseurs lexicaux du système d'exploitation.|  
+|**LoadOSResources**|Indique si les analyseurs lexicaux et les filtres du système d'exploitation sont enregistrés et utilisés avec cette instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Par défaut, cette propriété est désactivée de façon à éviter tout changement de comportement intempestif suite à des mises à jour du système d'exploitation. Le fait d'utiliser les ressources du système d'exploitation permet d'accéder aux ressources associées aux langues et types de document enregistrés avec le service d'indexation [!INCLUDE[msCoName](../../includes/msconame-md.md)], mais cela n'implique pas l'installation des ressources propres à l'instance. Si vous activez le chargement des ressources du système d’exploitation, veillez à ce que ces ressources soient des binaires signés et approuvés. Sinon, les ressources ne peuvent pas être chargées quand la propriété **VerifySignature** est définie sur 1.<br /><br /> 0 = Utiliser uniquement les filtres et les analyseurs lexicaux propres à cette instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> 1 = Charger les filtres et les analyseurs lexicaux du système d'exploitation.|  
 |**VerifySignature**|Indique si seuls les binaires signés sont chargés par le service de Recherche [!INCLUDE[msCoName](../../includes/msconame-md.md)]. Par défaut, seuls les binaires approuvés et signés sont chargés.<br /><br /> 0 = Ne pas vérifier si les binaires sont signés.<br /><br /> 1 = Vérifier que seuls les binaires approuvés et signés sont chargés.|  
   
 ## <a name="return-types"></a>Types de retour  
- **int**  
+ **Int**  
   
 ## <a name="examples"></a>Exemples  
  L'exemple suivant vérifie si seules les représentations binaires signées sont chargées, et la valeur de retour indique que cette vérification n'a pas lieu.  
@@ -88,9 +88,9 @@ EXEC sp_fulltext_service @action='verify_signature', @value=1;
 GO  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- [FULLTEXTCATALOGPROPERTY &#40; Transact-SQL &#41;](../../t-sql/functions/fulltextcatalogproperty-transact-sql.md)   
- [Fonctions de métadonnées &#40; Transact-SQL &#41;](../../t-sql/functions/metadata-functions-transact-sql.md)   
+## <a name="see-also"></a> Voir aussi  
+ [FULLTEXTCATALOGPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/fulltextcatalogproperty-transact-sql.md)   
+ [Fonctions de métadonnées &#40;Transact-SQL&#41;](../../t-sql/functions/metadata-functions-transact-sql.md)   
  [sp_fulltext_service &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md)  
   
   

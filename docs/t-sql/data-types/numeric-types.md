@@ -1,5 +1,5 @@
 ---
-title: "Types numériques | Documents Microsoft"
+title: Types numeric | Microsoft Docs
 ms.custom: 
 ms.date: 7/22/2017
 ms.prod: sql-non-specified
@@ -29,12 +29,12 @@ ms.lasthandoff: 11/21/2017
 # <a name="numeric-types"></a>Types valeurs numériques
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]prend en charge les **numérique** types.
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend en charge les types **numeric** suivants.
   
 ## <a name="in-this-section"></a>Contenu de cette section
-[Decimal et numeric &#40; Transact-SQL &#41;](../../t-sql/data-types/decimal-and-numeric-transact-sql.md)  
-[float et real &#40; Transact-SQL &#41;](../../t-sql/data-types/float-and-real-transact-sql.md)  
-[int, bigint, smallint, tinyint et #40 ; Transact-SQL &#41;](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)  
-[Money et smallmoney &#40; Transact-SQL &#41;](../../t-sql/data-types/money-and-smallmoney-transact-sql.md)
+[decimal et numeric &#40;Transact-SQL&#41;](../../t-sql/data-types/decimal-and-numeric-transact-sql.md)  
+[float et real &#40;Transact-SQL&#41;](../../t-sql/data-types/float-and-real-transact-sql.md)  
+[int, bigint, smallint et tinyint &#40;Transact-SQL&#41;](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)  
+[money et smallmoney &#40;Transact-SQL&#41;](../../t-sql/data-types/money-and-smallmoney-transact-sql.md)
   
   

@@ -1,5 +1,5 @@
 ---
-title: "Point (Type de données geometry) | Documents Microsoft"
+title: "Point (type de données geometry) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="point-geometry-data-type"></a>Point (type de données geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Construit un **geometry** instance représentant un **Point** instance à partir de ses valeurs X et Y et un SRID.
+Construit une instance **geometry** qui représente une instance **Point** à partir de ses valeurs X et Y, et d’un SRID.
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -45,20 +45,20 @@ Point ( X, Y, SRID )
   
 ## <a name="arguments"></a>Arguments  
  *X*  
- Est un **float** expression qui représente la coordonnée X de la **Point** en cours de génération.  
+ Expression **float** qui représente la coordonnée X du **Point** généré.  
   
  *O*  
- Est un **float** expression qui représente la coordonnée Y de la **Point** en cours de génération.  
+ Expression **float** qui représente la coordonnée Y du **Point** généré.  
   
  *SRID*  
- Est un **int** expression représentant les données spatiales ID de référence (SRID) de la **geometry** instance à retourner.  
+ Expression **int** qui représente le SRID (ID de référence spatiale) de l’instance **geometry** à retourner.  
   
 ## <a name="return-types"></a>Types de retour  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]type de retour : **geometry**  
+ Type de retour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] : **geometry**  
   
  Type de retour CLR : **SqlGeometry**  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
   
 ## <a name="examples"></a>Exemples  
  L'exemple suivant utilise la méthode `Point()` pour créer une instance `geometry`.  
@@ -69,7 +69,7 @@ SET @g = geometry::Point(1, 10, 0);
 SELECT @g.ToString();  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Méthodes geometry statiques étendues](../../t-sql/spatial-geometry/extended-static-geometry-methods.md)  
   
   

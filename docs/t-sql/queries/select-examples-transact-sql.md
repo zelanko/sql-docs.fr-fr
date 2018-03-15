@@ -1,5 +1,5 @@
 ---
-title: Exemples SELECT (Transact-SQL) | Documents Microsoft
+title: Exemples SELECT (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -47,7 +47,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="select-examples-transact-sql"></a>Exemples SELECT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Cette rubrique fournit des exemples d’utilisation de la [sélectionnez](../../t-sql/queries/select-transact-sql.md) instruction.  
+  Cette rubrique fournit des exemples d’utilisation de l’instruction [SELECT](../../t-sql/queries/select-transact-sql.md).  
   
 ## <a name="a-using-select-to-retrieve-rows-and-columns"></a>A. Utilisation de SELECT pour extraire des lignes et des colonnes  
  L'exemple suivant présente trois exemples de code. Le premier exemple de code retourne toutes les lignes (aucune clause WHERE n'est définie) et toutes les colonnes (en utilisant `*`) de la table `Product` dans la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
@@ -132,7 +132,7 @@ ms.lasthandoff: 01/25/2018
  [!code-sql[Select#SelectExamples18](../../t-sql/queries/codesnippet/tsql/select-examples-transact_17.sql)]  
   
 ## <a name="k-using-the-having-clause"></a>K. Utilisation de la clause HAVING  
- Le premier exemple suivant illustre une clause `HAVING` utilisée avec une fonction d'agrégation. Il regroupe les lignes de la `SalesOrderDetail` de table par ID de produit et élimine les produits dont les quantités moyenne soient inférieur ou égal à cinq. Le second exemple illustre une clause `HAVING` sans fonction d'agrégation.  
+ Le premier exemple suivant illustre une clause `HAVING` utilisée avec une fonction d'agrégation. Il regroupe les lignes de la table `SalesOrderDetail` par ID de produit et élimine les produits dont la quantité moyenne d’articles commandés est inférieure ou égale à cinq. Le second exemple illustre une clause `HAVING` sans fonction d'agrégation.  
   
  [!code-sql[Select#SelectExamples19](../../t-sql/queries/codesnippet/tsql/select-examples-transact_18.sql)]  
   
@@ -168,7 +168,7 @@ GO
  [!code-sql[Select#SelectExamples24](../../t-sql/queries/codesnippet/tsql/select-examples-transact_22.sql)]  
   
 ## <a name="n-using-the-index-optimizer-hint"></a>N. Utilisation de l'indicateur d'optimiseur INDEX  
- L'exemple suivant illustre deux manières d'utiliser l'indicateur d'optimiseur `INDEX`. Le premier exemple illustre la façon d'obliger l'optimiseur à utiliser un index non cluster pour extraire des lignes d'une table, tandis que le second exemple génère l'analyse d'une table à l'aide d'un index 0.  
+ L'exemple suivant illustre deux manières d'utiliser l'indicateur d'optimiseur `INDEX`. Le premier exemple illustre la façon d'obliger l'optimiseur à utiliser un index non-cluster pour extraire des lignes d'une table, tandis que le second exemple génère l'analyse d'une table à l'aide d'un index 0.  
   
  [!code-sql[Select#SelectExamples45](../../t-sql/queries/codesnippet/tsql/select-examples-transact_23.sql)]  
   
@@ -204,19 +204,19 @@ GO
   
  [!code-sql[Select#SelectExamples51](../../t-sql/queries/codesnippet/tsql/select-examples-transact_29.sql)]  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)   
  [CREATE VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md)   
  [DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)   
  [EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md)   
  [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
- [INSÉRER une &#40; Transact-SQL &#41;](../../t-sql/statements/insert-transact-sql.md)   
+ [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
  [LIKE &#40;Transact-SQL&#41;](../../t-sql/language-elements/like-transact-sql.md)   
  [UNION &#40;Transact-SQL&#41;](../../t-sql/language-elements/set-operators-union-transact-sql.md)   
- [À l’exception et INTERSECT &#40; Transact-SQL &#41;](../../t-sql/language-elements/set-operators-except-and-intersect-transact-sql.md)   
+ [EXCEPT et INTERSECT &#40;Transact-SQL&#41;](../../t-sql/language-elements/set-operators-except-and-intersect-transact-sql.md)   
  [UPDATE &#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md)   
  [WHERE &#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md)   
  [PathName &#40;Transact-SQL&#41;](../../relational-databases/system-functions/pathname-transact-sql.md)   
- [INTO Clause &#40;Transact-SQL&#41;](../../t-sql/queries/select-into-clause-transact-sql.md)  
+ [INTO, clause &#40;Transact-SQL&#41;](../../t-sql/queries/select-into-clause-transact-sql.md)  
   
   

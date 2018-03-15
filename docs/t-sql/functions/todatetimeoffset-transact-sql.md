@@ -1,5 +1,5 @@
 ---
-title: TODATETIMEOFFSET (Transact-SQL) | Documents Microsoft
+title: TODATETIMEOFFSET (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/13/2017
 ms.prod: sql-non-specified
@@ -40,7 +40,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="todatetimeoffset-transact-sql"></a>TODATETIMEOFFSET (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Retourne un **datetimeoffset** valeur convertie à partir un **datetime2** expression.  
+  Renvoie une valeur **datetimeoffset** convertie à partir d’une expression **datetime2**.  
   
  ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -52,10 +52,10 @@ TODATETIMEOFFSET ( expression , time_zone )
   
 ## <a name="arguments"></a>Arguments  
  *expression*  
- Est un [expression](../../t-sql/language-elements/expressions-transact-sql.md) qui se résout en un [datetime2](../../t-sql/data-types/datetime2-transact-sql.md) valeur.  
+ [Expression](../../t-sql/language-elements/expressions-transact-sql.md) qui est résolue en valeur [datetime2](../../t-sql/data-types/datetime2-transact-sql.md).  
   
 > [!NOTE]  
->  L’expression ne peut pas être de type **texte**, **ntext**, ou **image** , car ces types ne peut pas être implicitement convertis en **varchar** ou **nvarchar**.  
+>  L’expression ne peut pas être de type **text**, **ntext** ou **image**, car ces types ne sont pas implicitement convertibles en **varchar** ou **nvarchar**.  
   
  *time_zone*  
  Expression qui représente le décalage de fuseau horaire en minutes (pour un entier), par exemple -120, les heures et les minutes (pour une chaîne), par exemple « +13.00 ». La plage va de +14 à -14 (en heures). L'expression est interprétée en heure locale pour le time_zone spécifié.  
@@ -64,7 +64,7 @@ TODATETIMEOFFSET ( expression , time_zone )
 >  Si l'expression est une chaîne de caractères, elle doit être au format {+|-}TZH:THM.  
   
 ## <a name="return-type"></a>Type de retour  
- **DateTimeOffset**. La précision fractionnaire est identique à la *datetime* argument.  
+ **datetimeoffset**. La précision fractionnelle est la même que l’argument *datetime*.  
   
 ## <a name="examples"></a>Exemples  
   
@@ -97,10 +97,10 @@ SELECT TODATETIMEOFFSET (@dateTime, '+13:00');
 -- RETURNS 2007-08-28 18:00:30.0000000 +13:00  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- [CAST et CONVERT &#40; Transact-SQL &#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)   
- [Données de date et heure les fonctions et Types de &#40; Transact-SQL &#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)   
- [FUSEAU horaire &AMP;#40; Transact-SQL &#41;](../../t-sql/queries/at-time-zone-transact-sql.md)  
+## <a name="see-also"></a> Voir aussi  
+ [CAST et CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)   
+ [Types de données et fonctions de date et d’heure &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)   
+ [AT TIME ZONE &#40;Transact-SQL&#41;](../../t-sql/queries/at-time-zone-transact-sql.md)  
   
   
 

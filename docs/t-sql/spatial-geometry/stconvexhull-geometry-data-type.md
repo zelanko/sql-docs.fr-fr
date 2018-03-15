@@ -1,5 +1,5 @@
 ---
-title: "STConvexHull (Type de données geometry) | Documents Microsoft"
+title: "STConvexHull (type de données geometry) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stconvexhull-geometry-data-type"></a>STConvexHull (type de données geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Retourne un objet qui représente la forme convexe d’une **geometry** instance.
+Retourne un objet qui représente l’enveloppe convexe d’une instance **geometry**.
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -44,12 +44,12 @@ Retourne un objet qui représente la forme convexe d’une **geometry** instance
 ```  
   
 ## <a name="return-types"></a>Types de retour  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]type de retour : **geometry**  
+ Type de retour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] : **geometry**  
   
  Type de retour CLR : **SqlGeometry**  
   
-## <a name="remarks"></a>Notes  
- `STConvexHull()`Retourne le plus petit polygone convexe qui contient la donnée **geometry** instance. **Points** ou co-linéaires **LineString** produisent une instance du même type que celui de l’entrée.  
+## <a name="remarks"></a>Notes   
+ `STConvexHull()` retourne le plus petit polygone convexe qui contient l’instance **geometry** donnée. Les instances **Points** ou les instances **LineString** colinéaires produisent une instance du même type que celui de l’entrée.  
   
 ## <a name="examples"></a>Exemples  
  L'exemple suivant utilise `STConvexHull()` pour rechercher la forme convexe d'une instance `Polygon``geometry` non convexe.  
@@ -60,7 +60,7 @@ SET @g = geometry::STGeomFromText('POLYGON((0 0, 0 2, 1 1, 2 2, 2 0, 0 0))', 0);
 SELECT @g.STConvexHull().ToString();  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Méthodes OGC sur des instances geography](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   
   

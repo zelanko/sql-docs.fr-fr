@@ -1,5 +1,5 @@
 ---
-title: "Méthodes OGC sur les Instances géométriques | Documents Microsoft"
+title: "Méthodes OGC sur les instances Geometry | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -59,9 +59,9 @@ ms.lasthandoff: 01/25/2018
   
 -   [STCrosses](../../t-sql/spatial-geometry/stcrosses-geometry-data-type.md)  
   
--   [STCurveN &#40; Type de données geometry &#41;](../../t-sql/spatial-geometry/stcurven-geometry-data-type.md)  
+-   [STCurveN &#40;type de données geometry&#41;](../../t-sql/spatial-geometry/stcurven-geometry-data-type.md)  
   
--   [STCurveToLine &#40; Type de données geometry &#41;](../../t-sql/spatial-geometry/stcurvetoline-geometry-data-type.md)  
+-   [STCurveToLine &#40;type de données geometry&#41;](../../t-sql/spatial-geometry/stcurvetoline-geometry-data-type.md)  
   
 -   [STDifference](../../t-sql/spatial-geometry/stdifference-geometry-data-type.md)  
   
@@ -133,9 +133,9 @@ ms.lasthandoff: 01/25/2018
   
 -   [STY](../../t-sql/spatial-geometry/sty-geometry-data-type.md)  
   
-## <a name="see-also"></a>Voir aussi  
- [Méthodes étendues sur les Instances géométriques](../../t-sql/spatial-geometry/extended-methods-on-geometry-instances.md)   
- [Méthodes géométriques statiques OGC](../../t-sql/spatial-geometry/ogc-static-geometry-methods.md)   
+## <a name="see-also"></a> Voir aussi  
+ [Méthodes étendues sur des instances Geometry](../../t-sql/spatial-geometry/extended-methods-on-geometry-instances.md)   
+ [Méthodes Geometry statiques de l’OGC](../../t-sql/spatial-geometry/ogc-static-geometry-methods.md)   
  [Méthodes geometry statiques étendues](../../t-sql/spatial-geometry/extended-static-geometry-methods.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: PWDENCRYPT (Transact-SQL) | Documents Microsoft
+title: PWDENCRYPT (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -48,17 +48,17 @@ PWDENCRYPT ( 'password' )
 ```  
   
 ## <a name="arguments"></a>Arguments  
- *mot de passe*  
- Mot de passe à chiffrer. *mot de passe* est **sysname**.  
+ *password*  
+ Mot de passe à chiffrer. *password* est de type **sysname**.  
   
 ## <a name="return-types"></a>Types de retour  
  **varbinary(128)**  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  PWDENCRYPT est accessible publiquement.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Fonctions de sécurité &#40;Transact-SQL&#41;](../../t-sql/functions/security-functions-transact-sql.md)   
- [PWDCOMPARE &#40; Transact-SQL &#41;](../../t-sql/functions/pwdcompare-transact-sql.md)  
+ [PWDCOMPARE &#40;Transact-SQL&#41;](../../t-sql/functions/pwdcompare-transact-sql.md)  
   
   

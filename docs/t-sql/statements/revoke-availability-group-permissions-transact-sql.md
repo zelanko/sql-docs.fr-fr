@@ -1,5 +1,5 @@
 ---
-title: "Autorisations de groupe de disponibilité REVOKE (Transact-SQL) | Documents Microsoft"
+title: "REVOKE - Révoquer des autorisations sur un groupe de disponibilité (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/10/2017
 ms.prod: sql-non-specified
@@ -31,7 +31,7 @@ ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="revoke-availability-group-permissions-transact-sql"></a>REVOKE (Révocation d'autorisations de groupe de disponibilité) (Transact-SQL)
+# <a name="revoke-availability-group-permissions-transact-sql"></a>REVOKE - Révoquer des autorisations sur un groupe de disponibilité (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
   Révoque des autorisations sur un groupe de disponibilité Always On. 
@@ -56,13 +56,13 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
 ```  
   
 ## <a name="arguments"></a>Arguments  
- *autorisation*  
+ *permission*  
  Spécifie une autorisation qu'il est possible de révoquer sur un groupe de disponibilité. Pour obtenir la liste des autorisations, consultez la section Notes plus loin dans cette rubrique.  
   
- SUR le groupe de disponibilité **::***availability_group_name*  
- Spécifie le groupe de disponibilité sur lequel l'autorisation est révoquée. Le qualificateur d’étendue (**::**) est requis.  
+ ON AVAILABILITY GROUP **::***availability_group_name*  
+ Spécifie le groupe de disponibilité sur lequel l'autorisation est révoquée. Le qualificateur d’étendue (**::**) est obligatoire.  
   
- {À PARTIR DE | À} \<principal_de_serveur > Spécifie le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connexion auquel l’autorisation est révoquée.  
+ { FROM | TO } \<server_principal> spécifie la connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur laquelle l’autorisation est révoquée.  
   
  *SQL_Server_login*  
  Spécifie le nom d'une connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -88,13 +88,13 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
 > [!IMPORTANT]  
 >  Une révocation en cascade d'une autorisation accordée avec l'option WITH GRANT OPTION entraîne la révocation des deux options GRANT et DENY de cette autorisation.  
   
- En tant que *SQL_Server_login*  
+ AS *SQL_Server_login*  
  Spécifie la connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à partir de laquelle le principal qui exécute cette requête dérive son droit de révoquer l'autorisation.  
   
-## <a name="remarks"></a>Notes  
- Révoquer des autorisations au niveau de l’étendue du serveur uniquement lorsque la base de données actuelle est **master**.  
+## <a name="remarks"></a>Notes   
+ Les autorisations dans l’étendue du serveur peuvent être révoquées seulement quand la base de données active est **master**.  
   
- Informations sur les groupes de disponibilité sont visibles dans le [sys.availability_groups &#40; Transact-SQL &#41; ](../../relational-databases/system-catalog-views/sys-availability-groups-transact-sql.md) affichage catalogue. Pour plus d’informations sur les autorisations de serveur sont visibles dans le [sys.server_permissions](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md) vue de catalogue et des informations sur les principaux de serveur est visible dans le [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md) vue de catalogue.  
+ Des informations sur les groupes de disponibilité sont consultables dans la vue de catalogue [sys.availability_groups &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-availability-groups-transact-sql.md). Des informations sur les autorisations de serveur sont consultables dans la vue de catalogue [sys.server_permissions](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md) et des informations sur les principaux de serveur sont consultables dans la vue de catalogue [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md).  
   
  Un groupe de disponibilité est un élément sécurisable au niveau serveur. Les autorisations les plus spécifiques et limitées qu'il est possible de révoquer sur un groupe de disponibilité sont répertoriées dans le tableau ci-dessous, avec les autorisations plus générales qui les incluent de manière implicite.  
   
@@ -106,7 +106,7 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
 |TAKE OWNERSHIP|CONTROL|CONTROL SERVER|  
 |VIEW DEFINITION|CONTROL|VIEW ANY DEFINITION|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Requiert l'autorisation CONTROL sur le groupe de disponibilité ou l'autorisation ALTER ANY AVAILABILTIY GROUP sur le serveur.  
   
 ## <a name="examples"></a>Exemples  
@@ -131,7 +131,7 @@ GO
 ```  
   
 ### <a name="c-revoking-a-previously-granted-with-grant-option-clause"></a>C. Révocation d'une clause WITH GRANT OPTION précédemment accordée  
- Si une autorisation a été accordée à l’aide de la clause WITH GRANT OPTION, utilisez REVOKE GRANT OPTION FOR... Pour supprimer la clause WITH GRANT OPTION. L'exemple suivant accorde l'autorisation puis supprime la partie WITH GRANT de l'autorisation.  
+ Si une autorisation a été accordée à l’aide de WITH GRANT OPTION, utilisez REVOKE GRANT OPTION FOR … pour supprimer WITH GRANT OPTION. L'exemple suivant accorde l'autorisation puis supprime la partie WITH GRANT de l'autorisation.  
   
 ```  
 USE master;  
@@ -143,12 +143,12 @@ CASCADE
 GO  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- [Autorisations de groupe de disponibilité GRANT &#40; Transact-SQL &#41;](../../t-sql/statements/grant-availability-group-permissions-transact-sql.md)   
- [REFUSER des autorisations de groupe de disponibilité &#40; Transact-SQL &#41;](../../t-sql/statements/deny-availability-group-permissions-transact-sql.md)   
+## <a name="see-also"></a> Voir aussi  
+ [GRANT - Octroyer des autorisations sur un groupe de disponibilité &#40;Transact-SQL&#41;](../../t-sql/statements/grant-availability-group-permissions-transact-sql.md)   
+ [DENY - Refuser des autorisations sur un groupe de disponibilité &#40;Transact-SQL&#41;](../../t-sql/statements/deny-availability-group-permissions-transact-sql.md)   
  [CREATE AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/create-availability-group-transact-sql.md)   
- [Sys.availability_groups &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-availability-groups-transact-sql.md)   
- [Affichages catalogue des groupes de disponibilité Always On &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/always-on-availability-groups-catalog-views-transact-sql.md)   
+ [sys.availability_groups &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-availability-groups-transact-sql.md)   
+ [Vues de catalogue des groupes de disponibilité Always On &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/always-on-availability-groups-catalog-views-transact-sql.md)   
  [Autorisations &#40;moteur de base de données&#41;](../../relational-databases/security/permissions-database-engine.md)   
  [Principaux &#40;moteur de base de données&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)  
   

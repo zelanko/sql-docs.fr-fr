@@ -1,5 +1,5 @@
 ---
-title: Joindre les indicateurs (Transact-SQL) | Documents Microsoft
+title: Indicateurs de jointure (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/09/2017
 ms.prod: sql-non-specified
@@ -36,13 +36,13 @@ ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="hints-transact-sql---join"></a>Indicateurs (Transact-SQL) - jointure
+# <a name="hints-transact-sql---join"></a>Indicateurs (Transact-SQL) - Jointure
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Les indicateurs de jointure spécifient l'application, par l'optimiseur de requête, d'une stratégie de jointure entre deux tables dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Pour obtenir des informations générales sur les jointures et la syntaxe de jointure, consultez [FROM &#40; Transact-SQL &#41; ](../../t-sql/queries/from-transact-sql.md).  
+  Les indicateurs de jointure spécifient l'application, par l'optimiseur de requête, d'une stratégie de jointure entre deux tables dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Pour obtenir des informations générales sur les jointures et la syntaxe de jointure, consultez [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md).  
   
 > [!IMPORTANT]  
->  Étant donné que la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] optimiseur de requête sélectionne généralement le meilleur plan d’exécution pour une requête, nous vous recommandons de qui indicateurs, y compris \<indicateurs join_hint >, être utilisé qu’en dernier recours par les développeurs expérimentés et aux administrateurs de base de données.
+>  Étant donné que l’optimiseur de requête [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sélectionne généralement le meilleur plan d’exécution pour une requête, nous vous recommandons d’utiliser les indicateurs, y compris \<join_hint>, uniquement en dernier recours et si vous êtes un administrateur de base de données ou un développeur expérimenté.
   
  **S’applique à :**  
   
@@ -75,7 +75,7 @@ ms.lasthandoff: 01/25/2018
   
  REMOTE ne peut être utilisé que pour les opérations INNER JOIN.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Les indicateurs de jointure sont spécifiés dans la clause FROM d'une requête. Les indicateurs de jointure appliquent une stratégie de jointure entre deux tables. Si un indicateur de jointure est spécifié pour deux tables, l'optimiseur de requêtes applique automatiquement l'ordre de jointure de toutes les tables jointes de la requête, d'après la position des mots clés ON. Lorsqu'une jointure CROSS JOIN est utilisée sans la clause ON, l'ordre de jointure peut être indiqué au moyen de parenthèses.  
   
 ## <a name="examples"></a>Exemples  
@@ -114,7 +114,7 @@ INNER MERGE JOIN Purchasing.PurchaseOrderDetail AS pod
 GO  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- [Hints &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql.md)  
+## <a name="see-also"></a> Voir aussi  
+ [Indicateurs &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql.md)  
   
   

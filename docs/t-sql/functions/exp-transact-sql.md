@@ -1,5 +1,5 @@
 ---
-title: EXP (Transact-SQL) | Documents Microsoft
+title: EXP (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -35,7 +35,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="exp-transact-sql"></a>EXP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Renvoie la valeur exponentielle de l’objet **float** expression.  
+  Renvoie la valeur exponentielle de l’expression **float** spécifiée.  
   
  ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -46,18 +46,18 @@ EXP ( float_expression )
 ```  
   
 ## <a name="arguments"></a>Arguments  
- *expression*  
- Est un [expression](../../t-sql/language-elements/expressions-transact-sql.md) de type **float** ou d’un type qui peut être implicitement converti en **float**.  
+ *float_expression*  
+ [Expression](../../t-sql/language-elements/expressions-transact-sql.md) de type **float** ou dont le type peut être implicitement converti en type **float**.  
   
 ## <a name="return-types"></a>Types de retour  
  **float**  
   
-## <a name="remarks"></a>Notes  
- La constante **e** (2,718281...), est la base du logarithme népérien.  
+## <a name="remarks"></a>Notes   
+ La constante **e** (2,718281…), est la base des logarithmes népériens.  
   
- L’exposant d’un nombre correspond à la constante **e** élevé à la puissance du nombre. Par exemple, EXP(1,0) = e^1,0 = 2,71828182845905 et EXP(10) = e^10 = 22026,4657948067.  
+ L’exposant d’un nombre correspond à la constante **e** élevée à la puissance de ce nombre. Par exemple, EXP(1,0) = e^1,0 = 2,71828182845905 et EXP(10) = e^10 = 22026,4657948067.  
   
- La valeur exponentielle du logarithme naturel d’un nombre est le nombre lui-même : EXP (journal (*n*)) =  *n* . Le logarithme naturel de la valeur exponentielle d’un nombre est le nombre lui-même : journal (EXP (*n*)) =  *n* .  
+ La valeur exponentielle du logarithme népérien d’un nombre est le nombre lui-même : EXP (LOG (*n*)) = *n*. De même, le logarithme népérien de la valeur exponentielle d’un nombre est le nombre lui-même : LOG (EXP (*n*)) = *n*.  
   
 ## <a name="examples"></a>Exemples  
   
@@ -96,7 +96,7 @@ GO
 (1 row(s) affected)  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemples : [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] et[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemples : [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] et [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="c-finding-the-exponent-of-a-number"></a>C. Calcul de l'exposant d'un nombre  
  L’exemple suivant renvoie la valeur exponentielle de la valeur spécifiée (`10`).  
@@ -112,7 +112,7 @@ SELECT EXP(10);
 22026.4657948067  
 ```  
   
-### <a name="d-finding-exponential-values-and-natural-logarithms"></a>D. Valeurs exponentielles et logarithmes naturels  
+### <a name="d-finding-exponential-values-and-natural-logarithms"></a>D. Calcul des valeurs exponentielles et des logarithmes népériens  
  L'exemple suivant renvoie la valeur exponentielle du logarithme naturel de `20` et le logarithme naturel de la valeur exponentielle de `20`. Comme ces fonctions sont l'inverse l'une de l'autre, la valeur `20` est renvoyée dans les deux cas.  
   
 ```  
@@ -126,10 +126,10 @@ SELECT EXP( LOG(20)), LOG( EXP(20));
 20                  20  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- [Fonctions mathématiques &#40; Transact-SQL &#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)   
- [JOURNAL &#40; Transact-SQL &#41;](../../t-sql/functions/log-transact-sql.md)   
- [LOG10 &#40; Transact-SQL &#41;](../../t-sql/functions/log10-transact-sql.md)  
+## <a name="see-also"></a> Voir aussi  
+ [Fonctions mathématiques &#40;Transact-SQL&#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)   
+ [LOG &#40;Transact-SQL&#41;](../../t-sql/functions/log-transact-sql.md)   
+ [LOG10 &#40;Transact-SQL&#41;](../../t-sql/functions/log10-transact-sql.md)  
   
   
 

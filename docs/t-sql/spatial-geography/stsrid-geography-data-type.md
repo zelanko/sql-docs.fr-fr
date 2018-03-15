@@ -1,5 +1,5 @@
 ---
-title: "STSrid (Type de données geography) | Documents Microsoft"
+title: "STSrid (type de données geography) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stsrid-geography-data-type"></a>STSrid (type de données geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  **STSrid** est un entier représentant l’identificateur de référence spatiale (SRID) de l’instance.  
+  **STSrid** est un entier qui représente le SRID (identificateur de référence spatiale) de l’instance.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -44,11 +44,11 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>Types de retour  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]type : **int**  
+ Type [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] : **int**  
   
  Type CLR : **SqlInt32**  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Cette propriété peut être modifiée.  
   
 ## <a name="examples"></a>Exemples  
@@ -67,8 +67,8 @@ SET @g.STSrid = 4267;
 SELECT @g.STSrid;  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- [Méthodes OGC sur les Instances géographiques](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)   
- [Identificateurs de référence spatiale &#40; SRID &#41;](../../relational-databases/spatial/spatial-reference-identifiers-srids.md)  
+## <a name="see-also"></a> Voir aussi  
+ [Méthodes OGC sur des instances Geography](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)   
+ [Identificateurs de référence spatiale &#40;SRID&#41;](../../relational-databases/spatial/spatial-reference-identifiers-srids.md)  
   
   

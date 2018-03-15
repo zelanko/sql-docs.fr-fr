@@ -1,5 +1,5 @@
 ---
-title: "RÉVOQUER les autorisations de Service Broker (Transact-SQL) | Documents Microsoft"
+title: Autorisations REVOKE dans Service Broker (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
@@ -61,7 +61,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON
   
 ## <a name="arguments"></a>Arguments  
  GRANT OPTION FOR  
- Indique que le droit d'accorder le droit spécifié à d'autres principaux sera révoqué. L’autorisation elle-même ne sera pas révoque.  
+ Indique que le droit d'accorder le droit spécifié à d'autres principaux sera révoqué. L’autorisation elle-même ne sera pas révoquée.  
   
 > [!IMPORTANT]  
 >  Si le principal possède l'autorisation spécifiée sans l'option GRANT, l'autorisation elle-même sera révoquée.  
@@ -69,23 +69,23 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON
  *permission*  
  Spécifie une autorisation qui peut être révoquée sur un élément sécurisable [!INCLUDE[ssSB](../../includes/sssb-md.md)]. Pour obtenir la liste de ces autorisations, consultez la section Remarques plus loin dans cette rubrique.  
   
- CONTRAT **:: *** nom_contract*  
- Spécifie le contrat sur lequel l'autorisation est révoquée. Le qualificateur d’étendue **::** est requis.  
+ CONTRACT **::***contract_name*  
+ Spécifie le contrat sur lequel l'autorisation est révoquée. Le qualificateur d’étendue **::** est obligatoire.  
   
  MESSAGE TYPE **::***message_type_name*  
- Spécifie le type de message sur lequel l'autorisation est révoquée. Le qualificateur d’étendue **::** est requis.  
+ Spécifie le type de message sur lequel l'autorisation est révoquée. Le qualificateur d’étendue **::** est obligatoire.  
   
- REMOTE SERVICE BINDING **:: *** remote_binding_name*  
- Spécifie la liaison de service distant sur laquelle l'autorisation est révoquée. Le qualificateur d’étendue **::** est requis.  
+ REMOTE SERVICE BINDING **::***remote_binding_name*  
+ Spécifie la liaison de service distant sur laquelle l'autorisation est révoquée. Le qualificateur d’étendue **::** est obligatoire.  
   
- ITINÉRAIRE **:: *** route_name*  
- Spécifie l'itinéraire sur lequel l'autorisation est révoquée. Le qualificateur d’étendue **::** est requis.  
+ ROUTE **::***route_name*  
+ Spécifie l'itinéraire sur lequel l'autorisation est révoquée. Le qualificateur d’étendue **::** est obligatoire.  
   
  SERVICE **::***message_type_name*  
- Spécifie le service sur lequel l'autorisation est révoquée. Le qualificateur d’étendue **::** est requis.  
+ Spécifie le service sur lequel l'autorisation est révoquée. Le qualificateur d’étendue **::** est obligatoire.  
   
  *database_principal*  
- Spécifie le principal pour lequel l'autorisation est révoquée. *principal_base_de_données* peut prendre l’une des opérations suivantes :  
+ Spécifie le principal pour lequel l'autorisation est révoquée. *database_principal* peut être l’un des éléments suivants :  
   
 -   Utilisateur de base de données  
   
@@ -110,7 +110,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON
 >  Une révocation en cascade d'une autorisation accordée avec l'option WITH GRANT OPTION entraîne la révocation des deux options GRANT et DENY de cette autorisation.  
   
  AS *revoking_principal*  
- Spécifie un principal dont le principal qui exécute cette requête dérive son droit de révoquer l'autorisation. *revoking_principal* peut prendre l’une des opérations suivantes :  
+ Spécifie un principal dont le principal qui exécute cette requête dérive son droit de révoquer l'autorisation. *revoking_principal* peut être l’un des éléments suivants :  
   
 -   Utilisateur de base de données  
   
@@ -128,10 +128,10 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON
   
 -   Utilisateur de base de données mappé à un principal de serveur  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
   
 ## <a name="service-broker-contracts"></a>Contrats Service Broker  
- Un contrat [!INCLUDE[ssSB](../../includes/sssb-md.md)] est un élément sécurisable au niveau base de données, contenu dans la base de données qui est son parent dans la hiérarchie des autorisations. Les autorisations les plus spécifiques et limitées qui peuvent être révoquées sur un [!INCLUDE[ssSB](../../includes/sssb-md.md)] contrat sont répertoriées dans le tableau ci-dessous, ainsi que les autorisations plus générales qui les incluent de manière implicite.  
+ Un contrat [!INCLUDE[ssSB](../../includes/sssb-md.md)] est un élément sécurisable au niveau base de données, contenu dans la base de données qui est son parent dans la hiérarchie des autorisations. Les autorisations les plus spécifiques et limitées qu’il est possible de révoquer pour un contrat [!INCLUDE[ssSB](../../includes/sssb-md.md)] sont répertoriées dans le tableau ci-dessous, avec les autorisations plus générales, qui les incluent naturellement.  
   
 |Autorisation d'un contrat Service Broker|Impliquée par une autorisation d'un contrat Service Broker|Impliquée par une autorisation de base de données|  
 |----------------------------------------|---------------------------------------------------|------------------------------------|  
@@ -163,7 +163,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON
 |VIEW DEFINITION|CONTROL|VIEW DEFINITION|  
   
 ## <a name="service-broker-routes"></a>Itinéraires Service Broker  
- Un itinéraire [!INCLUDE[ssSB](../../includes/sssb-md.md)] est un élément sécurisable du niveau base de données, contenu par la base de données qui est son parent dans la hiérarchie des autorisations. Les autorisations les plus spécifiques et limitées qui peuvent être révoquées sur un [!INCLUDE[ssSB](../../includes/sssb-md.md)] itinéraire sont répertoriées dans le tableau ci-dessous, ainsi que les autorisations plus générales qui les incluent de manière implicite.  
+ Un itinéraire [!INCLUDE[ssSB](../../includes/sssb-md.md)] est un élément sécurisable du niveau base de données, contenu par la base de données qui est son parent dans la hiérarchie des autorisations. Les autorisations les plus spécifiques et limitées qu’il est possible de révoquer pour un itinéraire [!INCLUDE[ssSB](../../includes/sssb-md.md)] sont répertoriées dans le tableau ci-dessous, avec les autorisations plus générales, qui les incluent naturellement.  
   
 |Autorisation d'un itinéraire Service Broker|Impliquée par une autorisation d'un itinéraire Service Broker|Impliquée par une autorisation de base de données|  
 |-------------------------------------|------------------------------------------------|------------------------------------|  
@@ -173,7 +173,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON
 |VIEW DEFINITION|CONTROL|VIEW DEFINITION|  
   
 ### <a name="service-broker-services"></a>Services Service Broker  
- Un service [!INCLUDE[ssSB](../../includes/sssb-md.md)] est un élément sécurisable du niveau base de données, contenu par la base de données qui est son parent dans la hiérarchie des autorisations. Les autorisations les plus spécifiques et limitées qui peuvent être révoquées sur un [!INCLUDE[ssSB](../../includes/sssb-md.md)] service sont répertoriés dans le tableau ci-dessous, ainsi que les autorisations plus générales qui les incluent de manière implicite.  
+ Un service [!INCLUDE[ssSB](../../includes/sssb-md.md)] est un élément sécurisable du niveau base de données, contenu par la base de données qui est son parent dans la hiérarchie des autorisations. Les autorisations les plus spécifiques et limitées qu’il est possible de révoquer pour un service [!INCLUDE[ssSB](../../includes/sssb-md.md)] sont répertoriées dans le tableau ci-dessous, avec les autorisations plus générales, qui les incluent naturellement.  
   
 |Autorisation d'un service Service Broker|Impliquée par une autorisation d'un service Service Broker|Impliquée par une autorisation de base de données|  
 |---------------------------------------|--------------------------------------------------|------------------------------------|  
@@ -186,9 +186,9 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON
 ## <a name="permissions"></a>Autorisations  
  Nécessite des autorisations CONTROL sur le contrat, le type de message, la liaison de service distant, l'itinéraire ou le service [!INCLUDE[ssSB](../../includes/sssb-md.md)].  
   
-## <a name="see-also"></a>Voir aussi  
- [Autorisations GRANT Service Broker &#40; Transact-SQL &#41;](../../t-sql/statements/grant-service-broker-permissions-transact-sql.md)   
- [REFUSER des autorisations au Service Broker &#40; Transact-SQL &#41;](../../t-sql/statements/deny-service-broker-permissions-transact-sql.md)   
+## <a name="see-also"></a> Voir aussi  
+ [Autorisations GRANT dans Service Broker &#40;Transact-SQL&#41;](../../t-sql/statements/grant-service-broker-permissions-transact-sql.md)   
+ [Autorisations DENY dans Service Broker &#40;Transact-SQL&#41;](../../t-sql/statements/deny-service-broker-permissions-transact-sql.md)   
  [GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md)   
  [Autorisations &#40;moteur de base de données&#41;](../../relational-databases/security/permissions-database-engine.md)   
  [Principaux &#40;moteur de base de données&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)  

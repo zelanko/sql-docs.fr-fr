@@ -1,5 +1,5 @@
 ---
-title: SET ARITHABORT (Transact-SQL) | Documents Microsoft
+title: SET ARITHABORT (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 12/04/2017
 ms.prod: sql-non-specified
@@ -61,8 +61,8 @@ SET ARITHABORT { ON | OFF }
 SET ARITHABORT ON
 ```
   
-## <a name="remarks"></a>Notes  
- ARITHABORT doit toujours avoir la valeur ON dans vos sessions de connexion. Paramètre ARITHABORT OFF peut avoir des effets négatifs l’optimisation des requêtes impact conduisant à des problèmes de performances.  
+## <a name="remarks"></a>Notes   
+ ARITHABORT doit toujours avoir la valeur ON dans vos sessions de connexion. L’affectation de la valeur OFF à ARITHABORT peut impacter l’optimisation des requêtes et entraîner des problèmes de performances.  
   
 > [!WARNING]  
 >  Le paramètre ARITHABORT par défaut pour [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] est ON. Les applications clientes qui configurent ARITHABORT sur OFF peuvent recevoir des plans de requête différents, ce qui complique la résolution des celles dont les performances sont médiocres. Autrement dit, la même requête peut s'exécuter rapidement dans Management Studio, mais lentement dans l'application. Pour résoudre les requêtes avec [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] utilisez toujours le paramètre ARITHABORT du client.  
@@ -82,13 +82,13 @@ SET ARITHABORT ON
   
  Si la valeur de SET ARITHABORT ou de SET ARITHIGNORE est définie à OFF et que SET ANSI_WARNINGS a la valeur ON, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] renvoie malgré tout un message d'erreur quand il rencontre une erreur de division par zéro ou de dépassement de capacité.  
   
- Si SET ARITHABORT est définie sur OFF et une erreur d’abandon se produit lors de l’évaluation de la condition booléenne d’une instruction IF, la branche FALSE est exécutée.
+ Si SET ARITHABORT est défini à OFF et qu’une erreur d’abandon se produit pendant l’évaluation de la condition booléenne d’une instruction IF, la branche FALSE est exécutée.
   
  L'option SET ARITHABORT doit être activée (valeur ON) lorsque vous créez ou que vous modifiez des index dans des colonnes calculées ou des vues indexées. Si SET ARITHABORT est désactivée (OFF), les instructions CREATE, UPDATE, INSERT et DELETE appliquées à des tables comportant des index sur des colonnes calculées ou des vues indexées échouent.
   
  L'option SET ARITHABORT est appliquée lors de l'exécution, et non pas lors de l'analyse.  
   
- Pour afficher la valeur actuelle de ce paramètre, exécutez la requête suivante :
+ Pour afficher la valeur actuelle de ce paramètre, exécutez la requête suivante :
   
 ```  
 DECLARE @ARITHABORT VARCHAR(3) = 'OFF';  
@@ -97,7 +97,7 @@ SELECT @ARITHABORT AS ARITHABORT;
   
 ```  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l'appartenance au rôle **public** .  
   
 ## <a name="examples"></a>Exemples  
@@ -196,9 +196,9 @@ DROP TABLE t2;
 GO  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Instructions SET &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)   
- [SET ARITHIGNORE &#40; Transact-SQL &#41;](../../t-sql/statements/set-arithignore-transact-sql.md)   
- [SESSIONPROPERTY &#40; Transact-SQL &#41;](../../t-sql/functions/sessionproperty-transact-sql.md)  
+ [SET ARITHIGNORE &#40;Transact-SQL&#41;](../../t-sql/statements/set-arithignore-transact-sql.md)   
+ [SESSIONPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/sessionproperty-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: "RÉVOQUER des autorisations de recherche en texte intégral (Transact-SQL) | Documents Microsoft"
+title: "REVOKE - Autorisations relatives au texte intégral (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 07/26/2017
 ms.prod: sql-non-specified
@@ -63,11 +63,11 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON
  *permission*  
  Nom d'une autorisation. Les mappages valides des autorisations des éléments sécurisables sont décrits dans la section « Notes », plus loin dans cette rubrique.  
   
- DANS le catalogue de texte intégral **:: *** intégral-text_catalog_name*  
- Indique le catalogue de texte intégral pour lequel l'autorisation est révoquée. Le qualificateur d’étendue **::** est requis.  
+ ON FULLTEXT CATALOG **::***full-text_catalog_name*  
+ Indique le catalogue de texte intégral pour lequel l'autorisation est révoquée. Le qualificateur d’étendue **::** est obligatoire.  
   
  ON FULLTEXT STOPLIST **::***full-text_stoplist_name*  
- Indique la liste de mots vides de texte intégral pour laquelle l'autorisation est révoquée. Le qualificateur d’étendue **::** est requis.  
+ Indique la liste de mots vides de texte intégral pour laquelle l'autorisation est révoquée. Le qualificateur d’étendue **::** est obligatoire.  
   
  *database_principal*  
  Spécifie le principal pour lequel l'autorisation est révoquée. Il peut s'agir :  
@@ -113,7 +113,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON
   
 -   d'un utilisateur de base de données qui n'est pas mappé sur le principal d'un serveur.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
   
 ## <a name="fulltext-catalog-permissions"></a>Autorisations FULLTEXT CATALOG  
  Un catalogue de texte intégral est un élément sécurisable au niveau base de données contenu dans la base de données parente dans la hiérarchie des autorisations. Les autorisations les plus spécifiques et limitées qu'il est possible de révoquer pour un catalogue de texte intégral sont répertoriées dans le tableau ci-dessous, avec les autorisations plus générales qui les incluent de manière implicite.  
@@ -140,15 +140,15 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON
 ## <a name="permissions"></a>Autorisations  
  Nécessite l'autorisation CONTROL sur le catalogue de texte intégral.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [CREATE APPLICATION ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-application-role-transact-sql.md)   
  [CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-asymmetric-key-transact-sql.md)   
  [CREATE CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/create-certificate-transact-sql.md)   
- [CRÉER le catalogue de texte intégral &#40; Transact-SQL &#41;](../../t-sql/statements/create-fulltext-catalog-transact-sql.md)   
- [CRÉER une liste de mots vides de texte intégral &#40; Transact-SQL &#41;](../../t-sql/statements/create-fulltext-stoplist-transact-sql.md)   
+ [CREATE FULLTEXT CATALOG &#40;Transact-SQL&#41;](../../t-sql/statements/create-fulltext-catalog-transact-sql.md)   
+ [CREATE FULLTEXT STOPLIST &#40;Transact-SQL&#41;](../../t-sql/statements/create-fulltext-stoplist-transact-sql.md)   
  [Hiérarchie de chiffrement](../../relational-databases/security/encryption/encryption-hierarchy.md)   
  [sys.fn_my_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-my-permissions-transact-sql.md)   
- [Les autorisations GRANT recherche en texte intégral &#40; Transact-SQL &#41;](../../t-sql/statements/grant-full-text-permissions-transact-sql.md)   
+ [GRANT - Autorisations relatives au texte intégral &#40;Transact-SQL&#41;](../../t-sql/statements/grant-full-text-permissions-transact-sql.md)   
  [HAS_PERMS_BY_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/has-perms-by-name-transact-sql.md)   
  [Autorisations &#40;moteur de base de données&#41;](../../relational-databases/security/permissions-database-engine.md)   
  [Principaux &#40;moteur de base de données&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   

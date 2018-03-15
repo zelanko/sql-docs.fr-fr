@@ -1,5 +1,5 @@
 ---
-title: SAVE TRANSACTION (Transact-SQL) | Documents Microsoft
+title: BEGIN TRANSACTION (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -56,13 +56,13 @@ SAVE { TRAN | TRANSACTION } { savepoint_name | @savepoint_variable }
   
 ## <a name="arguments"></a>Arguments  
  *savepoint_name*  
- Nom affecté au point de sauvegarde. Les noms des points de sauvegarde doivent respecter les règles d'appellation des identificateurs, à la différence que leur nom est limité à 32 caractères. *savepoint_name* est toujours la casse, même lorsque l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne respecte pas la casse.  
+ Nom affecté au point de sauvegarde. Les noms des points de sauvegarde doivent respecter les règles d'appellation des identificateurs, à la différence que leur nom est limité à 32 caractères. *savepoint_name* respecte toujours la casse, même si l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] n’en tient pas compte.  
   
  @*savepoint_variable*  
- Nom d'une variable définie par l'utilisateur et contenant un nom de point de sauvegarde valide. La variable doit être déclarée avec un **char**, **varchar**, **nchar**, ou **nvarchar** type de données. Plus de 32 caractères peuvent être passés à la variable, mais seuls les 32 premiers peuvent être utilisés.  
+ Nom d'une variable définie par l'utilisateur et contenant un nom de point de sauvegarde valide. La variable doit être déclarée avec un type de données **char**, **varchar**, **nchar** ou **nvarchar**. Plus de 32 caractères peuvent être passés à la variable, mais seuls les 32 premiers peuvent être utilisés.  
   
-## <a name="remarks"></a>Notes  
- L'utilisateur peut placer un point de sauvegarde, ou marqueur, à l'intérieur d'une transaction. Le point de sauvegarde définit un emplacement auquel une transaction peut revenir si une partie de celle-ci est annulée par une condition. Si une transaction est restaurée à un point de sauvegarde, elle doit soit se poursuivre jusqu'à son exécution complète (avec davantage d'instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] si nécessaire et une instruction COMMIT TRANSACTION), soit être restaurée entièrement (à partir du début). Pour annuler une transaction entière, utilisez la syntaxe ROLLBACK TRANSACTION *argument*. Toutes les instructions ou procédures de la transaction sont ainsi annulées.  
+## <a name="remarks"></a>Notes   
+ L'utilisateur peut placer un point de sauvegarde, ou marqueur, à l'intérieur d'une transaction. Le point de sauvegarde définit un emplacement auquel une transaction peut revenir si une partie de celle-ci est annulée par une condition. Si une transaction est restaurée à un point de sauvegarde, elle doit soit se poursuivre jusqu'à son exécution complète (avec davantage d'instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] si nécessaire et une instruction COMMIT TRANSACTION), soit être restaurée entièrement (à partir du début). Pour annuler toute une transaction, utilisez la syntaxe ROLLBACK TRANSACTION *transaction_name*. Toutes les instructions ou procédures de la transaction sont ainsi annulées.  
   
  Dans une transaction, les noms de point de sauvegarde dupliqués sont autorisés. Toutefois, une instruction ROLLBACK TRANSACTION contenant le nom d'un point de sauvegarde en double n'effectue la restauration que jusqu'à l'instruction SAVE TRANSACTION la plus récente utilisant ce nom.  
   
@@ -167,7 +167,7 @@ AS
 GO  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [BEGIN TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/begin-transaction-transact-sql.md)   
  [COMMIT TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/commit-transaction-transact-sql.md)   
  [COMMIT WORK &#40;Transact-SQL&#41;](../../t-sql/language-elements/commit-work-transact-sql.md)   
@@ -176,7 +176,7 @@ GO
  [ERROR_NUMBER &#40;Transact-SQL&#41;](../../t-sql/functions/error-number-transact-sql.md)   
  [ERROR_PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/functions/error-procedure-transact-sql.md)   
  [ERROR_SEVERITY &#40;Transact-SQL&#41;](../../t-sql/functions/error-severity-transact-sql.md)   
- [ERROR_STATE &#40; Transact-SQL &#41;](../../t-sql/functions/error-state-transact-sql.md)   
+ [ERROR_STATE &#40;Transact-SQL&#41;](../../t-sql/functions/error-state-transact-sql.md)   
  [RAISERROR &#40;Transact-SQL&#41;](../../t-sql/language-elements/raiserror-transact-sql.md)   
  [ROLLBACK TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/rollback-transaction-transact-sql.md)   
  [ROLLBACK WORK &#40;Transact-SQL&#41;](../../t-sql/language-elements/rollback-work-transact-sql.md)   

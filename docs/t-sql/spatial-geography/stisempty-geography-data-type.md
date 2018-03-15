@@ -1,5 +1,5 @@
 ---
-title: "STIsEmpty (Type de données geography) | Documents Microsoft"
+title: "STIsEmpty (type de données geography) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stisempty-geography-data-type"></a>STIsEmpty (type de données geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Retourne 1 si une **geography** instance est vide. Retourne 0 si une **geography** instance n’est pas vide.  
+  Retourne 1 si une instance **geography** est vide. Retourne 0 si une instance **geography** n’est pas vide.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -44,7 +44,7 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>Types de retour  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]type de retour : **bits**  
+ Type de retour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] : **bit**  
   
  Type de retour CLR : **SqlBoolean**  
   
@@ -57,7 +57,7 @@ SET @g = geography::STGeomFromText('POLYGON EMPTY', 4326);
 SELECT @g.STIsEmpty();  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Méthodes OGC sur des instances geography](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
   
   

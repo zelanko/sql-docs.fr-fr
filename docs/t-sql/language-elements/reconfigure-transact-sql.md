@@ -39,7 +39,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="reconfigure-transact-sql"></a>RECONFIGURE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Met à jour la valeur actuellement configurée (la **config_value** colonne dans la **sp_configure** jeu de résultats) d’une option de configuration modifié avec la **sp_configure** procédure stockée système. Certaines options de configuration nécessitant un arrêt du serveur et le redémarrer pour mettre à jour la valeur en cours d’exécution, RECONFIGURE n’actualise pas toujours la valeur en cours d’exécution (la **run_value** colonne dans la **sp_configure** jeu de résultats) pour une valeur de configuration a changé.    
+  Met à jour la valeur actuellement configurée (la colonne **config_value** de l’ensemble de résultats de **sp_configure**) d’une option de configuration modifiée par la procédure stockée système **sp_configure**. Dans la mesure où certaines options de configuration exigent l’arrêt puis le redémarrage du serveur pour que la valeur en cours d’exécution soit mise à jour, RECONFIGURE n’actualise pas toujours cette dernière (colonne **run_value** de l’ensemble de résultats de **sp_configure**) lorsqu’une valeur de configuration est modifiée.    
     
  ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)    
     
@@ -52,22 +52,22 @@ RECONFIGURE [ WITH OVERRIDE ]
     
 ## <a name="arguments"></a>Arguments    
  RECONFIGURE    
- Indique que, si un paramètre de configuration n'exige pas l'arrêt puis le redémarrage du serveur, la valeur en cours d'exécution doit être mise à jour. RECONFIGURE vérifie également que les nouvelles valeurs de configuration de valeurs qui ne sont pas valides (par exemple, une valeur d’ordre de tri qui n’existe pas dans **syscharsets**) ou non recommandées. Dans le cas d'options de configuration n'exigeant pas l'arrêt et le redémarrage du serveur, la valeur en cours d'exécution et les valeurs actuellement configurées de l'option de configuration doivent être identiques après la spécification de RECONFIGURE.    
+ Indique que, si un paramètre de configuration n'exige pas l'arrêt puis le redémarrage du serveur, la valeur en cours d'exécution doit être mise à jour. RECONFIGURE vérifie également que les nouvelles valeurs de configuration ne contiennent pas de valeurs non valides (par exemple une valeur d’ordre de tri qui n’existe pas dans **syscharsets**) ni de valeurs déconseillées. Dans le cas d'options de configuration n'exigeant pas l'arrêt et le redémarrage du serveur, la valeur en cours d'exécution et les valeurs actuellement configurées de l'option de configuration doivent être identiques après la spécification de RECONFIGURE.    
     
  WITH OVERRIDE    
- Désactive la vérification (pour les valeurs qui ne sont pas valides ou déconseillées) pour des valeurs de configuration le **l’intervalle de récupération** option de configuration avancée.    
+ Désactive la vérification des valeurs de configuration (recherche de valeurs non valides ou déconseillées) pour l’option de configuration avancée **recovery interval**.    
     
- Presque toute option de configuration peut être reconfigurée en utilisant l’option WITH OVERRIDE, toutefois certains irrécupérables erreurs ne peuvent pas toujours. Par exemple, le **options min server memory** option de configuration ne peut pas être configurée avec une valeur supérieure à la valeur spécifiée dans le **mémoire maximum du serveur** option de configuration.
+ Presque toute option de configuration peut être reconfigurée en utilisant l’option WITH OVERRIDE, à l’exception toutefois de certaines erreurs irrécupérables. Par exemple, vous ne pouvez pas configurer l’option de configuration **min server memory** avec une valeur supérieure à celle spécifiée dans l’option de configuration **max server memory**.
       
-## <a name="remarks"></a>Notes    
- **sp_configure** n’accepte pas les nouvelles valeurs d’option de configuration en dehors du documentées plages valides pour chaque option de configuration.    
+## <a name="remarks"></a>Notes     
+ **sp_configure** n’accepte pas de nouvelles valeurs n’appartenant pas à la plage des valeurs autorisées pour chaque option de configuration.    
     
  RECONFIGURE n'est pas autorisée dans une transaction explicite ou implicite. Lorsque vous reconfigurez plusieurs options simultanément, si l'une des opérations de reconfiguration échoue, aucune des opérations de reconfiguration ne prend effet.    
     
- Lors de la reconfiguration du gouverneur de ressources, consultez l’option de reconfiguration de [ALTER RESOURCE GOVERNOR &#40; Transact-SQL &#41; ](../../t-sql/statements/alter-resource-governor-transact-sql.md).    
+ Lors de la reconfiguration de Resource Governor, consultez l’option RECONFIGURE de [ALTER RESOURCE GOVERNOR &#40;Transact-SQL&#41;](../../t-sql/statements/alter-resource-governor-transact-sql.md).    
     
 ## <a name="permissions"></a>Autorisations    
- Par défaut, les autorisations RECONFIGURE sont accordées aux personnes qui bénéficient de l'autorisation ALTER SETTINGS. Le **sysadmin** et **serveradmin** rôles serveur fixes détiennent implicitement cette autorisation.    
+ Par défaut, les autorisations RECONFIGURE sont accordées aux personnes qui bénéficient de l'autorisation ALTER SETTINGS. Seuls les rôles serveur fixes **sysadmin** et **serveradmin** détiennent implicitement cette autorisation.    
     
 ## <a name="examples"></a>Exemples    
  L'exemple suivant affecte la valeur `recovery interval` minutes à la limite supérieure de l'option de configuration `75` et utilise `RECONFIGURE WITH OVERRIDE` pour l'installer. Les intervalles de récupération supérieurs à 60 minutes sont déconseillés et désactivés par défaut. Toutefois, étant donné que l'option `WITH OVERRIDE` est spécifiée, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne vérifie pas si la valeur spécifiée (`90`) est valide pour l'option de configuration `recovery interval`.    
@@ -78,8 +78,8 @@ RECONFIGURE WITH OVERRIDE;
 GO    
 ```    
     
-## <a name="see-also"></a>Voir aussi    
- [Options de Configuration de serveur &#40; SQL Server &#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)     
+## <a name="see-also"></a> Voir aussi    
+ [Options de configuration de serveur &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)     
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)    
     
   

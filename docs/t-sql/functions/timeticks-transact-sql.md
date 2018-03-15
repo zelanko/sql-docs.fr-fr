@@ -1,5 +1,5 @@
 ---
-title: '@@TIMETICKS (Transact-SQL) | Documents Microsoft'
+title: '@@TIMETICKS (Transact-SQL) | Microsoft Docs'
 ms.custom: 
 ms.date: 09/18/2017
 ms.prod: sql-non-specified
@@ -35,7 +35,7 @@ ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="x40x40timeticks-transact-sql"></a>& #x 40 ; & #x 40 ; TIMETICKS (Transact-SQL)
+# <a name="x40x40timeticks-transact-sql"></a>&#x40;&#x40;TIMETICKS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Retourne le nombre de microsecondes par cycle.  
@@ -52,7 +52,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="return-types"></a>Types de retour  
  **entier**  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  La durée du cycle d'horloge varie d'un ordinateur à l'autre. Chaque cycle du système d'exploitation est de 31,25 millisecondes (soit un peu plus d'un trentième de seconde).  
   
 ## <a name="examples"></a>Exemples  
@@ -61,7 +61,7 @@ ms.lasthandoff: 11/21/2017
 SELECT @@TIMETICKS AS 'Time Ticks';  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- [Fonctions statistiques système &#40;Transact-SQL&#41;1 ;](../../t-sql/functions/system-statistical-functions-transact-sql.md)  
+## <a name="see-also"></a> Voir aussi  
+ [Fonctions statistiques système &#40;Transact-SQL&#41;](../../t-sql/functions/system-statistical-functions-transact-sql.md)  
   
   

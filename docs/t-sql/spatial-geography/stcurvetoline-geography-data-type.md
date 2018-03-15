@@ -1,5 +1,5 @@
 ---
-title: "STCurveToLine (Type de données geography) | Documents Microsoft"
+title: "STCurveToLine (type de données geography) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stcurvetoline-geography-data-type"></a>STCurveToLine (type de données geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Retourne une approximation polygonale d’une **geography** instance qui contient les segments d’arc de cercle.  
+  Retourne une approximation polygonale d’une instance **geography** contenant des segments d’arc de cercle.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -44,18 +44,18 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>Types de retour  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]type de retour : **geography**  
+ Type de retour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] : **geography**  
   
  Type de retour CLR : **SqlGeography**  
   
-## <a name="remarks"></a>Notes  
- Retourne un **LineString** d’instance pour un **CircularString** ou **CompoundCurve** instance.  
+## <a name="remarks"></a>Notes   
+ Retourne une instance **LineString** pour une instance **CircularString** ou **CompoundCurve**.  
   
- Retourne un **polygone** d’instance pour un **CurvePolygon** instance.  
+ Retourne une instance **Polygon** pour une instance **CurvePolygon**.  
   
- Retourner une copie de **geography** instances qui ne contiennent pas **CircularString**, **CompoundCurve**, ou **CurvePolygon** instances.  
+ Retourne une copie des instances **geography** qui ne contiennent pas d’instances **CircularString**, **CompoundCurve** ou **CurvePolygon**.  
   
- Contrairement à la spécification SQL MM, cette méthode n’utilise pas les valeurs de coordonnée z dans le calcul de l’approximation polygonale. Toutes les valeurs de coordonnée z présent dans l’appel **geography** instance sont ignorés.  
+ Contrairement à la spécification SQL MM, cette méthode n’utilise pas de valeurs de coordonnées z pour calculer l’approximation polygonale. Les valeurs de coordonnées z présentes dans l’instance **geography** appelante sont ignorées.  
   
 ## <a name="examples"></a>Exemples  
  L'exemple suivant retourne une instance `LineString` qui est une approximation polygonale d'une instance `CircularString` :  
@@ -67,9 +67,9 @@ ms.lasthandoff: 01/25/2018
  SELECT @g1.STNumPoints() AS G1, @g2.STNumPoints() AS G2;
  ```  
   
-## <a name="see-also"></a>Voir aussi  
- [STLength &#40; Type de données geography &#41;](../../t-sql/spatial-geography/stlength-geography-data-type.md)   
- [STNumPoints &#40; Type de données geography &#41;](../../t-sql/spatial-geography/stnumpoints-geography-data-type.md)   
+## <a name="see-also"></a> Voir aussi  
+ [STLength &#40;type de données geography&#41;](../../t-sql/spatial-geography/stlength-geography-data-type.md)   
+ [STNumPoints &#40;type de données geography&#41;](../../t-sql/spatial-geography/stnumpoints-geography-data-type.md)   
  [Présentation des types de données spatiales](../../relational-databases/spatial/spatial-data-types-overview.md)  
   
   

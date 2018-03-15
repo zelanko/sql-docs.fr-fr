@@ -1,5 +1,5 @@
 ---
-title: '@@FETCH_STATUS (Transact-SQL) | Documents Microsoft'
+title: '@@FETCH_STATUS (Transact-SQL) | Microsoft Docs'
 ms.custom: 
 ms.date: 09/18/2017
 ms.prod: sql-non-specified
@@ -33,7 +33,7 @@ ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="x40x40fetchstatus-transact-sql"></a>& #x 40 ; & #x 40 ; FETCH_STATUS (Transact-SQL)
+# <a name="x40x40fetchstatus-transact-sql"></a>&#x40;&#x40;FETCH_STATUS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Retourne l'état de la dernière instruction FETCH de curseur effectuée sur n'importe quel curseur actuellement ouvert par la connexion.  
@@ -52,19 +52,19 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="return-value"></a>Valeur retournée  
   
-|Valeur retournée| Description|  
+|Valeur retournée|Description|  
 |------------------|-----------------|  
 |0|L'instruction FETCH a réussi.|  
 |-1|L'instruction FETCH a échoué ou la ligne se situait au-delà du jeu de résultats.|  
 |-2|La ligne recherchée est manquante.|
-|-9|Le curseur n’effectue pas une opération d’extraction.|  
+|-9|Le curseur n’effectue pas d’opération de récupération (fetch).|  
   
-## <a name="remarks"></a>Notes  
- Étant donné que @@FETCH_STATUS est global pour tous les curseurs sur une connexion, utilisez @@FETCH_STATUS avec soin. Après l’exécution d’une instruction FETCH, le test pour @@FETCH_STATUS doit se produire avant l’exécution d’une autre instruction FETCH sur un autre curseur. La valeur de @@FETCH_STATUS n’est pas défini avant les extractions se sont produites sur la connexion.  
+## <a name="remarks"></a>Notes   
+ Étant donné que la variable @@FETCH_STATUS est commune à tous les curseurs d’une connexion, utilisez @@FETCH_STATUS avec précaution. Après l’exécution d’une instruction FETCH, le test pour @@FETCH_STATUS doit avoir lieu avant qu’une autre instruction FETCH ne soit effectuée sur un autre curseur. La valeur de @@FETCH_STATUS n’est pas définie avant l’exécution de recherches sur la connexion.  
   
- Supposons, par exemple, qu'un utilisateur exécute une instruction FETCH sur un curseur, puis appelle une procédure stockée qui ouvre et traite les résultats pour un autre curseur. Lorsque le contrôle est retourné à partir de la procédure stockée appelée, @@FETCH_STATUS reflète la dernière extraction exécutée dans la procédure stockée, pas l’instruction FETCH exécutée avant l’appel de la procédure stockée.  
+ Supposons, par exemple, qu'un utilisateur exécute une instruction FETCH sur un curseur, puis appelle une procédure stockée qui ouvre et traite les résultats pour un autre curseur. Lorsque le contrôle est renvoyé de la procédure stockée, @@FETCH_STATUS prend en compte la dernière instruction FETCH exécutée dans la procédure stockée et non celle qui avait eu lieu avant l’appel de la procédure stockée.  
   
- Pour récupérer le dernier état d’extraction d’un curseur spécifique, interrogez la **fetch_status** colonne de la **sys.dm_exec_cursors** fonction de gestion dynamique.  
+ Pour récupérer le dernier état de récupération (fetch) d’un curseur spécifique, interrogez la colonne **fetch_status** de la fonction de gestion dynamique **sys.dm_exec_cursors**.  
   
 ## <a name="examples"></a>Exemples  
  L'exemple suivant utilise `@@FETCH_STATUS` pour contrôler les activités d'un curseur dans une boucle `WHILE`.  
@@ -84,8 +84,8 @@ DEALLOCATE Employee_Cursor;
 GO  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Fonctions de curseur &#40;Transact-SQL&#41;](../../t-sql/functions/cursor-functions-transact-sql.md)   
- [EXTRACTION &#40; Transact-SQL &#41;](../../t-sql/language-elements/fetch-transact-sql.md)  
+ [FETCH &#40;Transact-SQL&#41;](../../t-sql/language-elements/fetch-transact-sql.md)  
   
   

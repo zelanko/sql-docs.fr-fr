@@ -1,5 +1,5 @@
 ---
-title: uniqueidentifier (Transact-SQL) | Documents Microsoft
+title: uniqueidentifier (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 12/1/2017
 ms.prod: sql-non-specified
@@ -39,22 +39,22 @@ ms.lasthandoff: 01/02/2018
 GUID sur 16 octets.
   
 ## <a name="remarks"></a>Notes   
-Une colonne ou une variable locale de **uniqueidentifier** type de données peut être initialisé à une valeur comme suit :
--   À l’aide de la [NEWID](../../t-sql/functions/newid-transact-sql.md) ou [NEWSEQUENTIALID](../../t-sql/functions/newsequentialid-transact-sql.md) fonctions.    
--   En convertissant à partir d’une constante de chaîne sous la forme *xxxxxxxx*-*xxxx*-*xxxx*-*xxxx*-*xxxxxxxxxxxx*, dans lequel chaque *x* est un chiffre hexadécimal dans la plage 0-9 ou a-f. Par exemple, 6F9619FF-8B86-D011-B42D-00C04FC964FF est valide **uniqueidentifier** valeur.  
+Il existe deux manières d’affecter une valeur initiale à une colonne ou à une variable locale du type de données **uniqueidentifier** :
+-   en utilisant les fonctions [NEWID](../../t-sql/functions/newid-transact-sql.md) ou [NEWSEQUENTIALID](../../t-sql/functions/newsequentialid-transact-sql.md) ;    
+-   en convertissant à partir d’une constante de chaîne de la forme *xxxxxxxx*-*xxxx*-*xxxx*-*xxxx*-*xxxxxxxxxxxx*, où chaque *x* est un chiffre hexadécimal compris dans la plage 0-9 ou a-f. Par exemple, 6F9619FF-8B86-D011-B42D-00C04FC964FF est une valeur **uniqueidentifier** valide.  
   
-Opérateurs de comparaison peuvent être utilisés avec **uniqueidentifier** valeurs. Toutefois, le classement n'est pas effectué par la comparaison des configurations binaires des deux valeurs. Les seules opérations qui peuvent être effectuées par rapport à un **uniqueidentifier** valeur sont les comparaisons (=, <>, \<, >, \<=, > =) et la vérification de la valeur NULL (IS NULL et IS NOT NULL). Aucun autre opérateur arithmétique n'est admis. Toutes les contraintes de colonne et les propriétés, à l’exception d’identité, peuvent être utilisées sur le **uniqueidentifier** type de données.
+Des opérateurs de comparaison peuvent être utilisés avec des valeurs **uniqueidentifier**. Toutefois, le classement n'est pas effectué par la comparaison des configurations binaires des deux valeurs. Les seules opérations que vous êtes autorisé à effectuer sur une valeur **uniqueidentifier** sont les comparaisons (=, <>, \<, >, \<=, >=) et la recherche de valeurs Null (IS NULL et IS NOT NULL). Aucun autre opérateur arithmétique n'est admis. Toutes les propriétés et contraintes de colonnes, à l’exception de la propriété IDENTITY, sont autorisées dans le type de données **uniqueidentifier**.
   
-Réplication de fusion et la réplication transactionnelle avec mise à jour des abonnements utilisation **uniqueidentifier** colonnes afin de garantir que les lignes sont identifiées unique entre plusieurs copies de la table.
+Les réplications de fusion et les réplications transactionnelles possédant des abonnements mis à jour utilisent des colonnes **uniqueidentifier** afin de garantir que les lignes sont identifiées de manière unique au sein des nombreuses copies de la table.
   
 ## <a name="converting-uniqueidentifier-data"></a>Conversion de données uniqueidentifier  
-Le **uniqueidentifier** type est considéré comme un type de caractère dans le cadre de la conversion à partir d’une expression de caractères et est donc soumis aux règles de troncation pour la conversion en un type de caractère. Autrement dit, lorsque des expressions de caractères sont converties en type caractère de taille différente, les valeurs trop longues pour le nouveau type de données sont tronquées. Consultez la section exemples.
+Le type **uniqueidentifier** est considéré comme un type caractère pour les besoins de la conversion à partir d’une expression de caractères ; il est par conséquent soumis aux règles de troncation pour la conversion en un type caractère. Autrement dit, lorsque des expressions de caractères sont converties en type caractère de taille différente, les valeurs trop longues pour le nouveau type de données sont tronquées. Consultez la section exemples.
   
 ## <a name="limitations-and-restrictions"></a>Limitations et restrictions
 
-Ces outils et fonctionnalités ne prennent pas en charge la `uniqueidentifier` type de données :
+Les outils et fonctionnalités ci-dessous ne prennent pas en charge le type de données `uniqueidentifier` :
 - PolyBase
-- [outil de chargement de dwloader](https://msdn.microsoft.com/sql/analytics-platform-system/dwloader) pour Parallel Data Warehouse
+- [Outil de chargement dwloader](https://msdn.microsoft.com/sql/analytics-platform-system/dwloader) pour Parallel Data Warehouse
 
 ## <a name="examples"></a>Exemples  
 L'exemple suivant convertit une valeur `uniqueidentifier` en type de données `char`.
@@ -64,7 +64,7 @@ DECLARE @myid uniqueidentifier = NEWID();
 SELECT CONVERT(char(255), @myid) AS 'char';  
 ```  
   
-L'exemple suivant illustre la troncation des données lorsque la valeur est trop longue pour le type de données vers lequel la conversion est effectuée. Étant donné que la **uniqueidentifier** type est limité à 36 caractères, les caractères qui dépassent cette longueur sont tronqués.
+L'exemple suivant illustre la troncation des données lorsque la valeur est trop longue pour le type de données vers lequel la conversion est effectuée. Étant donné que le type **uniqueidentifier** est limité à 36 caractères, les caractères qui dépassent cette longueur sont tronqués.
   
 ```sql
 DECLARE @ID nvarchar(max) = N'0E984725-C51C-4BF4-9960-E1C80E27ABA0wrong';  
@@ -87,8 +87,8 @@ String                                       TruncatedValue
 [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)  
 [Types de données &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)  
 [DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)  
-[NEWID &#40; Transact-SQL &#41;](../../t-sql/functions/newid-transact-sql.md)  
-[NEWSEQUENTIALID &#40; Transact-SQL &#41;](../../t-sql/functions/newsequentialid-transact-sql.md)    
+[NEWID &#40;Transact-SQL&#41;](../../t-sql/functions/newid-transact-sql.md)  
+[NEWSEQUENTIALID &#40;Transact-SQL&#41;](../../t-sql/functions/newsequentialid-transact-sql.md)    
 [SET @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/set-local-variable-transact-sql.md)  
 [Updatable Subscriptions for Transactional Replication](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)
   

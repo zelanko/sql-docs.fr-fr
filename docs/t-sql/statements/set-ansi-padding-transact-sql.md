@@ -1,5 +1,5 @@
 ---
-title: SET ANSI_PADDING (Transact-SQL) | Documents Microsoft
+title: SET ANSI_PADDING (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 12/04/2017
 ms.prod: sql-non-specified
@@ -58,29 +58,29 @@ SET ANSI_PADDING { ON | OFF }
 SET ANSI_PADDING ON
 ```
 
-## <a name="remarks"></a>Notes  
- Colonnes définies avec **char**, **varchar**, **binaire**, et **varbinary** des types de données ont une taille définie.  
+## <a name="remarks"></a>Notes   
+ Les colonnes définies avec les types de données **char**, **varchar**, **binaire** et **varbinary** ont une taille définie.  
   
  Cette valeur affecte uniquement la définition de nouvelles colonnes. Une fois la colonne créée, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stocke les valeurs en fonction du paramètre en vigueur lors de la création de la colonne. Les colonnes existantes ne sont pas affectées par toute modification ultérieure du paramètre.  
   
 > [!NOTE]  
 >  Il est recommandé que l'option SET ANSI_PADDING soit toujours activée (ON).  
   
- Le tableau suivant montre les effets de la valeur de SET ANSI_PADDING lorsque les valeurs sont insérées dans des colonnes avec **char**, **varchar**, **binaire**, et **varbinary** des types de données.  
+ Le tableau suivant montre les effets de l’option SET ANSI_PADDING quand des valeurs comportant des types de données **char**, **varchar**, **binary** et **varbinary** sont insérées dans des colonnes.  
   
-|Paramètre|char (*n*) non NULL ou binary (*n*) non NULL|char (*n*) NULL ou binary (*n*) NULL|varchar (*n*) ou varbinary (*n*)|  
+|Paramètre|char(*n*) NOT NULL ou binary(*n*) NOT NULL|char(*n*) NULL ou binary(*n*) NULL|varchar(*n*) ou varbinary(*n*)|  
 |-------------|----------------------------------------------------|--------------------------------------------|----------------------------------------|  
-|ON|Valeur d’origine de remplissage (avec les espaces à droite pour **char** colonnes et avec des zéros pour **binaire** colonnes) à la longueur de la colonne.|Suit les mêmes règles que pour **char (***n***)** ou **binaire (***n***)** NOT NULL lorsque l’option SET ANSI_PADDING est activée.|Les espaces à droite des valeurs de type character insérées dans **varchar** colonnes ne sont pas tronqués. Zéros à droite dans les valeurs binaires insérées dans **varbinary** colonnes ne sont pas tronqués. Les valeurs ne sont pas complétées à concurrence de la longueur de la colonne.|  
-|OFF|Valeur d’origine de remplissage (avec les espaces à droite pour **char** colonnes et avec des zéros pour **binaire** colonnes) à la longueur de la colonne.|Suit les mêmes règles que pour **varchar** ou **varbinary** lorsque SET ANSI_PADDING est désactivé.|Les espaces à droite des valeurs de type character insérées dans un **varchar** colonne sont tronqués. Zéros à droite dans les valeurs binaires insérées dans un **varbinary** colonne sont tronqués.|  
+|ON|Complète la valeur d’origine (avec des espaces à droite pour les colonnes de type **char** et des zéros à droite pour les colonnes de type **binary**), à concurrence de la longueur de la colonne.|Suit les mêmes règles que pour **char(***n***)** or **binary(***n***)** NOT NULL quand l’option SET ANSI_PADDING est ON.|Les espaces à droite figurant dans les valeurs de type character insérées dans des colonnes **varchar** ne sont pas tronqués. Les zéros à droite figurant dans les valeurs de type binary insérées dans des colonnes **varbinary** ne sont pas tronqués. Les valeurs ne sont pas complétées à concurrence de la longueur de la colonne.|  
+|OFF|Complète la valeur d’origine (avec des espaces à droite pour les colonnes de type **char** et des zéros à droite pour les colonnes de type **binary**), à concurrence de la longueur de la colonne.|Suit les mêmes règles que pour **varchar** ou **varbinary** quand SET ANSI_PADDING est OFF.|Les espaces à droite dans les valeurs de type character insérées dans les colonnes **varchar** sont tronqués. Les zéros à droite dans les valeurs de type binary insérées dans les colonnes **varbinary** sont tronqués.|  
   
 > [!NOTE]  
->  Lorsque complétées, **char** les colonnes sont complétées par des espaces, et **binaire** colonnes sont complétées avec des zéros. Lorsqu’il est tronqué, **char** colonnes ont des espaces de fin tronqués, et **binaire** colonnes ont les zéros à droite.  
+>  Quand les colonnes sont complétées, celles de type **char** le sont avec des espaces, et celles de type **binary** le sont avec des zéros. Quand les colonnes sont tronquées, celles de type **char** perdent les espaces à droite, tandis que celles de type **binary** perdent les zéros à droite.  
   
- SET ANSI_PADDING doit être activée (valeur ON) lors de la création ou de la modification d'index dans des colonnes calculées ou des vues indexées. Pour plus d’informations sur les paramètres des options SET requises avec les vues indexées et des index sur des colonnes calculées, consultez « Considérations lorsque vous utilisez des instructions SET » dans [instructions SET &#40; Transact-SQL &#41; ](../../t-sql/statements/set-statements-transact-sql.md).  
+ SET ANSI_PADDING doit être activée (valeur ON) lors de la création ou de la modification d'index dans des colonnes calculées ou des vues indexées. Pour plus d’informations sur les paramètres de l’option SET obligatoire avec les vues indexées et les index sur des colonnes calculées, consultez « Remarques sur l’utilisation des instructions SET » dans [Instructions SET &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md).  
   
- La valeur par défaut de SET ANSI_PADDING est ON. Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pilote ODBC Native Client et [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournisseur Native Client OLE DB pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] automatiquement de set ANSI_PADDING ON lors de la connexion. Cette option peut être configurée dans les sources de données et les attributs de connexion ODBC, ou encore dans les propriétés de connexion OLE DB définies dans l'application avant la connexion. Dans le cas d'applications DB-Library, SET ANSI_PADDING prend par défaut la valeur OFF.  
+ La valeur par défaut de SET ANSI_PADDING est ON. Le pilote ODBC [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client et le fournisseur OLE DB [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] affectent automatiquement la valeur ON à ANSI_PADDING lors de la connexion. Cette option peut être configurée dans les sources de données et les attributs de connexion ODBC, ou encore dans les propriétés de connexion OLE DB définies dans l'application avant la connexion. Dans le cas d'applications DB-Library, SET ANSI_PADDING prend par défaut la valeur OFF.  
   
- La valeur de SET ANSI_PADDING n’affecte pas la **nchar**, **nvarchar**, **ntext**, **texte**, **image**, **varbinary (max)**, **varchar (max)**, et **nvarchar (max)** des types de données. Le comportement par défaut est toujours celui de l'option SET ANSI_PADDING ON. Les espaces et les zéros à droite ne sont donc pas tronqués.  
+ La valeur de SET ANSI_PADDING n’affecte pas les types de données **nchar**, **nvarchar**, **ntext**, **text**, **image**, **varbinary(max)**, **varchar(max)** et **nvarchar(max)**. Le comportement par défaut est toujours celui de l'option SET ANSI_PADDING ON. Les espaces et les zéros à droite ne sont donc pas tronqués.  
   
  Lorsque SET ANSI_DEFAULTS a la valeur ON, l'option SET ANSI_PADDING est activée.  
   
@@ -95,7 +95,7 @@ SELECT @ANSI_PADDING AS ANSI_PADDING;
   
 ```  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l'appartenance au rôle public.  
   
 ## <a name="examples"></a>Exemples  
@@ -142,11 +142,11 @@ DROP TABLE t1;
 DROP TABLE t2;  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Instructions SET &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)   
- [SESSIONPROPERTY &#40; Transact-SQL &#41;](../../t-sql/functions/sessionproperty-transact-sql.md)   
+ [SESSIONPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/sessionproperty-transact-sql.md)   
  [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
  [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
- [SET ANSI_DEFAULTS &#40; Transact-SQL &#41;](../../t-sql/statements/set-ansi-defaults-transact-sql.md)  
+ [SET ANSI_DEFAULTS &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-defaults-transact-sql.md)  
   
   

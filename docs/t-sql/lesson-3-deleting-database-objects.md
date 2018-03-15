@@ -1,5 +1,5 @@
 ---
-title: "Leçon 3 : Suppression des objets de base de données | Documents Microsoft"
+title: "Leçon 3 : Suppression des objets de base de données | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -29,14 +29,14 @@ ms.contentlocale: fr-FR
 ms.lasthandoff: 11/21/2017
 ---
 # <a name="lesson-3-deleting-database-objects"></a>Leçon 3 : Suppression des objets de base de données
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]Cette brève leçon supprime les objets que vous créé dans la leçon 1 et 2 et supprime la base de données.  
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)] Cette brève leçon vous permet de supprimer les objets créés au cours des leçons 1 et 2, puis de supprimer la base de données.  
   
 Cette leçon contient une rubrique :  
   
--   [Deleting Database Objects](../t-sql/lesson-3-1-deleting-database-objects.md)  
+-   [Suppression des objets de base de données](../t-sql/lesson-3-1-deleting-database-objects.md)  
   
 ## <a name="next-task-in-lesson"></a>Tâche suivante de la leçon  
-[Deleting Database Objects](../t-sql/lesson-3-1-deleting-database-objects.md)  
+[Suppression des objets de base de données](../t-sql/lesson-3-1-deleting-database-objects.md)  
   
   
   

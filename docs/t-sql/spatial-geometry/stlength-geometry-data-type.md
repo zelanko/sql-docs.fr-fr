@@ -1,5 +1,5 @@
 ---
-title: "STLength (Type de données geometry) | Documents Microsoft"
+title: "STLength (type de données geometry) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stlength-geometry-data-type"></a>STLength (type de données geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Retourne la longueur totale des éléments dans un **geometry** instance.
+Retourne la longueur totale des éléments d’une instance **geometry**.
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -44,12 +44,12 @@ Retourne la longueur totale des éléments dans un **geometry** instance.
 ```  
   
 ## <a name="return-types"></a>Types de retour  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]type de retour : **float**  
+ Type de retour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] : **float**  
   
  Type de retour CLR : **SqlDouble**  
   
-## <a name="remarks"></a>Notes  
- Si un **geometry** instance est fermée, sa longueur est calculée comme la longueur totale autour de l’instance ; la longueur de tout polygone est son périmètre et la longueur d’un point est 0. La longueur d’une **geometrycollection** type est la somme des longueurs de ses **geometry** instances.  
+## <a name="remarks"></a>Notes   
+ Si une instance **geometry** est fermée, sa longueur est calculée en tant que longueur totale autour de l’instance ; la longueur d’un polygone correspond à son périmètre et la longueur d’un point est 0. La longueur d’un type **geometrycollection** correspond à la somme des longueurs des instances **geometry** qu’il contient.  
   
  STLength () fonctionne sur LineStrings valide et non valide. Généralement, un LineString n'est pas valide à cause du chevauchement des segments, qui peut être provoqué par des anomalies telles que des traces de longitude GPS inexactes. STLength () ne supprime pas les segments chevauchés ou non valides. Il les inclut dans la valeur de longueur retournée. La méthode MakeValid () peut supprimer les segments chevauchés d'un LineString.  
   
@@ -62,7 +62,7 @@ SET @g = geometry::STGeomFromText('LINESTRING(0 0, 2 2, 1 0)', 0);
 SELECT @g.STLength();  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Méthodes OGC sur des instances geography](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   
   

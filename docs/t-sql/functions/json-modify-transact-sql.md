@@ -1,5 +1,5 @@
 ---
-title: JSON_MODIFY (Transact-SQL) | Documents Microsoft
+title: JSON_MODIFY (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/02/2016
 ms.prod: sql-non-specified
@@ -27,7 +27,7 @@ ms.lasthandoff: 11/17/2017
 # <a name="jsonmodify-transact-sql"></a>JSON_MODIFY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  Met à jour la valeur d’une propriété dans une chaîne JSON et retourne la chaîne JSON mise à jour.  
+  Met à jour la valeur d’une propriété dans une chaîne JSON et renvoie la chaîne JSON mise à jour.  
   
  ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -39,61 +39,61 @@ JSON_MODIFY ( expression , path , newValue )
   
 ## <a name="arguments"></a>Arguments  
  *expression*  
- Expression. En règle générale, le nom d’une variable ou une colonne qui contient le texte JSON.  
+ Expression. En règle générale, nom d’une variable ou d’une colonne qui contient du texte JSON.  
   
- **JSON_MODIFY** renvoie une erreur si *expression* ne contient pas un JSON valide.  
+ **JSON_MODIFY** renvoie une erreur si *expression* ne contient pas de JSON valide.  
   
- *chemin d’accès*  
- Une expression de chemin JSON qui spécifie la propriété à mettre à jour.
+ *path*  
+ Expression de chemin JSON qui spécifie la propriété à mettre à jour.
 
- *chemin d’accès* présente la syntaxe suivante :  
+ La syntaxe de *path* est la suivante :  
   
  `[append] [ lax | strict ] $.<json path>`  
   
--   *ajouter*  
-    Modificateur facultatif qui spécifie que la nouvelle valeur doit être ajoutée au tableau référencé par  *\<chemin json >*.  
+-   *append*  
+    Modificateur facultatif qui spécifie que la nouvelle valeur doit être ajoutée au tableau référencé par *\<json path>*.  
   
 -   *lax*  
-    Spécifie que la propriété référencée par  *\<chemin json >* ne doit pas nécessairement exister. Si la propriété n’est pas présente, JSON_MODIFY tente d’insérer la nouvelle valeur du chemin d’accès spécifié. Insertion peut échouer si la propriété ne peut pas être insérée sur le chemin d’accès. Si vous ne spécifiez pas *lax* ou *strict*, *lax* est le mode par défaut.  
+    Spécifie que la propriété référencée par *\<json path>* ne doit pas nécessairement exister. Si la propriété n’est pas présente, JSON_MODIFY tente d’insérer la nouvelle valeur dans le chemin spécifié. L’insertion peut échouer si la propriété ne peut pas être insérée dans le chemin. Si vous ne spécifiez pas *lax* ou *strict*, *lax* est le mode par défaut.  
   
 -   *strict*  
-    Spécifie que la propriété référencée par  *\<chemin json >* doit être dans l’expression de JSON. Si la propriété n’est pas présente, JSON_MODIFY renvoie une erreur.  
+    Spécifie que la propriété référencée par *\<json path>* doit être dans l’expression JSON. Si la propriété n’est pas présente, JSON_MODIFY renvoie une erreur.  
   
--   *\<chemin d’accès JSON >*  
-    Spécifie le chemin d’accès de la propriété à mettre à jour. Pour plus d’informations, consultez [Expressions de chemin JSON &#40; SQL Server &#41; ](../../relational-databases/json/json-path-expressions-sql-server.md).  
+-   *\<json path>*  
+    Spécifie le chemin de la propriété à mettre à jour. Pour plus d’informations, consultez [Expressions de chemin JSON &#40;SQL Server&#41;](../../relational-databases/json/json-path-expressions-sql-server.md).  
   
-Dans [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] et dans [!INCLUDE[ssSDSfull_md](../../includes/sssdsfull-md.md)], vous pouvez fournir une variable en tant que la valeur de *chemin d’accès*.
+Dans [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] et [!INCLUDE[ssSDSfull_md](../../includes/sssdsfull-md.md)], vous pouvez fournir une variable comme valeur de *path*.
 
-**JSON_MODIFY** renvoie une erreur si le format de *chemin d’accès* n’est pas valide.  
+**JSON_MODIFY** renvoie une erreur si le format de *path* n’est pas valide.  
   
- *nouvelle valeur*  
- La nouvelle valeur de la propriété spécifiée par *chemin d’accès*.  
+ *newValue*  
+ Nouvelle valeur de la propriété spécifiée par *path*.  
   
- En mode de type lax, JSON_MODIFY supprime la clé spécifiée, si la nouvelle valeur est NULL.  
+ En mode lax, JSON_MODIFY supprime la clé spécifiée si la nouvelle valeur est NULL.  
   
-JSON_MODIFY remplace tous les caractères spéciaux dans la nouvelle valeur si le type de la valeur est NVARCHAR ou VARCHAR. Une valeur de texte non échappée s’il est correctement au format JSON produite par FOR JSON, JSON_QUERY ou JSON_MODIFY.  
+JSON_MODIFY échappe tous les caractères spéciaux dans la nouvelle valeur si le type de la valeur est NVARCHAR ou VARCHAR. Une valeur texte n’est pas échappée s’il s’agit de JSON correctement formaté produit par FOR JSON, JSON_QUERY ou JSON_MODIFY.  
   
 ## <a name="return-value"></a>Valeur retournée  
- Retourne la valeur mise à jour de *expression* comme correctement mis en forme de texte JSON.  
+ Retourne la valeur mise à jour de *expression* sous forme de texte JSON correctement formaté.  
   
-## <a name="remarks"></a>Notes  
- La fonction JSON_MODIFY vous permet de mettre à jour la valeur d’une propriété existante, insérez une nouvelle paire clé-valeur ou supprimer une clé basée sur une combinaison de modes et les valeurs fournies.  
+## <a name="remarks"></a>Notes   
+ La fonction JSON_MODIFY vous permet de mettre à jour la valeur d’une propriété existante, d’insérer une nouvelle paire clé-valeur ou de supprimer une clé en fonction d’une combinaison de modes et de valeurs fournies.  
   
- Le tableau suivant compare le comportement de **JSON_MODIFY** en mode de type lax et en mode strict. Pour plus d’informations sur la spécification du mode de chemin d’accès facultatif (lax ou stricte), consultez [Expressions de chemin JSON &#40; SQL Server &#41; ](../../relational-databases/json/json-path-expressions-sql-server.md).  
+ Le tableau suivant compare le comportement de **JSON_MODIFY** en mode lax et en mode strict. Pour plus d’informations sur la spécification du mode de chemin facultatif (lax ou strict), consultez [Expressions de chemin JSON &#40;SQL Server&#41;](../../relational-databases/json/json-path-expressions-sql-server.md).  
   
-|Valeur existante|Chemin d’accès existe|Mode lax|Mode strict|  
+|Valeur existante|Chemin existant|Mode lax|Mode strict|  
 |--------------------|-----------------|--------------|-----------------|  
-|Non NULL|Oui|Mettre à jour la valeur existante.|Mettre à jour la valeur existante.|  
-|Non NULL|Non|Essayez de créer une nouvelle paire clé-valeur sur le chemin d’accès spécifié.<br /><br /> Cette opération peut échouer. Par exemple, si vous spécifiez le chemin d’accès `$.user.setting.theme`, JSON_MODIFY n’insère pas de la clé `theme` si le `$.user` ou `$.user.settings` objets n’existent pas, ou si les paramètres est un tableau ou une valeur scalaire.|Erreur : INVALID_PROPERTY|  
-|NULL|Oui|Supprimer la propriété existante.|Définir la valeur null.|  
-|NULL|Non|Aucune action. Le premier argument est retourné comme résultat.|Erreur : INVALID_PROPERTY|  
+|Non Null|Oui|Mettre à jour la valeur existante.|Mettre à jour la valeur existante.|  
+|Non Null|non|Essayer de créer une paire clé-valeur dans le chemin spécifié.<br /><br /> Échec possible. Par exemple, si vous spécifiez le chemin `$.user.setting.theme`, JSON_MODIFY n’insère pas la clé `theme` si les objets `$.user` ou `$.user.settings` n’existent pas, ou bien si les paramètres sont un tableau ou une valeur scalaire.|Erreur : INVALID_PROPERTY|  
+|NULL|Oui|Supprimer la propriété existante.|Affecter à la valeur existante la valeur Null.|  
+|NULL|non|Aucune action. Le premier argument est retourné en tant que résultat.|Erreur : INVALID_PROPERTY|  
   
- En mode de type lax, JSON_MODIFY tente de créer une nouvelle paire clé-valeur, mais dans certains cas, il peut échouer.  
+ En mode lax, JSON_MODIFY tente de créer une nouvelle paire clé-valeur, mais dans certains cas, cela peut échouer.  
   
 ## <a name="examples"></a>Exemples  
   
 ### <a name="example---basic-operations"></a>Exemple : opérations de base  
- L’exemple suivant montre les opérations de base qui peuvent être faites avec le texte JSON.  
+ L’exemple suivant montre des opérations de base réalisables avec du texte JSON.  
   
  **Requête**  
   
@@ -150,8 +150,8 @@ PRINT @info
 }
 ```  
   
-### <a name="example---multiple-updates"></a>Exemple - plusieurs mises à jour  
- Avec JSON_MODIFY, vous pouvez mettre à jour qu’une seule propriété. Si vous devez effectuer plusieurs mises à jour, vous pouvez utiliser plusieurs appels JSON_MODIFY.  
+### <a name="example---multiple-updates"></a>Exemple : plusieurs mises à jour  
+ Avec JSON_MODIFY, vous pouvez mettre à jour une seule propriété. Si vous devez effectuer plusieurs mises à jour, vous pouvez utiliser plusieurs appels JSON_MODIFY.  
   
  **Requête**  
   
@@ -181,7 +181,7 @@ PRINT @info
 ```  
   
 ### <a name="example---rename-a-key"></a>Exemple : renommer une clé  
- L’exemple suivant montre comment renommer une propriété dans un texte JSON avec la fonction JSON_MODIFY. Tout d’abord, vous pouvez prendre la valeur d’une propriété existante et insérer en tant qu’une nouvelle paire clé-valeur. Vous pouvez supprimer l’ancienne clé en définissant la valeur de l’ancienne propriété NULL.  
+ L’exemple suivant montre comment renommer une propriété dans du texte JSON avec la fonction JSON_MODIFY. Tout d’abord, vous pouvez prendre la valeur d’une propriété existante et l’insérer en tant que nouvelle paire clé-valeur. Ensuite, vous pouvez supprimer l’ancienne clé en affectant à la valeur de l’ancienne propriété la valeur NULL.  
   
  **Requête**  
   
@@ -212,10 +212,10 @@ PRINT @product
 }
 ```  
   
- Si vous n’effectuez un cast de la nouvelle valeur à un type numérique, JSON_MODIFY traite en tant que texte et il entoure avec des guillemets doubles.  
+ Si vous ne castez pas la nouvelle valeur en type numérique, JSON_MODIFY la traite comme du texte et la met entre guillemets doubles.  
   
-### <a name="example---increment-a-value"></a>Exemple : une valeur d’incrément  
- L’exemple suivant montre comment incrémenter la valeur d’une propriété dans un texte JSON avec la fonction JSON_MODIFY. Tout d’abord, vous pouvez prendre la valeur de la propriété existante et insérer en tant qu’une nouvelle paire clé-valeur. Vous pouvez supprimer l’ancienne clé en définissant la valeur de l’ancienne propriété NULL.  
+### <a name="example---increment-a-value"></a>Exemple : incrémenter une valeur  
+ L’exemple suivant montre comment incrémenter la valeur d’une propriété dans du texte JSON avec la fonction JSON_MODIFY. Tout d’abord, vous pouvez prendre la valeur de la propriété existante et l’insérer en tant que nouvelle paire clé-valeur. Ensuite, vous pouvez supprimer l’ancienne clé en affectant à la valeur de l’ancienne propriété la valeur NULL.  
   
  **Requête**  
   
@@ -242,8 +242,8 @@ PRINT @stats
 }
 ```  
   
-### <a name="example---modify-a-json-object"></a>Exemple : modification d’un objet JSON  
- JSON_MODIFY traite le *newValue* argument sous forme de texte brut même si elle contient correctement mis en forme le texte JSON. Par conséquent, la sortie JSON de la fonction est entourée de guillemets doubles et tous les caractères spéciaux sont échappés, comme indiqué dans l’exemple suivant.  
+### <a name="example---modify-a-json-object"></a>Exemple : modifier un objet JSON  
+ JSON_MODIFY traite l’argument *newValue* comme du texte brut même s’il contient du texte JSON correctement formaté. Par conséquent, la sortie JSON de la fonction est mise entre guillemets doubles et tous les caractères spéciaux sont échappés, comme le montre l’exemple suivant.  
   
  **Requête**  
   
@@ -271,7 +271,7 @@ PRINT @info
 }
 ```  
   
- Pour éviter la séquence d’échappement automatique, fournissez *newValue* à l’aide de la fonction JSON_QUERY. JSON_MODIFY sait que la valeur retournée par JSON_MODIFY est correctement au format JSON, donc il n’échappe pas la valeur.  
+ Pour éviter un échappement automatique, fournissez *newValue* en utilisant la fonction JSON_QUERY. JSON_MODIFY sait que la valeur renvoyée par JSON_MODIFY est du JSON correctement formaté, donc la valeur n’est pas échappée.  
   
  **Requête**  
   
@@ -299,8 +299,8 @@ PRINT @info
 }
 ```  
   
-### <a name="example---update-a-json-column"></a>Exemple : mise à jour une colonne JSON  
- L’exemple suivant met à jour la valeur d’une propriété dans une colonne de table qui contient des données JSON.  
+### <a name="example---update-a-json-column"></a>Exemple : mettre à jour une colonne JSON  
+ L’exemple suivant met à jour la valeur d’une propriété dans une colonne de table contenant du texte JSON.  
   
 ```sql  
 UPDATE Employee
@@ -309,8 +309,8 @@ WHERE EmployeeID=17
  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- [Expressions de chemin JSON &#40; SQL Server &#41;](../../relational-databases/json/json-path-expressions-sql-server.md)   
- [Données JSON &#40; SQL Server &#41;](../../relational-databases/json/json-data-sql-server.md)  
+## <a name="see-also"></a> Voir aussi  
+ [Expressions de chemin JSON &#40;SQL Server&#41;](../../relational-databases/json/json-path-expressions-sql-server.md)   
+ [JSON Data &#40;SQL Server&#41;](../../relational-databases/json/json-data-sql-server.md)  
   
   

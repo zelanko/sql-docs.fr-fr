@@ -1,5 +1,5 @@
 ---
-title: "CERTAINS | N’importe quel (Transact-SQL) | Documents Microsoft"
+title: SOME | ANY (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
@@ -55,7 +55,7 @@ scalar_expression { = | < > | ! = | > | > = | ! > | < | < = | ! < }
   
 ## <a name="arguments"></a>Arguments  
  *scalar_expression*  
- Valide [expression](../../t-sql/language-elements/expressions-transact-sql.md).  
+ Toute [expression](../../t-sql/language-elements/expressions-transact-sql.md) valide.  
   
  { = | <> | != | > | >= | !> | < | <= | !< }  
  Tout opérateur de comparaison valide.  
@@ -64,16 +64,16 @@ scalar_expression { = | < > | ! = | > | > = | ! > | < | < = | ! < }
  Spécifie qu'il convient d'effectuer une comparaison.  
   
  *subquery*  
- Sous-requête avec un jeu de résultats d'une colonne. Le type de données de la colonne retournée doit être le même type de données en tant que *scalar_expression*.  
+ Sous-requête avec un jeu de résultats d'une colonne. Le type de données de la colonne renvoyée doit correspondre à celui de *scalar_expression*.  
   
 ## <a name="result-types"></a>Types des résultats  
  **Booléen**  
   
 ## <a name="result-value"></a>Valeur des résultats  
- CERTAINS ou tous les retours **TRUE** lorsque la comparaison spécifiée a la valeur TRUE pour n’importe quelle paire (*scalar_expression***,***x*) où *x* est une valeur dans la jeu de colonnes unique ; Sinon, retourne **FALSE**.  
+ SOME ou ANY retourne la valeur **TRUE** lorsque la comparaison spécifiée a la valeur TRUE pour une paire (*scalar_expression***,***x*) où *x* est une valeur du jeu de valeurs sur une seule colonne ; dans le cas contraire, la valeur **FALSE** est retournée.  
   
-## <a name="remarks"></a>Notes  
- SOME requiert le *scalar_expression* corresponde au moins une valeur retournée par la sous-requête. Pour les instructions qui nécessitent le *scalar_expression* corresponde à toutes les valeurs retournées par la sous-requête, consultez [tous les &#40; Transact-SQL &#41; ](../../t-sql/language-elements/all-transact-sql.md). Par exemple, si la sous-requête retourne les valeurs 2 et 3, *scalar_expression* = SOME (sous-requête) serait équivalente à TRUE pour une *scalar_express* de 2. Si la sous-requête retourne les valeurs 2 et 3, *scalar_expression* = ALL (sous-requête) donne FALSE comme résultat, car certaines valeurs de la sous-requête (la valeur 3) ne répondent pas aux critères de l’expression.  
+## <a name="remarks"></a>Notes   
+ SOME nécessite que *scalar_expression* corresponde à au moins une valeur retournée par la sous-requête. Pour les instructions qui nécessitent que l’argument *scalar_expression* corresponde à toutes les valeurs retournées par la sous-requête, consultez [ALL &#40;Transact-SQL&#41;](../../t-sql/language-elements/all-transact-sql.md). Par exemple, si la sous-requête retourne les valeurs 2 et 3, *scalar_expression* = SOME (sous-requête) prend la valeur TRUE pour une *scalar_expression* égale à 2. Si la sous-requête retourne les valeurs 2 et 3, l’instruction *scalar_expression* = ALL (sous-requête) donne FALSE comme résultat étant donné que certaines des valeurs de la sous-requête (à savoir 3) ne répondent pas aux critères de l’expression.  
   
 ## <a name="examples"></a>Exemples  
   
@@ -109,7 +109,7 @@ PRINT 'FALSE' ;
 ```  
   
 ### <a name="b-running-a-practical-example"></a>B. Exécution d'un exemple pratique  
- L’exemple suivant crée une procédure stockée qui détermine si tous les composants d’un `SalesOrderID` dans les `AdventureWorks2012` base de données peut être fabriqué dans le nombre de jours spécifié. L'exemple utilise une sous-requête pour créer une liste du nombre de `DaysToManufacture` pour tous les composants du `SalesOrderID` spécifié, puis vérifie si parmi les valeurs retournées par la sous-requête certaines sont supérieures au nombre de jours spécifié. Si chaque valeur retournée pour `DaysToManufacture` est inférieure au nombre fourni, la condition a la valeur TRUE et le premier message est imprimé.  
+ L’exemple suivant crée une procédure stockée qui détermine si tous les composants d’un `SalesOrderID` spécifié dans la base de données `AdventureWorks2012` peuvent être fabriqués dans le délai du nombre de jours spécifié. L'exemple utilise une sous-requête pour créer une liste du nombre de `DaysToManufacture` pour tous les composants du `SalesOrderID` spécifié, puis vérifie si parmi les valeurs retournées par la sous-requête certaines sont supérieures au nombre de jours spécifié. Si chaque valeur retournée pour `DaysToManufacture` est inférieure au nombre fourni, la condition a la valeur TRUE et le premier message est imprimé.  
   
 ```  
 -- Uses AdventureWorks  
@@ -131,7 +131,7 @@ PRINT 'All items for this order can be manufactured in the specified number of d
   
 ```  
   
- Pour tester la procédure, exécutez la procédure à l’aide de la `SalesOrderID``49080`, qui a un composant qui nécessite `2` jours et les deux composants qui demandent 0. La première instruction remplit les critères, mais pas la deuxième.  
+ Pour tester la procédure, exécutez-la en utilisant le `SalesOrderID``49080` dont l’un des composants demande `2` jours de fabrication, tandis que les 2 autres en demandent 0. La première instruction remplit les critères, mais pas la deuxième.  
   
 ```  
 EXECUTE ManyDaysToComplete 49080, 2 ;  
@@ -149,11 +149,11 @@ EXECUTE ManyDaysToComplete 49080, 1 ;
   
  `At least one item for this order cannot be manufactured in specified number of days.`  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [ALL &#40;Transact-SQL&#41;](../../t-sql/language-elements/all-transact-sql.md)   
  [CASE &#40;Transact-SQL&#41;](../../t-sql/language-elements/case-transact-sql.md)   
  [Fonctions intégrées &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)   
- [Operators &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
+ [Opérateurs &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [WHERE &#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md)   
  [IN &#40;Transact-SQL&#41;](../../t-sql/language-elements/in-transact-sql.md)  

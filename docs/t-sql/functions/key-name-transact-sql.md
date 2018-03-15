@@ -1,5 +1,5 @@
 ---
-title: KEY_NAME (Transact-SQL) | Documents Microsoft
+title: KEY_NAME (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -46,22 +46,22 @@ KEY_NAME ( ciphertext | key_guid )
 ```  
   
 ## <a name="arguments"></a>Arguments  
- *texte chiffré*  
- Texte chiffré par la clé symétrique. *Dans ce cas* est de type **varbinary (8000)**.  
+ *ciphertext*  
+ Texte chiffré par la clé symétrique. *cyphertext* est de type **varbinary(8000)**.  
   
  *key_guid*  
  GUID de la clé symétrique. *key_guid* est de type **uniqueidentifier**.  
   
 ## <a name="returned-types"></a>Types retournés  
- **varchar (128)**  
+ **varchar(128)**  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  À compter de la version [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], les métadonnées ne sont visibles que pour les éléments sécurisables qu'un utilisateur détient ou pour lesquels des autorisations lui ont été accordées. Pour plus d'informations, consultez [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="examples"></a>Exemples  
   
 ### <a name="a-displaying-the-name-of-a-symmetric-key-using-the-keyguid"></a>A. Affichage du nom d'une clé symétrique à l'aide de key_guid  
- Le **master** base de données contient une clé symétrique nommée ## MS_ServiceMasterKey ##. L'exemple suivant obtient le GUID de cette clé à partir de la vue de gestion dynamique sys.symmetric_keys, l'assigne à une variable, puis passe cette variable à la fonction KEY_NAME pour montrer comment retourner le nom correspondant au GUID.  
+ La base de données **master** contient une clé symétrique nommée ##MS_ServiceMasterKey##. L'exemple suivant obtient le GUID de cette clé à partir de la vue de gestion dynamique sys.symmetric_keys, l'assigne à une variable, puis passe cette variable à la fonction KEY_NAME pour montrer comment retourner le nom correspondant au GUID.  
   
 ```  
 USE master;  
@@ -115,9 +115,9 @@ SELECT KEY_NAME(@ciphertext) AS [Name of Key] ;
   
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- [Sys.symmetric_keys &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-symmetric-keys-transact-sql.md)   
- [ENCRYPTBYKEY &#40; Transact-SQL &#41;](../../t-sql/functions/encryptbykey-transact-sql.md)   
- [DECRYPTBYKEYAUTOASYMKEY &#40; Transact-SQL &#41;](../../t-sql/functions/decryptbykeyautoasymkey-transact-sql.md)  
+## <a name="see-also"></a> Voir aussi  
+ [sys.symmetric_keys &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-symmetric-keys-transact-sql.md)   
+ [ENCRYPTBYKEY &#40;Transact-SQL&#41;](../../t-sql/functions/encryptbykey-transact-sql.md)   
+ [DECRYPTBYKEYAUTOASYMKEY &#40;Transact-SQL&#41;](../../t-sql/functions/decryptbykeyautoasymkey-transact-sql.md)  
   
   

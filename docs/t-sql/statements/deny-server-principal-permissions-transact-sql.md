@@ -1,5 +1,5 @@
 ---
-title: REFUSER des autorisations de serveur Principal (Transact-SQL) | Documents Microsoft
+title: "DENY - Octroyer des autorisations de principal de serveur (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 06/09/2017
 ms.prod: sql-non-specified
@@ -35,7 +35,7 @@ ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="deny-server-principal-permissions-transact-sql"></a>DENY – refus d'autorisations du principal de serveur (Transact-SQL)
+# <a name="deny-server-principal-permissions-transact-sql"></a>DENY - Octroyer des autorisations de principal de serveur (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Permet de refuser des autorisations accordées sur une connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -63,19 +63,19 @@ DENY permission [ ,...n ] }
 ```  
   
 ## <a name="arguments"></a>Arguments  
- *autorisation*  
+ *permission*  
  Spécifie une autorisation qui peut être refusée sur une connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour obtenir la liste des autorisations, consultez la section Notes plus loin dans cette rubrique.  
   
- CONNEXION **::** *SQL_Server_login*  
- Spécifie la connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur laquelle l'autorisation doit être refusée. Le qualificateur d’étendue (**::**) est requis.  
+ LOGIN **::** *SQL_Server_login*  
+ Spécifie la connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur laquelle l'autorisation doit être refusée. Le qualificateur d’étendue (**::**) est obligatoire.  
   
- RÔLE de serveur **::** *server_role*  
- Spécifie le rôle de serveur sur lequel l'autorisation est refusée. Le qualificateur d’étendue (**::**) est requis.  
+ SERVER ROLE **::** *server_role*  
+ Spécifie le rôle de serveur sur lequel l'autorisation est refusée. Le qualificateur d’étendue (**::**) est obligatoire.  
   
- POUR \<principal_de_serveur >  
+ TO \<server_principal>  
  Spécifie le compte de connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou le rôle de serveur pour lequel l'autorisation est accordée.  
   
- POUR *SQL_Server_login*  
+ TO *SQL_Server_login*  
  Spécifie la connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour laquelle l'autorisation doit être refusée.  
   
  *SQL_Server_login*  
@@ -96,15 +96,15 @@ DENY permission [ ,...n ] }
  CASCADE  
  Indique que l'autorisation à refuser est également refusée pour les autres principaux auxquels elle a été accordée par ce principal.  
   
- En tant que *SQL_Server_login*  
+ AS *SQL_Server_login*  
  Spécifie la connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à partir de laquelle le principal qui exécute cette requête dérive son droit de refuser l'autorisation.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Les autorisations dans l'étendue du serveur peuvent être refusées seulement lorsque la base de données en cours est master.  
   
- Pour plus d’informations sur les autorisations de serveur sont disponibles dans le [sys.server_permissions](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md) affichage catalogue. Informations sur les principaux de serveur sont disponibles dans le [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md) vue de catalogue.  
+ Des informations sur les autorisations de serveur sont disponibles dans la vue de catalogue [sys.server_permissions](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md). Des informations sur les principaux de serveur sont disponibles dans la vue de catalogue [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md).  
   
- L’instruction DENY échoue si CASCADE n’est pas spécifié lors du refus d’une autorisation à une entité qui a été accordée cette autorisation avec l’option GRANT OPTION.  
+ L’instruction DENY échoue si l’option CASCADE n’est pas spécifiée lors du refus d’une autorisation pour un principal auquel cette autorisation a été accordée avec l’option GRANT OPTION.  
   
  Les comptes de connexion et les rôles de serveur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sont des éléments sécurisables au niveau du serveur. Les autorisations les plus spécifiques et limitées qu'il est possible de refuser sur un compte de connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou un rôle de serveur sont répertoriées dans le tableau ci-dessous, avec les autorisations plus générales qui les incluent de manière implicite.  
   
@@ -115,7 +115,7 @@ DENY permission [ ,...n ] }
 |VIEW DEFINITION|CONTROL|VIEW ANY DEFINITION|  
 |ALTER|CONTROL|ALTER ANY LOGIN<br /><br /> ALTER ANY SERVER ROLE|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Pour les comptes de connexion, requiert l'autorisation CONTROL sur le compte de connexion ou l'autorisation ALTER ANY LOGIN sur le serveur.  
   
  Pour les rôles de serveur, requiert l'autorisation CONTROL sur le rôle de serveur ou l'autorisation ALTER ANY SERVER ROLE sur le serveur.  
@@ -123,7 +123,7 @@ DENY permission [ ,...n ] }
 ## <a name="examples"></a>Exemples  
   
 ### <a name="a-denying-impersonate-permission-on-a-login"></a>A. Refus d'une autorisation IMPERSONATE sur une connexion  
- L’exemple suivant refuse `IMPERSONATE` l’autorisation sur le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connexion `WanidaBenshoof` à un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connexion créée à partir de l’utilisateur Windows `AdvWorks\YoonM`.  
+ Dans l’exemple ci-dessous, l’autorisation `IMPERSONATE` sur le compte de connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `WanidaBenshoof` est refusée à un compte de connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] créé à partir de l’utilisateur Windows `AdvWorks\YoonM`.  
   
 ```  
 USE master;  
@@ -131,7 +131,7 @@ DENY IMPERSONATE ON LOGIN::WanidaBenshoof TO [AdvWorks\YoonM];
 GO  
 ```  
   
-### <a name="b-denying-view-definition-permission-with-cascade"></a>B. Refuser l’autorisation VIEW DEFINITION avec l’option CASCADE  
+### <a name="b-denying-view-definition-permission-with-cascade"></a>B. Refus d’une autorisation VIEW DEFINITION avec l’option CASCADE  
  Dans l'exemple ci-dessous, l'autorisation `VIEW DEFINITION` sur la connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `EricKurjan` est refusée à la connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `RMeyyappan`. L'option `CASCADE` indique que l'autorisation `VIEW DEFINITION` sur `EricKurjan` sera également refusée aux principaux auxquels `RMeyyappan` a accordé cette autorisation.  
   
 ```  
@@ -150,7 +150,7 @@ DENY VIEW DEFINITION ON SERVER ROLE::Sales TO Auditors ;
 GO   
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [sys.server_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)   
  [sys.server_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md)   
  [Autorisations du principal du serveur GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-server-principal-permissions-transact-sql.md)   

@@ -1,5 +1,5 @@
 ---
-title: ISDATE (Transact-SQL) | Documents Microsoft
+title: ISDATE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -47,11 +47,11 @@ ms.lasthandoff: 11/21/2017
 # <a name="isdate-transact-sql"></a>ISDATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Retourne 1 si le *expression* n’est valide **date**, **temps**, ou **datetime** valeur ; sinon, 0.  
+  Retourne 1 si le paramètre *expression* est une valeur de type **date**, **time** ou **datetime** valide ; sinon, retourne 0.  
   
- ISDATE retourne 0 si le *expression* est un **datetime2** valeur.  
+ ISDATE retourne 0 si le paramètre *expression* est une valeur de type **datetime2**.  
   
- Pour une vue d’ensemble de tous les [!INCLUDE[tsql](../../includes/tsql-md.md)] les types de données date et heure et les fonctions, consultez [Date et fonctions et Types de données &#40; Transact-SQL &#41; ](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md). Notez que la plage de données datetime est comprise entre 1753-01-01 et 9999-12-31, tandis que la plage de données date est comprise entre 0001-01-01 et 9999-12-31.  
+ Pour obtenir une vue d’ensemble de tous les types de données et fonctions de date et d’heure [!INCLUDE[tsql](../../includes/tsql-md.md)], consultez [Types de données et fonctions de date et d’heure &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md). Notez que la plage de données datetime est comprise entre 1753-01-01 et 9999-12-31, tandis que la plage de données date est comprise entre 0001-01-01 et 9999-12-31.  
   
  ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -63,33 +63,33 @@ ISDATE ( expression )
   
 ## <a name="arguments"></a>Arguments  
  *expression*  
- Est une chaîne de caractères ou [expression](../../t-sql/language-elements/expressions-transact-sql.md) qui peut être converti en une chaîne de caractères. L'expression doit comporter moins de 4 000 caractères. Les types de données de date et d'heure, sauf datetime et smalldatetime, ne sont pas autorisés comme argument pour ISDATE.  
+ Chaîne de caractères ou [expression](../../t-sql/language-elements/expressions-transact-sql.md) qui peut être convertie en une chaîne de caractères. L'expression doit comporter moins de 4 000 caractères. Les types de données de date et d'heure, sauf datetime et smalldatetime, ne sont pas autorisés comme argument pour ISDATE.  
   
 ## <a name="return-type"></a>Type de retour  
- **int**  
+ **Int**  
   
-## <a name="remarks"></a>Notes  
- ISDATE est déterministe uniquement si vous l’utilisez avec le [convertir](../../t-sql/functions/cast-and-convert-transact-sql.md) fonctionner, si le paramètre de style CONVERT est spécifié, et style n’est pas égal à 0, 100, 9 ou 109.  
+## <a name="remarks"></a>Notes   
+ ISDATE est déterministe uniquement si elle est utilisée avec la fonction [CONVERT](../../t-sql/functions/cast-and-convert-transact-sql.md), lorsque le paramètre de style CONVERT est spécifié et que le style est différent de 0, 100, 9 et 109.  
   
- La valeur de retour d’ISDATE dépend des paramètres définis par [SET DATEFORMAT](../../t-sql/statements/set-dateformat-transact-sql.md), [SET LANGUAGE](../../t-sql/statements/set-language-transact-sql.md) et [configurer l’Option de Configuration de serveur de la langue par défaut](../../database-engine/configure-windows/configure-the-default-language-server-configuration-option.md).  
+ La valeur de retour d’ISDATE dépend des paramètres définis par [SET DATEFORMAT](../../t-sql/statements/set-dateformat-transact-sql.md), [SET LANGUAGE](../../t-sql/statements/set-language-transact-sql.md) et dans la rubrique [Configurer l’option de configuration de serveur default language](../../database-engine/configure-windows/configure-the-default-language-server-configuration-option.md).  
   
 ## <a name="isdate-expression-formats"></a>Formats d'expression ISDATE  
- Pour obtenir des exemples de formats valides pour lesquels ISDATE retourne 1, consultez la section « Prise en charge Formats littéraux de chaîne pour datetime » dans le [datetime](../../t-sql/data-types/datetime-transact-sql.md) et [smalldatetime](../../t-sql/data-types/smalldatetime-transact-sql.md) rubriques. Pour obtenir des exemples supplémentaires, consultez également la colonne d’entrée/sortie de la section « Arguments » de [CAST et CONVERT](../../t-sql/functions/cast-and-convert-transact-sql.md).  
+ Pour obtenir des exemples de formats valides pour lesquels ISDATE retourne 1, consultez la section « Formats de littéraux de chaîne pris en charge pour datetime » dans les rubriques [datetime](../../t-sql/data-types/datetime-transact-sql.md) et [smalldatetime](../../t-sql/data-types/smalldatetime-transact-sql.md). Pour obtenir des exemples supplémentaires, consultez également la colonne Entrée/sortie de la section « Arguments » de [CAST et CONVERT](../../t-sql/functions/cast-and-convert-transact-sql.md).  
   
  Le tableau suivant résume les formats d'expression d'entrée qui ne sont pas valides et qui retournent 0 ou une erreur.  
   
 |Expression ISDATE|Valeur retournée par ISDATE|  
 |-----------------------|-------------------------|  
 |NULL|0|  
-|Les valeurs des types de données répertoriées dans [des Types de données](../../t-sql/data-types/data-types-transact-sql.md) dans une catégorie de type de données autres que des chaînes de caractères, les chaînes de caractères Unicode, ou date et heure.|0|  
-|Les valeurs de **texte**, **ntext**, ou **image** des types de données.|0|  
-|Toute valeur qui a une échelle de précision en secondes supérieure à 3 (,0000 à ,0000000...n). ISDATE retourne 0 si le *expression* est un **datetime2** valeur, mais retourne 1 si le *expression* n’est valide **datetime** valeur.|0|  
+|Valeurs des types de données répertoriés dans [Types de données](../../t-sql/data-types/data-types-transact-sql.md) dans toute catégorie de type de données autre que les chaînes de caractères, chaînes de caractères Unicode, ou date et heure.|0|  
+|Valeurs des types de données **text**, **ntext** ou **image**.|0|  
+|Toute valeur qui a une échelle de précision en secondes supérieure à 3 (,0000 à ,0000000...n). ISDATE renverra 0 si le paramètre *expression* est une valeur **datetime2**, mais renverra 1 si le paramètre *expression* est une valeur **datetime** valide.|0|  
 |Toute valeur qui associe une date valide à une valeur non valide, par exemple 1995-10-1a.|0|  
   
 ## <a name="examples"></a>Exemples  
   
 ### <a name="a-using-isdate-to-test-for-a-valid-datetime-expression"></a>A. Utilisation d'ISDATE pour tester une expression datetime valide.  
- L’exemple suivant vous montre comment utiliser `ISDATE` pour tester si une chaîne de caractères est valide **datetime**.  
+ L’exemple suivant montre comment utiliser `ISDATE` pour tester si une chaîne de caractères est une valeur **datetime** valide.  
   
 ```  
 IF ISDATE('2009-05-12 10:19:41.177') = 1  
@@ -146,10 +146,10 @@ SET LANGUAGE us_english;
 SET DATEFORMAT mdy;  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemples : [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] et[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemples : [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] et [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="c-using-isdate-to-test-for-a-valid-datetime-expression"></a>C. Utilisation d'ISDATE pour tester une expression datetime valide.  
- L’exemple suivant vous montre comment utiliser `ISDATE` pour tester si une chaîne de caractères est valide **datetime**.  
+ L’exemple suivant montre comment utiliser `ISDATE` pour tester si une chaîne de caractères est une valeur **datetime** valide.  
   
 ```  
 IF ISDATE('2009-05-12 10:19:41.177') = 1  
@@ -158,7 +158,7 @@ ELSE
     SELECT 'INVALID';  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [CAST et CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
   
   

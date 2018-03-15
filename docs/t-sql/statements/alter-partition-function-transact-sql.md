@@ -1,5 +1,5 @@
 ---
-title: ALTER PARTITION FUNCTION (Transact-SQL) | Documents Microsoft
+title: ALTER PARTITION FUNCTION (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -62,23 +62,23 @@ ALTER PARTITION FUNCTION partition_function_name()
   
 ## <a name="arguments"></a>Arguments  
  *partition_function_name*  
- Est le nom de la fonction de partition à modifier.  
+ Nom de la fonction de partition à modifier.  
   
  SPLIT RANGE ( *boundary_value* )  
- Ajoute une partition à la fonction de partition. *boundary_value* détermine la plage de la nouvelle partition et doivent être différents des plages limites existantes de la fonction de partition. En fonction de *boundary_value*, le [!INCLUDE[ssDE](../../includes/ssde-md.md)] divise l’une des plages existantes en deux. De ces deux que celui dans lequel le nouveau *boundary_value* réside est considéré comme la nouvelle partition.  
+ Ajoute une partition à la fonction de partition. *boundary_value* détermine la plage de la nouvelle partition. Elle doit être différente des plages limites existantes de la fonction de partition. En fonction de la valeur de *boundary_value*, le [!INCLUDE[ssDE](../../includes/ssde-md.md)] divise l’une des plages existantes en deux. De ces deux demi-plages, c’est celle qui contient *boundary_value* qui est considérée comme la nouvelle partition.  
   
  Pour conserver la nouvelle partition, un groupe de fichiers doit être en ligne et être marqué par le schéma de partition qui utilise la fonction de partition comme étant le prochain utilisé (NEXT USED). Les groupes de fichiers sont alloués aux partitions dans une instruction CREATE PARTITION SCHEME. Si une instruction CREATE PARTITION SCHEME alloue plus de groupes de fichiers qu'il n'en faut (il y a alors moins de partitions créées dans l'instruction CREATE PARTITION FUNCTION qu'il n'y a de groupes de fichiers pour les accueillir), certains groupes de fichiers ne sont pas affectés, et l'un d'entre eux est marqué NEXT USED par le schéma de partition. C'est ce groupe de fichiers qui accueillera la nouvelle partition. Si aucun groupe de fichiers n'est marqué NEXT USED par le schéma de partition, vous devez utiliser ALTER PARTITION SCHEME pour ajouter un groupe de fichiers, ou en désigner un existant, afin d'accueillir la nouvelle partition. Un groupe de fichiers contenant déjà des partitions peut être désigné pour accueillir des partitions supplémentaires. Étant donné qu'une fonction de partition peut participer à plusieurs schémas de partition, tous les schémas de partition utilisant la fonction de partition à laquelle vous ajoutez des partitions doivent contenir un groupe de fichiers NEXT USED. À défaut, ALTER PARTITION FUNCTION échoue et génère une erreur indiquant le ou les schémas de partition qui sont dépourvus d'un groupe de fichiers NEXT USED.  
   
  Si vous créez toutes les partitions dans le même groupe de fichiers, celui-ci est initialement et automatiquement affecté comme le groupe de fichiers NEXT USED. Toutefois, après une opération de fractionnement, il n'y a plus de groupe de fichiers NEXT USED désigné. Vous devez affecter explicitement le groupe de fichiers comme groupe de fichiers NEXT USED à l'aide de ALTER PARTITION SCHEME, sinon toute opération de fractionnement ultérieure échoue.  
   
 > [!NOTE]  
->  Limitations de l’index columnstore : seules les partitions vides peuvent être fractionnées lorsqu’il existe un index columnstore sur la table. Vous devez supprimer ou désactiver l’index columnstore avant d’effectuer cette opération.  
+>  Limitations d’index columnstore : seules les partitions vides peuvent être fractionnées quand il existe un index columnstore sur la table. Vous devez supprimer ou désactiver l’index columnstore avant d’effectuer cette opération.  
   
- FUSIONNER [plage ( *boundary_value*)]  
- Supprime une partition et fusionne les valeurs qui existent dans la partition dans l'une des partitions restantes. PLAGE (*boundary_value*) doit être une valeur limite existante, dans laquelle les valeurs de la partition supprimée sont fusionnées. Le groupe de fichiers qui contenait initialement *boundary_value* le schéma de partition est supprimé, sauf si elle est utilisée par une partition restante, ou est marqué avec la propriété NEXT USED. La partition fusionnée réside dans le groupe de fichiers qui ne contenait pas initialement *boundary_value*. *boundary_value* est une expression constante qui peut référencer des variables (y compris les variables de type défini par l’utilisateur) ou des fonctions (y compris les fonctions définies par l’utilisateur). Elle ne peut pas faire référence à une expression [!INCLUDE[tsql](../../includes/tsql-md.md)]. *boundary_value* doit soit correspondre ou être implicitement convertible en type de données de la colonne de partitionnement correspondante et ne peut pas être tronquée pendant une conversion implicite d’une manière que la taille et l’échelle de la valeur ne correspond pas à celles de son *input_parameter_type*.  
+ MERGE [ RANGE ( *boundary_value*) ]  
+ Supprime une partition et fusionne les valeurs qui existent dans la partition dans l'une des partitions restantes. RANGE (*boundary_value*) doit être une valeur limite existante dans laquelle les valeurs de la partition supprimée sont fusionnées. Le groupe de fichiers qui contenait initialement *boundary_value* est supprimé du schéma de partition, sauf s’il est utilisé par une partition restante ou s’il est marqué de la propriété NEXT USED. La partition fusionnée réside dans le groupe de fichiers qui ne contenait pas initialement *boundary_value*. *boundary_value* est une expression constante qui peut référencer des variables (notamment des variables de type défini par l’utilisateur) ou des fonctions (notamment des fonctions définies par l’utilisateur). Elle ne peut pas faire référence à une expression [!INCLUDE[tsql](../../includes/tsql-md.md)]. *boundary_value* doit correspondre ou être implicitement convertible dans le type de données de sa colonne de partitionnement correspondante, et ne doit pas être tronquée lors de la conversion implicite d’une manière où la taille et l’échelle de la valeur ne correspondraient pas à son attribut *input_parameter_type* correspondant.  
   
 > [!NOTE]  
->  Limitations de l’index columnstore : Impossible de fusionner deux partitions non vides contenant un index columnstore. Vous devez supprimer ou désactiver l’index columnstore avant d’effectuer cette opération.  
+>  Limitations d’index columnstore : vous ne pouvez pas fusionner deux partitions non vides contenant un index columnstore. Vous devez supprimer ou désactiver l’index columnstore avant d’effectuer cette opération.  
   
 ## <a name="best-practices"></a>Bonnes pratiques  
  Conservez toujours les partitions vides aux deux extrémités de la plage de partition pour vous assurer que le fractionnement de la partition (avant de charger de nouvelles données) et la fusion de la partition (après déchargement des données précédentes) n'entraînent aucun déplacement de données. Évitez de fractionner ou fusionner des partitions remplies. Cela peut être très inefficace, car la génération peut parfois prendre quatre fois plus de temps et provoquer également un verrouillage grave.  
@@ -152,20 +152,20 @@ ALTER PARTITION FUNCTION myRangePF1 ()
 MERGE RANGE (100);  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Tables et index partitionnés](../../relational-databases/partitions/partitioned-tables-and-indexes.md)   
  [CREATE PARTITION FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-partition-function-transact-sql.md)   
- [DROP PARTITION FUNCTION &#40; Transact-SQL &#41;](../../t-sql/statements/drop-partition-function-transact-sql.md)   
+ [DROP PARTITION FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/drop-partition-function-transact-sql.md)   
  [CREATE PARTITION SCHEME &#40;Transact-SQL&#41;](../../t-sql/statements/create-partition-scheme-transact-sql.md)   
- [ALTER PARTITION SCHEME &#40; Transact-SQL &#41;](../../t-sql/statements/alter-partition-scheme-transact-sql.md)   
- [DROP PARTITION SCHEME &#40; Transact-SQL &#41;](../../t-sql/statements/drop-partition-scheme-transact-sql.md)   
+ [ALTER PARTITION SCHEME &#40;Transact-SQL&#41;](../../t-sql/statements/alter-partition-scheme-transact-sql.md)   
+ [DROP PARTITION SCHEME &#40;Transact-SQL&#41;](../../t-sql/statements/drop-partition-scheme-transact-sql.md)   
  [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)   
  [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)   
  [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
- [Sys.partition_functions &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-partition-functions-transact-sql.md)   
- [Sys.partition_parameters &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-partition-parameters-transact-sql.md)   
- [Sys.partition_range_values &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-partition-range-values-transact-sql.md)   
- [Sys.partitions &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-partitions-transact-sql.md)   
+ [sys.partition_functions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-partition-functions-transact-sql.md)   
+ [sys.partition_parameters &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-partition-parameters-transact-sql.md)   
+ [sys.partition_range_values &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-partition-range-values-transact-sql.md)   
+ [sys.partitions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-partitions-transact-sql.md)   
  [sys.tables &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-tables-transact-sql.md)   
  [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)   
  [sys.index_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md)  

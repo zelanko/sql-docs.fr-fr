@@ -1,5 +1,5 @@
 ---
-title: "SUPPRIMER la clé symétrique (Transact-SQL) | Documents Microsoft"
+title: DROP SYMMETRIC KEY (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -56,14 +56,14 @@ DROP SYMMETRIC KEY symmetric_key_name [REMOVE PROVIDER KEY]
  Nom de la clé symétrique à supprimer.  
   
  REMOVE PROVIDER KEY  
- Supprime une clé EKM (Gestion de clés extensible) d'un périphérique EKM. Pour plus d’informations sur la gestion de clés Extensible, consultez [gestion de clés Extensible &#40; Gestion de clés extensible &#41; ](../../relational-databases/security/encryption/extensible-key-management-ekm.md).  
+ Supprime une clé EKM (Gestion de clés extensible) d'un périphérique EKM. Pour plus d’informations sur la gestion de clés extensible, consultez [Gestion de clés extensible &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md).  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Si la clé est ouverte dans la session en cours, l'instruction échoue.  
   
- Si la clé asymétrique est mappée à une clé de gestion de clés Extensible (EKM) sur un périphérique EKM et **supprimer la clé de fournisseur** option n’est pas spécifiée, la clé doivent être supprimée de la base de données, mais pas sur l’appareil et un avertissement est émis.  
+ Si la clé asymétrique est mappée à une clé EKM (gestion de clés extensible) sur un appareil EKM et que l’option **REMOVE PROVIDER KEY** n’est pas spécifiée, la clé est supprimée de la base de données, mais pas de l’appareil, et un message d’avertissement est affiché.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Requiert l'autorisation CONTROL sur la clé symétrique.  
   
 ## <a name="examples"></a>Exemples  
@@ -75,12 +75,12 @@ DROP SYMMETRIC KEY GailSammamishKey6;
 GO  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [CREATE SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-symmetric-key-transact-sql.md)   
  [CREATE SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-symmetric-key-transact-sql.md)   
  [ALTER SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-symmetric-key-transact-sql.md)   
  [Hiérarchie de chiffrement](../../relational-databases/security/encryption/encryption-hierarchy.md)   
- [CLOSE SYMMETRIC KEY &#40; Transact-SQL &#41;](../../t-sql/statements/close-symmetric-key-transact-sql.md)   
+ [CLOSE SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/close-symmetric-key-transact-sql.md)   
  [Gestion de clés extensible &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md)  
   
   

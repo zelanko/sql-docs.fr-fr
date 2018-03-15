@@ -1,5 +1,5 @@
 ---
-title: ":: (Résolution de portée) (Transact-SQL) | Documents Microsoft"
+title: ":: (Résolution d’étendue) (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -28,10 +28,10 @@ ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="-scope-resolution-transact-sql"></a>:: (Résolution de portée) (Transact-SQL)
+# <a name="-scope-resolution-transact-sql"></a>:: (Résolution d’étendue) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  L’opérateur de résolution de portée **::** fournit l’accès à des membres statiques d’un type de données composé. Type de données composé est une qui contient plusieurs types de données simples et méthodes, telles que les types CLR intégrés et les Types de SQLCLR User-Defined personnalisé (UDT).  
+  L’opérateur de résolution d’étendue **::** fournit l’accès aux membres statiques d’un type de données composé. Un type de données composé est un type qui contient plusieurs types de données et méthodes simples, comme les types CLR intégrés et les UDT (types définis par l’utilisateur) SQLCLR personnalisés.  
   
 ## <a name="examples"></a>Exemples  
  L'exemple suivant montre comment utiliser l'opérateur de résolution de portée pour accéder au membre `GetRoot()` du type `hierarchyid`.  
@@ -46,7 +46,7 @@ PRINT @hid.ToString();
   
  `/`  
   
-## <a name="see-also"></a>Voir aussi  
- [Operators &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)  
+## <a name="see-also"></a> Voir aussi  
+ [Opérateurs &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)  
   
   

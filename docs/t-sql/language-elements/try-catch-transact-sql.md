@@ -1,5 +1,5 @@
 ---
-title: TRY... CATCH (Transact-SQL) | Documents Microsoft
+title: TRY...CATCH (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -68,7 +68,7 @@ END CATCH
  *statement_block*  
  Tout groupe d'instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] dans un lot ou contenues dans un bloc BEGIN…END.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  La construction TRY…CATCH intercepte toutes les erreurs d'exécution dont la gravité est supérieure à 10 et qui ne ferment pas la connexion de la base de données.  
   
  Un bloc TRY doit être suivi immédiatement d'un bloc CATCH associé. L'inclusion d'une autre instruction entre les instructions END TRY et BEGIN CATCH génère une erreur de syntaxe.  
@@ -98,13 +98,13 @@ END CATCH
   
 -   [ERROR_NUMBER()](../../t-sql/functions/error-number-transact-sql.md) renvoie le numéro de l’erreur.  
   
--   [ERROR_SEVERITY()](../../t-sql/functions/error-severity-transact-sql.md) renvoie le degré de gravité.  
+-   [ERROR_SEVERITY()](../../t-sql/functions/error-severity-transact-sql.md) renvoie la gravité de l’erreur.  
   
--   [ERROR_STATE()](../../t-sql/functions/error-state-transact-sql.md) renvoie le numéro d’état erreur.  
+-   [ERROR_STATE()](../../t-sql/functions/error-state-transact-sql.md) renvoie le numéro d’état de l’erreur.  
   
--   [ERROR_PROCEDURE()](../../t-sql/functions/error-procedure-transact-sql.md) renvoie le nom de la procédure stockée ou du déclencheur où l’erreur s’est produite.  
+-   [ERROR_PROCEDURE()](../../t-sql/functions/error-procedure-transact-sql.md) renvoie le nom de la procédure stockée ou du déclencheur où s’est produite l’erreur.  
   
--   [ERROR_LINE()](../../t-sql/functions/error-line-transact-sql.md) renvoie le numéro de ligne à l’intérieur de la routine qui a provoqué l’erreur.  
+-   [ERROR_LINE()](../../t-sql/functions/error-line-transact-sql.md) renvoie le numéro de ligne au sein de la routine qui a entraîné l’erreur.  
   
 -   [ERROR_MESSAGE()](../../t-sql/functions/error-message-transact-sql.md) renvoie le texte complet du message d’erreur. Le texte comprend les valeurs fournies pour tous les paramètres remplaçables, tels que les longueurs, les noms d'objet ou les heures.  
   
@@ -138,7 +138,7 @@ BEGIN CATCH
 END CATCH;   
 ```  
   
- L’erreur\_ \* fonctions fonctionnent également dans un `CATCH` bloquer à l’intérieur d’un [compilées en mode natif de procédure stockée](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md).  
+ Les fonctions ERROR\_\* fonctionnent également dans un bloc `CATCH` à l’intérieur d’une [procédure stockée compilée en mode natif](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md).  
   
 ## <a name="errors-unaffected-by-a-trycatch-construct"></a>Erreurs non affectées par une construction TRY…CATCH  
  Les constructions TRY…CATCH n'interceptent pas les conditions suivantes :  
@@ -155,7 +155,7 @@ END CATCH;
   
 -   Les erreurs de compilation, telles que les erreurs de syntaxe, qui empêchent un traitement de s'exécuter.  
   
--   Erreurs qui se produisent pendant la recompilation au niveau instruction, telles que les erreurs de résolution de nom objet qui se produisent après la compilation en raison de la résolution de noms différée.  
+-   Les erreurs qui se produisent pendant une recompilation de niveau instruction, telles que les erreurs de résolution de nom d’objet qui surviennent après la compilation en raison d’une résolution de nom différée.  
   
  Ces erreurs sont renvoyées au niveau qui a exécuté le traitement, la procédure stockée ou le déclencheur.  
   
@@ -206,7 +206,7 @@ END CATCH;
 ## <a name="uncommittable-transactions-and-xactstate"></a>Transactions non validables et XACT_STATE  
  Si une erreur générée dans un bloc TRY entraîne l'invalidation de la transaction actuelle, elle est classifiée comme transaction non validable. Une erreur qui termine normalement une transaction en dehors d'un bloc TRY fait entrer la transaction dans un état non validable lorsqu'elle survient au sein d'un bloc TRY. Une transaction non validable ne peut effectuer que des opérations de lecture ou ROLLBACK TRANSACTION. La transaction ne peut exécuter aucune instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] qui générerait une opération d'écriture ou COMMIT TRANSACTION. La fonction XACT_STATE renvoie une valeur de -1 si une transaction a été classifiée comme non validable. Lorsqu'un traitement est terminé, le [!INCLUDE[ssDE](../../includes/ssde-md.md)] restaure automatiquement toutes les transactions non validables actives. Si aucun message d'erreur n'a été envoyé lorsque la transaction est passée dans un état non validable, une erreur est envoyée à l'application cliente lorsque le traitement se termine. Cela indique qu'une transaction non validable a été détectée et annulée.  
   
- Pour plus d’informations sur les transactions non validables et la fonction XACT_STATE, consultez [XACT_STATE &#40; Transact-SQL &#41; ](../../t-sql/functions/xact-state-transact-sql.md).  
+ Pour plus d’informations sur les transactions non validables et la fonction XACT_STATE, consultez [XACT_STATE &#40;Transact-SQL&#41;](../../t-sql/functions/xact-state-transact-sql.md).  
   
 ## <a name="examples"></a>Exemples  
   
@@ -326,7 +326,7 @@ END CATCH;
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemples : [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] et[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemples : [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] et [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="d-using-trycatch"></a>D. Utilisation de TRY…CATCH  
  L'exemple suivant illustre une instruction `SELECT` qui génère une erreur de division par zéro. L'erreur entraîne le saut de l'exécution vers le bloc `CATCH` associé.  
@@ -347,15 +347,15 @@ END CATCH;
 GO  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [THROW &#40;Transact-SQL&#41;](../../t-sql/language-elements/throw-transact-sql.md)   
- [Gravité des erreurs du moteur de base de données](../../relational-databases/errors-events/database-engine-error-severities.md)   
+ [Niveaux de gravité des erreurs du moteur de base de données](../../relational-databases/errors-events/database-engine-error-severities.md)   
  [ERROR_LINE &#40;Transact-SQL&#41;](../../t-sql/functions/error-line-transact-sql.md)   
  [ERROR_MESSAGE &#40;Transact-SQL&#41;](../../t-sql/functions/error-message-transact-sql.md)   
  [ERROR_NUMBER &#40;Transact-SQL&#41;](../../t-sql/functions/error-number-transact-sql.md)   
  [ERROR_PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/functions/error-procedure-transact-sql.md)   
  [ERROR_SEVERITY &#40;Transact-SQL&#41;](../../t-sql/functions/error-severity-transact-sql.md)   
- [ERROR_STATE &#40; Transact-SQL &#41;](../../t-sql/functions/error-state-transact-sql.md)   
+ [ERROR_STATE &#40;Transact-SQL&#41;](../../t-sql/functions/error-state-transact-sql.md)   
  [RAISERROR &#40;Transact-SQL&#41;](../../t-sql/language-elements/raiserror-transact-sql.md)   
  [@@ERROR &#40;Transact-SQL&#41;](../../t-sql/functions/error-transact-sql.md)   
  [GOTO &#40;Transact-SQL&#41;](../../t-sql/language-elements/goto-transact-sql.md)   

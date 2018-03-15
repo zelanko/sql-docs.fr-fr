@@ -1,5 +1,5 @@
 ---
-title: Delete (DML XML) | Documents Microsoft
+title: delete (DML XML) | Microsoft Docs
 ms.custom: 
 ms.date: 07/26/2017
 ms.prod: sql-non-specified
@@ -45,12 +45,12 @@ delete Expression
   
 ## <a name="arguments"></a>Arguments  
  *Expression*  
- Expression XQuery qui identifie les nœuds à supprimer. Tous les nœuds sélectionnés par l'expression, ainsi que la totalité des nœuds ou des valeurs contenus dans les nœuds sélectionnés, sont supprimés. Comme décrit dans [insert (DML XML)](../../t-sql/xml/insert-xml-dml.md), cela doit être une référence à un nœud existant dans le document. Ce ne peut pas être un nœud construit. L'expression ne peut pas être le nœud racine (/). Si l'expression renvoie une séquence vide, aucune suppression ne se produit et aucune erreur n'est renvoyée.  
+ Expression XQuery qui identifie les nœuds à supprimer. Tous les nœuds sélectionnés par l'expression, ainsi que la totalité des nœuds ou des valeurs contenus dans les nœuds sélectionnés, sont supprimés. Comme l’indique l’article [insert (DML XML)](../../t-sql/xml/insert-xml-dml.md), cette instruction doit être une référence à un nœud existant dans le document. Ce ne peut pas être un nœud construit. L'expression ne peut pas être le nœud racine (/). Si l'expression renvoie une séquence vide, aucune suppression ne se produit et aucune erreur n'est renvoyée.  
   
 ## <a name="examples"></a>Exemples  
   
 ### <a name="a-deleting-nodes-from-a-document-stored-in-an-untyped-xml-variable"></a>A. Suppression de nœuds d'un document stocké dans une variable xml non typée  
- L'exemple suivant montre comment supprimer différents nœuds d'un document. Tout d’abord, une instance XML est affectée à la variable de **xml** type. Ensuite, les instructions DML XML delete suivantes suppriment différents nœuds du document.  
+ L'exemple suivant montre comment supprimer différents nœuds d'un document. Tout d’abord, une instance XML est affectée à une variable de type **xml**. Ensuite, les instructions DML XML delete suivantes suppriment différents nœuds du document.  
   
 ```  
 DECLARE @myDoc xml  
@@ -92,7 +92,7 @@ SELECT @myDoc
 ```  
   
 ### <a name="b-deleting-nodes-from-a-document-stored-in-an-untyped-xml-column"></a>B. Suppression de nœuds d'un document stocké dans une colonne xml non typée  
- Dans l’exemple suivant, un **supprimer** instruction XML DML supprime le second élément enfant de <`Features`> du document stocké dans la colonne.  
+ Dans l’exemple suivant, une instruction DML XML **delete** supprime le second élément enfant de <`Features`> du document stocké dans la colonne.  
   
 ```  
 CREATE TABLE T (i int, x xml)  
@@ -117,16 +117,16 @@ SELECT x.query(' //ProductDescription/Features')
 FROM T  
 ```  
   
- Notez les points suivants dans la requête précédente :  
+ Notez les points suivants dans la requête précédente :  
   
--   Le [modify(), méthode (Type de données xml)](../../t-sql/xml/modify-method-xml-data-type.md) est utilisé pour spécifier le **supprimer** mot clé XML DML.  
+-   La [méthode modify() (type de données xml)](../../t-sql/xml/modify-method-xml-data-type.md) permet de spécifier le mot clé DML XML **delete**.  
   
--   Le [query() (Type de données xml) de méthode](../../t-sql/xml/query-method-xml-data-type.md) est utilisée pour interroger le document.  
+-   La [méthode query() (type de données xml)](../../t-sql/xml/query-method-xml-data-type.md) permet d’interroger le document.  
   
 ### <a name="c-deleting-nodes-from-a-typed-xml-column"></a>C. Suppression de nœuds d'une colonne xml typée  
- Cet exemple supprime des nœuds d’un document XML stocké dans les instructions de fabrication typé **xml** colonne.  
+ Cet exemple supprime des nœuds d’un document XML d’instructions de fabrication stocké dans une colonne **xml** typée.  
   
- Dans l’exemple, vous créez une table (T) avec un typé **xml** colonne dans la base de données AdventureWorks. Ensuite, vous copiez une instance XML des instructions de fabrication depuis la colonne Instructions de la table ProductModel vers la table T et supprimez un ou plusieurs nœuds du document.  
+ Vous créez d’abord une table (T) avec une colonne **xml** typée dans la base données AdventureWorks. Ensuite, vous copiez une instance XML des instructions de fabrication depuis la colonne Instructions de la table ProductModel vers la table T et supprimez un ou plusieurs nœuds du document.  
   
 ```  
 use AdventureWorks  
@@ -192,10 +192,10 @@ drop table T
 go  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Comparer du XML typé et du XML non typé](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   
  [Créer des instances de données XML](../../relational-databases/xml/create-instances-of-xml-data.md)   
- [Méthodes des types de données xml](../../t-sql/xml/xml-data-type-methods.md)   
- [XML Data Modification Language &#40; XML DML &#41;](../../t-sql/xml/xml-data-modification-language-xml-dml.md)  
+ [méthodes de type de données xml](../../t-sql/xml/xml-data-type-methods.md)   
+ [Langage de manipulation de données XML &#40;DML XML&#41;](../../t-sql/xml/xml-data-modification-language-xml-dml.md)  
   
   

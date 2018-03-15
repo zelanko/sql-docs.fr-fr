@@ -1,5 +1,5 @@
 ---
-title: XML Data Modification Language (DML XML) | Documents Microsoft
+title: "Langage de manipulation de données XML (DML XML) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -38,7 +38,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="xml-data-modification-language-xml-dml"></a>Langage de modification de données XML (XML DML)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Le langage de modification de données XML (XML DML) est une extension du langage XQuery. Tel qu'il est défini par le consortium W3C, le langage XQuery ne possède pas la partie de manipulation des données (DML). Le langage XML DML présenté dans cette rubrique, ainsi que le langage XQuery, fournit une requête pleinement fonctionnel et un langage de modification de données que vous pouvez utiliser sur le **xml** type de données.  
+  Le langage de modification de données XML (XML DML) est une extension du langage XQuery. Tel qu'il est défini par le consortium W3C, le langage XQuery ne possède pas la partie de manipulation des données (DML). Le langage de manipulation de données (DML, Data Manipulation Language) XML présenté dans cette rubrique, ainsi que le langage de requête Xml, fournissent un langage de modification de données et de requête pleinement fonctionnel que vous pouvez utiliser sur les données de type **xml**.  
   
  Le XML DML ajoute dans XQuery les mots clés respectant la casse suivants :  
   
@@ -46,34 +46,34 @@ ms.lasthandoff: 01/25/2018
   
 -   **delete**  
   
--   **Remplacez la valeur de**  
+-   **replace value of**  
   
- Comme décrit dans [Type de données XML et les colonnes &#40; SQL Server &#41; ](../../relational-databases/xml/xml-data-type-and-columns-sql-server.md), vous pouvez créer des variables et des colonnes de la **xml** de type et leur attribuer des documents XML ou des fragments. Pour modifier ou mettre à jour ces instances XML, procédez comme suit :  
+ Comme décrit dans [Type et colonnes de données XML &#40;SQL Server&#41;](../../relational-databases/xml/xml-data-type-and-columns-sql-server.md), vous pouvez créer des variables et des colonnes de type **xml** et leur attribuer des documents ou fragments XML. Pour modifier ou mettre à jour ces instances XML, procédez comme suit :  
   
--   Utilisez le [xml Type de données de la méthode modify())](../../t-sql/xml/modify-method-xml-data-type.md) de la **xml** type de données.  
+-   Utilisez la [méthode modify()](../../t-sql/xml/modify-method-xml-data-type.md) du type de données **xml**.  
   
--   Spécifiez les instructions XML DML appropriées à l’intérieur de la **modify()** (méthode).  
+-   Spécifiez les instructions DML XML appropriées dans la méthode **modify()**.  
   
- Notez que certains attributs ne peuvent pas être insérés ou supprimés, et que leur valeur ne peut pas être modifiée. Par exemple :  
+ Notez que certains attributs ne peuvent pas être insérés ou supprimés, et que leur valeur ne peut pas être modifiée. Exemple :  
   
--   Pour non typés **xml,** les attributs sont **xmlns**, **xmlns :\***, et **XML : base**.  
+-   Pour le **xml** typé et non typé, les attributs sont **xmlns**, **xmlns:\*** et **xml:base**.  
   
--   Pour typées **xml** uniquement, les attributs sont **xsi : nil**, et **xsi : type**.  
+-   Pour le **xml** typé uniquement, les attributs sont **xsi:nil** et **xsi:type**.  
   
  Autres restrictions :  
   
--   Pour non typés **xml**, insertion de l’attribut **XML : base** échoue.  
+-   Pour le **xml** typé et non typé, l’insertion de l’attribut **xml:base** échoue.  
   
--   Pour typées **xml**, la suppression et modification de la **xsi : nil** attribut échouera. Pour non typées **xml**, vous pouvez supprimer l’attribut ou modifier sa valeur.  
+-   Pour le **xml** typé, la suppression et la modification de l’attribut **xsi:nil** échouent. Pour le **xml** non typé, vous pouvez supprimer l’attribut ou modifier sa valeur.  
   
--   Pour typées **xml**, modification de la valeur de la **msdata** attribut échouera. Pour non typées **xml**, vous pouvez modifier la valeur d’attribut.  
+-   Pour le **xml** typé, la modification de la valeur de l’attribut **xs:type** échoue. Pour le **xml** non typé, vous pouvez modifier la valeur de l’attribut.  
   
  Lorsque vous modifiez une instance XML typée, le format final doit être une instance valide de ce type. Dans le cas contraire, une erreur de validation est retournée.  
   
-## <a name="see-also"></a>Voir aussi  
- [insert &#40;XML DML&#41;](../../t-sql/xml/insert-xml-dml.md)   
- [delete &#40;XML DML&#41;](../../t-sql/xml/delete-xml-dml.md)   
- [Remplacez la valeur de &#40; XML DML &#41;](../../t-sql/xml/replace-value-of-xml-dml.md)   
+## <a name="see-also"></a> Voir aussi  
+ [insert &#40;DML XML&#41;](../../t-sql/xml/insert-xml-dml.md)   
+ [delete &#40;DML XML&#41;](../../t-sql/xml/delete-xml-dml.md)   
+ [replace value of &#40;DML XML&#41;](../../t-sql/xml/replace-value-of-xml-dml.md)   
  [Comparer du XML typé et du XML non typé](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   
  [Créer des instances de données XML](../../relational-databases/xml/create-instances-of-xml-data.md)   
  [Méthodes de type de données xml](../../t-sql/xml/xml-data-type-methods.md)  

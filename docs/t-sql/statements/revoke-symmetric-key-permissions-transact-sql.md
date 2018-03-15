@@ -1,5 +1,5 @@
 ---
-title: "RÉVOQUER les autorisations de clé symétrique (Transact-SQL) | Documents Microsoft"
+title: "REVOKE - Révoquer des autorisations sur une clé symétrique (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/10/2017
 ms.prod: sql-non-specified
@@ -30,7 +30,7 @@ ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="revoke-symmetric-key-permissions-transact-sql"></a>REVOKE – révocation d'autorisations de clé symétrique (Transact-SQL)
+# <a name="revoke-symmetric-key-permissions-transact-sql"></a>REVOKE - Révoquer des autorisations sur une clé symétrique (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Permet de révoquer des autorisations accordées ou refusées sur une clé symétrique.  
@@ -59,10 +59,10 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
 ```  
   
 ## <a name="arguments"></a>Arguments  
- *autorisation*  
+ *permission*  
  Spécifie une autorisation qui peut être révoquée sur une clé symétrique. Pour obtenir la liste des autorisations, consultez la section Notes plus loin dans cette rubrique.  
   
- CLÉ symétrique de ON :: *asymmetric_key_name*  
+ ON SYMMETRIC KEY :: *asymmetric_key_name*  
  Spécifie la clé symétrique sur laquelle l'autorisation doit être révoquée. L'identificateur d'étendue (::) est requis.  
   
  GRANT OPTION  
@@ -77,10 +77,10 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
 > [!CAUTION]  
 >  Une révocation en cascade d'une autorisation accordée avec l'option WITH GRANT OPTION entraîne la révocation des deux options GRANT et DENY de cette autorisation.  
   
- {POUR | FROM} \< *principal_base_de_données*>  
+ { TO | FROM } \<*database_principal*>  
  Spécifie le principal pour lequel l'autorisation est révoquée.  
   
- En tant que \<principal_base_de_données > Spécifie un principal à partir duquel le principal qui exécute cette requête dérive son droit de révoquer l’autorisation.  
+ AS \<database_principal> Spécifie un principal duquel le principal qui exécute cette requête dérive son droit de révoquer l’autorisation.  
   
  *Database_user*  
  Spécifie un utilisateur de base de données.  
@@ -106,8 +106,8 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
  *Database_user_with_no_login*  
  Spécifie un utilisateur de base de données sans principal au niveau serveur correspondant.  
   
-## <a name="remarks"></a>Notes  
- Informations sur les clés symétriques sont consultables dans le [sys.symmetric_keys](../../relational-databases/system-catalog-views/sys-symmetric-keys-transact-sql.md) affichage catalogue.  
+## <a name="remarks"></a>Notes   
+ Des informations sur les clés symétriques sont consultables dans la vue de catalogue [sys.symmetric_keys](../../relational-databases/system-catalog-views/sys-symmetric-keys-transact-sql.md).  
   
  L'instruction échoue si l'option CASCADE n'est pas spécifiée lors de la révocation d'une autorisation à partir d'un principal auquel cette autorisation a été accordée avec l'option GRANT OPTION.  
   
@@ -121,7 +121,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
 |TAKE OWNERSHIP|CONTROL|CONTROL|  
 |VIEW DEFINITION|CONTROL|VIEW DEFINITION|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Requiert l'autorisation CONTROL sur la clé symétrique ou l'autorisation ALTER ANY SYMMETRIC KEY sur la base de données. Si vous utilisez l'option AS, le principal spécifié doit posséder la clé symétrique.  
   
 ## <a name="examples"></a>Exemples  
@@ -133,10 +133,10 @@ REVOKE ALTER ON SYMMETRIC KEY::SamInventory42 TO HamidS CASCADE;
 GO  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- [Sys.symmetric_keys &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-symmetric-keys-transact-sql.md)   
- [ACCORDER des autorisations de clé symétrique &#40; Transact-SQL &#41;](../../t-sql/statements/grant-symmetric-key-permissions-transact-sql.md)   
- [REFUSER des autorisations de clé symétrique &#40; Transact-SQL &#41;](../../t-sql/statements/deny-symmetric-key-permissions-transact-sql.md)   
+## <a name="see-also"></a> Voir aussi  
+ [sys.symmetric_keys &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-symmetric-keys-transact-sql.md)   
+ [GRANT - Octroyer des autorisations sur une clé symétrique &#40;Transact-SQL&#41;](../../t-sql/statements/grant-symmetric-key-permissions-transact-sql.md)   
+ [DENY - Refuser des autorisations sur une clé symétrique &#40;Transact-SQL&#41;](../../t-sql/statements/deny-symmetric-key-permissions-transact-sql.md)   
  [CREATE SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-symmetric-key-transact-sql.md)   
  [Autorisations &#40;moteur de base de données&#41;](../../relational-databases/security/permissions-database-engine.md)   
  [Principaux &#40;moteur de base de données&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   

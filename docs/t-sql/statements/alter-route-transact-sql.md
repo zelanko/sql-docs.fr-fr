@@ -1,5 +1,5 @@
 ---
-title: ALTER ROUTE (Transact-SQL) | Documents Microsoft
+title: ALTER ROUTE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -65,12 +65,12 @@ WITH
  Introduit les clauses qui définissent l'itinéraire modifié.  
   
  SERVICE_NAME **='***service_name***'**  
- Spécifie le nom du service distant vers lequel pointe cet itinéraire. Le *service_name* doit correspondre exactement au nom de service distant utilise. [!INCLUDE[ssSB](../../includes/sssb-md.md)]utilise une comparaison octet par octet pour faire correspondre le *service_name*. En d'autres termes, la comparaison respecte la casse et ne prend pas en compte le classement actuel. Un itinéraire avec un nom de service de **' SQL/ServiceBroker/BrokerConfiguration'** est un itinéraire vers un service Broker Configuration Notice. Un itinéraire vers ce service ne peut pas spécifier d'instance de Service Broker.  
+ Spécifie le nom du service distant vers lequel pointe cet itinéraire. *service_name* doit correspondre exactement au nom utilisé par le service distant. [!INCLUDE[ssSB](../../includes/sssb-md.md)] utilise une comparaison octet par octet pour la concordance avec la chaîne *service_name*. En d'autres termes, la comparaison respecte la casse et ne prend pas en compte le classement actuel. Un itinéraire dont le nom de service est **« SQL/ServiceBroker/BrokerConfiguration »** est un itinéraire vers un service de notification de la configuration de Service Broker. Un itinéraire vers ce service ne peut pas spécifier d'instance de Service Broker.  
   
  Si la clause SERVICE_NAME est omise, le nom de service pour l'itinéraire reste le même.  
   
  BROKER_INSTANCE **='***broker_instance***'**  
- Spécifie la base de données qui héberge le service cible. Le *broker_instance* paramètre doit être l’identificateur d’instance service broker pour la base de données à distance, qui peut être obtenu en exécutant la requête suivante dans la base de données sélectionnée :  
+ Spécifie la base de données qui héberge le service cible. Le paramètre *broker_instance* doit être l’identificateur de l’instance Service Broker pour la base de données distante et peut être obtenu en exécutant la requête suivante dans la base de données sélectionnée :  
   
 ```  
 SELECT service_broker_guid  
@@ -87,11 +87,11 @@ WHERE database_id = DB_ID();
  Spécifie la durée, en secondes, pendant laquelle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] conserve l'itinéraire dans la table de routage. Lorsque la durée de vie expire, l'itinéraire expire et [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] n'en tient plus compte lors de la sélection d'un itinéraire pour une nouvelle conversation. Si cette clause est omise, la durée de vie de l'itinéraire reste la même.  
   
  ADDRESS **='***next_hop_address'*  
- Spécifie l'adresse réseau pour cet itinéraire. Le *next_hop_address* spécifie une adresse TCP/IP dans le format suivant :  
+ Spécifie l'adresse réseau pour cet itinéraire. *next_hop_address* spécifie une adresse TCP/IP au format suivant :  
   
  **TCP://** { *dns_name* | *netbios_name* |*ip_address* } **:** *port_number*  
   
- Spécifié *numéro_port* doit correspondre au numéro de port pour le [!INCLUDE[ssSB](../../includes/sssb-md.md)] point de terminaison d’une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur l’ordinateur spécifié. Cela peut être obtenu en exécutant la requête ci-après dans la base de données sélectionnée :  
+ Le *port_number* spécifié doit correspondre au numéro de port du point de terminaison de [!INCLUDE[ssSB](../../includes/sssb-md.md)] pour une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur l’ordinateur spécifié. Cela peut être obtenu en exécutant la requête ci-après dans la base de données sélectionnée :  
   
 ```  
 SELECT tcpe.port  
@@ -101,21 +101,21 @@ INNER JOIN sys.service_broker_endpoints AS ssbe
 WHERE ssbe.name = N'MyServiceBrokerEndpoint';  
 ```  
   
- Si un itinéraire spécifie **'LOCAL'** pour le *next_hop_address*, le message est remis à un service dans l’instance actuelle de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Si un itinéraire spécifie **'LOCAL'** pour le paramètre *next_hop_address*, le message est remis à un service de l’instance actuelle de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- Si un itinéraire spécifie **'TRANSPORT'** pour le *next_hop_address*, l’adresse réseau est déterminée en fonction de l’adresse réseau, le nom du service. Un itinéraire qui spécifie **'TRANSPORT'** pouvez spécifier une instance de service broker ou de nom.  
+ Si un itinéraire spécifie **'TRANSPORT'** pour le paramètre *next_hop_address*, l’adresse réseau est déterminée en fonction de l’adresse réseau spécifiée dans le nom du service. Un itinéraire qui spécifie **'TRANSPORT'** peut spécifier un nom de service ou d’instance Service Broker.  
   
- Lorsque le *next_hop_address* est le serveur principal pour une mise en miroir de base de données, vous devez également spécifier la clause MIRROR_ADDRESS pour le serveur miroir. Sinon, cet itinéraire ne bascule pas automatiquement sur le serveur miroir.  
+ Quand *next_hop_address* est le serveur principal d’une base de données miroir, vous devez également spécifier la clause MIRROR_ADDRESS pour le serveur miroir. Sinon, cet itinéraire ne bascule pas automatiquement sur le serveur miroir.  
   
 > [!NOTE]  
 >  Cette option n'est pas disponible dans une base de données à relation contenant-contenu.  
   
  MIRROR_ADDRESS **='***next_hop_mirror_address***'**  
- Spécifie l’adresse réseau pour le serveur miroir d’une paire mise en miroir dont le serveur principal est à le *next_hop_address*. Le *next_hop_mirror_address* spécifie une adresse TCP/IP dans le format suivant :  
+ Spécifie l’adresse réseau pour le serveur miroir d’une paire mise en miroir dont le serveur principal se trouve à l’adresse *next_hop_address*. *next_hop_mirror_address* spécifie une adresse TCP/IP au format suivant :  
   
  **TCP://**{ *dns_name* | *netbios_name* | *ip_address* } **:** *port_number*  
   
- Spécifié *numéro_port* doit correspondre au numéro de port pour le [!INCLUDE[ssSB](../../includes/sssb-md.md)] point de terminaison d’une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur l’ordinateur spécifié. Cela peut être obtenu en exécutant la requête ci-après dans la base de données sélectionnée :  
+ Le *port_number* spécifié doit correspondre au numéro de port du point de terminaison de [!INCLUDE[ssSB](../../includes/sssb-md.md)] pour une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur l’ordinateur spécifié. Cela peut être obtenu en exécutant la requête ci-après dans la base de données sélectionnée :  
   
 ```  
 SELECT tcpe.port  
@@ -125,24 +125,24 @@ INNER JOIN sys.service_broker_endpoints AS ssbe
 WHERE ssbe.name = N'MyServiceBrokerEndpoint';  
 ```  
   
- Si la clause MIRROR_ADDRESS est spécifiée, l'itinéraire doit spécifier les clauses SERVICE_NAME et BROKER_INSTANCE. Un itinéraire qui spécifie **'LOCAL'** ou **'TRANSPORT'** pour le *next_hop_address* ne peut pas spécifier une adresse miroir.  
+ Si la clause MIRROR_ADDRESS est spécifiée, l'itinéraire doit spécifier les clauses SERVICE_NAME et BROKER_INSTANCE. Un itinéraire qui spécifie **'LOCAL'** ou **'TRANSPORT'** pour le paramètre *next_hop_address* ne peut pas spécifier une adresse miroir.  
   
 > [!NOTE]  
 >  Cette option n'est pas disponible dans une base de données à relation contenant-contenu.  
   
-## <a name="remarks"></a>Notes  
- La table de routage qui stocke les itinéraires est une table de métadonnées qui peut être lu par le biais du **sys.routes** affichage catalogue. La mise à jour de la table de routage s'effectue uniquement au moyen des instructions CREATE ROUTE, ALTER ROUTE et DROP ROUTE.  
+## <a name="remarks"></a>Notes   
+ La table de routage qui stocke les itinéraires est une table de métadonnées. Elle peut être lue dans la vue de catalogue **sys.routes**. La mise à jour de la table de routage s'effectue uniquement au moyen des instructions CREATE ROUTE, ALTER ROUTE et DROP ROUTE.  
   
  Les clauses qui ne sont pas spécifiées dans la commande ALTER ROUTE restent inchangées. Par conséquent, il n'est pas possible de MODIFIER un itinéraire pour spécifier que ce dernier n'expire pas, qu'il correspond à n'importe quel nom de service ou à n'importe quelle instance de Service Broker. Pour modifier ces caractéristiques d'un itinéraire, vous devez supprimer l'itinéraire existant et en créer un nouveau avec les informations mises à jour.  
   
- Si un itinéraire spécifie **'TRANSPORT'** pour le *next_hop_address*, l’adresse réseau est déterminée en fonction du nom du service. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]traite les noms de service qui commencent par une adresse réseau dans un format qui n’est valide pour un *next_hop_address*. Les services dont les noms contiennent des adresses réseau valides seront acheminés vers l'adresse réseau spécifiée dans le nom de service.  
+ Si un itinéraire spécifie **'TRANSPORT'** pour le paramètre *next_hop_address*, l’adresse réseau est déterminée en fonction du nom du service. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] traite les noms de services qui commencent par une adresse réseau dans un format valide pour *next_hop_address*. Les services dont les noms contiennent des adresses réseau valides seront acheminés vers l'adresse réseau spécifiée dans le nom de service.  
   
  La table de routage peut contenir un nombre illimité d'itinéraires qui spécifient les mêmes service, adresse réseau et/ou identificateur d'instance de Service Broker. Dans ce cas, [!INCLUDE[ssSB](../../includes/sssb-md.md)] sélectionne un itinéraire à l'aide d'une procédure conçue pour rechercher la correspondance la plus précise entre les informations spécifiées dans la conversation et celles de la table de routage.  
   
  L'instruction ALTER AUTHORIZATION permet de modifier l'AUTORISATION pour un service.  
   
 ## <a name="permissions"></a>Autorisations  
- L’autorisation de modification d’un itinéraire par défaut au propriétaire de l’itinéraire, aux membres de la **db_ddladmin** ou **db_owner** fixe des rôles de base de données et les membres de la **sysadmin** rôle serveur fixe.  
+ L’autorisation de modification d’un itinéraire revient par défaut au propriétaire de l’itinéraire, aux membres du rôle de base de données fixe **db_ddladmin** ou **db_owner** et aux membres du rôle serveur fixe **sysadmin**.  
   
 ## <a name="examples"></a>Exemples  
   
@@ -183,7 +183,7 @@ ALTER ROUTE ExpenseRoute
      ADDRESS = 'TCP://www.Adventure-Works.com:1234';  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [CREATE ROUTE &#40;Transact-SQL&#41;](../../t-sql/statements/create-route-transact-sql.md)   
  [DROP ROUTE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-route-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  

@@ -38,7 +38,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="deallocate-transact-sql"></a>DEALLOCATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Supprime une référence de curseur. Lorsque la dernière référence de curseur désallouée, les structures de données contenant le curseur sont publiées par [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  Supprime une référence de curseur. Une fois la dernière référence de curseur désallouée, [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] libère les structures de données contenant le curseur.  
   
  ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -51,12 +51,12 @@ DEALLOCATE { { [ GLOBAL ] cursor_name } | @cursor_variable_name }
   
 ## <a name="arguments"></a>Arguments  
  *cursor_name*  
- Nom d'un curseur déjà déclaré. Si un global et un curseur local portent *cursor_name* comme leur nom, *cursor_name* fait référence au curseur global si GLOBAL est précisé et au curseur local si GLOBAL n’est pas spécifié.  
+ Nom d'un curseur déjà déclaré. Si un curseur global et un curseur local ont tous les deux le même nom *cursor_name*, *cursor_name* fait référence au curseur global si GLOBAL est précisé, et au curseur local dans le cas contraire.  
   
  @*cursor_variable_name*  
- Est le nom d’un **curseur** variable. @*nom_de_variable_de_curseur* doit être de type **curseur**.  
+ Nom d’une variable de **curseur**. @*cursor_variable_name* doit être de type **curseur**.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Les instructions affectant les curseurs font référence à ceux-ci à l'aide d'un nom ou d'une variable de curseur. DEALLOCATE supprime l'association entre un curseur et le nom ou la variable de curseur. S'il s'agit du dernier nom ou de la dernière variable qui référence le curseur, ce dernier est désalloué et les ressources qu'il utilisait sont libérées. DEALLOCATE libère les verrous de défilement qui protègent l'isolation d'extractions. Les verrous de transaction, utilisés pour protéger les mises à jour, notamment les mises à jour pointées par le curseur, sont maintenus jusqu'à la fin de la transaction.  
   
  L'instruction DECLARE CURSOR alloue et associe un curseur à un nom de curseur.  
@@ -85,7 +85,7 @@ SELECT * FROM Person.Person;
     SELECT * FROM Person.Person;  
     ```  
   
- Un DEALLOCATE @*nom_de_variable_de_curseur* instruction supprime uniquement la référence de la variable nommée au curseur. La variable est libérée uniquement lorsqu'elle est hors de portée à la fin d'un lot, d'une procédure stockée ou d'un déclencheur. Après un DEALLOCATE @*nom_de_variable_de_curseur* instruction, la variable peut être associée à un autre curseur à l’aide de l’instruction SET.  
+ Une instruction DEALLOCATE @*cursor_variable_name* supprime uniquement la référence de la variable nommée au curseur. La variable est libérée uniquement lorsqu'elle est hors de portée à la fin d'un lot, d'une procédure stockée ou d'un déclencheur. Après une instruction DEALLOCATE @*cursor_variable_name*, la variable peut être associée à un autre curseur à l’aide d’une instruction SET.  
   
 ```  
 USE AdventureWorks2012;  
@@ -147,7 +147,7 @@ DEALLOCATE @MyCursor;
 GO  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [CLOSE &#40;Transact-SQL&#41;](../../t-sql/language-elements/close-transact-sql.md)   
  [Curseurs](../../relational-databases/cursors.md)   
  [DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)   

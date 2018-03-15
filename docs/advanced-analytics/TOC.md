@@ -1,13 +1,8 @@
-# [Bien démarrer](getting-started-with-machine-learning-services.md)
-
 # Vue d'ensemble
-## [Présentation de Microsoft Machine Learning Services](r/r-services.md)
-## [Nouveautés de Machine Learning](what-s-new-in-sql-server-machine-learning-services.md)
-## [nouvelles articles et articles mises à jour](new-updated-advanced-analytics.md)
-## [Architecture et vue d’ensemble](architecture-overview-machine-learning.md)
-## [Différences dans les fonctionnalités de Machine Learning entre les éditions de SQL Server](r/differences-in-r-features-between-editions-of-sql-server.md)
-
-## [Utilisation de R dans Azure SQL Database](r/using-r-in-azure-sql-database.md)
+## [Qu’est-ce que SQL Server Machine Learning Services ?](what-is-sql-server-machine-learning.md)
+## [Nouvelles fonctionnalités](what-s-new-in-sql-server-machine-learning-services.md)
+## [Vue d’ensemble de l’architecture](architecture-overview-machine-learning.md)
+## [Fonctionnalités par édition](r/differences-in-r-features-between-editions-of-sql-server.md)
 
 # [Machine Learning Services - R](r/sql-server-r-services.md)
 
@@ -97,8 +92,6 @@
 #### [Entraîner et enregistrer le modèle](tutorials/sqldev-py5-train-and-save-a-model-using-t-sql.md)
 #### [Rendre le modèle opérationnel](tutorials/sqldev-py6-operationalize-the-model.md)
 
-### [Python : déployer et utiliser des modèles à l’aide d’un serveur autonome](../advanced-analytics/python/publish-consume-python-code.md)
-
 # [Machine Learning Server - (autonome)](r/r-server-standalone.md)
 ## [Bien démarrer](r/getting-started-with-microsoft-r-server-standalone.md)
 ## [Configurer Machine Learning Server (autonome)](r/create-a-standalone-r-server.md)
@@ -175,6 +168,8 @@
 
 ## [Problèmes connus](known-issues-for-sql-server-machine-learning-services.md)
 ## [Notes de publication](https://docs.microsoft.com/sql/sql-server/sql-server-2017-release-notes)
+## [nouvelles articles et articles mises à jour](new-updated-advanced-analytics.md)
+## [Utilisation de R dans Azure SQL Database](r/using-r-in-azure-sql-database.md)
 
 ## [Conseils pour la configuration et la résolution des problèmes](machine-learning-troubleshooting-faq.md)
 ### [Collecte de données pour la résolution des problèmes](data-collection-ml-troubleshooting-process.md)

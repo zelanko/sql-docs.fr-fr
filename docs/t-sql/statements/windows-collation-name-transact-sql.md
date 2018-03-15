@@ -1,5 +1,5 @@
 ---
-title: Nom de classement Windows (Transact-SQL) | Documents Microsoft
+title: Nom de classement Windows (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -59,31 +59,31 @@ CollationDesignator_<ComparisonStyle>
   
 -   la page de codes utilisée pour stocker les données caractères non-Unicode.  
   
- Certains exemples sont :  
+ Exemples :  
   
 -   Latin1_General ou French : ces deux ensembles de caractères s'appuient sur la page de codes 1252.  
   
 -   Turkish : utilise la page de code 1254.  
   
  *CaseSensitivity*  
- **L’élément de configuration** spécifie pas la casse, **CS** spécifie la casse.  
+ **CI** ne respecte pas la casse, contrairement à **CS**.  
   
  *AccentSensitivity*  
- **AI** spécifie les accents, **AS** spécifie les accents.  
+ **AI** ne respecte pas les accents, contrairement à **AS**.  
   
  *KanatypeSensitive*  
- **Omis** pas les caractères Kana, **KS** les respecte.  
+ **Omitted** ne respecte pas les caractères Kana alors que **KS** les respecte.  
   
  *WidthSensitivity*  
- **Omis** spécifie la largeur de la **WS** spécifie respectent la largeur.  
+ **Omitted** ne tient pas compte des largeurs, contrairement à **WS**.  
   
- **EMPLACEMENT**  
+ **BIN**  
  Indique l'ordre de tri binaire et assurant la compatibilité descendante à utiliser.  
   
  **BIN2**  
  Indique l'ordre de tri binaire utilisant la sémantique de comparaison des points de code.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Selon la version des classements, certains points de code peuvent être non définis. Par exemple, comparez :  
   
 ```  
@@ -103,7 +103,7 @@ GO
   
 -   **Latin1_General_100_**  
   
- Le classement utilise les règles de tri du dictionnaire général Latin1 et établit un mappage à la page de codes 1252. Non-respect de la casse (CI) et respect des accents (AS). Le classement utilise les mappages et les règles de tri du dictionnaire général Latin1 et établit un mappage à la page de codes 1252. Affiche le numéro de version du classement s'il s'agit d'un classement Windows : _90 ou _100. Est la casse (CI) et sensible aux accents (AS).  
+ Le classement utilise les règles de tri du dictionnaire général Latin1 et établit un mappage à la page de codes 1252. Non-respect de la casse (CI) et respect des accents (AS). Le classement utilise les mappages et les règles de tri du dictionnaire général Latin1 et établit un mappage à la page de codes 1252. Affiche le numéro de version du classement s'il s'agit d'un classement Windows : _90 ou _100. Non-respect de la casse (CI) et respect des accents (AS).  
   
 -   **Estonian_CS_AS**  
   
@@ -122,7 +122,7 @@ SELECT * FROM sys.fn_helpcollations() WHERE name NOT LIKE 'SQL%';
   
  Le tableau suivant répertorie tous les classements Windows pris en charge dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
-|Paramètres régionaux Windows|Version de classement 100|Classement version 90|  
+|Paramètres régionaux Windows|Classement version 100|Classement version 90|  
 |--------------------|---------------------------|--------------------------|  
 |Alsacien (France)|Latin1_General_100_|Non disponible|  
 |Amharique (Éthiopie)|Latin1_General_100_|Non disponible|  
@@ -173,7 +173,7 @@ SELECT * FROM sys.fn_helpcollations() WHERE name NOT LIKE 'SQL%';
 |Mohawk (Canada)|Mohawk_100_|Non disponible|  
 |Mongol (République populaire de Chine)|Cyrillic_General_100_|Non disponible|  
 |Népalais (Népal)|Nepali_100_<sup>1</sup>|Non disponible|  
-|Norvégien (Bokmål, Norvège)|Norwegian_100_|Non disponible|  
+|Norvégien (bokmål, Norvège)|Norwegian_100_|Non disponible|  
 |Norvégien (Nynorsk, Norvège)|Norwegian_100_|Non disponible|  
 |Occitan (France)|French_100_|Non disponible|  
 |Oriya (Inde)|Indic_General_100_<sup>1</sup>|Non disponible|  
@@ -188,7 +188,7 @@ SELECT * FROM sys.fn_helpcollations() WHERE name NOT LIKE 'SQL%';
 |Same de Lule (Norvège)|Sami_Norway_100_|Non disponible|  
 |Same de Lule (Suède)|Sami_Sweden_Finland_100_|Non disponible|  
 |Same du nord (Finlande)|Sami_Sweden_Finland_100_|Non disponible|  
-|Sami (du Nord, Norvège)|Sami_Norway_100_|Non disponible|  
+|Same du nord (Norvège)|Sami_Norway_100_|Non disponible|  
 |Same du nord (Suède)|Sami_Sweden_Finland_100_|Non disponible|  
 |Same de Skolt (Finlande)|Sami_Sweden_Finland_100_|Non disponible|  
 |Same du sud (Norvège)|Sami_Norway_100_|Non disponible|  
@@ -224,18 +224,18 @@ SELECT * FROM sys.fn_helpcollations() WHERE name NOT LIKE 'SQL%';
 |Déconseillé, non disponible au niveau serveur dans [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ou les versions ultérieures|Lithuanian_Classic|Lithuanian_Classic|  
 |Déconseillé, non disponible au niveau serveur dans [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ou les versions ultérieures|Macedonian|Macedonian|  
   
- <sup>1</sup>les classements Windows Unicode seulement seulement peuvent être appliqués aux données au niveau des colonnes ou au niveau de l’expression. Ils ne peuvent pas être utilisés en tant que classements de serveur ou de base de données.  
+ <sup>1</sup> Les classements Windows Unicode seulement ne peuvent être appliqués qu’à des données de niveau colonne ou de niveau expression. Ils ne peuvent pas être utilisés en tant que classements de serveur ou de base de données.  
   
- <sup>2</sup>telles que le classement chinois (Taiwan), chinois (Macao) utilise les règles du chinois simplifié ; contrairement au chinois (Taiwan), il utilise la page de codes 950.  
+ <sup>2</sup>Comme le classement chinois (Taiwan), le chinois (Macao) utilise les règles du chinois simplifié ; contrairement au chinois (Taiwan), il utilise la page de codes 950.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Prise en charge d'Unicode et du classement](../../relational-databases/collations/collation-and-unicode-support.md)   
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
- [Constantes &#40; Transact-SQL &#41;](../../t-sql/data-types/constants-transact-sql.md)   
+ [Constantes &#40;Transact-SQL&#41;](../../t-sql/data-types/constants-transact-sql.md)   
  [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)   
  [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
  [DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)   
- [table &#40; Transact-SQL &#41;](../../t-sql/data-types/table-transact-sql.md)   
+ [table &#40;Transact-SQL&#41;](../../t-sql/data-types/table-transact-sql.md)   
  [sys.fn_helpcollations &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md)  
   
   

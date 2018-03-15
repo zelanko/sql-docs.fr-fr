@@ -1,5 +1,5 @@
 ---
-title: "La file d’attente de ALTER (Transact-SQL) | Documents Microsoft"
+title: ALTER QUEUE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 05/01/2016
 ms.prod: sql-non-specified
@@ -93,10 +93,10 @@ WITH
   
 ## <a name="arguments"></a>Arguments  
  *database_name* (objet)  
- Nom de la base de données contenant la file d'attente à modifier. Lorsqu’aucun *nom_base_de_données* est fourni, l’emplacement par défaut pour la base de données actuelle.  
+ Nom de la base de données contenant la file d'attente à modifier. Quand aucun argument *database_name* n’est fourni, la base de données active est utilisée par défaut.  
   
- *schema_name* (object)  
- Nom du schéma auquel la nouvelle file d'attente appartient. Lorsqu’aucun *schema_name* est fourni, l’emplacement par défaut pour le schéma par défaut pour l’utilisateur actuel.  
+ *schema_name* (objet)  
+ Nom du schéma auquel la nouvelle file d'attente appartient. Quand aucun argument *schema_name* n’est fourni, le schéma par défaut de l’utilisateur actif est utilisé par défaut.  
   
  *queue_name*  
  Nom de la file d'attente à modifier.  
@@ -108,7 +108,7 @@ WITH
  Spécifie le paramètre de rétention pour la file d'attente. Si le paramètre RETENTION = ON (activé), tous les messages des conversations qui ont été envoyés ou reçus sont conservés dans la file d'attente jusqu'à ce que les conversations s'achèvent. Vous pouvez ainsi conserver les messages pour effectuer des audits ou procéder à des transactions de compensation si une erreur se produit.  
   
 > [!NOTE]  
->  Si RETENTION = ON peut réduire les performances. Ce paramètre doit être utilisé seulement s'il est nécessaire pour satisfaire au contrat de niveau de service pour l'application.  
+>  Les performances peuvent diminuer si RETENTION = ON. Ce paramètre doit être utilisé seulement s'il est nécessaire pour satisfaire au contrat de niveau de service pour l'application.  
   
  ACTIVATION  
  Spécifie des informations sur la procédure stockée qui est activée pour traiter les messages arrivant dans cette file d'attente.  
@@ -119,23 +119,23 @@ WITH
  REBUILD [ WITH \<queue_rebuild_options> ]  
  **S'applique à**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- Reconstruit tous les index sur la table interne de file d’attente. Utilisez cette fonction lorsque vous rencontrez des problèmes de fragmentation en raison d’une charge élevée. MAXDOP est l’option rebuild de la file d’attente pris en charge uniquement. RECONSTRUCTION est toujours une opération hors connexion.  
+ Reconstruit tous les index sur la table interne de file d’attente. Utilisez cette fonction quand vous rencontrez des problèmes de fragmentation en raison d’une charge élevée. MAXDOP est la seule option de reconstruction de file d’attente prise en charge. REBUILD est toujours une opération hors connexion.  
   
- RÉORGANISER [AVEC (LOB_COMPACTION = {ON | OFF})]  
+ REORGANIZE [ WITH ( LOB_COMPACTION = { ON | OFF } ) ]  
  **S'applique à**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Réorganiser tous les index sur la table interne de file d’attente.   
-Contrairement à RÉORGANISER dans les tables utilisateur, RÉORGANISER sur une file d’attente est toujours effectuée comme une opération hors connexion, car les verrous de page sont explicitement désactivés sur les files d’attente.  
+Contrairement à REORGANIZE sur les tables utilisateur, REORGANIZE sur une file d’attente est toujours exécutée comme opération hors connexion, car les verrous de page sont explicitement désactivés sur les files d’attente.  
   
 > [!TIP]  
->  Pour obtenir des instructions générales concernant la fragmentation des index, lors de la fragmentation est comprise entre 5 et 30 %, réorganiser l’index. Lors de la fragmentation est supérieure à 30 %, reconstruisez l’index. Toutefois, ces numéros sont uniquement pour des conseils généraux en tant que point de départ pour votre environnement. Pour déterminer la quantité de fragmentation d’index, utilisez [sys.dm_db_index_physical_stats &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md) -voir exemple G dans cet article pour obtenir des exemples.  
+>  En guise de recommandation générale concernant la fragmentation des index, quand la fragmentation est comprise entre 5 et 30 %, réorganisez l’index. Quand la fragmentation est supérieure à 30 %, reconstruisez l’index. Ces nombres ne constituent que des recommandations d’ordre général, à utiliser comme point de départ pour votre environnement. Pour déterminer la quantité de fragmentation d’index, utilisez [sys.dm_db_index_physical_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md) (voir l’exemple G dans cet article pour obtenir des exemples).  
   
  MOVE TO { *file_group* | "default" }  
  **S'applique à**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- Déplace la table interne de la file d’attente (avec ses index) à un groupe de fichiers spécifié par l’utilisateur.  Le nouveau groupe de fichiers ne doit pas être en lecture seule.  
+ Déplace la table interne de file d’attente (avec ses index) vers un groupe de fichiers spécifié par l’utilisateur.  Le nouveau groupe de fichiers ne doit pas être en lecture seule.  
   
- Nom_procédure = \<procédure >  
+ PROCEDURE_NAME = \<procedure>  
  Spécifie le nom de la procédure stockée à activer lorsque la file d'attente contient des messages à traiter. Cette valeur doit être un identificateur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  *database_name* (procédure)  
@@ -145,10 +145,10 @@ Contrairement à RÉORGANISER dans les tables utilisateur, RÉORGANISER sur une 
  Nom du schéma propriétaire de la procédure stockée.  
   
  *stored_procedure_name*  
- Est le nom de la procédure stockée.  
+ Nom de la procédure stockée.  
   
  MAX_QUEUE_READERS =*max_reader*  
- Précise le nombre maximal d'instances de la procédure stockée d'activation lancées simultanément par la file d'attente. La valeur de *max_readers* doit être un nombre compris entre 0 et 32 767.  
+ Précise le nombre maximal d'instances de la procédure stockée d'activation lancées simultanément par la file d'attente. La valeur de *max_readers* doit être comprise entre 0 et 32 767.  
   
  EXECUTE AS  
  Spécifie le compte d'utilisateur de la base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sous lequel la procédure stockée d'activation s'exécute. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] doit être en mesure de contrôler les autorisations de cet utilisateur au moment où la file d'attente active la procédure stockée. Pour un utilisateur de domaine Windows, le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] doit être connecté au domaine et pouvoir valider les autorisations de l'utilisateur spécifié lorsque la procédure est activée ou que l'activation échoue. Pour un utilisateur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], le serveur peut toujours vérifier les autorisations.  
@@ -157,7 +157,7 @@ Contrairement à RÉORGANISER dans les tables utilisateur, RÉORGANISER sur une 
  Spécifie que la procédure stockée s'exécute en tant qu'utilisateur actuel. (Principal de la base de données exécutant cette instruction ALTER QUEUE.)  
   
  '*user_name*'  
- Est le nom de l’utilisateur qui exécute la procédure stockée. *user_name* doit être un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilisateur spécifié comme un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] identificateur. L’utilisateur actuel doit avoir l’autorisation IMPERSONATE pour la *nom_utilisateur* spécifié.  
+ Nom de l’utilisateur sous lequel la procédure stockée s’exécute. Le paramètre *user_name* doit être un utilisateur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] valide spécifié en tant qu’identificateur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. L’utilisateur actuel doit disposer de l’autorisation IMPERSONATE pour la valeur de *user_name* spécifiée.  
   
  OWNER  
  Spécifie que la procédure stockée s'exécute en tant que propriétaire de la file d'attente.  
@@ -170,14 +170,14 @@ Contrairement à RÉORGANISER dans les tables utilisateur, RÉORGANISER sur une 
   
  Une file d'attente dont la gestion des messages incohérents a la valeur OFF ne sera pas désactivée après cinq restaurations de transactions consécutives. L'application peut ainsi définir un système personnalisé de gestion des messages incohérents.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Si une file d'attente dotée d'une procédure stockée d'activation spécifiée contient des messages, le fait de basculer l'état d'activation de OFF (désactivé) en ON (activé) déclenche immédiatement la procédure stockée d'activation. Le fait de repasser l'état d'activation de ON à OFF arrête l'activation d'instances de la procédure stockée par le broker, mais n'arrête pas les instances de la procédure stockée en cours d'exécution à ce moment-là.  
   
  La modification d'une file d'attente pour ajouter une procédure stockée d'activation ne change pas l'état d'activation de la file d'attente. La modification de la procédure stockée d'activation pour la file d'attente n'a pas d'incidence sur les instances de la procédure stockée en cours d'exécution à ce moment-là.  
   
  [!INCLUDE[ssSB](../../includes/sssb-md.md)] vérifie le nombre maximal d'agents de lecture pour une file d'attente dans le cadre du processus d'activation. Ainsi, la modification d'une file d'attente en vue d'augmenter le nombre maximal d'agents de lecture la file d'attente permet à [!INCLUDE[ssSB](../../includes/sssb-md.md)] de lancer immédiatement davantage d'instances de la procédure stockée d'activation. La modification d'une file d'attente pour diminuer le nombre maximal de lecteurs de file d'attente n'a pas d'incidence sur les instances de la procédure stockée d'activation en cours d'exécution à ce moment-là. [!INCLUDE[ssSB](../../includes/sssb-md.md)] ne lance cependant pas de nouvelles instances de la procédure stockée tant que le nombre d'instances de la procédure stockée d'activation ne retombe pas en-dessous de la limite maximale configurée.  
   
- Lorsqu'une file d'attente est indisponible, [!INCLUDE[ssSB](../../includes/sssb-md.md)] conserve les messages destinés aux services qui utilisent cette file dans la file d'attente de transmission de la base de données. Le [sys.transmission_queue](../../relational-databases/system-catalog-views/sys-transmission-queue-transact-sql.md) affichage catalogue fournit une vue de la file d’attente de transmission.  
+ Lorsqu'une file d'attente est indisponible, [!INCLUDE[ssSB](../../includes/sssb-md.md)] conserve les messages destinés aux services qui utilisent cette file dans la file d'attente de transmission de la base de données. La vue de catalogue [sys.transmission_queue](../../relational-databases/system-catalog-views/sys-transmission-queue-transact-sql.md) donne une vue de la file d’attente de transmission.  
   
  Si une instruction RECEIVE ou GET CONVERSATION GROUP spécifie une file d'attente indisponible, cette instruction échoue et une erreur [!INCLUDE[tsql](../../includes/tsql-md.md)] se produit.  
   
@@ -234,27 +234,27 @@ ALTER QUEUE ExpenseQueue WITH RETENTION = ON ;
 ALTER QUEUE ExpenseQueue WITH ACTIVATION (DROP) ;  
 ```  
   
-### <a name="g-rebuilding-queue-indexes"></a>G. La reconstruction des index de la file d’attente  
+### <a name="g-rebuilding-queue-indexes"></a>G. Reconstruction d’index de file d’attente  
   
 **S'applique à**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- L’exemple suivant reconstruit des index de la file d’attente  
+ L’exemple suivant reconstruit des index de file d’attente.  
   
 ```  
 ALTER QUEUE ExpenseQueue REBUILD WITH (MAXDOP = 2)   
 ```  
   
-### <a name="h-reorganizing-queue-indexes"></a>H. Réorganisation des index de la file d’attente  
+### <a name="h-reorganizing-queue-indexes"></a>H. Réorganisation d’index de file d’attente  
   
 **S'applique à**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- L’exemple suivant réorganise les index de la file d’attente  
+ L’exemple suivant réorganise des index de file d’attente.  
   
 ```  
 ALTER QUEUE ExpenseQueue REORGANIZE   
 ```  
   
-### <a name="i-moving-queue-internal-table-to-another-filegroup"></a>Faire : déplacer la table interne de file d’attente à un autre groupe de fichiers  
+### <a name="i-moving-queue-internal-table-to-another-filegroup"></a>I : Déplacement d’une table interne de file d’attente vers un autre groupe de fichiers  
   
 **S'applique à**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
@@ -262,7 +262,7 @@ ALTER QUEUE ExpenseQueue REORGANIZE
 ALTER QUEUE ExpenseQueue MOVE TO [NewFilegroup]   
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [CREATE QUEUE &#40;Transact-SQL&#41;](../../t-sql/statements/create-queue-transact-sql.md)   
  [DROP QUEUE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-queue-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   

@@ -1,5 +1,5 @@
 ---
-title: LAG (Transact-SQL) | Documents Microsoft
+title: LAG (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 11/09/2017
 ms.prod: sql-non-specified
@@ -35,9 +35,9 @@ ms.lasthandoff: 01/02/2018
 # <a name="lag-transact-sql"></a>LAG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
-  Accède aux données à partir d’une ligne précédente dans le même jeu de résultats sans l’utilisation d’une jointure réflexive partant [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. LAG permet d'accéder à une ligne à un décalage physique donné qui précède la ligne actuelle. Utilisez cette fonction analytique dans une instruction SELECT pour comparer des valeurs sur la ligne actuelle avec des valeurs sur une ligne précédente.  
+  Accède aux données d’une ligne précédente dans le même jeu de résultats sans recourir à une jointure réflexive, à compter de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. LAG permet d'accéder à une ligne à un décalage physique donné qui précède la ligne actuelle. Utilisez cette fonction analytique dans une instruction SELECT pour comparer des valeurs sur la ligne actuelle avec des valeurs sur une ligne précédente.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "icône lien de rubrique") [Conventions de syntaxe Transact-SQL &#40; Transact-SQL &#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône Lien de rubrique") [Conventions de la syntaxe Transact-SQL &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -50,17 +50,17 @@ LAG (scalar_expression [,offset] [,default])
  *scalar_expression*  
  Valeur à retourner en fonction du décalage spécifié. Il s'agit d'une expression de tout type qui retourne une valeur (scalaire) unique. *scalar_expression* ne peut pas être une fonction analytique.  
   
- *décalage*  
- Nombre de lignes en arrière de la ligne actuelle à partir de laquelle obtenir une valeur. Si cet argument n'est pas spécifié, la valeur par défaut est 1. *décalage* peut être une colonne, une sous-requête ou toute autre expression qui correspond à un entier positif ou peut être converti implicitement en **bigint**. *décalage* ne peut pas être une valeur négative ou une fonction analytique.  
+ *offset*  
+ Nombre de lignes en arrière de la ligne actuelle à partir de laquelle obtenir une valeur. Si cet argument n'est pas spécifié, la valeur par défaut est 1. *offset* peut être une colonne, une sous-requête ou une autre expression qui aboutit à un entier positif ou peut être converti en **bigint**. *offset* ne peut pas être une valeur négative ou une fonction analytique.  
   
- *par défaut*  
- La valeur à retourner lorsque *scalar_expression* à *offset* a la valeur NULL. Si aucune valeur par défaut n'est spécifiée, la valeur NULL est renvoyée. *par défaut* peut être une colonne, une sous-requête ou toute autre expression, mais il ne peut pas être une fonction analytique. *par défaut* doit être compatible avec *scalar_expression*.  
+ *default*  
+ Valeur à renvoyer lorsque *scalar_expression* pour *offset* a la valeur NULL. Si aucune valeur par défaut n'est spécifiée, la valeur NULL est renvoyée. *default* peut être une colonne, une sous-requête ou une autre expression, mais ne peut pas être une fonction analytique. *default* doit être compatible en matière de type avec *scalar_expression*.  
   
- SUR **(** [ *partition_by_clause* ] *order_by_clause***)**  
- *partition_by_clause* divise le jeu de résultats généré par la clause FROM en partitions auxquelles la fonction est appliquée. S'il n'est pas spécifié, la fonction gère toutes les lignes du jeu de résultats de la requête en un seul groupe. *order_by_clause* détermine l’ordre des données avant que la fonction est appliquée. Si *partition_by_clause* est spécifié, il détermine l’ordre des données dans la partition. Le *order_by_clause* est requis. Pour plus d’informations, consultez [la Clause OVER &#40; Transact-SQL &#41; ](../../t-sql/queries/select-over-clause-transact-sql.md).  
+ OVER **(** [ *partition_by_clause* ] *order_by_clause***)**  
+ *partition_by_clause* divise le jeu de résultats généré par la clause FROM en partitions auxquelles la fonction est appliquée. S'il n'est pas spécifié, la fonction gère toutes les lignes du jeu de résultats de la requête en un seul groupe. *order_by_clause* détermine l’ordre des données avant que la fonction soit appliquée. Si *partition_by_clause* est spécifié, il détermine l’ordre des données dans la partition. *order_by_clause* est requis. Pour plus d’informations, consultez [OVER, clause &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md).  
   
 ## <a name="return-types"></a>Types de retour  
- Le type de données spécifié *scalar_expression*. Valeur NULL est retournée si *scalar_expression* est nullable ou *par défaut* est définie sur NULL.  
+ Type de données de l’argument *scalar_expression* spécifié. La valeur NULL est renvoyée si *scalar_expression* est de type nullable ou si *default* est défini sur NULL.  
   
 ## <a name="general-remarks"></a>Remarques d'ordre général  
  LAG n'est pas déterministe. Pour plus d’informations, consultez [Fonctions déterministes et non déterministes](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md).  
@@ -145,10 +145,10 @@ b           c           i
 1           5           NULL  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemples : [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] et[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemples : [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] et [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="d-compare-values-between-quarters"></a>D: comparer des valeurs entre les trimestres  
- L’exemple suivant illustre la fonction LAG. La requête utilise la fonction LAG pour retourner la différence dans les quotas de ventes pour un employé spécifique sur trimestres précédents de calendrier. Notez que la valeur par défaut zéro (0) est retournée en raison de l'absence d'une valeur de décalage pour la première ligne.  
+### <a name="d-compare-values-between-quarters"></a>D. Comparer des valeurs entre des trimestres  
+ L’exemple suivant illustre la fonction LAG. La requête utilise la fonction LAG pour renvoyer la différence dans les quotas de ventes pour un employé spécifique sur les trimestres calendaires précédents. Notez que la valeur par défaut zéro (0) est retournée en raison de l'absence d'une valeur de décalage pour la première ligne.  
   
 ```sql   
 -- Uses AdventureWorks  
@@ -174,8 +174,8 @@ Year Quarter  SalesQuota  PrevQuota  Diff
 2002 4       154000.0000   7000.0000   84000.0000
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- [PROSPECT &#40; Transact-SQL &#41;](../../t-sql/functions/lead-transact-sql.md)  
+## <a name="see-also"></a> Voir aussi  
+ [LEAD &#40;Transact-SQL&#41;](../../t-sql/functions/lead-transact-sql.md)  
   
   
 

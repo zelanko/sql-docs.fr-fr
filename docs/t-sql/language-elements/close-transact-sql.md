@@ -49,10 +49,10 @@ CLOSE { { [ GLOBAL ] cursor_name } | cursor_variable_name }
   
 ## <a name="arguments"></a>Arguments  
  GLOBAL  
- Spécifie que *cursor_name* fait référence à un curseur global.  
+ Indique que *cursor_name* fait référence à un curseur global.  
   
  *cursor_name*  
- Nom d'un curseur ouvert. Si un global et un curseur local portent *cursor_name* comme leur nom, *cursor_name* fait référence au curseur global si GLOBAL est spécifié ; sinon, *cursor_name* fait référence au curseur local.  
+ Nom d'un curseur ouvert. Si un curseur global et un curseur local ont tous les deux le même nom *cursor_name*, *cursor_name* fait référence au curseur global si GLOBAL est spécifié ; sinon, *cursor_name* fait référence au curseur local.  
   
  *cursor_variable_name*  
  Nom d'une variable de curseur associée à un curseur ouvert.  
@@ -74,7 +74,7 @@ DEALLOCATE Employee_Cursor;
 GO  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Curseurs](../../relational-databases/cursors.md)   
  [Curseurs &#40;Transact-SQL&#41;](../../t-sql/language-elements/cursors-transact-sql.md)   
  [DEALLOCATE &#40;Transact-SQL&#41;](../../t-sql/language-elements/deallocate-transact-sql.md)   

@@ -1,5 +1,5 @@
 ---
-title: "STConvexHull (Type de données geography) | Documents Microsoft"
+title: "STConvexHull (type de données geography) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -31,7 +31,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stconvexhull-geography-data-type"></a>STConvexHull (type de données geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Retourne un objet qui représente la forme convexe d’une **geography** instance.  
+  Retourne un objet qui représente l’enveloppe convexe d’une instance **geography**.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -41,21 +41,21 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>Types de retour  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]type de retour : **geography**  
+ Type de retour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] : **geography**  
   
  Type de retour CLR : **SqlGeography**  
   
-## <a name="remarks"></a>Notes  
- Retourne un `FullGlobe` pour l’objet **geography** instance qui a un angle d’enveloppe supérieur à 90 degrés.  
+## <a name="remarks"></a>Notes   
+ Retourne un objet `FullGlobe` pour l’instance **geography** qui a un angle d’enveloppe supérieur à 90 degrés.  
   
- Retourne une **geography** collection vide **geography** instance.  
+ Retourne une collection **geography** vide pour une instance **geography** vide.  
   
- Retourne **null** pour non initialisé **geography** instance.  
+ Retourne **null** pour une instance **geography** non initialisée.  
   
 ## <a name="examples"></a>Exemples  
   
 ### <a name="a-using-stconvexhull-on-an-uninitialized-geography-instance"></a>A. Utilisation de STConvexHull() sur une instance géographique non initialisée  
- L’exemple suivant utilise `STConvexHull()` sur non initialisé **geography** instance.  
+ L’exemple suivant utilise `STConvexHull()` sur une instance **geography** non initialisée.  
   
 ```
  DECLARE @g geography;  
@@ -80,7 +80,7 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ### <a name="d-finding-the-convex-hull-on-a-geography-instance-with-an-envelope-angle-larger-than-90-degrees"></a>D. Recherche de la forme convexe sur une instance géographique avec un angle d'enveloppe supérieur à 90 degrés  
- L’exemple suivant utilise `STConvexHull()` sur un **geography** instance avec un angle d’enveloppe supérieur à 90 degrés.  
+ L’exemple suivant utilise `STConvexHull()` sur une instance **geography** avec un angle d’enveloppe supérieur à 90 degrés.  
   
 ```
  DECLARE @g geography = 'POLYGON((20.533 46.566, -18.283 46.1, -22.3 47.45, 20.533 46.566))';  

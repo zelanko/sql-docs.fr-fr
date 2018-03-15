@@ -1,5 +1,5 @@
 ---
-title: + (Plus unaire) (Transact-SQL) | Documents Microsoft
+title: + (Plus unaire) (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/13/2017
 ms.prod: sql-non-specified
@@ -37,7 +37,7 @@ ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="unary-operators---positive"></a>Opérateurs unaires - positif
+# <a name="unary-operators---positive"></a>Opérateurs unaires - Positif
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 Retourne la valeur d'une expression numérique (un opérateur unaire). Les opérateurs unaires effectuent une opération sur une seule expression de n'importe quel type de données de la catégorie des types numériques.   
@@ -61,13 +61,13 @@ Retourne la valeur d'une expression numérique (un opérateur unaire). Les opér
   
 ## <a name="arguments"></a>Arguments  
  *numeric_expression*  
- Valide [expression](../../t-sql/language-elements/expressions-transact-sql.md) de tout des données de type dans la catégorie de type de données numériques, sauf le **datetime** et **smalldatetime** des types de données.  
+ Toute [expression](../../t-sql/language-elements/expressions-transact-sql.md) valide de l’un des types de données de la catégorie numérique, sauf les types de données **datetime** et **smalldatetime**.  
   
 ## <a name="result-types"></a>Types des résultats  
  Retourne le type de données *numeric_expression*.  
   
-## <a name="remarks"></a>Notes  
- Bien qu'un plus unaire puisse apparaître avant n'importe quelle expression, il n'effectue aucune opération sur la valeur retournée de l'expression. Plus précisément, il ne retourne pas la valeur positive d'une expression négative. Pour retourner une valeur positive d’une expression négative, utilisez la [ABS](../../t-sql/functions/abs-transact-sql.md) (fonction).  
+## <a name="remarks"></a>Notes   
+ Bien qu'un plus unaire puisse apparaître avant n'importe quelle expression, il n'effectue aucune opération sur la valeur retournée de l'expression. Plus précisément, il ne retourne pas la valeur positive d'une expression négative. Pour retourner la valeur positive d’une expression négative, utilisez la fonction [ABS](../../t-sql/functions/abs-transact-sql.md).  
   
 ## <a name="examples"></a>Exemples  
   
@@ -111,10 +111,10 @@ GO
 (1 row(s) affected)  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Types de données &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
  [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
- [Operators &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
+ [Opérateurs &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
  [ABS &#40;Transact-SQL&#41;](../../t-sql/functions/abs-transact-sql.md)  
   
   

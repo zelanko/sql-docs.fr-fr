@@ -59,12 +59,12 @@ IF Boolean_expression
   
  Pour définir un bloc d'instructions, utilisez les mots clés de contrôle de flux BEGIN et END.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Une construction IF...ELSE peut être utilisée dans des traitements d'instructions, des procédures stockées et des requêtes ad hoc. Lorsque cette construction est utilisée dans une procédure stockée, elle est souvent utilisée pour rechercher la présence de certains paramètres.  
   
  Les tests de la condition IF peuvent être imbriqués après une autre condition IF ou après une condition ELSE. La limite concernant le nombre de niveaux imbriqués dépend de la mémoire disponible.  
   
-## <a name="example"></a>Exemple  
+## <a name="example"></a> Exemple  
   
 ```  
 IF DATENAME(weekday, GETDATE()) IN (N'Saturday', N'Sunday')
@@ -73,10 +73,10 @@ ELSE
        SELECT 'Weekday';
 ```  
   
- Pour plus d’exemples, consultez [ELSE &#40; si... AUTRE &#41; &#40; Transact-SQL &#41; ](../../t-sql/language-elements/else-if-else-transact-sql.md).  
+ Pour plus d’exemples, consultez [ELSE &#40;IF...ELSE&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/else-if-else-transact-sql.md).  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemples : [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] et[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- L’exemple suivant utilise `IF…ELSE` pour déterminer lequel des deux réponses permettant à l’utilisateur, en fonction du poids d’un élément dans le `DimProduct` table.  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemples : [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] et [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+ L’exemple suivant utilise `IF…ELSE` pour déterminer quelle réponse donner à l’utilisateur entre deux réponses, en fonction du poids d’un élément dans la table `DimProduct`.  
   
 ```  
 -- Uses AdventureWorksDW  
@@ -97,13 +97,13 @@ ELSE
     FROM DimProduct WHERE ProductKey = @productKey);  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [BEGIN...END &#40;Transact-SQL&#41;](../../t-sql/language-elements/begin-end-transact-sql.md)   
  [END &#40;BEGIN...END&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/end-begin-end-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [WHILE &#40;Transact-SQL&#41;](../../t-sql/language-elements/while-transact-sql.md)   
  [CASE &#40;Transact-SQL&#41;](../../t-sql/language-elements/case-transact-sql.md)   
- [Langage de contrôle de flux &#40; Transact-SQL &#41; ](~/t-sql/language-elements/control-of-flow.md) [ELSE &#40; si... AUTRE &#41; &#40; Transact-SQL &#41;](../../t-sql/language-elements/else-if-else-transact-sql.md) 
+ [Langage de contrôle de flux &#40;Transact-SQL&#41;](~/t-sql/language-elements/control-of-flow.md) [ELSE &#40;IF...ELSE&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/else-if-else-transact-sql.md) 
   
   
 

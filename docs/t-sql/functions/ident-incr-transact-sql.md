@@ -1,5 +1,5 @@
 ---
-title: IDENT_INCR (Transact-SQL) | Documents Microsoft
+title: IDENT_INCR (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -36,7 +36,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="identincr-transact-sql"></a>IDENT_INCR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Retourne la valeur d’incrément (retourné en tant que **numérique** (**@@**MAXPRECISION, 0)) spécifiée lors de la création d’une colonne d’identité dans une table ou une vue possédant une colonne d’identité.  
+  Renvoie la valeur incrémentielle (sous la forme **numeric** (**@@**MAXPRECISION,0)) spécifiée lors de la création d’une colonne d’identité dans une table ou une vue ayant une colonne d’identité.  
   
  ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -48,8 +48,8 @@ IDENT_INCR ( 'table_or_view' )
 ```  
   
 ## <a name="arguments"></a>Arguments  
- **'** *table_ou_vue* **'**  
- Est un [expression](../../t-sql/language-elements/expressions-transact-sql.md) spécifiant la table ou la vue dans laquelle une valeur incrément d’identité valide. *table_ou_vue* peut être une constante de chaîne de caractères placée entre guillemets, une variable, une fonction ou un nom de colonne. *table_ou_vue* est **char**, **nchar**, **varchar**, ou **nvarchar**.  
+ **'** *table_or_view* **'**  
+ [Expression](../../t-sql/language-elements/expressions-transact-sql.md) qui spécifie la table ou la vue dans laquelle rechercher une valeur incrémentielle d’identité valide. *table_or_view* peut être une constante de type chaîne de caractères entre guillemets, une variable, une fonction ou un nom de colonne. *table_or_view* est de type **char**, **nchar**, **varchar** ou **nvarchar**.  
   
 ## <a name="return-types"></a>Types de retour  
  **numeric**  
@@ -98,12 +98,12 @@ dbo                 AWBuildVersion                     1
 Production          BillOfMaterials                    1
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- [Expressions &#40; Transact-SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
+## <a name="see-also"></a> Voir aussi  
+ [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
  [Fonctions système &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)   
  [IDENT_CURRENT &#40;Transact-SQL&#41;](../../t-sql/functions/ident-current-transact-sql.md)   
- [IDENT_SEED &#40; Transact-SQL &#41;](../../t-sql/functions/ident-seed-transact-sql.md)   
+ [IDENT_SEED &#40;Transact-SQL&#41;](../../t-sql/functions/ident-seed-transact-sql.md)   
  [DBCC CHECKIDENT &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-checkident-transact-sql.md)   
- [Sys.identity_columns &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-identity-columns-transact-sql.md)  
+ [sys.identity_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-identity-columns-transact-sql.md)  
   
   

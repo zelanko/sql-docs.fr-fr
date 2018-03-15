@@ -1,5 +1,5 @@
 ---
-title: "STWithin (Type de données geometry) | Documents Microsoft"
+title: "STWithin (type de données geometry) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stwithin-geometry-data-type"></a>STWithin (type de données geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Retourne 1 si une **geometry** instance est complètement dans une autre **geometry** instance ; sinon, retourne 0. Le `STWithin` commande respecte la casse.
+Retourne 1 si une instance **geometry** est située complètement dans une autre instance **geometry** ; sinon, retourne 0. La commande `STWithin` respecte la casse.
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -45,15 +45,15 @@ Retourne 1 si une **geometry** instance est complètement dans une autre **geome
   
 ## <a name="arguments"></a>Arguments  
  *other_geometry*  
- Une autre **geometry** instance à comparer à l’instance sur laquelle `STWithin()` est appelé.  
+ Autre instance **geometry** à comparer à l’instance sur laquelle `STWithin()` est appelé.  
   
 ## <a name="return-types"></a>Types de retour  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]type de retour : **bits**  
+ Type de retour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] : **bit**  
   
  Type de retour CLR : **SqlBoolean**  
   
-## <a name="remarks"></a>Notes  
- Cette méthode retourne toujours null si l’ID de référence spatiale (SRID) de la **geometry** instances ne correspondent pas.
+## <a name="remarks"></a>Notes   
+ Cette méthode retourne toujours une valeur Null si les SRID (ID de référence spatiale) des instances **geometry** ne correspondent pas.
   
 ## <a name="examples"></a>Exemples  
  L'exemple suivant utilise `STWithin()` pour tester deux instances `geometry` pour voir si la première instance est complètement dans la deuxième instance.  
@@ -66,7 +66,7 @@ SET @h = geometry::STGeomFromText('POLYGON((1 1, 3 1, 3 3, 1 3, 1 1))', 0);
 SELECT @g.STWithin(@h);  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Vue d’ensemble des index spatiaux](../../relational-databases/spatial/spatial-indexes-overview.md)   
  [Méthodes OGC sur des instances geography](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   

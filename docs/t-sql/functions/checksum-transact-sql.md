@@ -1,5 +1,5 @@
 ---
-title: "Somme de contrôle (Transact-SQL) | Documents Microsoft"
+title: CHECKSUM (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
@@ -48,15 +48,15 @@ CHECKSUM ( * | expression [ ,...n ] )
   
 ## <a name="arguments"></a>Arguments  
 \*  
-Spécifie que le calcul concerne toutes les colonnes de la table. CHECKSUM retourne une erreur si une colonne est d'un type de données non comparable. Types de données incomparables sont **texte**, **ntext**, **image**, XML, et **curseur**et également **sql_variant** avec l’un des types énumérés en tant que son type de base.
+Spécifie que le calcul concerne toutes les colonnes de la table. CHECKSUM retourne une erreur si une colonne est d'un type de données non comparable. Les types de données non comparables sont **text**, **ntext**, **image**, XML et **cursor**, ainsi que **sql_variant** lorsque ce dernier utilise comme type de base l’un des types précédents.
   
 *expression*  
-Est un [expression](../../t-sql/language-elements/expressions-transact-sql.md) de n’importe quel type, à l’exception d’un type de données non comparable.
+[Expression](../../t-sql/language-elements/expressions-transact-sql.md) de type quelconque, à l’exception d’un type de données non comparable.
   
 ## <a name="return-types"></a>Types de retour
- **int**  
+ **Int**  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
 CHECKSUM calcule une valeur de hachage, appelée somme de contrôle, sur sa liste d'arguments. La valeur de hachage est destinée à être utilisée dans la création d'index de hachage. Si les arguments de CHECKSUM sont des colonnes et qu'un index est créé sur la valeur CHECKSUM calculée, le résultat est un index de hachage qui peut être utilisé dans des recherches d'égalité sur les colonnes.
   
 CHECKSUM a les propriétés d'une fonction de hachage : lorsque CHECKSUM est appliqué à deux listes d'expressions, la même valeur est retournée si les éléments correspondants dans les deux listes sont du même type et ont une valeur égale lorsqu'ils sont comparés à l'aide de l'opérateur d'égalité (=). Pour cette définition, les valeurs NULL d'un type spécifié sont considérées comme ayant une valeur de comparaison égale. Si l'une des valeurs de la liste d'expressions change, en général, la somme de contrôle de la liste change également. Il existe toutefois une faible probabilité pour que la somme de contrôle ne change pas. Pour cette raison, nous déconseillons d'utiliser CHECKSUM pour vérifier si des valeurs ont changé, à moins que votre application accepte de manquer parfois une modification. Envisagez d’utiliser [HashBytes](../../t-sql/functions/hashbytes-transact-sql.md) à la place. Lorsqu'un algorithme de hachage MD5 est spécifié, la probabilité que HashBytes retourne le même résultat pour deux entrées différentes est beaucoup plus faible que pour CHECKSUM.
@@ -96,8 +96,8 @@ GO
 La création de l'index dans une colonne calculée matérialise la colonne de la somme de contrôle, et toutes les modifications apportées à la valeur `ProductName` sont propagées à cette colonne. Un index peut aussi être créé directement sur la colonne indexée. Toutefois, lorsque les valeurs de clé sont longues, un index normal n'est probablement pas aussi performant qu'un index de somme de contrôle.
   
 ## <a name="see-also"></a>Voir aussi
-[CHECKSUM_AGG &#40; Transact-SQL &#41;](../../t-sql/functions/checksum-agg-transact-sql.md)  
-[HASHBYTES &#40; Transact-SQL &#41;](../../t-sql/functions/hashbytes-transact-sql.md)  
-[BINARY_CHECKSUM &#40; Transact-SQL &#41;](../../t-sql/functions/binary-checksum-transact-sql.md)
+[CHECKSUM_AGG &#40;Transact-SQL&#41;](../../t-sql/functions/checksum-agg-transact-sql.md)  
+[HASHBYTES &#40;Transact-SQL&#41;](../../t-sql/functions/hashbytes-transact-sql.md)  
+[BINARY_CHECKSUM  &#40;Transact-SQL&#41;](../../t-sql/functions/binary-checksum-transact-sql.md)
   
   
