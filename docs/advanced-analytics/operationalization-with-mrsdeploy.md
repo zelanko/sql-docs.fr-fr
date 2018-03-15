@@ -15,11 +15,11 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: b090579bd0a32b901d1c1cedcc26b290d7a68771
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 4b439725c8c9e522ed500f717686b8a9cf7d972a
+ms.sourcegitcommit: 6b1618aa3b24bf6759b00a820e09c52c4996ca10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="deploy-and-consume-analytics-using-mrsdeploy"></a>Déployer et de consommer analytique à l’aide de mrsdeploy
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -56,10 +56,6 @@ Cette fonctionnalité de déploiement de R Server offre les avantages :
   
   Vous pouvez utiliser en temps réel avec un objet de modèle R pris en charge de calcul de score pour améliorer la vitesse des opérations de calcul de score.
 
-+ Publier le code Python sous la forme d’un service web
-
-  Pour obtenir des exemples, consultez [publier et consommer le code Python](./python/publish-consume-python-code.md).
-
 + Consommation de lot asynchrone
 
   Les services Web qui appellent pour les données d’entrée volumineuses maintenant peuvent être utilisées en mode asynchrone via l’exécution par lots.
@@ -88,7 +84,7 @@ Toutefois, si vous avez besoin de les installer ensemble, suivez ces étapes sup
 
 3. Après avoir terminé l’installation de **Microsoft Machine Learning Server**manuellement ajouter la clé de Registre suivante pour **mrsdeploy**, qui spécifie le dossier de base pour les fichiers R_SERVER. 
 
-    + Créer une nouvelle clé de Registre`H_KEY_LOCAL_MACHINE\SOFTWARE\R Server\Path`
+    + Créer une nouvelle clé de Registre `H_KEY_LOCAL_MACHINE\SOFTWARE\R Server\Path`
     + Définir la valeur de la clé à `"C:\Program Files\Microsoft SQL Server\140\R_SERVER"`.
 
 4. Lorsque vous avez terminé, ouvrez le [utilitaire Administrateur](https://docs.microsoft.com/r-server/operationalize/configure-use-admin-utility).

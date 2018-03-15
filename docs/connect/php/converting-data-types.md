@@ -1,27 +1,28 @@
 ---
 title: "Conversion de Types de données | Documents Microsoft"
 ms.custom: 
-ms.date: 01/19/2017
+ms.date: 01/16/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: php
 ms.reviewer: 
 ms.suite: sql
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 508542ec-cc28-4a17-80f4-52325d6a48db
-caps.latest.revision: "29"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 3a0c956c00e21630aca34b4ea8cab2fd7760a66b
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 177f4cc6c28a231fe37df65a46976c4c8836e912
+ms.sourcegitcommit: 6b1618aa3b24bf6759b00a820e09c52c4996ca10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="converting-data-types"></a>Conversion de types de données
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -30,13 +31,14 @@ ms.lasthandoff: 11/18/2017
   
 ## <a name="in-this-section"></a>Dans cette section  
   
-|Rubrique|Description|  
+|Rubrique| Description|  
 |---------|---------------|  
 |[Types de données SQL Server par défaut](../../connect/php/default-sql-server-data-types.md)|Fournit des informations sur les types de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] par défaut lors de l’envoi de données au serveur.|  
 |[Types de données PHP par défaut](../../connect/php/default-php-data-types.md)|Fournit des informations sur les types de données PHP par défaut lors de la récupération de données à partir du serveur.|  
 |[Procédure : spécifier des types de données SQL Server](../../connect/php/how-to-specify-sql-server-data-types-when-using-the-sqlsrv-driver.md)|Montre comment spécifier des types de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] lors de l’envoi de données au serveur.|  
-|[Procédure : spécifier des types de données PHP](../../connect/php/how-to-specify-php-data-types.md)|Montre comment spécifier des types de données PHP lors de la récupération de données à partir du serveur.|  
+|[Guide pratique pour spécifier des types de données PHP](../../connect/php/how-to-specify-php-data-types.md)|Montre comment spécifier des types de données PHP lors de la récupération de données à partir du serveur.|  
 |[Guide pratique pour envoyer et récupérer des données UTF-8 à l’aide de la prise en charge UTF-8 intégrée](../../connect/php/how-to-send-and-retrieve-utf-8-data-using-built-in-utf-8-support.md)|Montre comment utiliser [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]de prise en charge intégrée pour les données UTF-8.<br /><br />Prise en charge des caractères UTF-8 a été ajoutée dans la version 1.1 de le [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].|  
+|[Guide pratique pour envoyer et récupérer des données ASCII dans Linux et macOS](../../connect/php/how-to-send-and-retrieve-ascii-data-in-linux-mac.md)|Montre comment utiliser [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]de prise en charge de données ASCII dans Linux ou macOS.<br /><br />Prise en charge des caractères ASCII dans les environnements autres que Windows a été ajoutée dans la version 5.2 de la [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].|
   
 ## <a name="see-also"></a>Voir aussi  
 [Guide de programmation pour le pilote SQL PHP](../../connect/php/programming-guide-for-php-sql-driver.md)

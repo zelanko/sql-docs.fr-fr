@@ -15,11 +15,11 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: 0abc11160704871799ec7cfcec19e86bb0f45a1b
-ms.sourcegitcommit: c08d665754f274e6a85bb385adf135c9eec702eb
+ms.openlocfilehash: 5ae4298fabb7147846b5ee87f391c1a0707cde3a
+ms.sourcegitcommit: 6b1618aa3b24bf6759b00a820e09c52c4996ca10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="getting-started-with-machine-learning-in-sql-server"></a>Bien démarrer avec Machine Learning dans SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -106,9 +106,6 @@ Vous pouvez également installer [!INCLUDE[rsql-platform-md](../includes/rsql-pl
 
    Une solution de bout en bout pour les développeurs SQL fournit tout le code que vous devez exécuter Python à partir de SQL Server Management Studio.
 
-+ [Publier et utiliser du Code Python](../advanced-analytics/python/publish-consume-python-code.md)
-
-  Cette procédure pas à pas est fourni avec tout le code nécessaire pour déployer un modèle à un service web à l’aide de la Machine Learning Server.
 
 ### <a name="product-samples-with-code"></a>Exemples de produit avec le code
 

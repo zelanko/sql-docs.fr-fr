@@ -63,7 +63,7 @@ ms.lasthandoff: 02/15/2018
 > [!IMPORTANT]  
 >  Les assemblys COM peuvent présenter un risque pour la sécurité. En raison de ce risque et d'autres considérations, les assemblys COM ont été déconseillés dans [!INCLUDE[ssASversion10](../../../includes/ssasversion10-md.md)]. Les assemblys COM peuvent ne pas être pris en charge dans les versions ultérieures.  
   
-##  <a name="Backup">Méthodes de sauvegarde et restauration</a>  
+##  <a name="Backup"></a>Méthodes de sauvegarde et restauration  
  Backup et Restore sont des méthodes qui permettent de créer des copies d'une base de données [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] et de récupérer cette dernière en utilisant ces copies. La méthode Backup appartient à l'objet <xref:Microsoft.AnalysisServices.Database>, tandis que la méthode Restore appartient à l'objet <xref:Microsoft.AnalysisServices.Server>.  
   
  Seuls les administrateurs de serveur et de base de données sont autorisés à procéder à la sauvegarde d'une base de données. Seuls les administrateurs de serveur peuvent restaurer une base de données sur un serveur différent de celui à partir duquel la sauvegarde a été effectuée. Les administrateurs de base de données ne peuvent restaurer une base de données en remplacement de la base de données existante que s'ils sont propriétaires de la base de données destinée à être remplacée. Après une restauration, l'administrateur de base de données peut perdre l'accès à la base de données restaurée si celle-ci est restaurée avec ses définitions de sécurité d'origine.  

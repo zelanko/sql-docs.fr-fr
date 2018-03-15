@@ -1,7 +1,7 @@
 ---
 title: "Vue d’ensemble de l’Assistant de Migration de données (SQL Server) | Documents Microsoft"
 ms.custom: 
-ms.date: 02/07/2018
+ms.date: 03/15/2018
 ms.prod: sql-non-specified
 ms.prod_service: dma
 ms.service: 
@@ -21,11 +21,11 @@ author: HJToland3
 ms.author: jtoland
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c23ed7d07474cc763da951e782badd42458dacdb
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: c387e5bb2a0b5cef10217b32807f88a8aee6c627
+ms.sourcegitcommit: 6b1618aa3b24bf6759b00a820e09c52c4996ca10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="overview-of-data-migration-assistant"></a>Vue d’ensemble de l’Assistant de Migration de données
 
@@ -45,27 +45,20 @@ L’Assistant de Migration données (DMA) vous permet de mettre à niveau vers u
 - Détecter les problèmes qui peuvent affecter une mise à niveau vers un ordinateur local SQL Server. Ceux-ci sont décrits comme des problèmes de compatibilité et sont organisés dans les catégories suivantes :
 
   - Modifications avec rupture
-
   - Changements de comportement
-
   - Fonctionnalités déconseillées
 
 - Découvrez les nouvelles fonctionnalités de la plateforme cible SQL Server que la base de données peut tirer parti d’après une mise à niveau. Ceux-ci sont décrits comme des recommandations de la fonctionnalité et sont organisés dans les catégories suivantes :
 
   - Performance
-
   - Sécurité
-
   - Stockage
 
 - Migrer une instance de SQL Server locale vers une instance de SQL Server moderne, hébergée localement ou sur une machine virtuelle Azure (VM) qui est accessible à partir de votre réseau local. La machine virtuelle Azure est accessible à l’aide de VPN ou autres technologies. Le flux de travail de migration vous aide à migrer les composants suivants :
 
   - Schéma des bases de données
-
   - Données et les utilisateurs
-
   - Rôles de serveur
-
   - Connexions SQL Server et Windows
 
 - Après la migration réussie, les applications peuvent se connecter pour les bases de données du serveur SQL cible en toute transparence.
@@ -89,6 +82,9 @@ DMA remplace toutes les versions précédentes du Conseiller de mise à niveau d
 - SQL Server 2016
 - SQL Server 2017 sur Windows et Linux
 - Azure SQL Database
+
+> [!NOTE] 
+> DMA ne prend pas en charge de base de données SQL Azure une Instance gérée en tant que cible.
 
 ## <a name="installation"></a>Installation
 

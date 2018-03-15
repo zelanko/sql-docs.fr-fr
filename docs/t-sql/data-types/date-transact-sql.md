@@ -29,11 +29,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: bc3d838c81ea8d973cff90e2e57e4bfd8b443f69
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 1776f70f2136f7b46fe3aa9205f76108a2807170
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="date-transact-sql"></a>date (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -106,73 +106,7 @@ Certains clients de bas niveau ne prennent pas en charge les types de données *
 |**datetimeoffset**|AAAA-MM-JJ hh:mm:ss[.nnnnnnn] [+&#124;-]hh:mm|SQL_WVARCHAR ou SQL_VARCHAR|DBTYPE_WSTR ou DBTYPE_STR|Java.sql.String|String ou SqString|  
   
 ## <a name="converting-date-and-time-data"></a>Conversion de données date et time
-Lorsque vous effectuez une conversion vers des types de données date et heure, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] rejette toutes les valeurs qu'il ne peut identifier comme dates ou heures. Pour plus d’informations sur l’utilisation des fonctions CAST et CONVERT avec des données date et time, consultez [CAST et CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md).
-  
-Dans le cas d’une conversion en **time(n)**, la conversion échoue et le message d’erreur 206 est généré : « Conflit de types d’opérandes : date est incompatible avec time ».
-  
-Dans le cas d’une conversion en **datetime**, la date est copiée et le composant heure est défini sur 00:00:00.000. Le code suivant montre les résultats de la conversion d'une valeur `date` en valeur `datetime`.  
-  
-```sql
-DECLARE @date date= '12-10-25';  
-DECLARE @datetime datetime= @date;  
-  
-SELECT @date AS '@date', @datetime AS '@datetime';  
-  
---Result  
---@date      @datetime  
------------- -----------------------  
---2025-12-10 2025-12-10 00:00:00.000  
---  
---(1 row(s) affected)  
-```  
-  
-Dans le cas d’une conversion en **smalldatetime**, quand la valeur **date** est comprise dans la plage d’une valeur [smalldatetime](../../t-sql/data-types/smalldatetime-transact-sql.md), le composant date est copié et le composant heure est défini sur 00:00:00. Quand la valeur **date** est située en dehors de la plage d’une valeur **smalldatetime**, le message d’erreur 242 est généré : « La conversion d’un type de données **date** en type de données **smalldatetime** a créé une valeur hors limites » ; et la valeur **smalldatetime** est définie sur Null. Le code suivant montre les résultats de la conversion d'une valeur `date` en valeur `smalldatetime`.
-  
-```sql
-DECLARE @date date= '1912-10-25';  
-DECLARE @smalldatetime smalldatetime = @date;  
-  
-SELECT @date AS '@date', @smalldatetime AS '@smalldatetime';  
-  
---Result  
---@date      @smalldatetime  
------------- -----------------------  
---1912-10-25 1912-10-25 00:00:00  
---  
---(1 row(s) affected)  
-```  
-  
-Dans le cas d’une conversion en **datetimeoffset(n)**, la date est copiée et l’heure est définie sur 00:00.0000000 +00:00. Le code suivant montre les résultats de la conversion d'une valeur `date` en valeur `datetimeoffset(3)`.
-  
-```sql
-DECLARE @date date = '1912-10-25';  
-DECLARE @datetimeoffset datetimeoffset(3) = @date;  
-  
-SELECT @date AS '@date', @datetimeoffset AS '@datetimeoffset';  
-  
---Result  
---@date      @datetimeoffset  
------------- ------------------------------  
---1912-10-25 1912-10-25 00:00:00.000 +00:00  
---  
---(1 row(s) affected)  
-```  
-  
-Dans le cas d’une conversion en **datetime2(n)**, le composant date est copié et le composant heure est défini sur 00:00:00.00 indépendamment de la valeur de (n). Le code suivant montre les résultats de la conversion d'une valeur `date` en valeur `datetime2(3)`.
-  
-```sql
-DECLARE @date date = '1912-10-25';  
-DECLARE @datetime2 datetime2(3) = @date;  
-  
-SELECT @date AS '@date', @datetime2 AS '@datetime2(3)';  
-  
---Result  
---@date      @datetime2(3)  
------------- -----------------------  
---1912-10-25 1912-10-25 00:00:00.00  
---  
---(1 row(s) affected)  
-```  
+Lorsque vous effectuez une conversion vers des types de données date et heure, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] rejette toutes les valeurs qu'il ne peut identifier comme dates ou heures. Pour plus d’informations sur l’utilisation des fonctions CAST et CONVERT avec des données date et time, consultez [CAST et CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md).  
   
 ### <a name="converting-date-to-other-date-and-time-types"></a>Conversion de date en d’autres types de données date et time
 Cette section décrit ce qui se produit quand un type de données **date** est converti en d’autres types de données date et time.
