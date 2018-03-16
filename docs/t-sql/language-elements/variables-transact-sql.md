@@ -1,5 +1,5 @@
 ---
-title: Variables (Transact-SQL) | Documents Microsoft
+title: Variables (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 09/12/2017
 ms.prod: sql-non-specified
@@ -29,14 +29,14 @@ ms.lasthandoff: 01/25/2018
 # <a name="variables-transact-sql"></a>Variables (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-Une variable locale Transact-SQL est un objet qui peut contenir une valeur de données unique d’un type spécifique. Les variables contenues dans les traitements et les scripts sont généralement utilisées : 
+Une variable locale Transact-SQL est un objet pouvant posséder une valeur de données unique d’un type donné. Les variables contenues dans les traitements et les scripts sont généralement utilisées : 
 
 * pour compter ou vérifier le nombre de fois qu'une boucle est réalisée ;
 * pour retenir une valeur de données à tester par une instruction de contrôle de flux ;
 * pour enregistrer une valeur de données que doit retourner le code de retour d'une procédure stockée ou la valeur de retour d'une fonction.
 
 > [!NOTE]
-> Les noms de certaines fonctions de système de Transact-SQL commencent par deux *à* signes (@@). Bien que dans les versions antérieures de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], le @@functions sont désignés comme des variables globales, elles ne sont pas des variables et n’ont pas le comportement en tant que variables. Le @@functions sont des fonctions système et leur syntaxe suit les règles pour les fonctions.
+> Le nom de certaines fonctions système Transact-SQL commence par deux *arobases* (@@). Bien que dans les versions précédentes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], les fonctions de type @@functions soient considérées comme des variables globales, ce n’en sont pas et elles n’en ont pas le comportement. Elles sont en réalité des fonctions système, et leur syntaxe suit les mêmes règles que celle des fonctions normales.
 
 Le script suivant crée une petite table test et lui attribue 26 lignes. Il utilise une variable pour effectuer trois actions : 
 
@@ -86,23 +86,23 @@ GO
 ```
 
 ## <a name="declaring-a-transact-sql-variable"></a>Déclaration d'une variable Transact-SQL
-L’instruction DECLARE initialise une variable Transact-SQL par : 
+L’instruction DECLARE initialise une variable Transact-SQL de la manière suivante : 
 * Affectation d'un nom. Celui-ci doit avoir comme premier caractère un @ unique.
 * Affectation d'un type de données système ou défini par l'utilisateur, ainsi que d'une taille. Pour les variables numériques, la précision et l'échelle doivent également être affectées. Pour les variables de type XML, une collection de schéma facultative peut être affectée.
 * Affectation de la valeur NULL à la variable.
 
-Par exemple, **DECLARE** instruction crée une variable locale nommée  **@mycounter**  avec un type de données int.  
+Par exemple, l’instruction **DECLARE** ci-dessous crée une variable locale appelée **@mycounter** avec un type de données int.  
 ```sql
 DECLARE @MyCounter int;
 ```
 Pour déclarer plusieurs variables locales, utilisez une virgule après la première variable locale définie, puis indiquez le nom et le type de données de la variable locale suivante.
 
-Par exemple, **DECLARE** instruction crée trois variables locales nommées  **@LastName** ,  **@FirstName**  et  **@StateProvince** et la valeur NULL :  
+Par exemple, l’instruction **DECLARE** suivante crée trois variables locales nommées **@LastName**, **@FirstName** et **@StateProvince**, puis initialise chacune sur la valeur NULL :  
 ```sql
 DECLARE @LastName nvarchar(30), @FirstName nvarchar(20), @StateProvince nchar(2);
 ```
 
-L’étendue d’une variable est les instructions de la plage de Transact-SQL qui peuvent faire référence à la variable. La portée d'une variable commence au point où elle est déclarée et se termine à la fin du traitement ou de la procédure stockée où elle est déclarée. Le script suivant, par exemple, génère une erreur de syntaxe car la variable est déclarée dans un lot et référencée dans un autre :  
+L’étendue d’une variable correspond à la plage des instructions Transact-SQL pouvant référencer cette variable. La portée d'une variable commence au point où elle est déclarée et se termine à la fin du traitement ou de la procédure stockée où elle est déclarée. Le script suivant, par exemple, génère une erreur de syntaxe car la variable est déclarée dans un lot et référencée dans un autre :  
 ```sql
 USE AdventureWorks2014;
 GO
@@ -152,7 +152,7 @@ WHERE FirstName = @FirstNameVariable
 GO
 ```
 
-Vous pouvez également affecter une valeur à une variable en y faisant référence dans une liste de sélection. Si une variable est référencée dans une liste de sélection, une valeur scalaire doit lui être affectée, sinon l'instruction SELECT ne retournera qu'une seule ligne. Par exemple :  
+Vous pouvez également affecter une valeur à une variable en y faisant référence dans une liste de sélection. Si une variable est référencée dans une liste de sélection, une valeur scalaire doit lui être affectée, sinon l'instruction SELECT ne retournera qu'une seule ligne. Exemple :  
 
 ```sql
 USE AdventureWorks2014;
@@ -167,7 +167,7 @@ GO
 > [!WARNING]
 > S'il y a plusieurs clauses d'affectation dans une seule instruction SELECT, SQL Server ne garantit pas l'ordre d'évaluation des expressions. Notez que les effets ne sont visibles que s'il existe des références parmi les affectations.
 
-Si une instruction SELECT retourne plusieurs lignes et la variable fait référence à une expression non scalaire, la variable est définie à la valeur retournée par l’expression dans la dernière ligne du jeu de résultats. Par exemple, dans le lot suivant  **@EmpIDVariable**  est défini sur le **BusinessEntityID** de la dernière ligne retournée, c'est-à-dire 1 :  
+Si une instruction SELECT retourne plusieurs lignes et si la variable fait référence à une expression non scalaire, la variable prend la valeur retournée par l’expression figurant à la dernière ligne de l’ensemble de résultats. Dans le lot suivant, par exemple, **@EmpIDVariable** prend la valeur **BusinessEntityID** de la dernière ligne retournée, c’est-à-dire 1 :  
 
 ```sql
 USE AdventureWorks2014;
@@ -182,11 +182,11 @@ SELECT @EmpIDVariable;
 GO
 ```
 
-## <a name="see-also"></a>Voir aussi  
- [Déclarer@local_variable](../../t-sql/language-elements/declare-local-variable-transact-sql.md)  
+## <a name="see-also"></a> Voir aussi  
+ [Declare @local_variable](../../t-sql/language-elements/declare-local-variable-transact-sql.md)  
  [SET @local_variable](../../t-sql/language-elements/set-local-variable-transact-sql.md)  
  [SELECT @local_variable](../../t-sql/language-elements/select-local-variable-transact-sql.md)  
  [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
- [Compound, opérateurs &#40; Transact-SQL &#41;](../../t-sql/language-elements/compound-operators-transact-sql.md)   
+ [Opérateurs composés &#40;Transact-SQL&#41;](../../t-sql/language-elements/compound-operators-transact-sql.md)   
   
   
