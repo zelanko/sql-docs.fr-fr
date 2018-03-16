@@ -40,7 +40,7 @@ La manière de basculer dépend de la distribution de Linux. Suivez les instruct
 
 ## <a name = "#rhelFailover"></a>Basculement manuel (RHEL ou Ubuntu)
 
-Pour effectuer un basculement manuel, sur Red Hat Enterprise Linux (RHEL) ou Ubuntu Server, exécutez les étapes suivantes.
+Pour effectuer un basculement manuel, sur des serveurs Red Hat Enterprise Linux (RHEL) ou Ubuntu, exécutez les étapes suivantes.
 1.  Exécutez la commande suivante : 
 
    ```bash
@@ -62,7 +62,7 @@ Pour effectuer un basculement manuel, sur Red Hat Enterprise Linux (RHEL) ou Ubu
 ## <a name = "#slesFailover"></a>Basculement manuel (SLES)
 
 
-Dans Suse Linux Enterprise Server (SLES), utilisez la commande `migrate` pour basculer manuellement une instance de cluster SQL Server. Exemple :
+Dans Suse Linux Enterprise Server (SLES), utilisez la commande `migrate` pour basculer manuellement une instance FCI SQL Server. Par exemple :
 
 ```bash
 crm resource migrate <FCIResourceName> <NewHostNode>
