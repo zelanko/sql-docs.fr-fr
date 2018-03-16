@@ -57,7 +57,7 @@ Utilisez les étapes suivantes pour créer un projet SSMA :
 
 1. Choisissez « SQL Server 2017 (Linux) - version préliminaire » dans le champ **Migrer vers**.
 
-SSMA pour Oracle n’utilise pas les exemples de schémas Oracle par défaut. Pour activer le schéma de ressources humaines, procédez comme suit :
+SSMA pour Oracle n’utilise pas les exemples de schémas Oracle par défaut. Pour activer le schéma HR, procédez comme suit :
 
 1. Dans SSMA, sélectionnez le menu **Outils**.
 
