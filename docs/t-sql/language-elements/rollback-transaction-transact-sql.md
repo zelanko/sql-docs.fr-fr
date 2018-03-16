@@ -1,5 +1,5 @@
 ---
-title: ROLLBACK TRANSACTION (Transact-SQL) | Documents Microsoft
+title: ROLLBACK TRANSACTION (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 09/12/2017
 ms.prod: sql-non-specified
@@ -57,31 +57,31 @@ ROLLBACK { TRAN | TRANSACTION }
   
 ## <a name="arguments"></a>Arguments  
  *transaction_name*  
- Nom attribué à la transaction dans BEGIN TRANSACTION *argument* doit être conforme aux règles des identificateurs, mais seuls les 32 premiers caractères du nom de transaction sont utilisés. En cas d’imbrication des transactions, *argument* doit être le nom de l’instruction BEGIN TRANSACTION la plus extérieure. *argument* est toujours la casse, même lorsque l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne respecte pas la casse.  
+ Nom attribué à la transaction dans BEGIN TRANSACTION *transaction_name* doit respecter les règles applicables aux identificateurs, mais seuls les 32 premiers caractères du nom de la transaction sont utilisés. En cas d’imbrication des transactions, *transaction_name* doit correspondre au nom figurant dans l’instruction BEGIN TRANSACTION la plus extérieure. *transaction_name* respecte toujours la casse, même si l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] n’en tient pas compte.  
   
  **@** *tran_name_variable*  
- Nom d'une variable définie par l'utilisateur et contenant un nom de transaction valide. La variable doit être déclarée avec un **char**, **varchar**, **nchar**, ou **nvarchar** type de données.  
+ Nom d'une variable définie par l'utilisateur et contenant un nom de transaction valide. La variable doit être déclarée avec un type de données **char**, **varchar**, **nchar** ou **nvarchar**.  
   
  *savepoint_name*  
- Est *savepoint_name* à partir d’une instruction SAVE TRANSACTION. *savepoint_name* doit être conforme aux règles des identificateurs. Utilisez *savepoint_name* quand une opération d’annulation conditionnelle doit affecter qu’une partie de la transaction.  
+ *savepoint_name* d’une instruction SAVE TRANSACTION. *savepoint_name* doit suivre les règles applicables aux identificateurs. Utilisez *savepoint_name* quand une restauration conditionnelle ne doit affecter qu’une partie de la transaction.  
   
  **@** *savepoint_variable*  
- Nom d'une variable définie par l'utilisateur et contenant un nom de point d'enregistrement valide. La variable doit être déclarée avec un **char**, **varchar**, **nchar**, ou **nvarchar** type de données.  
+ Nom d'une variable définie par l'utilisateur et contenant un nom de point d'enregistrement valide. La variable doit être déclarée avec un type de données **char**, **varchar**, **nchar** ou **nvarchar**.  
   
 ## <a name="error-handling"></a>Gestion des erreurs  
  Une instruction ROLLBACK TRANSACTION n'envoie aucun message à l'utilisateur. Si des avertissements sont nécessaires dans les procédures stockées ou les déclencheurs, utilisez les instructions RAISERROR ou PRINT. L'instruction RAISERROR est la mieux adaptée à l'indication des erreurs.  
   
 ## <a name="general-remarks"></a>Remarques d'ordre général  
- ROLLBACK TRANSACTION sans un *savepoint_name* ou *argument* restaure le début de la transaction. En cas d'imbrication des transactions, cette même instruction annule toutes les transactions internes jusqu'à l'instruction BEGIN TRANSACTION la plus extérieure. Dans les deux cas, ROLLBACK TRANSACTION le @@TRANCOUNT fonction système à 0. ROLLBACK TRANSACTION *savepoint_name* ne décrémente pas@TRANCOUNT.  
+ L’instruction ROLLBACK TRANSACTION sans *savepoint_name* ni *transaction_name* permet de restaurer la transaction à son début. En cas d'imbrication des transactions, cette même instruction annule toutes les transactions internes jusqu'à l'instruction BEGIN TRANSACTION la plus extérieure. Dans les deux cas, ROLLBACK TRANSACTION décrémente la fonction système @@TRANCOUNT jusqu’à 0. ROLLBACK TRANSACTION *savepoint_name* ne décrémente pas @@TRANCOUNT.  
   
- ROLLBACK TRANSACTION ne peut pas référencer un *savepoint_name* dans les transactions distribuées démarrées explicitement avec BEGIN DISTRIBUTED TRANSACTION, soit découlant d’une transaction locale.  
+ ROLLBACK TRANSACTION ne peut pas faire référence à un *savepoint_name* dans les transactions distribuées lancées soit explicitement avec BEGIN DISTRIBUTED TRANSACTION, soit découlant d’une transaction locale.  
   
- Une transaction ne peut pas être annulée après l'exécution d'une instruction COMMIT TRANSACTION, sauf lorsque l'instruction COMMIT TRANSACTION est associée à une transaction imbriquée qui est contenue dans la transaction restaurée. Dans ce cas, la transaction imbriquée est est restaurée, même si vous avez émis une instruction COMMIT TRANSACTION pour celle-ci.  
+ Une transaction ne peut pas être annulée après l'exécution d'une instruction COMMIT TRANSACTION, sauf lorsque l'instruction COMMIT TRANSACTION est associée à une transaction imbriquée qui est contenue dans la transaction restaurée. Dans ce cas, la transaction imbriquée est restaurée, même si vous avez émis une instruction COMMIT TRANSACTION.  
   
  Dans une transaction, les noms de point d'enregistrement dupliqués sont autorisés. Toutefois, une instruction ROLLBACK TRANSACTION contenant un nom de point d'enregistrement en double n'effectue l'annulation que jusqu'à l'instruction SAVE TRANSACTION la plus récente utilisant ce nom de point d'enregistrement.  
   
 ## <a name="interoperability"></a>Interopérabilité  
- Dans les procédures stockées, les instructions ROLLBACK TRANSACTION sans un *savepoint_name* ou *argument* restaurer toutes les instructions de la première instruction BEGIN transaction. Une instruction ROLLBACK TRANSACTION dans une procédure stockée qui provoque @@TRANCOUNT pour avoir une valeur différente lorsque la procédure stockée se termine et celui du @@TRANCOUNT valeur lors de l’appel de la procédure stockée génère un message d’information. Ce message n'affecte pas la suite du traitement.  
+ Dans les procédures stockées, les instructions ROLLBACK TRANSACTION sans *savepoint_name* ni *transaction_name* annulent toutes les instructions jusqu’à l’instruction BEGIN TRANSACTION la plus extérieure. Une instruction ROLLBACK TRANSACTION dans une procédure stockée qui modifie la valeur de @@TRANCOUNT entre le moment où la procédure stockée se termine et celui où la procédure a été appelée, génère un message d’information. Ce message n'affecte pas la suite du traitement.  
   
  L'exécution d'une instruction ROLLBACK TRANSACTION dans un déclencheur a les conséquences suivantes :  
   
@@ -91,7 +91,7 @@ ROLLBACK { TRAN | TRANSACTION }
   
 -   aucune instruction du traitement suivant celle qui a activé le déclencheur n'est exécutée.  
   
-@@TRANCOUNT est incrémenté d’un à l’entrée d’un déclencheur, même en mode autocommit. (Le système traite un déclencheur comme une transaction imbriquée implicite).  
+@@TRANCOUNT est incrémenté de un lorsqu’un déclencheur est entré, même en mode de validation automatique. (Le système traite un déclencheur comme une transaction imbriquée implicite).  
   
 Les instructions ROLLBACK TRANSACTION contenues dans des procédures stockées n'affectent pas les instructions suivantes dans le traitement qui a appelé la procédure ; les instructions suivantes du traitement sont exécutées. Les instructions ROLLBACK TRANSACTION figurant dans des déclencheurs terminent le traitement contenant l'instruction qui a activé le déclencheur ; les instructions suivantes du traitement ne sont pas exécutées.  
   
@@ -104,13 +104,13 @@ Les effets d'une instruction ROLLBACK sur les curseurs sont définis par les tro
 3.  une erreur qui termine un traitement et génère une annulation interne provoque la désallocation de tous les curseurs qui étaient déclarés dans le traitement contenant l'instruction erronée. Tous les curseurs sont désalloués, quel que soit leur type ou le paramétrage de CURSOR_CLOSE_ON_COMMIT. Cela inclut les curseurs déclarés dans les procédures stockées appelées par le traitement qui a provoqué l'erreur. Les curseurs déclarés dans un traitement précédant le traitement erroné sont soumis aux règles 1 et 2. Un blocage est un exemple de ce type d'erreur. Une instruction ROLLBACK exécutée dans un déclencheur génère aussi automatiquement ce type d'erreur.  
   
 ## <a name="locking-behavior"></a>Comportement de verrouillage  
- Une instruction ROLLBACK TRANSACTION spécifiant un *savepoint_name* libère tous les verrous acquis au-delà du point d’enregistrement, à l’exception des promotions et des conversions. Ces verrous ne sont pas libérés et ne sont pas reconvertis dans leur ancien mode de verrouillage.  
+ Une instruction ROLLBACK TRANSACTION spécifiant un *savepoint_name* libère tous les verrous acquis au-delà du point de sauvegarde, à l’exception des promotions et des conversions. Ces verrous ne sont pas libérés et ne sont pas reconvertis dans leur ancien mode de verrouillage.  
   
 ## <a name="permissions"></a>Autorisations  
  Nécessite l'appartenance au rôle **public** .  
   
 ## <a name="examples"></a>Exemples  
- L'exemple suivant montre l'effet de la restauration d'une transaction nommée. Après avoir créé une table, les instructions suivantes démarre une transaction nommée, insérer deux lignes, puis restaurer la transaction nommée dans la variable @TransactionName. Une autre instruction en dehors de la transaction nommée insère deux lignes. La requête retourne les résultats de ces instructions.   
+ L'exemple suivant montre l'effet de la restauration d'une transaction nommée. Après avoir créé une table, les instructions suivantes démarrent une transaction nommée, insérent deux lignes, puis restaurent la transaction nommée dans la variable @TransactionName. Une autre instruction en dehors de la transaction nommée insère deux lignes. La requête retourne les résultats des instructions précédentes.   
   
 ```sql    
 USE tempdb;  
@@ -139,7 +139,7 @@ value
 ```  
   
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [BEGIN DISTRIBUTED TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/begin-distributed-transaction-transact-sql.md)   
  [BEGIN TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/begin-transaction-transact-sql.md)   
  [COMMIT TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/commit-transaction-transact-sql.md)   

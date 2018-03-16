@@ -56,7 +56,7 @@ Pour la dernière stratégie de prise en charge pour SQL Server 2017, consultez 
 
 ## <a id="system"></a> Configuration système requise
 
-SQL Server 2017 requise est la suivante pour Linux :
+SQL Server 2017 a les prérequis suivants pour Linux :
 
 |||
 |-----|-----|
@@ -67,10 +67,10 @@ SQL Server 2017 requise est la suivante pour Linux :
 | **Cœurs de processeur** | 2 cœurs |
 | **Type de processeur** | x64 compatibles uniquement |
 
-Si vous utilisez **système NFS (Network File)** partages distants en production, notez les exigences de prise en charge suivantes :
+Si vous utilisez les partages distants **Network File System (NFS)** en production, notez les exigences de prise en charge suivantes :
 
 - Utiliser la version NFS **4.2 ou ultérieure**. Les versions antérieures de NFS ne gèrent pas les fonctionnalités requises, telles que fallocate et la création du fichier partiellement alloué, commune aux systèmes de fichiers modernes.
-- Recherchez uniquement les **/var/opt/mssql** répertoires sur le montage NFS. Autres fichiers, tels que les fichiers binaires du système SQL Server, ne sont pas pris en charge.
+- Recherchez uniquement les répertoires **/var/opt/mssql** sur le montage NFS. Les autres fichiers, tels que les fichiers binaires du système SQL Server, ne sont pas pris en charge.
 - Assurez-vous que les clients NFS utilisent l’option 'nolock' lorsque vous montez le partage distant.
 
 ## <a id="repositories"></a> Configurer des référentiels de code source
@@ -92,7 +92,7 @@ Vous pouvez installer SQL Server sur Linux à partir de la ligne de commande. Po
 
 ## <a id="upgrade"></a> Mettre à jour de SQL Server
 
-Pour mettre à jour le **mssql-serveur** vers la dernière version du package, utilisez une des commandes suivantes en fonction de votre plateforme :
+Pour mettre à jour le package **mssql-serveur** vers la dernière version, utilisez une des commandes suivantes en fonction de votre plateforme :
 
 | Plateforme | Commandes de mise à jour de package |
 |-----|-----|
@@ -100,7 +100,7 @@ Pour mettre à jour le **mssql-serveur** vers la dernière version du package, u
 | SLES | `sudo zypper update mssql-server` |
 | Ubuntu | `sudo apt-get update`<br/>`sudo apt-get install mssql-server` |
 
-Ces commandes télécharger le package les plus récents et remplacer les fichiers binaires situés sous `/opt/mssql/`. Bases de données généré par l’utilisateur et les bases de données système ne sont pas affectés par cette opération.
+Ces commandes téléchargent le package le plus récent et remplacent les fichiers binaires situés sous `/opt/mssql/`. Les bases de données généré par l’utilisateur et les bases de données système ne sont pas affectées par cette opération.
 
 ## <a id="rollback"></a> Restauration SQL Server
 
@@ -108,7 +108,7 @@ Pour restaurer ou rétrograder SQL Server vers une version précédente, procéd
 
 1. Identifiez le numéro de version pour le package de SQL Server que vous souhaitez rétrograder. Pour obtenir la liste de nombres de package, consultez la [notes de publication](sql-server-linux-release-notes.md).
 
-1. Passer à une version antérieure de SQL Server. Dans les commandes suivantes, remplacez `<version_number>` avec le numéro de version SQL Server que vous avez identifié à l’étape 1.
+1. Passez à une version antérieure de SQL Server. Dans les commandes suivantes, remplacez `<version_number>` avec le numéro de version SQL Server que vous avez identifié à l’étape 1.
 
    | Plateforme | Commandes de mise à jour de package |
    |-----|-----|
@@ -117,7 +117,7 @@ Pour restaurer ou rétrograder SQL Server vers une version précédente, procéd
    | Ubuntu | `sudo apt-get install mssql-server=<version_number>`<br/>`sudo systemctl start mssql-server` |
 
 > [!NOTE]
-> Il est uniquement pris en charge pour mettre à niveau vers une version au sein de la même version principale, telles que SQL Server 2017.
+> Il est uniquement pris en charge de mettre à niveau vers une version avec la même version majeure, telle que SQL Server 2017.
 
 ## <a id="versioncheck"></a> Vérifiez la version installée de SQL Server
 
@@ -133,7 +133,7 @@ Pour vérifier votre version actuelle et l’édition de SQL Server sur Linux, u
 
 ## <a id="uninstall"></a> Désinstaller SQL Server
 
-Pour supprimer la **mssql-serveur** package sous Linux, utilisez une des commandes suivantes en fonction de votre plateforme :
+Pour supprimer le package **mssql-server** sous Linux, utilisez une des commandes suivantes en fonction de votre plateforme :
 
 | Plateforme | Commandes de suppression de package |
 |-----|-----|
