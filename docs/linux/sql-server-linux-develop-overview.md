@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Développer des applications pour SQL Server sur Linux | Documents Microsoft"
 description: 
 author: rothja
@@ -53,9 +53,9 @@ Si vous disposez d'une application de base de données existante, vous pouvez si
 
 ## <a name="use-existing-sql-tools-on-windows-with-sql-server-on-linux"></a>Utiliser les outils SQL existants sous Windows avec SQL Server sur Linux
 
-Les outils qui fonctionnent actuellement sous Windows tels que SSMS, SSDT et PowerShell fonctionnent également avec SQL Server 2017 sous Linux. Bien qu'ils ne fonctionnent pas nativement sous Linux, vous pouvez quand même gérer les instances SQL Server distantes sous Linux.
+Les outils qui fonctionnent actuellement sous Windows tels que SSMS, SSDT et PowerShell fonctionnent également avec SQL Server 2017 sous Linux. Bien qu'ils ne fonctionnent pas nativement sous Linux, vous pouvez quand même gérer les instances SQL Server distantes sous Linux. 
 
-Consultez les rubriques suivantes pour plus d’informations :
+Consultez les rubriques suivantes pour plus d’informations :
 
 - [SQL Server Management Studio (SSMS)](sql-server-linux-develop-use-ssms.md)
 - [SQL Server Data Tools (SSDT)](sql-server-linux-develop-use-ssdt.md)
@@ -66,11 +66,11 @@ Consultez les rubriques suivantes pour plus d’informations :
 
 ## <a name="use-new-sql-tools-for-linux"></a>Utiliser les nouveaux outils SQL pour Linux
 
-Vous pouvez utiliser la nouvelle [extension mssql](https://aka.ms/mssql-marketplace) pour [Visual Studio Code](https://code.visualstudio.com) sous Linux, MacOS et Windows. Pour une marche à suivre étape par étape, consultez le tutoriel suivant:
+Vous pouvez utiliser la nouvelle [extension mssql](https://aka.ms/mssql-marketplace) pour [Visual Studio Code](https://code.visualstudio.com) sous Linux, MacOS et Windows. Pour une marche à suivre étape par étape, consultez le tutoriel suivant :
 
 - [Utilisez Visual Studio Code](sql-server-linux-develop-use-vscode.md)
 
-Vous pouvez également utiliser de nouveaux outils de ligne de commande natifs pour Linux. Ces outils comprennent les suivants:
+Vous pouvez également utiliser de nouveaux outils de ligne de commande natifs pour Linux. Ces outils comprennent les suivants :
 
 - [sqlcmd](../tools/sqlcmd-utility.md)
 - [bcp](sql-server-linux-migrate-bcp.md)
@@ -78,7 +78,7 @@ Vous pouvez également utiliser de nouveaux outils de ligne de commande natifs p
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-Pour commencer, installez SQL Server sur Linux à l’aide d’un des Démarrages rapides suivants :
+Pour démarrer, installez SQL Server sur Linux en suivant l'une des sections de démarrage rapide suivantes :
 
 - [Installer sur Red Hat Enterprise Linux](quickstart-install-connect-red-hat.md)
 - [Installer sur SUSE Linux Enterprise Server](quickstart-install-connect-suse.md)
