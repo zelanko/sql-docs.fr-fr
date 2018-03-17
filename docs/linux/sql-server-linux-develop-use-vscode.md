@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Utiliser l’extension mssql de Visual Studio Code | Documents Microsoft"
 description: "Cette rubrique montre comment utiliser l'extension mssql pour Visual Studio Code pour développer des bases de données SQL Server. Cette extension vous permet de modifier et exécuter des scripts Transact-SQL dans Visual Studio Code."
 author: erickangMSFT
@@ -25,7 +25,7 @@ ms.lasthandoff: 02/13/2018
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-Cet article explique comment utiliser le **mssql** extension pour Visual Studio Code (Code de Visual Studio) pour développer des bases de données SQL Server.
+Cette rubrique montre comment utiliser l'extension **mssql** pour Visual Studio Code (VS Code) pour développer des bases de données SQL Server.
 
 Visual Studio Code est un éditeur de code graphique pour Linux, MacOS et Windows qui supporte les extensions. [L'extension **mssql** pour VS Code] vous permet de vous connecter à SQL Server, d'effectuer une requête avec Transact-SQL (T-SQL) et d'afficher les résultats.
 
@@ -37,9 +37,9 @@ Visual Studio Code est un éditeur de code graphique pour Linux, MacOS et Window
 ## <a name="install-the-mssql-extension"></a>Installer l’extension mssql
 Les étapes suivantes expliquent comment installer l’extension mssql. 
 
-1. Appuyez sur **CTRL + MAJ + P** (ou **F1**) pour ouvrir la Palette de commandes dans le Visual Studio Code. 
+1. Appuyez sur **CTRL + MAJ + P** (ou **F1**) pour ouvrir la Palette de commandes dans Visual Studio Code. 
 
-2. Sélectionnez **installer une Extension** et écrivez **mssql**.
+2. Sélectionnez **installer une Extension** et type **mssql**.
    > [!TIP] 
    > Pour macOS, la touche **CMD** est équivalente à **CTRL** sous Linux et Windows.
 
@@ -47,12 +47,12 @@ Les étapes suivantes expliquent comment installer l’extension mssql.
    
    <img src="./media/sql-server-linux-develop-use-vscode/vscode-extension.png" alt="Install the extension" style="width: 600px;"/>
 
-3. L'installation de l'extension **mssql** prend jusqu' à une minute. Attendez l'invite qui vous indique qu'il a été installé avec succès.
+3. L'extension **mssql** prend jusqu'à une minute pour s'installer. Patientez jusqu'à ce que l’invite vous indique qu’il est correctement installé.
 
    <img src="./media/sql-server-linux-develop-use-vscode/vscode-install-success-notification.png" alt="Installation success notification" style="width: 600px;"/>
 
    > [!NOTE]
-   > Pour MacOS, vous devez installer OpenSSL. C'est un pré-requis pour .Net Core utilisé par l'extension mssql. Suivez les étapes préalables à l'installation** décrites dans les [instructions .Net Core]. Vous pouvez également exécuter les commandes suivantes dans votre Terminal MacOS.
+   > Pour MacOS, vous devez installer OpenSSL. C'est un pré-requis pour .Net Core utilisé par l'extension mssql. Suivez les étapes **préalables à l'installation** décrites dans les [instructions .Net Core]. Vous pouvez également exécuter les commandes suivantes dans votre Terminal MacOS.
    >
    >   ```bash
    >   brew update
@@ -62,11 +62,11 @@ Les étapes suivantes expliquent comment installer l’extension mssql.
    >   ```
    
    > [!NOTE]
-   > Pour les Windows 8.1, Windows Server 2012 ou plus anciennes, vous devez télécharger et installer le [Windows 10 Universal C Runtime]. Téléchargez et ouvrez le fichier zip. Ensuite, exécutez le programme d'installation (fichier. msu) en ciblant la configuration actuelle de votre système d'exploitation.
+   > Pour Windows 8.1, Windows Server 2012 ou une version inférieure, vous devez télécharger et installer le [Windows 10 universelles C Runtime]. Téléchargez et ouvrez le fichier zip. Puis exécutez le programme d’installation (fichiers .msu) ciblant la configuration actuelle du système d’exploitation.
 
 ## <a name="create-or-open-a-sql-file"></a>Créez ou ouvrez un fichier SQL
 
-L'extension **mssql** active les commandes mssql et l'IntelliSense T-SQL dans l'éditeur lorsque le mode langue est réglé sur SQL.
+L'extension **mssql** active les commandes mssql et l'IntelliSense T-SQL dans l'éditeur lorsque le mode langage est réglé sur **SQL**.
 
 1. Appuyez sur **CTRL + N**. Visual Studio Code ouvre un nouveau fichier de "Texte brut" par défaut. 
 
@@ -91,7 +91,7 @@ Les étapes suivantes montrent comment se connecter à SQL Server avec le Visual
 
 4. Sélectionnez **créer le profil de connexion**. Cette opération crée un profil de connexion pour votre instance de SQL Server.
 
-5. Suivez les invites afin de spécifier les propriétés de connexion pour le nouveau profil de connexion. Après avoir spécifié chaque valeur, appuyez sur **Entrée** pour continuer. 
+5. Suivez les invites pour spécifier les propriétés de connexion du nouveau profil de connexion. Après avoir spécifié chaque valeur, appuyez sur **entrée** pour continuer. 
 
    Le tableau suivant décrit les propriétés de profil de connexion.
 
@@ -101,16 +101,16 @@ Les étapes suivantes montrent comment se connecter à SQL Server avec le Visual
    | **[Facultatif] Nom de la base de données** | La base de données que vous voulez utiliser. Pour les besoins de ce tutoriel, ne spécifiez pas de base de données et appuyez sur **entrée** pour continuer. |
    | **Nom d'utilisateur** | Entrez le nom d'un utilisateur ayant accès à une base de données sur le serveur. Pour ce tutoriel, utilisez le compte **SA** créé par défaut lors de l'installation de SQL Server. |
    | **Mot de passe (connexion SQL)** | Entrez le mot de passe de l'utilisateur spécifié. | 
-   | **Enregistrer le mot de passe ?** | Tapez **Oui** pour enregistrer le mot de passe. Sinon, tapez **Non** pour demander le mot de passe chaque fois que le profil de connexion est utilisé. |
-   | **[Facultatif] Entrez un nom pour ce profil** | Nom du profil de connexion. Par exemple, vous pouvez nommer le profile **profile local** . 
+   | **Enregistrer le mot de passe ?** | Tapez **Oui** pour enregistrer le mot de passe. Sinon, tapez **Non** pour demander le mot de passe chaque fois que le profil de connexion est utilisé. |
+   | **[Facultatif] Entrez un nom pour ce profil** | Nom du profil de connexion. Par exemple, vous pouvez nommer le profil **profil local**. 
 
    > [!Tip] 
    > Vous pouvez créer et modifier des profils de connexion dans le fichier de paramètres utilisateur (settings.json). Ouvrez le fichier de paramètres en sélectionnant **préférences** , puis **paramètres utilisateur** dans le menu Visual Studio Code. Pour plus d’informations, consultez [gérer les profils de connexion].
 
-6. Appuyez sur la touche **Échap** pour fermer le message d’information qui vous signale que le profil a été créé et connecté.
+6. Appuyez sur la touche **ÉCHAP** pour fermer le message d’information qui vous informe que le profil est créé et connecté.
 
    > [!TIP]
-   > Si vous obtenez un échec de connexion, essayez d'abord de diagnostiquer le problème à partir du message d'erreur dans le panneau Output du VS Code (sélectionnez **Sortie** dans le menu **Vue**). Passez ensuite en revue les [recommandations de dépannage des connexions].
+   > Si vous obtenez un échec de connexion, essayez d'abord de diagnostiquer le problème à partir du message d'erreur dans le panneau **Output** du VS Code (sélectionnez **Sortie** dans le menu **Vue**). Passez ensuite en revue les[recommandations de dépannage des connexions].
 
 7. Vérifiez votre connexion dans la barre d’état.
 
@@ -151,7 +151,7 @@ Les étapes suivantes montrent comment se connecter à SQL Server avec le Visual
 
 2. Appuyez sur **F1** pour afficher la Palette de commandes.
 
-3. Type **sql** dans la Palette de commandes pour afficher les commandes SQL ou un type **sqluse** pour **MS SQL : Use Database** commande.
+3. Ecrivez **sql** dans la Palette de commandes pour afficher les commandes SQL ou un type **sqluse** pour **MS SQL : Use Database** commande.
 
 4. Cliquez sur **MS SQL:Use Database**, puis sélectionnez la base de données **TutorialDB**. Cela modifie le contexte de la nouvelle base de données créée dans la section précédente.
 
@@ -161,7 +161,7 @@ Les étapes suivantes montrent comment se connecter à SQL Server avec le Visual
 
 4. Dans l’extrait de code, tapez **employees** pour le nom de table.
 
-5. Appuyez sur l'**onglet**, puis tapez **dbo** comme nom de schéma.
+5. Appuyez sur **l’onglet**, puis tapez **dbo** comme nom de schéma.
 
    > [!NOTE]
    > Après avoir ajouté l’extrait de code, vous devez écrire les noms des tables et des schemas sans faire sortir le focus hors de l’éditeur de Visual Studio Code.
@@ -212,7 +212,7 @@ Les étapes suivantes montrent comment se connecter à SQL Server avec le Visual
    > En cours de frappe, utilisez l’aide de T-SQL IntelliSense.
    >   <img src="./media/sql-server-linux-develop-use-vscode/vscode-intellisense.png" alt="TSQL IntelliSense" style="width: 500px;" />
 
-2. Appuyez sur **CTRL + MAJ + E** pour exécuter les commandes. Les deux ensembles de résultats s'affichent dans la fenêtre  **résultats**. 
+2. Appuyez sur **CTRL + MAJ + E** pour exécuter les commandes. Les deux ensembles de résultats s'affichent dans la fenêtre **résultats**. 
 
    <img src="./media/sql-server-linux-develop-use-vscode/vscode-result-grid.png" alt="Results" style="width: 300px;" />
 
@@ -236,7 +236,7 @@ Les étapes suivantes montrent comment se connecter à SQL Server avec le Visual
    > [!NOTE]
    > L’icône Agrandir s’affiche lorsque votre script T-SQL possède deux ou plusieurs grilles de résultats.
 
-3. Ouvrez le menu contextuel de la grille à l'aide du bouton droit de la souris sur une grille.
+3. Ouvrez le menu contextuel de la grille à l'aide du bouton droit de la souris sur une grille. 
 
    <img src="./media/sql-server-linux-develop-use-vscode/vscode-grid-context-menu.png" alt="Context menu" style="width: 500px;" />
 
@@ -244,7 +244,7 @@ Les étapes suivantes montrent comment se connecter à SQL Server avec le Visual
 
 5. Ouvrez le menu contextuel de grille et sélectionnez **enregistrer en tant que JSON** pour enregistrer le résultat dans un fichier .json.
 
-6. Spécifiez un nom de fichier JSON. Pour ce didacticiel, tapez **employees.json**.
+6. Spécifiez un nom de fichier pour le fichier JSON. Pour ce didacticiel, tapez **employees.json**.
 
 7. Vérifiez que le fichier JSON est enregistré et ouvert dans Visual Studio Code.
 
@@ -252,23 +252,23 @@ Les étapes suivantes montrent comment se connecter à SQL Server avec le Visual
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-Dans un scénario réel, vous pouvez créer un script que vous devrez sauvegarder et exécuter plus tard (soit pour l'administration, soit dans le cadre d'un projet de développement plus vaste). Dans ce cas, vous pouvez sauvegarder le script avec une extension **.sql**.
+Dans un scénario réel, vous pouvez créer un script que vous devrez enregistrer et exécuter plus tard (soit pour l'administration, soit dans le cadre d'un projet de développement plus vaste). Dans ce cas, vous pouvez enregistrer le script avec une extension **.sql**.
 
 Si vous utilisez T-SQL, consultez [didacticiel : écriture d’instructions Transact-SQL] et [de référence Transact-SQL (moteur de base de données)].
 
-Pour plus d’informations sur l’utilisation ou qui ont contribué à l’extension mssql, consultez [le wiki de projet d’extension mssql].
+Pour plus d’informations sur l’utilisation ou pour contribuer à l’extension mssql, consultez [le Wiki de projet d’extension mssql].
 
-Pour plus d’informations sur l’utilisation de Code de Visual Studio, consultez le [documentation de Visual Studio Code](https://code.visualstudio.com/docs).
+Pour plus d’informations sur l’utilisation de Visual Studio Code, consultez la [documentation de Visual Studio Code](https://code.visualstudio.com/docs).
 
 [**mssql** extension VS Code]:https://aka.ms/mssql-marketplace
-[télécharger et installer VS Code]:https://code.visualstudio.com/Download
-[.Net des instructions de base]:https://www.microsoft.com/net/core
+[téléchargez et installez VS Code]:https://code.visualstudio.com/Download
+[instructions .Net Core]:https://www.microsoft.com/net/core
 [gérer les profils de connexion]:https://github.com/Microsoft/vscode-mssql/wiki/manage-connection-profiles
-[recommandations en matière de résolution des problèmes de connexion]:./sql-server-linux-troubleshooting-guide.md#connection
+[recommandations de dépannage des connexions]:./sql-server-linux-troubleshooting-guide.md#connection
 [personnaliser des raccourcis]:https://github.com/Microsoft/vscode-mssql/wiki/customize-shortcuts
 [didacticiel : écriture d’instructions Transact-SQL]:https://msdn.microsoft.com/library/ms365303.aspx
 [de référence Transact-SQL (moteur de base de données)]:https://msdn.microsoft.com/library/bb510741.aspx
 [Visual Studio Code documentation]:https://code.visualstudio.com/docs
 [Windows 10 universelles C Runtime]:https://github.com/Microsoft/vscode-mssql/wiki/windows10-universal-c-runtime-requirement
 [personnaliser les options d’extension]: https://github.com/Microsoft/vscode-mssql/wiki/customize-options
-[le wiki de projet d’extension mssql]: https://github.com/Microsoft/vscode-mssql/wiki
+[le Wiki de projet d’extension mssql]: https://github.com/Microsoft/vscode-mssql/wiki
