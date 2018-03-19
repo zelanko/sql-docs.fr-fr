@@ -76,14 +76,14 @@ Vous pouvez installer uniquement les composants clients de [!INCLUDE[ssNoVersion
   
 ## <a name="includessnoversionincludesssnoversion-mdmd-components"></a>Composants [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]  
 
-2017 du serveur SQL sur Linux prend en charge le moteur de base de données SQL Server. Le tableau suivant décrit les fonctionnalités dans le moteur de base de données.   
+SQL Server 2017 sous Linux prend en charge le moteur de base de données SQL Server. Le tableau suivant décrit les fonctionnalités dans le moteur de base de données.   
   
 |Composants serveur| Description|  
 |-----------------------|-----------------|  
 |[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]|[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] inclut le [!INCLUDE[ssDE](../includes/ssde-md.md)], le service principal de stockage, traitement et de sécurisation des données, réplication, recherche en texte intégral, outils de gestion relationnelles et XML et l’intégration de base de données analytique.|  
 
 **Éditions Developer, Enterprise Core et d’évaluation**  
-Pour les fonctionnalités prises en charge par les principaux de l’entreprise, développeur et les éditions d’évaluation, consultez les fonctionnalités répertoriées pour l’édition de SQL Server Enterprise dans les tableaux suivants.
+Pour les fonctionnalités prises en charge par l'édition Enterprise, Developer et les éditions d’évaluation, consultez les fonctionnalités répertoriées pour l’édition Enterprise de SQL Server  dans les tableaux ci-dessous.
 
 L’édition Developer continue à prendre en charge seulement 1 client pour [SQL Server Distributed Replay](../tools/distributed-replay/sql-server-distributed-replay.md). 
   
@@ -104,7 +104,7 @@ L’édition Developer continue à prendre en charge seulement 1 client pour [S
   
 |Fonctionnalité|Enterprise|Standard|Web|Express|  
 |-------------|----------------|--------------|---------|------------------------|  
-|Copie des journaux de transaction|Oui|Oui|Oui|non|  
+|Envoi des journaux de transaction|Oui|Oui|Oui|non|  
 |Compression de sauvegarde|Oui|Oui|Non|non| 
 |Instantané de base de données|Oui|Non|Non|non|
 |Instance de cluster de basculement Always On<sup>1</sup>|Oui|Oui|Non|non| 
@@ -177,13 +177,13 @@ L’édition Developer continue à prendre en charge seulement 1 client pour [S
 |Automation de stratégie (vérification selon la planification et sur modification)|Oui|Oui|Oui|Non|non|   
 |Collecteur de données de performances|Oui|Oui|Oui|Non|non| 
 |Rapports de performances standard|Oui|Oui|Oui|Non|non| 
-|Repères de plan et gel de plan relatif|Oui|Oui|Oui|Non|non|   
+|Repères de plan et gel de plan|Oui|Oui|Oui|Non|non|   
 |Requête directe de vues d'index (à l'aide de l'indicateur NOEXPAND)|Oui|Oui|Oui|Oui| 
 |Maintenance automatique des vues indexées|Oui|Oui|Oui|Non|non| 
 |Vues partitionnées distribuées|Oui|Non|Non|non| 
 |Opérations d'index parallèles|Oui|Non|Non|non|  
 |Utilisation automatique de vues indexées par l'optimiseur de requête|Oui|Non|Non|non| 
-|Vérifications de cohérence parallèles|Oui|Non|Non|non| 
+|Vérifications de cohérence en parallèle|Oui|Non|Non|non| 
 |Point de contrôle de l’utilitaire SQL Server|Oui|Non|Non|non|    
 
 ##  <a name="Programmability"></a> Programmability  
@@ -209,7 +209,7 @@ L’édition Developer continue à prendre en charge seulement 1 client pour [S
 
 ## <a name="IS"></a> Integration Services
 
-Pour plus d’informations sur les fonctionnalités d’Integration Services (SSIS) pris en charge par les éditions de [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)], consultez [fonctionnalités Integration Services pris en charge par les éditions de SQL Server](../integration-services/integration-services-features-supported-by-the-editions-of-sql-server.md).
+Pour plus d’informations sur les fonctionnalités d’Integration Services (SSIS) prises en charge par les éditions de [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)], consultez [fonctionnalités Integration Services pris en charge par les éditions de SQL Server](../integration-services/integration-services-features-supported-by-the-editions-of-sql-server.md).
 
 ##  <a name="SLS"></a> Services d’emplacement et spatiaux  
   

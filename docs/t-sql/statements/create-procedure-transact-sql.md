@@ -53,11 +53,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 086151e2916335ae0d7cda3eef11a79363d3ce53
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 8762890c81c5ff2b03ba07a44ef6c559c6d57ab7
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="create-procedure-transact-sql"></a>CREATE PROCEDURE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -81,7 +81,7 @@ Passez à la section [Exemples simples](#Simple) pour ignorer les détails de la
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```sql
 -- Transact-SQL Syntax for Stored Procedures in SQL Server and Azure SQL Database  
   
 CREATE [ OR ALTER ] { PROC | PROCEDURE } 
@@ -100,7 +100,7 @@ AS { [ BEGIN ] sql_statement [;] [ ...n ] [ END ] }
     [ EXECUTE AS Clause ]  
 ```  
   
-```  
+```sql
 -- Transact-SQL Syntax for CLR Stored Procedures  
   
 CREATE [ OR ALTER ] { PROC | PROCEDURE } 
@@ -113,7 +113,7 @@ AS { EXTERNAL NAME assembly_name.class_name.method_name }
 [;]  
 ```  
   
-```  
+```sql
 -- Transact-SQL Syntax for Natively Compiled Stored Procedures  
   
 CREATE [ OR ALTER ] { PROC | PROCEDURE } [schema_name.] procedure_name  
@@ -137,7 +137,7 @@ sql_statement [;] [ ... n ]
   | [ DELAYED_DURABILITY = { OFF | ON } ]  
 ```  
   
-```  
+```sql
 -- Transact-SQL Syntax for Stored Procedures in Azure SQL Data Warehouse
 -- and Parallel Data Warehouse  
   
@@ -224,7 +224,7 @@ RECOMPILE
 ENCRYPTION  
  **S’applique à** : SQL Server ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
- Indique que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] convertit le texte d’origine de l’instruction CREATE PROCEDURE dans un format d’obfuscation. La sortie générée par l'obfuscation n'est pas visible directement dans les vues de catalogue de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Les utilisateurs n'ayant pas accès aux tables système ou aux fichiers de base de données ne peuvent pas récupérer le texte obscurci. Le texte est cependant à la disposition des utilisateurs disposant de privilèges et qui peuvent accéder aux tables système par le biais du [port DAC](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md) ou qui accèdent directement aux fichiers de bases de données. Les utilisateurs qui peuvent attacher un débogueur au processus serveur peuvent également récupérer la procédure déchiffrée de la mémoire à l'exécution. Pour plus d’informations sur l’accès aux métadonnées système, consultez [Configuration de la visibilité des métadonnées](../../relational-databases/security/metadata-visibility-configuration.md).  
+ Indique que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] convertit le texte d’origine de l’instruction CREATE PROCEDURE dans un format d’obfuscation. La sortie générée par l'obfuscation n'est pas visible directement dans les affichages catalogue de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Les utilisateurs n'ayant pas accès aux tables système ou aux fichiers de base de données ne peuvent pas récupérer le texte obscurci. Le texte est cependant à la disposition des utilisateurs disposant de privilèges et qui peuvent accéder aux tables système par le biais du [port DAC](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md) ou qui accèdent directement aux fichiers de bases de données. Les utilisateurs qui peuvent attacher un débogueur au processus serveur peuvent également récupérer la procédure déchiffrée de la mémoire à l'exécution. Pour plus d’informations sur l’accès aux métadonnées système, consultez [Configuration de la visibilité des métadonnées](../../relational-databases/security/metadata-visibility-configuration.md).  
   
  Cette option n'est pas valide pour les procédures CLR.  
   
@@ -245,14 +245,14 @@ FOR REPLICATION
  Une procédure `FOR REPLICATION` a un type d’objet **RF** dans **sys.objects** et **sys.procedures**.  
   
  { [ BEGIN ] *sql_statement* [;] [ ...*n* ] [ END ] }  
- Une ou plusieurs instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] comprenant le corps de la procédure. Vous pouvez utiliser les mots clés facultatifs BEGIN et END pour délimiter les instructions. Pour plus d'informations, consultez les sections suivantes intitulées Bonnes pratiques, Remarques d'ordre général et Limitations et restrictions.  
+ Une ou plusieurs instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] comprenant le corps de la procédure. Vous pouvez utiliser les mots clés facultatifs BEGIN et END pour délimiter les instructions. Pour plus d'informations, consultez les sections suivantes intitulées Meilleures pratiques, Remarques d'ordre général et Limitations et restrictions.  
   
 EXTERNAL NAME *assembly_name***.***class_name***.***method_name*  
- **S’applique à** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+ **S’applique à** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] jusqu’à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
  Spécifie la méthode d'un assembly [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] pour une procédure CLR à référencer. *class_name* doit être un identificateur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] valide et doit exister comme classe dans l’assembly. Si la classe possède un nom qualifié par un espace de noms qui utilise un point (**.**) pour séparer les parties constituant l’espace de noms, le nom de la classe doit être délimité à l’aide de crochets (**[]**) ou de guillemets droits (**""**). La méthode spécifiée doit être une méthode statique de la classe.  
   
- Par défaut, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne peut pas exécuter du code CLR. Vous pouvez créer, modifier et supprimer des objets d’une base de données qui font référence à des modules CLR (Common Language Runtime) ; cependant, vous ne pouvez pas exécuter ces références dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tant que vous n’avez pas activé l’[option clr enabled](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md). Pour activer cette option, utilisez [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md).  
+ Par défaut, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne peut pas exécuter du code CLR. Vous pouvez créer, modifier et supprimer des objets d’une base de données qui font référence à des modules CLR (Common Language Runtime) ; cependant, vous ne pouvez pas exécuter ces références dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tant que vous n’avez pas activé l’[option CLR enabled](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md). Pour activer cette option, utilisez [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md).  
   
 > [!NOTE]  
 >  Les procédures CLR ne sont pas prises en charge dans une base de données à relation contenant-contenu.  
@@ -370,7 +370,7 @@ Consultez [Exemples](#Examples) à la fin de cette rubrique pour obtenir beaucou
   
 -   Évitez d'utiliser des fonctions scalaires dans des instructions SELECT qui retournent un grand nombre de lignes de données. Étant donné que la fonction scalaire doit être appliquée à chaque ligne, le comportement s'apparente à un traitement par ligne et nuit aux performances.  
   
--   Évitez d’utiliser `SELECT *`. Utilisez les noms de colonnes requis afin d'éviter que des erreurs du [!INCLUDE[ssDE](../../includes/ssde-md.md)] n'interrompent l'exécution de la procédure. Par exemple, l’exécution d’une instruction `SELECT *` qui retourne des données à partir d’une table contenant 12 colonnes, puis insère ces données dans une table temporaire de 12 colonnes s’effectue sans problème jusqu’à ce que l’ordre ou le nombre des colonnes change dans l’une des tables.  
+-   Évitez d’utiliser `SELECT *`. utilisez les noms de colonnes requis afin d'éviter que des erreurs du [!INCLUDE[ssDE](../../includes/ssde-md.md)] n'interrompent l'exécution de la procédure. Par exemple, l’exécution d’une instruction `SELECT *` qui retourne des données à partir d’une table contenant 12 colonnes, puis insère ces données dans une table temporaire de 12 colonnes s’effectue sans problème jusqu’à ce que l’ordre ou le nombre des colonnes change dans l’une des tables.  
   
 -   Évitez de traiter ou de retourner un trop grand nombre de données. Restreignez les résultats le plus tôt possible dans le code de la procédure afin que les opérations suivantes effectuées par la procédure impliquent le jeu de données le plus petit possible. Envoyez uniquement les données essentielles à l'application cliente. Cela s'avère plus efficace que l'envoi de données supplémentaires sur le réseau et l'obligation par l'application cliente de traiter inutilement des jeux de résultats volumineux.  
   
@@ -426,7 +426,7 @@ Consultez [Exemples](#Examples) à la fin de cette rubrique pour obtenir beaucou
   
  Vous ne pouvez pas spécifier un nom de fonction comme valeur par défaut d'un paramètre ou comme valeur transmise à un paramètre lors de l'exécution d'une procédure. En revanche, vous pouvez passer une fonction comme variable, comme indiqué dans l'exemple suivant.  
   
-```  
+```sql
 -- Passing the function value as a variable.  
 DECLARE @CheckDate datetime = GETDATE();  
 EXEC dbo.uspGetWhereUsedProductID 819, @CheckDate;   
@@ -444,9 +444,9 @@ GO
 -   les types de paramètres utilisés doivent être compatibles avec ceux des paramètres correspondant de la procédure [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour plus d’informations sur la correspondance des types de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] avec ceux de [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], consultez [Mappage des données de paramètres CLR](../../relational-databases/clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md).  
   
 ## <a name="metadata"></a>Métadonnées  
- Le tableau suivant répertorie les vues de catalogue et vues de gestion dynamique que vous pouvez utiliser pour retourner des informations sur les procédures stockées.  
+ Le tableau suivant répertorie les affichages catalogue et vues de gestion dynamique que vous pouvez utiliser pour retourner des informations sur les procédures stockées.  
   
-|Vue|Description|  
+|Affichage|Description|  
 |----------|-----------------|  
 |[sys.sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)|Retourne la définition d'une procédure [!INCLUDE[tsql](../../includes/tsql-md.md)]. Le texte d’une procédure créée à l’aide de l’option ENCRYPTION ne peut pas être affiché par le biais de la vue de catalogue **sys.sql_modules**.|  
 |[sys.assembly_modules](../../relational-databases/system-catalog-views/sys-assembly-modules-transact-sql.md)|Retourne des informations sur une procédure CLR.|  
@@ -589,7 +589,7 @@ GO
   
  La procédure `uspGetEmployees` peut être exécutée des manières suivantes :  
   
-```  
+```sql
 EXECUTE HumanResources.uspGetEmployees N'Ackerman', N'Pilar';  
 -- Or  
 EXEC HumanResources.uspGetEmployees @LastName = N'Ackerman', @FirstName = N'Pilar';  

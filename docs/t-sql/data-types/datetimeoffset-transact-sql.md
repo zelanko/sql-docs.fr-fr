@@ -30,11 +30,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: b1b8fba166243143cd9ab8c03303fcfd7448e7a3
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 8121c4b5054bcf8f3144fee3c05e6979f2252293
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="datetimeoffset-transact-sql"></a>datetimeoffset (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -115,6 +115,9 @@ Certains clients de bas niveau ne prennent pas en charge les types de données *
   
 ## <a name="converting-date-and-time-data"></a>Conversion de données date et time
 Lorsque vous effectuez une conversion vers des types de données date et heure, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] rejette toutes les valeurs qu'il ne peut identifier comme dates ou heures. Pour plus d’informations sur l’utilisation des fonctions CAST et CONVERT avec des données date et time, consultez [CAST et CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)
+  
+### <a name="converting-datetimeoffset-data-type-to-other-date-and-time-types"></a>Conversion du type de données datetimeoffset en d’autres types date et time
+Cette section décrit ce qui se produit quand un type de données **datetimeoffset** est converti en d’autres types de données date et time.
   
 Dans le cas d’une conversion en **date**, l’année, le mois et le jour sont copiés. Le code suivant montre les résultats de la conversion d'une valeur `datetimeoffset(4)` en valeur `date`.  
   
@@ -198,9 +201,6 @@ SELECT @datetimeoffset AS '@datetimeoffset', @datetime2 AS '@datetime2';
   
 --(1 row(s) affected)  
 ```  
-  
-### <a name="converting-datetimeoffset-data-type-to-other-date-and-time-types"></a>Conversion du type de données datetimeoffset en d’autres types date et time
-Le tableau suivant décrit ce qui se produit quand un type de données **datetimeoffset** est converti en d’autres types de données date et time.
   
 ### <a name="converting-string-literals-to-datetimeoffset"></a>Conversion de littéraux de chaîne en datetimeoffset
 Les conversions de littéraux de chaîne en types de date et d'heure sont autorisées si toutes les parties des chaînes sont dans des formats valides. Sinon, une erreur d'exécution est déclenchée. Les conversions implicites ou explicites qui ne spécifient pas de style à partir de types de date et d'heure en littéraux de chaîne seront au format par défaut de la session active. Le tableau suivant montre les règles de conversion d’un littéral de chaîne en type de données **datetimeoffset**.

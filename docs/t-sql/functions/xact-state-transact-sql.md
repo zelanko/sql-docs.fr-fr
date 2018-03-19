@@ -30,11 +30,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 81d8b98cf6f7ddd80e3952b82ae13cea75a81abd
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: f8b63625f4e0af0e1f6c55b2d85ae8bb10d53b02
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="xactstate-transact-sql"></a>XACT_STATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -59,7 +59,7 @@ XACT_STATE()
 |------------------|-------------|  
 | 1|Il existe une transaction utilisateur active pour la demande en cours. La demande peut exécuter toutes les actions, y compris l'écriture de données et la validation de la transaction.|  
 |0|Il n'existe aucune transaction utilisateur active pour la demande en cours.|  
-|-1|Il existe une transaction utilisateur active pour la demande en cours, mais une erreur a entraîné le classement de la transaction comme non validable. La demande ne peut pas valider la transaction ou revenir à un point d'enregistrement ; elle peut seulement demander une annulation complète de la transaction. La demande ne peut effectuer aucune opération d'écriture tant qu'elle n'a pas annulé la transaction. La demande peut effectuer uniquement des opérations de lecture tant qu'elle n'a pas annulé la transaction. Lorsque la transaction est annulée, la demande peut effectuer des opérations de lecture et d'écriture et commencer une nouvelle transaction.<br /><br /> À la fin de l’exécution d’un lot, le [!INCLUDE[ssDE](../../includes/ssde-md.md)] restaure automatiquement toutes les transactions non validables actives. Si aucun message d'erreur n'a été envoyé lorsque la transaction est passée dans un état non validable, une erreur est envoyée à l'application cliente lorsque le traitement se termine. Ce message indique qu'une transaction non validable a été détectée et restaurée.|  
+|-1|Il existe une transaction utilisateur active pour la demande en cours, mais une erreur a entraîné le classement de la transaction comme non validable. La demande ne peut pas valider la transaction ou revenir à un point d'enregistrement ; elle peut seulement demander une annulation complète de la transaction. La demande ne peut effectuer aucune opération d'écriture tant qu'elle n'a pas annulé la transaction. La demande peut effectuer uniquement des opérations de lecture tant qu'elle n'a pas annulé la transaction. Lorsque la transaction est annulée, la demande peut effectuer des opérations de lecture et d'écriture et commencer une nouvelle transaction.<br /><br /> À la fin de l’exécution du lot extérieur, le [!INCLUDE[ssDE](../../includes/ssde-md.md)] restaure automatiquement toutes les transactions non validables actives. Si aucun message d'erreur n'a été envoyé lorsque la transaction est passée dans un état non validable, une erreur est envoyée à l'application cliente lorsque le traitement se termine. Ce message indique qu'une transaction non validable a été détectée et restaurée.|  
   
  Les fonctions XACT_STATE et @@TRANCOUNT permettent de détecter s’il existe une transaction utilisateur active pour la demande en cours. @@TRANCOUNT ne permet pas de déterminer si cette transaction a été classée comme transaction non validable. XACT_STATE ne permet pas de déterminer s'il existe des transactions imbriquées.  
   

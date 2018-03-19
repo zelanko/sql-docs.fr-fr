@@ -39,11 +39,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 645cb458c480fb0842f83bf60721f5228e434d4c
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 9c1d8692b634c1f6f71c112be59eb9e5ff84ea5e
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="insert-transact-sql"></a>INSERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -190,22 +190,22 @@ INSERT INTO [ database_name . [ schema_name ] . | schema_name . ] table_name
   
  Si une colonne ne se trouve pas dans *column_list*, le [!INCLUDE[ssDE](../../includes/ssde-md.md)] doit pouvoir fournir une valeur basée sur la définition de la colonne ; sinon, il n’est pas possible de charger la ligne. Le [!INCLUDE[ssDE](../../includes/ssde-md.md)] fournit automatiquement une valeur pour la colonne si :  
   
--   la colonne a une propriété IDENTITY ; la valeur d'identité incrémentielle suivante est utilisée ;  
+-   a une propriété IDENTITY. la valeur d'identité incrémentielle suivante est utilisée ;  
   
--   la colonne a une valeur par défaut ; la valeur par défaut de la colonne est utilisée ;  
+-   elle a une valeur par défaut, la valeur par défaut de la colonne est utilisée ;  
   
 -   la colonne a un type de données **timestamp** ; la valeur d'horodateur actuelle est utilisée ;  
   
--   la colonne autorise la valeur NULL ; Une valeur Null est utilisée.  
+-   Autorise la valeur NULL. Une valeur Null est utilisée.  
   
--   la colonne est une colonne calculée ; la valeur calculée est utilisée.  
+-   Colonne calculée. la valeur calculée est utilisée.  
   
 *column_list* doit être utilisé lors de l’insertion de valeurs explicites dans une colonne d’identité ; par ailleurs, l’option SET IDENTITY_INSERT doit avoir la valeur ON pour la table.  
   
 Clause OUTPUT  
  Retourne des lignes insérées dans le cadre de l'opération d'insertion. Les résultats peuvent être retournés à l'application de traitement ou être insérés dans une table ou une variable de table pour un traitement ultérieur.  
   
- La [clause OUTPUT](../../t-sql/queries/output-clause-transact-sql.md) n’est pas prise en charge dans les instructions DML qui font référence à des vues partitionnées locales, à des vues partitionnées distribuées, à des tables distantes ou à des instructions INSERT contenant un *execute_statement*. La clause OUTPUT INTO n’est pas prise en charge dans les instructions INSERT qui contiennent une clause \<dml_table_source>. 
+ La [clause OUTPUT](../../t-sql/queries/output-clause-transact-sql.md) n’est pas prise en charge dans les instructions DML qui font référence à des vues partitionnées locales, à des vues partitionnées distribuées, à des tables distantes ou à des instructions INSERT contenant un *execute_statement*. La clause OUTPUT INTO n’est pas prise en charge dans les instructions INSERT qui contiennent une clause \<dml_table_source>. 
   
  VALUES  
  Présente la ou les listes de valeurs de données à insérer. Il doit y avoir une valeur de données pour chaque colonne de *column_list* (le cas échéant) ou de la table. La liste de valeurs doit être mise entre parenthèses.  
@@ -251,7 +251,7 @@ Clause OUTPUT
   
 -   Elle ne peut pas participer à la réplication de fusion ou à des abonnements pouvant être mis à jour pour la réplication transactionnelle.  
   
- Le niveau de compatibilité de la base de données doit être 100 ou plus. Pour plus d’informations, consultez [OUTPUT Clause &#40;Transact-SQL&#41;](../../t-sql/queries/output-clause-transact-sql.md).  
+ Le niveau de compatibilité de la base de données doit être 100 ou plus. Pour plus d’informations, consultez [Clause OUTPUT &#40;Transact-SQL&#41;](../../t-sql/queries/output-clause-transact-sql.md).  
   
  \<select_list>  
  Liste séparée par des virgules qui spécifie les colonnes retournées par la clause OUTPUT qu'il convient d'insérer. Les colonnes dans \<select_list> doivent être compatibles avec les colonnes dans lesquelles les valeurs sont insérées. \<select_list> ne peut pas faire référence à des fonctions d’agrégation ni à TEXTPTR. 
@@ -398,7 +398,9 @@ Ces optimisations sont similaires à celles disponibles avec la commande BULK IN
   
  Lorsque TOP est utilisé avec INSERT, les lignes référencées ne sont pas réorganisées dans un ordre particulier et la clause ORDER BY ne peut pas être spécifiée directement dans ces instructions. Si vous devez utiliser une clause TOP pour insérer des lignes dans un ordre chronologique significatif, vous devez associer à cette clause TOP une clause ORDER BY spécifiée dans une instruction de sous-sélection. Consultez la section Exemples plus loin dans cette rubrique.
  
-Les requêtes INSERT qui utilisent SELECT avec ORDER BY pour remplir les lignes garantissent la façon dont les valeurs d’identité sont calculées, mais pas l’ordre d’insertion des lignes.    
+Les requêtes INSERT qui utilisent SELECT avec ORDER BY pour remplir les lignes garantissent la façon dont les valeurs d’identité sont calculées, mais pas l’ordre d’insertion des lignes.
+
+Dans Parallel Data Warehouse, la clause ORDER BY n'est pas valide dans VIEWS, CREATE TABLE AS SELECT, INSERT SELECT, les fonctions inline, les tables dérivées, les sous-requêtes et les expressions de table communes, sauf si TOP est également spécifié.
   
 ## <a name="logging-behavior"></a>Comportement de journalisation  
  L’instruction INSERT est toujours entièrement journalisée, sauf lors de l’utilisation de la fonction OPENROWSET avec le mot clé BULK ou lors de l’utilisation d’`INSERT INTO <target_table> SELECT <columns> FROM <source_table>`. Ces opérations peuvent faire l'objet d'une journalisation minimale. Pour plus d'informations, consultez la section « Recommandations pour le chargement en masse des données », précédemment dans cette rubrique.  
@@ -411,7 +413,7 @@ Les requêtes INSERT qui utilisent SELECT avec ORDER BY pour remplir les lignes
 ### <a name="permissions"></a>Autorisations  
  L'autorisation INSERT est obligatoire sur la table cible.  
   
- Les autorisations INSERT sont accordées par défaut aux membres du rôle serveur fixe **sysadmin**, aux rôles de base de données fixes **db_owner** et **db_datawriter**, ainsi qu’au propriétaire de la table. Les membres des rôles **sysadmin**, **db_owner** et **db_securityadmin**, ainsi que le propriétaire de la table peuvent transférer des autorisations à d’autres utilisateurs.  
+ Les autorisations INSERT sont accordées par défaut aux membres du rôle serveur fixe **sysadmin**, aux rôles de base de données fixes **db_owner** et **db_datawriter**, ainsi qu’au propriétaire de la table. Les membres des rôles **sysadmin**, **db_owner** et **db_securityadmin** et le propriétaire de la table peuvent transférer des autorisations à d’autres utilisateurs.  
   
  Pour exécuter INSERT avec l’option BULK de la fonction OPENROWSET, vous devez être membre du rôle serveur fixe **sysadmin** ou **bulkadmin**.  
   
