@@ -22,7 +22,7 @@ ms.lasthandoff: 12/21/2017
 ---
 # <a name="what-is-includename-sosincludesname-sosmd"></a>Nouveautés [!INCLUDE[name-sos](../includes/name-sos.md)]?
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)] est un outil gratuit qui s’exécute sur Windows, Mac OS et Linux, pour la gestion de SQL Server, base de données SQL Azure et Azure SQL Data Warehouse ; là où ils s’exécutent.
+[!INCLUDE[name-sos](../includes/name-sos-short.md)] est un outil gratuit qui s’exécute sur Windows, Mac OS et Linux, pour la gestion de SQL Server, base de données SQL Azure et Azure SQL Data Warehouse ; partout où ils s’exécutent.
 
 **[Téléchargez et installez[!INCLUDE[name-sos](../includes/name-sos-short.md)]](download.md)**
 
@@ -40,7 +40,7 @@ Les extraits de code T-SQL génèrent la syntaxe T-SQL pour créer des bases de 
 
 ## <a name="customizable-server-and-database-dashboards"></a>Serveur personnalisable et tableaux de bord de base de données
 
-Créer des tableaux de bord personnalisables pour surveiller et résoudre rapidement les goulots d’étranglement de performances de vos bases de données. Pour en savoir plus sur les widgets d’aperçu et des tableaux de bord de base de données (et de serveur), consultez [gérer les serveurs et bases de données avec les widgets d'aperçu](insight-widgets.md).
+Créer des tableaux de bord personnalisables pour surveiller et résoudre rapidement les goulots d’étranglement de performances de vos bases de données. Pour en savoir plus sur les widgets d’aperçu et les tableaux de bord de base de données (et de serveur), consultez [gérer les serveurs et les bases de données avec les widgets d'aperçu](insight-widgets.md).
 
 ## <a name="connection-management-server-groups"></a>Gestion des connexions (groupes de serveurs)
 
