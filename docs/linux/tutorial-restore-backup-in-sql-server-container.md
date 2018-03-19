@@ -27,7 +27,7 @@ ms.lasthandoff: 02/13/2018
 Ce didacticiel montre comment déplacer et de restaurer un fichier de sauvegarde de SQL Server dans une image de conteneur de SQL Server 2017 Linux s’exécutant sur Docker.
 
 > [!div class="checklist"]
-> * Extraire et exécuter la dernière image de conteneur de SQL Server 2017 Linux.
+> * Extraire et exécuter la dernière image conteneur Linux de SQL Server 2017.
 > * Restaurer la base de données dans le conteneur. 
 > * Restaurez la base de données dans le conteneur.
 > * Exécuter les instructions Transact-SQL pour afficher et modifier la base de données.

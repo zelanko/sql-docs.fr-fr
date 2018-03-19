@@ -1,7 +1,7 @@
 ---
 title: DROP EXTERNAL LIBRARY (Transact-SQL) | Microsoft Docs
 ms.custom: 
-ms.date: 08/17/2017
+ms.date: 03/05/2018
 ms.prod: sql-non-specified
 ms.prod_service: sql-database
 ms.service: 
@@ -21,22 +21,22 @@ helpviewer_keywords:
 author: jeannt
 ms.author: jeannt
 manager: craigg
-ms.openlocfilehash: 8c45da28bf795fca50454fde21eb7d2c3c798296
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 96b323d9b7eaea93439cf6376bf368a8c62154de
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="drop-external-library-transact-sql"></a>DROP EXTERNAL LIBRARY (Transact-SQL)  
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 
-Supprime une bibliothèque de package existante.
+Supprime une bibliothèque de package existante. Des bibliothèques de package sont utilisées par les runtimes externes pris en charge, comme R ou Python.
 
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntaxe
 
-```
-DROP EXTERNAL LIBRARY library_name  
-[ AUTHORIZATION owner_name ];  
+```sql
+DROP EXTERNAL LIBRARY library_name
+[ AUTHORIZATION owner_name ];
 ```
 
 ### <a name="arguments"></a>Arguments
@@ -45,13 +45,17 @@ DROP EXTERNAL LIBRARY library_name
 
 Spécifie le nom d’une bibliothèque de package existante.
 
-Les bibliothèques sont limitées à l’utilisateur. Autrement dit, les noms de bibliothèques sont considérés comme uniques dans le contexte d’un utilisateur ou d’un propriétaire.
+Les bibliothèques sont limitées à l’utilisateur. Les noms de bibliothèques doivent être uniques dans le contexte d’un utilisateur ou d’un propriétaire donné.
 
 **owner_name**
 
 Spécifie le nom de l’utilisateur ou du rôle propriétaire de la bibliothèque externe.
 
 Les propriétaires de base de données peuvent supprimer les bibliothèques créées par les autres utilisateurs.
+
+## <a name="permissions"></a>Autorisations
+
+Supprimer une bibliothèque réclame le privilège ALTER ANY EXTERNAL LIBRARY. Par défaut, le propriétaire de la base de données ou de l’objet peut également supprimer une bibliothèque externe.
 
 ### <a name="return-values"></a>Valeurs retournées
 
@@ -63,20 +67,23 @@ Contrairement à d’autres instructions `DROP` de SQL Server, cette instruction
 
 ## <a name="examples"></a>Exemples
 
-Ajoutez un package R personnalisé, nommé `customPackage`, à une base de données :
+Ajoutez le package R personnalisé, `customPackage`, à une base de données :
 
 ```sql
 CREATE EXTERNAL LIBRARY customPackage 
-FROM 'C:\Users\Username\CustomPackages\customPackage.zip';
+FROM (CONTENT = 'C:\temp\customPackage_v1.1.zip')
+WITH (LANGUAGE = 'R');
+GO
 ```
 
 Supprimez la bibliothèque `customPackage`.
 
 ```sql
-DROP EXTERNAL LIBRARY customPackage <user_name>;
+DROP EXTERNAL LIBRARY customPackage;
 ```
 
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a>Voir aussi
+
 [CREATE EXTERNAL LIBRARY (Transact-SQL)](create-external-library-transact-sql.md)  
 [ALTER EXTERNAL LIBRARY (Transact-SQL)](alter-external-library-transact-sql.md)  
 [sys.external_library_files](../../relational-databases/system-catalog-views/sys-external-library-files-transact-sql.md)  

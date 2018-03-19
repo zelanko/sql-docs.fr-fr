@@ -1,7 +1,7 @@
 ---
 title: ALTER EXTERNAL LIBRARY (Transact-SQL) | Microsoft Docs
 ms.custom: 
-ms.date: 02/25/2018
+ms.date: 03/05/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
@@ -21,11 +21,11 @@ helpviewer_keywords:
 author: jeannt
 ms.author: jeannt
 manager: craigg
-ms.openlocfilehash: 0581957db73b82b9486f938d17b4c8938e20258d
-ms.sourcegitcommit: 6e819406554efbd17bbf84cf210d8ebeddcf772d
+ms.openlocfilehash: e2fb628e2f832b7d1b73a2e3fefae1fb1d6b8e2b
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="alter-external-library-transact-sql"></a>ALTER EXTERNAL LIBRARY (Transact-SQL)  
 
@@ -61,7 +61,7 @@ WITH ( LANGUAGE = 'R' )
 
 **library_name**
 
-Spécifie le nom d’une bibliothèque de package existante. Les bibliothèques sont limitées à l’utilisateur. Autrement dit, les noms de bibliothèques sont considérés comme uniques dans le contexte d’un utilisateur ou d’un propriétaire.
+Spécifie le nom d’une bibliothèque de package existante. Les bibliothèques sont limitées à l’utilisateur. Les noms de bibliothèques doivent être uniques dans le contexte d’un utilisateur ou d’un propriétaire donné.
 
 Le nom de la bibliothèque ne peut pas être assigné arbitrairement. Autrement dit, vous devez utiliser le nom que le runtime appelant attend quand il charge le package.
 
@@ -76,13 +76,6 @@ Spécifie le contenu du package pour une plateforme spécifique. Un seul artefac
 Le fichier peut être spécifié sous la forme d’un chemin local ou d’un chemin réseau. Si l’option de source de données est spécifiée, le nom de fichier peut être un chemin relatif au conteneur référencé dans `EXTERNAL DATA SOURCE`.
 
 Si vous le souhaitez, vous pouvez spécifier une plateforme de système d’exploitation pour le fichier. Un seul artefact de fichier ou contenu est autorisé pour chaque plateforme de système d’exploitation pour un langage ou un runtime spécifique.
-
-**DATA_SOURCE = external_data_source_name**
-
-Spécifie le nom de la source de données externe qui contient l’emplacement du fichier de bibliothèque. Cet emplacement doit référencer un chemin de stockage d’objets blob Azure. Pour créer une source de données externe, utilisez [CREATE EXTERNAL DATA SOURCE (Transact-SQL)](create-external-data-source-transact-sql.md).
-
-> [!IMPORTANT] 
-> Actuellement, les objets blob ne sont pas pris en charge comme source de données dans SQL Server 2017.
 
 **library_bits**
 
@@ -104,7 +97,7 @@ L’instruction `ALTER EXTERNAL LIBRARY` charge uniquement les bits de la biblio
 
 ## <a name="permissions"></a>Autorisations
 
-Nécessite l’autorisation `ALTER ANY EXTERNAL LIBRARY`. Les utilisateurs qui ont créé une bibliothèque externe peuvent modifier cette bibliothèque externe.
+Par défaut, l’utilisateur **dbo** ou n’importe quel membre du rôle **db_owner** a l’autorisation d’exécuter ALTER EXTERNAL LIBRARY. Par ailleurs, l’utilisateur qui a créé la bibliothèque externe peut la modifier.
 
 ## <a name="examples"></a>Exemples
 
@@ -135,10 +128,12 @@ EXEC sp_execute_external_script
 L’exemple suivant modifie la bibliothèque existante en passant les nouveaux bits sous forme de littéral hexadécimal.
 
 ```SQL
-ALTER EXTERNAL LIBRARY customLibrary FROM (CONTENT = 0xabc123) WITH (LANGUAGE = 'R');
+ALTER EXTERNAL LIBRARY customLibrary 
+SET (CONTENT = 0xabc123) WITH (LANGUAGE = 'R');
 ```
 
-Dans cet exemple de code, le contenu des variables est tronqué pour une meilleure lisibilité.
+> [!NOTE]
+> Cet exemple de code montre uniquement la syntaxe ; la valeur binaire de `CONTENT =` a été tronquée pour des raisons de clarté et ne crée pas une bibliothèque fonctionnelle. Son véritable contenu serait beaucoup plus long.
 
 ## <a name="see-also"></a>Voir aussi
 

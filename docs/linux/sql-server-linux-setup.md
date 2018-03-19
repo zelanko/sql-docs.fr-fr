@@ -25,7 +25,7 @@ ms.lasthandoff: 03/09/2018
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-Cet article fournit des conseils pour l’installation, la mise à jour et la désinstallation 2017 du serveur SQL sur Linux.
+Cette rubrique explique comment installer, mettre à jour et désinstaller SQL Server 2017 sur Linux.
 
 > [!TIP]
 > Ce guide coves plusieurs scénarios de déploiement. Si vous cherchez seulement pour obtenir des instructions d’installation pas à pas, passez à un des Démarrages rapides suivants :
@@ -38,7 +38,7 @@ Pour obtenir des réponses aux questions fréquemment posées, consultez le [SQL
 
 ## <a id="supportedplatforms"></a> Plateformes prises en charge
 
-SQL Server 2017 est pris en charge sur Red Hat Enterprise Linux (RHEL), SUSE Linux Enterprise Server (SLES) et Ubuntu. Il est également pris en charge comme une image Docker qui peut s’exécuter sur le moteur Docker sur Linux ou Docker pour Windows/Mac.
+SQL Server 2017 est pris en charge sur Red Hat Enterprise Linux (RHEL), SUSE Linux Enterprise Server (SLES) et Ubuntu. Il est également disponible sous une image Docker qui peut s’exécuter sur le moteur Docker sur Linux ou Docker pour Windows/Mac.
 
 | Plateforme | Versions prises en charge | Obtenir
 |-----|-----|-----
@@ -67,7 +67,7 @@ SQL Server 2017 a les prérequis suivants pour Linux :
 | **Cœurs de processeur** | 2 cœurs |
 | **Type de processeur** | x64 compatibles uniquement |
 
-Si vous utilisez les partages distants **Network File System (NFS)** en production, notez les exigences de prise en charge suivantes :
+Si vous utilisez les partages distants **NFS (Network File System)** en production, notez les exigences de prise en charge suivantes :
 
 - Utiliser la version NFS **4.2 ou ultérieure**. Les versions antérieures de NFS ne gèrent pas les fonctionnalités requises, telles que fallocate et la création du fichier partiellement alloué, commune aux systèmes de fichiers modernes.
 - Recherchez uniquement les répertoires **/var/opt/mssql** sur le montage NFS. Les autres fichiers, tels que les fichiers binaires du système SQL Server, ne sont pas pris en charge.

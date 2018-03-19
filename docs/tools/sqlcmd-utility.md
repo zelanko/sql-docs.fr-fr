@@ -1,4 +1,4 @@
-﻿---
+---
 title: Utilitaire SQLCMD | Documents Microsoft
 ms.custom: 
 ms.date: 07/27/2017

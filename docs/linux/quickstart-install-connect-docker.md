@@ -21,7 +21,7 @@ ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 03/08/2018
 ---
-# <a name="quickstart-run-the-sql-server-2017-container-image-with-docker"></a>Démarrage rapide : Exécuter l’image de SQL Server 2017 conteneur avec Docker
+# <a name="quickstart-run-the-sql-server-2017-container-image-with-docker"></a>Démarrage rapide : Exécuter l’image de conteneur SQL Server 2017 avec Docker
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
@@ -34,7 +34,7 @@ Cette image est composée de SQL Server s’exécutant sur Linux basé sur Ubunt
 
 ## <a id="requirements"></a> Configuration requise
 
-- Docker Engine 1.8+ sur n’importe quelle distribution Linux prise en charge ou Docker pour Mac/Windows. Pour plus d’informations, consultez [Installer Docker](https://docs.docker.com/engine/installation/).
+- Moteur Docker 1.8 + sur n’importe quelle distribution de Linux prise en charge ou Docker pour Mac et Windows. Pour plus d’informations, consultez [Installer Docker](https://docs.docker.com/engine/installation/).
 - Au moins 2 Go d’espace disque
 - Au moins 2 Go de RAM
 - [Configuration système requise pour SQL Server sur Linux](sql-server-linux-setup.md#system).
