@@ -21,16 +21,16 @@ ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 02/13/2018
 ---
-# <a name="bulk-copy-data-with-bcp-to-sql-server-on-linux"></a>Données de copie en bloc avec bcp à SQL Server sur Linux
+# <a name="bulk-copy-data-with-bcp-to-sql-server-on-linux"></a>Copie de données en bloc avec bcp vers/depuis SQL Server sous Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 Cet article explique comment utiliser le [bcp](../tools/bcp-utility.md) utilitaire de ligne de commande pour copier en bloc des données entre une instance de 2017 du serveur SQL sur Linux et un fichier de données dans un format spécifié par l’utilisateur.
 
-Vous pouvez utiliser `bcp` pour importer un grand nombre de lignes dans des tables SQL Server ou pour exporter des données à partir de tables SQL Server dans les fichiers de données. Sauf lorsqu’il est utilisé avec l’option queryout, `bcp` ne nécessite aucune connaissance de Transact-SQL. Le `bcp` utilitaire de ligne de commande fonctionne avec Microsoft SQL Server exécuté localement ou dans le cloud, sur Linux, Windows ou Docker et base de données SQL Azure et Azure SQL Data Warehouse.
+Vous pouvez utiliser `bcp` pour importer un grand nombre de lignes dans des tables SQL Server ou pour exporter des données à partir de tables SQL Server dans des fichiers de données. Sauf lorsqu’il est utilisé avec l’option queryout, `bcp` ne nécessite aucune connaissance de Transact-SQL. L'utilitaire de ligne de commande `bcp` fonctionne avec Microsoft SQL Server en local ou dans le cloud, sur Linux, Windows ou Docker et sur Azure SQL Database et Azure SQL Data Warehouse.
 
 Cet article vous montre comment à :
-- Importer des données dans une table à l’aide de la `bcp in` commande
+- Importer des données dans une table à l’aide de la commande `bcp in`.
 - Exporter les données d’une table à l’aide de la `bcp out` commande
 
 ## <a name="install-the-sql-server-command-line-tools"></a>Installer les outils de ligne de commande SQL Server
@@ -45,11 +45,11 @@ Cet article vous montre comment à :
 
 Dans ce didacticiel, vous créez une base de données exemple et une table sur l’instance de SQL Server locale (**localhost**), puis utilisez `bcp` à charger dans la table d’exemple à partir d’un fichier texte sur le disque.
 
-### <a name="create-a-sample-database-and-table"></a>Créer une base de données exemple et une table
+### <a name="create-a-sample-database-and-table"></a>Créer un exemple de base de données et de table
 
 Commençons par la création d’une base de données exemple avec un simple tableau qui est utilisé dans le reste de ce didacticiel.
 
-1. Dans votre boîte de Linux, ouvrez un terminal de commande.
+1. Ouvrez un terminal de commande sur votre ordinateur Linux.
 
 2. Copiez et collez les commandes suivantes dans la fenêtre de Terminal Server. Ces commandes utilisent le **sqlcmd** utilitaire de ligne de commande pour créer une base de données exemple (**BcpSampleDB**) et une table (**TestEmployees**) sur l’instance de SQL Server locale (**localhost**). N’oubliez pas de remplacer le `username` et `<your_password>` si nécessaire avant d’exécuter les commandes.
 
@@ -77,7 +77,7 @@ Vous pouvez vérifier que le fichier de données a été correctement créé en 
 cat ~/test_data.txt
 ```
 
-Il doit afficher les éléments suivants dans la fenêtre de Terminal Server :
+Les éléments suivants doivent s'afficher dans la fenêtre de terminal :
 ```bash
 1,Jared,Australia
 2,Nikita,India
@@ -95,19 +95,19 @@ Voici une brève vue d’ensemble des paramètres de ligne de commande que nous 
 - `-S`: Spécifie l’instance de SQL Server à laquelle se connecter
 - `-U`: Spécifie l’ID de connexion utilisé pour se connecter à SQL Server
 - `-P`: Spécifie le mot de passe pour l’ID de connexion
-- `-d`: Spécifie la base de données pour se connecter à
-- `-c`: effectue des opérations à l’aide d’un type de données caractère
-- `-t`: Spécifie la marque de fin de champ. Nous utilisons `comma` comme indicateur de fin de champ pour les enregistrements dans notre fichier de données
+- `-d`: Spécifie la base de données à laquelle se connecter
+- `-c`: Effectue l'opération en utilisant un type de données caractères
+- `-t`: Spécifie le séparateur en fin de champ. Nous utilisons `comma` comme indicateur de fin de champ pour les enregistrements dans notre fichier de données
 
 > [!NOTE]
-> Nous spécifions pas une marque de fin de ligne personnalisée dans cet exemple. Les lignes dans le fichier de données de texte ont été terminées correctement avec `newline` lorsque nous avons utilisé le `cat` commande pour créer le fichier de données précédemment.
+> Nous ne spécifions pas une marque de fin de ligne personnalisée dans cet exemple. Les lignes dans le fichier de données de texte ont été terminées correctement avec un `newline` lorsque nous avons utilisé la commande `cat` pour créer précédemment le fichier de données.
 
 Vous pouvez vérifier que les données n’a été importées en exécutant la commande suivante dans la fenêtre de Terminal Server. N’oubliez pas de remplacer le `username` et `<your_password>` si nécessaire avant d’exécuter la commande.
 ```bash 
 sqlcmd -S localhost -d BcpSampleDB -U sa -P <your_password> -I -Q "SELECT * FROM TestEmployees;"
 ```
 
-Il doit afficher les résultats suivants :
+Les résultats suivants doivent s'afficher :
 ```bash
 Id          Name                Location
 ----------- ------------------- -------------------
@@ -133,7 +133,7 @@ Vous pouvez vérifier que les données ont été correctement exportées en exé
 cat ~/test_export.txt
 ```
 
-Il doit afficher les éléments suivants dans la fenêtre de Terminal Server :
+Les éléments suivants doivent s'afficher dans la fenêtre de terminal :
 ```
 1,Jared,Australia
 2,Nikita,India
