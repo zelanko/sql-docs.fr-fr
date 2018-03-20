@@ -1,5 +1,5 @@
 ---
-title: "Prise en main la sécurité SQL Server sur Linux | Documents Microsoft"
+title: "Prise en main de la sécurité SQL Server sur Linux | Documents Microsoft"
 description: "Cet article décrit les actions de sécurité standard."
 author: rothja
 ms.author: jroth
@@ -25,15 +25,15 @@ ms.lasthandoff: 02/23/2018
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-Si vous êtes un utilisateur Linux qui est une nouveauté dans SQL Server, les tâches suivantes vous guident parmi les tâches de sécurité. Celles-ci ne sont pas uniques ou spécifiques à Linux, mais elle permet de vous donner une idée des zones pour approfondir vos recherches. Dans chaque exemple, un lien est fourni à la documentation détaillée de cette zone.
+Si vous êtes un utilisateur Linux pour qui SQL Server est une nouveauté, les tâches suivantes vous guident parmi les tâches de sécurité. Celles-ci ne sont pas uniques ou spécifiques à Linux, mais cela permet de vous donner une idée des domaines à approfondir. Dans chaque exemple, un lien est fourni, menant à la documentation détaillée pour ce domaine.
 
 >  [!NOTE]
->  Les exemples suivants utilisent le **AdventureWorks2014** base de données exemple. Pour obtenir des instructions sur la façon d’obtenir et installer cette base de données exemple, consultez [restaurer une base de données SQL Server à partir de Windows et Linux](sql-server-linux-migrate-restore-database.md).
+>  Les exemples suivants utilisent la base de données exemple **AdventureWorks2014**. Pour obtenir des instructions sur la façon d’obtenir et d'installer cette base de données exemple, consultez [restaurer une base de données SQL Server à partir de Windows et Linux](sql-server-linux-migrate-restore-database.md).
 
 
 ## <a name="create-a-login-and-a-database-user"></a>Créez une connexion et un utilisateur de base de données 
 
-D’autres accorder l’accès à SQL Server en créant une connexion dans la base de données master à l’aide de la [CREATE LOGIN](../t-sql/statements/create-login-transact-sql.md) instruction. Par exemple :
+Accordez l’accès à SQL Server en créant une connexion dans la base de données master à l’aide de la commande [CREATE LOGIN](../t-sql/statements/create-login-transact-sql.md). Par exemple :
 
 ```
 CREATE LOGIN Larry WITH PASSWORD = '************';  

@@ -20,19 +20,19 @@ helpviewer_keywords:
 - SqlServerAlias class
 ms.assetid: 475662b9-6985-45bf-b1e9-b0f26ef50443
 caps.latest.revision: 
-author: JennieHubbard
-ms.author: jhubbard
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a34ee85fcc625db5bba5c310107339fb2c97f38a
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: fccf014386dd7cca61d46e57c643eb35d9e3d311
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="sqlserveralias-class"></a>Classe SqlServerAlias
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-La [classe SqlServerAlias](../../../relational-databases/wmi-provider-configuration-classes/sqlserveralias-class/sqlserveralias-class.md) représente un alias de connexion au serveur.  
+  La [classe SqlServerAlias](../../../relational-databases/wmi-provider-configuration-classes/sqlserveralias-class/sqlserveralias-class.md) représente un alias de connexion au serveur.  
   
  Un alias de connexion au serveur est requis lorsque les deux conditions suivantes sont remplies :  
   

@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: sql-non-specified
 ms.service: 
 ms.component: samples
-ms.technology: samples
+ms.technology:
+- samples
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,20 +13,21 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 06f89721-8478-4abc-8ada-e9c73b08bf51
-caps.latest.revision: "2"
+caps.latest.revision: 
 author: BarbKess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 robots: noindex,nofollow
 ms.workload: Inactive
-ms.openlocfilehash: 9a76e8c2bb70be5accc28d65de7f86db86dacd29
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 34535db5b43311e13d21fd663f5302327b24978e
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="use-of-sql-server-features-and-capabilities"></a>Utilisation de fonctionnalités de SQL Server
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]WideWorldImporters utiliser de fonctionnalités de SQL Server dans la base de données OLTP.
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+WideWorldImporters utiliser de fonctionnalités de SQL Server dans la base de données OLTP.
 
 WideWorldImporters est conçu pour illustrer la plupart des principales fonctionnalités de SQL Server, y compris les dernières fonctionnalités introduites dans SQL Server 2016. Voici une liste des fonctionnalités de SQL Server et fonctionnalités et une description de la façon dont elles sont utilisées dans WideWorldImporters.
 
@@ -42,7 +44,7 @@ WideWorldImporters est conçu pour illustrer la plupart des principales fonction
 |Masquage dynamique des données|Dans le schéma de base de données, le masquage des données a été appliqué aux détails de la banque conservées pour les fournisseurs, dans la table `Purchasing.Suppliers`. Le personnel non-admin n’aura pas accès à ces informations.|
 |Always Encrypted|Une démonstration pour Always Encrypted est incluse dans le samples.zip téléchargeable, qui fait partie de la [version de l’exemple](http://go.microsoft.com/fwlink/?LinkID=800630)... La démonstration crée une clé de chiffrement, une table avec un chiffrement des données sensibles et un petit exemple d’application qui insère des données dans la table.|
 |Base de données Stretch|Le `Warehouse.ColdRoomTemperatures` table a été implémentée comme une table temporelle et est optimisée en mémoire dans la version complète de la base de données. La table d’archive est basée sur le disque et peut être étendue à Azure.|
-|Index de texte intégral|Index de recherche en texte intégral améliorent les recherches de personnes, les clients et StockItems. Les index sont appliquent aux requêtes uniquement si vous avez l’indexation de texte intégral est installé sur votre instance de SQL Server. Une colonne calculée non persistante est utilisée pour créer les données qui sont en texte intégral indexées dans la table StockItems.<br/><br/>`CONCAT`est utilisé pour concaténer les champs pour créer des SearchData qui est indexée en texte intégral.<br/>Pour activer l’utilisation des index de recherche en texte intégral dans l’exemple exécutez l’instruction suivante dans la base de données :<br/><br/>    `EXECUTE [Application].[Configuration_ConfigureFullTextIndexing]`<br/><br/>La procédure crée un catalogue de texte intégral par défaut si une n’existe pas déjà, puis remplace les vues de recherche en texte intégral des versions de ces vues).<br/><br/>Notez que l’utilisation des index de recherche en texte intégral dans SQL Server, en sélectionnant l’option de recherche en texte intégral lors de l’installation. Ne nécessite pas de base de données SQL Azure et une configuration spécifique pour activer les index de recherche en texte intégral.|
+|Index de texte intégral|Index de recherche en texte intégral améliorent les recherches de personnes, les clients et StockItems. Les index sont appliquent aux requêtes uniquement si vous avez l’indexation de texte intégral est installé sur votre instance de SQL Server. Une colonne calculée non persistante est utilisée pour créer les données qui sont en texte intégral indexées dans la table StockItems.<br/><br/>`CONCAT` est utilisé pour concaténer les champs pour créer des SearchData qui est indexée en texte intégral.<br/>Pour activer l’utilisation des index de recherche en texte intégral dans l’exemple exécutez l’instruction suivante dans la base de données :<br/><br/>    `EXECUTE [Application].[Configuration_ConfigureFullTextIndexing]`<br/><br/>La procédure crée un catalogue de texte intégral par défaut si une n’existe pas déjà, puis remplace les vues de recherche en texte intégral des versions de ces vues).<br/><br/>Notez que l’utilisation des index de recherche en texte intégral dans SQL Server, en sélectionnant l’option de recherche en texte intégral lors de l’installation. Ne nécessite pas de base de données SQL Azure et une configuration spécifique pour activer les index de recherche en texte intégral.|
 |Indexation des colonnes calculées persistantes|Indexation des colonnes calculées persistantes utilisées dans SupplierTransactions et CustomerTransactions.|
 |Contraintes de validation|Une contrainte de validation relativement complexe est en `Sales.SpecialDeals`. Cela garantit que l’une et une seule de DiscountAmount, DiscountPercentage, et UnitPrice est configuré.|
 |Contraintes uniques|De type plusieurs à plusieurs construction (et des contraintes uniques) sont configurés pour Warehouse.StockItemStockGroups'.|

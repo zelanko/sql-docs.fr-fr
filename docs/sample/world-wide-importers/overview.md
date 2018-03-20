@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: sql-non-specified
 ms.service: 
 ms.component: samples
-ms.technology: samples
+ms.technology:
+- samples
 ms.custom: 
 ms.date: 01/30/2017
 ms.reviewer: 
@@ -12,20 +13,21 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 4d4dcb00-b93e-44db-9d67-061702bba41a
-caps.latest.revision: "3"
+caps.latest.revision: 
 author: BarbKess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 robots: noindex,nofollow
 ms.workload: On Demand
-ms.openlocfilehash: 658c1b3ffd44cd2194c75d6ad45888e24e0772c1
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: f4d22aada117e3230e36aa52e911f31eea53439e
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="wide-world-importers-overview"></a>Vue d’ensemble de Wide World Importers
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]Il s’agit d’une vue d’ensemble de la société fictive Wide World Importers et les flux de travail qui est abordés dans les bases de données exemple WideWorldImporters pour SQL Server et la base de données SQL Azure.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+Il s’agit d’une vue d’ensemble de la société fictive Wide World Importers et les flux de travail qui est abordés dans les bases de données exemple WideWorldImporters pour SQL Server et la base de données SQL Azure.  
 
 Wide World Importers (WWI) est un importateur de biens de gros nouveauté et d’un serveur de distribution d’exploitation à partir de la zone de la baie de San Francisco.
 

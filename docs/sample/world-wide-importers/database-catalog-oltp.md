@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: sql-non-specified
 ms.service: 
 ms.component: samples
-ms.technology: samples
+ms.technology:
+- samples
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,20 +13,21 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e47c0022-ce87-4ba5-a24b-df55efe66431
-caps.latest.revision: "3"
+caps.latest.revision: 
 author: BarbKess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 robots: noindex,nofollow
 ms.workload: On Demand
-ms.openlocfilehash: 6d87a24e91f96957170671303af641c6bacc6599
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 0d458bc15530aa87bfa922787558fff3f07645f7
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="wideworldimporters-database-catalog"></a>Catalogue de base de données WideWorldImporters
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]La base de données WideWorldImporters contient toutes les les informations sur les transactions et données quotidiennes pour les achats et, ainsi que des données de capteur des véhicules et chambres froides.
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+La base de données WideWorldImporters contient toutes les les informations sur les transactions et données quotidiennes pour les achats et, ainsi que des données de capteur des véhicules et chambres froides.
 
 ## <a name="schemas"></a>Schémas
 
@@ -35,7 +37,7 @@ WideWorldImporters utilise les schémas à différentes fins, telles que le stoc
 
 Ces schémas contiennent les données. Un nombre de tables requises par tous les autres schémas et est situé dans le schéma de l’Application.
 
-|schéma| Description|
+|Schéma| Description|
 |-----------------------------|---------------------|
 |Application|Les utilisateurs de l’application, des contacts et des paramètres. Il contient également des tables de référence avec des données qui sont utilisées par plusieurs schémas|
 |Purchasing|Élément du stock achats à partir des fournisseurs et des détails sur les fournisseurs.|  
@@ -46,11 +48,11 @@ Ces schémas contiennent les données. Un nombre de tables requises par tous les
 
 Ces schémas sont utilisés pour les applications externes qui ne sont pas autorisées à accéder directement aux tables de données. Ils contiennent des vues et procédures stockées utilisées par des applications externes.
 
-|schéma| Description|
+|Schéma| Description|
 |-----------------------------|---------------------|
 |Site Web|Tous les accès à la base de données à partir du site Web d’entreprise sont via ce schéma.|
 |Rapports|Tous les accès à la base de données à partir de rapports de Reporting Services sont à ce schéma.|
-|Power BI|Tous les accès à la base de données dans les tableaux de bord Power BI via la passerelle d’entreprise sont via ce schéma.|
+|PowerBI|Tous les accès à la base de données dans les tableaux de bord Power BI via la passerelle d’entreprise sont via ce schéma.|
 
 Notez que les rapports Power BI et les schémas ne sont pas utilisés dans la version initiale de la base de données. Toutefois, les exemples de toutes les Reporting Services et Power BI reposant sur cette base de données sont encouragés à utiliser ces schémas.
 
@@ -58,7 +60,7 @@ Notez que les rapports Power BI et les schémas ne sont pas utilisés dans la ve
 
 Schémas spécial
 
-|schéma| Description|
+|Schéma| Description|
 |-----------------------------|---------------------|
 |Intégration|Objets et procédures requises pour l’intégration de l’entrepôt de données (autrement dit, migrer les données à la base de données WideWorldImportersDW).|
 |Séquences|Contient des séquences utilisées par toutes les tables dans l’application.|
@@ -95,13 +97,13 @@ Détails des fournisseurs et des achats de stock.
 |PurchaseOrderLines|Lignes de détails de fournisseur bons de commande|
 
  
-### <a name="sales-schema"></a>Schéma de vente
+### <a name="sales-schema"></a>Sales Schema
 
 Détails des clients, les commerciaux et des ventes de l’élément du stock.
 
 |Table| Description|
 |-----------------------------|---------------------|
-|Customers|Tables d’entité principale pour les clients (organisations ou aux individus)|
+|Clients (Customers)|Tables d’entité principale pour les clients (organisations ou aux individus)|
 |CustomerCategories|Catégories pour les clients (c.-à-d. nouveauté magasins, grande distribution, etc.)|
 |BuyingGroups|Organisations clientes peuvent faire partie de groupes qui exercer une plus grande puissance d’achat|
 |CustomerTransactions|Toutes les transactions financières qui sont liés au client (factures, paiements)|
@@ -217,7 +219,7 @@ Ces procédures sont utilisées pour configurer l’exemple. Ils sont utilisés 
 |CreateRoleIfNonExistant|Crée un rôle de base de données s’il n’existe pas.|
 
 
-### <a name="sequences-schema"></a>Schéma de séquences
+### <a name="sequences-schema"></a>Sequences Schema
 
 Procédures pour configurer les séquences dans la base de données.
 

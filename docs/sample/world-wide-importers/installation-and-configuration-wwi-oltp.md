@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: sql-non-specified
 ms.service: 
 ms.component: samples
-ms.technology: samples
+ms.technology:
+- samples
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,22 +13,23 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 6dd1f09b-dcff-4627-899a-eca5162d9e5b
-caps.latest.revision: "4"
+caps.latest.revision: 
 author: BarbKess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 robots: noindex,nofollow
 ms.workload: On Demand
-ms.openlocfilehash: 967755e34b397f2dfac98277d34cb799655f5165
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: add5788063cdc5026d343061b8111cbec42e5a4d
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="installation-and-configuration"></a>Installation et configuration
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]Wide World Importers OLTP instructions d’installation et configuration de base de données.
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+Wide World Importers OLTP instructions d’installation et configuration de base de données.
 
-## <a name="prerequisites"></a>Conditions préalables
+## <a name="prerequisites"></a>Configuration requise
 
 - [SQL Server 2016](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016) (ou version ultérieure) ou [base de données SQL Azure](https://azure.microsoft.com/services/sql-database/). Pour obtenir la version complète de l’exemple, utilisez SQL Server Evaluation/développeur/Enterprise Edition.
 - [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md). Pour obtenir les meilleurs résultats utilisent la version de juin 2016 ou version ultérieure.
@@ -36,15 +38,15 @@ ms.lasthandoff: 12/05/2017
 
 La dernière version de l’exemple :
 
-[Wide world importers version](http://go.microsoft.com/fwlink/?LinkID=800630)
+[wide-world-importers-release](http://go.microsoft.com/fwlink/?LinkID=800630)
 
 Téléchargez l’exemple WideWorldImporters de base de données sauvegarde/bacpac qui correspond à votre édition de SQL Server ou de la base de données SQL Azure.
 
 Code source pour recréer la base de données est disponible à partir de l’emplacement suivant. Notez qu’en recréant l’exemple entraîne légères différences dans les données, car il existe un facteur aléatoire dans la génération de données :
 
-[importateurs de Wide world](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/wide-world-importers/wwi-database-scripts)
+[wide-world-importers](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/wide-world-importers/wwi-database-scripts)
 
-## <a name="install"></a>Install
+## <a name="install"></a>Installation
 
 
 ### <a name="sql-server"></a>SQL Server
@@ -77,7 +79,7 @@ Pour importer un fichier bacpac dans une base de données SQL, vous pouvez utili
 La base de données peut tirer parti de l’indexation de texte intégral. Toutefois, cette fonctionnalité n’est pas installée par défaut avec SQL Server : vous devez la sélectionner lors de l’installation de SQL Server (elle est activée par défaut dans la base de données SQL Azure). Par conséquent, après l’installation est requise.
 
 1. Dans SQL Server Management Studio, connectez-vous à la base de données WideWorldImporters et ouvrir une nouvelle fenêtre de requête.
-2. Exécutez la commande T-SQL suivante pour activer l’utilisation de l’indexation de texte intégral dans la base de données :`EXECUTE Application.Configuration_ApplyFullTextIndexing`
+2. Exécutez la commande T-SQL suivante pour activer l’utilisation de l’indexation de texte intégral dans la base de données :  `EXECUTE Application.Configuration_ApplyFullTextIndexing`
 
 
 ### <a name="sql-server-audit"></a>SQL Server Audit

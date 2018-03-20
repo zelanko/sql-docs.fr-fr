@@ -19,19 +19,19 @@ apilocation:
 apitype: DLLExport
 ms.assetid: d4aaea30-1d0d-4436-bcdc-5c101d27b1c1
 caps.latest.revision: 
-author: JennieHubbard
-ms.author: jhubbard
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e3fb6ab670f626cb629a1ba301cab4b51c9a2c56
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 4bc3c9755dd9a5d2d9cc6ddf6f953a44bd62bea5
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="localdbgetversioninfo-function"></a>Fonction LocalDBGetVersionInfo
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-Retourne des informations pour la version spécifiée de SQL Server Express LocalDB, notamment si elle existe, ainsi que le numéro de version complet de LocalDB (avec les numéros de build et de version).  
+  Retourne des informations pour la version spécifiée de SQL Server Express LocalDB, notamment si elle existe, ainsi que le numéro de version complet de LocalDB (avec les numéros de build et de version).  
   
  Les informations sont retournées sous la forme d’un **struct** nommé **LocalDBVersionInfo**, qui a la définition suivante.  
   
