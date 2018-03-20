@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Installer la recherche en texte intégral SQL Server sur Linux | Documents Microsoft"
 description: "Cet article décrit comment installer la recherche en texte intégral de SQL Server sur Linux."
 author: rothja
@@ -44,14 +44,14 @@ Utilisez les commandes suivantes pour installer le package **mssql-server-fts** 
 sudo yum install -y mssql-server-fts
 ```
 
-Si **mssql-server-fts** est déjà installé, vous pouvez mettre à jour vers la dernière version avec les commandes suivantes :
+Si **FTP du serveur mssql** est déjà installé, vous pouvez mettre à jour vers la dernière version avec les commandes suivantes :
 
 ```bash
 sudo yum check-update
 sudo yum update mssql-server-fts
 ```
 
-Si vous avez besoin d’une installation hors connexion, recherchez le téléchargement du package de recherche en texte intégral dans le [notes de publication](sql-server-linux-release-notes.md). Puis utilisez les mêmes étapes d’installation hors connexion décrites dans l’article [installer SQL Server](sql-server-linux-setup.md#offline).
+Si vous avez besoin d’une installation hors connexion, recherchez le téléchargement du package de recherche en texte intégral dans les [notes de publication](sql-server-linux-release-notes.md). Puis utilisez les étapes d’installation hors connexion décrites dans la rubrique [installer SQL Server](sql-server-linux-setup.md#offline).
 
 ## <a name="ubuntu">Installer sur Ubuntu</a>
 
@@ -62,14 +62,14 @@ sudo apt-get update
 sudo apt-get install -y mssql-server-fts
 ```
 
-Si **mssql-server-fts** est déjà installé, vous pouvez mettre à jour vers la dernière version avec les commandes suivantes :
+Si **FTP du serveur mssql** est déjà installé, vous pouvez mettre à jour vers la dernière version avec les commandes suivantes :
 
 ```bash
 sudo apt-get update 
 sudo apt-get install -y mssql-server-fts 
 ```
 
-Si vous avez besoin d’une installation hors connexion, recherchez le téléchargement du package de recherche en texte intégral dans le [notes de publication](sql-server-linux-release-notes.md). Puis utilisez les mêmes étapes d’installation hors connexion décrites dans l’article [installer SQL Server](sql-server-linux-setup.md#offline).
+Si vous avez besoin d’une installation hors connexion, recherchez le téléchargement du package de recherche en texte intégral dans les [notes de publication](sql-server-linux-release-notes.md). Puis utilisez les étapes d’installation hors connexion décrites dans la rubrique [installer SQL Server](sql-server-linux-setup.md#offline).
 
 ## <a name="SLES">Installez SLES</a>
 
@@ -79,18 +79,18 @@ Utilisez les commandes suivantes pour installer le package **mssql-server-fts** 
 sudo zypper install mssql-server-fts
 ```
 
-Si vous avez déjà **mssql-server-fts** installé, vous pouvez mettre à jour vers la dernière version avec les commandes suivantes :
+Si **FTP du serveur mssql** est déjà installé, vous pouvez mettre à jour vers la dernière version avec les commandes suivantes :
 
 ```bash
 sudo zypper refresh
 sudo zypper update mssql-server-fts
 ```
 
-Si vous avez besoin d’une installation hors connexion, recherchez le téléchargement du package de recherche en texte intégral dans le [notes de publication](sql-server-linux-release-notes.md). Puis utilisez les mêmes étapes d’installation hors connexion décrites dans l’article [installer SQL Server](sql-server-linux-setup.md#offline).
+Si vous avez besoin d’une installation hors connexion, recherchez le téléchargement du package de recherche en texte intégral dans les [notes de publication](sql-server-linux-release-notes.md). Puis utilisez les étapes d’installation hors connexion décrites dans la rubrique [installer SQL Server](sql-server-linux-setup.md#offline).
 
 ## <a name="supported-languages"></a>Langues prises en charge
 
-La recherche en texte intégral utilise [des analyseurs lexicaux](../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md) qui déterminent comment identifier les mots individuels en fonction de la langue. Vous pouvez obtenir une liste des analyseurs lexicaux inscrits en interrogeant la vue d'affichage catalogue **sys.fulltext_languages**. Les analyseurs lexicaux pour les langues suivantes sont installés avec SQL Server 2017 :
+La recherche en texte intégral utilise [des analyseurs lexicaux](../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md) qui déterminent comment identifier les mots individuels en fonction de la langue. Vous pouvez obtenir une liste des analyseurs lexicaux inscrits en interrogeant la vue d'affichage catalogue **sys.fulltext_languages**. Les analyseurs lexicaux pour les langues suivantes sont installés avec SQL Server 2017 :
 
 | Langage | ID de langue |
 |---|---|
@@ -152,7 +152,7 @@ La recherche en texte intégral utilise [des analyseurs lexicaux](../relational-
 
 La recherche en texte intégral fonctionne également avec le texte stocké dans des fichiers binaires. Mais dans ce cas, un filtre installé est nécessaire pour traiter le fichier. Pour plus d’informations sur les filtres, consultez [configurer et gérer des filtres pour la recherche](../relational-databases/search/configure-and-manage-filters-for-search.md).
 
-Vous pouvez afficher une liste des filtres installés en exécutant la procédure **sp_help_fulltext_system_components 'filter'**. Pour SQL Server 2017, les filtres suivants sont installés :
+Vous pouvez afficher une liste des filtres installés en exécutant la procédure **sp_help_fulltext_system_components 'filtre'**. Pour SQL Server 2017, les filtres suivants sont installés :
 
 | Nom du composant | ID de classe | Version |
 |---|---|---|
@@ -266,7 +266,7 @@ Vous pouvez afficher une liste des filtres installés en exécutant la procédur
 
 Pour pouvoir utiliser la recherche sémantique, vous devez d’abord restaurer la base de données de statistiques linguistiques de sémantique sur votre ordinateur.
 
-1. Utilisez un outil, tel que [sqlcmd](sql-server-linux-setup-tools.md) pour exécuter la commande Transact-SQL suivante sur votre instance de SQL Server de Linux. Cette commande restaure la base de données de statistiques linguistiques.
+1. Utilisez un outil, tel que [sqlcmd](sql-server-linux-setup-tools.md)pour exécuter la commande Transact-SQL suivante sur votre instance de SQL Server de Linux. Cette commande restaure la base de données de statistiques linguistiques.
 
    ```sql
    RESTORE DATABASE [semanticsdb] FROM
