@@ -2,7 +2,7 @@
 title: "Didacticiel : Activer la table d’utilisation exemple insight le widget d’espace dans les opérations de SQL Studio (version préliminaire) | Documents Microsoft"
 description: "Ce didacticiel montre comment activer la table d’utilisation exemple insight le widget d’espace sur le tableau de bord de base de données SQL opérations Studio (version préliminaire)."
 ms.custom: tools|sos
-ms.date: 11/15/2017
+ms.date: 03/19/2018
 ms.prod: sql-non-specified
 ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
@@ -14,13 +14,13 @@ author: erickangMSFT
 ms.author: erickang
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7c51c7d1804baa490e665d316a08d911038c9f11
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 09a1ebe6fda1baf546923887f28b51d416a80b59
+ms.sourcegitcommit: 6bd21109abedf64445bdb3478eea5aaa7553fa46
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/20/2018
 ---
-# <a name="tutorial-enable-the-table-space-usage-sample-insight-widget-using-includename-sosincludesname-sos-shortmd"></a>Didacticiel : Activer la table d’espace d’utilisation exemple insight widget à l’aide[!INCLUDE[name-sos](../includes/name-sos-short.md)]
+# <a name="tutorial-enable-the-table-space-usage-sample-insight-widget-using-includename-sosincludesname-sos-shortmd"></a>Didacticiel : Activer la table d’espace d’utilisation exemple insight widget à l’aide [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
 Ce didacticiel montre comment activer un widget d’un aperçu du tableau de bord de base de données, en fournissant une vue en un coup de œil sur l’utilisation de l’espace pour toutes les tables dans une base de données. Au cours de ce didacticiel, vous apprendrez comment :
 
@@ -29,38 +29,46 @@ Ce didacticiel montre comment activer un widget d’un aperçu du tableau de bor
 > * Afficher les détails d’utilisation d’espace de table
 > * Filtrer les données et afficher les détails de l’étiquette sur un graphique d’analyse
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Configuration requise
 
 Ce didacticiel nécessite SQL Server ou la base de données SQL Azure *TutorialDB*. Pour créer le *TutorialDB* de base de données, effectuez l’une des Démarrages rapides suivants :
 
-- [Se connecter et interroger à l’aide de SQL Server[!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-server.md)
-- [Se connecter et interroger à l’aide de la base de données SQL Azure[!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-database.md)
+- [Se connecter et interroger à l’aide de SQL Server [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-server.md)
+- [Se connecter et interroger à l’aide de la base de données SQL Azure [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-database.md)
 
 
 ## <a name="turn-on-a-management-insight-on-includename-sosincludesname-sos-shortmds-database-dashboard"></a>Activer une vision de gestion sur [!INCLUDE[name-sos](../includes/name-sos-short.md)]du tableau de bord de base de données
-[!INCLUDE[name-sos](../includes/name-sos-short.md)]a un widget exemples intégrés pour surveiller l’espace utilisé par les tables dans une base de données.
+[!INCLUDE[name-sos](../includes/name-sos-short.md)] a un widget exemples intégrés pour surveiller l’espace utilisé par les tables dans une base de données.
 
-1. Ouvrez **paramètres utilisateur** en appuyant sur **Ctrl + Maj + P** pour ouvrir *Palette de commandes*, type *paramètres* dans la zone de recherche et sélectionnez  **Préférences : Ouvrez les paramètres de l’utilisateur**.
-
-   ![Commande de paramètres utilisateur ouverts](./media/tutorial-table-space-sql-server/open-user-settings.png)
-
+1. Ouvrez *paramètres utilisateur* en appuyant sur **Ctrl + Maj + P** pour ouvrir le *Palette de commandes*.
+2. Type *paramètres* dans la zone de recherche et sélectionnez **préférences : ouvrir les paramètres utilisateur**.
 2. Type *tableau de bord* zone de recherche de paramètres d’entrée et recherchez **dashboard.database.widgets**.
 
-   ![Paramètres de recherche](./media/tutorial-table-space-sql-server/search-settings.png)
+3. Pour personnaliser le **dashboard.database.widgets** paramètres, vous devez modifier le **dashboard.database.widgets** entrée dans le **paramètres utilisateur** section (la colonne dans le à droite). S’il existe aucune **dashboard.database.widgets** dans les **paramètres utilisateur** section, placez le curseur sur le **dashboard.database.widgets** texte dans la colonne de paramètres par défaut et cliquez sur l’icône de crayon apparaît à gauche du texte et cliquez sur **copie paramètres**. Si la fenêtre contextuelle est **remplacer dans les paramètres**, ne cliquez pas ! Accédez à la **paramètres utilisateur** colonne située à droite et recherchez le **dashboard.database.widgets** section et passer à l’étape suivante.
 
-3. Pour personnaliser le **dashboard.database.widgets** définition, placez le curseur sur l’icône de crayon à gauche de la **dashboard.database.widgets** texte, cliquez sur **modifier**  >  **Copie paramètres**.
+4. Dans le **dashboard.database.widgets** section, ajoutez le code suivant :
 
-4. À l’aide de [!INCLUDE[name-sos](../includes/name-sos-short.md)]de configurer les paramètres d’informations sur IntelliSense, *nom* pour le titre de widget, *gridItemConfig* pour la taille du widget, et *widget* en sélectionnant **table-espace-db-insight** dans la liste déroulante, comme indiqué dans la capture d’écran suivante :
+   ```json
+        {
+            "name": "Space Used by Tables",
+            "gridItemConfig": {
+                "sizex": 2,
+                "sizey": 1
+            },
+            "widget": {
+                "table-space-db-insight": null
+            }
+        },
+    ```
+Le **dashboard.database.widgets** section doit ressembler à l’image suivante :
 
-   ![Paramètres d’analyse](./media/tutorial-table-space-sql-server/insight-table-space.png)
+   ![Paramètres de recherche](./media/tutorial-table-space-sql-server/insight-table-space.png)
 
 5. Appuyez sur **Ctrl + S** pour enregistrer les paramètres.
 
 6. Tableau de bord de base de données ouverte en cliquant sur **TutorialDB** et cliquez sur **gérer**.
 
-   ![Tableau de bord ouvert](./media/tutorial-table-space-sql-server/insight-open-dashboard.png)
-
-7. Vue *espace utilisé par les tables* comme indiqué dans la capture d’écran suivante : 
+7. Afficher le *espace de table* widget insight comme indiqué dans l’image suivante : 
 
    ![Widget](./media/tutorial-table-space-sql-server/insight-table-space-result.png)
 
@@ -69,9 +77,9 @@ Ce didacticiel nécessite SQL Server ou la base de données SQL Azure *TutorialD
 
 [!INCLUDE[name-sos](../includes/name-sos-short.md)]du graphique d’insight fournit des informations de filtrage et de pointage. Pour essayer les étapes suivantes :
 
-1. Cliquez sur et activer/désactiver le *row_count* légende sur le graphique. [!INCLUDE[name-sos](../includes/name-sos-short.md)]Affiche ou masque les séries de données lorsque vous faites une légende ou désactiver.
+1. Cliquez sur et activer/désactiver le *row_count* légende sur le graphique. [!INCLUDE[name-sos](../includes/name-sos-short.md)] Affiche ou masque les séries de données lorsque vous faites une légende ou désactiver.
     
-2. Placez le pointeur de la souris sur le graphique. [!INCLUDE[name-sos](../includes/name-sos-short.md)]affiche plus d’informations sur l’étiquette de série de données et sa valeur comme indiqué dans la capture d’écran suivante.
+2. Placez le pointeur de la souris sur le graphique. [!INCLUDE[name-sos](../includes/name-sos-short.md)] affiche plus d’informations sur l’étiquette de série de données et sa valeur comme indiqué dans la capture d’écran suivante.
 
    ![bascule du graphique et la légende](./media/tutorial-table-space-sql-server/insight-table-space-toggle.png)
 

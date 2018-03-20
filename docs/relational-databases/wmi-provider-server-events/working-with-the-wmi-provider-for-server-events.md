@@ -23,19 +23,19 @@ helpviewer_keywords:
 - WMI Provider for Server Events, security
 ms.assetid: cd974b3b-2309-4a20-b9be-7cfc93fc4389
 caps.latest.revision: 
-author: JennieHubbard
-ms.author: jhubbard
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: da5cc9e2163ba86ebb26f631c8b35d8590de27c5
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: a560ca7d3bdcb2450ec3369a0663516c05987884
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="working-with-the-wmi-provider-for-server-events"></a>Utilisation du fournisseur WMI pour les événements de serveur
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-Cette rubrique fournit des indications que vous devez prendre en compte avant de programmer à l'aide du fournisseur WMI pour les événements de serveur.  
+  Cette rubrique fournit des indications que vous devez prendre en compte avant de programmer à l'aide du fournisseur WMI pour les événements de serveur.  
   
 ## <a name="enabling-service-broker"></a>Activation de Service Broker  
  Le fournisseur WMI pour les événements de serveur fonctionne en traduisant les requêtes WQL pour les événements en notifications d'événements dans la base de données que vous ciblez. Il peut être utile de comprendre comment les notifications d'événements fonctionnent lorsque vous programmez en fonction du fournisseur. Pour plus d’informations, consultez [Fournisseur WMI pour les concepts des événements de serveur](http://technet.microsoft.com/library/ms180560.aspx).  

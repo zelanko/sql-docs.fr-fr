@@ -14,11 +14,11 @@ ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: On Demand
-ms.openlocfilehash: 4e1190fea92c1e84ce38bd46040a8b5fcdd532d7
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.openlocfilehash: 97ec3cd688f69995f4d907d305ce4d14d4724efc
+ms.sourcegitcommit: 6e16d1616985d65484c72f5e0f34fb2973f828f4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="create-and-configure-an-availability-group-for-sql-server-on-linux"></a>Créer et configurer un groupe de disponibilité pour SQL Server sur Linux
 
@@ -426,7 +426,7 @@ Cet exemple montre comment créer un groupe de disponibilité de deux réplicas 
     ALTER AVAILABILITY GROUP [<AGName>] JOIN WITH (CLUSTER_TYPE = EXTERNAL);
     
     GO
-    ```
+   ```
 
 #### <a name="example-two--three-replicas-with-read-only-routing-external-cluster-type"></a>Réplicas exemple deux, trois avec (type de cluster externe) de routage en lecture seule
 
@@ -678,7 +678,7 @@ La ressource de groupe de disponibilité est créée est un type spécial de res
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-Dans ce didacticiel, vous avez appris à créer et configurer un groupe de disponibilité pour [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] sur Linux. Vous avez appris comment à :
+Dans ce didacticiel, vous avez appris à créer et configurer un groupe de disponibilité pour [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] sur Linux. Vous avez appris à :
 > [!div class="checklist"]
 > * Activer les groupes de disponibilité.
 > * Points de terminaison de créer le groupe de disponibilité et les certificats.
