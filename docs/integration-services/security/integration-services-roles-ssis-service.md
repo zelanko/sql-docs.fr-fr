@@ -29,10 +29,10 @@ ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 7353125066cfcfe8d1d244bd04d98b51eedc884c
-ms.sourcegitcommit: 657d18fc805512c9574b2fe7451310601b9d78cb
+ms.sourcegitcommit: 6bd21109abedf64445bdb3478eea5aaa7553fa46
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/13/2018
+ms.lasthandoff: 03/20/2018
 ---
 # <a name="integration-services-roles-ssis-service"></a>Rôles Integration Services (Service SSIS)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] fournit certains rôles fixes de niveau base de données pour aider à sécuriser l’accès aux packages stockés dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Les rôles disponibles diffèrent selon que vous enregistrez les packages dans la base de données du catalogue SSIS (SSISDB) ou dans la base de données msdb.  
