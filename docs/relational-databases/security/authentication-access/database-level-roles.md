@@ -45,11 +45,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 96a567e1fe27c5302d9adf3857539af2336d5d6f
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 9fe700c3dc23125b21b24a749ca5ae5238d6a02c
+ms.sourcegitcommit: 6b1618aa3b24bf6759b00a820e09c52c4996ca10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="database-level-roles"></a>Rôles au niveau de la base de données
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -69,7 +69,7 @@ Pour ajouter et supprimer des utilisateurs à un rôle de base de données, util
 
 Les autorisations des rôles de base de données définis par l’utilisateur peuvent être personnalisées à l’aide des instructions GRANT, DENY et REVOKE. Pour plus d’informations, consultez [Autorisations (moteur de base de données)](../../../relational-databases/security/permissions-database-engine.md).
 
-Pour obtenir une liste de toutes les autorisations, consultez l’affiche [Autorisations des moteurs de base de données](http://go.microsoft.com/fwlink/?LinkId=229142) . (Les autorisations de niveau serveur ne peuvent pas être accordées aux rôles de base de données. Les connexions et les autres principaux au niveau du serveur (tels que les rôles de serveur) ne peuvent pas être ajoutés aux rôles de base de données. Pour la sécurité au niveau du serveur dans [!INCLUDE[ssNoVersion_md](../../../includes/ssnoversion-md.md)], utilisez les [rôles de serveur](../../../relational-databases/security/authentication-access/server-level-roles.md) à la place. Les autorisations de niveau serveur ne peuvent pas être accordées par le biais des rôles dans [!INCLUDE[ssSDS_md](../../../includes/sssds-md.md)] et [!INCLUDE[ssSDW_md](../../../includes/sssdw-md.md)].)
+Pour obtenir une liste de toutes les autorisations, consultez l’affiche [Autorisations des moteurs de base de données](https://aka.ms/sql-permissions-poster) . (Les autorisations de niveau serveur ne peuvent pas être accordées aux rôles de base de données. Les connexions et les autres principaux au niveau du serveur (tels que les rôles de serveur) ne peuvent pas être ajoutés aux rôles de base de données. Pour la sécurité au niveau du serveur dans [!INCLUDE[ssNoVersion_md](../../../includes/ssnoversion-md.md)], utilisez les [rôles de serveur](../../../relational-databases/security/authentication-access/server-level-roles.md) à la place. Les autorisations de niveau serveur ne peuvent pas être accordées par le biais des rôles dans [!INCLUDE[ssSDS_md](../../../includes/sssds-md.md)] et [!INCLUDE[ssSDW_md](../../../includes/sssdw-md.md)].)
 
 ## <a name="fixed-database-roles"></a>rôles de base de données fixes
   
@@ -147,15 +147,15 @@ Quand vous installez R Services, vous disposez de rôles de base de données sup
 |[sp_droprole &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-droprole-transact-sql.md)|Command|Supprime un rôle de base de données de la base de données actuelle.|  
 |[sp_addrolemember &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md)|Command|Ajoute un utilisateur ou un rôle de base de données, un compte de connexion ou un groupe Windows à un rôle de base de données dans la base de données active. Toutes les plateformes sauf [!INCLUDE[ssPDW_md](../../../includes/sspdw-md.md)] doivent utiliser `ALTER ROLE` à la place.|  
 |[sp_droprolemember &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md)|Command|Supprime un compte de sécurité d'un rôle SQL Server dans la base de données actuelle. Toutes les plateformes sauf [!INCLUDE[ssPDW_md](../../../includes/sspdw-md.md)] doivent utiliser `ALTER ROLE` à la place.|
-|[GRANT](../../../t-sql/statements/grant-transact-sql.md)| Permissions | Ajoute l’autorisation à un rôle.
-|[DENY](../../../t-sql/statements/deny-transact-sql.md)| Permissions | Refuse une autorisation à un rôle.
-|[REVOKE](../../../t-sql/statements/revoke-transact-sql.md)| Permissions | Supprime des autorisations accordées ou refusées antérieurement.
+|[GRANT](../../../t-sql/statements/grant-transact-sql.md)| Autorisations | Ajoute l’autorisation à un rôle.
+|[DENY](../../../t-sql/statements/deny-transact-sql.md)| Autorisations | Refuse une autorisation à un rôle.
+|[REVOKE](../../../t-sql/statements/revoke-transact-sql.md)| Autorisations | Supprime des autorisations accordées ou refusées antérieurement.
   
   
 ## <a name="public-database-role"></a>Rôle de base de données public  
  Chaque utilisateur de base de données appartient au rôle de base de données **public** . Lorsqu'un utilisateur ne s'est pas vu accorder ou refuser des autorisations spécifiques sur un objet sécurisable, il hérite des autorisations accordées à **public** sur cet objet. Les utilisateurs de base de données ne peuvent pas être supprimés du rôle **public** . 
   
-## <a name="related-content"></a>Contenu connexe  
+## <a name="related-content"></a>Contenu associé  
  [Affichages catalogue de sécurité &#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)  
   
  [Procédures stockées de sécurité &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)  

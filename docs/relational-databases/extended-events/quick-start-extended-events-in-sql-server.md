@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: b532bf37f99a3fc05b0f2999d0d3d301323457d6
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: edba23fdc5d59a5b1a5d11d1efdfdc05d9132061
+ms.sourcegitcommit: 6b1618aa3b24bf6759b00a820e09c52c4996ca10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="quick-start-extended-events-in-sql-server"></a>Démarrage rapide : Événements étendus dans SQL Server
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -656,7 +656,7 @@ Voici des liens vers la documentation relative à ces instructions SELECT et les
 - [sys.server_principals (Transact-SQL)](http://msdn.microsoft.com/library/ms188786.aspx)
 - Pour la base de données SQL Azure en particulier, [sys.database_principals (Transact-SQL)](http://msdn.microsoft.com/library/ms187328.aspx)
 - Blog : [Autorisations de moteur de base de données en vigueur](http://social.technet.microsoft.com/wiki/contents/articles/15180.effective-database-engine-permissions.aspx)
-- [Poster](http://go.microsoft.com/fwlink/?LinkId=229142)zoomable, au format PDF, qui présente la hiérarchie de toutes les autorisations SQL Server.
+- [Poster](https://aka.ms/sql-permissions-poster)zoomable, au format PDF, qui présente la hiérarchie de toutes les autorisations SQL Server.
 
 
 
