@@ -98,7 +98,7 @@ Send feature usage data to Microsoft. Feature usage data includes information ab
 [Yes/No]:
 ```
 
-Si vous sélectionnez **Oui**, le service de télémétrie est activé et commence à s’exécuter. Le service redémarre automatiquement après chaque démarrage. Si vous sélectionnez **non**, le service de télémétrie s’arrête et est désactivée.
+Si vous sélectionnez **Oui**, le service de télémétrie est activé et commence à s’exécuter. Le service démarre automatiquement après chaque démarrage. Si vous sélectionnez **Non**, le service de télémétrie s’arrête et est désactivé.
 
 ## <a name="use-setup-to-initialize-and-set-up-microsoft-sql-server-integration-services"></a>Utilisez le programme d’installation pour initialiser et configurer Microsoft SQL Server Integration Services
 
@@ -116,11 +116,11 @@ Pour exécuter le `setup` de commandes avec des messages dans la langue que vous
 
 ## <a name="ssisconf-format"></a>format de SSIS.conf
 
-Les fichier `/var/opt/ssis/ssis.conf` fournit un exemple pour chaque paramètre.
+Le fichier `/var/opt/ssis/ssis.conf` suivant fournit un exemple pour chaque paramètre.
 
 Pour SQL Server, vous pouvez modifier les paramètres du système en modifiant les valeurs dans le fichier `mssql.conf`. Pour SSIS, vous *ne pouvez pas* modifier les paramètres système en modifiant les valeurs dans le fichier `ssis.conf`. Le fichier `ssis.conf` montre uniquement les résultats après l’installation. Si vous souhaitez modifier les paramètres de SSIS, vous devez supprimer le fichier `ssis.conf` et exécutez à nouveau la commande `setup`.
 
-Voici un exemple de fichier `ssis.conf`. Chaque champ correspond au résultat d’une étape d’installation.
+Si vous souhaitez modifier les paramètres de SSIS, vous devez supprimer le fichier `ssis.conf` et exécuter à nouveau la commande `setup`.
 
 ```
 [LICENSE]
