@@ -1,5 +1,5 @@
 ---
-title: Guide de s programmeur ADO &#39; | Documents Microsoft
+title: Programmeur ADO&#39;s Guide | Documents Microsoft
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -20,12 +20,12 @@ ms.author: genemi
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 6414a5691c89a2a399f207a3cf2059c17a00991c
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 03/21/2018
 ---
-# <a name="ado-programmer39s-guide-for-using-ado-objects"></a>Programmeur ADO &#39; s Guide d’utilisation des objets ADO
+# <a name="ado-programmer39s-guide-for-using-ado-objects"></a>Programmeur ADO&#39;s Guide d’utilisation des objets ADO
 Cette documentation fournit une vue d’ensemble de l’utilisation des objets ADO pour travailler avec des données provenant de différentes sources de données. Tout d’abord, l’introduction résume les nouvelles fonctionnalités et la configuration requise pour l’installation et à l’aide de redistribuer le composant ADO. Les sections suivantes décrivent l’utilisation des différents types d’objets ADO. Enfin, les annexes présentent différentes données fourni par Microsoft et fournisseurs de services, les messages d’erreur et les conseils sur l’utilisation d’ADO dans plusieurs langages de programmation, en plus des exemples et un glossaire.
 
  Cette section contient les rubriques suivantes.
