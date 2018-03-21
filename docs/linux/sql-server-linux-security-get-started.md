@@ -26,7 +26,7 @@ ms.lasthandoff: 11/20/2017
 Si vous êtes un utilisateur Linux pour qui SQL Server est une nouveauté, les tâches suivantes vous guident parmi les tâches de sécurité. Celles-ci ne sont pas uniques ou spécifiques à Linux, mais cela permet de vous donner une idée des domaines à approfondir. Dans chaque exemple, un lien est fourni, menant à la documentation détaillée pour ce domaine.
 
 >  [!NOTE]
->  Les exemples suivants utilisent la base de données exemple **AdventureWorks2014**. Pour obtenir des instructions sur la façon d’obtenir et installer cette base de données exemple, consultez [restaurer une base de données SQL Server à partir de Windows et Linux](sql-server-linux-migrate-restore-database.md).
+>  Les exemples suivants utilisent la base de données exemple **AdventureWorks2014**. Pour obtenir des instructions sur la façon d’obtenir et d'installer cette base de données exemple, consultez [restaurer une base de données SQL Server à partir de Windows et Linux](sql-server-linux-migrate-restore-database.md).
 
 
 ## <a name="create-a-login-and-a-database-user"></a>Créez une connexion et un utilisateur de base de données 
@@ -99,7 +99,7 @@ Pour plus d’informations sur le système d’autorisation, consultez [mise en 
 
 ## <a name="configure-row-level-security"></a>Configurer la sécurité de niveau ligne  
 
-La [Sécurité de niveau ligne](../relational-databases/security/row-level-security.md) vous permet de restreindre l’accès aux lignes dans une base de données en fonction de l’utilisateur qui exécute une requête. Cette fonctionnalité est utile pour les scénarios où l'on doit s’assurer que les clients peuvent accéder uniquement leurs propres données ou que les employés peuvent accéder uniquement aux données pertinentes pour leur service.   
+La [Sécurité de niveau ligne](../relational-databases/security/row-level-security.md) vous permet de restreindre l’accès aux lignes dans une base de données en fonction de l’utilisateur qui exécute une requête. Cette fonctionnalité est utile pour les scénarios où l'on doit s’assurer que les clients peuvent accéder uniquement à leurs propres données ou que les employés peuvent accéder uniquement aux données pertinentes pour leur service.  
 
 Les étapes ci-dessous vous guident dans le paramétrage de deux utilisateurs avec différents accès au niveau des lignes de la table `Sales.SalesOrderHeader` . 
 
@@ -147,7 +147,7 @@ ADD BLOCK PREDICATE Security.fn_securitypredicate(SalesPersonID)
 WITH (STATE = ON);   
 ```
 
-Exécutez le code suivant pour interroger la table `SalesOrderHeader` en tant que chacun des utilisateurs. Vérifiez que `SalesPerson280` voit uniquement les 95 lignes de leurs propres ventes et que les `Manager` peuvent voir toutes les lignes de la table.  
+Exécutez le code suivant pour interroger la table `SalesOrderHeader` en tant que chacun des utilisateurs. Vérifiez que `SalesPerson280` voit uniquement les 95 lignes de ses propres ventes et que les `Manager` peuvent voir toutes les lignes de la table.  
 
 ```    
 EXECUTE AS USER = 'SalesPerson280';   
@@ -192,7 +192,7 @@ SELECT EmailAddressID, EmailAddress FROM Person.EmailAddress;
 REVERT;    
 ```
  
-Vérifiez que la fonction de masquage modifie l’adresse de messagerie dans le premier enregistrement, en transformant :
+Vérifiez que la fonction de masquage modifie l’adresse de messagerie dans le premier enregistrement, en remplaçant les valeurs suivantes :
   
 |EmailAddressID |EmailAddress |  
 |----|---- |   
@@ -207,7 +207,7 @@ en
 
 ## <a name="enable-transparent-data-encryption"></a>Activer le chiffrement transparent des données
 
-Une menace pour votre base de données est le risque qu’une personne vole les fichiers de base de données situés sur votre disque dur. Cela peut se produire par une intrusion qui réussirait à obtenir une élévation de ses privilèges d’accès à votre système, les actions d’un employé à problème, ou en cas de vol de l’ordinateur contenant les fichiers (par exemple, un ordinateur portable).
+Une menace pour votre base de données est le risque qu’une personne vole les fichiers de base de données situés sur votre disque dur. Cela peut se produire par une intrusion qui réussirait à obtenir une élévation de ses privilèges d’accès à votre système, les actions d’un employé qui pose problème, ou en cas de vol de l’ordinateur contenant les fichiers (par exemple, un ordinateur portable).
 
 Le chiffrement transparent des données (TDE) chiffre les fichiers de données stockés sur le disque dur. La base de données master du moteur de base de données SQL Server possède la clé de chiffrement, afin que le moteur de base de données puisse manipuler les données. Les fichiers de base de données ne peuvent pas être lus sans accès à la clé. Les administrateurs peuvent administrer, sauvegarder et recréer la clé afin de pouvoir déplacer la base de données, mais ceci ne pourra être fait que par des personnes habilitées. Lorsque le chiffrement transparent des données est configuré, la base de données `tempdb` est automatiquement chiffrée. 
 
@@ -220,7 +220,7 @@ Le chiffrement transparent des données (TDE) chiffre les fichiers de données s
 - Créez une clé de chiffrement de base de données et protégez-la à l'aide du certificat.
 - Configurez la base de données pour qu'elle utilise le chiffrement.
 
-La configuration de chiffrement transparent des données requiert l'autorisation `CONTROL` sur la base de données master et `CONTROL` sur la base de données utilisateur. En général, c'est un administrateur qui configure le chiffrement transparent des données. 
+La configuration du chiffrement transparent des données requiert l'autorisation `CONTROL` sur la base de données master et `CONTROL` sur la base de données utilisateur. En général, c'est un administrateur qui configure le chiffrement transparent des données. 
 
 L'exemple ci-dessous illustre le chiffrement et le déchiffrement de la base de données `AdventureWorks2014` à l'aide d'un certificat installé sur le serveur nommé `MyServerCert`.
 
@@ -249,7 +249,7 @@ SET ENCRYPTION ON;
 
 Pour supprimer le chiffrement transparent des données, exécutez`ALTER DATABASE AdventureWorks2014 SET ENCRYPTION OFF;`   
 
-Les opérations de chiffrement et le déchiffrement sont planifiées sur des threads d’arrière-plan par SQL Server. Vous pouvez consulter l'état de ces opérations à l'aide des affichages catalogue et des vues de gestion dynamique mentionnés dans la liste fournie plus loin dans cette rubrique.   
+Les opérations de chiffrement et de déchiffrement sont planifiées sur des threads d’arrière-plan par SQL Server. Vous pouvez consulter l'état de ces opérations à l'aide des affichages catalogue et des vues de gestion dynamique mentionnés dans la liste fournie plus loin dans cette rubrique.
 
 >  [!WARNING]
 >  Les fichiers de sauvegarde des bases de données pour lesquelles le chiffrement transparent des données est activé sont également chiffrés à l'aide de la clé de chiffrement de base de données. En conséquence, lorsque vous restaurez ces sauvegardes, le certificat qui protège la clé de chiffrement de base de données doit être disponible. Cela signifie qu'en plus de sauvegarder la base de données, vous devez vous assurer que vous conservez des sauvegardes des certificats du serveur pour empêcher toute perte de données. Une perte de données interviendra si le certificat n'est plus disponible. Pour plus d'informations, consultez [SQL Server Certificates and Asymmetric Keys](../relational-databases/security/sql-server-certificates-and-asymmetric-keys.md).  
@@ -261,7 +261,7 @@ Pour plus d’informations sur le chiffrement transparent des données, consulte
 SQL Server a la possibilité de chiffrer les données lors de la création d’une sauvegarde. En spécifiant l’algorithme de chiffrement et le chiffreur (un certificat ou clé asymétrique) lors de la création d’une sauvegarde, vous pouvez créer un fichier de sauvegarde chiffré.    
   
 > [!WARNING]  
->  Il est très important de sauvegarder le certificat ou la clé asymétrique, et de préférence dans un autre emplacement que le fichier de sauvegarde qu'il a servi à chiffrer. Sans le certificat ou la clé asymétrique, vous ne pouvez pas restaurer la sauvegarde, ce qui rend le fichier de sauvegarde inutilisable. 
+>  Il est très important de sauvegarder le certificat ou la clé asymétrique, et de préférence dans un autre emplacement que celui du fichier de sauvegarde que le certificat ou la clé a servi à chiffrer. Sans le certificat ou la clé asymétrique, vous ne pouvez pas restaurer la sauvegarde, ce qui rend le fichier de sauvegarde inutilisable. 
  
  
 L’exemple suivant crée un certificat, puis crée une sauvegarde protégée par le certificat.
