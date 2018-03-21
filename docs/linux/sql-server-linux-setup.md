@@ -56,8 +56,8 @@ SQL Server 2017 requise est la suivante pour Linux :
 
 Si vous utilisez les partages distants **NFS (Network File System)** en production, notez les exigences de prise en charge suivantes :
 
-- Utiliser la version NFS **4.2 ou ultérieure**. Les versions antérieures de NFS ne gèrent pas les fonctionnalités requises, telles que fallocate et la création de fichiers sparse, commune aux systèmes de fichiers modernes.
-- Positionnez uniquement les répertoires **/var/opt/mssql** sur le montage NFS. Les autres fichiers, tels que les fichiers binaires du système SQL Server, ne sont pas pris en charge.
+- Utiliser la version NFS **4.2 ou ultérieure**. Les versions antérieures de NFS ne gèrent pas les fonctionnalités requises, telles que fallocate et la création de fichiers sparse, communes aux systèmes de fichiers modernes. 
+- Positionner uniquement les répertoires **/var/opt/mssql** sur le montage NFS. Les autres fichiers, tels que les fichiers binaires du système SQL Server, ne sont pas pris en charge. 
 - Assurez-vous que les clients NFS utilisent l’option 'nolock' lorsque vous montez le partage distant.
 
 ## <a id="platforms"></a> Installation de SQL Server
@@ -88,7 +88,7 @@ Pour restaurer ou rétrograder SQL Server vers une version précédente, procéd
 
 1. Identifiez le numéro de version pour le package de SQL Server que vous souhaitez rétrograder. Pour obtenir la liste de numéros de versions de package, consultez les [notes de publication](sql-server-linux-release-notes.md).
 
-1. Passez à une version antérieure de SQL Server. Dans les commandes suivantes, remplacez `<version_number>` avec le numéro de version SQL Server que vous avez identifié à l’étape 1.
+1. Passez à une version antérieure de SQL Server. Dans les commandes suivantes, remplacez `<version_number>` par le numéro de version SQL Server que vous avez identifié à l’étape 1. 
 
    | Plateforme | Commandes de mise à jour de package |
    |-----|-----|
@@ -97,13 +97,13 @@ Pour restaurer ou rétrograder SQL Server vers une version précédente, procéd
    | Ubuntu | `sudo apt-get install mssql-server=<version_number>`<br/>`sudo systemctl start mssql-server` |
 
 > [!NOTE]
-> Il est uniquement pris en charge de mettre à niveau vers une version de la même version principale, telle que SQL Server 2017.
+> Seule la rétrogradation vers une version de la même version principale, telle que SQL Server 2017, est prise en charge. 
 
 ## <a id="versioncheck"></a>Vérifiez la version installée de SQL Server
 
 Pour vérifier votre version actuelle et l’édition de SQL Server sur Linux, utilisez la procédure suivante :
 
-1. Si ils ne sont pas déjà installés, installez les [outils de ligne de commande SQL Server](sql-server-linux-setup-tools.md).
+1. Si ce n'est déjà fait, installez les [outils de ligne de commande SQL Server](sql-server-linux-setup-tools.md). 
 
 1. Utilisez **sqlcmd** pour exécuter une commande Transact-SQL qui affiche la version de SQL Server et l’édition.
 
@@ -129,15 +129,15 @@ sudo rm -rf /var/opt/mssql/
 
 ## <a id="repositories"></a>Configurer des référentiels de code source
 
-Lorsque vous installez ou mettez à niveau de SQL Server, vous obtenez la dernière version de SQL Server à partir du référentiel Microsoft configuré.
+Lorsque vous installez ou mettez à niveau SQL Server, vous obtenez la dernière version de SQL Server à partir du référentiel Microsoft configuré.
 
 ### <a name="repository-options"></a>Options de dépôt
 
 Il existe deux principaux types de référentiels pour chaque point de distribution :
 
-- **Les mises à jour cumulative (CU)**: le référentiel de la mise à jour Cumulative (CU) contient des packages pour la version de SQL Server de base et tous les correctifs de bogues ou améliorations apportées depuis cette version. Les mises à jour cumulatives sont spécifiques à une version, telles que SQL Server 2017. Elles sont publiées sur une cadence régulière.
+- **Mises à jour cumulative (CU)** : le référentiel de la mise à jour cumulative (CU) contient des packages pour la version SQL Server de base et tous les correctifs de bogues ou les améliorations apportées depuis cette version. Les mises à jour cumulatives sont spécifiques à une version, comme SQL Server 2017. Elles sont publiées à une cadence régulière. 
 
-- **GDR**: le référentiel du GDR (General Distribution Release) contient des packages pour la  version de base de SQL Server et uniquement les correctifs critiques et les mises à jour de sécurité depuis cette version. Ces mises à jour sont également ajoutés à la prochaine version CU.
+- **GDR** : le référentiel du GDR (General Distribution Release) contient des packages pour la version SQL Server de base et uniquement les correctifs critiques et les mises à jour de sécurité depuis cette version. Ces mises à jour sont également ajoutées à la prochaine version CU. 
 
 Chaque version de CU et correctif logiciel grand public contient le package SQL Server complet et toutes les mises à jour précédentes pour ce référentiel. La mise à jour à partir d’une version GDR vers une version CU est prise en charge par le changement de votre référentiel configuré pour SQL Server. Vous pouvez également [rétrograder](#rollback) vers n’importe quelle version dans votre version principale (ex : 2017). La mise à jour à partir d’une version CU vers une version GDR n’est pas prise en charge.
 
@@ -147,13 +147,13 @@ Si vous souhaitez vérifier le référentiel configuré, utilisez les techniques
 
 | Plateforme | Procédure |
 |-----|-----|
-| RHEL | 1. Afficher les fichiers dans le répertoire **/etc/yum.repos.d** :`sudo ls /etc/yum.repos.d`<br/>2. Recherchez le fichier qui configure le répertoire de SQL Server, tel que **mssql-server.repo**.<br/>3. Imprimer le contenu du fichier :`sudo cat /etc/yum.repos.d/mssql-server.repo`<br/>4. La propriété **name** indique le référentiel.|
+| RHEL | 1. Affichez les fichiers dans le répertoire **/etc/yum.repos.d** :`sudo ls /etc/yum.repos.d`<br/>2. Recherchez le fichier qui configure le répertoire de SQL Server, tel que **mssql-server.repo**.<br/>3. Imprimez le contenu du fichier :`sudo cat /etc/yum.repos.d/mssql-server.repo`<br/>4. La propriété **name** indique le référentiel.| 
 | SLES | 1. Exécutez la commande suivante : `sudo zypper info mssql-server`.<br/>2. La propriété **repository** indique le référentiel. |
 | Ubuntu | 1. Exécutez la commande suivante : `sudo cat /etc/apt/sources.list`.<br/>2. Examinez l’URL du package pour mssql-server. |
 
 La fin de l’URL du référentiel confirme que le type de référentiel :
 
-- **MSSQL-server**: référentiel de version préliminaire.
+- **MSSQL-server**: référentiel de préversion. 
 - **MSSQL-server-2017**: référentiel CU.
 - **MSSQL server 2017 gdr**: référentiel GDR.
 
@@ -162,7 +162,7 @@ La fin de l’URL du référentiel confirme que le type de référentiel :
 Pour configurer les référentiels CU ou GDR, procédez comme suit :
 
 > [!NOTE]
-> Le [guide de démarrage rapide](#platforms) configure le référentiel CU. Si vous suivez ces didacticiels, il est inutile d’utiliser les étapes ci-dessous pour continuer à utiliser le référentiel CU. Ces étapes ne sont nécessaires pour la modification de votre référentiel.
+> Le [guide de démarrage rapide](#platforms) configure le référentiel CU. Si vous suivez ces didacticiels, il est inutile d’utiliser les étapes ci-dessous pour continuer à utiliser le référentiel CU. Ces étapes ne sont pas nécessaires pour la modification de votre référentiel. 
 
 1. Si nécessaire, supprimez le référentiel configuré précédemment.
 
@@ -196,16 +196,16 @@ Pour configurer les référentiels CU ou GDR, procédez comme suit :
 1. [Installer](#platforms) ou [mettre à jour](#upgrade) SQL Server et les packages correspondants à partir du nouveau référentiel.
 
    > [!IMPORTANT]
-   > À ce stade, si vous choisissez d’utiliser un des didacticiels d’installation, tel que le [didacticiels de démarrage rapide](#platforms), souvenez-vous que vous venez de configurer le référentiel cible. Ne répétez pas cette étape dans les didacticiels. Cela est particulièrement vrai si vous configurez le référentiel GDR, étant donné que les didacticiels de démarrage rapide utilisent le référentiel CU.
+   > À ce stade, si vous choisissez d’utiliser un des didacticiels d’installation, comme les [didacticiels de démarrage rapide](#platforms), souvenez-vous que vous venez de configurer le référentiel cible. Ne répétez pas cette étape dans les didacticiels. Cela est particulièrement vrai si vous configurez le référentiel GDR, étant donné que les didacticiels de démarrage rapide utilisent le référentiel CU. 
 
 ## <a id="unattended"></a>Installation sans assistance
 
 Vous pouvez effectuer une installation sans assistance de la manière suivante :
 
 - Suivez les étapes initiales dans les [didacticiels de démarrage rapide](#platforms) pour inscrire les référentiels et installez SQL Server.
-- Lorsque vous exécutez `mssql-conf setup`, définissez les [variables d’environnement](sql-server-linux-configure-environment-variables.md) et utiliser l'option `-n` (sans invite).
+- Lorsque vous exécutez `mssql-conf setup`, définissez les [variables d’environnement](sql-server-linux-configure-environment-variables.md) et utilisez l'option `-n` (sans invite). 
 
-L’exemple suivant configure l’Édition Developer de SQL Server avec la variable d'envionnement **MSSQL_PID**. Elle accepte également le CLUF (**ACCEPT_EULA**) et définit le mot de passe SA (**MSSQL_SA_PASSWORD**). Le paramètre `-n`  effectue une installation sans invite où les valeurs de configuration sont extraites des variables d’environnement.
+L’exemple suivant configure l’édition Developer de SQL Server avec la variable d'environnement **MSSQL_PID**. Elle accepte également le CLUF (**ACCEPT_EULA**) et définit le mot de passe SA (**MSSQL_SA_PASSWORD**). Le paramètre `-n` effectue une installation sans invite où les valeurs de configuration sont extraites des variables d’environnement. 
 
 ```bash
 sudo MSSQL_PID=Developer ACCEPT_EULA=Y MSSQL_SA_PASSWORD='<YourStrong!Passw0rd>' /opt/mssql/bin/mssql-conf -n setup
@@ -221,14 +221,14 @@ Pour un exemple de script plus détaillé, consultez les exemples suivants :
 
 ## <a id="offline"></a>Installation hors connexion
 
-Si l’ordinateur Linux n’a pas d’accès aux référentiels en ligne utilisés dans le [Démarrages rapides](#platforms), vous pouvez télécharger directement les fichiers de package. Ces packages se trouvent dans le référentiel Microsoft, [https://packages.microsoft.com](https://packages.microsoft.com).
+Si l’ordinateur Linux n’a pas accès aux référentiels en ligne utilisés dans les [Démarrages rapides](#platforms), vous pouvez télécharger directement les fichiers de package. Ces packages se trouvent dans le référentiel Microsoft, [https://packages.microsoft.com](https://packages.microsoft.com). 
 
 > [!TIP]
-> Si vous avez installé avec succès avec les étapes décrites dans le démarrage rapide, il est inutile télécharger ou installer manuellement le(s) package(s) ci-dessous. Cette section concerne uniquement le scénario hors connexion.
+> Si l'installation a réussi avec les étapes décrites dans le démarrage rapide, il est inutile de télécharger ou d'installer manuellement le(s) package(s) ci-dessous. Cette section concerne uniquement le scénario hors connexion. 
 
-1. **Télécharger le package de moteur de base de données pour votre plateforme**. Recherchez les liens de téléchargement de package dans la section des détails du package dans les [Notes de publication](sql-server-linux-release-notes.md).
+1. **Téléchargez le package de moteur de base de données pour votre plateforme**. Recherchez les liens de téléchargement de package dans la section des détails du package dans les [Notes de publication](sql-server-linux-release-notes.md). 
 
-1. **Déplacer le package téléchargé sur votre ordinateur Linux**. Si vous avez utilisé un autre ordinateur pour télécharger les packages, deplacez les packages vers l’ordinateur Linux avec la commande **scp**.
+1. **Déplacez le package téléchargé sur votre ordinateur Linux**. Si vous avez utilisé un autre ordinateur pour télécharger les packages, déplacez les packages vers l’ordinateur Linux avec la commande **scp**. 
 
 1. **Installer le package de moteur de base de données**. Utilisez une des commandes suivantes en fonction de votre plateforme. Remplacez le nom du fichier de package dans cet exemple par le nom exact que vous avez téléchargé.
 
@@ -241,7 +241,7 @@ Si l’ordinateur Linux n’a pas d’accès aux référentiels en ligne utilis�
     > [!NOTE]
     > Vous pouvez également installer les packages RPM (RHEL et SLES) avec la commande `rpm -ivh`, mais les commandes du tableau précédent  installent automatiquement les dépendances si elles sont disponibles à partir de référentiels approuvés.
 
-1. **Résoudre les dépendances manquantes**: vous pouvez avoir des dépendances manquantes à ce stade. Si ce n’est pas le cas, vous pouvez ignorer cette étape. Sur Ubuntu, si vous avez accès à des référentiels approuvés contenant ces dépendances, la solution la plus simple consiste à utiliser la commande `apt-get -f install`. Cette commande complète également l’installation de SQL Server. Pour examiner les dépendances manuellement, utilisez les commandes suivantes :
+1. **Résoudre les dépendances manquantes** : vous pouvez avoir des dépendances manquantes à ce stade. Si ce n’est pas le cas, vous pouvez ignorer cette étape. Sur Ubuntu, si vous avez accès à des référentiels approuvés contenant ces dépendances, la solution la plus simple consiste à utiliser la commande `apt-get -f install`. Cette commande termine également l’installation de SQL Server. Pour examiner les dépendances manuellement, utilisez les commandes suivantes :
 
    | Plateforme | Commande de dépendances de liste |
    |-----|-----|
@@ -249,7 +249,7 @@ Si l’ordinateur Linux n’a pas d’accès aux référentiels en ligne utilis�
    | SLES | `rpm -qpR mssql-server_versionnumber.x86_64.rpm` |
    | Ubuntu | `dpkg -I mssql-server_versionnumber_amd64.deb` |
 
-   Après avoir résolu les dépendances manquantes, essayez d’installer le package mssql-server à nouveau.
+   Après avoir résolu les dépendances manquantes, essayez de réinstaller le package mssql-server.
 
 1. **Terminer l’installation de SQL Server**. Utilisez **mssql-conf** pour terminer l’installation de SQL Server :
 
