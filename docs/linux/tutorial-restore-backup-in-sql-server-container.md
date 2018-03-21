@@ -27,8 +27,8 @@ ms.lasthandoff: 11/20/2017
 Ce didacticiel montre comment déplacer et de restaurer un fichier de sauvegarde de SQL Server dans une image de conteneur de SQL Server 2017 Linux s’exécutant sur Docker.
 
 > [!div class="checklist"]
-> * Extraire et exécuter la dernière image de conteneur de SQL Server 2017 Linux.
-> * Copier le fichier de base de données wideworldimporters dans le conteneur.
+> * Extraire et exécuter la dernière image conteneur Linux de SQL Server 2017.
+> * Copier le fichier de base de données Wide World Importers dans le conteneur.
 > * Restaurer la base de données dans le conteneur.
 > * Exécuter les instructions Transact-SQL pour afficher et modifier la base de données.
 > * Sauvegarder la base de données modifiée.
@@ -79,7 +79,7 @@ Ce didacticiel montre comment déplacer et de restaurer un fichier de sauvegarde
     Cette commande crée un conteneur de SQL Server 2017 avec l’édition développeur (par défaut). Le port SQL Server **1433** est exposé sur l’ordinateur hôte en tant que port **1401**. Le paramètre facultatif `-v sql1data:/var/opt/mssql` crée un conteneur de volume de données nommé **sql1ddata**. Cela permet de conserver les données créées par SQL Server.
 
    > [!NOTE]
-   > La procedure pour exécuter des éditions de production de SQL Server dans des conteneurs est légèrement différente. Pour plus d’informations, consultez [exécuter des images de conteneur de production](sql-server-linux-configure-docker.md#production). Si vous utilisez les mêmes noms de conteneur et ports, le reste de ce guide pas à pas fonctionne aussi avec des conteneurs de production.
+   > La procédure pour exécuter des éditions de production de SQL Server dans des conteneurs est légèrement différente. Pour plus d’informations, consultez [Exécuter des images de conteneur de production](sql-server-linux-configure-docker.md#production). Si vous utilisez les mêmes noms de conteneur et ports, le reste de ce guide pas à pas fonctionne aussi avec des conteneurs de production. 
 
 1. Pour afficher vos conteneurs Docker, utilisez le `docker ps` commande.
 
@@ -91,7 +91,7 @@ Ce didacticiel montre comment déplacer et de restaurer un fichier de sauvegarde
     docker ps -a
     ```
  
-1. Si la colonne **STATUS** présente l’état **Up**, SQL Server est en cours d’exécution dans le conteneur et à l’écoute sur le port spécifié dans la colonne **PORTS**. Si la colonne **STATUS** pour votre conteneur SQL Server affiche **Exited**, consultez la [résolution des problèmes de la section du guide de configuration](sql-server-linux-configure-docker.md#troubleshooting).
+1. Si la colonne **STATUS** présente l’état **Up**, SQL Server est en cours d’exécution dans le conteneur et à l’écoute sur le port spécifié dans la colonne **PORTS**. Si la colonne **STATUS** pour votre conteneur SQL Server affiche **Exited**, consultez la [section sur la résolution des problèmes du guide de configuration](sql-server-linux-configure-docker.md#troubleshooting).
 
    ```
    $ sudo docker ps -a
@@ -172,7 +172,7 @@ Le fichier de sauvegarde se trouve désormais dans le conteneur. Avant de restau
    WWI_InMemory_Data_1   D:\Data\WideWorldImporters_InMemory_Data_1
    ```
 
-1. Appelez le **RESTORE DATABASE** pour restaurer la base de données dans le conteneur. Spécifiez les nouveaux chemins pour chacun des fichiers relevés à l’étape précédente.
+1. Appelez **RESTORE DATABASE** pour restaurer la base de données dans le conteneur. Spécifiez les nouveaux chemins pour chacun des fichiers relevés à l’étape précédente. 
 
    ```bash
    sudo docker exec -it sql1 /opt/mssql-tools/bin/sqlcmd \
@@ -236,7 +236,7 @@ Vous devez trouver **WideWorldImporters** dans la liste des bases de données.
 
 Les étapes suivantes apportent une modification dans la base de données.
 
-1. Exécuter une requête pour afficher les premiers 10 éléments dans la table **Warehouse.StockItems**.
+1. Exécuter une requête pour afficher les 10 premiers éléments dans la table **Warehouse.StockItems**.
 
    ```bash
    sudo docker exec -it sql1 /opt/mssql-tools/bin/sqlcmd \
@@ -379,7 +379,7 @@ En plus d'effectuer des sauvegardes de bases de données pour protéger vos donn
        -v sql1data:/var/opt/mssql -d microsoft/mssql-server-linux:2017-latest
     ```
 
-1. La base de données de Wide World Importers est présente dans le nouveau conteneur. Exécuter une requête pour vérifier la modification  que vous aviez apportée précédemment.
+1. La base de données de Wide World Importers est présente dans le nouveau conteneur. Exécutez une requête pour vérifier la modification que vous aviez apportée précédemment. 
 
    ```bash
    sudo docker exec -it sql2 /opt/mssql-tools/bin/sqlcmd \
@@ -398,7 +398,7 @@ En plus d'effectuer des sauvegardes de bases de données pour protéger vos donn
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-Dans ce didacticiel, vous avez appris comment sauvegarder une base de données sur Windows et la déplacer vers un serveur SQL Server 2017 sous Linux. Vous avez appris comment à :
+Dans ce didacticiel, vous avez appris comment sauvegarder une base de données sur Windows et la déplacer vers un serveur SQL Server 2017 sous Linux. Vous avez appris à : 
 > [!div class="checklist"]
 > * Créer des images de conteneur de SQL Server 2017 Linux.
 > * Copier les sauvegardes de base de données SQL Server dans un conteneur.
