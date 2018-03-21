@@ -4,24 +4,24 @@ ms.custom:
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
 ms.component: php
 ms.reviewer: 
 ms.suite: sql
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 9e78bbf3-9e9a-426d-99d3-6fa2cb33ff6b
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 79cd8f0b943c9382d4287369ec9cd21f28976172
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 1b9464f25551d391004275fcb6dda33fc9b89e2f
+ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/21/2018
 ---
 # <a name="microsoft-php-driver-for-sql-server"></a>Microsoft PHP Driver pour SQL Server
 
@@ -36,8 +36,8 @@ Le pilote SQL Server pour PHP permet l’intégration avec SQL Server pour les a
 * [Étape 4 : Connexion résiliente à SQL avec PHP](step-4-connect-resiliently-to-sql-with-php.md)  
   
 ## <a name="documentation"></a>Documentation  
-* [Bien démarrer](getting-started-with-the-php-sql-driver.md)
-* [Vue d’ensemble](overview-of-the-php-sql-driver.md)
+* [Prise en main](getting-started-with-the-php-sql-driver.md)
+* [Vue d'ensemble](overview-of-the-php-sql-driver.md)
 * [Guide de programmation](programming-guide-for-php-sql-driver.md) 
 * [Considérations relatives à la sécurité](security-considerations-for-php-sql-driver.md)
   

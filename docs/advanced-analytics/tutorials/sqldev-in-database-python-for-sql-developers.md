@@ -20,11 +20,11 @@ caps.latest.revision:
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
-ms.openlocfilehash: c026e09e1fa34b98d1eda43d59097c966051f6d7
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: dab1a9648865f13d1741917bd389eae287afd7f2
+ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/21/2018
 ---
 # <a name="in-database-python-analytics-for-sql-developers"></a>Analytique Python de la base de données pour les développeurs SQL
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -80,7 +80,7 @@ Toutes les tâches peuvent être effectuées à l’aide [!INCLUDE[tsql](../../i
 
 ### <a name="prerequisites"></a>Configuration requise
 
-+ Installez une instance de SQL Server 2017 avec Machine Learning Services et Python activée. Pour plus d’informations, consultez [configurer SQL Server Machine Learning Services avec Python](../python/setup-python-machine-learning-services.md).
++ Installez une instance de SQL Server 2017 avec Machine Learning Services et Python activée. Pour plus d’informations, consultez [installer SQL Server 2017 Machine Learning Services (de-de base de données)](../install/sql-machine-learning-services-windows-install.md).
 + La connexion que vous utilisez pour cette procédure pas à pas doit avoir les autorisations pour créer des bases de données et autres objets, pour charger des données, sélectionner des données et exécuter des procédures stockées.
 
 ### <a name="experience-level"></a>Niveau d’expérience

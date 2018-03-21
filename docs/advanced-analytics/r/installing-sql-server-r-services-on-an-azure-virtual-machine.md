@@ -16,11 +16,11 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 5d52dd25059dcc8204fbc2598a595de9e208f308
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 572aeffdc0d3c06a4c3bda17e3f3d438b2819183
+ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/21/2018
 ---
 # <a name="installing-sql-server-machine-learning-features-on-an-azure-virtual-machine"></a>L’installation de fonctionnalités sur une machine virtuelle Azure d’apprentissage automatique SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -37,7 +37,7 @@ Si vous déployez une machine virtuelle Azure qui inclut [!INCLUDE[ssCurrent](..
 
 ## <a name="create-a-new-sql-server-2017-virtual-machine"></a>Créer un ordinateur virtuel SQL Server 2017
 
-Pour utiliser R ou Python dans SQL Server 2017, veillez à obtenir un ordinateur virtuel basé sur Windows. [!INCLUDE[sscurrentlong-md](../../includes/sscurrentlong-md.md)]sur Linux prend en charge fast [score native](../sql-native-scoring.md) à l’aide de la fonction de prédiction de T-SQL, mais d’autres fonctionnalités d’apprentissage n’existe pas encore dans cette édition.
+Pour utiliser R ou Python dans SQL Server 2017, veillez à obtenir un ordinateur virtuel basé sur Windows. [!INCLUDE[sscurrentlong-md](../../includes/sscurrentlong-md.md)] sur Linux prend en charge fast [score native](../sql-native-scoring.md) à l’aide de la fonction de prédiction de T-SQL, mais d’autres fonctionnalités d’apprentissage n’existe pas encore dans cette édition.
 
 Pour obtenir la liste des offres de machine virtuelle SQL Server, consultez l’article : [vue d’ensemble de SQL Server sur des Machines virtuelles Azure (Windows)](https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-overview).
 
@@ -74,11 +74,10 @@ Vous pouvez également activer ou désactiver la fonctionnalité sur un ordinate
 Si vous avez créé une machine virtuelle Azure incluant SQL Server sans l’apprentissage automatique, vous pouvez ajouter la fonctionnalité en suivant ces étapes :
 
 1. Ré-exécutez le programme d’installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et ajoutez la fonctionnalité à partir de la page **Configuration du serveur** de l’Assistant.
-2. Activez l’exécution des scripts externes, puis redémarrez l’instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour plus d’informations, consultez [configurer SQL Server R Services](../../advanced-analytics/r/set-up-sql-server-r-services-in-database.md).
+2. Activez l’exécution des scripts externes, puis redémarrez l’instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour plus d’informations, consultez [installer SQL Server 2016 R Services](../install/sql-r-services-windows-install.md).
 3. (Facultatif) Configurez l’accès aux bases de données pour les comptes de travail R, si cela est nécessaire pour l’exécution des scripts à distance.
-   Pour plus d’informations, consultez [Configurer SQL Server R Services](../../advanced-analytics/r/set-up-sql-server-r-services-in-database.md).
-3. (Facultatif) Modifiez une règle de pare-feu sur la machine virtuelle Azure, si vous souhaitez autoriser l’exécution de script R à partir des clients de science des données distants. Pour plus d’informations, consultez [Désactiver une règle du pare-feu](#firewall).
-4. Installez ou activez les bibliothèques réseau nécessaires. Pour plus d’informations, consultez [Ajouter des protocoles réseau](#network).
+4. (Facultatif) Modifiez une règle de pare-feu sur la machine virtuelle Azure, si vous souhaitez autoriser l’exécution de script R à partir des clients de science des données distants. Pour plus d’informations, consultez [Désactiver une règle du pare-feu](#firewall).
+5. Installez ou activez les bibliothèques réseau nécessaires. Pour plus d’informations, consultez [Ajouter des protocoles réseau](#network).
 
 ## <a name="additional-steps"></a>Étapes supplémentaires
 
@@ -101,13 +100,13 @@ Pour activer l’accès à partir de clients de science des données à distance
 ### <a name="enable-odbc-callbacks-for-remote-clients"></a>Autoriser les rappels ODBC pour les clients distants
 
 Si vous prévoyez que les clients de l’appel du serveur doivent émettre des requêtes ODBC dans le cadre de leur solutions d’apprentissage, vous devez vous assurer que le Launchpad peut effectuer des appels ODBC part du client distant. Pour cela, vous devez autoriser les comptes de travail SQL utilisés par Launchpad à se connecter à l’instance.
-Pour plus d’informations, consultez [Configurer SQL Server R Services](../../advanced-analytics/r/set-up-sql-server-r-services-in-database.md).
+Pour plus d’informations, consultez [installer SQL Server 2016 R Services](../install/sql-r-services-windows-install.md).
 
 ### <a name="network"></a>Ajouter des protocoles réseau
 
 + Activer les canaux nommés
   
-  [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] utilise le protocole canaux nommés pour les connexions entre les ordinateurs client et serveur et pour certaines connexions internes. Si ce protocole n’est pas activé, vous devez l’installer et l’activer sur la machine virtuelle Azure et sur tous les clients de science des données susceptibles de se connecter au serveur.
+  [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] utilise le protocole des canaux nommés pour les connexions entre les ordinateurs client et serveur, ainsi que pour certaines connexions internes. Si ce protocole n’est pas activé, vous devez l’installer et l’activer sur la machine virtuelle Azure et sur tous les clients de science des données susceptibles de se connecter au serveur.
   
 + Activer TCP/IP
 

@@ -21,11 +21,11 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: 2d15f47fd148cb7b1f0edf399e94502c3570eabd
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 8631ebd8cee2eb5f94fd1c28bee71f9fcfee192f
+ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/21/2018
 ---
 # <a name="tutorials-for-sql-server-machine-learning-services"></a>Didacticiels pour SQL Server Machine Learning Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -111,8 +111,8 @@ Pour plus d’informations, consultez [Machine Learning Templates with SQL Serve
 
 Pour exécuter ces didacticiels, vous devez télécharger et installer l’apprentissage automatique, les composants SQL Server comme décrit ici :
 
-+ [Configurer SQL Server 2017 Machine Learning Services ou SQL Server 2016 R Services](../r/set-up-sql-server-r-services-in-database.md)
-+ [Configurer les Services de SQL Server 2017 Python](../python/setup-python-machine-learning-services.md)
++ [Installer SQL Server 2017 Machine Learning Services (de-de base de données)](../install/sql-machine-learning-services-windows-install.md)
++ [Installer SQL Server 2016 R Services (de-de base de données)](../install/sql-r-services-windows-install.md)
 
 Avec SQL Server 2017, vous pouvez installer R ou Python ou les deux. Sinon, le processus d’installation de globale, l’architecture et les exigences sont les mêmes.
 

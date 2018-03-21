@@ -17,11 +17,11 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 248b3b27a8df1320eb809c4cd537a12cefe4eacb
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 65398ab522f7a39aae08b1f438d2fa59291e4e8f
+ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/21/2018
 ---
 # <a name="managing-and-monitoring-machine-learning-solutions"></a>Gestion et surveillance des solutions machine learning
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -63,7 +63,5 @@ Les administrateurs de base de données doivent intégrer des projets et priorit
 Pour plus d'informations, consultez ces ressources :
 
 + [Gouvernance des ressources pour R Services](../r/resource-governance-for-r-services.md)
-
-+ [Analyse de R Services](../r/monitoring-r-services.md)
 
 + [Configurer et gérer les Extensions d’Analytique avancée](../r/configure-and-manage-advanced-analytics-extensions.md)

@@ -15,11 +15,11 @@ caps.latest.revision:
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
-ms.openlocfilehash: 80b4898397cd0cb6460b379d91be81eb28cd9b87
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 160dae2d84c84aeaecaa07ec16be681fabde5534
+ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/21/2018
 ---
 # <a name="set-up-a-data-science-client-for-use-with-sql-server"></a>Configurer un client de science des données pour une utilisation avec SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -38,13 +38,13 @@ Pour obtenir ces bibliothèques, installez les éléments suivants :
 
 + Microsoft R Server (pour SQL Server 2016)
 
-    - Pour installer à partir de l’installation de SQL Server, consultez [créer un serveur R autonome](../../advanced-analytics/r/create-a-standalone-r-server.md)
+    - Pour installer à partir de l’installation de SQL Server, consultez [installer SQL Server 2016 R Server (autonome)](../install/sql-r-standalone-windows-install.md)
 
     - Pour utiliser le programme d’installation distinct basé sur Windows, consultez [installer Machine Learning pour Windows Server](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install)
 
 + Apprentissage de serveur (pour SQL Server 2017)
 
-    - Pour installer à partir de l’installation de SQL Server, consultez [créer un serveur R autonome](../../advanced-analytics/r/create-a-standalone-r-server.md)
+    - Pour installer à partir de l’installation de SQL Server, consultez [installer SQL Server 2017 Machine Learning Server (autonome)](../install/sql-machine-learning-standalone-windows-install.md)
 
     - Pour utiliser le programme d’installation distinct basé sur Windows, consultez [installer R Server 9.1 pour Windows](https://docs.microsoft.com/machine-learning-server/install/r-server-install-windows)
 
@@ -60,7 +60,7 @@ Si vous n’avez pas encore un environnement de développement R par défaut, no
  
     Pour configurer RTV pour utiliser vos bibliothèques de client de Microsoft R, consultez [sur le Client Microsoft R](https://docs.microsoft.com/machine-learning-server/r-client/what-is-microsoft-r-client)
 
-+ Visual Studio 2017
++ Visual Studio 2017
 
     Même l’édition Community gratuite inclut la charge de science des données, qui installe des modèles de projet pour R, Python et F #.
 
@@ -81,7 +81,7 @@ Si vous n’avez pas encore un environnement de développement R par défaut, no
 
     Consultez [ce site](https://docs.microsoft.com/visualstudio/rtvs/getting-started-with-r) pour obtenir des exemples montrant comment générer et déboguer R projets à l’aide des outils R pour Visual Studio. 
 
-+ Visual Studio 2017
++ Visual Studio 2017
 
     Si vous installez le Client Microsoft R ou R Server **avant** vous installez Visual Studio, les bibliothèques R Server sont automatiquement détectés et utilisés pour votre chemin d’accès de la bibliothèque. Si vous n’avez pas installé les bibliothèques RevoScaleR, à partir de la **outils R** menu, sélectionnez **installer le Client R**.
 

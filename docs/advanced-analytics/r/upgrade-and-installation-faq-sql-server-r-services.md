@@ -1,6 +1,6 @@
 ---
 title: "FAQ d’installation et de mise à niveau pour l’apprentissage de SQL Server | Documents Microsoft"
-ms.date: 10/31/2017
+ms.date: 03/15/2018
 ms.reviewer: 
 ms.suite: sql
 ms.prod: machine-learning-services
@@ -9,79 +9,51 @@ ms.component: r
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-ms.assetid: 001e66b9-6c3f-41b3-81b7-46541e15f9ea
+ms.assetid: 
 caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
 ms.workload: On Demand
-ms.openlocfilehash: 3e259fcc1332d614cf1e3427f6a927613493bd31
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 3cbb94081b2d056128fb4beda413c82cd4a20964
+ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/21/2018
 ---
-# <a name="upgrade-and-installation-faq-for-sql-server-machine-learning"></a>FAQ d’installation et de mise à niveau pour l’apprentissage de SQL Server
+# <a name="upgrade-and-installation-faq-for-sql-server-machine-learning-or-r-server"></a>FAQ d’installation et de mise à niveau pour l’apprentissage de SQL Server ou R Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Cette rubrique fournit des réponses aux questions courantes sur l’installation de l’apprentissage des fonctionnalités de SQL Server. Elle traite également des questions courantes sur les mises à niveau.
 
-+ Certains problèmes se produisent uniquement avec les mises à niveau à partir de versions préliminaires. Par conséquent, nous vous recommandons d’identifier votre version et l’édition tout d’abord avant de lire ces notes.
++ Certains problèmes se produisent uniquement avec les mises à niveau à partir de versions préliminaires. Par conséquent, nous vous recommandons d’identifier votre version et l’édition tout d’abord avant de lire ces notes. Pour obtenir des informations de version, exécutez `@@VERSION` dans une requête à partir de SQL Server Management Studio.
 + Mettre à niveau vers la version de service dès que possible, ou d’une version la plus récente pour résoudre les problèmes qui ont été résolus dans les versions récentes.
 
 **S’applique à :** SQL Server 2016 R Services, SQL Server 2017 d’apprentissage Services (de-de base de données)
 
-## <a name="performing-setup-for-the-first-time"></a>Exécuter le programme d’installation pour la première fois
-
-Suivez les procédures de configuration [!INCLUDE[sscurrent_md](../../includes/sscurrent_md.md)] et des composants R, comme décrit ici : 
-
-+ [Configurer SQL Server R Services ou Machine Learning Services de bases de données](../r/set-up-sql-server-r-services-in-database.md)
-+ [Configurer 2017 du serveur SQL avec Python](../python/setup-python-machine-learning-services.md)
-+ [Créer un serveur R autonome](../r/create-a-standalone-r-server.md)
-
-> [!IMPORTANT]
-> 
-> Après avoir installé SQL Server et apprentissage des fonctionnalités, avant de pouvoir utiliser des scripts R ou Python, vous devez effectuer certaines étapes de configuration supplémentaires. C’est parce que la fonctionnalité d’exécution de script externe n’est pas activée par défaut.
-
-### <a name="requirements-and-restrictions"></a>Exigences et restrictions
+## <a name="requirements-and-restrictions-on-older-versions-of-sql-server-2016"></a>Exigences et restrictions sur les versions antérieures de SQL Server 2016 
 
 La version de SQL Server que vous installez, certaines des limitations suivantes peuvent s’appliquer :
 
 - Dans les versions antérieures de SQL Server 2016 R Services, modèle 8.3 notation était nécessaire sur le lecteur qui contient le répertoire de travail. Si vous avez installé une version préliminaire, la mise à niveau vers SQL Server 2016 Service Pack 1 doit résoudre ce problème. Cette exigence ne s’applique pas aux versions après le SP1.
 
-- Actuellement, vous ne pouvez pas installer [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] sur un cluster de basculement. 
-
-- Sur une machine virtuelle Azure, une configuration supplémentaire peut être nécessaire. Par exemple, vous devrez peut-être créer une exception de pare-feu pour prendre en charge l’accès à distance.
-
 - Installation côte à côte avec une autre version de R, ou avec d’autres versions de Revolution Analytique, n’est pas pris en charge.
-
-- Les nouvelles installations de versions préliminaires de [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] ne sont plus prises en charge. Si vous utilisez une version préliminaire, mettez à niveau dès que possible.
 
 - Désactiver l’analyse antivirus, avant de commencer l’installation. Une fois le programme d’installation est terminée, nous vous recommandons d’interruption analyse antivirus sur les dossiers utilisés par [!INCLUDE[ssnoversion](../../includes/ssnoversion.md)]. De préférence, suspendre l’analyse sur l’ensemble du [!INCLUDE[ssnoversion](../../includes/ssnoversion.md)] arborescence.
 
-### <a name="licensing-agreements-for-unattended-installs"></a>Contrats de licence pour les installations sans assistance
+ - L’installation de Microsoft R Server sur une instance de SQL Server est installé sur Windows Core. Dans la version RTM de SQL Server 2016, il a été un problème connu lors de l’ajout de Microsoft R Server pour une instance sur l’édition de Windows Server Core. Ce problème a été résolu. Si vous rencontrez ce problème, vous pouvez appliquer le correctif décrit dans [KB3164398](https://support.microsoft.com/kb/3164398) pour ajouter la fonctionnalité de R à l’instance existante sur Windows Server Core. Pour plus d’informations, consultez [Impossible d’installation Microsoft R Server (autonome) sur un système d’exploitation Windows Server Core](https://support.microsoft.com/kb/3168691).
 
-Si vous utilisez la ligne de commande pour mettre à niveau une instance de SQL Server, assurez-vous que la ligne de commande comprend à la fois le [!INCLUDE[ssnoversion](../../includes/ssnoversion.md)] paramètre de contrat et les nouveaux paramètres de contrat de licence de licence pour R et Python.
 
-### <a name="offline-installation-of-machine-learning-components-for-a-localized-version-of-sql-server"></a>Installation hors connexion des composants d’apprentissage machine pour une version localisée de SQL Server
+## <a name="offline-installation-of-machine-learning-components-for-a-localized-version-of-sql-server-2016"></a>Installation hors connexion des composants d’apprentissage machine pour une version localisée de SQL Server 2016
 
-Lorsque vous installez [!INCLUDE[ssnoversion](../../includes/ssnoversion.md)] composants learning d’ordinateurs sur un ordinateur qui n’a pas accès à internet, vous devez prendre quelques étapes supplémentaires :
+Échec de la libération anticipée des versions de SQL Server 2016 installer les fichiers .cab de paramètres régionaux spécifiques lors de l’installation en mode hors connexion sans connexion internet. Ce problème a été résolu dans les versions ultérieures, mais si le programme d’installation renvoie un message indiquant qu’il ne peut pas installer la langue appropriée, vous pouvez modifier le nom de fichier pour le programme d’installation continuer.
 
-+ Télécharger les programmes d’installation de composants de R ou Python vers un dossier local avant d’exécuter le programme d’installation de SQL Server.
-+ Dans certains cas, vous devrez peut-être modifier le fichier de programme d’installation pour vous assurer que la bonne langue est installée.
++ Modifier manuellement le fichier de programme d’installation pour vous assurer que la bonne langue est installée. Par exemple, pour installer la version japonaise de SQL Server, vous modifierait le nom du fichier à partir de SRS_8.0.3.0_**1033**.cab à SRS_8.0.3.0_**1041**.cab.
 + L’identificateur de langue utilisé pour les composants d’apprentissage automatique doit être identique à la langue d’installation de SQL Server, ou vous ne pouvez pas terminer l’installation.
 
-Pour plus d’informations, consultez [l’installation des composants d’apprentissage machine sans accès à internet](../r/installing-ml-components-without-internet-access.md).
+## <a name="pre-release-versions-support-policies-upgrade-and-known-issues"></a>Versions préliminaires : prend en charge les stratégies de mise à niveau et problèmes connus
 
-## <a name="post-installation-configuration"></a>Configuration de post-installation
-
-Pour utiliser l’apprentissage automatique avec R ou Python, une configuration supplémentaire est requise après avoir exécuté le programme d’installation de SQL Server. Les étapes précises requises varient selon le niveau de sécurité du serveur et la manière dont vous avez configuré votre instance de SQL Server et les bases de données.
-
-Passez en revue toutes les options dans la liste d’instructions de post-installation pour voir les étapes supplémentaires peuvent être requises dans votre environnement.
-
-+ [Configurer l’ordinateur SQL Server dans la base de données d’apprentissage](set-up-sql-server-r-services-in-database.md) 
-
-## <a name="upgrades-or-uninstallation"></a>Mises à niveau ou la désinstallation
+Les nouvelles installations de n’importe quelle version de la version préliminaire de [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] n’est plus pris en charge. Si vous utilisez une version préliminaire, mettez à niveau dès que possible.
 
 Cette section contient des instructions détaillées pour les scénarios de mise à niveau spécifiques.
 
@@ -121,46 +93,17 @@ En règle générale, le processus de mise à niveau est la suivante :
 
 Désinstallation d’une version préliminaire de SQL Server learning les composants d’ordinateur peuvent être complexes et peut nécessiter l’exécution d’un script spécial. Contactez le support technique pour obtenir de l'aide.
 
-### <a name="support-for-slipstream-upgrades"></a>Prise en charge des mises à niveau de l’installation intégrée
+###  <a name="bkmk_Uninstall"></a> Désinstallez avant la mise à niveau à partir d’une version antérieure de Microsoft R Server
 
-Une installation intégrée renvoie à la possibilité d’appliquer un correctif ou une mise à jour à une installation d’instance défaillante dans le but de corriger les problèmes existants. L’avantage de cette méthode est que SQL Server est mis à jour en même temps à exécuter le programme d’installation, pour éviter un redémarrage distinct ultérieurement.
+Si vous avez installé une version préliminaire de Microsoft R Server, commencez par la désinstaller avant de pouvoir mettre à niveau vers une version plus récente.
 
-Si le serveur n’a pas accès à internet, veillez à télécharger le programme d’installation de SQL Server. Vous devez aussi télécharger les versions correspondantes des programmes d’installation des composants R séparément *avant* de lancer le processus de mise à jour. 
+1.  Dans le **Panneau de configuration**, cliquez sur **Ajout/Suppression de programmes**, et sélectionnez `Microsoft SQL Server 2016 <version number>`.
 
-Pour les emplacements de téléchargement, consultez [l’installation des composants d’apprentissage machine sans accès à internet](installing-ml-components-without-internet-access.md).
+2.  Dans la boîte de dialogue proposant les options **Ajouter**, **Réparer**ou **Supprimer** les composants, sélectionnez **Supprimer**.
+  
+3.  Sur la page **Sélectionner les fonctionnalités** sous **Composants partagés**, sélectionnez **R Server (autonome)**. Cliquez sur **Suivant**, puis sur **Terminer** pour désinstaller les composants sélectionnés uniquement.
 
-Une fois que tous les fichiers d’installation sont copiés dans un répertoire local, démarrez l’utilitaire d’installation en tapant SETUP. EXE à partir de la ligne de commande.
-
-- Utilisez le */UpdateSource* argument pour spécifier l’emplacement d’un fichier local qui contient la mise à jour de SQL Server, tel qu’une mise à jour cumulative ou la version service pack.
-
-- Utilisez le */MRCACHEDIRECTORY* argument pour spécifier le dossier qui contient les fichiers CAB des composants R.
-
-Pour plus d’informations, consultez le blog par l’équipe de support : [déploiement R Services sur des ordinateurs sans accès à internet](https://blogs.msdn.microsoft.com/sqlcat/2016/10/20/do-it-right-deploying-sql-server-r-services-on-computers-without-internet-access/).
-
-### <a name="get-machine-learning-components-for-offline-installs"></a>Obtenir des composants de machine learning pour les installations en mode hors connexion
-
-Si vous installez ou mettez à niveau les serveurs qui ne sont pas connectés à internet, vous devez télécharger une version mise à jour de la machine learning composants manuellement avant de commencer l’actualisation. 
-
-+ [Installation des composants d’apprentissage machine sans accès à internet](../../advanced-analytics/r/installing-ml-components-without-internet-access.md).
-
-### <a name="support-policy-and-schedule-for-update-of-machine-learning-components"></a>Prise en charge de stratégie et la planification de mise à jour des composants de machine learning
-
-Comme les correctifs logiciels ou des améliorations apportées à SQL Server sont libérées, machine learning composants sont automatiquement mis à niveau ou actualisées, si votre instance comprend déjà la fonctionnalité.
-
-À compter de 2016 de décembre, vous pouvez mettre à niveau les composants learning d’ordinateur à un rythme plus rapide que le cycle de publication SQL Server. Pour ce faire, *liaison* une instance de SQL Server à la stratégie de cycle de vie des logiciels modernes. Chaque fois qu’une nouvelle version des outils d’apprentissage est publiée par l’équipe de développement d’apprentissage, vous pouvez télécharger la dernière version et l’appliquer à une instance de SQL Server qui est utilisée pour l’apprentissage.
-
-Pour plus d'informations, consultez :
-
-+ [Chronologie de prise en charge de Microsoft R Server et serveur de Machine Learning](https://docs.microsoft.com/machine-learning-server/resources-servicing-support)
-+ [Permet de mettre à niveau une instance de SQL Server SqlBindR](use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md).
-
-## <a name="r-server-standalone"></a>R Server (autonome)
-
-Cette section décrit les problèmes propres aux installations de Microsoft R Server (autonome) qui utilisent le programme d’installation de SQL Server 2016. 
-
-Pour les problèmes liés aux mises à niveau à partir de R Server pour serveur de Machine Learning, consultez [installer Machine Learning pour Windows Server](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install).
-
-### <a name="problems-when-r-services-and-r-server-standalone-are-installed-on-the-same-computer"></a>Problèmes lors de la R Services et autonome du serveur R sont installés sur le même ordinateur
+## <a name="r-services-and-r-server-standalone-side-by-side-errors"></a>R Services et les erreurs de côte-à-côte R Server (autonome) 
 
 Dans les versions antérieures de SQL Server 2016, l’installation de R Server (autonome) et R Services (de-de base de données) en même temps parfois a provoqué le programme d’installation échoue avec un message « accès refusé ». Ce problème a été résolu dans le Service Pack 1 pour SQL Server 2016.
 
@@ -186,8 +129,43 @@ Si cette procédure ne parvient pas à résoudre le problème, essayez de la sol
 
 En règle générale, nous vous recommandons de ne pas installer R Services (de-de base de données) et R Server (autonome) sur le même ordinateur. Toutefois, en supposant que le serveur possède une capacité suffisante, vous pouvez trouver que r serveur autonome peut être utile en tant qu’un outil de développement. Un autre scénario possible est que vous devez utiliser les fonctionnalités à l’Opérationnalisation de R Server, mais que vous souhaitez également accéder aux données de SQL Server sans le déplacement des données.
 
+## <a name="incompatible-version-of-r-client-and-r-server"></a>Version incompatible de R Client et de R Server
+
+Si vous installez Microsoft R Client et l’utiliser pour exécuter R dans un contexte de calcul de SQL Server à distance, vous pouvez obtenir ce type d’erreur :
+
+*Version9.0.0 du client de Microsoft R sont en cours d’exécution sur votre ordinateur, ce qui est incompatible avec la version 8.0.3 Microsoft R Server. Téléchargez et installez une version compatible.*
+
+Dans SQL Server 2016, il était nécessaire que la version de R en cours d’exécution dans SQL Server R Services être exactement le même que les bibliothèques dans le Client Microsoft R. Cette exigence a été supprimée dans les versions ultérieures. Toutefois, nous vous recommandons de vous toujours obtenez les dernières versions des composants d’apprentissage et d’installer tous les service packs. 
+
+Si vous avez une version antérieure de Microsoft R Server et que vous avez besoin assurer la compatibilité avec le Client Microsoft R 9.0.0, installer les mises à jour qui sont décrites dans cette [article du support technique](https://support.microsoft.com/kb/3210262).
+
+
+## <a name="installation-fails-with-error-only-one-revolution-enterprise-product-can-be-installed-at-a-time"></a>L’installation échoue avec l’erreur : « Seul un produit Revolution Enterprise peut être installé à la fois. »
+
+Vous pouvez rencontrer cette erreur si votre installation de produits Revolution Analytics est ancienne ou si vous disposez d’une version préliminaire de SQL Server R Services. Vous devez désinstaller toute version précédente avant de pouvoir installer une version plus récente de Microsoft R Server. L’installation côte à côte avec d’autres versions des outils Revolution Enterprise n’est pas prise en charge.
+
+Cependant, les installations côte à côte sont prises en charge quand R Server (autonome) est utilisé avec [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] ou SQL Server 2016.
+
+## <a name="registry-cleanup-to-uninstall-older-components"></a>Nettoyage du Registre pour désinstaller les composants plus anciens
+
+Si vous rencontrez des problèmes de suppression d’une version antérieure, vous devrez peut-être modifier le Registre pour supprimer les clés associées.
+
+> [!IMPORTANT]
+> Ce problème s’applique uniquement si vous avez installé une version préliminaire de Microsoft R Server ou une version CTP de SQL Server 2016 R Services.
+  
+1. Ouvrez le Registre Windows et recherchez cette clé : `HKLM\Software\Microsoft\Windows\CurrentVersion\Uninstall`.
+2. Supprimez toutes les entrées suivantes, le cas échéant, et si la clé contient uniquement la valeur `sEstimatedSize2`:
+  
+    -   E0B2C29E-B8FC-490B-A043-2CAE75634972        (pour 8.0.2)
+  
+    -   46695879-954E-4072-9D32-1CC84D4158F4        (pour 8.0.1)
+  
+    -   2DF16DF8-A2DB-4EC6-808B-CB5A302DA91B        (pour 8.0.0)
+  
+    -   5A2A1571-B8CD-4AAF-9303-8DF463DABE5A        (pour 7.5.0)
+
 ## <a name="see-also"></a>Voir aussi
 
- [Prise en main de SQL Server R Services](../r/getting-started-with-sql-server-r-services.md)
+ [Ordinateur SQL Server Learning Services (de-de base de données)](../r/sql-server-r-services.md)
 
- [Prise en main de Microsoft R Server autonome](../r/getting-started-with-microsoft-r-server-standalone.md)
+ [Ordinateur SQL Server apprentissage Server (autonome)](../r/r-server-standalone.md)

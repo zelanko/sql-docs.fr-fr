@@ -22,10 +22,10 @@ ms.author: jeannt
 manager: cgronlund
 ms.workload: Active
 ms.openlocfilehash: 4d18a45b40c7f80ae2b46514f6c8245b80f6b142
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.sourcegitcommit: 6bd21109abedf64445bdb3478eea5aaa7553fa46
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/20/2018
 ---
 # <a name="set-up-sql-server-machine-learning-services-in-database"></a>Configurer SQL Server Machine Learning Services (de-de base de données)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -55,7 +55,7 @@ Cet article décrit le processus du programme d’installation utilise le [!INCL
 
 **S’applique à :** SQL Server 2016, SQL Server 2017
 
-## <a name="bkmk_prereqs"></a> Liste de vérification de préinstallation
+## <a name="bkmk_prereqs"> </a> Liste de vérification de préinstallation
 
 + Machine learning dans-base de données nécessite SQL Server 2016 ou version ultérieure. 
 
@@ -77,7 +77,7 @@ Cet article décrit le processus du programme d’installation utilise le [!INCL
 
 + L’infrastructure d’apprentissage automatique requiert une configuration supplémentaire après l’installation. Les étapes exactes dépendent de votre organisation et les stratégies de sécurité, les configuration du serveur et les utilisateurs prévus. Nous vous recommandons d’examiner toutes les étapes et déterminer une configuration supplémentaire qui peut être nécessaire dans votre environnement.
 
-## <a name="bkmk2016top"></a>Installer SQL Server 2016 R Services (de-de base de données)
+## <a name="bkmk2016top"></a> Installer SQL Server 2016 R Services (de-de base de données)
 
 > [!div class="checklist"]
 > * Installer le moteur de base de données et l’apprentissage des fonctionnalités
@@ -119,7 +119,7 @@ Cet article décrit le processus du programme d’installation utilise le [!INCL
 7. Lors de l’installation est terminée, redémarrez votre ordinateur.
 
 
-## <a name="bkmk2017top"></a>Installer SQL Server 2017 Machine Learning Services (de-de base de données)
+## <a name="bkmk2017top"></a> Installer SQL Server 2017 Machine Learning Services (de-de base de données)
 
 > [!div class="checklist"]
 > * Installer le moteur de base de données et l’apprentissage des fonctionnalités
@@ -240,7 +240,7 @@ Cette section décrit comment reconfigurer l’instance pour l’apprentissage. 
     + [Les étapes de post-installation facultatives : configurer le service et les autorisations](#bkmk_FollowUp) 
     + [Résolution des problèmes d’apprentissage dans SQL Server](upgrade-and-installation-faq-sql-server-r-services.md)
 
-## <a name="bkmk_FollowUp"></a>Étapes de post-installation facultatives
+## <a name="bkmk_FollowUp"></a> Étapes de post-installation facultatives
 
 En fonction de votre cas d’usage pour l’apprentissage, vous devrez peut-être apporter des modifications supplémentaires pour le serveur, le pare-feu, les comptes utilisés par le service, ou les autorisations de base de données. Les modifications que vous devez effectuer varient selon le cas.
 
