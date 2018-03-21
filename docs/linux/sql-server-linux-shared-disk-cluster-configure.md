@@ -174,7 +174,7 @@ L’instance FCI est créé dans un groupe de ressources. C'est un peu plus simp
 
 Cet exemple crée une instance de cluster dans le groupe NewLinFCIGrp. Le nom du groupe de ressources doit être unique par rapport à n’importe quelle ressource créé dans Pacemaker.
 
-1.  Créez la ressource de disque. Vous n’obtiendrez aucune réponse si il n’y a pas de problème. La manière de créer la ressource disque dépend du type de stockage. Voici un exemple pour chaque type de stockage. Utilisez l’exemple qui s’applique au type de stockage de votre stockage cluster.
+1.  Créez la ressource de disque. Vous n’obtiendrez aucune réponse s’il n’y a pas de problème. La manière de créer la ressource disque dépend du type de stockage. Voici un exemple pour chaque type de stockage. Utilisez l’exemple qui s’applique au type de stockage de votre stockage en cluster.
 
     **iSCSI**
 
@@ -190,7 +190,7 @@ Cet exemple crée une instance de cluster dans le groupe NewLinFCIGrp. Le nom du
 
     \<FolderToMountiSCSIDIsk > est le dossier pour monter le disque (pour les bases de données système et l’emplacement par défaut, il serait /var/opt/mssql/data)
 
-    \<FileSystemType > serait EXT4 ou XFS selon comment le système de fichiers choisi et ce que la distribution prend en charge. 
+    \<FileSystemType > serait EXT4 ou XFS en fonction de la façon dont les choses ont été mises en forme et de ce que la distribution prend en charge. 
 
     **NFS**
 
@@ -237,7 +237,7 @@ Cet exemple crée une instance de cluster dans le groupe NewLinFCIGrp. Le nom du
 
     \<RGName > est le nom du groupe de ressources
  
-2.  Créez l’adresse IP qui sera utilisée par l’instance FCI. Vous n’obtiendrez aucune réponse si il n'y a pas de problème.
+2.  Créez l’adresse IP qui sera utilisée par l’instance FCI. Vous n’obtiendrez aucune réponse s'il n'y a pas de problème.
 
     ```bash
     sudo pcs resource create <IPResourceName> ocf:heartbeat:IPaddr2 ip=<IPAddress> nic=<NetworkCard> cidr_netmask=<NetMask> --group <RGName>
@@ -253,7 +253,7 @@ Cet exemple crée une instance de cluster dans le groupe NewLinFCIGrp. Le nom du
 
     \<RGName > est le nom du groupe de ressources
  
-3.  Créer la ressource FCI. Vous n’obtiendrez aucune réponse si il n’y a pas de problème.
+3.  Créez la ressource FCI. Vous n’obtiendrez aucune réponse s’il n’y a pas de problème.
 
     ```bash
     sudo pcs resource create FCIResourceName ocf:mssql:fci op defaults timeout=60s --group RGName
@@ -273,7 +273,7 @@ Cet exemple crée une instance de cluster dans le groupe NewLinFCIGrp. Le nom du
 
 8.  Basculer manuellement l’instance FCI vers le(s) autre(s) nœud(s). Consultez les instructions situées sous [Fonctionnement de SQL Server sous Linux en cluster - Basculement](sql-server-linux-shared-disk-cluster-operate.md).
 
-9.  Enfin, basculer de nouveau l’instance de cluster vers le nœud d’origine et supprimez la contrainte de colocalisation.
+9.  Enfin, basculez de nouveau l’instance de cluster vers le nœud d’origine et supprimez la contrainte de colocalisation.
 
 <!---
 |Distribution |Topic 
