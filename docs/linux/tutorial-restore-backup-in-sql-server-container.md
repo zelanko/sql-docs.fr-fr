@@ -1,6 +1,6 @@
 ---
-title: "Restaurer une base de données SQL Server dans Docker | Documents Microsoft"
-description: "Ce didacticiel montre comment restaurer une sauvegarde de base de données SQL Server dans un conteneur Linux Docker."
+title: Restaurer une base de données SQL Server dans Docker | Documents Microsoft
+description: Ce didacticiel montre comment restaurer une sauvegarde de base de données SQL Server dans un conteneur Linux Docker.
 author: rothja
 ms.author: jroth
 manager: craigg
@@ -8,8 +8,8 @@ ms.date: 10/02/2017
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
@@ -29,9 +29,9 @@ Ce didacticiel montre comment déplacer et de restaurer un fichier de sauvegarde
 > [!div class="checklist"]
 > * Extraire et exécuter la dernière image conteneur Linux de SQL Server 2017.
 > * Restaurer la base de données dans le conteneur. 
-> * Restaurez la base de données dans le conteneur.
+> * Restaurer la base de données dans le conteneur.
 > * Exécuter les instructions Transact-SQL pour afficher et modifier la base de données.
-> * Sauvegardre la base de données modifiée.
+> * Sauvegarder la base de données modifiée.
 
 ## <a name="prerequisites"></a>Configuration requise
 
@@ -73,7 +73,7 @@ Ce didacticiel montre comment déplacer et de restaurer un fichier de sauvegarde
        -d microsoft/mssql-server-linux:2017-latest
     ```
 
-    Cette commande crée un conteneur de SQL Server 2017 avec l’édition développeur (par défaut). Port SQL Server **1433** est exposée sur l’ordinateur hôte en tant que port **1401**. Le paramètre facultatif `-v sql1data:/var/opt/mssql` paramètre crée un conteneur de volume de données nommé **sql1ddata**. Cela permet de conserver les données créées par SQL Server.
+    Cette commande crée un conteneur de SQL Server 2017 avec l’édition développeur (par défaut). Le port SQL Server **1433** est exposé sur l’ordinateur hôte en tant que port **1401**. Le paramètre facultatif `-v sql1data:/var/opt/mssql` crée un conteneur de volume de données nommé **sql1ddata**. Cela permet de conserver les données créées par SQL Server.
 
    > [!NOTE]
    > Le processus d’exécution des éditions de SQL Server de production dans des conteneurs est légèrement différent. Pour plus d’informations, consultez [exécuter des images de conteneur de production](sql-server-linux-configure-docker.md#production). Si vous utilisez les mêmes noms de conteneur et ports, le reste de cette procédure pas à pas fonctionne toujours avec des conteneurs de production.
@@ -105,7 +105,7 @@ Ce didacticiel montre comment déplacer et de restaurer un fichier de sauvegarde
 
 Ce didacticiel utilise la [base de donnéesd'exemple Wide World Importers](../sample/world-wide-importers/wide-world-importers-documentation.md). Utilisez les étapes suivantes pour télécharger et copier le fichier de sauvegarde de base de données de Wide World Importers dans votre conteneur de SQL Server.
 
-1. Tout d’abord, utilisez **exec de docker** pour créer un dossier de sauvegarde. La commande suivante crée un **/var/opt/mssql/** répertoire à l’intérieur du conteneur de SQL Server.
+1. Tout d’abord, utilisez **docker exec** pour créer un dossier de sauvegarde. La commande suivante crée un répertoire **/var/opt/mssql/** à l’intérieur du conteneur de SQL Server.
 
    ```bash
    sudo docker exec -it sql1 mkdir /var/opt/mssql/backup
@@ -115,7 +115,7 @@ Ce didacticiel utilise la [base de donnéesd'exemple Wide World Importers](../sa
    docker exec -it sql1 mkdir /var/opt/mssql/backup
    ```
 
-1. Ensuite, téléchargez le [WideWorldImporters-full.bak](https://github.com/Microsoft/sql-server-samples/releases/tag/wide-world-importers-v1.0) fichier sur votre ordinateur hôte. Les commandes suivantes accédent au répertoire d’accueil/utilisateur et téléchargent le fichier de sauvegarde en tant que **wwi.bak**.
+1. Ensuite, téléchargez le fichier [WideWorldImporters-full.bak](https://github.com/Microsoft/sql-server-samples/releases/tag/wide-world-importers-v1.0) sur votre ordinateur hôte.  Les commandes suivantes accédent au répertoire d’accueil/utilisateur et téléchargent le fichier de sauvegarde en tant que **wwi.bak**.
 
    ```bash
    cd ~
