@@ -1,16 +1,16 @@
 ---
-title: "Spécifier des indicateurs de fin de champ et de fin de ligne (SQL Server) | Microsoft Docs"
-ms.custom: 
+title: Spécifier des indicateurs de fin de champ et de fin de ligne (SQL Server) | Microsoft Docs
+ms.custom: ''
 ms.date: 08/10/2016
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: import-export
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-bulk-import-export
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - bcp utility [SQL Server], terminators
@@ -19,14 +19,14 @@ helpviewer_keywords:
 - row terminators [SQL Server]
 - terminators [SQL Server]
 ms.assetid: f68b6782-f386-4947-93c4-e89110800704
-caps.latest.revision: 
+caps.latest.revision: ''
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
 ms.openlocfilehash: 8d596be8f4ae978a3eafe58d1cf9e8e52241f49c
 ms.sourcegitcommit: 6bd21109abedf64445bdb3478eea5aaa7553fa46
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 03/20/2018
 ---
@@ -46,13 +46,13 @@ ms.lasthandoff: 03/20/2018
 |Caractère de saut de ligne|\n<br /><br /> Il s'agit de l'indicateur de fin de ligne par défaut.|  
 |Retour chariot/saut de ligne|\r|  
 |Barre oblique inverse*|\\\|  
-|Indicateur de fin NULL (indicateur de fin non visible)**|\0|  
+|Indicateur de fin NULL (indicateur de fin non visible)\*\*|\0|  
 |Tout caractère imprimable (les caractères de contrôle ne le sont pas, sauf les valeurs NULL, tabulation, saut de ligne et retour chariot)|(*, A, t, l, etc.)|  
-|Une chaîne de 10 caractères imprimables maximum, y compris certains ou tous les indicateurs de fin énumérés précédemment|(**\t\*\*, fin, !!!!!!!!!!, \t—\n, etc.)|  
+|Une chaîne de 10 caractères imprimables maximum, y compris certains ou tous les indicateurs de fin énumérés précédemment|(\*\*\t\*\*, fin, !!!!!!!!!!, \t—\n, etc.)|  
   
  *Seuls les caractères t, n, r, 0, et '\0' fonctionnent avec le caractère d’échappement Barre oblique inverse pour générer un caractère de contrôle.  
   
- **Bien que le caractère de contrôle null (\0) ne soit pas visible à l’impression, il constitue bel et bien un caractère à part dans le fichier de données. En d'autres termes, utiliser ce caractère en tant qu'indicateur de fin de champ ou de fin de ligne ne revient pas à simplement omettre cet indicateur de fin.  
+ \*\*Bien que le caractère de contrôle null (\0) ne soit pas visible à l’impression, il constitue bel et bien un caractère à part dans le fichier de données. En d'autres termes, utiliser ce caractère en tant qu'indicateur de fin de champ ou de fin de ligne ne revient pas à simplement omettre cet indicateur de fin.  
   
 > [!IMPORTANT]  
 >  Si un caractère correspond à un caractère indicateur de fin dans la continuité des données, il est alors interprété en tant que tel et non en tant que donnée ; les données suivant ce caractère sont donc considérées comme faisant partie du champ ou de l'enregistrement suivant. Par conséquent, choisissez vos indicateurs consciencieusement afin qu'ils n'apparaissent jamais au sein de vos données. Par exemple, il n'est pas judicieux de choisir un indicateur de fin de champ de substitut faible pour un indicateur de fin de champ si les données contiennent ce substitut faible.  
