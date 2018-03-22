@@ -1,4 +1,4 @@
----
+﻿---
 title: "Utiliser l’extension mssql de Visual Studio Code | Documents Microsoft"
 description: "Cette rubrique montre comment utiliser l'extension mssql pour Visual Studio Code pour développer des bases de données SQL Server. Cette extension vous permet de modifier et exécuter des scripts Transact-SQL dans Visual Studio Code."
 author: erickangMSFT
@@ -39,7 +39,7 @@ Les étapes suivantes expliquent comment installer l’extension mssql.
 
 1. Appuyez sur **CTRL + MAJ + P** (ou **F1**) pour ouvrir la Palette de commandes dans Visual Studio Code. 
 
-2. Sélectionnez **installer une Extension** et type **mssql**.
+2. Sélectionnez **Installer l’extension** et tapez **mssql**. 
    > [!TIP] 
    > Pour macOS, la touche **CMD** est équivalente à **CTRL** sous Linux et Windows.
 
@@ -74,7 +74,7 @@ L'extension **mssql** active les commandes mssql et l'IntelliSense T-SQL dans l'
 
    <img src="./media/sql-server-linux-develop-use-vscode/vscode-language-mode.png" alt="SQL language mode" style="width: 500px;" />
 
-3. Vous pouvez également ouvrir un fichier existant avec l’extension de fichier .sql. Le mode de langage est automatiquement **SQL** pour les fichiers ayant l’extension .sql.  
+3. Vous pouvez également ouvrir un fichier existant avec l’extension de fichier .sql. Le mode de langage est automatiquement initialisé à **SQL** pour les fichiers ayant l’extension .sql.  
 
 ## <a name="connect-to-sql-server"></a>Se connecter à SQL Server
 
@@ -85,8 +85,8 @@ Les étapes suivantes montrent comment se connecter à SQL Server avec le Visual
 2. Ecrivez **sql** pour afficher les commandes mssql.
 
    <img src="./media/sql-server-linux-develop-use-vscode/vscode-commands.png" alt="mssql commands" style="width: 500px;" />
-   
 
+3. Sélectionnez la commande **MS SQL: Connect**. Vous pouvez simplement taper **sqlcon** et appuyer sur **Entrée**.
 3. Sélectionnez la commande **MS SQL: Connect**. Vous pouvez simplement taper **sqlcon** et appuyez sur **entrée**.
 
 4. Sélectionnez **créer le profil de connexion**. Cette opération crée un profil de connexion pour votre instance de SQL Server.
@@ -244,7 +244,7 @@ Les étapes suivantes montrent comment se connecter à SQL Server avec le Visual
 
 5. Ouvrez le menu contextuel de grille et sélectionnez **enregistrer en tant que JSON** pour enregistrer le résultat dans un fichier .json.
 
-6. Spécifiez un nom de fichier pour le fichier JSON. Pour ce didacticiel, tapez **employees.json**.
+6. Spécifiez un nom de fichier pour ce fichier JSON. Dans le cadre de ce didacticiel, tapez **employees.json**.
 
 7. Vérifiez que le fichier JSON est enregistré et ouvert dans Visual Studio Code.
 
