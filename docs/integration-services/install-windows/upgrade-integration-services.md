@@ -1,16 +1,16 @@
 ---
-title: "Mettre à niveau Integration Services | Microsoft Docs"
-ms.custom: 
+title: Mettre à niveau Integration Services | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: install-windows
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Integration Services, upgrading
@@ -18,14 +18,14 @@ helpviewer_keywords:
 - SQL Server Integration Services, upgrading
 - upgrading Integration Services
 ms.assetid: 04f9863c-ba0b-47c5-af91-f2d41b078a23
-caps.latest.revision: 
+caps.latest.revision: ''
 author: MikeRayMSFT
 ms.author: mikeray
 manager: erikre
 ms.workload: On Demand
 ms.openlocfilehash: e7617074c17989315b75272611688f1bd77d97d2
 ms.sourcegitcommit: 6bd21109abedf64445bdb3478eea5aaa7553fa46
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 03/20/2018
 ---
@@ -96,7 +96,7 @@ ms.lasthandoff: 03/20/2018
   
     -   Déplace les données du journal de la table système msdb.sysdtslog90 vers la table système msdb.sysssislog.  
   
--   Supprime les tables système msdb.sysdts*90 et les procédures stockées utilisées pour y accéder après avoir déplacé les données vers les nouvelles tables msdb.sysssis\* . Toutefois, la mise à niveau remplace la table sysdtslog90 par une vue qui est également nommée sysdtslog90. Cette nouvelle vue sysdtslog90 présente la nouvelle table système msdb.sysssislog. Cela garantit que les rapports basés sur la table du journal continuent à s'exécuter sans interruption.  
+-   Supprime les tables système msdb.sysdts\*90 et les procédures stockées utilisées pour y accéder après avoir déplacé les données vers les nouvelles tables msdb.sysssis\* . Toutefois, la mise à niveau remplace la table sysdtslog90 par une vue qui est également nommée sysdtslog90. Cette nouvelle vue sysdtslog90 présente la nouvelle table système msdb.sysssislog. Cela garantit que les rapports basés sur la table du journal continuent à s'exécuter sans interruption.  
   
 -   Pour contrôler l'accès aux packages, crée trois nouveaux rôles de base de données fixes : db_ssisadmin, db_ssisltduser et db_ssisoperator. Les rôles [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] de db_dtsadmin, db_dtsltduser et db_dtsoperator ne sont pas supprimés, mais deviennent membres des nouveaux rôles correspondants.  
   
