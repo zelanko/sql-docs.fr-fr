@@ -37,7 +37,7 @@ Visual Studio Code est un éditeur de code graphique pour Linux, MacOS et Window
 ## <a name="install-the-mssql-extension"></a>Installer l’extension mssql
 Les étapes suivantes expliquent comment installer l’extension mssql. 
 
-1. Appuyez sur **CTRL + MAJ + P** (ou **F1**) pour ouvrir la Palette de commandes dans Visual Studio Code. 
+1. Appuyez sur **Ctrl + Maj + P** (ou **F1**) pour ouvrir la Palette de commandes dans Visual Studio Code. 
 
 2. Sélectionnez **installer une Extension** et type **mssql**.
    > [!TIP] 
