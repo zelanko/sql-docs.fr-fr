@@ -219,15 +219,15 @@ Les sections suivantes décrivent les problèmes connus avec la version de la di
 
 - Mises à niveau vers la version GA de SQL Server 2017 sont pris en charge uniquement à partir de CTP 2.1 ou version ultérieure. 
 
-- La longueur du nom d’hôte sur lequel SQL Server est installé a besoin pour être de 15 caractères ou moins. 
+- Le nom d’hôte de l'ordinateur sur lequel SQL Server est installé doit avoir 15 caractères ou moins. 
 
-    - **Résolution**: Remplacez le nom d’hôte/etc/quelque chose de 15 caractères ou plus.
+    - **Résolution**: Remplacez le nom d’hôte dans /etc/hostname avec un nom de 15 caractères ou moins.
 
 - Définition manuelle de l’heure système vers l’arrière dans le temps entraîne SQL Server arrêter la mise à jour de l’heure système interne dans SQL Server.
 
     - **Résolution**: redémarrez SQL Server.
 
-- Seules les installations d’instance unique sont pris en charge.
+- Seules les installations d’instance unique sont prises en charge.
 
     - **Résolution**: Si vous souhaitez disposer de plusieurs instances sur un hôte donné, envisagez d’utiliser des machines virtuelles ou des conteneurs Docker. 
 
@@ -239,9 +239,9 @@ Les sections suivantes décrivent les problèmes connus avec la version de la di
 
 #### <a name="databases"></a>Bases de données
 
-- Impossible de déplacer la base de données master avec l’utilitaire mssql-conf. Autres bases de données système peuvent être déplacés avec mssql-conf.
+- Impossible de déplacer la base de données master avec l’utilitaire mssql-conf. Les autres bases de données système peuvent être déplacées avec mssql-conf.
 
-- Lorsque vous restaurez une base de données a été sauvegardée sur SQL Server sur Windows, vous devez utiliser le **WITH MOVE** clause dans l’instruction Transact-SQL.
+- Lorsque vous restaurez une base de données qui a été sauvegardée sur SQL Server sur Windows, vous devez utiliser la clause **WITH MOVE** dans l’instruction Transact-SQL.
 
 - Nécessiter que le service Microsoft Distributed Transaction Coordinator les transactions distribuées ne sont pas pris en charge sur SQL Server est en cours d’exécution sur Linux. SQL Server vers SQL Server, les serveurs liés sont pris en charge, sauf si elles impliquent le DTC. Pour plus d’informations, consultez [nécessiter que le service Microsoft Distributed Transaction Coordinator les transactions distribuées ne sont pas pris en charge sur SQL Server est en cours d’exécution sur Linux](https://blogs.msdn.microsoft.com/bobsql/2017/12/11/sql-server-linux-distributed-transactions-requiring-the-microsoft-distributed-transaction-coordinator-service-are-not-supported-on-sql-server-running-on-linux-sql-server-to-sql-server-distributed-tr/).
 
@@ -275,13 +275,13 @@ Fonctionnalités qui impliquent des connexions TCP sortantes à partir du proces
 
 1. Le serveur cible est spécifié comme un nom d’hôte et non une adresse IP.
 
-1. L’instance source a IPv6 désactivée dans le noyau. Pour vérifier si votre système IPv6 est activé dans le noyau, tous les tests suivants doivent passer :
+1. L’instance source a IPv6 désactivée dans le noyau. Pour vérifier si votre système a IPv6 activée dans le noyau, les tests suivants doivent être validés :
 
    - `cat /proc/cmdline` Imprime la ligne de commande de démarrage du noyau actuel. La sortie ne doit pas contenir `ipv6.disable=1`.
-   - La table/proc/sys/net/ipv6/répertoire doit exister.
-   - Un programme C qui appelle `socket(AF_INET6, SOCK_STREAM, IPPROTO_IP)` doit réussir - la syscall doit retourner un fd ! = -1 et n’échoue pas avec EAFNOSUPPORT.
+   - Le répertoire /proc/sys/net/ipv6/ doit exister.
+   - Un programme C qui appelle `socket(AF_INET6, SOCK_STREAM, IPPROTO_IP)` doit fonctionner - syscall doit retourner un fd ! = -1 et n’échoue pas avec EAFNOSUPPORT.
 
-L’erreur exacte dépend de la fonctionnalité. Pour les serveurs liés, cela se manifeste en tant qu’une erreur de délai d’attente de connexion. Pour les groupes de disponibilité, le `ALTER AVAILABILITY GROUP JOIN` DDL sur le serveur secondaire échoue après 5 minutes avec une erreur de délai d’attente de configuration de téléchargement.
+L’erreur exacte dépend de la fonctionnalité Pour les serveurs liés, cela se manifeste en tant qu’une erreur de délai d’attente de connexion. Pour les groupes de disponibilité, le DDL `ALTER AVAILABILITY GROUP JOIN` sur le serveur secondaire échoue après 5 minutes avec une erreur de délai d’attente de téléchargement de la configuration.
 
 Pour contourner ce problème, effectuez l’une des opérations suivantes :
 
@@ -289,12 +289,12 @@ Pour contourner ce problème, effectuez l’une des opérations suivantes :
 
 1. Activation du protocole IPv6 dans le noyau en supprimant `ipv6.disable=1` à partir de la ligne de commande de démarrage. La façon de procéder dépend de la distribution de Linux et le chargeur de démarrage, tels que grub. Si vous ne souhaitez pas IPv6 doit être désactivée, vous pouvez le désactiver en définissant `net.ipv6.conf.all.disable_ipv6 = 1` dans les `sysctl` configuration (par exemple, `/etc/sysctl.conf`). Cela sera toujours empêcher l’obtention d’une adresse IPv6 de carte de réseau du système, mais vous pouvez autoriser les fonctionnement de fonctionnalités sqlservr.
 
-#### <a name="network-file-system-nfs"></a>Système de fichiers réseau (NFS)
-Si vous utilisez les partages distants **NFS (Network File System)** en production, notez les exigences de prise en charge suivantes :
+#### <a name="network-file-system-nfs"></a>Network File System (NFS)
+Si vous utilisez les partages distants **Network File System (NFS)** en production, notez les exigences de prise en charge suivantes :
 
-- Utiliser la version NFS **4.2 ou ultérieure**. Les versions antérieures de NFS ne gèrent pas les fonctionnalités requises, telles que fallocate et la création de fichiers sparse, communes aux systèmes de fichiers modernes.
-- Recherchez uniquement les répertoires **/var/opt/mssql** sur le montage NFS. Les autres fichiers, tels que les fichiers binaires du système SQL Server, ne sont pas pris en charge.
-- Assurez-vous que les clients NFS utilisent l’option 'nolock' lorsque vous montez le partage distant.
+- Utiliser la version NFS **4.2 ou ultérieure**. Les versions antérieures de NFS ne gèrent pas les fonctionnalités requises, telles que fallocate et la création de fichier sparse, courantes avec les systèmes de fichiers modernes.
+- Positionnez uniquement les répertoires **/var/opt/mssql** sur le montage NFS. Les autres fichiers, tels que les fichiers binaires du système SQL Server, ne sont pas pris en charge.
+- Assurez-vous que les clients NFS utilisent l’option 'nolock' lorsque qu'ils montent le partage distant.
 
 #### <a name="localization"></a>Localisation
 
@@ -324,7 +324,7 @@ Si vous utilisez les partages distants **NFS (Network File System)** en producti
 
 - Les fonctionnalités suivantes ne sont pas pris en charge dans cette version lorsque vous exécutez des packages SSIS sur Linux :
   - Base de données catalogue de SSIS
-  - Exécution du package planifiés par l’Agent SQL
+  - Exécution de package planifié par l’Agent SQL
   - Authentification Windows
   - Les composants tiers
   - Capture de données modifiées (CDC)
@@ -346,9 +346,9 @@ Les limitations suivantes s’appliquent à SSMS sur Windows connectés à SQL S
 
 - Plans de maintenance ne sont pas pris en charge.
 
-- L’entrepôt de données de gestion (MDW) et le collecteur de données dans SSMS ne sont pas pris en charge. 
+- L’entrepôt de données de gestion (MDW) et la collecte de données (Data Collector) dans SSMS ne sont pas pris en charge. 
 
-- Les composants SSMS UI disposant de l’authentification Windows ou les options du journal des événements Windows ne fonctionnent pas avec Linux. Vous pouvez toujours utiliser ces fonctionnalités avec d’autres options, telles que des connexions SQL. 
+- Les composants de SSMS qui utilisent l’authentification Windows ou les options du journal des événements Windows ne fonctionnent pas avec Linux. Vous pouvez toujours utiliser ces fonctionnalités avec d’autres options, telles que des connexions SQL. 
 
 - Impossible de modifier le nombre de fichiers journaux à conserver.
 
