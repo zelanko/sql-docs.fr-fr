@@ -1,29 +1,29 @@
 ---
-title: "Chargement Azure SQL Data Warehouse, tâche | Microsoft Docs"
-ms.custom: 
+title: Chargement Azure SQL Data Warehouse, tâche | Microsoft Docs
+ms.custom: ''
 ms.date: 12/16/2016
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: control-flow
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - SQL13.DTS.DESIGNER.AFPDWUPTASK.F1
 - sql14.dts.designer.afpdwuptask.f1
 ms.assetid: eef82c89-228a-4dc7-9bd0-ea00f57692f5
-caps.latest.revision: 
+caps.latest.revision: ''
 author: Lingxi-Li
 ms.author: lingxl
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 2d6c95bda5faf7f3ccf8f6b9bc4774a66d482e51
 ms.sourcegitcommit: 6bd21109abedf64445bdb3478eea5aaa7553fa46
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 03/20/2018
 ---
@@ -40,7 +40,7 @@ Champ|Description
 -----|-----------
 LocalDirectory|Spécifie le répertoire local qui contient les fichiers de données à charger.
 Recursively|Spécifie s’il convient d’effectuer des recherches de façon récursive dans les sous-répertoires.
-FileName|Indique un filtre de nom pour sélectionner des fichiers dont le nom répond à certains critères. Par ex. MaFeuille*.xsl\* inclut les fichiers MaFeuille001.xsl et MaFeuilleABC.xslx.
+FileName|Indique un filtre de nom pour sélectionner des fichiers dont le nom répond à certains critères. Par ex. MaFeuille\*.xsl\* inclut les fichiers MaFeuille001.xsl et MaFeuilleABC.xslx.
 RowDelimiter|Spécifie le ou les caractères qui marquent la fin de chaque ligne.
 ColumnDelimiter|Spécifie un ou plusieurs caractères qui marquent la fin de chaque colonne. Par ex. &#124; (barre verticale), \t (tabulation), ’ (apostrophe), “ (guillemets doubles) et 0x5c (barre oblique inverse).
 IsFirstRowHeader|Spécifie si la première ligne de chaque fichier de données contient les noms de colonne au lieu des données réelles.
