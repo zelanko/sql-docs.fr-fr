@@ -352,7 +352,7 @@ En plus des sauvegardes de base de données pour protéger vos données, vous po
    docker stop sql1
    ```
 
-1. Supprimer le conteneur. Cette opération ne supprime pas précédemment créé **sql1data** conteneur de volumes de données et les données qu’elle contient.
+1. Supprimer le conteneur. Cette opération ne supprime pas le conteneur de volumes de données **sql1data** précédemment créé ni les données qu’il contient.
 
    ```bash
    sudo docker rm sql1
