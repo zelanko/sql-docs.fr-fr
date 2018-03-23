@@ -1,24 +1,24 @@
 ---
 title: SQL Server sur Linux FAQ | Documents Microsoft
-description: "Cet article fournit des réponses aux questions fréquemment posées sur SQL Server en cours d’exécution sur Linux."
+description: Cet article fournit des réponses aux questions fréquemment posées sur SQL Server en cours d’exécution sur Linux.
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 02/22/2018
+ms.date: 03/22/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: Active
-ms.openlocfilehash: 3fad3fb2892e5a91e42eefb5f00932c39d00064f
-ms.sourcegitcommit: f0c5e37c138be5fb2cbb93e9f2ded307665b54ea
+ms.openlocfilehash: 6fdf6679230141dd2dedb35a9ae7e9cc0fb1b9cb
+ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/24/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="sql-server-on-linux-frequently-asked-questions-faq"></a>SQL Server sur Linux Forum aux Questions (FAQ)
 
@@ -30,11 +30,11 @@ Les sections suivantes fournissent des questions et réponses pour SQL Server en
 
 1. **Les plateformes Linux sont pris en charge ?**
 
-   SQL Server est actuellement pris en charge sur Red Hat Enterprise Server et Ubuntu SUSE Linux Enterprise Server. Il s’exécute également dans un conteneur avec Docker. Pour plus d’informations sur les versions prises en charge, consultez [prise en charge de plates-formes](sql-server-linux-setup.md#supportedplatforms).
+   SQL Server est actuellement pris en charge sur Red Hat Enterprise Server et Ubuntu SUSE Linux Enterprise Server. Il est également possible d’exécuter dans un conteneur avec Docker. Pour plus d’informations sur les versions prises en charge, consultez [prise en charge de plates-formes](sql-server-linux-setup.md#supportedplatforms).
 
 1. **SQL Server sur Linux fonctionnera sur d’autres plateformes**?
 
-   Vous pouvez éventuellement installer et exécuter SQL Server sur les autres distributions de Linux. Par exemple, CentOS est étroitement liés à Red Hat Enterprise Server, et vous pourrez installer les packages RPM SQL Server. Cela peut être vrai pour les autres distributions étroitement liées ainsi. Le principal problème est prise en charge et test. SQL Server a été testé uniquement et est uniquement pris en charge sur Red Hat Enterprise Linux, SUSE Linux Enterprise Server et Ubuntu.
+   SQL Server est testé et pris en charge sous Linux pour les distributions précédemment répertoriées. Les autres distributions Linux sont étroitement liées et peut être en mesure d’exécuter SQL Server (par exemple, CentOS est étroitement liée à Red Hat Enterprise Server). Mais si vous choisissez d’installer SQL Server sur un système d’exploitation non pris en charge, passez en revue les **prennent en charge de la stratégie** section de la [politique de support technique pour Microsoft SQL Server](https://support.microsoft.com/help/4047326/support-policy-for-microsoft-sql-server) pour comprendre la prise en charge implications. Notez également que certains communautéent gérée par les distributions Linux n’ont pas d’un moyen formel de bénéficier du support si le système d’exploitation sous-jacent est le problème.
 
 1. **Les fonctionnalités de SQL Server sont pris en charge sous Linux ?**
 

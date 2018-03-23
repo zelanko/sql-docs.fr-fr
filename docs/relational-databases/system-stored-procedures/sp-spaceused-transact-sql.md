@@ -1,16 +1,16 @@
 ---
 title: sp_spaceused (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 08/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_spaceused_TSQL
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_spaceused
 ms.assetid: c6253b48-29f5-4371-bfcd-3ef404060621
-caps.latest.revision: 
+caps.latest.revision: ''
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 670fc2eaf7d6e5c4e499ff57c3a5564bec903ac1
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: ef8781d5c6ab68b90aefcc9c7d01e0cb9f070a02
+ms.sourcegitcommit: 270de8a0260fa3c0ecc37f91eec4a5aee9b9834a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="spspaceused-transact-sql"></a>sp_spaceused (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -50,7 +50,7 @@ sp_spaceused [[ @objname = ] 'objname' ]
   
 ## <a name="arguments"></a>Arguments  
 
-Pour [!INCLUDE[sssdw-md](../../includes/sssdw-md.md)] et [!INCLUDE[sspdw-md](../../includes/sspdw-md.md)], `sp_spacedused` doit spécifier des paramètres nommés (par exemple `sp_spacedused (@objname= N'Table1');` au lieu de vous fier à la position ordinale de paramètres. 
+Pour [!INCLUDE[sssdw-md](../../includes/sssdw-md.md)] et [!INCLUDE[sspdw-md](../../includes/sspdw-md.md)], `sp_spaceused` doit spécifier des paramètres nommés (par exemple `sp_spaceused (@objname= N'Table1');` au lieu de vous fier à la position ordinale de paramètres. 
 
  [ **@objname=**] **'***objname***'** 
    
@@ -58,7 +58,7 @@ Pour [!INCLUDE[sssdw-md](../../includes/sssdw-md.md)] et [!INCLUDE[sspdw-md](../
 Si *objname* n’est pas spécifié, les résultats sont renvoyés par la base de données.  
 *objname* est **nvarchar(776)**, avec NULL comme valeur par défaut.  
 > [!NOTE]  
-> [!INCLUDE[sssdw-md](../../includes/sssdw-md.md)]et [!INCLUDE[sspdw-md](../../includes/sspdw-md.md)] prennent uniquement en charge les objets de base de données et de table.
+> [!INCLUDE[sssdw-md](../../includes/sssdw-md.md)] et [!INCLUDE[sspdw-md](../../includes/sspdw-md.md)] prennent uniquement en charge les objets de base de données et de table.
   
  [ **@updateusage=**] **'***updateusage***'**  
  Indique que DBCC UPDATEUSAGE doit être exécuté pour mettre à jour les informations d'utilisation de l'espace. Lorsque *objname* est ne pas spécifié, l’instruction est exécutée sur la base de données ; sinon, l’instruction est exécutée *objname*. Les valeurs peuvent être **true** ou **false**. *UPDATEUSAGE* est **varchar (5)**, avec une valeur par défaut **false**.  
@@ -81,8 +81,8 @@ Si *objname* n’est pas spécifié, les résultats sont renvoyés par la base d
   
 |Valeur|Description|  
 |-----------|-----------------|  
-|0|Lorsque  *@objname*  a la valeur null ou n’est ne pas spécifié, les deux jeux de résultats est retournés. Deux jeux de résultats est le comportement par défaut.|  
-|1|Lorsque  *@objname*  = null ou n’est ne pas spécifié, un seul jeu de résultats est retourné.|  
+|0|Lorsque *@objname* a la valeur null ou n’est ne pas spécifié, les deux jeux de résultats est retournés. Deux jeux de résultats est le comportement par défaut.|  
+|1|Lorsque *@objname* = null ou n’est ne pas spécifié, un seul jeu de résultats est retourné.|  
   
  *oneresultset* est **bits**, avec une valeur par défaut **0**.  
 
@@ -174,7 +174,7 @@ Si *objname* est omis, la valeur d’oneresultset est 1, et *include_total_xtp_s
 |**xtp_pending_truncation**|**varchar(18)**|Taille totale des fichiers de point de contrôle avec l’état WAITING_FOR_LOG_TRUNCATION, en Ko. Il s’agit de l’espace disque utilisé pour les fichiers de point de contrôle qui sont en attente de nettoyage, une fois que la troncation du journal se produit. Retourne NULL si la base de données ne dispose pas d’un groupe de fichiers memory_optimized_data au moins un conteneur. Cette colonne est uniquement incluse en cas `@include_total_xtp_storage=1`.|
 
 ## <a name="remarks"></a>Notes  
- **database_size** est toujours supérieure à la somme des **réservé** + **espace non alloué** , car il inclut la taille des fichiers journaux, mais **réservé** et **unallocated_space** prendre en compte uniquement les pages de données.  
+ **database_size** est toujours supérieure à la somme des **réservé** + **espace non alloué** , car il inclut la taille des fichiers journaux, mais **réservé**et **unallocated_space** prendre en compte uniquement les pages de données.  
   
  Les pages qui sont utilisés par les index XML et les index de recherche en texte intégral sont inclus dans **index_size** pour les deux jeux de résultats. Lorsque *objname* est spécifié, les pages d’index XML et les index de recherche en texte intégral pour l’objet sont également comptées dans le total **réservé** et **index_size** résultats.  
   
@@ -211,7 +211,7 @@ GO
 ```  
   
 ### <a name="c-displaying-space-usage-information-about-the-remote-table-associated-with-a-stretch-enabled-table"></a>C. Affichage des informations sur l’utilisation de l’espace sur la table distante associée à une table compatible Stretch  
- L’exemple suivant récapitule l’espace utilisé par la table distante associée à une table compatible Stretch à l’aide de la  **@mode**  argument afin de spécifier la cible distante. Pour plus d'informations, consultez [Stretch Database](../../sql-server/stretch-database/stretch-database.md).  
+ L’exemple suivant récapitule l’espace utilisé par la table distante associée à une table compatible Stretch à l’aide de la **@mode** argument afin de spécifier la cible distante. Pour plus d'informations, consultez [Stretch Database](../../sql-server/stretch-database/stretch-database.md).  
   
 ```sql  
 USE StretchedAdventureWorks2016  

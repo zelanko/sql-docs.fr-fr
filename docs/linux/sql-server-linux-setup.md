@@ -4,7 +4,7 @@ description: Installer, mettre à jour et désinstaller SQL Server sur Linux. Ce
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 03/08/2018
+ms.date: 03/22/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
@@ -15,11 +15,11 @@ ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 565156c3-7256-4e63-aaf0-884522ef2a52
 ms.workload: Active
-ms.openlocfilehash: d8f8cde3d3a299008d75c4b701be224c458880eb
-ms.sourcegitcommit: 6c06267f3eeeb3f0d6fc4c57e1387621720ca8bf
-ms.translationtype: HT
+ms.openlocfilehash: ef5e2131681981e85971d734ebbe576e106e2b92
+ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="installation-guidance-for-sql-server-on-linux"></a>Aide à l’installation de SQL Server sur Linux
 
@@ -47,12 +47,10 @@ SQL Server 2017 est pris en charge sur Red Hat Enterprise Linux (RHEL), SUSE Lin
 | **Ubuntu** | 16.04 | [Obtenir Ubuntu 16.04](http://www.ubuntu.com/download/server)
 | **Moteur docker** | 1.8+ | [Obtenir Docker](http://www.docker.com/products/overview)
 
+Microsoft prend également en charge le déploiement et la gestion des conteneurs de SQL Server à l’aide de OpenShift et Kubernetes.
+
 > [!NOTE]
-> Il est parfois possible d’installer et exécuter SQL Server sur d’autres plateformes Linux étroitement liées, mais SQL Server est uniquement testé et pris en charge sur les plateformes répertoriées dans le tableau précédent.
-
-Microsoft prend en charge le déploiement et la gestion des conteneurs de SQL Server à l’aide de OpenShift et Kubernetes.
-
-Pour la dernière stratégie de prise en charge pour SQL Server 2017, consultez [politique de support technique pour Microsoft SQL Server](https://support.microsoft.com/help/4047326/support-policy-for-microsoft-sql-server).
+> SQL Server est testé et pris en charge sous Linux pour les distributions précédemment répertoriées. Si vous choisissez d’installer SQL Server sur un système d’exploitation non pris en charge, passez en revue les **prennent en charge de la stratégie** section de la [politique de support technique pour Microsoft SQL Server](https://support.microsoft.com/help/4047326/support-policy-for-microsoft-sql-server) pour comprendre la prise en charge implications.
 
 ## <a id="system"></a> Configuration système requise
 
@@ -170,7 +168,7 @@ Pour un exemple de script plus détaillé, consultez les exemples suivants :
 
 ## <a id="offline"></a> Installation hors connexion
 
-Si l’ordinateur Linux n’a pas accès aux référentiels en ligne utilisés dans les [Démarrages rapides](#platforms), vous pouvez télécharger directement les fichiers de package. Ces packages se trouvent dans le référentiel Microsoft, [https://packages.microsoft.com](https://packages.microsoft.com).
+Si l’ordinateur Linux n’a pas accès aux référentiels en ligne utilisés dans les [Démarrages rapides](#platforms), vous pouvez télécharger directement les fichiers de package. Ces packages se trouvent dans le référentiel Microsoft, [ https://packages.microsoft.com ](https://packages.microsoft.com).
 
 > [!TIP]
 > Si vous avez installé avec succès avec les étapes décrites dans le démarrage rapide, il est inutile télécharger ou installer manuellement l’ou les packages SQL Server. Cette section concerne uniquement le scénario hors connexion.
@@ -200,7 +198,7 @@ Si l’ordinateur Linux n’a pas accès aux référentiels en ligne utilisés d
 
    Après avoir résolu les dépendances manquantes, essayez de réinstaller le package mssql-server.
 
-1. **Terminer l’installation de SQL Server**. Utilisez **mssql-conf** pour terminer l’installation de SQL Server :
+1. **Terminer l’installation de SQL Server**. Utiliser **mssql-conf** pour terminer l’installation de SQL Server :
 
    ```bash
    sudo /opt/mssql/bin/mssql-conf setup
@@ -212,7 +210,7 @@ Après l’installation, vous pouvez également installer ou activer les fonctio
 
 - [Outils de ligne de commande de SQL Server](sql-server-linux-setup-tools.md)
 - [SQL Server Agent](sql-server-linux-setup-sql-agent.md)
-- [Recherche en texte intégral SQL Server](sql-server-linux-setup-full-text-search.md)
+- [Recherche de texte intégral SQL Server](sql-server-linux-setup-full-text-search.md)
 - [SQL Server Integration Services (Ubuntu)](sql-server-linux-setup-ssis.md)
 
 [!INCLUDE[Get Help Options](../includes/paragraph-content/get-help-options.md)]

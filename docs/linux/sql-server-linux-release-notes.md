@@ -4,7 +4,7 @@ description: Cette rubrique contient les notes de publication et les fonctionnal
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 03/21/2018
+ms.date: 03/22/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
@@ -15,11 +15,11 @@ ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 1314744f-fcaf-46db-800e-2918fa7e1b6c
 ms.workload: Active
-ms.openlocfilehash: 22c0bd360cd7b5cb6ac9dcc058a417d243b0fb3f
-ms.sourcegitcommit: ccb05cb5a4cccaf7ffa9e85a4684fa583bab914e
+ms.openlocfilehash: b6f6f6b19b145dfcaf4a59e8cf871bc1cb0c214a
+ms.sourcegitcommit: 270de8a0260fa3c0ecc37f91eec4a5aee9b9834a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="release-notes-for-sql-server-2017-on-linux"></a>Notes de publication pour 2017 de SQL Server sur Linux
 
@@ -70,6 +70,24 @@ Si vous mettez à jour des packages SQL Server existants, exécutez la commande 
 ## <a id="CU5"></a> CU5 (mars 2018)
 
 Il s’agit de la version 5 de mise à jour Cumulative (CU5) de SQL Server 2017. La version du moteur SQL Server pour cette version est 14.0.3023.8. Pour plus d’informations sur les correctifs et les améliorations apportées dans cette version, consultez [ https://support.microsoft.com/help/4092643 ](https://support.microsoft.com/help/4092643).
+
+### <a name="known-upgrade-issue"></a>Problème de mise à niveau connu
+
+Lorsque vous mettez à niveau depuis une version précédente à CU5, SQL Server peut échouer démarrer avec l’erreur suivante :
+
+```
+Error: 4860, Severity: 16, State: 1.
+Cannot bulk load. The file "C:\Install\SqlTraceCollect.dtsx" does not exist or you don't have file access rights.
+Error: 912, Severity: 21, State: 2.
+Script level upgrade for database 'master' failed because upgrade step 'msdb110_upgrade.sql' encountered error 200, state
+```
+
+Pour résoudre cette erreur, activez l’Agent SQL Server et redémarrez SQL Server avec les commandes suivantes :
+
+```bash
+sudo /opt/mssql/bin/mssql-conf set sqlagent.enabled true
+sudo systemctl start mssql-server
+```
 
 ### <a name="package-details"></a>Détails du package
 
@@ -274,7 +292,7 @@ Pour contourner ce problème, effectuez l’une des opérations suivantes :
 #### <a name="network-file-system-nfs"></a>Système de fichiers réseau (NFS)
 Si vous utilisez les partages distants **NFS (Network File System)** en production, notez les exigences de prise en charge suivantes :
 
-- Utiliser la version NFS **4.2 ou ultérieure**. Les versions antérieures de NFS ne gèrent pas les fonctionnalités requises, telles que fallocate et la création du fichier partiellement alloué, commune aux systèmes de fichiers modernes.
+- Utiliser la version NFS **4.2 ou ultérieure**. Les versions antérieures de NFS ne gèrent pas les fonctionnalités requises, telles que fallocate et la création de fichiers sparse, communes aux systèmes de fichiers modernes.
 - Recherchez uniquement les répertoires **/var/opt/mssql** sur le montage NFS. Les autres fichiers, tels que les fichiers binaires du système SQL Server, ne sont pas pris en charge.
 - Assurez-vous que les clients NFS utilisent l’option 'nolock' lorsque vous montez le partage distant.
 
