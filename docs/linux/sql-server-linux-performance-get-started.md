@@ -1,6 +1,6 @@
 ---
-title: "Prise en main des fonctionnalités de performances de SQL Server sur Linux | Documents Microsoft"
-description: "Cet article fournit une présentation des fonctionnalités de performances de SQL Server pour Linux aux nouveaux utilisateurs à SQL Server. La plupart de ces exemples fonctionnent sur toutes les plateformes, mais le contexte de cet article est Linux."
+title: Prise en main des fonctionnalités de performances de SQL Server sur Linux | Documents Microsoft
+description: Cet article fournit une présentation des fonctionnalités de performances de SQL Server pour Linux aux nouveaux utilisateurs à SQL Server. La plupart de ces exemples fonctionnent sur toutes les plateformes, mais le contexte de cet article est Linux.
 author: rothja
 ms.author: jroth
 manager: craigg
@@ -8,8 +8,8 @@ ms.date: 03/17/2017
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
 ms.technology: database-engine
 ms.assetid: 60036d26-4797-4872-9a9e-3552841c61be
@@ -87,7 +87,7 @@ SQL Server fournit des fonctionnalités OLTP en mémoire qui peuvent améliorer 
    GO
    ```
 
-2. Une transaction impliquant une table basée sur disque et une table mémoire optimisée, il est essentiel que la partie mémoire optimisée de la transaction fonctionne au niveau d’isolation des transactions nommé SNAPSHOT.  Pour appliquer les fiable ce niveau pour les tables optimisées en mémoire dans une transaction entre conteneurs, exécutez la commande suivante :
+2. Lorsqu'une transaction implique une table sur disque ainsi qu'une table optimisée en mémoire, il est essentiel que la partie de la transaction concernant la table optimisée en mémoire utilise le niveau d’isolation des transactions appelé SNAPSHOT.  Pour appliquer ce niveau d'isolation pour les tables optimisées en mémoire dans une transaction de ce type, exécutez la commande suivante :
 
    ```sql
    ALTER DATABASE CURRENT SET MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT=ON
@@ -170,7 +170,7 @@ Pour plus d’informations sur l’OLTP en mémoire, consultez les rubriques sui
 - [OLTP en mémoire (optimisation en mémoire)](../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)
 
 ## <a name="use-query-store"></a>Utiliser le magasin de requête
-Magasin de requêtes collecte des informations détaillées sur les performances sur les requêtes, les plans d’exécution et les statistiques d’exécution.
+Le magasin de requêtes (Query Store) collecte des informations détaillées sur les performances concernant les requêtes, les plans d’exécution et les statistiques d’exécution.
 
 Le magasin de requêtes n’est pas actif par défaut et peut être activé avec ALTER DATABASE :
 

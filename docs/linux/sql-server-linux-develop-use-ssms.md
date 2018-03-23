@@ -1,6 +1,6 @@
-﻿---
-title: "Gérer SQL Server sur Linux avec SSMS | Documents Microsoft"
-description: "Ce didacticiel montre comment utiliser SQL Server Management Studio sur Windows pour se connecter à SQL Server en cours d’exécution sur Linux."
+---
+title: Gérer SQL Server sur Linux avec SSMS | Documents Microsoft
+description: Ce didacticiel montre comment utiliser SQL Server Management Studio sur Windows pour se connecter à SQL Server en cours d’exécution sur Linux.
 author: rothja
 ms.author: jroth
 manager: craigg
@@ -8,8 +8,8 @@ ms.date: 10/02/2017
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
@@ -25,9 +25,9 @@ ms.lasthandoff: 02/13/2018
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-Cet article explique comment utiliser [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md) pour se connecter à SQL Server 2017 sur Linux. SSMS étant une application Windows, utilisez SSMS quand vous avez un ordinateur Windows qui peut se connecter à une instance SQL Server distante sur Linux sur Linux.
+Cette rubrique montre comment utiliser [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md) pour se connecter à SQL Server 2017 sur Linux. SSMS étant une application Windows, utilisez SSMS quand vous avez un ordinateur Windows qui peut se connecter à une instance SQL Server distante sur Linux.
 
-Après vous être connecté, vous exécutez une requête Transact-SQL (T-SQL) simple pour vérifier la communication avec la base de données.
+Une fois la connexion établie, vous lancez une simple requête Transact-SQL (T-SQL) pour vérifier la communication avec la base de données.
 
 ## <a name="install-the-newest-version-of-sql-server-management-studio"></a>Installez la dernière version de SQL Server Management Studio
 
@@ -48,7 +48,8 @@ Les étapes suivantes montrent comment se connecter à SQL Server 2017 sur Linux
    | **Type de serveur** | La valeur par défaut est le moteur de base de données ; ne modifiez pas cette valeur. |
    | **Nom du serveur** | Entrez le nom de l’ordinateur Linux SQL Server cible ou son adresse IP. |
    | **Authentification** | Pour SQL Server 2017 sur Linux, utilisez **Authentification SQL Server**. |
-   │ **Connexion** │ Entrez le nom d'un utilisateur ayant accès à une base de données sur le serveur (par exemple, le compte **AS** par défaut créé pendant la configuration). |
+   | **Connexion** | Entrez le nom d'un utilisateur ayant accès à une base de données sur le serveur (par exemple, le compte **AS** par défaut créé pendant la configuration).
+ |
    | **Mot de passe** | Saisissez le mot de passe pour l'utilisateur spécifié (pour le compte **AS** que vous avez créé pendant la configuration). |
 
     ![SQL Server Management Studio : Se connecter au serveur de base de données SQL](./media/sql-server-linux-develop-use-ssms/connect.png)
@@ -58,7 +59,7 @@ Les étapes suivantes montrent comment se connecter à SQL Server 2017 sur Linux
     > [!TIP]
     > Si vous obtenez un échec de connexion, essayez d'abord de diagnostiquer le problème à partir du message d'erreur. Passez ensuite en revue les [recommandations en matière de résolution des problèmes de connexion](sql-server-linux-troubleshooting-guide.md#connection).
  
-5. Après vous être connecté à votre serveur SQL, **l’Explorateur d'objets** s'ouvre et vous pouvez désormais accéder à votre base de données pour effectuer des tâches administratives ou interroger des données.
+5. Après vous être connecté à votre serveur SQL, **l’Explorateur d’objets** s’ouvre et vous pouvez désormais accéder à votre base de données pour effectuer des tâches administratives ou interroger des données.
  
      ![Explorateur d’objets](./media/sql-server-linux-develop-use-ssms/object-explorer.png)
      
@@ -66,19 +67,19 @@ Les étapes suivantes montrent comment se connecter à SQL Server 2017 sur Linux
 
 Une fois que vous vous connectez à votre serveur, vous pouvez vous connecter à une base de données et exécuter un exemple de requête. Si vous ne connaissez pas l’écriture de requêtes, consultez [l’écriture des instructions Transact-SQL](../t-sql/tutorial-writing-transact-sql-statements.md).
 
-1. Identifiez une base de données à utiliser pour exécuter une requête. Cela peut être une base de données que vous avez créée dans le [didacticiel de Transact-SQL](../t-sql/tutorial-writing-transact-sql-statements.md) ou l'exemple de base de données **AdventureWorks** que vous avez [téléchargé et restauré](sql-server-linux-migrate-restore-database.md).
+1. Identifiez une base de données à utiliser pour exécuter une requête. Cela peut être une base de données que vous avez créée dans le [didacticiel de Transact-SQL](../t-sql/tutorial-writing-transact-sql-statements.md). Ou l'exemple de base de données **AdventureWorks** que vous avez [téléchargé et restauré](sql-server-linux-migrate-restore-database.md).
 2. Dans **l’Explorateur d’objets**, accédez à la base de données cible sur le serveur.
-3. Cliquez avec le bouton droit sur la base de données, puis sélectionnez **Nouvelle requête** :
+2. Cliquez avec le bouton droit sur la base de données, puis sélectionnez **Nouvelle requête** :
 
     ![Nouvelle requête. Se connecter au serveur de base de données SQL : SQL Server Management Studio](./media/sql-server-linux-develop-use-ssms/new-query.png)
 
-4. Dans la fenêtre de requête, écrivez une requête Transact-SQL pour sélectionner les données à partir d’une des tables. L’exemple suivant sélectionne les données de la table **Production.Product** de la base de données **AdventureWorks**.
+3. Dans la fenêtre de requête, écrivez une requête Transact-SQL pour sélectionner les données à partir d’une des tables. L’exemple suivant sélectionne les données de la table **Production.Product** de la base de données **AdventureWorks**.
 
         SELECT TOP 10 Name, ProductNumber
         FROM Production.Product
         ORDER BY Name ASC
 
-5. Cliquez sur le bouton **Executer** :
+4. Cliquez sur le bouton **Executer** :
 
     ![Réussite. Se connecter au serveur de base de données SQL : SQL Server Management Studio](./media/sql-server-linux-develop-use-ssms/execute-query.png)
 

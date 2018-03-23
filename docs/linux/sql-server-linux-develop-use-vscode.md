@@ -1,6 +1,6 @@
 ---
-title: "Utiliser l’extension mssql de Visual Studio Code | Documents Microsoft"
-description: "Cette rubrique montre comment utiliser l'extension mssql pour Visual Studio Code pour développer des bases de données SQL Server. Cette extension vous permet de modifier et exécuter des scripts Transact-SQL dans Visual Studio Code."
+title: Utiliser l’extension mssql de Visual Studio Code | Documents Microsoft
+description: Cette rubrique montre comment utiliser l'extension mssql pour Visual Studio Code pour développer des bases de données SQL Server. Cette extension vous permet de modifier et exécuter des scripts Transact-SQL dans Visual Studio Code.
 author: erickangMSFT
 ms.author: erickang
 manager: craigg
@@ -8,8 +8,8 @@ ms.date: 03/17/2017
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
 ms.technology: database-engine
 ms.assetid: 9766ee75-32d3-4045-82a6-4c7968bdbaa6
@@ -68,13 +68,13 @@ Les étapes suivantes expliquent comment installer l’extension mssql.
 
 L'extension **mssql** active les commandes mssql et l'IntelliSense T-SQL dans l'éditeur lorsque le mode langage est réglé sur **SQL**.
 
-1. Appuyez sur **CTRL + N**. Visual Studio Code ouvre un nouveau fichier de "Texte brut" par défaut. 
+1. Appuyez sur **Ctrl + N**. Visual Studio Code ouvre un nouveau fichier de "Texte brut" par défaut. 
 
 2. Appuyez sur **CTRL + K, M** et modifiez le mode de langage à **SQL**. 
 
    <img src="./media/sql-server-linux-develop-use-vscode/vscode-language-mode.png" alt="SQL language mode" style="width: 500px;" />
 
-3. Vous pouvez également ouvrir un fichier existant avec l’extension de fichier .sql. Le mode de langage est automatiquement **SQL** pour les fichiers ayant l’extension .sql.  
+3. Vous pouvez également ouvrir un fichier existant avec l’extension de fichier .sql. Le mode de langage est automatiquement initialisé à **SQL** pour les fichiers ayant l’extension .sql.  
 
 ## <a name="connect-to-sql-server"></a>Se connecter à SQL Server
 
