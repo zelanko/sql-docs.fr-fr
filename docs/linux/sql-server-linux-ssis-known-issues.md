@@ -1,6 +1,6 @@
-﻿---
-title: "Limitations et problèmes connus pour SSIS sur Linux | Documents Microsoft"
-description: "Cet article décrit les limitations et problèmes connus pour SQL Server Integration Services (SSIS) sur les ordinateurs Linux"
+---
+title: Limitations et problèmes connus pour SSIS sur Linux | Documents Microsoft
+description: Cet article décrit les limitations et problèmes connus pour SQL Server Integration Services (SSIS) sur les ordinateurs Linux
 author: leolimsft
 ms.author: lle
 ms.reviewer: douglasl
@@ -9,8 +9,8 @@ ms.date: 10/02/2017
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
@@ -31,7 +31,7 @@ Cet article décrit les problèmes connus et les limitations actuelles pour SQL 
 
 Les fonctionnalités suivantes ne sont pas pris en charge dans cette version de SSIS sur Linux :
   - Base de données catalogue de SSIS
-  - Exécution du package planifiés par l’Agent SQL
+  - Exécution de package planifié par l’Agent SQL
   - Authentification Windows
   - Les composants tiers
   - Capture de données modifiées (CDC)
@@ -44,7 +44,7 @@ Pour les autres limitations et problèmes connus avec SSIS sur Linux, consultez 
 
 ## <a name="components"></a> Composants pris en charge et non pris en charge
 
-Les composants Integration Services suivants sont pris en charge sur Linux. Certaines d'entre elles proviennent de limitations de la plate-forme Linux, comme spécifié dans les tableaux suivants.
+Les composants Integration Services suivants sont pris en charge sur Linux. Certains d'entre eux proviennent de limitations de la plate-forme Linux, comme spécifié dans les tableaux suivants.
 
 Les composants de SSIS qui ne sont pas répertoriés ici ne sont pas pris en charge sous Linux.
 
@@ -56,7 +56,7 @@ Les composants de SSIS qui ne sont pas répertoriés ici ne sont pas pris en cha
 - Tâche Exécuter l'instruction T-SQL
 - Tâche d'expression
 - Tâche FTP
-- Tâche service Web
+- Tâche de service Web
 - XML Task
 
 ### <a name="control-flow-tasks-supported-with-limitations"></a>Tâches de flux de contrôle pris en charge avec les limitations
