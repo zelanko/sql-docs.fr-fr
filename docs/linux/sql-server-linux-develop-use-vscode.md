@@ -153,7 +153,7 @@ Les étapes suivantes montrent comment se connecter à SQL Server avec le Visual
 
 3. Ecrivez **sql** dans la Palette de commandes pour afficher les commandes SQL ou un type **sqluse** pour **MS SQL : Use Database** commande.
 
-4. Cliquez sur **MS SQL:Use Database**, puis sélectionnez la base de données **TutorialDB**. Cela modifie le contexte de la nouvelle base de données créée dans la section précédente.
+4. Cliquez sur **MS SQL:Use Database**, puis sélectionnez la base de données **TutorialDB**. Le contexte passe alors à la base de données créée dans la section précédente.
 
    <img src="./media/sql-server-linux-develop-use-vscode/vscode-use-database.png" alt="use database" style="width: 500px;" />
 
@@ -244,7 +244,7 @@ Les étapes suivantes montrent comment se connecter à SQL Server avec le Visual
 
 5. Ouvrez le menu contextuel de grille et sélectionnez **enregistrer en tant que JSON** pour enregistrer le résultat dans un fichier .json.
 
-6. Spécifiez un nom de fichier pour le fichier JSON. Pour ce didacticiel, tapez **employees.json**.
+6. Spécifiez un nom de fichier pour le fichier JSON. Dans le cadre de ce didacticiel, tapez **employees.json**.
 
 7. Vérifiez que le fichier JSON est enregistré et ouvert dans Visual Studio Code.
 
