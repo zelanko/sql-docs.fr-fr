@@ -229,7 +229,7 @@ Pour installer manuellement ces packages, procédez comme suit :
 
 1. **Déplacez les packages téléchargés sur votre ordinateur Linux**. Si vous avez utilisé un autre ordinateur pour télécharger les packages, une façon de déplacer les packages vers l’ordinateur Linux est d'utiliser la commande **scp**.
 
-1. **Installer les packages**: installer les packages **mssql-tools** et **msodbc**. Si vous obtenez des erreurs de dépendance, ignorez-les jusqu'à l’étape suivante.
+1. Installez **et les packages**mssql-tools**et**msodbc**.   Si vous obtenez des erreurs de dépendance, ignorez-les jusqu'à l’étape suivante.
 
     | Plateforme | Commandes d’installation de package |
     |-----|-----|
@@ -237,7 +237,7 @@ Pour installer manuellement ces packages, procédez comme suit :
     | SLES | `sudo zypper install msodbcsql-13.1.6.0-1.x86_64.rpm`<br/>`sudo zypper install mssql-tools-14.0.5.0-1.x86_64.rpm` |
     | Ubuntu | `sudo dpkg -i msodbcsql_13.1.6.0-1_amd64.deb`<br/>`sudo dpkg -i mssql-tools_14.0.5.0-1_amd64.deb` |
 
-1. **Résoudre les dépendances manquantes**: vous pouvez avoir des dépendances manquantes à ce stade. Si ce n’est pas le cas, vous pouvez ignorer cette étape. Dans certains cas, vous devez localiser et installer manuellement ces dépendances.
+1. **Résoudre les dépendances manquantes**: vous pouvez avoir des dépendances manquantes à ce stade. Si ce n’est pas le cas, vous pouvez ignorer cette étape. Dans certains cas, vous devez manuellement identifier et installer ces dépendances.
 
     Pour les packages RPM, vous pouvez inspecter les dépendances nécessaires avec les commandes suivantes :
 

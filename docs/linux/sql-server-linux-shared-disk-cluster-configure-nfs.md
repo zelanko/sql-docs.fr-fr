@@ -1,6 +1,6 @@
-﻿---
+---
 title: Configurer le stockage instance cluster de basculement NFS - SQL Server sur Linux | Documents Microsoft
-description: 
+description: ''
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
@@ -8,8 +8,8 @@ ms.date: 08/28/2017
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
@@ -26,27 +26,27 @@ ms.lasthandoff: 02/13/2018
 
 Cet article explique comment configurer le stockage NFS pour une instance de cluster de basculement (FCI) sur Linux. 
 
-NFS (Network File System) est une méthode couramment employée pour partager des disques dans le monde Linux, mais pas dans le monde Windows. Similaire à iSCSI, NFS peut être configuré sur un serveur ou certaines appliances ou unités de stockage à condition qu’il réponde aux exigences en matière de stockage de SQL Server.
+NFS ou système de fichiers réseau, est une méthode courante pour le partage dans le monde Linux, mais pas les fenêtres d’un des disques. Similaire à iSCSI, NFS peut être configuré sur un serveur ou une sorte d’appareil ou l’unité de stockage tant qu’il répond aux exigences du stockage SQL Server.
 
 ## <a name="important-nfs-server-information"></a>Informations importantes du serveur NFS
 
-La source qui héberge NFS (serveur Linux ou autre) doit utiliser la version 4.2 ou ultérieure ou être conforme à celle-ci. Les versions antérieures ne fonctionnent pas avec SQL Server sur Linux.
+La source d’hébergement NFS (un serveur Linux ou quelque chose d’autre) doit être à l’aide de/conforme à la version 4.2 ou ultérieure. Les versions antérieures ne fonctionnera pas avec SQL Server sur Linux.
 
 Quand vous configurez le ou les dossiers à partager sur le serveur NFS, vérifiez qu’ils respectent ces options générales :
 - `rw` Pour vous assurer que le dossier permettre être lues et écrites dans
 - `sync` Pour garantir la garantie d’écritures dans le dossier
-- Ne pas utiliser `no_root_squash`comme option (celle-ci est considérée comme un risque pour la sécurité)
-- Vérifier que le dossier dispose de droits complets (777)
+- N’utilisez pas `no_root_squash` en tant qu’option ; il est considéré comme un risque de sécurité
+- Assurez-vous que le dossier dispose des droits d’accès complets (777) appliquées
 
-Vérifiez que vos normes de sécurité sont appliquées pour l'accès. Quand vous configurez le dossier, vérifiez que seuls les serveurs participant à l’instance l'instance de cluster de basculement peuvent voir le dossier NFS. L'exemple ci-dessous montre un dossier /etc/exports modifié sur une solution NFS basée sur Linux. L'accès à ce dossier est limité à FCIN1 et FCIN2.
+Assurez-vous que vos normes de sécurité sont appliquées pour accéder à. Lorsque vous configurez le dossier, assurez-vous que seuls les serveurs participant à l’instance FCI consulter le dossier NFS. Un exemple d’un /etc/exports modifié sur une solution NFS basés sur Linux est indiqué ci-dessous dans lequel le dossier est limité à FCIN1 et FCIN2.
 
 ![05-nfsacl][1]
 
 ## <a name="instructions"></a>Instructions
 
-1. Choisissez un des serveurs (peu importe lequel) qui participera à la configuration de l'instance de cluster de basculement. 
+1. Dans la configuration ICF, choisissez un des serveurs participant à la. Quel que soit l’application. 
 
-2. Vérifiez que le serveur peut voir le ou les montages sur le serveur NFS.
+2. Vérifiez que le serveur peut voir le mount(s) sur le serveur NFS.
 
     ```bash
     sudo showmount -e <IPAddressOfNFSServer>
@@ -62,19 +62,19 @@ Vérifiez que vos normes de sécurité sont appliquées pour l'accès. Quand vou
     sudo systemctl stop mssql-server
     sudo systemctl status mssql-server
     ```
-   * Basculez entièrement en super utilisateur. Vous ne recevrez pas d’accusé de réception en cas de réussite.
+   * Commutateur entièrement le super utilisateur. Vous ne recevrez pas tout accusé de réception en cas de réussite.
 
     ```bash
     sudo -i
     ```
 
-   * Basculez vers l’utilisateur mssql. Vous ne recevrez pas d’accusé de réception en cas de réussite.
+   * Basculer vers l’utilisateur mssql. Vous ne recevrez pas tout accusé de réception en cas de réussite.
 
     ```bash
     su mssql
     ```
 
-   * Créez un répertoire temporaire pour stocker les données de SQL Server et les fichiers journaux. Vous ne recevrez pas d'accusé de réception en cas de réussite.
+   * Créez un répertoire temporaire pour stocker les données de SQL Server et les fichiers journaux. Vous ne recevrez pas tout accusé de réception en cas de réussite.
 
     ```bash
     mkdir <TempDir>
@@ -86,7 +86,7 @@ Vérifiez que vos normes de sécurité sont appliquées pour l'accès. Quand vou
     mkdir /var/opt/mssql/tmp
     ```
 
-   * Copiez les fichiers journaux et de données de SQL Server dans le répertoire temporaire. Vous ne recevrez pas de message de retour en cas de réussite.
+   * Copiez les fichiers journaux et de données de SQL Server dans le répertoire temporaire. Vous ne recevrez pas tout accusé de réception en cas de réussite.
     
     ```bash
     cp /var/opt/mssql/data/* <TempDir>
@@ -102,7 +102,7 @@ Vérifiez que vos normes de sécurité sont appliquées pour l'accès. Quand vou
 
     \<TempDir > est le nom du dossier à partir de l’étape d.
 
-   * Supprimez les fichiers à partir du répertoire de données SQL Server existant. Vous ne recevrez pas de message de retour en cas de réussite.
+   * Supprimez les fichiers à partir du répertoire de données SQL Server existant. Vous ne recevrez pas tout accusé de réception en cas de réussite.
 
     ```bash
     rm – f /var/opt/mssql/data/*
@@ -116,7 +116,7 @@ Vérifiez que vos normes de sécurité sont appliquées pour l'accès. Quand vou
     
    * Tapez exit pour revenir à l’utilisateur racine.
 
-   * Montez le partage NFS dans le dossier de données SQL Server. Vous ne recevrez pas de message de retour en cas de réussite.
+   * Montez le partage NFS dans le dossier de données SQL Server. Vous ne recevrez pas tout accusé de réception en cas de réussite.
 
     ```bash
     mount -t nfs4 <IPAddressOfNFSServer>:<FolderOnNFSServer> /var/opt/mssql/data -o nfsvers=4.2,timeo=14,intr
@@ -130,7 +130,7 @@ Vérifiez que vos normes de sécurité sont appliquées pour l'accès. Quand vou
     mount -t nfs4 200.201.202.63:/var/nfs/fci1 /var/opt/mssql/data -o nfsvers=4.2,timeo=14,intr
     ```
 
-   * Vérifiez que le montage a réussi en émettant la commande mount sans commutateurs.
+   * Vérifiez que le montage a réussi en émettant un montage sans commutateurs.
 
     ```bash
     mount
@@ -138,13 +138,13 @@ Vérifiez que vos normes de sécurité sont appliquées pour l'accès. Quand vou
 
     ![10-mountnoswitches][2]
 
-   * Basculez vers l’utilisateur mssql. Vous ne recevrez pas de message de retour en cas de réussite.
+   * Basculez vers l’utilisateur mssql. Vous ne recevrez pas tout accusé de réception en cas de réussite.
 
     ```bash
     su mssql
     ```
 
-   * Copiez les fichiers à partir du répertoire temporaire /var/opt/mssql/data. Vous ne recevrez pas de message de retour en cas de réussite.
+   * Copiez les fichiers à partir du répertoire temporaire /var/opt/mssql/data. Vous ne recevrez pas tout accusé de réception en cas de réussite.
 
     ```bash
     cp /var/opt/mssql/tmp/* /var/opt/mssqldata
@@ -156,11 +156,11 @@ Vérifiez que vos normes de sécurité sont appliquées pour l'accès. Quand vou
     ls /var/opt/mssql/data
     ```
 
-   * Entrez exit pour ne plus être mssql 
+   * Entrez exit pour ne pas être mssql 
     
-   * Entrez exit pour ne plus être root
+   * Entrez exit pour être racine
 
-   * Démarrez SQL Server. Si tout a été correctement copié et la sécurité appliquée, SQL Server doit s'afficher comme démarré.
+   * Démarrez SQL Server. Si tout a été correctement copié et sécurité appliquée, SQL Server doit afficher correctement a démarré.
 
     ```bash
     sudo systemctl start mssql-server
@@ -171,14 +171,14 @@ Vérifiez que vos normes de sécurité sont appliquées pour l'accès. Quand vou
  
     ![CreateTestdatabase][3]
 
-   * Arrêtez SQL Server et vérifiez qu’il est arrêté.
+   * Arrêt de SQL Server et vérifiez qu’il est arrêté.
 
     ```bash
     sudo systemctl stop mssql-server
     sudo systemctl status mssql-server
     ```
 
-   * Si vous ne créez aucun autre montage NFS, démontez le partage. Sinon, ne le démontez pas.
+   * Si vous ne créez pas de n’importe quel autres montages NFS, démontez le partage. Si vous êtes, démontez pas.
 
     ```bash
     sudo umount <IPAddressOfNFSServer>:<FolderOnNFSServer> <FolderToMountIn>
@@ -190,9 +190,9 @@ Vérifiez que vos normes de sécurité sont appliquées pour l'accès. Quand vou
 
     \<FolderMountedIn > est le dossier créé à l’étape précédente. 
 
-4. Pour les éléments autres que les bases de données système, tels que les bases de données utilisateur ou les sauvegardes, suivez ces étapes. Si vous utilisez uniquement l’emplacement par défaut, passez à l’étape 5.
+4. Pour les éléments autres que des bases de données système, telles que les bases de données utilisateur ou des sauvegardes, procédez comme suit. Si uniquement à l’aide de l’emplacement par défaut, passez à l’étape 5.
 
-   * Basculez sur le super utilisateur. Vous ne recevrez pas de message de retour en cas de réussite.
+   * Commutateur le super utilisateur. Vous ne recevrez pas tout accusé de réception en cas de réussite.
 
     ```bash
     sudo -i
@@ -210,7 +210,7 @@ Vérifiez que vos normes de sécurité sont appliquées pour l'accès. Quand vou
     mkdir /var/opt/mssql/userdata
     ```
 
-   * Montez le partage NFS dans le dossier qui a été créé à l’étape précédente. Vous ne recevrez pas de message de retour en cas de réussite.
+   * Montez le partage NFS dans le dossier qui a été créé à l’étape précédente. Vous ne recevrez pas tout accusé de réception en cas de réussite.
 
     ```bash
     Mount -t nfs4 <IPAddressOfNFSServer>:<FolderOnNFSServer> <FolderToMountIn> -o nfsvers=4.2,timeo=14,intr
@@ -226,9 +226,9 @@ Vérifiez que vos normes de sécurité sont appliquées pour l'accès. Quand vou
     mount -t nfs4 200.201.202.63:/var/nfs/fci2 /var/opt/mssql/userdata -o nfsvers=4.2,timeo=14,intr
     ```
 
-   * Vérifiez que le montage a réussi en émettant une commande mount sans commutateurs.
+   * Vérifiez que le montage a réussi en émettant un montage sans commutateurs.
   
-   * Tapez exit pour ne plus plus être super utilisateur.
+   * Type de sortie ne peut plus être le super utilisateur.
 
    * Pour tester, créez une base de données dans ce dossier. L’exemple suivant utilise sqlcmd pour créer une base de données, basculer vers elle, vérifiez les fichiers existent au niveau du système d’exploitation, puis supprime l’emplacement temporaire. Vous pouvez utiliser SSMS.
 
