@@ -1,6 +1,6 @@
 ---
-title: "Résoudre les problèmes de SQL Server sur Linux | Documents Microsoft"
-description: "Fournit des conseils de dépannage pour l’utilisation de SQL Server 2017 sur Linux."
+title: Résoudre les problèmes de SQL Server sur Linux | Documents Microsoft
+description: Fournit des conseils de dépannage pour l’utilisation de SQL Server 2017 sur Linux.
 author: annashres
 ms.author: anshrest
 manager: craigg
@@ -8,8 +8,8 @@ ms.date: 02/22/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
@@ -118,7 +118,7 @@ Les événements étendus peuvent être interrogées via une commande SQL.  Plus
 
 ## <a name="crash-dumps"></a>Vidages sur incident 
 
-Recherchez les vidages dans le répertoire de journal dans Linux. Vérifiez dans le répertoire /var/opt/mssql/log pour Linux Core dumps (. tar.gz2 extension) ou SQL minidumps (extension .mdmp)
+Recherchez les vidages dans le répertoire de journaux dans Linux. Recherchez dans le répertoire /var/opt/mssql/log les vidages Linux Core (extension .tar.gz2) ou les mini-vidages SQL (extension .mdmp)
 
 Pour les vidages 
    ```bash
@@ -187,7 +187,7 @@ Si vous avez démarré par inadvertance SQL Server avec un autre utilisateur, vo
 
 4. Utiliser des caractères spéciaux dans le mot de passe.
 
-   Si vous utilisez des caractères dans le mot de passe du compte de connexion SQL Server, vous devrez peut-être d’échappement lors de leur utilisation dans le terminal Linux. Vous devez isoler le $ à tout moment à l’aide de la barre oblique vous l’utilisez dans un script de shell de commande/Terminal Server :
+   Si vous utilisez certains caractères dans le mot de passe de connexion à SQL Server, vous devrez peut-être utiliser un caractère d’échappement lors de l'utilisation de ces caractères sur le terminal Linux. Vous devez utiliser un caractère d’échappement pour $ à l’aide de la barre oblique inverse à chaque fois que vous l'utilisez dans une commande de terminal/un script de shell
 
    Ne fonctionne pas :
 
