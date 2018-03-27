@@ -1,6 +1,6 @@
 ---
-title: "Utiliser l’instance de cluster de basculement - SQL Server sur Linux | Documents Microsoft"
-description: 
+title: Utiliser l’instance de cluster de basculement - SQL Server sur Linux | Documents Microsoft
+description: ''
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
@@ -8,12 +8,12 @@ ms.date: 08/28/2017
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
-ms.assetid: 
+ms.assetid: ''
 ms.workload: Inactive
 ms.openlocfilehash: 5e557c2ef6005a9e2822b973748928bae991875c
 ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
@@ -29,40 +29,40 @@ Cet article explique comment utiliser une instance de cluster de basculement (FC
 
 ## <a name="failover"></a>Basculement
 
-Basculement de fci est similaire à un cluster de basculement Windows Server (WSFC). Si le nœud de cluster qui héberge l’instance FCI rencontre une sorte de défaillance, l’instance de cluster doit basculer automatiquement vers un autre nœud. Contrairement à un cluster WSFC, il est impossible de définir des propriétaires favoris pour STIMULATEUR sélectionne le nœud qui sera le nouvel hôte de l’instance FCI.
+Le basculement d'une instance fci est similaire à un cluster de basculement Windows Server (WSFC). Si le nœud de cluster qui héberge l’instance FCI rencontre quelque sorte de défaillance, l’instance de cluster doit basculer automatiquement vers un autre nœud. Contrairement à un cluster WSFC, il est impossible de définir des propriétaires favoris. Pacemaker sélectionne le nœud qui sera le nouvel hôte de l’instance FCI.
 
-Il n’y a vous pouvez être amené à procéder manuellement l’instance FCI vers un autre nœud. Le processus n’est pas le même que sur les instances fci sur un cluster WSFC. Sur un cluster WSFC, vous basculez les ressources au niveau du rôle. Dans STIMULATEUR, vous choisissez une ressource à déplacer, et en supposant que toutes les contraintes sont corrects, tout le reste sera également déplacés. 
+Vous pouvez être amené à procéder manuellement au basculement de l’instance FCI vers un autre nœud. Le processus n’est pas le même que sur les instances fci d'un cluster WSFC. Sur un cluster WSFC, vous basculez les ressources au niveau du rôle. Dans Pacemaker, vous choisissez une ressource à déplacer, et en supposant que toutes les contraintes sont correctes, tout le reste sera également déplacé. 
 
-Le moyen de basculement dépend de la distribution de Linux. Suivez les instructions de votre distribution linux.
+La manière de basculer dépend de la distribution de Linux. Suivez les instructions de votre distribution linux.
 
 - [RHEL ou Ubuntu](#rhelFailover)
 - [SLES](#slesFailover)
 
 ## <a name = "#rhelFailover"></a> Basculement manuel (RHEL ou Ubuntu)
 
-Pour effectuer un basculement manuel, OGAM onn Red Hat Enterprise Linux (RHEL) ou des serveurs d’Ubuntu exécutent les étapes suivantes.
+Pour effectuer un basculement manuel, sur des serveurs Red Hat Enterprise Linux (RHEL) ou Ubuntu, exécutez les étapes suivantes.
 1.  Exécutez la commande suivante : 
 
    ```bash
    sudo pcs resource move <FCIResourceName> <NewHostNode> 
    ```
 
-   \<FCIResourceName > est le nom de ressource STIMULATEUR pour l’ICF de SQL Server.
+   \<FCIResourceName > est le nom de ressource Pacemaker pour l’instance de cluster FCI SQL Server.
 
-   \<NewHostNode > est le nom du nœud de cluster que vous souhaitez héberger l’instance FCI. 
+   \<NewHostNode > est le nom du nœud de cluster sur lequel vous souhaitez héberger l’instance FCI. 
 
-   Vous n’obtiendrez tout accusé de réception.
+   Vous n’obtiendrez aucune confirmation.
 
-2.  Lors d’un basculement manuel, STIMULATEUR crée une contrainte d’emplacement sur la ressource qui a été choisie pour déplacer manuellement. Pour voir cette contrainte, exécutez `sudo pcs constraint`.
+2.  Lors d’un basculement manuel, Pacemaker crée une contrainte d’emplacement sur la ressource choisie pour le déplacement manuel. Pour voir cette contrainte, exécutez `sudo pcs constraint`.
 
-3.  Une fois le basculement terminé, supprimez la contrainte en émettant `sudo pcs resource clear <FCIResourceName>`. 
+3.  Une fois le basculement terminé, supprimez la contrainte en exécutant `sudo pcs resource clear <FCIResourceName>`. 
 
-\<FCIResourceName > est le nom de ressource STIMULATEUR pour l’instance FCI. 
+\<FCIResourceName > est le nom de ressource Pacemaker pour l’instance FCI. 
 
 ## <a name = "#slesFailover"></a> Basculement manuel (SLES)
 
 
-Dans Suse Linux Enterprise Server (SLES), utilisez la `migrate` de commande pour basculer manuellement une instance de cluster SQL Server. Par exemple :
+Dans Suse Linux Enterprise Server (SLES), utilisez la commande `migrate` pour basculer manuellement une instance FCI SQL Server. Par exemple :
 
 ```bash
 crm resource migrate <FCIResourceName> <NewHostNode>
