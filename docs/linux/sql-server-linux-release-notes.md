@@ -298,7 +298,7 @@ Si vous utilisez les partages distants **Network File System (NFS)** en producti
 
 #### <a name="localization"></a>Localisation
 
-- Si vos paramètres régionaux n’est pas anglais (fr_FR) lors de l’installation, vous devez utiliser l’encodage UTF-8 dans votre session d’interpréteur de commandes/terminal. Si vous utilisez l’encodage ASCII, vous pouvez voir une erreur semblable au suivant :
+- Si vos paramètres régionaux n’est pas anglais (fr_FR) lors de l’installation, vous devez utiliser l’encodage UTF-8 dans votre session d’interpréteur de commandes/terminal. Si vous utilisez l’encodage ASCII, vous pouvez voir une erreur comme ci-après :
 
    ```
    UnicodeEncodeError: 'ascii' codec can't encode character u'\xf1' in position 8: ordinal not in range(128)
