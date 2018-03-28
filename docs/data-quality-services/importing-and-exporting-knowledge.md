@@ -1,27 +1,28 @@
 ---
 title: Importation et exportation de connaissances | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 07/31/2012
 ms.prod: sql-non-specified
 ms.prod_service: data-quality-services
-ms.service: 
+ms.service: ''
 ms.component: data-quality-services
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: data-quality-services
-ms.tgt_pltfrm: 
+ms.technology:
+- data-quality-services
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 12537c9d-31e4-40b0-a411-cb343abbe96a
-caps.latest.revision: "10"
+caps.latest.revision: ''
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d0443061d55f18dca07cf6f7c193995bda271419
-ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
+ms.openlocfilehash: 121fcc9304e72872f8e06374368bd3637577cb0f
+ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="importing-and-exporting-knowledge"></a>Importation et exportation de connaissances
   Vous pouvez créer des bases de connaissances et les domaines directement dans l'application [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] ou vous pouvez importer ou exporter les connaissances vers ou depuis une base de connaissances. Dans l'application [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] , vous pouvez utiliser un fichier de données pour les opérations d'importation et d'exportation, ou un fichier Excel pour les opérations d'importation. Le fichier de données utilisé est un fichier chiffré qui est créé par [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) avec l'extension .dqs. Les fichiers créés par Microsoft Excel peuvent avoir une extension .xlsx, .xls ou .csv. Ces opérations offrent plus de souplesse dans la génération et le partage des connaissances que vous utilisez pour effectuer le nettoyage et la correspondance des données.  

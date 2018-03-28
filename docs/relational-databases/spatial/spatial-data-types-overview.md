@@ -1,16 +1,16 @@
 ---
-title: "Présentation des types de données spatiales | Microsoft Docs"
-ms.custom: 
+title: Présentation des types de données spatiales | Microsoft Docs
+ms.custom: ''
 ms.date: 11/01/2016
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: spatial
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-spatial
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - geometry data type [SQL Server], understanding
@@ -18,25 +18,22 @@ helpviewer_keywords:
 - planar spatial data [SQL Server], geometry data type
 - spatial data types [SQL Server]
 ms.assetid: 1615db50-69de-4778-8be6-4e058c00ccd4
-caps.latest.revision: 
+caps.latest.revision: ''
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: a1eae19761ec8afa2ddf6491314d3f6ce5930f37
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 27b4acf9192c74ec3c9535d9ed35a477c5a5f5d0
+ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="spatial-data-types-overview"></a>Présentation des types de données spatiales
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   
 Il existe deux types de données spatiales. Le type de données **geometry** prend en charge les données planaires, ou euclidiennes (monde en deux dimensions). Le type de données **geometry** se conforme à la fois à la spécification Open Geospatial Consortium (OGC) Simple Features for SQL version 1.1.0. et à la norme SQL MM (norme ISO).
 De plus, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend en charge le type de données **geography** , qui stocke des données ellipsoïdes (monde sphérique), telles que des coordonnées GPS de latitude et de longitude.
-
-> [!IMPORTANT]  
->  Pour obtenir une description détaillée et des exemples des nouvelles fonctionnalités spatiales dans [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], notamment les optimisations des types de données spatiales, téléchargez le livre blanc [New Spatial Features in SQL Server Code-Named "Denali"](http://go.microsoft.com/fwlink/?LinkId=226407)(Nouvelles fonctions spatiales dans SQL Server nom de code « Denali »).  
 
 ##  <a name="objects"></a> Objets de données spatiales  
 Les types de données **geometry** et **geography** prennent en charge seize objets de données spatiales, ou types d’instances. Toutefois, seuls onze de ces types d’instances sont *instanciables*; vous pouvez créer et utiliser ces instances (ou les instancier) dans une base de données. Ces instances dérivent certaines propriétés de leurs types de données parents qui les distinguent comme **Points**, **LineStrings, CircularStrings**, **CompoundCurves**, **Polygons**, **CurvePolygons** , ou comme instances multiples de **geometry** ou **geography** dans un **GeometryCollection**. Le type**Geography** a un type d’instance supplémentaire, **FullGlobe**.  

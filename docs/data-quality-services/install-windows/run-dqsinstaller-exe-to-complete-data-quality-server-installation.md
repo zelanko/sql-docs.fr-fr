@@ -1,27 +1,28 @@
 ---
-title: "Exécuter DQSInstaller.exe pour effectuer l’installation du serveur DQS | Microsoft Docs"
-ms.custom: 
+title: Exécuter DQSInstaller.exe pour effectuer l’installation du serveur DQS | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: data-quality-services
-ms.service: 
+ms.service: ''
 ms.component: install-windows
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: data-quality-services
-ms.tgt_pltfrm: 
+ms.technology:
+- data-quality-services
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 7a8c96e0-1328-4f35-97fc-b6d9cb808bae
-caps.latest.revision: "33"
+caps.latest.revision: ''
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: d6d14694ebc822f28c7765d1ed7235b77e4db06c
-ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
+ms.openlocfilehash: 6d0052007846b4edf4a399fa831011982c344dd5
+ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="run-dqsinstallerexe-to-complete-data-quality-server-installation"></a>Exécuter DQSInstaller.exe pour terminer l'installation du serveur DQS
   Pour terminer l'installation du [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] , vous devez exécuter le fichier DQSInstaller.exe après avoir installé [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Cette rubrique décrit comment exécuter DQSInstaller.exe à partir de l'écran **Démarrer** , du menu **Démarrer** , de l'Explorateur Windows ou d'une invite de commandes ; vous pouvez choisir l'une des manières suivantes pour exécuter le fichier DQSInstaller.exe.  

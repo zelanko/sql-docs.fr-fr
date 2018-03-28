@@ -1,27 +1,28 @@
 ---
-title: "Gestion d’un domaine | Microsoft Docs"
-ms.custom: 
+title: Gestion d’un domaine | Microsoft Docs
+ms.custom: ''
 ms.date: 07/31/2012
 ms.prod: sql-non-specified
 ms.prod_service: data-quality-services
-ms.service: 
+ms.service: ''
 ms.component: data-quality-services
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: data-quality-services
-ms.tgt_pltfrm: 
+ms.technology:
+- data-quality-services
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: c5ab71a3-0dac-45b1-be8e-93bf7e0e03ce
-caps.latest.revision: "13"
+caps.latest.revision: ''
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4ca23eae8c1593e9bc5d8a9a58402b6a46d7603d
-ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
+ms.openlocfilehash: 7e988d58dc4f160ae85273762173d129c2cc9c2c
+ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="managing-a-domain"></a>Gestion d'un domaine
   Cette rubrique décrit l'utilisation des domaines dans [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Un domaine contient une représentation sémantique des données dans un champ spécifique dans la source de données qui doit être analysée. Un domaine fait partie de la base de connaissances que vous créez pour une source de données, et la connaissance que vous accumulez en analysant un exemple de source de données, ou lors de l'importation de données, est ajoutée aux domaines définis dans la base de connaissances. La connaissance de ces domaines est utilisée ultérieurement pour effectuer le nettoyage et la correspondance dans un projet de qualité des données. Les domaines sont au cœur de toutes les activités dans Data Quality Services.  
