@@ -1,16 +1,16 @@
 ---
 title: Reporting Services (SSRS) | Microsoft Docs
-description: "Découvrez les outils et services disponibles pour les rapports Reporting Services mobiles et paginés, ainsi que pour les rapports Power BI locaux."
-ms.custom: 
+description: Découvrez les outils et services disponibles pour les rapports Reporting Services mobiles et paginés, ainsi que pour les rapports Power BI locaux.
+ms.custom: ''
 ms.date: 07/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
+ms.service: ''
 ms.component: reporting-services
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 helpviewer_keywords:
 - reports [Reporting Services]
@@ -19,16 +19,16 @@ helpviewer_keywords:
 - Reporting Services
 - SQL Server Reporting Services
 ms.assetid: b8d18d3d-9db0-43e7-8286-7b46cc3a37ed
-caps.latest.revision: "70"
+caps.latest.revision: ''
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.workload: Active
-ms.openlocfilehash: 85377a9d96bbaa8d7d94dacafc0989d3089ff7dd
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 6deaece7d2dd01ebf831820c2e026044f80651de
+ms.sourcegitcommit: 3ed9be04cc7fb9ab1a9ec230c298ad2932acc71b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 03/17/2018
 ---
 # <a name="what-is-sql-server-reporting-services-ssrs"></a>Qu’est-ce que SQL Server Reporting Services (SSRS) ?
 
@@ -36,7 +36,7 @@ ms.lasthandoff: 01/09/2018
 
 [!INCLUDE [ssrs-previous-versions](../includes/ssrs-previous-versions.md)]
 
-Créez, déployez et gérez localement des rapports Reporting Services paginés et mobiles et des rapports Power BI en utilisant les outils et services prêts à l’emploi fournis par SQL Server Reporting Services (SSRS) et Power BI.
+Créer, déployer et gérer localement des rapports Reporting Services paginés et mobiles grâce aux outils et services prêts à l’emploi fournis par SSRS (SQL Server Reporting Services).
 
 ![SQL Server Reporting Services ensemble](../reporting-services/media/ss-reporting-services-all-together.png "SQL Server Reporting Services ensemble")
 
@@ -48,7 +48,7 @@ Pour SQL Server 2016, Reporting Services offre une suite de produits mise à jou
 
 * **Rapports paginés « traditionnels »** mis à jour, pour vous permettre de créer des rapports modernisés, avec des outils mis à jour et de nouvelles fonctionnalités pour les créer.
 * **Nouveaux rapports mobiles** avec une disposition réactive qui s’adapte aux différents appareils et aux différentes façons de les tenir en main.
-* **Portail web moderne** que vous pouvez afficher dans n’importe quel navigateur moderne. Dans le nouveau portail, vous pouvez organiser et afficher des indicateurs de performance clés et des rapports Reporting Services paginés et mobiles, ainsi que des rapports Power BI Desktop. Vous pouvez également stocker des classeurs Excel sur le portail.
+* **Portail web moderne** que vous pouvez afficher dans n’importe quel navigateur moderne. Dans le nouveau portail, vous pouvez organiser et afficher des indicateurs de performance clés et des rapports Reporting Services paginés et mobiles. Vous pouvez également stocker des classeurs Excel sur le portail.
 
 Pour en savoir plus, lisez la suite de cet article.
 
@@ -90,13 +90,13 @@ Vous créez ces rapports mobiles dans la nouvelle application [Éditeur de rappo
 
 ![ssrs-web-portal](../reporting-services/media/ssrs-web-portal.png)
 
-Pour les utilisateurs finaux de Reporting Services en mode natif, la porte d’entrée est un portail web moderne que vous pouvez afficher dans n’importe quel navigateur moderne. Vous pouvez accéder à tous vos indicateurs de performance clés et rapports paginés et mobiles Reporting Services dans le nouvel portail, ainsi qu’à des rapports Power BI Desktop. Découvrez d’autres informations sur les [rapports Power BI dans Reporting Services](../reporting-services/power-bi-reports-in-reporting-services.md).  
+Pour les utilisateurs finaux de Reporting Services en mode natif, la porte d’entrée est un portail web moderne que vous pouvez afficher dans n’importe quel navigateur moderne. Vous pouvez accéder à tous vos indicateurs de performance clés et rapports paginés et mobiles Reporting Services dans le nouvel portail.
 
 Vous pouvez appliquer une personnalisation à votre portail web. Et vous pouvez créer des indicateurs de performance clés directement dans le portail web. Les indicateurs de performance clés peuvent exposer des métriques métier clés en un clin d’œil dans le navigateur, sans qu’il soit nécessaire d’ouvrir un rapport. 
 
 Le nouveau portail web est une réécriture complète du Gestionnaire de rapports. Désormais, il s’agit d’une application HTML5 d’une seule page, basée sur des normes, pour laquelle les navigateurs modernes sont optimisés (Edge, Internet Explorer 10 et 11, Chrome, Firefox, Safari et tous les navigateurs les plus courants).
 
-Le contenu du portail web est organisé par type : les indicateurs de performance clés et les rapports mobiles et paginés Reporting Services, ainsi que les rapports Power BI Desktop, les classeurs Excel, les datasets partagés et les sources de données partagées sont à utiliser comme des modules dans vos rapports. Vous pouvez les stocker et les gérer ici en toute sécurité, dans la hiérarchie de dossiers classique. Vous pouvez baliser vos favoris et gérer le contenu si vous avez ce rôle.
+Le contenu du portail web est organisé par type : les indicateurs de performance clés et les rapports mobiles et paginés Reporting Services, les classeurs Excel, les datasets partagés et les sources de données partagées sont à utiliser comme des blocs de construction dans vos rapports. Vous pouvez les stocker et les gérer ici en toute sécurité, dans la hiérarchie de dossiers classique. Vous pouvez baliser vos favoris et gérer le contenu si vous avez ce rôle.
 
 Et vous pouvez toujours planifier le traitement des rapports, accéder aux rapports à la demande et vous abonner à des rapports publiés dans le nouveau portail web.
 
@@ -119,6 +119,5 @@ Plus de [Documentation du développeur Reporting Services](../reporting-services
 * [Installer Reporting Services](../reporting-services/install-windows/install-reporting-services.md)  
 * [Installer le Générateur de rapports](../reporting-services/install-windows/install-report-builder.md)   
 * [Télécharger SSDT (SQL Server Data Tools)](http://go.microsoft.com/fwlink/?LinkID=616714)  
-* [Rapports Power BI dans Reporting Services](../reporting-services/power-bi-reports-in-reporting-services.md)
 
 D’autres questions ? [Essayez de poser une question dans le forum Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

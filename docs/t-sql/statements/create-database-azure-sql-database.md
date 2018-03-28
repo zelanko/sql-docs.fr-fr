@@ -1,16 +1,16 @@
 ---
 title: CREATE DATABASE (Azure SQL Database | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 02/13/2018
-ms.prod: 
+ms.prod: ''
 ms.prod_service: sql-database
-ms.reviewer: 
+ms.reviewer: ''
 ms.service: sql-database
 ms.component: t-sql|statements
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - SERVICE_OBJECTIVE
@@ -29,22 +29,24 @@ helpviewer_keywords:
 - EDITION SQL Database
 - MAXSIZE SQL Database
 ms.assetid: 22b167f7-ae86-490b-adb3-ec02ca1c1508
-caps.latest.revision: 
+caps.latest.revision: ''
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: c61660015eb2f613148ad58b72386e42eb797db9
-ms.sourcegitcommit: aebbfe029badadfd18c46d5cd6456ea861a4e86d
+ms.openlocfilehash: 6d06fb220e8ec0df0ba5aab4fe5983c928d6a732
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="create-database-azure-sql-database"></a>CREATE DATABASE (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
   Crée une base de données.  
-  
+
+[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
+
 ## <a name="syntax"></a>Syntaxe  
   
 ``` 
@@ -218,7 +220,7 @@ L’argument CATALOG_COLLATION est uniquement disponible lors de la création de
  **Exigences supplémentaires relatives à l’utilisation de la syntaxe `CREATE DATABASE ... AS COPY OF` :** la connexion exécutant l’instruction sur le serveur local doit également être au moins `db_owner` sur le serveur source. Si la connexion est basée sur l’authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], la connexion exécutant l’instruction sur le serveur local doit avoir une connexion correspondante sur le serveur [!INCLUDE[ssSDS](../../includes/sssds-md.md)] source, avec les mêmes nom et mot de passe.  
   
 ## <a name="examples"></a>Exemples  
-Pour un didacticiel de démarrage rapide vous montrant comment se connecter à une base de données SQL Azure à l’aide de SQL Server Management Studio, consultez [Azure SQL Database : Utiliser SQL Server Management Studio pour vous connecter et interroger des données](/azure/sql-database/sql-database-connect-query-ssms).  
+Pour un tutoriel de démarrage rapide vous montrant comment se connecter à une base de données SQL Azure à l’aide de SQL Server Management Studio, consultez [Azure SQL Database : Utiliser SQL Server Management Studio pour vous connecter et interroger des données](/azure/sql-database/sql-database-connect-query-ssms).  
   
 ### <a name="simple-example"></a>Exemple simple  
  Voici un exemple simple de création d’une base de données.  

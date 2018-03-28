@@ -1,42 +1,42 @@
 ---
-title: "Détermination des autorisations effectives du moteur de base de données | Microsoft Docs"
-ms.custom: 
+title: Détermination des autorisations effectives du moteur de base de données | Microsoft Docs
+ms.custom: ''
 ms.date: 01/03/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: security
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - permissions, effective
 - effective permissions
 ms.assetid: 273ea09d-60ee-47f5-8828-8bdc7a3c3529
-caps.latest.revision: 
+caps.latest.revision: ''
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5c940b6382349630be1de89e5fde8db3991500bb
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 4d93f80a8a662edd4e84309aa95803dc0e3cc57c
+ms.sourcegitcommit: 6b1618aa3b24bf6759b00a820e09c52c4996ca10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="determining-effective-database-engine-permissions"></a>Détermination des autorisations effectives du moteur de base de données
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-Cette rubrique explique comment déterminer les détenteurs d’autorisations sur différents objets dans le moteur de base de données SQL Server. SQL Server met en œuvre deux systèmes d’autorisations pour ce moteur de base de données. Un ancien système de rôles fixes dispose d’autorisations pré-configurées. Depuis SQL Server 2005, un système plus flexible et plus précis est disponible. (Les informations contenues dans cette rubrique s’appliquent à SQL Server, à partir de 2005. Quelques types d’autorisations ne sont pas disponibles dans certaines versions de SQL Server.)
+Cet article explique comment déterminer les détenteurs d’autorisations sur différents objets dans le moteur de base de données SQL Server. SQL Server met en œuvre deux systèmes d’autorisations pour ce moteur de base de données. Un ancien système de rôles fixes dispose d’autorisations pré-configurées. Depuis SQL Server 2005, un système plus flexible et plus précis est disponible. (Les informations contenues dans cet article s’appliquent à SQL Server, à partir de 2005. Quelques types d’autorisations ne sont pas disponibles dans certaines versions de SQL Server.)
 
 >  [!IMPORTANT] 
 >  * Les autorisations effectives représentent l’agrégat des deux systèmes d’autorisations. 
 >  * Les refus d’autorisation se substituent aux octrois d’autorisation. 
 >  * Si un utilisateur est membre du rôle serveur fixe sysadmin, les autorisations ne sont pas vérifiées, et les refus d’accès ne sont donc pas appliqués. 
->  * L’ancien et le nouveau système présentent des similitudes. Par exemple, l’appartenance au rôle serveur fixe `sysadmin` revient à posséder l’autorisation `CONTROL SERVER`. Les systèmes, cependant, ne sont pas identiques. Par exemple, si une connexion ne dispose que de l’autorisation `CONTROL SERVER`, et qu’une procédure stockée vérifie l’appartenance au rôle serveur fixe `sysadmin`, la vérification des autorisations échoue. L’inverse est également vrai. 
+>  * L’ancien et le nouveau système présentent des similitudes. Par exemple, l’appartenance au rôle serveur fixe `sysadmin` revient à posséder l’autorisation `CONTROL SERVER`. Les systèmes, cependant, ne sont pas identiques. Par exemple, si une connexion ne dispose que de l’autorisation `CONTROL SERVER` et qu’une procédure stockée vérifie l’appartenance au rôle serveur fixe `sysadmin`, la vérification des autorisations échoue. L’inverse est également vrai. 
 
 
 ## <a name="summary"></a>Résumé   
@@ -51,13 +51,13 @@ Cette rubrique explique comment déterminer les détenteurs d’autorisations su
 * Les autorisations peuvent être acquises par le biais de connexions ou d’utilisateurs dotés de l’autorisation `IMPERSONATE`.   
 * Les membres du groupe des administrateurs locaux peuvent toujours élever leurs privilèges à `sysadmin`. (Ne s’applique pas à la base de données SQL.)  
 * Les membres du rôle serveur fixe `securityadmin` peuvent élever la plupart de leurs privilèges et dans certains cas les élever jusqu’à `sysadmin`. (Ne s’applique pas à la base de données SQL.)   
-* Les administrateurs SQL Server peuvent voir les informations se rapportant à toutes les connexions et à tous les utilisateurs. Moins privilégiés, les utilisateurs ne voient généralement que les informations relatives à leur propre identité.
+* Les administrateurs SQL Server peuvent voir les informations se rapportant à toutes les connexions et à tous les utilisateurs. Les utilisateurs avec moins de privilèges ne voient généralement que les informations relatives à leur propre identité.
 
 ## <a name="older-fixed-role-permission-system"></a>Ancien système d’autorisations de rôle fixe
 
-Il est impossible de modifier les rôles serveur et base de données fixes qui disposent d’autorisations pré-configurées. Pour déterminer qui est membre d’un rôle serveur fixe, exécutez la requête suivante.    
+Il est impossible de modifier les rôles serveur et base de données fixes qui disposent d’autorisations pré-configurées. Pour déterminer qui est membre d’un rôle serveur fixe, exécutez la requête suivante :    
 >  [!NOTE] 
->  Ne s’applique pas à la base de données SQL ni à SQL Data Warehouse, où les autorisations de niveau serveur ne sont pas disponibles. La colonne `is_fixed_role` de `sys.server_principals` a été ajoutée dans SQL Server 2012. Elle n’est pas nécessaire pour les versions antérieures de SQL Server.  
+>  Ne s’applique pas à SQL Database ni à SQL Data Warehouse, où les autorisations de niveau serveur ne sont pas disponibles. La colonne `is_fixed_role` de `sys.server_principals` a été ajoutée dans SQL Server 2012. Elle n’est pas nécessaire pour les versions antérieures de SQL Server.  
 ```sql
 SELECT SP1.name AS ServerRoleName, 
  isnull (SP2.name, 'No members') AS LoginName   
@@ -89,11 +89,11 @@ Pour comprendre les autorisations accordées à chaque rôle, consultez les desc
 
 ## <a name="newer-granular-permission-system"></a>Système d’autorisations granulaire plus récent
 
-Ce système est très souple, ce qui signifie qu’il peut être complexifié si la configuration voulue doit être très précise. Ceci n’est pas forcément une mauvaise chose en soi ; j’espère que mon établissement bancaire a ce degré de précision. Pour simplifier les choses, il permet de créer des rôles, d’attribuer des autorisations aux rôles, puis d’ajouter des groupes d’utilisateurs à ces rôles. Et c’est encore plus simple si l’équipe de développement de la bases de données sépare l’activité par schémas, pour accorder ensuite des autorisations de rôle à un schéma entier plutôt qu’à des procédures ou des tables individuelles. Pour autant, la réalité est complexe et nous devons considérer que les besoins des entreprises créent des exigences exceptionnelles en matière de sécurité.   
+Ce système est souple, ce qui signifie qu’il peut être plus complexe si la configuration voulue doit être précise. Pour simplifier les choses, il permet de créer des rôles, d’attribuer des autorisations aux rôles, puis d’ajouter des groupes d’utilisateurs à ces rôles. Et c’est encore plus simple si l’équipe de développement de la bases de données sépare l’activité par schémas, pour accorder ensuite des autorisations de rôle à un schéma entier plutôt qu’à des procédures ou des tables individuelles. Les scénarios réels sont complexes et les besoins de l’entreprise peuvent aboutir à des exigences de sécurité inattendues.   
 
-Le graphique suivant illustre les autorisations et leurs relations. Certaines des autorisations de niveau supérieur (telles que `CONTROL SERVER`) figurent plusieurs fois. Dans cette rubrique, le poster est trop petit pour être lu correctement. Cliquez sur l’image pour télécharger le **Poster des autorisations du moteur de base de données** au format pdf.  
+Le graphique suivant illustre les autorisations et leurs relations. Certaines des autorisations de niveau supérieur (telles que `CONTROL SERVER`) figurent plusieurs fois. Dans cet article, l’affiche est trop petite pour être lue correctement. Cliquez sur l’image pour télécharger le **Poster des autorisations du moteur de base de données** au format pdf.  
   
- [![Autorisations de moteur de base de données](../../../relational-databases/security/media/database-engine-permissions.PNG)](http://go.microsoft.com/fwlink/?LinkId=229142)
+ [![Autorisations de moteur de base de données](../../../relational-databases/security/media/database-engine-permissions.PNG)](https://aka.ms/sql-permissions-poster)
 
 ### <a name="security-classes"></a>Classes de sécurité
 
@@ -105,7 +105,7 @@ Des autorisations sont accordées aux principaux. Ces principaux peuvent être d
 
 Lorsqu’un utilisateur Windows se connecte au moyen d’une connexion de groupe Windows, certaines activités peuvent obliger SQL Server à créer une connexion ou un utilisateur pour représenter l’utilisateur Windows individuel. Par exemple, un groupe Windows (Techniciens) contient les utilisateurs (Mary, Todd, Pat) et ce groupe de techniciens dispose d’un compte d’utilisateur de base de données. Si Mary a l’autorisation et crée une table, vous pouvez créer un utilisateur (Mary) pour qu’il soit propriétaire de la table. Par ailleurs, si une autorisation est refusée à Todd alors qu’elle est détenue par le reste du groupe de techniciens, vous devez créer l’utilisateur Todd afin de suivre le refus d’autorisation.
 
-N’oubliez pas qu’un utilisateur Windows peut être membre de plusieurs groupes Windows (par exemple, le groupe des techniciens et celui des responsables). Qu’elles soient accordées ou refusées à la connexion des techniciens, à celle des responsables, à l’utilisateur individuellement, aux rôles dont l’utilisateur est membre, les autorisations seront toutes agrégées et évaluées pour les autorisations effectives. La fonction `HAS_PERMS_BY_NAME` permet de savoir si un utilisateur ou une connexion dispose d’une autorisation particulière. Toutefois, il n’existe aucun moyen avéré de déterminer la source de l’octroi ou du refus d’une autorisation. Vous devez examiner la liste des autorisations et procéder éventuellement par tâtonnements.
+N’oubliez pas qu’un utilisateur Windows peut être membre de plusieurs groupes Windows (par exemple, le groupe des techniciens et celui des responsables). Qu’elles soient accordées ou refusées à la connexion des techniciens, à celle des responsables, à l’utilisateur individuellement, aux rôles dont l’utilisateur est membre, les autorisations seront toutes agrégées et évaluées pour les autorisations effectives. La fonction `HAS_PERMS_BY_NAME` permet de savoir si un utilisateur ou une connexion dispose d’une autorisation particulière. Toutefois, il n’existe aucun moyen avéré de déterminer la source de l’octroi ou du refus d’une autorisation. Examinez la liste des autorisations et procédez éventuellement par tâtonnements.
 
 ## <a name="useful-queries"></a>Requêtes utiles
 
