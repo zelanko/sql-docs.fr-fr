@@ -47,7 +47,7 @@ ms.lasthandoff: 03/22/2018
 ####  <a name="Permissions"></a> Permissions  
  Vous devez disposer du rôle dqs_kb_editor ou dqs_administrator sur la base de données DQS_MAIN pour importer les valeurs de champs d'un fichier Excel.  
   
-##  <a name="Import"></a> Import values from an Excel file into a domain  
+##  <a name="Import"></a> Importer les valeurs d'un fichier Excel dans un domaine  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Exécutez l’application Data Quality Client](../data-quality-services/run-the-data-quality-client-application.md).  
   

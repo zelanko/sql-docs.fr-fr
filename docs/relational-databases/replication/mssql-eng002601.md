@@ -1,21 +1,21 @@
 ---
 title: MSSQL_ENG002601 | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: replication
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - MSSQL_ENG002601 error
 ms.assetid: 657c3ae6-9e4b-4c60-becc-4caf7435c1dc
-caps.latest.revision: 
+caps.latest.revision: ''
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
@@ -68,7 +68,7 @@ ms.lasthandoff: 03/08/2018
   
 -   L'erreur se produit pendant l'insertion dans une table système **MSmerge_contents**.  
   
-     Cette erreur peut se produire en raison d'une valeur incorrecte pour la propriété du filtre de jointure **join_unique_key**. Cette propriété doit être définie avec la valeur TRUE seulement si la colonne de jointure dans la table parente est unique. Si la propriété est définie avec la valeur TRUE mais que la colonne n'est pas unique, cette erreur est déclenchée. Pour plus d'informations sur la définition de cette propriété, consultez [Define and Modify a Join Filter Between Merge Articles](../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md).  
+     Cette erreur peut se produire en raison d'une valeur incorrecte pour la propriété du filtre de jointure **join_unique_key**. Cette propriété doit être définie avec la valeur TRUE seulement si la colonne de jointure dans la table parente est unique. Si la propriété est définie avec la valeur TRUE mais que la colonne n'est pas unique, cette erreur est déclenchée. Pour plus d’informations sur la définition de cette propriété, consultez [définir et modifier un Join Filter Between Merge Articles](../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md).  
   
 ## <a name="see-also"></a> Voir aussi  
  [Guide de référence des erreurs et des événements &#40;réplication&#41;](../../relational-databases/replication/errors-and-events-reference-replication.md)  

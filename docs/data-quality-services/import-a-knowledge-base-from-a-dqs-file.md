@@ -43,7 +43,7 @@ ms.lasthandoff: 03/22/2018
 ####  <a name="Permissions"></a> Permissions  
  Vous devez disposer du rôle dqs_kb_editor ou dqs_administrator sur la base de données DQS_MAIN pour importer une base de connaissances à partir d'un fichier de données .dqs.  
   
-##  <a name="Import"></a> Import a knowledge base from a .dqs file  
+##  <a name="Import"></a> Importer une base de connaissances à partir d'un fichier .dqs  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Exécutez l’application Data Quality Client](../data-quality-services/run-the-data-quality-client-application.md).  
   

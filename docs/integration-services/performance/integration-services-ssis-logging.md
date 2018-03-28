@@ -1,16 +1,16 @@
 ---
-title: "Journalisation d’Integration Services (SSIS) | Microsoft Docs"
-ms.custom: 
+title: Journalisation d’Integration Services (SSIS) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: performance
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.configuredtslogs.containers.f1
@@ -32,7 +32,7 @@ helpviewer_keywords:
 - Text File log provider
 - SQL Server log provider
 ms.assetid: 65e17889-371f-4951-9a7e-9932b2d0dcde
-caps.latest.revision: 
+caps.latest.revision: ''
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
@@ -46,7 +46,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="integration-services-ssis-logging"></a>Journalisation d'Integration Services (SSIS)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] contient des modules fournisseur d'informations que vous pouvez utiliser pour implémenter la journalisation dans les packages, les conteneurs et les tâches. Avec la journalisation, vous pouvez capturer des informations d'exécution sur un package qui vous aideront à auditer et à résoudre les problèmes d'un package à chaque exécution. Un journal peut ainsi capturer le nom de l'opérateur ayant exécuté le package et l'heure à laquelle le package a débuté et s'est terminé.  
   
- Vous pouvez configurer l'étendue des informations enregistrées lors d'une exécution de package sur le serveur [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Pour plus d’informations, consultez [Enable Logging for Package Execution on the SSIS Server](#server_logging).  
+ Vous pouvez configurer l'étendue des informations enregistrées lors d'une exécution de package sur le serveur [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Pour plus d’informations, consultez [Activer la journalisation des exécutions de package sur le serveur SSIS](#server_logging).  
   
  Vous pouvez également inclure la journalisation lorsque vous exécutez un package à l'aide de l'utilitaire d'invite de commandes **dtexec** . Pour plus d'informations sur les arguments d'invite de commandes prenant en charge la journalisation, consultez [dtexec Utility](../../integration-services/packages/dtexec-utility.md).  
   
@@ -385,7 +385,7 @@ ms.lasthandoff: 01/25/2018
   
 9. Pour enregistrer le package mis à jour, cliquez sur **Enregistrer les éléments sélectionnés** dans le menu **Fichier** .  
 
-## <a name="server_logging"></a> Enable Logging for Package Execution on the SSIS Server
+## <a name="server_logging"></a>Activer la journalisation des exécutions de package sur le serveur SSIS
   Cette rubrique explique comment définir ou modifier le niveau de journalisation d'un package lorsque vous exécutez un package déployé sur le serveur [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Le niveau de journalisation que vous définissez lorsque vous exécutez le package remplace la journalisation du package configurée lors de la création dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Pour plus d’informations, consultez [Activer la journalisation des packages dans les outils de données SQL Server](#ssdt) .  
   
  Dans **Propriétés du serveur**de SQL Server, sous la propriété **Niveau de journalisation du serveur** , vous pouvez sélectionner un niveau de journalisation par défaut au niveau du serveur. Vous pouvez choisir parmi les niveaux de journalisation intégrés décrits dans cette rubrique, ou choisir un niveau de journalisation personnalisé existant. Le niveau de journalisation sélectionné s'applique par défaut à tous les packages déployés sur le catalogue SSIS. Il s'applique également par défaut à une étape de travail de l'Agent SQL qui exécute un package SSIS.  

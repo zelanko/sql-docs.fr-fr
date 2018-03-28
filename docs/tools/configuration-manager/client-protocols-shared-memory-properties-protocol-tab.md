@@ -1,22 +1,22 @@
 ---
 title: Protocoles clients - Shared Memory Properties (onglet protocole) | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: configuration-manager
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - shared memory [SQL Server]
 - client protocols [SQL Server]
 ms.assetid: 941369bd-cd4d-4a64-8e42-724d9a866eb7
-caps.latest.revision: 
+caps.latest.revision: ''
 author: stevestein
 ms.author: sstein
 manager: craigg
@@ -29,7 +29,7 @@ ms.lasthandoff: 02/03/2018
 ---
 # <a name="client-protocols---shared-memory-properties-protocol-tab"></a>Protocoles clients - Propriétés de Mémoire partagée (onglet Protocole)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
-Dans le Gestionnaire de configuration [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , utilisez l'onglet **Protocole** de la boîte de dialogue **Propriétés de Mémoire partagée** pour visualiser ou modifier la mémoire partagée. Pour plus d'informations sur les chaînes de connexion, consultez [Creating a Valid Connection String Using Shared Memory Protocol](../../tools/configuration-manager/creating-a-valid-connection-string-using-shared-memory-protocol.md).  
+Dans le Gestionnaire de configuration [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , utilisez l'onglet **Protocole** de la boîte de dialogue **Propriétés de Mémoire partagée** pour visualiser ou modifier la mémoire partagée. Pour plus d'informations sur les chaînes de connexion, consultez [Création d'une chaîne de connexion valide à l'aide du protocole de mémoire partagée](../../tools/configuration-manager/creating-a-valid-connection-string-using-shared-memory-protocol.md).  
   
 ## <a name="options"></a>Options  
  **Activé**  

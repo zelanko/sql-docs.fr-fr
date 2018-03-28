@@ -31,7 +31,7 @@ Les notes suivantes s’appliquent à SQL Server 2017 est en cours d’exécutio
 
 | Plateforme | Système de fichiers | Guide d'installation |
 |-----|-----|-----|
-| Bureau, serveur et station de travail Red Hat Enterprise Linux 7.3 ou 7.4 | XFS ou EXT4 | [Guide d’installation](quickstart-install-connect-red-hat.md) | 
+| Red Hat Enterprise Linux 7.3 ou 7.4 Workstation, Server, et Desktop | XFS ou EXT4 | [Guide d’installation](quickstart-install-connect-red-hat.md) | 
 | Serveur Linux SUSE Enterprise SP2 v12 | XFS ou EXT4 | [Guide d’installation](quickstart-install-connect-suse.md) |
 | Ubuntu 16.04LTS | XFS ou EXT4 | [Guide d’installation](quickstart-install-connect-ubuntu.md) | 
 | Moteur docker 1.8 + sur Windows, Mac ou Linux | Néant | [Guide d’installation](quickstart-install-connect-docker.md) | 
@@ -160,7 +160,7 @@ Pour les installations de package manuelle ou hors connexion, vous pouvez télé
 
 ## <a id="GA"></a> GA (octobre 2017)
 
-Il s’agit de la version de la disponibilité générale de SQL Server 2017. La version du moteur SQL Server pour cette version est 14.0.1000.169.
+Il s’agit de la version de disponibilité générale de SQL Server 2017. La version du moteur SQL Server pour cette version est 14.0.1000.169.
 
 ### <a name="package-details"></a>Détails du package
 
@@ -231,11 +231,11 @@ Les sections suivantes décrivent les problèmes connus avec la version de la di
 
     - **Résolution**: Si vous souhaitez disposer de plusieurs instances sur un hôte donné, envisagez d’utiliser des machines virtuelles ou des conteneurs Docker. 
 
-- Gestionnaire de Configuration SQL Server ne peut pas se connecter à SQL Server sur Linux.
+- Le gestionnaire de Configuration SQL Server ne peut pas se connecter à SQL Server sur Linux.
 
 - La langue par défaut de la **sa** connexion est l’anglaise.
 
-    - **Résolution**: modifier la langue de la **sa** connexion avec le **ALTER LOGIN** instruction.
+    - **Résolution**: modifier la langue de la connexion **sa** avec l'instruction **ALTER LOGIN**.
 
 #### <a name="databases"></a>Bases de données
 

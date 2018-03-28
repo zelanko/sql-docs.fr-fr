@@ -41,7 +41,7 @@ ms.lasthandoff: 03/22/2018
 ####  <a name="Permissions"></a> Permissions  
  Vous devez disposer du rôle dqs_kb_editor ou dqs_administrator sur la base de données DQS_MAIN pour exporter une base de connaissances dans un fichier de données .dqs.  
   
-##  <a name="Export"></a> Export a knowledge base to a .dqs file  
+##  <a name="Export"></a> Exporter une base de connaissances dans un fichier .dqs  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Exécutez l’application Data Quality Client](../data-quality-services/run-the-data-quality-client-application.md).  
   

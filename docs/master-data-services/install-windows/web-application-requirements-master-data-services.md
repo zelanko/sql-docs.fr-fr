@@ -1,21 +1,21 @@
 ---
-title: "Configuration requise pour l’application web (Master Data Services) | Microsoft Docs"
-ms.custom: 
+title: Configuration requise pour l’application web (Master Data Services) | Microsoft Docs
+ms.custom: ''
 ms.date: 02/13/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
-ms.service: 
+ms.service: ''
 ms.component: install-windows
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 keywords:
 - master data services
 ms.assetid: 9455d3cf-c1b7-4d48-8aff-7dc636ed5dc3
-caps.latest.revision: 
+caps.latest.revision: ''
 author: leolimsft
 ms.author: lle
 manager: craigg
@@ -51,7 +51,7 @@ ms.lasthandoff: 03/05/2018
  
  
 > [!IMPORTANT]  
->La**compression du contenu dynamique** est activée par défaut. Cela réduit considérablement la taille de la réponse xml et économise des E/S réseau, mais le processeur est davantage sollicité.  Pour plus d’informations, consultez **[CTP 2.0] Performances améliorées** in [What's New in Master Data Services &#40;MDS&#41;](../../master-data-services/what-s-new-in-master-data-services-mds.md).  
+>La**compression du contenu dynamique** est activée par défaut. Cela réduit considérablement la taille de la réponse xml et économise des E/S réseau, mais le processeur est davantage sollicité.  Pour plus d’informations, consultez **[CTP 2.0] Performances améliorées** in [Nouveautés de Master Data Services &#40;MDS&#41;](../../master-data-services/what-s-new-in-master-data-services-mds.md).  
   
 ||  
 |-|  

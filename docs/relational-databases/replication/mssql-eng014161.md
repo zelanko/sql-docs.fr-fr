@@ -1,21 +1,21 @@
 ---
 title: MSSQL_ENG014161 | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: replication
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - MSSQL_ENG014161 error
 ms.assetid: 4b983e76-bb77-43c5-b44b-19919d3da619
-caps.latest.revision: 
+caps.latest.revision: ''
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
@@ -50,7 +50,7 @@ ms.lasthandoff: 03/08/2018
   
  Si la valeur du seuil est appropriée, mais qu'elle continue à être franchie, vous devez déterminer où se trouve le goulet d'étranglement dans le système. Pour plus d'informations sur le contrôle des performances de réplication et la résolution des éventuels problèmes, consultez les rubriques suivantes :  
   
--   [Measure Latency and Validate Connections for Transactional Replication](../../relational-databases/replication/monitor/measure-latency-and-validate-connections-for-transactional-replication.md)  
+-   [Mesurer la latence et valider les connexions pour la réplication transactionnelle](../../relational-databases/replication/monitor/measure-latency-and-validate-connections-for-transactional-replication.md)  
   
 -   [Analyser les performances avec le moniteur de réplication](../../relational-databases/replication/monitor/monitor-performance-with-replication-monitor.md)  
   
