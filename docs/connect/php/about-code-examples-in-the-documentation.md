@@ -1,44 +1,44 @@
 ---
-title: "À propos des exemples de Code dans la Documentation | Documents Microsoft"
-ms.custom: 
-ms.date: 01/19/2017
+title: À propos des exemples de Code dans la Documentation | Documents Microsoft
+ms.custom: ''
+ms.date: 03/26/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 3f035c37-0f2e-47d4-94e0-a10774402e82
-caps.latest.revision: "31"
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 4e9218af7938f3d60548a145936ba1645d4db824
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: a5515db3c5b98ddb0c3645016eade20ecf4f224b
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="about-code-examples-in-the-documentation"></a>À propos des exemples de code dans la documentation
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
+## <a name="remarks-about-the-code-examples"></a>Remarques sur les exemples de code
 Il existe plusieurs points à noter quand vous exécutez les exemples de code dans la documentation [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] :  
   
--   Presque tous les exemples partent du principe que SQL Server 2005 ou version ultérieure (SQL Server 2008 ou version ultérieure si vous utilisez la version 3.1) et la base de données AdventureWorks sont installés sur l’ordinateur local.  
+-   Presque tous les exemples supposent que SQL Server 2008 ou version ultérieure et la base de données AdventureWorks sont installés sur l’ordinateur local.  
   
     Pour plus d’informations sur la façon de télécharger les éditions gratuites et les versions d’évaluation de SQL Server, consultez [SQL Server](http://go.microsoft.com/fwlink/?LinkID=120193).  
   
-    Pour plus d’informations sur le téléchargement de la base de données AdventureWorks, consultez [Exemples et projets de la communauté Microsoft SQL Server](http://go.microsoft.com/fwlink/?LinkID=67739).  
-  
-    Pour plus d’informations sur l’installation de la base de données AdventureWorks, consultez [Procédure pas à pas : installation de la base de données AdventureWorks](http://go.microsoft.com/fwlink/?LinkID=65819).  
+    Pour plus d’informations sur la façon de télécharger et installer la base de données AdventureWorks, consultez le [page AdventureWorks dans le référentiel Github d’exemples SQL Server](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works).
   
 -   Presque tous les exemples de code de cette documentation sont destinés à être exécutés à partir de la ligne de commande, ce qui permet de les tester tous de manière automatisée. Pour plus d’informations sur l’exécution de PHP à partir de la ligne de commande, consultez [Utilisation de PHP à partir de la ligne de commande](http://php.net/manual/en/features.commandline.php).  
   
--   Bien que les exemples soient écrits pour être exécutés à partir de la ligne de commande, chaque exemple peut être exécuté en étant appelé à partir d’un navigateur sans avoir à apporter des modifications au script. Pour obtenir une mise en forme de sortie lisible, remplacez chaque « \n » par «\<\/br > » dans chaque exemple avant de l’appeler à partir d’un navigateur.  
+-   Bien que les exemples sont destinés à être exécutés à partir de la ligne de commande, chaque exemple peut être exécuté en l’appelant à partir d’un navigateur sans apporter de modifications au script. Pour formater la sortie correcte, remplacez chaque « \n » par «\<\/br > » dans chaque exemple avant de l’appeler à partir d’un navigateur.  
   
 -   Par souci de concision, la gestion des erreurs appropriée n’est pas effectuée dans tous les exemples. Il est recommandé de vérifier s’il existe des erreurs dans tout appel à une fonction **sqlsrv** ou méthode PDO et de les gérer selon les besoins de l’application.  
   
@@ -58,5 +58,5 @@ Il existe plusieurs points à noter quand vous exécutez les exemples de code da
     Pour plus d’informations sur la gestion des erreurs et avertissements, consultez [Gestion des erreurs et des avertissements](../../connect/php/handling-errors-and-warnings.md).  
   
 ## <a name="see-also"></a>Voir aussi  
-[Vue d’ensemble du pilote SQL PHP](../../connect/php/overview-of-the-php-sql-driver.md)
+[Vue d’ensemble des pilotes Microsoft SQL Server pour PHP](../../connect/php/overview-of-the-php-sql-driver.md)
   

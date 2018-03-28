@@ -1,27 +1,28 @@
 ---
-title: "La récupération de données | Documents Microsoft"
-ms.custom: 
-ms.date: 01/19/2017
+title: La récupération de données | Documents Microsoft
+ms.custom: ''
+ms.date: 03/26/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 3414992c-61c0-4e7d-b509-72517e52c1bb
-caps.latest.revision: "42"
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 54cd9cef5cf2d0c7a1af40028adfb5340823e94b
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 8f7482d5980d1e7a51479d9884623390b3e20fa5
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="retrieving-data"></a>Récupération de données
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -75,7 +76,7 @@ Vous pouvez voir le nombre de lignes dans un jeu de résultats si vous spécifie
   
 ## <a name="in-this-section"></a>Dans cette section  
   
-|Rubrique|Description|  
+|Rubrique| Description|  
 |---------|---------------|  
 |[Extraction de données sous la forme d’une chaîne](../../connect/php/retrieving-data-as-a-stream-using-the-sqlsrv-driver.md)|Fournit une vue d’ensemble de la manière de diffuser en continu des données à partir du serveur et indique des liens vers des cas d’usage spécifiques.|  
 |[Utilisation de paramètres directionnels](../../connect/php/using-directional-parameters.md)|Décrit comment utiliser les paramètres directionnels lors de l’appel d’une procédure stockée.|  
@@ -86,6 +87,7 @@ Vous pouvez voir le nombre de lignes dans un jeu de résultats si vous spécifie
 [Procédure : spécifier des types de données PHP](../../connect/php/how-to-specify-php-data-types.md)  
   
 ## <a name="see-also"></a>Voir aussi  
-[Guide de programmation pour le pilote SQL PHP](../../connect/php/programming-guide-for-php-sql-driver.md)
+[Guide de programmation pour les pilotes Microsoft pour PHP pour SQL Server](../../connect/php/programming-guide-for-php-sql-driver.md)
+
 [Récupération de données](../../connect/php/retrieving-data.md)  
   

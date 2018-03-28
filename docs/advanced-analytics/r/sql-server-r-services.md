@@ -1,32 +1,32 @@
 ---
-title: "Apprentissage et R Services (de-de base de données) de l’ordinateur SQL Server | Documents Microsoft"
+title: Apprentissage et R Services (de-de base de données) de l’ordinateur SQL Server | Documents Microsoft
 ms.date: 03/16/2018
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
-ms.assetid: 
-caps.latest.revision: 
+ms.assetid: ''
+caps.latest.revision: ''
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
 ms.workload: Active
-ms.openlocfilehash: 0d5bb56717eefa50a219db051eb611a82974a0bc
-ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
+ms.openlocfilehash: f84f61721bca14a78694a9df6c7af8b7f7d74ea7
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/21/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="sql-server-machine-learning-and-r-services-in-database"></a>Apprentissage et R Services (de-de base de données) de l’ordinateur SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Une installation de base de données de l’apprentissage intervient dans le contexte d’une instance de moteur de base de données SQL Server, les données résidentes dans votre instance de SQL Server prend en charge de script externe R et Python. Étant donné que l’apprentissage est intégré à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vous pouvez conserver analytique proches des données et éliminer les coûts et les risques de sécurité liés au déplacement des données.
 
-Le moteur de base de données étant à plusieurs instances, vous pouvez installer plusieurs instances de la base de données analytique, ou encore plus anciens et plus récentes versions côte à côte. Les choix incluent le [Machine Learning Services (de-de base de données) de SQL Server 2017](../install/sql-machine-learning-standalone-windows-install.md) avec R et Python, ou [R Services (dans-base de données) de SQL Server 2016](../install/sql-r-standalone-windows-install.md) avec simplement R. 
+Le moteur de base de données étant à plusieurs instances, vous pouvez installer plusieurs instances de la base de données analytique, ou encore plus anciens et plus récentes versions côte à côte. Les choix incluent le [Machine Learning Services (de-de base de données) de SQL Server 2017](../install/sql-machine-learning-standalone-windows-install.md) avec R et Python, ou [R Services (de-de base de données) de SQL Server 2016](../install/sql-r-standalone-windows-install.md) avec simplement R. 
 
 Composants de machine learning peuvent également être installés en tant qu’instance indépendant [serveurs autonomes](r-server-standalone.md). En règle générale, nous vous recommandons traiter (autonome) et (dans-base de données) installations mutuellement exclusif afin d’éviter les conflits de ressources, mais si vous disposez de suffisamment de ressources, il n’y aucun interdictions contre les installer à la fois sur le même ordinateur physique.
 

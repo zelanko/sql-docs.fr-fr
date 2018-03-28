@@ -1,16 +1,16 @@
 ---
-title: "Niveau de compatibilité ALTER DATABASE (Transact-SQL) | Microsoft Docs"
-ms.custom: 
+title: Niveau de compatibilité ALTER DATABASE (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 01/30/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - COMPATIBILITY_LEVEL_TSQL
@@ -26,22 +26,24 @@ helpviewer_keywords:
 - db compatibility level
 - db compat level
 ms.assetid: ca5fd220-d5ea-4182-8950-55d4101a86f6
-caps.latest.revision: 
+caps.latest.revision: ''
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 750578d028077079b051a08cc2a0ed4276983cda
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: d22ee796f75c4c4736c983801a63293b8a44e7cb
+ms.sourcegitcommit: 3ed9be04cc7fb9ab1a9ec230c298ad2932acc71b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 03/17/2018
 ---
 # <a name="alter-database-transact-sql-compatibility-level"></a>Niveau de compatibilité ALTER DATABASE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 Définit certains comportements de base de données pour qu'ils soient compatibles avec la version de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] spécifiée. Pour les autres options ALTER DATABASE, consultez [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).  
-  
+
+[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
+
  ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
@@ -155,7 +157,7 @@ Cette section décrit les nouveaux comportements introduits avec le niveau de co
 | Pour le niveau 120, les statistiques sont échantillonnées par un processus *monothread*. | Pour le niveau 130, les statistiques sont échantillonnées par un processus *multithread*. |  
 | Le nombre de clés étrangères entrantes est limité à 253. | Une table peut être référencée par un nombre maximal de 10 000 clés étrangères entrantes (ou types de références similaires). Pour connaître les restrictions associées, consultez [Create Foreign Key Relationships](../../relational-databases/tables/create-foreign-key-relationships.md). |  
 |Les algorithmes de hachage dépréciés MD2, MD4, MD5, SHA et SHA1 sont autorisés.|Seuls les algorithmes de hachage SHA2_256 et SHA2_512 sont autorisés.|
-||[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] Comprend des améliorations au niveau de certaines conversions de types de données et de certaines opérations (dont la plupart sont peu courantes). Pour plus d’informations, consultez [Améliorations de SQL Server 2016 dans le traitement de certains types de données et des opérations peu courantes](https://support.microsoft.com/help/4010261/sql-server-2016-improvements-in-handling-some-data-types-and-uncommon).|
+||[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] comprend des améliorations au niveau de certaines conversions de types de données et de certaines opérations (dont la plupart sont peu courantes). Pour plus d’informations, consultez [Améliorations de SQL Server 2016 dans le traitement de certains types de données et des opérations peu courantes](https://support.microsoft.com/help/4010261/sql-server-2016-improvements-in-handling-some-data-types-and-uncommon).|
   
 Les correctifs qui se trouvaient sous l’indicateur de trace 4199 dans les versions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] antérieures à [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] sont maintenant activés par défaut avec le niveau de compatibilité 130. L’indicateur de trace 4199 est toujours applicable aux correctifs de l’optimiseur de requête qui ont été publiés après la publication de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]. Pour utiliser l’ancien optimiseur de requête de [!INCLUDE[ssSDS](../../includes/sssds-md.md)], vous devez sélectionner le niveau de compatibilité 110. Pour plus d’informations sur l’indicateur de trace 4199, consultez [Indicateur de trace 4199](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md#4199).  
   
@@ -164,7 +166,7 @@ Les correctifs qui se trouvaient sous l’indicateur de trace 4199 dans les vers
   
 |Paramètre de niveau de compatibilité inférieur ou égal à 110|Paramètre de niveau de compatibilité égal à 120|  
 |--------------------------------------------------|-----------------------------------------|  
-|L'ancien optimiseur de requête est utilisé.|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Comprend d’importantes améliorations au niveau du composant qui crée et optimise les plans de requête. Cette nouvelle fonctionnalité de l'optimiseur de requête dépend de l'utilisation du niveau de compatibilité 120 de la base de données. Pour bénéficier de ces améliorations, vous devez développer des applications de base de données à l'aide d'un niveau de compatibilité de base de données 120. Les applications qui sont migrées des versions antérieures de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] doivent être soigneusement testées pour vérifier que de bonnes performances sont conservées ou améliorées. Si les performances se dégradent, définissez le niveau de compatibilité 110 ou inférieur de base de données pour utiliser la méthodologie de l'ancien optimiseur de requête.<br /><br /> Le niveau de compatibilité 120 de la base de données utilise un nouvel estimateur de cardinalité qui est réglé pour le stockage des données et les charges de travail OLTP modernes. Avant de définir le niveau de compatibilité de la base de données sur 110 en raison de problèmes de performances, consultez les recommandations de la section Plans de requête, dans la rubrique [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [Nouveautés du moteur de base de données](../../database-engine/configure-windows/what-s-new-in-sql-server-2016-database-engine.md).|  
+|L'ancien optimiseur de requête est utilisé.|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] comprend d’importantes améliorations au niveau du composant qui crée et optimise les plans de requête. Cette nouvelle fonctionnalité de l'optimiseur de requête dépend de l'utilisation du niveau de compatibilité 120 de la base de données. Pour bénéficier de ces améliorations, vous devez développer des applications de base de données à l'aide d'un niveau de compatibilité de base de données 120. Les applications qui sont migrées des versions antérieures de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] doivent être soigneusement testées pour vérifier que de bonnes performances sont conservées ou améliorées. Si les performances se dégradent, définissez le niveau de compatibilité 110 ou inférieur de base de données pour utiliser la méthodologie de l'ancien optimiseur de requête.<br /><br /> Le niveau de compatibilité 120 de la base de données utilise un nouvel estimateur de cardinalité qui est réglé pour le stockage des données et les charges de travail OLTP modernes. Avant de définir le niveau de compatibilité de la base de données sur 110 en raison de problèmes de performances, consultez les recommandations de la section Plans de requête, dans la rubrique [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [Nouveautés du moteur de base de données](../../database-engine/configure-windows/what-s-new-in-sql-server-2016-database-engine.md).|  
 |Dans les niveaux de compatibilité inférieurs à 120, le paramètre de langue est ignoré lors de la conversion d’une valeur de **date** en une valeur de chaîne. Notez que ce comportement ne s’applique qu’au type **date**. Consultez l’exemple B dans la section Exemples ci-dessous.|Le paramètre de langue est pris en compte lors de la conversion d’une valeur de **date** en une valeur de chaîne.|  
 |Les références récursives à droite d’une clause `EXCEPT` créent une boucle infinie. L’exemple C de la section Exemples ci-dessous illustre ce comportement.|Les références récursives d’une clause `EXCEPT` génèrent une erreur, conformément à la norme SQL ANSI.|  
 |L’expression de table commune récursive permet les noms de colonnes en double.|Les expressions CTE récursives n'autorisent pas les noms de colonnes en double.|  
@@ -209,7 +211,7 @@ Les correctifs qui se trouvaient sous l’indicateur de trace 4199 dans les vers
 |Les valeurs d'attribut XML qui contiennent des caractères de fin de ligne (retour chariot et saut de ligne) ne sont pas normalisées selon la norme XML. Autrement dit, les deux caractères sont retournés à la place d'un caractère de saut de ligne unique.|Les valeurs d'attribut XML qui contiennent des caractères de fin de ligne (retour chariot et saut de ligne) sont normalisées selon la norme XML. Autrement dit, tous les sauts de ligne dans les entités analysées externes (y compris l'entité de document) sont normalisés à l'entrée en un caractère unique #xA par la traduction de la séquence de deux caractères #xD #xA et #xD qui n'est pas suivi de #xA.<br /><br /> Les applications qui utilisent des attributs pour transporter des valeurs de chaîne qui contiennent des caractères de fin de ligne ne recevront pas ces caractères en retour lorsqu'ils sont soumis. Pour éviter le processus de normalisation, utilisez les entités de caractère numérique XML pour encoder tous les caractères de fin de ligne.|Faible|  
 |Les propriétés de colonne `ROWGUIDCOL` et `IDENTITY` peuvent être nommées de manière incorrecte en tant que contrainte. Par exemple, l'instruction `CREATE TABLE T (C1 int CONSTRAINT MyConstraint IDENTITY)` s'exécute, mais le nom de contrainte n'est pas conservé et n'est pas accessible à l'utilisateur.|Les propriétés de colonne `ROWGUIDCOL` et `IDENTITY` ne peuvent pas être nommées en tant que contrainte. L'erreur 156 est retournée.|Faible|  
 |La mise à jour des colonnes, à l’aide d’une affectation bidirectionnelle telle que `UPDATE T1 SET @v = column_name = <expression>`, peut produire des résultats inattendus, parce que la valeur dynamique de la variable peut être utilisée dans d’autres clauses, telles que les clauses `WHER`E et `ON`, pendant l’exécution de l’instruction au lieu de la valeur de départ de l’instruction. Cette opération peut modifier les significations des prédicats de façon imprévisible et ligne par ligne.<br /><br /> Ce comportement est applicable uniquement lorsque le niveau de compatibilité est défini à 90.|La mise à jour de colonnes en utilisant une affectation bidirectionnelle produit des résultats attendus car seule la valeur de départ d'instruction de la colonne fait l'objet d'un accès pendant l'exécution de l'instruction.|Faible|  
-|Consultez l’exemple E dans la section Exemples ci-dessous.|Consultez l’exemple F dans la section Exemples ci-dessous.|Faible|  
+|Consultez l’exemple E dans la section Exemples ci-dessous.|Consultez l’exemple F dans la section Exemples ci-dessous.|Faible|  
 |La fonction ODBC {fn CONVERT()} utilise le format de date par défaut de la langue. Pour certaines langues, le format par défaut est YDM, ce qui peut provoquer des erreurs de conversion lorsque CONVERT() est associé à d’autres fonctions, telles que `{fn CURDATE()}`, qui attendent un format YMD.|La fonction ODBC `{fn CONVERT()}` utilise le style 121 (format YMD indépendant de la langue) lors de la conversion aux types de données ODBC SQL_TIMESTAMP, SQL_DATE, SQL_TIME, SQLDATE, SQL_TYPE_TIME et SQL_TYPE_TIMESTAMP.|Faible|  
 |Les intrinsèques datetime tels que DATEPART ne requièrent pas que les valeurs d'entrée de chaîne soient des littéraux datetime valides. Par exemple, `SELECT DATEPART (year, '2007/05-30')` est compilé correctement.|Les intrinsèques datetime tels que `DATEPART` nécessitent que les valeurs d’entrée de chaîne soient des littéraux datetime valides. L'erreur 241 est retournée lorsqu'un littéral datetime non valide est utilisé.|Faible|  
   

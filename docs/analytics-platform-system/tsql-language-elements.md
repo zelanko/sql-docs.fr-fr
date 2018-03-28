@@ -1,30 +1,30 @@
 ---
-title: "Éléments de langage T-SQL - Analytique plateforme système Parallel Data Warehouse | Documents Microsoft"
+title: Éléments de langage T-SQL - Analytique plateforme système Parallel Data Warehouse | Documents Microsoft
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
-ms.custom: 
+ms.custom: ''
 ms.technology: mpp-data-warehouse
-description: "Éléments de langage Transact-SQL (T-SQL) pour un système de plateforme analyse (APS) SQL Server Parallel Data Warehouse (PDW)."
+description: Éléments de langage Transact-SQL (T-SQL) pour un système de plateforme analyse (APS) SQL Server Parallel Data Warehouse (PDW).
 services: sql-data-warehouse
 documentationcenter: NA
-editor: 
+editor: ''
 ms.assetid: ea0b9a3e-e489-458e-addc-cc153e5cc158
 ms.devlang: NA
 ms.topic: article
 ms.tgt_pltfrm: NA
 ms.workload: data-services
 ms.date: 12/15/2016
-ms.openlocfilehash: 35c8de2f1105bbbda05642b993d8fe0c88d76f39
-ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
+ms.openlocfilehash: 0fa153859632739fe626a92dbf8d741a879dd74f
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="language-elements"></a>Éléments de langage
 Éléments de langage Transact-SQL (T-SQL) pour un système de plateforme analyse (APS) SQL Server Parallel Data Warehouse (PDW).
@@ -61,7 +61,7 @@ ms.lasthandoff: 03/05/2018
 * [- (Négatif)](../t-sql/language-elements/unary-operators-negative.md)
 * [- (Soustraire)](../t-sql/language-elements/subtract-transact-sql.md)
 * [* (Multiplier)](../t-sql/language-elements/multiply-transact-sql.md)
-* [/ (Divide)](../t-sql/language-elements/divide-transact-sql.md)
+* [/ (Diviser)](../t-sql/language-elements/divide-transact-sql.md)
 * [Modulo](../t-sql/language-elements/modulo-transact-sql.md)
 
 ## <a name="wildcard-characters-to-match"></a>Caractères génériques à comparer
@@ -71,7 +71,7 @@ ms.lasthandoff: 03/05/2018
 * [> = (grand ou égal à)](../t-sql/language-elements/greater-than-or-equal-to-transact-sql.md)
 * [< = (inférieur ou égal à)](../t-sql/language-elements/less-than-or-equal-to-transact-sql.md)
 * [<> (Différent de)](../t-sql/language-elements/not-equal-to-transact-sql-traditional.md)
-* [! = (Différent de)](../t-sql/language-elements/not-equal-to-transact-sql-exclamation.md)
+* [\!= (Différent de)](../t-sql/language-elements/not-equal-to-transact-sql-exclamation.md)
 * [AND](../t-sql/language-elements/and-transact-sql.md)
 * [BETWEEN](../t-sql/language-elements/between-transact-sql.md)
 * [EXISTS](../t-sql/language-elements/exists-transact-sql.md)

@@ -1,27 +1,27 @@
 ---
-title: "Configurer un client de science des données pour une utilisation avec SQL Server | Documents Microsoft"
-ms.custom: 
+title: Configurer un client de science des données pour le développement de R sur SQL Server | Documents Microsoft
+ms.custom: ''
 ms.date: 10/31/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
-ms.assetid: d15ee956-918f-40e0-b986-2bf929ef303a
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
-ms.openlocfilehash: 160dae2d84c84aeaecaa07ec16be681fabde5534
-ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
+ms.assetid: ''
+caps.latest.revision: ''
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
+ms.openlocfilehash: 414410cdac959fb23989dda6569e0711b8a6fc23
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/21/2018
+ms.lasthandoff: 03/28/2018
 ---
-# <a name="set-up-a-data-science-client-for-use-with-sql-server"></a>Configurer un client de science des données pour une utilisation avec SQL Server
+# <a name="set-up-a-data-science-client-for-r-development-on-sql-server"></a>Configurer un client de science des données pour le développement de R sur SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Après avoir configuré une instance de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] pour prendre en charge d’apprentissage, vous devez configurer un environnement de développement qui est capable de se connecter au serveur pour le déploiement et l’exécution à distance.
@@ -47,6 +47,35 @@ Pour obtenir ces bibliothèques, installez les éléments suivants :
     - Pour installer à partir de l’installation de SQL Server, consultez [installer SQL Server 2017 Machine Learning Server (autonome)](../install/sql-machine-learning-standalone-windows-install.md)
 
     - Pour utiliser le programme d’installation distinct basé sur Windows, consultez [installer R Server 9.1 pour Windows](https://docs.microsoft.com/machine-learning-server/install/r-server-install-windows)
+
+## <a name="r-tools"></a>Outils R
+
+Lorsque vous installez R avec SQL Server, vous obtenez les mêmes outils R qui sont installés avec les **base** installation de R, tels que RGui, Rterm et ainsi de suite. Par conséquent techniquement, vous devez tous les outils dont vous avez besoin pour développer et tester le code R.
+
+Les outils R standards suivants sont inclus dans un *installation de base* de R et par conséquent, sont installés par défaut.
+
++ **RTerm**: un terminal de ligne de commande pour l’exécution des scripts R
+
++ **RGui.exe** : éditeur interactif simple pour R. Les arguments de ligne de commande sont les mêmes pour RGui.exe et RTerm.
+
++ **RScript** : outil en ligne de commande pour l’exécution de scripts R en mode batch.
+
+Pour rechercher ces outils, déterminez la bibliothèque R qui a été installée lorsque vous installez SQL Server ou la fonctionnalité d’apprentissage autonome. Par exemple, dans une installation par défaut, les outils R sont situés dans ces dossiers :
+
++ SQL Server 2016 R Services : `~\Program Files\Microsoft SQL Server\MSSQL13.<instancename>\R_SERVICES\bin\x64`
++ Microsoft R Server autonome : `~\Program Files\Microsoft R\R_SERVER\bin\x64`
++ SQL Server 2017 apprentissage Services : `~\Program Files\Microsoft SQL Server\MSSQL14.<instancename>\R_SERVICES\bin\x64`
++ Apprentissage Server (autonome) : `~\Program Files\Microsoft\ML Server\R_SERVER\bin\x64`
+
+Si vous avez besoin d’aide avec les outils R, ouvrez simplement **RGui**, cliquez sur **aide**, puis sélectionnez une des options
+
+## <a name="microsoft-r-client"></a>Microsoft R Client
+
+Microsoft R Client est un téléchargement gratuit qui vous permet d’accéder aux packages RevoScaleR à des fins de développement. En installant le Client de R, vous pouvez créer des solutions R qui peuvent être exécutées dans tous les contextes de calcul pris en charge, y compris analytique dans base de données de SQL Server et traitements distribués R sur Hadoop, Spark ou Linux à l’aide de la Machine Learning Server.
+
+Si vous avez déjà installé un autre environnement de développement R, tels que RStudio, veillez à reconfigurer l’environnement pour utiliser les bibliothèques et les exécutables fournis par le Client de Microsoft R. En procédant comme vous pouvez donc utiliser toutes les fonctionnalités du package RevoScaleR, bien que les performances seront en trouvent limitées.
+
+Pour plus d’informations, consultez [qu’est Microsoft R Client ?](https://docs.microsoft.com/machine-learning-server/r-client/what-is-microsoft-r-client)
 
 ## <a name="install-a-development-environment"></a>Installez un environnement de développement
 

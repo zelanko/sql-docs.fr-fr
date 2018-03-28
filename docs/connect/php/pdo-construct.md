@@ -1,27 +1,28 @@
 ---
-title: PDO::__construct | Documents Microsoft
-ms.custom: 
+title: PDO::__construct | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 3ee53aff-6fe4-44cd-a15b-51770c98c712
-caps.latest.revision: "18"
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c615bf11081ee791a6a3a700c4c7bae514fe4fae
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 3a1c40e8e31cbba9eb93155c3f81f6dd03452b59
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="pdoconstruct"></a>PDO::__construct
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -42,7 +43,7 @@ PDO::__construct($dsn [,$username [,$password [,$driver_options ]]] )
   
 *$password*: facultatif. Chaîne qui contient le mot de passe de l’utilisateur. Pour vous connecter en utilisant l’authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] , spécifiez le mot de passe. Pour vous  connecter avec l’authentification Windows, spécifiez `""`.  
   
-*$driver_options*: facultatif. Vous pouvez spécifier les attributs du Gestionnaire de pilotes PDO et [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] attributs de pilotes spécifique : PDO::SQLSRV_ATTR_ENCODING, PDO::SQLSRV_ATTR_DIRECT_QUERY. Un attribut non valide ne lève pas d’exception. Les attributs non valides lèvent des exceptions quand ils sont spécifiés avec [PDO::setAttribute](../../connect/php/pdo-setattribute.md).  
+*$driver_options*: facultatif. Vous pouvez spécifier les attributs du Gestionnaire de pilotes PDO et [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] attributs de pilotes spécifique : PDO::SQLSRV_ATTR_ENCODING, PDO::SQLSRV_ATTR_DIRECT_QUERY. Un attribut non valide ne génère pas d’exception. Les attributs non valides lèvent des exceptions quand ils sont spécifiés avec [PDO::setAttribute](../../connect/php/pdo-setattribute.md).  
   
 ## <a name="return-value"></a>Valeur retournée  
 Retourne un objet PDO. En cas d’échec, retourne un objet PDOException.  
@@ -53,7 +54,7 @@ PDOException
 ## <a name="remarks"></a>Notes  
 Vous pouvez fermer un objet de connexion en affectant à l’instance la valeur Null.  
   
-Après une connexion, PDO::errorCode affiche 01000 au lieu de 00000.  
+Une fois la connexion, PDO::errorCode affiche 01000 au lieu de 00000.  
   
 Si PDO::__construct échoue pour une raison quelconque, une exception est levée, même si PDO::ATTR_ERRMODE a la valeur PDO::ERRMODE_SILENT.  
   
@@ -93,6 +94,7 @@ Cet exemple montre comment se connecter à un serveur en spécifiant la base de 
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
-[Classe PDO](../../connect/php/pdo-class.md)  
-[PDO](http://go.microsoft.com/fwlink/?LinkID=187441)  
+[Classe PDO](../../connect/php/pdo-class.md)
+
+[PDO](http://php.net/manual/book.pdo.php)  
   

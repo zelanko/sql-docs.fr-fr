@@ -1,16 +1,16 @@
 ---
-title: "SQL Server Audit (moteur de base de données) | Microsoft Docs"
-ms.custom: 
+title: SQL Server Audit (moteur de base de données) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/21/2016
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: security
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - audit
@@ -18,21 +18,23 @@ helpviewer_keywords:
 - SQL Server Audit
 - audits [SQL Server], SQL Server Audit
 ms.assetid: 0c1fca2e-f22b-4fe8-806f-c87806664f00
-caps.latest.revision: 
+caps.latest.revision: ''
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 02c5d20286c4bcf688e9570a85d58ac89e2ffd06
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 3ca903d27dc667095e8db79e3a92e8cb85737004
+ms.sourcegitcommit: 6e16d1616985d65484c72f5e0f34fb2973f828f4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="sql-server-audit-database-engine"></a>SQL Server Audit (moteur de base de données)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   L'*audit* d'une instance de [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] ou d'une base de données individuelle implique le suivi et la journalisation des événements qui se produisent sur le [!INCLUDE[ssDE](../../../includes/ssde-md.md)]. L'audit[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] vous permet de créer des audits de serveur, qui peuvent contenir des spécifications d'audit de serveur pour les événements de niveau serveur, ainsi que des spécifications d'audit de base de données pour les événements de niveau base de données. Les événements audités peuvent être écrits dans des journaux d'événements ou des fichiers d'audit.  
+  
+[!INCLUDE[ssMIlimitation](../../../includes/sql-db-mi-limitation.md)]
   
  Il existe plusieurs niveaux d'audit pour [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], selon les spécifications de normes pour votre installation. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit fournit les outils et processus nécessaires pour activer, stocker et afficher les audits sur différents objets de serveur et de base de données.  
   
@@ -188,7 +190,7 @@ ms.lasthandoff: 11/21/2017
 > [!CAUTION]  
 >  Les principaux dans le rôle sysadmin peuvent falsifier tout composant d'audit et ceux dans le rôle db_owner peuvent falsifier les spécifications d'audit dans une base de données. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit s'assure qu'une ouverture de session qui crée ou modifie une spécification d'audit possède au moins l'autorisation ALTER ANY DATABASE AUDIT. Toutefois, aucune validation n'est effectuée lorsque vous attachez une base de données. Vous devez supposer que toutes les spécifications de l'audit de la base de données sont aussi dignes de confiance que les principaux dans le rôle sysadmin ou db_owner.  
   
-## <a name="related-tasks"></a>Tâches associées  
+## <a name="related-tasks"></a>Related Tasks  
  [Créer un audit du serveur et une spécification d’audit du serveur](../../../relational-databases/security/auditing/create-a-server-audit-and-server-audit-specification.md)  
   
  [Créer une spécification de l’audit du serveur et de la base de données](../../../relational-databases/security/auditing/create-a-server-audit-and-database-audit-specification.md)  
@@ -216,7 +218,7 @@ ms.lasthandoff: 11/21/2017
  [Microsoft TechNet : SQL Server TechCenter : SQL Server 2005 – Sécurité et protection](http://go.microsoft.com/fwlink/?LinkId=101152)  
  Fournit des informations à jour sur la sécurité de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Actions et groupes d’actions SQL Server Audit](../../../relational-databases/security/auditing/sql-server-audit-action-groups-and-actions.md)   
  [Enregistrements SQL Server Audit](../../../relational-databases/security/auditing/sql-server-audit-records.md)  
   

@@ -1,33 +1,35 @@
 ---
-title: "Comment : spécifier la Direction du paramètre à l’aide du pilote SQLSRV | Documents Microsoft"
-ms.custom: 
+title: 'Comment : spécifier la Direction du paramètre à l’aide du pilote SQLSRV | Documents Microsoft'
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-helpviewer_keywords: stored procedure support
+helpviewer_keywords:
+- stored procedure support
 ms.assetid: 1209eeca-df75-4283-96dc-714f39956b95
-caps.latest.revision: "16"
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 692d1cd432a7d156a4bb9d8cc2c3bfcf57c02d6d
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: b4004fa498c01e73c99204bb0d36ac4bded66a9b
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="how-to-specify-parameter-direction-using-the-sqlsrv-driver"></a>Procédure : spécifier la direction du paramètre à l’aide du pilote SQLSRV
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-Cette rubrique décrit l’utilisation du pilote SQLSRV pour spécifier la direction du paramètre quand vous appelez une procédure stockée. Notez que la direction du paramètre est spécifiée lors de la construction d’un paramètre de tableau (étape 3) qui est passé à [sqlsrv_query](../../connect/php/sqlsrv-query.md) ou [sqlsrv_prepare](../../connect/php/sqlsrv-prepare.md).  
+Cette rubrique décrit l’utilisation du pilote SQLSRV pour spécifier la direction du paramètre quand vous appelez une procédure stockée. La direction du paramètre est spécifiée lorsque vous construisez un tableau de paramètres (étape 3) qui est passé à [sqlsrv_query](../../connect/php/sqlsrv-query.md) ou [sqlsrv_prepare](../../connect/php/sqlsrv-prepare.md).  
   
 ### <a name="to-specify-parameter-direction"></a>Pour spécifier la direction du paramètre  
   
@@ -38,9 +40,9 @@ Cette rubrique décrit l’utilisation du pilote SQLSRV pour spécifier la direc
     ```  
   
     > [!NOTE]  
-    > Appeler les procédures stockées à l’aide de la syntaxe canonique est la pratique recommandée. Pour plus d’informations sur la syntaxe canonique, consultez [Appel d’une procédure stockée](http://go.microsoft.com/fwlink/?linkid=119517).  
+    > Appeler les procédures stockées à l’aide de la syntaxe canonique est la pratique recommandée. Pour plus d’informations sur la syntaxe canonique, consultez [appel d’une procédure stockée](../../relational-databases/native-client-odbc-stored-procedures/calling-a-stored-procedure.md).  
   
-2.  Initialisez ou mettez à jour les variables PHP qui correspondent aux espaces réservés dans la requête Transact-SQL. Par exemple, le code suivant initialise les deux paramètres de la procédure stockée UpdateVacationHours :  
+2.  Initialisez ou mettez à jour les variables PHP qui correspondent aux espaces réservés dans la requête Transact-SQL. Par exemple, le code suivant initialise les deux paramètres de la procédure stockée UpdateVacationHours :  
   
     ```  
     $employeeId = 101;  
@@ -61,7 +63,7 @@ Cette rubrique décrit l’utilisation du pilote SQLSRV pour spécifier la direc
   
     Pour comprendre la syntaxe à utiliser pour spécifier la direction du paramètre en général, supposons que *$var1*, *$var2*et *$var3* correspondent respectivement au paramètre d’entrée, de sortie et bidirectionnel. Vous pouvez spécifier la direction du paramètre de l’une des manières suivantes :  
   
-    -   Spécifiez implicitement le paramètre d’entrée, spécifiez explicitement le paramètre de sortie et spécifiez explicitement le paramètre bidirectionnel :  
+    -   Implicitement spécifier le paramètre d’entrée, spécifiez explicitement le paramètre de sortie et spécifiez explicitement le paramètre bidirectionnel :  
   
         ```  
         array(   
@@ -71,7 +73,7 @@ Cette rubrique décrit l’utilisation du pilote SQLSRV pour spécifier la direc
                );  
         ```  
   
-    -   Spécifiez explicitement le paramètre d’entrée, spécifiez explicitement le paramètre de sortie et spécifiez explicitement le paramètre bidirectionnel :  
+    -   Spécifiez explicitement le paramètre d’entrée, spécifiez explicitement le paramètre de sortie et spécifiez explicitement le paramètre bidirectionnel :  
   
         ```  
         array(   
@@ -88,6 +90,7 @@ Cette rubrique décrit l’utilisation du pilote SQLSRV pour spécifier la direc
     ```  
   
 ## <a name="see-also"></a>Voir aussi  
-[Procédure : récupérer des paramètres de sortie à l’aide du pilote SQLSRV](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md)  
+[Guide pratique pour récupérer des paramètres de sortie à l’aide du pilote SQLSRV](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md)
+
 [How to: Retrieve Input and Output Parameters Using the SQLSRV Driver](../../connect/php/how-to-retrieve-input-and-output-parameters-using-the-sqlsrv-driver.md)  
   

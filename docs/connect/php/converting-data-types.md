@@ -1,28 +1,28 @@
 ---
-title: "Conversion de Types de données | Documents Microsoft"
-ms.custom: 
-ms.date: 01/16/2018
+title: Conversion de Types de données | Documents Microsoft
+ms.custom: ''
+ms.date: 03/26/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - drivers
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 508542ec-cc28-4a17-80f4-52325d6a48db
-caps.latest.revision: 
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 177f4cc6c28a231fe37df65a46976c4c8836e912
-ms.sourcegitcommit: 6b1618aa3b24bf6759b00a820e09c52c4996ca10
+ms.openlocfilehash: 5caf6c4e807b734bae6705a1777f6889f571be9d
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="converting-data-types"></a>Conversion de types de données
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -41,8 +41,11 @@ ms.lasthandoff: 03/15/2018
 |[Guide pratique pour envoyer et récupérer des données ASCII dans Linux et macOS](../../connect/php/how-to-send-and-retrieve-ascii-data-in-linux-mac.md)|Montre comment utiliser [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]de prise en charge de données ASCII dans Linux ou macOS.<br /><br />Prise en charge des caractères ASCII dans les environnements autres que Windows a été ajoutée dans la version 5.2 de la [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].|
   
 ## <a name="see-also"></a>Voir aussi  
-[Guide de programmation pour le pilote SQL PHP](../../connect/php/programming-guide-for-php-sql-driver.md)
-[Référence d’API du pilote SQLSRV](../../connect/php/sqlsrv-driver-api-reference.md)  
-[Constantes &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)  
+[Guide de programmation pour les pilotes Microsoft pour PHP pour SQL Server](../../connect/php/programming-guide-for-php-sql-driver.md)
+
+[Informations de référence sur l’API du pilote SQLSRV](../../connect/php/sqlsrv-driver-api-reference.md)
+
+[Constantes &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)
+
 [Exemple d’application &#40;pilote SQLSRV&#41;](../../connect/php/example-application-sqlsrv-driver.md)  
   

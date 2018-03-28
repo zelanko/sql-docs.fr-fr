@@ -1,39 +1,39 @@
 ---
-title: "Guide pratique pour créer une procédure stockée à l’aide de sqlrutils | Microsoft Docs"
-ms.custom: 
+title: Guide pratique pour créer une procédure stockée à l’aide de sqlrutils | Microsoft Docs
+ms.custom: ''
 ms.date: 12/16/2016
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - R
 ms.assetid: 5ba99b49-481e-4b30-967a-a429b855b1bd
-caps.latest.revision: 
+caps.latest.revision: ''
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: ad0cf99c59bcd3295acf0e1c29b14c8523f6f925
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: fe1e05ee854fb6a094a66d88981d74287aa96beb
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="create-a-stored-procedure-using-sqlrutils"></a>Créer un sqlrutils utilisant de procédure stockée
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Cette rubrique décrit les étapes nécessaires pour convertir votre code R pour qu’il s’exécute en tant que procédure stockée T-SQL. Pour de meilleurs résultats, vous devrez peut-être modifier un peu votre code pour être sûr que toutes les entrées peuvent être paramétrées.
+Cet article décrit les étapes pour convertir votre code R à exécuter en tant qu’une procédure stockée T-SQL. Pour de meilleurs résultats, vous devrez peut-être modifier un peu votre code pour être sûr que toutes les entrées peuvent être paramétrées.
 
 ## <a name="bkmk_rewrite"></a>Étape 1. Réécrivez le Script R
 
 Pour de meilleurs résultats, vous devez réécrire votre code R pour encapsuler comme une fonction unique.
 
-Toutes les variables utilisées par la fonction doivent être définies à l’intérieur de la fonction, ou doivent être définies en tant que paramètres d’entrée. Consultez [l’exemple de code](#samples) dans cette rubrique.
+Toutes les variables utilisées par la fonction doivent être définies à l’intérieur de la fonction, ou doivent être définies en tant que paramètres d’entrée. Consultez le [exemple de code](#samples) dans cet article.
 
 En outre, étant donné que les paramètres d’entrée pour la fonction R deviendront les paramètres d’entrée de l’instruction SQL de procédure stockée, vous devez vous assurer que vos entrées et les sorties sont conformes aux exigences de type suivant :
 
@@ -69,8 +69,8 @@ Une fois que votre code R a été nettoyé et peut être appelé comme une fonct
 
 Si votre fonction accepte des entrées, pour chaque entrée, appelez les fonctions suivantes :
 
-- `setInputData`Si l’entrée est une trame de données
-- `setInputParameter`pour tous les autres types d’entrée
+- `setInputData` Si l’entrée est une trame de données
+- `setInputParameter` pour tous les autres types d’entrée
 
 Lorsque vous apportez chaque fonction à appeler, R création d’un objet que vous allez passer ultérieurement en tant qu’argument à `StoredProcedure`, pour créer la procédure stockée terminée.
 
@@ -82,8 +82,8 @@ Vous pouvez également ignorer de la conversion de cette étape si votre fonctio
 
 Lorsque la conversion d’une liste ou d’obtention d’un élément particulier dans une liste, choisissez à partir de ces fonctions :
 
-- `setOutputData`Si la variable à obtenir à partir de la liste est une trame de données
-- `setOutputParameter`pour tous les autres membres de la liste
+- `setOutputData` Si la variable à obtenir à partir de la liste est une trame de données
+- `setOutputParameter` pour tous les autres membres de la liste
 
 Lorsque vous apportez chaque fonction à appeler, R création d’un objet que vous allez passer ultérieurement en tant qu’argument à `StoredProcedure`, pour créer la procédure stockée terminée.
 

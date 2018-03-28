@@ -1,23 +1,23 @@
 ---
-title: "Bibliothèques de connexions de bases de données Microsoft SQL | Documents Microsoft"
-description: "Fournit des liens de téléchargement pour les modules qui permettent la connexion à Microsoft SQL Server et de la base de données SQL Azure, à partir d’une variété de langages de programmation du client."
+title: Bibliothèques de connexions de bases de données Microsoft SQL | Documents Microsoft
+description: Fournit des liens de téléchargement pour les modules qui permettent la connexion à Microsoft SQL Server et de la base de données SQL Azure, à partir d’une variété de langages de programmation du client.
 author: MightyPen
-ms.service: 
+ms.service: ''
 ms.component: connect
 ms.suite: sql
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.technology: dbe-data-tier-apps
-ms.custom: 
+ms.custom: ''
 ms.workload: data-management
 ms.topic: article
 ms.date: 08/09/2017
 ms.author: genemi
-ms.openlocfilehash: 9c85a5e40ca7d3b6e35cdb09fc4becbe5c9c65c3
-ms.sourcegitcommit: 1a3584a60c12521ba5b4b12a18d8cb32b1f2d555
+ms.openlocfilehash: 33df5e13dcdeb205a1dbc9fa9c1a5dc7efc754c2
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="connection-modules-for-microsoft-sql-databases"></a>Modules de connexion pour les bases de données Microsoft SQL
 
@@ -60,7 +60,7 @@ although the FWLink is less precise than is http://github.com/Microsoft/msphpsql
 | C++      | [ODBC](http://docs.microsoft.com/sql/connect/odbc/download-odbc-driver-for-sql-server) |
 | Java     | [JDBC](http://www.microsoft.com/download/details.aspx?id=55539) |
 | Node.js  | [Pilote Node.js, des instructions d’installation](http://docs.microsoft.com/sql/connect/node-js/step-1-configure-development-environment-for-node-js-development) |
-| PHP      | *Système d'exploitation :*<br /><br />[Pilote Windows PHP](https://www.microsoft.com/download/details.aspx?id=55642)<br />[Pilote Ubuntu ou MacOS PHP, à partir de Github](http://github.com/Microsoft/msphpsql/tree/dev#install-unix) |
+| PHP      | *Système d'exploitation :*<br /><br />[Pilote Windows PHP](https://www.microsoft.com/download/details.aspx?id=55642)<br />[Linux ou macOS pilote PHP à partir de Github](http://github.com/Microsoft/msphpsql/) |
 | Python   | [pyodbc, des instructions d’installation](http://docs.microsoft.com/sql/connect/python/pyodbc/step-1-configure-development-environment-for-pyodbc-python-development)<br />[Télécharger ODBC](http://docs.microsoft.com/sql/connect/odbc/download-odbc-driver-for-sql-server) |
 | Ruby     | [Pilote Ruby, des instructions d’installation](https://docs.microsoft.com/sql/connect/ruby/step-1-configure-development-environment-for-ruby-development)<br />[Page de téléchargement Ruby](https://rubyinstaller.org/downloads/) |
 | &nbsp; | <br /> |
@@ -90,7 +90,7 @@ Le tableau suivant répertorie des exemples d’infrastructures relationnelle ma
 ## <a name="build-an-app-webpages"></a>Pages Web d’une application de build
 
 
-[http://aka.ms/sqldev](http://aka.ms/sqldev) permet d’accéder à un ensemble de *-générer une application* des pages Web. Les pages Web fournissent des informations sur les nombreuses combinaisons de programmation de langue, système d’exploitation et le pilote de connexion SQL. Parmi les informations fournies par les pages Web générer une application sont les éléments suivants :
+[http://aka.ms/sqldev](http://aka.ms/sqldev) Permet d’accéder à un ensemble de *-générer une application* des pages Web. Les pages Web fournissent des informations sur les nombreuses combinaisons de programmation de langue, système d’exploitation et le pilote de connexion SQL. Parmi les informations fournies par les pages Web générer une application sont les éléments suivants :
 
 - Plus d’informations sur la prise en main depuis le début, pour chaque combinaison de langue, système d’exploitation + pilote.
     - Instructions pour installer les derniers pilotes de connexion SQL.

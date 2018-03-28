@@ -1,34 +1,34 @@
 ---
-title: "Présentation de l’architecture de SQL Server Machine Learning Services | Documents Microsoft"
-ms.custom: 
+title: Présentation de l’architecture de SQL Server Machine Learning Services | Documents Microsoft
+ms.custom: ''
 ms.date: 11/03/2017
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 4272a0f421bc8286fc9be7be44e3b7ef8cc13905
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 7993a93eec3bd657f4d37fbbbfbb16dd514453fa
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="architecture-overview-for-sql-server-machine-learning-services"></a>Présentation de l’architecture de SQL Server Machine Learning Services 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Cette rubrique décrit les objectifs de l’infrastructure d’extensibilité qui prend en charge l’exécution du script Python et R dans SQL Server.
+Cet article décrit les objectifs de l’infrastructure d’extensibilité qui prend en charge l’exécution du script Python et R dans SQL Server.
 
 Il fournit également une vue d’ensemble de la façon dont l’architecture est conçue pour répondre à ces objectifs, comment R Python pris en charge et est exécutées par SQL Server et les avantages de l’intégration.
 
-En général, l’infrastructure d’extensibilité est presque identique pour R et Python, avec quelques différences mineures dans les détails des lanceurs sont appelées, options de configuration et ainsi de suite. Pour plus d’informations sur l’implémentation pour une langue spécifique, consultez les rubriques suivantes :
+En général, l’infrastructure d’extensibilité est presque identique pour R et Python, avec quelques différences mineures dans les détails des lanceurs sont appelées, options de configuration et ainsi de suite. Pour plus d’informations sur l’implémentation pour une langue spécifique, consultez les articles suivants :
 
 - [Présentation de l’architecture de SQL Server R Services](r/architecture-overview-sql-server-r.md)
 - [Présentation de l’architecture pour Python dans SQL Server](python/architecture-overview-sql-server-python.md)

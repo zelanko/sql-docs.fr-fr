@@ -1,30 +1,31 @@
 ---
-title: "Comment : spécifier les Types de données SQL Server lors de l’utilisation du pilote SQLSRV | Documents Microsoft"
-ms.custom: 
+title: 'Comment : spécifier les Types de données SQL Server lors de l’utilisation du pilote SQLSRV | Documents Microsoft'
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - converting data types
 - streaming data
 ms.assetid: 1fcf73cb-5634-4d89-948f-9326f1dbd030
-caps.latest.revision: "18"
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c3ad9f3e6aa9e136f76122f39079db21b31c30d3
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: f88116134641d955c886bdee840982fa7710b934
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="how-to-specify-sql-server-data-types-when-using-the-sqlsrv-driver"></a>Procédure : spécifier des types de données SQL Server quand vous utilisez le pilote SQLSRV
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -44,7 +45,7 @@ Les étapes suivantes récapitulent la manière de spécifier le type de donnée
   
 3.  Construisez le tableau *$params* à utiliser lors de la préparation ou l’exécution de la requête. Notez que chaque élément du tableau *$params* doit également être un tableau quand vous spécifiez le type de données SQL Server.  
   
-4.  Spécifiez le type de données SQL Server souhaité à l’aide de la commande appropriée **SQLSRV_SQLTYPE_\***  constante en tant que quatrième paramètre dans chaque sous-tableau du *$params* tableau. Pour obtenir une liste complète de la **SQLSRV_SQLTYPE_\***  constantes, consultez la section SQLTYPEs de [constantes &#40; Microsoft Drivers for PHP for SQL Server &#41; ](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md). Par exemple, dans le code ci-dessous, *$changeDate*, *$rate*et *$payFrequency* sont respectivement spécifiés en tant que types SQL Server **datetime**, **money**et **tinyint** dans le tableau *$params* . Étant donné qu’aucun type SQL Server n’est spécifiée pour *$employeeId* et que ce paramètre est initialisé à un entier, le type SQL Server par défaut **integer** est utilisé.  
+4.  Spécifiez le type de données SQL Server souhaité à l’aide de la commande appropriée **SQLSRV_SQLTYPE_\***  constante en tant que quatrième paramètre dans chaque sous-tableau de la *$params* tableau. Pour obtenir une liste complète de la **SQLSRV_SQLTYPE_\***  constantes, consultez la section SQLTYPEs de [constantes &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md). Par exemple, dans le code ci-dessous, *$changeDate*, *$rate*et *$payFrequency* sont respectivement spécifiés en tant que types SQL Server **datetime**, **money**et **tinyint** dans le tableau *$params* . Étant donné qu’aucun type SQL Server n’est spécifiée pour *$employeeId* et que ce paramètre est initialisé à un entier, le type SQL Server par défaut **integer** est utilisé.  
   
     ```  
     $employeeId = 5;  
@@ -60,9 +61,9 @@ Les étapes suivantes récapitulent la manière de spécifier le type de donnée
     ```  
   
 ## <a name="example"></a>Exemple  
-L’exemple suivant insère des données dans la table *HumanResources.EmployeePayHistory* de la base de données Adventureworks. Les types SQL Server sont spécifiés pour les paramètres *$changeDate*, *$rate*et *$payFrequency* . Le type SQL Server par défaut est utilisé pour le paramètre *$employeeId* . Pour vérifier que les données ont été correctement insérées, les mêmes données sont récupérées et affichées.  
+L’exemple suivant insère des données dans le *HumanResources.EmployeePayHistory* table de base de données AdventureWorks. Les types SQL Server sont spécifiés pour les paramètres *$changeDate*, *$rate*et *$payFrequency* . Le type SQL Server par défaut est utilisé pour le paramètre *$employeeId* . Pour vérifier que les données ont été correctement insérées, les mêmes données sont récupérées et affichées.  
   
-Cet exemple part du principe que SQL Server et la base de données [AdventureWorks](http://go.microsoft.com/fwlink/?LinkID=67739) sont installés sur l’ordinateur local. Toute la sortie est écrite dans la console quand l’exemple est exécuté à partir de la ligne de commande.  
+Cet exemple suppose que SQL Server et le [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) base de données sont installés sur l’ordinateur local.  Toute la sortie est écrite dans la console quand l’exemple est exécuté à partir de la ligne de commande.  
   
 ```  
 <?php  
@@ -141,9 +142,13 @@ sqlsrv_close($conn);
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
-[Récupération de données](../../connect/php/retrieving-data.md)  
-[À propos des exemples de code dans la documentation](../../connect/php/about-code-examples-in-the-documentation.md)  
-[Procédure : spécifier des types de données PHP](../../connect/php/how-to-specify-php-data-types.md)  
-[Converting Data Types](../../connect/php/converting-data-types.md)  
-[Procédure : envoyer et récupérer des données UTF-8 à l’aide de la prise en charge UTF-8 intégrée](../../connect/php/how-to-send-and-retrieve-utf-8-data-using-built-in-utf-8-support.md)  
+[Récupération de données](../../connect/php/retrieving-data.md)
+
+[À propos des exemples de code dans la documentation](../../connect/php/about-code-examples-in-the-documentation.md)
+
+[Guide pratique pour spécifier des types de données PHP](../../connect/php/how-to-specify-php-data-types.md)
+
+[Conversion de types de données](../../connect/php/converting-data-types.md)
+
+[Guide pratique pour envoyer et récupérer des données UTF-8 à l’aide de la prise en charge UTF-8 intégrée](../../connect/php/how-to-send-and-retrieve-utf-8-data-using-built-in-utf-8-support.md)  
   

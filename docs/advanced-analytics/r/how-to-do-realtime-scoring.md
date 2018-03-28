@@ -1,29 +1,29 @@
 ---
-title: "Comment effectuer le calcul de score en temps réel ou calculer les scores natif dans SQL Server | Documents Microsoft"
-ms.custom: 
+title: Comment effectuer le calcul de score en temps réel ou calculer les scores natif dans SQL Server | Documents Microsoft
+ms.custom: ''
 ms.date: 11/09/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 9287a85017df7b05b3b354a855811ea528a3ad79
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 2a79ab351f109959a743fecfb4cb6a0d186c6892
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="how-to-perform-realtime-scoring-or-native-scoring-in-sql-server"></a>Comment effectuer le calcul de score en temps réel ou calculer les scores natif dans SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Cette rubrique fournit des exemples de code et des instructions pour l’exécution du calcul de score en temps réel et des fonctionnalités natives de score dans SQL Server 2017 et SQL Server 2016. L’objectif de calculer les scores en temps réel et de calcul de score natif est afin d’améliorer les performances des opérations de calcul de score par petits lots.
+Cet article fournit des instructions et des exemples de code pour l’exécution du calcul de score en temps réel et des fonctionnalités natives de score dans SQL Server 2017 et SQL Server 2016. L’objectif de calculer les scores en temps réel et de calcul de score natif est afin d’améliorer les performances des opérations de calcul de score par petits lots.
 
 À la fois en temps réel de calcul de score et le score natif sont conçus pour vous permettre d’utiliser un modèle d’apprentissage sans devoir installer R. Il vous souhaitez est d’obtenir un modèle préformé dans un format compatible et l’enregistrer dans une base de données SQL Server.
 
@@ -178,7 +178,7 @@ Si vous obtenez l’erreur, « erreur s’est produite lors de l’exécution d
 
 Cette section décrit les étapes requises pour configurer **en temps réel** prédiction et fournit un exemple montrant comment appeler la fonction à partir de T-SQL.
 
-### <a name ="bkmk_enableRtScoring"></a>Étape 1. Activer la procédure de calcul de score en temps réel
+### <a name ="bkmk_enableRtScoring"></a> Étape 1. Activer la procédure de calcul de score en temps réel
 
 Vous devez activer cette fonctionnalité pour chaque base de données que vous souhaitez utiliser pour calculer les scores. L’administrateur du serveur doit exécuter l’utilitaire de ligne de commande, RegisterRExt.exe, qui est inclus dans le package RevoScaleR.
 
@@ -202,7 +202,7 @@ Vous devez activer cette fonctionnalité pour chaque base de données que vous s
 3. RegisterRExt.exe crée les objets suivants :
 
     + Assemblys de confiance
-    + La procédure stockée`sp_rxPredict`
+    + La procédure stockée `sp_rxPredict`
     + Un nouveau rôle de base de données, `rxpredict_users`. L’administrateur de base de données peut utiliser ce rôle pour accorder l’autorisation aux utilisateurs qui utilisent la fonctionnalité de calcul de score en temps réel.
 
 4. Ajouter des utilisateurs ayant besoin d’exécuter `sp_rxPredict` au nouveau rôle.
@@ -221,7 +221,7 @@ model <- rxSerializeModel(model.name, realtimeScoringOnly = TRUE)
 
 ### <a name="step-3-call-sprxpredict"></a>Étape 3. Appel sp_rxPredict
 
-Vous appelez sp\_rxPredict en tant que vous feriez avec un autre procédure stockée. Dans la version actuelle, la procédure stockée accepte uniquement deux paramètres :  _@model_  pour le modèle au format binaire, et  _@inputData_  pour les données à utiliser dans le calcul de score, défini comme une requête SQL valide.
+Vous appelez sp\_rxPredict en tant que vous feriez avec un autre procédure stockée. Dans la version actuelle, la procédure stockée accepte uniquement deux paramètres : _@model_ pour le modèle au format binaire, et _@inputData_ pour les données à utiliser dans le calcul de score, défini comme une requête SQL valide.
 
 Étant donné que le format binaire est celui qui est utilisé par la fonction de prédiction, vous pouvez utiliser le tableau de modèles et des données à partir de l’exemple précédent.
 
@@ -246,7 +246,7 @@ EXEC sp_rxPredict
 
 ## <a name="disable-realtime-scoring"></a>Désactiver le calcul de score en temps réel
 
-Pour désactiver la fonctionnalité de calcul de score en temps réel, ouvrez une invite de commandes avec élévation de privilèges et exécutez la commande suivante :`RegisterRExt.exe /uninstallrts /database:<database_name> [/instance:name]`
+Pour désactiver la fonctionnalité de calcul de score en temps réel, ouvrez une invite de commandes avec élévation de privilèges et exécutez la commande suivante : `RegisterRExt.exe /uninstallrts /database:<database_name> [/instance:name]`
 
 ## <a name="realtime-scoring-in-microsoft-r-server-or-machine-learning-server"></a>En temps réel de calcul de score dans Microsoft R Server ou serveur de Machine Learning
 

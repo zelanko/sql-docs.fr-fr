@@ -1,28 +1,30 @@
 ---
 title: Constantes (Microsoft Drivers for PHP for SQL Server) | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-helpviewer_keywords: constants
+helpviewer_keywords:
+- constants
 ms.assetid: 9727c944-b645-48d6-9012-18dbde35ee3c
-caps.latest.revision: "72"
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 63f2812cc7c2aa19099a90518a3322084c1a94b3
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 9a7af0c51e115aae2fb8319a847d16b272001f93
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="constants-microsoft-drivers-for-php-for-sql-server"></a>Constantes (Microsoft Drivers for PHP for SQL Server)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -30,9 +32,9 @@ ms.lasthandoff: 11/18/2017
 Cette rubrique traite des constantes définies par le [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].  
   
 ## <a name="pdosqlsrv-driver-constants"></a>Constantes de pilote PDO_SQLSRV  
-Les constantes répertoriées sur le [site web PDO](http://go.microsoft.com/fwlink/?LinkID=187441) sont valides dans le [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].  
+Les constantes répertoriées sur le [site Web PDO](http://php.net/manual/book.pdo.php) sont valides dans le [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].  
   
-Les sections qui suivent décrivent les constantes propres à Microsoft dans le pilote PDO_SQLSRV.  
+Les éléments suivants décrivent les constantes spécifiques à Microsoft dans le pilote PDO_SQLSRV.  
   
 ### <a name="transaction-isolation-level-constants"></a>Constantes de niveau d’isolation de la transaction  
 La clé **TransactionIsolation** , qui est utilisée avec [PDO::__construct](../../connect/php/pdo-construct.md), accepte l’une des constantes suivantes :  
@@ -57,7 +59,7 @@ Les valeurs pouvant être passées à PDO::SQLSRV_ATTR_ENCODING sont
 |Constante de pilote PDO_SQLSRV| Description|  
 |-------------------------------|---------------|  
 |PDO::SQLSRV_ENCODING_BINARY|Les données sont un flux d’octets bruts retourné à partir du serveur sans encodage ni traduction.<br /><br />Non valide pour PDO::setAttribute.|  
-|PDO::SQLSRV_ENCODING_SYSTEM|Les données sont des caractères huit bits comme spécifié dans la page de codes des paramètres régionaux Windows définis sur le système. Les caractères multioctets ou les caractères non mappés dans cette page de codes sont remplacés par un point d’interrogation (?) à un octet.|  
+|PDO::SQLSRV_ENCODING_SYSTEM|Les données sont des caractères huit bits comme spécifié dans la page de codes des paramètres régionaux Windows définis sur le système. Les caractères multioctets ou les caractères qui ne sont pas mappent à cette page de codes sont remplacés par un caractère codés sur un point d’interrogation ( ?).|  
 |PDO::SQLSRV_ENCODING_UTF8|Les données sont dans l’encodage UTF-8. Il s’agit de l’encodage par défaut.|  
 |PDO::SQLSRV_ENCODING_DEFAULT|Utilise PDO::SQLSRV_ENCODING_SYSTEM si cela est spécifié durant la connexion.<br /><br />Utiliser l’encodage de la connexion s’il est spécifié dans une instruction de préparation.|  
   
@@ -70,7 +72,7 @@ Vous pouvez spécifier l’attribut PDO::SQLSRV_ATTR_QUERY_TIMEOUT avec [PDOStat
 Vous pouvez sélectionner l’exécution de requête directe ou l’exécution d’instruction préparée avec l’attribut PDO::SQLSRV_ATTR_DIRECT_QUERY. Vous pouvez définir PDO::SQLSRV_ATTR_DIRECT_QUERY avec [PDO::prepare](../../connect/php/pdo-prepare.md) ou [PDO::setAttribute](../../connect/php/pdo-setattribute.md). Pour plus d’informations sur PDO::SQLSRV_ATTR_DIRECT_QUERY, consultez [exécution d’instruction directe et exécution d’instruction préparée dans le pilote PDO_SQLSRV](../../connect/php/direct-statement-execution-prepared-statement-execution-pdo-sqlsrv-driver.md).  
 
 ### <a name="handling-numeric-fetches"></a>Gestion des extractions numérique
-L’attribut PDO::SQLSRV_ATTR_FETCHES_NUMERIC_TYPE peut être utilisé pour gérer les extractions numériques à partir de colonnes avec des types numériques SQL (bits, integer, smallint, tinyint, float et real). Lorsque PDO::SQLSRV_ATTR_FETCHES_NUMERIC_TYPE a la valeur true, les résultats à partir d’une colonne d’entiers est représentée comme int, tandis que SQL flotte réels sont représentées en tant que valeurs en virgule flottante. Cet attribut peut être défini avec [PDOStatement::setAttribute](../../connect/php/pdostatement-setattribute.md). 
+L’attribut PDO::SQLSRV_ATTR_FETCHES_NUMERIC_TYPE peut être utilisé pour gérer les extractions numériques à partir de colonnes avec des types numériques SQL (bits, integer, smallint, tinyint, float et real). Lorsque PDO::SQLSRV_ATTR_FETCHES_NUMERIC_TYPE a la valeur true, les résultats à partir d’une colonne d’entiers sont représentés en tant qu’entiers, tandis que SQL flotte réels sont représentées sous forme de nombres à virgule flottante. Cet attribut peut être défini avec [PDOStatement::setAttribute](../../connect/php/pdostatement-setattribute.md). 
 
 
 ## <a name="sqlsrv-driver-constants"></a>SQLSRV  
@@ -136,22 +138,22 @@ La liste suivante répertorie les constantes qui permettent de spécifier la dir
 |SQLSRV_PARAM_OUT|Indique un paramètre de sortie.|  
   
 ### <a name="phptype-constants"></a>Constantes PHPTYPE  
-Le tableau suivant répertorie les constantes utilisées pour décrire des types de données PHP. Pour plus d’informations sur les types de données PHP par défaut, consultez [Types PHP](http://go.microsoft.com/fwlink/?LinkId=104881).  
+Le tableau suivant répertorie les constantes utilisées pour décrire des types de données PHP. Pour plus d’informations sur les types de données PHP, consultez [Types PHP](http://php.net/manual/en/language.types.php).  
   
 |Constante SQLSRV|Type de données PHP|  
 |-------------------|-----------------|  
 |SQLSRV_PHPTYPE_INT|Entier|  
 |SQLSRV_PHPTYPE_DATETIME|DateTime|  
 |SQLSRV_PHPTYPE_FLOAT|Float|  
-|SQLSRV_PHPTYPE_STREAM ($encodage<sup>1</sup>)|STREAM|  
-|SQLSRV_PHPTYPE_STRING ($encodage<sup>1</sup>)|Chaîne|  
+|SQLSRV_PHPTYPE_STREAM($encoding<sup>1</sup>)|STREAM|  
+|SQLSRV_PHPTYPE_STRING($encoding<sup>1</sup>)|Chaîne|  
   
 1. **SQLSRV_PHPTYPE_STREAM** et **SQLSRV_PHPTYPE_STRING** acceptent un paramètre qui spécifie l’encodage du flux. Le tableau suivant répertorie les constantes SQLSRV qui sont des paramètres acceptables et fournit une description de l’encodage correspondant.  
   
 |Constante SQLSRV| Description|  
 |-------------------|---------------|  
 |SQLSRV_ENC_BINARY|Les données sont retournées à partir du serveur sous la forme d’un flux d’octets bruts sans encodage ni traduction.|  
-|SQLSRV_ENC_CHAR|Les données sont retournées sous forme de caractères huit bits comme spécifié dans la page de codes des paramètres régionaux Windows définis sur le système. Les caractères multioctets ou les caractères non mappés dans cette page de codes sont remplacés par un point d’interrogation (?) à un octet.<br /><br />Il s’agit de l’encodage par défaut.|  
+|SQLSRV_ENC_CHAR|Les données sont retournées sous forme de caractères huit bits comme spécifié dans la page de codes des paramètres régionaux Windows définis sur le système. Les caractères multioctets ou les caractères qui ne sont pas mappent à cette page de codes sont remplacés par un caractère codés sur un point d’interrogation ( ?).<br /><br />Il s’agit de l’encodage par défaut.|  
 |“UTF-8”|Les données sont retournées au format d’encodage UTF-8. Cette constante a été ajoutée dans la version 1.1 du [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]. Pour plus d’informations sur la prise en charge UTF-8, consultez [Comment : envoyer et récupérer UTF-8 données à l’aide intégrée UTF-8 prend en charge](../../connect/php/how-to-send-and-retrieve-utf-8-data-using-built-in-utf-8-support.md).|  
   
 > [!NOTE]  
@@ -160,7 +162,7 @@ Le tableau suivant répertorie les constantes utilisées pour décrire des types
 Pour plus d’informations sur ces constantes, consultez [Procédure : spécifier des types de données PHP](../../connect/php/how-to-specify-php-data-types.md), [Procédure : récupérer des données caractères sous la forme d’un flux à l’aide du pilote SQLSRV](../../connect/php/how-to-retrieve-character-data-as-a-stream-using-the-sqlsrv-driver.md).  
   
 ### <a name="sqltype-constants"></a>Constantes SQLTYPE  
-Le tableau suivant répertorie les constantes utilisées pour décrire des types de données SQL Server. Certaines constantes sont similaires à la fonction et peuvent prendre de paramètres qui correspondent à la précision, échelle et/ou à la longueur.  Lors de la liaison des paramètres, les constantes de type fonction doivent être utilisés. Pour les comparaisons de type, constantes (comme fonction non) standard sont requis. Pour plus d’informations sur les types de données SQL Server, consultez [des Types de données (Transact-SQL).](http://go.microsoft.com/fwlink/?LinkId=104883) Pour plus d’informations sur la précision, échelle et longueur, consultez [précision, échelle et longueur (Transact-SQL).](http://go.microsoft.com/fwlink/?LinkId=104885)  
+Le tableau suivant répertorie les constantes utilisées pour décrire des types de données SQL Server. Certaines constantes sont similaires à la fonction et peuvent prendre de paramètres qui correspondent à la précision, échelle et/ou à la longueur.  Lors de la liaison des paramètres, les constantes de type fonction doivent être utilisés. Pour les comparaisons de type, constantes (comme fonction non) standard sont requis. Pour plus d’informations sur les types de données SQL Server, consultez [des Types de données (Transact-SQL).](../../t-sql/data-types/data-types-transact-sql.md) Pour plus d’informations sur la précision, échelle et longueur, consultez [précision, échelle et longueur (Transact-SQL).](../../t-sql/data-types/precision-scale-and-length-transact-sql.md)  
   
 |Constante SQLSRV|Type de données SQL Server|  
 |-------------------|------------------------|  
@@ -173,16 +175,16 @@ Le tableau suivant répertorie les constantes utilisées pour décrire des types
 |SQLSRV_SQLTYPE_DATETIME|datetime|  
 |SQLSRV_SQLTYPE_DATETIME2|datetime2<sup>4</sup>|  
 |SQLSRV_SQLTYPE_DATETIMEOFFSET|datetimeoffset<sup>4</sup>|  
-|SQLSRV_SQLTYPE_DECIMAL|décimal<sup>5</sup>|
-|SQLSRV_SQLTYPE_DECIMAL($precision, $scale)|decimal|  
+|SQLSRV_SQLTYPE_DECIMAL|decimal<sup>5</sup>|
+|SQLSRV_SQLTYPE_DECIMAL($precision, $scale)|Décimal|  
 |SQLSRV_SQLTYPE_FLOAT|float|  
 |SQLSRV_SQLTYPE_IMAGE|image<sup>1</sup>|  
 |SQLSRV_SQLTYPE_INT|int|  
 |SQLSRV_SQLTYPE_MONEY|money| 
-|SQLSRV_SQLTYPE_NCHAR|NCHAR<sup>5</sup>|   
-|SQLSRV_SQLTYPE_NCHAR($charCount)|nchar|  
-|SQLSRV_SQLTYPE_NUMERIC|numérique<sup>5</sup>|
-|SQLSRV_SQLTYPE_NUMERIC($precision, $scale)|numeric|  
+|SQLSRV_SQLTYPE_NCHAR|nchar<sup>5</sup>|   
+|SQLSRV_SQLTYPE_NCHAR($charCount)|NCHAR|  
+|SQLSRV_SQLTYPE_NUMERIC|numeric<sup>5</sup>|
+|SQLSRV_SQLTYPE_NUMERIC($precision, $scale)|numérique|  
 |SQLSRV_SQLTYPE_NVARCHAR|nvarchar<sup>5</sup>|  
 |SQLSRV_SQLTYPE_NVARCHAR($charCount)|nvarchar|  
 |SQLSRV_SQLTYPE_NVARCHAR(’max’)|nvarchar(MAX)|  
@@ -193,7 +195,7 @@ Le tableau suivant répertorie les constantes utilisées pour décrire des types
 |SQLSRV_SQLTYPE_SMALLMONEY|smallmoney|  
 |SQLSRV_SQLTYPE_TEXT|text<sup>3</sup>|  
 |SQLSRV_SQLTYPE_TIME|time<sup>4</sup>|  
-|SQLSRV_SQLTYPE_TIMESTAMP|timestamp|  
+|SQLSRV_SQLTYPE_TIMESTAMP|TIMESTAMP|  
 |SQLSRV_SQLTYPE_TINYINT|tinyint|  
 |SQLSRV_SQLTYPE_UNIQUEIDENTIFIER|uniqueidentifier|  
 |SQLSRV_SQLTYPE_UDT|UDT|  
@@ -269,5 +271,5 @@ Les constantes suivantes spécifient la ligne à sélectionner dans le jeu de r�
 Pour plus d’informations sur l’utilisation de ces constantes, consultez [Specifying a Cursor Type and Selecting Rows](../../connect/php/specifying-a-cursor-type-and-selecting-rows.md).  
   
 ## <a name="see-also"></a>Voir aussi  
-[référence d’API du pilote SQLSRV](../../connect/php/sqlsrv-driver-api-reference.md)  
+[Informations de référence sur l’API du pilote SQLSRV](../../connect/php/sqlsrv-driver-api-reference.md)  
   

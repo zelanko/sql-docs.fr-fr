@@ -1,33 +1,35 @@
 ---
-title: sqlsrv_fetch | Documents Microsoft
-ms.custom: 
+title: sqlsrv_fetch | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: sqlsrv_fetch
+apiname:
+- sqlsrv_fetch
 apitype: NA
 helpviewer_keywords:
 - sqlsrv_fetch
 - API Reference, sqlsrv_fetch
 - retrieving data, as a single field
 ms.assetid: a5a640a1-6e7d-452e-8b66-850a4dc2ce89
-caps.latest.revision: "39"
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f9e7e835dbc1033fc5351f6a7af161c8ca021026
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: cdb47b0250989bd2568a4b46f9957933f6f75130
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="sqlsrvfetch"></a>sqlsrv_fetch
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -69,7 +71,7 @@ Pour plus d’informations sur ces valeurs, consultez [Spécification d’un typ
 Si la ligne suivante du jeu de résultats a été récupérée avec succès, la valeur **true** est retournée. S’il n’existe plus aucun résultat dans le jeu de résultats, la valeur **null** est retournée. Si une erreur s’est produite, la valeur **false** est retournée.  
   
 ## <a name="example"></a>Exemple  
-L’exemple suivant utilise **sqlsrv_fetch** pour récupérer une ligne de données contenant une évaluation de produit et le nom du réviseur. Pour récupérer des données du jeu de résultats, [sqlsrv_get_field](../../connect/php/sqlsrv-get-field.md) est utilisé. L’exemple part du principe que SQL Server et la base de données [AdventureWorks](http://go.microsoft.com/fwlink/?LinkID=67739) sont installés sur l’ordinateur local. Toute la sortie est écrite dans la console quand l’exemple est exécuté à partir de la ligne de commande.  
+L’exemple suivant utilise **sqlsrv_fetch** pour récupérer une ligne de données contenant une évaluation de produit et le nom du réviseur. Pour récupérer des données du jeu de résultats, [sqlsrv_get_field](../../connect/php/sqlsrv-get-field.md) est utilisé. L’exemple part du principe que SQL Server et le [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) base de données sont installés sur l’ordinateur local.  Toute la sortie est écrite dans la console quand l’exemple est exécuté à partir de la ligne de commande.  
   
 ```  
 <?php  
@@ -129,6 +131,8 @@ sqlsrv_close( $conn);
   
 ## <a name="see-also"></a>Voir aussi  
 [Récupération de données](../../connect/php/retrieving-data.md)  
-[référence d’API du pilote SQLSRV](../../connect/php/sqlsrv-driver-api-reference.md)  
+
+[Informations de référence sur l’API du pilote SQLSRV](../../connect/php/sqlsrv-driver-api-reference.md)  
+
 [À propos des exemples de code dans la documentation](../../connect/php/about-code-examples-in-the-documentation.md)  
   

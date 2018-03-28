@@ -1,28 +1,28 @@
 ---
-title: "Résoudre les problèmes de collecte de données pour l’apprentissage - SQL Server"
-ms.custom: 
+title: Résoudre les problèmes de collecte de données pour l’apprentissage - SQL Server
+ms.custom: ''
 ms.date: 06/16/2017
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - R
-caps.latest.revision: 
+caps.latest.revision: ''
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: ee3b5fb649d659ade9cca22292aa5c8715f515c8
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 95b70a2992b5c43ebaefb8faa729ec16ac3c84f7
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="troubleshoot-data-collection-for-machine-learning"></a>Résoudre les problèmes de collecte de données pour l’apprentissage
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -51,7 +51,7 @@ Si vous avez besoin d’aide pour déterminer quelle version et Édition, consul
 
 Selon l’édition de SQL Server, vous utilisez, certaines fonctionnalités d’apprentissage peut être indisponible ou limité.
 
-Consultez les rubriques suivantes pour obtenir la liste des fonctionnalités d’apprentissage machine dans les éditions Enterprise, Developer, Standard et Express.
+Consultez les articles suivants pour obtenir la liste des fonctionnalités d’apprentissage machine dans les éditions Enterprise, Developer, Standard et Express.
 
 * [Éditions et des fonctionnalités prises en charge de SQL Server](https://docs.microsoft.com/sql/sql-server/editions-and-components-of-sql-server-2016)
 * [Différences de fonctionnalités de R entre les éditions de SQL Server](https://docs.microsoft.com/sql/advanced-analytics/r/differences-in-r-features-between-editions-of-sql-server)
@@ -146,7 +146,7 @@ with WITH RESULT SETS (SQL keywords) ((PropertyName nvarchar(100), PropertyValue
 
 Si la Machine Learning Services n’est pas en cours d’exécution, vous pouvez déterminer la version installée de Python en examinant le fichier pythonlauncher.config. Nous vous recommandons de faire et ouvrir une copie du fichier afin que vous ne modifiez pas accidentellement des propriétés.
 
-1. Pour SQL Server 2017 uniquement :`C:\Program Files\Microsoft SQL Server\MSSQL14.<instance_name>\MSSQL\Log\ExtensibilityLog\pythonlauncher.config `
+1. Pour SQL Server 2017 uniquement : `C:\Program Files\Microsoft SQL Server\MSSQL14.<instance_name>\MSSQL\Log\ExtensibilityLog\pythonlauncher.config `
 2. Obtenir la valeur de **PYTHONHOME**.
 3. Obtenir la valeur du répertoire de travail actuel.
 
@@ -262,7 +262,7 @@ Par exemple, les messages de journal suivantes sont liées à l’infrastructure
 
 Par exemple, les messages suivants sont des erreurs système courantes liées à l’infrastructure d’extensibilité SQL Server : 
 
-* *Le service Launchpad de SQL Server (MSSQLSERVER) a échoué car l’erreur suivante :<text>*
+* *Le service Launchpad de SQL Server (MSSQLSERVER) a échoué car l’erreur suivante :  <text>*
 
 * *Le service n’a pas répondu à la demande de démarrage ou de contrôle en temps voulu.* 
 

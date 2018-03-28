@@ -1,31 +1,31 @@
 ---
-title: "Créer un pool de ressources pour l’apprentissage | Documents Microsoft"
-ms.custom: 
+title: Créer un pool de ressources pour l’apprentissage | Documents Microsoft
+ms.custom: ''
 ms.date: 11/13/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: c7f7f6e4-774d-4b45-b94a-f06c51718475
-caps.latest.revision: 
+caps.latest.revision: ''
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: dc7a1c26f38cb63cf678f71ec6b889f6051f5387
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 449b9b46b3f371ef7eca89a488201cdad05c232d
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="create-a-resource-pool-for-machine-learning"></a>Créer un pool de ressources pour l’apprentissage
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Cette rubrique décrit comment vous pouvez créer un pool de ressources conçus spécifiquement pour gérer les charges de travail machine learning dans SQL Server. Il part du principe que vous avez déjà installé et activé les fonctionnalités d’apprentissage automatique et reconfigurer l’instance pour prendre en charge une gestion plus affinée les ressources utilisées par les processus externes tels que R ou Python.
+Cet article décrit comment vous pouvez créer un pool de ressources conçus spécifiquement pour gérer les charges de travail machine learning dans SQL Server. Il part du principe que vous avez déjà installé et activé les fonctionnalités d’apprentissage automatique et reconfigurer l’instance pour prendre en charge une gestion plus affinée les ressources utilisées par les processus externes tels que R ou Python.
 
 Le processus comporte plusieurs étapes :
 
@@ -175,7 +175,7 @@ Pour vérifier que les modifications ont été apportées, vous devez vérifier 
     |2|par défaut|Moyenne|25|0|0|0|0|2|2|
     |256|ds_wg|Moyenne|25|0|0|0|0|2|256|
   
-2.  Utilisez la nouvelle vue de catalogue, [sys.resource_governor_external_resource_pools &#40; Transact-SQL &#41; ](../../relational-databases/system-catalog-views/sys-resource-governor-external-resource-pools-transact-sql.md), pour afficher tous les pools de ressources externes.
+2.  Utilisez la nouvelle vue de catalogue, [sys.resource_governor_external_resource_pools &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-resource-governor-external-resource-pools-transact-sql.md), pour afficher tous les pools de ressources externes.
   
     ```sql
     SELECT * FROM sys.resource_governor_external_resource_pools;
@@ -203,7 +203,7 @@ Pour vérifier que les modifications ont été apportées, vous devez vérifier 
 Pour plus d’informations sur la gestion des ressources du serveur, consultez :
 
 +  [Resource Governor](../../relational-databases/resource-governor/resource-governor.md) 
-+ [Le gouverneur de ressources liées de vues de gestion dynamique &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/resource-governor-related-dynamic-management-views-transact-sql.md)
++ [Le gouverneur de ressources liées de vues de gestion dynamique &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/resource-governor-related-dynamic-management-views-transact-sql.md)
 
 Pour une vue d’ensemble de la gouvernance de ressources pour l’apprentissage, consultez :
 
