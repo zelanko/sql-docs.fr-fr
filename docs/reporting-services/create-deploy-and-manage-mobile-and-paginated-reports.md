@@ -1,8 +1,8 @@
 ---
-title: Reporting Services (SSRS) | Microsoft Docs
-description: Découvrez les outils et services disponibles pour les rapports Reporting Services mobiles et paginés, ainsi que pour les rapports Power BI locaux.
+title: Qu’est-ce que SQL Server Reporting Services (SSRS) ? | Microsoft Docs
+description: Découvrez les outils et services disponibles pour les rapports Reporting Services mobiles et paginés locaux.
 ms.custom: ''
-ms.date: 07/01/2017
+ms.date: 03/16/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.service: ''
@@ -24,17 +24,17 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.workload: Active
-ms.openlocfilehash: 6deaece7d2dd01ebf831820c2e026044f80651de
-ms.sourcegitcommit: 3ed9be04cc7fb9ab1a9ec230c298ad2932acc71b
+ms.openlocfilehash: 8f7c8f1fb8e72ba3861df9b4ac015468dc143459
+ms.sourcegitcommit: ccb05cb5a4cccaf7ffa9e85a4684fa583bab914e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/17/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="what-is-sql-server-reporting-services-ssrs"></a>Qu’est-ce que SQL Server Reporting Services (SSRS) ?
 
 [!INCLUDE [ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE [ssrs-appliesto-not-pbirs](../includes/ssrs-appliesto-not-pbirs.md)])
 
-[!INCLUDE [ssrs-previous-versions](../includes/ssrs-previous-versions.md)]
+[!INCLUDE [ssrs-previous-versions](../includes/ssrs-previous-versions.md)] Vous recherchez Power BI Report Server ? Consultez [Prise en main de Power BI Report Server](https://powerbi.microsoft.com/documentation/reportserver-get-started/).
 
 Créer, déployer et gérer localement des rapports Reporting Services paginés et mobiles grâce aux outils et services prêts à l’emploi fournis par SSRS (SQL Server Reporting Services).
 
@@ -51,9 +51,6 @@ Pour SQL Server 2016, Reporting Services offre une suite de produits mise à jou
 * **Portail web moderne** que vous pouvez afficher dans n’importe quel navigateur moderne. Dans le nouveau portail, vous pouvez organiser et afficher des indicateurs de performance clés et des rapports Reporting Services paginés et mobiles. Vous pouvez également stocker des classeurs Excel sur le portail.
 
 Pour en savoir plus, lisez la suite de cet article.
-
-> [!NOTE]
-> Vous recherchez Power BI Report Server ? Consultez [Prise en main de Power BI Report Server](https://powerbi.microsoft.com/documentation/reportserver-get-started/).
 
 ### <a name="whats-new-in-reporting-services"></a>Nouveautés de Reporting Services
 

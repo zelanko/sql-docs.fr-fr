@@ -10,23 +10,24 @@ ms.suite: sql
 ms.prod_service: sql-tools
 ms.reviewer: sstein
 manager: craigg
-ms.openlocfilehash: c9ede90c1232469797f85af353c7e3fced6851b5
-ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
+ms.openlocfilehash: 8cdb4f258f62b425be78e9f6b4628d69e304c7ba
+ms.sourcegitcommit: ccb05cb5a4cccaf7ffa9e85a4684fa583bab914e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/21/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="tutorial-sql-server-management-studio-components-and-configuration"></a>Tutoriel : Composants et configuration de SQL Server Management Studio
 Ce tutoriel décrit les différents composants de fenêtres dans SSMS (SQL Server Management Studio) et certaines options de configuration de base pour votre espace de travail. Dans cet article, vous allez approfondir les sujets suivants : 
-- Différents composants qui constituent l’environnement SSMS
-- Modification de la disposition de l’environnement et réinitialisation des valeurs par défaut
-- Agrandissement de l’éditeur de requête
-- Modification de certains paramètres de base comme
-    - Modification de la police
-    - Configuration des options de démarrage
-    - Réinitialisation de la configuration par défaut
 
-## <a name="prerequisites"></a>Prérequis
+> [!div class="checklist"]
+> * Différents composants qui constituent l’environnement SSMS
+> * Modification de la disposition de l’environnement et réinitialisation des valeurs par défaut
+> * Agrandissement de l’éditeur de requête
+> * Modification de la police 
+> * Configuration des options de démarrage 
+> * Réinitialisation de la configuration par défaut 
+
+## <a name="prerequisites"></a>Prerequisites
 Pour suivre ce tutoriel, vous avez besoin de SQL Server Management Studio.  
 
 - Installez [SQL Server Management Studio](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms).
@@ -60,7 +61,7 @@ Cette section couvre les différents composants de fenêtres disponibles dans l�
 
     
 
-## <a name="changing-the-environmental-layout"></a>Modification de la disposition de l’environnement 
+## <a name="change-the-environmental-layout"></a>Modifier la disposition de l’environnement 
 Cette section décrit la manipulation de la disposition de l’environnement, comme le déplacement des différentes fenêtres. 
 
 -  Chaque composant de fenêtre peut être déplacé en maintenant le titre enfoncé et en faisant glisser la fenêtre. 
@@ -90,7 +91,7 @@ Cette section décrit la manipulation de la disposition de l’environnement, co
  
     ![Restaurer la disposition de fenêtre](media/ssms-configuration/resetwindowlayout.png)
     
-## <a name="maximizing-query-editor"></a>Agrandissement de l'Éditeur de requête
+## <a name="maximize-query-editor"></a>Agrandir l'Éditeur de requête
 L’éditeur de requête peut être agrandi en mode plein écran.
 
 1. Cliquez n’importe où dans la fenêtre de l’éditeur de requête.
@@ -100,7 +101,7 @@ Ce raccourci clavier fonctionne dans toute fenêtre de document.
 
 
 
-## <a name="changing-basic-settings"></a>Modification de paramètres de base
+## <a name="change-basic-settings"></a>Changer les paramètres de base
 Cette section explique comment modifier certains paramètres de base dans SSMS. Ces options se trouvent dans le menu **Outils** :
 
   ![Menu Outils](media/ssms-configuration/tools.png)
@@ -110,18 +111,32 @@ Cette section explique comment modifier certains paramètres de base dans SSMS. 
 
     ![Personnaliser la barre d’outils](media/ssms-configuration/toolbar.png)
 
+### <a name="change-the-font"></a>Changer la police
 - La police peut être modifiée à partir du menu : **Outils** > **Options** > **Polices et couleurs** :
 
      ![Polices et couleurs](media/ssms-configuration/fontsandcolors.png)
 
+### <a name="change-the-startup-options"></a>Changer les options de démarrage
 - Les options de démarrage déterminent l’aspect de votre espace de travail lors du premier lancement de SSMS. Elles peuvent être configurées dans le menu : **Outils** > **Options** > **Démarrage** :
  
     ![Options de démarrage](media/ssms-configuration/startup.png)
 
+### <a name="reset-settings-to-default"></a>Rétablir les valeurs par défaut des paramètres
 - Tous ces paramètres peuvent être exportés et importés dans le menu : **Outils** > **Importation et exportation de paramètres** 
 
     ![Importation et exportation de paramètres](media/ssms-configuration/settings.png)
     - Il s’agit également de l’emplacement où vous pouvez réinitialiser tous les paramètres par défaut. 
+
+
+## <a name="next-steps"></a>Étapes suivantes
+L’article suivant vous donne quelques conseils et astuces supplémentaires pour utiliser SSMS, par exemple comment rechercher votre journal des erreurs SQL Server et le nom de votre instance SQL. 
+
+Passez à l’article suivant pour en savoir plus
+> [!div class="nextstepaction"]
+> [Bouton Étapes suivantes](ssms-tricks.md)
+ 
+ 
+
 
 
 

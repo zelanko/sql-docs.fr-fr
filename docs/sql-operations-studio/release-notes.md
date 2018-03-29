@@ -1,28 +1,45 @@
 ---
-title: "Notes de publication Microsoft SQL Studio Operations (version préliminaire) | Documents Microsoft"
-description: "Notes de publication Microsoft SQL Studio Operations (version préliminaire)"
+title: Notes de publication Microsoft SQL Studio Operations (version préliminaire) | Documents Microsoft
+description: Notes de publication Microsoft SQL Studio Operations (version préliminaire)
 ms.custom: tools|sos
-ms.date: 02/15/2018
+ms.date: 03/28/2018
 ms.prod: sql-non-specified
 ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
 ms.component: sos
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1b8c5e3cce8f84f0565c764a47d3f3b7c1709454
-ms.sourcegitcommit: 4edac878b4751efa57601fe263c6b787b391bc7c
+ms.openlocfilehash: ba86403e791af25de4f7bcd8b1cbd7b5f188897b
+ms.sourcegitcommit: d6881107b51e1afe09c2d8b88b98d075589377de
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="sql-operations-studio-preview-release-notes"></a>Notes de publication SQL opérations Studio (version préliminaire)
 
-**[Télécharger la version préliminaire publique de février](download.md)**
+**[Télécharger la version préliminaire publique de mars](download.md)**
+
+## <a name="march-2018-march-public-preview"></a>Mars 2018 (mars version préliminaire publique)
+
+date de publication : le 28 mars 2018  
+version : 0.27.3
+
+Le *mars Public Preview* continue à résoudre les problèmes de GitHub supérieur et se concentre sur l’amélioration de notre histoire d’extensibilité. Plus précisément l’activation du Gestionnaire d’extensions, améliorer la gestion du tableau de bord et en fournissant l’Agent SQL et les extensions insights. Cette version inclut les améliorations suivantes :
+
+- Améliorer le modèle d’extensibilité du tableau de bord pour prendre en charge les analyses à onglets et volets de configuration.
+   - Gestionnaire d’extensions permet simple acquisition d’extensions.
+   - Extensions de tableau de bord pour sp_whoisactive de [whoisactive.com](http://www.whoisactive.com).
+   - Pour plus d’informations, consultez [étendre les fonctionnalités des opérations de SQL Studio](extensions.md).
+- Ajouter d’autres [API d’extensibilité pour la connexion et l’objet explorer](https://github.com/Microsoft/sqlopsstudio/wiki/Extensibility-API) management.
+- Corrigez les clients importants ayant un impact sur [GitHub problèmes](https://github.com/Microsoft/sqlopsstudio/issues).
+
+Pour plus d’informations, consultez la [journal des modifications](https://github.com/Microsoft/sqlopsstudio/blob/master/CHANGELOG.md).
+
 
 ## <a name="february-2018-february-public-preview"></a>Février 2018 (février version préliminaire publique)
 
@@ -63,8 +80,6 @@ Le *préliminaire de janvier* inclut des suggestions de fonctionnalités et les 
 - Corrigez la rupture de glisser-déposer bogue de script.
 - Correctif incorrect épinglé icône du Menu Démarrer.
 - Corrigez le compte Azure manquant icône de marque.
-
-Pour plus d’informations, consultez la [journal des modifications](https://github.com/Microsoft/sqlopsstudio/blob/master/CHANGELOG.md).
 
 
 ## <a name="december-2017-december-public-preview"></a>Décembre 2017 (préliminaire de décembre)
