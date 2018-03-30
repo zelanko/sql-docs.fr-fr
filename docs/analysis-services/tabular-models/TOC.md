@@ -1,6 +1,7 @@
 # [Vue d’ensemble](tabular-models-ssas.md)  
 
 # [Créer des modèles tabulaires](tabular-model-solutions-ssas-tabular.md)  
+## [Sources de données prises en charge dans les modèles tabulaires 1400](data-sources-supported-ssas-tabular-1400.md)  
 ## [Sources de données prises en charge dans les modèles tabulaires 1200](data-sources-supported-ssas-tabular.md)  
 ## [Types de données prises en charge](data-types-supported-ssas-tabular.md)  
 ## [Concepteur de modèle tabulaire](tabular-model-designer-ssas.md)  
@@ -23,6 +24,8 @@
 ### [Configurer les propriétés par défaut de la modélisation et du déploiement des données](configure-default-data-modeling-and-deployment-properties-ssas-tabular.md)  
 
 ## Importer des données
+
+### [Sources de données prises en charge dans les modèles tabulaires 1400](data-sources-supported-ssas-tabular-1400.md)  
 ### [Sources de données prises en charge dans les modèles tabulaires 1200](data-sources-supported-ssas-tabular.md)  
 ### [Types de données prises en charge](data-types-supported-ssas-tabular.md)  
 ### [Emprunt d’identité](impersonation-ssas-tabular.md)  
