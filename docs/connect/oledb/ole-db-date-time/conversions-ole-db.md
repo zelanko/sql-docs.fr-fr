@@ -21,11 +21,11 @@ author: pmasl
 ms.author: Pedro.Lopes
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e363464201a3d80c296ccd111e6708d5b3176501
-ms.sourcegitcommit: 9f4330a4b067deea396b8567747a6771f35e6eee
+ms.openlocfilehash: f6bff4cdd5ea1a6b2fef3283ba9c0413e3d26842
+ms.sourcegitcommit: 8f1d1363e18e0c32ff250617ab6cb2da2147bf8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2018
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="conversions-ole-db"></a>Conversions (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -47,7 +47,7 @@ ms.lasthandoff: 03/30/2018
      *yyyy*-*mm*-*dd*  
   
 > [!NOTE]  
->  Les versions antérieures de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client et SQLOLEDB autorisaient l'implémentation de conversions OLE en cas d'échec des processus de conversion standard. Par conséquent, certaines conversions effectuées par le pilote OLE DB pour SQL Server diffèrent de la spécification OLE DB.  
+>  Les versions antérieures de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client et SQLOLEDB autorisaient l'implémentation de conversions OLE en cas d'échec des processus de conversion standard. Le pilote OLE DB pour SQL Server suit le même comportement que [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client. Par conséquent, certaines conversions effectuées par le pilote OLE DB pour SQL Server diffèrent de la spécification OLE DB.  
   
  Les conversions de chaînes autorisent une souplesse en matière d'espace et de largeur de champ. Pour plus d’informations, consultez la section « Formats de données : chaînes et littéraux » dans [prise en charge du Type de données de Date OLE DB et les améliorations apportées au](../../oledb/ole-db-date-time/data-type-support-for-ole-db-date-and-time-improvements.md).  
   

@@ -1,0 +1,6 @@
+# [Création d’une application OLE DB Driver pour SQL Server](creating-a-oledb-driver-for-sql-server-application.md)
+# [Présentation des propriétés OLE DB](about-ole-db-properties.md)
+# [Établissement d’une connexion à une source de données](establishing-a-connection-to-a-data-source.md)
+# [Exécution d’une commande](executing-a-command.md)
+# [Traitement des résultats](processing-results.md)
+# [Utilisation de la clause OUTPUT avec OLE DB dans OLE DB Driver pour SQL Server](using-the-output-clause-with-ole-db-in-oledb-driver-for-sql-server.md)

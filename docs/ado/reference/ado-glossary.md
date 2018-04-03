@@ -1,28 +1,28 @@
 ---
 title: Glossaire ADO | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
-ms.technology: "“drivers”"
+ms.technology: drivers
 ms.topic: article
 helpviewer_keywords:
 - ADO, glossary
 ms.assetid: b0478836-4123-4357-969a-c5784fc28be5
-caps.latest.revision: 
+caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ed92b88736cdc579ddee67dff313f8aad3c69b71
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: f24e579d2cd1802b42ce4ae2cbc2d8b5b8e447e6
+ms.sourcegitcommit: 8f1d1363e18e0c32ff250617ab6cb2da2147bf8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="ado-glossary"></a>Glossaire ADO
 Cette rubrique définit les termes pertinents pour ADO.  
@@ -54,7 +54,7 @@ Cette rubrique définit les termes pertinents pour ADO.
  Un mappage entre un champ dans une table et une variable. Dans les extensions ADO de Visual C++, **Recordset** champs sont mappés à des variables C/C++.  
   
  masque de bits  
- Une valeur numérique destiné à une comparaison de valeurs de bit par bit avec d’autres valeurs numériques, généralement indiquer les options disponibles dans les paramètres ou valeurs de retour. Cette comparaison est généralement effectuée par des opérateurs logiques au niveau du bit, tel que **et** et **ou** en Visual Basic,  **&**  et **&#124;** en C++.  
+ Une valeur numérique destiné à une comparaison de valeurs de bit par bit avec d’autres valeurs numériques, généralement indiquer les options disponibles dans les paramètres ou valeurs de retour. Cette comparaison est généralement effectuée par des opérateurs logiques au niveau du bit, tel que **et** et **ou** en Visual Basic, **&** et **&#124;** en C++.  
   
  Par exemple, ADO **FieldAttributeEnum** valeurs peuvent être utilisées en tant que masques de bits pour déterminer les attributs d’un champ. Supposons que vous souhaitiez déterminer si un champ a été mise à jour. Pour cela, vous pouvez tester à l’expression suivante en Visual Basic :`Field.Attributes AND adFldUpdatable`  
   
@@ -165,7 +165,7 @@ Cette rubrique définit les termes pertinents pour ADO.
   
 ## <a name="e"></a>E  
  Énumération  
- Une liste de constantes nommées. Les valeurs énumérées ne doivent pas être uniques. Toutefois, le nom de chaque valeur doit être unique dans l’étendue où l’énumération est définie. Dans ADO, les énumérations sont utilisées pour le paramètre numérique et valeurs de retour, pour ajouter signification à code ADO et de protéger le développeur à partir des valeurs numériques (qui peuvent changer d’une version à l’autre). Par exemple, pour ouvrir un statique **Recordset**, utilisez le **adOpenStatic** valeur énumérée :`Recordset.Open ,,adOpenStatic`  
+ Une liste de constantes nommées. Les valeurs énumérées ne doivent pas être uniques. Toutefois, le nom de chaque valeur doit être unique dans l’étendue où l’énumération est définie. Dans ADO, les énumérations sont utilisées pour le paramètre numérique et valeurs de retour, pour ajouter signification à code ADO et de protéger le développeur à partir des valeurs numériques (qui peuvent changer d’une version à l’autre). Par exemple, pour ouvrir un statique **Recordset**, utilisez le **adOpenStatic** valeur énumérée : `Recordset.Open ,,adOpenStatic`  
   
  Également appelé *constante énumérée*. Voir aussi *constante*.  
   
