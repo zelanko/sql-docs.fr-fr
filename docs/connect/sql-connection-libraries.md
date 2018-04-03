@@ -11,13 +11,13 @@ ms.technology: dbe-data-tier-apps
 ms.custom: ''
 ms.workload: data-management
 ms.topic: article
-ms.date: 08/09/2017
+ms.date: 03/29/2018
 ms.author: genemi
-ms.openlocfilehash: 33df5e13dcdeb205a1dbc9fa9c1a5dc7efc754c2
-ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
+ms.openlocfilehash: c1f0f197fbc01863ab06164282d2d007c2bd8214
+ms.sourcegitcommit: 8f1d1363e18e0c32ff250617ab6cb2da2147bf8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="connection-modules-for-microsoft-sql-databases"></a>Modules de connexion pour les bases de données Microsoft SQL
 
@@ -27,7 +27,6 @@ Cet article fournit des liens de téléchargement pour les modules de connexion 
 - MacOS
 - Windows
 
-
 #### <a name="oop-to-relational-mismatch"></a>Incompatibilité de programmation orientée objet-relationnel
 
 *Relationnelle*: les programmes clients qui sont écrits dans un langage orienté objet de programmation (OOP) souvent utilisent les pilotes SQL qui retournent des données interrogées dans un format qui n’est plus relationnel qu’orientée objet. À l’aide d’ADO.NET en c# est un exemple. L’incompatibilité de format relationnel OOP rend parfois plus difficile à écrire et à comprendre le code de programmation orientée objet.
@@ -35,7 +34,6 @@ Cet article fournit des liens de téléchargement pour les modules de connexion 
 *ORM*: autres pilotes ou des infrastructures retournent des données interrogées au format OOP, ce qui évite l’incompatibilité. Ces pilotes fonctionnent par attendu que les classes ont été définies pour faire correspondre les colonnes de données de tables SQL particulières. Le pilote effectue ensuite les *mappage relationnel objet* (ORM) pour retourner des données interrogées comme une instance d’une classe. Microsoft Entity Framework (EF) pour c# et mettre en veille prolongée pour Java, sont deux exemples.
 
 Cet article consacre des sections distinctes pour ces deux types de pilotes de connexion.
-
 
 <a name="anchor-20-drivers-relational-access" />
 
@@ -53,18 +51,16 @@ PHP driver in Github.com also uses this FWLink:  http://go.microsoft.com/fwlink/
 although the FWLink is less precise than is http://github.com/Microsoft/msphpsql/tree/dev#install-unix .
 -->
 
-
 | Langage | Téléchargez le pilote SQL |
 | :------- | :---------------------- |
-| C#       | [ADO.NET](http://www.microsoft.com/net/download/)<br /><br />[.NET core,-Ubuntu Linux](https://www.microsoft.com/net/core#Ubuntu)<br />[.NET core, pour MacOS](https://www.microsoft.com/net/core#macos)<br />[.NET core, pour Windows](https://www.microsoft.com/net/core) |
-| C++      | [ODBC](http://docs.microsoft.com/sql/connect/odbc/download-odbc-driver-for-sql-server) |
-| Java     | [JDBC](http://www.microsoft.com/download/details.aspx?id=55539) |
-| Node.js  | [Pilote Node.js, des instructions d’installation](http://docs.microsoft.com/sql/connect/node-js/step-1-configure-development-environment-for-node-js-development) |
-| PHP      | *Système d'exploitation :*<br /><br />[Pilote Windows PHP](https://www.microsoft.com/download/details.aspx?id=55642)<br />[Linux ou macOS pilote PHP à partir de Github](http://github.com/Microsoft/msphpsql/) |
-| Python   | [pyodbc, des instructions d’installation](http://docs.microsoft.com/sql/connect/python/pyodbc/step-1-configure-development-environment-for-pyodbc-python-development)<br />[Télécharger ODBC](http://docs.microsoft.com/sql/connect/odbc/download-odbc-driver-for-sql-server) |
-| Ruby     | [Pilote Ruby, des instructions d’installation](https://docs.microsoft.com/sql/connect/ruby/step-1-configure-development-environment-for-ruby-development)<br />[Page de téléchargement Ruby](https://rubyinstaller.org/downloads/) |
+| C# | [ADO.NET](http://www.microsoft.com/net/download/)<br /><br />[.NET core,-Ubuntu Linux](https://www.microsoft.com/net/core#Ubuntu)<br />[.NET core, pour MacOS](https://www.microsoft.com/net/core#macos)<br />[.NET core, pour Windows](https://www.microsoft.com/net/core) |
+| C++ | [ODBC](./odbc/download-odbc-driver-for-sql-server.md)<br /><br />[OLE DB](./oledb/oledb-driver-for-sql-server-programming.md) |
+| Java | [JDBC](./jdbc/microsoft-jdbc-driver-for-sql-server.md) |
+| Node.js | [Pilote Node.js, des instructions d’installation](./node-js/step-1-configure-development-environment-for-node-js-development.md) |
+| PHP | *Système d'exploitation :*<br /><br />[Pilote Windows PHP](https://www.microsoft.com/download/details.aspx?id=55642)<br />[Linux ou macOS pilote PHP à partir de Github](http://github.com/Microsoft/msphpsql/) |
+| Python | [pyodbc, des instructions d’installation](./python/pyodbc/step-1-configure-development-environment-for-pyodbc-python-development.md)<br />[Télécharger ODBC](./odbc/download-odbc-driver-for-sql-server.md) |
+| Ruby | [Pilote Ruby, des instructions d’installation](./ruby/step-1-configure-development-environment-for-ruby-development.md)<br />[Page de téléchargement Ruby](https://rubyinstaller.org/downloads/) |
 | &nbsp; | <br /> |
-
 
 <a name="anchor-40-drivers-orm-access" />
 
@@ -82,14 +78,11 @@ Le tableau suivant répertorie des exemples d’infrastructures relationnelle ma
 | Node.js | [Sequelize ORM](http://docs.sequelizejs.com) |
 | Python | [Django](http://www.djangoproject.com/) |
 | Ruby | [Ruby sur Rails](http://rubyonrails.org/) |
-| &nbsp; | <br /> |
 
 
 <a name="anchor-60-build-an-app-webpages" />
 
 ## <a name="build-an-app-webpages"></a>Pages Web d’une application de build
-
-
 [http://aka.ms/sqldev](http://aka.ms/sqldev) Permet d’accéder à un ensemble de *-générer une application* des pages Web. Les pages Web fournissent des informations sur les nombreuses combinaisons de programmation de langue, système d’exploitation et le pilote de connexion SQL. Parmi les informations fournies par les pages Web générer une application sont les éléments suivants :
 
 - Plus d’informations sur la prise en main depuis le début, pour chaque combinaison de langue, système d’exploitation + pilote.
@@ -99,24 +92,16 @@ Le tableau suivant répertorie des exemples d’infrastructures relationnelle ma
     - Exemples de code ORM.
     - Démonstrations d’index ColumnStore pour des performances beaucoup plus rapides.
 
-
 #### <a name="first-page-of-build-an-app-webpages"></a>Première page, des pages Web de générer une application
-
 ![Pages Web générer une application, capture d’écran de première page][image-ref-163-buildanapp-webpages-first-page]
 
-
 #### <a name="menu-for-java---ubuntu-of-build-an-app-webpages"></a>Menu Java - Ubuntu, des pages Web de générer une application
-
 ![Pages Web générer une application, les menus Java Ubuntu][image-ref-167-buildanapp-webpages-menu-java-ubuntu]
-
 
 &nbsp;
 
-
 ## <a name="related-links"></a>Liens connexes
-
 - [Exemples de code pour la connexion à la base de données SQL Azure dans le cloud, avec Java et d’autres langages](http://docs.microsoft.com/azure/sql-database/sql-database-connect-query-java).
-
 
 <!-- Image references -->
 

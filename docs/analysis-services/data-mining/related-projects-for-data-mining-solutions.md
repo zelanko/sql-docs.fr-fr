@@ -1,31 +1,31 @@
 ---
-title: "Projets connexes pour les Solutions d’exploration de données | Documents Microsoft"
-ms.custom: 
+title: Projets connexes pour les Solutions d’exploration de données | Documents Microsoft
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: dc26489a-4c27-4b89-8215-6d245427c350
-caps.latest.revision: 
+caps.latest.revision: 12
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 7eebc2ae561e47481734c80dbc8f77ad381f4193
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: 8093acbb0886699bcb9c781c636b37f249f96bee
+ms.sourcegitcommit: 8f1d1363e18e0c32ff250617ab6cb2da2147bf8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="related-projects-for-data-mining-solutions"></a>Projets connexes pour des solutions d'exploration de données
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Une solution d'exploration de données requiert au minimum le projet d'exploration de données, lequel définit les sources de données, les vues de source de données, ainsi que les structures et modèles d'exploration de données. Toutefois, lorsque les modèles d'exploration de données sont utilisés dans les prises de décision quotidiennes, il est important que l'exploration de données soit intégrée à l'autre partie d'une solution d'analyse prédictive, qui peut inclure ces processus et composants :  
+  Une solution d'exploration de données requiert au minimum le projet d'exploration de données, lequel définit les sources de données, les vues de source de données, ainsi que les structures et modèles d'exploration de données. Toutefois, lorsque les modèles d'exploration de données sont utilisés dans les prises de décision quotidiennes, il est important que l'exploration de données soit intégrée à l'autre partie d'une solution d'analyse prédictive, qui peut inclure ces processus et composants :  
   
 -   Préparation et sélection des données et des variables. Inclut le nettoyage de données, la gestion et l'intégration des métadonnées de plusieurs sources de données, ainsi que la conversion, la fusion et le téléchargement de données dans un entrepôt de données.  
   
@@ -48,7 +48,7 @@ Une solution d'exploration de données requiert au minimum le projet d'explorati
  [Indexation sémantique](#bkmk_SemSearch)  
   
 ##  <a name="bkmk_SSIS"></a> SQL Server Integration Services  
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] fournit des composants et fonctionnalités requis pour les phases de préparation et d'apprentissage des données d'un projet d'exploration de données. Bien que vous puissiez effectuer de nombreuses tâches de nettoyage et de préparation des données à l'aide d'autres outils, tels que les scripts, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] présente beaucoup d'avantages pour l'exploration de données :  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]Fournit des composants et fonctionnalités qui sont nécessaires pour les phases de formation d’un projet d’exploration de données et de préparation des données. Bien que vous puissiez effectuer de nombreuses tâches de nettoyage et de préparation des données à l'aide d'autres outils, tels que les scripts, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] présente beaucoup d'avantages pour l'exploration de données :  
   
 -   Représente des tâches dans le cadre d'un flux de travail, qui peuvent être répétées, automatisées, ramifiées et étendues.  
   
@@ -209,6 +209,6 @@ Une solution d'exploration de données requiert au minimum le projet d'explorati
   
 ## <a name="see-also"></a>Voir aussi  
  [Solutions de modèles multidimensionnels ](../../analysis-services/multidimensional-models/multidimensional-model-solutions-ssas.md)   
- [Solutions de modèles tabulaires](../../analysis-services/tabular-models/tabular-model-solutions-ssas-tabular.md)  
+ [Solutions de modèles tabulaires](../../analysis-services/tabular-models/tabular-models-ssas.md)  
   
   

@@ -1,31 +1,31 @@
 ---
-title: "Base de données de l’espace de travail | Documents Microsoft"
-ms.custom: 
-ms.date: 02/21/2018
+title: Base de données de l’espace de travail de SQL Server Data Tools | Documents Microsoft
+ms.custom: ''
+ms.date: 03/30/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 662daf08-a514-44a7-8675-44644aa454a2
-caps.latest.revision: 
+caps.latest.revision: 24
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 2ab6a38542e9c6702edcf98401db0796fc5e78e4
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: ad6297a1485d710b6ef34cca88a5610efd6e7c9e
+ms.sourcegitcommit: 8f1d1363e18e0c32ff250617ab6cb2da2147bf8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="workspace-database"></a>Base de données d’espace de travail 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-La base de données de l'espace de travail de modèles tabulaires, utilisée lors de la création d'un modèle, est créée lorsque vous créez un projet de modèle tabulaire dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].
+  La base de données de l'espace de travail de modèles tabulaires, utilisée lors de la création d'un modèle, est créée lorsque vous créez un projet de modèle tabulaire dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].
   
 ## <a name="specifying-a-workspace-instance"></a>Spécification d’une instance d’espace de travail  
   Quand vous créez un projet de modèle tabulaire dans SSDT, vous pouvez spécifier une instance d’Analysis Services à utiliser lors de la création de votre projet. À partir de la version de septembre 2016 (14.0.60918.0) de [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], vous disposez de deux modes pour spécifier une instance d’espace de travail quand vous créez un projet de modèle tabulaire. 
@@ -94,6 +94,6 @@ En utilisant les propriétés de base de données d’espace de travail et de se
  Vous pouvez utiliser SQL Server Management Studio (SSMS) pour vous connecter à un serveur [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] qui héberge une base de données d’espace de travail. En général, aucune gestion de base de données de l'espace de travail n'est nécessaire ; le détachement ou la suppression d'une base de données de l'espace de travail constitue l'exception et cette opération doit être effectuée dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. N'utilisez pas [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] pour gérer la base de données de l'espace de travail alors que le projet est ouvert dans le générateur de modèles. Vous risqueriez de perdre des données.
    
 ## <a name="see-also"></a>Voir aussi  
-[Propriétés de modèle](../../analysis-services/tabular-models/model-properties-ssas-tabular.md) 
+[Propriétés d’un modèle](../../analysis-services/tabular-models/model-properties-ssas-tabular.md) 
   
   
