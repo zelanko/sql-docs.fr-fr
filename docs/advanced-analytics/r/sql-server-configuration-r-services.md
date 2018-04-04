@@ -1,26 +1,24 @@
 ---
 title: Configuration de SQL Server (R Services) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 07/26/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
-ms.assetid: 4b08969f-b90b-46b3-98e7-0bf7734833fc
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
+ms.author: heidist
+author: HeidiSteen
+manager: cgronlun
 ms.workload: Inactive
-ms.openlocfilehash: 5716fced7dd2be49c580222b9ae155451cf8f426
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 794a15c6673a06ea261f66129035ea62ea31cb0e
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="sql-server-configuration-for-use-with-r"></a>Configuration de SQL Server pour une utilisation avec R
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -98,7 +96,7 @@ Pour plus d’informations, consultez les documents suivants :
 
 + [Activer la compression sur une table ou un index](../../relational-databases/data-compression/enable-compression-on-a-table-or-index.md)
 
-+ [Guide des index ColumnStore](../../relational-databases/indexes/columnstore-indexes-overview.md)
++ [Guide des index columnstore](../../relational-databases/indexes/columnstore-indexes-overview.md)
 
 ### <a name="memory-optimized-tables"></a>Tables optimisées en mémoire
 
@@ -126,7 +124,7 @@ La gouvernance des ressources dans SQL Server vous permet de centraliser l’ana
 
 La valeur par défaut pour la consommation de mémoire par les scripts externes est limitée à 20 % de la mémoire totale disponible pour SQL Server lui-même. Cette limite est appliquée par défaut pour vous assurer que toutes les tâches qui s’appuient sur le serveur de base de données ne sont pas sérieusement affectés par les travaux R en cours d’exécution longue. Cependant, l’administrateur de base de données peut modifier ces limites. Dans de nombreux cas, la limite de 20 % n’est pas suffisante pour prendre en charge les charges de travail d’apprentissage grave.
 
-Les options de configuration prises en charge sont **MAX_CPU_PERCENT**, **MAX_MEMORY_PERCENT**, et **MAX_PROCESSES**. Pour afficher les paramètres actuels, utilisez cette instruction :`SELECT * FROM sys.resource_governor_external_resource_pools`
+Les options de configuration prises en charge sont **MAX_CPU_PERCENT**, **MAX_MEMORY_PERCENT**, et **MAX_PROCESSES**. Pour afficher les paramètres actuels, utilisez cette instruction : `SELECT * FROM sys.resource_governor_external_resource_pools`
 
 -  Si le serveur est principalement utilisé pour R Services, il peut être utile augmenter MAX_CPU_PERCENT à 40 % ou 60 %.
 
@@ -134,11 +132,11 @@ Les options de configuration prises en charge sont **MAX_CPU_PERCENT**, **MAX_ME
 
 Pour modifier les valeurs de ressource, utilisez les instructions T-SQL.
 
-+ Instruction définit l’utilisation de la mémoire à 40 %.`ALTER EXTERNAL RESOURCE POOL [default] WITH (MAX_MEMORY_PERCENT = 40)`
++ Instruction définit l’utilisation de la mémoire à 40 %. `ALTER EXTERNAL RESOURCE POOL [default] WITH (MAX_MEMORY_PERCENT = 40)`
 
-+ Cette instruction définit les trois valeurs configurables :`ALTER EXTERNAL RESOURCE POOL [default] WITH (MAX_CPU_PERCENT = 40, MAX_MEMORY_PERCENT = 50, MAX_PROCESSES = 20)`
++ Cette instruction définit les trois valeurs configurables : `ALTER EXTERNAL RESOURCE POOL [default] WITH (MAX_CPU_PERCENT = 40, MAX_MEMORY_PERCENT = 50, MAX_PROCESSES = 20)`
 
-+ Si vous modifiez une mémoire, processeur ou paramètre de processus maximale et que vous souhaitez appliquer les paramètres immédiatement, exécutez cette instruction :`ALTER RESOURCE GOVERNOR RECONFIGURE`
++ Si vous modifiez une mémoire, processeur ou paramètre de processus maximale et que vous souhaitez appliquer les paramètres immédiatement, exécutez cette instruction : `ALTER RESOURCE GOVERNOR RECONFIGURE`
 
 ## <a name="soft-numa-hardware-numa-and-cpu-affinity"></a>Affinité Soft-NUMA, le matériel NUMA et du processeur
 

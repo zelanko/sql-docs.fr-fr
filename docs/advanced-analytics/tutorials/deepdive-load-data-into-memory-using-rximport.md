@@ -1,31 +1,29 @@
 ---
-title: "Charger des données en mémoire à l’aide de rxImport (SQL et R approfondie) | Documents Microsoft"
-ms.custom: 
+title: Charger des données en mémoire à l’aide de rxImport (SQL et R approfondie) | Documents Microsoft
+ms.custom: ''
 ms.date: 12/14/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
-ms.component: 
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.component: ''
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: tutorial
 applies_to:
 - SQL Server 2016
 - SQL Server 2017
 dev_langs:
 - R
-ms.assetid: 47a42e9a-05a0-4a50-871d-de73253cf070
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
+ms.author: heidist
+author: HeidiSteen
+manager: cgronlun
 ms.workload: Inactive
-ms.openlocfilehash: 68e9533509c731b9cddff737a4db120be0dc86b8
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: b6bbc9f30fdf6144c75c56069a4e7a9fe4363e94
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="load-data-into-memory-using-rximport-sql-and-r-deep-dive"></a>Charger des données dans la mémoire à l’aide de rxImport (SQL et R approfondie)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

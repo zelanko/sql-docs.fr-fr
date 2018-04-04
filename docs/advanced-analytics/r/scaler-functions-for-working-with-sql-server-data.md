@@ -1,28 +1,26 @@
 ---
-title: "Les fonctions RevoScaleR pour travailler avec des données SQL Server | Documents Microsoft"
-ms.custom: 
+title: Les fonctions RevoScaleR pour travailler avec des données SQL Server | Documents Microsoft
+ms.custom: ''
 ms.date: 08/20/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - R
-ms.assetid: 5f3c9864-9c75-4688-947d-0940045b2671
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
+ms.author: heidist
+author: HeidiSteen
+manager: cgronlun
 ms.workload: Inactive
-ms.openlocfilehash: b1567bd6e4a419b293a963a7b3afe96c24409bcc
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 70591237d61d81dd78b09a5ce0c7d251a1b29796
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="revoscaler-functions-for-working-with-sql-server-data"></a>Fonctions RevoScaleR pour travailler avec des données SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -43,7 +41,7 @@ Les fonctions suivantes permettent de définir une source de données [!INCLUDE[
 
 Vous pouvez exécuter des instructions DDL à partir de R, si vous avez les autorisations nécessaires sur l’instance et de la base de données. Les fonctions suivantes utilisent des appels ODBC pour exécuter des instructions DDL ou de récupérer le schéma de base de données.
 
-+ `rxSqlServerTableExists`et [rxSqlServerDropTable](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxsqlserverdroptable) -supprimer un [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] de table ou de vérifier l’existence d’une table de base de données ou d’un objet
++ `rxSqlServerTableExists` et [rxSqlServerDropTable](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxsqlserverdroptable) -supprimer un [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] de table ou de vérifier l’existence d’une table de base de données ou d’un objet
 
 + [rxExecuteSQLDDL](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxexecutesqlddl) -exécuter une commande de langage de définition de données (DDL) qui définit ou manipule les objets de base de données. Cette fonction ne peut pas retourner des données et est utilisée uniquement pour récupérer ou modifier le schéma d’objet ou les métadonnées.
 
@@ -55,7 +53,7 @@ Les fonctions suivantes permettent de définir un nouveau contexte de calcul, d�
 
 + [rxInSqlServer](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxinsqlserver) : génère un contexte de calcul SQL Server qui permet aux fonctions **ScaleR** de s’exécuter dans SQL Server R Services. Ce contexte de calcul est actuellement pris en charge uniquement pour les instances SQL Server sur Windows.
 
-+ `rxGetComputeContext`et [rxSetComputeContext](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxgetcomputecontext) - obtenir ou définir le contexte de calcul active.
++ `rxGetComputeContext` et [rxSetComputeContext](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxgetcomputecontext) - obtenir ou définir le contexte de calcul active.
 
 ## <a name="move-data-and-transform-data"></a>Déplacer les données et de transformer des données
 

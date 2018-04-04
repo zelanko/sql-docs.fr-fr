@@ -1,29 +1,27 @@
 ---
-title: "À l’aide du Package MicrosoftML avec SQL Server | Documents Microsoft"
-ms.custom: 
+title: À l’aide du Package MicrosoftML avec SQL Server | Documents Microsoft
+ms.custom: ''
 ms.date: 08/23/2017
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - R
-ms.assetid: 1c377717-e281-431e-8171-3924dcce1cdd
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
 ms.workload: Inactive
-ms.openlocfilehash: d6b3c17d4fadf639102c4090fceaabee37276bc2
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 8d3cec4401f23e4cf7f187b1a937eb10b60dbcd0
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="using-the-microsoftml-package-with-sql-server"></a>À l’aide du package MicrosoftML avec SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -52,7 +50,7 @@ MicrosoftML contient une série de transformations qui ont été optimisées pou
 
 - Modèles de forêt arborescence et la décision de décision : `rxFastTree` est un algorithme d’arbre de décision augmentés initialement appelé FastRank, qui a été développée pour une utilisation dans Bing. Il s’agit de l’un des apprentissages les plus rapides et les plus populaires. Il prend en charge la régression et la classification binaire.
 
-  `rxFastForest`un modèle de régression logistique est basé sur la méthode de forêt aléatoire. Il est similaire à la fonction `rxLogit` dans RevoScaleR, mais il prend en charge la régularisation L1 et L2. Il prend en charge la régression et la classification binaire.
+  `rxFastForest` un modèle de régression logistique est basé sur la méthode de forêt aléatoire. Il est similaire à la fonction `rxLogit` dans RevoScaleR, mais il prend en charge la régularisation L1 et L2. Il prend en charge la régression et la classification binaire.
 
 - La régression logistique : `rxLogisticRegression` est un modèle de régression logistique similaire à la `rxLogit` fonction dans RevoScaleR, avec prise en charge supplémentaire pour la régularisation L1 et L2. Prend en charge la classification binaire ou multiclasse.
 

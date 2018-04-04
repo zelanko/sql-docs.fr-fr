@@ -1,29 +1,27 @@
 ---
-title: "Utilisation des entrées et sorties (R dans démarrage rapide de SQL) | Documents Microsoft"
-ms.custom: 
+title: Utilisation des entrées et sorties (R dans démarrage rapide de SQL) | Documents Microsoft
+ms.custom: ''
 ms.date: 07/31/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
-ms.component: 
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.component: ''
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: tutorial
 dev_langs:
 - R
 - SQL
-ms.assetid: 75480e5c-f37f-45b9-a176-67e08e9a9daf
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
+ms.author: heidist
+author: HeidiSteen
+manager: cgronlun
 ms.workload: On Demand
-ms.openlocfilehash: 593e102e75624ae2b36a56e528284bdcf47027e1
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 831ca196f4c45c169f398beb39895c7fa29e405f
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="working-with-inputs-and-outputs-r-in-sql-quickstart"></a>Utilisation des entrées et sorties (R dans démarrage rapide de SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -85,7 +83,7 @@ Obtient les données de la table, effectue un aller-retour via le runtime R et r
 
 ## <a name="change-input-or-output-variables"></a>Modifier les variables d’entrée ou de sortie
 
-L’exemple précédent utilisait les noms de variables d’entrée et de sortie par défaut, _InputDataSet_ et _OutputDataSet_. Pour définir les données d’entrée associées à _InputDatSet_, vous utilisez la variable  *@input_data_1* .
+L’exemple précédent utilisait les noms de variables d’entrée et de sortie par défaut, _InputDataSet_ et _OutputDataSet_. Pour définir les données d’entrée associées à _InputDatSet_, vous utilisez la variable *@input_data_1*.
 
 Dans cet exemple, les noms des variables de sortie et d’entrée de la procédure stockée ont été remplacés par *SQLOut* et *SQLIn* :
 

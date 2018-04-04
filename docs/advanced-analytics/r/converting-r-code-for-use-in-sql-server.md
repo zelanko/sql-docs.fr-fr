@@ -1,27 +1,25 @@
 ---
 title: Conversion de code R pour une utilisation dans R Services | Microsoft Doc
 ms.date: 12/20/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - R
-ms.assetid: 0b11ab52-b2f9-4a4f-b1ab-68ba09c8adcc
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
+ms.author: heidist
+author: HeidiSteen
+manager: cgronlun
 ms.workload: Inactive
-ms.openlocfilehash: 802ad1ee49920db65eadccfb29650c649c339d48
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 669f52d499b9479e23266af91c04e6bc084bb8ea
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="converting-r-code-for-execution-in-database"></a>Conversion de code R pour l’exécution de bases de données
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -34,7 +32,7 @@ Toutefois, votre code peut nécessiter des modifications substantielles si une d
 
 + Vous utilisez des bibliothèques R qui accèdent au réseau ou qui ne peut pas être installé sur SQL Server.
 + Le code effectue des appels séparés à des sources de données en dehors de SQL Server, tels que des feuilles de calcul Excel, les fichiers sur des partages et les autres bases de données. 
-+ Vous souhaitez exécuter le code de la  *@script*  paramètre de [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) et également paramétrer la procédure stockée.
++ Vous souhaitez exécuter le code de la *@script* paramètre de [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) et également paramétrer la procédure stockée.
 + Votre solution d’origine inclut plusieurs étapes qui peuvent être plus efficaces dans un environnement de production si exécutée indépendamment, telles que la préparation des données ou d’ingénierie de fonctionnalité et modèle d’apprentissage, de calcul de score ou le rapport.
 + Vous souhaitez améliorer optimiser les performances en modifiant les bibliothèques, à l’aide de l’exécution en parallèle ou le déchargement d’un traitement à SQL Server. 
 

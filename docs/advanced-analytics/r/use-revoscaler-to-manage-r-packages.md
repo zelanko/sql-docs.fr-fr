@@ -1,27 +1,25 @@
 ---
 title: Comment utiliser les fonctions RevoScaleR pour rechercher ou installer R packages SQL Server | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 02/20/2018
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - R
-ms.assetid: 
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
-ms.openlocfilehash: b600d7d118ad5bcc24c201683246f3e037da3fba
-ms.sourcegitcommit: c08d665754f274e6a85bb385adf135c9eec702eb
+ms.author: heidist
+author: HeidiSteen
+manager: cgronlun
+ms.openlocfilehash: 65bfbe18ddc6a39bb1d27bf4babab1d4dd3cf0de
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="how-to-use-revoscaler-functions-to-find-or-install-r-packages-on-sql-server"></a>Comment utiliser les fonctions RevoScaleR pour rechercher ou installer des packages R sur SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -52,7 +50,7 @@ La nouvelle version de RevoScaleR inclut également ces fonctions :
 
 + Utilisez le [rxSqlLibPaths](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsqllibpaths) contexte de calcul de la fonction pour déterminer le chemin d’accès de la bibliothèque de l’instance sur un serveur SQL Server.
 
-**S’applique à :** [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)].   Également pris en charge dans [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] [!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)] avec une mise à niveau vers Microsoft R Server 9.0 ou version ultérieure.   Autres restrictions s’appliquent.
+**S’applique à :** [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]. Également pris en charge dans [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] [!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)] avec une mise à niveau vers Microsoft R Server 9.0 ou version ultérieure. Autres restrictions s’appliquent.
 
 ## <a name="requirements"></a>Spécifications
 
