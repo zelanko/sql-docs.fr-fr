@@ -1,4 +1,4 @@
----
+﻿---
 title: Installer les outils de ligne de commande de SQL Server sur Linux | Documents Microsoft
 description: "Cet article décrit comment installer les outils SQL Server sur Linux."
 author: rothja
@@ -42,7 +42,7 @@ Cet article décrit comment installer les outils de ligne de commande. Si vous r
 
 ## <a name="a-idrhelainstall-tools-on-rhel-7"></a><a id="RHEL"><a/>Installer les outils sur RHEL 7
 
-Utilisez les étapes suivantes pour installer le **mssql-tools** sur Red Hat Enterprise Linux. 
+Utilisez les étapes suivantes pour installer le package **mssql-tools** sur Red Hat Enterprise Linux. 
 
 1. Activer le mode Super utilisateur.
 
@@ -56,13 +56,13 @@ Utilisez les étapes suivantes pour installer le **mssql-tools** sur Red Hat Ent
    curl https://packages.microsoft.com/config/rhel/7/prod.repo > /etc/yum.repos.d/msprod.repo
    ```
 
-1. Quitter le mode Super utilisateur.
+1. Quittez le mode Super utilisateur.
 
    ```bash
    exit
    ```
 
-1. Si vous aviez une version précédente de **mssql-tools** installé, supprimez tous les packages unixODBC plus anciens.
+1. Si vous aviez une version précédente de **mssql-tools** installée, supprimez tous les packages unixODBC plus anciens.
 
    ```bash
    sudo yum remove unixODBC-utf16 unixODBC-utf16-devel
@@ -98,9 +98,9 @@ Utilisez les étapes suivantes pour installer le **mssql-tools** sur Red Hat Ent
 
 ## <a id="ubuntu"></a>Installer les outils sur Ubuntu 16.04
 
-Utilisez les étapes suivantes pour installer le **mssql-tools** sur Ubuntu. 
+Utilisez les étapes suivantes pour installer le package **mssql-tools** sur Ubuntu. 
 
-1. Importer les clés GPG référentiel public.
+1. Importez les clés publiques GPG de référentiel. 
 
    ```bash
    curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
@@ -143,7 +143,7 @@ Utilisez les étapes suivantes pour installer le **mssql-tools** sur Ubuntu.
 
 ## <a id="SLES"></a>Installer les outils sur SLES 12
 
-Utilisez les étapes suivantes pour installer le **mssql-tools** sur SUSE Linux Enterprise Server. 
+Utilisez les étapes suivantes pour installer le package **mssql-tools** sur SUSE Linux Enterprise Server. 
 
 1. Ajouter le référentiel Microsoft SQL Server à Zypper.
 
@@ -182,7 +182,7 @@ Utilisez les étapes suivantes pour installer le **mssql-tools** sur SUSE Linux 
 
 ## <a id="macos"></a> Installer les outils sur macOS
 
-Un aperçu de **sqlcmd** et **bcp** est maintenant disponible sur macOS. Pour plus d’informations, consultez la [annonce](https://blogs.technet.microsoft.com/dataplatforminsider/2017/05/16/sql-server-command-line-tools-for-macos-released/).
+Un aperçu de **sqlcmd** et **bcp** est maintenant disponible sur macOS. Pour plus d’informations, consultez l'[annonce](https://blogs.technet.microsoft.com/dataplatforminsider/2017/05/16/sql-server-command-line-tools-for-macos-released/).
 
 *Installer [Homebrew](https://brew.sh) si vous ne l’avez déjà :*
 
@@ -201,13 +201,13 @@ brew install --no-sandbox mssql-tools
 
 ## <a id="docker"></a> Docker
 
-À compter de SQL Server 2017 CTP 2.0, les outils de ligne de commande de SQL Server sont inclus dans l’image de Docker. Si vous attachez à l’image avec une invite de commandes interactive, vous pouvez exécuter les outils localement.
+Depuis SQL Server 2017 CTP 2.0, les outils de ligne de commande de SQL Server sont inclus dans l’image de Docker. Si vous vous attachez à l’image avec une invite de commandes interactive, vous pouvez exécuter les outils localement.
 
 ## <a name="offline-installation"></a>Installation hors connexion
 
 [!INCLUDE[SQL Server Linux offline package installation](../includes/sql-server-linux-offline-package-install-intro.md)]
 
-Le tableau suivant fournit l’emplacement pour les packages d’outils plus récentes :
+Le tableau suivant fournit l’emplacement pour les packages d’outils les plus récents :
 
 | Package d’outils | Version | Télécharger |
 |-----|-----|-----|
@@ -216,7 +216,7 @@ Le tableau suivant fournit l’emplacement pour les packages d’outils plus ré
 | Ubuntu 16.04 Debian package des outils | 14.0.5.0-1 | [package de Debian MSSQL-outils](https://packages.microsoft.com/ubuntu/16.04/prod/pool/main/m/mssql-tools/mssql-tools_14.0.5.0-1_amd64.deb) |
 | Ubuntu 16.10 Debian package des outils | 14.0.5.0-1 | [package de Debian MSSQL-outils](https://packages.microsoft.com/ubuntu/16.10/prod/pool/main/m/mssql-tools/mssql-tools_14.0.5.0-1_amd64.deb) |
 
-Ces packages dépendent de **msodbcsql**, qui doit être installé en premier. Le **msodbcsql** celui-ci a également une dépendance sur le **unixODBC-développement** (RPM) ou **unixodbc-dev** (Debian). L’emplacement de la **msodbcsql** packages sont répertoriés dans le tableau suivant :
+Ces packages dépendent de **msodbcsql**, qui doit être installé en premier. **msodbcsql** a également une dépendance sur le **unixODBC-devel** (RPM) ou **unixodbc-dev** (Debian). L’emplacement des packages **msodbcsql** est répertorié dans le tableau suivant :
 
 | package de msodbcsql | Version | Télécharger |
 |-----|-----|-----|
@@ -237,7 +237,7 @@ Pour installer manuellement ces packages, procédez comme suit :
     | SLES | `sudo zypper install msodbcsql-13.1.6.0-1.x86_64.rpm`<br/>`sudo zypper install mssql-tools-14.0.5.0-1.x86_64.rpm` |
     | Ubuntu | `sudo dpkg -i msodbcsql_13.1.6.0-1_amd64.deb`<br/>`sudo dpkg -i mssql-tools_14.0.5.0-1_amd64.deb` |
 
-1. **Résoudre les dépendances manquantes**: vous pouvez avoir des dépendances manquantes à ce stade. Si ce n’est pas le cas, vous pouvez ignorer cette étape. Dans certains cas, vous devez localiser et installer manuellement ces dépendances.
+1. **Résoudre les dépendances manquantes**: vous pouvez avoir des dépendances manquantes à ce stade. Si ce n’est pas le cas, vous pouvez ignorer cette étape. Dans certains cas, vous devez manuellement identifier et installer ces dépendances.
 
     Pour les packages RPM, vous pouvez inspecter les dépendances nécessaires avec les commandes suivantes :
 
@@ -271,4 +271,4 @@ Pour obtenir un exemple montrant comment utiliser **sqlcmd** pour se connecter �
 - [Installer sur Ubuntu](quickstart-install-connect-ubuntu.md)
 - [Exécutez sur Docker](quickstart-install-connect-ubuntu.md)
 
-Pour obtenir un exemple montrant comment utiliser **bcp** pour importer en bloc et exporter des données, consultez [des données de copie en bloc vers SQL Server sur Linux](sql-server-linux-migrate-bcp.md).
+Pour obtenir un exemple montrant comment utiliser **bcp** pour importer et exporter des données en bloc, consultez [copie de données en bloc vers SQL Server sur Linux](sql-server-linux-migrate-bcp.md).
