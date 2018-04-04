@@ -1,29 +1,27 @@
 ---
-title: "Créer un modèle de prévision (R dans démarrage rapide de SQL) | Documents Microsoft"
-ms.custom: 
+title: Créer un modèle de prévision (R dans démarrage rapide de SQL) | Documents Microsoft
+ms.custom: ''
 ms.date: 07/26/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
-ms.component: 
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.component: ''
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: tutorial
 dev_langs:
 - R
 - SQL
-ms.assetid: 6eb78a80-5791-438f-9ca6-d142ab5d9bb1
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
+ms.author: heidist
+author: HeidiSteen
+manager: cgronlun
 ms.workload: On Demand
-ms.openlocfilehash: 1b40295452da5b7da34a31e6825630da9c6c4861
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: c01d03ff9911a88851b5dd560aaa44e85d4c89ff
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="create-a-predictive-model-r-in-sql-quickstart"></a>Créer un modèle de prévision (R dans démarrage rapide de SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -152,7 +150,7 @@ VALUES (' latest model', @model)
 
 N’oubliez pas ces règles pour l’utilisation des paramètres SQL et les variables de R dans `sp_execute_external_script`:
 
-+ Tous les paramètres SQL sont mappés à un script R doivent être répertoriés par nom dans la  _@params_  argument.
++ Tous les paramètres SQL sont mappés à un script R doivent être répertoriés par nom dans la _@params_ argument.
 + Pour sortir l’un de ces paramètres, ajoutez le mot clé OUTPUT dans la liste _@params_.
 + Après avoir répertorié les paramètres mappés, fournissez le mappage, ligne par ligne, des paramètres SQL aux variables R, de suite après la liste _@params_.
 

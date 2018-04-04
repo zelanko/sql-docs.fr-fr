@@ -1,34 +1,32 @@
 ---
-title: "La gouvernance de ressources pour l’apprentissage dans SQL Server | Documents Microsoft"
-ms.custom: 
+title: La gouvernance de ressources pour l’apprentissage dans SQL Server | Documents Microsoft
+ms.custom: ''
 ms.date: 11/16/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
-ms.assetid: 18c9978a-aa55-42bd-9ab3-8097030888c9
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
+ms.author: heidist
+author: HeidiSteen
+manager: cgronlun
 ms.workload: Inactive
-ms.openlocfilehash: d1eb0f1cce23d084516b5446d39274ac3078b0b8
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 11cfaba5f645824158e0c25103ec355e513fa075
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="resource-governance-for-machine-learning-in-sql-server"></a>Gouvernance de ressources pour l’apprentissage dans SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Cet article fournit une vue d’ensemble de la gouvernance de ressources dans SQL Server, les fonctionnalités qui aident à allouer et équilibrer les ressources utilisées par les scripts R et Python.
 
-**S’applique à :** [!INCLUDE[sscurrent-md](../../includes/sscurrent-md.md)]
- [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)] et [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] [!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)]
+**S’applique à** : [!INCLUDE[sscurrent-md](../../includes/sscurrent-md.md)]
+[!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)] et [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] [!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)]
 
 ## <a name="goals-of-resource-governance-for-machine-learning"></a>Objectifs de la gouvernance de ressources pour l’apprentissage
 
@@ -90,7 +88,7 @@ Si vous débutez au gouverneur de ressources, consultez cette rubrique pour une 
 
 La prise en charge des scripts externes est optionnelle dans le programme d’installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Même après l’installation des fonctionnalités d’apprentissage, la possibilité d’exécuter des scripts externes est désactivé par défaut, et vous devez manuellement de reconfigurer la propriété et de redémarrer l’instance pour activer l’exécution du script.
 
-Par conséquent, s’il existe un problème de ressource qui doit être atténuée immédiatement, ou d’un problème de sécurité, un administrateur peut immédiatement désactiver toute exécution de script externe à l’aide de [sp_configure &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) et en définissant la propriété `external scripts enabled` FALSE ou 0.
+Par conséquent, s’il existe un problème de ressource qui doit être atténuée immédiatement, ou d’un problème de sécurité, un administrateur peut immédiatement désactiver toute exécution de script externe à l’aide de [sp_configure &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) et en définissant la propriété `external scripts enabled` FALSE ou 0.
   
 ## <a name="see-also"></a>Voir aussi
 

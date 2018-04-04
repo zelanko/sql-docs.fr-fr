@@ -1,26 +1,24 @@
 ---
-title: "Performances pour R Services - optimisation des données | Documents Microsoft"
-ms.custom: 
+title: Performances pour R Services - optimisation des données | Documents Microsoft
+ms.custom: ''
 ms.date: 07/12/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
-ms.assetid: b6104878-ed19-47a7-ac37-21e4d6e2a1af
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
+ms.author: heidist
+author: HeidiSteen
+manager: cgronlun
 ms.workload: Inactive
-ms.openlocfilehash: 0ca7a57b10787ca183c2979fe95a5e3fe446dc86
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 6b320357d8978a97878d31943b48accee8898f9f
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="performance-for-r-services---data-optimization"></a>Performances pour R Services - optimisation des données
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -139,7 +137,7 @@ De nombreux algorithmes de RevoScaleR prend en charge les paramètres pour contr
 
 + [rxDTree](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxdtree)
 
-    `rxDTree`prend en charge la `maxDepth` paramètre qui contrôle la profondeur de l’arbre de décision. En tant que `maxDepth` est augmentée, performances peuvent se dégrader, il est donc important d’analyser les avantages de l’augmentation de la profondeur et réduit les performances.
+    `rxDTree` prend en charge la `maxDepth` paramètre qui contrôle la profondeur de l’arbre de décision. En tant que `maxDepth` est augmentée, performances peuvent se dégrader, il est donc important d’analyser les avantages de l’augmentation de la profondeur et réduit les performances.
 
     Vous pouvez également contrôler l’équilibre entre la précision de la complexité et la prédiction de temps en ajustant des paramètres tels que `maxNumBins`, `maxDepth`, `maxComplete`, et `maxSurrogate`. L’augmentation de la profondeur au-delà de 10 ou 15 peut rendre le calcul très coûteux.
 
@@ -181,7 +179,7 @@ Nous vous recommandons également de que vous recherchez dans le nouvel **Micros
 
 Si votre scénario implique la prédiction rapide à l’aide d’un modèle stocké ou l’intégration d’apprentissage automatique dans une application, vous pouvez utiliser la [à l’Opérationnalisation](https://docs.microsoft.com/r-server/what-is-operationalization) fonctionnalités de Microsoft R Server (anciennement DeployR).
 
-+ Comme un **spécialiste des données**, utilisez le [mrsdeploy package](https://docs.microsoft.com/r-server/r-reference/mrsdeploy/mrsdeploy-package) à partager du code R avec d’autres ordinateurs et à intégrer analytique R dans des applications web, bureau, mobile et du tableau de bord : [comment publier et gérer les services web de R dans R Server](https://docs.microsoft.com/r-server/operationalize/how-to-deploy-web-service-publish-manage-in-r)
++ Comme un **chercheur de données**, utilisez le [mrsdeploy package](https://docs.microsoft.com/r-server/r-reference/mrsdeploy/mrsdeploy-package) à partager du code R avec d’autres ordinateurs et à intégrer analytique R dans des applications web, bureau, mobile et du tableau de bord : [comment publier et gérer les services web de R dans R Server](https://docs.microsoft.com/r-server/operationalize/how-to-deploy-web-service-publish-manage-in-r)
 
 + Comme un **administrateur**, découvrez comment gérer les packages, surveiller des nœuds de site web et les nœuds de calcul et contrôler la sécurité sur les travaux R : [comment manipuler et utiliser des services web dans R](https://docs.microsoft.com/r-server/operationalize/how-to-consume-web-service-interact-in-r)
 

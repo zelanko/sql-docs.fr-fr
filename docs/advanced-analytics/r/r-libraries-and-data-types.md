@@ -1,27 +1,25 @@
 ---
-title: "Utilisation des types de données R | Microsoft Docs"
+title: Utilisation des types de données R | Microsoft Docs
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 01/31/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
-ms.assetid: 5df99e1c-a89a-42c1-9d68-ffe8d9577c94
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
+ms.author: heidist
+author: HeidiSteen
+manager: cgronlun
 ms.workload: Inactive
-ms.openlocfilehash: 977d358981e3382a0ea8ee224362098627424e88
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 58728d89907666cbfc6a12e4d850143eb1314493
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="r-libraries-and-r-data-types"></a>Bibliothèques R et les Types de données R
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -39,7 +37,7 @@ Les deux produits, Services de R et Machine Learning Services avec R, sont align
 
 Pour afficher la version de R associée à une instance particulière de SQL Server, ouvrez RGui.
 
-1. L’instance par défaut, le chemin d’accès serait comme suit :`C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\bin\x64\`
+1. L’instance par défaut, le chemin d’accès serait comme suit : `C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\bin\x64\`
 2. Un message s’affiche qui répertorie la distribution de R et le numéro de version de Microsoft R Open.
 
 Pour rechercher la version de R inclus dans une version particulière de Microsoft R Server, consultez [R Server - Nouveautés](https://msdn.microsoft.com/microsoft-r/rserver-whats-new#new-and-updated-packages).
@@ -84,7 +82,7 @@ Le tableau suivant présente les modifications de types de données et de valeur
 
 Parmi les catégories de types de données pris en charge par le [système SQL Server](../../t-sql/data-types/data-types-transact-sql.md), les types suivants sont susceptibles de poser des problèmes lorsqu’ils sont passés au code R :
 
-+ Types de données répertoriés dans le **autres** section de la rubrique de système de type SQL : **curseur**, **timestamp**, **hierarchyid**, **uniqueidentifier**, **sql_variant**, **xml**, **table**
++ Types de données répertoriés dans le **autres** section de la rubrique de système de type SQL : **curseur**, **timestamp**, **hierarchyid**,  **uniqueidentifier**, **sql_variant**, **xml**, **table**
 + Tous les types spatiaux
 + **image**
 

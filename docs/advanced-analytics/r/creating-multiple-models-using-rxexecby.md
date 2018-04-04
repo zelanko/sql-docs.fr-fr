@@ -1,24 +1,24 @@
 ---
-title: "Création de plusieurs modèles à l’aide de rxExecBy | Documents Microsoft"
-ms.custom: 
+title: Création de plusieurs modèles à l’aide de rxExecBy | Documents Microsoft
+ms.custom: ''
 ms.date: 04/18/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
+ms.author: heidist
+author: HeidiSteen
+manager: cgronlun
 ms.workload: Inactive
-ms.openlocfilehash: 685833317453c1ed5765385a73ff892a85989c2c
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: dd104a75e207cc783350f96250911bc7e3f8c20c
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="creating-multiple-models-using-rxexecby"></a>Création de plusieurs modèles à l’aide de rxExecBy
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -47,11 +47,11 @@ La fonction rxExecBy dans RevoScaleR est conçue pour traitement sur un grand no
 
 ### <a name="supported-functions"></a>Fonctions prises en charge
 
-Modélisation : `rxLinMod`, `rxLogit`, `rxGlm`,`rxDtree`
+Modélisation : `rxLinMod`, `rxLogit`, `rxGlm`, `rxDtree`
 
 Calcul de score : `rxPredict`,
 
-Transformation ou l’analyse :`rxCovCor`
+Transformation ou l’analyse : `rxCovCor`
 
 ## <a name="example"></a>Exemple
 

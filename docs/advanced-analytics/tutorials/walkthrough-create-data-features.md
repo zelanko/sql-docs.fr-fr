@@ -1,30 +1,28 @@
 ---
-title: "Créer des fonctionnalités de données à l’aide de R et SQL (procédure pas à pas) | Documents Microsoft"
-ms.custom: 
+title: Créer des fonctionnalités de données à l’aide de R et SQL (procédure pas à pas) | Documents Microsoft
+ms.custom: ''
 ms.date: 08/23/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
-ms.component: 
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.component: ''
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: tutorial
 applies_to:
 - SQL Server 2016
 dev_langs:
 - R
-ms.assetid: 4981d4eb-0874-4fe9-82e1-edf99890e27a
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
+ms.author: heidist
+author: HeidiSteen
+manager: cgronlun
 ms.workload: Inactive
-ms.openlocfilehash: 9b447f8c8faa834bea4360844308e468bf15d89c
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: ecbdc28ac530dcee1ba9f5a3820d999ad4e0fcd9
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="create-data-features-using-r-and-sql-walkthrough"></a>Créer des fonctionnalités de données à l’aide de R et SQL (procédure pas à pas)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -242,7 +240,7 @@ Vous pouvez essayer d’utiliser cela avec l’exemple de fonction personnalisé
 Vos heures peuvent varier considérablement, selon la vitesse de votre réseau et votre configuration matérielle. Dans les configurations que nous avons testé, le [!INCLUDE[tsql](../../includes/tsql-md.md)] approche de la fonction a été plus rapide que l’utilisation d’une fonction R personnalisée. Par conséquent, nous avons utilisé le [!INCLUDE[tsql](../../includes/tsql-md.md)] fonction pour ces calculs dans les étapes suivantes.
 
 > [!TIP]
-> Très souvent, des fonctionnalités à l’aide d’ingénierie [!INCLUDE[tsql](../../includes/tsql-md.md)] sera plus rapide que R. Par exemple, T-SQL inclut fenêtrage rapide et des fonctions de classement qui peuvent être appliquées aux calculs de science des données courantes telles que la restauration des moyennes mobiles et  *n* -vignettes. Choisissez la méthode la plus efficace en fonction de vos données et de vos tâches.
+> Très souvent, des fonctionnalités à l’aide d’ingénierie [!INCLUDE[tsql](../../includes/tsql-md.md)] sera plus rapide que R. Par exemple, T-SQL inclut fenêtrage rapide et des fonctions de classement qui peuvent être appliquées aux calculs de science des données courantes telles que la restauration des moyennes mobiles et *n*-vignettes. Choisissez la méthode la plus efficace en fonction de vos données et de vos tâches.
 
 ## <a name="next-lesson"></a>Leçon suivante
 

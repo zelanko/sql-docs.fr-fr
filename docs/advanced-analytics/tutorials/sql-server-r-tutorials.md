@@ -3,28 +3,27 @@ title: Didacticiels pour SQL Server R | Documents Microsoft
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 08/29/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
-ms.component: 
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.component: ''
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: tutorial
 applies_to:
 - SQL Server 2016
 dev_langs:
 - R
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
+ms.author: heidist
+author: HeidiSteen
+manager: cgronlun
 ms.workload: On Demand
-ms.openlocfilehash: a2fd60a40950710972c6e9507b3c9545e86840ff
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 34fee91978a27e38fca6092a98596c701cfd32eb
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="sql-server-r-tutorials"></a>Didacticiels de SQL Server R
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -113,7 +112,7 @@ Pour utiliser ces didacticiels et des exemples, vous devez installer un des prod
 
 Après avoir exécuté le programme d’installation de SQL Server, n’oubliez pas ces étapes importantes :
 
-+ Activez la fonctionnalité d’exécution de script externe en exécutant`sp_configure 'external scripts enabled', 1`
++ Activez la fonctionnalité d’exécution de script externe en exécutant `sp_configure 'external scripts enabled', 1`
 + Redémarrer le serveur
 + Assurez-vous que le service qui appelle le runtime externe dispose des autorisations nécessaires
 + Assurez-vous que votre compte de connexion SQL ou un compte d’utilisateur Windows dispose des autorisations nécessaires pour se connecter au serveur, pour lire des données et à créer des objets de base de données requis par l’exemple

@@ -1,30 +1,28 @@
 ---
-title: "Préparer les données à l’aide de PowerShell (procédure pas à pas) | Documents Microsoft"
-ms.custom: 
+title: Préparer les données à l’aide de PowerShell (procédure pas à pas) | Documents Microsoft
+ms.custom: ''
 ms.date: 11/10/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
-ms.component: 
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.component: ''
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: tutorial
 applies_to:
 - SQL Server 2016
 dev_langs:
 - R
-ms.assetid: 65fd41d4-c94e-4929-a24a-20e792a86579
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
+ms.author: heidist
+author: HeidiSteen
+manager: cgronlun
 ms.workload: On Demand
-ms.openlocfilehash: a1ed4da0aca0b2876e2162c012aabc6c4043c567
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: fbe74b101642ecabe0478a9d5b459e59f277da04
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="prepare-the-data-using-powershell-walkthrough"></a>Préparer les données à l’aide de PowerShell (procédure pas à pas)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -112,7 +110,7 @@ Il existe différentes manières que vous pouvez installer des packages sur SQL 
     install.packages("RODBC", lib=grep("Program Files", .libPaths(), value=TRUE)[1])
     ```
 
-    - Cet exemple utilise la fonction grep R permet de rechercher le vecteur de chemins d’accès disponibles et de trouver le chemin d’accès qui inclut « Program Files ». Pour plus d’informations, consultez [http://www.rdocumentation.org/packages/base/functions/grep](http://www.rdocumentation.org/packages/base/functions/grep).
+    - Cet exemple utilise la fonction grep R permet de rechercher le vecteur de chemins d’accès disponibles et de trouver le chemin d’accès qui inclut « Program Files ». Pour plus d’informations, consultez [ http://www.rdocumentation.org/packages/base/functions/grep ](http://www.rdocumentation.org/packages/base/functions/grep).
 
     - Si vous pensez que les packages sont déjà installés, vérifiez la liste des packages installés en exécutant `installed.packages()`.
 
@@ -277,7 +275,7 @@ Lorsque vous téléchargez les fichiers à partir du référentiel GitHub, vous 
 
 Les données sont un échantillon représentatif du jeu de données sur les taxis de la ville de New York, qui contient les enregistrements de plus de 173 millions de trajets en 2013, y compris les tarifs et le montant des pourboires versés pour chaque trajet. Pour rendre les données plus faciles à manipuler, l’équipe de science des données Microsoft a effectué un sous-échantillonnage pour obtenir seulement 1 % des données.  Ces données a été partagées dans un conteneur de stockage d’objets blob public dans Azure, au format .CSV. La source de données est un fichier non compressé, juste sous 350 Mo.
 
-+ Jeu de données public : [NYC Taxi et briefings Commission] (http://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml)
++ Jeu de données public : () [NYC Taxi et briefings Commission]http://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml)
 
 + [Création de modèles Azure ML sur le Dataset NYC Taxi] (https://blogs.technet.microsoft.com/machinelearning/2015/04/02/building-azure-ml-models-on-the-nyc-taxi-dataset/.
 

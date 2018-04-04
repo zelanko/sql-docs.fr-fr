@@ -1,24 +1,24 @@
 ---
 title: Calcul de score native | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 09/19/2017
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
-ms.openlocfilehash: 14e2a86b3f85f5dd1cfec7ac634b6801bb0f319b
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
+ms.openlocfilehash: 449773e8ca4f2e396dca4f8aed5299effb7aa49a
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="native-scoring"></a>Calcul de score en natif
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -99,7 +99,7 @@ Plateformes prises en charge sont les suivantes :
 + Le modèle doit être formé à l’avance à l’aide d’une des prises en charge **rx** algorithmes. Pour plus d’informations, consultez [algorithmes pris en charge](#bkmk_native_supported_algos).
 + Le modèle doit être enregistré à l’aide de la nouvelle fonction de sérialisation fournie dans Microsoft R Server 9.1.0. La fonction de sérialisation est optimisée pour prendre en charge la notation rapide.
 
-### <a name="bkmk_native_supported_algos"></a>Algorithmes qui prennent en charge la notation natif
+### <a name="bkmk_native_supported_algos"></a> Algorithmes qui prennent en charge la notation natif
 
 + Modèles de RevoScaleR
 

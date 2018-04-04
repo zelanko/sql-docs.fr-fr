@@ -1,30 +1,28 @@
 ---
-title: "Étape 6 : Mettre le modèle de Python à l’aide de SQL Server | Documents Microsoft"
-ms.custom: 
+title: 'Étape 6 : Mettre le modèle de Python à l’aide de SQL Server | Documents Microsoft'
+ms.custom: ''
 ms.date: 10/17/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
-ms.component: 
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.component: ''
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: tutorial
 applies_to:
 - SQL Server 2017
 dev_langs:
 - Python
 - TSQL
-ms.assetid: 
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
-ms.openlocfilehash: 18d90dfca8af630a129e03e73d3c3a4ee4681e18
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.author: heidist
+author: HeidiSteen
+manager: cgronlun
+ms.openlocfilehash: a93461ee03122a3bf70dc37cc2d0f639531d1bcf
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="step-6-operationalize-the-python-model-using-sql-server"></a>Étape 6 : Mettre le modèle de Python à l’aide de SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -354,16 +352,16 @@ Une fois que les procédures stockées ont été créées, il est facile de gén
 
 La sortie à partir de deux procédures est la probabilité d’une info-bulle est payée pour le voyage taxi avec les fonctionnalités ou les paramètres spécifiés.
 
-### <a name="changes"></a>Modifications
+### <a name="changes"></a> Modifications
 
 Cette section répertorie les modifications de code utilisé dans ce didacticiel. Ces modifications ont été apportées afin de refléter les dernières **revoscalepy** version. Pour obtenir de l’API, consultez [Python fonction référence de la bibliothèque](https://docs.microsoft.com/machine-learning-server/python-reference/introducing-python-package-reference).
 
 | Modifier les détails | Remarques|
 | ----|----|
 | supprimé `import pandas` dans tous les exemples| pandas maintenant chargés par défaut|
-| fonction `rx_predict_ex` remplacé par`rx_predict`| Exigent des versions RTM et en version préliminaire`rx_predict_ex`|
-| fonction `rx_logit_ex` remplacé par`rx_logit`| Exigent des versions RTM et en version préliminaire`rx_logit_ex`|
-| ` probList.append(probArray._results["tipped_Pred"])`remplacé par`prob_list = prob_array["tipped_Pred"].values`| mises à jour des API|
+| fonction `rx_predict_ex` remplacé par `rx_predict`| Exigent des versions RTM et en version préliminaire `rx_predict_ex`|
+| fonction `rx_logit_ex` remplacé par `rx_logit`| Exigent des versions RTM et en version préliminaire `rx_logit_ex`|
+| ` probList.append(probArray._results["tipped_Pred"])` remplacé par `prob_list = prob_array["tipped_Pred"].values`| mises à jour des API|
 
 Si vous avez installé les Services de Python à l’aide d’une version préliminaire de SQL Server 2017, nous vous recommandons de mettre à niveau que vous. Vous pouvez également mettre à niveau uniquement les composants de Python et R à l’aide de la dernière version du serveur de Machine Learning. Pour plus d’informations, consultez [à l’aide de la liaison pour mettre à niveau une instance de SQL Server](../r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md).
 

@@ -1,27 +1,25 @@
 ---
-title: "Configuration des Options avancées pour Services de Machine Learning | Documents Microsoft"
+title: Configuration des Options avancées pour Services de Machine Learning | Documents Microsoft
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 10/31/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
-ms.assetid: 8d73fd98-0c61-4a62-94bb-75658195f2a6
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
+ms.author: heidist
+author: HeidiSteen
+manager: cgronlun
 ms.workload: Inactive
-ms.openlocfilehash: 042e36faee599de3ff31a6bbb8dee32f0a6999cf
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 6001d30a38b1362db8b259d29fffbfcc268f706c
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="advanced-configuration-options-for-machine-learning-services"></a>Options de configuration avancée pour les Services de Machine Learning
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -30,7 +28,7 @@ Cet article décrit les modifications que vous pouvez effectuer après l’insta
 
 **S’applique à :** SQL Server 2016 R Services, SQL Server 2017 d’apprentissage automatique Services
 
-##  <a name="bkmk_Provisioning"></a>Comptes d’utilisateurs supplémentaires de disposition pour la machine apprentissage
+##  <a name="bkmk_Provisioning"></a> Comptes d’utilisateurs supplémentaires de disposition pour la machine apprentissage
 
 Processus de script externe dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] s’exécutent dans le contexte des comptes d’utilisateur local à faible privilège. Ces processus en cours d’exécution dans des comptes individuels à faible privilège présente les avantages suivants :
 
@@ -51,7 +49,7 @@ En outre, votre administrateur de base de données doit permettre à ce groupe l
 
 Pour plus d’informations sur la façon d’apporter des modifications pour le pool de comptes d’utilisateur, consultez [modifier le pool de comptes d’utilisateur pour SQL Server Machine Learning Services](../../advanced-analytics/r/modify-the-user-account-pool-for-sql-server-r-services.md).
 
-##  <a name="bkmk_ManagingMemory"></a>Gérer la mémoire utilisée par les processus de script externe
+##  <a name="bkmk_ManagingMemory"></a> Gérer la mémoire utilisée par les processus de script externe
 
 Par défaut, les exécutions de script externe pour l’apprentissage ne servent pas plus de 20 % de mémoire. Il dépend de votre système, mais en général, vous pouvez trouver cette limite inadéquates pour les tâches d’apprentissage automatique graves telles que l’apprentissage d’un modèle ou de prévision sur plusieurs lignes de données. 
 
@@ -75,7 +73,7 @@ Si vous modifiez le compte de service, veillez à utiliser l’application de **
 
 Pour plus d’informations sur les autorisations requises pour exécuter les services SQL Server, consultez [Configurer les comptes de service Windows et les autorisations](https://msdn.microsoft.com/library/ms143504.aspx#Windows).
 
-##  <a name="bkmk_ChangingConfig"></a>Modifier les options de service avancées
+##  <a name="bkmk_ChangingConfig"></a> Modifier les options de service avancées
 
 Dans les versions antérieures de SQL Server 2016 R Services, vous pourriez modifier certaines propriétés du service en modifiant le [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] fichier de configuration. 
 
@@ -93,7 +91,7 @@ Toutefois, ce fichier est n’est plus utilisé pour la modification des configu
 
 **Pour modifier les paramètres de débogage**
 
-Quelques propriétés peuvent uniquement être modifiées à l’aide du fichier de configuration de la zone de lancement qui peut-être être utile dans certains cas limités, tels que le débogage. Le fichier de configuration est créé au cours de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] le programme d’installation et par défaut est enregistré comme un fichier texte brut à l’emplacement suivant :`<instance path>\binn\rlauncher.config`
+Quelques propriétés peuvent uniquement être modifiées à l’aide du fichier de configuration de la zone de lancement qui peut-être être utile dans certains cas limités, tels que le débogage. Le fichier de configuration est créé au cours de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] le programme d’installation et par défaut est enregistré comme un fichier texte brut à l’emplacement suivant : `<instance path>\binn\rlauncher.config`
 
 Pour pouvoir apporter des modifications à ce fichier, vous devez être administrateur sur l’ordinateur exécutant [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Si vous modifiez le fichier, nous vous recommandons de faire une copie de sauvegarde avant d’enregistrer les modifications.
 

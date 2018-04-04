@@ -1,26 +1,24 @@
 ---
 title: Composants de SQL Server pour prendre en charge R | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 04/05/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
-ms.assetid: 54e9ef3f-1136-471e-865a-7cf013673186
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
+ms.author: heidist
+author: HeidiSteen
+manager: cgronlun
 ms.workload: Inactive
-ms.openlocfilehash: c66936108d054c5ee4772769732c8543283af3f9
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: cc9f600d6bfce5d522abb8452800c35f41069b92
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="components-in-sql-server-to-support-r"></a>Composants de SQL Server pour prendre en charge R
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -112,7 +110,7 @@ Le code R lancé de « l’intérieur » de [!INCLUDE[ssNoVersion_md](../../in
 4. BxlServer se coordonne avec le runtime R pour gérer les échanges de données avec [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] et le stockage des résultats du travail.
 5. SQL Satellite gère les communications sur les tâches associées et les processus avec [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)].
 6. BxlServer utilise SQL Satellite pour communiquer l’état et les résultats à [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)].
-7. [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] Obtient les résultats et ferme des processus et des tâches connexes.
+7. [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] obtient les résultats, puis ferme les processus et tâches associés.
 
 ### <a name="r-scripts-executed-from-a-remote-client"></a>Scripts R exécutés à partir d’un client distant
 
@@ -128,7 +126,7 @@ Lors de la connexion à partir d’un client de science des données à distance
 6. RLauncher effectue un appel à l’instance du runtime R qui est installé sur l’ordinateur [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)].
 7. Les résultats sont retournés à BxlServer.
 8. SQL Satellite gère la communication avec [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] et le nettoyage des objets de travail associés.
-9. [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] transmet les résultats au client.
+9. [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] renvoie les résultats au client.
 
 ## <a name="next-steps"></a>Étapes suivantes
 

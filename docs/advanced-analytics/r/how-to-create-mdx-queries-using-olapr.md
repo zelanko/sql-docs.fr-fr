@@ -1,28 +1,26 @@
 ---
-title: "Comment les requêtes MDX de créer à l’aide d’olapR | Documents Microsoft"
-ms.custom: 
+title: Comment les requêtes MDX de créer à l’aide d’olapR | Documents Microsoft
+ms.custom: ''
 ms.date: 11/29/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - R
-ms.assetid: c12b988e-be7e-41ba-a84c-299a5c45d4ab
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
+ms.author: heidist
+author: HeidiSteen
+manager: cgronlun
 ms.workload: Inactive
-ms.openlocfilehash: 12c44fd21ab72975276e41c3107ca68d67dc2f82
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 9d917316a9d25b0634605e0f55eae3eda93f8669
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="how-to-create-mdx-queries-using-olapr"></a>Comment créer des requêtes MDX à l’aide d’olapR
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -40,7 +38,7 @@ Les opérations suivantes ne sont pas prises en charge :
 + Création de nouveaux objets OLAP
 + Écriture différée pour les partitions, notamment les sommes ou les mesures
 
-## <a name="buildMDX"></a>Créer une requête MDX à partir de R
+## <a name="buildMDX"></a> Créer une requête MDX à partir de R
 
 1. Définissez une chaîne de connexion qui spécifie la source de données OLAP (instance SSAS) et le fournisseur MSOLAP.
 
@@ -51,8 +49,8 @@ Les opérations suivantes ne sont pas prises en charge :
 4. Utilisez les fonctions d’assistance suivantes pour fournir plus de détails sur les dimensions et les mesures à inclure dans la requête MDX :
 
      + `cube()` Spécifiez le nom de la base de données SSAS. Si vous vous connectez à une instance nommée, fournissez le nom de l’ordinateur et le nom de l’instance. 
-     + `columns()`Fournir les noms des mesures à utiliser dans le **ON colonnes** argument.
-     + `rows()`Fournir les noms des mesures à utiliser dans le **ON ROWS** argument.
+     + `columns()` Fournir les noms des mesures à utiliser dans le **ON colonnes** argument.
+     + `rows()` Fournir les noms des mesures à utiliser dans le **ON ROWS** argument.
      + `slicers()` Spécifiez un ou plusieurs membres à utiliser comme segment. Un segment est comme un filtre appliqué à toutes les données de requête MDX.
      
      + `axis()` Spécifiez le nom d’un axe supplémentaire à utiliser dans la requête. 
@@ -66,7 +64,7 @@ Les opérations suivantes ne sont pas prises en charge :
   + `executeMD` Retourne un tableau multidimensionnel
   + `execute2D` Retourne une trame de données à deux dimensions (tabulaire)
 
-## <a name="executeMDX"></a>Exécuter une requête MDX valide à partir de R
+## <a name="executeMDX"></a> Exécuter une requête MDX valide à partir de R
 
 1. Définissez une chaîne de connexion qui spécifie la source de données OLAP (instance SSAS) et le fournisseur MSOLAP.
 
@@ -191,7 +189,7 @@ explore(ocs, "Sales")
 
 #### <a name="to-return-all-members-of-the-specified-dimension-and-hierarchy"></a>Pour retourner tous les membres de la dimension et de la hiérarchie spécifiées
 
-Après avoir défini la source et créé le handle, spécifiez le cube, la dimension et la hiérarchie à retourner. Dans les résultats de retournés, les éléments qui portent le préfixe  **->**  représentent les enfants du membre précédent.
+Après avoir défini la source et créé le handle, spécifiez le cube, la dimension et la hiérarchie à retourner. Dans les résultats de retournés, les éléments qui portent le préfixe **->** représentent les enfants du membre précédent.
 
 ```R
 cnnstr <- "Data Source=localhost; Provider=MSOLAP;"
