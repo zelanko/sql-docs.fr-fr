@@ -29,16 +29,16 @@ helpviewer_keywords:
 - EDITION SQL Database
 - MAXSIZE SQL Database
 ms.assetid: 22b167f7-ae86-490b-adb3-ec02ca1c1508
-caps.latest.revision: ''
+caps.latest.revision: 62
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 6d06fb220e8ec0df0ba5aab4fe5983c928d6a732
-ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
+ms.openlocfilehash: de82cfb595559b738ca8db7d72acd620101d3995
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="create-database-azure-sql-database"></a>CREATE DATABASE (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -136,6 +136,7 @@ Spécifie le classement par défaut du catalogue de métadonnées. *DATABASE_DEF
 |À partir de 1 024 Go jusqu’à 4 096 Go par incréments de 256 Go* |Néant|Néant|Néant|Néant|√|√|  
   
  \* P11 et P15 autorisent MAXSIZE jusqu’à 4 To, 1 024 Go étant la taille par défaut.  P11 et P15 peuvent utiliser jusqu’à 4 To de stockage inclus sans frais supplémentaires. Dans le niveau Premium, une taille supérieure à 1 To est actuellement disponible pour MAXSIZE dans les régions suivantes : Est des États-Unis2, Ouest des États-Unis, Gouvernement des États-Unis - Virginie, Europe de l’Ouest, Centre de l’Allemagne, Asie du Sud-Est, Est du Japon, Est de l’Australie, Centre du Canada et Est du Canada. Pour connaître les limitations actuelles, consultez [Bases de données uniques](https://docs.microsoft.com/azure/sql-database-single-database-resources).  
+<!---Loc Comment: Link [Single databases] is not working---> 
   
  Les règles suivantes s'appliquent aux arguments MAXSIZE et EDITION.  
   
@@ -220,7 +221,7 @@ L’argument CATALOG_COLLATION est uniquement disponible lors de la création de
  **Exigences supplémentaires relatives à l’utilisation de la syntaxe `CREATE DATABASE ... AS COPY OF` :** la connexion exécutant l’instruction sur le serveur local doit également être au moins `db_owner` sur le serveur source. Si la connexion est basée sur l’authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], la connexion exécutant l’instruction sur le serveur local doit avoir une connexion correspondante sur le serveur [!INCLUDE[ssSDS](../../includes/sssds-md.md)] source, avec les mêmes nom et mot de passe.  
   
 ## <a name="examples"></a>Exemples  
-Pour un tutoriel de démarrage rapide vous montrant comment se connecter à une base de données SQL Azure à l’aide de SQL Server Management Studio, consultez [Azure SQL Database : Utiliser SQL Server Management Studio pour vous connecter et interroger des données](/azure/sql-database/sql-database-connect-query-ssms).  
+Pour un didacticiel de démarrage rapide vous montrant comment se connecter à une base de données SQL Azure à l’aide de SQL Server Management Studio, consultez [Azure SQL Database : Utiliser SQL Server Management Studio pour vous connecter et interroger des données](/azure/sql-database/sql-database-connect-query-ssms).  
   
 ### <a name="simple-example"></a>Exemple simple  
  Voici un exemple simple de création d’une base de données.  
