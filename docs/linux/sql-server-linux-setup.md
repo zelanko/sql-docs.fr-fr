@@ -1,4 +1,4 @@
----
+﻿---
 title: "Guide d’installation pour 2017 du serveur SQL sur Linux | Documents Microsoft"
 description: "Installer, mettre à jour et désinstaller SQL Server sur Linux. Cet article traite des scénarios en ligne, hors connexion et sans assistance."
 author: rothja
@@ -69,7 +69,7 @@ SQL Server 2017 a les prérequis suivants pour Linux :
 
 Si vous utilisez les partages distants **NFS (Network File System)** en production, notez les exigences de prise en charge suivantes :
 
-- Utiliser la version NFS **4.2 ou ultérieure**. Les versions antérieures de NFS ne gèrent pas les fonctionnalités requises, telles que fallocate et la création du fichier partiellement alloué, commune aux systèmes de fichiers modernes.
+- Utiliser la version NFS **4.2 ou ultérieure**. Les versions antérieures de NFS ne gèrent pas les fonctionnalités requises, telles que fallocate et la création de fichiers sparse, communes aux systèmes de fichiers modernes. 
 - Recherchez uniquement les répertoires **/var/opt/mssql** sur le montage NFS. Les autres fichiers, tels que les fichiers binaires du système SQL Server, ne sont pas pris en charge.
 - Assurez-vous que les clients NFS utilisent l’option 'nolock' lorsque vous montez le partage distant.
 
@@ -106,7 +106,7 @@ Ces commandes téléchargent le package le plus récent et remplacent les fichie
 
 Pour restaurer ou rétrograder SQL Server vers une version précédente, procédez comme suit :
 
-1. Identifiez le numéro de version pour le package de SQL Server que vous souhaitez rétrograder. Pour obtenir la liste de nombres de package, consultez la [notes de publication](sql-server-linux-release-notes.md).
+1. Identifiez le numéro de version pour le package de SQL Server que vous souhaitez rétrograder. Pour obtenir la liste de numéros de versions de package, consultez les [notes de publication](sql-server-linux-release-notes.md).
 
 1. Passez à une version antérieure de SQL Server. Dans les commandes suivantes, remplacez `<version_number>` avec le numéro de version SQL Server que vous avez identifié à l’étape 1.
 
@@ -123,7 +123,7 @@ Pour restaurer ou rétrograder SQL Server vers une version précédente, procéd
 
 Pour vérifier votre version actuelle et l’édition de SQL Server sur Linux, utilisez la procédure suivante :
 
-1. Si pas déjà installé, installez le [les outils de ligne de SQL Server](sql-server-linux-setup-tools.md).
+1. Si ce n'est déjà fait, installez les [outils de ligne de commande SQL Server](sql-server-linux-setup-tools.md). 
 
 1. Utilisez **sqlcmd** pour exécuter une commande Transact-SQL qui affiche la version de SQL Server et l’édition.
 
@@ -141,7 +141,7 @@ Pour supprimer le package **mssql-server** sous Linux, utilisez une des commande
 | SLES | `sudo zypper remove mssql-server` |
 | Ubuntu | `sudo apt-get remove mssql-server` |
 
-La suppression du package ne supprime pas les fichiers de base de données générée. Si vous souhaitez supprimer les fichiers de base de données, utilisez la commande suivante :
+La suppression du package ne supprime pas les fichiers de base de données. Si vous souhaitez supprimer les fichiers de base de données, utilisez la commande suivante :
 
 ```bash
 sudo rm -rf /var/opt/mssql/
@@ -152,9 +152,9 @@ sudo rm -rf /var/opt/mssql/
 Vous pouvez effectuer une installation sans assistance de la manière suivante :
 
 - Suivez les étapes initial dans le [Démarrages rapides](#platforms) pour inscrire les référentiels, installez SQL Server.
-- Lorsque vous exécutez `mssql-conf setup`, définissez [variables d’environnement](sql-server-linux-configure-environment-variables.md) et utiliser le `-n` (sans invite) option.
+- Lorsque vous exécutez `mssql-conf setup`, définissez les [variables d’environnement](sql-server-linux-configure-environment-variables.md) et utilisez l'option `-n` (sans invite). 
 
-L’exemple suivant configure l’Édition Developer de SQL Server avec le **MSSQL_PID** variable d’environnement. Elle accepte également le CLUF (**ACCEPT_EULA**) et définit le mot de passe SA (**MSSQL_SA_PASSWORD**). Le `-n` paramètre effectue une installation exemple où les valeurs de configuration sont extraites les variables d’environnement.
+L’exemple suivant configure l’édition Developer de SQL Server avec la variable d'environnement **MSSQL_PID**. Elle accepte également le CLUF (**ACCEPT_EULA**) et définit le mot de passe SA (**MSSQL_SA_PASSWORD**). Le paramètre `-n` effectue une installation sans invite où les valeurs de configuration sont extraites des variables d’environnement. 
 
 ```bash
 sudo MSSQL_PID=Developer ACCEPT_EULA=Y MSSQL_SA_PASSWORD='<YourStrong!Passw0rd>' /opt/mssql/bin/mssql-conf -n setup
@@ -162,7 +162,7 @@ sudo MSSQL_PID=Developer ACCEPT_EULA=Y MSSQL_SA_PASSWORD='<YourStrong!Passw0rd>'
 
 Vous pouvez également créer un script qui exécute d’autres actions. Par exemple, vous pouvez installer d’autres packages SQL Server.
 
-Pour un exemple de script plus détaillée, consultez les exemples suivants :
+Pour un exemple de script plus détaillé, consultez les exemples suivants :
 
 - [Red Hat script d’installation sans assistance](sample-unattended-install-redhat.md)
 - [SUSE script d’installation sans assistance](sample-unattended-install-suse.md)
@@ -170,14 +170,14 @@ Pour un exemple de script plus détaillée, consultez les exemples suivants :
 
 ## <a id="offline"></a> Installation hors connexion
 
-Si l’ordinateur Linux n’a pas d’accès pour les référentiels en ligne utilisés dans le [Démarrages rapides](#platforms), vous pouvez télécharger directement les fichiers du package. Ces packages se trouvent dans le référentiel Microsoft, [https://packages.microsoft.com](https://packages.microsoft.com).
+Si l’ordinateur Linux n’a pas accès aux référentiels en ligne utilisés dans les [Démarrages rapides](#platforms), vous pouvez télécharger directement les fichiers de package. Ces packages se trouvent dans le référentiel Microsoft, [https://packages.microsoft.com](https://packages.microsoft.com). 
 
 > [!TIP]
 > Si vous avez installé avec succès avec les étapes décrites dans le démarrage rapide, il est inutile télécharger ou installer manuellement l’ou les packages SQL Server. Cette section concerne uniquement le scénario hors connexion.
 
-1. **Télécharger le package de moteur de base de données pour votre plateforme**. Rechercher des liens de téléchargement de package dans la section des détails du package le [Notes de publication](sql-server-linux-release-notes.md).
+1. **Téléchargez le package de moteur de base de données pour votre plateforme**. Recherchez les liens de téléchargement de package dans la section des détails du package dans les [Notes de publication](sql-server-linux-release-notes.md). 
 
-1. **Déplacer le package téléchargé sur votre ordinateur Linux**. Si vous avez utilisé un autre ordinateur pour télécharger les packages, un pour déplacer les packages à l’ordinateur Linux est la **scp** commande.
+1. **Déplacez le package téléchargé sur votre ordinateur Linux**. Si vous avez utilisé un autre ordinateur pour télécharger les packages, déplacez les packages vers l’ordinateur Linux avec la commande **scp**. 
 
 1. **Installer le package de moteur de base de données**. Utilisez une des commandes suivantes en fonction de votre plateforme. Remplacez le nom du fichier de package dans cet exemple par le nom exact que vous avez téléchargé.
 
@@ -188,9 +188,9 @@ Si l’ordinateur Linux n’a pas d’accès pour les référentiels en ligne ut
    | Ubuntu | `sudo dpkg -i mssql-server_versionnumber_amd64.deb` |
 
     > [!NOTE]
-    > Vous pouvez également installer les packages RPM (RHEL et SLES) avec le `rpm -ivh` commande, mais les commandes dans le tableau précédent automatiquement installent des dépendances si disponibles à partir d’approuvée référentiels.
+    > Vous pouvez également installer les packages RPM (RHEL et SLES) avec la commande `rpm -ivh`, mais les commandes du tableau précédent  installent automatiquement les dépendances si elles sont disponibles à partir de référentiels approuvés.
 
-1. **Résoudre les dépendances manquantes**: vous pouvez avoir des dépendances manquantes à ce stade. Si ce n’est pas le cas, vous pouvez ignorer cette étape. Sur Ubuntu, si vous avez accès à des référentiels approuvées contenant ces dépendances, la solution la plus simple consiste à utiliser le `apt-get -f install` commande. Cette commande termine également l’installation de SQL Server. Pour examiner les dépendances manuellement, utilisez les commandes suivantes :
+1. **Résoudre les dépendances manquantes** : vous pouvez avoir des dépendances manquantes à ce stade. Si ce n’est pas le cas, vous pouvez ignorer cette étape. Sur Ubuntu, si vous avez accès à des référentiels approuvés contenant ces dépendances, la solution la plus simple consiste à utiliser la commande `apt-get -f install`. Cette commande termine également l’installation de SQL Server. Pour examiner les dépendances manuellement, utilisez les commandes suivantes :
 
    | Plateforme | Commande de dépendances de liste |
    |-----|-----|
@@ -198,7 +198,7 @@ Si l’ordinateur Linux n’a pas d’accès pour les référentiels en ligne ut
    | SLES | `rpm -qpR mssql-server_versionnumber.x86_64.rpm` |
    | Ubuntu | `dpkg -I mssql-server_versionnumber_amd64.deb` |
 
-   Après avoir résolu les dépendances manquantes, essayez d’installer le package serveur mssql à nouveau.
+   Après avoir résolu les dépendances manquantes, essayez de réinstaller le package mssql-server.
 
 1. **Terminer l’installation de SQL Server**. Utilisez **mssql-conf** pour terminer l’installation de SQL Server :
 
