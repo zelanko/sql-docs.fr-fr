@@ -1,18 +1,19 @@
 ---
-title: "Analysis Services avec les groupes de disponibilité Always On | Microsoft Docs"
-ms.custom: 
+title: Analysis Services avec les groupes de disponibilité Always On | Microsoft Docs
+ms.custom: ''
 ms.date: 05/17/2016
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: availability-groups
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 14d16bfd-228c-4870-b463-a283facda965
-caps.latest.revision: "12"
+caps.latest.revision: ''
 author: MikeRayMSFT
 ms.author: mikeray
 manager: erikre
@@ -159,7 +160,7 @@ ms.lasthandoff: 11/20/2017
   
      Terminez la source de données et fermez l'Assistant Source de données.  
   
-6.  Ajoutez **MultiSubnetFailover=Yes** à la chaîne de connexion pour fournir une détection et une connexion plus rapides au serveur actif. Pour plus d'informations sur cette propriété, consultez [SQL Server Native Client Support for High Availability, Disaster Recovery](../../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md).  
+6.  Ajoutez **MultiSubnetFailover=Yes** à la chaîne de connexion pour fournir une détection et une connexion plus rapides au serveur actif. Pour plus d'informations sur cette propriété, consultez [Prise en charge des fonctionnalités de récupération d'urgence, haute disponibilité par SQL Server Native Client](../../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md).  
   
      Cette propriété n'est pas visible dans la grille des propriétés. Pour ajouter la propriété, cliquez avec le bouton droit sur la source de données et choisissez **Afficher le code**. Ajoutez `MultiSubnetFailover=Yes` à la chaîne de connexion.  
   

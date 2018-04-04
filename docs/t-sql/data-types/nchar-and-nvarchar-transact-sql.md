@@ -1,16 +1,16 @@
 ---
 title: nchar et nvarchar (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 7/22/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|data-types
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -18,16 +18,16 @@ helpviewer_keywords:
 - nvarchar data type
 - nchar data type
 ms.assetid: 81ee5637-ee31-4c4d-96d0-56c26a742354
-caps.latest.revision: 
+caps.latest.revision: ''
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 4c3f2e9ad1d63992be8f4e4a4c65d821fae73389
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: de099c00e160e212ff309abf74d5411687a82532
+ms.sourcegitcommit: 6e16d1616985d65484c72f5e0f34fb2973f828f4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="nchar-and-nvarchar-transact-sql"></a>nchar et nvarchar (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -39,7 +39,7 @@ Types de données basés sur des caractères qui sont des données Unicode de lo
 Données de type chaîne Unicode de longueur fixe. *n* définit la longueur de chaîne et doit être une valeur comprise entre 1 et 4 000. La taille de stockage est le double de *n* octets. Quand la page de codes du classement utilise des caractères sur deux octets, la taille de stockage est toujours de *n* octets. En fonction de la chaîne, la taille de stockage de *n* octets peut être inférieure à la valeur spécifiée pour *n*. Les synonymes ISO de **nchar** sont **national char** et **national character**.
   
 **nvarchar** [ ( n | **max** ) ]  
-Données de type chaîne Unicode de longueur variable. *n* définit la longueur de chaîne et peut être une valeur comprise entre 1 et 4 000. **max** indique que la taille de stockage maximale est de 2^31-1 caractères (2 Go). La taille de stockage, en octets, est le double du nombre de la longueur réelle des données entrée plus 2 octets. Les synonymes ISO de **nvarchar** sont **national char varying** et **national character varying**.
+Données de type chaîne Unicode de longueur variable. *n* définit la longueur de chaîne et peut être une valeur comprise entre 1 et 4 000. **max** indique que la taille de stockage maximale est de 2^30-1 caractères.  La taille de stockage maximale en octets est de 2 Go. La taille de stockage réelle, en octets, est le double du nombre de caractères entrés plus 2 octets. Les synonymes ISO de **nvarchar** sont **national char varying** et **national character varying**.
   
 ## <a name="remarks"></a>Notes   
 Quand la valeur de *n* n’est spécifiée ni dans une définition de données ni dans une instruction de déclaration de variable, la longueur par défaut est 1. Quand la valeur de *n* n’est pas précisée avec la fonction CAST, la longueur par défaut est 30.
@@ -60,7 +60,7 @@ Faites précéder les constantes de chaînes de caractères Unicode de la lettre
 >  Quand la lettre N est ajoutée comme préfixe à une constante de chaîne, la conversion implicite aboutit à une chaîne Unicode si la constante à convertir ne dépasse pas la longueur maximale pour un type de données de chaîne Unicode (4 000). Sinon, la conversion implicite génère une valeur élevée (max) Unicode.
   
 > [!WARNING]  
->  Chaque colonne **varchar(max)** ou **nvarchar(max)** non Null demande 24 octets d’allocation fixe supplémentaire calculée par rapport à la limite de 8 060 octets par ligne pendant une opération de tri. Cela peut produire une limite implicite du nombre de colonnes **varchar(max)** ou **nvarchar(max)** non Null pouvant être créées dans une table. Aucune erreur spéciale n'est fournie quand la table est créée (mis à part l’avertissement habituel indiquant que la taille maximale de ligne dépasse la taille maximale autorisée de 8 060 octets) ou quand les données sont insérées. Cette grande taille de ligne peut provoquer des erreurs (comme l’erreur 512) au cours des opérations normales, telles que la mise à jour de la clé d’index cluster ou le tri de l’intégralité des colonnes, que les utilisateurs ne peuvent pas anticiper tant qu’elles n’ont pas été effectuées.  
+>  Chaque colonne **varchar(max)** ou **nvarchar(max)** non Null demande 24 octets d’allocation fixe supplémentaire calculée par rapport à la limite de 8 060 octets par ligne pendant une opération de tri. Ces octets supplémentaires peuvent produire une limite implicite du nombre de colonnes **varchar(max)** ou **nvarchar(max)** non Null dans une table. Aucune erreur spéciale n'est fournie quand la table est créée (mis à part l’avertissement habituel indiquant que la taille maximale de ligne dépasse la taille maximale autorisée de 8 060 octets) ou quand les données sont insérées. Cette grande taille de ligne peut provoquer des erreurs (comme l’erreur 512) que les utilisateurs peuvent ne pas anticiper au cours d’opérations normales.  Deux exemples d’opérations sont la mise à jour d’une clé d’index cluster ou le tri de l’intégralité du jeu de colonnes.
   
 ## <a name="converting-character-data"></a>Conversion des données de type caractère  
 Pour plus d’informations sur la conversion de données caractères, consultez [char et varchar &#40;Transact-SQL&#41;](../../t-sql/data-types/char-and-varchar-transact-sql.md).

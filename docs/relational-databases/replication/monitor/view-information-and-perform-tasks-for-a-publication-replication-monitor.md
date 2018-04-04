@@ -1,23 +1,23 @@
 ---
-title: "Afficher des informations et effectuer des tâches pour une publication (moniteur de réplication) | Microsoft Docs"
-ms.custom: 
+title: Afficher des informations et effectuer des tâches pour une publication (moniteur de réplication) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: replication
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - viewing publication information
 - publications [SQL Server replication], viewing information
 - publications [SQL Server replication], Replication Monitor tasks
 ms.assetid: 92e28a07-d6a7-461b-a0b3-bd9bc6afcbe5
-caps.latest.revision: 
+caps.latest.revision: ''
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
@@ -70,7 +70,7 @@ ms.lasthandoff: 03/08/2018
   
 5.  Pour afficher les informations sur les avertissements d'agent et les seuils, cliquez sur l'onglet **Avertissements** . Pour plus d’informations, voir [Set Thresholds and Warnings in Replication Monitor](../../../relational-databases/replication/monitor/set-thresholds-and-warnings-in-replication-monitor.md).  
   
-6.  Pour afficher des informations sur les jetons de suivi, cliquez sur l'onglet **Jetons de suivi** . Pour plus d'informations sur l'utilisation des jetons de suivi, consultez [Measure Latency and Validate Connections for Transactional Replication](../../../relational-databases/replication/monitor/measure-latency-and-validate-connections-for-transactional-replication.md).  
+6.  Pour afficher des informations sur les jetons de suivi, cliquez sur l'onglet **Jetons de suivi** . Pour plus d'informations sur l'utilisation des jetons de suivi, consultez [Mesurer la latence et valider les connexions pour la réplication transactionnelle](../../../relational-databases/replication/monitor/measure-latency-and-validate-connections-for-transactional-replication.md).  
   
 ## <a name="see-also"></a> Voir aussi  
  [Afficher et modifier les propriétés d’une publication](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)   

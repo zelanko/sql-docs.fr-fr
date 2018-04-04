@@ -1,25 +1,25 @@
 ---
 title: Installer le premier serveur de rapports en mode SharePoint | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 10/05/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint
-ms.service: 
+ms.service: ''
 ms.component: install-windows
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: b266fbdf4801a4b2433590cc3ee2403250702666
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 796eed171b40234af4ab00877a5e73121b49368e
+ms.sourcegitcommit: 6bd21109abedf64445bdb3478eea5aaa7553fa46
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 03/20/2018
 ---
 # <a name="install-the-first-report-server-in-sharepoint-mode"></a>Installer le premier serveur de rapports en mode SharePoint
 
@@ -69,7 +69,7 @@ ms.lasthandoff: 01/09/2018
   
  **Création d’applications de service Reporting Services**  
   
--   Après avoir installé et inscrit le service Reporting Services, créez une ou plusieurs applications de service Reporting Services. Le « compte de service de la batterie de serveurs SharePoint » doit être temporairement membre du groupe des administrateurs locaux pour permettre la création de l'application de service Reporting Services. Pour plus d’informations sur les autorisations de compte SharePoint 2013, consultez [Autorisations de compte et paramètres de sécurité dans SharePoint 2013](http://technet.microsoft.com/library/cc678863.aspx) (http://technet.microsoft.com/fr-fr/library/cc678863.aspx) ou, pour SharePoint 2016, consultez [Autorisations de compte et paramètres de sécurité dans SharePoint 2016](https://technet.microsoft.com/library/cc678863\(v=office.16\).aspx).  
+-   Après avoir installé et inscrit le service Reporting Services, créez une ou plusieurs applications de service Reporting Services. Le « compte de service de la batterie de serveurs SharePoint » doit être temporairement membre du groupe des administrateurs locaux pour permettre la création de l'application de service Reporting Services. Pour plus d’informations sur les autorisations de compte SharePoint 2013, consultez [Autorisations de compte et paramètres de sécurité dans SharePoint 2013](http://technet.microsoft.com/library/cc678863.aspx) (http://technet.microsoft.com/library/cc678863.aspx) ou, pour SharePoint 2016, consultez [Autorisations de compte et paramètres de sécurité dans SharePoint 2016](https://technet.microsoft.com/library/cc678863\(v=office.16\).aspx).  
   
      Pour des raisons de sécurité, il est recommandé que les comptes d'administrateur de la batterie de serveurs SharePoint ne soient pas également des comptes d'administrateurs locaux du système d'exploitation. Si vous ajoutez un compte d'administrateur de batterie de serveurs au groupe des administrateurs locaux dans le cadre du processus d'installation, nous vous recommandons de supprimer le compte du groupe des administrateurs locaux une fois l'installation terminée.  
   
@@ -81,7 +81,7 @@ ms.lasthandoff: 01/09/2018
  > Pour SharePoint 2016, le serveur SharePoint sur lequel Reporting Services est installé doit avoir le rôle serveur **Personnalisé**. Le déploiement de Reporting Services réussira sur un serveur SharePoint qui n’est pas dans le rôle **Personnalisé**, mais lors de la prochaine fenêtre de maintenance SharePoint, MinRole arrêtera le service Reporting Services, car il détectera que Reporting Services en mode intégré SharePoint ne prend en charge aucun autre rôle serveur SharePoint. L’application de service Reporting Services prend uniquement en charge le rôle **Personnalisé**.
  
  > [!NOTE]
- > Si vous prévoyez aussi d’installer le service Power Pivot sur SharePoint 2016, installez-le avant Reporting Services. Le service Power Pivot ne peut pas être installé sur un serveur SharePoint avec le rôle **Personnalisé** . Il n’est ainsi pas nécessaire de basculer à plusieurs reprises entre les rôles.
+ > Si vous prévoyez aussi d’installer le service Power Pivot sur SharePoint 2016, installez-le avant Reporting Services. Le service Power Pivot peut uniquement être installé sur un serveur SharePoint dans le rôle **Personnalisé**.
  
  ### <a name="apply-the-custom-server-role-to-a-sharepoint-2016-server"></a>Appliquer le rôle serveur Personnalisé à un serveur SharePoint 2016
  

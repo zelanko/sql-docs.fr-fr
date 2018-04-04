@@ -1,4 +1,4 @@
-- name: Documentations
+- name: Docs
   href: /
   homepage: /
   items:
@@ -106,6 +106,66 @@
                     - name: Syntaxe
                       href: /sql/odbc/reference/syntax/
                       homepage: /sql/odbc/reference/syntax/odbc-reference
+            - name: OLE DB
+              href: /sql/connect/oledb/
+              homepage: /sql/connect/oledb/oledb-driver-for-sql-server-programming
+              items:
+                - name: Fonctionnalités
+                  href: /sql/connect/oledb/features/
+                  homepage: /sql/connect/oledb/features/oledb-driver-for-sql-server-features
+                - name: Applications
+                  href: /sql/connect/oledb/applications/
+                  homepage: /sql/connect/oledb/applications/building-applications-with-oledb-driver-for-sql-server
+                - name: OLE DB
+                  href: /sql/connect/oledb/ole-db/
+                  homepage: /sql/connect/oledb/ole-db/oledb-driver-for-sql-server-ole-db
+                  items:
+                    - name: Pilote
+                      href: /sql/connect/oledb/ole-db-driver/
+                      homepage: /sql/connect/oledb/ole-db-driver/creating-a-oledb-driver-for-sql-server-application
+                    - name: Objets source de données
+                      href: /sql/connect/oledb/ole-db-data-source-objects/
+                      homepage: /sql/connect/oledb/ole-db-data-source-objects/data-source-objects-ole-db
+                    - name: Commandes
+                      href: /sql/connect/oledb/ole-db-commands/
+                      homepage: /sql/connect/oledb/ole-db-commands/commands
+                    - name: Ensembles de lignes
+                      href: /sql/connect/oledb/ole-db-rowsets/
+                      homepage: /sql/connect/oledb/ole-db-rowsets/rowsets
+                    - name: Objets blob
+                      href: /sql/connect/oledb/ole-db-blobs/
+                      homepage: /sql/connect/oledb/ole-db-blobs/blobs-and-ole-objects
+                    - name: Tables et index
+                      href: /sql/connect/oledb/ole-db-tables-indexes/
+                      homepage: /sql/connect/oledb/ole-db-tables-indexes/tables-and-indexes
+                    - name: Types de données
+                      href: /sql/connect/oledb/ole-db-data-types/
+                      homepage: /sql/connect/oledb/ole-db-data-types/data-types-ole-db
+                    - name: Paramètres table
+                      href: /sql/connect/oledb/ole-db-table-valued-parameters/
+                      homepage: /sql/connect/oledb/ole-db-table-valued-parameters/table-valued-parameters-ole-db
+                    - name: Date et heure
+                      href: /sql/connect/oledb/ole-db-date-time/
+                      homepage: /sql/connect/oledb/ole-db-date-time/date-and-time-improvements-ole-db
+                    - name: Transactions
+                      href: /sql/connect/oledb/ole-db-transactions/
+                      homepage: /sql/connect/oledb/ole-db-transactions/transactions
+                    - name: Erreurs
+                      href: /sql/connect/oledb/ole-db-errors/
+                      homepage: /sql/connect/oledb/ole-db-errors/errors
+                    - name: Interfaces
+                      href: /sql/connect/oledb/ole-db-interfaces/
+                      homepage: /sql/connect/oledb/ole-db-interfaces/oledb-driver-for-sql-server-ole-db-interfaces
+                    - name: Procédure
+                      href: /sql/connect/oledb/ole-db-how-to/
+                      homepage: /sql/connect/oledb/ole-db-how-to/ole-db-how-to-topics
+                      items:
+                        - name: Résultats
+                          href: /sql/connect/oledb/ole-db-how-to/results/
+                          homepage: /sql/connect/oledb/ole-db-how-to/results/processing-results-how-to-topics-ole-db
+                        - name: FileStream
+                          href: /sql/connect/oledb/ole-db-how-to/filestream/
+                          homepage: /sql/connect/oledb/ole-db-how-to/filestream/filestream-and-ole-db
             - name: PHP
               href: /sql/connect/php/
               homepage: /sql/connect/php/microsoft-php-driver-for-sql-server
@@ -125,12 +185,21 @@
         - name: SQL Server sur Linux
           href: /sql/linux/
           homepage: /sql/linux/sql-server-linux-overview
-        - name: Analytique avancée sur SQL Server
+        - name: SQL Server Machine Learning Services
           href: /sql/advanced-analytics/
-          homepage: /sql/advanced-analytics/getting-started-with-machine-learning-services
-        - name: Services R sur SQL Server
+          homepage: /sql/advanced-analytics/what-is-sql-server-machine-learning
+        - name: R
           href: /sql/advanced-analytics/r/
           homepage: /sql/advanced-analytics/r/architecture-overview-sql-server-r
+        - name: Python
+          href: /sql/advanced-analytics/python/
+          homepage: /sql/advanced-analytics/python/sql-server-python-services
+        - name: Installation et configuration
+          href: /sql/advanced-analytics/install/
+          homepage: /sql/advanced-analytics/install/sql-machine-learning-services-windows-install.md
+        - name: Didacticiels
+          href: /sql/advanced-analytics/tutorials/
+          homepage: /sql/advanced-analytics/tutorials/machine-learning-services-tutorials
         - name: SQL Server
           href: /sql/sql-server/
           homepage: /sql/sql-server/sql-server-technical-documentation
@@ -210,7 +279,7 @@
                         - name: Client
                           href: /sql/analysis-services/multidimensional-models-adomd-net-client/
                           homepage: /sql/analysis-services/multidimensional-models-adomd-net-client/adomd-net-client-functionality
-                        - name: Server
+                        - name: Serveur
                           href: /sql/analysis-services/multidimensional-models-adomd-net-server/
                           homepage: /sql/analysis-services/multidimensional-models-adomd-net-server/adomd-net-server-functionality
                     - name: Objets de gestion d’analyse
@@ -348,7 +417,7 @@
                 - name: .
                   href: /sql/integration-services/packages/
                   homepage: /sql/integration-services/packages/deploy-integration-services-ssis-projects-and-packages
-                - name: Performance
+                - name: Performances
                   href: /sql/integration-services/performance/
                   homepage: /sql/integration-services/performance/monitor-running-packages-and-other-operations
                 - name: Scale out
@@ -598,7 +667,7 @@
             - name: Partitions
               href: /sql/relational-databases/partitions/
               homepage: /sql/relational-databases/partitions/partitioned-tables-and-indexes
-            - name: Performance
+            - name: Performances
               href: /sql/relational-databases/performance/
               homepage: /sql/relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database
               items:
@@ -614,7 +683,7 @@
             - name: PolyBase
               href: /sql/relational-databases/polybase/
               homepage: /sql/relational-databases/polybase/polybase-guide
-            - name: Réplication
+            - name: REPLICATION
               href: /sql/relational-databases/replication/
               homepage: /sql/relational-databases/replication/sql-server-replication
               items:
@@ -645,7 +714,7 @@
                 - name: Transactionnelle
                   href: /sql/relational-databases/replication/transactional/
                   homepage: /sql/relational-databases/replication/transactional/transactional-replication
-            - name: Resource Governor
+            - name: gouverneur de ressources
               href: /sql/relational-databases/resource-governor/
               homepage: /sql/relational-databases/resource-governor/resource-governor
             - name: Création de scripts
@@ -1065,7 +1134,7 @@
                 - name: Menu Aide
                   href: /sql/ssms/menu-help/
                   homepage: /sql/ssms/menu-help/sql-server-management-studio-menu-help
-                - name: Objet
+                - name: Object
                   href: /sql/ssms/object/
                   homepage: /sql/ssms/object/object-explorer
                 - name: Inscrire des serveurs

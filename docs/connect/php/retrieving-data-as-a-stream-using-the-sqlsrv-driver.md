@@ -1,27 +1,28 @@
 ---
-title: "La récupération des données en tant que flux à l’aide du pilote SQLSRV | Documents Microsoft"
-ms.custom: 
+title: La récupération des données en tant que flux à l’aide du pilote SQLSRV | Documents Microsoft
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 17dc9129-04cd-430c-b5b3-82824116425d
-caps.latest.revision: "18"
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 53ff9f5cc78e1ccaec74425a47ac39bfca996aae
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: fa2d15dde596b9fb8ccd4d170281ef6fa4b2646f
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="retrieving-data-as-a-stream-using-the-sqlsrv-driver"></a>Récupération des données sous la forme d’un flux à l’aide du pilote SQLSRV
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -48,13 +49,14 @@ Les étapes suivantes récapitulent la manière de récupérer des données sous
   
 ## <a name="in-this-section"></a>Dans cette section  
   
-|Rubrique|Description|  
+|Rubrique| Description|  
 |---------|---------------|  
 |[Types de données avec prise en charge des flux à l’aide du pilote SQLSRV](../../connect/php/data-types-with-stream-support-using-the-sqlsrv-driver.md)|Répertorie les types de données SQL Server qui peuvent être récupérés sous forme de flux.|  
 |[Procédure : récupérer des données caractères sous la forme d’un flux à l’aide du pilote SQLSRV](../../connect/php/how-to-retrieve-character-data-as-a-stream-using-the-sqlsrv-driver.md)|Montre comment récupérer des données caractères sous la forme d’un flux.|  
 |[Procédure : récupérer des données binaires sous la forme d’un flux à l’aide du pilote SQLSRV](../../connect/php/how-to-retrieve-binary-data-as-a-stream-using-the-sqlsrv-driver.md)|Montre comment récupérer des données binaires sous la forme d’un flux.|  
   
 ## <a name="see-also"></a>Voir aussi  
-[Récupération de données](../../connect/php/retrieving-data.md)  
+[Récupération de données](../../connect/php/retrieving-data.md)
+
 [Constantes &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)  
   

@@ -16,11 +16,11 @@ author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
 ms.workload: 
-ms.openlocfilehash: 5e718755aeae67ba55165770dc323cad8d6a54a9
-ms.sourcegitcommit: 6b1618aa3b24bf6759b00a820e09c52c4996ca10
+ms.openlocfilehash: ccba60d0a3e0fe45f82215a045e53a265d6c0a92
+ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 03/21/2018
 ---
 # <a name="what-is-sql-server-machine-learning-services"></a>Nouveautés de SQL Server Machine Learning Services ?
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -31,12 +31,12 @@ La proposition de valeur de clé des Services de Machine Learning est la puissan
 
 Il existe deux options pour l’utilisation des fonctionnalités de machine learning dans SQL Server : 
 
-+ **SQL Server Machine Learning Services (de-de base de données)** opère au sein de l’instance du moteur de base de données, où le moteur de calcul est entièrement intégré avec le moteur de base de données. La plupart des installations sont cette option.
-+ **SQL Server Machine Learning Server (autonome)** est une installation non SQL. Bien que vous utilisez le programme d’installation de SQL Server pour installer le serveur, il est complètement découplé à partir de SQL Server.
++ [**SQL Server Machine Learning Services (de-de base de données)** ](r/sql-server-r-services.md) opère au sein de l’instance du moteur de base de données, où le moteur de calcul est entièrement intégré avec le moteur de base de données. La plupart des installations sont cette option.
++ [**SQL Server Machine Learning Server (autonome)** ](r/r-server-standalone.md) est une installation non SQL. Bien que vous utilisez le programme d’installation de SQL Server pour installer le serveur, il est complètement découplé à partir de SQL Server. Fonctionnellement, il est équivalent à l’autre que SQL [Microsoft Machine Learning pour Windows Server](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install).
 
 ## <a name="r-and-python-packages"></a>Packages R et Python
 
-Prise en charge pour chaque langue est par le biais des packages Microsoft propriétaires utilisés pour la création et l’apprentissage de modèles de différents types, notation des données et le traitement en parallèle à l’aide des ressources système sous-jacentes.
+Prise en charge pour chaque langue est par le biais des packages Microsoft propriétaires utilisés pour la création et l’apprentissage de modèles de différents types de données et le traitement parallèle utilise les ressources de système sous-jacent de calcul de score.
 
 Étant donné que les packages propriétaires reposent sur les distributions de R et Python open source, script ou code que vous exécutez dans SQL Server peut également appeler des fonctions de base et utiliser des packages tiers compatibles avec la version de langage fournie dans SQL Server (Python 3.5 et versions récentes de R, 3.3.3 actuellement).
 
@@ -84,12 +84,24 @@ SQL Server 2017 Machine Learning Services est la génération suivante de SQL Se
 
 Les versions récentes de la documentation de SQL Server sont indépendant de la version. Pour SQL Server Machine Learning Services, Python est disponible uniquement en 2017 et versions ultérieures, alors que la prise en charge R est dans toutes les versions. Sauf indication contraire, vous pouvez supposer que documentation de R s’applique aux versions 2016 et 2017.
 
+
+## <a name="related-machine-learning-products"></a>Produits apprentissage connexe
+
+ +  [Configurer une Machine virtuelle Azure](r/provision-the-r-server-only-sql-server-2016-enterprise-vm-on-azure.md)
+  
+  Azure marketplace inclut plusieurs images de machine virtuelle qui incluent la Machine Learning serveur ou R. Création d’un ordinateur virtuel dans Microsoft Azure est le moyen le plus rapide pour obtenir pour le développement et le déploiement de modèles prédictifs. Les images sont fournis avec les fonctionnalités de mise à l’échelle et de partage déjà configuré, ce qui le rend plus facile à incorporer analytique à l’intérieur d’applications et d’intégrer des systèmes principaux.
+
++ [Machine virtuelle pour la science des données](https://azure.microsoft.com/services/virtual-machines/data-science-virtual-machines/)
+
+  La dernière version de la machine virtuelle de science des données comprend des Machine Learning Server, SQL Server, plus un tableau des outils les plus populaires pour l’apprentissage automatique, toutes les préinstallé et testé. Créer les blocs-notes Notebook, développer des solutions dans Julia et utiliser des bibliothèques de GPU compatible de formation approfondie, MXNet, CNTK et TensorFlow.
+
 <a name="next-steps"></a>
+
 ## <a name="next-steps"></a>Étapes suivantes
 
 **Étape 1 :** installer et configurer le logiciel. 
 
-+ [Installer SQL Server 2017 Machine Learning Services (de-de base de données)](python/setup-python-machine-learning-services.md#bkmk_installPythonInDatabase)
++ [Installer SQL Server 2017 Machine Learning Services (de-de base de données)](install/sql-machine-learning-services-windows-install.md)
 
 **Étape 2 :** commencer avec le code à l’aide de l’une de ces didacticiels :
 

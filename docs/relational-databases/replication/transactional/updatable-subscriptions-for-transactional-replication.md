@@ -1,16 +1,16 @@
 ---
-title: "Abonnements pouvant être mis à jour pour la réplication transactionnelle | Microsoft Docs"
-ms.custom: 
+title: Abonnements pouvant être mis à jour pour la réplication transactionnelle | Microsoft Docs
+ms.custom: ''
 ms.date: 07/21/2016
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: replication
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - transactional replication, updatable subscriptions
@@ -20,7 +20,7 @@ helpviewer_keywords:
 - subscriptions [SQL Server replication], updatable
 - updatable subscriptions
 ms.assetid: 8eec95cb-3a11-436e-bcee-bdcd05aa5c5a
-caps.latest.revision: 
+caps.latest.revision: ''
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
@@ -63,7 +63,7 @@ ms.lasthandoff: 03/08/2018
  **Pour basculer d'un mode de mise à jour vers un autre**  
   
  Pour basculer d'un mode à l'autre, vous devez activer la publication et l'abonnement pour les deux modes de mise à jour puis basculer d'un mode à l'autre, le cas échéant. Pour plus d'informations, consultez  
-[Switch Between Update Modes for an Updatable Transactional Subscription](../../../relational-databases/replication/administration/switch-between-update-modes-for-an-updatable-transactional-subscription.md).  
+[Basculer entre les modes de mise à jour d'un abonnement transactionnel pouvant être mis à jour](../../../relational-databases/replication/administration/switch-between-update-modes-for-an-updatable-transactional-subscription.md).  
   
 ### <a name="considerations-for-using-updatable-subscriptions"></a>Considérations sur l'utilisation des abonnements pouvant être mis à jour  
   

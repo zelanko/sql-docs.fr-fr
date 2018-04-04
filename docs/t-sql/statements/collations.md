@@ -1,16 +1,16 @@
 ---
 title: Classements | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - COLLATE
@@ -21,21 +21,23 @@ helpviewer_keywords:
 - collations [SQL Server], COLLATE clause
 - COLLATE clause
 ms.assetid: 76763ac8-3e0d-4bbb-aa53-f5e7da021daa
-caps.latest.revision: 
+caps.latest.revision: ''
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 7a206f638b78a5e4311ab7889a7902aa39a17413
-ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+ms.openlocfilehash: a59320941ecd488abbaa728968a1326525682839
+ms.sourcegitcommit: 3ed9be04cc7fb9ab1a9ec230c298ad2932acc71b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 03/17/2018
 ---
 # <a name="collations"></a>Classements
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Clause pouvant être appliquée à la définition d'une base de données ou d'une colonne pour définir le classement, ou à une expression de chaîne de caractères pour appliquer un changement de classement.  
+
+[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
   
  ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -61,7 +63,7 @@ COLLATE { <collation_name> | database_default }
  Oblige la clause COLLATE à hériter du classement de la base de données active.  
   
 ## <a name="remarks"></a>Notes   
- La clause COLLATE peut être spécifiée à plusieurs niveaux. Ces options en question sont les suivantes :  
+ La clause COLLATE peut être spécifiée à plusieurs niveaux, Ces options en question sont les suivantes :  
   
 1.  la création ou modification d'une base de données ;  
   
@@ -105,6 +107,9 @@ FROM fn_helpcollations();
   
 -   Lors de la restauration ou de l’attachement d’une base de données, le classement par défaut de cette dernière et le classement de colonnes ou paramètres **char**, **varchar** et **text** de la base de données doivent être pris en charge par le système d’exploitation.  
   
+> [!NOTE]
+> Le classement du serveur de l’instance gérée Azure SQL Database est **SQL_Latin1_General_CP1_CI_AS** et ne peut pas être modifié.
+
 > [!NOTE]
 > Les traductions de pages de codes sont prises en charge pour les types de données **char** et **varchar**, mais pas pour **text**. La perte de données lors de la traduction d'une page de codes n'est pas mentionnée.  
   
@@ -162,7 +167,7 @@ Chiapas
   
 ## <a name="see-also"></a> Voir aussi  
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)    
- [Prise en charge d’Unicode et du classement](../../relational-databases/collations/collation-and-unicode-support.md)    
+ [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)    
  [Priorité de classement &#40;Transact-SQL&#41;](../../t-sql/statements/collation-precedence-transact-sql.md)     
  [Constantes &#40;Transact-SQL&#41;](../../t-sql/data-types/constants-transact-sql.md)     
  [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)     

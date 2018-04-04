@@ -1,16 +1,16 @@
 ---
 title: SERVERPROPERTY (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/02/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - SERVERPROPERTY_TSQL
@@ -25,22 +25,24 @@ helpviewer_keywords:
 - instances of SQL Server, property information
 - server properties [SQL Server]
 ms.assetid: 11e166fa-3dd2-42d8-ac4b-04f18c612c4a
-caps.latest.revision: 
+caps.latest.revision: ''
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: f619623b90b784d9d44bc76c99daf3d9802cb8a0
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: be72828789c74d599c003100c98db93b1ec937e4
+ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/21/2018
 ---
 # <a name="serverproperty-transact-sql"></a>SERVERPROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Retourne des informations de propriété relatives à l'instance du serveur.  
-  
+
+[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
+
  ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
@@ -75,7 +77,7 @@ SERVERPROPERTY ( 'propertyname' )
 |IsLocalDB|**S'applique à**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Le serveur est une instance de [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] LocalDB.<br /><br /> NULL = Entrée non valide, non applicable, ou erreur.|  
 |IsPolybaseInstalled|**S'applique à**: [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Indique si la fonctionnalité PolyBase est installée sur l’instance de serveur.<br /><br /> 0 = Polybase n’est pas installée.<br /><br /> 1 = Polybase est installée.<br /><br /> Type de données de base : **int**|  
 |IsSingleUser|Le serveur est en mode mono-utilisateur.<br /><br /> 1 = Utilisateur unique<br /><br /> 0 = Utilisateur non unique<br /><br /> NULL = Entrée non valide, non applicable, ou erreur.<br /><br /> Type de données de base : **int**|  
-|IsXTPSupported|**S’applique à** : SQL Server ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] jusqu’à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), [!INCLUDE[ssSDS](../../includes/sssds-md.md)].<br /><br /> Le serveur prend en charge OLTP en mémoire.<br /><br /> 1 = Le serveur prend en charge OLTP en mémoire.<br /><br /> 0 = Le serveur ne prend pas en charge OLTP en mémoire.<br /><br /> NULL = Entrée non valide, non applicable, ou erreur.<br /><br /> Type de données de base : **int**|  
+|IsXTPSupported|**S’applique à** : SQL Server ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), [!INCLUDE[ssSDS](../../includes/sssds-md.md)].<br /><br /> Le serveur prend en charge OLTP en mémoire.<br /><br /> 1 = Le serveur prend en charge OLTP en mémoire.<br /><br /> 0 = Le serveur ne prend pas en charge OLTP en mémoire.<br /><br /> NULL = Entrée non valide, non applicable, ou erreur.<br /><br /> Type de données de base : **int**|  
 |LCID|Identificateur des paramètres régionaux (LCID) Windows du classement.<br /><br /> Type de données de base : **int**|  
 |LicenseType|Inutilisé. Les informations de licence ne sont pas conservées ou ne sont pas gérées par le produit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Retourne toujours DISABLED.<br /><br /> Type de données de base : **nvarchar(128)**|  
 |MachineName|Nom de l'ordinateur Windows sur lequel s'exécute l'instance du serveur.<br /><br /> Dans le cas d'une instance en cluster, instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] s'exécutant sur un serveur virtuel sous Microsoft Cluster Service, le nom du serveur virtuel est retourné.<br /><br /> NULL = Entrée non valide, non applicable, ou erreur.<br /><br /> Type de données de base : **nvarchar(128)**|  
@@ -83,10 +85,10 @@ SERVERPROPERTY ( 'propertyname' )
 |ProcessID|ID de processus du service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. ProcessID permet d'identifier le fichier sqlservr.exe qui appartient à cette instance.<br /><br /> NULL = Entrée non valide, non applicable, ou erreur.<br /><br /> Type de données de base : **int**|  
 |ProductBuild|**S’applique à** : [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] depuis octobre 2015.<br /><br /> Numéro de build.|  
 |ProductBuildType|**S’applique à** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] jusqu’à la version actuelle dans les mises à jour depuis fin 2015.<br /><br /> Type de build de la build actuelle.<br /><br /> Retourne l'une des valeurs suivantes :<br /><br /> OD = Version à la demande pour un client spécifique.<br /><br /> GDR = Correctif logiciel grand public publié via Windows Update.<br /><br /> NULL<br />= Non applicable.|  
-|ProductLevel|Niveau de la version de l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> Retourne l'une des valeurs suivantes :<br /><br /> « 'RTM » = Version d'origine<br /><br /> 'SP*n* = Version du Service Pack<br /><br /> 'CTP*n*' = Version CTP (Community Technology Preview)<br /><br /> Type de données de base : **nvarchar(128)**|  
+|ProductLevel|Niveau de la version de l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> Retourne l'une des valeurs suivantes :<br /><br /> « 'RTM » = Version d'origine<br /><br /> 'SP*n*' = version du Service Pack<br /><br /> 'CTP*n*', = version CTP (Community Technology Preview)<br /><br /> Type de données de base : **nvarchar(128)**|  
 |ProductMajorVersion|**S’applique à** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] jusqu’à la version actuelle dans les mises à jour depuis fin 2015.<br /><br /> Version principale.|  
 |ProductMinorVersion|**S’applique à** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] jusqu’à la version actuelle dans les mises à jour depuis fin 2015.<br /><br /> Version mineure.|  
-|ProductUpdateLevel|**S’applique à** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] jusqu’à la version actuelle dans les mises à jour depuis fin 2015.<br /><br /> Niveau de mise à jour de la build actuelle. CU indique une mise à jour cumulative.<br /><br /> Retourne l'une des valeurs suivantes :<br /><br /> CU*n* = Mise à jour cumulative (Cumulative Update)<br /><br /> NULL<br />= Non applicable.|  
+|ProductUpdateLevel|**S’applique à** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] jusqu’à la version actuelle dans les mises à jour depuis fin 2015.<br /><br /> Niveau de mise à jour de la build actuelle. CU indique une mise à jour cumulative.<br /><br /> Retourne l'une des valeurs suivantes :<br /><br /> CU*n* = mise à jour cumulative<br /><br /> NULL<br />= Non applicable.|  
 |ProductUpdateReference|**S’applique à** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] jusqu’à la version actuelle dans les mises à jour depuis fin 2015.<br /><br /> Article de la Base de connaissances pour cette version.|  
 |ProductVersion|Version de l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], sous la forme de « *major.minor.build.revision* ».<br /><br /> Type de données de base : **nvarchar(128)**|  
 |ResourceLastUpdateDateTime|Retourne la date et l'heure de la dernière mise à jour de la base de données des ressources.<br /><br /> Type de données de base : **datetime**|  

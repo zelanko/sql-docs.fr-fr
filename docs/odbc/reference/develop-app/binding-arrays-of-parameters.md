@@ -1,31 +1,32 @@
 ---
-title: "Les tableaux de paramètres de liaison | Documents Microsoft"
-ms.custom: 
+title: Les tableaux de paramètres de liaison | Documents Microsoft
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - binding parameter arrays [ODBC]
 - arrays of parameter values [ODBC]
 - parameter arrays [ODBC]
 ms.assetid: 037afe23-052d-4f3a-8aa7-45302b199ad0
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ad5bb4e2281802c231b4dc7abcfd356c8ca4b72c
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 09b3a3c732b34a5a1a7a1d98e2ebe9740069f72e
+ms.sourcegitcommit: 8f1d1363e18e0c32ff250617ab6cb2da2147bf8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="binding-arrays-of-parameters"></a>Les tableaux de paramètres de liaison
 Les applications qui utilisent des tableaux de paramètres de lier les tableaux de paramètres dans l’instruction SQL. Il existe deux styles de liaison :  
@@ -41,7 +42,7 @@ Les applications qui utilisent des tableaux de paramètres de lier les tableaux 
   
  La liaison est la valeur par défaut. L’application également peut modifier à partir de la liaison pour la liaison en définissant l’attribut d’instruction SQL_ATTR_PARAM_BIND_TYPE. L’illustration suivante montre le fonctionnement selon les colonnes de la liaison.  
   
- ![Montre comment colonne &#45; liaison judicieux works](../../../odbc/reference/develop-app/media/pr31.gif "pr31")  
+ ![Montre comment colonne&#45;liaison fonctionne au niveau](../../../odbc/reference/develop-app/media/pr31.gif "pr31")  
   
  Par exemple, le code suivant lie des tableaux d’éléments de 10 à des paramètres pour les colonnes PartID, Description et le prix et exécute une instruction pour insérer des lignes de 10. Il utilise la liaison selon les colonnes.  
   
@@ -59,9 +60,9 @@ SQLINTEGER     PartIDIndArray[ARRAY_SIZE], DescLenOrIndArray[ARRAY_SIZE],
 SQLUSMALLINT   i, ParamStatusArray[ARRAY_SIZE];  
 SQLULEN ParamsProcessed;  
   
-memset(DescLenOrIndArray, 0, sizeof(DescLenOrIndArray);  
-memset(PartIDIndArray, 0, sizeof(PartIDIndArray);  
-memset(PriceIndArray, 0, sizeof(PriceIndArray);  
+memset(DescLenOrIndArray, 0, sizeof(DescLenOrIndArray));  
+memset(PartIDIndArray, 0, sizeof(PartIDIndArray));  
+memset(PriceIndArray, 0, sizeof(PriceIndArray));  
   
 // Set the SQL_ATTR_PARAM_BIND_TYPE statement attribute to use  
 // column-wise binding.  
@@ -134,7 +135,7 @@ Address = Bound Address + ((Row Number - 1) * Structure Size) + Offset
   
  dans lequel les lignes sont numérotées de 1 à la taille de l’ensemble de paramètres. Le décalage, s’il est défini, est la valeur vers laquelle pointée l’attribut d’instruction SQL_ATTR_PARAM_BIND_OFFSET_PTR. L’illustration suivante montre le fonctionnement selon les lignes de la liaison. Les paramètres peuvent être placés dans la structure dans n’importe quel ordre, mais sont affichées dans un ordre séquentiel par souci de clarté.  
   
- ![Affiche de ligne &#45; liaison judicieux works](../../../odbc/reference/develop-app/media/pr32.gif "pr32")  
+ ![Montre comment ligne&#45;liaison fonctionne au niveau](../../../odbc/reference/develop-app/media/pr32.gif "pr32")  
   
  Le code suivant crée une structure avec des éléments pour les valeurs à stocker dans les colonnes PartID, Description et le prix. Ensuite, il alloue un tableau de 10 éléments de ces structures et lie à des paramètres pour les colonnes PartID, Description et le prix, à l’aide de la liaison. Il exécute ensuite une instruction pour insérer des lignes de 10.  
   

@@ -1,24 +1,24 @@
 ---
 title: Gouvernance des ressources pour Python | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: python
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 8accb9b8e050340ff980a1b5d9f1faf9283d8b89
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: c1bf3fb84629310c09f0dc181f6b7eaa6707fa88
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="resource-governance-for-python"></a>Gouvernance des ressources pour Python
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -64,7 +64,7 @@ Vous trouverez une bonne introduction à la terminologie et aux concepts génér
 
 ## <a name="resource-management-using-resource-governor"></a>Gestion de ressources avec Resource Governor
 
-Si vous êtes un utilisateur novice de Resource Governor, la procédure pas à pas rapide contenue dans la rubrique suivante vous aidera à modifier les ressources par défaut d’une instance et à créer un nouveau pool de ressources externe : [Guide pratique pour créer un pool de ressources pour R](../../advanced-analytics/r-services/how-to-create-a-resource-pool-for-r.md)
+Si vous débutez au gouverneur de ressources, consultez l’article pour une présentation rapide de modifier les ressources de l’instance par défaut et créer un nouveau pool de ressources externes : [comment faire : créer un Pool de ressources pour R](../../advanced-analytics/r-services/how-to-create-a-resource-pool-for-r.md)
 
 Vous pouvez utiliser la *pool de ressources externes* mécanisme permettant de gérer les ressources utilisées par les exécutables pris en charge suivants :
 

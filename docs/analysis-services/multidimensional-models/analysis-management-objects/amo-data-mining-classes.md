@@ -46,7 +46,7 @@ ms.lasthandoff: 02/15/2018
   
  ![Classes DataMining AMO](../../../analysis-services/multidimensional-models/analysis-management-objects/media/amo-dataminingclasses.gif "Classes DataMining AMO")  
   
-##  <a name="MiningStructure">Objets MiningStructure</a>  
+##  <a name="MiningStructure"></a> Objets MiningStructure  
  Une structure d'exploration de données fait office de conteneur pour les modèles d'exploration de données. La structure définit toutes les colonnes que les modèles d'exploration de données sont susceptibles d'utiliser. Chaque modèle d'exploration de données définit ses propres colonnes à partir du jeu de colonnes définies dans la structure.  
   
  Un objet <xref:Microsoft.AnalysisServices.MiningStructure> simple se compose des éléments suivants : des informations de base, une vue de source de données, un ou plusieurs objets <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn>, zéro, un ou plusieurs objets <xref:Microsoft.AnalysisServices.TableMiningStructureColumn>, ainsi qu'un objet <xref:Microsoft.AnalysisServices.MiningModelCollection>.  
@@ -98,7 +98,7 @@ ms.lasthandoff: 02/15/2018
   
  Pour supprimer un objet <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn>, il convient de le supprimer de la collection de l'objet <xref:Microsoft.AnalysisServices.MiningStructure> parent, et l'objet <xref:Microsoft.AnalysisServices.MiningStructure> parent doit être mis à jour sur le serveur à l'aide de la méthode Remove.  
   
-##  <a name="MiningModel">Objets MiningModel</a>  
+##  <a name="MiningModel"></a> Objets MiningModel  
  <xref:Microsoft.AnalysisServices.MiningModel> est l'objet qui vous permet de sélectionner les colonnes de la structure à utiliser, l'algorithme à utiliser et éventuellement des paramètres spécifiques afin de paramétrer le modèle. Par exemple, vous pouvez souhaiter définir plusieurs modèles d'exploration de données dans une même structure d'exploration de données qui utilisent les mêmes algorithmes. Vous pouvez également souhaiter ignorer certaines colonnes de la structure d'exploration de données dans un modèle, les utiliser comme entrées dans un autre modèle et les utiliser comme colonnes prédictibles et d'entrée dans un troisième modèle. Cela peut s'avérer utile si vous souhaitez traiter une colonne en tant que colonne continue dans un modèle d'exploration de données mais que vous souhaitez la traiter en tant que colonne discrétisée dans un autre.  
   
  Un objet <xref:Microsoft.AnalysisServices.MiningModel> simple est constitué d'informations de base, d'une définition d'algorithme et de colonnes.  

@@ -1,30 +1,31 @@
 ---
-title: "Comment : exécuter des requêtes paramétrables | Documents Microsoft"
-ms.custom: 
-ms.date: 01/19/2017
+title: 'Comment : exécuter des requêtes paramétrables | Documents Microsoft'
+ms.custom: ''
+ms.date: 03/26/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - updating data
 - parameterized queries
 ms.assetid: dc7d0ede-a9b6-4ce2-977e-4d1e7ec2131c
-caps.latest.revision: "31"
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 946380fdce8f3ac0d976840e569e35db077a4202
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 23660f3d7ddbaf45ac39674c4eba23092e3ae2d2
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="how-to-perform-parameterized-queries"></a>Procédure : exécuter des requêtes paramétrables
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -37,7 +38,7 @@ Les étapes pour exécuter une requête paramétrable sont au nombre de quatre 
   
 2.  Initialisez ou mettez à jour les variables PHP qui correspondent aux espaces réservés dans la requête Transact-SQL.  
   
-3.  Utilisez les variables PHP de l’étape 2 pour créer ou mettre à jour un tableau de valeurs de paramètre correspondant, dans l’ordre, aux espaces réservés de paramètre dans la chaîne Transact-SQL.  
+3.  Utilisez les variables PHP de l’étape 2 pour créer ou mettre à jour un tableau de valeurs de paramètre qui correspondent aux espaces réservés de paramètre dans la chaîne Transact-SQL. Les valeurs de paramètre dans le tableau doivent être dans le même ordre que les espaces réservés destiné à représenter.
   
 4.  Exécutez la requête :  
   
@@ -55,7 +56,7 @@ L’exemple suivant met à jour la quantité d’un ID de produit spécifié dan
   
 L’exemple interroge ensuite la base de données pour vérifier que la quantité a été correctement mise à jour. L’ID de produit est un paramètre dans la requête SELECT.  
   
-L’exemple part du principe que SQL Server et la base de données [AdventureWorks](http://go.microsoft.com/fwlink/?LinkID=67739) sont installés sur l’ordinateur local. Toute la sortie est écrite dans la console quand l’exemple est exécuté à partir de la ligne de commande.  
+L’exemple part du principe que SQL Server et le [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) base de données sont installés sur l’ordinateur local.  Toute la sortie est écrite dans la console quand l’exemple est exécuté à partir de la ligne de commande.  
   
 ```  
 <?php  
@@ -121,7 +122,7 @@ L’exemple précédent utilise la fonction **sqlsrv_query** pour exécuter des 
 ## <a name="example"></a>Exemple  
 L’exemple suivant illustre la liaison implicite des variables quand vous utilisez la fonction **sqlsrv_prepare** . L’exemple montre comment insérer plusieurs commandes client dans la table *Sales.SalesOrderDetail* . Le *$params* est lié à l’instruction (*$stmt*) lorsque **sqlsrv_prepare** est appelée. Avant chaque exécution d’une requête qui insère une nouvelle commande client dans la table, le tableau *$params* est mis à jour avec de nouvelles valeurs correspondant aux détails de cette commande client. L’exécution suivante de la requête utilise les nouvelles valeurs de paramètre.  
   
-L’exemple part du principe que SQL Server et la base de données [AdventureWorks](http://go.microsoft.com/fwlink/?LinkID=67739) sont installés sur l’ordinateur local. Toute la sortie est écrite dans la console quand l’exemple est exécuté à partir de la ligne de commande.  
+L’exemple part du principe que SQL Server et le [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) base de données sont installés sur l’ordinateur local.  Toute la sortie est écrite dans la console quand l’exemple est exécuté à partir de la ligne de commande.  
   
 ```  
 <?php  
@@ -194,8 +195,11 @@ sqlsrv_close( $conn);
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
-[Conversion de types de données](../../connect/php/converting-data-types.md)  
-[Considérations relatives à la sécurité pour le pilote SQL PHP](../../connect/php/security-considerations-for-php-sql-driver.md)
-[À propos des exemples de code dans la documentation](../../connect/php/about-code-examples-in-the-documentation.md)  
+[Conversion de types de données](../../connect/php/converting-data-types.md)
+
+[Considérations de sécurité pour les pilotes Microsoft pour PHP pour SQL Server](../../connect/php/security-considerations-for-php-sql-driver.md)
+
+[À propos des exemples de code dans la documentation](../../connect/php/about-code-examples-in-the-documentation.md)
+
 [sqlsrv_rows_affected](../../connect/php/sqlsrv-rows-affected.md)  
   

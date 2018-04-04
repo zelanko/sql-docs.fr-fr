@@ -1,31 +1,32 @@
 ---
-title: "Importer les valeurs d’un fichier Excel dans un domaine | Microsoft Docs"
-ms.custom: 
+title: Importer les valeurs d’un fichier Excel dans un domaine | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: data-quality-services
-ms.service: 
+ms.service: ''
 ms.component: data-quality-services
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: data-quality-services
-ms.tgt_pltfrm: 
+ms.technology:
+- data-quality-services
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.dqs.kb.importfailing.f1
 - sql13.dqs.kb.importselect.f1
 - sql13.dqs.kb.failingvalues.f1
 ms.assetid: 04cde693-2043-477f-8417-fcc463ca7195
-caps.latest.revision: "26"
+caps.latest.revision: ''
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9d4e8bb9372d6e9e19e674160f9039422cd87ebc
-ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
+ms.openlocfilehash: c6331f1f695bb2e1c9974d27d8af76e03da55315
+ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="import-values-from-an-excel-file-into-a-domain"></a>Importer les valeurs d'un fichier Excel dans un domaine
   Cette rubrique décrit comment importer des valeurs à partir d'un fichier Excel vers un champ de [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). L'utilisation d'un fichier Excel pour importer les valeurs de champ dans l'application [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] simplifie le processus de génération de connaissance, et permet d'économiser aussi bien le temps que les efforts. Elle permet aux personnes qui ont une liste de valeurs de données valides dans un fichier Excel ou un fichier texte d'importer ces valeurs dans un domaine. À partir d'un fichier Excel, vous pouvez importer les valeurs de domaine dans un domaine ou des domaines d'une base de connaissances. (Consultez [Importer les domaines d’un fichier Excel dans la découverte des connaissances](../data-quality-services/import-domains-from-an-excel-file-in-knowledge-discovery.md) pour plus d’informations sur l’importation de domaines dans une base de connaissances.) L'exportation vers un fichier Excel n'est pas prise en charge.  
@@ -46,7 +47,7 @@ ms.lasthandoff: 01/19/2018
 ####  <a name="Permissions"></a> Permissions  
  Vous devez disposer du rôle dqs_kb_editor ou dqs_administrator sur la base de données DQS_MAIN pour importer les valeurs de champs d'un fichier Excel.  
   
-##  <a name="Import"></a> Import values from an Excel file into a domain  
+##  <a name="Import"></a> Importer les valeurs d'un fichier Excel dans un domaine  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Exécutez l’application Data Quality Client](../data-quality-services/run-the-data-quality-client-application.md).  
   
@@ -109,7 +110,7 @@ ms.lasthandoff: 01/19/2018
   
 -   Chaque ligne représente une valeur de domaine.  
   
--   La première ligne représente les noms de domaine ou la première valeur ou premier enregistrement de données, selon la valeur de la case à cocher **Utiliser la première ligne comme en-tête** . Si vous sélectionnez **Use First Row as header** lors de l'utilisation d'un fichier .xslx ou .xls, tous les noms de colonnes qui sont null seront automatiquement convertis en F*n*et un numéro sera ajouté à toutes les colonnes en doublon.  
+-   La première ligne représente les noms de domaine ou la première valeur ou premier enregistrement de données, selon la valeur de la case à cocher **Utiliser la première ligne comme en-tête** . Si vous sélectionnez **Utiliser la première ligne comme en-tête** lors de l'utilisation d'un fichier .xslx ou .xls, tous les noms de colonnes qui sont null seront automatiquement convertis en F*n*et un numéro sera ajouté à toutes les colonnes en doublon.  
   
 -   Si vous annulez l'opération d'importation avant qu'elle soit terminée, l'opération est annulée et aucune donnée n'est importée.  
   

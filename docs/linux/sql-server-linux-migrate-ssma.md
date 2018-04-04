@@ -1,6 +1,6 @@
-﻿---
-title: "Automatiser les opérations de base de données vers SQL Server sur Linux | Documents Microsoft"
-description: 
+---
+title: Automatiser les opérations de base de données vers SQL Server sur Linux | Documents Microsoft
+description: ''
 author: rothja
 ms.author: jroth
 manager: craigg
@@ -8,8 +8,8 @@ ms.date: 01/30/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
 ms.technology: database-engine
 ms.assetid: 251bc3af-ebce-4d97-adec-afc0e7fab6cc
@@ -25,9 +25,9 @@ ms.lasthandoff: 02/13/2018
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-Cet article présente [SQL Server Migration Assistant (SSMA)](http://msdn.microsoft.com/library/mt613434.aspx) qui vous permet de migrer facilement des bases de données vers SQL Server 2017 sous Linux à partir de Microsoft Access, DB2, MySQL, Oracle et Sybase. SSMA est une application Windows, vous pouvez donc utiliser SSMA si vous disposez d’un ordinateur Windows qui peut se connecter à une instance distante de SQL Server sur Linux.  [SQL Server Migration Assistant (SSMA)](http://msdn.microsoft.com/library/mt613434.aspx) qui vous permet de migrer facilement des bases de données vers SQL Server 2017 sous Linux à partir de Microsoft Access, DB2, MySQL, Oracle et Sybase. SSMA est une application Windows, vous pouvez donc utiliser SSMA si vous disposez d’un ordinateur Windows qui peut se connecter à une instance distante de SQL Server sur Linux. Cet article présenteCette rubrique présente [SQL Server Migration Assistant (SSMA)](http://msdn.microsoft.com/library/mt613434.aspx) qui vous permet de migrer facilement des bases de données vers SQL Server 2017 sous Linux à partir de Microsoft Access, DB2, MySQL, Oracle et Sybase. SSMA est une application Windows, vous pouvez donc utiliser SSMA si vous disposez d’un ordinateur Windows qui peut se connecter à une instance distante de SQL Server sur Linux.  [SQL Server Migration Assistant (SSMA)](http://msdn.microsoft.com/library/mt613434.aspx) qui vous permet de migrer facilement des bases de données vers SQL Server 2017 sous Linux à partir de Microsoft Access, DB2, MySQL, Oracle et Sybase. SSMA est une application Windows, vous pouvez donc utiliser SSMA si vous disposez d’un ordinateur Windows qui peut se connecter à une instance distante de SQL Server sur Linux.  [SQL Server Migration Assistant (SSMA)](http://msdn.microsoft.com/library/mt613434.aspx) qui vous permet de migrer facilement des bases de données vers SQL Server 2017 sous Linux à partir de Microsoft Access, DB2, MySQL, Oracle et Sybase. SSMA est une application Windows, vous pouvez donc utiliser SSMA si vous disposez d’un ordinateur Windows qui peut se connecter à une instance distante de SQL Server sur Linux.  [SQL Server Migration Assistant (SSMA)](http://msdn.microsoft.com/library/mt613434.aspx) qui vous permet de migrer facilement des bases de données vers SQL Server 2017 sous Linux à partir de Microsoft Access, DB2, MySQL, Oracle et Sybase. SSMA est une application Windows, vous pouvez donc utiliser SSMA si vous disposez d’un ordinateur Windows qui peut se connecter à une instance distante de SQL Server sur Linux. Cet article présenteCette rubrique présente [SQL Server Migration Assistant (SSMA)](http://msdn.microsoft.com/library/mt613434.aspx) qui vous permet de migrer facilement des bases de données vers SQL Server 2017 sous Linux à partir de Microsoft Access, DB2, MySQL, Oracle et Sybase. SSMA est une application Windows, vous pouvez donc utiliser SSMA si vous disposez d’un ordinateur Windows qui peut se connecter à une instance distante de SQL Server sur Linux.  [SQL Server Migration Assistant (SSMA)](http://msdn.microsoft.com/library/mt613434.aspx) qui vous permet de migrer facilement des bases de données vers SQL Server 2017 sous Linux à partir de Microsoft Access, DB2, MySQL, Oracle et Sybase. SSMA est une application Windows, vous pouvez donc utiliser SSMA si vous disposez d’un ordinateur Windows qui peut se connecter à une instance distante de SQL Server sur Linux. 
+Cet article présente [SQL Server Migration Assistant (SSMA)](http://msdn.microsoft.com/library/mt613434.aspx) qui vous permet de migrer facilement des bases de données vers 2017 du serveur SQL sur Linux à partir de Microsoft Access, DB2, MySQL, Oracle et Sybase. SSMA est une application Windows, vous pouvez donc utiliser SSMA si vous disposez d’un ordinateur Windows qui peut se connecter à une instance distante de SQL Server sur Linux. 
 
-SSMA prend en charge de diverses bases de données sources, notamment Oracle, MySQL, Sybase, DB2 et Microsoft Access 2017 vers SQL Server sous Linux et permet d’automatiser les tâches de migration telles que :
+SSMA prend en charge diverses bases de données sources, notamment Oracle, MySQL, Sybase, DB2 et Microsoft Access 2017 vers SQL Server sous Linux et permet d’automatiser les tâches de migration telles que :
 
 - évaluer votre base de données source
 - convertir le schéma de base de données source vers le schéma de Microsoft SQL Server

@@ -1,42 +1,43 @@
 ---
-title: "Paramètres d’informations de périphérique PDF | Microsoft Docs"
-ms.custom: 
-ms.date: 03/16/2017
+title: Paramètres d’informations de périphérique PDF | Microsoft Docs
+ms.custom: ''
+ms.date: 03/16/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
+ms.service: ''
 ms.component: reporting-services
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - device information settings [Reporting Services], PDF rendering
 - PDF [Reporting Services]
 ms.assetid: 9a4aabe5-dbdc-4884-b999-1200983fee47
-caps.latest.revision: "41"
+caps.latest.revision: ''
 author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: dccc67734b6cf54758ec14b326b171a6effef30b
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 0bd2635a54003fd663dadcf6d3bc5991c1841988
+ms.sourcegitcommit: ccb05cb5a4cccaf7ffa9e85a4684fa583bab914e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="pdf-device-information-settings"></a>Paramètres d'informations de périphérique PDF
   Le tableau suivant répertorie les paramètres d'informations de périphérique qui permettent un rendu des rapports au format PDF.  
   
 |Paramètre|Valeur|  
 |-------------|-----------|  
+| **AccessiblePDF** | Indique s’il faut restituer un PDF accessible/marqué, plus volumineux, mais plus facile à lire et à parcourir par les lecteurs d’écran et autres technologies d’assistance. La valeur par défaut est **false**. [Disponible dans Power BI Report Server (mars 2018) et versions ultérieures] |
 |**Colonnes**|Nombre de colonnes à définir pour le rapport. Cette valeur remplace les paramètres d'origine du rapport.|  
 |**ColumnSpacing**|Espacement entre les colonnes à définir pour le rapport. Cette valeur remplace les paramètres d'origine du rapport.|  
 |**DpiX**|Résolution du périphérique de sortie sur l'axe x.|  
 |**DpiY**|Résolution du périphérique de sortie sur l'axe y.|  
 |**EndPage**|Dernière page du rapport à restituer. La valeur par défaut correspond à la valeur définie pour **StartPage**.|  
-|**HumanReadablePDF**|Indique si le PDF doit être compressé, ce qui rend la source plus lisible. La valeur par défaut est **false**.|  
+|**HumanReadablePDF**|Indique s’il faut restituer un fichier PDF décompressé, plus volumineux, mais plus facile à lire par l’utilisateur dans un éditeur de texte brut. La valeur par défaut est **false**.|  
 |**MarginBottom**|Valeur de marge inférieure, exprimée en pouces, à définir pour le rapport. Vous devez saisir un entier ou un nombre à virgule, puis l’abréviation « in » (par exemple, 1in). Cette valeur remplace les paramètres d'origine du rapport.|  
 |**MarginLeft**|Valeur de marge de gauche, exprimée en pouces, à définir pour le rapport. Vous devez saisir un entier ou un nombre à virgule, puis l’abréviation « in » (par exemple, 1in). Cette valeur remplace les paramètres d'origine du rapport.|  
 |**MarginRight**|Valeur de marge de droite, exprimée en pouces, à définir pour le rapport. Vous devez saisir un entier ou un nombre à virgule, puis l’abréviation « in » (par exemple, 1in). Cette valeur remplace les paramètres d'origine du rapport.|  

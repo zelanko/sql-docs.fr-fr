@@ -16,11 +16,11 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: 2143b576e3104ba2cf707e8fada75471a007a987
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 0e9f4351e74e73453182ff8e8f840f50f0085537
+ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/21/2018
 ---
 # <a name="known-issues-in-machine-learning-services"></a>Problèmes connus dans les Services de Machine Learning
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -94,7 +94,7 @@ Ce problème est résolu dans la version release. En outre, cette restriction ne
 
 **S’applique à :** SQL Server 2017 avec Python
 
-### <a name="bkmk_sqlbindr"></a>Avertissement de version non compatible lorsque vous vous connectez à une version antérieure de SQL Server R Services à partir d’un client à l’aide de[!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)]
+### <a name="bkmk_sqlbindr"></a> Avertissement de version non compatible lorsque vous vous connectez à une version antérieure de SQL Server R Services à partir d’un client à l’aide de [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)]
 
 Lorsque vous exécutez le code R dans un SQL Server 2016 contexte de calcul, vous pouvez rencontrer l’erreur suivante :
 
@@ -117,7 +117,7 @@ Pour résoudre ce problème, vous pouvez installer la version de service à l’
 
 `C:\<path to installation media>\SQLServer2016-KB3164674-x64.exe /Action=Patch /IACCEPTROPENLICENSETERMS /MRCACHEDIRECTORY=<path to CU1 CAB files>`
 
-Pour obtenir les programmes d’installation les plus récentes, consultez [installer les composants d’apprentissage ordinateur sans accès à internet](r/installing-ml-components-without-internet-access.md).
+Pour obtenir les programmes d’installation les plus récentes, consultez [installer les composants d’apprentissage ordinateur sans accès à internet](install/sql-ml-component-install-without-internet-access.md).
 
 **S’applique à :** SQL Server 2016 R Services, avec R Server version9.0.0 ou une version antérieure
 
@@ -155,7 +155,7 @@ Il est possible d’appeler les bibliothèques qui sont installés pour SQL Serv
 
 Par exemple, même si vous utilisez l’édition Enterprise de SQL Server, R s’exécute en mode de thread unique lorsque vous exécutez votre code R à l’aide des outils externes. Pour obtenir les avantages de performances dans SQL Server, établir une connexion SQL Server et utiliser [sp_execute_external_script](../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) pour appeler le runtime de script externe.
 
-En règle générale, évitez d’appeler les bibliothèques qui sont utilisées par SQL Server à partir d’outils externes d’apprentissage automatique. Si vous avez besoin pour le débogage R ou code Python, il est généralement plus facile de le faire en dehors de SQL Server. Pour obtenir les mêmes bibliothèques qui se trouvent dans SQL Server, vous pouvez installer le Client Microsoft R ou [Machine Learning Server](r/create-a-standalone-r-server.md).
+En règle générale, évitez d’appeler les bibliothèques qui sont utilisées par SQL Server à partir d’outils externes d’apprentissage automatique. Si vous avez besoin pour le débogage R ou code Python, il est généralement plus facile de le faire en dehors de SQL Server. Pour obtenir les mêmes bibliothèques qui se trouvent dans SQL Server, vous pouvez installer le Client Microsoft R, [Machine Learning Server (autonome) de SQL Server 2017](install/sql-machine-learning-standalone-windows-install.md), ou [(autonome) du serveur SQL Server 2016 R](install/sql-r-standalone-windows-install.md).
 
 ### <a name="sql-server-data-tools-does-not-support-permissions-required-by-external-scripts"></a>Outils de données SQL Server ne prend pas en charge les autorisations requises par les scripts externes
 
@@ -264,7 +264,7 @@ Si vous utilisez une commande R pour effacer votre espace de travail d’objets 
 
 Pour résoudre ce problème, évitez d’effacement manque de discernement dans des variables et autres objets en cours d’exécution R [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Bien qu’il soit courant d’effacement de l’espace de travail lorsque vous travaillez dans la console R, il peut avoir des conséquences inattendues.
 
-* Pour supprimer des variables spécifiques, utilisent le R `remove` fonction : par exemple,`remove('name1', 'name2', ...)`
+* Pour supprimer des variables spécifiques, utilisent le R `remove` fonction : par exemple, `remove('name1', 'name2', ...)`
 * Si plusieurs variables sont à supprimer, enregistrez les noms des variables temporaires dans une liste et effectuez un nettoyage périodique.
 
 ### <a name="restrictions-on-data-that-can-be-provided-as-input-to-an-r-script"></a>Restrictions sur les données qui peuvent être fournies comme entrée à un script R
@@ -305,7 +305,7 @@ Lorsque vous envoyez des données de type chaîne vers R, convertissez-les en un
 
 Cette limitation s’applique aux données passées entre SQL Server et Python également. Caractères multioctets doivent être passés en tant que UTF-8 et stockées au format Unicode.
 
-### <a name="only-one-value-of-type-raw-can-be-returned-from-spexecuteexternalscript"></a>Une seule valeur de type `raw` peuvent être retournées à partir de`sp_execute_external_script`
+### <a name="only-one-value-of-type-raw-can-be-returned-from-spexecuteexternalscript"></a>Une seule valeur de type `raw` peuvent être retournées à partir de `sp_execute_external_script`
 
 Lorsqu’un type de données binaires (R **brutes** type de données) est retournée à partir de R, la valeur doit être envoyée dans la trame de données de sortie.
 

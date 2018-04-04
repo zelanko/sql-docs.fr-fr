@@ -1,15 +1,15 @@
 ---
-title: "Déployer des Solutions de modèle avec l’utilitaire de déploiement | Documents Microsoft"
-ms.custom: 
-ms.date: 03/14/2017
+title: Déployer des Solutions de modèle avec l’utilitaire de déploiement | Documents Microsoft
+ms.custom: ''
+ms.date: 03/27/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - deploying [Analysis Services], command prompt
@@ -17,21 +17,25 @@ helpviewer_keywords:
 - Microsoft.AnalysisServices.Deployment utility
 - Analysis Services deployments, command prompt
 ms.assetid: 584f78ac-5f18-41e0-b292-d1949ec05196
-caps.latest.revision: 
+caps.latest.revision: ''
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 1e094ee032e236d39003fe6e2f572edfea6241a5
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 38e91da35dc590b3acbe0f49517e3fad891510fc
+ms.sourcegitcommit: d6881107b51e1afe09c2d8b88b98d075589377de
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="deploy-model-solutions-with-the-deployment-utility"></a>Déployer des solutions de modèle avec l'utilitaire de déploiement
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-L'utilitaire **Microsoft.AnalysisServices.Deployment** permet de démarrer le moteur de déploiement de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] à partir de l'invite de commandes. Comme un fichier d'entrée, l'utilitaire emploie les fichiers de sorties XML générés par la construction d'un projet [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Les fichiers d'entrées sont facilement modifiables pour personnaliser le déploiement d'un projet [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Le script de déploiement généré peut alors être immédiatement exécuté ou enregistré en vue d'un déploiement ultérieur.  
+[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
+
+  L'utilitaire **Microsoft.AnalysisServices.Deployment** permet de démarrer le moteur de déploiement de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] à partir de l'invite de commandes. Comme un fichier d'entrée, l'utilitaire emploie les fichiers de sorties XML générés par la construction d'un projet [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Les fichiers d'entrées sont facilement modifiables pour personnaliser le déploiement d'un projet [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Le script de déploiement généré peut alors être immédiatement exécuté ou enregistré en vue d'un déploiement ultérieur.  
   
+> [!NOTE]
+> Le [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Assistant/utilitaire de déploiement est installé avec [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md) (SSMS). Veillez à l’aide de la version la plus récente. Par défaut, la dernière version de l’Assistant de déploiement est installée vers C:\Program Files (x86) \Microsoft SQL Server\140\Tools\Binn\ManagementStudio. 
+
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
@@ -70,7 +74,7 @@ Microsoft.AnalysisServices.Deployment [ASdatabasefile]
 ## <a name="remarks"></a>Notes  
  L'utilitaire **Microsoft.AnalysisServices.Deployment** prend un ensemble de fichiers qui fournit les définitions d'objets, les cibles de déploiement, les options de déploiement et les paramètres de configuration et tente de déployer les définitions d'objets dans les cibles de déploiement spécifiées, en utilisant les options de déploiement et les paramètres de configuration spécifiés. Cet utilitaire peut fournir une interface utilisateur lorsqu'il est invoqué dans un fichier de réponse ou en mode de sortie. Pour plus d’informations sur l’utilisation de l’interface utilisateur fournie pour cet utilitaire pour créer des fichiers de réponse, consultez [Déployer des solutions de modèles à l’aide de l’Assistant Déploiement](../../analysis-services/multidimensional-models/deploy-model-solutions-using-the-deployment-wizard.md).  
   
- L'utilitaire se trouve dans le dossier \Program files (x86)\Microsoft SQL Server\110\Binn\ManagementStudio.  
+ L’utilitaire se trouve dans le dossier de \Microsoft SQL Server\140\Binn\ManagementStudio \Program files (x86).  
   
 ##  <a name="Modes"></a> Modes  
  L'utilitaire peut être employé dans les modes indiqués dans le tableau suivant.  

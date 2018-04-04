@@ -1,34 +1,34 @@
 ---
-title: DBCC SHRINKLOG (Azure SQL Data Warehouse) | Microsoft Docs
-ms.custom: 
-ms.date: 07/17/2017
+title: DBCC SHRINKLOG (Parallel Data Warehouse) | Microsoft Docs
+ms.custom: ''
+ms.date: 03/16/2018
 ms.prod: sql-non-specified
 ms.prod_service: sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|database-console-commands
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
-caps.latest.revision: 
+caps.latest.revision: ''
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: d06917a784e507ab5568e28b4d34273f5fe71063
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: fc02884ed88c056eb2a7fedb57f7de701377ee37
+ms.sourcegitcommit: 3ed9be04cc7fb9ab1a9ec230c298ad2932acc71b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 03/17/2018
 ---
-# <a name="dbcc-shrinklog-azure-sql-data-warehouse"></a>DBCC SHRINKLOG (Azure SQL Data Warehouse)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+# <a name="dbcc-shrinklog-parallel-data-warehouse"></a>DBCC SHRINKLOG (Parallel Data Warehouse)
+[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
 
-Réduit la taille du journal des transactions *sur l’appliance* pour la base de données [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] ou [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] actuelle. Les données sont défragmentées afin de réduire le journal des transactions. Avec le temps, le journal des transactions de la base de données peut être fragmenté et inefficace. Utilisez DBCC SHRINKLOG pour réduire la fragmentation et la taille du journal.
+Réduit la taille du journal des transactions *sur l’appliance* pour la base de données [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] actuelle. Les données sont défragmentées afin de réduire le journal des transactions. Avec le temps, le journal des transactions de la base de données peut être fragmenté et inefficace. Utilisez DBCC SHRINKLOG pour réduire la fragmentation et la taille du journal.
   
 ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône Lien de rubrique") [Conventions de la syntaxe Transact-SQL &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -56,7 +56,7 @@ Nécessite l’autorisation ALTER SERVER STATE.
 ## <a name="general-remarks"></a>Remarques d'ordre général  
 DBCC SHRINKLOG ne modifie pas la taille de journal stockée dans les métadonnées de la base de données. Les métadonnées continuent de contenir le paramètre LOG_SIZE qui a été spécifié dans l’instruction CREATE DATABASE ou ALTER DATABASE.
   
-## <a name="examples-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemples : [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] et [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples"></a>Exemples 
 ### <a name="a-shrink-the-transaction-log-to-the-original-size-specified-by-create-database"></a>A. Réduire le journal des transactions à la taille d’origine spécifiée par CREATE DATABASE.  
 Supposons que le journal des transactions pour la base de données Addresses a été défini sur 100 Mo lors de la création de la base de données Addresses. Autrement dit, l’instruction CREATE DATABASE pour Addresses indiquait LOG_SIZE = 100 Mo. Supposons maintenant que le journal a atteint une taille de 150 Mo que vous voulez ramener à 100 Mo.
   

@@ -1,17 +1,17 @@
----
-title: "Désinstaller une instance existante de SQL Server (programme d’installation) | Microsoft Docs"
-ms.custom: 
+﻿---
+title: Désinstaller une instance existante de SQL Server (programme d’installation) | Microsoft Docs
+ms.custom: ''
 ms.date: 01/27/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: install
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - setup-install
 - setup-install
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - removing instances of SQL Server
@@ -20,7 +20,7 @@ helpviewer_keywords:
 - instances of SQL Server, uninstalling
 - uninstalling SQL Server
 ms.assetid: 3c64b29d-61d7-4b86-961c-0de62261c6a1
-caps.latest.revision: 
+caps.latest.revision: ''
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard

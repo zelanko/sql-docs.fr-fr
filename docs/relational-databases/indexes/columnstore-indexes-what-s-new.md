@@ -1,41 +1,39 @@
 ---
-title: "Index columnStore - Nouveautés | Microsoft Docs"
-ms.custom: 
-ms.date: 12/1/2017
+title: Index columnStore - Nouveautés | Microsoft Docs
+ms.custom: ''
+ms.date: 03/20/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: indexes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
-ms.assetid: 1fe5ea05-5b19-45a4-9b7a-8ae5ca367897
-caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 74b0f562bc50496df5fdbf88edac546e503d8718
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: f1a9ab49828410519b1aa5a36eb0804d4d7b50a5
+ms.sourcegitcommit: ccb05cb5a4cccaf7ffa9e85a4684fa583bab914e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="columnstore-indexes---what39s-new"></a>Index columnstore - Nouveautés
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  Synthèse des fonctionnalités columnstore disponibles pour chaque version de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et pour les dernières versions d’[!INCLUDE[ssSDS](../../includes/sssds-md.md)] Édition Premium, d’[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] et de [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
+  Récapitulatif des fonctionnalités columnstore disponibles pour chaque version de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et pour les dernières versions de [!INCLUDE[ssSDS](../../includes/sssds-md.md)], [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] et [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
 
  > [!NOTE]
- > Pour [!INCLUDE[ssSDS](../../includes/sssds-md.md)], les index columnstore sont uniquement disponibles dans l’Édition Premium.
+ > Pour [!INCLUDE[ssSDS](../../includes/sssds-md.md)], les index columnstore sont disponibles dans SQL Database niveau Premium et Standard (S3 et versions ultérieures). Pour SQL Server (2016 SP1 et versions ultérieures), les index columnstore sont disponibles dans toutes les éditions. Pour SQL Server (2016 et versions antérieures), les index columnstore sont uniquement disponibles dans l’édition Entreprise.
  
 ## <a name="feature-summary-for-product-releases"></a>Synthèse des fonctionnalités pour les versions du produit  
  Ce tableau récapitule les principales fonctionnalités des index columnstore et des produits dans lesquels ils sont disponibles.  
 
-|Fonctionnalité d’index columnstore|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]|[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]|[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] Édition Premium|[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]|  
+|Fonctionnalité d’index columnstore|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]|[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]|[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]|[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]|  
 |-------------------------------|---------------------------|---------------------------|---------------------------|--------------------------------------------|-------------------------|---|  
 |Exécution par lot de requêtes multithread|oui|oui|oui|oui|oui|oui| 
 |Exécution par lot de requêtes monothread|||oui|oui|oui|oui|  
@@ -64,7 +62,7 @@ ms.lasthandoff: 02/12/2018
 - [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] prend en charge les colonnes calculées non persistantes dans les index columnstore cluster. Les colonnes persistantes ne sont pas prises en charge dans les index columnstore cluster. Vous ne pouvez pas créer d’index non cluster sur un index columnstore qui a une colonne calculée. 
 
 ## [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]  
- [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ajoute des améliorations clés pour améliorer les performances et la flexibilité des index columnstore. Ces améliorations touchent les scénarios d’entreposage de données et permettent l’analytique opérationnelle en temps réel.  
+ [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ajoute des améliorations clés pour optimiser les performances et la flexibilité des index columnstore. Ces améliorations touchent les scénarios d’entreposage de données et permettent l’analytique opérationnelle en temps réel.  
   
 ### <a name="functional"></a>Fonctionnel  
   

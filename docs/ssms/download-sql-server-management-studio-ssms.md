@@ -1,41 +1,41 @@
 ---
-title: "Télécharger SQL Server Management Studio (SSMS) | Microsoft Docs"
-ms.custom: 
-ms.date: 02/21/2018
+title: Télécharger SQL Server Management Studio (SSMS) | Microsoft Docs
+ms.custom: ''
+ms.date: 03/20/2018
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - tools-ssms
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 keywords:
-- "installer ssms, télécharger ssms, dernière version de ssms"
+- installer ssms, télécharger ssms, dernière version de ssms
 - SQL Server Management Studio
 - ssms.exe
 - sql man studio
 - sql management studio
 - installation de sql management studio
-- "télécharger sql management studio"
+- télécharger sql management studio
 - ms sql management studio
 - installer sql management studio
 - ssms download
 - sql server ssms
 - ssms express
 ms.assetid: adafeeef-4255-4924-8042-02f503d599ca
-caps.latest.revision: 
+caps.latest.revision: ''
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: de6d0b4d679dab1f008ef53afef4a173311ea20e
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: 7b64f3d78ceafd5e1eac62e1e3dd1155827e8c61
+ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 03/21/2018
 ---
 # <a name="download-sql-server-management-studio-ssms"></a>Télécharger SQL Server Management Studio (SSMS)
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -47,9 +47,15 @@ Utilisez SQL Server Management Studio (SSMS) pour interroger, concevoir et gére
 
 SSMS 17.x est la dernière génération de *SQL Server Management Studio* et fournit la prise en charge de SQL Server 2017.
 
-**[![télécharger](../ssdt/media/download.png) Télécharger SQL Server Management Studio 17.5](https://go.microsoft.com/fwlink/?linkid=867670)**
+**[![télécharger](../ssdt/media/download.png) Télécharger SQL Server Management Studio 17.6](https://go.microsoft.com/fwlink/?linkid=870039)**
 
-**[![télécharger](../ssdt/media/download.png) Télécharger le package de mise à niveau de SQL Server Management Studio 17.5 (mises à niveau 17.x à 17.5)](https://go.microsoft.com/fwlink/?linkid=867672)**
+**[![télécharger](../ssdt/media/download.png) Télécharger le package de mise à niveau de SQL Server Management Studio 17.6 (mises à niveau 17.x à 17.6)](https://go.microsoft.com/fwlink/?linkid=870041)**
+
+**Informations sur la version**
+
+Numéro de version : 17.6<br>
+Numéro de build : 14.0.17230.0<br>
+Date de sortie : 20 mars 2018
 
 L’installation de SSMS 17.x ne met pas à niveau ni ne remplace les versions 16.x ou antérieures de SSMS. SSMS 17.x s’installe côte à côte avec les versions précédentes pour que vous puissiez utiliser les deux versions.
 Si un ordinateur contient des installations côte à côte de SSMS, vérifiez que vous démarrez la version adaptée à vos besoins spécifiques. La version la plus récente est étiquetée *Microsoft SQL Server Management Studio 17* et a une nouvelle icône : 
@@ -65,46 +71,49 @@ Si un ordinateur contient des installations côte à côte de SSMS, vérifiez qu
 
 Cette version de SSMS peut être installée dans les langues suivantes :
 
-SQL Server Management Studio 17.5 :<br>
-[Chinois (République populaire de Chine)](https://go.microsoft.com/fwlink/?linkid=867670&clcid=0x804) | [Chinois (Taïwan)](https://go.microsoft.com/fwlink/?linkid=867670&clcid=0x404) | [Anglais (États-Unis)](https://go.microsoft.com/fwlink/?linkid=867670&clcid=0x409) | [Français](https://go.microsoft.com/fwlink/?linkid=867670&clcid=0x40c) | [Allemand | ](https://go.microsoft.com/fwlink/?linkid=867670&clcid=0x407)[Italien](https://go.microsoft.com/fwlink/?linkid=867670&clcid=0x410) | [Japonais](https://go.microsoft.com/fwlink/?linkid=867670&clcid=0x411) | [Coréen](https://go.microsoft.com/fwlink/?linkid=867670&clcid=0x412) | [Portugais (Brésil)](https://go.microsoft.com/fwlink/?linkid=867670&clcid=0x416) | [Russe](https://go.microsoft.com/fwlink/?linkid=867670&clcid=0x419) | [Espagnol](https://go.microsoft.com/fwlink/?linkid=867670&clcid=0x40a)
+SQL Server Management Studio 17.6 :<br>
+[Chinois (République populaire de Chine)](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x804) | [Chinois (Taïwan)](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x404) | [Anglais (États-Unis)](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x409) | [Français](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x40c) | [Allemand | ](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x407)[Italien](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x410) | [Japonais](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x411) | [Coréen](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x412) | [Portugais (Brésil)](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x416) | [Russe](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x419) | [Espagnol](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x40a)
 
-Package de mise à niveau de SQL Server Management Studio 17.5 (mises à niveau 17.x à 17.5) :<br>
-[Chinois (République populaire de Chine)](https://go.microsoft.com/fwlink/?linkid=867672&clcid=0x804) | [Chinois (Taïwan)](https://go.microsoft.com/fwlink/?linkid=867672&clcid=0x404) | [Anglais (États-Unis)](https://go.microsoft.com/fwlink/?linkid=867672&clcid=0x409) | [Français](https://go.microsoft.com/fwlink/?linkid=867672&clcid=0x40c) | [Allemand | ](https://go.microsoft.com/fwlink/?linkid=867672&clcid=0x407)[Italien](https://go.microsoft.com/fwlink/?linkid=867672&clcid=0x410) | [Japonais](https://go.microsoft.com/fwlink/?linkid=867672&clcid=0x411) | [Coréen](https://go.microsoft.com/fwlink/?linkid=867672&clcid=0x412) | [Portugais (Brésil)](https://go.microsoft.com/fwlink/?linkid=867672&clcid=0x416) | [Russe](https://go.microsoft.com/fwlink/?linkid=867672&clcid=0x419) | [Espagnol](https://go.microsoft.com/fwlink/?linkid=867672&clcid=0x40a)
+Package de mise à niveau de SQL Server Management Studio 17.6 (mises à niveau 17.x à 17.6) :<br>
+[Chinois (République populaire de Chine)](https://go.microsoft.com/fwlink/?linkid=870041&clcid=0x804) | [Chinois (Taïwan)](https://go.microsoft.com/fwlink/?linkid=870041&clcid=0x404) | [Anglais (États-Unis)](https://go.microsoft.com/fwlink/?linkid=870041&clcid=0x409) | [Français](https://go.microsoft.com/fwlink/?linkid=870041&clcid=0x40c) | [Allemand | ](https://go.microsoft.com/fwlink/?linkid=870041&clcid=0x407)[Italien](https://go.microsoft.com/fwlink/?linkid=870041&clcid=0x410) | [Japonais](https://go.microsoft.com/fwlink/?linkid=870041&clcid=0x411) | [Coréen](https://go.microsoft.com/fwlink/?linkid=870041&clcid=0x412) | [Portugais (Brésil)](https://go.microsoft.com/fwlink/?linkid=870041&clcid=0x416) | [Russe](https://go.microsoft.com/fwlink/?linkid=870041&clcid=0x419) | [Espagnol](https://go.microsoft.com/fwlink/?linkid=870041&clcid=0x40a)
 
 > [!NOTE]
 > Le module PowerShell de SQL Server est désormais une installation distincte que vous pouvez effectuer par l’intermédiaire de la galerie PowerShell. Pour plus d'informations, consultez la page [Télécharger le module SQL Server PowerShell](download-sql-server-ps-module.md).
 ## <a name="sql-server-management-studio"></a>SQL Server Management Studio
 
-**Informations sur la version**
-
-Numéro de version : 17.5
-
-Numéro de build de cette version : 14.0.17224.0
-
-Date de publication : 15 février 2018
 
 ## <a name="new-in-this-release"></a>Nouveautés de cette version
 
-SSMS 17.5 est la dernière version de SQL Server Management Studio. La génération 17.x de SSMS prend en charge presque tous les composants de SQL Server 2008 à SQL Server 2017. La version 17.x prend également en charge la PaaS SQL Analysis Services.
+SSMS 17.6 est la dernière version de SQL Server Management Studio. La génération 17.x de SSMS prend en charge presque tous les composants de SQL Server 2008 à SQL Server 2017. La version 17.x prend également en charge la PaaS SQL Analysis Services.
 
-Contenu de la version 17.5 :
+Contenu de la version 17.6 :
 
-Découverte et classification des données :
+**SSMS général**
 
-- Ajout d’une nouvelle fonctionnalité Découverte et classification des données SQL pour la découverte, la classification, l’étiquetage et la création de rapport concernant les données sensibles dans vos bases de données. 
-- La découverte et la classification automatiques de vos données les plus sensibles (professionnelles, financières, médicales, PII, etc.) peuvent jouer un rôle essentiel dans la protection des informations de votre organisation.
-- Découvrez plus d’informations sur la [Découverte et classification des données SQL](../relational-databases/security/sql-data-discovery-and-classification.md).
+SQL Database Managed Instance :
 
-Éditeur de requête :
+- Ajout de la prise en charge d’[Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance). Azure SQL Database Managed Instance (en préversion) est une nouvelle version d’Azure SQL Database offrant une compatibilité proche de 100 % avec SQL Server local, une implémentation native de [réseau virtuel (VNet)](https://docs.microsoft.com/azure/virtual-network/virtual-networks-overview) qui traite les problèmes de sécurité courants et un [modèle d’entreprise](https://azure.microsoft.com/pricing/details/sql-database/) propice pour les clients de SQL Server local.
+- Prise en charge de scénarios de gestion courants tels que les suivants :
+   - Créer et modifier des bases de données.
+   - Sauvegarder et restaurer des bases de données.
+   - Importation, exportation, extraction et publication d’applications de la couche Données.
+   - Affichage et modification de propriétés du serveur.
+   - Prise en charge complète de l’Explorateur d’objets.
+   - Écriture d’objets de base de données sous forme de scripts.
+   - Prise en charge des travaux de l’Agent SQL.
+   - Prise en charge des serveurs liés.
+- Vous pouvez en savoir plus sur les instances managées [ici](https://azure.microsoft.com/blog/migrate-your-databases-to-a-fully-managed-service-with-azure-sql-database-managed-instance/).
 
-- Ajout de la prise en charge de l’option SkipRows pour le format de fichier externe de texte délimité dans Azure SQL Data Warehouse. Cette fonctionnalité permet aux utilisateurs d’ignorer un nombre spécifié de lignes pendant le chargement de fichiers de texte délimité dans SQL DW. Ajout également de la prise en charge d’Intellisense/SMO correspondante pour le mot clé FIRST_ROW. 
 
-Plan d’exécution de requêtes :
+Explorateur d'objets :
+- Paramètres ajoutés pour ne pas imposer des crochets autour des noms lors d’un glisser-déplacer à partir de l’Explorateur d’objets vers une fenêtre de requête. (Suggestions des utilisateurs [32911933](https://feedback.azure.com/forums/908035-sql-server/suggestions/32911933) et [32671051](https://feedback.azure.com/forums/908035-sql-server/suggestions/32671051).)
 
-- Activation de l’affichage du bouton de plan estimé pour SQL Data Warehouse
-- Ajout d’un nouvel attribut de plan d’exécution de requêtes *EstimateRowsWithoutRowGoal* et ajout de nouveaux attributs de plan d’exécution de requêtes pour *QueryTimeStats* : *UdfCpuTime* et *UdfElapsedTime*. Pour plus d’informations, consultez [Informations sur l’objectif de lignes de l’optimiseur dans le plan d’exécution de requêtes ajouté dans SQL Server 2017 CU3](http://support.microsoft.com/help/4051361).
+Classification des données :
+- Améliorations générales et résolutions de bogues.
 
+**Integration Services (IS)**
 
+- Ajout de la prise en charge du déploiement de packages sur une instance [SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance).
 
 ## <a name="supported-sql-offerings"></a>Produits SQL pris en charge
 
@@ -141,11 +150,9 @@ Cette version de SSMS prend en charge les plateformes 64 bits suivantes quand 
 
 ## <a name="release-notes"></a>Notes de publication
 
-Voici les problèmes et limitations de cette version 17.5 :
+Voici les problèmes et limitations de cette version 17.6 :
 
-Classification des données :
-- La suppression d’une classification, puis l’ajout manuel d’une nouvelle classification pour la même colonne entraînait l’attribution de l’ancien type d’informations et de l’ancienne étiquette de sensibilité à la colonne dans la vue principale.<br>
-*Solution de contournement* : Attribuez le nouveau type d’informations et la nouvelle étiquette de sensibilité après l’ajout de la classification à la vue principale et avant l’enregistrement.  
+Il n’existe actuellement aucun problème connu.
 
 
 ## <a name="previous-releases"></a>Versions antérieures

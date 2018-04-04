@@ -1,30 +1,30 @@
 ---
-title: "Leçon 1 : Créer une stratégie d’accès stockée et une signature d’accès partagé | Microsoft Docs"
-ms.custom: 
+title: 'Leçon 1 : Créer une stratégie d’accès stockée et une signature d’accès partagé | Microsoft Docs'
+ms.custom: ''
 ms.date: 06/02/2016
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: tutorial
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-backup-restore
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - SQL Server 2016
 ms.assetid: 41674d9d-8132-4bff-be4d-85a861419f3d
-caps.latest.revision: 
+caps.latest.revision: 22
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: fe7163f6ff8d2f79a4eb3297c831e82d59b70c48
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 86a4c906a808fcb9cf311f689ed10cd437f27123
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="lesson-1-create-stored-access-policy-and-shared-access-signature"></a>Leçon 1 : Créer une stratégie d’accès stockée et une signature d’accès partagé
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -65,7 +65,7 @@ Pour créer une stratégie sur le conteneur et générer une clé de signature d
 2.  Modifiez, puis exécutez le script suivant.  
   
     ```  
-    \<#   
+    <#   
     This script uses the Azure Resource model and creates a new ARM storage account.  
     Modify this script to use an existing ARM or classic storage account   
     using the instructions in comments within this script  
@@ -78,7 +78,7 @@ Pour créer une stratégie sur le conteneur et générer une clé de signature d
     $containerName= $prefixName + 'container'  # the storage container name to which you will attach the SAS policy with its SAS token  
     $policyName = $prefixName + 'policy' # the name of the SAS policy  
   
-    \<#   
+    <#   
     Using Azure Resource Manager deployment model  
     Comment out this entire section and use the classic storage account name to use an existing classic storage account  
     #>  
@@ -104,7 +104,7 @@ Pour créer une stratégie sur le conteneur et générer une clé de signature d
     # Create a new storage account context using an ARM storage account  
     $storageContext = New-AzureStorageContext -StorageAccountName $storageAccountName -StorageAccountKey $accountKeys[0].Value 
   
-    \<#  
+    <#  
     Using the Classic deployment model  
     Use the following four lines to use an existing classic storage account  
     #>  

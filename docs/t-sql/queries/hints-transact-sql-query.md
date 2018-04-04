@@ -1,16 +1,16 @@
 ---
-title: "Indicateurs de requête (Transact-SQL) | Microsoft Docs"
-ms.custom: 
-ms.date: 08/09/2017
+title: Indicateurs de requête (Transact-SQL) | Microsoft Docs
+ms.custom: ''
+ms.date: 03/11/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|queries
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - Query_Hint_TSQL
@@ -57,16 +57,16 @@ helpviewer_keywords:
 - EXTERNALPUSHDOWN query hint
 - USE HINT query hint
 ms.assetid: 66fb1520-dcdf-4aab-9ff1-7de8f79e5b2d
-caps.latest.revision: 
+caps.latest.revision: ''
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 0a3c74aa7b1da86c6d0ac54025d337700019465d
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: f13c32bbc1852c06a88df7a9ab24443be9d1c4d5
+ms.sourcegitcommit: 6b1618aa3b24bf6759b00a820e09c52c4996ca10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="hints-transact-sql---query"></a>Indicateurs (Transact-SQL) - Requête
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -74,7 +74,7 @@ ms.lasthandoff: 01/25/2018
   Les indicateurs de requête spécifient que les indicateurs affichés doivent être utilisés dans l'ensemble de la requête. Ils s’appliquent à tous les opérateurs de l’instruction. Si une clause UNION se trouve dans la requête principale, seule la dernière requête impliquant une opération UNION peut avoir la clause OPTION. Les indicateurs de requête sont spécifiés dans la [clause OPTION](../../t-sql/queries/option-clause-transact-sql.md). Si un ou plusieurs indicateurs de requête empêchent l'optimiseur de requête de générer un plan valide, l'erreur 8622 est déclenchée.  
   
 > [!CAUTION]  
->  Étant donné que l'optimiseur de requête [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sélectionne généralement le meilleur plan d'exécution pour une requête, nous recommandons de ne recourir aux indicateurs qu'en dernier ressort, et à condition d'être un développeur ou un administrateur de base de données expérimenté.  
+> Étant donné que l'optimiseur de requête [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sélectionne généralement le meilleur plan d'exécution pour une requête, nous recommandons de ne recourir aux indicateurs qu'en dernier ressort, et à condition d'être un développeur ou un administrateur de base de données expérimenté.  
   
  **S’applique à :**  
   
@@ -171,7 +171,7 @@ ms.lasthandoff: 01/25/2018
  Spécifie que l'ordre de jointure spécifié dans la syntaxe de la requête est conservé au cours de l'optimisation de la requête. L'utilisation de FORCE ORDER n'a aucun effet sur une éventuelle inversion des rôles de la part de l'optimiseur de requête.  
   
 > [!NOTE]  
->  Dans une instruction MERGE, il convient d'accéder à la table source avant la table cible comme ordre de jointure par défaut, à moins que la clause WHEN SOURCE NOT MATCHED ne soit spécifiée. La spécification de FORCE ORDER préserve ce comportement par défaut.  
+> Dans une instruction MERGE, il convient d'accéder à la table source avant la table cible comme ordre de jointure par défaut, à moins que la clause WHEN SOURCE NOT MATCHED ne soit spécifiée. La spécification de FORCE ORDER préserve ce comportement par défaut.  
   
  { FORCE | DISABLE } EXTERNALPUSHDOWN  
  Force ou désactive la poussée vers le bas (pushdown) du calcul des expressions éligibles dans Hadoop. S’applique uniquement aux requêtes avec PolyBase. Ne s’applique pas au stockage Azure.  
@@ -202,31 +202,31 @@ ms.lasthandoff: 01/25/2018
   
  Remplace l’option de configuration **max degree of parallelism** de **sp_configure** et Resource Governor pour la requête qui spécifie cette option. L'indicateur de requête MAXDOP peut dépasser la valeur configurée avec sp_configure. Si MAXDOP dépasse la valeur configurée avec Resource Governor, le [!INCLUDE[ssDE](../../includes/ssde-md.md)] utilise la valeur MAXDOP de Resource Governor, décrite dans [ALTER WORKLOAD GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/alter-workload-group-transact-sql.md). Toutes les règles sémantiques utilisées avec l’option de configuration **max degree of parallelism** sont applicables quand vous utilisez l’indicateur de requête MAXDOP. Pour plus d’informations, consultez [Configurer l’option de configuration du serveur max degree of parallelism](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).  
   
-> [!WARNING]  
-> Si MAXDOP est défini avec la valeur zéro, le serveur choisit le degré maximal de parallélisme.  
+> [!WARNING]     
+> Si MAXDOP a la valeur zéro, le serveur choisit le degré maximal de parallélisme.  
   
- MAXRECURSION *number*  
- Spécifie le nombre maximal de récursivités autorisé pour cette requête. *number* est un entier non négatif compris entre 0 et 32767. Lorsque 0 est spécifié, aucune limite n'est appliquée. Si cette option n'est pas spécifiée, la limite par défaut du serveur est 100.  
+ MAXRECURSION *number*     
+ Spécifie le nombre maximal de récursivités autorisé pour cette requête. *number* est un entier non négatif compris entre 0 et 32 767. Lorsque 0 est spécifié, aucune limite n'est appliquée. Si cette option n'est pas spécifiée, la limite par défaut du serveur est 100.  
   
  Lorsque la limite par défaut ou spécifiée de MAXRECURSION est atteinte au cours de l'exécution d'une requête, cette requête se termine et une erreur est retournée.  
   
  À cause de cette erreur, tous les effets de l'instruction sont annulés. S'il s'agit d'une instruction SELECT, les résultats retournés sont partiels ou aucun résultat n'est retourné. Il se peut que parmi les résultats partiels éventuellement retournés ne figurent pas toutes les lignes des niveaux de récursivité supérieurs au niveau de récursivité maximal spécifié.  
   
- Pour plus d’informations, consultez [WITH common_table_expression &#40;Transact-SQL&#41;](../../t-sql/queries/with-common-table-expression-transact-sql.md).  
+ Pour plus d’informations, consultez [WITH common_table_expression &#40;Transact-SQL&#41;](../../t-sql/queries/with-common-table-expression-transact-sql.md).     
   
- NO_PERFORMANCE_SPOOL  
+ NO_PERFORMANCE_SPOOL    
  **S'applique à**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Empêche l’ajout d’un opérateur de spool aux plans de requête (à l’exception des plans où un spool est nécessaire pour garantir la validité de la sémantique de mise à jour). Dans certains scénarios, l’opérateur de spool peut diminuer les performances. Par exemple, du fait que le spool utilise tempdb, une contention de tempdb peut se produire quand un grand nombre de requêtes simultanées sont exécutées avec les opérations de spool.  
   
- OPTIMIZE FOR ( *@variable_name* { UNKNOWN | = *literal_constant }* [ **,** ...*n* ] )  
+ OPTIMIZE FOR ( *@variable_name* { UNKNOWN | = *literal_constant }* [ **,** ...*n* ] )     
  Indique à l'optimiseur de requête d'attribuer à une variable locale une valeur déterminée lors de la compilation et de l'optimisation de la requête. Cette valeur n'est utilisée que pendant l'optimisation de la requête, et non pas lors de son exécution.  
   
  *@variable_name*  
  Nom d'une variable locale utilisée dans une requête, à laquelle une valeur peut être attribuée pour être utilisée avec l'indicateur de requête OPTIMIZE FOR.  
   
  *UNKNOWN*  
- Spécifie que l'optimiseur de requête utilise des données statistiques à la place de la valeur initiale pour déterminer la valeur d'une variable locale pendant l'optimisation de requête.  
+ Spécifie que l’optimiseur de requête utilise des données statistiques à la place de la valeur initiale pour déterminer la valeur d’une variable locale pendant l’optimisation de requête.  
   
  *literal_constant*  
  Valeur de constante littérale à assigner à  *@variable_name* pour être utilisée avec l’indicateur de requête OPTIMIZE FOR. *literal_constant* est utilisé uniquement pendant l’optimisation de la requête, et non comme valeur de *@variable_name* lors de l’exécution de la requête. *literal_constant* peut être de n’importe quel type de données système [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui peut être exprimé sous forme de constante littérale. Le type de données de *literal_constant* doit être implicitement convertible dans le type de données que *@variable_name* référence dans la requête.  
@@ -238,13 +238,14 @@ ms.lasthandoff: 01/25/2018
   
  Si OPTIMIZE FOR @variable_name = *literal_constant* et OPTIMIZE FOR UNKNOWN sont utilisés dans le même indicateur de requête, l’optimiseur de requête utilise la constante *literal_constant* indiquée pour une valeur spécifique et UNKNOWN pour les autres valeurs variables. Les valeurs ne sont utilisées que pendant l'optimisation de la requête, et non pas lors de son exécution.  
   
- PARAMETERIZATION { SIMPLE | FORCED }  
+ PARAMETERIZATION { SIMPLE | FORCED }     
  Spécifie les règles de paramétrage que l'optimiseur de requête [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] applique à la requête lorsqu'elle est compilée.  
   
 > [!IMPORTANT]  
-> L'indicateur de requête PARAMETERIZATION ne peut être spécifié qu'à l'intérieur d'un repère de plan. Il ne peut pas être spécifié directement dans une requête.  
+> L’indicateur de requête PARAMETERIZATION peut uniquement être spécifié à l’intérieur d’un repère de plan pour remplacer le paramètre actuel de l’option SET de base de données PARAMETERIZATION. Il ne peut pas être spécifié directement dans une requête.    
+> Pour plus d’informations, consultez [Spécifier le comportement du paramétrage de requêtes grâce aux repères de plan](../../relational-databases/performance/specify-query-parameterization-behavior-by-using-plan-guides.md).
   
- SIMPLE indique à l'optimiseur de requête de tenter le processus de paramétrage simple. FORCED indique à l'optimiseur de tenter le processus de paramétrage forcé. L'indicateur de requête PARAMETERIZATION permet de remplacer le paramétrage actuel de l'option PARAMETERIZATION database SET à l'intérieur d'un repère de plan. Pour plus d’informations, consultez [Spécifier le comportement du paramétrage de requêtes grâce aux repères de plan](../../relational-databases/performance/specify-query-parameterization-behavior-by-using-plan-guides.md).  
+ SIMPLE indique à l'optimiseur de requête de tenter le processus de paramétrage simple. FORCED indique à l’optimiseur de requête de tenter le processus de paramétrage forcé. Pour plus d’informations, consultez [Paramétrage forcé dans le Guide d’architecture de traitement des requêtes](../../relational-databases/query-processing-architecture-guide.md#ForcedParam) et [Paramétrage simple dans le Guide d’architecture de traitement des requêtes](../../relational-databases/query-processing-architecture-guide.md#SimpleParam).  
   
  RECOMPILE  
  Indique au [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] d'ignorer le plan généré pour la requête à l'issue de son exécution, forçant ainsi l'optimiseur de requête à recompiler un plan de requête lors de la prochaine exécution de cette même requête. Si RECOMPILE n’est pas spécifié, le [!INCLUDE[ssDE](../../includes/ssde-md.md)] met en cache les plans de requête et les réutilise. Lors de la compilation des plans de requête, l'indicateur de requête RECOMPILE utilise les valeurs actuelles des variables locales de la requête, qui sont transmises aux paramètres si la requête se trouve à l'intérieur d'une procédure stockée.  
@@ -256,12 +257,12 @@ ms.lasthandoff: 01/25/2018
   
  Si un tel plan n'est pas possible, l'optimiseur de requête retourne une erreur au lieu de reporter la détection de l'erreur au moment de l'exécution de la requête. Les lignes peuvent contenir des colonnes de longueur variable. Le [!INCLUDE[ssDE](../../includes/ssde-md.md)] permet de définir des lignes d’une taille maximale potentielle que le [!INCLUDE[ssDE](../../includes/ssde-md.md)] n’est pas en mesure de traiter. En règle générale, en dépit de la taille maximale potentielle, une application stocke des lignes dont la taille réelle est comprise dans les limites gérées par le [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Si le [!INCLUDE[ssDE](../../includes/ssde-md.md)] trouve une ligne trop longue, il retourne une erreur d'exécution.  
  
-<a name="use_hint"></a> USE HINT ( **'***hint_name***'** )  
- **S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (à partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]) et [!INCLUDE[ssSDS](../../includes/sssds-md.md)].
+<a name="use_hint"></a> USE HINT ( **'***hint_name***'** )    
+ **S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (à partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1) et [!INCLUDE[ssSDS](../../includes/sssds-md.md)].
  
- Fournit un ou plusieurs indicateurs supplémentaires au processeur de requêtes. Les noms d’indicateur sont indiqués **entre des guillemets simples**. 
+ Fournit un ou plusieurs indicateurs supplémentaires au processeur de requêtes. Les noms d’indicateur sont indiqués **entre des guillemets simples**.   
 
- Les noms d’indicateur suivants sont pris en charge :
+ Les noms d’indicateur suivants sont pris en charge :    
  
 *  'DISABLE_OPTIMIZED_NESTED_LOOP'  
  Indique au processeur de requêtes de ne pas appliquer d’opération de tri (tri par lots) sur les jointures de boucles imbriquées optimisées au moment de la génération d’un plan de requête. Cela équivaut à utiliser [l’indicateur de trace](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 2340.
@@ -285,11 +286,12 @@ ms.lasthandoff: 01/25/2018
 > [!TIP]
 > Les noms d’indicateur respectent la casse.
   
-  Vous pouvez obtenir la liste de tous les noms d’indicateur USE HINT pris en charge en effectuant une requête sur la vue de gestion dynamique [sys.dm_exec_valid_use_hints](../../relational-databases/system-dynamic-management-views/sys-dm-exec-valid-use-hints-transact-sql.md).
+  Vous pouvez obtenir la liste de tous les noms d’indicateur USE HINT pris en charge en effectuant une requête sur la vue de gestion dynamique [sys.dm_exec_valid_use_hints](../../relational-databases/system-dynamic-management-views/sys-dm-exec-valid-use-hints-transact-sql.md).    
+  
 > [!IMPORTANT] 
-> Certains indicateurs USE HINT peuvent être en conflit avec des indicateurs de trace activés au niveau global ou session, ou avec des paramètres de configuration au niveau base de données. Dans ce cas, l’indicateur de niveau requête (USE HINT) est toujours prioritaire. En présence d’un conflit entre l’indicateur USE HINT et un autre indicateur de requête ou un indicateur de trace activé au niveau requête (par exemple, par QUERYTRACEON), SQL Server génère une erreur quand vous tentez d’exécuter la requête. 
+> Certains indicateurs USE HINT peuvent être en conflit avec des indicateurs de trace activés au niveau global ou session, ou avec des paramètres de configuration au niveau base de données. Dans ce cas, l’indicateur de niveau requête (USE HINT) est toujours prioritaire. En présence d’un conflit entre l’indicateur USE HINT et un autre indicateur de requête ou un indicateur de trace activé au niveau requête (par exemple, par QUERYTRACEON), [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] génère une erreur quand vous tentez d’exécuter la requête. 
 
- USE PLAN N**'***xml_plan***'**  
+ USE PLAN N**'***xml_plan***'**     
  Force l’optimiseur de requête à utiliser un plan de requête existant pour une requête spécifiée par **'***xml_plan***'**. USE PLAN ne peut pas être spécifié avec des instructions INSERT, UPDATE, MERGE ou DELETE.  
   
 TABLE HINT **(***exposed_object_name* [ **,** \<table_hint> [ [**,** ]...*n* ] ] **)** Applique l’indicateur de table spécifié à la table ou la vue qui correspond à *exposed_object_name*. Nous vous recommandons d’utiliser un indicateur de table comme indicateur de requête uniquement dans le contexte d’un [repère de plan](../../relational-databases/performance/plan-guides.md).  
@@ -310,7 +312,7 @@ TABLE HINT **(***exposed_object_name* [ **,** \<table_hint> [ [**,** ]...*n* ] ]
 > Le fait de spécifier FORCESEEK avec des paramètres limite davantage le nombre de plans qui peuvent être considérés par l'optimiseur que le fait de spécifier FORCESEEK sans paramètre. Cela peut provoquer une erreur « Impossible de générer le plan » dans davantage de cas. Dans une version ultérieure, il se peut que des modifications internes de l'optimiseur autorisent la prise en considération de davantage de plans.  
   
 ## <a name="remarks"></a>Notes   
- Il n'est pas possible de spécifier des indicateurs de requête dans une instruction INSERT sauf si celle-ci contient une clause SELECT.  
+ Il n’est pas possible de spécifier des indicateurs de requête dans une instruction INSERT sauf si celle-ci contient une clause SELECT.  
   
  Les indicateurs de requête ne peuvent être spécifiés que dans une requête de niveau supérieur et non pas dans des sous-requêtes. Quand un indicateur de table est spécifié comme indicateur de requête, l’indicateur peut être spécifié dans la requête de niveau supérieur ou dans une sous-requête. Toutefois, la valeur spécifiée pour *exposed_object_name* dans la clause TABLE HINT doit correspondre exactement au nom exposé dans la requête ou sous-requête.  
   
@@ -320,15 +322,10 @@ TABLE HINT **(***exposed_object_name* [ **,** \<table_hint> [ [**,** ]...*n* ] ]
  Lorsqu'ils sont spécifiés comme indicateurs de requête, les indicateurs de table INDEX, FORCESCAN et FORCESEEK sont valides pour les objets suivants :  
   
 -   Tables  
-  
 -   Vues  
-  
 -   Vues indexées  
-  
 -   Expressions de table communes (l'indicateur doit être spécifié dans l'instruction SELECT dont le jeu de résultats remplit l'expression de table commune)  
-  
 -   Vues de gestion dynamique  
-  
 -   Sous-requêtes nommées  
   
  Les indicateurs de table INDEX, FORCESCAN et FORCESEEK peuvent être spécifiés en tant qu'indicateurs de requête pour une requête sans indicateurs de table existants, ou être utilisés pour remplacer respectivement un ou plusieurs indicateurs INDEX, FORCESCAN ou FORCESEEK existants dans la requête. Les indicateurs de table autres que INDEX, FORCESCAN et FORCESEEK sont interdits comme indicateurs de requête, à moins que la requête n'ait déjà une clause WITH qui spécifie l'indicateur de table. Dans ce cas, un indicateur correspondant doit également être spécifié comme indicateur de requête en utilisant TABLE HINT dans la clause OPTION pour conserver la sémantique de la requête. Par exemple, si la requête contient l’indicateur de table NOLOCK, la clause OPTION dans le paramètre **@hints** du repère de plan doit également contenir l’indicateur NOLOCK. Reportez-vous à l’exemple K. Quand un indicateur de table autre qu’INDEX, FORCESCAN ou FORCESEEK est spécifié en utilisant TABLE HINT dans la clause OPTION sans indicateur de requête correspondant, ou vice versa, l’erreur 8702 se produit (indiquant que la clause OPTION peut entraîner la modification de la sémantique de la requête) et la requête échoue.  
@@ -338,7 +335,7 @@ TABLE HINT **(***exposed_object_name* [ **,** \<table_hint> [ [**,** ]...*n* ] ]
 ### <a name="a-using-merge-join"></a>A. Utilisation de MERGE JOIN  
  L’exemple suivant spécifie que l’opération JOIN spécifiée dans la requête est effectuée par MERGE JOIN. L'exemple utilise la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
   
-```  
+```sql  
 SELECT *   
 FROM Sales.Customer AS c  
 INNER JOIN Sales.CustomerAddress AS ca ON c.CustomerID = ca.CustomerID  
@@ -350,7 +347,7 @@ GO
 ### <a name="b-using-optimize-for"></a>B. Utilisation de OPTIMIZE FOR  
  L’exemple suivant indique à l’optimiseur de requête d’utiliser la valeur `'Seattle'` pour la variable locale `@city_name`, mais aussi d’utiliser des données statistiques pour déterminer la valeur de la variable locale `@postal_code` lors de l’optimisation de la requête. L'exemple utilise la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
   
-```  
+```sql  
 DECLARE @city_name nvarchar(30);  
 DECLARE @postal_code nvarchar(15);  
 SET @city_name = 'Ascheim';  
@@ -389,7 +386,7 @@ GO
 ### <a name="d-using-merge-union"></a>D. Utilisation de MERGE UNION  
  L’exemple suivant utilise l’indicateur de requête MERGE UNION. L'exemple utilise la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
   
-```  
+```sql  
 SELECT *  
 FROM HumanResources.Employee AS e1  
 UNION  
@@ -402,7 +399,7 @@ GO
 ### <a name="e-using-hash-group-and-fast"></a>E. Utilisation de HASH GROUP et de FAST  
  L’exemple suivant utilise les indicateurs de requête HASH GROUP et FAST. L'exemple utilise la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
   
-```  
+```sql  
 SELECT ProductID, OrderQty, SUM(LineTotal) AS Total  
 FROM Sales.SalesOrderDetail  
 WHERE UnitPrice < $5.00  
@@ -417,7 +414,7 @@ GO
   
 **S'applique à**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
-```  
+```sql  
 SELECT ProductID, OrderQty, SUM(LineTotal) AS Total  
 FROM Sales.SalesOrderDetail  
 WHERE UnitPrice < $5.00  
@@ -430,7 +427,7 @@ GO
 ### <a name="g-using-index"></a>G. Utilisation de INDEX  
  Les exemples suivants utilisent l'indicateur INDEX. Le premier exemple spécifie un index unique. Le deuxième exemple spécifie plusieurs index pour une référence de table individuelle. Dans les deux exemples, étant donné que l'indicateur INDEX est appliqué à une table qui utilise un alias, la clause TABLE HINT doit également spécifier le même alias que le nom d'objet exposé. L'exemple utilise la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
   
-```  
+```sql  
 EXEC sp_create_plan_guide   
     @name = N'Guide1',   
     @stmt = N'SELECT c.LastName, c.FirstName, e.Title  
@@ -458,7 +455,7 @@ GO
 ### <a name="h-using-forceseek"></a>H. Utilisation de FORCESEEK  
  L'exemple suivant utilise l'indicateur de table FORCESEEK. Dans la mesure où l'indicateur INDEX est appliqué à une table qui utilise un nom en deux parties, la clause TABLE HINT doit également spécifier le même nom en deux parties que le nom d'objet exposé. L'exemple utilise la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
   
-```  
+```sql  
 EXEC sp_create_plan_guide   
     @name = N'Guide3',   
     @stmt = N'SELECT c.LastName, c.FirstName, HumanResources.Employee.Title  
@@ -476,7 +473,7 @@ GO
 ### <a name="i-using-multiple-table-hints"></a>I. Utilisation de plusieurs indicateurs de table  
  L'exemple suivant applique l'indicateur INDEX à une table et l'indicateur FORCESEEK à une autre. L'exemple utilise la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
   
-```  
+```sql  
 EXEC sp_create_plan_guide   
     @name = N'Guide4',   
     @stmt = N'SELECT e.ManagerID, c.LastName, c.FirstName, e.Title  
@@ -494,7 +491,7 @@ GO
 ### <a name="j-using-table-hint-to-override-an-existing-table-hint"></a>J. Utilisation de TABLE HINT pour substituer un indicateur de table existant  
  L'exemple suivant montre comment utiliser l'indicateur TABLE HINT sans spécifier d'indicateur pour substituer le comportement de l'indicateur de table INDEX spécifié dans la clause FROM de la requête. L'exemple utilise la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
   
-```  
+```sql  
 EXEC sp_create_plan_guide   
     @name = N'Guide5',   
     @stmt = N'SELECT e.ManagerID, c.LastName, c.FirstName, e.Title  
@@ -511,7 +508,7 @@ GO
 ### <a name="k-specifying-semantics-affecting-table-hints"></a>K. Spécification d'indicateurs de table affectant la sémantique  
  L'exemple suivant contient deux indicateurs de table dans la requête : NOLOCK, qui affecte la sémantique, et INDEX, qui n'affecte pas la sémantique. Pour préserver la sémantique de la requête, l'indicateur NOLOCK est spécifié dans la clause OPTIONS du repère de plan. Outre l'indicateur NOLOCK, les indicateurs INDEX et FORCESEEK sont spécifiés et remplacent l'indicateur INDEX n'affectant pas la sémantique dans la requête lorsque l'instruction est compilée et optimisée. L'exemple utilise la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
   
-```  
+```sql  
 EXEC sp_create_plan_guide   
     @name = N'Guide6',   
     @stmt = N'SELECT c.LastName, c.FirstName, e.Title  
@@ -528,7 +525,7 @@ GO
   
  L'exemple suivant indique une autre méthode pour préserver la sémantique de la requête et permettre à l'optimiseur de choisir un index autre que l'index spécifié dans l'indicateur de table. Pour ce faire, il convient de spécifier l'indicateur NOLOCK dans la clause OPTIONS (car il affecte la sémantique) et le mot clé TABLE HINT avec uniquement une référence de table et aucun indicateur INDEX. L'exemple utilise la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
   
-```  
+```sql  
 EXEC sp_create_plan_guide   
     @name = N'Guide7',   
     @stmt = N'SELECT c.LastName, c.FirstName, e.Title  
@@ -545,9 +542,9 @@ GO
 ### <a name="l-using-use-hint"></a>L. Utilisation d’indicateurs USE HINT  
  L’exemple suivant utilise les indicateurs de requête RECOMPILE et USE HINT. L'exemple utilise la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
   
-**S’applique à** : [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)].  
+**S’applique à** : [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)].  
   
-```  
+```sql  
 SELECT * FROM Person.Address  
 WHERE City = 'SEATTLE' AND PostalCode = 98104
 OPTION (RECOMPILE, USE HINT ('ASSUME_MIN_SELECTIVITY_FOR_FILTER_ESTIMATES', 'DISABLE_PARAMETER_SNIFFING')); 

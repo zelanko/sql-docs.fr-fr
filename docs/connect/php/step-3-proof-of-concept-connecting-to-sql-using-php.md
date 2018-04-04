@@ -1,27 +1,28 @@
 ---
-title: "Étape 3 : Preuve de concept pour la connexion à SQL via PHP | Documents Microsoft"
-ms.custom: 
+title: 'Étape 3 : Preuve de concept pour la connexion à SQL via PHP | Documents Microsoft'
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: a7451a85-18e5-4fd0-bbcb-2f15a1117290
-caps.latest.revision: "7"
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: deb18077283a1512c09aa223f9790079bdae5855
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 3ea9f1bce66da904f5587a9c21bd672818bc4423
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="step-3-proof-of-concept-connecting-to-sql-using-php"></a>Étape 3 : preuve de concept pour la connexion à SQL via PHP
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -85,7 +86,7 @@ Le [sqlsrv_query()](http://php.net/manual/en/function.sqlsrv-query.php) fonction
   
 ## <a name="step-3--insert-a-row"></a>Étape 3 : Insérer une ligne  
   
-Dans cet exemple, vous allez apprendre à exécuter une [insérer](../../t-sql/statements/insert-transact-sql.md) instruction passer en toute sécurité, des paramètres qui protègent votre application à partir de [injection SQL](../../relational-databases/tables/primary-and-foreign-key-constraints.md) valeur.    
+Dans cet exemple, vous allez apprendre à passer en toute sécurité une commande [INSERT](../../t-sql/statements/insert-transact-sql.md), en passant des valeurs en paramètres qui protègeront votre application à partir des tentatives [d'injection SQL](../../relational-databases/tables/primary-and-foreign-key-constraints.md).    
   
   
 ```php 
@@ -171,4 +172,5 @@ Cet exemple de code illustre l’utilisation de transactions dans lequel vous :
 ## <a name="additional-examples"></a>Autres exemples  
   
 [Exemple d’application (pilote SQLSRV)](../../connect/php/example-application-sqlsrv-driver.md)  
+
 [Exemple d’application (pilote PDO_SQLSRV)](../../connect/php/example-application-pdo-sqlsrv-driver.md)

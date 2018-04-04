@@ -1,6 +1,6 @@
-﻿---
+---
 title: Planifier des packages SSIS sur Linux avec cron | Documents Microsoft
-description: "Cet article décrit comment planifier des packages SQL Server Integration Services (SSIS) sur Linux avec le service cron."
+description: Cet article décrit comment planifier des packages SQL Server Integration Services (SSIS) sur Linux avec le service cron.
 author: leolimsft
 ms.author: lle
 ms.reviewer: douglasl
@@ -9,8 +9,8 @@ ms.date: 10/02/2017
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
@@ -25,6 +25,7 @@ ms.lasthandoff: 03/02/2018
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
+Quand vous exécutez SSIS (SQL Server Integration Services) et SQL Server sur Windows, vous pouvez automatiser l’exécution de packages SSIS à l’aide de SQL Server Agent. Toutefois, quand vous exécutez SQL Server et SSIS sur Linux, l’utilitaire SQL Server Agent n’est pas disponible pour planifier ces travaux. Au lieu de cela, vous utilisez le service cron, qui est largement utilisé sur les plateformes Linux pour automatiser l’exécution de packages.
 
 Cet article fournit des exemples qui montrent comment automatiser l’exécution des packages SSIS. Les exemples sont écrits pour s’exécuter sur Red Hat Enterprise. Le code est identique pour les autres distributions Linux, telles que Ubuntu.
 
@@ -57,7 +58,7 @@ Après avoir défini vos tâches, vous pouvez planifier celles-ci pour qu'elles 
 
 Pour ajouter un travail à cron pour qu’il l’exécute, ajoutez-le dans le fichier crontab. Pour ouvrir le fichier crontab dans un éditeur, où vous pouvez ajouter ou mettre à jour les travaux, utilisez la commande suivante : `crontab -e`.
 
-Pour planifier le travail décrit précédemment pour exécuter tous les jours à 2 h 10, ajoutez la ligne suivante au fichier crontab :
+Pour planifier le travail décrit précédemment pour exécuter tous les jours à 2 h 10, ajoutez la ligne suivante au fichier crontab :
 
 ```
 # run <SSIS package name> at 2:10 AM every day
@@ -76,7 +77,7 @@ L’illustration suivante montre la description du format de la ligne de tâche 
 
 Pour obtenir une description plus détaillée du format de fichier crontab, utilisez la commande suivante : `man 5 crontab`.
 
-Voici un exemple partiel de la sortie qui permet de comprendre l’exemple contenu dans cet article :
+Voici un exemple partiel de la sortie qui permet de comprendre l’exemple contenu dans cet article :
 
 ![Description partielle détaillée du format de crontab](media/sql-server-linux-schedule-ssis-packages/ssis-linux-cron-crontab-format.png)
 
