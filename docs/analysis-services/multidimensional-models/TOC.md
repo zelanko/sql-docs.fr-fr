@@ -1,4 +1,4 @@
-# [Vue d’ensemble](multidimensional-models-ssas.md)
+# [Modèles multidimensionnels](multidimensional-models-ssas.md)
  
 # [Solutions multidimensionnelles](multidimensional-model-solutions-ssas.md)  
 ## [Création de modèles multidimensionnels à l’aide de SSDT (SQL Server Data Tools)](creating-multidimensional-models-using-sql-server-data-tools-ssdt.md)  

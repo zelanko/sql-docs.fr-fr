@@ -1,19 +1,19 @@
-# [Vue d’ensemble](tabular-models-ssas.md)  
-
-# [Créer des modèles tabulaires](tabular-model-solutions-ssas-tabular.md)  
+# [Modèles tabulaires](tabular-models-ssas.md)  
+## [Niveau de compatibilité](compatibility-level-for-tabular-models-in-analysis-services.md)  
 ## [Sources de données prises en charge dans les modèles tabulaires 1400](data-sources-supported-ssas-tabular-1400.md)  
 ## [Sources de données prises en charge dans les modèles tabulaires 1200](data-sources-supported-ssas-tabular.md)  
 ## [Types de données prises en charge](data-types-supported-ssas-tabular.md)  
+
+# Créer des modèles tabulaires
 ## [Concepteur de modèle tabulaire](tabular-model-designer-ssas.md)  
 ## [Base de données d’espace de travail](workspace-database-ssas-tabular.md)  
-## [Niveau de compatibilité](compatibility-level-for-tabular-models-in-analysis-services.md)  
 
 ## [Projets de modèle tabulaire](tabular-model-projects-ssas-tabular.md)  
 ### [Créer un projet de modèle tabulaire](create-a-new-tabular-model-project-analysis-services.md)  
 ### [Importer depuis Analysis Services](import-from-analysis-services-ssas-tabular.md)  
 ### [Importer depuis Power Pivot](import-from-power-pivot-ssas-tabular.md)  
 
-## [Propriétés](properties-ssas-tabular.md)  
+## Propriétés
 ### [Power View - Propriétés de la génération de rapports](power-view-reporting-properties-ssas-tabular.md)  
 ### [Power View - Configurer un ensemble de champs par défaut](power-view-configure-default-field-set-for-reports.md)  
 ### [Power View - Configurer les propriétés de comportement de table](power-view-configure-table-behavior-properties-for-reports.md)  
