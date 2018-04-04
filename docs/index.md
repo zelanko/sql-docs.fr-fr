@@ -1,8 +1,8 @@
 ---
 layout: HubPage
-hide_bc: 
+hide_bc: true
 title: Documentation Microsoft SQL | Microsoft Docs
-description: "Découvrir SQL"
+description: Découvrir SQL
 author: barbkess
 ms.author: barbkess
 ms.topic: article

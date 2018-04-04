@@ -1,6 +1,6 @@
-﻿---
-title: "Résoudre les problèmes de SQL Server sur Linux | Documents Microsoft"
-description: "Fournit des conseils de dépannage pour l’utilisation de SQL Server 2017 sur Linux."
+---
+title: Résoudre les problèmes de SQL Server sur Linux | Documents Microsoft
+description: Fournit des conseils de dépannage pour l’utilisation de SQL Server 2017 sur Linux.
 author: annashres
 ms.author: anshrest
 manager: craigg
@@ -8,8 +8,8 @@ ms.date: 02/22/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
@@ -31,7 +31,7 @@ Ce document décrit comment résoudre les problèmes de Microsoft SQL Server s'e
 > Pour obtenir des réponses aux questions fréquemment posées, consultez le [SQL Server sur le Forum aux questions sur Linux](sql-server-linux-faq.md).
 
 ## <a id="connection"></a> Résoudre les échecs de connexion
-Si vous rencontrez des difficultés pour vous connecter à votre serveur SQL de Linux, il existe quelques éléments à vérifier. 
+Si vous rencontrez des difficultés pour vous connecter à votre serveur SQL Server sous Linux, il existe quelques éléments à vérifier. 
 
 - Vérifiez que le nom du serveur ou l’adresse IP est accessible à partir de votre ordinateur client.
 
@@ -98,9 +98,10 @@ Vous pouvez arrêter ou redémarrer le service SQL Server en fonction des besoin
 
 ## <a name="access-the-log-files"></a>Accéder aux fichiers journaux
    
-SQL Server stocke ses journaux dans le fichier /var/opt/mssql/log/errorlog dans les installations sous Linux et Docker. Vous devez être en mode de 'super utilisateur' pour parcourir ce répertoire.
+SQL Server stocke ses journaux dans le fichier /var/opt/mssql/log/errorlog dans les installations sous Linux et Docker.
+ Vous devez être en mode de 'super utilisateur' pour parcourir ce répertoire.
 
-Le programme d’installation enregistre ici : /var/opt/mssql/setup-<horodatage qui représente l'heure d’installation> Vous pouvez parcourir les fichiers journaux des erreurs avec n’importe quel outil compatible UTF-16 tel que « vim » ou « cat » comme suit : 
+Le programme d’installation enregistre ici : /var/opt/mssql/setup-< horodatage qui représente l'heure d’installation> Vous pouvez parcourir les fichiers journaux des erreurs avec n’importe quel outil compatible UTF-16 tel que « vim » ou « cat » comme suit : 
 
    ```bash
    sudo cat errorlog
@@ -113,7 +114,7 @@ Si vous préférez, vous pouvez également convertir les fichiers vers UTF-8 pou
    ```
 ## <a name="extended-events"></a>Événements étendus
 
-Les événements étendus peuvent être interrogées via une commande SQL. Plus d’informations sur les événements étendus accessibles [ici](https://technet.microsoft.com/en-us/library/bb630282.aspx):
+Les événements étendus peuvent être interrogées via une commande SQL.  Plus d’informations sur les événements étendus accessibles [ici](https://technet.microsoft.com/en-us/library/bb630282.aspx):
 
 ## <a name="crash-dumps"></a>Vidages sur incident 
 
@@ -139,7 +140,7 @@ Cette option est utile lorsqu'une valeur de configuration définie (espace mémo
    ```
 
 ### <a name="start-sql-server-in-single-user-mode"></a>Démarrage de SQL Server en Mode mono-utilisateur
-Vous pouvez par exemple vouloir modifier les options de configuration du serveur ou rétablir une base de données maître ou une autre base de données système endommagée. Par exemple, vous pouvez vouloir modifier les options de configuration du serveur ou récupérer une base de données maître endommagée ou une autre base de données système   
+Dans certaines circonstances, vous devrez peut-être démarrer une instance de SQL Server en mode mono-utilisateur à l’aide de l’option de démarrage -m. Vous pouvez par exemple vouloir modifier les options de configuration du serveur ou rétablir une base de données maître ou une autre base de données système endommagée. Par exemple, vous pouvez vouloir modifier les options de configuration du serveur ou récupérer une base de données maître endommagée ou une autre base de données système   
 
 Démarrage de SQL Server en Mode mono-utilisateur
    ```bash
@@ -152,9 +153,9 @@ Démarrage de SQL Server en Mode mono-utilisateur avec SQLCMD
    ```
   
 > [!WARNING]  
->  Démarrez SQL Server sur Linux avec l’utilisateur « mssql » afin d’éviter les problèmes de démarrage futurs. Exemple « sudo -u mssql /opt/mssql/bin/sqlservr [OPTIONS DE DÉMARRAGE] » 
+>  Démarrez SQL Server sous Linux avec l’utilisateur « mssql » afin d’éviter les problèmes de démarrage à l'avenir. Exemple « sudo -u mssql /opt/mssql/bin/sqlservr [OPTIONS DE DÉMARRAGE] » 
 
-Si vous avez démarré par inadvertance SQL Server avec un autre utilisateur, vous devez changer la propriété des fichiers de base de données SQL Server pour l'attribuer à l’utilisateur 'mssql' avant de démarrer SQL Server avec systemd. Par exemple, exécutez la commande suivante pour modifier la propriété de tous les fichiers de base de données sous /var/opt/mssql sur l’utilisateur « mssql »
+Si vous avez démarré par inadvertance SQL Server avec un autre utilisateur, vous devez changer la propriété des fichiers de base de données SQL Server pour l'attribuer à l’utilisateur 'mssql' avant de démarrer SQL Server avec systemd. Par exemple, exécutez la commande suivante pour modifier la propriété de tous les fichiers de base de données sous /var/opt/mssql sur l’utilisateur « mssql »,
 
    ```bash
    chown -R mssql:mssql /var/opt/mssql/
@@ -168,7 +169,7 @@ Si vous avez démarré par inadvertance SQL Server avec un autre utilisateur, vo
 
 2. Erreur : Le nom d’hôte doit compter 15 caractères maximum.
 
-   Il s’agit d’un problème connu qui se produit chaque fois que le nom de l’ordinateur sur lequel on tente d’installer le package Debian SQL Server est supérieur à 15 caractères. Il n’existe actuellement aucune solution de contournement autre que la modification du nom de l’ordinateur. Une façon d’effectuer cette opération est de modifier le fichier de nom d’hôte et de redémarrer l’ordinateur. Les éléments suivants [guide Web](http://www.cyberciti.biz/faq/ubuntu-change-hostname-command/) explique cela en détail.
+   Il s’agit d’un problème connu qui se produit chaque fois que le nom de l’ordinateur sur lequel on tente d’installer le package Debian SQL Server est supérieur à 15 caractères. Il n’existe actuellement aucune solution de contournement autre que la modification du nom de l’ordinateur. Une façon d’effectuer cette opération est de modifier le fichier de nom d’hôte et de redémarrer l’ordinateur. Le [guide du site Web](http://www.cyberciti.biz/faq/ubuntu-change-hostname-command/) suivant explique cela en détail.
 
 3. La réinitialisation de mot de passe système (SA) d’administration.
 
@@ -177,7 +178,7 @@ Si vous avez démarré par inadvertance SQL Server avec un autre utilisateur, vo
    > [!NOTE]
    > Les étapes suivantes arrêter le service SQL Server temporairement.
 
-   Se connecter dans le terminal de l’ordinateur hôte, exécutez les commandes suivantes, suivez les invites pour réinitialiser le mot de passe SA :
+   Connectez vous au terminal de l’ordinateur hôte, exécutez les commandes suivantes, suivez les invites pour réinitialiser le mot de passe SA :
 
    ```bash
    sudo systemctl stop mssql-server
@@ -186,7 +187,7 @@ Si vous avez démarré par inadvertance SQL Server avec un autre utilisateur, vo
 
 4. Utiliser des caractères spéciaux dans le mot de passe.
 
-   Si vous utilisez des caractères dans le mot de passe du compte de connexion SQL Server, vous devrez peut-être d’échappement lors de leur utilisation dans le terminal Linux. Vous devez isoler le $ à tout moment à l’aide de la barre oblique vous l’utilisez dans un script de shell de commande/Terminal Server :
+   Si vous utilisez certains caractères dans le mot de passe de connexion à SQL Server, vous devrez peut-être utiliser un caractère d’échappement lors de l'utilisation de ces caractères sur le terminal Linux. Vous devez utiliser un caractère d’échappement pour $ à l’aide de la barre oblique inverse à chaque fois que vous l'utilisez dans une commande de terminal/un script de shell
 
    Ne fonctionne pas :
 

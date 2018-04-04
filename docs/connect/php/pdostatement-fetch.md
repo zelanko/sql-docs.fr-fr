@@ -1,27 +1,28 @@
 ---
 title: PDOStatement::fetch | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 4368e362-5bda-4da1-8462-33714683c39f
-caps.latest.revision: "19"
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 3f503ddd9d661d2b2bfa75a3c19219874f159c42
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: a7326279bc150c25c712ca708dcd137a9e0d805d
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="pdostatementfetch"></a>PDOStatement::fetch
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -69,7 +70,7 @@ Si le curseur peut défiler (PDO::ATTR_CURSOR = PDO::CURSOR_SCROLL), fetch le re
 |PDO::FETCH_ORI_PRIOR|Récupère la ligne précédente.|  
 |PDO::FETCH_ORI_FIRST|Récupère la première ligne.|  
 |PDO::FETCH_ORI_LAST|Récupère la dernière ligne.|  
-|Valeur PDO::FETCH_ORI_ABS, *num*|Récupère la ligne demandée dans $*cursor_offset* par numéro de ligne.|  
+|PDO::FETCH_ORI_ABS, *num*|Récupère la ligne demandée dans $*cursor_offset* par numéro de ligne.|  
 |PDO::FETCH_ORI_REL, *num*|Récupère la ligne demandée dans $*cursor_offset* par position relative à la position actuelle.|  
   
 Si la valeur spécifiée pour $*cursor_offset* ou $*cursor_orientation* les résultats dans une position en dehors des limites du jeu de résultats, fetch échoue.  
@@ -147,6 +148,7 @@ La prise en charge de PDO a été ajoutée dans la version 2.0 de [!INCLUDE[ssDr
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
-[Classe PDOStatement](../../connect/php/pdostatement-class.md)  
-[PDO](http://go.microsoft.com/fwlink/?LinkID=187441)  
+[PDOStatement, classe](../../connect/php/pdostatement-class.md)
+
+[PDO](http://php.net/manual/book.pdo.php)  
   

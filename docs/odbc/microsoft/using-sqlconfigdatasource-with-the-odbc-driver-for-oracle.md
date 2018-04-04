@@ -1,28 +1,30 @@
 ---
-title: "À l’aide de SQLConfigDatasource avec le pilote ODBC pour Oracle | Documents Microsoft"
-ms.custom: 
+title: À l’aide de SQLConfigDatasource avec le pilote ODBC pour Oracle | Documents Microsoft
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-helpviewer_keywords: SQLConfigDataSource function [ODBC], ODBC driver for Oracle
+helpviewer_keywords:
+- SQLConfigDataSource function [ODBC], ODBC driver for Oracle
 ms.assetid: e535d1ef-aff9-4ae7-a3ed-ef4ca2584289
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 676ab0116fa14af4d2f29c2620a4f6e15f17cdc0
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 90ebd3887adec06bfc0ec100101adf7ad7302645
+ms.sourcegitcommit: 8f1d1363e18e0c32ff250617ab6cb2da2147bf8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="using-sqlconfigdatasource-with-the-odbc-driver-for-oracle"></a>À l’aide de SQLConfigDatasource avec le pilote ODBC pour Oracle
 > [!IMPORTANT]  
@@ -37,21 +39,21 @@ ms.lasthandoff: 12/21/2017
   
  Dans le tableau suivant, *A/N* signifie toute chaîne alphanumérique valide jusqu'à la longueur maximale autorisée. *Max Len* (longueur maximale) est la longueur maximale autorisée de la chaîne acceptée par le paramètre, y compris le caractère terminateur de chaîne.  
   
-|Paramètre|Max Len|Valeur par défaut|Valeurs valides|Description|  
+|Paramètre|Max Len|Valeur par défaut|Valeurs valides| Description|  
 |-------------|-------------|-------------------|------------------|-----------------|  
 |BufferSize|7|65535|1000|Jusqu'à 65 535 octets de taille de mémoire tampon d’extraction minimale|  
-|CatalogCap|2| 1|0 ou 1|Si 1, les identificateurs nonquoted sera converti en majuscules dans le catalogue des fonctions.|  
+|CatalogCap|2|1|0 ou 1|Si 1, les identificateurs nonquoted sera converti en majuscules dans le catalogue des fonctions.|  
 |ConnectString|128|""|A/N|Chaîne de connexion. Méthode nécessaire de spécifier le nom du serveur avec le pilote Msorcl10.dll.|  
-|Description|256|""|A/N|Description.|  
+| Description|256|""|A/N|Description.|  
 |DSN|33|""|A/N|Nom de source de données.|  
 |GuessTheColDef|4|0|A/N|Retourne une valeur différente de zéro pour les colonnes sans échelle définie par Oracle.|  
 |NumberFloat|2|""|0 ou 1|Si 0, les colonnes de type FLOAT sont traitées comme SQL_FLOAT. La valeur 1, les colonnes de type FLOAT sont traitées comme SQL_DOUBLE.|  
 |PWD|30|""|A/N|Mot de passe.|  
 |RDOSupport|2|""|0 ou 1|Permet de RDO appeler des procédures d’Oracle.|  
-|Notes |2|0|0 ou 1|Inclure des notes dans les fonctions de catalogue.|  
+|Notes|2|0|0 ou 1|Inclure des notes dans les fonctions de catalogue.|  
 |RowLimit|4|""|comprise entre 0 et 99|Nombre maximal de lignes retournées par une instruction SELECT. Une chaîne de longueur zéro indique qu’aucune limite n’est appliquée.|  
-|Serveur|128|""|A/N|Nom du serveur Oracle.|  
-|SynonymColumns|2| 1|0 ou 1|Inclure les synonymes dans SQLColumns.|  
+|Server|128|""|A/N|Nom du serveur Oracle.|  
+|SynonymColumns|2|1|0 ou 1|Inclure les synonymes dans SQLColumns.|  
 |SystemTable|2|""|0 ou 1|Si 0, les tables système ne s’affichera pas. La valeur 1, les tables système seront affichera.|  
 |TranslationDLL|33|""|A/N|Nom du fichier .dll de traduction.|  
 |TranslationName|33|""|A/N|Nom de la traduction.|  

@@ -1,16 +1,16 @@
 ---
-title: "Bookmark, propriété (ADO) | Documents Microsoft"
+title: Bookmark, propriété (ADO) | Documents Microsoft
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
-ms.date: 01/19/2017
-ms.reviewer: 
+ms.custom: ''
+ms.date: 03/20/2018
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 apitype: COM
 f1_keywords:
@@ -18,16 +18,16 @@ f1_keywords:
 helpviewer_keywords:
 - Bookmark property [ADO]
 ms.assetid: 481dcc93-487b-490e-ac58-a1e9b2ebfd43
-caps.latest.revision: 
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3c6076acd2bde7e82bf142bad76093d582106877
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 59cc184403fff8b152ee7eabbdf823abd6c3d4bc
+ms.sourcegitcommit: ccb05cb5a4cccaf7ffa9e85a4684fa583bab914e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="bookmark-property-ado"></a>Bookmark, propriété (ADO)
 Indique un signet qui identifie de façon unique l’enregistrement actif dans un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) de l’objet ou définit l’enregistrement actif un **Recordset** objet l’enregistrement identifié par un signet valid.  
@@ -40,7 +40,7 @@ Indique un signet qui identifie de façon unique l’enregistrement actif dans u
   
  Lorsque vous ouvrez un **Recordset** de l’objet, chacun de ses enregistrements possède un signet unique. Pour enregistrer le signet de l’enregistrement actif, affectez la valeur de la **signet** propriété à une variable. Pour revenir rapidement à cet enregistrement à tout moment après avoir déplacé vers un autre enregistrement, affectez le **Recordset** l’objet **signet** propriété à la valeur de cette variable.  
   
- L’utilisateur ne peut pas être en mesure d’afficher la valeur du signet. En outre, les utilisateurs ne doivent pas s’attendre à signets directement comparables ??? deux signets qui font référence au même enregistrement peuvent avoir des valeurs différentes.  
+ L’utilisateur ne peut pas être en mesure d’afficher la valeur du signet. En outre, les utilisateurs ne doivent pas s’attendre à signets à être directement comparables, étant donné que les deux signets qui font référence au même enregistrement peuvent avoir des valeurs différentes.  
   
  Si vous utilisez la [Clone](../../../ado/reference/ado-api/clone-method-ado.md) méthode pour créer une copie d’un **Recordset** objet, le **signet** paramètres de propriété pour la version d’origine et le doublon **Recordset**  objets sont identiques et vous pouvez les utiliser indifféremment. Toutefois, vous ne pouvez pas utiliser des signets à partir de différents **Recordset** des objets de manière interchangeable, même si elles ont été créées à partir de la même source ou commande.  
   

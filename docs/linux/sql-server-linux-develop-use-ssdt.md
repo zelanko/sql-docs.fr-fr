@@ -1,6 +1,6 @@
 ﻿---
 title: "Développer et déployer des bases de données pour SQL Server sur Linux | Documents Microsoft"
-description: 
+description: ''
 author: erickangMSFT
 ms.author: erickang
 manager: jroth
@@ -8,8 +8,8 @@ ms.date: 03/17/2017
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
 ms.technology: database-engine
 ms.assetid: 1e924704-e07c-4a8b-b243-8c1dd8cff0d3
@@ -25,7 +25,7 @@ ms.lasthandoff: 02/13/2018
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-SQL Server Data Tools (SSDT), Visual Studio se transforme en un environnement de gestion (DLM) du cycle de vie de développement et de base de données puissantes, pour SQL Server sur Linux. Vous pouvez développer, générer, tester et publier votre base de données à partir d’un projet sous contrôle de code source, tout comme vous développez votre code d’application.
+SQL Server Data Tools (SSDT) transforme Visual Studio en un puissant environnement de développement et de gestion du cycle de vie des bases de données (DLM) pour SQL Server sous Linux. Vous pouvez développer, construire, tester et publier votre base de données à partir d'un projet de contrôle de code source, tout comme vous développez votre code d'application.
 
 ## <a name="install-visual-studio-and-sql-server-data-tools"></a>Installer Visual Studio et SQL Server Data Tools
 
@@ -103,7 +103,7 @@ SQL Server 2017 sur Linux est pris en charge par SSDT version 17.0 RC ou ultéri
 
 5. Vérifiez l’état de la publication dans la fenêtre **opérations des outils de données**.
 
-6. Cliquez sur **vue Reulst** ou **afficher le Script** pour afficher les détails de la base de données à publier les résultats sur votre serveur SQL Server sur Linux.
+6. Cliquez sur **Afficher le résultat** ou sur **Afficher le script** pour voir les détails du résultat de la publication de la base de données sur votre serveur SQL Server sur Linux.
 
     <img src="./media/sql-server-linux-develop-use-ssdt/publish-result.png" alt="publish result" style="width: 480px;"/>
 
@@ -115,7 +115,7 @@ Si vous utilisez T-SQL, consultez [didacticiel : écriture d’instructions Tra
 
 Pour plus d’informations sur le développement d’une base de données avec les outils de données SQL, consultez [documents de MSDN SSDT]
 
-[télécharger et installer Visual Studio]:https://www.visualstudio.com/downloads/
+[téléchargez et installez Visual Studio]:https://www.visualstudio.com/downloads/
 [Download and Install SSDT 17.0 RC2]:https://aka.ms/ssdt-download
 [documents de MSDN SSDT]: https://msdn.microsoft.com/en-us/library/hh272686(v=vs.103).aspx
 [didacticiel : écriture d’instructions Transact-SQL]:https://msdn.microsoft.com/library/ms365303.aspx

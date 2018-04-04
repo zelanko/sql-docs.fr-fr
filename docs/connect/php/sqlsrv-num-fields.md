@@ -1,37 +1,39 @@
 ---
-title: sqlsrv_num_fields | Documents Microsoft
-ms.custom: 
-ms.date: 01/19/2017
+title: sqlsrv_num_fields | Microsoft Docs
+ms.custom: ''
+ms.date: 03/23/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: sqlsrv_num_fields
+apiname:
+- sqlsrv_num_fields
 apitype: NA
 helpviewer_keywords:
 - sqlsrv_num_fields
 - API Reference, sqlsrv_num_fields
 ms.assetid: 03ca1860-01ed-408c-862a-57a7355de4bf
-caps.latest.revision: "17"
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 978f04e3796cc104844ca86e3ac74b1c24cc10e1
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 80028fcf1b4a1c3d947bef49c2a4edc617f9d2d1
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="sqlsrvnumfields"></a>sqlsrv_num_fields
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-Récupère le nombre de champs dans un jeu de résultats actif. Notez que **sqlsrv_num_fields** peut être appelé sur une instruction préparée, avant ou après l’exécution.  
+Récupère le nombre de champs dans un jeu de résultats actif. Cette fonction peut être appelée sur une instruction préparée, avant ou après l’exécution.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -47,9 +49,9 @@ sqlsrv_num_fields( resource $stmt)
 Valeur entière qui représente le nombre de champs dans le jeu de résultats actif. Si une erreur se produit, la valeur booléenne **false** est retournée.  
   
 ## <a name="example"></a>Exemple  
-L’exemple suivant exécute une requête pour récupérer tous les champs des trois lignes supérieures de la table *HumanResources.Department* de la base de données Adventureworks. La fonction **sqlsrv_num_fields** détermine le nombre de champs du jeu de résultats. Ainsi, les données sont affichées en itérant au sein des champs dans chaque ligne retournée.  
+L’exemple suivant exécute une requête pour récupérer tous les champs pour les trois lignes du haut de la *HumanResources.Department* table de base de données AdventureWorks. La fonction **sqlsrv_num_fields** détermine le nombre de champs du jeu de résultats. Ainsi, les données sont affichées en itérant au sein des champs dans chaque ligne retournée.  
   
-L’exemple suppose que SQL Server et la base de données [AdventureWorks](http://go.microsoft.com/fwlink/?LinkID=67739) sont installés sur l’ordinateur local. Toute la sortie est écrite dans la console quand l’exemple est exécuté à partir de la ligne de commande.  
+L’exemple part du principe que SQL Server et le [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) base de données sont installés sur l’ordinateur local.  Toute la sortie est écrite dans la console quand l’exemple est exécuté à partir de la ligne de commande.  
   
 ```  
 <?php  
@@ -95,7 +97,9 @@ sqlsrv_close( $conn );
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
-[référence d’API du pilote SQLSRV](../../connect/php/sqlsrv-driver-api-reference.md)  
+[Informations de référence sur l’API du pilote SQLSRV](../../connect/php/sqlsrv-driver-api-reference.md)  
+
 [sqlsrv_field_metadata](../../connect/php/sqlsrv-field-metadata.md)  
+
 [À propos des exemples de code dans la documentation](../../connect/php/about-code-examples-in-the-documentation.md)  
   

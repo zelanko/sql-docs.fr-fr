@@ -1,16 +1,16 @@
 ---
-title: "Analyser les performances avec le moniteur de réplication | Microsoft Docs"
-ms.custom: 
+title: Analyser les performances avec le moniteur de réplication | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: replication
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - monitoring performance [SQL Server replication], Replication Monitor
@@ -22,7 +22,7 @@ helpviewer_keywords:
 - Distribution Agent, monitoring
 - monitoring performance [SQL Server replication]
 ms.assetid: f212397d-1bfd-496b-a246-668952891d09
-caps.latest.revision: 
+caps.latest.revision: ''
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

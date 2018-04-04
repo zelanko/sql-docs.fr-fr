@@ -1,16 +1,16 @@
 ---
 title: FROM (Transact-SQL) | Microsoft Docs
-ms.custom: 
-ms.date: 08/09/2017
+ms.custom: ''
+ms.date: 03/16/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|queries
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - JOIN
@@ -36,16 +36,16 @@ helpviewer_keywords:
 - UPDATE statement [SQL Server], FROM clause
 - derived tables
 ms.assetid: 36b19e68-94f6-4539-aeb1-79f5312e4263
-caps.latest.revision: 
+caps.latest.revision: ''
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: c1abc4a060dd275ba2f8500e88d634a5ba9244ee
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 0a78b022ae6b344531130c55fb08bfc3684f8e23
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="from-transact-sql"></a>FROM (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -137,11 +137,15 @@ FROM { <table_source> [ ,...n ] }
   
 <table_source> ::=   
 {  
-    [ database_name . [ schema_name ] . | schema_name . ] table_or_view_name [ AS ] table_or_view_alias  
+    [ database_name . [ schema_name ] . | schema_name . ] table_or_view_name [ AS ] table_or_view_alias 
+    [<tablesample_clause>]  
     | derived_table [ AS ] table_alias [ ( column_alias [ ,...n ] ) ]  
     | <joined_table>  
 }  
   
+<tablesample_clause> ::=
+    TABLESAMPLE ( sample_number [ PERCENT ] ) -- SQL Data Warehouse only  
+ 
 <joined_table> ::=   
 {  
     <table_source> <join_type> <table_source> ON search_condition   
@@ -188,7 +192,7 @@ FROM { <table_source> [ ,...n ] }
   
  *rowset_function*  
 
-**S’applique à** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] jusqu’à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] et [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+**S’applique à** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] et [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
 
   
  Spécifie l'une des fonctions d'ensemble de lignes, par exemple OPENROWSET, qui retourne un objet pouvant être utilisé à la place d'une référence de table. Pour plus d’informations sur une liste de fonctions d’ensemble de lignes, consultez [Fonctions d’ensemble de lignes &#40;Transact-SQL&#41;](../../t-sql/functions/rowset-functions-transact-sql.md).  
@@ -197,7 +201,7 @@ FROM { <table_source> [ ,...n ] }
   
  *bulk_column_alias*  
 
-**S’applique à** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] jusqu’à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] et [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+**S’applique à** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] et [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
 
   
  Alias facultatif qui peut remplacer un nom de colonne dans le jeu de résultats. Les alias de colonne sont autorisés uniquement dans les instructions SELECT qui utilisent la fonction OPENROWSET avec l'option BULK. Quand vous utilisez *bulk_column_alias*, spécifiez un alias pour chaque colonne de table dans le même ordre que les colonnes du fichier.  
@@ -210,7 +214,7 @@ FROM { <table_source> [ ,...n ] }
   
  OPENXML \<openxml_clause>  
 
-**S’applique à** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] jusqu’à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] et [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+**S’applique à** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] et [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
 
   
  Fournit une vue de l'ensemble de lignes d'un document XML. Pour plus d’informations, consultez [OPENXML &#40;Transact-SQL&#41;](../../t-sql/functions/openxml-transact-sql.md).  
@@ -230,8 +234,10 @@ FROM { <table_source> [ ,...n ] }
   
  Spécifie qu’une version spécifique des données est retournée à partir de la table temporelle spécifiée et de la table d’historique associée avec versions gérées par le système  
   
-\<tablesample_clause>  
- Spécifie qu'un exemple de données est retourné à partir de la table. L'exemple peut être approximatif. Cette clause peut être utilisée sur toute table primaire ou jointe dans une instruction SELECT, UPDATE ou DELETE. TABLESAMPLE ne peut pas être spécifié avec des vues.  
+### <a name="tablesample-clause"></a>Clause Tablesample
+**S’applique à :** SQL Server, SQL Database 
+ 
+ Spécifie qu'un exemple de données est retourné à partir de la table. L'exemple peut être approximatif. Cette clause peut être utilisée sur toute table primaire ou jointe dans une instruction SELECT ou UPDATE. TABLESAMPLE ne peut pas être spécifié avec des vues.  
   
 > [!NOTE]  
 >  Lorsque vous utilisez TABLESAMPLE sur des bases de données mises à niveau vers [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], le niveau de compatibilité de la base de données est défini à 110 ou plus, PIVOT n'est pas autorisé dans une requête d'expression de table commune récursive (CTE). Pour plus d’informations, consultez [Niveau de compatibilité ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
@@ -254,13 +260,22 @@ FROM { <table_source> [ ,...n ] }
  *repeat_seed*  
  Expression d'un entier de type constante utilisée par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour générer un nombre aléatoire. *repeat_seed* est une valeur **bigint**. Si la valeur *repeat_seed* n’est pas spécifiée, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] lui assigne une valeur aléatoire. Pour une valeur *repeat_seed* spécifique, le résultat de l’échantillonnage reste toujours identique si aucune modification n’est apportée à la table. L’expression *repeat_seed* doit correspondre à un entier supérieur à zéro.  
   
- \<joined_table>  
- Jeu de résultats correspondant au produit de deux ou plusieurs tables. Pour plusieurs jointures, utilisez des parenthèses afin de modifier l'ordre naturel des jointures.  
+### <a name="tablesample-clause"></a>Clause Tablesample
+**S’applique à :** SQL Data Warehouse
+
+ Spécifie qu'un exemple de données est retourné à partir de la table. L'exemple peut être approximatif. Cette clause peut être utilisée sur toute table primaire ou jointe dans une instruction SELECT ou UPDATE. TABLESAMPLE ne peut pas être spécifié avec des vues. 
+
+ PERCENT  
+ Spécifie qu’un pourcentage *sample_number* des lignes de la table doit être récupéré à partir de cette dernière. Quand PERCENT est spécifié, SQL Data Warehouse retourne une approximation du pourcentage spécifié. Quand PERCENT est spécifié, l’expression *sample_number* doit correspondre à une valeur comprise entre 0 et 100.  
+
+
+### <a name="joined-table"></a>Table jointe 
+Une table jointe est un jeu de résultats correspondant au produit de deux ou plusieurs tables. Pour plusieurs jointures, utilisez des parenthèses afin de modifier l'ordre naturel des jointures.  
   
-\<join_type>  
- Spécifie le type d'opération de jointure.  
+### <a name="join-type"></a>Type de jointure
+Spécifie le type d'opération de jointure.  
   
- **INNER**  
+ INNER  
  Spécifie que toutes les paires correspondantes de lignes sont retournées. Supprime les lignes n'ayant pas de correspondance dans les deux tables. Lorsqu'aucun type de jointure n'est spécifié, cet argument est la valeur par défaut.  
   
  FULL [ OUTER ]  
@@ -272,8 +287,8 @@ FROM { <table_source> [ ,...n ] }
  RIGHT [OUTER]  
  Spécifie que toutes les lignes de la table de droite qui ne respectent pas la condition de jointure sont incluses dans le jeu de résultats et que les colonnes de sortie qui correspondent à l'autre table ont des valeurs NULL en plus de toutes les lignes retournées par la jointure interne.  
   
-\<join_hint>  
- Pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et [!INCLUDE[ssSDS](../../includes/sssds-md.md)], spécifie que l’optimiseur de requête [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilise un indicateur de jointure (ou un algorithme d’exécution) pour chaque jointure spécifiée dans la clause FROM de la requête. Pour plus d’informations, consultez [Indicateurs de jointure &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-join.md).  
+### <a name="join-hint"></a>Indicateur de jointure  
+Pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et [!INCLUDE[ssSDS](../../includes/sssds-md.md)], spécifie que l’optimiseur de requête [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilise un indicateur de jointure (ou un algorithme d’exécution) pour chaque jointure spécifiée dans la clause FROM de la requête. Pour plus d’informations, consultez [Indicateurs de jointure &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-join.md).  
   
  Pour [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] et [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], ces indicateurs de jointure s’appliquent aux jointures INNER sur deux colonnes de distribution incompatibles. Ils contribuent à améliorer les performances de la requête, car ils limitent la quantité de données déplacées pendant le traitement de la requête. Les indicateurs de jointure pris en charge pour [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] et [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] sont les suivants :  
   
@@ -324,6 +339,8 @@ ON (p.ProductID = v.ProductID);
  *right_table_source*  
  Source de table, telle qu'elle est définie dans l'argument précédent. Pour plus d'informations, consultez la section Notes.  
   
+### <a name="pivot-clause"></a>Clause PIVOT
+
  *table_source* PIVOT \<pivot_clause>  
  Spécifie que la source *table_source* est croisée dynamiquement sur la colonne *pivot_column*. *table_source* correspond à une table ou une expression de table. La sortie est une table qui contient toutes les colonnes de la source *table_source*, à l’exception des colonnes *pivot_column* et *value_column*. Les colonnes de *table_source* (sauf les colonnes *pivot_column* et *value_column*) sont appelées colonnes de regroupement de l’opérateur PIVOT. Pour plus d’informations sur les opérateurs PIVOT et UNPIVOT, consultez [Utilisation des opérateurs PIVOT et UNPIVOT](../../t-sql/queries/from-using-pivot-and-unpivot.md).  
   
@@ -357,7 +374,7 @@ ON (p.ProductID = v.ProductID);
   
  AS OF \<date_time>  
 
-**S’applique à** : [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] jusqu’à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] et [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+**S’applique à** : [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] et [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
 
   
  Renvoie une table avec un seul enregistrement par ligne contenant les valeurs qui étaient réelles (actuelles) au moment dans le passé spécifié. En interne, une union est effectuée entre la table temporelle et sa table d’historique. Les résultats sont filtrés pour retourner les valeurs de la ligne qui était valide au moment spécifié par le paramètre *\<date_time>*. La valeur d’une ligne est considérée comme valide si *system_start_time_column_name* a une valeur inférieure ou égale à celle du paramètre *\<date_time>* et si *system_end_time_column_name* a une valeur supérieure à celle du paramètre *\<date_time>*.   
@@ -377,7 +394,7 @@ ON (p.ProductID = v.ProductID);
   
  CONTAINED IN (\<start_date_time> , \<end_date_time>)  
 
-**S’applique à** : [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] jusqu’à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] et [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+**S’applique à** : [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] et [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
 
   
  Renvoie une table avec les valeurs de toutes les versions d’enregistrement qui ont été ouvertes et fermées dans l’intervalle de temps spécifié défini par les deux valeurs datetime de l’argument CONTAINED IN. Les lignes qui sont devenues actives exactement sur la limite inférieure ou qui ont cessé d’être actives exactement sur la limite supérieure sont incluses.  
@@ -854,6 +871,14 @@ FROM DimProduct AS dp
 INNER REDISTRIBUTE JOIN FactInternetSales AS fis  
     ON dp.ProductKey = fis.ProductKey;  
 ```  
+
+### <a name="v-using-tablesample-to-read-data-from-a-sample-of-rows-in-a-table"></a>V. Utilisation de TABLESAMPLE pour lire des données à partir d'un exemple de lignes dans une table  
+ L'exemple suivant utilise `TABLESAMPLE` dans la clause `FROM` pour retourner environ `10` % de toutes les lignes de la table `Customer`.  
+  
+```sql    
+SELECT *  
+FROM Sales.Customer TABLESAMPLE SYSTEM (10 PERCENT) ;
+```
   
 ## <a name="see-also"></a> Voir aussi  
  [CONTAINSTABLE &#40;Transact-SQL&#41;](../../relational-databases/system-functions/containstable-transact-sql.md)   

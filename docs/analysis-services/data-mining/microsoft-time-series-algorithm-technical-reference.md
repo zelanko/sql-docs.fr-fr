@@ -1,15 +1,15 @@
 ---
-title: "Référence technique de Microsoft Time Series algorithme | Documents Microsoft"
-ms.custom: 
+title: Référence technique de Microsoft Time Series algorithme | Documents Microsoft
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - ARTXP
@@ -29,7 +29,7 @@ helpviewer_keywords:
 - COMPLEXITY_PENALTY parameter
 - PREDICTION_SMOOTHING parameter
 ms.assetid: 7ab203fa-b044-47e8-b485-c8e59c091271
-caps.latest.revision: 
+caps.latest.revision: ''
 author: Minewiskan
 ms.author: owend
 manager: kfile
@@ -142,7 +142,7 @@ ms.lasthandoff: 03/20/2018
 |*COMPLEXITY_PENALTY*|Contrôle la croissance de l'arbre de décision. La valeur par défaut est 0,1.<br /><br /> La diminution de cette valeur augmente la probabilité d'une division. L'augmentation de cette valeur diminue la probabilité d'une division.<br /><br /> Remarque : ce paramètre est uniquement disponible dans certaines éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |*FORECAST_METHOD*|Spécifie l'algorithme à utiliser pour l'analyse et la prédiction. Les valeurs possibles sont ARTXP, ARIMA ou MIXED. La valeur par défaut MIXED.|  
 |*HISTORIC_MODEL_COUNT*|Spécifie le nombre de modèles historiques qui seront construits. La valeur par défaut est 1.<br /><br /> Remarque : ce paramètre est uniquement disponible dans certaines éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|*HISTORICAL_MODEL_GAP*|Spécifie le décalage dans le temps entre deux modèles historiques successifs. La valeur par défaut est 10. La valeur représente plusieurs unités de temps, où l'unité est définie par le modèle.<br /><br /> Par exemple, la valeur g produit des modèles historiques générés pour des données tronquées par tranches de temps à des intervalles de g, 2*g, 3\*g et ainsi de suite.<br /><br /> Remarque : ce paramètre est uniquement disponible dans certaines éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|*HISTORICAL_MODEL_GAP*|Spécifie le décalage dans le temps entre deux modèles historiques successifs. La valeur par défaut est 10. La valeur représente plusieurs unités de temps, où l'unité est définie par le modèle.<br /><br /> Par exemple, la valeur g produit des modèles historiques générés pour des données tronquées par tranches de temps à des intervalles de g, 2\*g, 3\*g et ainsi de suite.<br /><br /> Remarque : ce paramètre est uniquement disponible dans certaines éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |*INSTABILITY_SENSITIVITY*|Contrôle le point à partir duquel la variance de prédiction dépasse un certain seuil, après quoi l'algorithme ARTXP supprime des prédictions. La valeur par défaut est 1.<br /><br /> Remarque : ce paramètre ne s’applique pas aux modèles qui utilisent uniquement ARIMA.<br /><br /> La valeur par défaut de 1 présente le même comportement que dans [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] surveille l'écart type normalisé pour chaque prédiction. Dès que cette valeur dépasse le seuil d'une prédiction, l'algorithme de série chronologique retourne une valeur Null et arrête le processus de prédiction.<br /><br /> La valeur [!INCLUDE[tabValue](../../includes/tabvalue-md.md)] arrête la détection d'instabilité. Cela signifie que vous pouvez créer un nombre infini de prédictions, quelle que soit la variance.<br /><br /> Remarque : ce paramètre est uniquement modifiable dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise. Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Standard, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] utilise uniquement la valeur par défaut 1.|  
 |*MAXIMUM_SERIES_VALUE*|Spécifie la valeur maximale à utiliser pour les prédictions. Ce paramètre est utilisé avec *MINIMUM_SERIES_VALUE*pour limiter les prédictions à une certaine plage attendue. Par exemple, vous pouvez spécifier que le volume de ventes prédites pour un jour ne doit jamais dépasser le nombre de produits dans l'inventaire.<br /><br /> Remarque : ce paramètre est uniquement disponible dans certaines éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |*MINIMUM_SERIES_VALUE*|Spécifie la valeur minimale qui peut être prédite. Ce paramètre est utilisé avec *MAXIMUM_SERIES_VALUE*pour limiter les prédictions à une certaine plage attendue. Par exemple, vous pouvez spécifier que la quantité de ventes prédite ne doit jamais être un nombre négatif.<br /><br /> Remarque : ce paramètre est uniquement disponible dans certaines éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  

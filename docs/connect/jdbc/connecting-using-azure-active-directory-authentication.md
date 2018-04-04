@@ -1,28 +1,28 @@
 ---
-title: "Connexion à l’aide de l’authentification Azure Active Directory | Documents Microsoft"
-ms.custom: 
+title: Connexion à l’aide de l’authentification Azure Active Directory | Documents Microsoft
+ms.custom: ''
 ms.date: 01/19/2018
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
 ms.technology:
 - drivers
 ms.topic: article
 ms.assetid: 9c9d97be-de1d-412f-901d-5d9860c3df8c
-caps.latest.revision: 
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 28c8e53032cacb6620aeb304c228c35deec9e7a6
-ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
+ms.openlocfilehash: a0cbb8a2b6eff8e3a612039616f9b497a2ea2737
+ms.sourcegitcommit: 7246ef88fdec262fa0d34bf0e232f089e03a6911
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/02/2018
+ms.lasthandoff: 03/29/2018
 ---
 # <a name="connecting-using-azure-active-directory-authentication"></a>Connexion à l’aide de l’authentification Azure Active Directory
 Cet article fournit des informations sur la façon de développer des applications Java à utiliser la fonctionnalité d’authentification Azure Active Directory avec Microsoft JDBC Driver 6.0 (ou version ultérieure) pour SQL Server.
@@ -212,16 +212,15 @@ L’exemple ci-dessous contient une simple application Java qui se connecte à l
 1.  Créer un compte d’application dans Azure Active Directory pour votre service.
     1. Connectez-vous au portail de gestion Azure
     2. Dans le volet de navigation gauche, cliquez sur Azure Active Directory
-    3. Cliquez sur le locataire d’annuaire dans lequel vous souhaitez enregistrer l’exemple d’application. Ce doit être le même répertoire que celui qui est associé à votre base de données (le serveur qui héberge votre base de données).
-    4. Cliquez sur l’onglet Applications.
-    5. Dans le tiroir, cliquez sur Ajouter.
-    6. Cliquez sur « Ajouter une application développée par mon organisation ».
-    7. Entrez mytokentest sous la forme d’un nom convivial pour l’application, sélectionnez « Application de Web et/ou API Web » et cliquez sur Suivant.
-    8. En supposant que cette application est un service/démon et non une application web, il n’a pas une URL ou connexion URI ID d’application. Pour ces deux champs, entrez http://mytokentest
-    9. Dans le portail Azure, cliquez sur l’onglet configurer de votre application
-    10. Recherche la valeur d’ID Client et copiez-le mis de côté, vous besoin plus tard lors de la configuration de votre application (par exemple, a4bbfe26-dbaa-4fec-8ef5-223d229f647d). Consultez l’instantané suivant.
-    11. Sous la section « Clés », sélectionnez la durée de la clé, enregistrer la configuration et copiez la clé pour une utilisation ultérieure. Il s’agit de la clé secrète du client.
-    12. En bas, cliquez sur « points de terminaison », puis copiez l’URL sous « OAUTH 2.0 AUTHORIZATION ENDPOINT » pour une utilisation ultérieure. Il s’agit de l’URL STS.
+    3. Cliquez sur l’onglet « Inscriptions d’application ».
+    4. Dans le tiroir, cliquez sur « Nouvelle inscription d’application ».
+    5. Entrez mytokentest sous la forme d’un nom convivial pour l’application, sélectionnez « application/API Web ».
+    6. Nous n’avez pas besoin d’URL de connexion. Simplement fournir tout élément : «http://mytokentest».
+    7. Cliquez sur « Créer » en bas.
+    9. Dans le portail Azure, cliquez sur l’onglet « Paramètres » de votre application et ouvrez l’onglet « Propriétés ».
+    10. Recherchez la valeur « ID d’Application » (également appelé ID de Client) et copiez-le mis de côté, vous besoin plus tard lors de la configuration de votre application (par exemple, 1846943b-ad04-4808-aa13-4702d908b5c1). Consultez l’instantané suivant.
+    11. Recherchez la valeur « URL ID d’application » et copiez-le mis de côté, voici l’URL STS.
+    12. Sous la section « Clés », créez une clé en renseignant le champ nom, en sélectionnant la durée de la clé et enregistrer la configuration (laisser le champ de valeur vide). Après l’enregistrement, la valeur doit être renseigné automatiquement, copiez la valeur générée. Il s’agit de la clé secrète du client.
 
     ![JDBC_AAD_Token](../../connect/jdbc/media/jdbc_aad_token.png)  
 2. Connectez-vous à la base de données utilisateur de votre serveur SQL Azure en tant qu’un administrateur Azure Active Directory et à l’aide une disposition de la commande T-SQL un utilisateur de base de données pour votre application principale. Consultez le [la connexion à la base de données SQL ou SQL données entrepôt par à l’aide d’authentification Azure Active Directory](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/) pour plus d’informations sur la création d’un administrateur Azure Active Directory et un utilisateur de base de données.
@@ -253,8 +252,8 @@ public class TokenBasedExample {
 
         // Retrieve the access token from the AD.
         String spn = "https://database.windows.net/";
-        String stsurl = "https://login.microsoftonline.com/..."; // Replace with your STS URL.
-        String clientId = "a4bbfe26-dbaa-4fec-8ef5-223d229f647d"; // Replace with your client ID.
+        String stsurl = "https://microsoft.onmicrosoft.com/..."; // Replace with your STS URL.
+        String clientId = "1846943b-ad04-4808-aa13-4702d908b5c1"; // Replace with your client ID.
         String clientSecret = "..."; // Replace with your client secret.
 
         AuthenticationContext context = new AuthenticationContext(stsurl, false, Executors.newFixedThreadPool(1));

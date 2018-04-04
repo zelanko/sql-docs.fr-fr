@@ -1,28 +1,28 @@
 ---
-title: "À l’aide d’Always Encrypted avec le pilote JDBC | Documents Microsoft"
-ms.custom: 
+title: À l’aide d’Always Encrypted avec le pilote JDBC | Documents Microsoft
+ms.custom: ''
 ms.date: 3/14/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - drivers
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 271c0438-8af1-45e5-b96a-4b1cabe32707
-caps.latest.revision: 
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: af8b651364f58c3c4261666d5d6531e99e620efe
-ms.sourcegitcommit: 6b1618aa3b24bf6759b00a820e09c52c4996ca10
+ms.openlocfilehash: 425f965c37e1d148a267566bd1980eb345cadfc6
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="using-always-encrypted-with-the-jdbc-driver"></a>À l’aide d’Always Encrypted avec le pilote JDBC
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -136,7 +136,7 @@ WITH VALUES
 ```
 
 > [!IMPORTANT]
-> L’implémentation SQLServerColumnEncryptionCertificateStoreProvider du pilote JDBC est disponible avec les systèmes d’exploitation Windows uniquement et a une dépendance sur le fichier sqljdbc_auth.dll qui est disponible dans le package de pilotes. Pour utiliser ce fournisseur, copiez le fichier sqljdbc_auth.dll dans un répertoire sur le chemin d’accès de système de Windows sur l’ordinateur où est installé le pilote JDBC. Vous pouvez également définir la propriété système java.libary.path afin de spécifier le répertoire du fichier sqljdbc_auth.dll. Si vous exécutez une machine virtuelle Java (JVM) 32 bits, utilisez le fichier sqljdbc_auth.dll dans le dossier x86, même si la version du système d'exploitation est x64. Si vous exécutez une machine virtuelle Java (JVM) 64 bits sur un processeur x64, utilisez le fichier sqljdbc_auth.dll dans le dossier x64. Par exemple, si vous utilisez la machine virtuelle Java 32 bits et le pilote JDBC est installé dans le répertoire par défaut, vous pouvez spécifier l’emplacement de la DLL à l’aide de l’argument suivant de la machine virtuelle (VM) au démarrage de l’application Java : `-Djava.library.path=C:\Microsoft JDBC Driver <version> for SQL Server\sqljdbc_<version>\enu\auth\x86`
+> Alors que les autres fournisseurs de magasins de clés dans cet article sont disponibles sur toutes les plateformes prises en charge par le pilote, l’implémentation SQLServerColumnEncryptionCertificateStoreProvider du pilote JDBC est disponible sur les systèmes d’exploitation Windows uniquement. Il comporte une dépendance sur le fichier sqljdbc_auth.dll qui est disponible dans le package de pilotes. Pour utiliser ce fournisseur, copiez le fichier sqljdbc_auth.dll dans un répertoire sur le chemin d’accès de système de Windows sur l’ordinateur où est installé le pilote JDBC. Vous pouvez également définir la propriété système java.libary.path afin de spécifier le répertoire du fichier sqljdbc_auth.dll. Si vous exécutez une machine virtuelle Java (JVM) 32 bits, utilisez le fichier sqljdbc_auth.dll dans le dossier x86, même si la version du système d'exploitation est x64. Si vous exécutez une machine virtuelle Java (JVM) 64 bits sur un processeur x64, utilisez le fichier sqljdbc_auth.dll dans le dossier x64. Par exemple, si vous utilisez la machine virtuelle Java 32 bits et le pilote JDBC est installé dans le répertoire par défaut, vous pouvez spécifier l’emplacement de la DLL à l’aide de l’argument suivant de la machine virtuelle (VM) au démarrage de l’application Java : `-Djava.library.path=C:\Microsoft JDBC Driver <version> for SQL Server\sqljdbc_<version>\enu\auth\x86`
 
 ### <a name="using-java-key-store-provider"></a>À l’aide du fournisseur de magasin de clés de Java
 Le pilote JDBC est fourni avec une implémentation de fournisseur de magasin de clés intégrée pour le magasin de clés de Java. Si le **keyStoreAuthentication** propriété de chaîne de connexion est présente dans la chaîne de connexion et il est défini sur « JavaKeyStorePassword », le pilote instancie automatiquement et enregistre le fournisseur de magasin de clés de Java. Le nom du fournisseur de magasin de clés de Java est MSSQL_JAVA_KEYSTORE. Ce nom peut également être interrogé à l’aide de l’API SQLServerColumnEncryptionJavaKeyStoreProvider.getName(). 
@@ -408,7 +408,7 @@ Le **sendTimeAsDatetime** propriété de connexion est utilisée pour configurer
 Pour plus d’informations sur cette propriété, consultez [java.sql.Time configurer comment les valeurs sont envoyées au serveur](configuring-how-java-sql-time-values-are-sent-to-the-server.md).
 
 ### <a name="configuring-how-string-values-are-sent-to-the-server"></a>Configurer comment les valeurs de chaîne sont envoyés au serveur
-Le **sendStringParametersAsUnicode** propriété de connexion est utilisée pour configurer la façon dont les valeurs de chaîne sont envoyés à SQL Server. Si la valeur true, des paramètres de chaîne est envoyée au serveur au format Unicode. Si la valeur false, paramètres de chaîne est envoyée dans un format non Unicode, tels que MBCS, Unicode ou ASCII. La valeur par défaut de cette propriété a la valeur true. Lorsque Always Encrypted est activé et une colonne char/varchar/varchar(max) est chiffrée, la valeur de **sendStringParametersAsUnicode** doit avoir la valeur true (ou être considérée comme la valeur par défaut). Si cette propriété est définie sur false, le pilote lève une exception lors de l’insertion de données à une colonne chiffrée char/varchar/varchar(max). Pour plus d’informations sur cette propriété, consultez [définissant les propriétés de connexion](../../connect/jdbc/setting-the-connection-properties.md).
+Le **sendStringParametersAsUnicode** propriété de connexion est utilisée pour configurer la façon dont les valeurs de chaîne sont envoyés à SQL Server. Si la valeur true, des paramètres de chaîne est envoyée au serveur au format Unicode. Si la valeur false, paramètres de chaîne est envoyée dans un format non Unicode, tels que MBCS, Unicode ou ASCII. La valeur par défaut de cette propriété a la valeur true. Lorsque Always Encrypted est activé et une colonne char/varchar/varchar(max) est chiffrée, la valeur de **sendStringParametersAsUnicode** doit être définie sur false. Si cette propriété est définie sur true, le pilote lève une exception lors du déchiffrement des données d’une colonne chiffrée char/varchar/varchar(max) qui comporte des caractères Unicode. Pour plus d’informations sur cette propriété, consultez [définissant les propriétés de connexion](../../connect/jdbc/setting-the-connection-properties.md).
   
 ## <a name="retrieving-and-modifying-data-in-encrypted-columns"></a>Extraction et modification de données dans des colonnes chiffrées
 Une fois que vous activez Always Encrypted pour les requêtes de l’application, vous pouvez utiliser l’API JDBC standard pour récupérer ou modifier des données dans les colonnes de la base de données chiffrée. Si votre application dispose des autorisations de base de données requis et peut accéder à la clé principale de colonne, le pilote chiffre tous les paramètres de requête qui ciblent des colonnes chiffrées et seront déchiffrer les données qui sont récupérées à partir des colonnes chiffrées.

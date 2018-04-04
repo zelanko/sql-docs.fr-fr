@@ -1,16 +1,16 @@
 ---
 title: BULK INSERT (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/04/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - BULK_TSQL
@@ -29,22 +29,24 @@ helpviewer_keywords:
 - bulk importing [SQL Server], BULK INSERT statement
 - file importing [SQL Server]
 ms.assetid: be3984e1-5ab3-4226-a539-a9f58e1e01e2
-caps.latest.revision: 
+caps.latest.revision: ''
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: ec29eaa73339980516f4a3de4b67fa195953d80a
-ms.sourcegitcommit: 7673ad0e84a6de69420e19247a59e39ca751a8aa
+ms.openlocfilehash: b7569b89a9ceffd99e15d11a5ef06c880411a479
+ms.sourcegitcommit: 3ed9be04cc7fb9ab1a9ec230c298ad2932acc71b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 03/17/2018
 ---
 # <a name="bulk-insert-transact-sql"></a>BULK INSERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Importe un fichier de données dans une table ou vue de base de données dans un format spécifié par l'utilisateur dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
-  
+
+[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
+
  ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
@@ -105,7 +107,7 @@ BULK INSERT
 
 **'** *data_source_name* **'**   
 **S’applique à :** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.   
-Source de données externe nommée pointant vers l’emplacement de Stockage Blob Azure du fichier qui sera importé. La source de données externe doit être créée à l’aide de l’option `TYPE = BLOB_STORAGE` ajoutée dans [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1. Pour plus d’informations, consultez [Créer une source de données externes](../../t-sql/statements/create-external-data-source-transact-sql.md).    
+Source de données externe nommée pointant vers l’emplacement de Stockage Blob Azure du fichier qui sera importé. La source de données externe doit être créée à l’aide de l’option `TYPE = BLOB_STORAGE` ajoutée dans [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1. Pour plus d’informations, consultez [CRÉER UNE SOURCE DE DONNÉES EXTERNES](../../t-sql/statements/create-external-data-source-transact-sql.md).    
   
  BATCHSIZE **=***batch_size*  
  Indique le nombre de lignes contenues dans un lot. Chaque lot est copié sur le serveur comme une transaction unique. En cas d'échec, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] valide ou annule la transaction pour chaque lot. Par défaut, toutes les données du fichier spécifié constituent un seul lot. Pour plus d'informations sur les performances, consultez la section « Notes » plus loin dans cette rubrique.  
@@ -156,7 +158,7 @@ Stockage Blob Azure.
 
 'errorfile_data_source_name'   
 **S’applique à :** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.
-Source de données externe nommée pointant vers l’emplacement de Stockage Blob Azure du fichier d’erreurs qui contiendra les erreurs détectées lors de l’importation. La source de données externe doit être créée à l’aide de l’option `TYPE = BLOB_STORAGE` ajoutée dans [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1. Pour plus d’informations, consultez [Créer une source de données externes](../../t-sql/statements/create-external-data-source-transact-sql.md).
+Source de données externe nommée pointant vers l’emplacement de Stockage Blob Azure du fichier d’erreur contenant les erreurs détectées lors de l’importation. La source de données externe doit être créée à l’aide de l’option `TYPE = BLOB_STORAGE` ajoutée dans [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1. Pour plus d’informations, consultez [CRÉER UNE SOURCE DE DONNÉES EXTERNES](../../t-sql/statements/create-external-data-source-transact-sql.md).
  
  FIRSTROW **=***first_row*  
  Numéro de la première ligne à charger. La valeur par défaut est la première ligne du fichier de données spécifié. FIRSTROW commence à 1.  
@@ -171,7 +173,7 @@ Source de données externe nommée pointant vers l’emplacement de Stockage Blo
 
 FORMATFILE_DATASOURCE **=** 'data_source_name'   
 **S’applique à :** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 1.1.   
-Source de données externe nommée pointant vers l’emplacement de Stockage Blob Azure du fichier de format qui définira le schéma des données importées. La source de données externe doit être créée à l’aide de l’option `TYPE = BLOB_STORAGE` ajoutée dans [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1. Pour plus d’informations, consultez [Créer une source de données externes](../../t-sql/statements/create-external-data-source-transact-sql.md).
+Source de données externe nommée pointant vers l’emplacement de Stockage Blob Azure du fichier de format qui définira le schéma des données importées. La source de données externe doit être créée à l’aide de l’option `TYPE = BLOB_STORAGE` ajoutée dans [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1. Pour plus d’informations, consultez [CRÉER UNE SOURCE DE DONNÉES EXTERNES](../../t-sql/statements/create-external-data-source-transact-sql.md).
   
  KEEPIDENTITY  
  Indique que la ou les valeurs d'identité figurant dans le fichier de données importé doivent être utilisées dans la colonne d'identité. Si KEEPIDENTITY n'est pas spécifié, les valeurs d'identité de cette colonne sont vérifiées mais pas importées, et [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] affecte automatiquement des valeurs uniques en fonction de la valeur initiale et d'un incrément spécifié lors de la création de la table. Si le fichier de données ne contient pas de valeurs pour la colonne d'identité de la table ou de la vue, utilisez un fichier de format pour indiquer que la colonne d'identité ne doit pas être prise en compte lors de l'importation des données ; dans ce cas, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] attribue automatiquement des valeurs uniques à la colonne. Pour plus d’informations, consultez [DBCC CHECKIDENT &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-checkident-transact-sql.md).  
@@ -214,7 +216,7 @@ Source de données externe nommée pointant vers l’emplacement de Stockage Blo
   
 FORMAT **=** 'CSV'   
 **S’applique à :** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.   
-Spécifie un fichier de valeurs séparées par des virgules qui est conforme à la norme [RFC 4180](https://tools.ietf.org/html/rfc4180).
+Spécifie un fichier de valeurs séparées par des virgules conforme à la norme [RFC 4180](https://tools.ietf.org/html/rfc4180).
 
 FIELDQUOTE **=** 'field_quote'   
 **S’applique à :** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.   
@@ -235,10 +237,10 @@ Spécifie un caractère qui sera utilisé comme caractère de guillemet dans le 
 À partir de [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1, format_file_path peut être dans 
 Stockage Blob Azure.
 
- FIELDTERMINATOR **='***indicateur_fin_de_champ***'**  
+ FIELDTERMINATOR **='***field_terminator***'**  
  Spécifie la marque de fin de champ à utiliser pour les fichiers de données de type **char** et **widechar**. La marque de fin de champ par défaut est le caractère de tabulation (\t). Pour plus d’informations, consultez [Spécifier des indicateurs de fin de champ et de fin de ligne &#40;SQL Server&#41;](../../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md).  
 
- ROWTERMINATOR **='***indicateur_fin_de_ligne***'**  
+ ROWTERMINATOR **='***row_terminator***'**  
  Spécifie le délimiteur de fin de ligne à utiliser pour les fichiers de données de type **char** et **widechar**. Par défaut, il s’agit de **\r\n** (caractère de nouvelle ligne).  Pour plus d’informations, consultez [Spécifier des indicateurs de fin de champ et de fin de ligne &#40;SQL Server&#41;](../../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md).  
 
   
@@ -247,7 +249,7 @@ Stockage Blob Azure.
   
 -   Les représentations en mode natif des types de données **float** ou **real** sont valides.  
   
--   Les données Unicode comportent un nombre d'octets pair.  
+-   les données Unicode comportent un nombre d'octets pair.  
   
 ## <a name="data-types"></a>Types de données  
   
@@ -272,7 +274,7 @@ CREATE TABLE t_float(c1 float, c2 decimal (5,4));
 8.0000000000000002E-28.0000000000000002E-2  
 ```  
   
- Cependant, l'instruction BULK INSERT ne peut pas importer ces données directement dans `t_float`, car sa deuxième colonne, `c2`, utilise le type de données `decimal`. Un fichier de format est donc nécessaire. Il doit mapper les données **float** à notation scientifique au format décimal de la colonne `c2`.  
+ Cependant, l'instruction BULK INSERT ne peut pas importer ces données directement dans `t_float`, car sa deuxième colonne, `c2`, utilise le type de données `decimal`. Un fichier de format est donc nécessaire, Il doit mapper les données **float** à notation scientifique au format décimal de la colonne `c2`.  
   
  Le fichier de format suivant utilise le type de données `SQLFLT8` pour établir la correspondance entre le deuxième champ de données et la deuxième colonne :  
   

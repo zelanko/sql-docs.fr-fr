@@ -1,7 +1,7 @@
 ---
-title: "Mettre à niveau les composants de la machine learning dans une instance de SQL Server | Documents Microsoft"
+title: "Lier des composants de machine learning sur SQL Server à Microsoft Machine Learning Server | Documents Microsoft"
 ms.custom: 
-ms.date: 10/31/2017
+ms.date: 03/15/2018
 ms.reviewer: 
 ms.suite: sql
 ms.prod: machine-learning-services
@@ -12,19 +12,19 @@ ms.tgt_pltfrm:
 ms.topic: article
 applies_to:
 - SQL Server (starting with 2016 CTP3)
-ms.assetid: 4da80998-f929-4fad-a86f-87d09c1a79ef
+ms.assetid: 
 caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
 ms.workload: On Demand
-ms.openlocfilehash: 643d5062f14de70cec493fd9c2fab69989eb4dd6
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 7c67d0accb7ac7be46105e5148028fac3f67aa0f
+ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/21/2018
 ---
-# <a name="upgrade-machine-learning-components-in-a-sql-server-instance"></a>Mettre à niveau les composants de la machine learning dans une instance de SQL Server
+# <a name="bind-machine-learning-components-on-sql-server-to-microsoft-machine-learning-server"></a>Lier des composants de machine learning sur SQL Server à Microsoft Machine Learning Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Cet article explique le processus de _liaison_, que vous pouvez utiliser pour mettre à niveau les composants utilisés dans SQL Server d’apprentissage automatique. Le processus de liaison verrouille le serveur dans une cadence de mise à jour selon les versions du serveur de Machine Learning, au lieu d’utiliser le serveur SQL Server de version et mettre à jour de la planification.
@@ -106,7 +106,7 @@ Si vous ne souhaitez pas utiliser l’Assistant, vous pouvez installer le serveu
 > 
 > Impossible de trouver SqlBindR.exe ? Vous avez téléchargé probablement pas les composants répertoriés ci-dessus. Cet utilitaire est disponible uniquement avec le programme d’installation de Windows pour l’apprentissage d’ordinateur serveur.
 
-1. Ouvrez une invite de commandes en tant qu’administrateur et accédez au dossier contenant sqlbindr.exe. L’emplacement par défaut est`C:\Program Files\Microsoft\MLServer\Setup`
+1. Ouvrez une invite de commandes en tant qu’administrateur et accédez au dossier contenant sqlbindr.exe. L’emplacement par défaut est `C:\Program Files\Microsoft\MLServer\Setup`
 
 2. Tapez la commande suivante pour afficher la liste des instances disponibles : `SqlBindR.exe /list`
   
@@ -114,7 +114,7 @@ Si vous ne souhaitez pas utiliser l’Assistant, vous pouvez installer le serveu
 
 3. Exécutez le **SqlBindR.exe** avec la */lier* argument et spécifiez le nom de l’instance à mettre à niveau, à l’aide du nom de l’instance qui a été retourné à l’étape précédente.
 
-   Par exemple, pour mettre à niveau l’instance par défaut, tapez :`SqlBindR.exe /bind MSSQL14.MSSQLSERVER`
+   Par exemple, pour mettre à niveau l’instance par défaut, tapez :  `SqlBindR.exe /bind MSSQL14.MSSQLSERVER`
 
 4. Une fois la mise à niveau terminée, redémarrez le service de Launchpad associé à n’importe quelle instance qui a été modifié.
 
@@ -135,7 +135,7 @@ Si vous décidez que vous ne souhaitez plus mettre à niveau les composants à l
 
     Pour obtenir des instructions, consultez [désinstaller Machine Learning pour Windows Server](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-uninstall). 
 
-### <a name="bkmk_wizunbind"></a>Supprimer la liaison à l’aide de l’Assistant
+### <a name="bkmk_wizunbind"></a> Supprimer la liaison à l’aide de l’Assistant
 
 1. Recherchez le programme d’installation pour l’apprentissage d’ordinateur serveur. Si vous avez supprimé le programme d’installation, vous devrez peut-être télécharger à nouveau, ou copiez-la depuis un autre ordinateur.
 2. Veillez à exécuter le programme d’installation sur l’ordinateur qui a l’instance que vous souhaitez supprimer la liaison.
@@ -144,7 +144,7 @@ Si vous décidez que vous ne souhaitez plus mettre à niveau les composants à l
 4. Acceptez le contrat de licence. Vous devez indiquer votre acceptation des termes du contrat de licence même lors de l’installation.
 5. Cliquez sur **Terminer**. Le processus prend un certain temps.
 
-### <a name="bkmk_cmdunbind"></a>Supprimer la liaison à l’aide de la ligne de commande
+### <a name="bkmk_cmdunbind"></a> Supprimer la liaison à l’aide de la ligne de commande
 
 1. Ouvrez une invite de commandes et accédez au dossier qui contient **sqlbindr.exe**, comme décrit dans la section précédente.
 
@@ -178,7 +178,7 @@ Pour résoudre ce problème, vous pouvez modifier l’installation de R Server e
 ### <a name="binding-or-unbinding-leaves-multiple-temporary-folders"></a>La liaison ou la séparation laisse plusieurs dossiers temporaires
 
 La liaison et annulation de la liaison des opérations échouent parfois à nettoyer les dossiers temporaires.
-Si vous trouvez des dossiers avec un nom tel que cela, vous pouvez le supprimer une fois l’installation terminée :`R_SERVICES_<guid>`
+Si vous trouvez des dossiers avec un nom tel que cela, vous pouvez le supprimer une fois l’installation terminée : `R_SERVICES_<guid>`
 
 > [!NOTE]
 > Veillez à attendre que l’installation est terminée. Il peut prendre beaucoup de temps à supprimer les bibliothèques R associé liés une version, puis ajoutez les nouvelles bibliothèques R. Lorsque l’opération est terminée, les dossiers temporaires sont supprimés.

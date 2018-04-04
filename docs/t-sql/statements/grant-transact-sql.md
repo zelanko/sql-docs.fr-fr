@@ -1,16 +1,16 @@
 ---
 title: GRANT (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 06/12/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - GRANT_TSQL
@@ -27,23 +27,23 @@ helpviewer_keywords:
 - database-level securables [SQL Server]
 - permissions [SQL Server], granting
 ms.assetid: a760c16a-4d2d-43f2-be81-ae9315f38185
-caps.latest.revision: 
+caps.latest.revision: ''
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 618e2068c1b1e9b99a68d0216c17c66e9b2cf3d1
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 6b470e1247c98d35aff96e19216d0cec36650749
+ms.sourcegitcommit: 6b1618aa3b24bf6759b00a820e09c52c4996ca10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="grant-transact-sql"></a>GRANT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Accorde des autorisations à un principal sur un élément sécurisable.  Le concept général est d’ACCORDER \<une autorisation> SUR \<un objet> À \<un utilisateur, une connexion ou un groupe>. Pour obtenir une présentation générale des autorisations, consultez [Autorisations &#40;moteur de base de données&#41;](../../relational-databases/security/permissions-database-engine.md).  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de l’article](../../database-engine/configure-windows/media/topic-link.gif "Icône Lien de l’article") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -83,7 +83,7 @@ GRANT
   
 ## <a name="arguments"></a>Arguments  
  ALL  
- Cette option est déconseillée mais maintenue uniquement pour la compatibilité descendante. Elle n'accorde pas toutes les autorisations possibles. Elle revient à accorder les autorisations suivantes.  
+ Cette option est déconseillée mais maintenue uniquement pour la compatibilité descendante. Elle n'accorde pas toutes les autorisations possibles. Elle revient à accorder les autorisations suivantes : 
   
 -   Si l'élément sécurisable est une base de données, ALL représente BACKUP DATABASE, BACKUP LOG, CREATE DATABASE, CREATE DEFAULT, CREATE FUNCTION, CREATE PROCEDURE, CREATE RULE, CREATE TABLE et CREATE VIEW.  
   
@@ -101,7 +101,7 @@ PRIVILEGES
  Inclus pour la conformité aux normes ISO. Ne change pas le comportement de l'option ALL.  
   
 *permission*  
- Nom d'une autorisation. Les mappages valides des autorisations des éléments sécurisables sont décrits dans les sous-rubriques qui suivent.  
+ Nom d'une autorisation. Les mappages valides des autorisations aux éléments sécurisables sont décrits dans les sous-rubriques qui suivent.  
   
 *column*  
  Spécifie le nom de la colonne d'une table à laquelle les autorisations s'appliquent. Les parenthèses () sont requises.  
@@ -113,7 +113,7 @@ PRIVILEGES
  Indique l'élément sécurisable sur lequel l'autorisation est accordée.  
   
 TO *principal*  
- Nom d’un principal. Les principaux auxquels il est possible d'accorder des autorisations sur un élément sécurisable varient en fonction de l'élément sécurisable. Voir les sous-rubriques ci-dessous pour connaître les combinaisons acceptées.  
+ Nom d’un principal. Les principaux auxquels il est possible d'accorder des autorisations sur un élément sécurisable varient en fonction de l'élément sécurisable. Consultez les sous-rubriques ci-dessous pour connaître les combinaisons acceptées.  
   
 GRANT OPTION  
  Indique que le détenteur de l'autorisation a également la possibilité d'accorder l'autorisation spécifiée à d'autres principaux.  
@@ -126,7 +126,7 @@ L’utilisation de la clause AS n’est généralement pas recommandé, sauf si 
 L’utilisation de AS dans cette instruction n’implique pas la possibilité d’emprunter l’identité d’un autre utilisateur. 
   
 ## <a name="remarks"></a>Notes   
- La syntaxe complète de l'instruction GRANT est complexe. Le diagramme de syntaxe ci-dessus a été simplifié pour attirer l'attention sur sa structure. La syntaxe complète d'accord des autorisations sur des éléments sécurisables particuliers est décrite dans les rubriques ci-dessous.  
+ La syntaxe complète de l'instruction GRANT est complexe. Le diagramme de syntaxe ci-dessus a été simplifié pour attirer l'attention sur sa structure. La syntaxe complète d’accord des autorisations sur des éléments sécurisables particuliers est décrite dans les articles ci-dessous.  
   
  L'instruction REVOKE peut s'utiliser pour supprimer des autorisations accordées et l'instruction DENY pour empêcher un principal d'obtenir une autorisation particulière au moyen d'une instruction GRANT.  
   
@@ -154,17 +154,17 @@ GRANT EXECUTE ON TestMe TO User2 AS TesterRole;
 ```  
   
 ## <a name="chart-of-sql-server-permissions"></a>Graphique des autorisations SQL Server  
- Pour obtenir un graphique de la taille d’une affiche de toutes les autorisations du [!INCLUDE[ssDE](../../includes/ssde-md.md)] au format PDF, consultez [http://go.microsoft.com/fwlink/?LinkId=229142](http://go.microsoft.com/fwlink/?LinkId=229142).  
+ Pour obtenir un graphique de la taille d’une affiche de toutes les autorisations du [!INCLUDE[ssDE](../../includes/ssde-md.md)] au format PDF, consultez [https://aka.ms/sql-permissions-poster](https://aka.ms/sql-permissions-poster).  
   
 ## <a name="permissions"></a>Autorisations  
- Le fournisseur d'autorisations (ou le principal spécifié avec l'option AS) doit posséder l'autorisation elle-même avec l'option GRANT OPTION ou une autorisation plus élevée qui implique l'autorisation accordée. En cas d'utilisation de l'option AS, d'autres critères s'appliquent. Pour plus d'informations, consultez la rubrique sur les éléments sécurisables.  
+ Le fournisseur d'autorisations (ou le principal spécifié avec l'option AS) doit posséder l'autorisation elle-même avec l'option GRANT OPTION ou une autorisation plus élevée qui implique l'autorisation accordée. En cas d'utilisation de l'option AS, d'autres critères s'appliquent. Pour plus d’informations, consultez l’article sur les éléments sécurisables.  
   
  Les propriétaires d'objets peuvent accorder des autorisations sur les objets qu'ils possèdent. Les principaux ayant l'autorisation CONTROL sur un élément sécurisable peuvent accorder une autorisation sur cet élément.  
   
  Les détenteurs de l'autorisation CONTROL SERVER, tels que les membres du rôle serveur fixe sysadmin, peuvent accorder une autorisation sur n'importe quel élément sécurisable du serveur. Les bénéficiaires de l'autorisation CONTROL sur une base de données, tels que les membres du rôle de base de données fixe db_owner, peuvent accorder une autorisation quelconque sur tout élément sécurisable inclus dans la base de données. Les détenteurs de l'autorisation CONTROL sur un schéma peuvent accorder une autorisation sur n'importe quel objet dans ce schéma.  
   
 ## <a name="examples"></a>Exemples  
- Le tableau suivant répertorie les éléments sécurisables et les rubriques qui décrivent leur syntaxe.  
+ Le tableau suivant répertorie les éléments sécurisables et les articles qui décrivent leur syntaxe.  
   
 |||  
 |-|-|  
@@ -189,12 +189,12 @@ GRANT EXECUTE ON TestMe TO User2 AS TesterRole;
 |Itinéraire|[GRANT - Octroyer des autorisations dans Service Broker &#40;Transact-SQL&#41;](../../t-sql/statements/grant-service-broker-permissions-transact-sql.md)|  
 |schéma|[GRANT - Octroyer des autorisations sur un schéma &#40;Transact-SQL&#41;](../../t-sql/statements/grant-schema-permissions-transact-sql.md)|  
 |Liste de propriétés de recherche|[GRANT - Accorder des autorisations sur une liste de propriétés de recherche &#40;Transact-SQL&#41;](../../t-sql/statements/grant-search-property-list-permissions-transact-sql.md)|  
-|Serveur|[GRANT Octroyer des autorisations sur un serveur &#40;Transact-SQL&#41;](../../t-sql/statements/grant-server-permissions-transact-sql.md)|  
+|Serveur|[Autorisations de serveur GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-server-permissions-transact-sql.md)|  
 |Service|[GRANT - Octroyer des autorisations dans Service Broker &#40;Transact-SQL&#41;](../../t-sql/statements/grant-service-broker-permissions-transact-sql.md)|  
 |Procédure stockée|[GRANT – Octroyer des autorisations sur un objet &#40;Transact-SQL&#41;](../../t-sql/statements/grant-object-permissions-transact-sql.md)|  
 |Clé symétrique|[GRANT - Octroyer des autorisations sur une clé symétrique &#40;Transact-SQL&#41;](../../t-sql/statements/grant-symmetric-key-permissions-transact-sql.md)|  
 |Synonyme|[GRANT – Octroyer des autorisations sur un objet &#40;Transact-SQL&#41;](../../t-sql/statements/grant-object-permissions-transact-sql.md)|  
-|Objets système|[GRANT - Octroyer des autorisations sur un objet système &#40;Transact-SQL&#41;](../../t-sql/statements/grant-system-object-permissions-transact-sql.md)|  
+|Objets système|[GRANT – octroi d’autorisations d’objet système &#40;Transact-SQL&#41;](../../t-sql/statements/grant-system-object-permissions-transact-sql.md)|  
 |Table de charge de travail|[GRANT – Octroyer des autorisations sur un objet &#40;Transact-SQL&#41;](../../t-sql/statements/grant-object-permissions-transact-sql.md)|  
 |Type|[GRANT – Octroyer des autorisations sur un type &#40;Transact-SQL&#41;](../../t-sql/statements/grant-type-permissions-transact-sql.md)|  
 |Utilisateur|[GRANT - Octroyer des autorisations à un principal de base de données &#40;Transact-SQL&#41;](../../t-sql/statements/grant-database-principal-permissions-transact-sql.md)|  

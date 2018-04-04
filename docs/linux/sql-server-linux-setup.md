@@ -1,25 +1,25 @@
 ﻿---
-title: "Guide d’installation pour 2017 du serveur SQL sur Linux | Documents Microsoft"
-description: "Installer, mettre à jour et désinstaller SQL Server sur Linux. Cet article traite des scénarios en ligne, hors connexion et sans assistance."
+title: Guide d’installation pour 2017 du serveur SQL sur Linux | Documents Microsoft
+description: Installer, mettre à jour et désinstaller SQL Server sur Linux. Cet article traite des scénarios en ligne, hors connexion et sans assistance.
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 03/08/2018
+ms.date: 03/22/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 565156c3-7256-4e63-aaf0-884522ef2a52
 ms.workload: Active
-ms.openlocfilehash: d8f8cde3d3a299008d75c4b701be224c458880eb
-ms.sourcegitcommit: 6c06267f3eeeb3f0d6fc4c57e1387621720ca8bf
+ms.openlocfilehash: ef5e2131681981e85971d734ebbe576e106e2b92
+ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="installation-guidance-for-sql-server-on-linux"></a>Aide à l’installation de SQL Server sur Linux
 
@@ -47,12 +47,10 @@ SQL Server 2017 est pris en charge sur Red Hat Enterprise Linux (RHEL), SUSE Lin
 | **Ubuntu** | 16.04 | [Obtenir Ubuntu 16.04](http://www.ubuntu.com/download/server)
 | **Moteur docker** | 1.8+ | [Obtenir Docker](http://www.docker.com/products/overview)
 
+Microsoft prend également en charge le déploiement et la gestion des conteneurs de SQL Server à l’aide de OpenShift et Kubernetes.
+
 > [!NOTE]
-> Il est parfois possible d’installer et exécuter SQL Server sur d’autres plateformes Linux étroitement liées, mais SQL Server est uniquement testé et pris en charge sur les plateformes répertoriées dans le tableau précédent.
-
-Microsoft prend en charge le déploiement et la gestion des conteneurs de SQL Server à l’aide de OpenShift et Kubernetes.
-
-Pour la dernière stratégie de prise en charge pour SQL Server 2017, consultez [politique de support technique pour Microsoft SQL Server](https://support.microsoft.com/help/4047326/support-policy-for-microsoft-sql-server).
+> SQL Server est testé et pris en charge sous Linux pour les distributions précédemment répertoriées. Si vous choisissez d’installer SQL Server sur un système d’exploitation non pris en charge, passez en revue les **prennent en charge de la stratégie** section de la [politique de support technique pour Microsoft SQL Server](https://support.microsoft.com/help/4047326/support-policy-for-microsoft-sql-server) pour comprendre la prise en charge implications.
 
 ## <a id="system"></a> Configuration système requise
 
@@ -108,7 +106,7 @@ Pour restaurer ou rétrograder SQL Server vers une version précédente, procéd
 
 1. Identifiez le numéro de version pour le package de SQL Server que vous souhaitez rétrograder. Pour obtenir la liste de numéros de versions de package, consultez les [notes de publication](sql-server-linux-release-notes.md).
 
-1. Passez à une version antérieure de SQL Server. Dans les commandes suivantes, remplacez `<version_number>` avec le numéro de version SQL Server que vous avez identifié à l’étape 1.
+1. Passez à une version antérieure de SQL Server. Dans les commandes suivantes, remplacez `<version_number>` par le numéro de version SQL Server que vous avez identifié à l’étape 1.
 
    | Plateforme | Commandes de mise à jour de package |
    |-----|-----|
@@ -151,7 +149,7 @@ sudo rm -rf /var/opt/mssql/
 
 Vous pouvez effectuer une installation sans assistance de la manière suivante :
 
-- Suivez les étapes initial dans le [Démarrages rapides](#platforms) pour inscrire les référentiels, installez SQL Server.
+- Suivez les étapes initiales dans les [Démarrages rapides](#platforms) pour inscrire les référentiels et installez SQL Server.
 - Lorsque vous exécutez `mssql-conf setup`, définissez les [variables d’environnement](sql-server-linux-configure-environment-variables.md) et utilisez l'option `-n` (sans invite). 
 
 L’exemple suivant configure l’édition Developer de SQL Server avec la variable d'environnement **MSSQL_PID**. Elle accepte également le CLUF (**ACCEPT_EULA**) et définit le mot de passe SA (**MSSQL_SA_PASSWORD**). Le paramètre `-n` effectue une installation sans invite où les valeurs de configuration sont extraites des variables d’environnement. 
@@ -200,7 +198,7 @@ Si l’ordinateur Linux n’a pas accès aux référentiels en ligne utilisés d
 
    Après avoir résolu les dépendances manquantes, essayez de réinstaller le package mssql-server.
 
-1. **Terminer l’installation de SQL Server**. Utilisez **mssql-conf** pour terminer l’installation de SQL Server :
+1. **Terminer l’installation de SQL Server**. Utiliser **mssql-conf** pour terminer l’installation de SQL Server :
 
    ```bash
    sudo /opt/mssql/bin/mssql-conf setup
@@ -212,7 +210,7 @@ Après l’installation, vous pouvez également installer ou activer les fonctio
 
 - [Outils de ligne de commande de SQL Server](sql-server-linux-setup-tools.md)
 - [SQL Server Agent](sql-server-linux-setup-sql-agent.md)
-- [Recherche en texte intégral SQL Server](sql-server-linux-setup-full-text-search.md)
+- [Recherche de texte intégral SQL Server](sql-server-linux-setup-full-text-search.md)
 - [SQL Server Integration Services (Ubuntu)](sql-server-linux-setup-ssis.md)
 
 [!INCLUDE[Get Help Options](../includes/paragraph-content/get-help-options.md)]

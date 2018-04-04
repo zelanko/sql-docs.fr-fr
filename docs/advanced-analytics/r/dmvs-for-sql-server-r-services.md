@@ -1,31 +1,31 @@
 ---
 title: Vues de gestion dynamique pour SQL Server Machine Learning Services | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 07/31/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: b3643ea0-d9f3-463f-8ece-572127f32a24
-caps.latest.revision: 
+caps.latest.revision: ''
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: d3c90457c7d55071520546e6362a451427503a52
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 2e51f5229eb085eb4b92a4f6f53cc7b28ebb7485
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="dmvs-for-sql-server-machine-learning-services"></a>Vues de gestion dynamique pour les Services SQL Server Machine Learning
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Cette rubrique répertorie les affichages catalogue système et les vues de gestion dynamique liées à l’apprentissage automatique dans SQL Server.
+L’article répertorie les affichages catalogue système et les vues de gestion dynamique liées à l’apprentissage automatique dans SQL Server.
 
 Pour plus d’informations sur les événements étendus, consultez [événements étendus pour apprentissage](../../advanced-analytics/r/extended-events-for-sql-server-r-services.md).
 
@@ -53,7 +53,7 @@ Vous pouvez surveiller et analyser les ressources utilisées par les scripts ext
   Cette DMV présente les compteurs suivants pour les scripts externes par instance :
 
   + **Nombre total d’exécutions**: nombre de processus externes démarrées par des appels locaux ou distants
-  + **Exécutions en parallèle**: nombre de fois où un script inclus le  _@parallel_  spécification et que [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] a été en mesure de générer et utiliser un plan de requête parallèle
+  + **Exécutions en parallèle**: nombre de fois où un script inclus le _@parallel_ spécification et que [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] a été en mesure de générer et utiliser un plan de requête parallèle
   + **Diffusion en continu des exécutions**: nombre de fois que la fonctionnalité de diffusion en continu a été appelée.
   + **Exécutions de CC SQL**: nombre d’externes scripts d’exécution où l’appel a été instancié à distance et de SQL Server a été utilisé comme contexte de calcul
   + **Connexions par auth. Connexions**: nombre de fois où un appel de bouclage ODBC a été effectué à l’aide d’implicite de l’authentification ; autrement dit, le [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] exécuté l’appel de la part de l’utilisateur envoie la demande de script

@@ -1,29 +1,30 @@
 ---
-title: Pilote PHP pour SQL Server High Availability, Disaster Recovery | Documents Microsoft
-ms.custom: 
-ms.date: 01/19/2017
+title: Prise en charge pour la haute disponibilité, récupération d’urgence pour les pilotes Microsoft SQL Server pour PHP | Documents Microsoft
+ms.custom: ''
+ms.date: 03/26/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 73a80821-d345-4fea-b076-f4aabeb4af3e
-caps.latest.revision: "15"
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a4777aa2ffac5b3932815dee65eb237337d95784
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: ee0be974c5998d531e20ed64c871ca85892aa46f
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/28/2018
 ---
-# <a name="php-driver-for-sql-server-support-for-high-availability-disaster-recovery"></a>Prise en charge de la récupération d’urgence et la haute disponibilité par le pilote SQL Server pour PHP
+# <a name="support-for-high-availability-disaster-recovery"></a>Prise en charge des fonctionnalités de récupération d’urgence/haute disponibilité
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 Cette rubrique traite [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] prise en charge (ajouté dans la version 3.0) pour la récupération d’urgence haute disponibilité-- [!INCLUDE[ssHADR](../../includes/sshadr_md.md)].  La prise en charge [!INCLUDE[ssHADR](../../includes/sshadr_md.md)] a été ajoutée dans [!INCLUDE[ssSQL11](../../includes/sssql11_md.md)]. Pour plus d'informations sur [!INCLUDE[ssHADR](../../includes/sshadr_md.md)], consultez la documentation en ligne de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] .  
@@ -38,7 +39,7 @@ Si vous ne vous connectez pas à un écouteur de groupe de disponibilité, et si
 ## <a name="connecting-with-multisubnetfailover"></a>Connexion à MultiSubnetFailover  
 Le **MultiSubnetFailover** propriété de connexion indique que l’application est déployée dans un groupe de disponibilité ou Instance de Cluster de basculement et que le [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] essaient de se connecter à la base de données sur le serveur principal [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] traite de l’instance en essayant de se connecter à tous les l’adresse IP. Lorsque **MultiSubnetFailover = true** est spécifié pour une connexion, le client tente de tentatives de connexion TCP plus rapidement que les intervalles de retransmission TCP par défaut du système d’exploitation. Cela permet une reconnexion plus rapide après le basculement d'un groupe de disponibilité AlwaysOn ou d'une instance de cluster de basculement AlwaysOn et s'applique aux groupes de disponibilité et aux instances de cluster de basculement uniques et à plusieurs sous-réseaux.  
   
-Spécifiez toujours **MultiSubnetFailover = True** lors de la connexion à un écouteur de groupe de disponibilité de SQL Server 2012 ou une Instance de Cluster de basculement SQL Server 2012. **MultiSubnetFailover** permet un basculement plus rapide pour tous les groupes de disponibilité et l’instance de cluster de basculement dans SQL Server 2012, et réduit considérablement le temps de basculement pour les topologies AlwaysOn uniques et de sous-réseaux multiples. Lors d'un basculement de sous-réseaux multiples, le client tente les connexions en parallèle. Lors d’un basculement de sous-réseau, le [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] sera intensément d’établir la connexion TCP.  
+Spécifiez toujours **MultiSubnetFailover = True** lors de la connexion à un écouteur de groupe de disponibilité de SQL Server 2012 ou une Instance de Cluster de basculement SQL Server 2012. **MultiSubnetFailover** permet un basculement plus rapide pour tous les groupes de disponibilité et une instance de cluster de basculement dans SQL Server 2012 et réduit considérablement les temps de basculement pour les topologies AlwaysOn de sous-réseaux uniques et multiples. Lors d'un basculement de sous-réseaux multiples, le client tente les connexions en parallèle. Lors d’un basculement de sous-réseau, le [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] sera intensément d’établir la connexion TCP.  
   
 Pour plus d’informations sur les mots clés de chaîne de connexion dans [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)], consultez [Options de connexion](../../connect/php/connection-options.md).  
   
@@ -83,7 +84,7 @@ Une base de données peut autoriser ou interdire les charges de travail en lectu
 Le mot clé **ApplicationIntent** est utilisé pour activer le routage en lecture seule.  
   
 ## <a name="read-only-routing"></a>Routage en lecture seule  
-Le routage en lecture seule est une fonctionnalité qui peut garantir la disponibilité d'un réplica en lecture seule d'une base de données. Pour activer le routage en lecture seule :  
+Le routage en lecture seule est une fonctionnalité qui permet de garantir la disponibilité d'un réplica de base de données en lecture seule. Pour activer le routage en lecture seule :  
   
 1.  Vous devez vous connecter à un écouteur du groupe de disponibilité Always On.  
   
@@ -93,7 +94,7 @@ Le routage en lecture seule est une fonctionnalité qui peut garantir la disponi
   
 Il est possible que plusieurs connexions utilisant le routage en lecture seule ne se connectent pas toutes au même réplica en lecture seule. Les modifications apportées à la synchronisation de base de données ou à la configuration du routage du serveur peuvent entraîner des connexions clientes à différents réplicas en lecture seule. Pour vérifier que toutes les demandes en lecture seule se connectent au même réplica en lecture seule, ne transmettez pas d’écouteur du groupe de disponibilité au mot clé de chaîne de connexion **Server**. Au lieu de cela, spécifiez le nom de l'instance en lecture seule.  
   
-Le routage en lecture seule peut prendre plus de temps que la connexion au réplica primaire car le routage en lecture seule se connecte d'abord au réplica primaire, puis recherche le meilleur réplica secondaire lisible disponible. Pour cette raison, vous devez augmenter le délai de connexion.  
+Le routage en lecture seule peut prendre plus longtemps que la connexion à la base de données principale, car il se connecte d'abord à la base de données principale, puis recherche la meilleure base de données secondaire accessible disponible. Dans ce cas, le délai de connexion doit être augmenté.  
   
 ## <a name="see-also"></a>Voir aussi  
 [Connexion au serveur](../../connect/php/connecting-to-the-server.md)  

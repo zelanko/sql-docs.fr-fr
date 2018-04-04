@@ -1,29 +1,29 @@
 ---
 title: Annotations CSDL pour Business Intelligence (CSDLBI) | Documents Microsoft
-ms.custom: 
-ms.date: 03/07/2017
+ms.custom: ''
+ms.date: 03/30/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
 ms.assetid: bf6f372a-bc67-45ea-a771-b2dc5b0527e5
-caps.latest.revision: 
+caps.latest.revision: 21
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: dfc70006520f0d4a9e47661de5c065aecf59356f
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: f2f0d4c06b15a6bb2fab3eaf44a9bcb17f225a91
+ms.sourcegitcommit: 8f1d1363e18e0c32ff250617ab6cb2da2147bf8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="csdl-annotations-for-business-intelligence-csdlbi"></a>Annotations CSDL pour Business Intelligence (CSDLBI)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -32,13 +32,7 @@ ms.lasthandoff: 02/23/2018
 ## <a name="understanding-the-role-of-csdl"></a>Comprendre le rôle du langage CSDL  
  CSDL est un langage basé sur XML qui décrit des entités, des relations et des fonctions. Le langage CSDL est défini dans le cadre de l'Entity Data Framework. Les annotations BI sont une extension conçue pour prendre en charge la modélisation des données à l'aide d'[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
- Bien que le langage CSDL soit compatible avec l'Entity Data Framework, vous n'avez pas besoin de comprendre le modèle de relation d'entité et vous n'avez pas non plus besoin d'outils spéciaux pour générer un modèle tabulaire ou un rapport basé sur un modèle. Pour générer des modèles, utilisez des outils clients tels que [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] ou une API telle que AMO, puis déployez le modèle sur un serveur. Pour se connectent au modèle les clients utilisent un fichier de définition de modèle, généralement publié dans une bibliothèque SharePoint où il pourra être utilisé par les concepteurs de rapports et les consommateurs de rapports. Pour plus d'informations, consultez ces liens :  
-  
--   [Solutions de modèles tabulaires](../../analysis-services/tabular-models/tabular-model-solutions-ssas-tabular.md)  
-  
--   [Déploiement de solutions de modèle tabulaire](../../analysis-services/tabular-models/tabular-model-solution-deployment-ssas-tabular.md)  
-  
--   [Connexion de modèle sémantique BI Power Pivot &#40;.bism&#41;](../../analysis-services/power-pivot-sharepoint/power-pivot-bi-semantic-model-connection-bism.md)  
+ Bien que le langage CSDL soit compatible avec l'Entity Data Framework, vous n'avez pas besoin de comprendre le modèle de relation d'entité et vous n'avez pas non plus besoin d'outils spéciaux pour générer un modèle tabulaire ou un rapport basé sur un modèle. Pour générer des modèles, utilisez des outils clients tels que [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] ou une API telle que AMO, puis déployez le modèle sur un serveur.  
   
  Le schéma CSDLBI est généré par le serveur Analysis Services en réponse à une demande d'une définition de modèle d'un client de création de rapports, tel que [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]. L'application cliente envoie une requête XML au serveur Analysis Services qui héberge les données du modèle. En réponse, le serveur envoie un message XML contenant une définition des entités du modèle, en utilisant les annotations CSDLBI. Le client du rapport utilise ensuite des informations pour présenter les champs, les agrégations et les mesures qui sont disponibles dans le modèle. Les annotations CSDLBI fournissent également des informations sur le regroupement, le tri et la mise en forme des données.  
   

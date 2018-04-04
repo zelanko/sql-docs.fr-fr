@@ -1,1 +1,1 @@
-SQL Server 2017
+SQL Server 2017 (14.x) 

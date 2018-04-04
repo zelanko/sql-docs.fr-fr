@@ -1,31 +1,32 @@
 ---
-title: "Activer ou désactiver les notifications de profilage dans DQS | Microsoft Docs"
-ms.custom: 
+title: Activer ou désactiver les notifications de profilage dans DQS | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: data-quality-services
-ms.service: 
+ms.service: ''
 ms.component: data-quality-services
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: data-quality-services
-ms.tgt_pltfrm: 
+ms.technology:
+- data-quality-services
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - enable notifications
 - notifications,enable
 - notifications,disable
 ms.assetid: e439bb29-60cc-4afd-a79a-f629b8d843c1
-caps.latest.revision: "8"
+caps.latest.revision: ''
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 09045ca8bd6eda252a61143207b466455ec7bd34
-ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
+ms.openlocfilehash: 2ccb77dd444b3366dda27c38fc696ccfaecfec52
+ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="enable-or-disable-profiling-notifications-in-dqs"></a>Activer ou désactiver les notifications de profilage dans DQS
   Cette rubrique explique comment activer ou désactiver les notifications de profilage dans [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Par défaut, les notifications de profilage sont activées dans DQS. Les notifications de profilage vous indiquent des faits importants sur la source de données et l'efficacité de l'activité actuelle effectuée sur les données. Pour plus d’informations, consultez [Data Profiling and Notifications in DQS](../data-quality-services/data-profiling-and-notifications-in-dqs.md).  

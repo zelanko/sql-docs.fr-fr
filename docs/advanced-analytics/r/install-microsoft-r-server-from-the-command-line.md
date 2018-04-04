@@ -17,10 +17,10 @@ ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
 ms.openlocfilehash: 95f8e0c688a2f141ce066e3831e461509d72c1a9
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.sourcegitcommit: 6bd21109abedf64445bdb3478eea5aaa7553fa46
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/20/2018
 ---
 # <a name="install-machine-learning-server-standalone-or-microsoft-r-server-standalone-from-the-command-line"></a>Installer Machine Learning Server (autonome) ou Microsoft R Server (autonome) à partir de la ligne de commande
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -43,7 +43,7 @@ Pour plus d’informations, consultez [installer SQL Server à partir de l’inv
 Si vous installez le serveur de Machine Learning ou Microsoft R Server (autonome) sur un ordinateur qui n’a pas accès à Internet, vous devez télécharger les composants requis de R (ou Python) à l’avance et les copier dans un dossier local. Pour les emplacements de téléchargement, consultez [l’installation des composants d’apprentissage machine sans accès à internet](installing-ml-components-without-internet-access.md).
 
 
-## <a name="bkmk_mls2017"></a>Installer Microsoft d’apprentissage automatique Server (autonome)
+## <a name="bkmk_mls2017"></a> Installer Microsoft d’apprentissage automatique Server (autonome)
 
 **S’applique à : SQL Server 2017**
 
@@ -96,8 +96,8 @@ Une fois l’installation terminée, vous pouvez consulter le fichier de configu
 
 Par défaut, tous le programme d’installation des journaux et des résumés pour SQL Server et les fonctionnalités associées sont créées dans les dossiers suivants :
 
-+ SQL Server 2017 :`C:\Program Files\Microsoft SQL Server\140\Setup Bootstrap\Log`
-+ SQL Server 2016 :`C:\Program Files\Microsoft SQL Server\130\Setup Bootstrap\Log`
++ SQL Server 2017 : `C:\Program Files\Microsoft SQL Server\140\Setup Bootstrap\Log`
++ SQL Server 2016 :  `C:\Program Files\Microsoft SQL Server\130\Setup Bootstrap\Log`
 
 Un sous-dossier distinct est créé pour chaque fonctionnalité que vous avez installé.
 

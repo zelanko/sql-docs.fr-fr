@@ -1,6 +1,6 @@
 ﻿---
 title: Installer les outils de ligne de commande de SQL Server sur Linux | Documents Microsoft
-description: "Cet article décrit comment installer les outils SQL Server sur Linux."
+description: Cet article décrit comment installer les outils SQL Server sur Linux.
 author: rothja
 ms.author: jroth
 manager: craigg
@@ -8,8 +8,8 @@ ms.date: 10/02/2017
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
@@ -81,15 +81,15 @@ Utilisez les étapes suivantes pour installer le package **mssql-tools** sur Red
    >   sudo yum update mssql-tools
    >   ```
 
-1. **Facultatif**: ajouter `/opt/mssql-tools/bin/` à votre variable d’environnement **path** dans un interpréteur de commandes bash.
+1. **Facultatif**: ajoutez `/opt/mssql-tools/bin/` à votre variable d'environnement de **chemin d’accès** dans un interpréteur de commandes bash.
 
-   Pour rendre **sqlcmd/bcp** accessible à partir de l’interface de l’interpréteur de commandes pour les sessions de connexion, modifiez votre **path** dans le fichier **~/.bash_profile** avec la commande suivante :
+   Pour rendre **sqlcmd et bcp** accessible à partir de l’interpréteur de commandes pour les sessions de connexion, modifiez votre **chemin d’accès** dans le fichier **~/.bash_profile**  avec la commande suivante :
 
    ```bash
    echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bash_profile
    ```
 
-   Pour rendre **sqlcmd/bcp** accessible à partir de l’interface de l’interpréteur de commandes pour les sessions/non-connexion interactive, modifiez le **path** dans le **~/.bashrc** fichier avec la commande suivante :
+   Pour rendre **sqlcmd/bcp** accessible à partir de l’interface de l’interpréteur de commandes pour les sessions interactives/de non-connexion, modifiez le **chemin d’accès** dans le fichier **~/.bashrc** avec la commande suivante :
 
    ```bash
    echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bashrc
@@ -126,15 +126,15 @@ Utilisez les étapes suivantes pour installer le package **mssql-tools** sur Ubu
    >   sudo apt-get install mssql-tools 
    >   ```
 
-1. **Facultatif**: ajouter `/opt/mssql-tools/bin/` à votre variable d’environnement **path** dans un interpréteur de commandes bash.
+1. **Facultatif**: ajoutez `/opt/mssql-tools/bin/` à votre variable d'environnement de **chemin d’accès** dans un interpréteur de commandes bash.
 
-   Pour rendre **sqlcmd/bcp** accessible à partir de l’interface de l’interpréteur de commandes pour les sessions de connexion, modifiez votre **path** dans le fichier **~/.bash_profile** avec la commande suivante :
+   Pour rendre **sqlcmd et bcp** accessible à partir de l’interpréteur de commandes pour les sessions de connexion, modifiez votre **chemin d’accès** dans le fichier **~/.bash_profile**  avec la commande suivante :
 
    ```bash
    echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bash_profile
    ```
 
-   Pour rendre **sqlcmd/bcp** accessible à partir de l’interface de l’interpréteur de commandes pour les sessions/non-connexion interactive, modifiez le **path** dans le **~/.bashrc** fichier avec la commande suivante :
+   Pour rendre **sqlcmd/bcp** accessible à partir de l’interface de l’interpréteur de commandes pour les sessions interactives/de non-connexion, modifiez le **chemin d’accès** dans le fichier **~/.bashrc** avec la commande suivante :
 
    ```bash
    echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bashrc
@@ -165,15 +165,15 @@ Utilisez les étapes suivantes pour installer le package **mssql-tools** sur SUS
    >   sudo zypper update mssql-tools
    >   ```
 
-1. **Facultatif**: ajouter `/opt/mssql-tools/bin/` à votre variable d’environnement **path** dans un interpréteur de commandes bash.
+1. **Facultatif**: ajoutez `/opt/mssql-tools/bin/` à votre variable d'environnement de **chemin d’accès** dans un interpréteur de commandes bash.
 
-   Pour rendre **sqlcmd/bcp** accessible à partir de l’interface de l’interpréteur de commandes pour les sessions de connexion, modifiez votre **path** dans le fichier **~/.bash_profile** avec la commande suivante :
+   Pour rendre **sqlcmd et bcp** accessible à partir de l’interpréteur de commandes pour les sessions de connexion, modifiez votre **chemin d’accès** dans le fichier **~/.bash_profile**  avec la commande suivante :
 
    ```bash
    echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bash_profile
    ```
 
-   Pour rendre **sqlcmd/bcp** accessible à partir de l’interface de l’interpréteur de commandes pour les sessions/non-connexion interactive, modifiez le **path** dans le **~/.bashrc** fichier avec la commande suivante :
+   Pour rendre **sqlcmd/bcp** accessible à partir de l’interface de l’interpréteur de commandes pour les sessions interactives/de non-connexion, modifiez le **chemin d’accès** dans le fichier **~/.bashrc** avec la commande suivante :
 
    ```bash
    echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bashrc
@@ -227,9 +227,9 @@ Ces packages dépendent de **msodbcsql**, qui doit être installé en premier. *
 
 Pour installer manuellement ces packages, procédez comme suit :
 
-1. **Déplacer les packages téléchargés sur votre ordinateur Linux**. Si vous avez utilisé un autre ordinateur pour télécharger les packages, une façon de déplacer les packages à l’ordinateur Linux est la commande **scp**.
+1. **Déplacez les packages téléchargés sur votre ordinateur Linux**. Si vous avez utilisé un autre ordinateur pour télécharger les packages, une façon de déplacer les packages vers l’ordinateur Linux est d'utiliser la commande **scp**.
 
-1. **Installer les packages**: installer les packages **mssql-tools** et **msodbc**. Si vous obtenez des erreurs de dépendance, les ignorer jusqu'à l’étape suivante.
+1. Installez **et les packages**mssql-tools**et**msodbc**.   Si vous obtenez des erreurs de dépendance, ignorez-les jusqu'à l’étape suivante.
 
     | Plateforme | Commandes d’installation de package |
     |-----|-----|

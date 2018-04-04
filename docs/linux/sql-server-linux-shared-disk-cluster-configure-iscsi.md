@@ -1,6 +1,6 @@
 ﻿---
 title: Configurer le stockage iSCSI basculement cluster instance - SQL Server sur Linux | Documents Microsoft
-description: 
+description: ''
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
@@ -8,8 +8,8 @@ ms.date: 08/28/2017
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
@@ -257,7 +257,7 @@ Pour plus d’informations sur l’initiateur iSCSI pour les distributions prise
     sudo systemctl status mssql-server
     ``` 
  
-   *    Arrêt de SQL Server et vérifiez qu’il est arrêté.
+   *    Arrêtez SQL Server et vérifiez qu’il est arrêté.
 
     ```bash
     sudo systemctl stop mssql-server
@@ -278,7 +278,7 @@ Pour plus d’informations sur l’initiateur iSCSI pour les distributions prise
     mkdir <FolderName>
     ```
 
-    \<Nom_dossier > est le nom du dossier. Le chemin du dossier complet doit être spécifié sinon dans l’emplacement approprié. L’exemple suivant crée un dossier nommé /var/opt/mssql/userdata.
+    \<FolderName> est le nom du dossier. Le chemin du dossier complet doit être spécifié sinon dans l’emplacement approprié. L’exemple suivant crée un dossier nommé /var/opt/mssql/userdata.
 
     ```bash
     mkdir /var/opt/mssql/userdata
@@ -302,7 +302,7 @@ Pour plus d’informations sur l’initiateur iSCSI pour les distributions prise
     chown mssql <FolderName>
     ```
 
-    \<Nom_dossier > est le nom du dossier qui a été créé. En voici un exemple :
+    \<Nom_dossier > est le nom du dossier qui a été créé. comme dans l’exemple suivant :
 
     ```bash
     chown mssql /var/opt/mssql/userdata
@@ -314,7 +314,7 @@ Pour plus d’informations sur l’initiateur iSCSI pour les distributions prise
     chown mssql <FolderName>
     ```
 
-    \<Nom_dossier > est le nom du dossier qui a été créé. En voici un exemple :
+    \<Nom_dossier > est le nom du dossier qui a été créé. comme dans l’exemple suivant :
 
     ```bash
     chown mssql /var/opt/mssql/userdata

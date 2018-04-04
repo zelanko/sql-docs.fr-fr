@@ -1,42 +1,43 @@
 ---
-title: "Comment : envoyer des données sous forme de flux | Documents Microsoft"
-ms.custom: 
-ms.date: 01/19/2017
+title: 'Comment : envoyer des données sous forme de flux | Documents Microsoft'
+ms.custom: ''
+ms.date: 03/26/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - updating data
 - streaming data
 ms.assetid: ab6b95d6-b6e6-4bd7-a18c-50f2918f7532
-caps.latest.revision: "30"
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: fe89454453e105ca264f5e04aacb8581dfb81cac
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: b1821f922e9c45340365abf680f5f46a61d6eb1e
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="how-to-send-data-as-a-stream"></a>Procédure : envoyer des données sous forme de flux
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-Le [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] tire parti des flux PHP pour envoyer des objets volumineux au serveur. Les exemples de cette rubrique montrent comment envoyer des données sous forme de flux. Le premier exemple utilise le pilote SQLSRV pour illustrer le comportement par défaut, qui consiste à envoyer toutes les données de flux au moment de l’exécution de la requête. Le deuxième exemple utilise le pilote SQLSRV pour illustrer comment envoyer jusqu’à huit kilo-octets (8 Ko) de données de flux à la fois au serveur.  
+Le [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] tire parti des flux PHP pour envoyer des objets volumineux au serveur. Les exemples de cette rubrique montrent comment envoyer des données sous forme de flux. Le premier exemple utilise le pilote SQLSRV pour illustrer le comportement par défaut, qui consiste à envoyer toutes les données de flux au moment de l’exécution de la requête. Le deuxième exemple utilise le pilote SQLSRV pour illustrer comment envoyer jusqu'à huit kilo-octets (8 Ko) de données de flux à la fois sur le serveur.  
   
 Le troisième exemple montre comment envoyer des données de flux au serveur à l’aide du pilote PDO_SQLSRV.  
   
-## <a name="example"></a>Exemple  
+## <a name="example-sending-stream-data-at-execution"></a>Exemple : Envoyer des données de flux lors de l’exécution
 L’exemple suivant insère une ligne dans la table *Production.ProductReview* de la base de données AdventureWorks. Les commentaires du client (*$comments*) sont ouverts en tant que flux avec PHP [fopen](http://php.net/manual/en/function.fopen.php) de fonction, puis transmis au serveur lors de l’exécution de la requête.  
   
-L’exemple suppose que SQL Server et la base de données [AdventureWorks](http://go.microsoft.com/fwlink/?LinkID=67739) sont installés sur l’ordinateur local. Toute la sortie est écrite dans la console.  
+L’exemple part du principe que SQL Server et le [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) base de données sont installés sur l’ordinateur local. Toute la sortie est écrite dans la console.  
   
 ```  
 <?php  
@@ -89,10 +90,10 @@ sqlsrv_close( $conn);
 ?>  
 ```  
   
-## <a name="example"></a>Exemple  
-L’exemple suivant est identique au précédent, sauf que le comportement par défaut qui consiste à envoyer toutes les données de flux lors de l’exécution est désactivé. L’exemple utilise [sqlsrv_send_stream_data](../../connect/php/sqlsrv-send-stream-data.md) pour envoyer des données de flux au serveur. Jusqu'à huit kilo-octets (8 Ko) de données est envoyé à chaque appel à **sqlsrv_send_stream_data**. Le script compte le nombre d’appels effectués par **sqlsrv_send_stream_data** et affiche le résultat dans la console.  
+## <a name="example-sending-stream-data-using-sqlsrvsendstreamdata"></a>Exemple : Envoi de données de flux de données à l’aide de sqlsrv_send_stream_data
+L’exemple suivant est identique à l’exemple précédent, mais le comportement par défaut de l’envoi de toutes les données de flux de données lors de l’exécution est désactivé. L’exemple utilise [sqlsrv_send_stream_data](../../connect/php/sqlsrv-send-stream-data.md) pour envoyer des données de flux au serveur. Jusqu'à huit kilo-octets (8 Ko) de données est envoyé à chaque appel à **sqlsrv_send_stream_data**. Le script compte le nombre d’appels effectués par **sqlsrv_send_stream_data** et affiche le résultat dans la console.  
   
-L’exemple suppose que SQL Server et la base de données [AdventureWorks](http://go.microsoft.com/fwlink/?LinkID=67739) sont installés sur l’ordinateur local. Toute la sortie est écrite dans la console.  
+L’exemple part du principe que SQL Server et le [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) base de données sont installés sur l’ordinateur local. Toute la sortie est écrite dans la console.  
   
 ```  
 <?php  
@@ -156,7 +157,7 @@ sqlsrv_close( $conn);
   
 Même si les exemples de cette rubrique envoient des données de type caractère au serveur, vous pouvez envoyer des données dans n’importe quel format sous forme de flux. Vous pouvez par exemple utiliser les techniques présentées dans cette rubrique pour envoyer des images au format binaire sous forme de flux.  
   
-## <a name="example"></a>Exemple  
+## <a name="example-sending-an-image-as-a-stream"></a>Exemple : Envoi d’une Image en tant que flux 
   
 ```  
 <?php  
@@ -176,7 +177,9 @@ Même si les exemples de cette rubrique envoient des données de type caractère
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
-[Mise à jour des données &#40;pilotes Microsoft SQL Server pour PHP&#41;](../../connect/php/updating-data-microsoft-drivers-for-php-for-sql-server.md)  
-[Récupération des données sous la forme d’un flux à l’aide du pilote SQLSRV](../../connect/php/retrieving-data-as-a-stream-using-the-sqlsrv-driver.md)  
+[Mise à jour des données &#40;pilotes Microsoft SQL Server pour PHP&#41;](../../connect/php/updating-data-microsoft-drivers-for-php-for-sql-server.md)
+
+[Récupération des données sous la forme d’un flux à l’aide du pilote SQLSRV](../../connect/php/retrieving-data-as-a-stream-using-the-sqlsrv-driver.md)
+
 [À propos des exemples de code dans la documentation](../../connect/php/about-code-examples-in-the-documentation.md)  
   

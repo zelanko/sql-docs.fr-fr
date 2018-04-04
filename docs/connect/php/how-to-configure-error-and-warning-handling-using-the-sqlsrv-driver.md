@@ -1,57 +1,59 @@
 ---
-title: "Configurer l’avertissement gestion des erreurs et l’utilisation du pilote SQLSRV | Documents Microsoft"
-ms.custom: 
-ms.date: 01/19/2017
+title: Configurer l’avertissement gestion des erreurs et l’utilisation du pilote SQLSRV | Documents Microsoft
+ms.custom: ''
+ms.date: 03/26/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-helpviewer_keywords: errors and warnings
+helpviewer_keywords:
+- errors and warnings
 ms.assetid: 257c6f53-9137-4619-a613-eee33d2077e8
-caps.latest.revision: "20"
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a01d21006913ad2ae04491eb99d342b58f97a0a9
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 4fa8c115c19ef758f44a17db6b491059ebcda9b8
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="how-to-configure-error-and-warning-handling-using-the-sqlsrv-driver"></a>Procédure : configurer la gestion des erreurs et avertissements à l’aide du pilote SQLSRV
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 Cette rubrique décrit comment configurer le pilote SQLSRV pour gérer les erreurs et avertissements.  
   
-Par défaut, le pilote SQLSRV traite les avertissements comme des erreurs ; un appel à une fonction **sqlsrv** qui génère une erreur ou un avertissement retourne **false**. Pour désactiver ce comportement, utilisez le [sqlsrv_configure](../../connect/php/sqlsrv-configure.md) (fonction). Lorsque la ligne de code suivante est placée au début d’un script, un **sqlsrv** fonction qui génère uniquement des avertissements (aucune erreur) ne retourne pas **false**:  
+Par défaut, le pilote SQLSRV traite les avertissements comme des erreurs ; un appel à une **sqlsrv** fonction qui génère une erreur ou un avertissement retourne **false**. Pour désactiver ce comportement, utilisez le [sqlsrv_configure](../../connect/php/sqlsrv-configure.md) (fonction). Lorsque la ligne de code suivante est placée au début d’un script, un **sqlsrv** fonction qui génère uniquement des avertissements (aucune erreur) ne retourne pas **false**:  
   
 `sqlsrv_configure("WarningsReturnAsErrors", 0);`  
   
-La ligne de code suivante réinitialise le comportement par défaut (les avertissements sont traités comme des erreurs) :  
+La ligne de code suivante rétablit le comportement par défaut (les avertissements sont traités comme des erreurs) :  
   
 `sqlsrv_configure("WarningsReturnAsErrors", 1);`  
   
 > [!NOTE]  
 > Les avertissements qui correspondent aux valeurs SQLSTATE 01000, 01001, 01003 et 01S02 ne sont jamais traités comme des erreurs. Quelle que soit la configuration, une fonction **sqlsrv** qui génère uniquement des avertissements qui correspondent à l’un de ces états ne retourne pas **false**.  
   
-La valeur de **WarningsReturnAsErrors** peut également être définie dans le fichier php.ini. Par exemple, cette entrée dans la section `[sqlsrv]` du fichier php.ini désactive le comportement par défaut.  
+La valeur de **WarningsReturnAsErrors** peut également être définie dans le fichier php.ini. Par exemple, cette entrée dans la `[sqlsrv]` section du fichier php.ini désactive le comportement par défaut.  
   
 `sqlsrv.WarningsReturnAsErrors = 0`  
   
 Pour plus d’informations sur la récupération d’informations d’erreur et d’avertissement, consultez [sqlsrv_errors](../../connect/php/sqlsrv-errors.md) et [Procédure : gérer les erreurs et avertissements](../../connect/php/how-to-handle-errors-and-warnings-using-the-sqlsrv-driver.md).  
   
 ## <a name="example"></a>Exemple  
-L’exemple de code suivant montre comment désactiver le comportement de gestion des erreurs par défaut. L’exemple utilise la commande Transact-SQL PRINT pour générer un avertissement. Pour plus d’informations sur la commande PRINT, consultez [PRINT (Transact-SQL)](http://go.microsoft.com/fwlink/?linkid=119518).  
+L’exemple de code suivant montre comment désactiver le comportement de gestion des erreurs par défaut. L’exemple utilise la commande Transact-SQL PRINT pour générer un avertissement. Pour plus d’informations sur la commande PRINT, consultez [PRINT (Transact-SQL)](../../t-sql/language-elements/print-transact-sql.md).  
   
 L’exemple montre d’abord le comportement de gestion des erreurs par défaut en exécutant une requête qui génère un avertissement. Cet avertissement est traité comme une erreur. Après avoir modifié la configuration de la gestion des erreurs, la même requête est exécutée. Cet avertissement n’est pas traité comme une erreur.  
   
-L’exemple part du principe que SQL Server est installé sur l’ordinateur local. Toute la sortie est écrite dans la console quand l’exemple est exécuté à partir de la ligne de commande.  
+L’exemple part du principe que SQL Server est installé sur l’ordinateur local.  Toute la sortie est écrite dans la console quand l’exemple est exécuté à partir de la ligne de commande.  
   
 ```  
 <?php  
@@ -86,7 +88,7 @@ $stmt2 = sqlsrv_query( $conn, $tsql);
 if($stmt2 === false)  
 {  
      /* Dump errors in the error collection. */  
-     /* Since the warning generated by the query will not be treated as   
+     /* Since the warning generated by the query is be treated as   
         an error, this block of code will not be executed. */  
      print_r(sqlsrv_errors(SQLSRV_ERR_ERRORS));  
 }  
@@ -103,7 +105,9 @@ sqlsrv_close($conn);
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
-[Journalisation de l’activité](../../connect/php/logging-activity.md)  
-[Guide de programmation pour le pilote SQL PHP](../../connect/php/programming-guide-for-php-sql-driver.md)
-[Référence d’API du pilote SQLSRV](../../connect/php/sqlsrv-driver-api-reference.md)  
+[Journalisation de l’activité](../../connect/php/logging-activity.md)
+
+[Guide de programmation pour les pilotes Microsoft pour PHP pour SQL Server](../../connect/php/programming-guide-for-php-sql-driver.md)
+
+[Informations de référence sur l’API du pilote SQLSRV](../../connect/php/sqlsrv-driver-api-reference.md)  
   

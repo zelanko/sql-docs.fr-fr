@@ -1,18 +1,18 @@
 ---
-title: "Configurer Analysis Services pour la délégation contrainte Kerberos | Documents Microsoft"
-ms.custom: 
+title: Configurer Analysis Services pour la délégation contrainte Kerberos | Documents Microsoft
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 6d751477-6bf1-48b4-8833-5a631bbe7650
-caps.latest.revision: 
+caps.latest.revision: ''
 author: Minewiskan
 ms.author: owend
 manager: kfile
@@ -116,7 +116,7 @@ Quand vous configurez Analysis Services pour l'authentification Kerberos, vous c
   
  Un test approfondi requiert l'utilisation d'outils de surveillance du réseau qui peuvent capturer les demandes et les réponses Kerberos sur le réseau. L'utilitaire de surveillance du réseau (netmon.exe), filtré pour Kerberos, peut être utilisé pour cette tâche. Pour plus d’informations sur l’utilisation de Netmon 3.4 et d’autres outils pour tester l’authentification Kerberos, consultez [Configuration de l’authentification Kerberos : configuration de base (SharePoint Server 2010)](http://technet.microsoft.com/library/gg502602\(v=office.14\).aspx).  
   
- Consultez également [The Most Confusing Dialog Box in Active Directory](http://windowsitpro.com/windows/most-confusing-dialog-box-active-directory) pour obtenir une description détaillée de chaque option de l'onglet Délégation de la boîte de dialogue de propriétés de l'objet Active Directory. Cet article explique également comment utiliser LDP pour effectuer des tests et interpréter leurs résultats.  
+ En outre, consultez la page consacrée à la [boîte de dialogue la plus déroutante dans Active Directory](http://windowsitpro.com/windows/most-confusing-dialog-box-active-directory) pour obtenir une description détaillée de chaque option sous l'onglet Délégation de la boîte de dialogue des propriétés de l'objet Active Directory. Cet article explique également comment utiliser LDP pour effectuer des tests et interpréter leurs résultats.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Authentification et délégation d'identité Microsoft BI](http://go.microsoft.com/fwlink/?LinkID=286576)   

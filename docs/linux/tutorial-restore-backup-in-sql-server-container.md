@@ -1,6 +1,6 @@
 ﻿---
-title: "Restaurer une base de données SQL Server dans Docker | Documents Microsoft"
-description: "Ce didacticiel montre comment restaurer une sauvegarde de base de données SQL Server dans un conteneur Linux Docker."
+title: Restaurer une base de données SQL Server dans Docker | Documents Microsoft
+description: Ce didacticiel montre comment restaurer une sauvegarde de base de données SQL Server dans un conteneur Linux Docker.
 author: rothja
 ms.author: jroth
 manager: craigg
@@ -8,8 +8,8 @@ ms.date: 10/02/2017
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
@@ -31,7 +31,7 @@ Ce didacticiel montre comment déplacer et de restaurer un fichier de sauvegarde
 > * Restaurer la base de données dans le conteneur. 
 > * Restaurer la base de données dans le conteneur.
 > * Exécuter les instructions Transact-SQL pour afficher et modifier la base de données.
-> * Sauvegardre la base de données modifiée.
+> * Sauvegarder la base de données modifiée.
 
 ## <a name="prerequisites"></a>Configuration requise
 
@@ -115,7 +115,7 @@ Ce didacticiel utilise la [base de donnéesd'exemple Wide World Importers](../sa
    docker exec -it sql1 mkdir /var/opt/mssql/backup
    ```
 
-1. Ensuite, téléchargez le [WideWorldImporters-full.bak](https://github.com/Microsoft/sql-server-samples/releases/tag/wide-world-importers-v1.0) fichier sur votre ordinateur hôte. Les commandes suivantes accédent au répertoire d’accueil/utilisateur et téléchargent le fichier de sauvegarde en tant que **wwi.bak**.
+1. Ensuite, téléchargez le fichier [WideWorldImporters-full.bak](https://github.com/Microsoft/sql-server-samples/releases/tag/wide-world-importers-v1.0) sur votre ordinateur hôte.  Les commandes suivantes accédent au répertoire d’accueil/utilisateur et téléchargent le fichier de sauvegarde en tant que **wwi.bak**.
 
    ```bash
    cd ~

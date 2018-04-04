@@ -1,31 +1,31 @@
 ---
-title: "Générateur de modèles tabulaires | Documents Microsoft"
-ms.date: 10/19/2017
+title: Générateur de modèles tabulaires dans SQL Server Data Tools | Documents Microsoft
+ms.date: 03/30/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.custom: 
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.custom: ''
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.ASVS.BIDTOOLSET.TOPLEVSEMMODUIENTRY.F1
 ms.assetid: 45735c57-2a95-4e45-8994-7242df6c9c5f
-caps.latest.revision: 
+caps.latest.revision: 22
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 98eb6a35d2dba7c71dcd857ffdfbe08c6e8bd17c
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: 062505fcf50d84cb853cff541dc0cf6ed6ee0f3e
+ms.sourcegitcommit: 8f1d1363e18e0c32ff250617ab6cb2da2147bf8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/03/2018
 ---
-# <a name="tabular-model-designer-ssas"></a>Générateur de modèles tabulaires (SSAS)
+# <a name="tabular-model-designer"></a>Générateur de modèles tabulaires
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
 Le générateur de modèles tabulaires fait partie de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], intégré à Microsoft [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], qui propose des modèles de type de projet supplémentaires propres au développement de solutions de modèles tabulaires professionnelles.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] peut être téléchargé gratuitement sur Internet. Pour plus d’informations, consultez [Télécharger SSDT (SQL Server Data Tools)](../../ssdt/download-sql-server-data-tools-ssdt.md).    
   
@@ -139,7 +139,6 @@ Le générateur de modèles tabulaires fait partie de [!INCLUDE[ssBIDevStudioFul
  Les raccourcis clavier Analysis Services peuvent être configurés/remappés via la boîte de dialogue Outils->Options->Clavier. Certains raccourcis globaux de [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] , permettant notamment la génération, l'enregistrement, le débogage, la création d'un nouveau projet, etc. sont pris en charge dans le contexte du générateur de modèles tabulaires. D'autres raccourcis spécifiques du générateur de modèles tabulaires sont présents dans le contexte d'Analysis Services.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Projets de modèles tabulaires](../../analysis-services/tabular-models/tabular-model-projects-ssas-tabular.md)   
- [Propriétés](../../analysis-services/tabular-models/properties-ssas-tabular.md)  
+ [Projets de modèle tabulaire](../../analysis-services/tabular-models/tabular-model-projects-ssas-tabular.md)   
   
   

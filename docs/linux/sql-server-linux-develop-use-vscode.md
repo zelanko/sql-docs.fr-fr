@@ -1,6 +1,6 @@
 ﻿---
-title: "Utiliser l’extension mssql de Visual Studio Code | Documents Microsoft"
-description: "Cette rubrique montre comment utiliser l'extension mssql pour Visual Studio Code pour développer des bases de données SQL Server. Cette extension vous permet de modifier et exécuter des scripts Transact-SQL dans Visual Studio Code."
+title: Utiliser l’extension mssql de Visual Studio Code | Documents Microsoft
+description: Cette rubrique montre comment utiliser l'extension mssql pour Visual Studio Code pour développer des bases de données SQL Server. Cette extension vous permet de modifier et exécuter des scripts Transact-SQL dans Visual Studio Code.
 author: erickangMSFT
 ms.author: erickang
 manager: craigg
@@ -8,18 +8,18 @@ ms.date: 03/17/2017
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
 ms.technology: database-engine
 ms.assetid: 9766ee75-32d3-4045-82a6-4c7968bdbaa6
 ms.custom: sql-linux
 ms.workload: Active
-ms.openlocfilehash: caf053ca9dc50df6d3433a11e992e097f2147d7a
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.openlocfilehash: fa3fb3c1d807698ddf1fa28c6c710956a75d30ea
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="use-visual-studio-code-to-create-and-run-transact-sql-scripts-for-sql-server"></a>Utilisez Visual Studio Code pour créer et exécuter des scripts Transact-SQL pour SQL Server
 
@@ -27,7 +27,7 @@ ms.lasthandoff: 02/13/2018
 
 Cette rubrique montre comment utiliser l'extension **mssql** pour Visual Studio Code (VS Code) pour développer des bases de données SQL Server.
 
-Visual Studio Code est un éditeur de code graphique pour Linux, MacOS et Windows qui supporte les extensions. [L'extension **mssql** pour VS Code] vous permet de vous connecter à SQL Server, d'effectuer une requête avec Transact-SQL (T-SQL) et d'afficher les résultats.
+Visual Studio Code est un éditeur de code graphique pour Linux, MacOS et Windows qui supporte les extensions. [ **L’extension mssql** pour VS Code] vous permet de vous connecter à SQL Server, d'effectuer des requêtes via Transact-SQL (T-SQL) et d'afficher les résultats.
 
 ## <a name="install-vs-code"></a>Installer Visual Studio Code
 1. Si vous n'avez pas encore installé Visual Studio Code, [téléchargez et installez VS Code] sur votre ordinateur.
@@ -37,7 +37,7 @@ Visual Studio Code est un éditeur de code graphique pour Linux, MacOS et Window
 ## <a name="install-the-mssql-extension"></a>Installer l’extension mssql
 Les étapes suivantes expliquent comment installer l’extension mssql. 
 
-1. Appuyez sur **CTRL + MAJ + P** (ou **F1**) pour ouvrir la Palette de commandes dans Visual Studio Code. 
+1. Appuyez sur **Ctrl + Maj + P** (ou **F1**) pour ouvrir la Palette de commandes dans Visual Studio Code. 
 
 2. Sélectionnez **Installer l’extension** et tapez **mssql**. 
    > [!TIP] 
@@ -68,7 +68,7 @@ Les étapes suivantes expliquent comment installer l’extension mssql.
 
 L'extension **mssql** active les commandes mssql et l'IntelliSense T-SQL dans l'éditeur lorsque le mode langage est réglé sur **SQL**.
 
-1. Appuyez sur **CTRL + N**. Visual Studio Code ouvre un nouveau fichier de "Texte brut" par défaut. 
+1. Appuyez sur **Ctrl + N**. Visual Studio Code ouvre un nouveau fichier de "Texte brut" par défaut. 
 
 2. Appuyez sur **CTRL + K, M** et modifiez le mode de langage à **SQL**. 
 
@@ -97,7 +97,7 @@ Les étapes suivantes montrent comment se connecter à SQL Server avec le Visual
 
    | Paramètre |  Description |
    |-----|-----|
-   | **Nom du serveur** | Le nom de l'instance SQL Server. Pour ce tutoriel, utilisez **localhost** pour vous connecter à l'instance SQL Server locale de votre machine. Si vous vous connectez à un serveur SQL distant, entrez le nom de la machine SQL Server cible ou son adresse IP. |
+   | **Nom du serveur** | Le nom de l'instance SQL Server. Pour ce tutoriel, utilisez **localhost** pour vous connecter à l'instance SQL Server locale de votre machine. Si vous vous connectez à un serveur SQL distant, entrez le nom de la machine SQL Server cible ou son adresse IP. Si vous avez besoin de spécifier un port pour votre instance de SQL Server, utilisez une virgule pour séparer à partir du nom. Par exemple pour un serveur local en cours d’exécution sur le port 1401 entrez **localhost, 1401**. |
    | **[Facultatif] Nom de la base de données** | La base de données que vous voulez utiliser. Pour les besoins de ce tutoriel, ne spécifiez pas de base de données et appuyez sur **entrée** pour continuer. |
    | **Nom d'utilisateur** | Entrez le nom d'un utilisateur ayant accès à une base de données sur le serveur. Pour ce tutoriel, utilisez le compte **SA** créé par défaut lors de l'installation de SQL Server. |
    | **Mot de passe (connexion SQL)** | Entrez le mot de passe de l'utilisateur spécifié. | 
@@ -153,7 +153,7 @@ Les étapes suivantes montrent comment se connecter à SQL Server avec le Visual
 
 3. Ecrivez **sql** dans la Palette de commandes pour afficher les commandes SQL ou un type **sqluse** pour **MS SQL : Use Database** commande.
 
-4. Cliquez sur **MS SQL:Use Database**, puis sélectionnez la base de données **TutorialDB**. Cela modifie le contexte de la nouvelle base de données créée dans la section précédente.
+4. Cliquez sur **MS SQL:Use Database**, puis sélectionnez la base de données **TutorialDB**. Le contexte passe alors à la base de données créée dans la section précédente.
 
    <img src="./media/sql-server-linux-develop-use-vscode/vscode-use-database.png" alt="use database" style="width: 500px;" />
 

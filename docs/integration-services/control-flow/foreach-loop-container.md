@@ -1,16 +1,16 @@
 ---
 title: Conteneur de boucles Foreach | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 08/22/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: control-flow
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.foreachloopcontainer.f1
@@ -33,14 +33,14 @@ helpviewer_keywords:
 - foreach enumerators [Integration Services]
 - containers [Integration Services], Foreach Loop
 ms.assetid: dd6cc2ba-631f-4adf-89dc-29ef449c6933
-caps.latest.revision: 
+caps.latest.revision: ''
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 834bdc1febf1f066847b33f1490f076151357e98
 ms.sourcegitcommit: 6bd21109abedf64445bdb3478eea5aaa7553fa46
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 03/20/2018
 ---
@@ -256,10 +256,10 @@ Utilisez la page **Général** de la boîte de dialogue **Éditeur de boucle For
  Permet de récupérer les chemins d'accès complets des noms de fichiers indiqués. Si des caractères génériques sont utilisés dans l’option Fichiers, les chemins complets retournés correspondent au filtre spécifié.  
   
  **Nom uniquement**  
- Permet de ne récupérer que les noms de fichiers. Si des caractères étoile (*) sont mentionnés dans l'option Fichiers, les noms de fichiers retournés par la fonction sont ceux correspondant au filtre spécifié.  
+ Permet de ne récupérer que les noms de fichiers. Si des caractères étoile sont mentionnés dans l'option Fichiers, les noms de fichiers retournés par la fonction sont ceux correspondant au filtre spécifié.  
   
  **Nom et extension**  
- Permet de retrouver le nom et l'extension des fichiers. Si des caractères étoile (*) sont mentionnés dans l'option Fichiers, les noms et extension de fichiers retournés par la fonction sont ceux correspondant au filtre spécifié.  
+ Permet de retrouver le nom et l'extension des fichiers. Si des caractères étoile sont mentionnés dans l'option Fichiers, les noms et extension de fichiers retournés par la fonction sont ceux correspondant au filtre spécifié.  
   
  **Parcourir les sous-dossiers**  
  Permet d'inclure les sous-dossiers dans l'énumération.  

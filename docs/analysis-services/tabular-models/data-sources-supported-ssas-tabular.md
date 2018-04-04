@@ -1,33 +1,36 @@
 ---
-title: "Les sources de données prises en charge dans les modèles tabulaires SQL Server Analysis Services | Documents Microsoft"
-ms.custom: 
-ms.date: 02/22/2018
+title: Sources de données pris en charge dans les modèles tabulaires 1200 de SQL Server Analysis Services | Documents Microsoft
+ms.custom: ''
+ms.date: 03/28/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: d6c2b1b3-91fc-4175-af25-509946dc7f24
-caps.latest.revision: 
+caps.latest.revision: ''
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 8eb83ae398449673cfe22caeeaba0a7616cee02f
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: 14aa6597e533000c259f513c503825e7993da77c
+ms.sourcegitcommit: 7246ef88fdec262fa0d34bf0e232f089e03a6911
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 03/29/2018
 ---
-# <a name="data-sources-supported-in-tabular-models"></a>Sources de données prises en charge dans les modèles tabulaires
+# <a name="data-sources-supported-in-sql-server-analysis-services-tabular-1200-models"></a>Sources de données pris en charge dans SQL Server Analysis Services les modèles tabulaires 1200
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-Pour Azure Analysis Services, consultez [des sources de données prises en charge dans Azure Analysis Services](https://docs.microsoft.com/azure/analysis-services/analysis-services-datasource).
+  
+Cet article décrit les types de sources de données qui peuvent être utilisés avec les modèles tabulaires SQL Server Analysis Services à 1200 et le niveau de compatibilité inférieur. 
 
-  Cet article décrit les types de sources de données qui peuvent être utilisés avec les modèles tabulaires.  
+Pour les niveaux de compatibilité 1400 les modèles, consultez [des sources de données pris en charge dans les modèles 1400 tabulaires SQL Server Analysis Services](data-sources-supported-ssas-tabular-1400.md).
+
+Pour Azure Analysis Services, consultez [des sources de données prises en charge dans Azure Analysis Services](https://docs.microsoft.com/azure/analysis-services/analysis-services-datasource).
   
 ##  <a name="bkmk_supported_ds"></a> Sources de données pris en charge pour les modèles tabulaires en mémoire  
 Lorsque vous installez [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], le programme d'installation n'installe pas les fournisseurs répertoriés pour chaque source de données. Certains fournisseurs peuvent être installés avec d’autres applications sur votre ordinateur. Dans d’autres cas, vous devrez peut-être télécharger et installer le fournisseur.  
@@ -73,3 +76,9 @@ Importer plusieurs tables, puis supprimer celles dont vous n'avez pas besoin peu
 Les colonnes qui contiennent des données similaires dans différentes sources de données constituent la base de la création de relations dans le générateur de modèles. Si vous utilisez des sources de données hétérogènes, choisissez des tables qui comportent des colonnes pouvant être mappées à des tables d'autres sources de données qui contiennent des données identiques ou similaires.  
   
 Fournisseurs OLE DB peuvent parfois offrir de meilleures performances pour les données à grande échelle. Quand vient le moment de faire votre choix parmi différents fournisseurs pour la même source de données, il est conseillé d'essayer en premier le fournisseur OLE DB.  
+
+## <a name="see-also"></a>Voir aussi
+
+[Sources de données pris en charge dans SQL Server Analysis Services les modèles tabulaires 1400](data-sources-supported-ssas-tabular-1400.md)
+
+[Sources de données prises en charge dans Azure Analysis Services](https://docs.microsoft.com/azure/analysis-services/analysis-services-datasource)   

@@ -1,35 +1,36 @@
 ---
-title: "PowerShell : Activer TDE à l’aide de votre propre clé Azure Key Vault | Microsoft Docs"
-description: "Découvrez comment configurer Azure SQL Database et Data Warehouse pour commencer à utiliser Transparent Data Encryption (TDE) pour le chiffrement au repos à l’aide de PowerShell."
-keywords: 
-documentationcenter: 
+title: 'PowerShell et CLI : Activer le chiffrement TDE SQL à l’aide de votre propre clé Azure Key Vault | Microsoft Docs'
+description: Découvrez comment configurer Azure SQL Database et Data Warehouse pour commencer à utiliser TDE (Transparent Data Encryption) pour le chiffrement au repos à l’aide de PowerShell ou CLI.
+keywords: ''
+documentationcenter: ''
 author: aliceku
 manager: craigg
-editor: 
-ms.prod: 
-ms.reviewer: 
+editor: ''
+ms.prod: ''
+ms.reviewer: ''
 ms.suite: sql
 ms.prod_service: sql-database, sql-data-warehouse
 ms.service: sql-database
 ms.component: security
 ms.workload: On Demand
-ms.tgt_pltfrm: 
-ms.devlang: na
+ms.tgt_pltfrm: ''
+ms.devlang: azurecli, powershell
 ms.topic: article
-ms.date: 08/07/2017
+ms.date: 03/15/2018
 ms.author: aliceku
-ms.openlocfilehash: 186db9581a3404fe04e4a748d6df06c5899bf810
-ms.sourcegitcommit: 34d3497039141d043429eed15d82973b18ad90f2
+ms.openlocfilehash: 9d1fee3a22bfa930f70a8c6e2585f60acaf5f419
+ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/04/2018
+ms.lasthandoff: 03/21/2018
 ---
-# <a name="powershell-enable-transparent-data-encryption-using-your-own-key-from-azure-key-vault-preview"></a>PowerShell : Activer Transparent Data Encryption à l’aide de votre propre clé Azure Key Vault (préversion)
+# <a name="powershell-and-cli-enable-transparent-data-encryption-using-your-own-key-from-azure-key-vault-preview"></a>PowerShell et CLI : Activer TDE à l’aide de votre propre clé Azure Key Vault (préversion)
+
 [!INCLUDE[appliesto-xx-asdb-asdw-xxx-md](../../../includes/appliesto-xx-asdb-asdw-xxx-md.md)]
 
 Ce guide pratique explique comment utiliser une clé Azure Key Vault avec la fonctionnalité Transparent Data Encryption (TDE) (préversion) pour SQL Database ou Data Warehouse. Pour en savoir plus sur TDE avec prise en charge de Bring Your Own Key (BYOK) (préversion), consultez [Transparent Data Encryption (TDE) avec prise en charge de Bring Your Own Key pour Azure SQL](transparent-data-encryption-byok-azure-sql.md). 
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites-for-powershell"></a>Prérequis pour PowerShell
 
 - Vous devez avoir un abonnement Azure et être administrateur de cet abonnement.
 - [Recommandé mais facultatif] Vous devez avoir un module de sécurité matériel (HSM) ou un magasin de clés local à utiliser pour la création d’une copie locale des éléments de clé du protecteur TDE.
@@ -42,9 +43,9 @@ Ce guide pratique explique comment utiliser une clé Azure Key Vault avec la fon
    - Non désactivée
    - Configurée avec les autorisations *get*, *wrap key*, *unwrap key*
 
-## <a name="step-1-assign-an-aad-identity-to-your-server"></a>Étape 1. Affecter une identité AAD à votre serveur 
+## <a name="step-1-assign-an-azure-ad-identity-to-your-server"></a>Étape 1. Affecter une identité Azure AD à votre serveur 
 
-Si vous utilisez un serveur existant, ajoutez une identité AAD à ce serveur de la manière suivante :
+Si vous disposez d’un serveur existant, ajoutez une identité Azure AD à ce serveur de la manière suivante :
 
    ```powershell
    $server = Set-AzureRmSqlServer `
@@ -53,7 +54,7 @@ Si vous utilisez un serveur existant, ajoutez une identité AAD à ce serveur de
    -AssignIdentity
    ```
 
-Si vous utilisez un nouveau serveur, utilisez l’applet de commande [New-AzureRmSqlServer](/powershell/module/azurerm.sql/new-azurermsqlserver) avec la balise -Identity pour ajouter une identité AAD au moment de la création du serveur :
+Si vous créez un serveur, utilisez l’applet de commande [New-AzureRmSqlServer](/powershell/module/azurerm.sql/new-azurermsqlserver) avec la balise -Identity pour ajouter une identité Azure AD au moment de la création du serveur :
 
    ```powershell
    $server = New-AzureRmSqlServer `
@@ -87,7 +88,7 @@ Utilisez l’applet de commande [Set-AzureRmKeyVaultAccessPolicy](/powershell/mo
 > 
 
 >[!Tip]
->Voici un exemple de valeur KeyId de Key Vault : https://contosokeyvault.vault.azure.net/keys/Key1/1a1a2b2b3c3c4d4d5e5e6f6f7g7g8h8h
+>Voici un exemple d’ID de la clé de Key Vault : https://contosokeyvault.vault.azure.net/keys/Key1/1a1a2b2b3c3c4d4d5e5e6f6f7g7g8h8h
 >
 
    ```powershell
@@ -124,7 +125,7 @@ Utilisez l’applet de commande [Set-AzureRMSqlDatabaseTransparentDataEncryption
 
 TDE est maintenant activé pour l’entrepôt de données ou la base de données, avec une clé de chiffrement dans Key Vault.
 
-## <a name="step-5-check-the-encryption-state-and-encryption-activity-of-the-database-or-data-warehouse"></a>Étape 5. Vérifier l’état de chiffrement et l’activité de chiffrement de l’entrepôt de données ou de la base de données
+## <a name="step-5-check-the-encryption-state-and-encryption-activity"></a>Étape 5. Vérifier l’état et l’activité de chiffrement
 
 Utilisez l’applet de commande [Get-AzureRMSqlDatabaseTransparentDataEncryption](/powershell/module/azurerm.sql/get-azurermsqldatabasetransparentdataencryption) pour obtenir l’état de chiffrement et l’applet de commande [Get-AzureRMSqlDatabaseTransparentDataEncryptionActivity](/powershell/module/azurerm.sql/get-azurermsqldatabasetransparentdataencryptionactivity) pour vérifier la progression du chiffrement pour un entrepôt de données ou une base de données.
 
@@ -192,4 +193,67 @@ En cas de problème, vérifiez les points suivants :
 - Découvrez comment effectuer une rotation du protecteur TDE d’un serveur conformément aux exigences de sécurité : [Effectuer une rotation du protecteur TDE (Transparent Data Encryption) à l’aide de PowerShell](transparent-data-encryption-byok-azure-sql-key-rotation.md).
 - En cas de risque pour la sécurité, découvrez comment supprimer un protecteur TDE potentiellement compromis : [Supprimer une clé potentiellement compromise](transparent-data-encryption-byok-azure-sql-remove-tde-protector.md). 
 
+## <a name="prerequisites-for-cli"></a>Prérequis pour CLI
 
+- Vous devez avoir un abonnement Azure et être administrateur de cet abonnement.
+- [Recommandé mais facultatif] Vous devez avoir un module de sécurité matériel (HSM) ou un magasin de clés local à utiliser pour la création d’une copie locale des éléments de clé du protecteur TDE.
+- Interface de ligne de commande CLI version 2.0 ou ultérieure. Pour installer la version la plus récente et vous connecter à votre abonnement Azure, consultez [Installer et configurer l’interface de ligne de commande multiplateforme Azure CLI 2.0](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli?view=azure-cli-latest). 
+- Vous devez avoir créé un conteneur Azure Key Vault et une clé pour TDE.
+   - [Gérer Key Vault à l’aide de CLI 2.0](https://docs.microsoft.com/en-us/azure/key-vault/key-vault-manage-with-cli2)
+   - [Instructions pour utiliser un module de sécurité matériel (HSM) et Key Vault](https://docs.microsoft.com/azure/key-vault/key-vault-get-started#a-idhsmaif-you-want-to-use-a-hardware-security-module-hsm)
+- La clé doit avoir les attributs suivants pour être utilisée pour TDE :
+   - Pas de date d’expiration
+   - Non désactivée
+   - Configurée avec les autorisations *get*, *wrap key*, *unwrap key*
+   
+## <a name="step-1-create-a-server-and-assign-an-azure-ad-identity-to-your-server"></a>Étape 1. Créer un serveur et affecter une identité Azure AD à votre serveur
+      ```cli
+      # create server (with identity) and database
+      az sql server create -n "ServerName" -g "ResourceGroupName" -l "westus" -u "cloudsa" -p "YourFavoritePassWord99@34" -I 
+      az sql db create -n "DatabaseName" -g "ResourceGroupName" -s "ServerName" 
+      ```
+
+ 
+## <a name="step-2-grant-key-vault-permissions-to-your-server"></a>Étape 2. Accorder des autorisations Key Vault à votre serveur
+      ```cli
+      # create key vault, key and grant permission
+      az keyvault create -n "VaultName" -g "ResourceGroupName" 
+      az keyvault key create -n myKey -p software --vault-name "VaultName" 
+      az keyvault set-policy -n "VaultName" --object-id "ServerIdentityObjectId" -g "ResourceGroupName" --key-permissions wrapKey unwrapKey get list 
+      ```
+
+ 
+## <a name="step-3-add-the-key-vault-key-to-the-server-and-set-the-tde-protector"></a>Étape 3. Ajouter la clé Key Vault au serveur et définir le protecteur TDE
+  
+     ```cli
+     # add server key and update encryption protector
+      az sql server key create -g "ResourceGroupName" -s "ServerName" -t "AzureKeyVault" -u "FullVersionedKeyUri 
+      az sql server tde-key update -g "ResourceGroupName" -s "ServerName" -t AzureKeyVault -u "FullVersionedKeyUri" 
+      ```
+  
+  > [!Note]
+> La longueur totale du nom Key Vault et du nom de la clé ne doit pas dépasser 94 caractères.
+> 
+
+>[!Tip]
+>Voici un exemple d’ID de la clé de Key Vault : https://contosokeyvault.vault.azure.net/keys/Key1/1a1a2b2b3c3c4d4d5e5e6f6f7g7g8h8h
+>
+  
+## <a name="step-4-turn-on-tde"></a>Étape 4. Activer TDE 
+      ```cli
+      # enable encryption
+      az sql db tde create -n "DatabaseName" -g "ResourceGroupName" -s "ServerName" --status Enabled 
+      ```
+
+TDE est maintenant activé pour l’entrepôt de données ou la base de données, avec une clé de chiffrement dans Key Vault.
+
+## <a name="step-5-check-the-encryption-state-and-encryption-activity"></a>Étape 5. Vérifier l’état et l’activité du chiffrement
+
+     ```cli
+      # get encryption scan progress
+      az sql db tde show-activity -n "DatabaseName" -g "ResourceGroupName" -s "ServerName" 
+
+      # get whether encryption is on or off
+      az sql db tde show-configuration -n "DatabaseName" -g "ResourceGroupName" -s "ServerName" 
+
+      ```

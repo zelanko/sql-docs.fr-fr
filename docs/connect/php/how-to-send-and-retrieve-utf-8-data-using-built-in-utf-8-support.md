@@ -1,32 +1,32 @@
 ---
-title: "Comment : envoyer et récupérer des données UTF-8 à l’aide de la prise en charge de UTF-8 intégrée | Documents Microsoft"
-ms.custom: 
-ms.date: 01/16/2018
+title: 'Comment : envoyer et récupérer des données UTF-8 à l’aide de la prise en charge de UTF-8 intégrée | Documents Microsoft'
+ms.custom: ''
+ms.date: 03/23/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - drivers
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - retrieving data, UTF-8 encoded data
 - converting data types
 - updating data
 ms.assetid: 366c57cf-352f-4202-8074-6ddce44880d1
-caps.latest.revision: 
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 2d2763ec8906cc3100c1259aa25473ae7e8d8b22
-ms.sourcegitcommit: 6b1618aa3b24bf6759b00a820e09c52c4996ca10
+ms.openlocfilehash: 55c6c0293dddf4919c270f6feeb59f32670f4344
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="how-to-send-and-retrieve-utf-8-data-using-built-in-utf-8-support"></a>Procédure : envoyer et récupérer des données UTF-8 à l’aide de la prise en charge UTF-8 intégrée
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -43,12 +43,12 @@ Pour envoyer ou récupérer des données encodées en UTF-8 sur le serveur :
   
     Quand vous spécifiez un jeu de caractères dans le cadre des options de connexion, le pilote part du principe que les autres chaînes de connexion utilisent ce même jeu de caractères. Les chaînes de nom de serveur et de requête sont également supposées utiliser le même jeu de caractères.  
   
-Vous pouvez passer UTF-8 ou SQLSRV_ENC_CHAR à **CharacterSet** (vous ne pouvez pas passer SQLSRV_ENC_BINARY). L’encodage par défaut est SQLSRV_ENC_CHAR.  
+Vous pouvez passer UTF-8 ou SQLSRV_ENC_CHAR à **CharacterSet**, mais vous ne pouvez pas passer SQLSRV_ENC_BINARY. L’encodage par défaut est SQLSRV_ENC_CHAR.  
   
 ## <a name="example"></a>Exemple  
-L’exemple suivant montre comment envoyer et récupérer des données encodées en UTF-8 en spécifiant le jeu de caractères UTF-8 au moment de l’établissement de la connexion. L’exemple met à jour la colonne Comments de la table Production.ProductReview pour un ID d’évaluation spécifié. L’exemple récupère également les données qui viennent d’être mises à jour et les affiche. La colonne Comments est de type **nvarchar (3850).** Notez également qu’avant que les données sont envoyées au serveur, il est converti en UTF-8 à l’aide de PHP **utf8_encode** (fonction). Cette étape est effectuée uniquement à des fins de démonstration. Dans un scénario d’application réelle, serait commencer avec des données UTF-8.  
+L’exemple suivant montre comment envoyer et récupérer des données encodées en UTF-8 en spécifiant le jeu de caractères UTF-8 au moment de l’établissement de la connexion. L’exemple met à jour la colonne Comments de la table Production.ProductReview pour un ID d’évaluation spécifié. L’exemple récupère également les données qui viennent d’être mises à jour et les affiche. Notez que la colonne Comments est de type **nvarchar (3850).** Notez également qu’avant que les données sont envoyées au serveur, il est converti en UTF-8 à l’aide de PHP **utf8_encode** (fonction). Cette opération est effectuée à des fins de démonstration uniquement. Dans un scénario d’application réelle, serait commencer avec des données UTF-8.  
   
-L’exemple part du principe que [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] et la base de données [AdventureWorks](http://go.microsoft.com/fwlink/?LinkID=67739) sont installés sur l’ordinateur local. Toute la sortie est écrite dans le navigateur quand l’exemple est exécuté à partir du navigateur.  
+L’exemple part du principe que [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] et [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) base de données sont installés sur l’ordinateur local. Toute la sortie est écrite dans le navigateur quand l’exemple est exécuté à partir du navigateur.  
   
 ```  
 <?php  
@@ -132,7 +132,7 @@ sqlsrv_close( $conn);
 ?>  
 ```  
   
-Pour plus d’informations sur le stockage des données Unicode, consultez [Utilisation de données Unicode](http://go.microsoft.com/fwlink/?LinkId=128236).  
+Pour plus d’informations sur le stockage des données Unicode, consultez [utilisation des données Unicode](https://msdn.microsoft.com/library/ms175180.aspx).  
   
 ## <a name="example"></a>Exemple  
 L’exemple suivant est similaire au premier exemple, mais au lieu de spécifier le jeu de caractères UTF-8 sur la connexion, il montre comment spécifier le jeu de caractères UTF-8 sur la colonne.  
@@ -226,10 +226,15 @@ sqlsrv_close( $conn);
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
-[Récupération de données](../../connect/php/retrieving-data.md)  
+[Récupération de données](../../connect/php/retrieving-data.md)
+
 [Utilisation des données ASCII dans non-Windows](../../connect/php/how-to-send-and-retrieve-ascii-data-in-linux-mac.md)
-[mise à jour des données &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/updating-data-microsoft-drivers-for-php-for-sql-server.md)  
-[Informations de référence sur l’API du pilote SQLSRV](../../connect/php/sqlsrv-driver-api-reference.md)  
-[Constantes &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)  
+
+[Mise à jour des données &#40;pilotes Microsoft SQL Server pour PHP&#41;](../../connect/php/updating-data-microsoft-drivers-for-php-for-sql-server.md)
+
+[référence d’API du pilote SQLSRV](../../connect/php/sqlsrv-driver-api-reference.md)
+
+[Constantes &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)
+
 [Exemple d’application &#40;pilote SQLSRV&#41;](../../connect/php/example-application-sqlsrv-driver.md)  
   

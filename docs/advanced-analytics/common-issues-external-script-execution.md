@@ -17,11 +17,11 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 261f7c750ab958cf85b3cfa6806704ca18f6d597
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: af9896e9e0baa2899b9e9c95795907ca46463504
+ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/21/2018
 ---
 # <a name="common-issues-with-external-script-execution-in-sql-server"></a>Problèmes courants liés à l’exécution du script externe dans SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -161,7 +161,7 @@ Si le groupe Windows pour les utilisateurs de R (également utilisé pour Python
 
     * *Journaux de sécurité indiquent que le compte de SERVICE NT a été incapable de se connecter*
 
-Pour plus d’informations sur la façon d’accorder à ce groupe d’utilisateurs les autorisations nécessaires, consultez [configurer SQL Server R Services](r/set-up-sql-server-r-services-in-database.md).
+Pour plus d’informations sur la façon d’accorder à ce groupe d’utilisateurs les autorisations nécessaires, consultez [installer SQL Server 2016 R Services](install/sql-r-services-windows-install.md).
 
 > [!NOTE]
 > Cette limitation ne s’applique pas si vous utilisez des connexions SQL pour exécuter des scripts R à partir d’une station de travail distante.
@@ -233,7 +233,7 @@ Cette duplication devient un problème lorsque vous essayez d’exécuter un scr
 
 Bien qu’il soit courant d’effacement de l’espace de travail lorsque vous travaillez dans la console R, il peut avoir des conséquences inattendues dans SQL contexte de calcul.
 
-`revoScriptConnection`est un objet dans l’espace de travail R qui contient des informations sur une session R appelée à partir de SQL Server. Toutefois, si votre code R inclut une commande pour effacer l’espace de travail (tels que `rm(list=ls())`), toutes les informations sur la session et d’autres objets dans l’espace de travail R sont également désactivées.
+`revoScriptConnection` est un objet dans l’espace de travail R qui contient des informations sur une session R appelée à partir de SQL Server. Toutefois, si votre code R inclut une commande pour effacer l’espace de travail (tels que `rm(list=ls())`), toutes les informations sur la session et d’autres objets dans l’espace de travail R sont également désactivées.
 
 Pour résoudre ce problème, évitez d’effacement manque de discernement dans des variables et autres objets en cours d’exécution R dans SQL Server. Vous pouvez supprimer des variables spécifiques à l’aide de la **supprimer** fonction :
 

@@ -1,19 +1,19 @@
 ---
 title: catalog.execution_component_phases | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: system-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 ms.assetid: 07a9a163-4787-40f7-b371-ac5c6cb4b095
-caps.latest.revision: 
+caps.latest.revision: ''
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
@@ -48,7 +48,7 @@ ms.lasthandoff: 01/25/2018
  L’exemple suivant utilise la vue catalog.execution_component_phases pour déterminer le temps total d’exécution d’un package spécifique au cours de toutes les phases (**active_time**), ainsi que le temps total écoulé pour le package (**total_time**).  
   
 > [!WARNING]  
->  La vue catalog.execution_component_phases fournit ces informations lorsque le niveau de journalisation de l'exécution du package est défini sur Performances ou Commentaires. Pour plus d’informations, consultez [Enable Logging for Package Execution on the SSIS Server](../../integration-services/performance/integration-services-ssis-logging.md#server_logging).  
+>  La vue catalog.execution_component_phases fournit ces informations lorsque le niveau de journalisation de l'exécution du package est défini sur Performances ou Commentaires. Pour plus d’informations, consultez [Activer la journalisation des exécutions de package sur le serveur SSIS](../../integration-services/performance/integration-services-ssis-logging.md#server_logging).  
   
 ```sql
 use SSISDB  

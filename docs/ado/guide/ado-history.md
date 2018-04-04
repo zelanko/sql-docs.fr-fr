@@ -1,29 +1,29 @@
 ---
 title: Historique de ADO | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
-ms.technology: "“drivers”"
+ms.technology: drivers
 ms.topic: article
 helpviewer_keywords:
 - ADO, what's new
 ms.assetid: 667673f2-3151-432b-894a-3fc60b704ea4
-caps.latest.revision: 
+caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4e76e56b9d1840d4e6e1f42acd10b3b9226a61d4
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 283d7ff395edf23668d1921e1f3f2c2e3c985446
+ms.sourcegitcommit: 8f1d1363e18e0c32ff250617ab6cb2da2147bf8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="ado-features-for-each-release"></a>Fonctionnalités d’ADO pour chaque version
 Cette rubrique répertorie les nouvelles fonctionnalités introduites par chaque version de ADO, ADO MD et ADOX.
@@ -37,7 +37,7 @@ Cette rubrique répertorie les nouvelles fonctionnalités introduites par chaque
  *Accès de disque dur n’est pas autorisé en dehors d’une zone de confiance.*
 Dans le script impliquant des sites non approuvés entre domaines, les opérations suivantes sont désactivées : **Stream.SaveToFile**, **Stream.LoadFromFile**, **Recordset.Save**, et **Recordset.Open**, utilisé conjointement avec la **adCmdFile** indicateur ou avec le fournisseur Microsoft OLE DB persistance (MSPersist).
 
- **Recordset.Open** *,***Recordset.Save** *,***Stream.SaveToFile** *et* **Stream.LoadFromFile***ne fonctionne pas sur les fichiers physiques.* 
+ **Recordset.Open** *,***Recordset.Save** *,***Stream.SaveToFile** *, et* **Stream.LoadFromFile***ne fonctionne pas sur les fichiers physiques.* 
 Ces méthodes maintenant vérifier que les descripteurs de fichiers pointent vers les fichiers physiques.
 
  **Recordset.ActiveCommand***renvoie une erreur lorsqu’elle est appelée à partir d’une page HTML/ASP.* 
@@ -50,24 +50,24 @@ Une commande imbriquée shape retourne maintenant un maximum de 512 **jeux d’e
  *prise en charge de la plateforme 64 bits* ADO 2.7 introduit la prise en charge des processeurs 64 bits.
 
 ## <a name="ado-26"></a>ADO 2.6
- **CubDef.GetSchemaObject***méthode* à partir de ADO 2.6, objets ADO MD peuvent être récupérées à l’aide des noms uniques, comme spécifié par le [UniqueName, propriété (ADO MD)](../../ado/reference/ado-md-api/uniquename-property-ado-md.md). Les noms des objets parents n’avez pas besoin de connaître et collections de parent n’avez pas besoin d’être rempli pour récupérer un objet de schéma. Consultez [GetSchemaObject, méthode (ADO MD)](../../ado/reference/ado-md-api/getschemaobject-method-ado-md.md).
+ **CubDef.GetSchemaObject***méthode* à partir de ADO 2.6, objets ADO MD peuvent être récupérées à l’aide des noms uniques, comme spécifié par le [UniqueName, propriété (ADO MD)](../../ado/reference/ado-md-api/uniquename-property-ado-md.md).   Les noms des objets parents n’avez pas besoin de connaître et collections de parent n’avez pas besoin d’être rempli pour récupérer un objet de schéma. Consultez [GetSchemaObject, méthode (ADO MD)](../../ado/reference/ado-md-api/getschemaobject-method-ado-md.md).
 
  *Flux de commandes* le **commande** objet prend en charge des commandes dans un format de flux de données en guise d’alternative à l’utilisation de la **CommandText** propriété. Le [CommandStream, propriété (ADO)](../../ado/reference/ado-api/commandstream-property-ado.md) peut être utilisé pour spécifier les modèles XML ou des programmes en tant que le **commande** d’entrée avec le fournisseur Microsoft OLE DB pour SQL Server.
 
- **Dialecte***propriété* [dialecte](../../ado/reference/ado-api/dialect-property.md) est une propriété qui définit la syntaxe et les règles générales que le fournisseur utilise pour analyser la chaîne ou le flux.
+ **Dialecte***propriété* [dialecte](../../ado/reference/ado-api/dialect-property.md) est une propriété qui définit la syntaxe et les règles générales que le fournisseur utilise pour analyser la chaîne ou le flux.  
 
- **Command.Execute***méthode* le [exécuter la méthode](../../ado/reference/ado-api/execute-method-ado-command.md) de ADO **commande** objet a été amélioré pour utiliser des flux d’entrée et de sortie.
+ **Command.Execute***méthode* le [exécuter la méthode](../../ado/reference/ado-api/execute-method-ado-command.md) de ADO **commande** objet a été amélioré pour utiliser des flux d’entrée et de sortie.  
 
  *Champ statusvalues* si l’utilisateur rencontre une erreur DB_E_ERRORSOCCURRED lorsque vous modifiez un **champ** d’un **Recordset**, ADO remplira maintenant la **Field.Status**propriété avec les informations d’état approprié afin que l’utilisateur aura plus d’informations sur la cause du problème. Consultez [Status, propriété (champ ADO)](../../ado/reference/ado-api/status-property-ado-field.md).
 
- **NamedParameters***propriété* [NamedParameters](../../ado/reference/ado-api/namedparameters-property-ado.md) une nouvelle propriété de la **commande** nommé de l’objet qui indique que le fournisseur doit utiliser. paramètres.
+ **NamedParameters***propriété* [NamedParameters](../../ado/reference/ado-api/namedparameters-property-ado.md) une nouvelle propriété de la **commande** nommé de l’objet qui indique que le fournisseur doit utiliser. paramètres.  
 
  *Jeux de résultats dans des flux* ADO peut retourner des jeux de résultats à partir d’une source de données dans un **flux**, plutôt qu’un **Recordset** objet. À l’aide de la version la plus récente du fournisseur Microsoft OLE DB pour SQL Server, vous pouvez obtenir des résultats XML à partir du fournisseur en exécutant une requête « Pour le XML ». A **flux** qui reçoit le jeu de résultats peut être ouvert avec une commande « Pour XML » comme source. Consultez [la récupération des jeux de résultats en flux](../../ado/guide/data/retrieving-resultsets-into-streams.md).
 
  *Jeu de résultats de ligne unique* ADO le **enregistrement** objet peut maintenant être ouverts sur une chaîne de commande ou **commande** objet qui retourne une ligne de données à partir du fournisseur. Cela entraîne de meilleures performances avec les fournisseurs de MDAC 2.6. Consultez [Open (méthode) (enregistrement ADO)](../../ado/reference/ado-api/open-method-ado-record.md).
 
 ## <a name="ado-25"></a>ADO 2.5
- **Enregistrement** *objet* ADO 2.5 présente le **enregistrement** objet pour représenter et gérer une ligne d’un **Recordset** ou d’un fournisseur de données ou d’un objet en encapsulant des données semi-structurées, par exemple un fichier ou répertoire.
+ **Enregistrement** *objet* ADO 2.5 présente le **enregistrement** objet pour représenter et gérer une ligne d’un **Recordset** ou un fournisseur de données, ou un objet en encapsulant un des données semi-structurées, par exemple un fichier ou répertoire.
 
  **Flux** *objet* ADO 2.5 présente également la **flux** objet pour représenter un flux de données binaire ou texte.
 

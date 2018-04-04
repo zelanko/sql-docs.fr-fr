@@ -1,34 +1,33 @@
-﻿---
+---
 title: Pilote Node.js pour SQL Server | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 08/08/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
 ms.component: node-js
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - drivers
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: c4cdbfa6-9b73-4b72-a1a6-e1b45d8a773d
-caps.latest.revision: 
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: c3f3203af56f39a4f9beffc8a7a616c0cde64270
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 5cf72af4ebd9b00c06b80a64cd6f3017d9cd4a63
+ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="nodejs-driver-for-sql-server"></a>Pilote Node.js pour SQL Server
 
 ![Téléchargement-bas encerclé](../../ssdt/media/download.png)[pour télécharger le pilote SQL Node.js](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
-Le module tedious est une implémentation javascript du protocole TDS, qui est pris en charge par tous les versions modernes de SQL Server. Le pilote est un projet open source sur Github.  
+Le module fastidieux est une implémentation javascript du protocole TDS, qui est pris en charge par toutes les versions récentes de SQL Server. Le pilote est un projet open source, disponible sur Github.  
   
 Vous pouvez vous connecter à une base de données SQL à l’aide de Node.js sur Windows, Linux ou Mac.  
   

@@ -63,7 +63,7 @@ La première étape consiste à configurer le système d’exploitation sur les 
     > [!NOTE] 
     > Lors de l'installation, une clé principale du serveur est générée pour l’instance de SQL Server et stockée dans `var/opt/mssql/secrets/machine-key`. Sur Linux, SQL Server s’exécute toujours sous un compte local nommé mssql. S’agissant d’un compte local, son identité n’est pas partagée entre les nœuds. Par conséquent, vous devez copier la clé de chiffrement à partir du nœud principal vers chaque nœud secondaire pour que chaque compte mssql local puisse y accéder pour déchiffrer la clé principale du serveur. 
 
-1.  Sur le nœud principal, créez une connexion SQL server pour STIMULATEUR et accorder l’autorisation de connexion pour exécuter `sp_server_diagnostics`. STIMULATEUR utilise ce compte pour vérifier le nœud qui exécute SQL Server. 
+1.  Sur le nœud principal, créez une connexion SQL server pour Pacemaker et accorder l’autorisation de connexion pour exécuter `sp_server_diagnostics`. STIMULATEUR utilise ce compte pour vérifier le nœud qui exécute SQL Server. 
 
     ```bash
     sudo systemctl start mssql-server
