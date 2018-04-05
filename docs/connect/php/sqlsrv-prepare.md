@@ -20,7 +20,7 @@ helpviewer_keywords:
 - API Reference, sqlsrv_prepare
 - sqlsrv_prepare
 ms.assetid: 8c74c697-3296-4f5d-8fb9-e361f53f19a6
-caps.latest.revision: ''
+caps.latest.revision: 52
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
@@ -50,9 +50,9 @@ sqlsrv_prepare(resource $conn, string $tsql [, array $params [, array $options]]
   
 *$params* [facultatif] : un **tableau** des valeurs qui correspondent aux paramètres d’une requête paramétrable. Chaque élément du tableau peut être l’un des éléments suivants :
   
--   Valeur littérale  
+-   Valeur littérale.  
   
--   Référence à une variable PHP  
+-   Référence à une variable PHP.  
   
 -   Objet **array** avec la structure suivante :  
   
@@ -65,7 +65,7 @@ sqlsrv_prepare(resource $conn, string $tsql [, array $params [, array $options]]
   
     Le tableau suivant décrit ces éléments de tableau :  
   
-    |Élément| Description|  
+    |Élément|Description|  
     |-----------|---------------|  
     |*&$value*|Valeur littérale ou référence à une variable PHP.|  
     |*$direction*[OPTIONAL]|Une des valeurs suivantes **SQLSRV_PARAM_\***  les constantes utilisées pour indiquer la direction du paramètre : **SQLSRV_PARAM_IN**, **SQLSRV_PARAM_OUT**, **SQLSRV_PARAM_INOUT**. La valeur par défaut est **SQLSRV_PARAM_IN**.<br /><br />Pour plus d’informations sur les constantes PHP, consultez [constantes &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md).|  
@@ -90,10 +90,10 @@ La combinaison de **sqlsrv_prepare** et **sqlsrv_execute** sépare la préparati
   
 Pour découvrir d’autres stratégies d’écriture et de lecture de grandes quantités d’informations, consultez [Batches of SQL Statements](../../odbc/reference/develop-app/batches-of-sql-statements.md) et [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md).  
   
-Pour plus d’informations, consultez [How to: Retrieve Output Parameters Using the SQLSRV Driver](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md).  
+Pour plus d’informations, consultez [Procédure : récupérer des paramètres de sortie à l’aide du pilote SQLSRVr](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md).  
   
 ## <a name="example"></a>Exemple  
-L’exemple suivant prépare et exécute une instruction. L’instruction, lors de l’exécution (voir [sqlsrv_execute](../../connect/php/sqlsrv-execute.md)), met à jour un champ dans le *Sales.SalesOrderDetail* table de base de données AdventureWorks. L’exemple part du principe que SQL Server et le [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) base de données sont installés sur l’ordinateur local.  Toute la sortie est écrite dans la console quand l’exemple est exécuté à partir de la ligne de commande.  
+L’exemple suivant prépare et exécute une instruction. L’instruction, lors de l’exécution (voir [sqlsrv_execute](../../connect/php/sqlsrv-execute.md)), met à jour un champ dans le *Sales.SalesOrderDetail* table de base de données AdventureWorks. L’exemple part du principe que SQL Server et le [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) base de données sont installés sur l’ordinateur local. Toute la sortie est écrite dans la console quand l’exemple est exécuté à partir de la ligne de commande.  
   
 ```  
 <?php  

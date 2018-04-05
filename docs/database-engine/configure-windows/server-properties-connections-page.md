@@ -1,19 +1,21 @@
 ---
-title: "Propriétés du serveur (page Connexions) | Microsoft Docs"
-ms.custom: 
+title: Propriétés du serveur (page Connexions) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: configure-windows
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
 ms.topic: article
-f1_keywords: sql13.swb.serverproperties.connections.f1
+f1_keywords:
+- sql13.swb.serverproperties.connections.f1
 ms.assetid: 33be8ac5-12dd-4b8a-99e0-68261c219dd2
-caps.latest.revision: "27"
+caps.latest.revision: 27
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
@@ -66,7 +68,7 @@ ms.lasthandoff: 01/18/2018
  Spécifie le temps (en secondes) imparti à une opération distante avant l'expiration de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . La valeur par défaut est de 600 secondes, soit un délai d'attente de 10 minutes.  
   
  **Nécessite des transactions distribuées pour la communication de serveur à serveur**  
- Protège les actions d'une procédure de serveur à serveur par le biais d'une transaction MS DTC ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Distributed Transaction Coordinator). Pour plus d'informations, consultez [Configure the remote proc trans Server Configuration Option](../../database-engine/configure-windows/configure-the-remote-proc-trans-server-configuration-option.md).  
+ Protège les actions d'une procédure de serveur à serveur par le biais d'une transaction MS DTC ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Distributed Transaction Coordinator). Pour plus d'informations, consultez [Configurer l'option de configuration du serveur remote proc trans](../../database-engine/configure-windows/configure-the-remote-proc-trans-server-configuration-option.md).  
   
 ## <a name="property-page-display-options"></a>Options d'affichage de la page Propriétés  
  **Valeurs configurées**  
