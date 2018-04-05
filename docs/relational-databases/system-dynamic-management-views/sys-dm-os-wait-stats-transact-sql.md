@@ -1,16 +1,16 @@
 ---
 title: sys.dm_os_wait_stats (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/04/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dm_os_wait_stats_TSQL
@@ -22,24 +22,24 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_os_wait_stats dynamic management view
 ms.assetid: 568d89ed-2c96-4795-8a0c-2f3e375081da
-caps.latest.revision: 
+caps.latest.revision: 111
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: afc91e5254a85d0863f2461e50d9ec55e0cb5bbd
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: d3add34699a2b0fa77d47d27ac8084f503802b43
+ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="sysdmoswaitstats-transact-sql"></a>sys.dm_os_wait_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-Retourne des informations sur toutes les attentes subies par les threads qui se sont exécutés. Vous pouvez utiliser cette vue agrégée pour diagnostiquer les problèmes de performance liés à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et également liés à des requêtes et des traitements spécifiques. [Sys.dm_exec_session_wait_stats &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-session-wait-stats-transact-sql.md) fournit des informations similaires par session.  
+Retourne des informations sur toutes les attentes subies par les threads qui se sont exécutés. Vous pouvez utiliser cette vue agrégée pour diagnostiquer les problèmes de performance liés à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et également liés à des requêtes et des traitements spécifiques. [Sys.dm_exec_session_wait_stats &#40;Transact-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-session-wait-stats-transact-sql.md) fournit des informations similaires par session.  
   
 > [!NOTE] 
-> Pour appeler cette de  **[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ou [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]** , utilisez le nom **sys.dm_pdw_nodes_os_wait_stats**.  
+> Pour appeler cette de **[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ou [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]**, utilisez le nom **sys.dm_pdw_nodes_os_wait_stats**.  
   
 |Nom de colonne|Type de données| Description|  
 |-----------------|---------------|-----------------|  
@@ -50,11 +50,12 @@ Retourne des informations sur toutes les attentes subies par les threads qui se 
 |signal_wait_time_ms|**bigint**|Différence entre le moment où le thread qui attend a été signalé et le moment où il a commencé à s'exécuter.|  
 |pdw_node_id|**int**|L’identificateur du nœud qui se trouve sur cette distribution. <br/> **S’applique aux**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] |  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Autorisations
+
 Sur [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], nécessite `VIEW SERVER STATE` autorisation.   
-Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] niveaux Premium, nécessite le `VIEW DATABASE STATE` autorisation dans la base de données. Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Standard et les niveaux de base, nécessite le **administrateur du serveur** ou **administrateur Active Directory de Azure** compte.  
-  
-##  <a name="WaitTypes"></a>Types d’attentes  
+Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], nécessite le `VIEW DATABASE STATE` autorisation dans la base de données.   
+
+##  <a name="WaitTypes"></a> Types d’attentes  
  **Les attentes de ressource** attentes se produisent lorsqu’un processus de travail demande l’accès à une ressource qui n’est pas disponible, car la ressource est utilisée par un autre travail ou qu’il n’est pas encore disponible. Ces attentes sont par exemple des attentes de verrous, de verrous internes, de réseau et d'E/S de disque. Les attentes de verrous et de verrous internes sont des attentes sur des objets de synchronisation.  
   
 **Attentes de file d’attente**  
@@ -943,7 +944,7 @@ Cette commande remet tous les compteurs à 0.
 |WAIT_XTP_CKPT_CLOSE |Se produit pendant l’attente d’un point de contrôle., <br /> **S'applique à**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |WAIT_XTP_CKPT_ENABLED |Se produit lorsque les points de contrôle est désactivé et en attente pour les points de contrôle doit être activé., <br /> **S'applique à**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |WAIT_XTP_CKPT_STATE_LOCK |Se produit lors de la synchronisation de la vérification de l’état du point de contrôle., <br /> **S'applique à**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
-|WAIT_XTP_COMPILE_WAIT |TBD <br /> **S’applique à**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] via [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
+|WAIT_XTP_COMPILE_WAIT |TBD <br /> **S’APPLIQUE À** : [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |WAIT_XTP_GUEST |Se produit lorsque l’allocateur de mémoire de base de données doit cesser de recevoir des notifications de mémoire insuffisante., <br /> **S'applique à**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |WAIT_XTP_HOST_WAIT |Se produit lorsque les attentes sont déclenchées par le moteur de base de données et implémentées par l’hôte., <br /> **S'applique à**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |WAIT_XTP_OFFLINE_CKPT_BEFORE_REDO |TBD <br /> **S'applique à**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
@@ -1014,7 +1015,7 @@ Cette commande remet tous les compteurs à 0.
 |XTPPROC_PARTITIONED_STACK_CREATE |Se produit lors de l’allocation par nœud NUMA en mode natif compilé des structures de cache de procédure stockée (doit être effectué un thread unique) pour une procédure donnée., <br /> **S'applique à**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|
 
   
- Les événements XEvent suivants sont liés pour partitionner **commutateur** et de reconstruction de l’index en ligne. Pour plus d’informations sur la syntaxe, consultez [ALTER TABLE &#40; Transact-SQL &#41; ](../../t-sql/statements/alter-table-transact-sql.md) et [ALTER INDEX &#40; Transact-SQL &#41; ](../../t-sql/statements/alter-index-transact-sql.md).  
+ Les événements XEvent suivants sont liés pour partitionner **commutateur** et de reconstruction de l’index en ligne. Pour plus d’informations sur la syntaxe, consultez [ALTER TABLE &#40;Transact-SQL&#41; ](../../t-sql/statements/alter-table-transact-sql.md) et [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md).  
   
 -   lock_request_priority_state  
   
@@ -1022,11 +1023,11 @@ Cette commande remet tous les compteurs à 0.
   
 -   ddl_with_wait_at_low_priority  
   
- Pour une matrice de compatibilité de verrouillage, consultez [sys.dm_tran_locks &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).  
+ Pour une matrice de compatibilité de verrouillage, consultez [sys.dm_tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).  
   
 ## <a name="see-also"></a>Voir aussi  
     
- [Système d’exploitation de serveur SQL relatives des vues de gestion dynamique &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)   
+ [Vues de gestion dynamique liées à système d’exploitation SQL Server &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)   
  [sys.dm_exec_session_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-session-wait-stats-transact-sql.md)   
  [sys.dm_db_wait_stats &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-wait-stats-azure-sql-database.md)  
   

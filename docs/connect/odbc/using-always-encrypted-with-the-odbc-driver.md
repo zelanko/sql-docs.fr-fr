@@ -1,27 +1,28 @@
 ---
-title: "Utilisation du chiffrement intégral avec le pilote ODBC pour SQL Server | Documents Microsoft"
-ms.custom: 
+title: Utilisation du chiffrement intégral avec le pilote ODBC pour SQL Server | Documents Microsoft
+ms.custom: ''
 ms.date: 10/01/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 02e306b8-9dde-4846-8d64-c528e2ffe479
-caps.latest.revision: "3"
+caps.latest.revision: 3
 ms.author: v-chojas
 manager: jhubbard
 author: MightyPen
 ms.workload: On Demand
-ms.openlocfilehash: a7e2679b04f55f528de1d90070593f6197160d79
-ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
+ms.openlocfilehash: 1456db9e5474f2970508b4bc035915744172b3df
+ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/22/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="using-always-encrypted-with-the-odbc-driver-for-sql-server"></a>Utilisation du chiffrement intégral avec le pilote ODBC pour SQL Server
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -333,10 +334,16 @@ Si SQL Server informe le pilote que le paramètre ne doit pas être chiffré, le
 
 ### <a name="column-encryption-key-caching"></a>Clé de chiffrement de colonne mise en cache
 
-Pour réduire le nombre d’appels à un magasin de clés principales de colonne pour déchiffrer les clés de chiffrement de colonne, le pilote met en cache le clés cek clair dans la mémoire. Après avoir reçu le ECEK à partir des métadonnées de la base de données, le pilote tente d’abord de trouver la clé CEK en texte clair correspondant à la valeur de clé chiffrée dans le cache. Le pilote appelle le magasin de clés contenant la clé CMK uniquement s’il ne peut pas trouver le texte en clair correspondante CEK dans le cache.
+Pour réduire le nombre d’appels à un magasin de clés principales de colonne pour déchiffrer les clés de chiffrement de colonne, le pilote met en cache le clés cek clair dans la mémoire. Le cache de la clé CEK est global pour le pilote et n’est pas associé avec une connexion. Après avoir reçu le ECEK à partir des métadonnées de la base de données, le pilote tente d’abord de trouver la clé CEK en texte clair correspondant à la valeur de clé chiffrée dans le cache. Le pilote appelle le magasin de clés contenant la clé CMK uniquement s’il ne peut pas trouver le texte en clair correspondante CEK dans le cache.
 
 > [!NOTE]
 > Dans le pilote ODBC pour SQL Server, les entrées dans le cache sont supprimées après un délai d’attente de deux heures. Cela signifie que, pour un ECEK donné, le pilote contacte le magasin de clés qu’une seule fois pendant la durée de vie de l’application ou de toutes les deux heures, si elle est inférieure.
+
+À compter du 17.1 du pilote ODBC pour SQL Server, le délai d’expiration du cache de clé CEK peut être ajusté à l’aide de la `SQL_COPT_SS_CEKCACHETTL` attribut de connexion, qui spécifie le nombre de secondes pendant lesquelles une clé CEK restent dans le cache. En raison de la nature globale du cache, cet attribut peut être ajusté à partir d’un handle de connexion valide pour le pilote. Lorsque le cache de durée de vie est réduite, clés cek existant qui dépasse la nouvelle durée de vie les sont également supprimés. Si la valeur est 0, aucun clés cek n’est mis en cache.
+
+### <a name="trusted-key-paths"></a>Chemins de clés approuvés
+
+À compter du 17.1 du pilote ODBC pour SQL Server, le `SQL_COPT_SS_TRUSTEDCMKPATHS` attribut de connexion permet à une application pour que les opérations de chiffrement intégral utilisent uniquement une liste de clés de migration certifiables, identifiés par leurs chemins d’accès de clé spécifiée. Par défaut, cet attribut est NULL, ce qui signifie que le pilote accepte n’importe quel chemin de la clé. Pour utiliser cette fonctionnalité, définissez `SQL_COPT_SS_TRUSTEDCMKPATHS` pour pointer vers une chaîne à caractères larges délimitée par null, se terminant par null qui répertorie les chemins d’accès clé autorisées. La mémoire vers lequel pointée cet attribut doit rester valide pendant les opérations de chiffrement ou déchiffrement utilisant le descripteur de connexion sur lequel il a la valeur---sur laquelle le pilote vérifie si le chemin de clé CMK tel que spécifié par les métadonnées du serveur n’est pas la casse dans cette liste. Si le chemin d’accès de la clé CMK n’est pas dans la liste, l’opération échoue. L’application peut modifier le contenu de mémoire que pointe de cet attribut, pour modifier la liste des clés de migration certifiables approuvés, sans définir l’attribut à nouveau.
 
 ## <a name="working-with-column-master-key-stores"></a>Utilisation de magasins de clés principales de colonne
 
@@ -430,7 +437,7 @@ Le pilote tente de charger la bibliothèque identifiée par le paramètre ValueP
 |`CE203`|Le symbole « CEKeyStoreProvider » exporté est introuvable dans la bibliothèque.|
 |`CE203`|Un ou plusieurs fournisseurs dans la bibliothèque sont déjà chargés.|
 
-`SQLSetConnectAttr`Renvoie l’erreur habituel ou valeurs de succès et des informations supplémentaires est disponible pour toutes les erreurs qui se sont produits par le biais du mécanisme de diagnostic ODBC standard.
+`SQLSetConnectAttr` Renvoie l’erreur habituel ou valeurs de succès et des informations supplémentaires est disponible pour toutes les erreurs qui se sont produits par le biais du mécanisme de diagnostic ODBC standard.
 
 > [!NOTE]
 > Le programmeur de l’application doit garantir que des fournisseurs personnalisés sont chargés avant toute requête qui en a besoin est envoyé via une connexion. Cela entraîne l’erreur :
@@ -567,8 +574,8 @@ Consultez [migrer des données sensibles protégées par Always Encrypted](../..
 
 |Nom| Description|  
 |----------|-----------------|  
-|`ColumnEncryption`|Valeurs acceptées sont `Enabled` / `Disabled`.<br>`Enabled`--Active la fonctionnalité de chiffrement intégral pour la connexion.<br>`Disabled`--désactiver la fonctionnalité Always Encrypted pour la connexion. <br><br>La valeur par défaut est `Disabled`.|  
-|`KeyStoreAuthentication` | Valeurs valides : `KeyVaultPassword`,`KeyVaultClientSecret` |
+|`ColumnEncryption`|Valeurs acceptées sont `Enabled` / `Disabled`.<br>`Enabled` --Active la fonctionnalité de chiffrement intégral pour la connexion.<br>`Disabled` --désactiver la fonctionnalité Always Encrypted pour la connexion. <br><br>La valeur par défaut est `Disabled`.|  
+|`KeyStoreAuthentication` | Valeurs valides : `KeyVaultPassword`, `KeyVaultClientSecret` |
 |`KeyStorePrincipalId` | Lorsque `KeyStoreAuthentication`  =  `KeyVaultPassword`, définissez cette valeur sur un nom Principal d’utilisateur Active Directory de Azure valide. <br>Lorsque `KeyStoreAuthetication`  =  `KeyVaultClientSecret` cette valeur pour l’ID Client d’Application Active Directory Azure valide |
 |`KeyStoreSecret` | Lorsque `KeyStoreAuthentication`  =  `KeyVaultPassword` cette valeur au mot de passe pour le nom d’utilisateur correspondant. <br>Lorsque `KeyStoreAuthentication`  =  `KeyVaultClientSecret` définir cette valeur sur la clé secrète d’Application associé avec l’ID Client d’Application Active Directory Azure valide|
 
@@ -576,15 +583,17 @@ Consultez [migrer des données sensibles protégées par Always Encrypted](../..
 
 |Nom|Type| Description|  
 |----------|-------|----------|  
-|`SQL_COPT_SS_COLUMN_ENCRYPTION`|De préconnexion|`SQL_COLUMN_ENCRYPTION_DISABLE`(0)--désactiver Always Encrypted <br>`SQL_COLUMN_ENCRYPTION_ENABLE`(1)--activer Always Encrypted|
+|`SQL_COPT_SS_COLUMN_ENCRYPTION`|De préconnexion|`SQL_COLUMN_ENCRYPTION_DISABLE` (0)--désactiver Always Encrypted <br>`SQL_COLUMN_ENCRYPTION_ENABLE` (1)--activer Always Encrypted|
 |`SQL_COPT_SS_CEKEYSTOREPROVIDER`|Post-connexion|[Set] Tentative de chargement CEKeystoreProvider<br>[Get] Retourne un nom CEKeystoreProvider|
 |`SQL_COPT_SS_CEKEYSTOREDATA`|Post-connexion|[Set] Écrire des données CEKeystoreProvider<br>[Get] Lire les données de CEKeystoreProvider|
+|`SQL_COPT_SS_CEKCACHETTL`|Post-connexion|[Set] Définir la durée de vie du cache de clé CEK<br>[Get] Obtenir le cache en cours de la clé CEK TTL|
+|`SQL_COPT_SS_TRUSTEDCMKPATHS`|Post-connexion|[Set] Définir le pointeur de chemins d’accès de clé CMK approuvé<br>[Get] Obtenir le pointeur de chemins d’accès de clé CMK approuvé en cours|
 
 ### <a name="statement-attributes"></a>Attributs d'instruction
 
 |Nom| Description|  
 |----------|-----------------|  
-|`SQL_SOPT_SS_COLUMN_ENCRYPTION`|`SQL_CE_DISABLED`(0)--always Encrypted est désactivé pour l’instruction <br>`SQL_CE_RESULTSETONLY`(1)--uniquement le déchiffrement. Jeux de résultats et valeurs de retour sont déchiffrées et les paramètres ne sont pas chiffrés. <br>`SQL_CE_ENABLED`(3)--toujours chiffré est activé et utilisé pour les paramètres et les résultats|
+|`SQL_SOPT_SS_COLUMN_ENCRYPTION`|`SQL_CE_DISABLED` (0)--always Encrypted est désactivé pour l’instruction <br>`SQL_CE_RESULTSETONLY` (1)--uniquement le déchiffrement. Jeux de résultats et valeurs de retour sont déchiffrées et les paramètres ne sont pas chiffrés. <br>`SQL_CE_ENABLED` (3)--toujours chiffré est activé et utilisé pour les paramètres et les résultats|
 
 ### <a name="descriptor-fields"></a>Champs de descripteur
 

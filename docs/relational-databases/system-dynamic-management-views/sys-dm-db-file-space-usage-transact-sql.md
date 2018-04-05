@@ -1,16 +1,16 @@
 ---
 title: sys.dm_db_file_space_usage (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dm_db_file_space_usage
@@ -22,16 +22,16 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_db_file_space_usage dynamic management view
 ms.assetid: 148a5276-a8d5-49d2-8146-3c63d24c2144
-caps.latest.revision: 
+caps.latest.revision: 45
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: e4e6cfa5fd274a9a3bc3e7a9e3a0f981be8e2b46
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 65be93c18aed0f9c03ea781ee7de3069c4e99698
+ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="sysdmdbfilespaceusage-transact-sql"></a>sys.dm_db_file_space_usage (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -62,7 +62,7 @@ ms.lasthandoff: 02/03/2018
   
  Le contenu de la banque des versions en cours est dans [sys.dm_tran_version_store](../../relational-databases/system-dynamic-management-views/sys-dm-tran-version-store-transact-sql.md). Le suivi des pages du magasin de versions n'est pas effectué au niveau des sessions et des tâches, mais au niveau des fichiers. En effet, il s'agit de ressources globales. Une session peut générer des versions, mais ces dernières ne peuvent pas être supprimées lorsque la session se termine. Le nettoyage du magasin de versions doit considérer la transaction la plus longue ayant besoin d'accéder à une version particulière. La transaction en cours d’exécution plus longue pour la version nettoyage du magasin peut être détectée en consultant la colonne elapsed_time_seconds dans [sys.dm_tran_active_snapshot_database_transactions](../../relational-databases/system-dynamic-management-views/sys-dm-tran-active-snapshot-database-transactions-transact-sql.md).  
   
- Des modifications fréquentes dans la colonne mixed_extent_page_count peuvent indiquer une utilisation importante de pages SGAM. Le cas échéant, vous risquez d'observer un grand nombre d'attentes PAGELATCH_UP dans lesquelles la ressource d'attente est une page SGAM. Pour plus d’informations, consultez [sys.dm_os_waiting_tasks &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-os-waiting-tasks-transact-sql.md), [sys.dm_os_wait_stats &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md), et [sys.dm_os_latch_stats &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-os-latch-stats-transact-sql.md).  
+ Des modifications fréquentes dans la colonne mixed_extent_page_count peuvent indiquer une utilisation importante de pages SGAM. Le cas échéant, vous risquez d'observer un grand nombre d'attentes PAGELATCH_UP dans lesquelles la ressource d'attente est une page SGAM. Pour plus d’informations, consultez [sys.dm_os_waiting_tasks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-waiting-tasks-transact-sql.md), [sys.dm_os_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md), et [sys.dm_os_latch_ statistiques &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-latch-stats-transact-sql.md).  
   
 ## <a name="user-objects"></a>Objets utilisateur  
  Les objets suivants sont compris dans les compteurs de pages des objets utilisateurs :  
@@ -94,11 +94,11 @@ ms.lasthandoff: 02/03/2018
 |----------|--------|------------------|  
 |sys.dm_db_file_space_usage.database_id, file_id|sys.dm_io_virtual_file_stats.database_id, file_id|Un à un|  
   
-## <a name="permissions"></a>Autorisations  
- Sur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] requiert l’autorisation VIEW SERVER STATE sur le serveur.  
-  
- Sur [!INCLUDE[ssSDS](../../includes/sssds-md.md)] niveaux Premium requiert l’autorisation VIEW DATABASE STATE dans la base de données. Sur [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Standard et les niveaux de base nécessite le [!INCLUDE[ssSDS](../../includes/sssds-md.md)] compte d’administrateur.  
-  
+## <a name="permissions"></a>Autorisations
+
+Sur [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], nécessite `VIEW SERVER STATE` autorisation.   
+Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], nécessite le `VIEW DATABASE STATE` autorisation dans la base de données.   
+
 ## <a name="examples"></a>Exemples  
   
 ### <a name="determing-the-amount-of-free-space-in-tempdb"></a>Détermination de la quantité d'espace disponible dans tempdb  
@@ -125,6 +125,6 @@ FROM sys.dm_db_file_space_usage;
   
 ## <a name="see-also"></a>Voir aussi  
  [Fonctions et vues de gestion dynamique &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [Base de données associés des vues de gestion dynamique &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)   
+ [Vues de gestion dynamique liées à la base de données &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)   
  [sys.dm_db_task_space_usage &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-task-space-usage-transact-sql.md)   
  [sys.dm_db_session_space_usage &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-session-space-usage-transact-sql.md)  

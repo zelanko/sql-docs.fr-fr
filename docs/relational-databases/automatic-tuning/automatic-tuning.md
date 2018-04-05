@@ -1,31 +1,31 @@
 ---
-title: "Le paramétrage automatique | Documents Microsoft"
-description: "En savoir plus sur le réglage automatique dans SQL Server et la base de données SQL Azure"
-ms.custom: 
+title: Le paramétrage automatique | Documents Microsoft
+description: En savoir plus sur le réglage automatique dans SQL Server et la base de données SQL Azure
+ms.custom: ''
 ms.date: 08/16/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: automatic-tuning
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - performance tuning [SQL Server]
-ms.assetid: 
-caps.latest.revision: 
+ms.assetid: ''
+caps.latest.revision: ''
 author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 04d8ac47233e0556cd54ed9fb2b3d22080b4ee42
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 2f08de0fadb8fbc237af89a3132cfd747c9d62c7
+ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="automatic-tuning"></a>Paramétrage automatique
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -79,7 +79,7 @@ Lorsque le [!INCLUDE[ssde_md](../../includes/ssde_md.md)] applique la dernière 
 
 Vous pouvez activer le réglage automatique pour chaque base de données et spécifier que le dernier bon plan connu doit être forcé quand une régression de changement de plan est détectée. Pour cela, utilisez la commande suivante :
 
-```   
+```sql   
 ALTER DATABASE current
 SET AUTOMATIC_TUNING ( FORCE_LAST_GOOD_PLAN = ON ); 
 ```
@@ -92,7 +92,7 @@ Plans forcés manuellement ne doivent pas être forcés à forever, parce que le
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournit toutes les vues nécessaires et les procédures requises pour surveiller les performances et résoudre les problèmes dans le magasin de requêtes.
 
-Dans [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], vous pouvez rechercher les régressions de choix de plan à l’aide de vues système de magasin de requêtes. Dans [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)], le [!INCLUDE[ssde_md](../../includes/ssde_md.md)] détecte et présente des régressions de choix de plan potentiels et les actions recommandées qui doivent être appliquées dans le [sys.dm_db_tuning_recommendations &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md) vue. La vue affiche des informations sur le problème, l’importance du problème et des détails tels que la requête identifiée, l’ID du plan de régression, l’ID du plan qui a été utilisé en tant que ligne de base pour la comparaison et le [!INCLUDE[tsql_md](../../includes/tsql_md.md)] instruction qui peut être exécutée pour résoudre le problème.
+Dans [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], vous pouvez rechercher les régressions de choix de plan à l’aide de vues système de magasin de requêtes. Dans [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)], le [!INCLUDE[ssde_md](../../includes/ssde_md.md)] détecte et présente des régressions de choix de plan potentiels et les actions recommandées qui doivent être appliquées dans le [sys.dm_db_tuning_recommendations &#40;Transact-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md) vue. La vue affiche des informations sur le problème, l’importance du problème et des détails tels que la requête identifiée, l’ID du plan de régression, l’ID du plan qui a été utilisé en tant que ligne de base pour la comparaison et le [!INCLUDE[tsql_md](../../includes/tsql_md.md)] instruction qui peut être exécutée pour résoudre le problème.
 
 | type | description | datetime | score | détails | … |
 | --- | --- | --- | --- | --- | --- |
@@ -104,11 +104,12 @@ Certaines colonnes de cette vue sont décrits dans la liste suivante :
  - Description qui contient des informations pourquoi [!INCLUDE[ssde_md](../../includes/ssde_md.md)] pense que ce changement de plan est une régression des performances potentielles.
  - Date et heure de la régression potentielle est détectée.
  - Score de cette recommandation. 
- - Pour plus d’informations sur les problèmes tels que les ID du plan détecté, l’ID du plan de régression, ID du plan qui doit être forcé pour résoudre le problème, [!INCLUDE[tsql_md](../../includes/tsql_md.md)] script qui peut-être être appliquée pour résoudre le problème, etc. Sont stockés les détails [format JSON](../../relational-databases/json/index.md).
+ - Pour plus d’informations sur les problèmes tels que les ID du plan détecté, l’ID du plan de régression, ID du plan qui doit être forcé pour résoudre le problème, [!INCLUDE[tsql_md](../../includes/tsql_md.md)]
+ script qui peut-être être appliquée pour résoudre le problème, etc. Sont stockés les détails [format JSON](../../relational-databases/json/index.md).
 
 Utilisez la requête suivante pour obtenir un script qui résout le problème et des informations supplémentaires sur l’estimation bénéficiez :
 
-```   
+```sql   
 SELECT reason, score,
       script = JSON_VALUE(details, '$.implementationDetails.script'),
       planForceDetails.*,
@@ -171,7 +172,7 @@ Actions requises pour créer des index nécessaires dans [!INCLUDE[ssazure_md](.
 
 ### <a name="alternative---manual-index-management"></a>Alternative - gestion d’index manuelles
 
-Sans la gestion automatique des index, l’utilisateur doit interroger manuellement [sys.dm_db_missing_index_details &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-details-transact-sql.md) afin de retrouver les index qui peuvent améliorer les performances, créer des index à l’aide des informations fournies dans cette vue et surveiller les performances de la requête manuellement. Afin de trouver l’index doivent être supprimés, les utilisateurs doivent surveiller opérationnel statistiques des index à l’index de recherche rarement utilisée.
+Sans la gestion automatique des index, l’utilisateur doit interroger manuellement [sys.dm_db_missing_index_details &#40;Transact-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-details-transact-sql.md) afin de retrouver les index qui peut améliorer les performances, créer des index à l’aide des détails fourni dans cette vue et surveiller les performances de la requête manuellement. Afin de trouver l’index doivent être supprimés, les utilisateurs doivent surveiller opérationnel statistiques des index à l’index de recherche rarement utilisée.
 
 [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] simplifie ce processus. [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] analyse de votre charge de travail, identifie les requêtes qui peuvent être exécutées plus rapidement avec un nouvel index et identifie les index non utilisés ou en double. Trouver les informations d’identification d’index doit être modifié sur [trouver des recommandations d’index dans le portail Azure](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-advisor-portal).
 
