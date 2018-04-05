@@ -16,11 +16,11 @@ helpviewer_keywords:
 - tutorials [SQL Server Management Studio]
 - Transact-SQL tutorials
 - SQL Server Management Studio [SQL Server], tutorials
-ms.openlocfilehash: 9f633a8d624fd31913dc2aeb6fde34ff30b7645d
-ms.sourcegitcommit: ccb05cb5a4cccaf7ffa9e85a4684fa583bab914e
+ms.openlocfilehash: 792d6c7fe69a1b8ec77c70d0fbfa6ceaa92d808a
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="tutorial-additional-tips-and-tricks-for-using-ssms"></a>Tutoriel : Conseils et astuces supplémentaires sur l’utilisation de SSMS
 Ce tutoriel vous propose des astuces supplémentaires sur l’utilisation de SQL Server Management Studio. Cet article va vous apprendre à : 
@@ -32,7 +32,7 @@ Ce tutoriel vous propose des astuces supplémentaires sur l’utilisation de SQL
 > * Accéder à votre journal des erreurs SQL Server
 > * Rechercher le nom de votre instance de SQL Server
 
-## <a name="prerequisites"></a>Prérequis
+## <a name="prerequisites"></a>Prerequisites
 Pour suivre ce tutoriel, vous avez besoin de SQL Server Management Studio, de l’accès à un serveur SQL Server et d’une base de données AdventureWorks. 
 
 - Installez [SQL Server Management Studio](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms).
@@ -143,33 +143,6 @@ Quand une base de données comprend un grand nombre d’objets, il peut être di
 ## <a name="access-your-sql-server-error-log"></a>Accéder à votre journal des erreurs SQL Server
 Le journal des erreurs est un fichier qui contient des détails sur les éléments qui se produisent sur votre serveur SQL Server. Il peut être parcouru et interrogé dans SSMS. Il peut également figurer sous forme de fichier .log sur le disque.
 
-### <a name="find-your-error-log-if-you-cannot-connect-to-sql"></a>Rechercher votre journal des erreurs si vous ne pouvez pas vous connecter à SQL
-1. Ouvrez le Gestionnaire de configuration SQL Server. 
-2. Développez le nœud **Services**.
-3. Cliquez avec le bouton droit sur votre instance de SQL Server > **Propriétés** :
-
-    ![Propriétés du Gestionnaire de configuration SQL Server](media/ssms-tricks/serverproperties.PNG)
-
-4. Sélectionnez l’onglet **Paramètres de démarrage**.
-5. Dans la zone **Paramètres existants**, le chemin après le « -e » correspond à l’emplacement du journal des erreurs : 
-    
-    ![Journal des erreurs de SQL Server](media/ssms-tricks/errorlog.png)
-    - Vous remarquerez la présence de plusieurs errorlog.* à cet emplacement. Celui se terminant par *.log représente le journal actuel. Ceux se terminant par des numéros sont les journaux précédents, car un journal est créé chaque fois que SQL Server redémarre. 
-6. Ouvrez ce fichier dans le Bloc-notes. 
-
-### <a name="find-your-error-log-if-youre-connected-to-sql"></a>Rechercher votre journal des erreurs si vous êtes connecté à SQL
-1. Connectez-vous à votre serveur SQL Server.
-2. Ouvrez une fenêtre **Nouvelle requête**.
-3. Collez l’extrait de code T-SQL suivant dans la fenêtre de requête, puis cliquez sur **Exécuter** :
-
-
-  ```sql
-   SELECT SERVERPROPERTY('ErrorLogFileName') AS 'Error log file location' 
-  ```
-3. Les résultats indiquent l’emplacement du journal des erreurs dans le système de fichiers : 
-
-![Rechercher le journal des erreurs par requête](media/ssms-tricks/finderrorlogquery.png)
-
 ### <a name="open-error-log-within-ssms"></a>Ouvrir le journal des erreurs dans SSMS
 1. Connectez-vous à votre serveur SQL Server.
 2. Développez le nœud **Gestion** . 
@@ -191,17 +164,45 @@ Le journal des erreurs est un fichier qui contient des détails sur les élémen
    
     ![Interroger le journal des erreurs](media/ssms-tricks/queryerrorlog.png)
 
-## <a name="determine-sql-server-instance-name"></a>Déterminer le nom de l’instance de SQL Server...
-Il existe différentes façons de déterminer le nom de votre instance avant et après la connexion à votre serveur SQL Server.  
+
+### <a name="find-error-log-location-if-youre-connected-to-sql"></a>Rechercher l’emplacement du journal des erreurs si vous êtes connecté à SQL
+1. Connectez-vous à votre serveur SQL Server.
+2. Ouvrez une fenêtre **Nouvelle requête**.
+3. Collez l’extrait de code T-SQL suivant dans la fenêtre de requête, puis cliquez sur **Exécuter** :
+
+ ```sql
+    SELECT SERVERPROPERTY('ErrorLogFileName') AS 'Error log file location'  
+  ``` 
+
+4. Les résultats indiquent l’emplacement du journal des erreurs dans le système de fichiers : 
+
+    ![Rechercher le journal des erreurs par requête](media/ssms-tricks/finderrorlogquery.png)
+
+### <a name="find-error-log-location-if-you-cannot-connect-to-sql"></a>Rechercher l’emplacement du journal des erreurs si vous ne pouvez pas vous connecter à SQL
+1. Ouvrez le Gestionnaire de configuration SQL Server. 
+2. Développez le nœud **Services**.
+3. Cliquez avec le bouton droit sur votre instance de SQL Server > **Propriétés** :
+
+    ![Propriétés du Gestionnaire de configuration SQL Server](media/ssms-tricks/serverproperties.PNG)
+
+4. Sélectionnez l’onglet **Paramètres de démarrage**.
+5. Dans la zone **Paramètres existants**, le chemin après le « -e » correspond à l’emplacement du journal des erreurs : 
+    
+    ![Journal des erreurs de SQL Server](media/ssms-tricks/errorlog.png)
+    - Vous remarquerez la présence de plusieurs errorlog.* à cet emplacement. Celui se terminant par *.log représente le journal actuel. Ceux se terminant par des numéros sont les journaux précédents, car un journal est créé chaque fois que SQL Server redémarre. 
+6. Ouvrez ce fichier dans le Bloc-notes. 
+
+## <a name="determine-sql-server-name"></a>Déterminer le nom du serveur SQL Server...
+Il existe différentes façons de déterminer le nom de votre serveur SQL Server avant et après la connexion à votre serveur SQL Server.  
 
 ### <a name="when-you-dont-know-it"></a>...quand vous ne le connaissez pas
 1. Suivez la procédure pour localiser le [journal des erreurs SQL Server sur le disque](#finding-your-error-log-if-you-cannot-connect-to-sql). 
 2. Ouvrez le fichier errorlog.log dans le Bloc-notes. 
 3. Parcourez-le jusqu’à ce que vous trouviez le texte « Le nom du serveur est » :
-  - Ce qui figure entre guillemets simples est le nom de l’instance et votre connexion : ![Nom du serveur dans le journal des erreurs](media/ssms-tricks/servernameinlog.png)
+  - Ce qui figure entre guillemets simples est le nom du serveur SQL Server et votre connexion : ![Nom du serveur dans le journal des erreurs](media/ssms-tricks/servernameinlog.png). Le format du nom est 'HOSTNAME\INSTANCENAME'. Si vous ne voyez que le nom d’hôte, cela signifie que vous avez installé l’instance par défaut et que le nom de votre instance est 'MSSQLSERVER'. Lors de la connexion à une instance par défaut, il vous suffit de taper le nom d’hôte pour vous connecter à votre serveur SQL Server.  
 
 ### <a name="once-youre-connected-to-sql"></a>...une fois que vous êtes connecté à SQL 
-Il existe trois emplacements où rechercher l’instance à laquelle vous êtes connecté. 
+Il existe trois emplacements où rechercher le serveur SQL Server auquel vous êtes connecté. 
 
 1. Le nom du serveur s’affiche dans **l’Explorateur d’objets** :
 
@@ -209,7 +210,7 @@ Il existe trois emplacements où rechercher l’instance à laquelle vous êtes 
 2. Le nom du serveur s’affiche dans la fenêtre de requête :
 
     ![Nom dans la fenêtre de requête](media/ssms-tricks/nameinquerywindow.png)
-3. . Le nom du serveur s’affiche également dans la **fenêtre Propriétés**.
+3. Le nom du serveur s’affiche également dans la **fenêtre Propriétés**.
     - Pour y accéder, ouvrez le menu **Affichage** > **Fenêtre Propriétés** :
 
     ![Nom dans la fenêtre Propriétés](media/ssms-tricks/nameinproperties.png)
