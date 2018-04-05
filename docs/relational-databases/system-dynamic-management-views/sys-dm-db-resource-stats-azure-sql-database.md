@@ -1,16 +1,16 @@
 ---
-title: "Sys.dm_db_resource_stats (de base de données SQL Azure) | Documents Microsoft"
-ms.custom: 
+title: Sys.dm_db_resource_stats (de base de données SQL Azure) | Documents Microsoft
+ms.custom: ''
 ms.date: 03/16/2016
-ms.prod: 
+ms.prod: ''
 ms.prod_service: sql-database
-ms.reviewer: 
+ms.reviewer: ''
 ms.service: sql-database
 ms.component: dmv's
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_db_resource_stats
@@ -23,16 +23,16 @@ helpviewer_keywords:
 - sys.dm_db_resource_stats
 - dm_db_resource_stats
 ms.assetid: 6e76b39f-236e-4bbf-b0b5-38be190d81e8
-caps.latest.revision: 
+caps.latest.revision: 11
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 606b871aeac34ac99d239ec4a84757187e00855f
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 116c5875ad7933e1b3d68f0c65ca7d0cb4d2b661
+ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="sysdmdbresourcestats-azure-sql-database"></a>sys.dm_db_resource_stats (base de données Azure SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -58,20 +58,17 @@ ms.lasthandoff: 02/03/2018
  Cette vue nécessite l'autorisation VIEW DATABASE STATE.  
   
 ## <a name="remarks"></a>Notes  
- Les données retournées par **sys.dm_db_resource_stats** est exprimée en pourcentage de la valeur maximale autorisée des limites DTU du niveau de service et niveau de performances qui vous sont en cours d’exécution pour les bases de données basique, Standard et Premium. Pour les niveaux « Web» et « Business », ces nombres indiquent les pourcentages selon les termes du niveau de performance Standard S2. Par exemple, lors d'une exécution avec une base de données web ou Business, si avg_cpu_percent retourne 70 %, cela indique 70 % de la limite du niveau S2. Pour les niveaux « Web» et « Business », les pourcentages peuvent aussi atteindre un nombre qui dépasse 100 %, également basé sur la limite de niveau S2.  
-  
+ Les données retournées par **sys.dm_db_resource_stats** est exprimée en pourcentage de la valeur maximale autorisée des limites DTU du niveau de service et niveau de performances qui vous sont en cours d’exécution pour les bases de données basique, Standard et Premium.
+ 
  Si la base de données a basculé vers un autre serveur lors des 60 dernières minutes, l’affichage retourne uniquement les données pour le temps durant lequel elle est la base de données primaire, depuis ce basculement.  
   
- Pour obtenir un affichage moins granulaire de ces données, utilisez **sys.resource_stats** vue de catalogue le **master** base de données. Cette vue capture des données toutes les 5 minutes et conserve 14 jours d'historique des données.  Pour plus d’informations, consultez [sys.resource_stats &#40; Base de données SQL Azure &#41; ](../../relational-databases/system-catalog-views/sys-resource-stats-azure-sql-database.md).  
+ Pour obtenir un affichage moins granulaire de ces données, utilisez **sys.resource_stats** vue de catalogue le **master** base de données. Cette vue capture des données toutes les 5 minutes et conserve 14 jours d'historique des données.  Pour plus d’informations, consultez [sys.resource_stats &#40;base de données SQL Azure&#41;](../../relational-databases/system-catalog-views/sys-resource-stats-azure-sql-database.md).  
   
  Lorsqu’une base de données est un membre d’un pool élastique, présentées sous forme de valeurs de pourcentage, statistiques des ressources sont exprimées en pourcentage de la limite maximale de DTU pour les bases de données défini dans la configuration du pool élastique.  
   
 ## <a name="example"></a>Exemple  
   
-> [!NOTE]  
->  Pour les niveaux « Web» et « Business », ces nombres indiquent les pourcentages selon les termes du niveau de performance Standard S2. Par exemple, lors d'une exécution avec une base de données web ou Business, si avg_cpu_percent retourne 70 %, cela indique 70 % de la limite du niveau S2. Pour les niveaux « Web» et « Business », les pourcentages peuvent aussi atteindre un nombre qui dépasse 100 %, également basé sur la limite de niveau S2.  
-  
- L'exemple suivant retourne les données d'utilisation de ressources ordonnées selon l’heure la plus récente pour la base de données actuellement connectée.  
+L'exemple suivant retourne les données d'utilisation de ressources ordonnées selon l’heure la plus récente pour la base de données actuellement connectée.  
   
 ```  
 SELECT * FROM sys.dm_db_resource_stats ORDER BY end_time DESC;  
