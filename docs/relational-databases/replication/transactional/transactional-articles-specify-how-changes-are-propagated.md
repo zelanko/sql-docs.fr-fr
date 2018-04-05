@@ -1,21 +1,21 @@
 ---
-title: "Spécifier le mode de propagation des modifications des articles transactionnels | Microsoft Docs"
-ms.custom: 
+title: Spécifier le mode de propagation des modifications des articles transactionnels | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: replication
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - transactional replication, propagation methods
 ms.assetid: a10c5001-22cc-4667-8f0b-3d0818dca2e9
-caps.latest.revision: 
+caps.latest.revision: 48
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
@@ -40,7 +40,7 @@ ms.lasthandoff: 03/08/2018
   
  Par défaut, la réplication transactionnelle propage les modifications vers les abonnés via un groupe de procédures stockées installées sur chaque abonné. Lorsqu'une opération Insert, Update ou Delete est effectuée sur une table du serveur de publication, elle est convertie en appel à une procédure stockée sur l'Abonné. La procédure stockée accepte des paramètres correspondant aux colonnes de la table, ce qui permet la modification de ces colonnes sur l'Abonné.  
   
- Pour définir la méthode de propagation des modifications de données des articles transactionnels, consultez [Set the Propagation Method for Data Changes to Transactional Articles](../../../relational-databases/replication/publish/set-the-propagation-method-for-data-changes-to-transactional-articles.md).  
+ Pour définir la méthode de propagation des modifications de données des articles transactionnels, consultez [Définir la méthode de propagation des modifications de données des articles transactionnels](../../../relational-databases/replication/publish/set-the-propagation-method-for-data-changes-to-transactional-articles.md).  
   
 ## <a name="default-and-custom-stored-procedures"></a>Procédures stockées par défaut et personnalisées  
  Trois procédures sont créées par défaut par la réplication pour chaque article de table :  
