@@ -1,4 +1,4 @@
----
+﻿---
 title: "Nouveautés de SQL Operations Studio (version préliminaire) | Microsoft Docs"
 description: "SQL Operations Studio (version préliminaire) est un outil gratuit et léger qui s’exécute sur Windows, Mac OS et Linux, pour la gestion de SQL Server, base de données SQL Azure et Azure SQL Data Warehouse ; partout où ils s’exécutent."
 ms.custom: tools|sos
@@ -8,7 +8,7 @@ ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
 ms.component: sos
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: overview
 author: stevestein
 ms.author: sstein
@@ -52,5 +52,6 @@ Utiliser vos outils de ligne de commande favoris (par exemple, Bash, PowerShell,
 
 ## <a name="next-steps"></a>Étapes suivantes
 - [Téléchargez et installez [!INCLUDE[name-sos](../includes/name-sos-short.md)]](download.md)
+- [Se connecter et Requêter SQL Server](quickstart-sql-server.md)
 - [Se connecter et Requêter SQL Server](quickstart-sql-server.md)
 - [Se connecter et interroger la base de données SQL Azure](quickstart-sql-database.md)

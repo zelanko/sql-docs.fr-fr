@@ -20,7 +20,7 @@ helpviewer_keywords:
 - subscriptions [SQL Server replication], updatable
 - updatable subscriptions
 ms.assetid: 8eec95cb-3a11-436e-bcee-bdcd05aa5c5a
-caps.latest.revision: ''
+caps.latest.revision: 60
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

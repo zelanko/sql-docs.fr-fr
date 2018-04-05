@@ -1,16 +1,16 @@
 ---
 title: sp_posttracertoken (Transact-SQL) | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedur+I741es
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -22,7 +22,7 @@ f1_keywords:
 helpviewer_keywords:
 - sp_posttracertoken
 ms.assetid: 24da5cd2-1c45-475e-93db-5bdf660f1c2c
-caps.latest.revision: 
+caps.latest.revision: 28
 author: edmacauley
 ms.author: edmaca
 manager: craigg
@@ -36,7 +36,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="spposttracertoken-transact-sql"></a>sp_posttracertoken (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Cette procédure publie un jeton de suivi dans le journal des transactions sur le serveur de publication et commence le processus de suivi des statistiques de latence. Les informations sont enregistrées lorsque le jeton de suivi est écrit dans le journal des transactions, lorsqu'il est repris par l'Agent de lecture du journal et lorsqu'il est appliqué par l'Agent de distribution. Cette procédure stockée est exécutée sur le serveur de publication dans la base de données de publication. Pour plus d’informations, voir [Measure Latency and Validate Connections for Transactional Replication](../../relational-databases/replication/monitor/measure-latency-and-validate-connections-for-transactional-replication.md).  
+  Cette procédure publie un jeton de suivi dans le journal des transactions sur le serveur de publication et commence le processus de suivi des statistiques de latence. Les informations sont enregistrées lorsque le jeton de suivi est écrit dans le journal des transactions, lorsqu'il est repris par l'Agent de lecture du journal et lorsqu'il est appliqué par l'Agent de distribution. Cette procédure stockée est exécutée sur le serveur de publication dans la base de données de publication. Pour plus d’informations, voir [Mesurer la latence et valider les connexions pour la réplication transactionnelle](../../relational-databases/replication/monitor/measure-latency-and-validate-connections-for-transactional-replication.md).  
   
  ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -50,7 +50,7 @@ sp_posttracertoken [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@publication** =] **'***publication***'**  
+ [ **@publication**=] **'***publication***'**  
  Nom de la publication pour laquelle la latence est mesurée. *publication* est **sysname**, sans valeur par défaut.  
   
  [  **@tracer_token_id=** ] *tracer_token_id***sortie**  
@@ -72,6 +72,6 @@ sp_posttracertoken [ @publication = ] 'publication'
  Seuls les membres de la **sysadmin** rôle serveur fixe ou **db_owner** du rôle de base de données fixe peut exécuter **sp_posttracertoken**.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Measure Latency and Validate Connections for Transactional Replication](../../relational-databases/replication/monitor/measure-latency-and-validate-connections-for-transactional-replication.md)  
+ [Mesurer la latence et valider les connexions pour la réplication transactionnelle](../../relational-databases/replication/monitor/measure-latency-and-validate-connections-for-transactional-replication.md)  
   
   
