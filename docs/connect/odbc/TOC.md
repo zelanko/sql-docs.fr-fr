@@ -7,3 +7,6 @@
 # [Télécharger un pilote ODBC pour SQL Server](download-odbc-driver-for-sql-server.md)
 
 # [Attributs et mots clés de chaîne de connexion DSN](dsn-connection-string-attribute.md)
+# [Utilisation d’Azure Active Directory avec ODBC Driver](using-azure-active-directory.md)
+
+# [Résolutions de bogues](bug-fixes.md)
