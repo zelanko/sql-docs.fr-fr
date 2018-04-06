@@ -24,11 +24,11 @@ author: pmasl
 ms.author: Pedro.Lopes
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 776562d89a12b544d6edbe475358067b39b58988
-ms.sourcegitcommit: 9f4330a4b067deea396b8567747a6771f35e6eee
+ms.openlocfilehash: 7917f0c1344ff8e79250791d1b262cece9ca3c4c
+ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="using-connection-string-keywords-with-ole-db-driver-for-sql-server"></a>À l’aide de mots clés de chaîne de connexion avec le pilote OLE DB pour SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -94,6 +94,7 @@ ms.lasthandoff: 03/30/2018
 |**FailoverPartnerSPN**|SSPROP_INIT_FAILOVERPARTNERSPN|Nom principal de service du partenaire de basculement. La valeur par défaut est une chaîne vide. Une chaîne vide provoque un pilote OLE DB pour SQL Server à utiliser la valeur par défaut, généré par le fournisseur SPN.|  
 |**Langage**|SSPROPT_INIT_CURRENTLANGUAGE|Langue de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].|  
 |**MarsConn**|SSPROP_INIT_MARSCONNECTION|Active ou désactive MARS (Multiple Active Result Set) sur la connexion si le serveur est [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] ou version ultérieure. Les valeurs possibles sont « yes » et « no ». La valeur par défaut est « no ».|  
+|**MultiSubnetFailover**|SSPROP_INIT_MULTISUBNETFAILOVER|Toujours spécifier **MultiSubnetFailover = Yes** lors de la connexion à l’écouteur de groupe de disponibilité d’un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] groupe de disponibilité ou un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Instance de Cluster de basculement. **MultiSubnetFailover = Yes** configure le pilote OLE DB pour SQL Server fournir une détection plus rapide et la connexion au serveur (actuellement) actif. Les valeurs possibles sont **Yes** et **No**. La valeur par défaut est **non**. Par exemple :<br /><br /> `MultiSubnetFailover=Yes`<br /><br /> Pour plus d’informations sur le pilote OLE DB pour la prise en charge de SQL Server pour [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], consultez [pilote OLE DB pour SQL Server prend en charge pour la haute disponibilité, la récupération d’urgence](../../oledb/features/oledb-driver-for-sql-server-support-for-high-availability-disaster-recovery.md).|  
 |**Net**|SSPROP_INIT_NETWORKLIBRARY|Synonyme de « Network ».|  
 |**Network**|SSPROP_INIT_NETWORKLIBRARY|Bibliothèque réseau utilisée pour établir une connexion à une instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dans l'organisation.|  
 |**Bibliothèque réseau**|SSPROP_INIT_NETWORKLIBRARY|Synonyme de « Network ».|  
@@ -149,6 +150,7 @@ ms.lasthandoff: 03/30/2018
 |**Nom de fichier initial**|SSPROP_INIT_FILENAME|Nom du fichier primaire (incluez le nom de chemin d'accès complet) d'une base de données pouvant être attachée. Pour utiliser **AttachDBFileName**, vous devez également spécifier le nom de la base de données avec le mot clé de base de données de chaîne fournisseur. Si la base de données a été attachée précédemment, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ne la rattache pas (il utilise la base de données attachée comme valeur par défaut pour la connexion).|  
 |**Sécurité intégrée**|DBPROP_AUTH_INTEGRATED|Accepte la valeur « SSPI » pour l'authentification Windows.|  
 |**Connexion MARS**|SSPROP_INIT_MARSCONNECTION|Active ou désactive MARS (Multiple Active Result Set) sur la connexion. Les valeurs reconnues sont « true » et « false ». La valeur par défaut est « false ».|  
+|**MultiSubnetFailover**|SSPROP_INIT_MULTISUBNETFAILOVER|Toujours spécifier **MultiSubnetFailover = True** lors de la connexion à l’écouteur de groupe de disponibilité d’un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] groupe de disponibilité ou un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Instance de Cluster de basculement. **MultiSubnetFailover = True** configure le pilote OLE DB pour SQL Server fournir une détection plus rapide et la connexion au serveur (actuellement) actif. Les valeurs possibles sont **True** et **False**. La valeur par défaut est **False**. Par exemple :<br /><br /> `MultiSubnetFailover=True`<br /><br /> Pour plus d’informations sur le pilote OLE DB pour la prise en charge de SQL Server pour [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], consultez [pilote OLE DB pour SQL Server prend en charge pour la haute disponibilité, la récupération d’urgence](../../oledb/features/oledb-driver-for-sql-server-support-for-high-availability-disaster-recovery.md).|  
 |**Adresse réseau**|SSPROP_INIT_NETWORKADDRESS|Adresse réseau d'une instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dans l'organisation.<br /><br /> Pour plus d’informations sur la syntaxe d’adresse valide, consultez la description de la **adresse** (mot clé), dans cette rubrique.|  
 |**Bibliothèque réseau**|SSPROP_INIT_NETWORKLIBRARY|Bibliothèque réseau utilisée pour établir une connexion à une instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dans l'organisation.|  
 |**Packet Size**|SSPROP_INIT_PACKETSIZE|Taille de paquet réseau. La valeur par défaut est 4096.|  
@@ -200,6 +202,7 @@ ms.lasthandoff: 03/30/2018
 |**Nom de fichier initial**|SSPROP_INIT_FILENAME|Nom du fichier primaire (incluez le nom de chemin d'accès complet) d'une base de données pouvant être attachée. Pour utiliser **AttachDBFileName**, vous devez également spécifier le nom de la base de données avec le mot clé de base de données de chaîne fournisseur. Si la base de données a été attachée précédemment, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ne la rattache pas (il utilise la base de données attachée comme valeur par défaut pour la connexion).|  
 |**Sécurité intégrée**|DBPROP_AUTH_INTEGRATED|Accepte la valeur « SSPI » pour l'authentification Windows.|  
 |**Connexion MARS**|SSPROP_INIT_MARSCONNECTION|Active ou désactive MARS (Multiple Active Result Set) sur la connexion si le serveur est [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] ou version ultérieure. Les valeurs reconnues sont « true » et « false ». La valeur par défaut est « false ».|  
+|**MultiSubnetFailover**|SSPROP_INIT_MULTISUBNETFAILOVER|Toujours spécifier **MultiSubnetFailover = True** lors de la connexion à l’écouteur de groupe de disponibilité d’un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] groupe de disponibilité ou un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Instance de Cluster de basculement. **MultiSubnetFailover = True** configure le pilote OLE DB pour SQL Server fournir une détection plus rapide et la connexion au serveur (actuellement) actif. Les valeurs possibles sont **True** et **False**. La valeur par défaut est **False**. Par exemple :<br /><br /> `MultiSubnetFailover=True`<br /><br /> Pour plus d’informations sur le pilote OLE DB pour la prise en charge de SQL Server pour [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], consultez [pilote OLE DB pour SQL Server prend en charge pour la haute disponibilité, la récupération d’urgence](../../oledb/features/oledb-driver-for-sql-server-support-for-high-availability-disaster-recovery.md).|  
 |**Adresse réseau**|SSPROP_INIT_NETWORKADDRESS|Adresse réseau d'une instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dans l'organisation.<br /><br /> Pour plus d’informations sur la syntaxe d’adresse valide, consultez la description de la **adresse** (mot clé), dans cette rubrique.|  
 |**Bibliothèque réseau**|SSPROP_INIT_NETWORKLIBRARY|Bibliothèque réseau utilisée pour établir une connexion à une instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dans l'organisation.|  
 |**Packet Size**|SSPROP_INIT_PACKETSIZE|Taille de paquet réseau. La valeur par défaut est 4096.|  
@@ -215,6 +218,6 @@ ms.lasthandoff: 03/30/2018
  **Remarque** dans la chaîne de connexion, la propriété « Ancien mot de passe » définit SSPROP_AUTH_OLD_PASSWORD, qui est en cours (peut-être périmé) mot de passe n’est pas disponible via une propriété de chaîne du fournisseur.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Génération d’Applications avec le pilote OLE DB pour SQL Server](../../oledb/applications/building-applications-with-oledb-driver-for-sql-server.md)  
+ [Génération d’applications avec OLE DB Driver pour SQL Server](../../oledb/applications/building-applications-with-oledb-driver-for-sql-server.md)  
   
   
