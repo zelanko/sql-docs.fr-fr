@@ -20,7 +20,7 @@ ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 12/21/2017
 ---
-#  <a name="using-source-control-in-includename-sosincludesname-sos-shortmd"></a>Utiliser le contrôle à la source dans [!INCLUDE[name-sos](../includes/name-sos-short.md)]
+# <a name="using-source-control-in-includename-sosincludesname-sos-shortmd"></a>Utilisation du contrôle de code source dans [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
 [!INCLUDE[name-sos](../includes/name-sos-short.md)]prend en charge Git pour le contrôle de version/code source.
 
@@ -31,22 +31,22 @@ ms.lasthandoff: 12/21/2017
 ## <a name="open-an-existing-git-repository"></a>Ouvrir un dépôt Git existant
 
 1. Sous le menu **Fichier** , sélectionnez **Ouvrir un dossier...**
-2. Accédez au dossier qui contient vos fichiers de suivi par Git, puis cliquez sur **Sélectionner le dossier**. Les sous-dossiers dans votre référentiel local sont OK sélectionner ici.
+2. Accédez au dossier qui contient vos fichiers suivis par Git, puis cliquez sur **Sélectionner le dossier**. Vous pouvez sélectionner ici les sous-dossiers de votre dépôt local.
 
 
 ## <a name="initialize-a-new-git-repository"></a>Initialiser un nouveau dépôt Git
 
-1. Sélectionnez **Contrôle de code Source**, puis sélectionnez l’icône Git.
+1. Sélectionnez **Contrôle de code source**, puis sélectionnez l’icône Git.
 
    ![Icône du contrôle de code source Git](media/source-control/source-control.png)
 
-2. Entrez le chemin d’accès au dossier que vous souhaitez initialiser un dépôt Git, puis appuyez sur **Entrée**.
+2. Entrez le chemin du dossier que vous voulez initialiser comme dépôt Git, puis appuyez sur **Entrée**.
 
    ![initialiser le référentiel Git](media/source-control/initialize-git-repository.png)
 
 ## <a name="working-with-git-repositories"></a>Utilisation des référentiels Git
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)] hérite son implémentation Git de Visual Studio Code, mais ne prend pas actuellement en charge d'autres fournisseurs SCM supplémentaires. Pour plus d’informations sur l’utilisation de Git après avoir ouvert ou initialiser un dépôt, consultez [prise en charge de Git dans VS Code](https://code.visualstudio.com/docs/editor/versioncontrol#_git-support).
+[!INCLUDE[name-sos](../includes/name-sos-short.md)] hérite son implémentation Git de Visual Studio Code, mais ne prend pas actuellement en charge d'autres fournisseurs SCM. Pour plus d’informations sur l’utilisation de Git après avoir ouvert ou initialisé un dépôt, consultez [prise en charge de Git dans VS Code](https://code.visualstudio.com/docs/editor/versioncontrol#_git-support).
 
 
 ## <a name="additional-resources"></a>Ressources supplémentaires
