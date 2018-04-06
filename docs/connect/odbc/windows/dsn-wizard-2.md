@@ -1,27 +1,28 @@
 ---
-title: "Écran 2 (le pilote ODBC pour SQL Server) de l’Assistant Source de données | Documents Microsoft"
-ms.custom: 
-ms.date: 09/27/2017
+title: Écran 2 (le pilote ODBC pour SQL Server) de l’Assistant Source de données | Documents Microsoft
+ms.custom: ''
+ms.date: 03/21/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 76326eeb-1144-4b9f-85db-50524c655d30
-caps.latest.revision: "22"
+caps.latest.revision: 22
 author: MightyPen
-ms.author: genemi
+ms.author: v-jizho2
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c2291b951c0df4f365b76f80ebab3572a39375d1
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 624888902e260baa03ad30aee8608f921deb73a4
+ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="data-source-wizard-screen-2"></a>Assistant Source de données - Écran 2
 
@@ -47,9 +48,13 @@ Spécifie que le pilote de s’authentifier à SQL Server à l’aide d’un ID 
 
 Spécifie que le pilote de s’authentifier à SQL Server à l’aide d’un ID de connexion d’Azure Active Directory et le mot de passe.
 
+### <a name="with-active-directory-interactive-authentication"></a>Avec l’authentification Interactive d’Active Directory
+
+Spécifie que le pilote de s’authentifier à SQL Server à l’aide du mode interactif Azure Active Directory en fournissant l’ID de connexion. Cette opération déclenche la boîte de dialogue invite de commandes de l’authentification Windows Azure.
+
 ### <a name="login-id"></a>Nom d'accès
 
-Spécifie l’ID de connexion que le pilote utilise lors de la connexion à SQL Server si **avec l’authentification SQL Server à l’aide d’un ID de connexion et un mot de passe entré par l’utilisateur** ou **avec Active Directory authentification mot de passe à l’aide d’un ID de connexion et le mot de passe entré par l’utilisateur** est sélectionnée. Cela s'applique uniquement à la connexion établie pour déterminer les paramètres serveur par défaut, pas aux connexions établies ultérieurement à l'aide de la source de données, après sa création.
+Spécifie l’ID de connexion que le pilote utilise lors de la connexion à SQL Server si **avec l’authentification SQL Server à l’aide d’un ID de connexion et un mot de passe entré par l’utilisateur** ou **avec Active Directory authentification mot de passe à l’aide d’un ID de connexion et le mot de passe entré par l’utilisateur** ou **avec Active Directory authentification Interactive à l’aide d’un ID de connexion entré par l’utilisateur** est sélectionnée. Cela s'applique uniquement à la connexion établie pour déterminer les paramètres serveur par défaut, pas aux connexions établies ultérieurement à l'aide de la source de données, après sa création.
 
 ### <a name="password"></a>Mot de passe
 
