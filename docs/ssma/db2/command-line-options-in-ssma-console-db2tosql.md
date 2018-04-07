@@ -2,30 +2,30 @@
 title: Options de ligne de commande dans la Console SSMA (DB2ToSQL) | Documents Microsoft
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-db2
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - sql-ssma
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 237354e9-25c4-4386-9d1f-ca0618d4a9a0
-caps.latest.revision: 
+caps.latest.revision: 6
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d5eff60694cdcfdb4d2d147ae0531fbbc2ecfb32
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 1ece5c9b4a72f588608103437b03902fd81cc89f
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="command-line-options-in-ssma-console-db2tosql"></a>Options de ligne de commande dans la Console SSMA (DB2ToSQL)
 Microsoft vous fournit un options de ligne de commande ensemble robuste pour exécuter et contrôler les activités SSMA. Les sections qui en découlent décrit en détail le même.  
@@ -93,7 +93,7 @@ Définition de serveur peut être une partie du fichier de connexion de serveur 
 ### <a name="xml-output-option--xxmloutput-xmloutputfile"></a>Option de sortie XML : - x / xmloutput [xmloutputfile]  
 Cette commande est utilisée pour la sortie des messages de sortie de commande au format xml à la console ou dans un fichier xml.  
   
-Il existe deux options pour xmloutput, notamment.., :  
+Il existe deux options pour xmloutput, notamment..,:  
   
 -   Si le chemin d’accès est fourni après le commutateur xmloutput la sortie est redirigée vers le fichier.  
   

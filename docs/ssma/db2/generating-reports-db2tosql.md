@@ -1,62 +1,63 @@
 ---
-title: "Génération de rapports (DB2ToSQL) | Documents Microsoft"
+title: Génération de rapports (DB2ToSQL) | Documents Microsoft
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-db2
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 69ef5fd9-190d-4c58-8199-b3f77d5e1883
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 77bca9dfb3bb5ff1f2d12fc112ae39a4dda4ed15
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: b26ed81725f95fc8c75c052cc5a45e6ad44ab5be
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="generating-reports-db2tosql"></a>Génération de rapports (DB2ToSQL)
 Les rapports de certaines activités effectuées à l’aide des commandes sont générés dans la Console SSMA au niveau d’arborescence objet.  
   
 Utilisez la procédure suivante pour générer des rapports :  
   
-1.  Spécifiez le **écriture-résumé-rapports pour** paramètre. Le rapport est stocké en tant que le nom de fichier (si spécifiée) ou dans le dossier que vous spécifiez. Le nom de fichier est prédéfinie par le système comme indiqué dans le tableau ci-dessous, where,  **&lt; n &gt;**  est le nombre de fichiers uniques qui incrémente par un chiffre à chaque exécution de la même commande.  
+1.  Spécifiez le **écriture-résumé-rapports pour** paramètre. Le rapport est stocké en tant que le nom de fichier (si spécifiée) ou dans le dossier que vous spécifiez. Le nom de fichier est prédéfinie par le système comme indiqué dans le tableau ci-dessous, where, **&lt;n&gt;** est le nombre de fichiers uniques qui incrémente par un chiffre à chaque exécution de la même commande.  
   
     Les commandes à l’égard de rapports sont :  
   
     ||||  
     |-|-|-|  
-    |**Sl. Non.**|**Commande**|**Titre de rapport**|  
-    | 1|Générer--rapport d’évaluation|AssessmentReport&lt;n&gt;. XML|  
-    |2|convertir le schéma|SchemaConversionReport&lt;n&gt;. XML|  
-    |3|migrer des données|DataMigrationReport&lt;n&gt;. XML|  
-    |4|instruction CONVERT-sql|ConvertSQLReport&lt;n&gt;. XML|  
-    |5|synchroniser la cible|TargetSynchronizationReport&lt;n&gt;. XML|  
-    |6|actualisation de base de données|SourceDBRefreshReport&lt;n&gt;. XML|  
+    |**Sl. Non.**|**Command**|**Titre de rapport**|  
+    |1|generate-assessment-report|AssessmentReport&lt;n&gt;.XML|  
+    |2|convert-schema|SchemaConversionReport&lt;n&gt;.XML|  
+    |3|migrate-data|DataMigrationReport&lt;n&gt;.XML|  
+    |4|convert-sql-statement|ConvertSQLReport&lt;n&gt;.XML|  
+    |5|synchronize-target|TargetSynchronizationReport&lt;n&gt;.XML|  
+    |6|actualisation de base de données|SourceDBRefreshReport&lt;n&gt;.XML|  
   
     > [!IMPORTANT]  
     > Un rapport de sortie est différent de rapport d’évaluation. Le premier est un rapport sur les performances d’une commande exécutée lors, ce dernier est un rapport XML pour la consommation par programmation.  
   
-    Pour les options de commande pour les rapports de sortie (à partir de Sl. Non. 2 à 4 ci-dessus), reportez-vous à la [l’exécution de la Console SSMA &#40; DB2ToSQL &#41;](../../ssma/db2/executing-the-ssma-console-db2tosql.md) section.  
+    Pour les options de commande pour les rapports de sortie (à partir de Sl. Non. 2 à 4 ci-dessus), reportez-vous à la [l’exécution de la Console SSMA &#40;DB2ToSQL&#41; ](../../ssma/db2/executing-the-ssma-console-db2tosql.md) section.  
   
 2.  Indique le degré de détail souhaité dans le rapport de sortie en utilisant les paramètres de niveau de détail de rapport :  
   
     ||||  
     |-|-|-|  
     |**Sl. Non.**|**Commande et paramètre**|**Description de la sortie**|  
-    | 1|verbose = « false »|Génère un rapport de synthèse de l’activité.|  
-    |2|verbose = « true »|Génère un rapport d’état résumées et détaillées pour chaque activité.|  
+    |1|verbose=”false”|Génère un rapport de synthèse de l’activité.|  
+    |2|verbose=”true”|Génère un rapport d’état résumées et détaillées pour chaque activité.|  
   
     > [!NOTE]  
     > Les paramètres de niveau de détail de rapport spécifiées ci-dessus s’appliquent à générer--rapport d’évaluation, convert-schema, migrer des données, les commandes instruction convert-sql.  
@@ -66,8 +67,8 @@ Utilisez la procédure suivante pour générer des rapports :
     ||||  
     |-|-|-|  
     |**Sl. Non.**|**Commande et paramètre**|**Description de la sortie**|  
-    | 1|signaler les erreurs = « false »|Aucun détail d’erreur / avertissement / messages d’informations.|  
-    |2|signaler les erreurs = « true »|Erreur détaillée / avertissement / messages d’informations.|  
+    |1|report-errors=”false”|Aucun détail d’erreur / avertissement / messages d’informations.|  
+    |2|report-errors=”true”|Erreur détaillée / avertissement / messages d’informations.|  
   
     > [!NOTE]  
     > Les paramètres de rapport d’erreurs spécifiées ci-dessus s’appliquent à générer--rapport d’évaluation, convert-schema, migrer des données, les commandes instruction convert-sql.  
@@ -92,8 +93,8 @@ Utilisez la procédure suivante pour générer des rapports :
    assessment-report-overwrite="<true/false>"/>  
 ```  
   
-### <a name="synchronize-target"></a>synchroniser à la cible :  
-La commande **cible synchroniser** a **erreurs de rapports pour** paramètre, qui spécifie l’emplacement du rapport d’erreurs pour l’opération de synchronisation. Ensuite, un fichier par nom **TargetSynchronizationReport&lt;n&gt;. XML** est créé à l’emplacement spécifié, où  **&lt; n &gt;**  est le nombre de fichiers uniques qui incrémente par un chiffre à chaque exécution de la même commande.  
+### <a name="synchronize-target"></a>synchronize-target:  
+La commande **cible synchroniser** a **erreurs de rapports pour** paramètre, qui spécifie l’emplacement du rapport d’erreurs pour l’opération de synchronisation. Ensuite, un fichier par nom **TargetSynchronizationReport&lt;n&gt;. XML** est créé à l’emplacement spécifié, où **&lt;n&gt;** est le nombre de fichiers uniques qui incrémente par un chiffre à chaque exécution de la même commande.  
   
 **Remarque :** si reçoit le chemin d’accès du dossier, puis 'rapports erreurs-pour' paramètre devient un attribut facultatif pour la commande « Synchroniser-cible ».  
   
@@ -116,10 +117,10 @@ La commande **cible synchroniser** a **erreurs de rapports pour** paramètre, qu
   
 -   rapport-chaque-sous-avertissement  
   
--   Échec-script  
+-   fail-script  
   
 ### <a name="refresh-from-database"></a>actualisation-de-base de données :  
-La commande **actualisation de base de données** a **erreurs de rapports pour** paramètre, qui spécifie l’emplacement du rapport d’erreurs pour l’opération d’actualisation. Ensuite, un fichier par nom **SourceDBRefreshReport&lt;n&gt;. XML** est créé à l’emplacement spécifié, où  **&lt; n &gt;**  est le nombre de fichiers uniques qui incrémente par un chiffre à chaque exécution de la même commande.  
+La commande **actualisation de base de données** a **erreurs de rapports pour** paramètre, qui spécifie l’emplacement du rapport d’erreurs pour l’opération d’actualisation. Ensuite, un fichier par nom **SourceDBRefreshReport&lt;n&gt;. XML** est créé à l’emplacement spécifié, où **&lt;n&gt;** est le nombre de fichiers uniques qui incrémente par un chiffre à chaque exécution de la même commande.  
   
 **Remarque :** si reçoit le chemin d’accès du dossier, puis 'rapports erreurs-pour' paramètre devient un attribut facultatif pour la commande « Synchroniser-cible ».  
   
@@ -144,7 +145,7 @@ La commande **actualisation de base de données** a **erreurs de rapports pour**
   
 -   rapport-chaque-sous-avertissement  
   
--   Échec-script  
+-   fail-script  
   
 ## <a name="see-also"></a>Voir aussi  
 [Exécution de la console SSMA](http://msdn.microsoft.com/en-us/ce63f633-067d-4f04-b8e9-e1abd7ec740b)  

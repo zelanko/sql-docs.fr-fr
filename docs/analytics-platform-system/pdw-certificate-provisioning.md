@@ -1,31 +1,31 @@
 ---
-title: "Certificat PDW (système de plateforme Analytique) d’approvisionnement"
+title: Certificat PDW (système de plateforme Analytique) d’approvisionnement
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.technology: mpp-data-warehouse
-ms.custom: 
+ms.custom: ''
 ms.date: 01/05/2017
 ms.reviewer: na
 ms.suite: sql
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 0a423b7d-c6ea-45c1-80b0-26758170594c
-caps.latest.revision: "22"
-ms.openlocfilehash: 9abee9638492368fe407f98a81beea2a48148971
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+caps.latest.revision: 22
+ms.openlocfilehash: a08a739c490f0cbd49f615441f557d5200107443
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="pdw-certificate-provisioning"></a>Configuration de certificats PDW
 Le **fourniture des certificats PDW** page du système de plateforme Analytique**Configuration Manager** importe ou supprime le certificat utilisé par la région PDW. Un certificat pour chiffrer les connexions peut aider à une communication sécurisée au nœud de contrôle via les clients de SQL Server, les outils qui utilisent les pilotes SQL Server PDW, le [Console d’administration](monitor-the-appliance-by-using-the-admin-console.md), et charge les Services d’intégration.  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Configuration requise  
 Avant d’installer le certificat, procédez comme suit :  
   
 1.  Obtenir un certificat de sécurité. Si vous avez besoin de plus d’informations sur la façon d’obtenir un certificat de sécurité, contactez le Support Microsoft.  
@@ -51,7 +51,7 @@ Les instructions suivantes indiquent comment importer ou de supprimer le certifi
   
 ### <a name="to-import-the-certificate"></a>Pour importer le certificat  
   
-1.  Lancer le **Configuration Manager**. Pour plus d’informations, consultez [lance le Gestionnaire de Configuration &#40; Système de plateforme Analytique &#41; ](launch-the-configuration-manager.md).  
+1.  Lancer le **Configuration Manager**. Pour plus d’informations, consultez [lancer le Gestionnaire de Configuration &#40;système de plateforme Analytique&#41;](launch-the-configuration-manager.md).  
   
 2.  Dans le volet gauche de la **Configuration Manager**, développez **topologie de l’entrepôt de données parallèle**, puis cliquez sur **certificats**.  
   
@@ -65,7 +65,7 @@ SQL Server PDW ne chiffre pas la connexion actuelle à l’aide du certificat im
   
 ### <a name="to-remove-the-previously-imported-certificate"></a>Pour supprimer le certificat précédemment importé  
   
-1.  Lancer le **Configuration Manager**. Pour plus d’informations, consultez [lance le Gestionnaire de Configuration &#40; Système de plateforme Analytique &#41; ](launch-the-configuration-manager.md).  
+1.  Lancer le **Configuration Manager**. Pour plus d’informations, consultez [lancer le Gestionnaire de Configuration &#40;système de plateforme Analytique&#41;](launch-the-configuration-manager.md).  
   
 2.  Dans le volet gauche de la **Configuration Manager**, développez **topologie de l’entrepôt de données parallèle**, puis cliquez sur **certificats**.  
   
@@ -78,6 +78,6 @@ SQL Server PDW continuera à chiffrer les connexions en cours, mais n’utilise 
 ![Certificat PDW des appliances DWConfig](./media/pdw-certificate-provisioning/SQL_Server_PDW_DWConfig_ApplPDWCert.png "SQL_Server_PDW_DWConfig_ApplPDWCert")  
   
 ## <a name="see-also"></a>Voir aussi  
-[Lancez le Gestionnaire de Configuration &#40; Système de plateforme Analytique &#41;](launch-the-configuration-manager.md)  
+[Lancez le Gestionnaire de Configuration &#40;Analytique plate-forme système&#41;](launch-the-configuration-manager.md)  
 <!-- MISSING LINKS [HDInsight Certificate Provisioning &#40;Analytics Platform System&#41;](hdinsight-certificate-provisioning.md)  -->  
   

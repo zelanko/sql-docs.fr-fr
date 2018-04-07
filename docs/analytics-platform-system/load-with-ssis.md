@@ -1,25 +1,25 @@
 ---
-title: "Charger des données avec Integration Services"
+title: Charger des données avec Integration Services
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
-ms.custom: 
+ms.custom: ''
 ms.technology: mpp-data-warehouse
-description: "Fournit des informations de référence et de déploiement pour charger des données dans SQL Server Parallel Data Warehouse à l’aide des packages SQL Server Integration Services (SSIS)."
+description: Fournit des informations de référence et de déploiement pour charger des données dans SQL Server Parallel Data Warehouse à l’aide des packages SQL Server Integration Services (SSIS).
 ms.date: 10/20/2016
 ms.topic: article
 ms.assetid: 9bdb559a-a91c-4342-8a6e-438cb93f975c
-caps.latest.revision: "69"
-ms.openlocfilehash: f00f72886a10c8be05db6a28adf3df89f8116081
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+caps.latest.revision: 69
+ms.openlocfilehash: d32e6b97d036437f6a28b81622873d14854d304f
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="load-data-with-integration-services"></a>Charger les données avec Integration Services
 Fournit des informations de référence et de déploiement pour charger des données dans SQL Server Parallel Data Warehouse à l’aide des packages SQL Server Integration Services (SSIS).  
@@ -59,12 +59,12 @@ Par défaut, BIDS s’exécute des packages à l’aide des fichiers binaires 64
 Pour exécuter le package à partir de SQL Server Data Tools, avec le bouton droit sur votre package et choisissez **exécuter le Package**.  
   
 ### <a name="run-from-powershell"></a>Exécuter à partir de PowerShell  
-Pour exécuter le package à partir de Windows PowerShell, à l’aide de la **dtexec** utilitaire :`dtexec /FILE <packagePath>`  
+Pour exécuter le package à partir de Windows PowerShell, à l’aide de la **dtexec** utilitaire : `dtexec /FILE <packagePath>`  
   
-Par exemple, `dtexec /FILE "C:\Users\User1\Desktop\Package.dtsx"`  
+Par exemple : `dtexec /FILE "C:\Users\User1\Desktop\Package.dtsx"`  
   
 ### <a name="run-from-a-windows-command-prompt"></a>Exécuter à partir de Windows une invite de commandes 
-Pour exécuter le package à partir d’une invite de commandes Windows, à l’aide de la **dtexec** utilitaire :`dtexec /FILE <packagePath>`  
+Pour exécuter le package à partir d’une invite de commandes Windows, à l’aide de la **dtexec** utilitaire : `dtexec /FILE <packagePath>`  
   
 Par exemple : `dtexec /FILE "C:\Users\User1\Desktop\Package.dtsx"`  
   
@@ -89,7 +89,7 @@ Les données sont ensuite mappées à partir des Services d’intégration aux t
 |NCHAR|DT_WSTR|  
 |NUMERIC|DT_DECIMAL, DT_I1, DT_I2, DT_I4, DT_I8, DT_NUMERIC, DT_UI1, DT_UI2, DT_UI4, DT_UI8|  
 |NVARCHAR|DT_WSTR, DT_STR|  
-|real|DT_R4|  
+|REAL|DT_R4|  
 |SMALLDATETIME|DT_DBTIMESTAMP2|  
 |SMALLINT|DT_I1, DT_I2, DT_UI1|  
 |SMALLMONEY|DT_R4|  

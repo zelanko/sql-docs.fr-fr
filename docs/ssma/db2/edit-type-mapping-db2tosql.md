@@ -2,29 +2,30 @@
 title: Modifier le mappage de Type (DB2ToSQL) | Documents Microsoft
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-db2
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: f93c4b7d-74fc-4856-bf42-035289918e83
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3abd2709b430be3e22a56d423474e26c7a04bf71
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: d9577b7616d5744fce71a55218ad846d130066d2
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="edit-type-mapping-db2tosql"></a>Modifier le mappage de Type (DB2ToSQL)
 Le **modifier le mappage de Type** boîte de dialogue vous permet de spécifier comment les types sont mappés entre les objets de base de données source et de destination.  
@@ -43,7 +44,7 @@ Sélectionnez le type de données source à mapper à un [!INCLUDE[ssNoVersion](
   
 Si le type de données est de longueur variable, les champs suivants apparaissent sous **type de Source de**:  
   
-**From**  
+**De**  
 Spécifiez la longueur minimale pour ce mappage. Par exemple, pour le **nchar** type de données, vous pouvez entrer 10 pour indiquer que ce mappage est pour une plage commençant à **nchar(10)**.  
   
 **Pour**  

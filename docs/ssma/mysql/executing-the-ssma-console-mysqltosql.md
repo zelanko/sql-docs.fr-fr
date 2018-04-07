@@ -1,15 +1,16 @@
 ---
-title: "L’exécution de la Console SSMA (MySQLToSQL) | Documents Microsoft"
+title: L’exécution de la Console SSMA (MySQLToSQL) | Documents Microsoft
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-mysql
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
@@ -23,16 +24,16 @@ helpviewer_keywords:
 - Script file commands, Report commands
 - Script file commands, Script generation commands
 ms.assetid: e3e9f7e4-0619-4861-a202-3d5d39953b26
-caps.latest.revision: "25"
+caps.latest.revision: 25
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6faf8033f2210a68217fe6cf3e7021edc2b29b98
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 2fb0022b9e4dd222fd3d19ed4dc3e6d03fc740bb
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="executing-the-ssma-console-mysqltosql"></a>L’exécution de la Console SSMA (MySQLToSQL)
 Microsoft vous fournit un ensemble robuste de script de commandes du fichier à exécuter et contrôler les activités SSMA.  
@@ -40,7 +41,7 @@ Microsoft vous fournit un ensemble robuste de script de commandes du fichier à 
 L’application console utilise certaines commandes de fichier de script standard comme énuméré dans cette section.  
   
 ## <a name="project--script-file-commands"></a>Commandes de Script de fichier projet  
-**Commande**  
+**Command**  
   
 créer à nouveau projet :   
                    Crée un projet SSMA.  
@@ -49,9 +50,9 @@ Les commandes de projet gèrent la création de projets, ouvrir, enregistrer et 
   
 **Script**  
   
-1.  `project-folder`Indique le dossier du projet créé.  
+1.  `project-folder` Indique le dossier du projet créé.  
   
-2.  `project-name`Indique le nom du projet. {string}  
+2.  `project-name` Indique le nom du projet. {string}  
   
 3.  `overwrite-if-exists`Attribut facultatif indique si un projet existant doit être remplacé. {valeur} booléenne  
   
@@ -76,16 +77,16 @@ Est de l’attribut 'Remplacer-if-exists' **false** par défaut.
   
 Est de l’attribut 'type de projet' **sql-server-2008** par défaut.  
   
-**Commande**  
+**Command**  
   
 Ouvrir-projet :   
                   Ouvre un projet existant.  
   
 **Script**  
   
-1.  `project-folder`Indique le dossier du projet créé. La commande échoue si le dossier spécifié n’existe pas.  {string}  
+1.  `project-folder` Indique le dossier du projet créé. La commande échoue si le dossier spécifié n’existe pas.  {string}  
   
-2.  `project-name`Indique le nom du projet. La commande échoue si le projet spécifié n’existe pas.  {string}  
+2.  `project-name` Indique le nom du projet. La commande échoue si le projet spécifié n’existe pas.  {string}  
   
 **Exemple de syntaxe :**  
   
@@ -101,7 +102,7 @@ Ouvrir-projet :
 > [!IMPORTANT]  
 > SSMA pour Application de Console MySQL prend en charge la compatibilité descendante. Vous ne pourrez pas ouvrir les projets créés par une version précédente de SSMA.  
   
-**Commande**  
+**Command**  
   
 enregistrer le projet : enregistre le projet de migration.  
   
@@ -112,9 +113,9 @@ enregistrer le projet : enregistre le projet de migration.
 ```xml  
 <save-project/>  
 ```  
-**Commande**  
+**Command**  
   
-projet de fermer  
+close-project  
                   : Ferme le projet de migration.  
   
 **Script**  
@@ -124,9 +125,9 @@ projet de fermer
 ```xml  
 <save-project/>  
 ```  
-**Commande**  
+**Command**  
   
-projet de fermer  
+close-project  
                   : Ferme le projet de migration.  
   
 **Script**  
@@ -149,9 +150,9 @@ Les commandes de connexion de base de données aident à vous connecter à la ba
   
 2.  Le **l’authentification windows** et **port** paramètres ne sont pas applicables lors de la connexion à SQL Azure.  
   
-3.  Pour plus d’informations sur « Créer des fichiers de Script », consultez [création de fichiers de Script &#40; MySQLToSQL &#41; ](../../ssma/mysql/creating-script-files-mysqltosql.md).  
+3.  Pour plus d’informations sur « Créer des fichiers de Script », consultez [création de fichiers de Script &#40;MySQLToSQL&#41;](../../ssma/mysql/creating-script-files-mysqltosql.md).  
   
-**Commande**  
+**Command**  
   
 se connecter--base de données source  
   
@@ -168,9 +169,9 @@ Définition de serveur est récupérée à partir de l’attribut de nom défini
 ```xml  
 <connect-source-database  server="<server-unique-name>"/>  
 ```  
-**Commande**  
+**Command**  
   
-force-charge-source/cible-base de données  
+force-load-source/target-database  
   
 -   Charge les métadonnées de la source.  
   
@@ -191,9 +192,9 @@ Nécessite un ou plusieurs nœuds de la métabase en tant que paramètre de lign
   
 </force-load>  
 ```  
-**Commande**  
+**Command**  
   
-reconnecter--base de données source  
+reconnect-source-database  
   
 1.  Se reconnecte à la base de données source mais ne se charge pas toutes les métadonnées, contrairement à la commande connect--base de données source.  
   
@@ -206,9 +207,9 @@ reconnecter--base de données source
 ```xml  
 <reconnect-source-database  server="<server-unique-name>"/>  
 ```  
-**Commande**  
+**Command**  
   
-se connecter--base de données cible  
+connect-target-database  
   
 1.  Se connecte à la base de données SQL Server ou SQL Azure cible et charge les métadonnées de niveau élevée de la base de données cible mais pas les métadonnées entièrement.  
   
@@ -223,9 +224,9 @@ Définition de serveur est récupérée à partir de l’attribut de nom défini
 ```xml  
 <connect-target-database  server="<server-unique-name>"/>  
 ```  
-**Commande**  
+**Command**  
   
-reconnecter--base de données cible  
+reconnect-target-database  
   
 1.  Se reconnecte à la base de données cible, mais ne se charge pas toutes les métadonnées, contrairement à la commande connect--base de données cible.  
   
@@ -242,9 +243,9 @@ reconnecter--base de données cible
 ## <a name="report-script-file-commands"></a>Commandes de fichier de Script de rapport  
 Les commandes de rapports génèrent des rapports sur les performances de diverses activités de la Console de SSMA.  
   
-**Commande**  
+**Command**  
   
-Générer--rapport d’évaluation  
+generate-assessment-report  
   
 1.  Génère des rapports d’évaluation de la base de données source.  
   
@@ -254,25 +255,25 @@ Générer--rapport d’évaluation
   
 **Script**  
   
-1.  `assessment-report-folder:`Spécifie le dossier où le rapport d’évaluation possible être stockées. (attribut facultatif)  
+1.  `assessment-report-folder:` Spécifie le dossier où le rapport d’évaluation possible être stockées. (attribut facultatif)  
   
-2.  `object-name:`Spécifie l’ou les objets pris en compte pour la génération de rapports d’évaluation (il peut avoir les noms d’objets individuels ou un nom d’objet de groupe).  
+2.  `object-name:` Spécifie l’ou les objets pris en compte pour la génération de rapports d’évaluation (il peut avoir les noms d’objets individuels ou un nom d’objet de groupe).  
   
-3.  `object-type:`Spécifie le type de l’objet spécifié dans l’attribut de nom de l’objet (si la catégorie d’objet de type d’objet sera « catégorie » n’est spécifié).  
+3.  `object-type:` Spécifie le type de l’objet spécifié dans l’attribut de nom de l’objet (si la catégorie d’objet de type d’objet sera « catégorie » n’est spécifié).  
   
-4.  `assessment-report-overwrite:`Spécifie s’il faut remplacer le dossier de rapport d’évaluation s’il existe déjà.  
+4.  `assessment-report-overwrite:` Spécifie s’il faut remplacer le dossier de rapport d’évaluation s’il existe déjà.  
   
     **Valeur par défaut :** false. (attribut facultatif)  
   
-5.  `write-summary-report-to:`Spécifie le chemin d’accès où le rapport de synthèse est généré.  
+5.  `write-summary-report-to:` Spécifie le chemin d’accès où le rapport de synthèse est généré.  
   
     Si seul le chemin d’accès du dossier est indiqué, puis de fichiers par nom **AssessmentReport&lt;n&gt;. XML** est créé. (attribut facultatif)  
   
     La création de rapports a deux sous-catégories supplémentaires :  
   
-    -   `report-errors`(= « true/false », valeur par défaut en tant que « false » (attributs facultatifs))  
+    -   `report-errors` (= « true/false », valeur par défaut en tant que « false » (attributs facultatifs))  
   
-    -   `verbose`(= « true/false », valeur par défaut en tant que « false » (attributs facultatifs))  
+    -   `verbose` (= « true/false », valeur par défaut en tant que « false » (attributs facultatifs))  
   
 **Exemple de syntaxe :**  
   
@@ -295,7 +296,7 @@ Générer--rapport d’évaluation
   
 />  
 ```  
-ou Gestionnaire de configuration  
+ou  
   
 ```xml  
 <generate-assessment-report  
@@ -318,9 +319,9 @@ Les commandes de Migration de convertir le schéma de base de données cible au 
   
 La sortie de console par défaut définissant pour les commandes de migration est le rapport de sortie « Complète » avec aucun rapport d’erreur détaillé : résumé uniquement sur le nœud racine d’arborescence objet source.  
   
-**Commande**  
+**Command**  
   
-convertir le schéma  
+convert-schema  
   
 1.  Effectue une conversion de schéma à partir de la source vers le schéma cible.  
   
@@ -328,25 +329,25 @@ convertir le schéma
   
 **Script**  
   
-1.  `conversion-report-folder:`Spécifie le dossier où le rapport d’évaluation possible être stockées. (attribut facultatif)  
+1.  `conversion-report-folder:` Spécifie le dossier où le rapport d’évaluation possible être stockées. (attribut facultatif)  
   
-2.  `object-name:`Spécifie l’ou les objets pris en compte pour la conversion de schéma (il peut avoir les noms d’objet indivdual ou un nom d’objet de groupe).  
+2.  `object-name:` Spécifie l’ou les objets pris en compte pour la conversion de schéma (il peut avoir les noms d’objet indivdual ou un nom d’objet de groupe).  
   
-3.  `object-type:`Spécifie le type de l’objet spécifié dans l’attribut de nom de l’objet (si la catégorie d’objet de type d’objet sera « catégorie » n’est spécifié).  
+3.  `object-type:` Spécifie le type de l’objet spécifié dans l’attribut de nom de l’objet (si la catégorie d’objet de type d’objet sera « catégorie » n’est spécifié).  
   
-4.  `conversion-report-overwrite:`Spécifie s’il faut remplacer le dossier de rapport d’évaluation s’il existe déjà.  
+4.  `conversion-report-overwrite:` Spécifie s’il faut remplacer le dossier de rapport d’évaluation s’il existe déjà.  
   
     **Valeur par défaut :** false. (attribut facultatif)  
   
-5.  `write-summary-report-to:`Spécifie le chemin d’accès où le rapport de synthèse est généré.  
+5.  `write-summary-report-to:` Spécifie le chemin d’accès où le rapport de synthèse est généré.  
   
     Si seul le chemin d’accès du dossier est indiqué, puis de fichiers par nom **SchemaConversionReport&lt;n&gt;. XML** est créé. (attribut facultatif)  
   
     La création de rapports de synthèse a deux sous-catégories supplémentaires :  
   
-    -   `report-errors`(= « true/false », valeur par défaut en tant que « false » (attributs facultatifs))  
+    -   `report-errors` (= « true/false », valeur par défaut en tant que « false » (attributs facultatifs))  
   
-    -   `verbose`(= « true/false », valeur par défaut en tant que « false » (attributs facultatifs))  
+    -   `verbose` (= « true/false », valeur par défaut en tant que « false » (attributs facultatifs))  
   
 **Exemple de syntaxe :**  
   
@@ -369,7 +370,7 @@ convertir le schéma
   
 />  
 ```  
-ou Gestionnaire de configuration  
+ou  
   
 ```xml  
 <convert-schema  
@@ -384,27 +385,27 @@ ou Gestionnaire de configuration
   
 </convert-schema>  
 ```  
-**Commande**  
+**Command**  
   
-migrer des données  
+migrate-data  
   
 1.  Migre les données source à la cible.  
   
 **Script**  
   
-1.  `object-name:`Spécifie l’ou les objets source pris en compte pour la migration de données (il peut avoir les noms d’objet indivdual ou un nom d’objet de groupe).  
+1.  `object-name:` Spécifie l’ou les objets source pris en compte pour la migration de données (il peut avoir les noms d’objet indivdual ou un nom d’objet de groupe).  
   
-2.  `object-type:`Spécifie le type de l’objet spécifié dans l’attribut de nom de l’objet (si la catégorie d’objet de type d’objet sera « catégorie » n’est spécifié).  
+2.  `object-type:` Spécifie le type de l’objet spécifié dans l’attribut de nom de l’objet (si la catégorie d’objet de type d’objet sera « catégorie » n’est spécifié).  
   
-3.  `write-summary-report-to:`Spécifie le chemin d’accès où le rapport de synthèse est généré.  
+3.  `write-summary-report-to:` Spécifie le chemin d’accès où le rapport de synthèse est généré.  
   
     Si seul le chemin d’accès du dossier est indiqué, puis de fichiers par nom **DataMigrationReport&lt;n&gt;. XML** est créé. (attribut facultatif)  
   
     La création de rapports a deux sous-catégories supplémentaires :  
   
-    -   `report-errors`(= « true/false », valeur par défaut en tant que « false » (attributs facultatifs))  
+    -   `report-errors` (= « true/false », valeur par défaut en tant que « false » (attributs facultatifs))  
   
-    -   `verbose`(= « true/false », valeur par défaut en tant que « false » (attributs facultatifs))  
+    -   `verbose` (= « true/false », valeur par défaut en tant que « false » (attributs facultatifs))  
   
 **Exemple de syntaxe :**  
   
@@ -429,7 +430,7 @@ migrer des données
   
 </migrate-data>  
 ```  
-ou Gestionnaire de configuration  
+ou  
   
 ```xml  
 <migrate-data  
@@ -446,17 +447,17 @@ ou Gestionnaire de configuration
 ## <a name="migration-preparation-script-file-command"></a>Commande de fichier de Script de préparation migration  
 La commande de préparation de Migration lance un mappage de schéma entre les bases de données source et cible.  
   
-**Commande**  
+**Command**  
   
-schéma de mappage  
+map-schema  
   
 Mappage de schéma de base de données source vers le schéma cible.  
   
 **Script**  
   
-1.  `source-schema`Spécifie le schéma source, que nous avons l’intention de migrer.  
+1.  `source-schema` Spécifie le schéma source, que nous avons l’intention de migrer.  
   
-2.  `sql-server-schema`Spécifie le schéma cible que nous voulons être migrée.  
+2.  `sql-server-schema` Spécifie le schéma cible que nous voulons être migrée.  
   
 **Exemple de syntaxe :**  
   
@@ -474,9 +475,9 @@ Les commandes de la facilité de gestion permettent de synchroniser les objets d
 > [!NOTE]  
 > La sortie de console par défaut définissant pour les commandes de migration est le rapport de sortie « Complète » avec aucun rapport d’erreur détaillé : résumé uniquement sur le nœud racine d’arborescence objet source.  
   
-**Commande**  
+**Command**  
   
-synchroniser la cible  
+synchronize-target  
   
 1.  Synchronise les objets cibles avec la base de données cible.  
   
@@ -486,19 +487,19 @@ synchroniser la cible
   
 **Script**  
   
-1.  `object-name:`Spécifie l’ou les objets pris en compte pour la synchronisation avec la base de données cible (il peut avoir les noms d’objet indivdual ou un nom d’objet de groupe).  
+1.  `object-name:` Spécifie l’ou les objets pris en compte pour la synchronisation avec la base de données cible (il peut avoir les noms d’objet indivdual ou un nom d’objet de groupe).  
   
-2.  `object-type:`Spécifie le type de l’objet spécifié dans l’attribut de nom de l’objet (si la catégorie d’objet de type d’objet sera « catégorie » n’est spécifié).  
+2.  `object-type:` Spécifie le type de l’objet spécifié dans l’attribut de nom de l’objet (si la catégorie d’objet de type d’objet sera « catégorie » n’est spécifié).  
   
-3.  `on-error:`Spécifie s’il faut spécifier des erreurs de synchronisation comme des avertissements ou erreurs. Options disponibles pour l’erreur :  
+3.  `on-error:` Spécifie s’il faut spécifier des erreurs de synchronisation comme des avertissements ou erreurs. Options disponibles pour l’erreur :  
   
     -   total de rapports en tant qu’avertissement  
   
     -   rapport-chaque-sous-avertissement  
   
-    -   Échec-script  
+    -   fail-script  
   
-4.  `report-errors-to:`Spécifie l’emplacement du rapport d’erreurs pour l’opération de synchronisation (attribut facultatif) si seul le chemin d’accès de dossier est indiqué, puis de fichiers par nom **TargetSynchronizationReport.XML** est créé.  
+4.  `report-errors-to:` Spécifie l’emplacement du rapport d’erreurs pour l’opération de synchronisation (attribut facultatif) si seul le chemin d’accès de dossier est indiqué, puis de fichiers par nom **TargetSynchronizationReport.XML** est créé.  
   
 **Exemple de syntaxe :**  
   
@@ -517,7 +518,7 @@ synchroniser la cible
   
 />  
 ```  
-ou Gestionnaire de configuration  
+ou  
   
 ```xml  
 <synchronize-target  
@@ -526,7 +527,7 @@ ou Gestionnaire de configuration
   
   object-type="<object-category>"/>  
 ```  
-ou Gestionnaire de configuration  
+ou  
   
 ```xml  
 <synchronize-target>  
@@ -539,7 +540,7 @@ ou Gestionnaire de configuration
   
 </synchronize-target>  
 ```  
-**Commande**  
+**Command**  
   
 actualisation de base de données  
   
@@ -549,19 +550,19 @@ actualisation de base de données
   
 **Script**  
   
-1.  `object-name:`Spécifie l’ou les objets source pris en compte pour l’actualisation à partir de la base de données source (il peut avoir les noms d’objet indivdual ou un nom d’objet de groupe).  
+1.  `object-name:` Spécifie l’ou les objets source pris en compte pour l’actualisation à partir de la base de données source (il peut avoir les noms d’objet indivdual ou un nom d’objet de groupe).  
   
-2.  `object-type:`Spécifie le type de l’objet spécifié dans l’attribut de nom de l’objet (si la catégorie d’objet de type d’objet sera « catégorie » n’est spécifié).  
+2.  `object-type:` Spécifie le type de l’objet spécifié dans l’attribut de nom de l’objet (si la catégorie d’objet de type d’objet sera « catégorie » n’est spécifié).  
   
-3.  `on-error:`Spécifie s’il faut spécifier des erreurs de synchronisation comme des avertissements ou erreurs. Options disponibles pour l’erreur :  
+3.  `on-error:` Spécifie s’il faut spécifier des erreurs de synchronisation comme des avertissements ou erreurs. Options disponibles pour l’erreur :  
   
     -   total de rapports en tant qu’avertissement  
   
     -   rapport-chaque-sous-avertissement  
   
-    -   Échec-script  
+    -   fail-script  
   
-4.  `report-errors-to:`Spécifie l’emplacement du rapport d’erreurs pour l’opération de synchronisation (attribut facultatif) si seul le chemin d’accès de dossier est indiqué, puis de fichiers par nom **SourceDBRefreshReport.XML** est créé.  
+4.  `report-errors-to:` Spécifie l’emplacement du rapport d’erreurs pour l’opération de synchronisation (attribut facultatif) si seul le chemin d’accès de dossier est indiqué, puis de fichiers par nom **SourceDBRefreshReport.XML** est créé.  
   
 Nécessite un ou plusieurs nœuds de la métabase en tant que paramètre de ligne de commande.  
   
@@ -582,7 +583,7 @@ Nécessite un ou plusieurs nœuds de la métabase en tant que paramètre de lign
   
 />  
 ```  
-ou Gestionnaire de configuration  
+ou  
   
 ```xml  
 <refresh-from-database  
@@ -591,7 +592,7 @@ ou Gestionnaire de configuration
   
    object-type="<object-category>"/>  
 ```  
-ou Gestionnaire de configuration  
+ou  
   
 ```xml  
 <refresh-from-database>  
@@ -604,9 +605,9 @@ ou Gestionnaire de configuration
 ## <a name="script-generation-script-file-commands"></a>Commandes de fichier de Script de génération script  
 Les commandes de génération du Script effectuent deux tâches : ils permettent d’enregistrer la console de sortie dans un fichier de script ; et enregistrez la sortie de T-SQL dans la console ou un fichier basé sur le paramètre que vous spécifiez.  
   
-**Commande**  
+**Command**  
   
-en tant que script de sauvegarde  
+save-as-script  
   
 Utilisé pour enregistrer les Scripts des objets dans un fichier mentionné lorsque la métabase = cible, il s’agit d’une alternative à la commande de synchronisation là où nous obtenir les scripts dans et exécutez le même sur la base de données cible.  
   
@@ -614,15 +615,15 @@ Utilisé pour enregistrer les Scripts des objets dans un fichier mentionné lors
   
 Nécessite un ou plusieurs nœuds de la métabase en tant que paramètre de ligne de commande.  
   
-1.  `object-name:`Spécifie l’ou les objets dont les scripts doivent être enregistrés. (Il peut avoir les noms d’objet indivdual ou un nom d’objet de groupe)  
+1.  `object-name:` Spécifie l’ou les objets dont les scripts doivent être enregistrés. (Il peut avoir les noms d’objet indivdual ou un nom d’objet de groupe)  
   
-2.  `object-type:`Spécifie le type de l’objet spécifié dans l’attribut de nom de l’objet (si la catégorie d’objet de type d’objet sera « catégorie » n’est spécifié).  
+2.  `object-type:` Spécifie le type de l’objet spécifié dans l’attribut de nom de l’objet (si la catégorie d’objet de type d’objet sera « catégorie » n’est spécifié).  
   
-3.  `metabase:`Spécifie s’il s’agit de la source ou cible de la métabase.  
+3.  `metabase:` Spécifie s’il s’agit de la source ou cible de la métabase.  
   
-4.  `destination:`Spécifie le chemin d’accès ou le dossier dans lequel le script doit être enregistré, si le nom de fichier n’est indiqué ensuite un nom de fichier dans le format (valeur de l’attribut object_name) .out  
+4.  `destination:` Spécifie le chemin d’accès ou le dossier dans lequel le script doit être enregistré, si le nom de fichier n’est indiqué ensuite un nom de fichier dans le format (valeur de l’attribut object_name) .out  
   
-5.  `overwrite:`Si true elle remplace si le même nom de fichier existe. Il peut avoir les valeurs (true/false).  
+5.  `overwrite:` Si true elle remplace si le même nom de fichier existe. Il peut avoir les valeurs (true/false).  
   
 **Exemple de syntaxe :**  
   
@@ -641,7 +642,7 @@ Nécessite un ou plusieurs nœuds de la métabase en tant que paramètre de lign
   
 />  
 ```  
-ou Gestionnaire de configuration  
+ou  
   
 ```xml  
 <save-as-script  
@@ -656,31 +657,31 @@ ou Gestionnaire de configuration
   
 </save-as-script>  
 ```  
-**Commande**  
+**Command**  
   
-instruction CONVERT-sql  
+convert-sql-statement  
   
-1.  `context`Spécifie le nom du schéma.  
+1.  `context` Spécifie le nom du schéma.  
   
-2.  `destination`Spécifie si la sortie doit être stockée dans un fichier.  
+2.  `destination` Spécifie si la sortie doit être stockée dans un fichier.  
   
     Si cet attribut n’est pas spécifié, l’instruction T-SQL convertie s’affiche sur la console. (attribut facultatif)  
   
-3.  `conversion-report-folder`Spécifie le dossier où le rapport d’évaluation possible être stockées. (attribut facultatif)  
+3.  `conversion-report-folder` Spécifie le dossier où le rapport d’évaluation possible être stockées. (attribut facultatif)  
   
-4.  `conversion-report-overwrite`Spécifie s’il faut remplacer le dossier de rapport d’évaluation s’il existe déjà.  
+4.  `conversion-report-overwrite` Spécifie s’il faut remplacer le dossier de rapport d’évaluation s’il existe déjà.  
   
     **Valeur par défaut :** false. (attribut facultatif)  
   
-5.  `write-converted-sql-to`Spécifie le fichier (ou) le chemin d’accès du dossier où le code T-SQL converti est stocké. Lorsqu’un chemin d’accès du dossier est spécifié avec la `sql-files` attribut, chaque fichier source aura une cible correspondante fichier T-SQL créé sous le dossier spécifié. Lorsqu’un chemin d’accès du dossier est spécifié avec la `sql` attribut, le code T-SQL converti est écrit dans un fichier nommé Result.out sous le dossier spécifié.  
+5.  `write-converted-sql-to` Spécifie le fichier (ou) le chemin d’accès du dossier où le code T-SQL converti est stocké. Lorsqu’un chemin d’accès du dossier est spécifié avec la `sql-files` attribut, chaque fichier source aura une cible correspondante fichier T-SQL créé sous le dossier spécifié. Lorsqu’un chemin d’accès du dossier est spécifié avec la `sql` attribut, le code T-SQL converti est écrit dans un fichier nommé Result.out sous le dossier spécifié.  
   
-6.  `sql`Spécifie les instructions sql de MySQL à convertir, une ou plusieurs instructions peuvent être séparés à utiliser un « ; »  
+6.  `sql` Spécifie les instructions sql de MySQL à convertir, une ou plusieurs instructions peuvent être séparés à utiliser un « ; »  
   
-7.  `sql-files`Spécifie le chemin d’accès des fichiers sql doit être converti en code T-SQL.  
+7.  `sql-files` Spécifie le chemin d’accès des fichiers sql doit être converti en code T-SQL.  
   
-8.  `write-summary-report-to`Spécifie le chemin d’accès où le rapport de synthèse est généré. Si seul le chemin d’accès du dossier est indiqué, puis de fichiers par nom **ConvertSQLReport.XML** est créé. (attribut facultatif)  
+8.  `write-summary-report-to` Spécifie le chemin d’accès où le rapport de synthèse est généré. Si seul le chemin d’accès du dossier est indiqué, puis de fichiers par nom **ConvertSQLReport.XML** est créé. (attribut facultatif)  
   
-    La création a 2 autres sous-catégories, notamment des rapports.., :  
+    La création a 2 autres sous-catégories, notamment des rapports..,:  
   
     -   erreurs de rapport (= « true/false », la valeur par défaut en tant que « false » (attributs facultatifs)).  
   
@@ -717,7 +718,7 @@ Nécessite un ou plusieurs nœuds de la métabase en tant que paramètre de lign
   
 </convert-sql-statement>  
 ```  
-ou Gestionnaire de configuration  
+ou  
   
 ```  
 <convert-sql-statement  
@@ -742,7 +743,7 @@ ou Gestionnaire de configuration
   
 />  
 ```  
-ou Gestionnaire de configuration  
+ou  
   
 ```  
 <convert-sql-statement  
@@ -759,15 +760,15 @@ ou Gestionnaire de configuration
 ```  
   
 ## <a name="next-step"></a>Étape suivante  
-Pour plus d’informations sur les options de ligne de commande, consultez [les Options de ligne de commande dans la Console de SSMA &#40; MySQLToSQL &#41; ](../../ssma/mysql/command-line-options-in-ssma-console-mysqltosql.md) .  
+Pour plus d’informations sur les options de ligne de commande, consultez [les Options de ligne de commande dans la Console SSMA &#40;MySQLToSQL&#41; ](../../ssma/mysql/command-line-options-in-ssma-console-mysqltosql.md) .  
   
-Pour plus d’informations sur les exemples de fichiers de script console, consultez [fonctionne avec les exemples de fichiers de Script Console &#40; MySQLToSQL &#41;](../../ssma/mysql/working-with-the-sample-console-script-files-mysqltosql.md)  
+Pour plus d’informations sur les exemples de fichiers de script console, consultez [fonctionne avec les exemples de fichiers de Script Console &#40;MySQLToSQL&#41;](../../ssma/mysql/working-with-the-sample-console-script-files-mysqltosql.md)  
   
 L’étape suivante varie selon les spécifications de votre projet :  
   
-1.  Pour spécifier un mot de passe ou d’exportation / importation des mots de passe, consultez [la gestion des mots de passe &#40; MySQLToSQL &#41; ](../../ssma/mysql/managing-passwords-mysqltosql.md).  
+1.  Pour spécifier un mot de passe ou d’exportation / importation des mots de passe, consultez [la gestion des mots de passe &#40;MySQLToSQL&#41;](../../ssma/mysql/managing-passwords-mysqltosql.md).  
   
-2.  Pour la génération de rapports, consultez [génération de rapports &#40; MySQLToSQL &#41; ](../../ssma/mysql/generating-reports-mysqltosql.md).  
+2.  Pour la génération de rapports, consultez [génération de rapports &#40;MySQLToSQL&#41;](../../ssma/mysql/generating-reports-mysqltosql.md).  
   
-3.  Pour résoudre les problèmes dans la console, consultez [dépannage &#40; MySQLToSQL &#41; ](../../ssma/mysql/troubleshooting-mysqltosql.md).  
+3.  Pour résoudre les problèmes dans la console, consultez [dépannage &#40;MySQLToSQL&#41;](../../ssma/mysql/troubleshooting-mysqltosql.md).  
   

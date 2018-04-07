@@ -1,30 +1,31 @@
 ---
-title: "Mappage des schémas de DB2 aux schémas SQL Server (DB2ToSQL) | Documents Microsoft"
+title: Mappage des schémas de DB2 aux schémas SQL Server (DB2ToSQL) | Documents Microsoft
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-db2
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 05ff7bd4-e60b-4f48-a893-bc2346aa9a8a
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 19abc8a901b2241a4fa7d6c69da2ffd90b77afb9
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 1b6270bf3fda2f19b6559ceca4c3385369213de3
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="mapping-db2-schemas-to-sql-server-schemas-db2tosql"></a>Mappage des schémas de DB2 aux schémas SQL Server (DB2ToSQL)
 Dans DB2, chaque base de données a un ou plusieurs schémas. Par défaut, SSMA migre tous les objets dans un schéma DB2 à un [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] nommé pour le schéma de base de données. Toutefois, vous pouvez personnaliser le mappage entre les schémas de DB2 et [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] bases de données.  
@@ -68,10 +69,10 @@ Si vous personnalisez le mappage entre un schéma DB2 et un [!INCLUDE[ssNoVersio
   
 1.  Sous l’onglet mappage de schéma, sélectionnez n’importe quelle ligne, puis cliquez sur **rétablir par défaut** pour rétablir la base de données par défaut et le schéma.  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>Étapes suivantes  
 Si vous souhaitez analyser la conversion d’objets DB2 dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] des objets, vous pouvez [rapport de Migration de données (SSMA commun)](http://msdn.microsoft.com/en-us/bbfb9d88-5a98-4980-8d19-c5d78bd0d241).  
   
 ## <a name="see-also"></a>Voir aussi  
-[Connexion à SQL Server &#40; DB2eToSQL &#41;](../../ssma/db2/connecting-to-sql-server-db2etosql.md)  
-[Migration des bases de données de DB2 pour SQL Server &#40; DB2ToSQL &#41;](../../ssma/db2/migrating-db2-databases-to-sql-server-db2tosql.md)  
+[Connexion à SQL Server &#40;DB2eToSQL&#41;](../../ssma/db2/connecting-to-sql-server-db2etosql.md)  
+[Bases de données DB2 migration vers SQL Server &#40;DB2ToSQL&#41;](../../ssma/db2/migrating-db2-databases-to-sql-server-db2tosql.md)  
   

@@ -1,26 +1,26 @@
 ---
-title: "Créer un administrateur de domaine APS (APS)"
+title: Créer un administrateur de domaine APS (APS)
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.technology: mpp-data-warehouse
-ms.custom: 
+ms.custom: ''
 ms.date: 01/05/2017
 ms.reviewer: na
 ms.suite: sql
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: ed52bf78-2b0a-4252-98a7-8c2805e22d3d
-caps.latest.revision: 
-ms.openlocfilehash: 0ebc616d28fe734b9dac52303641390ce9bc0957
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+caps.latest.revision: 7
+ms.openlocfilehash: 6842992931ba35f450d49d6db9beb803dce6b73a
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="create-an-aps-domain-administrator"></a>Créer un administrateur de domaine APS
 Certaines opérations requièrent des privilèges d’administrateur de domaine de système de plateforme Analytique. Cette rubrique explique comment créer des administrateurs de domaine de matériel supplémentaire.  
@@ -54,5 +54,5 @@ Dispose des autorisations appropriées pour configurer tous les nœuds de points
     Cette opération ajoute le nouvel utilisateur à la **Admins du domaine** groupe et la **PdwControlNodeAccess** groupe. Cliquez sur **OK**.  
   
 ## <a name="see-also"></a>Voir aussi  
-[Lancez le Gestionnaire de Configuration &#40; Système de plateforme Analytique &#41;](launch-the-configuration-manager.md)  
+[Lancez le Gestionnaire de Configuration &#40;Analytique plate-forme système&#41;](launch-the-configuration-manager.md)  
   

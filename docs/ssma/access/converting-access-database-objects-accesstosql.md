@@ -1,15 +1,16 @@
 ---
-title: "Convertir des objets de base de données Access (AccessToSQL) | Documents Microsoft"
+title: Convertir des objets de base de données Access (AccessToSQL) | Documents Microsoft
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-access
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
@@ -35,16 +36,16 @@ helpviewer_keywords:
 - translating Access to SQL Azure
 - translating Access to SQL Server
 ms.assetid: e0ef67bf-80a6-4e6c-a82d-5d46e0623c6c
-caps.latest.revision: "22"
+caps.latest.revision: 22
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a710d76b5df020e258676e0b1ff160c0e2e7a353
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: c05d0dd92d0802260f59f86fef13e617f6eea899
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="converting-access-database-objects-accesstosql"></a>Convertir des objets de base de données Access (AccessToSQL)
 Après avoir ajouté des bases de données Access et connecté à [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ou SQL Azure, SSMA affiche les métadonnées pour l’accès et [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ou des objets de base de données SQL Azure. Vous pouvez maintenant sélectionner des objets de base de données Access et convertir les schémas dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ou des schémas de SQL Azure.  
@@ -72,7 +73,7 @@ Le tableau suivant présente les objets d’accès sont convertis et résultant 
 |Requête|vue<br /><br />Requêtes SELECT plus sont convertis en vues. Autres requêtes, telles que les requêtes de mise à jour, ne sont pas migrés.<br /><br />Les requêtes SELECT qui prennent des paramètres ne sont pas converties, et vous ne les requêtes croisées.|  
 |rapport|non converti|  
 |formulaire|non converti|  
-|(macro)|non converti|  
+|macro|non converti|  
 |module|non converti|  
 |Valeur par défaut|Valeur par défaut|  
 |autoriser aucune propriété de colonne de longueur|la contrainte de validation|  

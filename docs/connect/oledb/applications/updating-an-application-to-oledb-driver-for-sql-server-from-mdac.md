@@ -10,7 +10,7 @@ ms.component: oledb|applications
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
-- docset-sql-devref
+- drivers
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -23,11 +23,11 @@ author: pmasl
 ms.author: Pedro.Lopes
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 4b0581e1423cd2731b1edb0dbdc0f26523f445a7
-ms.sourcegitcommit: 9f4330a4b067deea396b8567747a6771f35e6eee
+ms.openlocfilehash: 61056a6951176b4257856b114a512f6f81dfc33e
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="updating-an-application-to-ole-db-driver-for-sql-server-from-mdac"></a>Mise à jour d’une Application, le pilote OLE DB pour SQL Server à partir de MDAC
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -116,4 +116,4 @@ ms.lasthandoff: 03/30/2018
  Les deux pilote OLE DB pour SQL Server et MDAC lecture d’isolation de transaction validée à l’aide de la version de la ligne, mais uniquement pilote OLE DB pour SQL Server prend en charge la capture instantanée d’isolation des transactions. (En termes de programmation, l'isolation de la transaction de lecture validée à l'aide du contrôle de version de ligne est la même chose que la transaction de lecture validée.)  
 
 ## <a name="see-also"></a>Voir aussi  
- [Génération d’Applications avec le pilote OLE DB pour SQL Server](../../oledb/applications/building-applications-with-oledb-driver-for-sql-server.md)  
+ [Génération d’applications avec OLE DB Driver pour SQL Server](../../oledb/applications/building-applications-with-oledb-driver-for-sql-server.md)  

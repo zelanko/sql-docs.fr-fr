@@ -1,15 +1,16 @@
 ---
-title: "L’installation de SQL Server Migration Assistant pour Access (AccessToSQL) | Documents Microsoft"
+title: L’installation de SQL Server Migration Assistant pour Access (AccessToSQL) | Documents Microsoft
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-access
-ms.custom: 
+ms.custom: ''
 ms.date: 08/15/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
@@ -28,26 +29,26 @@ helpviewer_keywords:
 - uninstalling SSMA
 - upgrading SSMA
 ms.assetid: dd50eebd-75df-4e0d-8c4d-88b511aae4c7
-caps.latest.revision: "31"
+caps.latest.revision: 31
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 0ed2247057865624d0e365a5cac24e390295975a
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 0b60003c1d9c7c266d57f6c0fc583b977561be72
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="installing-sql-server-migration-assistant-for-access-accesstosql"></a>L’installation de SQL Server Migration Assistant pour Access (AccessToSQL)
-[!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Migration Assistant (SSMA) pour l’accès est installé à l’aide d’un Assistant basé sur le programme d’installation de Windows. Cette rubrique fournit des informations sur les conditions préalables d’installation, un lien vers la version la plus récente de SSMA et des instructions pour l’installation, la gestion de licences, la désinstallation et la mise à niveau de SSMA.  
+[!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Migration Assistant (SSMA) pour l’accès est installé à l’aide d’un Assistant basé sur le programme d’installation de Windows. Cette rubrique fournit des informations sur les conditions préalables d’installation, un lien vers la version la plus récente de SSMA et des instructions pour l’installation, la gestion de licences, la désinstallation et la mise à niveau de SSMA.  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Configuration requise  
 Avant d’installer SSMA, assurez-vous que votre système répond aux exigences suivantes :  
   
 -   Windows 7 ou une version ultérieure, ou Windows Server 2008 ou une version ultérieure.  
   
--   [!INCLUDE[msCoName](../../includes/msconame_md.md)]Windows Installer 3.1 ou une version ultérieure.  
+-   [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows Installer 3.1 ou une version ultérieure.  
   
 -   Le [!INCLUDE[msCoName](../../includes/msconame_md.md)] .NET Framework version 4.0 ou version ultérieure. Le .NET Framework version 4.0 est disponible sur le [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] du produit et à l’aide des informations contenues dans le [Guide de Microsoft .NET](https://docs.microsoft.com/en-us/dotnet/framework/).
   
@@ -69,7 +70,7 @@ Après avoir téléchargé la dernière version, vous devez extraire les fichier
   
 **Pour installer SSMA**  
   
-1.  Double-cliquez sur SSMA pour Access  *n* .msi, où  *n*  est le numéro de build.  
+1.  Double-cliquez sur SSMA pour Access *n*.msi, où *n* est le numéro de build.  
   
 2.  Dans la page d’accueil, cliquez sur **suivant**.  
   

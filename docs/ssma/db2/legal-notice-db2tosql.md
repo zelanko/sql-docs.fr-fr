@@ -1,30 +1,31 @@
 ---
-title: "Notice légale (DB2toSQL) | Documents Microsoft"
+title: Notice légale (DB2toSQL) | Documents Microsoft
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-db2
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: d2e558b8-7208-44b4-82b3-4b411a34a8c9
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f2da049a8a0230abe43b690ee53c3faa678c1718
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 1e75da6b2acbe891ada6af89789d96b8ee3b9d0a
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="legal-notice-db2tosql"></a>Notice légale (DB2toSQL)
 Cette documentation, ainsi que les exemples d’applications qu’elle contient, est fournie à titre d’information uniquement et sans aucune garantie, expresse ou implicite. Les informations contenues dans cette documentation, notamment les URL et autres références à des sites web Internet, pourront faire l’objet de modifications sans préavis. L’utilisateur reconnaît assumer tous les risques liés à l’utilisation ou aux résultats de l’utilisation de cette documentation.  

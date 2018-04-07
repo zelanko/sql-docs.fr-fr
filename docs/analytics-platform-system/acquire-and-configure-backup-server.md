@@ -1,25 +1,25 @@
 ---
-title: "Obtenir et configurer un serveur de sauvegarde pour les points d’accès PDW"
+title: Obtenir et configurer un serveur de sauvegarde pour les points d’accès PDW
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
-ms.custom: 
+ms.custom: ''
 ms.technology: mpp-data-warehouse
-description: "Configurer un système de Windows sur le matériel non comme un serveur de sauvegarde pour une utilisation avec la sauvegarde et de restauration des fonctionnalités de système de plateforme Analytique (APS) et SQL Server Parallel Data Warehouse (PDW)."
+description: Configurer un système de Windows sur le matériel non comme un serveur de sauvegarde pour une utilisation avec la sauvegarde et de restauration des fonctionnalités de système de plateforme Analytique (APS) et SQL Server Parallel Data Warehouse (PDW).
 ms.date: 10/20/2016
 ms.topic: article
-caps.latest.revision: "20"
+caps.latest.revision: 20
 ms.assetid: f8b769fe-c864-4d65-abcb-a9a287061702
-ms.openlocfilehash: 760537abd7e3227cc2245c429d0a0c13f7609f8b
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 564a70d5fa483f2c34ef2598213a2c22074daf80
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="acquire-and-configure-a-backup-server"></a>Obtenir et configurer un serveur de sauvegarde
 Cette rubrique décrit comment configurer un système de Windows sur le matériel non comme un serveur de sauvegarde pour une utilisation avec les fonctionnalités de sauvegarde et de restauration dans le système de plateforme Analytique (APS) et SQL Server Parallel Data Warehouse (PDW).  
@@ -94,7 +94,7 @@ PDW accéderont à la sauvegarde du serveur via un partage de fichiers UNC. Pour
   
 5.  Ajoutez les informations d’identification du compte de domaine à PDW.  
   
-    Exemple :  
+    Par exemple :  
   
     ```sql  
     EXEC sp_pdw_add_network_credentials '10.192.147.63', 'seattle\david', '********';  
@@ -114,7 +114,7 @@ Pour sauvegarder des données, utilisez un client de la requête pour se connect
 > [!IMPORTANT]  
 > N’oubliez pas d’utiliser l’adresse InfiniBand IP du serveur de sauvegarde. Dans le cas contraire, les données seront copiées sur Ethernet au lieu de InfiniBand.  
   
-Exemple :  
+Par exemple :  
   
 ```sql  
 BACKUP DATABASE Invoices TO DISK = '\\10.172.14.255\backups\yearly\Invoices2013Full';  
@@ -123,7 +123,7 @@ RESTORE DATABASE Invoices2013Full
 FROM DISK = '\\10.172.14.255\backups\yearly\Invoices2013Full'  
 ```  
   
-Pour plus d'informations, consultez : 
+Pour plus d'informations, consultez : 
   
 -   [BASE DE DONNÉES DE SAUVEGARDE](../t-sql/statements/backup-database-parallel-data-warehouse.md)   
   
@@ -136,12 +136,12 @@ Le serveur de sauvegarde n’est pas joint au domaine privé de l’application.
   
 ### <a name="manage-network-credentials"></a>Gérer les informations d’identification réseau  
   
-Accès réseau au répertoire de sauvegarde est basé sur la sécurité de partage de fichiers de Windows standard. Avant d’effectuer une sauvegarde, vous devez créer ou désigner un compte Windows qui sera utilisé pour l’authentification PDW dans le répertoire de sauvegarde. Ce compte windows doit avoir l’autorisation d’accès, de créer et d’écrire dans le répertoire de sauvegarde.  
+L’accès réseau au répertoire de sauvegarde est basé sur la sécurité standard des partages de fichiers Windows. Avant d’effectuer une sauvegarde, vous devez créer ou désigner un compte Windows qui sera utilisé pour l’authentification PDW dans le répertoire de sauvegarde. Ce compte Windows doit être doté d’un droit d’accès, de création et d’écriture sur le répertoire de sauvegarde.  
   
 > [!IMPORTANT]  
-> Pour réduire les risques de sécurité à vos données, il est conseillé que vous désignez un compte Windows uniquement à des fins de sauvegarde et les opérations de restauration. Autoriser ce compte disposent des autorisations à l’emplacement de sauvegarde et nulle part ailleurs.  
+> Pour réduire les risques de sécurité liés à vos données, il vous est conseillé de désigner un compte Windows qui servira uniquement aux opérations de sauvegarde et de restauration. Autorisez ce compte à accéder à l’emplacement de sauvegarde et à aucun autre emplacement.  
   
-Pour stocker le nom d’utilisateur et un mot de passe dans PDW, utilisez le [sp_pdw_add_network_credentials](../relational-databases/system-stored-procedures/sp-pdw-add-network-credentials-sql-data-warehouse.md) procédure stockée. PDW utilise le Gestionnaire d’informations d’identification Windows pour stocker et de chiffrer des noms d’utilisateur et mots de passe sur le nœud de contrôle et de nœuds de calcul. Les informations d’identification ne sont pas sauvegardées avec la commande de sauvegarde de base de données.  
+Pour stocker le nom d’utilisateur et un mot de passe dans PDW, utilisez le [sp_pdw_add_network_credentials](../relational-databases/system-stored-procedures/sp-pdw-add-network-credentials-sql-data-warehouse.md) procédure stockée. PDW utilise le Gestionnaire d’informations d’identification Windows pour stocker et de chiffrer des noms d’utilisateur et mots de passe sur le nœud de contrôle et de nœuds de calcul. Les informations d’identification ne sont pas sauvegardées avec la commande BACKUP DATABASE.  
   
 Pour supprimer les informations d’identification réseau de PDW, utilisez le [sp_pdw_remove_network_credentials](../relational-databases/system-stored-procedures/sp-pdw-remove-network-credentials-sql-data-warehouse.md) procédure stockée.  
   

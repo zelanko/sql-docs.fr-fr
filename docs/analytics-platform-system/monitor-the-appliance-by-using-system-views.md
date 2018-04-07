@@ -1,26 +1,26 @@
 ---
-title: "Surveiller l’application à l’aide de vues du système (système de plateforme Analytique)"
+title: Surveiller l’application à l’aide de vues du système (système de plateforme Analytique)
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.technology: mpp-data-warehouse
-ms.custom: 
+ms.custom: ''
 ms.date: 01/05/2017
 ms.reviewer: na
 ms.suite: sql
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: d6e34c16-12ba-4a6f-80a7-391bca5ba534
-caps.latest.revision: "8"
-ms.openlocfilehash: 17845f9be4a3b6c40573403d2d314c8802b71015
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+caps.latest.revision: 8
+ms.openlocfilehash: c6e756946e7ed558d6875bf5b330e1ebc9c35f5d
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="monitor-the-appliance-by-using-system-views"></a>Surveiller l’application à l’aide de vues système
 Cette rubrique répertorie les vues système que vous pouvez utiliser pour l’analyse de SQL Server PDW.  
@@ -42,5 +42,5 @@ SQL Server PDW inclut des vues système complète qui vous permettent d’obteni
   
 ## <a name="see-also"></a>Voir aussi  
 <!-- MISSING LINKS [Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  -->  
-[Surveillance de l’appliance &#40; Système de plateforme Analytique &#41;](appliance-monitoring.md)  
+[Surveillance de l’appliance &#40;Analytique plate-forme système&#41;](appliance-monitoring.md)  
   

@@ -1,15 +1,16 @@
 ---
-title: "Création de fichiers de Script (MySQLToSQL) | Documents Microsoft"
+title: Création de fichiers de Script (MySQLToSQL) | Documents Microsoft
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-mysql
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
@@ -20,21 +21,21 @@ helpviewer_keywords:
 - Creating script files, script file validation
 - Creating script files, server connection parameters
 ms.assetid: b4608fe7-c777-4ba5-b853-4402f02109e3
-caps.latest.revision: "22"
+caps.latest.revision: 22
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ddfe50aa62403c1dda26ebf1f2017bdf45bf7864
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 1bef1029a5bfcde8f3cad7c83393c026e7d8a5d9
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="creating-script-files-mysqltosql"></a>Création de fichiers de Script (MySQLToSQL)
 La première étape avant le lancement de l’application de console SSMA est à créer le fichier de script et, si nécessaire de créer le fichier de la valeur de la variable et le fichier de connexion de serveur.  
   
-Le fichier de script peut être divisé en trois sections, notamment.., :  
+Le fichier de script peut être divisé en trois sections, notamment..,:  
   
 1.  **config :** permet à l’utilisateur définir les paramètres de configuration pour l’application console.  
   
@@ -76,7 +77,7 @@ Les options configurables par l’utilisateur sont les suivantes :
   
     </output-providers>  
     ```  
-    *ou*  
+    *or*  
   
     ```xml  
     <…All commands…>  
@@ -98,9 +99,9 @@ Les options configurables par l’utilisateur sont les suivantes :
   
     Qu’un seul ou l’autre attribut spécifié peut être utilisé par exemple :  
   
-    - utilisé en source-utilisation-dernier = « true » (par défaut) ou serveur de source = « source_servername »  
+    - source-use-last-used="true" (default) or source-server="source_servername"  
   
-    - utilisé en cible-utilisation-dernier = « true » (par défaut) ou serveur à la cible = « target_servername »  
+    - target-use-last-used="true" (default) or target-server="target_servername"  
   
     **Exemple :**  
   
@@ -113,7 +114,7 @@ Les options configurables par l’utilisateur sont les suivantes :
   
     </output-providers>  
     ```  
-    *ou*  
+    *or*  
   
     ```xml  
     <migrate-data>  
@@ -146,7 +147,7 @@ Les options configurables par l’utilisateur sont les suivantes :
   
     </output-providers>  
     ```  
-    *ou*  
+    *or*  
   
     ```xml  
     <!-- Connect to target database -->  
@@ -179,7 +180,7 @@ Les options configurables par l’utilisateur sont les suivantes :
   
     </output-providers>  
     ```  
-    *ou*  
+    *or*  
   
     ```xml  
     <!--synchronization-->  
@@ -190,7 +191,7 @@ Les options configurables par l’utilisateur sont les suivantes :
   
     </synchronize-target>  
     ```  
-    *ou*  
+    *or*  
   
     ```xml  
     <!--data migration-->  
@@ -225,7 +226,7 @@ Les options configurables par l’utilisateur sont les suivantes :
   
     </output-providers>  
     ```  
-    *ou*  
+    *or*  
   
     ```xml  
     <convert-schema object-name="<object-name>">  
@@ -278,7 +279,7 @@ Les options configurables par l’utilisateur sont les suivantes :
   
     </output-providers>  
     ```  
-    *ou*  
+    *or*  
   
     ```xml  
     <…All commands…>  
@@ -320,7 +321,7 @@ Les options configurables par l’utilisateur sont les suivantes :
   
     </output-providers>  
     ```  
-    *ou*  
+    *or*  
   
     ```xml  
     <…All commands…>  
@@ -353,7 +354,7 @@ L’option non configurable est :
 -   **Nombre maximal de tentatives de reconnexion :** lorsqu’une connexion établie expire ou s’arrête en raison d’une défaillance du réseau, le serveur est requis pour être reconnecté. Les tentatives de reconnexion sont autorisées à un maximum de **5** nouvelles tentatives, la console effectue automatiquement la reconnexion. La fonctionnalité de reconnexion automatique permet de réduire votre effort de réexécuter le script.  
   
 ## <a name="server-connection-parameters"></a>Paramètres de connexion de serveur  
-Paramètres de connexion de serveur peuvent être définis dans le fichier de script ou dans le fichier de connexion de serveur. Reportez-vous à la [créer les fichiers de connexion de serveur &#40; MySQLToSQL &#41; ](../../ssma/mysql/creating-the-server-connection-files-mysqltosql.md) section pour plus d’informations.  
+Paramètres de connexion de serveur peuvent être définis dans le fichier de script ou dans le fichier de connexion de serveur. Reportez-vous à la [création des fichiers de connexion serveur &#40;MySQLToSQL&#41; ](../../ssma/mysql/creating-the-server-connection-files-mysqltosql.md) section pour plus d’informations.  
   
 ## <a name="script-commands"></a>Commandes de script  
 Le fichier de script contient une séquence de commandes de flux de travail de migration dans le format XML. L’application de console SSMA traite la migration dans l’ordre les commandes figurant dans le fichier de script.  
@@ -401,14 +402,14 @@ Modèles composé de 3 fichiers de script (pour l’exécution de divers scénar
   
 Vous pouvez exécuter les modèles (fichiers) après avoir modifié les paramètres affichés dans celui-ci, de pertinence.  
   
-Vous trouverez la liste complète des commandes de script dans [l’exécution de la Console SSMA &#40; MySQLToSQL &#41;](../../ssma/mysql/executing-the-ssma-console-mysqltosql.md)  
+Vous trouverez la liste complète des commandes de script dans [l’exécution de la Console SSMA &#40;MySQLToSQL&#41;](../../ssma/mysql/executing-the-ssma-console-mysqltosql.md)  
   
 ## <a name="script-file-validation"></a>Validation des fichiers de script  
 L’utilisateur peut valider facilement son fichier de script par rapport au fichier de définition de schéma **'M2SSConsoleScriptSchema.xsd'** disponibles dans le dossier « Schémas ».  
   
 ## <a name="next-step"></a>Étape suivante  
-L’étape suivante d’exploitation de la console est [création de fichiers de valeur Variable &#40; MySQLToSQL &#41; ](../../ssma/mysql/creating-variable-value-files-mysqltosql.md).  
+L’étape suivante d’exploitation de la console est [création de fichiers de valeur Variable &#40;MySQLToSQL&#41;](../../ssma/mysql/creating-variable-value-files-mysqltosql.md).  
   
 ## <a name="see-also"></a>Voir aussi  
-[Création de fichiers de la valeur de la Variable &#40; MySQLToSQL &#41;](../../ssma/mysql/creating-variable-value-files-mysqltosql.md)  
+[Création de fichiers de la valeur de la Variable &#40;MySQLToSQL&#41;](../../ssma/mysql/creating-variable-value-files-mysqltosql.md)  
   

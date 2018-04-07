@@ -1,25 +1,25 @@
 ---
-title: "Restaurer une base de données protégée par chiffrement transparent des données dans l’entrepôt de données en parallèle"
+title: Restaurer une base de données protégée par chiffrement transparent des données dans l’entrepôt de données en parallèle
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
-ms.custom: 
+ms.custom: ''
 ms.technology: mpp-data-warehouse
-description: "Utilisez la procédure suivante pour restaurer une base de données est chiffrée à l’aide du chiffrement transparent des données."
+description: Utilisez la procédure suivante pour restaurer une base de données est chiffrée à l’aide du chiffrement transparent des données.
 ms.date: 10/20/2016
 ms.topic: article
 ms.assetid: ffb681ca-8598-4614-b06c-660376333fc3
-caps.latest.revision: "4"
-ms.openlocfilehash: 5df3843a3e329901f8f77b65e5f6d4ff69cf6dbf
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+caps.latest.revision: 4
+ms.openlocfilehash: 2421b618f9f1d736b90fd882aad9e3ab9aae82f5
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="restore-a-database-protected-by-tde"></a>Restaurer une base de données protégée par chiffrement transparent des données
 Utilisez la procédure suivante pour restaurer une base de données est chiffrée à l’aide du chiffrement transparent des données.  

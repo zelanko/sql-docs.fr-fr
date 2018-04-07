@@ -2,24 +2,24 @@
 title: Load
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
-ms.custom: 
+ms.custom: ''
 ms.technology: mpp-data-warehouse
-description: "Vous pouvez charger ou insérer des données dans SQL Server Parallel Data Warehouse (PDW) à l’aide des Services d’intégration, utilitaire bcp, dwloader ou l’instruction SQL INSERT."
+description: Vous pouvez charger ou insérer des données dans SQL Server Parallel Data Warehouse (PDW) à l’aide des Services d’intégration, utilitaire bcp, dwloader ou l’instruction SQL INSERT.
 ms.date: 10/20/2016
 ms.topic: article
 ms.assetid: c7292108-4a48-409e-b0f4-e4ba84dce26f
-caps.latest.revision: "22"
-ms.openlocfilehash: be5ea7c2b939b58c7dfd826965f1568431cb1bff
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+caps.latest.revision: 22
+ms.openlocfilehash: 77bb7e3ba6a3377fe63decf06a872872eaa4ee61
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="load-sql-server-pdw"></a>Charge (SQL Server PDW)
 Vous pouvez charger ou insérer des données dans SQL Server Parallel Data Warehouse (PDW) à l’aide des Services d’intégration, [utilitaire bcp](../tools/bcp-utility.md), **dwloader** du chargeur de ligne de commande ou l’instruction SQL INSERT.  
@@ -46,9 +46,9 @@ Vous pouvez utiliser des instructions préparées pour charger des données dans
 For more information, see [Prepared statements](prepared-statements.md).
 -->
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Tâches associées  
   
-|Tâche|Description|  
+|Tâche| Description|  
 |--------|---------------|  
 |Créer la base de données mise en lots.|[Créer la base de données mise en lots](staging-database.md)|  
 |Charger avec Integration Services.|[Charger avec Integration Services](load-with-ssis.md)|  

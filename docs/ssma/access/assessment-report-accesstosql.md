@@ -1,15 +1,16 @@
 ---
-title: "Rapport d’évaluation (AccessToSQL) | Documents Microsoft"
+title: Assessment Report (AccessToSQL) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-access
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
@@ -18,18 +19,18 @@ helpviewer_keywords:
 - Assessment Report dialog box
 - Conversion Report dialog box
 ms.assetid: ba6f53aa-0049-4c49-8bb8-607a8bfaa737
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3a171fdf7f717ba5af9e0ecf73f5aca17923e155
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 5202655839821515939ea920779041d6f39db28f
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
-# <a name="assessment-report-accesstosql"></a>Rapport d’évaluation (AccessToSQL)
+# <a name="assessment-report-accesstosql"></a>Assessment Report (AccessToSQL)
 La fenêtre de rapport d’évaluation affiche les résultats de la conversion d’objets de base de données à [!INCLUDE[tsql](../../includes/tsql_md.md)] syntaxe, et vous estimez la complexité et le coût de vos projets de migration.  
   
 Pour créer un rapport d’évaluation, sélectionner les objets à convertir dans l’Explorateur de métadonnées source, avec le bouton droit **bases de données**, puis sélectionnez **créer un rapport**. Vous pouvez également afficher ce rapport automatiquement après la conversion de schémas. Toutefois, le nom du rapport sera rapport de Conversion. Pour plus d’informations, consultez [paramètres de projet (GUI) (SSMA commun)](http://msdn.microsoft.com/en-us/cf06baf1-8714-48a3-95dc-781f6ca53693).  

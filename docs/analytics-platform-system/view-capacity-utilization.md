@@ -1,26 +1,26 @@
 ---
-title: "Utilisation de la capacité d’affichage (système de plateforme Analytique)"
+title: Utilisation de la capacité d’affichage (système de plateforme Analytique)
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.technology: mpp-data-warehouse
-ms.custom: 
+ms.custom: ''
 ms.date: 01/05/2017
 ms.reviewer: na
 ms.suite: sql
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 373633ca-c5af-4618-88e8-58ca84e8e5f4
-caps.latest.revision: "9"
-ms.openlocfilehash: 9bf391d92b29acc057fad1170f878bfb47bccd23
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+caps.latest.revision: 9
+ms.openlocfilehash: 03da2fa3295153c08de1f844866a45ab0ca8ea8c
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="view-capacity-utilization"></a>Utilisation de la capacité d’affichage
 Cette rubrique explique comment afficher l’utilisation des capacités dans l’appliance SQL Server PDW.  
@@ -28,7 +28,7 @@ Cette rubrique explique comment afficher l’utilisation des capacités dans l�
 ## <a name="to-view-capacity-utilization-by-using-admin-console"></a>Pour afficher l’utilisation de la capacité en utilisant la Console d’administration  
 Pour afficher l’espace utilisé, ouvrez la Console d’administration, puis cliquez sur le **stockage** onglet. Il existe un **stockage** onglet pour la région PDW et la région HDI.  
   
-![Stockage de la Console d’administration PDW](./media/view-capacity-utilization/SQL_Server_PDW_AdminConsol_StorageV2.png "SQL_Server_PDW_AdminConsol_StorageV2")  
+![PDW Admin Console Storage](./media/view-capacity-utilization/SQL_Server_PDW_AdminConsol_StorageV2.png "SQL_Server_PDW_AdminConsol_StorageV2")  
   
 ## <a name="to-view-capacity-utilization-by-using-queries"></a>Pour afficher l’utilisation de la capacité à l’aide de requêtes  
 Pour comprendre si un nœud est espace insuffisant, le système de surveillance de l’intégrité de SQL Server PDW analyse déjà l’espace libre pour tous les volumes au sein de chaque nœud.  
@@ -111,5 +111,5 @@ ORDER BY [db_name], [pdw_node_id];
   
 ## <a name="see-also"></a>Voir aussi  
 <!-- MISSING LINKS [Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  -->
-[Surveillance de l’appliance &#40; Système de plateforme Analytique &#41;](appliance-monitoring.md)  
+[Surveillance de l’appliance &#40;Analytique plate-forme système&#41;](appliance-monitoring.md)  
   

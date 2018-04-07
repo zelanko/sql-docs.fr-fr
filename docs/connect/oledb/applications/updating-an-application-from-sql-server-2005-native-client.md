@@ -10,7 +10,7 @@ ms.component: oledb|applications
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
-- docset-sql-devref
+- drivers
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -19,11 +19,11 @@ author: pmasl
 ms.author: Pedro.Lopes
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 6ddeedf937de12337e8882bfa132461dd2c5f7a8
-ms.sourcegitcommit: 9f4330a4b067deea396b8567747a6771f35e6eee
+ms.openlocfilehash: e583abd0a5d84d4842a441fcb8093bbfcf6b9b26
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="updating-an-application-from-sql-server-2005-native-client"></a>Mise à jour d'une application depuis SQL Server 2005 Native Client
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -52,4 +52,4 @@ ms.lasthandoff: 03/30/2018
 |[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] peut retourner des résultats différents lorsque le déclencheur s’exécute.|Modifications introduites dans [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] peut entraîner une application des résultats différents soient retournés par une instruction qui a provoqué un déclencheur à exécuter quand **NOCOUNT OFF** était en vigueur. Dans ce cas, votre application peut générer une erreur. Pour résoudre cette erreur, définissez **NOCOUNT ON** dans le déclencheur ou appelez SQLMoreResults à passer au résultat suivant.|  
 
 ## <a name="see-also"></a>Voir aussi   
- [Programmation de SQL Server OLE DB pilote](../../oledb/oledb-driver-for-sql-server-programming.md)
+ [Programmation OLE DB Driver pour SQL Server](../../oledb/oledb-driver-for-sql-server-programming.md)
