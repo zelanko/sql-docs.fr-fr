@@ -1,26 +1,26 @@
 ---
-title: "Composants physiques (système de plateforme Analytique) PDW et l’infrastructure d’application"
+title: Composants physiques (système de plateforme Analytique) PDW et l’infrastructure d’application
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.technology: mpp-data-warehouse
-ms.custom: 
+ms.custom: ''
 ms.date: 01/05/2017
 ms.reviewer: na
 ms.suite: sql
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 7748d3da-0b7c-4ec6-9c22-4897758ba573
-caps.latest.revision: "17"
-ms.openlocfilehash: 95e80aaa641b04391d96b55f7491e21f1a30b6d1
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+caps.latest.revision: 17
+ms.openlocfilehash: 64a594c84d7be91939362ff0886a994147b76d93
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="pdw-and-appliance-fabric-physical-components"></a>Composants physiques PDW et l’infrastructure d’application
 Les noms et descriptions pour les composants physiques de l’ensemble fibre optique PDW et l’équipement. La région PDW contient tous ces composants.  
@@ -56,12 +56,12 @@ Un ordinateur virtuel qui exécute le nœud de calcul. Dans ce diagramme de nœu
 Ces composants font partie de l’infrastructure d’application.  
   
 ### <a name="virtual-machines"></a>Machines virtuelles  
-*appliance_domain*- WDS  
+*appliance_domain*-WDS  
 Ce déploiement de Services Windows (WDS), qui utilise de système de plateforme Analytique hôtes d’ordinateurs virtuels déploiement des systèmes d’exploitation Windows sur le réseau de l’appliance. Il héberge également le service DHCP, ce qui permet les hôtes de l’appliance joindre le réseau de l’application sans avoir une adresse IP préconfigurée.  
   
 Le *appliance_domain*- WDS virtual machine s’exécute sur HST01 et peut basculer vers HST02. L’ordinateur virtuel WDS et l’ordinateur virtuel VMM, déployer Windows sur les hôtes physiques lors de l’installation de l’appliance. Pendant le cycle de vie du matériel, WDS et VMM effectuent des opérations telles que le remplacement d’un ordinateur hôte.  
   
-*appliance_domain*- VMM  
+*appliance_domain*-VMM  
 Virtual Machine Manager (VMM) s’exécute sur une machine virtuelle et peut basculer vers HST02. VMM héberge System Center pour déployer le système d’exploitation sur les ordinateurs hôtes physiques. VMM offre également Windows Server Update Services (WSUS) pour appliquer ou supprimer des mises à jour Windows sur tous les hôtes et les ordinateurs virtuels.  
   
 *appliance_domain*-AD01, *appliance_domain*-AD02  
@@ -87,6 +87,6 @@ Il s’agit du stockage en attachement direct qui est connecté aux nœuds de ca
   
 ## <a name="see-also"></a>Voir aussi  
 <!-- MISSING LINKS [Hardware Configurations &#40;Analytics Platform System&#41;](../architecture/hardware-configurations.md)  -->  
-[Configuration du matériel &#40; Système de plateforme Analytique &#41;](appliance-configuration.md)  
-[Tâches de gestion d’application &#40; Système de plateforme Analytique &#41;](appliance-management-tasks.md)  
+[Configuration du matériel &#40;Analytique plate-forme système&#41;](appliance-configuration.md)  
+[Tâches de gestion appliance &#40;Analytique plate-forme système&#41;](appliance-management-tasks.md)  
   

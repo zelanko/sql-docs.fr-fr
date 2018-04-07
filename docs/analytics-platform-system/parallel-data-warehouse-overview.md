@@ -1,25 +1,25 @@
 ---
-title: "Vue d’ensemble de l’entrepôt de données parallèle"
+title: Vue d’ensemble de l’entrepôt de données parallèle
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
-ms.custom: 
+ms.custom: ''
 ms.technology: mpp-data-warehouse
-description: "Cette rubrique explique le logiciel et les composants non logicielle du système de plateforme Analytique."
+description: Cette rubrique explique le logiciel et les composants non logicielle du système de plateforme Analytique.
 ms.date: 01/05/2017
 ms.topic: article
 ms.assetid: db0c4a43-a66d-4c44-ab91-791c5785f71c
-caps.latest.revision: "20"
-ms.openlocfilehash: f2b6708f6e82340c971bdd3a6cc0cdb7e67f2d65
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+caps.latest.revision: 20
+ms.openlocfilehash: 42fb92c30c0487603f2ad8e870886f25b4c1655a
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="parallel-data-warehouse-overview"></a>Vue d’ensemble de l’entrepôt de données parallèle
 Cette rubrique explique le logiciel et les composants non logicielle du système de plateforme Analytique.  
@@ -248,15 +248,15 @@ Système de plateforme Analytique dispose de plusieurs méthodes pour surveiller
 ### <a name="admin-console"></a>Console Administration  
 La Console d’administration vous permet de vous permet d’afficher l’état actuel sur l’intégrité de l’application. Il s’exécute comme une application web sur le nœud de contrôle et est accessible via le protocole https.  
   
-Pour plus d’informations, consultez [contrôler le matériel à l’aide de la Console d’administration &#40; Système de plateforme Analytique &#41;](monitor-the-appliance-by-using-the-admin-console.md)  
+Pour plus d’informations, consultez [contrôler le matériel à l’aide de la Console d’administration &#40;Analytique plate-forme système&#41;](monitor-the-appliance-by-using-the-admin-console.md)  
 
 ### <a name="system-views"></a>Vues système  
 La Console d’administration est basée sur les requêtes de vue système. Vous pouvez interroger les vues système individuellement afin d’obtenir la partie spécifique des informations dont vous avez besoin.  
 
-Pour plus d’informations, consultez [contrôler le matériel à l’aide des vues système &#40; Système de plateforme Analytique &#41;](monitor-the-appliance-by-using-system-views.md) 
+Pour plus d’informations, consultez [contrôler le matériel en utilisant les vues système &#40;Analytique plate-forme système&#41;](monitor-the-appliance-by-using-system-views.md) 
   
 ### <a name="system-center-operations-manager"></a>System Center Operations Manager  
 Il existe des packs d’administration de System Center Operations Manager (SCOM) pour SQL Server PDW. 
 
-Pour configurer le matériel pour SCOM, consultez [contrôler le matériel à l’aide de System Center Operations Manager &#40; Système de plateforme Analytique &#41;](monitor-the-appliance-by-using-system-center-operations-manager.md)  
+Pour configurer le matériel pour SCOM, consultez [contrôler le matériel à l’aide de System Center Operations Manager &#40;Analytique plate-forme système&#41;](monitor-the-appliance-by-using-system-center-operations-manager.md)  
   

@@ -1,26 +1,26 @@
 ---
-title: "Configuration réseau (système de plateforme Analytique)"
+title: Configuration réseau (système de plateforme Analytique)
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.technology: mpp-data-warehouse
-ms.custom: 
+ms.custom: ''
 ms.date: 01/05/2017
 ms.reviewer: na
 ms.suite: sql
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 8e2b9abe-963d-479b-a4a7-1739fcb3e249
-caps.latest.revision: "27"
-ms.openlocfilehash: 34f322e9bd1d500b3755262332ab5724de5aa301
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+caps.latest.revision: 27
+ms.openlocfilehash: fcee7a037b3fbffc56e923f9be875074628398c3
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="appliance-network-configuration"></a>Configuration réseau
 L’application SQL Server PDW est conçue et configurée avec un ensemble de correction des adresses IP dans l’ensemble de tous les serveurs et appareils applicables à partir de l’usine du fabricant de matériel. Lors de la livraison de l’application, l’adresse IP externe (Ethernet) traité doit être reconfiguré pour répondre aux besoins de centre de données du client spécifique.  
@@ -30,7 +30,7 @@ L’application SQL Server PDW est conçue et configurée avec un ensemble de co
   
 Le **Configuration réseau** page permet de vous permet d’afficher les paramètres de réseau externe pour les nœuds sur votre appliance Analytique plateforme système. Cette page est en lecture seule.  
   
-![Réseau des appliances DWConfig](./media/appliance-network-configuration/SQL_Server_PDW_DWConfig_ApplTopNetwork.png "SQL_Server_PDW_DWConfig_ApplTopNetwork")  
+![DWConfig Appliance Network](./media/appliance-network-configuration/SQL_Server_PDW_DWConfig_ApplTopNetwork.png "SQL_Server_PDW_DWConfig_ApplTopNetwork")  
   
 ## <a name="to-update-the-network-configuration-on-your-appliance"></a>Pour mettre à jour la configuration du réseau sur votre appliance  
 Modifier les adresses IP de l’ensemble fibre optique domaine, domaine de la charge de travail et HDInsight domaines en modifiant le **AplianceInfo.xml** fichier, puis vous exécutez le programme d’installation. Il s’agit d’une opération hors connexion. HDInsight (le cas échéant) et PDW régions seront automatiquement arrêtées pendant la modification d’adresse IP.  
@@ -65,5 +65,5 @@ Pour plus d’informations sur les équipements Dell, consultez :
 -   PDU **Dell limitées Rack PDU**`ftp://ftp.dell.com/Manuals/all-products/esuprt_ser_stor_net/esuprt_rack_infrastructure/dell-metered-pdu-led_User's%20Guide_en-us.pdf`  
   
 ## <a name="see-also"></a>Voir aussi  
-[Lancez le Gestionnaire de Configuration &#40; Système de plateforme Analytique &#41;](launch-the-configuration-manager.md)  
+[Lancez le Gestionnaire de Configuration &#40;Analytique plate-forme système&#41;](launch-the-configuration-manager.md)  
   

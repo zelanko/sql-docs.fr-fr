@@ -1,30 +1,31 @@
 ---
-title: "Rapport de Migration de données (SybaseToSQL) | Documents Microsoft"
-ms.custom: 
+title: Rapport de Migration de données (SybaseToSQL) | Documents Microsoft
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-sybase
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: bac234ef-bc16-47e6-8a7c-aa6e76d860c5
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a0e73ad484ee145d2631aeca286de17ed451a4b0
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: fdb74aa52f1af141078bd63f1b688a02a91b6862
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="data-migration-report-sybasetosql"></a>Rapport de Migration de données (SybaseToSQL)
 Le **rapport de Migration de données** boîte de dialogue s’affiche après la migration des données à [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
@@ -33,7 +34,7 @@ Le **rapport de Migration de données** boîte de dialogue s’affiche après la
 **État**  
 Indique l’état de la migration des données à partir de la source de la base de données cible.  
   
-**From**  
+**De**  
 La table source.  
   
 **Pour**  
@@ -45,7 +46,7 @@ Le nombre de lignes de données dans la table source.
 **Nombre de lignes a été migrées**  
 Le nombre de lignes de données migrés avec succès à la table cible.  
   
-**Rapport**  
+**Ratio**  
 Le pourcentage de lignes migrés avec succès.  
   
 **Détails**  

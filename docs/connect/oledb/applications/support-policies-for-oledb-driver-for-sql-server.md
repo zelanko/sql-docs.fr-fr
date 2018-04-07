@@ -10,18 +10,18 @@ ms.reviewer: ''
 ms.suite: sql
 ms.custom: ''
 ms.technology:
-- docset-sql-devref
+- drivers
 ms.tgt_pltfrm: ''
 ms.topic: reference
 author: pmasl
 ms.author: Pedro.Lopes
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 250b0dce301190454a911f5409425f486286047b
-ms.sourcegitcommit: 9f4330a4b067deea396b8567747a6771f35e6eee
+ms.openlocfilehash: 374660fdba66e5c445ae441d988a3701de548427
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="support-policies-for-ole-db-driver-for-sql-server"></a>Stratégies de prise en charge pour le pilote OLE DB pour SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -47,4 +47,4 @@ ms.lasthandoff: 03/30/2018
 Applications peuvent utiliser le fournisseur OLE DB (SQLOLEDB) inclus avec le système d’exploitation Windows. Toutefois, qui est en mode maintenance et n’est plus mis à jour. Vous devez utiliser le pilote OLE DB pour SQL Server (MSOLEDBSQL) à la place.
 
 ## <a name="see-also"></a>Voir aussi  
- [Génération d’Applications avec le pilote OLE DB pour SQL Server](../../oledb/applications/building-applications-with-oledb-driver-for-sql-server.md)   
+ [Génération d’applications avec OLE DB Driver pour SQL Server](../../oledb/applications/building-applications-with-oledb-driver-for-sql-server.md)   

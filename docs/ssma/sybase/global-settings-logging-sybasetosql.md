@@ -1,30 +1,31 @@
 ---
-title: "Paramètres globaux (journalisation) (SybaseToSQL) | Documents Microsoft"
-ms.custom: 
+title: Paramètres globaux (journalisation) (SybaseToSQL) | Documents Microsoft
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-sybase
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 4cb4da20-3b99-4aae-8c80-329ee23e796e
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 97e9648a60828b42eb9cde0c14e5ab923a08eff9
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 943d9d640f6fe090bf0158ac23b892cdf0509aa4
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="global-settings-logging-sybasetosql"></a>Paramètres globaux (journalisation) (SybaseToSQL)
 Utilisez le **paramètres globaux** boîte de dialogue pour spécifier les paramètres de journalisation pour SSMA. En règle générale, il faudrait modifier ces paramètres uniquement lorsque vous travaillez avec le support technique.  
@@ -35,18 +36,18 @@ Pour accéder à cette boîte de dialogue, dans le **outils** menu, sélectionne
 **Au niveau des messages**  
 Les options suivantes sont disponibles sous **au niveau des Messages**:  
   
-|Option|Description|  
+|Option| Description|  
 |----------|---------------|  
 |**[toutes les catégories]**|Utilisé pour définir le niveau de journalisation pour toutes les options suivantes.|  
-|**Collecteur**|Collecte des métadonnées sur le schéma source et l’enregistre dans le projet.|  
-|**Convertisseur**|Convertit des objets de base de données source, tels que les tables et procédures stockées, des structures de correspondant [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] structures.|  
+|**Collector**|Collecte des métadonnées sur le schéma source et l’enregistre dans le projet.|  
+|**Converter**|Convertit des objets de base de données source, tels que les tables et procédures stockées, des structures de correspondant [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] structures.|  
 |**Utilitaire de migration de données**|Migre les données à partir de la base de données source dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].|  
-|**Formateur**|Sous-composant du convertisseur qui génère des scripts pour le [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] schéma.|  
+|**Formatter**|Sous-composant du convertisseur qui génère des scripts pour le [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] schéma.|  
 |**Interface utilisateur graphique**|Messages qui s’affichent lorsque vous utilisez l’outil SSMA.|  
-|**Éditeur de liens**|Résout les identificateurs SQL et fournit des informations à d’autres composants.|  
+|**Linker**|Résout les identificateurs SQL et fournit des informations à d’autres composants.|  
 |**Autres**|Tous les messages qui ne sont pas dans une autre catégorie.|  
-|**Analyseur**|Analyse du schéma source.|  
-|**Synchronisateur**|Charge la source des objets de base de données dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].|  
+|**Parser**|Analyse du schéma source.|  
+|**Synchronizer**|Charge la source des objets de base de données dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].|  
 |**TreeConverter**|Convertit des objets dans les métadonnées de la source en [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] métadonnées.|  
   
 Pour chaque option sous **au niveau des Messages**, configurez l’un des niveaux de journalisation suivants pour SSMA :  

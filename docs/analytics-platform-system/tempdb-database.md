@@ -1,27 +1,27 @@
 ---
-title: "la base de données (SQL Server PDW) tempdb"
+title: la base de données (SQL Server PDW) tempdb
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.technology: mpp-data-warehouse
-ms.custom: 
+ms.custom: ''
 ms.date: 01/13/2017
 ms.reviewer: na
 ms.suite: sql
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 5840033d-2dc6-4576-8a5f-067e2a58b170
-caps.latest.revision: "22"
+caps.latest.revision: 22
 ms.workload: not set
-ms.openlocfilehash: 459265906774604f4d98f7cfb2bd2ad09485cc7e
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 6a52f21b266d277f3bda205803d38431598545f7
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="tempdb-database"></a>Base de données tempdb
 **tempdb** est une base de données système SQL Server PDW qui stocke les tables temporaires locales pour les bases de données utilisateur. Les tables temporaires sont souvent utilisés pour améliorer les performances des requêtes. Par exemple, vous pouvez utiliser une table temporaire modulariser un script et réutiliser des données calculées.  
@@ -81,7 +81,7 @@ Limitations et restrictions sur les tables temporaires locales. Vous *ne peut pa
   
 -   Exécutez les commandes de la console de base de données sur les tables temporaires.  
   
--   Utilisez le même nom pour deux ou plusieurs des tables temporaires dans le même lot. Si plus d’une table temporaire locale est utilisée dans un lot, chacun doit avoir un nom unique. Si plusieurs sessions sont en cours d’exécution le même lot et la création de la même table temporaire locale, SQL Server PDW ajoute en interne un suffixe numérique au nom de table temporaire locale pour maintenir un nom unique pour chaque table temporaire locale.  
+-   Utilisez le même nom pour deux ou plusieurs des tables temporaires dans le même lot. Si plusieurs tables temporaires locales sont utilisées dans un traitement, chacune doit avoir un nom unique. Si plusieurs sessions sont en cours d’exécution le même lot et la création de la même table temporaire locale, SQL Server PDW ajoute en interne un suffixe numérique au nom de table temporaire locale pour maintenir un nom unique pour chaque table temporaire locale.  
   
 > [!NOTE]  
 > Vous *pouvez* créer et mettre à jour les statistiques sur une table temporaire. **ALTER INDEX** peut être utilisé pour reconstruire un index cluster.  
@@ -91,7 +91,7 @@ Tous les utilisateurs peuvent créer des objets temporaires dans tempdb. Les uti
   
 ## <a name="RelatedTasks"></a>Tâches associées  
   
-|Tâches|Description|  
+|Tâches| Description|  
 |---------|---------------|  
 |Créer une table dans **tempdb**.|Vous pouvez créer une table temporaire avec les instructions CREATE TABLE et CREATE TABLE AS SELECT. Pour plus d’informations, consultez [CREATE TABLE](../t-sql/statements/create-table-azure-sql-data-warehouse.md) et [CREATE TABLE AS SELECT](../t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md).|  
 |Afficher la liste des tables existantes dans **tempdb**.|`SELECT * FROM tempdb.sys.tables;`|  

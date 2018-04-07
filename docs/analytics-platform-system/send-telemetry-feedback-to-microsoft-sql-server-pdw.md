@@ -1,26 +1,26 @@
 ---
-title: "Envoyer des commentaires de télémétrie à Microsoft (SQL Server PDW)"
+title: Envoyer des commentaires de télémétrie à Microsoft (SQL Server PDW)
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.technology: mpp-data-warehouse
-ms.custom: 
+ms.custom: ''
 ms.date: 01/05/2017
 ms.reviewer: na
 ms.suite: sql
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 40a994f0-7eff-4db9-9572-401d6e1187a0
-caps.latest.revision: "18"
-ms.openlocfilehash: f78a9e7c1e66085dd84ba71e8e7b5f517131e18a
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+caps.latest.revision: 18
+ms.openlocfilehash: 970533d5c0220ac651074977f7f522a480d5e2a4
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="send-telemetry-feedback-to-microsoft"></a>Envoyer des commentaires de télémétrie à Microsoft
 Système de plateforme Analytique possède une fonctionnalité de télémétrie facultatif qui envoie des données de la Console d’administration à Microsoft. Nous vous encourageons à activer cette option pour nous aider à améliorer le produit.  
@@ -39,11 +39,11 @@ Pour fournir la protection de la confidentialité maximal, les points d’accès
   
 #### <a name="to-enable-feedback"></a>Pour activer les commentaires  
   
-1.  À l’aide d’un compte administrateur de domaine appliance, connectez-vous au nœud de contrôle (***appliance_domain*-CTL01**) et ouvrez une invite de commandes à l’aide de vos informations d’identification d’administrateur de Windows.  
+1.  À l’aide d’un compte administrateur de domaine appliance, connectez-vous au nœud de contrôle (***appliance_domain *-CTL01**) et ouvrez une invite de commandes à l’aide de vos informations d’identification d’administrateur de Windows.  
   
 2.  Accédez au répertoire suivant : `C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100`.  
   
-3.  Importez le module`Configure-RemoteMonitoring.ps1`  
+3.  Importez le module `Configure-RemoteMonitoring.ps1`  
   
     > [!NOTE]  
     > Pour importer vous devez utiliser les deux points dans la commande.  
@@ -89,11 +89,11 @@ La désactivation de télémétrie s’arrête toutes les opérations qui commun
   
 #### <a name="to-disable-telemetry"></a>Pour désactiver la télémétrie  
   
-1.  À l’aide d’un compte administrateur de domaine appliance, connectez-vous au nœud de contrôle (***appliance_domain*-CTL01**) et ouvrez une fenêtre PowerShell avec des privilèges d’administrateur.  
+1.  À l’aide d’un compte administrateur de domaine appliance, connectez-vous au nœud de contrôle (***appliance_domain *-CTL01**) et ouvrez une fenêtre PowerShell avec des privilèges d’administrateur.  
   
 2.  Accédez au répertoire suivant : `C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100`.  
   
-3.  Importez le module`Configure-RemoteMonitoring.ps1`  
+3.  Importez le module `Configure-RemoteMonitoring.ps1`  
   
     > [!NOTE]  
     > Pour importer vous devez utiliser les deux points dans la commande.  
@@ -117,8 +117,8 @@ Si vous voyez des erreurs ou des informations qui vous conduit à penser que la 
 Il n’existe pas de risque à en cours d’exécution le `Disable-RemoteMonitoring` commande plusieurs fois.  
   
 ## <a name="see-also"></a>Voir aussi  
-[Contrôler le matériel à l’aide de la Console d’administration &#40; Système de plateforme Analytique &#41;](monitor-the-appliance-by-using-the-admin-console.md)  
-[Contrôler le matériel à l’aide de vues système &#40; Système de plateforme Analytique &#41;](monitor-the-appliance-by-using-system-views.md)  
-[Contrôler le matériel à l’aide de System Center Operations Manager &#40; Système de plateforme Analytique &#41;](monitor-the-appliance-by-using-system-center-operations-manager.md)  
-[Utilisez un redirecteur DNS pour résoudre les noms DNS de l’Appliance Non &#40; Système de plateforme Analytique &#41;](use-a-dns-forwarder-to-resolve-non-appliance-dns-names.md)  
+[Contrôler le matériel à l’aide de la Console d’administration &#40;Analytique plate-forme système&#41;](monitor-the-appliance-by-using-the-admin-console.md)  
+[Surveiller l’application à l’aide de vues système &#40;Analytique plate-forme système&#41;](monitor-the-appliance-by-using-system-views.md)  
+[Surveiller l’application à l’aide de System Center Operations Manager &#40;Analytique plate-forme système&#41;](monitor-the-appliance-by-using-system-center-operations-manager.md)  
+[Un redirecteur DNS permet de résoudre les noms DNS de l’Appliance Non &#40;Analytique plate-forme système&#41;](use-a-dns-forwarder-to-resolve-non-appliance-dns-names.md)  
   

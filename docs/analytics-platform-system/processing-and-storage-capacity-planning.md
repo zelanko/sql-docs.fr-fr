@@ -1,25 +1,25 @@
 ---
-title: "Capacité de stockage et le traitement de la plateforme Analytique"
+title: Capacité de stockage et le traitement de la plateforme Analytique
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
-ms.custom: 
+ms.custom: ''
 ms.technology: mpp-data-warehouse
-description: "Vos exigences professionnelles de déterminer le nombre d’unités d’échelle de données et la taille des disques de nœud de calcul dont vous avez besoin dans votre solution de système de plateforme Analytique (APS)."
+description: Vos exigences professionnelles de déterminer le nombre d’unités d’échelle de données et la taille des disques de nœud de calcul dont vous avez besoin dans votre solution de système de plateforme Analytique (APS).
 ms.date: 10/20/2016
 ms.topic: article
 ms.assetid: 2c32fec4-e97c-4797-b7f8-7c8d4301b7b6
-caps.latest.revision: "7"
-ms.openlocfilehash: 9d7f933c45f05d7d4226a2f64fd41eff8d1c914a
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+caps.latest.revision: 7
+ms.openlocfilehash: 68852344c65863ee051467e524eb0c3f09211483
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="analytics-platform-system-processing-and-storage-capacity"></a>Capacité de traitement et de stockage de système de plateforme Analytique
 Vos exigences professionnelles de déterminer le nombre d’unités d’échelle de données et la taille des disques de nœud de calcul dont vous avez besoin dans votre solution de système de plateforme Analytique (APS). Utilisez ces calculs de traitement et de stockage pour guider la capacité de votre achat et les décisions de planification.  
@@ -39,7 +39,7 @@ Extension est le pourcentage de capacité de gain en augmentant la Uunits de mis
   
 |Unités d’échelle de données|Nœuds de calcul|Cœurs de processeur|Mémoire (Go)|Extension|  
 |--------------------|-----------------|-------------|-----------------|----------|  
-| 1|2|32|512|-|  
+|1|2|32|512|-|  
 |2|4|64|1024|100%|  
 |3|6|96|1536|50|  
 |4|8|128|2048|33%|  
@@ -70,7 +70,7 @@ Extension est le pourcentage de capacité de gain en augmentant la Uunits de mis
   
 |Unités d’échelle de données|Nœuds de calcul|Cœurs de processeur|Mémoire (Go)|Extension|  
 |--------------------|-----------------|-------------|-----------------|----------|  
-| 1|3|48|768|-|  
+|1|3|48|768|-|  
 |2|6|96|1536|100%|  
 |3|9|144|2,304|50|  
 |4|12|192|3,072|33%|  
@@ -90,10 +90,10 @@ Cette table estime que vous pouvez charger et stocker jusqu'à 6 plusieurs péta
 |----------|--------------|------------------------------------------|----------------------------------|------------------------------------------|------------------------------------------------|-----------------|-----------------------------------------------------|  
 |HPE|1 TO|JUSQU'À 16 TO|8|128 TO|320 TO|7|2,240 TO|  
 |HPE|2 TO|32 TO|8|256 TO|640 TO|7|4,480 TO|  
-|HPE|3 TO|48 TO|8|384 TO|960 TO|7|6,720 TO|  
+|HPE|3 TO|48 TB|8|384 TO|960 TO|7|6,720 TO|  
 |DELL|1 TO|JUSQU'À 16 TO|9|144 TO|360 TO|6|2,160 TO|  
 |DELL|2 TO|32 TO|9|288 TO|720 TO|6|4 320 TO|  
-|DELL|3 TO|48 TO|9|432 TO|1080 TO|6|6,480 TO|  
+|DELL|3 TO|48 TB|9|432 TO|1080 TO|6|6,480 TO|  
   
 Explication :  
   

@@ -2,24 +2,24 @@
 title: Analyse des charges pour Parallel Data Warehouse
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
-ms.custom: 
+ms.custom: ''
 ms.technology: mpp-data-warehouse
-description: "Vous pouvez surveiller les actifs et récentes [dwloader](dwloader.md) charge à l’aide de la Console d’administration de système de plateforme Analytique (APS) ou les vues système Parallel Data Warehouse (PDW)."
+description: Vous pouvez surveiller les actifs et récentes [dwloader](dwloader.md) charge à l’aide de la Console d’administration de système de plateforme Analytique (APS) ou les vues système Parallel Data Warehouse (PDW).
 ms.date: 10/20/2016
 ms.topic: article
 ms.assetid: c0c55c16-00bc-4676-8970-a8e10b3e9408
-caps.latest.revision: "6"
-ms.openlocfilehash: 988c34b248b0058941f53575a79e4f3b6acb4de0
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+caps.latest.revision: 6
+ms.openlocfilehash: e520fa01eef0c25e1cf094ee412a9530afaf70b7
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="monitor-loads"></a>Moniteur de charge
 Vous pouvez surveiller les actifs et récentes [dwloader](dwloader.md) charge à l’aide de la Console d’administration de système de plateforme Analytique (APS) ou Parallel Data Warehouse (PDW) [vues système](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-reference-tsql-system-views/). 
@@ -31,7 +31,7 @@ Vous pouvez surveiller les actifs et récentes [dwloader](dwloader.md) charge à
 To monitor this type of load, see [Monitoring Active Queries](monitor-active-queries.md).  
 -->
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Configuration requise  
 Quelle que soit la méthode utilisée pour surveiller la charge, la connexion doit avoir l’autorisation pour accéder aux sources de données sous-jacentes. 
 
 <!-- MISSING LINKS

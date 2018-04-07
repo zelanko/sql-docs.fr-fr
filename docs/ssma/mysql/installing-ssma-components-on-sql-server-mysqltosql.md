@@ -21,13 +21,13 @@ ms.assetid: 6772d0c5-258f-4d7b-afb0-b5f810e71af1
 caps.latest.revision: 9
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 15e50ed4dd915f524a2e9980d4aa4997053af912
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 5fd268b84300a15eb67b767858e7ac53ed2fdf3f
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="installing-ssma-components-on-sql-server-mysqltosql"></a>Installation des composants SSMA sur SQL Server (MySQLToSql)
 Outre l’installation SSMA, vous devez également installer les composants sur l’ordinateur qui est en cours d’exécution [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Ces composants incluent le Pack d’extension SSMA, qui prend en charge la migration des données et les fournisseurs de MySQL pour permettre la connectivité du serveur à serveur.  
@@ -37,10 +37,10 @@ Le Pack d’extension SSMA ajoute une base de données, **sysdb**, à l’instan
   
 En outre, lorsque vous migrez des données à [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], SSMA crée [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] des travaux de l’Agent, lorsque le moteur de migration de données côté serveur est utilisé pour migrer les données.  
   
-### <a name="prerequisites"></a>Prerequisites  
+### <a name="prerequisites"></a>Configuration requise  
 Avant d’installer SSMA pour les composants de serveur MySQL sur [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], assurez-vous que l’ordinateur répond aux exigences suivantes :  
   
--   [!INCLUDE[msCoName](../../includes/msconame_md.md)]Windows Installer 3.1 ou une version ultérieure.  
+-   [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows Installer 3.1 ou une version ultérieure.  
   
 -   Le fournisseur de Client de MySQL et la connectivité à la base de données MySQL que vous souhaitez migrer. Vous pouvez installer des fournisseurs à partir du support produit de MySQL ou d’un site Web de MySQL.  
   
@@ -57,7 +57,7 @@ Vous pouvez installer le Pack d’extension à tout moment avant de migrer des d
   
 **Pour installer le Pack d’extension**  
   
-1.  Copiez SSMA pour le Pack d’Extension MySQL. *n*. Install.exe, où  *n*  est le numéro de build, à l’ordinateur qui est en cours d’exécution [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
+1.  Copiez SSMA pour le Pack d’Extension MySQL. *n*. Install.exe, où *n* est le numéro de build, à l’ordinateur qui est en cours d’exécution [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
   
 2.  Double-cliquez sur SSMA pour le Pack d’Extension MySQL. *n*. Install.exe.  
   
@@ -81,13 +81,13 @@ Vous pouvez installer le Pack d’extension à tout moment avant de migrer des d
   
     L’authentification Windows permet de tenter de se connecter à l’instance de vos informations d’identification Windows [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Si vous sélectionnez [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] l’authentification, vous devez entrer un [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] nom d’utilisateur et mot de passe.  
   
-10. Dans la boîte de dialogue suivante, sélectionnez **installer d’utilitaires de base de données**  *n* , où  *n*  est le numéro de version, puis cliquez sur **suivant**.  
+10. Dans la boîte de dialogue suivante, sélectionnez **installer d’utilitaires de base de données** *n*, où *n* est le numéro de version, puis cliquez sur **suivant**.  
   
     Le **sysdb** base de données est créée avec les tables et procédures stockées requises pour la migration de données (à l’aide du moteur de migration de données côté serveur) sont créés dans cette base de données.  
   
 11. Pour installer les utilitaires vers une autre instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], sélectionnez **Oui**, puis cliquez sur **suivant**. Ou, pour quitter l’Assistant, cliquez sur **non**.  
   
 ## <a name="see-also"></a>Voir aussi  
-[L’installation de SSMA pour MySQL Client &#40; MySQLToSQL &#41;](../../ssma/mysql/installing-ssma-for-mysql-client-mysqltosql.md)  
-[Migration des bases de données de MySQL vers SQL Server - base de données SQL Azure &#40; MySQLToSql &#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
+[L’installation de SSMA pour MySQL Client &#40;MySQLToSQL&#41;](../../ssma/mysql/installing-ssma-for-mysql-client-mysqltosql.md)  
+[Bases de données de migration de MySQL vers SQL Server - base de données SQL Azure &#40;MySQLToSql&#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
   

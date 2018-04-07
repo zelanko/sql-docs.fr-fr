@@ -1,30 +1,31 @@
 ---
-title: "Mappage des caractères SQL Server et MySQL définie (MySQLToSQL) | Documents Microsoft"
+title: Mappage des caractères SQL Server et MySQL définie (MySQLToSQL) | Documents Microsoft
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-mysql
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 20b3f22e-16a2-4a87-b4eb-c277be6bf5c8
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c9b3fc89548b10593cb16e2a70c93afe9b56350e
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 793c7362024e402e52523da8c0f007f525fe2650
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="mapping-mysql-and-sql-server-character-set-mysqltosql"></a>Mappage des caractères SQL Server et MySQL définie (MySQLToSQL)
 Jeu de caractères (jeu de caractères) peut être spécifié pour les types de données caractères, les expressions et les littéraux de MySQL.  
@@ -89,29 +90,29 @@ Mappage de jeu de caractères varie à différents niveaux de nœud, à savoir 
     ||||  
     |-|-|-|  
     |**Nom du jeu de caractères**|**Description du jeu de caractères**|**Type de jeu de caractères cible (par défaut)**|  
-    |Big5|Chinois traditionnel Big5|NCHAR/NVARCHAR (par défaut)|  
+    |big5|Chinois traditionnel Big5|NCHAR/NVARCHAR (par défaut)|  
     |dec8|DEC ouest européenne|CHAR/VARCHAR (par défaut)|  
-    |CP850|Europe de l’ouest de déni de service|CHAR/VARCHAR (par défaut)|  
+    |cp850|Europe de l’ouest de déni de service|CHAR/VARCHAR (par défaut)|  
     |hp8|HP ouest européenne|CHAR/VARCHAR (par défaut)|  
     |koi8r|KOI8-R Relcom russe|CHAR/VARCHAR (par défaut)|  
     |Latin 1|cp1252 ouest européenne|CHAR/VARCHAR (par défaut)|  
-    |Latin2|ISO 8859-2 Europe de l'|CHAR/VARCHAR (par défaut)|  
+    |latin2|ISO 8859-2 Europe de l'|CHAR/VARCHAR (par défaut)|  
     |swe7|7 bits suédois|CHAR/VARCHAR (par défaut)|  
-    |ASCII|US ASCII|CHAR/VARCHAR (par défaut)|  
+    |ascii|US ASCII|CHAR/VARCHAR (par défaut)|  
     |ujis|EUC-JP japonais|NCHAR/NVARCHAR (par défaut)|  
     |SJIS|Shift-JIS japonais|NCHAR/NVARCHAR (par défaut)|  
     |Hébreu|ISO 8859-8 hébreu|CHAR/VARCHAR (par défaut)|  
-    |TIS620|TIS620 thaï|CHAR/VARCHAR (par défaut)|  
+    |tis620|TIS620 thaï|CHAR/VARCHAR (par défaut)|  
     |eucKR|EUC-KR coréen|NCHAR/NVARCHAR (par défaut)|  
     |koi8u|KOI8-U ukrainien|CHAR/VARCHAR (par défaut)|  
-    |GB2312|GB2312 En chinois simplifié|NCHAR/NVARCHAR (par défaut)|  
+    |gb2312|GB2312 En chinois simplifié|NCHAR/NVARCHAR (par défaut)|  
     |Grec|ISO 8859-7 grec|CHAR/VARCHAR (par défaut)|  
     |CP 1250|Europe centrale de Windows|CHAR/VARCHAR (par défaut)|  
-    |GBK|Chinois simplifié de GBK|NCHAR/NVARCHAR (par défaut)|  
+    |gbk|Chinois simplifié de GBK|NCHAR/NVARCHAR (par défaut)|  
     |Latin5|ISO 8859-9 turc|CHAR/VARCHAR (par défaut)|  
     |armscii8|ARMSCII-8 arménien|CHAR/VARCHAR (par défaut)|  
-    |UTF-8|UTF-8 Unicode|NCHAR/NVARCHAR (par défaut)|  
-    |UCS2|UCS-2 Unicode|NCHAR/NVARCHAR (par défaut)|  
+    |utf8|UTF-8 Unicode|NCHAR/NVARCHAR (par défaut)|  
+    |ucs2|UCS-2 Unicode|NCHAR/NVARCHAR (par défaut)|  
     |cp866|Russe de déni de service|CHAR/VARCHAR (par défaut)|  
     |keybcs2|DOS Kamenicky tchèque-slovaque|CHAR/VARCHAR (par défaut)|  
     |macce|Europe centrale du Mac|CHAR/VARCHAR (par défaut)|  
@@ -123,7 +124,7 @@ Mappage de jeu de caractères varie à différents niveaux de nœud, à savoir 
     |CP 1257|Windows : Baltique|CHAR/VARCHAR (par défaut)|  
     |binary|Jeu de caractères binaires pseudo|CHAR/VARCHAR (par défaut)|  
     |geostd8|GEOSTD8 géorgien|CHAR/VARCHAR (par défaut)|  
-    |CP932|SJIS pour Windows version japonaise|NCHAR/NVARCHAR (par défaut)|  
+    |cp932|SJIS pour Windows version japonaise|NCHAR/NVARCHAR (par défaut)|  
     |eucjpms|UJIS pour Windows version japonaise|NCHAR/NVARCHAR (par défaut)|  
   
 2.  **Sur la base de données, de catégorie ou de niveaux de nœuds d’objet :** au niveau base de données, de catégorie ou de nœuds d’objet, grille de mappage de jeu de caractères contient les mêmes lignes que sur le niveau de métadonnées du nœud racine, notamment. :  

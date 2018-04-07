@@ -2,25 +2,25 @@
 title: Configurer SQL Server PDW pour les Copies de la Table distante (SQL Server PDW)
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.technology: mpp-data-warehouse
-ms.custom: 
+ms.custom: ''
 ms.date: 01/13/2017
 ms.reviewer: na
 ms.suite: sql
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 496b4214-5891-404c-8237-c2a1e09db6d5
-caps.latest.revision: "11"
-ms.openlocfilehash: 08257e4823eed7bf86977ddca1df41eee7f8bda2
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+caps.latest.revision: 11
+ms.openlocfilehash: 46fdb88ce3a244946b89f14320229905793564ac
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="configure-sql-server-pdw-for-remote-table-copies"></a>Configurer SQL Server PDW pour les Copies de la Table distante
 Décrit comment configurer SQL Server PDW pour utiliser la fonctionnalité de copie de table distante pour copier des tables aux bases de données SMP SQL Server sur des serveurs non-appliance.  
@@ -30,7 +30,7 @@ Cette rubrique décrit l’une des étapes de configuration pour la configuratio
 ## <a name="before-you-begin"></a>Avant de commencer  
 Pour configurer SQL Server PDW pour utiliser la copie de la table distante, vous devez :  
   
--   Disposer d’un compte d’administrateur système de plateforme Analytique avec la possibilité de se connecter directement à la  ***appliance_domain*-AD01** et  ***appliance_domain*-AD02** nœuds.  
+-   Disposer d’un compte d’administrateur système de plateforme Analytique avec la possibilité de se connecter directement à la ***appliance_domain *-AD01** et ***appliance_domain *-AD02** nœuds.  
   
 -   Connaître le nom d’hôte ou nom IP du serveur de destination.  
   
@@ -39,7 +39,7 @@ Le **CREATE REMOTE TABLE** instruction, utilisée pour les copies de la table di
   
 Les étapes suivantes expliquent comment mettre à jour le serveur DNS.  
   
-1.  Ouvrez une session sur le nœud actif AD (normalement  ***appliance_domain*-AD01**).  
+1.  Ouvrez une session sur le nœud actif AD (normalement ***appliance_domain *-AD01**).  
   
 2.  Ouvrez le Gestionnaire DNS. Celui-ci se trouve sous **outils d’administration** dans les **Démarrer** menu.  
   

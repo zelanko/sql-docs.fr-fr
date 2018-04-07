@@ -1,25 +1,25 @@
 ---
-title: "Composants matériels de système de plateforme Analytique"
+title: Composants matériels de système de plateforme Analytique
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
-ms.custom: 
+ms.custom: ''
 ms.technology: mpp-data-warehouse
-description: "Système de plateforme Analytique (APS) utilise des composants afin que vous pouvez vous procurer le bon volume de stockage et le traitement en fonction des besoins de votre entreprise."
+description: Système de plateforme Analytique (APS) utilise des composants afin que vous pouvez vous procurer le bon volume de stockage et le traitement en fonction des besoins de votre entreprise.
 ms.date: 10/20/2016
 ms.topic: article
 ms.assetid: aa1cdcc7-cfee-4658-bbce-7d319bfb7483
-caps.latest.revision: "17"
-ms.openlocfilehash: cd58b4a7afb2f69081b99a884d3b0f32b194097a
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+caps.latest.revision: 17
+ms.openlocfilehash: 4b972c4b926463a67588c4ee41ed0157da7cdc80
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="analytics-platform-system-hardware-components"></a>Composants matériels de système de plateforme Analytique
 

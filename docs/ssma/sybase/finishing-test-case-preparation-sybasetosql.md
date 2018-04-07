@@ -21,13 +21,13 @@ ms.assetid: 8b2a49b0-4296-4f3f-9e56-323aa6a6fa8e
 caps.latest.revision: 6
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 41a22720524b4105bff9eec3dcf38e7183f01cc3
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 089bd7e6fe013f3cd590ff0c3e23929c367e67c8
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="finishing-test-case-preparation-sybasetosql"></a>Terminer la préparation du cas de Test (SybaseToSQL)
 Dernière page de l’Assistant affiche la description du cas de Test et des informations sur les objets impliqués dans le test. En outre, sur cette page vous pouvez définir le test des options d’exécution.  
@@ -56,7 +56,7 @@ Activer la restauration automatique des données après l’exécution du test.
 -   Si vous choisissez **non**, tous les tests de l’exécution de modifications de données seront enregistrées.  
   
 ### <a name="auxiliary-tables-saving-mode"></a>Mode d’économie de tables auxiliaires  
-Définit le mode d’enregistrement pour les tables auxiliaires créés pendant l’exécution du test. Consultez la description de tables auxiliaires dans le [cas de Test en cours d’exécution &#40; SybaseToSQL &#41; ](../../ssma/sybase/running-test-cases-sybasetosql.md) rubrique.  
+Définit le mode d’enregistrement pour les tables auxiliaires créés pendant l’exécution du test. Consultez la description de tables auxiliaires dans le [cas de Test en cours d’exécution &#40;SybaseToSQL&#41; ](../../ssma/sybase/running-test-cases-sybasetosql.md) rubrique.  
   
 -   Si vous sélectionnez **toujours enregistrer**, les données de table auxiliaire sont toujours stockées pour une utilisation ultérieure.  
   
@@ -66,10 +66,10 @@ Définit le mode d’enregistrement pour les tables auxiliaires créés pendant 
   
 -   Si vous sélectionnez **demandez à un utilisateur en cas d’échec de la comparaison des tables**, l’utilisateur peut sélectionner l’action requise si une erreur se produit.  
   
-Cliquez sur le **Terminer** bouton pour enregistrer le cas de Test prêt dans [référentiels de Test à l’aide de &#40; SybaseToSQL &#41; ](../../ssma/sybase/using-test-repositories-sybasetosql.md).  
+Cliquez sur le **Terminer** bouton pour enregistrer le cas de Test prêt dans [référentiels de Test à l’aide de &#40;SybaseToSQL&#41;](../../ssma/sybase/using-test-repositories-sybasetosql.md).  
   
 ## <a name="see-also"></a>Voir aussi  
-[À l’aide de référentiels de Test &#40; SybaseToSQL &#41;](../../ssma/sybase/using-test-repositories-sybasetosql.md)  
-[Exécuter des cas de Test &#40; SybaseToSQL &#41;](../../ssma/sybase/running-test-cases-sybasetosql.md)  
-[Test de migration des objets de base de données &#40; SybaseToSQL &#41;](../../ssma/sybase/testing-migrated-database-objects-sybasetosql.md)  
+[À l’aide de Test référentiels &#40;SybaseToSQL&#41;](../../ssma/sybase/using-test-repositories-sybasetosql.md)  
+[Exécuter des cas de Test &#40;SybaseToSQL&#41;](../../ssma/sybase/running-test-cases-sybasetosql.md)  
+[Test de migration des objets de base de données &#40;SybaseToSQL&#41;](../../ssma/sybase/testing-migrated-database-objects-sybasetosql.md)  
   

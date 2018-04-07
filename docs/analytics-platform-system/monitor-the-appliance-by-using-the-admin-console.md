@@ -1,34 +1,34 @@
 ---
-title: "Contrôler le matériel à l’aide de la Console d’administration (système de plateforme Analytique)"
+title: Contrôler le matériel à l’aide de la Console d’administration (système de plateforme Analytique)
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.technology: mpp-data-warehouse
-ms.custom: 
+ms.custom: ''
 ms.date: 01/05/2017
 ms.reviewer: na
 ms.suite: sql
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 294ba6ac-b1ff-46ea-ba32-d8b32cb4cdc2
-caps.latest.revision: "26"
-ms.openlocfilehash: db27003d4e1efd54a179551f585fb23ce9c0ed82
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+caps.latest.revision: 26
+ms.openlocfilehash: 8da883797f8e9d09de0a5d160fc3383caf181590
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="monitor-the-appliance-by-using-the-admin-console"></a>Contrôler le matériel à l’aide de la Console d’administration
 La Console d’administration est une application web SQL Server PDW qui expose les informations d’état, l’intégrité et les performances de matériel. Les utilisateurs se connecter à la Console d’administration via Internet Explorer.  
   
 ## <a name="About"></a>Sur la Console d’administration  
-![Accueil Console des appliances](./media/monitor-the-appliance-by-using-the-admin-console/SQL_Server_PDW_AdminConsol_ApplHome.png "SQL_Server_PDW_AdminConsol_ApplHome")  
+![Appliance Console Home](./media/monitor-the-appliance-by-using-the-admin-console/SQL_Server_PDW_AdminConsol_ApplHome.png "SQL_Server_PDW_AdminConsol_ApplHome")  
   
-**Équipement**  
+**Appliance**  
 Dossier de base  
 Fournit un résumé de l’état de l’application.  
   
@@ -53,7 +53,7 @@ Affiche une liste de requêtes en cours d’exécution et récemment terminé. I
 Charges  
 Affiche de charger les plans, l’état actuel de la charge PDW et les erreurs associées, le cas échéant.  
   
-Sauvegardes/restaurations  
+Backups/Restores  
 Affiche le journal de PDW sauvegarde et de restauration.  
   
 Contrôle d’intégrité  
@@ -112,12 +112,12 @@ La Console d’administration fournit la possibilité de contrôler les élémen
 |-|-|  
 |**Type d’information**|**Accès dans la Console d’administration**|  
 |État global de l’application|Cliquez sur **état des appliances** dans le menu supérieur, ou **accueil**.|  
-|Alertes|Cliquez sur **alertes**. Pour plus d’informations, consultez [présentation des alertes de la Console Administration &#40; Système de plateforme Analytique &#41; ](understanding-admin-console-alerts.md).|  
+|Alertes|Cliquez sur **alertes**. Pour plus d’informations, consultez [présentation des alertes de la Console Administrateur &#40;système de plateforme Analytique&#41;](understanding-admin-console-alerts.md).|  
 |Composants d’application et leur état|Cliquez sur **état des appliances** dans le menu supérieur, ou **accueil**.|  
 |Demandes d’analyse (y compris les requêtes, les charges, les sauvegardes et restaurations)|Cliquez sur **Sessions** pour afficher les sessions actuellement actives ou plus récentes.<br /><br />Cliquez sur **requêtes** pour afficher les requêtes actuellement actives ou plus récentes. Les informations affichées pour les requêtes incluent des charges, des sauvegardes et restaurations.<br /><br />Cliquez sur **verrous** pour afficher les verrous actifs.|  
 |Analyser des informations supplémentaires pour les charges, les sauvegardes et restaurations.|Cliquez sur **charges** ou **sauvegardes/restaurations**.|  
 |Informations sur les performances|Cliquez sur **l’Analyseur de performances**.|  
   
 ## <a name="see-also"></a>Voir aussi  
-[Surveillance de l’appliance &#40; Système de plateforme Analytique &#41;](appliance-monitoring.md)  
+[Surveillance de l’appliance &#40;Analytique plate-forme système&#41;](appliance-monitoring.md)  
   

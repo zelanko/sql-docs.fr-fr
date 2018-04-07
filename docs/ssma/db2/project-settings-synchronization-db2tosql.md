@@ -2,34 +2,35 @@
 title: Projet Settings(Synchronization) (DB2ToSQL) | Documents Microsoft
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-db2
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: a5629a72-8c17-46a4-bb4d-19d51a0b98a2
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9a701544d5f7d111d234b4a87def52beb3e1edbd
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: da4be629e37646b10011c76f5a78a2cde246865e
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="project-settingssynchronization-db2tosql"></a>Projet Settings(Synchronization) (DB2ToSQL)
 La page de synchronisation de la **les paramètres de projet** boîte de dialogue contient des paramètres permettant de personnaliser comment SSMA charge actualisations de la base de données et objets, tels que les tables et procédures stockées, en [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
   
-Les options d’actions par défaut spécifient les paramètres par défaut pour l’actualisation des objets à partir de la base de données DB2 et pour la synchronisation des objets avec la base de données SQL Server. Pour plus d’informations, consultez [Actualiser à partir de la base de données &#40; DB2ToSQL &#41;](../../ssma/db2/refresh-from-database-db2tosql.md).  
+Les options d’actions par défaut spécifient les paramètres par défaut pour l’actualisation des objets à partir de la base de données DB2 et pour la synchronisation des objets avec la base de données SQL Server. Pour plus d’informations, consultez [Actualiser à partir de la base de données &#40;DB2ToSQL&#41;](../../ssma/db2/refresh-from-database-db2tosql.md).  
   
 Vous pouvez accéder à deux pages différentes synchronisation qui contiennent les mêmes paramètres :  
   
@@ -38,7 +39,7 @@ Vous pouvez accéder à deux pages différentes synchronisation qui contiennent 
 -   Pour spécifier les paramètres pour le projet actuel, sur le **outils** menu, cliquez sur **les paramètres de projet**, puis cliquez sur **synchronisation** en bas du volet gauche.  
   
 ## <a name="miscellaneous-options"></a>Options diverses  
-**Tentatives**  
+**Attempts**  
 Spécifie le nombre de tentatives de SSMA doit lors du chargement d’objets dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Les objets qui ne sont pas chargés dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] lors de la tentative actuelle sera tentée à nouveau jusqu'à ce que SSMA atteint le nombre maximal de tentatives défini dans le processus de synchronisation en cours. Ensemble de valeur par défaut est **2**  
   
 ## <a name="synchronization-for-db2-options"></a>Synchronisation pour les Options de DB2  

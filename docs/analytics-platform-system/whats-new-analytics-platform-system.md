@@ -1,28 +1,28 @@
 ---
-title: "Nouveautés du système de plateforme Analytique – un entrepôt de données de la montée en puissance parallèle"
+title: Nouveautés du système de plateforme Analytique – un entrepôt de données de la montée en puissance parallèle
 author: happynicolle
 ms.author: nicw;barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
-ms.custom: 
+ms.custom: ''
 ms.technology: mpp-data-warehouse
-description: "Voir quelles sont les nouveautés dans le système de plateforme Microsoft® Analytique, un dispositif de montée en puissance parallèle sur site qui héberge MPP SQL Server Parallel Data Warehouse."
+description: Voir quelles sont les nouveautés dans le système de plateforme Microsoft® Analytique, un dispositif de montée en puissance parallèle sur site qui héberge MPP SQL Server Parallel Data Warehouse.
 ms.date: 11/28/2016
 ms.topic: article
-ms.openlocfilehash: eeeb41045527e72856edfb8bdb40becc462bde07
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: c6af71d6b7c2bc67aeea0fdc5c1af2e668f537c5
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="whats-new-in-analytics-platform-system-2016-a-scale-out-mpp-data-warehouse"></a>Nouveautés de l’Analytique plateforme System 2016, un entrepôt de données MPP montée en puissance parallèle
 Voir quelles sont les nouveautés dans Microsoft® Analytique système de plateforme (APS) 2016, la dernière mise à jour du matériel pour un dispositif de montée en puissance parallèle sur site qui héberge MPP SQL Server Parallel Data Warehouse. 
 
-## <a name="sql-server-2016"></a>SQL Server 2016
+## <a name="sql-server-2016"></a>SQL Server 2016
 
 APS 2016 s’exécute sur la dernière version de SQL Server 2016 et utilise le niveau de compatibilité de base de données par défaut 130.  SQL Server 2016 permet de prendre en charge certaines des nouvelles fonctionnalités telles que les index secondaires pour l’index columnstore cluster et Kerberos pour PolyBase. 
 
@@ -32,7 +32,7 @@ APS 2016 prend en charge ces améliorations de compatibilité de T-SQL.  Ces él
 
 - [Les classements au niveau des colonnes SQL][] sont désormais pris en charge en plus des classements Windows.
 - [Les index non cluster sur les index cluster columnstore][] améliorer les performances des requêtes qui recherchent des valeurs spécifiques dans l’index columnstore cluster. 
-- [SÉLECTIONNEZ... DANS][] 
+- [SELECT...INTO][] 
 - [sp_spaceused()][] affiche l’espace disque utilisé ou réservé dans une table ou une base de données.
 - [Les tableaux larges][] prise en charge est le même que SQL Server 2016. La limite précédente de 32 Ko pour la taille de ligne n’existe plus. 
 
@@ -99,7 +99,7 @@ L’installation ou la mise à niveau vers 2016 de points d’accès est plus ra
 [nvarchar (max)]:https://msdn.microsoft.com/library/ms186939.aspx
 [varbinary (max)]:https://msdn.microsoft.com/library/ms188362.aspx
 [SYSNAME]:https://msdn.microsoft.com/library/ms188021.aspx
-[SÉLECTIONNEZ... DANS]:https://msdn.microsoft.com/library/ms188029.aspx
+[SELECT...INTO]:https://msdn.microsoft.com/library/ms188029.aspx
 [sp_spaceused()]:https://msdn.microsoft.com/library/ms188776.aspx
 [Les tableaux larges]:https://msdn.microsoft.com/library/ms143432.aspx
 [BULK INSERT]:https://msdn.microsoft.com/library/ms188365.aspx

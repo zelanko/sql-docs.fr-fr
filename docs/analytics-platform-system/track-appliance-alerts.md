@@ -1,26 +1,26 @@
 ---
-title: "Suivi des alertes de l’Appliance (système de plateforme Analytique)"
+title: Suivi des alertes de l’Appliance (système de plateforme Analytique)
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.technology: mpp-data-warehouse
-ms.custom: 
+ms.custom: ''
 ms.date: 01/05/2017
 ms.reviewer: na
 ms.suite: sql
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 631345d9-4967-461a-8922-e5f8fd33f48f
-caps.latest.revision: "14"
-ms.openlocfilehash: a780aa34667280d9e079dad4f44954ba919275d5
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+caps.latest.revision: 14
+ms.openlocfilehash: 825617eb8ff8d1e6c20bd891a53e85aba71f6100
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="track-appliance-alerts"></a>Suivi des alertes de l’Appliance
 Cette rubrique explique comment utiliser la Console d’administration et les vues système pour effectuer le suivi des alertes dans un dispositif de SQL Server PDW.  
@@ -33,7 +33,7 @@ SQL Server PDW consigne les alertes dans le [sys.dm_pdw_component_health_alerts]
 ### <a name="view-alerts-by-using-the-admin-console"></a>Afficher les alertes à l’aide de la Console d’administration  
 Il existe un **alertes** onglet pour la région PDW, la région HDI et pour la région de l’infrastructure de l’application. Une fois le basculement se produit, l’événement de basculement est inclus dans le nombre d’alertes sur la page. Il existe une page de la région PDW, la région HDI et pour la région de l’infrastructure de l’application. Chaque page de contrôle d’intégrité a un onglet. Pour en savoir plus sur une alerte, cliquez sur le **intégrité** page, le **alertes** onglet, puis cliquez sur une alerte.  
   
-![Alertes de la Console d’administration PDW](./media/track-appliance-alerts/SQL_Server_PDW_AdminConsole_AlertsV2.png "SQL_Server_PDW_AdminConsole_AlertsV2")  
+![PDW Admin Console Alerts](./media/track-appliance-alerts/SQL_Server_PDW_AdminConsole_AlertsV2.png "SQL_Server_PDW_AdminConsole_AlertsV2")  
   
 Sur le **alertes** page :  
   
@@ -78,5 +78,5 @@ ORDER BY
   
 ## <a name="see-also"></a>Voir aussi  
 <!-- MISSING LINKS [Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  -->
-[Surveillance de l’appliance &#40; Système de plateforme Analytique &#41;](appliance-monitoring.md)  
+[Surveillance de l’appliance &#40;Analytique plate-forme système&#41;](appliance-monitoring.md)  
   
