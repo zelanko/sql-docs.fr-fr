@@ -1,27 +1,28 @@
 ---
-title: "Pilote ODBC sur Linux et macOS - haute disponibilité et récupération d’urgence | Documents Microsoft"
-ms.custom: 
-ms.date: 01/19/2017
+title: Pilote ODBC sur Linux et macOS - haute disponibilité et récupération d’urgence | Documents Microsoft
+ms.custom: ''
+ms.date: 04/04/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: fa656c5b-a935-40bf-bc20-e517ca5cd0ba
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 53553cc88d771aeb7ef7d537309583fb49e1aaa6
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: e69df64ad4e5c5e5319719fe14f380c745b0aeba
+ms.sourcegitcommit: 094c46e7fa6de44735ed0040c65a40ec3d951b75
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="odbc-driver-on-linux-and-macos-support-for-high-availability-and-disaster-recovery"></a>Pilote ODBC sur Linux et macOS prise en charge de la haute disponibilité et récupération d’urgence
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -74,29 +75,11 @@ Si le routage en lecture seule n’est pas effectif, la connexion à un emplacem
 2.  Si une application utilise **ApplicationIntent=ReadWrite** et si l’emplacement de réplica secondaire est configuré pour un accès en lecture seule.  
   
 Une connexion échoue si un réplica principal est configuré pour rejeter des charges de travail en lecture seule et si la chaîne de connexion contient **ApplicationIntent=ReadOnly**.  
-  
-## <a name="specifying-application-intent"></a>Spécification de l'intention d'application  
-Quand **ApplicationIntent=ReadOnly**, le client demande une charge de travail en lecture lors de la connexion à une base de données prenant en charge AlwaysOn. Le serveur applique l’intention au moment de la connexion et pendant une instruction de base de données USE mais uniquement à une base de données AlwaysOn est activé.
 
-Le mot clé **ApplicationIntent** ne fonctionne pas avec les bases de données en lecture seule existantes.  
 
-Une base de données peut autoriser ou interdire les charges de travail en lecture sur la base de données AlwaysOn ciblée. (Utilisez la **ALLOW_CONNECTIONS** clause de la **PRIMARY_ROLE** et **SECONDARY_ROLE** [!INCLUDE[tsql](../../../includes/tsql_md.md)] instructions.)  
-  
-Le mot clé **ApplicationIntent** est utilisé pour activer le routage en lecture seule.  
-  
-## <a name="read-only-routing"></a>Routage en lecture seule  
-Le routage en lecture seule est une fonctionnalité qui permet de garantir la disponibilité d'un réplica de base de données en lecture seule. Pour activer le routage en lecture seule :  
-  
-1.  Connectez-vous à un écouteur de groupe de disponibilité AlwaysOn.  
-  
-2.  Dans la chaîne de connexion, le mot clé **ApplicationIntent** doit avoir la valeur **ReadOnly**.  
-  
-3.  L’administrateur de base de données doit configurer le groupe de disponibilité pour activer le routage en lecture seule.  
-  
-Il est possible que plusieurs connexions utilisent le routage en lecture seule pour se connecter à différents réplicas en lecture seule. Les modifications apportées à la synchronisation de base de données ou à la configuration du routage du serveur peuvent entraîner des connexions clientes à différents réplicas en lecture seule. Pour vérifier que toutes les requêtes en lecture seule se connectent au même réplica en lecture seule, ne transmettez pas d’écouteur de groupe de disponibilité au mot clé de connexion **Server** . Au lieu de cela, spécifiez le nom de l'instance en lecture seule.  
-  
-Attendez-vous à des temps de connexion plus longs avec un routage en lecture seule qu’avec une connexion à la base de données principale. Par conséquent, augmentez le délai de connexion. Le routage en lecture seule se connecte d’abord à la base de données principale, puis recherche la meilleure base de données secondaire lisible disponible.  
-  
+[!INCLUDE[specify-application-intent_read-only-routing](~/includes/paragraph-content/specify-application-intent-read-only-routing.md)]
+
+
 ## <a name="odbc-syntax"></a>Syntaxe ODBC
 
 Prend en charge les deux mots de clés de la chaîne de connexion ODBC [!INCLUDE[ssHADR](../../../includes/sshadr_md.md)]:  
