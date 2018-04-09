@@ -4,7 +4,7 @@ description: Installer, mettre à jour et désinstaller SQL Server sur Linux. Ce
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 03/22/2018
+ms.date: 04/06/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
@@ -15,11 +15,11 @@ ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 565156c3-7256-4e63-aaf0-884522ef2a52
 ms.workload: Active
-ms.openlocfilehash: ef5e2131681981e85971d734ebbe576e106e2b92
-ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
+ms.openlocfilehash: 98f7f19bbcf7ba83d74c2d4aa1e54409c2434147
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/08/2018
 ---
 # <a name="installation-guidance-for-sql-server-on-linux"></a>Aide à l’installation de SQL Server sur Linux
 
@@ -67,9 +67,9 @@ SQL Server 2017 a les prérequis suivants pour Linux :
 
 Si vous utilisez les partages distants **NFS (Network File System)** en production, notez les exigences de prise en charge suivantes :
 
-- Utiliser la version NFS **4.2 ou ultérieure**. Les versions antérieures de NFS ne gèrent pas les fonctionnalités requises, telles que fallocate et la création de fichiers sparse, communes aux systèmes de fichiers modernes.
-- Recherchez uniquement les répertoires **/var/opt/mssql** sur le montage NFS. Les autres fichiers, tels que les fichiers binaires du système SQL Server, ne sont pas pris en charge.
-- Assurez-vous que les clients NFS utilisent l’option 'nolock' lorsque vous montez le partage distant.
+- Utiliser la version NFS **4.2 ou ultérieure**. Les versions antérieures de NFS ne gèrent pas les fonctionnalités requises, telles que fallocate et la création de fichier sparse, courantes avec les systèmes de fichiers modernes.
+- Positionnez uniquement les répertoires **/var/opt/mssql** sur le montage NFS. Les autres fichiers, tels que les fichiers binaires du système SQL Server, ne sont pas pris en charge.
+- Assurez-vous que les clients NFS utilisent l’option 'nolock' lorsque qu'ils montent le partage distant.
 
 ## <a id="repositories"></a> Configurer des référentiels de code source
 
@@ -179,14 +179,14 @@ Si l’ordinateur Linux n’a pas accès aux référentiels en ligne utilisés d
 
 1. **Installer le package de moteur de base de données**. Utilisez une des commandes suivantes en fonction de votre plateforme. Remplacez le nom du fichier de package dans cet exemple par le nom exact que vous avez téléchargé.
 
-   | Plateforme | Commande de suppression d’un package |
+   | Plateforme | Commande d’installation de package |
    |-----|-----|
    | RHEL | `sudo yum localinstall mssql-server_versionnumber.x86_64.rpm` |
    | SLES | `sudo zypper install mssql-server_versionnumber.x86_64.rpm` |
    | Ubuntu | `sudo dpkg -i mssql-server_versionnumber_amd64.deb` |
 
     > [!NOTE]
-    > Vous pouvez également installer les packages RPM (RHEL et SLES) avec la commande `rpm -ivh`, mais les commandes du tableau précédent  installent automatiquement les dépendances si elles sont disponibles à partir de référentiels approuvés.
+    > Vous pouvez également installer les packages RPM (RHEL et SLES) avec la commande `rpm -ivh` commande, mais les commandes du tableau précédent  installent automatiquement les dépendances si elles sont disponibles à partir de référentiels approuvés.
 
 1. **Résoudre les dépendances manquantes** : vous pouvez avoir des dépendances manquantes à ce stade. Si ce n’est pas le cas, vous pouvez ignorer cette étape. Sur Ubuntu, si vous avez accès à des référentiels approuvés contenant ces dépendances, la solution la plus simple consiste à utiliser la commande `apt-get -f install`. Cette commande termine également l’installation de SQL Server. Pour examiner les dépendances manuellement, utilisez les commandes suivantes :
 

@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 31b4ee5f9bef46f6b3e654d1cf16a7abbd2cbac8
-ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
+ms.openlocfilehash: 5bf4e79bc1f7092ebe95ff29079f3412306cf7b1
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 04/08/2018
 ---
 # <a name="download-and-install-sql-operations-studio-preview"></a>Téléchargez et installez Studio des opérations SQL (version préliminaire)
 
@@ -60,7 +60,10 @@ Cette version de [!INCLUDE[name-sos](../includes/name-sos-short.md)] inclut une 
 
 ## <a name="get-sql-operations-studio-preview-for-linux"></a>Obtenir des opérations de SQL Studio (version préliminaire) pour Linux
 
-1. Télécharger [ [!INCLUDE[name-sos](../includes/name-sos-short.md)] pour Linux](https://go.microsoft.com/fwlink/?linkid=870840).
+1. Télécharger [ ! INCLURE[nom-sos](../includes/name-sos-short.md) pour Linux à l’aide d’un des programmes d’installation ou de l’archive tar.gz :
+    - [.deb](https://go.microsoft.com/fwlink/?linkid=870842)
+    - [.rpm](https://go.microsoft.com/fwlink/?linkid=870841)
+    - [.tar.gz](https://go.microsoft.com/fwlink/?linkid=870840)
 1. Pour extraire le fichier et le lancement [!INCLUDE[name-sos](../includes/name-sos-short.md)], ouvrez une nouvelle fenêtre de Terminal et tapez les commandes suivantes :
 
    **Installation de Debian :**
@@ -84,7 +87,8 @@ Cette version de [!INCLUDE[name-sos](../includes/name-sos-short.md)] inclut une 
    cd ~ 
    cp ~/Downloads/sqlops-linux-<version string>.tar.gz ~ 
    tar -xvf ~/sqlops-linux-<version string>.tar.gz 
-   echo 'export PATH="$PATH:~/sqlops-linux-x64"' >> ~/.bashrc source ~/.bashrc 
+   echo 'export PATH="$PATH:~/sqlops-linux-x64"' >> ~/.bashrc
+   source ~/.bashrc 
    sqlops 
    ``` 
 

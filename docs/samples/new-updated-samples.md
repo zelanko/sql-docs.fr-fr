@@ -1,6 +1,6 @@
 ---
-title: Mise à jour - ADO pour la documentation de SQL Server | Documents Microsoft
-description: Extraits de l’affichage de contenu mis à jour pour la documentation récemment modifié, pour ActiveX Data Objects (ADO) pour Microsoft SQL Server.
+title: Exemples mis à jour - des documents de SQL Server | Documents Microsoft
+description: Extraits de l’affichage de contenu mis à jour pour obtenir une documentation récemment modifié, pour obtenir des exemples pour Microsoft SQL Server.
 manager: craigg
 author: MightyPen
 ms.author: genemi
@@ -8,15 +8,15 @@ ms.topic: article
 ms.custom: UpdArt.exe
 ms.suite: sql
 ms.prod_service: sql-non-specified
-ms.component: ado
+ms.component: samples
 ms.date: 02/03/2018
-ms.openlocfilehash: 0461584c0d82027994d452c2b20db4f4330492f2
+ms.openlocfilehash: 758ce1d48b6a8dc961635ee7dcb4023867d727d1
 ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 04/08/2018
 ---
-# <a name="new-and-recently-updated-activex-data-objects-ado-for-sql-server"></a>Nouveaux et mis à jour récemment : ActiveX Data Objects (ADO) pour SQL Server
+# <a name="new-and-recently-updated-samples-for-sql-server"></a>Nouveaux et mis à jour récemment : exemples pour SQL Server
 
 
 
@@ -29,7 +29,7 @@ Mises à jour récentes sont signalés pour la plage de dates suivante et l’ob
 
 
 - *Période des mises à jour :* &nbsp; **03-12-2017** &nbsp; au &nbsp; **03-02-2018**
-- *Zone de sujet :* &nbsp; **ActiveX Data Objects (ADO) pour SQL Server**.
+- *Zone de sujet :* &nbsp; **exemples pour SQL Server**.
 
 
 

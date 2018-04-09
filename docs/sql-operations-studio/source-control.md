@@ -20,7 +20,7 @@ ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 12/21/2017
 ---
-#  <a name="using-source-control-in-includename-sosincludesname-sos-shortmd"></a>À l’aide du contrôle de code source[!INCLUDE[name-sos](../includes/name-sos-short.md)]
+#  <a name="using-source-control-in-includename-sosincludesname-sos-shortmd"></a>Utilisation du contrôle de code source dans[!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
 [!INCLUDE[name-sos](../includes/name-sos-short.md)]prend en charge Git pour le contrôle de version/code source.
 
@@ -43,7 +43,7 @@ ms.lasthandoff: 12/21/2017
 
    ![Icône du contrôle de code source Git](media/source-control/source-control.png)
 
-1. Entrez le chemin d’accès au dossier que vous souhaitez initialiser un référentiel Git, puis appuyez sur **entrée**.
+1. Entrez le chemin du dossier que vous voulez initialiser comme dépôt Git, puis appuyez sur **Entrée**.
 
    ![initialiser le référentiel Git](media/source-control/initialize-git-repository.png)
 
