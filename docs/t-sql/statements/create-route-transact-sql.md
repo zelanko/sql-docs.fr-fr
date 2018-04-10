@@ -1,16 +1,16 @@
 ---
 title: CREATE ROUTE (Transact-SQL) | Microsoft Docs
-ms.custom: 
-ms.date: 03/14/2017
+ms.custom: ''
+ms.date: 03/30/2018
 ms.prod: sql-non-specified
 ms.prod_service: sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CREATE_ROUTE_TSQL
@@ -29,19 +29,19 @@ helpviewer_keywords:
 - activating routes
 - CREATE ROUTE statement
 ms.assetid: 7e695364-1a98-4cfd-8ebd-137ac5a425b3
-caps.latest.revision: 
+caps.latest.revision: 42
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 767be5069d65c11dad849a8fc32f5b15296a4eda
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 8ef29633b2585a139fdd9e009458f36f38f00c56
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="create-route-transact-sql"></a>CREATE ROUTE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
 
   Ajoute un itinéraire à la table de routage de la base de données active. Pour les messages sortants, [!INCLUDE[ssSB](../../includes/sssb-md.md)] détermine l'itinéraire en vérifiant la table de routage dans la base de données locale. Pour les messages de conversations issus d’une autre instance, notamment les messages à transférer, [!INCLUDE[ssSB](../../includes/sssb-md.md)] vérifie les itinéraires dans la base de données **msdb**.  
   
@@ -67,9 +67,9 @@ WITH
  Nom de l’itinéraire à créer. Un nouvel itinéraire est créé dans la base de données active et détenu par le principal spécifié dans la clause AUTHORIZATION. Les noms du serveur, de la base de données et du schéma ne peuvent pas être spécifiés. *route_name* doit être un **sysname** valide.  
   
  AUTHORIZATION *owner_name*  
- Définit le propriétaire de l'itinéraire pour l'utilisateur ou le rôle de base de données spécifié. *owner_name* peut correspondre au nom de n’importe quel utilisateur ou rôle valide quand l’utilisateur actif est membre du rôle de base de données fixe **db_owner** ou du rôle serveur fixe **sysadmin**. Sinon, *owner_name* doit être le nom de l’utilisateur actuel, le nom d’un utilisateur pour lequel l’utilisateur actuel a l’autorisation IMPERSONATE ou le nom d’un rôle auquel appartient l’utilisateur actuel. Si cette clause est omise, l'itinéraire appartient à l'utilisateur actif.  
+ Définit le propriétaire de l'itinéraire pour l'utilisateur ou le rôle de base de données spécifié. *owner_name* peut correspondre au nom de n’importe quel utilisateur ou rôle valide quand l’utilisateur actif est membre du rôle de base de données fixe **db_owner** ou du rôle serveur fixe **sysadmin**. Sinon, *owner_name* doit être le nom de l’utilisateur actuel, le nom d’un utilisateur pour lequel l’utilisateur actuel a l’autorisation IMPERSONATE ou le nom d’un rôle auquel appartient l’utilisateur actuel. Si cette clause est omise, l'itinéraire appartient à l'utilisateur en cours.  
   
- WITH  
+ par  
  Introduit les clauses qui définissent l'itinéraire créé.  
   
  SERVICE_NAME = **'***service_name***'**  
@@ -90,7 +90,9 @@ WHERE database_id = DB_ID()
  Spécifie la durée, en secondes, pendant laquelle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] conserve l'itinéraire dans la table de routage. Lorsque la durée de vie expire, l'itinéraire expire et [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] n'en tient plus compte lors de la sélection d'un itinéraire pour une nouvelle conversation. Si cette clause est omise, *route_lifetime* est NULL et l’itinéraire n’expire jamais.  
   
  ADDRESS **='***next_hop_address***'**  
- Spécifie l'adresse réseau pour cet itinéraire. *next_hop_address* spécifie une adresse TCP/IP au format suivant :  
+Pour SQL Database Managed Instance, `ADDRESS` doit être local. 
+
+Spécifie l'adresse réseau pour cet itinéraire. *next_hop_address* spécifie une adresse TCP/IP au format suivant :  
   
  **TCP://**{ *dns_name* | *netbios_name* | *ip_address* } **:***port_number*  
   
@@ -128,7 +130,7 @@ WHERE ssbe.name = N'MyServiceBrokerEndpoint';
  Si la clause MIRROR_ADDRESS est spécifiée, l'itinéraire doit spécifier les clauses SERVICE_NAME et BROKER_INSTANCE. Un itinéraire qui spécifie **'LOCAL'** ou **'TRANSPORT'** pour le paramètre *next_hop_address* ne peut pas spécifier une adresse miroir.  
   
 ## <a name="remarks"></a>Notes   
- La table de routage qui stocke les itinéraires est une table de métadonnées consultable dans la vue de catalogue **sys.routes**. Cette vue de catalogue peut être mise à niveau uniquement à l’aide des instructions CREATE ROUTE, ALTER ROUTE et DROP ROUTE.  
+ La table de routage qui stocke les itinéraires est une table de métadonnées consultable dans la vue de catalogue **sys.routes**. Cet affichage catalogue peut être mis à niveau uniquement à l'aide des instructions CREATE ROUTE, ALTER ROUTE et DROP ROUTE.  
   
  Par défaut, la table de routage de chaque base de données utilisateur ne contient qu'un seul itinéraire. Cet itinéraire est nommée **AutoCreatedLocal**. L’itinéraire spécifie **'LOCAL'** pour le paramètre *next_hop_address* et correspond à n’importe quel nom de service et identificateur d’instance de Service Broker.  
   
