@@ -1,15 +1,15 @@
 ---
-title: "AMO autres Classes et méthodes | Documents Microsoft"
-ms.custom: 
+title: AMO autres Classes et méthodes | Documents Microsoft
+ms.custom: ''
 ms.date: 02/14/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
@@ -23,7 +23,7 @@ helpviewer_keywords:
 - traces [AMO]
 - backups [AMO]
 ms.assetid: 60ed5cfa-3a03-4161-8271-0a71a3ae363b
-caps.latest.revision: 
+caps.latest.revision: 28
 author: Minewiskan
 ms.author: owend
 manager: kfile
@@ -53,7 +53,7 @@ ms.lasthandoff: 02/15/2018
   
  ![Autres Classes AMO](../../../analysis-services/multidimensional-models/analysis-management-objects/media/amo-otherclasses.gif "autres Classes AMO")  
   
-##  <a name="Assembly">Objets d’assembly</a>  
+##  <a name="Assembly"></a>Objets d’assembly  
  Pour créer un objet <xref:Microsoft.AnalysisServices.Assembly>, il convient de l'ajouter à la collection d'assemblys du serveur, puis de mettre à jour l'objet <xref:Microsoft.AnalysisServices.Assembly> sur le serveur à l'aide de la méthode Update.  
   
  Pour supprimer un <xref:Microsoft.AnalysisServices.Assembly> de l’objet, il doit être supprimé à l’aide de la méthode Drop de le <xref:Microsoft.AnalysisServices.Assembly> objet. La suppression d'un objet <xref:Microsoft.AnalysisServices.Assembly> de la collection d'assemblys de la base de données n'a pas pour effet de supprimer l'assembly en question : elle ne fait que le masquer dans votre application jusqu'à la prochaine exécution de cette dernière.  
@@ -116,7 +116,7 @@ ms.lasthandoff: 02/15/2018
   
 -   **Mot de passe**, si non vide, spécifie que le serveur chiffrera le fichier de sauvegarde.  
   
-##  <a name="Traces">Objets de trace</a>  
+##  <a name="Traces"></a>Objets de trace  
  Trace est une infrastructure destinée à surveiller, relire et gérer une instance de [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Une application cliente, comme [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)], s'abonne à une trace et le serveur renvoie les événements de trace comme spécifié dans la définition de trace.  
   
  Chaque événement est décrit par une classe d'événements. La classe d'événements décrit le type d'événement généré. Au sein d'une classe d'événements, les sous-classes d'événements décrivent un niveau de catégorisation plus fin. Chaque événement est décrit par plusieurs colonnes. Les colonnes qui décrivent un événement de trace sont les mêmes pour tous les événements et sont conformes à la structure de Trace SQL. Les informations enregistrées dans chaque colonne peuvent varier en fonction de la classe d'événements ; autrement dit, un ensemble prédéfini de colonnes est défini pour chaque trace, mais la signification des colonnes peut être différente d'une classe d'événements à une autre. Par exemple, la colonne TextData sert à enregistrer les éléments ASSL d'origine pour tous les événements d'instruction.  
@@ -155,14 +155,14 @@ ms.lasthandoff: 02/15/2018
   
 6.  Poursuivez avec votre application.  
   
-##  <a name="CaptureLog">Classe CaptureLog et attribut CaptureXML</a>  
+##  <a name="CaptureLog"></a>Classe CaptureLog et attribut CaptureXML  
  Toutes les actions à exécuter par AMO sont envoyées au serveur sous forme de messages XMLA. AMO permet de capturer tous ces messages sans les en-têtes SOAP. Pour plus d’informations, consultez [présentation des Classes AMO](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-classes-introduction.md). CaptureLog est le mécanisme d'AMO qui permet d'écrire sous forme de script les objets et les opérations ; les objets et les opérations sont écrits en XMLA.  
   
  Pour commencer à capturer le code XML, la propriété d’objet serveur CaptureXML doit être définie sur **true**. Dès lors, toutes les actions qui doivent être envoyées au serveur commencent à être capturées dans la classe CaptureLog, sans que les actions soient envoyées au serveur. CaptureLog est considérée comme une classe, car elle possède une méthode, Clear, qui sert à effacer le journal de capture.  
   
  Pour lire le journal, vous devez obtenir la collection de chaînes et commencer à parcourir les chaînes. Vous pouvez également concaténer tous les journaux dans une chaîne en utilisant la méthode d'objet serveur ConcatenateCaptureLog. ConcatenateCaptureLog comprend trois paramètres dont deux sont obligatoires. Les paramètres obligatoires sont *transactionnelle*, de type booléen, et *parallèles*, de type booléen. Si *transactionnelle* a la valeur **true**, il indique que le fichier de commandes XML sera créé comme une transaction unique au lieu de chaque commande qui est traitée comme une transaction distincte. Si *parallèles* a la valeur **true**, il indique que toutes les commandes dans le fichier de commandes seront enregistrées pour une exécution simultanée au lieu de manière séquentielle tels qu’ils ont été enregistrés.  
   
-##  <a name="AMO">Classe d’Exception AMOException</a>  
+##  <a name="AMO"></a>Classe d’Exception AMOException  
  Vous pouvez utiliser la classe d'exception AMOException pour intercepter facilement les exceptions levées dans votre application par AMO.  
   
  AMO lève des exceptions lorsque certains problèmes sont rencontrés. Le tableau suivant répertorie les types d'exceptions gérés par AMO. Les exceptions sont dérivées de la classe <xref:Microsoft.AnalysisServices.AmoException>.  
@@ -178,7 +178,7 @@ ms.lasthandoff: 02/15/2018
 ## <a name="see-also"></a>Voir aussi  
  <xref:Microsoft.AnalysisServices>   
  [Présentation des Classes AMO](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-classes-introduction.md)   
- [Architecture logique &#40; Analysis Services - données multidimensionnelles &#41;](../../../analysis-services/multidimensional-models/olap-logical/understanding-microsoft-olap-logical-architecture.md)   
- [Les objets de base de données &#40; Analysis Services - données multidimensionnelles &#41;](../../../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)  
+ [Architecture logique & #40 ; Analysis Services - données multidimensionnelles & #41 ;](../../../analysis-services/multidimensional-models/olap-logical/understanding-microsoft-olap-logical-architecture.md)   
+ [Les objets de base de données & #40 ; Analysis Services - données multidimensionnelles & #41 ;](../../../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)  
   
   
