@@ -1,6 +1,6 @@
 ---
-title: "Mise à jour : T-SQL (documentation) | Microsoft Docs"
-description: "Affichez les extraits du contenu mis à jour de la documentation changée récemment pour Transact-SQL."
+title: 'Mise à jour : T-SQL (documentation) | Microsoft Docs'
+description: Affichez les extraits du contenu mis à jour de la documentation changée récemment pour Transact-SQL.
 manager: craigg
 author: MightyPen
 ms.author: genemi
@@ -10,11 +10,11 @@ ms.suite: sql
 ms.prod_service: sql-non-specified
 ms.component: t-sql
 ms.date: 02/03/2018
-ms.openlocfilehash: c1f1ce751bd4bca781644e7e2f5282320c8c88a8
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 62f316ece41b5a1779ad039984e5065b0d94e8d0
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/08/2018
 ---
 # <a name="new-and-recently-updated-transact-sql-docs"></a>Articles nouveaux et récemment mis à jour : Transact-SQL (documentation)
 
@@ -97,7 +97,7 @@ MAXDOP = *max_degree_of_parallelism*
 
  Remplace l’option de configuration **max degree of parallelism** pendant la durée de l’opération statistique. Pour plus d’informations, consultez [Configurer l’option de configuration du serveur max degree of parallelism](statements/../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md). Utilisez MAXDOP pour limiter le nombre de processeurs utilisés dans une exécution de plan parallèle. Le nombre maximal de processeurs est égal à 64.
 
- *max_degree_of_parallelism* peut avoir la valeur :
+ *max_degree_of_parallelism* peut avoir la valeur :
 
  1 Supprime la génération de plans parallèles.
 
@@ -137,7 +137,7 @@ MAXDOP = *max_degree_of_parallelism*
 
  Remplace l’option de configuration **max degree of parallelism** pendant la durée de l’opération statistique. Pour plus d’informations, consultez [Configurer l’option de configuration du serveur max degree of parallelism](statements/../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md). Utilisez MAXDOP pour limiter le nombre de processeurs utilisés dans une exécution de plan parallèle. Le nombre maximal de processeurs est égal à 64.
 
- *max_degree_of_parallelism* peut avoir la valeur :
+ *max_degree_of_parallelism* peut avoir la valeur :
 
  1 Supprime la génération de plans parallèles.
 
@@ -188,7 +188,7 @@ Cette section liste les articles très similaires récemment mis à jour dans d�
 - [Nouveaux + Mis à jour (0 + 0) : **Master Data Services (MDS) for SQL** (documentation)](../master-data-services/new-updated-master-data-services.md)
 - [Nouveaux + Mis à jour (0 + 0) : **Expressions MDX (Multidimensional Expressions) pour SQL** (documentation)](../mdx/new-updated-mdx.md)
 - [Nouveaux + Mis à jour (0 + 0) : **ODBC (Open Database Connectivity) pour SQL** (documentation)](../odbc/new-updated-odbc.md)
-- [Nouveaux + Mis à jour (0 + 0) : **Exemples pour SQL** (documentation)](../sample/new-updated-sample.md)
+- [Nouveaux + Mis à jour (0 + 0) : **Exemples pour SQL** (documentation)](../samples/new-updated-samples.md)
 - [Nouveaux + Mis à jour (0 + 0) : **SQL Server Migration Assistant (SSMA)** (documentation)](../ssma/new-updated-ssma.md)
 - [Nouveaux + Mis à jour (0 + 0) : **Outils pour SQL** (documentation)](../tools/new-updated-tools.md)
 - [Nouveaux + Mis à jour (0 + 0) : **XQuery pour SQL** (documentation)](../xquery/new-updated-xquery.md)
