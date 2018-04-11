@@ -1,16 +1,16 @@
 ---
-title: "Créer des index cluster | Microsoft Docs"
-ms.custom: 
+title: Créer des index cluster | Microsoft Docs
+ms.custom: ''
 ms.date: 02/17/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: indexes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-indexes
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - index creation [SQL Server], clustered indexes
@@ -19,18 +19,18 @@ helpviewer_keywords:
 - clustered indexes, UNIQUE constraint
 - indexes [SQL Server], clustered
 ms.assetid: 47148383-c2c7-4f08-a9e4-7016bf2d1d13
-caps.latest.revision: 
+caps.latest.revision: 33
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: Active
 ms.openlocfilehash: f7aa0ca2f5ea1ffe7ec54cc6279fbf5f1218f8c0
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
-ms.translationtype: HT
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/10/2018
 ---
-# <a name="create-clustered-indexes"></a>Créer des index cluster
+# <a name="create-clustered-indexes"></a>Create Clustered Indexes
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   Vous pouvez créer des index cluster sur les tables à l’aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)]. À quelques exceptions près, chaque table doit posséder un index cluster. Outre le fait qu'il améliore les performances des requêtes, un index cluster peut être reconstruit ou réorganisé à la demande pour contrôler la fragmentation de la table. Un index cluster peut également être créé sur une vue. (Les index cluster sont définis dans la rubrique [Description des index cluster et non-cluster](../../relational-databases/indexes/clustered-and-nonclustered-indexes-described.md).)  
@@ -80,7 +80,7 @@ ms.lasthandoff: 02/23/2018
   
 ###  <a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorisations  
  Nécessite une autorisation ALTER sur la table ou la vue. L’utilisateur doit être membre du rôle serveur fixe **sysadmin** ou des rôles de base de données fixes **db_ddladmin** et **db_owner** .  
   
 ##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
@@ -127,7 +127,7 @@ ms.lasthandoff: 02/23/2018
   
 #### <a name="to-create-a-clustered-index"></a>Pour créer un index cluster  
   
-1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  Dans la barre d'outils standard, cliquez sur **Nouvelle requête**.  
   
@@ -151,7 +151,7 @@ ms.lasthandoff: 02/23/2018
   
  Pour plus d’informations, consultez [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md).  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Créer des clés primaires](../../relational-databases/tables/create-primary-keys.md)   
  [Créer des contraintes uniques](../../relational-databases/tables/create-unique-constraints.md)  
   

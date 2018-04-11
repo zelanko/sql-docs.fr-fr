@@ -1,31 +1,31 @@
 ---
-title: "Définir la méthode de propagation des modifications de données des articles transactionnels | Microsoft Docs"
-ms.custom: 
+title: Définir la méthode de propagation des modifications de données des articles transactionnels | Microsoft Docs
+ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: replication
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - transactional replication, propagation methods
 - propagating data changes [SQL Server replication]
 ms.assetid: 0a291582-f034-42da-a1a3-29535b607b74
-caps.latest.revision: 
+caps.latest.revision: 39
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: c8d2e7c8102333283171e1477d1637f447bf08c9
-ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
-ms.translationtype: HT
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="set-the-propagation-method-for-data-changes-to-transactional-articles"></a>Définir la méthode de propagation des modifications de données des articles transactionnels
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -118,7 +118,7 @@ ms.lasthandoff: 03/08/2018
     > [!NOTE]  
     >  Lors de la spécification de la valeur **NONE** pour un des paramètres ci-dessus, les commandes de ce type ne seront pas répliquées sur l'Abonné.  
   
-     Pour plus d'informations, voir [Define an Article](../../../relational-databases/replication/publish/define-an-article.md).  
+     Pour plus d'informations, voir [Définir un article](../../../relational-databases/replication/publish/define-an-article.md).  
   
 #### <a name="to-create-an-article-with-user-modified-custom-stored-procedures"></a>Pour créer un article avec des procédures stockées personnalisées modifiées par utilisateur  
   
@@ -156,7 +156,7 @@ ms.lasthandoff: 03/08/2018
     > [!NOTE]  
     >  Pour plus d’informations sur la syntaxe CALL, SCALL, XCALL et MCALL, consultez [Spécifier le mode de propagation des modifications des articles transactionnels](../../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md).  
   
-     Pour plus d'informations, voir [Define an Article](../../../relational-databases/replication/publish/define-an-article.md).  
+     Pour plus d'informations, voir [Définir un article](../../../relational-databases/replication/publish/define-an-article.md).  
   
 2.  Dans la base de données de publication du serveur de publication, utilisez l'instruction [ALTER PROCEDURE](../../../t-sql/statements/alter-procedure-transact-sql.md) pour modifier [sp_scriptpublicationcustomprocs](../../../relational-databases/system-stored-procedures/sp-scriptpublicationcustomprocs-transact-sql.md) afin qu'il retourne un script [CREATE PROCEDURE](../../../t-sql/statements/create-procedure-transact-sql.md) pour les procédures stockées personnalisées INSERT, UPDATE et DELETE. Pour plus d’informations, consultez [Spécifier le mode de propagation des modifications des articles transactionnels](../../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md).  
   
@@ -166,7 +166,7 @@ ms.lasthandoff: 03/08/2018
   
 2.  Répétez l'étape 1 pour chaque méthode de propagation à modifier.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Spécifier le mode de propagation des modifications des articles transactionnels](../../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md)   
  [Créer, modifier et supprimer des publications et des articles &#40;réplication&#41;](../../../relational-databases/replication/publish/create-modify-and-delete-publications-and-articles-replication.md)  
   

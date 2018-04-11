@@ -1,16 +1,16 @@
 ---
 title: sp_update_alert (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_update_alert_TSQL
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_update_alert
 ms.assetid: 4bbaeaab-8aca-4c9e-abc1-82ce73090bd3
-caps.latest.revision: 
+caps.latest.revision: 34
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 7d39736eed19992c5fa20bb1231aed3bcb20e3b0
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="spupdatealert-transact-sql"></a>sp_update_alert (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -69,13 +69,13 @@ sp_update_alert
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@name =**] **'***nom***'**  
+ [ **@name =**] **'***name***'**  
  Nom de l'alerte devant être mise à jour. *nom* est **sysname**, sans valeur par défaut.  
   
- [  **@new_name =**] **'***nouveau_nom***'**  
+ [ **@new_name =**] **'***new_name***'**  
  Nouveau nom de l'alerte. Le nom doit être unique. *nouveau_nom* est **sysname**, avec NULL comme valeur par défaut.  
   
- [  **@enabled =**] *activé*  
+ [ **@enabled =**] *enabled*  
  Spécifie si l’alerte est activée (**1**) ou désactivée (**0**). *activé* est **tinyint**, avec NULL comme valeur par défaut. Pour pouvoir se déclencher, une alerte doit être activée.  
   
  [ **@message_id =**] *message_id*  
@@ -101,7 +101,7 @@ sp_update_alert
 |**4**|**net send**|  
 |**7**|Tous|  
   
- [  **@database_name =**] **'***base de données***'**  
+ [ **@database_name =**] **'***database***'**  
  Nom de la base de données dans laquelle l'erreur doit survenir pour que l'alerte soit déclenchée. *base de données* est **sysname.** Les noms placés entre crochets ([ ]) ne sont pas autorisés. La valeur par défaut est NULL.  
   
  [ **@event_description_keyword =**] **'***event_description_keyword***'**  
@@ -110,7 +110,7 @@ sp_update_alert
  [ **@job_id =**] *job_id*  
  Numéro d’identification du travail. *job_id* est **uniqueidentifier**, avec NULL comme valeur par défaut. Si *job_id* est spécifié, *job_name* doit être omis.  
   
- [ **@job_name =**] **'***job_name***'**  
+ [  **@job_name =**] **'***job_name***'**  
  Nom du travail exécuté en réponse à l'alerte. *job_name* est **sysname**, avec NULL comme valeur par défaut. Si *job_name* est spécifié, *job_id* doit être omis.  
   
  [ **@occurrence_count =** ] *occurrence_count*  
@@ -143,16 +143,16 @@ sp_update_alert
 |Élément de format| Description|  
 |--------------------|-----------------|  
 |*Élément*|Objet de performances, compteur de performances ou instance nommée du compteur.|  
-|*Comparator*|Un de ces opérateurs :  **>** ,  **<** ,**=**|  
+|*Comparator*|Un de ces opérateurs : **>**, **<**, **=**|  
 |*Value*|Valeur numérique du compteur.|  
   
  [ **@category_name =**] **'***category***'**  
  Nom de la catégorie d'alerte. *catégorie* est **sysname** avec NULL comme valeur par défaut.  
   
- [  **@wmi_namespace** =] **'***wmi_namespace***'**  
+ [ **@wmi_namespace**=] **'***wmi_namespace***'**  
  Espace de noms WMI permettant de rechercher des événements via des requêtes. *wmi_namespace* est **sysname**, avec NULL comme valeur par défaut.  
   
- [ **@wmi_query**= ] **'***wmi_query***'**  
+ [ **@wmi_query**=] **'***wmi_query***'**  
  Requête spécifiant l'événement WMI pour l'alerte. *wmi_query* est **nvarchar (512)**, avec NULL comme valeur par défaut.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  

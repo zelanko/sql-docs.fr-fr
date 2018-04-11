@@ -1,16 +1,16 @@
 ---
-title: "Modèle de sécurité de l’Agent de réplication | Microsoft Docs"
-ms.custom: 
+title: Modèle de sécurité de l’Agent de réplication | Microsoft Docs
+ms.custom: ''
 ms.date: 10/07/2015
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: replication
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Snapshot Agent, security
@@ -23,16 +23,16 @@ helpviewer_keywords:
 - Merge Agent, security
 - replication [SQL Server], agents and profiles
 ms.assetid: 6d09fc8d-843a-4a7a-9812-f093d99d8192
-caps.latest.revision: 
+caps.latest.revision: 72
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 07b24a4d11b0bb95417d3808afb8d9d4e5c1b849
-ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
-ms.translationtype: HT
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="replication-agent-security-model"></a>Modèle de sécurité de l'Agent de réplication
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -98,9 +98,9 @@ ms.lasthandoff: 03/08/2018
 > [!NOTE]  
 >  Ces informations sont fournies pour vous aider à comprendre les conséquences de l'exécution d'agents dans le contexte de sécurité approprié. Il ne devrait pas être nécessaire d'interagir directement avec les informations d'identification ou les proxys qui ont été créés.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Replication Security Best Practices](../../../relational-databases/replication/security/replication-security-best-practices.md)   
- [Sécurité et protection &#40;Réplication&#41;](../../../relational-databases/replication/security/security-and-protection-replication.md)   
+ [Sécurité et protection &#40;réplication&#41;](../../../relational-databases/replication/security/security-and-protection-replication.md)   
  [Sécuriser le dossier d’instantanés](../../../relational-databases/replication/security/secure-the-snapshot-folder.md)  
   
   

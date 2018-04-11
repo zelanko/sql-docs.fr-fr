@@ -1,16 +1,16 @@
 ---
 title: Utiliser sqlcmd avec des variables de script | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-scripting
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - TSQL
@@ -21,19 +21,20 @@ helpviewer_keywords:
 - sqlcmd utility, scripts
 - setvar command
 ms.assetid: 793495ca-cfc9-498d-8276-c44a5d09a92c
-caps.latest.revision: 
+caps.latest.revision: 47
 author: mightypen
 ms.author: genemi
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 50548a9c34ff3c55c22e5492b807e338bcd4ccc2
-ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
-ms.translationtype: HT
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="sqlcmd---use-with-scripting-variables"></a>sqlcmd : utiliser avec des variables de script
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Les variables utilisées dans les scripts sont appelées des variables de script. Ces variables permettent à un script d'être utilisé dans plusieurs scénarios. Par exemple, pour exécuter un script sur plusieurs serveurs, vous pouvez utiliser une variable de script pour le nom du serveur au lieu de modifier le script pour chaque serveur. La modification du nom de serveur fourni à la variable de script permet d'exécuter le même script sur différents serveurs.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+  Les variables utilisées dans les scripts sont appelées des variables de script. Ces variables permettent à un script d'être utilisé dans plusieurs scénarios. Par exemple, pour exécuter un script sur plusieurs serveurs, vous pouvez utiliser une variable de script pour le nom du serveur au lieu de modifier le script pour chaque serveur. La modification du nom de serveur fourni à la variable de script permet d'exécuter le même script sur différents serveurs.  
   
  Les variables de script peuvent être définies explicitement à l’aide de la commande **setvar** ou implicitement à l’aide de l’option **sqlcmd-v** .  
   
@@ -115,7 +116,7 @@ sqlcmd -v ColumnName ="LastName" -i c:\testscript.sql
 ## <a name="sqlcmd-scripting-variables"></a>Variables de script sqlcmd  
  Les variables définies par **sqlcmd** sont reconnues comme des variables de script. Le tableau suivant répertorie les variables de script **sqlcmd** .  
   
-|        Variable         | Option connexe | R/W (Lecture/écriture) |         Valeur par défaut         |
+|        Variable         | Option connexe | R/W (Lecture/écriture) |         Par défaut         |
 | ----------------------- | -------------- | --- | ----------------------- |
 | SQLCMDUSER*             | -U             | R   | ""                      |
 | SQLCMDPASSWORD*         | -P             | --  | ""                      |
@@ -336,7 +337,7 @@ C:\> sqlcmd
 >2 GO
 ```
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Utiliser l'utilitaire sqlcmd](../../relational-databases/scripting/sqlcmd-use-the-utility.md)   
  [Utilitaire sqlcmd](../../tools/sqlcmd-utility.md)   
  [Référence de l’utilitaire d’invite de commandes &#40;moteur de base de données&#41;](../../tools/command-prompt-utility-reference-database-engine.md)  

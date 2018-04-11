@@ -1,16 +1,16 @@
 ---
 title: sp_configure_peerconflictdetection (Transact-SQL) | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_configure_peerconflictdetection
 ms.assetid: 45117cb2-3247-433f-ba3d-7fa19514b1c3
-caps.latest.revision: 
+caps.latest.revision: 17
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: f1fed4cb47795554df26deb08f496edba86b5a4d
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="spconfigurepeerconflictdetection-transact-sql"></a>sp_configure_peerconflictdetection (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,19 +56,19 @@ sp_configure_peerconflictdetection [ @publication = ] 'publication'
  [ @publication=] '*publication*'  
  Nom de la publication pour laquelle configurer la détection de conflit. *publication* est **sysname**, sans valeur par défaut.  
   
- [ @action=] '*action*'  
+ [ @action= ] '*action*'  
  Spécifie s'il faut activer ou désactiver la détection de conflit pour une publication. *action* est **nvarchar (5)**, et peut prendre l’une des valeurs suivantes.  
   
 |Valeur| Description|  
 |-----------|-----------------|  
-|**Activer**|Active la détection de conflit pour une publication.|  
-|**désactiver**|Désactive la détection de conflit pour une publication.|  
+|**enable**|Active la détection de conflit pour une publication.|  
+|**disable**|Désactive la détection de conflit pour une publication.|  
 |NULL (par défaut)||  
   
- [ @originator_id=] *originator_id*  
+ [ @originator_id= ] *originator_id*  
  Spécifie un ID pour un nœud dans une topologie d'égal à égal. *originator_id* est **int**, avec NULL comme valeur par défaut. Cet ID est utilisé pour la détection de conflit si *action* a la valeur **activer**. Spécifiez un ID positif différent de zéro qui n'a jamais été utilisé dans la topologie. Pour obtenir la liste des ID qui ont déjà été utilisés, interrogez la table système [Mspeer_originatorid_history](../../relational-databases/system-tables/mspeer-originatorid-history-transact-sql.md) .  
   
- [ @conflict_retention=] *conflict_retention*  
+ [ @conflict_retention= ] *conflict_retention*  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
  [ @continue_onconflict=] '*continue_onconflict*']  
@@ -77,10 +77,10 @@ sp_configure_peerconflictdetection [ @publication = ] 'publication'
 > [!CAUTION]  
 >  Nous vous recommandons de conserver la valeur par défaut FALSE. Lorsque cette option a la valeur TRUE, l'Agent de distribution tente de converger les données dans la topologie en appliquant la ligne en conflit du nœud doté de l'ID d'appelant le plus élevé. Cette méthode ne garantit pas la convergence. Vous devez vous assurer que la topologie est cohérente après la détection d'un conflit. Pour plus d'informations, consultez « Gestion des conflits » dans [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md).  
   
- [ @local=] '*local*'  
+ [ @local= ] '*local*'  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
- [ @timeout=] *délai d’attente*  
+ [ @timeout= ] *timeout*  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
@@ -89,7 +89,7 @@ sp_configure_peerconflictdetection [ @publication = ] 'publication'
 ## <a name="remarks"></a>Notes  
  sp_configure_peerconflictdetection est utilisé dans la réplication transactionnelle d'égal à égal. Pour utiliser la détection de conflit, tous les nœuds doivent exécuter [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ou versions ultérieures et la détection doivent être activé pour tous les nœuds.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Requiert l'appartenance au rôle serveur fixe sysadmin ou au rôle de base de données fixe db_owner.  
   
 ## <a name="see-also"></a>Voir aussi  

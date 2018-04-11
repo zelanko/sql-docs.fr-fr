@@ -1,16 +1,16 @@
 ---
-title: "Débogage du flux de contrôle | Microsoft Docs"
-ms.custom: 
+title: Débogage du flux de contrôle | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: troubleshooting
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.setbreakpoints.f1
@@ -22,16 +22,16 @@ helpviewer_keywords:
 - color-coded progress reporting [Integration Services]
 - Set Breakpoints dialog box
 ms.assetid: 54a458cc-9f4f-4b48-8cf2-db2e0fa7756c
-caps.latest.revision: 
+caps.latest.revision: 54
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 9aba628aa426093485d820ea4383dd04076481cd
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: HT
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="debugging-control-flow"></a>Débogage du flux de contrôle
   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] et [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] incluent des fonctionnalités et des outils permettant de résoudre les problèmes du flux de contrôle d’un package [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
@@ -49,7 +49,7 @@ ms.lasthandoff: 01/25/2018
   
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] propose dix conditions d’arrêt que vous pouvez activer sur toutes les tâches et tous les conteneurs. Dans la boîte de dialogue **Définir des points d’arrêt** , vous pouvez activer des points d’arrêt pour les conditions suivantes :  
   
-|Condition d'arrêt|Description|  
+|Condition d'arrêt| Description|  
 |---------------------|-----------------|  
 |Quand la tâche ou le conteneur reçoit l’événement **OnPreExecute** .|Appelée lorsqu'une tâche est sur le point de s'exécuter. Cet événement est déclenché par une tâche ou un conteneur immédiatement avant son exécution.|  
 |Quand la tâche ou le conteneur reçoit l’événement **OnPostExecute** .|Appelée immédiatement après la fin de la logique d'exécution de la tâche. Cet événement est déclenché par une tâche ou un conteneur immédiatement après son exécution.|  
@@ -74,7 +74,7 @@ ms.lasthandoff: 01/25/2018
   
  Le tableau suivant décrit les types de nombre d'accès.  
   
-|Type du nombre d'accès|Description|  
+|Type du nombre d'accès| Description|  
 |--------------------|-----------------|  
 |Always|L'exécution est toujours suspendue lorsque le point d'arrêt est atteint.|  
 |Égal au nombre d'accès|L'exécution est suspendue lorsque le nombre de fois où s'est produit le point d'arrêt est égal au nombre d'accès.|  
@@ -92,7 +92,7 @@ ms.lasthandoff: 01/25/2018
   
  Le tableau suivant indique les couleurs utilisées pour décrire l'état de l'exécution.  
   
-|Couleur|État de l'exécution|  
+|Color|État de l'exécution|  
 |-----------|----------------------|  
 |Gris|En attente d'exécution|  
 |Jaune|Exécution en cours|  
@@ -115,9 +115,9 @@ ms.lasthandoff: 01/25/2018
   
  Le tableau qui suit décrit ces fenêtres.  
   
-|Fenêtre|Description|  
+|Fenêtre| Description|  
 |------------|-----------------|  
-|Points d’arrêt|Énumère les points d'arrêt d'un package et donne accès aux options permettant d'activer ou de supprimer des points d'arrêt.|  
+|Points d'arrêt|Énumère les points d'arrêt d'un package et donne accès aux options permettant d'activer ou de supprimer des points d'arrêt.|  
 |Sortie|Affiche les messages d’état relatifs aux fonctionnalités de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].|  
 |Immédiat|Utilisée pour déboguer et évaluer des expressions, et imprimer des valeurs variables.|  
 
@@ -136,7 +136,7 @@ ms.lasthandoff: 01/25/2018
   
     -   Pour définir des points d’arrêt dans un flux de contrôle de package, cliquez sur l’onglet **Flux de contrôle** , cliquez avec le bouton droit sur une tâche, un conteneur de boucle For ou Foreach ou un conteneur de séquences, puis cliquez sur **Modifier les points d’arrêt**.  
   
-    -   Pour définir des points d’arrêt dans un gestionnaire d’événements, cliquez sur l’onglet **Gestionnaire d’événements** , cliquez avec le bouton droit sur une tâche, un conteneur de boucle For ou Foreach ou un conteneur de séquences, puis cliquez sur **Modifier les points d’arrêt**.  
+    -   Pour définir des points d’arrêt dans un gestionnaire d’événements, cliquez sur l’onglet **Gestionnaire d’événements**, cliquez avec le bouton droit sur une tâche, un conteneur de boucle For ou Foreach ou un conteneur de séquences, puis cliquez sur **Modifier les points d’arrêt**.  
   
 4.  Dans la boîte de dialogue **Définir les points d’arrêt de \<nom_conteneur>**, sélectionnez les points d’arrêt à activer.  
   
@@ -144,7 +144,7 @@ ms.lasthandoff: 01/25/2018
   
 6.  Pour enregistrer le package, cliquez sur **Enregistrer les éléments sélectionnés** dans le menu **Fichier** .  
 
-## <a name="set-breakpoints"></a>Définir des points d’arrêt
+## <a name="set-breakpoints"></a>Définir des points d'arrêt
   Utilisez la boîte de dialogue **Définir des points d'arrêt** pour spécifier les événements pour lesquels activer des points d'arrêt et pour gérer le contrôle du point d'arrêt.  
   
 ### <a name="options"></a>Options  
@@ -157,7 +157,7 @@ ms.lasthandoff: 01/25/2018
  **Type du nombre d'accès**  
  Spécifiez le moment où le point d'arrêt entre en vigueur.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**Always**|L'exécution est toujours suspendue lorsque le point d'arrêt est atteint.|  
 |**Égal au nombre d'accès**|L'exécution est suspendue lorsque le nombre de fois où s'est produit le point d'arrêt est égal au nombre d'accès.|  
@@ -167,6 +167,6 @@ ms.lasthandoff: 01/25/2018
  **Nombre d'accès**  
  Spécifiez le nombre d'accès à partir duquel déclencher un arrêt. Cette option n'est pas disponible si le point d'arrêt est constamment en vigueur.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Outils de dépannage pour le développement des packages](../../integration-services/troubleshooting/troubleshooting-tools-for-package-development.md)  
  [Déboguer un script en définissant des points d’arrêt dans une tâche de script et un composant de script](../../integration-services/extending-packages-scripting/debug-a-script-by-setting-breakpoints-in-a-script-task-and-script-component.md)   

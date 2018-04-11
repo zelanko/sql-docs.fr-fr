@@ -1,32 +1,32 @@
 ---
-title: "Renommer des colonnes (moteur de base de données) | Microsoft Docs"
-ms.custom: 
+title: Renommer des colonnes (moteur de base de données) | Microsoft Docs
+ms.custom: ''
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: tables
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-tables
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - columns [SQL Server], names
 - renaming columns
 - column names [SQL Server]
 ms.assetid: 7c71ec9f-0180-4398-b32a-4bfb7592e75d
-caps.latest.revision: 
+caps.latest.revision: 17
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
 ms.openlocfilehash: 0bb8f1e02fa372e33174b2268584885808e25790
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
-ms.translationtype: HT
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="rename-columns-database-engine"></a>Renommer des colonnes (moteur de base de données)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ ms.lasthandoff: 02/23/2018
   
 ###  <a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorisations  
  Requiert une autorisation ALTER sur l'objet.  
   
 ##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  

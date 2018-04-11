@@ -1,16 +1,16 @@
 ---
-title: "WillExecute, événement (ADO) | Documents Microsoft"
+title: WillExecute, événement (ADO) | Documents Microsoft
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 apitype: COM
 f1_keywords:
@@ -19,16 +19,16 @@ f1_keywords:
 helpviewer_keywords:
 - WillExecute event [ADO]
 ms.assetid: dd755e46-f589-48a3-93a9-51ff998d44b5
-caps.latest.revision: 
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: dafc71b9f9da6dde5cf9ef7acf7909236441f656
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="willexecute-event-ado"></a>WillExecute, événement (ADO)
 Le **WillExecute** événement est appelé juste avant l’exécution d’une commande en attente sur une connexion.  
