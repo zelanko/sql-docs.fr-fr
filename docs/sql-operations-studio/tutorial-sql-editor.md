@@ -1,6 +1,6 @@
 ---
-title: "Didacticiel : Utiliser l’éditeur SQL opérations Studio (version préliminaire) Transact-SQL pour créer des objets de base de données | Documents Microsoft"
-description: "Ce didacticiel présente les principales fonctionnalités qui simplifient l’utilisation de T-SQL dans Studio des opérations SQL (version préliminaire)."
+title: 'Didacticiel : Utiliser l’éditeur SQL Operations Studio (preview) Transact-SQL pour créer des objets de base de données | Documents Microsoft'
+description: Ce didacticiel présente les principales fonctionnalités qui simplifient l’utilisation de T-SQL dans SQL Operations Studio (preview).
 ms.custom: tools|sos
 ms.date: 03/13/2018
 ms.prod: sql-non-specified
@@ -8,7 +8,7 @@ ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
 ms.component: sos
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: tutorial
 author: erickangMSFT
 ms.author: erickang
@@ -57,13 +57,13 @@ Ce didacticiel nécessite SQL Server ou la base de données SQL Azure *TutorialD
 
    ![widget de la recherche rapide](./media/tutorial-sql-editor/quick-search-widget.png)
 
-1. Modifier la **messagerie** colonne dans la première ligne, type  *orlando0@adventure-works.com* et appuyez sur **entrée** pour enregistrer les modifications.
+1. Modifier la **messagerie** colonne dans la première ligne, type *orlando0@adventure-works.com*et appuyez sur **entrée** pour enregistrer les modifications.
 
    ![modifier des données](./media/tutorial-sql-editor/edit-data.png)
 
 ## <a name="use-t-sql-snippets-to-create-stored-procedures"></a>Utiliser des extraits de code T-SQL pour créer des procédures stockées
 
-Opérations de SQL Studio fournit plusieurs extraits de code T-SQL intégrés pour créer rapidement des instructions.
+SQL Operations Studio fournit plusieurs extraits de code T-SQL intégrés pour créer rapidement des instructions.
 
 
 1. Ouvrez un nouvel éditeur de requête en appuyant sur **Ctrl + N**.
@@ -117,7 +117,7 @@ La procédure stockée est maintenant créée et le **résultats** volet affiche
 
 ## <a name="use-peek-definition"></a>Utilisez l’aperçu de définition 
 
-Opérations de SQL Studio offre la possibilité pour afficher une définition d’objets à l’aide de la fonctionnalité de définition d’aperçu. Cette section crée une seconde procédure stockée et utilise un aperçu de définition pour voir quels sont les colonnes dans une table pour créer rapidement le corps de la procédure stockée.
+SQL Operations Studio offre la possibilité pour afficher une définition d’objets à l’aide de la fonctionnalité de définition d’aperçu. Cette section crée une seconde procédure stockée et utilise un aperçu de définition pour voir quels sont les colonnes dans une table pour créer rapidement le corps de la procédure stockée.
 
 1. Ouvrez un nouvel éditeur en appuyant sur **Ctrl + N**. 
 
@@ -185,7 +185,7 @@ Opérations de SQL Studio offre la possibilité pour afficher une définition d�
 
 ## <a name="use-save-query-results-as-json-to-test-the-setcustomer-stored-procedure"></a>Utilisez Enregistrer les résultats de la requête au format JSON pour tester la procédure stockée de setCustomer
 
-Le *setCustomer* procédure stockée créée dans la section précédente requiert JSON données être passées dans le  *@json_val*  paramètre. Cette section montre comment obtenir un bit correctement mis en forme de JSON à passer dans le paramètre, vous pouvez tester la procédure stockée.
+Le *setCustomer* procédure stockée créée dans la section précédente requiert JSON données être passées dans le *@json_val* paramètre. Cette section montre comment obtenir un bit correctement mis en forme de JSON à passer dans le paramètre, vous pouvez tester la procédure stockée.
 
 1. Dans le **serveurs** droit de la barre latérale du *dbo. Clients* de table et cliquez sur **sélectionnez 1000 lignes du haut**.
 

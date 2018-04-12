@@ -1,6 +1,6 @@
 ---
-title: Notes de publication Microsoft SQL Studio Operations (version préliminaire) | Documents Microsoft
-description: Notes de publication Microsoft SQL Studio Operations (version préliminaire)
+title: Notes de publication Microsoft SQL Operations Studio (preview) | Documents Microsoft
+description: Notes de publication Microsoft SQL Operations Studio (preview)
 ms.custom: tools|sos
 ms.date: 03/28/2018
 ms.prod: sql-non-specified
@@ -20,7 +20,7 @@ ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 03/28/2018
 ---
-# <a name="sql-operations-studio-preview-release-notes"></a>Notes de publication SQL opérations Studio (version préliminaire)
+# <a name="sql-operations-studio-preview-release-notes"></a>Notes de publication SQL Operations Studio (preview)
 
 **[Télécharger la version préliminaire publique de mars](download.md)**
 
@@ -34,7 +34,7 @@ Le *mars Public Preview* continue à résoudre les problèmes de GitHub supérie
 - Améliorer le modèle d’extensibilité du tableau de bord pour prendre en charge les analyses à onglets et volets de configuration.
    - Gestionnaire d’extensions permet simple acquisition d’extensions.
    - Extensions de tableau de bord pour sp_whoisactive de [whoisactive.com](http://www.whoisactive.com).
-   - Pour plus d’informations, consultez [étendre les fonctionnalités des opérations de SQL Studio](extensions.md).
+   - Pour plus d’informations, consultez [étendre les fonctionnalités des SQL Operations Studio](extensions.md).
 - Ajouter d’autres [API d’extensibilité pour la connexion et l’objet explorer](https://github.com/Microsoft/sqlopsstudio/wiki/Extensibility-API) management.
 - Corrigez les clients importants ayant un impact sur [GitHub problèmes](https://github.com/Microsoft/sqlopsstudio/issues).
 

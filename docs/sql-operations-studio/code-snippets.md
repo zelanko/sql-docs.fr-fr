@@ -1,6 +1,6 @@
 ---
-title: "Créer des extraits de code dans les opérations de SQL Studio (version préliminaire) | Documents Microsoft"
-description: "Découvrez comment créer et utiliser des extraits de code SQL dans SQL opérations Studio (version préliminaire)"
+title: Créer des extraits de code dans les SQL Operations Studio (preview) | Documents Microsoft
+description: Découvrez comment créer et utiliser des extraits de code SQL dans SQL Operations Studio (preview)
 ms.custom: tools|sos
 ms.date: 11/15/2017
 ms.reviewer: alayu; erickang; sstein
@@ -8,7 +8,7 @@ ms.prod: sql-non-specified
 ms.suite: sql
 ms.prod_service: sql-tools
 ms.component: sos
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 author: stevestein
 ms.author: sstein

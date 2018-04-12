@@ -1,6 +1,6 @@
 ---
-title: "Démarrage rapide : Se connecter et de requêtes SQL Server à l’aide des opérations de SQL Studio (version préliminaire) | Documents Microsoft"
-description: "Ce démarrage rapide montre comment utiliser les Studio des opérations SQL (aperçu) pour se connecter à SQL Server et d’exécuter une requête"
+title: 'Démarrage rapide : Se connecter et de requêtes SQL Server à l’aide des SQL Operations Studio (preview) | Documents Microsoft'
+description: Ce démarrage rapide montre comment utiliser les SQL Operations Studio (preview) pour se connecter à SQL Server et d’exécuter une requête
 ms.custom: tools|sos
 ms.date: 03/08/2018
 ms.prod: sql-non-specified
@@ -8,7 +8,7 @@ ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
 ms.component: sos
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: quickstart
 author: yualan
 ms.author: alayu
@@ -38,8 +38,8 @@ Si vous n’avez pas accès à un serveur SQL Server, sélectionnez votre platef
 ## <a name="connect-to-a-sql-server"></a>Se connecter à un serveur SQL Server
 
    
-1. Démarrer  **[!INCLUDE[name-sos](../includes/name-sos-short.md)]** .
-1. La première fois que vous exécutez  *[!INCLUDE[name-sos](../includes/name-sos-short.md)]*  le **connexion** boîte de dialogue s’ouvre. Si le **connexion** boîte de dialogue ne s’ouvre, cliquez sur le **nouvelle connexion** icône dans le **serveurs** page :
+1. Démarrer **[!INCLUDE[name-sos](../includes/name-sos-short.md)]**.
+1. La première fois que vous exécutez *[!INCLUDE[name-sos](../includes/name-sos-short.md)]* le **connexion** boîte de dialogue s’ouvre. Si le **connexion** boîte de dialogue ne s’ouvre, cliquez sur le **nouvelle connexion** icône dans le **serveurs** page :
    
    ![Nouvelle icône de connexion](media/quickstart-sql-server/new-connection-icon.png)
 

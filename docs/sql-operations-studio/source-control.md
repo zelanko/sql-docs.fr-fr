@@ -1,6 +1,6 @@
 ---
-title: Contrôle de code source dans SQL Operations Studio (version préliminaire) | Documents Microsoft
-description: Découvrez comment configurer le contrôle de code source dans SQL Operations Studio (version préliminaire).
+title: Contrôle de code source dans SQL Operations Studio (preview) | Documents Microsoft
+description: Découvrez comment configurer le contrôle de code source dans SQL Operations Studio (preview).
 ms.custom: tools|sos
 ms.date: 11/15/2017
 ms.prod: sql-non-specified

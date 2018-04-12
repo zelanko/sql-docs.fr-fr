@@ -1,6 +1,6 @@
 ---
-title: "Opérations de SQL Studio (version préliminaire) FAQ | Documents Microsoft"
-description: "Forum aux questions (FAQ) pour les opérations de SQL Studio (version préliminaire)."
+title: SQL Operations Studio (preview) FAQ | Documents Microsoft
+description: Forum aux questions (FAQ) pour les SQL Operations Studio (preview).
 ms.custom: tools|sos
 ms.date: 11/15/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,7 @@ ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
 ms.component: sos
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 author: stevestein
 ms.author: sstein

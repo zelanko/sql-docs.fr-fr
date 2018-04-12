@@ -1,6 +1,6 @@
 ---
-title: "Accéder rapidement aux analyses et tâches courantes dans les opérations de SQL Studio (version préliminaire) | Documents Microsoft"
-description: "En savoir plus sur l’affichage des widgets intéressante dans Studio des opérations SQL (version préliminaire)."
+title: Accéder rapidement aux analyses et tâches courantes dans les SQL Operations Studio (preview) | Documents Microsoft
+description: En savoir plus sur l’affichage des widgets intéressante dans SQL Operations Studio (preview).
 ms.custom: tools|sos
 ms.date: 11/15/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,7 @@ ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
 ms.component: sos
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 author: yualan
 ms.author: alayu

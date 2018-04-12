@@ -1,6 +1,6 @@
 ---
-title: "Sauvegarder et restaurer une base de données à l’aide des opérations de SQL Studio (version préliminaire) | Documents Microsoft"
-description: "Découvrez comment sauvegarder et restaurer une base de données à l’aide des opérations de SQL Studio (version préliminaire)"
+title: Sauvegarder et restaurer une base de données à l’aide des SQL Operations Studio (preview) | Documents Microsoft
+description: Découvrez comment sauvegarder et restaurer une base de données à l’aide des SQL Operations Studio (preview)
 ms.custom: tools|sos
 ms.date: 11/15/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,7 @@ ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
 ms.component: sos
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: tutorial
 author: erickangMSFT
 ms.author: erickang

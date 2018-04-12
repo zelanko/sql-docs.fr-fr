@@ -1,6 +1,6 @@
 ---
-title: Étendre les fonctionnalités des opérations de SQL Studio (version préliminaire) | Documents Microsoft
-description: Ajouter des extensions à des opérations de SQL Studio (version préliminaire)
+title: Étendre les fonctionnalités des SQL Operations Studio (preview) | Documents Microsoft
+description: Ajouter des extensions à des SQL Operations Studio (preview)
 ms.custom: tools|sos
 ms.date: 03/28/2018
 ms.reviewer: alayu; erickang; sstein
@@ -24,10 +24,10 @@ ms.lasthandoff: 03/28/2018
 
 Extensions de [!INCLUDE[name-sos](../includes/name-sos-short.md)] fournissent un moyen simple d’ajouter des fonctionnalités à la base de [!INCLUDE[name-sos](../includes/name-sos-short.md)] installation. 
 
-Extensions sont fournies par l’équipe SQL opérations Studio (Microsoft), ainsi que la Communauté 3e (vous !). Pour plus d’informations sur la création d’extensions, consultez [prise en main d’extensibilité](https://github.com/Microsoft/sqlopsstudio/wiki/Getting-started-with-Extensibility).
+Extensions sont fournies par l’équipe SQL Operations Studio (Microsoft), ainsi que la Communauté 3e (vous !). Pour plus d’informations sur la création d’extensions, consultez [prise en main d’extensibilité](https://github.com/Microsoft/sqlopsstudio/wiki/Getting-started-with-Extensibility).
 
 
-## <a name="add-sql-operations-studio-extensions"></a>Ajouter des extensions de Studio des opérations SQL
+## <a name="add-sql-operations-studio-extensions"></a>Ajouter des extensions de SQL Operations Studio
 
 1. Pour ouvrir le Gestionnaire d’extensions et accéder à des extensions disponibles, sélectionnez l’icône des extensions ou **Extensions** dans les **vue** menu.
 2. Sélectionnez une extension disponible pour afficher ses détails.

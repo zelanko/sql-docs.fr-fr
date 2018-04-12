@@ -1,6 +1,6 @@
 ---
-title: "Créer et personnaliser des raccourcis clavier dans Studio des opérations SQL (version préliminaire) | Documents Microsoft"
-description: "Découvrez comment créer et personnaliser des raccourcis clavier dans Studio des opérations SQL (version préliminaire)."
+title: Créer et personnaliser des raccourcis clavier dans SQL Operations Studio (preview) | Documents Microsoft
+description: Découvrez comment créer et personnaliser des raccourcis clavier dans SQL Operations Studio (preview).
 ms.custom: tools|sos
 ms.date: 11/15/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,7 @@ ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
 ms.component: sos
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 author: stevestein
 ms.author: sstein

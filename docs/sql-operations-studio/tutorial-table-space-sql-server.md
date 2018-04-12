@@ -1,6 +1,6 @@
 ---
-title: "Didacticiel : Activer la table d’utilisation exemple insight le widget d’espace dans les opérations de SQL Studio (version préliminaire) | Documents Microsoft"
-description: "Ce didacticiel montre comment activer la table d’utilisation exemple insight le widget d’espace sur le tableau de bord de base de données SQL opérations Studio (version préliminaire)."
+title: 'Didacticiel : Activer la table d’utilisation exemple insight le widget d’espace dans les SQL Operations Studio (preview) | Documents Microsoft'
+description: Ce didacticiel montre comment activer la table d’utilisation exemple insight le widget d’espace sur le tableau de bord de base de données SQL Operations Studio (preview).
 ms.custom: tools|sos
 ms.date: 03/19/2018
 ms.prod: sql-non-specified
@@ -8,7 +8,7 @@ ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
 ms.component: sos
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: tutorial
 author: erickangMSFT
 ms.author: erickang

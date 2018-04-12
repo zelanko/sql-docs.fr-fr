@@ -1,6 +1,6 @@
 ---
-title: "Démarrage rapide : Se connecter et interroger un entrepôt de données SQL Azure à l’aide des opérations de SQL Studio (version préliminaire) | Documents Microsoft"
-description: "Ce démarrage rapide montre comment utiliser les opérations de SQL Studio (version préliminaire) pour vous connecter à une base de données SQL et exécuter une requête"
+title: 'Démarrage rapide : Se connecter et interroger un entrepôt de données SQL Azure à l’aide des SQL Operations Studio (preview) | Documents Microsoft'
+description: Ce démarrage rapide montre comment utiliser les SQL Operations Studio (preview) pour vous connecter à une base de données SQL et exécuter une requête
 ms.custom: tools|sos
 ms.date: 03/08/2018
 ms.prod: sql-non-specified
@@ -8,7 +8,7 @@ ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
 ms.component: sos
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: quickstart
 author: yualan
 ms.author: alayu
@@ -56,7 +56,7 @@ Utilisez [!INCLUDE[name-sos](../includes/name-sos-short.md)] pour établir une c
 
    ![Nouvelle icône de connexion](media/quickstart-sql-dw/new-connection-screen.png) 
 
-3. Si votre serveur n’a pas une règle de pare-feu autorisant Studio des opérations SQL pour se connecter, le **créer une nouvelle règle de pare-feu** s’ouvre. Remplissez le formulaire pour créer une règle de pare-feu. Pour plus d’informations, consultez [des règles de pare-feu](https://docs.microsoft.com/azure/sql-database/sql-database-firewall-configure).
+3. Si votre serveur n’a pas une règle de pare-feu autorisant SQL Operations Studio pour se connecter, le **créer une nouvelle règle de pare-feu** s’ouvre. Remplissez le formulaire pour créer une règle de pare-feu. Pour plus d’informations, consultez [des règles de pare-feu](https://docs.microsoft.com/azure/sql-database/sql-database-firewall-configure).
 
    ![Nouvelle règle de pare-feu](media/quickstart-sql-dw/firewall.png)  
 
