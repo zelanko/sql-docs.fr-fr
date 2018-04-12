@@ -33,18 +33,18 @@ Pour afficher tous les raccourcis clavier actuellement définis :
 
 Ouvrez l'éditeur des **raccourcis clavier** à partir du menu **Fichier** : **Fichier** > **Préférences**  > **Raccourcis clavier** (**[!INCLUDE[name-sos](../includes/name-sos-short.md)]** > **Préférences** > **Raccourcis clavier** sur Mac).
 
-En plus d’afficher les combinaisons de touches actuelle, l'éditeur de **Raccourcis clavier** répertorie les commandes disponibles qui n’ont pas de raccourcis clavier définis. L'éditeur de **Raccourcis clavier** permet de modifier, supprimer, réinitialiser et définir des combinaisons de touches de nouveau.  
+En plus d’afficher les combinaisons de touches actuelle, l'éditeur de **Raccourcis clavier** répertorie les commandes disponibles qui n’ont pas de raccourcis clavier définis. L'éditeur de **Raccourcis clavier** permet de modifier, supprimer, réinitialiser et définir de nouvelles combinaisons de touches.
 
 
 ## <a name="edit-existing-keyboard-shortcuts"></a>Modifier les raccourcis clavier existants
 
 Pour modifier la combinaison de touches pour un raccourci clavier existant :
 
-1. Recherchez le raccourci clavier que vous souhaitez modifier à l’aide de la zone de recherche ou faites défiler la liste.
+1. Recherchez le raccourci clavier que vous souhaitez modifier à l’aide de la zone de recherche ou en faisant défiler la liste.
    > [!TIP]
    > Rechercher par clé, par commande, par source, etc. pour retourner tous les raccourcis clavier relevant.
 
-2. Cliquez sur l’entrée souhaitée, puis sélectionnez **Modifier le raccourci clavier**
+2. Cliquez avec le bouton droit sur l’entrée souhaitée, puis sélectionnez **Modifier le raccourci clavier**
 
    ![Modifier le raccourci clavier](media/keyboard-shortcuts/change-keybinding.png)
 
