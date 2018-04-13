@@ -31,7 +31,7 @@ Cet article fournit les étapes pour rapidement afficher, modifier et créer des
 
 Pour afficher tous les raccourcis clavier actuellement définis :
 
-Ouvrez le **raccourcis clavier** éditeur à partir de la **fichier** menu : **fichier** > **préférences**  >   **Raccourcis clavier** (**[!INCLUDE[name-sos](../includes/name-sos-short.md)]** > **préférences** > **raccourcis clavier** sur Mac).
+Ouvrez l'éditeur des **raccourcis clavier** à partir du menu **Fichier** : **Fichier** > **Préférences** > **Raccourcis clavier** (**[!INCLUDE[name-sos](../includes/name-sos-short.md)]** > **Préférences** > **Raccourcis clavier** sur Mac).
 
 En plus d’afficher les combinaisons de touches actuelle, le **raccourcis clavier** éditeur répertorie les commandes disponibles qui n’ont pas de raccourcis clavier définis. Le **raccourcis clavier** éditeur permet de modifier, supprimer, réinitialiser et définir des combinaisons de touches de nouveau.  
 
@@ -40,15 +40,15 @@ En plus d’afficher les combinaisons de touches actuelle, le **raccourcis clavi
 
 Pour modifier la combinaison de touches pour un raccourci clavier existant :
 
-1. Recherchez le raccourci clavier que vous souhaitez modifier à l’aide de la zone de recherche ou de faire défiler la liste.
+1. Recherchez le raccourci clavier que vous souhaitez modifier à l’aide de la zone de recherche ou en faisant défiler la liste.
    > [!TIP]
    > Rechercher par clé, par commande, par source, etc. pour retourner tous les raccourcis clavier appropriés.
 
 1. Cliquez sur l’entrée souhaitée, puis sélectionnez **combinaison de touches de modification**
 
-   ![modifier le raccourci clavier](media/keyboard-shortcuts/change-keybinding.png)
+   ![Modifier le raccourci clavier](media/keyboard-shortcuts/change-keybinding.png)
 
-1. Appuyez sur la combinaison désirée de clés, puis appuyez sur **entrée** à l’enregistrer. 
+1. Appuyez sur la combinaison de touches désirée, puis appuyez sur **Entrée** pour l’enregistrer. 
 
    ![enregistrer le raccourci clavier](media/keyboard-shortcuts/save-keybinding.png)
 
@@ -58,8 +58,8 @@ Pour créer des raccourcis clavier :
 
 1. Cliquez sur une commande qui n’ont de toute combinaison de touches et sélectionnez **ajouter la combinaison de touches**.
 
-   ![créer le raccourci clavier](media/keyboard-shortcuts/add-keybinding.png)
+   ![Créer un raccourci clavier](media/keyboard-shortcuts/add-keybinding.png)
 
-1. Appuyez sur la combinaison désirée de clés, puis appuyez sur **entrée** à l’enregistrer.
+1. Appuyez sur la combinaison de touches désirée, puis appuyez sur **Entrée** pour l’enregistrer.
 
 
