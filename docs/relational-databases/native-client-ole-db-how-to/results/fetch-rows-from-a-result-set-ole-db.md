@@ -1,20 +1,20 @@
 ---
-title: "Extraire des lignes d’un jeu de résultats (OLE DB) | Documents Microsoft"
-ms.custom: 
+title: Extraire des lignes d’un jeu de résultats (OLE DB) | Documents Microsoft
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: native-client-ole-db-how-to
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - rows [OLE DB]
 ms.assetid: 8e9916a5-61e1-468e-8a5c-1ab8b5110737
-caps.latest.revision: 
+caps.latest.revision: 18
 author: MightyPen
 ms.author: genemi
 manager: craigg
@@ -25,7 +25,7 @@ ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 01/24/2018
 ---
-# <a name="fetch-rows-from-a-result-set-ole-db"></a>Extraire des lignes à partir d'un jeu de résultats (OLE DB)
+# <a name="fetch-rows-from-a-result-set-ole-db"></a>Extraire des lignes à partir d'un jeu de résultats (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
@@ -385,6 +385,6 @@ int ProcessResultSet() {
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Rubriques de procédures de traitement des résultats &#40; OLE DB &#41;](../../../relational-databases/native-client-ole-db-how-to/results/processing-results-how-to-topics-ole-db.md)  
+ [Rubriques de procédures de traitement des résultats & #40 ; OLE DB & #41 ;](../../../relational-databases/native-client-ole-db-how-to/results/processing-results-how-to-topics-ole-db.md)  
   
   
