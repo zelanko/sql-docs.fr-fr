@@ -60,7 +60,7 @@ Si votre source de données est Excel, consultez [Fournir une requête source po
 > [!NOTE]
 > Si le temps requis pour vérifier la syntaxe de l’instruction dépasse la valeur du délai d’attente de 30 secondes, l’analyse s’arrête et génère une erreur. Vous ne pouvez avancer dans l’Assistant tant que l’analyse n’a pas réussi. Pour éviter l’expiration du délai, d’attente une solution consiste à créer une vue de base de données basée sur la requête à utiliser, puis à interroger la vue à partir de l’Assistant au lieu d’entrer directement le texte de requête.  
   
- **...**  
+ **Parcourir**  
  Sélectionnez un fichier enregistré qui contient le texte d’une requête SQL par l’intermédiaire de la boîte de dialogue **Ouvrir**. La sélection d’un fichier copie le texte du fichier dans la zone de texte **Instruction SQL** .  
  
 ## <a name="excelQueries"></a> Fournir une requête source pour Excel
