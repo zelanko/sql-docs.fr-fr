@@ -1,16 +1,16 @@
 ---
-title: sp_syscollector_run_collection_set (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: sp_syscollector_run_collection_set (Transact-SQL) | Documents Microsoft
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_syscollector_run_collection_set_TSQL
@@ -21,16 +21,16 @@ helpviewer_keywords:
 - sp_syscollector_run_collection_set
 - data collector [SQL Server], stored procedures
 ms.assetid: 7bbaee48-dfc7-45c0-b11f-c636b6a7e720
-caps.latest.revision: 
+caps.latest.revision: 9
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 749ab839921de15a534be8a091f98dee64197ae7
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 768067dbc8616241003897c1791e0f2bae73706c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spsyscollectorruncollectionset-transact-sql"></a>sp_syscollector_run_collection_set (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -65,7 +65,7 @@ sp_syscollector_run_collection_set [[ @collection_set_id = ] collection_set_id ]
 ## <a name="remarks"></a>Notes  
  Soit *collection_set_id* ou *nom* doit avoir une valeur, les deux ne peut pas être NULL.  
   
- Cette procédure démarre la collection et tâches de téléchargement pour la collection spécifiée jeu et démarre immédiatement le travail de l’agent de collecte si l’ensemble de la collection a son  **@collection_mode**  non mis en cache (1) la valeur. Pour plus d’informations, consultez [sp_syscollector_create_collection_set &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-syscollector-create-collection-set-transact-sql.md).  
+ Cette procédure démarre la collection et tâches de téléchargement pour la collection spécifiée jeu et démarre immédiatement le travail de l’agent de collecte si l’ensemble de la collection a son **@collection_mode** non mis en cache (1) la valeur. Pour plus d’informations, consultez [sp_syscollector_create_collection_set &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-create-collection-set-transact-sql.md).  
   
  sp_sycollector_run_collection_set peut également être utilisé pour exécuter un jeu d'éléments de collection sans planification.  
   

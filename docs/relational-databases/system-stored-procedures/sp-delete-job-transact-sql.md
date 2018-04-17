@@ -1,16 +1,16 @@
 ---
-title: sp_delete_job (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: sp_delete_job (Transact-SQL) | Documents Microsoft
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_delete_job
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_delete_job
 ms.assetid: b85db6e4-623c-41f1-9643-07e5ea38db09
-caps.latest.revision: 
+caps.latest.revision: 43
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: dc32f2328e4153f79a7eb1c7e4115e455078791c
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: c578243ec78605216a3cb5c640e6779e712fec46
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spdeletejob-transact-sql"></a>sp_delete_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,19 +49,19 @@ sp_delete_job { [ @job_id = ] job_id | [ @job_name = ] 'job_name' } ,
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [ **@job_id=** ] *job_id*  
+ [  **@job_id=** ] *job_id*  
  Numéro d'identification du travail à supprimer. *job_id* est **uniqueidentifier**, avec NULL comme valeur par défaut.  
   
- [ **@job_name=** ] **'***job_name***'**  
+ [  **@job_name=** ] **'***job_name***'**  
  Nom du travail à supprimer. *job_name* est **sysname**, avec NULL comme valeur par défaut.  
   
 > [!NOTE]  
 >  Soit *job_id* ou *job_name*doit être spécifié ; ne peut pas être spécifiés.  
   
- [ **@originating_server=** ] **'***server***'**  
+ [  **@originating_server=** ] **'***server***'**  
  À usage interne uniquement.  
   
- [ **@delete_history=** ] *delete_history*  
+ [  **@delete_history=** ] *delete_history*  
  Spécifie s'il faut supprimer l'historique du travail. *delete_history* est **bits**, avec une valeur par défaut **1**. Lorsque *delete_history* est **1**, l’historique des travaux pour le travail est supprimé. Lorsque *delete_history* est **0**, l’historique des travaux n’est pas supprimé.  
   
  Notez que lorsqu’un travail est supprimé et l’historique n’est pas supprimé, des informations d’historique pour le travail seront affiche pas dans le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent utilisateur graphique historique de l’interface, mais les informations seront trouvent toujours dans le **sysjobhistory** de table dans le **msdb** base de données.  
@@ -76,9 +76,9 @@ sp_delete_job { [ @job_id = ] job_id | [ @job_name = ] 'job_name' } ,
  Aucun  
   
 ## <a name="remarks"></a>Notes  
- Le  **@originating_server**  argument est réservé à un usage interne.  
+ Le **@originating_server** argument est réservé à un usage interne.  
   
- Le  **@delete_unused_schedule**  argument fournit la compatibilité descendante avec les versions précédentes de SQL Server en supprimant automatiquement les planifications qui ne sont associées à aucun travail. Notez que, par défaut, ce paramètre permet la compatibilité amont. Pour conserver les planifications qui ne sont pas associées à une tâche, vous devez fournir la valeur **0** comme le  **@delete_unused_schedule**  argument.  
+ Le **@delete_unused_schedule** argument fournit la compatibilité descendante avec les versions précédentes de SQL Server en supprimant automatiquement les planifications qui ne sont associées à aucun travail. Notez que, par défaut, ce paramètre permet la compatibilité amont. Pour conserver les planifications qui ne sont pas associées à une tâche, vous devez fournir la valeur **0** comme le **@delete_unused_schedule** argument.  
   
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] est un outil dont l'interface graphique permet de gérer facilement les travaux. Son utilisation est recommandée pour créer et gérer l'infrastructure des travaux.  
   

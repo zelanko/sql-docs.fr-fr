@@ -1,8 +1,8 @@
 ---
-title: sp_add_schedule (Transact-SQL) | Microsoft Docs
+title: sp_add_schedule (Transact-SQL) | Documents Microsoft
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: system-stored-procedures
@@ -25,11 +25,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: df04306671a8e2a0f0ded0fc7482e56955102a83
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.openlocfilehash: 5ce5f60759175964885532cf9cd674dde3a693a3
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spaddschedule-transact-sql"></a>sp_add_schedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -64,7 +64,7 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
  [  **@schedule_name =** ] **'***nom_de_la_planification***'**  
  Nom de la planification. *nom_de_la_planification*est **sysname**, sans valeur par défaut.  
   
- [ **@enabled =** ] *enabled*  
+ [  **@enabled =** ] *activé*  
  Indique l'état actuel de la planification. *activé*est **tinyint**, avec une valeur par défaut **1** (activé). Si **0**, la planification n’est pas activée. Si la planification n'est pas activée, aucun travail n'est exécuté dans cette dernière.  
   
  [ **@freq_type =** ] *freq_type*  
@@ -80,7 +80,7 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
 |**64**|Lancé au démarrage du service SQLServerAgent|  
 |**128**|Exécution pendant une période d'inactivité de l'ordinateur.|  
   
- [ **@freq_interval =** ] *freq_interval*  
+ [  **@freq_interval =** ] *freq_interval*  
  Jours d’exécution du travail. *freq_interval* est **int**, avec une valeur par défaut **1**et varie en fonction de la valeur de *freq_type*.  
   
 |Valeur de *freq_type*|Effet sur *freq_interval*|  
@@ -103,7 +103,7 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
 |**0x4**|Minutes|  
 |**0x8**|Heures|  
   
- [ **@freq_subday_interval =** ] *freq_subday_interval*  
+ [  **@freq_subday_interval =** ] *freq_subday_interval*  
  Le nombre de *freq_subday_type* périodes entre chaque exécution d’un travail. *freq_subday_interval*est **int**, avec une valeur par défaut **0**. Remarque : l'intervalle doit être supérieur à 10 secondes. *freq_subday_interval* est ignoré dans les cas où *freq_subday_type* est égal à **1**.  
   
  [ **@freq_relative_interval =** ] *freq_relative_interval*  
@@ -127,13 +127,13 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
   
  Pour les planifications hebdomadaires ou mensuelles, l'agent ignore si active_start_date se situe dans le passé, et utilise à la place la date actuelle. Lorsqu'une planification de l'agent SQL est créée à l'aide de sp_add_schedule, il existe une option pour spécifier le paramètre active_start_date, qui correspond à la date à laquelle l'exécution du travail commencera. Si le type de planification est hebdomadaire ou mensuel et que le paramètre active_start_date est défini à une date située dans le passé, le paramètre active_start_date est ignoré et la date actuelle est utilisée pour active_start_date.  
   
- [ **@active_end_date =** ] *active_end_date*  
+ [  **@active_end_date =** ] *active_end_date*  
  Date à laquelle l'exécution d'un travail peut s'arrêter. *active_end_date*est **int**, avec une valeur par défaut **99991231**, ce qui indique le 31 décembre 9999. La mise en forme est la suivante : AAAAMMJJ.  
   
- [ **@active_start_time =** ] *active_start_time*  
+ [  **@active_start_time =** ] *heure_de_début_active*  
  L’heure sur n’importe quel jour entre *active_start_date* et *active_end_date* pour commencer l’exécution d’un travail. *heure_de_début_active*est **int**, avec une valeur par défaut **000000**, ce qui signifie 12:00:00 a.m. sur une horloge de 24 heures. Elle doit être au format HHMMSS.  
   
- [ **@active_end_time =** ] *active_end_time*  
+ [  **@active_end_time =** ] *heure_fin_active*  
  L’heure sur n’importe quel jour entre *active_start_date* et *active_end_date* pour arrêter l’exécution d’une tâche. *heure_fin_active*est **int**, avec une valeur par défaut **235959**, ce qui indique à 11:59:59 PM sur une horloge de 24 heures. Elle doit être au format HHMMSS.  
   
  [ **@owner_login_name**=] **'***owner_login_name***'**  

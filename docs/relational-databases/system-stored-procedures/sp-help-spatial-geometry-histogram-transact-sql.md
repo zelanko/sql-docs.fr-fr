@@ -1,16 +1,16 @@
 ---
 title: sp_help_spatial_geometry_histogram (Transact-SQL) | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_help_spatial_geometry_histogram
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_spatial_geometry_histogram
 ms.assetid: 036aaf61-df3e-40f7-aa4e-62983c5a37bd
-caps.latest.revision: 
+caps.latest.revision: 17
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5acd841815df5329fe79624174c00e2694e65781
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 85790a21cc513a2cb46276dca3ab918bf2db2b1c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sphelpspatialgeometryhistogram-transact-sql"></a>sp_help_spatial_geometry_histogram (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -83,10 +83,10 @@ sp_help_spatial_geometry_histogram [ @tabname =] 'tabname'
 |Nom de colonne|Type de données| Description|  
 |-----------------|---------------|-----------------|  
 |**cellid**|**int**|Représente l'ID unique de chaque cellule ; le comptage démarre à 1.|  
-|**cellule**|**geometry**|Polygone rectangulaire qui représente chaque cellule. La forme de cellule est identique à la forme de cellule utilisée pour l'indexation spatiale.|  
+|**Cellule**|**geometry**|Polygone rectangulaire qui représente chaque cellule. La forme de cellule est identique à la forme de cellule utilisée pour l'indexation spatiale.|  
 |**row_count**|**bigint**|Indique le nombre d'objets spatiaux qui touchent ou contiennent la cellule.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Utilisateur doit être un membre de la **public** rôle. Nécessite une autorisation READ ACCESS sur le serveur et l'objet.  
   
 ## <a name="remarks"></a>Notes  
@@ -162,6 +162,6 @@ sp_help_spatial_geometry_histogram [ @tabname =] 'tabname'
  `GO`  
   
 ## <a name="see-also"></a>Voir aussi  
- [Procédures &#40; stockées d’Index spatial Transact-SQL &#41;](http://msdn.microsoft.com/library/1be0f34e-3d5a-4a1f-9299-bd482362ec7a)  
+ [Les procédures stockées d’Index spatial &#40;Transact-SQL&#41;](http://msdn.microsoft.com/library/1be0f34e-3d5a-4a1f-9299-bd482362ec7a)  
   
   

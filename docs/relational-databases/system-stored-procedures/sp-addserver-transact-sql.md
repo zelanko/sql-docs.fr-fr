@@ -2,7 +2,7 @@
 title: sp_addserver (Transact-SQL) | Documents Microsoft
 ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: system-stored-procedures
@@ -28,11 +28,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 08224c1f35e0115ba3bb97f88b0a2a51f5e05a6a
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.openlocfilehash: a90fde54b2924d418265a9f752e31ecf3a463ffd
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spaddserver-transact-sql"></a>sp_addserver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,12 +51,12 @@ sp_addserver [ @server = ] 'server' ,
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [ **@server =** ] **'***server***'**  
+ [  **@server =** ] **'***server***'**  
  Indique le nom du serveur. Les noms de serveurs doivent être uniques et suivre les règles de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows concernant les noms des ordinateurs, bien que l'utilisation d'espaces ne soit pas autorisée. *server* est de type **sysname**et n'a pas de valeur par défaut.  
   
  Lorsque plusieurs instances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sont installés sur un ordinateur, chacune fonctionne comme s’il se trouve sur un serveur distinct. Spécifier une instance nommée en faisant référence à *server* en tant que *nomserveur\nominstance*.  
   
- [ **@local =** ] **'LOCAL'**  
+ [  **@local =** ] **'LOCAL'**  
  Spécifie que le serveur est ajouté comme un serveur local. **@local** est **varchar (10)**, avec NULL comme valeur par défaut. Spécification de **@local** en tant que **LOCAL** définit **@server** en tant que le nom du serveur local et le @@SERVERNAME fonction pour retourner la valeur de *server*.  
   
  Le programme d'installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] affecte à cette variable le nom de l'ordinateur. Par défaut, le nom d’ordinateur est les manière dont les utilisateurs se connectent à une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sans configuration supplémentaire nécessaire.  

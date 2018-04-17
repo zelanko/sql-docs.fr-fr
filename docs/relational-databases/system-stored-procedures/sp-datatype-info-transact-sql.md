@@ -1,16 +1,16 @@
 ---
 title: sp_datatype_info (Transact-SQL) | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_datatype_info_TSQL
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_datatype_info
 ms.assetid: 045f3b5d-6bb7-4748-8b4c-8deb4bc44147
-caps.latest.revision: 
+caps.latest.revision: 32
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 32edf386d51ab28ae453db75c4adc8067c747cff
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: c93dec5dc4f6ed8ed01244cd3c30c8725e91efce
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spdatatypeinfo-transact-sql"></a>sp_datatype_info (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ sp_datatype_info [ [ @data_type = ] data_type ]
  Version d'ODBC utilisée. *le paramètre version_odbc* est **tinyint**, avec la valeur par défaut est 2.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
- Aucune  
+ Aucun  
   
 ## <a name="result-sets"></a>Jeux de résultats  
   
@@ -63,9 +63,9 @@ sp_datatype_info [ [ @data_type = ] data_type ]
 |TYPE_NAME|**sysname**|Type de données dépendant du SGBD (système de gestion de base de données)|  
 |DATA_TYPE|**smallint**|Code pour le type ODBC sur lequel toutes les colonnes de ce type sont mappées.|  
 |PRECISION|**int**|Précision maximale du type de données de la source de données. La valeur NULL est retournée pour les types de données pour lesquels la précision n'est pas applicable. La valeur de retour pour la colonne PRECISION est en base 10.|  
-|LITERAL_PREFIX|**varchar (**32**)**|Caractères utilisés devant une constante. Par exemple, un guillemet simple (**'**) pour les types de caractères et 0 x pour le fichier binaire.|  
-|LITERAL_SUFFIX|**varchar (**32**)**|Caractères utilisés pour terminer une constante. Par exemple, un guillemet simple (**'**) pour les types caractère et binaire sans les guillemets.|  
-|CREATE_PARAMS|**varchar (**32**)**|Description des paramètres de création de ce type de données. Par exemple, **décimal** est « precision, scale », **float** est NULL, et **varchar** correspond à « max_length ».|  
+|LITERAL_PREFIX|**varchar(**32**)**|Caractères utilisés devant une constante. Par exemple, un guillemet simple (**'**) pour les types de caractères et 0 x pour le fichier binaire.|  
+|LITERAL_SUFFIX|**varchar(**32**)**|Caractères utilisés pour terminer une constante. Par exemple, un guillemet simple (**'**) pour les types caractère et binaire sans les guillemets.|  
+|CREATE_PARAMS|**varchar(**32**)**|Description des paramètres de création de ce type de données. Par exemple, **décimal** est « precision, scale », **float** est NULL, et **varchar** correspond à « max_length ».|  
 |NULLABLE|**smallint**|Spécifie la possibilité de contenir une valeur NULL.<br /><br /> 1 = Autorise les valeurs NULL<br /><br /> 0 = N'autorise pas les valeurs NULL|  
 |CASE_SENSITIVE|**smallint**|Spécifie le respect de la casse.<br /><br /> 1 = Toutes les colonnes de ce type respectent la casse (pour les classements).<br /><br /> 0 = Toutes les colonnes de ce type ne respectent pas la casse.|  
 |SEARCHABLE|**smallint**|Spécifie la capacité de recherche du type de colonne :<br /><br /> 1 = Recherche impossible.<br /><br /> 2 = Recherche possible avec LIKE.<br /><br /> 3 = Recherche possible avec WHERE.<br /><br /> 4 = Recherche possible avec WHERE ou LIKE.|  
@@ -84,7 +84,7 @@ sp_datatype_info [ [ @data_type = ] data_type ]
 ## <a name="remarks"></a>Notes  
  sp_datatype_info est équivalent à SQLGetTypeInfo dans ODBC. Les résultats retournés sont triés par DATA_TYPE, puis en fonction du niveau de précision de la concordance entre le type de données et le type de données ODBC SQL correspondant.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l'appartenance au rôle public.  
   
 ## <a name="examples"></a>Exemples  
@@ -98,7 +98,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Moteur de base de données stockée procédures &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [Procédures stockées du moteur de base de données &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [Types de données &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
  [Procédures stockées système &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

@@ -1,16 +1,16 @@
 ---
 title: sp_grantlogin (Transact-SQL) | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_grantlogin_TSQL
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_grantlogin
 ms.assetid: 0c873d99-c3bf-4eb1-948b-a46cb235ccd4
-caps.latest.revision: 
+caps.latest.revision: 27
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a28ab1b1611a2beff1bdc3c9707baa25a9cbaa89
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: a1a8e7090c97be67f71797b24151b4edf381f47c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spgrantlogin-transact-sql"></a>sp_grantlogin (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.lasthandoff: 11/27/2017
   Crée un compte de connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]Utilisez [CREATE LOGIN](../../t-sql/statements/create-login-transact-sql.md) à la place.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Utilisez [CREATE LOGIN](../../t-sql/statements/create-login-transact-sql.md) à la place.  
   
  ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -56,11 +56,11 @@ sp_grantlogin [@loginame=] 'login'
  0 (réussite) ou 1 (échec)  
   
 ## <a name="remarks"></a>Notes  
- **sp_grantlogin** appelle CREATE LOGIN, qui prend en charge des options supplémentaires. Pour plus d’informations sur la création de connexions SQL Server, consultez [CREATE LOGIN &#40; Transact-SQL &#41;](../../t-sql/statements/create-login-transact-sql.md)  
+ **sp_grantlogin** appelle CREATE LOGIN, qui prend en charge des options supplémentaires. Pour plus d’informations sur la création de connexions SQL Server, consultez [CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md)  
   
  **sp_grantlogin** ne peut pas être exécutée dans une transaction définie par l’utilisateur.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l'autorisation ALTER ANY LOGIN sur le serveur.  
   
 ## <a name="examples"></a>Exemples  
@@ -72,7 +72,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Sécurité stockée procédures &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
+ [Procédures stockées de sécurité &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md)   
  [Procédures stockées système &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

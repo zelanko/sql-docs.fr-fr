@@ -1,16 +1,16 @@
 ---
 title: sp_addextendedproc (Transact-SQL) | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_addextendedproc_TSQL
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_addextendedproc
 ms.assetid: c0d4b47b-a855-451e-90e5-5fb2d836ebfa
-caps.latest.revision: 
+caps.latest.revision: 33
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8c17007edd948c5d914c6fc2ad602fb4cebb7d13
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 5b0b6e5be52bb598fb218a6fd355515eaedb7593
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spaddextendedproc-transact-sql"></a>sp_addextendedproc (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -60,7 +60,7 @@ sp_addextendedproc [ @functname = ] 'procedure' ,
  0 (réussite) ou 1 (échec)  
   
 ## <a name="result-sets"></a>Jeux de résultats  
- Aucune  
+ Aucun  
   
 ## <a name="remarks"></a>Notes  
  Après la création d’une procédure stockée étendue, il doit être ajouté à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à l’aide de **sp_addextendedproc**. Pour plus d’informations, consultez [Ajout d’une procédure stockée étendue à SQL Server](../../relational-databases/extended-stored-procedures-programming/adding-an-extended-stored-procedure-to-sql-server.md).  
@@ -72,7 +72,7 @@ sp_addextendedproc [ @functname = ] 'procedure' ,
 > [!IMPORTANT]  
 >  Les DLL existantes qui n'ont pas été inscrites avec leur chemin complet ne fonctionneront plus après une mise à niveau vers [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Pour corriger le problème, utilisez **sp_dropextendedproc** pour annuler l’inscription de la DLL, puis inscrivez-la avec **sp_addextendedproc**, en spécifiant le chemin d’accès complet.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Seuls les membres de la **sysadmin** du rôle serveur fixe peuvent exécuter **sp_addextendedproc**.  
   
 ## <a name="examples"></a>Exemples  
@@ -88,8 +88,8 @@ EXEC sp_addextendedproc xp_hello, 'c:\xp_hello.dll';
  [EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md)   
  [GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md)   
  [REVOKE &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-transact-sql.md)   
- [sp_dropextendedproc &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-dropextendedproc-transact-sql.md)   
- [sp_helpextendedproc &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-helpextendedproc-transact-sql.md)   
+ [sp_dropextendedproc &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropextendedproc-transact-sql.md)   
+ [sp_helpextendedproc &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpextendedproc-transact-sql.md)   
  [Procédures stockées système &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

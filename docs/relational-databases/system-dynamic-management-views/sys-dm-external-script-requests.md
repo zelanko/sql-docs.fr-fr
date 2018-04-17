@@ -1,15 +1,15 @@
 ---
 title: Sys.dm_external_script_requests | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 06/24/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_external_script_requests
@@ -21,16 +21,16 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_external_script_requests dynamic management view
 ms.assetid: e7e7c50f-b8b2-403c-b8c8-1955da5636c3
-caps.latest.revision: 
+caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 55ac900238a49bcad4c0af31b7482b7381b1aadc
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 6b73281b970940caced870dbf75c78946f9f559b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdmexternalscriptrequests"></a>Sys.dm_external_script_requests
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ Renvoie une ligne pour chaque compte de travail actif qui exécute un script ext
   
 |Nom de colonne|Type de données| Description|  
 |-----------------|---------------|-----------------|  
-|external_script_request_id|**Identificateur unique**|ID du processus qui a envoyé la demande de script externe. Cela correspond à l’ID de processus tel que reçu par [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]|  
+|external_script_request_id|**Identificateur unique**|ID du processus qui a envoyé la demande de script externe. Cela correspond à l’ID de processus comme reçu par [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]|  
 |langue|**nvarchar**|Mot clé qui représente un langage de script pris en charge. Actuellement, seul `R` est pris en charge.|  
 |degree_of_parallelism|**int**|Nombre indiquant le nombre de traitements parallèles qui ont été créés. Cette valeur peut être différente du nombre de traitements parallèles qui ont été demandés.|  
 |external_user_name|**nvarchar**|Le compte de travail Windows sous lequel le script a été exécuté.|  
@@ -91,7 +91,7 @@ external_script_request_id  |langue  |degree_of_parallelism  |external_user_name
   
 ## <a name="see-also"></a>Voir aussi  
  [Fonctions et vues de gestion dynamique &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [Les fonctions et vues de gestion dynamique &#40; liées à l’exécution Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)  
+ [Fonctions et vues de gestion dynamique liées à l’exécution &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)  
 [sys.dm_external_script_execution_stats](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-execution-stats.md)
 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)  
   

@@ -1,16 +1,16 @@
 ---
 title: sp_helpdistributor_properties (Transact-SQL) | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helpdistributor_properties
 ms.assetid: ee267724-3244-49eb-84c9-f38dbefdd639
-caps.latest.revision: 
+caps.latest.revision: 14
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b5ce0b5b3e7e7bdb03fd0e36927a48c9dfcc8e7a
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: a738c9c7e8791295848799c50ccf2a6340f7595a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sphelpdistributorproperties-transact-sql"></a>sp_helpdistributor_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,10 +57,10 @@ sp_helpdistributor_properties
 ## <a name="remarks"></a>Notes  
  **sp_helpdistributor_properties** est utilisé avec tous les types de réplication.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Seuls les membres de la **sysadmin** , les membres du rôle serveur fixe le **db_owner** ou **replmonitor** du rôle de base de données fixe sur la base de données de distribution et les utilisateurs dans la liste d’accès de publication (PAL) pour une publication qui utilise ce serveur de distribution permettre exécuter **sp_helpdistributor_properties**.  
   
 ## <a name="see-also"></a>Voir aussi  
- [sp_changedistributor_property &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-changedistributor-property-transact-sql.md)  
+ [sp_changedistributor_property &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changedistributor-property-transact-sql.md)  
   
   

@@ -1,16 +1,16 @@
 ---
 title: sp_browsereplcmds (Transact-SQL) | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_browsereplcmds
 ms.assetid: 30abcb41-1d18-4f43-a692-4c80914c0450
-caps.latest.revision: 
+caps.latest.revision: 34
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9e7a2a18736c95d11447d2330ffbe48c99da3a2f
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 2e7bc94efc680663436b0cc77692c35aaa36bac7
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spbrowsereplcmds-transact-sql"></a>sp_browsereplcmds (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -69,7 +69,7 @@ sp_browsereplcmds [ [ @xact_seqno_start = ] 'xact_seqno_start' ]
  Spécifie si les commandes avec l’objet *article_id* sont retournées. *article_id* est **int**, avec NULL comme valeur par défaut.  
   
  [  **@command_id =**] *id_de_commande*  
- Est l’emplacement de la commande dans [MSrepl_commands &#40; Transact-SQL &#41; ](../../relational-databases/system-tables/msrepl-commands-transact-sql.md) à décoder. *id_de_commande* est **int**, avec NULL comme valeur par défaut. Si spécifié, tous les autres paramètres doivent être spécifiés en outre, et *xact_seqno_start*doit être identique à *xact_seqno_end*.  
+ Est l’emplacement de la commande dans [MSrepl_commands &#40;Transact-SQL&#41; ](../../relational-databases/system-tables/msrepl-commands-transact-sql.md) à décoder. *id_de_commande* est **int**, avec NULL comme valeur par défaut. Si spécifié, tous les autres paramètres doivent être spécifiés en outre, et *xact_seqno_start*doit être identique à *xact_seqno_end*.  
   
  [  **@agent_id =**] *agent_id*  
  Spécifie que seules les commandes correspondant à un Agent de réplication donné sont retournées. *éléments agent_id* est **int**, avec NULL comme valeur par défaut.  
@@ -84,7 +84,7 @@ sp_browsereplcmds [ [ @xact_seqno_start = ] 'xact_seqno_start' ]
   
 |Nom de colonne|Type de données| Description|  
 |-----------------|---------------|-----------------|  
-|**xact_seqno**|**varbinary (16)**|Numéro de séquence de la commande.|  
+|**xact_seqno**|**varbinary(16)**|Numéro de séquence de la commande.|  
 |**originator_srvname**|**sysname**|Serveur d'origine de la transaction.|  
 |**originator_db**|**sysname**|Base de données d'origine de la transaction.|  
 |**article_id**|**int**|ID de l’article.|  
@@ -93,8 +93,8 @@ sp_browsereplcmds [ [ @xact_seqno_start = ] 'xact_seqno_start' ]
 |**hashkey**|**int**|À usage interne uniquement|  
 |**originator_publication_id**|**int**|ID de la publication d'origine de la transaction.|  
 |**originator_db_version**|**int**|Version de la base de données d'origine de la transaction.|  
-|**originator_lsn**|**varbinary (16)**|Identifie le numéro séquentiel dans le journal (LSN) de la commande dans la publication d'origine. Utilisé dans la réplication transactionnelle d’égal à égal.|  
-|**commande**|**nvarchar (1024)**|[!INCLUDE[tsql](../../includes/tsql-md.md)]commande.|  
+|**originator_lsn**|**varbinary(16)**|Identifie le numéro séquentiel dans le journal (LSN) de la commande dans la publication d'origine. Utilisé dans la réplication transactionnelle d’égal à égal.|  
+|**commande**|**nvarchar(1024)**|[!INCLUDE[tsql](../../includes/tsql-md.md)] commande.|  
 |**id_de_commande**|**int**|ID de la commande dans [MSrepl_commands](../../relational-databases/system-tables/msrepl-commands-transact-sql.md).|  
   
  Les commandes longues peuvent être réparties entre plusieurs lignes dans l'ensemble de résultats.  
@@ -102,12 +102,12 @@ sp_browsereplcmds [ [ @xact_seqno_start = ] 'xact_seqno_start' ]
 ## <a name="remarks"></a>Notes  
  **sp_browsereplcmds** est utilisé dans la réplication transactionnelle.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Seuls les membres de la **sysadmin** rôle serveur fixe ou les membres de la **db_owner** ou **replmonitor** des rôles de base de données fixe sur la base de données de distribution peuvent exécuter **sp_browsereplcmds**.  
   
 ## <a name="see-also"></a>Voir aussi  
  [sp_replcmds &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replcmds-transact-sql.md)   
- [sp_replshowcmds &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-replshowcmds-transact-sql.md)   
+ [sp_replshowcmds &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replshowcmds-transact-sql.md)   
  [Procédures stockées système &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

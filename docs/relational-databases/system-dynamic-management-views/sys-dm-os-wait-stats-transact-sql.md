@@ -1,8 +1,8 @@
 ---
-title: sys.dm_os_wait_stats (Transact-SQL) | Microsoft Docs
+title: Sys.dm_os_wait_stats (Transact-SQL) | Documents Microsoft
 ms.custom: ''
 ms.date: 01/04/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: dmv's
@@ -27,11 +27,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: c37a8f78d18a3315c188959f2f8403ef055c3155
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 55eaa65cc99bdc2e25e860be65570be6c8e32bdd
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdmoswaitstats-transact-sql"></a>sys.dm_os_wait_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -94,7 +95,7 @@ Cette commande remet tous les compteurs à 0.
   
  Le tableau suivant récapitule les types d'attente que rencontrent les tâches.  
 
-|type | Description| 
+|Type | Description| 
 |-------------------------- |--------------------------| 
 |ABR |Identifié à titre d'information uniquement. Non pris en charge. La compatibilité future n'est pas garantie.| | 
 |AM_INDBUILD_ALLOCATION |TBD <br />**S'applique à**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
@@ -793,7 +794,7 @@ Cette commande remet tous les compteurs à 0.
 |REMOTE_DATA_ARCHIVE_SCHEMA_TASK_QUEUE |TBD <br /> **S'applique à**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |REPL_CACHE_ACCESS |Se produit durant la synchronisation sur un cache des articles de réplication. Lors de ces attentes, l'utilitaire de lecture du journal des réplications se bloque et les instructions de langage de définition de données (DDL - Data Definition Language) sur une table publiée sont bloquées.| 
 |REPL_HISTORYCACHE_ACCESS |TBD| 
-|REPL_SCHEMA_ACCESS |Se produit durant la synchronisation des informations de version du schéma de réplication. Cet état existe lorsque des instructions DDL sont exécutées sur l'objet répliqué et lorsque l'utilitaire de lecture du journal crée ou exploite le schéma avec version reposant sur une occurrence de DDL.| 
+|REPL_SCHEMA_ACCESS |Se produit durant la synchronisation des informations de version du schéma de réplication. Cet état existe lorsque des instructions DDL sont exécutées sur l'objet répliqué et lorsque l'utilitaire de lecture du journal crée ou exploite le schéma avec version reposant sur une occurrence de DDL. Si vous avez plusieurs bases de données publiées sur un serveur de publication avec la réplication transactionnelle et de bases de données publiées sont très actifs, conflits peuvent être consultés sur ce type d’attente.| 
 |REPL_TRANFSINFO_ACCESS |TBD <br /> **S'applique à**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |REPL_TRANHASHTABLE_ACCESS |TBD| 
 |REPL_TRANTEXTINFO_ACCESS |TBD <br /> **S'applique à**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
@@ -1029,7 +1030,7 @@ Cette commande remet tous les compteurs à 0.
     
  [Vues de gestion dynamique liées à système d’exploitation SQL Server &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)   
  [sys.dm_exec_session_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-session-wait-stats-transact-sql.md)   
- [sys.dm_db_wait_stats &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-wait-stats-azure-sql-database.md)  
+ [Sys.dm_db_wait_stats &#40;base de données SQL Azure&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-wait-stats-azure-sql-database.md)  
   
   
 

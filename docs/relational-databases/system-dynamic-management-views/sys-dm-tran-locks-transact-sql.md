@@ -1,8 +1,8 @@
 ---
-title: sys.dm_tran_locks (Transact-SQL) | Microsoft Docs
+title: Sys.dm_tran_locks (Transact-SQL) | Documents Microsoft
 ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: dmv's
@@ -27,11 +27,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ec60197ba99cf24e0da74fd3b887b81d5cd0e44c
-ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 5e4552d7acab5640a6e6b8210b73eff20bf963d0
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdmtranlocks-transact-sql"></a>sys.dm_tran_locks (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -94,7 +95,7 @@ Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], nécessite le `VIEW DATABA
   
  Il n'est pas possible de distinguer plusieurs curseurs d'une même session qui sont traités comme une seule entité.  
   
- Les transactions distribuées non associées à un ID de session sont des transactions orphelines. L'ID de session -2 leur est attribué. Pour plus d’informations, consultez [KILL &#40; Transact-SQL &#41; ](../../t-sql/language-elements/kill-transact-sql.md).  
+ Les transactions distribuées non associées à un ID de session sont des transactions orphelines. L'ID de session -2 leur est attribué. Pour plus d’informations, consultez [KILL & #40 ; Transact-SQL & #41 ; ](../../t-sql/language-elements/kill-transact-sql.md).  
   
 ## <a name="resource-details"></a>Détails des ressources  
  Le tableau suivant répertorie les ressources qui sont représentées dans le **resource_associated_entity_id** colonne.  
@@ -206,7 +207,7 @@ Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], nécessite le `VIEW DATABA
 |DATABASE|Non applicable|ID de base de données est déjà disponible dans le **resource_database_id** colonne.|  
 |FILE|<file_id>|ID du fichier représenté par cette ressource.|  
 |OBJECT|<object_id>|ID de l'objet représenté par cette ressource. Cet objet peut être n’importe quel objet figurant dans **sys.objects**, pas seulement d’une table.|  
-|PAGE|<file_id>:<page_in_file>|Représente le fichier et l'ID de la page qui est représentée par cette ressource.|  
+|PAGE|< file_id > : < page_in_file >|Représente le fichier et l'ID de la page qui est représentée par cette ressource.|  
 |KEY|<hash_value>|Représente un hachage des colonnes clés de la ligne représentée par cette ressource.|  
 |EXTENT|<file_id>:<page_in_file>|Représente le fichier et l'ID de la page de l'étendue représentée par cette ressource. L'ID d'étendue est identique à l'ID de la première page de l'étendue.|  
 |RID|<file_id>:<page_in_file>:<row_on_page>|Représente l'ID de page et l'ID de ligne représentée par cette ressource. Remarquez que si l'ID de l'objet associé est égal à 99, cette ressource représente l'une des huit pages mélangées de la première page IAM d'une chaîne IAM.|  

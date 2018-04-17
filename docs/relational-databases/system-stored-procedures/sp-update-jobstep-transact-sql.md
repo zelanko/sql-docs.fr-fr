@@ -1,8 +1,8 @@
 ---
-title: sp_update_jobstep (Transact-SQL) | Microsoft Docs
+title: sp_update_jobstep (Transact-SQL) | Documents Microsoft
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: system-stored-procedures
@@ -25,11 +25,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: c81c22e3fb6de374b378df4ef52b316efe65fdb6
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.openlocfilehash: 196ef988c33ad6b039af73e498ffba85bc1b2f7e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spupdatejobstep-transact-sql"></a>sp_update_jobstep (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -68,7 +68,7 @@ sp_update_jobstep
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [ **@job_id =**] *job_id*  
+ [  **@job_id =**] *job_id*  
  Numéro d'identification du travail auquel l'étape appartient. *job_id*est **uniqueidentifier**, avec NULL comme valeur par défaut. Soit *job_id* ou *job_name* doit être spécifié, mais ne peut pas être spécifiés.  
   
  [  **@job_name =**] **'***job_name***'**  
@@ -77,19 +77,19 @@ sp_update_jobstep
  [ **@step_id =**] *step_id*  
  Numéro d'identification de l'étape d'un travail à modifier. Il est impossible de modifier ce numéro. *l’argument id_étape*est **int**, sans valeur par défaut.  
   
- [ **@step_name =**] **'***step_name***'**  
+ [  **@step_name =**] **'***nom_de_l***'**  
  Nouveau nom de l'étape. *nom_de_l*est **sysname**, avec NULL comme valeur par défaut.  
   
- [ **@subsystem =**] **'***subsystem***'**  
+ [  **@subsystem =**] **'***sous-système***'**  
  Sous-système utilisé par l’Agent Microsoft SQL Server pour exécuter *commande*. *sous-système* est **nvarchar (40)**, avec NULL comme valeur par défaut.  
   
- [ **@command =**] **'***command***'**  
+ [  **@command =**] **'***commande***'**  
  Les commandes à exécuter via *sous-système*. *commande* est **nvarchar (max)**, avec NULL comme valeur par défaut.  
   
  [  **@additional_parameters =**] **'***paramètres***'**  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
- [ **@cmdexec_success_code =**] *success_code*  
+ [  **@cmdexec_success_code =**] *code_succès*  
  La valeur retournée par une **CmdExec** commande du sous-système pour indiquer que *commande* exécutée avec succès. *code_succès* est **int**, avec NULL comme valeur par défaut.  
   
  [ **@on_success_action =**] *success_action*  
@@ -105,7 +105,7 @@ sp_update_jobstep
  [ **@on_success_step_id =**] *success_step_id*  
  Le numéro d’identification de l’étape du travail à exécuter si l’étape réussit et *action_succès* est **4**. *id_étape_succès* est **int**, avec NULL comme valeur par défaut.  
   
- [ **@on_fail_action =**] *fail_action*  
+ [  **@on_fail_action =**] *action_échec*  
  L’action à exécuter si l’étape échoue. *action_échec* est **tinyint**, avec NULL comme valeur par défaut et peut avoir l’une des valeurs suivantes.  
   
 |Valeur|Description (action)|  
@@ -115,16 +115,16 @@ sp_update_jobstep
 |**3**|Passage à l'étape suivante|  
 |**4**|Passez à l’étape *id_étape_échec **.*|  
   
- [ **@on_fail_step_id =**] *fail_step_id*  
+ [  **@on_fail_step_id =**] *id_étape_échec*  
  Le numéro d’identification de l’étape du travail à exécuter si l’étape échoue et *action_échec* est **4**. *id_étape_échec* est **int**, avec NULL comme valeur par défaut.  
   
- [ **@server =**] **'***server***'**  
+ [  **@server =**] **'***server***'**  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] *serveur* est **nvarchar (128)**, avec NULL comme valeur par défaut.  
   
- [ **@database_name =**] **'***database***'**  
+ [  **@database_name =**] **'***base de données***'**  
  Nom de la base de données dans laquelle l'étape [!INCLUDE[tsql](../../includes/tsql-md.md)] doit être exécutée. *base de données*est **sysname**. Les noms placés entre crochets ([ ]) ne sont pas autorisés. La valeur par défaut est NULL.  
   
- [ **@database_user_name =**] **'***user***'**  
+ [  **@database_user_name =**] **'***utilisateur***'**  
  Nom du compte d'utilisateur à utiliser lors de l'exécution d'une étape [!INCLUDE[tsql](../../includes/tsql-md.md)]. *utilisateur*est **sysname**, avec NULL comme valeur par défaut.  
   
  [ **@retry_attempts =**] *retry_attempts*  
@@ -143,7 +143,7 @@ sp_update_jobstep
   
  **@output_file_name = ' '**  
   
- [ **@flags =**] *flags*  
+ [  **@flags =**] *indicateurs*  
  Une option qui contrôle le comportement. *indicateurs* est **int**, et peut prendre l’une des valeurs suivantes.  
   
 |Valeur| Description|  

@@ -2,7 +2,7 @@
 title: sp_helpdynamicsnapshot_job (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: system-stored-procedures
@@ -31,11 +31,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8f9accc8ae7ffb64d82fa10c3b60a2f8fec44b8a
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.openlocfilehash: 82b1103e9dcf780dbc4a5be4c1a487173051f50a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sphelpdynamicsnapshotjob-transact-sql"></a>sp_helpdynamicsnapshot_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,17 +54,17 @@ sp_helpdynamicsnapshot_job [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [ **@publication =** ] **'***publication***'**  
+ [  **@publication =** ] **'***publication***'**  
  Nom de la publication. *publication* est **sysname**, avec une valeur par défaut **%**, qui retourne des informations sur tous les travaux de capture instantanée de données filtrées qui correspondent à la chaîne *dynamic_ snapshot_jobid*et *dynamic_snapshot_jobname*pour toutes les publications.  
   
- [ **@dynamic_snapshot_jobname =** ] **'***dynamic_snapshot_jobname***'**  
+ [  **@dynamic_snapshot_jobname =** ] **'***dynamic_snapshot_jobname***'**  
  Nom d'un travail d'instantané de données filtrées. *dynamic_snapshot_jobname*est **sysname**, avec comme valeur par défaut **%**», qui retourne tous les travaux dynamiques d’une publication avec l’objet *dynamic_ snapshot_jobid*. Si aucun nom de travail n'est défini explicitement lors de la création du travail, le nom du travail a le format suivant :  
   
 ```  
 'dyn_' + <name of the standard snapshot job> + <GUID>  
 ```  
   
- [ **@dynamic_snapshot_jobid =** ] **'***dynamic_snapshot_jobid***'**  
+ [  **@dynamic_snapshot_jobid =** ] **'***dynamic_snapshot_jobid***'**  
  Identificateur d'un travail d'instantané de données filtrées. *dynamic_snapshot_jobid*est **uniqueidentifier**, avec la valeur NULL par défaut, qui retourne tous les travaux de capture instantanée qui correspondent à la chaîne *dynamic_snapshot_jobname*.  
   
 ## <a name="result-sets"></a>Jeux de résultats  

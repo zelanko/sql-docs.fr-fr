@@ -1,16 +1,16 @@
 ---
-title: sp_start_job (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: sp_start_job (Transact-SQL) | Documents Microsoft
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_start_job
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_start_job
 ms.assetid: 8a91df6a-eb84-4512-9a17-4a6e32a9538a
-caps.latest.revision: 
+caps.latest.revision: 36
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 5939e906cee691c2b6f13ff10677eb4f4129622f
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 89cf8ae7b00aa917d626fd47070835690b56e1f4
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spstartjob-transact-sql"></a>sp_start_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,19 +52,19 @@ sp_start_job
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [ **@job_name=** ] **'***job_name***'**  
+ [  **@job_name=** ] **'***job_name***'**  
  Nom du travail à démarrer. Soit *job_id* ou *job_name* doit être spécifié, mais ne peut pas être spécifiés. *job_name* est **sysname**, avec NULL comme valeur par défaut.  
   
- [ **@job_id=** ] *job_id*  
+ [  **@job_id=** ] *job_id*  
  Numéro d'identification du travail à démarrer. Soit *job_id* ou *job_name* doit être spécifié, mais ne peut pas être spécifiés. *job_id* est **uniqueidentifier**, avec NULL comme valeur par défaut.  
   
  [ **@error_flag=** ] *error_flag*  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
- [ **@server_name=** ] **'***server_name***'**  
+ [  **@server_name=** ] **'***nom_serveur***'**  
  Serveur cible sur lequel doit être lancé le travail. *nom_serveur* est **nvarchar (128)**, avec NULL comme valeur par défaut. *nom_serveur* doit être un des serveurs cibles sur lesquels le travail est actuellement ciblé.  
   
- [ **@step_name=** ] **'***step_name***'**  
+ [  **@step_name=** ] **'***nom_de_l***'**  
  Nom de l'étape où doit commencer l'exécution du travail. S'applique uniquement aux travaux locaux. *nom_de_l* est **sysname**, avec NULL comme valeur par défaut  
   
  [ **@output_flag=** ] *output_flag*  

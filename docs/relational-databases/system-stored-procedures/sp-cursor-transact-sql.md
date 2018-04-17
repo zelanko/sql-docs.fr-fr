@@ -2,7 +2,7 @@
 title: sp_cursor (Transact-SQL) | Documents Microsoft
 ms.custom: ''
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: system-stored-procedures
@@ -25,11 +25,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e85732afe35198cea86a605dfde8396b013842dc
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.openlocfilehash: 9ff58f474c565d10a57505dce5019bca5ddafb34
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spcursor-transact-sql"></a>sp_cursor (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -67,7 +67,7 @@ sp_cursor  cursor, optype, rownum, table
 |0X20|SETPOSITION|Est utilisé uniquement lorsque le programme va émettre un serveur SQL suivantes positionné l’instruction DELETE ou UPDATE.|  
 |0X40|ABSOLUTE|Peut uniquement être utilisée avec UPDATE ou DELETE.  ABSOLUTE est utilisée uniquement avec les curseurs KEYSET (est ignorée pour les curseurs DYNAMIC et les curseurs STATIC ne peuvent pas être mis à jour).<br /><br /> Remarque : Si ABSOLUTE est spécifiée sur une ligne dans le jeu de clés n’a pas été extrait, l’opération peut échouer le contrôle d’accès concurrentiel et le résultat obtenu ne peut pas être garanti.|  
   
- *rownum*  
+ *ROWNUM*  
  Spécifie les lignes dans le tampon d'extraction sur lesquelles le curseur interviendra, qu'il mettra à jour ou supprimera.  
   
 > [!NOTE]  

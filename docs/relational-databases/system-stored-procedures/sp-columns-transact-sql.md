@@ -1,8 +1,8 @@
 ---
-title: sp_columns (Transact-SQL) | Microsoft Docs
+title: sp_columns (Transact-SQL) | Documents Microsoft
 ms.custom: ''
 ms.date: 10/17/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: system-stored-procedures
@@ -25,11 +25,12 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 7ea208a7c7c5c1cb969bfa556a5be27b32e5a856
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 10415e417fcf62ac530e50abf82d5214272351e0
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spcolumns-transact-sql"></a>MSdbms (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -51,21 +52,21 @@ sp_columns [ @table_name = ] object
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [ **@table_name=**] *object*  
+ [  **@table_name=**] *objet*  
  Nom de l'objet utilisé pour retourner des informations de catalogue. *objet* peut être une table, vue ou un autre objet qui a des colonnes telles que les fonctions table. *objet* est **nvarchar (384)**, sans valeur par défaut. La recherche de correspondance avec des caractères génériques est prise en charge.  
   
- [ **@table_owner****=**] *owner*  
+ [  **@table_owner*** =**] *propriétaire*  
  Nom du propriétaire de l'objet utilisé pour retourner des informations de catalogue. *propriétaire* est **nvarchar (384)**, avec NULL comme valeur par défaut. La recherche de correspondance avec des caractères génériques est prise en charge. Si *propriétaire* n’est pas spécifié, les règles de visibilité d’objet par défaut du SGBD sous-jacent s’appliquent.  
   
  Si l'utilisateur actuel est propriétaire d'un objet portant le nom spécifié, les colonnes de cet objet sont retournées. Si *propriétaire* n’est pas spécifié et l’utilisateur actuel ne possède pas d’un objet avec l’objet *objet*, **sp_columns** recherche un objet avec l’objet *objet* appartenant au propriétaire de la base de données. S'il en existe un, les colonnes de cet objet sont retournées.  
   
- [ **@table_qualifier****=**] *qualifier*  
+ [  **@table_qualifier*** =**] *qualificateur*  
  Nom du qualificateur de l'objet. *qualificateur* est **sysname**, avec NULL comme valeur par défaut. Divers produits SGBD prennent en charge d’affectation de noms en trois parties pour les objets (*qualificateur***.*** propriétaire***.*** nom de*). Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], cette colonne représente le nom de la base de données. Dans certains produits, elle représente le nom du serveur de l'environnement de base de données de l'objet.  
   
  [  **@column_name=**] *colonne*  
  Colonne unique utilisée lorsqu'une seule colonne d'informations de catalogue est demandée. *colonne* est **nvarchar (384)**, avec NULL comme valeur par défaut. Si *colonne* est ne pas spécifié, toutes les colonnes sont renvoyées. Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], *colonne* représente le nom de colonne indiqué dans le **syscolumns** table. La recherche de correspondance avec des caractères génériques est prise en charge. Pour assurer une interopérabilité maximale, le client de la passerelle ne doit utiliser que les modèles de comparaison standard de SQL-92 (caractères génériques % et _).  
   
- [ **@ODBCVer=**] *ODBCVer*  
+ [  **@ODBCVer=**] *ODBCVer*  
  Version d'ODBC actuellement utilisée. *ODBCVer* est **int**, avec la valeur par défaut est 2. Cela indique ODBC version 2. Les valeurs valides sont 2 ou 3. Pour les différences de comportement entre les versions 2 et 3, consultez ODBC **SQLColumns** spécification.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
@@ -78,7 +79,7 @@ sp_columns [ @table_name = ] object
 |-----------------|---------------|-----------------|  
 |**TABLE_QUALIFIER**|**sysname**|Nom du qualificateur d'objet. Ce champ peut contenir la valeur NULL.|  
 |**TABLE_OWNER**|**sysname**|Nom du propriétaire de l'objet. Ce champ retourne toujours une valeur.|  
-|**TABLE_NAME**|**sysname**|Nom de l'objet. Ce champ retourne toujours une valeur.|  
+|**NOM_TABLE**|**sysname**|Nom de l'objet. Ce champ retourne toujours une valeur.|  
 |**COLUMN_NAME**|**sysname**|Nom de colonne, pour chaque colonne de la **TABLE_NAME** retourné. Ce champ retourne toujours une valeur.|  
 |**DATA_TYPE**|**smallint**|Code entier pour le type de données ODBC. S’il s’agit d’un type de données qui ne peut pas être mappé à un type ODBC, sa valeur est NULL. Le nom de type de données natif est renvoyé dans le **TYPE_NAME** colonne.|  
 |**TYPE_NAME**|**sysname**|Chaîne représentant un type de données. Le SGBD sous-jacent dispose de ce nom de type de données.|  
@@ -86,7 +87,7 @@ sp_columns [ @table_name = ] object
 |**LENGTH**|**int**|Taille de transfert des données. <sup>1</sup>|  
 |**MISE À L’ÉCHELLE**|**smallint**|Nombre de chiffres situés à droite du séparateur décimal.|  
 |**RADIX**|**smallint**|Base pour les types de données numériques.|  
-|**NULLABLE**|**smallint**|Spécifie la possibilité de contenir une valeur NULL.<br /><br /> 1 = les valeurs NULL sont autorisées.<br /><br /> 0 = pas de valeur NULL.|  
+|**ACCEPTE LES VALEURS NULL**|**smallint**|Spécifie la possibilité de contenir une valeur NULL.<br /><br /> 1 = les valeurs NULL sont autorisées.<br /><br /> 0 = pas de valeur NULL.|  
 |**SECTION NOTES**|**varchar(254)**|Ce champ renvoie toujours la valeur NULL.|  
 |**COLUMN_DEF**|**nvarchar(4000)**|Valeur par défaut de la colonne.|  
 |**SQL_DATA_TYPE**|**smallint**|Valeur du type de données SQL tel qu'il apparaît dans le champ TYPE du descripteur. Cette colonne est le même que le **DATA_TYPE** colonne, à l’exception de la **datetime** et SQL-92 **intervalle** des types de données. Cette colonne renvoie toujours une valeur.|  

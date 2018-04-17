@@ -1,16 +1,16 @@
 ---
-title: sp_filestream_force_garbage_collection (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: sp_filestream_force_garbage_collection (Transact-SQL) | Documents Microsoft
+ms.custom: ''
 ms.date: 07/22/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_filestream_force_garbage_collection
@@ -21,18 +21,18 @@ helpviewer_keywords:
 - FILESTREAM [SQL Server]
 - sp_filestream_force_garbage_collection
 ms.assetid: 9d1efde6-8fa4-42ac-80e5-37456ffebd0b
-caps.latest.revision: 
+caps.latest.revision: 28
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d424bb470ac9da5edc6b314e62ffaa2e1e72b923
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: b567ffa4ac9b56074742999c602914ebe7d3934d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="filestream-and-filetable---spfilestreamforcegarbagecollection"></a>FileStream et FileTable - sp_filestream_force_garbage_collection
+# <a name="spfilestreamforcegarbagecollection-transact-sql"></a>sp_filestream_force_garbage_collection (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Force le garbage collector FILESTREAM à s'exécuter, en supprimant tous fichiers FILESTREAM inutiles.  
@@ -49,14 +49,14 @@ sp_filestream_force_garbage_collection
 ```  
   
 ## <a name="arguments"></a>Arguments  
- **@dbname** = *database_name***'**  
+ **@dbname** = *database_name ***'**  
  Représente le nom de la base de données dans laquelle exécuter le garbage collector.  
   
 > [!NOTE]  
 >  *dbname* est **sysname**. En l'absence de spécification, c'est la base de données actuelle qui est utilisée.  
   
  **@filename** = *logical_file_name*  
- Spécifie le nom logique du conteneur FILESTREAM dans lequel exécuter le garbage collector. **@filename**est facultatif. Si aucun nom de fichier logique n’est spécifié, le garbage collector nettoie tous les conteneurs FILESTREAM dans la base de données spécifié.  
+ Spécifie le nom logique du conteneur FILESTREAM dans lequel exécuter le garbage collector. **@filename** est facultatif. Si aucun nom de fichier logique n’est spécifié, le garbage collector nettoie tous les conteneurs FILESTREAM dans la base de données spécifié.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
   
@@ -113,6 +113,10 @@ EXEC sp_filestream_force_garbage_collection @dbname = N'FSDB',
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Stockage FILESTREAM dans SQL Server 2008](http://go.microsoft.com/fwlink/?LinkId=209156)  
+[FileStream](../../relational-databases/blob/filestream-sql-server.md)
+<br>[Filetables](../../relational-databases/blob/filetables-sql-server.md)
+<br>[FileStream et les vues de gestion dynamique FileTable (Transact-SQL)](../system-dynamic-management-views/filestream-and-filetable-dynamic-management-views-transact-sql.md)
+<br>[FileStream et les vues de catalogue FileTable (Transact-SQL)](../system-catalog-views/filestream-and-filetable-catalog-views-transact-sql.md)
+<br>[sp_kill_filestream_non_transacted_handles (Transact-SQL)](filestream-and-filetable-sp-kill-filestream-non-transacted-handles.md)
   
   

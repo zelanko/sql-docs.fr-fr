@@ -1,8 +1,8 @@
 ---
-title: sp_update_alert (Transact-SQL) | Microsoft Docs
+title: sp_update_alert (Transact-SQL) | Documents Microsoft
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: system-stored-procedures
@@ -25,11 +25,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7d39736eed19992c5fa20bb1231aed3bcb20e3b0
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.openlocfilehash: 64a669e37edf07ff897c94122e7e49d5899c1b6c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spupdatealert-transact-sql"></a>sp_update_alert (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -69,13 +69,13 @@ sp_update_alert
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [ **@name =**] **'***name***'**  
+ [  **@name =**] **'***nom***'**  
  Nom de l'alerte devant être mise à jour. *nom* est **sysname**, sans valeur par défaut.  
   
- [ **@new_name =**] **'***new_name***'**  
+ [  **@new_name =**] **'***nouveau_nom***'**  
  Nouveau nom de l'alerte. Le nom doit être unique. *nouveau_nom* est **sysname**, avec NULL comme valeur par défaut.  
   
- [ **@enabled =**] *enabled*  
+ [  **@enabled =**] *activé*  
  Spécifie si l’alerte est activée (**1**) ou désactivée (**0**). *activé* est **tinyint**, avec NULL comme valeur par défaut. Pour pouvoir se déclencher, une alerte doit être activée.  
   
  [ **@message_id =**] *message_id*  
@@ -84,10 +84,10 @@ sp_update_alert
  [  **@severity =**] *gravité*  
  Nouveau niveau de gravité (de **1** via **25**) pour la définition d’alerte. N’importe quel [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] message envoyé au journal des applications Windows avec la gravité indiquée activera l’alerte. *gravité* est **int**, avec NULL comme valeur par défaut. Un niveau de gravité peut être utilisé uniquement si le paramètre d’ID de message pour l’alerte est **0**.  
   
- [ **@delay_between_responses =**] *delay_between_responses*  
+ [  **@delay_between_responses =**] *délai_entre_réponses*  
  Nouveau délai d'attente, en secondes, entre les réponses faisant suite au déclenchement de l'alerte. *délai_entre_réponses* est **int**, avec NULL comme valeur par défaut.  
   
- [ **@notification_message =**] **'***notification_message***'**  
+ [  **@notification_message =**] **'***message_notification***'**  
  Texte révisé d’un message supplémentaire envoyé à l’opérateur comme faisant partie du message électronique, **envoi réseau**, ou par radiomessagerie. *message_notification* est **nvarchar (512)**, avec NULL comme valeur par défaut.  
   
  [ **@include_event_description_in =**] *include_event_description_in*  
@@ -101,52 +101,52 @@ sp_update_alert
 |**4**|**net send**|  
 |**7**|Tous|  
   
- [ **@database_name =**] **'***database***'**  
+ [  **@database_name =**] **'***base de données***'**  
  Nom de la base de données dans laquelle l'erreur doit survenir pour que l'alerte soit déclenchée. *base de données* est **sysname.** Les noms placés entre crochets ([ ]) ne sont pas autorisés. La valeur par défaut est NULL.  
   
  [ **@event_description_keyword =**] **'***event_description_keyword***'**  
  Chaîne de caractères devant figurer dans la description de l'erreur dans le journal des messages d'erreur. Les caractères correspondant au modèle d'expression [!INCLUDE[tsql](../../includes/tsql-md.md)] LIKE sont admis. *motclé_description_événement* est **nvarchar (100)**, avec NULL comme valeur par défaut. Ce paramètre est utile pour filtrer les noms d’objet (par exemple, **% customer_table %**).  
   
- [ **@job_id =**] *job_id*  
+ [  **@job_id =**] *job_id*  
  Numéro d’identification du travail. *job_id* est **uniqueidentifier**, avec NULL comme valeur par défaut. Si *job_id* est spécifié, *job_name* doit être omis.  
   
  [  **@job_name =**] **'***job_name***'**  
  Nom du travail exécuté en réponse à l'alerte. *job_name* est **sysname**, avec NULL comme valeur par défaut. Si *job_name* est spécifié, *job_id* doit être omis.  
   
- [ **@occurrence_count =** ] *occurrence_count*  
+ [  **@occurrence_count =** ] *occurrence_count*  
  Réinitialise le nombre de fois que l'alerte s'est produite. *occurrence_count* est **int**, avec NULL comme valeur par défaut et peut être définie uniquement sur **0**.  
   
  [ **@count_reset_date =**] *count_reset_date*  
  Réinitialise la date de la dernière réinitialisation du nombre d'occurrences. *date_réinitialisation_compte* est **int**, avec NULL comme valeur par défaut.  
   
- [ **@count_reset_time =**] *count_reset_time*  
+ [  **@count_reset_time =**] *heure_réinitialisation_compte*  
  Réinitialise l'heure de la dernière réinitialisation du nombre d'occurrences. *heure_réinitialisation_compte* est **int**, avec NULL comme valeur par défaut.  
   
  [ **@last_occurrence_date =**] *last_occurrence_date*  
  Réinitialise la date de la dernière occurrence de l'alerte. *date_dernière_occurrence* est **int**, avec NULL comme valeur par défaut et peut être définie uniquement sur **0**.  
   
- [ **@last_occurrence_time =**] *last_occurrence_time*  
+ [  **@last_occurrence_time =**] *heure_dernière_occurrence*  
  Réinitialise l'heure de la dernière occurrence de l'alerte. *heure_dernière_occurrence* est **int**, avec NULL comme valeur par défaut et peut être définie uniquement sur **0**.  
   
  [ **@last_response_date =**] *last_response_date*  
  Réinitialise la date à laquelle l'alerte a reçu la dernière réponse du service de l'Agent SQL Server. *date_dernière_réponse* est **int**, avec NULL comme valeur par défaut et peut être définie uniquement sur **0**.  
   
- [ **@last_response_time =**] *last_response_time*  
+ [  **@last_response_time =**] *heure_dernière_réponse*  
  Réinitialise l'heure à laquelle l'alerte a reçu la dernière réponse du service de l'Agent SQL Server. *heure_dernière_réponse* est **int**, avec NULL comme valeur par défaut et peut être définie uniquement sur **0**.  
   
- [ **@raise_snmp_trap =**] *raise_snmp_trap*  
+ [  **@raise_snmp_trap =**] *raise_snmp_trap*  
  Réservé.  
   
- [ **@performance_condition =**] **'***performance_condition***'**  
+ [  **@performance_condition =**] **'***l’argument condition_performances***'**  
  Une valeur exprimée dans le format **'***itemcomparatorvalue***'**. *l’argument condition_performances* est **nvarchar (512)**, avec NULL comme valeur par défaut et se compose de ces éléments.  
   
 |Élément de format| Description|  
 |--------------------|-----------------|  
 |*Élément*|Objet de performances, compteur de performances ou instance nommée du compteur.|  
-|*Comparator*|Un de ces opérateurs : **>**, **<**, **=**|  
+|*Comparateur*|Un de ces opérateurs : **>**, **<**, **=**|  
 |*Value*|Valeur numérique du compteur.|  
   
- [ **@category_name =**] **'***category***'**  
+ [  **@category_name =**] **'***catégorie***'**  
  Nom de la catégorie d'alerte. *catégorie* est **sysname** avec NULL comme valeur par défaut.  
   
  [ **@wmi_namespace**=] **'***wmi_namespace***'**  

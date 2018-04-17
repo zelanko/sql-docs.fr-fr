@@ -1,16 +1,16 @@
 ---
 title: sp_estimate_data_compression_savings (Transact-SQL) | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_estimate_data_compression_savings_TSQL
@@ -21,16 +21,16 @@ helpviewer_keywords:
 - compression [SQL Server], estimating
 - sp_estimate_data_compression_savings
 ms.assetid: 6f6c7150-e788-45e0-9d08-d6c2f4a33729
-caps.latest.revision: 
+caps.latest.revision: 27
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: acb61e6c699728902bc7ada6d5cfd7e12febb1c8
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: d93c3626e7177df5920cd2e8888ba75a2416fdfe
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spestimatedatacompressionsavings-transact-sql"></a>sp_estimate_data_compression_savings (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -67,10 +67,10 @@ sp_estimate_data_compression_savings
  Nom du schéma de base de données qui contient la table ou la vue indexée. *schema_name* est **sysname**. Si *nom_schéma* est NULL, le schéma par défaut de l’utilisateur actuel est utilisé.  
   
  [ @object_name=] '*nom_objet*'  
- Nom du schéma de la table ou de la vue indexée sur laquelle se trouve l'index. *nom_objet* est **sysname**.  
+ Nom du schéma de la table ou de la vue indexée sur laquelle se trouve l'index. *object_name* est de type **sysname**.  
   
  [ @index_id=] '*index_id*'  
- Est l’ID de l’index. *index_id* est **int**, et peut prendre l’une des valeurs suivantes : le numéro d’identification d’un index, NULL ou 0 si *object_id* est un segment de mémoire. Pour retourner des informations sur tous les index d'une table de base ou d'une vue, spécifiez la valeur NULL. Si vous spécifiez la valeur NULL, vous devez également spécifier NULL pour *partition_number*.  
+ Identificateur de l’index. *index_id* est **int**, et peut prendre l’une des valeurs suivantes : le numéro d’identification d’un index, NULL ou 0 si *object_id* est un segment de mémoire. Pour retourner des informations sur tous les index d'une table de base ou d'une vue, spécifiez la valeur NULL. Si vous spécifiez la valeur NULL, vous devez également spécifier NULL pour *partition_number*.  
   
  [ @partition_number=] '*partition_number*'  
  Numéro de partition dans l'objet. *partition_number* est **int**, et peut prendre l’une des valeurs suivantes : le numéro de partition d’un index ou segment de mémoire, NULL ou 1 pour un segment de mémoire ou un index non partitionné.  
@@ -110,7 +110,7 @@ sp_estimate_data_compression_savings
   
  Si l'ID d'index ou de partition n'existe pas, aucun résultat n'est retourné.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l'autorisation SELECT sur la table.  
   
 ## <a name="limitations-and-restrictions"></a>Limitations et restrictions  
@@ -129,8 +129,8 @@ GO
 ## <a name="see-also"></a>Voir aussi  
  [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
  [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)   
- [Sys.partitions &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-partitions-transact-sql.md)   
- [Moteur de base de données stockée procédures &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [sys.partitions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-partitions-transact-sql.md)   
+ [Procédures stockées du moteur de base de données &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [Implémentation de la compression Unicode](../../relational-databases/data-compression/unicode-compression-implementation.md)  
   
   

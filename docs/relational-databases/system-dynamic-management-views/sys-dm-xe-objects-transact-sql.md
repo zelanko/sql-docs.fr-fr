@@ -1,16 +1,16 @@
 ---
-title: sys.dm_xe_objects (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: Sys.dm_xe_objects (Transact-SQL) | Documents Microsoft
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dm_xe_objects
@@ -23,16 +23,16 @@ helpviewer_keywords:
 - sys.dm_xe_objects dynamic management view
 - extended events [SQL Server], views
 ms.assetid: 5d944b99-b097-491b-8cbd-b0e42b459ec0
-caps.latest.revision: 
+caps.latest.revision: 22
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e9f1146f74618195b28fd19f2464bc45a2498c61
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 2143a0aeaf4012c23e3d84452961596535b4c7e2
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdmxeobjects-transact-sql"></a>sys.dm_xe_objects (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ ms.lasthandoff: 02/03/2018
  |Nom de colonne|Type de données| Description|  
 |-----------------|---------------|-----------------|  
 |name|**nvarchar(60)**|Nom de l'objet. nom est unique dans un package pour un type d’objet spécifique. N'accepte pas la valeur NULL.|  
-|object_type|**nvarchar(60)**|Type de l’objet. object_type est une des opérations suivantes :<br /><br /> événement<br /><br /> action<br /><br /> target<br /><br /> pred_source<br /><br /> pred_compare<br /><br /> type<br /><br /> N'accepte pas la valeur NULL.|  
+|object_type|**nvarchar(60)**|Type de l’objet. object_type est une des opérations suivantes :<br /><br /> événement<br /><br /> action<br /><br /> target<br /><br /> pred_source<br /><br /> pred_compare<br /><br /> Type<br /><br /> N'accepte pas la valeur NULL.|  
 |package_guid|**uniqueidentifier**|GUID pour le package qui expose cette action. Il y a une relation plusieurs-à-un avec sys.dm_xe_packages.package_id. N'accepte pas la valeur NULL.|  
 |description|**nvarchar (256)**|Description de l'action Description est définie par l’auteur du package. N'accepte pas la valeur NULL.|  
 |Fonctionnalités|**int**|Bitmap qui décrit les fonctionnalités de l'objet. Autorise la valeur NULL.|  

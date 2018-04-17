@@ -1,16 +1,16 @@
 ---
 title: sp_replmonitorhelppublicationthresholds (Transact-SQL) | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_replmonitorhelppublicationthresholds
 ms.assetid: d6b1aa4b-3369-4255-a892-c0e5cc9cb693
-caps.latest.revision: 
+caps.latest.revision: 21
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 62f7770bb8127beba19170a6ee60369f83a11c02
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 6fd9a16067e4a7a1f670d0d50e1b44ea949208e3
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spreplmonitorhelppublicationthresholds-transact-sql"></a>sp_replmonitorhelppublicationthresholds (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,16 +50,16 @@ sp_replmonitorhelppublicationthresholds [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@publisher** =] **'***publisher***'**  
+ [ **@publisher**=] **'***publisher***'**  
  Nom du serveur de publication. *serveur de publication* est **sysname**, sans valeur par défaut.  
   
- [  **@publisher_db** =] **'***publisher_db***'**  
+ [ **@publisher_db**=] **'***publisher_db***'**  
  Nom de la base de données publiée. *publisher_db* est **sysname**, sans valeur par défaut.  
   
- [  **@publication** =] **'***publication***'**  
+ [ **@publication**=] **'***publication***'**  
  Nom de la publication. *publication* est **sysname**, sans valeur par défaut.  
   
- [  **@publication_type** =] *publication_type*  
+ [ **@publication_type**=] *publication_type*  
  Type de publication. *publication_type* est **int**, et peut prendre l’une des valeurs suivantes.  
   
 |Valeur|Description|  
@@ -85,7 +85,7 @@ sp_replmonitorhelppublicationthresholds [ @publisher = ] 'publisher'
 ## <a name="remarks"></a>Notes  
  **sp_replmonitorhelppublicationthresholds** est utilisé avec tous les types de réplication.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Seuls les membres de la **db_owner** ou **replmonitor** du rôle de base de données fixe sur la base de données de distribution permettre exécuter **sp_replmonitorhelppublicationthresholds**.  
   
 ## <a name="see-also"></a>Voir aussi  

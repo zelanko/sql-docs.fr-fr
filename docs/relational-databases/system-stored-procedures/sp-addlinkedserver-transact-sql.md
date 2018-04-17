@@ -1,16 +1,16 @@
 ---
 title: sp_addlinkedserver (Transact-SQL) | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 09/12/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_addlinkedserver_TSQL
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_addlinkedserver
 ms.assetid: fed3adb0-4c15-4a1a-8acd-1b184aff558f
-caps.latest.revision: 
+caps.latest.revision: 70
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 35173890392c69d6ef6fe40c71b484ae9db3bee3
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 52b40d4e2c995d00c357295fc1787fce579eed04
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spaddlinkedserver-transact-sql"></a>sp_addlinkedserver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -72,7 +72,7 @@ sp_addlinkedserver [ @server= ] 'server' [ , [ @srvproduct= ] 'product_name' ]
  Lorsque le serveur lié est créé par rapport à la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client fournisseur OLE DB natif, l’instance peut être spécifiée à l’aide du mot clé SERVER en tant que serveur =*nom_serveur*\\*instancename* pour spécifier une instance spécifique de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *nom_serveur* est le nom de l’ordinateur sur lequel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est en cours d’exécution, et *instancename* est le nom de l’instance spécifique de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à laquelle l’utilisateur est connecté.  
   
 > [!NOTE]  
->  Pour accéder à une base de données miroir, une chaîne de connexion doit contenir le nom de la base de données. Ce nom est nécessaire pour permettre au fournisseur d'accès aux données d'effectuer des tentatives de basculement. La base de données peut être spécifié dans le  **@provstr**  ou  **@catalog**  paramètre. Le cas échéant, la chaîne de connexion peut également fournir un nom de partenaire de basculement.  
+>  Pour accéder à une base de données miroir, une chaîne de connexion doit contenir le nom de la base de données. Ce nom est nécessaire pour permettre au fournisseur d'accès aux données d'effectuer des tentatives de basculement. La base de données peut être spécifié dans le **@provstr** ou **@catalog** paramètre. Le cas échéant, la chaîne de connexion peut également fournir un nom de partenaire de basculement.  
   
  [  **@catalog=** ] **'***catalogue***'**  
  Catalogue à utiliser lors de l'établissement d'une connexion au fournisseur OLE DB. *catalogue* est **sysname**, avec NULL comme valeur par défaut. *catalogue* est transmis comme propriété DBPROP_INIT_CATALOG pour initialiser le fournisseur OLE DB. Lorsque le serveur lié est défini sur une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], le catalogue fait référence à la base de données par défaut sur laquelle le serveur lié est mappé.  
@@ -88,9 +88,9 @@ sp_addlinkedserver [ @server= ] 'server' [ , [ @srvproduct= ] 'product_name' ]
   
 |Source de données OLE DB distante|Fournisseur OLE DB|product_name|provider_name|data_source|location|provider_string|catalogue|  
 |-------------------------------|---------------------|-------------------|--------------------|------------------|--------------|----------------------|-------------|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Fournisseur OLE DB native Client|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]<sup>1</sup> (par défaut)||||||  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Fournisseur OLE DB native Client||**SQLNCLI**|Nom réseau de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (pour l'instance par défaut)|||Nom de base de données (facultatif)|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Fournisseur OLE DB native Client||**SQLNCLI**|*nom_serveur*\\*instancename* (pour une instance particulière)|||Nom de base de données (facultatif)|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Fournisseur OLE DB Native Client|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] <sup>1</sup> (par défaut)||||||  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Fournisseur OLE DB Native Client||**SQLNCLI**|Nom réseau de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (pour l'instance par défaut)|||Nom de base de données (facultatif)|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Fournisseur OLE DB Native Client||**SQLNCLI**|*nom_serveur*\\*instancename* (pour une instance particulière)|||Nom de base de données (facultatif)|  
 |Oracle, version 8 et ultérieure|Fournisseur Oracle pour OLE DB|Tout|**OraOLEDB.Oracle**|Alias de la base de données Oracle||||  
 |Access/Jet|Fournisseur Microsoft OLE DB pour Jet|Tout|**Microsoft.Jet.OLEDB.4.0**|Nom d'accès complet du fichier de base de données Jet||||  
 |Source de données ODBC|Fournisseur Microsoft OLE DB pour ODBC|Tout|**MSDASQL**|Système DSN de la source de données ODBC||||  
@@ -114,7 +114,7 @@ sp_addlinkedserver [ @server= ] 'server' [ , [ @srvproduct= ] 'product_name' ]
 > [!IMPORTANT]  
 >  Quand un serveur lié est créé à l’aide de **sp_addlinkedserver**, un auto-mappage par défaut est ajouté pour toutes les connexions locales. Pour les fournisseurs non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], les connexions [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] authentifiées peuvent accéder au fournisseur sous le compte de service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Les administrateurs doivent envisager d'utiliser `sp_droplinkedsrvlogin <linkedserver_name>, NULL` pour supprimer le mappage global.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Le `sp_addlinkedserver` instruction nécessite la `ALTER ANY LINKED SERVER` autorisation. (SSMS **nouveau serveur lié** boîte de dialogue est implémentée de manière qui requiert l’appartenance dans le `sysadmin` rôle serveur fixe.)  
   
 ## <a name="examples"></a>Exemples  
@@ -311,13 +311,13 @@ select * from myLinkedServer.myDatabase.dbo.myTable
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Les requêtes distribuées stockées procédures &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/distributed-queries-stored-procedures-transact-sql.md)   
- [sp_addlinkedsrvlogin &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md)   
- [sp_addserver &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-addserver-transact-sql.md)   
- [sp_dropserver &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-dropserver-transact-sql.md)   
- [sp_serveroption &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-serveroption-transact-sql.md)   
- [sp_setnetname &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-setnetname-transact-sql.md)   
+ [Distributed des procédures stockées de requêtes &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/distributed-queries-stored-procedures-transact-sql.md)   
+ [sp_addlinkedsrvlogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md)   
+ [sp_addserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addserver-transact-sql.md)   
+ [sp_dropserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropserver-transact-sql.md)   
+ [sp_serveroption &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-serveroption-transact-sql.md)   
+ [sp_setnetname &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-setnetname-transact-sql.md)   
  [Procédures stockées système &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [Tables système &#40; Transact-SQL &#41;](../../relational-databases/system-tables/system-tables-transact-sql.md)  
+ [Tables système &#40;Transact-SQL&#41;](../../relational-databases/system-tables/system-tables-transact-sql.md)  
   
   

@@ -1,8 +1,8 @@
 ---
-title: sp_addlinkedsrvlogin (Transact-SQL) | Microsoft Docs
+title: sp_addlinkedsrvlogin (Transact-SQL) | Documents Microsoft
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: system-stored-procedures
@@ -25,11 +25,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: a4a55d2128cdba654ce9e753ac1cdcebd8f0ad8d
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.openlocfilehash: ef468f7ea427e2e7226bccf45e1192c9a6abcc4b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spaddlinkedsrvlogin-transact-sql"></a>sp_addlinkedsrvlogin (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ sp_addlinkedsrvlogin [ @rmtsrvname = ] 'rmtsrvname'
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [ @rmtsrvname **=** ] **'***rmtsrvname***'**  
+ [ @rmtsrvname **=** ] **'***nom_du_serveur_distant***'**  
  Nom d'un serveur lié auquel s'applique le mappage de la connexion. *nom_du_serveur_distant* est **sysname**, sans valeur par défaut.  
   
  [ @useself **=** ] **'**TRUE**'** | 'FALSE' | 'NULL'  
@@ -61,7 +61,7 @@ sp_addlinkedsrvlogin [ @rmtsrvname = ] 'rmtsrvname'
  [ @locallogin **=** ] **'***locallogin***'**  
  Connexion sur le serveur local. *LocalLogin* est **sysname**, avec NULL comme valeur par défaut. La valeur NULL spécifie que cette entrée s’applique à toutes les connexions locales qui se connectent à *nom_du_serveur_distant*. Si non NULL, *locallogin* peut être un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connexion ou une connexion Windows. La connexion Windows doit être autorisée à accéder à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] directement ou par l'intermédiaire de son appartenance à un groupe Windows qui a une autorisation d'accès.  
   
- [ @rmtuser **=** ] **'***rmtuser***'**  
+ [ @rmtuser **=** ] **'***l’argument utildist***'**  
  Nom de connexion à distance pour se connecter à *nom_du_serveur_distant* lorsque @useself a la valeur FALSE. Lorsque le serveur distant est une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui n’utilise pas l’authentification Windows, *l’argument utildist* est un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connexion. *l’argument utildist* est **sysname**, avec NULL comme valeur par défaut.  
   
  [ @rmtpassword **=** ] **'***rmtpassword***'**  

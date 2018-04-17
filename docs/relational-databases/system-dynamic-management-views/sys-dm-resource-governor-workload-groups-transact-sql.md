@@ -1,16 +1,16 @@
 ---
-title: sys.dm_resource_governor_workload_groups (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: Sys.dm_resource_governor_workload_groups (Transact-SQL) | Documents Microsoft
+ms.custom: ''
 ms.date: 03/30/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_resource_governor_workload_groups
@@ -22,16 +22,17 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_resource_governor_workload_groups dynamic management view
 ms.assetid: f63c4914-1272-43ef-b135-fe1aabd953e0
-caps.latest.revision: 
+caps.latest.revision: 27
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 588bbcb915873ba8a121432a83579b5877df8454
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 1836223ec409b0b10b66e6b5df298b52029b6575
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdmresourcegovernorworkloadgroups-transact-sql"></a>sys.dm_resource_governor_workload_groups (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -54,7 +55,7 @@ ms.lasthandoff: 02/03/2018
 |queued_request_count|**int**|Nombre actuel de demandes en attente. N'accepte pas la valeur NULL.|  
 |total_cpu_limit_violation_count|**bigint**|Nombre cumulatif de demandes dépassant la limite de l'UC. N'accepte pas la valeur NULL.|  
 |total_cpu_usage_ms|**bigint**|Utilisation cumulative de l'UC, en millisecondes, par ce groupe de charges de travail. N'accepte pas la valeur NULL.|  
-|max_request_cpu_time_ms|**bigint**|Utilisation maximale de l'UC, en millisecondes, pour une demande unique. N'accepte pas la valeur NULL.<br /><br /> **Remarque :** il s’agit d’une valeur mesurée, contrairement à request_max_cpu_time_sec, qui est un paramètre configurable. Pour plus d’informations, consultez [seuil UC dépassé classe d’événements](../../relational-databases/event-classes/cpu-threshold-exceeded-event-class.md).|  
+|max_request_cpu_time_ms|**bigint**|Utilisation maximale de l'UC, en millisecondes, pour une demande unique. N'accepte pas la valeur NULL.<br /><br /> **Remarque :** il s’agit d’une valeur mesurée, contrairement à request_max_cpu_time_sec, qui est un paramètre configurable. Pour plus d’informations, consultez [Classe d’événements CPU Threshold Exceeded](../../relational-databases/event-classes/cpu-threshold-exceeded-event-class.md).|  
 |blocked_task_count|**int**|Nombre actuel de tâches bloquées. N'accepte pas la valeur NULL.|  
 |total_lock_wait_count|**bigint**|Nombre cumulatif d'attentes de verrou qui se sont produites. N'accepte pas la valeur NULL.|  
 |total_lock_wait_time_ms|**bigint**|Somme cumulative du temps écoulé, en millisecondes, du maintien d'un verrou. N'accepte pas la valeur NULL.|  

@@ -1,8 +1,8 @@
 ---
-title: sp_add_data_file_recover_suspect_db (Transact-SQL) | Microsoft Docs
+title: sp_add_data_file_recover_suspect_db (Transact-SQL) | Documents Microsoft
 ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: system-stored-procedures
@@ -25,11 +25,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cb770c0580af43309daa81a2aad56e327864bc4f
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.openlocfilehash: 8fb5dd0e5f06271e2af3a8e7efd66b9b1c2ddf10
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spadddatafilerecoversuspectdb-transact-sql"></a>sp_add_data_file_recover_suspect_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -67,7 +67,7 @@ sp_add_data_file_recover_suspect_db [ @dbName= ] 'database'
  [  **@size=** ] **' *** taille* **'**  
  Taille initiale du fichier. *taille* est **nvarchar (20)**, avec NULL comme valeur par défaut. Indiquez un nombre entier sans aucune décimale. Les indications Mo et Ko peuvent être utilisées pour indiquer qu'il s'agit de mégaoctets ou de kilo-octets. La valeur par défaut est Mo. La valeur minimale est 512 Ko. Si *taille* n’est pas spécifié, la valeur par défaut est 1 Mo.  
   
- [ **@maxsize=** ] **'***max_size* **'**  
+ [  **@maxsize=** ] **' *** max_size* **'**  
  Est la taille maximale que peut atteindre le fichier. *max_size* est **nvarchar (20)**, avec NULL comme valeur par défaut. Indiquez un nombre entier sans aucune décimale. Les indications Mo et Ko peuvent être utilisées pour indiquer qu'il s'agit de mégaoctets ou de kilo-octets. La valeur par défaut est Mo.  
   
  Si *max_size* n’est pas spécifié, la taille du fichier augmente jusqu'à ce que le disque est plein. Le journal des applications [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows avertit l'administrateur lorsqu'un disque est sur le point d'être saturé.  

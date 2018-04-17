@@ -1,16 +1,16 @@
 ---
-title: sp_help_category (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: sp_help_category (Transact-SQL) | Documents Microsoft
+ms.custom: ''
 ms.date: 08/09/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_help_category
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_category
 ms.assetid: 8cad1dcc-b43e-43bd-bea0-cb0055c84169
-caps.latest.revision: 
+caps.latest.revision: 18
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: debc3b8cef2aeb0a9f4893ff5e9287a2a5fdd016
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: a7e013914fea52e8325acdb76d4aee10d7edd9ad
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sphelpcategory-transact-sql"></a>sp_help_category (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,29 +55,29 @@ sp_help_category [ [ @class = ] 'class' ]
 |Valeur| Description|  
 |-----------|-----------------|  
 |**JOB**|Fournit des informations sur une catégorie de travaux.|  
-|**ALERT**|Fournit des informations sur une catégorie d'alertes.|  
+|**ALERTE**|Fournit des informations sur une catégorie d'alertes.|  
 |**(OPÉRATEUR)**|Fournit des informations sur une catégorie d'opérateurs.|  
   
- [ **@type=** ] **'***type***'**  
+ [  **@type=** ] **'***type***'**  
  Type de catégorie faisant l'objet d'une demande d'informations. *type* est **varchar(12)**, avec NULL comme valeur par défaut et peut prendre l’une des valeurs suivantes.  
   
 |Valeur| Description|  
 |-----------|-----------------|  
 |**LOCAL**|Catégorie de travaux locale.|  
-|**MULTI -SERVER**|Catégorie de travaux multiserveur.|  
+|**MULTI-SERVEUR**|Catégorie de travaux multiserveur.|  
 |**NONE**|Catégorie d’une classe autre que **travail**.|  
   
  [  **@name=** ] **'***nom***'**  
  Nom de la catégorie faisant l'objet d'une demande d'informations. *nom* est **sysname**, avec NULL comme valeur par défaut.  
   
- [ **@suffix=** ] *suffix*  
+ [  **@suffix=** ] *suffixe*  
  Spécifie si le **category_type** colonne du jeu de résultats est un identificateur ou un nom. *suffixe* est **bits**, avec une valeur par défaut **0**. **1** montre la **category_type** en tant que nom, et **0** indique qu’il a un ID.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  **0** (réussite) ou **1** (échec)  
   
 ## <a name="result-sets"></a>Jeux de résultats  
- Lorsque  **@suffix**  est **0**, **sp_help_category** retourne le jeu de résultats suivant :  
+ Lorsque **@suffix** est **0**, **sp_help_category** retourne le jeu de résultats suivant :  
   
 |Nom de colonne|Type de données| Description|  
 |-----------------|---------------|-----------------|  
@@ -85,7 +85,7 @@ sp_help_category [ [ @class = ] 'class' ]
 |**category_type**|**tinyint**|Type de catégorie :<br /><br /> **1** = local<br /><br /> **2** = multiserveur<br /><br /> **3** = none|  
 |**nom**|**sysname**|Nom de la catégorie|  
   
- Lorsque  **@suffix**  est **1**, **sp_help_category** retourne le jeu de résultats suivant :  
+ Lorsque **@suffix** est **1**, **sp_help_category** retourne le jeu de résultats suivant :  
   
 |Nom de colonne|Type de données| Description|  
 |-----------------|---------------|-----------------|  

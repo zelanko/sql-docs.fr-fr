@@ -1,8 +1,8 @@
 ---
-title: sp_fulltext_service (Transact-SQL) | Microsoft Docs
+title: sp_fulltext_service (Transact-SQL) | Documents Microsoft
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: system-stored-procedures
@@ -27,11 +27,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c51847237598fcd1e493fec3194463359198d929
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 07e4a7e1832a91ebc2acd5da19839766b83619ea
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spfulltextservice-transact-sql"></a>sp_fulltext_service (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,10 +49,10 @@ sp_fulltext_service [ [@action=] 'action'
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [ **@action=**] **'***action***'**  
+ [  **@action=**] **'***action***'**  
  Propriété à modifier ou à réinitialiser. *action* est **nvarchar(100),** sans valeur par défaut. Pour obtenir la liste d’un*c*tion propriétés, leurs descriptions et les valeurs qui peuvent être définies, consultez le tableau sous la *valeur* argument. Cet argument retourne les propriétés suivantes : type de données, valeur d'exécution actuelle, valeur minimum ou maximum et état de désapprobation, le cas échéant.  
   
- [ **@value=**] *value*  
+ [  **@value=**] *valeur*  
  Valeur de la propriété spécifiée. *valeur* est **sql_variant**, avec NULL comme valeur par défaut. Si @value a la valeur null, **sp_fulltext_service** retourne le paramètre actuel. Ce tableau répertorie les propriétés relatives aux actions, leurs descriptions et les valeurs qui peuvent être définies.  
   
 > [!NOTE]  

@@ -1,16 +1,16 @@
 ---
 title: sp_primarykeys (Transact-SQL) | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_primarykeys_TSQL
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_primarykeys
 ms.assetid: 0f76dd31-5b7b-4209-9e2e-b9ed5cac164d
-caps.latest.revision: 
+caps.latest.revision: 27
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3d33444d2c868896717c3fcc9224838233b07c01
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 2c4ee9a511351a5fbda7f6a72f419f5bcb738eb1
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spprimarykeys-transact-sql"></a>sp_primarykeys (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ sp_primarykeys [ @table_server = ] 'table_server'
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@table_server =** ] **'***serveur_table '*  
+ [  **@table_server =** ] **' *** serveur_table '*  
  Nom du serveur lié à partir duquel sont retournées les informations de clé primaire. *serveur_de_la_table* est **sysname**, sans valeur par défaut.  
   
  [  **@table_name =** ] **'***table_name***'**  
@@ -62,7 +62,7 @@ sp_primarykeys [ @table_server = ] 'table_server'
  Est le nom du catalogue dans lequel spécifié *table_name* réside. Dans l'environnement [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], cet argument correspond au nom de la base de données. *table_catalog* est **sysname**, avec NULL comme valeur par défaut.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
- Aucune  
+ Aucun  
   
 ## <a name="result-sets"></a>Jeux de résultats  
   
@@ -71,7 +71,7 @@ sp_primarykeys [ @table_server = ] 'table_server'
 |**TABLE_CAT**|**sysname**|Catalogue de la table|  
 |**TABLE_SCHEM**|**sysname**|Schéma de la table|  
 |**NOM_TABLE**|**sysname**|Nom de la table.|  
-|**NOM_COLONNE**|**sysname**|Nom de la colonne.|  
+|**COLUMN_NAME**|**sysname**|Nom de la colonne.|  
 |**KEY_SEQ**|**int**|Numéro de séquence de la colonne dans une clé primaire multicolonne.|  
 |**PK_NAME**|**sysname**|Identificateur de clé primaire. Retourne NULL s'il n'est pas applicable à la source de données.|  
   
@@ -80,7 +80,7 @@ sp_primarykeys [ @table_server = ] 'table_server'
   
  **sp_primarykeys** retourne un résultat vide défini si le fournisseur OLE DB du serveur lié spécifié ne prend pas en charge l’ensemble de lignes PRIMARY_KEYS de le **IDBSchemaRowset** interface.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l'autorisation SELECT sur le schéma.  
   
 ## <a name="examples"></a>Exemples  
@@ -94,14 +94,14 @@ EXEC sp_primarykeys @table_server = N'LONDON1',
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Les requêtes distribuées stockées procédures &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/distributed-queries-stored-procedures-transact-sql.md)   
- [sp_catalogs &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-catalogs-transact-sql.md)   
- [sp_column_privileges &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-column-privileges-transact-sql.md)   
- [sp_foreignkeys &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-foreignkeys-transact-sql.md)   
- [sp_indexes &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-indexes-transact-sql.md)   
- [sp_linkedservers &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-linkedservers-transact-sql.md)   
- [sp_tables_ex &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-tables-ex-transact-sql.md)   
- [sp_table_privileges &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-table-privileges-transact-sql.md)   
+ [Distributed des procédures stockées de requêtes &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/distributed-queries-stored-procedures-transact-sql.md)   
+ [sp_catalogs &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-catalogs-transact-sql.md)   
+ [sp_column_privileges &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-column-privileges-transact-sql.md)   
+ [sp_foreignkeys &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-foreignkeys-transact-sql.md)   
+ [sp_indexes &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-indexes-transact-sql.md)   
+ [sp_linkedservers & #40 ; Transact-SQL & #41 ;](../../relational-databases/system-stored-procedures/sp-linkedservers-transact-sql.md)   
+ [sp_tables_ex &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-tables-ex-transact-sql.md)   
+ [sp_table_privileges &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-table-privileges-transact-sql.md)   
  [Procédures stockées système &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   
