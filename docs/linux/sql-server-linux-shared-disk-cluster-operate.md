@@ -1,4 +1,4 @@
----
+﻿---
 title: Utiliser l’instance de cluster de basculement - SQL Server sur Linux | Documents Microsoft
 description: ''
 author: MikeRayMSFT

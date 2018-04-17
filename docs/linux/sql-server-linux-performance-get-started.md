@@ -1,4 +1,4 @@
----
+﻿---
 title: Prise en main des fonctionnalités de performances de SQL Server sur Linux | Documents Microsoft
 description: Cet article fournit une présentation des fonctionnalités de performances de SQL Server pour Linux aux nouveaux utilisateurs à SQL Server. La plupart de ces exemples fonctionnent sur toutes les plateformes, mais le contexte de cet article est Linux.
 author: rothja
@@ -25,7 +25,6 @@ ms.lasthandoff: 02/13/2018
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-Si vous êtes un utilisateur Linux qui découvre SQL Server, les tâches suivantes vous guident parmi les fonctionnalités de performances. Celles-ci ne sont pas uniques ou spécifiques à Linux, mais cela permet de vous donner une idée des domaines à approfondir. Dans chaque exemple, un lien est fourni menant à la documentation pour ce domaine.
 
 > [!NOTE]
 > Les exemples suivants utilisent la base de données AdventureWorks. Pour obtenir des instructions sur la façon d’obtenir et installer cette base de données exemple, consultez [restaurer une base de données SQL Server à partir de Windows et Linux](sql-server-linux-migrate-restore-database.md).
@@ -52,7 +51,7 @@ Un index columnstore est une technologie pour le stockage et l’interrogation d
       ORDER BY ProductID
    ```
 
-3. Vérifiez que l'index Columnstore a bien été utilisé en recherchant l’object_id de l’index Columnstore et en vérifiant qu’il apparaît dans les statistiques d’utilisation de la table SalesOrderDetail :
+3. Vérifiez que l'index Columnstore a bien été utilisé en recherchant l’object_id de l’index Columnstore et en vérifiant qu’il apparaît dans les statistiques d’utilisation de la table SalesOrderDetail :
 
    ```sql
    SELECT * FROM sys.indexes WHERE name = 'IX_SalesOrderDetail_ColumnStore'
@@ -87,14 +86,14 @@ SQL Server fournit des fonctionnalités OLTP en mémoire qui peuvent améliorer 
    GO
    ```
 
-2. Lorsqu'une transaction implique une table sur disque ainsi qu'une table optimisée en mémoire, il est essentiel que la partie de la transaction concernant la table optimisée en mémoire utilise le niveau d’isolation des transactions appelé SNAPSHOT.  Pour appliquer ce niveau d'isolation pour les tables optimisées en mémoire dans une transaction de ce type, exécutez la commande suivante :
+2. Lorsqu'une transaction implique une table sur disque ainsi qu'une table optimisée en mémoire, il est essentiel que la partie de la transaction concernant la table optimisée en mémoire utilise le niveau d’isolation des transactions appelé SNAPSHOT. Pour appliquer ce niveau d'isolation pour les tables optimisées en mémoire dans une transaction de ce type, exécutez la commande suivante :
 
    ```sql
    ALTER DATABASE CURRENT SET MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT=ON
    GO
    ```
 
-3. Avant de pouvoir créer une table optimisée en mémoire, vous devez d’abord créer un groupe de fichiers optimisé en mémoire et un conteneur pour les fichiers de données :
+3. Avant de pouvoir créer une table optimisée en mémoire, vous devez d’abord créer un groupe de fichiers optimisé en mémoire et un conteneur pour les fichiers de données :
 
    ```sql
    ALTER DATABASE AdventureWorks ADD FILEGROUP AdventureWorks_mod CONTAINS memory_optimized_data
@@ -128,7 +127,7 @@ Le stockage des tables optimisées en mémoire est la mémoire principale, de so
    ```
 
 ### <a name="natively-compiled-stored-procedure"></a>Procédure stockée compilée en mode natif
-SQL Server prend en charge les procédures stockées compilées en mode natif qui accèdent aux tables optimisées en mémoire. Les instructions T-SQL sont compilées en code machine et stockées en tant que DLL natives, permettant l’accès aux données plus rapide et l’exécution des requêtes plus efficace que le T-SQL traditionnel.   Les procédures stockées qui sont identifiées par NATIVE_COMPILATION sont compilées en mode natif. 
+SQL Server prend en charge les procédures stockées compilées en mode natif qui accèdent aux tables optimisées en mémoire. Les instructions T-SQL sont compilées en code machine et stockées en tant que DLL natives, permettant l’accès aux données plus rapide et l’exécution des requêtes plus efficace que le T-SQL traditionnel.  Les procédures stockées qui sont identifiées par NATIVE_COMPILATION sont compilées en mode natif. 
 
 1. Exécutez le script suivant pour créer une procédure stockée compilée en mode natif qui insère un grand nombre d’enregistrements dans la table ShoppingCart :
 
@@ -172,13 +171,13 @@ Pour plus d’informations sur l’OLTP en mémoire, consultez les rubriques sui
 ## <a name="use-query-store"></a>Utiliser le magasin de requête
 Le magasin de requêtes (Query Store) collecte des informations détaillées sur les performances concernant les requêtes, les plans d’exécution et les statistiques d’exécution.
 
-Le magasin de requêtes n’est pas actif par défaut et peut être activé avec ALTER DATABASE :
+Le magasin de requêtes n’est pas actif par défaut et peut être activé avec ALTER DATABASE :
 
    ```sql
    ALTER DATABASE AdventureWorks SET QUERY_STORE = ON;
    ```
 
-Exécutez la requête suivante pour retourner des informations sur les requêtes et plans d'exécution du magasin de requêtes : 
+Exécutez la requête suivante pour retourner des informations sur les requêtes et plans d'exécution du magasin de requêtes : 
 
    ```sql
    SELECT Txt.query_text_id, Txt.query_sql_text, Pl.plan_id, Qry.*

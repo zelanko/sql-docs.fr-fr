@@ -1,4 +1,4 @@
----
+﻿---
 title: Éditions et des fonctionnalités prises en charge de SQL Server 2017 ~ Linux | Documents Microsoft
 ms.custom: sql-linux
 ms.date: 09/14/2017
@@ -96,7 +96,7 @@ L’édition Developer continue à prendre en charge seulement 1 client pour [S
 |Taille maximale des données à mémoire optimisée par base de données dans le [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]|Mémoire illimitée| 32 Go| 16 Go| 352 Mo|
 |Taille maximale de la base de données relationnelle|524 Po|524 Po|524 Po|10 GB|  
   
-<sup>1</sup> Enterprise edition avec serveur + Client accès licences (CAL) (non disponible pour les nouveaux contrats) est limitée à un maximum de 20 cœurs par instance de SQL Server. Il n'existe aucune limite dans le mode de licence Serveur selon le nombre de cœurs. Pour plus d’informations, consultez [limites de capacité de calcul par l’édition de SQL Server](../sql-server/compute-capacity-limits-by-edition-of-sql-server.md).  
+<sup>1</sup> L'édition Enterprise avec un mode de licences serveur + CAL (licence d'accès client), non disponible pour les nouveaux contrats, est limitée à un maximum de 20 cœurs par instance SQL Server. Il n'existe aucune limite dans le mode de licence Serveur par cœurs. Pour plus d’informations, consultez [limites de capacité de calcul par édition de SQL Server](../sql-server/compute-capacity-limits-by-edition-of-sql-server.md). 
  
 ##  <a name="RDBMSHA"></a> Haute disponibilité SGBDR  
   
@@ -120,11 +120,11 @@ L’édition Developer continue à prendre en charge seulement 1 client pour [S
 |Sauvegarde chiffrée|Oui|Oui|Non|non|
 |Sauvegarde hybride vers Windows Azure (sauvegarde vers une URL)|Oui|Oui|Non|non|
   
-<sup>1</sup> sur Enterprise edition, le nombre de nœuds est au maximum du système d’exploitation. L’édition Standard prend en charge deux nœuds. 
+<sup>1</sup> Sur l'édition Enterprise, le nombre de nœuds correspond au maximum du système d’exploitation. L’édition Standard prend en charge deux nœuds. 
 
-<sup>2</sup> sur Enterprise edition prend en charge jusqu'à 8 réplicas secondaires - notamment 2 réplicas secondaires synchrones. 
+<sup>2</sup> L'édition Enterprise prend en charge jusqu'à 8 réplicas secondaires, notamment 2 réplicas secondaires synchrones. 
 
-<sup>3</sup> standard edition prend en charge les groupes de disponibilité de base. Un groupe de disponibilité de base prend en charge deux réplicas, avec une base de données. Pour plus d’informations sur les groupes de disponibilité de base, consultez [Groupes de disponibilité de base](../database-engine/availability-groups/windows/basic-availability-groups-always-on-availability-groups.md).    
+<sup>3</sup> L'édition standard prend en charge les groupes de disponibilité de base. Un groupe de disponibilité de base prend en charge deux réplicas, avec une seule base de données. Pour plus d’informations sur les groupes de disponibilité de base, consultez [Groupes de disponibilité de base](../database-engine/availability-groups/windows/basic-availability-groups-always-on-availability-groups.md). 
 
 ##  <a name="RDBMSSP"></a> Scalabilité et performances SGBDR  
   
@@ -149,7 +149,7 @@ L’édition Developer continue à prendre en charge seulement 1 client pour [S
 |Améliorations de l’insertion en bloc|Oui|Oui|Oui|Oui|
 
 
-<sup>1</sup> La taille des données OLTP en mémoire et le cache de segments columnstore sont limités à la quantité de mémoire spécifiée par l’édition dans la section Limites d’échelle. Le Nombre maximal de degrés de parallélisme est limité. Les degrés de parallélisme de processus (DOP) pour la création d’un index est limitée à 2 de parallélisme maximal pour l’Édition Standard et 1 degré de parallélisme pour les éditions Web et Express. Ceci fait référence aux index columnstore créés sur des tables basées sur des disques et des tables à mémoire optimisée.
+<sup>1</sup> La taille des données OLTP en mémoire et le cache de segments columnstore sont limités à la quantité de mémoire spécifiée par l’édition dans la section Limites d’échelle. Le degré maximum de parallélisme est limité. Les degrés de parallélisme (DOP) pour la création d’un index est limitée au maximum à 2 pour l’Édition Standard et 1 pour les éditions Web et Express. Ceci fait référence aux index columnstore créés sur des tables sur disque et les tables optimisées en mémoire.
 
 ##  <a name="RDBMSS"></a> Sécurité SGBDR  
   

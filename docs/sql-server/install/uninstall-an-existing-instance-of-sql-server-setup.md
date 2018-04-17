@@ -1,4 +1,4 @@
----
+﻿---
 title: Désinstaller une instance existante de SQL Server (programme d’installation) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/27/2017

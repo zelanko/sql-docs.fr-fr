@@ -1,4 +1,4 @@
----
+﻿---
 title: Configurer le stockage iSCSI basculement cluster instance - SQL Server sur Linux | Documents Microsoft
 description: ''
 author: MikeRayMSFT
@@ -30,7 +30,7 @@ Cet article explique comment configurer le stockage iSCSI pour une instance de c
 iSCSI utilise le réseau pour présenter les disques à partir d’un serveur configuré comme une cible pour les serveurs. Les serveurs qui se connectent à la cible iSCSI nécessitent qu’un initiateur iSCSI soit configuré. Les disques sur le serveur cible disposent d’autorisations explicites afin qu’uniquement les initiateurs qui doivent être en mesure d’y accéder puissent le faire. La cible elle-même doit être hautement disponible et fiable.
 
 ### <a name="important-iscsi-target-information"></a>Informations de la cible iSCSI important
-Bien que cette section ne décrive pas comment configurer une cible iSCSI, car cette configuration est spécifique du type de source que vous souhaitez utiliser, assurez-vous que la sécurité pour les disques qui seront utilisés par les nœuds de cluster est configurée.  
+Bien que cette section ne décrive pas comment configurer une cible iSCSI, car cette configuration est spécifique du type de source que vous souhaitez utiliser, assurez-vous que la sécurité pour les disques qui seront utilisés par les nœuds de cluster est configurée. 
 
 La cible ne doit jamais être configurée sur un nœud de l’instance de cluster si vous utilisez une cible iSCSI basée sur Linux. Pour les performances et la disponibilité, les réseaux iSCSI doivent être distincts de ceux utilisés par le trafic réseau normal sur le serveur source et le serveur client. Les réseaux utilisés pour iSCSI doivent être rapides. N’oubliez pas que ce réseau consomme la bande passante du processeur, planifiez en conséquence si vous utilisez un serveur normal.
 Le plus important sur le serveur cible est de veiller à ce que les disques qui sont créés disposent des autorisations appropriées afin que seuls les serveurs participant à l’instance de cluster de basculement puissent y accéder. Un exemple est illustré ci-dessous à partir de la cible Microsoft iSCSI, où linuxnodes1 est le nom créé. Dans ce cas, les adresses IP des nœuds sont affectées pour que NewFCIDisk1.vhdx soit visible pour eux.
@@ -41,12 +41,12 @@ Le plus important sur le serveur cible est de veiller à ce que les disques qui 
 
 Cette section décrit comment configurer un initiateur iSCSI sur les serveurs qui seront utilisés comme nœuds de l’instance de cluster de basculement. Les instructions doivent fonctionner sur RHEL et Ubuntu.
 
-Pour plus d’informations sur l’initiateur iSCSI pour les distributions prises en charge, consultez les liens suivants :
+Pour plus d’informations sur l’initiateur iSCSI pour les distributions prises en charge, consultez les liens suivants :
 - [Red Hat](http://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/6/html/Storage_Administration_Guide/iscsi-api.html)
 - [SUSE](http://www.suse.com/documentation/sles11/stor_admin/data/sec_inst_system_iscsi_initiator.html) 
 - [Ubuntu](https://help.ubuntu.com/lts/serverguide/iscsi-initiator.html)
 
-1.  Choisissez un des serveurs participant à la configuration de l'instance de cluster de basculement. peu importe lequel. iSCSI devant être sur un réseau dédié, configurez iSCSI pour reconnaître et utiliser ce réseau. Exécutez `sudo iscsiadm -m iface -I <iSCSIIfaceName> -o new` où `<iSCSIIfaceName>` est le nom unique ou convivial du réseau. L’exemple suivant utilise `iSCSINIC`:
+1.  Choisissez un des serveurs participant à la configuration de l'instance de cluster de basculement, peu importe lequel. iSCSI devant être sur un réseau dédié, configurez iSCSI pour reconnaître et utiliser ce réseau. Exécutez `sudo iscsiadm -m iface -I <iSCSIIfaceName> -o new` où `<iSCSIIfaceName>` est le nom unique ou convivial du réseau. L’exemple suivant utilise `iSCSINIC`:
    
     ```bash
     sudo iscsiadm -m iface -I iSCSINIC -o new
@@ -161,7 +161,7 @@ Pour plus d’informations sur l’initiateur iSCSI pour les distributions prise
     su mssql
     ```
 
-   *    Créez un répertoire temporaire pour stocker les fichiers journaux et les données de SQL Server. Vous ne recevrez aucun accusé de réception en cas de réussite.
+   *    Créez un répertoire temporaire pour stocker les fichiers journaux et les données de SQL Server. Vous ne recevrez aucun accusé de réception en cas de réussite.	
 
     ```bash
     mkdir <TempDir>
@@ -216,7 +216,7 @@ Pour plus d’informations sur l’initiateur iSCSI pour les distributions prise
     mount /dev/FCIDataVG1/FCIDataLV1 /var/opt/mssql/data
     ``` 
 
-   *    Remplacez le propriétaire du montage par mssql. Vous ne recevrez aucun accusé de réception en cas de réussite.
+   *   Remplacez le propriétaire du montage par mssql. Vous ne recevrez aucun accusé de réception en cas de réussite.
 
     ```bash
     chown mssql /var/opt/mssql/data
@@ -228,7 +228,7 @@ Pour plus d’informations sur l’initiateur iSCSI pour les distributions prise
     chgrp mssql /var/opt/mssql/data
     ``` 
 
-   *    Basculez vers l’utilisateur mssql.  Vous ne recevrez aucun accusé de réception en cas de réussite.
+   *    Basculez vers l’utilisateur mssql. Vous ne recevrez aucun accusé de réception en cas de réussite.
 
     ```bash
     su mssql
@@ -266,7 +266,7 @@ Pour plus d’informations sur l’initiateur iSCSI pour les distributions prise
 
 13. Pour des éléments autres que des bases de données système, par exemple des bases de données utilisateur ou des sauvegardes, effectuez les étapes suivantes. Si vous utilisez uniquement l’emplacement par défaut, passez à l’étape 14.
 
-   *    Passez en mode superutilisateur. Vous ne recevrez aucun accusé de réception en cas de réussite.
+   *    Passez en mode superutilisateur. Vous ne recevrez pas de confirmation en cas de réussite.
 
     ```bash
     sudo -i
@@ -290,7 +290,7 @@ Pour plus d’informations sur l’initiateur iSCSI pour les distributions prise
     mount /dev/<VolumeGroupName>/<LogicalVolumeName> <FolderName>
     ```
 
-    \<VolumeGroupName> est le nom du groupe de volumes, \<LogicalVolumeName> le nom du volume logique créé et \<FolderName> le nom du dossier. Un exemple de syntaxe est illustré ci-dessous. Exemple de syntaxe est illustré ci-dessous.
+    \<VolumeGroupName> est le nom du groupe de volumes, \<LogicalVolumeName> le nom du volume logique créé et \<FolderName> le nom du dossier. Un exemple de syntaxe est illustré ci-dessous.
 
     ```bash
     mount /dev/FCIDataVG2/FCIDataLV2 /var/opt/mssql/userdata 
@@ -332,7 +332,7 @@ Pour plus d’informations sur l’initiateur iSCSI pour les distributions prise
     sudo umount /dev/<VolumeGroupName>/<LogicalVolumeName> <FolderName>
     ```
 
-    \<VolumeGroupName> est le nom du groupe de volumes, \<LogicalVolumeName> le nom du volume logique créé et \<FolderName> le nom du dossier. Un exemple de syntaxe est illustré ci-dessous. Exemple de syntaxe est illustré ci-dessous.
+    \<VolumeGroupName> est le nom du groupe de volumes, \<LogicalVolumeName> le nom du volume logique créé et \<FolderName> le nom du dossier. Un exemple de syntaxe est illustré ci-dessous.
 
     ```bash
     sudo umount /dev/FCIDataVG2/FCIDataLV2 /var/opt/mssql/userdata 
@@ -356,7 +356,7 @@ Pour plus d’informations sur l’initiateur iSCSI pour les distributions prise
     volume_list = [ <ListOfVGsNotUsedByPacemaker> ]
     ```
 
-    \<ListOfVGsNotUsedByPacemaker > est la liste des groupes de volumes provenant de la sortie de l’étape 20 qui ne seront pas utilisés par l’instance de cluster de basculement. Mettez chaque groupe entre guillemets et séparez-les par des virgules. comme dans l’exemple suivant :
+    \<ListOfVGsNotUsedByPacemaker > est la liste des groupes de volumes provenant de la sortie de l’étape 20 qui ne seront pas utilisés par l’instance de cluster de basculement. Mettez chaque groupe entre guillemets et séparez-les par des virgules, comme dans l’exemple suivant :
 
     ![55-ListOfVGs][11]
  
@@ -391,7 +391,7 @@ Pour plus d’informations sur l’initiateur iSCSI pour les distributions prise
     sudo systemctl stop mssql-server
     sudo systemctl status mssql-server
     ```
-25. Répétez les étapes 1 à 6 sur les autres serveurs qui participeront à la FCI.
+25. Répétez les étapes 1 à 6 sur les autres serveurs qui participeront au FCI.
 
 Vous êtes maintenant prêt à configurer l’instance FCI.
 

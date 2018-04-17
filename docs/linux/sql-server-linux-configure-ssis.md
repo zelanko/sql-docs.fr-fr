@@ -1,4 +1,4 @@
----
+﻿---
 title: Configurer SSIS sur Linux avec ssis-conf | Documents Microsoft
 description: "Cet article décrit comment configurer SQL Server Integration Services (SSIS) sur Linux avec l’utilitaire ssis-conf."
 author: leolimsft
@@ -38,7 +38,7 @@ Vous pouvez également utiliser le `ssis-conf` utilitaire pour configurer les pr
 
 ## <a name="run-ssis-conf"></a>Exécutez ssis-conf
 
-Les exemples de cet article nécessitent de spécifier le chemin complet `/opt/ssis/bin/ssis-conf` afin d'exécuter `ssis-conf`. Si au préalable vous accédez à cet emplacement avant d’exécuter `ssis-conf`, vous pouvez exécuter l’utilitaire dans le contexte du répertoire actif : `./ssis-conf`.
+Les exemples de cet article nécessitent de spécifier le chemin complet `/opt/ssis/bin/ssis-conf` afin d'exécuter `ssis-conf`. Si au préalable vous accédez à cet emplacement avant d’exécuter `ssis-conf`, vous pouvez exécuter l’utilitaire dans le contexte du répertoire actif : `./ssis-conf`.
 
 Veillez à exécuter les commandes qui sont décrites dans cet article avec des privilèges `root`. Par exemple, exécutez `sudo /opt/ssis/bin/ssis-conf setup` et non `/opt/ssis/bin/ssis-conf setup`.
 
@@ -94,7 +94,7 @@ Pour les éditions gratuites (autrement dit, les éditions Express, Developer et
 
 Entrez la commande suivante : `$ sudo /opt/ssis/bin/ssis-conf telemetry`.
 
-Pour les éditions payantes, après avoir entré la commande, vous recevrez le message suivant :
+Pour les éditions payantes, après avoir entré la commande, vous recevrez le message suivant :
 
 ```
 Send feature usage data to Microsoft. Feature usage data includes information about your hardware configuration and how you use SQL Server Integration Services.
@@ -102,7 +102,7 @@ Send feature usage data to Microsoft. Feature usage data includes information ab
 [Yes/No]:
 ```
 
-Si vous sélectionnez **Oui**, le service de télémétrie est activé et commence à s’exécuter. Le service démarre automatiquement après chaque démarrage. Si vous sélectionnez **non**, le service de télémétrie s’arrête et est désactivée.
+Si vous sélectionnez **Oui**, le service de télémétrie est activé et commence à s’exécuter. Le service démarre automatiquement après chaque démarrage. Si vous sélectionnez **Non**, le service de télémétrie s’arrête et est désactivé.
 
 ## <a name="use-setup-to-initialize-and-set-up-microsoft-sql-server-integration-services"></a>Utilisez le programme d’installation pour initialiser et configurer Microsoft SQL Server Integration Services
 
@@ -122,9 +122,9 @@ Pour exécuter le `setup` de commandes avec des messages dans la langue que vous
 
 Le fichier `/var/opt/ssis/ssis.conf` suivant fournit un exemple pour chaque paramètre.
 
-Pour SQL Server, vous pouvez modifier les paramètres du système en modifiant les valeurs dans le fichier `mssql.conf`. Pour SSIS, vous *ne pouvez pas* modifier les paramètres système en modifiant les valeurs dans le fichier `ssis.conf`. Le fichier `ssis.conf` montre uniquement les résultats après l’installation. Si vous souhaitez modifier les paramètres de SSIS, vous devez supprimer le fichier `ssis.conf` et exécuter à nouveau la commande `setup`.
+Pour SQL Server, vous pouvez modifier les paramètres du système en modifiant les valeurs dans le fichier `mssql.conf`. Pour SSIS, vous *ne pouvez pas* modifier les paramètres système en modifiant les valeurs dans le fichier `ssis.conf`. Le fichier `ssis.conf` montre uniquement les résultats après l’installation. Si vous souhaitez modifier les paramètres de SSIS, vous devez supprimer le fichier `ssis.conf` et exécutez à nouveau la commande `setup`.
 
-Voici un exemple de fichier `ssis.conf`. Chaque champ correspond au résultat d’une étape d’installation.
+Si vous souhaitez modifier les paramètres de SSIS, vous devez supprimer le fichier `ssis.conf` et exécuter à nouveau la commande `setup`.
 
 ```
 [LICENSE]
