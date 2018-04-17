@@ -1,33 +1,33 @@
 ---
-title: "Propriétés de l’assembly (Page Général) | Documents Microsoft"
-ms.custom: 
+title: Propriétés de l’assembly (Page Général) | Documents Microsoft
+ms.custom: ''
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: clr
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - sql13.swb.assemblies.general.f1
 ms.assetid: 88d40d3b-8983-4a57-b79d-ed1477a5c3c6
-caps.latest.revision: 
+caps.latest.revision: 22
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b2629fbf940ba55da8d69db388a5a6f07022c768
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: c97bf2c2fbf93284fb178ae39b51e40f25953142
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="assemblies---properties"></a>Assemblys - propriétés
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-Cette page vous permet d'afficher et de modifier les propriétés de l'assembly.  
+  Cette page vous permet d'afficher et de modifier les propriétés de l'assembly.  
   
 ## <a name="options"></a>Options  
  **Nom de l’assembly**  

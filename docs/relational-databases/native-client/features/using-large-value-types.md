@@ -1,15 +1,15 @@
 ---
-title: "À l’aide des Types de valeur volumineux | Documents Microsoft"
-ms.custom: 
+title: À l’aide des Types de valeur volumineux | Documents Microsoft
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: native-client|features
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - large value data types
@@ -19,22 +19,23 @@ helpviewer_keywords:
 - SQL Server Native Client ODBC driver, large value data types
 - SQL Server Native Client OLE DB provider, large value data types
 ms.assetid: 4a58b05c-8848-44bb-8704-f9f409efa5af
-caps.latest.revision: 
+caps.latest.revision: 53
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 54bc0998f8a275de6a0fb03398c461917a67a8e9
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 420c4456970a2dcc0605bdc6d2f5ad3409298aec
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="using-large-value-types"></a>Utilisation de types de valeur élevée
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
-  Avant [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], l'utilisation de types de données de valeur élevée nécessitait une gestion particulière. Les types de données à valeur élevée sont ceux dont la taille de ligne maximale dépasse 8 Ko. [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]introduit un **max** spécificateur pour **varchar**, **nvarchar** et **varbinary** des types de données pour permettre le stockage de valeurs aussi grand que 2 ^ 31 -1 octets. Colonnes de la table et [!INCLUDE[tsql](../../../includes/tsql-md.md)] variables peuvent spécifier **varchar (max)**, **nvarchar (max)** ou **varbinary (max)** des types de données.  
+  Avant [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], l'utilisation de types de données de valeur élevée nécessitait une gestion particulière. Les types de données à valeur élevée sont ceux dont la taille de ligne maximale dépasse 8 Ko. [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] introduit un **max** spécificateur pour **varchar**, **nvarchar** et **varbinary** des types de données pour permettre le stockage de valeurs aussi grand que 2 ^ 31 -1 octets. Colonnes de la table et [!INCLUDE[tsql](../../../includes/tsql-md.md)] variables peuvent spécifier **varchar (max)**, **nvarchar (max)** ou **varbinary (max)** des types de données.  
   
 > [!NOTE]  
 >  La taille maximale des types de données de valeur élevée peut être comprise entre 1 et 8 Ko. Il est aussi possible de spécifier une taille illimitée.  

@@ -1,16 +1,16 @@
 ---
-title: "srv_pfieldex (API de procédure stockée étendue) | Microsoft Docs"
-ms.custom: 
+title: srv_pfieldex (API de procédure stockée étendue) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: extended-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - srv_pfieldex
@@ -22,22 +22,22 @@ dev_langs:
 helpviewer_keywords:
 - srv_pfieldex
 ms.assetid: d4e9a34b-b3a3-434f-8556-768bd20d145a
-caps.latest.revision: 
+caps.latest.revision: 30
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 70f36511846d7435cc940ea65f871c462130958d
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
-ms.translationtype: MT
+ms.openlocfilehash: b2e3e72b30ff57270372bfaca3180447963940a4
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="srvpfieldex-extended-stored-procedure-api"></a>srv_pfieldex (API de procédure stockée étendue)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Utilisez plutôt l'intégration du CLR.  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Utilisez l’intégration CLR à la place.  
   
  Retourne un pointeur vers des données qui contiennent le champ SRV_PROC demandé.  
   
@@ -61,7 +61,7 @@ len
  *field*  
  Spécifie le champ *srvproc* à retourner.  
   
-|Champ|Description|Type renvoyé|  
+|Champ| Description|Type renvoyé|  
 |-----------|-----------------|------------------|  
 |SRV_MSGLCID|LCID du message de la session active.|ULONG*|  
 |SRV_INSTANCENAME|Nom de l'instance (si elle est nommée) ; sinon, retourne NULL.|WCHAR*|  
@@ -75,7 +75,7 @@ len
 > [!IMPORTANT]  
 >  La mémoire tampon retournée à partir du serveur doit être en lecture seule. Dans le cas contraire, l'état du serveur peut être endommagé.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  **Remarque relative à la sécurité** Il est recommandé de revoir en détail le code source des procédures stockées étendues et de tester les DLL compilées avant de les installer sur un serveur de production. Pour plus d'informations sur l'examen et les tests de sécurité, consultez ce [site Web de Microsoft](http://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409http://msdn.microsoft.com/security/).  
   
   
