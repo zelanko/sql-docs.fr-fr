@@ -1,31 +1,32 @@
 ---
 title: Pilote ODBC pour Oracle | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - ODBC driver for Oracle [ODBC]
 - ODBC driver for Oracle [ODBC], about ODBC driver for Oracle
 - Oracle data access [ODBC]
 ms.assetid: 937e0662-8b1d-44f7-b077-4015c6605b2c
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 70ae9b447f0f3bcc6e70060b2f46f994ef3ea773
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 1745942fff2488fe97d2860f17fc7b5239ba3942
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="odbc-driver-for-oracle"></a>Pilote ODBC pour Oracle
 > [!IMPORTANT]  
@@ -37,7 +38,7 @@ ms.lasthandoff: 12/21/2017
   
  Le pilote ODBC pour Oracle permet à une application à accéder aux données dans une base de données Oracle via l’interface ODBC. Le pilote peut accéder à des bases de données Oracle locales ou il peut communiquer avec le réseau via SQL * Net. Le diagramme suivant détaille cette architecture de l’application et le pilote.  
   
- ![Pilote ODBC pour Oracle application &#47; architecture du pilote](../../odbc/microsoft/media/orcdrvsdkarch.gif "OrcDrvSDKArch")  
+ ![Pilote ODBC pour Oracle application&#47;architecture du pilote](../../odbc/microsoft/media/orcdrvsdkarch.gif "OrcDrvSDKArch")  
   
  Le pilote ODBC pour Oracle est conforme aux API de mise en conformité au niveau 1 et SQL conformité au niveau de base. Il prend également en charge certaines fonctions dans les API de mise en conformité au niveau 2 et la plupart de la grammaire dans les niveaux de conformité Core et SQL étendue. Le pilote est conforme à ODBC 2.5 et prend en charge les systèmes 32 bits. Oracle 7.3 x est prise en charge complète ; Oracle8 prend en charge limitée. Le pilote ODBC pour Oracle ne prend pas en charge les nouveaux types de données Oracle8 : types de données Unicode, BLOB, CLOB, et ainsi de suite, ni nouveau modèle d’Oracle d’objet relationnel. Pour plus d’informations sur les types de données pris en charge, consultez [pris en charge les Types de données](../../odbc/microsoft/supported-data-types-odbc-driver-for-oracle.md) dans ce guide.  
   

@@ -1,15 +1,15 @@
 ---
-title: "Leçon supplémentaire de Analysis Services tutorial : les lignes de détails | Documents Microsoft"
-description: "Décrit comment créer une Expression de lignes de détails dans le didacticiel Analysis Services."
+title: 'Leçon supplémentaire de Analysis Services tutorial : les lignes de détails | Documents Microsoft'
+description: Décrit comment créer une Expression de lignes de détails dans le didacticiel Analysis Services.
 ms.prod_service: analysis-services, azure-analysis-services
 services: analysis-services
 ms.suite: pro-bi
-documentationcenter: 
+documentationcenter: ''
 author: Minewiskan
 manager: kfile
-editor: 
-tags: 
-ms.assetid: 
+editor: ''
+tags: ''
+ms.assetid: ''
 ms.service: analysis-services
 ms.devlang: NA
 ms.topic: get-started-article
@@ -17,11 +17,12 @@ ms.tgt_pltfrm: NA
 ms.workload: na
 ms.date: 02/20/2018
 ms.author: owend
-ms.openlocfilehash: 7efcdc724792656a917b95892ed699bc57590ce7
-ms.sourcegitcommit: 7ed8c61fb54e3963e451bfb7f80c6a3899d93322
+monikerRange: '>= sql-analysis-services-2017 || = sqlallproducts-allversions'
+ms.openlocfilehash: bd138f17df94b94cbe51869b9e364bbd544509f2
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/20/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="supplemental-lesson---detail-rows"></a>Leçon supplémentaire - les lignes de détails
 
@@ -43,11 +44,11 @@ Examinons les détails de la mesure InternetTotalSales, avant d’ajouter une Ex
   
 2.  Dans **PivotTable Fields**, ajoutez le **InternetTotalSales** mesure à partir de la table FactInternetSales **valeurs**, **CalendarYear** à partir de la table DimDate pour **colonnes**, et **EnglishCountryRegionName** à **lignes**. Le tableau croisé dynamique fournit maintenant des résultats agrégés dans la mesure InternetTotalSales par régions et l’année. 
 
-    ![as-lesson-detail-rows-pivottable](../tutorial-tabular-1400/media/as-lesson-detail-rows-pivottable.png)
+    ![en tant que-leçon-détail-lignes-tableau croisé dynamique](../tutorial-tabular-1400/media/as-lesson-detail-rows-pivottable.png)
 
 3. Dans le tableau croisé dynamique, double-cliquez sur une valeur agrégée pour une année et un nom de région. Ici, nous avons double-cliqué sur la valeur de l’Australie et l’année 2014. Une nouvelle feuille s’ouvre, contenant des données, mais les données inutiles.
 
-    ![as-lesson-detail-rows-pivottable](../tutorial-tabular-1400/media/as-lesson-detail-rows-sheet.png)
+    ![en tant que-leçon-détail-lignes-tableau croisé dynamique](../tutorial-tabular-1400/media/as-lesson-detail-rows-sheet.png)
   
 Ce que nous voulons ici est une table contenant des colonnes et lignes de données qui contribuent au résultat de la mesure InternetTotalSales agrégé. Pour ce faire, nous pouvons ajouter une Expression de lignes de détail en tant que propriété de la mesure.
 
@@ -59,7 +60,7 @@ Ce que nous voulons ici est une table contenant des colonnes et lignes de donné
 
 2. Dans **propriétés** > **Expression de lignes de détail**, cliquez sur le bouton de l’éditeur pour ouvrir l’éditeur DAX.
 
-    ![as-lesson-detail-rows-ellipse](../tutorial-tabular-1400/media/as-lesson-detail-rows-ellipse.png)
+    ![en tant que-leçon-détail-lignes-ellipse](../tutorial-tabular-1400/media/as-lesson-detail-rows-ellipse.png)
 
 3. Dans l’éditeur DAX, entrez l’expression suivante :
 
@@ -80,7 +81,7 @@ Ce que nous voulons ici est une table contenant des colonnes et lignes de donné
 
 4. Dans Excel, supprimez de la feuille créée à l’étape 3, puis double-cliquez sur une valeur agrégée. Cette fois, avec une propriété d’Expression de lignes de détail définie pour la mesure, une nouvelle feuille s’ouvre contenant des données beaucoup plus utiles.
 
-    ![as-lesson-detail-rows-detailsheet](../tutorial-tabular-1400/media/as-lesson-detail-rows-detailsheet.png)
+    ![en tant que-leçon-détail-lignes-detailsheet](../tutorial-tabular-1400/media/as-lesson-detail-rows-detailsheet.png)
 
 5. Redéployer votre modèle.
 

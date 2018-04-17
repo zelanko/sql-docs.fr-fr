@@ -1,27 +1,28 @@
 ---
-title: "Les identificateurs de Type pseudo-aléatoire | Documents Microsoft"
-ms.custom: 
+title: Les identificateurs de Type pseudo-aléatoire | Documents Microsoft
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 8fa365d2-9de0-40c6-bcd2-a85613061baf
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 448045d43ca75d73da61af00bc08c623a001c113
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: fa39f8dcaacbe4bfc0b12e00d41117b523d7ce03
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="pseudo-type-identifiers"></a>Identificateurs de Type pseudo-aléatoire
 Pour faciliter la programmation application, ODBC définit un nombre d’identificateurs de type pseudo-aléatoire. Ces identificateurs ne correspondent pas réellement aux types de données réelles, mais au lieu de cela, selon la situation, résoudre des types de données existant.  

@@ -1,31 +1,32 @@
 ---
-title: "Architecture des pilotes de bureau de base de données | Documents Microsoft"
-ms.custom: 
+title: Architecture des pilotes de bureau de base de données | Documents Microsoft
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Jet-based ODBC drivers [ODBC], architecture
 - ODBC desktop database drivers [ODBC], architecture
 - desktop database drivers [ODBC], architecture
 ms.assetid: 8b4d13f7-ab37-40b4-a9c6-145e7385352f
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3f5c7b12e5413441476e70dc63fe9d3da9284635
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 4b2b68b735a278fd00b4d472eb881594c0bf4245
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="desktop-database-drivers-architecture"></a>Architecture des pilotes de bureau de base de données
 Ces pilotes sont conçues pour utiliser Microsoft Windows 95 ou version ultérieure, ou Windows NT 4.0 et Windows 2000. Seules les applications 32 bits sont pris en charge sur Windows 95 ou version ultérieure ; les applications 16 bits et 32 bits sont pris en charge sur Windows NT 4.0 et Windows 2000.  
@@ -37,13 +38,13 @@ Ces pilotes sont conçues pour utiliser Microsoft Windows 95 ou version ultérie
   
  Est de l’architecture application/pilote sur Windows 95 ou version ultérieure :  
   
- ![Application &#47; architecture du pilote : Windows 95 et versions ultérieures](../../odbc/microsoft/media/odbcjetarch1.gif "ODBCJetArch1")  
+ ![Application&#47;architecture du pilote : Windows 95 et versions ultérieures](../../odbc/microsoft/media/odbcjetarch1.gif "ODBCJetArch1")  
   
  L’utilisation de ces pilotes par les applications 16 bits sur Windows 95 n’est pas pris en charge.  
   
  Est de l’architecture application/pilote sur Windows NT 4.0 et Windows 2000 :  
   
- ![Application &#47; architecture du pilote : NT 4.0 et Windows 2000](../../odbc/microsoft/media/odbcjetarch2.gif "ODBCJetArch2")  
+ ![Application&#47;architecture du pilote : NT 4.0 et Windows 2000](../../odbc/microsoft/media/odbcjetarch2.gif "ODBCJetArch2")  
   
  Les pilotes de base de données de bureau sont à deux niveaux. Dans une configuration à deux niveaux, le pilote n’effectue pas le processus de l’analyse, validation, optimisation et l’exécution de la requête. Au lieu de cela, Microsoft Jet effectue ces tâches. Il traite les appels d’API ODBC et agit comme un moteur SQL. Microsoft Jet fait désormais partie intégrante, non séparable des pilotes : il est fourni avec les pilotes et réside avec les pilotes, même si aucune autre application sur l’ordinateur n’utilise.  
   

@@ -1,15 +1,16 @@
 ---
-title: "Bloc et compatibilité des curseurs de défilement pour ODBC 3.x | Documents Microsoft"
-ms.custom: 
+title: Bloc et compatibilité des curseurs de défilement pour ODBC 3.x | Documents Microsoft
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - compatibility [ODBC], cursors
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - cursors [ODBC], compatibility issues
 - SQLFetchScroll function [ODBC], block cursors
 ms.assetid: 82f6cf68-cfde-4417-9788-d6382ca14bf8
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ca3cbf2bc9aba7baccc4cfdda738a82949951fda
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 116978a182b207f52e879310969a2a5aa5b4eb3c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="block-cursors-scrollable-cursors-and-backward-compatibility-for-odbc-3x-applications"></a>Curseurs de bloc, les curseurs permettant le défilement et la compatibilité descendante pour les Applications ODBC 3.x
 L’existence de deux **SQLFetchScroll** et **SQLExtendedFetch** représente le premier clear Fractionner dans ODBC entre l’Interface API (Application Programming), qui est l’ensemble de fonctions, les appels de l’application et le Service fournisseur Interface SPI (), qui est l’ensemble de fonctions le pilote implémente. Cette séparation est nécessaire pour équilibrer l’exigence dans ODBC 3. *x*, qui utilise **SQLFetchScroll**, pour s’aligner avec les normes et être compatible avec ODBC 2. *x*, qui utilise **SQLExtendedFetch**.  

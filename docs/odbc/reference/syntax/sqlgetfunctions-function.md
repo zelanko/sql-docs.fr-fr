@@ -2,7 +2,7 @@
 title: Fonction SQLGetFunctions | Documents Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: 0451d2f9-0f4f-46ba-b252-670956a52183
 caps.latest.revision: 23
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9a38bc5d8e071efee286f726d75f6949243cbb77
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 10304d56755f77a616862d97cea43bba8b4a5cad
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlgetfunctions-function"></a>Fonction SQLGetFunctions
 **Mise en conformité**  
@@ -74,7 +74,7 @@ SQLRETURN SQLGetFunctions(
 ## <a name="diagnostics"></a>Diagnostics  
  Lorsque **SQLGetFunctions** retourne SQL_ERROR ou SQL_SUCCESS_WITH_INFO, une valeur SQLSTATE associée peut être obtenu en appelant **SQLGetDiagRec** avec un *HandleType* de SQL_HANDLE_DBC et un *gérer* de *handle de connexion*. Le tableau suivant répertorie les valeurs SQLSTATE généralement retournées par **SQLGetFunctions** et explique chacune d’elles dans le contexte de cette fonction ; la notation « (DM) » précède les descriptions de SQLSTATE retournée par le Gestionnaire de pilotes. Le code de retour associé à chaque valeur SQLSTATE est SQL_ERROR, sauf indication contraire.  
   
-|SQLSTATE|Error|Description|  
+|SQLSTATE|Erreur| Description|  
 |--------|-----|-----------|  
 |01000|Avertissement général|Message d’information de spécifiques au pilote. (La fonction retourne SQL_SUCCESS_WITH_INFO).|  
 |08S01|Échec de lien de communication|Échec de la liaison de communication entre le pilote et la source de données à laquelle le pilote a été connecté avant le traitement de la fonction a été exécutée.|  
@@ -149,7 +149,7 @@ SQLRETURN SQLGetFunctions(
  Le SQL_FUNC_EXISTS (*SupportedPtr*, *ID de fonction*) (macro) est utilisé pour déterminer la prise en charge d’ODBC 3*.x* ou des fonctions antérieures après **SQLGetFunctions** a été appelé avec un *ID de fonction* argument de SQL_API_ODBC3_ALL_FUNCTIONS. L’application appelle SQL_FUNC_EXISTS avec la *SupportedPtr* affectée à l’argument le *SupportedPtr* passé dans *SQLGetFunctions*et avec le *ID de fonction* affectée à l’argument le **#define** pour la fonction. SQL_FUNC_EXISTS sinon, retourne SQL_TRUE si la fonction est prise en charge et SQL_FALSE.  
   
 > [!NOTE]  
->  Lorsque vous travaillez avec une API ODBC 2*.x* pilote, la version 3 ODBC*.x* du Gestionnaire de pilotes retourne SQL_TRUE pour **SQLAllocHandle** et **SQLFreeHandle** car **SQLAllocHandle** est mappé à **SQLAllocEnv**, **SQLAllocConnect**, ou **SQLAllocStmt**et parce que **SQLFreeHandle** est mappé à **SQLFreeEnv**, **SQLFreeConnect**, ou **SQLFreeStmt**. **SQLAllocHandle** ou **SQLFreeHandle** avec un *HandleType* argument de SQL_HANDLE_DESC n'est pas pris en charge, toutefois, même si SQL_TRUE est retourné pour les fonctions, car il n’existe aucune API ODBC 2*.x* fonction pour mapper à dans ce cas.  
+>  Lorsque vous travaillez avec une API ODBC 2*.x* pilote, la version 3 ODBC*.x* du Gestionnaire de pilotes retourne SQL_TRUE pour **SQLAllocHandle** et **SQLFreeHandle** car **SQLAllocHandle** est mappé à **SQLAllocEnv**, **SQLAllocConnect**, ou **SQLAllocStmt**et parce que **SQLFreeHandle** est mappé à **SQLFreeEnv**, **SQLFreeConnect**, ou **SQLFreeStmt**. **SQLAllocHandle** ou **SQLFreeHandle** avec un *HandleType* argument de SQL_HANDLE_DESC n'est pas pris en charge, toutefois, même si SQL_TRUE est retourné pour les fonctions, étant donné qu’aucun ODBC 2*.x* fonction pour mapper à dans ce cas.  
   
 ## <a name="code-example"></a>Exemple de code  
  Les trois exemples suivants montrent comment une application utilise **SQLGetFunctions** pour déterminer si un pilote prend en charge **SQLTables**, **SQLColumns**, et **SQLStatistics**. Si le pilote ne prend pas en charge ces fonctions, l’application se déconnecte du pilote. Le premier exemple appelle **SQLGetFunctions** une fois pour chaque fonction.  

@@ -2,7 +2,7 @@
 title: Prise en compte les fonctionnalités de base de données à utiliser | Documents Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -18,13 +18,13 @@ ms.assetid: 59760114-508e-46c5-81d2-8f2498c0d778
 caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f879d11b4c9f393accaaf96beda6a159aec2363f
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: a980d3f10b95af3f75945ad945bd5afd78ed5edf
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="considering-database-features-to-use"></a>Prise en compte les fonctionnalités de base de données à utiliser
 Une fois le niveau de base d’interopérabilité est connu, les fonctionnalités de base de données utilisées par l’application doivent être examinées. Par exemple, les instructions SQL que l’application exécute ? L’application va utiliser des curseurs de défilement ? Transactions ? Procédures ? Données de type long ? Pour les idées sur les fonctionnalités ne peuvent pas être pris en charge par tous les SGBD, consultez le [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md), [SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md), et [SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md) une description, de fonction et [annexe c : SQL grammaire](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md). Les fonctionnalités requises par une application peuvent éliminer certains SGBD à partir de la liste des cibles SGBD. Ils peuvent également afficher que l’application peut cibler facilement de nombreux SGBD.  

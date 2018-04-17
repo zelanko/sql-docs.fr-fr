@@ -1,31 +1,32 @@
 ---
-title: "La récupération des résultats (avancés) | Documents Microsoft"
-ms.custom: 
+title: La récupération des résultats (avancés) | Documents Microsoft
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - offsets [ODBC]
 - result sets [ODBC], about result sets
 - bind offsets [ODBC]
 ms.assetid: bc00c379-71a7-407a-975c-898243f39bb6
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 85c3447abebf7ef6eaa538a8a1d5d00edcc007fd
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 19be52004708fb448b00f2de115fd1a670302655
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="retrieving-results-advanced"></a>La récupération des résultats (avancés)
 Une application peut spécifier qu’un décalage est ajouté lié des adresses de mémoire tampon de données et l’indicateur de longueur/correspondante des adresses de mémoire tampon quand **SQLBulkOperations**, **SQLFetch**, **SQLFetchScroll**, ou **SQLSetPos** est appelée. Les résultats de ces ajouts déterminent les adresses utilisées dans ces opérations.  

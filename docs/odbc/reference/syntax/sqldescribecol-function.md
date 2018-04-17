@@ -2,7 +2,7 @@
 title: Fonction SQLDescribeCol | Documents Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: eddef353-83f3-4a3c-8f24-f9ed888890a4
 caps.latest.revision: 35
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4967b2de98246e3ae8eedb91ecfcbf507b2afc8c
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: f19de730a9755627863ad2b8e12df6a5e0b1dbc1
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqldescribecol-function"></a>Fonction SQLDescribeCol
 **Mise en conformité**  
@@ -63,7 +63,7 @@ SQLRETURN SQLDescribeCol(
  *ColumnNumber*  
  [Entrée] Numéro de colonne de données de résultat, ordonnés séquentiellement dans l’ordre croissant de colonne, en commençant à 1. Le *ColumnNumber* argument peut également être défini à 0 pour décrire le signet de colonne.  
   
- *Nom de colonne*  
+ *ColumnName*  
  [Sortie] Pointeur vers une mémoire tampon de se terminant par null dans lequel retourner le nom de colonne. Cette valeur est lue à partir du champ SQL_DESC_NAME de l’IRD. Si la colonne est sans nom ou le nom de colonne ne peut pas être déterminé, le pilote retourne une chaîne vide.  
   
  Si *ColumnName* est NULL, *NameLengthPtr* retourne toujours le nombre total de caractères (sans le caractère de fin de la valeur null pour les données de type caractère) disponibles à renvoyer dans la mémoire tampon vers laquelle pointée *ColumnName*.  
@@ -104,7 +104,7 @@ SQLRETURN SQLDescribeCol(
 ## <a name="diagnostics"></a>Diagnostics  
  Lorsque **SQLDescribeCol** retourne SQL_ERROR ou SQL_SUCCESS_WITH_INFO, une valeur SQLSTATE associée peut être obtenue en appelant **SQLGetDiagRec** avec un *HandleType* de SQL_HANDLE_STMT et un *gérer* de *au paramètre StatementHandle*. Le tableau suivant répertorie les valeurs SQLSTATE généralement retournées par **SQLDescribeCol** et explique chacune d’elles dans le contexte de cette fonction ; la notation « (DM) » précède les descriptions de SQLSTATE retournée par le Gestionnaire de pilotes. Le code de retour associé à chaque valeur SQLSTATE est SQL_ERROR, sauf indication contraire.  
   
-|SQLSTATE|Error|Description|  
+|SQLSTATE|Erreur| Description|  
 |--------------|-----------|-----------------|  
 |01000|Avertissement général|Message d’information de spécifiques au pilote. (La fonction retourne SQL_SUCCESS_WITH_INFO).|  
 |01004|Données de type chaîne, droite tronquées|La mémoire tampon \* *ColumnName* n’est pas suffisamment grande pour retourner le nom de la colonne entière, pour le nom de colonne a été tronqué. La longueur du nom de colonne non tronqué est retournée dans **NameLengthPtr*. (La fonction retourne SQL_SUCCESS_WITH_INFO).|  

@@ -1,15 +1,16 @@
 ---
 title: Interface de programmation standard | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - ODBC [ODBC], database access
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - standardizing database access [ODBC], programming interface
 - programming interface standardization [ODBC]
 ms.assetid: a2fa727e-51f2-4123-ae25-0ee28e611231
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 79cfb261e4ee433043794c864e7e02d93586c881
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: c91448833c6dacecaadfa4b0c11892e1a0c5e439
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="standard-programming-interface"></a>Interface de programmation standard
 L’interface de programmation est peut-être le plus évident candidat pour la normalisation. En fait, lorsque ODBC a été développé, ANSI et ISO déjà fournies aux normes pour embedded SQL et SQL modules. Bien qu’aucun niveau n’existe pour une base de données CLI, le groupe d’accès SQL : un consortium industriel de fournisseurs de base de données, a été vous envisagez de créer un. parties d’ODBC ultérieurement est devenue la base de leur travail.  

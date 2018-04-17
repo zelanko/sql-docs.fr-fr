@@ -1,15 +1,16 @@
 ---
-title: "Pilote spécification sous-clés | Documents Microsoft"
-ms.custom: 
+title: Pilote spécification sous-clés | Documents Microsoft
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - subkeys [ODBC], driver specification subkeys
@@ -17,24 +18,24 @@ helpviewer_keywords:
 - registry entries for components [ODBC], driver specification subkeys
 - drivers subkey [ODBC]
 ms.assetid: b4d802ef-b199-4e64-b7a5-6f2b3e5e2c80
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 078afea5ea6dfa6e0c3312d8e61cabb37369a2f8
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 52899dd2d473ac083d2d0effaca5b3b1726322c5
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="driver-specification-subkeys"></a>Pilote spécification sous-clés
 Chaque pilote répertorié dans la sous-clé de pilotes ODBC a une sous-clé qui lui sont propres. Cette sous-clé a le même nom que la valeur correspondante sous la sous-clé de pilotes ODBC. Les valeurs sous cette sous-clé répertorient les chemins d’accès complets du pilote et d’installation du pilote DLL, les valeurs des mots clés du pilote retournés par **SQLDrivers**et le nombre d’utilisations. Les formats des valeurs sont comme indiqué dans le tableau suivant.  
   
-|Nom   |Type de données|data|  
+|Nom|Type de données|data|  
 |----------|---------------|----------|  
 |APILevel|REG_SZ|**0** &#124; **1** &#124; **2**|  
-|ConnectFunctions|REG_SZ|{**Y**&#124; **N**} {**Y**&#124; **N**} {**Y**&#124; **N**}|  
+|ConnectFunctions|REG_SZ|{**Y**&AMP;#124;**N**} {**Y**&AMP;#124;**N**} {**Y**&AMP;#124;**N**}|  
 |CreateDSN|REG_SZ|*description du pilote*|  
 |Pilote|REG_SZ|*chemin de DLL de pilote*|  
 |DriverODBCVer|REG_SZ|*nn.nn*|  

@@ -2,7 +2,7 @@
 title: Fonction SQLBindCol | Documents Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: 41a37655-84cd-423f-9daa-e0b47b88dc54
 caps.latest.revision: 37
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 4b2031680faefcdf0b701ad8065b9d90cd8678f8
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 27b78b2b74e4990ce22d47fd433ae7147fc3d536
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlbindcol-function"></a>Fonction SQLBindCol
 **Mise en conformité**  
@@ -120,7 +120,7 @@ SQLRETURN SQLBindCol(
 ## <a name="diagnostics"></a>Diagnostics  
  Lorsque **SQLBindCol** retourne SQL_ERROR ou SQL_SUCCESS_WITH_INFO, une valeur SQLSTATE associée peut être obtenu en appelant **SQLGetDiagRec** avec un *HandleType* de SQL_HANDLE_STMT et un *gérer* de *au paramètre StatementHandle*. Le tableau suivant répertorie les valeurs SQLSTATE généralement retournées par **SQLBindCol** et explique chacune d’elles dans le contexte de cette fonction ; la notation « (DM) » précède les descriptions de SQLSTATE retournée par le Gestionnaire de pilotes. Le code de retour associé à chaque valeur SQLSTATE est SQL_ERROR, sauf indication contraire.  
   
-|SQLSTATE|Error|Description|  
+|SQLSTATE|Erreur| Description|  
 |--------------|-----------|-----------------|  
 |01000|Avertissement général|Message d’information de spécifiques au pilote. (La fonction retourne SQL_SUCCESS_WITH_INFO).|  
 |07006|Violation de l’attribut de type de données restreint|(DM) le *ColumnNumber* argument était 0 et le *TargetType* argument n’était pas SQL_C_BOOKMARK ou SQL_C_VARBOOKMARK.|  
@@ -242,7 +242,7 @@ SQLRETURN SQLBindCol(
   
  où des variables de la formule sont définies comme décrit dans le tableau suivant.  
   
-|Variable|Description|  
+|Variable| Description|  
 |--------------|-----------------|  
 |*Adresse de lié*|Pour les mémoires tampons de données, l’adresse spécifiée avec la *TargetValuePtr* argument dans **SQLBindCol**.<br /><br /> Pour les mémoires tampons de longueur / d’indicateur, l’adresse spécifiée avec la *StrLen_or_IndPtr* argument dans **SQLBindCol**. Pour plus d’informations, consultez « Commentaires supplémentaires » dans la section « Descripteurs et SQLBindCol ».<br /><br /> Si l’adresse associée est 0, aucune valeur de données est retournée, même si l’adresse telle que calculée par la formule précédente est différente de zéro.|  
 |*Décalage de la liaison*|Si la liaison est utilisée, la valeur stockée à l’adresse spécifiée avec l’attribut d’instruction SQL_ATTR_ROW_BIND_OFFSET_PTR.<br /><br /> Si la liaison est utilisée ou si la valeur de l’attribut d’instruction SQL_ATTR_ROW_BIND_OFFSET_PTR est un pointeur null, *liaison décalage* est 0.|  

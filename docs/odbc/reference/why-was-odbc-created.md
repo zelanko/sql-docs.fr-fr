@@ -2,7 +2,7 @@
 title: Pourquoi ODBC a été créé ? | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -18,13 +18,13 @@ ms.assetid: ba6eb993-316b-4650-bab8-d76583c00e53
 caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 33cc5f63c34618f51196e173e58adbac58377f29
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 82e2bd742d4736e75e5bfa3d6437304a32b289ed
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="why-was-odbc-created"></a>Pourquoi ODBC a été créé ?
 Historiquement, les entreprises utilisent un SGBD unique. Tous les accès de base de données a été effectuée via le serveur frontal de ce système ou les applications écrites pour utiliser exclusivement avec ce système. Toutefois, comme l’utilisation d’ordinateurs a augmenté et plus matériels et logiciels ont été rendues disponibles, sociétés démarré pour acquérir des SGBD différents. Les raisons sont nombreux : personnes ont acheté quel était moins coûteux, ce qui a été le plus rapide, ce qu’ils déjà connaissait, ce qui a été plus récent sur le marché, ce qui a fonctionné mieux pour une application unique. Pour d’autres raisons ont été réorganisations et les fusions, où les services qui avaient un SGBD unique avaient désormais plusieurs.  

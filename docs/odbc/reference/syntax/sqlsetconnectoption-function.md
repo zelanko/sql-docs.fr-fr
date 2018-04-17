@@ -2,7 +2,7 @@
 title: Fonction SQLSetConnectOption | Documents Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: 8cd2c2a2-25c8-4aff-951c-b593bbfc90ad
 caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1a3ebe388429949f64e58ba8612328caf3a14ee2
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 518fa715656e16672c118e0e56588c7c15d16a15
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlsetconnectoption-function"></a>Fonction SQLSetConnectOption
 **Mise en conformité**  
@@ -43,7 +43,7 @@ ms.lasthandoff: 12/21/2017
 > [!NOTE]  
 >  Pour plus d’informations sur ce que le Gestionnaire de pilotes mappe cette fonction pour lorsqu’un ODBC 2*.x* application fonctionne avec un ODBC 3*.x* pilote, consultez [mappage des fonctions déconseillées](../../../odbc/reference/appendixes/mapping-deprecated-functions.md)».  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Consultez [informations ODBC 64 bits](../../../odbc/reference/odbc-64-bit-information.md), si votre application s’exécutera sur un système d’exploitation de 64 bits.  
   
 > [!NOTE]  

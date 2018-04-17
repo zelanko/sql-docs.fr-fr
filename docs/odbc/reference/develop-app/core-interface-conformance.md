@@ -1,31 +1,32 @@
 ---
-title: "Mise en conformité de l’Interface de base | Documents Microsoft"
-ms.custom: 
+title: Mise en conformité de l’Interface de base | Documents Microsoft
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - interface conformance levels [ODBC]
 - conformance levels [ODBC], interface
 - core-level interface conformance levels [ODBC]
 ms.assetid: aaaa864a-6477-45ff-a50a-96d8db66a252
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1df0215014eea87559e87aeb2f29e848e1473a66
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 37ee705f6ead5317fe206fc4da27c42387f50e04
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="core-interface-conformance"></a>Conformité d’Interface de base
 Tous les pilotes ODBC doivent comporter au moins au niveau du noyau mise en conformité de l’interface. Les fonctionnalités du niveau de base sont celles qui sont requises par les applications interopérables plus génériques, le pilote peut travailler avec ces applications. Les fonctionnalités du niveau de base correspondent également pour les fonctionnalités définies dans la spécification ISO CLI et les fonctionnalités obligatoires définies dans la spécification CLI de groupe ouvert. Un pilote ODBC d’interface conforme au niveau du noyau permet à l’application effectuer toutes les opérations suivantes :  

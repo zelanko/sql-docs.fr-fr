@@ -2,7 +2,7 @@
 title: Fonction de référence de l’API de DLL de programme d’installation | Documents Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -18,13 +18,13 @@ ms.assetid: 47fcadc3-f102-4989-9ee7-a1c65233142a
 caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 614548110102e21cdd9f4bd5ba01f85aff6a6c55
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 2913a4e5db5aeaa609da2d269dea6a4ad68b0744
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="installer-dll-api-reference-function"></a>Fonction de référence de l’API de DLL de programme d’installation
 Cette section décrit la syntaxe des fonctions dans le programme d’installation des API de DLL. Le programme d’installation que DLL API se compose de 20 fonctions. Trois de ces fonctions, **SQLGetTranslator**, **SQLRemoveDSNFromIni**, et **SQLWriteDSNToIni**, sont appelés uniquement par le programme d’installation DLL. Les autres fonctions sont appelées par les programmes d’installation et d’administration.  

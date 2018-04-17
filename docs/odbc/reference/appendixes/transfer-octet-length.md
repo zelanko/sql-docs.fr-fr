@@ -1,15 +1,16 @@
 ---
-title: "Transfert de la longueur d’Octet | Documents Microsoft"
-ms.custom: 
+title: Transfert de la longueur d’Octet | Documents Microsoft
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - transfer octet length of data types [ODBC]
@@ -17,16 +18,16 @@ helpviewer_keywords:
 - SQL data types [ODBC], column characteristics
 - data types [ODBC], transfer octet length
 ms.assetid: 9fdc9762-e203-4cff-9212-54f450bf18d9
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 87347932efb54c93c2439170ebf350e4fe411564
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 5cb7bde54dd58d874e2ef7d994afc6372d9591c6
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="transfer-octet-length"></a>Transfert de la longueur en octets
 La longueur d’octet de transfert d’une colonne est le nombre maximal d’octets renvoyés à l’application lorsque les données sont transférées vers son type de données C par défaut. Pour les données de caractères, la longueur d’octet de transfert n’inclut pas d’espace pour le caractère de fin de la valeur null. La longueur d’octet de transfert d’une colonne peut être différente du nombre d’octets requis pour stocker les données sur la source de données.  
@@ -37,14 +38,14 @@ La longueur d’octet de transfert d’une colonne est le nombre maximal d’oct
 |-------------------------|------------|  
 |Tous les types de caractères [a]|La période définie par ou la longueur maximale (pour le type de variable) de la colonne en octets. Il s’agit de la même valeur que le champ de descripteur SQL_DESC_OCTET_LENGTH.|  
 |SQL_DECIMAL<br />SQL_NUMERIC|Le nombre d’octets requis pour contenir la représentation sous forme de caractères de ces données si le jeu de caractères est ANSI et deux fois ce nombre si le jeu de caractères UNICODE. Il s’agit du nombre maximal de chiffres plus de deux, car les données sont retournées comme une chaîne de caractères et caractères sont nécessaires pour les chiffres, un signe et une virgule décimale. Par exemple, la longueur de transfert d’une colonne définie en tant que NUMERIC(10,3) est 12.|  
-|SQL_TINYINT| 1|  
+|SQL_TINYINT|1|  
 |SQL_SMALLINT|2|  
 |SQL_INTEGER|4|  
 |SQL_BIGINT|Le nombre d’octets requis pour contenir la représentation sous forme de caractères de ces données si le jeu de caractères est ANSI et deux fois ce nombre si le jeu de caractères UNICODE, car ce type de données est retourné comme une chaîne de caractères par défaut. La représentation sous forme de caractère est composé de 20 caractères : 19 chiffres et un signe, si signé, ou 20 chiffres, si non signé. Par conséquent, la longueur est de 20.|  
 |SQL_REAL|4|  
 |SQL_FLOAT|8|  
 |SQL_DOUBLE|8|  
-|SQL_BIT| 1|  
+|SQL_BIT|1|  
 |Tous les types binaires [a]|Nombre d’octets requis pour contenir la période définie par (pour les types fixes) ou le nombre maximal (pour les types de variables) de caractères.|  
 |SQL_TYPE_DATE<br />SQL_TYPE_TIME|6 (la taille de la structure SQL_DATE_STRUCT ou SQL_TIME_STRUCT).|  
 |SQL_TYPE_TIMESTAMP|16 (la taille de la structure SQL_TIMESTAMP_STRUCT).|  

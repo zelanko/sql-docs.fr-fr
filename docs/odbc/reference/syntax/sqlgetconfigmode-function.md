@@ -2,7 +2,7 @@
 title: Fonction de SQLGetConfigMode | Documents Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: b96ab3b8-08d5-4fea-9ffe-e03043efbf2d
 caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ca766c5cb2e619672193888c791d4dee13a029e8
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: c00416f664f8c4e6049b37ee8c408c7c7563a11f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlgetconfigmode-function"></a>SQLGetConfigMode (fonction)
 **Mise en conformité**  
@@ -64,7 +64,7 @@ BOOL SQLGetConfigMode(
 ## <a name="diagnostics"></a>Diagnostics  
  Lorsque **SQLGetConfigMode** renvoie la valeur FALSE, associé à un  *\*pfErrorCode* valeur peut être obtenue en appelant **SQLInstallerError**. Le tableau suivant répertorie les  *\*pfErrorCode* les valeurs qui peuvent être retournées par **SQLInstallerError** et explique chacune d’elles dans le contexte de cette fonction.  
   
-|*\*pfErrorCode*|Error|Description|  
+|*\*pfErrorCode*|Erreur| Description|  
 |---------------------|-----------|-----------------|  
 |ODBC_ERROR_OUT_OF_MEM|Mémoire insuffisante|Le programme d’installation n’a pas pu effectuer la fonction en raison d’un manque de mémoire.|  
   

@@ -2,7 +2,7 @@
 title: Paramètre ExtendedAnsiSQL | Documents Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -18,18 +18,18 @@ ms.assetid: 37b775d1-65ac-45ac-8572-454bc4e3c1a2
 caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d263d57d9fecbcb03f737dc73472452367900a47
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: c120d665c1b3c1838214a8991334d421b96c71ab
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="setting-extendedansisql"></a>Paramètre ExtendedAnsiSQL
 L’attribut peut être contrôlé dans la chaîne de connexion en ajoutant l’attribut ExtendedAnsiSQL :  
   
-|Valeur|Description|  
+|Valeur| Description|  
 |-----------|-----------------|  
 |ExtendedAnsiSQL = 0 (valeur par défaut)|Ce paramètre ne permet pas de nouvelles fonctionnalités.|  
 |ExtendedAnsiSQL = 1|Ce paramètre active les nouvelles fonctionnalités.|  

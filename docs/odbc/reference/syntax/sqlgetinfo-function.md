@@ -2,7 +2,7 @@
 title: Fonction SQLGetInfo | Documents Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: 49dceccc-d816-4ada-808c-4c6138dccb64
 caps.latest.revision: 48
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 5ef6197247bbe50397c543a91156e0c5db294422
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: e9d01c26268ee9e26a0fead54ed9975a8c405558
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlgetinfo-function"></a>Fonction SQLGetInfo
 **Mise en conformité**  
@@ -82,7 +82,7 @@ SQLRETURN SQLGetInfo(
 ## <a name="diagnostics"></a>Diagnostics  
  Lorsque **SQLGetInfo** retourne SQL_ERROR ou SQL_SUCCESS_WITH_INFO, une valeur SQLSTATE associée peut être obtenue en appelant **SQLGetDiagRec** avec un *HandleType* de SQL_HANDLE_DBC et un *gérer* de *handle de connexion*. Le tableau suivant répertorie les valeurs SQLSTATE généralement retournées par **SQLGetInfo** et explique chacune d’elles dans le contexte de cette fonction ; la notation « (DM) » précède les descriptions de SQLSTATE retournée par le Gestionnaire de pilotes. Le code de retour associé à chaque valeur SQLSTATE est SQL_ERROR, sauf indication contraire.  
   
-|SQLSTATE|Error|Description|  
+|SQLSTATE|Erreur| Description|  
 |--------------|-----------|-----------------|  
 |01000|Avertissement général|Message d’information de spécifiques au pilote. (La fonction retourne SQL_SUCCESS_WITH_INFO).|  
 |01004|Données de type chaîne, droite tronquées|La mémoire tampon \* *InfoValuePtr* n’est pas suffisamment grande pour retourner toutes les informations demandées. Par conséquent, les informations ont été tronquées. La longueur des informations demandées dans sa forme non tronqué est retournée dans **StringLengthPtr*. (La fonction retourne SQL_SUCCESS_WITH_INFO).|  
@@ -1804,7 +1804,7 @@ SQLRETURN SQLGetInfo(
   
  SQL_BRC_EXPLICIT = nombre de lignes, si elle existe, sont disponibles lorsqu’un lot est exécuté directement en appelant **SQLExecute** ou **SQLExecDirect**. Si le nombre de lignes est disponibles, elles peuvent être restaurées vers le haut ou individuellement disponibles, selon le bit SQL_BRC_ROLLED_UP.  
   
-## <a name="example"></a> Exemple  
+## <a name="example"></a>Exemple  
  **SQLGetInfo** retourne la liste des options prises en charge sous la forme d’un masque de bits SQLUINTEGER dans **InfoValuePtr*. Le masque de bits pour chaque option est utilisée avec l’indicateur pour déterminer si l’option est prise en charge.  
   
  Par exemple, une application peut utiliser le code suivant pour déterminer si la fonction scalaire sous-chaîne est pris en charge par le pilote associé à la connexion.  

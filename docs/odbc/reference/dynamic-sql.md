@@ -1,15 +1,16 @@
 ---
 title: Instructions SQL dynamiques | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - SQL [ODBC], embedded SQL
@@ -19,16 +20,16 @@ helpviewer_keywords:
 - SQL [ODBC], dynamic SQL
 - embedded SQL [ODBC]
 ms.assetid: 0bfb9ab7-9c15-4433-93bc-bad8b6c9d287
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: a2378a7e84b62102666985f3166bd9c8586837e3
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: d0dab9c38b5fe567664455462f0d229a8235ba99
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="dynamic-sql"></a>Instructions SQL dynamiques
 Bien que SQL statique fonctionne dans de nombreuses situations, il est une classe d’applications dans lequel l’accès aux données ne peut pas être déterminé à l’avance. Par exemple, qu'une feuille de calcul permet à un utilisateur à entrer une requête, puis envoie à la feuille de calcul au SGBD pour récupérer des données. Évidemment, le contenu de cette requête ne peut pas être connu au programmeur lorsque le programme de feuille de calcul est écrit.  

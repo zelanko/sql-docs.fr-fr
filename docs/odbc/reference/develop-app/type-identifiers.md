@@ -1,15 +1,16 @@
 ---
 title: Identificateurs de type | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - data types [ODBC], identifiers
@@ -17,16 +18,16 @@ helpviewer_keywords:
 - identifiers [ODBC], type
 - type identifiers [ODBC], about type identifiers
 ms.assetid: 1d9fdfa2-e378-44fe-ac66-9743d9bbdd5a
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f28e9d5396184b5d83e75bc7fc772a5a208fcdaf
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 9a3de97dbf1ce632f1204a2218ead0c7ddd8cdf2
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="type-identifiers"></a>Identificateurs de type
 Pour décrire les types de données SQL et C, ODBC définit deux ensembles de *identificateurs de type*. Un identificateur de type décrit le type d’une colonne SQL ou une mémoire tampon C. Il s’agit d’un **#define** valeur et est généralement passée comme un argument de fonction ou retournée dans les métadonnées.  

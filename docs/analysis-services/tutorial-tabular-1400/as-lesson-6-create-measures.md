@@ -1,15 +1,15 @@
 ---
-title: "Leçon du didacticiel Analysis Services 6 : créer des mesures | Documents Microsoft"
-description: "Décrit comment créer des mesures dans le projet du didacticiel Analysis Services."
+title: 'Leçon du didacticiel Analysis Services 6 : créer des mesures | Documents Microsoft'
+description: Décrit comment créer des mesures dans le projet du didacticiel Analysis Services.
 ms.prod_service: analysis-services, azure-analysis-services
 services: analysis-services
 ms.suite: pro-bi
-documentationcenter: 
+documentationcenter: ''
 author: Minewiskan
 manager: kfile
-editor: 
-tags: 
-ms.assetid: 
+editor: ''
+tags: ''
+ms.assetid: ''
 ms.service: analysis-services
 ms.devlang: NA
 ms.topic: get-started-article
@@ -17,11 +17,12 @@ ms.tgt_pltfrm: NA
 ms.workload: na
 ms.date: 02/20/2018
 ms.author: owend
-ms.openlocfilehash: b4de99f18366afefaeb5411e0fc5454d378b87f7
-ms.sourcegitcommit: 7ed8c61fb54e3963e451bfb7f80c6a3899d93322
+monikerRange: '>= sql-analysis-services-2017 || = sqlallproducts-allversions'
+ms.openlocfilehash: d37b1c5a307ea7f9c90fa29c83536a4b3d8ef0bf
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/20/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-measures"></a>Créer des mesures
 
@@ -57,7 +58,7 @@ Cet article fait partie d’un didacticiel de modélisation tabulaire, qui doit 
   
     Notez que la cellule en haut à gauche contient maintenant une mesure nommée **DaysCurrentQuarterToDate**, suivi par le résultat, **92**. Le résultat s’applique pas à ce stade, car aucun filtre de l’utilisateur n’a été appliqué.
     
-      ![as-lesson6-newmeasure](../tutorial-tabular-1400/media/as-lesson6-newmeasure.png) 
+      ![en tant que newmeasure de lesson6](../tutorial-tabular-1400/media/as-lesson6-newmeasure.png) 
     
     Contrairement aux colonnes calculées, des formules de mesure, vous pouvez taper le nom de la mesure, suivi du signe deux-points, suivi par l’expression de formule.
 
@@ -84,7 +85,7 @@ Cet article fait partie d’un didacticiel de modélisation tabulaire, qui doit 
   
     La fonction de somme automatique crée automatiquement une mesure pour la colonne sélectionnée à l'aide de la formule de regroupement standard DistinctCount.  
     
-       ![as-lesson6-newmeasure2](../tutorial-tabular-1400/media/as-lesson6-newmeasure2.png)
+       ![en tant que newmeasure2 de lesson6](../tutorial-tabular-1400/media/as-lesson6-newmeasure2.png)
   
 4.  Dans la grille de mesures, cliquez sur la nouvelle mesure, puis, dans le **propriétés** fenêtre, dans **nom de la mesure**, renommez la mesure en **InternetDistinctCountSalesOrder**. 
  

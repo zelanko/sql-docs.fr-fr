@@ -2,7 +2,7 @@
 title: Fonction SQLSetEnvAttr | Documents Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: 0343241c-4b15-4d4b-aa2b-2e8ab5215cd2
 caps.latest.revision: 38
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c8a70e7d7de19f4f69a79db56742938ca0d61344
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: ef21f18346ad21afbba42d282763db5a527029f9
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlsetenvattr-function"></a>Fonction SQLSetEnvAttr
 **Mise en conformité**  
@@ -55,13 +55,13 @@ SQLRETURN SQLSetEnvAttr(
  *EnvironmentHandle*  
  [Entrée] Handle d’environnement.  
   
- *Attribute*  
+ *Attribut*  
  [Entrée] Attribut à définir, répertoriés dans « Commentaires ».  
   
  *ValuePtr*  
  [Entrée] Pointeur vers la valeur à associer à *attribut*. Selon la valeur de *attribut*, *ValuePtr* sera une valeur d’entier 32 bits ou pointe vers une chaîne de caractères terminée par null.  
   
- *StringLength*  
+ *stringLength*  
  [Entrée] Si *ValuePtr* pointe vers une chaîne de caractères ou d’un tampon binaire, cet argument doit être la longueur de **ValuePtr*. Pour les données de chaîne de caractères, cet argument doit contenir le nombre d’octets dans la chaîne.  
   
  Si *ValuePtr* est un entier, *StringLength* est ignoré.  
@@ -72,10 +72,10 @@ SQLRETURN SQLSetEnvAttr(
 ## <a name="diagnostics"></a>Diagnostics  
  Lorsque **SQLSetEnvAttr** retourne SQL_ERROR ou SQL_SUCCESS_WITH_INFO, une valeur SQLSTATE associée peut être obtenu en appelant **SQLGetDiagRec** avec un *HandleType* de SQL_HANDLE_ENV et un *gérer* de *EnvironmentHandle*. Le tableau suivant répertorie les valeurs SQLSTATE généralement retournées par **SQLSetEnvAttr** et explique chacune d’elles dans le contexte de cette fonction ; la notation « (DM) » précède les descriptions de SQLSTATE retournée par le Gestionnaire de pilotes. Le code de retour associé à chaque valeur SQLSTATE est SQL_ERROR, sauf indication contraire. Si un pilote ne prend pas en charge un attribut de l’environnement, l’erreur peut être retournée uniquement au moment de se connecter.  
   
-|SQLSTATE|Error|Description|  
+|SQLSTATE|Erreur| Description|  
 |--------------|-----------|-----------------|  
 |01000|Avertissement général|Message d’information de spécifiques au pilote. (La fonction retourne SQL_SUCCESS_WITH_INFO).|  
-|01 S 02|Valeur de l’option modifiée|Le pilote ne prenait pas en charge la valeur spécifiée dans *ValuePtr* et une valeur similaire. (La fonction retourne SQL_SUCCESS_WITH_INFO).|  
+|01S02|Valeur de l’option modifiée|Le pilote ne prenait pas en charge la valeur spécifiée dans *ValuePtr* et une valeur similaire. (La fonction retourne SQL_SUCCESS_WITH_INFO).|  
 |HY000|Erreur générale|Une erreur s’est produite pour laquelle aucun code SQLSTATE spécifique est survenu et pour lequel aucune SQLSTATE spécifique à l’implémentation a été définie. Le message d’erreur retourné par **SQLGetDiagRec** dans les  *\*MessageText* tampon décrit l’erreur et sa cause.|  
 |HY001|Erreur d’allocation de mémoire|Le pilote n’a pas pu allouer la mémoire requise pour prendre en charge l’exécution ou à l’achèvement de la fonction.|  
 |HY009|Utilisation non valide d’un pointeur null|L’argument d’attribut identifié un attribut d’environnement qui requiert une valeur de chaîne, et le *ValuePtr* argument était un pointeur null.|  
@@ -96,7 +96,7 @@ SQLRETURN SQLSetEnvAttr(
   
  Attributs de connexion ne peut pas être définis par un appel à **SQLSetEnvAttr**. Cette tentative retourne SQLSTATE HY092 (identificateur d’attribut/option non valide).  
   
-|*Attribute*|*ValuePtr* contenu|  
+|*Attribut*|*ValuePtr* contenu|  
 |-----------------|-------------------------|  
 |SQL_ATTR_CONNECTION_POOLING (ODBC 3.8)|Valeur 32 bits SQLUINTEGER qui active ou désactive le regroupement de connexions au niveau de l’environnement. Les valeurs suivantes sont utilisées :<br /><br /> SQL_CP_OFF = connexion le regroupement est mis hors tension. Il s'agit du paramètre par défaut.<br /><br /> SQL_CP_ONE_PER_DRIVER = un seul pool de connexions est pris en charge pour chaque pilote. Chaque connexion dans un pool est associée à un pilote.<br /><br /> SQL_CP_ONE_PER_HENV = un seul pool de connexions est pris en charge pour chaque environnement. Chaque connexion dans un pool est associée à un environnement.<br /><br /> SQL_CP_DRIVER_AWARE = utiliser la fonctionnalité de reconnaissance du pool de connexions du pilote, si elle est disponible. Si le pilote ne prend pas en charge la reconnaissance du pool de connexions, SQL_CP_DRIVER_AWARE est ignorée et SQL_CP_ONE_PER_HENV est utilisé. Pour plus d’informations, consultez [le regroupement de connexions prenant en charge les pilotes](../../../odbc/reference/develop-app/driver-aware-connection-pooling.md). Dans un environnement où certains pilotes prennent en charge certains pilotes ne prennent pas en charge reconnaissance du pool de connexions, SQL_CP_DRIVER_AWARE peuvent activer la fonctionnalité de reconnaissance de pool de connexions de ces pilotes de prise en charge, mais il est équivalent au paramètre SQL_CP_ONE_PER_HENV sur les pilotes qui ne prennent pas en charge la fonctionnalité de reconnaissance de pool de connexions.<br /><br /> Le regroupement de connexions est activé en appelant **SQLSetEnvAttr** pour définir l’attribut SQL_ATTR_CONNECTION_POOLING SQL_CP_ONE_PER_DRIVER ou SQL_CP_ONE_PER_HENV. Cet appel doit être effectué avant que l’application alloue de l’environnement partagé pour quelle connexion de regroupement doit être activé. Le handle d’environnement dans l’appel à **SQLSetEnvAttr** est définie sur null, ce qui rend SQL_ATTR_CONNECTION_POOLING un attribut au niveau du processus. Une fois le regroupement de connexions est activé, puis l’application alloue un environnement partagé implicit en appelant **SQLAllocHandle** avec la *InputHandle* argument défini à SQL_HANDLE_ENV.<br /><br /> Une fois que le regroupement de connexions a été activé et un environnement partagé a été sélectionné pour une application, SQL_ATTR_CONNECTION_POOLING ne peut pas être réinitialisé pour cet environnement, car **SQLSetEnvAttr** est appelée avec un handle d’environnement null lors de la définition de cet attribut. Si cet attribut est défini alors que le regroupement de connexions est déjà activé sur un environnement partagé, l’attribut affecte uniquement les environnements partagés qui sont affectés par la suite.<br /><br /> Il est également possible d’activer le regroupement de connexions sur un environnement. Notez les éléments suivants concernant le regroupement de connexions environnement :<br /><br /> -Activation d’un handle NULL de regroupement de connexions est un attribut au niveau du processus. Environnements alloués par la suite seront un environnement partagé et héritent des paramètres de regroupement de connexion au niveau du processus.<br />-Une fois un environnement est alloué, une application peut toujours modifier son paramètre de pool de connexions.<br />-Si le regroupement de connexions environnement est activé et que les pilotes de la connexion utilise le regroupement de pilote, le regroupement d’environnement prend préférence.<br /><br /> SQL_ATTR_CONNECTION_POOLING est implémentée dans le Gestionnaire de pilotes. Un pilote n’a pas besoin d’implémenter SQL_ATTR_CONNECTION_POOLING. ODBC 2.0 et 3.0 applications peuvent définir cet attribut de l’environnement.<br /><br /> Pour plus d’informations, consultez [le regroupement de connexions ODBC](../../../odbc/reference/develop-app/driver-manager-connection-pooling.md).|  
 |SQL_ATTR_CP_MATCH (ODBC 3.0)|Une valeur 32 bits SQLUINTEGER qui détermine la façon dont une connexion est choisie à partir d’un pool de connexions. Lorsque **SQLConnect** ou **SQLDriverConnect** est appelée, le Gestionnaire de pilotes détermine quelle connexion est réutilisée dans le pool. Le Gestionnaire de pilotes tente correspondent aux options de connexion dans l’appel et les attributs de connexion définies par l’application pour les mots clés et les attributs de connexion des connexions dans le pool. La valeur de cet attribut détermine le niveau de précision des critères de correspondance.<br /><br /> Les valeurs suivantes sont utilisées pour définir la valeur de cet attribut :<br /><br /> SQL_CP_STRICT_MATCH = uniquement les connexions qui correspondent exactement les options de connexion dans l’appel et la connexion, les attributs définis par l’application sont réutilisées. Il s'agit du paramètre par défaut.<br /><br /> SQL_CP_RELAXED_MATCH = connexions avec correspondance de chaîne de connexion de mots clés peuvent être utilisés. Mots clés doivent correspondre, mais pas tous les attributs de connexion doivent correspondre.<br /><br /> Pour plus d’informations sur la façon dont le Gestionnaire de pilotes effectue la correspondance à se connecter à une connexion regroupée, consultez [SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md). Pour plus d’informations sur le regroupement de connexions, consultez [le regroupement de connexions ODBC](../../../odbc/reference/develop-app/driver-manager-connection-pooling.md).|  

@@ -1,15 +1,15 @@
 ---
-title: "Leçon du didacticiel Analysis Services 13 : déployer | Documents Microsoft"
-description: "Décrit comment déployer le projet du didacticiel à Analysis Services."
+title: 'Leçon du didacticiel Analysis Services 13 : déployer | Documents Microsoft'
+description: Décrit comment déployer le projet du didacticiel à Analysis Services.
 ms.prod_service: analysis-services, azure-analysis-services
 services: analysis-services
 ms.suite: pro-bi
-documentationcenter: 
+documentationcenter: ''
 author: Minewiskan
 manager: kfile
-editor: 
-tags: 
-ms.assetid: 
+editor: ''
+tags: ''
+ms.assetid: ''
 ms.service: analysis-services
 ms.devlang: NA
 ms.topic: get-started-article
@@ -17,11 +17,12 @@ ms.tgt_pltfrm: NA
 ms.workload: na
 ms.date: 02/20/2018
 ms.author: owend
-ms.openlocfilehash: 444ba18e2cbbecf87dc259fa56efc130eae204a9
-ms.sourcegitcommit: 7ed8c61fb54e3963e451bfb7f80c6a3899d93322
+monikerRange: '>= sql-analysis-services-2017 || = sqlallproducts-allversions'
+ms.openlocfilehash: 874d185c5210da9fd8af7e18d79f1e6eed96f7e9
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/20/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="deploy"></a>Déployer
 
@@ -50,7 +51,7 @@ Cet article fait partie d’un didacticiel de modélisation tabulaire, qui doit 
   
 2.  Dans le **Pages de propriétés de AW Internet Sales** boîte de dialogue **serveur de déploiement**, dans le **Server** propriété, entrez le nom du serveur complet. Si vous vous connectez à Azure Analysis Services, le nom du serveur doit incluent l’URL complète.
 
-    ![as-lesson13-deploy-property](../tutorial-tabular-1400/media/as-lesson13-deploy-property.png)
+    ![en tant que-lesson13-déployer-propriété](../tutorial-tabular-1400/media/as-lesson13-deploy-property.png)
   
 3.  Dans le **base de données** , tapez **Internet Sales Adventure Works**.  
   
@@ -68,7 +69,7 @@ Cet article fait partie d’un didacticiel de modélisation tabulaire, qui doit 
   
     La boîte de dialogue déployer apparaît et affiche l’état du déploiement des métadonnées et chaque table incluse dans le modèle.  
     
-    ![as-lesson13-deploy-status](../tutorial-tabular-1400/media/as-lesson13-deploy-status.png)
+    ![en tant que-lesson13-déployer-status](../tutorial-tabular-1400/media/as-lesson13-deploy-status.png)
   
 3. Une fois le déploiement correctement effectué, cliquez sur **Fermer**.  
   
@@ -78,7 +79,7 @@ Cette leçon décrit la méthode plus courante et la plus simple pour déployer 
 ## <a name="conclusion"></a>Conclusion  
 Félicitations ! Vous avez terminé de créer et déployer votre premier modèle tabulaire Analysis Services. Ce didacticiel vous a guidés dans les tâches courantes pour créer un modèle tabulaire. Maintenant que votre modèle Internet Sales Adventure Works est déployé, vous pouvez utiliser SQL Server Management Studio pour gérer le modèle, créer des scripts de processus et un plan de sauvegarde. Les utilisateurs peuvent également maintenant vous connecter à l’aide d’une application cliente de création de rapports tels que Microsoft Excel ou Power BI.  
 
-![as-lesson13-ssms](../tutorial-tabular-1400/media/as-lesson13-ssms.png)
+![en tant que ssms de lesson13](../tutorial-tabular-1400/media/as-lesson13-ssms.png)
   
   
   

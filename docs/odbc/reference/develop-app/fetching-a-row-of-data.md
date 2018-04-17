@@ -1,15 +1,16 @@
 ---
-title: "Extraction d’une ligne de données | Documents Microsoft"
-ms.custom: 
+title: Extraction d’une ligne de données | Documents Microsoft
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - SQLFetch function [ODBC], fetching a row of data
@@ -17,16 +18,16 @@ helpviewer_keywords:
 - result sets [ODBC], fetching
 - fetches [ODBC], row of data
 ms.assetid: 16d4a380-0d83-456b-aeee-f10738944e86
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b51491fa5ab071d679c7f89990977275a4e45f1d
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 81fff470f916155e9b6d85571db46c46d9e63454
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="fetching-a-row-of-data"></a>Extraction d’une ligne de données
 Pour extraire une ligne de données, une application appelle **SQLFetch**. **SQLFetch** peut être appelé avec n’importe quel type de curseur, mais il ne déplace le curseur de l’ensemble de lignes dans une direction avant uniquement. **SQLFetch** avance le curseur à la ligne suivante et retourne les données pour toutes les colonnes qui ont été liés avec des appels à **SQLBindCol**. Lorsque le curseur atteint la fin du résultat défini, **SQLFetch** retourne SQL_NO_DATA. Pour obtenir des exemples de l’appel de **SQLFetch**, consultez [à l’aide de SQLBindCol](../../../odbc/reference/develop-app/using-sqlbindcol.md).  

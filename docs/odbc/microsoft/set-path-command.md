@@ -2,7 +2,7 @@
 title: Commande de chemin d’accès de SET | Documents Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -18,13 +18,13 @@ ms.assetid: db488d1e-0963-4f45-8c76-a23b9bde9e9d
 caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 553c3f464b5a14d578aa05bece939126f7251974
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 695325b486b485aabc8c28ec439d74cfdaf16fff
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="set-path-command"></a>Commande de chemin d’accès de SET
 Spécifie un chemin d’accès pour les recherches de fichier. Pour plus d’informations spécifiques au pilote, consultez la section Notes.  
@@ -40,7 +40,7 @@ SET PATH TO [Path]
  POUR [ *chemin d’accès*]  
  Spécifie les répertoires que vous souhaitez que Visual FoxPro à rechercher. Utilisez des virgules ou des points-virgules pour séparer les répertoires.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Permet de définir le chemin d’accès vous permet de spécifier les chemins de recherche pour d’autres programmes Visual FoxPro qui peuvent être appelées dans des procédures stockées. DÉFINIR le chemin d’accès ne modifiera pas le chemin d’accès de la source de données que vous avez spécifié pour la connexion.  
   
  Émettre définir les chemin d’accès à sans *chemin d’accès* pour restaurer le chemin d’accès au répertoire par défaut ou au dossier.  

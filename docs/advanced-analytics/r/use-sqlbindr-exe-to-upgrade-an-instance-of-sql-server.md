@@ -1,36 +1,28 @@
 ---
 title: Lier des composants de machine learning sur SQL Server à Microsoft Machine Learning Server | Documents Microsoft
-ms.custom: ''
-ms.date: 03/15/2018
-ms.reviewer: ''
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: r
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-applies_to:
-- SQL Server (starting with 2016 CTP3)
-ms.author: heidist
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
+ms.topic: conceptual
 author: HeidiSteen
+ms.author: heidist
 manager: cgronlun
-ms.workload: On Demand
-ms.openlocfilehash: c82a1788f7c2c5cf4bca43c4fb03ff5c9eba0e28
-ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
+ms.openlocfilehash: 3f0818d67bb866326786598f67bb2caac368dda6
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="bind-machine-learning-components-on-sql-server-to-microsoft-machine-learning-server"></a>Lier des composants de machine learning sur SQL Server à Microsoft Machine Learning Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Cet article explique le processus de _liaison_, que vous pouvez utiliser pour mettre à niveau les composants utilisés dans SQL Server d’apprentissage automatique. Le processus de liaison verrouille le serveur dans une cadence de mise à jour selon les versions du serveur de Machine Learning, au lieu d’utiliser le serveur SQL Server de version et mettre à jour de la planification.
+Cet article explique le processus de *liaison* une instance (de-de base de données) de SQL Server Machine Learning Services ou SQL Server R Services à Microsoft Machine Learning Server à des fins de mise à niveau de packages R et Python sur un cadence des versions plus rapide. 
 
-> [!IMPORTANT]
-> Vous n’avez pas besoin d’utiliser ce processus de mise à niveau si vous souhaitez obtenir des mises à niveau dans le cadre de mises à jour de SQL Server. Chaque fois que vous installez un nouveau service pack ou une version de service, machine learning composants sont automatiquement mis à niveau vers la dernière version. Utilisez uniquement le _liaison_ traiter si vous souhaitez mettre à niveau des composants à un rythme plus rapide que vous est offerte par les versions de service SQL Server.
+Le processus de liaison modifie le mécanisme de mise à jour de service. Sans liaison, la version des packages R et Python sont actualisées uniquement lorsque vous installez un service pack ou une mise à jour cumulative (CU). La liaison de versions plus récentes de package peuvent être appliquées à votre instance, indépendamment de la planification du déclenchement CU.
 
-Si à tout moment vous souhaitez arrêter la mise à niveau sur la planification de la Machine Learning Server, vous devez _dissocier_ l’instance, comme décrit dans [cette section](#bkmk_Unbind), désinstaller le serveur d’apprentissage Machine.
+Liaison affecte uniquement les composants Machine Learning ou R de l’instance du moteur de base de données, pas l’instance du moteur de base de données elle-même. Il s’applique uniquement à une instance (de-de base de données). Une installation (autonome) n’est pas dans la portée.
+
+Si à tout moment vous souhaitez revenir à la maintenance de SQL Server pour vos composants d’apprentissage, vous pouvez _dissocier_ l’instance, comme décrit dans [cette section](#bkmk_Unbind), désinstaller le serveur d’apprentissage Machine.
 
 **S’applique à :** SQL Server 2016 R Services, SQL Server 2017 d’apprentissage automatique Services
 

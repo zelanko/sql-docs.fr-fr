@@ -1,30 +1,31 @@
 ---
-title: "Mots clés réservés | Documents Microsoft"
-ms.custom: 
+title: Mots clés réservés | Documents Microsoft
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - ODBC function call reserved words [ODBC]
 - reserved keywords [ODBC]
 ms.assetid: 8eeede59-a828-44bf-866c-1ca9a77a2c5e
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 54df53e2ff5f095a0404719d6e1219013d90d47f
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: eb908b1fe38e0bd193a17ac66c753d4057fed4a7
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="reserved-keywords"></a>Mots clés réservés
 Les mots suivants sont réservés et utilisés dans les appels de fonction ODBC. Ces mots ne limitent pas la grammaire minimale SQL ; Toutefois, pour garantir la compatibilité avec les pilotes qui prennent en charge la grammaire SQL de base, les applications Évitez d’utiliser un de ces mots clés. Le #**définir** valeur SQL_ODBC_KEYWORDS contient une liste séparée par des virgules de ces mots clés.  
@@ -61,7 +62,7 @@ Les mots suivants sont réservés et utilisés dans les appels de fonction ODBC.
 |CHAR|NULLIF|  
 |CHAR_LENGTH|NUMERIC|  
 |CHARACTER|OCTET_LENGTH|  
-|CHARACTER_LENGTH|DE|  
+|CHARACTER_LENGTH|OF|  
 |CHECK|ON|  
 |CLOSE|ONLY|  
 |COALESCE|OPEN|  
@@ -84,7 +85,7 @@ Les mots suivants sont réservés et utilisés dans les appels de fonction ODBC.
 |CURRENT_TIME|PROCEDURE|  
 |CURRENT_TIMESTAMP|PUBLIC|  
 |CURRENT_USER|READ|  
-|CURSOR|real|  
+|CURSOR|REAL|  
 |DATE|REFERENCES|  
 |DAY|RELATIVE|  
 |DEALLOCATE|RESTRICT|  
@@ -94,7 +95,7 @@ Les mots suivants sont réservés et utilisés dans les appels de fonction ODBC.
 |DEFAULT|ROWS|  
 |DEFERRABLE|SCHEMA|  
 |DEFERRED|SCROLL|  
-|Suppression|SECOND|  
+|DELETE|SECOND|  
 |DESC|SECTION|  
 |DESCRIBE|SELECT|  
 |DESCRIPTOR|SESSION|  
@@ -117,7 +118,7 @@ Les mots suivants sont réservés et utilisés dans les appels de fonction ODBC.
 |EXTRACT|TEMPORARY|  
 |FALSE|THEN|  
 |FETCH|TIME|  
-|FIRST|timestamp|  
+|FIRST|TIMESTAMP|  
 |FLOAT|TIMEZONE_HOUR|  
 |FOR|TIMEZONE_MINUTE|  
 |FOREIGN|TO|  
@@ -135,7 +136,7 @@ Les mots suivants sont réservés et utilisés dans les appels de fonction ODBC.
 |HOUR|USAGE|  
 |IDENTITY|Utilisateur|  
 |IMMEDIATE|USING|  
-|IN|Value|  
+|IN|VALUE|  
 |INCLUDE|VALUES|  
 |INDEX|VARCHAR|  
 |INDICATOR|VARYING|  

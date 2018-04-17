@@ -1,15 +1,16 @@
 ---
-title: "Allouer le Handle d’environnement | Documents Microsoft"
-ms.custom: 
+title: Allouer le Handle d’environnement | Documents Microsoft
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - ODBC drivers [ODBC], environment handles
@@ -20,23 +21,23 @@ helpviewer_keywords:
 - connecting to data source [ODBC], environment handles
 - handles [ODBC], environment
 ms.assetid: 77b5d1d6-7eb7-428d-bf75-a5c5a325d25c
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6ac926c39f1390431b35b49b27e7302fe789ca4a
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: bcbfc5e9a8be2bf1fc543e9d458658a918e40b6d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="allocating-the-environment-handle"></a>Allouer le Handle d’environnement
 La première tâche pour une application ODBC consiste à charger le Gestionnaire de pilotes ; Cette opération dépend du système d’exploitation. Par exemple, sur un ordinateur exécutant Microsoft Windows® 95/98, Windows NT Workstation et Windows 2000 Professionnel ou Microsoft® Windows NT® Server et Windows 2000 Server, l’application soit liée à la bibliothèque du Gestionnaire de pilotes ou les appels **LoadLibrary** de charger la DLL du Gestionnaire de pilotes.  
   
  La tâche suivante, qui doit être effectuée avant qu’une application puisse appeler toute autre fonction ODBC, consiste à initialiser l’environnement ODBC et allouer un handle d’environnement, comme suit :  
   
-1.  L’application déclare une variable de type SQLHENV. Il appelle ensuite **SQLAllocHandle** et transmet l’adresse de cette variable et l’option de SQL_HANDLE_ENV. Exemple :  
+1.  L’application déclare une variable de type SQLHENV. Il appelle ensuite **SQLAllocHandle** et transmet l’adresse de cette variable et l’option de SQL_HANDLE_ENV. Par exemple :  
   
     ```  
     SQLHENV henv1;  

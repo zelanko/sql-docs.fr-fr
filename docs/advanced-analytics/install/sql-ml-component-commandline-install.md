@@ -1,26 +1,17 @@
 ---
-title: "Installation des composants de SQL Server machine learning d’invite de commandes | Documents Microsoft"
-ms.custom: 
-ms.date: 03/15/2018
-ms.reviewer: 
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-ms.assetid: 
-caps.latest.revision: 
+title: Installation des composants de SQL Server machine learning d’invite de commandes | Documents Microsoft
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
+ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.workload: Inactive
-ms.openlocfilehash: c51d8299837f0eda02a07afe1ea4d34d3ecd5e31
-ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
+ms.openlocfilehash: 1bc0cda53059b715a04d6e9a350e40d3a265d5e0
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/21/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="install-sql-server-machine-learning-components-from-the-command-line"></a>Installer les composants de SQL Server machine learning à partir de la ligne de commande
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

@@ -2,7 +2,7 @@
 title: Fonction SQLFreeHandle | Documents Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: 17a6fcdc-b05a-4de7-be93-a316f39696a1
 caps.latest.revision: 35
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 96f6d2c94a6b2fb78245c83cbf989e6a707caccc
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 601d1257b99e3c3a9713730ef1ea110905d0143f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlfreehandle-function"></a>Fonction SQLFreeHandle
 **Mise en conformité**  
@@ -81,7 +81,7 @@ SQLRETURN SQLFreeHandle(
 ## <a name="diagnostics"></a>Diagnostics  
  Lorsque **SQLFreeHandle** retourne SQL_ERROR, une valeur SQLSTATE associée peut être obtenu à partir de la structure de données de diagnostic pour le handle qui **SQLFreeHandle** a tenté de libérer mais n’a pas pu. Le tableau suivant répertorie les valeurs SQLSTATE généralement retournées par **SQLFreeHandle** et explique chacune d’elles dans le contexte de cette fonction ; la notation « (DM) » précède les descriptions de SQLSTATE retournée par le Gestionnaire de pilotes. Le code de retour associé à chaque valeur SQLSTATE est SQL_ERROR, sauf indication contraire.  
   
-|SQLSTATE|Error|Description|  
+|SQLSTATE|Erreur| Description|  
 |--------------|-----------|-----------------|  
 |HY000|Erreur générale|Une erreur s’est produite pour laquelle aucun code SQLSTATE spécifique est survenu et pour lequel aucune SQLSTATE spécifique à l’implémentation a été définie. Le message d’erreur retourné par **SQLGetDiagRec** dans les  *\*MessageText* tampon décrit l’erreur et sa cause.|  
 |HY001|Erreur d’allocation de mémoire|Le pilote n’a pas pu allouer de la mémoire qui est requis pour prendre en charge l’exécution ou à l’achèvement de la fonction.|  
@@ -103,7 +103,7 @@ SQLRETURN SQLFreeHandle(
  Si l’environnement est un environnement partagé, l’application qui appelle **SQLFreeHandle** avec un *HandleType* de SQL_HANDLE_ENV n’a plus accès à l’environnement après l’appel, mais les ressources de l’environnement ne sont pas nécessairement libérées. L’appel à **SQLFreeHandle** décrémente le décompte de références de l’environnement. Le décompte de références est conservé par le Gestionnaire de pilotes. Si elle ne parvient pas à zéro, l’environnement partagé n’est pas libéré, car il est toujours utilisé par un autre composant. Si le décompte de références atteint zéro, les ressources de l’environnement partagé sont libérées.  
   
 ## <a name="freeing-a-connection-handle"></a>La libération d’un Handle de connexion  
- Avant d’appeler **SQLFreeHandle** avec un *HandleType* de SQL_HANDLE_DBC, une application doit appeler **SQLDisconnect** pour la connexion s’il existe une connexion sur ce handle*.* Dans le cas contraire, l’appel à **SQLFreeHandle** retourne SQL_ERROR et la connexion reste valide.  
+ Avant d’appeler **SQLFreeHandle** avec un *HandleType* de SQL_HANDLE_DBC, une application doit appeler **SQLDisconnect** pour la connexion s’il existe une connexion sur ce gérer les*.* Dans le cas contraire, l’appel à **SQLFreeHandle** retourne SQL_ERROR et la connexion reste valide.  
   
  Pour plus d’informations, consultez [Handles de connexion](../../../odbc/reference/develop-app/connection-handles.md) et [déconnexion d’une Source de données ou le pilote](../../../odbc/reference/develop-app/disconnecting-from-a-data-source-or-driver.md).  
   

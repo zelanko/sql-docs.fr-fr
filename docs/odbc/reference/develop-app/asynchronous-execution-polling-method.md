@@ -2,7 +2,7 @@
 title: Exécution asynchrone (méthode d’interrogation) | Documents Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -18,13 +18,13 @@ ms.assetid: 8cd21734-ef8e-4066-afd5-1f340e213f9c
 caps.latest.revision: 40
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 357ee77565e711e886184d803540b5745edb1f25
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: f918a1fdcf40d7c772ee432edd58dd24c2c3f1c2
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="asynchronous-execution-polling-method"></a>Exécution asynchrone (méthode d’interrogation)
 Avant d’ODBC 3.8 et le Kit de développement logiciel Windows 7, opérations asynchrones ont été autorisées uniquement sur les fonctions de l’instruction. Pour plus d’informations, consultez la **l’exécution asynchrone d’opérations d’instruction**, plus loin dans cette rubrique.  
@@ -216,9 +216,9 @@ while ((rc = SQLExecDirect(hstmt1, SQLStatement, SQL_NTS)) == SQL_STILL_EXECUTIN
   
  Lorsque le regroupement de connexions est activé, **SQLEndTran** et **SQLSetConnectAttr** sont pris en charge pour les opérations asynchrones.  
   
-## <a name="example"></a> Exemple  
+## <a name="example"></a>Exemple  
   
-### <a name="description"></a>Description  
+### <a name="description"></a> Description  
  L’exemple suivant montre comment utiliser **SQLSetConnectAttr** pour permettre une exécution asynchrone pour les fonctions liées à la connexion.  
   
 ### <a name="code"></a>Code  
@@ -270,9 +270,9 @@ BOOL AsyncConnect (SQLHANDLE hdbc)
   
 ```  
   
-## <a name="example"></a> Exemple  
+## <a name="example"></a>Exemple  
   
-### <a name="description"></a>Description  
+### <a name="description"></a> Description  
  Cet exemple illustre les opérations de validation asynchrone. Opérations de restauration possible également de cette manière.  
   
 ### <a name="code"></a>Code  

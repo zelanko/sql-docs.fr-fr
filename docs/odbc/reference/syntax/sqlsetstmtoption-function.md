@@ -2,7 +2,7 @@
 title: Fonction SQLSetStmtOption | Documents Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: 9cbe2b62-4cf7-43ab-8fb4-9a53df2c6b3f
 caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e7e5f43bd2af541d7d56c0797eaa69baf3301cf3
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 944e468ebd5911766c4b0f20ca68f07e87bb37c6
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlsetstmtoption-function"></a>SQLSetStmtOption (fonction)
 **Mise en conformité**  
@@ -43,7 +43,7 @@ ms.lasthandoff: 12/21/2017
 > [!NOTE]  
 >  Pour plus d’informations sur ce que le Gestionnaire de pilotes mappe cette fonction pour lorsqu’un ODBC 2*.x* application fonctionne avec un ODBC 3*.x* pilote, consultez [mappage des fonctions déconseillées](../../../odbc/reference/appendixes/mapping-deprecated-functions.md) dans l’annexe g : pilote recommandations pour la compatibilité descendante.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Consultez [informations ODBC 64 bits](../../../odbc/reference/odbc-64-bit-information.md), si votre application s’exécutera sur un système d’exploitation de 64 bits.  
   
 ## <a name="see-also"></a>Voir aussi  

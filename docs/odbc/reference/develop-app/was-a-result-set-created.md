@@ -2,7 +2,7 @@
 title: Est le résultat créé ? | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -18,13 +18,13 @@ ms.assetid: 4a83b8cb-2d57-4e64-b497-80bd587ee1f9
 caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a7222a9dcbbf7c979dd46ff554fab5988bcfada4
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 4b2701f568397c2a6714587bf4261f5a4295f226
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="was-a-result-set-created"></a>Est le résultat créé ?
 Dans la plupart des cas, les programmeurs d’applications savent si les instructions de que l’exécution de leur application crée un jeu de résultats. C’est le cas si l’application utilise des instructions SQL codées en dur écrites par le programmeur. Il est généralement le cas lorsque l’application construit des instructions SQL en cours d’exécution : le programmeur peut inclure facilement du code qui signale si une **sélectionnez** instruction ou une **insérer** instruction est en cours de construction. Dans certaines situations, le programmeur ne peut pas savoir si une instruction crée un jeu de résultats. Cela est vrai si l’application fournit un moyen de l’utilisateur à entrer et à exécuter une instruction SQL. Il est également vrai lorsque l’application crée une instruction en cours d’exécution pour exécuter une procédure.  

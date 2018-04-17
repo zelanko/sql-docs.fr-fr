@@ -2,7 +2,7 @@
 title: Fonction SQLGetData | Documents Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: e3c1356a-5db7-4186-85fd-8b74633317e8
 caps.latest.revision: 46
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 0a23ddb9ee932b67bddd35edfcc9d64228b36f18
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: bd10d34093e7aa1bcbe901555c6b23ffc6368fbb
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlgetdata-function"></a>Fonction SQLGetData
 **Mise en conformité**  
@@ -102,7 +102,7 @@ SQLRETURN SQLGetData(
 ## <a name="diagnostics"></a>Diagnostics  
  Lorsque **SQLGetData** retourne SQL_ERROR ou SQL_SUCCESS_WITH_INFO, une valeur SQLSTATE associée peut être obtenue en appelant **SQLGetDiagRec** avec un *HandleType* de SQL_HANDLE_STMT et un *gérer* de *au paramètre StatementHandle*. Le tableau suivant répertorie les valeurs SQLSTATE généralement retournées par **SQLGetData** et explique chacune d’elles dans le contexte de cette fonction ; la notation « (DM) » précède les descriptions de SQLSTATE retournée par le Gestionnaire de pilotes. Le code de retour associé à chaque valeur SQLSTATE est SQL_ERROR, sauf indication contraire.  
   
-|SQLSTATE|Error|Description|  
+|SQLSTATE|Erreur| Description|  
 |--------------|-----------|-----------------|  
 |01000|Avertissement général|Message d’information de spécifiques au pilote. (La fonction retourne SQL_SUCCESS_WITH_INFO).|  
 |01004|Données de type chaîne, droite tronquées|Toutes les données pour la colonne spécifiée, *Col_or_Param_Num*, pu être récupérées dans un seul appel à la fonction. SQL_NO_TOTAL ou la longueur des données restantes dans la colonne spécifiée avant l’appel à **SQLGetData** est retourné dans \* *StrLen_or_IndPtr*. (La fonction retourne SQL_SUCCESS_WITH_INFO).<br /><br /> Pour plus d’informations sur l’utilisation de plusieurs appels à **SQLGetData** pour une colonne unique, consultez « Commentaires ».|  
@@ -163,7 +163,7 @@ SQLRETURN SQLGetData(
 >  Dans ODBC 2*.x*, ensemble d’applications *TargetType* SQL_C_DATE, SQL_C_TIME ou SQL_C_TIMESTAMP pour indiquer que \* *TargetValuePtr* est une structure de date, heure ou timestamp. Dans ODBC 3*.x*, ensemble d’applications *TargetType* SQL_C_TYPE_DATE, SQL_C_TYPE_TIME ou SQL_C_TYPE_TIMESTAMP. Le Gestionnaire de pilotes rend les mappages appropriés si nécessaire, en fonction de la version de l’application et le pilote.  
   
 ## <a name="retrieving-variable-length-data-in-parts"></a>La récupération des données de longueur Variable dans les parties  
- **SQLGetData** peut être utilisé pour récupérer des données d’une colonne qui contient les données de longueur variable dans les parties, autrement dit, lorsque l’identificateur du type de données SQL de la colonne est SQL_CHAR, SQL_VARCHAR, SQL_LONGVARCHAR, SQL_WCHAR, SQL_WVARCHAR, SQL_WLONGVARCHAR, SQL_BINARY, SQL_VARBINARY, SQL_LONGVARBINARY ou un identificateur spécifique du pilote pour un type de longueur variable.  
+ **SQLGetData** peut être utilisé pour récupérer des données d’une colonne qui contient les données de longueur variable dans les parties, autrement dit, lorsque l’identificateur du type de données SQL de la colonne est SQL_CHAR, SQL_VARCHAR, SQL_LONGVARCHAR, SQL_WCHAR, SQL_WVARCHAR, SQL_ WLONGVARCHAR, SQL_BINARY, SQL_VARBINARY, SQL_LONGVARBINARY ou un identificateur spécifique du pilote pour un type de longueur variable.  
   
  Pour récupérer des données à partir d’une colonne dans les parties, l’application appelle **SQLGetData** plusieurs fois de suite pour la même colonne. À chaque appel, **SQLGetData** retourne la partie suivante de données. C’est à l’application pour réassembler les parties, en prenant soin de supprimer le caractère de fin de la valeur null à partir des parties intermédiaires des données de caractères. S’il existe plus de données à retourner ou non de mémoire tampon insuffisante a été alloué pour le caractère de fin, **SQLGetData** retourne SQL_SUCCESS_WITH_INFO et SQLSTATE 01004 (données tronquées). Lorsqu’elle retourne la dernière partie des données, **SQLGetData** retourne SQL_SUCCESS. Ni SQL_NO_TOTAL ni zéro peut être renvoyé sur le dernier appel valid pour récupérer des données à partir d’une colonne, parce que l’application puis n’aurait aucun moyen de connaître la quantité des données dans la mémoire tampon d’application est valide. Si **SQLGetData** est appelée après cela, il retourne SQL_NO_DATA. Pour plus d’informations, consultez la section suivante, « Récupération des données avec SQLGetData ».  
   

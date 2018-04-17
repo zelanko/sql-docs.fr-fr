@@ -1,15 +1,16 @@
 ---
-title: "Les informations de connexion spécifiques au pilote | Documents Microsoft"
-ms.custom: 
+title: Les informations de connexion spécifiques au pilote | Documents Microsoft
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - SQLConnect function [ODBC], driver-specific connection information
@@ -20,16 +21,16 @@ helpviewer_keywords:
 - connecting to data source [ODBC], SQLConnect
 - connecting to driver [ODBC], driver-specific information
 ms.assetid: 3748758a-f16a-4f3b-9c40-06f2e300704e
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3352a0a31e6bb48be84d72a7da84eb3d7c6100c9
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 8d7ba512382963e45a10ba360df29626dd81f2aa
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="driver-specific-connection-information"></a>Informations de connexion spécifiques au pilote
 **SQLConnect** part du principe qu’un nom de source de données, un ID utilisateur et un mot de passe sont suffisantes pour se connecter à une source de données et que toutes les autres informations de connexion peuvent être stockées sur le système. Cela n’est souvent pas le cas. Par exemple, un pilote peut-être un ID d’utilisateur et mot de passe pour vous connecter à un serveur et un autre ID d’utilisateur et le mot de passe pour vous connecter à un SGBD. Étant donné que **SQLConnect** accepte un ID utilisateur et un mot de passe, cela signifie que les autres ID d’utilisateur et mot de passe doivent être stockés avec les informations de source de données sur le système si **SQLConnect** doit être utilisé. Cela constitue une violation potentielle de sécurité et doit être évitée, sauf si le mot de passe est chiffré.  

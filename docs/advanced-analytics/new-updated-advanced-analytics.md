@@ -1,20 +1,18 @@
 ---
 title: Mis à jour - Advanced Analytique des documents de SQL Server | Documents Microsoft
 description: Extraits de l’affichage de contenu mis à jour pour obtenir une documentation récemment modifié dans, pour avancée d’Analytique pour Microsoft SQL Server.
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
+ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.topic: article
-ms.custom: UpdArt.exe
-ms.suite: sql
-ms.prod_service: sql-non-specified
-ms.component: advanced-analytics
-ms.date: 02/03/2018
-ms.openlocfilehash: fa0c25c193ea2815773ed9d08a50194d825f0a8a
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.openlocfilehash: 058278df1ee54a6440f8225ea15f727857df76f2
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="new-and-recently-updated-advanced-analytics-for-sql-server"></a>Nouveaux et mis à jour récemment : Advanced Analytique pour SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

@@ -2,7 +2,7 @@
 title: Fonction de SQLCopyDesc | Documents Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: d5450895-3824-44c4-8aa4-d4f9752a9602
 caps.latest.revision: 19
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d2df05d157c7079a3b5c1a8ef9286dd2c4c7a633
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: c8f857ee82ffb9d715e0e408715c9c56353687fa
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlcopydesc-function"></a>SQLCopyDesc (fonction)
 **Mise en conformité**  
@@ -66,7 +66,7 @@ SQLRETURN SQLCopyDesc(
   
  Étant donné que **SQLCopyDesc** peut être implémentée en appelant **SQLGetDescField** et **SQLSetDescField**, **SQLCopyDesc** peut retourner SQLSTATE retournée par **SQLGetDescField** ou **SQLSetDescField**.  
   
-|SQLSTATE|Error|Description|  
+|SQLSTATE|Erreur| Description|  
 |--------------|-----------|-----------------|  
 |01000|Avertissement général|Message d’information de spécifiques au pilote. (La fonction retourne SQL_SUCCESS_WITH_INFO).|  
 |08S01|Échec de lien de communication|Échec de la liaison de communication entre le pilote et la source de données à laquelle le pilote a été connecté avant le traitement de la fonction a été exécutée.|  

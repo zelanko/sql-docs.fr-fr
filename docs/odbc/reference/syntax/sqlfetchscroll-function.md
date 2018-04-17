@@ -2,7 +2,7 @@
 title: Fonction SQLFetchScroll | Documents Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: c0243667-428c-4dda-ae91-3c307616a1ac
 caps.latest.revision: 30
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: df50946b183bcd7072f12f67b8f0293ac5eef080
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: e8b244a9b4e6923c6455ea84175ed1557ec4100a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlfetchscroll-function"></a>Fonction SQLFetchScroll
 **Mise en conformité**  
@@ -90,7 +90,7 @@ SQLRETURN SQLFetchScroll(
   
  Pour toutes ces SQLSTATE qui peut retourner SQL_SUCCESS_WITH_INFO ou SQL_ERROR (sauf 01xxx SQLSTATE), SQL_SUCCESS_WITH_INFO est retourné si une erreur se produit sur un ou plusieurs, mais pas toutes, les lignes d’une opération de plusieurs ligne, SQL_ERROR est retourné si une erreur se produit lors d’une opération de ligne unique.  
   
-|SQLSTATE|Error|Description|  
+|SQLSTATE|Erreur| Description|  
 |--------------|-----------|-----------------|  
 |01000|Avertissement général|Message d’information de spécifiques au pilote. (La fonction retourne SQL_SUCCESS_WITH_INFO).|  
 |01004|Données de type chaîne, droite tronquées|Retourné pour une colonne de données binary ou String a entraîné la troncation des caractères non vides ou les données binaires non NULL. S’il s’agissait d’une valeur de chaîne, il a été tronqué à la droite.|  
@@ -169,7 +169,7 @@ SQLRETURN SQLFetchScroll(
   
 |Condition|Première ligne du nouvel ensemble de lignes|  
 |---------------|-----------------------------|  
-|*Avant de démarrer*| 1|  
+|*Avant de démarrer*|1|  
 |*CurrRowsetStart + la RowsetSize*[1]  *\<= LastResultRow*|*CurrRowsetStart + la RowsetSize*[1]|  
 |*CurrRowsetStart + la RowsetSize*[1]*> LastResultRow*|*Après la fin*|  
 |*Après la fin*|*Après la fin*|  
@@ -200,8 +200,8 @@ SQLRETURN SQLFetchScroll(
 |*(Avant de démarrer et FetchOffset > 0) OU (après la fin et FetchOffset < 0)*|*--* <sup>[1]</sup>|  
 |*BeforeStart et FetchOffset < = 0*|*Avant de démarrer*|  
 |*CurrRowsetStart = 1 et FetchOffset < 0*|*Avant de démarrer*|  
-|*CurrRowsetStart > 1 AND CurrRowsetStart + FetchOffset < 1 et &#124; FetchOffset &#124; > La RowsetSize* <sup>[3]</sup>|*Avant de démarrer*|  
-|*CurrRowsetStart > 1 AND CurrRowsetStart + FetchOffset < 1 et &#124; FetchOffset &#124; < = la RowsetSize* <sup>[3]</sup>|*1* <sup>[2]</sup>|  
+|*CurrRowsetStart > 1 AND CurrRowsetStart + FetchOffset < 1 AND &#124; FetchOffset &#124; > La RowsetSize* <sup>[3]</sup>|*Avant de démarrer*|  
+|*CurrRowsetStart > 1 AND CurrRowsetStart + FetchOffset < 1 AND &#124; FetchOffset &#124; < = la RowsetSize* <sup>[3]</sup>|*1* <sup>[2]</sup>|  
 |*1 < = CurrRowsetStart + FetchOffset \<= LastResultRow*|*CurrRowsetStart + FetchOffset*|  
 |*CurrRowsetStart + FetchOffset > LastResultRow*|*Après la fin*|  
 |*Après la fin et FetchOffset > = 0*|*Après la fin*|  
@@ -217,9 +217,9 @@ SQLRETURN SQLFetchScroll(
   
 |Condition|Première ligne du nouvel ensemble de lignes|  
 |---------------|-----------------------------|  
-|*FetchOffset < 0 et &#124; FetchOffset &#124; < = LastResultRow*|*LastResultRow + FetchOffset + 1*|  
-|*FetchOffset < 0 et &#124; FetchOffset &#124; > LastResultRow et &#124; FetchOffset &#124; > La RowsetSize* <sup>[2]</sup>|*Avant de démarrer*|  
-|*FetchOffset < 0 et &#124; FetchOffset &#124; > LastResultRow et &#124; FetchOffset &#124; < = la RowsetSize* <sup>[2]</sup>|*1* <sup>[1]</sup>|  
+|*FetchOffset < 0 AND &#124; FetchOffset &#124; < = LastResultRow*|*LastResultRow + FetchOffset + 1*|  
+|*FetchOffset < 0 AND &#124; FetchOffset &#124; > LastResultRow AND &#124; FetchOffset &#124; > La RowsetSize* <sup>[2]</sup>|*Avant de démarrer*|  
+|*FetchOffset < 0 AND &#124; FetchOffset &#124; > LastResultRow AND &#124; FetchOffset &#124; < = la RowsetSize* <sup>[2]</sup>|*1* <sup>[1]</sup>|  
 |*FetchOffset = 0*|*Avant de démarrer*|  
 |*1 < = FetchOffset \<= LastResultRow*|*FetchOffset*|  
 |*FetchOffset > LastResultRow*|*Après la fin*|  
@@ -263,7 +263,7 @@ SQLRETURN SQLFetchScroll(
   
  Si le curseur détecte les lignes ajoutées au jeu de résultats ou supprime des lignes supprimées du jeu de résultats, il apparaît comme s’il détecte ces modifications uniquement lorsqu’il extrait les données. Cela inclut le cas lorsque **SQLFetchScroll** est appelée avec FetchOrientation définie sur SQL_FETCH_RELATIVE et FetchOffset d’extraire le même ensemble de lignes à la valeur 0, mais n’inclut pas le cas lorsque SQLSetPos est appelée avec fOption défini à SQL_REFRESH. Dans ce cas, les données dans les tampons de l’ensemble de lignes sont actualisées, mais pas de nouveau extraits et supprimés les lignes ne sont pas supprimés du jeu de résultats. Par conséquent, lorsqu’une ligne est supprimée à partir d’ou insérée dans l’ensemble de lignes en cours, le curseur ne modifie pas les tampons de l’ensemble de lignes. Au lieu de cela, il détecte la modification lorsqu’il lit tout ensemble de lignes précédemment inclus la ligne supprimée ou inclut désormais la ligne insérée.  
   
- Exemple :  
+ Par exemple :  
   
 ```  
 // Fetch the next rowset.  
@@ -294,9 +294,9 @@ SQLFetchScroll(hstmt, SQL_FETCH_RELATIVE, 0);
 |Insérer une ligne entre les lignes 21 et 22|PRIOR|0|11 à 20|  
 |Insérer une ligne entre les lignes 20 et 21|PRIOR|0|ligne insérée de 12 à 20,|  
 |Supprimer une ligne 21|RELATIVE|0|22 à 31<sup>[2]</sup>|  
-|Supprimer une ligne 21|RELATIVE| 1|22 à 31.|  
+|Supprimer une ligne 21|RELATIVE|1|22 à 31.|  
 |Insérer une ligne entre les lignes 21 et 22|RELATIVE|0|21, ligne insérée, 22 à 29|  
-|Insérer une ligne entre les lignes 21 et 22|RELATIVE| 1|22 à 31.|  
+|Insérer une ligne entre les lignes 21 et 22|RELATIVE|1|22 à 31.|  
 |Supprimer une ligne 21|ABSOLUTE|21|22 à 31<sup>[2]</sup>|  
 |Supprimer une ligne 22|ABSOLUTE|21|21, 23 et 31.|  
 |Insérer une ligne entre les lignes 21 et 22|ABSOLUTE|22|Ligne insérée, 22 à 29|  

@@ -1,15 +1,16 @@
 ---
-title: "Gestionnaire de pilotes &#39; rôle s dans le processus de connexion | Documents Microsoft"
-ms.custom: 
+title: Gestionnaire de pilotes&#39;rôle s dans le processus de connexion | Documents Microsoft
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - driver manager [ODBC], role in connection process
@@ -17,18 +18,18 @@ helpviewer_keywords:
 - connecting to driver [ODBC], driver manager
 - ODBC driver manager [ODBC]
 ms.assetid: 77c05630-5a8b-467d-b80e-c705dc06d601
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 10766d85c5e06323f534d131abfde582906fe340
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 9f6b57322f96f469060db134eead3c09071e7dde
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="driver-manager39s-role-in-the-connection-process"></a>Gestionnaire de pilotes &#39; rôle s dans le processus de connexion
+# <a name="driver-manager39s-role-in-the-connection-process"></a>Gestionnaire de pilotes&#39;rôle s dans le processus de connexion
 N’oubliez pas que les applications n’appellent pas directement les fonctions de pilote. Au lieu de cela, ils appellent des fonctions de gestionnaire de pilotes portant le même nom et le Gestionnaire de pilotes appelle les fonctions de pilote. Généralement, ceci est presque immédiatement. Par exemple, l’application appelle **SQLExecute** dans le Gestionnaire de pilotes et après quelques vérifications d’erreurs, le Gestionnaire de pilotes appelle **SQLExecute** dans le pilote.  
   
  Le processus de connexion est différent. Lorsque l’application appelle **SQLAllocHandle** avec les options de SQL_HANDLE_ENV et SQL_HANDLE_DBC, la fonction alloue des handles uniquement dans le Gestionnaire de pilotes. Le Gestionnaire de pilotes n’appelle pas cette fonction dans le pilote, car il ne connaît pas le pilote à appeler. De même, si l’application passe le handle d’une connexion non connecté à **SQLSetConnectAttr** ou **SQLGetConnectAttr**, seul le Gestionnaire de pilotes exécute la fonction. Il stocke ou obtient la valeur d’attribut à partir de sa connexion gèrent et retourne SQLSTATE 08003 (connexion non ouverte) lors de l’obtention d’une valeur pour un attribut qui n’a pas été définie et pour quels ODBC ne définit pas de valeur par défaut.  

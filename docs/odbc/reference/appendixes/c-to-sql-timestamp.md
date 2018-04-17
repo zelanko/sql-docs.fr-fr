@@ -1,31 +1,32 @@
 ---
-title: "C en SQL : Timestamp | Documents Microsoft"
-ms.custom: 
+title: 'C en SQL : Timestamp | Documents Microsoft'
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - data conversions from C to SQL types [ODBC], timestamp
 - timestamp data type [ODBC]
 - converting data from c to SQL types [ODBC], timestamp
 ms.assetid: 0e08bfff-68f9-4648-9558-09b57fea08ad
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9577b649d2812ad087728b7849637f872d4a84b9
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: be38d6accb796666a62324e7a6fd5aefcfa0f372
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="c-to-sql-timestamp"></a>C en SQL : Timestamp
 L’identificateur pour le type de données ODBC C timestamp est :  
@@ -46,6 +47,6 @@ L’identificateur pour le type de données ODBC C timestamp est :
   
  Pour plus d’informations sur les valeurs qui sont valides dans une structure SQL_C_TIMESTAMP, consultez [les Types de données C](../../../odbc/reference/appendixes/c-data-types.md), plus haut dans cette annexe.  
   
- Lorsque les données timestamp C sont converties en données SQL de type caractère, les données de caractères résultant sont dans le «*aaaa*-*mm*-*jj* *hh*:*mm*:*ss*[. *f...* ] « format.  
+ Lorsque les données timestamp C sont converties en données SQL de type caractère, les données de caractères résultant sont dans le «*aaaa*-*mm*-*jj* *hh*:*mm*:*ss*[.*f...*] « format.  
   
  Le pilote ignore la valeur de longueur/indicateur lors de la conversion des données à partir du type de données timestamp C et suppose que la taille du tampon de données est la taille du type de données timestamp C. La valeur de l’indicateur/longueur est passée dans le *StrLen_or_Ind* argument dans **SQLPutData** et dans la mémoire tampon spécifiée avec la *StrLen_or_IndPtr* argument dans **SQLBindParameter**. Le tampon de données est spécifié avec la *DataPtr* argument dans **SQLPutData** et *ParameterValuePtr* argument dans **SQLBindParameter**.

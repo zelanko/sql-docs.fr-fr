@@ -1,31 +1,32 @@
 ---
-title: "Messages d’erreur natif Visual FoxPro ODBC Driver | Documents Microsoft"
-ms.custom: 
+title: Messages d’erreur natif Visual FoxPro ODBC Driver | Documents Microsoft
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - error messages [ODBC], Visual FoxPro ODBC driver
 - Visual FoxPro ODBC driver [ODBC], error messages
 - FoxPro ODBC driver [ODBC], error messages
 ms.assetid: 7b2622e8-ccee-4853-9171-4fb10de0461d
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9bc0b106b88eee6335514723aa083aef44bd5b66
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 2ea42345439cfba41cc6c22788f76307ecab0876
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="visual-foxpro-odbc-driver-native-error-messages"></a>Messages d’erreur natif pilote Visual FoxPro
 Les tableaux suivants répertorient les messages d’erreur natifs pour le pilote ODBC de Visual FoxPro.  
@@ -34,7 +35,7 @@ Les tableaux suivants répertorient les messages d’erreur natifs pour le pilot
   
 |||  
 |-|-|  
-| 1|Fonctionnalité n’est pas disponible.|  
+|1|Fonctionnalité n’est pas disponible.|  
 |2|Échec de l’opération d’entrée/sortie.|  
 |3|Descripteur de fichier libre est introuvable.|  
 |5|Utilisation d’un handle non alloué.|  
@@ -108,7 +109,7 @@ Les tableaux suivants répertorient les messages d’erreur natifs pour le pilot
 |206|Définition de macro récursive.|  
 |209|Ligne est trop longue.|  
 |210|Autorisé DO imbriqués.|  
-|211|Une instruction IF &#124; AUTRE &#124; ENDIF manque.|  
+|211|Une instruction IF &#124; ELSE &#124; ENDIF manque.|  
 |212|Imbrication de la structure est trop profonde.|  
 |213|Il existe un mot clé manquant dans le pour... ENDFOR ou faire un cas en cours... Structure de la commande ENDCASE.|  
 |219|Commande contient une expression/le mot clé non reconnu.|  

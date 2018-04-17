@@ -1,31 +1,32 @@
 ---
-title: "Arguments de la valeur de modèle | Documents Microsoft"
-ms.custom: 
+title: Arguments de la valeur de modèle | Documents Microsoft
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - catalog functions [ODBC], arguments
 - arguments in catalog functions [ODBC], pattern value
 - pattern value arguments [ODBC]
 ms.assetid: 1d3f0ea6-87af-4836-807f-955e7df2b5df
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4959b329f855028cedc99f7c43ef889754baecda
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 39e6bf4734a63c79b09a78178e567900ff636bd3
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="pattern-value-arguments"></a>Arguments de valeur de modèle
 Certains arguments dans le catalogue des fonctions, telles que la *TableName* argument dans **SQLTables**, accepte les modèles de recherche. Ces arguments accepte les modèles de recherche si l’attribut d’instruction SQL_ATTR_METADATA_ID a la valeur SQL_FALSE ; ils représentent les arguments d’identificateur qui n’acceptent pas d’un modèle de recherche si cet attribut a la valeur SQL_TRUE.  
@@ -40,7 +41,7 @@ Certains arguments dans le catalogue des fonctions, telles que la *TableName* ar
   
  Le caractère d’échappement est récupéré avec l’option SQL_SEARCH_PATTERN_ESCAPE dans **SQLGetInfo**. Il doit précéder n’importe quel trait de soulignement, un signe de pourcentage ou un caractère d’échappement dans un argument qui accepte les modèles de recherche pour inclure ce caractère en tant que littéral. Exemples sont présentés dans le tableau suivant.  
   
-|Modèle de recherche|Description|  
+|Modèle de recherche| Description|  
 |--------------------|-----------------|  
 |% DE %A|Tous les identificateurs contenant la lettre A|  
 |ABC_|Tous les identificateurs de quatre caractères commençant par ABC|  

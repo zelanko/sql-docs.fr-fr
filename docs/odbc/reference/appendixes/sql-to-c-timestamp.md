@@ -1,31 +1,32 @@
 ---
-title: "SQL à C: horodatage | Documents Microsoft"
-ms.custom: 
+title: 'SQL à C: horodatage | Documents Microsoft'
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - timestamp data type [ODBC]
 - converting data from SQL to C types [ODBC], timestamp
 - data conversions from SQL to C types [ODBC], timestamp
 ms.assetid: 6a0617cf-d8c0-4316-8bb4-e6ddb45d7bf1
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d877c369a071dfc9c28f2500dc6584fe99808cfa
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 66e6d84f713911b91bc55a8757bb6b149d6ec582
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sql-to-c-timestamp"></a>SQL à c : Timestamp
 L’identificateur pour le type de données SQL ODBC timestamp est :  
@@ -55,4 +56,4 @@ _C_TYPE_TIMESTAMP|Partie fractions d’horodatage n’est pas tronqué [a]<br />
   
  [f] Il s’agit de la taille du type de données C correspondante.  
   
- Lors de l’horodatage de données SQL sont converties en données de type caractère C, la chaîne résultante est dans le «*aaaa*-*mm*-*jj* *hh*:*mm*:*ss*[. *f...* ] « format, où jusqu'à neuf chiffres peut être utilisé pour les fractions de seconde. Ce format n’est pas affecté par le paramètre de pays Windows®. (À l’exception de la virgule décimale et les fractions de seconde, tout le format doit être utilisé, quelle que soit la précision du type de données timestamp SQL.)
+ Lors de l’horodatage de données SQL sont converties en données de type caractère C, la chaîne résultante est dans le «*aaaa*-*mm*-*jj* *hh*:*mm*:*ss*[.*f...*] « format, où jusqu'à neuf chiffres peut être utilisé pour les fractions de seconde. Ce format n’est pas affecté par le paramètre de pays Windows®. (À l’exception de la virgule décimale et les fractions de seconde, tout le format doit être utilisé, quelle que soit la précision du type de données timestamp SQL.)

@@ -1,30 +1,31 @@
 ---
-title: "Sources de données de fichiers | Documents Microsoft"
-ms.custom: 
+title: Sources de données de fichiers | Documents Microsoft
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - data sources [ODBC], file
 - file data sources [ODBC]
 ms.assetid: db245c80-981a-4638-bd03-69d04bc67af0
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1fa8f72d601130df15f73e856f676b07bf8f0e52
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 254e859c8533625cb34f7d867c62f26bea5cd04d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="file-data-sources"></a>Sources de données fichier
 *Sources de données de fichiers* sont stockées dans un fichier et d’autoriser les informations de connexion à utiliser à plusieurs reprises par un utilisateur unique ou partagé par plusieurs utilisateurs. Lorsqu’une source de données de fichier est utilisée, le Gestionnaire de pilotes établit la connexion à la source de données en utilisant les informations dans un fichier .dsn. Ce fichier peut être manipulé comme tout autre fichier. Une source de données de fichier n’a pas de nom de source de données, que les sources de données machine et n’est pas inscrit à n’importe quel ordinateur ou d’un utilisateur.  

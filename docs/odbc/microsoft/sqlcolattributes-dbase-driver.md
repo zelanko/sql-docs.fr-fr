@@ -1,36 +1,37 @@
 ---
 title: SQLColAttributes (pilote dBASE) | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - SQLColAttribute function [ODBC], dBASE Driver
 - DBase driver [ODBC], SQLColAttributes
 ms.assetid: ed44de2b-0b01-4dce-a340-f5eb3aac30b7
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 39a99e86218da8add51bf548983ebd0a92e7bcc4
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 93b9df8d1ec9cc324b53d696c7e29fabe8162637
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlcolattributes-dbase-driver"></a>SQLColAttributes (pilote dBASE)
 > [!NOTE]  
 >  Cette rubrique fournit des informations spécifiques au pilote de dBASE. Pour obtenir des informations générales sur cette fonction, consultez la rubrique appropriée sous [référence de l’API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
   
-|Attribute|Commentaires|  
+|Attribut|Commentaires|  
 |---------------|--------------|  
 |SQL_COLUMN_DISPLAY_SIZE|Pour les données LONGVARBINARY, SQL_COLUMN_DISPLAY_SIZE est la longueur maximale de la colonne, et pas la longueur maximale de la colonne heures 2.|  
 |SQL_OWNER_NAME|Une chaîne vide (« ») est retourné dans cette colonne, car le nom du propriétaire n’est pas pris en charge.|  

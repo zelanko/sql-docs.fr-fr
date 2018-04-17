@@ -2,7 +2,7 @@
 title: Fonction SQLTablePrivileges | Documents Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: 8cfdb64f-64c5-47e6-ad57-0533ac630afa
 caps.latest.revision: 27
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6554826bdd2e63a6ce3baad75f747d3e923216a5
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 8a7ab7a3ce90677e0d403aaf430fa3859e9dc2a0
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqltableprivileges-function"></a>Fonction SQLTablePrivileges
 **Mise en conformité**  
@@ -66,7 +66,7 @@ SQLRETURN SQLTablePrivileges(
  *NameLength1*  
  [Entrée] Longueur en caractères de **CatalogName*.  
   
- *SchemaName*  
+ *schemaName*  
  [Entrée] Modèle de recherche de chaîne pour les noms de schéma. Si un pilote prend en charge les schémas pour certaines tables, mais pas pour d’autres, telles que lorsque le pilote récupère les données à partir de différents SGBD, une chaîne vide (« ») indique les tables qui n’ont pas de schémas.  
   
  Si l’attribut d’instruction SQL_ATTR_METADATA_ID a la valeur SQL_TRUE, *SchemaName* est traité comme un identificateur et ses cas n’est pas significatif. S’il s’agit de SQL_FALSE, *SchemaName* est un argument de valeur de modèle ; il est traité littéralement, et ses cas est significatif.  
@@ -88,7 +88,7 @@ SQLRETURN SQLTablePrivileges(
 ## <a name="diagnostics"></a>Diagnostics  
  Lorsque **SQLTablePrivileges** retourne SQL_ERROR ou SQL_SUCCESS_WITH_INFO, une valeur SQLSTATE associée peut être obtenu en appelant **SQLGetDiagRec** avec un *HandleType* de SQL_HANDLE_STMT et un *gérer* de *au paramètre StatementHandle*. Le tableau suivant répertorie les valeurs SQLSTATE généralement retournées par **SQLTablePrivileges** et explique chacune d’elles dans le contexte de cette fonction ; la notation « (DM) » précède les descriptions de SQLSTATE retournée par le Gestionnaire de pilotes. Le code de retour associé à chaque valeur SQLSTATE est SQL_ERROR, sauf indication contraire.  
   
-|SQLSTATE|Error|Description|  
+|SQLSTATE|Erreur| Description|  
 |--------------|-----------|-----------------|  
 |01000|Avertissement général|Message d’information de spécifiques au pilote. (La fonction retourne SQL_SUCCESS_WITH_INFO).|  
 |08S01|Échec de lien de communication|Échec de la liaison de communication entre le pilote et la source de données à laquelle le pilote a été connecté avant le traitement de la fonction a été exécutée.|  
@@ -131,7 +131,7 @@ SQLRETURN SQLTablePrivileges(
   
 |Nom de colonne|Numéro de colonne|Type de données|Commentaires|  
 |-----------------|-------------------|---------------|--------------|  
-|TABLE_CAT (ODBC VERSION 1.0)| 1|Varchar|Nom de catalogue ; NULL si non applicable à la source de données. Si un pilote prend en charge les catalogues pour certaines tables, mais pas pour d’autres, telles que lorsque le pilote récupère les données à partir de différents SGBD, il retourne une chaîne vide (« ») pour les tables qui n’ont pas de catalogues.|  
+|TABLE_CAT (ODBC VERSION 1.0)|1|Varchar|Nom de catalogue ; NULL si non applicable à la source de données. Si un pilote prend en charge les catalogues pour certaines tables, mais pas pour d’autres, telles que lorsque le pilote récupère les données à partir de différents SGBD, il retourne une chaîne vide (« ») pour les tables qui n’ont pas de catalogues.|  
 |TABLE_SCHEM (ODBC 1.0)|2|Varchar|Nom du schéma ; NULL si non applicable à la source de données. Si un pilote prend en charge les schémas pour certaines tables, mais pas pour d’autres, telles que lorsque le pilote récupère les données à partir de différents SGBD, il retourne une chaîne vide (« ») pour les tables qui n’ont pas de schémas.|  
 |TABLE_NAME (ODBC 1.0)|3|Varchar non NULL|Nom de la table.|  
 |FOURNISSEUR D’AUTORISATIONS (ODBC VERSION 1.0)|4|Varchar|Nom de l’utilisateur qui dispose du privilège ; NULL si non applicable à la source de données.<br /><br /> Pour toutes les lignes dans lesquelles la valeur dans la colonne GRANTEE est le propriétaire de l’objet, la colonne GRANTOR sera « s_ervice ».|  

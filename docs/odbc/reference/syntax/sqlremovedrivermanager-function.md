@@ -2,7 +2,7 @@
 title: Fonction de SQLRemoveDriverManager | Documents Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: 3a41511f-6603-4b81-a815-7883874023c4
 caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8d74b3b3eda914210f8d69d6089eb9a474416318
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 3dbb36481ff096f2964d597b8d215589b152bf02
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlremovedrivermanager-function"></a>SQLRemoveDriverManager (fonction)
 **Mise en conformité**  
@@ -58,7 +58,7 @@ BOOL SQLRemoveDriverManager(
 ## <a name="diagnostics"></a>Diagnostics  
  Lorsque **SQLRemoveDriverManager** renvoie la valeur FALSE, associé à un  *\*pfErrorCode* valeur peut être obtenue en appelant **SQLInstallerError**. Le tableau suivant répertorie les  *\*pfErrorCode* les valeurs qui peuvent être retournées par **SQLInstallerError** et explique chacune d’elles dans le contexte de cette fonction.  
   
-|*\*pfErrorCode*|Error|Description|  
+|*\*pfErrorCode*|Erreur| Description|  
 |---------------------|-----------|-----------------|  
 |ODBC_ERROR_GENERAL_ERR|Erreur du programme d’installation générales|Une erreur s’est produite pour lequel aucune erreur d’installation spécifique s’est produite.|  
 |ODBC_ERROR_COMPONENT_NOT_FOUND|Composant introuvable dans le Registre|Le programme d’installation n’a pas pu supprimer les informations du Gestionnaire de pilotes, car il n’existe pas dans le Registre ou est introuvable dans le Registre.|  

@@ -1,15 +1,15 @@
 ---
-title: "Leçon du didacticiel Analysis Services 5 : créer des colonnes calculées | Documents Microsoft"
-description: "Décrit comment créer des colonnes calculées dans le projet du didacticiel Analysis Services."
+title: 'Leçon du didacticiel Analysis Services 5 : créer des colonnes calculées | Documents Microsoft'
+description: Décrit comment créer des colonnes calculées dans le projet du didacticiel Analysis Services.
 ms.prod_service: analysis-services, azure-analysis-services
 services: analysis-services
 ms.suite: pro-bi
-documentationcenter: 
+documentationcenter: ''
 author: Minewiskan
 manager: kfile
-editor: 
-tags: 
-ms.assetid: 
+editor: ''
+tags: ''
+ms.assetid: ''
 ms.service: analysis-services
 ms.devlang: NA
 ms.topic: get-started-article
@@ -17,11 +17,12 @@ ms.tgt_pltfrm: NA
 ms.workload: na
 ms.date: 02/20/2018
 ms.author: owend
-ms.openlocfilehash: daed9d78d8b88bcf8088d8b19b4a34ba3a9f16c0
-ms.sourcegitcommit: 7ed8c61fb54e3963e451bfb7f80c6a3899d93322
+monikerRange: '>= sql-analysis-services-2017 || = sqlallproducts-allversions'
+ms.openlocfilehash: 50a1094bc35a68a6c5b73d47cfc7f3b910a1afef
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/20/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-calculated-columns"></a>Créer des colonnes calculées
 
@@ -63,7 +64,7 @@ Cet article fait partie d’un didacticiel de modélisation tabulaire, qui doit 
   
 5.  Renommer cette colonne **MonthCalendar**. 
 
-    ![as-lesson5-newcolumn](../tutorial-tabular-1400/media/as-lesson5-newcolumn.png) 
+    ![en tant que-lesson5-nouvelle colonne](../tutorial-tabular-1400/media/as-lesson5-newcolumn.png) 
   
 Le MonthCalendar calculée de colonne qui fournit un nom triable pour le mois.  
   
@@ -131,7 +132,7 @@ La colonne ProductCategoryName est utilisée pour créer une hiérarchie dans la
 
 4.  Renommez la colonne en **Margin**.  
  
-      ![as-lesson5-newmargin](../tutorial-tabular-1400/media/as-lesson5-newmargin.png)
+      ![en tant que newmargin de lesson5](../tutorial-tabular-1400/media/as-lesson5-newmargin.png)
       
     La colonne calculée Margin est utilisée pour analyser les marges bénéficiaires pour chaque vente.  
   

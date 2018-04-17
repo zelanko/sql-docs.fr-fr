@@ -2,7 +2,7 @@
 title: SQLCloseCursor, fonction | Documents Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: 05b0a054-e28d-4e16-b5b0-07418486b372
 caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8c8e82312bda206d941bb08fe21fdcd27dbc0f56
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 2d43749361796f3a0cfb372dcdc8040db66d9fd8
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlclosecursor-function"></a>SQLCloseCursor, fonction
 **Mise en conformité**  
@@ -58,7 +58,7 @@ SQLRETURN SQLCloseCursor(
 ## <a name="diagnostics"></a>Diagnostics  
  Lorsque **SQLCloseCursor** retourne SQL_ERROR ou SQL_SUCCESS_WITH_INFO, une valeur SQLSTATE associée peut être obtenu en appelant **SQLGetDiagRec** avec un *HandleType* de SQL_HANDLE_STMT et un *gérer* de *au paramètre StatementHandle*. Le tableau suivant répertorie les valeurs SQLSTATE généralement retournées par **SQLCloseCursor** et explique chacune d’elles dans le contexte de cette fonction ; la notation « (DM) » précède les descriptions de SQLSTATE retournée par le Gestionnaire de pilotes. Le code de retour associé à chaque valeur SQLSTATE est SQL_ERROR, sauf indication contraire.  
   
-|SQLSTATE|Error|Description|  
+|SQLSTATE|Erreur| Description|  
 |--------------|-----------|-----------------|  
 |01000|Avertissement général|Message d’information de spécifiques au pilote. (La fonction retourne SQL_SUCCESS_WITH_INFO).|  
 |24000|État de curseur non valide|Aucun curseur n’a été ouverte sur le *au paramètre StatementHandle*. (Il est renvoyé uniquement par un ODBC 3. *x* pilote.)|  

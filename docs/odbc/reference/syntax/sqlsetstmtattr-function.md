@@ -2,7 +2,7 @@
 title: Fonction SQLSetStmtAttr | Documents Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: 7abc5260-733a-48d4-9974-2d1a6a9ea5f6
 caps.latest.revision: 32
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: be7fb7064f3e6508b481011ed2aa05068542cef9
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: fab28d7076d4a529b1b77a340deb2f2e411da334
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlsetstmtattr-function"></a>Fonction SQLSetStmtAttr
 **Mise en conformité**  
@@ -58,7 +58,7 @@ SQLRETURN SQLSetStmtAttr(
  *Au paramètre StatementHandle*  
  [Entrée] Descripteur d’instruction.  
   
- *Attribute*  
+ *Attribut*  
  [Entrée] Option permettant de définir, répertoriés dans « Commentaires ».  
   
  *ValuePtr*  
@@ -82,7 +82,7 @@ SQLRETURN SQLSetStmtAttr(
   
  Si le *attribut* argument est une valeur spécifique au pilote, *ValuePtr* peut être un entier signé.  
   
- *StringLength*  
+ *stringLength*  
  [Entrée] Si *attribut* est un attribut défini par ODBC et *ValuePtr* pointe vers une chaîne de caractères ou d’un tampon binaire, cet argument doit être la longueur de \* *ValuePtr*. Si *attribut* est un attribut défini par ODBC et *ValuePtr* est un entier, *StringLength* est ignoré.  
   
  Si *attribut* est un attribut définies par le pilote, l’application indique la nature de l’attribut pour le Gestionnaire de pilotes en définissant le *StringLength* argument. *StringLength* peut avoir les valeurs suivantes :  
@@ -101,10 +101,10 @@ SQLRETURN SQLSetStmtAttr(
 ## <a name="diagnostics"></a>Diagnostics  
  Lorsque **SQLSetStmtAttr** retourne SQL_ERROR ou SQL_SUCCESS_WITH_INFO, une valeur SQLSTATE associée peut être obtenu en appelant **SQLGetDiagRec** avec un *HandleType* de SQL_HANDLE_STMT et un *gérer* de *au paramètre StatementHandle*. Le tableau suivant répertorie les valeurs SQLSTATE généralement retournées par **SQLSetStmtAttr** et explique chacune d’elles dans le contexte de cette fonction ; la notation « (DM) » précède les descriptions de SQLSTATE retournée par le Gestionnaire de pilotes. Le code de retour associé à chaque valeur SQLSTATE est SQL_ERROR, sauf indication contraire.  
   
-|SQLSTATE|Error|Description|  
+|SQLSTATE|Erreur| Description|  
 |--------------|-----------|-----------------|  
 |01000|Avertissement général|Message d’information de spécifiques au pilote. (La fonction retourne SQL_SUCCESS_WITH_INFO).|  
-|01 S 02|Valeur de l’option modifiée|Le pilote ne prenait pas en charge la valeur spécifiée dans *ValuePtr*, ou la valeur spécifiée dans *ValuePtr* était non valide en raison de conditions de travail de mise en œuvre, le pilote remplacé une valeur similaire. (**SQLGetStmtAttr** peut être appelée pour déterminer la valeur substituée temporairement.) La valeur de remplacement n’est valide pour le *au paramètre StatementHandle* jusqu'à ce que le curseur est fermé, à quel point l’attribut d’instruction reprend sa valeur précédente. Les attributs d’instruction qui peuvent être modifiés sont :<br /><br /> SQL_ ATTR_CONCURRENCY SQL_ ATTR_CURSOR_TYPE SQL_ ATTR_KEYSET_SIZE SQL_ ATTR_MAX_LENGTH SQL_ ATTR_MAX_ROWS SQL_ ATTR_QUERY_TIMEOUT SQL_ATTR_ROW_ARRAY_SIZE SQL_ ATTR_SIMULATE_CURSOR<br /><br /> (La fonction retourne SQL_SUCCESS_WITH_INFO).|  
+|01S02|Valeur de l’option modifiée|Le pilote ne prenait pas en charge la valeur spécifiée dans *ValuePtr*, ou la valeur spécifiée dans *ValuePtr* était non valide en raison de conditions de travail de mise en œuvre, le pilote remplacé une valeur similaire. (**SQLGetStmtAttr** peut être appelée pour déterminer la valeur substituée temporairement.) La valeur de remplacement n’est valide pour le *au paramètre StatementHandle* jusqu'à ce que le curseur est fermé, à quel point l’attribut d’instruction reprend sa valeur précédente. Les attributs d’instruction qui peuvent être modifiés sont :<br /><br /> SQL_ ATTR_CONCURRENCY SQL_ ATTR_CURSOR_TYPE SQL_ ATTR_KEYSET_SIZE SQL_ ATTR_MAX_LENGTH SQL_ ATTR_MAX_ROWS SQL_ ATTR_QUERY_TIMEOUT SQL_ATTR_ROW_ARRAY_SIZE SQL_ ATTR_SIMULATE_CURSOR<br /><br /> (La fonction retourne SQL_SUCCESS_WITH_INFO).|  
 |08S01|Échec de lien de communication|Échec de la liaison de communication entre le pilote et la source de données à laquelle le pilote a été connecté avant le traitement de la fonction a été exécutée.|  
 |24000|État de curseur non valide|Le *attribut* a été SQL_ATTR_CURSOR_TYPE, SQL_ATTR_CONCURRENCY, SQL_ATTR_SIMULATE_CURSOR ou SQL_ATTR_USE_BOOKMARKS, et le curseur a été ouvert.|  
 |HY000|Erreur générale|Une erreur s’est produite pour laquelle aucun code SQLSTATE spécifique est survenu et pour lequel aucune SQLSTATE spécifique à l’implémentation a été définie. Le message d’erreur retourné par **SQLGetDiagRec** dans les  *\*MessageText* tampon décrit l’erreur et sa cause.|  
@@ -166,7 +166,7 @@ SQLRETURN SQLSetStmtAttr(
 ## <a name="statement-attributes"></a>Attributs d'instruction  
  Les attributs actuellement définis et la version d’ODBC dans lequel elles ont été ajoutées sont affichés dans le tableau suivant ; Il est probable que des attributs seront définis par les pilotes pour tirer parti de différentes sources de données. Une plage d’attributs est réservée par ODBC ; les développeurs de pilote doivent réserver valeurs pour leur propre usage spécifiques au pilote à partir d’Open Group. Pour plus d’informations, consultez [les Types de données spécifiques au pilote, Types de descripteur, Types d’informations, Types de diagnostics et attributs](../../../odbc/reference/develop-app/driver-specific-data-types-descriptor-information-diagnostic.md).  
   
-|Attribute|*ValuePtr* contenu|  
+|Attribut|*ValuePtr* contenu|  
 |---------------|-------------------------|  
 |SQL_ATTR_APP_PARAM_DESC (ODBC 3.0)|Le handle pour le descripteur APD pour les appels suivants à **SQLExecute** et **SQLExecDirect** sur le descripteur d’instruction. La valeur initiale de cet attribut est le descripteur implicitement alloué lors de l’instruction a été initialement allouée. Si la valeur de cet attribut est définie à SQL_NULL_DESC ou le handle initialement allouée pour le descripteur, un handle APD explicitement alloué qui a été précédemment associé avec le descripteur d’instruction est dissocié de celle-ci et le descripteur d’instruction rétablit le descripteur APD implicitement alloué.<br /><br /> Cet attribut ne peut pas être défini à un handle de descripteur qui a été implicitement alloué pour une autre instruction ou à un autre handle de descripteur qui a été implicitement défini sur la même instruction ; handles de descripteur alloué implicitement ne peut pas être associés à plusieurs instructions ou le handle de descripteur.|  
 |SQL_ATTR_APP_ROW_DESC (ODBC 3.0)|Handle vers le ARD pour les extractions suivantes sur le handle d’instruction. La valeur initiale de cet attribut est le descripteur implicitement alloué lors de l’instruction a été initialement allouée. Si la valeur de cet attribut est définie à SQL_NULL_DESC ou le handle initialement allouée pour le descripteur, un handle ARD explicitement alloué qui a été précédemment associé avec le descripteur d’instruction est dissocié de celle-ci et le descripteur d’instruction rétablit le handle ARD implicitement alloué.<br /><br /> Cet attribut ne peut pas être défini à un handle de descripteur qui a été implicitement alloué pour une autre instruction ou à un autre handle de descripteur qui a été implicitement défini sur la même instruction ; handles de descripteur alloué implicitement ne peut pas être associés à plusieurs instructions ou le handle de descripteur.|  

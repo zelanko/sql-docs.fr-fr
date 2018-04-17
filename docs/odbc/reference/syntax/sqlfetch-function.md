@@ -2,7 +2,7 @@
 title: Fonction SQLFetch | Documents Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: 6c6611d2-bc6a-4390-87c9-1c5dd9cfe07c
 caps.latest.revision: 27
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 3af90114b88e3f54f14bbb94357f4f3bf805bb30
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: f1d87bc952852df3301d095203f6c94794de795d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlfetch-function"></a>Fonction SQLFetch
 **Mise en conformité**  
@@ -60,7 +60,7 @@ SQLRETURN SQLFetch(
   
  Pour toutes ces SQLSTATE qui peut retourner SQL_SUCCESS_WITH_INFO ou SQL_ERROR (sauf 01xxx SQLSTATE), SQL_SUCCESS_WITH_INFO est retourné si une erreur se produit sur un ou plusieurs, mais pas toutes, les lignes d’une opération de plusieurs ligne, SQL_ERROR est retourné si une erreur se produit lors d’une opération de ligne unique.  
   
-|SQLSTATE|Error|Description|  
+|SQLSTATE|Erreur| Description|  
 |--------------|-----------|-----------------|  
 |01000|Avertissement général|Message d’information de spécifiques au pilote. (La fonction retourne SQL_SUCCESS_WITH_INFO).|  
 |01004|Données de type chaîne, droite tronquées|Retourné pour une colonne de données binary ou String a entraîné la troncation des caractères non vides ou les données binaires non NULL. S’il s’agissait d’une valeur de chaîne, il a été tronqué à la droite.|  
@@ -112,7 +112,7 @@ SQLRETURN SQLFetch(
   
 |Condition|Première ligne du nouvel ensemble de lignes|  
 |---------------|-----------------------------|  
-|Avant de démarrer| 1|  
+|Avant de démarrer|1|  
 |*CurrRowsetStart* \< =  *LastResultRow – la RowsetSize*[1]|*CurrRowsetStart* + *la RowsetSize*[2]|  
 |*CurrRowsetStart* > *LastResultRow – la RowsetSize*[1]|Après la fin|  
 |Après la fin|Après la fin|  
@@ -183,7 +183,7 @@ SQLRETURN SQLFetch(
   
  Les valeurs suivantes sont retournées dans le tableau d’état de ligne.  
   
-|Valeur de tableau de statut de ligne|Description|  
+|Valeur de tableau de statut de ligne| Description|  
 |----------------------------|-----------------|  
 |SQL_ROW_SUCCESS|La ligne a été extraite avec succès et n’a pas changé depuis sa dernière extraction à partir de ce jeu de résultats.|  
 |SQL_ROW_SUCCESS_WITH_INFO|La ligne a été extraite avec succès et n’a pas changé depuis sa dernière extraction à partir de ce jeu de résultats. Toutefois, un avertissement a été retourné à la ligne.|  

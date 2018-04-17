@@ -1,31 +1,32 @@
 ---
-title: "Structure d’intervalle C | Documents Microsoft"
-ms.custom: 
+title: Structure d’intervalle C | Documents Microsoft
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - data types [ODBC], interval data types
 - interval data type [ODBC], structure
 - C data types [ODBC], interval
 ms.assetid: 52b42b56-50aa-4ce6-8d79-0963c7a71437
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 00ec992c87cce93eb95cd85314743a109183c51f
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 359facef0aecb21eabfd931970d41b3ea3f5d9c9
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="c-interval-structure"></a>Structure d’intervalle C
 Chacun des types de données C intervalle répertoriées dans le [les Types de données C](../../../odbc/reference/appendixes/c-data-types.md) section utilise la même structure pour contenir les données de l’intervalle. Lorsque **SQLFetch**, **SQLFetchScroll**, ou **SQLGetData** est appelée, le pilote retourne les données dans la structure SQL_INTERVAL_STRUCT, utilise la valeur qui a été spécifiée par l’application pour les types de données C (dans l’appel à **SQLBindCol**, **SQLGetData**, ou **SQLBindParameter**) pour interpréter le contenu de SQL_INTERVAL_STRUCT et remplit la *interval_type* champ de la structure avec la *enum* valeur correspondant au type C. Notez que les pilotes ne lisent pas les *interval_type* champ pour déterminer le type de l’intervalle ; ils récupèrent la valeur du champ de descripteur SQL_DESC_CONCISE_TYPE. Lorsque la structure est utilisée pour les données de paramètre, le pilote utilise la valeur spécifiée par l’application dans le champ SQL_DESC_CONCISE_TYPE de l’APD interpréter le contenu de SQL_INTERVAL_STRUCT, même si l’application définit la valeur de la *interval_type* champ sur une autre valeur.  

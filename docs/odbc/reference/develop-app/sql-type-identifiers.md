@@ -1,15 +1,16 @@
 ---
 title: Les identificateurs de Type SQL | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - data types [ODBC], identifiers
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - identifiers [ODBC], SQL type
 - SQL type identifiers [ODBC]
 ms.assetid: 22f6793b-2f43-4281-b35a-28f48e504dd8
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 98754c574acd8dea29184fafa70e1df702925a2a
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 046b9a9b8eda25dd0f3ecee885031423706742a4
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sql-type-identifiers"></a>Identificateurs de Type SQL
 Chaque source de données définit ses propres types de données SQL. ODBC définit les identificateurs de type et décrit les caractéristiques générales des types de données SQL qui peuvent être mappés à l’identificateur de chaque type. Il est spécifique au pilote comment chaque type de données dans la source de données sous-jacente est mappé à un identificateur de type SQL d’ODBC.  

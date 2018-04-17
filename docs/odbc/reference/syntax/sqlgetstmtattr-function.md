@@ -2,7 +2,7 @@
 title: Fonction SQLGetStmtAttr | Documents Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: e321d460-e997-4527-aee6-207cf5a498e9
 caps.latest.revision: 25
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 10ef63cf77fc4668d9f9f80daaff8ab483d1876b
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 7ee7c6b895be856f6ec2023c0795cf8b8ee291e6
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlgetstmtattr-function"></a>Fonction SQLGetStmtAttr
 **Mise en conformité**  
@@ -59,7 +59,7 @@ SQLRETURN SQLGetStmtAttr(
  *Au paramètre StatementHandle*  
  [Entrée] Descripteur d’instruction.  
   
- *Attribute*  
+ *Attribut*  
  [Entrée] Attribut à récupérer.  
   
  *ValuePtr*  
@@ -89,7 +89,7 @@ SQLRETURN SQLGetStmtAttr(
 ## <a name="diagnostics"></a>Diagnostics  
  Lorsque **SQLGetStmtAttr** retourne SQL_ERROR ou SQL_SUCCESS_WITH_INFO, une valeur SQLSTATE associée peut être obtenu en appelant **SQLGetDiagRec** avec un *HandleType* de SQL_HANDLE_STMT et un *gérer* de *au paramètre StatementHandle*. Le tableau suivant répertorie les valeurs SQLSTATE généralement retournées par **SQLGetStmtAttr** et explique chacune d’elles dans le contexte de cette fonction ; la notation « (DM) » précède les descriptions de SQLSTATE retournée par le Gestionnaire de pilotes. Le code de retour associé à chaque valeur SQLSTATE est SQL_ERROR, sauf indication contraire.  
   
-|SQLSTATE|Error|Description|  
+|SQLSTATE|Erreur| Description|  
 |--------------|-----------|-----------------|  
 |01000|Avertissement général|Message d’information de spécifiques au pilote. (La fonction retourne SQL_SUCCESS_WITH_INFO).|  
 |01004|Données de type chaîne, droite tronquées|Les données retournées dans  *\*ValuePtr* a été tronquée pour être *BufferLength* moins la longueur d’un caractère de fin de la valeur null. La longueur de la valeur de chaîne non tronqué est retournée dans **StringLengthPtr*. (La fonction retourne SQL_SUCCESS_WITH_INFO).|  

@@ -1,30 +1,31 @@
 ---
-title: "L’interopérabilité | Documents Microsoft"
-ms.custom: 
+title: L’interopérabilité | Documents Microsoft
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - interoperability [ODBC]
 - interoperability [ODBC], about interoperability
 ms.assetid: 43b7c849-9d59-4002-9977-9e2c8730b859
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b797bcf1e8e5521ea2b4fd57a68969b3f04e802d
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 4e7bbec995af3475208afa328c163dbbd42f0e46
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="interoperability"></a>Interopérabilité
 *L’interopérabilité* désigne la capacité d’une seule application de fonctionner avec nombreux SGBD différents. La nécessité d’écrire des applications interopérables génériques a été un des principaux facteurs menant au développement d’ODBC. Toutefois, l’interopérabilité n’est pas un chemin d’accès simple suivi de « pas interopérable » à « entièrement interopérables. » Le chemin d’accès possède de nombreuses branches, et chacune nécessite le compromis entre les fonctionnalités, la vitesse, la complexité du code et temps de développement.  
