@@ -1,15 +1,16 @@
 ---
-title: "Fonctions d’heure, Date et intervalle | Documents Microsoft"
-ms.custom: 
+title: Fonctions d’heure, Date et intervalle | Documents Microsoft
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - functions [ODBC], time functions
@@ -19,16 +20,16 @@ helpviewer_keywords:
 - time functions [ODBC]
 - date functions [ODBC]
 ms.assetid: bdf054a0-7aba-4e99-a34a-799917376fd5
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 49f765c78f6c0b861c56d1299fc90786b6c22b78
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 3d32dc500c2f57919757224d64b3f5c21c6f6423
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="time-date-and-interval-functions"></a>Fonctions d'heure, de date et d'intervalle
 Le tableau suivant répertorie les fonctions de date et heure sont incluses dans l’ensemble de la fonction scalaire ODBC. Une application peut déterminer les fonctions de date et heure sont pris en charge par un pilote en appelant **SQLGetInfo** avec un *type d’information* de SQL_TIMEDATE_FUNCTIONS.  
@@ -41,7 +42,7 @@ Le tableau suivant répertorie les fonctions de date et heure sont incluses dans
   
  Les CURRENT_DATE, CURRENT_TIME et CURRENT_TIMESTAMP heureDATE fonctions scalaires ont été ajoutés dans ODBC 3.0 pour les aligner avec SQL-92.  
   
-|Fonction|Description|  
+|Fonction| Description|  
 |--------------|-----------------|  
 |**(DE) CURRENT_DATE** (ODBC 3.0)|Retourne la date actuelle.|  
 |**CURRENT_TIME [(** *précision de l’heure* **)]** (ODBC version 3.0)|Retourne l'heure locale actuelle. Le *précision de l’heure* argument détermine la précision en secondes de la valeur retournée.|  

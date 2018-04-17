@@ -1,27 +1,28 @@
 ---
-title: "Connexion aux données Source ou le pilote | Documents Microsoft"
-ms.custom: 
+title: Connexion aux données Source ou le pilote | Documents Microsoft
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: e93027ab-9e60-47b7-ba96-8289dae32a22
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b5df6514242930ea23fd08350ccc41e027b431a8
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 77717667d5be9365a42d0006f47725027b9eb2dd
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="connecting-to-a-data-source-or-driver"></a>Connexion aux données Source ou pilote
 Une application peut être connectée à n’importe quel nombre de pilotes et les sources de données. Il peut s’agir d’une variété de pilotes et les sources de données, le même pilote et de diverses sources de données ou même plusieurs connexions à la même pilote et de la source de données.  

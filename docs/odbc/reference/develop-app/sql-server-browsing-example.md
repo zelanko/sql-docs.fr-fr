@@ -1,31 +1,32 @@
 ---
 title: Exemple de navigation de SQL Server | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - SQLBrowseConnect function [ODBC], example
 - connecting to data source [ODBC], SqlBrowseConnect
 - connecting to driver [ODBC], SQLBrowseConnect
 ms.assetid: 6e0d5fd1-ec93-4348-a77a-08f5ba738bc6
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 358a1ce1e7351fa61e19b78f766a7aaa71c3b441
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: fc6687becdb9f76a02ee10f87347033f746d3955
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sql-server-browsing-example"></a>Exemple de navigation de SQL Server
 L’exemple suivant montre comment **SQLBrowseConnect** peut être utilisé pour parcourir les connexions disponibles avec un pilote pour SQL Server. Tout d’abord, l’application demande un handle de connexion :  
@@ -82,7 +83,7 @@ SQLBrowseConnect(hdbc, "DATABASE=pubs;", SQL_NTS, BrowseResult,
 "DSN=MySQLServer;SERVER=green;UID=Smith;PWD=Sesame;DATABASE=pubs;"  
 ```  
   
- La chaîne de connexion finale retournée par le pilote ne contient pas les noms conviviaux après chaque mot clé, ni si elle contient des mots clés facultatifs ne pas spécifiées par l’application. L’application peut utiliser cette chaîne avec **SQLDriverConnect** se reconnecter à la source de données sur le handle de connexion actuel (après déconnexion) ou se connecter à la source de données sur un handle de connexion différents. Exemple :  
+ La chaîne de connexion finale retournée par le pilote ne contient pas les noms conviviaux après chaque mot clé, ni si elle contient des mots clés facultatifs ne pas spécifiées par l’application. L’application peut utiliser cette chaîne avec **SQLDriverConnect** se reconnecter à la source de données sur le handle de connexion actuel (après déconnexion) ou se connecter à la source de données sur un handle de connexion différents. Par exemple :  
   
 ```  
 SQLDriverConnect(hdbc, hwnd, BrowseResult, SQL_NTS, ConnStrOut,  

@@ -1,15 +1,16 @@
 ---
-title: "Mappage des fonctions de remplacement pour la compatibilité des applications - ODBC | Documents Microsoft"
-ms.custom: 
+title: Mappage des fonctions de remplacement pour la compatibilité des applications - ODBC | Documents Microsoft
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - mapping replacement functions [ODBC]
@@ -20,16 +21,16 @@ helpviewer_keywords:
 - application upgrades [ODBC], mapping replacement functions
 - backward compatibility [ODBC], mapping replacement functions
 ms.assetid: f5e6d9da-76ef-42cb-b3f5-f640857df732
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c93ea22e03f401580a968dacb1ca15910c7eb44b
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 400f1fd18788f361b3eada813a414077e62de1e1
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="mapping-replacement-functions-for-backward-compatibility-of-applications"></a>Mappage des fonctions de remplacement pour la compatibilité descendante des Applications
 Un ODBC 3*.x* application parcourt le ODBC 3*.x* du Gestionnaire de pilotes fonctionnera sur une API ODBC 2. *x* pilote tant qu’aucune nouvelle fonctionnalité n’est utilisées. Les deux dupliqué fonctionnalités et changements de comportement, toutefois, affectent-elles la façon qui le ODBC 3. *x* application fonctionne sur une API ODBC 2. *x* pilote. Lorsque vous travaillez avec une API ODBC 2. *x* pilote, le Gestionnaire de pilotes mappe le suivantes ODBC 3. *x* fonctions qui ont remplacé un ou plusieurs ODBC 2. *x* fonctions, dans le correspondant ODBC 2. *x* fonctions.  
@@ -480,7 +481,7 @@ SQLGetStmtOption(hstmt, SQL_GET_BOOKMARK, TargetValuePtr)
   
  Ce mappage est nécessaire pour prendre en compte pour le cas dans lequel **SQLFetch** a été appelé avant l’appel à **SQLGetData** et ODBC 2. *x* pilote ne prenait pas en charge **SQLExtendedFetch**. Dans ce cas, **SQLFetch** peuvent être transmis par le biais de l’API ODBC 2. *x* pilote, dans laquelle extraction de cas de signet n’est pas pris en charge.  
   
- **SQLGetData** ne peut pas être appelée plusieurs fois dans une API ODBC 2. *x* pilote de récupérer un signet dans les composants, par conséquent, l’appel **SQLGetData** avec la *BufferLength* argument défini à une valeur inférieure à 4 et la *ColumnNumber* argument a la valeur 0 retourne SQLSTATE HY090 (longueur de chaîne ou une mémoire tampon non valide). **SQLGetData** peut, cependant, être appelée plusieurs fois pour récupérer le même signet.  
+ **SQLGetData** ne peut pas être appelée plusieurs fois dans une API ODBC 2. *x* pilote de récupérer un signet dans les composants, par conséquent, l’appel **SQLGetData** avec la *BufferLength* argument défini à une valeur inférieure à 4 et la *ColumnNumber*argument a la valeur 0 retourne SQLSTATE HY090 (longueur de chaîne ou une mémoire tampon non valide). **SQLGetData** peut, cependant, être appelée plusieurs fois pour récupérer le même signet.  
   
 ### <a name="sqlsetstmtattr"></a>SQLSetStmtAttr  
  Lorsqu’une application ODBC 3. *x* application utilisant une API ODBC 2. *x* pilote appelle **SQLSetStmtAttr** pour définir l’attribut SQL_ATTR_USE_BOOKMARKS à SQL_UB_VARIABLE, le Gestionnaire de pilotes affecte l’attribut SQL_UB_ON dans sous-jacent ODBC 2. *x* pilote.

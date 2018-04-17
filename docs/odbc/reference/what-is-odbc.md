@@ -2,7 +2,7 @@
 title: Nouveautés d’ODBC ? | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -18,13 +18,13 @@ ms.assetid: badf3a45-f941-44ae-a31d-393116f68a18
 caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: f1cb1869039572d0d6da1302f66ce64abc3f2590
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: ed2f843b8b3c5da54f339d0d3e7f4602246a8d69
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="what-is-odbc"></a>Nouveautés d’ODBC ?
 Nombreuses idées sur ODBC existent dans le monde informatique. À l’utilisateur final, il est une icône dans le panneau de configuration Microsoft® Windows®. Pour les programmeurs d’applications, il est une bibliothèque contenant des routines d’accès aux données. Beaucoup d’autres, il est la réponse à tous les problèmes d’accès de base de données pensiez.  

@@ -2,7 +2,7 @@
 title: CRÉER la TABLE - commande SQL | Documents Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -18,13 +18,13 @@ ms.assetid: be2143ba-fc16-42c9-84f7-8985cd924860
 caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4e4ee29a84fc739cb0f66e1e81f668c8c9598832
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: b0e3fa9e8bfd3385988435670e9714f48ef44164
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-table---sql-command"></a>CRÉER la TABLE - commande SQL
 Crée une table comportant les champs spécifiés.  
@@ -53,7 +53,7 @@ CREATE TABLE | DBF TableName1 [NAME LongTableName] [FREE]
 ```  
   
 ## <a name="arguments"></a>Arguments  
- CRÉER une TABLE &#124; DBF *TableName1*  
+ CRÉER la TABLE &#124; DBF *TableName1*  
  Spécifie le nom de la table à créer. Les options de TABLE et DBF sont identiques.  
   
  NOM *LongTableName*  
@@ -140,7 +140,7 @@ CREATE TABLE mytable (char1 C(10), char2 C(10) NOCPTRANS,;
  À partir du tableau *nom de tableau*  
  Spécifie le nom d’un tableau existant dont le contenu est le nom, type, la précision et l’échelle pour chaque champ dans la table. Le contenu du tableau peut être défini avec la **AFIELDS**(fonction) ().  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  La nouvelle table est ouvert dans la zone la plus basse de travail disponible et est accessible par son alias. La nouvelle table est ouverte en mode exclusif, quel que soit le paramètre actuel de la valeur exclusif.  
   
  Si une base de données est ouverte et que vous n’incluez pas la clause libre, la nouvelle table est ajoutée à la base de données. Impossible de créer une nouvelle table avec le même nom qu’une table dans la base de données.  

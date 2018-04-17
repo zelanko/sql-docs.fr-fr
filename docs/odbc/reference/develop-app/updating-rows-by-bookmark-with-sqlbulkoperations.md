@@ -1,15 +1,16 @@
 ---
-title: "Mise à jour des lignes par le signet avec SQLBulkOperations | Documents Microsoft"
-ms.custom: 
+title: Mise à jour des lignes par le signet avec SQLBulkOperations | Documents Microsoft
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - data updates [ODBC], bookmarks
@@ -19,16 +20,16 @@ helpviewer_keywords:
 - updating data [ODBC], bookmarks
 - updating data [ODBC], SQLBulkOperations
 ms.assetid: c9ad82b7-8dba-45b0-bdb9-f4668b37c0d6
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3c3525f78ece4e5831cc4e84e0d8041ceacc6a05
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: c5a561fe33a54f31bcbe554dbf34525812c234e5
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="updating-rows-by-bookmark-with-sqlbulkoperations"></a>Mise à jour des lignes par le signet avec SQLBulkOperations
 Lors de la mise à jour d’une ligne par un signet, **SQLBulkOperations** rend la source de données à mettre à jour une ou plusieurs lignes de la table. Les lignes sont identifiées par le signet dans une colonne liée de signet. La ligne est mise à jour à l’aide des données dans les mémoires tampons d’application pour chaque colonne dépendante (sauf si la valeur dans la mémoire tampon de longueur / d’indicateur pour une colonne est SQL_COLUMN_IGNORE). Colonnes indépendantes ne seront pas mis à jour.  

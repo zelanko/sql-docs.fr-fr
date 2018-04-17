@@ -1,15 +1,16 @@
 ---
 title: SQLDescribeCol et SQLColAttribute | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - SQLColAttribute function [ODBC], and SQLDescribeCol
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - retrieving result set meta data [ODBC]
 - metadata [ODBC], result set
 ms.assetid: c2ca442c-03a8-4e0f-9e67-b300bb15962f
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1a79fa6a02a5c17be0180b0593e28c7827e751bd
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 4f3e09d40f81753029de94a480519540ebe6ef07
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqldescribecol-and-sqlcolattribute"></a>SQLDescribeCol et SQLColAttribute
 **SQLDescribeCol** et **SQLColAttribute** sont utilisées pour récupérer les métadonnées du jeu de résultats. La différence entre ces deux fonctions est que **SQLDescribeCol** retourne toujours les cinq pièces d’informations (d’une colonne nom, type de données, précision, échelle et possibilité de valeur null), lors de la mêmes **SQLColAttribute** retourne un seul élément d’information demandé par l’application. Toutefois, **SQLColAttribute** peut retourner une sélection plus riche de métadonnées, notamment le respect de la casse d’une colonne, affiche la taille, les mises à jour et les possibilités de recherche.  

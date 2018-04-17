@@ -1,15 +1,16 @@
 ---
-title: "Types de données de fichier texte | Documents Microsoft"
-ms.custom: 
+title: Types de données de fichier texte | Documents Microsoft
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - text file driver [ODBC], data types
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - text file data types [ODBC]
 - Jet-based ODBC drivers [ODBC], text file driver
 ms.assetid: e113112e-ae42-469e-8e4b-a365a10d9071
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ad5f3d62138693caae19e51a80b1dd5a49d4072a
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: c946e2d253ae80e0fe0ccbb97dba5994c9c1d386
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="text-file-data-types"></a>Types de données de fichier texte
 Le tableau suivant montre comment les types de données texte sont mappées aux types de données ODBC SQL. Notez que pas tous les types de données SQL ODBC sont prises en charge par le pilote ODBC texte.  
@@ -45,7 +46,7 @@ Le tableau suivant montre comment les types de données texte sont mappées aux 
   
  Le tableau suivant présente des limitations sur les types de données de texte.  
   
-|Type de données|Description|  
+|Type de données| Description|  
 |---------------|-----------------|  
 |CHAR|Création d’une colonne de type CHAR de zéro ou de longueur non spécifiée retourne en fait une colonne de bits de 255.<br /><br /> Dans les fichiers délimités, une colonne de type CHAR peut ou ne peut pas avoir de délimiteurs guillemets au début et à la fin ; dans les fichiers de longueur fixe, les guillemets doubles ne sont pas utilisés comme séparateurs.|  
 |DATETIME|MM-DD-YY (par exemple, 17-01-92)<br /><br /> MMM JJ-AA (par exemple, janvier-17-92)<br /><br /> JJ-MMM-AA (par exemple, 17-Jan-92)<br /><br /> AAAA-MM-JJ (par exemple, 1992-01-17)<br /><br /> AAAA-MMM-JJ (par exemple, janvier 1992-17)<br /><br /> Séparateurs de date mixtes ne sont pas autorisés dans une table.<br /><br /> Le texte ISAM met en forme un champ de date/heure dans le format États-Unis ou européenne, selon le paramètre International dans le panneau de configuration Windows.|  

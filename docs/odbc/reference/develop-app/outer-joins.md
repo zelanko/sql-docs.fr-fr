@@ -1,39 +1,40 @@
 ---
 title: Jointures externes | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - outer join escape sequences [ODBC]
 - escape sequences [ODBC], outer join
 ms.assetid: be1a0203-5da9-4871-9566-4bd3fbc0895c
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f217b7392b4db968e612f58b264e17f921a40aae
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: a350621a056226653a2f9906dbf3931dfdfccec6
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="outer-joins"></a>Jointures externes
 ODBC prend en charge le SQL-92 de gauche, syntaxe de jointure externe complète et à droite. Est de la séquence d’échappement pour les jointures externes  
   
- **{JO** *jointure externe***}**  
+ **{JO** *externe-jointure ***}**  
   
  où *jointure externe* est  
   
- *référence de table* {**gauche &#124; DROITE &#124; Une jointure externe complète}** {*référence de table* &#124; *jointure externe*} **ON** *condition de recherche*  
+ *référence de table* {**gauche &#124; droite &#124; complète} jointure externe** {*référence de table* &#124; *jointure externe*} **ON**  *condition de recherche*  
   
  *référence de table* spécifie un nom de table, et *condition de recherche* spécifie la condition de jointure entre la *références de table*.  
   

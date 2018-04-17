@@ -1,30 +1,31 @@
 ---
 title: Transactions ODBC | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - transactions [ODBC], about transactions
 - transactions [ODBC]
 ms.assetid: b4ca861a-c164-4e87-8672-d5de15e3823c
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 943c1240a9a9ad80c5787597f01917c517966005
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: fa56e9d1827b5a4335afb94fc8e69085e662009d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="transactions-odbc"></a>Transactions ODBC
 A *transaction* est une unité de travail qui s’agit d’une opération atomique unique ; autrement dit, l’opération réussit ou échoue dans sa globalité. Par exemple, considérez le transfert d’argent d’un compte bancaire vers un autre. Cela implique deux étapes : retrait de l’argent à partir du premier compte et il dépôt dans la seconde. Il est important que les deux étapes réussissent ; Il n’est pas acceptable pour une seule étape réussisse, l’autre échec. Une base de données qui prend en charge des transactions est en mesure de garantir cela.  

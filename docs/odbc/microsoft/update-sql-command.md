@@ -2,7 +2,7 @@
 title: Commande de mise à jour - SQL | Documents Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -18,13 +18,13 @@ ms.assetid: ff1e0331-c060-4304-b280-039725b45f63
 caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6fb2e4d3e3010eaba53b36de383c3365d82db289
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: c8c1189955ee62fd14484816358feffc38e002c5
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="update---sql-command"></a>Commande de mise à jour - SQL
 Met à jour des enregistrements dans une table avec les nouvelles valeurs.  
@@ -50,12 +50,12 @@ SET Column_Name1 = eExpression1
  Définissez *Column_Name1*= *eExpression1*[, *Column_Name2*= *eExpression2*  
  Spécifie les colonnes qui sont mises à jour et leurs nouvelles valeurs. Si vous omettez la clause WHERE, chaque ligne dans la colonne est mise à jour avec la même valeur.  
   
- OÙ *FilterCondition1*[AND &#124; OU *FilterCondition2*...]  
+ OÙ *FilterCondition1*[AND &#124; ou *FilterCondition2*...]  
  Spécifie les enregistrements sont mis à jour avec de nouvelles valeurs.  
   
  *FilterCondition* spécifie les critères que les enregistrements doivent respecter pour être mis à jour avec de nouvelles valeurs. Vous pouvez inclure autant de conditions de filtre que vous le souhaitez, qui les connectent avec AND ou opérateur OR. Vous pouvez également utiliser l’opérateur NOT pour inverser la valeur d’une expression logique, ou vous pouvez utiliser **vide**() pour rechercher un champ vide.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Mise à jour - SQL peut mettre à jour uniquement les enregistrements dans une table unique.  
   
  Contrairement à remplacer, mise à jour - SQL utilise le verrouillage lors de la mise à jour de plusieurs enregistrements dans les tables ouvert pour l’accès partagé. Cela réduit la contention enregistrement dans les situations multi-utilisateur, mais peut réduire les performances. Pour optimiser les performances, ouvrez la table d’exclusive utilisez ou **généalogique**() pour verrouiller la table.  

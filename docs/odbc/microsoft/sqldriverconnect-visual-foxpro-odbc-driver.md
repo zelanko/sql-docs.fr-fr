@@ -2,7 +2,7 @@
 title: SQLDriverConnect (le pilote ODBC Visual FoxPro) | Documents Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 67961f2d5b02bf203e67c82ed1406739aba914a1
-ms.sourcegitcommit: 8f1d1363e18e0c32ff250617ab6cb2da2147bf8e
+ms.openlocfilehash: f463f7c1c71ef120c7fb5446e3edd1f77c791137
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqldriverconnect-visual-foxpro-odbc-driver"></a>SQLDriverConnect (le pilote ODBC Visual FoxPro)
 > [!NOTE]  
@@ -50,7 +50,7 @@ ms.lasthandoff: 04/03/2018
 | Description||  
 |Exclusive|« Oui » ou « Non »|  
 |SourceDB|Un chemin d’accès complet d’un répertoire contenant zéro ou plusieurs [libre tables](../../odbc/microsoft/visual-foxpro-terminology.md), ou le nom de fichier et le chemin absolu pour un [base de données](../../odbc/microsoft/visual-foxpro-terminology.md).|  
-|SourceType|"DBC" or "DBF"|  
+|SourceType|« DBC » ou « DBF »|  
 |Version||  
   
  Si le nom de source de données n’est pas spécifié, le Gestionnaire de pilote invite l’utilisateur pour obtenir les informations (selon le paramètre de la *fDriverCompletion* argument), puis continue. Si plus d’informations est nécessaire, le pilote ODBC Visual FoxPro affiche la boîte de dialogue invite de commandes.  

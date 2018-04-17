@@ -1,23 +1,17 @@
 ---
 title: Apprentissage et R Services (de-de base de données) de l’ordinateur SQL Server | Documents Microsoft
-ms.date: 03/16/2018
-ms.reviewer: ''
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: r
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.author: heidist
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
+ms.topic: conceptual
 author: HeidiSteen
+ms.author: heidist
 manager: cgronlun
-ms.workload: Active
-ms.openlocfilehash: a610ff9393f502070cca28af84418b20c90e13cc
-ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
+ms.openlocfilehash: 24ef28cd5bfb8e09e3f0ac7dbfe46b5838ce029c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sql-server-machine-learning-and-r-services-in-database"></a>Apprentissage et R Services (de-de base de données) de l’ordinateur SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -106,7 +100,7 @@ En règle générale, les chercheurs de données à l’aide de R ont des probl�
 
 + **revoscalepy**. Cette bibliothèque Python, disponible dans SQL Server 2017, implémente les fonctions les plus populaires dans RevoScaleR, telles que les contextes de calcul à distance et de nombreux algorithmes qui prennent en charge de traitement distribué.
 
-**Resources**
+**Ressources**
 
 + [Étude de cas sur les performances](../../advanced-analytics/r/performance-case-study-r-services.md)
 + [R et optimisation des données](../../advanced-analytics/r/r-and-data-optimization-r-services.md)
@@ -127,7 +121,7 @@ Pour tirer parti de la gestion des ressources et les fonctionnalités de sécuri
 + Configuration de la sécurité et en verrouillant les packages utilisés par une tâche particulière
 + L’activation de la gouvernance de ressources (nécessite l’édition Enterprise)
 
-**Resources**
+**Ressources**
 
 + [Gouvernance des ressources pour R](resource-governance-for-r-services.md)
 + [Gestion des packages R pour SQL Server](r-package-management-for-sql-server-r-services.md)

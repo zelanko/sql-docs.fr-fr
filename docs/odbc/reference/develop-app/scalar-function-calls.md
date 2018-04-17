@@ -2,7 +2,7 @@
 title: Appels de fonction scalaire | Documents Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -18,13 +18,13 @@ ms.assetid: 10cb4dcf-4cd8-4a56-8725-d080bd3ffe47
 caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4e69cc7382c73aaedda31a902cc8ed8daff5cff8
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 45ba78e4a7533691c6346dad131b9c3e3fefee73
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="scalar-function-calls"></a>Appels de fonction scalaire
 Fonctions scalaires retournent une valeur pour chaque ligne. Par exemple, la fonction scalaire de valeur absolue prend une colonne numérique en tant qu’argument et retourne la valeur absolue de chaque valeur dans la colonne. Est de la séquence d’échappement pour appeler une fonction scalaire  
@@ -49,7 +49,7 @@ SELECT {fn SUBSTRING(Name, 1, CHARINDEX(',', Name) – 1)} FROM Customers
   
  Pour une interopérabilité maximale, les applications doivent utiliser le **convertir** fonction scalaire pour vous assurer que la sortie d’une fonction scalaire est le type requis. Le **convertir** fonction convertit les données à partir d’un type de données SQL pour le type de données SQL spécifié. La syntaxe de la **convertir** fonction  
   
- **CONVERTIR (** *value_exp* **,** *data_type***)**  
+ **CONVERTIR (** *value_exp* **,** *data_type ***)**  
   
  où *value_exp* est un nom de colonne, le résultat d’une autre fonction scalaire ou une valeur littérale, et *data_type* est un mot clé qui correspond à la **#define** nom qui est utilisé par un identificateur de type de données SQL, tel que défini dans [annexe d : les Types de données](../../../odbc/reference/appendixes/appendix-d-data-types.md). Par exemple, l’instruction SQL suivante utilise la **convertir** (fonction) pour vous assurer que la sortie de la **CURDATE** fonction est une date, au lieu d’un horodateur ou des caractères de données :  
   

@@ -2,7 +2,7 @@
 title: Fonction SQLConfigDataSource | Documents Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: f8d6e342-c010-434e-b1cd-f5371fb50a14
 caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6678a9b2fd25a1c639d03753f7e89a47d287adf2
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 1f2c33bc5c946331057486719750086a1f962924
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlconfigdatasource-function"></a>Fonction SQLConfigDataSource
 **Mise en conformité**  
@@ -86,7 +86,7 @@ BOOL SQLConfigDataSource(
 ## <a name="diagnostics"></a>Diagnostics  
  Lorsque **SQLConfigDataSource** renvoie la valeur FALSE, associé à un  *\*pfErrorCode* valeur peut être obtenue en appelant **SQLInstallerError**. Le tableau suivant répertorie les  *\*pfErrorCode* les valeurs qui peuvent être retournées par **SQLInstallerError** et explique chacune d’elles dans le contexte de cette fonction.  
   
-|*\*pfErrorCode*|Error|Description|  
+|*\*pfErrorCode*|Erreur| Description|  
 |---------------------|-----------|-----------------|  
 |ODBC_ERROR_GENERAL_ERR|Erreur du programme d’installation générales|Une erreur s’est produite pour lequel aucune erreur d’installation spécifique s’est produite.|  
 |ODBC_ERROR_INVALID_HWND|Handle de fenêtre non valide|Le *hwndParent* argument était non valide ou NULL.|  
@@ -102,7 +102,7 @@ BOOL SQLConfigDataSource(
   
  **SQLConfigDataSource** renvoie la valeur FALSE s’il est impossible de trouver ou de charger la DLL d’installation ou si l’utilisateur annule la boîte de dialogue. Sinon, elle retourne l’état reçue **ConfigDSN**.  
   
- **SQLConfigDataSource** mappe le DSN système *fréquents*s pour la source de données utilisateur *fréquents*s (ODBC_ADD_SYS_DSN à ODBC_ADD_DSN), ODBC_CONFIG_SYS_DSN à ODBC_CONFIG_DSN et ODBC_REMOVE_SYS_DSN à ODBC_REMOVE_DSN. Pour distinguer les utilisateurs et les sources de données système, **SQLConfigDataSource** définit le programme d’installation en mode de configuration selon le tableau suivant. Avant de retourner, **SQLConfigDataSource** BOTHDSN rétablit le mode de configuration. **ConfigDSN** (implémenté par les pilotes) doit appeler **SQLWriteDSNToIni** et **SQLWritePrivateProfileString** pour prendre en charge un DSN système. Pour plus d’informations, consultez [ConfigDSN fonction](../../../odbc/reference/syntax/configdsn-function.md).  
+ **SQLConfigDataSource** mappe le DSN système *fréquents*s pour la source de données utilisateur *fréquents*s (ODBC_ADD_SYS_DSN à ODBC_ADD_DSN, ODBC_CONFIG_SYS_DSN ODBC_CONFIG_DSN et ODBC_REMOVE_SYS_ DSN à ODBC_REMOVE_DSN). Pour distinguer les utilisateurs et les sources de données système, **SQLConfigDataSource** définit le programme d’installation en mode de configuration selon le tableau suivant. Avant de retourner, **SQLConfigDataSource** BOTHDSN rétablit le mode de configuration. **ConfigDSN** (implémenté par les pilotes) doit appeler **SQLWriteDSNToIni** et **SQLWritePrivateProfileString** pour prendre en charge un DSN système. Pour plus d’informations, consultez [ConfigDSN fonction](../../../odbc/reference/syntax/configdsn-function.md).  
   
 |*fréquents*|Mode de configuration|  
 |----------------|------------------------|  

@@ -1,15 +1,16 @@
 ---
-title: "Conversions de types de données | Documents Microsoft"
-ms.custom: 
+title: Conversions de types de données | Documents Microsoft
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - data types [ODBC], conversions
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - converting data types [ODBC]
 - C data types [ODBC], conversions
 ms.assetid: d311fe1c-d882-4136-9fa5-220a4121e04c
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 78edde90cc7103f87039bc1a357ea1d0357366a6
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 2af1af29f9fa9f4d43b5b56e9dfe55c8c67fcea8
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="data-type-conversions"></a>Conversions de types de données
 Données qui peuvent être converties à partir d’un type à un autre à un des quatre fois : lorsque données sont transférées de la variable d’une application vers un autre C à C, lorsque les données dans une variable d’application sont envoyées à un paramètre d’instruction C en SQL, lorsque les données dans une colonne de jeu de résultats sont retournées dans une variable d’application (SQL vers C), et lorsque les données sont transférées à partir de la source de données d’une colonne à un autre SQL (SQL).  

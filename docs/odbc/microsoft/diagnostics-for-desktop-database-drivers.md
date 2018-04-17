@@ -1,15 +1,16 @@
 ---
-title: "Pilotes de base de données de diagnostic pour Desktop | Documents Microsoft"
-ms.custom: 
+title: Pilotes de base de données de diagnostic pour Desktop | Documents Microsoft
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Jet-based ODBC drivers [ODBC], diagnostic information
@@ -17,16 +18,16 @@ helpviewer_keywords:
 - ODBC desktop database drivers [ODBC], diagnostic information
 - diagnostic information [ODBC], desktop database drivers
 ms.assetid: 1c3740eb-62c6-4009-b4b2-570fcf5661e4
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5440d7cb38dfeef678a9b665397b789bf506be72
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 2a3120fd230d15a8a940a6e631275e41bb79ed50
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="diagnostics-for-desktop-database-drivers"></a>Tests de diagnostic pour les pilotes de la base de données de bureau
 Toutes les erreurs et avertissements pas vérifiées ou partiellement vérifiée par le Gestionnaire de pilotes sont gérés par le pilote. Le pilote mappe également natif erreurs ou les erreurs retournées par la source de données à SQLSTATE. Chaque fonction répertoriée dans le *de référence du programmeur ODBC* contient une section « Diagnostics » qui spécifie les conditions et les messages.  

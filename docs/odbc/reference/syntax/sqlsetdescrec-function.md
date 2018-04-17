@@ -2,7 +2,7 @@
 title: SQLSetDescRec, fonction | Documents Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: bf55256c-7eb7-4e3f-97ef-b0fee09ba829
 caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c817bad04757820b7c8ee83905fbc0fad08b4e26
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: f3830cb70bee0abf557882b55af2b4787e9f3280
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlsetdescrec-function"></a>SQLSetDescRec, fonction
 **Mise en conformité**  
@@ -67,7 +67,7 @@ SQLRETURN SQLSetDescRec(
  *Type*  
  [Entrée] La valeur à laquelle définir le champ SQL_DESC_TYPE pour l’enregistrement de descripteur.  
   
- *Sous-type*  
+ *SubType*  
  [Entrée] Pour les enregistrements dont le type est SQL_DATETIME ou SQL_INTERVAL, il s’agit de la valeur à laquelle définir le champ de valeur SQL_DESC_DATETIME_INTERVAL_CODE.  
   
  *Longueur*  
@@ -96,7 +96,7 @@ SQLRETURN SQLSetDescRec(
 ## <a name="diagnostics"></a>Diagnostics  
  Lorsque **SQLSetDescRec** retourne SQL_ERROR ou SQL_SUCCESS_WITH_INFO, une valeur SQLSTATE associée peut être obtenu en appelant **SQLGetDiagRec** avec un *HandleType* de SQL_HANDLE_DESC et un *gérer* de *DescriptorHandle*. Le tableau suivant répertorie les valeurs SQLSTATE généralement retournées par **SQLSetDescRec** et explique chacune d’elles dans le contexte de cette fonction ; la notation « (DM) » précède les descriptions de SQLSTATE retournée par le Gestionnaire de pilotes. Le code de retour associé à chaque valeur SQLSTATE est SQL_ERROR, sauf indication contraire.  
   
-|SQLSTATE|Error|Description|  
+|SQLSTATE|Erreur| Description|  
 |--------------|-----------|-----------------|  
 |01000|Avertissement général|Message d’information de spécifiques au pilote. (La fonction retourne SQL_SUCCESS_WITH_INFO).|  
 |07009|Index de descripteur non valide|Le *RecNumber* argument a été défini sur 0 et le *DescriptorHandle* auquel un descripteur IPD.<br /><br /> Le *RecNumber* argument était inférieure à 0.<br /><br /> Le *RecNumber* argument était supérieur au nombre maximal de colonnes ou des paramètres de la source de données peut prendre en charge, et le *DescriptorHandle* argument était un APD, IPD ou ARD.<br /><br /> Le *RecNumber* argument était égal à 0 et le *DescriptorHandle* argument auquel une APD implicitement alloué. (Cette erreur ne se produit pas avec un descripteur de l’application attribuée explicitement, car il n’est pas connu qu’un descripteur de l’application explicitement alloué soit APD ou ARD jusqu'à ce que l’exécution.)|  

@@ -1,15 +1,16 @@
 ---
-title: "Types de données Microsoft Excel | Documents Microsoft"
-ms.custom: 
+title: Types de données Microsoft Excel | Documents Microsoft
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - data types [ODBC], Excel driver
@@ -19,16 +20,16 @@ helpviewer_keywords:
 - ODBC desktop database drivers [ODBC], Excel driver
 - Excel driver [ODBC], data types
 ms.assetid: 7b44c8e5-0bc3-4912-8a5d-56f4d5562fe6
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 5b18d5969cc2586fec45320af4a754a12276663d
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 6abe6c885c29eef089e64d6f28a750d1498ecdfe
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="microsoft-excel-data-types"></a>Types de données Microsoft Excel
 Le tableau suivant montre comment les types de données du pilote Microsoft Excel sont mappées aux types de données ODBC SQL. Le pilote Microsoft Excel affecte ces types de données aux colonnes de tables Microsoft Excel basés sur les données dans la colonne.  
@@ -46,7 +47,7 @@ Le tableau suivant montre comment les types de données du pilote Microsoft Exce
   
  Le tableau suivant présente des limitations sur les types de données Microsoft Excel.  
   
-|Type de données|Description|  
+|Type de données| Description|  
 |---------------|-----------------|  
 |Données chiffrées|Le pilote Microsoft Excel ne peut pas lire les données chiffrées.|  
 |Chaînes d’erreur|Le pilote Microsoft Excel ne peut pas retourner une chaîne de caractères pour les valeurs d’erreur Microsoft Excel (# n/a !, #VALUE !, #REF !, #DIV/0 !, #NUM !, #NAME ? et #NULL !), mais retourne une valeur NULL à la place.|  

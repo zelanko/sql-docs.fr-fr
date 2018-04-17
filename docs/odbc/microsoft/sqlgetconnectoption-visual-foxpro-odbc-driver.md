@@ -2,7 +2,7 @@
 title: SQLGetConnectOption (le pilote ODBC Visual FoxPro) | Documents Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -18,13 +18,13 @@ ms.assetid: 5703eb39-f3b2-4f3a-8676-a5625ae29a41
 caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 41fdb44589b0a788591b6d31ee8ff03de965cd37
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 3d00ae529d6dacc001b29cc97da8fcf1d987caaa
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlgetconnectoption-visual-foxpro-odbc-driver"></a>SQLGetConnectOption (le pilote ODBC Visual FoxPro)
 > [!NOTE]  
@@ -38,7 +38,7 @@ ms.lasthandoff: 12/21/2017
   
  Le tableau suivant décrit uniquement les arguments avec un comportement spécifique à l’implémentation du pilote ODBC Visual FoxPro de **SQLGetConnectOption**.  
   
-|*fOption*|Notes |  
+|*fOption*|Notes|  
 |---------------|-------------|  
 |SQL_AUTOCOMMIT|Si vous choisissez SQL_AUTOCOMMIT_OFF, votre application doit explicitement valider ou annuler les transactions avec [SQLTransact](../../odbc/microsoft/sqltransact-visual-foxpro-odbc-driver.md); le pilote ODBC Visual FoxPro ne valide pas automatiquement une instruction transactable à l’achèvement. Le pilote commence une transaction si l’instruction est transactable.|  
 |SQL_CURRENT_QUALIFIER|Peut être un nom qualifié complet de la base de données (fichier .dbc) ou le chemin d’accès complet à un répertoire qui contient zéro ou plusieurs tables (fichiers .dbf).|  

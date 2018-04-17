@@ -1,15 +1,16 @@
 ---
-title: "Fonctions d’heure et Date (le pilote ODBC Visual FoxPro) | Documents Microsoft"
-ms.custom: 
+title: Fonctions d’heure et Date (le pilote ODBC Visual FoxPro) | Documents Microsoft
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - ODBC date functions [ODBC]
@@ -19,16 +20,16 @@ helpviewer_keywords:
 - ODBC time and date functions [ODBC]
 - date functions [ODBC]
 ms.assetid: c1fb63b7-af50-45d6-8dec-ae6ea7119527
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 95545399054e35ee9377f2be5ad2569205c64e8b
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 5ba661df5c57c9611164889126eab9572743c8e4
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="time-and-date-functions-visual-foxpro-odbc-driver"></a>Fonctions d’heure et Date (le pilote ODBC Visual FoxPro)
 Le tableau suivant répertorie les fonctions de date et heure ODBC pris en charge par le pilote ODBC Visual FoxPro ; lors de la grammaire Visual FoxPro pour la même fonction diffère de la syntaxe ODBC, le Visual FoxPro équivalent est répertorié.  
@@ -66,7 +67,7 @@ Le tableau suivant répertorie les fonctions de date et heure ODBC pris en charg
 --(*vendor(Microsoft),product(ODBC) ts ''value' *)—  
 ```  
   
- Dans cette syntaxe, **d** indique que *valeur* est une date dans le *aaaa-mm-jj* format et **ts** indique que *valeur* est un horodateur dans le *aaaa-mm-jj hh : mm :*[. *f...* ] format. La syntaxe raccourcie pour les données de date et l’horodatage est la suivante :  
+ Dans cette syntaxe, **d** indique que *valeur* est une date dans le *aaaa-mm-jj* format et **ts** indique que *valeur* est un horodateur dans le *aaaa-mm-jj hh : mm :*[.*f...*] format. La syntaxe raccourcie pour les données de date et l’horodatage est la suivante :  
   
 ```  
 {d 'value'}  
@@ -85,5 +86,5 @@ UPDATE alltypes
    WHERE KEY=111  
 ```  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Pour plus d’informations sur les séquences d’échappement, consultez [les séquences d’échappement dans ODBC](../../odbc/reference/develop-app/escape-sequences-in-odbc.md) dans les *de référence du programmeur ODBC*.

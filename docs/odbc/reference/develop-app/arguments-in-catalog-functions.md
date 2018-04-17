@@ -1,15 +1,16 @@
 ---
 title: Arguments de fonctions de catalogue | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - arguments in catalog functions [ODBC]
@@ -17,16 +18,16 @@ helpviewer_keywords:
 - arguments in catalog functions [ODBC], about arguments
 - functions [ODBC], catalog functions
 ms.assetid: f5e0abec-8f24-42e0-b94f-16dd1f2004fd
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bb973a525b5a978d16566edc02fb4d4651e11406
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: f46b286a929d261b1cf1c608fefccd5f266b92b2
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="arguments-in-catalog-functions"></a>Arguments de fonctions de catalogue
 Toutes les fonctions de catalogue acceptent des arguments avec lequel une application peut restreindre l’étendue des données retournées. Par exemple, les premier et deuxième appels à **SQLTables** dans le code suivant retourne un jeu de résultats contenant plus d’informations sur toutes les tables, tandis que le troisième appel retourne des informations sur la table Orders :  
@@ -43,7 +44,7 @@ SQLTables(hstmt3, NULL, 0, NULL, 0, "Orders", SQL_NTS, NULL, 0);
 |--------------|--------------|---------------------------------------------------------------|--------------------------------------------------------------|  
 |**SQLColumnPrivileges**|*Nom de catalogue* *SchemaName* *TableName* *nom de colonne*|OA OA OA PV|ID ID ID ID|  
 |**SQLColumns**|*Nom de catalogue* *SchemaName* *TableName* *nom de colonne*|OA PV PV PV|ID ID ID ID|  
-|**SQLForeignKeys**|*PKCatalogName* *PKSchemaName* *PKTableName* *FKCatalogName* *FKSchemaName* *FKTableName*|OA OA OA OA OA OA|ID ID ID ID ID ID|  
+|**SQLForeignKeys**|*PKCatalogName* *PKSchemaName* *PKTableName* *FKCatalogName* *FKSchemaName*  *FKTableName*|OA OA OA OA OA OA|ID ID ID ID ID ID|  
 |**SQLPrimaryKeys**|*Nom de catalogue* *SchemaName* *TableName*|OA OA OA|ID DE L’ID ID|  
 |**SQLProcedureColumns**|*Nom de catalogue* *SchemaName* *ProcName* *nom de colonne*|OA PV PV PV|ID ID ID ID|  
 |**SQLProcedures**|*Nom de catalogue* *SchemaName* *ProcName*|OA PV PV|ID DE L’ID ID|  

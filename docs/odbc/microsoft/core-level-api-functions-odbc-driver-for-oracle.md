@@ -1,15 +1,16 @@
 ---
-title: "Fonctions d’API de niveau (le pilote ODBC pour Oracle) de base | Documents Microsoft"
-ms.custom: 
+title: Fonctions d’API de niveau (le pilote ODBC pour Oracle) de base | Documents Microsoft
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - functions [ODBC], ODBC driver for Oracle
@@ -17,16 +18,16 @@ helpviewer_keywords:
 - core level API functions [ODBC]
 - ODBC core level API functions [ODBC]
 ms.assetid: 8596eed7-bda6-4cac-ae1f-efde1aab785f
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 118ea5f86f89e73eadd5c0bef79770b438d53f9b
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 3b04102f149c96792f769a84535783c235832e2b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="core-level-api-functions-odbc-driver-for-oracle"></a>Fonctions d’API de niveau principales (le pilote ODBC pour Oracle)
 > [!IMPORTANT]  
@@ -43,7 +44,7 @@ ms.lasthandoff: 12/21/2017
 |**SQLCancel**|Annule le traitement sur un descripteur d’instruction, hstmt. Dans certains cas, Oracle n’autorise pas l’annulation d’une instruction en cours d’exécution. Cela signifie qu’une instruction en cours d’exécution continue jusqu'à ce que Oracle termine le processus, le moment où les résultats des instructions sont annulées par le pilote ODBC pour Oracle.|  
 |**SQLColAttributes**|Retourne les informations de descripteur pour une colonne dans un jeu de résultats. Informations de descripteur sont retournées comme une chaîne de caractères, une valeur de descripteur dépendant 32 bits ou une valeur entière.|  
 |**SQLConnect**|Se connecte à une source de données. Pour utiliser l’authentification du système d’exploitation Oracle, spécifiez « / » comme le *szUID* paramètre et « » en tant que le *szAuthStr* paramètre.|  
-|**SQLDescribeCol**|Retourne le nom de type, précision, échelle et possibilité de valeur null de la colonne de résultat donné. **Remarque :****SQLDescribeCol** signale les colonnes calculées en tant que SQL_VARCHAR.|  
+|**SQLDescribeCol**|Retourne le nom de type, précision, échelle et possibilité de valeur null de la colonne de résultat donné. **Remarque :****SQLDescribeCol** signale les colonnes calculées en tant que SQL_VARCHAR.  |  
 |**SQLDisconnect**|Ferme une connexion. Si le regroupement de connexions est activé pour un environnement partagé, et une application appelle **SQLDisconnect** sur une connexion dans cet environnement, la connexion est retournée au pool de connexions et est toujours disponible pour d’autres composants en utilisant le même environnement partagé.|  
 |**SQLError**|Retourne des informations d’erreur ou d’état sur la dernière erreur. Le pilote gère une pile ou une liste d’erreurs qui peuvent être retournées pour le *hstmt*, *pas*, et *henv* arguments, selon la manière dont l’appel à **SQLError** est effectuée. La file d’attente de l’erreur est vidé après chaque instruction. Généralement, récupère un message d’erreur Oracle et est vide.|  
 |**SQLExecDirect**|Exécute une instruction SQL de nouvelle, non préparée. Le pilote utilise les valeurs actuelles des variables de marqueur de paramètre, si tous les paramètres existent dans l’instruction. Si votre table, vue ou les noms de champs contiennent des espaces, placez les noms à l’arrière devis marques. Par exemple, si votre base de données contient une table nommée *My Table* et le champ *mon champ*, placez chaque élément de l’identificateur comme suit :<br /><br /> Sélectionnez \`ma Table\`. \`Mon Field1\`, \`Ma Table\`.\` Mon Field2\` FROM \`ma Table »|  

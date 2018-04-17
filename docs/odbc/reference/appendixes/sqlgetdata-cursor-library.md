@@ -2,7 +2,7 @@
 title: SQLGetData (bibliothèque de curseurs) | Documents Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -18,13 +18,13 @@ ms.assetid: ff40c9c0-b847-4426-a099-1bff47e6e872
 caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: afb65143aa9da062ff405c01e4a7e438bcb42ef8
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 6b9f9f3217e455d523cbf0740531b5a3c88d1720
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlgetdata-cursor-library"></a>SQLGetData (bibliothèque de curseurs)
 > [!IMPORTANT]  
@@ -43,6 +43,6 @@ ms.lasthandoff: 12/21/2017
   
 -   **SQLGetData** ne peut pas être appelée pour les curseurs avant uniquement.  
   
--   **SQLGetData** peut être appelée uniquement lorsque les conditions suivantes sont remplies : un **sélectionnez** instruction générée le jeu de résultats ; le **sélectionnez** instruction ne contenait pas d’une jointure, une **UNION** clause, ou un **GROUP BY** clause ; et toutes les colonnes qui a utilisé un alias ou une expression dans la liste select n’étaient pas liés avec **SQLBindCol**.  
+-   **SQLGetData** peut être appelée uniquement lorsque les conditions suivantes sont remplies : un **sélectionnez** instruction générée le jeu de résultats ; le **sélectionnez** instruction ne contenait pas d’une jointure, une  **UNION** clause, ou un **GROUP BY** clause ; et toutes les colonnes qui a utilisé un alias ou une expression dans la liste select n’étaient pas liés avec **SQLBindCol**.  
   
 -   Si le pilote prend en charge qu’une seule instruction active, la bibliothèque de curseurs extrait le reste du résultat défini avant l’exécution du **sélectionnez** instruction et en appelant **SQLGetData**.

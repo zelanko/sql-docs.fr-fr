@@ -1,15 +1,16 @@
 ---
-title: "Connexion à l’aide de Sources de données fichier | Documents Microsoft"
-ms.custom: 
+title: Connexion à l’aide de Sources de données fichier | Documents Microsoft
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - connecting to driver [ODBC], file data sources
@@ -19,16 +20,16 @@ helpviewer_keywords:
 - connecting to data source [ODBC], file data sources
 - file data sources [ODBC]
 ms.assetid: 3003f8c2-8be6-41cc-8d9c-612e9bd0f3ae
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: d64a08cc8e748efe984c8aa5acd7deac743c2ed3
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 70b0f5dd8c8ff133d1eb1b1a35c5ce24a7cc7ad5
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="connecting-using-file-data-sources"></a>Connexion à l’aide de Sources de données fichier
 Les informations de connexion pour une source de données de fichier sont stockées dans un fichier .dsn. Par conséquent, la chaîne de connexion peut être utilisée à plusieurs reprises à un seul utilisateur ou partagée par plusieurs utilisateurs, s’ils ont le pilote approprié installé. Le fichier contient un nom de pilote (ou un autre nom de source de données dans le cas d’une source de données fichier partageable) et le cas échéant, la chaîne de connexion qui peut être utilisée par **SQLDriverConnect**. Le Gestionnaire de pilotes génère la chaîne de connexion pour l’appel à **SQLDriverConnect** à partir de mots clés dans le fichier .dsn.  
@@ -60,4 +61,4 @@ DSN = MyDataSource
  La chaîne de connexion utilisée pour une source de données de fichier est l’union entre les mots clés spécifiés dans le fichier .dsn et les mots clés spécifiés dans la chaîne de connexion dans l’appel à **SQLDriverConnect**. Si les mots clés dans le fichier .dsn sont en conflit avec les mots clés dans la chaîne de connexion, le Gestionnaire de pilotes décide dont la valeur de mot clé doit être utilisée. Pour plus d’informations, consultez [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [http://support.Microsoft.com/kb/165866](http://support.microsoft.com/kb/165866)
+ [http://support.microsoft.com/kb/165866](http://support.microsoft.com/kb/165866)

@@ -1,30 +1,31 @@
 ---
 title: Grammaire minimale SQL | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - minimum SQL syntax supported [ODBC]
 - ODBC drivers [ODBC], minimum SQL syntax supported
 ms.assetid: 4f36d785-104f-4fec-93be-f201203bc7c7
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 130f434bfb0b41829d2c49782454fcf888af1e27
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 3186090eb2c912f9d0e683210b00674d65f6e6e2
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sql-minimum-grammar"></a>Grammaire minimale SQL
 Cette section décrit la syntaxe SQL minimale un pilote ODBC doit prendre en charge. La syntaxe décrite dans cette section est un sous-ensemble de la syntaxe au niveau d’entrée de SQL-92.  
@@ -67,15 +68,15 @@ Cette section décrit la syntaxe SQL minimale un pilote ODBC doit prendre en cha
   
  *instruction* :: = *-table-instruction create*  
   
- &#124; *recherche-instruction de suppression*  
+ &#124;*recherche-instruction de suppression*  
   
- &#124; *instruction drop-table*  
+ &#124;*instruction drop-table*  
   
- &#124; *-instruction insert*  
+ &#124;*-instruction insert*  
   
- &#124; *instruction select*  
+ &#124;*instruction select*  
   
- &#124; *recherche-instruction de mise à jour*  
+ &#124;*recherche-instruction de mise à jour*  
   
  *recherche-instruction de mise à jour*  
   

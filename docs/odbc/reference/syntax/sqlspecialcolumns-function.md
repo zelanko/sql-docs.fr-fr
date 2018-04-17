@@ -2,7 +2,7 @@
 title: Fonction SQLSpecialColumns | Documents Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: bb2d9f21-bda0-4e50-a8be-f710db660034
 caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 80afdd42ee17c77a44035854207812ecac3afb46
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: fe2c39ee38986004947e52bb580a8f8864bb2abd
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlspecialcolumns-function"></a>Fonction SQLSpecialColumns
 **Mise en conformité**  
@@ -80,7 +80,7 @@ SQLRETURN SQLSpecialColumns(
  *NameLength1*  
  [Entrée] Longueur en caractères de **CatalogName*.  
   
- *SchemaName*  
+ *schemaName*  
  [Entrée] Nom de schéma pour la table. Si un pilote prend en charge les schémas pour certaines tables, mais pas pour d’autres, telles que lorsque le pilote récupère les données à partir de différents SGBD, une chaîne vide (« ») indique les tables qui n’ont pas de schémas. *SchemaName* ne peut pas contenir un modèle de recherche de chaîne.  
   
  Si l’attribut d’instruction SQL_ATTR_METADATA_ID a la valeur SQL_TRUE, *SchemaName* est traité comme un identificateur et ses cas n’est pas significatif. S’il s’agit de SQL_FALSE, *SchemaName* est un argument ordinaire ; elle est traitée littéralement, et ses cas est significatif.  
@@ -96,7 +96,7 @@ SQLRETURN SQLSpecialColumns(
  *NameLength3*  
  [Entrée] Longueur en caractères de **TableName*.  
   
- *Étendue*  
+ *Portée*  
  [Entrée] Étendue minimale requise de rowid. Rowid retourné peut être étendue supérieure. Doit prendre l'une des valeurs suivantes :  
   
  SQL_SCOPE_CURROW : Le ROWID n’est garanti valide uniquement quand positionné sur cette ligne. Une version ultérieure sélectionnez de nouveau à l’aide du rowid ne peut pas retourner une ligne si la ligne a été mis à jour ou supprimée par une autre transaction.  
@@ -118,7 +118,7 @@ SQLRETURN SQLSpecialColumns(
 ## <a name="diagnostics"></a>Diagnostics  
  Lorsque **SQLSpecialColumns** retourne SQL_ERROR ou SQL_SUCCESS_WITH_INFO, une valeur SQLSTATE associée peut être obtenu en appelant **SQLGetDiagRec** avec un *HandleType* de SQL_HANDLE_STMT et un *gérer* de *au paramètre StatementHandle*. Le tableau suivant répertorie les valeurs SQLSTATE généralement retournées par **SQLSpecialColumns** et explique chacune d’elles dans le contexte de cette fonction ; la notation « (DM) » précède les descriptions de SQLSTATE retournée par le Gestionnaire de pilotes. Le code de retour associé à chaque valeur SQLSTATE est SQL_ERROR, sauf indication contraire.  
   
-|SQLSTATE|Error|Description|  
+|SQLSTATE|Erreur| Description|  
 |--------------|-----------|-----------------|  
 |01000|Avertissement général|Message d’information de spécifiques au pilote. (La fonction retourne SQL_SUCCESS_WITH_INFO).|  
 |08S01|Échec de lien de communication|Échec de la liaison de communication entre le pilote et la source de données à laquelle le pilote a été connecté avant le traitement de la fonction a été exécutée.|  
@@ -144,7 +144,7 @@ SQLRETURN SQLSpecialColumns(
 |IM018|**SQLCompleteAsync** n’a pas été appelé pour terminer l’opération asynchrone précédente sur ce handle.|Si l’appel de fonction précédente sur le handle retourne SQL_STILL_EXECUTING et si le mode de notification est activé, **SQLCompleteAsync** doit être appelée sur le handle de post-traitement et terminer l’opération.|  
   
 ## <a name="comments"></a>Commentaires  
- Lorsque le *IdentifierType* argument est SQL_BEST_ROWID, **SQLSpecialColumns** retourne l’ou les colonnes qui identifient de façon unique chaque ligne de la table. Ces colonnes peuvent toujours être utilisées dans un *liste de sélection* ou **où** clause. **SQLColumns**, qui est utilisé pour retourner une variété d’informations sur les colonnes d’une table, ne retournent pas nécessairement les colonnes qui identifient de façon unique chaque ligne, ou les colonnes qui sont automatiquement mis à jour lorsqu’une valeur dans la ligne est mise à jour par une transaction. Par exemple, **SQLColumns** peut ne pas retourner Oracle pseudo-colonne ROWID. C’est pourquoi **SQLSpecialColumns** est utilisée pour retourner ces colonnes. Pour plus d’informations, consultez [utilise des données du catalogue](../../../odbc/reference/develop-app/uses-of-catalog-data.md).  
+ Lorsque le *IdentifierType* argument est SQL_BEST_ROWID, **SQLSpecialColumns** retourne l’ou les colonnes qui identifient de façon unique chaque ligne de la table. Ces colonnes peuvent toujours être utilisées dans un *liste de sélection* ou **où** clause. **SQLColumns**, qui est utilisé pour retourner une variété d’informations sur les colonnes d’une table, ne retournent pas nécessairement les colonnes qui identifient de façon unique chaque ligne, ou les colonnes qui sont automatiquement mis à jour lorsqu’une valeur dans la ligne est mise à jour par un transaction. Par exemple, **SQLColumns** peut ne pas retourner Oracle pseudo-colonne ROWID. C’est pourquoi **SQLSpecialColumns** est utilisée pour retourner ces colonnes. Pour plus d’informations, consultez [utilise des données du catalogue](../../../odbc/reference/develop-app/uses-of-catalog-data.md).  
   
 > [!NOTE]  
 >  Pour plus d’informations sur l’utilisation générale, les arguments et les données retournées des fonctions de catalogue ODBC, consultez [fonctions de catalogue](../../../odbc/reference/develop-app/catalog-functions.md).  
@@ -171,7 +171,7 @@ SQLRETURN SQLSpecialColumns(
   
 |Nom de colonne|Numéro de colonne|Type de données|Commentaires|  
 |-----------------|-------------------|---------------|--------------|  
-|PORTÉE (ODBC VERSION 1.0)| 1|Smallint|Étendue réelle de rowid. Contient l’une des valeurs suivantes :<br /><br /> SQL_SCOPE_CURROW SQL_SCOPE_TRANSACTION SQL_SCOPE_SESSION<br /><br /> NULL est retourné lorsque *IdentifierType* est SQL_ROWVER. Pour obtenir une description de chaque valeur, consultez la description de *étendue* dans « Syntaxe », plus haut dans cette section.|  
+|PORTÉE (ODBC VERSION 1.0)|1|Smallint|Étendue réelle de rowid. Contient l’une des valeurs suivantes :<br /><br /> SQL_SCOPE_CURROW SQL_SCOPE_TRANSACTION SQL_SCOPE_SESSION<br /><br /> NULL est retourné lorsque *IdentifierType* est SQL_ROWVER. Pour obtenir une description de chaque valeur, consultez la description de *étendue* dans « Syntaxe », plus haut dans cette section.|  
 |COLUMN_NAME (ODBC VERSION 1.0)|2|Varchar non NULL|Nom de colonne. Le pilote retourne une chaîne vide pour une colonne qui n’a pas de nom.|  
 |DATA_TYPE (ODBC 1.0)|3|Smallint non NULL|Type de données SQL. Cela peut être un type de données SQL ODBC ou un type de données SQL spécifique au pilote. Pour obtenir la liste des types de données ODBC SQL valides, consultez [les Types de données SQL](../../../odbc/reference/appendixes/sql-data-types.md). Pour plus d’informations sur les types de données spécifiques au pilote SQL, consultez la documentation du pilote.|  
 |TYPE_NAME (ODBC VERSION 1.0)|4|Varchar non NULL|Nom du type de données de dépend de la source de données ; par exemple, « CHAR », « VARCHAR », « MONEY », « LONG VARBINARY » ou « () CHAR pour les données BIT ».|  

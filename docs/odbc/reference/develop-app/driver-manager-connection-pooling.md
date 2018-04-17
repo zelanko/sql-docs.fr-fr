@@ -1,15 +1,16 @@
 ---
 title: Regroupement de connexions du Gestionnaire de pilotes | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - connection pooling [ODBC]
@@ -17,16 +18,16 @@ helpviewer_keywords:
 - connecting to driver [ODBC], connection pooling
 - connecting to data source [ODBC], connection pooling
 ms.assetid: ee95ffdb-5aa1-49a3-beb2-7695b27c3df9
-caps.latest.revision: "32"
+caps.latest.revision: 32
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d2883c374768723eeff4100113873130eeea6da7
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: c18e4e09d620221541bea32dc80391a7e4b5ddd9
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="driver-manager-connection-pooling"></a>Regroupement de connexions du Gestionnaire de pilotes
 Le regroupement de connexions permet à une application d’utiliser une connexion à partir d’un pool de connexions qui ne doivent pas être rétablie pour chaque utilisation. Une fois qu’une connexion a été créée et placée dans un pool, une application peut réutiliser cette connexion sans effectuer le processus de connexion complète.  
@@ -36,7 +37,7 @@ Le regroupement de connexions permet à une application d’utiliser une connexi
  En plus des gains de performances, l’architecture de regroupement de connexions permet à un environnement et les connexions associées à être utilisé par plusieurs composants dans un processus unique. Cela signifie que les composants autonomes dans le même processus peuvent interagir entre eux sans connaître les unes des autres. Une connexion dans un pool de connexions peut être utilisée à plusieurs reprises par plusieurs composants.  
   
 > [!NOTE]  
->  Le regroupement de connexions peut être utilisé par une application ODBC présentant ODBC 2. *x* comportement, tant que l’application peut appeler *SQLSetEnvAttr*. Lorsque vous utilisez le regroupement de connexions, l’application ne doit pas exécuter les instructions SQL qui modifient la base de données ou le contexte de la base de données, telles que la modification du \< *base de données**nom*>, ce qui modifie le catalogue utilisé par une source de données.  
+>  Le regroupement de connexions peut être utilisé par une application ODBC présentant ODBC 2. *x* comportement, tant que l’application peut appeler *SQLSetEnvAttr*. Lorsque vous utilisez le regroupement de connexions, l’application ne doit pas exécuter les instructions SQL qui modifient la base de données ou le contexte de la base de données, telles que la modification du \< *base de données ** nom*>, ce qui modifie le catalogue utilisé par un source de données.  
   
  Un pilote ODBC doit être complètement thread-safe, et les connexions ne doivent pas d’affinité de thread pour prendre en charge le regroupement de connexions. Cela signifie que le pilote est en mesure de gérer un appel sur n’importe quel thread à tout moment et est en mesure de se connecter sur un thread, pour utiliser la connexion sur un autre thread et pour déconnecter sur un troisième thread.  
   
@@ -48,7 +49,7 @@ Le regroupement de connexions permet à une application d’utiliser une connexi
   
  Un pilote doit implémenter cette option efficacement ou nuira aux performances de regroupement de connexion. Plus précisément, un appel pour obtenir cet attribut de connexion ne devrait pas provoquer un aller-retour au serveur. Au lieu de cela, un pilote doit simplement retourner le dernier état connu de la connexion. La connexion est inactive si le dernier voyage sur le serveur a échoué et pas morts si le dernier voyage a réussi.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Si une connexion a été perdue (signalées via SQL_ATTR_CONNECTION_DEAD), le Gestionnaire de pilotes ODBC détruira cette connexion en appelant SQLDisconnect dans le pilote. Nouvelles demandes de connexion ne peuvent pas rechercher une connexion utilisable dans le pool. Finit par le Gestionnaire de pilotes peut être une nouvelle connexion, en supposant que le pool est vide.  
   
  Pour utiliser un pool de connexions, une application effectue les étapes suivantes :  

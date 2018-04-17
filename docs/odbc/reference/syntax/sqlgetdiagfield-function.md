@@ -2,7 +2,7 @@
 title: Fonction SQLGetDiagField | Documents Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: 1dbc4398-97a8-4585-bb77-1f7ea75e24c4
 caps.latest.revision: 26
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c202841d54e01758312c4e8388a78e583de9058c
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: f337b8455ba860caaf5e4a5b1bd4be1d0ee86c37
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlgetdiagfield-function"></a>Fonction SQLGetDiagField
 **Mise en conformité**  
@@ -224,7 +224,7 @@ n-définition *|« CRÉER UN DOMAINE »|SQL_DIAG_CREATE_DOMAIN|
 |*définition de la traduction*|« CRÉATION DE TRADUCTION »|SQL_DIAG_CREATE_TRANSLATION|  
 |*positionné-instruction de mise à jour*|« MISE À JOUR DYNAMIQUE DE CURSEUR »|SQL_DIAG_DYNAMIC_UPDATE_CURSOR|  
 |*recherche-instruction de mise à jour*|« MISE À JOUR DE WHERE »|SQL_DIAG_UPDATE_WHERE|  
-|Unknown|*chaîne vide*|SQL_DIAG_UNKNOWN_STATEMENT|  
+|Unknown|*Chaîne vide*|SQL_DIAG_UNKNOWN_STATEMENT|  
   
 ## <a name="sequence-of-status-records"></a>Séquence d’enregistrements d’état  
  Enregistrements d’état sont placés dans une séquence en fonction du numéro de ligne et le type de diagnostic. Le Gestionnaire de pilotes détermine l’ordre final dans lequel retourner les enregistrements d’état qu’elle génère. Le pilote détermine l’ordre final dans lequel retourner les enregistrements d’état qu’elle génère.  

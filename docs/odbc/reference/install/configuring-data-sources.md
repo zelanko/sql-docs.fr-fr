@@ -2,7 +2,7 @@
 title: Configuration des Sources de données | Documents Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -18,13 +18,13 @@ ms.assetid: f11985c2-c054-4ab4-840e-aca4c585c9d8
 caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e7e8c96fe9ce093f9a5d3d0f09b0dc6a35568d9e
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: bf8e6b63991fa3ca850d0bda4793959548e5f691
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="configuring-data-sources"></a>Configuration des Sources de données
 Informations sur les sources de données sont stockées dans le Registre système. Les utilisateurs modifier les informations de source de données via un programme d’administration. Cela peut être l’administrateur ODBC, l’appareil ODBC le panneau de configuration ou un programme d’administration écrit par un développeur d’application ou le pilote.  

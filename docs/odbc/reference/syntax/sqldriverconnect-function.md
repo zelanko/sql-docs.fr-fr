@@ -2,7 +2,7 @@
 title: Fonction SQLDriverConnect | Documents Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: e299be1d-5c74-4ede-b6a3-430eb189134f
 caps.latest.revision: 50
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 4600a76e303930e941c737313f1db4850f8d5e43
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: ab13d8ad4f2bf16cd7b7c0dc8d352363bb89a5b7
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqldriverconnect-function"></a>Fonction SQLDriverConnect
 **Mise en conformité**  
@@ -104,12 +104,12 @@ SQLRETURN SQLDriverConnect(
 ## <a name="diagnostics"></a>Diagnostics  
  Lorsque **SQLDriverConnect** retourne SQL_ERROR ou SQL_SUCCESS_WITH_INFO, une valeur SQLSTATE associée peut être obtenue en appelant **SQLGetDiagRec** avec un *fHandleType* de SQL_HANDLE_DBC et un *hHandle* de *handle de connexion*. Le tableau suivant répertorie les valeurs SQLSTATE généralement retournées par **SQLDriverConnect** et explique chacune d’elles dans le contexte de cette fonction ; la notation « (DM) » précède les descriptions de SQLSTATE retournée par le Gestionnaire de pilotes. Le code de retour associé à chaque valeur SQLSTATE est SQL_ERROR, sauf indication contraire.  
   
-|SQLSTATE|Error|Description|  
+|SQLSTATE|Erreur| Description|  
 |--------------|-----------|-----------------|  
 |01000|Avertissement général|Message d’information de spécifiques au pilote. (La fonction retourne SQL_SUCCESS_WITH_INFO).|  
 |01004|Données de type chaîne, droite tronquées|La mémoire tampon \* *OutConnectionString* n’est pas suffisamment grande pour retourner la chaîne de connexion entière, afin de la chaîne de connexion a été tronquée. La longueur de la chaîne de connexion non tronqué est retournée dans **StringLength2Ptr*. (La fonction retourne SQL_SUCCESS_WITH_INFO).|  
 |01 S 00|Attribut de chaîne de connexion non valide|Un mot clé d’attribut non valide a été spécifié dans la chaîne de connexion (*InConnectionString*), mais le pilote n’a pas pu vous connecter à la source de données. (La fonction retourne SQL_SUCCESS_WITH_INFO).|  
-|01 S 02|Valeur de l’option modifiée|Le pilote ne prenait pas en charge la valeur spécifiée vers lequel pointée le *ValuePtr* argument dans **SQLSetConnectAttr** et une valeur similaire. (La fonction retourne SQL_SUCCESS_WITH_INFO).|  
+|01S02|Valeur de l’option modifiée|Le pilote ne prenait pas en charge la valeur spécifiée vers lequel pointée le *ValuePtr* argument dans **SQLSetConnectAttr** et une valeur similaire. (La fonction retourne SQL_SUCCESS_WITH_INFO).|  
 |01S08|Erreur pendant l’enregistrement de la source de données fichier|La chaîne dans  *\*InConnectionString* contenait un **FILEDSN** (mot clé), mais le fichier .dsn n’ont pas été enregistrées. (La fonction retourne SQL_SUCCESS_WITH_INFO).|  
 |01S09|Mot clé non valide|(DM) dans la chaîne de  *\*InConnectionString* contenus un **SAVEFILE** (mot clé), mais pas un **pilote** ou un **FILEDSN** (mot clé). (La fonction retourne SQL_SUCCESS_WITH_INFO).|  
 |08001|Impossible d’établir la connexion du client|Le pilote n’a pas pu établir une connexion avec la source de données.|  
@@ -153,11 +153,11 @@ SQLRETURN SQLDriverConnect(
   
  *chaîne de connexion* :: = *une chaîne vide*[ ;] &#124; *attribut*[ ;] &#124; *attribut*; *chaîne de connexion*  
   
- *une chaîne vide* :: =*attribut* :: = *mot clé de l’attribut*=*attribut-valeur* &#124; PILOTE = [{}]*attribut-valeur*[}]  
+ *une chaîne vide* :: =*attribut* :: = *mot clé de l’attribut*=*attribut-valeur* &#124; pilote = [{}] *valeur d’attribut*[}]  
   
- *mot clé de l’attribut* :: = source de données &#124; UID &#124; PWD &#124; *-défini-attribut-mot clé driver*  
+ *mot clé de l’attribut* :: = DSN &#124; UID &#124; PWD &#124; *-défini-attribut-mot clé driver*  
   
- *valeur d’attribut* :: = *chaîne de caractères*  
+ *attribute-value* ::= *character-string*  
   
  *défini-attribut-mot clé Driver* :: = *identificateur*  
   
@@ -175,11 +175,11 @@ SQLRETURN SQLDriverConnect(
   
 |Mot clé|Description de valeur d’attribut|  
 |-------------|---------------------------------|  
-|**SOURCE DE DONNÉES**|Nom d’une source de données, tel que retourné par **SQLDataSources** ou la boîte de dialogue de sources de données de **SQLDriverConnect**.|  
+|**DSN**|Nom d’une source de données, tel que retourné par **SQLDataSources** ou la boîte de dialogue de sources de données de **SQLDriverConnect**.|  
 |**FILEDSN**|Nom de fichier .dsn à partir de laquelle une chaîne de connexion doit être générée pour la source de données. Ces sources de données sont appelées des sources de données fichier.|  
 |**PILOTE**|Description du pilote tel que retourné par le **SQLDrivers** (fonction). Par exemple, Rdb ou SQL Server.|  
 |**UID**|Un ID utilisateur.|  
-|**MOT DE PASSE**|Le mot de passe correspondant à l’ID d’utilisateur, ou une chaîne vide s’il n’existe aucun mot de passe pour l’ID d’utilisateur (PWD = ;).|  
+|**PWD**|Le mot de passe correspondant à l’ID d’utilisateur, ou une chaîne vide s’il n’existe aucun mot de passe pour l’ID d’utilisateur (PWD = ;).|  
 |**SAVEFILE**|Le nom de fichier d’un fichier .dsn dans lequel les valeurs d’attribut de mots clés utilisés dans l’établissement de la connexion à présente, réussite doivent être enregistrés.|  
   
  Pour plus d’informations sur la façon dont une application choisit un pilote ou une source de données, consultez [choisir une Source de données ou le pilote](../../../odbc/reference/develop-app/choosing-a-data-source-or-driver.md).  
