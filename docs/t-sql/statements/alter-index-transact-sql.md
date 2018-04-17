@@ -1,16 +1,16 @@
 ---
 title: ALTER INDEX (Transact-SQL) | Microsoft Docs
-ms.custom: 
-ms.date: 11/24/2017
+ms.custom: ''
+ms.date: 04/03/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: tsql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ALTER INDEX
@@ -48,16 +48,16 @@ helpviewer_keywords:
 - index rebuild [SQL Server]
 - index reorganize [SQL Server]
 ms.assetid: b796c829-ef3a-405c-a784-48286d4fb2b9
-caps.latest.revision: 
+caps.latest.revision: 222
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: a5bf734d607c6954c1652df9b9814a31b2224740
-ms.sourcegitcommit: 0a9c29c7576765f3b5774b2e087852af42ef4c2d
+ms.openlocfilehash: ed76514d94521f8efefdbcc0dda4f51aaeb871fd
+ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="alter-index-transact-sql"></a>ALTER INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -182,7 +182,7 @@ ALTER INDEX { index_name | ALL }
 ```    
 ## <a name="arguments"></a>Arguments  
  *index_name*  
- Nom de l'index. Les noms d'index doivent être uniques dans une table ou une vue, mais ne doivent pas être nécessairement uniques dans une base de données. Les noms d’index doivent se conformer aux règles des [identificateurs](../../relational-databases/databases/database-identifiers.md).  
+ Nom de l'index. Les noms d'index doivent être uniques dans une table ou une vue, mais ne doivent pas être nécessairement uniques dans une base de données. Les noms d’index doivent se conformer aux règles régissant les [identificateurs](../../relational-databases/databases/database-identifiers.md).  
   
  ALL  
  Indique tous les index associés à une table ou à une vue indépendamment du type d'index. L'ajout de l'option ALL provoque un échec de l'instruction si des index se trouvent dans un groupe de fichiers hors connexion ou en lecture seule ou si l'opération spécifiée n'est pas autorisée sur certains types d'index. Le tableau suivant répertorie les types d'opérations ainsi que les types d'index non autorisés.  
@@ -200,7 +200,7 @@ ALTER INDEX { index_name | ALL }
 > [!WARNING]
 >  Pour plus d’informations sur les opérations d’index pouvant être effectuées en ligne, consultez [Instructions pour les opérations d’index en ligne](../../relational-databases/indexes/guidelines-for-online-index-operations.md).
 
- Si ALL est spécifié avec PARTITION = *partition_number*, tous les index doivent être alignés. Ceci revient à les partitionner d'après des fonctions de partition équivalentes. L’utilisation de ALL avec PARTITION entraîne la reconstruction ou la réorganisation de toutes les partitions d’index qui ont le même *partition_number*. Pour plus d'informations sur les index partitionnés, consultez [Tables et index partitionnés](../../relational-databases/partitions/partitioned-tables-and-indexes.md).  
+ Si ALL est spécifié avec PARTITION = *partition_number*, tous les index doivent être alignés. Ceci revient à les partitionner d'après des fonctions de partition équivalentes. L’utilisation de ALL avec PARTITION entraîne la reconstruction ou la réorganisation de toutes les partitions d’index qui ont le même *partition_number*. Pour plus d'informations sur les index partitionnés, consultez [Partitioned Tables and Indexes](../../relational-databases/partitions/partitioned-tables-and-indexes.md).  
   
  *database_name*  
  Nom de la base de données.  
@@ -216,7 +216,7 @@ ALTER INDEX { index_name | ALL }
  REBUILD [ WITH **(**\<rebuild_index_option> [ **,**... *n*]**)** ]  
  Index à reconstruire d'après les mêmes colonnes, le même type d'index, le même attribut assurant son unicité ainsi que le même ordre de tri. Cette clause équivaut à [DBCC DBREINDEX](../../t-sql/database-console-commands/dbcc-dbreindex-transact-sql.md). REBUILD permet de réactiver un index désactivé. La reconstruction portant sur un index cluster n'entraîne pas celle des index non cluster associés, à moins que le mot clé ALL ne soit spécifié. Si les options d’index ne sont pas spécifiées, leurs valeurs existantes stockées dans [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md) sont celles qui sont appliquées. Si une valeur d’option d’index n’est pas stockée dans **sys.indexes**, celle indiquée par défaut dans la définition de l’argument de l’option s’applique.  
   
- Si l'option ALL est indiquée et que la table sous-jacente correspond à un segment de mémoire, l'opération de reconstruction n'a alors aucun effet sur la table. Tous les index non-cluster associés à la table sont donc reconstruits.  
+ Si l'option ALL est indiquée et que la table sous-jacente correspond à un segment de mémoire, l'opération de reconstruction n'a alors aucun effet sur la table. Tous les index non cluster associés à la table sont donc reconstruits.  
   
  L'opération de reconstruction peut être consignée dans un journal au minimum si le mode de récupération de base de données est défini sur Utilisant les journaux de transactions ou sur Simple.  
   
@@ -355,7 +355,7 @@ FILLFACTOR = *fillfactor*
  Indique si les résultats du tri doivent être stockés dans **tempdb**. La valeur par défaut est OFF.  
   
  ON  
- Les résultats de tri intermédiaires utilisés pour créer l’index sont stockés dans **tempdb**. Si **tempdb** ne se trouve pas sur le même groupe de disques que la base de données utilisateur, le temps nécessaire à la création de l’index peut être plus court. Toutefois, une plus grande quantité d'espace disque est alors utilisée lors de la création de l'index.  
+ Les résultats intermédiaires du tri utilisés pour créer l’index sont stockés dans **tempdb**. Si **tempdb** ne se trouve pas sur le même groupe de disques que la base de données utilisateur, le temps nécessaire à la création de l’index peut être plus court. Toutefois, une plus grande quantité d'espace disque est alors utilisée lors de la création de l'index.  
   
  OFF  
  Les résultats de tri intermédiaires sont stockés dans la même base de données que l'index.  
@@ -394,7 +394,7 @@ FILLFACTOR = *fillfactor*
 > Si vous désactivez le recalcul automatique des statistiques de distribution, il se peut que cela empêche l'optimiseur de requête de choisir les plans d'exécution optimaux pour les requêtes impliquant la table.  
   
  STATISTICS_INCREMENTAL = { ON | **OFF** }  
- Si la valeur **ON** est définie, les statistiques sont créées par partition. Si la valeur est **OFF**, l'arborescence des statistiques est supprimée et [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] recalcule les statistiques. La valeur par défaut est **OFF**.  
+ Si la valeur **ON** est définie, les statistiques sont créées par partition. Si la valeur est **OFF**, l’arborescence des statistiques est supprimée et [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] recalcule les statistiques. La valeur par défaut est **OFF**.  
   
  Si les statistiques par partition ne sont pas prises en charge, l'option est ignorée et un avertissement est généré. Les statistiques incrémentielles ne sont pas prises en charge pour les types de statistiques suivants :  
   
@@ -428,9 +428,9 @@ FILLFACTOR = *fillfactor*
   
 -   Index XML  
   
--   Index portant sur des tables temporaires locales  
+-   index portant sur des tables temporaires locales ;  
   
--   Partie d’un index partitionné (un index partitionné entier peut être reconstruit en ligne).  
+-   sous-ensemble d'un index partitionné (un index partitionné entier peut être reconstruit en ligne).  
 
 -  [!INCLUDE[ssSDS](../../includes/sssds-md.md)] avant la version V12 et SQL Server avant [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ne prennent pas en charge l’option `ONLINE` pour les opérations de construction et de reconstruction d’index cluster quand la table de base contient des colonnes **varchar(max)** ou **varbinary(max)**.
 
@@ -486,7 +486,7 @@ ALLOW_PAGE_LOCKS **=** { **ON** | OFF }
 > [!IMPORTANT]
 >  Bien que l'option MAXDOP soit prise en charge syntaxiquement pour tous les index XML, pour un index spatial ou un XML primaire, ALTER INDEX utilise actuellement seulement un processeur unique.  
   
- *max_degree_of_parallelism* peut avoir les valeurs suivantes :  
+ *max_degree_of_parallelism* peut avoir la valeur :  
   
   1  
  Supprime la création de plans parallèles.  
@@ -742,7 +742,7 @@ Les fonctionnalités suivantes sont désactivées pour les opérations de recons
 > [!NOTE]
 > La commande DDL s’exécute tant qu’elle n’a pas fini, n’est pas mise en pause ou n’a pas échoué. Si la commande est en pause, une erreur s’affiche indiquant que l’opération a été mise en pause et que la création d’index n’a pas été effectuée. Vous trouverez plus d’informations sur l’état d’index actuel dans [sys.index_resumable_operations](../../relational-databases/system-catalog-views/sys-index-resumable-operations.md). Comme avant, en cas de défaillance, une erreur s’affiche également. 
 
- Pour plus d’informations, consultez [Exécuter des opérations d’index en ligne](../../relational-databases/indexes/perform-index-operations-online.md).  
+ Pour plus d'informations, consultez [Perform Index Operations Online](../../relational-databases/indexes/perform-index-operations-online.md).  
   
  ### <a name="waitatlowpriority-with-online-index-operations"></a>WAIT_AT_LOW_PRIORITY avec les opérations d’index en ligne  
   
@@ -757,7 +757,7 @@ Les fonctionnalités suivantes sont désactivées pour les opérations de recons
   
  Pour modifier des options spécifiques à un index spatial, telles que BOUNDING_BOX ou GRID, vous pouvez utiliser une instruction CREATE SPATIAL INDEX qui spécifie DROP_EXISTING = ON ou supprimer l'index spatial et en créer un nouveau. Pour obtenir un exemple, consultez [CREATE SPATIAL INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-spatial-index-transact-sql.md).  
   
-## <a name="data-compression"></a>Compression des données  
+## <a name="data-compression"></a>Data Compression  
  Pour plus d’informations sur la compression de données, consultez [Compression des données](../../relational-databases/data-compression/data-compression.md).  
   
  Pour évaluer dans quelle mesure le changement de compression PAGE et ROW affecte une table, un index ou une partition, utilisez la procédure stockée [sp_estimate_data_compression_savings](../../relational-databases/system-stored-procedures/sp-estimate-data-compression-savings-transact-sql.md).  
@@ -765,8 +765,8 @@ Les fonctionnalités suivantes sont désactivées pour les opérations de recons
 Les restrictions suivantes s'appliquent aux index partitionnés :  
   
 -   Quand vous utilisez `ALTER INDEX ALL ...`, vous ne pouvez pas changer le paramètre de compression d'une partition unique si la table contient des index non alignés.  
--   La syntaxe ALTER INDEX \<index> ... REBUILD PARTITION ... reconstruit la partition spécifiée de l'index.  
--   La syntaxe ALTER INDEX \<index> ... REBUILD WITH ... reconstruit toutes les partitions de l'index.  
+-   La syntaxe ALTER INDEX \<index> ... REBUILD PARTITION ... reconstruit la partition spécifiée de l'index.  
+-   La syntaxe ALTER INDEX \<index> ... REBUILD WITH ... reconstruit toutes les partitions de l'index.  
   
 ## <a name="statistics"></a>Statistiques  
  Lorsque vous exécutez **ALTER INDEX ALL...** sur une table, seules les statistiques associées aux index sont mises à jour. Les statistiques automatiques ou manuelles créées sur la table (au lieu d'un index) ne sont pas mises à jour.  
@@ -887,7 +887,7 @@ ALTER INDEX cci_FactInternetSales2 ON FactInternetSales2 REORGANIZE PARTITION = 
 ### <a name="c-compress-all-open-and-closed-delta-rowgroups-into-the-columnstore"></a>C. Compression de tous les rowgroups delta OPEN et CLOSED dans le columnstore  
  **S’applique à :** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (depuis [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]) et [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 
   
- La commande REORGANIZE WITH (COMPRESS_ALL_ROW_GROUPS = ON) compresse chaque rowgroup delta OPEN et CLOSED dans le columnstore en tant que rowgroup compressé. Cette opération vide les deltastores et force toutes les lignes à être compressées dans le columnstore. Elle est utile en particulier après l’exécution de nombreuses opérations d’insertion dans la mesure où ces opérations stockent les lignes dans un ou plusieurs deltastores.  
+ La commande REORGANIZE WITH (COMPRESS_ALL_ROW_GROUPS = ON) compresse chaque rowgroup delta OPEN et CLOSED dans le columnstore en tant que rowgroup compressé. Cette opération vide le deltastore et force la compression de toutes les lignes dans le columnstore. Elle est utile en particulier après l’exécution de nombreuses opérations d’insertion, dans la mesure où ces opérations stockent les lignes dans un ou plusieurs rowgroups delta.  
   
  REORGANIZE combine les rowgroups pour remplir les rowgroups avec un nombre maximal de lignes de \<= 1 024 576. Par conséquent, quand vous compressez tous les rowgroups OPEN et CLOSED, vous ne vous retrouvez pas avec un grand nombre de rowgroups compressés qui contiennent uniquement quelques lignes. Vous souhaitez que les rowgroups soient aussi remplis que possible pour réduire la taille compressée et améliorer les performances des requêtes.  
   

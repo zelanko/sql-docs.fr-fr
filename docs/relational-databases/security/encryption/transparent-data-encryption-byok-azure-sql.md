@@ -15,15 +15,14 @@ ms.custom: ''
 ms.component: security
 ms.workload: On Demand
 ms.tgt_pltfrm: ''
-ms.devlang: na
 ms.topic: article
 ms.date: 04/03/2018
 ms.author: aliceku
-ms.openlocfilehash: e39e6f8957c1fc2c4f50603af213055cde84d0b6
-ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
+ms.openlocfilehash: e8e5456b1c6e8ca160e677907a97976c8f2b0374
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/08/2018
 ---
 # <a name="transparent-data-encryption-with-bring-your-own-key-preview-support-for-azure-sql-database-and-data-warehouse"></a>Transparent Data Encryption avec prise en charge de la fonctionnalité BYOK (préversion) pour Azure SQL Database et Data Warehouse
 [!INCLUDE[appliesto-xx-asdb-asdw-xxx-md](../../../includes/appliesto-xx-asdb-asdw-xxx-md.md)]
@@ -60,7 +59,7 @@ Quand TDE est d’abord configuré pour utiliser un protecteur TDE dans Key Vaul
 ### <a name="general-guidelines"></a>Règles générales
 - Vérifiez qu’Azure Key Vault et Azure SQL Database sont dans le même locataire.  Les interactions entre coffre de clés et serveur qui sont dans des locataires différents **ne sont pas prises en charge**.
 - Décidez des abonnements qui vont être utilisés pour les ressources requises. Si par la suite vous déplacez le serveur parmi les abonnements, vous devrez réinstaller TDE avec des clés BYOK.
-- Lors de la configuration de TDE avec l’option BYOK, il est important de prendre en compte la charge placée sur le coffre de clés par les opérations répétées de type wrap/unwrap. Par exemple, étant donné que toutes les bases de données associées à un serveur logique utilisent le même protecteur TDE, un basculement de ce serveur déclenchera autant d’opérations de clé par rapport au coffre qu’il y a de bases de données sur le serveur. D’après notre expérience et les [limites de service de coffre de clés](https://docs.microsoft.com/en-us/azure/key-vault/key-vault-service-limits) documentées, nous vous recommandons d’associer au maximum 500 bases de données Standard ou 200 bases de données Premium avec un coffre de clés Azure dans un même abonnement, afin de garantir une disponibilité toujours aussi élevée lors de l’accès au protecteur TDE dans le coffre. 
+- Lors de la configuration de TDE avec l’option BYOK, il est important de prendre en compte la charge placée sur le coffre de clés par les opérations répétées de type wrap/unwrap. Par exemple, étant donné que toutes les bases de données associées à un serveur logique utilisent le même protecteur TDE, un basculement de ce serveur déclenchera autant d’opérations de clé par rapport au coffre qu’il y a de bases de données sur le serveur. D’après notre expérience et les [limites du service de coffre de clés](https://docs.microsoft.com/en-us/azure/key-vault/key-vault-service-limits) documentées, nous vous recommandons d’associer au maximum 500 bases de données Standard / à usage général ou 200 bases de données Premium / Critiques pour l’entreprise avec un coffre de clés Azure Key Vault dans un même abonnement, afin de garantir une disponibilité toujours aussi élevée lors de l’accès au protecteur TDE dans le coffre. 
 - Recommandé : Conservez une copie du protecteur TDE en local.  Pour ce faire, vous devez avoir un appareil HSM pour créer un protecteur TDE en local et un système de dépôt de clés pour stocker une copie locale du protecteur TDE.
 
 
@@ -102,12 +101,12 @@ Quand TDE est d’abord configuré pour utiliser un protecteur TDE dans Key Vaul
 
 ## <a name="high-availability-geo-replication-and-backup--restore"></a>Haute disponibilité, géoréplication et sauvegarde/restauration
 
-### <a name="high-availability-and-disaster-recovery"></a>Haute disponibilité et reprise d’activité après sinistre
+### <a name="high-availability-and-disaster-recovery"></a>Haute disponibilité et récupération d’urgence
 
 Le mode de configuration de la haute disponibilité avec Azure Key Vault dépend de la configuration de votre base de données et de votre serveur logique. Voici les configurations recommandées pour les deux cas distincts.  Le premier cas est un serveur logique ou une base de données autonome sans géoredondance configurée.  Le deuxième cas est une base de données ou un serveur logique configuré avec des groupes de basculement ou la géoredondance, où vous devez veiller à ce que chaque copie géoredondante ait un coffre de clés Azure local dans le groupe de basculement pour que les géobasculements fonctionnent. Dans le premier cas, si vous avez besoin d’une base de données et d’un serveur logique avec une haute disponibilité sans géoredondance configurée, il est vivement recommandé de configurer le serveur de sorte à utiliser deux coffres de clés distincts dans deux régions distinctes avec les mêmes éléments de clé.  Pour ce faire, vous pouvez créer un protecteur TDE avec le coffre de clés principal situé dans la même région que le serveur logique, puis cloner la clé dans un coffre de clés d’une autre région Azure pour que le serveur ait accès au second coffre de clés si jamais le coffre de clés principal tombe en panne alors que la base de données fonctionne. Utilisez l’applet de commande Backup-AzureKeyVaultKey pour récupérer la clé dans un format chiffré dans le coffre de clé principal, puis utilisez l’applet de commande Restore-AzureKeyVaultKey et spécifiez un coffre de clés dans la seconde région.
 
 
-![Serveur unique à haute disponibilité et aucune géoreprise d’activité après sinistre](./media/transparent-data-encryption-byok-azure-sql/SingleServer_HA_Config.PNG)
+![Serveur unique à haute disponibilité et aucune géorécupération d’urgence](./media/transparent-data-encryption-byok-azure-sql/SingleServer_HA_Config.PNG)
 
 ## <a name="how-to-configure-geo-dr-with-azure-key-vault"></a>Comment configurer la géoreprise d’activité avec Azure Key Vault
 
@@ -143,7 +142,7 @@ Les étapes de configuration décrites ci-dessous diffèrent selon que vous dém
 - Créez la base de données primaire. 
 - Suivez les [conseils sur la géoréplication active](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-geo-replication-overview) pour terminer le scénario. Cette étape crée la base de données secondaire.
 
-![Groupes de basculement et géoreprise d’activité après sinistre](./media/transparent-data-encryption-byok-azure-sql/Geo_DR_Config.PNG)
+![Groupes de basculement et géorécupération d’urgence](./media/transparent-data-encryption-byok-azure-sql/Geo_DR_Config.PNG)
 
 >[!NOTE]
 >Il est important de vérifier que les deux coffres de clés contiennent les mêmes protecteurs TDE avant d’établir le lien de géoréplication entre les bases de données.
@@ -158,7 +157,7 @@ Les étapes de configuration décrites ci-dessous diffèrent selon que vous dém
 - Ensuite, effectuez l’opération suivante sur le serveur SQL logique qui héberge la base de données primaire : 
    - Sélectionnez le même protecteur TDE que celui utilisé pour la base de données secondaire
    
-![Groupes de basculement et géoreprise d’activité après sinistre](./media/transparent-data-encryption-byok-azure-sql/geo_DR_ex_config.PNG)
+![Groupes de basculement et géorécupération d’urgence](./media/transparent-data-encryption-byok-azure-sql/geo_DR_ex_config.PNG)
 
 >[!NOTE]
 >Quand vous assignez le coffre de clés au serveur, vous devez commencer par le serveur secondaire.  Dans la deuxième étape, assignez le coffre de clés au serveur principal et mettez à jour le protecteur TDE. Le lien de géoreprise d’activité reste opérationnel, car à ce stade, le protecteur TDE utilisé par la base de données répliquée est disponible pour les deux serveurs.
