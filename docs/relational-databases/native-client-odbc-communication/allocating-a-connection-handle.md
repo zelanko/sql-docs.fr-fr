@@ -1,15 +1,15 @@
 ---
-title: "Allocation d’un descripteur de connexion | Documents Microsoft"
-ms.custom: 
+title: Allocation d’un descripteur de connexion | Documents Microsoft
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: native-client-odbc-communication
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - ODBC applications, passwords
@@ -22,16 +22,17 @@ helpviewer_keywords:
 - modifying passwords
 - SQLAllocHandle function
 ms.assetid: 471d8a31-199c-4f92-bb10-004fc7733b35
-caps.latest.revision: 
+caps.latest.revision: 32
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2046fc4df80ba780e7ab16948105ef0aebb1e84c
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: bf2fe53571bacec1da93110f9da4849dfe6cb904
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="allocating-a-connection-handle"></a>Allocation d'un handle de connexion
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -48,6 +49,6 @@ ms.lasthandoff: 01/25/2018
  Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pilote ODBC Native Client a un nombre d’attributs de connexion étendus qu’une application peut utiliser pour améliorer ses fonctionnalités. Certains de ces attributs contrôlent les mêmes options que celles qui peuvent être spécifiées dans les sources de données et qui sont utilisées pour remplacer n'importe quelle option définie dans une source de données. Par exemple, si une application utilise des identificateurs entre guillemets, elle peut attribuer à l'attribut SQL_COPT_SS_QUOTED_IDENT spécifique au pilote la valeur SQL_QI_ON pour faire en sorte que cette option soit toujours définie indépendamment du paramètre dans une source de données quelconque.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Communication avec SQL Server &#40; ODBC &#41;](../../relational-databases/native-client-odbc-communication/communicating-with-sql-server-odbc.md)  
+ [Communication avec SQL Server &#40;ODBC&#41;](../../relational-databases/native-client-odbc-communication/communicating-with-sql-server-odbc.md)  
   
   

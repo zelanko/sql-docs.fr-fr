@@ -1,16 +1,16 @@
 ---
-title: "Enregistrer le processus de génération (SQLXML 4.0) | Documents Microsoft"
-ms.custom: 
+title: Enregistrer le processus de génération (SQLXML 4.0) | Documents Microsoft
+ms.custom: ''
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: sqlxml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-xml
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - XML Bulk Load [SQLXML], record generation process
@@ -24,20 +24,21 @@ helpviewer_keywords:
 - leaving node scope [SQLXML]
 - schema mapping [SQLXML]
 ms.assetid: d8885bbe-6f15-4fb9-9684-ca7883cfe9ac
-caps.latest.revision: 
+caps.latest.revision: 24
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b7e494f0d849834bfe4434f42da1de8fddb9d10d
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: e72388a753b1003c259f20371b34ffb3c269a2e1
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="record-generation-process-sqlxml-40"></a>Processus de génération d'enregistrements (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-Le chargement en masse XML traite les données d'entrée XML et prépare des enregistrements pour les tables appropriées dans Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. La logique de la fonctionnalité de chargement en masse XML détermine quand générer un nouvel enregistrement, quelles valeurs d'attributs ou d'éléments enfants copier dans les champs de l'enregistrement et quand l'enregistrement est terminé et prêt à être envoyé à [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pour insertion.  
+  Le chargement en masse XML traite les données d'entrée XML et prépare des enregistrements pour les tables appropriées dans Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. La logique de la fonctionnalité de chargement en masse XML détermine quand générer un nouvel enregistrement, quelles valeurs d'attributs ou d'éléments enfants copier dans les champs de l'enregistrement et quand l'enregistrement est terminé et prêt à être envoyé à [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pour insertion.  
   
  Le chargement en masse XML ne charge pas toutes les données d'entrée XML dans la mémoire et ne produit pas de jeux d'enregistrements complets avant d'envoyer les données à [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Cela tient au fait que les données d'entrée XML peuvent correspondre à un document volumineux et que le chargement du document entier en mémoire peut s'avérer onéreux. À la place, le chargement en masse XML effectue les opérations suivantes :  
   
@@ -50,7 +51,7 @@ Le chargement en masse XML traite les données d'entrée XML et prépare des enr
  Le chargement en masse XML gère les annotations de schéma de mappage courantes, y compris les mappages de colonne et de table (spécifiés explicitement à l'aide d'annotations ou implicitement par le biais du mappage par défaut), ainsi que les relations de jointure.  
   
 > [!NOTE]  
->  Cette rubrique suppose que vous connaissez bien les schémas de mappage XDR ou XSD annotés. Pour plus d’informations sur les schémas, consultez [Introduction aux schémas de XSD annoté &#40; SQLXML 4.0 &#41; ](../../../relational-databases/sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md) ou [annoté des schémas XDR &#40; déconseillés dans SQLXML 4.0 &#41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/annotated-xdr-schemas-deprecated-in-sqlxml-4-0.md).  
+>  Cette rubrique suppose que vous connaissez bien les schémas de mappage XDR ou XSD annotés. Pour plus d’informations sur les schémas, consultez [Introduction aux schémas de XSD annoté &#40;SQLXML 4.0&#41; ](../../../relational-databases/sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md) ou [de schémas XDR annotés &#40;déconseillé dans SQLXML 4.0&#41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/annotated-xdr-schemas-deprecated-in-sqlxml-4-0.md).  
   
  Pour comprendre la génération d'enregistrements, vous devez comprendre les concepts suivants :  
   

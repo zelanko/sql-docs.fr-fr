@@ -1,16 +1,16 @@
 ---
-title: "XPath côté client et (SQLXML 4.0) de la mise en forme XML côté serveur | Documents Microsoft"
-ms.custom: 
+title: XPath côté client et (SQLXML 4.0) de la mise en forme XML côté serveur | Documents Microsoft
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: sqlxml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-xml
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - NESTED mode
@@ -21,20 +21,21 @@ helpviewer_keywords:
 - AUTO mode
 - client-side XPath
 ms.assetid: f807ab7a-c5f8-4e61-9b00-23aebfabc47e
-caps.latest.revision: 
+caps.latest.revision: 31
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 252164e0a5ce8b3eeae00549d36450acb1a7d44e
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 95088fe868d8e9e392613a147f61438e1818e643
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="client-side-vs-server-side-xml-formatting-sqlxml-40"></a>XPath côté client et Mise en forme XML côté serveur (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-Cette rubrique décrit les principales différences entre la mise en forme XML côté client et côté serveur dans SQLXML.  
+  Cette rubrique décrit les principales différences entre la mise en forme XML côté client et côté serveur dans SQLXML.  
   
 ## <a name="multiple-rowset-queries-not-supported-in-client-side-formatting"></a>Les requêtes générant plusieurs ensembles de lignes ne sont pas prises en charge dans la mise en forme côté client  
  Les requêtes qui génèrent plusieurs ensembles de lignes ne sont pas prises en charge lorsque vous utilisez la mise en forme XML côté client. Supposons par exemple que vous ayez un répertoire virtuel dans lequel une mise en forme côté client est spécifiée. Considérez cet exemple de modèle qui a deux instructions SELECT dans une  **\<SQL : >** bloc :  
@@ -221,8 +222,8 @@ CREATE VIEW ContactView AS (SELECT ContactID as CID,
 -   Lorsque vous spécifiez **client-side-xml = « 1 »** (true) dans un modèle, vous demandez la mise en forme de XML côté client. Dans ce cas, vous pouvez spécifier FOR XML NESTED. Si vous spécifiez FOR XML AUTO, la mise en forme XML se produit côté serveur bien que **client-side-xml = « 1 »** est spécifié dans le modèle.  
   
 ## <a name="see-also"></a>Voir aussi  
- [POUR les considérations de sécurité XML &#40; SQLXML 4.0 &#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/for-xml-security-considerations-sqlxml-4-0.md)   
- [La mise en forme XML côté client &#40; SQLXML 4.0 &#41;](../../../relational-databases/sqlxml/formatting/client-side-xml-formatting-sqlxml-4-0.md)   
- [La mise en forme XML côté serveur &#40; SQLXML 4.0 &#41;](../../../relational-databases/sqlxml/formatting/server-side-xml-formatting-sqlxml-4-0.md)  
+ [POUR des raisons de sécurité XML &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/for-xml-security-considerations-sqlxml-4-0.md)   
+ [La mise en forme XML côté client &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml/formatting/client-side-xml-formatting-sqlxml-4-0.md)   
+ [La mise en forme XML côté serveur &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml/formatting/server-side-xml-formatting-sqlxml-4-0.md)  
   
   

@@ -2,7 +2,7 @@
 title: SQLSetDescField, fonction | Documents Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: 8c544388-fe9d-4f94-a0ac-fa0b9c9c88a5
 caps.latest.revision: 28
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3e6a0ee843ce2b78ebc611fee30a5ee8e16fc7e1
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: ad3a900242068f8bcfb6f532b5e272cb2afb0ac5
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlsetdescfield-function"></a>SQLSetDescField, fonction
 **Mise en conformité**  
@@ -86,10 +86,10 @@ SQLRETURN SQLSetDescField(
 ## <a name="diagnostics"></a>Diagnostics  
  Lorsque **SQLSetDescField** retourne SQL_ERROR ou SQL_SUCCESS_WITH_INFO, une valeur SQLSTATE associée peut être obtenu en appelant **SQLGetDiagRec** avec un *HandleType* de SQL_HANDLE_DESC et un *gérer* de *DescriptorHandle*. Le tableau suivant répertorie les valeurs SQLSTATE généralement retournées par **SQLSetDescField** et explique chacune d’elles dans le contexte de cette fonction ; la notation « (DM) » précède les descriptions de SQLSTATE retournée par le Gestionnaire de pilotes. Le code de retour associé à chaque valeur SQLSTATE est SQL_ERROR, sauf indication contraire.  
   
-|SQLSTATE|Error|Description|  
+|SQLSTATE|Erreur| Description|  
 |--------------|-----------|-----------------|  
 |01000|Avertissement général|Message d’information de spécifiques au pilote. (La fonction retourne SQL_SUCCESS_WITH_INFO).|  
-|01 S 02|Valeur de l’option modifiée|Le pilote ne prenait pas en charge la valeur spécifiée dans  *\*ValuePtr* (si *ValuePtr* était un pointeur) ou la valeur *ValuePtr* (si *ValuePtr* a une valeur entière), ou  *\*ValuePtr* était non valide en raison de conditions de travail de mise en œuvre, le pilote remplacé une valeur similaire. (La fonction retourne SQL_SUCCESS_WITH_INFO).|  
+|01S02|Valeur de l’option modifiée|Le pilote ne prenait pas en charge la valeur spécifiée dans  *\*ValuePtr* (si *ValuePtr* était un pointeur) ou la valeur *ValuePtr* (si *ValuePtr* a une valeur entière), ou  *\*ValuePtr* était non valide en raison de conditions de travail de mise en œuvre, le pilote remplacé une valeur similaire. (La fonction retourne SQL_SUCCESS_WITH_INFO).|  
 |07009|Index de descripteur non valide|Le *FieldIdentifier* argument était un champ d’enregistrement, la *RecNumber* argument était 0 et le *DescriptorHandle* argument auquel un descripteur IPD.<br /><br /> Le *RecNumber* argument était inférieure à 0 et le *DescriptorHandle* argument auquel une ARD ou un APD.<br /><br /> Le *RecNumber* argument était supérieur au nombre maximal de colonnes ou des paramètres de la source de données peut prendre en charge, et le *DescriptorHandle* argument auquel une APD ou le ARD.<br /><br /> (DM) le *FieldIdentifier* SQL_DESC_COUNT, a été l’argument et  *\*ValuePtr* argument était inférieure à 0.<br /><br /> Le *RecNumber* argument était égal à 0 et le *DescriptorHandle* argument auquel une APD implicitement alloué. (Cette erreur ne se produit pas avec un descripteur d’application attribuée explicitement, car on ne sait pas si un descripteur de l’application explicitement alloué est un APD ou un ARD jusqu'à ce que l’exécution.)|  
 |08S01|Échec de lien de communication|Échec de la liaison de communication entre le pilote et la source de données à laquelle le pilote a été connecté avant le traitement de la fonction a été exécutée.|  
 |22001|Données de type chaîne, droite tronquées|Le *FieldIdentifier* SQL_DESC_NAME, a été l’argument et le *BufferLength* argument a une valeur supérieure à SQL_MAX_IDENTIFIER_LEN.|  
@@ -146,7 +146,7 @@ SQLRETURN SQLSetDescField(
   
  L’initialisation des champs d’en-tête est décrite dans le tableau suivant.  
   
-|Nom de champ d’en-tête|Type|R/W (Lecture/écriture)|Valeur par défaut|  
+|Nom de champ d’en-tête|Type|R/W (Lecture/écriture)|Par défaut|  
 |-----------------------|----------|----------|-------------|  
 |SQL_DESC_ALLOC_TYPE|SQLSMALLINT|ARD : R APD : R IRD : R IPD : R|ARD : SQL_DESC_ALLOC_AUTO pour implicite ou SQL_DESC_ALLOC_USER pour explicite<br /><br /> APD : SQL_DESC_ALLOC_AUTO pour implicite ou SQL_DESC_ALLOC_USER pour explicite<br /><br /> IRD : SQL_DESC_ALLOC_AUTO<br /><br /> IPD : SQL_DESC_ALLOC_AUTO|  
 |SQL_DESC_ARRAY_SIZE|SQLULEN|ARD : R/W APD : R/W IRD : inutilisé IPD : inutilisé|ARD : APD [1] : [1] IRD : inutilisé IPD : inutilisé|  
@@ -160,7 +160,7 @@ SQL_DESC_COUNT|SQLSMALLINT|ARD : R/W APD : IRD DE R/W : R IPD : R/W|ARD : A
   
  L’initialisation des champs d’enregistrement est comme indiqué dans le tableau suivant.  
   
-|Nom de champ d’enregistrement|Type|R/W (Lecture/écriture)|Valeur par défaut|  
+|Nom de champ d’enregistrement|Type|R/W (Lecture/écriture)|Par défaut|  
 |-----------------------|----------|----------|-------------|  
 |SQL_DESC_AUTO_UNIQUE_VALUE|SQLINTEGER|ARD : APD inutilisé : IRD inutilisé : R IPD : inutilisé|ARD : APD inutilisé : IRD inutilisé : D IPD : inutilisé|  
 |SQL_DESC_BASE_COLUMN_NAME|SQLCHAR *|ARD : APD inutilisé : IRD inutilisé : R IPD : inutilisé|ARD : APD inutilisé : IRD inutilisé : D IPD : inutilisé|  

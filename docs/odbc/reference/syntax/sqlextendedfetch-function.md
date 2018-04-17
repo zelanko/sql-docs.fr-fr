@@ -2,7 +2,7 @@
 title: Fonction de SQLExtendedFetch | Documents Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: 940b5cf7-581c-4ede-8533-c67d5e9ef488
 caps.latest.revision: 26
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 100b877fb6adc71b0f42dd41a0bc8a8d437b1d1a
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 08611c1a798f9c25ae57d518e46d94193239ca1f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlextendedfetch-function"></a>SQLExtendedFetch (fonction)
 **Mise en conformité**  
@@ -81,7 +81,7 @@ SQLRETURN SQLExtendedFetch(
 ## <a name="diagnostics"></a>Diagnostics  
  Lorsque **SQLExtendedFetch** retourne SQL_ERROR ou SQL_SUCCESS_WITH_INFO, une valeur SQLSTATE associée peut être obtenue en appelant **SQLError**. Le tableau suivant répertorie les valeurs SQLSTATE généralement retournées par **SQLExtendedFetch** et explique chacune d’elles dans le contexte de cette fonction ; la notation « (DM) » précède les descriptions de SQLSTATE retournée par le Gestionnaire de pilotes. Le code de retour associé à chaque valeur SQLSTATE est SQL_ERROR, sauf indication contraire. Si une erreur se produit sur une colonne unique, **SQLGetDiagField** peut être appelé avec un *DiagIdentifier* de SQL_DIAG_COLUMN_NUMBER pour déterminer la colonne de l’erreur s’est produite ; et **SQLGetDiagField** peut être appelé avec un *DiagIdentifier* de SQL_DIAG_ROW_NUMBER pour déterminer la ligne qui contient cette colonne.  
   
-|SQLSTATE|Error|Description|  
+|SQLSTATE|Erreur| Description|  
 |--------------|-----------|-----------------|  
 |01000|Avertissement général|Message d’information de spécifiques au pilote. (La fonction retourne SQL_SUCCESS_WITH_INFO).|  
 |01004|Données de type chaîne, droite tronquées|Retourné pour une colonne de données binary ou String a entraîné la troncation des caractères non vides ou les données binaires non NULL. S’il s’agissait d’une valeur de chaîne, il a été tronqué à la droite. S’il s’agissait d’une valeur numérique, la partie fractionnaire du nombre a été tronquée.  (La fonction retourne SQL_SUCCESS_WITH_INFO).|  

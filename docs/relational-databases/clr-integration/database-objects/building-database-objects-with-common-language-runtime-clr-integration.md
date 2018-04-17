@@ -1,15 +1,15 @@
 ---
-title: "Création d’objets de base de données avec l’intégration du Common Language Runtime (CLR) | Documents Microsoft"
-ms.custom: 
+title: Création d’objets de base de données avec l’intégration du Common Language Runtime (CLR) | Documents Microsoft
+ms.custom: ''
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: clr
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - routines [CLR integration]
@@ -19,20 +19,20 @@ helpviewer_keywords:
 - building database objects [CLR integration]
 - .NET Framework routines [SQL Server]
 ms.assetid: ce34132c-bfa3-447b-9131-b6e17c672efe
-caps.latest.revision: 
+caps.latest.revision: 48
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bffc0c6796955eee2a23bc4885c3cfc23a7e9304
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 7c54c2eedd7ac1ff5e265378cc81ac366e58c2fc
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="building-database-objects-with-common-language-runtime-clr-integration"></a>Création d'objets de base de données avec intégration du Common Language Runtime (CLR)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-Vous pouvez générer des objets de base de données à l'aide de l'intégration de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] avec le CLR (Common Language Runtime) .NET Framework. Code managé qui s’exécute à l’intérieur de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] est appelé « routine CLR ». Ces routines incluent :  
+  Vous pouvez générer des objets de base de données à l'aide de l'intégration de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] avec le CLR (Common Language Runtime) .NET Framework. Code managé qui s’exécute à l’intérieur de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] est appelé « routine CLR ». Ces routines incluent :  
   
 -   Fonctions scalaires définies par l'utilisateur (fonctions UDF scalaires)  
   
@@ -79,6 +79,6 @@ Vous pouvez générer des objets de base de données à l'aide de l'intégration
  Explique comment implémenter et utiliser les déclencheurs CLR.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Common Language Runtime &#40; CLR &#41; Vue d’ensemble](../../../relational-databases/clr-integration/common-language-runtime-integration-overview.md)  
+ [Common Language Runtime & #40 ; CLR & #41 ; Vue d’ensemble](../../../relational-databases/clr-integration/common-language-runtime-integration-overview.md)  
   
   

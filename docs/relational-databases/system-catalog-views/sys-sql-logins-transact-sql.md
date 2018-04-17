@@ -1,16 +1,16 @@
 ---
 title: Sys.sql_logins (Transact-SQL) | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/20/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, pdw
-ms.service: 
+ms.service: ''
 ms.component: system-catalog-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.sql_logins_TSQL
@@ -22,16 +22,17 @@ dev_langs:
 helpviewer_keywords:
 - sys.sql_logins catalog view
 ms.assetid: 0d9c5b09-86fe-40ff-baab-00b7c051402f
-caps.latest.revision: 
+caps.latest.revision: 43
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 12dcc799255ebc44ed2b8d6401de80a98d83bcbb
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: ecff509ffd103928f6a3e73872f9c814c45fab5e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="syssqllogins-transact-sql"></a>sys.sql_logins (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-pdw-md.md)]
@@ -43,16 +44,16 @@ ms.lasthandoff: 11/21/2017
 |**\<héritée de colonnes >**|--|Hérite de **sys.server_principals**.|  
 |**is_policy_checked**|**bit**|La stratégie de mot de passe est vérifiée.|  
 |**is_expiration_checked**|**bit**|Vérification de l'expiration du mot de passe.|  
-|**password_hash**|**varbinary(256)**|Hachage du mot de passe SQL. À partir de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], stockées les informations de mot de passe sont calculées à l’aide du mot de passe salt SHA-512.|  
+|**password_hash**|**varbinary(256)**|Hachage du mot de passe SQL. Depuis [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], les informations de mot de passe stockées sont calculées à l’aide de la valeur salt SHA-512 du mot de passe.|  
   
- Pour obtenir la liste des colonnes qui hérite de cette vue, consultez [sys.server_principals &#40; Transact-SQL &#41; ](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md).  
+ Pour obtenir la liste des colonnes qui hérite de cette vue, consultez [sys.server_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md).  
   
 ## <a name="remarks"></a>Notes  
- Pour afficher les deux [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] des connexions d’authentification et les connexions d’authentification Windows, consultez [sys.server_principals &#40; Transact-SQL &#41; ](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md).  
+ Pour afficher les deux [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] des connexions d’authentification et les connexions d’authentification Windows, consultez [sys.server_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md).  
   
- Relation contenant-contenu aux utilisateurs de base de données sont activés, les connexions peuvent être apportées sans les connexions. Pour identifier ces comptes, consultez [sys.database_principals &#40; Transact-SQL &#41; ](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md).  
+ Relation contenant-contenu aux utilisateurs de base de données sont activés, les connexions peuvent être apportées sans les connexions. Pour identifier ces comptes, consultez [sys.database_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Toute connexion d'authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut voir son propre nom de connexion et la connexion d'administrateur système (sa). Pour voir d'autres connexions, vous devez disposer de l'autorisation ALTER ANY LOGIN, ou d'une autorisation sur la connexion.  
   
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Pour plus d'informations, consultez [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
