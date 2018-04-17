@@ -1,16 +1,16 @@
 ---
 title: sp_help_spatial_geometry_index (Transact-SQL) | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_help_spatial_geometry_index
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_spatial_geometry_index procedure
 ms.assetid: f1bcefb1-09c8-4b49-8c51-5d471065849f
-caps.latest.revision: 
+caps.latest.revision: 13
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b91735734ed05f6132dbebb7ca7eaf5a26f703fa
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: f1e995cb00997207c28b4d3f052b49ad7dfbbf6d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sphelpspatialgeometryindex-transact-sql"></a>sp_help_spatial_geometry_index (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -54,14 +54,14 @@ sp_help_spatial_geometry_index [ @tabname =] 'tabname'
 ## <a name="property-valuereturn-value"></a>Valeur de propriété/valeur de retour  
  Consultez [Arguments et les propriétés d’Index Spatial de procédures stockées](../../relational-databases/system-stored-procedures/spatial-index-stored-procedures-arguments-and-properties.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  L'utilisateur doit être assigné un rôle PUBLIC pour accéder à la procédure. Nécessite une autorisation READ ACCESS sur le serveur et l'objet.  
   
 ## <a name="remarks"></a>Notes  
  Les propriétés qui contiennent des valeurs NULL ne sont pas incluses dans le jeu de retour.  
   
 ## <a name="example"></a>Exemple  
- L’exemple suivant utilise `sp_help_spatial_geometry_index` pour étudier l’index spatial **SIndx_SpatialTable_geometry_col2** définie sur la table **geometry_col** de l’exemple de requête donné dans  **@qs** . Cet exemple retourne uniquement les propriétés principales de l'index spécifié.  
+ L’exemple suivant utilise `sp_help_spatial_geometry_index` pour étudier l’index spatial **SIndx_SpatialTable_geometry_col2** définie sur la table **geometry_col** de l’exemple de requête donné dans **@qs**. Cet exemple retourne uniquement les propriétés principales de l'index spécifié.  
   
 ```  
 declare @qs geometry  

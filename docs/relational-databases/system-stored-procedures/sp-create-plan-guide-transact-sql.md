@@ -1,8 +1,8 @@
 ---
-title: sp_create_plan_guide (Transact-SQL) | Microsoft Docs
+title: sp_create_plan_guide (Transact-SQL) | Documents Microsoft
 ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: system-stored-procedures
@@ -25,11 +25,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 70caae94a352f014757bd00099b43019c08f4a2c
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.openlocfilehash: d213b79938f0856d9e17b36366958a89e7ecd2be
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spcreateplanguide-transact-sql"></a>sp_create_plan_guide (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -61,7 +61,7 @@ sp_create_plan_guide [ @name = ] N'plan_guide_name'
  [ @name =] N'*plan_guide_name*'  
  Est le nom du repère de plan. Les noms des repères de plan sont limités à la base de données active. *plan_guide_name* doivent respecter les règles pour [identificateurs](../../relational-databases/databases/database-identifiers.md) et ne peut pas commencer par le signe dièse (#). La longueur maximale de *plan_guide_name* est de 124 caractères.  
   
- [ @stmt = ] N'*statement_text*'  
+ [ @stmt =] N'*statement_text*'  
  Instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] permettant de créer un repère de plan. Lorsque le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] requête optimiseur reconnaît une requête qui correspond à *statement_text*, *plan_guide_name* en vigueur. Pour la création d’un repère de plan réussisse, *statement_text* doit apparaître dans le contexte spécifié par le @type, @module_or_batch, et @params paramètres.  
   
  *statement_text* doit être fourni d’une façon qui permet de faire correspondre à l’instruction correspondante fournie dans le lot ou le module identifié par l’optimiseur de requête @module_or_batch et @params. Pour plus d'informations, consultez la section « Remarques ». La taille de *statement_text* est limité uniquement par la mémoire disponible du serveur.  
@@ -94,8 +94,8 @@ sp_create_plan_guide [ @name = ] N'plan_guide_name'
   
  *@parameter_name data_type* doit être fourni dans exactement le même format qu’il est soumis à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à l’aide de sp_executesql ou soumis en interne après le paramétrage. Pour plus d'informations, consultez la section Notes. Si le traitement ne contient aucun paramètre, la valeur NULL doit être spécifiée. La taille de @params est limité uniquement par la mémoire du serveur disponible.  
   
- [@hints = ]{ N'OPTION (*query_hint* [ ,*...n* ] )' | N'*XML_showplan*' | NULL }  
- N'OPTION (*query_hint* [ ,*...n* ] )  
+ [@hints =] {N’option (*query_hint* [,*.. .n* ])' | N'*XML_showplan*' | NULL}  
+ N’option (*query_hint* [,*.. .n* ])  
  Spécifie une clause OPTION à joindre à une requête qui correspond à @stmt. @hints doit être syntaxiquement identique à une clause OPTION dans une instruction SELECT et peut contenir toute séquence valide d’indicateurs de requête.  
   
  N'*XML_showplan*'  

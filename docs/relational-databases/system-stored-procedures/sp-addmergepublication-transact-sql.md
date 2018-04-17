@@ -2,7 +2,7 @@
 title: sp_addmergepublication (Transact-SQL) | Documents Microsoft
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: system-stored-procedures
@@ -25,11 +25,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b3f61d6ab3c2154020be3eb1ecf4407f57541918
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 350bb858beee315e45a63cb5d72ab05f45d70848
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spaddmergepublication-transact-sql"></a>sp_addmergepublication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -102,7 +102,7 @@ sp_addmergepublication [ @publication = ] 'publication'
 |Valeur| Description|  
 |-----------|-----------------|  
 |**native** (par défaut)|Produit une copie par bloc en mode natif de toutes les tables.|  
-|**caractère**|Produit une copie par bloc en mode caractère de toutes les tables. Requis pour prendre en charge [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssEW](../../includes/ssew-md.md)] et non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] abonnés.|  
+|**character**|Produit une copie par bloc en mode caractère de toutes les tables. Requis pour prendre en charge [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssEW](../../includes/ssew-md.md)] et non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] abonnés.|  
   
  [  **@allow_push =** ] **'***allow_push***'**  
  Indique si des abonnements par envoi de données (push) peuvent être créés pour la publication concernée. *allow_push* est **nvarchar (5)**, par défaut est TRUE, qui autorise les abonnements par envoi de données sur la publication.  
@@ -248,9 +248,9 @@ sp_addmergepublication [ @publication = ] 'publication'
 |Valeur|Version|  
 |-----------|-------------|  
 |**jour** (par défaut)|La période de rétention est spécifiée en jours.|  
-|**semaine**|La période de rétention est spécifiée en semaines.|  
-|**mois**|La période de rétention est spécifiée en mois.|  
-|**année**|La période de rétention est spécifiée en années.|  
+|**week**|La période de rétention est spécifiée en semaines.|  
+|**month**|La période de rétention est spécifiée en mois.|  
+|**year**|La période de rétention est spécifiée en années.|  
   
  [  **@generation_leveling_threshold=** ] *generation_leveling_threshold*  
  Spécifie le nombre de modifications qui sont contenus dans une génération. Une génération est une collection de modifications remises à un serveur de publication ou à un Abonné. *generation_leveling_threshold* est **int**, valeur par défaut est 1000.  
@@ -283,19 +283,19 @@ sp_addmergepublication [ @publication = ] 'publication'
   
  Pour [!INCLUDE[ssEW](../../includes/ssew-md.md)] abonnés, la valeur de *alternate_snapshot_folder* est uniquement utilisé lorsque la valeur de *snapshot_in_default_folder* est **false**.  
   
- Avec la réplication DDL est activée (*replicate_ddl***= 1**) pour une publication, pour rendre le DDL non répliquées des modifications à la publication, [sp_changemergepublication &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md) doit tout d’abord être exécutée pour définir *replicate_ddl* à **0**. Une fois que les instructions DDL non répliquées ont été émises, **sp_changemergepublication** peut être exécuté à nouveau pour activer la réplication DDL.  
+ Avec la réplication DDL est activée (* replicate_ddl ***= 1**) pour une publication, pour rendre le DDL non répliquées des modifications à la publication, [sp_changemergepublication &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md)doit tout d’abord être exécutée pour définir *replicate_ddl* à **0**. Une fois que les instructions DDL non répliquées ont été émises, **sp_changemergepublication** peut être exécuté à nouveau pour activer la réplication DDL.  
   
 ## <a name="example"></a>Exemple  
  [!code-sql[HowTo#sp_AddMergePub](../../relational-databases/replication/codesnippet/tsql/sp-addmergepublication-t_1.sql)]  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Seuls les membres de la **sysadmin** rôle serveur fixe ou **db_owner** du rôle de base de données fixe peut exécuter **sp_addmergepublication**.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)   
  [Publier des données et des objets de base de données](../../relational-databases/replication/publish/publish-data-and-database-objects.md)   
  [sp_changemergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md)   
- [sp_dropmergepublication &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-dropmergepublication-transact-sql.md)   
+ [sp_dropmergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergepublication-transact-sql.md)   
  [sp_helpmergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql.md)   
  [Procédures stockées de réplication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   

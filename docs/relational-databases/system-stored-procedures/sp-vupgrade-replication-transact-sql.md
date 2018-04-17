@@ -1,16 +1,16 @@
 ---
 title: sp_vupgrade_replication (Transact-SQL) | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_vupgrade_replication
 ms.assetid: d2c0ed66-07d1-4adc-82e5-a654376879bc
-caps.latest.revision: 
+caps.latest.revision: 30
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d07f50261726675d921f39226cd97f9b163b1f7f
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: d99e942d4b1aeb6e0268398800766366d3e8930f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spvupgradereplication-transact-sql"></a>sp_vupgrade_replication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ sp_vupgrade_replication [ [@login=] 'login' ]
   
 ## <a name="arguments"></a>Arguments  
  [  **@login=**] **'***connexion***'**  
- Nom de connexion de l'administrateur système à utiliser lors de la création d'objets système dans la base de données de distribution. *connexion* est **sysname**, avec NULL comme valeur par défaut. Ce paramètre n’est pas nécessaire si *security_mode* a la valeur **1**, qui est l’authentification Windows.  
+ Nom de connexion de l'administrateur système à utiliser lors de la création d'objets système dans la base de données de distribution. *login* est de type **sysname**, avec NULL comme valeur par défaut. Ce paramètre n’est pas nécessaire si *security_mode* a la valeur **1**, qui est l’authentification Windows.  
   
 > [!NOTE]  
 >  Ce paramètre est ignoré lorsque vous effectuez une mise à niveau vers [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] et versions ultérieures.  
@@ -82,7 +82,7 @@ sp_vupgrade_replication [ [@login=] 'login' ]
 ## <a name="remarks"></a>Notes  
  **sp_vupgrade_replication** est utilisé lors de la mise à niveau de tous les types de réplication.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Seuls les membres de la **sysadmin** du rôle serveur fixe peuvent exécuter **sp_vupgrade_replication**.  
   
 ## <a name="see-also"></a>Voir aussi  

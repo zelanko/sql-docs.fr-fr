@@ -1,16 +1,16 @@
 ---
 title: sp_get_redirected_publisher (Transact-SQL) | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -18,16 +18,16 @@ f1_keywords:
 - sp_get_redirected_publisher_TSQL
 - sp_get_redirected_publisher
 ms.assetid: d47a9ab5-f2cc-42a8-8be9-a33895ce44f0
-caps.latest.revision: 
+caps.latest.revision: 10
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cdd0079a3af3ae647c66ea7106e79fb6f9a93ef9
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 746f55b0230bf75ac835be901432d0e8eae278d0
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spgetredirectedpublisher-transact-sql"></a>sp_get_redirected_publisher (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -47,10 +47,10 @@ sp_get_redirected_publisher
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@original_publisher**  =] **'***original_publisher***'**  
+ [ **@original_publisher** =] **'***original_publisher***'**  
  Nom de la base de données publiée. *publisher_db* est **sysname**, sans valeur par défaut.  
   
- [  **@publisher_db**  =] **'***publisher_db***'**  
+ [ **@publisher_db** = ] **'***publisher_db***'**  
  Nom de la base de données publiée. *publisher_db* est **sysname**, sans valeur par défaut.  
   
  [ **@bypass_publisher_validation** = ] [0 | 1 ]  
@@ -73,17 +73,17 @@ sp_get_redirected_publisher
   
  Si la validation n’est pas requise ou si aucune entrée n’existe pour le serveur de publication et de la base de données de publication, *error_number* et *error_severity* retournent 0 et *error_message* retourne la valeur null.  
   
- Si la validation est requise, la procédure stockée de la validation [sp_validate_redirected_publisher &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-validate-redirected-publisher-transact-sql.md) est appelée pour vérifier que la cible de la redirection est un hôte approprié pour la base de données de publication. Si la validation réussit, **sp_get_redirected_publisher** retourne le nom du serveur de publication redirigé, 0 pour le *error_number* et *error_severity* colonnes et la valeur null dans le *error_message* colonne.  
+ Si la validation est requise, la procédure stockée de la validation [sp_validate_redirected_publisher &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-validate-redirected-publisher-transact-sql.md) est appelée pour vérifier que la cible de la redirection est un hôte approprié pour la publication base de données. Si la validation réussit, **sp_get_redirected_publisher** retourne le nom du serveur de publication redirigé, 0 pour le *error_number* et *error_severity* colonnes et la valeur null dans le *error_message* colonne.  
   
  Si la validation est requise et échoue, le nom du serveur de publication redirigé est retourné avec les informations d'erreur.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  L’appelant doit être un membre de la **sysadmin** rôle serveur fixe le **db_owner** rôle de base de données fixe pour la base de données de distribution ou un membre d’une liste d’accès à une publication définie associée à la base de données du serveur de publication.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Procédures stockées de réplication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)   
- [sp_validate_redirected_publisher &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-validate-redirected-publisher-transact-sql.md)   
- [sp_redirect_publisher &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-redirect-publisher-transact-sql.md)   
- [sp_validate_replica_hosts_as_publishers &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-validate-replica-hosts-as-publishers-transact-sql.md)  
+ [sp_validate_redirected_publisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-validate-redirected-publisher-transact-sql.md)   
+ [sp_redirect_publisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-redirect-publisher-transact-sql.md)   
+ [sp_validate_replica_hosts_as_publishers &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-validate-replica-hosts-as-publishers-transact-sql.md)  
   
   

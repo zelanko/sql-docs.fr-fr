@@ -1,16 +1,16 @@
 ---
 title: sp_reinitpullsubscription (Transact-SQL) | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_reinitpullsubscription
 ms.assetid: 7d9abe49-ce92-47f3-82c9-aea749518c91
-caps.latest.revision: 
+caps.latest.revision: 24
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d9020182762ac7f74e888e64814cedcae6fedec2
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 9cbb7a77d2592be420fb3e10527cd6d33301571f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spreinitpullsubscription-transact-sql"></a>sp_reinitpullsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -67,14 +67,14 @@ sp_reinitpullsubscription [ @publisher = ] 'publisher'
   
  **sp_reinitpullsubscription** peut être appelée à partir de l’abonné pour réinitialiser l’abonnement, au cours de la prochaine exécution de l’Agent de Distribution.  
   
- Abonnements aux publications créées avec la valeur **false** pour  **@immediate_sync**  ne peut pas être réinitialisé à partir de l’abonné.  
+ Abonnements aux publications créées avec la valeur **false** pour **@immediate_sync** ne peut pas être réinitialisé à partir de l’abonné.  
   
  Vous pouvez réinitialiser un abonnement par extraction de données en l’exécutant **sp_reinitpullsubscription** sur l’abonné ou **sp_reinitsubscription** sur le serveur de publication.  
   
 ## <a name="example"></a>Exemple  
  [!code-sql[HowTo#sp_reinitpullsub](../../relational-databases/replication/codesnippet/tsql/sp-reinitpullsubscriptio_1.sql)]  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Seuls les membres de la **sysadmin** rôle serveur fixe ou **db_owner** du rôle de base de données fixe peut exécuter **sp_reinitpullsubscription**.  
   
 ## <a name="see-also"></a>Voir aussi  

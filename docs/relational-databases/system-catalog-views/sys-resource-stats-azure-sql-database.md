@@ -28,11 +28,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5f1b2719813ecc58cc68477b47141a215f4880be
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
+ms.openlocfilehash: 7b8087839e5ea151d69a18cdf46d19fa5c917e66
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysresourcestats-azure-sql-database"></a>sys.resource_stats (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -48,13 +49,13 @@ ms.lasthandoff: 04/08/2018
 |start_time|**datetime**|Heure UTC indiquant le début de l’intervalle de création de rapports de cinq minutes.|  
 |end_time|**datetime**|Heure UTC indiquant la fin de l’intervalle de création de rapports de cinq minutes.|  
 |database_name|**varchar**|Nom de la base de données utilisateur.|  
-|sku|**varchar**|Niveau de service de la base de données. Les valeurs possibles sont les suivantes :<br /><br /> Basic<br /><br /> Standard<br /><br /> Premium<br /><br />Usage général<br /><br />Critiques|  
+|sku|**varchar**|Niveau de service de la base de données. Les valeurs possibles sont les suivantes :<br /><br /> Basic<br /><br /> Standard<br /><br /> Premium<br /><br />Usage général<br /><br />Critique pour l’entreprise|  
 |storage_in_megabytes|**float**|Taille de stockage maximale en mégaoctets pour la période de temps, y compris les données de la base de données, les index, les procédures stockées et les métadonnées.|  
 |avg_cpu_percent|**numeric**|Utilisation moyenne du calcul en pourcentage de la limite de la couche de service.|  
 |avg_data_io_percent|**numeric**|Utilisation moyenne des E-S en pourcentage en fonction de la limite du niveau de service.|  
 |avg_log_write_percent|**numeric**|Utilisation moyenne de la ressource d'écriture en pourcentage de la limite de la couche de service.|  
-|max_worker_percent|**decimal(5,2)**|Traitements simultanés maximum (demandes) en pourcentage de la limite de niveau de service de la base de données.<br /><br /> Nombre maximal est actuellement calculée pour l’intervalle de cinq minutes basée sur les échantillons de 15 secondes des nombres de travail simultanés.|  
-|max_session_percent|**decimal(5,2)**|Nombre maximal de sessions simultané en pourcentage de la limite de niveau de service de la base de données.<br /><br /> Nombre maximal est actuellement calculée pour l’intervalle de cinq minutes basée sur les échantillons de 15 secondes du nombre de sessions simultanées.|  
+|max_worker_percent|**Decimal(5,2)**|Traitements simultanés maximum (demandes) en pourcentage de la limite de niveau de service de la base de données.<br /><br /> Nombre maximal est actuellement calculée pour l’intervalle de cinq minutes basée sur les échantillons de 15 secondes des nombres de travail simultanés.|  
+|max_session_percent|**Decimal(5,2)**|Nombre maximal de sessions simultané en pourcentage de la limite de niveau de service de la base de données.<br /><br /> Nombre maximal est actuellement calculée pour l’intervalle de cinq minutes basée sur les échantillons de 15 secondes du nombre de sessions simultanées.|  
 |dtu_limit|**int**|Base de données max DTU paramètre actuel de cette base de données pendant cet intervalle. |  
   
 > [!TIP]  

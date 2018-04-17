@@ -1,8 +1,8 @@
 ---
-title: sp_add_jobschedule (Transact-SQL) | Microsoft Docs
+title: sp_add_jobschedule (Transact-SQL) | Documents Microsoft
 ms.custom: ''
 ms.date: 07/28/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: system-stored-procedures
@@ -25,11 +25,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: b2da9a4bf2bc1fb7e2768922b6b5dd4d93452571
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.openlocfilehash: e3e17e1cb49063da0916f04cac2a8c6a49e6e83c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spaddjobschedule-transact-sql"></a>sp_add_jobschedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +58,7 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [ **@job_id=** ] *job_id*  
+ [  **@job_id=** ] *job_id*  
  Numéro d'identification du travail auquel ajouter la planification. *job_id* est **uniqueidentifier**, sans valeur par défaut.  
   
  [  **@job_name=** ] **'***job_name***'**  
@@ -70,7 +70,7 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
  [  **@name=** ] **'***nom***'**  
  Nom de la planification. *nom* est **nvarchar (128)**, sans valeur par défaut.  
   
- [ **@enabled=** ] *enabled_flag*  
+ [  **@enabled=** ] *enabled_flag*  
  Indique l'état actuel de la planification. *enabled_flag* est **tinyint**, avec une valeur par défaut **1** (activé). Si **0**, la planification n’est pas activée. Lorsque la planification n'est pas activée, le travail n'est pas exécuté.  
   
  [ **@freq_type=** ] *frequency_type*  
@@ -99,7 +99,7 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
 |**64** (lorsque le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] démarrage du service Agent)|*frequency_interval* n’est pas utilisée.|  
 |**128**|*frequency_interval* n’est pas utilisée.|  
   
- [ **@freq_subday_type=** ] *frequency_subday_type*  
+ [  **@freq_subday_type=** ] *frequency_subday_type*  
  Spécifie les unités de *frequency_subday_interval*. *frequency_subday_type* est **int**, sans valeur par défaut et peut prendre l’une des valeurs suivantes :  
   
 |Valeur|Description (unité)|  
@@ -108,10 +108,10 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
 |**0x4**|Minutes|  
 |**0x8**|Heures|  
   
- [ **@freq_subday_interval=** ] *frequency_subday_interval*  
+ [  **@freq_subday_interval=** ] *frequency_subday_interval*  
  Nombre de *frequency_subday_type* périodes entre chaque exécution du travail. *frequency_subday_interval* est **int**, avec 0 comme valeur par défaut.  
   
- [ **@freq_relative_interval=** ] *frequency_relative_interval*  
+ [  **@freq_relative_interval=** ] *frequency_relative_interval*  
  Définit également la *frequency_interval* lorsque *frequency_type* a la valeur **32** (mensuel relatif).  
   
  *frequency_relative_interval* est **int**, sans valeur par défaut et peut prendre l’une des valeurs suivantes :  
@@ -134,13 +134,13 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
   
  Après avoir créé la planification, examinez la date de début et assurez-vous qu'elle est correcte. Pour plus d’informations, consultez la section « Planification des Date de début » dans [créer et attacher les planifications de travaux](http://msdn.microsoft.com/library/079c2984-0052-4a37-a2b8-4ece56e6b6b5).  
   
- [ **@active_end_date=** ] *active_end_date*  
+ [  **@active_end_date=** ] *active_end_date*  
  Date à laquelle l'exécution du travail peut s'arrêter. *active_end_date* est **int**, sans valeur par défaut. La date est au format AAAAMMJJ.  
   
  [ **@active_start_time=** ] *active_start_time*  
  Heure de n’importe quel jour entre *active_start_date* et *active_end_date* pour commencer l’exécution du travail. *heure_de_début_active* est **int**, sans valeur par défaut. L'heure est au format HHMMSS et est exprimée sur 24 heures.  
   
- [ **@active_end_time=***active_end_time*  
+ [**@active_end_time= *** heure_fin_active*  
  Heure de n’importe quel jour entre *active_start_date* et *active_end_date* pour arrêter l’exécution de travail. *heure_fin_active* est **int**, sans valeur par défaut. L'heure est au format HHMMSS et est exprimée sur 24 heures.  
   
  [  **@schedule_id=***id_de_la_planification***sortie**  

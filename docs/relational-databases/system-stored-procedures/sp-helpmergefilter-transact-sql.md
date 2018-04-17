@@ -1,16 +1,16 @@
 ---
 title: sp_helpmergefilter (Transact-SQL) | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helpmergefilter
 ms.assetid: f133a094-0009-4771-b93b-e86a5c01e40b
-caps.latest.revision: 
+caps.latest.revision: 15
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6ec2500e3fc16c2f6c78473fb97a6b1bf757ef52
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 35e478a3eb65b030d61f32ea57ed23510d1eb994
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sphelpmergefilter-transact-sql"></a>sp_helpmergefilter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,10 +52,10 @@ sp_helpmergefilter [ @publication= ] 'publication'
  Nom de la publication. *publication* est **sysname**, sans valeur par défaut.  
   
  [  **@article=**] **'***article***'**  
- Nom de l'article. *article* est **sysname**, avec une valeur par défaut  **%** , qui retourne les noms de tous les articles.  
+ Nom de l'article. *article* est **sysname**, avec une valeur par défaut **%**, qui retourne les noms de tous les articles.  
   
  [  **@filtername=**] **'***filtername***'**  
- Nom du filtre pour lequel il faut renvoyer des informations. *FilterName* est **sysname**, avec une valeur par défaut  **%** , qui retourne des informations sur tous les filtres définis sur l’article ou de la publication.  
+ Nom du filtre pour lequel il faut renvoyer des informations. *FilterName* est **sysname**, avec une valeur par défaut **%**, qui retourne des informations sur tous les filtres définis sur l’article ou de la publication.  
   
 ## <a name="result-sets"></a>Jeux de résultats  
   
@@ -79,7 +79,7 @@ sp_helpmergefilter [ @publication= ] 'publication'
 ## <a name="remarks"></a>Notes  
  **sp_helpmergefilter** est utilisé dans la réplication de fusion.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Seuls les membres de la **sysadmin** rôle serveur fixe et le **db_owner** du rôle de base de données fixe peut exécuter **sp_helpmergefilter**.  
   
 ## <a name="see-also"></a>Voir aussi  

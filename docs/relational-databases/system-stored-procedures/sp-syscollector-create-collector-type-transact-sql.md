@@ -1,16 +1,16 @@
 ---
-title: sp_syscollector_create_collector_type (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: sp_syscollector_create_collector_type (Transact-SQL) | Documents Microsoft
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_syscollector_create_collector_type
@@ -21,16 +21,16 @@ helpviewer_keywords:
 - sp_syscollector_create_collector_type
 - data collector [SQL Server], stored procedures
 ms.assetid: 568e9119-b9b0-4284-9cef-3878c691de5f
-caps.latest.revision: 
+caps.latest.revision: 23
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4165bdb2ddf2bdfa713fb88a787221a9838bce97
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: df2874e764e134ee1b3a7112954cb445bf0d6a6f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spsyscollectorcreatecollectortype-transact-sql"></a>sp_syscollector_create_collector_type (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ sp_syscollector_create_collector_type
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [ @collector_type_uid = ] '*collector_type_uid*'  
+ [ @collector_type_uid =] '*collector_type_uid*'  
  Est le GUID pour le type de collecteur. *collector_type_uid* est **uniqueidentifier** et si sa valeur est NULL, il sera automatiquement créé et retourné en tant que sortie.  
   
  [ @name =] '*nom*'  
@@ -65,10 +65,10 @@ sp_syscollector_create_collector_type
  [ @parameter_formatter =] '*parameter_formatter*'  
  Modèle à utiliser pour transformer le XML utilisé dans la page de propriétés du jeu d'éléments de collecte. *parameter_formatter* est **xml** avec NULL comme valeur par défaut.  
   
- [@collection_package_id = ] *collection_package_id*  
+ [@collection_package_id =] *collection_package_id*  
  Identificateur unique local qui pointe vers le package de collection [!INCLUDE[ssIS](../../includes/ssis-md.md)] utilisé par le jeu d'éléments de collecte. *collection_package_id* est **uniqueidentifer** et est requis.  
   
- [@upload_package_id = ] *upload_package_id*  
+ [@upload_package_id =] *upload_package_id*  
  Identificateur unique local qui pointe vers le package de téléchargement [!INCLUDE[ssIS](../../includes/ssis-md.md)] utilisé par le jeu d'éléments de collecte. *upload_package_id* est **uniqueidentifier** et est requis.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  

@@ -1,16 +1,16 @@
 ---
 title: sp_script_synctran_commands (Transact-SQL) | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_script_synctran_commands
 ms.assetid: f132694a-dd05-405b-9d84-21acce9e564a
-caps.latest.revision: 
+caps.latest.revision: 27
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0897995f56614edcef86b9b7bb63c168d774108c
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: e8e724f9a787d54f1143472f5823cd5b34962eb4
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spscriptsynctrancommands-transact-sql"></a>sp_script_synctran_commands (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,10 +47,10 @@ sp_script_synctran_commands [@publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@publication**  =] **'***publication***'**  
+ [ **@publication** =] **'***publication***'**  
  Nom de la publication à écrire. *publication* est **sysname**, sans valeur par défaut.  
   
- [  **@article**  =] **'***article***'**  
+ [ **@article** =] **'***article***'**  
  Nom de l'article à écrire. *article* est **sysname**, avec une valeur par défaut **tous les**, qui spécifie tous les articles sont écrites.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
@@ -64,12 +64,12 @@ sp_script_synctran_commands [@publication = ] 'publication'
   
  **sp_addqueued_artinfo** est utilisée pour les abonnements pouvant être mis en file d’attente.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Seuls les membres de la **sysadmin** rôle serveur fixe ou **db_owner** du rôle de base de données fixe peut exécuter **sp_script_synctran_commands**.  
   
 ## <a name="see-also"></a>Voir aussi  
- [sp_addsynctriggers &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-addsynctriggers-transact-sql.md)   
- [sp_addqueued_artinfo &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-addqueued-artinfo-transact-sql.md)   
+ [sp_addsynctriggers &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsynctriggers-transact-sql.md)   
+ [sp_addqueued_artinfo &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addqueued-artinfo-transact-sql.md)   
  [Procédures stockées système &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

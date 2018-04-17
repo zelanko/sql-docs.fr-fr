@@ -1,16 +1,16 @@
 ---
-title: sys.syscacheobjects (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: Sys.syscacheobjects (Transact-SQL) | Documents Microsoft
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-compatibility-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.syscacheobjects_TSQL
@@ -23,16 +23,16 @@ helpviewer_keywords:
 - syscacheobjects system table
 - sys.syscacheobjects compatibility view
 ms.assetid: 9b14f37c-b7f5-4f71-b070-cce89a83f69e
-caps.latest.revision: 
+caps.latest.revision: 37
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: afc20f732375a4ecd04075c1dbd228139b0005d3
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 18e93585cea187fa46a1a86068a17e7692789272
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="syssyscacheobjects-transact-sql"></a>sys.syscacheobjects (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ ms.lasthandoff: 02/09/2018
   
 |Nom de colonne|Type de données| Description|  
 |-----------------|---------------|-----------------|  
-|**bucketid**|**int**|ID du compartiment. La valeur est comprise entre 0 et (taille du répertoire -1). La taille du répertoire est la taille de la table de hachage.|  
+|**ID du paquet**|**int**|ID du compartiment. La valeur est comprise entre 0 et (taille du répertoire -1). La taille du répertoire est la taille de la table de hachage.|  
 |**cacheobjtype**|**nvarchar(17)**|Type de l'objet dans le cache :<br /><br /> Plan compilé<br /><br /> Plan exécutable<br /><br /> Arborescence d'analyse<br /><br /> Curseur<br /><br /> Procédure stockée étendue|  
 |**objtype**|**nvarchar(8)**|Type d’objet :<br /><br /> Procédure stockée<br /><br /> Instruction préparée<br /><br /> Requête ad hoc ([!INCLUDE[tsql](../../includes/tsql-md.md)] soumis en tant qu’événements de langage à partir de la **sqlcmd** ou **osql** utilitaires, au lieu d’appels de procédure distante)<br /><br /> ReplProc (procédure de réplication)<br /><br /> Déclencheur<br /><br /> Affichage<br /><br /> Par défaut<br /><br /> Table utilisateur<br /><br /> Table système<br /><br /> Vérifier<br /><br /> Règle|  
 |**objid**|**int**|Une des clés principales servant à rechercher un objet dans le cache. Il s’agit d’ID d’objet stocké dans **sysobjects** pour les objets de base de données (procédures, vues, déclencheurs, etc.). Pour les objets du cache, tel que SQL ad hoc ou préparée, **objid** est une valeur générée en interne.|  
@@ -55,7 +55,7 @@ ms.lasthandoff: 02/09/2018
 |**usecounts**|**int**|Nombre d'utilisations de l'objet dans le cache depuis le début|  
 |**pagesused**|**int**|Nombre de pages consommées par l'objet dans le cache.|  
 |**setopts**|**int**|Valeurs de l'option SET qui affectent un plan compilé. Elles font partie de la clé du cache. Des modifications de cette colonne indiquent que des utilisateurs ont modifié les options SET. Il s'agit des options suivantes :<br /><br /> **ANSI_PADDING**<br /><br /> **FORCEPLAN**<br /><br /> **CONCAT_NULL_YIELDS_NULL**<br /><br /> **ANSI_WARNINGS**<br /><br /> **ANSI_NULLS**<br /><br /> **QUOTED_IDENTIFIER**<br /><br /> **ANSI_NULL_DFLT_ON**<br /><br /> **ANSI_NULL_DFLT_OFF**|  
-|**langid**|**smallint**|ID de langue. ID de la langue de la connexion qui a créé l'objet dans le cache.|  
+|**ID de langue**|**smallint**|ID de langue. ID de la langue de la connexion qui a créé l'objet dans le cache.|  
 |**dateformat**|**smallint**|Format de date de la connexion qui a créé l'objet dans le cache|  
 |**status**|**int**|Indique si l'objet dans le cache est un plan de curseur ou non. Seul le bit de poids faible est actuellement utilisé.|  
 |**lasttime**|**bigint**|Pour compatibilité descendante uniquement. Retourne toujours 0.|  

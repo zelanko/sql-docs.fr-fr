@@ -1,16 +1,16 @@
 ---
 title: sp_cursor_list (Transact-SQL) | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_cursor_list
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_cursor_list
 ms.assetid: 7187cfbe-d4d9-4cfa-a3bb-96a544c7c883
-caps.latest.revision: 
+caps.latest.revision: 31
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2b4ce00bf096ecbd0c40b723c017b21d6fa982d1
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 7a01fabe88b8e38c9495ebd349c6251fa2388fa9
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spcursorlist-transact-sql"></a>sp_cursor_list (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,14 +54,14 @@ sp_cursor_list [ @cursor_return = ] cursor_variable_name OUTPUT
  [ @cursor_scope=] *étendue_curseur*  
  Spécifie le niveau des curseurs à signaler. *étendue_curseur* est **int**, sans valeur par défaut et peut prendre l’une des valeurs suivantes.  
   
-|Valeur|Description|  
+|Valeur| Description|  
 |-----------|-----------------|  
 |1|Signaler tous les curseurs locaux.|  
 |2|Signaler tous les curseurs globaux.|  
 |3|Signaler les curseurs locaux et globaux.|  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
- Aucune  
+ Aucun  
   
 ## <a name="cursors-returned"></a>Curseurs retournés  
  sp_cursor_list renvoie son rapport sous la forme d'un paramètre de résultat de curseur [!INCLUDE[tsql](../../includes/tsql-md.md)] et non pas sous la forme d'un ensemble de résultats. Ceci permet aux lots [!INCLUDE[tsql](../../includes/tsql-md.md)], aux procédures stockées et aux déclencheurs de travailler sur une seule ligne de résultat à la fois. Cela signifie aussi que la procédure ne peut pas être appelée directement à partir des fonctions d'API de base de données. Le paramètre de sortie de curseur doit être lié à une variable de programme, mais les API de base de données ne prennent pas en charge les paramètres ou les variables de curseur de liaison.  
@@ -94,7 +94,7 @@ sp_cursor_list [ @cursor_return = ] cursor_variable_name OUTPUT
   
  Utilisez sp_describe_cursor_columns pour obtenir une description des attributs du jeu de résultats retourné par le curseur. Utilisez sp_describe_cursor_tables pour générer un rapport sur les tables de base référencées par le curseur. sp_describe_cursor rapporte les mêmes informations que sp_cursor_list, mais uniquement pour un curseur spécifié.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Les autorisations d'exécution sont attribuées par défaut au rôle public.  
   
 ## <a name="examples"></a>Exemples  

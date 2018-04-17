@@ -1,8 +1,8 @@
 ---
-title: sys.dm_os_waiting_tasks (Transact-SQL) | Microsoft Docs
+title: Sys.dm_os_waiting_tasks (Transact-SQL) | Documents Microsoft
 ms.custom: ''
 ms.date: 03/13/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: dmv's
@@ -27,11 +27,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 9c21fa8cd03079695ddc8b94e9b2dc2ab105b2b5
-ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 3b399543fbcd2bfc025f854caf18b015973eb81b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdmoswaitingtasks-transact-sql"></a>sys.dm_os_waiting_tasks (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -60,13 +61,13 @@ ms.lasthandoff: 04/05/2018
   
  **Propriétaire de ressources de pool de threads :**  
   
--   threadpool id=scheduler\<hex-address>  
+-   id du pool de threads = planificateur\<hex-address >  
   
  **Propriétaire de la ressource requête parallèle :**  
   
--   exchangeEvent id={Port|Pipe}\<hex-address> WaitType=\<exchange-wait-type> nodeId=\<exchange-node-id>  
+-   id d’exchangeEvent = {Port | Canal}\<hex-address > WaitType =\<type d’attente exchange > nodeId =\<exchange-nœud-id >  
   
- **Exchange-wait-type:**  
+ **Exchange--type d’attente :**  
   
 -   e_waitNone  
   
@@ -84,7 +85,7 @@ ms.lasthandoff: 04/05/2018
   
  **Propriétaire de ressource de verrou :**  
   
--   \<type-specific-description> id=lock\<lock-hex-address> mode=\<mode> associatedObjectId=\<associated-obj-id>  
+-   \<type-specific-description > id = verrou\<verrou-hex-address > mode =\<mode > associatedObjectId =\<associés-obj-id >  
   
      **\<type-specific-description > peut être :**  
   
@@ -134,11 +135,11 @@ ms.lasthandoff: 04/05/2018
   
  **Propriétaire de ressource de verrou :**  
   
--   \<db-id>:\<file-id>:\<page-in-file>  
+-   \<DB-id > :\<id de fichier > :\<page dans le fichier >  
   
--   \<GUID>  
+-   \<GUID &GT;  
   
--   \<latch-class> (\<latch-address>)  
+-   \<classe de verrous > (\<verrou-address >)  
   
 ## <a name="permissions"></a>Autorisations
 

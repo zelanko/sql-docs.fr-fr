@@ -2,7 +2,7 @@
 title: sp_bindefault (Transact-SQL) | Documents Microsoft
 ms.custom: ''
 ms.date: 11/25/2015
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.service: ''
 ms.component: system-stored-procedures
@@ -25,11 +25,12 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b3e23435d6c0a2db3809722856b9daa6b2d66505
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 7a01ab44ac03ae5782f5983e781d21c9d32f8f0b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spbindefault-transact-sql"></a>sp_bindefault (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -54,7 +55,7 @@ sp_bindefault [ @defname = ] 'default' ,
  [  **@defname=** ] **'***par défaut***'**  
  Nom de la valeur par défaut créée par l'instruction CREATE DÉFAUT. *par défaut* est **nvarchar(776)**, sans valeur par défaut.  
   
- [ **@objname=** ] **'***object_name***'**  
+ [  **@objname=** ] **'***nom_objet***'**  
  Nom de la table et de la colonne ou type de données d'alias, auquel est liée la valeur par défaut. *nom_objet* est **nvarchar(776)** sans valeur par défaut. *nom_objet* ne peut pas être défini avec la **varchar (max)**, **nvarchar (max)**, **varbinary (max)**, **xml**, ou CLR types définis par l’utilisateur.  
   
  Si *nom_objet* est un nom d’une seule partie, il est résolu en tant que type de données alias. S'il s'agit d'un nom à deux ou trois composantes, il est d'abord résolu en tant que table et colonne. Si la résolution échoue, il est résolu en tant que type de données d'alias. Par défaut, les colonnes existantes du type de données alias héritent *par défaut*, sauf si une valeur par défaut a été liée directement à la colonne. Une valeur par défaut ne peut pas être lié à un **texte**, **ntext**, **image**, **varchar (max)**, **nvarchar (max)**, **varbinary (max)**, **xml**, **timestamp**, ou CLR colonne de type défini par l’utilisateur, une colonne avec la propriété IDENTITY, une colonne calculée ou une colonne qui a déjà une contrainte par défaut.  
@@ -62,7 +63,7 @@ sp_bindefault [ @defname = ] 'default' ,
 > [!NOTE]  
 >  *nom_objet* peut contenir des crochets **[]** en tant qu’identificateurs délimités. Pour plus d'informations, consultez [Database Identifiers](../../relational-databases/databases/database-identifiers.md).  
   
- [ **@futureonly=** ] **'***futureonly_flag***'**  
+ [  **@futureonly=** ] **'***futureonly_flag***'**  
  S'utilise seulement pour lier une valeur par défaut à un type de données d'alias. *l’argument futureonly_flag* est **varchar(15)** avec NULL comme valeur par défaut. Lorsque ce paramètre a la valeur **futureonly**, les colonnes existantes de ce type de données ne peut pas hériter de la nouvelle valeur par défaut. Il ne s'emploie jamais lors de la liaison d'une valeur par défaut à une colonne. Si *futureonly_flag* est NULL, la nouvelle valeur par défaut est liée à toute colonne du type de données alias qui n’a aucune valeur par défaut ou qui sont à l’aide de la valeur par défaut existante du type de données alias.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  

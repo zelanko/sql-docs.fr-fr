@@ -1,16 +1,16 @@
 ---
 title: sp_adddistributiondb (Transact-SQL) | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_adddistributiondb
 ms.assetid: e9bad56c-d2b3-44ba-a4d7-ff2fd842e32d
-caps.latest.revision: 
+caps.latest.revision: 27
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6657074bade1db3cb050d6ca0c33e358d05e5f0c
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 3a91a41c1d0ca2df23f48bc6144fc185a9e9725f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spadddistributiondb-transact-sql"></a>sp_adddistributiondb (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -63,7 +63,7 @@ sp_adddistributiondb [ @database= ] 'database'
  [  **@database=**] *base de données »*  
  Nom de la base de données de distribution à créer. *base de données* est **sysname**, sans valeur par défaut. Si la base de données spécifiée existe déjà et n'est pas déjà marquée comme base de données de distribution, les objets nécessaires à l'activation de la distribution sont installés ; la base de données est également marquée comme base de données de distribution. Si la base de données spécifiée est déjà activée comme base de données de distribution, une erreur est renvoyée.  
   
- [  **@data_folder=**] **'***argument dossier_de_données '*  
+ [  **@data_folder=**] **' *** argument dossier_de_données '*  
  Nom du répertoire utilisé pour stocker le fichier de données de la base de données de distribution. *argument dossier_de_données* est **nvarchar (255)**, avec NULL comme valeur par défaut. Si sa valeur est NULL, le répertoire de données de cette instance de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est utilisé, par exemple `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Data`.  
   
  [  **@data_file=**] **'***data_file***'**  
@@ -94,7 +94,7 @@ sp_adddistributiondb [ @database= ] 'database'
  Mode de sécurité à utiliser lors de la connexion à un serveur de distribution. *security_mode* est **int**, avec 1 comme valeur par défaut. **0** spécifie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l’authentification ; **1** Spécifie l’authentification intégrée de Windows.  
   
  [  **@login=**] **'***connexion***'**  
- Nom de connexion utilisé lors de la connexion au serveur de distribution pour créer la base de données de distribution. Cela est nécessaire si *security_mode* a la valeur **0**. *connexion* est **sysname**, avec NULL comme valeur par défaut.  
+ Nom de connexion utilisé lors de la connexion au serveur de distribution pour créer la base de données de distribution. Cela est nécessaire si *security_mode* a la valeur **0**. *login* est de type **sysname**, avec NULL comme valeur par défaut.  
   
  [  **@password=**] **'***mot de passe***'**  
  Mot de passe utilisé lors de la connexion au serveur de distribution. Cela est nécessaire si *security_mode* a la valeur **0**. *mot de passe* est **sysname**, avec NULL comme valeur par défaut.  
@@ -177,13 +177,13 @@ GO
   
 ```  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Seuls les membres de la **sysadmin** du rôle serveur fixe peuvent exécuter **sp_adddistributiondb**.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Configurer la publication et la distribution](../../relational-databases/replication/configure-publishing-and-distribution.md)   
- [sp_changedistributiondb &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-changedistributiondb-transact-sql.md)   
- [sp_dropdistributiondb &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-dropdistributiondb-transact-sql.md)   
+ [sp_changedistributiondb &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changedistributiondb-transact-sql.md)   
+ [sp_dropdistributiondb &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropdistributiondb-transact-sql.md)   
  [sp_helpdistributiondb &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpdistributiondb-transact-sql.md)   
  [Procédures stockées système &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Configurer la distribution](../../relational-databases/replication/configure-distribution.md)  

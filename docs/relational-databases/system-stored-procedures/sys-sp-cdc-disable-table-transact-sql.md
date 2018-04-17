@@ -1,16 +1,16 @@
 ---
 title: Sys.sp_cdc_disable_table (Transact-SQL) | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.sp_cdc_disable_table
@@ -24,16 +24,16 @@ helpviewer_keywords:
 - sys.sp_cdc_disable_table
 - change data capture [SQL Server], disabling tables
 ms.assetid: da2156c0-504e-4d76-b9a0-4448becf9bda
-caps.latest.revision: 
+caps.latest.revision: 27
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1909d0d284642166312fe4dde2f2eda4f4ebac09
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: d4364f6cba3a5eb28cfac72e4f5f727ddf1bd1ef
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysspcdcdisabletable-transact-sql"></a>sys.sp_cdc_disable_table (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -72,12 +72,12 @@ sys.sp_cdc_disable_table
  **0** (réussite) ou **1** (échec)  
   
 ## <a name="result-sets"></a>Jeux de résultats  
- Aucune  
+ Aucun  
   
 ## <a name="remarks"></a>Notes  
  **Sys.sp_cdc_disable_table** supprime la capture de données modifiées modifier la table et les fonctions système associées à l’instance de capture et de la table source spécifiée. Il supprime toutes les lignes associées à l’instance de capture spécifiée à partir de la modification des tables de système de capture de données et le définit le **is_tracked_by_cdc** colonne pour l’entrée de table dans le [sys.tables](../../relational-databases/system-catalog-views/sys-tables-transact-sql.md) affichage 0 catalogue.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l’appartenance dans le **db_owner** rôle de base de données fixe.  
   
 ## <a name="examples"></a>Exemples  
@@ -93,6 +93,6 @@ EXECUTE sys.sp_cdc_disable_table
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Sys.sp_cdc_enable_table &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md)  
+ [Sys.sp_cdc_enable_table &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md)  
   
   

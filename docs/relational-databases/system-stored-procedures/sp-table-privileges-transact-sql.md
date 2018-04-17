@@ -1,16 +1,16 @@
 ---
 title: sp_table_privileges (Transact-SQL) | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_table_privileges
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_table_privileges
 ms.assetid: 0512e688-4fc0-4557-8dc8-016672c1e3fe
-caps.latest.revision: 
+caps.latest.revision: 36
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 3f71b84e9f2aa0f732178a302f3d131f0a448dc0
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 2eb872a8ca079bbde96ad3667d687618cba7414a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sptableprivileges-transact-sql"></a>sp_table_privileges (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -64,7 +64,7 @@ sp_table_privileges [ @table_name = ] 'table_name'
  Détermine si le trait de soulignement (_), pourcentage (%) et entre crochets ([ou]) caractères sont interprétés comme des caractères génériques. Les valeurs valides sont 0 (critères spéciaux désactivés) et 1 (critères spéciaux activés). *fUsePattern* est **bits**, avec 1 comme valeur par défaut.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
- Aucune  
+ Aucun  
   
 ## <a name="result-sets"></a>Jeux de résultats  
   
@@ -81,7 +81,7 @@ sp_table_privileges [ @table_name = ] 'table_name'
 ## <a name="remarks"></a>Notes  
  La procédure stockée sp_table_privileges est équivalente à SQLTablePrivileges dans ODBC. Les résultats retournés sont classés par TABLE_QUALIFIER, TABLE_OWNER, TABLE_NAME et PRIVILEGE.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l'autorisation SELECT sur le schéma.  
   
 ## <a name="examples"></a>Exemples  
@@ -95,7 +95,7 @@ EXEC sp_table_privileges
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Catalogue des procédures stockées &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/catalog-stored-procedures-transact-sql.md)   
+ [Procédures stockées du catalogue &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/catalog-stored-procedures-transact-sql.md)   
  [Procédures stockées système &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -1,16 +1,16 @@
 ---
-title: sp_attach_schedule (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: sp_attach_schedule (Transact-SQL) | Documents Microsoft
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_attach_schedule_TSQL
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_attach_schedule
 ms.assetid: 80c80eaf-cf23-4ed8-b8dd-65fe59830dd1
-caps.latest.revision: 
+caps.latest.revision: 34
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d78d6c73d28325771460a1c055a6fb0b491c264c
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 3dc76db676b05d358b6ec6b33b2b5043f7ac63de
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spattachschedule-transact-sql"></a>sp_attach_schedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,19 +49,19 @@ sp_attach_schedule
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [ **@job_id=** ] *job_id*  
+ [  **@job_id=** ] *job_id*  
  Numéro d’identification du travail auquel ajouter la planification. *job_id*est **uniqueidentifier**, avec NULL comme valeur par défaut.  
   
- [ **@job_name =** ] **'***job_name***'**  
+ [  **@job_name =** ] **'***job_name***'**  
  Le nom du travail auquel ajouter la planification. *job_name*est **sysname**, avec NULL comme valeur par défaut.  
   
 > [!NOTE]  
 >  Soit *job_id* ou *job_name* doit être spécifié, mais ne peut pas être spécifiés.  
   
- [ **@schedule_id =** ] *schedule_id*  
+ [  **@schedule_id =** ] *id_de_la_planification*  
  Numéro d'identification de la planification à définir pour le travail. *id_de_la_planification*est **int**, avec NULL comme valeur par défaut.  
   
- [ **@schedule_name =** ] **'***schedule_name***'**  
+ [  **@schedule_name =** ] **'***nom_de_la_planification***'**  
  Nom de la planification à définir pour le travail. *nom_de_la_planification*est **sysname**, avec NULL comme valeur par défaut.  
   
 > [!NOTE]  
@@ -87,7 +87,7 @@ sp_attach_schedule
   
  Pour en savoir plus sur les autorisations de ces rôles, consultez [Rôles de base de données fixes de l'Agent SQL Server](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79).  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vérifie si l’utilisateur propriétaire de la tâche et la planification.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vérifie si l'utilisateur détient à la fois le travail et la planification.  
   
 ## <a name="examples"></a>Exemples  
  L'exemple suivant crée une planification nommée `NightlyJobs`. Les travaux qui utilisent cette planification s'exécutent tous les jours lorsque l'heure indiquée par le serveur est `01:00`. L'exemple joint la planification au travail `BackupDatabase` et au travail `RunReports`.  

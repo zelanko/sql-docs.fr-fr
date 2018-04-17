@@ -1,16 +1,16 @@
 ---
 title: semanticsimilaritydetailstable (Transact-SQL) | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - semanticsimilaritydetailstable
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - semanticsimilaritydetailstable function
 ms.assetid: 038d751a-fca5-4b4c-9129-cba741a4e173
-caps.latest.revision: 
+caps.latest.revision: 16
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 69d13d3b16d1b58062cd93dc18e2f20f3fd01b42
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 376c644ebeab414cc9f3cf93a56b449f2669be5b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="semanticsimilaritydetailstable-transact-sql"></a>semanticsimilaritydetailstable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -81,7 +81,7 @@ SEMANTICSIMILARITYDETAILSTABLE
 |Column_name|Type| Description|  
 |------------------|----------|-----------------|  
 |**keyphrase**|**NVARCHAR**|Expression clé qui contribue à la similarité entre le document source et le document correspondant.|  
-|**score**|**RÉEL**|Valeur relative de cette expression clé dans sa relation à toutes les autres expressions clés qui sont semblables dans les deux documents.<br /><br /> La valeur est une valeur décimale fractionnaire comprise dans la plage de [0.0, 1.0] dans laquelle un score élevé représente une pondération plus élevée, 1.0 étant le score parfait.|  
+|**Score**|**REAL**|Valeur relative de cette expression clé dans sa relation à toutes les autres expressions clés qui sont semblables dans les deux documents.<br /><br /> La valeur est une valeur décimale fractionnaire comprise dans la plage de [0.0, 1.0] dans laquelle un score élevé représente une pondération plus élevée, 1.0 étant le score parfait.|  
   
 ## <a name="general-remarks"></a>Remarques d'ordre général  
  Pour plus d’informations, consultez [rechercher Documents similaires ou connexes avec la recherche sémantique](../../relational-databases/search/find-similar-and-related-documents-with-semantic-search.md).  

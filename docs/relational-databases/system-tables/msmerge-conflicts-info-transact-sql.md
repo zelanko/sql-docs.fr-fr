@@ -1,8 +1,8 @@
 ---
-title: MSmerge_conflicts_info (Transact-SQL) | Microsoft Docs
+title: MSmerge_conflicts_info (Transact-SQL) | Documents Microsoft
 ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: system-tables
@@ -27,11 +27,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 85ce4ab68f0ae49425b72b1e0d7601a7d0ff5f60
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.openlocfilehash: 0c2376ff24d94a8360bd39686fb71f0b4d94a2b4
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="msmergeconflictsinfo-transact-sql"></a>MSmerge_conflicts_info (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ ms.lasthandoff: 04/10/2018
 |Nom de colonne|Type de données| Description|  
 |-----------------|---------------|-----------------|  
 |**tablenick**|**int**|Surnom de la table publiée.|  
-|**rowguid**|**uniqueidentifier**|Identificateur de la ligne de conflit|  
+|**ROWGUID**|**uniqueidentifier**|Identificateur de la ligne de conflit|  
 |**origin_datasource**|**nvarchar(255)**|Nom de la base de données d'où provient la modification conflictuelle|  
 |**conflict_type**|**int**|Type de conflit qui s'est produit, qui peut être l'un des suivants :<br /><br /> **1** = conflit mise à jour : le conflit est détecté au niveau de la ligne.<br /><br /> **2** = conflit de mise à jour de colonne : le conflit est détecté au niveau de la colonne.<br /><br /> **3** = mise à jour supprimer Wins conflit : la suppression gagne le conflit.<br /><br /> **4** = conflit de suppression Wins mise à jour : le rowguid supprimé qui perd le conflit est enregistré dans cette table.<br /><br /> **5** = télécharger Insert a échoué : l’insertion provenant de l’abonné n’a pas pu être appliquée sur le serveur de publication.<br /><br /> **6** = Échec du téléchargement du insérer : l’insertion provenant du serveur de publication n’a pas pu être appliquée sur l’abonné.<br /><br /> **7** = télécharger supprimer a échoué : la suppression à l’abonné n’a pas pu être téléchargée sur le serveur de publication.<br /><br /> **8** = Échec du téléchargement du supprimer : la suppression appliquée au serveur de publication n’a pas pu être téléchargée à l’abonné.<br /><br /> **9** = Échec de télécharger la mise à jour : la mise à jour à l’abonné n’a pas pu être appliquée sur le serveur de publication.<br /><br /> **10** = Échec du téléchargement du jour : la mise à jour au serveur de publication n’a pas pu être appliquée à l’abonné.<br /><br /> **11** = résolution<br /><br /> **12** = logique mise à jour Wins suppression de l’enregistrement : l’enregistrement logique supprimé qui perd le conflit est enregistré dans cette table.<br /><br /> **13** = logique enregistrement conflit Insérer Mettre à jour : insertion dans un enregistrement logique est en conflit avec une mise à jour.<br /><br /> **14** = logique enregistrement supprimer Wins mise à jour en conflit : l’enregistrement logique mis à jour qui perd le conflit est enregistré dans cette table.|  
 |**reason_code**|**int**|Le code d’erreur qui peut dépendre du contexte. Dans le cas de conflits de mise à jour de la mise à jour et suppression de la mise à jour, la valeur utilisée pour cette colonne est le même que le **conflict_type**. Par contre, dans les conflits d'échec de modification, le code de la raison correspond à l'erreur qui a empêché l'Agent de fusion d'appliquer la modification. Par exemple, si l’Agent de fusion ne peut pas appliquer une insertion sur l’abonné en raison d’une violation de clé primaire, il se connecte un **conflict_type** de 6 (« téléchargement insert a échoué ») et un **reason_code** de valeur 2627, qui est le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] message d’erreur interne pour une violation de clé primaire : « Violation de contrainte %ls ' %. * %.*ls. Impossible d’insérer une clé dupliquée dans l’objet ' %. \*%.*ls. »|  

@@ -1,16 +1,16 @@
 ---
-title: sp_help_notification (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: sp_help_notification (Transact-SQL) | Documents Microsoft
+ms.custom: ''
 ms.date: 08/09/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_help_notification
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_notification
 ms.assetid: 0273457f-9d2a-4a6f-9a16-6a6bf281cba0
-caps.latest.revision: 
+caps.latest.revision: 34
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 542ffbb8b2bf6c51b31da93dc654a3a71b3fa401
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: c779b314553c1895071ab04b5131d998c029cc94
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sphelpnotification-transact-sql"></a>sp_help_notification (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +57,7 @@ sp_help_notification
  [  **@name =**] **'***nom***'**  
  Un nom d’opérateur (si *object_type* est OPERATORS) ou un nom d’alerte (si *object_type* est ALERTS). *nom* est **sysname**, sans valeur par défaut.  
   
- [ **@enum_type =**] **'***enum_type***'**  
+ [  **@enum_type =**] **'***type_de_liste***'**  
  Le *object_type*informations qui sont retournées. *type_de_liste* prend la valeur ACTUAL dans la plupart des cas. *type_de_liste*est **char (10)**, sans valeur par défaut et peut prendre l’une des valeurs suivantes.  
   
 |Valeur| Description|  
@@ -66,7 +66,7 @@ sp_help_notification
 |ALL|Répertorie tous les*object_types* y compris ceux qui ne sont pas associés *nom*.|  
 |TARGET|Répertorie uniquement les *object_types* correspondant fourni *target_name*, indépendamment de l’association avec*nom*.|  
   
- [ **@notification_method =**] *notification_method*  
+ [  **@notification_method =**] *méthode_de_notification*  
  Valeur numérique qui détermine les colonnes de méthode de notification à retourner. *méthode_de_notification* est **tinyint**, et peut prendre l’une des valeurs suivantes.  
   
 |Valeur|Description|  
@@ -76,7 +76,7 @@ sp_help_notification
 |**4**|Envoi réseau : retourne uniquement le **use_netsend** colonne.|  
 |**7**|Tout : retourne toutes les colonnes.|  
   
- [ **@target_name =**] **'***target_name***'**  
+ [  **@target_name =**] **'***target_name***'**  
  Nom d’alerte à rechercher (si *object_type* est ALERTS) ou un nom d’opérateur à rechercher (si *object_type* est OPERATORS). *target_name* est nécessaire seulement si *type_de_liste* est la cible. *target_name* est **sysname**, avec NULL comme valeur par défaut.  
   
 ## <a name="return-code-valves"></a>Valeur des codes de retour  
@@ -89,9 +89,9 @@ sp_help_notification
 |-----------------|---------------|-----------------|  
 |**alert_id**|**int**|Numéro d'identification de l'alerte.|  
 |**alert_name**|**sysname**|Nom de l’alerte.|  
-|**use_email**|**int**|Un message électronique est utilisé pour avertir l'opérateur.<br /><br /> **1** = Oui<br /><br /> **0** = non|  
-|**use_pager**|**int**|La radiomessagerie est utilisée pour avertir l'opérateur.<br /><br /> **1** = Oui<br /><br /> **0** = non|  
-|**use_netsend**|**int**|Le réseau est utilisé pour avertir l'opérateur :<br /><br /> **1** = Oui<br /><br /> **0** = non|  
+|**use_email**|**int**|Un message électronique est utilisé pour avertir l'opérateur.<br /><br /> **1** = Oui<br /><br /> **0** = Non|  
+|**use_pager**|**int**|La radiomessagerie est utilisée pour avertir l'opérateur.<br /><br /> **1** = Oui<br /><br /> **0** = Non|  
+|**use_netsend**|**int**|Le réseau est utilisé pour avertir l'opérateur :<br /><br /> **1** = Oui<br /><br /> **0** = Non|  
 |**has_email**|**int**|Nombre de notifications envoyées par messagerie électronique pour cette alerte.|  
 |**has_pager**|**int**|Nombre de notifications envoyées par radiomessagerie pour cette alerte.|  
 |**has_netsend**|**int**|Nombre de **envoi réseau** notifications envoyées pour cette alerte.|  
@@ -102,12 +102,12 @@ sp_help_notification
 |-----------------|---------------|-----------------|  
 |**operator_id**|**int**|Numéro d'identification de l'opérateur.|  
 |**operator_name**|**sysname**|Nom de l’opérateur.|  
-|**use_email**|**int**|Un message électronique est utilisé pour envoyer la notification à l'opérateur :<br /><br /> **1** = Oui<br /><br /> **0** = non|  
-|**use_pager**|**int**|La radiomessagerie est utilisée pour envoyer la notification à l'opérateur :<br /><br /> **1** = Oui<br /><br /> **0** = non|  
-|**use_netsend**|**int**|Le réseau est utilisé pour avertir l’opérateur :<br /><br /> **1** = Oui<br /><br /> **0** = non|  
-|**has_email**|**int**|L'opérateur possède une adresse électronique :<br /><br /> **1** = Oui<br /><br /> **0** = non|  
-|**has_pager**|**int**|L'opérateur possède une adresse de radiomessagerie :<br /><br /> **1** = Oui<br /><br /> **0** = non|  
-|**has_netsend**|**int**|Une notification d'envoi réseau est configurée pour l'opérateur.<br /><br /> **1** = Oui<br /><br /> **0** = non|  
+|**use_email**|**int**|Un message électronique est utilisé pour envoyer la notification à l'opérateur :<br /><br /> **1** = Oui<br /><br /> **0** = Non|  
+|**use_pager**|**int**|La radiomessagerie est utilisée pour envoyer la notification à l'opérateur :<br /><br /> **1** = Oui<br /><br /> **0** = Non|  
+|**use_netsend**|**int**|Le réseau est utilisé pour avertir l’opérateur :<br /><br /> **1** = Oui<br /><br /> **0** = Non|  
+|**has_email**|**int**|L'opérateur possède une adresse électronique :<br /><br /> **1** = Oui<br /><br /> **0** = Non|  
+|**has_pager**|**int**|L'opérateur possède une adresse de radiomessagerie :<br /><br /> **1** = Oui<br /><br /> **0** = Non|  
+|**has_netsend**|**int**|Une notification d'envoi réseau est configurée pour l'opérateur.<br /><br /> **1** = Oui<br /><br /> **0** = Non|  
   
 ## <a name="remarks"></a>Notes  
  Cette procédure stockée doit être exécutée à partir de la **msdb** base de données.  

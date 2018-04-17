@@ -1,16 +1,16 @@
 ---
-title: sp_syscollector_create_collection_item (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: sp_syscollector_create_collection_item (Transact-SQL) | Documents Microsoft
+ms.custom: ''
 ms.date: 08/09/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_syscollector_create_collection_item
@@ -21,16 +21,16 @@ helpviewer_keywords:
 - sp_syscollector_create_collection_item
 - data collector [SQL Server], stored procedures
 ms.assetid: 60dacf13-ca12-4844-b417-0bc0a8bf0ddb
-caps.latest.revision: 
+caps.latest.revision: 27
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3fac04c31bdebdc98aa082fb9809fe505ce66eef
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: ca29db3a4df1da4cdf566ba3b8df06e8661027e7
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spsyscollectorcreatecollectionitem-transact-sql"></a>sp_syscollector_create_collection_item (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +56,7 @@ sp_syscollector_create_collection_item
  [ @collection_set_id = ] *collection_set_id*  
  Identificateur local unique pour le jeu d'éléments de collecte. *collection_set_id* est **int**.  
   
- [ @collector_type_uid = ] '*collector_type_uid*'  
+ [ @collector_type_uid =] '*collector_type_uid*'  
  GUID qui identifie le type de collecteur à utiliser pour cet élément *collector_type_uid* est **uniqueidentifier** sans valeur par défaut... Pour obtenir une liste de types de collecteurs, interrogez la vue système syscollector_collector_types.  
   
  [ @name =] '*nom*'  
@@ -64,7 +64,7 @@ sp_syscollector_create_collection_item
   
  *nom* doit être unique. Pour obtenir une liste de noms d'élément de collecte actuels, interrogez la vue système syscollector_collection_items.  
   
- [ @frequency = ] *frequency*  
+ [ @frequency =] *fréquence*  
  Permet de spécifier (en secondes) la fréquence de collecte des données par cet élément de collecte. *fréquence* est **int**, avec 5 comme valeur par défaut. La valeur minimale pouvant être spécifiée est de 5 secondes.  
   
  Si le jeu d'éléments de collecte est défini en mode non mis en cache, la fréquence est ignorée car ce mode provoque l'exécution de la collecte et du téléchargement des données selon la planification spécifiée pour le jeu d'éléments de collecte. Pour afficher le mode de collecte de l’ensemble de la collection, interrogez la [syscollector_collection_sets](../../relational-databases/system-catalog-views/syscollector-collection-sets-transact-sql.md) vue système.  
@@ -72,7 +72,7 @@ sp_syscollector_create_collection_item
  [ @parameters =] '*paramètres*'  
  Les paramètres d'entrée pour le type de collecteur. *paramètres* est **xml** avec NULL comme valeur par défaut. Le *paramètres* schéma doit correspondre au schéma de paramètres du type de collecteur.  
   
- [ @collection_item_id = ] *collection_item_id*  
+ [ @collection_item_id =] *collection_item_id*  
  Identificateur unique qui identifie l'élément du jeu d'éléments de collecte. *collection_item_id* est **int** et a une sortie.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
@@ -87,7 +87,7 @@ sp_syscollector_create_collection_item
  Requiert l'appartenance au rôle de base de données fixe dc_admin (avec autorisation EXECUTE) pour exécuter cette procédure.  
   
 ## <a name="examples"></a>Exemples  
- L'exemple suivant crée un élément de collecte selon le type collecteur `Generic T-SQL Query Collector Type` et l'ajoute au jeu d'éléments de collecte appelé `Simple collection set test 2`. Pour créer la collection spécifiée jeu, exécutez l’exemple B dans [sp_syscollector_create_collection_set &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-syscollector-create-collection-set-transact-sql.md).  
+ L'exemple suivant crée un élément de collecte selon le type collecteur `Generic T-SQL Query Collector Type` et l'ajoute au jeu d'éléments de collecte appelé `Simple collection set test 2`. Pour créer la collection spécifiée jeu, exécutez l’exemple B dans [sp_syscollector_create_collection_set &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-create-collection-set-transact-sql.md).  
   
 ```  
 USE msdb;  

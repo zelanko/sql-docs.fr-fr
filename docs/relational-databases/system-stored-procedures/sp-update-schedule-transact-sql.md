@@ -1,8 +1,8 @@
 ---
-title: sp_update_schedule (Transact-SQL) | Microsoft Docs
+title: sp_update_schedule (Transact-SQL) | Documents Microsoft
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: system-stored-procedures
@@ -25,11 +25,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 23d1d4b4cfdc7fb19cffff63de8cae84b2606d6e
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.openlocfilehash: 5e7d510de0d66a72278cbacdbdfa9eedf49851ba
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spupdateschedule-transact-sql"></a>sp_update_schedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -62,7 +62,7 @@ sp_update_schedule
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [ **@schedule_id =** ] *schedule_id*  
+ [  **@schedule_id =** ] *id_de_la_planification*  
  Identificateur de la planification à modifier. *id_de_la_planification* est **int**, sans valeur par défaut. Soit *id_de_la_planification* ou *nom_de_la_planification* doit être spécifié.  
   
  [  **@name =** ] **'***nom_de_la_planification***'**  
@@ -71,7 +71,7 @@ sp_update_schedule
  [ **@new_name**=] *nouveau_nom*  
  Nouveau nom de la planification. *nouveau_nom* est **sysname**, avec NULL comme valeur par défaut. Lorsque *nouveau_nom* est NULL, le nom de la planification reste inchangé.  
   
- [ **@enabled =** ] *enabled*  
+ [  **@enabled =** ] *activé*  
  Indique l'état actuel de la planification. *activé*est **tinyint**, avec une valeur par défaut **1** (activé). Si **0**, la planification n’est pas activée. Si la planification n'est pas activée, aucun travail n'est exécuté dans cette dernière.  
   
  [ **@freq_type =** ] *freq_type*  
@@ -87,7 +87,7 @@ sp_update_schedule
 |**64**|Lancé au démarrage du service SQLServerAgent|  
 |**128**|Exécution pendant une période d'inactivité de l'ordinateur.|  
   
- [ **@freq_interval =** ] *freq_interval*  
+ [  **@freq_interval =** ] *freq_interval*  
  Jours d’exécution du travail. *freq_interval* est **int**, avec une valeur par défaut **0**et varie en fonction de la valeur de *freq_type*.  
   
 |Valeur de *freq_type*|Effet sur *freq_interval*|  
@@ -110,7 +110,7 @@ sp_update_schedule
 |**0x4**|Minutes|  
 |**0x8**|Heures|  
   
- [ **@freq_subday_interval =** ] *freq_subday_interval*  
+ [  **@freq_subday_interval =** ] *freq_subday_interval*  
  Le nombre de *freq_subday_type* périodes entre chaque exécution d’un travail. *freq_subday_interval*est **int**, avec une valeur par défaut **0**.  
   
  [ **@freq_relative_interval =** ] *freq_relative_interval*  
@@ -132,19 +132,19 @@ sp_update_schedule
   
  Après avoir créé la planification, examinez la date de début et assurez-vous qu'elle est correcte. Pour plus d’informations, consultez la section « Planification des Date de début » dans [créer et attacher les planifications de travaux](http://msdn.microsoft.com/library/079c2984-0052-4a37-a2b8-4ece56e6b6b5).  
   
- [ **@active_end_date =** ] *active_end_date*  
+ [  **@active_end_date =** ] *active_end_date*  
  Date à laquelle l'exécution d'un travail peut s'arrêter. *active_end_date*est **int**, avec une valeur par défaut **99991231**, ce qui indique le 31 décembre 9999. La mise en forme est la suivante : AAAAMMJJ.  
   
- [ **@active_start_time =** ] *active_start_time*  
+ [  **@active_start_time =** ] *heure_de_début_active*  
  L’heure sur n’importe quel jour entre *active_start_date* et *active_end_date* pour commencer l’exécution d’un travail. *heure_de_début_active*est **int**, avec une valeur 000000 par défaut, ce qui signifie 12:00:00 a.m. sur une horloge de 24 heures. Elle doit être au format HHMMSS.  
   
- [ **@active_end_time =** ] *active_end_time*  
+ [  **@active_end_time =** ] *heure_fin_active*  
  L’heure sur n’importe quel jour entre *active_start_date* et *active_end_date* pour arrêter l’exécution d’une tâche. *heure_fin_active*est **int**, avec une valeur par défaut **235959**, ce qui indique à 11:59:59 PM sur une horloge de 24 heures. Elle doit être au format HHMMSS.  
   
  [ **@owner_login_name**=] **'***owner_login_name***'**]  
  Nom du principal de serveur qui détient la planification. *owner_login_name* est **sysname**, avec NULL comme valeur par défaut, ce qui signifie que la planification est détenue par le créateur.  
   
- [ **@automatic_post =**] *automatic_post*  
+ [  **@automatic_post =**] *envoi_automatique*  
  Réservé.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  

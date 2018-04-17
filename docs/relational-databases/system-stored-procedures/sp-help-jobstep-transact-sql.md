@@ -1,16 +1,16 @@
 ---
-title: sp_help_jobstep (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: sp_help_jobstep (Transact-SQL) | Documents Microsoft
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_help_jobstep_TSQL
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_jobstep
 ms.assetid: 4a13b804-45f2-4f82-987f-42d9a57dd6db
-caps.latest.revision: 
+caps.latest.revision: 40
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bb316ee70ad1cf1f98898fd08edbb7cfb9622f56
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 1f091fbfa1183b2decb8628984dd730ac4cd2ba6
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sphelpjobstep-transact-sql"></a>sp_help_jobstep (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,10 +49,10 @@ sp_help_jobstep { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [ **@job_id =**] **'***job_id***'**  
+ [  **@job_id =**] **'***job_id***'**  
  Numéro d’identification pour laquelle retourner des informations sur les travaux. *job_id* est **uniqueidentifier**, avec NULL comme valeur par défaut.  
   
- [ **@job_name =**] **'***job_name***'**  
+ [  **@job_name =**] **'***job_name***'**  
  Nom du travail. *job_name* est **sysname**, avec NULL comme valeur par défaut.  
   
 > [!NOTE]  
@@ -61,10 +61,10 @@ sp_help_jobstep { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
  [ **@step_id =**] *step_id*  
  Numéro d'identification de l'étape du travail. S'il n'est pas inclus, toutes les étapes du travail sont englobées. *l’argument id_étape* est **int**, avec NULL comme valeur par défaut.  
   
- [ **@step_name =**] **'***step_name***'**  
+ [  **@step_name =**] **'***nom_de_l***'**  
  Nom de l'étape du travail. *nom_de_l* est **sysname**, avec NULL comme valeur par défaut.  
   
- [ **@suffix =**] *suffix*  
+ [  **@suffix =**] *suffixe*  
  Un indicateur qui signale si une description de texte est ajoutée à la **indicateurs** colonne dans la sortie. *suffixe*est **bits**, avec la valeur par défaut de **0**. Si *suffixe* est **1**, une description est appliquée.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  

@@ -1,16 +1,16 @@
 ---
-title: sys.dm_fts_index_keywords_by_property (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: Sys.dm_fts_index_keywords_by_property (Transact-SQL) | Documents Microsoft
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dm_fts_index_keywords_by_property
@@ -25,16 +25,16 @@ helpviewer_keywords:
 - full-text search [SQL Server], viewing keywords
 - sys.dm_fts_index_keywords_by_property dynamic management view
 ms.assetid: fa41e052-a79a-4194-9b1a-2885f7828500
-caps.latest.revision: 
+caps.latest.revision: 14
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0257f4a6ce50ff3e28497e3e27bdd704e40cbf84
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 603ff2cfed32a6a8ecfb4f55467b697307009822
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdmftsindexkeywordsbyproperty-transact-sql"></a>sys.dm_fts_index_keywords_by_property (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -66,10 +66,10 @@ OBJECT_ID('table_name')
 ```  
   
 ## <a name="arguments"></a>Arguments  
- db_id('*database_name*')  
- Un appel à la [DB_ID()](../../t-sql/functions/db-id-transact-sql.md) (fonction). Cette fonction accepte un nom de base de données et retourne l’ID de base de données, les sys.dm_fts_index_keywords_by_property utilise pour rechercher la base de données spécifié. Si *nom_base_de_données* est omis, l’ID de base de données actuel est retourné.  
+ DB_ID ('*nom_base_de_données*')  
+ Un appel à la [DB_ID()](../../t-sql/functions/db-id-transact-sql.md) (fonction). Cette fonction accepte un nom de base de données et retourne l’ID de base de données, les sys.dm_fts_index_keywords_by_property utilise pour rechercher la base de données spécifié. Si *database_name* est omis, la fonction retourne l’ID de la base de données active.  
   
- object_id('*table_name*')  
+ object_id ('*table_name*')  
  Un appel à la [OBJECT_ID()](../../t-sql/functions/object-id-transact-sql.md) (fonction). Cette fonction accepte un nom de table et retourne l'ID de la table contenant l'index de recherche en texte intégral à examiner.  
   
 ## <a name="table-returned"></a>Table retournée  

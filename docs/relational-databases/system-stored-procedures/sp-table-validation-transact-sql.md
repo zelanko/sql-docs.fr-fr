@@ -1,16 +1,16 @@
 ---
 title: sp_table_validation (Transact-SQL) | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/08/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_table_validation_TSQL
@@ -18,16 +18,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_table_validation
 ms.assetid: 31b25f9b-9b62-496e-a97e-441d5fd6e767
-caps.latest.revision: 
+caps.latest.revision: 33
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bd5182a0e742db6ef535a30e94ddb2b4da5f669a
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: e4d146cdd2620af70d2fafb6de06341a7bfabf6e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sptablevalidation-transact-sql"></a>sp_table_validation (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -86,9 +86,9 @@ sp_table_validation [ @table = ] 'table'
  Si l’Agent de Distribution est en cours d’exécution **sp_table_validation**, spécifie si l’Agent de Distribution doit être fermé immédiatement après l’achèvement de la validation. *shutdown_agent* est **bits**, avec une valeur par défaut **0**. Si **0**, l’agent de réplication ne s’arrête pas. Si **1**, l’erreur 20578 est déclenchée et l’agent de réplication est signalé pour l’arrêter. Ce paramètre est ignoré lorsque **sp_table_validation** exécuté directement par un utilisateur.  
   
  [  **@table_name =**] *nom_table*  
- Nom de la table qui contient la vue utilisée pour les messages de sortie. *nom_table* est **sysname**, avec une valeur par défaut  **@table** .  
+ Nom de la table qui contient la vue utilisée pour les messages de sortie. *nom_table* est **sysname**, avec une valeur par défaut **@table**.  
   
- [  **@column_list** =] **'***column_list***'**  
+ [ **@column_list**=] **'***column_list***'**  
  Liste de colonnes à utiliser dans la fonction de somme de contrôle. *column_list* est **nvarchar (4000)**, avec NULL comme valeur par défaut. Active la validation d'articles de fusion pour spécifier une liste de colonnes excluant les colonnes calculées et les colonnes timestamp.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
@@ -105,14 +105,14 @@ sp_table_validation [ @table = ] 'table'
   
  Valeurs à virgule flottante sont susceptibles de générer des différences de somme de contrôle si le mode caractère **bcp** a été utilisé, ce qui est le cas si la publication a non -[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] abonnés. Cela est dû à des erreurs mineures et inévitables de précision lors de la conversion vers le mode caractère et à partir de ce mode.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Pour exécuter **sp_table_validation**, vous devez disposer des autorisations SELECT sur la table en cours de validation.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Somme de contrôle &#40; Transact-SQL &#41;](../../t-sql/functions/checksum-transact-sql.md)   
+ [Somme de contrôle &#40;Transact-SQL&#41;](../../t-sql/functions/checksum-transact-sql.md)   
  [@@ROWCOUNT &#40;Transact-SQL&#41;](../../t-sql/functions/rowcount-transact-sql.md)   
- [sp_article_validation &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-article-validation-transact-sql.md)   
- [sp_publication_validation &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-publication-validation-transact-sql.md)   
+ [sp_article_validation &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-article-validation-transact-sql.md)   
+ [sp_publication_validation &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-publication-validation-transact-sql.md)   
  [Procédures stockées système &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

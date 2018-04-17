@@ -1,16 +1,16 @@
 ---
 title: xp_cmdshell (Transact-SQL) | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - xp_cmdshell
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - xp_cmdshell
 ms.assetid: 18935cf4-b320-4954-b6c1-e007fcefe358
-caps.latest.revision: 
+caps.latest.revision: 26
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: bb3fcd3cba2be225c4c45514b2dcbc021683c0db
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 6ca6baab6e4bb3332d48cb2e50129713aab24817
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="xpcmdshell-transact-sql"></a>xp_cmdshell (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -88,9 +88,9 @@ The command(s) completed successfully.
 EXEC sp_xp_cmdshell_proxy_account 'SHIPPING\KobeR','sdfh%dkc93vcMt0';  
 ```  
   
- Pour plus d’informations, consultez [sp_xp_cmdshell_proxy_account &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-xp-cmdshell-proxy-account-transact-sql.md).  
+ Pour plus d’informations, consultez [sp_xp_cmdshell_proxy_account &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-xp-cmdshell-proxy-account-transact-sql.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Étant donné que les utilisateurs malveillants essaient quelquefois d’élever leurs privilèges à l’aide de **xp_cmdshell**, **xp_cmdshell** est désactivée par défaut. Utilisez **sp_configure** ou **gestion basée sur** pour l’activer. Pour plus d’informations, consultez [xp_cmdshell (option de configuration de serveur)](../../database-engine/configure-windows/xp-cmdshell-server-configuration-option.md).  
   
  Lorsque le premier est activé, **xp_cmdshell** nécessite l’autorisation CONTROL SERVER pour exécuter et le processus Windows créé par **xp_cmdshell** a le même contexte de sécurité que le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] compte de service. Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] compte de service a souvent plus d’autorisations que nécessaire pour le travail effectué par le processus créé par **xp_cmdshell**. Pour améliorer la sécurité, l’accès à **xp_cmdshell** doit être limitée aux utilisateurs disposant de privilèges élevés.  
@@ -178,9 +178,9 @@ EXEC master..xp_cmdshell @cmd;
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Étendues générales des procédures stockées &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/general-extended-stored-procedures-transact-sql.md)   
+ [Procédures stockées étendues générales &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/general-extended-stored-procedures-transact-sql.md)   
  [xp_cmdshell (option) de Configuration de serveur](../../database-engine/configure-windows/xp-cmdshell-server-configuration-option.md)   
  [Configuration de la surface d'exposition](../../relational-databases/security/surface-area-configuration.md)   
- [sp_xp_cmdshell_proxy_account &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-xp-cmdshell-proxy-account-transact-sql.md)  
+ [sp_xp_cmdshell_proxy_account &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-xp-cmdshell-proxy-account-transact-sql.md)  
   
   

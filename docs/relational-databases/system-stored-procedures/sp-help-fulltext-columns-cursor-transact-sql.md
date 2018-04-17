@@ -1,16 +1,16 @@
 ---
-title: sp_help_fulltext_columns_cursor (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: sp_help_fulltext_columns_cursor (Transact-SQL) | Documents Microsoft
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_help_fulltext_columns_cursor
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_fulltext_columns_cursor
 ms.assetid: 26054e76-53b7-4004-8d48-92ba3435e9d7
-caps.latest.revision: 
+caps.latest.revision: 28
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ce3850391a0bfe07e228b9f7c57984fdbeb0f886
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 22417190de19fd801a991c0cc6425311230d8ca6
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sphelpfulltextcolumnscursor-transact-sql"></a>sp_help_fulltext_columns_cursor (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,13 +51,13 @@ sp_help_fulltext_columns_cursor [ @cursor_return = ] @cursor_variable OUTPUT
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@cursor_return =**]  *@cursor_variable*  SORTIE  
+ [  **@cursor_return =**] *@cursor_variable* SORTIE  
  Variable de sortie de type **curseur**. Le curseur résultant est en lecture seule, dynamique et autorise les défilements.  
   
- [ **@table_name =**] **'***table_name***'**  
+ [  **@table_name =**] **'***table_name***'**  
  Nom de la table en une ou deux parties pour laquelle les informations sur l'indexation de texte intégral sont nécessaires. *nom_table* est **nvarchar (517)**, avec NULL comme valeur par défaut. Si *table_name* est omis, les informations de colonne de l’index de texte intégral sont récupérées pour chaque table indexée en texte intégral.  
   
- [ **@column_name =**] **'***column_name***'**  
+ [  **@column_name =**] **'***column_name***'**  
  Nom de la colonne dont vous souhaitez obtenir les métadonnées d'index de texte intégral. *column_name* est **sysname** avec une valeur par défaut NULL. Si *column_name* est omis ou a la valeur NULL, les informations de colonne de recherche en texte intégral sont retournées pour chaque colonne indexée en texte intégral de *table_name*. Si *table_name* est également omis ou a la valeur NULL, informations de colonne d’index de texte intégral sont retournées pour chaque colonne indexée en texte intégral pour toutes les tables dans la base de données.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
@@ -69,7 +69,7 @@ sp_help_fulltext_columns_cursor [ @cursor_return = ] @cursor_variable OUTPUT
 |-----------------|---------------|-----------------|  
 |**TABLE_OWNER**|**sysname**|Propriétaire de la table. Nom de l'utilisateur de la base de données qui a créé la table.|  
 |**TABLE_ID**|**int**|ID de la table.|  
-|**TABLE_NAME**|**sysname**|Nom de la table.|  
+|**NOM_TABLE**|**sysname**|Nom de la table.|  
 |**FULLTEXT_COLUMN_NAME**|**sysname**|Colonne d'une table indexée de texte intégral désignée pour l'indexation.|  
 |**FULLTEXT_COLID**|**int**|ID de la colonne indexées sur le texte intégral.|  
 |**FULLTEXT_BLOBTP_COLNAME**|**sysname**|Colonne d'une table indexée sur le texte intégral qui désigne le type de document de la colonne indexée sur le texte intégral. Cette valeur s’applique uniquement lorsque la colonne indexée en texte intégral est un **varbinary (max)** ou **image** colonne.|  
