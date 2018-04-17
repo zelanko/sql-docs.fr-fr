@@ -1,16 +1,16 @@
 ---
-title: sp_help_peerconflictdetection (Transact-SQL) | Documents Microsoft
-ms.custom: 
+title: sp_help_peerconflictdetection (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_help_peerconflictdetection
 ms.assetid: 59e04107-5eaa-44a1-beb6-ac4f2dbbcb28
-caps.latest.revision: 
+caps.latest.revision: 13
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 43221792e6f2b29ac86fc6d4ef70376ba4896c49
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="sphelppeerconflictdetection-transact-sql"></a>sp_help_peerconflictdetection (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,10 +47,10 @@ sp_help_peerconflictdetection [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [ @publication=] '*publication*'  
+ [ @publication= ] '*publication*'  
  Nom de la publication pour laquelle renvoyer les informations. *publication* est **sysname**, sans valeur par défaut.  
   
- [ @timeout=] *délai d’attente*  
+ [ @timeout= ] *timeout*  
  Spécifie la durée, en secondes, du délai d'expiration de la procédure durant l'attente d'une réponse de chaque nœud dans la topologie. Si la topologie contient un Abonné en lecture seule, spécifier une valeur de délai d'attente n'est pas valide. Les Abonnés en lecture seule ne répondent jamais à un appel de cette procédure. *délai d’attente* est **int**, avec la valeur par défaut est 60.  
   
 ## <a name="result-sets"></a>Jeux de résultats  
@@ -68,7 +68,7 @@ sp_help_peerconflictdetection [ @publication = ] 'publication'
 ## <a name="remarks"></a>Notes  
  sp_help_peerconflictdetection est utilisé dans la réplication transactionnelle d'égal à égal.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Requiert l'appartenance au rôle serveur fixe sysadmin ou au rôle de base de données fixe db_owner.  
   
 ## <a name="see-also"></a>Voir aussi  

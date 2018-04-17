@@ -1,26 +1,27 @@
 ---
-title: "Initialiser automatiquement un groupe de disponibilité Always On | Microsoft Docs"
-ms.custom: 
-ms.date: 08/23/2017
+title: Initialiser automatiquement un groupe de disponibilité Always On | Microsoft Docs
+ms.custom: ''
+ms.date: 03/26/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: availability-groups
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 67c6a601-677a-402b-b3d1-8c65494e9e96
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: MikeRayMSFT
 ms.author: v-saume
 manager: craigg
-ms.openlocfilehash: aa2ce39b4cf932d5659adb2ccc1a85b4ff547cac
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 44ff615a44427cdf0e5ed6e06937181762deb7a0
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="automatically-initialize-always-on-availability-group"></a>Initialiser automatiquement le groupe de disponibilité Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -169,6 +170,12 @@ Sur le réplica principal, interrogez la vue de gestion dynamique `sys.dm_hadr_p
 ```sql
 SELECT * FROM sys.dm_hadr_physical_seeding_stats;
 ```
+
+Les deux colonnes *total_disk_io_wait_time_ms* et *total_network_wait_time_ms* peuvent être utilisées pour déterminer le goulot d’étranglement dans le processus d’amorçage automatique. Les deux colonnes sont également présentes dans l’événement étendu *hadr_physical_seeding_progress*.
+
+**total_disk_io_wait_time_ms** représente le temps d’attente du thread de sauvegarde/restauration sur le disque. Cette valeur est cumulative depuis le début de l’opération d’amorçage. Si les disques ne sont pas prêts pour lire ou écrire le flux de sauvegarde, le thread de sauvegarde/restauration passe à l’état de veille et sort de veille chaque seconde pour vérifier si le disque est prêt.
+        
+**total_network_wait_time_ms** est interprété différemment sur le réplica principal et le réplica secondaire. Sur le réplica principal, ce compteur représente le temps de contrôle du flux réseau. Sur le réplica secondaire, ce compteur représente le temps que le thread de restauration attend un message permettant d’écrire sur le disque.
 
 ### <a name="diagnose-database-initialization-using-automatic-seeding-in-the-error-log"></a>Diagnostiquer l’initialisation de bases de données à l’aide de l’amorçage automatique dans le journal des erreurs
 

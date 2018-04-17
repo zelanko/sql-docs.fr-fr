@@ -1,16 +1,16 @@
 ---
-title: "Unités de sauvegarde (SQL Server) | Microsoft Docs"
-ms.custom: 
+title: Unités de sauvegarde (SQL Server) | Microsoft Docs
+ms.custom: ''
 ms.date: 08/12/2016
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: backup-restore
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-backup-restore
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - tape backup devices, about tape backup devices
@@ -28,20 +28,20 @@ helpviewer_keywords:
 - backing up databases [SQL Server], backup devices
 - devices [SQL Server]
 ms.assetid: 35a8e100-3ff2-4844-a5da-dd088c43cba4
-caps.latest.revision: 
+caps.latest.revision: 93
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 1dbf5d00855a498782a65a3ff04e2477a2cb871d
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
-ms.translationtype: HT
+ms.openlocfilehash: fda4874de4ba9df6c8bab86ca8201dff76b28f33
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="backup-devices-sql-server"></a>Unités de sauvegarde (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-Au cours d’une opération de sauvegarde sur une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , les données sauvegardées (la *sauvegarde*) sont écrites sur une unité de sauvegarde physique. Cette unité de sauvegarde physique est activée dès l'écriture de la première sauvegarde dans un jeu de supports. Les sauvegardes sur un jeu comprenant une ou plusieurs unités de sauvegarde constituent un seul jeu de supports.  
+  Au cours d’une opération de sauvegarde sur une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , les données sauvegardées (la *sauvegarde*) sont écrites sur une unité de sauvegarde physique. Cette unité de sauvegarde physique est activée dès l'écriture de la première sauvegarde dans un jeu de supports. Les sauvegardes sur un jeu comprenant une ou plusieurs unités de sauvegarde constituent un seul jeu de supports.  
    
 ##  <a name="TermsAndDefinitions"></a> Termes et définitions  
  disque de sauvegarde  
@@ -75,9 +75,9 @@ Au cours d’une opération de sauvegarde sur une base de données [!INCLUDE[ssN
   
  TO DISK **=** { **'***physical_backup_device_name***'** | **@***physical_backup_device_name_var* }  
   
- Exemple :  
+ Par exemple :  
   
-```  
+```sql  
 BACKUP DATABASE AdventureWorks2012   
    TO DISK = 'Z:\SQLServerBackups\AdventureWorks2012.bak';  
 GO  
@@ -89,9 +89,9 @@ GO
   
  FROM DISK **=** { **'***physical_backup_device_name***'** | **@***physical_backup_device_name_var* }  
   
- Par exemple,  
+ Par exemple :  
   
-```  
+```sql  
 RESTORE DATABASE AdventureWorks2012   
    FROM DISK = 'Z:\SQLServerBackups\AdventureWorks2012.bak';   
 ```  
@@ -102,7 +102,7 @@ RESTORE DATABASE AdventureWorks2012
   
  Pour éviter toute ambiguïté, en particulier dans les scripts, il est recommandé de spécifier explicitement le chemin d'accès du répertoire de sauvegarde dans chaque clause DISK. Cependant, cette exigence prend moins d'importance si vous utilisez l'Éditeur de requête. Dans ce cas, si vous êtes certain que le fichier de sauvegarde réside dans le répertoire de sauvegarde par défaut, vous pouvez omettre le chemin d'accès d'une clause DISK. Par exemple, l'instruction `BACKUP` suivante sauvegarde la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] dans le répertoire de sauvegarde par défaut.  
   
-```  
+```sql  
 BACKUP DATABASE AdventureWorks2012   
    TO DISK = ’AdventureWorks2012.bak’;  
 GO  
@@ -125,9 +125,9 @@ GO
 ## <a name="specify-a-universal-naming-convention-unc-name"></a>Définir un nom UNC (Universal Naming Convention)  
  Pour préciser un partage réseau dans une opération de sauvegarde ou de restauration, utilisez le nom UNC (Universal Naming Convention) complet du fichier de l’unité de sauvegarde. Un nom UNC se présente sous la forme **\\\\***nom_système***\\***nom_partage***\\***chemin***\\***nom_fichier*.  
   
- Exemple :  
+ Par exemple :  
   
-```  
+```sql  
 BACKUP DATABASE AdventureWorks2012   
    TO DISK = '\\BackupSystem\BackupDisk1\AW_backups\AdventureWorksData.Bak';  
 GO  
@@ -155,9 +155,9 @@ GO
   
  TO TAPE **=** { **'***physical_backup_device_name***'** | **@***physical_backup_device_name_var* }  
   
- Exemple :  
+ Par exemple :  
   
-```  
+```sql  
 BACKUP LOG AdventureWorks2012   
    TO TAPE = '\\.\tape0';  
 GO  
@@ -200,7 +200,7 @@ GO
   
  Une fois définie une unité de sauvegarde logique, dans une commande BACKUP ou RESTORE, spécifiez l'unité de sauvegarde logique à la place du nom physique de l'unité. Par exemple, l'instruction suivante sauvegarde la base de données `AdventureWorks2012` dans l'unité de sauvegarde logique `AdventureWorksBackups` .  
   
-```  
+```sql  
 BACKUP DATABASE AdventureWorks2012   
    TO AdventureWorksBackups;  
 GO  

@@ -1,6 +1,6 @@
 ---
-title: "Groupes de serveurs dans les opérations de SQL Studio (version préliminaire) | Documents Microsoft"
-description: "En savoir plus sur les groupes de serveurs dans les opérations de SQL Studio (version préliminaire)."
+title: Groupes de serveurs dans les SQL Operations Studio (preview) | Documents Microsoft
+description: En savoir plus sur les groupes de serveurs dans les SQL Operations Studio (preview).
 ms.custom: tools|sos
 ms.date: 11/15/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,7 @@ ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
 ms.component: sos
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 author: stevestein
 ms.author: sstein

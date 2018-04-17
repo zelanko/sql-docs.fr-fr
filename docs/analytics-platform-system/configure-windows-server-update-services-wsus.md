@@ -17,10 +17,10 @@ ms.topic: article
 ms.assetid: a10b2884-468e-41ef-bd59-8df894381254
 caps.latest.revision: 41
 ms.openlocfilehash: 31427bc55017cf9c069e8cd4a467dfdb9608ca3f
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="configure-windows-server-update-services-wsus"></a>Configurer Windows Server Update Services (WSUS)
 Ces instructions vous guident dans les étapes pour configurer WSUS pour système de plateforme Analytique à l’aide de l’Assistant de Configuration de Windows Server Update Services (WSUS). Vous devez configurer WSUS avant de pouvoir appliquer des mises à jour logicielles à l’appliance. WSUS est déjà installé sur l’ordinateur virtuel VMM de l’application.  
@@ -113,7 +113,7 @@ Pour configurer WSUS, vous devez :
   
     Si ce serveur nécessite un serveur proxy pour accéder à Microsoft Update ou un autre serveur en amont, vous pouvez configurer les paramètres du serveur proxy. Sinon, cliquez sur **suivant**.  
   
-    ![WSUS Proxy](./media/configure-windows-server-update-services-wsus/WSUS_Wiz5a.png "WSUS_Wiz5a")  
+    ![Proxy WSUS](./media/configure-windows-server-update-services-wsus/WSUS_Wiz5a.png "WSUS_Wiz5a")  
   
     #### <a name="to-configure-proxy-server-settings"></a>Pour configurer les paramètres du serveur proxy  
   
@@ -139,7 +139,7 @@ Pour configurer WSUS, vous devez :
   
     Sélectionnez **anglais**, puis cliquez sur **suivant**.  
   
-    ![Choose languages](./media/configure-windows-server-update-services-wsus/SQL_Server_PDW_WSUSChooseLanguages.png "SQL_Server_PDW_WSUSChooseLanguages")  
+    ![Choisir les langues](./media/configure-windows-server-update-services-wsus/SQL_Server_PDW_WSUSChooseLanguages.png "SQL_Server_PDW_WSUSChooseLanguages")  
   
 8.  Choisir les produits.  
   
@@ -165,7 +165,7 @@ Pour configurer WSUS, vous devez :
   
     Sélectionnez **synchroniser manuellement**, puis cliquez sur **suivant**.  
   
-    ![Set sync schedule](./media/configure-windows-server-update-services-wsus/SQL_Server_PDW_WSUSSyncSchedule.png "SQL_Server_PDW_WSUSSyncSchedule")  
+    ![Planification de la synchronisation](./media/configure-windows-server-update-services-wsus/SQL_Server_PDW_WSUSSyncSchedule.png "SQL_Server_PDW_WSUSSyncSchedule")  
   
 11. Commencer la synchronisation initiale.  
   
@@ -201,7 +201,7 @@ Après la configuration de WSUS pour système de plateforme Analytique, l’éta
   
 5.  Sélectionnez le nouveau groupe d’ordinateurs que vous avez créé en cliquant sur la case à cocher, puis sur **OK**.  
   
-    ![Set Computer Group Membership](./media/configure-windows-server-update-services-wsus/SQL_Server_PDW_WSUSSetComputerGroupMembership.png "SQL_Server_PDW_WSUSSetComputerGroupMembership")  
+    ![L’appartenance au groupe d’ordinateurs ensemble](./media/configure-windows-server-update-services-wsus/SQL_Server_PDW_WSUSSetComputerGroupMembership.png "SQL_Server_PDW_WSUSSetComputerGroupMembership")  
   
 6.  Sélectionnez le groupe d’ordinateurs, de modifier son **état** à **tout**, puis cliquez sur **Actualiser**. Tous les ordinateurs doivent maintenant être assignés à ce groupe et répertoriés dans le volet droit. Il est généralement préférable de se poursuivre lorsque les nœuds affichent des avertissements comme **ce nœud n’a pas indiqué son état encore**.  
   

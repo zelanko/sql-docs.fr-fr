@@ -2,7 +2,7 @@
 title: Pilote OLE DB SQL Server Support for High Availability, Disaster Recovery | Documents Microsoft
 description: Pilote OLE DB pour SQL Server prend en charge pour la haute disponibilité, la récupération d’urgence
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 04/04/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
@@ -17,9 +17,9 @@ author: pmasl
 ms.author: Pedro.Lopes
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: c915af2ec748c4b2c15882c9a643c8e200442e98
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
-ms.translationtype: HT
+ms.openlocfilehash: 1c23f1147b525ae35050ee47fe0c6278d03b3181
+ms.sourcegitcommit: 094c46e7fa6de44735ed0040c65a40ec3d951b75
+ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 04/06/2018
 ---
@@ -72,29 +72,11 @@ Une erreur de connexion se produit si les mots clés de connexion **MultiSubnetF
 Si vous mettez à niveau un pilote OLE DB pour l’application de SQL Server qui utilise actuellement la mise en miroir de base de données à un scénario de sous-réseaux multiples, vous devez supprimer la **Failover_Partner** propriété de connexion et remplacez-la par  **MultiSubnetFailover** la valeur **Oui** et remplacez le nom du serveur dans la chaîne de connexion avec un écouteur de groupe de disponibilité. Si une chaîne de connexion utilise **Failover_Partner** et **MultiSubnetFailover=Yes**, le pilote génère une erreur. Toutefois, si une chaîne de connexion utilise **Failover_Partner** et **MultiSubnetFailover=No** (ou **ApplicationIntent=ReadWrite**), l’application utilise la mise en miroir de bases de données.  
   
 Le pilote retournera une erreur si la mise en miroir de bases de données est utilisée pour la base de données principale au sein du groupe de disponibilité, et si **MultiSubnetFailover=Yes** est utilisé dans la chaîne de connexion qui établit une connexion avec une base de données principale au lieu d’un écouteur de groupe de disponibilité.  
-  
-## <a name="specifying-application-intent"></a>Spécification de l'intention d'application  
-Lorsque **ApplicationIntent = ReadOnly**, le client demande un travail en lecture lors de la connexion à une base de données Always On est activé. Le serveur applique l’intention au moment de la connexion et pendant une `USE` de base de données de l’instruction, mais uniquement à une base de données Always On est activé.  
-  
-Le mot clé **ApplicationIntent** ne fonctionne pas avec les bases de données en lecture seule existantes.  
-  
-Une base de données peut autoriser ou interdire les charges de travail en lecture sur la base de données AlwaysOn ciblée. (Utilisez la clause **ALLOW_CONNECTIONS** des instructions **PRIMARY_ROLE** et **SECONDARY_ROLE**[!INCLUDE[tsql](../../../includes/tsql-md.md)].)  
-  
-Le mot clé **ApplicationIntent** est utilisé pour activer le routage en lecture seule.  
-  
-## <a name="read-only-routing"></a>Routage en lecture seule  
-Le routage en lecture seule est une fonctionnalité qui permet de garantir la disponibilité d'un réplica de base de données en lecture seule. Pour activer le routage en lecture seule :  
-  
-1.  Vous devez vous connecter à un écouteur du groupe de disponibilité Always On.  
-  
-2.  Dans la chaîne de connexion, le mot clé **ApplicationIntent** doit avoir la valeur **ReadOnly**.  
-  
-3.  Le groupe de disponibilité AlwaysOn doit être configuré par l’administrateur de base de données pour activer le routage en lecture seule.  
-  
-Il est possible que plusieurs connexions utilisant le routage en lecture seule ne se connectent pas toutes au même réplica en lecture seule. Les modifications apportées à la synchronisation de base de données ou à la configuration du routage du serveur peuvent entraîner des connexions clientes à différents réplicas en lecture seule. Pour vérifier que toutes les demandes en lecture seule se connectent au même réplica en lecture seule, ne passez pas un écouteur de groupe de disponibilité AlwaysOn pour la **Server** mot clé de chaîne de connexion. Au lieu de cela, spécifiez le nom de l'instance en lecture seule.  
-  
-Le routage en lecture seule peut prendre plus longtemps que la connexion à la base de données principale, car il se connecte d'abord à la base de données principale, puis recherche la meilleure base de données secondaire accessible disponible. Pour cette raison, vous devez augmenter le délai de connexion.  
-  
+
+
+[!INCLUDE[specify-application-intent_read-only-routing](~/includes/paragraph-content/specify-application-intent-read-only-routing.md)]
+
+
 ## <a name="ole-db"></a>OLE DB  
 Le pilote OLE DB pour SQL Server prend en charge la **ApplicationIntent** et **MultiSubnetFailover** mots clés.   
   

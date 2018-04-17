@@ -16,10 +16,10 @@ ms.assetid: 9766ee75-32d3-4045-82a6-4c7968bdbaa6
 ms.custom: sql-linux
 ms.workload: Active
 ms.openlocfilehash: fa3fb3c1d807698ddf1fa28c6c710956a75d30ea
-ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="use-visual-studio-code-to-create-and-run-transact-sql-scripts-for-sql-server"></a>Utilisez Visual Studio Code pour créer et exécuter des scripts Transact-SQL pour SQL Server
 
@@ -27,7 +27,7 @@ ms.lasthandoff: 03/28/2018
 
 Cette rubrique montre comment utiliser l'extension **mssql** pour Visual Studio Code (VS Code) pour développer des bases de données SQL Server.
 
-Visual Studio Code est un éditeur de code graphique pour Linux, MacOS et Windows qui supporte les extensions. [ **L’extension mssql** pour VS Code] vous permet de vous connecter à SQL Server, d'effectuer des requêtes via Transact-SQL (T-SQL) et d'afficher les résultats.
+Visual Studio Code est un éditeur de code graphique pour Linux, MacOS et Windows qui supporte les extensions. [L’extension **mssql** pour VS Code] vous permet de vous connecter à SQL Server, d'effectuer des requêtes via Transact-SQL (T-SQL) et d'afficher les résultats.
 
 ## <a name="install-vs-code"></a>Installer Visual Studio Code
 1. Si vous n'avez pas encore installé Visual Studio Code, [téléchargez et installez VS Code] sur votre ordinateur.
@@ -260,7 +260,7 @@ Pour plus d’informations sur l’utilisation ou pour contribuer à l’extensi
 
 Pour plus d’informations sur l’utilisation de Visual Studio Code, consultez la [documentation de Visual Studio Code](https://code.visualstudio.com/docs).
 
-[**mssql** extension VS Code]:https://aka.ms/mssql-marketplace
+[L’extension **mssql** pour VS Code]:https://aka.ms/mssql-marketplace
 [téléchargez et installez VS Code]:https://code.visualstudio.com/Download
 [instructions .Net Core]:https://www.microsoft.com/net/core
 [gérer les profils de connexion]:https://github.com/Microsoft/vscode-mssql/wiki/manage-connection-profiles

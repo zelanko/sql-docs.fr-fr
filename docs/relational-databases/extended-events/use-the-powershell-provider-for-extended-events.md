@@ -1,33 +1,30 @@
 ---
-title: "Utiliser le fournisseur PowerShell pour les événements étendus | Microsoft Docs"
-ms.custom: 
+title: Utiliser le fournisseur PowerShell pour les événements étendus | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
-ms.service: 
-ms.component: extended-events
-ms.reviewer: 
+ms.service: ''
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-- xevents
-ms.tgt_pltfrm: 
+ms.technology: xevents
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - PowerShell [SQL Server], xevent
 - extended events [SQL Server], PowerShell
 - PowerShell [SQL Server], extended events
 ms.assetid: 0b10016f-a479-4444-a484-46cb4677cf64
-caps.latest.revision: 
+caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3e5accd33da019a93fa731bd48ce187a053aef21
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
-ms.translationtype: HT
+ms.openlocfilehash: 7c51331b402cf848d9b76d5dfc42801c71c3e2a6
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="use-the-powershell-provider-for-extended-events"></a>Utiliser le fournisseur PowerShell pour les événements étendus
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -60,7 +57,7 @@ ms.lasthandoff: 02/12/2018
   
 -   La stratégie d'exécution de PowerShell doit autoriser l'exécution du script. Pour définir la stratégie d’exécution, utilisez l’applet de commande **Set-Executionpolicy** . (Pour plus d’informations, tapez **get-help set-executionpolicy -detailed**, puis appuyez sur Entrée).  
   
- Le script suivant crée une nouvelle session nommée « TestSession ».  
+ Le script suivant crée une nouvelle session nommée « TestSession ».  
   
 ```  
 #Script for creating a session.  
@@ -119,7 +116,7 @@ $session.Create()
 ## <a name="security"></a>Sécurité  
  Pour créer, modifier ou supprimer une session Événements étendus, vous devez disposer de l'autorisation ALTER ANY EVENT SESSION.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [SQL Server PowerShell](../../relational-databases/scripting/sql-server-powershell.md)   
  [Utiliser la session system_health](../../relational-databases/extended-events/use-the-system-health-session.md)   
  [Outils associés aux événements étendus](../../relational-databases/extended-events/extended-events-tools.md)  

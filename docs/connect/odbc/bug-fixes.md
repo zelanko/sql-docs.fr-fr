@@ -20,11 +20,11 @@ author: v-makouz
 ms.author: genemi
 manager: kenvh
 ms.workload: Active
-ms.openlocfilehash: dc71f74ca8e81f370037b82e42fd78957e096775
-ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
+ms.openlocfilehash: 5187e07d18c6a967ce0a8fadbac370273684c9dc
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 04/08/2018
 ---
 # <a name="list-of-bugs-fixed"></a>Liste des bogues corrigés
 
@@ -38,10 +38,10 @@ Cette page contient une liste des bogues corrigés dans chaque version, en comme
 - Correction d’un bogue rare sur Windows 32 bits lors de la conversion flottante point nombre en entier
 - Ne correction d’un problème où serait de l’insertion de double dans un champ décimal avec Always Encrypted sur aucune erreur de troncation de données de retour
 - Résolution d’un avertissement sur MacOS installer
+- Fixe l’envoi d’état incorrect à SQL Server pendant la tentative de récupération de la Session lors de la résilience des connexions et le regroupement de connexions à la fois sont activés, à l’origine de la session de suppression par le serveur
 
 ### <a name="bug-fixes-in-the-includemsconameincludesmsconamemdmd-odbc-driver-17-for-includessnoversionincludesssnoversionmdmd"></a>Correctifs de bogues dans le [!INCLUDE[msCoName](../../includes/msconame_md.md)] 17 du pilote ODBC pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]
 
-- Fixe l’envoi d’état incorrect à SQL Server pendant la tentative de récupération de la Session lors de la résilience des connexions et le regroupement de connexions à la fois sont activés, à l’origine de la session de suppression par le serveur
 - Correction d’un bogue où lorsque vous utilisez l’authentification Kerberos, l’insertion en bloc peut échouer avec l’erreur « accès refusé »
 - Solution de contournement supprimée d’un bogue unixODBC présente dans la version est inférieure à 2.3.1 (pilote a doublé les tailles de certaines mémoires tampon passé à unixODBC)
 - Fixe la résilience des connexions (reconnexion) négatif lors de l’utilisation de ColumnEncryption = activé

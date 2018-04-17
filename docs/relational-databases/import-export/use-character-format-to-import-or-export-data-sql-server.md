@@ -1,31 +1,31 @@
 ---
-title: "Utiliser le format caractère pour importer ou exporter des données (SQL Server) | Microsoft Docs"
-ms.custom: 
+title: Utiliser le format caractère pour importer ou exporter des données (SQL Server) | Microsoft Docs
+ms.custom: ''
 ms.date: 09/29/2016
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: import-export
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-bulk-import-export
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - data formats [SQL Server], character
 - character formats [SQL Server]
 ms.assetid: d925e66a-1a73-43cd-bc06-1cbdf8174a4d
-caps.latest.revision: 
+caps.latest.revision: 42
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: c3eff449d858ce95e1df141363571f73c0c5813d
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: HT
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="use-character-format-to-import-or-export-data-sql-server"></a>Utiliser le format caractère pour importer ou exporter des données (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -36,7 +36,7 @@ Le format caractère utilise le format de données de caractères pour toutes le
 > [!NOTE]
 >  Lors du transfert en bloc de données entre des instances de [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , si le fichier de données contient des données caractères Unicode mais aucun caractère étendu ni jeu de caractères codés sur deux octets (DBCS), utilisez le format de caractères Unicode. Pour plus d’informations, consultez [Utiliser le format caractère Unicode pour importer ou exporter des données &#40;SQL Server&#41;](../../relational-databases/import-export/use-unicode-character-format-to-import-or-export-data-sql-server.md).
   
-|Dans cette rubrique :|
+|Dans cette rubrique :|
 |---|
 |[Considérations relatives à l'utilisation du format caractère](#considerations)|
 |[Options de commande pour le format caractère](#command_options)|
@@ -69,7 +69,7 @@ Vous pouvez importer des données au format caractère dans une table à l’aid
   
 Le format caractère est pris en charge par les options de commande suivantes :  
   
-|Command|Option|Description|  
+|Command|Option| Description|  
 |-------------|------------|-----------------|  
 |bcp|**-c**|Force l’utilitaire bcp à utiliser les données de type caractère.*|  
 |BULK INSERT|DATAFILETYPE **='char'**|Utilise le format caractère lors de l'importation en bloc des données.|  
@@ -224,7 +224,7 @@ Pour utiliser des formats de données pour l'importation ou l'exportation en blo
   
 -   [Utiliser le format natif Unicode pour importer ou exporter des données &#40;SQL Server&#41;](../../relational-databases/import-export/use-unicode-native-format-to-import-or-export-data-sql-server.md)  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [bcp Utility](../../tools/bcp-utility.md)   
  [BULK INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md)   
  [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)   

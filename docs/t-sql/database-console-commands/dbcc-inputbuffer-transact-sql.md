@@ -1,16 +1,16 @@
 ---
 title: DBCC INPUTBUFFER (Transact-SQL) | Microsoft Docs
-ms.custom: 
-ms.date: 11/14/2017
+ms.custom: ''
+ms.date: 04/04/2018
 ms.prod: sql-non-specified
 ms.prod_service: sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|database-console-commands
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - DBCC INPUTBUFFER
@@ -26,16 +26,16 @@ helpviewer_keywords:
 - statements [SQL Server], last statement
 - DBCC INPUTBUFFER statement
 ms.assetid: a44d702b-b3fb-4950-8c8f-1adcf3f514ba
-caps.latest.revision: 
+caps.latest.revision: 51
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 0d36f0e25c0f5959053e028cdfc95babf69c4e48
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: f3292b45e9a0e73754bc4f3247c18c431f11271a
+ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="dbcc-inputbuffer-transact-sql"></a>DBCC INPUTBUFFER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -104,7 +104,7 @@ Sur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], l’une des condi
 SELECT @@spid;  
 ```
   
-Sur les niveaux [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Premium, l’autorisation VIEW DATABASE STATE est requise dans la base de données. Sur les niveaux [!INCLUDE[ssSDS](../../includes/sssds-md.md)] standard et de base, le compte administrateur [!INCLUDE[ssSDS](../../includes/sssds-md.md)] est requis.
+Pour les niveaux [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Premium et critique pour l’entreprise, l’autorisation VIEW DATABASE STATE est requise dans la base de données. Pour les niveaux [!INCLUDE[ssSDS](../../includes/sssds-md.md)] standard, de base et à usage général, le compte administrateur [!INCLUDE[ssSDS](../../includes/sssds-md.md)] est requis.
   
 ## <a name="examples"></a>Exemples  
 L'exemple suivant exécute `DBCC INPUTBUFFER` sur une seconde connexion tandis qu'une longue transaction est en cours d'exécution sur une connexion précédente.

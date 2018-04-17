@@ -1,16 +1,16 @@
 ---
-title: "Utilitaire d’exécution de package (dtexecui) | Microsoft Docs"
-ms.custom: 
+title: Utilitaire d’exécution de package (dtexecui) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: packages
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.dts.dtexecui.setvalues.f1
@@ -26,16 +26,16 @@ f1_keywords:
 helpviewer_keywords:
 - DTExecUI utility
 ms.assetid: 3d71df39-126b-4c8e-bd77-128bbd5b0887
-caps.latest.revision: 
+caps.latest.revision: 39
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: de1484e04318c45057213226016379326e670304
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: HT
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="execute-package-utility-dtexecui"></a>Utilitaire d’exécution de package (dtexecui)
   Utilisez l' **Utilitaire d'exécution de package** pour exécuter des packages [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . L’utilitaire exécute les packages stockés à l’un des trois emplacements suivants : la base de données [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , le magasin de packages [!INCLUDE[ssIS](../../includes/ssis-md.md)] et le système de fichiers. Cette interface utilisateur, qui peut être ouverte à partir de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou en tapant **dtexecui** à partir d’une invite de commandes, offre un autre moyen d’exécuter des packages à l’aide de l’outil d’invite de commandes **DTExec** .  
@@ -80,7 +80,7 @@ ms.lasthandoff: 01/25/2018
   
  Chacune des sélections ci-dessus comporte la série d'options suivante :  
   
- **Exécuter**  
+ **Execute**  
  Permet d'exécuter le package.  
   
  **Fermer**  
@@ -98,7 +98,7 @@ ms.lasthandoff: 01/25/2018
  **Utiliser l'authentification Windows**  
  Sélectionnez cette option pour utiliser l’authentification Windows et connectez-vous à l’aide d’un compte d’utilisateur [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.  
   
- **Utiliser l’authentification SQL Server**  
+ **Utiliser l'authentification SQL Server**  
  Sélectionnez cette option pour utiliser l’authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Quand un utilisateur se connecte avec un nom d’accès et un mot de passe spécifiés à partir d’une connexion non autorisée, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] réalise l’authentification en vérifiant si un compte de connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a été défini et si le mot de passe spécifié correspond à celui enregistré précédemment. Si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne peut pas trouver le compte de connexion, l'authentification échoue et l'utilisateur reçoit un message d'erreur.  
   
 > [!IMPORTANT]  
@@ -121,7 +121,7 @@ ms.lasthandoff: 01/25/2018
  **Utiliser l'authentification Windows**  
  Sélectionnez cette option pour utiliser l'authentification Windows et connectez-vous à l'aide d'un compte d'utilisateur Microsoft Windows.  
   
- **Utiliser l’authentification SQL Server**  
+ **Utiliser l'authentification SQL Server**  
  Cette option est désactivée quand vous exécutez un package stocké dans le **Magasin de packages SSIS**.  
   
  **Package**  
@@ -146,7 +146,7 @@ ms.lasthandoff: 01/25/2018
  **Supprimer**  
  Sélectionnez un fichier de configuration dans la liste, puis cliquez sur **Supprimer**.  
   
- **Exécuter**  
+ **Execute**  
  Permet d'exécuter le package.  
   
  **Fermer**  
@@ -168,7 +168,7 @@ ms.lasthandoff: 01/25/2018
  **Supprimer**  
  Permet de sélectionner un fichier de commandes dans la zone de texte, puis de le supprimer par le biais du bouton **Supprimer** .  
   
- **Exécuter**  
+ **Execute**  
  Permet d'exécuter le package.  
   
  **Fermer**  
@@ -187,7 +187,7 @@ ms.lasthandoff: 01/25/2018
  **Chaîne de connexion**  
  Modifie la chaîne de connexion d'un gestionnaire de connexions. Ce champ est modifiable uniquement lorsque la case à cocher **Gestionnaire de connexions** est activée.  
   
- **Exécuter**  
+ **Execute**  
  Permet d'exécuter le package.  
   
  **Fermer**  
@@ -212,7 +212,7 @@ ms.lasthandoff: 01/25/2018
  **Fichier de point de contrôle**  
  Affiche le fichier de points de contrôle que le package utilise, si vous activez les points de contrôle du package.  
   
- **...**  
+ **Parcourir**  
  Cliquez sur le bouton Parcourir **(…)** pour rechercher le fichier de points de contrôle au moyen de la boîte de dialogue **Ouvrir** , si vous activez les points de contrôle du package. Si un fichier de points de contrôle est déjà spécifié, il est remplacé par le fichier sélectionné.  
   
  **Substituer les options de redémarrage**  
@@ -276,13 +276,13 @@ ms.lasthandoff: 01/25/2018
  **GUID d'exécution**  
  Sélectionnez cette option pour générer un rapport sur le GUID de l'instance d'exécution du package.  
   
- **Message**  
+ **Boîte de**  
  Sélectionnez cette option pour générer un rapport sur les messages.  
   
  **Heure de début et heure de fin**  
  Sélectionnez cette option pour générer un rapport sur l'heure à laquelle le package a commencé et s'est terminé.  
   
- **Exécuter**  
+ **Execute**  
  Permet d'exécuter le package.  
   
  **Fermer**  
@@ -301,7 +301,7 @@ ms.lasthandoff: 01/25/2018
  **Supprimer**  
  Permet de sélectionner un module fournisseur d'informations pour le supprimer.  
   
- **Exécuter**  
+ **Execute**  
  Permet d'exécuter le package.  
   
  **Fermer**  
@@ -314,13 +314,13 @@ ms.lasthandoff: 01/25/2018
  **Chemin de la propriété**  
  Tapez le chemin d'accès à la propriété. Le chemin doit comporter une barre oblique inverse (\\) pour indiquer que l’élément suivant est un conteneur, un point pour indiquer que l’élément suivant est une propriété et des parenthèses pour indiquer un membre d’une collection. Il est possible d'identifier le membre par son index ou son nom. Par exemple, le chemin d'accès à une variable d'un package est : \Package.Variables[MyVariable].Value.  
   
- **Value**  
+ **Valeur**  
  Tapez la valeur de la propriété.  
   
  **Supprimer**  
  Sélectionnez le chemin d'accès à une propriété et cliquez dessus pour la supprimer.  
   
- **Exécuter**  
+ **Execute**  
  Permet d'exécuter le package.  
   
  **Fermer**  
@@ -351,7 +351,7 @@ ms.lasthandoff: 01/25/2018
  ID de version  
  Spécifiez le numéro d'identification de la version.  
   
- **Exécuter**  
+ **Execute**  
  Permet d'exécuter le package.  
   
  **Fermer**  
@@ -370,13 +370,13 @@ ms.lasthandoff: 01/25/2018
  **Command line**  
  Affiche la ligne de commande actuelle. Cet élément est modifiable si vous avez activé l'option de modifier la ligne de commande manuellement.  
   
- **Exécuter**  
+ **Execute**  
  Permet d'exécuter le package.  
   
  **Fermer**  
  Ferme la boîte de dialogue **Utilitaire d’exécution de package** .  
   
-## <a name="see-also"></a> Voir aussi  
- [Utilitaire dtexec](../../integration-services/packages/dtexec-utility.md)  
+## <a name="see-also"></a>Voir aussi  
+ [Utilitaire DTExec](../../integration-services/packages/dtexec-utility.md)  
   
   

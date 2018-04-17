@@ -1,28 +1,28 @@
 ---
-title: "Effectuer un « lift-and-shift » des charges de travail SQL Server Integration Services vers le cloud | Microsoft Docs"
+title: Effectuer un « lift-and-shift » des charges de travail SQL Server Integration Services vers le cloud | Microsoft Docs
 ms.date: 10/31/2017
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: lift-shift
 ms.suite: sql
-ms.custom: 
+ms.custom: ''
 ms.technology:
 - integration-services
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 36a844cb2dcda45701c29066b825e64a864d5757
-ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
+ms.openlocfilehash: 82a6ab09504edd0a5df17a05de62ae5fd44a1c18
+ms.sourcegitcommit: 8f1d1363e18e0c32ff250617ab6cb2da2147bf8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="lift-and-shift-sql-server-integration-services-workloads-to-the-cloud"></a>Effectuer un « lift-and-shift » des charges de travail SQL Server Integration Services vers le cloud
 Vous pouvez maintenant déplacer vos packages et charges de travail SQL Server Integration Services (SSIS) vers le cloud Azure.
--   Stockez et gérez les projets et packages SSIS dans la base de données de catalogues SSIS (SSISDB) sur Azure SQL Database.
+-   Stockez et gérez les projets et packages SSIS dans la base de données de catalogues SSIS (SSISDB) sur Azure SQL Database ou SQL Database Managed Instance (préversion).
 -   Exécutez des packages dans une instance du runtime d’intégration Azure SSIS, présenté dans le cadre d’Azure Data Factory version 2.
 -   Utilisez des outils familiers tels que SQL Server Management Studio (SSMS) pour ces tâches courantes.
 
@@ -38,7 +38,7 @@ Le tableau suivant met en évidence les différences entre une instance SSIS loc
 | Stockage | Runtime | Extensibilité |
 |---|---|---|
 | Local (SQL Server) | Runtime SSIS hébergé par SQL Server | SSIS Scale Out (dans SQL Server 2017 et versions ultérieures)<br/><br/>Solutions personnalisées (dans les versions antérieures de SQL Server) |
-| Sur Azure (SQL Database) | Runtime d’intégration Azure SSIS, un composant d’Azure Data Factory version 2 | Options de montée en charge pour le runtime d’intégration SSIS |
+| Dans Azure (SQL Database ou SQL Database Managed Instance (préversion)) | Runtime d’intégration Azure SSIS, un composant d’Azure Data Factory version 2 | Options de montée en charge pour le runtime d’intégration SSIS |
 | | | |
 
 Azure Data Factory héberge le moteur de runtime des packages SSIS sur Azure. Le moteur de runtime est appelé runtime d’intégration Azure SSIS (runtime d’intégration SSIS).
@@ -55,37 +55,42 @@ Vous devez provisionner une seule fois le runtime d’intégration SSIS. Vous po
 
 Data Factory prend également en charge d’autres types de runtime d’intégration. Pour plus d’informations sur le runtime d’intégration SSIS et les autres types de runtime d’intégration, consultez la section [Runtime d’intégration dans Azure Data Factory](https://docs.microsoft.com/azure/data-factory/concepts-integration-runtime).
 
-## <a name="prerequisites"></a>Prerequisites
-Les fonctionnalités décrites dans cet article ne nécessitent pas SQL Server 2017 ou SQL Server 2016.
+## <a name="version-info"></a>Informations de version
 
-Ces fonctionnalités nécessitent les versions suivantes de SQL Server Data Tools (SSDT) :
+Vous pouvez déployer n’importe quel package créé avec l’une des versions de SSIS sur Azure. Quand vous déployez un package sur Azure sans erreur de validation, le package est automatiquement mis à niveau avec le dernier format de package. Le package est donc toujours mis à niveau avec la dernière version de SSIS.
+
+Le processus de déploiement valide chaque package pour vérifier qu’il peut s’exécuter dans Azure SSIS Integration Runtime. Pour plus d’informations, consultez [Valider des packages SSIS déployés sur Azure](ssis-azure-validate-packages.md).
+
+## <a name="prerequisites"></a>Prérequis
+
+Les fonctionnalités décrites dans cet article nécessitent les versions suivantes de SQL Server Data Tools (SSDT) :
 -   Pour Visual Studio 2017, version 15.3 (préversion) ou version ultérieure.
 -   Pour Visual Studio 2015, version 17.2 ou version ultérieure.
 
-> [!NOTE]
-> Quand vous déployez des packages sur Azure, l’Assistant Déploiement de package met toujours à niveau les packages avec le format de package le plus récent.
-
 Pour plus d’informations sur les prérequis dans Azure, consultez [Déployer des packages SSIS sur Azure](https://docs.microsoft.com/azure/data-factory/tutorial-create-azure-ssis-runtime-portal).
 
-## <a name="ssis-features-on-azure"></a>Fonctionnalités SSIS sur Azure
-
-Quand vous provisionnez une instance de SQL Database pour héberger SSISDB, le Feature Pack Azure pour SSIS et le composant redistribuable Access sont également installés. Ces composants fournissent une connectivité aux fichiers **Excel et Access** et à diverses sources de données **Azure**, en plus des sources de données prises en charge par les composants intégrés. Vous ne pouvez pas installer de **composants tiers** pour SSIS pour le moment (notamment les composants tiers de Microsoft, tels que les composants Oracle et Teradata d’Attunity et les composants SAP BI).
+## <a name="provision-ssis-on-azure"></a>Provisionner SSIS sur Azure
+Avant de pouvoir déployer et exécuter des packages SSIS dans Azure, vous devez provisionner la base de données de catalogues SSIS (SSISDB) et Azure SSIS Integration Runtime. Suivez les étapes de provisionnement dans cet article : [Déployer des packages SSIS sur Azure](https://docs.microsoft.com/azure/data-factory/tutorial-create-azure-ssis-runtime-portal).
 
 Le **nom de l’instance SQL Database** qui héberge SSISDB devient la première partie du nom en quatre parties à utiliser quand vous déployez et gérez des packages à partir de SSDT et de SSMS - `<sql_database_name>.database.windows.net`.
 
-Vous devez utiliser le **modèle de déploiement de projet**, et non le modèle de déploiement de package, pour les projets que vous déployez sur SSISDB dans Azure SQL Database.
+Pour plus d’informations sur la connexion à la base de données de catalogues SSIS, consultez [Se connecter à la base de données de catalogues SSISDB sur Azure](ssis-azure-connect-to-catalog-database.md).
 
+## <a name="design-packages"></a>Concevoir des packages
 Vous continuez à **concevoir et générer des packages** localement dans SSDT, ou dans Visual Studio avec SSDT installé.
 
-Pour plus d’informations sur la connexion aux **sources de données locales** à partir du cloud avec l’authentification Windows, consultez [Se connecter à des sources de données locales avec l’authentification Windows](ssis-azure-connect-with-windows-auth.md).
+Pour plus d’informations sur la connexion à des sources de données locales à partir du cloud avec **l’authentification Windows**, consultez [Se connecter à des sources de données locales et des partages de fichiers Azure avec l’authentification Windows](ssis-azure-connect-with-windows-auth.md).
 
-## <a name="common-tasks"></a>Tâches courantes
+Pour plus d’informations sur la connexion à des fichiers et partages de fichiers, consultez [Stocker et récupérer des fichiers sur des partages de fichiers locaux et dans Azure avec SSIS](ssis-azure-files-file-shares.md).
 
-### <a name="provision"></a>Approvisionner
-Avant de pouvoir déployer et exécuter des packages SSIS dans Azure, vous devez provisionner la base de données de catalogues SSISDB et le runtime d’intégration Azure SSIS. Suivez les étapes de provisionnement dans cet article : [Déployer des packages SSIS sur Azure](https://docs.microsoft.com/azure/data-factory/tutorial-create-azure-ssis-runtime-portal).
+Quand vous provisionnez une instance de SQL Database pour héberger SSISDB, le Feature Pack Azure pour SSIS et le composant redistribuable Access sont également installés. Ces composants fournissent une connectivité à diverses sources de données **Azure** et aux fichiers **Excel et Access**, en plus des sources de données prises en charge par les composants intégrés.
 
-### <a name="deploy-and-run-packages"></a>Déployer et exécuter des packages
-Pour déployer des projets et exécuter des packages sur SQL Database, vous pouvez utiliser plusieurs outils et options de script de votre choix :
+Vous ne pouvez pas installer ou utiliser de **composants tiers** pour SSIS (notamment des composants tiers de Microsoft, tels que les composants Oracle et Teradata d’Attunity ou les composants SAP BI).
+
+## <a name="deploy-and-run-packages"></a>Déployer et exécuter des packages
+Vous devez utiliser le **modèle de déploiement de projet**, et non le modèle de déploiement de package, quand vous déployez des projets dans SSISDB sur Azure.
+
+Pour déployer des projets et exécuter des packages sur Azure, vous pouvez utiliser plusieurs outils et options de script de votre choix :
 -   SQL Server Management Studio (SSMS)
 -   Transact-SQL (à partir de SSMS, Visual Studio Code ou tout autre outil)
 -   Un outil en ligne de commande
@@ -94,12 +99,12 @@ Pour déployer des projets et exécuter des packages sur SQL Database, vous pouv
 
 Pour commencer, consultez [Déployer, exécuter et surveiller un package SSIS sur Azure](ssis-azure-deploy-run-monitor-tutorial.md).
 
-### <a name="monitor-packages"></a>Surveiller les packages
+## <a name="monitor-packages"></a>Surveiller les packages
 Pour surveiller les packages en cours d’exécution dans SSMS, vous pouvez utiliser l’un des outils de compte-rendu suivants dans SSMS.
 -   Cliquez avec le bouton droit sur **SSISDB**, puis sélectionnez **Opérations actives** pour ouvrir la boîte de dialogue **Opérations actives**.
 -   Sélectionnez un package dans l’Explorateur d’objets, cliquez avec le bouton droit, sélectionnez **Rapports**, **Rapports standard**, puis **Toutes les exécutions**.
 
-### <a name="schedule-packages"></a>Planifier les packages
+## <a name="schedule-packages"></a>Planifier les packages
 Pour planifier l’exécution des packages stockés dans SQL Database, vous pouvez utiliser les outils suivants :
 -   SQL Server Agent (local)
 -   Activité de procédure stockée SQL Server Data Factory

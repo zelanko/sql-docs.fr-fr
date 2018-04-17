@@ -1,16 +1,16 @@
 ---
 title: DATABASEPROPERTYEX (Transact-SQL) | Microsoft Docs
-ms.custom: 
-ms.date: 07/29/2017
+ms.custom: ''
+ms.date: 04/04/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - DATABASEPROPERTYEX
@@ -22,16 +22,16 @@ helpviewer_keywords:
 - displaying database properties
 - database properties [SQL Server]
 ms.assetid: 8a9e0ffb-28b5-4640-95b2-a54e3e5ad941
-caps.latest.revision: 
+caps.latest.revision: 84
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: a67b74ad595fdf7b6f3a63dbd2ea2c9e5793f54f
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: a04544f76b509e1461d26574cd2179ec63ee5ad8
+ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="databasepropertyex-transact-sql"></a>DATABASEPROPERTYEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -61,7 +61,7 @@ Expression représentant le nom de la propriété de base de données à renvoye
 |---|---|---|
 |Classement|Nom du classement par défaut de la base de données|Nom du classement<br /><br /> NULL = la base de données n'est pas démarrée.<br /><br /> Type de données de base : **nvarchar(128)**|  
 |ComparisonStyle|Style de comparaison Windows du classement. ComparisonStyle est une donnée bitmap calculée à l’aide des valeurs suivantes pour les styles possibles.<br /><br /> Ignorer la casse : 1<br /><br /> Ignorer les accents : 2<br /><br /> Ignorer le type de caractères Kana : 65536<br /><br /> Ignorer la largeur : 131072<br /><br /> <br /><br /> Par exemple, la valeur par défaut 196609 est le résultat de la combinaison des options permettant d'ignorer la casse, le type de caractères Kana et la largeur.|Retourne le style de comparaison.<br /><br /> Renvoie 0 pour tous les classements binaires.<br /><br /> Type de données de base : **int**|  
-|Édition|Édition de la base de données ou couche de service.|**S’applique à** : [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].<br /><br /> <br /><br /> Web = Édition Web de la base de données<br /><br /> Business = Édition Business de la base de données<br /><br /> Simple<br /><br /> Standard<br /><br /> Premium<br /><br /> Système (pour la base de données master)<br /><br /> NULL = la base de données n'est pas démarrée.<br /><br /> Type de données de base : **nvarchar**(64)|  
+|Édition|Édition de la base de données ou couche de service.|**S’applique à** : [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].<br /><br /> <br /><br /> Usage général<br /><br /> Critique pour l’entreprise<br /><br /> Simple<br /><br /> Standard<br /><br /> Premium<br /><br /> Système (pour la base de données master)<br /><br /> NULL = la base de données n'est pas démarrée.<br /><br /> Type de données de base : **nvarchar**(64)|  
 |IsAnsiNullDefault|La base de données suit les règles ISO d'autorisation des valeurs Null.|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = entrée non valide<br /><br /> Type de données de base : **int**|  
 |IsAnsiNullsEnabled|Toutes les comparaisons à une valeur NULL produisent le résultat UNKNOWN (inconnu).|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = entrée non valide<br /><br /> Type de données de base : **int**|  
 |IsAnsiPaddingEnabled|Les chaînes sont complétées à la même longueur avant leur comparaison ou insertion.|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = entrée non valide<br /><br /> Type de données de base : **int**|  

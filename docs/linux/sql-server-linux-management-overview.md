@@ -1,6 +1,6 @@
 ---
-title: "Gérer SQL Server sur Linux | Documents Microsoft"
-description: "Cet article fournit des liens vers les tâches de gestion courantes et des outils pour SQL Server en cours d’exécution sur Linux."
+title: Gérer SQL Server sur Linux | Documents Microsoft
+description: Cet article fournit des liens vers les tâches de gestion courantes et des outils pour SQL Server en cours d’exécution sur Linux.
 author: rothja
 ms.author: jroth
 manager: craigg
@@ -8,8 +8,8 @@ ms.date: 03/17/2017
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
 ms.technology: database-engine
 ms.assetid: 6bd8eb0b-593d-467e-87ea-ab1c4dbcd1ea
@@ -36,7 +36,7 @@ Presque tout ce dont vous pouvez faire dans un outil client peut également êtr
 
 ## <a name="sql-server-operations-studio-preview"></a>SQL Server Operations Studio (version préliminaire)
 
-Nouveau Microsoft SQL opérations Studio (version préliminaire) est un outil d’inter-plateformes de gestion SQL Server. Pour plus d’informations, consultez [opérations Studio (version préliminaire) de Microsoft SQL](../sql-operations-studio/what-is.md).
+Nouveau Microsoft SQL Operations Studio (preview) est un outil d’inter-plateformes de gestion SQL Server. Pour plus d’informations, consultez [Microsoft SQL Operations Studio (preview)](../sql-operations-studio/what-is.md).
 
 ## <a name="sql-server-management-studio-on-windows"></a>SQL Server Management Studio sur Windows
 

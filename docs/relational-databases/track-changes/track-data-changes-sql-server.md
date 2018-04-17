@@ -1,16 +1,16 @@
 ---
-title: "Suivre les modifications de données (SQL Server) | Microsoft Docs"
-ms.custom: 
+title: Suivre les modifications de données (SQL Server) | Microsoft Docs
+ms.custom: ''
 ms.date: 08/08/2016
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: track-changes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - change data capture [SQL Server], compared to change tracking
@@ -22,16 +22,16 @@ helpviewer_keywords:
 - change data capture [SQL Server], security
 - change data capture [SQL Server], other SQL Server features and
 ms.assetid: 7a34be46-15b4-4b6b-8497-cfd8f9f14234
-caps.latest.revision: 
+caps.latest.revision: 39
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: d4f7c4422a192f60fec25e56553558041a579483
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 99a8b9bc80dc23ab4d67d72acdb507447d8e9433
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/08/2018
 ---
 # <a name="track-data-changes-sql-server"></a>Suivre les modifications de données (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -50,16 +50,16 @@ ms.lasthandoff: 02/09/2018
   
 -   Des fonctions sont fournies pour l'obtention des informations de modification.  
   
--   Faible charge de traitement des opérations DML. Le suivi synchrone des modifications entraîne toujours une charge de traitement. Toutefois, le recours au suivi des modifications peut contribuer à réduire cette charge. La charge de traitement est souvent inférieure à celle qu'entraînent des solutions alternatives, en particulier lorsque celles-ci requièrent des déclencheurs d'utilisation.  
+-   Faible charge de traitement des opérations DML. Le suivi synchrone des modifications entraîne toujours une charge de traitement. Toutefois, le recours au suivi des modifications peut contribuer à réduire cette charge. La charge de traitement est souvent inférieure à celle qu’entraînent des solutions alternatives, en particulier lorsque celles-ci demandent d’utiliser des déclencheurs.  
   
 -   Le suivi des modifications est basé sur des transactions validées. L'ordre des modifications est basé sur l'heure de validation des transactions. Cela favorise l'obtention de résultats fiables lorsque sont impliquées des transactions longues ou qui se chevauchent. Les solutions personnalisées qui utilisent des valeurs **timestamp** doivent être conçues spécifiquement pour gérer ces scénarios.  
   
--   Les outils standard sont disponibles pour les opérations de configuration et de gestion. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] fournit des instructions DDL standard, [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], des affichages catalogue et des autorisations de sécurité.  
+-   Les outils standard sont disponibles pour les opérations de configuration et de gestion. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] fournit des instructions DDL standard, [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], des vues de catalogue et des autorisations de sécurité.  
   
-## <a name="feature-differences-between-change-data-capture-and-change-tracking"></a>Différences de fonctionnalités entre la capture de données modifiées et le suivi des modifications  
- Le tableau suivant répertorie les différences de fonctionnalités entre la capture de données modifiées et le suivi des modifications. Le mécanisme de suivi de la capture de données modifiées implique une capture asynchrone des modifications à partir du journal des transactions afin que les modifications soient disponibles après l'opération DML. Dans le suivi des modifications, le mécanisme de suivi implique le suivi synchrone des modifications en parallèle avec les opérations DML, afin que les informations relatives aux modifications soient disponibles immédiatement.  
+## <a name="feature-differences-between-change-data-capture-and-change-tracking"></a>Différences de fonctionnalités entre la capture des changements de données et le suivi des modifications  
+ Le tableau suivant répertorie les différences de fonctionnalités entre la capture des changements de données et le suivi des modifications. Le mécanisme de suivi de la capture des changements de données implique une capture asynchrone des modifications à partir du journal des transactions afin que les modifications soient disponibles après l'opération DML. Dans le suivi des modifications, le mécanisme de suivi implique le suivi synchrone des modifications en parallèle avec les opérations DML, afin que les informations relatives aux modifications soient disponibles immédiatement.  
   
-|Fonctionnalité|Capture des données modifiées|Suivi des modifications|  
+|Fonctionnalité|Capture des changements de données|Suivi des modifications|  
 |-------------|-------------------------|---------------------|  
 |**Modifications suivies**|||  
 |Modifications DML|Oui|Oui|  
@@ -68,15 +68,15 @@ ms.lasthandoff: 02/09/2018
 |Si la colonne a été modifiée|Oui|Oui|  
 |Type DML|Oui|Oui|  
   
-##  <a name="Capture"></a> Change Data Capture  
- La capture de données modifiées fournit des informations de modification historiques pour une table utilisateur en capturant à la fois le fait que des modifications DML aient été apportées et les données effectivement modifiées. Les modifications sont capturées à l'aide d'un processus asynchrone qui lit le journal des transactions et n'a qu'un faible impact sur le système.  
+##  <a name="Capture"></a> Capture des changements de données  
+ La capture des changements de données fournit l’historique des changements d’une table utilisateur en capturant à la fois le fait que les changements DML aient été apportées et les données effectivement changées. Les changements sont capturés à l'aide d'un processus asynchrone qui lit le journal des transactions et n'a qu'un faible impact sur le système.  
   
- Comme indiqué dans l'illustration suivante, les modifications apportées aux tables utilisateur sont capturées dans des tables de modifications correspondantes. Ces tables de modifications fournissent une vue historique des modifications au fil du temps. Les fonctions de [capture de données modifiées](../../relational-databases/system-functions/change-data-capture-functions-transact-sql.md)fournies par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autorisent une utilisation facile et systématique des données modifiées.  
+ Comme indiqué dans l'illustration suivante, les changements apportés aux tables utilisateur sont capturés dans des tables de changements correspondantes. Ces tables de changement fournissent une vue historique des changements au fil du temps. Les fonctions de [capture des changements de données](../../relational-databases/system-functions/change-data-capture-functions-transact-sql.md) fournies par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permettent de consommer facilement et systématiquement les changements de données.  
   
- ![Illustration conceptuelle de la capture des données modifiées](../../relational-databases/track-changes/media/cdcart1.gif "Illustration conceptuelle de la capture des données modifiées")  
+ ![Illustration conceptuelle de la capture des changements de données](../../relational-databases/track-changes/media/cdcart1.gif "Illustration conceptuelle de la capture des changements de données")  
   
 ### <a name="security-model"></a>Modèle de sécurité  
- Cette section décrit le modèle de sécurité de la capture de données modifiées.  
+ Cette section décrit le modèle de sécurité de la capture des changements de données.  
   
  **Configuration et administration**  
  Pour activer ou désactiver la capture de données modifiées pour une base de données, l’appelant de [sys.sp_cdc_enable_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-db-transact-sql.md) ou [sys.sp_cdc_disable_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-disable-db-transact-sql.md) doit être membre du rôle serveur fixe **sysadmin**. Activer et désactiver la capture de données modifiées au niveau de la table exigent que l’appelant de [sys.sp_cdc_enable_table &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md) et [sys.sp_cdc_disable_table &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-disable-table-transact-sql.md) soit membre du rôle sysadmin ou du rôle de base de données **db_owner**.  
@@ -87,7 +87,7 @@ ms.lasthandoff: 02/09/2018
  Pour accéder aux données modifiées associées à une instance de capture, l'utilisateur doit pouvoir accéder à toutes les colonnes capturées de la table source associée. De plus, si un rôle de régulation est spécifié lors de la création de l'instance de capture, l'appelant doit également être membre du rôle de régulation spécifié. Les autres fonctions de capture de données modifiées générales pour accéder aux métadonnées seront accessibles à tous les utilisateurs de base de données par le biais du rôle public, bien que l'accès aux métadonnées retournées soit en général également régulé par le biais de l'accès choisi aux tables sources sous-jacentes et par l'appartenance aux rôles de régulation définis.  
   
  **Opérations DDL pour modifier les tables sources activées pour la capture de données modifiées**  
- Lorsqu’une table est activée pour la capture de données modifiées, des opérations DDL peuvent être appliquées à la table uniquement par un membre du rôle serveur fixe **sysadmin**, un membre du **rôle de base de données db_owner**ou un membre du **rôle de base de données db_ddladmin**. Les utilisateurs autorisés de manière explicite à effectuer des opérations DDL sur la table recevront l'erreur 22914 s'ils tentent d'effectuer cette opération.  
+ Lorsqu’une table est activée pour la capture de données modifiées, des opérations DDL peuvent être appliquées à la table uniquement par un membre du rôle serveur fixe **sysadmin**, un membre du **rôle de base de données db_owner**ou un membre du **rôle de base de données db_ddladmin**. Les utilisateurs autorisés de manière explicite à effectuer des opérations DDL sur la table recevront l'erreur 22914 s'ils tentent d'effectuer ces opérations.  
   
 ### <a name="data-type-considerations-for-change-data-capture"></a>Considérations relatives aux types de données pour la capture de données modifiées  
  Tous les types de colonne de base sont pris en charge par la capture de données modifiées. Le tableau suivant indique le comportement et les limites de plusieurs types de colonne.  
@@ -180,9 +180,9 @@ ms.lasthandoff: 02/09/2018
 ## <a name="see-also"></a> Voir aussi  
  [Fonctions de capture de données modifiées &#40;Transact-SQL&#41;](../../relational-databases/system-functions/change-data-capture-functions-transact-sql.md)   
  [Fonctions de suivi des modifications &#40;Transact-SQL&#41;](../../relational-databases/system-functions/change-tracking-functions-transact-sql.md)   
- [Procédures stockées de capture des données modifiées &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/change-data-capture-stored-procedures-transact-sql.md)   
- [Tables de capture des données modifiées &#40;Transact-SQL&#41;](../../relational-databases/system-tables/change-data-capture-tables-transact-sql.md)   
- [Vues de gestion dynamique liées à la capture des données modifiées &#40;Transact-SQL&#41;](http://msdn.microsoft.com/library/2a771d7d-693a-4f56-9227-02cd00e0e200)  
+ [Procédures stockées de capture des changements de données &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/change-data-capture-stored-procedures-transact-sql.md)   
+ [Tables de capture des changements de données &#40;Transact-SQL&#41;](../../relational-databases/system-tables/change-data-capture-tables-transact-sql.md)   
+ [Vues de gestion dynamique liées à la capture des changements de données &#40;Transact-SQL&#41;](http://msdn.microsoft.com/library/2a771d7d-693a-4f56-9227-02cd00e0e200)  
   
   
 

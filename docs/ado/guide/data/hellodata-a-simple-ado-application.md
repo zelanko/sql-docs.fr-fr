@@ -1,31 +1,31 @@
 ---
-title: "HelloData : Une Application ADO Simple | Documents Microsoft"
+title: 'HelloData : Une Application ADO Simple | Documents Microsoft'
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - HelloData sample application [ADO]
 - ADO, samples
 ms.assetid: de4bcd56-dac2-45e6-95ab-9fd7f25878fc
-caps.latest.revision: 
+caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 007f2842279607c722f6216d771751209ff723bc
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="hellodata-a-simple-ado-application"></a>HelloData : Une Application ADO Simple
 Cette application simple passe en revue chacune des quatre principales opérations ADO : mise en route, d’examiner, de modification et de mise à jour des données. Ces opérations sont effectuées sur la base de données Northwind fournie avec Microsoft® SQL Server. Pour vous concentrer sur les notions de base de l’objet ADO et éviter l’encombrement du code, la gestion des erreurs dans l’exemple est minime.  

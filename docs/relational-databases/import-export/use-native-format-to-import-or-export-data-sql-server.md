@@ -1,31 +1,31 @@
 ---
-title: "Utiliser le format natif pour importer ou exporter des données (SQL Server) | Microsoft Docs"
-ms.custom: 
+title: Utiliser le format natif pour importer ou exporter des données (SQL Server) | Microsoft Docs
+ms.custom: ''
 ms.date: 09/30/2016
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: import-export
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-bulk-import-export
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - native data format [SQL Server]
 - data formats [SQL Server], native
 ms.assetid: eb279b2f-0f1f-428f-9b8f-2a7fc495b79f
-caps.latest.revision: 
+caps.latest.revision: 43
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 6c979bd304e2715c587596d73c9e750b5935078b
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: HT
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="use-native-format-to-import-or-export-data-sql-server"></a>Utiliser le format natif pour importer ou exporter des données (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -42,7 +42,7 @@ Le format natif préserve les types de données native d'une base de données. I
   
 L'utilisation d'un format natif entre tables identiques permet de gagner du temps et de l'espace puisque les conversions superflues des types de données à partir de et vers le format caractère sont éliminées. Pour atteindre la vitesse de transfert optimale, quelques contrôles sont effectués au niveau du formatage des données. Pour empêcher que des problèmes ne surviennent au niveau des données chargées, tenez compte des restrictions suivantes.  
 
-|Dans cette rubrique :|
+|Dans cette rubrique :|
 |---|
 |[Restrictions](#restrictions)|
 |[Traitement des données au format natif par l'utilitaire bcp](#considerations)|
@@ -92,7 +92,7 @@ Vous pouvez importer des données au format natif dans une table à l’aide de 
 
 Le format natif est pris en charge par les options de commande suivantes :  
 
-|Command|Option|Description|  
+|Command|Option| Description|  
 |-------------|------------|-----------------|  
 |bcp|**-n**|Force l’utilitaire bcp à utiliser les types de données natifs des données.*|  
 |BULK INSERT|DATAFILETYPE **='native'**|Utilise les types de données native ou widenative des données. Notez que DATAFILETYPE n'est pas nécessaire si un fichier de format spécifie les types de données.|  
@@ -155,7 +155,7 @@ Notepad D:\BCP\myNative.fmt
 Les exemples ci-dessous utilisent la base de données et les fichiers de format créés ci-dessus.
 
 ### **Utilisation de bcp et du format natif pour exporter des données**<a name="bcp_native_export"></a>
-**-n** et commande **OUT** .  Remarque : Le fichier de données créé dans cet exemple est utilisé dans tous les exemples suivants.  À partir d’une invite de commandes, entrez les commandes suivantes :
+Commutateur**-n** et commande **OUT** .  Remarque : Le fichier de données créé dans cet exemple est utilisé dans tous les exemples suivants.  À partir d’une invite de commandes, entrez les commandes suivantes :
 
 ```cmd
 bcp TestDatabase.dbo.myNative OUT D:\BCP\myNative.bcp -T -n
@@ -165,7 +165,7 @@ NOTEPAD D:\BCP\myNative.bcp
 ```
 
 ### **Utilisation de bcp et du format natif pour importer des données sans un fichier de format**<a name="bcp_native_import"></a>
-**-n** et commande **IN** .  À partir d’une invite de commandes, entrez les commandes suivantes :
+Commutateur**-n** et commande **IN** .  À partir d’une invite de commandes, entrez les commandes suivantes :
 
 ```cmd
 REM Truncate table (for testing)
@@ -179,7 +179,7 @@ SQLCMD -Q "SELECT * FROM TestDatabase.dbo.myNative;"
 ```
 
 ### **Utilisation de bcp et du format natif pour importer des données avec un fichier de format non XML**<a name="bcp_native_import_fmt"></a>
-**-n** ou **-f** , et commande **IN** .  À partir d’une invite de commandes, entrez les commandes suivantes :
+Commutateurs**-n** et **-f** switches et **IN** commet.  À partir d’une invite de commandes, entrez les commandes suivantes :
 
 ```cmd
 REM Truncate table (for testing)
@@ -249,7 +249,7 @@ Pour utiliser des formats de données pour l'importation ou l'exportation en blo
   
 -   [Utiliser le format natif Unicode pour importer ou exporter des données &#40;SQL Server&#41;](../../relational-databases/import-export/use-unicode-native-format-to-import-or-export-data-sql-server.md)  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [bcp Utility](../../tools/bcp-utility.md)   
  [BULK INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md)   
  [Types de données &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   

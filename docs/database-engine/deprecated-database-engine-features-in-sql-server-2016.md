@@ -1,32 +1,32 @@
 ---
-title: "Fonctionnalités du moteur de base de données dépréciées dans SQL Server 2016 | Microsoft Docs"
-ms.custom: 
+title: Fonctionnalités du moteur de base de données dépréciées dans SQL Server 2016 | Microsoft Docs
+ms.custom: ''
 ms.date: 06/12/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: database-engine
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - deprecated features [SQL Server]
 - Database Engine [SQL Server], backward compatibility
 - deprecation [SQL Server], feature list
 ms.assetid: c10eeaa5-3d3c-49b4-a4bd-5dc4fb190142
-caps.latest.revision: 
+caps.latest.revision: 215
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 2c85ec6c5975b8053dfd5c87a575fe79f61d5170
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 785a3740d27b57bc4aee02f3cfccfd22b95d987f
+ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="deprecated-database-engine-features-in-sql-server-2016"></a>Fonctionnalités du moteur de base de données déconseillées dans SQL Server 2016
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -54,11 +54,10 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |Objets de base de données|Possibilité de retourner les jeux de résultats à partir de déclencheurs|None|Le déclencheur retourne des résultats|12|  
 |Chiffrement|Le chiffrement à l'aide de RC4 ou RC4_128 est déconseillé et est planifié pour être supprimé dans la prochaine version. Le déchiffrement de RC4 et RC4_128 n'est pas déconseillé.|Utilisez un autre algorithme de chiffrement, par exemple AES.|Algorithme de chiffrement déconseillé|253|  
 |Serveurs distants|sp_addremotelogin<br /><br /> sp_addserver<br /><br /> sp_dropremotelogin<br /><br /> sp_helpremotelogin<br /><br /> sp_remoteoption|Remplacez les serveurs distants à l'aide de serveurs liés. sp_addserver ne peut être utilisé qu’avec l’option « local ».|sp_addremotelogin<br /><br /> sp_addserver<br /><br /> sp_dropremotelogin<br /><br /> sp_helpremotelogin<br /><br /> sp_remoteoption|70<br /><br /> 69<br /><br /> 71<br /><br /> 72<br /><br /> 73|  
-|Serveurs distants|@@remserver|Remplacez les serveurs distants à l'aide de serveurs liés.|None|None|  
+|Serveurs distants|\@\@remserver|Remplacez les serveurs distants à l'aide de serveurs liés.|None|None|  
 |Serveurs distants|SET REMOTE_PROC_TRANSACTIONS|Remplacez les serveurs distants à l'aide de serveurs liés.|SET REMOTE_PROC_TRANSACTIONS|110|  
 |Options définies|**SET ROWCOUNT** pour les instructions **INSERT**, **UPDATE**et **DELETE**|Mot clé TOP|SET ROWCOUNT|109|  
 |Indicateurs de table|Indicateur de table HOLDLOCK sans parenthèses.|Utilisez HOLDLOCK avec la parenthèse.|Indicateur de table HOLDLOCK sans parenthèses|167|  
-|Outils|sqlmaint (utilitaire)|Utilisez la fonction de plan de maintenance [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] |None|None|  
   
 ## <a name="features-not-supported-in-a-future-version-of-sql-server"></a>Fonctionnalités non prises en charge dans une future version de SQL Server  
  Les fonctions suivantes du [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] seront prises en charge dans la prochaine version de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], mais seront supprimées dans une version ultérieure. La version spécifique de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] n'a pas été déterminée.  
@@ -158,7 +157,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|ROWGUIDCOL comme nom de colonne dans les instructions DML.|Utilisez $rowguid.|ROWGUIDCOL|182|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|IDENTITYCOL comme nom de colonne dans les instructions DML.|Utilisez $identity.|IDENTITYCOL|183|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|Utilisation de #, ## comme table temporaire et noms de procédure stockée temporaires.|Utilisez au moins un caractère supplémentaire.|'#' et '##' comme nom des tables temporaires et procédures stockées|185|  
-|[!INCLUDE[tsql](../includes/tsql-md.md)]|Utilisation de @, @@ ou @@ comme identificateurs [!INCLUDE[tsql](../includes/tsql-md.md)].|N'utilisez pas @, @@ ou des noms commençant par @@ comme identificateurs.|'@' et noms commençant par '@@' comme identificateurs [!INCLUDE[tsql](../includes/tsql-md.md)]|186.|  
+|[!INCLUDE[tsql](../includes/tsql-md.md)]|Utilisation de \@, \@\@ ou \@\@ comme identificateurs [!INCLUDE[tsql](../includes/tsql-md.md)].|N’utilisez pas \@, \@\@ ou des noms commençant par \@\@ comme identificateurs.|\@ et noms commençant par \@\@ comme identificateurs [!INCLUDE[tsql](../includes/tsql-md.md)]|186.|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|Utilisation du mot clé DEFAULT comme valeur par défaut.|N'utilisez pas le mot DEFAULT comme valeur par défaut.|Mot clé DEFAULT comme valeur par défaut.|187|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|Utilisation d'un espace comme séparateur entre les indicateurs de table.|Utilisez une virgule pour séparer les indicateurs de table.|Indicateurs de table multiples sans virgule|168|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|La liste de sélection d'une vue indexée d'agrégation doit contenir COUNT_BIG (*) dans le mode de compatibilité 90.|Utilisez COUNT_BIG (*).|Liste de sélection de vue d'index sans COUNT_BIG (*)|2|  

@@ -1,6 +1,6 @@
 ---
-title: "Les widgets Insight permet d’analyser les serveurs et bases de données SQL opérations Studio (version préliminaire) | Documents Microsoft"
-description: "Découvrez les widgets insight dans Studio des opérations SQL (version préliminaire)."
+title: Les widgets Insight permet d’analyser les serveurs et bases de données SQL Operations Studio (preview) | Documents Microsoft
+description: Découvrez les widgets insight dans SQL Operations Studio (preview).
 ms.custom: tools|sos
 ms.date: 11/15/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,7 @@ ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
 ms.component: sos
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article"
 author: stevestein
 ms.author: sstein

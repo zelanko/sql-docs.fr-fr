@@ -1,26 +1,26 @@
 ---
-title: "Importer des données d’Excel vers SQL | Microsoft Docs"
-ms.custom: 
-ms.date: 08/02/2017
+title: Importer des données d’Excel vers SQL | Microsoft Docs
+ms.custom: ''
+ms.date: 04/02/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: import-export
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 158a6c72c0c172b061d79bb52a276bacc22c0fcd
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: b935bd332e5cbfa481f9400968a7c8188e2bc603
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="import-data-from-excel-to-sql-server-or-azure-sql-database"></a>Importer des données d’Excel vers SQL Server ou Azure SQL Database
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -34,8 +34,10 @@ Il existe plusieurs moyens d’importer des données provenant de fichiers Excel
     -   BCP
     -   Azure Data Factory
 
+La description complète des outils et services complexes, par exemple SSIS et Azure Data Factory, n’entre pas dans le cadre de cette vue d’ensemble. Pour plus d’informations sur la solution qui vous intéresse, suivez les liens fournis.
+
 > [!IMPORTANT]
-> La description complète des outils et services complexes, par exemple SSIS et Azure Data Factory, n’entre pas dans le cadre de cette vue d’ensemble. Pour plus d’informations sur la solution qui vous intéresse, suivez les liens fournis.
+> Pour obtenir des informations détaillées sur la connexion à des fichiers Excel, et sur les limitations et les problèmes connus liés au chargement de données depuis ou vers des fichiers Excel, consultez [Charger des données depuis ou vers Excel avec SQL Server Integration Services (SSIS)](../../integration-services/load-data-to-from-excel-with-ssis.md).
 
 ## <a name="sql-server-import-and-export-wizard"></a>Assistant Importation et Exportation SQL Server
 
@@ -209,6 +211,5 @@ Pour apprendre à copier des données avec Azure Data Factory, consultez les rub
 -   [Déplacer des données grâce à l’activité de copie](https://docs.microsoft.com/azure/data-factory/data-factory-data-movement-activities)
 -   [Didacticiel : Créer un pipeline avec activité de copie à l’aide du Portail Azure](https://docs.microsoft.com/azure/data-factory/data-factory-copy-data-from-azure-blob-storage-to-sql-database)
 
-## <a name="next-steps"></a>Étapes suivantes
-
-Pour plus d’informations sur la solution qui vous intéresse, suivez les liens fournis.
+## <a name="see-also"></a> Voir aussi
+[Charger des données depuis ou vers Excel avec SQL Server Integration Services (SSIS)](../../integration-services/load-data-to-from-excel-with-ssis.md)

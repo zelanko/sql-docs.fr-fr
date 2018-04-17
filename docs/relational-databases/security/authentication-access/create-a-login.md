@@ -1,16 +1,16 @@
 ---
-title: "Créer un compte de connexion | Microsoft Docs"
-ms.custom: 
+title: Créer un compte de connexion | Microsoft Docs
+ms.custom: ''
 ms.date: 08/01/2016
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: security
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.swb.login.status.f1
@@ -25,16 +25,16 @@ helpviewer_keywords:
 - Create login [SQL Server]
 - SQL Server logins
 ms.assetid: fb163e47-1546-4682-abaa-8c9494e9ddc7
-caps.latest.revision: 
+caps.latest.revision: 29
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
 ms.openlocfilehash: 1cfca2d37697e8c9942ac042857784e68dca7088
-ms.sourcegitcommit: 50e54dda407f362262b86941f68b7d80516db7fb
-ms.translationtype: HT
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/06/2017
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="create-a-login"></a>Créer un compte de connexion
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -170,9 +170,9 @@ ms.lasthandoff: 12/06/2017
   
 1.  Cliquez sur **Rechercher**.  
   
-2.  Dans la boîte de dialogue **Ajouter des objets**, sélectionnez l’une des options suivantes : **Objets spécifiques…**, **Tous les objets des types…** ou **Le serveur** *nom_serveur*. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+2.  Dans le **ajouter des objets** boîte de dialogue, sélectionnez une des options suivantes : **des objets spécifiques...** , **Tous les objets des types...** , ou **le serveur *** nom_serveur*. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-    > **REMARQUE :** La sélection de l’option **Le serveur***nom_serveur* remplit automatiquement la grille supérieure avec tous les objets sécurisables de ce serveur.  
+    > **Remarque :** sélection **le serveur *** nom_serveur* remplit automatiquement la grille supérieure avec tous les objets sécurisables de ce serveur.  
   
 3.  Si vous sélectionnez **Objets spécifiques…**:  
   
@@ -235,7 +235,7 @@ ms.lasthandoff: 12/06/2017
 ##  <a name="TsqlProcedure"></a> Créer une connexion à l’aide de l’authentification Windows à l’aide de T-SQL  
   
  
-1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
+1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   
 2.  Dans la barre d'outils standard, cliquez sur **Nouvelle requête**.  
   
@@ -251,7 +251,7 @@ ms.lasthandoff: 12/06/2017
   
 ## <a name="create-a-login-using-sql-server-authentication-with-ssms"></a>Créer une connexion via l’authentification SQL Server avec SSMS  
   
-1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
+1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   
 2.  Dans la barre d'outils standard, cliquez sur **Nouvelle requête**.  
   

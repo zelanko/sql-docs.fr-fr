@@ -1,16 +1,16 @@
 ---
-title: "Guide de conception d’index SQL Server | Microsoft Docs"
-ms.custom: 
-ms.date: 12/1/2017
+title: Guide de conception d’index SQL Server | Microsoft Docs
+ms.custom: ''
+ms.date: 04/03/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: relational-databases-misc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - index design guide
@@ -24,16 +24,16 @@ helpviewer_keywords:
 - sql server index design guide
 - sql server index design guidance
 ms.assetid: 11f8017e-5bc3-4bab-8060-c16282cfbac1
-caps.latest.revision: 
+caps.latest.revision: 3
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: c11d217a3818d872071bb466ac2221e2c8adc3f7
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: b6e1617f3ea9d4f725d2a95b9b1d55fbacf85876
+ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="sql-server-index-design-guide"></a>Guide de conception d'index SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -630,7 +630,7 @@ WHERE b = CONVERT(Varbinary(4), 1);
 
 Un *columnstore index* est une technologie permettant de stocker, extraire et gérer les données à l'aide d'un format de données en colonnes, appelé columnstore. Pour plus d’informations, consultez [Index columnstore - Présentation](../relational-databases/indexes/columnstore-indexes-overview.md). 
 
-**S'applique à**: [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] jusqu'à [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].
+Pour obtenir des informations de version, consultez [Index columnstore - Nouveautés](/sql/relational-databases/indexes/columnstore-indexes-what-s-new).
 
 ### <a name="columnstore-index-architecture"></a>Architecture des index columnstore
 
@@ -649,7 +649,7 @@ Un index columnstore stocke physiquement la plupart des données au format colum
 
 Un index columnstore stocke également physiquement des lignes dans un format rowstore appelé « deltastore ». Le deltastore, également appelé « rowgroups delta », est un espace de stockage pour les lignes qui sont en trop petit nombre pour bénéficier de la compression dans le columnstore. Chaque rowgroup delta est implémenté comme un index B-tree cluster. 
 
-- Un **deltastore** est un espace de stockage pour les lignes qui sont en trop petit nombre pour être compressées dans le columnstore. Le deltastore est un rowstore. 
+- Le **deltastore** est un espace de stockage pour les lignes qui sont en trop petit nombre pour être compressées dans le columnstore. Le deltastore stocke les lignes au format rowstore. 
   
 #### <a name="operations-are-performed-on-rowgroups-and-column-segments"></a>Les opérations sont effectuées sur des rowgroups et des segments de colonne
 

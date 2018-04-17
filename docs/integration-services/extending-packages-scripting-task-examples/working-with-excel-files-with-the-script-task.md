@@ -1,15 +1,15 @@
 ---
-title: "Utilisation de fichiers Excel avec la tâche de script | Microsoft Docs"
-ms.custom: 
-ms.date: 03/17/2017
+title: Utilisation de fichiers Excel avec la tâche de script | Microsoft Docs
+ms.custom: ''
+ms.date: 04/02/2018
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: extending-packages-scripting-task-examples
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
@@ -20,39 +20,30 @@ helpviewer_keywords:
 - Script task [Integration Services], examples
 - Excel [Integration Services]
 ms.assetid: b8fa110a-2c9c-4f5a-8fe1-305555640e44
-caps.latest.revision: 
+caps.latest.revision: 35
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: bfbe8efdeab1af1ba6c802d69abdce4b1b4696fa
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: a533795d6d6017c885b887e35b8e996ab82493df
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="working-with-excel-files-with-the-script-task"></a>Utilisation de fichiers Excel avec la tâche de script
-  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] fournit le gestionnaire de connexions Excel, la source Excel et la destination Excel pour utiliser des données stockées dans des feuilles de calcul au format de fichier [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel. Les techniques décrites dans cette rubrique utilisent la tâche de script pour obtenir des informations sur les bases de données (fichiers de classeur) et tables (feuilles de calcul et plages nommées) Excel disponibles. Ces exemples peuvent être modifiés facilement afin d'utiliser l'une des autres sources de données basées sur des fichiers prises en charge par le fournisseur OLE DB [!INCLUDE[msCoName](../../includes/msconame-md.md)] Jet.  
+  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] fournit le gestionnaire de connexions Excel, la source Excel et la destination Excel pour utiliser des données stockées dans des feuilles de calcul au format de fichier [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel. Les techniques décrites dans cette rubrique utilisent la tâche de script pour obtenir des informations sur les bases de données (fichiers de classeur) et tables (feuilles de calcul et plages nommées) Excel disponibles.
   
- [Configuration d’un package pour tester les exemples](#configuring)  
-  
- [Exemple 1 : vérifier si un fichier Excel existe](#example1)  
-  
- [Exemple 2 : vérifier si une table Excel existe](#example2)  
-  
- [Exemple 3 : obtenir la liste des fichiers Excel contenus dans un dossier](#example3)  
-  
- [Exemple 4 : obtenir la liste des tables contenues dans un fichier Excel](#example4)  
-  
- [Affichage des résultats des exemples](#testing)  
-  
-> [!NOTE]  
->  Si vous souhaitez créer une tâche plus facilement réutilisable sur plusieurs packages, envisagez d'utiliser le code indiqué dans l'exemple de tâche de script comme point de départ d'une tâche personnalisée. Pour plus d’informations, consultez [Développement d’une tâche personnalisée](../../integration-services/extending-packages-custom-objects/task/developing-a-custom-task.md).  
-  
+> [!TIP]  
+>  Si vous souhaitez créer une tâche réutilisable sur plusieurs packages, utilisez le code indiqué dans l’exemple de tâche de script comme point de départ d’une tâche personnalisée. Pour plus d’informations, consultez [Développement d’une tâche personnalisée](../../integration-services/extending-packages-custom-objects/task/developing-a-custom-task.md).  
+
+> [!IMPORTANT]
+> Pour obtenir des informations détaillées sur la connexion à des fichiers Excel, et sur les limitations et les problèmes connus liés au chargement de données depuis ou vers des fichiers Excel, consultez [Charger des données depuis ou vers Excel avec SQL Server Integration Services (SSIS)](../load-data-to-from-excel-with-ssis.md).
+ 
 ##  <a name="configuring"></a> Configuration d’un package pour tester les exemples  
  Vous pouvez configurer un package unique pour tester tous les exemples de cette rubrique. Les exemples utilisent de nombreuses variables de package et classes [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] identiques.  
   
-#### <a name="to-configure-a-package-for-use-with-the-examples-in-this-topic"></a>Pour configurer un package à utiliser avec les exemples de cette rubrique  
+### <a name="to-configure-a-package-for-use-with-the-examples-in-this-topic"></a>Pour configurer un package à utiliser avec les exemples de cette rubrique  
   
 1.  Créez un projet [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] et ouvrez le package par défaut afin de le modifier.  
   
@@ -85,7 +76,7 @@ ms.lasthandoff: 01/25/2018
 ##  <a name="example1"></a> Description de l’exemple 1 : vérifier si un fichier Excel existe  
  Cet exemple détermine si le fichier de classeur Excel spécifié dans la variable `ExcelFile` existe, puis définit la valeur booléenne de la variable `ExcelFileExists` sur le résultat. Vous pouvez utiliser cette valeur booléenne pour créer une branche dans le flux de travail du package.  
   
-#### <a name="to-configure-this-script-task-example"></a>Pour configurer cet exemple de tâche de script  
+### <a name="to-configure-this-script-task-example"></a>Pour configurer cet exemple de tâche de script  
   
 1.  Ajoutez une nouvelle tâche de script au package et remplacez son nom par **ExcelFileExists**.  
   
@@ -155,7 +146,7 @@ public class ScriptMain
 ##  <a name="example2"></a> Description de l’exemple 2 : vérifier si une table Excel existe  
  Cet exemple détermine si la feuille de calcul ou la plage nommée Excel spécifiée dans la variable `ExcelTable` existe dans le fichier de classeur Excel spécifié dans la variable `ExcelFile`, puis définit la valeur booléenne de la variable `ExcelTableExists` sur le résultat. Vous pouvez utiliser cette valeur booléenne pour créer une branche dans le flux de travail du package.  
   
-#### <a name="to-configure-this-script-task-example"></a>Pour configurer cet exemple de tâche de script  
+### <a name="to-configure-this-script-task-example"></a>Pour configurer cet exemple de tâche de script  
   
 1.  Ajoutez une nouvelle tâche de script au package et remplacez son nom par **ExcelTableExists**.  
   
@@ -262,7 +253,7 @@ public class ScriptMain
 ##  <a name="example3"></a> Description de l’exemple 3 : obtenir la liste des fichiers Excel contenus dans un dossier  
  Cet exemple remplit un tableau à l'aide de la liste des fichiers Excel détectés dans le dossier spécifié dans la valeur de la variable `ExcelFolder`, puis copie le tableau dans la variable `ExcelFiles`. Vous pouvez utiliser l'énumérateur Foreach à partir d'une variable pour parcourir les fichiers inclus dans le tableau.  
   
-#### <a name="to-configure-this-script-task-example"></a>Pour configurer cet exemple de tâche de script  
+### <a name="to-configure-this-script-task-example"></a>Pour configurer cet exemple de tâche de script  
   
 1.  Ajoutez une nouvelle tâche de script au package et remplacez son nom par **GetExcelFiles**.  
   
@@ -337,7 +328,7 @@ public class ScriptMain
 > [!NOTE]  
 >  La liste des tableaux d'un classeur Excel comprend à la fois les feuilles de calcul (affectées du suffixe $) et les plages nommées. Si vous devez filtrer la liste uniquement pour obtenir uniquement les feuilles de calcul ou les plages nommées, vous pouvez être amené à ajouter du code supplémentaire.  
   
-#### <a name="to-configure-this-script-task-example"></a>Pour configurer cet exemple de tâche de script  
+### <a name="to-configure-this-script-task-example"></a>Pour configurer cet exemple de tâche de script  
   
 1.  Ajoutez une nouvelle tâche de script au package et remplacez son nom par **GetExcelTables**.  
   
@@ -446,7 +437,7 @@ public class ScriptMain
 ##  <a name="testing"></a> Affichage des résultats des exemples  
  Si vous avez configuré chacun des exemples de cette rubrique dans le même package, vous pouvez connecter toutes les tâches de script à une tâche de script supplémentaire qui affiche la sortie de tous les exemples.  
   
-#### <a name="to-configure-a-script-task-to-display-the-output-of-the-examples-in-this-topic"></a>Pour configurer une tâche de script afin d'afficher la sortie des exemples de cette rubrique  
+### <a name="to-configure-a-script-task-to-display-the-output-of-the-examples-in-this-topic"></a>Pour configurer une tâche de script afin d'afficher la sortie des exemples de cette rubrique  
   
 1.  Ajoutez une nouvelle tâche de script au package et remplacez son nom par **DisplayResults**.  
   
@@ -550,7 +541,7 @@ public class ScriptMain
 ```  
   
 ## <a name="see-also"></a> Voir aussi  
- [Gestionnaire de connexions Excel](../../integration-services/connection-manager/excel-connection-manager.md)   
+ [Charger des données depuis ou vers Excel avec SQL Server Integration Services (SSIS)](../load-data-to-from-excel-with-ssis.md)  
  [Effectuer une boucle dans des fichiers et des tables Excel en utilisant un conteneur de boucles Foreach](../../integration-services/control-flow/loop-through-excel-files-and-tables-by-using-a-foreach-loop-container.md)  
   
   

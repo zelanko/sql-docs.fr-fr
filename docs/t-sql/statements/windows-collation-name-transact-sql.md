@@ -1,16 +1,16 @@
 ---
 title: Nom de classement Windows (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -20,7 +20,7 @@ helpviewer_keywords:
 - collations [SQL Server], Windows collations
 - Collation Designator
 ms.assetid: acceef84-2c68-46e2-a021-be019b7ab14e
-caps.latest.revision: 
+caps.latest.revision: 43
 author: edmacauley
 ms.author: edmaca
 manager: craigg
@@ -226,7 +226,7 @@ SELECT * FROM sys.fn_helpcollations() WHERE name NOT LIKE 'SQL%';
   
  <sup>1</sup> Les classements Windows Unicode seulement ne peuvent être appliqués qu’à des données de niveau colonne ou de niveau expression. Ils ne peuvent pas être utilisés en tant que classements de serveur ou de base de données.  
   
- <sup>2</sup>Comme le classement chinois (Taiwan), le chinois (Macao) utilise les règles du chinois simplifié ; contrairement au chinois (Taiwan), il utilise la page de codes 950.  
+ <sup>2</sup>Comme le classement chinois (Taiwan), le chinois (Macao (R.A.S.)) utilise les règles du chinois simplifié ; contrairement au chinois (Taiwan), il utilise la page de codes 950.  
   
 ## <a name="see-also"></a> Voir aussi  
  [Prise en charge d'Unicode et du classement](../../relational-databases/collations/collation-and-unicode-support.md)   

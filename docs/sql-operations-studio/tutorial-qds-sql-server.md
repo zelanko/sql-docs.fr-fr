@@ -1,6 +1,6 @@
 ---
-title: "Didacticiel : Activer les cinq premières requêtes exemple widget - opérations de SQL Studio (version préliminaire) | Documents Microsoft"
-description: "Ce didacticiel montre comment activer le widget exemple requêtes les plus lents cinq sur le tableau de bord de base de données."
+title: 'Didacticiel : Activer les cinq premières requêtes exemple widget - SQL Operations Studio (preview) | Documents Microsoft'
+description: Ce didacticiel montre comment activer le widget exemple requêtes les plus lents cinq sur le tableau de bord de base de données.
 ms.custom: tools|sos
 ms.date: 03/15/2018
 ms.prod: sql-non-specified
@@ -8,7 +8,7 @@ ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
 ms.component: sos
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: tutorial
 author: erickangMSFT
 ms.author: erickang

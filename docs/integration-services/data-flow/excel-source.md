@@ -1,16 +1,16 @@
 ---
 title: Source Excel | Microsoft Docs
-ms.custom: 
-ms.date: 03/14/2017
+ms.custom: ''
+ms.date: 04/02/2018
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: data-flow
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.excelsource.f1
@@ -21,20 +21,24 @@ helpviewer_keywords:
 - Excel [Integration Services]
 - sources [Integration Services], Excel
 ms.assetid: e66349f3-b1b8-4763-89b7-7803541a4d62
-caps.latest.revision: 
+caps.latest.revision: 60
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 872ac8117bb87cb9f1709afedbacc32b2d1f1413
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 6a9795de30c7d4fbe2ede9a17043a916e5953cd5
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="excel-source"></a>Source Excel
   La source Excel extrait des données de feuilles de calcul ou de plages dans des classeurs [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel.  
-  
+
+> [!IMPORTANT]
+> Pour obtenir des informations détaillées sur la connexion à des fichiers Excel, et sur les limitations et les problèmes connus liés au chargement de données depuis ou vers des fichiers Excel, consultez [Charger des données depuis ou vers Excel avec SQL Server Integration Services (SSIS)](../load-data-to-from-excel-with-ssis.md).
+
+## <a name="access-mode"></a>Mode d’accès
  La source Excel fournit quatre modes d'accès aux données différents pour l'extraction des données :  
   
 -   Une table ou une vue.  
@@ -44,9 +48,6 @@ ms.lasthandoff: 01/25/2018
 -   Les résultats d'une instruction SQL. La requête peut être une requête paramétrable.  
   
 -   Les résultats d'une instruction SQL stockée dans une variable.  
-  
-> [!IMPORTANT]  
->  Dans Excel, une feuille de calcul ou une plage sont l'équivalent d'une table ou d'une vue. La listes de tables disponibles dans les éditeurs de source et de destination Excel n'affiche que des feuilles de calcul existantes (identifiées par le signe « $ » à la fin du nom de la feuille de calcul, par exemple « Feuille1$ ») et des plages nommées (signalées par l'absence du signe « $ », par exemple « MaPlage »). Pour plus d'informations, consultez la section Considérations sur l'utilisation.  
   
  La source Excel utilise à un gestionnaire de connexions Excel pour se connecter à une source de données ; ce gestionnaire spécifie le classeur à utiliser. Pour plus d'informations, consultez [Excel Connection Manager](../../integration-services/connection-manager/excel-connection-manager.md).  
   
@@ -205,13 +206,6 @@ ms.lasthandoff: 01/25/2018
  Appliquez l'option de gestion des erreurs aux cellules sélectionnées.  
   
 ## <a name="related-content"></a>Contenu associé  
-  
--   Entrée de blog, [Importing data from 64-bit Excel in SSIS](http://go.microsoft.com/fwlink/?LinkId=217673), sur hrvoje.piasevoli.com  
-  
--   Entrée de blog, [Excel in Integration Services, Part 1 of 3: Connections and Components](http://go.microsoft.com/fwlink/?LinkId=217674), sur dougbert.com  
-  
--   Entrée de blog, [Excel in Integration Services, Part 2 of 3: Tables and Data Types](http://go.microsoft.com/fwlink/?LinkId=217675), sur dougbert.com.  
-  
--   Entrée de blog, [Excel in Integration Services, Part 3 of 3: Issues and Alternatives](http://go.microsoft.com/fwlink/?LinkId=217676), sur dougbert.com.  
-  
-  
+[Charger des données depuis ou vers Excel avec SQL Server Integration Services (SSIS)](../load-data-to-from-excel-with-ssis.md)
+[Destination Excel](excel-destination.md)  
+[Gestionnaire de connexions Excel](../connection-manager/excel-connection-manager.md)

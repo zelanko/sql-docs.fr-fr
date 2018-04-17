@@ -1,16 +1,16 @@
 ---
 title: sp_update_operator (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_update_operator_TSQL
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_update_operator
 ms.assetid: 231750a6-4828-4d03-afe6-b91d38c42ed3
-caps.latest.revision: 
+caps.latest.revision: 23
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 38da9010e434570fbcd75e026f11c50450e10691
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="spupdateoperator-transact-sql"></a>sp_update_operator (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -78,13 +78,13 @@ sp_update_operator
  [ @weekday_pager_start_time=] *weekday_pager_start_time*  
  Indique l'heure à partir de laquelle une notification peut être envoyée à cet opérateur sur son récepteur de radiomessagerie, du lundi au vendredi. *heure_début_radiomessagerie_semaine*est **int**, avec NULL comme valeur par défaut et doit être entré au format HHMMSS pour une utilisation avec une horloge de 24 heures.  
   
- [ @weekday_pager_end_time=] *weekday_pager_end_time*  
+ [ @weekday_pager_end_time=] *au vendredi*  
  Indique l'heure à partir de laquelle une notification ne peut pas être envoyée à l'opérateur spécifié sur son récepteur de radiomessagerie, du lundi au vendredi. *au vendredi*est **int**, avec NULL comme valeur par défaut et doit être entré au format HHMMSS pour une utilisation avec une horloge de 24 heures.  
   
  [ @saturday_pager_start_time=] *saturday_pager_start_time*  
  Indique l'heure à partir de laquelle une notification peut être envoyée le samedi à l'opérateur spécifié sur son récepteur de radiomessagerie. *heure_début_radiomessagerie_samedi*est **int**, avec NULL comme valeur par défaut et doit être entré au format HHMMSS pour une utilisation avec une horloge de 24 heures.  
   
- [ @saturday_pager_end_time=] *saturday_pager_end_time*  
+ [ @saturday_pager_end_time=] *heure_fin_radiomessagerie_samedi*  
  Indique l'heure à partir de laquelle une notification ne peut pas être envoyée le samedi à l'opérateur spécifié sur son récepteur de radiomessagerie. *heure_fin_radiomessagerie_samedi*est **int**, avec NULL comme valeur par défaut et doit être entré au format HHMMSS pour une utilisation avec une horloge de 24 heures.  
   
  [ @sunday_pager_start_time=] *sunday_pager_start_time*  
@@ -109,7 +109,7 @@ sp_update_operator
  [ @netsend_address=] '*netsend_address*'  
  Adresse réseau de l'opérateur à qui est envoyé le message réseau. *adresse_envoiréseau*est **nvarchar (100)**, avec NULL comme valeur par défaut.  
   
- [ @category_name=] '*catégorie*'  
+ [ @category_name=] '*category*'  
  Nom de la catégorie pour cette alerte. *catégorie* est **sysname**, avec NULL comme valeur par défaut.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  

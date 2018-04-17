@@ -1,4 +1,4 @@
----
+﻿---
 title: "Contrôle de code source dans SQL Operations Studio (version préliminaire) | Documents Microsoft"
 description: "Découvrez comment configurer le contrôle de code source dans SQL Operations Studio (version préliminaire)."
 ms.custom: tools|sos
@@ -8,7 +8,7 @@ ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
 ms.component: sos
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 author: stevestein
 ms.author: sstein

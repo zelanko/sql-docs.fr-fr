@@ -1,30 +1,30 @@
 ---
-title: "Instanciation des événements ADO : Visual C++ | Documents Microsoft"
+title: 'Instanciation des événements ADO : Visual C++ | Documents Microsoft'
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - C++
 ms.assetid: 385ad90a-37d0-497c-94aa-935d21fed78f
-caps.latest.revision: 
+caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 4be073e1c216b82c8cedc50d3cde83668df04ad4
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="ado-event-instantiation-visual-c"></a>Instanciation des événements ADO : Visual C++
 Il s’agit d’une description schématique d’instanciation des événements ADO dans Microsoft® Visual C++®. Consultez [exemple de modèle d’événements ADO (VC ++)](../../../ado/reference/ado-api/ado-events-model-example-vc.md) pour une description complète.  
@@ -74,7 +74,7 @@ STDMETHODIMP CConnEvent::ConnectComplete(
   
  Les classes d’événements héritent de **IUnknown**, vous devez également implémenter la **QueryInterface**, **AddRef**, et **version** méthodes. Également implémenter des destructeurs et des constructeurs de classe. Choisissez les outils Visual C++ avec laquelle vous maîtrisez le mieux simplifier cette partie de la tâche.  
   
- Assurez-vous qu’il est connu que vos gestionnaires d’événements sont disponibles en émettant **QueryInterface** sur la [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) et [connexion](../../../ado/reference/ado-api/connection-object-ado.md) des objets pour le  **IConnectionPointContainer** et **IConnectionPoint** interfaces. Ensuite, émettez **IConnectionPoint::Advise** pour chaque classe.  
+ Assurez-vous qu’il est connu que vos gestionnaires d’événements sont disponibles en émettant **QueryInterface** sur la [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) et [connexion](../../../ado/reference/ado-api/connection-object-ado.md) des objets pour le ** IConnectionPointContainer** et **IConnectionPoint** interfaces. Ensuite, émettez **IConnectionPoint::Advise** pour chaque classe.  
   
  Par exemple, supposons que vous utilisez une fonction booléenne qui retourne **True** si elle informe un **Recordset** de l’objet que vous avez des gestionnaires d’événements disponibles.  
   

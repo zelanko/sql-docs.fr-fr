@@ -1,16 +1,16 @@
 ---
-title: ISSAsynchStatus::Abort (OLE DB) | Microsoft Docs
-ms.custom: 
+title: ISSAsynchStatus::Abort (OLE DB) | Documents Microsoft
+ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: native-client-ole-db-interfaces
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - ISSAsynchStatus::Abort (OLE DB)
@@ -18,7 +18,7 @@ apitype: COM
 helpviewer_keywords:
 - Abort method
 ms.assetid: 2a4bd312-839a-45a8-a299-fc8609be9a2a
-caps.latest.revision: 
+caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
@@ -49,7 +49,7 @@ HRESULT Abort(
  Handle du chapitre pour lequel vous souhaitez abandonner l'opération. Si l'objet appelé n'est pas un objet d'ensemble de lignes ou que l'opération ne s'applique pas à un chapitre, l'appelant doit attribuer la valeur DB_NULL_HCHAPTER à *hChapter* .  
   
  *eOperation*[in]  
- L'opération à abandonner. Elle doit avoir la valeur suivante :  
+ L'opération à abandonner. Elle doit avoir la valeur suivante :  
   
  DBASYNCHOP_OPEN : la demande d'annulation s'applique à l'ouverture ou au remplissage asynchrone d'un ensemble de lignes ou à l'initialisation asynchrone d'un objet source de données.  
   

@@ -1,6 +1,6 @@
 ---
-title: "Studio d’opérations SQL (aperçu) utilisateur et les paramètres de l’espace de travail | Documents Microsoft"
-description: "Comment modifier les paramètres de l’espace de travail et les Studio des opérations SQL (aperçu) utilisateur."
+title: SQL Operations Studio (preview) utilisateur et les paramètres de l’espace de travail | Documents Microsoft
+description: Comment modifier les paramètres de l’espace de travail et les SQL Operations Studio (preview) utilisateur.
 ms.custom: tools|sos
 ms.date: 11/15/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,7 @@ ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
 ms.component: sos
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 author: yualan
 ms.author: alayu
@@ -55,7 +55,7 @@ Le fichier de paramètres d’espace de travail se trouve sous le `.[!INCLUDE[na
 
 ## <a name="hot-exit"></a>Sortie à chaud
 
-Studio d’opérations SQL sera n’oubliez pas les modifications non enregistrées dans des fichiers lorsque vous quittez par défaut. Cela est identique à la fonctionnalité de sortie à chaud dans Visual Studio Code.
+SQL Operations Studio sera n’oubliez pas les modifications non enregistrées dans des fichiers lorsque vous quittez par défaut. Cela est identique à la fonctionnalité de sortie à chaud dans Visual Studio Code.
 
 Par défaut, la sortie à chaud est désactivée. Permettre à chaud sortie en modifiant le `files.hotExit` paramètre. Pour plus d’informations, consultez [à chaud de sortie (dans la documentation de Visual Studio Code)](https://code.visualstudio.com/docs/editor/codebasics#_hot-exit).
 

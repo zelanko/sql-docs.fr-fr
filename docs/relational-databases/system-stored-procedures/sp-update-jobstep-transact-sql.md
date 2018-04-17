@@ -1,16 +1,16 @@
 ---
 title: sp_update_jobstep (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_update_jobstep
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_update_jobstep
 ms.assetid: e158802c-c347-4a5d-bf75-c03e5ae56e6b
-caps.latest.revision: 
+caps.latest.revision: 33
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: c81c22e3fb6de374b378df4ef52b316efe65fdb6
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="spupdatejobstep-transact-sql"></a>sp_update_jobstep (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -71,7 +71,7 @@ sp_update_jobstep
  [ **@job_id =**] *job_id*  
  Numéro d'identification du travail auquel l'étape appartient. *job_id*est **uniqueidentifier**, avec NULL comme valeur par défaut. Soit *job_id* ou *job_name* doit être spécifié, mais ne peut pas être spécifiés.  
   
- [ **@job_name =**] **'***job_name***'**  
+ [  **@job_name =**] **'***job_name***'**  
  Nom du travail auquel l'étape appartient. *job_name*est **sysname**, avec NULL comme valeur par défaut. Soit *job_id* ou *job_name* doit être spécifié, mais ne peut pas être spécifiés.  
   
  [ **@step_id =**] *step_id*  
@@ -121,7 +121,7 @@ sp_update_jobstep
  [ **@server =**] **'***server***'**  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] *serveur* est **nvarchar (128)**, avec NULL comme valeur par défaut.  
   
- [  **@database_name =**] **'***base de données***'**  
+ [ **@database_name =**] **'***database***'**  
  Nom de la base de données dans laquelle l'étape [!INCLUDE[tsql](../../includes/tsql-md.md)] doit être exécutée. *base de données*est **sysname**. Les noms placés entre crochets ([ ]) ne sont pas autorisés. La valeur par défaut est NULL.  
   
  [ **@database_user_name =**] **'***user***'**  
@@ -133,17 +133,17 @@ sp_update_jobstep
  [ **@retry_interval =**] *retry_interval*  
  Nombre de minutes s'écoulant entre chaque tentative de reprise. *intervalle_entre_reprises* est **int**, avec NULL comme valeur par défaut.  
   
- [ **@os_run_priority =**] *run_priority*  
+ [  **@os_run_priority =**] *priorité_exécution*  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
- [ **@output_file_name =**] **'***file_name***'**  
+ [  **@output_file_name =**] **'***nom_fichier***'**  
  Nom du fichier dans lequel est enregistré le résultat de l'étape. *file_name* est **nvarchar(200)**, avec NULL comme valeur par défaut. Ce paramètre est valide uniquement avec les commandes fonctionnant dans les sous-systèmes [!INCLUDE[tsql](../../includes/tsql-md.md)] ou CmdExec.  
   
  Pour définir le redéfinir à NULL, vous devez définir *nom_fichier_sortie* sur une chaîne vide (' ') ou à une chaîne de caractères vides, mais vous ne pouvez pas utiliser le **CHAR(32)** (fonction). Vous pouvez par exemple définir cet argument avec une chaîne vide comme suit :  
   
  **@output_file_name = ' '**  
   
- [  **@flags =**] *indicateurs*  
+ [ **@flags =**] *flags*  
  Une option qui contrôle le comportement. *indicateurs* est **int**, et peut prendre l’une des valeurs suivantes.  
   
 |Valeur| Description|  
@@ -154,10 +154,10 @@ sp_update_jobstep
 |**8**|Écriture du journal dans la table (remplace l'historique existant)|  
 |**16**|Écriture du journal dans la table (s'ajoute à l'historique existant)|  
   
- [ **@proxy_id**= ] *proxy_id*  
+ [ **@proxy_id**=] *proxy_id*  
  Numéro d'identification du proxy sous lequel s'exécute l'étape de travail. *proxy_id* est de type **int**, avec NULL comme valeur par défaut. Si aucun *proxy_id* est spécifié, aucun *proxy_name* est spécifié et aucune *nom_utilisateur* est spécifié, l’étape de travail s’exécute en tant que compte de service pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l’Agent.  
   
- [  **@proxy_name** =] **'***proxy_name***'**  
+ [ **@proxy_name**=] **'***proxy_name***'**  
  Nom du proxy sous lequel s'exécute l'étape de travail. *proxy_name* est de type **sysname**, avec NULL comme valeur par défaut. Si aucun *proxy_id* est spécifié, aucun *proxy_name* est spécifié et aucune *nom_utilisateur* est spécifié, l’étape de travail s’exécute en tant que compte de service pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l’Agent.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  

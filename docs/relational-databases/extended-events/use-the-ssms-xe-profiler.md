@@ -1,17 +1,14 @@
 ---
 title: Utiliser SSMS XEvent Profiler | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 10/02/2016
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
-ms.service: 
-ms.component: extended-events
+ms.service: ''
 ms.reviewer: genemi
 ms.suite: sql
-ms.technology:
-- database-engine
-- xevents
-ms.tgt_pltfrm: 
+ms.technology: xevents
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - extended events [SQL Server], system health session
@@ -23,19 +20,20 @@ author: yualan
 ms.author: alayu
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5d478dc053a744cfffa9f7234fe49bad552cc429
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 9a59b2a0fed20b372e6070782f2013f2e01e29d2
+ms.sourcegitcommit: 094c46e7fa6de44735ed0040c65a40ec3d951b75
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="use-the-ssms-xevent-profiler"></a>Utiliser SSMS XEvent Profiler
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] XEvent Profiler est une fonctionnalité SQL Server Management Studio (SSMS) qui affiche une fenêtre de visualisation en direct des événements étendus. Cette vue d’ensemble décrit les raisons de l’utiliser et ses principales fonctionnalités, puis fournit des instructions pour commencer à visualiser des événements étendus.
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+XEvent Profiler est une fonctionnalité SQL Server Management Studio (SSMS) qui affiche une fenêtre de visualisation en direct des événements étendus. Cette vue d’ensemble décrit les raisons de l’utiliser et ses principales fonctionnalités, puis fournit des instructions pour commencer à visualiser des événements étendus.
 
 ## <a name="why-would-i-use-the-xevent-profiler"></a>Pourquoi utiliser XEvent Profiler ?
 Contrairement à SQL Profiler, XEvent Profiler est directement intégré à SSMS et s’appuie sur la technologie d’événements étendus scalable du moteur SQL. Cette fonctionnalité permet d’accéder rapidement à une vue de streaming en direct des événements de diagnostic sur le serveur SQL. Cette vue peut être personnalisée et ces personnalisations peuvent être partagées avec d’autres utilisateurs SSMS sous forme de fichier .viewsettings. La session créée par XE Profiler est moins intrusive dans le serveur SQL en cours d’exécution qu’une trace SQL similaire le serait si vous utilisiez SQL Profiler. Cette session peut être aussi personnalisée par l’utilisateur avec l’interface utilisateur des propriétés de session XE existante ou avec TSQL.
 
-## <a name="prerequisites"></a>Conditions préalables
+## <a name="prerequisites"></a>Prerequisites
 Cette fonctionnalité est uniquement disponible dans SQL Server Management Studio (SSMS) version 17.3 ou ultérieure. Veillez à utiliser la version la plus récente. Vous trouverez la dernière version [ici.](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms)
 
 ## <a id="getting-started"></a>Commencer
@@ -57,7 +55,7 @@ Pour accéder à XEvent Profiler, procédez comme suit :
 
    ![Visionneuse XEProfiler](media/xevents-xe-profiler-start-viewer.png)
 
-## <a name="see-also"></a>Voir aussi
+## <a name="see-also"></a> Voir aussi
 [Événements étendus](../../relational-databases/extended-events/extended-events.md)  
 [Outils associés aux événements étendus](../../relational-databases/extended-events/extended-events-tools.md)  
   

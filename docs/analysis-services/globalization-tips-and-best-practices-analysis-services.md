@@ -1,15 +1,15 @@
 ---
 title: Globalisation conseils et meilleures pratiques (Analysis Services) | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - translations [Analysis Services], client applications
@@ -18,7 +18,7 @@ helpviewer_keywords:
 - time [Analysis Services]
 - month comparisons [Analysis Services]
 ms.assetid: 71a8c438-1370-4c69-961e-d067ee4e47c2
-caps.latest.revision: "33"
+caps.latest.revision: 33
 author: Minewiskan
 ms.author: owend
 manager: kfile
@@ -66,7 +66,7 @@ ms.lasthandoff: 01/22/2018
   
      À Taïwan, il est plus courant de voir le Chinois traditionnel avec l'ordre de tri recommandé basé sur le nombre de traits : Chinese_Taiwan_Stroke (pour SQL Server 2000), Chinese_Taiwan_Stroke_90 (pour SQL Server 2005) ou Chinese_Traditional_Stroke_Count_100 (pour SQL Server 2008 et versions ultérieures).  
   
-     Les autres régions (comme Hong Kong et Macao) utilisent également le Chinois traditionnel. Pour les classements, à Hong Kong il n'est pas rare de voir Chinese_Hong_Kong_Stroke_90 (sur SQL Server 2005). À Macao, Chinese_Traditional_Stroke_Count_100 (SQL Server 2008 et versions ultérieures) est utilisé relativement souvent.  
+     Les autres régions (comme Macao (R.A.S.) et Macao) utilisent également le Chinois traditionnel. Pour les classements, à Macao (R.A.S.) il n'est pas rare de voir Chinese_Hong_Kong_Stroke_90 (sur SQL Server 2005). À Macao, Chinese_Traditional_Stroke_Count_100 (SQL Server 2008 et versions ultérieures) est utilisé relativement souvent.  
   
 -   Pour le japonais, le classement le plus courant est Japanese_CI_AS. Japanese_XJIS_100 est utilisé dans les installations prenant en charge [JIS2004](http://en.wikipedia.org/wiki/JIS_X_0213). On utilise généralement Japanese_BIN2 dans les projets de migration de données, avec des données provenant de plateformes non-Windows ou de sources de données autres que le moteur de base de données relationnelle de SQL Server.  
   

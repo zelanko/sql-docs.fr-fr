@@ -1,16 +1,16 @@
 ---
-title: "Propriétés de l’index – Aide (F1) | Microsoft Docs"
-ms.custom: 
+title: Propriétés de l’index – Aide (F1) | Microsoft Docs
+ms.custom: ''
 ms.date: 02/17/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: indexes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-indexes
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - sql13.swb.indexproperties.filter.f1
@@ -21,16 +21,16 @@ f1_keywords:
 - sql13.swb.indexproperties.options.f1
 - sql13.swb.indexproperties.spatial.f1
 ms.assetid: 45efd81a-3796-4b04-b0cc-f3deec94c733
-caps.latest.revision: 
+caps.latest.revision: 38
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: c04983b7d37f71d7b74072b5c673fc4696ebc895
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
-ms.translationtype: HT
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="index-properties-f1-help"></a>Propriétés de l'index – Aide (F1)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -150,7 +150,7 @@ ms.lasthandoff: 02/23/2018
  Spécifie le groupe de fichiers pour les données FILESTREAM. Cette liste affiche uniquement des groupes de fichiers FILESTREAM. Le groupe de fichiers sélectionné par défaut dans la liste est le groupe PRIMARY FILESTREAM. Pour plus d’informations, consultez [FILESTREAM &#40;SQL Server&#41;](../../relational-databases/blob/filestream-sql-server.md).  
   
  **Schéma de partition**  
- Stocke l'index dans un schéma de partition. En cliquant sur **Schéma de partition** , vous activez la grille ci-dessous. Le schéma de partition sélectionné par défaut dans la liste est celui qui est utilisé pour stocker les données de la table. Si vous sélectionnez un autre schéma de partition dans la liste, les informations affichées dans la grille sont actualisées. Pour plus d’informations, consultez [Tables et index partitionnés](../../relational-databases/partitions/partitioned-tables-and-indexes.md).  
+ Stocke l'index dans un schéma de partition. En cliquant sur **Schéma de partition** , vous activez la grille ci-dessous. Le schéma de partition sélectionné par défaut dans la liste est celui qui est utilisé pour stocker les données de la table. Si vous sélectionnez un autre schéma de partition dans la liste, les informations affichées dans la grille sont actualisées. Pour plus d'informations, consultez [Partitioned Tables and Indexes](../../relational-databases/partitions/partitioned-tables-and-indexes.md).  
   
  L'option Schéma de partition n'est pas disponible s'il n'y a pas de schémas de partition dans la base de données.  
   
@@ -169,7 +169,7 @@ ms.lasthandoff: 02/23/2018
  Affiche des informations sur les types de données figurant dans la colonne.  
   
 > [!NOTE]  
->  Si la colonne de table est une colonne calculée, **Type de données de la colonne** contient la mention « colonne calculée ».  
+>  Si la colonne de table est une colonne calculée, **Type de données de la colonne** a la valeur « colonne calculée ».  
   
  **Autoriser le traitement en ligne des instructions DML lors du déplacement de l'index**  
  Permet aux utilisateurs d'accéder à la table sous-jacente ou aux données des index cluster et à tous les index non-cluster associés pendant l'opération d'index. Pour plus d'informations, consultez [Perform Index Operations Online](../../relational-databases/indexes/perform-index-operations-online.md).  
@@ -178,7 +178,7 @@ ms.lasthandoff: 02/23/2018
 >  Cette option n'est pas disponible pour les index XML ou si l'index est un index cluster désactivé.  
   
  **Définir le degré maximal de parallélisme**  
- Limite le nombre de processeurs à utiliser pendant l'exécution des plans parallèles. La valeur par défaut est 0, indiquant que le nombre réel de processeurs disponibles est utilisé. Spécifier la valeur 1 supprime la génération d'un plan parallèle ; spécifier une valeur supérieure à 1 limite le nombre maximal de processeurs utilisés au cours de l'exécution d'une requête simple. Cette option est disponible seulement si la boîte de dialogue est dans l'état **Reconstruire** ou **Recréer** . Pour plus d'informations, consultez [Set the Max Degree of Parallelism Option for Optimal Performance](../../relational-databases/policy-based-management/set-the-max-degree-of-parallelism-option-for-optimal-performance.md).  
+ Limite le nombre de processeurs à utiliser pendant l'exécution des plans parallèles. La valeur par défaut est 0, indiquant que le nombre réel de processeurs disponibles est utilisé. Spécifier la valeur 1 supprime la génération d'un plan parallèle ; spécifier une valeur supérieure à 1 limite le nombre maximal de processeurs utilisés au cours de l'exécution d'une requête simple. Cette option est disponible seulement si la boîte de dialogue est dans l'état **Reconstruire** ou **Recréer** . Pour plus d'informations, consultez [Définir l'option max degree of parallelism pour des performances optimales](../../relational-databases/policy-based-management/set-the-max-degree-of-parallelism-option-for-optimal-performance.md).  
   
 > [!NOTE]  
 >  Si une valeur supérieure au nombre d'UC disponibles est spécifiée, le nombre réel d'UC est utilisé.  
@@ -247,7 +247,7 @@ ms.lasthandoff: 02/23/2018
  **Expression de filtre**  
  Définit quelles lignes de données inclure dans l'index filtré. Par exemple : `StartDate > '20000101' AND EndDate IS NOT NULL'.`  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Définir les options d'index](../../relational-databases/indexes/set-index-options.md)   
  [INDEXPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/indexproperty-transact-sql.md)   
  [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)  

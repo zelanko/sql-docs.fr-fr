@@ -1,6 +1,6 @@
 ---
-title: "Activer ou désactiver la collecte des données d’utilisation et bloquer la création de rapports pour les opérations de SQL Studio (version préliminaire) | Documents Microsoft"
-description: "Cet article explique comment contrôler si les données de rapport d’incident et l’utilisation sont collectées et envoyées à Microsoft."
+title: Activer ou désactiver la collecte des données d’utilisation et bloquer la création de rapports pour les SQL Operations Studio (preview) | Documents Microsoft
+description: Cet article explique comment contrôler si les données de rapport d’incident et l’utilisation sont collectées et envoyées à Microsoft.
 ms.custom: tools|sos
 ms.date: 11/15/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,7 @@ ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
 ms.component: sos
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 author: stevestein
 ms.author: sstein

@@ -33,7 +33,7 @@ ms.lasthandoff: 12/21/2017
 
 ## <a name="smart-t-sql-code-snippets"></a>Extraits de code smart T-SQL
 
-Les extraits de code T-SQL génèrent la syntaxe T-SQL pour créer des bases de données, des tables, des vues, des procédures stockées, des utilisateurs, des connexions, des rôles, etc. et mettre à jour des objets de base de données existants. Utilisez les extraits de code pour créer rapidement des copies de votre base de données de développement ou à des fins de tests et pour générer et exécuter, créer et insérer des scripts.
+Les extraits de code T-SQL génèrent la syntaxe T-SQL pour créer des bases de données, des tables, des vues, des procédures stockées, des utilisateurs, des connexions, des rôles, etc. et pour mettre à jour des objets de base de données existants. Utilisez les extraits de code intelligent pour créer rapidement des copies de votre base de données de développement ou à des fins de tests et pour générer et exécuter des scripts CREATE et INSERT.
 
 [!INCLUDE[name-sos](../includes/name-sos-short.md)] fournit également des fonctionnalités permettant de créer des extraits de code T-SQL personnalisées. Pour plus d’informations, consultez [créer et utiliser des extraits de code](code-snippets.md).
 
@@ -48,10 +48,10 @@ Les groupes de serveurs vous permettent d’organiser les informations de connex
 
 ## <a name="integrated-terminal"></a>Terminal Server intégré
 
-Utiliser vos outils de ligne de commande favoris (par exemple, Bash, PowerShell, sqlcmd, l’utilitaire bcp et ssh) dans la fenêtre de Terminal Server intégré dans l' interface utilisateur [!INCLUDE[name-sos](../includes/name-sos-short.md)]. Pour en savoir plus sur le terminal intégré, consultez [terminal intégré] (terminal.md intégré).
+Utilisez vos outils de ligne de commande favoris (par exemple Bash, PowerShell, sqlcmd, bcp et ssh) dans la fenêtre du terminal intégré, directement dans l'interface utilisateur de [!INCLUDE[name-sos](../includes/name-sos-short.md)]. Pour en savoir plus sur le terminal intégré, consultez [terminal intégré] (terminal.md intégré).
 
 ## <a name="next-steps"></a>Étapes suivantes
 - [Téléchargez et installez [!INCLUDE[name-sos](../includes/name-sos-short.md)]](download.md)
 - [Se connecter et Requêter SQL Server](quickstart-sql-server.md)
-- [Se connecter et Requêter SQL Server](quickstart-sql-server.md)
+- [Se connecter à et interroger SQL Server](quickstart-sql-server.md)
 - [Se connecter et interroger la base de données SQL Azure](quickstart-sql-database.md)
