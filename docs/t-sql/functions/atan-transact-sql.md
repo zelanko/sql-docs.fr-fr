@@ -1,16 +1,16 @@
 ---
 title: ATAN (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ATAN_TSQL
@@ -22,21 +22,21 @@ helpviewer_keywords:
 - ATAN function
 - tangent
 ms.assetid: 6d3dd28e-4fa6-40ba-94cf-b33c0ff614ec
-caps.latest.revision: 
+caps.latest.revision: 25
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: efb6cbe8dcc58d8989b8f8ce9b4deb6ce587dc83
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 2f5701d45426eef09e5c743685c0541679e38005
+ms.sourcegitcommit: 094c46e7fa6de44735ed0040c65a40ec3d951b75
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="atan-transact-sql"></a>ATAN (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-Renvoie l’angle en radians dont la tangente est une expression **float** spécifiée. Cette valeur est également appelée arc tangente.
+Fonction qui retourne l’angle en radians dont la tangente est une expression **float** spécifiée. Cette valeur est également appelée arc tangente.
   
 ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -48,13 +48,13 @@ ATAN ( float_expression )
   
 ## <a name="arguments"></a>Arguments  
 *float_expression*  
-[Expression](../../t-sql/language-elements/expressions-transact-sql.md) de type **float** ou dont le type peut être implicitement converti en type **float**.
+[Expression](../../t-sql/language-elements/expressions-transact-sql.md) de type **float** ou dont le type est implicitement converti en **float**.
   
 ## <a name="return-types"></a>Types de retour
 **float**
   
 ## <a name="examples"></a>Exemples  
-L’exemple suivant accepte une expression de type **float** et renvoie l’arc tangente (ATAN) de l’angle spécifié.
+Cet exemple accepte une expression **float** et retourne l’arc tangente (ATAN) de l’angle spécifié.
   
 ```sql
 SELECT 'The ATAN of -45.01 is: ' + CONVERT(varchar, ATAN(-45.01))  
@@ -96,7 +96,7 @@ The ATAN of 197.1099392 is: 1.56572
 ```  
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemples : [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] et [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
-L’exemple suivant accepte une expression de type **float** et renvoie l’arc tangente de l’angle spécifié.
+Cet exemple accepte une expression **float** et retourne l’arc tangente de l’angle spécifié.
   
 ```sql
 SELECT ATAN(45.87) AS atanCalc1,  
