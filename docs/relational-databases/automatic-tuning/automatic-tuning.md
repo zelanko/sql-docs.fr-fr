@@ -3,7 +3,7 @@ title: Le paramétrage automatique | Documents Microsoft
 description: En savoir plus sur le réglage automatique dans SQL Server et la base de données SQL Azure
 ms.custom: ''
 ms.date: 08/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.service: ''
 ms.component: automatic-tuning
@@ -21,11 +21,12 @@ author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 2f08de0fadb8fbc237af89a3132cfd747c9d62c7
-ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
+monikerRange: = azuresqldb-current || >= sql-server-2017 || = sqlallproducts-allversions
+ms.openlocfilehash: e49c26384d432c7a18b8c5997ac84b2ed18cc782
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="automatic-tuning"></a>Paramétrage automatique
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -75,6 +76,8 @@ En outre, [!INCLUDE[ssde_md](../../includes/ssde_md.md)] vous permet d’entièr
 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] détecte automatiquement une régression de choix de plan potentiels, y compris le plan qui doit être utilisé au lieu du plan incorrect.
 Lorsque le [!INCLUDE[ssde_md](../../includes/ssde_md.md)] applique la dernière connu bon plan, il analyse automatiquement les performances du plan forcé. Si le plan forcé n’est pas meilleur que le plan de régression, le nouveau plan sera unforced et le [!INCLUDE[ssde_md](../../includes/ssde_md.md)] compile un plan. Si [!INCLUDE[ssde_md](../../includes/ssde_md.md)] vérifie que le plan forcé est préférable à une régression, le plan forcé est conservé jusqu'à une recompilation (par exemple, sur la prochaine modification de schéma ou de statistiques) s’il est préférable que le plan de régression.
 
+Remarque : N’importe quel automatique des plans forcé ne pas persit sur un redémarrage de l’instance de SQL Server.
+
 ### <a name="enabling-automatic-plan-choice-correction"></a>L’activation de correction des choix de plan automatique
 
 Vous pouvez activer le réglage automatique pour chaque base de données et spécifier que le dernier bon plan connu doit être forcé quand une régression de changement de plan est détectée. Pour cela, utilisez la commande suivante :
@@ -94,7 +97,7 @@ Plans forcés manuellement ne doivent pas être forcés à forever, parce que le
 
 Dans [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], vous pouvez rechercher les régressions de choix de plan à l’aide de vues système de magasin de requêtes. Dans [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)], le [!INCLUDE[ssde_md](../../includes/ssde_md.md)] détecte et présente des régressions de choix de plan potentiels et les actions recommandées qui doivent être appliquées dans le [sys.dm_db_tuning_recommendations &#40;Transact-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md) vue. La vue affiche des informations sur le problème, l’importance du problème et des détails tels que la requête identifiée, l’ID du plan de régression, l’ID du plan qui a été utilisé en tant que ligne de base pour la comparaison et le [!INCLUDE[tsql_md](../../includes/tsql_md.md)] instruction qui peut être exécutée pour résoudre le problème.
 
-| type | description | datetime | score | détails | … |
+| Type | description | datetime | score | détails | … |
 | --- | --- | --- | --- | --- | --- |
 | `FORCE_LAST_GOOD_PLAN` | Temps processeur passé de 4 ms à 14 ms | 3/17/2017 | 83 | `queryId` `recommendedPlanId` `regressedPlanId` `T-SQL` |   |
 | `FORCE_LAST_GOOD_PLAN` | Temps processeur passé de ms 37 à 84 ms | 3/16/2017 | 26 | `queryId` `recommendedPlanId` `regressedPlanId` `T-SQL` |   |
@@ -135,13 +138,15 @@ FROM sys.dm_db_tuning_recommendations
 
 [!INCLUDE[ssresult-md](../../includes/ssresult-md.md)]     
 
-| reason | score | script | requête\_id | plan actuel\_id | recommandé plan\_id | estimated\_gain | erreur\_sujets
+| reason | score | script | requête\_id | plan actuel\_id | recommandé plan\_id | estimé\_obtenir | erreur\_sujets
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | Temps processeur passé de 3 ms à 46 ms | 36 | EXEC sp\_requête\_stocker\_forcer\_plan 12, 17 ; | 12 | 28 | 17 | 11.59 | 0
 
 `estimated_gain` représente le nombre estimé de secondes qui seraient enregistrés si le plan recommandé est exécuté à la place le plan actuel. Si le gain est supérieur à 10 secondes, le plan recommandé doit être forcé à la place le plan actuel. S’il existe des erreurs plus (par exemple, les délais d’attente ou abandonnées exécutions) dans le plan actuel que dans la planification, la colonne `error_prone` serait défini sur la valeur `YES`. Plan susceptible d’engendrer des erreurs est une autre raison pour lesquelles le plan recommandé doit être forcé au lieu de l’objet actuel.
 
 Bien que [!INCLUDE[ssde_md](../../includes/ssde_md.md)] fournit toutes les informations requises pour identifier les régressions de choix de plan ; continue d’analyse et de résolution des problèmes de performances peuvent être un processus fastidieux. Le paramétrage automatique facilite ce processus.
+
+Remarque : Les données dans cette vue DMV ne persistent pas après un redémarrage de l’instance de SQL Server.
 
 ## <a name="automatic-index-management"></a>Gestion automatique des index
 
@@ -177,9 +182,9 @@ Sans la gestion automatique des index, l’utilisateur doit interroger manuellem
 [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] simplifie ce processus. [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] analyse de votre charge de travail, identifie les requêtes qui peuvent être exécutées plus rapidement avec un nouvel index et identifie les index non utilisés ou en double. Trouver les informations d’identification d’index doit être modifié sur [trouver des recommandations d’index dans le portail Azure](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-advisor-portal).
 
 ## <a name="see-also"></a>Voir aussi  
- [ALTER DATABASE SET AUTOMATIC_TUNING &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)   
+ [MODIFICATION de base de données ensemble AUTOMATIC_TUNING &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)   
  [sys.database_automatic_tuning_options &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-automatic-tuning-options-transact-sql.md)  
- [sys.dm_db_tuning_recommendations &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md)   
+ [Sys.dm_db_tuning_recommendations &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md)   
  [sys.dm_db_missing_index_details &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-details-transact-sql.md)   
  [sp_query_store_force_plan &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-force-plan-transact-sql.md)     
  [sp_query_store_unforce_plan &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-unforce-plan-transact-sql.md)           
