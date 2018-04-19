@@ -1,16 +1,16 @@
 ---
-title: CHANGETABLE (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: CHANGETABLE (Transact-SQL) | Documents Microsoft
+ms.custom: ''
 ms.date: 08/08/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: system-functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CHANGETABLE_TSQL
@@ -21,16 +21,17 @@ helpviewer_keywords:
 - CHANGETABLE
 - change tracking [SQL Server], CHANGETABLE
 ms.assetid: d405fb8d-3b02-4327-8d45-f643df7f501a
-caps.latest.revision: 
+caps.latest.revision: 34
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 6fa552ec5c819773153118be3b45374570b5d6e2
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 16aa30d9074e2cd1508f896c1076538ff7371738
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="changetable-transact-sql"></a>CHANGETABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -53,7 +54,7 @@ CHANGETABLE (
 ```  
   
 ## <a name="arguments"></a>Arguments  
- CHANGES *table* , *last_sync_version*  
+ MODIFICATIONS *table* , *last_sync_version*  
  Retourne le suivi des informations pour toutes les modifications apportées à une table qui se sont produites depuis la version spécifiée par *last_sync_version*.  
   
  *table*  
@@ -70,9 +71,9 @@ CHANGETABLE (
   
  Si la valeur est NULL, toutes les modifications suivies sont retournées.  
   
- *last_sync_version* doivent être validées pour garantir qu’il n’est pas trop ancien, car certaines ou toutes les informations de modification peuvent avoir été nettoyées en fonction de la période de rétention configurée pour la base de données. Pour plus d’informations, consultez [CHANGE_TRACKING_MIN_VALID_VERSION &#40; Transact-SQL &#41; ](../../relational-databases/system-functions/change-tracking-min-valid-version-transact-sql.md) et [ALTER définir les Options de base de données &#40; Transact-SQL &#41; ](../../t-sql/statements/alter-database-transact-sql-set-options.md).  
+ *last_sync_version* doivent être validées pour garantir qu’il n’est pas trop ancien, car certaines ou toutes les informations de modification peuvent avoir été nettoyées en fonction de la période de rétention configurée pour la base de données. Pour plus d’informations, consultez [CHANGE_TRACKING_MIN_VALID_VERSION &#40;Transact-SQL&#41; ](../../relational-databases/system-functions/change-tracking-min-valid-version-transact-sql.md) et [Options ALTER DATABASE SET &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md).  
   
- VERSION *table*, { <primary_key_values> }  
+ VERSION *table*, {< primary_key_values >}  
  Retourne les informations de suivi des modifications les plus récentes pour une ligne spécifiée. Les valeurs de clé primaire doivent identifier la ligne. <primary_key_values> identifie les colonnes de clé primaire et spécifie les valeurs. Les noms des colonnes clés primaires peuvent être spécifiés dans n'importe quel ordre.  
   
  *Table*  
@@ -84,7 +85,7 @@ CHANGETABLE (
  *Value*  
  Valeur de la clé primaire. S’il existe plusieurs colonnes de clé primaire, les valeurs doivent être spécifiées dans le même ordre que les colonnes apparaissent dans le *column_name* liste.  
   
- [EN] *alias_de_la_table* [(*column_alias* [,...*n* ] ) ]  
+ [EN] *alias_de_la_table* [(*column_alias* [,... *n* ])]  
  Fournit des noms pour les résultats retournés par CHANGETABLE.  
   
  *table_alias*  
