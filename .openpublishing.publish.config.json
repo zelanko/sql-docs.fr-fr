@@ -6,6 +6,10 @@
       "build_source_folder": "docs",
       "build_output_subfolder": "sql",
       "locale": "fr-fr",
+      "monikers": [],
+      "moniker_ranges": [
+        "= azuresqldb-current || = azuresqldb-mi-current || = azure-sqldw-latest || >= aps-pdw-2016 || >= sql-analysis-services-2016 || >= sql-analysis-services-2017 || >= sql-server-2014 || >= sql-server-2016 || >= sql-server-2017 || >= sql-server-linux-2017 || >= ssdt-15vs2017 || = sqlallproducts-allversions"
+      ],
       "open_to_public_contributors": true,
       "type_mapping": {
         "Conceptual": "Content",
@@ -22,7 +26,8 @@
     "CnE_UE_Bugfixing_ENG@moravia.com"
   ],
   "branches_to_filter": [
-    "live-oldev"    
+    "live-oldev",
+    "live"
   ],
   "git_repository_url_open_to_public_contributors": "https://github.com/MicrosoftDocs/sql-docs.fr-fr",
   "git_repository_branch_open_to_public_contributors": "live",
