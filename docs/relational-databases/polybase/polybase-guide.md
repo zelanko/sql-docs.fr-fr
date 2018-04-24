@@ -1,16 +1,16 @@
 ---
 title: Guide de PolyBase | Microsoft Docs
 ms.date: 05/30/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: polybase
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.custom: 
+ms.custom: ''
 ms.technology:
 - database-engine-polybase
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 f1_keywords:
 - PolyBase
@@ -18,24 +18,24 @@ f1_keywords:
 helpviewer_keywords:
 - PolyBase
 - PolyBase, overview
-- "Hadoop import ×"
+- Hadoop import ×
 - Hadoop export
 - Hadoop export, PolyBase overview
 - Hadoop import, PolyBase overview
-caps.latest.revision: 
+caps.latest.revision: 26
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 13f4dc7e877341917ebf4f41694cb886c81c53f2
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: d5aa107a95505e4132f24aa2cf20952a4d7fcf10
+ms.sourcegitcommit: beaad940c348ab22d4b4a279ced3137ad30c658a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="polybase-guide"></a>Guide de PolyBase
-[!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-PolyBase est une technologie qui permet d’accéder aux données en dehors de la base de données via le langage t-sql.  Dans SQL Server 2016, elle vous permet d’exécuter des requêtes sur des données externes dans Hadoop, ou d’importer/exporter des données à partir de Stockage Blob Azure. Les requêtes sont optimisées pour déléguer les calculs à Hadoop. Dans Azure SQL Data Warehouse, vous pouvez importer/exporter des données depuis Stockage Blob Azure et Azure Data Lake Store.
+[!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../../includes/appliesto-ss-xxxx-asdw-pdw-md.md)]
+  PolyBase est une technologie qui permet d’accéder aux données en dehors de la base de données via le langage t-sql.  Dans SQL Server 2016, elle vous permet d’exécuter des requêtes sur des données externes dans Hadoop, ou d’importer/exporter des données à partir de Stockage Blob Azure. Les requêtes sont optimisées pour déléguer les calculs à Hadoop. Dans Azure SQL Data Warehouse, vous pouvez importer/exporter des données depuis Stockage Blob Azure et Azure Data Lake Store.
   
   
  Pour utiliser PolyBase, consultez [Prise en main de PolyBase](../../relational-databases/polybase/get-started-with-polybase.md).  
@@ -61,7 +61,7 @@ Pour plus de simplicité, PolyBase vous dispense d’installer des logiciels sup
   
 ## <a name="performance"></a>Performances  
   
--   **Délégation des calculs à Hadoop.**L’optimiseur de requête prend une décision basée sur les coûts de déléguer les calculs à Hadoop si doit permettre d’améliorer les performances des requêtes.  Il s’appuie sur les statistiques des tables externes pour prendre la décision basée sur les coûts. La délégation des calculs a pour effet de créer des tâches MapReduce et de tirer parti des ressources de calcul distribuées de Hadoop.  
+-   **Délégation des calculs à Hadoop.** L’optimiseur de requête prend une décision basée sur les coûts de déléguer les calculs à Hadoop si doit permettre d’améliorer les performances des requêtes.  Il s’appuie sur les statistiques des tables externes pour prendre la décision basée sur les coûts. La délégation des calculs a pour effet de créer des tâches MapReduce et de tirer parti des ressources de calcul distribuées de Hadoop.  
   
 -   **Mise à l’échelle des ressources de calcul.** Pour améliorer les performances des requêtes, vous pouvez utiliser des [groupes de scale-out PolyBase](../../relational-databases/polybase/polybase-scale-out-groups.md)SQL Server. Cela autorise un transfert de données en parallèle entre les instances SQL Server et les nœuds Hadoop, et cela ajoute des ressources de calcul qui permettent d’exploiter les données externes.  
   

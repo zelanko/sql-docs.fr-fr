@@ -1,30 +1,33 @@
 ---
-title: "Fonctionnalités et tâches Master Data Services | Microsoft Docs"
-ms.custom: 
+title: Fonctionnalités et tâches Master Data Services | Microsoft Docs
+ms.custom: ''
 ms.date: 04/01/2016
 ms.prod: sql-non-specified
 ms.prod_service: mds
-ms.service: 
+ms.service: ''
 ms.component: non-specific
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 19519697-c219-44a8-9339-ee1b02545445
-caps.latest.revision: 
+caps.latest.revision: 8
 author: leolimsft
 ms.author: lle
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: a64d484a0739e17e947370d2760886bcbac7dd90
-ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
+ms.openlocfilehash: a85118fdc5499a47a491ae1229713a4d58d87451
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="master-data-services-features-and-tasks"></a>Fonctionnalités et tâches Master Data Services
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   Apprenez à utiliser [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] pour gérer les données de référence de votre organisation. Apprenez comment créer et manipuler les objets de modèle, qui sont des conteneurs de données. Apprenez comment organiser et gérer les données de référence elles-mêmes. Apprenez comment importer et exporter des données de référence et partager des modèles entre les environnements de test et de production. Enfin, apprenez comment développer des applications personnalisées qui accèdent au service Web de [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .  
   
 ## <a name="create-structures-to-contain-data"></a>Créer des structures pour contenir des données  

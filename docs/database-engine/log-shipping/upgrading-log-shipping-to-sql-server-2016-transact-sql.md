@@ -2,7 +2,7 @@
 title: Mise à niveau de la copie des journaux de transaction vers SQL Server 2016 (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 02/01/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: log-shipping
@@ -20,14 +20,15 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e2aae5c92052e2a08c2b6ab5ef1d48fd8f3f83dd
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 5d0824b800c75e627ecafb1be8d30b3d53fef00d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="upgrading-log-shipping-to-sql-server-2016-transact-sql"></a>Mise à niveau de la copie des journaux de transaction vers SQL Server 2016 (Transact-SQL)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Lors de la mise à niveau d’une configuration de la copie des journaux de transaction de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vers une nouvelle version de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], un nouveau service pack [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ou une mise à jour cumulative [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], la mise à niveau de vos serveurs de copie des journaux de transaction dans le bon ordre permettra de préserver votre solution de récupération d’urgence de copie des journaux de transaction.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Lors de la mise à niveau d’une configuration de la copie des journaux de transaction de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vers une nouvelle version de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , un nouveau service pack [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ou une mise à jour cumulative [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], la mise à niveau de vos serveurs de copie des journaux de transaction dans le bon ordre permettra de préserver votre solution de récupération d’urgence de copie des journaux de transaction.  
   
 > [!NOTE]  
 >  [La compression de la sauvegarde](../../relational-databases/backup-restore/backup-compression-sql-server.md) a été introduite dans [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)]. Une configuration mise à niveau de copie des journaux de transaction utilise l’option de configuration du niveau serveur par défaut pour la **compression de sauvegarde** pour contrôler si la compression de la sauvegarde est utilisée pour les fichiers de sauvegarde du journal des transactions. Le comportement de la compression de la sauvegarde des sauvegardes de fichiers journaux peut être spécifié pour chaque configuration de la copie des journaux de transaction. Pour plus d’informations, consultez [Configurer la copie des journaux de transaction &#40;Transact-SQL&#41;](../../database-engine/log-shipping/configure-log-shipping-sql-server.md).  

@@ -1,33 +1,36 @@
 ---
-title: "Entités (Master Data Services) | Microsoft Docs"
-ms.custom: 
+title: Entités (Master Data Services) | Microsoft Docs
+ms.custom: ''
 ms.date: 04/01/2016
 ms.prod: sql-non-specified
 ms.prod_service: mds
-ms.service: 
+ms.service: ''
 ms.component: non-specific
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - entities [Master Data Services], about entities
 - entities [Master Data Services]
 ms.assetid: 0af057d5-6b73-472b-99eb-9f5eb61a9b5b
-caps.latest.revision: 
+caps.latest.revision: 10
 author: leolimsft
 ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ee34c6829e0faed75a375727850c7caf9034b7d4
-ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
+ms.openlocfilehash: 0d7c11b995bf42a55ce3673120550b8aa4896b19
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="entities-master-data-services"></a>Entités (services de données de référence)
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   Les entités sont des objets contenus dans des modèles [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] . Chaque entité contient des membres, qui correspondent aux lignes de données de référence que vous gérez.  
   
 ## <a name="how-many-entities-are-appropriate"></a>Quel est le nombre approprié d'entités ?  

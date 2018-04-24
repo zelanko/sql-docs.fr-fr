@@ -2,7 +2,7 @@
 title: CREATE TRIGGER (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/10/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.service: ''
 ms.component: t-sql|statements
@@ -36,11 +36,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 23cb33dffcc9753200d24116b4a6d279c8fe8db5
-ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
+ms.openlocfilehash: e7b9f91e07459d4b1cbfaadff59a77c844a81aa4
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-trigger-transact-sql"></a>CREATE TRIGGER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -327,7 +327,7 @@ SELECT * FROM deleted;
 |-|-|-|  
 |CREATE INDEX (y compris CREATE SPATIAL INDEX et CREATE XML INDEX)|ALTER INDEX|DROP INDEX|  
 |DBCC DBREINDEX|ALTER PARTITION FUNCTION|DROP TABLE|  
-|ALTER TABLE quand elle est utilisée pour effectuer les actions suivantes :<br /><br /> Ajout, modification ou suppression de colonnes.<br /><br /> Changement de partitions.<br /><br /> Ajout ou suppression de contraintes PRIMARY KEY ou UNIQUE.|||  
+|ALTER TABLE quand elle est utilisée pour effectuer les actions suivantes :<br /><br /> ajout, modification ou suppression de colonnes ;<br /><br /> changement de partitions ;<br /><br /> ajout ou suppression de contraintes PRIMARY KEY ou UNIQUE.|||  
   
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne prenant pas en charge les déclencheurs définis par l'utilisateur sur des tables système, nous recommandons de ne pas en créer. 

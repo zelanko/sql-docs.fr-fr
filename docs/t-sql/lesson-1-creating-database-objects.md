@@ -1,33 +1,35 @@
 ---
-title: "Leçon 1 : Création des objets de base de données | Microsoft Docs"
-ms.custom: 
+title: 'Leçon 1 : Création des objets de base de données | Microsoft Docs'
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - SQL Server 2016
 ms.assetid: 9fb8656b-0e4e-4ada-b404-4db4d3eea995
-caps.latest.revision: 
+caps.latest.revision: 20
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 53bfe761519a6c497f384b7f2541b88c18df70a6
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 62ad1e807fd9e5c93b12d98be85d2fa2abcdc7be
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="lesson-1-creating-database-objects"></a>Leçon 1 : Création des objets de base de données
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)] Cette leçon vous montre comment créer une base de données, comment créer une table dans la base de données, puis comment accéder aux données de la table pour les changer. Étant donné que cette leçon est une introduction à l’utilisation de [!INCLUDE[tsql](../includes/tsql-md.md)], elle n’utilise pas ni ne décrit les nombreuses options disponibles pour ces instructions.  
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]
+Cette leçon vous montre comment créer une base de données, une table dans la base de données, puis accéder aux données et les modifier dans la table. Étant donné que cette leçon est une introduction à l’utilisation de [!INCLUDE[tsql](../includes/tsql-md.md)], elle n’utilise pas ni ne décrit les nombreuses options disponibles pour ces instructions.  
   
 [!INCLUDE[tsql](../includes/tsql-md.md)] les instructions peuvent être écrites et soumises au [!INCLUDE[ssDE](../includes/ssde-md.md)] comme suit :  
   

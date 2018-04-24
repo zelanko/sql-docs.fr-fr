@@ -18,11 +18,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ddec688efe7ce468b7af1c05389b9cc1e86cf4c4
-ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
+monikerRange: = azuresqldb-current || = sqlallproducts-allversions
+ms.openlocfilehash: a6c9d1740936f82b2058716d71f801792f2fd6f7
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="alter-database-azure-sql-database"></a>ALTER DATABASE (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -277,7 +278,7 @@ La valeur MAXSIZE pour le modèle basé sur DTU, si elle est spécifiée, doit �
 |:--- | --: |--: |--: |--: |--: |
 |Taille maximale des données (Go)|1024|1024|1536|2048|2048|
 
-Si aucune valeur `MAXSIZE` n’est définie lors de l’utilisation du modèle vCore, la valeur par défaut est de 32 Go. Pour plus d’informations concernant les limitations des ressources pour le modèle basé sur vCore, consultez [Limites des ressources basées sur vCore](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits).
+Si aucune valeur `MAXSIZE` n’est définie lors de l’utilisation du modèle vCore, la valeur par défaut est de 32 Go. Pour plus d’informations sur les limitations des ressources du modèle basé sur vCore, consultez [Limites des ressources basées sur vCore](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits).
   
 Les règles suivantes s'appliquent aux arguments MAXSIZE et EDITION.  
   

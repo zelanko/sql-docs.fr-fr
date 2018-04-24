@@ -1,34 +1,34 @@
 ---
-title: "Créer une table pour le stockage de données FILESTREAM | Microsoft Docs"
-ms.custom: 
+title: Créer une table pour le stockage de données FILESTREAM | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: blob
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-blob
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - FILESTREAM [SQL Server], table storage
 ms.assetid: 029c3059-5c83-43e2-a859-9027031b7de1
-caps.latest.revision: 
+caps.latest.revision: 16
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: f68e1867254caeb5257fe0c2c28fa291b45fd901
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 90596e58b14ffc51754ade6a61a8684120e46555
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-a-table-for-storing-filestream-data"></a>Créer une table pour le stockage de données FILESTREAM
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-Cette rubrique indique comment créer une table pour stocker des données FILESTREAM.  
+  Cette rubrique indique comment créer une table pour stocker des données FILESTREAM.  
   
  Lorsque la base de données comporte un groupe de fichiers FILESTREAM, vous pouvez créer ou modifier des tables pour stocker des données FILESTREAM. Pour spécifier qu’une colonne contient des données FILESTREAM, créez une colonne **varbinary(max)** et ajoutez l’attribut FILESTREAM.  
   

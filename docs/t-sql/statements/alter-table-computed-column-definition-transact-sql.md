@@ -1,32 +1,32 @@
 ---
 title: computed_column_definition (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 05/05/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
 helpviewer_keywords:
 - ALTER TABLE statement
 ms.assetid: 746eabda-3b4f-4940-b0b5-1c379f5cf7a5
-caps.latest.revision: 
+caps.latest.revision: 62
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: faff7cbb4f4eec1cf68601805d0dbbe1a3a84b3e
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 2ca7c9fb5f326f8813b2ed62e1d3463a3752b5c2
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="alter-table-computedcolumndefinition-transact-sql"></a>ALTER TABLE computed_column_definition (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -76,7 +76,7 @@ column_name AS computed_column_expression
     >  Chaque ligne dans une table pouvant avoir des valeurs différentes pour les colonnes impliquées dans la colonne calculée, il est possible que la colonne calculée n'ait pas le même résultat pour chaque ligne.  
   
 PERSISTED  
- Spécifie que le [!INCLUDE[ssDE](../../includes/ssde-md.md)] stockera physiquement les valeurs calculées dans la table et qu'il les mettra à jour lorsque les autres colonnes dont dépend la colonne calculée seront actualisées. Le marquage d'une colonne calculée comme PERSISTED permet de créer un index sur une colonne calculée déterministe, mais pas précise. Pour plus d'informations, consultez [Index sur les colonnes calculées](../../relational-databases/indexes/indexes-on-computed-columns.md). Les colonnes calculées utilisées comme colonnes de partitionnement d’une table partitionnée doivent être explicitement marquées comme PERSISTED. *computed_column_expression* doit être déterministe quand PERSISTED est spécifié.  
+ Spécifie que le [!INCLUDE[ssDE](../../includes/ssde-md.md)] stockera physiquement les valeurs calculées dans la table et qu'il les mettra à jour lorsque les autres colonnes dont dépend la colonne calculée seront actualisées. Le marquage d'une colonne calculée comme PERSISTED permet de créer un index sur une colonne calculée déterministe, mais pas précise. Pour plus d'informations, consultez [Indexes on Computed Columns](../../relational-databases/indexes/indexes-on-computed-columns.md). Les colonnes calculées utilisées comme colonnes de partitionnement d’une table partitionnée doivent être explicitement marquées comme PERSISTED. *computed_column_expression* doit être déterministe quand PERSISTED est spécifié.  
 NULL | NOT NULL  
  Indique si les valeurs NULL sont autorisées dans la colonne. NULL n'est pas strictement une contrainte, mais peut être spécifié comme NOT NULL. Il est possible de spécifier NOT NULL pour des colonnes calculées seulement si PERSISTED est également spécifié.  
   
@@ -84,7 +84,7 @@ CONSTRAINT
  Spécifie le début de la définition d'une contrainte PRIMARY KEY ou UNIQUE.  
   
 *constraint_name*  
- Nouvelle contrainte. Les noms de contraintes doivent respecter les règles applicables aux [identificateurs](../../relational-databases/databases/database-identifiers.md), excepté que le nom ne peut pas commencer par un signe dièse (#). Si *constraint_name* n’est pas spécifié, un nom généré par le système est affecté à la contrainte.  
+ Nouvelle contrainte. Les noms de contrainte doivent suivre les règles des [identificateurs](../../relational-databases/databases/database-identifiers.md), sauf que le nom ne peut pas commencer par un signe dièse (#). Si *constraint_name* n’est pas spécifié, un nom généré par le système est affecté à la contrainte.  
   
 PRIMARY KEY  
  Contrainte garantissant l’intégrité de l’entité d’une ou de plusieurs colonnes spécifiées au moyen d’un index unique. Une seule contrainte PRIMARY KEY peut être créée par table.  

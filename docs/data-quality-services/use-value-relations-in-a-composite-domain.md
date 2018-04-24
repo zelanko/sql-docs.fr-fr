@@ -15,18 +15,21 @@ ms.topic: article
 f1_keywords:
 - sql13.dqs.dm.cdvaluerelations.f1
 ms.assetid: 5ee468f0-8538-4620-90e8-63f466c9000e
-caps.latest.revision: ''
+caps.latest.revision: 12
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fa0df2009e849773eed84a0ce7a7d3fbf6302d73
-ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
+ms.openlocfilehash: 7bf9cd8c216f822a9ebb8197451ced359fda78af
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="use-value-relations-in-a-composite-domain"></a>Utiliser les relations de valeur dans un domaine composite
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   Cette rubrique décrit comment afficher les combinaisons de valeurs trouvées pour le domaine composite pendant le processus de découverte des connaissances dans [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Cette page affiche le nombre d'occurrences des combinaisons de valeur. La gestion de valeur n'est pas prise en charge pour les domaines composites, vous ne pouvez donc pas exécuter d'opérations sur ces valeurs.  
   
 ##  <a name="BeforeYouBegin"></a> Avant de commencer  

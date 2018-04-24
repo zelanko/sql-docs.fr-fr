@@ -1,16 +1,16 @@
 ---
-title: "DENY - Autorisations relatives au texte intégral | Microsoft Docs"
-ms.custom: 
+title: DENY - Autorisations relatives au texte intégral | Microsoft Docs
+ms.custom: ''
 ms.date: 05/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -21,16 +21,16 @@ helpviewer_keywords:
 - full-text stoplist [SQL Server], permissions
 - DENY statement, full-text permissions
 ms.assetid: d86e9a1d-0938-4ec2-a169-2d0564f3642e
-caps.latest.revision: 
+caps.latest.revision: 26
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 70af6c1c5b5f23e857a989d37fb4cf99701dc1fb
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 5a1d813b89200f661b7be564e9c3819e9d57b750
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="deny-full-text-permissions-transact-sql"></a>DENY - Autorisations relatives au texte intégral (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -140,7 +140,7 @@ DENY permission [ ,...n ] ON
  [DENY &#40;Transact-SQL&#41;](../../t-sql/statements/deny-transact-sql.md)   
  [Hiérarchie de chiffrement](../../relational-databases/security/encryption/encryption-hierarchy.md)   
  [sys.fn_my_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-my-permissions-transact-sql.md)   
- [GRANT - Octroyer des autorisations sur un catalogue de texte intégral &#40;Transact-SQL&#41;](../../t-sql/statements/grant-full-text-permissions-transact-sql.md)   
+ [GRANT - Autorisations relatives au texte intégral &#40;Transact-SQL&#41;](../../t-sql/statements/grant-full-text-permissions-transact-sql.md)   
  [HAS_PERMS_BY_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/has-perms-by-name-transact-sql.md)   
  [Autorisations &#40;moteur de base de données&#41;](../../relational-databases/security/permissions-database-engine.md)   
  [Principaux &#40;moteur de base de données&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   

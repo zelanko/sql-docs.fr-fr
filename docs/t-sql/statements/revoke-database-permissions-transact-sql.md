@@ -1,16 +1,16 @@
 ---
-title: "REVOKE - Révoquer des autorisations sur une base de données (Transact-SQL) | Microsoft Docs"
-ms.custom: 
+title: REVOKE - Révoquer des autorisations sur une base de données (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 08/10/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -19,18 +19,19 @@ helpviewer_keywords:
 - database permissions [SQL Server], revoking
 - REVOKE statement, databases
 ms.assetid: 442acfc6-af97-40a3-b546-91cd485ee2be
-caps.latest.revision: 
+caps.latest.revision: 42
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bb882c3cbb5e8d37d664197a60ea86a64465ffa2
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 53b4ab689410998f04ccd9e37edcbf295b68083a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="revoke-database-permissions-transact-sql"></a>REVOKE - Révoquer des autorisations sur une base de données (Transact-SQL)
+# <a name="revoke-database-permissions-transact-sql"></a>REVOKE – révocation d'autorisations de base de données (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Permet de révoquer des autorisations accordées et refusées sur une base de données.  
@@ -91,27 +92,27 @@ permission | ALL [ PRIVILEGES ]
  Spécifie un rôle de base de données.  
   
  *Application_role*  
-**S’applique à** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] jusqu’à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].
+**S’applique à** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]
   
  Spécifie un rôle d'application.  
   
  *Database_user_mapped_to_Windows_User*  
-**S’applique à** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] jusqu’à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
+**S’applique à**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] jusqu’à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
  Spécifie un utilisateur de base de données mappé sur un utilisateur Windows.  
   
  *Database_user_mapped_to_Windows_Group*  
-**S’applique à** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] jusqu’à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
+**S’applique à**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] jusqu’à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
  Spécifie un utilisateur de base de données mappé à un groupe Windows.  
   
  *Database_user_mapped_to_certificate*  
-**S’applique à** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] jusqu’à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
+**S’applique à**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] jusqu’à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
  Spécifie un utilisateur de base de données mappé sur un certificat.  
   
  *Database_user_mapped_to_asymmetric_key*  
-**S’applique à** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] jusqu’à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
+**S’applique à**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] jusqu’à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
  Spécifie un utilisateur de base de données mappé à une clé asymétrique.  
   
@@ -213,7 +214,7 @@ permission | ALL [ PRIVILEGES ]
 ### <a name="a-revoking-permission-to-create-certificates"></a>A. Révocation d'une autorisation pour créer des certificats  
  Dans l'exemple ci-dessous, l'autorisation `CREATE CERTIFICATE` sur la base de données `AdventureWorks2012` est révoquée pour l'utilisateur `MelanieK`.  
   
-**S’applique à** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] jusqu’à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
+**S’applique à**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] jusqu’à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
 ```  
 USE AdventureWorks2012;  
@@ -224,7 +225,7 @@ GO
 ### <a name="b-revoking-references-permission-from-an-application-role"></a>B. Révocation d'une autorisation REFERENCES à partir d'un rôle d'application  
  Dans l'exemple ci-dessous, l'autorisation `REFERENCES` sur la base de données `AdventureWorks2012` est révoquée du rôle d'application `AuditMonitor`.  
   
-**S’applique à** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] jusqu’à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].
+**S’applique à** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]
   
 ```  
 USE AdventureWorks2012;  

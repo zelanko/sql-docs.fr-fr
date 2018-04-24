@@ -1,8 +1,8 @@
 ---
 title: Cibles des événements étendus SQL Server | Microsoft Docs
 ms.custom: ''
-ms.date: 04/02/2018
-ms.prod: sql-non-specified
+ms.date: 04/17/2018
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.service: ''
 ms.reviewer: ''
@@ -16,11 +16,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 06ac9f1d58fef9a2c8344de8e56e9bccb7024a31
-ms.sourcegitcommit: 094c46e7fa6de44735ed0040c65a40ec3d951b75
+monikerRange: = azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 90dc83f080a2b2b64771ccb48e5cc3839e0a67e7
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="targets-for-extended-events-in-sql-server"></a>Cibles des Événements étendus SQL Server
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -154,11 +155,14 @@ La cible **event_file** écrit la sortie de session d’événements à partir d
 
 - Le nom de fichier que vous choisissez est utilisé par le système en tant que préfixe auquel un entier long basé sur une date-heure est ajouté suivi de l’extension .xel.
 
+::: moniker range="= azuresqldb-current || = azuresqldb-mi-current || = sqlallproducts-allversions"
+
 > [!NOTE]
 > Azure SQL Database prend en charge la cible **event_file**, mais uniquement en utilisant un objet blob dans le stockage Azure pour la sortie. SQL Database ne permet pas le stockage de la sortie des événements dans un fichier sur votre disque dur local.
+>
 > Pour obtenir un exemple de code **event_file** utilisable avec SQL Database (et avec SQL Database Managed Instance), consultez [Code de la cible de fichier d’événements pour les événements étendus dans SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-xevent-code-event-file).
 
-<!-- After OPS Versioning is live, the above !NOTE could be converted into a "3colon ZONE".  GeneMi = MightyPen. -->
+::: moniker-end
 
 
 #### <a name="create-event-session-with-eventfile-target"></a>CREATE EVENT SESSION avec cible **event_file**

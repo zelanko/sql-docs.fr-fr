@@ -13,18 +13,21 @@ ms.technology:
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 158009e9-8069-4741-8085-c14a5518d3fc
-caps.latest.revision: ''
+caps.latest.revision: 15
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 684a191f93f8b83fe730dbfbd30f9874a1c0cfef
-ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
+ms.openlocfilehash: be9b1d3318872b1cce55b58ee6aaeaba66c6cee0
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="cleanse-data-using-reference-data-external-knowledge"></a>Nettoyer les données à l'aide de la connaissance des données de référence (externes)
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   Cette rubrique décrit comment nettoyer les données à l'aide de la connaissance des fournisseurs de données de référence. Toutes les étapes d’exécution du nettoyage restent les mêmes pour nettoyer vos données à l’aide de la connaissance des fournisseurs de données de référence, comme expliqué dans [Nettoyer des données à l’aide de la base de connaissance DQS &#40;interne&#41;](../data-quality-services/cleanse-data-using-dqs-internal-knowledge.md). Cette rubrique fournit des informations spécifiques sur le nettoyage des données à l’aide du service des données de référence dans [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS).  
   
  Lorsque vous utilisez la fonction du service des données de référence dans DQS pour nettoyer vos données, le processus de nettoyage DQS envoie les valeurs du domaine mappé au fournisseur de services de données de référence sous forme de demande de traitement. Le service de données de référence répond avec les informations suivantes :  

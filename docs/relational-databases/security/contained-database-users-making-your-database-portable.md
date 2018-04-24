@@ -2,7 +2,7 @@
 title: Utilisateurs de base de données à relation contenant-contenu - Rendre votre base de données portable | Microsoft Docs
 ms.custom: ''
 ms.date: 03/05/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: security
@@ -16,16 +16,17 @@ helpviewer_keywords:
 - contained database, users
 - user [SQL Server], about contained database users
 ms.assetid: e57519bb-e7f4-459b-ba2f-fd42865ca91d
-caps.latest.revision: ''
+caps.latest.revision: 33
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 9f46babc81cf982caa81d7015028a951731ea73d
-ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: f83a9be0f6f854f6282d74f54f72e1a5659383be
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="contained-database-users---making-your-database-portable"></a>Utilisateurs de base de données à relation contenant-contenu - Rendre votre base de données portable
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -53,7 +54,7 @@ ms.lasthandoff: 03/08/2018
 ## <a name="firewalls"></a>Pare-feux  
   
 ### [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
- Les règles de pare-feu Windows s'appliquent à toutes les connexions et ont les mêmes effets sur les connexions (connexions de modèle traditionnel) et les utilisateurs de base de données à relation contenant-contenu. Pour plus d'informations sur le pare-feu Windows, consultez [Configurer un pare-feu Windows pour accéder au moteur de base de données](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md).  
+ Les règles de pare-feu Windows s'appliquent à toutes les connexions et ont les mêmes effets sur les connexions (connexions de modèle traditionnel) et les utilisateurs de base de données à relation contenant-contenu. Pour plus d'informations sur le pare-feu Windows, consultez [Configure a Windows Firewall for Database Engine Access](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md).  
   
 ### <a name="includesssdsincludessssds-mdmd-firewalls"></a>[!INCLUDE[ssSDS](../../includes/sssds-md.md)] Pare-feux  
  [!INCLUDE[ssSDS](../../includes/sssds-md.md)] permet des règles de pare-feu distinctes pour les connexions au niveau serveur (connexions) et pour les connexions au niveau base de données (utilisateurs de base de données à relation contenant-contenu). Quand vous vous connectez à une base de données utilisateur, les règles de pare-feu au niveau de la base de données sont contrôlées en premier. Si aucune règle n'autorise l'accès à la base de données, les règles de pare-feu au niveau serveur sont contrôlées, ce qui nécessite un accès à la base de données MASTER du serveur logique. L'association de règles de pare-feu au niveau de la base de données et d'utilisateurs de base de données à relation contenant-contenu peut éliminer la nécessité d'accéder à la base de données MASTER du serveur pendant la connexion, d'où un avantage potentiel en matière d'extensibilité de la connexion.  

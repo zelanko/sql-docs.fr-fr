@@ -1,16 +1,16 @@
 ---
 title: CREATE WORKLOAD GROUP (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/04/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - WORKLOAD GROUP
@@ -22,23 +22,23 @@ dev_langs:
 helpviewer_keywords:
 - CREATE WORKLOAD GROUP statement
 ms.assetid: d949e540-9517-4bca-8117-ad8358848baa
-caps.latest.revision: 
+caps.latest.revision: 47
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cec1360259d78679fab31a45a074d5fbbf3779b5
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: de17c3a1d00554e36537ce76eafcebba2ac0e55d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-workload-group-transact-sql"></a>CREATE WORKLOAD GROUP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Crée un groupe de charges de travail du gouverneur de ressources et l'associe à un pool de ressources du gouverneur de ressources. Resource Governor n’est pas disponible dans toutes les éditions de [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour obtenir la liste des fonctionnalités prises en charge par les éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez [Fonctionnalités prise en charge par les éditions de SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
+ ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône de lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -81,13 +81,13 @@ CREATE WORKLOAD GROUP group_name
 > [!NOTE]  
 > La quantité spécifiée fait uniquement référence à la mémoire allouée à l'exécution de la requête.  
   
- *value* doit être égal à 0 ou un entier positif. La plage autorisée pour *value* est comprise entre 0 et 100. Le paramètre par défaut pour *value* est 25.  
+ *value* doit être égal à 0 ou un entier positif. La plage autorisée pour *value* est comprise entre 0 et 100. La valeur par défaut de *value* est 25.  
   
  Notez les points suivants :  
   
--   En attribuant à *value* la valeur 0, vous empêchez l’exécution des requêtes avec les opérations SORT et HASH JOIN dans les groupes de charges de travail définis par l’utilisateur.  
+-   L’affectation de la valeur 0 à *value* empêche l’exécution de requêtes avec les opérations SORT et HASH JOIN dans les groupes de charges de travail définis par l’utilisateur.  
   
--   Il est déconseillé d’attribuer à *value* une valeur supérieure à 70, car le serveur risque de ne pas pouvoir mettre de côté suffisamment de mémoire disponible si d’autres requêtes simultanées s’exécutent. Cela risque de provoquer l'erreur de délai d'attente de requête 8645.  
+-   Il est déconseillé d’affecter à *value* une valeur supérieure à 70, car le serveur risque de ne pas pouvoir mettre de côté suffisamment de mémoire disponible si d’autres requêtes simultanées s’exécutent. Cela risque de provoquer l'erreur de délai d'attente de requête 8645.  
   
 > [!NOTE]  
 >  Si les besoins en mémoire de la requête dépassent la limite spécifiée par ce paramètre, le serveur effectue les opérations suivantes :  
@@ -129,7 +129,7 @@ CREATE WORKLOAD GROUP group_name
 -   Une fois le degré maximal de parallélisme (DOP) configuré, il ne peut être diminué que sous la sollicitation de l'allocation de mémoire. La reconfiguration du groupe de charges de travail n'est pas visible lors de l'attente dans la file d'attente d'allocation de mémoire.  
   
  GROUP_MAX_REQUESTS =*value*  
- Spécifie le nombre maximal de demandes simultanées autorisées à s'exécuter dans le groupe de charges de travail. *value* doit être égal à 0 ou un entier positif. Le paramètre par défaut de *value*, 0, autorise un nombre illimité de demandes. Lorsque le nombre maximal de requêtes est atteint, un utilisateur de ce groupe peut se connecter, mais est placé dans un état d'attente jusqu'à ce que le nombre de requêtes simultanées soit inférieur à la valeur spécifiée.  
+ Spécifie le nombre maximal de demandes simultanées autorisées à s'exécuter dans le groupe de charges de travail. *value* doit être égal à 0 ou un entier positif. La valeur par défaut de *value*, 0, autorise un nombre illimité de demandes. Lorsque le nombre maximal de requêtes est atteint, un utilisateur de ce groupe peut se connecter, mais est placé dans un état d'attente jusqu'à ce que le nombre de requêtes simultanées soit inférieur à la valeur spécifiée.  
   
  USING { *pool_name* | **"default"** }  
  Associe le groupe de charge de travail au pool de ressources défini par l’utilisateur identifié par *pool_name*. Cette opération revient en fait à placer le groupe de charges de travail dans le pool de ressources. Si *pool_name* n’est pas fourni ou si l’argument USING n’est pas utilisé, le groupe de charge de travail est placé dans le pool par défaut Resource Governor prédéfini.  

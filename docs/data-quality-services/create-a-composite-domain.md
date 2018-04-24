@@ -16,18 +16,21 @@ f1_keywords:
 - sql13.dqs.kb.createcd.f1
 - sql13.dqs.dm.cdproperties.f1
 ms.assetid: c7f0bd84-a02e-4a81-885d-985e6415c499
-caps.latest.revision: ''
+caps.latest.revision: 21
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2d358802cd5500359b4132e6db6868485e317773
-ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
+ms.openlocfilehash: 8edd709f2a753d75c5208b82ac8cd6d885d83db6
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="create-a-composite-domain"></a>Créer un domaine composite
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   Cette rubrique explique comment créer un domaine composite dans une base de connaissances dans [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Un domaine composite comprend un ou plusieurs domaines uniques qui s'appliquent à un seul champ de données. Pour plus d’informations sur les domaines composites, consultez [Gestion d’un domaine composite](../data-quality-services/managing-a-composite-domain.md).  
   
  Il existe deux méthodes pour créer un domaine composite. La première se situe pendant l'étape Mapper de l'activité de découverte des connaissances, lorsque vous êtes en cours d'analyse d'un exemple de données pour ajouter des connaissances à une base nouvelle ou existante. La deuxième se situe pendant l'activité de gestion de l'arborescence du domaine quand, au lieu de modifier un domaine existant, vous en créez un nouveau. Pour créer un domaine composite, vous devez avoir déjà créé au moins deux domaines uniques à ajouter au domaine composite. Seuls les domaines uniques qui ont déjà été créés et qui n'ont pas été ajoutés à un domaine composite existant sont disponibles lorsque vous créez un nouveau domaine composite. Un seul domaine ne peut pas être ajouté à plusieurs domaines composites et un domaine composite ne peut pas être ajouté à un autre domaine composite.  

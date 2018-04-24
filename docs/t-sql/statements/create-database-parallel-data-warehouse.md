@@ -1,28 +1,29 @@
 ---
 title: CREATE DATABASE (Parallel Data Warehouse) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 40cacde4-ac72-45f7-9564-d76e2b4a741a
-caps.latest.revision: 
+caps.latest.revision: 13
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4e9ff76a4d260604a93f59baa3b61f5c37b4952f
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 41ed767a4acd2dbe4b202e94ed054da46810e14a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-database-parallel-data-warehouse"></a>CREATE DATABASE (Parallel Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
@@ -108,7 +109,7 @@ GO
 -   Journaux [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de la taille de (*log_size* / nombre de nœuds de calcul).  
   
 ## <a name="locking"></a>Verrouillage  
- Acquiert un verrou partagé sur l’objet DATABASE.  
+ Prend un verrou partagé sur l’objet DATABASE.  
   
 ## <a name="metadata"></a>Métadonnées  
  Une fois cette opération réussie, une entrée pour cette base de données apparaît dans les vues de métadonnées [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) et [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md).  

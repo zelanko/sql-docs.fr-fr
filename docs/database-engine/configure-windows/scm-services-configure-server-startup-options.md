@@ -1,16 +1,16 @@
 ---
-title: "Configurer les options de démarrage du serveur (Gestionnaire de configuration SQL Server) | Microsoft Docs"
-ms.custom: 
+title: Configurer les options de démarrage du serveur (Gestionnaire de configuration SQL Server) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/23/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: configure-windows
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - parameters [SQL Server], startup options
@@ -22,20 +22,20 @@ helpviewer_keywords:
 - SQL Server services, setting startup options
 - SQL Server services, setting startup parameters
 ms.assetid: 7a94643c-6460-4baf-bb31-0cb99eaf970d
-caps.latest.revision: 
+caps.latest.revision: 31
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ff11f5d2ec4c086733793ebb13e54ab5448b9dd3
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: d95ee1d8202b26563814939d5f5af8a32eb1d5d2
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="scm-services---configure-server-startup-options"></a>Services SCM - Configurer les options de démarrage du serveur
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-Cette rubrique explique comment configurer les options de démarrage à utiliser à chaque démarrage du [!INCLUDE[ssDE](../../includes/ssde-md.md)] dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide du Gestionnaire de configuration [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Pour obtenir la liste des options de démarrage, consultez [Options de démarrage du service moteur de base de données](../../database-engine/configure-windows/database-engine-service-startup-options.md).  
+  Cette rubrique explique comment configurer les options de démarrage à utiliser à chaque démarrage du [!INCLUDE[ssDE](../../includes/ssde-md.md)] dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide du Gestionnaire de configuration [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Pour obtenir la liste des options de démarrage, consultez [Options de démarrage du service moteur de base de données](../../database-engine/configure-windows/database-engine-service-startup-options.md).  
   
 ##  <a name="BeforeYouBegin"></a> Avant de commencer  
   

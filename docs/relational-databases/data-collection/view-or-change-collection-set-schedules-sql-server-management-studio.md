@@ -1,16 +1,16 @@
 ---
-title: "Afficher ou modifier des planifications de jeu d’éléments de collecte (SQL Server Management Studio) | Microsoft Docs"
-ms.custom: 
+title: Afficher ou modifier des planifications de jeu d’éléments de collecte (SQL Server Management Studio) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: data-collection
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.swb.dc.collectionsetprop.uploads.f1
@@ -22,20 +22,20 @@ helpviewer_keywords:
 - collection sets [SQL Server], viewing schedules
 - schedules [SQL Server], viewing collection set
 ms.assetid: 26336c98-78c5-414f-8d6a-574fc3af60c4
-caps.latest.revision: 
+caps.latest.revision: 26
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8f58af1ebf8e039b935c235ef35118a62f725053
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 9d018c701915708166c7bfe7bfb29121bec5fc7f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="view-or-change-collection-set-schedules-sql-server-management-studio"></a>Afficher ou modifier des planifications de jeu d'éléments de collecte (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-Vous pouvez afficher ou modifier des planifications de jeu d'éléments de collecte à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+  Vous pouvez afficher ou modifier des planifications de jeu d'éléments de collecte à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
  Le mode de collecte, avec ou sans mise en cache, détermine la manière dont vous pouvez apporter des modifications à une planification. Le mode avec mise en cache utilise des planifications distinctes pour la collecte et le téléchargement. Le mode sans mise en cache utilise la même planification pour la collecte et le téléchargement. Le type de mode de collecte pour chacun des jeux d’éléments de collecte de données système est comme suit :  
   

@@ -1,16 +1,16 @@
 ---
-title: "Limiter les résultats de la recherche avec RANK | Microsoft Docs"
-ms.custom: 
+title: Limiter les résultats de la recherche avec RANK | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: search
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-search
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - row ranking [full-text search]
@@ -21,20 +21,21 @@ helpviewer_keywords:
 - rankings [full-text search]
 - per-row rank values [full-text search]
 ms.assetid: 06a776e6-296c-4ec7-9fa5-0794709ccb17
-caps.latest.revision: 
+caps.latest.revision: 20
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f9d4cf346f769133ffecdf20d7a5541876652ea1
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 432eaa56a2261ff10164ad873a14acc40b3d4457
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="limit-search-results-with-rank"></a>Limiter les résultats de la recherche avec RANK
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-Les fonctions [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) et [FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md) retournent une colonne appelée RANK qui contient des valeurs ordinales comprises entre 0 et 1000 (valeurs de classement). Ces valeurs servent à établir le rang des lignes retournées en fonction de leur correspondance par rapport aux critères de sélection. Les valeurs de classement indiquent uniquement un ordre relatif de pertinence pour les lignes du jeu de résultats. Une valeur inférieure indique une pertinence plus faible. Les valeurs réelles sont sans importance et sont généralement différentes d'une exécution de requête à une autre.  
+  Les fonctions [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) et [FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md) retournent une colonne appelée RANK qui contient des valeurs ordinales comprises entre 0 et 1000 (valeurs de classement). Ces valeurs servent à établir le rang des lignes retournées en fonction de leur correspondance par rapport aux critères de sélection. Les valeurs de classement indiquent uniquement un ordre relatif de pertinence pour les lignes du jeu de résultats. Une valeur inférieure indique une pertinence plus faible. Les valeurs réelles sont sans importance et sont généralement différentes d'une exécution de requête à une autre.  
   
 > [!NOTE]  
 >  Les prédicats CONTAINS et FREETEXT ne retournent aucune valeur de rang.  

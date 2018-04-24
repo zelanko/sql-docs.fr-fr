@@ -2,7 +2,7 @@
 title: Propriétés du serveur (page Avancé) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: configure-windows
@@ -20,14 +20,15 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e6fdf75cd720e6463a41475212beb07ee4a79819
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 69fccae4b0c44d9b71952e6de1361db22fa2266c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="server-properties---advanced-page"></a>Propriétés du serveur - page Avancé
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Utilisez cette page pour afficher ou modifier vos paramètres de serveur avancés.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Utilisez cette page pour afficher ou modifier vos paramètres de serveur avancés.  
   
  **Pour afficher les pages de propriétés de serveur**  
   
@@ -105,7 +106,7 @@ ms.lasthandoff: 01/18/2018
  **Année de coupure à deux chiffres**  
  Indique le numéro d'année le plus élevé qui peut être entré en tant qu'année à deux chiffres. L'année répertoriée et les 99 années précédentes peuvent être entrées sous forme d'années à deux chiffres. Toutes les autres années doivent être entrées sous forme d'années à quatre chiffres.  
   
- Par exemple, le paramètre par défaut 2049 indique qu'une date entrée sous la forme "14/3/49" sera interprétée comme le 14 mars 2049, tandis qu'une date entrée sous la forme "14/3/50" sera interprétée comme le 14 mars 1950. Pour plus d’informations, voir [Configurer l'option de configuration de serveur two digit year cutoff](../../database-engine/configure-windows/configure-the-two-digit-year-cutoff-server-configuration-option.md).  
+ Par exemple, le paramètre par défaut 2049 indique qu'une date entrée sous la forme "14/3/49" sera interprétée comme le 14 mars 2049, tandis qu'une date entrée sous la forme "14/3/50" sera interprétée comme le 14 mars 1950. Pour plus d’informations, voir [Configure the two digit year cutoff Server Configuration Option](../../database-engine/configure-windows/configure-the-two-digit-year-cutoff-server-configuration-option.md).  
   
 ## <a name="network"></a>Réseau  
  **Taille du paquet réseau**  

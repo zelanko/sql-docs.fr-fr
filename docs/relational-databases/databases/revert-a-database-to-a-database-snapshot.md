@@ -1,35 +1,35 @@
 ---
-title: "Rétablir une base de données dans l’état d’un instantané de base de données | Microsoft Docs"
-ms.custom: 
+title: Rétablir une base de données dans l’état d’un instantané de base de données | Microsoft Docs
+ms.custom: ''
 ms.date: 03/09/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: databases
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - database snapshots [SQL Server], reverting to
 - reverting databases
 ms.assetid: 8f74dd31-c9ca-4537-8760-0c7648f0787d
-caps.latest.revision: 
+caps.latest.revision: 58
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 4a93fde67cfb08245607153afbddaffd1aca6669
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: 73937db1d92e704085af59291d04bd557ccdc3d3
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="revert-a-database-to-a-database-snapshot"></a>Rétablir une base de données dans l'état d'un instantané de base de données
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-Si les données d'une base de données en ligne sont endommagées, dans certains cas, rétablir la base de données dans l'état d'un instantané précédant le problème peut être une bonne solution plutôt que de restaurer la base de données à partir d'une sauvegarde. Par exemple, rétablir une base de données peut être utile pour annuler une grave erreur de l'utilisateur, telle que la suppression d'une table. Toutefois, toutes les modifications apportées depuis la création de l'instantané sont perdues.  
+  Si les données d'une base de données en ligne sont endommagées, dans certains cas, rétablir la base de données dans l'état d'un instantané précédant le problème peut être une bonne solution plutôt que de restaurer la base de données à partir d'une sauvegarde. Par exemple, rétablir une base de données peut être utile pour annuler une grave erreur de l'utilisateur, telle que la suppression d'une table. Toutefois, toutes les modifications apportées depuis la création de l'instantané sont perdues.  
   
 -   **Avant de commencer :**  
   

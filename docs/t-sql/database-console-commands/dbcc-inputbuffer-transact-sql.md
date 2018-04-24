@@ -2,7 +2,7 @@
 title: DBCC INPUTBUFFER (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/04/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-database
 ms.service: ''
 ms.component: t-sql|database-console-commands
@@ -31,11 +31,11 @@ author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: f3292b45e9a0e73754bc4f3247c18c431f11271a
-ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
+ms.openlocfilehash: 5f424f36e641e7bc28960a026849d3c5e73597d2
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="dbcc-inputbuffer-transact-sql"></a>DBCC INPUTBUFFER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -104,7 +104,7 @@ Sur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], l’une des condi
 SELECT @@spid;  
 ```
   
-Pour les niveaux [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Premium et critique pour l’entreprise, l’autorisation VIEW DATABASE STATE est requise dans la base de données. Pour les niveaux [!INCLUDE[ssSDS](../../includes/sssds-md.md)] standard, de base et à usage général, le compte administrateur [!INCLUDE[ssSDS](../../includes/sssds-md.md)] est requis.
+Pour les niveaux [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Premium et critique pour l’entreprise, l’autorisation VIEW DATABASE STATE est requise dans la base de données. Pour les niveaux [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Standard, De base et Usage général, le compte administrateur [!INCLUDE[ssSDS](../../includes/sssds-md.md)] est requis.
   
 ## <a name="examples"></a>Exemples  
 L'exemple suivant exécute `DBCC INPUTBUFFER` sur une seconde connexion tandis qu'une longue transaction est en cours d'exécution sur une connexion précédente.

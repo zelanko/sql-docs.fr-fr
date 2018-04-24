@@ -17,18 +17,21 @@ helpviewer_keywords:
 - log files
 - dqs log files
 ms.assetid: 4fccfd24-aede-4882-be69-ec1e82682e16
-caps.latest.revision: ''
+caps.latest.revision: 15
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 72881f3b184c14b682990c012daa4e2aba5a8465
-ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
+ms.openlocfilehash: 1214dcef9c0fb095becb3cb1f80986df28b709de
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="manage-dqs-log-files"></a>Gérer les fichiers journaux DQS
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   Les fichiers journaux[!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) vous aident dans le diagnostic et la résolution de problèmes avec [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)], [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]et [!INCLUDE[ssDQSCleansingLong](../includes/ssdqscleansinglong-md.md)]. Des fichiers journaux distincts sont générés pour [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)], [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]et [!INCLUDE[ssDQSCleansing](../includes/ssdqscleansing-md.md)].  
   
  Vous pouvez utiliser [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] pour configurer le paramètre de gravité du journal pour les fonctionnalités et les modules [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] . En outre, vous pouvez également configurer d'autres paramètres (avancés) pour les fichiers journaux DQS en modifiant manuellement les paramètres de configuration des journaux DQS dans la base de données DQS_MAIN et un fichier XML sur l'ordinateur [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] .  

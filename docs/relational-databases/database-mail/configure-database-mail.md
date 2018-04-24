@@ -2,7 +2,7 @@
 title: Configuration de la Messagerie de base de données | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: database-mail
@@ -47,17 +47,17 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 3d88087b9d1142919f844155c805e2284e954e54
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
-ms.translationtype: MT
+ms.openlocfilehash: 258e534b2291712f322cfb1dd611c3fb7a0c876c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="configure-database-mail"></a>Configuration de la Messagerie de base de données
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Cette rubrique explique comment activer et configurer la messagerie de base de données à l'aide de l'Assistant Configuration de la messagerie de base de données, et créer un script de configuration de la messagerie de base de données à l'aide de modèles.  
   
--   **Before you begin:**  [Limitations and Restrictions](#Restrictions), [Security](#Security)  
+-   **Avant de commencer :**  [Limitations et restrictions](#Restrictions), [Sécurité](#Security)  
   
 -   **Pour configurer la messagerie de base de données, utilisez :**  [Assistant Configuration de la messagerie de base de données](#DBWizard), [Utilisation de modèles](#Template)  
   
@@ -195,7 +195,7 @@ ms.lasthandoff: 04/10/2018
  **Nom du compte**  
  Sélectionnez le compte à afficher, mettre à jour ou supprimer.  
   
- **Delete**  
+ **Supprimer**  
  Supprime le compte sélectionné. Vous devez supprimer ce compte des profils associés ou supprimer ces profils avant de supprimer le compte sélectionné.  
   
  **Description**  
@@ -225,7 +225,7 @@ ms.lasthandoff: 04/10/2018
  **Authentification de base**  
  Spécifiez le nom d'utilisateur et le mot de passe demandés par le serveur SMTP.  
   
- **Nom d'utilisateur**  
+ **User name**  
  Affichez ou modifiez le nom d'utilisateur que la messagerie de base de données utilise pour se connecter au serveur SMTP. Ce nom est obligatoire si le serveur SMTP nécessite une authentification de base.  
   
  **Mot de passe**  
@@ -275,7 +275,7 @@ ms.lasthandoff: 04/10/2018
  **Nom de profil**  
  Sélectionnez le nom du profil à gérer.  
   
- **Delete**  
+ **Supprimer**  
  Supprimez le profil sélectionné. Vous serez invité à sélectionner **Oui** pour supprimer le profil sélectionné et pour annuler les messages non envoyés, ou pour sélectionner **Non** afin de supprimer le profil sélectionné uniquement en l'absence de tout message non envoyé  
   
  **Description**  
@@ -369,7 +369,7 @@ ms.lasthandoff: 04/10/2018
   
  Un profil peut être un profil par défaut. Dans ce cas, les utilisateurs ou les rôles peuvent envoyer des messages électroniques avec ce profil, sans le spécifier explicitement. Si l'utilisateur ou le rôle qui envoie ce message possède un profil privé par défaut, la messagerie de base de données utilise ce profil. Si l’utilisateur ou le rôle ne possède pas de profil privé par défaut, **sp_send_dbmail** utilise le profil public par défaut pour la base de données **msdb** . S’il n’existe ni profil privé par défaut pour l’utilisateur ou le rôle, ni profil public par défaut pour la base de données, **sp_send_dbmail** renvoie une erreur.  
   
- **Nom d'utilisateur**  
+ **User name**  
  Pour sélectionner le nom d’un utilisateur ou d’un rôle dans la base de données **msdb** .  
   
  **Accès**  

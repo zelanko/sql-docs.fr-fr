@@ -18,13 +18,16 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: debbf608daac6d95527939808b620d34fe1e4c31
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: c958dfa6d3ba94a1d17835876d8de6b26dea1943
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="master-data-services-installation-and-configuration"></a>Installation et configuration de Master Data Services
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   Cet article explique comment installer [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] sur un ordinateur Windows Server 2012 R2, configurer la base de données et le site web MDS, et déployer les exemples de modèles et de données. [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] (MDS) permet à votre organisation de gérer une version approuvée des données.   
   
 > [!NOTE] 

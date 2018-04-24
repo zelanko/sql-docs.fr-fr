@@ -1,34 +1,35 @@
 ---
-title: "Resource Governor | Microsoft Docs"
-ms.custom: 
+title: Resource Governor | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: resource-governor
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Resource Governor, overview
 - Resource Governor
 ms.assetid: 2bc89b66-e801-45ba-b30d-8ed197052212
-caps.latest.revision: 
+caps.latest.revision: 41
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 631b9668bbea31db5b38a0f20eef099f470815b3
-ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
+ms.openlocfilehash: 8825a530b99737bbf7e04e08327dd8849dfa803e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="resource-governor"></a>gouverneur de ressources
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Resource Governor est une fonctionnalité que vous pouvez utiliser pour gérer la charge de travail et la consommation des ressources système de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Resource Governor vous permet de spécifier des limites sur l'utilisation de la quantité d'UC, d'E/S physiques et de mémoire par les demandes d'application entrantes.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Resource Governor est une fonctionnalité que vous pouvez utiliser pour gérer la charge de travail et la consommation des ressources système de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Resource Governor vous permet de spécifier des limites sur l'utilisation de la quantité d'UC, d'E/S physiques et de mémoire par les demandes d'application entrantes.  
   
 ## <a name="benefits-of-resource-governor"></a>Avantages de Resource Governor  
  Resource Governor vous permet de gérer les ressources et les charge de travail [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en spécifiant des limites concernant la consommation de ressources par les demandes entrantes. Du point de vue de Resource Governor, la charge de travail est un ensemble de requêtes de taille similaire qui peuvent ou devraient être traitées comme une entité unique. Bien que cela ne soit pas indispensable, plus le modèle d'utilisation des ressources d'une charge de travail est uniforme, plus il est avantageux d'utiliser Resource Governor. Les limites de ressources peuvent être reconfigurées en temps réel avec un impact négligeable sur les charges de travail en cours d'exécution.  

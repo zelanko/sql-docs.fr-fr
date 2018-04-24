@@ -1,16 +1,16 @@
 ---
 title: CREATE QUEUE (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 04/10/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - QUEUE_TSQL
@@ -28,16 +28,16 @@ helpviewer_keywords:
 - activation stored procedures [Service Broker]
 - queues [Service Broker], creating
 ms.assetid: fce80faf-2bdc-475d-8ca1-31438ed41fb0
-caps.latest.revision: 
+caps.latest.revision: 67
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 7bd20267a78f9a0fcaf2d854b6e94553b7c80167
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 129670e6efbbfcf7373c9cb03112a4f404c8c46f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-queue-transact-sql"></a>CREATE QUEUE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -150,9 +150,9 @@ CREATE QUEUE <object>
   
  Les autorisations correspondant à la procédure stockée d'activation sont vérifiées lorsque [!INCLUDE[ssSB](../../includes/sssb-md.md)] démarre la procédure stockée et non lorsque la file d'attente est créée. L'instruction CREATE QUEUE ne vérifie pas si l'utilisateur spécifié dans la clause EXECUTE AS dispose de l'autorisation d'exécution de la procédure stockée spécifiée dans la clause PROCEDURE NAME.  
   
- Lorsqu'une file d'attente est indisponible, [!INCLUDE[ssSB](../../includes/sssb-md.md)] conserve les messages destinés aux services qui utilisent cette file dans la file d'attente de transmission de la base de données. La vue de catalogue sys.transmission_queue donne une vue de la file d'attente de transmission.  
+ Lorsqu'une file d'attente est indisponible, [!INCLUDE[ssSB](../../includes/sssb-md.md)] conserve les messages destinés aux services qui utilisent cette file dans la file d'attente de transmission de la base de données. L'affichage catalogue sys.transmission_queue donne une vue de la file d'attente de transmission.  
   
- Une file d'attente est un objet appartenant à un schéma. Les files d'attente apparaissent dans la vue de catalogue sys.objects.  
+ Une file d'attente est un objet appartenant à un schéma. Les files d'attente apparaissent dans l'affichage catalogue sys.objects.  
   
  Le tableau suivant donne la liste des colonnes d'une file d'attente.  
   

@@ -1,16 +1,16 @@
 ---
 title: Versions (Master Data Services) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
-ms.service: 
+ms.service: ''
 ms.component: non-specific
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - version flags [Master Data Services], about version flags
@@ -18,18 +18,21 @@ helpviewer_keywords:
 - version flags [Master Data Services]
 - versions [Master Data Services], version flags
 ms.assetid: 752ec96d-53d7-4160-8ed2-92e0324645f3
-caps.latest.revision: 
+caps.latest.revision: 9
 author: leolimsft
 ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6348d7477123e993edc2223b874ac15f11da2897
-ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
+ms.openlocfilehash: 88a658672a9f8501af8f6f94ad59873771d3e53a
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="versions-master-data-services"></a>Versions (Master Data Services)
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   Dans [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], vous pouvez créer plusieurs versions des données de référence dans un modèle. Les versions peuvent être verrouillées pendant que vous validez vos données et activées une fois les données validées. Les versions activées constituent un enregistrement des modifications pouvant être audité. Chaque version que vous créez contient l'ensemble des membres, valeurs d'attribut, membres de hiérarchie, relations de hiérarchie et collections pour le modèle.  
   
 ## <a name="when-to-use-versions"></a>Cas d'utilisation des versions  

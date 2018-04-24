@@ -1,35 +1,35 @@
 ---
-title: "Exemple : spécification des directives ID et IDREFS | Microsoft Docs"
-ms.custom: 
+title: 'Exemple : spécification des directives ID et IDREFS | Microsoft Docs'
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: xml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-xml
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - IDREFS directive
 - ID directive
 ms.assetid: 99b9f0d8-ecbb-4225-859f-881066c09785
-caps.latest.revision: 
+caps.latest.revision: 11
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 43bc62b8d8753a4f1ce03b44fc9a318a700db708
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: d37e844d481585207b144929dba2e30760ba1668
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="example-specifying-the-id-and-idrefs-directives"></a>Exemple : spécification des directives ID et IDREFS
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-Un attribut d’élément peut être spécifié comme attribut de type **ID** et l’attribut **IDREFS** peut ensuite être utilisé pour y faire référence. Cela permet de créer des liens à l'intérieur du document et est assimilable aux relations entre clés primaires et clés étrangères dans les bases de données relationnelles.  
+  Un attribut d’élément peut être spécifié comme attribut de type **ID** et l’attribut **IDREFS** peut ensuite être utilisé pour y faire référence. Cela permet de créer des liens à l'intérieur du document et est assimilable aux relations entre clés primaires et clés étrangères dans les bases de données relationnelles.  
   
  Cet exemple illustre l’utilisation des directives **ID** et **IDREFS** pour créer des attributs de types **ID** et **IDREFS** . Étant donné que les ID ne peuvent pas être des valeurs entières, dans cet exemple, leurs valeurs sont converties. En d'autres termes, ils subissent une conversion de type. Des préfixes sont utilisés pour les valeurs d'ID.  
   

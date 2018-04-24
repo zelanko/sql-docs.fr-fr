@@ -1,16 +1,16 @@
 ---
-title: "Présentation des erreurs du moteur de base de données | Microsoft Docs"
-ms.custom: 
+title: Présentation des erreurs du moteur de base de données | Microsoft Docs
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: errors-events
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - errors [SQL Server], about errors
@@ -18,21 +18,23 @@ helpviewer_keywords:
 - errors [SQL Server]
 - Database Engine [SQL Server], errors
 ms.assetid: ddaca9d3-956f-46a5-8cd3-a7a15ec75878
-caps.latest.revision: 
+caps.latest.revision: 27
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cbd10231e195d22b227589d704ce166eb44c0c26
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: cdd35c45e3e6828a9faf1da3ee78236791de372d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="understanding-database-engine-errors"></a>Présentation des erreurs du moteur de base de données
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Les erreurs déclenchées par le [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] ont les attributs décrits dans le tableau suivant.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+  Les erreurs déclenchées par le [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] have the attributes described in the following table.  
   
-|Attribut|Description|  
+|Attribute|Description|  
 |---------------|-----------------|  
 |Numéro d'erreur|Chaque message d'erreur possède un numéro d'erreur unique.|  
 |Chaîne de message d'erreur|Le message d'erreur contient des informations sur la cause probable de l'erreur. De nombreux messages d'erreur ont des variables de substitution contenant des informations telles que le nom de l'objet à l'origine de l'erreur.|  
@@ -63,7 +65,7 @@ SELECT
   
  Pour plus d’informations, consultez [sys.messages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/messages-for-errors-catalog-views-sys-messages.md).  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [sys.messages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/messages-for-errors-catalog-views-sys-messages.md)   
  [RAISERROR &#40;Transact-SQL&#41;](../../t-sql/language-elements/raiserror-transact-sql.md)   
  [@@ERROR &#40;Transact-SQL&#41;](../../t-sql/functions/error-transact-sql.md)   

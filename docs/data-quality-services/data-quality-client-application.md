@@ -13,18 +13,21 @@ ms.technology:
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 25d1547e-4113-4b34-a9f8-8897db1acf16
-caps.latest.revision: ''
+caps.latest.revision: 15
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 3b86461302e64c244deb9dfd1da7b431fcb89685
-ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
+ms.openlocfilehash: 8b3e7ccdbcd056acfb0a49a1eb06a1280508a770
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="data-quality-client-application"></a>Application Data Quality Client
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   L'application [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] vous permet d'effectuer des opérations de qualité des données à l'aide d'un outil autonome. Cette application permet de créer des bases de connaissances, de créer et d'exécuter des projets de qualité des données et d'effectuer des tâches d'administration.  
   
  Les gestionnaires de données, les experts en données et les professionnels de l'informatique chargés de la gestion des ressources de données et du respect de niveaux élevés en matière de qualité des données peuvent utiliser l'application cliente dans l'un des trois rôles disponibles : un opérateur de base de connaissances DQS qui peut modifier et exécuter un projet de qualité des données, un éditeur de base de connaissances DQS qui peut exécuter les fonctions de projet, créer et modifier une base de connaissances, et un administrateur DQS qui peut exécuter les fonctions de projet et de base de connaissances et administrer le système. Pour plus d’informations, voir [DQS Security](../data-quality-services/dqs-security.md).  

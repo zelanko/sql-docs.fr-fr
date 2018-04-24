@@ -2,7 +2,7 @@
 title: Propriétés du serveur (page Connexions) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: configure-windows
@@ -20,14 +20,15 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 20a65fb532fd8a37402c9ce09e6095907715d1f3
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 74bd7dd8ad4a3d188a590b4def7a3b689c010494
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="server-properties---connections-page"></a>Propriétés du serveur - page Connexions
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Utilisez cette page pour consulter ou modifier vos options de connexion.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Utilisez cette page pour consulter ou modifier vos options de connexion.  
   
 ## <a name="connections"></a>Connexions  
  **Nombre maximal de connexions simultanées (0 = illimité)**  
@@ -68,7 +69,7 @@ ms.lasthandoff: 01/18/2018
  Spécifie le temps (en secondes) imparti à une opération distante avant l'expiration de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . La valeur par défaut est de 600 secondes, soit un délai d'attente de 10 minutes.  
   
  **Nécessite des transactions distribuées pour la communication de serveur à serveur**  
- Protège les actions d'une procédure de serveur à serveur par le biais d'une transaction MS DTC ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Distributed Transaction Coordinator). Pour plus d'informations, consultez [Configurer l'option de configuration du serveur remote proc trans](../../database-engine/configure-windows/configure-the-remote-proc-trans-server-configuration-option.md).  
+ Protège les actions d'une procédure de serveur à serveur par le biais d'une transaction MS DTC ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Distributed Transaction Coordinator). Pour plus d'informations, consultez [Configure the remote proc trans Server Configuration Option](../../database-engine/configure-windows/configure-the-remote-proc-trans-server-configuration-option.md).  
   
 ## <a name="property-page-display-options"></a>Options d'affichage de la page Propriétés  
  **Valeurs configurées**  

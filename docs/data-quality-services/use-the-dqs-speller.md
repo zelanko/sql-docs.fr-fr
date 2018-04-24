@@ -13,18 +13,21 @@ ms.technology:
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 65e4e53e-2699-4cae-a9e0-fe78547755b5
-caps.latest.revision: ''
+caps.latest.revision: 15
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0a362ebc450559580430a952b99fb0aebe93e97a
-ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
+ms.openlocfilehash: 7a8e9efc399d840f56b92162ad557863f4a4fa66
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="use-the-dqs-speller"></a>Utiliser le vérificateur d'orthographe DQS
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   Le vérificateur d'orthographe [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) vérifie la syntaxe, l'orthographe, et la structure de la phrase des valeurs de chaîne dans un domaine. Le vérificateur d'orthographe est une fonctionnalité autonome et côté client qui n'a pas d'intégration avec les moteurs côté serveur et aucune conséquence sur les flux ou les états actuels. Le vérificateur d'orthographe identifie ces valeurs de chaîne qu'il considère comme des erreurs potentielles, puis les marque d'un trait de soulignement rouge dans le même emplacement que celui où vous apportez d'autres modifications manuelles aux valeurs de domaine. Ces emplacements incluent :  
   
 -   La page **Gérer les valeurs du domaine** de l'activité **Découverte des connaissances**  

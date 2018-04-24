@@ -16,18 +16,21 @@ f1_keywords:
 - sql13.dqs.dm.testcdrule.f1
 - sql13.dqs.dm.cdrules.f1
 ms.assetid: 0f3f5ba4-cc47-4d66-866e-371a042d1f21
-caps.latest.revision: ''
+caps.latest.revision: 13
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9a9d5e5885832d83f27e061f2a54987a8c8e4f8a
-ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
+ms.openlocfilehash: a1199bd1bc03a29b5e2469b501bc2d9be7124abe
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="create-a-cross-domain-rule"></a>Créer une règle inter-domaines
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   Cette rubrique décrit comment créer une règle inter-domaines pour un domaine composite d'une base de connaissances dans [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Une règle inter-domaines teste la relation entre les valeurs des domaines uniques inclus dans un domaine composite. Une règle inter-domaines doit contenir true sur un domaine composite pour que les valeurs de domaine soient considérées comme exactes et conformes aux besoins de l'entreprise. Une règle inter-domaines est utilisée pour valider, corriger et normaliser les valeurs de domaine.  
   
  La clause If et la clause Then d'une règle inter-domaines sont définies chacune pour l'un des domaines uniques du domaine composite. Chaque clause doit être définie pour un seul domaine. Une règle inter-domaines doit être en relation avec plusieurs domaines uniques ; vous ne pouvez pas définir une règle simple de domaine (pour un seul domaine) pour un domaine composite. Pour cela, définissez une règle de domaine pour un seul domaine. La clause If et la clause Then peuvent chacune contenir une ou plusieurs conditions.  

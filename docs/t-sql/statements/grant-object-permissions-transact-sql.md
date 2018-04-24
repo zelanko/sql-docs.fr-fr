@@ -1,16 +1,16 @@
 ---
-title: "GRANT - Octroyer des autorisations sur un objet (Transact-SQL) | Microsoft Docs"
-ms.custom: 
+title: GRANT - Octroyer des autorisations sur un objet (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 08/10/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -18,18 +18,19 @@ helpviewer_keywords:
 - granting permissions [SQL Server], objects
 - GRANT statement, objects
 ms.assetid: c001c2e7-d092-43d4-8fa6-693b3ec4c3ea
-caps.latest.revision: 
+caps.latest.revision: 40
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 7346cb0ddd69277fd9a7336feaba766fb1ec5b0b
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 238d5eb98aac1f1e73f911eff61cbd8a059f94a8
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="grant-object-permissions-transact-sql"></a>GRANT - Octroyer des autorisations sur un objet (Transact-SQL)
+# <a name="grant-object-permissions-transact-sql"></a>GRANT – octroi d'autorisations d'objet (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Permet d'accorder des autorisations sur une table, une vue, une fonction table, une procédure stockée, une procédure stockée étendue, une fonction scalaire, une fonction d'agrégation, une file d'attente de service ou un synonyme.  
@@ -123,7 +124,7 @@ PRIVILEGES
 > [!IMPORTANT]  
 >  Dans certains cas, une combinaison d'autorisations ALTER et REFERENCE pourrait autoriser le bénéficiaire des autorisations à afficher des données ou à exécuter des fonctions non autorisées. Exemple : un utilisateur avec une autorisation ALTER sur une table et une autorisation REFERENCE sur une fonction peut créer une colonne calculée sur une fonction et l'exécuter. Dans ce cas, l'utilisateur aurait également besoin de l'autorisation SELECT sur la colonne calculée.  
   
- Des informations sur les objets sont consultables dans différentes vues de catalogue. Pour plus d’informations, consultez [Vues de catalogue d’objets &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md).  
+ Des informations sur les objets sont consultables dans différents affichages catalogue. Pour plus d’informations, consultez [Vues de catalogue d’objets &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md).  
   
  Un objet est un élément sécurisable de niveau schéma inclus dans le schéma qui est son parent dans la hiérarchie des autorisations. Les autorisations les plus spécifiques et limitées qu'il est possible d'accorder sur un objet sont répertoriées dans le tableau ci-dessous, avec les autorisations plus générales qui les incluent de manière implicite.  
   
@@ -213,7 +214,7 @@ GO
 ```  
   
 ## <a name="see-also"></a> Voir aussi  
- [DENY - Refuser des autorisations sur un objet &#40;Transact-SQL&#41;](../../t-sql/statements/deny-object-permissions-transact-sql.md)   
+ [DENY – refus d’autorisations d’objet &#40;Transact-SQL&#41;](../../t-sql/statements/deny-object-permissions-transact-sql.md)   
  [REVOKE - Révoquer des autorisations sur un objet &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-object-permissions-transact-sql.md)   
  [Vues de catalogue d’objets &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [Autorisations &#40;moteur de base de données&#41;](../../relational-databases/security/permissions-database-engine.md)   

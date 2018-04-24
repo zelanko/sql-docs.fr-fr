@@ -1,34 +1,35 @@
 ---
-title: "Lock:Released, classe d’événements | Microsoft Docs"
-ms.custom: 
+title: Lock:Released, classe d’événements | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: event-classes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Released event class
 ms.assetid: a150c300-72fa-4231-8f41-f1abd550a429
-caps.latest.revision: 
+caps.latest.revision: 35
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a977b5093165e7a5532f9b7312d43c272566b23b
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 43adf0086a623bc434d8214feefc05867076aa96
+ms.sourcegitcommit: beaad940c348ab22d4b4a279ced3137ad30c658a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="lockreleased-event-class"></a>Classe d'événements Lock:Released
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-La classe d'événements Lock:Released indique qu'un verrou sur une ressource (une page par exemple) a été débloqué.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  La classe d'événements Lock:Released indique qu'un verrou sur une ressource (une page par exemple) a été débloqué.  
   
  Les classes d'événements Lock:Acquired et Lock:Released permettent de contrôler à quel moment des objets sont verrouillés, le type des verrous établis et la durée de maintien des verrous. Les verrous maintenus pendant de longues périodes peuvent causer des contentions et doivent être examinés. Par exemple, une application peut acquérir des verrous sur les lignes d'une table puis attendre la saisie de l'utilisateur. La saisie de l'utilisateur pouvant prendre du temps pour se produire, les verrous risquent de bloquer d'autres utilisateurs. Dans ce cas, l'application doit être modifiée pour effectuer des demandes de verrous uniquement lorsque cela est nécessaire et ne pas demander une saisie de l'utilisateur après avoir acquis des verrous.  
   

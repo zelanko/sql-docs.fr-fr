@@ -1,16 +1,16 @@
 ---
 title: REPLACE (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 08/23/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - REPLACE_TSQL
@@ -24,16 +24,17 @@ helpviewer_keywords:
 - second string expressions [SQL Server]
 - REPLACE function
 ms.assetid: 8a7aaaf2-62e3-46c0-8e44-fa22290dd86b
-caps.latest.revision: 
+caps.latest.revision: 39
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 330a3d79893bd24e3253eced054fa029b7f8d1d9
-ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: a3543a88968e8728550b4c845c8e776d03908af0
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="replace-transact-sql"></a>REPLACE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -52,10 +53,10 @@ REPLACE ( string_expression , string_pattern , string_replacement )
  *string_expression*  
  [Expression](../../t-sql/language-elements/expressions-transact-sql.md) de chaîne à rechercher. *string_expression* peut être de type de données binaire ou caractère.  
   
- *string_*pattern  
+ *string_* pattern  
  Sous-chaîne à rechercher. *string_pattern* peut être de type de données binaire ou caractère. *string_pattern* ne peut pas être une chaîne vide ('') et ne doit pas dépasser le nombre maximal d’octets tenant sur une page.  
   
- *string_*replacement  
+ *string_* replacement  
  Chaîne de remplacement. *string_replacement* peut être de type de données binaire ou caractère.  
   
 ## <a name="return-types"></a>Types de retour  
