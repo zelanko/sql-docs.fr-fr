@@ -1,23 +1,19 @@
 ---
-title: Nouveautés du système de plateforme Analytique – un entrepôt de données de la montée en puissance parallèle
-author: happynicolle
-ms.author: nicw;barbkess
-manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.suite: sql
-ms.custom: ''
-ms.technology: mpp-data-warehouse
+title: Nouveautés du système de plateforme Analytique – un entrepôt de données de la montée en puissance parallèle | Documents Microsoft
 description: Voir quelles sont les nouveautés dans le système de plateforme Microsoft® Analytique, un dispositif de montée en puissance parallèle sur site qui héberge MPP SQL Server Parallel Data Warehouse.
-ms.date: 11/28/2016
-ms.topic: article
-ms.openlocfilehash: c6af71d6b7c2bc67aeea0fdc5c1af2e668f537c5
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+author: mzaman1
+manager: craigg
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 4beb44ac45d95aa0338dc9dc0be0796a223d3243
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="whats-new-in-analytics-platform-system-2016-a-scale-out-mpp-data-warehouse"></a>Nouveautés de l’Analytique plateforme System 2016, un entrepôt de données MPP montée en puissance parallèle
 Voir quelles sont les nouveautés dans Microsoft® Analytique système de plateforme (APS) 2016, la dernière mise à jour du matériel pour un dispositif de montée en puissance parallèle sur site qui héberge MPP SQL Server Parallel Data Warehouse. 
@@ -32,7 +28,7 @@ APS 2016 prend en charge ces améliorations de compatibilité de T-SQL.  Ces él
 
 - [Les classements au niveau des colonnes SQL][] sont désormais pris en charge en plus des classements Windows.
 - [Les index non cluster sur les index cluster columnstore][] améliorer les performances des requêtes qui recherchent des valeurs spécifiques dans l’index columnstore cluster. 
-- [SELECT...INTO][] 
+- [SÉLECTIONNEZ... DANS][] 
 - [sp_spaceused()][] affiche l’espace disque utilisé ou réservé dans une table ou une base de données.
 - [Les tableaux larges][] prise en charge est le même que SQL Server 2016. La limite précédente de 32 Ko pour la taille de ligne n’existe plus. 
 
@@ -99,7 +95,7 @@ L’installation ou la mise à niveau vers 2016 de points d’accès est plus ra
 [nvarchar (max)]:https://msdn.microsoft.com/library/ms186939.aspx
 [varbinary (max)]:https://msdn.microsoft.com/library/ms188362.aspx
 [SYSNAME]:https://msdn.microsoft.com/library/ms188021.aspx
-[SELECT...INTO]:https://msdn.microsoft.com/library/ms188029.aspx
+[SÉLECTIONNEZ... DANS]:https://msdn.microsoft.com/library/ms188029.aspx
 [sp_spaceused()]:https://msdn.microsoft.com/library/ms188776.aspx
 [Les tableaux larges]:https://msdn.microsoft.com/library/ms143432.aspx
 [BULK INSERT]:https://msdn.microsoft.com/library/ms188365.aspx
