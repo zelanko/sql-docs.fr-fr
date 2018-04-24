@@ -1,16 +1,16 @@
 ---
-title: "Créer des déclencheurs imbriqués | Microsoft Docs"
-ms.custom: 
+title: Créer des déclencheurs imbriqués | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: triggers
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-dml
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - recursive DML triggers [SQL Server]
@@ -23,20 +23,21 @@ helpviewer_keywords:
 - indirect recursion [SQL Server]
 - nested DML triggers
 ms.assetid: cd522dda-b4ab-41b8-82b0-02445bdba7af
-caps.latest.revision: 
+caps.latest.revision: 32
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: db111a07ce666d9b2cde477febe8680b45327c6b
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: d3a37b5abbf9c29dd52a94033980c5b637546487
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-nested-triggers"></a>Créer des déclencheurs imbriqués
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
-Les déclencheurs DML et DDL sont imbriqués lorsqu'un déclencheur exécute une action qui lance un autre déclencheur. Ces actions peuvent lancer d'autres déclencheurs, et ainsi de suite. Les déclencheurs DML et DDL peuvent avoir jusqu'à 32 niveaux d'imbrication. Vous pouvez définir si les déclencheurs AFTER peuvent être imbriqués à l’aide de l’option de configuration serveur **nested triggers** . Les déclencheurs INSTEAD OF (seuls les déclencheurs DML peuvent être des déclencheurs INSTEAD OF) peuvent être imbriqués quelle que soit la valeur de ce paramètre.  
+  Les déclencheurs DML et DDL sont imbriqués lorsqu'un déclencheur exécute une action qui lance un autre déclencheur. Ces actions peuvent lancer d'autres déclencheurs, et ainsi de suite. Les déclencheurs DML et DDL peuvent avoir jusqu'à 32 niveaux d'imbrication. Vous pouvez définir si les déclencheurs AFTER peuvent être imbriqués à l’aide de l’option de configuration serveur **nested triggers** . Les déclencheurs INSTEAD OF (seuls les déclencheurs DML peuvent être des déclencheurs INSTEAD OF) peuvent être imbriqués quelle que soit la valeur de ce paramètre.  
   
 > [!NOTE]  
 >  Une référence au code managé à partir d'un déclencheur [!INCLUDE[tsql](../../includes/tsql-md.md)] compte pour un niveau quant à la limite d'imbrication de 32 niveaux. Les méthodes appelées à partir du code managé ne comptent pas par rapport à cette limite.  

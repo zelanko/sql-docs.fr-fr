@@ -1,16 +1,16 @@
 ---
-title: "Mise à niveau de la fonction de recherche en texte intégral | Microsoft Docs"
-ms.custom: 
+title: Mise à niveau de la fonction de recherche en texte intégral | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: search
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-search
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - full-text search [SQL Server], installing
@@ -19,20 +19,21 @@ helpviewer_keywords:
 - installing Full-Text Search
 - full-text search [SQL Server], upgrading
 ms.assetid: 2fee4691-f2b5-472f-8ccc-fa625b654520
-caps.latest.revision: 
+caps.latest.revision: 106
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 74e12e9e4b1d6379a0dc8954b2c99d77c99faa55
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: f0215117505c5873fdaeda174de3e50e8c22a610
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="upgrade-full-text-search"></a>Mise à niveau de la fonction de recherche en texte intégral
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-La mise à niveau de recherche en texte intégral vers [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] est effectuée pendant l'installation et lorsque les fichiers de base de données et les catalogues de texte intégral de la version antérieure de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sont joints, restaurés ou copiés à l'aide de l'Assistant Copie de base de données.  
+  La mise à niveau de recherche en texte intégral vers [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] est effectuée pendant l'installation et lorsque les fichiers de base de données et les catalogues de texte intégral de la version antérieure de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sont joints, restaurés ou copiés à l'aide de l'Assistant Copie de base de données.  
   
   
 ##  <a name="Upgrade_Server"></a> Mise à niveau d’une instance de serveur  
@@ -128,7 +129,7 @@ Lorsqu'une base de données est mise à niveau vers [!INCLUDE[ssCurrent](../../i
   
  **Pour modifier le comportement de mise à niveau de texte intégral sur une instance de serveur**  
   
--   [!INCLUDE[tsql](../../includes/tsql-md.md)] : utilisez l’action **upgrade\_option** de [sp\_fulltext\_service](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md)  
+-   [!INCLUDE[tsql](../../includes/tsql-md.md)] : Utiliser l’action **upgrade\_option** de [sp\_fulltext\_service](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md)  
   
 -   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **:** utilisez **l’option de mise à niveau de texte intégral** de la boîte de dialogue **Propriétés du serveur** . Pour plus d’informations, consultez [Gérer et surveiller la recherche en texte intégral pour une instance de serveur](../../relational-databases/search/manage-and-monitor-full-text-search-for-a-server-instance.md).  
   

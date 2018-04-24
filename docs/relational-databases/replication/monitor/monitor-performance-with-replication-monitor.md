@@ -2,7 +2,7 @@
 title: Analyser les performances avec le moniteur de réplication | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: replication
@@ -27,11 +27,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 590c82fa430be2c34796b6ae5201a0ef7efba7c1
-ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
+ms.openlocfilehash: 561b5569b25eb3c8cff177a07da9c166bf1c8915
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="monitor-performance-with-replication-monitor"></a>Analyser les performances avec le Moniteur de réplication
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -96,7 +96,7 @@ ms.lasthandoff: 03/08/2018
  Pour plus d’informations, consultez [Afficher des informations et effectuer des tâches pour un abonnement &#40;moniteur de réplication&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-subscription-replication-monitor.md).  
   
 ## <a name="determine-latency-with-tracer-tokens"></a>Déterminer la latence avec des jetons de suivi  
- La réplication transactionnelle vous permet de mesurer la latence dans un système en insérant un jeton (une petite quantité de données) dans le journal des transactions de la base de données de publication et en enregistrant le temps qu'il met pour arriver au serveur de distribution et aux Abonnés. Le jeton vous permet aussi de détecter si des données n'atteignent par le serveur de distribution ou l'Abonné. Pour plus d’informations, voir [Mesurer la latence et valider les connexions pour la réplication transactionnelle](../../../relational-databases/replication/monitor/measure-latency-and-validate-connections-for-transactional-replication.md).  
+ La réplication transactionnelle vous permet de mesurer la latence dans un système en insérant un jeton (une petite quantité de données) dans le journal des transactions de la base de données de publication et en enregistrant le temps qu'il met pour arriver au serveur de distribution et aux Abonnés. Le jeton vous permet aussi de détecter si des données n'atteignent par le serveur de distribution ou l'Abonné. Pour plus d’informations, voir [Measure Latency and Validate Connections for Transactional Replication](../../../relational-databases/replication/monitor/measure-latency-and-validate-connections-for-transactional-replication.md).  
   
 ## <a name="view-detailed-synchronization-performance-for-merge-replication"></a>Afficher les performances de synchronisation détaillées pour la réplication de fusion  
  Pour la réplication de fusion, le moniteur de réplication affiche des statistiques détaillées pour chaque article traité lors de la synchronisation, notamment la quantité de temps passé dans chaque phase du traitement (chargement des modifications, téléchargement des modifications, etc.). Il peut être utile d'identifier les tables spécifiques qui provoquent les ralentissements ; il s'agit du meilleur observatoire pour résoudre les problèmes de performance avec les abonnements de fusion. Pour plus d’informations sur l’affichage de statistiques détaillées, consultez [Afficher des informations et effectuer des tâches pour les agents d’abonnement &#40;moniteur de réplication&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-subscription-agents.md).  

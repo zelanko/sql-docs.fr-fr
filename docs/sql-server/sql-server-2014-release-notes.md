@@ -2,9 +2,8 @@
 title: Notes de publication de SQL Server 2014 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-non-specified
-ms.service: ''
 ms.component: sql-non-specified
 ms.technology: server-general
 ms.reviewer: ''
@@ -12,16 +11,17 @@ ms.suite: sql
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: bf4c4922-80b3-4be3-bf71-228247f97004
-caps.latest.revision: ''
+caps.latest.revision: 100
 author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0eb2f0de2a013ae801330aee9154b764964868db
-ms.sourcegitcommit: 6e16d1616985d65484c72f5e0f34fb2973f828f4
+monikerRange: = sql-server-2014 || = sqlallproducts-allversions
+ms.openlocfilehash: 727798fd3cc320f90586f476e4ee43f0a1867f3f
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="sql-server-2014-release-notes"></a>Notes de publication de SQL Server 2014
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ SQL Server 2014 SP2 contient des cumuls de correctifs logiciels publiés pour S
 |Fonctionnalité|Description|Informations supplémentaires|
 |---|---|---|
 |Partitionnement du NUMA logiciel automatique|Vous pouvez configurer automatiquement le NUMA logiciel sur les systèmes ayant 8 UC ou plus par nœud NUMA.|[Soft-NUMA (SQL Server)](https://docs.microsoft.com/sql/database-engine/configure-windows/soft-numa-sql-server)|
-|Extension du pool de mémoires tampons|Permet au pool de mémoires tampons SQL Server de monter en charge au-delà 8 To.|[Extension du pool de mémoires tampons](https://docs.microsoft.com/sql/database-engine/configure-windows/buffer-pool-extension)|
+|Buffer Pool Extension|Permet au pool de mémoires tampons SQL Server de monter en charge au-delà 8 To.|[Extension du pool de mémoires tampons](https://docs.microsoft.com/sql/database-engine/configure-windows/buffer-pool-extension)|
 |Mise à l’échelle dynamique des objets mémoire| Les objets mémoire sont partitionnés de façon dynamique en fonction du nombre de nœuds et de cœurs. Cette amélioration rend inutile l’indicateur de trace 8048 après SQL 2014 SP2.|[Mise à l’échelle dynamique des objets mémoire](https://blogs.msdn.microsoft.com/sql_server_team/dynamic-memory-object-scaling/)|
 |Indicateur MAXDOP pour les commandes DBCC CHECK*|Cette amélioration est utile pour exécuter DBCC CHECKDB avec un paramètre MAXDOP autre que la valeur sp_configure.|[Indicateurs (Transact-SQL) - Requête](https://docs.microsoft.com/sql/t-sql/queries/hints-transact-sql-query)|
 |Amélioration du verrouillage tournant SOS_RWLock|Supprime la nécessité du verrouillage tournant pour SOS_RWLock et utilise à la place des techniques sans verrou similaires à OLTP en mémoire. |[Nouvelle conception de SOS_RWLock](https://blogs.msdn.microsoft.com/psssql/2016/04/07/sql-2016-it-just-runs-faster-sos_rwlock-redesign/)|
@@ -129,7 +129,7 @@ Le contenu du Générateur de rapports et de PowerPivot n’est pas disponible d
   
 -   Grec (el-GR)  
 -   Norvégien (Bokmal) (nb-NO)  
--   Finnois (fi-Fi)  
+-   Finnois (fi Fi)  
 -   Danois (da-DK)  
   
 Dans [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], ce contenu était disponible dans un fichier CHM fourni avec le produit et disponible dans ces langues. Les fichiers CHM ne sont plus fournis avec le produit et le contenu du Générateur de rapports est uniquement disponible sur MSDN. MSDN ne prend pas en charge ces langues. Le Générateur de rapports a également été supprimé de TechNet, et n'est donc plus disponible dans les langues prises en charge.  

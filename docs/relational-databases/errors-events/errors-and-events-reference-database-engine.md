@@ -1,35 +1,36 @@
 ---
-title: "Références relatives aux erreurs et aux événements (moteur de base de données) | Microsoft Docs"
-ms.custom: 
+title: Références relatives aux erreurs et aux événements (moteur de base de données) | Microsoft Docs
+ms.custom: ''
 ms.date: 05/03/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: errors-events
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - errors [SQL Server Database Engine]
 - Database Engine [SQL Server], errors
 - events [SQL Server Database Engine]
 ms.assetid: ea928535-6fd1-4738-a8ed-ffb602f3825e
-caps.latest.revision: 
+caps.latest.revision: 15
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d421713ed83c3f73bd3d9b30f0549bceb692b40a
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 8ed5a2375cf1e5426f832254948064bb992114e6
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="errors-and-events-reference-database-engine"></a>Références relatives aux erreurs et aux événements (moteur de base de données)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Cette section contient des messages d’erreur [!INCLUDE[ssDE](../../includes/ssde-md.md)] sélectionnés qui nécessitent des explications complémentaires.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Cette section contient des messages d’erreur [!INCLUDE[ssDE](../../includes/ssde-md.md)] sélectionnés qui nécessitent des explications complémentaires.  
   
 ## <a name="in-this-section"></a>Dans cette section  
  [Erreurs et événements du moteur de base de données](../../relational-databases/errors-events/database-engine-events-and-errors.md)  

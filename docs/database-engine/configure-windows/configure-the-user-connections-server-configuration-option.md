@@ -1,16 +1,16 @@
 ---
-title: "Configurer l’option de configuration de serveur user connections | Microsoft Docs"
-ms.custom: 
+title: Configurer l’option de configuration de serveur user connections | Microsoft Docs
+ms.custom: ''
 ms.date: 03/02/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: configure-windows
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - simultaneous connections [SQL Server]
@@ -19,16 +19,16 @@ helpviewer_keywords:
 - maximum number of simultaneous user connections
 - connections [SQL Server], simultaneous
 ms.assetid: 53beee6e-59fe-4276-9abb-8f1cec2a3508
-caps.latest.revision: 
+caps.latest.revision: 29
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 51eb56b34a8f3aa18ab0a115954e7a4004aca74e
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 9b5b79a46fa7eb321e11d4d67457b2fb6a69b205
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="configure-the-user-connections-server-configuration-option"></a>Configurer l'option de configuration de serveur user connections
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +57,7 @@ ms.lasthandoff: 02/03/2018
   
 ###  <a name="Recommendations"></a> Recommandations  
   
--   Cette option avancée ne doit être changée que par un administrateur de base de données qualifié ou un spécialiste agréé [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+-   Seul un administrateur de base de données qualifié ou un spécialiste agréé doit changer cette option avancée [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 -   L'option **user connections** vous aide à éviter de surcharger le serveur avec de trop nombreuses connexions simultanées. Pour estimer le nombre de connexions à définir, prenez comme base la configuration de votre système et les besoins des utilisateurs. Par exemple, pour un système comptant de nombreux utilisateurs, chaque utilisateur n'a pas obligatoirement besoin d'une connexion unique. Les connexions peuvent être partagées par plusieurs utilisateurs. Les utilisateurs qui exécutent des applications OLE DB ont besoin d’une connexion pour chaque objet de connexion ouvert. Les utilisateurs qui exécutent des applications ODBC (Open Database Connectivity) ont besoin d’une connexion pour chaque descripteur de connexion actif dans l’application. Les utilisateurs qui exécutent des applications de type bibliothèque de base de données (DB-Library) ont besoin d’une connexion pour chaque processus démarré qui appelle la fonction **dbopen** de la bibliothèque de base de données.  
   

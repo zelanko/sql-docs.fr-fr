@@ -1,16 +1,16 @@
 ---
-title: "Stratégie de mot de passe | Microsoft Docs"
-ms.custom: 
+title: Stratégie de mot de passe | Microsoft Docs
+ms.custom: ''
 ms.date: 09/25/2015
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: security
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - ALTER LOGIN statement
@@ -35,19 +35,20 @@ helpviewer_keywords:
 - passwords [SQL Server], complexity
 - characters [SQL Server], password policies
 ms.assetid: c0040c0a-a18f-45b9-9c40-0625685649b1
-caps.latest.revision: 
+caps.latest.revision: 41
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: dc4da4aefa4cc0b92977af29df9d6992c48f74a4
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: e5002d48ac8573ea2d4d2a706a0d6d4e7dfab2a3
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="password-policy"></a>Stratégie de mot de passe
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut exploiter les mécanismes de stratégie de mot de passe Windows. La stratégie de mot de passe s'applique à une connexion qui utilise l'authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et à un utilisateur de base de données à relation contenant-contenu avec un mot de passe.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut exploiter les mécanismes de stratégie de mot de passe Windows. La stratégie de mot de passe s'applique à une connexion qui utilise l'authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et à un utilisateur de base de données à relation contenant-contenu avec un mot de passe.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut appliquer aux mots de passe utilisés dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]des stratégies de complexité et d'expiration identiques à celles de Windows. Cette fonctionnalité dépend de l'API `NetValidatePasswordPolicy` .  
   
@@ -110,7 +111,7 @@ ms.lasthandoff: 11/21/2017
   
  La stratégie de sécurité peut être définie dans Windows ou peut être reçue du domaine. Pour afficher la stratégie de mot de passe sur l’ordinateur, utilisez le composant logiciel enfichable MMC Stratégie de sécurité locale (**secpol.msc**).  
   
-## <a name="related-tasks"></a>Tâches associées  
+## <a name="related-tasks"></a>Related Tasks  
  [CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md)  
   
  [ALTER LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/alter-login-transact-sql.md)  
@@ -123,7 +124,7 @@ ms.lasthandoff: 11/21/2017
   
  [Créer un utilisateur de base de données](../../relational-databases/security/authentication-access/create-a-database-user.md)  
   
-## <a name="related-content"></a>Contenu connexe  
+## <a name="related-content"></a>Contenu associé  
  [Mots de passe forts](../../relational-databases/security/strong-passwords.md)  
   
   

@@ -1,8 +1,8 @@
 ---
-title: 'Tutoriel : chaînes de propriétés et changement de contexte | Microsoft Docs'
+title: 'Didacticiel : chaînes de propriétés et changement de contexte | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: tutorial
@@ -18,23 +18,23 @@ helpviewer_keywords:
 - context switching [SQL Server], tutorials
 - ownership chains [SQL Server]
 ms.assetid: db5d4cc3-5fc5-4cf5-afc1-8d4edc1d512b
-caps.latest.revision: ''
+caps.latest.revision: 16
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1ec6c4b013fabd008d2de3388ea163eae0428dcb
-ms.sourcegitcommit: 6b1618aa3b24bf6759b00a820e09c52c4996ca10
+ms.openlocfilehash: d380293dd100c2d148b3ced0bf1e081596be81d9
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="tutorial-ownership-chains-and-context-switching"></a>Tutoriel : chaînes de propriété et changement de contexte
+# <a name="tutorial-ownership-chains-and-context-switching"></a>Tutorial: Ownership Chains and Context Switching
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-Ce tutoriel explore en se fondant sur un scénario les concepts de sécurité de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] impliquant les chaînes de propriétés et le changement de contexte utilisateur.  
+Ce didacticiel explore en se fondant sur un scénario les concepts de sécurité de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] impliquant les chaînes de propriétés et le changement de contexte utilisateur.  
   
 > [!NOTE]  
-> Pour exécuter le code de ce tutoriel, vous devez à la fois configurer la sécurité en mode mixte et installer la base de données [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] . Pour plus d’informations sur la sécurité en mode mixte, consultez [Choisir un mode d’authentification](../relational-databases/security/choose-an-authentication-mode.md).  
+> Pour exécuter le code de ce didacticiel, vous devez à la fois configurer la sécurité en mode mixte et installer la base de données [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] . Pour plus d’informations sur la sécurité en mode mixte, consultez [Choisir un mode d’authentification](../relational-databases/security/choose-an-authentication-mode.md).  
   
 ## <a name="scenario"></a>Scénario  
 Dans ce scénario, deux utilisateurs ont besoin de comptes leur permettant d'accéder aux données des bons de commande stockées dans la base de données [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] . Les exigences requises sont les suivantes :  
@@ -55,7 +55,7 @@ Pour répondre aux exigences de ce scénario, l'exemple est divisé en quatre pa
   
 4.  Réinitialisation de l'environnement  
   
-Chaque bloc de code dans cet exemple est présenté sous forme de lignes. Pour copier l'exemple tout entier, consultez la section [Exemple complet](#CompleteExample) à la fin de ce tutoriel.  
+Chaque bloc de code dans cet exemple est présenté sous forme de lignes. Pour copier l'exemple tout entier, consultez la section [Exemple complet](#CompleteExample) à la fin de ce didacticiel.  
   
 ## <a name="1-configure-the-environment"></a>1. Configurez l'environnement  
 Utilisez [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] et le code ci-dessous pour ouvrir la base de données `AdventureWorks2012` ; ensuite, à l'aide de l'instruction `CURRENT_USER` [!INCLUDE[tsql](../includes/tsql-md.md)], vérifiez que l'utilisateur dbo est affiché dans le contexte.  

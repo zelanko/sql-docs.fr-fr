@@ -1,34 +1,35 @@
 ---
-title: "Hash Warning, classe d’événements | Microsoft Docs"
-ms.custom: 
+title: Hash Warning, classe d’événements | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: event-classes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Hash Warning event class
 ms.assetid: cb93c620-4be9-4362-8bf0-af3f2048bdaf
-caps.latest.revision: 
+caps.latest.revision: 39
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7e3d82475509a6707001787ff1c08ab66636292c
-ms.sourcegitcommit: 7e9380e53341755df13fce130ab3287918a8e44c
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: f7a3dbd06508d22c4b37acb3966104d7e3418276
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="hash-warning-event-class"></a>Hash Warning (classe d'événements)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-La classe d'événements Hash Warning peut être utilisée pour analyser une récurrence de hachage ou une cessation de hachage (interruption de hachage) qui s'est produite lors d'une opération de hachage.  
+  La classe d'événements Hash Warning peut être utilisée pour analyser une récurrence de hachage ou une cessation de hachage (interruption de hachage) qui s'est produite lors d'une opération de hachage.  
   
  Une récurrence de hachage se produit lorsque l'entrée de construction n'est pas adaptée à la mémoire disponible, ce qui entraîne une fragmentation de l'entrée en plusieurs parties traitées séparément. Si l'une de ces parties n'est toujours pas adaptée à la mémoire disponible, elle est à nouveau fragmentée en sous-parties, également traitées séparément. Ce processus de fragmentation se poursuit jusqu'à ce que toutes les parties soient s'adaptées à la mémoire disponible ou jusqu'à ce que le niveau maximal de récursivité soit atteint (affiché dans la colonne de données IntegerData).  
   

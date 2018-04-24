@@ -1,34 +1,35 @@
 ---
-title: "TM: Save Tran Completed, classe d’événements | Microsoft Docs"
-ms.custom: 
+title: 'TM: Save Tran Completed, classe d’événements | Microsoft Docs'
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: event-classes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - 'TM: Save Tran Completed event class'
 ms.assetid: e6b37780-5ad8-4d50-89a3-d8a22496faac
-caps.latest.revision: 
+caps.latest.revision: 21
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 778d2c82a46ce093abd4de7826e1676535c661d7
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 04b6487c1690462639bc3e9be1b391857f4ac528
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="tm-save-tran-completed-event-class"></a>TM: Save Tran Completed, classe d'événements
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-La classe d'événements TM: Save Tran Completed indique qu'une demande SAVE TRANSACTION est terminée. La demande a été envoyée à partir du client via l'interface de gestion des transactions.  
+  La classe d'événements TM: Save Tran Completed indique qu'une demande SAVE TRANSACTION est terminée. La demande a été envoyée à partir du client via l'interface de gestion des transactions.  
   
 ## <a name="tm-save-tran-completed-event-class-data-columns"></a>Colonnes de données de la classe d'événements TM: Save Tran Completed  
   

@@ -1,16 +1,16 @@
 ---
-title: "Données hiérarchiques (SQL Server) | Microsoft Docs"
-ms.custom: 
+title: Données hiérarchiques (SQL Server) | Microsoft Docs
+ms.custom: ''
 ms.date: 09/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: relational-databases-misc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - hierarchies [SQL Server], tables to support
@@ -20,20 +20,21 @@ helpviewer_keywords:
 - hierarchyid [Database Engine]
 - hierarchical queries [SQL Server], using hierarchyid data type
 ms.assetid: 19aefa9a-fbc2-4b22-92cf-67b8bb01671c
-caps.latest.revision: 
+caps.latest.revision: 40
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 9eee39caae6b780e692ed0cee3440b6cb250da9f
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 33242a30d520ff42721cec074c1bd8a4b78460cf
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="hierarchical-data-sql-server"></a>Données hiérarchiques (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-Le type de données **hierarchyid** intégré simplifie le stockage et l’interrogation de données hiérarchiques. **hierarchyid** est optimisé pour représenter les arborescences, qui sont le type le plus courant de données hiérarchiques.  
+  Le type de données **hierarchyid** intégré simplifie le stockage et l’interrogation de données hiérarchiques. **hierarchyid** est optimisé pour représenter les arborescences, qui sont le type le plus courant de données hiérarchiques.  
   
  Les données hiérarchiques sont définies comme un jeu d'éléments de données liés entre eux par des relations hiérarchiques. Des relations hiérarchiques existent dans lesquelles un élément de données est le parent d'un autre élément. Voici quelques exemples de données hiérarchiques communément stockées dans les bases de données :  
   

@@ -1,16 +1,16 @@
 ---
-title: "Niveaux de gravité des erreurs du moteur de base de données | Microsoft Docs"
-ms.custom: 
+title: Niveaux de gravité des erreurs du moteur de base de données | Microsoft Docs
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: errors-events
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - user-defined error messages [SQL Server]
@@ -19,19 +19,20 @@ helpviewer_keywords:
 - errors [SQL Server], severity
 - TRY...CATCH [SQL Server]
 ms.assetid: 3e7f5925-6edd-42e1-bf17-f7deb03993a7
-caps.latest.revision: 
+caps.latest.revision: 21
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: a399c817aef67a59ef9a4e7edff00391a9173b88
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: f48f4b4b774538f9ca388e8a8fbaf1e0f9b1aded
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="database-engine-error-severities"></a>Niveaux de gravité des erreurs du moteur de base de données
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Quand une erreur est déclenchée par le [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], la gravité de l’erreur indique le type de problème rencontré par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Lorsqu'une erreur est déclenchée par le [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], la gravité de l'erreur indique le type de problème rencontré par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="levels-of-severity"></a>Niveaux de gravité  
  Le tableau suivant répertorie et décrit les niveaux de gravité des erreurs déclenchées par le [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].  
@@ -75,7 +76,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="retrieving-error-severity"></a>extraction de la gravité des erreurs  
  La fonction système ERROR_SEVERITY permet de récupérer le niveau de gravité de l'erreur qui a causé l'exécution du bloc CATCH d'une construction TRY…CATCH. ERROR_SEVERITY retourne NULL s'il est appelé en dehors de la portée d'un bloc CATCH. Pour plus d’informations, consultez [ERROR_SEVERITY &#40;Transact-SQL&#41;](../../t-sql/functions/error-severity-transact-sql.md).  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Présentation des erreurs du moteur de base de données](../../relational-databases/errors-events/understanding-database-engine-errors.md)   
  [sys.messages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/messages-for-errors-catalog-views-sys-messages.md)   
  [Fonctions système &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)   

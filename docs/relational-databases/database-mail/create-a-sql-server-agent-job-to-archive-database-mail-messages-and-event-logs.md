@@ -2,7 +2,7 @@
 title: Créer un travail de SQL Server Agent pour archiver les messages et les journaux d’événements de la messagerie de base de données | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: database-mail
@@ -23,11 +23,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8823296f7fd9a64fdc0d5b978a22e89e8b415d37
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
-ms.translationtype: MT
+ms.openlocfilehash: a8c2b7948e4a9c33e8d49c82e477d25a74752c2c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-a-sql-server-agent-job-to-archive-database-mail-messages-and-event-logs"></a>Créer un travail d'Agent SQL Server pour archiver les messages et les journaux d'événements de la messagerie de base de données
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.lasthandoff: 04/10/2018
   
 -   **Avant de commencer :**  , [Conditions préalables](#Prerequisites), [Recommandations](#Recommendations), [Autorisations](#Permissions)  
   
--   **To Archive Database Mail messages and logs using :**  [SQL Server Agent](#Process_Overview)  
+-   **Pour archiver les messages et les journaux de la messagerie de base de données à l'aide de :**  [Agent SQL Server](#Process_Overview)  
   
 ##  <a name="BeforeYouBegin"></a> Avant de commencer  
   
@@ -46,7 +46,7 @@ ms.lasthandoff: 04/10/2018
  Dans votre environnement de production, vous pouvez ajouter des fonctionnalités supplémentaires de vérification des erreurs et faire envoyer un message électronique aux opérateurs en cas d'échec du travail.  
   
   
-###  <a name="Permissions"></a> Autorisations  
+###  <a name="Permissions"></a> Permissions  
  Vous devez être membre du rôle serveur fixe **sysadmin** pour pouvoir exécuter les procédures stockées décrites dans cette rubrique.  
   
   
@@ -67,7 +67,7 @@ ms.lasthandoff: 04/10/2018
 -   Planifiez une exécution périodique du travail.  
   
   
-## <a name="to-create-a-sql-server-agent-job"></a>Pour créer un travail de l'Agent SQL Server  
+## <a name="to-create-a-sql-server-agent-job"></a>Pour créer un travail de l'Agent SQL Server  
   
 1.  Dans l’Explorateur d’objets, développez l’Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , cliquez avec le bouton droit sur **Travaux**, puis cliquez sur **Nouveau travail**.  
   
@@ -105,7 +105,7 @@ ms.lasthandoff: 04/10/2018
   
 6.  Cliquez sur **OK** pour enregistrer l'étape.  
   
- [Vue d'ensemble](#Process_Overview)  
+ [Vue d’ensemble](#Process_Overview)  
   
 ## <a name="to-create-a-step-to-archive-the-database-mail-attachments"></a>Pour créer une étape permettant d'archiver les pièces jointes de la messagerie de base de données  
   
@@ -132,7 +132,7 @@ ms.lasthandoff: 04/10/2018
   
 6.  Cliquez sur **OK** pour enregistrer l'étape.  
   
- [Vue d'ensemble](#Process_Overview)  
+ [Vue d’ensemble](#Process_Overview)  
   
 ## <a name="to-create-a-step-to-archive-the-database-mail-log"></a>Pour créer une étape permettant d'archiver le journal de la messagerie de base de données  
   
@@ -159,7 +159,7 @@ ms.lasthandoff: 04/10/2018
   
 6.  Cliquez sur **OK** pour enregistrer l'étape.  
   
- [Vue d'ensemble](#Process_Overview)  
+ [Vue d’ensemble](#Process_Overview)  
   
 ## <a name="to-create-a-step-to-remove-the-archived-rows-from-database-mail"></a>Pour créer une étape permettant de supprimer les lignes archivées du journal de la messagerie de base de données  
   
@@ -181,7 +181,7 @@ ms.lasthandoff: 04/10/2018
   
 6.  Cliquez sur **OK** pour enregistrer l'étape.  
   
- [Vue d'ensemble](#Process_Overview)  
+ [Vue d’ensemble](#Process_Overview)  
   
 ## <a name="to-create-a-step-to-remove-the-archived-items-from-database-mail-event-log"></a>Pour créer une étape permettant de supprimer les éléments archivés du journal des événements de la messagerie de base de données  
   
@@ -201,7 +201,7 @@ ms.lasthandoff: 04/10/2018
   
 5.  Cliquez sur **OK** pour enregistrer l'étape.  
   
- [Vue d'ensemble](#Process_Overview)  
+ [Vue d’ensemble](#Process_Overview)  
   
 ## <a name="to-schedule-the-job-to-run-periodically"></a>Pour planifier une exécution périodique du travail  
   
@@ -221,6 +221,6 @@ ms.lasthandoff: 04/10/2018
   
 8.  Cliquez sur **OK** pour enregistrer le travail.  
   
- [Vue d'ensemble](#Process_Overview)  
+ [Vue d’ensemble](#Process_Overview)  
   
   
