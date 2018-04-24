@@ -1,33 +1,33 @@
 ---
-title: "Mise à jour et CancelUpdate, méthodes-exemple (VB) | Documents Microsoft"
-ms.prod: sql-non-specified
+title: Mise à jour et CancelUpdate, méthodes-exemple (VB) | Documents Microsoft
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - CancelUpdate method [ADO]
 - Update method [ADO], Visual Basic example
 ms.assetid: 55bedd08-7440-4da4-b854-4ac9ef2fdedb
-caps.latest.revision: 
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6c2f4f3de2ca297fb803eef8fd855611bf835282
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: af532ecc0bd593639513dfae0c7e06d05388592a
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="update-and-cancelupdate-methods-example-vb"></a>Mise à jour et CancelUpdate, méthodes-exemple (VB)
 Cet exemple illustre la [mise à jour](../../../ado/reference/ado-api/update-method.md) méthode conjointement avec la [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md) (méthode).  
@@ -129,5 +129,5 @@ Attribute VB_Name = "Update"
   
 ## <a name="see-also"></a>Voir aussi  
  [CancelUpdate, méthode (ADO)](../../../ado/reference/ado-api/cancelupdate-method-ado.md)   
- [Recordset Object (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
+ [Objet Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Update, méthode](../../../ado/reference/ado-api/update-method.md)

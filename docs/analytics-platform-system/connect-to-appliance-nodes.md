@@ -1,29 +1,22 @@
 ---
-title: Se connecter aux nœuds de l’Appliance (système de plateforme Analytique)
-author: barbkess
-ms.author: barbkess
+title: Se connecter à l’appliance nœuds - système de plateforme Analytique | Documents Microsoft
+description: Cet article explique les différentes façons de se connecter à chaque nœud au niveau du matériel de système de plateforme Analytique.
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: f975aa91-c816-4b29-89bf-923ab5b4abb4
-caps.latest.revision: 19
-ms.openlocfilehash: 9b95bc8285625170c9c9b4a91eeae99dcd3907a5
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 2d7d634023c5fc3d0a6f522b5f60933ce3b96272
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="connect-to-appliance-nodes"></a>Se connecter à des nœuds de l’équipement
-Cette rubrique explique les différentes façons de se connecter à chaque nœud au niveau du matériel de système de plateforme Analytique.  
+# <a name="connect-to-appliance-nodes-in-analytics-platform-system"></a>Se connecter à des nœuds de matériel dans le système de plateforme Analytique
+Cet article explique les différentes façons de se connecter à chaque nœud au niveau du matériel de système de plateforme Analytique.  
   
 ## <a name="connecting-with-hadoop"></a>Connexion à Hadoop  
 Avant d’utiliser Hadoop avec SQL Server PDW, demandez à votre administrateur de matériel pour installer l’environnement d’exécution Java sur SQL Server PDW. Pour obtenir des instructions, consultez [configurer la connectivité PolyBase pour données externes &#40;système de plateforme Analytique&#41; ](configure-polybase-connectivity-to-external-data.md) dans le dispositif Operations Guide.  

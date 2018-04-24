@@ -1,29 +1,22 @@
 ---
-title: Analyse des requêtes actives (SQL Server PDW)
-author: barbkess
-ms.author: barbkess
+title: Surveiller les requêtes actives - Parallel Data Warehouse | Documents Microsoft
+description: Utilisez les vues système Console d’administration et Parallel Data Warehouse pour surveiller les requêtes actives sur le système de plateforme d’Analytique.
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/13/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: bb73f790-0537-414b-8dc2-f1eb69b92362
-caps.latest.revision: 7
-ms.openlocfilehash: 8a792e8dc4f29a257568f37350ba1b2c792c88fe
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 057e5448b68ea7a7f8f23bc57d1a3b0308b300d2
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="monitoring-active-queries"></a>Analyse des requêtes actives
-Cette rubrique montre comment utiliser la Console d’administration et les vues système SQL Server PDW pour surveiller les requêtes actives. Consultez [contrôler le matériel à l’aide de la Console d’administration](monitor-the-appliance-by-using-the-admin-console.md) et [vues système](tsql-system-views.md) pour plus d’informations sur ces outils.  
+# <a name="monitoring-active-queries---parallel-data-warehouse"></a>Analyse des requêtes actives - Parallel Data Warehouse
+Cet article explique comment utiliser la Console d’administration et les vues système SQL Server PDW pour surveiller les requêtes actives. Consultez [contrôler le matériel à l’aide de la Console d’administration](monitor-the-appliance-by-using-the-admin-console.md) et [vues système](tsql-system-views.md) pour plus d’informations sur ces outils.  
   
 ## <a name="prerequisites"></a>Configuration requise  
 Quelle que soit la méthode utilisée pour surveiller les requêtes actives, la connexion doit avoir les autorisations décrites dans « Utiliser tous les de la Console d’administration » dans [accorder des autorisations pour utiliser la Console d’administration](grant-permissions.md#grant-permissions-to-use-the-admin-console).  

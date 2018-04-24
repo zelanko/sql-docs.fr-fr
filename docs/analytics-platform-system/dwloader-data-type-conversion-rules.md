@@ -1,27 +1,21 @@
 ---
-title: Type de données des règles de conversion de dwloader
-author: barbkess
-ms.author: barbkess
+title: Parallel Data Warehouse - les règles de conversion de type de données de Dwloader | Documents Microsoft
+description: Cette rubrique décrit les formats de données d’entrée et les conversions de types de données implicites qui dwloader que chargeur de ligne de commande prend en charge lors du chargement de données dans Parallel Data Warehouse (PDW). »
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.suite: sql
-ms.custom: ''
-ms.technology: mpp-data-warehouse
-description: Cette rubrique décrit les formats de données d’entrée et les conversions de types de données implicites qui dwloader que chargeur de ligne de commande prend en charge lors du chargement des données dans PDW.
-ms.date: 10/20/2016
-ms.topic: article
-ms.assetid: 79c48520-b08b-4b15-a943-a551cc90a2c4
-caps.latest.revision: 30
-ms.openlocfilehash: 6910358803673c34d2381d071340e2ec7c8f2a0b
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: ecfc29c92bc99827ee943ff665524ff49e82a8df
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="data-type-conversion-rules-for-dwloader"></a>Type de données des règles de conversion de dwloader
+# <a name="data-type-conversion-rules-for-dwloader---parallel-data-warehouse"></a>Type de données des règles de conversion de dwloader - Parallel Data Warehouse
 Cette rubrique décrit les formats de données d’entrée et les conversions de types de données implicites qui [dwloader de ligne de commande chargeur](dwloader.md) prend en charge lors du chargement des données dans PDW. Les conversions implicites de données se produisent lorsque les données d’entrée ne correspondent pas le type de données dans la table cible de SQL Server PDW. Utilisez ces informations lorsque vous concevez votre processus de chargement pour vous assurer de vos données sera chargé avec succès dans SQL Server PDW.  
    
   
@@ -42,7 +36,7 @@ Le tableau suivant définit le format par défaut et les règles pour le chargem
 |-------------------|-----------------------|------------------------------------|  
 |Littéral de chaîne dans **datetime** format|'AAAA-MM-JJ HH : mm : [.fff]'<br /><br />Exemple : « 2007-05-08 12:35:29.123'|Les chiffres fractionnaires manquantes sont définies à 0 lorsque la valeur est insérée. Par exemple, le littéral ' 2007-05-08 12:35 ' est inséré en tant que « 2007-05-08 12:35:00.000'.|  
 |Littéral de chaîne dans **smalldatetime** format|'AAAA-MM-JJ HH'<br /><br />Exemple : « 2007-05-08 12:35 '|Secondes et fractions restantes sont définies à 0 lorsque la valeur est insérée.|  
-|Littéral de chaîne dans **date** format|'yyyy-MM-dd'<br /><br />Exemple : « 2007-05-08'|Les valeurs de temps (heures, minutes, secondes et fractions) sont définies sur 12:00:00.000 lorsque la valeur est insérée.|  
+|Littéral de chaîne dans **date** format|« AAAA-MM-JJ »<br /><br />Exemple : « 2007-05-08'|Les valeurs de temps (heures, minutes, secondes et fractions) sont définies sur 12:00:00.000 lorsque la valeur est insérée.|  
 |Littéral de chaîne dans **datetime2** format|'AAAA-MM-JJ ss.fffffff'<br /><br />Exemple : « 2007-05-08 12:35:29.1234567'|La source de données ne peut pas dépasser trois chiffres fractionnaires. Par exemple, le littéral ' 2007-05-08 12:35:29.123' sera inséré, mais la valeur « 2007-05-8 12:35:29.1234567' génère une erreur.|  
   
 ### <a name="smalldatetime-data-type"></a>Type de données smalldatetime  
@@ -51,21 +45,21 @@ Le tableau suivant définit le format par défaut et les règles pour le chargem
 |Type de données d’entrée|Exemples de données d’entrée|Conversion en Type de données smalldatetime|  
 |-------------------|-----------------------|-----------------------------------------|  
 |Littéral de chaîne dans **smalldatetime** format|« AAAA-MM-JJ HH : mm » ou « AAAA-MM-JJ HH : mm : »<br /><br />Exemple : « 2007-05-08 12:00 ' ou ' 2007-05-08-12:00:15 '|La source de données doit avoir des valeurs pour l’année, mois, date, heure et minute. Secondes sont facultatives et, s’il est présent, doivent être définies à la valeur 00. Toute autre valeur génère une erreur.<br /><br />Les secondes sont facultatives. Lors du chargement dans une colonne de smalldatetime, dwloader arrondit les secondes et fractions de seconde. Par exemple, 1999-05-01 20:10:35.123 chargera 01-05 20:11.|  
-|Littéral de chaîne dans **date** format|'yyyy-MM-dd'<br /><br />Exemple : « 2007-05-08'|Valeurs d’heure (heures, minutes, secondes et fractions) sont définies à 0 lorsque la valeur est insérée.|  
+|Littéral de chaîne dans **date** format|« AAAA-MM-JJ »<br /><br />Exemple : « 2007-05-08'|Valeurs d’heure (heures, minutes, secondes et fractions) sont définies à 0 lorsque la valeur est insérée.|  
   
 ### <a name="date-data-type"></a>Type de données date  
 Le tableau suivant définit le format par défaut et les règles pour le chargement des valeurs littérales dans une colonne de type **date**. Une chaîne vide (") est convertie en la valeur par défaut ' 1900-01-01 ». Les chaînes qui contiennent uniquement des espaces à droite (' ') génère une erreur.  
   
 |Type de données d’entrée|Exemples de données d’entrée|Conversion en Type de données de date|  
 |-------------------|-----------------------|--------------------------------|  
-|Littéral de chaîne dans **date** format|'yyyy-MM-dd'<br /><br />Exemple : « 2007-05-08'||  
+|Littéral de chaîne dans **date** format|« AAAA-MM-JJ »<br /><br />Exemple : « 2007-05-08'||  
   
 ### <a name="time-data-type"></a>Type de données heure  
 Le tableau suivant définit le format par défaut et les règles pour le chargement des valeurs littérales dans une colonne de type **temps**. Une chaîne vide (") est convertie en la valeur par défaut '00:00:00.0000'. Les chaînes qui contiennent uniquement des espaces à droite (' ') génère une erreur.  
   
 |Type de données d’entrée|Exemples de données d’entrée|Conversion en Type de données heure|  
 |-------------------|-----------------------|--------------------------------|  
-|Littéral de chaîne dans **temps** format|'hh:mm:ss.fffffff'<br /><br />Exemple : '12:35:29.1234567'|Si la source de données a une précision inférieure ou égale (nombre de chiffres fractionnaires) à la précision de la **temps** type de données, les données sont complétées à droite avec des zéros. Par exemple, une valeur littérale '12:35:29.123' est insérée en tant que '12:35:29.1230000'.|  
+|Littéral de chaîne dans **temps** format|'ss.fffffff'<br /><br />Exemple : '12:35:29.1234567'|Si la source de données a une précision inférieure ou égale (nombre de chiffres fractionnaires) à la précision de la **temps** type de données, les données sont complétées à droite avec des zéros. Par exemple, une valeur littérale '12:35:29.123' est insérée en tant que '12:35:29.1230000'.|  
   
 ### <a name="datetimeoffset-data-type"></a>Types de données DateTimeOffset  
 Le tableau suivant définit le format par défaut et les règles pour le chargement des valeurs littérales dans une colonne de type **datetimeoffset** (*n*). Le format par défaut est ' : ss.fffffff AAAA-MM-JJ {+ |-} HH : mm ». Une chaîne vide (") est convertie en la valeur par défaut ' 1900-01-01 12:00:00.0000000 + 00:00 ». Les chaînes qui contiennent uniquement des espaces à droite (' ') génère une erreur. Le nombre de chiffres fractionnaires dépend de la définition de colonne. Par exemple, une colonne définie en tant que **datetimeoffset** (2) aura deux chiffres fractionnaires.  
@@ -74,9 +68,9 @@ Le tableau suivant définit le format par défaut et les règles pour le chargem
 |-------------------|-----------------------|------------------------------------------|  
 |Littéral de chaîne dans **datetime** format|'AAAA-MM-JJ HH : mm : [.fff]'<br /><br />Exemple : « 2007-05-08 12:35:29.123'|Les chiffres fractionnaires manquantes et les valeurs de décalage sont définies à 0 lorsque la valeur est insérée. Par exemple, le littéral ' 2007-05-08 12:35:29.123 » est inséré en tant que « 2007-05-08 12:35:29.1230000 + 00:00 ».|  
 |Littéral de chaîne dans **smalldatetime** format|'AAAA-MM-JJ HH'<br /><br />Exemple : « 2007-05-08 12:35 '|Secondes, les chiffres fractionnaires restants et les valeurs de décalage sont définies à 0 lorsque la valeur est insérée.|  
-|Littéral de chaîne dans **date** format|'yyyy-MM-dd'<br /><br />Exemple : « 2007-05-08'|Valeurs d’heure (heures, minutes, secondes et fractions) sont définies à 0 lorsque la valeur est insérée. Par exemple, le littéral ' 2007-05-08' est inséré en tant que « 2007-05-08 00:00:00.0000000 + 00:00 ».|  
+|Littéral de chaîne dans **date** format|« AAAA-MM-JJ »<br /><br />Exemple : « 2007-05-08'|Valeurs d’heure (heures, minutes, secondes et fractions) sont définies à 0 lorsque la valeur est insérée. Par exemple, le littéral ' 2007-05-08' est inséré en tant que « 2007-05-08 00:00:00.0000000 + 00:00 ».|  
 |Littéral de chaîne dans **datetime2** format|'AAAA-MM-JJ ss.fffffff'<br /><br />Exemple : « 2007-05-08 12:35:29.1234567'|La source de données ne peut pas dépasser le nombre spécifié de fraction de seconde dans la colonne de datetimeoffset. Si la source de données possède un nombre plus petit ou égal de fraction de seconde, les données sont complétées à droite avec des zéros. Par exemple, si le type de données est datetimeoffset (5), la valeur littérale ' 2007-05-08 12:35:29.123 + 12:15 ' est inséré en tant que ' 12:35:29.12300 + 12:15 '.|  
-|Littéral de chaîne dans **datetimeoffset** format|'yyyy-MM-dd hh:mm:ss.fffffff {+&#124;-} hh:mm'<br /><br />Exemple : « 2007-05-08 12:35:29.1234567 + 12:15 '|La source de données ne peut pas dépasser le nombre spécifié de fraction de seconde dans la colonne de datetimeoffset. Si la source de données possède un nombre plus petit ou égal de fraction de seconde, les données sont complétées à droite avec des zéros. Par exemple, si le type de données est datetimeoffset (5), la valeur littérale ' 2007-05-08 12:35:29.123 + 12:15 ' est inséré en tant que ' 12:35:29.12300 + 12:15 '.|  
+|Littéral de chaîne dans **datetimeoffset** format|' : ss.fffffff AAAA-MM-jj {+&#124;-} hh : mm '<br /><br />Exemple : « 2007-05-08 12:35:29.1234567 + 12:15 '|La source de données ne peut pas dépasser le nombre spécifié de fraction de seconde dans la colonne de datetimeoffset. Si la source de données possède un nombre plus petit ou égal de fraction de seconde, les données sont complétées à droite avec des zéros. Par exemple, si le type de données est datetimeoffset (5), la valeur littérale ' 2007-05-08 12:35:29.123 + 12:15 ' est inséré en tant que ' 12:35:29.12300 + 12:15 '.|  
   
 ### <a name="datetime2-data-type"></a>Type de données datetime2  
 Le tableau suivant définit le format par défaut et les règles pour le chargement des valeurs littérales dans une colonne de type **datetime2** (*n*). Le format par défaut est 'AAAA-MM-JJ ss.fffffff'. Une chaîne vide (") est convertie en la valeur par défaut ' 1900-01-01-12:00:00 ». Les chaînes qui contiennent uniquement des espaces à droite (' ') génère une erreur. Le nombre de chiffres fractionnaires dépend de la définition de colonne. Par exemple, une colonne définie en tant que **datetime2** (2) aura deux chiffres fractionnaires.  
@@ -85,7 +79,7 @@ Le tableau suivant définit le format par défaut et les règles pour le chargem
 |-------------------|-----------------------|-------------------------------------|  
 |Littéral de chaîne dans **datetime** format|'AAAA-MM-JJ HH : mm : [.fff]'<br /><br />Exemple : « 2007-05-08 12:35:29.123'|Les fractions de secondes sont facultatives et sont définies sur 0 lorsque la valeur est insérée.|  
 |Littéral de chaîne dans **smalldatetime** format|'AAAA-MM-JJ HH'<br /><br />Exemple : « 2007-05-08 12'|Secondes facultatif et chiffres fractionnaires restants sont égales à 0 lorsque la valeur est insérée.|  
-|Littéral de chaîne dans **date** format|'yyyy-MM-dd'<br /><br />Exemple : « 2007-05-08'|Valeurs d’heure (heures, minutes, secondes et fractions) sont définies à 0 lorsque la valeur est insérée. Par exemple, le littéral ' 2007-05-08' est inséré en tant que « 2007-05-08 12:00:00.0000000'.|  
+|Littéral de chaîne dans **date** format|« AAAA-MM-JJ »<br /><br />Exemple : « 2007-05-08'|Valeurs d’heure (heures, minutes, secondes et fractions) sont définies à 0 lorsque la valeur est insérée. Par exemple, le littéral ' 2007-05-08' est inséré en tant que « 2007-05-08 12:00:00.0000000'.|  
 |Littéral de chaîne dans **datetime2** format|'AAAA-MM-JJ hh:mm:ss:fffffff'<br /><br />Exemple : « 2007-05-08 12:35:29.1234567'|Si la source de données contient des composants de date et d’heure qui sont inférieur ou égal à la valeur spécifiée dans **datetime2**(*n*), les données sont insérées ; sinon, une erreur est générée.|  
   
 ### <a name="DateFormats"></a>Formats de date/heure  

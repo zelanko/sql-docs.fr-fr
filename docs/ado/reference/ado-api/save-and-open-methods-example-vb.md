@@ -1,33 +1,33 @@
 ---
-title: "Enregistrer et ouvrir des méthodes-exemple (VB) | Documents Microsoft"
-ms.prod: sql-non-specified
+title: Enregistrer et ouvrir des méthodes-exemple (VB) | Documents Microsoft
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - Save method [ADO], Visual Basic example
 - Open method [ADO]
 ms.assetid: ddccdf58-9c57-4c9b-8b7f-0cf193f955fb
-caps.latest.revision: 
+caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7bf87da3c7a8e00b93c7e4055e6c957453fe658c
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 34428a67a557043e33b82eae1babb2122b6610bf
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="save-and-open-methods-example-vb"></a>Enregistrer et ouvrir des méthodes-exemple (VB)
 Ces trois exemples montrent comment les [enregistrer](../../../ado/reference/ado-api/save-method.md) et [ouvrir](../../../ado/reference/ado-api/open-method-ado-recordset.md) méthodes peuvent être utilisés ensemble.  
@@ -105,6 +105,6 @@ Attribute VB_Name = "Save"
   
 ## <a name="see-also"></a>Voir aussi  
  [Open (méthode) (jeu d’enregistrements ADO)](../../../ado/reference/ado-api/open-method-ado-recordset.md)   
- [Recordset Object (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
+ [Objet Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [En savoir plus sur la persistance des objets Recordset](../../../ado/guide/data/more-about-recordset-persistence.md)   
  [Save, méthode](../../../ado/reference/ado-api/save-method.md)

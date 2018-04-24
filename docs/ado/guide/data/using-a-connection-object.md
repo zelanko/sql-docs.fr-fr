@@ -1,30 +1,30 @@
 ---
-title: "À l’aide d’un objet de connexion | Documents Microsoft"
-ms.prod: sql-non-specified
+title: À l’aide d’un objet de connexion | Documents Microsoft
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - connections [ADO]
 ms.assetid: 4b34f971-5699-43e7-9b15-137d334fa66e
-caps.latest.revision: 
+caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e27a3da94c2699e2281d331e6aa1fff4b9a62001
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 7aa8e57d79b7f65ede84c7e88f03d18a5131f449
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="using-a-connection-object"></a>À l’aide d’un objet de connexion
 Avant d’ouvrir un **connexion** de l’objet, vous devez définir certaines informations sur la source de données et le type de connexion. La plupart de ces informations est détenue par le *ConnectionString* paramètre de la [Open (méthode)](../../../ado/reference/ado-api/open-method-ado-connection.md) sur la **connexion** objet, ou par le [ConnectionString propriété](../../../ado/reference/ado-api/connectionstring-property-ado.md) sur la **connexion** objet. Une chaîne de connexion se compose d’une liste de paires de valeur d’argument séparés par des points-virgules, avec les valeurs encadrées par des guillemets simples. Par exemple :  

@@ -1,32 +1,32 @@
 ---
-title: "Exemple de propriété StayInSync (VB) | Documents Microsoft"
-ms.prod: sql-non-specified
+title: Exemple de propriété StayInSync (VB) | Documents Microsoft
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - StayInSync property [ADO], Visual Basic example
 ms.assetid: b682bcc3-04b3-42b0-86f4-c17e0cd29baf
-caps.latest.revision: 
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d67fd1c7399e79575f76da16e91cf972bf954b57
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 6330252f69b9d847fe85d28864b967ca14d75b3f
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="stayinsync-property-example-vb"></a>Exemple de propriété StayInSync (VB)
 Cet exemple montre comment la [StayInSync](../../../ado/reference/ado-api/stayinsync-property.md) propriété facilite l’accès aux lignes dans une liste hiérarchique [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).  
@@ -98,5 +98,5 @@ End Sub
   
 ## <a name="see-also"></a>Voir aussi  
  [Collection de champs (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
- [Recordset Object (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
+ [Objet Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [StayInSync, propriété](../../../ado/reference/ado-api/stayinsync-property.md)

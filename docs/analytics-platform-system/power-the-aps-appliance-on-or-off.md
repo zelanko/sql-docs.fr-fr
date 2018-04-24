@@ -1,28 +1,21 @@
 ---
-title: L’alimentation de l’Appliance APS On ou Off (système de plateforme Analytique)
-author: barbkess
-ms.author: barbkess
+title: L’application ou désactiver - système de plateforme d’Analytique de l’alimentation | Documents Microsoft
+description: L’application ou désactiver l’alimentation pour un système de plateforme d’Analytique
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 2258f8e3-e7a1-4455-8a5e-10d4d15775d6
-caps.latest.revision: 45
-ms.openlocfilehash: 04473682d04a5b3ff26a5dec0081300d83052f09
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 54829190d03a889ade31383662bf192516934012
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="power-the-aps-appliance-on-or-off"></a>Le dispositif de points d’accès de l’alimentation ou désactiver
+# <a name="power-the-appliance-on-or-off-for-analytics-platform-system"></a>L’application ou désactiver l’alimentation pour un système de plateforme d’Analytique
 Cette rubrique décrit comment mettre sous tension ou hors tension votre Systemappliance de plateforme Analytique qui est en cours d’exécution Parallel Data Warehouse et éventuellement une région HDInsight en cours d’exécution. Utilisez cette rubrique lorsqu’un dispositif de système de plateforme Analytique est déplacé, ou pour mettre sur un appareil après une panne catastrophique.  
   
 Mise sous tension de l’application et n’est pas le même que le démarrage et arrêt des services d’application. Pour plus d’informations sur ce sujet, consultez [l’état des Services PDW &#40;système de plateforme Analytique&#41;](pdw-services-status.md). Pour plus d’informations sur la mise sous tension ou désactiver un SQL Server 2008 Parallel Data Warehouse, consultez le fichier d’aide de SQL Server 2008 Parallel Data Warehouse. Pour plus d’informations sur la mise sous tension ou désactiver de SQL Server 2012 AU1 AU2 Parallel Data Warehouse, consultez le fichier d’aide pour ces versions.  

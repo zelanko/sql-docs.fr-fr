@@ -1,32 +1,32 @@
 ---
-title: "Exemple d’ensemble de cellules (VB) | Documents Microsoft"
-ms.prod: sql-non-specified
+title: Exemple d’ensemble de cellules (VB) | Documents Microsoft
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - Cellset object [ADO MD], Visual Basic example
 ms.assetid: 2666ad1c-b48e-4b2c-b269-5a9f4e4a7810
-caps.latest.revision: 
+caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 42b76d40fe98b142e85ee70a5e902397e58a4dab
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 4f8938832eb3cd08e55fd0b5d2a5dc639d863fc8
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="cellset-example-vb"></a>Exemple d’ensemble de cellules (VB)
 Ce projet Visual Basic illustre les principes fondamentaux de l’utilisation d’ADO MD pour accéder aux données de cube. Il affiche les légendes de membre pour les en-têtes de ligne et de colonne, puis affiche mises en forme des valeurs de cellules spécifiques au sein de l’ensemble de cellules.  

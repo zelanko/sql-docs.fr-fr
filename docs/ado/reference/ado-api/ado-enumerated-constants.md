@@ -1,30 +1,30 @@
 ---
-title: "Constantes énumérées ADO | Documents Microsoft"
-ms.prod: sql-non-specified
+title: Constantes énumérées ADO | Documents Microsoft
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - enumerated constants [ADO]
 ms.assetid: c97ed131-1a93-463c-9e61-22f029b0c474
-caps.latest.revision: 
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a350235fd7afd0c9423c164f08bc076191aa97cd
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: c77a194ee2eb17779774d92b5452509d86c0fb29
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="ado-enumerated-constants"></a>Constantes énumérées ADO
 Pour faciliter le débogage, les énumérations ADO comportent une valeur pour chaque constante. Toutefois, cette valeur est purement indicative et peut changer d’une version de l’objet ADO à un autre. Votre code doit uniquement dépendre du nom, pas la valeur réelle de chaque constante énumérée.  

@@ -1,28 +1,22 @@
 ---
-title: Obtenir et configurer un serveur de sauvegarde pour les points d’accès PDW
-author: barbkess
-ms.author: barbkess
+title: Obtenir et configurer un serveur de sauvegarde - Parallel Data Warehouse | Documents Microsoft
+description: Cet article décrit comment configurer un système de Windows sur le matériel non comme un serveur de sauvegarde pour une utilisation avec les fonctionnalités de sauvegarde et de restauration de système de plateforme Analytique (APS) et Parallel Data Warehouse (PDW).
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.suite: sql
-ms.custom: ''
-ms.technology: mpp-data-warehouse
-description: Configurer un système de Windows sur le matériel non comme un serveur de sauvegarde pour une utilisation avec la sauvegarde et de restauration des fonctionnalités de système de plateforme Analytique (APS) et SQL Server Parallel Data Warehouse (PDW).
-ms.date: 10/20/2016
-ms.topic: article
-caps.latest.revision: 20
-ms.assetid: f8b769fe-c864-4d65-abcb-a9a287061702
-ms.openlocfilehash: 564a70d5fa483f2c34ef2598213a2c22074daf80
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 4464857e2b1e71a96f87e95d45df0577df987176
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="acquire-and-configure-a-backup-server"></a>Obtenir et configurer un serveur de sauvegarde
-Cette rubrique décrit comment configurer un système de Windows sur le matériel non comme un serveur de sauvegarde pour une utilisation avec les fonctionnalités de sauvegarde et de restauration dans le système de plateforme Analytique (APS) et SQL Server Parallel Data Warehouse (PDW).  
+# <a name="acquire-and-configure-a-backup-server-for-parallel-data-warehouse"></a>Obtenir et configurer un serveur de sauvegarde pour Parallel Data Warehouse
+Cet article décrit comment configurer un système de Windows sur le matériel non comme un serveur de sauvegarde pour une utilisation avec les fonctionnalités de sauvegarde et de restauration de système de plateforme Analytique (APS) et Parallel Data Warehouse (PDW).  
   
   
 ## <a name="Basics"></a>Principes de base de sauvegarde du serveur  

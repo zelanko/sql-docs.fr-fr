@@ -1,27 +1,21 @@
 ---
-title: Le chargement de feuille de planification la capacité de serveur (SQL Server PDW)
-author: barbkess
-ms.author: barbkess
+title: Le chargement de la capacité du serveur planification - système de plateforme Analytique | Documents Microsoft
+description: Cette feuille de calcul de la planification de capacité vous aide à déterminer la configuration requise pour un serveur de chargement pour charger les données à Analytique plateforme système Parallel Data Warehouse. »
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.suite: sql
-ms.custom: ''
-ms.technology: mpp-data-warehouse
-description: Cette feuille de calcul de la planification de capacité vous aide à déterminer la configuration requise pour un serveur de chargement pour charger des données dans SQL Server PDW.
-ms.date: 01/05/2017
-ms.topic: article
-ms.assetid: df2155be-a624-40ba-9a85-58af708f7ce7
-caps.latest.revision: 9
-ms.openlocfilehash: 73f4b55c82f0b2b5e3c7cb73222a546d3dfc4af6
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 2f0efd7e0688496d5af7887431ca00ae683c874f
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="loading-server-capacity-planning-worksheet"></a>Le chargement de feuille de planification de capacité de serveur
+# <a name="loading-server-capacity-planning-worksheet-for-analytics-platform-system"></a>Le chargement de la feuille de planification de capacité de serveur pour le système de plateforme Analytique
 Cette feuille de calcul de la planification de capacité vous aide à déterminer la configuration requise pour un serveur de chargement pour charger des données dans SQL Server PDW. Cela permet de créer votre plan pour l’achat ou de configuration existant du chargement des serveurs.  
   
 ## <a name="worksheet-notes"></a>Notes de la feuille de calcul

@@ -1,27 +1,21 @@
 ---
-title: Certificat PDW (système de plateforme Analytique) d’approvisionnement
-author: barbkess
-ms.author: barbkess
+title: Certificat de configuration - système de plateforme Analytique | Documents Microsoft
+description: Configuration de certificats dans le système de plateforme d’Analytique.
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.suite: sql
-ms.custom: ''
-ms.technology: mpp-data-warehouse
-description: La page Configuration de certificats PDW du Gestionnaire de Configuration système Analytique plateforme importe ou supprime le certificat utilisé par PDW.
-ms.date: 01/05/2017
-ms.topic: article
-ms.assetid: 0a423b7d-c6ea-45c1-80b0-26758170594c
-caps.latest.revision: 22
-ms.openlocfilehash: 13e4f6ba3aeb105813ae53eee3a15ce41616273a
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 82907692bbba3ad92e796e8ecc8bb99e3141cb1a
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="pdw-certificate-provisioning"></a>Configuration de certificats PDW
+# <a name="certificate-provisioning-in-analytics-platform-system"></a>Configuration de certificats dans le système de plateforme Analytique
 Le **fourniture des certificats PDW** page du système de plateforme Analytique**Configuration Manager** importe ou supprime le certificat utilisé par PDW. 
 
 Un certificat pour chiffrer les connexions peut aider à une communication sécurisée au nœud de contrôle via les clients de SQL Server, les outils qui utilisent les pilotes SQL Server PDW, le [Console d’administration](monitor-the-appliance-by-using-the-admin-console.md), et charge les Services d’intégration. 

@@ -1,28 +1,21 @@
 ---
-title: Téléchargez et appliquez les mises à jour Microsoft (système de plateforme Analytique)
-author: barbkess
-ms.author: barbkess
+title: Télécharger les mises à jour Microsoft - système de plateforme Analytique | Documents Microsoft
+description: Cette rubrique explique comment télécharger les mises à jour à partir du catalogue Microsoft Update pour Windows Server Update Services (WSUS) et appliquer ces mises à jour sur les serveurs de matériel système Analytique de la plateforme. Microsoft Update va installer toutes les mises à jour pour Windows et SQL Server. WSUS est installé sur l’ordinateur virtuel VMM de l’application.
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 4f69df44-8549-4a8a-b10c-f91908594856
-caps.latest.revision: 51
-ms.openlocfilehash: b1bbb32473ff89ee137c0de0fcdb0b3750c31889
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: b98a2be90f222fc2c531c1f1983f8882bdab640e
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="download-and-apply-microsoft-updates"></a>Téléchargez et appliquez les mises à jour Microsoft
+# <a name="download-and-apply-microsoft-updates-for-analytics-platform-system"></a>Téléchargez et appliquez les mises à jour Microsoft pour système de plateforme Analytique
 Cette rubrique explique comment télécharger les mises à jour à partir du catalogue Microsoft Update pour Windows Server Update Services (WSUS) et appliquer ces mises à jour sur les serveurs de matériel système Analytique de la plateforme. Microsoft Update va installer toutes les mises à jour pour Windows et SQL Server. WSUS est installé sur l’ordinateur virtuel VMM de l’application.  
   
 ## <a name="TOP"></a>Avant de commencer  

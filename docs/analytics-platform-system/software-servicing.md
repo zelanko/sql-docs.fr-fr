@@ -1,28 +1,21 @@
 ---
-title: Logiciels (système de plateforme Analytique) de maintenance
-author: barbkess
-ms.author: barbkess
+title: Maintenance de logiciel - système de plateforme Analytique | Documents Microsoft
+description: Logiciel de maintenance dans le système de plateforme Analytique (APS).
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: cec4d924-c88f-470c-84bb-0af3e21aabf1
-caps.latest.revision: 33
-ms.openlocfilehash: 8bddf00569ad4c5e5c78e801399b589a9f6d5f42
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 7d9991dfb310e2cebc3c61bbd6f9f04a40a0f38e
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="software-servicing"></a>Maintenance de logiciel
+# <a name="software-servicing-in-analytics-platform-system"></a>Maintenance de logiciel dans le système de plateforme Analytique
 Cette section résume le logiciel de configuration requise pour les équipements de système de plateforme Analytique, y compris les correctifs logiciels WSUS et le système de plateforme d’Analytique de maintenance.  
   
 ## <a name="Basics"></a>Principes fondamentaux de la maintenance de logiciel  

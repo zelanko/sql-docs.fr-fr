@@ -1,28 +1,28 @@
 ---
-title: "Envoyer les mises à jour : méthode UpdateBatch | Documents Microsoft"
-ms.prod: sql-non-specified
+title: 'Envoyer les mises à jour : méthode UpdateBatch | Documents Microsoft'
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 87123797-831f-48e0-94b5-f669f9ca194a
-caps.latest.revision: 
+caps.latest.revision: 3
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 061435976bb08c644705e80c0d1d605ee944f304
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: c19c51655a972b512c4d3b3978a3d176bae25dac
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="sending-the-updates-updatebatch-method"></a>Envoyer les mises à jour : méthode UpdateBatch
 Le code suivant ouvre un objet Recordset en mode batch en affectant la propriété LockType adLockBatchOptimistic et CursorLocation adUseClient. Il ajoute deux nouveaux enregistrements et modifie la valeur d’un champ dans un enregistrement existant, en enregistrant les valeurs d’origine, puis appelle la méthode UpdateBatch pour renvoyer les modifications à la source de données.  

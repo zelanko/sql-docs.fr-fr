@@ -1,28 +1,22 @@
 ---
-title: Vue d’ensemble de l’entrepôt de données parallèle
-author: barbkess
-ms.author: barbkess
+title: Composants de l’entrepôt de données - système de plateforme d’Analytique en parallèle | Documents Microsoft
+description: Cet article explique le logiciel et les composants non logicielle du système de plateforme Analytique.
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.suite: sql
-ms.custom: ''
-ms.technology: mpp-data-warehouse
-description: Cette rubrique explique le logiciel et les composants non logicielle du système de plateforme Analytique.
-ms.date: 01/05/2017
-ms.topic: article
-ms.assetid: db0c4a43-a66d-4c44-ab91-791c5785f71c
-caps.latest.revision: 20
-ms.openlocfilehash: 42fb92c30c0487603f2ad8e870886f25b4c1655a
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 09813eecdcc933619955de8d94e83079cad0c68f
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="parallel-data-warehouse-overview"></a>Vue d’ensemble de l’entrepôt de données parallèle
-Cette rubrique explique le logiciel et les composants non logicielle du système de plateforme Analytique.  
+# <a name="parallel-data-warehouse-components---analytics-platform-system"></a>Composants de l’entrepôt de données - système de plateforme d’Analytique en parallèle
+Cet article explique le logiciel et les composants non logicielle du système de plateforme Analytique.  
   
 <!-- MISSING LINKS
 

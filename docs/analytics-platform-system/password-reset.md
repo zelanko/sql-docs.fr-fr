@@ -1,28 +1,21 @@
 ---
-title: Réinitialisation de mot de passe (système de plateforme Analytique)
-author: barbkess
-ms.author: barbkess
+title: Réinitialisation du mot de passe - système de plateforme Analytique | Documents Microsoft
+description: La page de réinitialisation de mot de passe vous permet de modifier le mot de passe pour les comptes d’administrateur utilisé par le système de plateforme d’Analytique.
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: a0f808fc-e120-430b-b6c9-11f2b1c90bf3
-caps.latest.revision: 26
-ms.openlocfilehash: 0574cf85dc4baaf6d92159aa423a0b1771042c59
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 63fbb097bf1ca926223ce7c0114c8da5d10cd969
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="password-reset"></a>Redéfinition du mot de passe
+# <a name="password-reset---analytics-platform-system"></a>Réinitialisation du mot de passe - système de plateforme Analytique
 Le **mot de passe réinitialisé** page permet de modifier le mot de passe pour les comptes d’administrateur utilisé par le système de plateforme d’Analytique.  
   
 > [!WARNING]  
@@ -30,10 +23,10 @@ Le **mot de passe réinitialisé** page permet de modifier le mot de passe pour 
   
 Lorsque l’application est remise, vous obtenez les mots de passe du système de plateforme Analytique. Toujours modifier les mots de passe pour les nouvelles valeurs lorsque vous prenez la responsabilité de votre solution. Il existe trois mots de passe pour mettre à jour. Les mots de passe n’ont pas le même que l’autre.  
   
-**F<*xxxx*>\Administrator**  
+**F <*xxxx*> \Administrator**  
 Le **administrateur** du domaine d’application.  
   
-**.\Administrator**  
+**. \Administrator**  
 Local **administrateur** compte sur les ordinateurs qui hébergent les machines virtuelles.  
   
 > [!IMPORTANT]  
@@ -58,7 +51,7 @@ Les informations d’identification d’administrateur de domaine et les informa
   
     Modifications apportées à ces comptes n’affectent pas les sessions actives, mais seront appliquées à la prochaine tentative d’ouverture de session pour chaque utilisateur.  
   
-    ![SQL Server DWConfig Password](./media/password-reset/SQL_Server_PDW_DWConfig_TopPW.png "SQL_Server_PDW_DWConfig_TopPW")  
+    ![Mot de passe SQL Server DWConfig](./media/password-reset/SQL_Server_PDW_DWConfig_TopPW.png "SQL_Server_PDW_DWConfig_TopPW")  
   
 ## <a name="see-also"></a>Voir aussi  
 [Définir le mot de passe administrateur pour ouvrir une session sur les nœuds AD en Mode restauration des Services Active &#40;DSRM&#41; &#40;Analytique plate-forme système&#41;](set-admin-password-for-logging-on-to-ad-nodes-in-directory-services-restore-mode.md)  

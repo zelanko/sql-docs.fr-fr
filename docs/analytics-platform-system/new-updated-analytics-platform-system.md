@@ -1,24 +1,21 @@
 ---
-title: Mise à jour - système de plateforme d’Analytique des documents de SQL Server | Documents Microsoft
+title: Mise à jour - documentation sur le système de plateforme Analytique | Documents Microsoft
 description: Extraits de l’affichage de contenu mis à jour pour obtenir une documentation récemment modifié, pour le système de plateforme Analytique pour Microsoft SQL Server.
+author: mzaman1
 manager: craigg
-author: MightyPen
-ms.author: genemi
-ms.topic: article
-ms.custom: UpdArt.exe
-ms.suite: sql
-ms.prod_service: sql-non-specified
-ms.component: aps-pdw
-ms.date: 02/03/2018
-ms.openlocfilehash: f3a8a14c0c01ff99c8ad613bbc9f5e1e01955e7e
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 94b7666476874e610991ebf838ad259f3d0bb85a
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="new-and-recently-updated-analytics-platform-system-for-sql-server"></a>Nouveaux et mis à jour récemment : système de plateforme d’Analytique pour SQL Server
-
-
 
 Presque tous les jours Microsoft met à jour certains de ses articles existants sur son [Docs.Microsoft.com](http://docs.microsoft.com/) site Web de documentation. Cet article affiche des extraits d’articles récemment mis à jour. Des liens vers nouveaux articles peuvent également être répertoriés.
 

@@ -1,6 +1,6 @@
 ---
 title: Présentation du fichier de personnalisation | Documents Microsoft
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: ado
@@ -11,7 +11,7 @@ ms.date: 01/19/2017
 ms.reviewer: ''
 ms.suite: sql
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - customization file in RDS [ADO]
 ms.assetid: 136f74bf-8d86-4a41-be66-c86cbcf81548
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0597c403a9d716c155fe129ab8cb514268b27341
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.openlocfilehash: 72d44f46f3f6f1a349a2dabf7a0c7576d55fdfe7
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="understanding-the-customization-file"></a>Présentation du fichier de personnalisation
 Chaque en-tête de section dans le fichier de personnalisation est constitué de crochets (**[]**) contenant un type et un paramètre. Les quatre types de section sont indiquées par les chaînes littérales **connecter**, **sql**, **userlist**, ou **journaux**. Le paramètre est la chaîne littérale, la valeur par défaut, un identificateur spécifié par l’utilisateur ou rien du tout.  
@@ -50,12 +50,12 @@ identifier
   
 |Élément| Description|  
 |----------|-----------------|  
-|**connect**|Une chaîne littérale qui modifie une chaîne de connexion.|  
+|**Se connecter**|Une chaîne littérale qui modifie une chaîne de connexion.|  
 |**sql**|Une chaîne littérale qui modifie une chaîne de commande.|  
 |**userlist**|Une chaîne littérale qui modifie les droits d’accès d’un utilisateur spécifique.|  
-|**logs**|Une chaîne littérale qui spécifie un fichier journal de l’enregistrement des erreurs opérationnelles.|  
+|**Journaux**|Une chaîne littérale qui spécifie un fichier journal de l’enregistrement des erreurs opérationnelles.|  
 |**default**|Une chaîne littérale est utilisée si aucun identificateur n’est spécifié ou trouvé.|  
-|*identifier*|Chaîne qui correspond à une chaîne dans le **connecter** ou **commande** chaîne.<br /><br /> -Utilisez cette section si l’en-tête de section contient **connecter** et la chaîne d’identificateur est trouvée dans la chaîne de connexion.<br />-Utilisez cette section si l’en-tête de section contient **sql** et la chaîne d’identificateur est trouvée dans la chaîne de commande.<br />-Utilisez cette section si l’en-tête de section contient **userlist** et la chaîne de l’identificateur correspond à un **connecter** identificateur de section.|  
+|*Identificateur*|Chaîne qui correspond à une chaîne dans le **connecter** ou **commande** chaîne.<br /><br /> -Utilisez cette section si l’en-tête de section contient **connecter** et la chaîne d’identificateur est trouvée dans la chaîne de connexion.<br />-Utilisez cette section si l’en-tête de section contient **sql** et la chaîne d’identificateur est trouvée dans la chaîne de commande.<br />-Utilisez cette section si l’en-tête de section contient **userlist** et la chaîne de l’identificateur correspond à un **connecter** identificateur de section.|  
   
  Le **DataFactory** appelle le gestionnaire, en passant les paramètres client. Le Gestionnaire de recherche des chaînes entières dans les paramètres client qui correspondent aux identificateurs dans les en-têtes de la section appropriée. Si une correspondance est trouvée, le contenu de cette section est appliqué au paramètre du client.  
   
