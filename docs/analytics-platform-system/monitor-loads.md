@@ -1,28 +1,22 @@
 ---
-title: Analyse des charges pour Parallel Data Warehouse
-author: barbkess
-ms.author: barbkess
+title: Contrôler des chargements de Parallel Data Warehouse | Documents Microsoft
+description: Contrôler des chargements récents et actives à l’aide de la Console d’administration Analytique plateforme système (APS) ou les vues du système Data Warehouse (PDW) parallèle ».
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.suite: sql
-ms.custom: ''
-ms.technology: mpp-data-warehouse
-description: Vous pouvez surveiller les actifs et récentes [dwloader](dwloader.md) charge à l’aide de la Console d’administration de système de plateforme Analytique (APS) ou les vues système Parallel Data Warehouse (PDW).
-ms.date: 10/20/2016
-ms.topic: article
-ms.assetid: c0c55c16-00bc-4676-8970-a8e10b3e9408
-caps.latest.revision: 6
-ms.openlocfilehash: e520fa01eef0c25e1cf094ee412a9530afaf70b7
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 3230f170348f5952148894bd1fdb1ecc36a790bc
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="monitor-loads"></a>Moniteur de charge
-Vous pouvez surveiller les actifs et récentes [dwloader](dwloader.md) charge à l’aide de la Console d’administration de système de plateforme Analytique (APS) ou Parallel Data Warehouse (PDW) [vues système](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-reference-tsql-system-views/). 
+# <a name="monitor-loads-into-parallel-data-warehouse"></a>Moniteur de charge dans Parallel Data Warehouse
+Analyse active et récentes [dwloader](dwloader.md) charge à l’aide de la Console d’administration de système de plateforme Analytique (APS) ou Parallel Data Warehouse (PDW) [vues système](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-reference-tsql-system-views/). 
   
 > [!TIP]  
 > Certaines charges sont lancées à l’aide des instructions INSERT ou des outils d’analyse décisionnelle qui utilisent des instructions SQL pour effectuer le chargement. 

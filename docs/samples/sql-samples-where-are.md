@@ -16,18 +16,20 @@ ms.author: barbkess
 manager: craigg
 robots: noindex,nofollow
 ms.workload: On Demand
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 60efe21b9417e0efe7301472f8b9777b1d1f8a91
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: bd577dfbabfe8d4aa989fc2da0f1751310c3d0dc
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="sql-samples"></a>Exemples SQL
+
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+
 Emplacements des bases de données et des exemples de code pour les produits Microsoft SQL.
 
 ## <a name="sql-samples-repository"></a>Référentiel d’exemples SQL
+
 Exemples de code pour les produits SQL se trouvent dans le [Microsoft SQL Server Samples](https://github.com/microsoft/sql-server-samples) référentiel GitHub. Chaque exemple comprend un fichier Lisez-moi qui explique comment exécuter et utiliser cet exemple. Le fichier Lisez-moi de principal pour le référentiel d’exemples explique comment contribuer. 
 
 Les exemples et les modèles sont tous sous licence la licence du MIT. Consultez le fichier license.txt à la racine.

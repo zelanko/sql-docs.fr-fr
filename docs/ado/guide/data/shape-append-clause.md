@@ -1,32 +1,32 @@
 ---
 title: Clause APPEND de forme | Documents Microsoft
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - shape commands [ADO]
 - data shaping [ADO], APPEND clause
 - append clause [ADO]
 ms.assetid: f90fcf55-6b24-401d-94e1-d65bd24bd342
-caps.latest.revision: 
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8f4c9bf19fd1df07bb4271a8db94311548a4e092
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: eb0275048d5afbe1bb13adc74eb5d2cba14e2a9e
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="shape-append-clause"></a>Clause APPEND de forme
 La clause APPEND de commande shape ajoute une ou plusieurs colonnes à un **Recordset**. Souvent, ces colonnes sont des colonnes de chapitres, qui font référence à un enfant **Recordset**.  
@@ -40,7 +40,7 @@ SHAPE [parent-command [[AS] parent-alias]] APPEND column-list
 ## <a name="description"></a> Description  
  Les parties de cette clause sont les suivantes :  
   
- *parent-command*  
+ *commande parent*  
  Zéro ou un des éléments suivants (vous pouvez omettre le *parent-command* complètement) :  
   
 -   Une commande fournisseur entourée accolades (« {} ») qui retourne un **Recordset** objet. La commande est envoyée au fournisseur de données sous-jacent et sa syntaxe dépend des exigences de ce fournisseur. Ce sera généralement le langage SQL, même si ADO ne requiert pas de langage de requête particulier.  
@@ -49,7 +49,7 @@ SHAPE [parent-command [[AS] parent-alias]] APPEND column-list
   
 -   Le mot-clé TABLE, suivi du nom d’une table dans le fournisseur de données.  
   
- *parent-alias*  
+ *alias-parent*  
  Alias facultatif qui fait référence au parent **Recordset**.  
   
  *column-list*  
@@ -81,7 +81,7 @@ SHAPE [parent-command [[AS] parent-alias]]
   
 -   Le mot-clé TABLE, suivi du nom d’une table dans le fournisseur de données.  
   
- *child-alias*  
+ *alias-enfant*  
  Un alias qui fait référence à l’enfant **Recordset**.  
   
  *parent-column*  
@@ -93,7 +93,7 @@ SHAPE [parent-command [[AS] parent-alias]]
  *param-number*  
  Consultez [fonctionnement des commandes paramétrées](../../../ado/guide/data/operation-of-parameterized-commands.md).  
   
- *chapter-alias*  
+ *alias-chapitre*  
  Un alias qui fait référence à la colonne de chapitre ajoutée au parent.  
   
 > [!NOTE]

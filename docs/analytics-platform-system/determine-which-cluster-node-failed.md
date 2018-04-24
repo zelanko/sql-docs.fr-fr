@@ -1,29 +1,22 @@
 ---
-title: Déterminer le nœud de Cluster a échoué (système de plateforme Analytique)
-author: barbkess
-ms.author: barbkess
+title: Déterminer le nœud de cluster défaillant - système de plateforme Analytique | Documents Microsoft
+description: Cet article décrit comment déterminer le nom du nœud système de plateforme Analytique (APS) qui ont échoué après un basculement de cluster s’est produite et une alerte de basculement de cluster a été déclenchée. Dans le cadre du dépannage d’un cluster de basculement, vous devez déterminer le nom du nœud qui a échoué avant de contacter Microsoft pour aider à résoudre le problème.
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 1e001117-a1b6-4357-bf25-e85aba3f1cf0
-caps.latest.revision: 21
-ms.openlocfilehash: 201d11f7c3e5e7d50e1138ab41edf4fbdb60a6b9
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 031c8033e91d7a7f74ca8c4409bc02296a22ebcf
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="determine-which-cluster-node-failed"></a>Déterminer quel nœud du Cluster a échoué.
-Cette rubrique explique comment déterminer le nom du nœud SQL Server PDW qui ont échoué après un basculement de cluster s’est produite et une alerte de basculement de cluster a été déclenchée. Dans le cadre du dépannage d’un cluster de basculement, vous devez déterminer le nom du nœud qui a échoué avant de contacter Microsoft pour aider à résoudre le problème.  
+# <a name="determine-which-cluster-node-failed-for-analytics-platform-system"></a>Déterminer quel cluster nœud a échoué pour le système de plateforme Analytique
+Cette rubrique explique comment déterminer le nom du nœud système de plateforme Analytique (APS) qui ont échoué après un basculement de cluster s’est produite et une alerte de basculement de cluster a été déclenchée. Dans le cadre du dépannage d’un cluster de basculement, vous devez déterminer le nom du nœud qui a échoué avant de contacter Microsoft pour aider à résoudre le problème.  
   
 ## <a name="Background"></a>En arrière-plan  
 Pour la haute disponibilité dans SQL Server PDW, le nœud de contrôle et les nœuds de calcul sont configurés en tant que composants actifs ou passifs de clusters de basculement Windows. Lorsqu’un serveur actif ne répond pas aux demandes du système critiques, le serveur passif bascule et exécute les fonctions du serveur qui a échoué.  

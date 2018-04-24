@@ -1,31 +1,31 @@
 ---
-title: "Execute (méthode) (RDS) | Documents Microsoft"
-ms.prod: sql-non-specified
+title: Execute (méthode) (RDS) | Documents Microsoft
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 helpviewer_keywords:
 - Execute method [ADO]
 ms.assetid: 2d9c30e9-ab5b-4920-91b8-48454c2fb5d8
-caps.latest.revision: 
+caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: be0dfb94d6681af706d75437143dcde28e63587d
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: db01dfef8e751808431b1796ee022060e30a7d17
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="execute-method-rds"></a>Execute (méthode) (RDS)
 Exécute la requête et crée un jeu d’enregistrements ADO pour une utilisation dans ADO 2.5 et versions ultérieures.  
@@ -41,13 +41,13 @@ object.Execute(ConnectionString As String, HandlerString As String, QueryString 
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- *ConnectionString*  
+ *connectionString*  
  Chaîne utilisée pour se connecter au fournisseur OLE DB où la demande va être envoyée pour l’exécution. Si un gestionnaire est spécifié à l’aide de *HandlerString* il peut modifier ou remplacer la chaîne de connexion.  
   
  *HandlerString*  
  Une chaîne en deux parties qui identifie le gestionnaire à utiliser avec cette exécution. La chaîne contient deux parties. La première partie contient le nom (ProgID) du gestionnaire à utiliser. La deuxième partie contient les arguments à passer au gestionnaire. Les détails de l’interprétation de la chaîne d’arguments sont spécifiques à chaque gestionnaire. Les deux parties sont séparées par la première instance d’une virgule dans la chaîne. La chaîne d’arguments peut contenir des virgules supplémentaires. Les arguments sont facultatifs.  
   
- *QueryString*  
+ *Chaîne de requête*  
  Une commande dans le langage de commande pris en charge par le fournisseur OLE DB identifié dans la chaîne de connexion. Pour les fournisseurs SQL, *QueryString* peut contenir une instruction de commande Transact-SQL, mais les fournisseurs non-SQL (par exemple, MSDataShape) cela peut ne pas être un [!INCLUDE[tsql](../../../includes/tsql_md.md)] instruction de requête.  
   
  Si un gestionnaire est utilisé, le gestionnaire peut modifier ou remplacer la valeur spécifiée ici. Par exemple, le gestionnaire remplace généralement *QueryString* avec une chaîne de requête à partir de son fichier .ini. Par défaut, le fichier Msdfmap.ini est utilisé.  

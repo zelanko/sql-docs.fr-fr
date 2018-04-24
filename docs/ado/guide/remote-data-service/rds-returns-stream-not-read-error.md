@@ -1,30 +1,30 @@
 ---
 title: Retourne &quot;flux non lu&quot; erreur | Documents Microsoft
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - stream not read error in RDS [ADO]
 ms.assetid: cb5a68f8-dba4-41da-bafd-04efe53706b7
-caps.latest.revision: 
+caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a14606f5ac503494159a70129e13b53b51758e72
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: d197487ed4d7e46d8e89b968c8fff4bcd9b80784
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="rds-returns-quotstream-not-readquot-error"></a>Retourne &quot;flux non lu&quot; erreur
 « L’objet de flux est illisible, car il est vide, ou la position actuelle est à la fin du flux de données. Pour les flux non vide, définissez la position actuelle avec la propriété Position. Pour déterminer si un flux de données est vide, vérifiez la propriété de taille. »  

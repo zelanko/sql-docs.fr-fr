@@ -1,32 +1,32 @@
 ---
-title: "Trier l’exemple de propriété (VB) | Documents Microsoft"
-ms.prod: sql-non-specified
+title: Trier l’exemple de propriété (VB) | Documents Microsoft
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - Sort property [ADO], Visual Basic example
 ms.assetid: fc2fd40b-65d6-4023-90a3-90c9a88ef6cf
-caps.latest.revision: 
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: afc3a981438c2aab15e5b4928ee1776a62c31966
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: c224224772f4aa560dc8fd5d2accd3405ab1b4a3
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="sort-property-example-vb"></a>Exemple de propriété de tri (VB)
 Cet exemple utilise le [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) l’objet [tri](../../../ado/reference/ado-api/sort-property.md) propriété pour réorganiser les lignes d’une **Recordset** dérivé le ***auteurs*** table de le ***Pubs*** base de données. Une routine utilitaire secondaire imprime chaque ligne.  
@@ -117,5 +117,5 @@ Attribute VB_Name = "Sort"
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Recordset Object (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
+ [Objet Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Sort, propriété](../../../ado/reference/ado-api/sort-property.md)

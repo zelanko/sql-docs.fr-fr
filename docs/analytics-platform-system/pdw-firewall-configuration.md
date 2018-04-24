@@ -1,28 +1,21 @@
 ---
-title: Configuration du pare-feu PDW (système de plateforme Analytique)
-author: barbkess
-ms.author: barbkess
+title: Configuration du pare-feu PDW - système de plateforme Analytique | Documents Microsoft
+description: La page pare-feu du Gestionnaire de Configuration PDW SQL Server permet d’activer ou désactiver des règles de pare-feu qui autorisent ou empêchent l’accès à des ports spécifiques sur le matériel de système de plateforme Analytique.
+aauthor: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 191f292d-16bc-4166-b855-158854ad062d
-caps.latest.revision: 28
-ms.openlocfilehash: 8795f2254160a4ba605643b89dc4b9df0cce4c7f
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 8ccfd60aee7647c2421870a09ab5fa9b2653b99d
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="pdw-firewall-configuration"></a>Configuration du pare-feu PDW
+# <a name="parallel-data-warehouse-firewall-configuration-in-analytics-platform-system"></a>Parallèle configuration du pare-feu de l’entrepôt de données dans le système de plateforme Analytique
 Le **pare-feu** page du Gestionnaire de Configuration PDW SQL Server vous permet d’activer ou désactiver des règles de pare-feu qui autorisent ou empêchent l’accès à des ports spécifiques sur le matériel de système de plateforme Analytique.  
   
 ## <a name="to-manage-ports-and-firewall-rules-for-appliance-nodes"></a>Pour gérer les ports et les règles de pare-feu pour les nœuds de l’équipement  
@@ -35,20 +28,20 @@ Le **pare-feu** page du Gestionnaire de Configuration PDW SQL Server vous permet
   
 4.  Cliquez sur **appliquer** pour enregistrer vos modifications.  
   
-![DWConfig Appliance PDW Firewall](./media/pdw-firewall-configuration/SQL_Server_PDW_DWConfig_ApplPDWFirewall.png "SQL_Server_PDW_DWConfig_ApplPDWFirewall")  
+![Pare-feu de PDW des appliances DWConfig](./media/pdw-firewall-configuration/SQL_Server_PDW_DWConfig_ApplPDWFirewall.png "SQL_Server_PDW_DWConfig_ApplPDWFirewall")  
   
 ## <a name="external-ports"></a>Ports externes  
 Les ports suivants sont ouverts pour les connexions client provenant en dehors de PDW.  
   
 |Fonction|Port #|Nœuds|  
 |-----------|-----------|---------|  
-|Accès Client SQL pour PDW (TDS)|17001|CTL|  
-|Accès au Client de chargeur (dwloader & SSIS)|8001|CTL|  
+|Accès Client SQL pour PDW (TDS)|17001|LISTE CTL|  
+|Accès au Client de chargeur (dwloader & SSIS)|8001|LISTE CTL|  
 |Accès Bureau à distance|3389|CTL, CMP|  
-|SSIS BinaryLoaderDataChannel|16551|CTL|  
+|SSIS BinaryLoaderDataChannel|16551|LISTE CTL|  
 |dwloader BinaryLoaderDataChannel|16551|CMP|  
 |SSL chiffrée connexions (pour les communications internes, pour accéder à la Console d’administration et d’accéder aux services de cluster HDInsight)|443|Tous les nœuds|  
-|Flux de contrôle SQL Server PDW charge - informations d’identification Windows|8002|CTL|  
+|Flux de contrôle SQL Server PDW charge - informations d’identification Windows|8002|LISTE CTL|  
 |_Kerberos|88|AD01 et AD02,|  
 |_ldap|389|AD01 et AD02|  
   

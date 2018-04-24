@@ -1,17 +1,17 @@
 ---
-title: "Close (méthode) (ADO) | Documents Microsoft"
-ms.prod: sql-non-specified
+title: Close (méthode) (ADO) | Documents Microsoft
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - Recordset15::Close
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - Close method [ADO]
 ms.assetid: 3cdf27d1-a180-4cff-8e42-95dec5fb1b55
-caps.latest.revision: 
+caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 693f6adc51682fec4f9890d7d7618aa53e43593d
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 996da92c866789b91a317c152449f7ca2540d273
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="close-method-ado"></a>Close (méthode) (ADO)
 Ferme un objet ouvert et tous les objets dépendants.  
@@ -51,7 +51,7 @@ object.Close
   
  Fermeture un **connexion** lorsqu’il y a ouvert de l’objet **Recordset** objets sur la connexion annule toutes les modifications en attente dans tous les **Recordset** objets. Fermer explicitement un **connexion** objet (appelant le **fermer** méthode) lorsqu’une transaction est en cours génère une erreur. Si un **connexion** objet devient hors de portée lorsqu’une transaction est en cours, ADO restaure automatiquement la transaction.  
   
-## <a name="recordset-record-stream"></a>Recordset, Record, Stream  
+## <a name="recordset-record-stream"></a>Jeu d’enregistrements, l’enregistrement, de flux  
  À l’aide de la **fermer** méthode pour fermer une **Recordset**, **enregistrement**, ou **flux** objet libère les données associées et un accès exclusif vous disposiez aux données via cet objet spécifique. Vous pouvez appeler ultérieurement la [ouvrir](../../../ado/reference/ado-api/open-method-ado-recordset.md) méthode pour rouvrir l’objet avec le même ou modifiée, les attributs.  
   
  Pendant un **Recordset** objet est fermé, l’appel d’une méthode nécessitant un curseur actif génère une erreur.  

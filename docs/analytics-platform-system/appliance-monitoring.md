@@ -1,29 +1,22 @@
 ---
-title: Dispositif de surveillance (système de plateforme Analytique)
-author: barbkess
-ms.author: barbkess
+title: Analyse de l’appliance - système de plateforme Analytique | Documents Microsoft
+description: Ce guide analyse appliance décrit les outils et les tâches de surveillance de l’application de système de plateforme Analytique.
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 253864fb-9178-41d2-a0ae-5dd9fd0a4fda
-caps.latest.revision: 25
-ms.openlocfilehash: f361b56581fd5a8dadb4ff41c387074abc006879
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: f87734a14337e7e35655439ddf70f0a126147eb7
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="appliance-monitoring"></a>Surveillance de l’appliance
-Ce Guide de surveillance de matériel décrit les outils et les tâches de surveillance de l’appliance SQL Server PDW.  
+# <a name="appliance-monitoring-for-analytics-platform-system"></a>Dispositif d’analyse pour le système de plateforme d’Analytique
+Ce guide analyse appliance décrit les outils et les tâches de surveillance de l’application de système de plateforme Analytique.  
   
 ## <a name="Basics"></a>Principes de base et les outils d’analyse  
 Les valeurs et les informations qui peuvent être surveillées sur le dispositif de SQL Server PDW sont étendues. Par exemple, les éléments suivants sont classiques de surveillance des tâches.  
@@ -48,7 +41,7 @@ SQL Server PDW a une Console d’administration. Il s’agit d’un outil web qu
   
 -   [Contrôler le matériel à l’aide de la Console d’administration &#40;Analytique plate-forme système&#41;](monitor-the-appliance-by-using-the-admin-console.md)  
   
-![PDW Admin Console Alerts](./media/appliance-monitoring/SQL_Server_PDW_AdminConsol_Queries.png "SQL_Server_PDW_AdminConsol_Queries")  
+![Alertes de la Console d’administration PDW](./media/appliance-monitoring/SQL_Server_PDW_AdminConsol_Queries.png "SQL_Server_PDW_AdminConsol_Queries")  
   
 Vues système  
 SQL Server PDW inclut des vues système complète qui vous permettent d’obtenir des informations détaillées sur le contrôle d’intégrité de l’équipement, état et les performances. Pour obtenir la liste de vues système pour l’analyse des tâches, consultez :  

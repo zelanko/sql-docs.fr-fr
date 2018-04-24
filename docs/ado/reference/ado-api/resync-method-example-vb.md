@@ -1,32 +1,32 @@
 ---
-title: "Resync, méthode-exemple (VB) | Documents Microsoft"
-ms.prod: sql-non-specified
+title: Resync, méthode-exemple (VB) | Documents Microsoft
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - Resync method [ADO], Visual Basic example
 ms.assetid: ab95315c-fe15-458c-9e0c-937ae5596592
-caps.latest.revision: 
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 86e65db9410f501224f9a745ada5e6128d91c7b4
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 613fec1ac05108dd6fe9716554dff9ae5ea67cbb
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="resync-method-example-vb"></a>Resync, méthode-exemple (VB)
 Cet exemple montre comment utiliser le [Resync](../../../ado/reference/ado-api/resync-method.md) méthode pour actualiser les données dans un jeu d’enregistrements statique.  
@@ -111,5 +111,5 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Recordset Object (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
+ [Objet Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Resync, méthode](../../../ado/reference/ado-api/resync-method.md)

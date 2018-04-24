@@ -1,28 +1,21 @@
 ---
-title: Configurer Windows Server Update Services (WSUS) (système de plateforme Analytique)
-author: barbkess
-ms.author: barbkess
+title: Configurer WSUS - système de plateforme Analytique | Documents Microsoft
+description: Ces instructions vous guident dans les étapes pour configurer WSUS pour système de plateforme Analytique à l’aide de l’Assistant de Configuration de Windows Server Update Services (WSUS).
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: a10b2884-468e-41ef-bd59-8df894381254
-caps.latest.revision: 41
-ms.openlocfilehash: 31427bc55017cf9c069e8cd4a467dfdb9608ca3f
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: dfddc93672dfeb5840afe4cb97e668e3c12132c3
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="configure-windows-server-update-services-wsus"></a>Configurer Windows Server Update Services (WSUS)
+# <a name="configure-windows-server-update-services-wsus-in-analytics-platform-system"></a>Configurer Windows Server Update Services (WSUS) dans le système de plateforme Analytique
 Ces instructions vous guident dans les étapes pour configurer WSUS pour système de plateforme Analytique à l’aide de l’Assistant de Configuration de Windows Server Update Services (WSUS). Vous devez configurer WSUS avant de pouvoir appliquer des mises à jour logicielles à l’appliance. WSUS est déjà installé sur l’ordinateur virtuel VMM de l’application.  
   
 Pour plus d’informations sur la configuration de WSUS, consultez le [Guide d’Installation pas à pas WSUS](http://go.microsoft.com/fwlink/?LinkId=202417) sur le site Web WSUS. Après la configuration de WSUS, consultez [télécharger et appliquer les mises à jour Microsoft &#40;système de plateforme Analytique&#41; ](download-and-apply-microsoft-updates.md) pour lancer une mise à jour.  

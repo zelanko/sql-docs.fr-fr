@@ -28,11 +28,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 73a727c385ce24f9d1490de52e1e563510d3dfa5
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
-ms.translationtype: MT
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: d5033120057e83f6fd155466a35188be04068ef6
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="use-performance-objects"></a>Utiliser des objets de performance
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -48,19 +49,19 @@ Le tableau suivant décrit la dénomination des objets de performance du service
   
 |Type d’instance|Nom de l'objet|  
 |-----------------|---------------|  
-|Par défaut|**SQLAgent : ***objet*:*compteur*|  
+|Valeur par défaut|**SQLAgent : ***objet*:*compteur*|  
 |Nommé|**SQLAgent$**<br /> **&#42;nom_instance&#42; :***objet*:*compteur*|  
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] comprend les objets de performance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent suivants.  
   
-|Nom de l'objet| Description|  
+|Nom de l'objet|Description|  
 |---------------|---------------|  
 |[SQLAgent:Jobs](http://msdn.microsoft.com/en-us/225b5e2d-4a78-4178-b2b6-b419df83c4aa)|Informations de performance relatives aux travaux démarrés, aux taux de réussite et à l'état actuel|  
 |[SQLAgent:JobSteps](http://msdn.microsoft.com/en-us/44f9983c-1753-4fe0-8475-973aa2460b3a)|Informations d'état relatives aux étapes de travail|  
 |[SQLAgent:Alerts](http://msdn.microsoft.com/en-us/e5e37f74-ee88-46d0-ad8f-71fd1b1fa64a)|Informations relatives au nombre d'alertes et de notifications|  
 |[SQLAgent:Statistics](http://msdn.microsoft.com/en-us/ebe92bfa-0721-48aa-9ba6-e7904ad265a1)|Informations générales sur les performances|  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [Surveiller et régler les performances](http://msdn.microsoft.com/en-us/87f23f03-0f19-4b2e-bfae-efa378f7a0d4)  
 [Procédure : démarrer le Moniteur système (Windows)](http://msdn.microsoft.com/en-us/5e51bb79-5737-470b-9c47-fac330c001c5)  
   

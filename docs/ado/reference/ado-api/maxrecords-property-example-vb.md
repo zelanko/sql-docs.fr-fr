@@ -1,32 +1,32 @@
 ---
-title: "Exemple de propriété MaxRecords (VB) | Documents Microsoft"
-ms.prod: sql-non-specified
+title: Exemple de propriété MaxRecords (VB) | Documents Microsoft
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - MaxRecords property [ADO], Visual Basic example
 ms.assetid: 630a3be4-7a87-41cf-997e-8bb50d89db1e
-caps.latest.revision: 
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 89a1d7e9ecc360bb5a92cb4a9584c93cbc2ca8ce
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 3f59c12cae5ff2b8ce4c78602b7f47d13fbde6f5
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="maxrecords-property-example-vb"></a>Exemple de propriété MaxRecords (VB)
 Cet exemple utilise le [MaxRecords](../../../ado/reference/ado-api/maxrecords-property-ado.md) propriété pour ouvrir un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) contenant les 10 titres les plus coûteuses dans le ***titres*** table.  
@@ -95,5 +95,5 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [MaxRecords Property (ADO)](../../../ado/reference/ado-api/maxrecords-property-ado.md)   
+ [MaxRecords, propriété (ADO)](../../../ado/reference/ado-api/maxrecords-property-ado.md)   
  [Recordset, objet (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

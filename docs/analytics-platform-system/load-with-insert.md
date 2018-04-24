@@ -1,27 +1,21 @@
 ---
-title: Charger les données avec INSERT
-author: barbkess
-ms.author: barbkess
+title: Charger les données avec INSERT - Parallel Data Warehouse | Documents Microsoft
+description: Pour charger des données dans un Parallel Data Warehouse (PDW) à l’aide de l’instruction T-SQL INSERT distribuées ou table répliquée.
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.suite: sql
-ms.custom: ''
-ms.technology: mpp-data-warehouse
-description: Vous pouvez utiliser l’instruction INSERT tsql pour charger des données dans un SQL Server Parallel Data Warehouse (PDW) distribuées ou table répliquée.
-ms.date: 10/20/2016
-ms.topic: article
-ms.assetid: 6e951b0e-e95b-4fd1-b5f3-c65607aee0d8
-caps.latest.revision: 21
-ms.openlocfilehash: d11799aabdf3f0695a1a8e33add730886a4bcbbe
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: a505a099e239049aab40c616c9e98e44e328537c
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="load-data-with-insert"></a>Charger les données avec INSERT
+# <a name="load-data-with-insert-into-parallel-data-warehouse"></a>Charger des données avec INSERT dans Parallel Data Warehouse
 
 Vous pouvez utiliser l’instruction INSERT tsql pour charger des données dans un SQL Server Parallel Data Warehouse (PDW) distribuées ou table répliquée. Pour plus d’informations sur l’insertion, consultez [insérer](../t-sql/statements/insert-transact-sql.md). Pour les tables répliquées et toutes les colonnes non-distribution dans une table distribuée, PDW utilise SQL Server pour convertir implicitement les valeurs de données spécifiées dans l’instruction pour le type de données de la colonne de destination. Pour plus d’informations sur les règles de conversion de données SQL Server, consultez [de types de données pour SQL](http://msdn.microsoft.com/library/ms191530&#40;v=sql11&#40;.aspx). Toutefois, pour les colonnes de distribution, PDW prend en charge uniquement un sous-ensemble des conversions implicites qui prend en charge de SQL Server. Par conséquent, lorsque vous utilisez l’instruction INSERT pour charger des données dans une colonne de distribution, la source de données doit être spécifié dans un des formats définis dans les tableaux suivants.  
   
@@ -66,7 +60,7 @@ Le tableau suivant définit les formats acceptés et les règles pour insérer d
   
 |Type de littéral|Format|Règles de conversion|  
 |----------------|----------|--------------------|  
-|Littéral de chaîne dans **temps** format|'hh:mm:ss.nnnnnnn'<br /><br />Exemple : '12:35:29.1234567'|Si la source de données a une précision inférieure ou égale (nombre de chiffres fractionnaires) à la précision de la **temps** type de données, les données sont complétées à droite avec des zéros. Par exemple, une valeur littérale '12:35:29.123' est insérée en tant que '12:35:29.1230000'.<br /><br />Une valeur qui a une précision plus élevée que le type de données cible est rejetée.|  
+|Littéral de chaîne dans **temps** format|'.nnnnnnn'<br /><br />Exemple : '12:35:29.1234567'|Si la source de données a une précision inférieure ou égale (nombre de chiffres fractionnaires) à la précision de la **temps** type de données, les données sont complétées à droite avec des zéros. Par exemple, une valeur littérale '12:35:29.123' est insérée en tant que '12:35:29.1230000'.<br /><br />Une valeur qui a une précision plus élevée que le type de données cible est rejetée.|  
   
 ### <a name="datetimeoffset-data-type"></a>type de données DateTimeOffset  
 Le tableau suivant définit les formats acceptés et les règles pour insérer des valeurs littérales dans une colonne de distribution de type **datetimeoffset** (*n*). Le format par défaut est ' AAAA-MM-JJ.nnnnnnn {+ |-} hh : mm ». Une chaîne vide (") est convertie en la valeur par défaut ' 1900-01-01 12:00:00.0000000 + 00:00 ». Les chaînes qui contiennent uniquement des espaces à droite (' ') génère une erreur. Le nombre de chiffres fractionnaires dépend de la définition de colonne. Par exemple, une colonne définie en tant que **datetimeoffset** (2) aura deux chiffres fractionnaires.  

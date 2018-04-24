@@ -17,11 +17,12 @@ ms.author: barbkess
 manager: craigg
 robots: noindex,nofollow
 ms.workload: On Demand
-ms.openlocfilehash: 8039efbdb9157b45f8fcc67d0b8f72d367d81e52
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+monikerRange: '>= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 9148c4efb219b020f84556afb7f21ba3bb9fca0f
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="wideworldimportersdw-database-catalog"></a>Catalogue de base de données WideWorldImportersDW
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -99,7 +100,7 @@ Les procédures utilisées dans le processus ETL se répartissent dans ces caté
 - Les procédures utilisées par le package ETL pour la migration des données intermédiaires dans les tables d’entrepôt de données - toutes les procédures de migration *.
 - `PopulateDateDimensionForYear` -Prend une année et garantit que toutes les dates de cette année sont renseignées dans la `Dimension.Date` table.
 
-### <a name="sequences-schema"></a>Sequences Schema
+### <a name="sequences-schema"></a>Schéma de séquences
 
 Procédures pour configurer les séquences dans la base de données.
 

@@ -1,28 +1,22 @@
 ---
-title: Sauvegarde et restauration
-author: barbkess
-ms.author: barbkess
+title: Sauvegarde et restauration - Parallel Data Warehouse | Documents Microsoft
+description: Décrit comment les données de sauvegarde et restauration fonctionne pour Parallel Data Warehouse (PDW). Opérations de sauvegarde et de restauration sont utilisées pour la récupération d’urgence. Sauvegarde et restauration peuvent également servir à copier une base de données à partir d’une application sur un autre matériel.
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.suite: sql
-ms.custom: ''
-ms.technology: mpp-data-warehouse
-description: Décrit comment les données de sauvegarde et restauration fonctionne pour SQL Server Parallel Data Warehouse (PDW).
-ms.date: 10/20/2016
-ms.topic: article
-ms.assetid: d4669957-270a-4e50-baf3-14324ca63049
-caps.latest.revision: 50
-ms.openlocfilehash: b4ac7a3a0b9f005ac05646ad03dcf3123036462e
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 118b9ced12e01ac6655d85969bb61717f2b31e0b
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="backup-and-restore"></a>Sauvegarde et restauration
-Décrit comment les données de sauvegarde et restauration fonctionne pour SQL Server Parallel Data Warehouse (PDW). Opérations de sauvegarde et de restauration sont utilisées pour la récupération d’urgence. Sauvegarde et restauration peuvent également servir à copier une base de données à partir d’une application sur un autre matériel.  
+Décrit comment les données de sauvegarde et restauration fonctionne pour Parallel Data Warehouse (PDW). Opérations de sauvegarde et de restauration sont utilisées pour la récupération d’urgence. Sauvegarde et restauration peuvent également servir à copier une base de données à partir d’une application sur un autre matériel.  
     
 ## <a name="BackupRestoreBasics"></a>Principes élémentaires de sauvegarde et restauration  
 Un PDW *sauvegarde de base de données* est une copie d’une base de données d’appliance, stockée dans un format afin qu’il peut être utilisé pour restaurer la base de données d’origine vers un appareil.  

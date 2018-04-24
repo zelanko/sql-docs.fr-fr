@@ -1,29 +1,22 @@
 ---
-title: État d’intégrité analyse Appliance (système de plateforme Analytique)
-author: barbkess
-ms.author: barbkess
+title: Surveiller l’état appliance - système de plateforme Analytique
+description: Comment surveiller l’état d’un appareil de système de plateforme Analytique à l’aide de la Console d’administration, ou en interrogeant directement les vues de gestion dynamique Parallel Data Warehouse.
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 91132e3c-3137-4670-adaa-8a7b234fb8d2
-caps.latest.revision: 12
-ms.openlocfilehash: 346e7f00973a59ce23ebe4fb4e018157c7a03c84
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: d8616d291dcaa8afadc01c9bd237903ca6c13573
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="monitor-appliance-health-state"></a>État de contrôle d’intégrité de l’analyse
-Cette rubrique explique comment surveiller l’état d’un appareil de SQL Server PDW à l’aide de la Console d’administration, ou en interrogeant directement les vues de gestion dynamique SQL Server PDW.  
+Cet article explique comment surveiller l’état d’un appareil de système de plateforme Analytique à l’aide de la Console d’administration, ou en interrogeant directement les vues de gestion dynamique Parallel Data Warehouse. 
   
 ## <a name="to-monitor-the-appliance-state"></a>Pour surveiller l’état de l’équipement  
 Un administrateur système peut utiliser la Console d’administration ou les vues de gestion dynamique (DMV) SQL Server PDW pour récupérer la hiérarchie complète des nœuds, les composants et les logiciels. Le diagramme suivant donne une présentation générale des composants SQL Server PDW surveille.  
@@ -37,7 +30,7 @@ Pour récupérer l’état du composant à l’aide de la Console d’administra
   
 2.  Dans la page État de l’application, cliquez sur un nœud spécifique pour afficher les détails du nœud.  
   
-    ![PDW Admin Console State](./media/monitor-appliance-health-state/SQL_Server_PDW_AdminConsol_State.png "SQL_Server_PDW_AdminConsol_State")  
+    ![État de la Console Administration PDW](./media/monitor-appliance-health-state/SQL_Server_PDW_AdminConsol_State.png "SQL_Server_PDW_AdminConsol_State")  
   
 ### <a name="monitor-component-status-by-using-system-views"></a>État du composant Moniteur à l’aide de vues système  
 Pour récupérer l’état du composant à l’aide de vues système, utilisez [sys.dm_pdw_component_health_status](../relational-databases/system-dynamic-management-views/sys-dm-pdw-component-health-status-transact-sql.md). Par exemple, la requête suivante récupère l’état de tous les composants.  
@@ -75,7 +68,7 @@ ORDER BY
   
 Retourné pour la propriété Status de valeurs possibles sont :  
   
--   Ok  
+-   Bien  
   
 -   Non critique  
   

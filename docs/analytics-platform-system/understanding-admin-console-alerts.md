@@ -1,28 +1,21 @@
 ---
-title: Présentation des alertes de Console d’administration (système de plateforme Analytique)
-author: barbkess
-ms.author: barbkess
+title: Alertes de la Console d’administration - système de plateforme Analytique | Documents Microsoft
+description: Présentation des alertes de Console d’administration dans le système de plateforme Analytique (APS).
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 0c4aa221-55c2-44cf-9eaa-3bf7bd55e51a
-caps.latest.revision: 10
-ms.openlocfilehash: 51e7260a3c1c920d102320bc288167001da43921
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 2d1473e3ac769cd70c6985e15efdb59dfc1039ef
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="understanding-admin-console-alerts"></a>Présentation des alertes de la Console d’administration
+# <a name="understanding-admin-console-alerts-in-analytics-platform-system"></a>Présentation des alertes de Console d’administration de système de plateforme Analytique
 Les alertes s’affichent dans l’appliance **Console d’administration** et dans **System Center Operations Manager** (SCOM). Utilisez cette liste d’alertes pour aider à identifier les alertes qui nécessitent un examen complémentaire.  
   
 Pour plus d’informations sur la connexion à la **Console d’administration** en utilisant Internet Explorer, consultez [contrôler le matériel à l’aide de la Console d’administration &#40;système de plateforme Analytique&#41;](monitor-the-appliance-by-using-the-admin-console.md). Pour plus d’informations sur **SCOM**, consultez [contrôler le matériel à l’aide de System Center Operations Manager &#40;Analytique plate-forme système&#41;](monitor-the-appliance-by-using-system-center-operations-manager.md)  

@@ -1,29 +1,22 @@
 ---
-title: Dispositif d’analyse avec System Center Operations Manager (APS)
-author: barbkess
-ms.author: barbkess
+title: Moniteur avec SCOM - système de plateforme Analytique | Documents Microsoft
+description: System Center Operations Manager (SCOM) permet de surveiller le matériel du système de plateforme Analytique (APS).
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: de6cbf6e-f2e9-4877-94df-9c13b1182d56
-caps.latest.revision: 14
-ms.openlocfilehash: 02bdd22c66729ab471298e211b619e1cb1e4565c
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: c2b26462ab37cf7d63960ff7db6e20c57e8290bb
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="monitor-the-appliance-by-using-system-center-operations-manager"></a>Surveiller l’application à l’aide de System Center Operations Manager
-Cette section décrit comment utiliser System Center Operations Manager pour surveiller SQL Server PDW et HDInsight.  
+# <a name="monitor-with-system-center-operations-manager---analytics-platform-system"></a>Moniteur avec System Center Operations Manager - système de plateforme Analytique
+System Center Operations Manager (SCOM) permet de surveiller le matériel du système de plateforme Analytique (APS).
   
 ## <a name="before-you-begin"></a>Avant de commencer  
   
@@ -33,7 +26,7 @@ Cette section décrit comment utiliser System Center Operations Manager pour sur
   
 2.  SQL Server 2008 R2 Native Client ou SQL Server 2012 Native Client doit être installé.  
   
-3.  Les packs d’administration pour analyser SQL Server PDW et HDInsight doivent être installés, importés et configurés. Utilisez les informations suivantes pour obtenir des instructions pour effectuer ces tâches.  
+3.  Les packs d’administration pour analyser SQL Server PDW et HDInsight doivent être installés, importés et configurés. Utilisez les articles suivants pour obtenir des instructions pour effectuer ces tâches.  
   
     -   [Installer les Packs d’administration SCOM &#40;Analytique plate-forme système&#41;](install-the-scom-management-packs.md)  
   
@@ -53,14 +46,14 @@ Les alertes sont où vous pouvez rechercher des alertes en cours à gérer.
 ![Alerts](./media/monitor-the-appliance-by-using-system-center-operations-manager/SCOM_SCOM.png "SCOM_SCOM")  
   
 ### <a name="appliances"></a>Appliances  
-Appareils sont où vous trouverez les appareils actuellement détectés et analysés SQL Server PDW dans votre environnement. Si une appliance n’affiche pas ici, et vous avez créé la connexion ODBC pour celle-ci, puis il peut être un problème avec votre compte PDWWatcher. Si elles apparaissent comme « Non analysé » peut avoir un problème avec votre compte PDWMonitor. Soyez patient SCOM ne pas apporte des modifications en temps réel, mais vérifie périodiquement pour les nouveaux équipements à surveiller et envoie régulièrement des requêtes pour les appareils pour l’analyse.  
+Appareils sont où vous trouverez les appareils actuellement détectés et analysés SQL Server PDW dans votre environnement. Si une appliance n’affiche pas ici, et vous avez créé la connexion ODBC pour celle-ci, puis il peut être un problème avec votre compte PDWWatcher. Si elles apparaissent comme « Non analysé », peut avoir un problème avec votre compte PDWMonitor. Soyez patient car SCOM ne pas apporte des modifications en temps réel, mais vérifie périodiquement pour les nouveaux équipements à surveiller et envoie périodiquement des requêtes pour les appareils pour l’analyse.  
   
 ![Appliances](./media/monitor-the-appliance-by-using-system-center-operations-manager/SCOM_SCOM2.png "SCOM_SCOM2")  
   
 ### <a name="appliances-diagram"></a>Diagramme des appliances  
 La Page de diagramme des Appliances est où vous pouvez obtenir les examiner l’intégrité de votre application avec une vue d’arborescence :  
   
-![Appliances diagram](./media/monitor-the-appliance-by-using-system-center-operations-manager/SCOM_SCOM3.png "SCOM_SCOM3")  
+![Diagramme des appliances](./media/monitor-the-appliance-by-using-system-center-operations-manager/SCOM_SCOM3.png "SCOM_SCOM3")  
   
 ### <a name="nodes"></a>Nœuds  
 Enfin, l’affichage de nœuds permet de voir l’intégrité de votre application sur chaque nœud :  

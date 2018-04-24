@@ -1,35 +1,28 @@
 ---
-title: Envoyer des commentaires de télémétrie à Microsoft (SQL Server PDW)
-author: barbkess
-ms.author: barbkess
+title: Commentaires de télémétrie - système de plateforme Analytique | Documents Microsoft
+description: Envoyer des commentaires de télémétrie à Microsoft pour système de plateforme d’Analytique.
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 40a994f0-7eff-4db9-9572-401d6e1187a0
-caps.latest.revision: 18
-ms.openlocfilehash: 970533d5c0220ac651074977f7f522a480d5e2a4
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 747274cd03e9cbd5dd2eab4423458700331358dd
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="send-telemetry-feedback-to-microsoft"></a>Envoyer des commentaires de télémétrie à Microsoft
-Système de plateforme Analytique possède une fonctionnalité de télémétrie facultatif qui envoie des données de la Console d’administration à Microsoft. Nous vous encourageons à activer cette option pour nous aider à améliorer le produit.  
+# <a name="send-telemetry-feedback-to-microsoft-for-analytics-platform-system"></a>Envoyer des commentaires de télémétrie à Microsoft pour système de plateforme Analytique
+Système de plateforme Analytique possède une fonctionnalité de télémétrie facultatif qui envoie des données de la Console d’administration à Microsoft. 
   
 > [!NOTE]  
 > Dans cette version, Microsoft ne surveille pas activement les données de télémétrie. Les données collectées sont uniquement à des fins d’analyse.  
   
 ## <a name="privacy"></a>Confidentialité  
-Pour fournir la protection de la confidentialité maximal, les points d’accès est fourni sans activer la télémétrie. Avant d’activer cette fonctionnalité, tout d’abord examiner les [déclaration de confidentialité de Microsoft Analytique plateforme System](http://go.microsoft.com/fwlink/?LinkId=400902). Ensuite, pour participer exécuter le script PowerShell décrit ci-dessous.  
+Pour fournir la protection de la confidentialité maximal, les points d’accès est fourni sans activer la télémétrie. Avant d’activer cette fonctionnalité, tout d’abord examiner les [déclaration de confidentialité de Microsoft Analytique plateforme System](http://go.microsoft.com/fwlink/?LinkId=400902). Pour s’abonner, exécutez le script PowerShell décrit ci-dessous.  
   
 ## <a name="enable"></a>Activez la télémétrie  
 **Transfert de DNS :** envoyer les données de télémétrie à Microsoft requiert le système de plateforme Analytique pour vous connecter à internet via un redirecteur DNS. Pour activer cette fonctionnalité, vous devez activer la redirection DNS sur tous les hôtes et les charges de travail ordinateurs virtuels. Appeler le `Enable-RemoteMonitoring` avec la `SetupDnsForwarder` option Configurer la redirection DNS et activez la télémétrie correctement. Appeler le `Enable-RemoteMonitoring` commande sans le `SetupDnsForwarder` option lors de la redirection DNS est déjà configurée et que vous souhaitez uniquement activer l’analyse de pulsation.  
@@ -116,9 +109,10 @@ Si vous voyez des erreurs ou des informations qui vous conduit à penser que la 
   
 Il n’existe pas de risque à en cours d’exécution le `Disable-RemoteMonitoring` commande plusieurs fois.  
   
-## <a name="see-also"></a>Voir aussi  
-[Contrôler le matériel à l’aide de la Console d’administration &#40;Analytique plate-forme système&#41;](monitor-the-appliance-by-using-the-admin-console.md)  
-[Surveiller l’application à l’aide de vues système &#40;Analytique plate-forme système&#41;](monitor-the-appliance-by-using-system-views.md)  
-[Surveiller l’application à l’aide de System Center Operations Manager &#40;Analytique plate-forme système&#41;](monitor-the-appliance-by-using-system-center-operations-manager.md)  
-[Un redirecteur DNS permet de résoudre les noms DNS de l’Appliance Non &#40;Analytique plate-forme système&#41;](use-a-dns-forwarder-to-resolve-non-appliance-dns-names.md)  
+## <a name="next-steps"></a>Étapes suivantes
+Pour plus d'informations, consultez :
+- [Contrôler le matériel à l’aide de la Console d’administration &#40;Analytique plate-forme système&#41;](monitor-the-appliance-by-using-the-admin-console.md)  
+- [Surveiller l’application à l’aide de vues système &#40;Analytique plate-forme système&#41;](monitor-the-appliance-by-using-system-views.md)  
+- [Surveiller l’application à l’aide de System Center Operations Manager &#40;Analytique plate-forme système&#41;](monitor-the-appliance-by-using-system-center-operations-manager.md)  
+- [Un redirecteur DNS permet de résoudre les noms DNS de l’Appliance Non &#40;Analytique plate-forme système&#41;](use-a-dns-forwarder-to-resolve-non-appliance-dns-names.md)  
   

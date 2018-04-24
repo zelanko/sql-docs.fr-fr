@@ -1,30 +1,30 @@
 ---
 title: Espaces de noms | Documents Microsoft
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - namespaces in ADO
 ms.assetid: efff5569-db52-451d-a039-2e74870534da
-caps.latest.revision: 
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c34bb680f7a066eeb694cf62fba39cabb0d4cbea
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 1838b0ab342a2c9748ef856aea9bbf08e523c64b
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="namespaces"></a>Espaces de noms
 Le format XML de persistance dans ADO utilise les quatre espaces de noms.  
@@ -35,7 +35,7 @@ Le format XML de persistance dans ADO utilise les quatre espaces de noms.
 |Prefix| Description|  
 |------------|-----------------|  
 |s|Fait référence à l’espace de noms « XML-Data » contenant les éléments et les attributs qui définissent le schéma de l’ensemble d’enregistrements en cours.|  
-|dt|Fait référence à la spécification de définitions de type de données.|  
+|type de données|Fait référence à la spécification de définitions de type de données.|  
 |rs|Fait référence à l’espace de noms des éléments qui le contient et les attributs spécifiques aux propriétés du jeu d’enregistrements ADO et les attributs.|  
 |z|Fait référence au schéma de l’ensemble de lignes en cours.|  
   

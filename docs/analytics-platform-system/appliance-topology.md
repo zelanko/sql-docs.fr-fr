@@ -1,28 +1,21 @@
 ---
-title: Topologie d’appliances (système de plateforme Analytique)
-author: barbkess
-ms.author: barbkess
+title: Topologie d’appliances - système de plateforme Analytique | Documents Microsoft
+description: Affiche des informations résumées sur l’ensemble du système plateforme Analytique.
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: cd92c07e-4cee-4657-b23a-ed80bee07089
-caps.latest.revision: 4
-ms.openlocfilehash: c25767a922199b3f3af337d4720dfe611be162eb
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 9691da25c866e51e901aad1960b712b59fbd522b
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="appliance-topology"></a>Topologie d’appliances
+# <a name="appliance-topology---analytics-platform-system"></a>Topologie d’appliances - système de plateforme Analytique
 Affiche des informations résumées sur l’ensemble du système plateforme Analytique.  
   
 Développez les éléments de cette section pour configurer les informations qui s’applique à l’application entière. Sélectionnez les sections parallèles topologie de l’entrepôt de données ou de la topologie de HDInsight pour configurer les informations qui s’applique à uniquement cette région de l’application.  

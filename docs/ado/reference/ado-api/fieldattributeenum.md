@@ -1,33 +1,33 @@
 ---
 title: FieldAttributeEnum | Documents Microsoft
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - FieldAttributeEnum
 helpviewer_keywords:
 - FieldAttributeEnum enumeration [ADO]
 ms.assetid: 6e34d886-005a-40dc-bd5c-6adcbf81e5cd
-caps.latest.revision: 
+caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e2b737b179a47aa28196bf8ff334dfe3256f91ef
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: eeeeea72ae2a0e3fc0ca777b16e70d1120f9d247
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="fieldattributeenum"></a>FieldAttributeEnum
 Spécifie un ou plusieurs attributs d’un [champ](../../../ado/reference/ado-api/field-object.md) objet.  
@@ -49,7 +49,7 @@ Spécifie un ou plusieurs attributs d’un [champ](../../../ado/reference/ado-ap
 |**adFldRowID**|0x100|Indique que le champ contient un identificateur de ligne persistant qui ne peut pas être écrit pour et n’a aucune valeur significative, excepté pour identifier la ligne (par exemple, un numéro d’enregistrement, un identificateur unique, etc.).|  
 |**adFldRowVersion**|0x200|Indique que le champ contienne un cachet de date ou heure permet de suivre les mises à jour.|  
 |**adFldUnknownUpdatable**|0x8|Indique que le fournisseur ne peut pas déterminer si vous pouvez écrire dans le champ.|  
-|**adFldUnspecified**|-1 0xFFFFFFFF|Indique que le fournisseur ne spécifie pas les attributs de champ.|  
+|**adFldUnspecified**|-0xFFFFFFFF 1|Indique que le fournisseur ne spécifie pas les attributs de champ.|  
 |**adFldUpdatable**|0x4|Indique que vous pouvez écrire dans le champ.|  
   
 ## <a name="adowfc-equivalent"></a>ADO/WFC équivalent  

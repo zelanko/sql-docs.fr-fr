@@ -1,28 +1,22 @@
 ---
-title: Obtenir et configurer un serveur de chargement (SQL Server PDW)
-author: barbkess
-ms.author: barbkess
+title: Obtenir et configurer un serveur de chargement - Parallel Data Warehouse | Documents Microsoft
+description: Cet article décrit comment acquérir et configurez un serveur de chargement comme un système de Windows non appliance pour l’envoi des chargements de données à Parallel Data Warehouse (PDW).
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.suite: sql
-ms.custom: ''
-ms.technology: mpp-data-warehouse
-description: Obtenir et configurer un serveur de chargement comme un système de Windows non appliance pour l’envoi des chargements de données pour SQL Server Parallel Data Warehouse.
-ms.date: 10/20/2016
-ms.topic: article
-ms.assetid: a434b174-a818-4f73-b218-264619bab664
-caps.latest.revision: 19
-ms.openlocfilehash: 566153d95f2affa5b8c5857d45f53c6b43a80a39
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: a796616ad76ba62ea4174cf22c1517c489305055
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="acquire-and-configure-a-loading-server"></a>Obtenir et configurer un serveur de chargement
-Cette rubrique décrit comment acquérir et configurez un serveur de chargement comme un système de Windows non appliance pour l’envoi des chargements de données pour SQL Server Parallel Data Warehouse (PDW).  
+# <a name="acquire-and-configure-a-loading-server-for-parallel-data-warehouse"></a>Obtenir et configurer un serveur de chargement pour Parallel Data Warehouse
+Cet article décrit comment acquérir et configurez un serveur de chargement comme un système de Windows non appliance pour l’envoi des chargements de données à Parallel Data Warehouse (PDW).  
   
 ## <a name="Basics"></a>Principes de base  
 Le chargement du serveur :  
