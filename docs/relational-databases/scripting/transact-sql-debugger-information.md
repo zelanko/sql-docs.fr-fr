@@ -1,16 +1,16 @@
 ---
-title: "Informations du débogueur Transact-SQL | Microsoft Docs"
-ms.custom: 
+title: Informations du débogueur Transact-SQL | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-scripting
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Transact-SQL debugger, Locals Window
@@ -20,19 +20,21 @@ helpviewer_keywords:
 - Transact-SQL debugger, QuickWatch
 - Transact-SQL debugger, viewing information
 ms.assetid: b99819cc-f388-41a1-b304-36e78ce24147
-caps.latest.revision: 
+caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4222cf4e92319b12779251750805c9e888776873
-ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 7ff61f3cc84829372e305ffe40aefff870531679
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="transact-sql-debugger---information"></a>Débogueur Transact-SQL - Informations
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Chaque fois que le débogueur suspend l’exécution du code au niveau d’une instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] spécifique, vous pouvez utiliser les différentes fenêtres du débogueur pour afficher l’état d’exécution actuel.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+  Chaque fois que le débogueur suspend l'exécution du code au niveau d'une instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] spécifique, vous pouvez utiliser les différentes fenêtres du débogueur pour afficher l'état d'exécution actuel.  
   
 ## <a name="debugger-windows"></a>Fenêtres du débogueur  
  En mode débogage, le débogueur ouvre deux fenêtres en bas de la fenêtre principale de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] . Le débogueur affiche toutes ses informations dans ces deux fenêtres. Chaque fenêtre du débogueur contient des onglets que vous pouvez sélectionner pour contrôler le jeu d'informations à afficher dans la fenêtre. La fenêtre gauche du débogueur contient les onglets **Variables locales**, **Espion 1**, **Espion 2**, **Espion 3**et **Espion 4** . La fenêtre droite du débogueur contient les onglets **Pile des appels**, **Threads**, **Points d’arrêt**, **Fenêtre de commande**et **Sortie** .  

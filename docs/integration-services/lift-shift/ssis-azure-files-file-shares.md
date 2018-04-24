@@ -1,19 +1,20 @@
 ---
-title: "Stocker et récupérer des fichiers sur des partages de fichiers locaux et dans Azure | Microsoft Docs"
-description: "Cet article explique comment utiliser le système de fichiers et les partages de fichiers, aussi bien localement que dans Azure, avec SSIS"
+title: Stocker et récupérer des fichiers sur des partages de fichiers locaux et dans Azure | Microsoft Docs
+description: Cet article explique comment utiliser le système de fichiers et les partages de fichiers, aussi bien localement que dans Azure, avec SSIS
 ms.date: 11/27/2017
 ms.topic: article
-ms.prod: sql-non-specified
-ms.technology: integration-services
+ms.prod: sql
+ms.technology:
+- integration-services
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5b6034787f2e6ab34e583c06d219d7415c82d055
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: b9fb260101c1f814c85360d3fe5998b6e9234101
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="store-and-retrieve-files-on-file-shares-on-premises-and-in-azure-with-ssis"></a>Stocker et récupérer des fichiers sur des partages de fichiers locaux et dans Azure avec SSIS
 Cet article explique comment mettre à jour vos packages SSIS (SQL Server Integration Services) quand vous effectuez un « lift-and-shift » des packages qui utilisent des systèmes de fichiers locaux dans SSIS au sein d’Azure.

@@ -17,18 +17,21 @@ f1_keywords:
 - sql13.dqs.matchingproject.matching.f1
 - sql13.dqs.matchingproject.export.f1
 ms.assetid: 6aa9d199-83ce-4b5d-8497-71eef9258745
-caps.latest.revision: ''
+caps.latest.revision: 36
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cd76d59bc0c13742633185766f559bd3d189e228
-ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
+ms.openlocfilehash: ae48076185149d0ba1306260459ec7b34dcc8123
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="run-a-matching-project"></a>Exécuter un projet de correspondance
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   Cette rubrique décrit comment réaliser la correspondance de données dans [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Le processus de correspondance identifie les clusters des enregistrements correspondants selon les règles de correspondance de la stratégie de correspondance, indique un enregistrement de chaque cluster en tant que survivant basé sur une règle de survivance, et exporte les résultats. DQS exécute le processus de correspondance, également appelé déduplication, dans un processus assisté par ordinateur, mais vous créez des règles de correspondance de manière interactive et sélectionnez la règle de survivance parmi plusieurs choix, afin de contrôler le processus de correspondance.  
   
  La correspondance est effectuée en trois étapes : un processus de mappage dans lequel vous identifiez la source de données et mappez les domaines à la source de données, un processus de correspondance dans lequel vous exécutez l'analyse de correspondance, et un processus de survivance et d'exportation dans lequel vous indiquez la règle de survivance et exportez les résultats de correspondance. Chacun de ces processus est exécuté sur une page distincte de l'Assistant de l'activité de correspondance, ce qui vous permet de vous déplacer dans les deux sens vers différentes pages, de réexécuter le processus et de fermer un processus de concordance spécifique, puis de retourner à la même étape du processus. DQS vous fournit des statistiques sur les données sources, les règles de correspondance et les résultats de correspondance qui vous permettent de prendre des décisions avisées sur la correspondance et d'affiner le processus de concordance.  

@@ -1,34 +1,35 @@
 ---
-title: "CursorExecute, classe d’événements | Microsoft Docs"
-ms.custom: 
+title: CursorExecute, classe d’événements | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: event-classes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - CursorExecute event class
 ms.assetid: 83399fd8-cc25-4d3c-8985-7a824ef08e08
-caps.latest.revision: 
+caps.latest.revision: 32
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d93f12bc5aa56b08b5cb2c8a5ee7c80f6b352665
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 61efcf8cb65306c3d25b9cceef6215aa4a47a227
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="cursorexecute-event-class"></a>CursorExecute (classe d'événements)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-La classe d’événements **CursorExecute** décrit les événements d’exécution de curseur qui se produisent dans les curseurs de l’interface de programmation d’applications (API). Les événements d’exécution de curseur se produisent lorsque le [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] crée et remplit un curseur à partir du plan d’exécution généré par un événement de préparation de curseur.  
+  La classe d’événements **CursorExecute** décrit les événements d’exécution de curseur qui se produisent dans les curseurs de l’interface de programmation d’applications (API). Les événements d’exécution de curseur se produisent lorsque le [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] crée et remplit un curseur à partir du plan d’exécution généré par un événement de préparation de curseur.  
   
  Incluez la classe d’événements **CursorExecute** dans les traces qui enregistrent les performances des curseurs. Lorsque la classe d’événements **CursorExecute** figure dans une trace, la quantité de charge inhérente dépend de la fréquence d’utilisation des curseurs sur la base de données pendant la trace. Si les curseurs sont fortement utilisés, la trace peut dégrader notablement les performances.  
   

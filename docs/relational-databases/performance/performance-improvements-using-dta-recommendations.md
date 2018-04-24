@@ -1,30 +1,30 @@
 ---
-title: "Optimisation des performances à l’aide des recommandations DTA | Microsoft Docs"
-ms.custom: 
+title: Optimisation des performances à l’aide des recommandations DTA | Microsoft Docs
+ms.custom: ''
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: performance
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Database Engine Tuning Advisor, performance improvements
 ms.assetid: 2e51ea06-81cb-4454-b111-da02808468e6
-caps.latest.revision: 
+caps.latest.revision: 3
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 935483efd524b85c24e11716c5499b25b81ff651
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: fa8fa50021b760cd03a5957c30219522803cd473
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="performance-improvements-using-dta-recommendations"></a>Optimisation des performances à l’aide des recommandations DTA
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,8 +38,8 @@ L’Assistant Paramétrage du moteur de base de données (DTA), à compter de SQ
 Pour démontrer les avantages des recommandations de l’Assistant DTA sur les performances de charge de travail, nous avons expérimenté plusieurs charges de travail client réelles. Pour chaque charge de travail client, nous avons laissé l’Assistant DTA analyser les requêtes individuelles, ainsi que la charge de travail complète des requêtes. Nous considérons trois possibilités :
   
   1. **ColumnStore uniquement** : générer uniquement des index columnstore pour toutes les tables sans utiliser l’Assistant DTA. 
-  2. **DTA (rowstore uniquement)** : exécuter l’Assistant DTA avec l’option permettant de recommander les index rowstore uniquement.
-  3. **DTA (rowstore + columnstore)** : exécuter l’Assistant DTA avec l’option permettant de recommander à la fois les index rowstore et columnstore.  
+  2. **DTA (rowstore uniquement)**  : exécuter l’Assistant DTA avec l’option permettant de recommander les index rowstore uniquement.
+  3. **DTA (rowstore + columnstore)**  : exécuter l’Assistant DTA avec l’option permettant de recommander à la fois les index rowstore et columnstore.  
    
 Dans chaque cas, nous avons ensuite implémenté les index recommandés. Nous signalons le temps processeur (en millisecondes) moyen sur plusieurs exécutions de la requête ou de la charge de travail. La figure ci-dessous indique le temps processeur en millisecondes pour des charges de travail sur deux bases de données client différentes. Notez que l’axe des y (temps processeur) utilise une échelle logarithmique.   
 

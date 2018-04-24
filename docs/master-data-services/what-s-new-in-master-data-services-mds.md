@@ -13,18 +13,21 @@ ms.technology:
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: ad530f60-d480-4457-ba7a-93a10c8a1695
-caps.latest.revision: ''
+caps.latest.revision: 85
 author: leolimsft
 ms.author: lle
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 583d8f49803b7a9d527583644540c7d93e103cf6
-ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
+ms.openlocfilehash: 8f48092fa22f540805feefda03b02389e6544300
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="what39s-new-in-master-data-services-mds"></a>Nouveautés de Master Data Services (MDS)
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
 [!INCLUDE[feedback-stackoverflow-msdn-connect-md](../includes/feedback-stackoverflow-msdn-connect-md.md)]
 
   Cette rubrique résume les changements et les mises à jour de la version [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] de [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]. 
@@ -43,7 +46,7 @@ ms.lasthandoff: 03/05/2018
   
  L’amélioration des performances vous permet de créer des modèles plus volumineux, de charger les données de façon plus efficace et d’obtenir de meilleures performances globales. Cette amélioration des performances concerne aussi le complément pour Microsoft Excel, qui a été amélioré pour réduire le temps de chargement des données et traiter des entités plus volumineuses.  
   
- Pour plus d’informations sur le complément pour Microsoft Excel, consultez[Complément Master Data Services pour Microsoft Excel](../master-data-services/microsoft-excel-add-in/master-data-services-add-in-for-microsoft-excel.md).  
+ Pour plus d’informations sur le complément pour Microsoft Excel, consultez [Master Data Services Add-in for Microsoft Excel](../master-data-services/microsoft-excel-add-in/master-data-services-add-in-for-microsoft-excel.md).  
   
  Les améliorations touchent également les fonctionnalités suivantes.  
   

@@ -2,7 +2,7 @@
 title: ASYMKEYPROPERTY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/24/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.service: ''
 ms.component: t-sql|functions
@@ -25,11 +25,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f4738a706c6f6d717a4346e8dc67169d1f795e74
-ms.sourcegitcommit: 094c46e7fa6de44735ed0040c65a40ec3d951b75
+ms.openlocfilehash: 39a03b6b5f087305db6a5e795a532392bdd668a5
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="asymkeyproperty-transact-sql"></a>ASYMKEYPROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -48,13 +48,13 @@ ASYMKEYPROPERTY (Key_ID , 'algorithm_desc' | 'string_sid' | 'sid')
 *Key_ID*  
 ID d'une clé asymétrique dans la base de données. Si vous connaissez uniquement le nom de la clé, utilisez ASYMKEY_ID pour rechercher son ID. *Key_ID* est de type **int**.
   
-**'**algorithm_desc**'**  
+**'** algorithm_desc **'**  
 Spécifie que la sortie retourne la description de l'algorithme de la clé asymétrique. Uniquement disponible pour les clés asymétriques créées à partir d'un module EKM.
   
-**'**string_sid**'**  
+**'** string_sid **'**  
 Spécifie que la sortie retourne le SID de la clé asymétrique au format **nvarchar()**.
   
-**'**sid**'**  
+**'** sid **'**  
 Spécifie que la sortie retourne le SID de la clé asymétrique au format binaire.
   
 ## <a name="return-types"></a>Types de retour  

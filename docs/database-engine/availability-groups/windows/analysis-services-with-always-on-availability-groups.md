@@ -2,7 +2,7 @@
 title: Analysis Services avec les groupes de disponibilité Always On | Microsoft Docs
 ms.custom: ''
 ms.date: 05/17/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: availability-groups
@@ -13,16 +13,16 @@ ms.technology:
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 14d16bfd-228c-4870-b463-a283facda965
-caps.latest.revision: ''
+caps.latest.revision: 12
 author: MikeRayMSFT
 ms.author: mikeray
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 3f6c3afd409b4c1d7ddf2ad5e099078dfa5238f8
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 4340ed907ffac7f4f0e53540061907a391362ed2
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="analysis-services-with-always-on-availability-groups"></a>Analysis Services avec les groupes de disponibilité Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -160,7 +160,7 @@ ms.lasthandoff: 11/20/2017
   
      Terminez la source de données et fermez l'Assistant Source de données.  
   
-6.  Ajoutez **MultiSubnetFailover=Yes** à la chaîne de connexion pour fournir une détection et une connexion plus rapides au serveur actif. Pour plus d'informations sur cette propriété, consultez [Prise en charge des fonctionnalités de récupération d'urgence, haute disponibilité par SQL Server Native Client](../../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md).  
+6.  Ajoutez **MultiSubnetFailover=Yes** à la chaîne de connexion pour fournir une détection et une connexion plus rapides au serveur actif. Pour plus d'informations sur cette propriété, consultez [SQL Server Native Client Support for High Availability, Disaster Recovery](../../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md).  
   
      Cette propriété n'est pas visible dans la grille des propriétés. Pour ajouter la propriété, cliquez avec le bouton droit sur la source de données et choisissez **Afficher le code**. Ajoutez `MultiSubnetFailover=Yes` à la chaîne de connexion.  
   
@@ -202,7 +202,7 @@ ms.lasthandoff: 11/20/2017
   
 4.  Dans [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)], connectez-vous au réplica secondaire.  
   
-5.  Développez le nœud **Haute disponibilité Always On** et le nœud **Groupes de disponibilité** .  
+5.  Développez le nœud **Haute disponibilité AlwaysOn** et le nœud **Groupes de disponibilité** .  
   
 6.  Cliquez avec le bouton droit sur le groupe de disponibilité à basculer et sélectionnez la commande **Basculement** . Cette commande démarre l'Assistant Basculer le groupe de disponibilité. Utilisez l'Assistant pour choisir le réplica qui sera le nouveau réplica principal.  
   
@@ -228,16 +228,16 @@ ms.lasthandoff: 11/20/2017
 ##  <a name="bkmk_writeback"></a> Écriture différée lors de l’utilisation d’une base de données de disponibilité Always On  
  L'écriture différée est une fonctionnalité Analysis Services qui prend en charge l'analyse Scénario dans Excel. Elle est généralement utilisée pour budgéter et prévoir des tâches dans des applications personnalisées.  
   
- La prise en charge de l'écriture différée nécessite une connexion cliente READWRITE. Dans Excel, si vous tentez d’écrire en différé sur une connexion en lecture seule, l’erreur suivante se produit : « Impossible de récupérer les données de la source de données externe. ». « Impossible de récupérer les données de la source de données externe. »  
+ La prise en charge de l'écriture différée nécessite une connexion cliente READWRITE. Dans Excel, si vous tentez d’écrire en différé sur une connexion en lecture seule, l’erreur suivante se produit : « Impossible de récupérer les données de la source de données externe. ». « Impossible de récupérer les données de la source de données externe. »  
   
  Si vous avez configuré une connexion pour accéder toujours à un réplica secondaire lisible, vous devez maintenant configurer une connexion qui utilise une connexion READWRITE au réplica principal.  
   
  Pour cela, créez une source de données supplémentaire dans un modèle Analysis Services pour prendre en charge la connexion en lecture-écriture. Lors de la création de la source de données supplémentaire, utilisez le nom d’écouteur et la base de données que vous avez spécifiés dans la connexion en lecture seule, mais au lieu de modifier **Intention de l’application**, conservez la valeur par défaut qui prend en charge les connexions READWRITE. Vous pouvez à présent ajouter de nouvelles tables de faits ou de dimension à votre vue de source de données, basées sur la source de données en lecture-écriture, puis activer l'écriture différée sur les nouvelles tables.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Écouteurs de groupe de disponibilité, connectivité client et basculement d’application &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)   
  [Secondaires actifs : réplicas secondaires lisibles &#40;groupes de disponibilité Always On&#41;](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)   
- [Stratégies Always On pour les problèmes opérationnels avec des groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-policies-for-operational-issues-always-on-availability.md)   
+ [Stratégies Always On pour les problèmes opérationnels avec les groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-policies-for-operational-issues-always-on-availability.md)   
  [Créer une source de données &#40;SSAS Multidimensionnel&#41;](../../../analysis-services/multidimensional-models/create-a-data-source-ssas-multidimensional.md)   
  [Activer l’écriture différée de la dimension](../../../analysis-services/multidimensional-models/bi-wizard-enable-dimension-writeback.md)  
   

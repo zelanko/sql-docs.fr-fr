@@ -1,16 +1,16 @@
 ---
-title: "Réduire la charge de paramétrage du serveur de production | Microsoft Docs"
-ms.custom: 
+title: Réduire la charge de paramétrage du serveur de production | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: performance
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - overhead [Database Engine Tuning Advisor]
@@ -21,19 +21,21 @@ helpviewer_keywords:
 - production servers [SQL Server]
 - offload tuning overhead [SQL Server]
 ms.assetid: bb95ecaf-444a-4771-a625-e0a91c8f0709
-caps.latest.revision: 
+caps.latest.revision: 39
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 17d4f6a412677dbdfa580baeec777ed069cdc7d1
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 124c7be2ec961ff536c8b3909579176964c58c6b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="reduce-the-production-server-tuning-load"></a>Réduire la charge de paramétrage du serveur de production
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] L’Assistant Paramétrage du [!INCLUDE[ssDE](../../includes/ssde-md.md)] compte sur l’optimiseur de requête pour analyser une charge de travail et faire des recommandations de paramétrage. Le fait d'effectuer cette analyse sur le serveur de production augmente la charge du serveur et peut dégrader les performances du serveur pendant la session de paramétrage. Vous pouvez réduire l'impact sur la charge du serveur pendant une session de paramétrage en utilisant un serveur de test en plus du serveur de production.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+  [!INCLUDE[ssDE](../../includes/ssde-md.md)] L’Assistant Paramétrage compte sur l’optimiseur de requête pour analyser une charge de travail et faire des recommandations de paramétrage. Le fait d'effectuer cette analyse sur le serveur de production augmente la charge du serveur et peut dégrader les performances du serveur pendant la session de paramétrage. Vous pouvez réduire l'impact sur la charge du serveur pendant une session de paramétrage en utilisant un serveur de test en plus du serveur de production.  
   
 ## <a name="how-database-engine-tuning-advisor-uses-a-test-server"></a>Utilisation d'un serveur de test par l'Assistant Paramétrage du moteur de base de données  
  En règle générale, pour utiliser un serveur de test, vous copiez toutes les données du serveur de production vers le serveur de test, paramétrez le serveur de test et implémentez la recommandation sur le serveur de production. Cette méthode élimine le problème d'impact sur les performances du serveur de production, mais elle ne constitue pas la solution la plus efficace. La copie d'une importante quantité de données du serveur de production vers le serveur de test, par exemple, s'avère longue et consomme un nombre substantiel de ressources. En outre, le matériel du serveur de test est rarement aussi puissant que le matériel déployé pour les serveurs de production. Le processus de paramétrage repose sur l'optimiseur de requêtes. En outre, les recommandations qu'il génère sont partiellement basées sur le matériel sous-jacent. Si les matériels des serveurs de test et de production ne sont pas identiques, la qualité de la recommandation de l’Assistant Paramétrage du [!INCLUDE[ssDE](../../includes/ssde-md.md)] est moindre.  

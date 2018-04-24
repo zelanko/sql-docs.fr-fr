@@ -18,18 +18,21 @@ f1_keywords:
 - sql13.dqs.dqproject.correction.f1
 - sql13.dqs.dqproject.export.f1
 ms.assetid: c96b13ad-02a6-4646-bcc7-b4a8d490f5cc
-caps.latest.revision: ''
+caps.latest.revision: 26
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ed7b80a8efa3f80ba349144afa2b931e4d255ec1
-ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
+ms.openlocfilehash: 419f6ae4c8c7c5e19117aaeb86d730e1c625ee44
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="cleanse-data-using-dqs-internal-knowledge"></a>Nettoyer des données à l'aide de la base de connaissances DQS (interne)
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   Cette rubrique explique comment nettoyer vos données en utilisant un projet de qualité des données dans [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Le nettoyage des données est effectué sur vos données sources à l'aide d'une base de connaissances générée dans DQS sur un ensemble de données de haute qualité. Pour plus d’informations, consultez [Construction d’une base de connaissances](../data-quality-services/building-a-knowledge-base.md).  
   
  Le nettoyage des données s'effectue en quatre étapes : une étape de *mappage* au cours de laquelle vous identifiez la source de données à nettoyer et la mappez aux domaines requis dans une base de connaissances, une étape de *nettoyage assisté par ordinateur* au cours de laquelle DQS applique la base de connaissances aux données à nettoyer et propose/apporte des modifications pour les données sources, une étape de *nettoyage interactif* au cours de laquelle des gestionnaires de données peuvent analyser les modifications de données, et les accepter ou les refuser, et enfin l'étape d' *exportation* qui vous permet d'exporter les données nettoyées. Chacun de ces processus est effectué sur une page distincte de l'Assistant de l'activité de nettoyage, ce qui vous permet de naviguer entre les différentes pages, de réexécuter le processus et de fermer un processus de nettoyage spécifique, puis de retourner à la même étape du processus. DQS vous fournit des statistiques sur les données sources et les résultats du nettoyage, lesquelles vous permettent de prendre des décisions avisées sur le nettoyage des données.  

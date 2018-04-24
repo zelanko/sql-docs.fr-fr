@@ -1,16 +1,16 @@
 ---
 title: STDEVP (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/13/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - STDEVP
@@ -22,16 +22,17 @@ helpviewer_keywords:
 - expressions [SQL Server], statistical standard deviation
 - statistical standard deviation
 ms.assetid: 29f2a906-d084-4464-abc3-4b275ed19442
-caps.latest.revision: 
+caps.latest.revision: 45
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: af2c89686b804e263d0a7e576a3c91e926a65644
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 1e4a234c179fb4530acd3fbef5bf7beecfaa7853
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="stdevp-transact-sql"></a>STDEVP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -67,10 +68,10 @@ STDEVP (expression) OVER ( [ partition_by_clause ] order_by_clause)
  Spécifie que chaque valeur unique est prise en considération.  
   
  *expression*  
- [Expression](../../t-sql/language-elements/expressions-transact-sql.md) numérique. Les fonctions d'agrégation et les sous-requêtes ne sont pas autorisées. *expression* est une expression de la catégorie de type de données numérique exacte ou approximative, à l’exception du type de données **bit**.  
+ [Expression](../../t-sql/language-elements/expressions-transact-sql.md) numérique. Les fonctions d'agrégation et les sous-requêtes ne sont pas autorisées. *expression* est une expression de la catégorie de type de données numérique exacte ou approximative, à l’exception du type de données **bit** .  
   
  OVER **(** [ *partition_by_clause* ] *order_by_clause***)**  
- *partition_by_clause* divise le jeu de résultats généré par la clause FROM en partitions auxquelles la fonction est appliquée. S'il n'est pas spécifié, la fonction gère toutes les lignes du jeu de résultats de la requête en un seul groupe. *order_by_clause* détermine l’ordre logique dans lequel l’opération est effectuée. *order_by_clause* est requis. Pour plus d’informations, consultez [OVER, clause &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md).  
+ *partition_by_clause* divise le jeu de résultats généré par la clause FROM en partitions auxquelles la fonction est appliquée. S'il n'est pas spécifié, la fonction gère toutes les lignes du jeu de résultats de la requête en un seul groupe. *order_by_clause* détermine l’ordre logique dans lequel l’opération est effectuée. *order_by_clause* est requis. Pour plus d’informations, consultez [Clause OVER &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md).  
   
 ## <a name="return-types"></a>Types de retour  
  **float**  
@@ -113,7 +114,7 @@ Distinct_Values   All_Values
 ```  
   
 ### <a name="c-using-stdevp-with-over"></a>C. Utilisation de STDEVP avec OVER  
- L’exemple suivant renvoie l’écart-type (`STDEVP`) des valeurs de quota de ventes pour chaque trimestre de l’année civile. Notez que l'argument `ORDER BY` de la clause `OVER` détermine l'ordre des valeurs `STDEVP` tandis que l'argument `ORDER BY` de l'instruction `SELECT` détermine l'ordre de l'ensemble de résultats.  
+ L’exemple suivant retourne la variance statistique (`STDEVP`) des valeurs de quota de ventes pour chaque trimestre de l’année civile. Notez que l'argument `ORDER BY` de la clause `OVER` détermine l'ordre des valeurs `STDEVP` tandis que l'argument `ORDER BY` de l'instruction `SELECT` détermine l'ordre de l'ensemble de résultats.  
   
 ```  
 -- Uses AdventureWorks  
