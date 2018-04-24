@@ -1,16 +1,16 @@
 ---
-title: "Créer des graphiques, des alertes, des journaux et des rapports | Microsoft Docs"
-ms.custom: 
+title: Créer des graphiques, des alertes, des journaux et des rapports | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: performance-monitor
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - System Monitor [SQL Server], charts and reports
@@ -22,19 +22,20 @@ helpviewer_keywords:
 - System Monitor [SQL Server], logs
 - Windows System Monitor [SQL Server], logs
 ms.assetid: c9162b37-e5dc-43d1-a3aa-1e9ebc69fecc
-caps.latest.revision: 
+caps.latest.revision: 21
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0c84f299a27b69def3acf965f7a3cf6d4ab74017
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: c6e78d36478157f58c0cbaa6c1f832fabcbe9545
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-charts-alerts-logs-and-reports"></a>Créer des graphiques, des alertes, des journaux et des rapports
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Le Moniteur système vous permet de créer des graphiques, des alertes, des journaux et des rapports pour surveiller une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Le Moniteur système vous permet de créer des graphiques, des alertes, des journaux et des rapports pour surveiller une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="charts"></a>Graphiques  
  Les graphiques permettent de surveiller les performances en cours des objets et des compteurs sélectionnés (par exemple l'utilisation de l'UC ou les E/S du disque). Il est possible d'ajouter à un graphique diverses combinaisons d'objets et de compteurs du Moniteur système. Vous pouvez également ajouter des objets et compteurs [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows à un graphique.  

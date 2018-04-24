@@ -1,28 +1,29 @@
 ---
-title: "Prise en charge d’OLTP en mémoire par Transact-SQL | Microsoft Docs"
-ms.custom: 
+title: Prise en charge d’OLTP en mémoire par Transact-SQL | Microsoft Docs
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: in-memory-oltp
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine-imoltp
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: b1cc7c30-1747-4c21-88ac-e95a5e58baac
-caps.latest.revision: 
+caps.latest.revision: 52
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 430666d28e79c9b1fa3c7bd7f322f5db119a606a
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 095e7ee73733b55cfa9c599a1b1dd94b3d0234d9
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="transact-sql-support-for-in-memory-oltp"></a>Prise en charge d'OLTP en mémoire par Transact-SQL
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -33,7 +34,7 @@ ms.lasthandoff: 02/12/2018
   
 -   [ALTER TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/alter-trigger-transact-sql.md)  
   
--   [CRÉER une base de données &#40; SQL Server Transact-SQL &#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md) (ajout de **MEMORY_OPTIMIZED_DATA**)  
+-   [CRÉER une base de données & #40 ; SQL Server Transact-SQL & #41 ;](../../t-sql/statements/create-database-sql-server-transact-sql.md) (ajout de **MEMORY_OPTIMIZED_DATA**)  
   
 -   [CREATE PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/create-procedure-transact-sql.md)  
   

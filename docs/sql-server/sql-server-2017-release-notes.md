@@ -1,29 +1,29 @@
 ---
-title: "Notes de publication de SQL Server 2017 | Microsoft Docs"
-ms.custom: 
+title: Notes de publication de SQL Server 2017 | Microsoft Docs
+ms.custom: ''
 ms.date: 10/30/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-non-specified
-ms.service: 
-ms.component: sql-non-specified
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: server-general
-ms.tgt_pltfrm: 
+ms.technology: supportability
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 13942af8-5a40-4cef-80f5-918386767a47
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 69f0db3da6a75c64aa331a0050be39274e01dad3
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+monikerRange: = sql-server-2017 || = sqlallproducts-allversions
+ms.openlocfilehash: 15e778c6b38f61905a7bf4167cf3ce65d418e942
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="sql-server-2017-release-notes"></a>Notes de publication de SQL Server 2017
-[!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)] Cet article décrit les limitations et les problèmes de SQL Server 2017. Pour des informations connexes, consultez :
+[!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
+Cet article décrit les limitations et les problèmes de SQL Server 2017. Pour des informations connexes, consultez :
 - [Nouveautés de SQL Server 2017](../sql-server/what-s-new-in-sql-server-2017.md)
 - [Notes de publication de SQL Server sur Linux](https://docs.microsoft.com/sql/linux/sql-server-linux-release-notes)
 - [Mises à jour cumulatives de SQL Server 2017](http://aka.ms/sql2017cu) pour plus d’informations sur la dernière version des mises à jour cumulatives
@@ -48,7 +48,7 @@ ms.lasthandoff: 12/05/2017
 
 - **Solutions de contournement :** 
   - Accordez l’autorisation sur les sous-nœuds de l’arborescence au lieu de le faire au niveau racine.
-  - ou
+  - ou Gestionnaire de configuration
   - Exécutez le script décrit dans ce blog de l’équipe MDS : [erreur d’application d’une autorisation au niveau de l’entité](http://sqlblog.com/blogs/mds_team/archive/2017/09/05/sql-server-2016-sp1-cu4-regression-error-while-applying-permission-on-entity-level-quick-workaround.aspx)
 
 ### <a name="analysis-services"></a>Analysis Services

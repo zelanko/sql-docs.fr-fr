@@ -1,34 +1,35 @@
 ---
-title: "Object:Altered, classe d’événements | Microsoft Docs"
-ms.custom: 
+title: Object:Altered, classe d’événements | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: event-classes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Object:Altered event class
 ms.assetid: f94e3b59-ff2f-4d8d-8479-e85ce5b3483e
-caps.latest.revision: 
+caps.latest.revision: 23
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 21eafbc19f9659ca6fc22cf59c242f0b4857b699
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: f3266f3c4134c6428e585da49d3648fe537d50ef
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="objectaltered-event-class"></a>Object:Altered (classe d'événements)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-La classe d'événements Object:Altered indique qu'un objet a été modifié ; par exemple, à l'aide d'une instruction ALTER INDEX, ALTER TABLE, ou d'une instruction ALTER DATABASE. Cette classe d'événements peut être utilisée pour déterminer si des objets sont modifiés ; par exemple, par les applications ODBC, qui créent souvent des procédures stockées temporaires.  
+  La classe d'événements Object:Altered indique qu'un objet a été modifié ; par exemple, à l'aide d'une instruction ALTER INDEX, ALTER TABLE, ou d'une instruction ALTER DATABASE. Cette classe d'événements peut être utilisée pour déterminer si des objets sont modifiés ; par exemple, par les applications ODBC, qui créent souvent des procédures stockées temporaires.  
   
  La classe d'événements Object:Altered se produit toujours sous forme de deux événements. Le premier événement indique la phase Begin. Le second événement indique la phase Rollback ou Commit.  
   

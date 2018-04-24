@@ -1,34 +1,35 @@
 ---
-title: "Data File Auto Grow, classe d’événements | Microsoft Docs"
-ms.custom: 
+title: Data File Auto Grow, classe d’événements | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: event-classes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Data File Auto Grow event class
 ms.assetid: 63701c20-7886-454a-936f-7aea9d042cf7
-caps.latest.revision: 
+caps.latest.revision: 29
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4fbd4c3c6cf403ae8f61c0f9cd77568ed0b8acf1
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 4f05c3f0e068c59ee5033f1b9d07859dc7e283a4
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="data-file-auto-grow-event-class"></a>Data File Auto Grow (classe d'événements)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-La classe d’événements **Data File Auto Grow** indique que le fichier de données a crû automatiquement. Cet événement n'est pas déclenché si le fichier de données a été augmenté de manière explicite par le biais de l'instruction ALTER DATABASE.  
+  La classe d’événements **Data File Auto Grow** indique que le fichier de données a crû automatiquement. Cet événement n'est pas déclenché si le fichier de données a été augmenté de manière explicite par le biais de l'instruction ALTER DATABASE.  
   
  Incluez la classe d’événements **Data File Auto Grow** dans les traces qui surveillent la croissance du fichier de données.  
   

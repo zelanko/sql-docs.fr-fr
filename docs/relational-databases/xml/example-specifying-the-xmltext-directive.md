@@ -1,34 +1,34 @@
 ---
-title: "Exemple : spécification de la directive XMLTEXT | Microsoft Docs"
-ms.custom: 
+title: 'Exemple : spécification de la directive XMLTEXT | Microsoft Docs'
+ms.custom: ''
 ms.date: 04/05/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: xml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-xml
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - XMLTEXT directive
 ms.assetid: e78008ec-51e8-4fd1-b86f-1058a781de17
-caps.latest.revision: 
+caps.latest.revision: 10
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e71a67f991291f1426fbf3a583169b339f69c110
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: fdc8aad3f516e5bbdc9aa455e6ca1017f52f789e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="example-specifying-the-xmltext-directive"></a>Exemple : spécification de la directive XMLTEXT
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-Cet exemple illustre l’adressage des informations contenues dans la colonne de dépassement de capacité à l’aide de la directive **XMLTEXT** dans une instruction `SELECT` utilisant le mode EXPLICIT.  
+  Cet exemple illustre l’adressage des informations contenues dans la colonne de dépassement de capacité à l’aide de la directive **XMLTEXT** dans une instruction `SELECT` utilisant le mode EXPLICIT.  
   
  Soit la table `Person` . Cette table possède une colonne nommée `Overflow` , qui stocke les données non consommées du document XML.  
   

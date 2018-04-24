@@ -2,7 +2,7 @@
 title: OLTP en mémoire (optimisation en mémoire) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/22/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.service: ''
 ms.component: in-memory-oltp
@@ -21,11 +21,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 1cd94040db8eb4f126333863c31c92aa0a2b75f8
-ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 001d2355ee3e95ec481ce14416e3a7da9b74d0a6
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="in-memory-oltp-in-memory-optimization"></a>OLTP en mémoire (optimisation en mémoire)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -52,7 +53,7 @@ Pour une présentation plus détaillée de l’OLTP en mémoire et un examen des
 > [!NOTE]  
 >  **À votre tour d’essayer**  
 >   
->  L’OLTP en mémoire est disponible dans les pools élastiques et les bases de données SQL Azure des niveaux Premium et Critique pour l’entreprise. Pour prendre en main l’OLTP en mémoire et Columnstore dans Azure SQL Database, consultez [Optimiser les performances à l’aide des technologies en mémoire dans SQL Database](https://azure.microsoft.com/documentation/articles/sql-database-in-memory/).  
+>  L’OLTP en mémoire est disponible dans les pools élastiques et les bases de données SQL Azure des niveaux Premium et Critique pour l’entreprise. Pour prendre en main l’OLTP en mémoire et Columnstore dans Azure SQL Database, consultez [Optimize Performance using In-Memory Technologies in SQL Database](https://azure.microsoft.com/documentation/articles/sql-database-in-memory/)(Optimiser les performances à l’aide des technologies en mémoire dans SQL Database).  
   
 
 ## <a name="in-this-section"></a>Contenu de cette section  

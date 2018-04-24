@@ -2,7 +2,7 @@
 title: Utiliser le fournisseur PowerShell pour les événements étendus | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.service: ''
 ms.reviewer: ''
@@ -20,11 +20,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7c51331b402cf848d9b76d5dfc42801c71c3e2a6
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
-ms.translationtype: MT
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: f804f515f31b64923cdc4dd2a70bcc285568414a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="use-the-powershell-provider-for-extended-events"></a>Utiliser le fournisseur PowerShell pour les événements étendus
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -57,7 +58,7 @@ ms.lasthandoff: 04/10/2018
   
 -   La stratégie d'exécution de PowerShell doit autoriser l'exécution du script. Pour définir la stratégie d’exécution, utilisez l’applet de commande **Set-Executionpolicy** . (Pour plus d’informations, tapez **get-help set-executionpolicy -detailed**, puis appuyez sur Entrée).  
   
- Le script suivant crée une nouvelle session nommée « TestSession ».  
+ Le script suivant crée une nouvelle session nommée « TestSession ».  
   
 ```  
 #Script for creating a session.  
@@ -116,7 +117,7 @@ $session.Create()
 ## <a name="security"></a>Sécurité  
  Pour créer, modifier ou supprimer une session Événements étendus, vous devez disposer de l'autorisation ALTER ANY EVENT SESSION.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [SQL Server PowerShell](../../relational-databases/scripting/sql-server-powershell.md)   
  [Utiliser la session system_health](../../relational-databases/extended-events/use-the-system-health-session.md)   
  [Outils associés aux événements étendus](../../relational-databases/extended-events/extended-events-tools.md)  

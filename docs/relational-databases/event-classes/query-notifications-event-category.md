@@ -1,34 +1,35 @@
 ---
-title: "Notifications de requêtes, catégorie d’événement | Microsoft Docs"
-ms.custom: 
+title: Notifications de requêtes, catégorie d’événement | Microsoft Docs
+ms.custom: ''
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: event-classes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - event classes [SQL Server], Query Notifications event category
 ms.assetid: 13c62636-ce8a-410f-9af9-c0a78959fb49
-caps.latest.revision: 
+caps.latest.revision: 12
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c9256c4d3ea467012053a2a6251e465de8a1c3bd
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 5faf3da1c8770ca04ffa7a92a5502f0f76073f45
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="query-notifications-event-category"></a>Catégorie d'événement Notifications de requêtes
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-La catégorie d’événement **Notifications de requêtes** contient des classes d’événements chargées de fournir des informations que les développeurs et les administrateurs peuvent exploiter pour contrôler les notifications de requêtes et résoudre les problèmes qui en découlent.  
+  La catégorie d’événement **Notifications de requêtes** contient des classes d’événements chargées de fournir des informations que les développeurs et les administrateurs peuvent exploiter pour contrôler les notifications de requêtes et résoudre les problèmes qui en découlent.  
   
 ## <a name="in-this-section"></a>Dans cette section  
  [Classe d'événements QN:Dynamics](../../relational-databases/event-classes/qn-dynamics-event-class.md)  

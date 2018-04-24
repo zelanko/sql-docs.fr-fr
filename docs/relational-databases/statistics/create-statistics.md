@@ -2,7 +2,7 @@
 title: Créer des statistiques | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: statistics
@@ -26,11 +26,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9cf772ad4cffd6d992233d4324ce270c884cb06d
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
-ms.translationtype: MT
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 791e92681938ee0b198f3f6524354e7412ae371a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-statistics"></a>Créer des statistiques
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -62,7 +63,7 @@ ms.lasthandoff: 04/10/2018
   
 ###  <a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Autorisations  
+####  <a name="Permissions"></a> Permissions  
  Nécessite que l’utilisateur soit le propriétaire de la table ou de la vue indexée ou qu’il soit membre d’un des rôles suivants : rôle serveur fixe **sysadmin** , rôle de base de données fixe **db_owner** ou rôle de base de données fixe **db_ddladmin** .  
   
 ##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
@@ -100,7 +101,7 @@ ms.lasthandoff: 04/10/2018
      **Identity**  
      Indique une colonne d'identité lorsque l'option est activée.  
   
-     **Allow Nulls**  
+     **Null autorisé**  
      Indique si la colonne accepte les valeurs NULL.  
   
      **Ajouter**  
@@ -124,7 +125,7 @@ ms.lasthandoff: 04/10/2018
      La propriété suivante s’affiche dans la page **Filtre** de la boîte de dialogue **Nouvelles statistiques sur la table***nom_table*.  
   
      **Expression de filtre**  
-     Définit quelles lignes de données inclure dans les statistiques filtrées. Par exemple : `Production.ProductSubcategoryID IN ( 1,2,3 )`  
+     Définit quelles lignes de données inclure dans les statistiques filtrées. Par exemple, `Production.ProductSubcategoryID IN ( 1,2,3 )`  
   
 5.  Dans la boîte de dialogue **Nouvelles statistiques sur la table***nom_table*, dans la page **Général**, cliquez sur **Ajouter**.  
   
@@ -153,7 +154,7 @@ ms.lasthandoff: 04/10/2018
   
 #### <a name="to-create-statistics"></a>Pour créer des statistiques  
   
-1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  Dans la barre d'outils standard, cliquez sur **Nouvelle requête**.  
   

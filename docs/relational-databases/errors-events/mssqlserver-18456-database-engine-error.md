@@ -1,30 +1,30 @@
 ---
 title: MSSQLSERVER_18456 | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 06/09/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: errors-events
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 helpviewer_keywords:
 - 18456 (Database Engine error)
 ms.assetid: c417631d-be1f-42e0-8844-9f92c77e11f7
-caps.latest.revision: 
+caps.latest.revision: 15
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ae32f75a30f38c3f2c86370afbb49bbf6e6031b7
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: da4c628ad102eb7115e0cab2e2ed7a73c7ed9c4f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="mssqlserver18456"></a>MSSQLSERVER_18456
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -68,9 +68,9 @@ Le message suivant peut également être retourné :
 ## <a name="additional-error-information"></a>Informations supplémentaires sur l'erreur  
 Pour des raisons de sécurité, le message d'erreur retourné au client masque délibérément la nature de l'erreur d'authentification. Toutefois, dans le journal des erreurs [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], une erreur correspondante contient un état d'erreur mappé à une condition d'échec d'authentification. Comparez l'état d'erreur à la liste suivante afin de déterminer la raison de l'échec de connexion.  
   
-|État| Description|  
+|État|Description|  
 |---------|---------------|  
-|1|Aucune information sur l'erreur n'est disponible. Cet état signifie généralement que vous n'avez pas l'autorisation de recevoir les informations d'erreur. Contactez votre administrateur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour plus d'informations.|  
+| 1|Aucune information sur l'erreur n'est disponible. Cet état signifie généralement que vous n'avez pas l'autorisation de recevoir les informations d'erreur. Contactez votre administrateur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour plus d'informations.|  
 |2|ID utilisateur non valide.|  
 |5|ID utilisateur non valide.|  
 |6|Tentative d'utilisation d'un nom de connexion Windows avec l'authentification SQL Server.|  

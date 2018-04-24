@@ -1,34 +1,34 @@
 ---
-title: "Prise en charge de FOR XML pour le type de données timestamp | Microsoft Docs"
-ms.custom: 
+title: Prise en charge de FOR XML pour le type de données timestamp | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: xml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-xml
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - timestamp data type
 ms.assetid: 4e1920e1-e7a4-4069-965e-3f6039a6099e
-caps.latest.revision: 
+caps.latest.revision: 19
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4bea123b8b9c8e77b058ee500910928c93a9559e
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 813a9d148d4d31d4fd1fdd6ee811dd4291c4a147
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="for-xml-support-for-the-timestamp-data-type"></a>Prise en charge de FOR XML pour le type de données timestamp
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-En cas de transformation FOR XML, les valeurs de type **timestamp** sont traitées comme des données de type **varbinary(8)** et seront toujours encodées en base 64. Le cas échéant, le schéma XSD ou XDR prend en compte ce type.  
+  En cas de transformation FOR XML, les valeurs de type **timestamp** sont traitées comme des données de type **varbinary(8)** et seront toujours encodées en base 64. Le cas échéant, le schéma XSD ou XDR prend en compte ce type.  
   
 ```  
 drop table t  
