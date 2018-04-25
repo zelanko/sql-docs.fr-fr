@@ -1,8 +1,8 @@
 ---
-title: sqlsrv_server_info | Microsoft Docs
+title: sqlsrv_server_info | Documents Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: php
@@ -19,16 +19,16 @@ helpviewer_keywords:
 - API Reference, sqlsrv_server_info
 - sqlsrv_server_info
 ms.assetid: ef6fe2b7-d267-4379-b948-5626c4684367
-caps.latest.revision: ''
+caps.latest.revision: 21
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b919fd8f5278fc176e4397ffb2b9a646d6d89bcd
-ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
-ms.translationtype: MT
+ms.openlocfilehash: d65fd337b3d3eec851bfa7d3bd43ec108be7286d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: MTE
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlsrvserverinfo"></a>sqlsrv_server_info
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -48,13 +48,13 @@ sqlsrv_server_info( resource $conn)
 ## <a name="return-value"></a>Valeur retournée  
 Tableau associatif avec les clés suivantes :  
   
-|Clé| Description|  
+|Key|Description|  
 |-------|---------------|  
 |CurrentDatabase|Base de données actuellement ciblée.|  
 |SQLServerVersion|Version de SQL Server.|  
 |SQLServerName|Nom du serveur.|  
   
-## <a name="example"></a>Exemple  
+## <a name="example"></a> Exemple  
 L’exemple suivant écrit des informations de serveur dans la console quand l’exemple est exécuté à partir de la ligne de commande.  
   
 ```  
@@ -87,7 +87,7 @@ sqlsrv_close( $conn);
 ?>  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [Informations de référence sur l’API du pilote SQLSRV](../../connect/php/sqlsrv-driver-api-reference.md)  
 
 [À propos des exemples de code dans la documentation](../../connect/php/about-code-examples-in-the-documentation.md)  

@@ -2,7 +2,7 @@
 title: Liste des bogues corrigés | Documents Microsoft
 ms.custom: ''
 ms.date: 04/04/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -20,11 +20,11 @@ author: v-makouz
 ms.author: genemi
 manager: kenvh
 ms.workload: Active
-ms.openlocfilehash: 5187e07d18c6a967ce0a8fadbac370273684c9dc
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
-ms.translationtype: MT
+ms.openlocfilehash: 58da69ed6c4b7b046f8d1bc1ddf4e23b71b99a29
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: MTE
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="list-of-bugs-fixed"></a>Liste des bogues corrigés
 
@@ -36,7 +36,7 @@ Cette page contient une liste des bogues corrigés dans chaque version, en comme
 - Fixe une panne de l’erreur 22003 dans SQLGetData lorsque la taille de la mémoire tampon passée est inférieure, les récupération de données (Windows)
 - Fixe des messages d’erreur ADAL tronquée
 - Correction d’un bogue rare sur Windows 32 bits lors de la conversion flottante point nombre en entier
-- Ne correction d’un problème où serait de l’insertion de double dans un champ décimal avec Always Encrypted sur aucune erreur de troncation de données de retour
+- Correction d’un problème où insertion double dans un champ décimal avec Always Encrypted sur retournerait erreur de troncation de données
 - Résolution d’un avertissement sur MacOS installer
 - Fixe l’envoi d’état incorrect à SQL Server pendant la tentative de récupération de la Session lors de la résilience des connexions et le regroupement de connexions à la fois sont activés, à l’origine de la session de suppression par le serveur
 

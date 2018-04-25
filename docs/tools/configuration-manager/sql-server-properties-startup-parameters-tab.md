@@ -1,26 +1,26 @@
 ---
-title: "Propriétés de SQL Server (onglet Paramètres de démarrage) | Documents Microsoft"
-ms.custom: 
+title: Propriétés de SQL Server (onglet Paramètres de démarrage) | Documents Microsoft
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: configuration-manager
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 16942624-5374-446c-8de4-ee6ed34d6e94
-caps.latest.revision: 
+caps.latest.revision: 10
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: c845f8c174f96ba2e0dd5595d49721ae800777e2
 ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
-ms.translationtype: MT
+ms.translationtype: MTE
 ms.contentlocale: fr-FR
 ms.lasthandoff: 02/03/2018
 ---
@@ -38,7 +38,7 @@ Utilisez cette boîte de dialogue pour ajouter ou supprimer des paramètres de d
  Pour supprimer un paramètre, sélectionnez-le, puis cliquez sur **Supprimer**.  
   
 ## <a name="parameter-format"></a>Format du paramètre  
- N'entrez aucun séparateur entre les paramètres. Le Gestionnaire de configuration [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ajoute automatiquement le séparateur. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Gestionnaire de configuration met en œuvre les spécifications de paramètre suivantes.  
+ N'entrez aucun séparateur entre les paramètres. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ajoute automatiquement le séparateur. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] impose les spécifications de paramètre suivantes.  
   
 -   Les espaces de début et de fin sont supprimés des paramètres de démarrage.  
   
@@ -68,7 +68,7 @@ Utilisez cette boîte de dialogue pour ajouter ou supprimer des paramètres de d
   
 |Paramètre|Description courte|  
 |---------------|-----------------------|  
-|-m|Démarre une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en mode mono-utilisateur.|  
+|-M|Démarre une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en mode mono-utilisateur.|  
 |-T1204|Retourne les ressources et les types de verrous participant à l'interblocage et la commande active affectée.|  
 |-T1224|Désactive l'escalade de verrous en fonction du nombre de verrous.|  
 |-T3608|Empêche [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de démarrer automatiquement et de récupérer des bases de données, sauf la base de données master.|  

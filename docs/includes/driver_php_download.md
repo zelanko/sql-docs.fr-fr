@@ -1,1 +1,1 @@
-![Télécharger](../ssdt/media/download.png)[Télécharger le pilote PHP](https://www.microsoft.com/download/details.aspx?id=55642)
+![Télécharger](../ssdt/media/download.png)[Télécharger le pilote PHP](https://go.microsoft.com/fwlink/?linkid=871846)

@@ -1,26 +1,26 @@
 ---
-title: "Propriétés de l’Agent SQL Server (onglet Ouvrir une session) | Documents Microsoft"
-ms.custom: 
+title: Propriétés de l’Agent SQL Server (onglet Ouvrir une session) | Documents Microsoft
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: configuration-manager
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 01fc6329-5d6b-4186-9565-395f375477bb
-caps.latest.revision: 
+caps.latest.revision: 18
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: f74928db1958fbb8ec607bac83b45612a6129e46
 ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
-ms.translationtype: MT
+ms.translationtype: MTE
 ms.contentlocale: fr-FR
 ms.lasthandoff: 02/03/2018
 ---
@@ -36,7 +36,7 @@ L'onglet **Ouvrir une session** de la boîte de dialogue **Propriétés de l'Age
  Spécifie un compte système local, qui ne requiert pas de mot de passe. Cependant, le compte système local peut limiter l'interaction du service avec les autres serveurs, en fonction des privilèges accordés au compte.  
   
  **Ce compte**  
- Spécifiez un compte d'utilisateur local ou de domaine qui utilise l'authentification Windows. [!INCLUDE[msCoName](../../includes/msconame-md.md)]recommande d’utiliser un compte d’utilisateur de domaine doté d’autorisations minimales pour les services. Pour plus d'informations sur la sélection d'un compte, recherchez « Configuration des comptes de service Windows » dans la documentation en ligne.  
+ Spécifiez un compte d'utilisateur local ou de domaine qui utilise l'authentification Windows. [!INCLUDE[msCoName](../../includes/msconame-md.md)] recommande d'utiliser un compte d'utilisateur de domaine doté d'autorisations minimales pour les services. Pour plus d'informations sur la sélection d'un compte, recherchez « Configuration des comptes de service Windows » dans la documentation en ligne.  
   
  **Nom du compte**  
  Spécifie le nom de compte d'utilisateur local ou de domaine.  

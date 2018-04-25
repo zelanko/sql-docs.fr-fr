@@ -21,10 +21,10 @@ ms.author: Pedro.Lopes
 manager: jhubbard
 ms.workload: Inactive
 ms.openlocfilehash: efbe3ce15444b0c6556cf3cef0267e99bb55657f
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
-ms.translationtype: MT
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.translationtype: MTE
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/11/2018
 ---
 # <a name="filestream-support-ole-db"></a>Prise en charge de FILESTREAM (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -37,7 +37,7 @@ ms.lasthandoff: 04/06/2018
   
  Cette modification affecte toutes les interfaces qui transfèrent des données, principalement IRowset::GetData ICommand::Execute et IRowsetFastLoad::InsertRow.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Programmation OLE DB Driver pour SQL Server](../../oledb/oledb-driver-for-sql-server-programming.md)  
   
   
