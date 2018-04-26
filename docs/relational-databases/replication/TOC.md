@@ -29,8 +29,10 @@
 #### [Topologies pour la synchronisation web](topologies-for-web-synchronization.md)  
 ### [Configurer IIS pour la synchronisation web](configure-iis-for-web-synchronization.md)  
 ### [Configurer IIS 7 pour la synchronisation web](configure-iis-7-for-web-synchronization.md)  
+
 ## [Configurer la distribution](configure-distribution.md)  
 ### [Configurer la publication et la distribution](configure-publishing-and-distribution.md)  
+### [Configurer la distribution dans un groupe de disponibilité](configure-distribution-availability-group.md)
 ### [Afficher et modifier les propriétés d’un serveur de distribution ou d’un serveur de publication](view-and-modify-distributor-and-publisher-properties.md)  
 ### [Désactiver la publication et la distribution](disable-publishing-and-distribution.md)  
 ### [Activer une base de données pour la réplication (SQL Server Management Studio)](enable-a-database-for-replication-sql-server-management-studio.md)  
@@ -38,6 +40,7 @@
 ### [Spécifier l’emplacement par défaut des instantanés (SQL Server Management Studio)](specify-the-default-snapshot-location-sql-server-management-studio.md)  
 ### [Définir la période de rétention de la distribution pour les publications transactionnelles (SQL Server Management Studio)](set-distribution-retention-period-for-transactional-publications.md)  
 ### [Définir la période de rétention de l’historique (SQL Server Management Studio)](set-the-history-retention-period-sql-server-management-studio.md)  
+
 ## [S'abonner à des publications](subscribe-to-publications.md)  
 ### [Créer un abonnement par extraction de données (pull)](create-a-pull-subscription.md)  
 ### [Créer un abonnement par émission (push)](create-a-push-subscription.md)  

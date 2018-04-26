@@ -1,29 +1,22 @@
 ---
-title: Autorisations de PDW (SQL Server PDW)
-author: barbkess
-ms.author: barbkess
+title: Autorisations dans l’entrepôt de données en parallèle | Documents Microsoft
+description: Cet article décrit la configuration requise et les options de gestion des autorisations de base de données pour Parallel Data Warehouse.
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 7e271980-bec8-424b-9f68-cea11b4e64e8
-caps.latest.revision: 23
-ms.openlocfilehash: 95843be163714be27e6eeb7f28825e98a5371e19
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 16ed81d3349cd1e641a66a95d9993e2a86ca4098
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="pdw-permissions"></a>Autorisations de PDW
-Cette rubrique décrit la configuration requise et les options de gestion des autorisations de base de données pour SQL Server PDW.  
+# <a name="managing-permissions-in-parallel-data-warehouse"></a>La gestion des autorisations dans Parallel Data Warehouse
+Cet article décrit la configuration requise et les options de gestion des autorisations de base de données pour SQL Server PDW.  
   
 ## <a name="BackupRestoreBasics"></a>Autorisation notions de base du moteur de base de données  
 Des autorisations du moteur de base de données sur SQL Server PDW sont gérées au niveau du serveur via des connexions et au niveau de la base de données par le biais des utilisateurs de base de données et les rôles de base de données défini par l’utilisateur.  

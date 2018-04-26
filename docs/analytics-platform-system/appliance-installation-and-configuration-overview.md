@@ -1,29 +1,22 @@
 ---
-title: Installation du matériel et présentation de la Configuration (système de plateforme Analytique)
-author: barbkess
-ms.author: barbkess
+title: Équipement installer et configurer - système de plateforme Analytique | Documents Microsoft
+description: Guide des administrateurs de matériel de système de plateforme Analytique (APS) à travers les étapes initiales pour configurer et commencer à utiliser votre nouveau matériel.
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 10934f62-4acf-4ca5-b550-f426ba81fe11
-caps.latest.revision: 23
-ms.openlocfilehash: df27bb16f24e313f7cb1d7c7f5ced912c0a09e1d
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 5b6aa75cdab85fce9ef308d3e853ddb0107c28ee
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="appliance-installation-and-configuration-overview"></a>Installation du matériel et présentation de la Configuration
-Guide à travers les étapes initiales pour configurer et commencer à utiliser votre nouveau matériel SQL Server PDW, les administrateurs de SQL Server PDW matériel.  
+# <a name="appliance-installation-and-configuration-for-analytics-platform-system"></a>Installation du matériel et configuration pour le système de plateforme d’Analytique
+Guide des administrateurs de matériel de système de plateforme Analytique (APS) à travers les étapes initiales pour configurer et commencer à utiliser votre nouveau matériel.  
   
 <!-- MISSING LINKS ## <a name="BeforeYouBegin"></a>Before You Begin  
 Before you begin to install, configure, and use your new appliance, we recommend reviewing information about the appliance components. Review the following to familiarize yourself with the appliance:  

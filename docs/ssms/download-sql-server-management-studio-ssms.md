@@ -1,7 +1,7 @@
 ---
 title: Télécharger SQL Server Management Studio (SSMS) | Microsoft Docs
 ms.custom: ''
-ms.date: 04/06/2018
+ms.date: 04/17/2018
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
 ms.service: ''
@@ -31,11 +31,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 28606246c37a4a081b1dd9766519c837db41f5d9
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.openlocfilehash: 4343fe350d541a04b5aad44df457d09f69af3bcb
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="download-sql-server-management-studio-ssms"></a>Télécharger SQL Server Management Studio (SSMS)
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -50,6 +50,9 @@ SSMS 17.x est la dernière génération de *SQL Server Management Studio* et fo
 **[![télécharger](../ssdt/media/download.png) Télécharger SQL Server Management Studio 17.6](https://go.microsoft.com/fwlink/?linkid=870039)**
 
 **[![télécharger](../ssdt/media/download.png) Télécharger le package de mise à niveau de SQL Server Management Studio 17.6 (mises à niveau 17.x à 17.6)](https://go.microsoft.com/fwlink/?linkid=870041)**
+
+> [!WARNING]
+> Il existe un problème connu où SSMS 17.6 devient instable et plante lors de l’utilisation de [Plans de maintenance](../relational-databases/maintenance-plans/maintenance-plans.md). Si vous utilisez des plans de maintenance, n’installez pas SSMS 17.6. Revenez à SSMS 17.5 si vous avez déjà installé 17.6 et que ce problème vous affecte. 
 
 **Informations sur la version**
 
@@ -161,13 +164,9 @@ Il existe actuellement un problème connu où SSMS 17.6 plante lors de la confi
 
 ## <a name="feedback"></a>Commentaires
 
-![needhelp_person_icon](../ssms/media/needhelp_person_icon.png) [Forum des outils clients SQL](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqltools)  
-
+![needhelp_person_icon](../ssms/media/needhelp_person_icon.png) [Forum des outils clients SQL](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqltools)
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
-
-
-
 
 ## <a name="see-also"></a> Voir aussi
 
@@ -175,3 +174,5 @@ Il existe actuellement un problème connu où SSMS 17.6 plante lors de la confi
 - [Documentation de SQL Server Management Studio](sql-server-management-studio-ssms.md)
 - [Service Packs et mises à jour supplémentaires](https://technet.microsoft.com/sqlserver/ff803383.aspx)
 - [Télécharger SSDT (SQL Server Data Tools)](../ssdt/download-sql-server-data-tools-ssdt.md)
+
+[!INCLUDE[contribute-to-content](../includes/paragraph-content/contribute-to-content.md)]
