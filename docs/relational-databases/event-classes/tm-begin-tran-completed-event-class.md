@@ -1,34 +1,35 @@
 ---
-title: "TM: Begin Tran Completed, classe d’événements | Microsoft Docs"
-ms.custom: 
+title: 'TM: Begin Tran Completed, classe d’événements | Microsoft Docs'
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: event-classes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - 'TM: Begin Tran Completed event class'
 ms.assetid: 95ddd3c6-51ef-4ad1-afd0-3aed82c9f724
-caps.latest.revision: 
+caps.latest.revision: 23
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d68743592891bee8f6a60a095e29f6381fbf4a82
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 5da2772606cbc770561365a3ca050a61c5679b1f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="tm-begin-tran-completed-event-class"></a>TM: Begin Tran Completed, classe d'événements
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-La classe d'événements TM: Begin Tran Completed indique qu'une demande BEGIN TRANSACTION a été effectuée. La demande a été envoyée à partir du client via l'interface de gestion des transactions.  
+  La classe d'événements TM: Begin Tran Completed indique qu'une demande BEGIN TRANSACTION a été effectuée. La demande a été envoyée à partir du client via l'interface de gestion des transactions.  
   
 ## <a name="tm-begin-tran-completed-event-class-data-columns"></a>Colonnes de données de la classe d'événements TM: Begin Tran Completed  
   

@@ -2,7 +2,7 @@
 title: Utiliser le format caractère pour importer ou exporter des données (SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 09/29/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: import-export
@@ -21,11 +21,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: c3eff449d858ce95e1df141363571f73c0c5813d
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
-ms.translationtype: MT
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: f7bf18d9a0cff7b9185b66e3cfecebbcb2d5c443
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="use-character-format-to-import-or-export-data-sql-server"></a>Utiliser le format caractère pour importer ou exporter des données (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -36,7 +37,7 @@ Le format caractère utilise le format de données de caractères pour toutes le
 > [!NOTE]
 >  Lors du transfert en bloc de données entre des instances de [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , si le fichier de données contient des données caractères Unicode mais aucun caractère étendu ni jeu de caractères codés sur deux octets (DBCS), utilisez le format de caractères Unicode. Pour plus d’informations, consultez [Utiliser le format caractère Unicode pour importer ou exporter des données &#40;SQL Server&#41;](../../relational-databases/import-export/use-unicode-character-format-to-import-or-export-data-sql-server.md).
   
-|Dans cette rubrique :|
+|Dans cette rubrique :|
 |---|
 |[Considérations relatives à l'utilisation du format caractère](#considerations)|
 |[Options de commande pour le format caractère](#command_options)|
@@ -69,7 +70,7 @@ Vous pouvez importer des données au format caractère dans une table à l’aid
   
 Le format caractère est pris en charge par les options de commande suivantes :  
   
-|Command|Option| Description|  
+|Command|Option|Description|  
 |-------------|------------|-----------------|  
 |bcp|**-c**|Force l’utilitaire bcp à utiliser les données de type caractère.*|  
 |BULK INSERT|DATAFILETYPE **='char'**|Utilise le format caractère lors de l'importation en bloc des données.|  
@@ -130,7 +131,7 @@ Notepad D:\BCP\myChar.fmt
 Les exemples ci-dessous utilisent la base de données et les fichiers de format créés ci-dessus.
 
 ### **Utilisation de bcp et du format caractère pour exporter des données**<a name="bcp_char_export"></a>
-Commutateur**-c** et commande **OUT** .  Remarque : Le fichier de données créé dans cet exemple est utilisé dans tous les exemples suivants.  À partir d'une invite de commandes, entrez la commande suivante :
+Commutateur **-c** et commande **OUT** .  Remarque : Le fichier de données créé dans cet exemple est utilisé dans tous les exemples suivants.  À partir d'une invite de commandes, entrez la commande suivante :
 
 ```cmd
 bcp TestDatabase.dbo.myChar OUT D:\BCP\myChar.bcp -T -c
@@ -140,7 +141,7 @@ NOTEPAD D:\BCP\myChar.bcp
 ```
 
 ### **Utilisation de bcp et du format caractère pour importer des données sans un fichier de format**<a name="bcp_char_import"></a>
-Commutateur**-c** et commande **IN** .  À partir d'une invite de commandes, entrez la commande suivante :
+Commutateur **-c** et commande **IN** .  À partir d'une invite de commandes, entrez la commande suivante :
 
 ```cmd
 REM Truncate table (for testing)
@@ -154,7 +155,7 @@ SQLCMD -Q "SELECT * FROM TestDatabase.dbo.myChar;"
 ```
 
 ### **Utilisation de bcp et du format caractère pour importer des données avec un fichier de format non XML**<a name="bcp_char_import_fmt"></a>
-Commutateurs**-c** et **-f** switches et **IN** commet.  À partir d'une invite de commandes, entrez la commande suivante :
+Commutateurs **-c** et **-f** switches et **IN** commet.  À partir d'une invite de commandes, entrez la commande suivante :
 
 ```cmd
 REM Truncate table (for testing)
@@ -224,7 +225,7 @@ Pour utiliser des formats de données pour l'importation ou l'exportation en blo
   
 -   [Utiliser le format natif Unicode pour importer ou exporter des données &#40;SQL Server&#41;](../../relational-databases/import-export/use-unicode-native-format-to-import-or-export-data-sql-server.md)  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [bcp Utility](../../tools/bcp-utility.md)   
  [BULK INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md)   
  [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)   

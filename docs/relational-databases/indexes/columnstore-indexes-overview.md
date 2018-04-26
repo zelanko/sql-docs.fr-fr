@@ -2,7 +2,7 @@
 title: Index columnstore - Présentation | Microsoft Docs
 ms.custom: ''
 ms.date: 04/03/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: indexes
@@ -24,11 +24,12 @@ author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: df76c7156e506fa9e01763e8f12ba1873c943f0e
-ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: a892aa9d0af1e56e0b3356d0b4dda29b62be7d73
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="columnstore-indexes---overview"></a>Index columnstore - Présentation
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -138,7 +139,7 @@ Lors d'un chargement en masse important, la plupart des lignes sont directement 
 |[sys.dm_db_column_store_row_group_operational_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-column-store-row-group-operational-stats-transact-sql.md)|[sys.dm_db_index_operational_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-operational-stats-transact-sql.md)|  
 |[sys.dm_db_index_physical_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)||  
   
-## <a name="related-tasks"></a>Tâches associées  
+## <a name="related-tasks"></a>Related Tasks  
  Toutes les tables relationnelles, sauf si vous les spécifiez en tant qu’index cluster columnstore, utilisent rowstore comme format de données sous-jacent. `CREATE TABLE` crée une table rowstore, sauf si vous spécifiez l’option `WITH CLUSTERED COLUMNSTORE INDEX`.  
   
  Quand vous créez une table avec l’instruction `CREATE TABLE`, vous pouvez la créer en tant que table columnstore en spécifiant l’option `WITH CLUSTERED COLUMNSTORE INDEX`. Si vous avez déjà une table rowstore et que vous souhaitez la convertir au format columnstore, utilisez l’instruction `CREATE COLUMNSTORE INDEX`.  

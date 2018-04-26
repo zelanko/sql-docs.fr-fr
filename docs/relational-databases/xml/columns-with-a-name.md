@@ -2,7 +2,7 @@
 title: Colonnes avec nom | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: xml
@@ -20,11 +20,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 8a73ca9c3e77d73ea885ecb70e25fc2018663690
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
-ms.translationtype: MT
+ms.openlocfilehash: b94d0528a7112fe9a1f1278501b6faaf46cfaa1b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="columns-with-a-name"></a>Colonnes avec nom
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ go
   
 ```  
   
- Voici le résultat obtenu :  
+ Voici le résultat obtenu :  
   
 ```  
 <row PmId="7">  
@@ -83,7 +83,7 @@ SELECT 2+2 as result
 for xml PATH  
 ```  
   
- Voici le résultat obtenu :  
+ Voici le résultat obtenu :  
   
 ```  
 <row>  
@@ -106,7 +106,7 @@ FOR XML PATH
 go  
 ```  
   
- Voici le résultat obtenu :  
+ Voici le résultat obtenu :  
   
 ```  
 <row>  
@@ -192,7 +192,7 @@ AND    E.EmployeeID=1
 FOR XML PATH  
 ```  
   
- Voici le résultat obtenu :  
+ Voici le résultat obtenu :  
   
 ```  
 <row EmpID="1">  
@@ -230,7 +230,7 @@ FOR XML PATH
   
  La requête crée donc deux éléments `EmpName`. Le premier élément `EmpName` possède l’élément enfant `FirstName` et le second élément `EmpName` possède les éléments enfants `MiddleName` et `LastName`.  
   
- Voici le résultat obtenu :  
+ Voici le résultat obtenu :  
   
 ```  
 <row EmpID="1">  
@@ -247,7 +247,7 @@ FOR XML PATH
 </row>  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Utiliser le mode PATH avec FOR XML](../../relational-databases/xml/use-path-mode-with-for-xml.md)  
   
   

@@ -1,16 +1,16 @@
 ---
-title: "DENY - Refuser des autorisations sur un schéma (Transact-SQL) | Microsoft Docs"
-ms.custom: 
+title: DENY - Refuser des autorisations sur un schéma (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -20,18 +20,18 @@ helpviewer_keywords:
 - permissions [SQL Server], schemas
 - DENY statement, schemas
 ms.assetid: 300a67c4-d226-4653-9e9f-7ae4d53fcf33
-caps.latest.revision: 
+caps.latest.revision: 28
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f74655c422b1a18068aa77b111f1d441bc517cce
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 4b966b2f6fa61e3a1f5a60ce048fbfbf69bb9fb7
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="deny-schema-permissions-transact-sql"></a>DENY - Refuser des autorisations sur un schéma (Transact-SQL)
+# <a name="deny-schema-permissions-transact-sql"></a>DENY (Autorisations de schéma) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Refuse l'octroi d'autorisations sur un schéma.  
@@ -52,8 +52,8 @@ DENY permission  [ ,...n ] } ON SCHEMA :: schema_name
  *permission*  
  Spécifie une autorisation qui peut être refusée sur un schéma. Pour obtenir la liste de ces autorisations, consultez la section Remarques plus loin dans cette rubrique.  
   
- ON SCHEMA **::** schema*_name*  
- Spécifie le schéma sur lequel l'autorisation est refusée. Le qualificateur d’étendue **::** est obligatoire.  
+ ON SCHEMA **::** schema *_name*  
+ Spécifie le schéma sur lequel l'autorisation est refusée. Le qualificateur d’étendue **::** est obligatoire.  
   
  *database_principal*  
  Spécifie le principal auquel l'autorisation est refusée. *database_principal* peut être l’un des éléments suivants :  
