@@ -1,16 +1,16 @@
 ---
-title: "Protocoles réseau et bibliothèques réseau | Microsoft Docs"
-ms.custom: 
+title: Protocoles réseau et bibliothèques réseau | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: install
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - setup-install
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - protocols [SQL Server]
@@ -24,16 +24,16 @@ helpviewer_keywords:
 - network protocols [SQL Server], about network protocols
 - configuration options [SQL Server], libraries
 ms.assetid: 8cd437f6-9af1-44ce-9cb0-4d10c83da9ce
-caps.latest.revision: 
+caps.latest.revision: 50
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 6a89bec1046eab92432ffa53a8de3618903f7ab6
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 4fcbdda587d73eb7797f3f9f2b8e0b3621cca33c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="network-protocols-and-network-libraries"></a>Protocoles réseau et bibliothèques réseau
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -43,7 +43,7 @@ ms.lasthandoff: 02/09/2018
 ## <a name="default-sql-server-network-configuration"></a>Configuration réseau par défaut de SQL Server  
  Une instance par défaut de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est configurée pour le port TCP/IP 1433 et le canal nommé \\\\.\pipe\sql\query. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sont configurées pour des ports dynamiques TCP, avec un numéro de port attribué par le système d'exploitation.  
   
- Si vous ne pouvez pas utiliser les adresses de port dynamiques (par exemple, lorsque des connexions d' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] doivent traverser un serveur pare-feu configuré pour passer des adresses de port spécifiques), sélectionnez un numéro de port non assigné. Les affectations de numéro de port sont gérées par l’IANA (Internet Assigned Numbers Authority) et sont répertoriées à l’adresse [http://www.iana.org](http://go.microsoft.com/fwlink/?LinkId=48844).  
+ Si vous ne pouvez pas utiliser les adresses de port dynamiques (par exemple, lorsque des connexions d' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] doivent traverser un serveur pare-feu configuré pour passer des adresses de port spécifiques), sélectionnez un numéro de port non assigné. Les affectations de numéro de port sont gérées par l’IANA (Internet Assigned Numbers Authority) et sont listées dans [http://www.iana.org](http://go.microsoft.com/fwlink/?LinkId=48844).  
   
  Pour renforcer la sécurité, la connectivité réseau n'est pas entièrement activée lorsque [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est installé. Pour activer, désactiver et configurer les protocoles réseau une fois l'installation terminée, utilisez la zone Configuration du réseau [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] du Gestionnaire de configuration [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   

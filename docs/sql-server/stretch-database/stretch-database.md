@@ -1,30 +1,30 @@
 ---
 title: Stretch Database| Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 06/27/2016
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: stretch-database
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-stretch
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Stretch Database
 ms.assetid: ce6db775-21a5-40bc-95a1-f560376d4ee2
-caps.latest.revision: 
+caps.latest.revision: 39
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 30361d4466b7495945a7dae857bbcd52fd86103a
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 5356a2578b5c5d25dba440729e4f902ecb886dc6
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="stretch-database"></a>Stretch Database
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
@@ -50,7 +50,7 @@ ms.lasthandoff: 02/09/2018
  Étant donné que vos applications les plus importantes sont étendues en toute sécurité vers le cloud, vous n’avez aucune inquiétude à vous faire. SQL Server Always Encrypted assure le chiffrement de vos données en mouvement. De plus, vous pouvez également utiliser la sécurité au niveau des lignes et d’autres fonctionnalités avancées de sécurité de SQL Server avec Stretch Database pour protéger vos données.  
   
 ## <a name="what-does-stretch-database-do"></a>À quoi sert Stretch Database ?  
- Une fois que vous avez activé la fonctionnalité Stretch Database pour une instance SQL Server, une base de données et au moins une table, Stretch Database commence à migrer vos données à froid vers Azure en mode silencieux.  
+ Une fois que vous avez activé Stretch Database pour une instance SQL Server et une base de données, et sélectionné au moins une table, Stretch Database commence à migrer vos données à froid vers Azure en mode silencieux.  
   
 -   Si vous stockez des données à froid dans une table distincte, vous pouvez migrer la table entière.  
   

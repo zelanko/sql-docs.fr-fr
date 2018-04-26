@@ -1,34 +1,36 @@
 ---
-title: "Limites de capacité de calcul des éditions SQL Server | Microsoft Docs"
-ms.custom: 
+title: Limites de capacité de calcul des éditions SQL Server | Microsoft Docs
+ms.custom: ''
 ms.date: 11/06/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-non-specified
-ms.service: 
+ms.service: ''
 ms.component: sql-non-specified
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - processors [SQL Server], supported
 - number of processors supported
 - maximum number of processors supported
 ms.assetid: cd308bc9-9468-40cc-ad6e-1a8a69aca6c8
-caps.latest.revision: "60"
+caps.latest.revision: 60
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 56a8763efc38fbcb9fcd0597e09e5992f9efc793
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 50adedb266ef265f7e829826bb4acc54cd60dfbb
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="compute-capacity-limits-by-edition-of-sql-server"></a>Limites de capacité de calcul des éditions SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Cet article traite des limites de capacité de calcul des éditions de [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] et de la façon dont elles diffèrent dans les environnements physiques et virtualisés avec les processeurs hyperthreaded.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Cet article traite des limites de capacité de calcul des éditions de [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] et de leurs différences dans les environnements physiques et virtualisés avec des processeurs hyperthreaded.  
   
  ![Mappages aux limites de capacité de calcul](../sql-server/media/compute-capacity-limits.gif "Mappages aux limites de capacité de calcul")  
   
@@ -37,7 +39,7 @@ ms.lasthandoff: 12/05/2017
 |Valeur|Description|  
 |-----------|-----------------|  
 |0..1|Zéro ou un|  
-|1|Un seul|  
+| 1|Un seul|  
 |1..\*|Un ou plus|  
 |0..\*|Zéro ou plus|  
 |1..2|Un ou deux|  
@@ -103,6 +105,7 @@ Vous pouvez désactiver l’hyperthreading quand les performances de chaque proc
  [Fonctionnalités prises en charge par les éditions de SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)   
  [Spécifications de capacité maximale pour SQL Server](../sql-server/maximum-capacity-specifications-for-sql-server.md)   
  [Démarrer rapidement l’installation de SQL Server 2016](http://msdn.microsoft.com/library/672afac9-364d-4946-ad5d-8a2d89cf8d81)  
-  
-  
 
+[!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
+
+[!INCLUDE[contribute-to-content](../includes/paragraph-content/contribute-to-content.md)]

@@ -1,27 +1,29 @@
 ---
 title: Data-Tier Application Framework - Termes du contrat de licence | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssdt
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssdt
-ms.tgt_pltfrm: 
+ms.technology:
+- tools-ssdt
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 68b76541-ab99-436a-982b-f18c46bc6fe3
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1f149d3f9f87cc9306cf7e0ee316a326c0fd7956
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: e1984a2e71de0a605346d23b0b99ac8a7aed0afb
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="data-tier-application-framework---license-terms"></a>Data-Tier Application Framework - Termes du contrat de licence
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -83,7 +85,7 @@ de ce logiciel à moins que d’autres termes n’accompagnent ces produits, auq
     -   transférer le logiciel ou ce contrat à un tiers ; ou  
     -   utiliser le logiciel en association avec des services d’hébergement commercial.  
       
-4.  **MENTIONS DE TIERS.** Le logiciel peut inclure du code de tiers que Microsoft, et non le tiers, vous concède sous licence aux termes stipulés dans le présent contrat. Les mentions éventuelles relatives à du code de tiers sont incluses pour votre information uniquement. En outre, tout script tiers lié à, appelé ou référencé par ce logiciel, vous est concédé sous licence par le tiers propriétaire de ce code, et non pas par Microsoft. Consultez les conditions d’utilisation du CDN Ajax ASP.NET : http://www.asp.net/ajaxlibrary/CDN.ashx.  
+4.  **MENTIONS DE TIERS.** Le logiciel peut inclure du code de tiers que Microsoft, et non le tiers, vous concède sous licence aux termes stipulés dans le présent contrat. Les mentions éventuelles relatives à du code de tiers sont incluses pour votre information uniquement. De plus, tout script tiers lié à, appelé ou référencé par ce logiciel, vous est concédé sous licence par le tiers propriétaire de ce code, et non par Microsoft. Consultez les conditions d’utilisation du CDN Ajax ASP.NET : http://www.asp.net/ajaxlibrary/CDN.ashx.  
   
 5.  **COPIE DE SAUVEGARDE.** Vous êtes autorisé à effectuer une copie de sauvegarde du logiciel. Vous ne pouvez l’utiliser que dans le but de réinstaller le logiciel.  
   
