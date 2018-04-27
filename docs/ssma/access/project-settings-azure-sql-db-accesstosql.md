@@ -1,6 +1,6 @@
 ---
 title: Paramètres (base de données SQL Azure) du projet (AccessToSQL) | Documents Microsoft
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-access
@@ -24,11 +24,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ca33c5cfd48b8ebc9c9b98bd6a0b606fec61ef96
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: b9034a699a604bfe70ea7c2fb52c7a8b6ee58cc4
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="project-settings-azure-sql-db-accesstosql"></a>Paramètres (base de données SQL Azure) du projet (AccessToSQL)
 Les paramètres du projet SQL Azure vous permettent de configurer le suffixe de la base de données SQL Azure à ajouter dans la boîte de dialogue de connexion et permettent également à implémenter le mécanisme de pulsation dans la connexion à SQL Azure.  
@@ -50,7 +50,7 @@ Spécifie un intervalle de temps à utiliser pour le mécanisme de pulsation afi
   
 La valeur doit être spécifiée dans suis : format des ss (par exemple, ' 4:45 ' ou ' 0:50 ').  
   
-**SQL Azure Server Suffix**  
+**Suffixe du serveur Azure SQL**  
   
 Spécifie le suffixe du serveur SQL Azure  
   

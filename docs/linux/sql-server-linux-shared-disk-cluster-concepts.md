@@ -1,25 +1,25 @@
 ---
 title: Instances de Cluster de basculement, SQL Server sur Linux | Documents Microsoft
-description: 
+description: ''
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.date: 08/28/2017
 ms.topic: article
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
-ms.assetid: 
+ms.assetid: ''
 ms.workload: Inactive
-ms.openlocfilehash: a9e8964b16eff5da35ef3abac6f493afc7615903
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.openlocfilehash: f47d5695d2c67a0a5d20df9288854d72ad98be97
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="failover-cluster-instances---sql-server-on-linux"></a>Instances de Cluster de basculement, SQL Server sur Linux
 
@@ -68,7 +68,7 @@ Le nom et l’adresse IP doivent être inscrit dans DNS.
 Toutes les instances de fci, qu’ils soient sur Linux ou Windows Server, nécessitent une certaine forme de stockage partagé. Ce stockage est présenté à tous les serveurs qui peuvent héberger éventuellement l’instance FCI, mais un seul serveur peut utiliser le stockage de l’instance FCI à tout moment donné. Les options disponibles pour le stockage partagé sous Linux sont :
 
 - iSCSI
-- Système de fichiers réseau (NFS)
+- Network File System (NFS)
 - Server Message Block (SMB) sous Windows Server, il existe des options légèrement différentes. Une des options non prises en charge pour les instances de fci basés sur Linux sont la possibilité d’utiliser un disque local sur le nœud pour TempDB, qui est l’espace de travail temporaire de SQL Server.
 
 Dans une configuration qui s’étend sur plusieurs emplacements, ce qui est stocké à un centre de données doit être synchronisé avec les autres. En cas de basculement, l’instance FCI sera mise en ligne et le stockage est visible pour être identiques. Pour cela nécessitera une méthode externe pour la réplication de stockage, si elle est effectuée via le matériel de stockage sous-jacent ou un utilitaire basé sur le logiciel. 

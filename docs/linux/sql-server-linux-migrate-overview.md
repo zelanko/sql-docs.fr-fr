@@ -1,25 +1,25 @@
 ---
-title: "Migrer des bases de données vers SQL Server sur Linux | Documents Microsoft"
-description: "Cet article décrit les différentes options de migration de bases de données et données vers SQL Server sur Linux."
+title: Migrer des bases de données vers SQL Server sur Linux | Documents Microsoft
+description: Cet article décrit les différentes options de migration de bases de données et données vers SQL Server sur Linux.
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.date: 03/17/2017
 ms.topic: article
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
 ms.technology: database-engine
 ms.assetid: 1619489d-377a-4f32-8930-d4f536539689
 ms.custom: sql-linux
 ms.workload: Inactive
-ms.openlocfilehash: 18970e7a18f635dbceac9fbbaa8b2d26aef7df94
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.openlocfilehash: aaca1c80780895369a3d2fafa3531a3b33223c6b
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="migrate-databases-and-structured-data-to-sql-server-on-linux"></a>Migrer des bases de données et les données structurées vers SQL Server sur Linux 
 

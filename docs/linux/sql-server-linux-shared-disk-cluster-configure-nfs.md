@@ -6,7 +6,7 @@ ms.author: mikeray
 manager: craigg
 ms.date: 08/28/2017
 ms.topic: article
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: ''
@@ -14,11 +14,11 @@ ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: Inactive
-ms.openlocfilehash: 368fce4b3c9595f89ea14ca310049a52cf180a28
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.openlocfilehash: 3c17fc54cf181bbac1fee61ddc52cef034c91f02
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="configure-failover-cluster-instance---nfs---sql-server-on-linux"></a>Configuration d’instance de cluster de basculement - NFS - SQL Server sur Linux
 
@@ -167,7 +167,7 @@ Vérifiez que vos normes de sécurité sont appliquées pour l'accès. Quand vou
     sudo systemctl status mssql-server
     ```
     
-   * Créez une base de données pour vérifier que la sécurité est correctement configurée. L’exemple suivant montre qu’effectué via Transact-SQL ; Il est possible via SSMS.
+   * Créez une base de données pour vérifier que la sécurité est correctement configurée. L’exemple ci-dessous utilise Transact-SQL, vous pouvez aussi utiliser SSMS.
  
     ![CreateTestdatabase][3]
 
@@ -226,7 +226,7 @@ Vérifiez que vos normes de sécurité sont appliquées pour l'accès. Quand vou
     mount -t nfs4 200.201.202.63:/var/nfs/fci2 /var/opt/mssql/userdata -o nfsvers=4.2,timeo=14,intr
     ```
 
-   * Vérifiez que le montage a réussi en émettant la commande mount sans commutateurs.
+   * Vérifiez que le montage a réussi en émettant une commande mount sans commutateurs.
   
    * Tapez exit pour ne plus plus être super utilisateur.
 

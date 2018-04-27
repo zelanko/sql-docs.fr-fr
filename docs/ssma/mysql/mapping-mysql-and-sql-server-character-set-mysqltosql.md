@@ -1,6 +1,6 @@
 ---
 title: Mappage des caractères SQL Server et MySQL définie (MySQLToSQL) | Documents Microsoft
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-mysql
@@ -21,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 793c7362024e402e52523da8c0f007f525fe2650
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: affbdb7f6e6015f440bda1b6e7aa10e22d321048
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="mapping-mysql-and-sql-server-character-set-mysqltosql"></a>Mappage des caractères SQL Server et MySQL définie (MySQLToSQL)
 Jeu de caractères (jeu de caractères) peut être spécifié pour les types de données caractères, les expressions et les littéraux de MySQL.  
@@ -90,29 +90,29 @@ Mappage de jeu de caractères varie à différents niveaux de nœud, à savoir 
     ||||  
     |-|-|-|  
     |**Nom du jeu de caractères**|**Description du jeu de caractères**|**Type de jeu de caractères cible (par défaut)**|  
-    |big5|Chinois traditionnel Big5|NCHAR/NVARCHAR (par défaut)|  
+    |Big5|Chinois traditionnel Big5|NCHAR/NVARCHAR (par défaut)|  
     |dec8|DEC ouest européenne|CHAR/VARCHAR (par défaut)|  
-    |cp850|Europe de l’ouest de déni de service|CHAR/VARCHAR (par défaut)|  
+    |CP850|Europe de l’ouest de déni de service|CHAR/VARCHAR (par défaut)|  
     |hp8|HP ouest européenne|CHAR/VARCHAR (par défaut)|  
     |koi8r|KOI8-R Relcom russe|CHAR/VARCHAR (par défaut)|  
     |Latin 1|cp1252 ouest européenne|CHAR/VARCHAR (par défaut)|  
-    |latin2|ISO 8859-2 Europe de l'|CHAR/VARCHAR (par défaut)|  
+    |Latin2|ISO 8859-2 Europe de l'|CHAR/VARCHAR (par défaut)|  
     |swe7|7 bits suédois|CHAR/VARCHAR (par défaut)|  
-    |ascii|US ASCII|CHAR/VARCHAR (par défaut)|  
+    |ASCII|US ASCII|CHAR/VARCHAR (par défaut)|  
     |ujis|EUC-JP japonais|NCHAR/NVARCHAR (par défaut)|  
     |SJIS|Shift-JIS japonais|NCHAR/NVARCHAR (par défaut)|  
     |Hébreu|ISO 8859-8 hébreu|CHAR/VARCHAR (par défaut)|  
-    |tis620|TIS620 thaï|CHAR/VARCHAR (par défaut)|  
+    |TIS620|TIS620 thaï|CHAR/VARCHAR (par défaut)|  
     |eucKR|EUC-KR coréen|NCHAR/NVARCHAR (par défaut)|  
     |koi8u|KOI8-U ukrainien|CHAR/VARCHAR (par défaut)|  
     |gb2312|GB2312 En chinois simplifié|NCHAR/NVARCHAR (par défaut)|  
     |Grec|ISO 8859-7 grec|CHAR/VARCHAR (par défaut)|  
     |CP 1250|Europe centrale de Windows|CHAR/VARCHAR (par défaut)|  
-    |gbk|Chinois simplifié de GBK|NCHAR/NVARCHAR (par défaut)|  
+    |GBK|Chinois simplifié de GBK|NCHAR/NVARCHAR (par défaut)|  
     |Latin5|ISO 8859-9 turc|CHAR/VARCHAR (par défaut)|  
     |armscii8|ARMSCII-8 arménien|CHAR/VARCHAR (par défaut)|  
-    |utf8|UTF-8 Unicode|NCHAR/NVARCHAR (par défaut)|  
-    |ucs2|UCS-2 Unicode|NCHAR/NVARCHAR (par défaut)|  
+    |UTF-8|UTF-8 Unicode|NCHAR/NVARCHAR (par défaut)|  
+    |UCS2|UCS-2 Unicode|NCHAR/NVARCHAR (par défaut)|  
     |cp866|Russe de déni de service|CHAR/VARCHAR (par défaut)|  
     |keybcs2|DOS Kamenicky tchèque-slovaque|CHAR/VARCHAR (par défaut)|  
     |macce|Europe centrale du Mac|CHAR/VARCHAR (par défaut)|  

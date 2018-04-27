@@ -1,25 +1,25 @@
 ---
-title: "Configurer le Cluster RHEL pour le groupe de disponibilité de SQL Server | Documents Microsoft"
-description: 
+title: Configurer le Cluster RHEL pour le groupe de disponibilité de SQL Server | Documents Microsoft
+description: ''
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.date: 06/14/2017
 ms.topic: article
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: b7102919-878b-4c08-a8c3-8500b7b42397
 ms.workload: Inactive
-ms.openlocfilehash: c90eb7d5f11456a13dfa3d4354070bc506d030e5
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.openlocfilehash: e073b59b4fd29db9abf8ad602298c0f10301f178
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="configure-rhel-cluster-for-sql-server-availability-group"></a>Configurer le Cluster RHEL pour le groupe de disponibilité de SQL Server
 
@@ -37,7 +37,7 @@ Pour plus d’informations sur la configuration du cluster, options d’agents d
 
 Les sections suivantes les différentes étapes pour configurer un cluster STIMULATEUR et ajouter un groupe de disponibilité en tant que ressource dans le cluster pour la haute disponibilité.
 
-## <a name="roadmap"></a>Roadmap
+## <a name="roadmap"></a>Feuille de route
 
 Les étapes pour créer un groupe de disponibilité sur des serveurs Linux pour une haute disponibilité sont différentes des étapes sur un cluster de basculement Windows Server. La liste suivante décrit les étapes principales : 
 

@@ -2,7 +2,7 @@
 title: Consolider les rapports d’évaluation (données Assistant Migration SQL Server) | Documents Microsoft
 ms.custom: ''
 ms.date: 04/16/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: dma
 ms.service: ''
 ms.component: ''
@@ -21,11 +21,11 @@ author: HJToland3
 ms.author: jtoland
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f13ca7479abf67c63bdb2d1de53523737d975180
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 30399ddacff6c84ea1f5d914f87b11dac02167b4
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="consolidate-assessment-reports-data-migration-assistant"></a>Consolider les rapports d’évaluation (Assistant Migration de données)
 

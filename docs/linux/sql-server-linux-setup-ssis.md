@@ -1,25 +1,25 @@
 ---
 title: Installer SQL Server Integration Services sur Linux | Documents Microsoft
-description: "Cet article décrit la procédure d’installation de SQL Server Integration Services (SSIS) sur Linux."
+description: Cet article décrit la procédure d’installation de SQL Server Integration Services (SSIS) sur Linux.
 author: leolimsft
 ms.author: lle
 ms.reviewer: douglasl
 manager: craigg
 ms.date: 01/09/2018
 ms.topic: article
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: On Demand
-ms.openlocfilehash: 70e5bddb584135585042d9521ab580777e0e8b5a
-ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
+ms.openlocfilehash: 79ea78bc8697c477968f2a1b7dba6e90e689b54d
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/02/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="install-sql-server-integration-services-ssis-on-linux"></a>Installer SQL Server Integration Services (SSIS) sur Linux
 
@@ -35,7 +35,7 @@ Installer SQL Server Integration Services pour votre plateforme :
 ## <a name="ubuntu"></a> Installer SSIS sur Ubuntu
 Pour installer le package `mssql-server-is` sur Ubuntu, procédez comme suit :
 
-1. Importer les clés GPG référentiel public.
+1. Importez les clés publiques GPG de référentiel.
 
    ```bash
    curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -

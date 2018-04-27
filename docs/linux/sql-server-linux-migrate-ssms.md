@@ -1,25 +1,25 @@
 ---
-title: "Exporter et importer une base de données sur Linux | Documents Microsoft"
-description: 
+title: Exporter et importer une base de données sur Linux | Documents Microsoft
+description: ''
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.date: 10/02/2017
 ms.topic: article
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
 ms.technology: database-engine
 ms.assetid: 2210cfc3-c23a-4025-a551-625890d6845f
 ms.custom: sql-linux
 ms.workload: On Demand
-ms.openlocfilehash: 817fc0ae018ebb7999ad572c0f18ede943ff7090
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.openlocfilehash: 8e3ac15e2cf774577bbd4567509ca630ef91c15b
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="export-and-import-a-database-on-linux-with-ssms-or-sqlpackageexe-on-windows"></a>Exporter et importer une base de données sur Linux avec SSMS ou SqlPackage.exe sur Windows
 
@@ -34,7 +34,7 @@ Vous devez toujours installer et utiliser la dernière version de SQL Server Man
 
 ## <a name="export-a-database-with-ssms"></a>Exporter une base de données avec SSMS
 
-1. Lancez SSMS en tapant **Microsoft SQL Server Management Studio** dans les fenêtres de zone de recherche, puis cliquez sur l’application de bureau.
+1. Démarrez SSMS en tapant **Microsoft SQL Server Management Studio** dans la zone de recherche Windows, puis cliquez sur l'application de bureau.
 
     ![SQL Server Management Studio](./media/sql-server-linux-develop-use-ssms/ssms.png) 
 
@@ -52,7 +52,7 @@ Le *. Fichier BACPAC est créé à l’emplacement que vous avez choisi et vous 
 
 ## <a name="import-a-database-with-ssms"></a>Importer une base de données avec SSMS
 
-1. Lancez SSMS en tapant **Microsoft SQL Server Management Studio** dans les fenêtres de zone de recherche, puis cliquez sur l’application de bureau.
+1. Démarrez SSMS en tapant **Microsoft SQL Server Management Studio** dans la zone de recherche Windows, puis cliquez sur l'application de bureau.
 
     ![SQL Server Management Studio](./media/sql-server-linux-develop-use-ssms/ssms.png) 
 

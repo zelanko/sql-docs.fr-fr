@@ -1,7 +1,7 @@
 ---
 title: Sys.dm_os_wait_stats (Transact-SQL) | Documents Microsoft
 ms.custom: ''
-ms.date: 01/04/2018
+ms.date: 04/23/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
@@ -28,11 +28,11 @@ ms.author: mathoma
 manager: craigg
 ms.workload: Active
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 55eaa65cc99bdc2e25e860be65570be6c8e32bdd
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: bea0f427b3a88179f41a928830787b043c245934
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="sysdmoswaitstats-transact-sql"></a>sys.dm_os_wait_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -174,8 +174,8 @@ Cette commande remet tous les compteurs à 0.
 |CONNECTION_ENDPOINT_LOCK |TBD <br /> **S'applique à**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |COUNTRECOVERYMGR |TBD <br /> **S'applique à**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |CREATE_DATINISERVICE |TBD <br /> **S'applique à**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
-|CXCONSUMER |Se produit avec les plans de requête parallèles lorsqu’un thread consommateur attend qu’un thread producteur envoyer des lignes. Il s’agit d’un composant normal de l’exécution des requêtes parallèles. <br /> **S’applique aux**: [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 et [!INCLUDE[ssSDS](../../includes/sssds-md.md)]|
-|CXPACKET |Se produit avec les plans de requête parallèles, lors de la synchronisation de l’itérateur exchange de processeur de requêtes et lors de la production et la consommation des lignes. Si l'attente est excessive et ne peut pas être réduite en ajustant la requête (en ajoutant des index, par exemple), pensez à affiner le seuil de coût pour le parallélisme ou à baisser le degré de parallélisme.<br /> **Remarque :** dans [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 et [!INCLUDE[ssSDS](../../includes/sssds-md.md)], CXPACKET fait référence uniquement à la synchronisation de l’itérateur exchange de processeur de requêtes et à produire des lignes pour les threads de consommateur. Threads de consommateur sont suivis séparément dans le type d’attente CXCONSUMER.| 
+|CXCONSUMER |Se produit avec les plans de requête parallèles lorsqu’un thread consommateur attend qu’un thread producteur envoyer des lignes. Il s’agit d’un composant normal de l’exécution des requêtes parallèles. <br /> **S’applique aux**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (en commençant par [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2, [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3), [!INCLUDE[ssSDS](../../includes/sssds-md.md)]|
+|CXPACKET |Se produit avec les plans de requête parallèles, lors de la synchronisation de l’itérateur exchange de processeur de requêtes et lors de la production et la consommation des lignes. Si l'attente est excessive et ne peut pas être réduite en ajustant la requête (en ajoutant des index, par exemple), pensez à affiner le seuil de coût pour le parallélisme ou à baisser le degré de parallélisme.<br /> **Remarque :** compter [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2, [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3, et [!INCLUDE[ssSDS](../../includes/sssds-md.md)], CXPACKET fait référence uniquement à la synchronisation de l’itérateur exchange de processeur de requêtes et à produire des lignes pour les threads de consommateur. Threads de consommateur sont suivis séparément dans le type d’attente CXCONSUMER.| 
 |CXROWSET_SYNC |Se produit pendant une analyse de plage parallèle.| 
 |DAC_INIT |Se produit alors que la connexion administrateur dédiée est en cours d'initialisation.| 
 |DBCC_SCALE_OUT_EXPR_CACHE |TBD <br /> **S'applique à**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 

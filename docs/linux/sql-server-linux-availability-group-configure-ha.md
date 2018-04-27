@@ -1,25 +1,25 @@
 ---
-title: "Configurer SQL Server groupe de disponibilité AlwaysOn pour une haute disponibilité sur Linux | Documents Microsoft"
-description: 
+title: Configurer SQL Server groupe de disponibilité AlwaysOn pour une haute disponibilité sur Linux | Documents Microsoft
+description: ''
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.date: 02/14/2018
 ms.topic: article
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
-ms.assetid: 
+ms.assetid: ''
 ms.workload: On Demand
-ms.openlocfilehash: 90bd5cfea78adc5f73c4f95af34a108d6b953587
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 13d7020ca62a0dc9e81eab8336da86f9e3be7bb7
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="configure-sql-server-always-on-availability-group-for-high-availability-on-linux"></a>Configurer SQL Server groupe de disponibilité AlwaysOn pour une haute disponibilité sur Linux
 
@@ -33,7 +33,7 @@ Configurations de garantissent la haute disponibilité et protection des donnée
 
 Tous les serveurs doivent être physiques ou virtuels et serveurs virtuels doivent se trouver sur la même plateforme de virtualisation. Cette exigence est, car les agents de délimitation sont spécifiques à la plateforme. Consultez [des stratégies pour les Clusters invités](https://access.redhat.com/articles/29440#guest_policies).
 
-## <a name="roadmap"></a>Roadmap
+## <a name="roadmap"></a>Feuille de route
 
 Les étapes pour créer un groupe de disponibilité sur des serveurs Linux pour une haute disponibilité sont différentes des étapes sur un cluster de basculement Windows Server. La liste suivante décrit les étapes principales : 
 
