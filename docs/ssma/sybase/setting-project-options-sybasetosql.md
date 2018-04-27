@@ -2,7 +2,7 @@
 title: Définition des Options de projet (SybaseToSQL) | Documents Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-sybase
@@ -23,11 +23,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 57954b06479e041772200fbb05ba823607a02ad5
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: 626fb48e030f1bf1d78bc0ff0391cc5748fe78f9
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="setting-project-options-sybasetosql"></a>Définition des Options de projet (SybaseToSQL)
 Pour chaque projet SSMA, vous pouvez définir les options au niveau du projet. Ces options déterminent la conversion de l’objet, lors du chargement de l’objet, SQL azure, l’interface utilisateur et les paramètres de migration de données. Avant de convertir des objets à [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ou SQL Azure ou migrer des données dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ou SQL Azure, vérifiez que les options de configuration sont appropriées pour le projet.  
@@ -43,7 +43,7 @@ SSMA a cinq jeux de paramètres du projet :
   
 3.  Synchronization  
   
-4.  GUI  
+4.  INTERFACE GRAPHIQUE UTILISATEUR  
   
 5.  Mappage de type  
   

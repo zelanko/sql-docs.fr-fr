@@ -1,6 +1,6 @@
 ---
 title: Mappage des bases de données MySQL pour les schémas SQL Server (MySQLToSQL) | Documents Microsoft
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-mysql
@@ -24,11 +24,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1369b509f815950fb1d6401e0b835a55d6263f19
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: 79cbcae3c7c272f871b18ff0fc9b5a5c1acce57f
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="mapping-mysql-databases-to-sql-server-schemas-mysqltosql"></a>Mappage des bases de données MySQL pour les schémas SQL Server (MySQLToSQL)
 Par défaut, SSMA pour MySQL migre tous les objets dans un schéma MySQL à un [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ou nommée pour le schéma de la base de données SQL Azure. Toutefois, vous pouvez personnaliser le mappage entre les schémas de MySQL et [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ou bases de données SQL Azure.  

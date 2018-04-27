@@ -1,6 +1,6 @@
 ---
 title: Chargement converti objets base de données dans SQL Server (DB2ToSQL) | Documents Microsoft
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-db2
@@ -21,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3997b2e1284513d92c76aefbb582f6cbebb81c7b
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: f1b3aac2fad273e8df34828c1ceba9ed9b3a3b3f
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="loading-converted-database-objects-into-sql-server-db2tosql"></a>Chargement converti objets base de données dans SQL Server (DB2ToSQL)
 Après avoir converti les schémas de DB2 à [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], vous pouvez charger les objets de base de données qui en résulte dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Vous pouvez avoir créer les objets SSMA, ou vous pouvez les objets de script et exécuter les scripts vous-même. SSMA vous permet également de mettre à jour des métadonnées de la cible avec le contenu réel du [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] base de données.  

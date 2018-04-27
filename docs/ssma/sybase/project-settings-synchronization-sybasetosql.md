@@ -2,7 +2,7 @@
 title: Paramètres (synchronisation) (SybaseToSQL) du projet | Documents Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-sybase
@@ -21,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4e25ed9954d033d080cbe8b00222e9dbcc641bce
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: 49783b54640b82295b54450ad7eb63ea044e0721
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="project-settings-synchronization-sybasetosql"></a>Paramètres du projet (synchronisation) (SybaseToSQL)
 La page de synchronisation de la **les paramètres de projet** boîte de dialogue contient des paramètres permettant de personnaliser comment SSMA charge des objets de base de données, telles que les tables et procédures stockées, [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ou SQL Azure.  
@@ -37,7 +37,7 @@ Vous pouvez accéder à deux pages différentes synchronisation qui contiennent 
 -   Pour spécifier les paramètres pour le projet actuel, sur le **outils** menu, sélectionnez **les paramètres de projet**, puis sélectionnez **synchronisation** en bas du volet gauche.  
   
 ## <a name="options"></a>Options  
-**Attempts**  
+**Tentatives**  
 Spécifie le nombre de tentatives de SSMA doit lors du chargement d’objets dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Les objets qui ne sont pas chargés dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] lors de la tentative actuelle sera tentée à nouveau jusqu'à ce que SSMA atteint le nombre maximal de tentatives défini dans le processus de synchronisation en cours.  
   
 ## <a name="synchronization-for-sql-server"></a>Synchronisation pour SQL Server  

@@ -1,7 +1,7 @@
 ---
 title: Sys.dm_tran_version_store_space_usage (Transact-SQL) | Documents Microsoft
 ms.custom: ''
-ms.date: 04/30/2017
+ms.date: 04/24/2018
 ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
@@ -28,14 +28,14 @@ ms.author: pariks
 manager: ajayj
 ms.workload: Inactive
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 0f46c84abe0c62c36f76a3bc8d02576d30357e19
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 1459dd2b98ed9579bc1939c60c1e74e14157d0b6
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="sysdmtranversionstorespaceusage-transact-sql"></a>Sys.dm_tran_version_store_space_usage (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-2016sp2-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-2016sp2-asdb-xxxx-xxx-md.md)]
 
 Retourne une table qui affiche l’espace total dans tempdb utilisé par les enregistrements de magasin de version pour chaque base de données. **Sys.dm_tran_version_store_space_usage** est efficace et pas coûteuses à exécuter, comme il ne pas parcourir les enregistrements de magasin de version individuelle et retourne agrégées magasin espace consommée dans tempdb par base de données.
   
@@ -53,7 +53,7 @@ Comme l'enregistrement avec contrôle de version est stocké sous forme binaire,
 Sur [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], nécessite `VIEW SERVER STATE` autorisation.   
 
 ## <a name="examples"></a>Exemples  
- La requête suivante peut être utilisée pour déterminer l’espace utilisé dans tempdb, par la banque des versions de chaque base de données dans un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance. 
+La requête suivante peut être utilisée pour déterminer l’espace utilisé dans tempdb, par la banque des versions de chaque base de données dans un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance. 
   
 ```sql  
 SELECT 

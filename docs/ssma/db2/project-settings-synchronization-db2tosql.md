@@ -1,6 +1,6 @@
 ---
 title: Projet Settings(Synchronization) (DB2ToSQL) | Documents Microsoft
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-db2
@@ -21,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: da4be629e37646b10011c76f5a78a2cde246865e
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: 9416a0162eb08f40f8fced7434d1bf965dfe20bb
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="project-settingssynchronization-db2tosql"></a>Projet Settings(Synchronization) (DB2ToSQL)
 La page de synchronisation de la **les paramètres de projet** boîte de dialogue contient des paramètres permettant de personnaliser comment SSMA charge actualisations de la base de données et objets, tels que les tables et procédures stockées, en [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
@@ -39,7 +39,7 @@ Vous pouvez accéder à deux pages différentes synchronisation qui contiennent 
 -   Pour spécifier les paramètres pour le projet actuel, sur le **outils** menu, cliquez sur **les paramètres de projet**, puis cliquez sur **synchronisation** en bas du volet gauche.  
   
 ## <a name="miscellaneous-options"></a>Options diverses  
-**Attempts**  
+**Tentatives**  
 Spécifie le nombre de tentatives de SSMA doit lors du chargement d’objets dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Les objets qui ne sont pas chargés dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] lors de la tentative actuelle sera tentée à nouveau jusqu'à ce que SSMA atteint le nombre maximal de tentatives défini dans le processus de synchronisation en cours. Ensemble de valeur par défaut est **2**  
   
 ## <a name="synchronization-for-db2-options"></a>Synchronisation pour les Options de DB2  

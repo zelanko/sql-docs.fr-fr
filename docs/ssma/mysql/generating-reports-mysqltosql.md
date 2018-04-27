@@ -1,6 +1,6 @@
 ---
 title: Génération de rapports (MySQLToSQL) | Documents Microsoft
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-mysql
@@ -23,11 +23,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b452d85718dbdca6ade3c40417fa8b200ea74cdc
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: 44e368d2839725a99b3c2d38db6c24e1c9114537
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="generating-reports-mysqltosql"></a>Génération de rapports (MySQLToSQL)
 Les rapports de certaines activités effectuées à l’aide des commandes sont générés dans la Console SSMA au niveau d’arborescence objet.  
@@ -41,12 +41,12 @@ Utilisez la procédure suivante pour générer des rapports :
     ||||  
     |-|-|-|  
     |**Sl. Non.**|**Command**|**Titre de rapport**|  
-    |1|generate-assessment-report|AssessmentReport&lt;n&gt;.XML|  
+    |1|Générer--rapport d’évaluation|AssessmentReport&lt;n&gt;. XML|  
     |2|convert-schema|SchemaConversionReport&lt;n&gt;.XML|  
-    |3|migrate-data|DataMigrationReport&lt;n&gt;.XML|  
-    |4|convert-sql-statement|ConvertSQLReport&lt;n&gt;.XML|  
-    |5|synchronize-target|TargetSynchronizationReport&lt;n&gt;.XML|  
-    |6|actualisation de base de données|SourceDBRefreshReport&lt;n&gt;.XML|  
+    |3|migrer des données|DataMigrationReport&lt;n&gt;. XML|  
+    |4|instruction CONVERT-sql|ConvertSQLReport&lt;n&gt;.XML|  
+    |5|synchroniser la cible|TargetSynchronizationReport&lt;n&gt;.XML|  
+    |6|actualisation de base de données|SourceDBRefreshReport&lt;n&gt;. XML|  
   
     > [!IMPORTANT]  
     > Un rapport de sortie est différent de rapport d’évaluation. Le premier est un rapport sur les performances d’une commande exécutée lors, ce dernier est un rapport XML pour la consommation par programmation.  
@@ -58,8 +58,8 @@ Utilisez la procédure suivante pour générer des rapports :
     ||||  
     |-|-|-|  
     |**Sl. Non.**|**Commande et paramètre**|**Description de la sortie**|  
-    |1|verbose=”false”|Génère un rapport de synthèse de l’activité.|  
-    |2|verbose=”true”|Génère un rapport d’état résumées et détaillées pour chaque activité.|  
+    |1|verbose = « false »|Génère un rapport de synthèse de l’activité.|  
+    |2|verbose = « true »|Génère un rapport d’état résumées et détaillées pour chaque activité.|  
   
     > [!NOTE]  
     > Les paramètres de niveau de détail de rapport spécifiées ci-dessus s’appliquent à générer--rapport d’évaluation, convert-schema, migrer des données, les commandes instruction convert-sql.  
@@ -69,8 +69,8 @@ Utilisez la procédure suivante pour générer des rapports :
     ||||  
     |-|-|-|  
     |**Sl. Non.**|**Commande et paramètre**|**Description de la sortie**|  
-    |1|report-errors=”false”|Aucun détail d’erreur / avertissement / messages d’informations.|  
-    |2|report-errors=”true”|Erreur détaillée / avertissement / messages d’informations.|  
+    |1|signaler les erreurs = « false »|Aucun détail d’erreur / avertissement / messages d’informations.|  
+    |2|signaler les erreurs = « true »|Erreur détaillée / avertissement / messages d’informations.|  
   
     > [!NOTE]  
     > Les paramètres de rapport d’erreurs spécifiées ci-dessus s’appliquent à générer--rapport d’évaluation, convert-schema, migrer des données, les commandes instruction convert-sql.  
@@ -95,7 +95,7 @@ Utilisez la procédure suivante pour générer des rapports :
 />  
 ```  
   
-### <a name="synchronize-target"></a>synchronize-target:  
+### <a name="synchronize-target"></a>synchroniser à la cible :  
 La commande **cible synchroniser** a **erreurs de rapports pour** paramètre, qui spécifie l’emplacement du rapport d’erreurs pour l’opération de synchronisation. Ensuite, un fichier par nom **TargetSynchronizationReport&lt;n&gt;. XML** est créé à l’emplacement spécifié, où **&lt;n&gt;** est le nombre de fichiers uniques qui incrémente par un chiffre à chaque exécution de la même commande.  
   
 **Remarque :** si reçoit le chemin d’accès du dossier, puis 'rapports erreurs-pour' paramètre devient un attribut facultatif pour la commande « Synchroniser-cible ».  
@@ -121,7 +121,7 @@ La commande **cible synchroniser** a **erreurs de rapports pour** paramètre, qu
   
 -   rapport-chaque-sous-avertissement  
   
--   fail-script  
+-   Échec-script  
   
 ### <a name="refresh-from-database"></a>actualisation-de-base de données :  
 La commande **actualisation de base de données** a **erreurs de rapports pour** paramètre, qui spécifie l’emplacement du rapport d’erreurs pour l’opération d’actualisation. Ensuite, un fichier par nom **SourceDBRefreshReport&lt;n&gt;. XML** est créé à l’emplacement spécifié, où **&lt;n&gt;** est le nombre de fichiers uniques qui incrémente par un chiffre à chaque exécution de la même commande.  
@@ -151,7 +151,7 @@ La commande **actualisation de base de données** a **erreurs de rapports pour**
   
 -   rapport-chaque-sous-avertissement  
   
--   fail-script  
+-   Échec-script  
   
 ## <a name="see-also"></a>Voir aussi  
 [L’exécution de la Console SSMA (MySQL)](http://msdn.microsoft.com/en-us/e3e9f7e4-0619-4861-a202-3d5d39953b26)  

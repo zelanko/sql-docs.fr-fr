@@ -1,16 +1,16 @@
 ---
-title: "Contexte de l’expression et l’évaluation de la requête (XQuery) | Documents Microsoft"
-ms.custom: 
+title: Contexte de l’expression et l’évaluation de la requête (XQuery) | Documents Microsoft
+ms.custom: ''
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
-ms.service: 
+ms.prod: sql
+ms.prod_service: sql
+ms.service: ''
 ms.component: xquery
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -23,16 +23,16 @@ helpviewer_keywords:
 - static context
 - dynamic context [XQuery]
 ms.assetid: 5059f858-086a-40d4-811e-81fedaa18b06
-caps.latest.revision: 
+caps.latest.revision: 19
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b387ebe6649cca113e4974b3275498bb9b3b970e
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: aa51ff95256dde4ed6d750a2dbfab5c2c44c2d41
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="expression-context-and-query-evaluation-xquery"></a>Contexte des expressions et évaluation des requêtes (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -128,7 +128,7 @@ ms.lasthandoff: 02/09/2018
   
 2.  Résolution des noms de fonction et de type spécifiés dans l'expression.  
   
-3.  Typage statique de la requête. De cette façon, le type de la requête est sûr. Par exemple, la requête suivante retourne une erreur statique, car le  **+**  opérateur requiert des arguments de type primitif numérique :  
+3.  Typage statique de la requête. De cette façon, le type de la requête est sûr. Par exemple, la requête suivante retourne une erreur statique, car le **+** opérateur requiert des arguments de type primitif numérique :  
   
     ```  
     declare @x xml  

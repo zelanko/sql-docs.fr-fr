@@ -2,7 +2,7 @@
 title: Sélectionner et configurer les objets (SybaseToSQL) affectés | Documents Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-sybase
@@ -23,11 +23,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a9871370dc3e6e8ca9d148a4df2435ce94286903
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: 2b4ee4b97b69aa937479ca3123a02adcef906d2d
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="selecting-and-configuring-affected-objects-sybasetosql"></a>Sélectionner et configurer les objets (SybaseToSQL) affectés
 Sur cette page, vous pouvez sélectionner les tables et les clés étrangères, les modifications dans lequel doivent être comparés quand SSMA vérifie les résultats de l’exécution pour les objets sélectionnés dans l’étape précédente. En outre, vous pouvez personnaliser les paramètres de vérification.  
@@ -56,7 +56,7 @@ L’onglet de la Table contient l’affichage de grille de la table sélectionn�
   
 -   Nullable  
   
-## <a name="sql"></a>Sql  
+## <a name="sql"></a>SQL  
 Onglet SQL contient la table « créer » SQL de la table sélectionnée.  
   
 ## <a name="data"></a>data  

@@ -2,7 +2,7 @@
 title: Travailler avec les fichiers de Script de la Console exemple (SybaseToSQL) | Documents Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-sybase
@@ -23,11 +23,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 617c897ce05b3b57b32e8ffd67606d4314fb5c80
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: cf3808b7753770a211ae867ba20902a442ae086a
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="working-with-the-sample-console-script-files-sybasetosql"></a>Travailler avec les fichiers de Script de la Console exemple (SybaseToSQL)
 Quelques exemples de fichiers ont été fournis avec le produit pour la référence de l’utilisateur et son utilisation. Cette section décrit la façon de personnaliser ces scripts en fonction des besoins des utilisateurs finaux.  
@@ -45,7 +45,7 @@ Les fichiers de script de console exemple suivants couvrant les différents scé
   
 -   ConversionAndDataMigrationSample.xml  
   
--   **ServersConnectionFileSample.xml:**  
+-   **ServersConnectionFileSample.xml :**  
   
     -   Cet exemple donne les différents modes de connexion n’est disponible pour la base de données source et cible et l’utilisateur peut sélectionner n’importe quel mode conformément à la spécification. Cet exemple contient les définitions de serveur.  
   
@@ -53,12 +53,12 @@ Les fichiers de script de console exemple suivants couvrant les différents scé
   
     -   Pour plus d’informations sur la connexion au serveur source et cible, consultez [création des fichiers de connexion serveur &#40;SybaseToSQL&#41;](../../ssma/sybase/creating-the-server-connection-files-sybasetosql.md).  
   
--   **VariableValueFileSample.xml:**  
+-   **VariableValueFileSample.xml :**  
     Fichiers de script de toutes les variables qui ont été utilisés dans l’exemple de console et `ServersConnectionFileSample.xml` ont été assemblés dans ce fichier. Pour exécuter les exemples de scripts de console que l’utilisateur a simplement à remplacer la variable de l’exemple avec l’utilisateur, les valeurs celles définies et passer ce fichier comme un argument de ligne de commande supplémentaires, ainsi que le fichier de script.  
   
     Pour plus d’informations sur le fichier de valeurs Variable, consultez [création de fichiers de valeur Variable &#40;SybaseToSQL&#41;](../../ssma/sybase/creating-variable-value-files-sybasetosql.md).  
   
--   **AssessmentReportGenerationSample.xml:**  
+-   **AssessmentReportGenerationSample.xml :**  
     Cet exemple permet à l’utilisateur Générer un rapport d’évaluation xml qui peut être utilisé par l’utilisateur pour l’analyse avant de commencer à convertir et migrer des données.  
   
     Dans le `generate-assessment-report` l’utilisateur doit obligatoirement modifier la valeur de la variable de commande (consultez **VariableValueFileSample.xml**) dans le `object-name` attribut le nom de base de données est en cours d’utilisation par l’utilisateur. Selon le type d’objet spécifié, le `object-type` valeur devra également être modifié.  
@@ -71,7 +71,7 @@ Les fichiers de script de console exemple suivants couvrant les différents scé
     > -   Assurez-vous que l’argument de ligne de commande de fichier de valeur de la variable est passée à l’application de console et VariableValueFileSample.xml est mis à jour avec l’utilisateur spécifié les valeurs.  
     > -   Assurez-vous qu’argument de ligne de commande de fichier de connexion serveur est passé à l’application de console et le ServersConnectionFileSample.xml est mis à jour avec les valeurs de paramètre de serveur correct.  
   
--   **SqlStatementConversionSample.xml:**  
+-   **SqlStatementConversionSample.xml :**  
     Cet exemple permet à l’utilisateur générer le correspondant `t-sql` script pour la base de données source `sql` fournie comme entrée de commande.  
   
     Dans le `convert-sql-statement` l’utilisateur doit obligatoirement modifier la valeur de la variable de commande (consultez **VariableValueFileSample.xml**) dans le `context` nom à l’attribut de base de données qui est en cours d’utilisation par l’utilisateur. L’utilisateur devra également modifier le `sql` valeur d’attribut à la base de données source `sql` commande il nécessitant à convertir.  
@@ -81,7 +81,7 @@ Les fichiers de script de console exemple suivants couvrant les différents scé
     > [!NOTE]  
     > Assurez-vous que l’argument de ligne de commande de fichier de valeur de la variable est passée à l’application de console et VariableValueFileSample.xml est mis à jour avec l’utilisateur spécifié les valeurs.  
   
--   **ConversionAndDataMigrationSample.xml:**  
+-   **ConversionAndDataMigrationSample.xml :**  
      Cet exemple permet à l’utilisateur effectuer une migration de bout en bout à partir de la conversion de la migration des données. Vous trouverez ci-dessous la liste des valeurs d’attribut obligatoires qui ils devront modifier :  
   
     **Nom de la commande**  

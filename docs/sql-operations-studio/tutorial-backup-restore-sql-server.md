@@ -1,9 +1,9 @@
 ---
-title: Sauvegarder et restaurer une base de données à l’aide des SQL Operations Studio (preview) | Documents Microsoft
-description: Découvrez comment sauvegarder et restaurer une base de données à l’aide des SQL Operations Studio (preview)
+title: Sauvegarder et restaurer une base de données à l’aide des opérations de SQL Studio (version préliminaire) | Documents Microsoft
+description: Découvrez comment sauvegarder et restaurer une base de données à l’aide des opérations de SQL Studio (version préliminaire)
 ms.custom: tools|sos
 ms.date: 11/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
@@ -14,13 +14,13 @@ author: erickangMSFT
 ms.author: erickang
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 46ef55aa54275e356eff9674aac10a27b36d758e
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: baf76f3d403f74bc84ecafc4d2c84bce340a0e2e
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
-# <a name="backup-and-restore-using-includename-sosincludesname-sos-shortmd"></a>Sauvegarde et restauration à l’aide[!INCLUDE[name-sos](../includes/name-sos-short.md)]
+# <a name="backup-and-restore-using-includename-sosincludesname-sos-shortmd"></a>Sauvegarde et restauration à l’aide [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
 Dans ce didacticiel, vous apprenez à utiliser [!INCLUDE[name-sos](../includes/name-sos-short.md)] pour :
 > [!div class="checklist"]
@@ -34,7 +34,7 @@ Dans ce didacticiel, vous apprenez à utiliser [!INCLUDE[name-sos](../includes/n
 
 Ce didacticiel nécessite SQL Server *TutorialDB*. Pour créer le *TutorialDB* de base de données, effectuez l’une des Démarrages rapides suivants :
 
-- [Se connecter et interroger à l’aide de SQL Server[!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-server.md)
+- [Se connecter et interroger à l’aide de SQL Server [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-server.md)
 
 
 ## <a name="backup-a-database"></a>Sauvegarde une base de données

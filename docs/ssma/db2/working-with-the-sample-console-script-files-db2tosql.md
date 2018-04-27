@@ -1,6 +1,6 @@
 ---
 title: Travailler avec les fichiers de Script de la Console exemple (DB2ToSQL) | Documents Microsoft
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-db2
@@ -21,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b5d7a127cb350c8cb95c84ebe43795212986274b
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: 209333cfd06ae2049865a9ebf1494c6eacafc591
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="working-with-the-sample-console-script-files-db2tosql"></a>Travailler avec les fichiers de Script de la Console exemple (DB2ToSQL)
 Quelques exemples de fichiers ont été fournis avec le produit pour la référence de l’utilisateur et son utilisation. Cette section décrit la façon de personnaliser ces scripts en fonction des besoins des utilisateurs finaux.  
@@ -43,7 +43,7 @@ Les fichiers de script de console exemple suivants couvrant les différents scé
   
 -   ConversionAndDataMigrationSample.xml  
   
-1.  **ServersConnectionFileSample.xml:**  
+1.  **ServersConnectionFileSample.xml :**  
   
     -   Cet exemple donne les différents modes de connexion n’est disponible pour la base de données source et cible et l’utilisateur peut sélectionner n’importe quel mode conformément à la spécification. Cet exemple contient les définitions de serveur.  
   

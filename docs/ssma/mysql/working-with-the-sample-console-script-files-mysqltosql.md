@@ -1,6 +1,6 @@
 ---
 title: Travailler avec les fichiers de Script de la Console exemple (MySQLToSQL) | Documents Microsoft
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-mysql
@@ -23,11 +23,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 667cd2b758e5b7f249379b00266db3fc41c1d398
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: 86d6de3f4914bed3b8542dc32b632bee5cc7f438
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="working-with-the-sample-console-script-files-mysqltosql"></a>Travailler avec les fichiers de Script de la Console exemple (MySQLToSQL)
 Quelques exemples de fichiers ont été fournis avec le produit pour la référence de l’utilisateur et son utilisation. Cette section décrit la façon de personnaliser ces scripts en fonction des besoins des utilisateurs finaux.  
@@ -45,7 +45,7 @@ Les fichiers de script de console exemple suivants couvrant les différents scé
   
 -   ConversionAndDataMigrationSample.xml  
   
--   **ServersConnectionFileSample.xml:**  
+-   **ServersConnectionFileSample.xml :**  
   
     -   Cet exemple donne les différents modes de connexion n’est disponible pour la base de données source et cible et l’utilisateur peut sélectionner n’importe quel mode conformément à la spécification. Cet exemple contient les définitions de serveur.  
   
@@ -71,7 +71,7 @@ Les fichiers de script de console exemple suivants couvrant les différents scé
   
     -   Assurez-vous qu’argument de ligne de commande de fichier de connexion serveur est passé à l’application de console et le ServersConnectionFileSample.xml est mis à jour avec les valeurs de paramètre de serveur correct.  
   
--   **SqlStatementConversionSample.xml:**  
+-   **SqlStatementConversionSample.xml :**  
     Cet exemple permet à l’utilisateur générer le correspondant `t-sql` script pour la base de données source `sql` fournie comme entrée de commande.  
   
     Dans le `convert-sql-statement` l’utilisateur doit obligatoirement modifier la valeur de la variable de commande (consultez **VariableValueFileSample.xml**) dans le `context` nom à l’attribut de base de données qui est en cours d’utilisation par l’utilisateur. L’utilisateur devra également modifier le `sql` valeur d’attribut à la base de données source `sql` commande il nécessitant à convertir.  
@@ -81,7 +81,7 @@ Les fichiers de script de console exemple suivants couvrant les différents scé
     > [!NOTE]  
     > Assurez-vous que l’argument de ligne de commande de fichier de valeur de la variable est passée à l’application de console et VariableValueFileSample.xml est mis à jour avec l’utilisateur spécifié les valeurs.  
   
--   **ConversionAndDataMigrationSample.xml:**  
+-   **ConversionAndDataMigrationSample.xml :**  
      Cet exemple permet à l’utilisateur effectuer une migration de bout en bout à partir de la conversion de la migration des données. Vous trouverez ci-dessous la liste des valeurs d’attribut obligatoires qui ils devront modifier :  
   
     **Nom de la commande**  

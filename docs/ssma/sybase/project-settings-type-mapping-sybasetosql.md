@@ -2,7 +2,7 @@
 title: Paramètres (Type de mappage) du projet (SybaseToSQL) | Documents Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-sybase
@@ -21,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 411cb12d17399e43ebdc454f5f55a5c5595972a2
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: d113993ad9cbfa46e471748ae5840fab3c96d26b
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="project-settings-type-mapping-sybasetosql"></a>Paramètres (Type de mappage) du projet (SybaseToSQL)
 La page mappage de Type de la **les paramètres de projet** boîte de dialogue contient des paramètres permettant de personnaliser comment SSMA convertit les types de données Sybase Adaptive Server Enterprise (ASE) dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] des types de données.  
@@ -64,33 +64,33 @@ Le tableau suivant contient le mappage de type par défaut entre ASE et [!INCLUD
 |-----------------|------------------------|  
 |**bigint**|**bigint**|  
 |**binaire**|**binaire**|  
-|**binaire [\*... 8000]**|**binary[\*]**|  
-|**binary[8001..\*]**|**varbinary(max)**|  
+|**binaire [\*... 8000]**|**binaire [\*]**|  
+|**binaire [8001..\*]**|**varbinary(max)**|  
 |**bit**|**bit**|  
 |**char**|**char**|  
 |**char varying**|**varchar**|  
 |**char varying [\*... 8000]**|**varchar[\*]**|  
 |**char varying [8001..\*]**|**varchar(max)**|  
-|**char[\*..8000]**|**char[\*]**|  
-|**char[8001..\*;]**|**varchar(max)**|  
+|**Char [\*... 8000]**|**char[\*]**|  
+|**Char [8001..\*;]**|**varchar(max)**|  
 |**character**|**char**|  
 |**variable de caractère**|**varchar**|  
 |**variable de caractères [\*... 8000]**|**varchar[\*]**|  
 |**variable de caractères [8001..\*]**|**varchar(max)**|  
-|**character[\*..8000]**|**char[\*]**|  
-|**character[8001..\*]**|**varchar(max)**|  
+|**caractère [\*... 8000]**|**char[\*]**|  
+|**caractère [8001..\*]**|**varchar(max)**|  
 |**date**|**date**|  
 |**datetime**|**datetime2[3]**|  
 |**dec**|**decimal**|  
 |**dec[\*..\*]**|**decimal[\*]**|  
 |**dec[\*..\*][\*..\*]**|**decimal[\*][\*]**|  
 |**decimal**|**decimal**|  
-|**decimal[\*..\*]**|**decimal[\*]**|  
-|**decimal[\*..\*][\*..\*]**|**decimal[\*][\*]**|  
+|**Decimal [\*... \*]**|**decimal[\*]**|  
+|**Decimal [\*... \*][\*.. \*]**|**decimal[\*][\*]**|  
 |**double précision**|**float[53]**|  
 |**float**|**float[53]**|  
-|**float[\*..15]**|**float[24]**|  
-|**float[16..\*]**|**float[53]**|  
+|**float [\*... 15]**|**float[24]**|  
+|**float [16..\*]**|**float[53]**|  
 |**image**|**image**|  
 |**int**|**int**|  
 |**entier**|**int**|  
@@ -115,42 +115,42 @@ Le tableau suivant contient le mappage de type par défaut entre ASE et [!INCLUD
 |**NCHAR varying**|**nvarchar**|  
 |**NCHAR varying [\*... 4000]**|**nvarchar[\*]**|  
 |**NCHAR varying [4001..\*]**|**nvarchar(max)**|  
-|**nchar[\*..4000]**|**nchar[\*]**|  
-|**nchar[4001..\*]**|**nvarchar(max)**|  
+|**NCHAR [\*... 4000]**|**nchar[\*]**|  
+|**NCHAR [4001..\*]**|**nvarchar(max)**|  
 |**numeric**|**numeric**|  
-|**numeric[\*..\*]**|**numeric[\*]**|  
-|**numeric[\*..\*][\*..\*]**|**numeric[\*][\*]**|  
+|**numérique [\*... \*]**|**numeric[\*]**|  
+|**numérique [\*... \*][\*.. \*]**|**numeric[\*][\*]**|  
 |**nvarchar**|**nvarchar**|  
-|**nvarchar[\*..4000]**|**nvarchar[\*]**|  
-|**nvarchar[4001..\*]**|**nvarchar(max)**|  
+|**nvarchar [\*... 4000]**|**nvarchar[\*]**|  
+|**nvarchar [4001..\*]**|**nvarchar(max)**|  
 |**real**|**float[24]**|  
 |**smalldatetime**|**smalldatetime**|  
 |**smallint**|**smallint**|  
 |**smallmoney**|**smallmoney**|  
 |**sysname**|**nvarchar[128]**|  
-|**sysname[\*..\*]**|**nvarchar[255]**|  
+|**sysname [\*... \*]**|**nvarchar[255]**|  
 |**texte**|**texte**|  
 |**time**|**time[3]**|  
 |**timestamp**|**rowversion**|  
 |**tinyint**|**tinyint**|  
-|**unichar**|**nchar**|  
+|**UNICHAR**|**nchar**|  
 |**UNICHAR variable**|**nvarchar**|  
 |**UNICHAR varying [\*... 4000]**|**nvarchar[\*]**|  
 |**UNICHAR varying [4001..\*]**|**nvarchar(max)**|  
-|**unichar[\*..4000]**|**nchar[\*]**|  
-|**unichar[4001..\*]**|**nvarchar(max)**|  
+|**UNICHAR [\*... 4000]**|**nchar[\*]**|  
+|**UNICHAR [4001..\*]**|**nvarchar(max)**|  
 |**unitext**|**nvarchar(max)**|  
 |**univarchar**|**nvarchar**|  
-|**univarchar[\*..4000]**|**nvarchar[\*]**|  
-|**univarchar[4001..\*]**|**nvarchar(max)**|  
+|**univarchar [\*... 4000]**|**nvarchar[\*]**|  
+|**univarchar [4001..\*]**|**nvarchar(max)**|  
 |**bigint non signé**|**numeric[20][0]**|  
 |**entier non signé**|**bigint**|  
 |**smallint non signé**|**int**|  
 |**tinyint non signé**|**tinyint**|  
 |**varbinary**|**varbinary**|  
-|**varbinary[\*..8000]**|**varbinary[\*]**|  
-|**varbinary[8001..\*]**|**varbinary(max)**|  
+|**varbinary [\*... 8000]**|**varbinary[\*]**|  
+|**varbinary [8001..\*]**|**varbinary(max)**|  
 |**varchar**|**varchar**|  
-|**varchar[\*..8000]**|**varchar[\*]**|  
-|**varchar[8001..\*]**|**varchar(max)**|  
+|**varchar [\*... 8000]**|**varchar[\*]**|  
+|**varchar [8001..\*]**|**varchar(max)**|  
   

@@ -1,6 +1,6 @@
 ---
 title: Paramètres (Conversion) (DB2ToSQL) du projet | Documents Microsoft
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-db2
@@ -21,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 389d5da7b3940464150ca52618595fd8bd518fb8
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: 5ad3409125f4e6862304e02f05b03bcf821923ba
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="project-settings-conversion-db2tosql"></a>Paramètres du projet (Conversion) (DB2ToSQL)
 La page de Conversion de la **les paramètres de projet** boîte de dialogue contient des paramètres permettant de personnaliser comment SSMA convertit la syntaxe DB2 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] syntaxe.  
@@ -81,7 +81,7 @@ Ce paramètre spécifie comment les schémas de DB2 sont mappées aux schémas S
   
 1.  **Schéma de base de données :** dans ce mode, DB2, schéma 'sch1' sera mappé par défaut pour le schéma de SQL Server « dbo » dans la base de données de SQL Server 'sch1'.  
   
-2.  **Schéma au schéma :**dans ce mode, DB2, schéma 'sch1' sera mappé par défaut pour le schéma de SQL Server 'sch1' dans la base de données SQL Server par défaut fourni dans la boîte de dialogue de connexion.  
+2.  **Schéma au schéma :** dans ce mode, DB2, schéma 'sch1' sera mappé par défaut pour le schéma de SQL Server 'sch1' dans la base de données SQL Server par défaut fourni dans la boîte de dialogue de connexion.  
   
 Lorsque vous sélectionnez un mode de conversion dans le **Mode** zone, SSMA s’applique le paramètre suivant :  
   
@@ -180,7 +180,7 @@ Le tableau suivant montre comment SSMA convertit les modes de verrouillage DB2 
 |MISE À JOUR DU PARTAGE = PARTAGE DE LIGNE|ROWLOCK, HOLDLOCK|  
 |PARTAGER|TABLOCK, HOLDLOCK|  
 |LIGNE DE PARTAGE EXCLUSIF|TABLOCK, XLOCK, HOLDLOCK|  
-|EXCLUSIVE|TABLOCKX, HOLDLOCK|  
+|EXCLUSIF|TABLOCKX, HOLDLOCK|  
   
 Lorsque vous sélectionnez un mode de conversion dans le **Mode** zone, SSMA s’applique le paramètre suivant :  
   

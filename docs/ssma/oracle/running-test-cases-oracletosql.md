@@ -1,27 +1,28 @@
 ---
-title: "Exécuter des cas de Test (OracleToSQL) | Documents Microsoft"
-ms.prod: sql-non-specified
+title: Exécuter des cas de Test (OracleToSQL) | Documents Microsoft
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-oracle
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: fc208cdb-7373-4f6b-8f6c-cdff9d3dcd02
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
-ms.openlocfilehash: 6d9e4e71813ff5b092ba1b67db207abd9b1adc44
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: bff5a571a8ad60e2baa3ea1211d6aff97c01c5ea
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="running-test-cases-oracletosql"></a>Cas de Test en cours d’exécution (OracleToSQL)
 Lorsque le testeur de SSMA s’exécute à un cas de Test, il exécute les objets sélectionnés pour le test et crée un rapport sur les résultats de la vérification. Si les résultats sont identiques sur les deux plateformes, le test a réussi. La correspondance des objets entre Oracle et [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] est déterminé en fonction des paramètres de mappage de schéma pour le projet SSMA actuel.  
@@ -39,7 +40,7 @@ Lorsque le test est terminé, le rapport de cas de Test est créé. Cliquez sur 
   
 ## <a name="test-case-execution-steps"></a>Étapes d’exécution des cas de test  
   
-### <a name="prerequisites"></a>Prerequisites  
+### <a name="prerequisites"></a>Configuration requise  
 Testeur de SSMA vérifie si toutes les conditions préalables sont remplies pour que l’exécution du test avant le début du test. Si certaines conditions ne sont pas satisfaites, un message d’erreur s’affiche.  
   
 ### <a name="initialization"></a>Initialisation  
@@ -49,7 +50,7 @@ Supposons que la table vérifiée est nommée USER_TABLE. Pour une telle table, 
   
 ||||  
 |-|-|-|  
-|Nom   |Type|Description|  
+|Nom|Type| Description|  
 |USER_TABLE$ Trg|déclencheur|Déclencheur d’audit les modifications dans la table vérifiée.|  
 |USER_TABLE$ AUD|table|Tableau dans lequel sont enregistrés les lignes supprimées et remplacées.|  
 |USER_TABLE$ AUDID|table|Tableau dans lequel les lignes nouvelles et modifiées sont enregistrés.|  
@@ -62,14 +63,14 @@ L’objet suivant est créé dans le schéma de table vérifié au niveau [!INCL
   
 ||||  
 |-|-|-|  
-|Nom   |Type|Description|  
+|Nom|Type| Description|  
 |USER_TABLE$ Trg|déclencheur|Déclencheur d’audit les modifications dans la table vérifiée.|  
   
 Et les objets suivants sont créés au [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]dans la base de données ssmatesterdb.  
   
 ||||  
 |-|-|-|  
-|Nom   |Type|Description|  
+|Nom|Type| Description|  
 |USER_TABLE$ Aud|table|Tableau dans lequel sont enregistrés les lignes supprimées et remplacées.|  
 |USER_TABLE$ AudID|table|Tableau dans lequel les lignes nouvelles et modifiées sont enregistrés.|  
 |USER_TABLE|vue|Représentation simplifiée des modifications de la table.|  
@@ -84,10 +85,10 @@ Et les objets suivants sont créés au [!INCLUDE[ssNoVersion](../../includes/ssn
 Lors de la finalisation SSMA testeur nettoie les objets auxiliaires créés lors de la **initialisation** étape.  
   
 ## <a name="next-step"></a>Étape suivante  
-[Affichage de rapports de cas de Test &#40; OracleToSQL &#41;](../../ssma/oracle/viewing-test-case-reports-oracletosql.md)  
+[Affichage des rapports de cas de Test &#40;OracleToSQL&#41;](../../ssma/oracle/viewing-test-case-reports-oracletosql.md)  
   
 ## <a name="see-also"></a>Voir aussi  
-[Sélection et configuration d’objets pour Test &#40; OracleToSQL &#41;](../../ssma/oracle/selecting-and-configuring-objects-to-test-oracletosql.md)  
-[Sélection et configuration affectées objets &#40; OracleToSQL &#41;](../../ssma/oracle/selecting-and-configuring-affected-objects-oracletosql.md)  
-[Test de migration des objets de base de données &#40; OracleToSQL &#41;](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)  
+[Sélection et configuration d’objets pour le Test &#40;OracleToSQL&#41;](../../ssma/oracle/selecting-and-configuring-objects-to-test-oracletosql.md)  
+[Sélectionner et configurer les objets affectés &#40;OracleToSQL&#41;](../../ssma/oracle/selecting-and-configuring-affected-objects-oracletosql.md)  
+[Test de migration des objets de base de données &#40;OracleToSQL&#41;](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)  
   

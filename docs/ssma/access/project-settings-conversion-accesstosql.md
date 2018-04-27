@@ -1,6 +1,6 @@
 ---
 title: Paramètres (Conversion) (AccessToSQL) du projet | Documents Microsoft
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-access
@@ -24,11 +24,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 12376ac24f8d1ef545a7e0d3b05482fb6852d4d1
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: cd8aa23b438b5acf14ec0748b464ffe228415721
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="project-settings-conversion-accesstosql"></a>Paramètres du projet (Conversion) (AccessToSQL)
 Les paramètres de projet de Conversion vous permettent de configurer la façon dont les objets sont convertis à partir des objets de base de données Access à [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ou des objets de base de données SQL Azure.  

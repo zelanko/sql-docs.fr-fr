@@ -1,25 +1,25 @@
-﻿---
-title: "Bien démarrer avec SQL Server 2017 sur Docker | Microsoft Docs"
-description: "Ce démarrage rapide montre comment utiliser Docker pour exécuter l’image conteneur de SQL Server 2017. Ensuite, vous créez et interrogez une base de données avec sqlcmd."
+---
+title: Bien démarrer avec SQL Server 2017 sur Docker | Microsoft Docs
+description: Ce démarrage rapide montre comment utiliser Docker pour exécuter l’image conteneur de SQL Server 2017. Ensuite, vous créez et interrogez une base de données avec sqlcmd.
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.date: 03/07/2018
 ms.topic: article
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 ms.workload: Active
-ms.openlocfilehash: 8c3f8bc09ef8c3b6838912027024a3feb97cea5d
-ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
+ms.openlocfilehash: d422a4a755061837c08a6f4f8de4e1889768ac5d
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="quickstart-run-the-sql-server-2017-container-image-with-docker"></a>Démarrage rapide : Exécuter l’image de conteneur SQL Server 2017 avec Docker
 
@@ -158,7 +158,7 @@ La procédure suivante crée une base de données nommée `TestDB`.
 1. Sur la ligne suivante, écrivez une requête pour retourner le nom de toutes les bases de données sur votre serveur :
 
    ```sql
-   SELECT Name from sys.databases
+   SELECT Name from sys.Databases
    ```
 
 1. Les deux commandes précédentes n’ont pas été exécutées immédiatement. Vous devez taper `GO` sur une nouvelle ligne pour exécuter les commandes précédentes :

@@ -1,6 +1,6 @@
 ---
 title: Paramètres (chargement d’objets) du projet (AccessToSQL) | Documents Microsoft
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-access
@@ -21,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 16d21bbe8cb2d3bc2e2d069c12fe53607774373e
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: ddfa41712c37e9c829c934a302ef8c33f038c4da
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="project-settings-loading-objects-accesstosql"></a>Paramètres (chargement d’objets) du projet (AccessToSQL)
 Les paramètres du projet du chargement des objets vous permettent de configurer le mode de synchronisation des objets de base de données Access avec des objets de base de données SQL Server.  
@@ -42,7 +42,7 @@ Vous pouvez accéder à deux pages différentes synchronisation qui contiennent 
   
 ##### <a name="misc"></a>Divers  
   
-##### <a name="attempts"></a>Attempts  
+##### <a name="attempts"></a>Tentatives  
 Fournit les informations sur le nombre de passages prennent des objets à charger dans SQL Server. Chargement des objets dans SQL Server est généralement effectué en plusieurs passes. Les objets qui ne parviennent pas à charger lors du premier passage, telles que les clés étrangères, peuvent se charger correctement dans l’étape suivante.  
   
 Par défaut, la valeur est 2.  

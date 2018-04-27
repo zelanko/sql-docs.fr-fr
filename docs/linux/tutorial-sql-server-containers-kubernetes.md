@@ -1,24 +1,24 @@
 ---
-title: "Configurer un conteneur de SQL Server dans Kubernetes pour la haute disponibilité | Documents Microsoft"
-description: "Ce didacticiel montre comment déployer une solution de haute disponibilité de SQL Server avec Kubernetes sur le Service de conteneur Azure."
+title: Configurer un conteneur de SQL Server dans Kubernetes pour la haute disponibilité | Documents Microsoft
+description: Ce didacticiel montre comment déployer une solution de haute disponibilité de SQL Server avec Kubernetes sur le Service de conteneur Azure.
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.date: 01/10/2018
 ms.topic: tutorial
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux,mvc
 ms.technology: database-engine
 ms.workload: Inactive
-ms.openlocfilehash: a21856b3a864373f84ad304484ecdd88ac17f52a
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.openlocfilehash: 9e9925268f46007155c3a6851b250a57d9b02298
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="configure-a-sql-server-container-in-kubernetes-for-high-availability"></a>Configurer un conteneur de SQL Server dans Kubernetes pour la haute disponibilité
 
@@ -61,7 +61,7 @@ Dans le diagramme suivant, le nœud qui héberge le `mssql-server` conteneur a �
    >[!NOTE]
    >Pour protéger contre les défaillances de nœud, un cluster Kubernetes nécessite plus d’un nœud.
 
-* **Azure CLI 2.0.23**
+* **CLI Azure 2.0.23**
    - Les instructions de ce didacticiel ont été validées par rapport à 2.0.23 CLI d’Azure.
 
 ## <a name="create-an-sa-password"></a>Créer un mot de passe

@@ -1,6 +1,6 @@
 ---
 title: Définition des Options de projet (OracleToSQL) | Documents Microsoft
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-oracle
@@ -20,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
-ms.openlocfilehash: 0022ce5df4791ba3084507810d3490db2c7ae4dd
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 6e3f796e4681f7eb8a5f3c8b1b00d8ab9f552b13
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="setting-project-options-oracletosql"></a>Définition des Options de projet (OracleToSQL)
 Pour chaque projet SSMA, vous pouvez définir les options de niveau projet. Ces options déterminent la conversion de l’objet, lors du chargement de l’objet de paramètres de migration des données et d’interface utilisateur. Avant de convertir des objets à [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ou migrer des données dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], vérifiez que les options de configuration sont appropriées pour le projet.  
@@ -46,7 +46,7 @@ SSMA a cinq jeux de paramètres du projet :
   
 Il comprend quatre modes de configuration de ces paramètres :  
   
--   Valeur par défaut  
+-   Par défaut  
   
 -   Optimistic  
   
@@ -58,15 +58,15 @@ Le mode par défaut est recommandé pour la plupart des utilisateurs. Le mode co
   
 Pour plus d’informations sur les paramètres et la façon dont les paramètres sont appliqués dans chaque mode, consultez les rubriques suivantes :  
   
--   [Paramètres du projet &#40; Conversion de &#41; &#40; OracleToSQL &#41;](../../ssma/oracle/project-settings-conversion-oracletosql.md)  
+-   [Paramètres du projet &#40;Conversion&#41; &#40;OracleToSQL&#41;](../../ssma/oracle/project-settings-conversion-oracletosql.md)  
   
--   [Paramètres du projet &#40; Migration &#41; &#40; OracleToSQL &#41;](../../ssma/oracle/project-settings-migration-oracletosql.md)  
+-   [Paramètres du projet &#40;Migration&#41; &#40;OracleToSQL&#41;](../../ssma/oracle/project-settings-migration-oracletosql.md)  
   
--   [Paramètres du projet &#40; Synchronisation &#41; &#40; OracleToSQL &#41;](../../ssma/oracle/project-settings-synchronization-oracletosql.md)  
+-   [Paramètres du projet&#40;synchronisation&#41; &#40;OracleToSQL&#41;](../../ssma/oracle/project-settings-synchronization-oracletosql.md)  
   
--   [Paramètres du projet &#40; L’interface graphique utilisateur &#41; &#40; OracleToSQL &#41;](../../ssma/oracle/project-settings-gui-oracletosql.md)  
+-   [Paramètres du projet &#40;GUI&#41; &#40;OracleToSQL&#41;](../../ssma/oracle/project-settings-gui-oracletosql.md)  
   
--   [Paramètres du projet &#40; Mappage de type &#41; &#40; OracleToSQL &#41;](../../ssma/oracle/project-settings-type-mapping-oracletosql.md)  
+-   [Paramètres du projet &#40;le mappage de Type&#41; &#40;OracleToSQL&#41;](../../ssma/oracle/project-settings-type-mapping-oracletosql.md)  
   
 ## <a name="setting-project-options"></a>Définition des Options de projet  
 Dans SSMA, vous pouvez configurer les paramètres par défaut pour tous les projets. Ces paramètres sont enregistrés dans le fichier de configuration de SSMA et appliqués à tout nouveau projet que vous créez.  
@@ -99,13 +99,13 @@ Vous pouvez également personnaliser les paramètres pour le projet actuel. Ces 
   
 3.  Cliquez sur **OK** pour enregistrer les paramètres.  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>Étapes suivantes  
 L’étape suivante de la migration dépend des besoins de votre projet :  
   
--   Pour personnaliser le mappage des types de données source et cible, consultez [Oracle de mappage et les Types de données SQL Server &#40; OracleToSQL &#41;](../../ssma/oracle/mapping-oracle-and-sql-server-data-types-oracletosql.md).  
+-   Pour personnaliser le mappage des types de données source et cible, consultez [Oracle de mappage et les Types de données SQL Server &#40;OracleToSQL&#41;](../../ssma/oracle/mapping-oracle-and-sql-server-data-types-oracletosql.md).  
   
--   Sinon, vous pouvez convertir les définitions d’objets de base de données Oracle dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] définitions d’objets. Pour plus d’informations, consultez [conversion des schémas Oracle &#40; OracleToSQL &#41;](../../ssma/oracle/converting-oracle-schemas-oracletosql.md).  
+-   Sinon, vous pouvez convertir les définitions d’objets de base de données Oracle dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] définitions d’objets. Pour plus d’informations, consultez [conversion des schémas Oracle &#40;OracleToSQL&#41;](../../ssma/oracle/converting-oracle-schemas-oracletosql.md).  
   
 ## <a name="see-also"></a>Voir aussi  
-[Mappage d’Oracle et les Types de données SQL Server &#40; OracleToSQL &#41;](../../ssma/oracle/mapping-oracle-and-sql-server-data-types-oracletosql.md)  
+[Mappage d’Oracle et les Types de données SQL Server &#40;OracleToSQL&#41;](../../ssma/oracle/mapping-oracle-and-sql-server-data-types-oracletosql.md)  
   

@@ -1,9 +1,9 @@
 ---
-title: 'Didacticiel : Créer un widget insight personnalisées dans les SQL Operations Studio (preview) | Documents Microsoft'
-description: Ce didacticiel montre comment créer des widgets d’insight personnalisés et les ajouter à la base de données et serveur des tableaux de bord dans SQL Operations Studio (preview).
+title: 'Didacticiel : Créer un widget insight personnalisées dans les opérations de SQL Studio (version préliminaire) | Documents Microsoft'
+description: Ce didacticiel montre comment créer des widgets d’insight personnalisés et les ajouter à la base de données et serveur des tableaux de bord dans Studio des opérations SQL (version préliminaire).
 ms.custom: tools|sos
 ms.date: 11/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
@@ -14,11 +14,11 @@ author: erickangMSFT
 ms.author: erickang
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 344cf021a4a0abc13fc8c531875c604095c8c0d1
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 97a5177bf4f0dd9e5ae3ae1b097285bd7a8d42b5
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="tutorial-build-a-custom-insight-widget"></a>Didacticiel : Créer un widget insight personnalisé
 
@@ -35,8 +35,8 @@ Au cours de ce didacticiel, vous apprendrez comment :
 
 Ce didacticiel nécessite SQL Server ou la base de données SQL Azure *TutorialDB*. Pour créer le *TutorialDB* de base de données, effectuez l’une des Démarrages rapides suivants :
 
-- [Se connecter et interroger à l’aide de SQL Server[!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-server.md)
-- [Se connecter et interroger à l’aide de la base de données SQL Azure[!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-database.md)
+- [Se connecter et interroger à l’aide de SQL Server [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-server.md)
+- [Se connecter et interroger à l’aide de la base de données SQL Azure [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-database.md)
 
 
 ## <a name="run-your-own-query-and-view-the-result-in-a-chart-view"></a>Exécuter votre propre requête et afficher le résultat dans une vue graphique

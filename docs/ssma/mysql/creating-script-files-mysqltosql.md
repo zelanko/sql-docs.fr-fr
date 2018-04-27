@@ -1,6 +1,6 @@
 ---
 title: Création de fichiers de Script (MySQLToSQL) | Documents Microsoft
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-mysql
@@ -26,11 +26,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1bef1029a5bfcde8f3cad7c83393c026e7d8a5d9
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: e8ae3b53b946373ba6f3b6bed8f6d5f139afaadb
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="creating-script-files-mysqltosql"></a>Création de fichiers de Script (MySQLToSQL)
 La première étape avant le lancement de l’application de console SSMA est à créer le fichier de script et, si nécessaire de créer le fichier de la valeur de la variable et le fichier de connexion de serveur.  
@@ -77,7 +77,7 @@ Les options configurables par l’utilisateur sont les suivantes :
   
     </output-providers>  
     ```  
-    *or*  
+    *Ou*  
   
     ```xml  
     <…All commands…>  
@@ -99,9 +99,9 @@ Les options configurables par l’utilisateur sont les suivantes :
   
     Qu’un seul ou l’autre attribut spécifié peut être utilisé par exemple :  
   
-    - source-use-last-used="true" (default) or source-server="source_servername"  
+    - utilisé en source-utilisation-dernier = « true » (par défaut) ou serveur de source = « source_servername »  
   
-    - target-use-last-used="true" (default) or target-server="target_servername"  
+    - utilisé en cible-utilisation-dernier = « true » (par défaut) ou serveur à la cible = « target_servername »  
   
     **Exemple :**  
   
@@ -114,7 +114,7 @@ Les options configurables par l’utilisateur sont les suivantes :
   
     </output-providers>  
     ```  
-    *or*  
+    *Ou*  
   
     ```xml  
     <migrate-data>  
@@ -147,7 +147,7 @@ Les options configurables par l’utilisateur sont les suivantes :
   
     </output-providers>  
     ```  
-    *or*  
+    *Ou*  
   
     ```xml  
     <!-- Connect to target database -->  
@@ -180,7 +180,7 @@ Les options configurables par l’utilisateur sont les suivantes :
   
     </output-providers>  
     ```  
-    *or*  
+    *Ou*  
   
     ```xml  
     <!--synchronization-->  
@@ -191,7 +191,7 @@ Les options configurables par l’utilisateur sont les suivantes :
   
     </synchronize-target>  
     ```  
-    *or*  
+    *Ou*  
   
     ```xml  
     <!--data migration-->  
@@ -226,7 +226,7 @@ Les options configurables par l’utilisateur sont les suivantes :
   
     </output-providers>  
     ```  
-    *or*  
+    *Ou*  
   
     ```xml  
     <convert-schema object-name="<object-name>">  
@@ -279,7 +279,7 @@ Les options configurables par l’utilisateur sont les suivantes :
   
     </output-providers>  
     ```  
-    *or*  
+    *Ou*  
   
     ```xml  
     <…All commands…>  
@@ -321,7 +321,7 @@ Les options configurables par l’utilisateur sont les suivantes :
   
     </output-providers>  
     ```  
-    *or*  
+    *Ou*  
   
     ```xml  
     <…All commands…>  

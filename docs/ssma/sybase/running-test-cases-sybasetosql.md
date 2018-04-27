@@ -2,7 +2,7 @@
 title: Exécuter des cas de Test (SybaseToSQL) | Documents Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-sybase
@@ -23,11 +23,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 687fa8b221a31e0c1c447b5c5cbee85cc31d1702
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: 321a4f0dfdadc1209cf480448e72d68cfa4fe7ed
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="running-test-cases-sybasetosql"></a>Cas de Test en cours d’exécution (SybaseToSQL)
 Lorsque le testeur de SSMA s’exécute à un cas de Test, il exécute les objets sélectionnés pour le test et crée un rapport sur les résultats de la vérification. Si les résultats sont identiques sur les deux plateformes, le test a réussi. La correspondance des objets entre Sybase et [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] est déterminé en fonction des paramètres de mappage de schéma pour le projet SSMA actuel.  
@@ -62,7 +62,7 @@ Les objets suivants sont créés au Sybase, dans la base de données SSMATESTER2
 |USER_TABLE$ AudID|Table|Tableau dans lequel les lignes nouvelles et modifiées sont enregistrés.|  
 |USER_TABLE|Affichage|Représentation simplifiée des modifications de la table.|  
 |$ USER_TABLE nouveau|Affichage|Simplifiée de la représentation sous forme de lignes insérées et remplacés.|  
-|USER_TABLE$new_id|Affichage|Identification des lignes insérées et modifiés.|  
+|USER_TABLE$ new_id|Affichage|Identification des lignes insérées et modifiés.|  
 |$ USER_TABLE ancien|Affichage|Simplifiée de la représentation sous forme de lignes supprimés et remplacés.|  
   
 L’objet suivant est créé dans la base de données de table vérifié à Sybase et [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  

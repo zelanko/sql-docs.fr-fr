@@ -1,4 +1,4 @@
-﻿---
+---
 title: Guide d’installation pour 2017 du serveur SQL sur Linux | Documents Microsoft
 description: Installer, mettre à jour et désinstaller SQL Server sur Linux. Cet article traite des scénarios en ligne, hors connexion et sans assistance.
 author: rothja
@@ -6,7 +6,7 @@ ms.author: jroth
 manager: craigg
 ms.date: 04/06/2018
 ms.topic: article
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: ''
@@ -15,11 +15,11 @@ ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 565156c3-7256-4e63-aaf0-884522ef2a52
 ms.workload: Active
-ms.openlocfilehash: 98f7f19bbcf7ba83d74c2d4aa1e54409c2434147
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.openlocfilehash: 69b56cf027a1c7d8f536b4d9ad80e5ef3b627469
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="installation-guidance-for-sql-server-on-linux"></a>Aide à l’installation de SQL Server sur Linux
 
@@ -121,7 +121,7 @@ Pour restaurer ou rétrograder SQL Server vers une version précédente, procéd
 
 Pour vérifier votre version actuelle et l’édition de SQL Server sur Linux, utilisez la procédure suivante :
 
-1. Si ce n'est déjà fait, installez les [outils de ligne de commande SQL Server](sql-server-linux-setup-tools.md). 
+1. Si ce n'est déjà fait, installez les [les outils de ligne de SQL Server](sql-server-linux-setup-tools.md).
 
 1. Utilisez **sqlcmd** pour exécuter une commande Transact-SQL qui affiche la version de SQL Server et l’édition.
 
@@ -139,7 +139,7 @@ Pour supprimer le package **mssql-server** sous Linux, utilisez une des commande
 | SLES | `sudo zypper remove mssql-server` |
 | Ubuntu | `sudo apt-get remove mssql-server` |
 
-La suppression du package ne supprime pas les fichiers de base de données. Si vous souhaitez supprimer les fichiers de base de données, utilisez la commande suivante :
+La suppression du package ne supprime pas les fichiers de base de données. Si vous souhaitez supprimer les fichiers de base de données, utilisez la commande suivante :
 
 ```bash
 sudo rm -rf /var/opt/mssql/
@@ -150,9 +150,9 @@ sudo rm -rf /var/opt/mssql/
 Vous pouvez effectuer une installation sans assistance de la manière suivante :
 
 - Suivez les étapes initiales dans les [Démarrages rapides](#platforms) pour inscrire les référentiels et installez SQL Server.
-- Lorsque vous exécutez `mssql-conf setup`, définissez les [variables d’environnement](sql-server-linux-configure-environment-variables.md) et utilisez l'option `-n` (sans invite). 
+- Lorsque vous exécutez `mssql-conf setup`, définissez les [variables d’environnement](sql-server-linux-configure-environment-variables.md)et utilisez l'option `-n` (sans invite) .
 
-L’exemple suivant configure l’édition Developer de SQL Server avec la variable d'environnement **MSSQL_PID**. Elle accepte également le CLUF (**ACCEPT_EULA**) et définit le mot de passe SA (**MSSQL_SA_PASSWORD**). Le paramètre `-n` effectue une installation sans invite où les valeurs de configuration sont extraites des variables d’environnement. 
+L’exemple suivant configure l’édition Developer de SQL Server avec la variable d'environnement **MSSQL_PID**. Elle accepte également le CLUF (**ACCEPT_EULA**) et définit le mot de passe SA (**MSSQL_SA_PASSWORD**). Le `-n` effectue une installation sans invite où les valeurs de configuration sont extraites des variables d’environnement.
 
 ```bash
 sudo MSSQL_PID=Developer ACCEPT_EULA=Y MSSQL_SA_PASSWORD='<YourStrong!Passw0rd>' /opt/mssql/bin/mssql-conf -n setup
@@ -160,7 +160,7 @@ sudo MSSQL_PID=Developer ACCEPT_EULA=Y MSSQL_SA_PASSWORD='<YourStrong!Passw0rd>'
 
 Vous pouvez également créer un script qui exécute d’autres actions. Par exemple, vous pouvez installer d’autres packages SQL Server.
 
-Pour un exemple de script plus détaillé, consultez les exemples suivants :
+Pour un exemple de script plus détaillé, consultez les exemples suivants :
 
 - [Red Hat script d’installation sans assistance](sample-unattended-install-redhat.md)
 - [SUSE script d’installation sans assistance](sample-unattended-install-suse.md)
@@ -168,14 +168,14 @@ Pour un exemple de script plus détaillé, consultez les exemples suivants :
 
 ## <a id="offline"></a> Installation hors connexion
 
-Si l’ordinateur Linux n’a pas accès aux référentiels en ligne utilisés dans les [Démarrages rapides](#platforms), vous pouvez télécharger directement les fichiers de package. Ces packages se trouvent dans le référentiel Microsoft, [https://packages.microsoft.com](https://packages.microsoft.com). 
+Si l’ordinateur Linux n’a pas accès aux référentiels en ligne utilisés dans les [Démarrages rapides](#platforms), vous pouvez télécharger directement les fichiers de package. Ces packages se trouvent dans le référentiel Microsoft, [ https://packages.microsoft.com ](https://packages.microsoft.com).
 
 > [!TIP]
 > Si vous avez installé avec succès avec les étapes décrites dans le démarrage rapide, il est inutile télécharger ou installer manuellement l’ou les packages SQL Server. Cette section concerne uniquement le scénario hors connexion.
 
-1. **Téléchargez le package de moteur de base de données pour votre plateforme**. Recherchez les liens de téléchargement de package dans la section des détails du package dans les [Notes de publication](sql-server-linux-release-notes.md). 
+1. **Téléchargez le package de moteur de base de données pour votre plateforme**. Recherchez les liens de téléchargement de package dans la section des détails du package dans les [Notes de publication](sql-server-linux-release-notes.md).
 
-1. **Déplacez le package téléchargé sur votre ordinateur Linux**. Si vous avez utilisé un autre ordinateur pour télécharger les packages, déplacez les packages vers l’ordinateur Linux avec la commande **scp**. 
+1. **Déplacez le package téléchargé sur votre ordinateur Linux**. Si vous avez utilisé un autre ordinateur pour télécharger les packages, déplacez les packages vers l’ordinateur Linux avec la commande **scp**.
 
 1. **Installer le package de moteur de base de données**. Utilisez une des commandes suivantes en fonction de votre plateforme. Remplacez le nom du fichier de package dans cet exemple par le nom exact que vous avez téléchargé.
 

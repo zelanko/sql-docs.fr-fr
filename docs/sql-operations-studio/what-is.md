@@ -1,9 +1,9 @@
-﻿---
-title: "Nouveautés de SQL Operations Studio (version préliminaire) | Microsoft Docs"
-description: "SQL Operations Studio (version préliminaire) est un outil gratuit et léger qui s’exécute sur Windows, Mac OS et Linux, pour la gestion de SQL Server, base de données SQL Azure et Azure SQL Data Warehouse ; partout où ils s’exécutent."
+---
+title: Nouveautés de SQL Operations Studio (version préliminaire) | Microsoft Docs
+description: SQL Operations Studio (version préliminaire) est un outil gratuit et léger qui s’exécute sur Windows, Mac OS et Linux, pour la gestion de SQL Server, d’Azure SQL Database et d’Azure SQL Data Warehouse, quel que soit l’endroit où ils s’exécutent.
 ms.custom: tools|sos
 ms.date: 11/17/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
@@ -14,22 +14,22 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 99dbe934a5b13e983a7c796689a2956c42354af2
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 730eed76bb4859ddbd1edacb47ab92ab5973d455
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="what-is-includename-sosincludesname-sosmd"></a>Nouveautés [!INCLUDE[name-sos](../includes/name-sos.md)]?
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)] est un outil gratuit qui s’exécute sur Windows, Mac OS et Linux, pour la gestion de SQL Server, base de données SQL Azure et Azure SQL Data Warehouse ; partout où ils s’exécutent.
+[!INCLUDE[name-sos](../includes/name-sos-short.md)]est un outil gratuit qui s’exécute sur Windows, Mac OS et Linux, pour la gestion de SQL Server, d’Azure SQL Database et d’Azure SQL Data Warehouse, quel que soit l’endroit où ils s’exécutent.
 
-**[Téléchargez et installez[!INCLUDE[name-sos](../includes/name-sos-short.md)]](download.md)**
+**[Téléchargez et installez [!INCLUDE[name-sos](../includes/name-sos-short.md)]](download.md)**
 
 
 ## <a name="transact-sql-t-sql-code-editor-with-intellisense"></a>Éditeur de code Transact-SQL (T-SQL) avec IntelliSense
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)] offre une expérience moderne, avec du code T-SQL axé sur le clavier qui facilite vos tâches quotidiennes avec les fonctionnalités intégrées, telles que des fenêtres d’onglet mutiples, un éditeur T-SQL riche, l'IntelliSense, la complétion de mot clé, des extraits de code, la navigation de code et l'intégration du contrôle de code source (Git). Exécutez des requêtes T-SQL à la demande, affichez et enregistrez les résultats en tant que texte, JSON ou Excel. Modifiez les données, organisez vos connexions de base de données favories et parcourez les objets de base de données dans une expérience de navigation objet familière. Pour savoir comment utiliser l’éditeur T-SQL, consultez [utiliser l’éditeur T-SQL pour créer des objets de base de données](tutorial-sql-editor.md).
+[!INCLUDE[name-sos](../includes/name-sos-short.md)]offre une expérience moderne du codage de T-SQL centré sur le clavier, qui facilite vos tâches quotidiennes avec des fonctionnalités intégrées, comme des fenêtres à plusieurs onglets, un éditeur T-SQL avec de nombreuses fonctionnalités, IntelliSense, la complétion de mot clé, les extraits de code, la navigation dans le code et l'intégration du contrôle du code source (Git). Exécutez des requêtes T-SQL à la demande, affichez et enregistrez les résultats en tant que texte, JSON ou Excel. Modifiez les données, organisez vos connexions de base de données préférées et parcourez les objets de celles-ci dans une expérience de navigation familière. Pour savoir comment utiliser l’éditeur T-SQL, consultez [utiliser l’éditeur T-SQL pour créer des objets de base de données](tutorial-sql-editor.md).
 
 ## <a name="smart-t-sql-code-snippets"></a>Extraits de code smart T-SQL
 
@@ -51,7 +51,7 @@ Les groupes de serveurs vous permettent d’organiser les informations de connex
 Utilisez vos outils de ligne de commande favoris (par exemple Bash, PowerShell, sqlcmd, bcp et ssh) dans la fenêtre du terminal intégré, directement dans l'interface utilisateur de [!INCLUDE[name-sos](../includes/name-sos-short.md)]. Pour en savoir plus sur le terminal intégré, consultez [terminal intégré] (terminal.md intégré).
 
 ## <a name="next-steps"></a>Étapes suivantes
-- [Téléchargez et installez [!INCLUDE[name-sos](../includes/name-sos-short.md)]](download.md)
-- [Se connecter et Requêter SQL Server](quickstart-sql-server.md)
+- [Téléchargez et installez[!INCLUDE[name-sos](../includes/name-sos-short.md)]](download.md)
+
 - [Se connecter à et interroger SQL Server](quickstart-sql-server.md)
 - [Se connecter et interroger la base de données SQL Azure](quickstart-sql-database.md)

@@ -2,7 +2,7 @@
 title: L’exécution de la Console SSMA (SybaseToSQL) | Documents Microsoft
 ms.custom: ''
 ms.date: 09/27/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-sybase
@@ -30,11 +30,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 85ffcf0158ea7f28e53addc7d8a5cb1878dbcb38
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: ae312cdb14d6e2e963fb4d967402a7209ffb8a36
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="executing-the-ssma-console-sybasetosql"></a>L’exécution de la Console SSMA (SybaseToSQL)
 Microsoft vous fournit un ensemble robuste de script de commandes du fichier à exécuter et contrôler les activités SSMA. Les sections qui en découlent décrit en détail le même.  
@@ -45,7 +45,7 @@ L’application console utilise certaines commandes de fichier de script standar
 ## <a name="project-commands"></a>Commandes du projet  
 Les commandes de projet gèrent la création de projets, ouvrir, enregistrer et les projets en cours de fermeture.  
   
-### <a name="create-new-project"></a>create-new-project  
+### <a name="create-new-project"></a>créer à nouveau projet  
 Cette commande crée un nouveau projet SSMA.  
   
 -   `project-folder` Indique le dossier du projet créé.  
@@ -95,7 +95,7 @@ Cette commande ouvre le projet.
 > [!NOTE]  
 > SSMA pour l’Application de Console SAP ASE prend en charge la compatibilité descendante. Vous pouvez l’utiliser pour ouvrir des projets créés par une version précédente de SSMA.  
   
-### <a name="save-project"></a>save-project  
+### <a name="save-project"></a>enregistrer le projet  
 Cette commande enregistre le projet de migration.  
   
 **Exemple de syntaxe :**  
@@ -104,7 +104,7 @@ Cette commande enregistre le projet de migration.
 <save-project/>  
 ```  
   
-### <a name="close-project"></a>close-project  
+### <a name="close-project"></a>projet de fermer  
 Cette commande ferme le projet de migration.  
   
 **Exemple de syntaxe :**  
@@ -136,7 +136,7 @@ La définition de serveur est récupérée à partir de l’attribut de nom déf
 <connect-source-database  server="<server-unique-name>"/>  
 ```  
   
-### <a name="force-load-sourcetarget-database"></a>force-load-source/target-database  
+### <a name="force-load-sourcetarget-database"></a>force-charge-source/cible-base de données  
 Cette commande charge les métadonnées de la source, et il est utile pour travailler sur le projet de migration hors connexion.  
   
 Si la connexion à la source/cible ne peut pas être établie, une erreur est générée et l’application console arrête davantage l’exécution.  
@@ -153,7 +153,7 @@ Cette commande nécessite un ou plusieurs nœuds de la métabase en tant que par
 </force-load>  
 ```  
   
-### <a name="reconnect-source-database"></a>reconnect-source-database  
+### <a name="reconnect-source-database"></a>reconnecter--base de données source  
 Cette commande se reconnecte à la base de données source mais ne charge pas toutes les métadonnées, contrairement à la commande connect--base de données source.  
   
 Si la (connexion avec la source re) ne peut pas être établie, une erreur est générée et l’application console arrête davantage l’exécution.  
@@ -164,7 +164,7 @@ Si la (connexion avec la source re) ne peut pas être établie, une erreur est g
 <reconnect-source-database  server="<server-unique-name>"/>  
 ```  
   
-### <a name="connect-target-database"></a>connect-target-database  
+### <a name="connect-target-database"></a>se connecter--base de données cible  
 Cette commande se connecte à la base de données SQL Server et charge les métadonnées de haut niveau de la base de données cible mais pas les métadonnées entièrement.  
   
 Si la connexion à la cible ne peut pas être établie, une erreur est générée et l’application console arrête davantage l’exécution.  
@@ -177,7 +177,7 @@ La définition de serveur est récupérée à partir de l’attribut de nom déf
 <connect-target-database  server="<server-unique-name>"/>  
 ```  
   
-### <a name="reconnect-target-database"></a>reconnect-target-database  
+### <a name="reconnect-target-database"></a>reconnecter--base de données cible  
   
 Cette commande se reconnecte à la base de données cible, mais ne charge pas toutes les métadonnées, contrairement à la commande connect--base de données cible.  
   
@@ -192,7 +192,7 @@ Si la (connexion à la cible re) ne peut pas être établie, une erreur est gén
 ## <a name="report-commands"></a>Commandes de rapport  
 Les commandes de rapports génèrent des rapports sur les performances de diverses activités de la Console de SSMA.  
   
-### <a name="generate-assessment-report"></a>generate-assessment-report  
+### <a name="generate-assessment-report"></a>Générer--rapport d’évaluation  
   
 Cette commande génère des rapports d’évaluation de la base de données source.  
   
@@ -322,7 +322,7 @@ ou
 </convert-schema>  
 ```  
   
-### <a name="migrate-data"></a>migrate-data  
+### <a name="migrate-data"></a>migrer des données  
 Cette commande migre les données source à la cible.  
   
 -   `object-name:` Spécifie l’ou les objets source pris en compte pour la migration de données (prend en charge les noms de l’objet ou un nom d’objet de groupe).  
@@ -382,7 +382,7 @@ La commande de préparation de Migration lance un mappage de schéma entre les b
 > [!NOTE]  
 > La sortie de console par défaut définissant pour les commandes de migration est le rapport de sortie « Complète » avec aucun rapport d’erreur détaillé : résumé uniquement sur le nœud racine d’arborescence objet source.  
   
-### <a name="map-schema"></a>map-schema  
+### <a name="map-schema"></a>schéma de mappage  
 Cette commande fournit le mappage du schéma de la base de données source vers le schéma cible.  
   
 -   `source-schema` Spécifie le schéma source pour effectuer la migration.  
@@ -403,7 +403,7 @@ Les commandes de la facilité de gestion permettent de synchroniser les objets d
 > [!NOTE]  
 > La sortie de console par défaut définissant pour les commandes de migration est le rapport de sortie « Complète » avec aucun rapport d’erreur détaillé : résumé uniquement sur le nœud racine d’arborescence objet source.  
   
-### <a name="synchronize-target"></a>synchronize-target  
+### <a name="synchronize-target"></a>synchroniser la cible  
 Cette commande synchronise les objets cibles avec la base de données cible.  
  
 Si cette commande est exécutée sur la base de données source, une erreur s’est produite.  
@@ -420,7 +420,7 @@ Si la connexion de base de données cible n’est pas effectuée avant d’exéc
   
     -   rapport-chaque-sous-avertissement  
   
-    -   fail-script  
+    -   Échec-script  
   
 -   `report-errors-to:` Spécifie l’emplacement du rapport d’erreurs pour l’opération de synchronisation (attribut facultatif). Si seul le chemin d’accès de dossier est indiqué, puis de fichiers par nom **TargetSynchronizationReport.XML** est créé.  
   
@@ -481,7 +481,7 @@ Cette commande nécessite un ou plusieurs nœuds de la métabase en tant que par
   
     -   rapport-chaque-sous-avertissement  
   
-    -   fail-script  
+    -   Échec-script  
   
 -   `report-errors-to:` Spécifie l’emplacement du rapport d’erreurs pour l’opération d’actualisation (attribut facultatif). Si seul le chemin d’accès de dossier est indiqué, puis de fichiers par nom **SourceDBRefreshReport.XML** est créé.  
   
@@ -524,7 +524,7 @@ ou
 ## <a name="script-generation-commands"></a>Les commandes de génération de script  
 Les commandes de génération du Script effectuent deux tâches : elles permettent d’enregistrer la sortie dans un fichier de script de la console, et ils enregistrent la sortie de T-SQL dans la console ou un fichier basé sur le paramètre que vous spécifiez.  
   
-### <a name="save-as-script"></a>save-as-script  
+### <a name="save-as-script"></a>en tant que script de sauvegarde  
 Cette commande est utilisée pour enregistrer les Scripts des objets dans un fichier mentionné lorsque la métabase = cible. Il s’agit d’une alternative à la commande de synchronisation dans la mesure où nous obtenir les scripts et d’exécuter le même sur la base de données cible.  
   
 Cette commande nécessite un ou plusieurs nœuds de la métabase en tant que paramètre de ligne de commande.  
@@ -572,7 +572,7 @@ ou
 </save-as-script>  
 ```  
   
-### <a name="convert-sql-statement"></a>convert-sql-statement
+### <a name="convert-sql-statement"></a>instruction CONVERT-sql
 Cette commande convertit l’instruction SQL.  
   
 -   `context` Spécifie le nom du schéma.  

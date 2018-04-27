@@ -1,16 +1,16 @@
 ---
-title: "L’atomisation (XQuery) | Documents Microsoft"
-ms.custom: 
+title: L’atomisation (XQuery) | Documents Microsoft
+ms.custom: ''
 ms.date: 08/01/2016
-ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
-ms.service: 
+ms.prod: sql
+ms.prod_service: sql
+ms.service: ''
 ms.component: xquery
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - XML
@@ -18,16 +18,16 @@ helpviewer_keywords:
 - XQuery, atomization
 - atomization [XQuery]
 ms.assetid: e3d7cf2f-c6fb-43c2-8538-4470a6375af5
-caps.latest.revision: 
+caps.latest.revision: 16
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 266a592860894ac255f7d01647e1f4caabbe88a3
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: a670727f677f17eb8ecab859dd1593bdae855a97
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="atomization-xquery"></a>Atomisation (XQuery)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ SELECT @x.query('sum(/ROOT/Location/@LaborHours)')
 SELECT @x.query('sum(data(ROOT/Location/@LaborHours))')  
 ```  
   
- Un autre exemple d'atomisation implicite réside dans l'utilisation d'opérateurs arithmétiques. Le  **+**  opérateur requiert des valeurs atomiques et **data()** est appliquée implicitement pour récupérer la valeur atomique de l’attribut LaborHours. La requête est spécifiée sur la colonne Instructions de la **xml** type dans la table ProductModel. La requête suivante renvoie trois fois l'attribut LaborHours. À ce sujet, vous remarquerez que :  
+ Un autre exemple d'atomisation implicite réside dans l'utilisation d'opérateurs arithmétiques. Le **+** opérateur requiert des valeurs atomiques et **data()** est appliquée implicitement pour récupérer la valeur atomique de l’attribut LaborHours. La requête est spécifiée sur la colonne Instructions de la **xml** type dans la table ProductModel. La requête suivante renvoie trois fois l'attribut LaborHours. À ce sujet, vous remarquerez que :  
   
 -   Lors de la construction de l'attribut OriginalLaborHours, l'atomisation s'applique implicitement à la séquence singleton renvoyée par (`$WC/@LaborHours`). La valeur typée de l'attribut LaborHours est affectée à OriginalLaborHours.  
   
@@ -85,7 +85,7 @@ where ProductModelID=7
   
 ## <a name="see-also"></a>Voir aussi  
  [Principes fondamentaux de XQuery](../xquery/xquery-basics.md)   
- [Expressions de comparaison &#40; XQuery &#41;](../xquery/comparison-expressions-xquery.md)   
+ [Expressions de comparaison &#40;XQuery&#41;](../xquery/comparison-expressions-xquery.md)   
  [Fonctions XQuery impliquant le type de données xml](../xquery/xquery-functions-against-the-xml-data-type.md)  
   
   

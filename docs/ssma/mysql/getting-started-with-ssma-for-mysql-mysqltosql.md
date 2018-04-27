@@ -1,6 +1,6 @@
 ---
 title: Prise en main de SSMA pour MySQL (MySQLToSQL) | Documents Microsoft
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-mysql
@@ -25,11 +25,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: efe3b32103e655213cecedbc9312233d5fd2c2d9
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: eac1a3e0b45669194dc78c34fbe28526f17c005b
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="getting-started-with-ssma-for-mysql-mysqltosql"></a>Prise en main de SSMA pour MySQL (MySQLToSQL)
 SQL Server Migration Assistant (SSMA) pour MySQL vous permet de rapidement convertir des schémas de base de données MySQL en schémas SQL Server ou de la base de données SQL Azure, téléchargez les schémas qui en résulte dans SQL Server ou une base de données SQL Azure et migrer des données de MySQL vers SQL Server ou de la base de données SQL Azure.  
@@ -107,7 +107,7 @@ Le tableau suivant affiche les commandes de la barre d’outils de la migration�
   
 |||  
 |-|-|  
-|**Button**|**Fonction**|  
+|**Bouton**|**Fonction**|  
 |**Créer des rapports**|Convertit les objets sélectionnés de MySQL pour les objets SQL Server ou de la base de données SQL Azure et crée ensuite un rapport qui indique la réussite de la conversion a.<br /><br />Cette commande est désactivée, sauf si les objets sont sélectionnés dans l’Explorateur de métadonnées MySQL.|  
 |**Convertir le schéma**|Convertit les objets sélectionnés de MySQL pour les objets SQL Server ou de la base de données SQL Azure.<br /><br />Cette commande est désactivée, sauf si les objets sont sélectionnés dans l’Explorateur de métadonnées MySQL.|  
 |**Migrer des données**|Migre les données à partir de la base de données MySQL vers SQL Server ou de la base de données SQL Azure. Avant d’exécuter cette commande, vous devez convertir les schémas MySQL en schémas SQL Server ou de la base de données SQL Azure et puis charger les objets dans SQL Server ou de la base de données SQL Azure.<br /><br />Cette commande est désactivée, sauf si les objets sont sélectionnés dans l’Explorateur de métadonnées MySQL.|  

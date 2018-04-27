@@ -2,7 +2,7 @@
 title: Commandes de menu et autres touches de raccourci (Sybase vers SQL) | Documents Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-sybase
@@ -21,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c0d4a6d5e9275c9d6f62b6ebe06b950f5600b4ee
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: f076131ed31fbd9e7d132291b25b177fbc8a2793
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="menu-commands-and-other-shortcut-keys-sybase-to-sql"></a>Commandes de menu et autres touches de raccourci (Sybase vers SQL)
 Les sections suivantes décrivent les raccourcis clavier pour accéder aux commandes de menu et autres touches de raccourci utilisées dans les différentes boîtes de dialogue de SSMA pour Sybase application.  

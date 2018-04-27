@@ -1,6 +1,6 @@
 ---
 title: Évaluation des objets de base de données Access pour la Conversion (AccessToSQL) | Documents Microsoft
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-access
@@ -30,11 +30,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f34d6d2c90b90a5afc7b10a19cc5d82373a26a86
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: 98d7b1276251e171ce849e04862ac6057a510d4e
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="assessing-access-database-objects-for-conversion-accesstosql"></a>Évaluation des objets de base de données Access pour la Conversion (AccessToSQL)
 Avant de charger des objets et de migrer des données vers [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ou SQL Azure, vous devez déterminer la quantité de la migration sera établie, et la durée pendant laquelle la conversion peut prendre. SSMA peut créer un rapport d’évaluation qui affiche le pourcentage des objets qui ont été correctement converti en [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ou syntaxe de SQL Azure et l’heure des estimations pour effectuer la migration. SSMA permet également d’afficher les problèmes spécifiques à l’origine des échecs de conversion.  

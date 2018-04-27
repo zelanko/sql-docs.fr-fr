@@ -2,7 +2,7 @@
 title: Paramètres (base de données SQL Azure) du projet (SybaseToSQL) | Documents Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-sybase
@@ -21,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cb155079bc318e9b23944fb2830a64454d3a76de
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: 741c45fb95faee927129d073b7132b32c8ecc83d
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="project-settings-azure-sql-db--sybasetosql"></a>Paramètres (base de données SQL Azure) du projet (SybaseToSQL)
 Les paramètres de projet de base de données SQL Azure vous permettent de configurer le suffixe de base de données de base de données SQL Azure à ajouter dans la boîte de dialogue de connexion et permettent également à implémenter un mécanisme de pulsation dans la connexion de base de données SQL Azure.  
@@ -45,7 +45,7 @@ Spécifie un intervalle de temps à utiliser pour le mécanisme de pulsation afi
   
 La valeur doit être spécifiée dans suis : format des ss (par exemple, ' 4:45 ' ou ' 0:50 ').  
   
-**Azure SQL DB Server Suffix**  
+**Suffixe de serveur de base de données SQL Azure**  
   
 Spécifie un suffixe de serveur de base de données SQL Azure  
   

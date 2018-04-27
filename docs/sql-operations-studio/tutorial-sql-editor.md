@@ -1,9 +1,9 @@
 ---
-title: 'Didacticiel : Utiliser l’éditeur SQL Operations Studio (preview) Transact-SQL pour créer des objets de base de données | Documents Microsoft'
-description: Ce didacticiel présente les principales fonctionnalités qui simplifient l’utilisation de T-SQL dans SQL Operations Studio (preview).
+title: 'Didacticiel : Utiliser l’éditeur SQL opérations Studio (version préliminaire) Transact-SQL pour créer des objets de base de données | Documents Microsoft'
+description: Ce didacticiel présente les principales fonctionnalités qui simplifient l’utilisation de T-SQL dans Studio des opérations SQL (version préliminaire).
 ms.custom: tools|sos
 ms.date: 03/13/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
@@ -14,11 +14,11 @@ author: erickangMSFT
 ms.author: erickang
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: db9cc8185742980b649f9fcc11eced5687201464
-ms.sourcegitcommit: 6b1618aa3b24bf6759b00a820e09c52c4996ca10
+ms.openlocfilehash: 5fec80de2d2e86871926a36c7d1601a217b1b737
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="tutorial-use-the-transact-sql-editor-to-create-database-objects---includename-sosincludesname-sos-shortmd"></a>Didacticiel : Utiliser l’éditeur Transact-SQL pour créer des objets de base de données- [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
@@ -63,18 +63,18 @@ Ce didacticiel nécessite SQL Server ou la base de données SQL Azure *TutorialD
 
 ## <a name="use-t-sql-snippets-to-create-stored-procedures"></a>Utiliser des extraits de code T-SQL pour créer des procédures stockées
 
-SQL Operations Studio fournit plusieurs extraits de code T-SQL intégrés pour créer rapidement des instructions.
+Opérations de SQL Studio fournit plusieurs extraits de code T-SQL intégrés pour créer rapidement des instructions.
 
 
 1. Ouvrez un nouvel éditeur de requête en appuyant sur **Ctrl + N**.
 
 2. Type **sql** dans l’éditeur, la flèche vers le bas pour **sqlCreateStoredProcedure**, puis appuyez sur la *onglet* clé (ou *entrée*) pour charger la créer stockée extrait de la procédure.
 
-   ![snippet-list](./media/tutorial-sql-editor/snippet-list.png)
+   ![liste de l’extrait de code](./media/tutorial-sql-editor/snippet-list.png)
 
 3. L’extrait de code de procédure stockée créer comporte deux champs défini pour la modification rapide, *StoredProcedureName* et *SchemaName*. Sélectionnez *StoredProcedureName*, avec le bouton droit, puis sélectionnez **modifier toutes les Occurrences**. Tapez maintenant *getCustomer* et tous les *StoredProcedureName* pour modifier les entrées *getCustomer*.
 
-   ![snippet](./media/tutorial-sql-editor/snippet.png)
+   ![Extrait de code](./media/tutorial-sql-editor/snippet.png)
 
 5. Remplacez toutes les occurrences de *SchemaName* à *dbo*. 
 6. L’extrait de code contient les paramètres de l’espace réservé et le texte à mettre à jour. Le *EXECUTE* instruction contient également le texte d’espace réservé, car il ne connaît pas le nombre de paramètres aura par la procédure. Pour ce didacticiel mise à jour de l’extrait de code il ressemble le code suivant :
@@ -117,7 +117,7 @@ La procédure stockée est maintenant créée et le **résultats** volet affiche
 
 ## <a name="use-peek-definition"></a>Utilisez l’aperçu de définition 
 
-SQL Operations Studio offre la possibilité pour afficher une définition d’objets à l’aide de la fonctionnalité de définition d’aperçu. Cette section crée une seconde procédure stockée et utilise un aperçu de définition pour voir quels sont les colonnes dans une table pour créer rapidement le corps de la procédure stockée.
+Opérations de SQL Studio offre la possibilité pour afficher une définition d’objets à l’aide de la fonctionnalité de définition d’aperçu. Cette section crée une seconde procédure stockée et utilise un aperçu de définition pour voir quels sont les colonnes dans une table pour créer rapidement le corps de la procédure stockée.
 
 1. Ouvrez un nouvel éditeur en appuyant sur **Ctrl + N**. 
 

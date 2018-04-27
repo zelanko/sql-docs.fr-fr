@@ -1,6 +1,6 @@
 ---
 title: Définition des Options de projet (MySQLToSQL) | Documents Microsoft
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-mysql
@@ -23,11 +23,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9de9ab5f01b0d6b5bf46c45d091e93430cfb8067
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: 0a39cb38cc8439ccb5eac559445b7836982b41ff
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="setting-project-options-mysqltosql"></a>Définition des Options de projet (MySQLToSQL)
 Pour chaque projet SSMA, vous pouvez définir les options au niveau du projet. Ces options déterminent la façon dont les objets sont convertis, la migration des données et la correspondance entre les types de sources de données et les types de données cible.  Avant de convertir les objets dans SQL Server ou SQL Azure ou migrer des données vers SQL Server ou SQL Azure, vérifiez que les options de configuration sont appropriées pour le projet.  
@@ -43,7 +43,7 @@ SSMA a cinq jeux de paramètres du projet :
   
 -   Synchronization  
   
--   GUI  
+-   INTERFACE GRAPHIQUE UTILISATEUR  
   
 -   Mappage de type  
   

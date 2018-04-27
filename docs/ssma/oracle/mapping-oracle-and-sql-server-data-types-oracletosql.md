@@ -1,6 +1,6 @@
 ---
 title: Mappage d’Oracle et les Types de données SQL Server (OracleToSQL) | Documents Microsoft
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-oracle
@@ -20,17 +20,17 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
-ms.openlocfilehash: 8984f279cb6a42d057093f048a29149a7be2d981
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 14abe4d362eead87d83ab8ea9b9082f8c2c8f566
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="mapping-oracle-and-sql-server-data-types-oracletosql"></a>Mappage d’Oracle et les Types de données SQL Server (OracleToSQL)
 Les types de base de données Oracle diffèrent [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] types de base de données. Lorsque vous convertissez des objets de base de données Oracle à [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] des objets, vous devez spécifier le mappage des types de données d’Oracle vers [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Vous pouvez accepter les mappages de type de données par défaut, ou vous pouvez personnaliser les mappages comme indiqué dans les sections suivantes.  
   
 ## <a name="default-mappings"></a>Mappages par défaut  
-SSMA a un jeu de mappages de types de données. Pour obtenir la liste des mappages par défaut, consultez [paramètres du projet &#40; Mappage de type &#41; &#40; OracleToSQL &#41; ](../../ssma/oracle/project-settings-type-mapping-oracletosql.md).  
+SSMA a un jeu de mappages de types de données. Pour obtenir la liste des mappages par défaut, consultez [les paramètres de projet &#40;le mappage de Type&#41; &#40;OracleToSQL&#41;](../../ssma/oracle/project-settings-type-mapping-oracletosql.md).  
   
 ## <a name="type-mapping-inheritance"></a>Mappage d’héritage de type  
 Vous pouvez personnaliser les mappages de type pour le projet au niveau, le niveau de catégorie objet (par exemple, toutes les procédures stockées) ou objet. Les paramètres sont hérités du niveau supérieur, sauf si elles sont remplacées à un niveau inférieur. Par exemple, si vous mappez **smallmoney** à **money** au niveau du projet, tous les objets dans le projet utilisera ce mappage, sauf si vous personnalisez le mappage au niveau de l’objet ou une catégorie.  
@@ -84,7 +84,7 @@ La procédure suivante montre comment mapper des types de données au niveau du 
   
     4.  Sous **type cible**, sélectionnez la cible [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] type de données.  
   
-        Certains types nécessitent une longueur de type de données cible. Si nécessaire, entrez la nouvelle longueur de données dans le **remplacer par** zone, puis[!INCLUDE[clickOK](../../includes/clickok_md.md)]  
+        Certains types nécessitent une longueur de type de données cible. Si nécessaire, entrez la nouvelle longueur de données dans le **remplacer par** zone, puis [!INCLUDE[clickOK](../../includes/clickok_md.md)]  
   
 4.  Pour supprimer un mappage de type de données personnalisé, procédez comme suit :  
   
@@ -94,9 +94,9 @@ La procédure suivante montre comment mapper des types de données au niveau du 
   
         Impossible de supprimer les mappages hérités. Toutefois, héritée de mappages sont remplacés par des mappages personnalisés sur un objet spécifique ou la catégorie d’objet.  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>Étapes suivantes  
 L’étape suivante du processus de migration consiste à [créer un rapport d’évaluation](http://msdn.microsoft.com/en-us/4de9bcf6-1346-4740-87f9-7f24a8226357) ou [convertir les objets de base de données Oracle en syntaxe SQL](http://msdn.microsoft.com/en-us/e021182d-31da-443d-b110-937f5db27272). Si vous créez un rapport d’évaluation, les objets Oracle sont automatiquement convertis durant l’évaluation.  
   
 ## <a name="see-also"></a>Voir aussi  
-[Migration bases de données Oracle pour SQL Server &#40; OracleToSQL &#41;](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  
+[Bases de données de migration d’Oracle vers SQL Server &#40;OracleToSQL&#41;](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  
   

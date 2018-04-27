@@ -28,11 +28,11 @@ ms.author: sstein
 manager: craigg
 ms.workload: On Demand
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: aa92fecfa13610fb5e8720238629321bfb6c62c5
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 727a7752eea98f778780056c0940873580e6682c
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="sysdmexecsqltext-transact-sql"></a>sys.dm_exec_sql_text (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -82,7 +82,7 @@ Identifie de façon univoque un plan de requête pour un traitement en cache ou 
 |**texte**|**nvarchar(max** **)**|Texte de la requête SQL.<br /><br /> NULL pour les objets chiffrés.|  
   
 ## <a name="permissions"></a>Autorisations  
- requièrent l'autorisation VIEW SERVER STATE sur le serveur.  
+ Nécessite l'autorisation `VIEW SERVER STATE` sur le serveur.  
   
 ## <a name="remarks"></a>Notes  
 Pour les requêtes ad hoc, les handles SQL sont des valeurs de hachage en fonction du texte SQL qui est envoyé au serveur et peuvent provenir d’une base de données. 

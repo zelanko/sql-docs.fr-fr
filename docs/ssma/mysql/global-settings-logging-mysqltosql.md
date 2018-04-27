@@ -1,6 +1,6 @@
 ---
 title: Paramètres globaux (journalisation) (MySQLToSQL) | Documents Microsoft
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-mysql
@@ -21,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7c0014fc222c045a0a35766f1d20225c3bf68866
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: 07b857c7fbd9d303eb100e6bf7df5785f1ec3f6c
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="global-settings-logging--mysqltosql"></a>Paramètres globaux (journalisation) (MySQLToSQL)
 Utilisez le **paramètres globaux** boîte de dialogue pour spécifier les paramètres de journalisation pour SSMA. En règle générale, il faudrait modifier ces paramètres uniquement lorsque vous travaillez avec le support technique.  
@@ -39,15 +39,15 @@ Les options suivantes sont disponibles sous **au niveau des Messages**:
 |Option| Description|  
 |----------|---------------|  
 |**[toutes les catégories]**|Utilisé pour définir le niveau de journalisation pour toutes les options suivantes.|  
-|**Collector**|Collecte des métadonnées sur le schéma source et l’enregistre dans le projet.|  
+|**Collecteur**|Collecte des métadonnées sur le schéma source et l’enregistre dans le projet.|  
 |**Converter**|Convertit des objets de base de données source, tels que les tables et procédures stockées, des structures de correspondant [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] structures.|  
 |**Utilitaire de migration de données**|Migre les données à partir de la base de données source dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].|  
-|**Formatter**|Sous-composant du convertisseur qui génère des scripts pour le [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] schéma.|  
+|**Formateur**|Sous-composant du convertisseur qui génère des scripts pour le [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] schéma.|  
 |**Interface utilisateur graphique**|Messages qui s’affichent lorsque vous utilisez l’outil SSMA.|  
-|**Linker**|Résout les identificateurs SQL et fournit des informations à d’autres composants.|  
+|**Éditeur de liens**|Résout les identificateurs SQL et fournit des informations à d’autres composants.|  
 |**Autres**|Tous les messages qui ne sont pas dans une autre catégorie.|  
-|**Parser**|Analyse du schéma source.|  
-|**Synchronizer**|Charge la source des objets de base de données dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].|  
+|**Analyseur**|Analyse du schéma source.|  
+|**Synchronisateur**|Charge la source des objets de base de données dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].|  
 |**TreeConverter**|Convertit des objets dans les métadonnées de la source en [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] métadonnées.|  
   
 Pour chaque option sous **au niveau des Messages**, configurez l’un des niveaux de journalisation suivants pour SSMA :  

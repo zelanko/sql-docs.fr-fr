@@ -1,24 +1,24 @@
 ---
 title: Meilleures pratiques de performances pour SQL Server sur Linux | Documents Microsoft
-description: "Cet article fournit des performances meilleures pratiques et des instructions pour l’exécution de SQL Server 2017 sur Linux."
+description: Cet article fournit des performances meilleures pratiques et des instructions pour l’exécution de SQL Server 2017 sur Linux.
 author: rgward
 ms.author: bobward
 manager: craigg
 ms.date: 09/14/2017
 ms.topic: article
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: Inactive
-ms.openlocfilehash: a5cc1b84780ce8b3ea471ee567a7296ab2b183b9
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.openlocfilehash: a0e9c5dde8f5bc9ef2e8a7ac285a8152b0c34e9c
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="performance-best-practices-and-configuration-guidelines-for-sql-server-2017-on-linux"></a>Meilleures pratiques de performance et des instructions de configuration pour 2017 du serveur SQL sur Linux
 
@@ -78,7 +78,7 @@ Le tableau suivant fournit des recommandations pour les paramètres de disque :
 | Paramètre | Valeur | Informations complémentaires |
 |---|---|---|
 | lues par anticipation de disque | 4096 | Consultez le **blockdev** commande |
-| paramètres de sysctl | kernel.sched_min_granularity_ns = 10000000<br/>kernel.sched_wakeup_granularity_ns = 15000000<br/>vm.dirty_ratio = 40<br/>VM.dirty_background_ratio = 10<br/>vm.swappiness=10 | Consultez le **sysctl** commande |
+| paramètres de sysctl | Kernel.sched_min_granularity_ns = 10000000<br/>Kernel.sched_wakeup_granularity_ns = 15 000 000<br/>VM.dirty_ratio = 40<br/>VM.dirty_background_ratio = 10<br/>vm.swappiness=10 | Consultez le **sysctl** commande |
 
 ### <a name="kernel-setting-auto-numa-balancing-for-multi-node-numa-systems"></a>Noyau paramètre auto numa équilibrage pour les systèmes à plusieurs nœuds NUMA
 
@@ -104,7 +104,7 @@ Utilisez le **noatime** attribut avec n’importe quel système de fichiers qui 
 
 La plupart des installations de Linux doit disposer de cette option sur par défaut. Nous vous recommandons de l’expérience de performances plus cohérent de laisser cette option de configuration activée.
 
-### <a name="swapfile"></a>swapfile
+### <a name="swapfile"></a>fichier d’échange
 
 Assurez-vous de qu'avoir un fichier d’échange configuré correctement pour éviter les problèmes de mémoire insuffisante. Consultez votre documentation Linux pour savoir comment créer et dimensionner correctement un fichier d’échange.
 

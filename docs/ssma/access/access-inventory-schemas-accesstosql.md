@@ -1,6 +1,6 @@
 ---
-title: Access Inventory Schemas (AccessToSQL) | Microsoft Docs
-ms.prod: sql-non-specified
+title: Accéder aux schémas d’inventaire (AccessToSQL) | Documents Microsoft
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-access
@@ -48,13 +48,13 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d68215dd768a2fbd4e6723d7ca98ef9a5c96c72d
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: a279ed084f4d7dc3b2574ed71332acf9bfe61c8f
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
-# <a name="access-inventory-schemas-accesstosql"></a>Access Inventory Schemas (AccessToSQL)
+# <a name="access-inventory-schemas-accesstosql"></a>Accès aux schémas de stock (AccessToSQL)
 Les sections suivantes décrivent les tables qui sont créés par SSMA lorsque vous exportez des schémas d’accès à [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
   
 ## <a name="databases"></a>Bases de données  
@@ -108,7 +108,7 @@ Métadonnées de colonne sont exportée vers le **SSMA_Access_InventoryColumns**
 |**DataType**|**nvarchar(4000)**|Type de données Access de la colonne, tel que **texte** ou **Long**.|  
 |**IsAutoIncrement**|**bit**|Spécifie si la colonne s’incrémente automatiquement des valeurs entières. Si la valeur est 1, les entiers sont à incrémentation automatique.|  
 |**Ordinal**|**smallint**|L’ordre de la colonne dans la table, en commençant à zéro.|  
-|**DefaultValue**|**nvarchar(4000)**|Valeur par défaut de la colonne.|  
+|**defaultValue**|**nvarchar(4000)**|Valeur par défaut de la colonne.|  
 |**ValidationRule**|**nvarchar(4000)**|La règle est utilisée pour valider des données ajoutés ou mis à jour dans la colonne.|  
   
 ## <a name="indexes"></a>Index  
@@ -170,7 +170,7 @@ Métadonnées de la macro sont exportée vers le **SSMA_Access_InventoryMacros**
 |---------------|-------------|---------------|  
 |**DatabaseId**|**uniqueidentifier**|Identifie la base de données qui contient la macro.|  
 |**MacroId**|**int**|Nombre s’incrémentant entier qui identifie la macro. Cette colonne est la clé primaire pour la table.|  
-|**MacroName**|**nvarchar(4000)**|Le nom de la macro.|  
+|**Nom_macro**|**nvarchar(4000)**|Le nom de la macro.|  
   
 ## <a name="reports"></a>Rapports  
 Métadonnées du rapport sont exportée vers le **SSMA_Access_InventoryReports** table. Cette table contient les colonnes suivantes :  
@@ -178,7 +178,7 @@ Métadonnées du rapport sont exportée vers le **SSMA_Access_InventoryReports**
 |Nom de la colonne|Type de données| Description|  
 |---------------|-------------|---------------|  
 |**DatabaseId**|**uniqueidentifier**|Identifie la base de données qui contient le rapport.|  
-|**ReportId**|**int**|Entier incrémentation qui identifie le rapport. Cette colonne est la clé primaire pour la table.|  
+|**Identificateur ReportId**|**int**|Entier incrémentation qui identifie le rapport. Cette colonne est la clé primaire pour la table.|  
 |**ReportName**|**nvarchar(4000)**|Nom du rapport.|  
   
 ## <a name="modules"></a>Modules  
@@ -188,7 +188,7 @@ Métadonnées du module sont exportées vers le **SSMA_Access_InventoryModules**
 |---------------|-------------|---------------|  
 |**DatabaseId**|**uniqueidentifier**|Identifie la base de données qui contient le module.|  
 |**ModuleId**|**int**|Nombre s’incrémentant entier qui identifie le module. Cette colonne est la clé primaire pour la table.|  
-|**ModuleName**|**nvarchar(4000)**|Le nom du module.|  
+|**nom du module**|**nvarchar(4000)**|Le nom du module.|  
   
 ## <a name="see-also"></a>Voir aussi  
 [Exportation d’un inventaire Access](http://msdn.microsoft.com/en-us/7e1941fb-3d14-4265-aff6-c77a4026d0ed)  

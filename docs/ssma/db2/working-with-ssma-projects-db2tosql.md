@@ -1,6 +1,6 @@
 ---
 title: Utilisation de projets SSMA (DB2ToSQL) | Documents Microsoft
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-db2
@@ -21,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 76642133566117c55fb750d1308e3e9331e1e6de
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: 5743862c6f8352f0d94172707f2ac31aeaf59c8d
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="working-with-ssma-projects-db2tosql"></a>Utilisation de projets SSMA (DB2ToSQL)
 Pour migrer des bases de données DB2 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], vous créez un projet SSMA. Le projet est un fichier qui contient les informations suivantes :  
@@ -86,7 +86,7 @@ Pour migrer des données à partir de bases de données DB2 [!INCLUDE[ssNoVersio
   
     -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2016  
   
-    -   Azure SQL DB  
+    -   Base de données SQL Azure  
   
 ## <a name="customizing-project-settings"></a>Personnalisation des paramètres de projet  
 Outre la définition des paramètres de projet par défaut qui s’appliquent à tous les nouveaux projets SSMA, vous pouvez personnaliser les paramètres pour chaque projet. Pour plus d’informations, consultez [définition des Options de projet &#40;OracleToSQL&#41; ](../../ssma/oracle/setting-project-options-oracletosql.md) et rubriques connexes.  

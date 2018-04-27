@@ -1,7 +1,7 @@
 ---
 title: Installer et configurer la base de données exemple WideWorldImporters - SQL | Documents Microsoft
-ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod: sql
+ms.prod_service: sql
 ms.service: ''
 ms.component: samples
 ms.technology:
@@ -17,11 +17,11 @@ ms.author: barbkess
 manager: craigg
 robots: noindex,nofollow
 ms.workload: On Demand
-ms.openlocfilehash: 3b2a1c4f6fc6045a25a86ea8d49290fafbc29b57
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.openlocfilehash: 04fe03ecffa717de838642006764c9b82f2341d3
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="installation-and-configuration"></a>Installation et configuration
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ Téléchargez l’exemple WideWorldImporters de base de données sauvegarde/bacp
 
 Code source pour recréer la base de données est disponible à partir de l’emplacement suivant. Notez qu’en recréant l’exemple entraîne légères différences dans les données, car il existe un facteur aléatoire dans la génération de données :
 
-[wide-world-importers](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/wide-world-importers/wwi-database-scripts)
+[importateurs de Wide world](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/wide-world-importers/wwi-database-scripts)
 
 ## <a name="install"></a>Installation
 

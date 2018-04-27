@@ -2,8 +2,8 @@
 title: Téléchargez et installez Microsoft SQL Studio Operations (version préliminaire) | Documents Microsoft
 description: Téléchargez et installez Microsoft SQL opérations Studio (version préliminaire) pour Windows, Mac OS ou Linux
 ms.custom: tools|sos
-ms.date: 03/28/2018
-ms.prod: sql-non-specified
+ms.date: 04/25/2018
+ms.prod: sql
 ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
@@ -14,23 +14,23 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 836d34cdb019b7defd16736b21485a32474a8757
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 7df740f3c50e8f4db5324e37908ec11ea83aed15
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="download-and-install-sql-operations-studio-preview"></a>Téléchargez et installez Studio des opérations SQL (version préliminaire)
 
 [!INCLUDE[name-sos](../includes/name-sos.md)] s’exécute sur Windows, Mac OS et Linux.
 
-Téléchargez et installez la dernière version, le *mars Public Preview*:
+Téléchargez et installez la dernière version, le *avril Public Preview*:
 
 |Plateforme|Télécharger|Date de publication| Version |
 |:---|:---|:---|:---|
-|Windows|[Programme d’installation](https://go.microsoft.com/fwlink/?linkid=870837)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=870838)|28 mars 2018 |0.27.3|
-|macOS|[.zip](https://go.microsoft.com/fwlink/?linkid=870839)|28 mars 2018 |0.27.3|
-|Linux|[.DEB](https://go.microsoft.com/fwlink/?linkid=870842)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=870841)<br>[.tar.gz](https://go.microsoft.com/fwlink/?linkid=870840)|28 mars 2018 |0.27.3|
+|Windows|[Programme d’installation](https://go.microsoft.com/fwlink/?linkid=872717)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=872718)|25 avril 2018 |0.28.6|
+|macOS|[.zip](https://go.microsoft.com/fwlink/?linkid=872719)|25 avril 2018 |0.28.6|
+|Linux|[.DEB](https://go.microsoft.com/fwlink/?linkid=872722)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=872721)<br>[.tar.gz](https://go.microsoft.com/fwlink/?linkid=872720)|25 avril 2018 |0.28.6|
 
 Pour plus d’informations sur la dernière version, consultez le [notes de publication](release-notes.md).
 
@@ -40,20 +40,20 @@ Cette version de [!INCLUDE[name-sos](../includes/name-sos-short.md)] inclut une 
 
 **Programme d’installation**
 
-1. Téléchargez et exécutez le [ [!INCLUDE[name-sos](../includes/name-sos-short.md)] programme d’installation de Windows](https://go.microsoft.com/fwlink/?linkid=870837).
+1. Téléchargez et exécutez le [ [!INCLUDE[name-sos](../includes/name-sos-short.md)] programme d’installation de Windows](https://go.microsoft.com/fwlink/?linkid=872717).
 1. Démarrer le [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] application.
 
 
 **fichier .zip**
 
-1. Télécharger [ [!INCLUDE[name-sos](../includes/name-sos-short.md)] .zip pour Windows](https://go.microsoft.com/fwlink/?linkid=870838).
+1. Télécharger [ [!INCLUDE[name-sos](../includes/name-sos-short.md)] .zip pour Windows](https://go.microsoft.com/fwlink/?linkid=872718).
 2. Recherchez le fichier téléchargé et extrayez-le.
 3. Exécutez `\sqlops-windows\sqlops.exe`
 
 
 ## <a name="get-sql-operations-studio-preview-for-macos"></a>Obtenir des opérations de SQL Studio (version préliminaire) pour Mac OS
 
-1. Télécharger [ [!INCLUDE[name-sos](../includes/name-sos-short.md)] pour macOS](https://go.microsoft.com/fwlink/?linkid=870839).
+1. Télécharger [ [!INCLUDE[name-sos](../includes/name-sos-short.md)] pour macOS](https://go.microsoft.com/fwlink/?linkid=872719).
 2. Pour développer le contenu du fichier zip, double-cliquez dessus.
 3. Pour rendre [!INCLUDE[name-sos](../includes/name-sos-short.md)] disponibles dans le *Launchpad*, faites glisser *sqlops.app* à la *Applications* dossier.
 
@@ -61,9 +61,9 @@ Cette version de [!INCLUDE[name-sos](../includes/name-sos-short.md)] inclut une 
 ## <a name="get-sql-operations-studio-preview-for-linux"></a>Obtenir des opérations de SQL Studio (version préliminaire) pour Linux
 
 1. Télécharger [!INCLUDE[name-sos](../includes/name-sos-short.md)] pour Linux à l’aide d’un des programmes d’installation ou de l’archive tar.gz :
-    - [.DEB](https://go.microsoft.com/fwlink/?linkid=870842)
-    - [.rpm](https://go.microsoft.com/fwlink/?linkid=870841)
-    - [.tar.gz](https://go.microsoft.com/fwlink/?linkid=870840)
+    - [.DEB](https://go.microsoft.com/fwlink/?linkid=872722)
+    - [.rpm](https://go.microsoft.com/fwlink/?linkid=872721)
+    - [.tar.gz](https://go.microsoft.com/fwlink/?linkid=872720)
 1. Pour extraire le fichier et le lancement [!INCLUDE[name-sos](../includes/name-sos-short.md)], ouvrez une nouvelle fenêtre de Terminal et tapez les commandes suivantes :
 
    **Installation de Debian :**

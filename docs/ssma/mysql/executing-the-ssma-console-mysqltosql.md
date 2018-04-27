@@ -1,6 +1,6 @@
 ---
 title: L’exécution de la Console SSMA (MySQLToSQL) | Documents Microsoft
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-mysql
@@ -29,11 +29,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2fb0022b9e4dd222fd3d19ed4dc3e6d03fc740bb
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: b8946a6abdce48e55624965d1dea8b17c40760ea
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="executing-the-ssma-console-mysqltosql"></a>L’exécution de la Console SSMA (MySQLToSQL)
 Microsoft vous fournit un ensemble robuste de script de commandes du fichier à exécuter et contrôler les activités SSMA.  
@@ -115,7 +115,7 @@ enregistrer le projet : enregistre le projet de migration.
 ```  
 **Command**  
   
-close-project  
+projet de fermer  
                   : Ferme le projet de migration.  
   
 **Script**  
@@ -127,7 +127,7 @@ close-project
 ```  
 **Command**  
   
-close-project  
+projet de fermer  
                   : Ferme le projet de migration.  
   
 **Script**  
@@ -171,7 +171,7 @@ Définition de serveur est récupérée à partir de l’attribut de nom défini
 ```  
 **Command**  
   
-force-load-source/target-database  
+force-charge-source/cible-base de données  
   
 -   Charge les métadonnées de la source.  
   
@@ -194,7 +194,7 @@ Nécessite un ou plusieurs nœuds de la métabase en tant que paramètre de lign
 ```  
 **Command**  
   
-reconnect-source-database  
+reconnecter--base de données source  
   
 1.  Se reconnecte à la base de données source mais ne se charge pas toutes les métadonnées, contrairement à la commande connect--base de données source.  
   
@@ -209,7 +209,7 @@ reconnect-source-database
 ```  
 **Command**  
   
-connect-target-database  
+se connecter--base de données cible  
   
 1.  Se connecte à la base de données SQL Server ou SQL Azure cible et charge les métadonnées de niveau élevée de la base de données cible mais pas les métadonnées entièrement.  
   
@@ -226,7 +226,7 @@ Définition de serveur est récupérée à partir de l’attribut de nom défini
 ```  
 **Command**  
   
-reconnect-target-database  
+reconnecter--base de données cible  
   
 1.  Se reconnecte à la base de données cible, mais ne se charge pas toutes les métadonnées, contrairement à la commande connect--base de données cible.  
   
@@ -245,7 +245,7 @@ Les commandes de rapports génèrent des rapports sur les performances de divers
   
 **Command**  
   
-generate-assessment-report  
+Générer--rapport d’évaluation  
   
 1.  Génère des rapports d’évaluation de la base de données source.  
   
@@ -387,7 +387,7 @@ ou
 ```  
 **Command**  
   
-migrate-data  
+migrer des données  
   
 1.  Migre les données source à la cible.  
   
@@ -449,7 +449,7 @@ La commande de préparation de Migration lance un mappage de schéma entre les b
   
 **Command**  
   
-map-schema  
+schéma de mappage  
   
 Mappage de schéma de base de données source vers le schéma cible.  
   
@@ -477,7 +477,7 @@ Les commandes de la facilité de gestion permettent de synchroniser les objets d
   
 **Command**  
   
-synchronize-target  
+synchroniser la cible  
   
 1.  Synchronise les objets cibles avec la base de données cible.  
   
@@ -497,7 +497,7 @@ synchronize-target
   
     -   rapport-chaque-sous-avertissement  
   
-    -   fail-script  
+    -   Échec-script  
   
 4.  `report-errors-to:` Spécifie l’emplacement du rapport d’erreurs pour l’opération de synchronisation (attribut facultatif) si seul le chemin d’accès de dossier est indiqué, puis de fichiers par nom **TargetSynchronizationReport.XML** est créé.  
   
@@ -560,7 +560,7 @@ actualisation de base de données
   
     -   rapport-chaque-sous-avertissement  
   
-    -   fail-script  
+    -   Échec-script  
   
 4.  `report-errors-to:` Spécifie l’emplacement du rapport d’erreurs pour l’opération de synchronisation (attribut facultatif) si seul le chemin d’accès de dossier est indiqué, puis de fichiers par nom **SourceDBRefreshReport.XML** est créé.  
   
@@ -607,7 +607,7 @@ Les commandes de génération du Script effectuent deux tâches : ils permetten
   
 **Command**  
   
-save-as-script  
+en tant que script de sauvegarde  
   
 Utilisé pour enregistrer les Scripts des objets dans un fichier mentionné lorsque la métabase = cible, il s’agit d’une alternative à la commande de synchronisation là où nous obtenir les scripts dans et exécutez le même sur la base de données cible.  
   
@@ -659,7 +659,7 @@ ou
 ```  
 **Command**  
   
-convert-sql-statement  
+instruction CONVERT-sql  
   
 1.  `context` Spécifie le nom du schéma.  
   

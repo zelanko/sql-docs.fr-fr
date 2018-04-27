@@ -1,6 +1,6 @@
 ---
-title: Assessment Report (AccessToSQL) | Microsoft Docs
-ms.prod: sql-non-specified
+title: Rapport d’évaluation (AccessToSQL) | Documents Microsoft
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-access
@@ -24,13 +24,13 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5202655839821515939ea920779041d6f39db28f
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: 903fcc1d14d7976e39603bf925595594b0b88170
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
-# <a name="assessment-report-accesstosql"></a>Assessment Report (AccessToSQL)
+# <a name="assessment-report-accesstosql"></a>Rapport d’évaluation (AccessToSQL)
 La fenêtre de rapport d’évaluation affiche les résultats de la conversion d’objets de base de données à [!INCLUDE[tsql](../../includes/tsql_md.md)] syntaxe, et vous estimez la complexité et le coût de vos projets de migration.  
   
 Pour créer un rapport d’évaluation, sélectionner les objets à convertir dans l’Explorateur de métadonnées source, avec le bouton droit **bases de données**, puis sélectionnez **créer un rapport**. Vous pouvez également afficher ce rapport automatiquement après la conversion de schémas. Toutefois, le nom du rapport sera rapport de Conversion. Pour plus d’informations, consultez [paramètres de projet (GUI) (SSMA commun)](http://msdn.microsoft.com/en-us/cf06baf1-8714-48a3-95dc-781f6ca53693).  

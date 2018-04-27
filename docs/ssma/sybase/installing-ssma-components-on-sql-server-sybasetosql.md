@@ -2,7 +2,7 @@
 title: Installation des composants SSMA sur SQL Server (SybaseToSQL) | Documents Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-sybase
@@ -21,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 97c0e5dc529a6563212dc3ddedce5014ccfd463a
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: 2532575dcfeaff0b75520ef1a104db0281bbc9b0
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="installing-ssma-components-on-sql-server-sybasetosql"></a>Installation des composants SSMA sur SQL Server (SybaseToSQL)
 Outre l’installation de SSMA pour l’utilisation de migration des données côté serveur, vous devez également installer les composants sur l’ordinateur qui est en cours d’exécution [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Ces composants incluent le Pack d’extension SSMA, qui prend en charge la migration des données et les fournisseurs de Sybase pour permettre la connectivité du serveur à serveur.  
@@ -98,7 +98,7 @@ Après avoir installé le Pack d’extension, vous aurez un voir un **ssma_syb.b
   
 -   **stop_agent_process**  
   
-Chaque fois que vous migrez des données à [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], SSMA crée un [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] travail de l’Agent. Ces tâches sont nommées **le package de migration de données ssma_syb {GUID}**et sont visibles dans le [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] nœud de l’Agent de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] dans le dossier Jobs.  
+Chaque fois que vous migrez des données à [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], SSMA crée un [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] travail de l’Agent. Ces tâches sont nommées **le package de migration de données ssma_syb {GUID}** et sont visibles dans le [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] nœud de l’Agent de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] dans le dossier Jobs.  
   
 ## <a name="sybase-providers"></a>Fournisseurs de Sybase  
 Lorsque vous migrez des données à partir de ASE à [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]SQL Azure, la migration des données directement entre ASE et [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]SQL Azure. Il ne passe pas par le biais SSMA, car cela risque de ralentir la migration des données.  

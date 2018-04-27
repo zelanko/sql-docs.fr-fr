@@ -1,24 +1,24 @@
 ---
-title: "Déployer un cluster STIMULATEUR pour SQL Server sur Linux | Documents Microsoft"
-description: "Ce didacticiel montre comment déployer un cluster STIMULATEUR pour SQL Server sur Linux."
+title: Déployer un cluster STIMULATEUR pour SQL Server sur Linux | Documents Microsoft
+description: Ce didacticiel montre comment déployer un cluster STIMULATEUR pour SQL Server sur Linux.
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.date: 12/11/2017
 ms.topic: article
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: On Demand
-ms.openlocfilehash: 303629364a954fec1328d571ec3b6f3df57b6527
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.openlocfilehash: 10560a49c334f1b65800fb9a21ce4f0116a42536
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="deploy-a-pacemaker-cluster-for-sql-server-on-linux"></a>Déployer un cluster STIMULATEUR pour SQL Server sur Linux
 
@@ -123,7 +123,7 @@ STIMULATEUR lui-même utilise un utilisateur créé sur la distribution nommée 
 ## <a name="create-the-pacemaker-cluster"></a>Créer le cluster STIMULATEUR 
 Cette section décrit comment créer et configurer le cluster pour chaque point de distribution de Linux.
 
-RHEL
+**RHEL**
 
 1. Autoriser les nœuds
    
@@ -205,7 +205,7 @@ Utilisez les commandes suivantes pour installer le package SQL Server à haute d
 > - Si vous ne souhaitez pas utiliser [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] Agent pour l’envoi de journaux ou de toute autre utilisation, il n’a pas à installer, par conséquent, le package *mssql-server-agent* peut être ignorée.
 > - Les autres packages facultatifs pour [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] sur Linux, [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] recherche en texte intégral (*FTP du serveur mssql*) et [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] Integration Services (*mssql server est*), ne sont pas requis pour la haute disponibilité, soit pour une instance de cluster ou un groupe de disponibilité.
 
-RHEL
+**RHEL**
 
 ```bash
 sudo yum install mssql-server-ha mssql-server-agent
@@ -228,7 +228,7 @@ sudo systemctl restart mssql-server
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-Dans ce didacticiel, vous avez appris comment déployer un cluster STIMULATEUR pour SQL Server sur Linux. Vous avez appris comment à :
+Dans ce didacticiel, vous avez appris comment déployer un cluster STIMULATEUR pour SQL Server sur Linux. Vous avez appris à : 
 > [!div class="checklist"]
 > * Installer le module complémentaire de haute disponibilité et STIMULATEUR.
 > * Préparer les nœuds pour STIMULATEUR (RHEL et Ubuntu uniquement).
