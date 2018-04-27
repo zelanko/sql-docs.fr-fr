@@ -2,7 +2,7 @@
 title: Mappage de type de données dans l’Assistant Importation et Exportation SQL Server | Microsoft Docs
 ms.custom: ''
 ms.date: 01/11/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
 ms.service: ''
 ms.component: import-export-data
@@ -18,11 +18,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 1796ece3b0fb24b0fb5a4026ce12a085d4744a77
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
-ms.translationtype: MT
+ms.openlocfilehash: 984beda9e79c525d45334959f0a866fcb2868080
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="data-type-mapping-in-the-sql-server-import-and-export-wizard"></a>Mappage de type de données dans l’Assistant Importation et Exportation SQL Server
  Dans l’Assistant Importation et Exportation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , vous pouvez définir le nom, le type de données et les propriétés de type de données des colonnes des nouveaux fichiers et tables de destination, mais vous ne pouvez pas spécifier de conversions personnalisées pour les valeurs de colonnes. Le mappage intégré des types de données à partir de la source à la destination est donc important.  
@@ -35,7 +35,7 @@ L’Assistant utilise les fichiers de mappage installés par [!INCLUDE[ssNoVersi
  Si vous modifiez un fichier de mappage existant ou ajoutez un nouveau fichier de mappage au dossier, vous devez fermer et rouvrir l’Assistant Importation et Exportation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] pour charger le fichier de mappage (nouveau ou modifié).  
  
 ## <a name="you-can-change-an-existing-mapping-file"></a>Vous pouvez modifier un fichier de mappage existant
-Si votre entreprise nécessite différents mappages entre types de données, vous pouvez mettre à jour les fichiers de mappage pour modifier les mappages utilisés par l’Assistant. Par exemple, si vous voulez que le type de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **nchar** soit mappé au type de données DB2 **GRAPHIC** et non au type de données DB2 **VARGRAPHIC**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pendant le transfert de données de vers DB2, vous devez modifier le mappage **nchar** dans le fichier de mappage **qlClientToIBMDB2.xml** pour utiliser **GRAPHIC** à la place de **VARGRAPHIC**.  
+Si votre entreprise nécessite différents mappages entre types de données, vous pouvez mettre à jour les fichiers de mappage pour modifier les mappages utilisés par l’Assistant. Par exemple, si vous voulez que le type de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **nchar** soit mappé au type de données DB2 **GRAPHIC**et non au type de données DB2**VARGRAPHIC[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pendant le transfert de données de**  vers DB2, vous devez modifier le mappage **nchar** dans le fichier de mappage **qlClientToIBMDB2.xml** pour utiliser **GRAPHIC** à la place de **VARGRAPHIC**.  
   
 ## <a name="you-can-add-a-new-mapping-file"></a>Vous pouvez ajouter un nouveau fichier de mappage
 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] installe les mappages entre de nombreuses combinaisons de source et de destination couramment utilisées. Vous pouvez également ajouter les nouveaux fichiers de mappage au répertoire **MappingFiles** pour prendre en charge d’autres sources et destinations. Les nouveaux fichiers de mappage doivent se conformer au schéma XSD publié et mapper une combinaison unique de source et de destination. Le schéma des fichiers de mappage, **DataTypeMapping.xsd**, est publié [ici](http://schemas.microsoft.com/sqlserver/2008/07/IntegrationServices/DataTypeMapping/DataTypeMapping.xsd).

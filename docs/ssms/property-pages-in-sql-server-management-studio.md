@@ -2,7 +2,7 @@
 title: Pages des propriétés dans SQL Server Management Studio | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssms
@@ -20,14 +20,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3a74c0a9090936fc172642e06d3608c407718712
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 0d465ecadb7f818cae84d407e1ec52db50502fcd
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="property-pages-in-sql-server-management-studio"></a>Pages des propriétés dans SQL Server Management Studio
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Les boîtes de dialogue de page de propriétés de [!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] utilisent toutes un format commun pour l’affichage des informations avec des catégories pouvant être développées et réduites. Les champs affichés varient selon la propriété. Les propriétés affichées en gris sont en lecture seule. Les boutons Par catégorie et Alphabétique se trouvent en haut de chaque page de propriétés.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+Les boîtes de dialogue de page de propriétés de [!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] utilisent toutes un format commun pour l'affichage des informations avec des catégories pouvant être développées et réduites. Les champs affichés varient selon la propriété. Les propriétés affichées en gris sont en lecture seule. Les boutons Par catégorie et Alphabétique se trouvent en haut de chaque page de propriétés.  
   
 Le tableau ci-dessous décrit les éléments communs des boîtes de dialogue de page de propriétés [!INCLUDE[ssManStudio](../includes/ssmanstudio_md.md)] .  
   

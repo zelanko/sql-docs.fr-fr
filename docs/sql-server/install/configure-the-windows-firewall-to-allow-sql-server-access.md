@@ -2,7 +2,7 @@
 title: Configurer le Pare-feu Windows pour autoriser l’accès à SQL Server | Microsoft Docs
 ms.custom: ''
 ms.date: 05/17/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: install
@@ -31,11 +31,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 556084f586c5c9105e9379b302d690e785a8ce08
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 64e8f497247a0c670c4091dca5c0531ed5715cb6
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="configure-the-windows-firewall-to-allow-sql-server-access"></a>Configure the Windows Firewall to Allow SQL Server Access
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -90,7 +90,7 @@ Configurez les paramètres du Pare-feu Windows avec **Microsoft Management Conso
   
 -   **netsh**  
   
-     L’outil **netsh.exe** peut être utilisé par un administrateur pour configurer et surveiller des ordinateurs Windows à partir d’une invite de commandes ou à l’aide d’un fichier de commandes**.** En utilisant l’outil **netsh** , vous pouvez diriger les commandes de contexte que vous entrez dans l’application d’assistance appropriée, et celle-ci exécute ensuite la commande. Une application d’assistance est un fichier de bibliothèque de liens dynamiques (.dll, Dynamic Link Library) qui étend les fonctionnalités de l’outil **netsh** en fournissant la configuration, l’analyse et la prise en charge d’un ou plusieurs services, utilitaires ou protocoles. Tous les systèmes d'exploitation qui prennent en charge [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ont un programme d'assistance de pare-feu. [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] possède également une application d’assistance de pare-feu avancée nommée **advfirewall**. Aucune information détaillée sur l’utilisation de **netsh** n’est fournie dans cet article. Toutefois, un grand nombre des options de configuration décrites peuvent être configurées via **netsh**. Exécutez, par exemple, le script suivant à partir d'une invite de commandes pour ouvrir le port TCP 1433 :  
+     L’outil **netsh.exe** peut être utilisé par un administrateur pour configurer et surveiller des ordinateurs Windows à partir d’une invite de commandes ou à l’aide d’un fichier de commandes **.** En utilisant l’outil **netsh** , vous pouvez diriger les commandes de contexte que vous entrez dans l’application d’assistance appropriée, et celle-ci exécute ensuite la commande. Une application d’assistance est un fichier de bibliothèque de liens dynamiques (.dll, Dynamic Link Library) qui étend les fonctionnalités de l’outil **netsh** en fournissant la configuration, l’analyse et la prise en charge d’un ou plusieurs services, utilitaires ou protocoles. Tous les systèmes d'exploitation qui prennent en charge [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ont un programme d'assistance de pare-feu. [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] possède également une application d’assistance de pare-feu avancée nommée **advfirewall**. Aucune information détaillée sur l’utilisation de **netsh** n’est fournie dans cet article. Toutefois, un grand nombre des options de configuration décrites peuvent être configurées via **netsh**. Exécutez, par exemple, le script suivant à partir d'une invite de commandes pour ouvrir le port TCP 1433 :  
   
     ```  
     netsh firewall set portopening protocol = TCP port = 1433 name = SQLPort mode = ENABLE scope = SUBNET profile = CURRENT  

@@ -1,22 +1,23 @@
 ---
-title: "Valider les packages SSIS déployés sur Azure | Microsoft Docs"
+title: Valider les packages SSIS déployés sur Azure | Microsoft Docs
 ms.date: 11/27/2017
 ms.topic: article
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: lift-shift
 ms.suite: sql
-ms.custom: 
-ms.technology: integration-services
+ms.custom: ''
+ms.technology:
+- integration-services
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 15f838e93a5473a2d2345ae8c297f9b92eb2a23e
-ms.sourcegitcommit: 19e1c4067142d33e8485cb903a7a9beb7d894015
+ms.openlocfilehash: 6e2bf8f48751d819293edbaa0e40a85e74b0c513
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="validate-ssis-packages-deployed-to-azure"></a>Valider les packages SSIS déployés sur Azure
 Quand vous déployez un projet SQL Server Integration Services (SSIS) sur la base de données de catalogue SSIS (SSISDB) sur un serveur Azure, l’Assistant Déploiement de package ajoute une étape de validation après la page **Vérifier**. Cette étape de validation inspecte les packages du projet à la recherche de problèmes connus susceptibles d’impacter leur exécution dans Azure SSIS Integration Runtime. L’Assistant affiche ensuite tous les avertissements applicables dans la page **Valider**.
@@ -37,7 +38,7 @@ L’Assistant inspecte certains gestionnaires de connexions à la recherche des 
 
 L’Assistant effectue les contrôles de validation suivants pour les gestionnaires de connexions dans la liste.
 
-| Gestionnaire de connexions | Authentification Windows | Chemin du fichier | Chemin UNC | Nom d'hôte | Fournisseur ou pilote |
+| Gestionnaire de connexions | Authentification Windows | Chemins d'accès au fichier | Chemin UNC | Nom d'hôte | Fournisseur ou pilote |
 |--------------------|----------|-----------|-----|-----------|-------------------|
 | Ado                | ✓        |           |     | ✓         | ✓                 |
 | AdoNet             | ✓        |           |     | ✓         | ✓                 |

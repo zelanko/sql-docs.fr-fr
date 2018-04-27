@@ -2,7 +2,7 @@
 title: Liste des colonnes, boîte de dialogue (Visual Database Tools) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssms-visual-db
@@ -20,14 +20,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f01884482a43f1aff3a6d833bdae0a431f284d01
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 13e2c797ff53f14aebfdaa2aaf2801c5279c23fb
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="partition-column-list-dialog-box-visual-database-tools"></a>Liste des colonnes, boîte de dialogue (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Si une table possède un schéma de partition associé, vous pouvez utiliser cette boîte de dialogue pour choisir la ou les colonnes auxquelles s’applique la fonction de partition. Cette fonction n'est utilisable que si le type de données de la colonne vers laquelle vous basculez est identique à celui de la colonne définie dans la fonction de partition.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+Si une table possède un schéma de partition associé, vous pouvez utiliser cette boîte de dialogue pour choisir la ou les colonnes auxquelles s'applique la fonction de partition. Cette fonction n'est utilisable que si le type de données de la colonne vers laquelle vous basculez est identique à celui de la colonne définie dans la fonction de partition.  
   
 Pour plus d'informations sur les schémas et les fonctions de partition, consultez la documentation en ligne de SQL Server.  
   

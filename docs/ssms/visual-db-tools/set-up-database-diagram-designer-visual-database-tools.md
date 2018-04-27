@@ -2,7 +2,7 @@
 title: Configurer le Concepteur de schémas de base de données (Visual Database Tools) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssms-visual-db
@@ -24,14 +24,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e7fa34af156764f2780a479069fa2919ec2ea103
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 5568bcc9a595e1087bcc76773c94dd806a6ee4a9
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="set-up-database-diagram-designer-visual-database-tools"></a>Configurer le Concepteur de schémas de base de données (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Pour pouvoir utiliser le Concepteur de schémas de base de données, il doit d’abord être configuré par un membre du rôle **db_owner** afin de contrôler l’accès aux schémas.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+Pour pouvoir utiliser le Concepteur de schémas de base de données, il doit d’abord être configuré par un membre du rôle **db_owner** afin de contrôler l’accès aux schémas.  
   
 ### <a name="to-set-up-database-diagramming"></a>Pour configurer la fonctionnalité de schémas de base de données  
   

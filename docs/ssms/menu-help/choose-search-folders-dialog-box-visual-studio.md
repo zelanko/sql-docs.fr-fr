@@ -2,7 +2,7 @@
 title: Choisir des dossiers de recherche, boîte de dialogue (Visual Studio) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssms-menu
@@ -20,14 +20,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7b0bddd8bb76fa236f84cc4229b6da5ff979b2aa
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 8777f992c6081b13c86a3f916d65ccc6be9be571
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="choose-search-folders-dialog-box-visual-studio"></a>Boîte de dialogue Choisir des dossiers de recherche (Visual Studio)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Cette boîte de dialogue vous permet d’assembler, d’enregistrer et de réviser vos propres jeux de dossiers de recherche nommés et de spécifier l’ordre de la recherche. Pour afficher cette boîte de dialogue, cliquez sur le bouton **Parcourir (...)** en regard de la liste déroulante **Regarder dans** sous les onglets Rechercher dans les fichiers ou Remplacer dans les fichiers de la fenêtre Rechercher et remplacer.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+Cette boîte de dialogue vous permet d'assembler, d'enregistrer et de réviser vos propres jeux de dossiers de recherche nommés et de spécifier l'ordre de la recherche. Pour afficher cette boîte de dialogue, cliquez sur le bouton **Parcourir (...)** en regard de la liste déroulante **Regarder dans** sous les onglets Rechercher dans les fichiers ou Remplacer dans les fichiers de la fenêtre Rechercher et remplacer.  
   
 Ajoutez des dossiers à la liste **Dossiers sélectionnés** , tapez le nom de ce jeu de dossiers dans le champ **Jeu de dossiers** , puis cliquez sur **Appliquer** pour l’enregistrer. Cette zone de recherche personnalisée peut ensuite être sélectionnée par son nom dans les listes déroulantes **Regarder dans** des onglets **Rechercher dans les fichiers** et **Remplacer dans les fichiers**. Pour supprimer un jeu de dossiers personnalisé des listes **Regarder dans** , sélectionnez son nom dans le champ **Jeu de dossiers** et cliquez sur **Supprimer**.  
   

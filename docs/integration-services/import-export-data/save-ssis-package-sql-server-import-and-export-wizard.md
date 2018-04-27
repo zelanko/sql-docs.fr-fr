@@ -1,30 +1,30 @@
 ---
-title: "Enregistrer le package SSIS (Assistant Importation et Exportation SQL Server) | Microsoft Docs"
-ms.custom: 
+title: Enregistrer le package SSIS (Assistant Importation et Exportation SQL Server) | Microsoft Docs
+ms.custom: ''
 ms.date: 02/17/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: import-export-data
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.dts.impexpwizard.savedtspackage.f1
 ms.assetid: 7bf8ac6a-5599-43ab-bf5c-e072c11b85a0
-caps.latest.revision: 
+caps.latest.revision: 64
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: f20252884bd2adc8003603107ed4efbd45c01ca9
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: f57b291cbc29e26aebb5281aa65b7e2f3c371134
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="save-ssis-package-sql-server-import-and-export-wizard"></a>Enregistrer le package SSIS (Assistant Importation et Exportation SQL Server)
   Si vous avez indiqué dans la page **Enregistrer et exécuter le package** que vous souhaitiez enregistrer vos paramètres sous la forme d’un package SQL Server Integration Service (SSIS), l’Assistant Importation et Exportation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] affiche l’option **Enregistrer le package SSIS**. Cette page vous permet de spécifier d’autres options pour l’enregistrement du package créé par l’Assistant.  
@@ -90,7 +90,7 @@ La capture d’écran suivante montre la page **Enregistrer le package SSIS** de
 >   
 >  Souvenez-vous de l’endroit où vous enregistrez le fichier du package.  
   
- **...**  
+ **Parcourir**  
  (Facultatif) Vous pouvez rechercher et sélectionner le chemin du fichier de destination dans la boîte de dialogue **Enregistrer le package**.  
 
 ## <a name="about-the-two-pages-of-options-for-saving-the-package"></a>Présentation des deux pages d’options pour l’enregistrement du package  

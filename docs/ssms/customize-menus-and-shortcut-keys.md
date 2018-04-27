@@ -1,15 +1,16 @@
 ---
 title: Personnaliser des menus et des touches de raccourci | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
+ms.technology:
+- tools-ssms
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - SQL Server Management Studio [SQL Server], shortcuts
@@ -22,19 +23,20 @@ helpviewer_keywords:
 - customizing menus [SQL Server]
 - accelerator keys
 ms.assetid: fb4edf3c-71b6-4645-b1d1-ddfdd69f0d7b
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 26565d1078d8fcb813cc634ce5d3cee05d151f4a
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: bb45c4a93083ddd6fc5c6757fe38698efd139149
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="customize-menus-and-shortcut-keys"></a>Personnaliser des menus et des touches de raccourci
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Une touche d’accès rapide vous permet de sélectionner une commande de menu ou un bouton en appuyant sur Alt+*<single letter>*. Par exemple, pour ouvrir le menu **Edition** , appuyez sur Alt+E. Vous pouvez réorganiser et modifier les boutons des barres d’outils, les menus et les commandes de menu dans la boîte de dialogue **Personnaliser** . Les instructions fournies dans cette rubrique permettent de modifier les paramètres à l'aide de la souris ou du clavier uniquement.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+Une touche d’accès rapide vous permet de sélectionner une commande de menu ou un bouton en appuyant sur Alt+*<single letter>*. Par exemple, pour ouvrir le menu **Edition** , appuyez sur Alt+E. Vous pouvez réorganiser et modifier les boutons des barres d’outils, les menus et les commandes de menu dans la boîte de dialogue **Personnaliser** . Les instructions fournies dans cette rubrique permettent de modifier les paramètres à l'aide de la souris ou du clavier uniquement.  
   
 Les touches d’accès rapides pour les procédures stockées qui utilisent la touche Ctrl peuvent être créées dans la page **Clavier** de la boîte de dialogue **Outils**/**Options** .  
   

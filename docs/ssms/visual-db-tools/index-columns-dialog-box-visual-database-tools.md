@@ -2,7 +2,7 @@
 title: Boîte de dialogue Colonnes d’index (Visual Database Tools) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssms-visual-db
@@ -20,14 +20,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 58eb707b051fc163202af81aa847ce68a8df64fc
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 8f56d8e36c6710b866d3f399a968d694afcf76f8
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="index-columns-dialog-box-visual-database-tools"></a>Boîte de dialogue Colonnes d'index (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Utilisez cette boîte de dialogue pour sélectionner les colonnes pour un index et définir leurs ordres de tri. Un index peut utiliser une ou plusieurs colonnes et chaque colonne peut être triée par ordre croissant ou décroissant. Pour accéder à cette boîte de dialogue, dans la boîte de dialogue **Index/clés** , cliquez sur le bouton d’ellipse pour la ligne **Colonnes** dans la section **Général** .  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+Utilisez cette boîte de dialogue pour sélectionner les colonnes pour un index et définir leurs ordres de tri. Un index peut utiliser une ou plusieurs colonnes et chaque colonne peut être triée par ordre croissant ou décroissant. Pour accéder à cette boîte de dialogue, dans la boîte de dialogue **Index/clés** , cliquez sur le bouton d’ellipse pour la ligne **Colonnes** dans la section **Général** .  
   
 ## <a name="options"></a>Options  
 **Nom de la colonne**  

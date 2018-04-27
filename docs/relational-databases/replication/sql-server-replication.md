@@ -21,18 +21,18 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 3615c25c15eb264eeced29dcd0e063a6d6dc667a
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 4d9eaa2d55a030c48535cdb974bf937c20de1ba5
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="sql-server-replication"></a>Réplication SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   La réplication repose sur un ensemble de technologies qui permettent de copier et de distribuer des données et des objets de base de données d'une base de données vers une autre, puis de synchroniser ces bases de données afin de préserver leur cohérence. Utilisez la réplication pour distribuer des données en différents emplacements et à des utilisateurs distants ou mobiles sur des réseaux locaux et étendus, des connexions d’accès à distance, des connexions sans fil, et Internet.  
   
  La réplication transactionnelle est généralement utilisée dans des scénarios serveur à serveur qui nécessitent un débit élevé, notamment pour l'amélioration de l'extensibilité et de la disponibilité, l'entrepôt de données et la création de rapports, l'intégration de données depuis plusieurs sites, l'intégration de données hétérogènes et le déchargement du traitement par lots. La réplication de fusion est conçue essentiellement pour les applications mobiles ou les applications de serveur distribuées contenant des conflits de données possibles. Les scénarios courants incluent l'échange de données avec des utilisateurs mobiles, les applications de point de vente aux consommateurs (POS, Consumer Point of Sale) et l'intégration des données à partir de plusieurs sites. La réplication d'instantané est utilisée pour fournir le jeu des données initiales pour la réplication transactionnelle et de fusion ; elle peut s'utiliser également lorsque des actualisations complètes des données sont nécessaires. Avec ces trois types de réplication, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournit un système souple et puissant de synchronisation des données dans votre entreprise. La réplication dans SQLCE 3.5 et SQLCE 4.0 est prise en charge sur [!INCLUDE[win8srv](../../includes/win8srv-md.md)] et [!INCLUDE[win8](../../includes/win8-md.md)].  
-  
+
  Comme alternative à la réplication,les bases de données peuvent être synchronisées à l'aide de Microsoft Sync Framework. Sync Framework inclut les composants et une API intuitive et flexible qui facilitent la synchronisation entre des bases de données SQL Server, SQL Server Express, SQL Server Compact, et SQL Azure. Sync Framework inclut également les classes qui peuvent être adaptées pour synchroniser une base de données SQL Server et toute autre base de données compatible avec ADO.NET. Pour la documentation détaillée des composants de synchronisation de base de données Sync Framework, consultez [Synchronisation des bases de données](http://go.microsoft.com/fwlink/?LinkId=209079). Pour une vue d'ensemble de Sync Framework, consultez le [Centre de développement Microsoft Sync Framework](http://go.microsoft.com/fwlink/?LinkId=209078). Pour une comparaison entre Sync Framework et la réplication de fusion, consultez [Synchronisation de présentation de bases de données](http://msdn.microsoft.com/library/bb902818\(SQL.110\).aspx)  
   
  **Parcourir par zone**  

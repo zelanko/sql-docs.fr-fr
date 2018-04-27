@@ -2,7 +2,7 @@
 title: Aide (F1) de Visual Database Tools | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssms-visual-db
@@ -20,14 +20,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b5c1404c4f5dceb9ca5ef5b6a9be5c8a64a24dd7
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: ae151529619af34a8d801ef0efa1f82818e4d977
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="visual-database-tools-f1-help"></a>Aide (F1) de Visual Database Tools
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Ces rubriques décrivent les commandes et options des boîtes de dialogue et fenêtres de propriétés pour les éléments Visual Database Tools, tels que la fenêtre Propriétés du tableau et l’onglet Propriétés des colonnes.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+Ces rubriques décrivent les commandes et options des boîtes de dialogue et fenêtres de propriétés pour les éléments Visual Database Tools, tels que la fenêtre Propriétés du tableau et l'onglet Propriétés des colonnes.  
   
 Pour accéder aux rubriques relatives aux boîtes de dialogue, appuyez sur F1 lorsque vous avez ouvert une boîte de dialogue et qu'il s'agit de la fenêtre active. Pour accéder aux rubriques relatives aux fenêtres de propriétés, cliquez dans la fenêtre Propriétés et appuyez sur F1.  
   

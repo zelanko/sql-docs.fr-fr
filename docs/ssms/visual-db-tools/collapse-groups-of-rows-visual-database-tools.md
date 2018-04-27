@@ -1,34 +1,36 @@
 ---
-title: "Réduire des groupes de lignes (Visual Database Tools) | Microsoft Docs"
-ms.custom: 
+title: Réduire des groupes de lignes (Visual Database Tools) | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-visual-db
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
+ms.technology:
+- tools-ssms
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - group collapsing [SQL Server]
 - collapsing rows
 - row collapsing [SQL Server]
 ms.assetid: 7338dad0-965d-44ba-8c1a-b993acb7156d
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4bc579ff02d58fbc4a06800af44e5eb514977aac
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 39aed7b233447bf52c0266dc08fcc5e8e1f1d769
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="collapse-groups-of-rows-visual-database-tools"></a>Réduire des groupes de lignes (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Vous pouvez créer un résultat de requête dans lequel chaque ligne de résultat correspond à tout un groupe de lignes des données d’origine. La réduction de lignes donne les possibilités suivantes :  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+Vous pouvez créer un résultat de requête dans lequel chaque ligne de résultat correspond à tout un groupe de lignes des données d'origine. La réduction de lignes donne les possibilités suivantes :  
   
 -   **Élimination de lignes en double** Certaines requêtes donnent des ensembles de résultats faisant apparaître plusieurs lignes identiques. Par exemple, vous pouvez créer un ensemble de résultats où les lignes citent une ville et son état si un auteur quelconque y réside, mais si plusieurs auteurs résident dans la même ville, vous obtiendrez plusieurs lignes identiques. L'instruction SQL obtenue peut se présenter de la manière suivante :  
   

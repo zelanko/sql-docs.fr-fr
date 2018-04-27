@@ -2,7 +2,7 @@
 title: Utiliser des rapports personnalisés avec les propriétés des nœuds de l’Explorateur d’objets | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssms-objects
@@ -20,14 +20,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0cf165a803e6b6b8fa5640b5dd3e38173f59fa4c
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: c7e7370e0158b806305437d599198be966bd184f
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="use-custom-reports-with-object-explorer-node-properties"></a>Utiliser des rapports personnalisés avec les propriétés des nœuds de l'Explorateur d'objets
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Vous pouvez exécuter des rapports personnalisés dans le contexte d’un nœud de l’Explorateur d’objets si les rapports personnalisés font référence aux paramètres de rapport de ce nœud. Un rapport peut ainsi exploiter le contexte actuel (par exemple, la base de données actuelle ou un objet de serveur ou de base de données).  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+Vous pouvez exécuter des rapports personnalisés dans le contexte d'un nœud de l'Explorateur d'objets si les rapports personnalisés font référence aux paramètres de rapport de ce nœud. Un rapport peut ainsi exploiter le contexte actuel (par exemple, la base de données actuelle ou un objet de serveur ou de base de données).  
   
 ## <a name="object-explorer-node-report-parameters"></a>Paramètres de rapport des nœuds de l'Explorateur d'objets  
   

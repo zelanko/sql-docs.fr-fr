@@ -2,7 +2,7 @@
 title: Index XML, boîte de dialogue (Visual Database Tools) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssms-visual-db
@@ -20,14 +20,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f47274fe87b23da05550d05b28af1b003fa9a2bc
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 3cda93dbe33a812a21a5a3575c730cb36e48dfb8
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="xml-indexes-dialog-box-visual-database-tools"></a>Boîte de dialogue Index XML (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Utilisez la boîte de dialogue **Index XML** pour créer des index pour les colonnes du type de données XML qui ne peuvent pas être indexées à l’aide de la boîte de dialogue **Index/Clés**. Chaque colonne XML peut posséder plusieurs index XML, mais le premier index créé (principal) est utilisé comme base pour les autres (secondaires). Si vous supprimez l'index XML principal, les index secondaires sont également supprimés.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+Utilisez la boîte de dialogue **Index XML** pour créer des index pour les colonnes du type de données XML qui ne peuvent pas être indexées à l’aide de la boîte de dialogue **Index/Clés** . Chaque colonne XML peut posséder plusieurs index XML, mais le premier index créé (principal) est utilisé comme base pour les autres (secondaires). Si vous supprimez l'index XML principal, les index secondaires sont également supprimés.  
   
 ## <a name="options"></a>Options  
 **Index XML sélectionné**  
@@ -64,7 +65,7 @@ Développée, elle affiche les champs de propriétés de **Nom** et **Descriptio
 Indique le nom de l'index XML. Lorsqu'un nouvel index ou une nouvelle clé sont créés, ils obtiennent un nom par défaut basé sur la table affichée dans la fenêtre active du Concepteur de tables. Vous pouvez modifier le nom à tout moment.  
   
 **Description**  
-Décrivez l’index. Pour écrire une description plus détaillée, cliquez sur **Description** , puis sur le bouton de sélection**(...)**qui apparaît à droite du champ de propriété. Vous obtiendrez une zone d'écriture plus large.  
+Décrivez l’index. Pour écrire une description plus détaillée, cliquez sur **Description** , puis sur le bouton de sélection **(...)** qui apparaît à droite du champ de propriété. Vous obtiendrez une zone d'écriture plus large.  
   
 **Catégorie Concepteur de tables**  
 Développée, elle affiche des informations sur les propriétés de cet index XML.  
