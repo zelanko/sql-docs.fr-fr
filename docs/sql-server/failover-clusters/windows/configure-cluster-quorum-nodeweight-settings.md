@@ -21,11 +21,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 75d81e8e19e2ee1cf4efe62da164caf0e337e5ab
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: d5d6abe02569642c60023da0977af3c4e87ada8c
+ms.sourcegitcommit: 31df356f89c4cd91ba90dac609a7eb50b13836de
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="configure-cluster-quorum-nodeweight-settings"></a>Configurer les paramètres NodeWeight pour un quorum de cluster
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -66,12 +66,12 @@ ms.lasthandoff: 04/26/2018
 4.  Générez la sortie des propriétés du nœud de cluster dans un format lisible.  
   
 ### <a name="example-powershell"></a>Exemple (PowerShell)  
- L’exemple suivant modifie le paramètre NodeWeight pour supprimer le vote du quorum pour le nœud « Always OnSrv1 », puis génère les paramètres pour tous les nœuds du cluster.  
+ L'exemple suivant modifie le paramètre NodeWeight pour supprimer le vote du quorum pour le nœud « AlwaysOnSrv1 », puis génère les paramètres pour tous les nœuds du cluster.  
   
 ```powershell  
 Import-Module FailoverClusters  
   
-$node = “Always OnSrv1”  
+$node = “AlwaysOnSrv1”  
 (Get-ClusterNode $node).NodeWeight = 0  
   
 $cluster = (Get-ClusterNode $node).Cluster  
@@ -92,10 +92,10 @@ $nodes | Format-Table -property NodeName, State, NodeWeight
 2.  Utilisez **cluster.exe** pour définir les valeurs `NodeWeight` .  
   
 ### <a name="example-clusterexe"></a>Exemple (Cluster.exe)  
- L’exemple suivant modifie la valeur NodeWeight pour supprimer le vote du quorum pour le nœud « Always OnSrv1 » dans le cluster « Cluster001 ».  
+ L'exemple suivant modifie la valeur NodeWeight pour supprimer le vote du quorum pour le nœud « AlwaysOnSrv1 » dans le cluster « Cluster001 ».  
   
 ```ms-dos  
-cluster.exe Cluster001 node Always OnSrv1 /prop NodeWeight=0  
+cluster.exe Cluster001 node AlwaysOnSrv1 /prop NodeWeight=0  
 ```  
   
 ##  <a name="RelatedContent"></a> Contenu associé  

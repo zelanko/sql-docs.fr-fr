@@ -7,11 +7,11 @@ ms.topic: overview
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: d4beafc3c5dcb19c1b46b53d727f36733884daad
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 1b33d7fb0736e1d87aa46d052ff9e42fa740662e
+ms.sourcegitcommit: 31df356f89c4cd91ba90dac609a7eb50b13836de
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="what-is-sql-server-machine-learning-services"></a>Nouveautés de SQL Server Machine Learning Services ?
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -39,7 +39,7 @@ Prise en charge pour chaque langue est par le biais des packages Microsoft propr
 | [sqlRUtils](r/generating-an-r-stored-procedure-for-r-code-using-the-sqlrutils-package.md) | aucun | Fonctions de la mise des scripts R dans T-SQL des procédures stockées, l’inscription d’une procédure stockée avec une base de données et la procédure stockée en cours d’exécution à partir d’un environnement de développement R.
 | [mrsdeploy](operationalization-with-mrsdeploy.md) | aucun | Principalement utilisé sur une installation non SQL Server d’apprentissage Machine, telles que la [(autonome) version](r/r-server-standalone.md). Utilisez ce package pour déployer et d’héberger des services web, de générer des topologies de montée en puissance parallèle avec web dédié et de nœuds de calcul, de basculer entre les sessions locales et distantes, exécutez les diagnostics et bien plus encore. Pour une installation (de-de base de données), utilisez ce package dans une capacité d’un client : par exemple, pour accéder à un service web sur un serveur distant dédié simplement les charges de travail Machine Learning Services en cours d’exécution. |
 
-La portabilité de votre code R et Python personnalisé est adressée par l’intermédiaire de la distribution de packages et les interpréteurs de plusieurs produits. Les packages qui sont fournis dans SQL Server sont également disponibles dans plusieurs autres produits et services Microsoft, y compris une version non SQL appelée [Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/). Les clients libres qui incluent des interpréteurs de notre R et Pyton incluent [Microsoft R Client](https://docs.microsoft.com/machine-learning-server/r-client/what-is-microsoft-r-client) et le [bibliothèques de Python](https://docs.microsoft.com/machine-learning-server/install/python-libraries-interpreter).
+La portabilité de votre code R et Python personnalisé est adressée par l’intermédiaire de la distribution de packages et les interpréteurs de plusieurs produits. Les packages qui sont fournis dans SQL Server sont également disponibles dans plusieurs autres produits et services Microsoft, y compris une version non SQL appelée [Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/). Les clients libres qui incluent des interpréteurs de notre R et Python incluent [Microsoft R Client](https://docs.microsoft.com/machine-learning-server/r-client/what-is-microsoft-r-client) et le [bibliothèques de Python](https://docs.microsoft.com/machine-learning-server/install/python-libraries-interpreter).
 
 Les packages et les interpréteurs de sont également disponibles sur plusieurs [machines virtuelles](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-azure-vm-on-linux), Azure Machine Learning et des services Azure tels que [HDInsight](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-on-azure-hdinsight). 
 

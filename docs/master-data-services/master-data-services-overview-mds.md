@@ -23,17 +23,17 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: d2f03949fa0edab709dcdf14a71daad12d12022b
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: b8d9a0203b8e4bce7391415c99ebeba8aafa3333
+ms.sourcegitcommit: 31df356f89c4cd91ba90dac609a7eb50b13836de
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="master-data-services-overview-mds"></a>Vue d’ensemble de Master Data Services (MDS)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
- Cette rubrique décrit les fonctionnalités d’organisation et de gestion des données clés de [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]. 
+Cette rubrique décrit les fonctionnalités d’organisation et de gestion des données clés de [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]. 
   
  [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] vous permet de gérer un ensemble principal de données de votre organisation. Vous pouvez organiser les données en modèles, créer des règles de mise à jour des données et contrôler qui met les données à jour. Avec Excel, vous pouvez partager le jeu de données principal avec d’autres personnes de votre organisation. 
   
