@@ -1,28 +1,28 @@
 ---
-title: "Vue d’ensemble du pilote JDBC | Documents Microsoft"
-ms.custom: 
+title: Vue d’ensemble du pilote JDBC | Documents Microsoft
+ms.custom: ''
 ms.date: 01/18/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - drivers
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 939a8773-2583-49a4-bf00-6b892fbe39dc
-caps.latest.revision: 
+caps.latest.revision: 57
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 3783933de0579de9c0da9f227280656b3583b7b7
-ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
-ms.translationtype: MT
+ms.openlocfilehash: 6ac8d19b9bc3147fd661b4911c970d950252e556
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/02/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="overview-of-the-jdbc-driver"></a>Présentation du pilote JDBC
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -44,11 +44,11 @@ ms.lasthandoff: 03/02/2018
 |[Redistribution du pilote Microsoft JDBC](../../connect/jdbc/redistributing-the-microsoft-jdbc-driver.md)|Décrit comment s’inscrire pour redistribuer le pilote Microsoft JDBC.|  
 |[Recherche d’informations supplémentaires sur le pilote JDBC](../../connect/jdbc/finding-additional-jdbc-driver-information.md)|Indique où trouver des ressources supplémentaires sur le pilote Microsoft JDBC, en fournissant notamment des liens vers des ressources externes.|  
 |[Matrice de prise en charge de Microsoft JDBC Driver pour SQL Server](../../connect/jdbc/microsoft-jdbc-driver-for-sql-server-support-matrix.md)|Matrice de support et politique de support pour Microsoft JDBC Driver pour SQL Server.|  
-|[Forum aux Questions &#40; Forum aux questions &#41; pour le pilote JDBC](../../connect/jdbc/frequently-asked-questions-faq-for-jdbc-driver.md)|Forum aux questions sur le pilote Microsoft JDBC.|  
+|[Forum aux Questions &#40;FAQ&#41; pour le pilote JDBC](../../connect/jdbc/frequently-asked-questions-faq-for-jdbc-driver.md)|Forum aux questions sur le pilote Microsoft JDBC.|  
 |[Dépendances de fonctionnalité de Microsoft JDBC Driver pour SQL Server](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md)|Dépendances de la fonctionnalité de Microsoft JDBC Driver pour SQL Server.|
 
 ## <a name="see-also"></a>Voir aussi  
- [JDBC Driver GitHub Repository](https://github.com/microsoft/mssql-jdbc)  
+ [Référentiel GitHub de pilote JDBC](https://github.com/microsoft/mssql-jdbc)  
  [Référence d’API du pilote JDBC](../../connect/jdbc/reference/jdbc-driver-api-reference.md)  
   
   

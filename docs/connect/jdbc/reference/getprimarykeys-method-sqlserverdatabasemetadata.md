@@ -1,30 +1,33 @@
 ---
-title: "Méthode getPrimaryKeys (SQLServerDatabaseMetaData) | Documents Microsoft"
-ms.custom: 
+title: Méthode getPrimaryKeys (SQLServerDatabaseMetaData) | Documents Microsoft
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLServerDatabaseMetaData.getPrimaryKeys
-apilocation: sqljdbc.jar
+apiname:
+- SQLServerDatabaseMetaData.getPrimaryKeys
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: ebfe236a-dc02-493e-a3ab-5353d3769e36
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4dad2aa3d1f423b623970b7bb21673d27fb6616c
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 2e01a7c08fd3cb5c92084953be4940f8bd30bb98
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="getprimarykeys-method-sqlserverdatabasemetadata"></a>Méthode getPrimaryKeys (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -45,7 +48,7 @@ public java.sql.ResultSet getPrimaryKeys(java.lang.String cat,
   
  A **chaîne** qui contient le nom du catalogue.  
   
- *schéma*  
+ *schema*  
   
  A **chaîne** qui contient le nom du schéma.  
   
@@ -67,7 +70,7 @@ public java.sql.ResultSet getPrimaryKeys(java.lang.String cat,
 |Nom|Type| Description|  
 |----------|----------|-----------------|  
 |TABLE_CAT|Chaîne|Le nom de la base de données dans laquelle réside la table spécifiée.|  
-|TABLE_SCHEM|Chaîne|Le schéma pour la table.|  
+|TABLE_SCHEM|Chaîne|Schéma de la table.|  
 |TABLE_NAME|Chaîne|Nom de la table.|  
 |COLUMN_NAME|Chaîne|Nom de la colonne.|  
 |KEY_SEQ|short|Numéro séquentiel de la colonne dans une clé primaire multicolonne.|  

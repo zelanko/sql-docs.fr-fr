@@ -3,7 +3,7 @@ title: À l’aide des Types de valeur volumineux | Documents Microsoft
 description: À l’aide des types de valeur volumineux avec le pilote OLE DB pour SQL Server
 ms.custom: ''
 ms.date: 03/26/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: oledb|features
@@ -21,13 +21,13 @@ helpviewer_keywords:
 - OLE DB Driver for SQL Server, large value data types
 author: pmasl
 ms.author: Pedro.Lopes
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 252670fd1231efde3e9840ce28ab2ed2c4c42227
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
-ms.translationtype: MT
+ms.openlocfilehash: 8366d4ea0b307600f2e13a456dac8a437fd6ca45
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="using-large-value-types"></a>Utilisation de types de valeur élevée
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -68,11 +68,11 @@ ms.lasthandoff: 04/06/2018
   
  Lors du signalement de la taille maximale d’une colonne, le pilote OLE DB pour SQL Server signalera :  
   
--   La taille maximale définie qui, par exemple, est 2000 pour une **varchar (**2000**)** colonne, ou  
+-   La taille maximale définie qui, par exemple, est 2000 pour une **varchar (** 2000 **)** colonne, ou  
   
 -   La valeur « illimitée » qui dans le cas d’un **varchar (max)** colonne est égale à ~ 0. Cette valeur est définie pour la propriété de métadonnées DBCOLUMN_COLUMNSIZE.  
   
- Les règles de conversion standard s’appliquent à un **varchar (max)** colonne, ce qui signifie que toute conversion valide pour un **varchar (**2000**)** colonne sera également valide pour un **varchar (max)** colonne. Est de même pour **nvarchar (max)** et **varbinary (max)** colonnes.  
+ Les règles de conversion standard s’appliquent à un **varchar (max)** colonne, ce qui signifie que toute conversion valide pour un **varchar (** 2000 **)** colonne sera également valide pour un **varchar (max)** colonne. Est de même pour **nvarchar (max)** et **varbinary (max)** colonnes.  
   
  Lors de la récupération de types de valeur élevée, l'approche la plus efficace consiste à lier en tant que DBTYPE_IUNKNOWN et à attribuer à la propriété d'ensemble de lignes DBPROP_ACCESSORDER la valeur DBPROPVAL_AO_SEQUENTIALSTORAGEOBJECTS. La valeur sera alors diffusée en continu directement à partir du réseau sans mise en mémoire tampon intermédiaire, comme dans l'exemple suivant :  
   

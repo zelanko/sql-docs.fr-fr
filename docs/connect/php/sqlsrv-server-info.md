@@ -26,7 +26,7 @@ manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: d65fd337b3d3eec851bfa7d3bd43ec108be7286d
 ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MTE
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 04/16/2018
 ---
@@ -48,13 +48,13 @@ sqlsrv_server_info( resource $conn)
 ## <a name="return-value"></a>Valeur retournée  
 Tableau associatif avec les clés suivantes :  
   
-|Key|Description|  
+|Key| Description|  
 |-------|---------------|  
 |CurrentDatabase|Base de données actuellement ciblée.|  
 |SQLServerVersion|Version de SQL Server.|  
 |SQLServerName|Nom du serveur.|  
   
-## <a name="example"></a> Exemple  
+## <a name="example"></a>Exemple  
 L’exemple suivant écrit des informations de serveur dans la console quand l’exemple est exécuté à partir de la ligne de commande.  
   
 ```  
@@ -87,7 +87,7 @@ sqlsrv_close( $conn);
 ?>  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [Informations de référence sur l’API du pilote SQLSRV](../../connect/php/sqlsrv-driver-api-reference.md)  
 
 [À propos des exemples de code dans la documentation](../../connect/php/about-code-examples-in-the-documentation.md)  

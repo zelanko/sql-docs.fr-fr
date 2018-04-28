@@ -1,30 +1,33 @@
 ---
-title: "Méthode getMoreResults (int) | Documents Microsoft"
-ms.custom: 
+title: Méthode getMoreResults (int) | Documents Microsoft
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLServerStatement.getMoreResults (int)
-apilocation: sqljdbc.jar
+apiname:
+- SQLServerStatement.getMoreResults (int)
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: 6419e5a8-8b3a-4d5b-8226-95865c52c723
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 94667aabdcc08693f4f7a8647f9333a18053e956
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 1f0b20046e664a4bf856a63d3dddbf7a45a48165
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="getmoreresults-method-int"></a>Méthode getMoreResults (int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,7 +42,7 @@ public final boolean getMoreResults(int mode)
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- *mode*  
+ *Mode*  
   
  Un **int** qui indique comment gérer des objets du jeu de résultats actuellement ouverts. Doit être une des constantes suivantes :  
   
@@ -64,7 +67,7 @@ public final boolean getMoreResults(int mode)
 >  Le pilote JDBC ne prend pas en charge la constante KEEP_CURRENT_RESULT. Si elle est utilisée, une exception est levée.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Méthode getMoreResults &#40; SQLServerStatement &#41;](../../../connect/jdbc/reference/getmoreresults-method-sqlserverstatement.md)   
+ [Méthode getMoreResults &#40;SQLServerStatement&#41;](../../../connect/jdbc/reference/getmoreresults-method-sqlserverstatement.md)   
  [Membres de SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-members.md)   
  [SQLServerStatement, classe](../../../connect/jdbc/reference/sqlserverstatement-class.md)  
   

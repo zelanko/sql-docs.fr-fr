@@ -1,27 +1,28 @@
 ---
 title: Membres de SQLServerXAResource | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: a069bf2c-1b70-4817-b084-a508445de799
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7e61b22a719ea74b1097a50f811a4e1bde85db54
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: b4d0dd8ffe48528b439447a59e2540950c34527d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlserverxaresource-members"></a>Membres de SQLServerXAResource
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -47,16 +48,16 @@ ms.lasthandoff: 11/18/2017
   
 |Nom| Description|  
 |----------|-----------------|  
-|[validation](../../../connect/jdbc/reference/commit-method-sqlserverxaresource.md)|Valide la transaction globale spécifiée par l’objet Xid donné.|  
-|[fin](../../../connect/jdbc/reference/end-method-sqlserverxaresource.md)|Termine le travail effectué pour le compte d'une branche de transaction.|  
+|[Validation](../../../connect/jdbc/reference/commit-method-sqlserverxaresource.md)|Valide la transaction globale spécifiée par l’objet Xid donné.|  
+|[Fin](../../../connect/jdbc/reference/end-method-sqlserverxaresource.md)|Termine le travail effectué pour le compte d'une branche de transaction.|  
 |[oubliez](../../../connect/jdbc/reference/forget-method-sqlserverxaresource.md)|Indique au gestionnaire de ressources de ne pas tenir compte d'une branche de transaction terminée de manière heuristique.|  
 |[getTransactionTimeout](../../../connect/jdbc/reference/gettransactiontimeout-method-sqlserverxaresource.md)|Obtient la valeur de délai d’attente de transaction actuelle définie pour ce [SQLServerXAResource](../../../connect/jdbc/reference/sqlserverxaresource-class.md) objet.|  
 |[isSameRM](../../../connect/jdbc/reference/issamerm-method-sqlserverxaresource.md)|Détermine si l’instance du Gestionnaire de ressources représentée par l’objet cible est identique à l’instance du Gestionnaire de ressources représentée par l’objet XAResource donné.|  
-|[préparer](../../../connect/jdbc/reference/prepare-method-sqlserverxaresource.md)|Demande que le Gestionnaire de ressources se préparer à une validation de la transaction spécifiée par l’objet Xid donné.|  
+|[Préparer](../../../connect/jdbc/reference/prepare-method-sqlserverxaresource.md)|Demande que le Gestionnaire de ressources se préparer à une validation de la transaction spécifiée par l’objet Xid donné.|  
 |[récupérer](../../../connect/jdbc/reference/recover-method-sqlserverxaresource.md)|Obtient une liste des branches de transactions préparées à partir d'un gestionnaire de ressources.|  
-|[restauration](../../../connect/jdbc/reference/rollback-method-sqlserverxaresource.md)|Demande que le gestionnaire de ressources restaure le travail effectué pour le compte d'une branche de transaction.|  
+|[Restauration](../../../connect/jdbc/reference/rollback-method-sqlserverxaresource.md)|Demande que le gestionnaire de ressources restaure le travail effectué pour le compte d'une branche de transaction.|  
 |[setTransactionTimeout](../../../connect/jdbc/reference/settransactiontimeout-method-sqlserverxaresource.md)|Définit la valeur de délai d’attente de transaction en cours de ce [SQLServerXAResource](../../../connect/jdbc/reference/sqlserverxaresource-class.md) objet.|  
-|[Démarrer](../../../connect/jdbc/reference/start-method-sqlserverxaresource.md)|Démarre le travail pour le compte d’une branche de transaction spécifiée dans l’objet Xid.|  
+|[start](../../../connect/jdbc/reference/start-method-sqlserverxaresource.md)|Démarre le travail pour le compte d’une branche de transaction spécifiée dans l’objet Xid.|  
   
 ## <a name="inherited-methods"></a>Méthodes héritées  
   

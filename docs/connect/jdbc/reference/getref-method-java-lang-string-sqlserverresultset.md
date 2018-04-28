@@ -1,30 +1,33 @@
 ---
-title: "Méthode getRef (java.lang.String) (SQLServerResultSet) | Documents Microsoft"
-ms.custom: 
+title: Méthode getRef (java.lang.String) (SQLServerResultSet) | Documents Microsoft
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLServerResultSet.getRef (java.lang.String)
-apilocation: sqljdbc.jar
+apiname:
+- SQLServerResultSet.getRef (java.lang.String)
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: 83c60c5d-7a69-498b-be9c-bbdbfafec157
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 51be409ac39094fb9950844ccd4aa5168c4fe93b
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: e7f74198e4278af269868d24be00524be6d09c2d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="getref-method-javalangstring-sqlserverresultset"></a>Méthode getRef (java.lang.String) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,7 +42,7 @@ public java.sql.Ref getRef(java.lang.String colName)
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- *nom de colonne*  
+ *Nom de colonne*  
   
  A **chaîne** qui contient le nom de colonne.  
   
@@ -53,7 +56,7 @@ public java.sql.Ref getRef(java.lang.String colName)
  Cette méthode getRef est spécifiée par la méthode getRef dans l’interface java.sql.ResultSet.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Méthode getRef &#40; SQLServerResultSet &#41;](../../../connect/jdbc/reference/getref-method-sqlserverresultset.md)   
+ [Méthode getRef &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getref-method-sqlserverresultset.md)   
  [Membres de SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet, classe](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

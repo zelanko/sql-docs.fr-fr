@@ -2,7 +2,7 @@
 title: Développeur de données SQL | Documents Microsoft
 ms.custom: ''
 ms.date: 03/28/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: connect
@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: eb0f5e27677c455f95136d7827139bb6e34f79c0
-ms.sourcegitcommit: 094c46e7fa6de44735ed0040c65a40ec3d951b75
-ms.translationtype: MT
+ms.openlocfilehash: 47c3e90100b7b4fa12c47acd98333e10e15603d7
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sql-data-developer"></a>Développeur de données SQL
 Plateforme de données SQL de Microsoft permet de créer des solutions basées sur les données sur les appareils mobiles et ordinateurs de bureau pour les serveurs web, serveurs d’entreprise et le cloud.  

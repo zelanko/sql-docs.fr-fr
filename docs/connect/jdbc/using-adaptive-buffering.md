@@ -1,27 +1,28 @@
 ---
-title: "À l’aide de la mise en mémoire tampon adaptative | Documents Microsoft"
-ms.custom: 
+title: À l’aide de la mise en mémoire tampon adaptative | Documents Microsoft
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 92d4e3be-c3e9-4732-9a60-b57f4d0f7cb7
-caps.latest.revision: "53"
+caps.latest.revision: 53
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4743d48d09625dd4ce1840b61abb58497057789d
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 194301cbaa751beedb3ba70bfb78bc6062b0841f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="using-adaptive-buffering"></a>Utilisation de la mise en mémoire tampon adaptative
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -34,7 +35,7 @@ ms.lasthandoff: 11/18/2017
   
 -   **La requête génère un jeu de résultats très volumineux :** l’application peut exécuter une instruction SELECT qui produit plus de lignes que l’application peut stocker en mémoire. Dans les versions précédentes, l’application devait utiliser un curseur côté serveur afin d’éviter une OutOfMemoryError. La mise en mémoire tampon adaptative permet d'effectuer un passage en lecture seule avant uniquement d'un jeu de résultats arbitrairement volumineux sans nécessiter de curseur côté serveur.  
   
--   **La requête produit très volumineux**[SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md)**colonnes ou**[SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md)**les valeurs de paramètre :**  L’application peut récupérer une valeur unique (colonne ou paramètre OUT) trop grande pour tenir entièrement dans la mémoire de l’application. Mise en mémoire tampon adaptative permet à l’application cliente récupérer une telle valeur en tant que flux, à l’aide de la getAsciiStream, la getBinaryStream ou les méthodes getCharacterStream. L’application récupère la valeur de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] lorsqu’il lit à partir du flux.  
+-   **La requête produit très volumineux**[SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md)**colonnes ou**[SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md)**les valeurs de paramètre :** L’application peut récupérer une valeur unique (colonne ou paramètre OUT) trop grande pour tenir entièrement dans la mémoire de l’application. Mise en mémoire tampon adaptative permet à l’application cliente récupérer une telle valeur en tant que flux, à l’aide de la getAsciiStream, la getBinaryStream ou les méthodes getCharacterStream. L’application récupère la valeur de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] lorsqu’il lit à partir du flux.  
   
 > [!NOTE]  
 >  Avec la mise en mémoire tampon adaptative, le pilote JDBC ne met en mémoire tampon que la quantité de données requise. Le pilote ne fournit aucune méthode publique pour contrôler ou limiter la taille de la mémoire tampon.  

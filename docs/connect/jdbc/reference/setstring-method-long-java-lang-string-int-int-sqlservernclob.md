@@ -1,27 +1,28 @@
 ---
-title: "Méthode setString (long, java.lang.String, int, int) - NClob | Documents Microsoft"
-ms.custom: 
+title: Méthode setString (long, java.lang.String, int, int) - NClob | Documents Microsoft
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 2d5e9f50-15b2-4c76-8bfc-3b5be49c2781
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9a5945b09f75fefde2b87387d02ca45ad58b0cc0
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: a464993f85073458f5b2310cf667e1eb55c7bc8d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="setstring-method-long-javalangstring-int-int-sqlservernclob"></a>Méthode setString (long, java.lang.String, int, int) (SQLServerNClob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -47,11 +48,11 @@ int setString(long pos,
   
  La chaîne à écrire dans le **NCLOB**.  
   
- *décalage*  
+ *offset*  
   
  Offset dans *str* pour démarrer la lecture des caractères à écrire.  
   
- *Len*  
+ *len*  
   
  Nombre de caractères à écrire.  
   

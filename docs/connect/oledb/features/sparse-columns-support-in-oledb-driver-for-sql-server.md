@@ -3,7 +3,7 @@ title: La prise en charge des colonnes éparses dans le pilote OLE DB pour SQL S
 description: Prise en charge des colonnes éparses dans le pilote OLE DB pour SQL Server
 ms.custom: ''
 ms.date: 03/26/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: oledb|features
@@ -18,13 +18,13 @@ helpviewer_keywords:
 - sparse columns, OLE DB
 author: pmasl
 ms.author: Pedro.Lopes
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ffb8b7f18cf9c1653e5c77217f1d1dd339333fcf
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
-ms.translationtype: MT
+ms.openlocfilehash: 08de456a687ffdde2889cb3bd26bd5dbfa39a5dc
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sparse-columns-support-in-ole-db-driver-for-sql-server"></a>Prise en charge des colonnes éparses dans le pilote OLE DB pour SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -67,6 +67,6 @@ ms.lasthandoff: 04/06/2018
  Toutefois, si **queryout** est utilisé pour l’exportation et que vous référencez des colonnes éparses qui sont membres du jeu par nom de colonnes éparses, vous ne pouvez effectuer aucune importation directe dans une table de structure similaire. Effet, BCP utilise des métadonnées cohérentes avec une **sélectionnez \***  opération pour l’importation et ne peut pas correspondre à **column_set** colonnes membres avec ces métadonnées. Pour importer **column_set** colonnes membres individuellement, vous devez définir une vue sur la table qui fait référence à l’élément **column_set** colonnes et que vous devez effectuer l’opération d’importation à l’aide de la vue.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Programmation OLE DB Driver pour SQL Server](../../oledb/oledb-driver-for-sql-server-programming.md)  
+ [OLE DB Driver pour SQL Server](../../oledb/oledb-driver-for-sql-server.md)  
   
   

@@ -1,8 +1,8 @@
 ---
-title: sqlsrv_prepare | Microsoft Docs
+title: sqlsrv_prepare | Documents Microsoft
 ms.custom: ''
 ms.date: 10/24/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: php
@@ -23,13 +23,13 @@ ms.assetid: 8c74c697-3296-4f5d-8fb9-e361f53f19a6
 caps.latest.revision: 52
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: dbfcece545b5fb66dbc8c2e8fd8afb1bcb9f9336
-ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
-ms.translationtype: MT
+ms.openlocfilehash: 52d4cbf24fe05ff73d85117ab8c9f10f566683a5
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlsrvprepare"></a>sqlsrv_prepare
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -68,13 +68,13 @@ sqlsrv_prepare(resource $conn, string $tsql [, array $params [, array $options]]
     |Élément|Description|  
     |-----------|---------------|  
     |*&$value*|Valeur littérale ou référence à une variable PHP.|  
-    |*$direction*[OPTIONAL]|Une des valeurs suivantes **SQLSRV_PARAM_\***  les constantes utilisées pour indiquer la direction du paramètre : **SQLSRV_PARAM_IN**, **SQLSRV_PARAM_OUT**, **SQLSRV_PARAM_INOUT**. La valeur par défaut est **SQLSRV_PARAM_IN**.<br /><br />Pour plus d’informations sur les constantes PHP, consultez [constantes &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md).|  
-    |*$phpType*[OPTIONAL]|A **SQLSRV_PHPTYPE_\***  constante qui spécifie le type de données PHP de la valeur retournée.|  
-    |*$sqlType*[OPTIONAL]|A **SQLSRV_SQLTYPE_\***  constante qui spécifie le type de données SQL Server de la valeur d’entrée.|  
+    |*$direction*[facultatif]|Une des valeurs suivantes **SQLSRV_PARAM_\***  les constantes utilisées pour indiquer la direction du paramètre : **SQLSRV_PARAM_IN**, **SQLSRV_PARAM_OUT**, **SQLSRV_PARAM_INOUT**. La valeur par défaut est **SQLSRV_PARAM_IN**.<br /><br />Pour plus d’informations sur les constantes PHP, consultez [constantes &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md).|  
+    |*$phpType*[facultatif]|A **SQLSRV_PHPTYPE_\***  constante qui spécifie le type de données PHP de la valeur retournée.|  
+    |*$sqlType*[facultatif]|A **SQLSRV_SQLTYPE_\***  constante qui spécifie le type de données SQL Server de la valeur d’entrée.|  
   
 *$options* [facultatif] : tableau associatif qui définit les propriétés de la requête. Le tableau suivant répertorie les clés prises en charge et les valeurs correspondantes :  
   
-|Clé|Valeurs prises en charge| Description|  
+|Key|Valeurs prises en charge| Description|  
 |-------|--------------------|---------------|  
 |QueryTimeout|Valeur d'entier positif.|Définit le délai d’expiration de la requête, en secondes. Par défaut, le pilote attend indéfiniment pour obtenir les résultats.|  
 |SendStreamParamsAtExec|**true** ou **false**<br /><br />La valeur par défaut est **true**.|Configure le pilote pour envoyer tous les flux de données lors de l’exécution (**true**), ou pour envoyer des données de flux de données en segments (**false**). La valeur par défaut est **true**. Pour plus d’informations, consultez [sqlsrv_send_stream_data](../../connect/php/sqlsrv-send-stream-data.md).|  
@@ -140,7 +140,7 @@ sqlsrv_close($conn);
 ```  
   
 ## <a name="example"></a>Exemple  
-L’exemple suivant montre comment préparer une instruction puis la réexécuter avec des valeurs de paramètres différentes. L’exemple met à jour la colonne *OrderQty* de la table *Sales.SalesOrderDetail* dans la base de données AdventureWorks. Une fois les mises à jour effectuées, la base de données est interrogée pour vérifier que les mises à jour ont réussi. L’exemple part du principe que SQL Server et le [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) base de données sont installés sur l’ordinateur local.  Toute la sortie est écrite dans la console quand l’exemple est exécuté à partir de la ligne de commande.  
+L’exemple suivant montre comment préparer une instruction puis la réexécuter avec des valeurs de paramètres différentes. L’exemple met à jour la colonne *OrderQty* de la table *Sales.SalesOrderDetail* dans la base de données AdventureWorks. Une fois les mises à jour effectuées, la base de données est interrogée pour vérifier que les mises à jour ont réussi. L’exemple part du principe que SQL Server et le [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) base de données sont installés sur l’ordinateur local. Toute la sortie est écrite dans la console quand l’exemple est exécuté à partir de la ligne de commande.  
   
 ```  
 <?php  

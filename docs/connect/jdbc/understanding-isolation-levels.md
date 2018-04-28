@@ -1,27 +1,28 @@
 ---
-title: "Présentation des niveaux d’Isolation | Documents Microsoft"
-ms.custom: 
+title: Présentation des niveaux d’Isolation | Documents Microsoft
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 2c41e23a-da6c-4650-b5fc-b5fe53ba65c3
-caps.latest.revision: "17"
+caps.latest.revision: 17
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 5acd91539652aefd7eee0049bb2e1ccc277c16a0
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 0115d8c16c63882990a462c0fde8d146e91dbf88
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="understanding-isolation-levels"></a>Fonctionnement des niveaux d'isolement
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -52,10 +53,10 @@ ms.lasthandoff: 11/18/2017
 |Niveau d'isolement|Lecture erronée|Lecture non reproductible|Fantôme|  
 |---------------------|----------------|-------------------------|-------------|  
 |Lecture non validée|Oui|Oui|Oui|  
-|Lecture validée|Non|Oui|Oui|  
-|Lecture renouvelable|Non|Non|Oui|  
-|Snapshot|Non|Non|Non|  
-|Sérialisable|Non|Non|Non|  
+|Lecture validée|non|Oui|Oui|  
+|Lecture renouvelable|non|Non|Oui|  
+|Snapshot|non|Non|non|  
+|Sérialisable|non|Non|non|  
   
  Les transactions doivent être exécutées à un niveau d'isolement au moins égal à lecture renouvelée afin d'empêcher les pertes de mises à jour qui peuvent se produire lorsque deux transactions extraient la même ligne, puis mettent ultérieurement à jour la ligne en fonction des valeurs extraites initialement. Si les deux transactions mettent à jour des lignes à l'aide d'une instruction UPDATE unique et qu'elles ne basent pas la mise à jour sur les valeurs extraites précédemment, aucune perte de mise à jour ne peut se produire au niveau d'isolement par défaut de lecture validée.  
   

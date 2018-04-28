@@ -1,30 +1,33 @@
 ---
-title: "Méthode updateInt (int, int) | Documents Microsoft"
-ms.custom: 
+title: Méthode updateInt (int, int) | Documents Microsoft
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLServerResultSet.updateInt (int, int)
-apilocation: sqljdbc.jar
+apiname:
+- SQLServerResultSet.updateInt (int, int)
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: f4f651b0-a822-4bd4-b391-cc2355154a2a
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9208f1a3933e4253931d29bc010e3bfbc6a439ec
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: ba78facdeae3fc113b54f77277fd27f1eab9487c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="updateint-method-int-int"></a>Méthode updateInt (int, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -55,7 +58,7 @@ public void updateInt(int index,
  Cette méthode updateInt est spécifiée par la méthode updateInt dans l’interface java.sql.ResultSet.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Méthode updateInt &#40; SQLServerResultSet &#41;](../../../connect/jdbc/reference/updateint-method-sqlserverresultset.md)   
+ [Méthode updateInt &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updateint-method-sqlserverresultset.md)   
  [Membres de SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet, classe](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

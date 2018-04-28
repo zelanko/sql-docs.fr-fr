@@ -1,27 +1,28 @@
 ---
-title: "Connexion à une base de données SQL Azure | Documents Microsoft"
-ms.custom: 
+title: Connexion à une base de données SQL Azure | Documents Microsoft
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 49645b1f-39b1-4757-bda1-c51ebc375c34
-caps.latest.revision: "23"
+caps.latest.revision: 23
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: bc0a49d5758b4e7160ecf5e9e374d4c460755161
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 7e7452a001f96b38b8e2a6047a144a82b5f957a9
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="connecting-to-an-azure-sql-database"></a>Connexion à une base de données SQL Azure
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -38,7 +39,7 @@ ms.lasthandoff: 11/18/2017
   
 ## <a name="details"></a>Détails  
  Lors de la connexion à un [!INCLUDE[ssAzure](../../includes/ssazure_md.md)], vous devez vous connecter à la base de données master pour appeler **SQLServerDatabaseMetaData.getCatalogs**.  
- [!INCLUDE[ssAzure](../../includes/ssazure_md.md)]ne prend pas en charge le retour de l’ensemble des catalogues à partir d’une base de données utilisateur. **SQLServerDatabaseMetaData.getCatalogs** utilise la vue sys.databases pour récupérer les catalogues. Reportez-vous à la discussion des autorisations de [sys.databases (base de données SQL Azure)](http://go.microsoft.com/fwlink/?LinkId=217396) pour comprendre **SQLServerDatabaseMetaData.getCatalogs** comportement sur un [!INCLUDE[ssAzure](../../includes/ssazure_md.md)].  
+ [!INCLUDE[ssAzure](../../includes/ssazure_md.md)] ne prend pas en charge le retour de l’ensemble des catalogues à partir d’une base de données utilisateur. **SQLServerDatabaseMetaData.getCatalogs** utilise la vue sys.databases pour récupérer les catalogues. Reportez-vous à la discussion des autorisations de [sys.databases (base de données SQL Azure)](http://go.microsoft.com/fwlink/?LinkId=217396) pour comprendre **SQLServerDatabaseMetaData.getCatalogs** comportement sur un [!INCLUDE[ssAzure](../../includes/ssazure_md.md)].  
   
  Connexions supprimées  
  Lors de la connexion à un [!INCLUDE[ssAzure](../../includes/ssazure_md.md)], connexions inactives peuvent être arrêtées par un composant réseau (tel qu’un pare-feu) après une période d’inactivité. Il existe deux types de connexions inactives dans ce contexte :  
@@ -85,7 +86,7 @@ shutdown /r /t 1
  Utilisation du chiffrement, nécessitant la définition d'un hostNameInCertificate  
  Lors de la connexion à un [!INCLUDE[ssAzure](../../includes/ssazure_md.md)], vous devez spécifier **hostNameInCertificate** si vous spécifiez **chiffrer = true**. (Si le nom du serveur dans la chaîne de connexion est *shortName*. *nom_domaine*, définissez le **hostNameInCertificate** propriété \*. *nom_domaine*.)  
   
- Exemple :  
+ Par exemple :  
   
 ```  
 jdbc:sqlserver://abcd.int.mscds.com;databaseName= myDatabase;user=myName;password=myPassword;encrypt=true;hostNameInCertificate= *.int.mscds.com;  

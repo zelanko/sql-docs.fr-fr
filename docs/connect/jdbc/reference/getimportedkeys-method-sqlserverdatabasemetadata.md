@@ -1,30 +1,33 @@
 ---
-title: "Méthode getImportedKeys (SQLServerDatabaseMetaData) | Documents Microsoft"
-ms.custom: 
+title: Méthode getImportedKeys (SQLServerDatabaseMetaData) | Documents Microsoft
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLServerDatabaseMetaData.getImportedKeys
-apilocation: sqljdbc.jar
+apiname:
+- SQLServerDatabaseMetaData.getImportedKeys
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: dc8c1a5e-700e-4059-a5ed-5013bbb87fb6
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8dc8dfc6d37fcd6ffb3c77105962e6d45b4be313
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 5ed1492914aa1f149a641eead6605704daba6c10
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="getimportedkeys-method-sqlserverdatabasemetadata"></a>Méthode getImportedKeys (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -45,7 +48,7 @@ public java.sql.ResultSet getImportedKeys(java.lang.String cat,
   
  A **chaîne** qui contient le nom du catalogue.  
   
- *schéma*  
+ *schema*  
   
  A **chaîne** qui contient le nom du schéma.  
   
@@ -66,19 +69,19 @@ public java.sql.ResultSet getImportedKeys(java.lang.String cat,
   
 |Nom|Type| Description|  
 |----------|----------|-----------------|  
-|PKTABLE_CAT|**Chaîne**|Nom du catalogue qui contient la table de clés primaires.|  
-|PKTABLE_SCHEM|**Chaîne**|Nom du schéma de la table de clés primaires.|  
-|PKTABLE_NAME|**Chaîne**|Nom de la table de clés primaires.|  
-|PKCOLUMN_NAME|**Chaîne**|Nom de colonne de la clé primaire.|  
-|FKTABLE_CAT|**Chaîne**|Nom du catalogue qui contient la table de clés étrangères.|  
-|FKTABLE_SCHEM|**Chaîne**|Nom du schéma de la table de clés étrangères.|  
-|FKTABLE_NAME|**Chaîne**|Nom de la table de clés étrangères.|  
-|FKCOLUMN_NAME|**Chaîne**|Nom de colonne de la clé étrangère.|  
+|PKTABLE_CAT|**String**|Nom du catalogue qui contient la table de clés primaires.|  
+|PKTABLE_SCHEM|**String**|Nom du schéma de la table de clés primaires.|  
+|PKTABLE_NAME|**String**|Nom de la table de clés primaires.|  
+|PKCOLUMN_NAME|**String**|Nom de colonne de la clé primaire.|  
+|FKTABLE_CAT|**String**|Nom du catalogue qui contient la table de clés étrangères.|  
+|FKTABLE_SCHEM|**String**|Nom du schéma de la table de clés étrangères.|  
+|FKTABLE_NAME|**String**|Nom de la table de clés étrangères.|  
+|FKCOLUMN_NAME|**String**|Nom de colonne de la clé étrangère.|  
 |KEY_SEQ|**courte**|Numéro séquentiel de la colonne dans une clé primaire multicolonne.|  
 |UPDATE_RULE|**courte**|Action appliquée à la clé étrangère lorsque l'opération SQL correspond à une mise à jour. Il peut prendre l’une des valeurs suivantes :<br /><br /> importedKeyNoAction (3)<br /><br /> importedKeyCascade (0)<br /><br /> importedKeySetNull (2)<br /><br /> importedKeySetDefault (4)<br /><br /> importedKeyRestrict (1)|  
 |DELETE_RULE|**courte**|Action appliquée à la clé étrangère lorsque l'opération SQL correspond à une suppression. Il peut prendre l’une des valeurs suivantes :<br /><br /> importedKeyNoAction (3)<br /><br /> importedKeyCascade (0)<br /><br /> importedKeySetNull (2)<br /><br /> importedKeySetDefault (4)<br /><br /> importedKeyRestrict (1)|  
-|FK_NAME|**Chaîne**|Nom de la clé étrangère.|  
-|PK_NAME|**Chaîne**|Nom de la clé primaire.|  
+|FK_NAME|**String**|Nom de la clé étrangère.|  
+|PK_NAME|**String**|Nom de la clé primaire.|  
 |DEFERRABILITY|**courte**|Indique si l'évaluation de la contrainte de clé étrangère peut être différée jusqu'à une opération de validation. Il peut prendre l’une des valeurs suivantes :<br /><br /> importedKeyInitiallyDeferred (5)<br /><br /> importedKeyInitiallyImmediate (6)<br /><br /> importedKeyNotDeferrable (7)|  
   
 > [!NOTE]  

@@ -2,7 +2,7 @@
 title: Configurer l’avertissement gestion des erreurs et l’utilisation du pilote SQLSRV | Documents Microsoft
 ms.custom: ''
 ms.date: 03/26/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: php
@@ -15,16 +15,16 @@ ms.topic: article
 helpviewer_keywords:
 - errors and warnings
 ms.assetid: 257c6f53-9137-4619-a613-eee33d2077e8
-caps.latest.revision: ''
+caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4fa8c115c19ef758f44a17db6b491059ebcda9b8
-ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
-ms.translationtype: MT
+ms.openlocfilehash: f2683ec1060f6aef98aa1b51323e511f8e1d5b22
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-configure-error-and-warning-handling-using-the-sqlsrv-driver"></a>Procédure : configurer la gestion des erreurs et avertissements à l’aide du pilote SQLSRV
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -53,7 +53,7 @@ L’exemple de code suivant montre comment désactiver le comportement de gestio
   
 L’exemple montre d’abord le comportement de gestion des erreurs par défaut en exécutant une requête qui génère un avertissement. Cet avertissement est traité comme une erreur. Après avoir modifié la configuration de la gestion des erreurs, la même requête est exécutée. Cet avertissement n’est pas traité comme une erreur.  
   
-L’exemple part du principe que SQL Server est installé sur l’ordinateur local.  Toute la sortie est écrite dans la console quand l’exemple est exécuté à partir de la ligne de commande.  
+L’exemple part du principe que SQL Server est installé sur l’ordinateur local. Toute la sortie est écrite dans la console quand l’exemple est exécuté à partir de la ligne de commande.  
   
 ```  
 <?php  

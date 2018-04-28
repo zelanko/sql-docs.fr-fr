@@ -23,7 +23,7 @@ manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 9e8bdb5c51dd30682fdbd93754dce2f68722a1cc
 ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MTE
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 04/16/2018
 ---
@@ -45,7 +45,7 @@ sqlsrv_has_rows( resource $stmt )
 ## <a name="return-value"></a>Valeur retournée  
 S’il existe des lignes dans le jeu de résultats, la valeur de retour est **true**. En l’absence de lignes, ou si l’appel de fonction échoue, la valeur de retour est **false**.  
   
-## <a name="example"></a> Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 <?php  
@@ -65,6 +65,6 @@ S’il existe des lignes dans le jeu de résultats, la valeur de retour est **tr
 ?>  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [Informations de référence sur l’API du pilote SQLSRV](../../connect/php/sqlsrv-driver-api-reference.md)  
   

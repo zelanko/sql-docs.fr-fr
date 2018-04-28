@@ -1,27 +1,28 @@
 ---
-title: "Résilience des connexions dans le pilote ODBC de Windows | Documents Microsoft"
-ms.custom: 
+title: Résilience des connexions dans le pilote ODBC de Windows | Documents Microsoft
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 614fa0b4-e9fd-4c68-aab3-183f9b9df143
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6dda329540bd228920e88a12c69a4a6f2b8a8327
-ms.sourcegitcommit: e904c2a85347a93dcb15bb6b801afd39613d3ae7
-ms.translationtype: MT
+ms.openlocfilehash: f74ff01124e9efdb855f356f1951f29e531944f1
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/16/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="connection-resiliency-in-the-windows-odbc-driver"></a>Résilience de connexion du pilote ODBC Windows
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -67,7 +68,7 @@ ms.lasthandoff: 12/16/2017
   
  Les codes d’état suivants sont retournés par toute fonction qui exécute une commande sur le serveur :  
   
-|État|Message|  
+|État|Boîte de|  
 |-----------|-------------|  
 |IMC01|La connexion est interrompue et la récupération n’est pas possible. Le pilote du client a tenté de rétablir la connexion une fois ou plus et toutes les tentatives ont échoué. Augmentez la valeur de ConnectRetryCount pour augmenter le nombre de tentatives de récupération.|  
 |IMC02|Le serveur n’a pas reconnu une tentative de récupération. La récupération de la connexion est impossible.|  
@@ -76,7 +77,7 @@ ms.lasthandoff: 12/16/2017
 |IMC05|La connexion est interrompue et la récupération n’est pas possible. La connexion est marquée par le serveur comme irrécupérable. Aucune tentative n’a été faite pour rétablir la connexion.|  
 |IMC06|La connexion est interrompue et la récupération n’est pas possible. La connexion est marquée par le pilote du client comme irrécupérable. Aucune tentative n’a été faite pour rétablir la connexion.|  
   
-## <a name="example"></a> Exemple  
+## <a name="example"></a>Exemple  
  L’exemple suivant contient deux fonctions. **func1** montre comment vous pouvez vous connecter avec un nom de source de données (DSN) qui utilise le pilote ODBC pour [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] sur Windows. La source de données utilise l’authentification [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] et spécifie l’ID utilisateur. **func1** récupère ensuite le nombre de tentatives de connexion avec **SQL_COPT_SS_CONNECT_RETRY_COUNT**.  
   
  **func2** utilise **SQLDriverConnect**, le mot clé de chaîne de connexion **ConnectRetryCount** et les attributs de connexion pour récupérer le paramètre pour les tentatives de connexion et l’intervalle avant nouvelle tentative.  

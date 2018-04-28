@@ -3,7 +3,7 @@ title: Mappage de Type de données dans ITableDefinition | Documents Microsoft
 description: Mappage de type de données dans ITableDefinition
 ms.custom: ''
 ms.date: 03/26/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: ole-db-data-types
@@ -23,13 +23,13 @@ helpviewer_keywords:
 - OLE DB, data types
 author: pmasl
 ms.author: Pedro.Lopes
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e4cdcbbc5fdb0ac5efc6e8090213dd06475695b3
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
-ms.translationtype: MT
+ms.openlocfilehash: 1ef0aa17d3229188fe4b52780d9c894126d8e7f8
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="data-type-mapping-in-itabledefinition"></a>Mappage de type de données dans ITableDefinition
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -43,22 +43,24 @@ ms.lasthandoff: 04/06/2018
 |DBTYPE_BOOL|**bit**||  
 |DBTYPE_BYTES|**binaire**, **varbinary**, **image,** ou **varbinary (max)**|Le pilote OLE DB pour SQL Server inspecte le *ulColumnSize* membre de la structure DBCOLUMNDESC. En fonction de la valeur et la version de la [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] de l’instance, le pilote OLE DB pour SQL Server mappe le type à **image**.<br /><br /> Si la valeur de *ulColumnSize* est inférieure à la longueur maximale d’un **binaire** type de données de colonne, le pilote OLE DB pour SQL Server inspecte la structure DBCOLUMNDESC *rgPropertySets*membre. Si DBPROP_COL_FIXEDLENGTH est VARIANT_TRUE, le pilote OLE DB pour SQL Server mappe le type à **binaire**. Si la valeur de la propriété est VARIANT_FALSE, le pilote OLE DB pour SQL Server mappe le type à **varbinary**. Dans les deux cas, la structure DBCOLUMNDESC *ulColumnSize* détermine la largeur de la colonne SQL Server créée.|  
 |DBTYPE_CY|**money**||  
-|DBTYPE_DBTIMESTAMP|**datetime**||  
+|DBTYPE_DBTIMESTAMP|**datetime2**||  
 |DBTYPE_GUID|**uniqueidentifier**||  
 |DBTYPE_I2|**smallint**||  
 |DBTYPE_I4|**int**||  
+|DBTYPE_I8|**bigint**||
 |DBTYPE_NUMERIC|**numeric**|Le pilote OLE DB pour SQL Server inspecte les membres *bPrecision* et *bScale* membres pour déterminer la précision et l’échelle pour le **numérique** colonne.|  
 |DBTYPE_R4|**real**||  
 |DBTYPE_R8|**float**||  
 |DBTYPE_STR|**char**, **varchar**, **texte,** ou **varchar (max)**|Le pilote OLE DB pour SQL Server inspecte le *ulColumnSize* membre de la structure DBCOLUMNDESC. En fonction de la valeur et la version de la [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] de l’instance, le pilote OLE DB pour SQL Server mappe le type à **texte**.<br /><br /> Si la valeur de *ulColumnSize* est inférieure à la longueur maximale d’une colonne de type de données de caractères multioctets, puis le pilote OLE DB pour SQL Server inspecte la structure DBCOLUMNDESC *rgPropertySets* membre. Si DBPROP_COL_FIXEDLENGTH est VARIANT_TRUE, le pilote OLE DB pour SQL Server mappe le type à **char**. Si la valeur de la propriété est VARIANT_FALSE, le pilote OLE DB pour SQL Server mappe le type à **varchar**. Dans les deux cas, la structure DBCOLUMNDESC *ulColumnSize* détermine la largeur de la [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] colonne créée.|  
 |DBTYPE_UDT|**UDT**|Les informations suivantes sont utilisées dans **DBCOLUMNDESC** par les structures **ITableDefinition::CreateTable** lorsque les colonnes UDT sont requises :<br /><br /> *pwSzTypeName* est ignoré.<br /><br /> *rgPropertySets* doit inclure un **DBPROPSET_SQLSERVERCOLUMN** propriété est définie comme décrit dans la section sur **DBPROPSET_SQLSERVERCOLUMN**, dans [Defined Types ](../../oledb/features/using-user-defined-types.md).|  
 |DBTYPE_UI1|**tinyint**||  
+|DBTYPE_VARIANT|**sql_variant**||
 |DBTYPE_WSTR|**NCHAR**, **nvarchar**, **ntext,** ou **nvarchar (max)**|Le pilote OLE DB pour SQL Server inspecte le *ulColumnSize* membre de la structure DBCOLUMNDESC. En fonction de la valeur, le pilote OLE DB pour SQL Server mappe le type à **ntext**.<br /><br /> Si la valeur de *ulColumnSize* est inférieure à la longueur maximale d’une colonne de type de données de caractères Unicode, puis le pilote OLE DB pour SQL Server inspecte la structure DBCOLUMNDESC *rgPropertySets* membre. Si DBPROP_COL_FIXEDLENGTH est VARIANT_TRUE, le pilote OLE DB pour SQL Server mappe le type à **nchar**. Si la valeur de la propriété est VARIANT_FALSE, le pilote OLE DB pour SQL Server mappe le type à **nvarchar**. Dans les deux cas, la structure DBCOLUMNDESC *ulColumnSize* détermine la largeur de la [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] colonne créée.|  
 |DBTYPE_XML|**XML**||  
-  
+
 > [!NOTE]  
 >  Lorsque vous créez une nouvelle table, le pilote OLE DB pour SQL Server mappe uniquement les valeurs OLE DB données type énumération spécifiés dans le tableau précédent. Toute tentative de création d'une table avec une colonne de tout autre type de données OLE DB génère une erreur.  
-  
+
 ## <a name="see-also"></a>Voir aussi  
  [Types de données & #40 ; OLE DB & #41 ;](../../oledb/ole-db-data-types/data-types-ole-db.md)  
   

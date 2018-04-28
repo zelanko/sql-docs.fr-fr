@@ -1,28 +1,28 @@
 ---
-title: "Amélioration des performances et fiabilité avec le pilote JDBC | Documents Microsoft"
-ms.custom: 
+title: Amélioration des performances et fiabilité avec le pilote JDBC | Documents Microsoft
+ms.custom: ''
 ms.date: 01/19/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - drivers
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: e1592499-b87b-45ee-bab8-beaba8fde841
-caps.latest.revision: 
+caps.latest.revision: 25
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d8b2d716ada4cb786eb141c0f49dcad41c5231c4
-ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
-ms.translationtype: MT
+ms.openlocfilehash: d9333af182b7d4fdd8edfe983a6b3874845ba979
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/02/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="improving-performance-and-reliability-with-the-jdbc-driver"></a>Amélioration des performances et de la fiabilité avec le pilote JDBC
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -40,7 +40,7 @@ ms.lasthandoff: 03/02/2018
 |[Utilisation des instructions et des jeux de résultats](../../connect/jdbc/working-with-statements-and-result-sets.md)|Décrit les techniques d’amélioration des performances lorsque vous utilisez les objets de l’instruction ou le jeu de résultats.|  
 |[Utilisation de la mise en mémoire tampon adaptative](../../connect/jdbc/using-adaptive-buffering.md)|Décrit une fonctionnalité de mise en mémoire tampon adaptative, conçue pour récupérer tout type de données de grande valeur sans la charge liée au temps de traitement des curseurs côté serveur.|  
 |[Colonnes éparses](../../connect/jdbc/sparse-columns.md)|Décrit la prise en charge du pilote JDBC pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] les colonnes éparses.|  
-|[Métadonnées d’instruction préparée mise en cache pour le pilote JDBC](../../connect/jdbc/prepared-statement-metadata-caching-for-the-jdbc-driver.md)|Présente les techniques d’amélioration des performances des requêtes de l’instruction préparée.|
+|[Mise en cache des métadonnées d’instruction préparée pour le pilote JDBC](../../connect/jdbc/prepared-statement-metadata-caching-for-the-jdbc-driver.md)|Présente les techniques d’amélioration des performances des requêtes de l’instruction préparée.|
   
 ## <a name="see-also"></a>Voir aussi  
  [Vue d’ensemble du pilote JDBC](../../connect/jdbc/overview-of-the-jdbc-driver.md)  

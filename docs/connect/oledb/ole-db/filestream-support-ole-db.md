@@ -22,7 +22,7 @@ manager: jhubbard
 ms.workload: Inactive
 ms.openlocfilehash: efbe3ce15444b0c6556cf3cef0267e99bb55657f
 ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
-ms.translationtype: MTE
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 04/11/2018
 ---
@@ -37,7 +37,7 @@ ms.lasthandoff: 04/11/2018
   
  Cette modification affecte toutes les interfaces qui transfèrent des données, principalement IRowset::GetData ICommand::Execute et IRowsetFastLoad::InsertRow.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Programmation OLE DB Driver pour SQL Server](../../oledb/oledb-driver-for-sql-server-programming.md)  
   
   
