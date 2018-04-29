@@ -1,16 +1,16 @@
 ---
-title: "Conversion de données, transformation | Microsoft Docs"
-ms.custom: 
+title: Conversion de données, transformation | Microsoft Docs
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: data-flow
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.dataconversiontrans.f1
@@ -20,16 +20,16 @@ helpviewer_keywords:
 - Data Conversion transformation
 - data types [Integration Services], converting
 ms.assetid: fd515bbc-6f49-4d0c-ae7f-6ea3c3f24a1c
-caps.latest.revision: 
+caps.latest.revision: 53
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 314175a9f3a90c54a90b149cce91be885d5ef597
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 851de5d448fe984f3a5fca2b2cb1e1f1759c57a0
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="data-conversion-transformation"></a>transformation de conversion de données
   La transformation de conversion de données convertit les données d'une colonne d'entrée en un type de données différent, puis les copie dans une nouvelle colonne de sortie. Par exemple, un package peut extraire des données de plusieurs sources, puis utiliser cette transformation pour convertir des colonnes vers le type de données requis par la banque de données de destination. Vous pouvez appliquer plusieurs conversions à une même colonne d'entrée.  

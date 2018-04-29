@@ -1,33 +1,34 @@
 ---
 title: SQL Server Integration Services (SSIS) Scale Out | Microsoft Docs
 ms.description: This article provides an overview of the SQL Server Integration Services (SSIS) Scale Out feature, which provides high-performance execution of SSIS packages
-ms.custom: 
+ms.custom: ''
 ms.date: 12/13/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: scale-out
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: integration-services
-ms.tgt_pltfrm: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: dcfbd1c5-c001-4fb7-b9ae-916e49ab6a96
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: e3dc41da860382173076afafd768de09bd20366e
-ms.sourcegitcommit: ea68e8a68ee58584dd52035ed3d611a69b6c3818
+ms.openlocfilehash: 7dae1d65334003843ea5ad55143db40f862715a6
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/15/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="integration-services-ssis-scale-out"></a>Integration Services (SSIS) Scale Out
 SSIS (SQL Server [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]) Scale Out constitue un moyen très performant d’exécuter des packages SSIS en distribuant les exécutions sur plusieurs ordinateurs. Après avoir configuré Scale Out, vous pouvez effectuer plusieurs exécutions de packages en parallèle, en mode Scale Out, à partir de SSMS (SQL Server Management Studio).
 
-## <a name="components"></a>Composants
+## <a name="components"></a>Components
 [!INCLUDE[ssIS_md](../../includes/ssis-md.md)] Scale Out se compose d’un [!INCLUDE[ssIS_md](../../includes/ssis-md.md)] Scale Out Master et d’un ou de plusieurs [!INCLUDE[ssIS_md](../../includes/ssis-md.md)] Scale Out Workers.
 
 -   Le Scale Out Master est responsable de la gestion de Scale Out et reçoit les demandes d’exécution de package des utilisateurs. Pour plus d’informations, consultez [Scale Out Master](integration-services-ssis-scale-out-master.md).

@@ -1,16 +1,16 @@
 ---
-title: "Requête d’exploration de données, tâche | Microsoft Docs"
-ms.custom: 
+title: Requête d’exploration de données, tâche | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: control-flow
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.dataminingquerytask.f1
@@ -21,16 +21,16 @@ helpviewer_keywords:
 - prediction queries [Integration Services]
 - Data Mining Query task [Integration Services]
 ms.assetid: f489348c-2008-4f66-8c2c-c07c3029439a
-caps.latest.revision: 
+caps.latest.revision: 45
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c8ffadcd36d1df013d8e5a9a9aeb3f85d4056c27
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 092787065ee391c521810d09d1c01002a3fc8a74
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="data-mining-query-task"></a>Data Mining Query Task
   La tâche de requête d'exploration de données exécute des requêtes de prédiction basées sur les modèles d'exploration de données intégrés à [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. La requête de prédiction crée une prédiction de nouvelles données à l'aide de modèles d'exploration de données. Par exemple, une requête de prédiction peut prédire le nombre de voiliers susceptibles d'être vendus pendant les mois d'été ou générer la liste des prospects susceptibles d'acheter un voilier.  
@@ -44,7 +44,7 @@ ms.lasthandoff: 01/25/2018
 -   [Tâche de traitement d'Analysis Services](../../integration-services/control-flow/analysis-services-processing-task.md)  
   
 ## <a name="prediction-queries"></a>Requêtes de prédiction  
- La requête est une instruction DMX (Data Mining Extensions). Le langage DMX est une extension du langage SQL qui prend en charge l'utilisation de modèles d'exploration de données. Pour plus d’informations sur l’utilisation du langage DMX, consultez [Guide de référence du langage DMX &#40;Data Mining Extensions&#41;](../../dmx/data-mining-extensions-dmx-reference.md).  
+ La requête est une instruction DMX (Data Mining Extensions). Le langage DMX est une extension du langage SQL qui prend en charge l'utilisation de modèles d'exploration de données. Pour plus d’informations sur l’utilisation du langage DMX, consultez [Guide de référence du langage DMX & #40;Data Mining Extensions&#41;](../../dmx/data-mining-extensions-dmx-reference.md).  
   
  La tâche peut interroger plusieurs modèles d'exploration de données basés sur la même structure d'exploration de données. Un modèle d'exploration de données est construit à partir de l'un des algorithmes d'exploration de données fournis par [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . La structure d'exploration de données référencée par la tâche de requête d'exploration de données peut comprendre plusieurs modèles d'exploration de données, construits à partir de différents algorithmes. Pour plus d’informations, consultez [Structures d’exploration de données &#40;Analysis Services - exploration de données&#41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md) et [Algorithmes d’exploration de données &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md).  
   

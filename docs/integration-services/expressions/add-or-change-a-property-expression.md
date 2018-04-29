@@ -1,31 +1,31 @@
 ---
-title: "Ajouter ou modifier une expression de propriété | Microsoft Docs"
-ms.custom: 
+title: Ajouter ou modifier une expression de propriété | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: expressions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - expressions [Integration Services], creating
 - expressions [Integration Services], property expressions
 ms.assetid: cb5da499-065f-4fa6-9f6d-5bc5f385241e
-caps.latest.revision: 
+caps.latest.revision: 28
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b1ee8f6cfea444ee02880800908683213701af6e
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 7d6d845d53132ef7e440f39c9b3b5084ff1f134c
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="add-or-change-a-property-expression"></a>Ajouter ou modifier une expression de propriété
   Vous pouvez créer des expressions de propriété pour les packages, les tâches, les conteneurs de boucles For ou Foreach, les conteneurs de séquences, les gestionnaires d'événements, les gestionnaires de connexions aux niveaux des packages et du projet, ainsi que les modules fournisseurs d'informations.  

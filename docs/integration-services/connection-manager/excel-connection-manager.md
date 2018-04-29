@@ -1,7 +1,7 @@
 ---
 title: Gestionnaire de connexions Excel | Microsoft Docs
 ms.date: 04/02/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
 ms.service: ''
 ms.component: connection-manager
@@ -25,11 +25,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: c36d49debc132b6e67b2bcbd2a37df75007419ff
-ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
+ms.openlocfilehash: e273a5c9c41162a130769cf685096b4176752825
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="excel-connection-manager"></a>Gestionnaire de connexions Excel
   Un gestionnaire de connexions Excel permet à un package de se connecter à un fichier de classeur [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel. La source et la destination Excel incluses dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] utilisent le gestionnaire de connexions Excel.  
@@ -63,7 +63,7 @@ ms.lasthandoff: 04/04/2018
  **Chemin de fichier Excel**  
  Tapez le chemin et le nom d’un fichier de classeur Excel existant ou nouveau.  
    
- **...**  
+ **Parcourir**  
  Utilisez la boîte de dialogue **Ouvrir** pour accéder au dossier contenant le fichier Excel existant ou au dossier où vous souhaitez créer le fichier.  
   
  **Version Excel**  
@@ -72,7 +72,7 @@ ms.lasthandoff: 04/04/2018
  **La première ligne possède des noms de colonnes**  
  Permet de spécifier si la première ligne de données dans la feuille de calcul sélectionnée contient les noms des colonnes. La valeur par défaut de cette option est **True**.  
   
-## <a name="related-tasks"></a>Tâches associées  
+## <a name="related-tasks"></a>Related Tasks  
 [Charger des données depuis ou vers Excel avec SQL Server Integration Services (SSIS)](../load-data-to-from-excel-with-ssis.md)  
 [Source Excel](../data-flow/excel-source.md)  
 [Destination Excel](../data-flow/excel-destination.md)

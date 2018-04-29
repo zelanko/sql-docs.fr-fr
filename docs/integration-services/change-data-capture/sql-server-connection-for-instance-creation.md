@@ -1,28 +1,28 @@
 ---
-title: "Connexion SQL Server pour la création d’une instance | Microsoft Docs"
-ms.custom: 
+title: Connexion SQL Server pour la création d’une instance | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: change-data-capture
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 81d0e7e2-d8f0-4bd9-9565-218ce996f28e
-caps.latest.revision: 
+caps.latest.revision: 7
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2fe20acb562272e719f455a5922cfe2e94e2ba1f
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 72521e3cbe7057b80c89c24b82440b7b2cacd7ad
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="sql-server-connection-for-instance-creation"></a>Connexion SQL Server pour la création d'une instance
   Une des premières étapes de la création d'une instance Oracle CDC est la création d'une base de données CDC sur l'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cible. Cette base de données CDC est activée pour SQL Server CDC et cette activation requiert une connexion membre du rôle serveur fixe `sysadmin` .  

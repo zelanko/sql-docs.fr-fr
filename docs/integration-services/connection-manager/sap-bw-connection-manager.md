@@ -1,30 +1,30 @@
 ---
 title: Gestionnaire de connexions SAP BW | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: connection-manager
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 06b166a1-a9df-48ea-a0e8-9b8d6979c0a1
-caps.latest.revision: 
+caps.latest.revision: 10
 f1_keywords:
 - sql13.dts.designer.sapbwconnectionmanager.f1
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 23e7412671010511897e2937301e63942b44b5f7
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: d28122d6bb9e3b4ce5b13a43817f514878fb5868
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="sap-bw-connection-manager"></a>Gestionnaire de connexions SAP BW
   Le gestionnaire de connexions SAP BW est le composant de gestionnaire de connexions de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 pour SAP BW. Ainsi, le gestionnaire de connexions SAP BW fournit la connectivité à un système SAP Netweaver BW version 7 dont ont besoin les composants source et de destination de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 pour SAP BW. (La source et la destination SAP BW qui font partie du package [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 pour SAP BW sont les seuls composants [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] qui utilisent le gestionnaire de connexions SAP BW.)  
@@ -148,7 +148,7 @@ ms.lasthandoff: 01/25/2018
   
  Si vous ne sélectionnez pas de répertoire de journal, la journalisation n'est pas activée.  
   
- **...**  
+ **Parcourir**  
  Parcourez l'arborescence pour sélectionner un dossier pour le répertoire du journal.  
   
  **Tester la connexion**  

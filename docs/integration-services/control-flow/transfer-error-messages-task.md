@@ -1,16 +1,16 @@
 ---
-title: "Transférer les messages d’erreur, tâche | Microsoft Docs"
-ms.custom: 
+title: Transférer les messages d’erreur, tâche | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: control-flow
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.transfererrormessagestask.f1
@@ -19,16 +19,16 @@ f1_keywords:
 helpviewer_keywords:
 - Transfer Error Messages task [Integration Services]
 ms.assetid: da702289-035a-4d14-bd74-04461fbfee1b
-caps.latest.revision: 
+caps.latest.revision: 31
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cfb05e7b06ceebecca2af1fd363a7d312efc954c
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: f1e505b971f709124635cb9aa2ecd5bcbaf4f4af
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="transfer-error-messages-task"></a>Tâche de transfert de messages d'erreur
   La tâche de transfert de messages d’erreur transfère un ou plusieurs messages d’erreur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] définis par l’utilisateur entre des instances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Les messages définis par l'utilisateur sont des messages avec un identificateur supérieur ou égal à 50 000. Les messages dont l'identificateur est inférieur à 50 000 sont des messages d'erreur système qui ne peuvent pas être transférés à l'aide de la tâche de transfert de messages d'erreur.  

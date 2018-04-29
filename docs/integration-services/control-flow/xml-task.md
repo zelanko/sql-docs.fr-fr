@@ -1,16 +1,16 @@
 ---
-title: "XML, tâche | Microsoft Docs"
-ms.custom: 
+title: XML, tâche | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: control-flow
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.xmltask.f1
@@ -19,16 +19,16 @@ helpviewer_keywords:
 - XML [Integration Services]
 - XML task [Integration Services]
 ms.assetid: 9f761846-390e-46d5-9db7-858943d40849
-caps.latest.revision: 
+caps.latest.revision: 59
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: d8826d464d7cdbfab3e17e2cca9b61ceed0ae304
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: d487c283a463df4b1df7b37953e9f31564240e15
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="xml-task"></a>Tâche XML
   La tâche XML est utilisée pour travailler avec des données XML. À l'aide de cette tâche, un package peut extraire des documents XML, appliquer des opérations aux documents en utilisant des feuilles de style XSLT (Extensible Stylesheet Language Transformations) et des expressions XPath, fusionner plusieurs documents, ou bien valider, comparer et enregistrer les documents mis à jour dans des fichiers et des variables.  

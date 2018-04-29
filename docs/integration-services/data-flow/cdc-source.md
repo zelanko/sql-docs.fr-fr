@@ -2,7 +2,7 @@
 title: Source CDC | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
 ms.service: ''
 ms.component: data-flow
@@ -23,11 +23,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 632174b48536a4111125b24cfc85503ed6868a20
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
-ms.translationtype: MT
+ms.openlocfilehash: f0552a81beb1bce6a578b058953236453bc8e47f
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="cdc-source"></a>Source CDC
   La source CDC lit une plage de données modifiées dans les tables de modifications de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] et apporte les modifications en aval aux autres composants SSIS.  
@@ -109,9 +109,9 @@ use <cdc-enabled-database-name>
   
 -   [Éditeur de source CDC &#40;page Gestionnaire de connexions&#41;](../../integration-services/data-flow/cdc-source-editor-connection-manager-page.md)  
   
--   [Éditeur de Source de capture de données modifiées & #40 ; Page colonnes & #41 ;](../../integration-services/data-flow/cdc-source-editor-columns-page.md)  
+-   [Éditeur de source CDC &#40;page Colonnes&#41;](../../integration-services/data-flow/cdc-source-editor-columns-page.md)  
   
--   [Éditeur de Source de capture de données modifiées & #40 ; Page sortie d’erreur & #41 ;](../../integration-services/data-flow/cdc-source-editor-error-output-page.md)  
+-   [Éditeur de source CDC &#40;page Sortie d’erreur&#41;](../../integration-services/data-flow/cdc-source-editor-error-output-page.md)  
   
  La boîte de dialogue **Éditeur avancé** contient les propriétés qui peuvent être définies par programme.  
   
@@ -167,7 +167,7 @@ use <cdc-enabled-database-name>
   
 -   **Net avec masque de mise à jour** : ce mode est semblable au mode Net standard, à ceci près qu’il ajoute des colonnes booléennes au modèle de nom **__$\<nom-colonne>\__Modifié** qui indique les colonnes modifiées dans la ligne de modification active.  
   
--   **Net avec fusion** : ce mode est semblable au mode Net standard, à ceci près que les opérations d’insertion et de mise à jour sont fusionnées en une seule opération de fusion (UPSERT).  
+-   **Net avec fusion**: ce mode est semblable au mode Net standard, à ceci près que les opérations d’insertion et de mise à jour sont fusionnées en une seule opération de fusion (UPSERT).  
   
 > [!NOTE]  
 >  Pour toutes les options de modifications Net, la table source doit avoir une clé primaire ou un index unique. Pour les tables sans clé primaire ou sans index unique, vous devez utiliser l’option **Tout** .  
@@ -250,7 +250,7 @@ use <cdc-enabled-database-name>
  **Rediriger le flux**  
  La ligne de données qui présente l'erreur ou la troncation est dirigée vers la sortie d'erreur de la source CDC. Dans ce cas, la gestion des erreurs de la source CDC est utilisée. Pour plus d'informations, consultez [CDC Source](../../integration-services/data-flow/cdc-source.md).  
   
-## <a name="related-content"></a>Contenu connexe  
+## <a name="related-content"></a>Contenu associé  
   
 -   Entrée de blog, [Processing Modes for the CDC Source](http://www.mattmasson.com/2012/01/processing-modes-for-the-cdc-source/)(Modes de traitement pour la source CDC), sur mattmasson.com.  
   

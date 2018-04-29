@@ -2,7 +2,7 @@
 title: Gérer un service Oracle CDC | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
 ms.service: ''
 ms.component: change-data-capture
@@ -20,11 +20,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f54659eeb98bd72edf2addbb0d68df8519d2eb0b
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: be42903fb91978ea292b8c561d958fc2a6cdb754
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="manage-an-oracle-cdc-service"></a>Manage an Oracle CDC Service
   Vous pouvez utiliser la console de configuration du service de capture de données modifiées pour gérer un service de capture de données modifiées spécifique.  
@@ -35,7 +35,7 @@ ms.lasthandoff: 01/25/2018
   
 2.  Sélectionnez le service de capture de données modifiées à utiliser.  
   
-     Vous pouvez également cliquer avec le bouton droit sur le service de capture de données modifiées que vous souhaitez utiliser et sélectionner l'action souhaitée. Consultez [Opérations possibles avec un service de capture de données modifiées](../../integration-services/change-data-capture/manage-an-oracle-cdc-service.md#BKMK_WhatcandowithCDCService).  
+     Vous pouvez également cliquer avec le bouton droit sur le service de capture de données modifiées que vous souhaitez utiliser et sélectionner l'action souhaitée. Consultez [What can you do with a CDC Service](../../integration-services/change-data-capture/manage-an-oracle-cdc-service.md#BKMK_WhatcandowithCDCService).  
   
  **OR**  
   
@@ -45,7 +45,7 @@ ms.lasthandoff: 01/25/2018
   
      Vous pouvez également cliquer avec le bouton droit sur le service de capture de données modifiées que vous souhaitez utiliser et sélectionner l'action souhaitée. Consultez [Opérations possibles avec un service de capture de données modifiées](../../integration-services/change-data-capture/manage-an-oracle-cdc-service.md#BKMK_WhatcandowithCDCService).  
   
-##  <a name="BKMK_WhatcandowithCDCService"></a> Opérations possibles avec un service de capture de données modifiées  
+##  <a name="BKMK_WhatcandowithCDCService"></a> What can you do with a CDC Service  
  Vous pouvez effectuer les actions suivantes lorsque vous utilisez un service de capture de données modifiées.  
   
 ### <a name="delete-the-service"></a>Supprimer le service  

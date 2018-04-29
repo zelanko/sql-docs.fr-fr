@@ -2,7 +2,7 @@
 title: Gestionnaire de connexions MSMQ | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
 ms.service: ''
 ms.component: connection-manager
@@ -20,16 +20,16 @@ helpviewer_keywords:
 - MSMQ connection manager
 - message queue connections [Integration Services]
 ms.assetid: a86900e2-450e-479f-b207-e1b02361d395
-caps.latest.revision: ''
+caps.latest.revision: 35
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: add29828603c19a3d909ebb621e99ba58bdc6052
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 5a5dee5322e197d46cbdab5911f2e93bf34df4af
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="msmq-connection-manager"></a>Gestionnaire de connexions MSMQ
   Un gestionnaire de connexions MSMQ permet à un package de se connecter à une file d'attente de messages qui utilise Message Queuing (MSMQ). La tâche MSMQ incluse dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] utilise un gestionnaire de connexions MSMQ.  
@@ -64,7 +64,7 @@ ms.lasthandoff: 01/25/2018
  Pour en savoir plus sur le gestionnaire de connexions MSMQ, consultez [MSMQ Connection Manager](../../integration-services/connection-manager/msmq-connection-manager.md).  
   
 > [!NOTE]  
->  Le gestionnaire de connexions MSMQ prend en charge les files d'attente privées et publiques locales et les files d'attente publiques distantes. Il ne prend pas en charge les files d'attente privées distantes. Pour une solution de contournement qui utilise la tâche de script, consultez [Envoi vers une file d'attente de messages privée distante à l'aide de la tâche de script](../../integration-services/extending-packages-scripting-task-examples/sending-to-a-remote-private-message-queue-with-the-script-task.md).  
+>  Le gestionnaire de connexions MSMQ prend en charge les files d'attente privées et publiques locales et les files d'attente publiques distantes. Il ne prend pas en charge les files d'attente privées distantes. Pour une solution de contournement qui utilise la tâche de script, consultez [Sending to a Remote Private Message Queue with the Script Task](../../integration-services/extending-packages-scripting-task-examples/sending-to-a-remote-private-message-queue-with-the-script-task.md).  
   
 ### <a name="options"></a>Options  
  **Nom**  

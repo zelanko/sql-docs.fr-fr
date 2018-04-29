@@ -1,23 +1,24 @@
 ---
-title: "Déployer un projet SSIS à partir de l’invite de commandes | Microsoft Docs"
+title: Déployer un projet SSIS à partir de l’invite de commandes | Microsoft Docs
 ms.date: 09/25/2017
 ms.topic: article
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: non-specific
 ms.suite: sql
-ms.custom: 
-ms.technology: integration-services
+ms.custom: ''
+ms.technology:
+- integration-services
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a753aa1418e935604148d0d42afa22716dec1b17
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 65a94a74659cefdb1fbed508836d45cacff1cf65
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="deploy-an-ssis-project-from-the-command-prompt-with-isdeploymentwizardexe"></a>Déployer un projet SSIS à partir de l’invite de commandes avec ISDeploymentWizard.exe
 Ce didacticiel de démarrage rapide montre comment déployer un projet SSIS à partir de l’invite de commandes en exécutant l’Assistant Déploiement d’Integration Services, `ISDeploymentWizard.exe`.

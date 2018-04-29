@@ -2,7 +2,7 @@
 title: catalog.grant_permission (base de données SSISDB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
 ms.service: ''
 ms.component: system-stored-procedures
@@ -21,11 +21,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c7c079453409e0af538aaeb2c82f6596e05b7d49
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
-ms.translationtype: MT
+ms.openlocfilehash: dc6fc98c397837d6952a0934e862b702cc0e04c4
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="cataloggrantpermission-ssisdb-database"></a>catalog.grant_permission (base de données SSISDB)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -68,7 +68,7 @@ catalog.grant_permission [ @object_type = ] object_type
  5 (autre erreur)  
   
 ## <a name="result-sets"></a>Jeux de résultats  
- Aucun  
+ None  
   
 ## <a name="permissions"></a>Autorisations  
  Cette procédure stockée requiert l'une des autorisations suivantes :  
@@ -81,7 +81,7 @@ catalog.grant_permission [ @object_type = ] object_type
 
 Cette procédure ne peut pas être appelée par des connexions authentifiées par SQL Server. Elle ne peut pas être appelée par la connexion sa.
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Cette procédure stockée vous permet d'accorder les types d'autorisation décrits dans le tableau suivant :  
   
 |Valeur permission_type|Nom de l'autorisation|Description de l'autorisation|Types d'objet applicables|  

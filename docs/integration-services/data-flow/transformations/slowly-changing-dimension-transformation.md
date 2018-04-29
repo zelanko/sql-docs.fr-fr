@@ -1,16 +1,16 @@
 ---
-title: "Dimension à variation lente, transformation | Microsoft Docs"
-ms.custom: 
+title: Dimension à variation lente, transformation | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: data-flow
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.slowlychangingdimtrans.f1
@@ -20,16 +20,16 @@ helpviewer_keywords:
 - SCD transformation
 - updating slowly changing dimensions
 ms.assetid: f8849151-c171-4725-bd25-f2c33a40f4fe
-caps.latest.revision: 
+caps.latest.revision: 55
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: d0b0582426598b30ed955bc1a2e2aae47c963097
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: c9dc7013eb987c04417088a0b36af24684edb0d6
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="slowly-changing-dimension-transformation"></a>Transformation de dimension à variation lente
   La transformation de dimension à variation lente coordonne la mise à jour et l'insertion d'enregistrements dans des tables de dimension d'entrepôts de données. Par exemple, vous pouvez utiliser cette transformation pour configurer les sorties de la transformation qui insèrent et mettent à jour des enregistrements dans la table DimProduct de la base de données [!INCLUDE[ssSampleDBDWobject](../../../includes/sssampledbdwobject-md.md)] à l’aide des données de la table Production.Products de la base de données OLTP AdventureWorks.  

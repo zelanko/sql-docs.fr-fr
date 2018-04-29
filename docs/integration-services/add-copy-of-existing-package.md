@@ -1,32 +1,32 @@
 ---
 title: Ajouter une copie des packages existants | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: non-specific
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.addcopyexistingpackage.f1
 helpviewer_keywords:
 - Add Copy of Existing Package dialog box
 ms.assetid: ed530b0d-438d-4c93-8e91-13f2b2b6a8b2
-caps.latest.revision: 
+caps.latest.revision: 13
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c81b378a82156493fd88119f83ef814350cf091f
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 8077138dddd7b6c9e366fce4cf91d47cd3530710
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="add-copy-of-existing-package"></a>Ajouter une copie des packages existants
   Utilisez la boîte de dialogue **Ajouter une copie des packages existants** pour ajouter à un projet [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]une copie d'un package stocké dans [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , le système de fichiers ou le magasin de packages SSIS.  
