@@ -1,7 +1,7 @@
 ---
 title: Catalogue de base de données WideWorldImporters OLTP - SQL | Documents Microsoft
-ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod: sql
+ms.prod_service: sql
 ms.service: ''
 ms.component: samples
 ms.technology:
@@ -17,11 +17,11 @@ ms.author: barbkess
 manager: craigg
 robots: noindex,nofollow
 ms.workload: On Demand
-ms.openlocfilehash: 9f4cabeaa5dafe2de26d760b1c03377ba10c2890
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.openlocfilehash: d7240025e36f64ac6a11194d81ba563d4e7c49b0
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="wideworldimporters-database-catalog"></a>Catalogue de base de données WideWorldImporters
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ Ces schémas sont utilisés pour les applications externes qui ne sont pas autor
 |-----------------------------|---------------------|
 |Site Web|Tous les accès à la base de données à partir du site Web d’entreprise sont via ce schéma.|
 |Rapports|Tous les accès à la base de données à partir de rapports de Reporting Services sont à ce schéma.|
-|PowerBI|Tous les accès à la base de données dans les tableaux de bord Power BI via la passerelle d’entreprise sont via ce schéma.|
+|Power BI|Tous les accès à la base de données dans les tableaux de bord Power BI via la passerelle d’entreprise sont via ce schéma.|
 
 Notez que les rapports Power BI et les schémas ne sont pas utilisés dans la version initiale de la base de données. Toutefois, les exemples de toutes les Reporting Services et Power BI reposant sur cette base de données sont encouragés à utiliser ces schémas.
 
@@ -95,7 +95,7 @@ Détails des fournisseurs et des achats de stock.
 |PurchaseOrderLines|Lignes de détails de fournisseur bons de commande|
 
  
-### <a name="sales-schema"></a>Sales Schema
+### <a name="sales-schema"></a>Schéma de vente
 
 Détails des clients, les commerciaux et des ventes de l’élément du stock.
 
@@ -217,7 +217,7 @@ Ces procédures sont utilisées pour configurer l’exemple. Ils sont utilisés 
 |CreateRoleIfNonExistant|Crée un rôle de base de données s’il n’existe pas.|
 
 
-### <a name="sequences-schema"></a>Sequences Schema
+### <a name="sequences-schema"></a>Schéma de séquences
 
 Procédures pour configurer les séquences dans la base de données.
 
