@@ -1,8 +1,8 @@
 ---
 title: Notes de publication de SQL Server 2016 | Microsoft Docs
-ms.date: 03/14/2018
+ms.date: 04/24/2018
 ms.prod: sql
-ms.prod_service: sql-non-specified
+ms.prod_service: sql
 ms.reviewer: ''
 ms.suite: sql
 ms.custom: ''
@@ -18,24 +18,29 @@ ms.author: craigg
 manager: jhubbard
 ms.workload: Active
 monikerRange: = sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 20cd775d23caae5f4f833b95e9a4bc7c1a257612
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: d3e8962771c634f3cf606606beaac1b0604623e6
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="sql-server-2016-release-notes"></a>Notes de publication de SQL Server 2016
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
   Cet article décrit les limitations et les problèmes des versions SQL Server 2016, notamment les Service Packs. Pour plus d’informations sur les nouveautés, consultez [Nouveautés de SQL Server 2016](https://docs.microsoft.com/en-us/sql/sql-server/what-s-new-in-sql-server-2016).
 
-> [![Télécharger à partir du Centre d’évaluation](../includes/media/download2.png)](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)  Télécharger SQL Server 2016 à partir du **[Centre d’évaluation](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)**
->
-> [![Machine virtuelle Azure de petite taille](../includes/media/azure-vm.png)](https://azure.microsoft.com/marketplace/partners/microsoft/sqlserver2016sp1standardwindowsserver2016/) Vous avez un compte Azure ?  Cliquez **[ici](https://azure.microsoft.com/marketplace/partners/microsoft/sqlserver2016sp1standardwindowsserver2016/)** pour lancer une machine virtuelle avec SQL Server 2016 SP1 déjà installé.
->
-> [![Télécharger SSMS](../includes/media/download2.png)](../ssms/download-sql-server-management-studio-ssms.md) Pour obtenir la dernière version de SQL Server Management Studio, consultez **[Télécharger SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md)**.
+- [![Télécharger à partir du Centre d’évaluation](../includes/media/download2.png)](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)  Télécharger SQL Server 2016 à partir du **[Centre d’évaluation](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)**
+- [![Machine virtuelle Azure de petite taille](../includes/media/azure-vm.png)](https://azure.microsoft.com/marketplace/partners/microsoft/sqlserver2016sp1standardwindowsserver2016/) Vous avez un compte Azure ?  Cliquez **[ici](https://azure.microsoft.com/marketplace/partners/microsoft/sqlserver2016sp1standardwindowsserver2016/)** pour lancer une machine virtuelle avec SQL Server 2016 SP1 déjà installé.
+- [![Télécharger SSMS](../includes/media/download2.png)](../ssms/download-sql-server-management-studio-ssms.md) Pour obtenir la dernière version de SQL Server Management Studio, consultez **[Télécharger SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md)**.
+
+## <a name="bkmk_2016sp2"></a>SQL Server 2016 Service Pack 2 (SP2)
+
+![info_tip](../sql-server/media/info-tip.png) SQL Server 2016 SP2 inclut toutes les mises à jour cumulatives publiées après 2016 SP1, jusqu’à CU8 inclus. 
+
+- [![Centre de téléchargement Microsoft](../includes/media/download2.png)](https://go.microsoft.com/fwlink/?linkid=869608) [Télécharger SQL Server 2016 Service Pack 2 (SP2)](https://go.microsoft.com/fwlink/?linkid=869608)
+- Pour une liste complète des mises à jour, consultez [Informations de version de SQL Server 2016 Service Pack 2](https://support.microsoft.com/en-us/help/4052908/sql-server-2016-service-pack-2-release-information)
 
 ## <a name="bkmk_2016sp1"></a>SQL Server 2016 Service Pack 1 (SP1)
-![info_tip](../sql-server/media/info-tip.png) SQL Server 2016 SP1 inclut tous les correctifs jusqu’à SQL Server 2016 RTM CU3, notamment la mise à jour de sécurité MS16-136. Elle contient un récapitulatif des solutions fournies dans les mises à jour cumulatives de SQL Server 2016 jusqu’à la dernière mise à jour cumulative - CU3 (incluse) et la mise à jour de sécurité MS16-136 publiée le 8 novembre 2016. 
+![info_tip](../sql-server/media/info-tip.png) SQL Server 2016 SP1 inclut toutes les mises à jour cumulatives jusqu’à SQL Server 2016 RTM CU3, notamment la mise à jour de sécurité MS16-136. Elle contient un récapitulatif des solutions fournies dans les mises à jour cumulatives de SQL Server 2016 jusqu’à la dernière mise à jour cumulative - CU3 (incluse) et la mise à jour de sécurité MS16-136 publiée le 8 novembre 2016.
 
 Les fonctionnalités suivantes sont disponibles dans les éditions Standard, Web, Express et Base de données locale de SQL Server SP1 (sauf indication contraire) :
 - Always Encrypted
@@ -159,24 +164,22 @@ De même, exécutez les procédures stockées ci-dessous du magasin de requêtes
 -   Utilisez l’option **Choisir l’aide en ligne ou locale** , puis sélectionnez « Utiliser l’aide en ligne ».    
     
 -   Utilisez l’option **Installer du contenu à partir d’une source en ligne** , puis téléchargez le contenu SQL Server 2014.    
-    
+
  **Aide (F1) :** par défaut, quand vous appuyez sur F1 dans [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], la version en ligne de l’article d’aide F1 s’affiche dans le navigateur. Le problème vient de l’aide basée sur le navigateur même si vous avez configuré et installé l’aide locale. 
-     
-**Mise à jour du contenu :**    
-Dans SQL Server Management Studio et Visual Studio, l’application Visionneuse d’aide peut se figer (se bloquer) pendant l’ajout de la documentation. Pour résoudre ce problème, effectuez les étapes ci-dessous. Pour plus d’informations sur ce problème, consultez [La visionneuse d’aide Visual Studio se fige sur l’écran de démarrage](https://msdn.microsoft.com/library/mt654096.aspx).    
+
+**Mise à jour de contenu :** Dans SQL Server Management Studio et Visual Studio, l’application Visionneuse d’aide peut se figer (se bloquer) pendant l’ajout de la documentation. Pour résoudre ce problème, effectuez les étapes ci-dessous. Pour plus d’informations sur ce problème, consultez [La visionneuse d’aide Visual Studio se fige sur l’écran de démarrage](https://msdn.microsoft.com/library/mt654096.aspx).    
     
-* Ouvrez le fichier %LOCALAPPDATA%\Microsoft\HelpViewer2.2\HlpViewer_SSMS16_en-US.settings | HlpViewer_VisualStudio14_en-US.settings dans le Bloc-notes et remplacez la date dans le code ci-dessous par une date future.    
-    
-     
-```    
-     Cache LastRefreshed="12/31/2017 00:00:00"    
-``` 
+* Ouvrez le fichier %LOCALAPPDATA%\Microsoft\HelpViewer2.2\HlpViewer_SSMS16_en-US.settings | HlpViewer_VisualStudio14_en-US.settings dans le Bloc-notes et remplacez la date dans le code ci-dessous par une date future.
 
-## <a name="additional-information"></a>Informations supplémentaires
-+ [Installation de SQL Server 2016](../database-engine/install-windows/installation-for-sql-server-2016.md)
-+ [Centre de mise à jour SQL Server - liens et informations pour toutes les versions prises en charge](https://msdn.microsoft.com/library/ff803383.aspx)
+     Dernière actualisation du cache = « 31/12/2017 00:00:00 »    
+```
 
+## Additional Information
++ [SQL Server 2016 installation](../database-engine/install-windows/installation-for-sql-server-2016.md)
++ [SQL Server Update Center - links and information for all supported versions](https://msdn.microsoft.com/library/ff803383.aspx)
 
-[!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]    
+[!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
 
-![MS_Logo_X-Small](../sql-server/media/ms-logo-x-small.png "MS_Logo_X-Small")    
+[!INCLUDE[contribute-to-content](../includes/paragraph-content/contribute-to-content.md)]
+
+![MS_Logo_X-Small](../sql-server/media/ms-logo-x-small.png "MS_Logo_X-Small")
