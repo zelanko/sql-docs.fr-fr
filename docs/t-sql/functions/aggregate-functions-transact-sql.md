@@ -26,20 +26,20 @@ ms.author: edmaca
 manager: craigg
 ms.workload: Active
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 750bb88b8446858f4253d072fef829623e70511f
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: e376fccb023a862a71e61a1437a19028758ad200
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="aggregate-functions-transact-sql"></a>Fonctions d'agrégation (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-Les fonctions d'agrégation effectuent un calcul sur un ensemble de valeurs et retournent une valeur unique. À l'exception de COUNT, les fonctions d'agrégation ignorent les valeurs NULL. Les fonctions d'agrégation sont souvent utilisées avec la clause GROUP BY de l'instruction SELECT.
+Une fonction d’agrégation effectue un calcul sur un ensemble de valeurs et retourne une seule valeur. À l’exception de `COUNT`, les fonctions d’agrégation ignorent les valeurs NULL. Les fonctions d’agrégation sont souvent utilisées avec la clause GROUP BY de l’instruction SELECT.
   
-Toutes les fonctions d'agrégation sont déterministes. Les fonctions sont déterministes lorsqu’elles retournent toujours le même résultat à chaque fois qu’elles sont appelées en utilisant un ensemble de valeurs d’entrée spécifique. Pour plus d’informations sur le déterminisme des fonctions, consultez [Fonctions déterministes et non déterministes](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md). La [clause OVER](../../t-sql/queries/select-over-clause-transact-sql.md) peut suivre toutes les fonctions d’agrégation sauf GROUPING et GROUPING_ID.
+Toutes les fonctions d'agrégation sont déterministes. En d’autres termes, les fonctions d’agrégation retournent la même valeur chaque fois qu’elles sont appelées, quand elles sont appelées avec un ensemble spécifique de valeurs d’entrée. Pour plus d’informations sur le déterminisme des fonctions, consultez [Fonctions déterministes et non déterministes](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md). La clause [OVER](../../t-sql/queries/select-over-clause-transact-sql.md) peut suivre toutes les fonctions d’agrégation, sauf GROUPING et GROUPING_ID.
   
-Les fonctions d'agrégation peuvent être utilisées comme expressions uniquement dans les cas suivants :
+Utilisez les fonctions d’agrégation comme expressions seulement dans les cas suivants :
 -   la liste de sélection d'une instruction SELECT (une sous-requête ou une requête externe) ;  
 -   une clause HAVING.  
   

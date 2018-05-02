@@ -34,11 +34,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 2bf3df5733c9b427f7c34459b95404768d4520d5
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: bee373167ee406e9383053af0f312925441b8895
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="waitfor-transact-sql"></a>WAITFOR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -65,13 +65,13 @@ WAITFOR
  Période de temps qui doit s'écouler, dans la limite de 24 heures, avant la poursuite de l'exécution d'un traitement d'instructions, d'une procédure stockée ou d'une transaction.  
   
  '*time_to_pass*'  
- Durée de l'attente. *time_to_pass* peut être spécifié dans tout format accepté pour les données **datetime** ou en tant que variable locale. Vous ne pouvez pas spécifier de dates ; par conséquent, la partie date de la valeur **datetime** n’est pas autorisée.  
+ Durée de l'attente. *time_to_pass* peut être spécifié dans tout format accepté pour les données **datetime** ou en tant que variable locale. Vous ne pouvez pas spécifier de dates ; par conséquent, la partie date de la valeur **datetime** n’est pas autorisée. Elle est au format hh:mm[[:ss].mss].
   
  TIME  
  Heure spécifiée de l'exécution du traitement d'instructions, de la procédure stockée ou de la transaction.  
   
  '*time_to_execute*'  
- Heure à laquelle se termine l'instruction WAITFOR. *time_to_execute* peut être spécifié dans tout format accepté pour les données **datetime** ou en tant que variable locale. Vous ne pouvez pas spécifier de dates ; par conséquent, la partie date de la valeur **datetime** n’est pas autorisée.  
+ Heure à laquelle se termine l'instruction WAITFOR. *time_to_execute* peut être spécifié dans tout format accepté pour les données **datetime** ou en tant que variable locale. Vous ne pouvez pas spécifier de dates ; par conséquent, la partie date de la valeur **datetime** n’est pas autorisée. Elle est au format hh:mm[[:ss].mss] et peut facultativement inclure la date au format 1900-01-01.
   
  *receive_statement*  
  Instruction RECEIVE valide.  

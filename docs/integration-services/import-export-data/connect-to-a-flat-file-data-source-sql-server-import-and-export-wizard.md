@@ -1,28 +1,28 @@
 ---
-title: "Se connecter à une source de données de fichier plat (Assistant Importation et Exportation SQL Server) | Microsoft Docs"
-ms.custom: 
+title: Se connecter à une source de données de fichier plat (Assistant Importation et Exportation SQL Server) | Microsoft Docs
+ms.custom: ''
 ms.date: 02/17/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: import-export-data
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: d7e7067b-f5a5-482f-b97e-9d82fe8e9f76
-caps.latest.revision: 
+caps.latest.revision: 8
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: c8ab77d362f9758e21a1bce78c31bc066d39f51c
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 57326cdaab173fa0ab3255da4b336eb4b294e19b
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="connect-to-a-flat-file-data-source-sql-server-import-and-export-wizard"></a>Se connecter à une source de données de fichier plat (Assistant Importation et Exportation SQL Server)
 Cette rubrique vous montre comment se connecter à une source de données de **fichier plat** (fichier texte) à partir de la page **Choisir une source de données** ou **Choisir une destination** de l’Assistant Importation et Exportation SQL Server. Ces deux pages de l’Assistant présentent des jeux d’options différents pour les fichiers plats, ainsi cette rubrique décrit la source de fichier plat et la destination de fichier plat séparément.
@@ -53,7 +53,7 @@ Radiomessagerie|Recommandation  |Type
  **Nom de fichier**  
  Entrez le chemin et le nom du fichier plat.  
   
- **...**  
+ **Parcourir**  
  Recherchez le fichier plat.  
   
  **Paramètres régionaux**  
@@ -276,7 +276,7 @@ Pour une destination de fichier plat, il n’existe qu’une seule page d’opti
  **Nom de fichier**  
  Entrez le chemin et le nom du fichier plat.  
   
- **...**  
+ **Parcourir**  
  Recherchez le fichier plat.  
   
  **Paramètres régionaux**  

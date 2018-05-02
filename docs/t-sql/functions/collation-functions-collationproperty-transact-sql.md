@@ -27,16 +27,16 @@ ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 76baefbaf0fc156d782c705e8a81683770bedc68
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 041b1bdcc190980d471b48e7525da0fa035d087a
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="collation-functions---collationproperty-transact-sql"></a>Fonctions de classement - COLLATIONPROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-Retourne la propriété d'un classement spécifié dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
+Cette fonction retourne la propriété d’un classement spécifié dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
   
 ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -48,17 +48,17 @@ COLLATIONPROPERTY( collation_name , property )
   
 ## <a name="arguments"></a>Arguments  
 *collation_name*  
-Nom du classement. *collation_name* est de type **nvarchar(128)** et n’a pas de valeur par défaut.
+Nom du classement. L’argument *collation_name* a un type de données **nvarchar(128)**, sans valeur par défaut.
   
 *property*  
-Propriété du classement. *property* est de type **varchar(128)** et peut prendre l’une des valeurs suivantes :
+Propriété du classement. L’argument *property* a un type de données **varchar(128)** et peut avoir une des valeurs suivantes :
   
 |Nom de la propriété|Description|  
 |---|---|
-|**CodePage**|Page de codes non-Unicode du classement. Consultez [Annexe G – Tables de mappage DBCS/Unicode](https://msdn.microsoft.com/en-us/library/cc194886.aspx) et [Annexe H – Pages de code](https://msdn.microsoft.com/en-us/library/cc195051.aspx) pour convertir ces valeurs et voir leurs mappages de caractères.|  
+|**CodePage**|Page de codes non-Unicode du classement. Consultez [Annexe G – Tables de mappage DBCS/Unicode](https://msdn.microsoft.com/en-us/library/cc194886.aspx) et [Annexe H – Pages de code](https://msdn.microsoft.com/en-us/library/cc195051.aspx) pour convertir ces valeurs et voir leurs mappages de caractères.|  
 |**LCID**|Indicateur LCID Windows du classement. Consultez [Structure LCID](https://msdn.microsoft.com/en-us/library/cc233968.aspx) pour convertir ces valeurs (vous devrez commencer par les convertir en **varbinary**).|  
-|**ComparisonStyle**|Style de comparaison Windows du classement. Retourne 0 pour tous les classements binaires, à la fois (\_BIN) et (\_BIN2), ainsi que lorsque toutes les propriétés sont sensibles. Valeurs de masque de bits :<br /><br /> Ignorer la casse : 1<br /><br /> Ignorer les accents : 2<br /><br /> Ignorer le type de caractères Kana : 65536<br /><br /> Ignorer la largeur : 131072<br /><br /> Remarque : Même si elle affecte le comportement de comparaison, l’option de sélecteur de variante (\_VSS) n’est pas représentée dans cette valeur.|  
-|**Version**|Version du classement, dérivée du champ de version de l'ID du classement. Retourne un nombre entier compris entre 0 et 3.<br /><br /> Les classements dont le nom contient « 140 » retournent 3.<br /><br /> Les classements dont le nom contient « 100 » retournent 2.<br /><br /> Les classements dont le nom contient « 90 » retournent 1.<br /><br /> Tous les autres classements retournent 0.|  
+|**ComparisonStyle**|Style de comparaison Windows du classement. Retourne 0 pour tous les classements binaires, à la fois (\_BIN) et (\_BIN2), ainsi que quand toutes les propriétés respectent la casse. Valeurs de masque de bits :<br /><br /> Ignorer la casse : 1<br /><br /> Ignorer les accents : 2<br /><br /> Ignorer le type de caractères Kana : 65536<br /><br /> Ignorer la largeur : 131072<br /><br /> Remarque : L’option de sélecteur de variante (\_VSS) n’est pas représentée dans cette valeur, même si elle affecte le comportement de la comparaison.|  
+|**Version**|Version du classement, dérivée du champ de version de l’ID du classement. Retourne un nombre entier compris entre 0 et 3.<br /><br /> Les classements dont le nom contient « 140 » retournent 3.<br /><br /> Les classements dont le nom contient « 100 » retournent 2.<br /><br /> Les classements dont le nom contient « 90 » retournent 1.<br /><br /> Tous les autres classements retournent 0.|  
   
 ## <a name="return-types"></a>Types de retour
 **sql_variant**

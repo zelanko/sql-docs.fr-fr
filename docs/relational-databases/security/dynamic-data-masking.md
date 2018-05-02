@@ -1,7 +1,7 @@
 ---
 title: Masquage dynamique des données | Microsoft Docs
 ms.custom: ''
-ms.date: 09/26/2016
+ms.date: 04/23/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.service: ''
@@ -19,11 +19,11 @@ ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 1a261930d257f4c787a5f28af59d82ee75a7af7c
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 453399db3852ff7165bfd569a255b16797675fc5
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="dynamic-data-masking"></a>Masquage dynamique des données
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -70,7 +70,7 @@ Par exemple, si une personne assurant le support technique au sein d’un centre
   
 -   L’utilisation de `SELECT INTO` ou de `INSERT INTO` pour copier les données d’une colonne masquée dans une autre table a pour effet de masquer les données dans la table cible.  
   
--   Un masquage dynamique des données est appliqué pendant l’exécution d’opérations d’importation et d’exportation dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Une base de données contenant des colonnes masquées produit un fichier de sauvegarde dont les données sont masquées (en supposant qu’elle est exportée par un utilisateur dépourvu de privilèges **UNMASK** ), et la base de données importée contient des données masquées statiquement.  
+-   Un masquage dynamique des données est appliqué pendant l’exécution d’opérations d’importation et d’exportation dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Une base de données contenant des colonnes masquées produit un fichier de données exportées dont les données sont masquées (en supposant qu’elle est exportée par un utilisateur sans privilèges **UNMASK**), et la base de données importée contient des données masquées statiquement.  
   
 ## <a name="querying-for-masked-columns"></a>Interrogation de colonnes masquées  
  Pour interroger des colonnes de table auxquelles une fonction de masquage est appliquée, utilisez la vue **sys.masked_columns** . Celle-ci hérite de la vue **sys.columns** . Elle retourne toutes les colonnes de la vue **sys.columns** , ainsi que les colonnes **is_masked** et **masking_function** , en indiquant si les colonnes sont masquées et, dans ce cas, la fonction de masquage est définie. Cette vue présente uniquement les colonnes auxquelles une fonction de masquage est appliquée.  

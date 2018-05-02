@@ -29,16 +29,16 @@ ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 4438a86353a8fdbc6174a718d401656bf05df4fe
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 47991654f3d73645737872b0dda53ecc1c5c4052
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="colname-transact-sql"></a>COL_NAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-Renvoie le nom d'une colonne à partir des numéros d'identification de table et de colonne correspondants.
+Cette fonction retourne le nom d’une colonne de table à partir des valeurs du numéro d’identification de table et du numéro d’identification de colonne de cette colonne de table.
   
 ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -50,18 +50,18 @@ COL_NAME ( table_id , column_id )
   
 ## <a name="arguments"></a>Arguments  
 *table_id*  
-Numéro d'identification de la table contenant la colonne. *table_id* est de type **int**.
+Numéro d’identification de la table contenant cette colonne. L’argument *table_id* a un type de données **int**.
   
 *column_id*  
-Numéro d'identification de la colonne. Le paramètre *column_id* est de type **int**.
+Numéro d’identification de la colonne. L’argument *column_id* a un type de données **int**.
   
 ## <a name="return-types"></a>Types de retour
 **sysname**
   
 ## <a name="exceptions"></a>Exceptions  
-Retourne la valeur NULL en cas d'erreur ou si un appelant n'est pas autorisé à afficher l'objet.
+Retourne NULL en cas d’erreur ou si un appelant ne dispose pas de l’autorisation appropriée pour voir l’objet.
   
-Un utilisateur peut voir uniquement les métadonnées des éléments sécurisables qui lui appartiennent ou pour lesquels il dispose d'une autorisation. Cela signifie que les fonctions intégrées générant des métadonnées, telles que COL_NAME, peuvent retourner la valeur NULL si l'utilisateur ne dispose d'aucune autorisation sur l'objet. Pour plus d'informations, consultez [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).
+Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], un utilisateur peut seulement voir les métadonnées des éléments sécurisables qui lui appartiennent ou pour lesquels il dispose d’un droit d’accès. Cela signifie que les fonctions intégrées générant des métadonnées, comme `COL_NAME`, peuvent retourner NULL si l’utilisateur ne dispose pas des autorisations appropriées sur l’objet. Pour plus d’informations, consultez [Configuration de la visibilité des métadonnées](../../relational-databases/security/metadata-visibility-configuration.md).
   
 ## <a name="remarks"></a>Notes   
 Les paramètres *table_id* et *column_id* génèrent ensemble une chaîne de nom de colonne.
@@ -69,7 +69,7 @@ Les paramètres *table_id* et *column_id* génèrent ensemble une chaîne de nom
 Pour plus d’informations sur l’obtention des numéros d’identification de table et de colonne, consultez [OBJECT_ID &#40;Transact-SQL&#41;](../../t-sql/functions/object-id-transact-sql.md).
   
 ## <a name="examples"></a>Exemples  
-L’exemple suivant renvoie le nom de la première colonne d’un exemple de table `Employee`.
+L’exemple suivant retourne le nom de la première colonne d’un exemple de table `Employee`.
   
 ```sql
 -- Uses AdventureWorks  

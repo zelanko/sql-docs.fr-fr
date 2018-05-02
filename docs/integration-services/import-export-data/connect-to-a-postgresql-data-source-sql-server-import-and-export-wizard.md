@@ -1,28 +1,28 @@
 ---
-title: "Se connecter à une source de données PostgreSQL (Assistant Importation et Exportation SQL Server) | Microsoft Docs"
-ms.custom: 
+title: Se connecter à une source de données PostgreSQL (Assistant Importation et Exportation SQL Server) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: import-export-data
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: b7a75a72-b267-444f-9eb8-d23eb333fc35
-caps.latest.revision: 
+caps.latest.revision: 11
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 5f57bd2510c80e676a979c691b1e3d43707c6885
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 082366abdb89202ee956bf5678a743c53e25ea49
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="connect-to-a-postgresql-data-source-sql-server-import-and-export-wizard"></a>Se connecter à une source de données PostgreSQL (Assistant Importation et Exportation SQL Server)
 Cette rubrique vous montre comment se connecter à une source de données **PostgreSQL** à partir de la page **Choisir une source de données** ou **Choisir une destination** de l’Assistant Importation et Exportation SQL Server. 
@@ -38,7 +38,7 @@ Exécutez Stack Builder pour ajouter le pilote ODBC PostgreSQL (psqlODBC) à vot
 ![Installation du pilote ODBC PostgreSQL à l’aide de Stack Builder](../../integration-services/import-export-data/media/install-postgresql-odbc-with-stack-builder.png)
 
 ### <a name="or-download-the-latest-odbc-driver"></a>Ou télécharger le dernier pilote ODBC
-Téléchargez le Windows Installer de la dernière version du pilote ODBC PostgreSQL (psqlODBC) directement à partir de ce site FTP : [https://www.postgresql.org/ftp/odbc/versions/msi/](https://www.postgresql.org/ftp/odbc/versions/msi/). Extrayez les fichiers du fichier .zip et exécutez le fichier .msi.
+Vous pouvez aussi télécharger le Windows Installer pour la dernière version du pilote ODBC PostgreSQL (psqlODBC) directement à partir de ce site FTP : [https://www.postgresql.org/ftp/odbc/versions/msi/](https://www.postgresql.org/ftp/odbc/versions/msi/). Extrayez les fichiers du fichier .zip et exécutez le fichier .msi.
 
 ## <a name="connect-to-postgresql-with-the-postgresql-odbc-driver-psqlodbc"></a>Se connecter à PostgreSQL avec le pilote ODBC PostgreSQL (psqlODBC)
 Les pilotes ODBC ne sont pas répertoriés dans la liste déroulante des sources de données. Pour vous connecter avec un pilote ODBC, commencez par sélectionner le **Fournisseur de données .NET Framework pour ODBC** comme source de données dans la page **Choisir une source de données** ou **Choisir une destination**. Ce fournisseur agit comme un wrapper autour du pilote ODBC.
