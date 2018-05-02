@@ -1,9 +1,9 @@
 ---
-title: SQL Operations Studio (preview) utilisateur et les paramètres de l’espace de travail | Documents Microsoft
-description: Comment modifier les paramètres de l’espace de travail et les SQL Operations Studio (preview) utilisateur.
+title: Studio d’opérations SQL (aperçu) utilisateur et les paramètres de l’espace de travail | Documents Microsoft
+description: Comment modifier les paramètres de l’espace de travail et les Studio des opérations SQL (aperçu) utilisateur.
 ms.custom: tools|sos
 ms.date: 11/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
@@ -14,17 +14,17 @@ author: yualan
 ms.author: alayu
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6e87461fb2973bec630ed21975a80cdbc17cd1cd
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: MT
+ms.openlocfilehash: 7ec3ddc85512f0ae071865f4806358a5da28ff09
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="user-and-workspace-settings"></a>Utilisateur et les paramètres de l’espace de travail
 
 Il est facile à configurer [!INCLUDE[name-sos](../includes/name-sos-short.md)] à votre convenance via des paramètres. Presque toutes les parties de [!INCLUDE[name-sos](../includes/name-sos-short.md)]d’éditeur, l’interface utilisateur et le comportement fonctionnel propose les options que vous pouvez modifier.
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)]fournit deux portées différentes pour les paramètres :
+[!INCLUDE[name-sos](../includes/name-sos-short.md)] fournit deux portées différentes pour les paramètres :
 
 * **Utilisateur** ces paramètres s’appliquent globalement à une instance de [!INCLUDE[name-sos](../includes/name-sos-short.md)] vous ouvrez.
 * **Espace de travail** paramètres de l’espace de travail sont des paramètres spécifiques à un dossier sur votre ordinateur et sont disponibles uniquement lorsque le dossier est ouvert dans la barre latérale de l’Explorateur. Paramètres définis sur cette étendue de remplacent l’étendue de l’utilisateur.
@@ -55,7 +55,7 @@ Le fichier de paramètres d’espace de travail se trouve sous le `.[!INCLUDE[na
 
 ## <a name="hot-exit"></a>Sortie à chaud
 
-SQL Operations Studio sera n’oubliez pas les modifications non enregistrées dans des fichiers lorsque vous quittez par défaut. Cela est identique à la fonctionnalité de sortie à chaud dans Visual Studio Code.
+Studio d’opérations SQL sera n’oubliez pas les modifications non enregistrées dans des fichiers lorsque vous quittez par défaut. Cela est identique à la fonctionnalité de sortie à chaud dans Visual Studio Code.
 
 Par défaut, la sortie à chaud est désactivée. Permettre à chaud sortie en modifiant le `files.hotExit` paramètre. Pour plus d’informations, consultez [à chaud de sortie (dans la documentation de Visual Studio Code)](https://code.visualstudio.com/docs/editor/codebasics#_hot-exit).
 
