@@ -2,7 +2,7 @@
 title: Se connecter à une source de données Excel (Assistant Importation et Exportation SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/02/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
 ms.service: ''
 ms.component: import-export-data
@@ -18,11 +18,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: d9cbf7499236daba8ab87e46a6f7cea39016e672
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 113dd9821b8f86aaabb8880520c70ed1db9f0b4b
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="connect-to-an-excel-data-source-sql-server-import-and-export-wizard"></a>Se connecter à une source de données Excel (Assistant Importation et Exportation SQL Server)
 Cet article vous montre comment vous connecter à une source de données **Microsoft Excel** à partir de la page **Choisir une source de données** ou **Choisir une destination** de l’Assistant Importation et Exportation SQL Server.
@@ -31,7 +31,7 @@ La capture d’écran suivante montre un exemple de connexion à un classeur Mic
 
 ![Connexion à Excel](../../integration-services/import-export-data/media/excel-connection.png) 
 
-Vous pouvez être amené à télécharger et installer des fichiers supplémentaires pour vous connecter aux fichiers Excel. Pour plus d’informations, consultez [Obtenir les fichiers nécessaires pour vous connecter à Excel](../load-data-to-from-excel-with-ssis.md#files-you-need).
+Vous pouvez être amené à télécharger et installer des fichiers supplémentaires pour vous connecter aux fichiers Excel. Pour plus d’informations, consultez [Se procurer les fichiers nécessaires pour se connecter à Excel](../load-data-to-from-excel-with-ssis.md#files-you-need).
 
 > [!IMPORTANT]
 > Pour obtenir des informations détaillées sur la connexion à des fichiers Excel, et sur les limitations et les problèmes connus liés au chargement de données depuis ou vers des fichiers Excel, consultez [Charger des données depuis ou vers Excel avec SQL Server Integration Services (SSIS)](../load-data-to-from-excel-with-ssis.md).

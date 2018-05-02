@@ -3,7 +3,7 @@ title: Prise en charge de SQL Server Integration Services (SSIS) Scale Out pour 
 ms.description: This article describes how to configure SSIS Scale Out for high availability
 ms.custom: ''
 ms.date: 12/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
 ms.service: ''
 ms.component: scale-out
@@ -18,11 +18,11 @@ author: haoqian
 ms.author: haoqian
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a1f0f7f06da7032049496a2c2820fbe5c8abe6a8
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: ea9f20b9b0eb23d50a6c5aa7809e6a4e027a5b56
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="scale-out-support-for-high-availability"></a>Prise en charge de Scale Out pour la haute disponibilité
 
@@ -34,7 +34,7 @@ La haute disponibilité côté Scale Out Master peut aussi être obtenue au moye
 
 Pour configurer la haute disponibilité côté Scale Out Master à l’aide de la fonctionnalité Always On pour le catalogue SSIS, suivez les étapes ci-dessous :
 
-## <a name="1-prerequisites"></a>1. Prérequis
+## <a name="1-prerequisites"></a>1. Conditions préalables requises
 Configurez un cluster de basculement Windows. Pour obtenir des instructions, consultez le billet de blog [Installing the Failover Cluster Feature and Tools for Windows Server 2012](http://blogs.msdn.com/b/clustering/archive/2012/04/06/10291601.aspx). Installez la fonctionnalité et les outils sur tous les nœuds de cluster.
 
 ## <a name="2-install-scale-out-master-on-the-primary-node"></a>2. Installer Scale Out Master sur le nœud principal

@@ -1,7 +1,7 @@
 ---
 title: Importer un fichier plat dans SQL | Microsoft Docs
 ms.custom: ''
-ms.date: 09/25/2017
+ms.date: 09/26/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.service: ''
@@ -19,11 +19,11 @@ ms.author: alayu
 manager: craigg
 ms.workload: Inactive
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: c018165f4e64605efc0b22b6fa2a3f566787453b
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 874f49dd654ad1f52079a3d9ba2fbfb1c5497e58
+ms.sourcegitcommit: 31df356f89c4cd91ba90dac609a7eb50b13836de
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="import-flat-file-to-sql-wizard"></a>Assistant Importation d’un fichier plat dans SQL
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ Pour mieux comprendre l’amélioration apportée à l’expérience utilisateur
 
 > [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Introducing-the-new-Import-Flat-File-Wizard-in-SSMS-173/player]
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Conditions préalables requises
 Cette fonctionnalité est uniquement disponible dans SQL Server Management Studio (SSMS) version 17.3 ou ultérieure. Veillez à utiliser la version la plus récente. Vous trouverez la dernière version [ici.](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms)
  
 ## <a id="started"></a>Commencer
@@ -94,11 +94,6 @@ Il s’agit simplement d’une page qui résume votre configuration actuelle. Si
 Cette page indique si l’importation a réussi. Si une coche verte s’affiche, elle a réussi. Dans le cas contraire, vous devrez peut-être rechercher des erreurs dans votre configuration ou votre fichier d’entrée.
 
 ![Assistant - Résultats](media/import-flat-file-wizard/importffresults.png)
-
-## <a name="reporting-import-flat-file-failures"></a>Signalement des échecs d’importation de fichiers plats
-Si vous rencontrez des problèmes, envoyez un e-mail à sqltoolsprosesupport@microsoft.com
-
-Pour plus d’informations, [consultez ces conseils](reporting-import-flat-file-failures.md).
 
 ## <a name="learn-more"></a>En savoir plus
 
