@@ -1,16 +1,16 @@
 ---
-title: "Récupérer une base de données sans restaurer les données (Transact-SQL) | Microsoft Docs"
-ms.custom: 
+title: Récupérer une base de données sans restaurer les données (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: backup-restore
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-backup-restore
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - restoring [SQL Server], recovery-only
@@ -21,20 +21,20 @@ helpviewer_keywords:
 - database restores [SQL Server], recovery-only
 - recovery [SQL Server], without restoring data
 ms.assetid: 7e8fa620-315d-4e10-a718-23fa5171c09e
-caps.latest.revision: 
+caps.latest.revision: 39
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 9cf307382a1fcf763b80ddf5e4bc2aac87e7cf68
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: ab055d2aa8c5f7f685d343fa6b938b852dbf190b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="recover-a-database-without-restoring-data-transact-sql"></a>Récupérer une base de données sans restaurer les données (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-En général, toutes les données dans une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sont restaurées avant que la base de données ne soit récupérée. Toutefois, une opération de restauration peut récupérer une base de données sans réellement restaurer une sauvegarde, par exemple lors de la récupération d'un fichier en lecture seule qui est cohérent avec la base de données. Il s’agit d’une *restauration avec récupération uniquement*. Lorsque des données hors ligne sont déjà cohérentes avec la base de données et doivent uniquement être rendues disponibles, une restauration avec récupération uniquement termine la récupération de la base de données et met les données en ligne.  
+  En général, toutes les données dans une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sont restaurées avant que la base de données ne soit récupérée. Toutefois, une opération de restauration peut récupérer une base de données sans réellement restaurer une sauvegarde, par exemple lors de la récupération d'un fichier en lecture seule qui est cohérent avec la base de données. Il s’agit d’une *restauration avec récupération uniquement*. Lorsque des données hors ligne sont déjà cohérentes avec la base de données et doivent uniquement être rendues disponibles, une restauration avec récupération uniquement termine la récupération de la base de données et met les données en ligne.  
   
  Une restauration avec récupération uniquement peut se produire pour une base de données entière ou pour un ou plusieurs fichiers ou groupes de fichiers.  
   
@@ -71,7 +71,7 @@ RESTORE DATABASE AdventureWorks2012
   
  La syntaxe [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) pour une restauration de fichier avec récupération uniquement est la suivante :  
   
- RESTORE DATABASE *nom_base_de_données* { FILE **=***nom_fichier_logique* | FILEGROUP **=***nom_groupe_fichiers_logique* }[ **,**...*n* ] WITH RECOVERY  
+ RESTORE DATABASE *nom_base_de_données* { FILE **=***nom_fichier_logique* | FILEGROUP **=***nom_groupe_fichiers_logique* }[ **,**...* n* ] WITH RECOVERY  
   
  **Exemple**  
   

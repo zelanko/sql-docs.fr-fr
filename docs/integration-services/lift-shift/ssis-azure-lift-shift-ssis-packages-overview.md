@@ -1,6 +1,6 @@
 ---
 title: Effectuer un « lift-and-shift » des charges de travail SQL Server Integration Services vers le cloud | Microsoft Docs
-ms.date: 10/31/2017
+ms.date: 04/13/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 82a6ab09504edd0a5df17a05de62ae5fd44a1c18
-ms.sourcegitcommit: 8f1d1363e18e0c32ff250617ab6cb2da2147bf8e
+ms.openlocfilehash: 8fb064a5efe77b9b273234f8ccd4f9760a128d92
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="lift-and-shift-sql-server-integration-services-workloads-to-the-cloud"></a>Effectuer un « lift-and-shift » des charges de travail SQL Server Integration Services vers le cloud
 Vous pouvez maintenant déplacer vos packages et charges de travail SQL Server Integration Services (SSIS) vers le cloud Azure.
@@ -61,7 +61,7 @@ Vous pouvez déployer n’importe quel package créé avec l’une des versions 
 
 Le processus de déploiement valide chaque package pour vérifier qu’il peut s’exécuter dans Azure SSIS Integration Runtime. Pour plus d’informations, consultez [Valider des packages SSIS déployés sur Azure](ssis-azure-validate-packages.md).
 
-## <a name="prerequisites"></a>Prérequis
+## <a name="prerequisites"></a>Prerequisites
 
 Les fonctionnalités décrites dans cet article nécessitent les versions suivantes de SQL Server Data Tools (SSDT) :
 -   Pour Visual Studio 2017, version 15.3 (préversion) ou version ultérieure.
@@ -85,7 +85,7 @@ Pour plus d’informations sur la connexion à des fichiers et partages de fichi
 
 Quand vous provisionnez une instance de SQL Database pour héberger SSISDB, le Feature Pack Azure pour SSIS et le composant redistribuable Access sont également installés. Ces composants fournissent une connectivité à diverses sources de données **Azure** et aux fichiers **Excel et Access**, en plus des sources de données prises en charge par les composants intégrés.
 
-Vous ne pouvez pas installer ou utiliser de **composants tiers** pour SSIS (notamment des composants tiers de Microsoft, tels que les composants Oracle et Teradata d’Attunity ou les composants SAP BI).
+Vous pouvez également installer des composants supplémentaires. Pour plus d’informations, consultez [Installation personnalisée pour le runtime d’intégration SSIS Azure](/azure/articles/data-factory/how-to-configure-azure-ssis-ir-custom-setup.md).
 
 ## <a name="deploy-and-run-packages"></a>Déployer et exécuter des packages
 Vous devez utiliser le **modèle de déploiement de projet**, et non le modèle de déploiement de package, quand vous déployez des projets dans SSISDB sur Azure.

@@ -2,7 +2,7 @@
 title: TOP (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: t-sql|queries
@@ -28,11 +28,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 926de1152e7c1223441d9ac85da11246049e31ea
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
-ms.translationtype: MT
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 38b365674914575ab9bc25706fe5b9b3d0c012cc
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="top-transact-sql"></a>TOP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -234,7 +235,7 @@ GO
 ###  <a name="DML"></a> Limitation des lignes affectées par DELETE, INSERT ou UPDATE  
   
 #### <a name="a-using-top-to-limit-the-number-of-rows-deleted"></a>A. Utilisation de TOP pour limiter le nombre de lignes supprimées  
- Lorsque TOP (*n*) clause est utilisée avec DELETE, l’opération de suppression est effectuée sur une sélection non définie de *n* nombre de lignes. Autrement dit, l’instruction DELETE choisit un (*n*) nombre de lignes qui répondent aux critères définis dans la clause WHERE. L'exemple suivant supprime `20` lignes de la table `PurchaseOrderDetail` dont la date d'échéance est antérieure au 1er juillet 2002.  
+ Quand une clause TOP (*n*) est utilisée avec DELETE, l’opération de suppression est effectuée sur une sélection non définie de *n* lignes. Autrement dit, l’instruction DELETE choisit un nombre (*n*) de lignes qui répondent aux critères définis dans la clause WHERE. L'exemple suivant supprime `20` lignes de la table `PurchaseOrderDetail` dont la date d'échéance est antérieure au 1er juillet 2002.  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -300,7 +301,7 @@ GO
 ```  
   
 #### <a name="c-using-top-to-limit-the-number-of-rows-updated"></a>C. Utilisation de TOP pour limiter le nombre de lignes mises à jour  
- L'exemple suivant utilise la clause TOP pour mettre à jour des lignes dans une table. Lorsque TOP (*n*) clause est utilisée avec la mise à jour, l’opération de mise à jour est effectuée sur un nombre indéfini de lignes. Autrement dit, l’instruction UPDATE choisit un (*n*) nombre de lignes qui répondent aux critères définis dans la clause WHERE. L'exemple suivant retire 10 clients à un vendeur et les attribue à un autre vendeur.  
+ L'exemple suivant utilise la clause TOP pour mettre à jour des lignes dans une table. Quand une clause TOP (*n*) est utilisée avec UPDATE, l’opération de mise à jour est effectuée sur une sélection non définie de lignes. Autrement dit, l’instruction UPDATE choisit un nombre (*n*) de lignes qui répondent aux critères définis dans la clause WHERE. L'exemple suivant retire 10 clients à un vendeur et les attribue à un autre vendeur.  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -342,9 +343,9 @@ FROM DimEmployee ORDER BY LastName;
   
  Résultat : 33 lignes sont retournées, car 3 employés du nom de Brown sont liés aux à la ligne 31.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
- [INSÉRER une &#40; Transact-SQL &#41;](../../t-sql/statements/insert-transact-sql.md)   
+ [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
  [UPDATE &#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md)   
  [DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)   
  [Clause ORDER BY &#40;Transact-SQL&#41;](../../t-sql/queries/select-order-by-clause-transact-sql.md)   

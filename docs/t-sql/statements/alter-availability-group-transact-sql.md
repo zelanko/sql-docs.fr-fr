@@ -1,16 +1,16 @@
 ---
 title: ALTER AVAILABILITY GROUP (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/02/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ALTER_AVAILABILITY_GROUP_TSQL
@@ -25,16 +25,16 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], configuring
 - Availability Groups [SQL Server], Transact-SQL statements
 ms.assetid: f039d0de-ade7-4aaf-8b7b-d207deb3371a
-caps.latest.revision: 
+caps.latest.revision: 152
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: d9f18ee709fde7c9f239b08f553eaf43fad6e9d2
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: ebe662a8164db991c105ebf676b6a51e1f6cdcc5
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="alter-availability-group-transact-sql"></a>ALTER AVAILABILITY GROUP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -264,7 +264,7 @@ ALTER AVAILABILITY GROUP group_name
  *nom_réseau_FCI*  
  Nom réseau utilisé pour accéder à un cluster de basculement [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Utilisez ce nom si l'instance de serveur participe en tant que serveur partenaire de basculement [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. L’exécution de SELECT [@@SERVERNAME](../../t-sql/functions/servername-transact-sql.md) sur une instance de serveur FCI retourne l’intégralité de sa chaîne '*FCI_network_name*[\\*instance_name*]' (laquelle correspond au nom complet du réplica).  
   
- *nom_instance*  
+ *instance_name*  
  Nom d’une instance d’un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] hébergé par *system_name* ou *FCI_network_name* et où AlwaysOn est activé. Pour une instance de serveur par défaut, *nom_instance* est facultatif. Les noms d'instance ne respectent pas la casse. Sur une instance de serveur autonome, ce nom de valeur est le même que la valeur retournée en exécutant SELECT [@@SERVERNAME](../../t-sql/functions/servername-transact-sql.md).  
   
  \  
@@ -277,7 +277,7 @@ ALTER AVAILABILITY GROUP group_name
   
  ENDPOINT_URL est requis dans la clause ADD REPLICA ON et est facultatif dans la clause MODIFY REPLICA ON.  Pour plus d’informations, consultez [Spécifier l’URL de point de terminaison lors de l’ajout ou lors de la modification d’un réplica de disponibilité &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/specify-endpoint-url-adding-or-modifying-availability-replica.md).  
   
- **'**TCP**://***system-address***:***port***'**  
+ **'** TCP **://***system-address***:***port***'**  
  Spécifie une URL pour spécifier une URL de point de terminaison ou l'URL de routage en lecture seule. Les paramètres d'URL sont les suivants :  
   
  *system-address*  
@@ -360,7 +360,7 @@ ALTER AVAILABILITY GROUP group_name
   
  Pour plus d’informations, consultez [Secondaires actifs : réplicas secondaires lisibles &#40;groupes de disponibilité Always On&#41;](../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).  
   
- READ_ONLY_ROUTING_URL **='**TCP**://***system-address***:***port***'**  
+ READ_ONLY_ROUTING_URL **='** TCP **://***system-address***:***port***'**  
  Spécifie l'URL à utiliser pour le routage des demandes de connexion de tentative de lecture à ce réplica de disponibilité. Il s'agit de l'URL sur laquelle le moteur de base de données SQL Server écoute. En général, l'instance par défaut du moteur de base de données SQL Server écoute le port TCP 1433.  
   
  Pour une instance nommée, vous pouvez obtenir le numéro de port en interrogeant les colonnes **port** et **type_desc** de la vue de gestion dynamique [sys.dm_tcp_listener_states](../../relational-databases/system-dynamic-management-views/sys-dm-tcp-listener-states-transact-sql.md). L’instance de serveur utilise l’écouteur Transact-SQL (**type_desc='TSQL'**).  
@@ -481,12 +481,12 @@ ALTER AVAILABILITY GROUP group_name
  \<ag_name>  
  Spécifie le nom du groupe de disponibilité qui constitue la moitié du groupe de disponibilité distribué.  
   
- LISTENER **='**TCP**://***system-address***:***port***'**  
+ LISTENER **='** TCP **://***system-address***:***port***'**  
  Spécifie le chemin de l’URL de l’écouteur associé au groupe de disponibilité.  
   
  La clause LISTENER est obligatoire.  
   
- **'**TCP**://***system-address***:***port***'**  
+ **'** TCP **://***system-address***:***port***'**  
  Spécifie une URL pour l’écouteur associé au groupe de disponibilité. Les paramètres d'URL sont les suivants :  
   
  *system-address*  

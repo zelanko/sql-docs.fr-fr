@@ -1,16 +1,16 @@
 ---
-title: "Bien démarrer avec PolyBase | Microsoft Docs"
-ms.custom: 
+title: Bien démarrer avec PolyBase | Microsoft Docs
+ms.custom: ''
 ms.date: 08/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: polybase
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine-polybase
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 helpviewer_keywords:
 - PolyBase
@@ -21,16 +21,16 @@ helpviewer_keywords:
 - Azure blob storage export
 - Hadoop import, PolyBase getting started
 - Hadoop export, Polybase getting started
-caps.latest.revision: 
+caps.latest.revision: 78
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 9b28ca40643cec6661564c439657e1a3454929be
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 7c406a55361eb8a948f385f3bf7e76257c216720
+ms.sourcegitcommit: f3aa02a0f27cc1d3d5450f65cc114d6228dd9d49
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/23/2018
 ---
 # <a name="get-started-with-polybase"></a>Prise en main de PolyBase
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -45,33 +45,10 @@ ms.lasthandoff: 02/12/2018
   
 -   Compréhension de la manière de gérer des objets PolyBase dans SQL Server Management Studio (SSMS)  
   
--   Exemples de requêtes utilisant des objets PolyBase  
-  
-## <a name="prerequisites"></a>Prerequisites  
- Instance de [SQL Server (64 bits)](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016) comportant :  
-  
--   Microsoft .NET Framework 4.5  
-  
--   Oracle SE Java RunTime Environment (JRE), version 7.51 ou ultérieure (64 bits). ( [JRE](http://www.oracle.com/technetwork/java/javase/downloads/jre8-downloads-2133155.html) ou [Server JRE](http://www.oracle.com/technetwork/java/javase/downloads/server-jre8-downloads-2133154.html) fonctionnent). Accédez à [Java SE downloads](http://www.oracle.com/technetwork/java/javase/downloads/index.html)(Téléchargements Java SE). Le programme d’installation échoue si JRE n’est pas présent.   
-  
--   Mémoire minimale : 4 Go  
-  
--   Espace libre minimal sur le disque dur : 2 Go    
-
--   La connectivité TCP/IP doit être activée. (Consultez [Activer ou désactiver un protocole réseau de serveur](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md).) Par défaut, TCP/IP est désactivé sur les éditions Developer et Express de SQL Server. PolyBase peut être installé, mais ne démarre pas complètement jusqu’à ce que TCP/IP soit activé. Vous devez activer manuellement TCP/IP pour disposer de la fonctionnalité PolyBase. 
-  
- 
- Une source de données externe parmi les suivantes :  
-  
--   Cluster Hadoop. Pour connaître les versions prises en charge, consultez [Configurer PolyBase](#supported).  
-
--   Stockage Blob Azure
-
-> [!NOTE]
->   Si vous envisagez d’utiliser la fonction de délégation des calculs sur Hadoop, vous devez vous assurer que le cluster Hadoop cible est doté des principaux composants de hdfs, Yarn/MapReduce avec le serveur Jobhistory activé. PolyBase envoie la requête émise via MapReduce et extrait l’état à partir du serveur JobHistory. L’absence de l’un ou l’autre des composants entraîne l’échec de la requête. 
+-   Exemples de requêtes utilisant des objets PolyBase    
 
 ## <a name="install-polybase"></a>Installer PolyBase  
- Si vous n’avez pas installé PolyBase, consultez [Installation de PolyBase](../../relational-databases/polybase/polybase-installation.md).  
+Si vous n’avez pas installé PolyBase, consultez [Installation de PolyBase](../../relational-databases/polybase/polybase-installation.md). Cet article décrit les prérequis pour l’installation.
   
 ### <a name="how-to-confirm-installation"></a>Comment vérifier l’installation  
  Après l’installation, exécutez la commande suivante pour vérifier que PolyBase a été installé avec succès. Si PolyBase est installé, la valeur est 1, sinon 0.  

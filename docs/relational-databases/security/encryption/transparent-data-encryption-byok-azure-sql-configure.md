@@ -18,17 +18,18 @@ ms.devlang: azurecli, powershell
 ms.topic: article
 ms.date: 03/15/2018
 ms.author: aliceku
-ms.openlocfilehash: 9d1fee3a22bfa930f70a8c6e2585f60acaf5f419
-ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
+monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
+ms.openlocfilehash: eed635cc4b58c5ec975f0b77f8e3b69f87fd65ff
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/21/2018
+ms.lasthandoff: 04/18/2018
 ---
-# <a name="powershell-and-cli-enable-transparent-data-encryption-using-your-own-key-from-azure-key-vault-preview"></a>PowerShell et CLI : Activer TDE à l’aide de votre propre clé Azure Key Vault (préversion)
+# <a name="powershell-and-cli-enable-transparent-data-encryption-using-your-own-key-from-azure-key-vault"></a>PowerShell et CLI : Activer TDE à l’aide de votre propre clé Azure Key Vault
 
 [!INCLUDE[appliesto-xx-asdb-asdw-xxx-md](../../../includes/appliesto-xx-asdb-asdw-xxx-md.md)]
 
-Ce guide pratique explique comment utiliser une clé Azure Key Vault avec la fonctionnalité Transparent Data Encryption (TDE) (préversion) pour SQL Database ou Data Warehouse. Pour en savoir plus sur TDE avec prise en charge de Bring Your Own Key (BYOK) (préversion), consultez [Transparent Data Encryption (TDE) avec prise en charge de Bring Your Own Key pour Azure SQL](transparent-data-encryption-byok-azure-sql.md). 
+Ce guide pratique explique comment utiliser une clé Azure Key Vault avec la fonctionnalité Transparent Data Encryption (TDE) pour SQL Database ou Data Warehouse. Pour en savoir plus sur TDE avec prise en charge de Bring Your Own Key (BYOK), consultez [Transparent Data Encryption (TDE) avec prise en charge de Bring Your Own Key pour Azure SQL](transparent-data-encryption-byok-azure-sql.md). 
 
 ## <a name="prerequisites-for-powershell"></a>Prérequis pour PowerShell
 
@@ -125,7 +126,7 @@ Utilisez l’applet de commande [Set-AzureRMSqlDatabaseTransparentDataEncryption
 
 TDE est maintenant activé pour l’entrepôt de données ou la base de données, avec une clé de chiffrement dans Key Vault.
 
-## <a name="step-5-check-the-encryption-state-and-encryption-activity"></a>Étape 5. Vérifier l’état et l’activité de chiffrement
+## <a name="step-5-check-the-encryption-state-and-encryption-activity"></a>Étape 5. Vérifier l’état et l’activité du chiffrement
 
 Utilisez l’applet de commande [Get-AzureRMSqlDatabaseTransparentDataEncryption](/powershell/module/azurerm.sql/get-azurermsqldatabasetransparentdataencryption) pour obtenir l’état de chiffrement et l’applet de commande [Get-AzureRMSqlDatabaseTransparentDataEncryptionActivity](/powershell/module/azurerm.sql/get-azurermsqldatabasetransparentdataencryptionactivity) pour vérifier la progression du chiffrement pour un entrepôt de données ou une base de données.
 

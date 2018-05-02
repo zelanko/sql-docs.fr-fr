@@ -1,16 +1,16 @@
 ---
-title: "Requêtes PolyBase | Microsoft Docs"
-ms.custom: 
+title: Requêtes PolyBase | Microsoft Docs
+ms.custom: ''
 ms.date: 12/08/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: polybase
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine-polybase
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 keywords:
 - PolyBase
@@ -21,21 +21,21 @@ helpviewer_keywords:
 - Azure blob storage, import with PolyBase
 - Azure blob storage, export with PolyBase
 ms.assetid: 2c5aa2bd-af7d-4f57-9a28-9673c2a4c07e
-caps.latest.revision: 
+caps.latest.revision: 18
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 332661e69cde4a1ca8ec55c4082e1b3a23077571
-ms.sourcegitcommit: 4edac878b4751efa57601fe263c6b787b391bc7c
+ms.openlocfilehash: b6544e06a8b0d07e4a2eda1f8371cd0440c172f9
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="polybase-queries"></a>Requêtes PolyBase
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  Cet article donne des exemples de requêtes qui utilisent la fonctionnalité [PolyBase](../../relational-databases/polybase/polybase-guide.md) de SQL Server 2016. Avant d’utiliser ces exemples, vous devez également comprendre les instructions T-SQL nécessaires pour installer PolyBase (voir [Objets T-SQL PolyBase](../../relational-databases/polybase/polybase-t-sql-objects.md)).
+  Cet article donne des exemples de requêtes qui utilisent la fonctionnalité [PolyBase](../../relational-databases/polybase/polybase-guide.md) de SQL Server ( à partir de la version 2016). Avant d’utiliser ces exemples, vous devez également comprendre les instructions T-SQL nécessaires pour installer PolyBase (voir [Objets T-SQL PolyBase](../../relational-databases/polybase/polybase-t-sql-objects.md)).
   
 ## <a name="queries"></a>Requêtes  
  Exécutez des instructions Transact-SQL sur les tables externes ou utilisez des outils d’aide à la décision pour interroger des tables externes.
@@ -156,9 +156,10 @@ CREATE CLUSTERED COLUMNSTORE INDEX CCI_FastCustomers ON Fast_Customers;
 
 Exportez des données de SQL Server vers Hadoop ou le Stockage Azure. 
 
-Tout d’abord, activez la fonctionnalité d’exportation en définissant la valeur `sp_configure` de l’option « autoriser l’exportation polybase » sur 1. Créez ensuite une table externe pointant vers le répertoire de destination. Puis, utilisez INSERT INTO pour exporter les données d’une table SQL Server locale dans une source de données externe. 
+Tout d’abord, activez la fonctionnalité d’exportation en définissant la valeur `sp_configure` de l’option « autoriser l’exportation polybase » sur 1. Créez ensuite une table externe pointant vers le répertoire de destination. L’instruction CREATE EXTERNAL TABLE crée le répertoire de destination, s’il n’existe pas encore. Utilisez ensuite l’instruction INSERT INTO pour exporter les données d’une table SQL Server locale dans la source de données externe. 
 
-L’instruction INSERT INTO crée le répertoire de destination, s’il n’existe pas, et les résultats de l’instruction SELECT sont exportés à l’emplacement et au format spécifiés. Les fichiers externes sont nommés *QueryID_date_time_ID.format*, où *ID* est un identificateur incrémentiel et *format* est le format des données exportées. Exemple de nom de fichier : QID776_20160130_182739_0.orc.
+Les résultats de l’instruction SELECT sont exportés dans un fichier au format et à l’emplacement spécifiés. Les fichiers externes sont nommés *QueryID_date_time_ID.format*, où *ID* est un identificateur incrémentiel et *format* est le format des données exportées. Exemple de nom de fichier : QID776_20160130_182739_0.orc.
+
 
 > [!NOTE]
 > En cas d’exportation de données vers Hadoop ou le Stockage Blob Azure via PolyBase, seules les données sont exportées, et non les noms de colonnes (métadonnées), comme le définit la commande CREATE EXTERNAL TABLE.

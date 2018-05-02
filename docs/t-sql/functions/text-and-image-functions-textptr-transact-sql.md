@@ -1,16 +1,16 @@
 ---
 title: TEXTPTR (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 10/23/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - TEXTPTR_TSQL
@@ -23,16 +23,16 @@ helpviewer_keywords:
 - text-pointer values
 - displaying text pointer values
 ms.assetid: 2672b8cb-f747-46f3-9358-9b49b3583b8e
-caps.latest.revision: 
+caps.latest.revision: 36
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 109f9bdd06bf27928450c89ad06dc6d93247b881
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 137f5200829916c69c2cf8fcae4c8490e48b2b6e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="text-and-image-functions---textptr-transact-sql"></a>Fonctions texte et image - TEXTPTR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -69,8 +69,8 @@ TEXTPTR ( column )
   
 |Fonction ou instruction|Description|  
 |---------------------------|-----------------|  
-|PATINDEX**('***%pattern%***' ,** *expression***)**|Retourne la position d’un caractère dans la chaîne de caractères spécifiée dans les colonnes **text** et **ntext**.|  
-|DATALENGTH**(***expression***)**|Retourne la longueur des données dans les colonnes de type **text**, **ntext** et **image**.|  
+|PATINDEX **('***%pattern%***' ,** *expression***)**|Retourne la position d’un caractère dans la chaîne de caractères spécifiée dans les colonnes **text** et **ntext**.|  
+|DATALENGTH **(***expression***)**|Retourne la longueur des données dans les colonnes de type **text**, **ntext** et **image**.|  
 |SET TEXTSIZE|Retourne la limite, en octets, des données **text**, **ntext** ou **image** à retourner avec une instruction SELECT.|  
 |SUBSTRING**(***text_column*, *start*, *length***)**|Retourne une chaîne **varchar** spécifiée par le décalage *start* et par la longueur *length*. La longueur doit être inférieure à 8 Ko.|  
   

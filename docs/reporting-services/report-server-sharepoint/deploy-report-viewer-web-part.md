@@ -1,25 +1,25 @@
 ---
-title: "Déployer le composant WebPart Visionneuse de rapports de SQL Server Reporting Services sur un site SharePoint | Microsoft Docs"
-ms.custom: 
+title: Déployer le composant WebPart Visionneuse de rapports de SQL Server Reporting Services sur un site SharePoint | Microsoft Docs
+ms.custom: ''
 ms.date: 10/05/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
+ms.service: ''
 ms.component: report-server-sharepoint
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: f5fd405e91f9ca16caf9345a4a3e8f7852a3ad37
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: df39b0b38363f7990609214abddeda8b5b6e54a9
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="deploy-the-sql-server-reporting-services-report-viewer-web-part-on-a-sharepoint-site"></a>Déployer le composant WebPart Visionneuse de rapports de SQL Server Reporting Services sur un site SharePoint
 
@@ -33,7 +33,11 @@ Utilisez les instructions suivantes pour déployer manuellement le package de so
 
 ## <a name="requirements"></a>Spécifications
 
-**Versions SharePoint Server prises en charge :**  
+> [!IMPORTANT]
+> Vous ne pouvez pas installer ce composant WebPart si vous avez déjà configuré le mode intégré SharePoint de Reporting Services.
+>
+
+**Versions SharePoint Server prises en charge :**
 * SharePoint Server 2016
 * SharePoint Server 2013
 
@@ -148,6 +152,26 @@ Les langues suivantes sont prises en charge dans le composant WebPart :
 * Russe (ru)
 * Chinois (simplifié - zh-HANS et zh-CHS)
 * Chinois (traditionnel - zh-HANT et zh-CHT)
+
+## <a name="troubleshoot"></a>Dépanner
+
+* Erreur lors de la désinstallation de SSRS si le mode intégré SharePoint est configuré :
+
+    Install-SPRSService : [A] Impossible de caster Microsoft.ReportingServices.SharePoint.SharedService.Service.ReportingWebService en [B]Microsoft.ReportingServices.SharePoint.SharedService.Service.ReportingWebService. Le type A provient de 'Microsoft.ReportingServices.SharePoint.SharedService,Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91' dans le contexte 'Default' à l’emplacement 'C:\Windows\assembly\GAC_MSIL\Microsoft.Reporting Services.SharePoint.SharedService.dll'. Le type B provient de 'Microsoft.ReportingServices.SharePoint.SharedService,Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91' dans le contexte 'Default' à l’emplacement 'C:\Windows\assembly\GAC_MSIL\Microsoft.Reporting Services.SharePoint.SharedService.dll'.
+    
+    Solution :
+    1. Supprimez le composant WebPart de la Visionneuse de rapports.
+    2. Désinstallez SSRS.
+    3. Réinstallez le composant WebPart de la Visionneuse de rapports.
+
+* Erreur lors de la tentative de mise à niveau de SharePoint si le mode intégré SharePoint est configuré :
+
+    Impossible de charger le fichier ou l’assembly 'Microsoft.ReportingServices.Alerting.ServiceContract, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91' ou une de ses dépendances. Le système ne trouve pas le fichier spécifié. 00000000-0000-0000-0000-000000000000
+    
+    Solution :
+    1. Supprimez le composant WebPart de la Visionneuse de rapports.
+    2. Désinstallez SSRS.
+    3. Réinstallez le composant WebPart de la Visionneuse de rapports.
 
 ## <a name="next-steps"></a>Étapes suivantes
 

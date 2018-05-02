@@ -1,30 +1,31 @@
 ---
-title: "Planifier l’exécution d’un package SSIS sur Azure | Microsoft Docs"
-ms.date: 01/16/2018
+title: Planifier l’exécution d’un package SSIS sur Azure | Microsoft Docs
+ms.date: 04/17/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: lift-shift
 ms.suite: sql
-ms.custom: 
+ms.custom: ''
 ms.technology:
 - integration-services
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4724d7a306e59e05d17f466643146d868f372a7f
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: 94d0bb3462fe2dac81194e881521299f2b8c6e38
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="schedule-the-execution-of-an-ssis-package-on-azure"></a>Planifier l’exécution d’un package SSIS sur Azure
 Vous pouvez planifier l’exécution de packages stockés dans la base de données de catalogues SSISDB sur un serveur Azure SQL Database en choisissant l’une des options de planification suivantes :
 -   [SQL Server Agent](#agent)
 -   [Travaux élastiques SQL Database](#elastic)
--   [Activité de procédure stockée SQL Server Azure Data Factory](#sproc)
+-   [Activité d’exécution d’un package SSIS dans Azure Data Factory](#activities)
+-   [Activité de procédure stockée SQL Server Azure Data Factory](#activities)
 
 ## <a name="agent"></a> Planifier un package avec SQL Server Agent
 
@@ -142,13 +143,15 @@ EXEC jobs.sp_update_job @job_name='ExecutePackageJob', @enabled=1,
     @schedule_interval_type='Minutes', @schedule_interval_count=60 
 ```
 
-## <a name="sproc"></a> Planifier un package avec l’activité de procédure stockée SQL Server Azure Data Factory
+## <a name="activities"></a> Planifier un package avec Azure Data Factory
 
-Pour plus d’informations sur la façon de planifier un package SSIS à l’aide de l’activité de procédure stockée Azure Data Factory, consultez les articles suivants :
+Pour plus d’informations sur la planification d’un package SSIS à l’aide d’activités Azure Data Factory, consultez les articles suivants :
 
--   Pour Data Factory version 2 : [Appeler un package SSIS à l’aide de l’activité de procédure stockée dans Azure Data Factory](https://docs.microsoft.com/azure/data-factory/how-to-invoke-ssis-package-stored-procedure-activity)
+-   Pour Data Factory version 2 : [Exécuter un package SSIS à l’aide d’une activité SSIS dans Azure Data Factory](https://docs.microsoft.com/azure/data-factory/how-to-invoke-ssis-package-ssis-activity)
 
--   Pour Data Factory version 1 : [Appeler un package SSIS à l’aide de l’activité de procédure stockée dans Azure Data Factory](https://docs.microsoft.com/azure/data-factory/v1/how-to-invoke-ssis-package-stored-procedure-activity)
+-   Pour Data Factory version 2 : [Exécuter un package SSIS à l’aide d’une activité de procédure stockée dans Azure Data Factory](https://docs.microsoft.com/azure/data-factory/how-to-invoke-ssis-package-stored-procedure-activity)
+
+-   Pour Data Factory version 1 : [Exécuter un package SSIS à l’aide d’une activité de procédure stockée dans Azure Data Factory](https://docs.microsoft.com/azure/data-factory/v1/how-to-invoke-ssis-package-stored-procedure-activity)
 
 ## <a name="next-steps"></a>Étapes suivantes
 Pour plus d’informations sur SQL Server Agent, consultez [Travaux de SQL Server Agent pour les packages](../packages/sql-server-agent-jobs-for-packages.md).

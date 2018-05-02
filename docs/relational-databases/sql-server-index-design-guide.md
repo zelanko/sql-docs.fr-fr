@@ -1,8 +1,8 @@
 ---
-title: Guide de conception d’index SQL Server | Microsoft Docs
+title: Guide de conception et d’architecture d’index SQL Server | Microsoft Docs
 ms.custom: ''
 ms.date: 04/03/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: relational-databases-misc
@@ -29,16 +29,17 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: b6e1617f3ea9d4f725d2a95b9b1d55fbacf85876
-ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 405482e0cc8fdf8e545ee8fffab9edc678d1612e
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 04/18/2018
 ---
-# <a name="sql-server-index-design-guide"></a>Guide de conception d'index SQL Server
+# <a name="sql-server-index-architecture-and-design-guide"></a>Guide de conception et d’architecture d’index SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-L'engorgement des applications de base de données est souvent imputable à des index mal conçus ou en nombre insuffisant. La conception d'index efficaces est primordiale pour le bon fonctionnement des bases de données et des applications. Ce guide de conception d’index [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] contient des informations et des bonnes pratiques utiles pour créer des index performants et adaptés aux besoins de votre application.  
+L'engorgement des applications de base de données est souvent imputable à des index mal conçus ou en nombre insuffisant. La conception d'index efficaces est primordiale pour le bon fonctionnement des bases de données et des applications. Ce guide de conception d’index [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] contient des informations sur l’architecture des index, ainsi que des bonnes pratiques permettant de créer des index performants et adaptés aux besoins de votre application.  
     
 Ce guide suppose que le lecteur connaît les types d'index disponibles dans [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Pour obtenir description générale des types d'index, consultez [Types d'index](../relational-databases/indexes/indexes.md).  
 
@@ -121,7 +122,7 @@ Pour plus d’informations sur les index de recherche en texte intégral, consul
   
 -   Veillez à ce que la clé d'index des index cluster soit courte. En outre, les index cluster bénéficient du fait d'être créés sur des colonnes uniques ou non NULL.  
   
--   Les colonnes dont le type de données est **ntext**, **text**, **image**, **varchar(max)**, **nvarchar(max)**ou **varbinary(max)** ne peuvent pas être spécifiées en tant que colonnes de clés d’index. Cependant, les types de données **varchar(max)**, **nvarchar(max)**, **varbinary(max)**et **xml** peuvent participer à des index non-cluster en tant que colonnes d’index non-clés. Pour plus d'informations, consultez la section [Index avec colonnes incluses](#Included_Columns)dans ce guide.  
+-   Les colonnes dont le type de données est **ntext**, **text**, **image**, **varchar(max)**, **nvarchar(max)** ou **varbinary(max)** ne peuvent pas être spécifiées en tant que colonnes de clés d’index. Cependant, les types de données **varchar(max)**, **nvarchar(max)**, **varbinary(max)** et **xml** peuvent participer à des index non-cluster en tant que colonnes d’index non-clés. Pour plus d'informations, consultez la section [Index avec colonnes incluses](#Included_Columns)dans ce guide.  
   
 -   Un type de données **xml** ne peut être qu'une colonne clé dans un index XML. Pour plus d’informations, consultez [Index XML &#40;SQL Server&#41;](../relational-databases/xml/xml-indexes-sql-server.md). SQL Server 2012 SP1 introduit un nouveau type d'index XML appelé index XML sélectif. Ce nouvel index améliore les performances de requête sur les données stockées en XML dans SQL Server, permettant ainsi d'indexer plus rapidement les charges de travail comportant beaucoup de données XML et améliorant l'évolutivité en réduisant les coûts de stockage de l'index en lui-même. Pour plus d’informations, consultez [Index XML sélectifs &#40;SXI&#41;](../relational-databases/xml/selective-xml-indexes-sxi.md).  
   
@@ -456,7 +457,7 @@ INCLUDE (AddressLine1, AddressLine2, City, StateProvinceID);
   
 -   Le nombre de lignes d'index contenues sur une page sera moindre. Ceci pourrait augmenter les E/S et réduire l'efficacité de la mémoire cache.  
   
--   L'espace disque requis pour stocker l'index sera supérieur. En particulier, l’ajout des types de données **varchar(max)**, **nvarchar(max)**, **varbinary(max)**et **xml** en tant que colonnes d’index non-clés peut accroître considérablement l’espace disque nécessaire. En effet, les valeurs des colonnes sont copiées dans le niveau feuille de l'index. Par conséquent, elles résident à la fois dans l'index et dans la table de base.  
+-   L'espace disque requis pour stocker l'index sera supérieur. En particulier, l’ajout des types de données **varchar(max)**, **nvarchar(max)**, **varbinary(max)** et **xml** en tant que colonnes d’index non-clés peut accroître considérablement l’espace disque nécessaire. En effet, les valeurs des colonnes sont copiées dans le niveau feuille de l'index. Par conséquent, elles résident à la fois dans l'index et dans la table de base.  
   
 -   La maintenance d'un index peut accroître la durée nécessaire pour effectuer des modifications, des insertions, des mises à jour ou des suppressions à la table sous-jacente ou à la vue indexée.  
   

@@ -38,7 +38,7 @@ Ce tutoriel va vous apprendre à générer des scripts T-SQL (Transact-SQL) pour
 En résumé, ce tutoriel montre que tous les objets de **l’Explorateur d’objets** peuvent être scriptés en cliquant dessus avec le bouton droit et en sélectionnant l’option **Scripter l’objet en tant que**. 
 
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Prérequis
 Pour suivre ce tutoriel, vous avez besoin de SQL Server Management Studio, de l’accès à un serveur SQL Server et d’une base de données AdventureWorks. 
 
 - Installez [SQL Server Management Studio](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms).

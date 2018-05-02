@@ -2,7 +2,7 @@
 title: 'Exemple : demande de schémas comme résultats à l’aide des options XMLDATA et XMLSCHEMA | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: xml
@@ -21,17 +21,17 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cc4ba3242b22ac168b1469d1bd3870218839ea7b
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
-ms.translationtype: MT
+ms.openlocfilehash: 34786573aa50fc70ff6e6d0b3c2f3fe4d5cca668
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="example-requesting-schemas-as-results-with-the-xmldata-and-xmlschema-options"></a>Exemple : demande de schémas comme résultats à l'aide des options XMLDATA et XMLSCHEMA
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   La requête suivante retourne le schéma XML-DATA qui décrit la structure du document.  
   
-## <a name="example"></a>Exemple  
+## <a name="example"></a> Exemple  
   
 ```  
 USE AdventureWorks2012;  
@@ -43,7 +43,7 @@ FOR XML RAW, XMLDATA
 GO  
 ```  
   
- Voici le résultat obtenu :  
+ Voici le résultat obtenu :  
   
 ```  
 <Schema name="Schema1" xmlns="urn:schemas-microsoft-com:xml-data"   
@@ -60,7 +60,7 @@ GO
 ```  
   
 > [!NOTE]  
->  <`Schema`> est déclaré en tant qu'espace de noms. Pour éviter les conflits d'espaces de noms lorsque plusieurs schémas XML-Data sont interrogés dans des requêtes FOR XML différentes, l'identificateur d'espace de noms, `Schema1` dans cet exemple, est modifié à chaque exécution de requête. L’identificateur d’espace de noms est constitué de **schéma * n*** où ***n*** est un entier.  
+>  <`Schema`> est déclaré en tant qu'espace de noms. Pour éviter les conflits d'espaces de noms lorsque plusieurs schémas XML-Data sont interrogés dans des requêtes FOR XML différentes, l'identificateur d'espace de noms, `Schema1` dans cet exemple, est modifié à chaque exécution de requête. L’identificateur d’espace de noms est composé de**Schema*n***, où ***n*** est un entier.  
   
  En spécifiant l'option `XMLSCHEMA` , vous pouvez demander le schéma XSD pour le résultat.  
   
@@ -131,7 +131,7 @@ GO
 <row xmlns="urn:example.com" ProductModelID="119" Name="Bike Wash" />  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Utiliser le mode RAW avec FOR XML](../../relational-databases/xml/use-raw-mode-with-for-xml.md)  
   
   

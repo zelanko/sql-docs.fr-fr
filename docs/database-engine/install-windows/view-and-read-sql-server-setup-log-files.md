@@ -1,16 +1,16 @@
 ---
-title: "Afficher et lire les fichiers journaux d’installation de SQL Server | Microsoft Docs"
-ms.custom: 
+title: Afficher et lire les fichiers journaux d’installation de SQL Server | Microsoft Docs
+ms.custom: ''
 ms.date: 09/08/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: install-windows
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - setup-install
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - viewing logs
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - errors [SQL Server], Setup
 - logs [SQL Server], Setup
 ms.assetid: 9d77af64-9084-4375-908a-d90f99535062
-caps.latest.revision: 
+caps.latest.revision: 54
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 1ca86119236aecc19868bac5f5846a3363118502
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: de8c06e452f096799deab83d1cbe22353de75cba
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="view-and-read-sql-server-setup-log-files"></a>Afficher et lire les fichiers journaux d’installation de SQL Server
 
@@ -87,7 +87,7 @@ ms.lasthandoff: 02/09/2018
 -   l'emplacement du fichier du rapport de règles.  
   
 ### <a name="location"></a>Emplacement  
- Il se trouve à l’emplacement %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\*nnn*\Setup Bootstrap\Log\\.  
+ Le fichier se trouve à cet emplacement : %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\*nnn*\Setup Bootstrap\Log\\.  
   
  Pour trouver les erreurs dans le fichier texte résumé, recherchez les mots clés « error » ou « failed » dans le fichier.  
   
@@ -97,7 +97,7 @@ ms.lasthandoff: 02/09/2018
  Le fichier de base summary_engine est semblable au fichier résumé et est généré au cours du flux de travail principal.  
   
 ### <a name="location"></a>Emplacement  
- Il se trouve à l’emplacement %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\*nnn*\Setup Bootstrap\Log\\<AAAAMMJJ_HHMM>\\.  
+ Le fichier se trouve à cet emplacement : %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\*nnn*\Setup Bootstrap\Log\\<AAAAMMJJ_HHMM>\\.  
   
 ## <a name="summaryengine-baseyyyymmddhhmmsscomponentupdatetxt"></a>Summary_engine-base_YYYYMMDD_HHMMss_ComponentUpdate.txt  
   
@@ -105,7 +105,7 @@ ms.lasthandoff: 02/09/2018
  Le fichier journal résumé de mise à jour des composants est semblable au fichier résumé et est généré au cours du flux de travail de mise à jour des composants.  
   
 ### <a name="location"></a>Emplacement  
- Il se trouve à l’emplacement %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\*nnn*\Setup Bootstrap\Log\\<AAAAMMJJ_HHMM>\\.  
+ Le fichier se trouve à cet emplacement : %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\*nnn*\Setup Bootstrap\Log\\<AAAAMMJJ_HHMM>\\.  
   
 ## <a name="summaryengine-baseversionnumbermmddhhmmssglobalrulestxt"></a>Summary_engine-base_\<numéro_version>MMJJ_HHMMss_GlobalRules.txt  
   
@@ -113,7 +113,7 @@ ms.lasthandoff: 02/09/2018
  Le fichier journal résumé des règles globales est semblable au fichier résumé généré au cours du flux de travail des règles globales.  
   
 ### <a name="location"></a>Emplacement  
- Il se trouve à l’emplacement %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\*nnn*\Setup Bootstrap\Log\\<AAAAMMJJ_HHMM>\\.  
+ Le fichier se trouve à cet emplacement : %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\*nnn*\Setup Bootstrap\Log\\<AAAAMMJJ_HHMM>\\.  
   
 ## <a name="detailtxt"></a>Detail.txt  
   
@@ -121,7 +121,7 @@ ms.lasthandoff: 02/09/2018
  Detail.txt est généré pour le flux de travail principal, par exemple l'installation ou la mise à niveau, et fournit les détails de l'exécution. Les journaux dans le fichier sont générés en fonction de l'heure à laquelle chaque action pour l'installation a été appelée, et indiquent l'ordre dans lequel les actions ont été exécutées et leurs dépendances.  
   
 ### <a name="location"></a>Emplacement  
- Il se trouve à l’emplacement %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\*nnn*\Setup  
+ Le fichier se trouve à cet emplacement : %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\*nnn*\Setup  
   
  Bootstrap\Log\\<AAAAMMJJ_HHMM>\Detail.txt.  
   
@@ -133,7 +133,7 @@ ms.lasthandoff: 02/09/2018
  Le fichier Detail_ComponentUpdate.txt est généré pour le flux de travail de mise à jour des composants et est semblable au fichier Detail.txt.  
   
 ### <a name="location"></a>Emplacement  
- Il se trouve à l’emplacement %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\*nnn*\Setup Bootstrap\Log\\<AAAAMMJJ_HHMM>\\.  
+ Le fichier se trouve à cet emplacement : %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\*nnn*\Setup Bootstrap\Log\\<AAAAMMJJ_HHMM>\\.  
   
 ## <a name="detailglobalrulestxt"></a>Detail_GlobalRules.txt  
   
@@ -141,7 +141,7 @@ ms.lasthandoff: 02/09/2018
  Le fichier Detail_GlobalRules.txt est généré pour l'exécution des règles globales et est semblable au fichier Detail.txt.  
   
 ### <a name="location"></a>Emplacement  
- Il se trouve à l’emplacement %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\*nnn*\Setup Bootstrap\Log\\<AAAAMMJJ_HHMM>\\.  
+ Le fichier se trouve à cet emplacement : %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\*nnn*\Setup Bootstrap\Log\\<AAAAMMJJ_HHMM>\\.  
   
 ## <a name="msi-log-files"></a>Fichiers journaux MSI  
   
@@ -157,7 +157,7 @@ ms.lasthandoff: 02/09/2018
 -   \<Fonctionnalité>_\<Architecture>\_\<Interaction>\_\<FLux_de_travail>.log  
   
 ### <a name="location"></a>Emplacement  
- Les fichiers journaux MSI se trouvent à l’emplacement %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\*nnn*\Setup Bootstrap\Log\\<AAAAMMJJ_HHMM>\\<nom\>.log.  
+ Les fichiers journaux MSI se trouvent à cet emplacement : %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\*nnn*\Setup Bootstrap\Log\\<AAAAMMJJ_HHMM>\\<Nom\>.log.  
   
  À la fin du fichier se trouve un résumé de l'exécution qui indique l'état de réussite ou d'échec et les propriétés. Pour trouver l'erreur dans le fichier MSI, recherchez « value 3 ». Les erreurs se trouvent généralement à proximité de cette chaîne.  
   
@@ -167,7 +167,7 @@ ms.lasthandoff: 02/09/2018
  Le fichier de configuration contient les paramètres d'entrée fournis au cours de l'installation. Vous pouvez l'utiliser pour redémarrer l'installation sans entrer les paramètres manuellement. Toutefois, les mots de passe pour les comptes, PID et certains paramètres ne sont pas enregistrés dans le fichier de configuration. Les paramètres peuvent être soit ajoutés au fichier, soit fournis à l'aide de la ligne de commande ou de l'interface utilisateur du programme d'installation. Pour plus d’informations, consultez [Installer SQL Server 2016 à l’aide d’un fichier de configuration](../../database-engine/install-windows/install-sql-server-2016-using-a-configuration-file.md).  
   
 ### <a name="location"></a>Emplacement  
- Il se trouve à l’emplacement %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\*nnn*\Setup Bootstrap\Log\\<AAAAMMJJ_HHMM>\\.  
+ Le fichier se trouve à cet emplacement : %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\*nnn*\Setup Bootstrap\Log\\<AAAAMMJJ_HHMM>\\.  
   
 ## <a name="systemconfigurationcheckreporthtm"></a>SystemConfigurationCheck_Report.htm  
   
@@ -175,7 +175,7 @@ ms.lasthandoff: 02/09/2018
  Le rapport de vérification de la configuration du système contient une brève description de chaque rôle exécuté et de l'état d'exécution.  
   
 ### <a name="location"></a>Emplacement  
- Il se trouve à l’emplacement %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\*nnn*\Setup Bootstrap\Log\\<AAAAMMJJ_HHMM>\\.  
+ Le fichier se trouve à cet emplacement : %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\*nnn*\Setup Bootstrap\Log\\<AAAAMMJJ_HHMM>\\.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Installer SQL Server 2016](../../database-engine/install-windows/install-sql-server.md)  

@@ -2,7 +2,7 @@
 title: Créer un compte de connexion | Microsoft Docs
 ms.custom: ''
 ms.date: 08/01/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: security
@@ -30,11 +30,12 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 1cfca2d37697e8c9942ac042857784e68dca7088
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
-ms.translationtype: MT
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 03a4f993deace5c4714e17667b00eee99b4811a3
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-a-login"></a>Créer un compte de connexion
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -145,7 +146,7 @@ ms.lasthandoff: 04/10/2018
  **Carte**  
  Autorise la connexion à accéder aux bases de données répertoriées au-dessous.  
   
- **Base de données**  
+ **Sauvegarde de la base de données**  
  Répertorie les bases de données disponibles sur le serveur.  
   
  **Utilisateur**  
@@ -170,9 +171,9 @@ ms.lasthandoff: 04/10/2018
   
 1.  Cliquez sur **Rechercher**.  
   
-2.  Dans le **ajouter des objets** boîte de dialogue, sélectionnez une des options suivantes : **des objets spécifiques...** , **Tous les objets des types...** , ou **le serveur *** nom_serveur*. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+2.  Dans la boîte de dialogue **Ajouter des objets**, sélectionnez l’une des options suivantes : **Objets spécifiques…**, **Tous les objets des types…** ou **Le serveur***nom_serveur*. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-    > **Remarque :** sélection **le serveur *** nom_serveur* remplit automatiquement la grille supérieure avec tous les objets sécurisables de ce serveur.  
+    > **REMARQUE :** La sélection de l’option **Le serveur***nom_serveur* remplit automatiquement la grille supérieure avec tous les objets sécurisables de ce serveur.  
   
 3.  Si vous sélectionnez **Objets spécifiques…**:  
   
@@ -235,7 +236,7 @@ ms.lasthandoff: 04/10/2018
 ##  <a name="TsqlProcedure"></a> Créer une connexion à l’aide de l’authentification Windows à l’aide de T-SQL  
   
  
-1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
+1.  Dans l'**Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   
 2.  Dans la barre d'outils standard, cliquez sur **Nouvelle requête**.  
   
@@ -251,7 +252,7 @@ ms.lasthandoff: 04/10/2018
   
 ## <a name="create-a-login-using-sql-server-authentication-with-ssms"></a>Créer une connexion via l’authentification SQL Server avec SSMS  
   
-1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
+1.  Dans l'**Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   
 2.  Dans la barre d'outils standard, cliquez sur **Nouvelle requête**.  
   
@@ -278,7 +279,7 @@ ms.lasthandoff: 04/10/2018
   
 -   Pour accorder une autorisation à un compte de connexion, consultez [Accorder une autorisation à un principal](../../../relational-databases/security/authentication-access/grant-a-permission-to-a-principal.md).  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Centre de sécurité pour le moteur de base de données SQL Server et la base de données SQL Azure](../../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
   
   

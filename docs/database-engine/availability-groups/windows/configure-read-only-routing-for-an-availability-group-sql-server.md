@@ -1,16 +1,16 @@
 ---
-title: "Configurer le routage en lecture seule pour un groupe de disponibilité (SQL Server) | Microsoft Docs"
-ms.custom: 
+title: Configurer le routage en lecture seule pour un groupe de disponibilité (SQL Server) | Microsoft Docs
+ms.custom: ''
 ms.date: 08/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: availability-groups
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-high-availability
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - read-only routing
@@ -20,19 +20,19 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], client connectivity
 - Availability Groups [SQL Server], active secondary replicas
 ms.assetid: 7bd89ddd-0403-4930-a5eb-3c78718533d4
-caps.latest.revision: 
+caps.latest.revision: 34
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 9df48b3e6fb769543e7b5e4248b00c5a4ec2a88c
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: af2cc1f3496cfc5aea545f11433cb8399d8b42f3
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="configure-read-only-routing-for-an-availability-group-sql-server"></a>Configurer le routage en lecture seule pour un groupe de disponibilité (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-Pour configurer un groupe de disponibilité Always On et prendre en charge le routage en lecture seule dans [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)], vous pouvez utiliser [!INCLUDE[tsql](../../../includes/tsql-md.md)] ou PowerShell. Le*routage en lecture seule* fait référence à la capacité de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] d’acheminer les demandes de connexion en lecture seule applicables à un [réplica secondaire lisible](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md) Always On disponible (autrement dit, un réplica configuré pour autoriser des charges de travail en lecture seule lorsqu’il s’exécute sous le rôle secondaire). Pour prendre en charge le routage en lecture seule, le groupe de disponibilité doit posséder un [écouteur de groupe de disponibilité](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md). Les clients en lecture seule doivent diriger leurs demandes de connexion à cet écouteur, et les chaînes de connexion du client doivent spécifier l'intention d'application « en lecture seule ». Autrement dit, il doit s’agir de *demandes de connexion d’intention de lecture*.  
+  Pour configurer un groupe de disponibilité Always On et prendre en charge le routage en lecture seule dans [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)], vous pouvez utiliser [!INCLUDE[tsql](../../../includes/tsql-md.md)] ou PowerShell. Le*routage en lecture seule* fait référence à la capacité de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] d’acheminer les demandes de connexion en lecture seule applicables à un [réplica secondaire lisible](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md) Always On disponible (autrement dit, un réplica configuré pour autoriser des charges de travail en lecture seule lorsqu’il s’exécute sous le rôle secondaire). Pour prendre en charge le routage en lecture seule, le groupe de disponibilité doit posséder un [écouteur de groupe de disponibilité](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md). Les clients en lecture seule doivent diriger leurs demandes de connexion à cet écouteur, et les chaînes de connexion du client doivent spécifier l'intention d'application « en lecture seule ». Autrement dit, il doit s’agir de *demandes de connexion d’intention de lecture*.  
 
 Le routage en lecture seule est disponible dans [!INCLUDE[sssql15](../../../includes/sssql15-md.md)] et versions ultérieures.
 
@@ -106,7 +106,7 @@ Le routage en lecture seule est disponible dans [!INCLUDE[sssql15](../../../incl
   
     -   Pour configurer le routage en lecture seule pour le rôle secondaire, dans la clause ADD REPLICA ou MODIFY REPLICA WITH, spécifiez l'option SECONDARY_ROLE, comme suit :  
   
-         SECONDARY_ROLE **(** READ_ONLY_ROUTING_URL **='**TCP**://***adresse_système***:***port***')**  
+         SECONDARY_ROLE **(** READ_ONLY_ROUTING_URL **='** TCP **://***adresse_système***:***port***')**  
   
          Les paramètres de l'URL de routage en lecture sont les suivants :  
   
@@ -200,7 +200,7 @@ GO
   
          Pour plus d’informations, consultez [Calcul de l’URL de routage en lecture seule pour Always On](http://blogs.msdn.com/b/mattn/archive/2012/04/25/calculating-read-only-routing-url-for-Always%20On.aspx).  
   
-    -   Pour configurer l’accès à la connexion pour le rôle principal, spécifiez **ReadonlyRoutingList"***serveur***"** [ **,**...*n* ], où *serveur* indique une instance de serveur qui héberge un réplica secondaire en lecture seule dans le groupe de disponibilité. Par exemple :  `-ReadOnlyRoutingList "SecondaryServer","PrimaryServer"`  
+    -   Pour configurer l’accès à la connexion pour le rôle principal, spécifiez **ReadonlyRoutingList"***serveur***"** [ **,**...*n* ], où *serveur* identifie une instance de serveur qui héberge un réplica secondaire en lecture seule dans le groupe de disponibilité. Par exemple :  `-ReadOnlyRoutingList "SecondaryServer","PrimaryServer"`  
   
         > [!NOTE]  
         >  Vous devez définir l'URL de routage en lecture seule d'un réplica avant de configurer sa liste de routage en lecture seule.  

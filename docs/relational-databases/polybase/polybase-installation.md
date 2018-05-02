@@ -1,16 +1,16 @@
 ---
 title: Installation de PolyBase | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 02/23/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: polybase
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine-polybase
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - PolyBase, installation
@@ -18,11 +18,11 @@ author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 4aefc608d16245a2cb28245a87beb6b165489fab
-ms.sourcegitcommit: f0c5e37c138be5fb2cbb93e9f2ded307665b54ea
+ms.openlocfilehash: fbb861dda4b837bc3f3003edf357c89efaa4eb88
+ms.sourcegitcommit: f3aa02a0f27cc1d3d5450f65cc114d6228dd9d49
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/24/2018
+ms.lasthandoff: 04/23/2018
 ---
 # <a name="polybase-installation"></a>Installation de PolyBase
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,17 +31,23 @@ ms.lasthandoff: 02/24/2018
   
 ## <a name="prerequisites"></a>Prerequisites  
   
--   Version d’évaluation de SQL Server 64 bits  
+- Version d’évaluation de SQL Server 64 bits  
   
--   Microsoft .NET Framework 4.5  
+- Microsoft .NET Framework 4.5  
+
+- Oracle Java SE Runtime Environment (JRE). Les versions 7 (à partir de la version 7.51) et 8 sont prises en charge ([JRE](http://www.oracle.com/technetwork/java/javase/downloads/jre8-downloads-2133155.html) et [Server JRE](http://www.oracle.com/technetwork/java/javase/downloads/server-jre8-downloads-2133154.html) fonctionnent). Accédez à [Java SE downloads](http://www.oracle.com/technetwork/java/javase/downloads/index.html)(Téléchargements Java SE). Le programme d’installation échoue si JRE n’est pas présent. JRE9 et JRE10 ne sont pas pris en charge.
+    
+- Mémoire minimale : 4 Go  
   
--   Oracle SE Java RunTime Environment (JRE), version 7.51 ou 8 (64 bits) ( [JRE](http://www.oracle.com/technetwork/java/javase/downloads/jre8-downloads-2133155.html) ou [Server JRE](http://www.oracle.com/technetwork/java/javase/downloads/server-jre8-downloads-2133154.html) fonctionne). Accédez à [Java SE downloads](http://www.oracle.com/technetwork/java/javase/downloads/index.html)(Téléchargements Java SE). Le programme d’installation échoue si JRE n’est pas présent. JRE 9 ou version ultérieure ne fonctionne pas, sauf si vous disposez de la mise à jour cumulative 4 ou ultérieure pour SQL Server 2017. Vous pouvez installer JRE 8, installer PolyBase, puis effectuer la mise à niveau vers JRE 9. 
+- Espace libre minimal sur le disque dur : 2 Go  
   
--   Mémoire minimale : 4 Go  
-  
--   Espace libre minimal sur le disque dur : 2 Go  
-  
--   TCP/IP doit être activé pour que PolyBase fonctionne correctement. TCP/IP est activé par défaut sur toutes les éditions de SQL Server, sauf sur les éditions SQL Server Express et Developer. Pour que PolyBase fonctionne correctement sur les éditions Express et Developer, vous devez activer la connectivité TCP/IP (consultez [Activer ou désactiver un protocole réseau de serveur](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md).)
+- TCP/IP doit être activé pour que PolyBase fonctionne correctement. TCP/IP est activé par défaut sur toutes les éditions de SQL Server, sauf sur les éditions SQL Server Express et Developer. Pour que PolyBase fonctionne correctement sur les éditions Express et Developer, vous devez activer la connectivité TCP/IP (consultez [Activer ou désactiver un protocole réseau de serveur](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md).)
+
+- Une source de données externe (objet blob Azure ou cluster Hadoop). Pour connaître les versions d’Hadoop prises en charge, consultez [Configurer PolyBase](#supported).  
+
+
+> [!NOTE]
+>   Si vous envisagez d’utiliser la fonction de délégation des calculs sur Hadoop, vous devez vous assurer que le cluster Hadoop cible est doté des principaux composants de hdfs, Yarn/MapReduce avec le serveur Jobhistory activé. PolyBase envoie la requête émise via MapReduce et extrait l’état à partir du serveur JobHistory. L’absence de l’un ou l’autre des composants entraîne l’échec de la requête. 
   
  **Remarques**  
   

@@ -1,28 +1,29 @@
 ---
-title: "Vue d’ensemble et scénarios d’utilisation | Microsoft Docs"
-ms.custom: 
+title: Vue d’ensemble et scénarios d’utilisation | Microsoft Docs
+ms.custom: ''
 ms.date: 04/10/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: in-memory-oltp
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 62c964c5-eae4-4cf1-9024-d5a19adbd652
-caps.latest.revision: 
+caps.latest.revision: 5
 author: jodebrui
 ms.author: jodebrui
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 75f077fc93196e07bdada34924a2edbd2b02d6ab
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 2bbf55de6f63d6d78165e9c7a57685bb7fdea4ca
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="overview-and-usage-scenarios"></a>Vue d’ensemble et scénarios d’utilisation
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -49,7 +50,7 @@ Pour tirer parti de l’OLTP en mémoire dans votre base de données, vous devez
 
 OLTP en mémoire est intégré à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. Et comme ces objets se comportent de façon similaire aux objets standard équivalents, vous pouvez généralement améliorer les performances simplement en apportant quelques modifications minimes à la base de données et à l’application. De plus, vous pouvez avoir des tables optimisées en mémoire et des tables sur disque traditionnelles dans la même base de données, et exécuter simultanément des requêtes sur ces deux types de tables. Un script Transact-SQL présentant un exemple de chacun de ces types d’objets est fourni vers la fin de cet article.
 
-## <a name="usage-scenarios-for-in-memory-oltp"></a>Scénarios d’utilisation pour l’OLTP en mémoire
+## <a name="usage-scenarios-for-in-memory-oltp"></a>Scénarios d’usage de l’OLTP en mémoire
 
 L’OLTP en mémoire n’est pas un bouton d’accélération magique et ne convient pas à toutes les charges de travail. Par exemple, les tables à mémoire optimisée ne réduisent pas l’utilisation du processeur si la plupart des requêtes effectuent des opérations d’agrégation sur de grandes plages de données (dans ce scénario, utilisez plutôt des index columnstore).
 
@@ -83,7 +84,7 @@ Les modèles d’application courants sont les suivants :
 -  ingestion de relevés et d’événements de capteurs à des fins de notification et d’analyse d’historique ; 
 -  gestion des mises à jour par lot, même à partir de plusieurs sources, tout en réduisant l’impact sur la charge de travail de lecture simultanée.
 
-#### <a name="implementation-considerations"></a>Considérations relatives à la mise en œuvre
+#### <a name="implementation-considerations"></a>Considérations relatives à l’implémentation
 
 Utilisez une table optimisée en mémoire pour l’intégration de données. Si l’intégration consiste principalement en des insertions (plutôt que des mises à jour) et l’encombrement de stockage des données dans l’OLTP en mémoire est un critère important :
 
@@ -99,7 +100,7 @@ Le référentiel d’exemples [!INCLUDE[ssNoVersion](../../includes/ssnoversion-
 
 - [Quorum doubles key database’s workload while lowering utilization by 70% by leveraging In-Memory OLTP in Azure SQL Database](http://customers.microsoft.com/story/quorum-doubles-key-databases-workload-while-lowering-dtu-with-sql-database)
 - EdgeNet a amélioré les performances de chargement de données par lot et supprimé la nécessité de maintenir un cache de niveau intermédiaire grâce à l’OLTP en mémoire dans [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] : [Data Services Firm Gains Real-Time Access to Product Data with In-Memory Technology](https://customers.microsoft.com/en-us/story/data-services-firm-gains-real-time-access-to-product-d)
-- L’établissement Beth Israel Deaconess Medical Center a pu améliorer considérablement la vitesse d’intégration des données des contrôleurs de domaine et gère efficacement les pics de charge de travail à l’aide de l’OLTP en mémoire dans [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] : [https://customers.microsoft.com/fr-fr/story/strengthening-data-security-and-creating-more-time-for]
+- L’établissement Beth Israel Deaconess Medical Center a pu améliorer considérablement la vitesse d’intégration des données des contrôleurs de domaine et gère efficacement les pics de charge de travail à l’aide de l’OLTP en mémoire dans [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] : [https://customers.microsoft.com/en-us/story/strengthening-data-security-and-creating-more-time-for]
 
 ### <a name="caching-and-session-state"></a>Mise en cache et état de session
 

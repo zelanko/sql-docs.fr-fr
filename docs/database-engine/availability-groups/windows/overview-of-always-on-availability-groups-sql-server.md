@@ -1,15 +1,16 @@
 ---
-title: "Vue d’ensemble des groupes de disponibilité Always On (SQL Server) | Microsoft Docs"
-ms.custom: 
+title: Vue d’ensemble des groupes de disponibilité Always On (SQL Server) | Microsoft Docs
+ms.custom: ''
 ms.date: 05/17/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: availability-groups
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - secondary databases [SQL Server], in availability group
@@ -18,21 +19,21 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], data movement
 - Availability Groups [SQL Server]
 ms.assetid: 04fd9d95-4624-420f-a3be-1794309b3a47
-caps.latest.revision: "121"
+caps.latest.revision: 121
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 22f2cac063d651a2c5eb2867e54a64515b1472e1
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 220fdffb83548c103e42249026bc862e7f66a724
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="overview-of-always-on-availability-groups-sql-server"></a>Vue d’ensemble des groupes de disponibilité Always On (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
- > Pour du contenu sur les versions précédentes de SQL Server, consultez [Vue d’ensemble des groupes de disponibilité AlwaysOn (SQL Server)](https://msdn.microsoft.com/en-US/library/ff877884(SQL.120).aspx).
+ > Pour obtenir des informations sur les versions précédentes de SQL Server, consultez [Vue d’ensemble des groupes de disponibilité Always On (SQL Server)](https://msdn.microsoft.com/en-US/library/ff877884(SQL.120).aspx).
 
  Cette rubrique présente les concepts [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] essentiels pour configurer et gérer un ou plusieurs groupes de disponibilité dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Pour obtenir un résumé des avantages offerts par les groupes de disponibilité et une vue d’ensemble de la terminologie [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], consultez [Groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md).  
   
