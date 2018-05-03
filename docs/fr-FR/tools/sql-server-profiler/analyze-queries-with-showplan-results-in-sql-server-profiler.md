@@ -2,7 +2,7 @@
 title: Analyser des requêtes avec des résultats SHOWPLAN dans SQL Server Profiler | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: sql-server-profiler
@@ -22,14 +22,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fc385ac38ff22a0b07231aa1ae81c332eb91c63f
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: e601ef4e91057082997503909e66414bd2dfbca0
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="analyze-queries-with-showplan-results-in-sql-server-profiler"></a>Analyser des requêtes avec des résultats SHOWPLAN dans SQL Server Profiler
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Vous pouvez ajouter des classes d’événements Showplan à une définition de trace afin que [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] rassemble et montre les informations de plan de requête dans la trace. Vous pouvez également extraire les événements Showplan des autres événements collectés dans la trace et les enregistrer dans un fichier XML distinct.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Vous pouvez ajouter des classes d'événements Showplan à une définition de trace afin que [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] rassemble et affiche les informations de plan de requête dans la trace. Vous pouvez également extraire les événements Showplan des autres événements collectés dans la trace et les enregistrer dans un fichier XML distinct.  
   
  Chacune des procédures suivantes permet d'extraire les événements Showplan de la trace :  
   

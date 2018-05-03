@@ -2,7 +2,7 @@
 title: Utilitaire ssbdiagnose (Service Broker) | Documents Microsoft
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssbdiagnose
@@ -33,14 +33,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ee4dfdfeb9dd22130a287000731d656fbcfb803c
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: b4cbf56d010afd4d97b6449fc35281baa44819de
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="ssbdiagnose-utility-service-broker"></a>Utilitaire ssbdiagnose (Service Broker)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] L’utilitaire **ssbdiagnose** signale des problèmes dans des conversations [!INCLUDE[ssSB](../../includes/sssb-md.md)] ou dans la configuration des services [!INCLUDE[ssSB](../../includes/sssb-md.md)]. Des vérifications de configuration peuvent réalisées pour deux services ou pour un seul. Les problèmes sont signalés soit dans la fenêtre d’invite de commandes par un texte explicite, soit dans un fichier XML mis en forme qui peut être redirigé vers un fichier ou un autre programme.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  L’utilitaire **ssbdiagnose** signale des problèmes rencontrés dans des conversations [!INCLUDE[ssSB](../../includes/sssb-md.md)] ou dans la configuration des services [!INCLUDE[ssSB](../../includes/sssb-md.md)] . Des vérifications de configuration peuvent réalisées pour deux services ou pour un seul. Les problèmes sont signalés soit dans la fenêtre d’invite de commandes par un texte explicite, soit dans un fichier XML mis en forme qui peut être redirigé vers un fichier ou un autre programme.  
   
 ## <a name="syntax"></a>Syntaxe  
   

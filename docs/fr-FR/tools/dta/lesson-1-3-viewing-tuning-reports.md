@@ -2,7 +2,7 @@
 title: Affichage des rapports de paramétrage | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: dta
@@ -22,14 +22,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c986b13e3c38e168f7384a6552befca085f9be2f
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: b8886f3907f8fab2536ce46eeea69e4c4c2dd8a8
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="lesson-1-3---viewing-tuning-reports"></a>Leçon 1-3 : Affichage des rapports de paramétrage
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Au cours de l’exercice précédent de cette leçon, vous avez affiché les scripts [!INCLUDE[tsql](../../includes/tsql-md.md)] qui permettent de créer ou de supprimer des objets de base de données dans les recommandations de l’Assistant Paramétrage du moteur de base de données générées, en résultat de la session de paramétrage MySession. La session de paramétrage MySession a été créée dans [Tuning a Workload](../../tools/dta/lesson-1-1-tuning-a-workload.md).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Au cours de l'exercice précédent de cette leçon, vous avez affiché les scripts [!INCLUDE[tsql](../../includes/tsql-md.md)] qui permettent de créer ou de supprimer des objets de base de données dans les recommandations de l'Assistant Paramétrage du moteur de base de données générées en résultat de la session de paramétrage MySession. La session de paramétrage MySession a été créée dans [Tuning a Workload](../../tools/dta/lesson-1-1-tuning-a-workload.md).  
   
 Bien qu'il soit très utile d'afficher les scripts utilisables pour implémenter les résultats du paramétrage, l'Assistant Paramétrage du moteur de base de données fournit également de nombreux rapports utiles que vous pouvez afficher. Ces rapports fournissent des informations sur les structures de création physiques existantes dans la base de données que vous paramétrez et sur les structures recommandées. Pour afficher les rapports de paramétrage, cliquez sur l'onglet **Rapports** comme décrit dans l'exercice qui suit. Cet exercice utilise les sessions de paramétrage MySession et EvaluateMySession (ÉvaluerMaSession) que vous avez créées dans les sections [Tuning a Workload](../../tools/dta/lesson-1-1-tuning-a-workload.md) et [Viewing Tuning Recommendations](../../tools/dta/lesson-1-2-viewing-tuning-recommendations.md)du didacticiel.  
   

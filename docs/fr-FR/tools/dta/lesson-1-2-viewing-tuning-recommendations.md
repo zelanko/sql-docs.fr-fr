@@ -2,7 +2,7 @@
 title: Affichage des recommandations de paramétrage | Documents Microsoft
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: dta
@@ -22,14 +22,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 634534fb9fa7f97e61431a481ab847bd87e2806a
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: fe49d0959cdeb89b40e953cf0600ffc0675e74bc
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="lesson-1-2---viewing-tuning-recommendations"></a>Leçon 1-2 : Affichage des recommandations pour le paramétrage
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Cette tâche est basée sur la session de paramétrage que vous avez créée dans [Paramétrage d’une charge de travail](../../tools/dta/lesson-1-1-tuning-a-workload.md). Une fois la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] paramétrée au moyen du script [!INCLUDE[tsql](../../includes/tsql-md.md)] MyScript.sql, l’Assistant Paramétrage du [!INCLUDE[ssDE](../../includes/ssde-md.md)] affiche ses résultats sous l’onglet **Recommendations** . La tâche suivante présente l’onglet **Recommendations** de l’interface graphique utilisateur de l’Assistant Paramétrage du [!INCLUDE[ssDE](../../includes/ssde-md.md)] et vous guide pour explorer les informations que ce dernier fournit sur les résultats de la session de paramétrage.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Cette tâche est basée sur la session de paramétrage que vous avez créée dans [Paramétrage d’une charge de travail](../../tools/dta/lesson-1-1-tuning-a-workload.md). Une fois la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] paramétrée au moyen du script [!INCLUDE[tsql](../../includes/tsql-md.md)] MyScript.sql, l’Assistant Paramétrage du [!INCLUDE[ssDE](../../includes/ssde-md.md)] affiche ses résultats sous l’onglet **Recommendations** . La tâche suivante présente l’onglet **Recommendations** de l’interface graphique utilisateur de l’Assistant Paramétrage du [!INCLUDE[ssDE](../../includes/ssde-md.md)] et vous guide pour explorer les informations que ce dernier fournit sur les résultats de la session de paramétrage.  
   
 ### <a name="view-tuning-recommendations"></a>Afficher les recommandations de paramétrage  
   

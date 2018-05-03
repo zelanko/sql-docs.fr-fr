@@ -2,7 +2,7 @@
 title: NS$&lt;nom du service&gt; propriétés (onglet Service) | Documents Microsoft
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: configuration-manager
@@ -18,15 +18,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 59203f010913252abf05201df0f92a2d1b639c18
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: f6c59ff68ccee2fb2655badb0ac98ca782fa641a
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="nsltservice-namegt-properties-service-tab"></a>Propriétés de NS$&lt;service name&gt; (onglet Service)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
-Ce service est le service [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNS](../../includes/ssns-md.md)] . Les valeurs des propriétés en gris clair ne peuvent pas être modifiées à l'aide de cette application.  
+  Ce service est le service [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNS](../../includes/ssns-md.md)] . Les valeurs des propriétés en gris clair ne peuvent pas être modifiées à l'aide de cette application.  
   
 ## <a name="options"></a>Options  
  **Chemin d’accès binaire**  

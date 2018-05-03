@@ -2,7 +2,7 @@
 title: Distributed Replay Requirements | Documents Microsoft
 ms.custom: ''
 ms.date: 01/18/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: distributed-replay
@@ -18,14 +18,15 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: ondemand
-ms.openlocfilehash: 3267939b053be638ae40ab33e0e7e02776bf918c
-ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
+ms.openlocfilehash: 8db7e6c00c83de21ff37b65dc79d8751ebb10471
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="distributed-replay-requirements"></a>Distributed Replay Requirements
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Avant d’utiliser la fonctionnalité [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay, prenez connaissance des spécifications du produit présentées dans cette rubrique.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Avant d’utiliser la fonctionnalité [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay, prenez connaissance des spécifications du produit présentées dans cette rubrique.  
   
 ## <a name="input-trace-requirements"></a>Spécifications des données de trace d'entrée  
  Pour que les données de trace puissent être correctement relues, elles doivent répondre à des spécifications de version et de format et contenir des événements et des colonnes obligatoires.  

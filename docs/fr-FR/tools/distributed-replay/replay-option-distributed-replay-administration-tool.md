@@ -2,7 +2,7 @@
 title: Option replay (outil d’administration Distributed Replay) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: distributed-replay
@@ -18,14 +18,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cf93f19d25faf48efa3195d7d34348354eae5969
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: b355885ab496ab00b9186cfdf9ddce52dc7e6e03
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="replay-option-distributed-replay-administration-tool"></a>Option replay (outil d'administration Distributed Replay)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] L’outil d’administration [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay, **DReplay.exe**, est un outil en ligne de commande qui permet de communiquer avec Distributed Replay Controller. Cette rubrique décrit l’option de ligne de commande **replay** et la syntaxe correspondante.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  L’outil d’administration [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay ( **DReplay.exe**) est un outil en ligne de commande que vous pouvez utiliser pour communiquer avec Distributed Replay Controller. Cette rubrique décrit l’option de ligne de commande **replay** et la syntaxe correspondante.  
   
  L’option **replay** initialise l’étape de relecture d’événement, dans laquelle le contrôleur distribue des données de relecture aux clients spécifiés, lance la relecture distribuée et synchronise les clients. Chaque client participant à la relecture peut éventuellement enregistrer l'activité de relecture et enregistrer un fichier de trace de résultats localement.  
   

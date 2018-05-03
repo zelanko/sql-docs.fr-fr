@@ -2,7 +2,7 @@
 title: Exemples de fichiers (DTA) d’entrée XML | Documents Microsoft
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: dta
@@ -22,14 +22,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e4d9d8aaf26114afae1bcf35ab1ea0288e6893d1
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 54ecf5b22dc5b7670031426fd6abcce8dd5f02ca
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="xml-input-file-samples-dta"></a>Exemples de fichiers d'entrée XML (Assistant Paramétrage de base de données)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Cette section contient des exemples de fichiers d’entrée XML que vous pouvez utiliser avec l’outil en ligne de commande **dta**. Cet outil forme l'une des interfaces utilisateur de l'Assistant Paramétrage du moteur de base de données, outil qui permet de paramétrer des bases de données en vue d'améliorer les performances des requêtes. L'Assistant Paramétrage du moteur de base de données analyse les effets d'une charge de travail dans une ou plusieurs bases de données. Une charge de travail est un ensemble d'instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] qui s'exécutent dans les bases de données que vous souhaitez paramétrer. Une fois que l'Assistant Paramétrage du moteur de base de données a terminé d'analyser les effets de la charge de travail, il crée une recommandation pour ajouter des index, des vues indexées et des partitions afin d'améliorer les performances des requêtes dans vos bases de données.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Cette section contient des exemples de fichiers d’entrée XML que vous pouvez utiliser avec l’outil en ligne de commande **dta** . Cet outil forme l'une des interfaces utilisateur de l'Assistant Paramétrage du moteur de base de données, outil qui permet de paramétrer des bases de données en vue d'améliorer les performances des requêtes. L'Assistant Paramétrage du moteur de base de données analyse les effets d'une charge de travail dans une ou plusieurs bases de données. Une charge de travail est un ensemble d'instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] qui s'exécutent dans les bases de données que vous souhaitez paramétrer. Une fois que l'Assistant Paramétrage du moteur de base de données a terminé d'analyser les effets de la charge de travail, il crée une recommandation pour ajouter des index, des vues indexées et des partitions afin d'améliorer les performances des requêtes dans vos bases de données.  
   
 ## <a name="in-this-section"></a>Dans cette section  
   

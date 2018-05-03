@@ -2,7 +2,7 @@
 title: Lanceur de démon de filtre de texte intégral SQL (Avancé) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: configuration-manager
@@ -18,15 +18,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5182ebaec71112d1160e9c1685e43fdb96935106
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 13dfac7101e7949de8071978366d1617510e5363
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="sql-full-text-filter-daemon-launcher-advanced"></a>Lanceur de démon de filtre de texte intégral SQL (Avancé)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
-À compter de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], le service du lanceur de démon de filtre de texte intégral SQL est utilisé par la recherche en texte intégral [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Ce service doit être en cours d'exécution pendant que vous utilisez la recherche en texte intégral. Pour plus d'informations sur les processus hôte de démon de filtre, consultez « Architecture de la recherche en texte intégral » dans la documentation en ligne de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+  À compter de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], le service du lanceur de démon de filtre de texte intégral SQL est utilisé par la recherche en texte intégral [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Ce service doit être en cours d'exécution pendant que vous utilisez la recherche en texte intégral. Pour plus d'informations sur les processus hôte de démon de filtre, consultez « Architecture de la recherche en texte intégral » dans la documentation en ligne de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  Aucune propriété n'apparaît sous l'onglet **Avancé** par défaut. Si des propriétés personnalisées sont définies, elles apparaissent également sous cet onglet, avec les valeurs correspondantes.  
   

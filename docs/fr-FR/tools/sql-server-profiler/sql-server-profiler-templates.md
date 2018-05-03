@@ -2,7 +2,7 @@
 title: Modèles du Générateur de profils SQL Server | Documents Microsoft
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: sql-server-profiler
@@ -25,14 +25,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: b02daf16a7cb1be9d7b0f12d1b75c217575a5e4b
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: a055c12f1b9fcaa020ddf00cd6f85e260b77c802
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="sql-server-profiler-templates"></a>Modèles du Générateur de profils SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Vous pouvez utiliser [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] pour créer des modèles qui définissent les classes d’événements et les colonnes de données à inclure dans les traces. Après avoir défini et enregistré le modèle, vous pouvez exécuter une trace qui enregistre les données de chaque classe d'événements sélectionnée. Vous pouvez utiliser un modèle sur de nombreuses traces ; le modèle lui-même n'est pas exécuté.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Vous pouvez utiliser le [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] pour créer des modèles qui définissent les classes d'événements et les colonnes de données à inclure dans les traces. Après avoir défini et enregistré le modèle, vous pouvez exécuter une trace qui enregistre les données de chaque classe d'événements sélectionnée. Vous pouvez utiliser un modèle sur de nombreuses traces ; le modèle lui-même n'est pas exécuté.  
   
  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] fournit des modèles de traces prédéfinis qui permettent de configurer aisément les classes d’événements dont vous aurez vraisemblablement besoin pour des traces spécifiques. Le modèle standard, par exemple, permet de créer une trace générique pour enregistrer les connexions, les déconnexions, les traitements terminés et les informations de connexion. Vous pouvez utiliser ce modèle pour exécuter des traces sans modification ou comme point de départ pour d'autres modèles avec des configurations d'événements différents.  
   

@@ -2,7 +2,7 @@
 title: Retrouver une valeur ou une colonne de données pendant le suivi (SQL Server Profiler) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: sql-server-profiler
@@ -22,14 +22,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 30ee97e1dc5dceb6ecc9b5ac3deef0e7d065344b
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: f8bf13ae0ae7502ef91dbc1133acbd8b49785abe
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="find-a-value-or-data-column-while-tracing-sql-server-profiler"></a>Retrouver une valeur ou une colonne de données pendant le suivi (SQL Server Profiler)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Cette rubrique décrit comment rechercher une valeur ou une colonne de données particulière au sein des données de sortie de la trace pendant la réalisation de la trace avec [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Cette rubrique décrit comment rechercher une valeur ou une colonne de données particulière au sein des données de sortie de la trace pendant la réalisation de la trace, à l'aide du [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  
   
 ### <a name="to-find-a-value-or-data-column-while-running-a-trace"></a>Pour rechercher une valeur ou une colonne de données au cours de l'exécution d'une trace  
   

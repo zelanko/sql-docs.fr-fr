@@ -2,7 +2,7 @@
 title: Préparer les données de Trace d’entrée | Documents Microsoft
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: distributed-replay
@@ -18,14 +18,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7cda1a0a932a914e85618359cb067b2e4da2a0f7
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 1299f489029125695ad920022120ba8da1fdf30d
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="prepare-the-input-trace-data"></a>Préparer les données de trace d'entrée
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Avant de pouvoir démarrer une relecture distribuée avec la fonctionnalité [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay, vous devez préparer les données de trace d’entrée en lançant l’étape de prétraitement de l’outil d’administration de relecture distribuée. Dans l'étape de prétraitement, Distributed Replay Controller traite les données de trace et génère un fichier intermédiaire :  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Avant de pouvoir démarrer une relecture distribuée avec la fonctionnalité [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay, vous devez préparer les données de trace d'entrée en initialisant l'étape de prétraitement de l'outil d'administration de relecture distribuée. Dans l'étape de prétraitement, Distributed Replay Controller traite les données de trace et génère un fichier intermédiaire :  
   
  ![Étape de prétraitement Distributed replay](../../tools/distributed-replay/media/preprocess.gif "étape de prétraitement Distributed replay")  
   

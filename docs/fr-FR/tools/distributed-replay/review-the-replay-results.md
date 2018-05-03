@@ -2,7 +2,7 @@
 title: Passez en revue les résultats de relecture | Documents Microsoft
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: distributed-replay
@@ -18,14 +18,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ffcc2c8b5a8eb97acea95e841b24ca800b87df9d
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 5abf9d59d4288b9a61127dfc8469802dc2e3e5be
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="review-the-replay-results"></a>Examiner les résultats de la relecture
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Une fois que la fonctionnalité [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay a terminé une relecture distribuée, l’activité de relecture de chaque client peut être capturée et enregistrée dans des fichiers de trace de résultats sur chaque client. Pour capturer cette activité, vous devez utiliser le paramètre **-o** quand vous exécutez l’outil d’administration avec l’option **replay** . Pour plus d’informations sur l’option replay, consultez [Option replay &#40;outil d’administration Distributed Replay&#41;](../../tools/distributed-replay/replay-option-distributed-replay-administration-tool.md).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Une fois que la fonctionnalité [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay a terminé une relecture distribuée, l'activité de relecture de chaque client peut être capturée et enregistrée dans des fichiers de trace de résultats sur chaque client. Pour capturer cette activité, vous devez utiliser le paramètre **-o** quand vous exécutez l’outil d’administration avec l’option **replay**. Pour plus d’informations sur l’option replay, consultez [Option replay &#40;outil d’administration Distributed Replay&#41;](../../tools/distributed-replay/replay-option-distributed-replay-administration-tool.md).  
   
  L'emplacement où sont stockés les fichiers de trace de résultats est spécifié par l'élément XML `<ResultDirectory>` dans le fichier de configuration client, `DReplayClient.xml`, situé sur chaque client. Les fichiers de trace dans le répertoire des résultats du client sont remplacés à chaque relecture.  
   

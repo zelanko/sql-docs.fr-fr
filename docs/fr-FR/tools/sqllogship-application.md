@@ -2,7 +2,7 @@
 title: Application sqllogship | Documents Microsoft
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: sqllogship
@@ -20,14 +20,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ec4a757306f0e63e2e85b70526a211667a70f6e6
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 28422037d2a1bca822dc89c93f6c7582dfed6118
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="sqllogship-application"></a>Application sqllogship
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]L’application **sqllogship** effectue une opération de sauvegarde, de copie ou de restauration, ainsi que les tâches de nettoyage associées pour une configuration d’envoi de journaux. L'opération a lieu sur une instance spécifique de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] pour une base de données spécifique.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  L’application **sqllogship** effectue une opération de sauvegarde, de copie ou de restauration, ainsi que les tâches de nettoyage associées pour une configuration d’envoi de journaux. L'opération a lieu sur une instance spécifique de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] pour une base de données spécifique.  
   
  ![Icône de lien de rubrique](../database-engine/configure-windows/media/topic-link.gif "icône lien de rubrique") pour les conventions de syntaxe, consultez [référence utilitaire d’invite de commandes &#40;moteur de base de données&#41;](../tools/command-prompt-utility-reference-database-engine.md).  
   

@@ -2,7 +2,7 @@
 title: Configurer Distributed Replay | Documents Microsoft
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: distributed-replay
@@ -18,14 +18,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a2ded636f3ded5a8821b6675ef5d18c21a31b968
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 1c203d2f67712e833d0866d871ad41b1c0462cb8
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="configure-distributed-replay"></a>Configure Distributed Replay
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Les détails de configuration de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay sont spécifiés dans les fichiers XML qui se trouvent sur Distributed Replay Controller, sur les clients et à l’emplacement où l’outil d’administration est installé. Il s'agit des fichiers suivants :  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Les détails de configuration de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Utility sont spécifiés dans les fichiers XML qui se trouvent sur Distributed Replay Controller, sur les clients et à l'emplacement où l'outil d'administration est installé. Il s'agit des fichiers suivants :  
   
 -   [Fichier de configuration du contrôleur](#DReplayController)  
   

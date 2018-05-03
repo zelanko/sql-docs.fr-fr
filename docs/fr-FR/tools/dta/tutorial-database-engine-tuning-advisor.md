@@ -2,7 +2,7 @@
 title: 'Tutoriel : Assistant Paramétrage du moteur de base de données | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: dta
@@ -23,14 +23,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 0c6068064e47e571f143070bfd853c6df4e913d4
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 7d99417924f5fd585652f0bd1f7cbec457abe379
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="tutorial-database-engine-tuning-advisor"></a>Didacticiel : Assistant Paramétrage du moteur de base de données
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Bienvenue dans le tutoriel Assistant Paramétrage du moteur de base de données. Cet outil examine la façon dont les requêtes sont traitées dans les bases de données que vous spécifiez, puis il recommande des moyens d'améliorer les performances du traitement des requêtes en modifiant les structures des bases de données telles que les index, les vues indexées et le partitionnement.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Bienvenue dans le Didacticiel Assistant Paramétrage du moteur de base de données. Cet outil examine la façon dont les requêtes sont traitées dans les bases de données que vous spécifiez, puis il recommande des moyens d'améliorer les performances du traitement des requêtes en modifiant les structures des bases de données telles que les index, les vues indexées et le partitionnement.  
   
 L’Assistant Paramétrage du moteur de base de données fournit deux interfaces utilisateur : une interface utilisateur graphique (GUI) et l’utilitaire en ligne de commande **dta** . L’interface utilisateur graphique facilite l’affichage des résultats des sessions de paramétrage, tandis que l’utilitaire en ligne de commande **dta** facilite l’intégration de la fonctionnalité Assistant Paramétrage du moteur de base de données aux scripts pour automatiser le paramétrage. De plus, l'Assistant Paramétrage du moteur de base de données peut accepter les entrées XML, ce qui permet de mieux contrôler la procédure de paramétrage.  
   
