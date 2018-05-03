@@ -2,7 +2,7 @@
 title: Définition des Options de l’outil et la disposition | Documents Microsoft
 ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: dta
@@ -22,14 +22,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 68a4c894fb4defe848b146c59b3ad159ac3da287
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 51f300147cb9df54bb07112309d1488d35a81d36
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="lesson-1-2---setting-tool-options-and-layout"></a>Leçon 1-2 : Définition des options du menu Outils et de la disposition
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Vous pouvez définir des options qui permettent de configurer ce que l’interface de l’Assistant Paramétrage du moteur de base de données affiche au démarrage, les polices qu’elle utilise et d’autres fonctionnalités pour faciliter l’utilisation de l’outil. Les exercices pratiques de cette page vous aideront à vous familiariser avec les options qu'il est possible de définir et avec la façon de procéder.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Vous pouvez définir les options qui permettent de configurer ce que l'interface de l'Assistant Paramétrage du moteur de base de données affiche au démarrage, les polices qu'elle utilise et également configurer d'autres fonctionnalités pour faciliter l'utilisation de l'outil. Les exercices pratiques de cette page vous aideront à vous familiariser avec les options qu'il est possible de définir et avec la façon de procéder.  
   
 ### <a name="set-the-tool-options"></a>Définition des options de l'outil  
   

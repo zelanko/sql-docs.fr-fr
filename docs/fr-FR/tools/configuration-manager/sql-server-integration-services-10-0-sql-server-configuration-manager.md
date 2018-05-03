@@ -2,7 +2,7 @@
 title: SQL Server Integration Services 10.0 (Gestionnaire de configuration SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: configuration-manager
@@ -18,15 +18,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 08885df32557164e6d2219a3b522ec00d0f7a3e6
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 902131f1092ea98447a8ce1f37662f06492dc2de
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="sql-server-integration-services-100-sql-server-configuration-manager"></a>SQL Server Integration Services 10.0 (Gestionnaire de configuration SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
-Il s'agit du service qui prend en charge [!INCLUDE[ssIS](../../includes/ssis-md.md)]. Pour afficher les propriétés du service, cliquez avec le bouton droit sur son nom dans le volet d’informations, puis cliquez sur **Propriétés**.  
+  Il s'agit du service qui prend en charge [!INCLUDE[ssIS](../../includes/ssis-md.md)]. Pour afficher les propriétés du service, cliquez avec le bouton droit sur son nom dans le volet d’informations, puis cliquez sur **Propriétés**.  
   
  Pour plus d'informations sur [!INCLUDE[ssIS](../../includes/ssis-md.md)], consultez la documentation en ligne.  
   

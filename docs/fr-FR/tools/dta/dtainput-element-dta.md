@@ -2,7 +2,7 @@
 title: DTAInput, élément (DTA) | Documents Microsoft
 ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: dta
@@ -22,14 +22,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2ac4b1252abed4d02100e3891cdc2a22e4c3854e
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: f7f82b3d94d8a96bdfd0da58a140e8714e406f74
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="dtainput-element-dta"></a>DTAInput, élément (Assistant Paramétrage de base de données)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Contient la définition de l’entrée XML pour l’Assistant Paramétrage du moteur de base de données.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Contient la définition de l'entrée XML pour l'Assistant Paramétrage du moteur de base de données.  
   
 ## <a name="syntax"></a>Syntaxe  
   
