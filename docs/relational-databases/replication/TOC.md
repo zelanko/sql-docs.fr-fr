@@ -293,3 +293,6 @@
 ## [Configurer la réplication transactionnelle](tutorial-replicating-data-between-continuously-connected-servers.md)  
 ## [Configurer la réplication de fusion](tutorial-replicating-data-with-mobile-clients.md)  
 
+# Résolution des problèmes
+## [Erreurs avec la réplication transactionnelle](../../troubleshooters/replication/troubleshoot-tran-repl-errors.md)
+

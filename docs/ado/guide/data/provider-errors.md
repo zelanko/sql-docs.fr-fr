@@ -1,11 +1,9 @@
 ---
 title: Erreurs du fournisseur | Documents Microsoft
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -23,12 +21,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 14f79d299850bf6163fb328b0dd54be9d84f9a7b
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 551c3a7e7f90f69601ff84449d60fc79c1375ece
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="provider-errors"></a>Erreurs du fournisseur
 En cas d’erreur du fournisseur, une erreur d’exécution de -2147467259 est retournée. Lorsque vous recevez cette erreur, vérifiez le **erreurs** collection actif **connexion** objet, qui contient une ou plusieurs erreurs décrivant ce qui s’est produite.  
