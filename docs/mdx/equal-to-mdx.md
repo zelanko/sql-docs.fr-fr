@@ -23,12 +23,11 @@ caps.latest.revision: 36
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 51df250577d539c48acb55e26e9906cf1d5a15d4
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 1e401e3c69397ce7aa1bf0941528a9e31219e2dd
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="-equal-to-mdx"></a>= (Égal à) (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -36,7 +35,7 @@ ms.lasthandoff: 01/08/2018
   Exécute une opération de comparaison qui détermine si la valeur d'une expression MDX est égale à celle d'une autre expression MDX.  
   
 > [!NOTE]  
->  Pour comparer des objets, utilisez la [IS &#40; MDX &#41; ](../mdx/is-mdx.md) opérateur. Par exemple, utilisez l'opérateur IS lorsque vous vérifiez si le membre actuel sur un axe de requête est un membre spécifique.  
+>  Pour comparer des objets, utilisez la [IS &#40;MDX&#41; ](../mdx/is-mdx.md) opérateur. Par exemple, utilisez l'opérateur IS lorsque vous vérifiez si le membre actuel sur un axe de requête est un membre spécifique.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -90,6 +89,6 @@ MDX_Expression = MDX_Expression
  `From [Adventure Works]`  
   
 ## <a name="see-also"></a>Voir aussi  
- [Référence des opérateurs MDX &#40; MDX &#41;](../mdx/mdx-operator-reference-mdx.md)  
+ [Référence des opérateurs MDX &#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)  
   
   

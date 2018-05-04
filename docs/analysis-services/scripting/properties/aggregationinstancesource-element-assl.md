@@ -25,15 +25,15 @@ caps.latest.revision: 12
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 877299e940a6fc33a4d75d21176f6104c6b2f209
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 89ceb3c2b808b97ab528d309bc3923e78364bfdb
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="aggregationinstancesource-element-assl"></a>Élément AggregationInstanceSource (ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Identifie la source de données pour les instances d’agrégation définies par l’utilisateur liées à un [Partition](../../../analysis-services/scripting/objects/partition-element-assl.md) élément.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Identifie la source de données pour les instances d’agrégation définies par l’utilisateur liées à un [Partition](../../../analysis-services/scripting/objects/partition-element-assl.md) élément.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -51,24 +51,24 @@ ms.lasthandoff: 01/08/2018
 |Caractéristique|Description|  
 |--------------------|-----------------|  
 |Type de données et longueur|[DataSourceViewBinding](../../../analysis-services/scripting/data-type/datasourceviewbinding-data-type-assl.md)|  
-|Valeur par défaut|None|  
-|Cardinalité|0-1 : élément facultatif qui peut apparaître une fois et une seule.|  
+|Valeur par défaut|Aucune|  
+|Cardinalité|0-1: élément facultatif qui peut apparaître une fois et une seule.|  
   
 ## <a name="element-relationships"></a>Relations entre les éléments  
   
 |Relation|Élément|  
 |------------------|-------------|  
 |Éléments parents|[Partition](../../../analysis-services/scripting/objects/partition-element-assl.md)|  
-|Éléments enfants|None|  
+|Éléments enfants|Aucune|  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Si cet élément apparaît manquant ou est défini sur une chaîne vide, la vue de source de données du cube propriétaire de la partition est utilisée par défaut.  
   
- Pour plus d’informations sur la **liaison** type, y compris les tableaux des objets Analysis Services Scripting Language (ASSL) de la **liaison** type et la hiérarchie d’héritage de **liaison** types, consultez [Type de liaison de données &#40; ASSL &#41; ](../../../analysis-services/scripting/data-type/binding-data-type-assl.md).  
+ Pour plus d’informations sur la **liaison** type, y compris les tableaux des objets Analysis Services Scripting Language (ASSL) de la **liaison** type et la hiérarchie d’héritage de  **Liaison** types, consultez [Type de données de liaison &#40;ASSL&#41;](../../../analysis-services/scripting/data-type/binding-data-type-assl.md).  
   
- Pour une vue d’ensemble des liaisons de données dans ASSL, consultez [des Sources de données et liaisons &#40; SSAS multidimensionnel &#41; ](../../../analysis-services/multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md).  
+ Pour une vue d’ensemble des liaisons de données dans ASSL, consultez [des Sources de données et liaisons & #40 ; SSAS multidimensionnel & #41 ; ](../../../analysis-services/multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Propriétés &#40; ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
+ [Propriétés & #40 ; ASSL & #41 ;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   

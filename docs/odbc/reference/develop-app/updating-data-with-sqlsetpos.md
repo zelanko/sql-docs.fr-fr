@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - updating data [ODBC], SQLSetPos
 - data updates [ODBC], SQLSetPos
@@ -21,12 +21,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: d23f0292665d7e1cfbd4ce0c32e5cf254e8e4fb3
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: a25d331649510f7e2d407842dc915df2da7d6184
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="updating-data-with-sqlsetpos"></a>Mise à jour des données avec SQLSetPos
 Les applications peuvent mettre à jour ou supprimer les lignes de l’ensemble de lignes avec **SQLSetPos**. Appel de **SQLSetPos** est une alternative pratique à la construction et l’exécution d’une instruction SQL. Il permet à un pilote ODBC prend en charge les mises à jour positionnées même lorsque la source de données ne prend pas en charge les instructions SQL positionnées. Il fait partie du paradigme de réaliser un accès de base de données au moyen d’appels de fonction.  

@@ -27,15 +27,15 @@ caps.latest.revision: 37
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 563dc6c7cc36af0ed48bee8dd6c759c2772da528
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: ec3d8d8616d6561e3b7d7e898e6c05d77839e34d
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="block-element-assl"></a>Élément Block (ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Contient l’ensemble ou une partie du contenu binaire d’un [ClrAssemblyFile](../../../analysis-services/scripting/data-type/clrassemblyfile-data-type-assl.md) élément.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Contient l’ensemble ou une partie du contenu binaire d’un [ClrAssemblyFile](../../../analysis-services/scripting/data-type/clrassemblyfile-data-type-assl.md) élément.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -51,7 +51,7 @@ ms.lasthandoff: 01/08/2018
 |Caractéristique|Description|  
 |--------------------|-----------------|  
 |Type de données et longueur|Base64Binary|  
-|Valeur par défaut|None|  
+|Valeur par défaut|Aucune|  
 |Cardinalité|1-n : élément requis pouvant apparaître plusieurs fois.|  
   
 ## <a name="element-relationships"></a>Relations entre les éléments  
@@ -59,16 +59,16 @@ ms.lasthandoff: 01/08/2018
 |Relation|Élément|  
 |------------------|-------------|  
 |Éléments parents|[Blocs](../../../analysis-services/scripting/collections/blocks-element-assl.md)|  
-|Éléments enfants|None|  
+|Éléments enfants|Aucune|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Assembly, élément &#40; ASSL &#41;](../../../analysis-services/scripting/objects/assembly-element-assl.md)   
- [Type de données ClrAssembly &#40; ASSL &#41;](../../../analysis-services/scripting/data-type/clrassembly-data-type-assl.md)   
- [Élément de fichiers &#40; ASSL &#41;](../../../analysis-services/scripting/collections/files-element-assl.md)   
- [Élément File &#40; ASSL &#41;](../../../analysis-services/scripting/objects/file-element-assl.md)   
- [Type de données ClrAssemblyFile &#40; ASSL &#41;](../../../analysis-services/scripting/data-type/clrassemblyfile-data-type-assl.md)   
- [Élément de données &#40; ASSL &#41;](../../../analysis-services/scripting/objects/data-element-assl.md)   
- [Type de données DataBlock &#40; ASSL &#41;](../../../analysis-services/scripting/data-type/datablock-data-type-assl.md)   
- [Objets &#40; ASSL &#41;](../../../analysis-services/scripting/objects/objects-assl.md)  
+ [Assembly, élément & #40 ; ASSL & #41 ;](../../../analysis-services/scripting/objects/assembly-element-assl.md)   
+ [Type de données ClrAssembly &#40;ASSL&#41;](../../../analysis-services/scripting/data-type/clrassembly-data-type-assl.md)   
+ [Fichiers d’élément &#40;ASSL&#41;](../../../analysis-services/scripting/collections/files-element-assl.md)   
+ [Élément File & #40 ; ASSL & #41 ;](../../../analysis-services/scripting/objects/file-element-assl.md)   
+ [Type de données ClrAssemblyFile & #40 ; ASSL & #41 ;](../../../analysis-services/scripting/data-type/clrassemblyfile-data-type-assl.md)   
+ [Élément de données & #40 ; ASSL & #41 ;](../../../analysis-services/scripting/objects/data-element-assl.md)   
+ [Type de données DataBlock & #40 ; ASSL & #41 ;](../../../analysis-services/scripting/data-type/datablock-data-type-assl.md)   
+ [Objets & #40 ; ASSL & #41 ;](../../../analysis-services/scripting/objects/objects-assl.md)  
   
   

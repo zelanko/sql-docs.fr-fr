@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - transactions [ODBC], concurrency control
 - concurrency control [ODBC]
@@ -20,12 +20,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: ca6003893c767cf7fe3a5649097d816c96b6f064
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 3d0a9065248139fe3d2e369062301b76b4839955
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="concurrency-control"></a>Contrôle d'accès concurrentiel
 *Accès concurrentiel* est la possibilité de deux transactions utilisent les mêmes données en même temps, et avec accrue des transactions isolation devrait être une concurrence réduite. Il s’agit, car l’isolation des transactions est généralement implémentée par le verrouillage de lignes et que plusieurs lignes sont verrouillées, moins de transactions peuvent être effectuées au moins temporairement bloqué par une ligne verrouillée. Lors de la concurrence réduite est généralement considérée comme un compromis pour les transaction d’isolation élevés nécessaires pour maintenir l’intégrité de base de données, il peut devenir un problème dans un environnement interactif avec une activité élevée en lecture/écriture qui utilisent des curseurs.  

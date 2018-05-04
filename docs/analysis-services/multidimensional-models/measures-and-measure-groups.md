@@ -1,41 +1,23 @@
 ---
 title: Mesures et groupes de mesures | Documents Microsoft
-ms.custom: 
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-helpviewer_keywords:
-- measure groups [Analysis Services]
-- measures [Analysis Services], about measures
-- OLAP objects [Analysis Services], measures
-- aggregate functions [Analysis Services]
-- granularity
-- measure groups [Analysis Services], about measure groups
-- measures [Analysis Services]
-- aggregations [Analysis Services], measures
-- fact tables [Analysis Services]
-ms.assetid: 4f0122f9-c3a5-4172-ada3-5bc5f7b1cc9a
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: c8775c33a50d25379f1de53f00b7e66830cbf971
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 171ee494ad3d4b89ab923b4b2f0a769da0d7012c
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="measures-and-measure-groups"></a>Mesures et groupes de mesures
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Un cube inclut des *mesures* contenues dans des *groupes de mesures*, une logique métier, ainsi qu'une collection de dimensions qui donnent le contexte d'évaluation des données numériques fournies par une mesure. Les mesures et les groupes de mesures constituent chacun un composant essentiel d'un cube. Un cube ne peut pas exister sans au moins un de chacun de ces composants.  
+  Un cube inclut des *mesures* contenues dans des *groupes de mesures*, une logique métier, ainsi qu'une collection de dimensions qui donnent le contexte d'évaluation des données numériques fournies par une mesure. Les mesures et les groupes de mesures constituent chacun un composant essentiel d'un cube. Un cube ne peut pas exister sans au moins un de chacun de ces composants.  
   
  Cette rubrique décrit les [Measures](#bkmk_measure) et les [Measure Groups](#bkmk_mg). Elle contient également le tableau suivant, avec des liens vers des procédures de création et de configuration de mesures et de groupes de mesures.  
   

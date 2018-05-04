@@ -23,20 +23,20 @@ caps.latest.revision: 31
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 43ec669b0b72775645f12ff51d0e4ede962b7700
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 7243eae7198e9ae22df7fc661f005b51eb8db02e
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mdschemaproperties-rowset"></a>Ensemble de lignes MDSCHEMA_PROPERTIES
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Décrit les propriétés des membres dans une base de données.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Décrit les propriétés des membres d'une base de données.  
   
 ## <a name="rowset-columns"></a>Colonnes de l'ensemble de lignes  
  Le **MDSCHEMA_PROPERTIES** ensemble de lignes contient les colonnes suivantes.  
   
-|Nom de colonne|Indicateur de type|Longueur|Description|  
+|Nom de colonne|Indicateur de type|Longueur| Description|  
 |-----------------|--------------------|------------|-----------------|  
 |**CATALOG_NAME**|**DBTYPE_WSTR**||Nom de la base de données.|  
 |**SCHEMA_NAME**|**DBTYPE_WSTR**||Nom du schéma auquel appartient cette propriété. **NULL** si le fournisseur ne prend pas en charge les schémas.|  
@@ -85,6 +85,6 @@ ms.lasthandoff: 01/08/2018
 |**PROPERTY_VISIBILITY**|**DBTYPE_UI2**|(Facultatif) Restriction par défaut est une valeur de 1. Une image bitmap avec l’une des valeurs valides suivantes :<br /><br /> 1 Visible<br /><br /> 2 non visible|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Ensembles de lignes de schéma OLE DB pour OLAP](../../../analysis-services/schema-rowsets/ole-db-olap/ole-db-for-olap-schema-rowsets.md)  
+ [OLE DB pour OLAP Schema Rowsets](../../../analysis-services/schema-rowsets/ole-db-olap/ole-db-for-olap-schema-rowsets.md)  
   
   

@@ -24,12 +24,11 @@ caps.latest.revision: 9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 8461d1d883bde3315a11861b9951c477c797ce93
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: e56a51063d97ae2f5ac2c528f594c11938b18310
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spsyspolicyupdatepolicycategorysubscription-transact-sql"></a>sp_syspolicy_update_policy_category_subscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,15 +51,15 @@ sp_syspolicy_update_policy_category_subscription [ @policy_category_subscription
  [  **@policy_category_subscription_id=** ] *policy_category_subscription_id*  
  Identificateur de l'abonnement aux catégories de stratégies à mettre à jour. *policy_category_subscription_id* est **int**et est requis.  
   
- [ **@target_type=** ] **'**target_type**'**  
+ [ **@target_type=** ] **'** target_type **'**  
  Type de cible de l'abonnement aux catégories. *target_type* est **sysname**, avec NULL comme valeur par défaut.  
   
  Si vous spécifiez *target_type*, la valeur doit être définie à 'DATABASE'.  
   
- [ **@target_object=** ] **'**target_object**'**  
+ [ **@target_object=** ] **'** target_object **'**  
  Est le nom de la base de données qui peuvent s’abonner à la catégorie de stratégie. *target_object* est **sysname**, avec NULL comme valeur par défaut.  
   
- [  **@policy_category=** ] **'**policy_category**'**  
+ [  **@policy_category=** ] **'** policy_category **'**  
  Nom de la catégorie de stratégie à laquelle vous voulez que la base de données s'abonne. *policy_category* est **sysname**, avec NULL comme valeur par défaut.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  

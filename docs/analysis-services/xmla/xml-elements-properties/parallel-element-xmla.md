@@ -29,15 +29,15 @@ caps.latest.revision: 13
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 0045bb8696a6f8cae8977cd5d4f2d1b6da0f8f22
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 5ccdba7fb5233bd6593c1e4efd5539ea59e8aca4
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="parallel-element-xmla"></a>Parallel Element (XMLA)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]Spécifie le nombre de travaux de traitement peut s’exécuter en parallèle à l’aide du parent [lot](../../../analysis-services/xmla/xml-elements-commands/batch-element-xmla.md) commande.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
+  Spécifie le nombre de travaux de traitement peut s’exécuter en parallèle à l’aide du parent [lot](../../../analysis-services/xmla/xml-elements-commands/batch-element-xmla.md) commande.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -56,8 +56,8 @@ ms.lasthandoff: 01/08/2018
   
 |Caractéristique|Description|  
 |--------------------|-----------------|  
-|Type de données et longueur|None|  
-|Valeur par défaut|None|  
+|Type de données et longueur|Aucune|  
+|Valeur par défaut|Aucune|  
 |Cardinalité|0-n : élément facultatif pouvant apparaître plusieurs fois.|  
   
 ## <a name="element-relationships"></a>Relations entre les éléments  
@@ -69,13 +69,13 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="attributes"></a>Attributs  
   
-|Attribute|Description|  
+|Attribut| Description|  
 |---------------|-----------------|  
 |maxParallel|Attribut **Integer** facultatif. Indique le nombre maximal de threads sur lesquels exécuter des commandes en parallèle. Si non spécifié ou la valeur 0, l’instance de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] détermine un nombre optimal de threads en fonction du nombre de processeurs disponibles sur l’ordinateur.|  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
   
 ## <a name="see-also"></a>Voir aussi  
- [Propriétés &#40; XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+ [Propriétés & #40 ; XMLA & #41 ;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

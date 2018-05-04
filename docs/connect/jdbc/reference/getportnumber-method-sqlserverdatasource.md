@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 apiname:
 - SQLServerDataSource.getPortNumber
 apilocation:
@@ -22,12 +22,11 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 7cc115a11669b586a9e8271aad44e4ce11359c91
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: d8b84c1a9e68deef49103c047ad962bffc9c58b9
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="getportnumber-method-sqlserverdatasource"></a>Méthode getPortNumber (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -51,7 +50,7 @@ public int getPortNumber()
 >  Le [setPortNumber](../../../connect/jdbc/reference/setportnumber-method-sqlserverdatasource.md) méthode n’effectue aucune vérification sur la valeur de port transmise de plage. Vous pouvez transmettre des numéros qui ne sont pas valides, tels que 99999, sans déclencher d’erreur.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Membres de SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   
+ [SQLServerDataSource, membres](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   
  [SQLServerDataSource, classe](../../../connect/jdbc/reference/sqlserverdatasource-class.md)  
   
   

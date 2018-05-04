@@ -1,31 +1,23 @@
 ---
-title: "Configurer le stockage des chaînes pour les Partitions et Dimensions | Documents Microsoft"
-ms.custom: 
-ms.date: 03/06/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: Configurer le stockage des chaînes pour les Partitions et Dimensions | Documents Microsoft
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-ms.assetid: 987f6cfc-da82-4b2e-96ef-a8af88339e5f
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: c10be134f541434543c43c186181b122188a379f
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 9585c5a2535148cc7e1984c3d911794a4dbe0bdc
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configure-string-storage-for-dimensions-and-partitions"></a>Configurer le stockage de chaînes pour des dimensions et des partitions
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Vous pouvez reconfigurer le stockage des chaînes pour adapter les chaînes de très grande taille dans les attributs de dimension ou les partitions qui dépassent la limite de taille de fichier de 4 Go pour les magasins de chaînes. Si vos dimensions ou partitions incluent des magasins de chaînes de cette taille, vous pouvez contourner cette contrainte de taille de fichier en modifiant la propriété **StringStoresCompatibilityLevel** au niveau de la dimension ou de la partition, pour les objets locaux et les objets liés (locaux ou distants).  
+  Vous pouvez reconfigurer le stockage des chaînes pour adapter les chaînes de très grande taille dans les attributs de dimension ou les partitions qui dépassent la limite de taille de fichier de 4 Go pour les magasins de chaînes. Si vos dimensions ou partitions incluent des magasins de chaînes de cette taille, vous pouvez contourner cette contrainte de taille de fichier en modifiant la propriété **StringStoresCompatibilityLevel** au niveau de la dimension ou de la partition, pour les objets locaux et les objets liés (locaux ou distants).  
   
  Notez que vous pouvez augmenter le stockage des chaînes seulement sur les objets qui nécessitent une capacité supplémentaire. Dans la plupart des modèles multidimensionnels, des données de chaîne sont associées aux dimensions. Toutefois, les partitions qui contiennent des mesures de comptage distinctes sur les chaînes peuvent également bénéficier de ce paramètre. Le paramètre ne concernant que les chaînes, les données numériques ne sont pas affectées.  
   
@@ -95,7 +87,7 @@ Vous pouvez reconfigurer le stockage des chaînes pour adapter les chaînes de t
   
 ## <a name="see-also"></a>Voir aussi  
  [Outils et approches de traitement &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/tools-and-approaches-for-processing-analysis-services.md)   
- [Options de traitement et les paramètres &#40; Analysis Services &#41;](../../analysis-services/multidimensional-models/processing-options-and-settings-analysis-services.md)   
+ [Options de traitement et les paramètres & #40 ; Analysis Services & #41 ;](../../analysis-services/multidimensional-models/processing-options-and-settings-analysis-services.md)   
  [Traitement et Modes de stockage de partitions](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-partition-storage-modes-and-processing.md)   
  [Stockage de dimension](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimensions-storage.md)  
   

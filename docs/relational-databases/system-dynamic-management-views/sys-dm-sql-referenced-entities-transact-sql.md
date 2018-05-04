@@ -26,13 +26,12 @@ caps.latest.revision: 46
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: On Demand
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: a1ca935166f5d7f955594aafc2e8ff96ee566d8d
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: d6d384e280defcef14dd93b64ae47b604ecc6466
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sysdmsqlreferencedentities-transact-sql"></a>sys.dm_sql_referenced_entities (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -103,7 +102,7 @@ sys.dm_sql_referenced_entities (
 |is_select_all|**bit**|**S'applique à**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 1 = L'objet est utilisé dans une clause SELECT * (au niveau de l'objet uniquement).|  
 |is_all_columns_found|**bit**|**S'applique à**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 1 = Toutes les dépendances de colonne pour l'objet ont été trouvées.<br /><br /> 0 = Les dépendances de colonne pour l'objet n'ont pas été trouvées.|
 |is_insert_all|**bit**|**S'applique à**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 1 = l’objet est utilisé dans une instruction INSERT sans liste de colonnes (au niveau objet uniquement).|  
-|is_incomplete|**bit**|**S’applique aux**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 via [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 1 = l’objet ou de la colonne a une erreur de liaison et est incomplet.|
+|is_incomplete|**bit**|**S’applique à** : [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 1 = l’objet ou de la colonne a une erreur de liaison et est incomplet.|
   
 ## <a name="exceptions"></a>Exceptions  
  Retourne un jeu de résultats vide sous chacune des conditions suivantes :  

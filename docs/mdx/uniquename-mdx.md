@@ -22,12 +22,11 @@ caps.latest.revision: 31
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 9c68a32d649cf9042e173dc3fa79b73a5c820b98
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 64dc6a7b258778b30e5b65cc775681a97270b74f
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="uniquename-mdx"></a>UniqueName (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -64,10 +63,10 @@ Member_Expression.UniqueName
  *Argument*  
  Expression MDX (Multidimensional Expressions) valide qui retourne un membre.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Le **UniqueName** fonction retourne le nom unique de l’objet, pas le nom retourné par la [nom](../mdx/name-mdx.md) (fonction). Le nom retourné n'inclut pas le nom du cube. Les résultats retournés dépendent des paramètres côté serveur ou de la propriété de chaîne de connexion UniqueNameStyle MDX.  
   
-## <a name="example"></a> Exemple  
+## <a name="example"></a>Exemple  
  L'exemple ci-dessous retourne la valeur de nom unique de la dimension Product, de la hiérarchie Product Categories, du niveau Subcategory et du membre Bike Racks dans le cube Adventure Works.  
   
 ```  
@@ -89,6 +88,6 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Référence des fonctions MDX &#40; MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Référence des fonctions MDX & #40 ; MDX & #41 ;](../mdx/mdx-function-reference-mdx.md)  
   
   

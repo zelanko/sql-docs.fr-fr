@@ -29,15 +29,15 @@ caps.latest.revision: 12
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 61e9e8b5b03e9ecdf5eba345d907f4ccc0f9c07a
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 79c7f077de06bbba9468d98ef0b087be9c45b4d1
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="key-element-xmla"></a>Élément Key (XMLA)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]Contient une valeur de clé de membre pour un membre d’attribut.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
+  Contient une valeur de clé de membre pour un membre d'attribut.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -55,7 +55,7 @@ ms.lasthandoff: 01/08/2018
 |Caractéristique|Description|  
 |--------------------|-----------------|  
 |Type de données et longueur|Tout|  
-|Valeur par défaut|None|  
+|Valeur par défaut|Aucune|  
 |Cardinalité|0-n : élément facultatif pouvant apparaître plusieurs fois.|  
   
 ## <a name="element-relationships"></a>Relations entre les éléments  
@@ -63,19 +63,19 @@ ms.lasthandoff: 01/08/2018
 |Relation|Élément|  
 |------------------|-------------|  
 |Éléments parents|[Clés](../../../analysis-services/xmla/xml-elements-properties/keys-element-xmla.md)|  
-|Éléments enfants|None|  
+|Éléments enfants|Aucune|  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Le type de données utilisé par cet élément doit correspondre au type de données de la colonne clé appropriée de l'attribut spécifié. Si les éléments **Key** ne sont pas spécifiés pour un élément **Attribute** parent, les éléments **AttributeName** et **Name** spécifiés dans l'élément **Attribute** parent sont utilisés pour identifier le membre d'attribut à modifier.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Élément attribute &#40; XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/attribute-element-xmla.md)   
- [Élément AttributeName &#40; XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/attributename-element-xmla.md)   
- [Supprimer l’élément &#40; XMLA &#41;](../../../analysis-services/xmla/xml-elements-commands/drop-element-xmla.md)   
- [Insérer un élément &#40; XMLA &#41;](../../../analysis-services/xmla/xml-elements-commands/insert-element-xmla.md)   
- [Élément KeyColumn &#40; ASSL &#41;](../../../analysis-services/scripting/objects/keycolumn-element-assl.md)   
- [Mettre à jour, élément &#40; XMLA &#41;](../../../analysis-services/xmla/xml-elements-commands/update-element-xmla.md)   
- [Où, élément &#40; XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/where-element-xmla.md)   
- [Propriétés &#40; XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+ [Élément attribute & #40 ; XMLA & #41 ;](../../../analysis-services/xmla/xml-elements-properties/attribute-element-xmla.md)   
+ [Élément AttributeName & #40 ; XMLA & #41 ;](../../../analysis-services/xmla/xml-elements-properties/attributename-element-xmla.md)   
+ [Supprimer l’élément & #40 ; XMLA & #41 ;](../../../analysis-services/xmla/xml-elements-commands/drop-element-xmla.md)   
+ [Insérer un élément & #40 ; XMLA & #41 ;](../../../analysis-services/xmla/xml-elements-commands/insert-element-xmla.md)   
+ [Élément KeyColumn & #40 ; ASSL & #41 ;](../../../analysis-services/scripting/objects/keycolumn-element-assl.md)   
+ [Mettre à jour, élément & #40 ; XMLA & #41 ;](../../../analysis-services/xmla/xml-elements-commands/update-element-xmla.md)   
+ [Où, élément & #40 ; XMLA & #41 ;](../../../analysis-services/xmla/xml-elements-properties/where-element-xmla.md)   
+ [Propriétés & #40 ; XMLA & #41 ;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

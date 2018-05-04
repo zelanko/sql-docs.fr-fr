@@ -1,33 +1,32 @@
 ---
-title: "Importer à partir de Power Pivot | Documents Microsoft"
-ms.custom: 
+title: Importer à partir de Power Pivot | Documents Microsoft
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - sql13.asvs.bidtoolset.importfromppt.f1
 ms.assetid: ac1a6a79-bda3-4122-a717-8b1e2f77da02
-caps.latest.revision: 
+caps.latest.revision: 25
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: cf23e21dfa0a87af7702bf07961d71184e6a59c2
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
-ms.translationtype: MT
+ms.openlocfilehash: 30c5b268d5d15376fe8e29d1de88f6b7067e0842
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="import-from-power-pivot"></a>Importer à partir de Power Pivot 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-Cet article décrit comment créer un nouveau projet de modèle tabulaire en important les métadonnées et les données d’une [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] classeur à l’aide de l’importation à partir de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] modèle de projet dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
+  Cet article décrit comment créer un nouveau projet de modèle tabulaire en important les métadonnées et les données d’une [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] classeur à l’aide de l’importation à partir de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] modèle de projet dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
 ## <a name="create-a-new-tabular-model-from-a-power-pivot-for-excel-file"></a>Créer un nouveau modèle tabulaire à partir d’un fichier Power Pivot pour Excel  
  Lors de la création d’un nouveau projet de modèle tabulaire par importation à partir d’un classeur [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , les métadonnées qui définissent la structure du classeur sont utilisées pour créer et définir la structure du modèle tabulaire dans [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]. Les objets tels que les tables, les colonnes, les mesures et les relations sont conservés et apparaîtront dans le projet de modèle tabulaire tels qu’ils s’affichent dans le classeur [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Aucune modification n'est apportée au fichier de classeur .xlsx.  

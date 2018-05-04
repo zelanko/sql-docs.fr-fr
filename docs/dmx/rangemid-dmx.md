@@ -22,12 +22,11 @@ caps.latest.revision: 29
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 09ca15b99b44bda1bb58078f3b5e273826561ee6
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 95d43d77c240d103f2fa96add77ba982684fc73f
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="rangemid-dmx"></a>RangeMid (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -47,8 +46,8 @@ RangeMid(<scalar column reference>)
 ## <a name="return-type"></a>Type de retour  
  Une valeur scalaire.  
   
-## <a name="remarks"></a>Notes   
- Lorsqu’il est utilisé avec [SELECT FROM &#60; modèle &#62; JOINTURE de prédiction &#40; DMX &#41; ](../dmx/select-from-model-prediction-join-dmx.md), le **RangeMin**, **RangeMid**, et **RangeMax** fonctions retournent les valeurs limites réelles du compartiment spécifié. Par exemple, si vous effectuez une prévision sur une colonne discrétisée, la requête retourne le numéro du compartiment prédit dans la colonne discrétisée. Le **RangeMin**, **RangeMid**, et **RangeMax** fonctions décrivent le compartiment que la prévision spécifie. Lorsque le **RangeMid** fonction est utilisée avec une instruction PREDICTION JOIN, la référence de colonne scalaire peut contenir uniquement des colonnes discrètes, prédictibles.  
+## <a name="remarks"></a>Notes  
+ Lorsqu’il est utilisé avec [SELECT FROM &#60;modèle&#62; PREDICTION JOIN &#40;DMX&#41;](../dmx/select-from-model-prediction-join-dmx.md), le **RangeMin**, **RangeMid**, et **RangeMax**  fonctions retournent les valeurs limites réelles du compartiment spécifié. Par exemple, si vous effectuez une prévision sur une colonne discrétisée, la requête retourne le numéro du compartiment prédit dans la colonne discrétisée. Le **RangeMin**, **RangeMid**, et **RangeMax** fonctions décrivent le compartiment que la prévision spécifie. Lorsque le **RangeMid** fonction est utilisée avec une instruction PREDICTION JOIN, la référence de colonne scalaire peut contenir uniquement des colonnes discrètes, prédictibles.  
   
 ## <a name="examples"></a>Exemples  
  L'exemple suivant retourne les valeurs minimales, maximales et moyennes de la colonne de données continues Yearly Income dans un modèle d'exploration de données Arbre de décision TM.  
@@ -62,10 +61,10 @@ FROM [TM Decision Tree]
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Les Extensions d’exploration de données &#40; DMX &#41; Référence de fonction](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [Fonctions &#40; DMX &#41;](../dmx/functions-dmx.md)   
- [Fonctions de prédiction générales &#40; DMX &#41;](../dmx/general-prediction-functions-dmx.md)   
- [RangeMax &#40; DMX &#41;](../dmx/rangemax-dmx.md)   
- [RangeMin &#40; DMX &#41;](../dmx/rangemin-dmx.md)  
+ [Data Mining Extensions &#40;DMX&#41; référence de fonction](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [Fonctions &#40;DMX&#41;](../dmx/functions-dmx.md)   
+ [Fonctions de prédiction générales &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)   
+ [RangeMax &#40;DMX&#41;](../dmx/rangemax-dmx.md)   
+ [RangeMin &#40;DMX&#41;](../dmx/rangemin-dmx.md)  
   
   

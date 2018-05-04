@@ -1,28 +1,28 @@
 ---
-title: "Leçon 10 : Créer des hiérarchies | Documents Microsoft"
-ms.custom: 
+title: 'Leçon 10 : Créer des hiérarchies | Documents Microsoft'
+ms.custom: ''
 ms.date: 04/10/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 ms.assetid: 1e2561d3-4890-4495-a9cd-84eb88508938
-caps.latest.revision: "23"
+caps.latest.revision: 23
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 7a09f05b8e508205f3e2a8863627c12afdec9c64
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 24624bd54030819ef543997d79f70ec213d39ed2
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="lesson-9-create-hierarchies"></a>Leçon 9 : Créer des hiérarchies
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
@@ -33,7 +33,7 @@ Pour créer des hiérarchies, vous allez utiliser le Générateur de modèles da
   
 Durée estimée pour effectuer cette leçon : **20 minutes**  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Conditions préalables  
 Cette rubrique fait partie d'un didacticiel de modélisation tabulaire, qui doit être suivi dans l'ordre. Avant d’effectuer les tâches de cette leçon, vous devez avoir terminé la leçon précédente : [leçon 8 : créer des Perspectives](../analysis-services/lesson-8-create-perspectives.md).  
   
 ## <a name="create-hierarchies"></a>Créer des hiérarchies  

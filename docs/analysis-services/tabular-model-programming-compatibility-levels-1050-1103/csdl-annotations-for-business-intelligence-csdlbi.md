@@ -18,12 +18,11 @@ caps.latest.revision: 21
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: f2f0d4c06b15a6bb2fab3eaf44a9bcb17f225a91
-ms.sourcegitcommit: 8f1d1363e18e0c32ff250617ab6cb2da2147bf8e
-ms.translationtype: MT
+ms.openlocfilehash: 4f12d7ab2f8b5d6eb4b905161e802a5574ba18e2
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/03/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="csdl-annotations-for-business-intelligence-csdlbi"></a>Annotations CSDL pour Business Intelligence (CSDLBI)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -48,7 +47,7 @@ ms.lasthandoff: 04/03/2018
 ### <a name="csdlbi-versions"></a>Versions de CSDLBI  
  La spécification CSDL d'origine (Entity Data Framework) prévoit la plupart des entités et des propriétés exigées pour prendre en charge la modélisation. Les annotations BI prennent en charge les spécifications particulières des modèles tabulaires, les propriétés de création de rapports requises pour les clients, tels que [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)], et les métadonnées supplémentaires requises pour les modèles multidimensionnels. Cette section décrit les mises à jour dans chaque version.  
   
- **CSDLBI 1.0**  
+ **CSDLBI VERSION 1.0**  
   
  Le jeu initial d'ajouts au schéma CSDL pour prendre en charge les modèles tabulaires [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] contenait des annotations afin de prendre en charge la modélisation des données, les calculs personnalisés et la présentation avancée :  
   
@@ -58,7 +57,7 @@ ms.lasthandoff: 04/03/2018
   
 -   Propriétés de visualisation et de navigation. Par exemple, des propriétés ont été ajoutées pour prendre en charge les champs de tri personnalisé, les images par défaut et  
   
- **CSDLBI 1.1**  
+ **1.1 DE CSDLBI**  
   
  Cette version du schéma CSDLBI inclut des ajouts pour la prise en charge des bases de données multidimensionnelles (telles que les cubes OLAP). Les nouveaux éléments et propriétés sont les suivants :  
   

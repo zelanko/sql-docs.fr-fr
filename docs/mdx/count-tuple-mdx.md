@@ -22,12 +22,11 @@ caps.latest.revision: 31
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 76bea834dccee153edf96c78175f290a4e5551c5
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 2bb8a346570d52cbea9c027bf4b9b12222195171
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="count-tuple-mdx"></a>Count (Tuple) (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -45,10 +44,10 @@ Tuple_Expression.Count
  *Tuple_Expression*  
  Expression MDX (Multidimensional Expressions) valide qui retourne un tuple.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Retourne le nombre de dimensions d'un tuple.  
   
-## <a name="example"></a> Exemple  
+## <a name="example"></a>Exemple  
  La mesure calculée dans la requête suivante retourne la valeur 2, qui est le nombre de hiérarchies présentes dans le tuple `([Measures].[Internet Sales Amount], [Date].[Calendar].[Calendar Year].&[2001])` :  
   
 ```  
@@ -59,9 +58,9 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Nombre &#40; Dimension &#41; &#40; MDX &#41;](../mdx/count-dimension-mdx.md)   
- [Nombre &#40; Niveaux de hiérarchie &#41; &#40; MDX &#41;](../mdx/count-hierarchy-levels-mdx.md)   
- [Nombre &#40; Définir le &#41; &#40; MDX &#41;](../mdx/count-set-mdx.md)   
- [Référence des fonctions MDX &#40; MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Nombre &#40;Dimension&#41; &#40;MDX&#41;](../mdx/count-dimension-mdx.md)   
+ [Nombre &#40;des niveaux de hiérarchie&#41; &#40;MDX&#41;](../mdx/count-hierarchy-levels-mdx.md)   
+ [Nombre & #40 ; Définir le & #41 ; & #40 ; MDX & #41 ;](../mdx/count-set-mdx.md)   
+ [Référence des fonctions MDX & #40 ; MDX & #41 ;](../mdx/mdx-function-reference-mdx.md)  
   
   

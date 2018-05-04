@@ -27,15 +27,15 @@ caps.latest.revision: 34
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 1f656318799a68acf482d935620d34b58f1efbe4
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: d431e1f1c73b9224f3e8803fd0efcf70b49b0a4c
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="trimming-element-assl"></a>Élément Trimming (ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Spécifie comment les données à partir de la source de données sont tronquées.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Spécifie comment les données de la source de données sont tronquées.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -54,19 +54,19 @@ ms.lasthandoff: 01/08/2018
 |--------------------|-----------------|  
 |Type de données et longueur|Chaîne (énumération)|  
 |Valeur par défaut|*Oui*|  
-|Cardinalité|0-1 : élément facultatif qui peut apparaître une fois et une seule.|  
+|Cardinalité|0-1: élément facultatif qui peut apparaître une fois et une seule.|  
   
 ## <a name="element-relationships"></a>Relations entre les éléments  
   
 |Relation|Élément|  
 |------------------|-------------|  
 |Élément parent|[DataItem](../../../analysis-services/scripting/data-type/dataitem-data-type-assl.md)|  
-|Éléments enfants|None|  
+|Éléments enfants|Aucune|  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  La valeur de cet élément est limitée à l'une des chaînes répertoriées dans le tableau suivant.  
   
-|Valeur|Description|  
+|Valeur| Description|  
 |-----------|-----------------|  
 |*Gauche*|Les données sont tronquées à gauche.|  
 |*Oui*|Les données sont tronquées à droite.|  
@@ -78,6 +78,6 @@ ms.lasthandoff: 01/08/2018
  L’élément qui correspond au parent de **Trimming** dans l’objet d’objets AMO (Analysis Management) est modèle <xref:Microsoft.AnalysisServices.DataItem>.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Propriétés &#40; ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
+ [Propriétés & #40 ; ASSL & #41 ;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   

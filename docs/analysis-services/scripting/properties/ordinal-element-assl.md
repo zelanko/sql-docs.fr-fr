@@ -27,15 +27,15 @@ caps.latest.revision: 31
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 37af18b1a261e02460cf692ee6e147875d314b89
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: a6523c00ed000d1e1ce1ca9f76c3a31a001bc2c5
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ordinal-element-assl"></a>Élément Ordinal (ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Indique le nombre ordinal auquel s’associer dans des collections, telles que des clés et des traductions.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Indique le nombre ordinal auquel s'associer dans des collections, telles que des clés et des traductions.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -54,21 +54,21 @@ ms.lasthandoff: 01/08/2018
 |--------------------|-----------------|  
 |Type de données et longueur|Entier|  
 |Valeur par défaut|**0**|  
-|Cardinalité|0-1 : élément facultatif qui peut apparaître une fois et une seule.|  
+|Cardinalité|0-1: élément facultatif qui peut apparaître une fois et une seule.|  
   
 ## <a name="element-relationships"></a>Relations entre les éléments  
   
 |Relation|Élément|  
 |------------------|-------------|  
 |Éléments parents|[AttributeBinding](../../../analysis-services/scripting/data-type/attributebinding-data-type-assl.md), [CubeAttributeBinding](../../../analysis-services/scripting/data-type/cubeattributebinding-data-type-assl.md)|  
-|Éléments enfants|None|  
+|Éléments enfants|Aucune|  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  **AttributeBinding** et **CubeAttributeBinding** éléments dans lesquels la [Type](../../../analysis-services/scripting/properties/type-element-binding-assl.md) propriété a la valeur *clé* ou *traduction* peut être lié à un attribut qui est à son tour lié à une collection de colonnes dans la vue de source de données. La valeur de l'élément **Ordinal** détermine à quelle colonne l'élément **AttributeBinding** ou **CubeAttributeBinding** se rapporte dans cette collection.  
   
  Les éléments qui correspondent aux parents de **Ordinal** dans le modèle d’objet objets AMO (Analysis Management) sont <xref:Microsoft.AnalysisServices.AttributeBinding> et <xref:Microsoft.AnalysisServices.CubeAttributeBinding>.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Propriétés &#40; ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
+ [Propriétés & #40 ; ASSL & #41 ;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   

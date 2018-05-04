@@ -22,12 +22,11 @@ caps.latest.revision: 37
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 0811bbd1e0f3cf81ebe87ff200906e2489036092
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 2628ef6a691772a4fc085130e1d1482b2bd4cb2e
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="drilldownlevelbottom-mdx"></a>DrilldownLevelBottom (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -44,26 +43,26 @@ DrilldownLevelBottom(Set_Expression, Count [,[<Level_Expression>] [,[<Numeric_Ex
  *Set_Expression*  
  Une expression MDX (Multidimensional Expressions) valide qui retourne un jeu.  
   
- *Nombre*  
+ *Compter*  
  Expression numérique valide qui précise le nombre de tuples à retourner.  
   
  *Level_Expression*  
  Expression MDX (Multidimensional Expressions) valide qui retourne un niveau.  
   
  *Numeric_expression*  
- Facultatif. Expression numérique valide qui correspond généralement à une expression MDX (Multidimensional Expressions) des coordonnées des cellules qui retournent un nombre.  
+ Ce paramètre est facultatif. Expression numérique valide qui correspond généralement à une expression MDX (Multidimensional Expressions) des coordonnées des cellules qui retournent un nombre.  
   
  *Include_Calc_Members*  
- Facultatif. Un mot clé qui ajoute des membres calculés aux résultats de l’exploration vers le bas.  
+ Ce paramètre est facultatif. Un mot clé qui ajoute des membres calculés aux résultats de l’exploration vers le bas.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Si une expression numérique est spécifiée, la **DrilldownLevelBottom** fonction trie, par ordre croissant, les enfants de chaque membre dans le jeu spécifié, en fonction de la valeur spécifiée, telle qu’évaluée sur le jeu de membres enfants. Si une expression numérique n'est pas spécifiée, la fonction trie, dans l'ordre croissant, les enfants de chaque membre dans le jeu spécifié, d'après les valeurs des cellules représentées par le jeu de membres enfants, comme déterminé par le contexte de requête ; ce comportement est semblable aux fonctions BottomCount et Tail (MDX) qui retournent un jeu de membres dans l'ordre naturel, sans tri.  
   
  Après le tri, le **DrilldownLevelBottom** fonction retourne un jeu qui contient les membres parents et le nombre de membres enfants spécifiés dans *nombre*, avec la valeur la plus faible.  
   
  Le **DrilldownLevelBottom** fonction est similaire à la [DrilldownLevel](../mdx/drilldownlevel-mdx.md) (fonction), mais au lieu d’inclure tous les enfants de chaque membre au niveau spécifié, le **DrilldownLevelBottom** fonction retourne le nombre le plus bas des membres enfants.  
   
- Interrogez la propriété XMLA MdpropMdxDrillFunctions vous permet de vérifier le niveau de prise en charge par le serveur pour les fonctions d’extraction ; consultez [pris en charge les propriétés XMLA &#40; XMLA &#41; ](../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md) pour plus d’informations.  
+ Interrogez la propriété XMLA MdpropMdxDrillFunctions vous permet de vérifier le niveau de prise en charge par le serveur pour les fonctions d’extraction ; consultez [pris en charge les propriétés XMLA &#40;XMLA&#41; ](../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md) pour plus d’informations.  
   
 ## <a name="examples"></a>Exemples  
  L'exemple ci-dessous retourne les trois enfants inférieurs du niveau Product Category en fonction de la mesure par défaut. Dans l'exemple de cube Adventure Works, les trois derniers enfants pour Accessories sont Tires and Tubes, Pumps et Panniers. Dans Management Studio, dans la fenêtre de requête MDX, vous pouvez accéder à Products | Product Categories | Members | All Products | Accessories pour afficher la liste complète. Vous pouvez augmenter l'argument Count pour retourner davantage de membres.  
@@ -95,7 +94,7 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [DrilldownLevel &#40; MDX &#41;](../mdx/drilldownlevel-mdx.md)   
- [Référence des fonctions MDX &#40; MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
+ [DrilldownLevel & #40 ; MDX & #41 ;](../mdx/drilldownlevel-mdx.md)   
+ [Référence des fonctions MDX & #40 ; MDX & #41 ;](../mdx/mdx-function-reference-mdx.md)  
   
   

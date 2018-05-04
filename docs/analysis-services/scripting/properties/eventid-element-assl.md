@@ -27,15 +27,15 @@ caps.latest.revision: 37
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: b5d4f1dea61c45f87225e93c4f70ed3fa1bccb63
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: a9d4d2b5469817e98beb3979df99396ea047c0c2
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="eventid-element-assl"></a>Élément EventID (ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Identifie de façon unique un [événement](../../../analysis-services/scripting/objects/event-element-assl.md) élément à capturer dans le cadre d’un [Trace](../../../analysis-services/scripting/objects/trace-element-assl.md) élément.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Identifie de façon unique un [événement](../../../analysis-services/scripting/objects/event-element-assl.md) élément à capturer dans le cadre d’un [Trace](../../../analysis-services/scripting/objects/trace-element-assl.md) élément.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -52,8 +52,8 @@ ms.lasthandoff: 01/08/2018
   
 |Caractéristique|Description|  
 |--------------------|-----------------|  
-|Type de données et longueur|String|  
-|Valeur par défaut|None|  
+|Type de données et longueur|Chaîne|  
+|Valeur par défaut|Aucune|  
 |Cardinalité|1-1 : élément obligatoire qui peut apparaître une fois et une seule.|  
   
 ## <a name="element-relationships"></a>Relations entre les éléments  
@@ -61,13 +61,13 @@ ms.lasthandoff: 01/08/2018
 |Relation|Élément|  
 |------------------|-------------|  
 |Éléments parents|[Événement](../../../analysis-services/scripting/objects/event-element-assl.md)|  
-|Éléments enfants|None|  
+|Éléments enfants|Aucune|  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  L’élément qui correspond au parent de **EventID** dans l’objet d’objets AMO (Analysis Management) est modèle <xref:Microsoft.AnalysisServices.TraceEvent>.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Élément Events &#40; ASSL &#41;](../../../analysis-services/scripting/collections/events-element-assl.md)   
- [Propriétés &#40; ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
+ [Élément Events &#40;ASSL&#41;](../../../analysis-services/scripting/collections/events-element-assl.md)   
+ [Propriétés & #40 ; ASSL & #41 ;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   

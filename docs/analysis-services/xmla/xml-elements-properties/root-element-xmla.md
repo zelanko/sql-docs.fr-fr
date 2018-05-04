@@ -29,15 +29,15 @@ caps.latest.revision: 15
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 402d03a39b1eb4711b338c8e3bc0ff29de11437a
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: cc8dfbd3309d19fb54bc1246cd7430863268686c
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="root-element-xmla"></a>Élément racine (Root) (XMLA)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]Contient un résultat retourné par la [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md) méthode ou une commande XML for Analysis (XMLA) exécutée à l’aide de la [Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md) (méthode).  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
+  Contient un résultat retourné par la [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md) méthode ou une commande XML for Analysis (XMLA) exécutée à l’aide de la [Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md) (méthode).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -59,7 +59,7 @@ ms.lasthandoff: 01/08/2018
 |Caractéristique|Description|  
 |--------------------|-----------------|  
 |Type de données et longueur|Consultez le tableau ci-dessous.|  
-|Valeur par défaut|None|  
+|Valeur par défaut|Aucune|  
 |Cardinalité|1-n : élément requis pouvant apparaître plusieurs fois.|  
   
 |Ancêtre|Type de données|  
@@ -72,12 +72,12 @@ ms.lasthandoff: 01/08/2018
 |Relation|Élément|  
 |------------------|-------------|  
 |Éléments parents|[résultats](../../../analysis-services/xmla/xml-elements-properties/results-element-xmla.md), [de retour](../../../analysis-services/xmla/xml-elements-properties/return-element-xmla.md)|  
-|Éléments enfants|None|  
+|Éléments enfants|Aucune|  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Le **racine** élément contient les informations retournées dans le le [DiscoverResponse](../../../analysis-services/xmla/xml-elements-objects-discoverresponse.md) élément retourné par un seul **Discover** appel de méthode, ou dans le [ExecuteResponse](../../../analysis-services/xmla/xml-elements-objects-executeresponse.md) élément retourné par une commande XMLA unique exécutée par un seul **Execute** appel de méthode.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Propriétés &#40; XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+ [Propriétés & #40 ; XMLA & #41 ;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

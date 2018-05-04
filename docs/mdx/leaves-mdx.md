@@ -22,12 +22,11 @@ caps.latest.revision: 32
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: e8038145cf8587c6c0d5a86461302fd7075bcee9
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: c9ac580c71d1c82876a41953d6f8b5411dc7dd55
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="leaves-mdx"></a>Leaves (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -45,7 +44,7 @@ Leaves( [ Dimension_expression ] )
  *Dimension_Expression*  
  Expression MDX (Multidimensional Expressions) valide qui retourne une dimension.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Les membres feuilles sont des tuples formés par la jointure croisée du niveau le plus bas de toutes les hiérarchies d'attribut. Les membres calculés sont exclus.  
   
 -   Si un nom de dimension est spécifié, le **laisse** fonction retourne un jeu qui contient les membres feuille de l’attribut clé pour la dimension spécifiée.  
@@ -61,6 +60,6 @@ Leaves( [ Dimension_expression ] )
     >  Une erreur est générée si tous les attributs ne présentent pas la même granularité dans les groupes de mesures de l'étendue actuelle.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Référence des fonctions MDX &#40; MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Référence des fonctions MDX & #40 ; MDX & #41 ;](../mdx/mdx-function-reference-mdx.md)  
   
   

@@ -23,20 +23,20 @@ caps.latest.revision: 31
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: bea7c78fddb8aa56f1ccae47b9a3964d81e1d115
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: caf9cc5b0c178c70889be608d4622b4469f798c1
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="dbschemaprovidertypes-rowset"></a>Ensemble de lignes de schéma DBSCHEMA_PROVIDER_TYPES
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Identifie les types de données (base) pris en charge par le fournisseur de données.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Identifie les types de données (de base) pris en charge par le fournisseur de données.  
   
 ## <a name="rowset-columns"></a>Colonnes de l'ensemble de lignes  
  L'ensemble de lignes **DBSCHEMA_PROVIDER_TYPES** contient les colonnes suivantes.  
   
-|Nom de colonne|Indicateur de type|Description|  
+|Nom de colonne|Indicateur de type| Description|  
 |-----------------|--------------------|-----------------|  
 |**TYPE_NAME**|**DBTYPE_WSTR**|Nom du type de données spécifique au fournisseur.|  
 |**DATA_TYPE**|**DBTYPE_UI2**|Indicateur du type de données.|  
@@ -71,6 +71,6 @@ ms.lasthandoff: 01/08/2018
 |**BEST_MATCH**|**DBTYPE_BOOL**|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Ensembles de lignes de schéma OLE DB](../../../analysis-services/schema-rowsets/ole-db/ole-db-schema-rowsets.md)  
+ [Ensembles de lignes de schéma OLE DB](../../../analysis-services/schema-rowsets/ole-db/ole-db-schema-rowsets.md)  
   
   

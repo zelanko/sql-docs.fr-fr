@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - connecting to driver [ODBC], selecting driver
 - connecting to data source [ODBC], selecting data source
@@ -22,12 +22,11 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 6e2bc882cce58654e45f803972820e2ef6615783
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 6ea84e234291056901c9d759e9aa206301a24641
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="choosing-a-data-source-or-driver"></a>En choisissant des données Source ou pilote
 La source de données ou le pilote utilisé par une application est parfois codé en dur dans l’application. Par exemple, une application personnalisée écrite par un service MIS à transférer des données à partir d’une source de données à l’autre contient les noms de ces sources de données, l’application ne fonctionnerait pas avec d’autres sources de données. Un autre exemple est une application verticale, tel que celui utilisé pour l’entrée de commande. Une telle application toujours utilise la même source de données, qui dispose d’un schéma prédéfini connu par l’application.  

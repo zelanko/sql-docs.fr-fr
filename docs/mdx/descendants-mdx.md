@@ -22,12 +22,11 @@ caps.latest.revision: 38
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: On Demand
-ms.openlocfilehash: a641da0586093194c2ae64614a7cdf845827001f
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 200fd06f596c02056ae5b55a5f20ad55ed4eb9a7
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="descendants-mdx"></a>Descendants (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -62,13 +61,13 @@ Descendants(Set_Expression [ , Distance [ ,Desc_Flag ] ] )
  *Level_Expression*  
  Expression MDX (Multidimensional Expressions) valide qui retourne un niveau.  
   
- *Distance*  
+ *distance*  
  Expression numérique valide qui spécifie la distance depuis le membre spécifié.  
   
  *Desc_Flag*  
  Expression de chaîne valide qui précise un indicateur de description qui identifie de possibles jeux de descendants.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Si un niveau est spécifié, le **Descendants** fonction retourne un jeu qui contient les descendants du membre spécifié ou les membres du jeu spécifié, à un niveau spécifié, éventuellement modifié par un indicateur spécifié dans *Desc_Flag*.  
   
  Si *Distance* est spécifié, le **Descendants** fonction retourne un jeu qui contient les descendants du membre spécifié ou les membres du jeu spécifié qui sont le nombre de niveaux dans la hiérarchie du membre spécifié, éventuellement modifié par un indicateur spécifié dans *Desc_Flag*. En règle générale, cette fonction est utilisée avec l'argument Distance pour le travail avec des hiérarchies irrégulières. Si la distance précisée est zéro (0), la fonction retourne un jeu composé uniquement du membre ou du jeu spécifié.  
@@ -105,7 +104,7 @@ Descendants(Set_Expression [ , Distance [ ,Desc_Flag ] ] )
   
  En modifiant la valeur de l'indicateur de description, vous pouvez inclure ou exclure des descendants au niveau spécifié ou à la distance spécifiée, les enfants avant ou après la distance ou le niveau spécifié (jusqu'au nœud feuille), ainsi que les enfants de la feuille quel que soit le niveau spécifié ou la distance spécifiée. Le tableau suivant décrit les indicateurs autorisés dans les *Desc_Flag* argument.  
   
-|Indicateur|Description|  
+|Indicateur| Description|  
 |----------|-----------------|  
 |SELF|Retourne uniquement les membres descendants du niveau spécifié ou au niveau de la distance spécifiée. La fonction englobe le membre spécifié si le niveau spécifié correspond au niveau du membre spécifié.|  
 |AFTER|Retourne les membres descendants de tous les niveaux subordonnés au niveau ou à la distance spécifiée.|  
@@ -176,6 +175,6 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Référence des fonctions MDX &#40; MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Référence des fonctions MDX & #40 ; MDX & #41 ;](../mdx/mdx-function-reference-mdx.md)  
   
   

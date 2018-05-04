@@ -29,15 +29,15 @@ caps.latest.revision: 14
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 47425fd75c42d70ad98172eee2070bdcb9b2db45
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 091f250f4a9009337f23ebcfa19bd0ee2450fe5d
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="subscribe-element-xmla"></a>Élément Subscribe (XMLA)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]S’abonne à une trace et retourne un ensemble de lignes qui contient les événements de trace d’un [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] instance.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
+  S’abonne à une trace et retourne un ensemble de lignes qui contient les événements de trace d’un [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] instance.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -54,18 +54,18 @@ ms.lasthandoff: 01/08/2018
   
 |Caractéristique|Description|  
 |--------------------|-----------------|  
-|Type de données et longueur|None|  
-|Valeur par défaut|None|  
+|Type de données et longueur|Aucune|  
+|Valeur par défaut|Aucune|  
 |Cardinalité|0-n : élément facultatif pouvant apparaître plusieurs fois.|  
   
 ## <a name="element-relationships"></a>Relations entre les éléments  
   
 |Relation|Élément|  
 |------------------|-------------|  
-|Éléments parents|[Commandee](../../../analysis-services/xmla/xml-elements-properties/command-element-xmla.md)|  
+|Éléments parents|[Command](../../../analysis-services/xmla/xml-elements-properties/command-element-xmla.md)|  
 |Éléments enfants|[Objet](../../../analysis-services/xmla/xml-elements-properties/object-element-xmla.md)|  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Le **s’abonner** commande s’abonne à et flux de sauvegarder un ensemble de lignes à partir d’une trace spécifiée sur un [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] instance. Si un objet autre qu'une trace est spécifié dans l'élément **Object** , une erreur survient.  
   
  Si le **objet** élément n’est pas spécifié, une trace de session est définie et l’abonné sur le [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] instance. La trace de session retourne un ensemble fixe d'événements de trace à partir de la session en cours.  
@@ -73,6 +73,6 @@ ms.lasthandoff: 01/08/2018
  Le flux de l’ensemble de lignes retourné par cette commande est terminé si l’application cliente ferme la connexion à la [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] instance, ou si la session sur laquelle le **s’abonner** commande est exécutée est terminée.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Commandes &#40; XMLA &#41;](../../../analysis-services/xmla/xml-elements-commands/xml-elements-commands.md)  
+ [Commandes & #40 ; XMLA & #41 ;](../../../analysis-services/xmla/xml-elements-commands/xml-elements-commands.md)  
   
   

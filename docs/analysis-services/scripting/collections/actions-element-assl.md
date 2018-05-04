@@ -27,15 +27,15 @@ caps.latest.revision: 40
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: ead5a2c8a921e0c65b60f7d9c243bc3814397a37
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 8a1409a997b6d5a3285d54d5d364e2e40cc06100
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="actions-element-assl"></a>Élément Actions (ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Contient la collection d’actions pour un [Cube](../../../analysis-services/scripting/objects/cube-element-assl.md) ou [Perspective](../../../analysis-services/scripting/objects/perspective-element-assl.md) élément.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Contient la collection d'actions pour un élément [Cube](../../../analysis-services/scripting/objects/cube-element-assl.md) ou [Perspective](../../../analysis-services/scripting/objects/perspective-element-assl.md) .  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -60,7 +60,7 @@ ms.lasthandoff: 01/08/2018
 |--------------------|-----------------|  
 |Type de données et longueur|Aucun (collection)|  
 |Valeur par défaut|Aucun (collection)|  
-|Cardinalité|0-1 : élément facultatif qui peut apparaître une fois et une seule.|  
+|Cardinalité|0-1: élément facultatif qui peut apparaître une fois et une seule.|  
   
 ## <a name="element-relationships"></a>Relations entre les éléments  
   
@@ -74,10 +74,10 @@ ms.lasthandoff: 01/08/2018
 |[Cube](../../../analysis-services/scripting/objects/cube-element-assl.md)|[DrillThroughAction](../../../analysis-services/scripting/data-type/drillthroughaction-data-type-assl.md), [ReportAction](../../../analysis-services/scripting/data-type/reportaction-data-type-assl.md), [StandardAction](../../../analysis-services/scripting/data-type/standardaction-data-type-assl.md)|  
 |[Point de vue](../../../analysis-services/scripting/objects/perspective-element-assl.md)|[PerspectiveAction](../../../analysis-services/scripting/data-type/perspectiveaction-data-type-assl.md)|  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Les éléments correspondants dans le modèle objet AMO (Analysis Management Objects) sont <xref:Microsoft.AnalysisServices.ActionCollection> et <xref:Microsoft.AnalysisServices.PerspectiveActionCollection>.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Collections de &#40; ASSL &#41;](../../../analysis-services/scripting/collections/collections-assl.md)  
+ [Collections de & #40 ; ASSL & #41 ;](../../../analysis-services/scripting/collections/collections-assl.md)  
   
   

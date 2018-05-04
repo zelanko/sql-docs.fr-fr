@@ -22,12 +22,11 @@ caps.latest.revision: 34
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: aaeb95f70c9afc6872bd56df494a8eba88f98f91
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: b8ef0b3f0ba361e368695b31d15b26cd013ed6e8
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="predictsequence-dmx"></a>PredictSequence (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -46,10 +45,10 @@ PredictSequence(\<table column reference, n-start, n-end>)
 ## <a name="return-type"></a>Type de retour  
  A \<expression de table >.  
   
-## <a name="remarks"></a>Notes   
- Si le  *n*  paramètre est spécifié, il retourne les valeurs suivantes :  
+## <a name="remarks"></a>Notes  
+ Si le *n* paramètre est spécifié, il retourne les valeurs suivantes :  
   
--   Si  *n*  est supérieure à zéro, les valeurs de séquence le plus probables dans la prochaine  *n*  étapes.  
+-   Si *n* est supérieure à zéro, les valeurs de séquence le plus probables dans la prochaine *n* étapes.  
   
 -   Si les deux *n-start* et *n-end* sont spécifiés, les valeurs de séquence à partir de *n-start* à *n-fin*.  
   
@@ -64,8 +63,8 @@ From
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Les Extensions d’exploration de données &#40; DMX &#41; Référence de fonction](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [Fonctions &#40; DMX &#41;](../dmx/functions-dmx.md)   
- [Fonctions de prédiction générales &#40; DMX &#41;](../dmx/general-prediction-functions-dmx.md)  
+ [Data Mining Extensions &#40;DMX&#41; référence de fonction](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [Fonctions &#40;DMX&#41;](../dmx/functions-dmx.md)   
+ [Fonctions de prédiction générales &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)  
   
   

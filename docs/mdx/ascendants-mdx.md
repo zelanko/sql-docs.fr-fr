@@ -22,12 +22,11 @@ caps.latest.revision: 39
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: a8f2d48317bb6cb0fb5a066348ae1beed8a0f35f
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 7eb0bff443065cff7a279320d85d848ae303f5dd
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ascendants-mdx"></a>Ascendants (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -45,7 +44,7 @@ Ascendants(Member_Expression)
  *Argument*  
  Expression MDX (Multidimensional Expressions) valide qui retourne un membre.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Le **Ascendants** fonction retourne tous les ancêtres d’un membre du membre lui-même jusqu’au haut de la hiérarchie du membre ; plus spécifiquement, il effectue une traversée post-ordre de la hiérarchie du membre spécifié, et puis retourne tous les membres ascendants associés au membre, notamment lui-même, dans un jeu. Ceci est le contraire de la [ancêtre](../mdx/ancestor-mdx.md) fonction, qui retourne un membre ascendant spécifique, ou ancêtre, à un niveau spécifique.  
   
 ## <a name="examples"></a>Exemples  
@@ -65,6 +64,6 @@ FROM
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Référence des fonctions MDX &#40; MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Référence des fonctions MDX & #40 ; MDX & #41 ;](../mdx/mdx-function-reference-mdx.md)  
   
   

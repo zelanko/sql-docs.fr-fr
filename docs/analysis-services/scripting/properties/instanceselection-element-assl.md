@@ -25,15 +25,15 @@ caps.latest.revision: 14
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: db8918b9f172dc972eb59474c3bc1614d5251c02
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 258c6c5fd4df4ea38b2fb2a41569a2793b1ac48e
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="instanceselection-element-assl"></a>Élément InstanceSelection (ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Fournit un indicateur aux applications clientes qui suggère le mode d’une liste d’éléments doit être affiché, en fonction du nombre attendu d’éléments dans la liste.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Fournit un indicateur aux applications clientes qui suggère le mode d'affichage d'une liste d'éléments d'après le nombre d'éléments attendus dans la liste.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -52,16 +52,16 @@ ms.lasthandoff: 01/08/2018
 |--------------------|-----------------|  
 |Type de données et longueur|Chaîne (énumération)|  
 |Valeur par défaut|*Aucun*|  
-|Cardinalité|0-1 : élément facultatif qui peut apparaître une fois et une seule.|  
+|Cardinalité|0-1: élément facultatif qui peut apparaître une fois et une seule.|  
   
 ## <a name="element-relationships"></a>Relations entre les éléments  
   
 |Relation|Élément|  
 |------------------|-------------|  
 |Élément parent|[DimensionAttribute](../../../analysis-services/scripting/data-type/dimensionattribute-data-type-assl.md)|  
-|Éléments enfants|None|  
+|Éléments enfants|Aucune|  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  La valeur de cet élément est limitée à l'une des chaînes suivantes :  
   
 |Valeur|Description|  
@@ -75,6 +75,6 @@ ms.lasthandoff: 01/08/2018
  L’énumération qui correspond aux valeurs autorisées pour **InstanceSelection** dans l’objet d’objets AMO (Analysis Management) est modèle <xref:Microsoft.AnalysisServices.InstanceSelection>.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Propriétés &#40; ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
+ [Propriétés & #40 ; ASSL & #41 ;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   

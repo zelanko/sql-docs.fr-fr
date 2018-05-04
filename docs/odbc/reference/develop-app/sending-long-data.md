@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - long data [ODBC]
 - sending long data [ODBC]
@@ -20,12 +20,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: e3dd5ec4edf58bb29772ca565109e5d9c79a3304
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 260c62d849f1b771b6d9fc40245fd1b0bfd2c5ae
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sending-long-data"></a>Envoi de données de type Long
 Définir des SGBD *données longues* sous forme de n’importe quel caractère ou binaire sur une certaine taille, tels que de 254 caractères. Il se peut qu’il ne soit pas possible de stocker la totalité d’un élément de données de type long dans la mémoire, telles que lorsque l’élément représente un document de texte long ou une image bitmap. Étant donné que ces données ne peut pas être stockées dans une seule mémoire tampon, la source de données l’envoie au pilote dans des parties avec **SQLPutData** lorsque l’instruction est exécutée. Paramètres pour lesquels les données sont envoyées au moment de l’exécution sont appelées *data-at-execution paramètres*.  

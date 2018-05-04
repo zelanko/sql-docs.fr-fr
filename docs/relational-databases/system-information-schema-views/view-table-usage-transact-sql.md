@@ -25,13 +25,12 @@ caps.latest.revision: 36
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 1b47f194bf1a8f231bb1b05168a9bcb8368368cc
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 91ef91b6c2012dedf23b42d98fa8b20d9078fb2b
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="viewtableusage-transact-sql"></a>VIEW_TABLE_USAGE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -42,11 +41,11 @@ ms.lasthandoff: 04/16/2018
   
 |Nom de colonne|Type de données| Description|  
 |-----------------|---------------|-----------------|  
-|**VIEW_CATALOG**|**nvarchar(**128**)**|Qualificateur de la vue.|  
-|**VIEW_SCHEMA**|**nvarchar(**128**)**|Nom du schéma qui contient la vue.<br /><br /> **\*\* Important \* \***  n’utilisez pas les vues INFORMATION_SCHEMA pour déterminer le schéma d’un objet. La seule méthode fiable pour rechercher le schéma d’un objet est d’interroger l’affichage catalogue sys.objects.|  
+|**VIEW_CATALOG**|**nvarchar(** 128 **)**|Qualificateur de la vue.|  
+|**VIEW_SCHEMA**|**nvarchar(** 128 **)**|Nom du schéma qui contient la vue.<br /><br /> **\*\* Important \* \***  n’utilisez pas les vues INFORMATION_SCHEMA pour déterminer le schéma d’un objet. La seule méthode fiable pour rechercher le schéma d’un objet est d’interroger l’affichage catalogue sys.objects.|  
 |**VIEW_NAME**|**sysname**|Nom de la vue.|  
-|**TABLE_CATALOG**|**nvarchar(**128**)**|Qualificateur de la table.|  
-|**TABLE_SCHEMA**|**nvarchar(**128**)**|Nom du schéma qui contient la table de base.<br /><br /> **\*\* Important \* \***  n’utilisez pas les vues INFORMATION_SCHEMA pour déterminer le schéma d’un objet. La seule méthode fiable pour rechercher le schéma d’un objet est d’interroger l’affichage catalogue sys.objects.|  
+|**TABLE_CATALOG**|**nvarchar(** 128 **)**|Qualificateur de la table.|  
+|**TABLE_SCHEMA**|**nvarchar(** 128 **)**|Nom du schéma qui contient la table de base.<br /><br /> **\*\* Important \* \***  n’utilisez pas les vues INFORMATION_SCHEMA pour déterminer le schéma d’un objet. La seule méthode fiable pour rechercher le schéma d’un objet est d’interroger l’affichage catalogue sys.objects.|  
 |**NOM_TABLE**|**sysname**|Table de base sur laquelle est basée la vue.|  
   
 ## <a name="see-also"></a>Voir aussi  

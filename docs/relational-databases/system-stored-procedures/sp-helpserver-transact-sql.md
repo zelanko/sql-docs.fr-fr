@@ -24,12 +24,11 @@ caps.latest.revision: 21
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 90a71416548b92480826c61979f98a3948527b4d
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 0b385ddfdb140f38614e4082b45ada8a8140e4f4
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sphelpserver-transact-sql"></a>sp_helpserver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +51,7 @@ sp_helpserver [ [ @server = ] 'server' ]
  Serveur sur lequel sont fournies les informations. Lorsque *server* n’est pas spécifié, les rapports sur tous les serveurs de **master.sys.servers**. *serveur* est **sysname**, avec NULL comme valeur par défaut.  
   
  [  **@optname =** ] **'***option***'**  
- Option qui décrit le serveur. *option* est **varchar (**35**)**, avec NULL comme valeur par défaut et doit être une des valeurs suivantes.  
+ Option qui décrit le serveur. *option* est **varchar (** 35 **)**, avec NULL comme valeur par défaut et doit être une des valeurs suivantes.  
   
 |Valeur| Description|  
 |-----------|-----------------|  
@@ -69,7 +68,7 @@ sp_helpserver [ [ @server = ] 'server' ]
 |**utiliser le classement distant**|Le classement d'une colonne distante est utilisé à la place de celui du serveur local.|  
   
  [  **@show_topology =** ] **'***afficher_la_topologie***'**  
- Relation entre le serveur spécifié et d'autres serveurs. *afficher_la_topologie* est **varchar (**1**)**, avec NULL comme valeur par défaut. Si *afficher_la_topologie* n’est pas égal à **t** ou a la valeur NULL, **sp_helpserver** renvoie les colonnes répertoriées dans la section des jeux de résultats. Si *afficher_la_topologie* est égal à **t**, en plus des colonnes répertoriées dans les jeux de résultats, **sp_helpserver** retourne également **topy** et **sp_helpserver** plus d’informations.  
+ Relation entre le serveur spécifié et d'autres serveurs. *afficher_la_topologie* est **varchar (** 1 **)**, avec NULL comme valeur par défaut. Si *afficher_la_topologie* n’est pas égal à **t** ou a la valeur NULL, **sp_helpserver** renvoie les colonnes répertoriées dans la section des jeux de résultats. Si *afficher_la_topologie* est égal à **t**, en plus des colonnes répertoriées dans les jeux de résultats, **sp_helpserver** retourne également **topy** et **sp_helpserver** plus d’informations.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  0 (succès) ou 1 (échec).  
@@ -80,8 +79,8 @@ sp_helpserver [ [ @server = ] 'server' ]
 |-----------------|---------------|-----------------|  
 |**nom**|**sysname**|Nom du serveur.|  
 |**network_name**|**sysname**|Nom réseau du serveur.|  
-|**status**|**varchar (**70**)**|État du serveur.|  
-|**id**|**char (**4**)**|Numéro d'identification du serveur.|  
+|**status**|**varchar (** 70 **)**|État du serveur.|  
+|**id**|**char (** 4 **)**|Numéro d'identification du serveur.|  
 |**collation_name**|**sysname**|Classement du serveur.|  
 |**connect_timeout**|**int**|Valeur du délai d'expiration de la connexion au serveur lié.|  
 |**query_timeout**|**int**|Valeur du délai d'expiration des requêtes sur le serveur lié.|  

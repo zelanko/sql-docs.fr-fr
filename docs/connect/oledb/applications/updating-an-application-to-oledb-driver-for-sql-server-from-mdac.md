@@ -22,12 +22,11 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: d7754d3db286c69245c626f9af018749c38592b5
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: a4b3f50c791d7cc53d3fa3161aaf8293abbd8b62
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="updating-an-application-to-ole-db-driver-for-sql-server-from-mdac"></a>Mise à jour d’une Application, le pilote OLE DB pour SQL Server à partir de MDAC
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -59,8 +58,6 @@ ms.lasthandoff: 04/16/2018
 -   Pilote OLE DB pour SQL Server ne contient pas d’intégration de XML. Pilote OLE DB pour SQL Server prend en charge SELECT... POUR les requêtes de XML, mais ne prend pas en charge d’autres fonctionnalités XML. Toutefois, le pilote OLE DB pour SQL Server prend en charge la **xml** type de données introduits dans [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)].  
 
 -   Pilote OLE DB pour SQL Server prend en charge la configuration des bibliothèques réseau côté client à l’aide des attributs de chaîne de connexion uniquement. Pour configurer une bibliothèque réseau de manière plus complète, vous devez utiliser le Gestionnaire de configuration [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
-
--   Pilote OLE DB pour SQL Server n’est pas compatible avec odbcbcp.dll. Pour établir un lien msoledbsql.lib afin d’utiliser le pilote OLE DB pour SQL Server, les applications doivent être recréées.    
 
 -   Chaînes de connexion MDAC autorisent une valeur booléenne (**true**) pour le **Trusted_Connection** (mot clé). Un pilote OLE DB pour la chaîne de connexion SQL Server doit utiliser **Oui** ou **aucun**.  
 

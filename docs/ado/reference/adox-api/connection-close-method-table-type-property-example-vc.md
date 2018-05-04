@@ -22,12 +22,11 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 83be87a8c4c0dc86867e624e1f31a00994a37971
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 2f280217d00753ffc3179d8149b1ec4c6957ef92
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="connection-close-method-table-type-property-example-vc"></a>Méthode de fermeture de connexion, exemple de propriété Table Type (VC ++)
 Définition de la [ActiveConnection](../../../ado/reference/adox-api/activeconnection-property-adox.md) propriété **rien** doit « fermer » le catalogue. Collections associées seront vides. Tous les objets qui ont été créés à partir des objets de schéma dans le catalogue sont orphelins. Toutes les propriétés sur les objets qui ont été mis en cache seront toujours disponibles, mais la tentative de lecture des propriétés qui requièrent un appel au fournisseur échouera.  

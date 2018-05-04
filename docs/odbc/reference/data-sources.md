@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data sources [ODBC]
 - data sources [ODBC], about data sources
@@ -20,11 +20,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b16699f67a74232730b2b96a2fdeeb4545d1fe46
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 13f39771ed48501e4ab90494bdff9d3253219bba
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="data-sources"></a>Sources de données
 A *source de données* est simplement la source de données. Il peut être un fichier, une base de données sur un SGBD, ou même un flux de données actives. Les données peuvent être situées sur le même ordinateur que le programme, ou sur un autre ordinateur situé sur un réseau. Par exemple, une source de données peut être un SGBD Oracle s’exécutant sur un système d’exploitation OS/2®, accédé par Novell® Netware ; un SGBD de DB2 d’IBM accessibles via une passerelle ; une collection de fichiers Xbase dans un répertoire du serveur ; ou un fichier de base de données Microsoft® Access local.  

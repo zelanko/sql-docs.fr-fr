@@ -1,31 +1,30 @@
 ---
-title: "Chargement de fichier et enregistrement de catégorie d’événement | Documents Microsoft"
-ms.custom: 
+title: Chargement de fichier et enregistrement de catégorie d’événement | Documents Microsoft
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 8051a7d8-d815-45e1-a764-a5992b07b4fd
-caps.latest.revision: 
+caps.latest.revision: 6
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 35e87b8be69035997a6ba466d45f426d6e236a9c
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: aa5b41ec41ba5671d4af48c6bf5fee219e73432f
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="file-load-and-save-event-category"></a>Chargement de fichier et enregistrement de catégorie d'événement
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-La catégorie d'événement File Load and Save contient les classes d'événements décrites dans le tableau ci-dessous.  
+  La catégorie d'événement File Load and Save contient les classes d'événements décrites dans le tableau ci-dessous.  
   
 |Classe d'événements|ID d'événement|Description|  
 |-----------------|--------------|-----------------|  

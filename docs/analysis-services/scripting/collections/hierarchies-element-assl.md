@@ -27,15 +27,15 @@ caps.latest.revision: 36
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 6ef6b15dfe25df203421c807806923947d121ff2
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 1fd20c0c3d9cd521e993bdae1b84ff8fcfb7c40b
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="hierarchies-element-assl"></a>Élément Hierarchies (ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Contient la collection de [hiérarchie](../../../analysis-services/scripting/objects/hierarchy-element-assl.md) éléments associés à l’élément parent.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Contient la collection d'éléments [Hierarchy](../../../analysis-services/scripting/objects/hierarchy-element-assl.md) associée à l'élément parent.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -58,9 +58,9 @@ ms.lasthandoff: 01/08/2018
   
 |Caractéristique|Description|  
 |--------------------|-----------------|  
-|Type de données et longueur|None|  
-|Valeur par défaut|None|  
-|Cardinalité|0-1 : élément facultatif qui peut apparaître une fois et une seule.|  
+|Type de données et longueur|Aucune|  
+|Valeur par défaut|Aucune|  
+|Cardinalité|0-1: élément facultatif qui peut apparaître une fois et une seule.|  
   
 ## <a name="element-relationships"></a>Relations entre les éléments  
   
@@ -71,14 +71,14 @@ ms.lasthandoff: 01/08/2018
   
 |Ancêtre ou parent|Élément enfant|  
 |------------------------|-------------------|  
-|[CubeDimension](../../../analysis-services/scripting/data-type/cubedimension-data-type-assl.md)|[Hiérarchie](../../../analysis-services/scripting/objects/hierarchy-element-assl.md) de type [CubeHierarchy](../../../analysis-services/scripting/data-type/cubehierarchy-data-type-assl.md)|  
-|[Dimension](../../../analysis-services/scripting/objects/dimension-element-assl.md)|[Hierarchy](../../../analysis-services/scripting/objects/hierarchy-element-assl.md)|  
-|[PerspectiveDimension](../../../analysis-services/scripting/data-type/perspectivedimension-data-type-assl.md)|[Hiérarchie](../../../analysis-services/scripting/objects/hierarchy-element-assl.md) de type [PerspectiveHierarchy](../../../analysis-services/scripting/data-type/perspectivehierarchy-data-type-assl.md)|  
+|[CubeDimension](../../../analysis-services/scripting/data-type/cubedimension-data-type-assl.md)|[Hierarchy](../../../analysis-services/scripting/objects/hierarchy-element-assl.md) de type [CubeHierarchy](../../../analysis-services/scripting/data-type/cubehierarchy-data-type-assl.md)|  
+|[Dimension](../../../analysis-services/scripting/objects/dimension-element-assl.md)|[Hiérarchie](../../../analysis-services/scripting/objects/hierarchy-element-assl.md)|  
+|[PerspectiveDimension](../../../analysis-services/scripting/data-type/perspectivedimension-data-type-assl.md)|[Hierarchy](../../../analysis-services/scripting/objects/hierarchy-element-assl.md) de type [PerspectiveHierarchy](../../../analysis-services/scripting/data-type/perspectivehierarchy-data-type-assl.md)|  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Les éléments correspondants dans le modèle objet AMO (Analysis Management Objects) sont <xref:Microsoft.AnalysisServices.HierarchyCollection>, <xref:Microsoft.AnalysisServices.CubeHierarchyCollection> et <xref:Microsoft.AnalysisServices.PerspectiveHierarchyCollection>.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Collections de &#40; ASSL &#41;](../../../analysis-services/scripting/collections/collections-assl.md)  
+ [Collections de & #40 ; ASSL & #41 ;](../../../analysis-services/scripting/collections/collections-assl.md)  
   
   

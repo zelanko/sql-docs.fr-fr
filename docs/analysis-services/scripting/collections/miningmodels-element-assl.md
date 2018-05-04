@@ -27,15 +27,15 @@ caps.latest.revision: 32
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 3a23d361c9b3b71a158f67944e3eb8797af03447
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 6f5f9b86895e91292b7dfbaf5c3b112cb85cc050
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="miningmodels-element-assl"></a>Élément MiningModels (ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Contient la collection de [MiningModel](../../../analysis-services/scripting/objects/miningmodel-element-assl.md) éléments associés à un [MiningStructure](../../../analysis-services/scripting/objects/miningstructure-element-assl.md).  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Contient la collection de [MiningModel](../../../analysis-services/scripting/objects/miningmodel-element-assl.md) éléments associés à un [MiningStructure](../../../analysis-services/scripting/objects/miningstructure-element-assl.md).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -54,9 +54,9 @@ ms.lasthandoff: 01/08/2018
   
 |Caractéristique|Description|  
 |--------------------|-----------------|  
-|Type de données et longueur|None|  
-|Valeur par défaut|None|  
-|Cardinalité|0-1 : élément facultatif qui peut apparaître une fois et une seule.|  
+|Type de données et longueur|Aucune|  
+|Valeur par défaut|Aucune|  
+|Cardinalité|0-1: élément facultatif qui peut apparaître une fois et une seule.|  
   
 ## <a name="element-relationships"></a>Relations entre les éléments  
   
@@ -65,10 +65,10 @@ ms.lasthandoff: 01/08/2018
 |Éléments parents|[MiningStructure](../../../analysis-services/scripting/objects/miningstructure-element-assl.md)|  
 |Éléments enfants|[MiningModel](../../../analysis-services/scripting/objects/miningmodel-element-assl.md)|  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  L’élément correspondant dans le modèle d’objet objets AMO (Analysis Management) est <xref:Microsoft.AnalysisServices.MiningModelCollection>.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Collections de &#40; ASSL &#41;](../../../analysis-services/scripting/collections/collections-assl.md)  
+ [Collections de & #40 ; ASSL & #41 ;](../../../analysis-services/scripting/collections/collections-assl.md)  
   
   

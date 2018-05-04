@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - ODBC desktop database drivers [ODBC]
 - Jet-based ODBC drivers [ODBC]
@@ -24,12 +24,11 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: d1d35ce2ec2ebd37cf9718a85e07e27ec1348ca2
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: c21c46ca8c9171ad33894f2f63c53a5009fe06c1
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="microsoft-odbc-desktop-database-drivers"></a>Pilotes de bureau de base de données ODBC de Microsoft
 ODBC est une API qui utilise le langage SQL (Structured Query) comme langage de base de données access. Vous pouvez accéder à un large éventail de systèmes de gestion de base de données (SGBD) avec le même code de source ODBC est directement incorporé dans le code source d’une application. Avec les pilotes de base de données Microsoft ODBC Desktop, un utilisateur d’une application ODBC peut ouvrir, la requête et mettre à jour une base de données de bureau via l’interface ODBC.  

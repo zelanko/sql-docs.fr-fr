@@ -29,15 +29,15 @@ caps.latest.revision: 12
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 765d4de799e1f54f8202351b010a891c3f88f961
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 080f9c7fca541a1dfc8f1f83f3b6555cbb904a7e
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="measuregroupid-element-xmla"></a>Élément MeasureGroupID (XMLA)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]Identifie un groupe de mesures dans un élément parent qui contient une référence d’objet.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
+  Identifie un groupe de mesures dans un élément parent qui contient une référence d'objet.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -54,8 +54,8 @@ ms.lasthandoff: 01/08/2018
   
 |Caractéristique|Description|  
 |--------------------|-----------------|  
-|Type de données et longueur|String|  
-|Valeur par défaut|None|  
+|Type de données et longueur|Chaîne|  
+|Valeur par défaut|Aucune|  
 |Cardinalité|Consultez le tableau ci-dessous.|  
   
 |Ancêtre ou parent|Cardinalité|  
@@ -68,11 +68,11 @@ ms.lasthandoff: 01/08/2018
 |Relation|Élément|  
 |------------------|-------------|  
 |Éléments parents|[Object](../../../analysis-services/xmla/xml-elements-properties/object-element-xmla.md), [ParentObject](../../../analysis-services/xmla/xml-elements-properties/parentobject-element-xmla.md), [Source](../../../analysis-services/xmla/xml-elements-properties/source-element-xmla.md), [Target](../../../analysis-services/xmla/xml-elements-properties/target-element-xmla.md)|  
-|Éléments enfants|None|  
+|Éléments enfants|Aucune|  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
   
 ## <a name="see-also"></a>Voir aussi  
- [Propriétés &#40; XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+ [Propriétés & #40 ; XMLA & #41 ;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

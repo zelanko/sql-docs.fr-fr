@@ -20,22 +20,22 @@ caps.latest.revision: 21
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 7f97592e50485bdd26c55eb62fb9b4649acb545b
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 47ae34ea04d85eab94bb9231c0ec1efc75853e7b
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="discovercommandobjects-rowset"></a>Ensemble de lignes DISCOVER_COMMAND_OBJECTS
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Fournit des informations d’activité et de l’utilisation des ressources sur les objets en cours d’utilisation par la commande référencée.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Fournit des informations sur l'activité et l'utilisation des ressources des objets actuellement utilisés par la commande référencée.  
   
  **S'applique à :** modèles tabulaires, modèles multidimensionnels  
   
 ## <a name="rowset-columns"></a>Colonnes de l'ensemble de lignes  
  L'ensemble de lignes **DISCOVER_COMMAND_OBJECTS** contient les colonnes suivantes.  
   
-|Nom de colonne|Indicateur de type|Restriction|Description|  
+|Nom de colonne|Indicateur de type|Restriction| Description|  
 |-----------------|--------------------|-----------------|-----------------|  
 |**SESSION_SPID**|**DBTYPE_I4**|Oui|ID de session.|  
 |**SESSION_ID**|**DBTYPE_WSTR**|Oui|Identificateur unique de session, tel qu'un GUID.|  
@@ -68,6 +68,6 @@ ms.lasthandoff: 01/08/2018
 |ADOMDNAME|CommandObjects|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Ensembles de lignes de schéma XML for Analysis](../../../analysis-services/schema-rowsets/xml/xml-for-analysis-schema-rowsets.md)  
+ [XML for Analysis ensembles de lignes de schéma](../../../analysis-services/schema-rowsets/xml/xml-for-analysis-schema-rowsets.md)  
   
   

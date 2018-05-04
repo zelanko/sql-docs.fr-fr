@@ -27,15 +27,15 @@ caps.latest.revision: 30
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 182efe91e661fe7b2fdd0bd85b70fe17cb32dcf1
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 5c9b0096331fb8834d241837a6a47ffa57344808
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="foreignkeycolumns-element-assl"></a>Élément ForeignKeyColumns (ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Contient la collection de colonnes qui identifient la jointure à la table parente pour une source de données relationnelle.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Contient la collection des colonnes qui identifient la jointure à la table parente pour une source de données relationnelle.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -54,9 +54,9 @@ ms.lasthandoff: 01/08/2018
   
 |Caractéristique|Description|  
 |--------------------|-----------------|  
-|Type de données et longueur|None|  
-|Valeur par défaut|None|  
-|Cardinalité|0-1 : élément facultatif qui peut apparaître une fois et une seule.|  
+|Type de données et longueur|Aucune|  
+|Valeur par défaut|Aucune|  
+|Cardinalité|0-1: élément facultatif qui peut apparaître une fois et une seule.|  
   
 ## <a name="element-relationships"></a>Relations entre les éléments  
   
@@ -66,7 +66,7 @@ ms.lasthandoff: 01/08/2018
 |Éléments enfants|[ForeignKeyColumn](../../../analysis-services/scripting/objects/foreignkeycolumn-element-assl.md) de type [DataItem](../../../analysis-services/scripting/data-type/dataitem-data-type-assl.md)|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Élément MiningStructure &#40; ASSL &#41;](../../../analysis-services/scripting/objects/miningstructure-element-assl.md)   
- [Collections de &#40; ASSL &#41;](../../../analysis-services/scripting/collections/collections-assl.md)  
+ [Élément MiningStructure &#40;ASSL&#41;](../../../analysis-services/scripting/objects/miningstructure-element-assl.md)   
+ [Collections de & #40 ; ASSL & #41 ;](../../../analysis-services/scripting/collections/collections-assl.md)  
   
   

@@ -24,12 +24,11 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 5e56a451d3d78cb4f4560e748b1c1db9b21fa467
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 330f06ef60f72d76f33ee439da0de7768b164dea
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="movefirst-movelast-movenext-and-moveprevious-methods-example-vc"></a>MoveFirst, MoveLast, MoveNext et MovePrevious, méthodes-exemple (VC ++)
 Cet exemple utilise le [MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md), [MoveLast](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md), [MoveNext](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md), et [MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md) méthodes pour déplacer le pointeur de l’enregistrement d’un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) selon la commande fournie. La fonction MoveAny est requise pour exécuter cet exemple.  

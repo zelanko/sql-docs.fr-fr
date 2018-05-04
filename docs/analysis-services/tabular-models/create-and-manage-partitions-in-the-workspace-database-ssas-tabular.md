@@ -1,33 +1,32 @@
 ---
-title: "Créer et gérer des Partitions dans la base de données de l’espace de travail | Documents Microsoft"
-ms.custom: 
+title: Créer et gérer des Partitions dans la base de données de l’espace de travail | Documents Microsoft
+ms.custom: ''
 ms.date: 02/22/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - sql13.asvs.bidtoolset.partitionmgr.f1
 ms.assetid: 0b3027d6-652b-4eb3-a197-58b25df65218
-caps.latest.revision: 
+caps.latest.revision: 15
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: bc056913fefe9b6847c0aad96957290a3e00d560
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
-ms.translationtype: MT
+ms.openlocfilehash: 416181764e71d923a55b6a6dbd0b1448dc619476
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-and-manage-partitions-in-the-workspace-database"></a>Créer et gérer des partitions dans la base de données de l’espace de travail 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-Les partitions divisent une table en sections logiques. Chaque partition peut ensuite être traitée (actualisée) indépendamment ou parallèlement à d'autres partitions. Les partitions peuvent améliorer l'évolutivité et la gestion de bases de données volumineuses. Par défaut, chaque table possède une partition qui inclut toutes les colonnes. Les tâches de cette rubrique décrivent comment créer et gérer des partitions dans la base de données model de l’espace de travail à l’aide de la boîte de dialogue **Gestionnaire de partition** dans [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]  
+  Les partitions divisent une table en sections logiques. Chaque partition peut ensuite être traitée (actualisée) indépendamment ou parallèlement à d'autres partitions. Les partitions peuvent améliorer l'évolutivité et la gestion de bases de données volumineuses. Par défaut, chaque table possède une partition qui inclut toutes les colonnes. Tâches de cette rubrique décrivent comment créer et gérer des partitions dans la base de données de modèle espace de travail à l’aide de la **le Gestionnaire de Partition** boîte de dialogue[!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]  
   
  Une fois que le modèle a été déployé sur une autre instance Analysis Services, les administrateurs de bases de données peuvent créer et gérer des partitions dans le modèle (déployé) à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Pour plus d’informations, consultez [créer et gérer des Partitions de modèles tabulaires](../../analysis-services/tabular-models/create-and-manage-tabular-model-partitions-ssas-tabular.md).  
   

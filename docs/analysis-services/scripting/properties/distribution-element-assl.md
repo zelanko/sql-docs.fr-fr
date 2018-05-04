@@ -27,15 +27,15 @@ caps.latest.revision: 34
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 532fc038be81ea0f993ca69ccb692ed847046c62
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 81d3a0c6680448674b65995739961c64c45ef0c3
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="distribution-element-assl"></a>Élément Distribution (ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Contient une valeur spécifique au fournisseur qui décrit les valeurs scalaires comment sont distribuées dans la colonne d’un [MiningStructure](../../../analysis-services/scripting/objects/miningstructure-element-assl.md) élément.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Contient une valeur spécifique au fournisseur qui décrit les valeurs scalaires comment sont distribuées dans la colonne d’un [MiningStructure](../../../analysis-services/scripting/objects/miningstructure-element-assl.md) élément.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -53,22 +53,22 @@ ms.lasthandoff: 01/08/2018
 |Caractéristique|Description|  
 |--------------------|-----------------|  
 |Type de données et longueur|Chaîne (énumération)|  
-|Valeur par défaut|None|  
-|Cardinalité|0-1 : élément facultatif qui peut apparaître une fois et une seule.|  
+|Valeur par défaut|Aucune|  
+|Cardinalité|0-1: élément facultatif qui peut apparaître une fois et une seule.|  
   
 ## <a name="element-relationships"></a>Relations entre les éléments  
   
 |Relation|Élément|  
 |------------------|-------------|  
 |Éléments parents|[ScalarMiningStructureColumn](../../../analysis-services/scripting/data-type/scalarminingstructurecolumn-data-type-assl.md)|  
-|Éléments enfants|None|  
+|Éléments enfants|Aucune|  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Les valeurs disponibles pour l'élément **Distribution** , telles que *Normal* ou *Uniform,* , sont spécifiques à chaque fournisseur de l'algorithme d'exploration de données. Pour plus d'informations sur les valeurs **Distribution** valides, consultez la documentation du fournisseur de l'algorithme d'exploration de données.  
   
  L’élément qui correspond au parent de **Distribution** dans l’objet d’objets AMO (Analysis Management) est modèle <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn>.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Propriétés &#40; ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
+ [Propriétés & #40 ; ASSL & #41 ;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   

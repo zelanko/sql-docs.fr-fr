@@ -30,15 +30,15 @@ caps.latest.revision: 21
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: d8e1f992cd7cf9a6aceb1490d78aa0fba49b7758
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: c12c3d3e4f64ee0be203d676753a00cc002cf11b
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="axes-element-xmla"></a>Élément Axes (XMLA)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]Contient une collection de [axe](../../../analysis-services/xmla/xml-elements-properties/axis-element-xmla.md) éléments représentant des données de l’axe contenues par un [racine](../../../analysis-services/xmla/xml-elements-properties/root-element-xmla.md) élément qui utilise le [MDDataSet](../../../analysis-services/xmla/xml-data-types/mddataset-data-type-xmla.md) type de données.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
+  Contient une collection de [axe](../../../analysis-services/xmla/xml-elements-properties/axis-element-xmla.md) éléments représentant des données de l’axe contenues par un [racine](../../../analysis-services/xmla/xml-elements-properties/root-element-xmla.md) élément qui utilise le [MDDataSet](../../../analysis-services/xmla/xml-data-types/mddataset-data-type-xmla.md) type de données.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -58,18 +58,18 @@ ms.lasthandoff: 01/08/2018
 |Caractéristique|Description|  
 |--------------------|-----------------|  
 |Type de données et longueur|Tout|  
-|Valeur par défaut|None|  
-|Cardinalité|1-1 : élément requis qui apparaît une fois et une seule.|  
+|Valeur par défaut|Aucune|  
+|Cardinalité|1-1 : élément requis qui apparaît une fois et une seule.|  
   
 ## <a name="element-relationships"></a>Relations entre les éléments  
   
 |Relation|Élément|  
 |------------------|-------------|  
 |Éléments parents|[racine](../../../analysis-services/xmla/xml-elements-properties/root-element-xmla.md)|  
-|Éléments enfants|[Axis](../../../analysis-services/xmla/xml-elements-properties/axis-element-xmla.md)|  
+|Éléments enfants|[Axe](../../../analysis-services/xmla/xml-elements-properties/axis-element-xmla.md)|  
   
-## <a name="remarks"></a>Notes   
- Sous le **Axes** élément, le **axe** éléments sont répertoriés dans l’ordre où ils apparaissent dans le jeu de données, en commençant à zéro. Le **AxisFormat** définition de la propriété XMLA détermine comment **axe** mise en forme des éléments. Pour plus d’informations sur la **AxisFormat** propriété, consultez [pris en charge les propriétés XMLA &#40; XMLA &#41; ](../../../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md).  
+## <a name="remarks"></a>Notes  
+ Sous le **Axes** élément, le **axe** éléments sont répertoriés dans l’ordre où ils apparaissent dans le jeu de données, en commençant à zéro. Le **AxisFormat** définition de la propriété XMLA détermine comment **axe** mise en forme des éléments. Pour plus d’informations sur la **AxisFormat** propriété, consultez [pris en charge les propriétés XMLA &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md).  
   
  Un axe représente un jeu de tuples dans lequel tous les tuples ont la même dimensionnalité. Un jeu peut être représenté de plusieurs façons offrant différents avantages. Par exemple, le jeu de quatre tuples suivant peut être représenté comme une collection de tuples à deux dimensions ou un produit cartésien de deux ensembles unidimensionnels.  
   
@@ -93,7 +93,7 @@ ms.lasthandoff: 01/08/2018
   
  Le tableau suivant répertorie les opérations qui peuvent être utilisées pour définir et caractériser la structure et les membres d'un axe.  
   
-|Opération|Description|  
+|Opération| Description|  
 |---------------|-----------------|  
 |Membre|La plus petite unité d'un axe représentant le membre d'une hiérarchie de dimension.|  
 |Membres|Une collection de **membre** les objets de la même hiérarchie de dimension.|  
@@ -125,7 +125,7 @@ CrossProduct (
  Un client peut utiliser le **AxisFormat** propriété pour demander une représentation spécifique.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Type de données MDDataSet &#40; XMLA &#41;](../../../analysis-services/xmla/xml-data-types/mddataset-data-type-xmla.md)   
- [Propriétés &#40; XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+ [Type de données MDDataSet & #40 ; XMLA & #41 ;](../../../analysis-services/xmla/xml-data-types/mddataset-data-type-xmla.md)   
+ [Propriétés & #40 ; XMLA & #41 ;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

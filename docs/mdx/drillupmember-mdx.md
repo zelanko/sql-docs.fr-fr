@@ -22,12 +22,11 @@ caps.latest.revision: 40
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 7062d26fa444eefcdcf77519be5e6d28e42ce9cf
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 156a26cfbfb8812c93d8850313d6f73482021cd5
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="drillupmember-mdx"></a>DrillupMember (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -48,7 +47,7 @@ DrillupMember(Set_Expression1, Set_Expression2)
  *Set_Expression2*  
  Une expression MDX (Multidimensional Expressions) valide qui retourne un jeu.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Le **DrillupMember** fonction retourne un jeu de membres selon les membres spécifiés dans le premier jeu qui sont des descendants des membres dans le deuxième jeu. Le premier jeu peut avoir n'importe quelle dimensionnalité mais le deuxième jeu doit contenir un jeu unidimensionnel. L'ordre des membres d'origine dans le premier jeu est conservé. La fonction construit le jeu en incluant uniquement les membres du premier jeu qui sont des descendants immédiats des membres du deuxième jeu. Si l'ancêtre immédiat d'un membre du premier jeu n'est pas présent dans le deuxième jeu, le membre du premier jeu est inclus dans le jeu retourné par cette fonction. Les descendants dans le premier jeu qui précèdent un membre ancêtre du deuxième jeu sont également inclus.  
   
  Le premier jeu peut contenir des tuples au lieu de membres. Descente de tuple est une extension de OLE DB et retourne un jeu de tuples au lieu de membres.  
@@ -56,7 +55,7 @@ DrillupMember(Set_Expression1, Set_Expression2)
 > [!IMPORTANT]  
 >  Un membre fait l'objet d'une exploration vers le haut uniquement s'il est aussitôt suivi d'un enfant ou d'un descendant. L’ordre des membres dans le jeu est importante pour les deux la fonction d’exploration\* et Drillup\* familles de fonctions. Envisagez d’utiliser le **Hierarchize** fonction pour ordonner les membres du premier jeu de manière appropriée.  
   
-## <a name="example"></a> Exemple  
+## <a name="example"></a>Exemple  
  Les trois exemples suivants sont identiques, à l'exception du deuxième jeu. Dans le premier exemple, le deuxième jeu contient le membre United States. Par conséquent, le membre Colorado est exclu du jeu de résultats. C'est un descendant du membre United States.  
   
 ```  
@@ -108,6 +107,6 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Référence des fonctions MDX &#40; MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Référence des fonctions MDX & #40 ; MDX & #41 ;](../mdx/mdx-function-reference-mdx.md)  
   
   

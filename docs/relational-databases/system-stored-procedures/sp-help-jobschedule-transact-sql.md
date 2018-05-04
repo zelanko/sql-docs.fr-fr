@@ -24,12 +24,11 @@ caps.latest.revision: 34
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 731857bc70bcda1c7817db6e2cdc7eed3ad68236
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 9e3f0c96d3b0921a7843e83d2b174ace160caf66
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sphelpjobschedule-transact-sql"></a>sp_help_jobschedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -94,7 +93,7 @@ sp_help_jobschedule { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 |**schedule_uid**|**uniqueidentifier**|Identificateur de la planification.|  
 |**job_count**|**int**|Nombre de travaux retournés.|  
   
-> **Remarque :****sp_help_jobschedule** retourne des valeurs à partir de la **dbo.sysjobschedules** et **dbo.sysschedules** dans les tables système **msdb** .   **sysjobschedules** met à jour toutes les 20 minutes. Cela peut affecter les valeurs retournées par cette procédure stockée.  
+> **Remarque :****sp_help_jobschedule** retourne des valeurs à partir de la **dbo.sysjobschedules** et **dbo.sysschedules** dans les tables système **msdb** . **sysjobschedules** met à jour toutes les 20 minutes. Cela peut affecter les valeurs retournées par cette procédure stockée.  
   
 ## <a name="remarks"></a>Notes  
  Les paramètres de **sp_help_jobschedule** peut être utilisé uniquement dans certaines combinaisons. Si *id_de_la_planification* est spécifié, ni *job_id* ni *job_name* peut être spécifié. Dans le cas contraire, le *job_id* ou *job_name* paramètres peuvent être utilisés avec *nom_de_la_planification*.  

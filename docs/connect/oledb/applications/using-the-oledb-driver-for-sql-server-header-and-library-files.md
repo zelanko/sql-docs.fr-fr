@@ -26,12 +26,11 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: d518924d129beef40ec4f24dce0cc01b7de25977
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 8ed2d5385806ee439cc67111c83cc08ea786e160
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="using-the-ole-db-driver-for-sql-server-header-and-library-files"></a>À l’aide du pilote de base de données OLE pour SQL Server en-tête et les fichiers de bibliothèque
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -46,7 +45,7 @@ ms.lasthandoff: 04/16/2018
   
  Le pilote OLE DB pour le fichier d’en-tête SQL Server (msoledbsql.h) peut être utilisé pour ajouter le pilote OLE DB pour la fonctionnalité d’accès de données de SQL Server pour vos applications personnalisées. Le pilote OLE DB pour le fichier d’en-tête SQL Server contient toutes les définitions, des attributs, des propriétés et les interfaces nécessaires pour tirer parti des nouvelles fonctionnalités introduites dans [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)].  
   
- Outre le pilote OLE DB pour le fichier d’en-tête SQL Server, il existe également un fichier de bibliothèque de msoledbsql.lib qui est la bibliothèque d’exportation pour [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] fonctionnalités du programme de copie en bloc (BCP).  
+ Outre le pilote OLE DB pour le fichier d’en-tête SQL Server, il existe également un fichier de bibliothèque de msoledbsql.lib qui est la bibliothèque d’exportation pour [OpenSqlFilestream](../../../relational-databases/blob/access-filestream-data-with-opensqlfilestream.md) fonctionnalité.  
   
  Le pilote OLE DB pour le fichier d’en-tête SQL Server est rétrocompatible avec le fichier d’en-tête sqloledb.h utilisé avec Microsoft Data Access Components (MDAC), mais ne contient pas les CLSID pour SQLOLEDB (le fournisseur OLE DB pour [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] inclus avec MDAC) ou des symboles pour Fonctionnalités XML (ce qui ne sont pas pris en charge par le pilote OLE DB pour SQL Server).    
   

@@ -22,12 +22,11 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 07fd097076dd16d5a77b4011e87ca6bbe0ae5f0a
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 75c060a057c7bed4b989e93d4ba3a934a2ed38a6
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="seek-method-and-index-property-example-vb"></a>Recherche la méthode et les Index, propriété-Exemple (VB)
 Cet exemple utilise le [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) l’objet [recherche](../../../ado/reference/ado-api/seek-method.md) (méthode) et [Index](../../../ado/reference/ado-api/index-property.md) propriété conjointement avec une donnée ***ID d’employé***, localiser nom de l’employé dans le ***employés*** table de la base de données Nwind.mdb.  

@@ -24,12 +24,11 @@ caps.latest.revision: 34
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 92d6cdbd458a32ce0280e60551e5eff2f1fda810
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 754fbef75a1cfd1f3948ccc6c89210b15f780293
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spaddtype-transact-sql"></a>sp_addtype (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -80,7 +79,7 @@ sp_addtype [ @typename = ] type,
  Entier non négatif qui indique le nombre maximal de décimales qui peuvent figurer à droite d'une virgule décimale ; il doit être inférieur ou égal à la précision. Pour plus d’informations, consultez [decimal et numeric &#40;Transact-SQL&#41;](../../t-sql/data-types/decimal-and-numeric-transact-sql.md).  
   
  [  **@nulltype =** ] **'***type_null***'**  
- Indique la manière dont le type de données alias gère les valeurs NULL. *type_null* est **varchar (**8**)**, avec NULL comme valeur par défaut et doit être entouré de guillemets simples ('NULL', 'NOT NULL' ou 'NONULL'). Si *type_null* n’est pas défini explicitement par **sp_addtype**, il a la valeur actuelle. Utilisez la fonction système GETANSINULL pour déterminer la possibilité de valeurs NULL actuellement définie. Il est possible d'ajuster cette valeur au moyen de l'instruction SET ou ALTER DATABASE. La possibilité de valeurs NULL doit être définie explicitement. Si **@phystype** est **bits**, et **@nulltype** n’est pas spécifié, la valeur par défaut n’est pas NULL.  
+ Indique la manière dont le type de données alias gère les valeurs NULL. *type_null* est **varchar (** 8 **)**, avec NULL comme valeur par défaut et doit être entouré de guillemets simples ('NULL', 'NOT NULL' ou 'NONULL'). Si *type_null* n’est pas défini explicitement par **sp_addtype**, il a la valeur actuelle. Utilisez la fonction système GETANSINULL pour déterminer la possibilité de valeurs NULL actuellement définie. Il est possible d'ajuster cette valeur au moyen de l'instruction SET ou ALTER DATABASE. La possibilité de valeurs NULL doit être définie explicitement. Si **@phystype** est **bits**, et **@nulltype** n’est pas spécifié, la valeur par défaut n’est pas NULL.  
   
 > [!NOTE]  
 >  Le *type_null* paramètre définit uniquement la possibilité de valeur NULL par défaut pour ce type de données. Si la possibilité d'utiliser des valeurs NULL est explicitement définie quand le type de données alias est utilisé lors de la création de la table, elle est prioritaire sur la possibilité de valeurs NULL actuellement définie. Pour plus d’informations, consultez [ALTER TABLE &#40;Transact-SQL&#41; ](../../t-sql/statements/alter-table-transact-sql.md) et [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md).  

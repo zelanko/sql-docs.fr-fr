@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - cursors [ODBC], block
 - block cursors [ODBC]
@@ -21,12 +21,11 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: fdda088594fcad53b1d53093e2ef4a39adb5cf75
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: f63bbab9dd5b74c23f3f76b2c851e49a7094e9dc
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="block-cursors"></a>Curseurs de bloc
 De nombreuses applications passent beaucoup de temps mettre des données sur le réseau. Partie de ce temps est consacré à mettre jour les données sur le réseau et partie est passée sur le réseau de surcharge, telles que l’appel effectué par le pilote pour demander une ligne de données. L’heure de ce dernier peut être réduit si l’application effectue une utilisation efficace de *bloc,* ou *fat,* *curseurs,* qui peut retourner plusieurs lignes à la fois.  

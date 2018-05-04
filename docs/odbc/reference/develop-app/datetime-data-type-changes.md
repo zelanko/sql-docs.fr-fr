@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - time data type [ODBC]
 - datetime data types [ODBC]
@@ -24,12 +24,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: a2033cd5931278c9a05c62d907d7da73473902e8
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 1fefa994f1902411e18419d8595a314f29ad0f58
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="datetime-data-type-changes"></a>Modifications de Type de données DateTime
 Dans ODBC 3. *x*, les identificateurs de date, heure et types de données timestamp SQL ont changé depuis SQL_DATE, SQL_TIME et SQL_TIMESTAMP (avec des instances de **#define** dans le fichier d’en-tête de 9, 10 et 11) SQL_TYPE_DATE, SQL_TYPE_TIME et SQL_TYPE_TIMESTAMP (avec des instances de **#define** dans le fichier d’en-tête de 91, 92 et 93), respectivement. Les identificateurs de type C correspondants ont changé depuis SQL_C_DATE, SQL_C_TIME et SQL_C_TIMESTAMP SQL_C_TYPE_DATE, SQL_C_TYPE_TIME et SQL_C_TYPE_TIMESTAMP, respectivement.  
@@ -38,7 +37,7 @@ Dans ODBC 3. *x*, les identificateurs de date, heure et types de données timest
   
  Ces modifications affectent les **SQLDescribeCol**, **SQLDescribeParam**, et **SQLColAttribute**; **SQLBindCol**, **SQLBindParameter**, et **SQLGetData**; et **SQLColumns**, **SQLGetTypeInfo**, **SQLProcedureColumns**, **SQLStatistics**, et **SQLSpecialColumns**.  
   
- Le tableau suivant montre comment la ODBC 3*.x* du Gestionnaire de pilotes effectue le mappage des date, time et timestamp C de types de données entré dans le *TargetType* arguments de **SQLBindCol** et **SQLGetData** ou dans le *ValueType* argument de **SQLBindParameter**.  
+ Le tableau suivant montre comment la ODBC 3 *.x* du Gestionnaire de pilotes effectue le mappage des date, time et timestamp C de types de données entré dans le *TargetType* arguments de **SQLBindCol** et **SQLGetData** ou dans le *ValueType* argument de **SQLBindParameter**.  
   
 |Type de données<br /><br /> code entré|2.*x* application<br /><br /> 2.*x* pilote|2.*x* application<br /><br /> 3.*x* pilote|3.*x* application<br /><br /> 2.*x* pilote|3.*x* application<br /><br /> 3.*x* pilote|  
 |--------------------------------|-----------------------------------|-----------------------------------|-----------------------------------|-----------------------------------|  
@@ -53,7 +52,7 @@ Dans ODBC 3. *x*, les identificateurs de date, heure et types de données timest
   
  [2] en raison de cela, un ODBC 3. *x* application utilisant une ODBC 3. *x* pilote peut utiliser les codes de date, heure ou timestamp renvoyés dans les jeux de résultats retournés par les fonctions de catalogue.  
   
- Le tableau suivant montre comment la ODBC 3*.x* du Gestionnaire de pilotes effectue le mappage des types de données SQL date, time et timestamp entré dans le *ParameterType* argument de **SQLBindParameter** ou dans le *DataType* argument de **SQLGetTypeInfo**.  
+ Le tableau suivant montre comment la ODBC 3 *.x* du Gestionnaire de pilotes effectue le mappage des types de données SQL date, time et timestamp entré dans le *ParameterType* argument de **SQLBindParameter** ou dans le *DataType* argument de **SQLGetTypeInfo**.  
   
 |Type de données<br /><br /> code entré|2.*x* application<br /><br /> 2.*x* pilote|2.*x* application<br /><br /> 3.*x* pilote|3.*x* application<br /><br /> 2.*x* pilote|3.*x* application<br /><br /> 3.*x* pilote|  
 |--------------------------------|-----------------------------------|-----------------------------------|-----------------------------------|-----------------------------------|  

@@ -22,12 +22,11 @@ caps.latest.revision: 28
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: ba59d13932b4d93f7d4992b8f26b6830ba67b395
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 26ebed881d32bb9d550ae9630ee7b60cb15cd153
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="using-set-expressions"></a>Utilisation d'expressions de jeu
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -40,7 +39,7 @@ ms.lasthandoff: 01/08/2018
   
  Les expressions de membre spécifiées dans une expression de jeu sont converties en expressions de tuple à un membre.  
   
-## <a name="example"></a> Exemple  
+## <a name="example"></a>Exemple  
  L'exemple suivant affiche deux expressions d'ensemble utilisées sur les axes des colonnes et des lignes d'une requête :  
   
  `SELECT`  
@@ -71,9 +70,9 @@ ms.lasthandoff: 01/08/2018
   
  se compose de trois tuples, chacun contient deux références explicites aux membres sur la hiérarchie Product Categories de la dimension Product et la hiérarchie de calendrier de la dimension Date.  
   
- Pour obtenir des exemples de fonctions qui renvoient des jeux, consultez [utilisation des membres, Tuples et jeux &#40; MDX &#41; ](../analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx.md).  
+ Pour obtenir des exemples de fonctions qui renvoient des jeux, consultez [utilisation des membres, Tuples et jeux &#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Expressions &#40; MDX &#41;](../mdx/expressions-mdx.md)  
+ [Expressions &#40;MDX&#41;](../mdx/expressions-mdx.md)  
   
   

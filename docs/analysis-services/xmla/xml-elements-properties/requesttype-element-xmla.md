@@ -29,15 +29,15 @@ caps.latest.revision: 12
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: ba93a7d983a77fc70c7bf863ebfa173b526e7848
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: b02b112fc7be79ee1a79950b8d1fec64f4e3b139
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="requesttype-element-xmla"></a>Élément RequestType (XMLA)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]Détermine le type de métadonnées retournées par le [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md) (méthode).  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
+  Détermine le type de métadonnées retournées par le [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md) (méthode).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -55,23 +55,23 @@ ms.lasthandoff: 01/08/2018
 |Caractéristique|Description|  
 |--------------------|-----------------|  
 |Type de données et longueur|Chaîne (énumération)|  
-|Valeur par défaut|None|  
-|Cardinalité|1-1 : élément requis qui apparaît une fois et une seule.|  
+|Valeur par défaut|Aucune|  
+|Cardinalité|1-1 : élément requis qui apparaît une fois et une seule.|  
   
 ## <a name="element-relationships"></a>Relations entre les éléments  
   
 |Relation|Élément|  
 |------------------|-------------|  
 |Éléments parents|[Découvrir](../../../analysis-services/xmla/xml-elements-methods-discover.md)|  
-|Éléments enfants|None|  
+|Éléments enfants|Aucune|  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Le **RequestType** élément détermine l’ensemble de lignes de schéma à partir de laquelle le **Discover** méthode retourne les données. Cette énumération est limitée aux noms des ensembles de lignes de schéma pris en charge par [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Pour plus d’informations sur les ensembles de lignes de schéma, consultez [ensembles de lignes de schéma Analysis Services](../../../analysis-services/schema-rowsets/analysis-services-schema-rowsets.md).  
   
 > [!NOTE]  
 >  Le **RequestType** élément énumère uniquement les noms d’ensemble de lignes de schéma. Une erreur se produit si le GUID de l'ensemble de lignes de schéma est utilisé.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Propriétés &#40; XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+ [Propriétés & #40 ; XMLA & #41 ;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

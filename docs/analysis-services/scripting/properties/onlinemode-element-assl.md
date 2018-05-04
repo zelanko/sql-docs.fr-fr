@@ -27,15 +27,15 @@ caps.latest.revision: 30
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: c0724508194e9ea69a061f65fa5c78f538dd58be
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 387d072c0903bff7cb6ace4334121fe1fd53da1b
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="onlinemode-element-assl"></a>Élément OnlineMode (ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Spécifie si la base de données est remise en ligne immédiatement lorsque la reconstruction du cache est initiée, ou seulement lorsque la reconstruction du cache est terminée.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Spécifie si la base de données est remise en ligne immédiatement dès le début de la reconstruction du cache ou seulement lorsque la reconstruction du cache est terminée.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -54,19 +54,19 @@ ms.lasthandoff: 01/08/2018
 |--------------------|-----------------|  
 |Type de données et longueur|Chaîne (énumération)|  
 |Valeur par défaut|*Immédiate*|  
-|Cardinalité|0-1 : élément facultatif qui peut apparaître une fois et une seule.|  
+|Cardinalité|0-1: élément facultatif qui peut apparaître une fois et une seule.|  
   
 ## <a name="element-relationships"></a>Relations entre les éléments  
   
 |Relation|Élément|  
 |------------------|-------------|  
 |Élément parent|[ProactiveCaching](../../../analysis-services/scripting/objects/proactivecaching-element-assl.md)|  
-|Éléments enfants|None|  
+|Éléments enfants|Aucune|  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  La valeur de cet élément est limitée à l'une des chaînes répertoriées dans le tableau suivant.  
   
-|Valeur|Description|  
+|Valeur| Description|  
 |-----------|-----------------|  
 |*Immédiate*|La base de données est remise en ligne immédiatement lorsque la reconstruction du cache est initiée.|  
 |*OnCacheComplete*|La base de données n'est remise en ligne que lorsque la reconstruction du cache est terminée.|  
@@ -74,6 +74,6 @@ ms.lasthandoff: 01/08/2018
  L’énumération qui correspond aux valeurs autorisées pour **OnlineMode** dans l’objet d’objets AMO (Analysis Management) est modèle <xref:Microsoft.AnalysisServices.ProactiveCaching>.  
   
 ## <a name="see-also"></a>Voir aussi  
- [ProactiveCaching, élément &#40; ASSL &#41;](../../../analysis-services/scripting/objects/proactivecaching-element-assl.md)  
+ [Élément ProactiveCaching &#40;ASSL&#41;](../../../analysis-services/scripting/objects/proactivecaching-element-assl.md)  
   
   

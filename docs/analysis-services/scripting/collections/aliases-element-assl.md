@@ -27,15 +27,15 @@ caps.latest.revision: 35
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: e0e3a5c5cabfdc4396257d72aac9ff08e3d0ba43
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 513a838352bf033e00af6f7365b60a8885cf6807
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="aliases-element-assl"></a>Élément Aliases (ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Contient la collection de [Alias](../../../analysis-services/scripting/properties/alias-element-assl.md) éléments associés à un [compte](../../../analysis-services/scripting/objects/account-element-assl.md) élément  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Contient la collection de [Alias](../../../analysis-services/scripting/properties/alias-element-assl.md) éléments associés à un [compte](../../../analysis-services/scripting/objects/account-element-assl.md) élément  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -56,7 +56,7 @@ ms.lasthandoff: 01/08/2018
 |--------------------|-----------------|  
 |Type de données et longueur|Aucun (collection)|  
 |Valeur par défaut|Aucun (collection)|  
-|Cardinalité|0-1 : élément facultatif qui peut apparaître une fois et une seule.|  
+|Cardinalité|0-1: élément facultatif qui peut apparaître une fois et une seule.|  
   
 ## <a name="element-relationships"></a>Relations entre les éléments  
   
@@ -65,12 +65,12 @@ ms.lasthandoff: 01/08/2018
 |Éléments parents|[Compte](../../../analysis-services/scripting/objects/account-element-assl.md)|  
 |Éléments enfants|[Alias](../../../analysis-services/scripting/properties/alias-element-assl.md)|  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  L’élément qui correspond au parent de **alias** dans l’objet d’objets AMO (Analysis Management) est modèle <xref:Microsoft.AnalysisServices.Account>.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Élément Accounts &#40; ASSL &#41;](../../../analysis-services/scripting/collections/accounts-element-assl.md)   
- [Élément de la base de données &#40; ASSL &#41;](../../../analysis-services/scripting/objects/database-element-assl.md)   
- [Collections de &#40; ASSL &#41;](../../../analysis-services/scripting/collections/collections-assl.md)  
+ [Comptes d’élément &#40;ASSL&#41;](../../../analysis-services/scripting/collections/accounts-element-assl.md)   
+ [Élément de base de données &#40;ASSL&#41;](../../../analysis-services/scripting/objects/database-element-assl.md)   
+ [Collections de & #40 ; ASSL & #41 ;](../../../analysis-services/scripting/collections/collections-assl.md)  
   
   

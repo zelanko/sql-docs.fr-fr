@@ -21,19 +21,18 @@ caps.latest.revision: 28
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: bc1574fc06eeaa032fb68d395106721fc33ec699
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 3e4fb83517c88df521780d86428825c204479df9
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="using-member-expressions"></a>Utilisation d'expressions de membre
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Une expression de membre contient un identificateur de membre, une fonction membre ou une expression pouvant être convertie en membre.  
   
- Les identificateurs de membre sont disponibles dans plusieurs formats. La forme la plus simple d'un identificateur de membre se compose du nom du membre. Exemple :  
+ Les identificateurs de membre sont disponibles dans plusieurs formats. La forme la plus simple d'un identificateur de membre se compose du nom du membre. Par exemple :  
   
 ```  
 SELECT Amount ON 0  
@@ -69,12 +68,12 @@ Dimension_Name
   
 ```  
   
- De nombreuses fonctions MDX retournent des membres. Pour obtenir la liste complète, consultez [référence des fonctions MDX &#40; MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
+ De nombreuses fonctions MDX retournent des membres. Pour obtenir la liste complète, consultez [référence des fonctions MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
 > [!NOTE]  
->  Pour plus d’informations sur les noms des membres et des clés de membre, consultez [utilisation des membres, Tuples et jeux &#40; MDX &#41; ](../analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx.md).  
+>  Pour plus d’informations sur les noms des membres et des clés de membre, consultez [utilisation des membres, Tuples et jeux &#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Expressions &#40; MDX &#41;](../mdx/expressions-mdx.md)  
+ [Expressions &#40;MDX&#41;](../mdx/expressions-mdx.md)  
   
   

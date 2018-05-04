@@ -23,20 +23,20 @@ caps.latest.revision: 33
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 497396bf0679afbabbebe9936ba6c5f443942bec
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: d64b63f6aae163e6703f7f2a7074f3c1e543adb6
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="dmschemaminingserviceparameters-rowset"></a>Ensemble de lignes DMSCHEMA_MINING_SERVICE_PARAMETERS
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Décrit les paramètres des algorithmes sur le serveur.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Décrit les paramètres des algorithmes sur le serveur.  
   
 ## <a name="rowset-columns"></a>Colonnes de l'ensemble de lignes  
  L'ensemble de lignes **DMSCHEMA_MINING_SERVICE_PARAMETERS** contient les colonnes suivantes.  
   
-|Nom de colonne|Indicateur de type|Description|  
+|Nom de colonne|Indicateur de type| Description|  
 |-----------------|--------------------|-----------------|  
 |**SERVICE_NAME**|**DBTYPE_WSTR**|Nom de l'algorithme.|  
 |**NOM_PARAMÈTRE**|**DBTYPE_WSTR**|Nom du paramètre.|  
@@ -54,10 +54,10 @@ ms.lasthandoff: 01/08/2018
   
 |Nom de colonne|Indicateur de type|État de la restriction|  
 |-----------------|--------------------|-----------------------|  
-|**SERVICE_NAME**|**DBTYPE_WSTR**|Facultatif.|  
-|**NOM_PARAMÈTRE**|**DBTYPE_WSTR**|Facultatif.|  
+|**SERVICE_NAME**|**DBTYPE_WSTR**|Ce paramètre est facultatif.|  
+|**NOM_PARAMÈTRE**|**DBTYPE_WSTR**|Ce paramètre est facultatif.|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Ensembles de lignes de schéma d’exploration de données](../../../analysis-services/schema-rowsets/data-mining/data-mining-schema-rowsets.md)  
+ [Ensembles de lignes de schéma de données d’exploration de données](../../../analysis-services/schema-rowsets/data-mining/data-mining-schema-rowsets.md)  
   
   

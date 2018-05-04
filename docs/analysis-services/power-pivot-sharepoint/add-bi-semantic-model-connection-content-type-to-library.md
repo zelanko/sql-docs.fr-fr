@@ -1,31 +1,23 @@
 ---
-title: "Ajouter le Type contenu de la connexion de modèle sémantique BI à bibliothèque | Documents Microsoft"
-ms.custom: 
-ms.date: 03/07/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: Ajouter le Type contenu de la connexion de modèle sémantique BI à bibliothèque | Documents Microsoft
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: ppvt-sharepoint
 ms.topic: article
-ms.assetid: 145505ed-50bc-4528-912b-2a5cd2566011
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 4438608a9e2b5ed5e4e642afa239186db863f578
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 6cdebe4a97f46f04a35d9fb6a3dd1eea1ab3cb3a
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="add-bi-semantic-model-connection-content-type-to-library"></a>Ajouter le Type contenu de la connexion de modèle sémantique BI à la bibliothèque
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Une connexion du modèle sémantique BI est créée dans SharePoint et assure la redirection vers les données du modèle sémantique Business Intelligence situées dans un classeur [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ou une base de données model tabulaire Analysis Services sur un serveur réseau. Avant de pouvoir créer une connexion de modèle sémantique BI dans SharePoint, vous devez étendre une bibliothèque de documents pour autoriser la création d'un fichier .bism. Cette étape est effectuée une seule fois pour chaque bibliothèque, mais vous devrez la répéter pour toutes les bibliothèques à partir desquelles vous souhaitez créer des fichiers .bism. Les meilleures pratiques recommandent de créer une bibliothèque centralisée pour le stockage des fichiers .bism, afin que vous puissiez gérer les autorisations dans un seul emplacement.  
+  Une connexion du modèle sémantique BI est créée dans SharePoint et assure la redirection vers les données du modèle sémantique Business Intelligence situées dans un classeur [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ou une base de données model tabulaire Analysis Services sur un serveur réseau. Avant de pouvoir créer une connexion de modèle sémantique BI dans SharePoint, vous devez étendre une bibliothèque de documents pour autoriser la création d'un fichier .bism. Cette étape est effectuée une seule fois pour chaque bibliothèque, mais vous devrez la répéter pour toutes les bibliothèques à partir desquelles vous souhaitez créer des fichiers .bism. Les meilleures pratiques recommandent de créer une bibliothèque centralisée pour le stockage des fichiers .bism, afin que vous puissiez gérer les autorisations dans un seul emplacement.  
   
 > [!NOTE]  
 >  Si vous utilisez déjà des bibliothèques de connexion de données SharePoint, le type de contenu Connexion de modèle sémantique BI est ajouté automatiquement à ce modèle de bibliothèque. Vous pouvez ignorer les étapes de cette section si vous utilisez une bibliothèque de connexions de données qui vous permet déjà de créer des documents de connexion de modèle sémantique BI.  

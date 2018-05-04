@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data types [ODBC], interval data types
 - interval literals [ODBC]
@@ -21,12 +21,11 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: f119398650dc537ce553268c99ed34b0788b6601
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 976a56ea43eb5cb0f6161cc4c3cd4b7e735061ea
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="interval-literals"></a>Littéraux de l’intervalle
 ODBC requiert que tous les pilotes prennent en charge la conversion du type de données SQL_CHAR ou SQL_VARCHAR à tous les types de données d’intervalle C. Si la source de données sous-jacente ne prend pas en charge les types de données interval, toutefois, le pilote doit connaître le format correct de la valeur dans le champ SQL_CHAR pour prendre en charge ces conversions. De même, ODBC requiert que n’importe quel type être convertible en SQL_CHAR ou SQL_VARCHAR, par conséquent, un pilote doit savoir quel format un intervalle stocké dans le champ de caractère de ODBC C doit avoir. Cette section décrit la syntaxe des littéraux de l’intervalle, le writer de pilote doit utiliser pour valider les champs SQL_CHAR lors de la conversion vers ou depuis des types d’intervalle C.  

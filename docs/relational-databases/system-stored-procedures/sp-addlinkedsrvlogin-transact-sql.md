@@ -24,12 +24,11 @@ caps.latest.revision: 41
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: ef468f7ea427e2e7226bccf45e1192c9a6abcc4b
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 62b73908bc65698cc6f84124a76214398f75fa4a
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spaddlinkedsrvlogin-transact-sql"></a>sp_addlinkedsrvlogin (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,8 +52,8 @@ sp_addlinkedsrvlogin [ @rmtsrvname = ] 'rmtsrvname'
  [ @rmtsrvname **=** ] **'***nom_du_serveur_distant***'**  
  Nom d'un serveur lié auquel s'applique le mappage de la connexion. *nom_du_serveur_distant* est **sysname**, sans valeur par défaut.  
   
- [ @useself **=** ] **'**TRUE**'** | 'FALSE' | 'NULL'  
- Détermine si la connexion à *nom_du_serveur_distant* en empruntant l’identité des connexions locales ou en envoyant explicitement une connexion et un mot de passe. Le type de données est **varchar (**8**)**, avec TRUE comme valeur par défaut.  
+ [ @useself **=** ] **'** TRUE **'** | 'FALSE' | 'NULL'  
+ Détermine si la connexion à *nom_du_serveur_distant* en empruntant l’identité des connexions locales ou en envoyant explicitement une connexion et un mot de passe. Le type de données est **varchar (** 8 **)**, avec TRUE comme valeur par défaut.  
   
  La valeur TRUE Spécifie que les connexions utilisent leurs propres informations d’identification pour se connecter à *nom_du_serveur_distant*, avec le *l’argument utildist* et *rmtpassword* arguments est ignorés. La valeur FALSE indique que le *l’argument utildist* et *rmtpassword* arguments sont utilisés pour se connecter à *nom_du_serveur_distant* spécifié *locallogin*. Si *l’argument utildist* et *rmtpassword* sont également la valeur NULL, aucune connexion ou le mot de passe est utilisée pour se connecter au serveur lié.  
   

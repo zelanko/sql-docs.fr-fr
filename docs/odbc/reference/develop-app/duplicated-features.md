@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - duplicated functions [ODBC]
 - compatibility [ODBC], duplicated functions
@@ -23,12 +23,11 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: e834e0733e3f388658cf41e3a620b17f843e0c14
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 55faa01b16331870c4539e290e218838e4d9e381
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="duplicated-features"></a>Fonctionnalités en double
 ODBC 2 suivante. *x* fonctions ont été dupliquées par ODBC 3. *x* fonctions. Par conséquent, l’API ODBC 2. *x* fonctions sont déconseillées dans ODBC 3. *x*. ODBC 3. *x* fonctions sont appelées fonctions de remplacement.  
@@ -58,4 +57,4 @@ ODBC 2 suivante. *x* fonctions ont été dupliquées par ODBC 3. *x* fonctions. 
  [1] la fonction **SQLExtendedFetch** est une fonctionnalité en double ; **SQLFetchScroll** fournit les mêmes fonctionnalités dans ODBC 3. *x*. Toutefois, le Gestionnaire de pilotes ne mappe pas **SQLExtendedFetch** à **SQLFetchScroll** lors du passage par rapport à un ODBC 3. *x* pilote. Pour plus d’informations, consultez [ce que le Gestionnaire de pilotes fait](../../../odbc/reference/appendixes/what-the-driver-manager-does.md) dans l’annexe g : pilote recommandations pour la compatibilité descendante. Le Gestionnaire de pilotes mappe **SQLFetchScroll** à **SQLExtendedFetch** lors du passage par rapport à une API ODBC 2. *x* pilote.  
   
 > [!NOTE]  
->  La fonction **SQLBindParam** est un cas spécial. **SQLBindParam** est une fonctionnalité en double. Ce n’est pas un ODBC 2*.x* fonction, mais une fonction qui est présente dans les normes Open Group et ISO. La fonctionnalité fournie par cette fonction est entièrement utilisée par des **SQLBindParameter**. Par conséquent, le Gestionnaire de pilotes est mappé à un appel à **SQLBindParam** à **SQLBindParameter** lorsque le pilote sous-jacent est un ODBC 3. *x* pilote. Toutefois, lorsque le pilote sous-jacent est une API ODBC 2*.x* pilote, le Gestionnaire de pilotes n’effectue pas de ce mappage.
+>  La fonction **SQLBindParam** est un cas spécial. **SQLBindParam** est une fonctionnalité en double. Ce n’est pas un ODBC 2 *.x* fonction, mais une fonction qui est présente dans les normes Open Group et ISO. La fonctionnalité fournie par cette fonction est entièrement utilisée par des **SQLBindParameter**. Par conséquent, le Gestionnaire de pilotes est mappé à un appel à **SQLBindParam** à **SQLBindParameter** lorsque le pilote sous-jacent est un ODBC 3. *x* pilote. Toutefois, lorsque le pilote sous-jacent est une API ODBC 2 *.x* pilote, le Gestionnaire de pilotes n’effectue pas de ce mappage.

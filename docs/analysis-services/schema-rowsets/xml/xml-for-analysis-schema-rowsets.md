@@ -1,15 +1,15 @@
 ---
 title: XML for Analysis Schema Rowsets | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
@@ -19,20 +19,19 @@ helpviewer_keywords:
 - schema rowsets [Analysis Services], XML for Analysis
 - schema rowsets [XML for Analysis]
 ms.assetid: 36e3ecfd-fcc3-415a-9c43-f59921d2468a
-caps.latest.revision: 
+caps.latest.revision: 34
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 44c9f6740001c80fd01eaaf53f735bc539f39036
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 0bc51b8f70f768cab5415c60023411c6b744ce6a
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="xml-for-analysis-schema-rowsets"></a>XML for Analysis Schema Rowsets
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-Le fournisseur [!INCLUDE[msCoName](../../../includes/msconame-md.md)] XML for Analysis (XMLA) inclut des ensembles de lignes de schéma qui retournent des métadonnées sur l'état du serveur, l'activité et des objets. La récupération de métadonnées est nécessaire si vous développez une application cliente qui se connecte à un modèle Analysis Services dont la structure et les caractéristiques sont variables.  
+  Le fournisseur [!INCLUDE[msCoName](../../../includes/msconame-md.md)] XML for Analysis (XMLA) inclut des ensembles de lignes de schéma qui retournent des métadonnées sur l'état du serveur, l'activité et des objets. La récupération de métadonnées est nécessaire si vous développez une application cliente qui se connecte à un modèle Analysis Services dont la structure et les caractéristiques sont variables.  
   
  Les ensembles de lignes de schéma fournissent également l'analyse des processus internes et les opérations qui peuvent vous aider à analyser le serveur et à résoudre les problèmes. Pour une meilleure prise en charge des tâches d'administration ad hoc, vous pouvez exécuter une requête de vue de gestion dynamique (DMV) sur la plupart des ensembles de lignes de schéma. Les requêtes DMV retournent des résultats dans un format lisible et tabulaire que vous pouvez afficher dans [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)].  
   
@@ -52,7 +51,7 @@ Le fournisseur [!INCLUDE[msCoName](../../../includes/msconame-md.md)] XML for An
 |[Ensemble de lignes DISCOVER_DIMENSION_STAT](../../../analysis-services/schema-rowsets/xml/discover-dimension-stat-rowset.md)|Retourne des statistiques sur la dimension spécifiée.|  
 |[Ensemble de lignes DISCOVER_ENUMERATORS](../../../analysis-services/schema-rowsets/xml/discover-enumerators-rowset.md)|Retourne une liste des noms, types de données et valeurs d'énumération d'énumérateurs pris en charge par le fournisseur XMLA pour une source de données spécifique.|  
 |[Ensemble de lignes DISCOVER_JOBS](../../../analysis-services/schema-rowsets/xml/discover-jobs-rowset.md)|Fournit des informations sur les travaux actifs exécutés sur le serveur.|  
-|[Ensemble de lignes DISCOVER_KEYWORDS &#40; XMLA &#41;](../../../analysis-services/schema-rowsets/xml/discover-keywords-rowset-xmla.md)|Retourne des informations sur les mots clés réservés par le fournisseur XMLA.|  
+|[Ensemble de lignes DISCOVER_KEYWORDS & #40 ; XMLA & #41 ;](../../../analysis-services/schema-rowsets/xml/discover-keywords-rowset-xmla.md)|Retourne des informations sur les mots clés réservés par le fournisseur XMLA.|  
 |[Ensemble de lignes DISCOVER_LITERALS](../../../analysis-services/schema-rowsets/xml/discover-literals-rowset.md)|Retourne des informations sur les littéraux pris en charge par le fournisseur XMLA, y compris les types de données et les valeurs.|  
 |[DISCOVER_LOCATIONS, ensemble de lignes](../../../analysis-services/schema-rowsets/xml/discover-locations-rowset.md)|Retourne des informations sur le contenu d'un fichier de sauvegarde.|  
 |[Ensemble de lignes DISCOVER_LOCKS](../../../analysis-services/schema-rowsets/xml/discover-locks-rowset.md)|Fournit des informations sur les verrous actuellement en place sur le serveur.|  
@@ -80,7 +79,7 @@ Le fournisseur [!INCLUDE[msCoName](../../../includes/msconame-md.md)] XML for An
   
 ## <a name="see-also"></a>Voir aussi  
  [Développement avec XMLA dans Analysis Services](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md)   
- [Utiliser dynamique vues de gestion &#40; vues de gestion dynamique &#41; pour surveiller Analysis Services](../../../analysis-services/instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)   
+ [Utilisez les vues de gestion dynamique &#40;DMV&#41; pour surveiller Analysis Services](../../../analysis-services/instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)   
  [Récupération de métadonnées à partir d’une source de données analytiques](../../../analysis-services/multidimensional-models-adomd-net-client/retrieving-metadata-from-an-analytical-data-source.md)  
   
   

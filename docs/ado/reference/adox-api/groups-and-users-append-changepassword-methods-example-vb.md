@@ -22,12 +22,11 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: a2c233eea6416050a350a1349d1e037facfb183d
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 2377bd40226859ad5573a1587bac72699eac0bf0
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="groups-and-users-append-changepassword-methods-example-vb"></a>Utilisateurs et groupes Append, ChangePassword, méthodes-exemple (VB)
 Cet exemple illustre la [Append](../../../ado/reference/adox-api/append-method-adox-groups.md) méthode de [groupes](../../../ado/reference/adox-api/groups-collection-adox.md), ainsi que le [Append](../../../ado/reference/adox-api/append-method-adox-users.md) méthode de [utilisateurs](../../../ado/reference/adox-api/users-collection-adox.md) en ajoutant un nouvel [groupe](../../../ado/reference/adox-api/group-object-adox.md) et un nouveau [utilisateur](../../../ado/reference/adox-api/user-object-adox.md) au système. La nouvelle **groupe** est ajouté à la **groupes** collection de la nouvelle **utilisateur**. Par conséquent, la nouvelle **utilisateur** est ajouté à la **groupe**. En outre, le [ChangePassword](../../../ado/reference/adox-api/changepassword-method-adox.md) méthode est utilisée pour spécifier le **utilisateur** mot de passe.  

@@ -1,29 +1,28 @@
 ---
-title: "Définition d’une relation plusieurs-à-plusieurs | Documents Microsoft"
-ms.custom: 
+title: Définition d’une relation plusieurs-à-plusieurs | Documents Microsoft
+ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
 ms.assetid: 7bebb174-148c-4cbb-a285-2f6d536a16d5
-caps.latest.revision: 
+caps.latest.revision: 16
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: ec51909c0d333ead023cf695b5d63cbdb734f276
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 1fee68a19ece5eab139211939602254db4acff77
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="lesson-5-3---defining-a-many-to-many-relationship"></a>Leçon 5-3-définir une relation plusieurs-à-plusieurs
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -67,7 +66,7 @@ Au cours des tâches de cette rubrique, vous allez définir la dimension Sales R
   
     Notez que les types de données des deux autres colonnes dans cette table sont des types de données numériques.  
   
-10. Dans le volet **Tables** , cliquez avec le bouton droit sur **InternetSalesReason (dbo.FactInternetSalesReason)**et choisissez **Explorer les données**.  
+10. Dans le volet **Tables** , cliquez avec le bouton droit sur **InternetSalesReason (dbo.FactInternetSalesReason)** et choisissez **Explorer les données**.  
   
     Notez que, pour chaque numéro de ligne de chaque commande, une valeur clé identifie la raison de la vente pour l'achat correspondant à ce poste, comme montré dans l'illustration suivante.  
   
@@ -183,7 +182,7 @@ Au cours des tâches de cette rubrique, vous allez définir la dimension Sales R
 [Définir la granularité des dimensions dans un groupe de mesures](../analysis-services/lesson-5-4-defining-dimension-granularity-within-a-measure-group.md)  
   
 ## <a name="see-also"></a>Voir aussi  
-[Utiliser des diagrammes dans le Concepteur de vue de Source de données &#40; Analysis Services &#41;](../analysis-services/multidimensional-models/work-with-diagrams-in-data-source-view-designer-analysis-services.md)  
+[Utiliser des diagrammes dans le Concepteur de vue de Source de données & #40 ; Analysis Services & #41 ;](../analysis-services/multidimensional-models/work-with-diagrams-in-data-source-view-designer-analysis-services.md)  
 [Relations de dimension](../analysis-services/multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)  
 [Définir une relation plusieurs à plusieurs et les propriétés d’une relation plusieurs à plusieurs](../analysis-services/multidimensional-models/define-a-many-to-many-relationship-and-many-to-many-relationship-properties.md)  
   

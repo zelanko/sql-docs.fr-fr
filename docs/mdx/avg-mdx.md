@@ -22,12 +22,11 @@ caps.latest.revision: 42
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: On Demand
-ms.openlocfilehash: 4972d38cb5cd52d0da7d76c6eb771520a89fb896
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 88327f99397698497c620fc2d06586a57eb3b0a2
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="avg-mdx"></a>Avg (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -48,7 +47,7 @@ Avg( Set_Expression [ , Numeric_Expression ] )
  *Numeric_expression*  
  Expression numérique valide qui correspond généralement à une expression MDX (Multidimensional Expressions) des coordonnées des cellules qui retournent un nombre.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Si un jeu de tuples vides ou un jeu vide est spécifié, le **Avg** fonction retourne une valeur vide.  
   
  Le **Avg** calcule la moyenne des valeurs non vides des cellules dans le jeu spécifié en calculant la somme des valeurs d’abord toutes les cellules dans le jeu spécifié, puis en divisant cette somme par le nombre de cellules non vides dans le jeu spécifié.  
@@ -159,6 +158,6 @@ FROM
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Référence des fonctions MDX &#40; MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Référence des fonctions MDX & #40 ; MDX & #41 ;](../mdx/mdx-function-reference-mdx.md)  
   
   

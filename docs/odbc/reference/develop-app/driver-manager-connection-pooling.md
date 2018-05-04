@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - connection pooling [ODBC]
 - pooled connections [ODBC]
@@ -22,12 +22,11 @@ caps.latest.revision: 32
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: c18e4e09d620221541bea32dc80391a7e4b5ddd9
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 69736f00cc4d357da0f6da7d4fbf3886144d1553
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="driver-manager-connection-pooling"></a>Regroupement de connexions du Gestionnaire de pilotes
 Le regroupement de connexions permet à une application d’utiliser une connexion à partir d’un pool de connexions qui ne doivent pas être rétablie pour chaque utilisation. Une fois qu’une connexion a été créée et placée dans un pool, une application peut réutiliser cette connexion sans effectuer le processus de connexion complète.  
@@ -45,7 +44,7 @@ Le regroupement de connexions permet à une application d’utiliser une connexi
   
  Le Gestionnaire de pilotes détermine si une connexion spécifique dans un pool doit être utilisée selon les arguments passés dans **SQLConnect** ou **SQLDriverConnect**et selon les attributs de connexion définies après la connexion a été allouée.  
   
- Lorsque le Gestionnaire de pilotes est le regroupement de connexions, il doit être en mesure de déterminer si une connexion fonctionne toujours avant de passer à la connexion. Dans le cas contraire, le Gestionnaire de pilotes conserve en distribuant la connexion à l’application chaque fois qu’une erreur réseau se produit. Un nouvel attribut de connexion a été défini dans ODBC 3*.x*: SQL_ATTR_CONNECTION_DEAD. Il s’agit d’un attribut de connexion en lecture seule qui retourne SQL_CD_TRUE ou SQL_CD_FALSE. La valeur SQL_CD_TRUE signifie que la connexion a été perdue, tandis que la valeur SQL_CD_FALSE signifie que la connexion est toujours active. (Pilotes conformes à des versions antérieures d’ODBC peuvent prendre également en charge cet attribut.)  
+ Lorsque le Gestionnaire de pilotes est le regroupement de connexions, il doit être en mesure de déterminer si une connexion fonctionne toujours avant de passer à la connexion. Dans le cas contraire, le Gestionnaire de pilotes conserve en distribuant la connexion à l’application chaque fois qu’une erreur réseau se produit. Un nouvel attribut de connexion a été défini dans ODBC 3 *.x*: SQL_ATTR_CONNECTION_DEAD. Il s’agit d’un attribut de connexion en lecture seule qui retourne SQL_CD_TRUE ou SQL_CD_FALSE. La valeur SQL_CD_TRUE signifie que la connexion a été perdue, tandis que la valeur SQL_CD_FALSE signifie que la connexion est toujours active. (Pilotes conformes à des versions antérieures d’ODBC peuvent prendre également en charge cet attribut.)  
   
  Un pilote doit implémenter cette option efficacement ou nuira aux performances de regroupement de connexion. Plus précisément, un appel pour obtenir cet attribut de connexion ne devrait pas provoquer un aller-retour au serveur. Au lieu de cela, un pilote doit simplement retourner le dernier état connu de la connexion. La connexion est inactive si le dernier voyage sur le serveur a échoué et pas morts si le dernier voyage a réussi.  
   

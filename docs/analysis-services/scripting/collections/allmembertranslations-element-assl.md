@@ -27,15 +27,15 @@ caps.latest.revision: 38
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: ba8c3348e99f89a7d4668113636418deccbae6c3
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 166fd2dd114a92877542b8df418ed5346e1f6172
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="allmembertranslations-element-assl"></a>Élément AllMemberTranslations (ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Contient la collection de [traduction](../../../analysis-services/scripting/objects/translation-element-assl.md) éléments pour la légende du membre All d’un [hiérarchie](../../../analysis-services/scripting/objects/hierarchy-element-assl.md) élément.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Contient la collection de [traduction](../../../analysis-services/scripting/objects/translation-element-assl.md) éléments pour la légende du membre All d’un [hiérarchie](../../../analysis-services/scripting/objects/hierarchy-element-assl.md) élément.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -57,20 +57,20 @@ ms.lasthandoff: 01/08/2018
 |--------------------|-----------------|  
 |Type de données et longueur|Aucun (collection)|  
 |Valeur par défaut|Aucun (collection)|  
-|Cardinalité|0-1 : élément facultatif qui peut apparaître une fois et une seule.|  
+|Cardinalité|0-1: élément facultatif qui peut apparaître une fois et une seule.|  
   
 ## <a name="element-relationships"></a>Relations entre les éléments  
   
 |Relation|Élément|  
 |------------------|-------------|  
-|Élément parent|[Hierarchy](../../../analysis-services/scripting/objects/hierarchy-element-assl.md)|  
+|Élément parent|[Hiérarchie](../../../analysis-services/scripting/objects/hierarchy-element-assl.md)|  
 |Éléments enfants|[AllMemberTranslation](../../../analysis-services/scripting/objects/allmembertranslation-element-assl.md)|  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  L’élément qui correspond au parent de **AllMemberTranslations** dans l’objet d’objets AMO (Analysis Management) est modèle <xref:Microsoft.AnalysisServices.Hierarchy>.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Élément Translation &#40; ASSL &#41;](../../../analysis-services/scripting/objects/translation-element-assl.md)   
- [Collections de &#40; ASSL &#41;](../../../analysis-services/scripting/collections/collections-assl.md)  
+ [Élément Translation &#40;ASSL&#41;](../../../analysis-services/scripting/objects/translation-element-assl.md)   
+ [Collections de & #40 ; ASSL & #41 ;](../../../analysis-services/scripting/collections/collections-assl.md)  
   
   

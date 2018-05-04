@@ -22,12 +22,11 @@ caps.latest.revision: 31
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: d073e4bc1916720224b7b355b00e23c35430b86a
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 5836e793bd226291944326402a2a980ce1cd3723
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="intersect-mdx"></a>Intersect (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -48,12 +47,12 @@ Intersect(Set_Expression1 , Set_Expression2 [ , ALL ] )
  *Set_Expression2*  
  Une expression MDX (Multidimensional Expressions) valide qui retourne un jeu.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Le **Intersect** fonction retourne l’intersection de deux jeux. Par défaut, cette fonction supprime les doublons des deux ensembles avant l'intersection. Les deux ensembles spécifiés doivent avoir le même dimensionnement.  
   
  Le paramètre facultatif **tous les** indicateur conserve les doublons. Si **tous les** est spécifié, le **Intersect** fonction entre en intersection avec les éléments qui comme d’habitude et que l’intersection de chaque doublon dans le premier jeu qui a un doublon correspondant dans le deuxième jeu. Les deux ensembles spécifiés doivent avoir le même dimensionnement.  
   
-## <a name="example"></a> Exemple  
+## <a name="example"></a>Exemple  
  La requête suivante retourne les années 2003 et 2004, les deux membres qui apparaissent dans les deux ensembles spécifiés :  
   
  `SELECT`  
@@ -87,6 +86,6 @@ Intersect(Set_Expression1 , Set_Expression2 [ , ALL ] )
  `[Adventure Works]`  
   
 ## <a name="see-also"></a>Voir aussi  
- [Référence des fonctions MDX &#40; MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Référence des fonctions MDX & #40 ; MDX & #41 ;](../mdx/mdx-function-reference-mdx.md)  
   
   

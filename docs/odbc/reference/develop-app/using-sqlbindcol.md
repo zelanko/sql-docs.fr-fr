@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - result sets [ODBC], binding columns
 - binding columns [ODBC]
@@ -21,12 +21,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 2e3329d1f5990edae9805538d6e9c5e4c563b028
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: f057dd64e65a60fd168acc72903e45e604967621
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="using-sqlbindcol"></a>À l’aide de SQLBindCol
 L’application lie les colonnes en appelant **SQLBindCol**. Cette fonction est liée à une colonne à la fois. Avec elle, l’application spécifie les éléments suivants :  
@@ -41,7 +40,7 @@ L’application lie les colonnes en appelant **SQLBindCol**. Cette fonction est 
   
  Par exemple, le code suivant lie des variables pour les colonnes vendeur et CustID. Données pour les colonnes seront retournées dans *vendeur* et *CustID*. Étant donné que *vendeur* est une mémoire tampon de caractères, l’application spécifie sa longueur en octets (11) afin que le pilote peut déterminer s’il faut tronquer les données. La longueur d’octet de retourné de titre, ou si sa valeur est NULL, seront retournées dans *SalesPersonLenOrInd*.  
   
- Étant donné que *CustID* est une variable de type entier et a résolu longueur, il est inutile de spécifier sa longueur en octets ; le pilote part du principe qu’il est **sizeof (**SQLUINTEGER**)**. La longueur en octets du client retourné ID de données, ou si sa valeur est NULL, seront retournées dans *CustIDInd*. Notez que l’application s’intéresse uniquement si le salaire est NULL, car la longueur d’octet est toujours **sizeof (**SQLUINTEGER**)**.  
+ Étant donné que *CustID* est une variable de type entier et a résolu longueur, il est inutile de spécifier sa longueur en octets ; le pilote part du principe qu’il est **sizeof (** SQLUINTEGER **)**. La longueur en octets du client retourné ID de données, ou si sa valeur est NULL, seront retournées dans *CustIDInd*. Notez que l’application s’intéresse uniquement si le salaire est NULL, car la longueur d’octet est toujours **sizeof (** SQLUINTEGER **)**.  
   
 ```  
 SQLCHAR       SalesPerson[11];  

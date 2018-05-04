@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 apiname:
 - SQLGetInfo
 apilocation:
@@ -26,12 +26,11 @@ caps.latest.revision: 48
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: e9d01c26268ee9e26a0fead54ed9975a8c405558
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: fca7aaa6278bfc7ab6a21b89c620a28297bf9da3
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlgetinfo-function"></a>Fonction SQLGetInfo
 **Mise en conformité**  
@@ -148,7 +147,7 @@ SQLRETURN SQLGetInfo(
  Tous les appels à **SQLGetInfo** requièrent une connexion ouverte, sauf quand le *InfoType* est SQL_ODBC_VER, qui retourne la version du Gestionnaire de pilotes.  
   
 ## <a name="information-types"></a>Types d’informations  
- Cette section répertorie les types d’informations prises en charge par **SQLGetInfo**. Types d’informations sont regroupées par catégories et classées par ordre alphabétique. Types d’informations qui ont été ajoutés ou renommés par ODBC 3*.x* sont également répertoriés.  
+ Cette section répertorie les types d’informations prises en charge par **SQLGetInfo**. Types d’informations sont regroupées par catégories et classées par ordre alphabétique. Types d’informations qui ont été ajoutés ou renommés par ODBC 3 *.x* sont également répertoriés.  
   
 ## <a name="driver-information"></a>Informations sur le pilote  
  Les valeurs suivantes de la *InfoType* argument retourner des informations sur le pilote ODBC, comme le nombre d’instructions actives, le nom de source de données et niveau de conformité aux normes de l’interface :  
@@ -277,7 +276,7 @@ SQLRETURN SQLGetInfo(
 |SQL_CONVERT_INTERVAL_DAY_TIME||  
   
 ## <a name="information-types-added-for-odbc-3x"></a>Types d’informations ajoutées pour ODBC 3.x  
- Les valeurs suivantes de la *InfoType* argument ont été ajoutés pour ODBC 3*.x*:  
+ Les valeurs suivantes de la *InfoType* argument ont été ajoutés pour ODBC 3 *.x*:  
   
 |||  
 |-|-|  
@@ -308,7 +307,7 @@ SQLRETURN SQLGetInfo(
 |SQL_DM_VER|SQL_XOPEN_CLI_YEAR|  
   
 ## <a name="information-types-renamed-for-odbc-3x"></a>Types d’informations renommés pour ODBC 3.x  
- Les valeurs suivantes de la *InfoType* argument ont été renommés pour ODBC 3*.x*.  
+ Les valeurs suivantes de la *InfoType* argument ont été renommés pour ODBC 3 *.x*.  
   
  SQL_ACTIVE_CONNECTIONS  
  SQL_MAX_DRIVER_CONNECTIONS  
@@ -344,7 +343,7 @@ SQLRETURN SQLGetInfo(
  SQL_CATALOG_USAGE  
   
 ## <a name="information-types-deprecated-in-odbc-3x"></a>Types d’informations déconseillées dans ODBC 3.x  
- Les valeurs suivantes de la *InfoType* argument ont été déconseillées dans ODBC 3*.x*. ODBC 3*.x* pilotes doivent continuer à prendre en charge ces types d’informations pour la compatibilité descendante avec ODBC 2*.x* applications. (Pour plus d’informations sur ces types, consultez [prise en charge SQLGetInfo](../../../odbc/reference/appendixes/sqlgetinfo-support.md) dans l’annexe g : pilote recommandations pour la compatibilité descendante.)  
+ Les valeurs suivantes de la *InfoType* argument ont été déconseillées dans ODBC 3 *.x*. ODBC 3 *.x* pilotes doivent continuer à prendre en charge ces types d’informations pour la compatibilité descendante avec ODBC 2 *.x* applications. (Pour plus d’informations sur ces types, consultez [prise en charge SQLGetInfo](../../../odbc/reference/appendixes/sqlgetinfo-support.md) dans l’annexe g : pilote recommandations pour la compatibilité descendante.)  
   
 |||  
 |-|-|  
@@ -732,7 +731,7 @@ SQLRETURN SQLGetInfo(
  Un caractère de chaîne avec le nom de la base de données actuelle en cours d’utilisation, si la source de données définit un objet nommé appelé « database ».  
   
 > [!NOTE]  
->  Dans ODBC 3*.x*, la valeur retournée pour cette *InfoType* peut également être renvoyé en appelant **SQLGetConnectAttr** avec un *attribut* argument de SQL_ATTR_CURRENT_CATALOG.  
+>  Dans ODBC 3 *.x*, la valeur retournée pour cette *InfoType* peut également être renvoyé en appelant **SQLGetConnectAttr** avec un *attribut* argument de SQL_ATTR_CURRENT_CATALOG.  
   
  SQL_DATETIME_LITERALS (ODBC 3.0)  
  Un masque de bits SQLUINTEGER énumérant les littéraux de date/heure SQL-92 pris en charge par la source de données. Notez que ceux-ci sont les littéraux datetime répertoriés dans la spécification SQL-92 et sont distincts les clauses d’échappement littéral de date/heure définis par ODBC. Pour plus d’informations sur les clauses d’échappement ODBC le littéral de date/heure, consultez [Date, Time et Timestamp littéraux](../../../odbc/reference/develop-app/date-time-and-timestamp-literals.md).  
@@ -1337,7 +1336,7 @@ SQLRETURN SQLGetInfo(
  SQL_FN_NUM_ABS (ODBC 1.0) SQL_FN_NUM_ACOS (ODBC 1.0) SQL_FN_NUM_ASIN (ODBC 1.0) SQL_FN_NUM_ATAN (ODBC 1.0) SQL_FN_NUM_ATAN2 (ODBC 1.0) SQL_FN_NUM_CEILING (ODBC 1.0) SQL_FN_NUM_COS (ODBC 1.0) SQL_FN_NUM_COT (ODBC 1.0) SQL_FN_NUM_DEGREES (ODBC VERSION 2.0) SQL_FN_NUM_EXP (ODBC 1.0) SQL_FN_NUM_FLOOR (ODBC 1.0) SQL_FN_NUM_LOG (ODBC 1.0) SQL_FN_NUM_LOG10 SQL_FN_ DE (ODBC VERSION 2.0) NUM_MOD (ODBC 1.0) SQL_FN_NUM_PI (ODBC 1.0) SQL_FN_NUM_POWER (ODBC VERSION 2.0) SQL_FN_NUM_RADIANS (ODBC VERSION 2.0) SQL_FN_NUM_RAND (ODBC 1.0) SQL_FN_NUM_ROUND (ODBC VERSION 2.0) SQL_FN_NUM_SIGN (ODBC 1.0) SQL_FN_NUM_SIN (ODBC 1.0) SQL_FN_NUM_SQRT (ODBC 1.0) SQL_FN_NUM_TAN (ODBC 1.0) SQL_FN_NUM_TRUNCATE (ODBC VERSION 2.0)  
   
  SQL_ODBC_INTERFACE_CONFORMANCE (ODBC 3.0)  
- Une valeur SQLUINTEGER qui indique le niveau de la version 3 ODBC*.x* interface conforme par le pilote.  
+ Une valeur SQLUINTEGER qui indique le niveau de la version 3 ODBC *.x* interface conforme par le pilote.  
   
  SQL_OIC_CORE : Le niveau minimal tous les pilotes ODBC sont doit se conformer. Ce niveau inclut les éléments d’interface de base telles que les fonctions de connexion, des fonctions pour la préparation et l’exécution d’une instruction SQL, fonctions de métadonnées du jeu de résultats de base, les fonctions de catalogue de base et ainsi de suite.  
   

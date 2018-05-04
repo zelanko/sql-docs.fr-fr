@@ -22,12 +22,11 @@ caps.latest.revision: 31
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: On Demand
-ms.openlocfilehash: 03157756a26301dc0dbaec037b51826b0f6fd6da
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: e85ecbaf3c413215cbe549da779f46ab567c3efb
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="parallelperiod-mdx"></a>ParallelPeriod (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -51,7 +50,7 @@ ParallelPeriod( [ Level_Expression [ ,Index [ , Member_Expression ] ] ] )
  *Argument*  
  Expression MDX (Multidimensional Expressions) valide qui retourne un membre.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Bien que similaire à la [Cousin](../mdx/cousin-mdx.md) (fonction), la **ParallelPeriod** fonction est davantage liée à la série chronologique. Le **ParallelPeriod** fonction prend l’ancêtre du membre spécifié au niveau spécifié, recherche le frère de l’ancêtre avec le décalage spécifié et enfin retourne la période parallèle du membre spécifié parmi les descendants du frère.  
   
  Le **ParallelPeriod** fonction a les valeurs par défaut suivantes :  
@@ -68,7 +67,7 @@ ParallelPeriod( [ Level_Expression [ ,Index [ , Member_Expression ] ] ] )
   
  `Cousin(Member_Expression, Ancestor(Member_Expression, Level_Expression) .Lag(Numeric_Expression))`  
   
-## <a name="example"></a> Exemple  
+## <a name="example"></a>Exemple  
  L'exemple ci-dessous retourne la période parallèle du mois d'octobre 2003 avec un décalage de trois périodes en se basant sur le niveau du trimestre, ce qui retourne le mois de janvier 2003.  
   
 ```  
@@ -90,6 +89,6 @@ SELECT ParallelPeriod ([Date].[Calendar].[Calendar Semester]
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Référence des fonctions MDX &#40; MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Référence des fonctions MDX & #40 ; MDX & #41 ;](../mdx/mdx-function-reference-mdx.md)  
   
   

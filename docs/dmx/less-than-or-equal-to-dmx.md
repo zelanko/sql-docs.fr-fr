@@ -21,12 +21,11 @@ caps.latest.revision: 13
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: a430c03f7e42fb589b071ba4a40528b72f5afda4
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 5115e57006237b324ecaebe42dcc277865c1127f
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="lt-less-than-or-equal-to-dmx"></a>&lt;= (Inférieur ou égal à) (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -48,8 +47,8 @@ DMX_Expression <= DMX_Expression
  Valeur booléenne contenant la valeur TRUE si les deux paramètres ont la valeur Non NULL et si la valeur du premier paramètre est inférieure ou égale à la valeur du deuxième paramètre. La valeur booléenne contient FALSE si les deux paramètres ont la valeur Non NULL et si la valeur du premier paramètre est supérieure à la valeur du deuxième paramètre. La valeur booléenne contient une valeur NULL si l'un des deux ou les deux paramètres donnent comme résultat une valeur NULL.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Opérateurs de comparaison &#40; DMX &#41;](../dmx/operators-comparison.md)   
- [Les Extensions d’exploration de données &#40; DMX &#41; Référence des opérateurs](../dmx/data-mining-extensions-dmx-operator-reference.md)   
- [Opérateurs &#40; DMX &#41;](../dmx/operators-dmx.md)  
+ [Opérateurs de comparaison &#40;DMX&#41;](../dmx/operators-comparison.md)   
+ [Data Mining Extensions &#40;DMX&#41; référence des opérateurs](../dmx/data-mining-extensions-dmx-operator-reference.md)   
+ [Opérateurs &#40;DMX&#41;](../dmx/operators-dmx.md)  
   
   

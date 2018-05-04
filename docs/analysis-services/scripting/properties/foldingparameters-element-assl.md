@@ -27,15 +27,15 @@ caps.latest.revision: 16
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 8f6fa2a178bc1d8f9722a101d7305cedfa248663
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 8d536d67738872ba070217d934a1b47be7857398
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="foldingparameters-element-assl"></a>Élément FoldingParameters (ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Spécifie les paramètres utilisés par le [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] serveur lorsqu’il effectue la validation croisée de modèles d’exploration de données.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Spécifie les paramètres utilisés par le serveur [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] lorsqu'il effectue une validation croisée de modèles d'exploration de données.  
   
 > [!NOTE]  
 >  Ces paramètres sont réservés à un usage interne uniquement. Les présentes informations sont fournies à titre de référence uniquement.  
@@ -57,7 +57,7 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>Caractéristiques de l'élément  
   
-|Caractéristique|Description|  
+|Caractéristique| Description|  
 |--------------------|-----------------|  
 |*FoldIndex*|Entier qui indique la position de départ de la partition qui est utilisée pour la validation croisée.|  
 |*FoldCount*|Entier qui indique le nombre de partitions dans le modèle après la validation croisée.|  
@@ -71,14 +71,14 @@ ms.lasthandoff: 01/08/2018
 |Élément parent|[MiningModel](../../../analysis-services/scripting/objects/miningmodel-element-assl.md)|  
 |Éléments enfants|*FoldIndex*<br /><br /> *FoldCount*<br /><br /> *MaxCases*<br /><br /> *FoldTargetAttribute*|  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Ces propriétés sont réservées à un usage interne uniquement, et ne sont pas prises en charge pour une utilisation dans les instructions DDL.  
   
  Pour plus d’informations sur l’utilisation de la validation croisée dans [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)], consultez [mesures dans le rapport de Validation croisée](../../../analysis-services/data-mining/measures-in-the-cross-validation-report.md).  
   
- Pour plus d’informations sur la façon d’effectuer la validation croisée à l’aide de [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] des procédures stockées, consultez [les procédures stockées d’exploration de données &#40; Analysis Services - Exploration de données &#41; ](../../../analysis-services/data-mining/data-mining-stored-procedures-analysis-services-data-mining.md).  
+ Pour plus d’informations sur la façon d’effectuer la validation croisée à l’aide de [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] des procédures stockées, consultez [les procédures stockées d’exploration de données &#40;Analysis Services - Exploration de données&#41;](../../../analysis-services/data-mining/data-mining-stored-procedures-analysis-services-data-mining.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Propriétés &#40; ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
+ [Propriétés & #40 ; ASSL & #41 ;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   

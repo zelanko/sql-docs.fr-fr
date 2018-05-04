@@ -11,18 +11,17 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 336565da-4203-4745-bce2-4f011c08e357
 caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: e5b0c8ceb6924171e304f3bc14d3c0438baa3306
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: f9ef152274bd9ceea650ebd3c74f97c51c18500c
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="notification-of-asynchronous-function-completion"></a>Notification de fin de la fonction asynchrone
 Dans le SDK Windows 8, ODBC ajouté un mécanisme pour informer les applications lors de l’opération asynchrone terminée, nous appelons « notification d’achèvement ». (Consultez [exécution asynchrone (méthode de Notification)](../../../odbc/reference/develop-app/asynchronous-execution-notification-method.md) pour plus d’informations.) Cette rubrique décrit certains des problèmes pour les développeurs de pilote.  

@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 apiname:
 - SQLDriverConnect
 apilocation:
@@ -26,12 +26,11 @@ caps.latest.revision: 50
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: ab13d8ad4f2bf16cd7b7c0dc8d352363bb89a5b7
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 367a265c33f3c4520b4885524627fca4261829a4
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqldriverconnect-function"></a>Fonction SQLDriverConnect
 **Mise en conformité**  
@@ -163,11 +162,11 @@ SQLRETURN SQLDriverConnect(
   
  où *chaîne de caractères* a zéro ou plusieurs caractères ; *identificateur* a un ou plusieurs caractères ; *mot clé de l’attribut* ne respecte pas la casse ; *attribut-valeur* peut respecter la casse ; et la valeur de la **DSN** mot clé n’est pas constitué uniquement d’espaces.  
   
- En raison de l’initialisation et la chaîne de fichier grammaire, mots clés et l’attribut valeurs de connexion qui contient les caractères **[] {} (), ? \*= ! @** ne figurant ne pas entre accolades doivent être évités. La valeur de la **DSN** mot clé ne peut pas se composer uniquement d’espaces et ne doit pas contenir des espaces. En raison de la grammaire des informations système, les noms de sources de données et les mots clés ne peut pas contenir la barre oblique inverse (\\) caractères.  
+ En raison de l’initialisation et la chaîne de fichier grammaire, mots clés et l’attribut valeurs de connexion qui contient les caractères **[]{}(), ? \*= ! @** ne figurant ne pas entre accolades doivent être évités. La valeur de la **DSN** mot clé ne peut pas se composer uniquement d’espaces et ne doit pas contenir des espaces. En raison de la grammaire des informations système, les noms de sources de données et les mots clés ne peut pas contenir la barre oblique inverse (\\) caractères.  
   
  Applications n’ont pas à ajouter des accolades autour de la valeur d’attribut après le **pilote** (mot clé), sauf si l’attribut contient un point-virgule ( ;), auquel cas les accolades sont obligatoires. Si la valeur d’attribut que le pilote reçoit contient des accolades, le pilote ne doit pas les supprimer, mais ils doivent faire partie de la chaîne de connexion retournée.  
   
- Valeur de chaîne DSN ou connexion délimitée par des accolades ({}) qui contient les caractères **[] {} (), ? \*= ! @** est transmis au pilote intacts. Toutefois, lors de l’utilisation de ces caractères dans un mot clé, le Gestionnaire de pilotes retourne une erreur lorsque vous travaillez avec un DSN de fichier, mais passe la chaîne de connexion au pilote pour les chaînes de connexion normale. Évitez d’utiliser des accolades incorporées dans une valeur de mot clé.  
+ Une valeur de chaîne de connexion ou de la source de données délimitée par des accolades ({}) qui contient les caractères **[]{}(), ? \*= ! @** est transmis au pilote intacts. Toutefois, lors de l’utilisation de ces caractères dans un mot clé, le Gestionnaire de pilotes retourne une erreur lorsque vous travaillez avec un DSN de fichier, mais passe la chaîne de connexion au pilote pour les chaînes de connexion normale. Évitez d’utiliser des accolades incorporées dans une valeur de mot clé.  
   
  La chaîne de connexion peut inclure n’importe quel nombre de mots clés définis par le pilote. Étant donné que la **pilote** mot-clé n’utilise pas les informations à partir des informations système, le pilote doit définir suffisamment de mots clés afin qu’un pilote peut se connecter à une source de données à l’aide uniquement les informations dans la chaîne de connexion. (Pour plus d’informations, consultez « Instructions pilote », plus loin dans cette section.) Le pilote définit les mots clés qui sont requis pour se connecter à la source de données.  
   

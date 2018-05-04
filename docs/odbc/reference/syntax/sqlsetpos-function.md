@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 apiname:
 - SQLSetPos
 apilocation:
@@ -26,12 +26,11 @@ caps.latest.revision: 31
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 06a7c9e052b30a764579bd775ce5e1ac36287175
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: a32c882450a07f4588f46849753835dfe501fc44
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlsetpos-function"></a>SQLSetPos, fonction
 **Mise en conformité**  
@@ -66,7 +65,7 @@ SQLRETURN SQLSetPos(
  SQL_POSITION SQL_REFRESH SQL_UPDATE SQL_DELETE  
   
 > [!NOTE]  
->  La valeur SQL_ADD pour la *opération* argument a été déconseillé pour ODBC 3*.x*. ODBC 3. *x* pilotes doivent prendre en charge SQL_ADD pour la compatibilité descendante. Cette fonctionnalité a été remplacée par un appel à **SQLBulkOperations** avec un *opération* de SQL_ADD. Lorsqu’une application ODBC 3. *x* application fonctionne avec une API ODBC 2. *x* pilote, le Gestionnaire de pilotes est mappé à un appel à **SQLBulkOperations** avec un *opération* de SQL_ADD à **SQLSetPos** avec un *opération* de SQL_ADD.  
+>  La valeur SQL_ADD pour la *opération* argument a été déconseillé pour ODBC 3 *.x*. ODBC 3. *x* pilotes doivent prendre en charge SQL_ADD pour la compatibilité descendante. Cette fonctionnalité a été remplacée par un appel à **SQLBulkOperations** avec un *opération* de SQL_ADD. Lorsqu’une application ODBC 3. *x* application fonctionne avec une API ODBC 2. *x* pilote, le Gestionnaire de pilotes est mappé à un appel à **SQLBulkOperations** avec un *opération* de SQL_ADD à **SQLSetPos** avec un *opération* de SQL_ADD.  
   
  Pour plus d’informations, consultez « Commentaires ».  
   
@@ -129,7 +128,7 @@ SQLRETURN SQLSetPos(
 ## <a name="comments"></a>Commentaires  
   
 > [!CAUTION]  
->  Pour plus d’informations sur l’instruction indique que **SQLSetPos** peut être appelée et ce qu’il doit faire pour la compatibilité avec ODBC 2*.x* les applications, consultez [curseurs de bloc, les curseurs permettant le défilement et la compatibilité descendante](../../../odbc/reference/appendixes/block-cursors-scrollable-cursors-and-backward-compatibility.md).  
+>  Pour plus d’informations sur l’instruction indique que **SQLSetPos** peut être appelée et ce qu’il doit faire pour la compatibilité avec ODBC 2 *.x* les applications, consultez [curseurs de bloc, les curseurs permettant le défilement et la compatibilité descendante](../../../odbc/reference/appendixes/block-cursors-scrollable-cursors-and-backward-compatibility.md).  
   
 ## <a name="rownumber-argument"></a>Argument RowNumber  
  Le *RowNumber* argument spécifie le numéro de la ligne dans l’ensemble de lignes sur lequel effectuer l’opération spécifiée par le *opération* argument. Si *RowNumber* est 0, l’opération s’applique à chaque ligne de l’ensemble de lignes. *RowNumber* doit être comprise entre 0 et le nombre de lignes dans l’ensemble de lignes.  

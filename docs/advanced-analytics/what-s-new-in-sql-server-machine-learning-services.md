@@ -2,16 +2,16 @@
 title: Ce que&#39;s nouvelles dans SQL Server Machine Learning Services | Documents Microsoft
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 05/02/2018
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 0f0487d26e602504fc776b1262414488e24c8336
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 405e4636525898268c54f1a3d603c9e5da3dc14d
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="whats-new-in-sql-server-machine-learning-services"></a>Nouveautés de SQL Server Machine Learning Services 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -25,7 +25,9 @@ Cette version ajouté la prise en charge de Python et les algorithmes d’appren
 Cette version introduite également **Machine Learning Server (autonome) de SQL Server**, entièrement indépendants de SQL Server, pour les charges de travail R et Python que vous souhaitez exécuter sur un système dédié. Avec le serveur autonome, vous pouvez distribuer et l’échelle des solutions de R ou Python sans l’aide de SQL Server.
 
 | Version | Mise à jour de la fonctionnalité |
-|---------|---------------|
+|---------|----------------|
+| CU 6 | Correctifs de bogues et actualisation du package, mais pas des fonctionnalités nouvelles annonces. Correctifs incluent la prise en charge pour les types de données DateTime requête SPEES pour Python et des messages d’erreur améliorés dans microsoftml lorsque dont l’apprentissage des modèles sont manquants. |
+| CU 5 | Correctifs de bogues et actualisation du package, mais pas des fonctionnalités nouvelles annonces. Correctifs incluent des améliorations pour transformer les fonctions et variables dans revoscalepy, la correction des erreurs de long chemin d’accès relatif dans rxInstallPackages, résolution des connexions dans une boucle pour RxExec rx_exec fonctions et les révisions des messages d’avertissement. |
 | CU 4 | Correctifs de bogues et actualisation du package, mais pas des fonctionnalités nouvelles annonces. |
 | CU 3 | Sérialisation dans revoscalepy, de modèle de Python à l’aide de la [rx_serialize_model fonction](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-serialize-model).<br/><br/>[Calcul de score native](sql-native-scoring.md) ainsi que des améliorations apportées aux [en temps réel de calcul de score](real-time-scoring.md). Calcul de score dans base de données, le débit est un million de lignes par seconde à l’aide des modèles R. Cette mise à jour, calculer les scores en temps réel et le score natif offrent les meilleures performances dans une ligne et le calcul du score du lot. Natif score utilise une fonction T-SQL pour le score rapide qui peut être exécutée sur n’importe quelle édition de SQL Server, y compris sur Linux. La fonction ne requiert aucune installation de R ou une configuration supplémentaire. Cela signifie que vous pouvez effectuer l’apprentissage d’un modèle à un autre emplacement, enregistrez-le dans SQL Server et puis effectuer le calcul de score sans jamais appeler R. Pour plus d’informations sur les méthodes de calcul de score, consultez [l’exécution de calculer les scores en temps réel ou calculer les scores natif](r/how-to-do-realtime-scoring.md). |
 | CU 2 | Correctifs de bogues et actualisation du package, mais pas des fonctionnalités nouvelles annonces. |

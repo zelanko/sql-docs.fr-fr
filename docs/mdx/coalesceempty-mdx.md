@@ -22,12 +22,11 @@ caps.latest.revision: 39
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: d02d253d39a605405df747b49fd0a762913030f1
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 03ed1dd874c130f7e97d1d4b66723bbd40844f1f
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="coalesceempty-mdx"></a>CoalesceEmpty (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -58,7 +57,7 @@ CoalesceEmpty(String_Expression1 [ ,String_Expression2,...n] )
  *String_Expression2*  
  Expression de chaîne valide qui correspond généralement à une valeur de chaîne spécifique substituée à une valeur NULL retournée par la première expression de chaîne.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Si une ou plusieurs expressions numériques sont spécifiées, le **CoalesceEmpty** fonction retourne la valeur numérique de la première expression (de gauche à droite) numérique qui peut être résolue en une valeur non vide. Si aucune des expressions numériques spécifiées ne peut être résolue en une valeur non vide, la fonction retourne la valeur de cellule vide. En règle générale, la valeur de la deuxième expression numérique correspond à la valeur numérique substituée à une valeur NULL retournée par la première expression numérique.  
   
  Si une ou plusieurs expressions de chaîne sont spécifiées, la fonction retourne la valeur de chaîne de la première expression de chaîne (de gauche à droite) qui peut être résolue à une valeur non vide. Si aucune des expressions de chaîne spécifiées ne peut être résolue en une valeur non vide, la fonction retourne la valeur de cellule vide. En règle générale, la valeur de la deuxième expression de chaîne correspond à la valeur de chaîne substituée à une valeur NULL retournée par la première expression de chaîne.  
@@ -67,7 +66,7 @@ CoalesceEmpty(String_Expression1 [ ,String_Expression2,...n] )
   
  Pour plus d'informations sur les cellules vides, consultez la documentation OLE DB.  
   
-## <a name="example"></a> Exemple  
+## <a name="example"></a>Exemple  
  L’exemple suivant interroge la **Adventure Works** cube. Cet exemple retourne la quantité commandée de chaque produit et le pourcentage des quantités commandées par catégorie. Le **CoalesceEmpty** fonction garantit que les valeurs null sont représentées en tant que zéro (0) lors de la mise en forme des membres calculés.  
   
 ```  
@@ -92,6 +91,6 @@ WHERE {[Date].[Calendar Year].[Calendar Year].&[2003]}
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Référence des fonctions MDX &#40; MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Référence des fonctions MDX & #40 ; MDX & #41 ;](../mdx/mdx-function-reference-mdx.md)  
   
   

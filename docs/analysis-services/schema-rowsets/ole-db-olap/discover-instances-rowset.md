@@ -23,20 +23,20 @@ caps.latest.revision: 30
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 39705d4efdcec8ed190bc58e2ac1888b3aeef7fe
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: d6761a62ebb6d47594273550f56a1450c8f38360
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="discoverinstances-rowset"></a>Ensemble de lignes DISCOVER_INSTANCES
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Décrit les instances sur le serveur.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Décrit les instances sur le serveur.  
   
 ## <a name="rowset-columns"></a>Colonnes de l'ensemble de lignes  
  L'ensemble de lignes **DISCOVER_INSTANCES** contient les colonnes suivantes.  
   
-|Nom de colonne|Indicateur de type|Longueur|Description|  
+|Nom de colonne|Indicateur de type|Longueur| Description|  
 |-----------------|--------------------|------------|-----------------|  
 |**NOM_INSTANCE**|**DBTYPE_WSTR**||Nom de l'instance.|  
 |**INSTANCE_PORT_NUMBER**|**DBTYPE_I4**||Numéro de port sur lequel l'instance écoute.|  
@@ -49,9 +49,9 @@ ms.lasthandoff: 01/08/2018
   
 |Nom de colonne|Indicateur de type|État de la restriction|  
 |-----------------|--------------------|-----------------------|  
-|**NOM_INSTANCE**|**DBTYPE_WSTR**|Facultatif.|  
+|**NOM_INSTANCE**|**DBTYPE_WSTR**|Ce paramètre est facultatif.|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Ensembles de lignes de schéma OLE DB pour OLAP](../../../analysis-services/schema-rowsets/ole-db-olap/ole-db-for-olap-schema-rowsets.md)  
+ [OLE DB pour OLAP Schema Rowsets](../../../analysis-services/schema-rowsets/ole-db-olap/ole-db-for-olap-schema-rowsets.md)  
   
   

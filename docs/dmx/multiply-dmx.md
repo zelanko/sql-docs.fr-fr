@@ -21,12 +21,11 @@ caps.latest.revision: 12
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 9fcd1cd05485a7b03590cc01da1ef7b755a87a37
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 3c877e2e55e5db9b88b3cf78376b181a86c964c6
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="-multiply-dmx"></a>* (Multiply) (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -47,12 +46,12 @@ Numeric_Expression * Numeric_Expression
 ## <a name="return-value"></a>Valeur retournée  
  Valeur qui possède le type de données du paramètre doté de la priorité la plus élevée.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Les deux expressions doivent être de même type de données, ou l'une des expressions doit pouvoir être implicitement convertie dans le type de données de l'autre expression. Si une expression donne comme résultat une valeur NULL, l'opérateur retourne une valeur NULL.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Arithmétique opérateurs &#40; DMX &#41;](../dmx/operators-arithmetic.md)   
- [Les Extensions d’exploration de données &#40; DMX &#41; Référence des opérateurs](../dmx/data-mining-extensions-dmx-operator-reference.md)   
- [Opérateurs &#40; DMX &#41;](../dmx/operators-dmx.md)  
+ [Opérateurs arithmétiques &#40;DMX&#41;](../dmx/operators-arithmetic.md)   
+ [Data Mining Extensions &#40;DMX&#41; référence des opérateurs](../dmx/data-mining-extensions-dmx-operator-reference.md)   
+ [Opérateurs &#40;DMX&#41;](../dmx/operators-dmx.md)  
   
   

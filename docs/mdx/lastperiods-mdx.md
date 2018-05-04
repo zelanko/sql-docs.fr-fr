@@ -22,12 +22,11 @@ caps.latest.revision: 34
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: a3a9f0940796ecbc8138447fa8dd4ba59febbe96
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: c4d2f7fdb3d91341dcd4849bf1a47bafcacc4dc4
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="lastperiods-mdx"></a>LastPeriods (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -48,7 +47,7 @@ LastPeriods(Index [ ,Member_Expression ] )
  *Argument*  
  Expression MDX (Multidimensional Expressions) valide qui retourne un membre.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Si le nombre de périodes spécifié est positif, le **LastPeriods** fonction retourne un jeu de membres qui commence par le membre qui est en retard *Index* -1 à partir de l’expression de membre spécifié et se termine par le membre spécifié. Le nombre de membres retournés par la fonction est égal à *Index*.  
   
  Si le nombre de périodes spécifié est négatif, le **LastPeriods** fonction retourne un jeu de membres qui commence par le membre spécifié et se termine par le membre arrivant en premier (- *Index* - 1) à partir du membre spécifié. Le nombre de membres retournés par la fonction est égal à la valeur absolue de *Index*.  
@@ -80,6 +79,6 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Référence des fonctions MDX &#40; MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Référence des fonctions MDX & #40 ; MDX & #41 ;](../mdx/mdx-function-reference-mdx.md)  
   
   

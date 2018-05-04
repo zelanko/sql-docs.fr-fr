@@ -29,15 +29,15 @@ caps.latest.revision: 11
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 478115a00c7e0f97fcad6e25fc74c1e205bb0a75
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 20da0d8bcd7a651047b10736d829074265203fa0
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="members-element-xmla"></a>Élément Members (XMLA)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]Contient une collection de [membre](../../../analysis-services/xmla/xml-elements-properties/member-element-xmla.md) éléments contenus par le parent [CrossProduct](../../../analysis-services/xmla/xml-elements-properties/crossproduct-element-xmla.md) élément.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
+  Contient une collection de [membre](../../../analysis-services/xmla/xml-elements-properties/member-element-xmla.md) éléments contenus par le parent [CrossProduct](../../../analysis-services/xmla/xml-elements-properties/crossproduct-element-xmla.md) élément.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -55,8 +55,8 @@ ms.lasthandoff: 01/08/2018
   
 |Caractéristique|Description|  
 |--------------------|-----------------|  
-|Type de données et longueur|None|  
-|Valeur par défaut|None|  
+|Type de données et longueur|Aucune|  
+|Valeur par défaut|Aucune|  
 |Cardinalité|0-n : élément facultatif pouvant apparaître plusieurs fois.|  
   
 ## <a name="element-relationships"></a>Relations entre les éléments  
@@ -68,14 +68,14 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="attributes"></a>Attributs  
   
-|Attribute|Description|  
+|Attribut|Description|  
 |---------------|-----------------|  
-|Hierarchy|Attribut **String** requis. Le nom de la hiérarchie à laquelle les membres contenus par le **membres** l’élément appartient.|  
+|Hiérarchie|Attribut **String** requis. Le nom de la hiérarchie à laquelle les membres contenus par le **membres** l’élément appartient.|  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Lorsqu’une application cliente définit le **AxisFormat** propriété *ClusterFormat*, les membres de chaque axe sont divisés en clusters dans lequel chaque cluster représente un produit croisé entre des ensembles ordonnés de membres de chaque hiérarchie. Chaque **axe** élément se compose d’un ou plusieurs **CrossProduct** éléments. Chaque **CrossProduct** élément contient un **membres** , élément pour chaque hiérarchie sur l’axe. Le **membres** élément contient à son tour, un **membre** élément pour chaque membre de la hiérarchie spécifiée incluse dans le produit croisé.  
   
-## <a name="example"></a> Exemple  
+## <a name="example"></a>Exemple  
  L’exemple suivant illustre la structure de la **membres** élément lorsqu’un client spécifie *ClusterFormat* pour le **AxisFormat** propriété XMLA les membres suivants de l’axe :  
   
 ||||||  
@@ -129,6 +129,6 @@ ms.lasthandoff: 01/08/2018
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Propriétés &#40; XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+ [Propriétés & #40 ; XMLA & #41 ;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

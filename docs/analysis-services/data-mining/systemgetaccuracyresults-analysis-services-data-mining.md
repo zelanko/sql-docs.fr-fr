@@ -1,35 +1,34 @@
 ---
-title: "SystemGetAccuracyResults (Analysis Services - Exploration de données) | Documents Microsoft"
-ms.custom: 
+title: SystemGetAccuracyResults (Analysis Services - Exploration de données) | Documents Microsoft
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - stored procedures [Analysis Services], data mining
 - SystemGetAccuracyResults
 - cross-validation [data mining]
 ms.assetid: 54ff584c-c6ce-4c31-9515-0a645719bd1a
-caps.latest.revision: 
+caps.latest.revision: 26
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 1f6cc8a8bc3e35f6072e5998faed8fb9d51b768f
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: d4afb1af5b4ea7cb2c10f6e5c7ad515c54629449
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="systemgetaccuracyresults-analysis-services---data-mining"></a>SystemGetAccuracyResults (Analysis Services - Exploration de données)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Retourne les mesures de précision de validation croisée d'une structure d'exploration de données et de tous les modèles connexes, à l'exclusion des modèles de clustering.  
+  Retourne les mesures de précision de validation croisée d'une structure d'exploration de données et de tous les modèles connexes, à l'exclusion des modèles de clustering.  
   
  Cette procédure stockée retourne les mesures du jeu de données dans son ensemble sous forme de partition unique. Pour partitionner le jeu de données en sections croisées et retourner les mesures pour chaque partition, utilisez [SystemGetCrossValidationResults &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/systemgetcrossvalidationresults-analysis-services-data-mining.md).  
   
@@ -168,7 +167,7 @@ CALL SystemGetAccuracyResults (
 ## <a name="see-also"></a>Voir aussi  
  [SystemGetCrossValidationResults &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/systemgetcrossvalidationresults-analysis-services-data-mining.md)   
  [SystemGetAccuracyResults](../../analysis-services/data-mining/systemgetaccuracyresults-analysis-services-data-mining.md)   
- [SystemGetClusterCrossValidationResults &#40; Analysis Services - Exploration de données &#41;](../../analysis-services/data-mining/systemgetclustercrossvalidationresults-analysis-services-data-mining.md)   
- [SystemGetClusterAccuracyResults &#40; Analysis Services - Exploration de données &#41;](../../analysis-services/data-mining/systemgetclusteraccuracyresults-analysis-services-data-mining.md)  
+ [SystemGetClusterCrossValidationResults &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/systemgetclustercrossvalidationresults-analysis-services-data-mining.md)   
+ [SystemGetClusterAccuracyResults & #40 ; Analysis Services - Exploration de données & #41 ;](../../analysis-services/data-mining/systemgetclusteraccuracyresults-analysis-services-data-mining.md)  
   
   

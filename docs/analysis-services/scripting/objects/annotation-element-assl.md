@@ -27,15 +27,15 @@ caps.latest.revision: 43
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 09cafc5c5dcbafd48047995b03082a4d15e84288
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 91290ec4f4b0ba29fb8b14d5cb6602ba4db7ed36
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="annotation-element-assl"></a>Élément Annotation (ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Contient les éléments qui sont utilisés pour étendre le schéma d’Analysis Services Scripting Language (ASSL).  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Contient des éléments utilisés pour étendre le schéma ASSL (Analysis Services Scripting Language).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -54,8 +54,8 @@ ms.lasthandoff: 01/08/2018
   
 |Caractéristique|Description|  
 |--------------------|-----------------|  
-|Type de données et longueur|None|  
-|Valeur par défaut|None|  
+|Type de données et longueur|Aucune|  
+|Valeur par défaut|Aucune|  
 |Cardinalité|0-n : élément facultatif pouvant apparaître plusieurs fois.|  
   
 ## <a name="element-relationships"></a>Relations entre les éléments  
@@ -65,7 +65,7 @@ ms.lasthandoff: 01/08/2018
 |Éléments parents|[Annotations](../../../analysis-services/scripting/collections/annotations-element-assl.md)|  
 |Éléments enfants|[Nom](../../../analysis-services/scripting/properties/name-element-assl.md), [valeur](../../../analysis-services/scripting/properties/value-element-assl.md), [visibilité](../../../analysis-services/scripting/properties/visibility-element-assl.md)|  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Le **Annotation** élément permet d’étendre le schéma ASSL pour tous les objets autres que ceux utilisés uniquement pour la définition d’un type de données complexes. Le **valeur** élément de la **Annotation** élément peut contenir un XML valide à partir de n’importe quel espace de noms XML autre qu’ASSL et soumis aux règles suivantes :  
   
 -   Les données XML peuvent contenir uniquement des éléments.  
@@ -79,6 +79,6 @@ ms.lasthandoff: 01/08/2018
  L’élément correspondant dans le modèle d’objet objets AMO (Analysis Management) est <xref:Microsoft.AnalysisServices.Annotation>.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Objets &#40; ASSL &#41;](../../../analysis-services/scripting/objects/objects-assl.md)  
+ [Objets & #40 ; ASSL & #41 ;](../../../analysis-services/scripting/objects/objects-assl.md)  
   
   

@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Visual FoxPro ODBC driver [ODBC], accessing Visual FoxPro data
 - Visual FoxPro data [ODBC], accessing
@@ -25,12 +25,11 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: d88a72ff8c871ecccf2f100e8b1472394492240e
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: d32897f570019b3ccfd99f27aea1e87d93e44d27
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="system-requirements-visual-foxpro-odbc-driver"></a>Configuration système requise (le pilote ODBC Visual FoxPro)
 La configuration requise pour l’installation fournit la configuration minimale du système d’exploitation et l’espace disque nécessaires à l’installation du pilote. Une fois que vous avez installé le pilote, vous pouvez sélectionner le logiciel d’application spécifique que vous souhaitez utiliser pour accéder aux données Visual FoxPro.  

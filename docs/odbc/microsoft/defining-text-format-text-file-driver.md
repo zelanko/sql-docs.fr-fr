@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - text format [ODBC]
 - text file driver [ODBC], text format
@@ -20,12 +20,11 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 55a900ec55e4dc93b53168a2949de06fa9f2e879
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: a6f5954e7ffe41a7b2d1f6ea66ea651e1db8024a
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="defining-text-format-text-file-driver"></a>Définir le Format de texte (pilote du fichier texte)
 Lorsque le pilote de texte est utilisé, vous pouvez utiliser la **définition du Format texte** boîte de dialogue pour définir le format des colonnes dans un fichier sélectionné. Cette boîte de dialogue vous permet de spécifier le schéma pour chaque table de données. Cette information est écrite dans un fichier Schema.ini dans le répertoire de source de données. Un fichier Schema.ini distinct est créé pour chaque répertoire de source de données de texte.  

@@ -23,25 +23,25 @@ caps.latest.revision: 32
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 4b23f8bda8cc2aa410ddc04225420ff6372be3e4
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: f56517d3f8a974ae54d08f0dda2c24de5025facb
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mdschemacubes-rowset"></a>Ensemble de lignes MDSCHEMA_CUBES
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Décrit la structure des cubes d’une base de données.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Décrit la structure des cubes d'une base de données.  
   
 ## <a name="rowset-columns"></a>Colonnes de l'ensemble de lignes  
  L'ensemble de lignes **MDSCHEMA_CUBES** contient les colonnes suivantes.  
   
-|Nom de colonne|Indicateur de type|Description|  
+|Nom de colonne|Indicateur de type| Description|  
 |-----------------|--------------------|-----------------|  
 |**CATALOG_NAME**|**DBTYPE_WSTR**|Nom de la base de données.|  
 |**SCHEMA_NAME**|**DBTYPE_WSTR**|Non pris en charge.|  
 |**CUBE_NAME**|**DBTYPE_WSTR**|Nom du cube ou de la dimension. Les noms de dimension sont précédés d'un symbole dollar ($).<br /><br /> Remarque : Seuls administrateurs de serveur et base de données disposer d’autorisations pour afficher les cubes créés à partir d’une dimension.|  
-|**CUBE_TYPE**|**DBTYPE_WSTR**|Type du cube. Les valeurs valides sont :<br /><br /> **CUBE**<br /><br /> **DIMENSION**|  
+|**CUBE_TYPE**|**DBTYPE_WSTR**|Type du cube. Les valeurs valides sont :<br /><br /> **CUBE**<br /><br /> **DIMENSION**|  
 |**CUBE_GUID**|**DBTYPE_GUID**|Non pris en charge.|  
 |**CREATED_ON**|**DBTYPE_DBTIMESTAMP**|Non pris en charge.|  
 |**LAST_SCHEMA_UPDATE**|**DBTYPE_DBTIMESTAMP**|Heure du dernier traitement du cube.|  
@@ -64,13 +64,13 @@ ms.lasthandoff: 01/08/2018
   
 |Nom de colonne|Indicateur de type|État de la restriction|  
 |-----------------|--------------------|-----------------------|  
-|**CATALOG_NAME**|**DBTYPE_WSTR**|Facultatif.|  
-|**SCHEMA_NAME**|**DBTYPE_WSTR**|Facultatif.|  
-|**CUBE_NAME**|**DBTYPE_WSTR**|Facultatif.|  
+|**CATALOG_NAME**|**DBTYPE_WSTR**|Ce paramètre est facultatif.|  
+|**SCHEMA_NAME**|**DBTYPE_WSTR**|Ce paramètre est facultatif.|  
+|**CUBE_NAME**|**DBTYPE_WSTR**|Ce paramètre est facultatif.|  
 |**CUBE_SOURCE**|**DBTYPE_UI2**|(Facultatif) Restriction par défaut est une valeur de 1. Une image bitmap avec l’une des valeurs valides suivantes :<br /><br /> 1 CUBE<br /><br /> 2 DIMENSION|  
-|**Cube_Name de base**|**DBTYPE_WSTR**|Facultatif.|  
+|**Cube_Name de base**|**DBTYPE_WSTR**|Ce paramètre est facultatif.|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Ensembles de lignes de schéma OLE DB pour OLAP](../../../analysis-services/schema-rowsets/ole-db-olap/ole-db-for-olap-schema-rowsets.md)  
+ [OLE DB pour OLAP Schema Rowsets](../../../analysis-services/schema-rowsets/ole-db-olap/ole-db-for-olap-schema-rowsets.md)  
   
   

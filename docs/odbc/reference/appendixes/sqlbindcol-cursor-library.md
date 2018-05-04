@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQLAllocStmt function [ODBC], Cursor Library
 ms.assetid: f4dd546a-0a6c-4397-8ee7-fafa6b9da543
@@ -19,12 +19,11 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: eeca90b8de3ce65e8da68d6aabac89b2181ed047
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: a877b6cade18e59f12abfe807d8efa04363b3dcb
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlbindcol-cursor-library"></a>SQLBindCol (bibliothèque de curseurs)
 > [!IMPORTANT]  
@@ -36,8 +35,8 @@ ms.lasthandoff: 04/16/2018
   
  Une application peut appeler **SQLBindCol** obligent le résultat à définie les colonnes après l’appel **SQLExtendedFetch**, **SQLFetch**, ou **SQLFetchScroll**, à condition que le type de données C, taille de la colonne et les chiffres décimaux de la colonne liée restent les mêmes. L’application ne doive pas fermer le curseur pour relier les colonnes à différentes adresses.  
   
- La bibliothèque de curseurs prend en charge la définition de l’attribut d’instruction SQL_ATTR_ROW_BIND_OFFSET_PTR à utiliser les décalages de liaison. (**SQLBindCol** n’a pas à être appelée pour cette nouvelle liaison doit avoir lieu.) Si la bibliothèque de curseurs est utilisée avec un ODBC 3*.x* pilote, le décalage de la liaison n’est pas utilisée lorsque **SQLFetch** est appelée. Le décalage de la liaison est utilisé si **SQLFetch** est appelée lorsque la bibliothèque de curseurs est utilisée avec une API ODBC 2. *x* pilote car **SQLFetch** est ensuite mappé sur **SQLExtendedFetch**.  
+ La bibliothèque de curseurs prend en charge la définition de l’attribut d’instruction SQL_ATTR_ROW_BIND_OFFSET_PTR à utiliser les décalages de liaison. (**SQLBindCol** n’a pas à être appelée pour cette nouvelle liaison doit avoir lieu.) Si la bibliothèque de curseurs est utilisée avec un ODBC 3 *.x* pilote, le décalage de la liaison n’est pas utilisée lorsque **SQLFetch** est appelée. Le décalage de la liaison est utilisé si **SQLFetch** est appelée lorsque la bibliothèque de curseurs est utilisée avec une API ODBC 2. *x* pilote car **SQLFetch** est ensuite mappé sur **SQLExtendedFetch**.  
   
  La bibliothèque de curseurs prend en charge l’appel **SQLBindCol** pour lier la colonne de signet.  
   
- Lorsque vous travaillez avec une API ODBC 2. *x* pilote, la bibliothèque de curseurs retourne SQLSTATE HY090 (longueur de chaîne ou une mémoire tampon non valide) lorsque **SQLBindCol** est appelée pour définir la longueur du tampon pour une colonne de signet à une valeur non égale à 4. Lorsque vous travaillez avec un ODBC 3*.x* pilote, la bibliothèque de curseurs permet d’être n’importe quelle taille de la mémoire tampon.
+ Lorsque vous travaillez avec une API ODBC 2. *x* pilote, la bibliothèque de curseurs retourne SQLSTATE HY090 (longueur de chaîne ou une mémoire tampon non valide) lorsque **SQLBindCol** est appelée pour définir la longueur du tampon pour une colonne de signet à une valeur non égale à 4. Lorsque vous travaillez avec un ODBC 3 *.x* pilote, la bibliothèque de curseurs permet d’être n’importe quelle taille de la mémoire tampon.

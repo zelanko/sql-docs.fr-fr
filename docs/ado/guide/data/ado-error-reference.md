@@ -21,12 +21,11 @@ caps.latest.revision: 4
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 5e1b20ffe6165688a438f97c2c23a7ac573ad320
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 2f6a702e504b5dd0f7f6e2cc6399de7736bd62f4
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ado-errors"></a>Erreurs ADO
 Le **ErrorValueEnum** constante décrit les valeurs d’erreur ADO. Pour une liste complète de ces constantes énumérées, notamment les valeurs, consultez [annexe b : erreurs ADO](../../../ado/guide/appendixes/appendix-b-ado-errors.md). Cette section examine certaines des erreurs plus intéressantes et explique certaines situations peuvent déclencher ou des solutions pour résoudre le problème. Les deux le **ErrorValueEnum** constante et le nombre décimal positif court sont répertoriés.

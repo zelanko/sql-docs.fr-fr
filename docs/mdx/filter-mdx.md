@@ -22,12 +22,11 @@ caps.latest.revision: 34
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: On Demand
-ms.openlocfilehash: 729adc2230242798e67914907b6928ec7346b871
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 8bd5ca0e0c3d470a25b9d8e44a8b55712e469924
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="filter-mdx"></a>Filter (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -48,7 +47,7 @@ Filter(Set_Expression, Logical_Expression )
  *Logical_Expression*  
  Expression logique MDX (Multidimensional Expressions) valide qui prend la valeur True ou False.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Le **filtre** fonction évalue l’expression logique spécifiée par rapport à chaque tuple dans le jeu spécifié. La fonction retourne un jeu composé de chaque tuple dans le jeu spécifié où l’expression logique prend la valeur **true**. Si aucun tuple donnent comme résultat **true**, un ensemble vide est retourné.  
   
  Le **filtre** fonctionne de manière similaire à celle de la [IIf](../mdx/iif-mdx.md) (fonction). Le **IIf** fonction retourne uniquement une des deux options en fonction de l’évaluation d’une expression logique MDX, tandis que la **filtre** fonction retourne un jeu de tuples qui satisfait la condition de recherche spécifié. En effet, le **filtre** fonction exécute `IIf(Logical_Expression, Set_Expression.Current, NULL)` sur chaque tuple du jeu et retourne le jeu obtenu.  
@@ -98,6 +97,6 @@ WHERE ([Geography].[State-Province].x,
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Référence des fonctions MDX &#40; MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Référence des fonctions MDX & #40 ; MDX & #41 ;](../mdx/mdx-function-reference-mdx.md)  
   
   

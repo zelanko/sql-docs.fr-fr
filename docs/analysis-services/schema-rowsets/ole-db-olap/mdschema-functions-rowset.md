@@ -23,20 +23,20 @@ caps.latest.revision: 29
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: e8a03e34bf6ea617e650132f2a81fb065a014d80
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: c26528fd259dbb950d29b36271cd60be6bb05b5a
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mdschemafunctions-rowset"></a>Ensemble de lignes MDSCHEMA_FUNCTIONS
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Décrit les fonctions disponibles pour les applications clientes connectées à la base de données.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Décrit les fonctions disponibles pour les applications clientes connectées à la base de données.  
   
 ## <a name="rowset-columns"></a>Colonnes de l'ensemble de lignes  
  Le **MDSCHEMA_FUNCTIONS** ensemble de lignes contient les colonnes suivantes.  
   
-|Nom de colonne|Indicateur de type|Description|  
+|Nom de colonne|Indicateur de type| Description|  
 |-----------------|--------------------|-----------------|  
 |**NOM DE LA FONCTION**|**DBTYPE_WSTR**|Nom de la fonction.|  
 |**DESCRIPTION**|**DBTYPE_WSTR**|Description de la fonction.|  
@@ -48,7 +48,7 @@ ms.lasthandoff: 01/08/2018
 |**NOM_DLL**|**DBTYPE_WSTR**|(Facultatif) Nom de la classe dans l'assembly qui implémente la fonction définie par l'utilisateur.<br /><br /> Retourne **VT_NULL** pour les fonctions MDX.|  
 |**HELP_FILE**|**DBTYPE_WSTR**|(Facultatif) Nom du fichier qui contient la documentation d'aide pour la fonction définie par l'utilisateur.<br /><br /> Retourne **VT_NULL** pour les fonctions MDX.|  
 |**HELP_CONTEXT**|**DBTYPE_I4**|(Facultatif) Retourne l'ID du contexte d'aide pour cette fonction.|  
-|**OBJET**|**DBTYPE_WSTR**|(Facultatif) Nom générique de la classe de l'objet auquel s'applique une propriété. Par exemple, l’ensemble de lignes correspondant à l’élément < nom_niveau >. Membres de fonction retourne «**niveau**».<br /><br /> Retourne **VT_NULL** pour les fonctions définies par l’utilisateur, ou les fonctions MDX pas une propriété.|  
+|**OBJECT**|**DBTYPE_WSTR**|(Facultatif) Nom générique de la classe de l'objet auquel s'applique une propriété. Par exemple, l’ensemble de lignes correspondant à l’élément < nom_niveau >. Membres de fonction retourne «**niveau**».<br /><br /> Retourne **VT_NULL** pour les fonctions définies par l’utilisateur, ou les fonctions MDX pas une propriété.|  
 |**LÉGENDE**|**DBTYPE_WSTR**|Légende d'affichage pour la fonction.|  
   
  L’ensemble de lignes est trié sur **origine**, **nom_interface**, **nom_fonction**.  
@@ -58,12 +58,12 @@ ms.lasthandoff: 01/08/2018
   
 |Nom de colonne|Indicateur de type|État de la restriction|  
 |-----------------|--------------------|-----------------------|  
-|**NOM_LIBRAIRIE**|**DBTYPE_WSTR**|Facultatif.|  
-|**NOM_INTERFACE**|**DBTYPE_WSTR**|Facultatif.|  
-|**NOM DE LA FONCTION**|**DBTYPE_WSTR**|Facultatif.|  
-|**ORIGINE**|**DBTYPE_I4**|Facultatif.|  
+|**NOM_LIBRAIRIE**|**DBTYPE_WSTR**|Ce paramètre est facultatif.|  
+|**NOM_INTERFACE**|**DBTYPE_WSTR**|Ce paramètre est facultatif.|  
+|**NOM DE LA FONCTION**|**DBTYPE_WSTR**|Ce paramètre est facultatif.|  
+|**ORIGINE**|**DBTYPE_I4**|Ce paramètre est facultatif.|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Ensembles de lignes de schéma OLE DB pour OLAP](../../../analysis-services/schema-rowsets/ole-db-olap/ole-db-for-olap-schema-rowsets.md)  
+ [OLE DB pour OLAP Schema Rowsets](../../../analysis-services/schema-rowsets/ole-db-olap/ole-db-for-olap-schema-rowsets.md)  
   
   

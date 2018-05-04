@@ -21,19 +21,18 @@ caps.latest.revision: 28
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 1417fd747df92c84fe66e2c69996f57ab51875e1
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: bf316e56eeb7ad3b463ea73609d215364ae5a371
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="using-dimension-expressions"></a>Utilisation d'expressions de dimension
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Vous utilisez généralement des expressions de dimension et de hiérarchie lorsque vous passez des paramètres à des fonctions dans MDX (Multidimensional Expressions) pour retourner des membres, des jeux ou des tuples à partir d'une hiérarchie.  
   
- Les expressions de dimension peuvent être uniquement des expressions simples car elles sont des identificateurs d'objet. Consultez [Expressions &#40; MDX &#41; ](../mdx/expressions-mdx.md) pour une explication des expressions simples et complexes.  
+ Les expressions de dimension peuvent être uniquement des expressions simples car elles sont des identificateurs d'objet. Consultez [Expressions &#40;MDX&#41; ](../mdx/expressions-mdx.md) pour une explication des expressions simples et complexes.  
   
 ## <a name="dimension-expressions"></a>Expressions de dimension  
  Une expression de dimension contient un identificateur de dimension ou une fonction de dimension.  
@@ -71,9 +70,9 @@ ms.lasthandoff: 01/08/2018
   
  `FROM [Adventure Works]`  
   
- Un identificateur de hiérarchie apparaît sous la forme *Dimension_Name**.* *Hierarchy_Name* dans la notation BNF utilisée pour décrire des instructions MDX.  
+ Un identificateur de hiérarchie apparaît sous la forme *Dimension_Name **.** Hierarchy_Name* dans la notation BNF utilisée pour décrire des instructions MDX.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Expressions &#40; MDX &#41;](../mdx/expressions-mdx.md)  
+ [Expressions &#40;MDX&#41;](../mdx/expressions-mdx.md)  
   
   

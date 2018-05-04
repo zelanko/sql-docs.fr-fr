@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - compatibility [ODBC], SQLSTATE
 - backward compatibility [ODBC], SQLSTATE
@@ -21,12 +21,11 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 402d5b6c01142334ed38a73b96da9f0eb635f1c3
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 2e3f1dc1e8f0e8cf67ac97c33a7ab6b7137cdd7e
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlstate-mappings"></a>Mappages SQLSTATE
 Cette rubrique décrit les valeurs SQLSTATE pour ODBC 2. *x* et ODBC 3. *x*. Pour plus d’informations sur ODBC 3. *x* valeurs SQLSTATE, consultez [annexe a : les Codes d’erreur ODBC](../../../odbc/reference/appendixes/appendix-a-odbc-error-codes.md).  
@@ -35,7 +34,7 @@ Cette rubrique décrit les valeurs SQLSTATE pour ODBC 2. *x* et ODBC 3. *x*. Pou
   
  Lorsqu’une application ODBC 2. *x* application est mise à niveau vers une ODBC 3. *x* application, l’application doit être modifiée pour attendre ODBC 3. *x* SQLSTATE au lieu de l’API ODBC 2. *x* SQLSTATE. Le tableau suivant répertorie les ODBC 3. *x* SQLSTATE que chaque ODBC 2. *x* SQLSTATE est mappé à.  
   
- Lorsque l’attribut d’environnement SQL_ATTR_ODBC_VERSION est définie à SQL_OV_ODBC2, le pilote valide ODBC 2. *x* SQLSTATE plutôt que ODBC 3. *x* SQLSTATE lorsque **SQLGetDiagField** ou **SQLGetDiagRec** est appelée. Un mappage spécifique peut être déterminé en notant ODBC 2*.x* SQLSTATE dans la colonne 1 du tableau suivant qui correspond à la version ODBC 3. *x* SQLSTATE dans la colonne 2.  
+ Lorsque l’attribut d’environnement SQL_ATTR_ODBC_VERSION est définie à SQL_OV_ODBC2, le pilote valide ODBC 2. *x* SQLSTATE plutôt que ODBC 3. *x* SQLSTATE lorsque **SQLGetDiagField** ou **SQLGetDiagRec** est appelée. Un mappage spécifique peut être déterminé en notant ODBC 2 *.x* SQLSTATE dans la colonne 1 du tableau suivant qui correspond à la version ODBC 3. *x* SQLSTATE dans la colonne 2.  
   
 |ODBC 2. *x* SQLSTATE|ODBC 3. *x* SQLSTATE|Commentaires|  
 |-------------------------|-------------------------|--------------|  

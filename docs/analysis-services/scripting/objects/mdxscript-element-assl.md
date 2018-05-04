@@ -27,15 +27,15 @@ caps.latest.revision: 34
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 3219890a9583ff5f3c09882253e27de5506115ac
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 36f51acb4f8ab067d683a1ee21fd74cca41c1f74
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mdxscript-element-assl"></a>Élément MdxScript (ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Contient des informations sur un script MDX (Multidimensional Expressions) qui est associé à un [Cube](../../../analysis-services/scripting/objects/cube-element-assl.md) élément.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Contient des informations sur un script MDX (Multidimensional Expressions) qui est associé à un [Cube](../../../analysis-services/scripting/objects/cube-element-assl.md) élément.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -60,8 +60,8 @@ ms.lasthandoff: 01/08/2018
   
 |Caractéristique|Description|  
 |--------------------|-----------------|  
-|Type de données et longueur|None|  
-|Valeur par défaut|None|  
+|Type de données et longueur|Aucune|  
+|Valeur par défaut|Aucune|  
 |Cardinalité|0-n : élément facultatif pouvant apparaître plusieurs fois.|  
   
 ## <a name="element-relationships"></a>Relations entre les éléments  
@@ -71,12 +71,12 @@ ms.lasthandoff: 01/08/2018
 |Éléments parents|[MdxScripts](../../../analysis-services/scripting/collections/mdxscripts-element-assl.md)|  
 |Éléments enfants|[Annotations](../../../analysis-services/scripting/collections/annotations-element-assl.md), [CalculationProperties](../../../analysis-services/scripting/collections/calculationproperties-element-assl.md), [commandes](../../../analysis-services/scripting/collections/commands-element-assl.md), [CreatedTimestamp](../../../analysis-services/scripting/properties/createdtimestamp-element-assl.md), [DefaultScript](../../../analysis-services/scripting/properties/defaultscript-element-assl.md), [Description](../../../analysis-services/scripting/properties/description-element-assl.md), [ID](../../../analysis-services/scripting/properties/id-element-assl.md), [LastSchemaUpdate](../../../analysis-services/scripting/properties/lastschemaupdate-element-assl.md), [nom](../../../analysis-services/scripting/properties/name-element-assl.md)|  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  L'élément **DefaultScript** d'un script a par défaut la valeur **True** . Si vous affectez à l'élément **DefaultScript** la valeur **True** pour un script particulier, l'élément **DefaultScript** adopte la valeur **False** pour tous les autres scripts.  
   
  L’élément correspondant dans le modèle d’objet objets AMO (Analysis Management) est <xref:Microsoft.AnalysisServices.MdxScript>.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Objets &#40; ASSL &#41;](../../../analysis-services/scripting/objects/objects-assl.md)  
+ [Objets & #40 ; ASSL & #41 ;](../../../analysis-services/scripting/objects/objects-assl.md)  
   
   

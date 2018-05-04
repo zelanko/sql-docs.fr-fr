@@ -23,22 +23,22 @@ caps.latest.revision: 33
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 0529692c18cb33848bf74bd7ed2c2e64dcdebe74
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 0a8933c872bcc0947e8bff34cf3fbbc57394b9cf
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="discoverkeywords-rowset-xmla"></a>Ensemble de lignes DISCOVER_KEYWORDS (XMLA)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Retourne des informations sur les mots clés réservés par le [!INCLUDE[msCoName](../../../includes/msconame-md.md)] XML pour le fournisseur Analysis (XMLA).  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Retourne des informations sur les mots clés réservés par le fournisseur [!INCLUDE[msCoName](../../../includes/msconame-md.md)] XML for Analysis (XMLA).  
   
  Si vous appelez la méthode [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md) avec la valeur d'énumération **DISCOVER_KEYWORDS** dans l'élément [RequestType](../../../analysis-services/xmla/xml-elements-properties/requesttype-element-xmla.md) , la méthode **Discover** retourne l'ensemble de lignes **DISCOVER_KEYWORDS** .  
   
 ## <a name="rowset-columns"></a>Colonnes de l'ensemble de lignes  
  L'ensemble de lignes **DISCOVER_KEYWORDS** contient les colonnes suivantes.  
   
-|Nom de colonne|Indicateur de type|Longueur|Description|  
+|Nom de colonne|Indicateur de type|Longueur| Description|  
 |-----------------|--------------------|------------|-----------------|  
 |**Mot clé**|**DBTYPE_WSTR**||Liste de tous les mots clés réservés par un fournisseur.<br /><br /> Exemple : **AND**|  
   
@@ -49,10 +49,10 @@ ms.lasthandoff: 01/08/2018
   
 |Nom de colonne|Indicateur de type|État de la restriction|  
 |-----------------|--------------------|-----------------------|  
-|**Mot clé**|**DBTYPE_WSTR**|Facultatif.|  
+|**Mot clé**|**DBTYPE_WSTR**|Ce paramètre est facultatif.|  
   
 ## <a name="see-also"></a>Voir aussi  
  [XML for Analysis ensembles de lignes de schéma](../../../analysis-services/schema-rowsets/xml/xml-for-analysis-schema-rowsets.md)   
- [DISCOVER_LITERALS, ensemble de lignes](../../../analysis-services/schema-rowsets/xml/discover-literals-rowset.md)  
+ [Ensemble de lignes DISCOVER_LITERALS](../../../analysis-services/schema-rowsets/xml/discover-literals-rowset.md)  
   
   

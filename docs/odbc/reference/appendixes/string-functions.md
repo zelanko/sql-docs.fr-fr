@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - functions [ODBC], string functions
 - string functions [ODBC]
@@ -20,12 +20,11 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: bf8654f4851f2d0ed93437be884057112c26a968
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: a38b4c3ce271661373fb7b809fdf8c80e7ff19ec
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="string-functions"></a>Fonctions de chaîne
 Le tableau suivant répertorie les fonctions de manipulation de chaîne. Une application peut déterminer les fonctions de chaîne sont pris en charge par un pilote en appelant **SQLGetInfo** avec un *type d’information* de SQL_STRING_FUNCTIONS.  
@@ -64,5 +63,5 @@ Le tableau suivant répertorie les fonctions de manipulation de chaîne. Une app
 |**RTRIM (** *exp_chaîne* **)** (ODBC version 1.0)|Retourne les caractères de *exp_chaîne* avec des espaces de fin supprimés.|  
 |**SOUNDEX (** *exp_chaîne* **)** (ODBC 2.0)|Retourne une chaîne de caractères – dépendante de la source de données représentant le son des mots dans *exp_chaîne*. Par exemple, SQL Server retourne un code SOUNDEX de 4 chiffres ; Oracle retourne une représentation phonétique de chaque mot.|  
 |**ESPACE (** *nombre* **)** (ODBC 2.0)|Retourne une chaîne de caractères composée de *nombre* des espaces.|  
-|**SUBSTRING (** *exp_chaîne*, *Démarrer*, longueur**)** (ODBC version 1.0)|Retourne une chaîne de caractères qui est dérivée de *exp_chaîne*, en commençant à la position de caractère spécifiée par *Démarrer* pour *longueur* caractères.|  
+|**SUBSTRING (** *exp_chaîne*, *Démarrer*, longueur **)** (ODBC version 1.0)|Retourne une chaîne de caractères qui est dérivée de *exp_chaîne*, en commençant à la position de caractère spécifiée par *Démarrer* pour *longueur* caractères.|  
 |**UCASE (** *exp_chaîne* **)** (ODBC version 1.0)|Retourne une chaîne égale à celle de *exp_chaîne*, avec toutes les minuscules en majuscules.|

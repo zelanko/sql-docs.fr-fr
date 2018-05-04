@@ -1,16 +1,16 @@
 ---
-title: "Algorithme de série chronologique de Microsoft | Documents Microsoft"
-ms.custom: 
+title: Algorithme de série chronologique de Microsoft | Documents Microsoft
+ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - ARTXP
 - time series algorithms [Analysis Services]
@@ -21,20 +21,19 @@ helpviewer_keywords:
 - series [Analysis Services]
 - regression algorithms [Analysis Services]
 ms.assetid: 642297cc-f32a-499b-b26e-fdc7ee24361e
-caps.latest.revision: 
+caps.latest.revision: 75
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 27903370d69462107dffb0aecf56c4312f60a2d1
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 8e8373898f8764693ffaca258bcc4b1da0fe46fd
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="microsoft-time-series-algorithm"></a>Algorithme MTS (Microsoft Time Series)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-L’algorithme MTS ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series) fournit plusieurs algorithmes qui sont optimisés pour prévoir des valeurs continues, telles que les ventes de produits, dans le temps. Contrairement à d'autres algorithmes [!INCLUDE[msCoName](../../includes/msconame-md.md)] , tels que les arbres de décision, un modèle de série chronologique ne nécessite pas de colonnes supplémentaires avec de nouvelles informations comme entrée pour prédire une tendance. Un modèle de série chronologique peut prédire des tendances en fonction uniquement du jeu de données d'origine utilisé pour créer le modèle. Vous pouvez également ajouter de nouvelles données au modèle lorsque vous effectuez une prédiction et les incorporer automatiquement à l'analyse de tendances.  
+  L’algorithme MTS ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series) fournit plusieurs algorithmes qui sont optimisés pour prévoir des valeurs continues, telles que les ventes de produits, dans le temps. Contrairement à d'autres algorithmes [!INCLUDE[msCoName](../../includes/msconame-md.md)] , tels que les arbres de décision, un modèle de série chronologique ne nécessite pas de colonnes supplémentaires avec de nouvelles informations comme entrée pour prédire une tendance. Un modèle de série chronologique peut prédire des tendances en fonction uniquement du jeu de données d'origine utilisé pour créer le modèle. Vous pouvez également ajouter de nouvelles données au modèle lorsque vous effectuez une prédiction et les incorporer automatiquement à l'analyse de tendances.  
   
  Le diagramme suivant représente un modèle standard pour prévoir les ventes d'un produit dans quatre régions de ventes différentes dans le temps. Le modèle affiché dans le diagramme affiche des ventes pour chaque région représentée sous la forme de traits de couleur rouge, jaune, violette et bleue. Le trait de chaque région est constitué de deux parties :  
   
@@ -164,6 +163,6 @@ L’algorithme MTS ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Se
  [Parcourir un modèle à l’aide de la visionneuse de série Microsoft Time](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-time-series-viewer.md)   
  [Référence technique de Microsoft Time Series algorithme](../../analysis-services/data-mining/microsoft-time-series-algorithm-technical-reference.md)   
  [Exemples de requête de modèle de série de temps](../../analysis-services/data-mining/time-series-model-query-examples.md)   
- [Contenu du modèle d’exploration de données pour les modèles de série chronologique &#40; Analysis Services - Exploration de données &#41;](../../analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md)  
+ [Contenu du modèle d’exploration de données pour les modèles de série chronologique & #40 ; Analysis Services - Exploration de données & #41 ;](../../analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md)  
   
   

@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - parameter values [ODBC]
 ms.assetid: 13e5da79-b60c-48d0-b467-773f481ef2a4
@@ -19,12 +19,11 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 88b8ea3a21f7b2d0bd5790aad934e784b4ca3e87
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: b0e41f775ef6640f4f82aa16cea038becc305bf5
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="setting-parameter-values"></a>Définition des valeurs de paramètre
 Pour définir la valeur d’un paramètre, l’application définit simplement la valeur de la variable liée au paramètre. Il n’est pas important lorsque cette valeur est définie, tant qu’elle est définie avant l’exécution de l’instruction. L’application peut définir la valeur avant ou après la variable de liaison, et elle peut modifier la valeur autant de fois qu’il le souhaite. Lorsque l’instruction est exécutée, le pilote récupère simplement la valeur actuelle de la variable. Cela est particulièrement utile lors de l’exécution d’une instruction préparée plusieurs fois ; l’application définit de nouvelles valeurs pour certaines ou toutes les variables chaque fois que l’instruction est exécutée. Pour obtenir un exemple, consultez [exécution préparée](../../../odbc/reference/develop-app/prepared-execution-odbc.md), plus haut dans cette section.  

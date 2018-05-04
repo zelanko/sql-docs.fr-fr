@@ -29,15 +29,15 @@ caps.latest.revision: 15
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 363b89eddf7794174689c0d6df7805328c88eb70
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: a6480eec04a32ee76ee4cd83f8df096b2d18e879
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="type-element-xmla"></a>Élément Type XMLA
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]Détermine le type de traitement à effectuer par le [processus](../../../analysis-services/xmla/xml-elements-commands/process-element-xmla.md) élément.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
+  Détermine le type de traitement à effectuer par le [processus](../../../analysis-services/xmla/xml-elements-commands/process-element-xmla.md) élément.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -55,22 +55,22 @@ ms.lasthandoff: 01/08/2018
 |Caractéristique|Description|  
 |--------------------|-----------------|  
 |Type de données et longueur|Chaîne (énumération)|  
-|Valeur par défaut|None|  
-|Cardinalité|1-1 : élément requis qui apparaît une fois et une seule.|  
+|Valeur par défaut|Aucune|  
+|Cardinalité|1-1 : élément requis qui apparaît une fois et une seule.|  
   
 ## <a name="element-relationships"></a>Relations entre les éléments  
   
 |Relation|Élément|  
 |------------------|-------------|  
 |Éléments parents|[Traiter](../../../analysis-services/xmla/xml-elements-commands/process-element-xmla.md)|  
-|Éléments enfants|None|  
+|Éléments enfants|Aucune|  
   
-## <a name="remarks"></a>Notes   
- Pour plus d’informations sur les options de traitement disponibles pour les objets sur une instance de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], consultez [du traitement d’un modèle multidimensionnel &#40; Analysis Services &#41; ](../../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md).  
+## <a name="remarks"></a>Notes  
+ Pour plus d’informations sur les options de traitement disponibles pour les objets sur une instance de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], consultez [du traitement d’un modèle multidimensionnel &#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md).  
   
  La valeur de la **Type** élément est limitée à une des chaînes répertoriées dans le tableau suivant.  
   
-|Valeur|Description|  
+|Valeur| Description|  
 |-----------|-----------------|  
 |*ProcessFull*|Supprime toutes les données de l'objet affecté, puis traite l'objet affecté.|  
 |*ProcessAdd*|Ajoute de nouvelles données à l'objet affecté.|  
@@ -84,6 +84,6 @@ ms.lasthandoff: 01/08/2018
 |*ProcessClearStructureOnly*|Efface uniquement les données de l'objet affecté.|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Propriétés &#40; XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+ [Propriétés & #40 ; XMLA & #41 ;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

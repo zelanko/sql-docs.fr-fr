@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 apiname:
 - SQLServerDataSource.getConnection
 apilocation:
@@ -22,12 +22,11 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 8e6f4e2cca811b187a54a8e0c6cd09e2fd0926e2
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: f081005b22f2878abd0b7506183190d521611b95
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="getconnection-method-sqlserverdatasource"></a>Méthode getConnection (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +41,7 @@ ms.lasthandoff: 04/16/2018
 |[getConnection (java.lang.String, java.lang.String)](../../../connect/jdbc/reference/getconnection-method-java-lang-string-java-lang-string.md)|Tente d’établir une connexion avec les données source que ce [SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md) objet représente à l’aide du nom d’utilisateur et un mot de passe.|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Membres de SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   
+ [SQLServerDataSource, membres](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   
  [SQLServerDataSource, classe](../../../connect/jdbc/reference/sqlserverdatasource-class.md)  
   
   

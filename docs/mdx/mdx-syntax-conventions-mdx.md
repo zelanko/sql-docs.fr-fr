@@ -21,12 +21,11 @@ caps.latest.revision: 31
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: c82d4e7bc8f39168a963cc5b11cbafe410eb6f2a
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 8c8fc09d950ac66f7bf4096f96ddb2104cc5aca0
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mdx-syntax-conventions-mdx"></a>Conventions de syntaxe MDX (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -39,10 +38,10 @@ ms.lasthandoff: 01/08/2018
 |&#124; (barre verticale)|Sépare les éléments de syntaxe indiqués entre crochets ou accolades. Vous ne pouvez sélectionner qu'un seul de ces éléments.|  
 |`[ ]` (crochets)|Indique des éléments de syntaxe facultatifs. Ne tapez pas les crochets.|  
 |[,] ...n|Indique que l'élément précédent peut être répété de façon illimitée. Les éléments sont parfois séparés par des virgules.|  
-|\<étiquette > :: =|Indique le nom d'un bloc de syntaxe. Cette convention est utilisée pour regrouper et étiqueter des parties de syntaxe longue ou une unité de syntaxe pouvant apparaître à plusieurs endroits au sein d'une instruction. Chaque emplacement dans lequel le bloc de syntaxe peut être utilisé est signalé par une étiquette encadrée de chevrons : \<étiquette >.|  
+|\<étiquette> ::=|Indique le nom d'un bloc de syntaxe. Cette convention est utilisée pour regrouper et étiqueter des parties de syntaxe longue ou une unité de syntaxe pouvant apparaître à plusieurs endroits au sein d'une instruction. Chaque emplacement dans lequel le bloc de syntaxe peut être utilisé est signalé par une étiquette encadrée de chevrons : \<étiquette >.|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Référence du langage MDX &#40; MDX &#41;](../mdx/mdx-language-reference-mdx.md)  
+ [Référence du langage MDX & #40 ; MDX & #41 ;](../mdx/mdx-language-reference-mdx.md)  
   
   
 

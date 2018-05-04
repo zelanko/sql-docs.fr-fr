@@ -1,31 +1,30 @@
 ---
-title: "Stockage de chaîne et classement dans les modèles tabulaires | Documents Microsoft"
-ms.custom: 
+title: Stockage de chaîne et classement dans les modèles tabulaires | Documents Microsoft
+ms.custom: ''
 ms.date: 02/21/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 8516f0ad-32ee-4688-a304-e705143642ca
-caps.latest.revision: 
+caps.latest.revision: 12
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: f84b7fb415372066b820119280dd3728d340322d
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
-ms.translationtype: MT
+ms.openlocfilehash: f61c3effcc3e892e39a239485b2d9781fbd30577
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="string-storage-and-collation-in-tabular-models"></a>Stockage de chaînes et de classement dans les modèles tabulaires
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-Les chaînes (valeurs texte) sont stockées dans un format fortement compressé dans les modèles tabulaires ; en raison de cette compression, vous pouvez obtenir des résultats inattendus lorsque vous récupérez des chaînes entières ou partielles. En outre, comme les paramètres régionaux et les classements de chaîne sont hérités hiérarchiquement de l'objet parent le plus proche, si le langage de chaîne n'est pas défini explicitement, les paramètres régionaux et le classement du parent peuvent affecter la façon dont chaque chaîne est stockée et si la chaîne doit être unique ou combinée avec des chaînes semblables tel que le défini le classement parent.  
+  Les chaînes (valeurs texte) sont stockées dans un format fortement compressé dans les modèles tabulaires ; en raison de cette compression, vous pouvez obtenir des résultats inattendus lorsque vous récupérez des chaînes entières ou partielles. En outre, comme les paramètres régionaux et les classements de chaîne sont hérités hiérarchiquement de l'objet parent le plus proche, si le langage de chaîne n'est pas défini explicitement, les paramètres régionaux et le classement du parent peuvent affecter la façon dont chaque chaîne est stockée et si la chaîne doit être unique ou combinée avec des chaînes semblables tel que le défini le classement parent.  
   
  Cet article décrit le mécanisme par lequel les chaînes sont compressées et stockées et fournit des exemples d’utilisation du classement et du langage affectent les résultats des formules de texte dans les modèles tabulaires.  
   

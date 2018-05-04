@@ -22,12 +22,11 @@ caps.latest.revision: 39
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: f7eb644b085cbc5686a91988fc98ada9ee2257ab
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 06300993d36eb81c6db93e656a7d9ea4cf6e9ff9
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="predictcaselikelihood-dmx"></a>PredictCaseLikelihood (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -54,7 +53,7 @@ PredictCaseLikelihood([NORMALIZED|NONNORMALIZED])
 ## <a name="return-type"></a>Type de retour  
  Nombre à virgule flottante double précision compris entre 0 et 1. Un nombre plus proche de 1 indique que le cas a une probabilité plus élevée de se produire dans ce modèle. Un nombre plus proche de 0 indique qu'il est moins probable que le cas se produise dans ce modèle.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Par défaut, le résultat de la **PredictCaseLikelihood** fonction est normalisée. Les valeurs normalisées sont généralement plus utiles lorsque le nombre d'attributs d'un cas augmente et que les différences entre les probabilités brutes de deux cas deviennent beaucoup moins importantes.  
   
  L'équation suivante est utilisée pour calculer les valeurs normalisées pour des valeurs x et y données :  
@@ -95,8 +94,8 @@ NATURAL PREDICTION JOIN
   
 ## <a name="see-also"></a>Voir aussi  
  [Algorithmes d’exploration de données &#40; Analysis Services - Exploration de données &#41;](../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [Les Extensions d’exploration de données &#40; DMX &#41; Référence de fonction](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [Fonctions &#40; DMX &#41;](../dmx/functions-dmx.md)   
- [Fonctions de prédiction générales &#40; DMX &#41;](../dmx/general-prediction-functions-dmx.md)  
+ [Data Mining Extensions &#40;DMX&#41; référence de fonction](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [Fonctions &#40;DMX&#41;](../dmx/functions-dmx.md)   
+ [Fonctions de prédiction générales &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)  
   
   

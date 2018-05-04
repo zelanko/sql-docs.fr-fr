@@ -22,31 +22,30 @@ caps.latest.revision: 31
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 797c2ebeb5e6f721973cbb47ba3e3979c04175d3
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: a9201f2dded1df96a050e8f9e9fe7c52652543cf
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="dmx-statements---data-definition"></a>Instructions DMX - définition de données 
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Le tableau ci-dessous affiche la liste des instructions qui font partie du langage de définition de données (DDL) d'exploration de données dans le langage DMX (Data Mining Extensions).  
   
-|.|Description|  
+|.| Description|  
 |---------------|-----------------|  
-|[CRÉER UNE STRUCTURE D’EXPLORATION DE DONNÉES &#40; DMX &#41;](../dmx/create-mining-structure-dmx.md)|Crée une structure d'exploration de données dans la base de données.|  
-|[MODIFIER LA STRUCTURE D’EXPLORATION DE DONNÉES &#40; DMX &#41;](../dmx/alter-mining-structure-dmx.md)|Ajoute un modèle d'exploration de données à une structure d'exploration de données existante.|  
-|[CRÉER LE MODÈLE D’EXPLORATION DE DONNÉES &#40; DMX &#41;](../dmx/create-mining-model-dmx.md)|Crée une structure et un modèle d'exploration de données dans la base de données.|  
-|[SUPPRIMER LES MODÈLES D’EXPLORATION DE DONNÉES &#40; DMX &#41;](../dmx/drop-mining-model-dmx.md)|Supprime un modèle d'exploration de données de la base de données.|  
-|[SUPPRIMER LA STRUCTURE D’EXPLORATION DE DONNÉES &#40; DMX &#41;](../dmx/drop-mining-structure-dmx.md)|Supprime une structure d'exploration de données de la base de données.|  
-|[EXPORTATION &#40; DMX &#41;](../dmx/export-dmx.md)|Exporte un modèle ou une structure d'exploration de données et ses objets associés dans un fichier .abf.|  
-|[IMPORTATION &#40; DMX &#41;](../dmx/import-dmx.md)|Importe un modèle ou une structure d'exploration de données et ses objets associés à partir d'un fichier .abf.|  
-|[SELECT INTO &#40; DMX &#41;](../dmx/select-into-dmx.md)|Crée une copie d'un modèle d'exploration de données existant.|  
+|[CRÉER UNE STRUCTURE D’EXPLORATION DE DONNÉES & #40 ; DMX & #41 ;](../dmx/create-mining-structure-dmx.md)|Crée une structure d'exploration de données dans la base de données.|  
+|[ALTER MINING STRUCTURE &AMP;#40;DMX&AMP;#41;](../dmx/alter-mining-structure-dmx.md)|Ajoute un modèle d'exploration de données à une structure d'exploration de données existante.|  
+|[CRÉER LE MODÈLE D’EXPLORATION DE &AMP;#40;DMX&AMP;#41;](../dmx/create-mining-model-dmx.md)|Crée une structure et un modèle d'exploration de données dans la base de données.|  
+|[SUPPRIMER LES MODÈLES D’EXPLORATION DE DONNÉES & #40 ; DMX & #41 ;](../dmx/drop-mining-model-dmx.md)|Supprime un modèle d'exploration de données de la base de données.|  
+|[DROP MINING STRUCTURE &AMP;#40;DMX&AMP;#41;](../dmx/drop-mining-structure-dmx.md)|Supprime une structure d'exploration de données de la base de données.|  
+|[EXPORTATION & #40 ; DMX & #41 ;](../dmx/export-dmx.md)|Exporte un modèle ou une structure d'exploration de données et ses objets associés dans un fichier .abf.|  
+|[IMPORTATION & #40 ; DMX & #41 ;](../dmx/import-dmx.md)|Importe un modèle ou une structure d'exploration de données et ses objets associés à partir d'un fichier .abf.|  
+|[SELECT INTO &AMP;#40;DMX&AMP;#41;](../dmx/select-into-dmx.md)|Crée une copie d'un modèle d'exploration de données existant.|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Les Extensions d’exploration de données &#40; DMX &#41; Instructions de Manipulation de données](../dmx/dmx-statements-data-manipulation.md)   
- [Guide de référence des instructions DMX &#40;Data Mining Extensions&#41;](../dmx/data-mining-extensions-dmx-statements.md)  
+ [Data Mining Extensions &#40;DMX&#41; instructions de Manipulation de données](../dmx/dmx-statements-data-manipulation.md)   
+ [Les Extensions d’exploration de données & #40 ; DMX & #41 ; Référence des instructions](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

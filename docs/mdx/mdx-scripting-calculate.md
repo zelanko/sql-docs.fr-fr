@@ -22,12 +22,11 @@ caps.latest.revision: 42
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: a7bc4b283d3874b68c4bbe532bc32dcf4014896f
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 9be6ad404ade5784ab86845b90cda51b2b939bdf
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mdx-scripting---calculate"></a>Écriture de scripts MDX - calculer
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -42,19 +41,19 @@ CALCULATE
 ```  
   
 ## <a name="arguments"></a>Arguments  
- None  
+ Aucun  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  L'instruction CALCULATE est automatiquement incluse en tant que première instruction d'un script MDX d'un cube lorsque vous créez un cube à l'aide de [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. Elle indique à chaque cellule au sein du cube de s'agréger à partir de cellules de granularité plus faible. Après avoir agrégé une cellule, si vous remplissez par la suite les cellules à plus faible granularité à l'aide d'expressions, cette opération aura une incidence sur la valeur agrégée des cellules à plus forte granularité. Cette agrégation est quasiment toujours souhaitable mais vous pouvez la supprimer ou forcer l'exécution d'autres instructions avant cette instruction.  
   
- L'instruction CALCULATE ne peut être intégrée à un sous-cube imbriqué au sein du script MDX. Un sous-cube imbriqué se définit à l'aide de l'instruction SCOPE. Pour plus d’informations sur l’instruction SCOPE, consultez [instruction SCOPE &#40; MDX &#41; ](../mdx/mdx-scripting-scope.md).  
+ L'instruction CALCULATE ne peut être intégrée à un sous-cube imbriqué au sein du script MDX. Un sous-cube imbriqué se définit à l'aide de l'instruction SCOPE. Pour plus d’informations sur l’instruction SCOPE, consultez [instruction SCOPE &#40;MDX&#41;](../mdx/mdx-scripting-scope.md).  
   
 > [!NOTE]  
 >  Les membres calculés ne sont pas agrégés.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Instructions de script MDX &#40; MDX &#41;](../mdx/mdx-scripting-statements-mdx.md)   
- [Principes de base de script MDX &#40; Analysis Services &#41;](../analysis-services/multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services.md)   
+ [Instructions de script MDX &#40;MDX&#41;](../mdx/mdx-scripting-statements-mdx.md)   
+ [Principes de base de script MDX & #40 ; Analysis Services & #41 ;](../analysis-services/multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services.md)   
  [Définir des attributions et d’autres commandes de script](../analysis-services/multidimensional-models/define-assignments-and-other-script-commands.md)  
   
   

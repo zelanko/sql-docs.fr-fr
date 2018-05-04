@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - ODBC desktop database drivers [ODBC]
 - desktop database drivers [ODBC]
@@ -20,12 +20,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: cbf1441bb5aa322f008ee073f414cf2327ffa509
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: a3f02a190814a3aa46794a97f1948564f7fae203
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="index-name-limitations"></a>Limitations de nom d’index
 Lorsque le pilote Paradox est utilisé, un index principal doit avoir le même nom que la table sur laquelle il est défini. Tout autre index unique ou non unique doit avoir le même nom que la table sur laquelle ils sont définis.

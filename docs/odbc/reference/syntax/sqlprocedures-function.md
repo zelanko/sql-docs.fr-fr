@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 apiname:
 - SQLProcedures
 apilocation:
@@ -26,12 +26,11 @@ caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 5420d0adf427a95dec7cbfe224d4b77621c9a5d1
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: daec499cca74ef63978b3eede0216e192435bdaa
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlprocedures-function"></a>Fonction SQLProcedures
 **Mise en conformité**  
@@ -121,9 +120,9 @@ SQLRETURN SQLProcedures(
 > [!NOTE]  
 >  **SQLProcedures** peut ne pas retourner toutes les procédures. Applications peuvent utiliser toute procédure valide, indépendamment de si elle est retournée par **SQLProcedures**.  
   
- Les colonnes suivantes ont été renommés pour ODBC 3*.x*. Les changements de nom de colonne n’affectent pas la compatibilité descendante, car les applications lier par numéro de colonne.  
+ Les colonnes suivantes ont été renommés pour ODBC 3 *.x*. Les changements de nom de colonne n’affectent pas la compatibilité descendante, car les applications lier par numéro de colonne.  
   
-|Colonne de ODBC 2.0|ODBC 3*.x* colonne|  
+|Colonne de ODBC 2.0|ODBC 3 *.x* colonne|  
 |---------------------|-----------------------|  
 |PROCEDURE_QUALIFIER|PROCEDURE_CAT|  
 |PROCÉDURE _OWNER|PROCÉDURE _SCHEM|  

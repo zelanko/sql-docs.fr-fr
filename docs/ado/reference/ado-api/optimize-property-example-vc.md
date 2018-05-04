@@ -21,12 +21,11 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: e4cceefba08de84b95e7563daeddb32a6c6ecc8d
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 7e986ec8517322f76bd421ab9b7071ffc464079e
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="optimize-property-example-vc"></a>Optimiser l’exemple de propriété (VC ++)
 Cet exemple illustre la [champ](../../../ado/reference/ado-api/field-object.md) objet dynamique **optimiser** propriété. Le **zip** champ le **auteurs** de table dans le **Pubs** base de données n’est pas indexée. Définissant le [optimiser](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md) propriété **True** sur la **zip** champ autorise ADO pour créer un index qui améliore les performances de la [trouver](../../../ado/reference/ado-api/find-method-ado.md)(méthode).  

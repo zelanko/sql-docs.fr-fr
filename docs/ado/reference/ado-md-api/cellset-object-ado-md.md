@@ -22,12 +22,11 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: ae855ee5770aec297cabfe41f6a0eaf3c86b9be6
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 2f88abeee11fd171254d9019097abbd0680ee45d
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cellset-object-ado-md"></a>Cellset, objet (ADO MD)
 Représente les résultats d’une requête multidimensionnelle. Il est une collection de cellules sélectionnées à partir de cubes ou d’autres ensembles de cellules.  

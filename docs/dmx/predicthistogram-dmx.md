@@ -22,12 +22,11 @@ caps.latest.revision: 34
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: b967498b2ea2cf742eca67c8557230ed80c78055
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 2c06d117d2abd0fc988f5d5b497e588910bd744a
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="predicthistogram-dmx"></a>PredictHistogram (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -47,7 +46,7 @@ PredictHistogram(<scalar column reference> | <cluster column reference>)
 ## <a name="return-type"></a>Type de retour  
  Table.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Un histogramme génère des colonnes statistiques. La structure de colonne de l’histogramme retourné dépend du type de référence de colonne qui est utilisée avec la **PredictHistogram** (fonction).  
   
 ## <a name="scalar-columns"></a>Colonnes scalaires  
@@ -61,11 +60,11 @@ PredictHistogram(<scalar column reference> | <cluster column reference>)
   
 -   **$ProbabilityVariance**  
   
-     [!INCLUDE[msCoName](../includes/msconame-md.md)]algorithmes d’exploration de données ne gèrent pas **$ProbabilityVariance**. Cette colonne contient toujours 0 pour les algorithmes [!INCLUDE[msCoName](../includes/msconame-md.md)].  
+     [!INCLUDE[msCoName](../includes/msconame-md.md)] algorithmes d’exploration de données ne gèrent pas **$ProbabilityVariance**. Cette colonne contient toujours 0 pour les algorithmes [!INCLUDE[msCoName](../includes/msconame-md.md)].  
   
 -   **$ProbabilityStdev**  
   
-     [!INCLUDE[msCoName](../includes/msconame-md.md)]algorithmes d’exploration de données ne gèrent pas **$ProbabilityStdev**. Cette colonne contient toujours 0 pour les algorithmes [!INCLUDE[msCoName](../includes/msconame-md.md)].  
+     [!INCLUDE[msCoName](../includes/msconame-md.md)] algorithmes d’exploration de données ne gèrent pas **$ProbabilityStdev**. Cette colonne contient toujours 0 pour les algorithmes [!INCLUDE[msCoName](../includes/msconame-md.md)].  
   
 -   **$AdjustedProbability**  
   
@@ -98,16 +97,16 @@ NATURAL PREDICTION JOIN
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Cluster &#40; DMX &#41;](../dmx/cluster-dmx.md)   
- [ClusterProbability &#40; DMX &#41;](../dmx/clusterprobability-dmx.md)   
- [PredictAdjustedProbability &#40; DMX &#41;](../dmx/predictadjustedprobability-dmx.md)   
- [PredictProbability &#40; DMX &#41;](../dmx/predictprobability-dmx.md)   
- [PredictStdev &#40; DMX &#41;](../dmx/predictstdev-dmx.md)   
- [PredictSupport &#40; DMX &#41;](../dmx/predictsupport-dmx.md)   
- [PredictVariance &#40; DMX &#41;](../dmx/predictvariance-dmx.md)   
+ [Cluster &#40;DMX&#41;](../dmx/cluster-dmx.md)   
+ [ClusterProbability &#40;DMX&#41;](../dmx/clusterprobability-dmx.md)   
+ [PredictAdjustedProbability &#40;DMX&#41;](../dmx/predictadjustedprobability-dmx.md)   
+ [PredictProbability &#40;DMX&#41;](../dmx/predictprobability-dmx.md)   
+ [PredictStdev &#40;DMX&#41;](../dmx/predictstdev-dmx.md)   
+ [PredictSupport &#40;DMX&#41;](../dmx/predictsupport-dmx.md)   
+ [PredictVariance &#40;DMX&#41;](../dmx/predictvariance-dmx.md)   
  [Algorithmes d’exploration de données &#40; Analysis Services - Exploration de données &#41;](../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [Les Extensions d’exploration de données &#40; DMX &#41; Référence de fonction](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [Fonctions &#40; DMX &#41;](../dmx/functions-dmx.md)   
- [Fonctions de prédiction générales &#40; DMX &#41;](../dmx/general-prediction-functions-dmx.md)  
+ [Data Mining Extensions &#40;DMX&#41; référence de fonction](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [Fonctions &#40;DMX&#41;](../dmx/functions-dmx.md)   
+ [Fonctions de prédiction générales &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)  
   
   

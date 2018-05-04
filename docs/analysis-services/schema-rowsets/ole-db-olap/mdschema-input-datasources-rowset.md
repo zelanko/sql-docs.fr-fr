@@ -23,20 +23,20 @@ caps.latest.revision: 30
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: a810fef41d402cb35d9e6e3c62120f09b0c6bae4
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: e256ec44816db43f61c332a76942d27f63cb676b
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mdschemainputdatasources-rowset"></a>Ensemble de lignes MDSCHEMA_INPUT_DATASOURCES
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Décrit les sources de données définies dans la base de données.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Décrit les sources de données définies dans la base de données.  
   
 ## <a name="rowset-columns"></a>Colonnes de l'ensemble de lignes  
  L'ensemble de lignes **MDSCHEMA_INPUT_DATASOURCES** contient les colonnes suivantes.  
   
-|Nom de colonne|Indicateur de type|Longueur|Description|  
+|Nom de colonne|Indicateur de type|Longueur| Description|  
 |-----------------|--------------------|------------|-----------------|  
 |**CATALOG_NAME**|**DBTYPE_WSTR**||Nom du catalogue auquel appartient cette source de données.|  
 |**SCHEMA_NAME**|**DBTYPE_WSTR**||Non pris en charge.|  
@@ -54,12 +54,12 @@ ms.lasthandoff: 01/08/2018
   
 |Nom de colonne|Indicateur de type|État de la restriction|  
 |-----------------|--------------------|-----------------------|  
-|**CATALOG_NAME**|**DBTYPE_WSTR**|Facultatif.|  
-|**SCHEMA_NAME**|**DBTYPE_WSTR**|Facultatif.|  
-|**DATASOURCE_NAME**|**DBTYPE_WSTR**|Facultatif.|  
-|**DATASOURCE_TYPE**|**DBTYPE_WSTR**|Facultatif.|  
+|**CATALOG_NAME**|**DBTYPE_WSTR**|Ce paramètre est facultatif.|  
+|**SCHEMA_NAME**|**DBTYPE_WSTR**|Ce paramètre est facultatif.|  
+|**DATASOURCE_NAME**|**DBTYPE_WSTR**|Ce paramètre est facultatif.|  
+|**DATASOURCE_TYPE**|**DBTYPE_WSTR**|Ce paramètre est facultatif.|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Ensembles de lignes de schéma OLE DB pour OLAP](../../../analysis-services/schema-rowsets/ole-db-olap/ole-db-for-olap-schema-rowsets.md)  
+ [OLE DB pour OLAP Schema Rowsets](../../../analysis-services/schema-rowsets/ole-db-olap/ole-db-for-olap-schema-rowsets.md)  
   
   

@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data types [ODBC], column size
 - size of data types [ODBC]
@@ -22,12 +22,11 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 2178697aef549d86fedfa3d4bb70c8b45ba1f68e
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 5c0f4111b758421dd03be3489e7da82d78e8f181
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="column-size"></a>Taille de la colonne
 La taille de colonne (ou paramètre) des types de données numérique est définie en tant que le nombre maximal de chiffres utilisés par le type de données de la colonne ou du paramètre ou la précision des données. Pour les types de caractères, il s’agit la longueur en caractères des données ; pour les types de données binaires, taille de la colonne est définie comme la longueur en octets des données. Pour l’heure, timestamp et tous les types d’intervalle, il s’agit du nombre de caractères dans la représentation sous forme de caractères de ces données. La taille de colonne définie pour chaque type de données SQL concis est indiquée dans le tableau suivant.  

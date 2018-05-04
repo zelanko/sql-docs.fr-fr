@@ -1,33 +1,19 @@
 ---
-title: "Migration d’ADO MD vers ADOMD.NET | Documents Microsoft"
-ms.custom: 
-ms.date: 02/14/2018
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- ADOMD.NET, migrating to
-- migrating ADO MD to ADOMD.NET
-- ADO MD migration [ADOMD.NET]
-ms.assetid: 8c760db3-c475-468e-948d-e5f599d985ad
-caps.latest.revision: 
-author: Minewiskan
+title: Migration d’ADO MD vers ADOMD.NET | Documents Microsoft
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: adomd
+ms.topic: article
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 5cfe7226ee90f7333a5a80abcc0590212b15576e
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: dc5c88301ac6d777372c66a3e702710ae45b7177
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="migrating-from-ado-md-to-adomdnet"></a>Migration d'ADO MD vers ADOMD.NET
   La bibliothèque ADOMD.NET est semblable à la bibliothèque ADO MD (ActiveX Data Objects Multidimensional), extension de la bibliothèque ADO (ActiveX Data Objects) utilisée pour accéder aux données multidimensionnelles dans les applications clientes COM (Component Object Model). ADO MD facilite l'accès aux données multidimensionnelles à partir de langages non managés tels que C++ et [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic. ADOMD.NET facilite l'accès aux données analytiques (multidimensionnelles et d'exploration de données) à partir de langages managés tels que [!INCLUDE[msCoName](../../includes/msconame-md.md)] C# et [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic .NET. En outre, ADOMD.NET fournit un modèle objet de métadonnées amélioré.  

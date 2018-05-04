@@ -27,15 +27,15 @@ caps.latest.revision: 37
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 77d6f65f6214f83b93bd6ba8e5c41a984cc342e0
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 8e6bbbc680dccb5c00be2ec349b80f7ee881b9ee
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="attributehierarchyoptimizedstate-element-assl"></a>Élément AttributeHierarchyOptimizedState (ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Détermine le niveau d’optimisation appliqué à la hiérarchie d’attribut.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Détermine le niveau d'optimisation appliqué à la hiérarchie d'attribut.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -55,19 +55,19 @@ ms.lasthandoff: 01/08/2018
 |--------------------|-----------------|  
 |Type de données et longueur|Chaîne (énumération)|  
 |Valeur par défaut|*FullyOptimized*|  
-|Cardinalité|0-1 : élément facultatif qui peut apparaître une fois et une seule.|  
+|Cardinalité|0-1: élément facultatif qui peut apparaître une fois et une seule.|  
   
 ## <a name="element-relationships"></a>Relations entre les éléments  
   
 |Relation|Élément|  
 |------------------|-------------|  
 |Élément parent|[CubeAttribute](../../../analysis-services/scripting/data-type/cubeattribute-data-type-assl.md), [DimensionAttribute](../../../analysis-services/scripting/data-type/dimensionattribute-data-type-assl.md)|  
-|Éléments enfants|None|  
+|Éléments enfants|Aucune|  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  La valeur de cet élément est limitée à l'une des chaînes du tableau suivant.  
   
-|Valeur|Description|  
+|Valeur| Description|  
 |-----------|-----------------|  
 |*FullyOptimized*|L'instance construit des index pour la hiérarchie d'attribut afin d'augmenter les performances des requêtes.|  
 |*NotOptimized*|Aucun index supplémentaire n'est construit par l'instance.|  
@@ -75,6 +75,6 @@ ms.lasthandoff: 01/08/2018
  L’énumération qui correspond aux valeurs autorisées pour **AttributeHierarchyOptimizedState** dans l’objet d’objets AMO (Analysis Management) est modèle <xref:Microsoft.AnalysisServices.OptimizationType>. Les éléments qui correspondent aux parents de **AttributeHierarchyOptimizedState** dans le modèle objet AMO sont <xref:Microsoft.AnalysisServices.CubeAttribute> et <xref:Microsoft.AnalysisServices.DimensionAttribute>.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Propriétés &#40; ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
+ [Propriétés & #40 ; ASSL & #41 ;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   

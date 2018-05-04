@@ -22,12 +22,11 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 12814f0e38eb8f1e44513478e66e5868010e6c22
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 50fa6ab8e1481bd80413ba32a77a9c865ae0d8fb
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="procedure-object-adox"></a>Objet Procedure (ADOX)
 Représente une procédure stockée. Lorsqu’il est utilisé conjointement avec ADO [commande](../../../ado/reference/ado-api/command-object-ado.md) objet, le **procédure** objet peut être utilisé pour l’ajout, suppression ou modification des procédures stockées.  

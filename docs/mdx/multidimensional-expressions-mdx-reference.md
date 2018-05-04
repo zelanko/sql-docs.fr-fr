@@ -26,12 +26,11 @@ caps.latest.revision: 43
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: On Demand
-ms.openlocfilehash: f0391b6ddf2e87a8170e4271ab2082b424baff34
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: de53db87ba350d839b68bab46ae28c0613e478a2
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="multidimensional-expressions-mdx-reference"></a>Référence MDX (Multidimensional Expressions)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -39,14 +38,14 @@ ms.lasthandoff: 01/08/2018
     
 ## <a name="in-this-section"></a>Dans cette section  
   
-|Rubrique|Description|  
+|Rubrique| Description|  
 |-----------|-----------------|  
-|[Éléments de syntaxe MDX &#40; MDX &#41;](../mdx/mdx-syntax-elements-mdx.md)|Décrit les divers éléments de syntaxe disponibles dans le langage MDX pour les expressions, instructions et scripts MDX.|  
-|[Référence du langage MDX &#40; MDX &#41;](../mdx/mdx-language-reference-mdx.md)|Décrit les instructions, opérateurs et fonctions définissant le langage MDX.|  
+|[Éléments de syntaxe MDX &#40;MDX&#41;](../mdx/mdx-syntax-elements-mdx.md)|Décrit les divers éléments de syntaxe disponibles dans le langage MDX pour les expressions, instructions et scripts MDX.|  
+|[Référence du langage MDX & #40 ; MDX & #41 ;](../mdx/mdx-language-reference-mdx.md)|Décrit les instructions, opérateurs et fonctions définissant le langage MDX.|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Interrogation de données multidimensionnelles avec MDX](../analysis-services/multidimensional-models/mdx/querying-multidimensional-data-with-mdx.md)   
- [Analysis Services Scripting Language &#40; ASSL de XMLA &#41;](../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md)   
+ [Analysis Services Scripting Language &#40;ASSL de XMLA&#41;](../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md)   
  [La récupération des données à partir d’une Source de données analytiques](../analysis-services/multidimensional-models-adomd-net-client/retrieving-data-from-an-analytical-data-source.md)   
  [Définir des attributions et d’autres commandes de script](../analysis-services/multidimensional-models/define-assignments-and-other-script-commands.md)  
   

@@ -27,15 +27,15 @@ caps.latest.revision: 34
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 7560b3ce0fe03700f73be4d0ef34817c03619950
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: f55d756683b882ca552a6e71c726166b3606fda3
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="defaultscript-element-assl"></a>Élément DefaultScript (ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Identifie la valeur par défaut [MdxScript](../../../analysis-services/scripting/objects/mdxscript-element-assl.md) élément dans le [MdxScripts](../../../analysis-services/scripting/collections/mdxscripts-element-assl.md) collection.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Identifie la valeur par défaut [MdxScript](../../../analysis-services/scripting/objects/mdxscript-element-assl.md) élément dans le [MdxScripts](../../../analysis-services/scripting/collections/mdxscripts-element-assl.md) collection.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -54,21 +54,21 @@ ms.lasthandoff: 01/08/2018
 |--------------------|-----------------|  
 |Type de données et longueur|Booléen|  
 |Valeur par défaut|**True**|  
-|Cardinalité|0-1 : élément facultatif qui peut apparaître une fois et une seule.|  
+|Cardinalité|0-1: élément facultatif qui peut apparaître une fois et une seule.|  
   
 ## <a name="element-relationships"></a>Relations entre les éléments  
   
 |Relation|Élément|  
 |------------------|-------------|  
 |Éléments parents|[MdxScript](../../../analysis-services/scripting/objects/mdxscript-element-assl.md)|  
-|Éléments enfants|None|  
+|Éléments enfants|Aucune|  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  L'attribution à **DefaultScript** de la valeur **True** pour un script affecte à **DefaultScript** la valeur **False** pour tous les autres éléments **MdxScript** de la collection **MdxScripts** .  
   
  L’élément qui correspond au parent de **DefaultScript** dans l’objet d’objets AMO (Analysis Management) est modèle <xref:Microsoft.AnalysisServices.MdxScript>.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Propriétés &#40; ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
+ [Propriétés & #40 ; ASSL & #41 ;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   

@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - trace files [ODBC]
 - tracing options [ODBC], trace files
@@ -20,16 +20,15 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: bb72a0fb16c53ebc3627284855bc442bf0b7bd14
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: a5c6c58e297e862d0e2241fe216dc7eb82bd4238
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="trace-file"></a>Fichier de trace
 Une application spécifie le fichier de trace en définissant le **TraceFile** mot clé dans l’entrée de Registre Odbc.ini ou en appelant **SQLSetConnectAttr** avec l’attribut de connexion SQL_ATTR_TRACEFILE. Si le fichier n’existe pas lorsque le traçage est activé, le Gestionnaire de pilote va créer le fichier. Chaque application doit avoir son propre fichier de trace dédié pour éviter la contention. Une application peut utiliser plusieurs fichiers de trace ; programme d’installation d’une application peut fournir l’utilisateur avec un choix de fichiers de trace. Si le traçage est activé de manière dynamique, une application peut également afficher les résultats de trace, plutôt que la journalisation dans le fichier de trace.  
   
  Le fichier de trace fournit un journal de chaque appel de fonction ODBC avec les types de données et les valeurs de tous les arguments. Il enregistre l’entrée de toutes les fonctions et enregistre toutes les fonctions retournées avec les codes de retour et les États d’erreur.  
   
- Dans ODBC 3*.x*, les paramètres à des fonctions de connexion ne sont pas fournies à la DLL de trace.
+ Dans ODBC 3 *.x*, les paramètres à des fonctions de connexion ne sont pas fournies à la DLL de trace.

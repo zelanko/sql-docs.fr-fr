@@ -14,12 +14,11 @@ ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
-ms.workload: Active
-ms.openlocfilehash: d422a4a755061837c08a6f4f8de4e1889768ac5d
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
-ms.translationtype: MT
+ms.openlocfilehash: 841f5b737742a23e8126d5b5b9bf0d9c7ed55399
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="quickstart-run-the-sql-server-2017-container-image-with-docker"></a>Démarrage rapide : Exécuter l’image de conteneur SQL Server 2017 avec Docker
 
@@ -59,13 +58,13 @@ Cette image est composée de SQL Server s’exécutant sur Linux basé sur Ubunt
 
    ```bash
    sudo docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' \
-      -p 1401:1433 --name sql1 \
+      -p 1433:1433 --name sql1 \
       -d microsoft/mssql-server-linux:2017-latest
    ```
 
    ```PowerShell
    docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" `
-      -p 1401:1433 --name sql1 `
+      -p 1433:1433 --name sql1 `
       -d microsoft/mssql-server-linux:2017-latest
    ```
 
@@ -81,7 +80,7 @@ Cette image est composée de SQL Server s’exécutant sur Linux basé sur Ubunt
    |-----|-----|
    | **-e 'ACCEPT_EULA=Y'** |  Définissez la variable **ACCEPT_EULA** sur n’importe quelle valeur pour confirmer que vous acceptez le [Contrat de licence utilisateur final](http://go.microsoft.com/fwlink/?LinkId=746388). Paramètre obligatoire pour l’image de SQL Server. |
    | **-e 'MSSQL_SA_PASSWORD=\<YourStrong!Passw0rd\>'** | Spécifiez votre propre mot de passe fort, qui doit avoir au moins 8 caractères et respecter les [exigences de mot de passe SQL Server](../relational-databases/security/password-policy.md). Paramètre obligatoire pour l’image de SQL Server. |
-   | **-p 1401:1433** | Mappez un port TCP sur l’environnement hôte (première valeur) à un port TCP dans le conteneur (deuxième valeur). Dans cet exemple, SQL Server écoute sur TCP 1433 dans le conteneur, mappé au port 1401 sur l’hôte. |
+   | **p - 1433:1433** | Mappez un port TCP sur l’environnement hôte (première valeur) à un port TCP dans le conteneur (deuxième valeur). Dans cet exemple, SQL Server écoute sur TCP 1433 dans le conteneur, et ces informations sont exposées pour le port 1433, sur l’ordinateur hôte. |
    | **--name sql1** | Spécifiez un nom personnalisé pour le conteneur plutôt qu’un nom généré de manière aléatoire. Si vous exécutez plusieurs conteneurs, vous ne pouvez pas réutiliser le même nom. |
    | **microsoft/mssql-server-linux:2017-latest** | Image conteneur Linux de SQL Server 2017. |
 
@@ -229,14 +228,14 @@ Les étapes suivantes utilisent **sqlcmd** en dehors de votre conteneur pour se 
 
 1. Recherchez l’adresse IP de la machine qui héberge votre conteneur. Sur Linux, utilisez **ifconfig** ou **ip addr**. Sur Windows, utilisez **ipconfig**.
 
-1. Exécutez sqlcmd en spécifiant l’adresse IP et le port mappé au port 1433 dans votre conteneur. Dans cet exemple, il s’agit du port 1401 sur l’hôte.
+1. Exécutez sqlcmd en spécifiant l’adresse IP et le port mappé au port 1433 dans votre conteneur. Dans cet exemple, qui est le même port 1433, sur l’ordinateur hôte. Si vous avez spécifié un autre port mappé sur l’ordinateur hôte, vous devez l’utiliser ici.
 
    ```bash
-   sqlcmd -S 10.3.2.4,1401 -U SA -P '<YourNewStrong!Passw0rd>'
+   sqlcmd -S 10.3.2.4,1433 -U SA -P '<YourNewStrong!Passw0rd>'
    ```
 
    ```PowerShell
-   sqlcmd -S 10.3.2.4,1401 -U SA -P "<YourNewStrong!Passw0rd>"
+   sqlcmd -S 10.3.2.4,1433 -U SA -P "<YourNewStrong!Passw0rd>"
    ```
 
 1. Exécutez les commandes Transact-SQL. Quand vous avez terminé, tapez `QUIT`.

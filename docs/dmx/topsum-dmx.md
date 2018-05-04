@@ -22,12 +22,11 @@ caps.latest.revision: 41
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: c3f3a81f804673fa0f9586a224d881b284719ebf
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 5d0d11002b837410274b85dbb3d0920a5ccd59b7
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="topsum-dmx"></a>TopSum (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -45,9 +44,9 @@ TopSum(<table expression>, <rank expression>, <sum>)
  Une expression qui retourne une table, comme un \<référence de colonne de table >, ou une fonction qui retourne une table.  
   
 ## <a name="return-type"></a>Type de retour  
- \<expression de table >  
+ \<Expression de table >  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Le **TopSum** fonction retourne les lignes en ordre décroissant d’en fonction de la valeur évaluée de la \<rank expression > argument pour chaque ligne, telles que la somme de la \<rank expression > valeurs soit au moins égale au total spécifié par le \<somme > argument. **TopSum** retourne le plus petit nombre d’éléments possible tout en correspondant à la valeur de la somme spécifiée.  
   
 ## <a name="examples"></a>Exemples  
@@ -113,8 +112,8 @@ NATURAL PREDICTION JOIN
  **Remarque** cet exemple est fourni uniquement pour illustrer l’utilisation de **TopSum**. L'exécution de cette requête peut prendre beaucoup de temps, en fonction de la taille de votre jeu de données.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Fonctions &#40; DMX &#41;](../dmx/functions-dmx.md)   
- [Fonctions de prédiction générales &#40; DMX &#41;](../dmx/general-prediction-functions-dmx.md)   
- [TopPercent &#40; DMX &#41;](../dmx/toppercent-dmx.md)  
+ [Fonctions &#40;DMX&#41;](../dmx/functions-dmx.md)   
+ [Fonctions de prédiction générales &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)   
+ [TopPercent &#40;DMX&#41;](../dmx/toppercent-dmx.md)  
   
   

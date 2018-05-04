@@ -27,15 +27,15 @@ caps.latest.revision: 33
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: bdd3f7f93e491d9abb112ae3fe04975015be8882
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: b9506777be3319cabfba07acd46199c353318e6e
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="measuregroups-element-assl"></a>Élément MeasureGroups (ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Contient la collection de [MeasureGroup](../../../analysis-services/scripting/objects/measuregroup-element-assl.md) éléments associés à l’élément parent.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Contient la collection d'éléments [MeasureGroup](../../../analysis-services/scripting/objects/measuregroup-element-assl.md) associée à l'élément parent.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -56,9 +56,9 @@ ms.lasthandoff: 01/08/2018
   
 |Caractéristique|Description|  
 |--------------------|-----------------|  
-|Type de données et longueur|None|  
-|Valeur par défaut|None|  
-|Cardinalité|0-1 : élément facultatif qui peut apparaître une fois et une seule.|  
+|Type de données et longueur|Aucune|  
+|Valeur par défaut|Aucune|  
+|Cardinalité|0-1: élément facultatif qui peut apparaître une fois et une seule.|  
   
 ## <a name="element-relationships"></a>Relations entre les éléments  
   
@@ -70,13 +70,13 @@ ms.lasthandoff: 01/08/2018
 |Ancêtre ou parent|Élément enfant|  
 |------------------------|-------------------|  
 |[Cube](../../../analysis-services/scripting/objects/cube-element-assl.md)|[Groupe de mesures](../../../analysis-services/scripting/objects/measuregroup-element-assl.md)|  
-|[CubeBinding](../../../analysis-services/scripting/data-type/cubebinding-data-type-out-of-line-assl.md)|[Groupe de mesures](../../../analysis-services/scripting/objects/measuregroup-element-assl.md) de type [MeasureGroupBinding](../../../analysis-services/scripting/data-type/measuregroupbinding-data-type-assl.md)|  
-|[Point de vue](../../../analysis-services/scripting/objects/perspective-element-assl.md)|[Groupe de mesures](../../../analysis-services/scripting/objects/measuregroup-element-assl.md) de type [PerspectiveMeasureGroup](../../../analysis-services/scripting/data-type/perspectivemeasuregroup-data-type-assl.md)|  
+|[CubeBinding](../../../analysis-services/scripting/data-type/cubebinding-data-type-out-of-line-assl.md)|[MeasureGroup](../../../analysis-services/scripting/objects/measuregroup-element-assl.md) de type [MeasureGroupBinding](../../../analysis-services/scripting/data-type/measuregroupbinding-data-type-assl.md)|  
+|[Point de vue](../../../analysis-services/scripting/objects/perspective-element-assl.md)|[MeasureGroup](../../../analysis-services/scripting/objects/measuregroup-element-assl.md) de type [PerspectiveMeasureGroup](../../../analysis-services/scripting/data-type/perspectivemeasuregroup-data-type-assl.md)|  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  L'élément correspondant dans le modèle objet AMO (Analysis Management Objects) est <xref:Microsoft.AnalysisServices.MeasureGroupCollection> ou <xref:Microsoft.AnalysisServices.PerspectiveMeasureGroupCollection>.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Collections de &#40; ASSL &#41;](../../../analysis-services/scripting/collections/collections-assl.md)  
+ [Collections de & #40 ; ASSL & #41 ;](../../../analysis-services/scripting/collections/collections-assl.md)  
   
   

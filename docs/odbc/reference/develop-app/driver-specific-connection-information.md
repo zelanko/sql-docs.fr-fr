@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQLConnect function [ODBC], driver-specific connection information
 - connecting to driver [ODBC], SQLConnect
@@ -25,12 +25,11 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 8d7ba512382963e45a10ba360df29626dd81f2aa
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 21b67f1fdbf609aa8564a6b95a0e60382a0b97a5
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="driver-specific-connection-information"></a>Informations de connexion spécifiques au pilote
 **SQLConnect** part du principe qu’un nom de source de données, un ID utilisateur et un mot de passe sont suffisantes pour se connecter à une source de données et que toutes les autres informations de connexion peuvent être stockées sur le système. Cela n’est souvent pas le cas. Par exemple, un pilote peut-être un ID d’utilisateur et mot de passe pour vous connecter à un serveur et un autre ID d’utilisateur et le mot de passe pour vous connecter à un SGBD. Étant donné que **SQLConnect** accepte un ID utilisateur et un mot de passe, cela signifie que les autres ID d’utilisateur et mot de passe doivent être stockés avec les informations de source de données sur le système si **SQLConnect** doit être utilisé. Cela constitue une violation potentielle de sécurité et doit être évitée, sauf si le mot de passe est chiffré.  
@@ -46,6 +45,6 @@ DSN={MyDataSourceName};UID={MyUserID};PWD={MyServerPassword};UIDDBMS={MyDBMSUser
   
  Le **DSN** (mot clé) (nom de Source de données) désigne la source de données, le **UID** et **PWD** mots clés spécifient l’ID utilisateur et un mot de passe pour le serveur et le **UIDDBMS** et **PWDDBMS** mots clés spécifient l’ID utilisateur et un mot de passe pour le SGBD. Notez que le point-virgule final est facultatif. **SQLDriverConnect** analyse cette chaîne ; utilise le nom de source de données XYZ Corp pour récupérer les informations de connexion supplémentaires à partir du système, telles que l’adresse du serveur et ouvre une session sur le serveur et un SGBD à l’aide de l’ID d’utilisateur spécifié et les mots de passe.  
   
- Dans des paires mot clé-valeur **SQLDriverConnect** doivent suivre certaines règles de syntaxe. Les mots clés et leurs valeurs ne doivent pas contenir le **[] {} (), ? \*= ! @** caractères. La valeur de la **DSN** mot clé ne peut pas se composer uniquement d’espaces et ne doit pas contenir des espaces. En raison de la grammaire du Registre, les noms de sources de données et les mots clés ne peut pas contenir la barre oblique inverse (\\) caractères. Les espaces ne sont pas autorisés autour du signe égal dans la paire mot clé-valeur.  
+ Dans des paires mot clé-valeur **SQLDriverConnect** doivent suivre certaines règles de syntaxe. Les mots clés et leurs valeurs ne doivent pas contenir le **[]{}(), ? \*= ! @** caractères. La valeur de la **DSN** mot clé ne peut pas se composer uniquement d’espaces et ne doit pas contenir des espaces. En raison de la grammaire du Registre, les noms de sources de données et les mots clés ne peut pas contenir la barre oblique inverse (\\) caractères. Les espaces ne sont pas autorisés autour du signe égal dans la paire mot clé-valeur.  
   
  Le **FILEDSN** mot clé peut être utilisé dans un appel à **SQLDriverConnect** pour spécifier le nom d’un fichier qui contient des informations de source de données (voir [la connexion à l’aide de Sources de données](../../../odbc/reference/develop-app/connecting-using-file-data-sources.md), plus loin dans cette section). Le **SAVEFILE** mot clé peut être utilisé pour spécifier le nom d’un fichier .dsn dans lequel les paires mot clé-valeur d’une connexion est effectuée par l’appel à **SQLDriverConnect** sera enregistré. Pour plus d’informations sur les sources de données de fichier, consultez le [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md) description de fonction.

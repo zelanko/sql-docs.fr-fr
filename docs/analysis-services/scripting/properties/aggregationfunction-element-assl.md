@@ -27,15 +27,15 @@ caps.latest.revision: 39
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: c9cc86c77bc1f0b33a394cb7151bc29e2fd36ed4
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: ae6bd946da1ecff32e0c008b86662a51c7e7d9ad
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="aggregationfunction-element-assl"></a>Élément AggregationFunction (ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Contient la fonction d’agrégation à utiliser pour le type de compte.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Contient la fonction d'agrégation à utiliser pour le type de compte.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -54,22 +54,22 @@ ms.lasthandoff: 01/08/2018
 |--------------------|-----------------|  
 |Type de données et longueur|Chaîne (énumération)|  
 |Valeur par défaut|*Sum*|  
-|Cardinalité|0-1 : élément facultatif qui peut apparaître une fois et une seule.|  
+|Cardinalité|0-1: élément facultatif qui peut apparaître une fois et une seule.|  
   
 ## <a name="element-relationships"></a>Relations entre les éléments  
   
 |Relation|Élément|  
 |------------------|-------------|  
 |Éléments parents|[Compte](../../../analysis-services/scripting/objects/account-element-assl.md)|  
-|Éléments enfants|None|  
+|Éléments enfants|Aucune|  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  La valeur de cet élément est limitée à l'une des chaînes suivantes :  
   
-|Valeur|Description|  
+|Valeur| Description|  
 |-----------|-----------------|  
 |*Sum*|La mesure est agrégée à l'aide de la fonction **Sum** .|  
-|*Nombre*|La mesure est agrégée à l'aide de la fonction **Count** .|  
+|*Compter*|La mesure est agrégée à l'aide de la fonction **Count** .|  
 |*Min*|La mesure est agrégée à l'aide de la fonction **Min** .|  
 |*Max*|La mesure est agrégée à l'aide de la fonction **Max** .|  
 |*DistinctCount*|La mesure est agrégée à l'aide de la fonction **DistinctCount** .|  
@@ -77,13 +77,13 @@ ms.lasthandoff: 01/08/2018
 |*AverageOfChildren*|La mesure est agrégée par retour de la moyenne de ses enfants.|  
 |*FirstChild*|La mesure est agrégée par retour de son premier membre enfant.|  
 |*LastChild*|La mesure est agrégée par retour de son dernier membre enfant.|  
-|*Premier non vide*|La mesure est agrégée par retour de son premier membre non vide.|  
+|*FirstNonEmpty*|La mesure est agrégée par retour de son premier membre non vide.|  
 |*LastNonEmpty*|La mesure est agrégée par retour de son dernier membre non vide.|  
   
  L’énumération qui correspond aux valeurs autorisées pour **AggregationFunction** dans l’objet d’objets AMO (Analysis Management) est modèle <xref:Microsoft.AnalysisServices.AggregationFunction>.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Élément Accounts &#40; ASSL &#41;](../../../analysis-services/scripting/collections/accounts-element-assl.md)   
- [Propriétés &#40; ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
+ [Comptes d’élément &#40;ASSL&#41;](../../../analysis-services/scripting/collections/accounts-element-assl.md)   
+ [Propriétés & #40 ; ASSL & #41 ;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   

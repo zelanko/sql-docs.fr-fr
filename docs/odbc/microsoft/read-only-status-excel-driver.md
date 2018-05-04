@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - read-only status for Excel driver [ODBC]
 - Excel driver [ODBC], read-only status
@@ -20,12 +20,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: b61c66536c40aeb39033fb93e315b320d83070cf
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: d0cdfec3129dbe01e5b25f0c8595b8bd4e528ba8
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="read-only-status-excel-driver"></a>État en lecture seule (pilote Excel)
 Lorsque le pilote Microsoft Excel est utilisé, les tables de source de données sont ouverts en lecture seule par défaut et peuvent être ouverte par un seul utilisateur à la fois. Même si les tables ont un état en lecture seule, toutefois, les applications peuvent effectuer des insertions et des mises à jour pour les tables de Microsoft Excel.  

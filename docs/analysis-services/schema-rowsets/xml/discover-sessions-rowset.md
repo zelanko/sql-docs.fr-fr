@@ -20,20 +20,20 @@ caps.latest.revision: 18
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: daa1e2d464283fa3e2cb37733bb2a705454e50dc
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 25272b0fe9689bfdb76d427fe7a92a44278978a2
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="discoversessions-rowset"></a>Ensemble de lignes DISCOVER_SESSIONS
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Fournit des informations sur les sessions actuellement ouvertes activité et l’utilisation des ressources sur le serveur.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Fournit des informations sur l'activité et l'utilisation des ressources des sessions actuellement ouvertes sur le serveur.  
   
 ## <a name="rowset-columns"></a>Colonnes de l'ensemble de lignes  
  L'ensemble de lignes **DISCOVER_SESSIONS** contient les colonnes suivantes.  
   
-|Nom de colonne|Indicateur de type|Longueur|Description|  
+|Nom de colonne|Indicateur de type|Longueur| Description|  
 |-----------------|--------------------|------------|-----------------|  
 |**SESSION_COMMAND_COUNT**|**DBTYPE_I4**||Nombre de commandes dont l'exécution a commencé depuis le début de la session.|  
 |**SESSION_CONNECTION_ID**|**DBTYPE_I4**||Identificateur de connexion de la session.|  
@@ -65,17 +65,17 @@ ms.lasthandoff: 01/08/2018
   
 |Nom de colonne|Indicateur de type|État de la restriction|  
 |-----------------|--------------------|-----------------------|  
-|SESSION_ID|DBTYPE_WSTR|Facultatif.|  
-|SESSION_SPID|DBTYPE_I4|Facultatif.|  
-|SESSION_CONNECTION_ID|DBTYPE_I4|Facultatif.|  
-|SESSION_USER_NAME|DBTYPE_WSTR|Facultatif.|  
-|SESSION_CURRENT_DATABASE|DBTYPE_WSTR|Facultatif.|  
-|SESSION_ELAPSED_TIME_MS|DBTYPE_UI8|Facultatif.|  
-|SESSION_CPU_TIME_MS|DBTYPE_UI8|Facultatif.|  
-|SESSION_IDLE_TIME_MS|DBTYPE_UI8|Facultatif.|  
-|SESSION_STATUS|DBTYPE_I4|Facultatif.|  
+|SESSION_ID|DBTYPE_WSTR|Ce paramètre est facultatif.|  
+|SESSION_SPID|DBTYPE_I4|Ce paramètre est facultatif.|  
+|SESSION_CONNECTION_ID|DBTYPE_I4|Ce paramètre est facultatif.|  
+|SESSION_USER_NAME|DBTYPE_WSTR|Ce paramètre est facultatif.|  
+|SESSION_CURRENT_DATABASE|DBTYPE_WSTR|Ce paramètre est facultatif.|  
+|SESSION_ELAPSED_TIME_MS|DBTYPE_UI8|Ce paramètre est facultatif.|  
+|SESSION_CPU_TIME_MS|DBTYPE_UI8|Ce paramètre est facultatif.|  
+|SESSION_IDLE_TIME_MS|DBTYPE_UI8|Ce paramètre est facultatif.|  
+|SESSION_STATUS|DBTYPE_I4|Ce paramètre est facultatif.|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Ensembles de lignes de schéma XML for Analysis](../../../analysis-services/schema-rowsets/xml/xml-for-analysis-schema-rowsets.md)  
+ [XML for Analysis ensembles de lignes de schéma](../../../analysis-services/schema-rowsets/xml/xml-for-analysis-schema-rowsets.md)  
   
   

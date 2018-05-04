@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - transactions [ODBC], concurrency control
 - concurrency control [ODBC]
@@ -21,12 +21,11 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 756775900c04ff501095f95fda95fa4f184e8833
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 01076f3f9167af8b67153abf9f3458a63bed1bf3
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="optimistic-concurrency"></a>Accès concurrentiel optimiste
 *L’accès concurrentiel optimiste* tire son nom de l’hypothèse optimiste que collisions entre les transactions seront produit rarement ; une collision est dite se sont produites lors d’une autre transaction met à jour ou supprime une ligne de données entre le moment où il est en lecture par la transaction en cours et le temps, il est mis à jour ou supprimé. Il est l’opposé de *d’accès concurrentiel pessimiste,* ou de verrouillage, dans lequel le développeur d’applications estime que ces conflits sont courants.  

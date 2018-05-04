@@ -1,33 +1,32 @@
 ---
-title: "Propriétés des colonnes | Documents Microsoft"
-ms.custom: 
+title: Propriétés des colonnes | Documents Microsoft
+ms.custom: ''
 ms.date: 02/21/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - sql13.asvs.bidtoolset.columnprop.f1
 ms.assetid: 4046c1a3-46c7-47db-b355-52e9c2f23671
-caps.latest.revision: 
+caps.latest.revision: 14
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: b4198d0d71f5c0d14c12391426f4ac4397ede93c
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
-ms.translationtype: MT
+ms.openlocfilehash: 1b1d04e5db22d83814e4c83f47f53c2dbd258ce4
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="column-properties"></a>Propriétés des colonnes 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-Cet article décrit les propriétés de colonne de modèle tabulaire.  
+  Cet article décrit les propriétés de colonne de modèle tabulaire.  
   
 >  [!NOTE]  
 >  Certaines propriétés ne sont pas pris en charge dans tous les niveaux de compatibilité.    
@@ -50,7 +49,7 @@ Cet article décrit les propriétés de colonne de modèle tabulaire.
 |**Caché**|False|Spécifie si la colonne est masquée dans les listes de champs de client de création de rapports.<br /><br /> Définissez cette propriété avec la valeur **True** pour masquer cette colonne dans l'affichage. Par exemple, les colonnes qui contiennent des identificateurs ou des clés ne sont généralement pas utiles à l'utilisateur final.<br /><br /> Si vous masquez une colonne dans le client de création de rapports, le champ n'est pas supprimé dans les données de modèle. Le champ est toujours visible si vous créez une requête sur le modèle. Une colonne masquée peut encore être utilisée pour le regroupement ou le tri.<br /><br /> La propriété **Masqué** ne fournit aucune forme de sécurité des données. Pour sécuriser les données, utilisez des filtres de ligne dans les rôles. Pour plus d’informations, consultez [rôles](../../analysis-services/tabular-models/roles-ssas-tabular.md).|  
 |**Trier par colonne**||Spécifie une autre colonne pour trier les valeurs de cette colonne. Une relation doit exister entre les deux colonnes.<br /><br /> Cette valeur doit correspondre au nom d'une colonne existante. Vous ne pouvez pas spécifier de formule ou de mesure.|  
 
- **Misc.**  
+ **Divers**  
   
 |Propriété|Paramètre par défaut| Description|  
 |--------------|---------------------|-----------------|  

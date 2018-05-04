@@ -24,12 +24,11 @@ caps.latest.revision: 69
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 9ac83f7ffeb53b501090c7fe1e5f65e08eee07d0
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 3d61d5b674c5adb36c75e7af44edb0955ae0bbba
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spaddmergearticle-transact-sql"></a>sp_addmergearticle (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -132,7 +131,7 @@ sp_addmergearticle [ @publication = ] 'publication'
 >  Les scripts de création ne sont pas exécutés sur les Abonnés [!INCLUDE[ssEW](../../includes/ssew-md.md)].  
   
  [  **@schema_option=** ] *schema_option*  
- Est un bitmap de l'option de génération de schéma pour l'article donné. *schema_option* est **Binary (8)**et peut prendre le [| (OR au niveau du bit) ](../../t-sql/language-elements/bitwise-or-transact-sql.md) produit d’un ou plusieurs de ces valeurs.  
+ Est un bitmap de l'option de génération de schéma pour l'article donné. *schema_option* est **Binary (8)** et peut prendre le [| (OR au niveau du bit) ](../../t-sql/language-elements/bitwise-or-transact-sql.md) produit d’un ou plusieurs de ces valeurs.  
   
 |Valeur| Description|  
 |-----------|-----------------|  

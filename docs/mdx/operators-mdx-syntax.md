@@ -23,12 +23,11 @@ caps.latest.revision: 29
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 87304b4a33daa7d9460983a403136974c46c1f81
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 8b849cf1a9c87e91c2104217d8b435adfeef6efc
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="operators-mdx-syntax"></a>Opérateurs (syntaxe MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -47,10 +46,10 @@ ms.lasthandoff: 01/08/2018
   
 |Si vous devez effectuer ce type d'opération|Utiliser|  
 |---------------------------------------|---------|  
-|Affecter une valeur à une variable ou associer une colonne de jeu de résultats à un alias|[Opérateurs d’affectation](../mdx/assignment-operators.md)|  
+|Affecter une valeur à une variable ou associer une colonne de jeu de résultats à un alias.|[Opérateurs d’affectation](../mdx/assignment-operators.md)|  
 |Addition, soustraction, multiplication, division.|[Opérateurs arithmétiques](../mdx/arithmetic-operators.md)|  
 |Tester une condition telle que AND, OR, NOT et XOR.|[Opérateurs au niveau du bit](../mdx/bitwise-operators.md)|  
-|Comparer une valeur à une autre ou à une expression|[Opérateurs de comparaison](../mdx/comparison-operators.md)|  
+|Comparer une valeur à une autre ou à une expression.|[Opérateurs de comparaison](../mdx/comparison-operators.md)|  
 |Combiner deux chaînes en une de façon permanente ou temporaire.|[Opérateurs de concaténation](../mdx/concatenation-operators.md)|  
 |Combiner deux expressions d'ensemble en une de façon permanente ou temporaire.|[Opérateurs de jeu](../mdx/set-operators.md)|  
 |Exécute une opération sur un opérande.|[Opérateurs unaires](../mdx/unary-operators.md)|  
@@ -90,14 +89,14 @@ ms.lasthandoff: 01/08/2018
   
 -   XOR  
   
--   - ou -  
+-   OU  
   
- Pour plus d’informations sur les opérateurs dans la syntaxe MDX, consultez [référence des opérateurs MDX &#40; MDX &#41; ](../mdx/mdx-operator-reference-mdx.md).  
+ Pour plus d’informations sur les opérateurs dans la syntaxe MDX, consultez [référence des opérateurs MDX &#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md).  
   
 ### <a name="determining-results"></a>Détermination de résultats  
  Lorsque vous combinez des expressions simples pour constituer une expression complexe, les règles des opérateurs combinées à celles de priorité des types de données déterminent le type de données de la valeur obtenue.  
   
- Si le résultat est un caractère ou une valeur Unicode, les règles des opérateurs combinées à celles de la priorité de classement déterminent le classement du résultat. Pour plus d’informations sur les classements, consultez [langues et classements &#40; Analysis Services &#41; ](../analysis-services/languages-and-collations-analysis-services.md).  
+ Si le résultat est un caractère ou une valeur Unicode, les règles des opérateurs combinées à celles de la priorité de classement déterminent le classement du résultat. Pour plus d’informations sur les classements, consultez [langues et classements &#40;Analysis Services&#41;](../analysis-services/languages-and-collations-analysis-services.md).  
   
  Il existe également des règles pour déterminer la précision, l’échelle et la longueur du résultat basées sur la précision, l’échelle et la longueur des expressions simples.  
   
@@ -106,14 +105,14 @@ ms.lasthandoff: 01/08/2018
   
 |Type d'origine|Type exigé|Conversion|  
 |-------------------|-----------------|----------------|  
-|Level|Définissez|\<niveau > .members|  
-|Hierarchy|Membre|\<hiérarchie > .defaultmember|  
+|Niveau|Définissez|\<niveau > .members|  
+|Hiérarchie|Membre|\<hiérarchie > .defaultmember|  
 |Membre|Tuple|(\<Membre >)|  
 |Tuple|Membre|\<Tuple > .item(0)|  
 |Tuple|Scalaire|\<Tuple > .value|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Référence des opérateurs MDX &#40; MDX &#41;](../mdx/mdx-operator-reference-mdx.md)   
- [Éléments de syntaxe MDX &#40; MDX &#41;](../mdx/mdx-syntax-elements-mdx.md)  
+ [Référence des opérateurs MDX &#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)   
+ [Éléments de syntaxe MDX &#40;MDX&#41;](../mdx/mdx-syntax-elements-mdx.md)  
   
   

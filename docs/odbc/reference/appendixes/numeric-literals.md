@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data types [ODBC], numeric data types
 - numeric data type [ODBC], literals
@@ -22,12 +22,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 33b180e63bf3f0c38c930f46e3b4a74a7ab66754
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: b4b5a40b9cda29b528280b6bb873a8fda747d9ed
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="numeric-literals"></a>Littéraux numériques
 Littéraux numériques sont utilisés lorsque les valeurs de données numériques sont stockées dans des chaînes de caractères. Pour la conversion de données SQL numériques en une chaîne SQL_C_CHAR ou de conversion de données C numériques sur une chaîne SQL_CHAR ou SQL_VARCHAR, syntaxe de littéral numérique est utilisé pour spécifier ce qui est stocké dans la cible. Pour la conversion de numérique stockée sous forme de chaîne SQL_C_CHAR numérique de données SQL ou numérique stockée sous forme de chaîne SQL_CHAR à des données numériques C, cette syntaxe est utilisée pour valider ce qui est stocké dans la source.  

@@ -22,12 +22,11 @@ caps.latest.revision: 29
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 60957fe0ef3afde1734b3945b197f961f844c0a9
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 5db634f9fdffc8792ab72523f59f886ddb37b442
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="isinnode-dmx"></a>IsInNode (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -44,8 +43,8 @@ IsInNode(<NodeID>)
 ## <a name="return-type"></a>Type de retour  
  Type booléen  
   
-## <a name="remarks"></a>Notes   
- **IsInNode** est utilisée uniquement dans [SELECT FROM &#60; modèle &#62;. CAS &#40; DMX &#41; ](../dmx/select-from-model-cases-dmx.md) et [SELECT FROM &#60; modèle &#62;. SAMPLE_CASES &#40; DMX &#41; ](../dmx/select-from-model-sample-cases-dmx.md) requêtes.  
+## <a name="remarks"></a>Notes  
+ **IsInNode** est utilisée uniquement dans [SELECT FROM &#60;modèle&#62;. CAS &#40;DMX&#41; ](../dmx/select-from-model-cases-dmx.md) et [SELECT FROM &#60;modèle&#62;. SAMPLE_CASES &#40;DMX&#41; ](../dmx/select-from-model-sample-cases-dmx.md) requêtes.  
   
 ## <a name="examples"></a>Exemples  
  L'exemple suivant retourne tous les cas qui ont été utilisés pour créer le modèle qui est associé au nœud spécifié dans la fonction IsInNode.  
@@ -56,8 +55,8 @@ WHERE IsInNode('0')
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Les Extensions d’exploration de données &#40; DMX &#41; Référence de fonction](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [Fonctions &#40; DMX &#41;](../dmx/functions-dmx.md)   
- [Fonctions de prédiction générales &#40; DMX &#41;](../dmx/general-prediction-functions-dmx.md)  
+ [Data Mining Extensions &#40;DMX&#41; référence de fonction](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [Fonctions &#40;DMX&#41;](../dmx/functions-dmx.md)   
+ [Fonctions de prédiction générales &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)  
   
   

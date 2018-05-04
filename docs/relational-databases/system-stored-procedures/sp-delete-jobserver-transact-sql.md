@@ -24,12 +24,11 @@ caps.latest.revision: 36
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 95410b08fca279b65b1c8a119504e248f19084e7
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 71608242267079dff50cfd5f77722e9f29746b5b
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spdeletejobserver-transact-sql"></a>sp_delete_jobserver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +56,7 @@ sp_delete_jobserver { [ @job_id = ] job_id | [ @job_name = ] 'job_name' } ,
 >  Soit *job_id* ou *job_name* doit être spécifié ; ne peut pas être spécifiés.  
   
  [  **@server_name=** ] **'***server***'**  
- Nom du serveur cible à supprimer du travail spécifié. *serveur* est **nvarchar (30)**, sans valeur par défaut. *serveur* peut être **(LOCAL)**ou le nom d’un serveur cible distant.  
+ Nom du serveur cible à supprimer du travail spécifié. *serveur* est **nvarchar (30)**, sans valeur par défaut. *serveur* peut être **(LOCAL)** ou le nom d’un serveur cible distant.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  **0** (réussite) ou **1** (échec)  

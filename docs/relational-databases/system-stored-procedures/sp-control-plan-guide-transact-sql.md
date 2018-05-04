@@ -24,12 +24,11 @@ caps.latest.revision: 29
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: bcc6de242dba546858ecedc4690a736c0c1d1447
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 9f1e9e78020787bcec4f6b3a04efbdc4ba466023
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spcontrolplanguide-transact-sql"></a>sp_control_plan_guide (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -76,7 +75,7 @@ sp_control_plan_guide [ @operation = ] N'<control_option>'
  Active le repère de plan spécifié par *plan_guide_name*. Une fois activé, un repère de plan peut être associé à une requête admissible. Par défaut, les repères de plan sont activés au moment de leur création.  
   
  ENABLE ALL  
- Active tous les repères de plan dans la base de données actuelle. **N'***plan_guide_name***'**ne peut pas être spécifié lorsque ENABLE ALL est spécifié.  
+ Active tous les repères de plan dans la base de données actuelle. **N'***plan_guide_name***'** ne peut pas être spécifié lorsque ENABLE ALL est spécifié.  
   
 ## <a name="remarks"></a>Notes  
  Si vous tentez de supprimer ou de modifier une fonction, une procédure stockée ou un déclencheur DML référencé par un repère de plan, qu'il soit activé ou désactivé, une erreur se produit.  
@@ -86,7 +85,7 @@ sp_control_plan_guide [ @operation = ] N'<control_option>'
  Les repères de plan ne sont pas disponibles dans toutes les éditions de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour obtenir la liste des fonctionnalités prises en charge par les éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez [Fonctionnalités prises en charge par les éditions de SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md). Toutefois, vous pouvez exécuter **sp_control_plan_guide** avec l’option DROP ou DROP ALL dans n’importe quelle édition de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="permissions"></a>Autorisations  
- Pour exécuter **sp_control_plan_guide** sur un repère de plan de type OBJECT (créé en spécifiant  **@type ='**objet**'** ) nécessite l’autorisation ALTER sur l’objet qui est référencé par le repère de plan. Tous les autres repères de plan nécessitent l'autorisation ALTER DATABASE.  
+ Pour exécuter **sp_control_plan_guide** sur un repère de plan de type OBJECT (créé en spécifiant  **@type ='** objet **'** ) nécessite l’autorisation ALTER sur l’objet qui est référencé par le repère de plan. Tous les autres repères de plan nécessitent l'autorisation ALTER DATABASE.  
   
 ## <a name="examples"></a>Exemples  
   

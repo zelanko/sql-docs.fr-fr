@@ -23,12 +23,11 @@ caps.latest.revision: 35
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: e1ff5c587440746411a00ffe0df06088a3162ca1
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 57e29adb2d98d4b3e6ceb6a9a5423de05d371eb7
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="--subtract-mdx"></a>- (Soustraction) (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -49,7 +48,7 @@ Numeric_Expression - Numeric_Expression
 ## <a name="return-value"></a>Valeur retournée  
  Valeur dont le type de données du paramètre possède la priorité la plus élevée.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Les deux expressions doivent être de même type de données, ou l'une des expressions doit pouvoir être implicitement convertie dans le type de données de l'autre expression. Si une expression s'évalue à NULL, l'opérateur retourne le résultat de l'expression non NULL.  
   
 ## <a name="examples"></a>Exemples  
@@ -77,6 +76,6 @@ WHERE
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Référence des opérateurs MDX &#40; MDX &#41;](../mdx/mdx-operator-reference-mdx.md)  
+ [Référence des opérateurs MDX &#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)  
   
   

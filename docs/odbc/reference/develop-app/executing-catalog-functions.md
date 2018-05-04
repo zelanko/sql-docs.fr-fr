@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - catalog functions [ODBC], executing
 - functions [ODBC], catalog functions
@@ -20,12 +20,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 9c50bbb813c0aad7ae8d9a531458b2999dcae86f
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 854a7e7fe347bb02c59fe1608afd74bf87be6b7b
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="executing-catalog-functions"></a>L’exécution des fonctions de catalogue
 Une fonction de catalogue crée un jeu de résultats, il est équivalent à l’exécution de n’importe quelle instruction SQL de création de jeu de résultats. En fait, les fonctions de catalogue sont souvent implémentées en exécutant les instructions SQL prédéfinies ou en appelant les procédures prédéfinies qui sont livrés avec le pilote ou le SGBD. Presque tout ce qui s’applique aux instructions SQL qui créent des jeux de résultats s’applique également aux fonctions de catalogue. Par exemple, l’attribut d’instruction SQL_ATTR_MAX_ROWS limite le nombre de lignes retournées par la fonction de catalogue, exactement comme elle limite le nombre de lignes retournées par une **sélectionnez** instruction.  

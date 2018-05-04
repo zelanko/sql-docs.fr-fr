@@ -1,33 +1,32 @@
 ---
 title: Le Mode DirectQuery | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 02/22/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - sql13.asvs.bidtoolset.realtime.f1
 ms.assetid: 45ad2965-05ec-4fb1-a164-d8060b562ea5
-caps.latest.revision: 
+caps.latest.revision: 64
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 13c60b58664d87cf23ea76069a6c68eb00870927
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
-ms.translationtype: MT
+ms.openlocfilehash: 4d71b1854680abe9584cf2d5d4d928b86804070b
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="directquery-mode"></a>Mode DirectQuery
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-Cet article décrit *mode DirectQuery* pour les modèles tabulaires Analysis Services sur les niveaux de compatibilité 1200 et supérieurs. Vous pouvez activer le mode DirectQuery pour les modèles que vous concevez dans SSDT. Pour les modèles tabulaires qui ont déjà été déployés, vous pouvez basculer en mode DirectQuery dans SSMS. Avant de choisir le mode DirectQuery, vous devez comprendre quels sont ses avantages et ses restrictions.
+  Cet article décrit *mode DirectQuery* pour les modèles tabulaires Analysis Services sur les niveaux de compatibilité 1200 et supérieurs. Vous pouvez activer le mode DirectQuery pour les modèles que vous concevez dans SSDT. Pour les modèles tabulaires qui ont déjà été déployés, vous pouvez basculer en mode DirectQuery dans SSMS. Avant de choisir le mode DirectQuery, vous devez comprendre quels sont ses avantages et ses restrictions.
   
 ##  <a name="bkmk_Benefits"></a> Avantages
  Par défaut, les modèles tabulaires utilisent un cache mémoire pour stocker et interroger les données. Quand les modèles tabulaires interrogent des données en mémoire, même les requêtes complexes peuvent être extrêmement rapides. Toutefois, l’utilisation de données en mémoire cache présente des limitations. En effet, des jeux de données de grande taille peuvent dépasser la capacité mémoire disponible, et il peut s’avérer difficile, voire impossible, de répondre aux exigences d’actualisation des données avec une planification de traitement régulière.  

@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - automatically populating ipd [ODBC]
 - descriptors [ODBC], automatically populating ipd
@@ -23,12 +23,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: f9ff41c33a308b6e1645f81a0f62e311939d971b
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 473594a879fe3bc6ab66937d2cd4e35f1975ecf1
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="automatic-population-of-the-ipd"></a>Remplissage automatique de l’IPD
 Certains pilotes sont capables de définir les champs de l’IPD après qu’une requête paramétrable a été préparée. Les champs de descripteur sont automatiquement remplis avec des informations sur le paramètre, y compris le type de données, précision, échelle et d’autres caractéristiques. Cela est équivalent à la prise en charge **SQLDescribeParam**. Ces informations peuvent être particulièrement utiles pour une application lorsqu’il n’a pas d’autre moyen pour la détection, par exemple lorsqu’une requête ad hoc est exécutée avec les paramètres de l’application ne connaît pas.  

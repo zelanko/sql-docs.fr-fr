@@ -1,30 +1,30 @@
 ---
 title: Objet de partitions (TMSL) | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 05/30/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: df1da0d2-d824-42ba-b9dc-47fbd8edc10f
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 756101dba74f227c295b61a7f8a640f78055b037
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: bc820929603cadb400bd19f3afa4d04a6222fb89
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="partitions-object-tmsl"></a>Objet de partitions (TMSL)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Définit une partition, ou une segmentation logique, de l’ensemble de lignes de table. Une partition se compose d’une requête SQL utilisée pour l’importation de données, pour des exemples de données dans l’environnement de modélisation, ou comme une requête de données complète pour passer de l’exécution des requêtes via DirectQuery.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+  Définit une partition, ou une segmentation logique, de l’ensemble de lignes de table. Une partition se compose d’une requête SQL utilisée pour l’importation de données, pour des exemples de données dans l’environnement de modélisation, ou comme une requête de données complète pour passer de l’exécution des requêtes via DirectQuery.  
   
  Les propriétés sur la partition déterminent la façon dont les données en provenance de la table.  Dans la hiérarchie d’objets, l’objet parent d’une partition est un objet table.  
   
@@ -47,7 +47,7 @@ ms.lasthandoff: 01/08/2018
 |-|-|  
 |**Importer**|Indique la requête, les demandes sont effectuées sur le moteur analytique de mémoire dans le stockage des données importées.|  
 |**DirectQuery**|Passer en exécutant la requête à une base de données relationnelle externe. Le mode DirectQuery utilise des partitions pour fournir des exemples de données utilisés lors de la conception du modèle. Lors du déploiement sur un serveur de production, vous devez basculer vers la vue complète des données. Rappelez-vous que le mode DirectQuery nécessite une seule partition par table et une source de données par le modèle.|  
-|**par défaut**|Définir si vous souhaitez basculer entre les modes plus haut de l’arborescence d’objets au niveau du modèle ou la base de données. Lorsque vous choisissez par défaut, le mode de requête sera import et DirectQuery.|  
+|**default**|Définir si vous souhaitez basculer entre les modes plus haut de l’arborescence d’objets au niveau du modèle ou la base de données. Lorsque vous choisissez par défaut, le mode de requête sera import et DirectQuery.|  
   
  source  
  Identifie l’emplacement des données à interroger. Les valeurs valides sont **requête, calculée**, ou **aucun**. Cette valeur est requise.  
@@ -55,14 +55,14 @@ ms.lasthandoff: 01/08/2018
 |||  
 |-|-|  
 |**Aucun**|Utilisé pour le mode d’importation, où les données sont chargées et stockées en mémoire.|  
-|**requête**|Pour le mode DirectQuery, il s’agit d’une requête SQL exécutée sur la base de données relationnelle spécifiée dans le modèle **source de données**. Consultez [sources de données objet &#40; TMSL &#41; ](../../analysis-services/tabular-models-scripting-language-objects/datasources-object-tmsl.md).|  
-|**calculé**|Tables calculées proviennent d’une expression spécifiée lors de la table est créée. Cette expression est considéré comme la source de la partition créée pour la table calculée.|  
+|**Requête**|Pour le mode DirectQuery, il s’agit d’une requête SQL exécutée sur la base de données relationnelle spécifiée dans le modèle **source de données**. Consultez [objet de sources de données &#40;TMSL&#41;](../../analysis-services/tabular-models-scripting-language-objects/datasources-object-tmsl.md).|  
+|**Calculé**|Tables calculées proviennent d’une expression spécifiée lors de la table est créée. Cette expression est considéré comme la source de la partition créée pour la table calculée.|  
   
  DataView  
  Pour les partitions DirectQuery, une propriété supplémentaire dataView davantage Spécifie si la requête qui Récupère des données est un échantillon ou le jeu de données complet. Les valeurs valides sont **complète**, **exemple**, ou **par défaut** (héritée). Comme indiqué, les exemples sont utilisés uniquement pendant les données de modélisation et de test. Consultez [ajouter des exemples de données à un modèle DirectQuery en Mode Création](../../analysis-services/tabular-models/add-sample-data-to-a-directquery-model-in-design-mode.md) pour plus d’informations.  
   
 ## <a name="usage"></a>Utilisation  
- Les objets de partition sont utilisées dans [Alter commande &#40; TMSL &#41; ](../../analysis-services/tabular-models-scripting-language-commands/alter-command-tmsl.md), [Créer commande &#40; TMSL &#41; ](../../analysis-services/tabular-models-scripting-language-commands/create-command-tmsl.md), [CreateOrReplace commande &#40; TMSL &#41; ](../../analysis-services/tabular-models-scripting-language-commands/createorreplace-command-tmsl.md), [Supprimer commande &#40; TMSL &#41; ](../../analysis-services/tabular-models-scripting-language-commands/delete-command-tmsl.md), [Actualiser commande &#40; TMSL &#41; ](../../analysis-services/tabular-models-scripting-language-commands/refresh-command-tmsl.md), et [MergePartitions commande &#40; TMSL &#41; ](../../analysis-services/tabular-models-scripting-language-commands/mergepartitions-command-tmsl.md).  
+ Les objets de partition sont utilisées dans [commande Alter &#40;TMSL&#41;](../../analysis-services/tabular-models-scripting-language-commands/alter-command-tmsl.md), [Créer commande &#40;TMSL&#41;](../../analysis-services/tabular-models-scripting-language-commands/create-command-tmsl.md), [la commande CreateOrReplace &#40;TMSL&#41; ](../../analysis-services/tabular-models-scripting-language-commands/createorreplace-command-tmsl.md), [Commande delete &#40;TMSL&#41;](../../analysis-services/tabular-models-scripting-language-commands/delete-command-tmsl.md), [commande Refresh &#40;TMSL&#41;](../../analysis-services/tabular-models-scripting-language-commands/refresh-command-tmsl.md), et [commande MergePartitions &#40;TMSL&#41;](../../analysis-services/tabular-models-scripting-language-commands/mergepartitions-command-tmsl.md).  
   
  Lors de la création, du remplacement ou de modification d’un objet de la partition, spécifiez toutes les propriétés en lecture-écriture de la définition d’objet. L’omission d’une propriété en lecture-écriture est considérée comme une suppression. Propriétés en lecture-écriture incluent le nom, la description, le mode et source.  
   

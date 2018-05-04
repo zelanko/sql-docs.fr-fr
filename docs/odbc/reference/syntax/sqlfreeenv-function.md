@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 apiname:
 - SQLFreeEnv
 apilocation:
@@ -26,22 +26,21 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 802dfd5b5f95a615cca743299b264dd93afe4798
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: b2b7a037fee8f70704eb33c8eb4be5c1c5293270
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlfreeenv-function"></a>SQLFreeEnv (fonction)
 **Mise en conformité**  
  Version introduite : Conformité de normes 1.0 ODBC : déconseillé  
   
  **Résumé**  
- Dans ODBC 3*.x*, la fonction ODBC 2.0 **SQLFreeEnv** a été remplacé par **SQLFreeHandle**. Pour plus d’informations, consultez [SQLFreeHandle](../../../odbc/reference/syntax/sqlfreehandle-function.md).  
+ Dans ODBC 3 *.x*, la fonction ODBC 2.0 **SQLFreeEnv** a été remplacé par **SQLFreeHandle**. Pour plus d’informations, consultez [SQLFreeHandle](../../../odbc/reference/syntax/sqlfreehandle-function.md).  
   
 > [!NOTE]  
->  Pour plus d’informations sur ce que le Gestionnaire de pilotes mappe cette fonction pour lorsqu’un ODBC 2*.x* application fonctionne avec un ODBC 3*.x* pilote, consultez [mappage des fonctions déconseillées](../../../odbc/reference/appendixes/mapping-deprecated-functions.md) dans l’annexe g : pilote recommandations pour la compatibilité descendante.  
+>  Pour plus d’informations sur ce que le Gestionnaire de pilotes mappe cette fonction pour lorsqu’un ODBC 2 *.x* application fonctionne avec un ODBC 3 *.x* pilote, consultez [mappage des fonctions déconseillées](../../../odbc/reference/appendixes/mapping-deprecated-functions.md) dans l’annexe g : pilote recommandations pour la compatibilité descendante.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Référence de l’API ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   

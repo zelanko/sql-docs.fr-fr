@@ -23,15 +23,15 @@ caps.latest.revision: 23
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 910372435e504efb7afabfe245bba65e430fe1d4
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 0a4d0f52c112380623507a8537e217dcbb3df537
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="holdoutseed-element"></a>Élément HoldoutSeed
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Spécifie la valeur initiale d’une partition d’exclusion répétée qui contient le jeu de tests d’un [MiningStructure](../../../analysis-services/scripting/objects/miningstructure-element-assl.md) élément. Cette valeur de départ garantit que le contenu du modèle reste le même pendant le retraitement. Si non spécifié ou la valeur 0, [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] crée une valeur initiale à l’aide d’un algorithme de hachage sur le nom de la structure d’exploration de données.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Spécifie la valeur initiale d’une partition d’exclusion répétée qui contient le jeu de tests d’un [MiningStructure](../../../analysis-services/scripting/objects/miningstructure-element-assl.md) élément. Cette valeur de départ garantit que le contenu du modèle reste le même pendant le retraitement. Si non spécifié ou la valeur 0, [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] crée une valeur initiale à l’aide d’un algorithme de hachage sur le nom de la structure d’exploration de données.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -57,9 +57,9 @@ ms.lasthandoff: 01/08/2018
 |Relation|Élément|  
 |------------------|-------------|  
 |Élément parent|[MiningStructure](../../../analysis-services/scripting/objects/miningstructure-element-assl.md)|  
-|Éléments enfants|None|  
+|Éléments enfants|Aucune|  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Lors de la création initiale d'une structure d'exploration de données, l'ID et le nom sont identiques. Toutefois, vous pouvez modifier le nom de la structure d'exploration de données. Par conséquent, si vous souhaitez veiller à ce que la partition soit répétée, vous ne devez pas compter sur la valeur de départ créée par le nom, mais définir une valeur de départ explicitement.  
   
  En outre, lorsque vous créez une copie d’une structure d’exploration de données à l’aide de la **exporter** instruction, [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] conserve le nom de la nouvelle structure d’exploration de données mais génère automatiquement un nouveau code. Par conséquent, il est possible d'avoir deux structures d'exploration de données qui partagent le même nom mais qui ont des ID différents. Deux structures d'exploration de données qui portent le même nom ont la même valeur de départ. Toutefois, comme le partitionnement des données dépend également des données source, le contenu réel des partitions dans chaque structure peut être différent.  
@@ -71,7 +71,7 @@ ms.lasthandoff: 01/08/2018
  L’élément qui correspond au parent de **HoldoutSeed** dans l’objet d’objets AMO (Analysis Management) est modèle <xref:Microsoft.AnalysisServices.MiningStructure>.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Propriétés &#40; ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)   
+ [Propriétés &#40;ASSL&#41;](../../../analysis-services/scripting/properties/properties-assl.md)   
  [HoldoutActualSize (élément)](../../../analysis-services/scripting/properties/holdoutactualsize-element.md)   
  [Holdoutmaxpercent, élément](../../../analysis-services/scripting/properties/holdoutmaxpercent-element.md)   
  [HoldoutMaxCases, élément](../../../analysis-services/scripting/properties/holdoutmaxcases-element.md)  

@@ -22,12 +22,11 @@ caps.latest.revision: 31
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 43fdace8b02e51ccfc5efc987a34ddd22b66019a
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 37c20d4470e257d0b15d89974bc8b39e0f46527c
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="prevmember-mdx"></a>PrevMember (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -45,10 +44,10 @@ Member_Expression.PrevMember
  *Argument*  
  Expression MDX (Multidimensional Expressions) valide qui retourne un membre.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Le **PrevMember** fonction retourne le membre précédent dans le même niveau que le membre spécifié.  
   
-## <a name="example"></a> Exemple  
+## <a name="example"></a>Exemple  
  L’exemple suivant montre une requête simple qui utilise le **PrevMember** fonction pour afficher le nom du membre immédiatement avant le membre actuel sur l’axe des lignes :  
   
  `WITH MEMBER MEASURES.PREVMEMBERDEMO AS`  
@@ -90,6 +89,6 @@ WHERE ([Geography].[State-Province].x,
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Référence des fonctions MDX &#40; MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Référence des fonctions MDX & #40 ; MDX & #41 ;](../mdx/mdx-function-reference-mdx.md)  
   
   

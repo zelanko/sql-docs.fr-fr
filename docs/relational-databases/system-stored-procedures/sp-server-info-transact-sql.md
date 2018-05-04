@@ -24,12 +24,11 @@ caps.latest.revision: 39
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: ab2bee2085b2b86015225f67a99bb01d833efb9d
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 652983ee8143f8ef23001bb702c323b25a13e36b
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spserverinfo-transact-sql"></a>sp_server_info (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,8 +56,8 @@ sp_server_info [[@attribute_id = ] 'attribute_id']
 |Nom de colonne|Type de données| Description|  
 |-----------------|---------------|-----------------|  
 |**ID_D**|**int**|Numéro d'identification de l'attribut.|  
-|**ATTRIBUTE_NAME**|**varchar (**60**)**|Nom de l'attribut.|  
-|**ATTRIBUTE_VALUE**|**varchar (**255**)**|Valeur actuelle de l'attribut.|  
+|**ATTRIBUTE_NAME**|**varchar (** 60 **)**|Nom de l'attribut.|  
+|**ATTRIBUTE_VALUE**|**varchar (** 255 **)**|Valeur actuelle de l'attribut.|  
   
  Le tableau suivant décrit ces attributs. [!INCLUDE[msCoName](../../includes/msconame-md.md)] Bibliothèques clientes ODBC utilisent actuellement les attributs **1**, **2**, **18**, **22**, et **500** lors de la connexion heure.  
   

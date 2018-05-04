@@ -21,12 +21,11 @@ caps.latest.revision: 11
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 2d74ff84d4659f17ea911844736767b7e820046b
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 38e0f7f27e642d2e0a313880604f004b868b8e80
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="-positive-dmx"></a>+ (positif) (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -48,8 +47,8 @@ ms.lasthandoff: 01/08/2018
  Valeur dotée du type de données du paramètre spécifié.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Les Extensions d’exploration de données &#40; DMX &#41; Référence des opérateurs](../dmx/data-mining-extensions-dmx-operator-reference.md)   
- [Opérateurs &#40; DMX &#41;](../dmx/operators-dmx.md)   
- [Opérateurs unaires &#40; DMX &#41;](../dmx/operators-unary.md)  
+ [Data Mining Extensions &#40;DMX&#41; référence des opérateurs](../dmx/data-mining-extensions-dmx-operator-reference.md)   
+ [Opérateurs &#40;DMX&#41;](../dmx/operators-dmx.md)   
+ [Opérateurs unaires &#40;DMX&#41;](../dmx/operators-unary.md)  
   
   

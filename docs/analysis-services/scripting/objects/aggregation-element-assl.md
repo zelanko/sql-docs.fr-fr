@@ -27,15 +27,15 @@ caps.latest.revision: 39
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: e4d6801123ab0a07ff4243d1147673f3baedb07d
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 9631596f7e1a3ab3ae26fa3c270c9a25f38e6dc7
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="aggregation-element-assl"></a>Élément Aggregation (ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Définit une agrégation unique pour un [Partition](../../../analysis-services/scripting/objects/partition-element-assl.md) élément.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Définit une agrégation unique pour un [Partition](../../../analysis-services/scripting/objects/partition-element-assl.md) élément.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -56,8 +56,8 @@ ms.lasthandoff: 01/08/2018
   
 |Caractéristique|Description|  
 |--------------------|-----------------|  
-|Type de données et longueur|None|  
-|Valeur par défaut|None|  
+|Type de données et longueur|Aucune|  
+|Valeur par défaut|Aucune|  
 |Cardinalité|0-n : élément facultatif pouvant apparaître plusieurs fois.|  
   
 ## <a name="element-relationships"></a>Relations entre les éléments  
@@ -67,13 +67,13 @@ ms.lasthandoff: 01/08/2018
 |Élément parent|[Agrégations](../../../analysis-services/scripting/collections/aggregations-element-assl.md)|  
 |Éléments enfants|[Annotations](../../../analysis-services/scripting/collections/annotations-element-assl.md), [Description](../../../analysis-services/scripting/properties/description-element-assl.md), [Dimensions](../../../analysis-services/scripting/collections/dimensions-element-assl.md), [ID](../../../analysis-services/scripting/properties/id-element-assl.md), [nom](../../../analysis-services/scripting/properties/name-element-assl.md)|  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  L’élément correspondant dans le modèle d’objet objets AMO (Analysis Management) est <xref:Microsoft.AnalysisServices.Aggregation>.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Élément partition &#40; ASSL &#41;](../../../analysis-services/scripting/objects/partition-element-assl.md)   
- [Élément AggregationDesign &#40; ASSL &#41;](../../../analysis-services/scripting/objects/aggregationdesign-element-assl.md)   
- [Élément MeasureGroup &#40; ASSL &#41;](../../../analysis-services/scripting/objects/measuregroup-element-assl.md)   
- [Objets &#40; ASSL &#41;](../../../analysis-services/scripting/objects/objects-assl.md)  
+ [Élément de la partition &#40;ASSL&#41;](../../../analysis-services/scripting/objects/partition-element-assl.md)   
+ [Élément AggregationDesign & #40 ; ASSL & #41 ;](../../../analysis-services/scripting/objects/aggregationdesign-element-assl.md)   
+ [Élément MeasureGroup &#40;ASSL&#41;](../../../analysis-services/scripting/objects/measuregroup-element-assl.md)   
+ [Objets & #40 ; ASSL & #41 ;](../../../analysis-services/scripting/objects/objects-assl.md)  
   
   

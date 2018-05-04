@@ -1,36 +1,35 @@
 ---
-title: "Algorithme de régression linéaire Microsoft | Documents Microsoft"
-ms.custom: 
+title: Algorithme de régression linéaire Microsoft | Documents Microsoft
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - algorithms [data mining]
 - linear regression algorithms [Analysis Services]
 - linear regression [Analysis Services]
 - regression algorithms [Analysis Services]
 ms.assetid: 50a4abb8-c0b0-4380-ba5e-c49b305b9d22
-caps.latest.revision: 
+caps.latest.revision: 23
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: b904dc4d9858b87f135b180b66ea24e8f688f0c2
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 05edc75faf07f624f14c555236a1b88d7d84d9f8
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="microsoft-linear-regression-algorithm"></a>Algorithme MLR (Microsoft Linear Regression)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-L’algorithme MLR ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Linear Regression) est une variante de l’algorithme MDT ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees) qui vous permet de calculer une relation linéaire entre une variable dépendante et indépendante, puis d’utiliser cette relation pour la prédiction.  
+  L’algorithme MLR ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Linear Regression) est une variante de l’algorithme MDT ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees) qui vous permet de calculer une relation linéaire entre une variable dépendante et indépendante, puis d’utiliser cette relation pour la prédiction.  
   
  La relation se présente sous la forme d'une équation correspondant à la droite représentant le mieux une série de données. Par exemple, la droite dans le diagramme suivant est la meilleure représentation linéaire possible des données.  
   
@@ -87,6 +86,6 @@ L’algorithme MLR ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Linear 
  [Algorithmes d’exploration de données &#40; Analysis Services - Exploration de données &#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
  [Référence technique de Microsoft Linear Regression algorithme](../../analysis-services/data-mining/microsoft-linear-regression-algorithm-technical-reference.md)   
  [Exemples de requêtes de modèle de régression linéaire](../../analysis-services/data-mining/linear-regression-model-query-examples.md)   
- [Contenu du modèle d’exploration de données pour les modèles de régression linéaire &#40; Analysis Services - Exploration de données &#41;](../../analysis-services/data-mining/mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)  
+ [Contenu du modèle d’exploration de données pour les modèles de régression linéaire & #40 ; Analysis Services - Exploration de données & #41 ;](../../analysis-services/data-mining/mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)  
   
   

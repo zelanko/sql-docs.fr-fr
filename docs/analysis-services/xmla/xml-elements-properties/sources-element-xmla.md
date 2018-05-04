@@ -29,15 +29,15 @@ caps.latest.revision: 13
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 622d8267bdbb9725ac3bc4e170f336ce34dd0ecc
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 6e28bfee38daba21b8ba195adb8654a1e5aabb88
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sources-element-xmla"></a>Élément Sources (XMLA)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]Contient une collection de [Source](../../../analysis-services/xmla/xml-elements-properties/source-element-xmla.md) éléments pour le parent [MergePartitions](../../../analysis-services/xmla/xml-elements-commands/mergepartitions-element-xmla.md) élément.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
+  Contient une collection de [Source](../../../analysis-services/xmla/xml-elements-properties/source-element-xmla.md) éléments pour le parent [MergePartitions](../../../analysis-services/xmla/xml-elements-commands/mergepartitions-element-xmla.md) élément.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -56,9 +56,9 @@ ms.lasthandoff: 01/08/2018
   
 |Caractéristique|Description|  
 |--------------------|-----------------|  
-|Type de données et longueur|None|  
-|Valeur par défaut|None|  
-|Cardinalité|1-1 : élément requis qui apparaît une fois et une seule.|  
+|Type de données et longueur|Aucune|  
+|Valeur par défaut|Aucune|  
+|Cardinalité|1-1 : élément requis qui apparaît une fois et une seule.|  
   
 ## <a name="element-relationships"></a>Relations entre les éléments  
   
@@ -67,9 +67,9 @@ ms.lasthandoff: 01/08/2018
 |Éléments parents|[MergePartitions](../../../analysis-services/xmla/xml-elements-commands/mergepartitions-element-xmla.md)|  
 |Éléments enfants|[Source](../../../analysis-services/xmla/xml-elements-properties/source-element-xmla.md)|  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
   
-## <a name="example"></a> Exemple  
+## <a name="example"></a>Exemple  
  L'exemple suivant associe l'ensemble des quatre partitions du groupe de mesures `Internet Sales` dans la partition cible `Internet_Sales_2004` . L'exemple utilise le cube Adventure Works DW de l'exemple de base de données [!INCLUDE[ssAWDWsp](../../../includes/ssawdwsp-md.md)] intitulé [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
   
 ```  
@@ -104,6 +104,6 @@ ms.lasthandoff: 01/08/2018
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Propriétés &#40; XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+ [Propriétés & #40 ; XMLA & #41 ;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

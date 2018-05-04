@@ -29,15 +29,15 @@ caps.latest.revision: 13
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: d6c59b1833e211e43c9429e6bf4aeb265325d76d
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 560ed0b86a29cffaa3b9a0969b2ae5f8783e26b5
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cell-element-mddataset-xmla"></a>Élément Cell (MDDataSet) (XMLA)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]Contient des informations sur une cellule unique contenue par un parent [CellData](../../../analysis-services/xmla/xml-elements-properties/celldata-element-xmla.md) élément.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
+  Contient des informations sur une cellule unique contenue par un parent [CellData](../../../analysis-services/xmla/xml-elements-properties/celldata-element-xmla.md) élément.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -56,8 +56,8 @@ ms.lasthandoff: 01/08/2018
   
 |Caractéristique|Description|  
 |--------------------|-----------------|  
-|Type de données et longueur|None|  
-|Valeur par défaut|None|  
+|Type de données et longueur|Aucune|  
+|Valeur par défaut|Aucune|  
 |Cardinalité|0-n : élément facultatif pouvant apparaître plusieurs fois.|  
   
 ## <a name="element-relationships"></a>Relations entre les éléments  
@@ -69,11 +69,11 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="attributes"></a>Attributs  
   
-|Attribute|Description|  
+|Attribut|Description|  
 |---------------|-----------------|  
 |CellOrdinal|Requis **unsignedInt** attribut. Position ordinale de la cellule dans le dataset multidimensionnel.|  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Dans le parent **racine** élément, le **Axes** élément est suivi par le **CellData** , une collection de **cellule** éléments contenant les valeurs de propriété pour chaque cellule retournée dans le dataset multidimensionnel. Le **cellule** élément contient le **CellOrdinal** attribut, qui indique la position ordinale de base zéro de la cellule dans le jeu de données multidimensionnel et à un élément pour chaque valeur de propriété de cellule associée à la cellule. Chaque valeur de propriété de cellule dans le **cellule** est définie par un élément XML distinct. La valeur de la propriété de cellule est les données contenues dans l’élément XML et le nom de la propriété de cellule, tel que défini dans le **CellInfo** élément de l’élément racine parent, correspond au nom de l’élément XML.  
   
  La syntaxe suivante décrit une valeur de propriété de cellule :  
@@ -122,7 +122,7 @@ ms.lasthandoff: 01/08/2018
   
  Pour i = 0, Ei = 1, c’est le cas pour i = 0 la somme est 1 * 1 = 1 et pour i = 1, la somme est 2 (valeur ordinale du tuple) heures 4 (valeur Ei calculée sous la forme 1 \* 4), ou 8. La somme de 1 + 8 est ensuite 9, soit l'ordinal de cette cellule.  
   
-## <a name="example"></a> Exemple  
+## <a name="example"></a>Exemple  
  L’exemple suivant illustre la structure de la **cellule** élément, y compris la valeur, FORMATTED_VALUE et FORMAT_STRING des valeurs de propriété pour chaque cellule de la cellule.  
   
 ```  
@@ -146,7 +146,7 @@ ms.lasthandoff: 01/08/2018
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Type de données MDDataSet &#40; XMLA &#41;](../../../analysis-services/xmla/xml-data-types/mddataset-data-type-xmla.md)   
- [Propriétés &#40; XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+ [Type de données MDDataSet & #40 ; XMLA & #41 ;](../../../analysis-services/xmla/xml-data-types/mddataset-data-type-xmla.md)   
+ [Propriétés & #40 ; XMLA & #41 ;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

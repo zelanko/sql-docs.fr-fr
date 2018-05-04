@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data sources [ODBC], connection functions
 - connecting to driver [ODBC], SQLConnect
@@ -27,12 +27,11 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: bcb591c8fb9e3921ad3788669f47290384c302e8
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 1dbb9c58b69fbec426fb203e47c355348f089b0b
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="connecting-with-sqlconnect"></a>Connexion avec SQLConnect
 **SQLConnect** est la fonction de connexion la plus simple. Il requiert un nom de source de données et qui accepte un ID d’utilisateur facultatif et le mot de passe. Elle fonctionne bien pour les applications que coder en dur une source de données nom et ne requièrent pas un ID d’utilisateur ou le mot de passe. Elle fonctionne également bien pour les applications qui souhaitent contrôlent leur propres « apparence » ou qui n’ont aucune interface utilisateur. De telles applications peuvent générer une liste de sources de données à l’aide de **SQLDataSources**, inviter l’utilisateur à la source de données, ID d’utilisateur et mot de passe, puis appelez **SQLConnect**.  

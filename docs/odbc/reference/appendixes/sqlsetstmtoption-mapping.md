@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - mapping deprecated functions [ODBC], SQLSetStmtOption
 - SQLSetStmtOption function [ODBC], mapping
@@ -20,15 +20,14 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 34316cba593d433d240dc67360d802e3deaddd2f
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: b5b1fd1295586e69f9db0f4084f74540163f45ed
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlsetstmtoption-mapping"></a>Mappage de SQLSetStmtOption
-Lorsqu’une application appelle **SQLSetStmtOption** via un ODBC 3*.x* pilote, l’appel à  
+Lorsqu’une application appelle **SQLSetStmtOption** via un ODBC 3 *.x* pilote, l’appel à  
   
 ```  
 SQLSetStmtOption(StatementHandle, fOption, vParam)  
@@ -58,8 +57,8 @@ SQLSetStmtOption(StatementHandle, fOption, vParam)
   
  Étant donné que le Gestionnaire de pilotes ne sait pas si l’attribut d’instruction de définies par le pilote a besoin d’une chaîne ou une valeur d’entier 32 bits, il doit passer une valeur valide pour le *StringLength* argument de **SQLSetStmtAttr**. Si le pilote a défini une sémantique spéciale pour les attributs d’instruction définie par le pilote et doit être appelée à l’aide de **SQLSetStmtOption**, il doit prendre en charge **SQLSetStmtOption**.  
   
- Si une application appelle **SQLSetStmtOption** pour définir une option d’instruction spécifiques au pilote dans un ODBC 3*.x* pilote et l’option a été définie dans une API ODBC 2. *x* version du pilote, une nouvelle constante de manifeste doit être définie pour l’option dans ODBC 3*.x* pilote. Si la constante de manifeste ancien est utilisée dans l’appel à **SQLSetStmtOption**, appelle le Gestionnaire de pilotes **SQLSetStmtAttr** avec la *StringLength* argument défini à 0.  
+ Si une application appelle **SQLSetStmtOption** pour définir une option d’instruction spécifiques au pilote dans un ODBC 3 *.x* pilote et l’option a été définie dans une API ODBC 2. *x* version du pilote, une nouvelle constante de manifeste doit être définie pour l’option dans ODBC 3 *.x* pilote. Si la constante de manifeste ancien est utilisée dans l’appel à **SQLSetStmtOption**, appelle le Gestionnaire de pilotes **SQLSetStmtAttr** avec la *StringLength* argument défini à 0.  
   
- Lorsqu’une application appelle **SQLSetStmtAttr** à la valeur SQL_ATTR_USE_BOOKMARKS SQL_UB_ON dans un ODBC 3*.x* pilote, l’attribut d’instruction SQL_ATTR_USE_BOOKMARKS a la valeur SQL_UB_FIXED. SQL_UB_ON est la même constante en tant que SQL_UB_FIXED. Le Gestionnaire de pilotes passe SQL_UB_FIXED par le biais du pilote. SQL_UB_FIXED a été déconseillée dans ODBC 3*.x*, mais une ODBC 3*.x* pilote doit implémenter qu’il fonctionne avec ODBC 2. *x* les applications qui utilisent des signets de longueur fixe.  
+ Lorsqu’une application appelle **SQLSetStmtAttr** à la valeur SQL_ATTR_USE_BOOKMARKS SQL_UB_ON dans un ODBC 3 *.x* pilote, l’attribut d’instruction SQL_ATTR_USE_BOOKMARKS a la valeur SQL_UB_FIXED. SQL_UB_ON est la même constante en tant que SQL_UB_FIXED. Le Gestionnaire de pilotes passe SQL_UB_FIXED par le biais du pilote. SQL_UB_FIXED a été déconseillée dans ODBC 3 *.x*, mais une ODBC 3 *.x* pilote doit implémenter qu’il fonctionne avec ODBC 2. *x* les applications qui utilisent des signets de longueur fixe.  
   
- Pour un ODBC 3*.x* pilote, le Gestionnaire de pilotes ne sont plus vérifie si *Option* est entre SQL_STMT_OPT_MIN et SQL_STMT_OPT_MAX, ou est supérieure à SQL_CONNECT_OPT_DRVR_START.
+ Pour un ODBC 3 *.x* pilote, le Gestionnaire de pilotes ne sont plus vérifie si *Option* est entre SQL_STMT_OPT_MIN et SQL_STMT_OPT_MAX, ou est supérieure à SQL_CONNECT_OPT_DRVR_START.

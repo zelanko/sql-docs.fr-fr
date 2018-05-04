@@ -22,12 +22,11 @@ caps.latest.revision: 30
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 643dca97d4d3e4675b07a7b8f9c06a5a78401dd8
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 267f45132476eafe7e7da87fa18c06bb57003d2b
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="stripcalculatedmembers-mdx"></a>StripCalculatedMembers (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -45,10 +44,10 @@ StripCalculatedMembers(Set_Expression)
  *Set_Expression*  
  Une expression MDX (Multidimensional Expressions) valide qui retourne un jeu.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Le **StripCalculatedMembers** fonction supprime les membres calculés à partir d’un jeu. Calculé membres peuvent être ajoutés à un jeu à l’aide de la [AddCalculatedMembers](../mdx/addcalculatedmembers-mdx.md) fonction, qui retourne les membres calculés qui sont définis sur le serveur, ou les membres calculés qui ont été ajoutés à la requête elle-même à l’aide de la syntaxe WITH MEMBER.  
   
-## <a name="example"></a> Exemple  
+## <a name="example"></a>Exemple  
  L'exemple ci-dessous supprime tous les membres calculés de la requête.  
   
 ```  
@@ -92,6 +91,6 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Référence des fonctions MDX &#40; MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Référence des fonctions MDX & #40 ; MDX & #41 ;](../mdx/mdx-function-reference-mdx.md)  
   
   

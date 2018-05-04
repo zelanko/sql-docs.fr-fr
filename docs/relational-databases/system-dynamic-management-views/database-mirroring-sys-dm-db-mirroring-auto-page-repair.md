@@ -28,12 +28,11 @@ caps.latest.revision: 17
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: d71ed7405b896a4e8542a66f445a7b6ed9376092
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: c4c86f019ed7b34ceab785c8f78205c5aed2d709
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="database-mirroring---sysdmdbmirroringautopagerepair"></a>Base de données mise en miroir - sys.dm_db_mirroring_auto_page_repair
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +44,7 @@ ms.lasthandoff: 04/16/2018
 |**database_id**|**int**|ID de la base de données à laquelle cette ligne correspond.|  
 |**file_id**|**int**|ID du fichier dans lequel la page est située.|  
 |**page_id**|**bigint**|ID de la page dans le fichier.|  
-|**error_type**|**int**|Type de l'erreur. Les valeurs peuvent être :<br /><br /> **-**1 = toutes les erreurs 823 de matériel<br /><br /> 1 = 824 erreurs autre qu’une somme de contrôle incorrecte ou d’une page endommagée (par exemple, un ID de page incorrect)<br /><br /> 2 = Somme de contrôle incorrecte<br /><br /> 3 = Page endommagée|  
+|**error_type**|**int**|Type de l'erreur. Les valeurs peuvent être :<br /><br /> **-** 1 = toutes les erreurs 823 de matériel<br /><br /> 1 = 824 erreurs autre qu’une somme de contrôle incorrecte ou d’une page endommagée (par exemple, un ID de page incorrect)<br /><br /> 2 = Somme de contrôle incorrecte<br /><br /> 3 = Page endommagée|  
 |**page_status**|**int**|État de la tentative de réparation de page :<br /><br /> 2 = En file d'attente pour demande au serveur partenaire.<br /><br /> 3 = Demande envoyée au serveur partenaire.<br /><br /> 4 = En file d'attente pour réparation de page automatique (réponse reçue du serveur partenaire).<br /><br /> 5 = Réparation de page automatique réussie et la page doit être utilisable.<br /><br /> 6 = Irréparable. Cela indique qu'une erreur a eu lieu pendant la tentative de réparation de page, par exemple, parce que la page est également endommagée sur le serveur partenaire, le serveur partenaire est déconnecté ou un problème réseau s'est produit. Cet état n'est pas terminal ; si la page est de nouveau endommagée, elle sera redemandée au serveur partenaire.|  
 |**modification_time**|**datetime**|Heure de la dernière modification de l'état de page.|  
   

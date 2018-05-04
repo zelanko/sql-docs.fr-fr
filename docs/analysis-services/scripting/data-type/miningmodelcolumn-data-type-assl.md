@@ -27,15 +27,15 @@ caps.latest.revision: 36
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 525e67d7c4c7ff203ab5ed5e75fc0775834b626b
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 59649cb1eed6bbd3f72aa6ed9a1a97cd12ef9160
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="miningmodelcolumn-data-type-assl"></a>Type de données MiningModelColumn (ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Définit un type de données primitif qui représente des informations sur une colonne dans un [MiningModel](../../../analysis-services/scripting/objects/miningmodel-element-assl.md) élément.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Définit un type de données primitif qui fournit des informations sur une colonne dans un élément [MiningModel](../../../analysis-services/scripting/objects/miningmodel-element-assl.md) .  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -58,21 +58,21 @@ ms.lasthandoff: 01/08/2018
   
 |Caractéristique|Description|  
 |--------------------|-----------------|  
-|Types de données de base|None|  
-|Types de données dérivés|None|  
+|Types de données de base|Aucune|  
+|Types de données dérivés|Aucune|  
   
 ## <a name="data-type-relationships"></a>Relations du type de données  
   
 |Relation|Élément|  
 |------------------|-------------|  
-|Éléments parents|None|  
-|Éléments enfants|[Annotations](../../../analysis-services/scripting/collections/annotations-element-assl.md), [colonnes](../../../analysis-services/scripting/collections/columns-element-assl.md), [Description](../../../analysis-services/scripting/properties/description-element-assl.md), [ID](../../../analysis-services/scripting/properties/id-element-assl.md), [ModelingFlags](../../../analysis-services/scripting/collections/modelingflags-element-assl.md), [nom](../../../analysis-services/scripting/properties/name-element-assl.md), [SourceColumnID](../../../analysis-services/scripting/properties/sourcecolumnid-element-assl.md), [traductions](../../../analysis-services/scripting/collections/translations-element-assl.md), [l’utilisation](../../../analysis-services/scripting/properties/usage-element-dimensionattribute-assl.md)|  
+|Éléments parents|Aucune|  
+|Éléments enfants|[Annotations](../../../analysis-services/scripting/collections/annotations-element-assl.md), [colonnes](../../../analysis-services/scripting/collections/columns-element-assl.md), [Description](../../../analysis-services/scripting/properties/description-element-assl.md), [ID](../../../analysis-services/scripting/properties/id-element-assl.md), [ModelingFlags](../../../analysis-services/scripting/collections/modelingflags-element-assl.md), [nom](../../../analysis-services/scripting/properties/name-element-assl.md) , [SourceColumnID](../../../analysis-services/scripting/properties/sourcecolumnid-element-assl.md), [traductions](../../../analysis-services/scripting/collections/translations-element-assl.md), [l’utilisation](../../../analysis-services/scripting/properties/usage-element-dimensionattribute-assl.md)|  
 |Éléments dérivés|[Colonne](../../../analysis-services/scripting/objects/column-element-assl.md) ([colonnes](../../../analysis-services/scripting/collections/columns-element-assl.md), collection de [MiningModel](../../../analysis-services/scripting/objects/miningmodel-element-assl.md))|  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  L’élément correspondant dans le modèle d’objet objets AMO (Analysis Management) est <xref:Microsoft.AnalysisServices.MiningModelColumn>.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Analysis Services script des Types de données XML Language &#40; ASSL &#41;](../../../analysis-services/scripting/data-type/analysis-services-scripting-language-xml-data-types-assl.md)  
+ [Analysis Services script des Types de données XML Language & #40 ; ASSL & #41 ;](../../../analysis-services/scripting/data-type/analysis-services-scripting-language-xml-data-types-assl.md)  
   
   

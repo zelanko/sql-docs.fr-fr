@@ -22,12 +22,11 @@ caps.latest.revision: 40
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: On Demand
-ms.openlocfilehash: c67e4106b760f9218172e7ada5628e34dd308f8a
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: f951c681b205ff9cfbc2b99c3935931811585186
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="order-mdx"></a>Order (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -58,7 +57,7 @@ Order(Set_Expression, String_Expression
  *String_Expression*  
  Expression de chaîne valide qui correspond généralement à une expression MDX (Multidimensional Expressions) valide des coordonnées des cellules qui retournent un nombre exprimé sous forme de chaîne.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Le **ordre** fonction peut être hiérarchique (comme spécifié à l’aide de la **ASC** ou **DESC** indicateur) ou non hiérarchique (comme spécifié à l’aide de la **BASC** ou **BDESC** indicateur ; le **B** « hiérarchie »). Si **ASC** ou **DESC** est spécifié, le **commande** fonction réorganise d’abord les membres en fonction de leur position dans la hiérarchie et puis elle ordonne chaque niveau. Si **BASC** ou **BDESC** est spécifié, le **commande** fonction organise les membres du jeu, indépendamment de la hiérarchie. Aucun indicateur n’est spécifié, **ASC** est la valeur par défaut.  
   
  Si le **commande** fonction est utilisée avec un jeu où deux ou plusieurs hiérarchies sont joints entre eux et le **DESC** indicateur est utilisé, seuls les membres de la dernière hiérarchie dans le jeu sont triés. Il s'agit là d'une différence par rapport à Analysis Services 2000 où toutes les hiérarchies du jeu étaient triées.  
@@ -225,6 +224,6 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Référence des fonctions MDX &#40; MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Référence des fonctions MDX & #40 ; MDX & #41 ;](../mdx/mdx-function-reference-mdx.md)  
   
   

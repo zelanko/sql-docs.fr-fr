@@ -25,12 +25,11 @@ caps.latest.revision: 32
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 310840a228c61b2e7fd8234c38e4a5198a9c3706
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 7a5833eae71a8d26f9f03d78a02581be9d11c3f3
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="keycolumnusage-transact-sql"></a>KEY_COLUMN_USAGE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -41,13 +40,13 @@ ms.lasthandoff: 04/16/2018
   
 |Nom de colonne|Type de données| Description|  
 |-----------------|---------------|-----------------|  
-|**CONSTRAINT_CATALOG**|**nvarchar(**128**)**|Qualificateur de la contrainte.|  
-|**CONSTRAINT_SCHEMA**|**nvarchar(**128**)**|Nom du schéma qui contient la contrainte.<br /><br /> **\*\* Important \* \***  n’utilisez pas les vues INFORMATION_SCHEMA pour déterminer le schéma d’un objet. La seule méthode fiable pour rechercher le schéma d’un objet est d’interroger l’affichage catalogue sys.objects.|  
-|**CONSTRAINT_NAME**|**nvarchar(**128**)**|Nom de la contrainte.|  
-|**TABLE_CATALOG**|**nvarchar(**128**)**|Qualificateur de la table.|  
-|**TABLE_SCHEMA**|**nvarchar(**128**)**|Nom du schéma qui contient la table.<br /><br /> **\*\* Important \* \***  n’utilisez pas les vues INFORMATION_SCHEMA pour déterminer le schéma d’un objet. La seule méthode fiable pour rechercher le schéma d’un objet est d’interroger l’affichage catalogue sys.objects.|  
-|**NOM_TABLE**|**nvarchar(**128**)**|Nom de la table.|  
-|**COLUMN_NAME**|**nvarchar(**128**)**|Nom de colonne.|  
+|**CONSTRAINT_CATALOG**|**nvarchar(** 128 **)**|Qualificateur de la contrainte.|  
+|**CONSTRAINT_SCHEMA**|**nvarchar(** 128 **)**|Nom du schéma qui contient la contrainte.<br /><br /> **\*\* Important \* \***  n’utilisez pas les vues INFORMATION_SCHEMA pour déterminer le schéma d’un objet. La seule méthode fiable pour rechercher le schéma d’un objet est d’interroger l’affichage catalogue sys.objects.|  
+|**CONSTRAINT_NAME**|**nvarchar(** 128 **)**|Nom de la contrainte.|  
+|**TABLE_CATALOG**|**nvarchar(** 128 **)**|Qualificateur de la table.|  
+|**TABLE_SCHEMA**|**nvarchar(** 128 **)**|Nom du schéma qui contient la table.<br /><br /> **\*\* Important \* \***  n’utilisez pas les vues INFORMATION_SCHEMA pour déterminer le schéma d’un objet. La seule méthode fiable pour rechercher le schéma d’un objet est d’interroger l’affichage catalogue sys.objects.|  
+|**NOM_TABLE**|**nvarchar(** 128 **)**|Nom de la table.|  
+|**COLUMN_NAME**|**nvarchar(** 128 **)**|Nom de colonne.|  
 |**ORDINAL_POSITION**|**int**|Position ordinale de la colonne.|  
   
 ## <a name="see-also"></a>Voir aussi  

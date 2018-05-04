@@ -27,15 +27,15 @@ caps.latest.revision: 34
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 7e15c2d5d155a14b71a08185123495bc9ba535f1
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 3981bc24fab2c36505ee9fc309fde3735a53c6c0
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="dimensionpermission-element-assl"></a>Élément DimensionPermission (ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Définit les autorisations qui appartiennent à un particulier [rôle](../../../analysis-services/scripting/objects/role-element-assl.md) élément pour une dimension de base de données spécifique ou de la dimension de cube.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Définit les autorisations qui appartiennent à un particulier [rôle](../../../analysis-services/scripting/objects/role-element-assl.md) élément pour une dimension de base de données spécifique ou de la dimension de cube.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -53,7 +53,7 @@ ms.lasthandoff: 01/08/2018
 |Caractéristique|Description|  
 |--------------------|-----------------|  
 |Type de données et longueur|Les éléments suivants sont Parent valide (ou un ancêtre commun) : paires de Type de données :<br /><br /> [Dimension](../../../analysis-services/scripting/objects/dimension-element-assl.md):[DimensionPermission](../../../analysis-services/scripting/data-type/dimensionpermission-data-type-assl.md)<br /><br /> [CubePermission](../../../analysis-services/scripting/objects/cubepermission-element-assl.md):<br />                        [CubeDimensionPermission](../../../analysis-services/scripting/data-type/cubedimensionpermission-data-type-assl.md)|  
-|Valeur par défaut|None|  
+|Valeur par défaut|Aucune|  
 |Cardinalité|0-n : élément facultatif susceptible d'apparaître une fois ou plusieurs fois.|  
   
 ## <a name="element-relationships"></a>Relations entre les éléments  
@@ -62,10 +62,10 @@ ms.lasthandoff: 01/08/2018
 |------------------|-------------|  
 |Élément parent|[DimensionPermissions](../../../analysis-services/scripting/collections/dimensionpermissions-element-assl.md)|  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Les éléments correspondants dans le modèle objet AMO (Analysis Management Objects) sont <xref:Microsoft.AnalysisServices.DimensionPermission> et <xref:Microsoft.AnalysisServices.CubeDimensionPermission>.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Objets &#40; ASSL &#41;](../../../analysis-services/scripting/objects/objects-assl.md)  
+ [Objets & #40 ; ASSL & #41 ;](../../../analysis-services/scripting/objects/objects-assl.md)  
   
   

@@ -20,12 +20,11 @@ caps.latest.revision: 20
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 38db9eddac7c7b753b680714f53d6ad01a49ea00
-ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
-ms.translationtype: MT
+ms.openlocfilehash: caf22b2c05db67af5b0cc8f2b316e18f7bc460ae
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/22/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="data-mining-programming"></a>Programmation de l'exploration de données
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -34,7 +33,7 @@ ms.lasthandoff: 01/22/2018
   
 -   **XMLA**  
   
-     [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]prend en charge XML for Analysis (XMLA) comme protocole de communication avec les applications clientes. Des commandes supplémentaires qui étendent la spécification XML for Analysis sont prises en charge par [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
+     [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] prend en charge XML for Analysis (XMLA) comme protocole de communication avec les applications clientes. Des commandes supplémentaires qui étendent la spécification XML for Analysis sont prises en charge par [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
   
      Dans la mesure où [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] utilise XMLA pour la définition, la manipulation et le contrôle de données, vous pouvez créer des structures et des modèles d'exploration de données à l'aide des outils visuels fournis par [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], puis étendre les objets d'exploration de données que vous avez créés en utilisant des scripts DMX (Data Mining Extensions) et ASSL (Analysis Services Scripting Language).  
   
@@ -68,14 +67,14 @@ ms.lasthandoff: 01/22/2018
  [Développement avec ADOMD.NET](../analysis-services/multidimensional-models/adomd-net/developing-with-adomd-net.md)  
  Présente les clients et serveur de programmation d’objets ADOMD.NET.  
   
- [Développement avec Analysis Management Objects &#40; AMO &#41;](../analysis-services/multidimensional-models/analysis-management-objects/developing-with-analysis-management-objects-amo.md)  
+ [Développement avec Analysis Management Objects & #40 ; AMO & #41 ;](../analysis-services/multidimensional-models/analysis-management-objects/developing-with-analysis-management-objects-amo.md)  
  Présente la bibliothèque de programmation AMO.  
   
- [Développement avec Analysis Services Scripting Language &#40; ASSL &#41;](../analysis-services/multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)  
+ [Développement avec Analysis Services Scripting Language & #40 ; ASSL & #41 ;](../analysis-services/multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)  
  Présente XML for Analysis (XMLA) et ses extensions.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Documentation du développeur Analysis Services](../analysis-services/analysis-services-developer-documentation.md)   
- [Les Extensions d’exploration de données &#40; DMX &#41; Référence](../dmx/data-mining-extensions-dmx-reference.md)  
+ [Les Extensions d’exploration de données & #40 ; DMX & #41 ; Référence](../dmx/data-mining-extensions-dmx-reference.md)  
   
   

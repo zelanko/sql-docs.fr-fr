@@ -1,35 +1,34 @@
 ---
-title: "Rechercher un nœud spécifique dans un réseau de dépendances | Documents Microsoft"
-ms.custom: 
+title: Rechercher un nœud spécifique dans un réseau de dépendances | Documents Microsoft
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - nodes [Analysis Services]
 - dependency network nodes [Analysis Services]
 - Mining Model Viewer [Analysis Services], dependency network nodes
 ms.assetid: 37c54602-ab25-48be-ae7a-59819deea8ed
-caps.latest.revision: 
+caps.latest.revision: 26
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: e67cca59b2383c525fdd0fbd80546d2c123a8a96
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: b6f7ac88e01ddb49d175ff0fcf3311780f599387
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="find-a-specific-node-in-a-dependency-network"></a>Rechercher un nœud spécifique dans un réseau de dépendances
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Un réseau de dépendances dans un modèle d’exploration de données [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] peut contenir plusieurs nœuds, ce qui rend difficile la recherche des données qui vous intéressent. Pour résoudre ce problème, vous pouvez utiliser la boîte de dialogue **Rechercher un nœud** de l’onglet **Réseau de dépendances** du Concepteur d’exploration de données.  
+  Un réseau de dépendances dans un modèle d’exploration de données [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] peut contenir plusieurs nœuds, ce qui rend difficile la recherche des données qui vous intéressent. Pour résoudre ce problème, vous pouvez utiliser la boîte de dialogue **Rechercher un nœud** de l’onglet **Réseau de dépendances** du Concepteur d’exploration de données.  
   
 ### <a name="to-find-a-specific-node-in-a-dependency-network"></a>Pour rechercher un nœud spécifique dans un réseau de dépendances  
   

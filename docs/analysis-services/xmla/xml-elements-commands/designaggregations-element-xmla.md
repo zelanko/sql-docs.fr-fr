@@ -29,15 +29,15 @@ caps.latest.revision: 13
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 5e6e3755c3f043a446301092ff948e31910547cf
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: b990707ad5df6379651ac698b14c309d5bef5610
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="designaggregations-element-xmla"></a>Élément DesignAggregations (XMLA)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]Crée des agrégations pour une conception d’agrégation sur une [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] instance.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
+  Crée des agrégations pour une conception d’agrégation sur une [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] instance.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -60,21 +60,21 @@ ms.lasthandoff: 01/08/2018
   
 |Caractéristique|Description|  
 |--------------------|-----------------|  
-|Type de données et longueur|None|  
-|Valeur par défaut|None|  
+|Type de données et longueur|Aucune|  
+|Valeur par défaut|Aucune|  
 |Cardinalité|0-n : élément facultatif pouvant apparaître plusieurs fois.|  
   
 ## <a name="element-relationships"></a>Relations entre les éléments  
   
 |Relation|Élément|  
 |------------------|-------------|  
-|Éléments parents|[Commandee](../../../analysis-services/xmla/xml-elements-properties/command-element-xmla.md)|  
-|Éléments enfants|[Matérialiser](../../../analysis-services/xmla/xml-elements-properties/materialize-element-xmla.md), [objet](../../../analysis-services/xmla/xml-elements-properties/object-element-xmla.md), [optimisation](../../../analysis-services/xmla/xml-elements-properties/optimization-element-xmla.md), [requêtes](../../../analysis-services/xmla/xml-elements-properties/queries-element-xmla.md), [étapes](../../../analysis-services/xmla/xml-elements-properties/steps-element-xmla.md), [stockage](../../../analysis-services/xmla/xml-elements-properties/storage-element-xmla.md), [heure](../../../analysis-services/xmla/xml-elements-properties/time-element-xmla.md)|  
+|Éléments parents|[Command](../../../analysis-services/xmla/xml-elements-properties/command-element-xmla.md)|  
+|Éléments enfants|[Matérialiser](../../../analysis-services/xmla/xml-elements-properties/materialize-element-xmla.md), [objet](../../../analysis-services/xmla/xml-elements-properties/object-element-xmla.md), [optimisation](../../../analysis-services/xmla/xml-elements-properties/optimization-element-xmla.md), [requêtes](../../../analysis-services/xmla/xml-elements-properties/queries-element-xmla.md), [étapes](../../../analysis-services/xmla/xml-elements-properties/steps-element-xmla.md), [stockage](../../../analysis-services/xmla/xml-elements-properties/storage-element-xmla.md) , [Heure](../../../analysis-services/xmla/xml-elements-properties/time-element-xmla.md)|  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  La commande **DesignAggregations** est utilisée pour générer des définitions d'agrégation stockées par une conception d'agrégation. Une conception d'agrégation peut être utilisée ensuite pour matérialiser des agrégations pour une partition et peut être réutilisée entre des partitions.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Commandes &#40; XMLA &#41;](../../../analysis-services/xmla/xml-elements-commands/xml-elements-commands.md)  
+ [Commandes & #40 ; XMLA & #41 ;](../../../analysis-services/xmla/xml-elements-commands/xml-elements-commands.md)  
   
   

@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - absolute scrolling [ODBC]
 - relative scrolling [ODBC]
@@ -22,12 +22,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 41155a5536493ba77941855e0283011ccda7d1a2
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 96487021b9f791a3c6cd08b222c829178f67a4a3
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="relative-and-absolute-scrolling"></a>Absolues et le défilement
 La plupart des options de défilement dans **SQLFetchScroll** positionnez le curseur par rapport à la position actuelle ou à une position absolue. **SQLFetchScroll** prend en charge l’extraction de la suivante, précédente, première et dernière ensembles de lignes, comme l’extraction de bien comme étant relative (extraire l’ensemble de lignes *n* lignes à partir du début de l’ensemble de lignes en cours) et absolu l’extraction (fetch le démarrage de l’ensemble de lignes à la ligne *n*). Si *n* est négatif dans une extraction absolue, les lignes sont comptées à partir de la fin du jeu de résultats. Par conséquent, une extraction absolue de ligne -1 signifie que l’extraction l’ensemble de lignes qui commence par la dernière ligne du jeu de résultats.  

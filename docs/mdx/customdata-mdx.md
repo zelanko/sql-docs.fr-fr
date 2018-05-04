@@ -22,12 +22,11 @@ caps.latest.revision: 18
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 717d8aa2aea972cf1193f279d3bf2b6283a9657e
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 5fb7c745ac65b41095c3d4dfb41b62b081d83c1d
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="customdata-mdx"></a>CustomData (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -44,7 +43,7 @@ CustomData()
 ## <a name="return-value"></a>Valeur retournée  
  Le **CustomData** fonction peut récupérer le **CustomData** propriété de chaîne de connexion et passer un paramètre à utiliser par les fonctions MDX (Multidimensional Expressions) et les instructions, telles que de configuration [UserName (MDX)](../mdx/username-mdx.md) et [instruction CALL (MDX)](../mdx/mdx-data-manipulation-call.md). Par exemple, cette fonction peut être utilisée dans une expression de la sécurité dynamique pour sélectionner les membres du jeu autorisé/refusé pour la valeur de chaîne dans le **CustomData** propriété de chaîne de connexion.  
   
-## <a name="example"></a> Exemple  
+## <a name="example"></a>Exemple  
  La requête suivante affiche la valeur retournée par la **CustomData** fonction dans une mesure calculée :  
   
 ```  
@@ -55,6 +54,6 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Référence des fonctions MDX &#40; MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Référence des fonctions MDX & #40 ; MDX & #41 ;](../mdx/mdx-function-reference-mdx.md)  
   
   

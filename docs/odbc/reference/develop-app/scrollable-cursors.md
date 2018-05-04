@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - scrollable cursors [ODBC]
 - cursors [ODBC], scrollable
@@ -20,12 +20,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: d337edea514a796a2d7525f7a01e3607e8ba7423
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: a6e779d551385c62ae8cddc5a2e7612b88095497
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="scrollable-cursors"></a>Curseurs de défilement
 Dans les applications modernes basée sur l’écran, l’utilisateur fait défiler vers le haut et vers l’avant les données. Pour de telles applications, il existe un problème de retour à une ligne extraite précédemment. L’une des possibilités consiste à fermer et rouvrir le curseur, puis extraire des lignes jusqu'à ce que le curseur atteint la ligne requise. Une autre possibilité consiste à lire le jeu de résultats, mettre en cache localement et implémenter le défilement dans l’application. Les deux possibilités fonctionnent bien uniquement avec les petits jeux de résultats, et la possibilité de ce dernier est difficile à implémenter. Une meilleure solution consiste à utiliser un *curseur permettant le défilement,* qui peut revenir en arrière et en avant dans le jeu de résultats.  

@@ -29,12 +29,11 @@ caps.latest.revision: 35
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 72c0c0816e250f135790604c2c832b87d74c0be2
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: e98ab15f5370eab52f4dc467bf13e7d52c62c979
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mdx-data-definition---drop-set"></a>Définition de données MDX - jeu de dépôt
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -60,10 +59,10 @@ DROP [SESSION] SET
  *Set_Name*  
  Expression de chaîne valide qui précise le nom du jeu nommé à supprimer.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Pour plus d’informations sur les jeux nommés, consultez [Création de jeux nommés à l’aide d’expressions MDX &#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/mdx-named-sets-building-named-sets.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Instructions MDX de définition de données &#40; MDX &#41;](../mdx/mdx-data-definition-statements-mdx.md)  
+ [Instructions MDX de définition de données &#40;MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)  
   
   

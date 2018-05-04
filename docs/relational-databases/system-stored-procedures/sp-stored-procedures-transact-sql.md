@@ -24,12 +24,11 @@ caps.latest.revision: 34
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: fb9ddbb55213fa83a746d73a26e88c9c010f9ba6
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 3efbb8829890dda1895237dde5bb65b5a4b3ab40
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spstoredprocedures-transact-sql"></a>sp_stored_procedures (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -64,7 +63,7 @@ sp_stored_procedures [ [ @sp_name = ] 'name' ]
 -   Schéma **dbo** dans la base de données active.  
   
  [  **@qualifier =** ] **'***qualificateur***'**  
- Nom du qualificateur de la procédure. *qualificateur* est **sysname**, avec NULL comme valeur par défaut. Divers produits SGBD prennent en charge d’affectation de noms en trois parties pour les tables dans le formulaire (*qualificateur***.*** schéma***.*** nom*. Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], *qualificateur* représente le nom de la base de données. Dans certains produits, elle représente le nom du serveur de l'environnement de base de données de la table.  
+ Nom du qualificateur de la procédure. *qualificateur* est **sysname**, avec NULL comme valeur par défaut. Divers produits SGBD prennent en charge d’affectation de noms en trois parties pour les tables dans le formulaire (*qualificateur ***.*** schéma ***.*** nom*. Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], *qualificateur* représente le nom de la base de données. Dans certains produits, elle représente le nom du serveur de l'environnement de base de données de la table.  
   
  [  **@fUsePattern =** ] **'***fUsePattern***'**  
  Détermine si les caractères de trait de soulignement (_), de pourcentage (%) ou les crochets [ ]) sont interprétés comme des caractères génériques. *fUsePattern* est **bits**, avec 1 comme valeur par défaut.  

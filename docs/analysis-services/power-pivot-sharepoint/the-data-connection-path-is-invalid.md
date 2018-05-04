@@ -1,31 +1,23 @@
 ---
-title: "Le chemin d’accès de connexion de données n’est pas valide | Documents Microsoft"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: reference
-ms.assetid: bd22e41a-0931-4d32-888a-633a3046fc5e
-caps.latest.revision: 
-author: Minewiskan
+title: Le chemin d’accès de connexion de données n’est pas valide | Documents Microsoft
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: ppvt-sharepoint
+ms.topic: article
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: b74fcdb45f2f7fb85423da9faa629e3565b10209
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: f4aefcd1c9cc69f678c17a726573a679ecfe9594
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="the-data-connection-path-is-invalid"></a>Le chemin d’accès de connexion de données n’est pas valide
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Pour les classeurs Excel contenant les données [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , Excel Services retourne cette erreur s’il ne peut pas se connecter aux sources de données incorporées.  
+  Pour les classeurs Excel contenant les données [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , Excel Services retourne cette erreur s’il ne peut pas se connecter aux sources de données incorporées.  
   
 ## <a name="details"></a>Détails  
   

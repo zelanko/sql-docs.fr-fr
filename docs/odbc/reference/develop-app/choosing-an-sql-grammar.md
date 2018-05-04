@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL statements [ODBC], interoperability
 - interoperability of SQL statements [ODBC], SQL grammar
@@ -21,12 +21,11 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 90aba694c610f34d2f6da93a3e5d155cb4fc4ab0
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: f33ff806f5283be5dd5973a1527664834ecc1411
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="choosing-an-sql-grammar"></a>Choix d’une grammaire SQL
 La première décision à prendre lors de la construction d’instructions SQL est le grammaire à utiliser. Outre les grammaires disponibles dans les différentes instances de normes, telles que Open Group, ANSI et ISO, pratiquement tous les fournisseurs SGBD définit sa propre grammaire, chacune d’elles varie légèrement par rapport à la norme.  

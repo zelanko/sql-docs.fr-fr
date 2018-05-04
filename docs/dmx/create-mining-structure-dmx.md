@@ -25,17 +25,16 @@ caps.latest.revision: 45
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: e7c12fe48c10b0fac4a89e2aa9a8e2b2ea0dce2f
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 47bdba77b79b49011bbd6b48547ffe9cc34aa270
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-mining-structure-dmx"></a>CREATE MINING STRUCTURE (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  Crée une structure d'exploration de données dans une base de données et, éventuellement, définit les partitions d'apprentissage et de test. Après avoir créé la structure d’exploration de données, vous pouvez utiliser la [ALTER MINING STRUCTURE &#40; DMX &#41;](../dmx/alter-mining-structure-dmx.md) instruction pour ajouter des modèles à la structure d’exploration de données.  
+  Crée une structure d'exploration de données dans une base de données et, éventuellement, définit les partitions d'apprentissage et de test. Après avoir créé la structure d’exploration de données, vous pouvez utiliser la [ALTER MINING STRUCTURE &#40;DMX&#41; ](../dmx/alter-mining-structure-dmx.md) instruction pour ajouter des modèles à la structure d’exploration de données.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -78,7 +77,7 @@ CREATE [SESSION] MINING STRUCTURE <structure>
   
  Valeur par défaut : RÉPÉTABLE(0)  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Vous définissez une structure d'exploration de données en spécifiant une liste de colonnes, en spécifiant éventuellement des relations hiérarchiques entre les colonnes, puis en partitionnant éventuellement la structure d'exploration de données en jeux de données d'apprentissage et de test.  
   
  Le mot clé SESSION facultatif indique que la structure est une structure temporaire que vous pouvez utiliser uniquement pour la durée de la session active. Une fois la session terminée, la structure, ainsi que tous les modèles sur celle-ci, seront supprimés. Pour créer des modèles et les structures d’exploration de données temporaire, vous devez d’abord définir la propriété de base de données, AllowSessionMiningModels. Pour plus d’informations, consultez [Propriétés de l’exploration de données](../analysis-services/server-properties/data-mining-properties.md).  
@@ -112,18 +111,18 @@ CREATE [SESSION] MINING STRUCTURE <structure>
   
  Pour la liste des types de données, types de contenu, distributions de colonnes et indicateurs de modélisation à utiliser pour définir une colonne de structure, consultez les rubriques suivantes :  
   
--   [Types de données &#40; exploration de données &#41;](../analysis-services/data-mining/data-types-data-mining.md)  
+-   [Types de données & #40 ; exploration de données & #41 ;](../analysis-services/data-mining/data-types-data-mining.md)  
   
--   [Contenu des Types de &#40; exploration de données &#41;](../analysis-services/data-mining/content-types-data-mining.md)  
+-   [Contenu des Types de & #40 ; exploration de données & #41 ;](../analysis-services/data-mining/content-types-data-mining.md)  
   
--   [Distributions de colonnes &#40; exploration de données &#41;](../analysis-services/data-mining/column-distributions-data-mining.md)  
+-   [Distributions de colonnes &#40;d’exploration de données&#41;](../analysis-services/data-mining/column-distributions-data-mining.md)  
   
--   [Modélisation des indicateurs &#40; exploration de données &#41;](../analysis-services/data-mining/modeling-flags-data-mining.md)  
+-   [Modélisation des indicateurs & #40 ; exploration de données & #41 ;](../analysis-services/data-mining/modeling-flags-data-mining.md)  
   
  Vous pouvez définir plusieurs valeurs d'indicateur de modélisation pour une colonne. Toutefois, vous ne pouvez avoir qu'un seul type de contenu et qu'un seul type de données pour une colonne.  
   
 ### <a name="column-relationships"></a>Relations de colonnes  
- Vous pouvez ajouter une clause à n'importe quelle instruction de définition de colonne pour décrire la relation entre deux colonnes. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]prend en charge l’utilisation de ces \<relation de colonne > clause.  
+ Vous pouvez ajouter une clause à n'importe quelle instruction de définition de colonne pour décrire la relation entre deux colonnes. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] prend en charge l’utilisation de ces \<relation de colonne > clause.  
   
  **LIÉS À**  
  Indique une hiérarchie de valeur. La cible d'une colonne RELATED TO peut être une colonne clé dans une table imbriquée, une colonne de valeurs discrètes dans la ligne de cas ou une autre colonne RELATED TO qui indique une hiérarchie plus profonde.  
@@ -154,7 +153,7 @@ WITH HOLDOUT (2000 CASES OR 20 PERCENT)
  Les exemples suivants montrent comment créer une structure d'exploration de données avec exclusion à l'aide de DMX.  
   
 ### <a name="example-1-adding-a-structure-with-no-training-set"></a>Exemple 1 : Ajout d'une structure sans jeu d'apprentissage  
- L'exemple suivant crée une structure d'exploration de données nommée `New Mailing` sans créer de modèle d'exploration de données associé et sans utiliser d'exclusion. Pour savoir comment ajouter un modèle d’exploration de données à la structure, consultez [ALTER MINING STRUCTURE &#40; DMX &#41;](../dmx/alter-mining-structure-dmx.md).  
+ L'exemple suivant crée une structure d'exploration de données nommée `New Mailing` sans créer de modèle d'exploration de données associé et sans utiliser d'exclusion. Pour savoir comment ajouter un modèle d’exploration de données à la structure, consultez [ALTER MINING STRUCTURE &#40;DMX&#41;](../dmx/alter-mining-structure-dmx.md).  
   
 ```  
 CREATE MINING STRUCTURE [New Mailing]  
@@ -195,8 +194,8 @@ WITH HOLDOUT(25 PERCENT OR 2000 CASES) REPEATABLE(0)
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Les Extensions d’exploration de données &#40; DMX &#41; Instructions de définition de données](../dmx/dmx-statements-data-definition.md)   
- [Les Extensions d’exploration de données &#40; DMX &#41; Instructions de Manipulation de données](../dmx/dmx-statements-data-manipulation.md)   
- [Guide de référence des instructions DMX &#40;Data Mining Extensions&#41;](../dmx/data-mining-extensions-dmx-statements.md)  
+ [Data Mining Extensions &#40;DMX&#41; instructions de définition de données](../dmx/dmx-statements-data-definition.md)   
+ [Data Mining Extensions &#40;DMX&#41; instructions de Manipulation de données](../dmx/dmx-statements-data-manipulation.md)   
+ [Les Extensions d’exploration de données & #40 ; DMX & #41 ; Référence des instructions](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

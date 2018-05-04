@@ -27,15 +27,15 @@ caps.latest.revision: 32
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: c37eaed200b5f9be4d7ef39599bd2a02ce7b2e58
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: f29696c14e370a922d7c79d3aead53df5b38482c
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="type-element-binding-assl"></a>Élément Type (Binding) (ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Contient le type de la liaison de l’attribut.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Contient le type de la liaison d'attribut.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -53,20 +53,20 @@ ms.lasthandoff: 01/08/2018
 |Caractéristique|Description|  
 |--------------------|-----------------|  
 |Type de données et longueur|Chaîne (énumération)|  
-|Valeur par défaut|None|  
-|Cardinalité|1-1 : élément requis qui apparaît une fois et une seule.|  
+|Valeur par défaut|Aucune|  
+|Cardinalité|1-1 : élément requis qui apparaît une fois et une seule.|  
   
 ## <a name="element-relationships"></a>Relations entre les éléments  
   
 |Relation|Élément|  
 |------------------|-------------|  
 |Éléments parents|[AttributeBinding](../../../analysis-services/scripting/data-type/attributebinding-data-type-assl.md), [CubeAttributeBinding](../../../analysis-services/scripting/data-type/cubeattributebinding-data-type-assl.md)|  
-|Éléments enfants|None|  
+|Éléments enfants|Aucune|  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  La valeur de cet élément est limitée à l'une des chaînes répertoriées dans le tableau suivant.  
   
-|Valeur|Description|  
+|Valeur| Description|  
 |-----------|-----------------|  
 |*Tous*|Tous les niveaux|  
 |*Clé*|Clés de membre|  
@@ -81,7 +81,7 @@ ms.lasthandoff: 01/08/2018
  Les éléments qui correspondent aux parents de **Type** dans le modèle d’objet objets AMO (Analysis Management) sont <xref:Microsoft.AnalysisServices.AttributeBinding> et <xref:Microsoft.AnalysisServices.CubeAttributeBinding>.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Type de liaison de données &#40; ASSL &#41;](../../../analysis-services/scripting/data-type/binding-data-type-assl.md)   
- [Propriétés &#40; ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
+ [Type de liaison de données & #40 ; ASSL & #41 ;](../../../analysis-services/scripting/data-type/binding-data-type-assl.md)   
+ [Propriétés & #40 ; ASSL & #41 ;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   

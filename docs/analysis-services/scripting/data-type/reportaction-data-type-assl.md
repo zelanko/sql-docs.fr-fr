@@ -27,15 +27,15 @@ caps.latest.revision: 40
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: e8103a26b28517d7db2550830811915a874b46b4
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 2b9fb3a6727f74c28474f965af15476d7a81c8f4
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="reportaction-data-type-assl"></a>Type de données ReportAction (ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Définit un type de données dérivé qui représente une action qui génère un [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] rapport.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Définit un type de données dérivé qui représente une action qui génère un [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] rapport.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -55,22 +55,22 @@ ms.lasthandoff: 01/08/2018
 |Caractéristique|Description|  
 |--------------------|-----------------|  
 |Types de données de base|[Action](../../../analysis-services/scripting/data-type/action-data-type-assl.md)|  
-|Types de données dérivés|None|  
+|Types de données dérivés|Aucune|  
   
 ## <a name="data-type-relationships"></a>Relations du type de données  
   
 |Relation|Élément|  
 |------------------|-------------|  
-|Éléments parents|None|  
+|Éléments parents|Aucune|  
 |Éléments enfants|[Chemin d’accès](../../../analysis-services/scripting/properties/path-element-assl.md), [ReportFormatParameters](../../../analysis-services/scripting/collections/reportformatparameters-element-assl.md), [ReportParameters](../../../analysis-services/scripting/collections/reportparameters-element-assl.md), [ReportServer](../../../analysis-services/scripting/properties/reportserver-element-assl.md)|  
 |Éléments dérivés|[Action](../../../analysis-services/scripting/objects/action-element-assl.md) ([Actions](../../../analysis-services/scripting/collections/actions-element-assl.md) collection de [Cube](../../../analysis-services/scripting/objects/cube-element-assl.md) ou [Perspective](../../../analysis-services/scripting/objects/perspective-element-assl.md))|  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Le serveur de rapports répond aux demandes de rapports basées sur une URL. L'action de rapport est définie avec un type *Report*. Les ressources et les paramètres sont transmis au serveur lors de la création de l'action. Le serveur expose l'action en tant qu'action de type ensemble de lignes.  
   
  L’élément correspondant dans le modèle d’objet objets AMO (Analysis Management) est <xref:Microsoft.AnalysisServices.ReportAction>.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Analysis Services script des Types de données XML Language &#40; ASSL &#41;](../../../analysis-services/scripting/data-type/analysis-services-scripting-language-xml-data-types-assl.md)  
+ [Analysis Services script des Types de données XML Language & #40 ; ASSL & #41 ;](../../../analysis-services/scripting/data-type/analysis-services-scripting-language-xml-data-types-assl.md)  
   
   

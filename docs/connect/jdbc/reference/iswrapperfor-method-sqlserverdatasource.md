@@ -11,18 +11,17 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f77af027-c021-4a17-b264-1ee592bfdd84
 caps.latest.revision: 21
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 8b687a5d3f05484eb906e14773dd0b519d387215
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: b1862175c31876c2391d2076929d146ec7a5a31a
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="iswrapperfor-method-sqlserverdatasource"></a>Méthode isWrapperFor (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -48,15 +47,15 @@ public boolean isWrapperFor(Class iface)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Notes  
- Le [isWrapperFor](../../../connect/jdbc/reference/iswrapperfor-method-sqlserverdatasource.md) (méthode) et le [unwrap](../../../connect/jdbc/reference/unwrap-method-sqlserverdatasource.md) méthode sont définis par l’interface java.sql.Wrapper, introduite dans les spécifications de JDBC 4.0.  
+ La méthode [isWrapperFor](../../../connect/jdbc/reference/iswrapperfor-method-sqlserverdatasource.md) et la méthode [unwrap](../../../connect/jdbc/reference/unwrap-method-sqlserverdatasource.md) sont définies par l’interface java.sql.Wrapper, introduite dans les spécifications de JDBC 4.0.  
   
- Si cette méthode retourne la valeur true, l’appel [unwrap](../../../connect/jdbc/reference/unwrap-method-sqlserverdatasource.md) avec le même argument réussit.  
+ Si cette méthode retourne la valeur True, l’appel de [unwrap](../../../connect/jdbc/reference/unwrap-method-sqlserverdatasource.md) avec le même argument réussit.  
   
  Pour plus d’informations, consultez [Wrappers et Interfaces](../../../connect/jdbc/wrappers-and-interfaces.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Méthode Unwrap &#40;SQLServerDataSource&#41;](../../../connect/jdbc/reference/unwrap-method-sqlserverdatasource.md)   
- [Membres de SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   
+ [SQLServerDataSource, membres](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   
  [SQLServerDataSource, classe](../../../connect/jdbc/reference/sqlserverdatasource-class.md)  
   
   

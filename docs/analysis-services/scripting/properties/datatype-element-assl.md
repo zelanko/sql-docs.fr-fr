@@ -27,15 +27,15 @@ caps.latest.revision: 38
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 34e1e88cef7b608bef7995849a170d8ce6ec8e70
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: c9a45fa75f92d38ab707e31c792cd7e388e1fab2
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="datatype-element-assl"></a>Élément DataType (ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Définit le type de données de l’élément associé.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Définit le type de données de l'élément associé.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -53,24 +53,24 @@ ms.lasthandoff: 01/08/2018
 |Caractéristique|Description|  
 |--------------------|-----------------|  
 |Type de données et longueur|Chaîne (énumération)|  
-|Valeur par défaut|None|  
-|Cardinalité|0-1 : élément facultatif qui peut apparaître une fois et une seule.|  
+|Valeur par défaut|Aucune|  
+|Cardinalité|0-1: élément facultatif qui peut apparaître une fois et une seule.|  
   
 ## <a name="element-relationships"></a>Relations entre les éléments  
   
 |Relation|Élément|  
 |------------------|-------------|  
 |Élément parent|[DataItem](../../../analysis-services/scripting/data-type/dataitem-data-type-assl.md), [mesure](../../../analysis-services/scripting/objects/measure-element-assl.md)|  
-|Éléments enfants|None|  
+|Éléments enfants|Aucune|  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Les valeurs de **DataType** sont définies dans le **System.Data.OleDb.OleDbType** énumération. Toutefois, seules les valeurs d’énumération dans le tableau suivant sont valides dans le **DataType** élément.  
   
-|Valeur|Description|  
+|Valeur| Description|  
 |-----------|-----------------|  
 |*BigInt*|Entier signé de 64 bits. Ce type de données est mappé à la **Int64** de type de données dans [!INCLUDE[msCoName](../../../includes/msconame-md.md)] de type .NET Framework et les données DBTYPE_I8 dans OLE DB.|  
 |*Bool*|Valeur booléenne. Ce type de données est mappé à la **booléenne** type de données dans le .NET Framework et le type de données DBTYPE_BOOL dans OLE DB.|  
-|*Devise*|Valeur monétaire comprise entre -2<sup>63</sup> (ou -922,337,203,685,477.5808) à 2<sup>63</sup>-1 (ou + 922,337,203,685,477.5807) avec une précision au dix-millième d’unité monétaire. Ce type de données est mappé à la **décimal** type de données dans le .NET Framework et le type de données DBTYPE_CY dans OLE DB.|  
+|*Monétaire (Currency)*|Valeur monétaire comprise entre -2<sup>63</sup> (ou -922,337,203,685,477.5808) à 2<sup>63</sup>-1 (ou + 922,337,203,685,477.5807) avec une précision au dix-millième d’unité monétaire. Ce type de données est mappé à la **décimal** type de données dans le .NET Framework et le type de données DBTYPE_CY dans OLE DB.|  
 |*Date*|Données de date, stockées en tant que nombre à virgule flottante double précision. La partie entière correspond au nombre de jours depuis le 30 décembre 1899 tandis que la partie fractionnaire désigne une fraction d'un jour. Ce type de données est mappé à la **DateTime** type de données dans le .NET Framework et le type de données DBTYPE_DATE dans OLE DB.|  
 |*Double*|Une virgule flottante double précision nombre compris entre - 1.79E + 308 et 1,79E + 308. Ce type de données est mappé à la **Double** type de données dans le .NET Framework et le type de données DBTYPE_R8 dans OLE DB.|  
 |*Entier*|Entier signé de 32 bits. Ce type de données est mappé à la **Int32** type de données dans le .NET Framework et le type de données DBTYPE_I4 dans OLE DB.|  
@@ -84,6 +84,6 @@ ms.lasthandoff: 01/08/2018
 |*Héritée*|Type de données de la **DataItem** contenus dans le [Source](../../../analysis-services/scripting/properties/source-element-measure-assl.md) élément de la **mesure** élément.<br /><br /> Remarque : Applicable uniquement aux **mesure** éléments.|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Propriétés &#40; ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
+ [Propriétés & #40 ; ASSL & #41 ;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   

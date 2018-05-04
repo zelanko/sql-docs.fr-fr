@@ -25,13 +25,12 @@ caps.latest.revision: 25
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 4d4987027ff854dfe9bef7c72420775a40298e15
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 8f56e7704e68e092b47deb9494dcbd6a600cb767
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="tableconstraints-transact-sql"></a>TABLE_CONSTRAINTS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -42,15 +41,15 @@ ms.lasthandoff: 04/16/2018
   
 |Nom de colonne|Type de données| Description|  
 |-----------------|---------------|-----------------|  
-|**CONSTRAINT_CATALOG**|**nvarchar(**128**)**|Qualificateur de la contrainte.|  
-|**CONSTRAINT_SCHEMA**|**nvarchar(**128**)**|Nom du schéma qui contient la contrainte.<br /><br /> **\*\* Important \* \***  n’utilisez pas les vues INFORMATION_SCHEMA pour déterminer le schéma d’un objet. La seule méthode fiable pour rechercher le schéma d’un objet est d’interroger l’affichage catalogue sys.objects.|  
+|**CONSTRAINT_CATALOG**|**nvarchar(** 128 **)**|Qualificateur de la contrainte.|  
+|**CONSTRAINT_SCHEMA**|**nvarchar(** 128 **)**|Nom du schéma qui contient la contrainte.<br /><br /> **\*\* Important \* \***  n’utilisez pas les vues INFORMATION_SCHEMA pour déterminer le schéma d’un objet. La seule méthode fiable pour rechercher le schéma d’un objet est d’interroger l’affichage catalogue sys.objects.|  
 |**CONSTRAINT_NAME**|**sysname**|Nom de la contrainte.|  
-|**TABLE_CATALOG**|**nvarchar(**128**)**|Qualificateur de la table.|  
-|**TABLE_SCHEMA**|**nvarchar(**128**)**|Nom du schéma qui contient la table.<br /><br /> **\*\* Important \* \***  n’utilisez pas les vues INFORMATION_SCHEMA pour déterminer le schéma d’un objet. La seule méthode fiable pour rechercher le schéma d’un objet est d’interroger l’affichage catalogue sys.objects.|  
+|**TABLE_CATALOG**|**nvarchar(** 128 **)**|Qualificateur de la table.|  
+|**TABLE_SCHEMA**|**nvarchar(** 128 **)**|Nom du schéma qui contient la table.<br /><br /> **\*\* Important \* \***  n’utilisez pas les vues INFORMATION_SCHEMA pour déterminer le schéma d’un objet. La seule méthode fiable pour rechercher le schéma d’un objet est d’interroger l’affichage catalogue sys.objects.|  
 |**NOM_TABLE**|**sysname**|Nom de la table.|  
-|**TYPE_CONTRAINTE**|**varchar (**11**)**|Type de contrainte :<br /><br /> CHECK<br /><br /> UNIQUE<br /><br /> PRIMARY KEY<br /><br /> FOREIGN KEY|  
-|**IS_DEFERRABLE**|**varchar (**2**)**|Indique si la vérification des contraintes peut être différée. Renvoie toujours NO.|  
-|**INITIALLY_DEFERRED**|**varchar (**2**)**|Spécifie si la vérification des contraintes est différée au départ. Renvoie toujours NO.|  
+|**TYPE_CONTRAINTE**|**varchar (** 11 **)**|Type de contrainte :<br /><br /> CHECK<br /><br /> UNIQUE<br /><br /> PRIMARY KEY<br /><br /> FOREIGN KEY|  
+|**IS_DEFERRABLE**|**varchar (** 2 **)**|Indique si la vérification des contraintes peut être différée. Renvoie toujours NO.|  
+|**INITIALLY_DEFERRED**|**varchar (** 2 **)**|Spécifie si la vérification des contraintes est différée au départ. Renvoie toujours NO.|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Vues système &#40;Transact-SQL&#41;](http://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)   

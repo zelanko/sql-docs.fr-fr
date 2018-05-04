@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - deleting data sources [ODBC], ODBC data source administrator
 - data sources [ODBC], ODBC data source administrator
@@ -23,12 +23,11 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 679edbfc02628e9a78b209961b22f576f627f057
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 222bbc143fee7aa89d8414a05510fa01a35873cd
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="managing-data-sources"></a>Gestion des Sources de données
 Après avoir installé un pilote ODBC programme du pilote d’installation, vous pouvez définir une ou plusieurs sources de données pour celui-ci. Le nom de source de données (DSN) doit fournir une description unique des données ; par exemple, *paie* ou *paies*. Les sources de données utilisateur et système qui sont définies pour tous les pilotes actuellement installés sont répertoriés dans le **DSN utilisateur** ou **DSN système** onglets de la **administrateur de sources de données ODBC** boîte de dialogue. Les sources de données de fichier dans un répertoire donné sont répertoriées dans le **DSN de fichier** onglet ; le répertoire à afficher est entré dans le **Regarder dans** zone le **DSN de fichier** onglet.  

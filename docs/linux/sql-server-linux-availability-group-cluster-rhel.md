@@ -14,12 +14,11 @@ ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: b7102919-878b-4c08-a8c3-8500b7b42397
-ms.workload: Inactive
-ms.openlocfilehash: e073b59b4fd29db9abf8ad602298c0f10301f178
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
-ms.translationtype: MT
+ms.openlocfilehash: 2a25f2cfa7ce0afdd1455cecd1ad8c8befce53e9
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configure-rhel-cluster-for-sql-server-availability-group"></a>Configurer le Cluster RHEL pour le groupe de disponibilité de SQL Server
 
@@ -127,18 +126,31 @@ sudo pcs property set stonith-enabled=false
 >[!IMPORTANT]
 >La désactivation de STONITH est uniquement pour des tests. Si vous envisagez d’utiliser STIMULATEUR dans un environnement de production, vous devez planifier une implémentation STONITH en fonction de votre environnement et qu’il soit activé. RHEL ne fournit pas de délimitation agents Hyper-V ou des environnements de cloud (y compris Azure). Par conséquent, le fournisseur de cluster n’offre pas de prise en charge des clusters de production en cours d’exécution dans ces environnements. Nous travaillons sur une solution pour cet intervalle qui est disponible dans les versions futures.
 
-## <a name="set-cluster-property-start-failure-is-fatal-to-false"></a>Définissez la propriété cluster start-échec-est-irrécupérable false
+## <a name="set-cluster-property-cluster-recheck-interval"></a>Définir la propriété cluster cluster-revérification-intervalle
 
-`start-failure-is-fatal` Indique si un échec pour démarrer une ressource sur un nœud empêche d’autres tentatives de démarrage sur ce nœud. Lorsque la valeur `false`, le cluster décide s’il faut essayer de démarrer sur le même nœud en fonction d’actuelle count et migration seuil d’échec la ressource. Après que le basculement se produit, les tentatives de STIMULATEUR à partir de la disponibilité groupe ressources sur l’ancien principal une fois que l’instance SQL est disponible. STIMULATEUR rétrograde le réplica de base de données secondaire, et il rejoint automatiquement le groupe de disponibilité. 
+`cluster-recheck-interval` Indique l’intervalle d’interrogation à laquelle le cluster vérifie les modifications dans les paramètres des ressources, des contraintes ou des autres options de cluster. Si un réplica tombe en panne, le cluster tente de redémarrer le réplica à un intervalle est lié par le `failure-timeout` valeur et le `cluster-recheck-interval` valeur. Par exemple, si `failure-timeout` est défini à 60 secondes et `cluster-recheck-interval` est définie à 120 secondes, le redémarrage sera tenté à un intervalle est supérieur à 60 secondes, mais moins de 120 secondes. Nous vous recommandons de définir d’expiration de l’échec à 60 s et de cluster-revérification-intervalle à une valeur qui est supérieure à 60 secondes. Paramètre d’intervalle de revérification de cluster sur une petite valeur n’est pas recommandé.
 
-Pour mettre à jour la valeur de propriété à `false` exécuter :
+Pour mettre à jour la valeur de propriété à `2 minutes` exécuter :
 
 ```bash
-sudo pcs property set start-failure-is-fatal=false
+sudo pcs property set cluster-recheck-interval=2min
 ```
 
->[!WARNING]
->Après un basculement automatique, lorsque `start-failure-is-fatal = true` le Gestionnaire de ressources va tenter de démarrer la ressource. En cas d’échec de la première tentative, exécutez manuellement `pcs resource cleanup <resourceName>` pour nettoyer le nombre d’échecs de ressources et de réinitialiser la configuration.
+> [!IMPORTANT] 
+> Toutes les distributions qui utilisent le dernier package 1.1.18-11.el7 STIMULATEUR disponibles (notamment RHEL 7.3 et 7.4) introduisent un changement de comportement pour le paramètre de démarrage-échec-est-irrécupérable cluster lorsque sa valeur est false. Cette modification affecte le flux de travail de basculement. Si un réplica principal connaît une panne, le cluster est prévu pour basculer vers un des réplicas secondaires disponibles. Au lieu de cela, les utilisateurs Remarquez que le cluster conserve la tentative de démarrage du réplica principal a échoué. Si ce principal est jamais en ligne (en raison d’une panne permanente), le cluster ne bascule vers un autre réplica secondaire disponible. Grâce à cette modification, une configuration précédemment recommandée pour définir le début-échec-est-irrécupérable n’est plus valide et que le paramètre doit être restauré à sa valeur par défaut de `true`. En outre, la ressource de groupe de disponibilité doit être mis à jour pour inclure le `failover-timeout` propriété. 
+
+Pour mettre à jour la valeur de propriété à `true` exécuter :
+
+```bash
+sudo pcs property set start-failure-is-fatal=true
+```
+
+Pour mettre à jour le `ag1` propriété de ressource `failure-timeout` à `60s` exécuter :
+
+```bash
+pcs resource update ag1 meta failure-timeout=60s
+```
+
 
 Pour plus d’informations sur les propriétés du cluster STIMULATEUR, consultez [STIMULATEUR Clusters propriétés](http://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/High_Availability_Add-On_Reference/ch-clusteropts-HAAR.html).
 
@@ -151,8 +163,8 @@ Pour plus d’informations sur les propriétés du cluster STIMULATEUR, consulte
 Pour créer la ressource de groupe de disponibilité, utilisez `pcs resource create` de commandes et définissez les propriétés de ressource. La commande suivante crée un `ocf:mssql:ag` maître/esclave pour le groupe de disponibilité avec le nom de ressource de type `ag1`.
 
 ```bash
-sudo pcs resource create ag_cluster ocf:mssql:ag ag_name=ag1 master notify=true
-```
+sudo pcs resource create ag_cluster ocf:mssql:ag ag_name=ag1 meta failure-timeout=30s master notify=true
+``` 
 
 [!INCLUDE [required-synchronized-secondaries-default](../includes/ss-linux-cluster-required-synchronized-secondaries-default.md)]
 

@@ -22,12 +22,11 @@ caps.latest.revision: 33
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 88a6b0a3948e7a29ef97c0bdce85cddcd3f2b6da
-ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
-ms.translationtype: MT
+ms.openlocfilehash: 90c74aa65af67256ae7b64fd751147abe89ab2bb
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/22/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="globalization-tips-and-best-practices-analysis-services"></a>Conseils et meilleures pratiques en matière de globalisation (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]

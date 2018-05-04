@@ -22,12 +22,11 @@ caps.latest.revision: 41
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 086ac8bb714bca7c182a59040d64badf89f261d3
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: c7db63f58a76c2ad24e52693a58c4ed9e9b23479
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="bottompercent-dmx"></a>BottomPercent (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -54,7 +53,7 @@ BottomPercent(<table expression>, <rank expression>, <percent>)
 ## <a name="result-type"></a>Type de résultat  
  Table.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Le **BottomPercent** fonction retourne les lignes les plus bas dans l’ordre croissant. Le rang est basé sur la valeur évaluée de la \<rank expression > argument pour chaque ligne, telles que la somme de la \<rank expression > valeurs soit au moins égale au pourcentage spécifié par le \<% > argument. **BottomPercent** retourne le plus petit nombre d’éléments possible tout en correspondant à la valeur du pourcentage spécifiée.  
   
 ## <a name="examples"></a>Exemples  
@@ -124,10 +123,10 @@ NATURAL PREDICTION JOIN
  **Remarque** cet exemple est fourni uniquement pour illustrer l’utilisation de BottomPercent. L'exécution de cette requête peut prendre beaucoup de temps, en fonction de la taille de votre jeu de données.  
   
 > [!WARNING]  
->  Les fonctions MDX pour TOPPERCENT et BOTTOMPERCENT peuvent générer des résultats inattendus lorsque les valeurs utilisées pour calculer le pourcentage incluent les nombres négatifs. Ce comportement n'affecte pas les fonctions DMX. Pour plus d’informations, consultez [BottomPercent &#40; MDX &#41; ](../mdx/bottompercent-mdx.md).  
+>  Les fonctions MDX pour TOPPERCENT et BOTTOMPERCENT peuvent générer des résultats inattendus lorsque les valeurs utilisées pour calculer le pourcentage incluent les nombres négatifs. Ce comportement n'affecte pas les fonctions DMX. Pour plus d’informations, consultez [BottomPercent &#40;MDX&#41;](../mdx/bottompercent-mdx.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Les Extensions d’exploration de données &#40; DMX &#41; Référence de fonction](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [Fonctions &#40; DMX &#41;](../dmx/functions-dmx.md)  
+ [Data Mining Extensions &#40;DMX&#41; référence de fonction](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [Fonctions &#40;DMX&#41;](../dmx/functions-dmx.md)  
   
   

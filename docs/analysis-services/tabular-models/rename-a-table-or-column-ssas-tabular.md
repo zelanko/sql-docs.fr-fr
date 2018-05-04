@@ -1,33 +1,32 @@
 ---
 title: Renommer une Table ou colonne | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 05/22/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - sql13.asvs.bidtoolset.renametableorcolumn.f1
 ms.assetid: 88061a39-c5aa-403d-a52b-7fdb365fc235
-caps.latest.revision: 
+caps.latest.revision: 11
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: bf8d925f0ffe72eab343ebf8af82030a21c0a9b0
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
-ms.translationtype: MT
+ms.openlocfilehash: c99456397e4d5443f969010307a848a663f40d8b
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="rename-a-table-or-column"></a>Renommer une table ou une colonne 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-Vous pouvez modifier le nom d'une table pendant le processus d'importation en tapant un **Nom convivial** dans la page **Sélectionner des tables et des vues** de l' **Assistant Importation de table**. Vous pouvez également changer le nom des tables et des colonnes si vous importez des données en spécifiant une requête dans la page **Spécifier une requête SQL** de l' **Assistant Importation de table**.  
+  Vous pouvez modifier le nom d'une table pendant le processus d'importation en tapant un **Nom convivial** dans la page **Sélectionner des tables et des vues** de l' **Assistant Importation de table**. Vous pouvez également changer le nom des tables et des colonnes si vous importez des données en spécifiant une requête dans la page **Spécifier une requête SQL** de l' **Assistant Importation de table**.  
   
  Une fois que vous avez ajouté les données au modèle, le nom (ou le titre) d'une table s'affiche sous l'onglet Table, au bas du générateur de modèles. Vous pouvez changer le nom de votre table afin de lui donner un nom plus approprié. Vous pouvez également renommer une colonne après l’ajout de données au classeur. Cette option est notamment importante lorsque vous avez importé des données à partir de plusieurs sources et souhaitez vous assurer que les colonnes dans les différentes tables ont des noms qui sont faciles à distinguer.  
   
@@ -53,7 +52,7 @@ Vous pouvez modifier le nom d'une table pendant le processus d'importation en ta
   
 -   Caractères de contrôle  
   
--   Caractères suivants (qui ne sont pas valides dans les noms d’objets Analysis Services) : .,;':/\\*|?&%$!+=()[]{}<>  
+-   Les caractères suivants (qui ne sont pas valides dans les noms d’objets Analysis Services) :., ' : / \\*|? & % $! %$!+=()[]5D;{}{}<>  
   
 -   Mots clés réservés Analysis Services, notamment les opérateurs et les noms de fonction MDX et DMX.  
   

@@ -24,12 +24,11 @@ caps.latest.revision: 44
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: d6182a83fce79b3940b4137345d24d14d259c7db
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: e17a010a96c669e7f8363634a135bdaa9e7be892
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spchangemergepublication-transact-sql"></a>sp_changemergepublication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -87,7 +86,7 @@ sp_changemergepublication [ @publication= ] 'publication'
 |**compress_snapshot**|**true**|L'instantané se trouvant dans un dossier d'instantané de remplacement est compressé au format CAB. L'instantané se trouvant dans le dossier d'instantané par défaut ne peut pas être compressé. La modification de cette propriété requiert un nouvel instantané.|  
 ||**false**|L'instantané n'est pas compressé par défaut. La modification de cette propriété requiert un nouvel instantané.|  
 |**conflict_logging**|**publisher** (serveur de publication)|Les enregistrements en conflit sont stockés sur le serveur de publication.|  
-||**subscriber** (Abonné)|Les enregistrements en conflit sont stockés dans l'Abonné à l'origine du conflit. Non pris en charge pour [!INCLUDE[ssEW](../../includes/ssew-md.md)] abonnés*.*|  
+||**subscriber** (Abonné)|Les enregistrements en conflit sont stockés dans l'Abonné à l'origine du conflit. Non pris en charge pour [!INCLUDE[ssEW](../../includes/ssew-md.md)] abonnés *.*|  
 ||**both** (les deux)|Les enregistrements en conflit sont stockés dans le serveur de publication et l'Abonné.|  
 |**conflict_retention**||Un **int** qui spécifie la période de rétention en jours, pendant laquelle les conflits sont conservés. Paramètre *conflict_retention* à **0** signifie aucun nettoyage de conflit n’est nécessaire.|  
 |**description**||Description de la publication.|  

@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL statements [ODBC], CLI
 - CLI [ODBC], using CLI
@@ -23,12 +23,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 1b019e7757f907656b2d1180af9488f9a4e8595f
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 5df7ff90e8b290f6fb55f1c62b59eee10d83cd8e
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="call-level-interfaces"></a>Interfaces de niveau d’appel
 La dernière technique pour l’envoi d’instructions SQL au SGBD est via une interface de niveau d’appel (CLI). Une interface de niveau d’appel fournit une bibliothèque de fonctions SGBD qui peut être appelée par l’application. Par conséquent, au lieu de tenter de fusion SQL avec un autre langage de programmation, une interface de niveau d’appel est similaire aux routine la plupart des programmeurs sont habitués à utiliser, par exemple, la chaîne, d’e/s, les bibliothèques ou des bibliothèques de mathématiques dans C. Notez que SGBD qui prennent en charge de SQL incorporé déjà ont une interface au niveau de l’appel, les appels à qui sont générés par le précompilés. Toutefois, ces appels sont non documenté et l’objet de modifications sans préavis.  

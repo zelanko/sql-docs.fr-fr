@@ -1,31 +1,23 @@
 ---
-title: "Afficher le schéma de Cube | Documents Microsoft"
-ms.custom: 
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: Afficher le schéma de Cube | Documents Microsoft
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-ms.assetid: 82fc715c-e08e-447d-8fc8-9c9005f145f0
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 25343dab0a818aa86f0a3a2f5080204602cc1f38
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 8e6ff9162eb9a72596b3f5dc43ef86cd00d287e4
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="view-the-cube-schema"></a>Afficher le schéma de cube
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Le volet **Vue de source de données** de l'onglet **Structure de cube** du **Concepteur de cube** affiche le schéma de cube. Le schéma est l'ensemble de tables à partir desquelles les mesures et les dimensions d'un cube sont dérivées. Chaque schéma de cube se compose d'une ou plusieurs tables de faits et d'une ou plusieurs tables de dimension sur lesquelles les mesures et les dimensions du cube sont basées.  
+  Le volet **Vue de source de données** de l'onglet **Structure de cube** du **Concepteur de cube** affiche le schéma de cube. Le schéma est l'ensemble de tables à partir desquelles les mesures et les dimensions d'un cube sont dérivées. Chaque schéma de cube se compose d'une ou plusieurs tables de faits et d'une ou plusieurs tables de dimension sur lesquelles les mesures et les dimensions du cube sont basées.  
   
  Le volet **Vue de source de données** de l'onglet **Structure de cube** affiche un diagramme de la vue de source de données sur laquelle le cube est basé. Ce diagramme est un sous-ensemble du diagramme principal de la vue de source de données. Vous pouvez masquer et afficher les tables dans le volet **Vue de source de données** et afficher tous les diagrammes existants. Toutefois, vous ne pouvez pas apporter des modifications (telles que l'ajout de nouvelles relations ou requêtes nommées) au schéma sous-jacent. Pour apporter des modifications au schéma, utilisez le concepteur de vue de source de données.  
   

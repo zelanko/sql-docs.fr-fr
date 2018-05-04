@@ -22,12 +22,11 @@ caps.latest.revision: 30
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: f6969649d0ac405aca0766219b0df52b1c1ee244
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: b3c35a64883a8e7c7c3f09863f0ee36318654967
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mtd-mdx"></a>Mtd (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -45,12 +44,12 @@ Mtd( [ Member_Expression ] )
  *Argument*  
  Expression MDX (Multidimensional Expressions) valide qui retourne un membre.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Si une expression de membre n’est pas spécifiée, la valeur par défaut est le membre actuel de la première hiérarchie avec un niveau de type *mois* dans la première dimension de type *temps* dans le groupe de mesures.  
   
  Le **Mtd** fonction est un raccourci pour la [PeriodsToDate](../mdx/periodstodate-mdx.md) lorsque la propriété Type de la hiérarchie d’attribut sur lequel est basé un niveau est la valeur de la fonction *mois*. Ce qui signifie que `Mtd(Member_Expression)` est équivalent à `PeriodsToDate(Month_Level_Expression,Member_Expression)`.  
   
-## <a name="example"></a> Exemple  
+## <a name="example"></a>Exemple  
  L’exemple suivant retourne la somme du mois pour les coûts de fret date pour les ventes sur Internet pour le mois de juillet 2002 jusqu'à la date du 20 juillet.  
   
 ```  
@@ -64,7 +63,7 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Somme &#40; MDX &#41;](../mdx/sum-mdx.md)   
- [Référence des fonctions MDX &#40; MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Somme &#40;MDX&#41;](../mdx/sum-mdx.md)   
+ [Référence des fonctions MDX & #40 ; MDX & #41 ;](../mdx/mdx-function-reference-mdx.md)  
   
   

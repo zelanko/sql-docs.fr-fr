@@ -1,5 +1,5 @@
 ---
-title: '&gt;(Supérieur à) (DMX) | Documents Microsoft'
+title: '&gt; (Supérieur à) (DMX) | Documents Microsoft'
 ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
@@ -21,14 +21,13 @@ caps.latest.revision: 13
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 58c959cb74a2a6b402cdfba2b80a1dca82d56a0f
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 4184641970fc24e8ae1e9dbd87b915c86375f0ab
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="gt-greater-than-dmx"></a>&gt;(Supérieur à) (DMX)
+# <a name="gt-greater-than-dmx"></a>&gt; (Supérieur à) (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Effectue une opération de comparaison qui détermine si la valeur d'une expression DMX (Data Mining Extensions) est supérieure à la valeur d'une autre expression DMX.  
@@ -48,8 +47,8 @@ DMX_Expression > DMX_Expression
  Valeur booléenne contenant la valeur TRUE si les deux paramètres ont la valeur Non NULL et si le premier paramètre a une valeur supérieure à la valeur du deuxième paramètre. La valeur booléenne contient FALSE si les deux paramètres ont la valeur Non NULL et si le premier paramètre a une valeur qui est égale à ou inférieure à la valeur du deuxième paramètre. La valeur booléenne contient une valeur NULL si l'un des deux ou les deux paramètres donnent comme résultat une valeur NULL.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Opérateurs de comparaison &#40; DMX &#41;](../dmx/operators-comparison.md)   
- [Les Extensions d’exploration de données &#40; DMX &#41; Référence des opérateurs](../dmx/data-mining-extensions-dmx-operator-reference.md)   
- [Opérateurs &#40; DMX &#41;](../dmx/operators-dmx.md)  
+ [Opérateurs de comparaison &#40;DMX&#41;](../dmx/operators-comparison.md)   
+ [Data Mining Extensions &#40;DMX&#41; référence des opérateurs](../dmx/data-mining-extensions-dmx-operator-reference.md)   
+ [Opérateurs &#40;DMX&#41;](../dmx/operators-dmx.md)  
   
   

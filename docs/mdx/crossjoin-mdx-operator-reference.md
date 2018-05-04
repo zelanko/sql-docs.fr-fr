@@ -23,12 +23,11 @@ caps.latest.revision: 41
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: e192e0eacd926cde2c6548392b1523cfc3d0af12
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: a510ca656d7a17bc80878c49bab20fb3254c81e0
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="crossjoin----mdx-operator-reference"></a>Crossjoin - référence des opérateurs MDX
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -49,7 +48,7 @@ Set_Expression * Set_Expression
 ## <a name="return-value"></a>Valeur retournée  
  Jeu contenant le produit croisé des deux paramètres spécifiés.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Le  **\* (Crossjoin)** opérateur est fonctionnellement équivalente à la [Crossjoin](../mdx/crossjoin-mdx.md) (fonction).  
   
 ## <a name="examples"></a>Exemples  
@@ -69,6 +68,6 @@ WHERE
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Référence des opérateurs MDX &#40; MDX &#41;](../mdx/mdx-operator-reference-mdx.md)  
+ [Référence des opérateurs MDX &#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)  
   
   

@@ -22,17 +22,16 @@ caps.latest.revision: 32
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 871720eafb0d0b166789491e576d56dbcc5f33ac
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 359fb827d4ce4c7e0915fbaf2021f0c754b6ea1d
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="var-mdx"></a>Var (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  Retourne la variance d’une expression numérique évaluée sur un jeu, à l’aide de la formule de remplissage non biaisée (division par  *n* ).  
+  Retourne la variance d’une expression numérique évaluée sur un jeu, à l’aide de la formule de remplissage non biaisée (division par *n*).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -48,12 +47,12 @@ Var(Set_Expression [ ,Numeric_Expression ] )
  *Numeric_expression*  
  Expression numérique valide qui correspond généralement à une expression MDX (Multidimensional Expressions) des coordonnées des cellules qui retournent un nombre.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Le **Var** fonction renvoie la variance non biaisée d’une expression numérique spécifiée évaluée sur un jeu spécifié.  
   
  Le **Var** fonction utilise la formule de remplissage non biaisée et la [VarP](../mdx/varp-mdx.md) fonction utilise la formule de remplissage biaisée.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Référence des fonctions MDX &#40; MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Référence des fonctions MDX & #40 ; MDX & #41 ;](../mdx/mdx-function-reference-mdx.md)  
   
   

@@ -21,12 +21,11 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: f3ce672d532062e93c6e6e758d7cd8b296655ae9
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 8d8553f8e290015281f64a51a81fe191e3dd4d9b
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="definedsize-property-example-vb"></a>Exemple de propriété DefinedSize (VB)
 Cet exemple illustre la [DefinedSize](../../../ado/reference/adox-api/definedsize-property-adox.md) propriété d’un [colonne](../../../ado/reference/adox-api/column-object-adox.md). Le code redéfinit la taille de la colonne FirstName de la **employés** table de la *Northwind* base de données. Ensuite, la modification des valeurs du prénom [champ](../../../ado/reference/ado-api/field-object.md) d’un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) basé sur le **employés** table s’affiche. Notez que, par défaut, le champ Prénom est complété avec des espaces après que vous redéfinissez le **DefinedSize** propriété.  

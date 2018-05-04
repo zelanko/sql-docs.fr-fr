@@ -29,15 +29,15 @@ caps.latest.revision: 11
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: f4a5712589c87c0301a7285083fda5f87c96aa6f
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 7f6a40dd9485ff4a3c82ae82a7d75e54f03cb039
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="movewithdescendants-element-xmla"></a>Élément MoveWithDescendants (XMLA)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]Indique si les descendants des membres d’attribut sont également mis à jour par le parent [mise à jour](../../../analysis-services/xmla/xml-elements-commands/update-element-xmla.md) commande.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
+  Indique si les descendants des membres d’attribut sont également mis à jour par le parent [mise à jour](../../../analysis-services/xmla/xml-elements-commands/update-element-xmla.md) commande.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -56,24 +56,24 @@ ms.lasthandoff: 01/08/2018
 |--------------------|-----------------|  
 |Type de données et longueur|Booléen|  
 |Valeur par défaut|False|  
-|Cardinalité|0-1 : élément facultatif qui peut apparaître une fois et une seule.|  
+|Cardinalité|0-1: élément facultatif qui peut apparaître une fois et une seule.|  
   
 ## <a name="element-relationships"></a>Relations entre les éléments  
   
 |Relation|Élément|  
 |------------------|-------------|  
 |Éléments parents|[Update](../../../analysis-services/xmla/xml-elements-commands/update-element-xmla.md)|  
-|Éléments enfants|None|  
+|Éléments enfants|Aucune|  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Le **MoveWithDescendants** élément détermine si le **mettre à jour** commande ne doit pas simplement mettre les membres d’attribut identifiés par le [attributs](../../../analysis-services/xmla/xml-elements-properties/attributes-element-xmla.md) élément mais également les descendants de ces membres d’attribut sont également mis à jour.  
   
 > [!NOTE]  
 >  Cet élément s'applique uniquement aux membres d'attribut dans les hiérarchies de type parent-enfant.  
   
- Pour plus d’informations sur la mise à jour des membres, consultez [insertion, mise à jour et suppression de membres &#40; XMLA &#41; ](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/inserting-updating-and-dropping-members-xmla.md).  
+ Pour plus d’informations sur la mise à jour des membres, consultez [insertion, mise à jour et suppression de membres &#40;XMLA&#41;](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/inserting-updating-and-dropping-members-xmla.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Propriétés &#40; XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+ [Propriétés & #40 ; XMLA & #41 ;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

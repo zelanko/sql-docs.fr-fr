@@ -1,35 +1,34 @@
 ---
-title: "SystemGetCrossValidationResults (Analysis Services - Exploration de données) | Documents Microsoft"
-ms.custom: 
+title: SystemGetCrossValidationResults (Analysis Services - Exploration de données) | Documents Microsoft
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - SystemGetCrossValidationResults
 - stored procedures [Analysis Services], data mining
 - cross-validation [data mining]
 ms.assetid: f70c3337-c930-434a-b278-caf1ef0c3b3b
-caps.latest.revision: 
+caps.latest.revision: 26
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 499e62070cb0ec0fed8e814c926d915f7e69bbe3
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: cdb80f65fcde712def73201bcfe562ac7fe92149
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="systemgetcrossvalidationresults-analysis-services---data-mining"></a>SystemGetCrossValidationResults (Analysis Services - Exploration de données)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Partitionne la structure d'exploration de données dans le nombre spécifié de sections croisées, effectue l'apprentissage d'un modèle pour chaque partition, puis retourne les mesures de précision de chaque partition.  
+  Partitionne la structure d'exploration de données dans le nombre spécifié de sections croisées, effectue l'apprentissage d'un modèle pour chaque partition, puis retourne les mesures de précision de chaque partition.  
   
 > [!NOTE]  
 >  Cette procédure stockée ne peut pas être utilisée pour effectuer la validation croisée de modèles de clustering ou de modèles créés à l’aide de l’algorithme MTS ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series) ou de l’algorithme MSC ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Sequence Clustering). Pour la validation croisée des modèles de clustering, vous pouvez utiliser la procédure stockée distincte [SystemGetClusterCrossValidationResults &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/systemgetclustercrossvalidationresults-analysis-services-data-mining.md).  
@@ -119,7 +118,7 @@ SystemGetCrossValidationResults(
  La valeur par défaut est **null**.  
   
 > [!NOTE]  
->  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ne génère pas d’erreur si vous définissez *state threshold* sur 0.0, mais vous ne devez jamais utiliser cette valeur. En effet, un seuil de 0.0 signifie que les prédictions avec une probabilité de 0 pour cent sont comptabilisées comme correctes.  
+>  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ne génère pas d’une erreur si vous définissez *seuil d’état* à 0.0, mais vous ne devez jamais utiliser cette valeur. En effet, un seuil de 0.0 signifie que les prédictions avec une probabilité de 0 pour cent sont comptabilisées comme correctes.  
   
  (Facultatif)  
   
@@ -195,8 +194,8 @@ NULL
   
 ## <a name="see-also"></a>Voir aussi  
  [SystemGetCrossValidationResults](../../analysis-services/data-mining/systemgetcrossvalidationresults-analysis-services-data-mining.md)   
- [SystemGetAccuracyResults &#40; Analysis Services - Exploration de données &#41;](../../analysis-services/data-mining/systemgetaccuracyresults-analysis-services-data-mining.md)   
- [SystemGetClusterCrossValidationResults &#40; Analysis Services - Exploration de données &#41;](../../analysis-services/data-mining/systemgetclustercrossvalidationresults-analysis-services-data-mining.md)   
- [SystemGetClusterAccuracyResults &#40; Analysis Services - Exploration de données &#41;](../../analysis-services/data-mining/systemgetclusteraccuracyresults-analysis-services-data-mining.md)  
+ [SystemGetAccuracyResults &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/systemgetaccuracyresults-analysis-services-data-mining.md)   
+ [SystemGetClusterCrossValidationResults &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/systemgetclustercrossvalidationresults-analysis-services-data-mining.md)   
+ [SystemGetClusterAccuracyResults & #40 ; Analysis Services - Exploration de données & #41 ;](../../analysis-services/data-mining/systemgetclusteraccuracyresults-analysis-services-data-mining.md)  
   
   

@@ -1,35 +1,34 @@
 ---
-title: "Configurer les propriétés de comportement de Table pour les rapports Power View | Documents Microsoft"
-ms.custom: 
+title: Configurer les propriétés de comportement de Table pour les rapports Power View | Documents Microsoft
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - sql13.asvs.bidtoolset.tablebehavior.f1
 ms.assetid: 1386aae0-1d73-4a50-9c69-ae12405d855c
-caps.latest.revision: 
+caps.latest.revision: 8
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 23fcfac88cb0ab2a1ba390d003039b11bdf8bfc3
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
-ms.translationtype: MT
+ms.openlocfilehash: 5a524b19b9cb10e3eac2110b4d9e279ceccebfc9
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="power-view---configure-table-behavior-properties-for-reports"></a>Power View - configurer les propriétés de comportement de Table pour les rapports
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-Si vous utilisez un modèle tabulaire comme modèle de données pour [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)], vous pouvez définir les propriétés de comportement de table qui exposent les lignes de détails à un niveau plus granulaire. La définition des propriétés de comportement de table modifie le comportement de regroupement des lignes de détail et produit un meilleur placement par défaut des informations d'identification (tels que les noms, les cartes d'identité avec photo ou les images de logo) dans les mises en page de mosaïque, de carte et de graphique.  
+  Si vous utilisez un modèle tabulaire comme modèle de données pour [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)], vous pouvez définir les propriétés de comportement de table qui exposent les lignes de détails à un niveau plus granulaire. La définition des propriétés de comportement de table modifie le comportement de regroupement des lignes de détail et produit un meilleur placement par défaut des informations d'identification (tels que les noms, les cartes d'identité avec photo ou les images de logo) dans les mises en page de mosaïque, de carte et de graphique.  
   
- [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] diffère des autres applications de création de rapports en ceci qu'il groupe automatiquement les éléments lors de la conception de rapports en évaluant les colonnes que vous avez placées dans la liste des champs du rapport en fonction du format de présentation que vous utilisez. Dans la plupart des cas, le regroupement par défaut produit un résultat optimal. Mais pour certaines tables, en particulier celles qui contiennent des données de détail, le comportement de regroupement par défaut regroupe parfois des lignes qui ne devraient pas l'être. Pour ces tables, vous pouvez définir des propriétés qui modifient la manière dont les groupes sont évalués.  
+ [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]diffère des autres applications de création de rapports dans la mesure où il groupe automatiquement les éléments lors de la conception de rapports en évaluant les colonnes que vous avez placé dans la liste de champs de rapport par rapport au format de présentation que vous utilisez. Dans la plupart des cas, le regroupement par défaut produit un résultat optimal. Mais pour certaines tables, en particulier celles qui contiennent des données de détail, le comportement de regroupement par défaut regroupe parfois des lignes qui ne devraient pas l'être. Pour ces tables, vous pouvez définir des propriétés qui modifient la manière dont les groupes sont évalués.  
   
  La définition des propriétés de comportement de table est recommandée pour les tables dans lesquelles les lignes individuelles sont particulièrement importantes, notamment les enregistrements d'employés ou de clients. Par opposition, parmi les tables qui ne profitent pas de ces propriétés, figurent celles qui agissent comme table de recherche (par exemple, une table de date, une table de catégorie de produit ou une table de service, où la table consiste en un nombre relativement réduit de lignes et de colonnes) ou les tables de synthèse contenant des lignes qui sont uniquement intéressantes une fois résumées (par exemple, les données de recensement regroupées par sexe, par âge ou par situation géographique). Pour les tables de recherche et de synthèse, le comportement de regroupement par défaut produit un résultat optimal.  
   

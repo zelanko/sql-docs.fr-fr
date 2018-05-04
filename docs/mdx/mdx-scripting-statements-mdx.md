@@ -22,12 +22,11 @@ caps.latest.revision: 31
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 028df15dd74bac7bb994d0b36816074f320d0247
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: eebdfcd0b5352db1c261d42001463907ee6afebd
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mdx-scripting-statements-mdx"></a>Instructions de script MDX (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -36,19 +35,19 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="in-this-section"></a>Dans cette section  
   
-|Rubrique|Description|  
+|Rubrique| Description|  
 |-----------|-----------------|  
-|[CALCULER l’instruction &#40; MDX &#41;](../mdx/mdx-scripting-calculate.md)|Calcule un sous-cube, en déterminant éventuellement l'ordre de résolution des dimensions incluses dans le sous-cube.|  
-|[Instruction CASE &#40; MDX &#41;](../mdx/case-statement-mdx.md)|Permet de retourner des valeurs spécifiques à partir de plusieurs comparaisons sous certaines conditions.|  
-|[Mot clé EXISTING &#40; MDX &#41;](../analysis-services/multidimensional-models/mdx/mdx-query-existing-keyword.md)|Force un jeu spécifié à être évalué dans le contexte actuel.|  
-|[FIGER instruction &#40; MDX &#41;](../mdx/mdx-scripting-freeze.md)|Verrouille à leur valeur actuelle les valeurs des cellules d'un sous-cube spécifié.|  
-|[IF instruction &#40; MDX &#41;](../mdx/mdx-scripting-if.md)|Exécute une instruction si la condition est vérifiée.|  
-|[Instruction SCOPE &#40; MDX &#41;](../mdx/mdx-scripting-scope.md)|Limite l'étendue des instructions MDX spécifiées à un sous-cube spécifié.|  
+|[CALCULER l’instruction & #40 ; MDX & #41 ;](../mdx/mdx-scripting-calculate.md)|Calcule un sous-cube, en déterminant éventuellement l'ordre de résolution des dimensions incluses dans le sous-cube.|  
+|[Instruction CASE & #40 ; MDX & #41 ;](../mdx/case-statement-mdx.md)|Permet de retourner des valeurs spécifiques à partir de plusieurs comparaisons sous certaines conditions.|  
+|[Mot clé EXISTING & #40 ; MDX & #41 ;](../analysis-services/multidimensional-models/mdx/mdx-query-existing-keyword.md)|Force un jeu spécifié à être évalué dans le contexte actuel.|  
+|[FIGER instruction & #40 ; MDX & #41 ;](../mdx/mdx-scripting-freeze.md)|Verrouille à leur valeur actuelle les valeurs des cellules d'un sous-cube spécifié.|  
+|[IF instruction & #40 ; MDX & #41 ;](../mdx/mdx-scripting-if.md)|Exécute une instruction si la condition est vérifiée.|  
+|[Instruction SCOPE & #40 ; MDX & #41 ;](../mdx/mdx-scripting-scope.md)|Limite l'étendue des instructions MDX spécifiées à un sous-cube spécifié.|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Référence des instructions MDX &#40; MDX &#41;](../mdx/mdx-statement-reference-mdx.md)   
- [Instructions MDX de définition de données &#40; MDX &#41;](../mdx/mdx-data-definition-statements-mdx.md)   
- [Instructions MDX de Manipulation de données &#40; MDX &#41;](../mdx/mdx-data-manipulation-statements-mdx.md)   
- [Principes de base de script MDX &#40; Analysis Services &#41;](../analysis-services/multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services.md)  
+ [Référence des instructions MDX &#40;MDX&#41;](../mdx/mdx-statement-reference-mdx.md)   
+ [Instructions MDX de définition de données &#40;MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)   
+ [Les instructions de Manipulation de données MDX &#40;MDX&#41;](../mdx/mdx-data-manipulation-statements-mdx.md)   
+ [Principes de base de script MDX & #40 ; Analysis Services & #41 ;](../analysis-services/multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services.md)  
   
   

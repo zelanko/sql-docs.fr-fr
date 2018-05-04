@@ -24,12 +24,11 @@ caps.latest.revision: 37
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 492c67ad4e5580e7ecccaa4580afe024ebae8ec4
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 5426d05f577016a2a93f131a7eaca85abe6e4f21
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spchangeobjectowner-transact-sql"></a>sp_changeobjectowner (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +52,7 @@ sp_changeobjectowner [ @objname = ] 'object' , [ @newowner = ] 'owner'
   
 ## <a name="arguments"></a>Arguments  
  [  **@objname =** ] **'***objet***'**  
- Nom d'une table, d'une vue, d'une fonction définie par l'utilisateur ou d'une procédure stockée dans la base de données actuelle. *objet* est un **nvarchar(776)**, sans valeur par défaut. *objet* peut être qualifié avec le propriétaire de l’objet existant, sous la forme *propriétaire_existant.objet***.*** objet* si le schéma et son propriétaire ont le même nom.  
+ Nom d'une table, d'une vue, d'une fonction définie par l'utilisateur ou d'une procédure stockée dans la base de données actuelle. *objet* est un **nvarchar(776)**, sans valeur par défaut. *objet* peut être qualifié avec le propriétaire de l’objet existant, sous la forme *propriétaire_existant.objet ***.*** objet* si le schéma et son propriétaire ont le même nom.  
   
  [  **@newowner=**] **' *** propriétaire* **'**  
  Nom du compte de sécurité qui sera le nouveau propriétaire de l'objet. *propriétaire* est **sysname**, sans valeur par défaut. *propriétaire* doit être un utilisateur de base de données valide, le rôle de serveur, [!INCLUDE[msCoName](../../includes/msconame-md.md)] connexion Windows ou du groupe Windows ayant accès à la base de données actuelle. Un utilisateur de base de données est créé si le nouveau propriétaire est un utilisateur Windows ou un groupe Windows pour lequel il n'existe pas de principal de base de données correspondant.  

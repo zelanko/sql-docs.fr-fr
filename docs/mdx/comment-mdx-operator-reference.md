@@ -23,12 +23,11 @@ caps.latest.revision: 40
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 2bcafeb6ee60d42f63780f4479ae0c7ccd2f7eba
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: f762a67949fa3129e3456733f09e6bb1883acdd2
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="comment---mdx-operator-reference"></a>Commentaire - référence des opérateurs MDX
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -46,7 +45,7 @@ ms.lasthandoff: 01/08/2018
  *Comment_Text*  
  Chaîne contenant le texte du commentaire.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Il est possible d'insérer des commentaires sur une ligne distincte, à la fin d'une ligne de script MDX (Multidimensional Expressions), ou à l'intérieur d'une instruction MDX. Le serveur n'évalue pas ces commentaires.  
   
  Utilisez cet opérateur pour un commentaire d'une seule ligne ou imbriqué. Les commentaires insérés à l'aide de -- sont délimités par le caractère de fin de paragraphe.  
@@ -70,8 +69,8 @@ WHERE
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Commentaire &#40;MDX&#41;](../mdx/comment-mdx.md)   
- [&#40; Commentaire &#41; &#40; MDX &#41;](../mdx/comment-mdx-double-slash.md)   
- [Référence des opérateurs MDX &#40; MDX &#41;](../mdx/mdx-operator-reference-mdx.md)  
+ [Commentaire & #40 ; MDX & #41 ;](../mdx/comment-mdx.md)   
+ [&#40;Commentaire&#41; &#40;MDX&#41;](../mdx/comment-mdx-double-slash.md)   
+ [Référence des opérateurs MDX &#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)  
   
   

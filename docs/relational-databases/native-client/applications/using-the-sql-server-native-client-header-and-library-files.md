@@ -28,13 +28,12 @@ caps.latest.revision: 63
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: c511b130397334faf22b22da37789c6ae10b869b
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 4b234d3c76b4db8c3de1c9f2cc1e0c1db100d6bf
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="using-the-sql-server-native-client-header-and-library-files"></a>Utilisation des fichiers bibliothèques et de l'en-tête SQL Server Native Client
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -44,7 +43,7 @@ ms.lasthandoff: 04/16/2018
   
  Les fichiers bibliothèque et d'en-tête [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client sont installés à l'emplacement suivant :  
   
- *%Program Files%*\Microsoft SQL Server\110\SDK  
+ *%Program Files%* \Microsoft SQL Server\110\SDK  
   
  Le fichier d'en-tête [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client (sqlncli.h) peut être utilisé pour ajouter la fonctionnalité d'accès aux données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client à vos applications personnalisées. Le fichier d'en-tête [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client contient l'ensemble des définitions, attributs, propriétés et interfaces nécessaires pour tirer parti des nouvelles fonctionnalités introduites dans [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)].  
   

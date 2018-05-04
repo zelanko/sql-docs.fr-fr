@@ -27,15 +27,15 @@ caps.latest.revision: 38
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: a265c23b614c257b81e045f201de8a93ce850ed5
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: f92ebde6349d67b4be7d9604be0a40ec144e57a6
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="aggregationdesigns-element-assl"></a>Élément AggregationDesigns (ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Contient la collection des conceptions d’agrégation qui peuvent être partagés entre plusieurs partitions dans une base de données.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Contient la collection des conceptions d'agrégation qu'il est possible de partager sur plusieurs partitions dans une base de données.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -56,7 +56,7 @@ ms.lasthandoff: 01/08/2018
 |--------------------|-----------------|  
 |Type de données et longueur|Aucun (collection)|  
 |Valeur par défaut|Aucun (collection)|  
-|Cardinalité|0-1 : élément facultatif qui peut apparaître une fois et une seule.|  
+|Cardinalité|0-1: élément facultatif qui peut apparaître une fois et une seule.|  
   
 ## <a name="element-relationships"></a>Relations entre les éléments  
   
@@ -65,11 +65,11 @@ ms.lasthandoff: 01/08/2018
 |Éléments parents|[Groupe de mesures](../../../analysis-services/scripting/objects/measuregroup-element-assl.md)|  
 |Éléments enfants|[AggregationDesign](../../../analysis-services/scripting/objects/aggregationdesign-element-assl.md)|  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  L’élément correspondant dans le modèle d’objet objets AMO (Analysis Management) est <xref:Microsoft.AnalysisServices.AggregationDesignCollection>.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Élément partition &#40; ASSL &#41;](../../../analysis-services/scripting/objects/partition-element-assl.md)   
- [Collections de &#40; ASSL &#41;](../../../analysis-services/scripting/collections/collections-assl.md)  
+ [Élément de la partition &#40;ASSL&#41;](../../../analysis-services/scripting/objects/partition-element-assl.md)   
+ [Collections de & #40 ; ASSL & #41 ;](../../../analysis-services/scripting/collections/collections-assl.md)  
   
   

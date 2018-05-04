@@ -22,12 +22,11 @@ caps.latest.revision: 32
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: a2b5e06839166528482a52fffc594d933a30ee57
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 3cc97425397a1ddbc025e53a81526b7a37ed2ad5
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="lookupcube-mdx"></a>LookupCube (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -55,7 +54,7 @@ LookupCube(Cube_Name, String_Expression )
  *String_Expression*  
  Expression de chaîne valide qui correspond généralement à une expression MDX (Multidimensional Expressions) valide des coordonnées des cellules qui retourne une chaîne.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Si une expression numérique est spécifiée, la **LookupCube** fonction évalue l’expression numérique spécifiée dans le cube spécifié et retourne la valeur numérique qui en résulte.  
   
  Si une expression de chaîne est spécifiée, le **LookupCube** fonction évalue l’expression de chaîne spécifiée dans le cube spécifié et retourne la valeur de chaîne qui en résulte.  
@@ -79,6 +78,6 @@ LookupCube(Cube_Name, String_Expression )
  `FROM [Adventure Works]`  
   
 ## <a name="see-also"></a>Voir aussi  
- [Référence des fonctions MDX &#40; MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Référence des fonctions MDX & #40 ; MDX & #41 ;](../mdx/mdx-function-reference-mdx.md)  
   
   

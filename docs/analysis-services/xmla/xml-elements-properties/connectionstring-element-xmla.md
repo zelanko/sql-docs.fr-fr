@@ -29,15 +29,15 @@ caps.latest.revision: 13
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 24ed26ac9b9a422f7bfc05fa16e700f336e29132
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 45f89128f21362b1a1eb936be04bf17e1a450178
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="connectionstring-element-xmla"></a>Élément ConnectionString (XMLA)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]Contient une chaîne de connexion utilisée par le parent [emplacement](../../../analysis-services/xmla/xml-elements-properties/location-element-xmla.md) ou [Source](../../../analysis-services/xmla/xml-elements-properties/source-element-xmla.md) élément.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
+  Contient une chaîne de connexion utilisée par le parent [emplacement](../../../analysis-services/xmla/xml-elements-properties/location-element-xmla.md) ou [Source](../../../analysis-services/xmla/xml-elements-properties/source-element-xmla.md) élément.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -54,32 +54,32 @@ ms.lasthandoff: 01/08/2018
   
 |Caractéristique|Description|  
 |--------------------|-----------------|  
-|Type de données et longueur|String|  
-|Valeur par défaut|None|  
+|Type de données et longueur|Chaîne|  
+|Valeur par défaut|Aucune|  
 |Cardinalité|Consultez le tableau ci-dessous.|  
   
 |Ancêtre ou parent|Cardinalité|  
 |------------------------|-----------------|  
-|[Emplacement](../../../analysis-services/xmla/xml-elements-properties/location-element-xmla.md)|1-1 : élément requis qui apparaît une fois et une seule.|  
-|[Source](../../../analysis-services/xmla/xml-elements-properties/source-element-xmla.md)|0-1 : élément facultatif qui peut apparaître une fois et une seule.|  
+|[Emplacement](../../../analysis-services/xmla/xml-elements-properties/location-element-xmla.md)|1-1 : élément requis qui apparaît une fois et une seule.|  
+|[Source](../../../analysis-services/xmla/xml-elements-properties/source-element-xmla.md)|0-1: élément facultatif qui peut apparaître une fois et une seule.|  
   
 ## <a name="element-relationships"></a>Relations entre les éléments  
   
 |Relation|Élément|  
 |------------------|-------------|  
 |Éléments parents|[Emplacement](../../../analysis-services/xmla/xml-elements-properties/location-element-xmla.md), [Source](../../../analysis-services/xmla/xml-elements-properties/source-element-xmla.md)|  
-|Éléments enfants|None|  
+|Éléments enfants|Aucune|  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Pour **emplacement** éléments, le **ConnectionString** élément contient la chaîne de connexion utilisée par le **restaurer** ou **synchroniser** commande Mettre à jour une source de données local ou se connecter à une instance distante.  
   
  Pour **Source** éléments, le **ConnectionString** élément contient la chaîne de connexion utilisée par le **synchroniser** commande pour vous connecter à l’instance source.  
   
- Pour plus d’informations sur la sauvegarde et restauration des objets, consultez [sauvegarde, restauration et synchroniser les bases de données &#40; XMLA &#41; ](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md).  
+ Pour plus d’informations sur la sauvegarde et restauration des objets, consultez [sauvegarde, restauration et synchroniser les bases de données & #40 ; XMLA & #41 ; ](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Restaurer l’élément &#40; XMLA &#41;](../../../analysis-services/xmla/xml-elements-commands/restore-element-xmla.md)   
- [Synchroniser, élément &#40; XMLA &#41;](../../../analysis-services/xmla/xml-elements-commands/synchronize-element-xmla.md)   
- [Propriétés &#40; XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+ [Restaurer l’élément & #40 ; XMLA & #41 ;](../../../analysis-services/xmla/xml-elements-commands/restore-element-xmla.md)   
+ [Synchroniser, élément & #40 ; XMLA & #41 ;](../../../analysis-services/xmla/xml-elements-commands/synchronize-element-xmla.md)   
+ [Propriétés & #40 ; XMLA & #41 ;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

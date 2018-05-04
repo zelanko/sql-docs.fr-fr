@@ -7,11 +7,11 @@ ms.topic: overview
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 1b33d7fb0736e1d87aa46d052ff9e42fa740662e
-ms.sourcegitcommit: 31df356f89c4cd91ba90dac609a7eb50b13836de
+ms.openlocfilehash: d52196007b5a1de4753e9846e4057295113baa7b
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="what-is-sql-server-machine-learning-services"></a>Nouveautés de SQL Server Machine Learning Services ?
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -23,7 +23,7 @@ La proposition de valeur de clé des Services de Machine Learning est la puissan
 Il existe deux options pour l’utilisation des fonctionnalités de machine learning dans SQL Server : 
 
 + [**SQL Server Machine Learning Services (de-de base de données)** ](r/sql-server-r-services.md) opère au sein de l’instance du moteur de base de données, où le moteur de calcul est entièrement intégré avec le moteur de base de données. La plupart des installations sont cette option.
-+ [**SQL Server Machine Learning Server (autonome)** ](r/r-server-standalone.md) est une installation non SQL. Bien que vous utilisez le programme d’installation de SQL Server pour installer le serveur, il est complètement découplé à partir de SQL Server. Fonctionnellement, il est équivalent à l’autre que SQL [Microsoft Machine Learning pour Windows Server](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install).
++ [**SQL Server Machine Learning Server (autonome)** ](r/r-server-standalone.md) est Machine Learning pour Windows Server qui s’exécute indépendamment du moteur de base de données. Bien que vous utilisez le programme d’installation de SQL Server pour installer le serveur, la fonctionnalité n’est pas dépendant des instances. Il équivaut fonctionnellement, non-SQL-Server [Microsoft Machine Learning pour Windows Server](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install).
 
 ## <a name="r-and-python-packages"></a>Packages R et Python
 

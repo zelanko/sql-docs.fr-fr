@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 apiname:
 - SQLServerPreparedStatement.setNull
 apilocation:
@@ -22,12 +22,11 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 7fbe7267017ec1e7d4c50fc548e599fee36f12b2
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: cdfe53cdd10f353ed1658aca2e5b462ed0e28cd5
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="setnull-method-sqlserverpreparedstatement"></a>setNull (méthode) (SQLServerPreparedStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +41,7 @@ ms.lasthandoff: 04/16/2018
 |[setNull (int, int, java.lang.String)](../../../connect/jdbc/reference/setnull-method-int-int-java-lang-string.md)|Définit le paramètre désigné avec une valeur Null, en fonction du type et du nom du paramètre à définir.|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Membres de SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-members.md)   
+ [SQLServerPreparedStatement, membres](../../../connect/jdbc/reference/sqlserverpreparedstatement-members.md)   
  [SQLServerPreparedStatement, classe](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md)  
   
   

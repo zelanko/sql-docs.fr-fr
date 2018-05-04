@@ -22,12 +22,11 @@ caps.latest.revision: 31
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 3cfa0b03deae60d9354e2e7056e0725125355ff4
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: dbe31042708d3c4cb4f78c4f5cc291ecf5684a33
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="median-mdx"></a>Median (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -48,7 +47,7 @@ Median(Set_Expression [ ,Numeric_Expression ] )
  *Numeric_expression*  
  Expression numérique valide qui correspond généralement à une expression MDX (Multidimensional Expressions) des coordonnées des cellules qui retournent un nombre.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Si une expression numérique est spécifiée, cette expression est évaluée sur le jeu, puis retourne la valeur médiane produite par cette évaluation. Si aucune expression numérique n'est précisée, le jeu spécifié est évalué dans le contexte actuel des membres du jeu, puis retourne la valeur médiane de l'évaluation.  
   
  La valeur médiane est la valeur de milieu d'un jeu de nombres ordonnés. (La valeur médiane n'est pas la moyenne, qui est la somme d'un ensemble de chiffres divisée par le nombre de chiffres présents dans cet ensemble). La valeur médiane est déterminée en choisissant la plus petite valeur de sorte que la moitié au moins des valeurs du jeu ne soient pas supérieures à la valeur choisie. Si le nombre des valeurs du jeu est impair, la valeur médiane correspond à une seule valeur. Si le nombre des valeurs du jeu est pair, la valeur médiane correspond à la somme des deux valeurs du milieu divisée par deux.  
@@ -56,7 +55,7 @@ Median(Set_Expression [ ,Numeric_Expression ] )
 > [!NOTE]  
 >  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ignore les valeurs NULL lors du calcul de la valeur médiane dans un jeu de nombres ordonnés.  
   
-## <a name="example"></a> Exemple  
+## <a name="example"></a>Exemple  
  L'exemple ci-dessous retourne les ventes mensuelles médianes de chaque trimestre, sous-catégorie et chaque pays inscrit dans le cube Adventure Works.  
   
 ```  
@@ -74,6 +73,6 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Référence des fonctions MDX &#40; MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Référence des fonctions MDX & #40 ; MDX & #41 ;](../mdx/mdx-function-reference-mdx.md)  
   
   

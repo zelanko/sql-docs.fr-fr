@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL data types [ODBC], identifiers
 - SQLGetTypeInfo function [ODBC], retrieving data type information
@@ -24,12 +24,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 7e89297c8fb0cdd7cc048fd19a24810c67b2d271
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: e0a5377934d3487fcfdc58459e8d08e01c8bd21b
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="retrieving-data-type-information-with-sqlgettypeinfo"></a>La récupération des informations de Type de données avec SQLGetTypeInfo
 Étant donné que les mappages de types de données SQL sous-jacente aux identificateurs de type ODBC sont approximatifs, ODBC fournit une fonction (**SQLGetTypeInfo**) via lequel un pilote peut complètement décrivent chaque type de données SQL dans la source de données. Cette fonction retourne un jeu de résultats, chaque ligne qui décrit les caractéristiques d’un type de données, telles que le nom, identificateur de type, la précision, échelle et possibilité de valeur null.  

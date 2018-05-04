@@ -20,12 +20,11 @@ caps.latest.revision: 22
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: On Demand
-ms.openlocfilehash: a4dbcc7ab42a0e044be0c7561adff4049fd8d1b9
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 7bf874dfda3e4e76c9e519c375349fced839fa58
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="case-statement-mdx"></a>Instruction CASE (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -56,7 +55,7 @@ END
 ```  
   
 ## <a name="arguments"></a>Arguments  
- *Il peut s’agir*  
+ *input_expression*  
  Expression MDX (Multidimensional Expressions) résolue en valeur scalaire.  
   
  *Il peut s’agir*  
@@ -68,10 +67,10 @@ END
  *else_result_expression*  
  Valeur scalaire retournée si aucune des clauses WHEN ne prend la valeur True.  
   
- *Expression_booléenne*  
+ *Boolean_expression*  
  Expression MDX qui prend une valeur scalaire.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  S'il n'existe aucune clause ELSE et si toutes les clauses WHEN prennent la valeur false, le résultat est une cellule vide.  
   
 ## <a name="simple-case-expression"></a>Expression CASE simple  
@@ -118,6 +117,6 @@ WHERE [Measures].x
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Instructions de script MDX &#40; MDX &#41;](../mdx/mdx-scripting-statements-mdx.md)  
+ [Instructions de script MDX & #40 ; MDX & #41 ;](../mdx/mdx-scripting-statements-mdx.md)  
   
   

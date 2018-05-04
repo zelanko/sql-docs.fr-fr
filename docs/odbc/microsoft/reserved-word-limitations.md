@@ -1,7 +1,7 @@
 ---
 title: Réservé Limitations Word | Documents Microsoft
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 05/01/2018
 ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - ODBC desktop database drivers [ODBC]
 - desktop database drivers [ODBC]
@@ -20,12 +20,21 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 14229cd0487b8beb663be255ce54f76f4fb6b5b2
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: ac61a7aa818ef3593fddc630d5027fbf7e4aa211
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="reserved-word-limitations"></a>Limitations de mot réservé
-N’utilisez pas les mots réservés répertoriés dans la grammaire SQL dans l’annexe C de la *de référence du programmeur ODBC* (ou la forme abrégée de ces mots réservés) en tant qu’identificateurs (autrement dit, table ou colonne de noms), sauf si vous devez placer le mot à l’arrière apostrophes (').
+# <a name="reserved-keyword-limitations"></a>Limitations du mot clé réservé
+
+Évitez d’utiliser les mots clés réservés ODBC en tant qu’identificateurs dans des tables SQL ou des objets connexes. Si un cas exceptionnels se produit où vous devez utiliser un mot clé réservé comme identificateur, vous devez placer l’identificateur avec une paire de *obliques* ('). Un autre nom pour *backtick* est *guillemet arrière*.
+
+La limitation de mot clé réservé s’applique également à toute forme abrégée de mots clés réservés.
+
+Une liste des mots clés réservés ODBC est disponible à l’adresse :
+
+- [Mots clés réservés ODBC](https://docs.microsoft.com/sql/odbc/reference/appendixes/reserved-keywords).
+
+- Dans le *Guide de référence du programmeur ODBC*, consultez [annexe c : SQL grammaire](https://docs.microsoft.com/sql/odbc/reference/appendixes/appendix-c-sql-grammar).
+

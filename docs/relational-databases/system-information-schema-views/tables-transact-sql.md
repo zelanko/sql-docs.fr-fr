@@ -25,13 +25,12 @@ caps.latest.revision: 39
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 507593c3b3d9240bf42482a9fc1a1c342e3df958
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 3e41d96d6376dceb8594851e2ba31244ca1a8b60
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="tables-transact-sql"></a>TABLES (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -42,10 +41,10 @@ ms.lasthandoff: 04/16/2018
   
 |Nom de colonne|Type de données| Description|  
 |-----------------|---------------|-----------------|  
-|**TABLE_CATALOG**|**nvarchar(**128**)**|Qualificateur de la table.|  
-|**TABLE_SCHEMA**|**nvarchar(**128**)**|Nom du schéma qui contient la table.<br /><br /> **\*\* Important \* \***  n’utilisez pas les vues INFORMATION_SCHEMA pour déterminer le schéma d’un objet. La seule méthode fiable pour rechercher le schéma d'un objet est d'interroger l'affichage catalogue sys.objects. Les vues INFORMATION_SCHEMA peuvent être incomplètes dans la mesure où elles ne sont pas mises à jour pour toutes les nouvelles fonctionnalités.|  
+|**TABLE_CATALOG**|**nvarchar(** 128 **)**|Qualificateur de la table.|  
+|**TABLE_SCHEMA**|**nvarchar(** 128 **)**|Nom du schéma qui contient la table.<br /><br /> **\*\* Important \* \***  n’utilisez pas les vues INFORMATION_SCHEMA pour déterminer le schéma d’un objet. La seule méthode fiable pour rechercher le schéma d'un objet est d'interroger l'affichage catalogue sys.objects. Les vues INFORMATION_SCHEMA peuvent être incomplètes dans la mesure où elles ne sont pas mises à jour pour toutes les nouvelles fonctionnalités.|  
 |**NOM_TABLE**|**sysname**|Nom de la table.|  
-|**TABLE_TYPE**|**varchar (**10**)**|Type de table. Peut être VIEW ou BASE TABLE.|  
+|**TABLE_TYPE**|**varchar (** 10 **)**|Type de table. Peut être VIEW ou BASE TABLE.|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Vues système &#40;Transact-SQL&#41;](http://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)   

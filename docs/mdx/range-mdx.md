@@ -23,12 +23,11 @@ caps.latest.revision: 37
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: e9ca2a16a74ce772ce7737c6c30581522d6d30f1
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: cba26f6b69ca22a1ab39fa753749d6a8b1a150df
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="-range-mdx"></a>: (Plage) (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -49,7 +48,7 @@ Member_Expression : Member_Expression
 ## <a name="return-value"></a>Valeur retournée  
  Jeu contenant les membres spécifiés et tous les membres situés entre eux.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Les deux paramètres doivent spécifier des membres situés dans le même niveau et la même hiérarchie d'une dimension donnée. Si les deux paramètres spécifient le même membre, le **: (plage)** renvoie un jeu qui contient uniquement le membre spécifié. Si le premier paramètre est Null, le jeu contient tous les membres du début du niveau du membre spécifié dans le second paramètre jusqu'au dernier membre (inclus) sur le même niveau. Si le second paramètre est Null, le jeu contient tous les membres du membre spécifié dans le premier paramètre jusqu'au dernier membre (inclus) sur le même niveau.  
   
  Cet opérateur de jeu n'a aucun équivalent fonctionnel dans MDX.  
@@ -77,6 +76,6 @@ WHERE
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Référence des opérateurs MDX &#40; MDX &#41;](../mdx/mdx-operator-reference-mdx.md)  
+ [Référence des opérateurs MDX &#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)  
   
   

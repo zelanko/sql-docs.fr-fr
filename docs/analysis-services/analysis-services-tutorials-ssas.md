@@ -3,27 +3,26 @@ title: Didacticiels sur Analysis Services | Documents Microsoft
 ms.date: 02/20/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.custom: 
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.custom: ''
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
 ms.assetid: b378c3bb-eead-46eb-b213-70d994f2d562
-caps.latest.revision: 
+caps.latest.revision: 17
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Active
-ms.openlocfilehash: 78b46dfa832faf6496d0b986dce78390fb8af33a
-ms.sourcegitcommit: 7ed8c61fb54e3963e451bfb7f80c6a3899d93322
-ms.translationtype: MT
+ms.openlocfilehash: de8e0313951dda44677edcd86819f35608c72525
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/20/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="analysis-services-tutorials"></a>Didacticiels sur Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../includes/ssas-appliesto-sqlas-all-aas.md)]

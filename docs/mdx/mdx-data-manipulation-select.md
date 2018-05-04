@@ -23,12 +23,11 @@ caps.latest.revision: 43
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: On Demand
-ms.openlocfilehash: b1cf2d78fcb8b275a899be437b85b643c2f5b6af
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: fc495e44fd9c2bc49ba54afbb17cc48a5a855ac6
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mdx-data-manipulation---select"></a>Manipulation de données MDX - SELECT
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -124,14 +123,14 @@ FROM
  *MemberProperty_Name*  
  Chaîne valide qui représente une propriété de membre.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  L'expression `<SELECT slicer axis clause>` doit contenir des membres de dimensions et de hiérarchies autres que ceux référencés dans les expressions `<SELECT query axis clause>` spécifiées.  
   
  Si un attribut du cube est omis dans les expressions `<SELECT query axis clause>` spécifiées et dans la valeur `<SELECT slicer axis clause>`, le membre par défaut de l'attribut est implicitement ajouté à l'axe de secteur.  
   
  L'option NON VISUAL de l'instruction de sous-sélection vous permet de filtrer les membres tout en conservant les totaux réels au lieu des totaux filtrés. Cela vous permet de lancer une requête pour les dix meilleures ventes (personnes/produits/régions) et d'obtenir le total réel des ventes pour tous les membres faisant l'objet de la requête, au lieu de la valeur totale des ventes pour les dix meilleures ventes renvoyées. Pour plus d'informations, consultez les exemples ci-après.  
   
- Les membres calculés peuvent être inclus dans \<clause d’axe de requête SELECT > chaque fois que la connexion a été ouvert à l’aide du paramètre de chaîne de connexion *sous-requêtes = 1*; consultez [pris en charge les propriétés XMLA &#40; XMLA &#41; ](../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md) et <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> pour l’utilisation des paramètres. Voici un exemple concernant les membres calculés dans les sous-sélections.  
+ Les membres calculés peuvent être inclus dans \<clause d’axe de requête SELECT > chaque fois que la connexion a été ouvert à l’aide du paramètre de chaîne de connexion *sous-requêtes = 1*; consultez [pris en charge les propriétés XMLA &#40; XMLA&#41; ](../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md) et <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> pour l’utilisation des paramètres. Voici un exemple concernant les membres calculés dans les sous-sélections.  
   
 ## <a name="autoexists"></a>Autoexists  
  Lorsque deux attributs, ou plus, de la dimension sont utilisés dans une instruction SELECT, Analysis Services évalue les expressions des attributs pour s'assurer que les membres de ces attributs sont correctement limités afin de répondre aux critères de tous les autres attributs. Supposons, par exemple, que vous utilisez des attributs de la dimension de Geography. Si vous avez une expression qui retourne tous les membres de l'attribut City et une autre expression qui limite les membres de l'attribut Country à tous les pays d'Europe, il en résultera une limitation des membres de City aux seules villes qui appartiennent à des pays d'Europe. Cette caractéristique d'Analysis Services, appelée Autoexists, s'applique uniquement à des attributs dans la même dimension. En effet, elle tente d'empêcher que des enregistrements de la dimension exclus d'une expression d'attribut soient exclus par les autres expressions d'attributs. La fonctionnalité Autoexists peut également être interprétée comme l'intersection obtenue entre les différentes expressions d'attributs sur les enregistrements de dimension. Observez les exemples ci-dessous :  
@@ -354,7 +353,7 @@ FROM
 |**Mountain-100**|**8 568 958,27 $**|**139 393,27 $**|**1.63**|  
 |**HL Mountain Frame**|**3 365 069,27 $**|**$174.11**|**0.01**|  
   
- Comportement d’Autoexists peut être modifié à l’aide de la fonctionnalité AUTOEXISTS = [1 | 2 | paramètre 3] dans la chaîne de connexion ; consultez [pris en charge les propriétés XMLA &#40; XMLA &#41; ](../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md) et <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> pour l’utilisation des paramètres.  
+ Comportement d’Autoexists peut être modifié à l’aide de la fonctionnalité AUTOEXISTS = [1 | 2 | paramètre 3] dans la chaîne de connexion ; consultez [pris en charge les propriétés XMLA &#40;XMLA&#41; ](../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md) et <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> pour l’utilisation des paramètres.  
   
 ## <a name="examples"></a>Exemples  
  L’exemple suivant retourne la somme de la `Measures.[Order Quantity]` membre, agrégé sur les huit premiers mois de l’année civile 2003 qui sont contenus dans le `Date` dimension, à partir de la **Adventure Works** cube.  
@@ -478,9 +477,9 @@ WHERE
 |80 450 596,98 $|$79,980,114.38|$470,482.60|0.58%|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Concepts clés dans MDX &#40; Analysis Services &#41;](../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)   
- [Instructions MDX de Manipulation de données &#40; MDX &#41;](../mdx/mdx-data-manipulation-statements-mdx.md)   
- [Restriction de la requête avec les Axes de secteur et de requête &#40; MDX &#41;](~/analysis-services/multidimensional-models/mdx/mdx-query-and-slicer-axes-restricting-the-query.md)  
+ [Concepts clés dans MDX & #40 ; Analysis Services & #41 ;](../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)   
+ [Les instructions de Manipulation de données MDX &#40;MDX&#41;](../mdx/mdx-data-manipulation-statements-mdx.md)   
+ [Restriction de la requête avec les Axes de secteur et de requête & #40 ; MDX & #41 ;](~/analysis-services/multidimensional-models/mdx/mdx-query-and-slicer-axes-restricting-the-query.md)  
   
   
 

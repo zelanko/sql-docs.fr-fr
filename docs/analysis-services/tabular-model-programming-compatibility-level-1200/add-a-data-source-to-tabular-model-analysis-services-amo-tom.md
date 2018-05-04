@@ -1,30 +1,30 @@
 ---
-title: "Ajouter une source de données à un modèle tabulaire (Analysis Services AMO-TOM) | Documents Microsoft"
-ms.custom: 
+title: Ajouter une source de données à un modèle tabulaire (Analysis Services AMO-TOM) | Documents Microsoft
+ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: e54a8a1b-b964-4b6e-9057-44d50af676c0
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 501e99294ccc603a8815448c7c23b380ea125b46
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 3892601961f95b0d4dd4f0de0d3767eff01186d1
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="add-a-data-source-to-tabular-model-analysis-services-amo-tom"></a>Ajouter une source de données à un modèle tabulaire (Analysis Services AMO-TOM)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Le **source de données** classe dans l’espace de noms Microsoft.AnalysisServices.Tabular est une abstraction d’une source de données d’un modèle tabulaire qui spécifie le type et l’emplacement des données importées pendant une opération d’actualisation des données. 
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+Le **source de données** classe dans l’espace de noms Microsoft.AnalysisServices.Tabular est une abstraction d’une source de données d’un modèle tabulaire qui spécifie le type et l’emplacement des données importées pendant une opération d’actualisation des données. 
 
 Vous pouvez ajouter une source de données au modèle tabulaire en instanciant un objet d’une classe dérivée de **DataSource**, puis l’ajouter à la **sources de données** collection de l’objet de modèle. Pour valider les modifications sur le serveur, appelez **Model.SaveChanges()** ou **Database.Update(UpdateOptions.ExpandFull)**. 
 

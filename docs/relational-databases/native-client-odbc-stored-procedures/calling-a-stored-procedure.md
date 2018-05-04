@@ -24,13 +24,12 @@ caps.latest.revision: 41
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 2b1dfc08ad0ff42c5a7e5409d729b6f62a4f4d36
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 451a7538ac011c1dce455122909c7ae88ac8242c
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="calling-a-stored-procedure"></a>Appel d'une procédure stockée
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -43,7 +42,7 @@ ms.lasthandoff: 04/16/2018
   
  La séquence d'échappement ODBC CALL permettant d'appeler une procédure est la suivante :  
   
- {[**? =**]**appel ***nom_procédure*[([*paramètre*] [**, **[*paramètre *]]...)]}  
+ {[**? =**]**appel ***nom_procédure*[([*paramètre*] [**, **[* paramètre *]]...)]}  
   
  où *nom_procédure* Spécifie le nom d’une procédure et *paramètre* spécifie un paramètre de procédure. Les paramètres nommés sont pris en charge uniquement dans les instructions à l'aide de la séquence d'échappement ODBC CALL.  
   

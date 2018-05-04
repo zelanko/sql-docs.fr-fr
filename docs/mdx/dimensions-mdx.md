@@ -22,12 +22,11 @@ caps.latest.revision: 33
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: e14d37c916240c0c7cc454df50d44d4de4ba319a
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 493a17424410155be360828e7c998335c2f11aad
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="dimensions-mdx"></a>Dimensions (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -52,7 +51,7 @@ Dimensions(Hierarchy_Name)
  *Hierarchy_Name*  
  Expression de chaîne valide qui spécifie un nom de hiérarchie.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Si un numéro de hiérarchie est spécifié, la **Dimensions** fonction retourne une hiérarchie dont la position de base zéro dans le cube est spécifiée de numéro de hiérarchie.  
   
  Si un nom de hiérarchie est spécifié, la **Dimensions** fonction retourne la hiérarchie spécifiée. En général, vous utilisez cette version de chaîne de la **Dimensions** fonction avec les fonctions définies par l’utilisateur.  
@@ -93,6 +92,6 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Référence des fonctions MDX &#40; MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Référence des fonctions MDX & #40 ; MDX & #41 ;](../mdx/mdx-function-reference-mdx.md)  
   
   

@@ -22,12 +22,11 @@ caps.latest.revision: 37
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 4fa2207edb9ea3e732807a3d4ac0783334c361c2
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: d53c0686742f096f49519da93e64ea2b6706d056
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="closingperiod-mdx"></a>ClosingPeriod (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -48,7 +47,7 @@ ClosingPeriod( [ Level_Expression [ ,Member_Expression ] ] )
  *Argument*  
  Expression MDX (Multidimensional Expressions) valide qui retourne un membre.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Cette fonction a principalement été conçue pour être exploitée dans une dimension de type Time (dimension de temps) mais peut également être utilisée avec n'importe quelle dimension.  
   
 -   Si une expression de niveau est spécifiée, la **ClosingPeriod** fonction utilise la dimension qui contient le niveau spécifié et retourne le dernier frère parmi les descendants du membre par défaut au niveau spécifié.  
@@ -94,8 +93,8 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [OpeningPeriod &#40; MDX &#41;](../mdx/openingperiod-mdx.md)   
- [Référence des fonctions MDX &#40; MDX &#41;](../mdx/mdx-function-reference-mdx.md)   
- [LastSibling &#40; MDX &#41;](../mdx/lastsibling-mdx.md)  
+ [OpeningPeriod &#40;MDX&#41;](../mdx/openingperiod-mdx.md)   
+ [Référence des fonctions MDX & #40 ; MDX & #41 ;](../mdx/mdx-function-reference-mdx.md)   
+ [LastSibling &#40;MDX&#41;](../mdx/lastsibling-mdx.md)  
   
   

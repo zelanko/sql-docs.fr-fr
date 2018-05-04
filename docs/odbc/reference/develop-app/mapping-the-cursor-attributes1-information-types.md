@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - compatibility [ODBC], mapping cursor attributes1 information types
 - application upgrades [ODBC], mapping cursor attributes1 information types
@@ -23,15 +23,14 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 2d40ff95acc4011e7cc3dc12785ea6cef7340e35
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 90f5913eef381d2130fbe0c7eeeaa225a2587c6c
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mapping-the-cursor-attributes1-information-types"></a>Mapper les Types d’informations de Attributes1 curseur
-Lorsqu’une application ODBC 3. *x* application appelle **SQLGetInfo** dans une API ODBC 2*.x* pilote avec les informations de type (pour pilotés dynamique et en avant uniquement, ou les curseurs statiques), le paramètre des bits retournés par le Gestionnaire de pilotes de SQL_XXXX_CURSOR_ATTRIBUTES1 dépend de quelles ODBC 2. *x* pilote retourne pour correspondant ODBC 2. *x* types d’informations. Les bits sont définis comme indiqué dans le tableau suivant.  
+Lorsqu’une application ODBC 3. *x* application appelle **SQLGetInfo** dans une API ODBC 2 *.x* pilote avec les informations de type (pour pilotés dynamique et en avant uniquement, ou les curseurs statiques), le paramètre des bits retournés par le Gestionnaire de pilotes de SQL_XXXX_CURSOR_ATTRIBUTES1 dépend de quelles ODBC 2. *x* pilote retourne pour correspondant ODBC 2. *x* types d’informations. Les bits sont définis comme indiqué dans le tableau suivant.  
   
 |Bit dans<br /><br /> SQL_XXXX_CURSOR_ATTRIBUTES1|Type de curseur|ODBC 2. *x* informations<br /><br /> Type|  
 |-----------------------------------------------|-----------------|-------------------------------------|  

@@ -1,33 +1,32 @@
 ---
-title: "Élément AssociationSet (CSDLBI) | Documents Microsoft"
-ms.custom: 
+title: Élément AssociationSet (CSDLBI) | Documents Microsoft
+ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
 ms.assetid: 93e5ac4d-d7e8-490e-b775-28263a48cfcc
-caps.latest.revision: 
+caps.latest.revision: 8
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: df59f83d3f2ce978db817369b513c1cc0678368c
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 5760bbebaf3561462ddfa9d2829e585e63d2ce6d
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="associationset-element-csdlbi"></a>Élément AssociationSet (CSDLBI)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-L'élément **AssociationSet** est un type complexe qui définit une association. Dans un modèle de données CSDLBI, une association est une relation entre deux tables.  
+  L'élément **AssociationSet** est un type complexe qui définit une association. Dans un modèle de données CSDLBI, une association est une relation entre deux tables.  
   
  Un **AssociationSet** doit être spécifié pour chaque relation unique dans un modèle. L'élément **AssociationSet** définit les points de terminaison à l'aide de l'élément **Association** . L'élément **AssociationSet** définit également les métadonnées sur la relation et son utilisation dans le modèle de données.  
   

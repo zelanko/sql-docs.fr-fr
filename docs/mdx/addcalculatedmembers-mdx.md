@@ -22,12 +22,11 @@ caps.latest.revision: 41
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: c2482dc235ec5665b464764decdc6f25da074e5f
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 277489f47a80cbaeda8b9ccd1f2d4ab386b44b22
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="addcalculatedmembers-mdx"></a>AddCalculatedMembers (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -45,7 +44,7 @@ AddCalculatedMembers(Set_Expression)
  *Set_Expression*  
  Une expression MDX (Multidimensional Expressions) valide qui retourne un jeu.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Par défaut, MDX exclut les membres calculés lorsqu'il résout des fonctions Set. Le **AddCalculatedMembers** fonction examine l’expression d’ensemble spécifiée dans *Set_Expression,* et inclut des membres calculés qui sont des frères des membres contenus dans l’étendue de cette expression d’ensemble.  
   
 > [!NOTE]  
@@ -74,6 +73,6 @@ FROM
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Référence des fonctions MDX &#40; MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Référence des fonctions MDX & #40 ; MDX & #41 ;](../mdx/mdx-function-reference-mdx.md)  
   
   

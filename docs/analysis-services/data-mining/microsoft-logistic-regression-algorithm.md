@@ -1,36 +1,35 @@
 ---
-title: "L’algorithme Microsoft Logistic Regression | Documents Microsoft"
-ms.custom: 
+title: L’algorithme Microsoft Logistic Regression | Documents Microsoft
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - logical regression algorithms [Analysis Services]
 - algorithms [data mining]
 - neural network algorithms [Analysis Services]
 - regression algorithms [Analysis Services]
 ms.assetid: 3dd54d07-1c3b-4b87-b7f0-b962ed8cf844
-caps.latest.revision: 
+caps.latest.revision: 22
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 8a5fbba7e01d56f77d376f41ac259744b1a4344d
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: dd07a9b2b56393e18f7115f3caf8e251b3f9572f
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="microsoft-logistic-regression-algorithm"></a>Algorithme MLR (Microsoft Logistic Regression)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-La régression logistique est une technique statistique connue utilisée pour modéliser les résultats binaires.  
+  La régression logistique est une technique statistique connue utilisée pour modéliser les résultats binaires.  
   
  Il existe différentes implémentations de régression logistique dans la recherche de statistiques, qui utilisent différentes techniques d'apprentissage. L'algorithme de régression logistique de [!INCLUDE[msCoName](../../includes/msconame-md.md)] a été implémenté en utilisant une variante de l'algorithme MNN de réseau neuronal de [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Cet algorithme partage un grand nombre des qualités des réseaux neuronaux, mais son apprentissage est plus aisé.  
   

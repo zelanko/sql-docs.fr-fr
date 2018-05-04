@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - result sets [ODBC], binding columns
 - binding columns [ODBC]
@@ -20,12 +20,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 107a89aeca70d7b28958c475994e3c41f417fa26
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: e56b3a9757089bae9da3341ba3649d8579f8d663
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="binding-result-set-columns"></a>Définie les colonnes de résultat de la liaison
 Les applications peuvent lier en tant que nombre des colonnes du jeu de résultats lorsqu’ils le souhaitent, y compris tout aucune colonne de liaison. Lorsqu’une ligne de données est atteinte, le pilote retourne les données pour les colonnes liées à l’application. Indique si l’application lie toutes les colonnes du jeu de résultats dépend de l’application. Par exemple, les applications qui génèrent les rapports généralement ont un format fixe ; de telles applications créer un jeu de résultats contenant toutes les colonnes utilisées dans le rapport et ensuite lient et récupèrent les données pour toutes ces colonnes. Les applications qui affichent des écrans complète des données parfois autorisent l’utilisateur de choisir les colonnes à afficher ; de telles applications créent un jeu de résultats contenant toutes les colonnes de choix, mais lier et l’utilisateur peut récupérer les données pour les colonnes choisies par l’utilisateur.  

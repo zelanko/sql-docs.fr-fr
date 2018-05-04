@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - converting data from c to SQL types [ODBC], about converting
 - converting data from c to SQL types [ODBC]
@@ -27,12 +27,11 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: d87c393e9af2b3b24bd50b41287b9323a6e114cf
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 4006d78d46168f6f7be272ce3c6e4557f8305b57
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="converting-data-from-c-to-sql-data-types"></a>Conversion de données à partir de C en Types de données SQL
 Lorsqu’une application appelle **SQLExecute** ou **SQLExecDirect**, le pilote récupère les données pour tous les paramètres liés avec **SQLBindParameter** à partir d’emplacements de stockage dans l’application. Lorsqu’une application appelle **SQLSetPos**, le pilote récupère les données pour une mise à jour ou l’opération d’ajout de colonnes liées avec **SQLBindCol**. Pour les paramètres de données d’exécution, l’application envoie les données de paramètre avec **SQLPutData**. Si nécessaire, le pilote convertit les données du type de données spécifié par le *ValueType* argument dans **SQLBindParameter** au type de données spécifié par le *ParameterType* argument dans **SQLBindParameter**, puis envoie les données à la source de données.  

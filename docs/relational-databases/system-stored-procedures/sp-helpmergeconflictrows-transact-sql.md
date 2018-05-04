@@ -24,12 +24,11 @@ caps.latest.revision: 21
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 3972f0bee0e172d19ddc205fc9d8aa6a314d89cf
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: d4f659af9b6ba2ea785d344311c9d7471dc25a26
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sphelpmergeconflictrows-transact-sql"></a>sp_helpmergeconflictrows (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +53,7 @@ sp_helpmergeconflictrows [ [ @publication = ] 'publication' ]
  Nom de la publication. *publication* est **sysname**, avec une valeur par défaut **%**. Si la publication est spécifiée, tous les conflits qualifiés par la publication sont renvoyés. Par exemple, si le **MSmerge_conflict_Customers** table a des lignes de conflits pour le **WA** et le **autorité de certification** publications, en passant un nom de publication **autorité de certification** récupère les conflits qui se rapportent à la **autorité de certification** publication.  
   
  [  **@conflict_table=**] **'***conflict_table***'**  
- Nom de la table de conflits. *conflict_table* est **sysname**, sans valeur par défaut. Dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] et versions ultérieures, les tables de conflits sont nommés en utilisant les noms de format avec **MSmerge_conflict_*publication*_*article ***, avec une table pour chaque publication article.  
+ Nom de la table de conflits. *conflict_table* est **sysname**, sans valeur par défaut. Dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] et versions ultérieures, les tables de conflits sont nommés en utilisant les noms de format avec **MSmerge_conflict_* publication *_* article ***, avec une table pour chaque publication article.  
   
  [  **@publisher=**] **'***publisher***'**  
  Nom du serveur de publication. *serveur de publication* est **sysname**, avec NULL comme valeur par défaut.  

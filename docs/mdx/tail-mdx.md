@@ -22,12 +22,11 @@ caps.latest.revision: 29
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 2d8781dc0364699146d1d3706a8e2e976acc1f7c
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: c836c38e54063961c9714cc076fe66383ef01864
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="tail-mdx"></a>Tail (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -45,13 +44,13 @@ Tail(Set_Expression [ ,Count ] )
  *Set_Expression*  
  Une expression MDX (Multidimensional Expressions) valide qui retourne un jeu.  
   
- *Nombre*  
+ *Compter*  
  Expression numérique valide qui précise le nombre de tuples à retourner.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Le **fin** fonction retourne le nombre spécifié de tuples à partir de la fin du jeu spécifié. L'ordre des éléments est conservé. La valeur par défaut *nombre* est 1. Si le nombre de tuples spécifié est inférieur à 1, la fonction retourne le jeu vide. Si le nombre de tuples spécifié dépasse le nombre de tuples dans le jeu, la fonction retourne le jeu d'origine.  
   
-## <a name="example"></a> Exemple  
+## <a name="example"></a>Exemple  
  L'exemple ci-dessous retourne la mesure Reseller Sales pour les cinq premières sous-catégories de vente de produits, quelle que soit la hiérarchie et conformément à la mesure Reseller Gross Profit (marge brute du revendeur). Le **fin** fonction est utilisée pour retourner uniquement les cinq derniers jeux dans le résultat, une fois que le résultat est classé à l’aide de la **ordre** (fonction).  
   
 ```  
@@ -67,6 +66,6 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Référence des fonctions MDX &#40; MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Référence des fonctions MDX & #40 ; MDX & #41 ;](../mdx/mdx-function-reference-mdx.md)  
   
   

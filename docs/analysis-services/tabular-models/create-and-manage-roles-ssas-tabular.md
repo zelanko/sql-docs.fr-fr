@@ -1,34 +1,33 @@
 ---
-title: "Créer et gérer des rôles | Documents Microsoft"
-ms.custom: 
+title: Créer et gérer des rôles | Documents Microsoft
+ms.custom: ''
 ms.date: 02/22/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - sql13.asvs.bidtoolset.rolemanager.f1
 - sql13.asvs.bidtoolset.roledb.f1
 ms.assetid: e23d27a8-e968-4082-9dbe-963fc724b5d9
-caps.latest.revision: 
+caps.latest.revision: 17
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 3787b8a3ee01c11cddb302025e2370085d0c63db
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
-ms.translationtype: MT
+ms.openlocfilehash: 50f1946d0a3a35b28635134547fd8e1053bb78e0
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-and-manage-roles"></a>Créer et gérer des rôles 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-Les rôles, dans les modèles tabulaires, définissent des autorisations de membre pour un modèle. Les rôles sont définis pour un projet de modèle à l'aide de la boîte de dialogue Gestionnaire de rôles de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Lorsqu'un modèle est déployé, les administrateurs de base de données peuvent gérer les rôles à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+  Les rôles, dans les modèles tabulaires, définissent des autorisations de membre pour un modèle. Les rôles sont définis pour un projet de modèle à l'aide de la boîte de dialogue Gestionnaire de rôles de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Lorsqu'un modèle est déployé, les administrateurs de base de données peuvent gérer les rôles à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
  Les tâches de cet article décrivent comment créer et gérer les rôles pendant la création d’un modèle à l’aide de la boîte de dialogue Gestionnaire de rôles dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Pour plus d’informations sur la gestion des rôles dans une base de données model déployée, consultez [des rôles de modèle tabulaire](../../analysis-services/tabular-models/tabular-model-roles-ssas-tabular.md).  
   
@@ -71,7 +70,7 @@ Les rôles, dans les modèles tabulaires, définissent des autorisations de memb
 9. Cliquez sur **OK**.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Roles](../../analysis-services/tabular-models/roles-ssas-tabular.md)   
+ [Rôles](../../analysis-services/tabular-models/roles-ssas-tabular.md)   
  [Perspectives](../../analysis-services/tabular-models/perspectives-ssas-tabular.md)   
  [Analyser dans Excel](../../analysis-services/tabular-models/analyze-in-excel-ssas-tabular.md)   
  [Nom d’utilisateur, fonction (DAX)](http://msdn.microsoft.com/en-us/22dddc4b-1648-4c89-8c93-f1151162b93f)   

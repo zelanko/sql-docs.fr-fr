@@ -23,20 +23,20 @@ caps.latest.revision: 14
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 62ee9e17d9f53d981e5e44918ec690c9abceddbb
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: bbdc0a38b1c29176d68469966e008911fecf3291
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mdschemameasuregroupdimensions-rowset"></a>Ensemble de lignes MDSCHEMA_MEASUREGROUP_DIMENSIONS
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Énumère les dimensions des groupes de mesures.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Énumère les dimensions des groupes de mesures.  
   
 ## <a name="rowset-columns"></a>Colonnes de l'ensemble de lignes  
  L'ensemble de lignes **MDSCHEMA_MEASUREGROUP_DIMENSIONS** contient les colonnes suivantes.  
   
-|Nom de colonne|Indicateur de type|Longueur|Description|  
+|Nom de colonne|Indicateur de type|Longueur| Description|  
 |-----------------|--------------------|------------|-----------------|  
 |**CATALOG_NAME**|**DBTYPE_WSTR**||Nom du catalogue auquel appartient ce groupe de mesures. Valeur**NULL** si le fournisseur ne prend pas en charge les catalogues.|  
 |**SCHEMA_NAME**|**DBTYPE_WSTR**||Non pris en charge.|  
@@ -57,14 +57,14 @@ ms.lasthandoff: 01/08/2018
   
 |Nom de colonne|Indicateur de type|État de la restriction|  
 |-----------------|--------------------|-----------------------|  
-|**CATALOG_NAME**|**DBTYPE_WSTR**|Facultatif.|  
-|**SCHEMA_NAME**|**DBTYPE_WSTR**|Facultatif.|  
-|**CUBE_NAME**|**DBTYPE_WSTR**|Facultatif.|  
-|**MEASUREGROUP_NAME**|**DBTYPE_WSTR**|Facultatif.|  
-|**DIMENSION_UNIQUE_NAME**|**DBTYPE_WSTR**|Facultatif.|  
+|**CATALOG_NAME**|**DBTYPE_WSTR**|Ce paramètre est facultatif.|  
+|**SCHEMA_NAME**|**DBTYPE_WSTR**|Ce paramètre est facultatif.|  
+|**CUBE_NAME**|**DBTYPE_WSTR**|Ce paramètre est facultatif.|  
+|**MEASUREGROUP_NAME**|**DBTYPE_WSTR**|Ce paramètre est facultatif.|  
+|**DIMENSION_UNIQUE_NAME**|**DBTYPE_WSTR**|Ce paramètre est facultatif.|  
 |**DIMENSION_VISIBILITY**|**DBTYPE_UI2**|(Facultatif) Bitmap avec l'une des valeurs valides suivantes :<br /><br /> 1 Visible<br /><br /> 2 non visible<br /><br /> La restriction par défaut est la valeur 1.|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Ensembles de lignes de schéma OLE DB pour OLAP](../../../analysis-services/schema-rowsets/ole-db-olap/ole-db-for-olap-schema-rowsets.md)  
+ [OLE DB pour OLAP Schema Rowsets](../../../analysis-services/schema-rowsets/ole-db-olap/ole-db-for-olap-schema-rowsets.md)  
   
   

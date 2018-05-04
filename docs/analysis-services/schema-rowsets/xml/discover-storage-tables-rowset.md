@@ -1,33 +1,32 @@
 ---
 title: Ensemble de lignes DISCOVER_STORAGE_TABLES | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
 ms.assetid: 13df6f10-8efe-4fe9-83a6-96d108809ed1
-caps.latest.revision: 
+caps.latest.revision: 13
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 51b5bd319480be4c7757d4fb642859af54f209a3
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 2bfa54e95a97aeb8bd79b9551da461473c4be980
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="discoverstoragetables-rowset"></a>Ensemble de lignes DISCOVER_STORAGE_TABLES
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-Permet au client d'identifier les tables incluses dans une base de données Analysis Services qui fonctionne en mode tabulaire ou SharePoint.  
+  Permet au client d'identifier les tables incluses dans une base de données Analysis Services qui fonctionne en mode tabulaire ou SharePoint.  
   
 ## <a name="rowset-columns"></a>Colonnes de l'ensemble de lignes  
  L'ensemble de lignes **DISCOVER_STORAGE_TABLES** contient les colonnes suivantes.  
@@ -36,8 +35,8 @@ Permet au client d'identifier les tables incluses dans une base de données Anal
 |---------------------|------------------------|----------------|---------------------|  
 |**DATABASE_NAME**|**DBTYPE_WSTR**||Spécifie le nom de la base de données qui contient les tables.<br /><br /> L'ensemble de lignes **DISCOVER_STORAGE_TABLES** peut être restreint à l'aide de cette colonne. Si cette colonne n'est pas utilisée pour restreindre l'ensemble de lignes, la base de données actuelle est utilisée.|  
 |**CUBE_NAME**|**DBTYPE_WSTR**||Spécifie le cube ou modèle qui contient les tables.<br /><br /> L'ensemble de lignes **DISCOVER_STORAGE_TABLES** peut être restreint à l'aide de cette colonne.|  
-|**MEASURE_GROUP_NAME**|**DBTYPE_WSTR**||Nom du groupe de mesures.|  
-|**PARTITION_NAME**|**DBTYPE_WSTR**||Nom de la partition.|  
+|**NOM_GROUPE_MESURES**|**DBTYPE_WSTR**||Nom du groupe de mesures.|  
+|**NOM_PARTITION**|**DBTYPE_WSTR**||Nom de la partition.|  
 |**DIMENSION_NAME**|**DBTYPE_WSTR**||Nom de la dimension.|  
 |**TABLE_ID**|**DBTYPE_WSTR**||ID de la table utilisée pour stocker les attributs de table.|  
 |**TABLE_PARTITIONS_COUNT**|**DBTYPE_ WSTR**||Nombre de partitions de la table.|  
@@ -52,8 +51,8 @@ Permet au client d'identifier les tables incluses dans une base de données Anal
 |---------------------|------------------------|---------------------------|  
 |**DATABASE_NAME**|**DBTYPE_WSTR**|Ce paramètre est facultatif.|  
 |**CUBE_NAME**|**DBTYPE_WSTR**|Ce paramètre est facultatif.|  
-|**MEASURE_GROUP_NAME**|**DBTYPE_WSTR**|Ce paramètre est facultatif|  
-|**PARTITION_NAME**|**DBTYPE_WSTR**|Ce paramètre est facultatif|  
+|**NOM_GROUPE_MESURES**|**DBTYPE_WSTR**|Ce paramètre est facultatif|  
+|**NOM_PARTITION**|**DBTYPE_WSTR**|Ce paramètre est facultatif|  
   
 ## <a name="example"></a>Exemple  
  L'exemple de code suivant retourne une liste de tables de stockages et le nombre de lignes dans chacune, à partir de la base de données par défaut sur la connexion actuelle.  

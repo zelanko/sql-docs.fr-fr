@@ -27,15 +27,15 @@ caps.latest.revision: 41
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 80a0bdc56107980b9865015f07abd8b213d1021c
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 0db52a153915fb07032daae1634025620d7bf4a2
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="action-element-assl"></a>Élément Action (ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Contient des informations sur une action disponible dans un [Cube](../../../analysis-services/scripting/objects/cube-element-assl.md) élément ou un [Perspective](../../../analysis-services/scripting/objects/perspective-element-assl.md) élément.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Contient des informations sur une action disponible dans un élément [Cube](../../../analysis-services/scripting/objects/cube-element-assl.md) ou un élément [Perspective](../../../analysis-services/scripting/objects/perspective-element-assl.md) .  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -55,7 +55,7 @@ ms.lasthandoff: 01/08/2018
 |Caractéristique|Description|  
 |--------------------|-----------------|  
 |Type de données et longueur|Consultez le tableau ci-dessous.|  
-|Valeur par défaut|None|  
+|Valeur par défaut|Aucune|  
 |Cardinalité|0-n : élément facultatif pouvant apparaître plusieurs fois.|  
   
 |Ancêtre ou parent|Type de données|  
@@ -68,15 +68,15 @@ ms.lasthandoff: 01/08/2018
 |Relation|Élément|  
 |------------------|-------------|  
 |Éléments parents|[Actions](../../../analysis-services/scripting/collections/actions-element-assl.md)|  
-|Éléments enfants|None|  
+|Éléments enfants|Aucune|  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  L’élément correspondant dans le modèle d’objet objets AMO (Analysis Management) est <xref:Microsoft.AnalysisServices.Action>.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Élément cube &#40; ASSL &#41;](../../../analysis-services/scripting/objects/cube-element-assl.md)   
- [Élément perspective &#40; ASSL &#41;](../../../analysis-services/scripting/objects/perspective-element-assl.md)   
- [Type de données PerspectiveAction &#40; ASSL &#41;](../../../analysis-services/scripting/data-type/perspectiveaction-data-type-assl.md)   
- [Objets &#40; ASSL &#41;](../../../analysis-services/scripting/objects/objects-assl.md)  
+ [Élément cube & #40 ; ASSL & #41 ;](../../../analysis-services/scripting/objects/cube-element-assl.md)   
+ [Élément perspective & #40 ; ASSL & #41 ;](../../../analysis-services/scripting/objects/perspective-element-assl.md)   
+ [Type de données PerspectiveAction & #40 ; ASSL & #41 ;](../../../analysis-services/scripting/data-type/perspectiveaction-data-type-assl.md)   
+ [Objets & #40 ; ASSL & #41 ;](../../../analysis-services/scripting/objects/objects-assl.md)  
   
   

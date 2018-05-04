@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 apiname:
 - SQLGetDiagField
 apilocation:
@@ -26,12 +26,11 @@ caps.latest.revision: 26
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: f337b8455ba860caaf5e4a5b1bd4be1d0ee86c37
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 7a05aebcf49e5abbaea244010ad8608a18126e4c
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlgetdiagfield-function"></a>Fonction SQLGetDiagField
 **Mise en conformité**  
@@ -161,7 +160,7 @@ SQLRETURN SQLGetDiagField(
   
  Pilotes peuvent définir en-tête spécifique au pilote et des champs d’enregistrement dans la structure de données de diagnostic.  
   
- Un ODBC 3*.x* application utilisant une API ODBC 2*.x* pilote sera en mesure d’appeler **SQLGetDiagField** uniquement avec un *DiagIdentifier* argument de SQL_DIAG_CLASS_ORIGIN, SQL_DIAG_CLASS_SUBCLASS_ORIGIN, SQL_DIAG_CONNECTION_NAME, SQL_DIAG_MESSAGE_TEXT, SQL_DIAG_NATIVE, SQL_DIAG_NUMBER, SQL_DIAG_RETURNCODE, SQL_DIAG_SERVER_NAME ou SQL_DIAG_SQLSTATE. Tous les autres champs de diagnostic retourne SQL_ERROR.  
+ Un ODBC 3 *.x* application utilisant une API ODBC 2 *.x* pilote sera en mesure d’appeler **SQLGetDiagField** uniquement avec un *DiagIdentifier* argument de SQL_DIAG_CLASS_ORIGIN, SQL_DIAG_CLASS_SUBCLASS_ORIGIN, SQL_DIAG_CONNECTION_NAME, SQL_DIAG_MESSAGE_TEXT, SQL_DIAG_NATIVE, SQL_DIAG_NUMBER, SQL_DIAG_RETURNCODE, SQL_DIAG_SERVER_NAME ou SQL_DIAG_SQLSTATE. Tous les autres champs de diagnostic retourne SQL_ERROR.  
   
 ## <a name="header-fields"></a>Champs d’en-tête  
  Les champs d’en-tête répertoriés dans le tableau suivant peuvent être inclus dans le *DiagIdentifier* argument.  
@@ -240,7 +239,7 @@ n-définition *|« CRÉER UN DOMAINE »|SQL_DIAG_CREATE_DOMAIN|
 -   Pour tous les enregistrements qui se rapportent à des lignes spécifiques, les enregistrements sont triés par la valeur dans le champ SQL_DIAG_ROW_NUMBER. Toutes les erreurs et avertissements de la première ligne affectés sont répertoriés, puis toutes les erreurs et avertissements de la prochaine ligne affecté et ainsi de suite.  
   
 > [!NOTE]  
->  Le ODBC 3*.x* du Gestionnaire de pilotes ne trie pas les enregistrements d’état dans la file d’attente diagnostic si 01 s 01 SQLSTATE (erreur de ligne) est retourné par une API ODBC 2*.x* pilote ou si 01 s 01 SQLSTATE (erreur de ligne) est retourné par une ODBC 3*.x* pilote lorsque **SQLExtendedFetch** est appelée ou **SQLSetPos** est appelée sur un curseur qui a été positionné avec **SQLExtendedFetch**.  
+>  Le ODBC 3 *.x* du Gestionnaire de pilotes ne trie pas les enregistrements d’état dans la file d’attente diagnostic si 01 s 01 SQLSTATE (erreur de ligne) est retourné par une API ODBC 2 *.x* pilote ou si 01 s 01 SQLSTATE (erreur de ligne) est retourné par une ODBC 3 *.x* pilote lorsque **SQLExtendedFetch** est appelée ou **SQLSetPos** est appelée sur un curseur qui a été positionné avec **SQLExtendedFetch**.  
   
  Dans chaque ligne, ou pour tous les enregistrements qui ne correspondent pas à une ligne ou pour lesquels le numéro de ligne est inconnu, ou pour tous les enregistrements ayant un nombre de lignes égal à SQL_NO_ROW_NUMBER, le premier enregistrement répertorié est déterminé à l’aide d’un ensemble de règles de tri. Après le premier enregistrement, l’ordre des enregistrements qui affectent une ligne n’est pas défini. Une application ne peut pas supposer que les erreurs précédent avertissements après le premier enregistrement. La structure de données de diagnostic complet pour obtenir des informations complètes sur un appel à une fonction doivent analyser les applications.  
   

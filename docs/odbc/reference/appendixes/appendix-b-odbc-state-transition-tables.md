@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - state transitions [ODBC]
 - transitioning states [ODBC], about state transitions
@@ -21,12 +21,11 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: cc14674918571a3536cf0d15389ea4d43367c262
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 27d719a9ab41bfa7594231462ea5c6318d95247d
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="appendix-b-odbc-state-transition-tables"></a>Annexe b : Tables de Transition d’état ODBC
 Les tableaux de cette annexe montrent comment les fonctions ODBC provoquent des transitions de l’environnement, connexion, l’instruction et états du descripteur. L’état de l’environnement, une connexion, une instruction ou une descripteur dicte généralement lorsque les fonctions qui utilisent le type de handle (environnement, connexion, instruction ou descripteur) correspondant peuvent être appelées. Les États de l’environnement, connexion, l’instruction et descripteur se chevauchent à peu près comme indiqué dans les illustrations suivantes. Par exemple, le chevauchement exact de connexion indique C5 et C6 et états d’instruction que s1 à S12 est source de données, car les transactions commencent à des moments différents sur différentes sources de données, et l’état descripteur D1i (implicitement alloué descripteur) dépend de l’état de l’instruction qui le descripteur est associé, tandis que l’état D1e (explicitement alloué descripteur) est indépendante de l’état de n’importe quelle instruction. Pour obtenir une description de chaque état, consultez [Transitions d’environnement](../../../odbc/reference/appendixes/environment-transitions.md), [connexion Transitions](../../../odbc/reference/appendixes/connection-transitions.md), [Transitions de l’instruction](../../../odbc/reference/appendixes/statement-transitions.md), et [descripteur Transitions](../../../odbc/reference/appendixes/descriptor-transitions.md), plus loin dans cette annexe.  

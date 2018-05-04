@@ -1,36 +1,23 @@
 ---
-title: "Définir l’écriture différée de Partition | Documents Microsoft"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: Définir l’écriture différée de Partition | Documents Microsoft
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-helpviewer_keywords:
-- write-enabled partitions [Analysis Services]
-- partitions [Analysis Services], writeback
-- partitions [Analysis Services], write-enabled
-- writeback [Analysis Services], partitions
-ms.assetid: 38bb09cc-2652-4971-8373-0cf468cdc7a6
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: c1e6971bd8c1bc228386ad5b39a498f0e0ed5d42
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 66b06d7c6dabeeb83707dabe1d454267f6c4bf3f
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="set-partition-writeback"></a>Définir l'écriture différée de partition
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Si vous activez en écriture un groupe de mesures, les utilisateurs finaux peuvent modifier les données du cube lorsqu'ils le parcourent, et les modifications sont stockées dans une table séparée appelée « table d'écriture différée », et non dans les données du cube ou les données sources. Les utilisateurs finaux qui explorent une partition activée en écriture peuvent voir le résultat de toutes les modifications dans la table d'écriture différée de la partition.  
+  Si vous activez en écriture un groupe de mesures, les utilisateurs finaux peuvent modifier les données du cube lorsqu'ils le parcourent, et les modifications sont stockées dans une table séparée appelée « table d'écriture différée », et non dans les données du cube ou les données sources. Les utilisateurs finaux qui explorent une partition activée en écriture peuvent voir le résultat de toutes les modifications dans la table d'écriture différée de la partition.  
   
  Vous pouvez parcourir ou supprimer les données en écriture différée. Vous pouvez aussi convertir en partition les données en écriture différée. Sur une partition activée en écriture, vous pouvez utiliser des rôles de cube pour accorder l'accès en lecture/écriture aux utilisateurs et aux groupes d'utilisateurs et pour limiter l'accès à des cellules ou des groupes de cellules spécifiques de la partition.  
   

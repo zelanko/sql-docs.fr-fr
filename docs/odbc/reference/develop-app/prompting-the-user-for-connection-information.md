@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - connecting to data source [ODBC], SqlConnect
 - connecting to driver [ODBC], prompting user for information
@@ -27,12 +27,11 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 796713fb12fe2eb70a0e7630ec558a63d7cfec4d
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 54d419e83a4a44273b42559e4b1ba300f021f771
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="prompting-the-user-for-connection-information"></a>Demander à l’utilisateur des informations de connexion
 Si l’application utilise **SQLConnect** et doit demander à l’utilisateur pour toutes les informations de connexion, telles qu’un nom d’utilisateur et un mot de passe, il doit le faire lui-même. Cela permet l’application de contrôler son « apparence », il peut forcer l’application pour contenir le code spécifique au pilote. Cela se produit lorsque l’application doit demander à l’utilisateur pour les informations de connexion spécifiques au pilote. Cela présente une situation impossible pour les applications génériques qui sont conçues pour fonctionner avec tous les pilotes, y compris les pilotes qui n’existent pas lorsque l’application est écrite.  

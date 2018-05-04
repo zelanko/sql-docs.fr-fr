@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - backward compatibility [ODBC], bookmarks
 - bookmarks [ODBC]
@@ -22,16 +22,15 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 797a23c4fea5692cd01ce9fd05b56aeac27c3329
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: c94d79500047fe1f918689426846a3faa98bb2d7
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="fixed-length-bookmarks"></a>Signets de longueur fixe
-Si un ODBC 3*.x* pilote doit fonctionner avec une API ODBC 2. *x* application qu’utilise signets de longueur fixe, le pilote doivent prendre en charge les éléments suivants :  
+Si un ODBC 3 *.x* pilote doit fonctionner avec une API ODBC 2. *x* application qu’utilise signets de longueur fixe, le pilote doivent prendre en charge les éléments suivants :  
   
--   SQL_UB_ON en tant que valeur pour l’option d’instruction SQL_USE_BOOKMARKS. (SQL_UB_ON est déconseillé dans ODBC 3*.x*.)  
+-   SQL_UB_ON en tant que valeur pour l’option d’instruction SQL_USE_BOOKMARKS. (SQL_UB_ON est déconseillé dans ODBC 3 *.x*.)  
   
 -   L’option d’instruction SQL_GET_BOOKMARK.

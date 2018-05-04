@@ -27,15 +27,15 @@ caps.latest.revision: 39
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 3ddfc11592478d55a1ca8b253fa33c3b7af4b449
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 9967906561190fdccba9c780d019c70c8cc29782
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="aggregationdesigndimension-data-type-assl"></a>Type de données AggregationDesignDimension (ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Définit un type de données primitif qui représente la relation entre une dimension de cube et un [AggregationDesign](../../../analysis-services/scripting/objects/aggregationdesign-element-assl.md) élément.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Définit un type de données primitif représentant la relation entre une dimension de cube et un élément [AggregationDesign](../../../analysis-services/scripting/objects/aggregationdesign-element-assl.md) .  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -52,22 +52,22 @@ ms.lasthandoff: 01/08/2018
   
 |Caractéristique|Description|  
 |--------------------|-----------------|  
-|Types de données de base|None|  
-|Types de données dérivés|None|  
+|Types de données de base|Aucune|  
+|Types de données dérivés|Aucune|  
   
 ## <a name="data-type-relationships"></a>Relations du type de données  
   
 |Relation|Élément|  
 |------------------|-------------|  
-|Éléments parents|None|  
-|Éléments enfants|[Annotations](../../../analysis-services/scripting/collections/annotations-element-assl.md), [attributs](../../../analysis-services/scripting/collections/attributes-element-assl.md), [CubeDimensionID](../../../analysis-services/scripting/properties/cubedimensionid-element-assl.md)|  
-|Éléments dérivés|[Dimension](../../../analysis-services/scripting/objects/dimension-element-assl.md) ([Dimensions](../../../analysis-services/scripting/collections/dimensions-element-assl.md) collection de [AggregationDesign](../../../analysis-services/scripting/objects/aggregationdesign-element-assl.md))|  
+|Éléments parents|Aucune|  
+|Éléments enfants|[Annotations](../../../analysis-services/scripting/collections/annotations-element-assl.md), [Attributes](../../../analysis-services/scripting/collections/attributes-element-assl.md), [CubeDimensionID](../../../analysis-services/scripting/properties/cubedimensionid-element-assl.md)|  
+|Éléments dérivés|[Dimension](../../../analysis-services/scripting/objects/dimension-element-assl.md) (collection[Dimensions](../../../analysis-services/scripting/collections/dimensions-element-assl.md) d' [AggregationDesign](../../../analysis-services/scripting/objects/aggregationdesign-element-assl.md))|  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  L’élément correspondant dans le modèle d’objet objets AMO (Analysis Management) est <xref:Microsoft.AnalysisServices.AggregationDesignDimension>.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Élément AggregationDesign &#40; ASSL &#41;](../../../analysis-services/scripting/objects/aggregationdesign-element-assl.md)   
- [Analysis Services script des Types de données XML Language &#40; ASSL &#41;](../../../analysis-services/scripting/data-type/analysis-services-scripting-language-xml-data-types-assl.md)  
+ [Élément AggregationDesign & #40 ; ASSL & #41 ;](../../../analysis-services/scripting/objects/aggregationdesign-element-assl.md)   
+ [Analysis Services script des Types de données XML Language & #40 ; ASSL & #41 ;](../../../analysis-services/scripting/data-type/analysis-services-scripting-language-xml-data-types-assl.md)  
   
   

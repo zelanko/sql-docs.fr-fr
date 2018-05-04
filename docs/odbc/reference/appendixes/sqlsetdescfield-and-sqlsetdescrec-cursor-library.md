@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQLSetDescField function [ODBC], Cursor Library
 - SQLSetDescRec function [ODBC], Cursor Library
@@ -20,12 +20,11 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 2129b4dffc162eb342bf18de345943146a34c633
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 822e6c0e2d71c24261372224d3832e3c001e616f
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlsetdescfield-and-sqlsetdescrec-cursor-library"></a>SQLSetDescField et SQLSetDescRec (bibliothèque de curseurs)
 > [!IMPORTANT]  
@@ -61,7 +60,7 @@ ms.lasthandoff: 04/16/2018
   
  La bibliothèque de curseurs exécute les appels à **SQLSetDescRec** pour une colonne de signet.  
   
- Lorsque vous travaillez avec une API ODBC 2. *x* pilote, la bibliothèque de curseurs retourne SQLSTATE HY090 (longueur de chaîne ou une mémoire tampon non valide) lorsque **SQLSetDescField** ou **SQLSetDescRec** est appelée pour définir le champ SQL_DESC_OCTET_LENGTH pour l’enregistrement de signet d’un ARD à une valeur non égale à 4. Lorsque vous travaillez avec un ODBC 3*.x* pilote, la bibliothèque de curseurs permet d’être n’importe quelle taille de la mémoire tampon.  
+ Lorsque vous travaillez avec une API ODBC 2. *x* pilote, la bibliothèque de curseurs retourne SQLSTATE HY090 (longueur de chaîne ou une mémoire tampon non valide) lorsque **SQLSetDescField** ou **SQLSetDescRec** est appelée pour définir le champ SQL_DESC_OCTET_LENGTH pour l’enregistrement de signet d’un ARD à une valeur non égale à 4. Lorsque vous travaillez avec un ODBC 3 *.x* pilote, la bibliothèque de curseurs permet d’être n’importe quelle taille de la mémoire tampon.  
   
  La bibliothèque de curseurs exécute **SQLSetDescField** lorsqu’elle est appelée pour retourner la valeur du champ SQL_DESC_BIND_OFFSET_PTR, SQL_DESC_BIND_TYPE, SQL_DESC_ROW_ARRAY_SIZE ou SQL_DESC_ROW_STATUS_PTR. Ces champs peuvent être retournées pour toute ligne, et pas seulement la ligne du signet.  
   

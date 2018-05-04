@@ -1,31 +1,30 @@
 ---
-title: "Importer un projet d’exploration de données à l’aide de l’Assistant Importation d’Analysis Services | Documents Microsoft"
-ms.custom: 
+title: Importer un projet d’exploration de données à l’aide de l’Assistant Importation d’Analysis Services | Documents Microsoft
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 62bc9fc5-c6ff-4517-b598-d92df76743a2
-caps.latest.revision: 
+caps.latest.revision: 6
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 9ac94cfcd17842f118ea6bda19af830d8d737b94
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
-ms.translationtype: MT
+ms.openlocfilehash: df2f9fe81a733448d232129475fc9eb6cc2ed0c3
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="import-a-data-mining-project-using-the-analysis-services-import-wizard"></a>Importer un projet d'exploration de données à l'aide de l'Assistant Importation d'Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Cette rubrique décrit la méthode de création d’un projet d’exploration de données en important les métadonnées d’un projet existant d’exploration de données sur un autre serveur, à l’aide du modèle **Importer à partir du serveur (Multidimensionnel et exploration de données)**, dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
+  Cette rubrique décrit la méthode de création d’un projet d’exploration de données en important les métadonnées d’un projet existant d’exploration de données sur un autre serveur, à l’aide du modèle **Importer à partir du serveur (Multidimensionnel et exploration de données)**, dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
 ## <a name="import-data-sources-mining-structures-and-mining-models-from-an-existing-data-mining-project"></a>Importez des sources de données, des structures d'exploration de données et des modèles d'exploration de données d'un projet existant d'exploration de données  
  Quand vous utilisez le modèle **Importer à partir du serveur (Multidimensionnel et exploration de données)**, [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] crée un projet d’exploration de données, puis copie les métadonnées du projet d’exploration de données spécifié. Le nouveau projet contient les mêmes sources de données, vues de source de données, structures d'exploration de données et modèles d'exploration de données que la base de données ssASnoversion à partir de laquelle vous avez effectué l'importation. Toutefois, le projet ne peut pas être utilisé tant que certaines propriétés ne sont pas mises à jour et que les objets n'ont pas été traités comme suit :  

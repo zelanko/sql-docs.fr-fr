@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - row-wise binding [ODBC]
 - result sets [ODBC], binding columns
@@ -21,12 +21,11 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: bf2df3b6aa74ad9e959bdebc2ffcefe32c2a3047
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 61839fe1cad32bc9daf0acdc1bb43a2d793bf5b1
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="row-wise-binding"></a>Liaison selon les lignes
 Lorsque vous utilisez la liaison selon les lignes, une application définit une structure contenant un ou deux, ou dans certains cas, trois éléments pour chaque colonne pour laquelle les données sont à retourner. Le premier élément conserve la valeur de données, et le deuxième élément conserve la mémoire tampon de longueur / d’indicateur. Indicateurs et des valeurs de longueur peuvent être stockés dans les mémoires tampon distincte en définissant les champs de descripteur SQL_DESC_INDICATOR_PTR et SQL_DESC_OCTET_LENGTH_PTR à des valeurs différentes ; Si cette opération est effectuée, la structure contient un troisième élément. L’application alloue un tableau de ces structures, qui contient autant d’éléments qu’il existe des lignes dans l’ensemble de lignes.  

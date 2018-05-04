@@ -1,35 +1,34 @@
 ---
-title: "Filtre de modèle de règles d’un jeu d’éléments dans une Association | Documents Microsoft"
-ms.custom: 
+title: Filtre de modèle de règles d’un jeu d’éléments dans une Association | Documents Microsoft
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - itemsets [Analysis Services]
 - filtering itemsets [Analysis Services]
 - Mining Model Viewer [Analysis Services], itemsets
 ms.assetid: 3ed919ea-8598-45d2-a4a0-b1b3357a4ab1
-caps.latest.revision: 
+caps.latest.revision: 27
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 33d207fb181d05e2901cbb5fe02d58958a2157d1
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: bb07516c57e5364e92ee1efe249efb0cbd8bbefb
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="filter-an-itemset-in-an-association-rules-model"></a>Filtrer un jeu d'éléments dans un modèle de règles d'association
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], vous pouvez filtrer les jeux d’éléments affichés sous l’onglet **Jeux d’éléments** de la visionneuse de l’algorithme MAR ([!INCLUDE[msCoName](../../includes/msconame-md.md)] Association Rules).  
+  Dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], vous pouvez filtrer les jeux d’éléments affichés sous l’onglet **Jeux d’éléments** de la visionneuse de l’algorithme MAR ([!INCLUDE[msCoName](../../includes/msconame-md.md)] Association Rules).  
   
 ### <a name="to-filter-an-itemset"></a>Pour filtrer un jeu d'éléments  
   

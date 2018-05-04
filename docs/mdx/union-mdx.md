@@ -20,12 +20,11 @@ caps.latest.revision: 19
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 5551b2d2fe5b041dbee57d76eee58fb30861c308
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: ed3c4eac39b7ee34bc16063ad7671aa5a0175f9d
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="union--mdx"></a>Union (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -53,8 +52,8 @@ Alternate syntax 2
  *Expression d’ensemble 2*  
  Une expression MDX (Multidimensional Expressions) valide qui retourne un jeu.  
   
-## <a name="remarks"></a>Notes   
- Cette fonction retourne l’union de deux ou plusieurs jeux spécifiés*.* Avec la syntaxe standard et la syntaxe alternative 1, les doublons sont éliminés par défaut. Avec la syntaxe standard, à l’aide de la **tous les** indicateur conserve les doublons dans le jeu joint. Les doublons sont supprimés de la fin du jeu. Avec la syntaxe alternative 2, les doublons sont toujours conservés.  
+## <a name="remarks"></a>Notes  
+ Cette fonction retourne l’union de deux ou plusieurs jeux spécifiés *.* Avec la syntaxe standard et la syntaxe alternative 1, les doublons sont éliminés par défaut. Avec la syntaxe standard, à l’aide de la **tous les** indicateur conserve les doublons dans le jeu joint. Les doublons sont supprimés de la fin du jeu. Avec la syntaxe alternative 2, les doublons sont toujours conservés.  
   
 ## <a name="examples"></a>Exemples  
  Les exemples suivants illustrent le comportement de la **Union** avec chaque syntaxe de fonction.  
@@ -107,7 +106,7 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [+ &#40; Union &#41; &#40; MDX &#41;](../mdx/union-mdx-operator-reference.md)   
- [Référence des fonctions MDX &#40; MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
+ [+ &#40;Union&#41; &#40;MDX&#41;](../mdx/union-mdx-operator-reference.md)   
+ [Référence des fonctions MDX & #40 ; MDX & #41 ;](../mdx/mdx-function-reference-mdx.md)  
   
   

@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - statement handles [ODBC]
 - handles [ODBC], statement
@@ -20,12 +20,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 1691020070667876d56414b3d93dee384538ae8f
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 1bd4d07e87af049ac59bc63faf119e84872bbc45
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="statement-handles"></a>Descripteurs d’instruction
 A *instruction* est plus facilement considérée comme une instruction SQL, tel que **sélectionnez \* de l’employé**. Toutefois, une instruction est plus qu’une instruction SQL, il se compose de toutes les informations associées à cette instruction SQL, tels que des jeux de résultats créés par l’instruction et les paramètres utilisés dans l’exécution de l’instruction. Une instruction n’a même pas besoin d’avoir une instruction SQL définie par l’application. Par exemple, lorsqu’une fonction de catalogue comme **SQLTables** est exécutée sur une instruction, il s’exécute une instruction SQL prédéfinie qui retourne une liste des noms de table.  

@@ -23,12 +23,11 @@ caps.latest.revision: 32
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 4bc79c9a1c641f625a6a0dae11c17aba4188b5e8
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 5c1cef419c1c53426f403a8758df396f622ed2ef
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="distributions-dmx"></a>Distributions (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -46,19 +45,19 @@ ms.lasthandoff: 01/08/2018
  **UNIFORME**  
  Les valeurs de la colonne continue forment une courbe plate, dont toutes les valeurs sont sensiblement les mêmes.  
   
- Pour plus d’informations sur [!INCLUDE[msCoName](../includes/msconame-md.md)] algorithmes d’exploration de données, consultez [algorithmes d’exploration de données &#40; Analysis Services - Exploration de données &#41; ](../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md). Des algorithmes tiers peuvent prendre en charge des types de distribution supplémentaires. Pour déterminer les types de distribution un algorithme prend en charge, utilisez le **SUPPORTED_DISTRIBUTION_FLAGS** de lignes du schéma.  
+ Pour plus d’informations sur [!INCLUDE[msCoName](../includes/msconame-md.md)] algorithmes d’exploration de données, consultez [algorithmes d’exploration de données &#40;Analysis Services - Exploration de données&#41;](../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md). Des algorithmes tiers peuvent prendre en charge des types de distribution supplémentaires. Pour déterminer les types de distribution un algorithme prend en charge, utilisez le **SUPPORTED_DISTRIBUTION_FLAGS** de lignes du schéma.  
   
- Pour plus d’informations sur les types de distribution, consultez [Distributions de colonnes &#40; exploration de données &#41;](../analysis-services/data-mining/column-distributions-data-mining.md).  
+ Pour plus d’informations sur les types de distribution, consultez [Distributions de colonnes &#40;d’exploration de données&#41;](../analysis-services/data-mining/column-distributions-data-mining.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Contenu des Types de &#40; exploration de données &#41;](../analysis-services/data-mining/content-types-data-mining.md)   
- [Les Extensions d’exploration de données &#40; DMX &#41; Référence](../dmx/data-mining-extensions-dmx-reference.md)   
- [Les Extensions d’exploration de données &#40; DMX &#41; Éléments de syntaxe](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
- [Les Extensions d’exploration de données &#40; DMX &#41; Référence de fonction](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [Les Extensions d’exploration de données &#40; DMX &#41; Référence des opérateurs](../dmx/data-mining-extensions-dmx-operator-reference.md)   
- [Les Extensions d’exploration de données &#40; DMX &#41; Référence des instructions](../dmx/data-mining-extensions-dmx-statements.md)   
- [Les Extensions d’exploration de données &#40; DMX &#41; Conventions de syntaxe](../dmx/data-mining-extensions-dmx-syntax-conventions.md)   
- [Fonctions de prédiction générales &#40; DMX &#41;](../dmx/general-prediction-functions-dmx.md)   
+ [Contenu des Types de & #40 ; exploration de données & #41 ;](../analysis-services/data-mining/content-types-data-mining.md)   
+ [Les Extensions d’exploration de données & #40 ; DMX & #41 ; Référence](../dmx/data-mining-extensions-dmx-reference.md)   
+ [Data Mining Extensions &#40;DMX&#41; éléments de syntaxe](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
+ [Data Mining Extensions &#40;DMX&#41; référence de fonction](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [Data Mining Extensions &#40;DMX&#41; référence des opérateurs](../dmx/data-mining-extensions-dmx-operator-reference.md)   
+ [Les Extensions d’exploration de données & #40 ; DMX & #41 ; Référence des instructions](../dmx/data-mining-extensions-dmx-statements.md)   
+ [Data Mining Extensions &#40;DMX&#41; Conventions de syntaxe](../dmx/data-mining-extensions-dmx-syntax-conventions.md)   
+ [Fonctions de prédiction générales &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)   
  [Structure et utilisation des requêtes de prédiction DMX](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
  [Présentation de l’instruction DMX Select](../dmx/understanding-the-dmx-select-statement.md)  
   

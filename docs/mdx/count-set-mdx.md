@@ -22,12 +22,11 @@ caps.latest.revision: 39
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: On Demand
-ms.openlocfilehash: 41d5ff72346e95985b19812f194d266e8d5db165
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 8fb02f59ec89c8c3c54c13973251ebdd78cfa32f
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="count-set-mdx"></a>Count (Set) (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -49,7 +48,7 @@ Set_Expression.Count
  *Set_Expression*  
  Une expression MDX (Multidimensional Expressions) valide qui retourne un jeu.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Le **Count (Set)** fonction inclut ou exclut les cellules vides, selon la syntaxe utilisée. Si la syntaxe standard est utilisée, les cellules vides peuvent être exclus ou inclus à l’aide de la **EXCLUDEEMPTY** ou **INCLUDEEMPTY** indicateurs, respectivement. Si vous utilisez l'autre syntaxe proposée, la fonction inclut toujours les cellules vides.  
   
  Pour exclure les cellules vides dans le comptage d’un jeu, utilisez la syntaxe standard et le paramètre facultatif **EXCLUDEEMPTY** indicateur.  
@@ -105,16 +104,16 @@ WHERE ([Geography].[State-Province].x,
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Nombre &#40; Dimension &#41; &#40; MDX &#41;](../mdx/count-dimension-mdx.md)   
- [Nombre &#40; Niveaux de hiérarchie &#41; &#40; MDX &#41;](../mdx/count-hierarchy-levels-mdx.md)   
- [Nombre &#40; Tuple &#41; &#40; MDX &#41;](../mdx/count-tuple-mdx.md)   
- [DrilldownLevel &#40; MDX &#41;](../mdx/drilldownlevel-mdx.md)   
- [AddCalculatedMembers &#40; MDX &#41;](../mdx/addcalculatedmembers-mdx.md)   
- [Hierarchize &#40; MDX &#41;](../mdx/hierarchize-mdx.md)   
- [Propriétés &#40; MDX &#41;](../mdx/properties-mdx.md)   
- [Agrégat &#40; MDX &#41;](../mdx/aggregate-mdx.md)   
- [Filtre &#40; MDX &#41;](../mdx/filter-mdx.md)   
- [PrevMember &#40; MDX &#41;](../mdx/prevmember-mdx.md)   
- [Référence des fonctions MDX &#40; MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Nombre &#40;Dimension&#41; &#40;MDX&#41;](../mdx/count-dimension-mdx.md)   
+ [Nombre &#40;des niveaux de hiérarchie&#41; &#40;MDX&#41;](../mdx/count-hierarchy-levels-mdx.md)   
+ [Nombre &#40;Tuple&#41; &#40;MDX&#41;](../mdx/count-tuple-mdx.md)   
+ [DrilldownLevel & #40 ; MDX & #41 ;](../mdx/drilldownlevel-mdx.md)   
+ [AddCalculatedMembers & #40 ; MDX & #41 ;](../mdx/addcalculatedmembers-mdx.md)   
+ [Hierarchize & #40 ; MDX & #41 ;](../mdx/hierarchize-mdx.md)   
+ [Propriétés & #40 ; MDX & #41 ;](../mdx/properties-mdx.md)   
+ [Agrégat & #40 ; MDX & #41 ;](../mdx/aggregate-mdx.md)   
+ [Filtre & #40 ; MDX & #41 ;](../mdx/filter-mdx.md)   
+ [PrevMember &#40;MDX&#41;](../mdx/prevmember-mdx.md)   
+ [Référence des fonctions MDX & #40 ; MDX & #41 ;](../mdx/mdx-function-reference-mdx.md)  
   
   

@@ -1,29 +1,28 @@
 ---
 title: Modification de la Dimension de produit | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
 ms.assetid: 8e3ffecd-7f40-41a8-8735-bc9858a310cb
-caps.latest.revision: 
+caps.latest.revision: 19
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 8bbed44f2b02b0d94678513185dbf682a537e9e5
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 3bf90c339081a9e92965bda770c72c2624e3dbae
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="lesson-3-3---modifying-the-product-dimension"></a>Leçon 3-3-modification de la Dimension de produit
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -192,7 +191,7 @@ Si les données sous-jacentes le prennent en charge, il est également conseill�
 [Modification de la dimension Date](../analysis-services/lesson-3-4-modifying-the-date-dimension.md)  
   
 ## <a name="see-also"></a>Voir aussi  
-[Définir des calculs nommés dans une vue de Source de données &#40; Analysis Services &#41;](../analysis-services/multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md)  
+[Définir des calculs nommés dans une vue de Source de données & #40 ; Analysis Services & #41 ;](../analysis-services/multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md)  
 [Créer des hiérarchies définies par l'utilisateur](../analysis-services/multidimensional-models/user-defined-hierarchies-create.md)  
 [Configurer le niveau &#40;Tous&#41; des hiérarchies d’attributs](../analysis-services/multidimensional-models/database-dimensions-configure-the-all-level-for-attribute-hierarchies.md)  
   

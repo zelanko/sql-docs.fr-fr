@@ -22,12 +22,11 @@ caps.latest.revision: 32
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: On Demand
-ms.openlocfilehash: 8f9d95aca057801c924ceec962f818c7e6f27869
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: b647c31febd5ef06b8cb2e6f808e296518f98af6
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ytd-mdx"></a>Ytd (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -45,12 +44,12 @@ Ytd( [ Member_Expression ] )
  *Argument*  
  Expression MDX (Multidimensional Expressions) valide qui retourne un membre.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Si une expression de membre n’est pas spécifiée, la valeur par défaut est le membre actuel de la première hiérarchie avec un niveau de type *ans* dans la première dimension de type *temps* dans le groupe de mesures.  
   
  Le **Ytd** fonction est un raccourci pour la [PeriodsToDate](../mdx/periodstodate-mdx.md) fonction où la propriété Type de la hiérarchie d’attribut sur lequel repose le niveau est définie à *ans*. Ce qui signifie que `Ytd(Member_Expression)` est équivalent à `PeriodsToDate(Year_Level_Expression,Member_Expression)`. Notez que cette fonction ne fonctionne pas lorsque la propriété Type a la valeur *FiscalYears*.  
   
-## <a name="example"></a> Exemple  
+## <a name="example"></a>Exemple  
  L’exemple suivant retourne la somme de la `Measures.[Order Quantity]` membre, agrégé sur les huit premiers mois de l’année civile 2003 qui sont contenus dans le `Date` dimension, à partir de la **Adventure Works** cube.  
   
 ```  
@@ -67,7 +66,7 @@ WHERE
     [Measures].[Order Quantity]  
 ```  
   
- **YTD** est fréquemment utilisé en association avec aucun paramètre spécifié, ce qui signifie que le [CurrentMember &#40; MDX &#41; ](../mdx/currentmember-mdx.md) fonction affichera un total cumulatif d’year-to-date dans un rapport, comme indiqué dans la requête suivante :  
+ **YTD** est fréquemment utilisé en association avec aucun paramètre spécifié, ce qui signifie que la [CurrentMember &#40;MDX&#41; ](../mdx/currentmember-mdx.md) fonction affichera un total cumulatif d’year-to-date dans un rapport, comme indiqué dans les requête suivante :  
   
  `WITH MEMBER MEASURES.YTDDEMO AS`  
   
@@ -80,6 +79,6 @@ WHERE
  `FROM [Adventure Works]`  
   
 ## <a name="see-also"></a>Voir aussi  
- [Référence des fonctions MDX &#40; MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Référence des fonctions MDX & #40 ; MDX & #41 ;](../mdx/mdx-function-reference-mdx.md)  
   
   

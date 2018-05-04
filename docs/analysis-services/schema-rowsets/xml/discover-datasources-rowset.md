@@ -23,15 +23,15 @@ caps.latest.revision: 39
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: d52c95835c5583bd4b8a01a416131aaa7166f385
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 79b6cd2e494f35ac87c3483cb0929721eee13e82
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="discoverdatasources-rowset"></a>Ensemble de lignes DISCOVER_DATASOURCES
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Retourne une liste de XML pour les sources de données de fournisseur Analysis (XMLA) qui sont disponibles sur le serveur ou le service Web. Les sources de données publiées sont retournées à partir d'une URL du serveur Web d'application. Le client peut se connecter à l'une des sources de données indiquées dans cette liste.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Retourne la liste des sources de données du fournisseur XML for Analysis (XMLA) qui sont disponibles sur le serveur ou le service Web. Les sources de données publiées sont retournées à partir d'une URL du serveur Web d'application. Le client peut se connecter à l'une des sources de données indiquées dans cette liste.  
   
  Si vous appelez le [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md) méthode avec la **DISCOVER_DATASOURCES** valeur d’énumération dans le [RequestType](../../../analysis-services/xmla/xml-elements-properties/requesttype-element-xmla.md) élément, le **Discover** méthode retourne la **DISCOVER_DATASOURCES** ensemble de lignes.  
   
@@ -42,7 +42,7 @@ ms.lasthandoff: 01/08/2018
   
  L'ensemble de lignes **DISCOVER_DATASOURCES** contient les colonnes suivantes.  
   
-|Nom de colonne|Indicateur de type|Restriction|Description|  
+|Nom de colonne|Indicateur de type|Restriction| Description|  
 |-----------------|--------------------|-----------------|-----------------|  
 |**DataSourceName**|**DBTYPE_WSTR**|Oui|Nom de la source de données, par exemple **Adventure Works**.|  
 |**DataSourceDescription**|**DBTYPE_WSTR**||Description de la source de données entrée par le serveur de publication.<br /><br /> Peut retourner **NULL**.|  
@@ -68,6 +68,6 @@ ms.lasthandoff: 01/08/2018
 |ADOMDNAME|DataSources|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Ensembles de lignes de schéma XML for Analysis](../../../analysis-services/schema-rowsets/xml/xml-for-analysis-schema-rowsets.md)  
+ [XML for Analysis ensembles de lignes de schéma](../../../analysis-services/schema-rowsets/xml/xml-for-analysis-schema-rowsets.md)  
   
   

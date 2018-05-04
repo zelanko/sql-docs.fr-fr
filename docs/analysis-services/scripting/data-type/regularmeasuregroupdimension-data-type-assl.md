@@ -27,15 +27,15 @@ caps.latest.revision: 40
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 7e2ebc73971224e8ce6c44c192580a6436bc4521
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 292aab5c68bacd3e7551dd7bce18982eda755a9b
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="regularmeasuregroupdimension-data-type-assl"></a>Type de données RegularMeasureGroupDimension (ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Définit un type de données dérivé qui représente une relation régulière entre une dimension et un groupe de mesures.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Définit un type de données dérivé représentant une relation régulière entre une dimension et un groupe de mesures.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -59,14 +59,14 @@ ms.lasthandoff: 01/08/2018
   
 |Relation|Élément|  
 |------------------|-------------|  
-|Éléments parents|None|  
+|Éléments parents|Aucune|  
 |Éléments enfants|[Attributs](../../../analysis-services/scripting/collections/attributes-element-assl.md), [cardinalité](../../../analysis-services/scripting/properties/cardinality-element-assl.md)|  
 |Éléments dérivés|[Dimension](../../../analysis-services/scripting/objects/dimension-element-assl.md) ([Dimensions](../../../analysis-services/scripting/collections/dimensions-element-assl.md) collection)|  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  L’élément correspondant dans le modèle d’objet objets AMO (Analysis Management) est <xref:Microsoft.AnalysisServices.RegularMeasureGroupDimension>.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Analysis Services script des Types de données XML Language &#40; ASSL &#41;](../../../analysis-services/scripting/data-type/analysis-services-scripting-language-xml-data-types-assl.md)  
+ [Analysis Services script des Types de données XML Language & #40 ; ASSL & #41 ;](../../../analysis-services/scripting/data-type/analysis-services-scripting-language-xml-data-types-assl.md)  
   
   

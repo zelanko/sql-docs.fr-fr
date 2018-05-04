@@ -1,16 +1,16 @@
 ---
-title: "Propriétés du modèle d’exploration de données | Documents Microsoft"
-ms.custom: 
+title: Propriétés du modèle d’exploration de données | Documents Microsoft
+ms.custom: ''
 ms.date: 03/13/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - mining models [Analysis Services], properties
 - data mining [Analysis Services], properties
@@ -18,20 +18,19 @@ helpviewer_keywords:
 - Data Mining Designer
 - properties [data mining]
 ms.assetid: c5194619-8b31-42be-a95f-585711462945
-caps.latest.revision: 
+caps.latest.revision: 32
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: fcc84bc6effb3e4a831ce58b81fcbe9e7eda3437
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: b29794e3c41f218f1bd117fd68ad5a978066b150
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mining-model-properties"></a>Propriétés du modèle d'exploration de données
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Les modèles d'exploration de données ont les types de propriétés suivantes :  
+  Les modèles d'exploration de données ont les types de propriétés suivantes :  
   
 -   les propriétés qui sont héritées de la structure d'exploration de données et qui définissent le type de données et le type de contenu des données utilisées par le modèle ;  
   
@@ -67,7 +66,7 @@ Les modèles d'exploration de données ont les types de propriétés suivantes :
   
 ## <a name="see-also"></a>Voir aussi  
  [Colonnes du modèle d’exploration de données](../../analysis-services/data-mining/mining-model-columns.md)   
- [Les Structures d’exploration de données &#40; Analysis Services - Exploration de données &#41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
+ [Les Structures d’exploration de données & #40 ; Analysis Services - Exploration de données & #41 ;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
  [Tâches liées aux modèles d’exploration de données et procédures](../../analysis-services/data-mining/mining-model-tasks-and-how-tos.md)   
  [Modifier les propriétés d’un modèle d’exploration de données](../../analysis-services/data-mining/change-the-properties-of-a-mining-model.md)   
  [Outils d’exploration de données](../../analysis-services/data-mining/data-mining-tools.md)   

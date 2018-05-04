@@ -1,35 +1,34 @@
 ---
-title: "Exemples de requêtes de modèle de régression linéaire | Documents Microsoft"
-ms.custom: 
+title: Exemples de requêtes de modèle de régression linéaire | Documents Microsoft
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - linear regression algorithms [Analysis Services]
 - linear regression [Analysis Services]
 - content queries [DMX]
 ms.assetid: fd3cf312-57a1-44b6-b772-fce6fc1c26d7
-caps.latest.revision: 
+caps.latest.revision: 21
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 150ef98bd2c949f7b4eb47170ec7855173608fbc
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 7240ee128416e11fe7ab8780da68ecef180bd107
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="linear-regression-model-query-examples"></a>Exemples de requête de modèle de régression linéaire
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Lorsque vous créez une requête sur un modèle d'exploration de données, vous pouvez créer une requête de contenu, qui fournit des détails sur les modèles (ou séquences) découverts au cours de l'analyse, ou créer une requête de prédiction, qui utilise les séquences du modèle pour effectuer des prédictions pour les nouvelles données. Par exemple, une requête de contenu peut fournir des détails supplémentaires sur la formule de régression, tandis qu'une requête de prédiction peut vous indiquer si un nouveau point de données est adapté au modèle. Vous pouvez également extraire les métadonnées relatives au modèle en utilisant une requête.  
+  Lorsque vous créez une requête sur un modèle d'exploration de données, vous pouvez créer une requête de contenu, qui fournit des détails sur les modèles (ou séquences) découverts au cours de l'analyse, ou créer une requête de prédiction, qui utilise les séquences du modèle pour effectuer des prédictions pour les nouvelles données. Par exemple, une requête de contenu peut fournir des détails supplémentaires sur la formule de régression, tandis qu'une requête de prédiction peut vous indiquer si un nouveau point de données est adapté au modèle. Vous pouvez également extraire les métadonnées relatives au modèle en utilisant une requête.  
   
  Cette section explique comment créer ces requêtes pour les modèles basés sur l'algorithme MLR (Microsoft Linear Regression).  
   
@@ -197,13 +196,13 @@ NATURAL PREDICTION JOIN
 |||  
 |-|-|  
 |Fonction de prédiction|Utilisation|  
-|[IsDescendant &#40; DMX &#41;](../../dmx/isdescendant-dmx.md)|Détermine si un nœud est un enfant d'un autre nœud dans le modèle.|  
-|[IsInNode &#40; DMX &#41;](../../dmx/isinnode-dmx.md)|Indique si le nœud spécifié contient le cas courant.|  
-|[PredictHistogram &#40; DMX &#41;](../../dmx/predicthistogram-dmx.md)|Retourne une valeur ou un ensemble de valeurs prédites pour une colonne spécifiée.|  
-|[PredictNodeId &#40; DMX &#41;](../../dmx/predictnodeid-dmx.md)|Retourne Node_ID pour chaque cas.|  
-|[PredictStdev &#40; DMX &#41;](../../dmx/predictstdev-dmx.md)|Retourne l'écart-type pour la valeur prédite.|  
-|[PredictSupport &#40; DMX &#41;](../../dmx/predictsupport-dmx.md)|Retourne la valeur de support pour un état spécifié.|  
-|[PredictVariance &#40; DMX &#41;](../../dmx/predictvariance-dmx.md)|Retourne la variance d'une colonne spécifiée.|  
+|[IsDescendant & #40 ; DMX & #41 ;](../../dmx/isdescendant-dmx.md)|Détermine si un nœud est un enfant d'un autre nœud dans le modèle.|  
+|[IsInNode & #40 ; DMX & #41 ;](../../dmx/isinnode-dmx.md)|Indique si le nœud spécifié contient le cas courant.|  
+|[PredictHistogram & #40 ; DMX & #41 ;](../../dmx/predicthistogram-dmx.md)|Retourne une valeur ou un ensemble de valeurs prédites pour une colonne spécifiée.|  
+|[PredictNodeId & #40 ; DMX & #41 ;](../../dmx/predictnodeid-dmx.md)|Retourne Node_ID pour chaque cas.|  
+|[PredictStdev & #40 ; DMX & #41 ;](../../dmx/predictstdev-dmx.md)|Retourne l'écart-type pour la valeur prédite.|  
+|[PredictSupport & #40 ; DMX & #41 ;](../../dmx/predictsupport-dmx.md)|Retourne la valeur de support pour un état spécifié.|  
+|[PredictVariance & #40 ; DMX & #41 ;](../../dmx/predictvariance-dmx.md)|Retourne la variance d'une colonne spécifiée.|  
   
  Pour obtenir la liste des fonctions qui sont communes à tous les algorithmes [!INCLUDE[msCoName](../../includes/msconame-md.md)], consultez [Algorithmes d’exploration de données &#40;Analysis Services – Exploration de données&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md). Pour plus d’informations sur l’utilisation de ces fonctions, consultez [Fonctions DMX &#40;Data Mining Extensions&#41;](../../dmx/data-mining-extensions-dmx-function-reference.md).  
   
@@ -211,6 +210,6 @@ NATURAL PREDICTION JOIN
  [Algorithme de régression linéaire Microsoft](../../analysis-services/data-mining/microsoft-linear-regression-algorithm.md)   
  [Requêtes d’exploration de données](../../analysis-services/data-mining/data-mining-queries.md)   
  [Référence technique de Microsoft Linear Regression algorithme](../../analysis-services/data-mining/microsoft-linear-regression-algorithm-technical-reference.md)   
- [Contenu du modèle d’exploration de données pour les modèles de régression linéaire &#40; Analysis Services - Exploration de données &#41;](../../analysis-services/data-mining/mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)  
+ [Contenu du modèle d’exploration de données pour les modèles de régression linéaire & #40 ; Analysis Services - Exploration de données & #41 ;](../../analysis-services/data-mining/mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)  
   
   

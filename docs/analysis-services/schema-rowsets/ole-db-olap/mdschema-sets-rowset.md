@@ -23,20 +23,20 @@ caps.latest.revision: 37
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: d861c23e40464535fbde4b666c2e1429f65c772c
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 84104e80456129f8afcd1f3457e440cbbb38e220
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mdschemasets-rowset"></a>Ensemble de lignes MDSCHEMA_SETS
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Décrit les ensembles actuellement définis dans une base de données, y compris les ensembles de niveau session.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Décrit les ensembles actuellement définis dans une base de données, y compris les ensembles de niveau session.  
   
 ## <a name="rowset-columns"></a>Colonnes de l'ensemble de lignes  
  Le **MDSCHEMA_SETS** ensemble de lignes contient les colonnes suivantes.  
   
-|Nom de colonne|Indicateur de type|Description|  
+|Nom de colonne|Indicateur de type| Description|  
 |-----------------|--------------------|-----------------|  
 |**CATALOG_NAME**|**DBTYPE_WSTR**|Nom de la base de données.|  
 |**SCHEMA_NAME**|**DBTYPE_WSTR**|Non pris en charge.|  
@@ -57,15 +57,15 @@ ms.lasthandoff: 01/08/2018
   
 |Nom de colonne|Indicateur de type|État de la restriction|  
 |-----------------|--------------------|-----------------------|  
-|**CATALOG_NAME**|**DBTYPE_WSTR**|Facultatif.|  
-|**SCHEMA_NAME**|**DBTYPE_WSTR**|Facultatif.|  
-|**CUBE_NAME**|**DBTYPE_WSTR**|Facultatif.|  
-|**SET_NAME**|**DBTYPE_WSTR**|Facultatif.|  
-|**ÉTENDUE**|**DBTYPE_I4**|Facultatif.|  
-|**HIERARCHY_UNIQUE_NAME**|**DBTYPE_WSTR**|Facultatif.|  
-|**CUBE_SOURCE**|**DBTYPE_UI2**|Facultatif.<br /><br /> Remarque : Une seule hiérarchie peut être incluse, et seuls les jeux nommés dont les hiérarchies correspondent exactement à la restriction sont retournés.|  
+|**CATALOG_NAME**|**DBTYPE_WSTR**|Ce paramètre est facultatif.|  
+|**SCHEMA_NAME**|**DBTYPE_WSTR**|Ce paramètre est facultatif.|  
+|**CUBE_NAME**|**DBTYPE_WSTR**|Ce paramètre est facultatif.|  
+|**SET_NAME**|**DBTYPE_WSTR**|Ce paramètre est facultatif.|  
+|**ÉTENDUE**|**DBTYPE_I4**|Ce paramètre est facultatif.|  
+|**HIERARCHY_UNIQUE_NAME**|**DBTYPE_WSTR**|Ce paramètre est facultatif.|  
+|**CUBE_SOURCE**|**DBTYPE_UI2**|Ce paramètre est facultatif.<br /><br /> Remarque : Une seule hiérarchie peut être incluse, et seuls les jeux nommés dont les hiérarchies correspondent exactement à la restriction sont retournés.|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Ensembles de lignes de schéma OLE DB pour OLAP](../../../analysis-services/schema-rowsets/ole-db-olap/ole-db-for-olap-schema-rowsets.md)  
+ [OLE DB pour OLAP Schema Rowsets](../../../analysis-services/schema-rowsets/ole-db-olap/ole-db-for-olap-schema-rowsets.md)  
   
   

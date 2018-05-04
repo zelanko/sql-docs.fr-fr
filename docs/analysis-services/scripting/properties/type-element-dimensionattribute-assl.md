@@ -27,15 +27,15 @@ caps.latest.revision: 35
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 9cd0db2e914ffba09e7e2e3831b5815be8288e10
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 652e0ca8726ba1e5b6ddfec11225929ea6416675
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="type-element-dimensionattribute-assl"></a>Élément Type (DimensionAttribute) (ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Contient le type de l’attribut.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Contient le type de l'attribut.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -53,20 +53,20 @@ ms.lasthandoff: 01/08/2018
 |Caractéristique|Description|  
 |--------------------|-----------------|  
 |Type de données et longueur|Chaîne (énumération)|  
-|Valeur par défaut|*Régulière*|  
-|Cardinalité|0-1 : élément facultatif qui peut apparaître une fois et une seule.|  
+|Valeur par défaut|*Regular*|  
+|Cardinalité|0-1: élément facultatif qui peut apparaître une fois et une seule.|  
   
 ## <a name="element-relationships"></a>Relations entre les éléments  
   
 |Relation|Élément|  
 |------------------|-------------|  
 |Élément parent|[DimensionAttribute](../../../analysis-services/scripting/data-type/dimensionattribute-data-type-assl.md)|  
-|Éléments enfants|None|  
+|Éléments enfants|Aucune|  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  La valeur de cet élément est limitée à l'une des chaînes répertoriées dans le tableau suivant.  
   
-|Valeur|Description|  
+|Valeur| Description|  
 |-----------|-----------------|  
 |*Compte*|L'attribut représente le nom d'un compte.|  
 |*AccountNumber*|L'attribut représente le numéro d'un compte.|  
@@ -100,7 +100,7 @@ ms.lasthandoff: 01/08/2018
 |*CurrencySource*|L'attribut représente la devise source d'une opération de change.|  
 |*CustomerGroup*|L'attribut représente un groupe de clients.|  
 |*CustomerHousehold*|L'attribut représente une famille de clients.|  
-|*Clients*|L'attribut représente un client.|  
+|*Customers*|L'attribut représente un client.|  
 |*Date*|L'attribut représente une date.|  
 |*DateCanceled*|L'attribut représente une date d'annulation.|  
 |*DateDuration*|L'attribut représente une durée.|  
@@ -108,11 +108,11 @@ ms.lasthandoff: 01/08/2018
 |*DateModified*|L'attribut représente une date de modification.|  
 |*DateStart*|L'attribut représente une date de début.|  
 |*DayOfHalfYears*|L'attribut représente l'ordinal de jour d'un semestre.|  
-|*DayOfMonth*|L'attribut représente l'ordinal de jour d'un mois.|  
+|*dayOfMonth*|L'attribut représente l'ordinal de jour d'un mois.|  
 |*DayOfQuarter*|L'attribut représente l'ordinal de jour d'un trimestre.|  
 |*DayOfTrimester*|L'attribut représente l'ordinal de jour d'un quadrimestre.|  
-|*DayOfWeek*|L'attribut représente l'ordinal de jour d'une semaine.|  
-|*DayOfYear*|L'attribut représente l'ordinal de jour d'une année.|  
+|*dayOfWeek*|L'attribut représente l'ordinal de jour d'une semaine.|  
+|*dayOfYear*|L'attribut représente l'ordinal de jour d'une année.|  
 |*Jours d’utilisation*|L'attribut représente des jours.|  
 |*DaysOfTenDays*|L'attribut représente l'ordinal de jour d'une période de dix jours.|  
 |*FiscalDay*|L'attribut représente des jours dans un calendrier fiscal.|  
@@ -160,7 +160,7 @@ ms.lasthandoff: 01/08/2018
 |*HalfYears*|L'attribut représente des semestres.|  
 |*HalfYearsOfYear*|L'attribut représente l'ordinal de semestre d'une année.|  
 |*Heures*|L'attribut représente des heures.|  
-|*ID*|L'attribut représente un identificateur ou une clé.|  
+|*Id*|L'attribut représente un identificateur ou une clé.|  
 |*IsHoliday*|L'attribut indique si une date est un congé.|  
 |*ISO8601DayOfWeek*|L'attribut représente l'ordinal de jour d'une semaine dans un calendrier ISO 8601.|  
 |*ISO8601DayOfYear*|L'attribut représente l'ordinal de jour d'une année dans un calendrier ISO 8601.|  
@@ -222,7 +222,7 @@ ms.lasthandoff: 01/08/2018
 |*PhysicalWeight*|L'attribut représente un poids.|  
 |*PhysicalWidth*|L'attribut représente une largeur.|  
 |*Point*|L'attribut représente un point.|  
-|*Code postal*|L'attribut représente un code postal.|  
+|*PostalCode*|L'attribut représente un code postal.|  
 |*Product*|L'attribut représente un produit.|  
 |*ProductBrand*|L'attribut représente une marque de produit.|  
 |*ProductCategory*|L'attribut représente une catégorie de produit.|  
@@ -243,7 +243,7 @@ ms.lasthandoff: 01/08/2018
 |*Taux de*|L'attribut représente un taux.|  
 |*RateType*|L'attribut représente un type de taux.|  
 |*Region*|L'attribut représente une région définie par le client.|  
-|*Régulière*|L'attribut représente un attribut régulier.|  
+|*Regular*|L'attribut représente un attribut régulier.|  
 |*RelationToParent*|L'attribut représente une relation avec un parent.|  
 |*ReportingDay*|L'attribut représente des jours dans un calendrier de rapports.|  
 |*ReportingDayOfHalfYears*|L'attribut représente l'ordinal de jour d'un semestre dans un calendrier de rapports.|  
@@ -305,8 +305,8 @@ ms.lasthandoff: 01/08/2018
  L’élément qui correspond au parent de **Type** dans l’objet d’objets AMO (Analysis Management) est modèle <xref:Microsoft.AnalysisServices.DimensionAttribute>.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Élément Attributes &#40; ASSL &#41;](../../../analysis-services/scripting/collections/attributes-element-assl.md)   
- [Élément dimension &#40; ASSL &#41;](../../../analysis-services/scripting/objects/dimension-element-assl.md)   
- [Propriétés &#40; ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
+ [Attributs d’élément &#40;ASSL&#41;](../../../analysis-services/scripting/collections/attributes-element-assl.md)   
+ [Élément dimension & #40 ; ASSL & #41 ;](../../../analysis-services/scripting/objects/dimension-element-assl.md)   
+ [Propriétés & #40 ; ASSL & #41 ;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   

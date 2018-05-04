@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - application process [ODBC], building and executing statements
 - SQL statements [ODBC], building and executing
@@ -20,12 +20,11 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 6d2be6f4e75ebc774c17bd0d80eb37efec74499d
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 9d3ee89477b2037f2eb11bdde1a6b08d53ad3065
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="step-3-build-and-execute-an-sql-statement"></a>Étape 3 : Créer et exécuter une instruction SQL
 La troisième étape consiste à générer et exécuter une instruction SQL, comme indiqué dans l’illustration suivante. Les méthodes utilisées pour effectuer cette étape sont susceptibles de varier considérablement. L’application peut inviter l’utilisateur à entrer une instruction SQL, créez une instruction SQL en fonction de l’entrée d’utilisateur, ou utiliser une instruction SQL codées en dur. Pour plus d’informations, consultez [construire des instructions SQL](../../../odbc/reference/develop-app/constructing-sql-statements.md).  

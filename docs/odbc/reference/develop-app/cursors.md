@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - forward-only cursors [ODBC]
 - scrollable cursors [ODBC]
@@ -25,12 +25,11 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: c0c6ae5b9bda276bcd1296fcb475063fea6db204
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 0e83efd6239d49af2066bd39d244665a50fa7030
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cursors"></a>Curseurs
 Une application extrait les données avec un *curseur*. Un curseur est différent à partir d’un jeu de résultats : un jeu de résultats est l’ensemble de lignes qui correspond aux critères de recherche spécifique, tandis qu’un curseur est le logiciel qui retourne les lignes à l’application. Le nom *curseur,* telle qu’elle s’applique aux bases de données, probablement l’origine à partir du curseur clignotant sur un ordinateur Terminal Server. Comme ce curseur indique la position actuelle sur l’écran et l’emplacement où les mots apparaîtra suivants, un curseur sur un jeu de résultats indique la position actuelle dans le jeu de résultats et reviendrez ensuite les lignes.  

@@ -8,8 +8,7 @@ ms.service: ''
 ms.component: sqlxml
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-xml
+ms.technology: xml
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -28,13 +27,12 @@ caps.latest.revision: 24
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: e72388a753b1003c259f20371b34ffb3c269a2e1
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 75d372bcd162fda196333d62acaf68c3d5cd5d1f
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="record-generation-process-sqlxml-40"></a>Processus de génération d'enregistrements (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -155,7 +153,7 @@ ms.lasthandoff: 04/16/2018
   
  L'exemple de données XML et les étapes de création d'un exemple fonctionnel sont fournis ci-dessous.  
   
--   Lorsqu’un  **\<client >** nœud d’élément dans le fichier de données XML entre dans l’étendue, le chargement en masse XML génère un enregistrement pour la table Cust. Chargement en masse XML copie ensuite les valeurs de colonne nécessaires (CustomerID, CompanyName et City) à partir de la  **\<CustomerID >**,  **\<CompanyName >**et le  **\<ville >** des éléments enfants en tant que ces éléments entrent dans l’étendue.  
+-   Lorsqu’un  **\<client >** nœud d’élément dans le fichier de données XML entre dans l’étendue, le chargement en masse XML génère un enregistrement pour la table Cust. Chargement en masse XML copie ensuite les valeurs de colonne nécessaires (CustomerID, CompanyName et City) à partir de la  **\<CustomerID >**,  **\<CompanyName >** et le  **\<ville >** des éléments enfants en tant que ces éléments entrent dans l’étendue.  
   
 -   Lorsqu’un  **\<ordre >** nœud d’élément entre dans l’étendue, le chargement en masse XML génère un enregistrement pour la table CustOrder. Chargement en masse XML copie la valeur de la **OrderID** d’attribut à cet enregistrement. La valeur requise pour la colonne CustomerID est obtenue à partir de la  **\<CustomerID >** élément enfant de le  **\<client >** élément. Chargement en masse XML utilise les informations qui sont spécifiées dans  **\<SQL : Relationship >** pour obtenir la valeur de clé étrangère CustomerID pour cet enregistrement, à moins que le **CustomerID** attribut a été spécifié dans le  **\<ordre >** élément. La règle générale est que, si l’élément enfant spécifie explicitement une valeur pour l’attribut de clé étrangère, chargement en masse XML utilise cette valeur et n’obtient pas la valeur de l’élément parent en utilisant le  **\<SQL : Relationship >**. Comme cela  **\<ordre >** nœud d’élément est hors de portée, le chargement en masse XML envoie l’enregistrement à [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] puis traite tous les  **\<ordre >** nœuds d’élément de la même manière.  
   

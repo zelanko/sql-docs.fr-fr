@@ -1,33 +1,32 @@
 ---
-title: "Base de données (tabulaire) | Documents Microsoft"
-ms.custom: 
+title: Base de données (tabulaire) | Documents Microsoft
+ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
 ms.assetid: 16a233fb-f83b-4ca1-acb5-6186eca0a62c
-caps.latest.revision: 
+caps.latest.revision: 12
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 69ca2b7cadbb70a8728fda2e631d5df57efbda76
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 4c64a2963cf4011e8bb98cb23b6530fc2e3a4c81
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="database-representationtabular"></a>Représentation de la base de données (tabulaire)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-En mode tabulaire, la base de données est le conteneur pour tous les objets dans le modèle tabulaire.  
+  En mode tabulaire, la base de données est le conteneur pour tous les objets dans le modèle tabulaire.  
   
 ## <a name="database-representation"></a>Représentation de la base de données  
  La base de données est l'emplacement où tous les objets qui forment un modèle tabulaire résident. À l'intérieur de la base de données le développeur trouve des objets tels que des connexions, des tables, des rôles et bien plus.  

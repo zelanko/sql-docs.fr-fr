@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 apiname:
 - SQLGetFunctions
 apilocation:
@@ -26,12 +26,11 @@ caps.latest.revision: 23
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 10304d56755f77a616862d97cea43bba8b4a5cad
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 698e78ca1cbb0d6396c6319ef8618d813191c67e
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlgetfunctions-function"></a>Fonction SQLGetFunctions
 **Mise en conformité**  
@@ -55,16 +54,16 @@ SQLRETURN SQLGetFunctions(
  [Entrée] Handle de connexion.  
   
  *ID de fonction*  
- [Entrée] A **#define** valeur qui identifie la fonction ODBC d’intérêt ; **SQL_API_ODBC3_ALL_FUNCTIONS orSQL_API_ALL_FUNCTIONS**. **SQL_API_ODBC3_ALL_FUNCTIONS** est utilisé par un ODBC 3*.x* application afin de déterminer la prise en charge d’ODBC 3*.x* et les fonctions précédentes. **SQL_API_ALL_FUNCTIONS** est utilisé par un ODBC 2*.x* application afin de déterminer la prise en charge d’ODBC 2*.x* et les fonctions précédentes.  
+ [Entrée] A **#define** valeur qui identifie la fonction ODBC d’intérêt ; **SQL_API_ODBC3_ALL_FUNCTIONS orSQL_API_ALL_FUNCTIONS**. **SQL_API_ODBC3_ALL_FUNCTIONS** est utilisé par un ODBC 3 *.x* application afin de déterminer la prise en charge d’ODBC 3 *.x* et les fonctions précédentes. **SQL_API_ALL_FUNCTIONS** est utilisé par un ODBC 2 *.x* application afin de déterminer la prise en charge d’ODBC 2 *.x* et les fonctions précédentes.  
   
  Pour obtenir la liste de **#define** les valeurs qui identifient les fonctions ODBC, consultez les tableaux dans « Commentaires ».  
   
  *SupportedPtr*  
  [Sortie]  Si *ID de fonction* identifie une seule fonction ODBC, *SupportedPtr* pointe vers un seul SQLUSMALLINT valeur SQL_TRUE si la fonction spécifiée est prise en charge par le pilote et SQL_FALSE si elle n’est pas pris en charge.  
   
- Si *ID de fonction* est SQL_API_ODBC3_ALL_FUNCTIONS, *SupportedPtr* pointe vers un tableau SQLSMALLINT avec un nombre d’éléments égales à SQL_API_ODBC3_ALL_FUNCTIONS_SIZE. Ce tableau est traité par le Gestionnaire de pilotes sous forme de bitmap 4 000 bits qui peut être utilisé pour déterminer si un ODBC 3*.x* ou fonction earlier est pris en charge. La macro SQL_FUNC_EXISTS est appelée pour déterminer la prise en charge de la fonction. (Voir « Commentaires ».) Un ODBC 3*.x* application peut appeler **SQLGetFunctions** avec SQL_API_ODBC3_ALL_FUNCTIONS contre un 3 ODBC*.x* ou ODBC 2*.x* pilote.  
+ Si *ID de fonction* est SQL_API_ODBC3_ALL_FUNCTIONS, *SupportedPtr* pointe vers un tableau SQLSMALLINT avec un nombre d’éléments égales à SQL_API_ODBC3_ALL_FUNCTIONS_SIZE. Ce tableau est traité par le Gestionnaire de pilotes sous forme de bitmap 4 000 bits qui peut être utilisé pour déterminer si un ODBC 3 *.x* ou fonction earlier est pris en charge. La macro SQL_FUNC_EXISTS est appelée pour déterminer la prise en charge de la fonction. (Voir « Commentaires ».) Un ODBC 3 *.x* application peut appeler **SQLGetFunctions** avec SQL_API_ODBC3_ALL_FUNCTIONS contre un 3 ODBC *.x* ou ODBC 2 *.x* pilote.  
   
- Si *ID de fonction* est SQL_API_ALL_FUNCTIONS, *SupportedPtr* pointe vers un tableau SQLUSMALLINT de 100 éléments. Le tableau est indexé par **#define** utilisés par les valeurs *ID de fonction* pour identifier chaque fonction ODBC ; certains éléments du tableau sont inutilisées et réservé à un usage ultérieur. Un élément est SQL_TRUE si elle identifie un ODBC 2*.x* ou fonction earlier pris en charge par le pilote. Il est SQL_FALSE si elle identifie une fonction ODBC non prise en charge par le pilote ou n’identifie pas une fonction ODBC.  
+ Si *ID de fonction* est SQL_API_ALL_FUNCTIONS, *SupportedPtr* pointe vers un tableau SQLUSMALLINT de 100 éléments. Le tableau est indexé par **#define** utilisés par les valeurs *ID de fonction* pour identifier chaque fonction ODBC ; certains éléments du tableau sont inutilisées et réservé à un usage ultérieur. Un élément est SQL_TRUE si elle identifie un ODBC 2 *.x* ou fonction earlier pris en charge par le pilote. Il est SQL_FALSE si elle identifie une fonction ODBC non prise en charge par le pilote ou n’identifie pas une fonction ODBC.  
   
  Les tableaux retournés dans **SupportedPtr* utiliser l’indexation de base zéro.  
   
@@ -135,7 +134,7 @@ SQLRETURN SQLGetFunctions(
 |SQL_API_SQLFOREIGNKEYS|SQL_API_SQLTABLEPRIVILEGES|  
 |SQL_API_SQLMORERESULTS| |  
   
- [1] lorsque vous travaillez avec une API ODBC 2*.x* pilote, **SQLBulkOperations** s’affichera comme pris en charge uniquement si les deux des options suivantes sont vraies : ODBC 2*.x* pilote prend en charge **SQLSetPos**, et le type d’informations SQL_POS_OPERATIONS retourne le bit SQL_POS_ADD en tant qu’ensemble.  
+ [1] lorsque vous travaillez avec une API ODBC 2 *.x* pilote, **SQLBulkOperations** s’affichera comme pris en charge uniquement si les deux des options suivantes sont vraies : ODBC 2 *.x* pilote prend en charge **SQLSetPos**, et le type d’informations SQL_POS_OPERATIONS retourne le bit SQL_POS_ADD en tant qu’ensemble.  
   
  Voici une liste des valeurs valides pour *ID de fonction* pour les fonctions introduites dans ODBC 3.8 ou version ultérieure :  
   
@@ -146,10 +145,10 @@ SQLRETURN SQLGetFunctions(
  [2] **SQLCancelHandle** s’affichera comme pris en charge uniquement si le pilote prend en charge les deux **SQLCancel** et **SQLCancelHandle**. Si **SQLCancel** est pris en charge mais **SQLCancelHandle** n’est pas le cas, l’application peut toujours appeler **SQLCancelHandle** sur un descripteur d’instruction, car elle sera mappée vers **SQLCancel**.  
   
 ## <a name="sqlfuncexists-macro"></a>SQL_FUNC_EXISTS Macro  
- Le SQL_FUNC_EXISTS (*SupportedPtr*, *ID de fonction*) (macro) est utilisé pour déterminer la prise en charge d’ODBC 3*.x* ou des fonctions antérieures après **SQLGetFunctions** a été appelé avec un *ID de fonction* argument de SQL_API_ODBC3_ALL_FUNCTIONS. L’application appelle SQL_FUNC_EXISTS avec la *SupportedPtr* affectée à l’argument le *SupportedPtr* passé dans *SQLGetFunctions*et avec le *ID de fonction* affectée à l’argument le **#define** pour la fonction. SQL_FUNC_EXISTS sinon, retourne SQL_TRUE si la fonction est prise en charge et SQL_FALSE.  
+ Le SQL_FUNC_EXISTS (*SupportedPtr*, *ID de fonction*) (macro) est utilisé pour déterminer la prise en charge d’ODBC 3 *.x* ou des fonctions antérieures après **SQLGetFunctions** a été appelé avec un *ID de fonction* argument de SQL_API_ODBC3_ALL_FUNCTIONS. L’application appelle SQL_FUNC_EXISTS avec la *SupportedPtr* affectée à l’argument le *SupportedPtr* passé dans *SQLGetFunctions*et avec le *ID de fonction* affectée à l’argument le **#define** pour la fonction. SQL_FUNC_EXISTS sinon, retourne SQL_TRUE si la fonction est prise en charge et SQL_FALSE.  
   
 > [!NOTE]  
->  Lorsque vous travaillez avec une API ODBC 2*.x* pilote, la version 3 ODBC*.x* du Gestionnaire de pilotes retourne SQL_TRUE pour **SQLAllocHandle** et **SQLFreeHandle** car **SQLAllocHandle** est mappé à **SQLAllocEnv**, **SQLAllocConnect**, ou **SQLAllocStmt**et parce que **SQLFreeHandle** est mappé à **SQLFreeEnv**, **SQLFreeConnect**, ou **SQLFreeStmt**. **SQLAllocHandle** ou **SQLFreeHandle** avec un *HandleType* argument de SQL_HANDLE_DESC n'est pas pris en charge, toutefois, même si SQL_TRUE est retourné pour les fonctions, étant donné qu’aucun ODBC 2*.x* fonction pour mapper à dans ce cas.  
+>  Lorsque vous travaillez avec une API ODBC 2 *.x* pilote, la version 3 ODBC *.x* du Gestionnaire de pilotes retourne SQL_TRUE pour **SQLAllocHandle** et **SQLFreeHandle** car **SQLAllocHandle** est mappé à **SQLAllocEnv**, **SQLAllocConnect**, ou **SQLAllocStmt**et parce que **SQLFreeHandle** est mappé à **SQLFreeEnv**, **SQLFreeConnect**, ou **SQLFreeStmt**. **SQLAllocHandle** ou **SQLFreeHandle** avec un *HandleType* argument de SQL_HANDLE_DESC n'est pas pris en charge, toutefois, même si SQL_TRUE est retourné pour les fonctions, étant donné qu’aucun ODBC 2 *.x* fonction pour mapper à dans ce cas.  
   
 ## <a name="code-example"></a>Exemple de code  
  Les trois exemples suivants montrent comment une application utilise **SQLGetFunctions** pour déterminer si un pilote prend en charge **SQLTables**, **SQLColumns**, et **SQLStatistics**. Si le pilote ne prend pas en charge ces fonctions, l’application se déconnecte du pilote. Le premier exemple appelle **SQLGetFunctions** une fois pour chaque fonction.  

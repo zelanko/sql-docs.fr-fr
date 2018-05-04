@@ -1,32 +1,23 @@
 ---
 title: Créer une Dimension à l’aide de l’Assistant Dimension | Documents Microsoft
-ms.custom: ''
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: ''
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-helpviewer_keywords:
-- dimensions [Analysis Services], creating
-ms.assetid: d84f66ae-7551-49bf-99d0-88368ca2dd0e
-caps.latest.revision: 17
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: a36943eeb6042deaf35853dd9e69a3492b9cf327
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 0606f1156d0a2cf5a3ff44a0224d2e92fc46701c
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-a-dimension-using-the-dimension-wizard"></a>Créer une dimension à l'aide de l'Assistant Dimension
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Vous pouvez créer une nouvelle dimension à l’aide de l’Assistant Dimension de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  Vous pouvez créer une dimension en utilisant l'Assistant Dimension dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
 ### <a name="to-create-a-new-dimension"></a>Pour créer une dimension  
   
@@ -78,6 +69,6 @@ ms.lasthandoff: 01/08/2018
     >  Vous pouvez utiliser le Concepteur de dimensions après avoir terminé l'Assistant Dimension pour ajouter, supprimer et configurer des attributs et des hiérarchies dans la dimension.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Créer une dimension à l'aide d'une table existante](../../analysis-services/multidimensional-models/create-a-dimension-by-using-an-existing-table.md)  
+ [Créer une Dimension à l’aide d’une Table existante](../../analysis-services/multidimensional-models/create-a-dimension-by-using-an-existing-table.md)  
   
   

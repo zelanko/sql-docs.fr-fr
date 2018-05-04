@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 apiname:
 - SQLServerDataSource.setXopenStates
 apilocation:
@@ -22,12 +22,11 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 201c0b34da3198ed0f6067944d581fb9bc696bd4
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 9d33a442e5847cf56f443142471cc6ad68d610ef
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="setxopenstates-method-sqlserverdatasource"></a>Méthode setXopenStates (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -47,10 +46,10 @@ public void setXopenStates(boolean xopenStates)
  **true** si la conversion d’états SQL en États compatibles XOPEN est activée. Dans le cas contraire, la valeur est **false**.  
   
 ## <a name="remarks"></a>Notes  
- Si la propriété xopenStates a la valeur **true**, le [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] convertira les États SQL en États compatibles XOPEN. La valeur par défaut est **false**, ce qui entraîne le pilote JDBC générer des codes d’état SQL 99. Si xopenStates n’est pas définie, la [getXopenStates](../../../connect/jdbc/reference/getxopenstates-method-sqlserverdatasource.md) méthode retourne la valeur par défaut **false**.  
+ Si la propriété xopenStates a la valeur **true**, le [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] convertit les états SQL en états compatibles XOPEN. La valeur par défaut est **false**, qui entraîne le pilote JDBC à générer des codes d'état SQL 99. Si xopenStates n’est pas définie, la [getXopenStates](../../../connect/jdbc/reference/getxopenstates-method-sqlserverdatasource.md) méthode retourne la valeur par défaut **false**.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Membres de SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   
+ [SQLServerDataSource, membres](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   
  [SQLServerDataSource, classe](../../../connect/jdbc/reference/sqlserverdatasource-class.md)  
   
   

@@ -1,33 +1,32 @@
 ---
-title: "L’élément KpiStatus (CSDLBI) | Documents Microsoft"
-ms.custom: 
+title: L’élément KpiStatus (CSDLBI) | Documents Microsoft
+ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
 ms.assetid: 6fee5b82-caa8-46a1-ad68-bbce3e11e01e
-caps.latest.revision: 
+caps.latest.revision: 13
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: af4c2fd061dcfcce4316fd16dd0272bbac45c6c9
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: d94aff9317b1f5357dd3cb120816309e90c0815e
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="kpistatus-element-csdlbi"></a>Élément KpiStatus (CSDLBI)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-L'élément KpiStatus définit une référence à la colonne qui contient la valeur utilisée comme un indicateur d'état dans un indicateur de performance clé (KPI).  
+  L'élément KpiStatus définit une référence à la colonne qui contient la valeur utilisée comme un indicateur d'état dans un indicateur de performance clé (KPI).  
   
 ## <a name="elements-and-attributes"></a>Éléments et attributs  
  Le tableau suivant répertorie les éléments et les attributs qui définissent l'élément KpiStatus.  
@@ -88,6 +87,6 @@ L'élément KpiStatus définit une référence à la colonne qui contient la val
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Élément KPI &#40; CSDLBI &#41;](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/kpi-element-csdlbi.md)  
+ [Élément KPI & #40 ; CSDLBI & #41 ;](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/kpi-element-csdlbi.md)  
   
   

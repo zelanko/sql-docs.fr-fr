@@ -24,12 +24,11 @@ caps.latest.revision: 34
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 0c31ae66112acc5cf1831573e436995c68c5d7ff
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 574f0e4e829bfbe92761992e51fd3c3ffd5ef852
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spcolumnprivilegesex-transact-sql"></a>sp_column_privileges_ex (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -70,14 +69,14 @@ sp_column_privileges_ex [ @table_server = ] 'table_server'
   
 |Nom de colonne|Type de données| Description|  
 |-----------------|---------------|-----------------|  
-|**TABLE_CAT**|**sysname**|Nom du qualificateur de table. Divers produits SGBD prennent en charge d’affectation de noms en trois parties pour les tables (*qualificateur***.*** propriétaire***.*** nom de*). Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], cette colonne représente le nom de la base de données. Dans d'autres produits, elle représente le nom du serveur de l'environnement de base de données de la table. Ce champ peut contenir la valeur NULL.|  
+|**TABLE_CAT**|**sysname**|Nom du qualificateur de table. Divers produits SGBD prennent en charge d’affectation de noms en trois parties pour les tables (*qualificateur ***.*** propriétaire ***.*** nom de*). Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], cette colonne représente le nom de la base de données. Dans d'autres produits, elle représente le nom du serveur de l'environnement de base de données de la table. Ce champ peut contenir la valeur NULL.|  
 |**TABLE_SCHEM**|**sysname**|Nom du propriétaire de la table. Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], cette colonne représente le nom de l'utilisateur de la base de données qui a créé la table. Ce champ retourne toujours une valeur.|  
 |**NOM_TABLE**|**sysname**|Nom de la table. Ce champ retourne toujours une valeur.|  
 |**COLUMN_NAME**|**sysname**|Nom de colonne, pour chaque colonne de la **TABLE_NAME** retourné. Ce champ retourne toujours une valeur.|  
 |**FOURNISSEUR D’AUTORISATIONS**|**sysname**|Nom d’utilisateur de base de données qui a accordé les autorisations sur ce **COLUMN_NAME** à la liste **bénéficiaire**. Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], cette colonne est toujours le même que le **TABLE_OWNER**. Ce champ retourne toujours une valeur.<br /><br /> Le **GRANTOR** colonne peut être soit le propriétaire de la base de données (**TABLE_OWNER**) ou un utilisateur auquel le propriétaire de la base de données a accordé des autorisations à l’aide de la clause WITH GRANT OPTION de l’instruction GRANT.|  
 |**BÉNÉFICIAIRE**|**sysname**|Nom d’utilisateur de base de données qui a été accordé des autorisations sur **COLUMN_NAME** par le **GRANTOR**. Ce champ retourne toujours une valeur.|  
-|**PRIVILÈGE**|**varchar(**32**)**|L'une des autorisations sur les colonnes disponibles. Les autorisations relatives aux colonnes peuvent prendre l'une des valeurs suivantes (ou d'autres valeurs prises en charge par la source des données si leur implémentation est définie) :<br /><br /> Sélectionnez = **bénéficiaire** peut récupérer des données pour les colonnes.<br /><br /> INSERT = **bénéficiaire** peut fournir des données pour cette colonne lorsque de nouvelles lignes sont insérées (par le **bénéficiaire**) dans la table.<br /><br /> Mise à jour = **bénéficiaire** peuvent modifier les données existantes dans la colonne.<br /><br /> RÉFÉRENCES = **bénéficiaire** peut faire référence à une colonne dans une table étrangère dans une relation de clé étrangère/clé primaire. Les relations clé primaire/clé étrangère sont définies grâce à des contraintes portant sur les tables.|  
-|**IS_GRANTABLE**|**varchar (**3**)**|Indique si le **bénéficiaire** est autorisé à accorder des autorisations à d’autres utilisateurs (souvent appelés « droit d’accorder »). Les valeurs possibles sont YES, NO ou NULL. Une valeur inconnue ou NULL renvoie à une source de données où le « droit d'accorder » ne s'applique pas.|  
+|**PRIVILÈGE**|**varchar(** 32 **)**|L'une des autorisations sur les colonnes disponibles. Les autorisations relatives aux colonnes peuvent prendre l'une des valeurs suivantes (ou d'autres valeurs prises en charge par la source des données si leur implémentation est définie) :<br /><br /> Sélectionnez = **bénéficiaire** peut récupérer des données pour les colonnes.<br /><br /> INSERT = **bénéficiaire** peut fournir des données pour cette colonne lorsque de nouvelles lignes sont insérées (par le **bénéficiaire**) dans la table.<br /><br /> Mise à jour = **bénéficiaire** peuvent modifier les données existantes dans la colonne.<br /><br /> RÉFÉRENCES = **bénéficiaire** peut faire référence à une colonne dans une table étrangère dans une relation de clé étrangère/clé primaire. Les relations clé primaire/clé étrangère sont définies grâce à des contraintes portant sur les tables.|  
+|**IS_GRANTABLE**|**varchar (** 3 **)**|Indique si le **bénéficiaire** est autorisé à accorder des autorisations à d’autres utilisateurs (souvent appelés « droit d’accorder »). Les valeurs possibles sont YES, NO ou NULL. Une valeur inconnue ou NULL renvoie à une source de données où le « droit d'accorder » ne s'applique pas.|  
   
 ## <a name="permissions"></a>Autorisations  
  Nécessite l'autorisation SELECT sur le schéma.  

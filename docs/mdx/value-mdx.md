@@ -22,12 +22,11 @@ caps.latest.revision: 31
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 2605c0984a772ca3af031a4fc3d6b13d64c02452
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 14cdd865f2c209db59f77dd2d188c3402358da62
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="value-mdx"></a>Value (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -45,8 +44,8 @@ Member_Expression[.Value]
  *Argument*  
  Expression MDX (Multidimensional Expressions) valide qui retourne un membre.  
   
-## <a name="remarks"></a>Notes   
- Le **valeur** fonction retourne la valeur du membre spécifié sous forme de chaîne. Le **valeur** argument est facultatif, car la valeur d’un membre est la propriété par défaut d’un membre et est la valeur retournée pour un membre si aucune autre valeur n’est spécifiée. Pour plus d’informations sur les propriétés des membres, consultez [des propriétés de membre intrinsèques &#40; MDX &#41; ](../analysis-services/multidimensional-models/mdx/mdx-member-properties-intrinsic-member-properties.md) et [des propriétés de membre définies par l’utilisateur &#40; MDX &#41; ](../analysis-services/multidimensional-models/mdx/mdx-member-properties-user-defined-member-properties.md).  
+## <a name="remarks"></a>Notes  
+ Le **valeur** fonction retourne la valeur du membre spécifié sous forme de chaîne. Le **valeur** argument est facultatif, car la valeur d’un membre est la propriété par défaut d’un membre et est la valeur retournée pour un membre si aucune autre valeur n’est spécifiée. Pour plus d’informations sur les propriétés des membres, consultez [des propriétés de membre intrinsèques &#40;MDX&#41; ](../analysis-services/multidimensional-models/mdx/mdx-member-properties-intrinsic-member-properties.md) et [propriétés de membre définies par l’utilisateur &#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/mdx-member-properties-user-defined-member-properties.md).  
   
 ## <a name="examples"></a>Exemples  
  L'exemple ci-dessous retourne la valeur d'un membre ainsi que le nom du membre de manière explicite.  
@@ -67,10 +66,10 @@ from [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [MemberValue &#40; MDX &#41;](../mdx/membervalue-mdx.md)   
- [Propriétés &#40; MDX &#41;](../mdx/properties-mdx.md)   
- [Nom &#40; MDX &#41;](../mdx/name-mdx.md)   
- [UniqueName &#40; MDX &#41;](../mdx/uniquename-mdx.md)   
- [Référence des fonctions MDX &#40; MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MemberValue &#40;MDX&#41;](../mdx/membervalue-mdx.md)   
+ [Propriétés & #40 ; MDX & #41 ;](../mdx/properties-mdx.md)   
+ [Nom &#40;MDX&#41;](../mdx/name-mdx.md)   
+ [UniqueName &#40;MDX&#41;](../mdx/uniquename-mdx.md)   
+ [Référence des fonctions MDX & #40 ; MDX & #41 ;](../mdx/mdx-function-reference-mdx.md)  
   
   

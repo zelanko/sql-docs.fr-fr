@@ -22,12 +22,11 @@ caps.latest.revision: 30
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 8ebc7c203eeb0ca365f7c61dbc827082c6bf9234
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 85a7c589f072c3da615e721afceab797e189f349
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="datamember-mdx"></a>DataMember (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -45,13 +44,13 @@ Member_Expression.DataMember
  *Argument*  
  Expression MDX (Multidimensional Expressions) valide qui retourne un membre.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Cette fonction fonctionne sur des membres non-feuille dans n’importe quelle hiérarchie et peut être utilisée par le [UPDATE CUBE Statement (MDX)](../mdx/mdx-data-manipulation-update-cube.md) commande pour l’écriture différée des données à un membre non-feuille directement, plutôt qu’à des descendants du membre feuille.  
   
 > [!NOTE]  
 >  Retourne le membre spécifié si ce dernier est un membre feuille ou si le membre non-feuille n'est associé à aucun membre de données.  
   
-## <a name="example"></a> Exemple  
+## <a name="example"></a>Exemple  
  L’exemple suivant utilise le **DataMember** fonction dans une mesure calculée pour afficher le quota de ventes pour chaque employé individuel :  
   
 ```  
@@ -64,7 +63,7 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Référence des fonctions MDX &#40; MDX &#41;](../mdx/mdx-function-reference-mdx.md)   
- [Concepts clés dans MDX &#40; Analysis Services &#41;](../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)  
+ [Référence des fonctions MDX & #40 ; MDX & #41 ;](../mdx/mdx-function-reference-mdx.md)   
+ [Concepts clés dans MDX & #40 ; Analysis Services & #41 ;](../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)  
   
   

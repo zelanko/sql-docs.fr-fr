@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - ODBC data source administrator [ODBC], about ODBC data source administrator
 - ODBC data source administrator [ODBC]
@@ -20,12 +20,11 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: f94dd66f0b09c31244a7126edbaff526308dd8d7
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 612badd195e427907262c79005f13b44af89d65b
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="odbc-data-source-administrator"></a>Administrateur des sources de données ODBC
 Administrateur de sources de données Microsoft® ODBC gère les sources de données et les pilotes de base de données. Cette application se trouve dans le panneau de configuration Windows sous **outils d’administration**. À compter de Windows 8, l’icône est nommé **des Sources de données ODBC**, et sur les systèmes d’exploitation 64 bits, il existe une version 32 bits et 64 bits.  

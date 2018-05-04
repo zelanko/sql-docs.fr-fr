@@ -27,15 +27,15 @@ caps.latest.revision: 28
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 60a0c8bd38d280d267b85148e3d40f2bac4967cb
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: e0c23c170fafdecf8223bc477abc93eda7e678da
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="column-element-assl"></a>Élément Column (ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Décrit une colonne dans la collection de colonnes associée à l’élément parent.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Décrit une colonne dans la collection de colonnes associée à l'élément parent.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -77,10 +77,10 @@ ms.lasthandoff: 01/08/2018
   
 |Relation|Élément|  
 |------------------|-------------|  
-|Éléments parents|[Colonnes](../../../analysis-services/scripting/collections/columns-element-assl.md)|  
-|Éléments enfants|None|  
+|Éléments parents|[Columns](../../../analysis-services/scripting/collections/columns-element-assl.md)|  
+|Éléments enfants|Aucune|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Objets &#40; ASSL &#41;](../../../analysis-services/scripting/objects/objects-assl.md)  
+ [Objets & #40 ; ASSL & #41 ;](../../../analysis-services/scripting/objects/objects-assl.md)  
   
   

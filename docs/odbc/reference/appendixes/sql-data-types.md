@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL data types [ODBC]
 - SQL data types [ODBC], about SQL data types
@@ -21,12 +21,11 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 2c1bb7ad5ce2523f4ee4e5404608e1359b216178
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 3c2022f1a0e034741a7259cef2613ce69361285a
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sql-data-types"></a>Types de données SQL
 Chaque SGBD définit ses propres types SQL. Chaque pilote ODBC expose uniquement ces types de données SQL qui définit des SGBD associé. Plus d’informations sur la façon dont un pilote mappe les types DBMS SQL pour les identificateurs de type défini par ODBC de SQL et la façon dont un pilote mappe les types de DBMS SQL à ses propres identificateurs de type spécifiques au pilote SQL est retourné via un appel à **SQLGetTypeInfo**. Un pilote retourne également les types de données SQL lors de la description des types de données des colonnes et des paramètres via des appels de **SQLColAttribute**, **SQLColumns**, **SQLDescribeCol**, **SQLDescribeParam**, **SQLProcedureColumns**, et **SQLSpecialColumns**.  
@@ -92,7 +91,7 @@ _INTERVAL_MINUTE_TO_SECOND [7]|MINUTES d’intervalle (*p*) à la seconde (*q*)|
   
  [5] en fonction de l’implémentation, la précision de SQL_FLOAT peut être 24 ou 53 : s’il s’agit de 24, le type de données SQL_FLOAT est le même que SQL_REAL ; s’il est 53, le type de données SQL_FLOAT est le même que SQL_DOUBLE.  
   
- [6] dans ODBC 3*.x*, les types de données SQL date, time et timestamp sont SQL_TYPE_DATE, SQL_TYPE_TIME et SQL_TYPE_TIMESTAMP, respectivement ; dans ODBC 2. *x*, les types de données sont SQL_DATE, SQL_TIME et SQL_TIMESTAMP.  
+ [6] dans ODBC 3 *.x*, les types de données SQL date, time et timestamp sont SQL_TYPE_DATE, SQL_TYPE_TIME et SQL_TYPE_TIMESTAMP, respectivement ; dans ODBC 2. *x*, les types de données sont SQL_DATE, SQL_TIME et SQL_TIMESTAMP.  
   
  [7] pour plus d’informations sur les types de données SQL intervalle, consultez le [Types de données Interval](../../../odbc/reference/appendixes/interval-data-types.md) section, plus loin dans cette annexe.  
   

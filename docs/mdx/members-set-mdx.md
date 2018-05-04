@@ -22,12 +22,11 @@ caps.latest.revision: 33
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: f600fa5163131d797c8ea0146c1a4e02e172381d
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: f643eeb5d864b37e9d18e82178ec1cf0eb179584
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="members-set-mdx"></a>Members (Set) (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -52,8 +51,8 @@ Level_Expression.Members
  *Level_Expression*  
  Expression MDX (Multidimensional Expressions) valide qui retourne un niveau.  
   
-## <a name="remarks"></a>Notes   
- Si une expression de hiérarchie est spécifiée, la **Members (Set)** fonction retourne le jeu de tous les membres dans la hiérarchie spécifiée, sans les membres calculés. Pour obtenir le jeu de tous les membres, calculée ou dans le cas contraire, une hiérarchie utilisent les [AllMembers &#40; MDX &#41; ](../mdx/allmembers-mdx.md) (fonction)  
+## <a name="remarks"></a>Notes  
+ Si une expression de hiérarchie est spécifiée, la **Members (Set)** fonction retourne le jeu de tous les membres dans la hiérarchie spécifiée, sans les membres calculés. Pour obtenir le jeu de tous les membres, calculée ou dans le cas contraire, une hiérarchie utilisent les [AllMembers &#40;MDX&#41; ](../mdx/allmembers-mdx.md) (fonction)  
   
  Si une expression de niveau est spécifiée, la **Members (Set)** fonction retourne le jeu de tous les membres dans le niveau spécifié.  
   
@@ -84,7 +83,7 @@ WHERE
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Référence des fonctions MDX &#40; MDX &#41;](../mdx/mdx-function-reference-mdx.md)   
- [Référence des fonctions MDX &#40; MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Référence des fonctions MDX & #40 ; MDX & #41 ;](../mdx/mdx-function-reference-mdx.md)   
+ [Référence des fonctions MDX & #40 ; MDX & #41 ;](../mdx/mdx-function-reference-mdx.md)  
   
   

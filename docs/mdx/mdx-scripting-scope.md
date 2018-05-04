@@ -23,12 +23,11 @@ caps.latest.revision: 38
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: On Demand
-ms.openlocfilehash: 018b08ba8c45393e77101cf56d098c1dd176ce9c
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 7cb864de089645a137676d7d8607e988e084939e
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mdx-scripting---scope"></a>Écriture de scripts MDX - étendue
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -87,7 +86,7 @@ Limited_Set ::=
  *single_tuple*  
  Tuple unique.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  L'instruction SCOPE détermine le sous-cube qui sera affecté par l'exécution d'une ou plusieurs instructions MDX. Sauf si une instruction MDX est insérée dans une instruction SCOPE, l'étendue implicite d'une instruction MDX est le cube tout entier.  
   
 > [!NOTE]  
@@ -97,7 +96,7 @@ Limited_Set ::=
   
  Les membres calculés et les jeux nommés créés dans le cadre d'une instruction SCOPE ne sont pas affectés par l'instruction SCOPE.  
   
-## <a name="example"></a> Exemple  
+## <a name="example"></a>Exemple  
  L’exemple suivant, à partir du script de calcul MDX dans la solution exemple Adventure Works, définit l’étendue actuelle en tant que trimestre fiscal dans l’année fiscale 2005 et de la mesure de quota du montant des ventes, puis assigne une valeur aux cellules dans l’étendue actuelle à l’aide de la **ParallelPeriod** (fonction). L’exemple modifie ensuite l’étendue à l’aide d’une autre instruction SCOPE et qu’il exécute ensuite une autre assignation à l’aide du [This (MDX)](../mdx/this-mdx.md) (fonction).  
   
 ```  
@@ -129,6 +128,6 @@ End Scope ;
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Instructions de script MDX &#40; MDX &#41;](../mdx/mdx-scripting-statements-mdx.md)  
+ [Instructions de script MDX & #40 ; MDX & #41 ;](../mdx/mdx-scripting-statements-mdx.md)  
   
   

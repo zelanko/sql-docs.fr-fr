@@ -24,13 +24,12 @@ caps.latest.revision: 45
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 10415e417fcf62ac530e50abf82d5214272351e0
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: ddfd5a7dd04bcacb2544b6fb38a2cd1bedd6e284
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spcolumns-transact-sql"></a>MSdbms (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -61,7 +60,7 @@ sp_columns [ @table_name = ] object
  Si l'utilisateur actuel est propriétaire d'un objet portant le nom spécifié, les colonnes de cet objet sont retournées. Si *propriétaire* n’est pas spécifié et l’utilisateur actuel ne possède pas d’un objet avec l’objet *objet*, **sp_columns** recherche un objet avec l’objet *objet* appartenant au propriétaire de la base de données. S'il en existe un, les colonnes de cet objet sont retournées.  
   
  [  **@table_qualifier*** =**] *qualificateur*  
- Nom du qualificateur de l'objet. *qualificateur* est **sysname**, avec NULL comme valeur par défaut. Divers produits SGBD prennent en charge d’affectation de noms en trois parties pour les objets (*qualificateur***.*** propriétaire***.*** nom de*). Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], cette colonne représente le nom de la base de données. Dans certains produits, elle représente le nom du serveur de l'environnement de base de données de l'objet.  
+ Nom du qualificateur de l'objet. *qualificateur* est **sysname**, avec NULL comme valeur par défaut. Divers produits SGBD prennent en charge d’affectation de noms en trois parties pour les objets (*qualificateur ***.*** propriétaire ***.*** nom de*). Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], cette colonne représente le nom de la base de données. Dans certains produits, elle représente le nom du serveur de l'environnement de base de données de l'objet.  
   
  [  **@column_name=**] *colonne*  
  Colonne unique utilisée lorsqu'une seule colonne d'informations de catalogue est demandée. *colonne* est **nvarchar (384)**, avec NULL comme valeur par défaut. Si *colonne* est ne pas spécifié, toutes les colonnes sont renvoyées. Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], *colonne* représente le nom de colonne indiqué dans le **syscolumns** table. La recherche de correspondance avec des caractères génériques est prise en charge. Pour assurer une interopérabilité maximale, le client de la passerelle ne doit utiliser que les modèles de comparaison standard de SQL-92 (caractères génériques % et _).  

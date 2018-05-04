@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - alignment issues [ODBC]
 ms.assetid: 06a01e51-e7a5-495f-aa27-e304b0d005ff
@@ -19,12 +19,11 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: f0368a42e1f6238e151dd14de03012237f9c20cf
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: ede36175f606b28c742e72bb005cf5fa7563bfc0
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="alignment"></a>Alignment
 Les problèmes d’alignement dans une application ODBC sont généralement pas différents qu’ils se trouvent dans une autre application. Autrement dit, la plupart des applications ODBC ont peu ou pas des problèmes avec l’alignement. Les pénalités pour non-alignement adresses varient selon le matériel et le système d’exploitation et peuvent être aussi mineure qu’une légère baisse des performances ou comme principale comme une erreur d’exécution irrécupérable. Par conséquent, les applications ODBC et les applications ODBC portables en particulier, prudence aligner correctement les données.  

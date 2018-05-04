@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - diagnostic information [ODBC], SqlGetDiagField
 - SQLGetDiagField function [ODBC], and SQLGetDiagRec
@@ -23,12 +23,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 895eb4b04b974c66f64e4ded31b84890cf19e076
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: d01e70929d8cc4d9465828d208c0e774ba8b5428
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="using-sqlgetdiagrec-and-sqlgetdiagfield"></a>À l’aide de SQLGetDiagRec et SQLGetDiagField
 Appel d’applications **SQLGetDiagRec** ou **SQLGetDiagField** pour récupérer les informations de diagnostic. Ces fonctions acceptent un handle d’environnement, connexion, instruction ou descripteur et retournent des diagnostics à partir de la fonction qui gère la dernière utilisation. Les tests de diagnostic enregistrés sur un handle particulier sont ignorés lorsqu’une fonction est appelée à l’aide de ce descripteur. Si la fonction a renvoyé plusieurs enregistrements de diagnostic, l’application appelle ces fonctions plusieurs fois ; le nombre total d’enregistrements d’état est récupéré en appelant **SQLGetDiagField** pour l’enregistrement d’en-tête (enregistrement 0) avec l’option SQL_DIAG_NUMBER.  

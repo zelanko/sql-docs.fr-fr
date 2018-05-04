@@ -1,36 +1,35 @@
 ---
-title: "Propriétés de Structure d’exploration de données et les colonnes de Structure | Documents Microsoft"
-ms.custom: 
+title: Propriétés de Structure d’exploration de données et les colonnes de Structure | Documents Microsoft
+ms.custom: ''
 ms.date: 03/13/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - mining structures [Analysis Services], column properties
 - data mining [Analysis Services], properties
 - columns [data mining], properties
 - properties [data mining]
 ms.assetid: ce90f684-bb8c-4eca-b9e6-000794dbee16
-caps.latest.revision: 
+caps.latest.revision: 23
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 0bc682b950c696f801bef26f3b258b55ba7d93bb
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: de1c95d94fbcafc2503b9d9772a0881d7e96d794
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="properties-for-mining-structure-and-structure-columns"></a>Propriétés des colonnes de structure et des structure d'exploration de données
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Vous pouvez définir ou modifier les propriétés pour une structure d’exploration de données ainsi que pour ses colonnes et colonnes imbriquées associées en utilisant l’onglet **Structure d’exploration de données** du Concepteur d’exploration de données. Les propriétés que vous définissez sous cet onglet sont propagées à chaque modèle d'exploration de données associé à la structure.  
+  Vous pouvez définir ou modifier les propriétés pour une structure d’exploration de données ainsi que pour ses colonnes et colonnes imbriquées associées en utilisant l’onglet **Structure d’exploration de données** du Concepteur d’exploration de données. Les propriétés que vous définissez sous cet onglet sont propagées à chaque modèle d'exploration de données associé à la structure.  
   
 > [!NOTE]  
 >  Si vous modifiez la valeur d'une propriété dans la structure d'exploration de données, y compris des métadonnées telles qu'un nom ou une description, la structure d'exploration de données et ses modèles doivent être retraités pour que vous puissiez afficher ou interroger le modèle.  

@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - compatibility [ODBC], Unicode
 - Unicode [ODBC], desktop database drivers
@@ -24,12 +24,11 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 557a7254e9cea7476ee3de706da86519f9ef1fec
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 1a8390be6d2aa4fa7999f19018a4a2750c7d44fd
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="desktop-database-driver-compatibility"></a>Compatibilité de pilote de base de données de bureau
 Unicode est une méthode d’encodage de caractères logiciel traite tous les caractères comme ayant une largeur fixe de deux octets. Cette méthode est utilisée comme alternative à l’encodage de caractères Windows ANSI, qui, car il représente les caractères dans un seul octet, est limitée à 256 caractères. Étant donné que Unicode peut représenter plus de 65 000 caractères, il prend en charge plusieurs langues dont les caractères ne sont pas représentés au format ANSI.  

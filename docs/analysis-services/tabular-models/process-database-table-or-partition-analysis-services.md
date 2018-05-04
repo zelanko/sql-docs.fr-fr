@@ -1,33 +1,32 @@
 ---
-title: "Processus de base de données, la Table ou Partition (Analysis Services) | Documents Microsoft"
-ms.custom: 
+title: Processus de base de données, la Table ou Partition (Analysis Services) | Documents Microsoft
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - sql13.ASVS.SSMS.PARTITIONS.PROCESSINGOPTIONS.IMBI.F1
 ms.assetid: 307d69c3-cabb-4dfa-b90c-9852492c1213
-caps.latest.revision: 
+caps.latest.revision: 8
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: c789fc9601bd4889585d52dcb6ecfe6365038323
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
-ms.translationtype: MT
+ms.openlocfilehash: de732b2ac89d89763ef42a233c9ce4620ef6b2d6
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="process-database-table-or-partition-analysis-services"></a>Processus de base de données, table ou partition (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-Les tâches de cette rubrique décrivent comment traiter manuellement les partitions, table ou une base de données de modèle tabulaire à l’aide de la **processus \<objet >** boîte de dialogue de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+  Les tâches de cette rubrique décrivent comment traiter manuellement les partitions, table ou une base de données de modèle tabulaire à l’aide de la **processus \<objet >** boîte de dialogue de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
  Pour plus d’informations sur le traitement du modèle tabulaire, consultez [traiter les données](../../analysis-services/tabular-models/process-data-ssas-tabular.md).  
   

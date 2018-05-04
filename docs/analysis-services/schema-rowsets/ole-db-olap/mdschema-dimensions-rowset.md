@@ -23,20 +23,20 @@ caps.latest.revision: 30
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 5cf0198759485452fc3fd6d82cdd2642df92b440
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: c2561c27de11ad00541e7b0f3d582c84eb89ec1a
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mdschemadimensions-rowset"></a>Ensemble de lignes MDSCHEMA_DIMENSIONS
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Décrit les dimensions partagées et privées dans une base de données.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Décrit les dimensions partagées et privées dans une base de données.  
   
 ## <a name="rowset-columns"></a>Colonnes de l'ensemble de lignes  
  Le **MDSCHEMA_DIMENSIONS** ensemble de lignes contient les colonnes suivantes :  
   
-|Nom de colonne|Indicateur de type|Description|  
+|Nom de colonne|Indicateur de type| Description|  
 |-----------------|--------------------|-----------------|  
 |**CATALOG_NAME**|**DBTYPE_WSTR**|Nom de la base de données.|  
 |**SCHEMA_NAME**|**DBTYPE_WSTR**|Non pris en charge.|  
@@ -63,15 +63,15 @@ ms.lasthandoff: 01/08/2018
   
 |Nom de colonne|Indicateur de type|État de la restriction|  
 |-----------------|--------------------|-----------------------|  
-|**CATALOG_NAME**|**DBTYPE_WSTR**|Facultatif.|  
-|**SCHEMA_NAME**|**DBTYPE_WSTR**|Facultatif.|  
-|**CUBE_NAME**|**DBTYPE_WSTR**|Facultatif.|  
-|**DIMENSION_NAME**|**DBTYPE_WSTR**|Facultatif.|  
-|**DIMENSION_UNIQUE_NAME**|**DBTYPE_WSTR**|Facultatif.|  
+|**CATALOG_NAME**|**DBTYPE_WSTR**|Ce paramètre est facultatif.|  
+|**SCHEMA_NAME**|**DBTYPE_WSTR**|Ce paramètre est facultatif.|  
+|**CUBE_NAME**|**DBTYPE_WSTR**|Ce paramètre est facultatif.|  
+|**DIMENSION_NAME**|**DBTYPE_WSTR**|Ce paramètre est facultatif.|  
+|**DIMENSION_UNIQUE_NAME**|**DBTYPE_WSTR**|Ce paramètre est facultatif.|  
 |**CUBE_SOURCE**|**DBTYPE_UI2**|(Facultatif) Restriction par défaut est une valeur de 1. Une image bitmap avec l’une des valeurs valides suivantes :<br /><br /> 1 CUBE<br /><br /> 2 DIMENSION|  
 |**DIMENSION_VISIBILITY**|**DBTYPE_UI2**|(Facultatif) Restriction par défaut est une valeur de 1. Une image bitmap avec l’une des valeurs valides suivantes :<br /><br /> 1 Visible<br /><br /> 2 non visible|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Ensembles de lignes de schéma OLE DB pour OLAP](../../../analysis-services/schema-rowsets/ole-db-olap/ole-db-for-olap-schema-rowsets.md)  
+ [OLE DB pour OLAP Schema Rowsets](../../../analysis-services/schema-rowsets/ole-db-olap/ole-db-for-olap-schema-rowsets.md)  
   
   

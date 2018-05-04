@@ -29,15 +29,15 @@ caps.latest.revision: 11
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 704906a3b42557feace9c75ce5f2702be553ff08
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: d06884e5b317d66a0c6a2c4cff54562fc6650c8e
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="restrictions-element-xmla"></a>Élément Restrictions (XMLA)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]Contient les colonnes de restriction et les données utilisées par le [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md) (méthode).  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
+  Contient les colonnes de restriction et les données utilisées par le [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md) (méthode).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -56,9 +56,9 @@ ms.lasthandoff: 01/08/2018
   
 |Caractéristique|Description|  
 |--------------------|-----------------|  
-|Type de données et longueur|None|  
-|Valeur par défaut|None|  
-|Cardinalité|1-1 : élément requis qui apparaît une fois et une seule.|  
+|Type de données et longueur|Aucune|  
+|Valeur par défaut|Aucune|  
+|Cardinalité|1-1 : élément requis qui apparaît une fois et une seule.|  
   
 ## <a name="element-relationships"></a>Relations entre les éléments  
   
@@ -67,10 +67,10 @@ ms.lasthandoff: 01/08/2018
 |Éléments parents|[Découvrir](../../../analysis-services/xmla/xml-elements-methods-discover.md)|  
 |Éléments enfants|[Liste de restrictions](../../../analysis-services/xmla/xml-elements-properties/restrictionlist-element-xmla.md)|  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Le **Restrictions** élément représente les colonnes de restriction et les données utilisées pour restreindre les informations récupérées par le **Discover** (méthode).  
   
-## <a name="example"></a> Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 <Discover xmlns="urn:schemas-microsoft-com:xml-analysis">  
@@ -85,6 +85,6 @@ ms.lasthandoff: 01/08/2018
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Propriétés &#40; XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+ [Propriétés & #40 ; XMLA & #41 ;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

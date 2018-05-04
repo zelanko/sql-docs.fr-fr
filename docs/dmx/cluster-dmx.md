@@ -22,12 +22,11 @@ caps.latest.revision: 34
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: cec73e5b3c182073cfad14c3605183fe72732d72
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: fed486ce6ec5ad2a2b0edf1f470734ae40e8c2e3
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cluster-dmx"></a>Cluster (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -49,11 +48,11 @@ Cluster()
   
  Le **Cluster** fonction retourne une valeur scalaire d’un nom de cluster. Toutefois, si vous utilisez cette fonction en tant qu’argument d’une autre fonction, vous devez la considérer comme un \<référence de colonne de cluster >.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  **Cluster** peut également être utilisé comme un `<`référence de colonne de cluster`>` pour un **PredictHistogram** (fonction).  
   
 ## <a name="examples"></a>Exemples  
- L’exemple suivant utilise une requête singleton avec les [PredictHistogram &#40; DMX &#41;](../dmx/predicthistogram-dmx.md) et fonctions pour retourner la distance séparant le cas individuel à partir de chaque cluster du modèle d’exploration de données TM Clustering et de la probabilité que le cas individuel existe dans chaque cluster du Cluster.  
+ L’exemple suivant utilise une requête singleton avec les [PredictHistogram &#40;DMX&#41; ](../dmx/predicthistogram-dmx.md) et fonctions pour retourner la distance séparant le cas individuel à partir de chaque cluster du modèle d’exploration de données TM Clustering du Cluster et le probabilité que le cas individuel existe dans chaque cluster.  
   
 ```  
 SELECT  
@@ -69,9 +68,9 @@ FROM
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [ClusterProbability &#40; DMX &#41;](../dmx/clusterprobability-dmx.md)   
- [Les Extensions d’exploration de données &#40; DMX &#41; Référence de fonction](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [Fonctions &#40; DMX &#41;](../dmx/functions-dmx.md)   
- [Fonctions de prédiction générales &#40; DMX &#41;](../dmx/general-prediction-functions-dmx.md)  
+ [ClusterProbability &#40;DMX&#41;](../dmx/clusterprobability-dmx.md)   
+ [Data Mining Extensions &#40;DMX&#41; référence de fonction](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [Fonctions &#40;DMX&#41;](../dmx/functions-dmx.md)   
+ [Fonctions de prédiction générales &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)  
   
   

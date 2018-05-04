@@ -25,12 +25,11 @@ caps.latest.revision: 39
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 729d6837a07738a17e4c926c4f98f39ad79c3d82
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: ba4f13bed63954643e6678ca4210400cb91c3b98
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="functions-dmx"></a>Fonctions (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -50,7 +49,7 @@ ms.lasthandoff: 01/08/2018
   
  Les plupart des fonctions DMX retournent une valeur scalaire, comme la prise en charge d'une prévision, mais certaines retournent un résultat tabulaire. Par exemple, la fonction PredictHistogram retourne une table qui contient la prise en charge et la probabilité pour chaque état de la colonne prédictible spécifiée. Les résultats sont affichés dans une nouvelle colonne tabulaire.  
   
- **Pour plus d’informations :** [fonctions de prédiction générales &#40; DMX &#41;](../dmx/general-prediction-functions-dmx.md), [Data Mining Extensions &#40; DMX &#41; Référence de fonction](../dmx/data-mining-extensions-dmx-function-reference.md)  
+ **Pour plus d’informations :** [fonctions de prédiction générales &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md), [Data Mining Extensions &#40;DMX&#41; référence de fonction](../dmx/data-mining-extensions-dmx-function-reference.md)  
   
 ## <a name="visual-basic-for-applications-vba-and-excel-functions"></a>Fonctions Visual Basic for Applications (VBA) et Excel  
  Outre les fonctions DMX, il est également possible d'appeler un grand nombre de fonctions VBA et Excel à l'aide des instructions DMX. Par exemple, vous pouvez utiliser la fonction lCase pour modifier le mode d’affichage de la colonne Attribute_Name dans le contenu du modèle TM_Decision_Tree. Cela est illustré par l'exemple de code suivant.  
@@ -68,13 +67,13 @@ FROM [TM_Decision_Tree].CONTENT
  **Pour plus d’informations :** [gestion des assemblys de modèle multidimensionnel](../analysis-services/multidimensional-models/multidimensional-model-assemblies-management.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Les Extensions d’exploration de données &#40; DMX &#41; Référence](../dmx/data-mining-extensions-dmx-reference.md)   
- [Les Extensions d’exploration de données &#40; DMX &#41; Référence de fonction](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [Les Extensions d’exploration de données &#40; DMX &#41; Référence des opérateurs](../dmx/data-mining-extensions-dmx-operator-reference.md)   
- [Les Extensions d’exploration de données &#40; DMX &#41; Référence des instructions](../dmx/data-mining-extensions-dmx-statements.md)   
- [Les Extensions d’exploration de données &#40; DMX &#41; Conventions de syntaxe](../dmx/data-mining-extensions-dmx-syntax-conventions.md)   
- [Les Extensions d’exploration de données &#40; DMX &#41; Éléments de syntaxe](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
- [Fonctions de prédiction générales &#40; DMX &#41;](../dmx/general-prediction-functions-dmx.md)   
+ [Les Extensions d’exploration de données & #40 ; DMX & #41 ; Référence](../dmx/data-mining-extensions-dmx-reference.md)   
+ [Data Mining Extensions &#40;DMX&#41; référence de fonction](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [Data Mining Extensions &#40;DMX&#41; référence des opérateurs](../dmx/data-mining-extensions-dmx-operator-reference.md)   
+ [Les Extensions d’exploration de données & #40 ; DMX & #41 ; Référence des instructions](../dmx/data-mining-extensions-dmx-statements.md)   
+ [Data Mining Extensions &#40;DMX&#41; Conventions de syntaxe](../dmx/data-mining-extensions-dmx-syntax-conventions.md)   
+ [Data Mining Extensions &#40;DMX&#41; éléments de syntaxe](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
+ [Fonctions de prédiction générales &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)   
  [Structure et utilisation des requêtes de prédiction DMX](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
  [Présentation de l’instruction DMX Select](../dmx/understanding-the-dmx-select-statement.md)  
   

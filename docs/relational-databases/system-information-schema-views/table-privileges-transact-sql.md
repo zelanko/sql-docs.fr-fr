@@ -25,13 +25,12 @@ caps.latest.revision: 30
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 4b3a75f550772704ef29fbc7e99e9013d416a723
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: efefb3b57ad124afe2af77be8d5eb81b434d3f2c
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="tableprivileges-transact-sql"></a>TABLE_PRIVILEGES (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -42,13 +41,13 @@ ms.lasthandoff: 04/16/2018
   
 |Nom de colonne|Type de données| Description|  
 |-----------------|---------------|-----------------|  
-|**FOURNISSEUR D’AUTORISATIONS**|**nvarchar(**128**)**|Personne qui accorde le privilège|  
-|**BÉNÉFICIAIRE**|**nvarchar(**128**)**|Personne qui reçoit le privilège|  
-|**TABLE_CATALOG**|**nvarchar(**128**)**|Qualificateur de la table.|  
-|**TABLE_SCHEMA**|**nvarchar(**128**)**|Nom du schéma qui contient la table.<br /><br /> **\*\* Important \* \***  n’utilisez pas les vues INFORMATION_SCHEMA pour déterminer le schéma d’un objet. La seule méthode fiable pour rechercher le schéma d’un objet est d’interroger l’affichage catalogue sys.objects.|  
+|**FOURNISSEUR D’AUTORISATIONS**|**nvarchar(** 128 **)**|Personne qui accorde le privilège|  
+|**BÉNÉFICIAIRE**|**nvarchar(** 128 **)**|Personne qui reçoit le privilège|  
+|**TABLE_CATALOG**|**nvarchar(** 128 **)**|Qualificateur de la table.|  
+|**TABLE_SCHEMA**|**nvarchar(** 128 **)**|Nom du schéma qui contient la table.<br /><br /> **\*\* Important \* \***  n’utilisez pas les vues INFORMATION_SCHEMA pour déterminer le schéma d’un objet. La seule méthode fiable pour rechercher le schéma d’un objet est d’interroger l’affichage catalogue sys.objects.|  
 |**NOM_TABLE**|**sysname**|Nom de la table.|  
-|**PRIVILEGE_TYPE**|**varchar (**10**)**|Type de privilège|  
-|**IS_GRANTABLE**|**varchar (**3**)**|Indique si le bénéficiaire peut accorder des autorisations à d'autres personnes.|  
+|**PRIVILEGE_TYPE**|**varchar (** 10 **)**|Type de privilège|  
+|**IS_GRANTABLE**|**varchar (** 3 **)**|Indique si le bénéficiaire peut accorder des autorisations à d'autres personnes.|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Vues système &#40;Transact-SQL&#41;](http://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)   

@@ -24,12 +24,11 @@ caps.latest.revision: 69
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 296a54187b415d79a4cc036f9111091cb6b1b415
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: f0f667c71bd1e67b311aad2d8da93b48e605ca79
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spaddpublication-transact-sql"></a>sp_addpublication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -181,7 +180,7 @@ sp_addpublication [ @publication = ] 'publication'
  Indique l'emplacement du dossier de remplacement pour l'instantané. *alternate_snapshot_folder* est **nvarchar (255)** avec NULL comme valeur par défaut.  
   
  [  **@pre_snapshot_script=** ] **'***pre_snapshot_script***'**  
- Spécifie un pointeur vers un **.sql** emplacement du fichier. *pre_snapshot_script* est **nvarchar (255),**avec NULL comme valeur par défaut. L'Agent de distribution exécute le script de pré-instantané avant l'exécution des scripts d'objet répliqué, lors de l'application d'un instantané sur un Abonné. Le script est exécuté dans le contexte de sécurité utilisé par l'Agent de distribution lors de sa connexion à la base de données d'abonnement.  
+ Spécifie un pointeur vers un **.sql** emplacement du fichier. *pre_snapshot_script* est **nvarchar (255),** avec NULL comme valeur par défaut. L'Agent de distribution exécute le script de pré-instantané avant l'exécution des scripts d'objet répliqué, lors de l'application d'un instantané sur un Abonné. Le script est exécuté dans le contexte de sécurité utilisé par l'Agent de distribution lors de sa connexion à la base de données d'abonnement.  
   
  [  **@post_snapshot_script=** ] **'***post_snapshot_script***'**  
  Spécifie un pointeur vers un **.sql** emplacement du fichier. *post_snapshot_script* est **nvarchar (255)**, avec NULL comme valeur par défaut. L'Agent de distribution exécute le script de post-instantané après que tous les autres scripts et données d'objet répliqué ont été appliqués lors d'une synchronisation initiale. Le script est exécuté dans le contexte de sécurité utilisé par l'Agent de distribution lors de sa connexion à la base de données d'abonnement.  

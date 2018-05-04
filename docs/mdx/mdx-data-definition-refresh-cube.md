@@ -28,12 +28,11 @@ caps.latest.revision: 31
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 37649d37d1cef67eb50caf8f3768beba19545988
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 47bb32f3319e4e184637c3b816f10ca563d6c76d
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mdx-data-definition---refresh-cube"></a>Définition de données MDX - REFRESH CUBE
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -51,7 +50,7 @@ REFRESH CUBECube_Name
  *Cube_Name*  
  Expression de chaîne valide qui précise le nom d'un cube.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Pour les applications clientes connectées à une instance de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], cette instruction provoque la mémoire mise en cache sur l’application cliente pour être synchronisé avec le serveur. Bien que cette situation soit d'ordinaire détectée et mise à jour automatiquement, la durée qui s'écoule avant qu'elle ne se produise dépend des paramètres de chaîne de connexion du client. L'instruction REFRESH CUBE actualise immédiatement les données.  
   
  Pour les applicaions clientes connectées à un cube local, l'instruction REFRESH CUBE déclenche la reconstruction du fichier de cube local.  
@@ -60,6 +59,6 @@ REFRESH CUBECube_Name
 >  Les jeux nommés stockés sur le serveur ne sont pas actualisés.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Instructions MDX de définition de données &#40; MDX &#41;](../mdx/mdx-data-definition-statements-mdx.md)  
+ [Instructions MDX de définition de données &#40;MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)  
   
   

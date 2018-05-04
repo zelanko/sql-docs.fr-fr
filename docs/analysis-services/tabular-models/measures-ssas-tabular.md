@@ -1,30 +1,30 @@
 ---
 title: Mesures | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 04/10/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 27ec8f99-e9ef-44c9-a83f-f7c88e128ad3
-caps.latest.revision: "19"
+caps.latest.revision: 19
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 41834c6a734417d6851e055cc63e7e8f89aea954
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 231b9296f5cd6b2a46037f540716c9bdb7a68fc7
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="measures"></a>mesures
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Dans les modèles tabulaires, une mesure est un calcul créé à l’aide d’une formule DAX pour une utilisation dans un client de création de rapports. Les mesures sont évaluées en fonction des champs, des filtres, et des segments que les utilisateurs choisissent dans l'application cliente de création de rapports.  
+# <a name="measures"></a>Mesures
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+  Dans les modèles tabulaires, une mesure est un calcul créé à l'aide d'une formule DAX pour une utilisation dans un client de création de rapport. Les mesures sont évaluées en fonction des champs, des filtres, et des segments que les utilisateurs choisissent dans l'application cliente de création de rapports.  
   
 ##  <a name="bkmk_understanding"></a> Avantages  
  Les mesures peuvent reposer sur des fonctions d'agrégation standard, comme AVERAGE, COUNT, ou SUM, ou vous pouvez définir votre propre formule à l'aide de DAX. Outre la formule, chaque mesure a des propriétés, définies par le type de données de mesure, tel que le nom, le détail de table, le format et les décimales.  
@@ -76,7 +76,7 @@ Sum of TotalProfit: =SUM([TotalProfit])
 ##  <a name="bkmk_properties"></a> Propriétés des mesures  
  Chaque mesure a des propriétés qui la caractérisent. Les propriétés de mesures, ainsi que les propriétés des colonnes associées, peuvent être modifiées dans la fenêtre Propriétés. Les mesures ont les propriétés suivantes :  
   
-|Propriété|Paramètre par défaut|Description|  
+|Propriété|Paramètre par défaut| Description|  
 |--------------|---------------------|-----------------|  
 |**Description**|Vide|Description de la mesure. La description n'apparaîtra pas avec la mesure dans un client de création de rapports.|  
 |**Format**|Déterminé automatiquement à partir du type de données de la colonne référencée dans l'expression de formule.|Format de la mesure. Par exemple, devise ou pourcentage.|  
@@ -90,7 +90,7 @@ Sum of TotalProfit: =SUM([TotalProfit])
   
 ##  <a name="bkmk_rel_tasks"></a> Related tasks  
   
-|Rubrique|Description|  
+|Rubrique| Description|  
 |-----------|-----------------|  
 |[Créer et gérer des mesures](../../analysis-services/tabular-models/create-and-manage-measures-ssas-tabular.md)|Décrit comment créer et gérer des mesures à l'aide de la grille de mesures dans le générateur de modèles.|  
   

@@ -1,16 +1,16 @@
 ---
-title: "Architecture logique (Analysis Services - Exploration de données) | Documents Microsoft"
-ms.custom: 
+title: Architecture logique (Analysis Services - Exploration de données) | Documents Microsoft
+ms.custom: ''
 ms.date: 03/13/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - mining structures [Analysis Services], about mining structures
 - logical architecture [Data Mining]
@@ -18,20 +18,19 @@ helpviewer_keywords:
 - mining models [Analysis Services], about data mining models
 - architecture [Analysis Services]
 ms.assetid: 4e0cbf46-cc60-4e91-a292-9a69f29746f0
-caps.latest.revision: 
+caps.latest.revision: 25
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 3f6e0b1540d9dc1072e7370b50cfa8736894b712
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 259f79dd8ba277eb6fb469efe2334632c3710ff3
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="logical-architecture-analysis-services---data-mining"></a>Architecture logique (Analysis Services - Exploration de données)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-L'exploration de données est un processus qui implique l'interaction de plusieurs composants.  
+  L'exploration de données est un processus qui implique l'interaction de plusieurs composants.  
   
 -   Vous accédez aux sources de données dans une base de données SQL Server ou à toute autre source de données à utiliser pour l’apprentissage, le test ou les prédictions.  
   
@@ -94,7 +93,7 @@ L'exploration de données est un processus qui implique l'interaction de plusieu
  Pour plus d’informations, consultez [Gestion des assemblys de modèles multidimensionnels](../../analysis-services/multidimensional-models/multidimensional-model-assemblies-management.md).  
   
  **Procédures stockées personnalisées**  
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] L’exploration de données prend en charge l’utilisation de procédures stockées pour utiliser des objets d’exploration de données. Vous pouvez créer vos propres procédures stockées pour étendre les fonctionnalités et utiliser plus facilement les données retournées par des requêtes de prédiction et des requêtes de contenu.  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] exploration de données prend en charge l’utilisation de procédures stockées pour travailler avec les objets d’exploration de données. Vous pouvez créer vos propres procédures stockées pour étendre les fonctionnalités et utiliser plus facilement les données retournées par des requêtes de prédiction et des requêtes de contenu.  
   
  [Définition de procédures stockées](../../analysis-services/multidimensional-models-extending-olap-stored-procedures/defining-stored-procedures.md)  
   
@@ -105,7 +104,7 @@ L'exploration de données est un processus qui implique l'interaction de plusieu
  En outre, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] contient de nombreuses procédures stockées système qui sont utilisées en interne pour l'exploration de données. Bien que les procédures stockées système sont réservées à un usage interne, elles peuvent s'avérer d'utiles raccourcis. Microsoft se réserve le droit de modifier ces procédures stockées si nécessaire ; par conséquent, dans un environnement de production, nous vous recommandons de créer des requêtes avec DMX, AMO, ou XMLA.  
   
  **Algorithmes de plug-in personnalisés**  
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] fournit un mécanisme pour créer vos propres algorithmes, puis ajouter les algorithmes sous forme de nouveau service d’exploration de données à l’instance de serveur.  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] fournit un mécanisme pour créer vos propres algorithmes, puis en ajoutant les algorithmes comme un nouveau service d’exploration de données à l’instance de serveur.  
   
  Analysis Services utilise ces interfaces COM pour communiquer avec les algorithmes de plug-in. Pour en savoir plus sur la manière d’implémenter de nouveaux algorithmes, consultez [Algorithmes de plug-in](../../analysis-services/data-mining/plugin-algorithms.md).  
   
@@ -114,6 +113,6 @@ L'exploration de données est un processus qui implique l'interaction de plusieu
   
 ## <a name="see-also"></a>Voir aussi  
  [Traitement d’un modèle multidimensionnel &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)   
- [Les Extensions d’exploration de données &#40; DMX &#41; Référence](../../dmx/data-mining-extensions-dmx-reference.md)  
+ [Les Extensions d’exploration de données & #40 ; DMX & #41 ; Référence](../../dmx/data-mining-extensions-dmx-reference.md)  
   
   

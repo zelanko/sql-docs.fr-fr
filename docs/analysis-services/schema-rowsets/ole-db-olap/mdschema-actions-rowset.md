@@ -23,20 +23,20 @@ caps.latest.revision: 33
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 214fb372b021e7cee9f11bb82cccdc65575a7929
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 19423a6d4b8ffe345309032559e733f629358594
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mdschemaactions-rowset"></a>Ensemble de lignes MDSCHEMA_ACTIONS
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Décrit les actions qui peuvent être disponibles à l’application cliente.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Décrit les actions qui peuvent être disponibles pour les applications clientes.  
   
 ## <a name="rowset-columns"></a>Colonnes de l'ensemble de lignes  
  Le **MDSCHEMA_ACTIONS** ensemble de lignes contient les colonnes suivantes.  
   
-|Nom de colonne|Indicateur de type|Longueur|Description|  
+|Nom de colonne|Indicateur de type|Longueur| Description|  
 |-----------------|--------------------|------------|-----------------|  
 |**CATALOG_NAME**|**DBTYPE_WSTR**||Nom de la base de données.|  
 |**SCHEMA_NAME**|**DBTYPE_WSTR**||Non pris en charge. Contient toujours **VT_NULL**.|  
@@ -47,7 +47,7 @@ ms.lasthandoff: 01/08/2018
 |**COORDINATE_TYPE**|**DBTYPE_I4**||Une image bitmap qui spécifie comment la **coordonner** colonne de restriction est interprété. Le fichier Msmd.h définit les constantes de valeur binaire suivantes pour cette image bitmap :<br /><br /> **MDACTION_COORDINATE_CUBE** (**1**)<br /><br /> **MDACTION_COORDINATE_DIMENSION** (**2**) : fait référence aux hiérarchies de dimensions.<br /><br /> **MDACTION_COORDINATE_LEVEL** (**3**)<br /><br /> **MDACTION_COORDINATE_MEMBER** (**4**)<br /><br /> **MDACTION_COORDINATE_SET** (**5**)<br /><br /> **MDACTION_COORDINATE_CELL** (**6**)|  
 |**ACTION_CAPTION**|**DBTYPE_WSTR**||Nom de l'action si aucune légende n'a été spécifiée et si aucune traduction n'a été spécifiée dans le DDL.<br /><br /> Si une légende ou des traductions ont été spécifiées, et **CaptionIsMDX** a la valeur false, une des chaînes suivantes :<br /><br /> -Traduction pour la langue appropriée.<br /><br /> -Légende spécifiée si aucune traduction n’a été trouvée pour la langue spécifiée.<br /><br /> -Le nom de l’action si aucune traduction n’a été trouvée et la légende n’a pas été spécifiée dans le DDL.<br /><br /> Si une légende ou des traductions ont été spécifiées, et **CaptionIsMDX** est true, la chaîne qui résulte de la recherche de la traduction appropriée pour la langue spécifiée ou la traduction spécifiée dans la légende DDL et le calcul de la formule pour créer la chaîne.<br /><br /> Si l'action a été spécifiée dans un script MDX, il n'y a pas de traductions et la légende est toujours traitée comme une expression MDX.|  
 |**DESCRIPTION**|**DBTYPE_WSTR**||Description conviviale de l'action.|  
-|**CONTENU**|**DBTYPE_WSTR**||Expression ou contenu de l'action qui sera exécutée.|  
+|**CONTENT**|**DBTYPE_WSTR**||Expression ou contenu de l'action qui sera exécutée.|  
 |**APPLICATION**|**DBTYPE_WSTR**||Nom de l'application qui sera utilisée pour exécuter l'action.|  
 |**APPEL**|**DBTYPE_I4**||Informations sur la manière dont l'action doit être appelée :<br /><br /> **MDACTION_INVOCATION_INTERACTIVE** (**1**) indique une action régulière utilisée pendant les opérations normales. Il s'agit de la valeur par défaut pour cette colonne.<br /><br /> **MDACTION_INVOCATION_ON_OPEN** (**2**) indique que l’action doit être effectuée lors de la première ouverture du cube.<br /><br /> **MDACTION_INVOCATION_BATCH** (**4**) indique que l’action est effectuée dans le cadre d’une opération de traitement par lots ou [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] tâche.<br /><br /> <br /><br /> Notez que ces valeurs d’énumération sont définies dans le fichier, Msmd.h.|  
   
@@ -76,20 +76,20 @@ ms.lasthandoff: 01/08/2018
   
  Les applications clientes peuvent définir plusieurs **ACTION_TYPE** à l’aide de l’opérateur OR.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Le tableau suivant répertorie les valide **coordonner** et **COORDINATE_TYPE** combinaisons.  
   
 |Type d'objet COORDINATE|COORDINATE_TYPE|  
 |----------------------------|----------------------|  
 |**Cube**|**MDACTION_COORDINATE_CUBE**|  
 |**Dimension**|**MDACTION_COORDINATE_DIMENSION**<br /><br /> **MDACTION_COORDINATE_LEVEL**<br /><br /> **MDACTION_COORDINATE_MEMBER**<br /><br /> **MDACTION_COORDINATE_SET**<br /><br /> **MDACTION_COORDINATE_CELL**|  
-|**Hierarchy**|**MDACTION_COORDINATE_DIMENSION**|  
+|**Hiérarchie**|**MDACTION_COORDINATE_DIMENSION**|  
 |**Level**|**MDACTION_COORDINATE_LEVEL**|  
 |**Membre**|**MDACTION_COORDINATE_MEMBER**|  
 |**Ensemble**|**MDACTION_COORDINATE_SET**|  
-|**cellule**|**MDACTION_COORDINATE_CELL**|  
+|**Cellule**|**MDACTION_COORDINATE_CELL**|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Ensembles de lignes de schéma OLE DB pour OLAP](../../../analysis-services/schema-rowsets/ole-db-olap/ole-db-for-olap-schema-rowsets.md)  
+ [OLE DB pour OLAP Schema Rowsets](../../../analysis-services/schema-rowsets/ole-db-olap/ole-db-for-olap-schema-rowsets.md)  
   
   

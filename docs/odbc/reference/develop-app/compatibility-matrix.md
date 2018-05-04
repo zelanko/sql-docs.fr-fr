@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - driver compatibility issues [ODBC]
 - ODBC drivers [ODBC], backward compatibility
@@ -25,12 +25,11 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 1199aab1324c086159fdbb83f111406a209a8e7b
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: ce98e3471f3bf14ada77fcbb67291ba8a4dff166
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="compatibility-matrix"></a>Matrice de compatibilité
 Le tableau suivant décrit la compatibilité des types d’applications et des pilotes définies précédemment dans cette section.  
@@ -53,7 +52,7 @@ Le tableau suivant décrit la compatibilité des types d’applications et des p
   
  [3] de cette configuration peut potentiellement pas, car il existe des fonctionnalités dans ODBC 2. *x* qui ne sont pas dans les normes, telles que les signets.  
   
- [4], cette configuration peut potentiellement ne fonctionnent pas, car il existe des fonctionnalités dans ODBC 3*.x* qui ne sont pas dans les normes, telles que les signets.  
+ [4], cette configuration peut potentiellement ne fonctionnent pas, car il existe des fonctionnalités dans ODBC 3 *.x* qui ne sont pas dans les normes, telles que les signets.  
   
  [5], cette configuration peut potentiellement être défaillants, car il existe des fonctionnalités qui ne sont pas dans ODBC 2.x ou 3.x pilotes, tels que spécifiques au pilote dans ODBC 3.8 [des Types de données C dans ODBC](../../../odbc/reference/develop-app/c-data-types-in-odbc.md).  
   

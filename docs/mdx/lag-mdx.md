@@ -22,12 +22,11 @@ caps.latest.revision: 34
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: a219e0b8455ff3a66d20a8c670bb8675481498e4
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 7dce14ac4d98d3fd75da42ace8327115eefafd1e
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="lag-mdx"></a>Lag (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -48,18 +47,18 @@ Member_Expression.Lag(Index)
  *Index*  
  Expression numérique valide qui spécifie le nombre de positions de membres à décaler.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Les positions des membres dans un niveau sont déterminées en fonction de l'ordre naturel de la hiérarchie d'attribut. La numérotation des positions commence à zéro.  
   
  Si le décalage spécifié est égal à zéro, le **Lag** fonction retourne le membre spécifié lui-même.  
   
  Si le décalage spécifié est négatif, le **Lag** fonction retourne un membre suivant.  
   
- `Lag(1)`équivaut à la [PrevMember](../mdx/prevmember-mdx.md) (fonction). `Lag(-1)`équivaut à la [NextMember](../mdx/nextmember-mdx.md) (fonction).  
+ `Lag(1)` équivaut à la [PrevMember](../mdx/prevmember-mdx.md) (fonction). `Lag(-1)` équivaut à la [NextMember](../mdx/nextmember-mdx.md) (fonction).  
   
  Le **Lag** fonction est similaire à la [entraîner](../mdx/lead-mdx.md) de fonction, à ceci près que le **entraîner** fonction recherche dans la direction opposée à la **Lag** (fonction). Ce qui signifie que `Lag(n)` est équivalent à `Lead(-n)`.  
   
-## <a name="example"></a> Exemple  
+## <a name="example"></a>Exemple  
  L'exemple ci-après retourne la valeur du mois de décembre 2001 :  
   
 ```  
@@ -77,6 +76,6 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Référence des fonctions MDX &#40; MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Référence des fonctions MDX & #40 ; MDX & #41 ;](../mdx/mdx-function-reference-mdx.md)  
   
   

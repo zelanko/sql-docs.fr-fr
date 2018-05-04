@@ -22,12 +22,11 @@ caps.latest.revision: 14
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 6f5fb5dccb91af6409c0ed91796ba5119475ccaf
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 9e741b37b167fcb4568fd38fe069224e669cda0f
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="exists-dmx"></a>Exists (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -42,13 +41,13 @@ EXISTS(<subquery>)
 ```  
   
 ## <a name="arguments"></a>Arguments  
- *sous-requête*  
+ *subquery*  
  Une instruction SELECT sous la forme SELECT * FROM \<nom de colonne > [où \<liste_prédicats >].  
   
 ## <a name="result-type"></a>Type de résultat  
  Retourne **true** si le jeu de résultats retourné par la sous-requête contient au moins une ligne ; sinon, retourne **false**.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Vous pouvez utiliser le mot clé NOT avant EXISTS ; par exemple, `WHERE NOT EXISTS (<subquery>)`.  
   
  La liste des colonnes que vous ajoutez à l'argument de sous-requête d'EXISTS est inappropriée ; la fonction vérifie uniquement l'existence d'une ligne qui remplit la condition.  
@@ -70,7 +69,7 @@ WHERE [[Model] = 'Patch kit'
  Un autre pour afficher les mêmes données que celui qui sont retournées par cette requête consiste à ouvrir le modèle dans la visionneuse d’associations, cliquez sur le jeu d’éléments **Patch kit = Existing**, sélectionnez le **extraire** option et sélectionnez **cas de modèles uniquement**.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Fonctions &#40; DMX &#41;](../dmx/functions-dmx.md)   
- [Syntaxe de filtre de modèle et exemples &#40; Analysis Services - Exploration de données &#41;](../analysis-services/data-mining/model-filter-syntax-and-examples-analysis-services-data-mining.md)  
+ [Fonctions &#40;DMX&#41;](../dmx/functions-dmx.md)   
+ [Syntaxe de filtre et des exemples de modèle &#40;Analysis Services - Exploration de données&#41;](../analysis-services/data-mining/model-filter-syntax-and-examples-analysis-services-data-mining.md)  
   
   

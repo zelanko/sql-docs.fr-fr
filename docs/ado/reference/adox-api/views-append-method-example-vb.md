@@ -21,12 +21,11 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: a3513431ecfcd9539e2e5e4eb1e1dad7edecd114
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 35e73785de98258b66e7feb487fffa74b53114e7
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="views-append-method-example-vb"></a>Views Append, méthode-exemple (VB)
 Le code suivant montre comment utiliser un [commande](../../../ado/reference/ado-api/command-object-ado.md) objet et la [vues](../../../ado/reference/adox-api/views-collection-adox.md) collection [Append](../../../ado/reference/adox-api/append-method-adox-views.md) méthode pour créer une nouvelle vue dans la source de données sous-jacente.  
