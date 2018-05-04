@@ -1,11 +1,9 @@
 ---
 title: Anticipation des erreurs | Documents Microsoft
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -21,12 +19,11 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 0fc74732fb812f1b13bcb52b8eda97311ae562d7
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 5978768e515f4fc6cf6986dc23e7cec1379c69c7
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="anticipating-errors"></a>Anticipation des erreurs
 Prévention des erreurs est au moins aussi importante que la gestion des erreurs. Cette dernière section contient une courte liste des précautions de que votre application peut prendre pour faciliter les erreurs éventuelles.  

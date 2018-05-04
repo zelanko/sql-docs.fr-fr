@@ -1,11 +1,9 @@
 ---
 title: Clause APPEND de forme | Documents Microsoft
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -21,12 +19,11 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: eb0275048d5afbe1bb13adc74eb5d2cba14e2a9e
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 78a1b524d54f77fc5bdcc894c4948ca3139cf334
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="shape-append-clause"></a>Clause APPEND de forme
 La clause APPEND de commande shape ajoute une ou plusieurs colonnes à un **Recordset**. Souvent, ces colonnes sont des colonnes de chapitres, qui font référence à un enfant **Recordset**.  
@@ -43,7 +40,7 @@ SHAPE [parent-command [[AS] parent-alias]] APPEND column-list
  *commande parent*  
  Zéro ou un des éléments suivants (vous pouvez omettre le *parent-command* complètement) :  
   
--   Une commande fournisseur entourée accolades (« {} ») qui retourne un **Recordset** objet. La commande est envoyée au fournisseur de données sous-jacent et sa syntaxe dépend des exigences de ce fournisseur. Ce sera généralement le langage SQL, même si ADO ne requiert pas de langage de requête particulier.  
+-   Une commande fournisseur entourée accolades («{}») qui retourne un **Recordset** objet. La commande est envoyée au fournisseur de données sous-jacent et sa syntaxe dépend des exigences de ce fournisseur. Ce sera généralement le langage SQL, même si ADO ne requiert pas de langage de requête particulier.  
   
 -   Une autre commande shape placée entre parenthèses.  
   
@@ -73,7 +70,7 @@ SHAPE [parent-command [[AS] parent-alias]]
   
 ## <a name="remarks"></a>Notes  
  *child-recordset*  
- -   Une commande fournisseur entourée accolades (« {} ») qui retourne un **Recordset** objet. La commande est envoyée au fournisseur de données sous-jacent et sa syntaxe dépend des exigences de ce fournisseur. Ce sera généralement le langage SQL, même si ADO ne requiert pas de langage de requête particulier.  
+ -   Une commande fournisseur entourée accolades («{}») qui retourne un **Recordset** objet. La commande est envoyée au fournisseur de données sous-jacent et sa syntaxe dépend des exigences de ce fournisseur. Ce sera généralement le langage SQL, même si ADO ne requiert pas de langage de requête particulier.  
   
 -   Une autre commande shape placée entre parenthèses.  
   

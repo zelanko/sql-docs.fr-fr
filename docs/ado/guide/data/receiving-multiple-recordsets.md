@@ -1,11 +1,9 @@
 ---
 title: Réception de plusieurs jeux d’enregistrements | Documents Microsoft
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -20,12 +18,11 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: e504f49e2f062e77323d1b411686fcbcdf2e5b1f
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: a603e1c5f3498daa6140915be5d05494b1b968f1
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="receiving-multiple-recordsets"></a>Réception de plusieurs jeux d’enregistrements
 Le [fournisseur Microsoft OLE DB pour SQL Server](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-sql-server.md) prend en charge de retourner plusieurs **Recordset** objets pour une commande unique contenant plusieurs instructions SQL, un **Recordset**par l’instruction SQL. L’ordre dans lequel le **Recordset**sont renvoyées suit l’ordre dans lequel les instructions SQL sont placées dans le texte de commande.  

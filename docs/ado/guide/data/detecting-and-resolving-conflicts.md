@@ -1,11 +1,9 @@
 ---
 title: Détection et résolution des conflits | Documents Microsoft
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -20,12 +18,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 0bb8451f5d4355b521f794501b4a431b02fc2f06
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 05e79fec4c5ddf9d33c9cfaa17581b6d50e0e42b
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="detecting-and-resolving-conflicts"></a>Détection et résolution des conflits
 Si vous êtes confronté à votre jeu d’enregistrements en mode exécution, il est beaucoup moins le risque de problèmes d’accès concurrentiel se produise. En revanche, si votre application utilise le mode de traitement par lots mise à jour, il peut être une bonne chance qu’un utilisateur modifie un enregistrement avant l’enregistrement des modifications apportées par un autre utilisateur, ce même enregistrement. Dans ce cas, vous préférerez votre application de façon à gérer le conflit. Il peut être votre souhait de la dernière personne à envoyer une mise à jour sur le serveur « remporte ». Ou vous pouvez souhaiter permettre à l’utilisateur la plus récente afin de déterminer la mise à jour est prioritaire en lui offrant un choix entre les deux valeurs en conflit.  

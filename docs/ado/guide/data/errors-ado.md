@@ -1,11 +1,9 @@
 ---
 title: Erreurs (ADO) | Documents Microsoft
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -20,12 +18,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 66503a0a42e9b7c88899b9d0008b464f04bab1dd
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: d34a1e8a51c3843c3df73aefa620bec1d7f43f95
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="errors-ado"></a>Erreurs (ADO)
 Toute opération impliquant des objets ADO peut générer une ou plusieurs erreurs de fournisseur. Lorsqu’une erreur survient, un ou plusieurs **erreur** objets sont placés dans le **erreurs** collection de la **connexion** objet. Pour plus d’informations sur la gestion des avertissements et erreurs dans votre application ADO, consultez [gestion des erreurs](../../../ado/guide/data/error-handling.md).  
