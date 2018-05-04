@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 apiname:
 - SQLTables
 apilocation:
@@ -26,12 +26,11 @@ caps.latest.revision: 24
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: a318503cfc5efb5aa39dd93de76f3811b0a65aa4
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: ca0e5379079c735b7dd0f5b6770818e5f930f51d
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqltables-function"></a>Fonction SQLTables
 **Mise en conformité**  
@@ -129,7 +128,7 @@ SQLRETURN SQLTables(
   
  Sinon, l’application doit être en mesure de gérer une situation où l’utilisateur sélectionne une table pour laquelle **sélectionnez** privilèges ne sont pas accordées.  
   
- Le *SchemaName* et *TableName* arguments accepte les modèles de recherche. Le *CatalogName* argument accepte les modèles de recherche si l’attribut d’environnement SQL_ODBC_VERSION SQL_OV_ODBC3 ; il n’accepte pas les modèles de recherche si SQL_OV_ODBC2 est défini. Si SQL_OV_ODBC3 est définie, un ODBC 3*.x* pilote requiert que les caractères génériques caractères dans le *CatalogName* argument être échappés pour être considérées littéralement. Pour plus d’informations sur les modèles de recherche valides, consultez [Arguments de valeur de modèle](../../../odbc/reference/develop-app/pattern-value-arguments.md).  
+ Le *SchemaName* et *TableName* arguments accepte les modèles de recherche. Le *CatalogName* argument accepte les modèles de recherche si l’attribut d’environnement SQL_ODBC_VERSION SQL_OV_ODBC3 ; il n’accepte pas les modèles de recherche si SQL_OV_ODBC2 est défini. Si SQL_OV_ODBC3 est définie, un ODBC 3 *.x* pilote requiert que les caractères génériques caractères dans le *CatalogName* argument être échappés pour être considérées littéralement. Pour plus d’informations sur les modèles de recherche valides, consultez [Arguments de valeur de modèle](../../../odbc/reference/develop-app/pattern-value-arguments.md).  
   
 > [!NOTE]  
 >  Pour plus d’informations sur l’utilisation générale, les arguments et les données retournées des fonctions de catalogue ODBC, consultez [fonctions de catalogue](../../../odbc/reference/develop-app/catalog-functions.md).  
@@ -148,9 +147,9 @@ SQLRETURN SQLTables(
   
  Pour déterminer les longueurs réelles des colonnes TABLE_CAT, TABLE_SCHEM et TABLE_NAME, une application peut appeler **SQLGetInfo** avec les types d’informations SQL_MAX_CATALOG_NAME_LEN, SQL_MAX_SCHEMA_NAME_LEN et SQL_MAX_TABLE_NAME_LEN.  
   
- Les colonnes suivantes ont été renommés pour ODBC 3*.x*. Les changements de nom de colonne n’affectent pas la compatibilité descendante, car les applications lier par numéro de colonne.  
+ Les colonnes suivantes ont été renommés pour ODBC 3 *.x*. Les changements de nom de colonne n’affectent pas la compatibilité descendante, car les applications lier par numéro de colonne.  
   
-|Colonne de ODBC 2.0|ODBC 3*.x* colonne|  
+|Colonne de ODBC 2.0|ODBC 3 *.x* colonne|  
 |---------------------|-----------------------|  
 |TABLE_QUALIFIER|TABLE_CAT|  
 |TABLE_OWNER|TABLE_SCHEM|  

@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - driver compatibility issues [ODBC]
 - ODBC drivers [ODBC], backward compatibility
@@ -22,12 +22,11 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 711e71809a4c75eb4cb4507fc6528efa10dd07ce
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: d4ecf7a751f8a846c5ffcdc6aba12fb7828fb6c5
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="types-of-drivers"></a>Types de pilotes
 Pilotes ODBC peuvent être classés comme suit :  
@@ -35,7 +34,7 @@ Pilotes ODBC peuvent être classés comme suit :
 -   **32 bits ODBC 2.**  
      ***x* pilote** pilote de 32 bits qui :  
   
-    -   Exporte uniquement ODBC 2*.x* fonctions.  
+    -   Exporte uniquement ODBC 2 *.x* fonctions.  
   
     -   Expose ODBC 2. *x* comportement pour les changements de comportement.  
   

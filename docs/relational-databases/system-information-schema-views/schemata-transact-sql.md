@@ -25,13 +25,12 @@ caps.latest.revision: 41
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: e814026040e37b8467407ddca9f73c57438fa4bd
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 446c6645f850ac11b546929006e4b20b51c8c38b
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="schemata-transact-sql"></a>SCHEMATA (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -41,10 +40,10 @@ ms.lasthandoff: 04/16/2018
 |Nom de colonne|Type de données| Description|  
 |-----------------|---------------|-----------------|  
 |**CATALOG_NAME**|**sysname**|Nom de la base de données active|  
-|**SCHEMA_NAME**|**nvarchar(**128**)**|Renvoie le nom du schéma|  
-|**SCHEMA_OWNER**|**nvarchar(**128**)**|Nom du propriétaire du schéma<br /><br /> **\*\* Important \* \***  n’utilisez pas les vues INFORMATION_SCHEMA pour déterminer le schéma d’un objet. La seule méthode fiable pour rechercher le schéma d'un objet est d'interroger l'affichage catalogue sys.objects.|  
-|**DEFAULT_CHARACTER_SET_CATALOG**|**varchar (**6**)**|Retourne toujours la valeur Null.|  
-|**DEFAULT_CHARACTER_SET_SCHEMA**|**varchar (**3**)**|Retourne toujours la valeur Null.|  
+|**SCHEMA_NAME**|**nvarchar(** 128 **)**|Renvoie le nom du schéma|  
+|**SCHEMA_OWNER**|**nvarchar(** 128 **)**|Nom du propriétaire du schéma<br /><br /> **\*\* Important \* \***  n’utilisez pas les vues INFORMATION_SCHEMA pour déterminer le schéma d’un objet. La seule méthode fiable pour rechercher le schéma d'un objet est d'interroger l'affichage catalogue sys.objects.|  
+|**DEFAULT_CHARACTER_SET_CATALOG**|**varchar (** 6 **)**|Retourne toujours la valeur Null.|  
+|**DEFAULT_CHARACTER_SET_SCHEMA**|**varchar (** 3 **)**|Retourne toujours la valeur Null.|  
 |**DEFAULT_CHARACTER_SET_NAME**|**sysname**|Renvoie le nom du jeu de caractères par défaut|  
 
 **Exemple**  

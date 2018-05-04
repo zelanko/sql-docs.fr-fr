@@ -22,12 +22,11 @@ caps.latest.revision: 52
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: On Demand
-ms.openlocfilehash: 9ae3eb300df4b0dccd02e6e3ec7034feaa8913e7
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: c3f885ecf4b30e573ba7f0140ad48c69c744d9db
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="aggregate-mdx"></a>Aggregate (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -48,14 +47,14 @@ Aggregate(Set_Expression [ ,Numeric_Expression ])
  *Numeric_expression*  
  Expression numérique valide qui correspond généralement à une expression MDX (Multidimensional Expressions) des coordonnées des cellules qui retournent un nombre.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Si un jeu de tuples vides ou un jeu vide est spécifié, cette fonction retourne une valeur vide.  
   
  Le tableau suivant décrit comment la **d’agrégation** fonction se comporte avec différentes fonctions d’agrégation.  
   
-|Opérateur d'agrégation|Résultats|  
+|Opérateur d'agrégation|Résultat|  
 |--------------------------|------------|  
-|SUM|Retourne la somme des valeurs dans le jeu.|  
+|Sum|Retourne la somme des valeurs dans le jeu.|  
 |Compter|Retourne le nombre de valeurs dans le jeu.|  
 |Max|Retourne la valeur maximale dans le jeu.|  
 |Min|Retourne la valeur minimale dans le jeu.|  
@@ -136,15 +135,15 @@ WHERE ([Geography].[State-Province].x,
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [PeriodsToDate &#40; MDX &#41;](../mdx/periodstodate-mdx.md)   
- [Enfants &#40; MDX &#41;](../mdx/children-mdx.md)   
- [Hierarchize &#40; MDX &#41;](../mdx/hierarchize-mdx.md)   
- [Nombre &#40; Définir le &#41; &#40; MDX &#41;](../mdx/count-set-mdx.md)   
- [Filtre &#40; MDX &#41;](../mdx/filter-mdx.md)   
- [AddCalculatedMembers &#40; MDX &#41;](../mdx/addcalculatedmembers-mdx.md)   
- [DrilldownLevel &#40; MDX &#41;](../mdx/drilldownlevel-mdx.md)   
- [Propriétés &#40; MDX &#41;](../mdx/properties-mdx.md)   
- [PrevMember &#40; MDX &#41;](../mdx/prevmember-mdx.md)   
- [Référence des fonctions MDX &#40; MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
+ [PeriodsToDate &#40;MDX&#41;](../mdx/periodstodate-mdx.md)   
+ [Enfants &#40;MDX&#41;](../mdx/children-mdx.md)   
+ [Hierarchize & #40 ; MDX & #41 ;](../mdx/hierarchize-mdx.md)   
+ [Nombre & #40 ; Définir le & #41 ; & #40 ; MDX & #41 ;](../mdx/count-set-mdx.md)   
+ [Filtre & #40 ; MDX & #41 ;](../mdx/filter-mdx.md)   
+ [AddCalculatedMembers & #40 ; MDX & #41 ;](../mdx/addcalculatedmembers-mdx.md)   
+ [DrilldownLevel & #40 ; MDX & #41 ;](../mdx/drilldownlevel-mdx.md)   
+ [Propriétés & #40 ; MDX & #41 ;](../mdx/properties-mdx.md)   
+ [PrevMember &#40;MDX&#41;](../mdx/prevmember-mdx.md)   
+ [Référence des fonctions MDX & #40 ; MDX & #41 ;](../mdx/mdx-function-reference-mdx.md)  
   
   

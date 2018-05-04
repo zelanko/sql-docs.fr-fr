@@ -22,12 +22,11 @@ caps.latest.revision: 22
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 695442f30d62a651521dc5b90027a4d43daa7dde
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 08acc168c60295b499097e7fb211cd6b05ad31be
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sphelpsubscription-transact-sql"></a>sp_helpsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -61,7 +60,7 @@ sp_helpsubscription [ [ @publication = ] 'publication' ]
  [  **@destination_db=** ] **'***destination_db***'**  
  Nom de la base de données de destination. *destination_db* est **sysname**, avec une valeur par défaut **%**.  
   
- [  **@found=** ] **'***trouvé***'**sortie  
+ [  **@found=** ] **'***trouvé***'** sortie  
  Indicateur désignant les lignes retournées. *trouvé*est **int** d’un paramètre OUTPUT, avec 23456 comme valeur par défaut.  
   
  **1** indique la publication a été trouvée.  

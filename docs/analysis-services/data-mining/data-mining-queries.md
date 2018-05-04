@@ -1,37 +1,23 @@
 ---
-title: "Requêtes d’exploration de données | Documents Microsoft"
-ms.custom: 
-ms.date: 03/06/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
+title: Requêtes d’exploration de données | Documents Microsoft
+ms.date: 05/01/2018
+ms.prod: sql
+ms.technology: analysis-services
 ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- prediction queries [Analysis Services]
-- queries [DMX], creating
-- prediction queries [DMX]
-- Prediction Query Builder
-- mining models [Analysis Services], querying
-ms.assetid: 802806a6-69bb-4c3c-b9aa-d1a1ddfc7fc2
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 260a6d48b6da55f65098790df73b01a10e35e126
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: eb1e42ac7f9cf3aeaf58d6e1fb3f913c8c164047
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="data-mining-queries"></a>Requêtes d’exploration de données
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Les requêtes d'exploration de données sont utiles à de nombreuses fins. Vous pouvez :  
+  Les requêtes d'exploration de données sont utiles à de nombreuses fins. Vous pouvez :  
   
 -   Appliquer le modèle aux nouvelles données, pour créer des prédictions uniques ou multiples. Vous pouvez fournir des valeurs d'entrée sous forme de paramètres, ou dans un lot.  
   
@@ -60,7 +46,7 @@ Les requêtes d'exploration de données sont utiles à de nombreuses fins. Vous 
 ##  <a name="bkmk_Understand"></a> Fonctionnement des requêtes d'exploration de données  
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] prend en charge les types de requêtes suivants :  
   
--   [Requêtes de prédiction &#40; exploration de données &#41;](../../analysis-services/data-mining/prediction-queries-data-mining.md)  
+-   [Requêtes de prédiction & #40 ; exploration de données & #41 ;](../../analysis-services/data-mining/prediction-queries-data-mining.md)  
   
      Requêtes qui créent des inférences basées sur des schémas dans le modèle, et à partir des données d'entrée.  
   
@@ -68,7 +54,7 @@ Les requêtes d'exploration de données sont utiles à de nombreuses fins. Vous 
   
      Requêtes qui retournent des métadonnées, des statistiques et d'autres informations sur le modèle lui-même.  
   
--   [Requêtes d’extraction &#40; exploration de données &#41;](../../analysis-services/data-mining/drillthrough-queries-data-mining.md)  
+-   [Requêtes d’extraction & #40 ; exploration de données & #41 ;](../../analysis-services/data-mining/drillthrough-queries-data-mining.md)  
   
      Requêtes qui peuvent récupérer les données de cas sous-jacentes pour le modèle, ou même les données de la structure qui n'ont pas été utilisées dans le modèle.  
   
@@ -149,13 +135,13 @@ Les requêtes d'exploration de données sont utiles à de nombreuses fins. Vous 
 ## <a name="in-this-section"></a>Dans cette section  
  Les rubriques de cette section présentent chaque type de requête d'exploration de données plus en détail et fournissent des liens vers des exemples détaillés de création de requêtes sur des modèles d'exploration de données.  
   
- [Requêtes de prédiction &#40; exploration de données &#41;](../../analysis-services/data-mining/prediction-queries-data-mining.md)  
+ [Requêtes de prédiction & #40 ; exploration de données & #41 ;](../../analysis-services/data-mining/prediction-queries-data-mining.md)  
   
  [Requêtes de contenu &#40;Exploration de données&#41;](../../analysis-services/data-mining/content-queries-data-mining.md)  
   
  [Requêtes d’extraction &#40;exploration de données&#41;](../../analysis-services/data-mining/drillthrough-queries-data-mining.md)  
   
- [Requêtes de définition de données &#40; exploration de données &#41;](../../analysis-services/data-mining/data-definition-queries-data-mining.md)  
+ [Requêtes de définition de données & #40 ; exploration de données & #41 ;](../../analysis-services/data-mining/data-definition-queries-data-mining.md)  
   
  [Outils de requête d’exploration de données](../../analysis-services/data-mining/data-mining-query-tools.md)  
   

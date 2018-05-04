@@ -22,12 +22,11 @@ caps.latest.revision: 26
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 331f4e7d67524bb6fc4d3af706f9a28ef9dabb95
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: fb0c2586ba5ba25c7a5791e8f1ec9418f9079ec9
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mdx-statement-reference-mdx"></a>Guide de référence des instructions MDX (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -36,13 +35,13 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="in-this-section"></a>Dans cette section  
   
-|Rubrique|Description|  
+|Rubrique| Description|  
 |-----------|-----------------|  
-|[Instructions de script MDX &#40; MDX &#41;](../mdx/mdx-scripting-statements-mdx.md)|Contient des informations sur les instructions de script MDX qui gèrent le contexte de la requête, l'étendue et le contrôle de flux au sein des scripts MDX.|  
-|[Instructions MDX de définition de données &#40; MDX &#41;](../mdx/mdx-data-definition-statements-mdx.md)|Contient des informations sur les instructions de définition de données MDX qui créent, suppriment et manipulent des objets multidimensionnels.|  
-|[Instructions MDX de Manipulation de données &#40; MDX &#41;](../mdx/mdx-data-manipulation-statements-mdx.md)|Contient des informations sur les instructions de manipulation de données MDX qui récupèrent et manipulent les données d'objets multidimensionnels.|  
+|[Instructions de script MDX & #40 ; MDX & #41 ;](../mdx/mdx-scripting-statements-mdx.md)|Contient des informations sur les instructions de script MDX qui gèrent le contexte de la requête, l'étendue et le contrôle de flux au sein des scripts MDX.|  
+|[Instructions MDX de définition de données &#40;MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)|Contient des informations sur les instructions de définition de données MDX qui créent, suppriment et manipulent des objets multidimensionnels.|  
+|[Les instructions de Manipulation de données MDX &#40;MDX&#41;](../mdx/mdx-data-manipulation-statements-mdx.md)|Contient des informations sur les instructions de manipulation de données MDX qui récupèrent et manipulent les données d'objets multidimensionnels.|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Référence du langage MDX &#40; MDX &#41;](../mdx/mdx-language-reference-mdx.md)  
+ [Référence du langage MDX & #40 ; MDX & #41 ;](../mdx/mdx-language-reference-mdx.md)  
   
   

@@ -23,28 +23,28 @@ caps.latest.revision: 40
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 32df882f6f6b34c4cd5049713240460c62324ddb
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: ad15c20b68b3ccc69dee5b39c839f9f8dd0b2fab
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="dbschemacolumns-rowset"></a>Ensemble de lignes DBSCHEMA_COLUMNS
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Fournit des informations de colonne pour toutes les colonnes correspondant aux critères de restriction fournie.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Fournit des informations de colonne pour toutes les colonnes qui répondent aux critères de restriction indiqués.  
   
 ## <a name="rowset-columns"></a>Colonnes de l'ensemble de lignes  
  Le **DBSCHEMA_COLUMNS** ensemble de lignes contient les colonnes suivantes.  
   
-|Nom de colonne|Indicateur de type|Longueur|Description|  
+|Nom de colonne|Indicateur de type|Longueur| Description|  
 |-----------------|--------------------|------------|-----------------|  
 |**TABLE_CATALOG**|**DBTYPE_WSTR**||Nom de la base de données.|  
 |**TABLE_SCHEMA**|**DBTYPE_WSTR**||Non pris en charge.|  
 |**NOM_TABLE**|**DBTYPE_WSTR**||Nom du cube.|  
-|**NOM_COLONNE**|**DBTYPE_WSTR**||Nom de la mesure ou de la hiérarchie d'attribut.|  
+|**COLUMN_NAME**|**DBTYPE_WSTR**||Nom de la mesure ou de la hiérarchie d'attribut.|  
 |**COLUMN_GUID**|**DBTYPE_GUID**||Non pris en charge.|  
 |**COLUMN_PROPID**|**DBTYPE_UI4**||Non pris en charge.|  
-|**POSITION ORDINALE**|**DBTYPE_UI4**||Position de la colonne, à partir de 1.|  
+|**ORDINAL_POSITION**|**DBTYPE_UI4**||Position de la colonne, à partir de 1.|  
 |**COLUMN_HAS_DEFAULT**|**DBTYPE_BOOL**||Non pris en charge.|  
 |**COLUMN_DEFAULT**|**DBTYPE_WSTR**||Non pris en charge.|  
 |**COLUMN_FLAGS**|**DBTYPE_UI4**||A **DBCOLUMNFLAGS** masque de bits indiquant les propriétés de la colonne. Consultez « Type d’énuméré DBCOLUMNFLAGS » dans [IColumnsInfo::GetColumnInfo](http://msdn2.microsoft.com/library/ms722704.aspx)|  
@@ -78,10 +78,10 @@ ms.lasthandoff: 01/08/2018
 |**TABLE_CATALOG**|**DBTYPE_WSTR**|Ce paramètre est facultatif|  
 |**TABLE_SCHEMA**|**DBTYPE_WSTR**|Ce paramètre est facultatif|  
 |**NOM_TABLE**|**DBTYPE_WSTR**|Ce paramètre est facultatif|  
-|**NOM_COLONNE**|**DBTYPE_WSTR**|Ce paramètre est facultatif|  
+|**COLUMN_NAME**|**DBTYPE_WSTR**|Ce paramètre est facultatif|  
 |**COLUMN_OLAP_TYPE**|**DBTYPE_WSTR**|Ce paramètre est facultatif|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Ensembles de lignes de schéma OLE DB](../../../analysis-services/schema-rowsets/ole-db/ole-db-schema-rowsets.md)  
+ [Ensembles de lignes de schéma OLE DB](../../../analysis-services/schema-rowsets/ole-db/ole-db-schema-rowsets.md)  
   
   

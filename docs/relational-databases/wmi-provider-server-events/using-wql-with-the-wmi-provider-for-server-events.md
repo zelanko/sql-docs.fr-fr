@@ -23,12 +23,11 @@ caps.latest.revision: 36
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 05731087009d1f1ab444c7f740889ee441bb99a6
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 777d035c3b37f3e8f8eb5e329fe6d19152cced6b
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="using-wql-with-the-wmi-provider-for-server-events"></a>Utilisation de WQL avec le fournisseur WMI pour les événements de serveur
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -99,7 +98,7 @@ WHERE where_condition
   
  Le fournisseur WMI pour les événements serveur utilise un algorithme ascendant pour produire l'étendue la plus étroite possible pour l'EVENT NOTIFICATION sous-jacent. L'algorithme essaie de réduire l'activité interne sur le serveur, ainsi que le trafic réseau entre l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et le processus hôte de WMI. Le fournisseur examine le *event_type* spécifié dans la clause FROM et les conditions dans la clause WHERE et essaie d’inscrire l’EVENT NOTIFICATION sous-jacent avec la plus petite portée possible. Si le fournisseur ne peut pas effectuer l'inscription avec l'étendue la plus étroite, il essaie de s'inscrire successivement à des étendues supérieures jusqu'à ce qu'une inscription réussisse enfin. S'il atteint l'étendue la plus élevée (niveau serveur) et échoue, il retourne une erreur au consommateur.  
   
- Par exemple, si DatabaseName =**'**AdventureWorks**'**est spécifié dans la clause WHERE, le fournisseur essaie d’inscrire une notification d’événement dans le [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] base de données. Si la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] existe et que le client appelant a les autorisations requises pour créer une notification d'événements dans [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)], l'inscription est réussie. Sinon, une tentative a lieu pour enregistrer la notification d'événements au niveau serveur. L'inscription réussit si le client WMI a les autorisations requises. Toutefois, dans ce scénario, les événements ne sont pas retournés au client tant que la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] n'a pas été créée.  
+ Par exemple, si DatabaseName =**'** AdventureWorks **'** est spécifié dans la clause WHERE, le fournisseur essaie d’inscrire une notification d’événement dans le [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] base de données. Si la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] existe et que le client appelant a les autorisations requises pour créer une notification d'événements dans [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)], l'inscription est réussie. Sinon, une tentative a lieu pour enregistrer la notification d'événements au niveau serveur. L'inscription réussit si le client WMI a les autorisations requises. Toutefois, dans ce scénario, les événements ne sont pas retournés au client tant que la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] n'a pas été créée.  
   
  Le *where_condition* peut également agir en tant que filtre pour limiter en outre la requête à une base de données spécifique, un schéma ou un objet. Examinons, par exemple, la requête WQL suivante :  
   

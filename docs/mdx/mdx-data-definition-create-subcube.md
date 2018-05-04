@@ -26,12 +26,11 @@ caps.latest.revision: 32
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: bf2b3d21aa2eac4bc982b75257f8c1e2d87ea46b
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 6a1021b7a1443e598352f762bf4ecfdc3cea5e2a
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mdx-data-definition---create-subcube"></a>Définition de données MDX - créer un sous-cube
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -53,9 +52,9 @@ CREATE SUBCUBE Cube_Name AS Select_Statement
  *Select_Statement*  
  Expression MDX (Multidimensional Expressions) SELECT valide qui ne contient pas de clauses WITH, NON EMPTY ou HAVING et ne nécessite pas de propriétés de dimension ou de cellule.  
   
- Consultez [sélectionnez instruction &#40; MDX &#41; ](../mdx/mdx-data-manipulation-select.md) pour une explication de la syntaxe détaillée sur les instructions Select et **NON VISUAL** clause.  
+ Consultez [instruction SELECT &#40;MDX&#41; ](../mdx/mdx-data-manipulation-select.md) pour une explication de la syntaxe détaillée sur les instructions Select et **NON VISUAL** clause.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Lorsque les membres par défaut sont exclus de la définition d'un sous-cube, les coordonnées changent de façon correspondante. Pour les attributs qui peuvent être agrégés, le membre par défaut est déplacé vers le membre [All]. Pour les attributs qui ne peuvent pas être agrégés, le membre par défaut est déplacé vers un membre existant dans le sous-cube. Le tableau ci-dessous donne des exemples de combinaisons de sous-cubes et de membres par défaut.  
   
 |Membre par défaut d'origine|Peut être agrégé|Sous-sélection|Membre par défaut révisé|  
@@ -70,9 +69,9 @@ CREATE SUBCUBE Cube_Name AS Select_Statement
   
  Les objets de session créés dans le contexte d'un sous-cube sont supprimés lorsque le sous-cube est supprimé.  
   
- Pour plus d’informations sur les sous-cubes, consultez [sous-cubes de construction dans MDX &#40; MDX &#41; ](../analysis-services/multidimensional-models/mdx/building-subcubes-in-mdx-mdx.md).  
+ Pour plus d’informations sur les sous-cubes, consultez [sous-cubes de construction dans MDX &#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/building-subcubes-in-mdx-mdx.md).  
   
-## <a name="example"></a> Exemple  
+## <a name="example"></a>Exemple  
  L'exemple ci-dessous crée un sous-cube qui limite l'espace apparent du cube aux membres existants pour le Canada. Il utilise ensuite la **membres** fonction pour renvoyer tous les membres du pays au niveau de la hiérarchie Geography définie par l’utilisateur - retourner uniquement le pays du Canada.  
   
 ```  
@@ -146,9 +145,9 @@ SELECT [Geography].[Country].[Country].MEMBERS ON 0
  Les parties [All Products] et [All Resellers], colonne et ligne respectivement, contiennent des totaux pour tous les membres et pas seulement pour ceux qui sont visibles.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Concepts clés dans MDX &#40; Analysis Services &#41;](../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)   
- [Instructions de script MDX &#40; MDX &#41;](../mdx/mdx-scripting-statements-mdx.md)   
- [Instruction de sous-cube DROP &#40; MDX &#41;](../mdx/mdx-data-definition-drop-subcube.md)   
- [Instruction SELECT &#40; MDX &#41;](../mdx/mdx-data-manipulation-select.md)  
+ [Concepts clés dans MDX & #40 ; Analysis Services & #41 ;](../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)   
+ [Instructions de script MDX &#40;MDX&#41;](../mdx/mdx-scripting-statements-mdx.md)   
+ [Instruction de sous-cube DROP &#40;MDX&#41;](../mdx/mdx-data-definition-drop-subcube.md)   
+ [Instruction SELECT & #40 ; MDX & #41 ;](../mdx/mdx-data-manipulation-select.md)  
   
   

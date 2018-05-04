@@ -29,15 +29,15 @@ caps.latest.revision: 12
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: ad12131fe961f279bf0d670d91ab03900a8a6ad1
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: e28ea0859b689cec5d1ebeae987fdf55dc768205
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="axisinfo-element-xmla"></a>Élément AxisInfo (XMLA)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]Représente les métadonnées d’un axe contenue par le parent [AxesInfo](../../../analysis-services/xmla/xml-elements-properties/axesinfo-element-xmla.md) élément.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
+  Représente les métadonnées d’un axe contenue par le parent [AxesInfo](../../../analysis-services/xmla/xml-elements-properties/axesinfo-element-xmla.md) élément.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -56,8 +56,8 @@ ms.lasthandoff: 01/08/2018
   
 |Caractéristique|Description|  
 |--------------------|-----------------|  
-|Type de données et longueur|None|  
-|Valeur par défaut|None|  
+|Type de données et longueur|Aucune|  
+|Valeur par défaut|Aucune|  
 |Cardinalité|1-n : élément requis pouvant apparaître plusieurs fois.|  
   
 ## <a name="element-relationships"></a>Relations entre les éléments  
@@ -69,14 +69,14 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="attributes"></a>Attributs  
   
-|Attribute|Description|  
+|Attribut|Description|  
 |---------------|-----------------|  
-|Nom   |Attribut **String** requis. Nom de l'axe.|  
+|Nom|Attribut **String** requis. Nom de l'axe.|  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Dans un **racine** élément qui utilise le **MDDataSet** objet, un **AxisInfo** élément contient une collection de **HierarchyInfo** éléments qui, combinée avec la valeur de la **nom** attribut, représente la définition d’un axe retournée dans le dataset multidimensionnel.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Propriétés &#40; XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+ [Propriétés & #40 ; XMLA & #41 ;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

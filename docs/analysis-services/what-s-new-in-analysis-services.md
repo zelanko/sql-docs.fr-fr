@@ -1,29 +1,28 @@
 ---
-title: "Quel &#39; nouveauté dans Analysis Services | Documents Microsoft"
-ms.custom: 
+title: Ce que&#39;nouveauté dans Analysis Services | Documents Microsoft
+ms.custom: ''
 ms.date: 03/24/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 ms.assetid: aa69c299-b8f4-4969-86d8-b3292fe13f08
-caps.latest.revision: 
+caps.latest.revision: 97
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 6ec1299dc5e82e4af6093c914742d456e7897807
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
-ms.translationtype: MT
+ms.openlocfilehash: 75d2f8519d66ca80b90477711fd5b41dbc1f5100
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="what39s-new-in-analysis-services"></a>Quel &#39; nouveauté dans Analysis Services
+# <a name="what39s-new-in-analysis-services"></a>Ce que&#39;nouveauté dans Analysis Services
 [!INCLUDE[ssas-appliesto-sql2016](../includes/ssas-appliesto-sql2016.md)]
 
 SQL Server 2016 Analysis Services inclut de nombreuses nouvelles améliorations de fournir des performances améliorées, solution plus facile de création, de gestion automatisée de la base de données améliorée des relations avec bidirectionnelles entre le filtrage, le traitement des partitions parallèles et bien plus encore. Au cœur de la plupart des améliorations apportées à cette version se trouve le nouveau niveau de compatibilité 1200 pour les bases de données model tabulaires.     
@@ -89,7 +88,7 @@ Une *table calculée* est une construction de modèle uniquement qui est basée 
  ### <a name="parallel-processing-for-multiple-table-partitions-in-tabular-models"></a>Traitement en parallèle de plusieurs partitions de tables dans les modèles tabulaires    
  Cette version inclut une nouvelle fonctionnalité de traitement en parallèle des tables avec plusieurs partitions, ce qui améliore les performances de traitement. Il n’y a pas de paramètres de configuration pour cette fonctionnalité. Pour plus d’informations sur la configuration des partitions et de traiter les tables, consultez [des Partitions de modèles tabulaires](../analysis-services/tabular-models/tabular-model-partitions-ssas-tabular.md).    
  ### <a name="add-computer-accounts-as-administrators-in-ssms"></a>Ajout de comptes d’ordinateur en tant qu’administrateurs dans SSMS    
- [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] peuvent désormais utiliser [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] pour configurer des comptes d’ordinateur en tant que membres du groupe Administrateurs [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Dans la boîte de dialogue **Sélectionner des utilisateurs ou des groupes** , définissez l’option **Emplacements** pour le domaine des ordinateurs, puis ajoutez le type d’objet **Ordinateurs** . Pour plus d’informations, consultez [Accorder des droits d’administrateur de serveur à une instance Analysis Services](../analysis-services/instances/grant-server-admin-rights-to-an-analysis-services-instance.md).    
+ Les administrateurs de[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] peuvent désormais utiliser [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] pour configurer des comptes d’ordinateur en tant que membres du groupe d’administrateurs [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Dans la boîte de dialogue **Sélectionner des utilisateurs ou des groupes** , définissez l’option **Emplacements** pour le domaine des ordinateurs, puis ajoutez le type d’objet **Ordinateurs** . Pour plus d’informations, consultez [Accorder des droits d’administrateur de serveur à une instance Analysis Services](../analysis-services/instances/grant-server-admin-rights-to-an-analysis-services-instance.md).    
  ### <a name="dbcc-for-analysis-services"></a>DBCC pour Analysis Services    
  DBCC (Database Consistency Checker) s’exécute en interne pour détecter la présence potentielle de données endommagées au chargement d’une base de données, mais il peut aussi être exécuté à la demande si vous soupçonnez des problèmes dans vos données ou un modèle. DBCC exécute des vérifications différentes selon que le modèle est tabulaire ou multidimensionnel. Pour plus de détails, consultez [DBCC &#40;Database Consistency Checker&#41; pour les bases de données multidimensionnelles et tabulaires Analysis Services](../analysis-services/instances/database-consistency-checker-dbcc-for-analysis-services.md).    
  ### <a name="extended-events-updates"></a>Mises à jour des événements étendus    

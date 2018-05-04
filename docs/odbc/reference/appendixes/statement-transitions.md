@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - transitioning states [ODBC], statement
 - state transitions [ODBC], statement
@@ -21,12 +21,11 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: a0566a32a2c34efca52391aea656c6908a7f8906
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 94696a2975436669567db926b3d66020dd29ab5b
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="statement-transitions"></a>Transitions d’instruction
 Instructions ODBC ont les états suivants.  
@@ -330,7 +329,7 @@ Instructions ODBC ont les états suivants.
   
  [1] cette ligne affiche les transitions lorsque *Option* a été SQL_CLOSE.  
   
- [2] de cette ligne affiche les transitions lorsque *Option* était SQL_UNBIND ou SQL_RESET_PARAMS. Si le *Option* SQL_DROP a été l’argument et le pilote sous-jacent est un ODBC 3*.x* pilote, le Gestionnaire de pilotes mappe à un appel à **SQLFreeHandle** avec *HandleType* défini à SQL_HANDLE_STMT. Pour plus d’informations, consultez le tableau de transition pour [SQLFreeHandle](../../../odbc/reference/syntax/sqlfreehandle-function.md).  
+ [2] de cette ligne affiche les transitions lorsque *Option* était SQL_UNBIND ou SQL_RESET_PARAMS. Si le *Option* SQL_DROP a été l’argument et le pilote sous-jacent est un ODBC 3 *.x* pilote, le Gestionnaire de pilotes mappe à un appel à **SQLFreeHandle** avec *HandleType* défini à SQL_HANDLE_STMT. Pour plus d’informations, consultez le tableau de transition pour [SQLFreeHandle](../../../odbc/reference/syntax/sqlfreehandle-function.md).  
   
 ## <a name="sqlgetconnectattr"></a>SQLGetConnectAttr  
   

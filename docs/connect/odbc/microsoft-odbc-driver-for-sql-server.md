@@ -10,22 +10,21 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 9f2ae91b-06af-4c9a-9d24-062df7bc4662
 caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: a9e480bd8ab948c02be27aa82a8bcd8caa2d7015
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 7f7d037b0080b754e8a0ba65efc22a92ce43873b
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="microsoft-odbc-driver-for-sql-server"></a>Pilote Microsoft ODBC pour SQL Server
 
-![Téléchargement-bas encerclé](../../ssdt/media/download.png)[pour télécharger le pilote ODBC](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+[!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
 
 ODBC est l’API d’accès de données native principale pour les applications écrites en C et C++ pour SQL Server. Il existe un pilote ODBC pour la plupart des sources de données. Autres langues que vous peuvent utiliser ODBC incluent COBOL, Perl, PHP et Python. ODBC est largement utilisé dans les scénarios d’intégration de données.
 
@@ -33,15 +32,15 @@ Le pilote ODBC est fourni avec des outils comme [ **sqlcmd** ](../../tools/sqlcm
 
 ## <a name="code-example-in-c"></a>Exemple de code en C++
 
-Nous avons un fichier de petite .zip qui contient le code source d’un programme C++ qui utilise ODBC :
+L’exemple C++ suivant illustre l’utilisation de l’API ODBC pour se connecter à et d’accéder à une base de données :
 
 - [Exemple de code C++, l’utilisation d’ODBC](../../odbc/reference/sample-odbc-program.md)
 
 ## <a name="download"></a>Télécharger
 
-- ![Téléchargement-bas encerclé](../../ssdt/media/download.png)[pour télécharger le pilote ODBC](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+- ![Téléchargement-bas encerclé](../../ssdt/media/download.png)[pour télécharger le pilote ODBC](download-odbc-driver-for-sql-server.md)
 
-## <a name="documentation"></a>Documentation  
+## <a name="documentation"></a>Documentation
 
 ### <a name="features"></a>Fonctionnalités
 

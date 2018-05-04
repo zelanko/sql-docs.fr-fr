@@ -1,31 +1,32 @@
 ---
-title: "Élément DisplayKeyPosition (XML) | Documents Microsoft"
-ms.custom: 
+title: Élément DisplayKeyPosition (XML) | Documents Microsoft
+ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 ms.assetid: 345a24e6-186c-4570-baf2-7bfe9b7b4cc1
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 7c331f8a3bb2b7555e5a755c6e84a228a0ee7a03
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 286d23944458d074d5959b86c6e8e61ab26ec806
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="displaykeyposition-element-xml"></a>Élément DisplayKeyPosition (XML)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]Contient des informations sur la position de l’élément dans une collection d’éléments.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
+  Contient des informations sur la position de l'élément dans une collection d'éléments.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -51,9 +52,9 @@ ms.lasthandoff: 01/08/2018
 |Relation|Élément|  
 |------------------|-------------|  
 |Éléments parents|[RelationshipEndVisualizationProperties](../../../analysis-services/scripting/data-type/relationshipendvisualizationproperties-data-type-assl.md)|  
-|Éléments enfants|None|  
+|Éléments enfants|Aucune|  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Pour **RelationshipEndVisualizationProperties** éléments, le **DisplayKeyPosition** élément contient la position de l’élément clé dans une collection de détails. La valeur par défaut indique qu'il n'y a pas de clé d'affichage à utiliser.  
   
   

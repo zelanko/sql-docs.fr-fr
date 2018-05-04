@@ -25,13 +25,12 @@ caps.latest.revision: 50
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: caf1f7cc37ab428b4f5c0ec1c57fdb0fbed4b214
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 294a1ebedc6b647534107b0580b3a8b8d11c86d9
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="routines-transact-sql"></a>ROUTINES (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -45,55 +44,55 @@ ms.lasthandoff: 04/16/2018
   
 |Nom de colonne|Type de données| Description|  
 |-----------------|---------------|-----------------|  
-|SPECIFIC_CATALOG|**nvarchar(**128**)**|Nom spécifique du catalogue Ce nom est le même que ROUTINE_CATALOG.|  
-|SPECIFIC_SCHEMA|**nvarchar(**128**)**|Nom spécifique du schéma.<br /><br /> **\*\* Important \* \***  n’utilisez pas les vues INFORMATION_SCHEMA pour déterminer le schéma d’un objet. La seule méthode fiable pour rechercher le schéma d’un objet est d’interroger l’affichage catalogue sys.objects.|  
-|SPECIFIC_NAME|**nvarchar(**128**)**|Nom spécifique du catalogue Ce nom est le même que ROUTINE_NAME.|  
-|ROUTINE_CATALOG|**nvarchar(**128**)**|Nom de catalogue de la fonction|  
-|ROUTINE_SCHEMA|**nvarchar(**128**)**|Nom du schéma contenant cette fonction.<br /><br /> **\*\* Important \* \***  n’utilisez pas les vues INFORMATION_SCHEMA pour déterminer le schéma d’un objet. La seule méthode fiable pour rechercher le schéma d’un objet est d’interroger l’affichage catalogue sys.objects.|  
-|ROUTINE_NAME|**nvarchar(**128**)**|Nom de la fonction.|  
-|ROUTINE_TYPE|**nvarchar (**20**)**|Renvoie la valeur PROCEDURE pour les procédures stockées et la valeur FUNCTION pour les fonctions.|  
-|MODULE_CATALOG|**nvarchar(**128**)**|NULL. Réservé pour un usage ultérieur.|  
-|MODULE_SCHEMA|**nvarchar(**128**)**|NULL. Réservé pour un usage ultérieur.|  
-|MODULE_NAME|**nvarchar(**128**)**|NULL. Réservé pour un usage ultérieur.|  
-|UDT_CATALOG|**nvarchar(**128**)**|NULL. Réservé pour un usage ultérieur.|  
-|UDT_SCHEMA|**nvarchar(**128**)**|NULL. Réservé pour un usage ultérieur.|  
-|UDT_NAME|**nvarchar(**128**)**|NULL. Réservé pour un usage ultérieur.|  
-|DATA_TYPE|**nvarchar(**128**)**|Type de données de la valeur renvoyée de la fonction. Retourne **table** si une fonction table.|  
+|SPECIFIC_CATALOG|**nvarchar(** 128 **)**|Nom spécifique du catalogue Ce nom est le même que ROUTINE_CATALOG.|  
+|SPECIFIC_SCHEMA|**nvarchar(** 128 **)**|Nom spécifique du schéma.<br /><br /> **\*\* Important \* \***  n’utilisez pas les vues INFORMATION_SCHEMA pour déterminer le schéma d’un objet. La seule méthode fiable pour rechercher le schéma d’un objet est d’interroger l’affichage catalogue sys.objects.|  
+|SPECIFIC_NAME|**nvarchar(** 128 **)**|Nom spécifique du catalogue Ce nom est le même que ROUTINE_NAME.|  
+|ROUTINE_CATALOG|**nvarchar(** 128 **)**|Nom de catalogue de la fonction|  
+|ROUTINE_SCHEMA|**nvarchar(** 128 **)**|Nom du schéma contenant cette fonction.<br /><br /> **\*\* Important \* \***  n’utilisez pas les vues INFORMATION_SCHEMA pour déterminer le schéma d’un objet. La seule méthode fiable pour rechercher le schéma d’un objet est d’interroger l’affichage catalogue sys.objects.|  
+|ROUTINE_NAME|**nvarchar(** 128 **)**|Nom de la fonction.|  
+|ROUTINE_TYPE|**nvarchar (** 20 **)**|Renvoie la valeur PROCEDURE pour les procédures stockées et la valeur FUNCTION pour les fonctions.|  
+|MODULE_CATALOG|**nvarchar(** 128 **)**|NULL. Réservé pour un usage ultérieur.|  
+|MODULE_SCHEMA|**nvarchar(** 128 **)**|NULL. Réservé pour un usage ultérieur.|  
+|MODULE_NAME|**nvarchar(** 128 **)**|NULL. Réservé pour un usage ultérieur.|  
+|UDT_CATALOG|**nvarchar(** 128 **)**|NULL. Réservé pour un usage ultérieur.|  
+|UDT_SCHEMA|**nvarchar(** 128 **)**|NULL. Réservé pour un usage ultérieur.|  
+|UDT_NAME|**nvarchar(** 128 **)**|NULL. Réservé pour un usage ultérieur.|  
+|DATA_TYPE|**nvarchar(** 128 **)**|Type de données de la valeur renvoyée de la fonction. Retourne **table** si une fonction table.|  
 |CHARACTER_MAXIMUM_LENGTH|**int**|Longueur maximale en caractères, lorsque la valeur renvoyée est de type caractère.<br /><br /> -1 pour **xml** et les données de type de valeur élevée.|  
 |CHARACTER_OCTET_LENGTH|**int**|Longueur maximale en octets, lorsque la valeur renvoyée est de type caractère.<br /><br /> -1 pour **xml** et les données de type de valeur élevée.|  
-|COLLATION_CATALOG|**nvarchar(**128**)**|Retourne toujours la valeur Null.|  
-|COLLATION_SCHEMA|**nvarchar(**128**)**|Retourne toujours la valeur Null.|  
-|COLLATION_NAME|**nvarchar(**128**)**|Nom de classement de la valeur renvoyée. Renvoie la valeur NULL pour les types non-caractère.|  
-|CHARACTER_SET_CATALOG|**nvarchar(**128**)**|Retourne toujours la valeur Null.|  
-|CHARACTER_SET_SCHEMA|**nvarchar(**128**)**|Retourne toujours la valeur Null.|  
-|CHARACTER_SET_NAME|**nvarchar(**128**)**|Nom du jeu de caractères de la valeur renvoyée. Renvoie la valeur NULL pour les types non-caractère.|  
+|COLLATION_CATALOG|**nvarchar(** 128 **)**|Retourne toujours la valeur Null.|  
+|COLLATION_SCHEMA|**nvarchar(** 128 **)**|Retourne toujours la valeur Null.|  
+|COLLATION_NAME|**nvarchar(** 128 **)**|Nom de classement de la valeur renvoyée. Renvoie la valeur NULL pour les types non-caractère.|  
+|CHARACTER_SET_CATALOG|**nvarchar(** 128 **)**|Retourne toujours la valeur Null.|  
+|CHARACTER_SET_SCHEMA|**nvarchar(** 128 **)**|Retourne toujours la valeur Null.|  
+|CHARACTER_SET_NAME|**nvarchar(** 128 **)**|Nom du jeu de caractères de la valeur renvoyée. Renvoie la valeur NULL pour les types non-caractère.|  
 |NUMERIC_PRECISION|**smallint**|Précision numérique de la valeur renvoyée. Pour les types non numériques, retourne NULL.|  
 |NUMERIC_PRECISION_RADIX|**smallint**|Base de la précision numérique de la valeur renvoyée. Renvoie la valeur NULL pour les types non numériques.|  
 |NUMERIC_SCALE|**smallint**|Échelle de la valeur renvoyée. Renvoie la valeur NULL pour les types non numériques.|  
 |DATETIME_PRECISION|**smallint**|Précision de fraction de seconde si la valeur de retour est de type **datetime**. Dans le cas contraire, la valeur NULL est retournée.|  
-|INTERVAL_TYPE|**nvarchar (**30**)**|NULL. Réservé pour un usage ultérieur.|  
+|INTERVAL_TYPE|**nvarchar (** 30 **)**|NULL. Réservé pour un usage ultérieur.|  
 |INTERVAL_PRECISION|**smallint**|NULL. Réservé pour un usage ultérieur.|  
-|TYPE_UDT_CATALOG|**nvarchar(**128**)**|NULL. Réservé pour un usage ultérieur.|  
-|TYPE_UDT_SCHEMA|**nvarchar(**128**)**|NULL. Réservé pour un usage ultérieur.|  
-|TYPE_UDT_NAME|**nvarchar(**128**)**|NULL. Réservé pour un usage ultérieur.|  
-|SCOPE_CATALOG|**nvarchar(**128**)**|NULL. Réservé pour un usage ultérieur.|  
-|SCOPE_SCHEMA|**nvarchar(**128**)**|NULL. Réservé pour un usage ultérieur.|  
-|SCOPE_NAME|**nvarchar(**128**)**|NULL. Réservé pour un usage ultérieur.|  
+|TYPE_UDT_CATALOG|**nvarchar(** 128 **)**|NULL. Réservé pour un usage ultérieur.|  
+|TYPE_UDT_SCHEMA|**nvarchar(** 128 **)**|NULL. Réservé pour un usage ultérieur.|  
+|TYPE_UDT_NAME|**nvarchar(** 128 **)**|NULL. Réservé pour un usage ultérieur.|  
+|SCOPE_CATALOG|**nvarchar(** 128 **)**|NULL. Réservé pour un usage ultérieur.|  
+|SCOPE_SCHEMA|**nvarchar(** 128 **)**|NULL. Réservé pour un usage ultérieur.|  
+|SCOPE_NAME|**nvarchar(** 128 **)**|NULL. Réservé pour un usage ultérieur.|  
 |MAXIMUM_CARDINALITY|**bigint**|NULL. Réservé pour un usage ultérieur.|  
-|DTD_IDENTIFIER|**nvarchar(**128**)**|NULL. Réservé pour un usage ultérieur.|  
-|ROUTINE_BODY|**nvarchar (**30**)**|Renvoie la valeur SQL pour une fonction [!INCLUDE[tsql](../../includes/tsql-md.md)] et la valeur EXTERNAL pour une fonction externe.<br /><br /> Les fonctions sont toujours en SQL.|  
-|ROUTINE_DEFINITION|**nvarchar (**4000**)**|Retourne les 4 000 premiers caractères du texte de définition de la fonction ou de la procédure stockée, si ces dernières ne sont pas chiffrées. Dans le cas contraire, la valeur NULL est retournée.<br /><br /> Pour garantir l’obtention de la définition complète, interrogez la [OBJECT_DEFINITION](../../t-sql/functions/object-definition-transact-sql.md) fonction ou la colonne de la définition de la [sys.sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md) affichage catalogue.|  
-|EXTERNAL_NAME|**nvarchar(**128**)**|NULL. Réservé pour un usage ultérieur.|  
-|EXTERNAL_LANGUAGE|**nvarchar (**30**)**|NULL. Réservé pour un usage ultérieur.|  
-|PARAMETER_STYLE|**nvarchar (**30**)**|NULL. Réservé pour un usage ultérieur.|  
-|IS_DETERMINISTIC|**nvarchar (**10**)**|Renvoie la valeur YES si la routine est déterministe.<br /><br /> Renvoie la valeur NO si la routine est non déterministe.<br /><br /> Renvoie toujours la valeur NO pour les procédures stockées.|  
-|SQL_DATA_ACCESS|**nvarchar (**30**)**|Renvoie l'une des valeurs suivantes :<br /><br /> NONE = La fonction de contient pas de SQL.<br /><br /> CONTAINS = La fonction est susceptible de contenir du SQL.<br /><br /> READS = La fonction est susceptible de lire des données SQL.<br /><br /> MODIFIES = La fonction est susceptible de modifier des données SQL.<br /><br /> La valeur READS est renvoyée pour toutes les fonctions et la valeur MODIFIES est renvoyée pour toutes les procédures stockées.|  
-|IS_NULL_CALL|**nvarchar (**10**)**|Indique si la routine est appelée lorsque l'un de ses arguments a la valeur NULL.|  
-|SQL_PATH|**nvarchar(**128**)**|NULL. Réservé pour un usage ultérieur.|  
-|SCHEMA_LEVEL_ROUTINE|**nvarchar (**10**)**|Renvoie YES dans le cas d'une fonction au niveau du schéma, ou NO dans le cas contraire.<br /><br /> Retourne toujours YES.|  
+|DTD_IDENTIFIER|**nvarchar(** 128 **)**|NULL. Réservé pour un usage ultérieur.|  
+|ROUTINE_BODY|**nvarchar (** 30 **)**|Renvoie la valeur SQL pour une fonction [!INCLUDE[tsql](../../includes/tsql-md.md)] et la valeur EXTERNAL pour une fonction externe.<br /><br /> Les fonctions sont toujours en SQL.|  
+|ROUTINE_DEFINITION|**nvarchar (** 4000 **)**|Retourne les 4 000 premiers caractères du texte de définition de la fonction ou de la procédure stockée, si ces dernières ne sont pas chiffrées. Dans le cas contraire, la valeur NULL est retournée.<br /><br /> Pour garantir l’obtention de la définition complète, interrogez la [OBJECT_DEFINITION](../../t-sql/functions/object-definition-transact-sql.md) fonction ou la colonne de la définition de la [sys.sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md) affichage catalogue.|  
+|EXTERNAL_NAME|**nvarchar(** 128 **)**|NULL. Réservé pour un usage ultérieur.|  
+|EXTERNAL_LANGUAGE|**nvarchar (** 30 **)**|NULL. Réservé pour un usage ultérieur.|  
+|PARAMETER_STYLE|**nvarchar (** 30 **)**|NULL. Réservé pour un usage ultérieur.|  
+|IS_DETERMINISTIC|**nvarchar (** 10 **)**|Renvoie la valeur YES si la routine est déterministe.<br /><br /> Renvoie la valeur NO si la routine est non déterministe.<br /><br /> Renvoie toujours la valeur NO pour les procédures stockées.|  
+|SQL_DATA_ACCESS|**nvarchar (** 30 **)**|Renvoie l'une des valeurs suivantes :<br /><br /> NONE = La fonction de contient pas de SQL.<br /><br /> CONTAINS = La fonction est susceptible de contenir du SQL.<br /><br /> READS = La fonction est susceptible de lire des données SQL.<br /><br /> MODIFIES = La fonction est susceptible de modifier des données SQL.<br /><br /> La valeur READS est renvoyée pour toutes les fonctions et la valeur MODIFIES est renvoyée pour toutes les procédures stockées.|  
+|IS_NULL_CALL|**nvarchar (** 10 **)**|Indique si la routine est appelée lorsque l'un de ses arguments a la valeur NULL.|  
+|SQL_PATH|**nvarchar(** 128 **)**|NULL. Réservé pour un usage ultérieur.|  
+|SCHEMA_LEVEL_ROUTINE|**nvarchar (** 10 **)**|Renvoie YES dans le cas d'une fonction au niveau du schéma, ou NO dans le cas contraire.<br /><br /> Retourne toujours YES.|  
 |MAX_DYNAMIC_RESULT_SETS|**smallint**|Nombre maximal d'ensembles de résultats dynamiques renvoyés par la routine.<br /><br /> Renvoie 0 dans le cas des fonctions.|  
-|IS_USER_DEFINED_CAST|**nvarchar (**10**)**|Renvoie YES dans le cas d'une fonction CAST définie par l'utilisateur, ou NO dans le cas contraire.<br /><br /> Renvoie toujours NO.|  
-|IS_IMPLICITLY_INVOCABLE|**nvarchar (**10**)**|Renvoie la valeur YES si la routine peut être appelée implicitement et NO dans le cas contraire.<br /><br /> Renvoie toujours NO.|  
+|IS_USER_DEFINED_CAST|**nvarchar (** 10 **)**|Renvoie YES dans le cas d'une fonction CAST définie par l'utilisateur, ou NO dans le cas contraire.<br /><br /> Renvoie toujours NO.|  
+|IS_IMPLICITLY_INVOCABLE|**nvarchar (** 10 **)**|Renvoie la valeur YES si la routine peut être appelée implicitement et NO dans le cas contraire.<br /><br /> Renvoie toujours NO.|  
 |CREATED|**datetime**|Heure de création de la routine.|  
 |LAST_ALTERED|**datetime**|Dernière date/heure de modification de la fonction.|  
   

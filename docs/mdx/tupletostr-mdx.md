@@ -22,12 +22,11 @@ caps.latest.revision: 32
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 0c777583e5ae027ab3f2ada53b4b168431e3390a
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 9a3a17d50ac15f7f59b41881d95a6e0c5fc2a3a6
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="tupletostr-mdx"></a>TupleToStr (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -45,8 +44,8 @@ TupleToStr(Tuple_Expression)
  *Tuple_Expression*  
  Expression MDX (Multidimensional Expressions) valide qui retourne un tuple.  
   
-## <a name="remarks"></a>Notes   
- Cette fonction permet de transférer une représentation de chaîne d'un tuple vers une fonction externe à des fins d'analyse. La chaîne qui est retournée apparaît entre accolades {} et chaque membre (si plusieurs membres sont expressément définis dans le tuple) est séparé par une virgule.  
+## <a name="remarks"></a>Notes  
+ Cette fonction permet de transférer une représentation de chaîne d'un tuple vers une fonction externe à des fins d'analyse. La chaîne retournée est placée entre accolades {} et chaque membre, si plusieurs sont expressément défini dans le tuple, séparée par une virgule.  
   
 ## <a name="examples"></a>Exemples  
  L'exemple ci-dessous retourne la chaîne ([Date].[Calendar Year].&[2001],[Geography].[Geography].[Country].&[United States]) :  
@@ -77,6 +76,6 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Référence des fonctions MDX &#40; MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Référence des fonctions MDX & #40 ; MDX & #41 ;](../mdx/mdx-function-reference-mdx.md)  
   
   

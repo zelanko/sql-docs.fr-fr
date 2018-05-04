@@ -22,12 +22,11 @@ caps.latest.revision: 15
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 900b602a00e11cc58cd6500cafc99eb90dcca62d
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: ad69726d5cdba7b421c33bdde86f46c187af4049
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="slash-star-comment-dmx"></a>Barre oblique étoile (commentaire) (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -45,17 +44,17 @@ ms.lasthandoff: 01/08/2018
  *Comment_Text*  
  Chaîne contenant le texte du commentaire.  
   
-## <a name="remarks"></a>Notes   
- Commentaires de plusieurs lignes doivent être signalés par / * et \*/.  
+## <a name="remarks"></a>Notes  
+ Les commentaires de plusieurs lignes doivent être signalés par /* et \*/.  
   
  Il n'y a pas de longueur maximale pour les commentaires.  
   
- Pour plus d’informations sur l’utilisation de différents types de commentaires dans DMX, consultez [commentaires &#40; DMX &#41;](../dmx/comments-dmx.md).  
+ Pour plus d’informations sur l’utilisation de différents types de commentaires dans DMX, consultez [commentaires &#40;DMX&#41;](../dmx/comments-dmx.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Double barre oblique &#40; Commentaire &#41; &#40; DMX &#41;](../dmx/double-slash-comment-dmx.md)   
- [--&#40; Commentaire &#41; &#40; DMX &#41; Résumé](../dmx/comment-dmx-summary.md)   
- [Les Extensions d’exploration de données &#40; DMX &#41; Référence des opérateurs](../dmx/data-mining-extensions-dmx-operator-reference.md)   
- [Opérateurs &#40; DMX &#41;](../dmx/operators-dmx.md)  
+ [Double barre oblique &#40;commentaire&#41; &#40;DMX&#41;](../dmx/double-slash-comment-dmx.md)   
+ [-- &#40;Commentaire&#41; &#40;DMX&#41; résumé](../dmx/comment-dmx-summary.md)   
+ [Data Mining Extensions &#40;DMX&#41; référence des opérateurs](../dmx/data-mining-extensions-dmx-operator-reference.md)   
+ [Opérateurs &#40;DMX&#41;](../dmx/operators-dmx.md)  
   
   

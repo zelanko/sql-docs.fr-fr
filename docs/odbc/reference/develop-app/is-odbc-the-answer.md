@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - interoperability [ODBC], ODBC
 ms.assetid: bfa5e6ee-5979-42a9-be6f-a84d1ee7a54c
@@ -19,12 +19,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 4fffe02b0e000750792bc71654bbc59becf0f087
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: c92ffbcdf0dc09ddb72916ebb1207775a7157d7d
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="is-odbc-the-answer"></a>La réponse est ODBC ?
 Avant d’aborder la question de l’interopérabilité, envisagez la question suivante : l’application doit-elle utiliser ODBC du tout ? Cela peut sembler étrange question à poser dans un guide pour ODBC, mais il est en fait, un message légitime. ODBC n’est pas conçu pour remplacer complètement les API de bases de données natif, ni si elle a été conçue pour fournir un accès de base de données dans toutes les circonstances. Il a été conçu pour fournir une interface commune pour les bases de données et a été conçu pour libérer les programmeurs d’applications d’avoir à en savoir plus sur et mettre à jour des liens vers plusieurs bases de données.  

@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 apiname:
 - SQLFreeHandle
 apilocation:
@@ -26,12 +26,11 @@ caps.latest.revision: 35
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 601d1257b99e3c3a9713730ef1ea110905d0143f
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 41ed0af53844edfe55203e8310ce326fb2c4e2b8
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlfreehandle-function"></a>Fonction SQLFreeHandle
 **Mise en conformité**  
@@ -41,7 +40,7 @@ ms.lasthandoff: 04/16/2018
  **SQLFreeHandle** libère les ressources associées à un handle d’environnement, connexion, instruction ou descripteur spécifique.  
   
 > [!NOTE]  
->  Cette fonction est une fonction générique pour la libération des handles. Il remplace les fonctions ODBC 2.0 **SQLFreeConnect** (pour la libération d’un handle de connexion) et **SQLFreeEnv** (pour la libération d’un handle d’environnement). **SQLFreeConnect** et **SQLFreeEnv** sont déconseillés dans ODBC 3*.x*. **SQLFreeHandle** remplace également la fonction ODBC 2.0 **SQLFreeStmt** (avec la SQL_DROP *Option*) pour la libération d’un descripteur d’instruction. Pour plus d’informations, consultez « Commentaires ». Pour plus d’informations sur ce que le Gestionnaire de pilotes mappe cette fonction pour lorsqu’un ODBC 3*.x* application fonctionne avec une API ODBC 2*.x* pilote, consultez [mappage des fonctions de remplacement pour la compatibilité descendante des Applications](../../../odbc/reference/develop-app/mapping-replacement-functions-for-backward-compatibility-of-applications.md).  
+>  Cette fonction est une fonction générique pour la libération des handles. Il remplace les fonctions ODBC 2.0 **SQLFreeConnect** (pour la libération d’un handle de connexion) et **SQLFreeEnv** (pour la libération d’un handle d’environnement). **SQLFreeConnect** et **SQLFreeEnv** sont déconseillés dans ODBC 3 *.x*. **SQLFreeHandle** remplace également la fonction ODBC 2.0 **SQLFreeStmt** (avec la SQL_DROP *Option*) pour la libération d’un descripteur d’instruction. Pour plus d’informations, consultez « Commentaires ». Pour plus d’informations sur ce que le Gestionnaire de pilotes mappe cette fonction pour lorsqu’un ODBC 3 *.x* application fonctionne avec une API ODBC 2 *.x* pilote, consultez [mappage des fonctions de remplacement pour la compatibilité descendante des Applications](../../../odbc/reference/develop-app/mapping-replacement-functions-for-backward-compatibility-of-applications.md).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -90,7 +89,7 @@ SQLRETURN SQLFreeHandle(
 |HY017|Utilisation non valide d’un handle de descripteur alloué automatiquement.|(DM) le *gérer* a été défini pour le handle pour un descripteur alloué automatiquement.|  
 |HY117|Connexion est interrompue en raison de l’état de transaction inconnu. Déconnecter uniquement et les fonctions en lecture seule sont autorisées.|(DM) pour plus d’informations sur l’état suspendu, consultez [fonction SQLEndTran](../../../odbc/reference/syntax/sqlendtran-function.md).|  
 |HYT01|Délai de connexion a expiré.|Le délai d’expiration de connexion a expiré avant que la source de données a répondu à la demande. Le délai d’expiration de connexion est défini par le **SQLSetConnectAttr**, SQL_ATTR_CONNECTION_TIMEOUT.|  
-|IM001|Pilote ne prend pas en charge cette fonction|(DM) le *HandleType* argument SQL_HANDLE_DESC, et le pilote était un ODBC 2*.x* pilote.<br /><br /> (DM) le *HandleType* argument était SQL_HANDLE_STMT et le pilote n’a pas un pilote ODBC.|  
+|IM001|Pilote ne prend pas en charge cette fonction|(DM) le *HandleType* argument SQL_HANDLE_DESC, et le pilote était un ODBC 2 *.x* pilote.<br /><br /> (DM) le *HandleType* argument était SQL_HANDLE_STMT et le pilote n’a pas un pilote ODBC.|  
   
 ## <a name="comments"></a>Commentaires  
  **SQLFreeHandle** est utilisée pour libérer les handles pour les environnements, les connexions, les instructions et les descripteurs, comme décrit dans les sections suivantes. Pour obtenir des informations générales sur les handles, consultez [Handles](../../../odbc/reference/develop-app/handles.md).  
@@ -103,7 +102,7 @@ SQLRETURN SQLFreeHandle(
  Si l’environnement est un environnement partagé, l’application qui appelle **SQLFreeHandle** avec un *HandleType* de SQL_HANDLE_ENV n’a plus accès à l’environnement après l’appel, mais les ressources de l’environnement ne sont pas nécessairement libérées. L’appel à **SQLFreeHandle** décrémente le décompte de références de l’environnement. Le décompte de références est conservé par le Gestionnaire de pilotes. Si elle ne parvient pas à zéro, l’environnement partagé n’est pas libéré, car il est toujours utilisé par un autre composant. Si le décompte de références atteint zéro, les ressources de l’environnement partagé sont libérées.  
   
 ## <a name="freeing-a-connection-handle"></a>La libération d’un Handle de connexion  
- Avant d’appeler **SQLFreeHandle** avec un *HandleType* de SQL_HANDLE_DBC, une application doit appeler **SQLDisconnect** pour la connexion s’il existe une connexion sur ce gérer les*.* Dans le cas contraire, l’appel à **SQLFreeHandle** retourne SQL_ERROR et la connexion reste valide.  
+ Avant d’appeler **SQLFreeHandle** avec un *HandleType* de SQL_HANDLE_DBC, une application doit appeler **SQLDisconnect** pour la connexion s’il existe une connexion sur ce gérer les *.* Dans le cas contraire, l’appel à **SQLFreeHandle** retourne SQL_ERROR et la connexion reste valide.  
   
  Pour plus d’informations, consultez [Handles de connexion](../../../odbc/reference/develop-app/connection-handles.md) et [déconnexion d’une Source de données ou le pilote](../../../odbc/reference/develop-app/disconnecting-from-a-data-source-or-driver.md).  
   
@@ -116,7 +115,7 @@ SQLRETURN SQLFreeHandle(
  Un appel à **SQLFreeHandle** avec un *HandleType* de SQL_HANDLE_DESC libère le handle de descripteur dans *gérer*. L’appel à **SQLFreeHandle** ne libère pas la mémoire allouée par l’application qui peut être référencée par un champ de pointeur (y compris les SQL_DESC_DATA_PTR, SQL_DESC_INDICATOR_PTR et SQL_DESC_OCTET_LENGTH_PTR) de n’importe quel enregistrement de descripteur de *gérer*. La mémoire allouée par le pilote pour les champs qui ne sont pas des champs de pointeur est libérée lorsque le handle est libéré. Lorsqu’un handle de descripteur alloué par l’utilisateur est libéré, toutes les instructions du handle libéré a été associé à revenir à leurs handles de descripteur alloué automatiquement respectifs.  
   
 > [!NOTE]  
->  ODBC 2*.x* pilotes ne prennent pas en charge libération des handles de descripteur, tout comme ils ne prennent pas en charge allouer des handles de descripteur.  
+>  ODBC 2 *.x* pilotes ne prennent pas en charge libération des handles de descripteur, tout comme ils ne prennent pas en charge allouer des handles de descripteur.  
   
  Notez que **SQLDisconnect** supprime automatiquement toutes les instructions et les descripteurs ouverts sur la connexion. Lorsqu’une application libère un handle d’instruction, il libère tous les descripteurs de généré automatiquement associés à ce handle.  
   

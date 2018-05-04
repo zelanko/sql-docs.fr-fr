@@ -19,13 +19,12 @@ caps.latest.revision: 9
 author: barbkess
 ms.author: barbkess
 manager: craigg
-ms.workload: Inactive
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: f63087431cfca9578d4af19c7a213a08806f97c8
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 774465439764220d854358da6fce331dd463b1e0
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spspecialcolumns100-sql-data-warehouse"></a>sp_special_columns_100 (entrepôt de données SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -62,16 +61,16 @@ sp_special_columns_100 [ @table_name = ] 'table_name'
  Nom du qualificateur de la table. *qualificateur* est **sysname**, avec NULL comme valeur par défaut. Divers produits SGBD prennent en charge d’affectation de noms en trois parties pour les tables (*qualifier.owner.name*). Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], cette colonne représente le nom de la base de données. Dans certains produits, elle représente le nom du serveur de l'environnement de base de données de la table.  
   
  [ @col_type=] '*type_colonne*'  
- Est le type de colonne. *type_colonne* est **char (**1**)**, avec un défaut Type R retourne la colonne ou jeu optimal de colonnes qui, en récupérant des valeurs à partir de l’ou les colonnes, permet de n’importe quelle ligne spécifié table pour identifier de manière unique. Une colonne peut être soit une colonne virtuelle spécifiquement créée à cet effet, soit la ou les colonnes d'un index unique de la table. Le type V fournit la ou les colonnes de la table spécifiée qui, le cas échéant, sont automatiquement mises à jour par la source de données lorsqu'une valeur dans la ligne est mise à jour par une transaction.  
+ Est le type de colonne. *type_colonne* est **char (** 1 **)**, avec un défaut Type R retourne la colonne ou jeu optimal de colonnes qui, en récupérant des valeurs à partir de l’ou les colonnes, permet de n’importe quelle ligne spécifié table pour identifier de manière unique. Une colonne peut être soit une colonne virtuelle spécifiquement créée à cet effet, soit la ou les colonnes d'un index unique de la table. Le type V fournit la ou les colonnes de la table spécifiée qui, le cas échéant, sont automatiquement mises à jour par la source de données lorsqu'une valeur dans la ligne est mise à jour par une transaction.  
   
  [ @scope=] '*étendue*'  
- Étendue minimale requise de l'identificateur de ligne ROWID. *étendue* est **char (**1**)**, avec t comme valeur par défaut Spécifie que le ROWID est valide uniquement lorsqu’il est positionné sur cette ligne. L'étendue T indique que le ROWID est valide pour l'ensemble de la transaction.  
+ Étendue minimale requise de l'identificateur de ligne ROWID. *étendue* est **char (** 1 **)**, avec t comme valeur par défaut Spécifie que le ROWID est valide uniquement lorsqu’il est positionné sur cette ligne. L'étendue T indique que le ROWID est valide pour l'ensemble de la transaction.  
   
  [ @nullable=] '*nullable*'  
- Permet de savoir si les colonnes spéciales peuvent accepter ou non une valeur NULL. *Nullable* est **char (**1**)**, avec une valeur par défaut U. O identifie les colonnes spéciales qui n’acceptent pas les valeurs null. U identifie les colonnes qui acceptent partiellement des valeurs NULL.  
+ Permet de savoir si les colonnes spéciales peuvent accepter ou non une valeur NULL. *Nullable* est **char (** 1 **)**, avec une valeur par défaut U. O identifie les colonnes spéciales qui n’acceptent pas les valeurs null. U identifie les colonnes qui acceptent partiellement des valeurs NULL.  
   
  [ @ODBCVer=] '*ODBCVer*'  
- Est la version ODBC utilisée. *ODBCVer* est **int (**4**)**, avec la valeur par défaut est 2. Cela indique ODBC version 2.0. Pour plus d’informations sur la différence entre la version 2.0 et ODBC version 3.0, consultez la spécification ODBC SQLSpecialColumns pour ODBC version 3.0.  
+ Est la version ODBC utilisée. *ODBCVer* est **int (** 4 **)**, avec la valeur par défaut est 2. Cela indique ODBC version 2.0. Pour plus d’informations sur la différence entre la version 2.0 et ODBC version 3.0, consultez la spécification ODBC SQLSpecialColumns pour ODBC version 3.0.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  Aucun  
@@ -85,7 +84,7 @@ sp_special_columns_100 [ @table_name = ] 'table_name'
 |DATA_TYPE|**smallint**|Type de données ODBC SQL.|  
 |TYPE_NAME|**sysname**|Nom du type de données dépendant de la source de données ; par exemple, **char**, **varchar**, **money**, ou **texte**.|  
 |PRECISION|**Int**|Précision de la colonne dans la source de données. Ce champ retourne toujours une valeur.|  
-|LENGTH|**Int**|Longueur, en octets, nécessaire pour le type de données sous forme binaire dans la source de données, par exemple, 10 pour **char (**10**)**, 4 pour **entier**et 2 pour **smallint**.|  
+|LENGTH|**Int**|Longueur, en octets, nécessaire pour le type de données sous forme binaire dans la source de données, par exemple, 10 pour **char (** 10 **)**, 4 pour **entier**et 2 pour **smallint**.|  
 |SCALE|**smallint**|Échelle de la colonne dans la source de données. La valeur NULL est retournée pour les types de données pour lesquels l'échelle n'est pas applicable.|  
 |PSEUDO_COLUMN|**smallint**|Indique si la colonne est une colonne virtuelle. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retourne toujours 1 :<br /><br /> 0 = SQL_PC_UNKNOWN<br /><br /> 1 = SQL_PC_NOT_PSEUDO<br /><br /> 2 = SQL_PC_PSEUDO|  
   

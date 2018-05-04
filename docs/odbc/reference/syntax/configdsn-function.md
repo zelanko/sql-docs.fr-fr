@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 apiname:
 - ConfigDSN
 apilocation:
@@ -26,12 +26,11 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: dec94050079f41415983a63eac0669070145b2fa
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 2d7ae36927ef95bcfb96846b5f266da56e5f3bec
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configdsn-function"></a>ConfigDSN (fonction)
 **Mise en conformité**  
@@ -88,7 +87,7 @@ BOOL ConfigDSN(
 ## <a name="comments"></a>Commentaires  
  **ConfigDSN** reçoit des informations de connexion à partir de la DLL de programme d’installation en tant que liste d’attributs sous la forme de paires mot clé-valeur. Chaque paire se termine par un octet null, et la liste entière se termine par un octet null. (Autrement dit, deux octets null marquent la fin de la liste.) Les espaces ne sont pas autorisés autour du signe égal dans la paire mot clé-valeur. **ConfigDSN** peut accepter des mots clés qui ne sont pas des mots clés valides de **SQLBrowseConnect** et **SQLDriverConnect**. **ConfigDSN** ne prend en charge n’est pas nécessairement tous les mots clés qui sont des mots clés valides de **SQLBrowseConnect** et **SQLDriverConnect**. (**ConfigDSN** n’accepte pas les **pilote** (mot clé).) Les mots clés utilisés par le **ConfigDSN** fonction doit prendre en charge toutes les options requises pour recréer la source de données à l’aide de la fonctionnalité de configuration automatique du programme d’installation. Lorsque les utilisations de la **ConfigDSN** valeurs et les valeurs de chaîne de connexion sont les mêmes, les mêmes mots clés doivent être utilisés.  
   
- Comme dans **SQLBrowseConnect** et **SQLDriverConnect**, les mots clés et leurs valeurs ne doivent pas contenir le **[] {} (), ? \*= ! @** caractères et la valeur de la **DSN** mot clé ne peut pas se composer uniquement d’espaces. En raison de la grammaire du Registre, les noms de sources de données et les mots clés ne peut pas contenir la barre oblique inverse (\\) caractères.  
+ Comme dans **SQLBrowseConnect** et **SQLDriverConnect**, les mots clés et leurs valeurs ne doivent pas contenir le **[]{}(), ? \*= ! @** caractères et la valeur de la **DSN** mot clé ne peut pas se composer uniquement d’espaces. En raison de la grammaire du Registre, les noms de sources de données et les mots clés ne peut pas contenir la barre oblique inverse (\\) caractères.  
   
  **ConfigDSN** doit appeler **SQLValidDSN** pour vérifier la longueur du nom de la source de données et vérifiez qu’aucun caractère non valide n’est inclus dans le nom. Si le nom de source de données est supérieure à SQL_MAX_DSN_LENGTH ou contient des caractères non valides, **SQLValidDSN** renvoie une erreur et **ConfigDSN** renvoie une erreur. La longueur du nom de la source de données est également vérifiée par **SQLWriteDSNToIni**.  
   

@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - interoperability [ODBC], levels
 ms.assetid: 1f915832-a7c1-41cd-8c4f-bf6d976951b0
@@ -19,12 +19,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 3cf83e2d651915d485b2d834335c7b38f1c5e089
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 7ab508dfbfae8f49f2bb6887068fb192429405a7
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="choosing-a-level-of-interoperability"></a>Choix d’un niveau d’interopérabilité
 En supposant que l’application utilise ODBC, l’étape suivante consiste à déterminer le niveau d’interopérabilité est requis. Le niveau de base d’interopérabilité est généralement une fonction du type d’application : Custom applications tendent à ne pas être interopérable, les applications verticales ont tendance à être interopérables entre un nombre limité de SGBD et les applications génériques ont tendance à être interopérable parmi tous les SGBD.  

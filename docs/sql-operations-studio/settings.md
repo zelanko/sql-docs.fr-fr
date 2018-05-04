@@ -14,11 +14,11 @@ author: yualan
 ms.author: alayu
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7ec3ddc85512f0ae071865f4806358a5da28ff09
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: bbabb96b46a7054ed22daf034413df05c903e553
+ms.sourcegitcommit: 31df356f89c4cd91ba90dac609a7eb50b13836de
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="user-and-workspace-settings"></a>Utilisateur et les paramètres de l’espace de travail
 
@@ -35,7 +35,7 @@ La commande de menu **fichier** > **préférences** > **paramètres** (**Code** 
 
 Vous pouvez également ouvrir les paramètres utilisateur et l’espace de travail à partir de la **Palette de commandes** (**Ctrl + Maj + P**) avec **préférences : ouvrir les paramètres utilisateur** et  **Préférences : Paramètres d’espace de travail ouvert** ou utilisez le raccourci clavier (**Ctrl +**).
 
-L’exemple suivant désactive les numéros de ligne dans l’éditeur et configure les lignes de texte à la ligne automatiquement en fonction de la taille de l’éditeur.
+L’exemple suivant désactive les numéros de ligne dans l’éditeur et configure les lignes de code pour être mises en retrait automatiquement.
 
 ![Exemples de paramètres](media/settings/sample-settings.png)
 

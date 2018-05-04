@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 apiname:
 - SQLInstallDriverEx
 apilocation:
@@ -26,12 +26,11 @@ caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 85c6bcc740743473e8563fc3c3c25e967caff095
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 427a72ebdf63df7bb8d3d1ef93f306c9167782d5
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlinstalldriverex-function"></a>SQLInstallDriverEx (fonction)
 **Mise en conformité**  
@@ -106,9 +105,9 @@ BOOL SQLInstallDriverEx(
 ## <a name="comments"></a>Commentaires  
  Le *lpszDriver* argument est une liste d’attributs sous la forme de paires mot clé-valeur. Chaque paire se termine par un octet null, et la liste entière se termine par un octet null. (Autrement dit, deux octets null marquent la fin de la liste.) Le format de cette liste est la suivante :  
   
- *pilote-desc* **\\**0Driver**=***pilote-DLL-nom de fichier***\\**0 [le programme d’installation **= ***le programme d’installation-DLL-nom de fichier***\\**0]  
+ *pilote-desc* **\\** 0Driver**=***pilote-DLL-nom de fichier***\\** 0 [le programme d’installation **= ***le programme d’installation-DLL-nom de fichier***\\** 0]  
   
- [*pilote-attr-mot_clé1***=***value1 ***\\**0] [*pilote-attr-mot Clé2***=*** value2 ***\\**0]... **\\**0  
+ [*pilote-attr-mot_clé1***=*** value1 ***\\** 0] [* pilote-attr-mot Clé2***=*** value2 ***\\** 0]... **\\** 0  
   
  où \0 est un octet null et *pilote-attr-keywordn* est n’importe quel mot clé d’attribut pilote. Les mots clés doivent apparaître dans l’ordre spécifié. Par exemple, supposons qu’un pilote pour les fichiers de texte mis en forme possède de pilote séparé et le programme d’installation DLL et pouvez utiliser des fichiers portant les extensions .txt et .csv. Le *lpszDriver* argument pour ce pilote peut être comme suit :  
   

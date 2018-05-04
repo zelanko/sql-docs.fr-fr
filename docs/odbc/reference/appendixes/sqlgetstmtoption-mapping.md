@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQLGetStmtOption function [ODBC], mapping
 - mapping deprecated functions [ODBC], SQLGetStmtOption
@@ -20,15 +20,14 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: ce6b64f9151808e8b02f3036638d7322d3012938
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: ceb6213d6e10195cff663d4206d21a62f3e2fc75
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlgetstmtoption-mapping"></a>Mappage de SQLGetStmtOption
-Lorsqu’une application appelle **SQLGetStmtOption** à un ODBC 3*.x* pilote qui ne prend pas en charge il, l’appel à  
+Lorsqu’une application appelle **SQLGetStmtOption** à un ODBC 3 *.x* pilote qui ne prend pas en charge il, l’appel à  
   
 ```  
 SQLGetStmtOption(hstmt, fOption, pvParam)  
@@ -58,6 +57,6 @@ SQLGetStmtOption(hstmt, fOption, pvParam)
   
  Pour les options de connexion de chaîne définie par ODBC, le Gestionnaire de pilotes définit le *BufferLength* argument dans l’appel à **SQLGetConnectAttr** à la longueur maximale prédéfinie (SQL_MAX_OPTION_STRING_LENGTH) ; pour l’option de connexion sans chaînes, *BufferLength* est définie sur 0.  
   
- L’option d’instruction SQL_GET_BOOKMARK a été déconseillée dans ODBC 3*.x*. Pour un ODBC 3*.x* pilote pour fonctionner avec ODBC 2. *x* les applications qui utilisent SQL_GET_BOOKMARK, il doit prendre en charge SQL_GET_BOOKMARK. Pour un ODBC 3*.x* pilote pour fonctionner avec ODBC 2. *x* applications, il doit prendre en charge affectant SQL_USE_BOOKMARKS SQL_UB_ON et doit exposer des signets de longueur fixe. Si un ODBC 3*.x* pilote prend en charge uniquement des signets de longueur variable, les signets pas à longueur fixe, elle doit retourner la valeur SQLSTATE HYC00 (fonctionnalité facultative non implémentée) si un ODBC 2. *x* application tente de la valeur SQL_USE_BOOKMARKS SQL_UB_ON.  
+ L’option d’instruction SQL_GET_BOOKMARK a été déconseillée dans ODBC 3 *.x*. Pour un ODBC 3 *.x* pilote pour fonctionner avec ODBC 2. *x* les applications qui utilisent SQL_GET_BOOKMARK, il doit prendre en charge SQL_GET_BOOKMARK. Pour un ODBC 3 *.x* pilote pour fonctionner avec ODBC 2. *x* applications, il doit prendre en charge affectant SQL_USE_BOOKMARKS SQL_UB_ON et doit exposer des signets de longueur fixe. Si un ODBC 3 *.x* pilote prend en charge uniquement des signets de longueur variable, les signets pas à longueur fixe, elle doit retourner la valeur SQLSTATE HYC00 (fonctionnalité facultative non implémentée) si un ODBC 2. *x* application tente de la valeur SQL_USE_BOOKMARKS SQL_UB_ON.  
   
- Pour un ODBC 3*.x* pilote, le Gestionnaire de pilotes ne sont plus vérifie si *Option* est entre SQL_STMT_OPT_MIN et SQL_STMT_OPT_MAX, ou est supérieure à SQL_CONNECT_OPT_DRVR_START. Le pilote doit vérifier.
+ Pour un ODBC 3 *.x* pilote, le Gestionnaire de pilotes ne sont plus vérifie si *Option* est entre SQL_STMT_OPT_MIN et SQL_STMT_OPT_MAX, ou est supérieure à SQL_CONNECT_OPT_DRVR_START. Le pilote doit vérifier.

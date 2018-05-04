@@ -24,13 +24,12 @@ caps.latest.revision: 26
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: f176d3f6be7f48920bee35ceae38977e6b947623
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 6ecbe398a303b7e4cb75fd0eeedc4e7951cfb4fe
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spsproccolumns-transact-sql"></a>sp_sproc_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -54,10 +53,10 @@ sp_sproc_columns [[@procedure_name = ] 'name']
   
 ## <a name="arguments"></a>Arguments  
  [  **@procedure_name =** ] **'***nom***'**  
- Nom de la procédure utilisée pour renvoyer des informations de catalogue. *nom* est **nvarchar (**390**)**, avec une valeur par défaut %, qui signifie que toutes les tables de la base de données actuelle. La recherche de correspondance avec des caractères génériques est prise en charge.  
+ Nom de la procédure utilisée pour renvoyer des informations de catalogue. *nom* est **nvarchar (** 390 **)**, avec une valeur par défaut %, qui signifie que toutes les tables de la base de données actuelle. La recherche de correspondance avec des caractères génériques est prise en charge.  
   
  [  **@procedure_owner =**] **'***propriétaire***'**  
- Est le nom du propriétaire de la procédure. *propriétaire*est **nvarchar (**384**)**, avec NULL comme valeur par défaut. La recherche de correspondance avec des caractères génériques est prise en charge. Si *propriétaire* n’est pas spécifié, les règles de visibilité de procédure par défaut du SGBD sous-jacent s’appliquent.  
+ Est le nom du propriétaire de la procédure. *propriétaire*est **nvarchar (** 384 **)**, avec NULL comme valeur par défaut. La recherche de correspondance avec des caractères génériques est prise en charge. Si *propriétaire* n’est pas spécifié, les règles de visibilité de procédure par défaut du SGBD sous-jacent s’appliquent.  
   
  Si l'utilisateur actuel possède une procédure du nom spécifié, les informations relatives à cette procédure sont retournées. Si *propriétaire*n’est pas spécifié et l’utilisateur actuel ne possède pas une procédure avec le nom spécifié, **sp_sproc_columns** rechercher une procédure portant le nom spécifié est possédée par le propriétaire de la base de données. Si la procédure existe, les informations relatives à ses colonnes sont renvoyées.  
   
@@ -65,7 +64,7 @@ sp_sproc_columns [[@procedure_name = ] 'name']
  Nom du qualificateur de la procédure. *qualificateur* est **sysname**, avec NULL comme valeur par défaut. Divers produits SGBD prennent en charge d’affectation de noms en trois parties pour les tables (*qualifier.owner.name*). Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ce paramètre représente le nom de la base de données. Dans d'autres produits, elle représente le nom du serveur de l'environnement de base de données de la table.  
   
  [  **@column_name =**] **'***column_name***'**  
- Colonne unique utilisée lorsqu'une seule colonne d'informations de catalogue est souhaitée. *column_name* est **nvarchar (**384**)**, avec NULL comme valeur par défaut. Si *column_name* est omis, toutes les colonnes sont renvoyées. La recherche de correspondance avec des caractères génériques est prise en charge. Pour assurer une interopérabilité maximale, le client de la passerelle ne doit utiliser que les modèles de comparaison standard ISO (caractères génériques % et _).  
+ Colonne unique utilisée lorsqu'une seule colonne d'informations de catalogue est souhaitée. *column_name* est **nvarchar (** 384 **)**, avec NULL comme valeur par défaut. Si *column_name* est omis, toutes les colonnes sont renvoyées. La recherche de correspondance avec des caractères génériques est prise en charge. Pour assurer une interopérabilité maximale, le client de la passerelle ne doit utiliser que les modèles de comparaison standard ISO (caractères génériques % et _).  
   
  [  **@ODBCVer =**] **'***ODBCVer***'**  
  Est la version d’ODBC utilisée. *ODBCVer* est **int**, avec une valeur par défaut de 2, qui représente ODBC version 2.0. Pour plus d’informations sur la différence entre la version 2.0 et ODBC version 3.0 d’ODBC, consultez ODBC **SQLProcedureColumns** spécification pour ODBC version 3.0  
@@ -82,7 +81,7 @@ sp_sproc_columns [[@procedure_name = ] 'name']
 |-----------------|---------------|-----------------|  
 |**PROCEDURE_QUALIFIER**|**sysname**|Nom du qualificateur de procédure. Cette colonne peut être NULL.|  
 |**PROCEDURE_OWNER**|**sysname**|Nom du propriétaire de la procédure. Cette colonne renvoie toujours une valeur.|  
-|**NOM_PROCÉDURE**|**nvarchar (**134**)**|Nom de la procédure. Cette colonne renvoie toujours une valeur.|  
+|**NOM_PROCÉDURE**|**nvarchar (** 134 **)**|Nom de la procédure. Cette colonne renvoie toujours une valeur.|  
 |**COLUMN_NAME**|**sysname**|Nom de colonne pour chaque colonne de la **TABLE_NAME** retourné. Cette colonne renvoie toujours une valeur.|  
 |**COLUMN_TYPE**|**smallint**|Ce champ retourne toujours une valeur :<br /><br /> 0 = SQL_PARAM_TYPE_UNKNOWN<br /><br /> 1 = SQL_PARAM_TYPE_OUTPUT<br /><br /> 2 = SQL_PARAM_TYPE_OUTPUT<br /><br /> 3 = SQL_RESULT_COL<br /><br /> 4 = SQL_PARAM_OUTPUT<br /><br /> 5 = SQL_RETURN_VALUE|  
 |**DATA_TYPE**|**smallint**|Code entier d'un type de données ODBC. Si ce type de données ne peut pas être mappé à un type ISO, la valeur est NULL. Le nom de type de données natif est renvoyé dans le **TYPE_NAME** colonne.|  
@@ -92,8 +91,8 @@ sp_sproc_columns [[@procedure_name = ] 'name']
 |**MISE À L’ÉCHELLE**|**smallint**|Nombre de chiffres situés à droite du séparateur décimal.|  
 |**RADIX**|**smallint**|Base des types numériques.|  
 |**ACCEPTE LES VALEURS NULL**|**smallint**|Précise la possibilité de valeur nulle.<br /><br /> 1 = Le type de données peut être créé en autorisant des valeurs NULL.<br /><br /> 0 = les valeurs NULL ne sont pas autorisées.|  
-|**SECTION NOTES**|**varchar (**254**)**|Description de la colonne de procédure. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne retourne pas de valeur pour cette colonne.|  
-|**COLUMN_DEF**|**nvarchar (**4000**)**|Valeur par défaut de la colonne.|  
+|**SECTION NOTES**|**varchar (** 254 **)**|Description de la colonne de procédure. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne retourne pas de valeur pour cette colonne.|  
+|**COLUMN_DEF**|**nvarchar (** 4000 **)**|Valeur par défaut de la colonne.|  
 |**SQL_DATA_TYPE**|**smallint**|Valeur du type de données SQL telle qu’elle apparaît dans le **TYPE** champ du descripteur. Cette colonne est le même que le **DATA_TYPE** colonne, à l’exception de la **datetime** et ISO **intervalle** des types de données. Cette colonne renvoie toujours une valeur.|  
 |**SQL_DATETIME_SUB**|**smallint**|Le **datetime** ISO **intervalle** sous-code si la valeur de **SQL_DATA_TYPE** est **SQL_DATETIME** ou **SQL_INTERVAL**. Pour les données les types autres que **datetime** et ISO **intervalle**, ce champ est NULL.|  
 |**CHAR_OCTET_LENGTH**|**int**|Longueur maximale en octets d’un **caractère** ou **binaire** colonne de type de données. Pour tous les autres types de données, cette colonne retourne une valeur NULL.|  

@@ -28,12 +28,11 @@ caps.latest.revision: 27
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: d4364f6cba3a5eb28cfac72e4f5f727ddf1bd1ef
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 58c7e6bf72656b83f3fc43b35bd5d27dce43178b
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sysspcdcdisabletable-transact-sql"></a>sys.sp_cdc_disable_table (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -63,7 +62,7 @@ sys.sp_cdc_disable_table
   
  *source_name* doit exister dans la base de données actuelle.  
   
- [  **@capture_instance=** ] **'***capture_instance***'** | **'**tous les**'**  
+ [  **@capture_instance=** ] **'***capture_instance***'** | **'** tous les **'**  
  Nom de l'instance de capture à désactiver pour la table source spécifiée. *capture_instance* est **sysname** et ne peut pas être NULL.  
   
  Lorsque 'all' est spécifié, toutes les instances de capture définies pour *source_name* sont désactivés.  

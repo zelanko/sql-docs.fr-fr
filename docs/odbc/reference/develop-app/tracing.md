@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - tracing options [ODBC], about tracing
 - driver manager [ODBC], tracing
@@ -20,15 +20,14 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: e7511981cfe9ec533455ee61c4cf75d33ec020cb
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 7549f0790aa13882dc04ead78f097cf0035993e6
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="tracing"></a>Suivi
-Le Gestionnaire de pilotes ODBC comporte une fonctionnalité de trace qui permet la séquence d’appels de fonction effectués par une application ODBC être enregistrés et transcrite dans un fichier journal. Le traçage est effectué par une DLL de traçage qui capture les appels entre l’application et le Gestionnaire de pilotes et entre le Gestionnaire de pilotes et le pilote. Cette méthode de suivi remplace le suivi effectué par l’API ODBC 2*.x* du Gestionnaire de pilotes et le suivi effectuent dans ODBC 2*.x* par ODBC Spy.  
+Le Gestionnaire de pilotes ODBC comporte une fonctionnalité de trace qui permet la séquence d’appels de fonction effectués par une application ODBC être enregistrés et transcrite dans un fichier journal. Le traçage est effectué par une DLL de traçage qui capture les appels entre l’application et le Gestionnaire de pilotes et entre le Gestionnaire de pilotes et le pilote. Cette méthode de suivi remplace le suivi effectué par l’API ODBC 2 *.x* du Gestionnaire de pilotes et le suivi effectuent dans ODBC 2 *.x* par ODBC Spy.  
   
  Cette section contient les rubriques suivantes.  
   

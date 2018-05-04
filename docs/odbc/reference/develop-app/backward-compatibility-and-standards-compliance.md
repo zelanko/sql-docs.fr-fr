@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - backward compatibility [ODBC], standards compliance
 - compatibility [ODBC], standards compliance
@@ -21,15 +21,14 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 796491fa284113d350cd7f0233ce95a4f3ceb37a
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 9eb141c5754bf6cd7d5dd52324d784ee2a87b6ac
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="backward-compatibility-and-standards-compliance"></a>Compatibilité descendante et la conformité aux normes
-Compatibilité descendante est la possibilité de nouveaux composants ODBC pour travailler avec les anciens composants ODBC. Les sections suivantes décrivent comment ces composants sont affectés par les modifications dans ODBC 3*.x*. Les informations contenues dans les principalement traite l’écriture d’un ODBC 3*.x* application et comment vers l’arrière des problèmes de compatibilité sont traités par les pilotes ODBC. Pour obtenir des instructions spécifiques sur la compatibilité ascendante comment problèmes affectent l’écriture d’un ODBC 3*.x* pilote, consultez [annexe g : pilote recommandations pour la compatibilité descendante](../../../odbc/reference/appendixes/appendix-g-driver-guidelines-for-backward-compatibility.md).  
+Compatibilité descendante est la possibilité de nouveaux composants ODBC pour travailler avec les anciens composants ODBC. Les sections suivantes décrivent comment ces composants sont affectés par les modifications dans ODBC 3 *.x*. Les informations contenues dans les principalement traite l’écriture d’un ODBC 3 *.x* application et comment vers l’arrière des problèmes de compatibilité sont traités par les pilotes ODBC. Pour obtenir des instructions spécifiques sur la compatibilité ascendante comment problèmes affectent l’écriture d’un ODBC 3 *.x* pilote, consultez [annexe g : pilote recommandations pour la compatibilité descendante](../../../odbc/reference/appendixes/appendix-g-driver-guidelines-for-backward-compatibility.md).  
   
  Cette section contient les rubriques suivantes.  
   

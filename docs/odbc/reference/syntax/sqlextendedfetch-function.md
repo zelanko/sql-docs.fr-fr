@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 apiname:
 - SQLExtendedFetch
 apilocation:
@@ -26,12 +26,11 @@ caps.latest.revision: 26
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 08611c1a798f9c25ae57d518e46d94193239ca1f
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: ee25cf1b7b4df806c3ea999205d14117aac3c038
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlextendedfetch-function"></a>SQLExtendedFetch (fonction)
 **Mise en conformité**  
@@ -41,7 +40,7 @@ ms.lasthandoff: 04/16/2018
  **SQLExtendedFetch** extrait l’ensemble spécifié de lignes de données du jeu de résultats et retourne les données pour toutes les colonnes liées. Ensembles de lignes peut être spécifié à une position relative ou absolue ou par signet.  
   
 > [!NOTE]  
->  Dans ODBC 3*.x*, **SQLExtendedFetch** a été remplacé par **SQLFetchScroll**. ODBC 3*.x* applications ne doivent pas appeler **SQLExtendedFetch**; au lieu de cela, ils doivent appeler **SQLFetchScroll**. Le Gestionnaire de pilotes mappe **SQLFetchScroll** à **SQLExtendedFetch** lorsque vous travaillez avec une API ODBC 2*.x* pilote. ODBC 3*.x* pilotes doivent prendre en charge **SQLExtendedFetch** s’ils veulent travailler avec ODBC 2*.x* les applications qui l’appellent. Pour plus d’informations, consultez « Commentaires » et [curseurs de bloc, les curseurs permettant le défilement et la compatibilité descendante](../../../odbc/reference/appendixes/block-cursors-scrollable-cursors-and-backward-compatibility.md) dans l’annexe g : pilote recommandations pour la compatibilité descendante.  
+>  Dans ODBC 3 *.x*, **SQLExtendedFetch** a été remplacé par **SQLFetchScroll**. ODBC 3 *.x* applications ne doivent pas appeler **SQLExtendedFetch**; au lieu de cela, ils doivent appeler **SQLFetchScroll**. Le Gestionnaire de pilotes mappe **SQLFetchScroll** à **SQLExtendedFetch** lorsque vous travaillez avec une API ODBC 2 *.x* pilote. ODBC 3 *.x* pilotes doivent prendre en charge **SQLExtendedFetch** s’ils veulent travailler avec ODBC 2 *.x* les applications qui l’appellent. Pour plus d’informations, consultez « Commentaires » et [curseurs de bloc, les curseurs permettant le défilement et la compatibilité descendante](../../../odbc/reference/appendixes/block-cursors-scrollable-cursors-and-backward-compatibility.md) dans l’annexe g : pilote recommandations pour la compatibilité descendante.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -129,9 +128,9 @@ SQLRETURN SQLExtendedFetch(
   
 -   Les appels à **SQLExtendedFetch** ne peut pas être mélangés avec les appels à **SQLFetch** ou **SQLFetchScroll**et si **SQLBulkOperations** est appelée avant toute fonction d’extraction, **SQLExtendedFetch** ne peut pas être appelée tant que le curseur est fermé et rouvert. Autrement dit, **SQLExtendedFetch** peut être appelée uniquement dans l’état de l’instruction S7. Pour plus d’informations, consultez [Transitions de l’instruction](../../../odbc/reference/appendixes/statement-transitions.md) dans les Tables de Transition d’état annexe b : ODBC.  
   
- Lorsqu’une application appelle **SQLFetchScroll** lors de l’utilisation d’une API ODBC 2*.x* pilote, le Gestionnaire de pilotes est mappé à cet appel à **SQLExtendedFetch**. Pour plus d’informations, consultez « SQLFetchScroll et ODBC 2*.x* pilotes » dans [SQLFetchScroll](../../../odbc/reference/syntax/sqlfetchscroll-function.md).  
+ Lorsqu’une application appelle **SQLFetchScroll** lors de l’utilisation d’une API ODBC 2 *.x* pilote, le Gestionnaire de pilotes est mappé à cet appel à **SQLExtendedFetch**. Pour plus d’informations, consultez « SQLFetchScroll et ODBC 2 *.x* pilotes » dans [SQLFetchScroll](../../../odbc/reference/syntax/sqlfetchscroll-function.md).  
   
- Dans ODBC 2*.x*, **SQLExtendedFetch** a été appelé pour extraire plusieurs lignes et **SQLFetch** a été appelé pour extraire une seule ligne. Dans ODBC 3*.x*, quant à eux, **SQLFetch** peut être appelé pour extraire plusieurs lignes.  
+ Dans ODBC 2 *.x*, **SQLExtendedFetch** a été appelé pour extraire plusieurs lignes et **SQLFetch** a été appelé pour extraire une seule ligne. Dans ODBC 3 *.x*, quant à eux, **SQLFetch** peut être appelé pour extraire plusieurs lignes.  
   
 ## <a name="related-functions"></a>Fonctions connexes  
   

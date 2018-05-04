@@ -29,15 +29,15 @@ caps.latest.revision: 13
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: e28026dda3ddb43e1ed43ac427851b8fa4ff773c
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 8e295bb3faddcc9e012e8d928e6a1095f1982907
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="row-element-xmla"></a>Élément row (XMLA)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]Contient une ligne unique de données pour un [racine](../../../analysis-services/xmla/xml-elements-properties/root-element-xmla.md) élément qui contient les données sous forme de tableau retournées par une [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md) ou [Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md) appel de méthode.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
+  Contient une ligne unique de données pour un élément [root](../../../analysis-services/xmla/xml-elements-properties/root-element-xmla.md) contenant les données sous forme de tableau retournées par un appel de méthode [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md) ou [Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md) .  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -54,18 +54,18 @@ ms.lasthandoff: 01/08/2018
   
 |Caractéristique|Description|  
 |--------------------|-----------------|  
-|Type de données et longueur|None|  
-|Valeur par défaut|None|  
+|Type de données et longueur|Aucune|  
+|Valeur par défaut|Aucune|  
 |Cardinalité|0-n : élément facultatif pouvant apparaître plusieurs fois.|  
   
 ## <a name="element-relationships"></a>Relations entre les éléments  
   
 |Relation|Élément|  
 |------------------|-------------|  
-|Éléments parents|[racine](../../../analysis-services/xmla/xml-elements-properties/root-element-xmla.md) (à l’aide de la [ensemble de lignes](../../../analysis-services/xmla/xml-data-types/rowset-data-type-xmla.md) type de données)|  
+|Éléments parents|[root](../../../analysis-services/xmla/xml-elements-properties/root-element-xmla.md) (utilisation du type de données [Rowset](../../../analysis-services/xmla/xml-data-types/rowset-data-type-xmla.md) )|  
 |Éléments enfants|Un ou plusieurs éléments de colonne.|  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Chaque ligne retournée par un élément **root** contenant des données sous forme de tableau a un élément **row** correspondant. Chaque colonne dans l'élément **root** est représentée par un élément XML distinct. La valeur de la colonne pour l'élément **row** correspond aux données figurant dans l'élément XML, et le nom de la colonne correspond au nom de l'élément XML.  
   
  Il existe deux moyens d'exprimer une valeur NULL pour une colonne au sein d'une ligne :  
@@ -81,7 +81,7 @@ ms.lasthandoff: 01/08/2018
 </row>  
 ```  
   
- - ou -  
+ Ou:  
   
 ```  
 <row>  
@@ -101,9 +101,9 @@ ms.lasthandoff: 01/08/2018
 </row>  
 ```  
   
- Pour plus d’informations sur la colonne d’affectation de noms et des informations de schéma pour les données tabulaires, consultez [Type d’ensemble de lignes de données &#40; XMLA &#41; ](../../../analysis-services/xmla/xml-data-types/rowset-data-type-xmla.md).  
+ Pour plus d’informations sur la colonne d’affectation de noms et des informations de schéma pour les données tabulaires, consultez [Type d’ensemble de lignes de données & #40 ; XMLA & #41 ; ](../../../analysis-services/xmla/xml-data-types/rowset-data-type-xmla.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Propriétés &#40; XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+ [Propriétés & #40 ; XMLA & #41 ;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   
