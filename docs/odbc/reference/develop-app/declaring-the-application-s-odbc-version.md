@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - declaring ODBC version [ODBC]
 - data sources [ODBC], declaring ODBC version
@@ -24,12 +24,11 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 2753c4b75f92c2ca48e3e87b25f8c92124ddd4c4
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 89e3363eeefaf85aa81c29266bdf565066c626a3
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="declaring-the-application39s-odbc-version"></a>Déclaration de l’Application&#39;s Version ODBC
 Une application alloue une connexion, il doit au préalable l’attribut d’environnement SQL_ATTR_ODBC_VERSION. Cet attribut indique que l’application suit ODBC 2. *x* ou ODBC 3. *x* spécification lorsque vous utilisez les éléments suivants :  
@@ -49,9 +48,9 @@ Une application alloue une connexion, il doit au préalable l’attribut d’env
     |SQL_C_TIME|SQL_C_TYPE_TIME|  
     |SQL_C_TIMESTAMP|SQL_C_TYPE_TIMESTAMP|  
   
--   *Nom de catalogue***Argument dans SQLTables**.   Dans ODBC 2. *x*, les caractères génériques (« % » et « _ ») dans le *CatalogName* argument sont traités de manière littérale. Dans ODBC 3. *x*, elles sont traitées comme des caractères génériques. Par conséquent, une application qui suit ODBC 2. *x* spécification ne peut pas utiliser ces caractères génériques caractères et n’échappe pas les lors de leur utilisation en tant que littéraux. Une application qui suit la ODBC 3. *x* spécification peut les utiliser en tant que caractères génériques ou échappement et les utiliser en tant que littéraux. Pour plus d’informations, consultez [Arguments dans les fonctions de catalogue](../../../odbc/reference/develop-app/arguments-in-catalog-functions.md).  
+-   *Nom de catalogue***Argument dans SQLTables**. Dans ODBC 2. *x*, les caractères génériques (« % » et « _ ») dans le *CatalogName* argument sont traités de manière littérale. Dans ODBC 3. *x*, elles sont traitées comme des caractères génériques. Par conséquent, une application qui suit ODBC 2. *x* spécification ne peut pas utiliser ces caractères génériques caractères et n’échappe pas les lors de leur utilisation en tant que littéraux. Une application qui suit la ODBC 3. *x* spécification peut les utiliser en tant que caractères génériques ou échappement et les utiliser en tant que littéraux. Pour plus d’informations, consultez [Arguments dans les fonctions de catalogue](../../../odbc/reference/develop-app/arguments-in-catalog-functions.md).  
   
- La version 3 ODBC*.x* du Gestionnaire de pilotes alors que ODBC 3*.x* pilotes vérifier la version de la spécification ODBC dans lequel une application est écrite et réagir en conséquence. Par exemple, si l’application suit ODBC 2. *x* spécification et appelle **SQLExecute** avant d’appeler **SQLPrepare**, la version 3 ODBC*.x* du Gestionnaire de pilotes retourne SQLSTATE S1010 (erreur de séquence de fonction). Si l’application suit les ODBC 3*.x* spécification, le Gestionnaire de pilotes retourne SQLSTATE HY010 (erreur de séquence de fonction). Pour plus d’informations, consultez [la compatibilité descendante et la conformité aux normes](../../../odbc/reference/develop-app/backward-compatibility-and-standards-compliance.md).  
+ La version 3 ODBC *.x* du Gestionnaire de pilotes alors que ODBC 3 *.x* pilotes vérifier la version de la spécification ODBC dans lequel une application est écrite et réagir en conséquence. Par exemple, si l’application suit ODBC 2. *x* spécification et appelle **SQLExecute** avant d’appeler **SQLPrepare**, la version 3 ODBC *.x* du Gestionnaire de pilotes retourne SQLSTATE S1010 (erreur de séquence de fonction). Si l’application suit les ODBC 3 *.x* spécification, le Gestionnaire de pilotes retourne SQLSTATE HY010 (erreur de séquence de fonction). Pour plus d’informations, consultez [la compatibilité descendante et la conformité aux normes](../../../odbc/reference/develop-app/backward-compatibility-and-standards-compliance.md).  
   
 > [!IMPORTANT]  
 >  Applications qui suivent l’ODBC 3. *x* spécification doit utiliser le code conditionnel pour éviter d’utiliser la fonctionnalité nouvelle ODBC 3. *x* lorsque vous travaillez avec ODBC 2. *x* pilotes. ODBC 2. *x* pilotes ne prennent pas en charge les fonctionnalités nouvelles ODBC 3. *x* parce que l’application déclare qu’il suit la ODBC 3. *x* spécification. En outre, ODBC 3. *x* pilotes cesse pas en charge des fonctionnalités nouvelles ODBC 3. *x* parce que l’application déclare qu’il suit ODBC 2. *x* spécification.

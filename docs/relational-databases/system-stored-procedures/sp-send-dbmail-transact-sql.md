@@ -25,12 +25,11 @@ caps.latest.revision: 72
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: 1c33d72b5f89c73e409f82d9e8c851aa740dd54e
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: ba13be54b517541ee0e14ac291d871aa8654561f
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spsenddbmail-transact-sql"></a>sp_send_dbmail (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -131,7 +130,7 @@ sp_send_dbmail [ [ @profile_name = ] 'profile_name' ]
  Liste des noms de fichiers à joindre au message électronique (délimitée par des points-virgules). Les fichiers de la liste doivent être spécifiés sous forme de chemins d'accès absolus. La liste des pièces jointes est de type **nvarchar (max)**. Par défaut, la messagerie de base de données limite la taille des pièces jointes à 1 Mo par fichier.  
   
  [  **@query=** ] **'***requête***'**  
- Requête à exécuter. Les résultats de la requête sont inclus dans le corps du message électronique ou attachés comme pièce jointe. La requête est de type **nvarchar (max)**et peut contenir valide [!INCLUDE[tsql](../../includes/tsql-md.md)] instructions. Notez que la requête est exécutée dans une session distincte, : les variables locales du script appelant **sp_send_dbmail** ne sont pas disponibles pour la requête.  
+ Requête à exécuter. Les résultats de la requête sont inclus dans le corps du message électronique ou attachés comme pièce jointe. La requête est de type **nvarchar (max)** et peut contenir valide [!INCLUDE[tsql](../../includes/tsql-md.md)] instructions. Notez que la requête est exécutée dans une session distincte, : les variables locales du script appelant **sp_send_dbmail** ne sont pas disponibles pour la requête.  
   
  [ **@execute_query_database=** ] **'***execute_query_database***'**  
  Contexte de base de données dans lequel la procédure stockée exécute la requête. Le paramètre est de type **sysname**, avec une valeur par défaut de la base de données actuelle. Ce paramètre s’applique uniquement si **@query** est spécifié.  

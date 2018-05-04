@@ -24,12 +24,11 @@ caps.latest.revision: 82
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: d213b79938f0856d9e17b36366958a89e7ecd2be
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 09c1ccc4ba5b01b434ee4794a058ccfae4ccfa61
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spcreateplanguide-transact-sql"></a>sp_create_plan_guide (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -83,7 +82,7 @@ sp_create_plan_guide [ @name = ] N'plan_guide_name'
   
  Pour un repère de plan corresponde à un lot soumis à partir d’une application, *batch_tex*t doit être fourni dans le même format caractère pour caractère, qu’il est soumis à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Aucune conversion interne n'est effectuée pour faciliter cette correspondance. Pour plus d'informations, consultez la section Notes.  
   
- [*schema_name*.] *nom_objet* Spécifie le nom d’un [!INCLUDE[tsql](../../includes/tsql-md.md)] stockées procédure, fonction scalaire, fonction table multi-instructions, ou [!INCLUDE[tsql](../../includes/tsql-md.md)] déclencheur DML qui contient *statement_text*. Si *nom_schéma* n’est pas spécifié, *schema_name* utilise le schéma de l’utilisateur actuel. Si NULL est spécifié et @type = 'SQL', la valeur de @module_or_batch est définie à la valeur de @stmt. Si @type = ' modèle**'**, @module_or_batch doit être NULL.  
+ [*schema_name*.] *nom_objet* Spécifie le nom d’un [!INCLUDE[tsql](../../includes/tsql-md.md)] stockées procédure, fonction scalaire, fonction table multi-instructions, ou [!INCLUDE[tsql](../../includes/tsql-md.md)] déclencheur DML qui contient *statement_text*. Si *nom_schéma* n’est pas spécifié, *schema_name* utilise le schéma de l’utilisateur actuel. Si NULL est spécifié et @type = 'SQL', la valeur de @module_or_batch est définie à la valeur de @stmt. Si @type = ' modèle **'**, @module_or_batch doit être NULL.  
   
  [ @params =] {N' *@parameter_name data_type* [,*.. .n* ]' | NULL}  
  Spécifie les définitions de tous les paramètres qui sont incorporés dans *statement_text*. @params s’applique uniquement lorsque une des conditions suivantes est remplie :  
@@ -123,7 +122,7 @@ sp_create_plan_guide [ @name = ] N'plan_guide_name'
   
  Quand @type= 'SQL' et que @module_or_batch a la valeur NULL, la valeur définie pour de @module_or_batch est celle de @stmt. Cela signifie que la valeur de *statement_text* doit être fourni exactement dans le même format, caractère pour caractère, qu’il est soumis à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Aucune conversion interne n'est effectuée pour faciliter cette correspondance.  
   
- Lorsque [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] correspond à la valeur de *statement_text* à *batch_text* et  *@parameter_name data_type* [,*.. .n* ], ou si @type = **'**objet », au texte de la requête correspondante dans *nom_objet*, les éléments de chaîne suivants ne sont pas considérés comme :  
+ Lorsque [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] correspond à la valeur de *statement_text* à *batch_text* et  *@parameter_name data_type* [,*.. .n* ], ou si @type = **'** objet », au texte de la requête correspondante dans *nom_objet*, les éléments de chaîne suivants ne sont pas considérés comme :  
   
 -   les espaces (tabulations, espaces, retours chariot ou sauts de ligne) à l'intérieur de la chaîne ;  
   

@@ -22,12 +22,11 @@ caps.latest.revision: 33
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 4ddc10c3c32b6ac2cd411e04afd1775bdd3fc02f
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 7051e8506384b65987e5281b5d7dcff105522f6d
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="and-mdx"></a>AND (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -51,7 +50,7 @@ Expression1 AND Expression2
 ## <a name="return-value"></a>Valeur retournée  
  Valeur booléenne qui retourne la valeur true si les deux paramètres donnent comme résultat **true**; sinon, **false**.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Le **AND** opérateur traite les deux expressions en tant que valeurs booléennes (zéro, 0, comme **false**; sinon, **true**) avant que l’opérateur effectue la conjonction logique. Le tableau suivant illustre comment la **AND** opérateur effectue la conjonction logique.  
   
 |*Expression1*|*Expression2*|Valeur retournée|  
@@ -61,7 +60,7 @@ Expression1 AND Expression2
 |**false**|**true**|**false**|  
 |**false**|**false**|**false**|  
   
-## <a name="example"></a> Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 -- This query returns the gross profit margin (GPM)  
@@ -82,6 +81,6 @@ WHERE
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Référence des opérateurs MDX &#40; MDX &#41;](../mdx/mdx-operator-reference-mdx.md)  
+ [Référence des opérateurs MDX &#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)  
   
   

@@ -1,38 +1,37 @@
 ---
 title: Ensemble de lignes DISCOVER_MEMORYUSAGE | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
 ms.assetid: e416ea61-9615-468c-a96f-bbf731f803b1
-caps.latest.revision: 
+caps.latest.revision: 7
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: bd97d1b2eb02dda3f8add861e6767b7a495a821d
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 832017b2efa7d1d788a74a20332160cffea63764
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="discovermemoryusage-rowset"></a>DISCOVER_MEMORYUSAGE, ensemble de lignes
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-Retourne les statistiques DISCOVER_MEMORYUSAGE pour plusieurs objets alloués par le serveur.  
+  Retourne les statistiques DISCOVER_MEMORYUSAGE pour plusieurs objets alloués par le serveur.  
   
 > [!WARNING]  
 >  Cet ensemble de lignes peut produire des jeux de résultats très volumineux. Si les résultats ne peuvent pas être affichés car ils nécessitent davantage de mémoire d'affichage que ne le permet SQL Server Management Studio, ils sont écrits dans un fichier temporaire, dans l'emplacement par défaut suivant :  
 >   
->  '\<drive>:\Users\\<username\>\AppData\Local\Temp\\<fileID\>.xml'.  
+>  «\<lecteur > : \Users\\< nom d’utilisateur\>\AppData\Local\Temp\\< fileID\>.xml ».  
   
  **S'applique à :** modèles tabulaires, modèles multidimensionnels  
   
@@ -50,8 +49,8 @@ Retourne les statistiques DISCOVER_MEMORYUSAGE pour plusieurs objets alloués pa
 |**MemoryAllocated**|**DBTYPE_UI8**||Quantité de mémoire allouée à l'utilisation de l'objet, qui peut être supérieure à la quantité de mémoire réellement utilisée par l'objet.|  
 |**MemoryAllocBase**|**DBTYPE_UI8**||Octets initialement alloués pour l'objet lui-même (à l'exception des allocations supplémentaires pour le contenu de l'objet).|  
 |**MemoryAllocFromAlloc**|**DBTYPE_UI8**||Mémoire allouée au contenu de cet objet.|  
-|**ElementCount**|**DBTYPE_UI4**||Pour un objet conteneur, il s'agit du nombre d'objets contenus par cet objet.|  
-|**Shrinkable**|**DBTYPE_BOOL**|Oui|Valeur booléenne qui indique si la mémoire est réductible (peut être supprimée en cas de sollicitation de la mémoire). Si la valeur est true, la mémoire est réductible ; si la valeur est false, la mémoire n'est pas réductible.|  
+|**valeur d’elementCount**|**DBTYPE_UI4**||Pour un objet conteneur, il s'agit du nombre d'objets contenus par cet objet.|  
+|**Réductible**|**DBTYPE_BOOL**|Oui|Valeur booléenne qui indique si la mémoire est réductible (peut être supprimée en cas de sollicitation de la mémoire). Si la valeur est true, la mémoire est réductible ; si la valeur est false, la mémoire n'est pas réductible.|  
 |**ObjectParentPath**|**DBTYPE_WSTR**||Chaîne identifiant le chemin complet de cet objet.|  
 |**ObjectID**|**DBTYPE_WSTR**||Chaîne identifiant l'objet. Le chemin d’accès complet de cet objet est représenté par la chaîne : (ObjectParentPath + '.' + ObjectId).|  
   

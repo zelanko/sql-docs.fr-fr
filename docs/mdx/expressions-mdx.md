@@ -24,12 +24,11 @@ caps.latest.revision: 37
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: On Demand
-ms.openlocfilehash: 0fbb0f5d2b1b9699cd468cbcbd81a528c217bd3a
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: a158bbcdd77e4a7e1e026db793b46e306d8c6fbe
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="expressions-mdx"></a>Expressions (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -48,7 +47,7 @@ ms.lasthandoff: 01/08/2018
  Dans la syntaxe MDX, une fonction scalaire retourne une valeur unique au sein du contexte d'évaluation. Cette distinction est importante pour comprendre la manière dont MDX résout les fonctions scalaires, car la plupart des expressions, instructions et scripts MDX ne sont pas évalués sur un élément de données unique, mais bien de façon itérative sur un groupe d'éléments de données, tels que ces cellules ou des membres. Cependant, au moment de l'évaluation de la fonction scalaire, elle vérifie généralement un élément de données unique.  
   
  Identificateur d'objet  
- La syntaxe MDX est orientée objet en raison de la nature des données multidimensionnelles. Les identificateurs d'objet sont considérés comme des expressions simples dans la syntaxe MDX. Pour plus d’informations sur les identificateurs, consultez [identificateurs &#40; MDX &#41; ](../mdx/identifiers-mdx.md).  
+ La syntaxe MDX est orientée objet en raison de la nature des données multidimensionnelles. Les identificateurs d'objet sont considérés comme des expressions simples dans la syntaxe MDX. Pour plus d’informations sur les identificateurs, consultez [identificateurs &#40;MDX&#41;](../mdx/identifiers-mdx.md).  
   
  Une expression complexe peut être une combinaison de ces entités associées par des opérateurs.  
   
@@ -89,7 +88,7 @@ WHERE [Product].[Category].[Bikes]
   
 ## <a name="in-this-section"></a>Dans cette section  
   
-|Rubrique|Description|  
+|Rubrique| Description|  
 |-----------|-----------------|  
 |[Utilisation d’expressions de cube et de sous-cube](../mdx/using-cube-and-subcube-expressions.md)|Définit les expressions de cube et de sous-cube.|  
 |[Utilisation d’expressions de dimension](../mdx/using-dimension-expressions.md)|Définit les expressions de dimension.|  
@@ -100,7 +99,7 @@ WHERE [Product].[Category].[Bikes]
 |[Manipulation de valeurs vides](../mdx/working-with-empty-values.md)|Décrit une valeur vide et la manière dont les valeurs de ce type sont gérées.|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Référence du langage MDX &#40; MDX &#41;](../mdx/mdx-language-reference-mdx.md)   
- [Principes de base de requête MDX &#40; Analysis Services &#41;](../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
+ [Référence du langage MDX & #40 ; MDX & #41 ;](../mdx/mdx-language-reference-mdx.md)   
+ [Principes de base de requête MDX & #40 ; Analysis Services & #41 ;](../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
   
   

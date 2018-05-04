@@ -24,12 +24,11 @@ caps.latest.revision: 33
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: db5dad55a4dfb5cef1c1e98c0e5209cff92a724d
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 2ad7d7746c1bd436a6473d7d25921c7a3437e75a
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sptableprivilegesex-transact-sql"></a>sp_table_privileges_ex (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -72,13 +71,13 @@ sp_table_privileges_ex [ @table_server = ] 'table_server'
   
 |Nom de colonne|Type de données| Description|  
 |-----------------|---------------|-----------------|  
-|**TABLE_CAT**|**sysname**|Nom du qualificateur de table. Divers produits SGBD prennent en charge d’affectation de noms en trois parties pour les tables (*qualificateur***.*** propriétaire***.*** nom de*). Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], cette colonne représente le nom de la base de données. Dans d'autres produits, elle représente le nom du serveur de l'environnement de base de données de la table. Ce champ peut contenir la valeur NULL.|  
+|**TABLE_CAT**|**sysname**|Nom du qualificateur de table. Divers produits SGBD prennent en charge d’affectation de noms en trois parties pour les tables (*qualificateur ***.*** propriétaire ***.*** nom de*). Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], cette colonne représente le nom de la base de données. Dans d'autres produits, elle représente le nom du serveur de l'environnement de base de données de la table. Ce champ peut contenir la valeur NULL.|  
 |**TABLE_SCHEM**|**sysname**|Nom du propriétaire de la table. Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], cette colonne représente le nom de l'utilisateur de la base de données qui a créé la table. Ce champ retourne toujours une valeur.|  
 |**NOM_TABLE**|**sysname**|Nom de la table. Ce champ retourne toujours une valeur.|  
 |**FOURNISSEUR D’AUTORISATIONS**|**sysname**|Nom d’utilisateur de base de données qui a accordé les autorisations sur ce **TABLE_NAME** à la liste **bénéficiaire**. Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], cette colonne est toujours le même que le **TABLE_OWNER**. Ce champ retourne toujours une valeur. En outre, la colonne GRANTOR peut être soit le propriétaire de la base de données (**TABLE_OWNER**) ou un utilisateur auquel le propriétaire de la base de données a accordé des autorisations à l’aide de la clause WITH GRANT OPTION de l’instruction GRANT.|  
 |**BÉNÉFICIAIRE**|**sysname**|Nom d’utilisateur de base de données qui a été accordé des autorisations sur **TABLE_NAME** par le **GRANTOR**. Ce champ retourne toujours une valeur.|  
-|**PRIVILÈGE**|**varchar(**32**)**|L'une des autorisations disponibles sur la table. Les autorisations sur les tables peuvent prendre l'une des valeurs suivantes (ou d'autres valeurs prises en charge par la source des données si leur implémentation est définie) :<br /><br /> Sélectionnez = **bénéficiaire** peut récupérer des données pour un ou plusieurs des colonnes.<br /><br /> INSERT = **bénéficiaire** peut fournir des données pour les nouvelles lignes pour un ou plusieurs des colonnes.<br /><br /> Mise à jour = **bénéficiaire** peut modifier des données existantes pour un ou plusieurs des colonnes.<br /><br /> DELETE = **bénéficiaire** peut supprimer des lignes de la table.<br /><br /> RÉFÉRENCES = **bénéficiaire** peut faire référence à une colonne dans une table étrangère dans une relation de clé étrangère/clé primaire. Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], les relations clé primaire/clé étrangère sont définies grâce à des contraintes de table.<br /><br /> Le rayon d’action pour le **bénéficiaire** par une table spécifique privilège est dépendante de la source de données. Par exemple, l’autorisation de mise à jour pourrait permettre la **bénéficiaire** pour mettre à jour toutes les colonnes d’une table pour une source de données et uniquement les colonnes pour lesquelles le **GRANTOR** a l’autorisation de mise à jour sur une autre source de données.|  
-|**IS_GRANTABLE**|**varchar (**3**)**|Indique si le **bénéficiaire** est autorisé à accorder des autorisations à d’autres utilisateurs. On appelle habituellement ce mécanisme « transmission des droits ». Les valeurs possibles sont YES, NO ou NULL. Une valeur inconnue (ou NULL) fait référence à une source de données où la « transmission des droits » ne s'applique pas.|  
+|**PRIVILÈGE**|**varchar(** 32 **)**|L'une des autorisations disponibles sur la table. Les autorisations sur les tables peuvent prendre l'une des valeurs suivantes (ou d'autres valeurs prises en charge par la source des données si leur implémentation est définie) :<br /><br /> Sélectionnez = **bénéficiaire** peut récupérer des données pour un ou plusieurs des colonnes.<br /><br /> INSERT = **bénéficiaire** peut fournir des données pour les nouvelles lignes pour un ou plusieurs des colonnes.<br /><br /> Mise à jour = **bénéficiaire** peut modifier des données existantes pour un ou plusieurs des colonnes.<br /><br /> DELETE = **bénéficiaire** peut supprimer des lignes de la table.<br /><br /> RÉFÉRENCES = **bénéficiaire** peut faire référence à une colonne dans une table étrangère dans une relation de clé étrangère/clé primaire. Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], les relations clé primaire/clé étrangère sont définies grâce à des contraintes de table.<br /><br /> Le rayon d’action pour le **bénéficiaire** par une table spécifique privilège est dépendante de la source de données. Par exemple, l’autorisation de mise à jour pourrait permettre la **bénéficiaire** pour mettre à jour toutes les colonnes d’une table pour une source de données et uniquement les colonnes pour lesquelles le **GRANTOR** a l’autorisation de mise à jour sur une autre source de données.|  
+|**IS_GRANTABLE**|**varchar (** 3 **)**|Indique si le **bénéficiaire** est autorisé à accorder des autorisations à d’autres utilisateurs. On appelle habituellement ce mécanisme « transmission des droits ». Les valeurs possibles sont YES, NO ou NULL. Une valeur inconnue (ou NULL) fait référence à une source de données où la « transmission des droits » ne s'applique pas.|  
   
 ## <a name="remarks"></a>Notes  
  Les résultats obtenus sont triés par **TABLE_QUALIFIER**, **TABLE_OWNER**, **TABLE_NAME**, et **privilège**.  

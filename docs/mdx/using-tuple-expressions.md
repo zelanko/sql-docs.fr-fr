@@ -24,12 +24,11 @@ caps.latest.revision: 27
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 659b1047984e58395097a15446b2860ed37a7371
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 2a9118fb5c8279c450f6a61e166ab5445353efa9
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="using-tuple-expressions"></a>Utilisation d'expressions de tuple
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -60,7 +59,7 @@ ms.lasthandoff: 01/08/2018
  Si l'expression de tuple possède un membre unique, MDX le convertit en tuple à un membre à des fins d'évaluation de l'expression. En d'autres termes, la fourniture d'une expression de membre `[Measures].[TestMeasure]` plutôt que d'une expression de tuple équivaut d'un point de vue fonctionnel à l'expression de tuple `( [Measures].[TestMeasure] ).`  
   
 ## <a name="see-also"></a>Voir aussi  
- [Expressions &#40; MDX &#41;](../mdx/expressions-mdx.md)   
- [Référence des fonctions MDX &#40; MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Expressions &#40;MDX&#41;](../mdx/expressions-mdx.md)   
+ [Référence des fonctions MDX & #40 ; MDX & #41 ;](../mdx/mdx-function-reference-mdx.md)  
   
   

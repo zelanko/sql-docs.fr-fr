@@ -22,12 +22,11 @@ caps.latest.revision: 32
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: e78dec45044cc29e375b9116886b183013c74ef1
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: b352fe818402cbad25af99a4ca336704b331a4f9
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="generate-mdx"></a>Generate (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -58,10 +57,10 @@ Generate( Set_Expression1 ,  String_Expression [ ,Delimiter ]  )
  *Délimiteur*  
  Délimiteur valide exprimé en tant qu'expression de chaîne.  
   
-## <a name="remarks"></a>Notes   
- Si un deuxième jeu est spécifié, le **générer** fonction retourne un jeu généré en appliquant les tuples du deuxième jeu à chaque tuple dans le premier jeu*,* et puis associant les jeux obtenus par union. Si **tous les** est spécifié, la fonction conserve les doublons dans le jeu résultant.  
+## <a name="remarks"></a>Notes  
+ Si un deuxième jeu est spécifié, le **générer** fonction retourne un jeu généré en appliquant les tuples du deuxième jeu à chaque tuple dans le premier jeu *,* et puis associant les jeux obtenus par union. Si **tous les** est spécifié, la fonction conserve les doublons dans le jeu résultant.  
   
- Si une expression de chaîne est spécifiée, le **générer** fonction retourne une chaîne générée en évaluant l’expression de chaîne spécifiée par rapport à chaque tuple dans le premier jeu*,* puis en concaténant les résultats. Vous pouvez éventuellement délimiter la chaîne en séparant chaque résultat dans la chaîne concaténée obtenue.  
+ Si une expression de chaîne est spécifiée, le **générer** fonction retourne une chaîne générée en évaluant l’expression de chaîne spécifiée par rapport à chaque tuple dans le premier jeu *,* puis en concaténant les résultats. Vous pouvez éventuellement délimiter la chaîne en séparant chaque résultat dans la chaîne concaténée obtenue.  
   
 ## <a name="examples"></a>Exemples  
   
@@ -118,7 +117,7 @@ ON 1
 FROM [Adventure Works]  
 ```  
   
-### <a name="string"></a>String  
+### <a name="string"></a>Chaîne  
  L’exemple suivant illustre l’utilisation de **générer** pour retourner une chaîne :  
   
 ```  
@@ -138,9 +137,9 @@ FROM [Adventure Works]
 ```  
   
 > [!NOTE]  
->  Cette forme de la **générer** fonction peut être utile lors du débogage des calculs, car elle permet de retourner une chaîne qui affiche les noms de tous les membres dans un jeu. Cela peut être plus facile à lire que la représentation MDX stricte d’un jeu qui le [SetToStr &#40; MDX &#41; ](../mdx/settostr-mdx.md) fonction renvoie.  
+>  Cette forme de la **générer** fonction peut être utile lors du débogage des calculs, car elle permet de retourner une chaîne qui affiche les noms de tous les membres dans un jeu. Cela peut être plus facile à lire que la représentation MDX stricte d’un jeu qui le [SetToStr &#40;MDX&#41; ](../mdx/settostr-mdx.md) fonction renvoie.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Référence des fonctions MDX &#40; MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Référence des fonctions MDX & #40 ; MDX & #41 ;](../mdx/mdx-function-reference-mdx.md)  
   
   

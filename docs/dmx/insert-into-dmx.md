@@ -32,17 +32,16 @@ caps.latest.revision: 49
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 70b2acdd5370be93f4fca9a5270a5b9951305248
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 9ee2a89f60504719b74eb340f9399b8622d06500
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="insert-into-dmx"></a>INSERT INTO (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  Traite l'objet d'exploration de données spécifié. Pour plus d’informations sur le traitement des modèles d’exploration de données et les structures d’exploration de données, consultez [le traitement des exigences et considérations relatives à la &#40; exploration de données &#41;](../analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md).  
+  Traite l'objet d'exploration de données spécifié. Pour plus d’informations sur le traitement des modèles d’exploration de données et les structures d’exploration de données, consultez [le traitement des exigences et les considérations &#40;d’exploration de données&#41;](../analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md).  
   
  Si une structure d'exploration de données est spécifiée, l'instruction traite la structure et tous ses modèles d'exploration de données associés. Si un modèle d'exploration de données est spécifié, l'instruction traite uniquement le modèle.  
   
@@ -67,12 +66,12 @@ INSERT INTO [MINING MODEL]|[MINING STRUCTURE] <model>|<structure>.COLUMN_VALUES 
  *requête de source de données*  
  Requête source dans le format défini par le fournisseur  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Si vous ne spécifiez pas **modèle d’exploration de données** ou **STRUCTURE d’exploration de données**, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] recherche le type d’objet en fonction du nom et traite l’objet correct. Si le serveur contient une structure d'exploration de données et un modèle d'exploration de données portant le même nom, une erreur est retournée.  
   
  À l’aide de la deuxième forme de syntaxe, INSERT INTO*\<objet >*. COLUMN_VALUES, vous pouvez insérer des données directement dans les colonnes du modèle sans apprentissage du modèle. Cette méthode permet d'insérer des données de colonnes dans le modèle d'une manière concise et organisée, ce qui est utile lorsque vous utilisez des datasets contenant des hiérarchies ou des colonnes triées.  
   
- Si vous utilisez **INSERT INTO** avec un modèle d’exploration de données ou une structure et laissez le champ désactivé le \<mappé les colonnes du modèle > et \<requête de source de données > arguments, l’instruction se comporte comme **ProcessDefault**, à l’aide de liaisons qui existent déjà. Si les liaisons n'existent pas, l'instruction retourne une erreur. Pour plus d’informations sur **ProcessDefault**, consultez [les Options de traitement et les paramètres &#40; Analysis Services &#41; ](../analysis-services/multidimensional-models/processing-options-and-settings-analysis-services.md). L’exemple suivant illustre la syntaxe :  
+ Si vous utilisez **INSERT INTO** avec un modèle d’exploration de données ou une structure et laissez le champ désactivé le \<mappé les colonnes du modèle > et \<requête de source de données > arguments, l’instruction se comporte comme **ProcessDefault**, à l’aide de liaisons qui existent déjà. Si les liaisons n'existent pas, l'instruction retourne une erreur. Pour plus d’informations sur **ProcessDefault**, consultez [les paramètres et les Options de traitement &#40;Analysis Services&#41;](../analysis-services/multidimensional-models/processing-options-and-settings-analysis-services.md). L’exemple suivant illustre la syntaxe :  
   
 ```  
 INSERT INTO [MINING MODEL] <model>  
@@ -82,13 +81,13 @@ INSERT INTO [MINING MODEL] <model>
   
  Le tableau ci-dessous donne une description du résultat de différentes formes de l'instruction, en fonction de l'état des objets.  
   
-|.|État des objets|Résultats|  
+|.|État des objets|Résultat|  
 |---------------|----------------------|------------|  
 |INSERT INTO MINING MODEL*\<modèle >*|La structure d'exploration de données est traitée.|Le modèle d'exploration de données est traité.|  
 ||La structure d'exploration de données n'est pas traitée.|Le modèle et la structure d'exploration de données sont traités.|  
 ||La structure d'exploration de données contient des modèles d'exploration de données supplémentaires.|Échec du traitement. Vous devez retraiter la structure et les modèles d'exploration de données associés.|  
 |INSERT INTO MINING STRUCTURE*\<structure >*|La structure d'exploration de données est traitée ou non.|La structure d'exploration de données et les modèles d'exploration de données associés sont traités.|  
-|INSERT INTO MINING MODEL*\<modèle >* qui contient une requête source<br /><br /> ou Gestionnaire de configuration<br /><br /> INSERT INTO MINING STRUCTURE*\<structure >* qui contient une requête source|La structure ou le modèle contient déjà du contenu.|Échec du traitement. Vous devez supprimer les objets avant d’effectuer cette opération, à l’aide de [Supprimer &#40; DMX &#41;](../dmx/delete-dmx.md).|  
+|INSERT INTO MINING MODEL*\<modèle >* qui contient une requête source<br /><br /> ou<br /><br /> INSERT INTO MINING STRUCTURE*\<structure >* qui contient une requête source|La structure ou le modèle contient déjà du contenu.|Échec du traitement. Vous devez supprimer les objets avant d’effectuer cette opération, à l’aide de [supprimer &#40;DMX&#41;](../dmx/delete-dmx.md).|  
   
 ## <a name="mapped-model-columns"></a>Mapped Model Columns  
  À l’aide de la \<mappé les colonnes du modèle > élément, vous pouvez mapper les colonnes de la source de données pour les colonnes dans votre modèle d’exploration de données. Le \<mappé les colonnes du modèle > élément a la forme suivante :  
@@ -114,7 +113,7 @@ INSERT INTO [MINING MODEL] <model>
   
 -   Toute requête [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] retournant un ensemble de lignes  
   
- Pour plus d’informations sur les types de source de données, consultez [&#60; requête de source de données &#62;](../dmx/source-data-query.md).  
+ Pour plus d’informations sur les types de source de données, consultez [ &#60;requête de source de données&#62;](../dmx/source-data-query.md).  
   
 ## <a name="basic-example"></a>Exemple de base  
  L’exemple suivant utilise **OPENQUERY** pour former un modèle Naive Bayes basé sur les données de publipostage ciblées dans le [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] base de données.  
@@ -144,8 +143,8 @@ AS [Models]
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Les Extensions d’exploration de données &#40; DMX &#41; Instructions de définition de données](../dmx/dmx-statements-data-definition.md)   
- [Les Extensions d’exploration de données &#40; DMX &#41; Instructions de Manipulation de données](../dmx/dmx-statements-data-manipulation.md)   
- [Guide de référence des instructions DMX &#40;Data Mining Extensions&#41;](../dmx/data-mining-extensions-dmx-statements.md)  
+ [Data Mining Extensions &#40;DMX&#41; instructions de définition de données](../dmx/dmx-statements-data-definition.md)   
+ [Data Mining Extensions &#40;DMX&#41; instructions de Manipulation de données](../dmx/dmx-statements-data-manipulation.md)   
+ [Les Extensions d’exploration de données & #40 ; DMX & #41 ; Référence des instructions](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

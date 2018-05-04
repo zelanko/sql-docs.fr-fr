@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 apiname:
 - SQLGetEnvAttr
 apilocation:
@@ -26,12 +26,11 @@ caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 11c2b83057291f04e7476abddc63c0ccb9954b85
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 010a47003b044a400abaaaef5cd7ffd3c80d94d3
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlgetenvattr-function"></a>Cas (fonction)
 **Mise en conformité**  
@@ -92,10 +91,10 @@ SQLRETURN SQLGetEnvAttr(
 ## <a name="comments"></a>Commentaires  
  Pour obtenir la liste des attributs, consultez [SQLSetEnvAttr](../../../odbc/reference/syntax/sqlsetenvattr-function.md). Il n’existe pas d’attributs spécifiques au pilote environnement. Si *attribut* spécifie un attribut qui retourne une chaîne, *ValuePtr* doit être un pointeur vers une mémoire tampon dans lequel retourner la chaîne. La longueur maximale de la chaîne, y compris l’octet de valeur null, sera *BufferLength* octets.  
   
- **Cas** peut être appelée à tout moment entre l’allocation et la libération d’un handle d’environnement. Tous les attributs d’environnement a été définis par l’application pour l’environnement sont conservés jusqu'à **SQLFreeHandle** est appelée sur le *EnvironmentHandle* avec un *HandleType* de SQL_HANDLE_ENV. Plus d’un handle d’environnement peut être alloué simultanément dans ODBC 3*.x*. Un attribut de l’environnement sur un environnement n’est pas affecté quand un autre environnement a été alloué.  
+ **Cas** peut être appelée à tout moment entre l’allocation et la libération d’un handle d’environnement. Tous les attributs d’environnement a été définis par l’application pour l’environnement sont conservés jusqu'à **SQLFreeHandle** est appelée sur le *EnvironmentHandle* avec un *HandleType* de SQL_HANDLE_ENV. Plus d’un handle d’environnement peut être alloué simultanément dans ODBC 3 *.x*. Un attribut de l’environnement sur un environnement n’est pas affecté quand un autre environnement a été alloué.  
   
 > [!NOTE]  
->  L’attribut d’environnement SQL_ATTR_OUTPUT_NTS est pris en charge par les applications conformes aux normes. Lorsque **cas** est appelée, la version 3 ODBC*.x* du Gestionnaire de pilotes retourne toujours SQL_TRUE pour cet attribut. SQL_ATTR_OUTPUT_NTS peut être définie à SQL_TRUE uniquement par un appel à **SQLSetEnvAttr**.  
+>  L’attribut d’environnement SQL_ATTR_OUTPUT_NTS est pris en charge par les applications conformes aux normes. Lorsque **cas** est appelée, la version 3 ODBC *.x* du Gestionnaire de pilotes retourne toujours SQL_TRUE pour cet attribut. SQL_ATTR_OUTPUT_NTS peut être définie à SQL_TRUE uniquement par un appel à **SQLSetEnvAttr**.  
   
 ## <a name="related-functions"></a>Fonctions connexes  
   

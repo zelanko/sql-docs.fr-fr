@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - default subkey [ODBC]
 - registry entries for data sources [ODBC], default subkey
@@ -21,12 +21,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 8ddd5b9a390e5e258ecf3f7d30a2ec71437add6e
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: b0cdb5bcedc1eae7de98e6d7833b7fae17c2b22b
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="default-subkey"></a>Sous-clé par défaut
 Le Registre peut spécifier une source de données par défaut avec la sous-clé par défaut. Cette sous-clé est un cas spécial d’une sous-clé de spécification de source de données et a les mêmes valeurs que n’importe quel autre sous-clé de spécification des source de données. La seule différence est qu’il n’est pas répertorié en tant que valeur sous la sous-clé de Sources de données ODBC.

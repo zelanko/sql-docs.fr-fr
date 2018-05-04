@@ -22,12 +22,11 @@ caps.latest.revision: 13
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 564e0dddd4d1d5c3ea417b9b8a4f1f01404219d4
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 821c13f6a0d6e695249d873477a5145fc64b1b4c
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="data-mining-extensions-dmx-syntax-conventions"></a>Conventions de syntaxe DMX (Data Mining Extensions)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -42,10 +41,10 @@ ms.lasthandoff: 01/08/2018
 |`[ ]` (crochets)|Contiennent des éléments de syntaxe facultatifs. Ne tapez pas les crochets.|  
 |{} (accolades)|Contiennent des éléments de syntaxe obligatoires. Ne tapez pas les accolades.|  
 |, ...|Indique que l'élément précédent la virgule peut se répéter de façon illimitée. Les éléments sont séparés par des virgules.|  
-|\<étiquette > :: =|Nom d'un bloc de syntaxe. Cette convention est utilisée pour regrouper et étiqueter des sections de syntaxe longue ou une unité de syntaxe pouvant apparaître à plusieurs emplacements au sein d'une instruction. Chaque emplacement dans lequel le bloc de syntaxe peut être utilisé est indiqué par une étiquette encadrée de chevrons, tel que \<étiquette >.|  
+|\<étiquette> ::=|Nom d'un bloc de syntaxe. Cette convention est utilisée pour regrouper et étiqueter des sections de syntaxe longue ou une unité de syntaxe pouvant apparaître à plusieurs emplacements au sein d'une instruction. Chaque emplacement dans lequel le bloc de syntaxe peut être utilisé est indiqué par une étiquette encadrée de chevrons, tel que \<étiquette >.|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Les Extensions d’exploration de données &#40; DMX &#41; Référence](../dmx/data-mining-extensions-dmx-reference.md)  
+ [Les Extensions d’exploration de données & #40 ; DMX & #41 ; Référence](../dmx/data-mining-extensions-dmx-reference.md)  
   
   
 

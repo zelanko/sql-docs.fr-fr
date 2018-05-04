@@ -25,12 +25,11 @@ caps.latest.revision: 40
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 688f63fb4dd2ecbd1594dd0750343d08a594f7b5
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 7bc3948044bbfd37d5ddb5a4dad32f3dc9e09725
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spserveroption-transact-sql"></a>sp_serveroption (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +52,7 @@ sp_serveroption [@server = ] 'server'
  Nom du serveur pour lequel l'option doit être définie. *server* est de type **sysname**et n'a pas de valeur par défaut.  
   
  [  **@optname =** ] **'***option_name***'**  
- Option à définir pour le serveur spécifié. *option_name* est **varchar (**35**)**, sans valeur par défaut. *option_name* peut être une des valeurs suivantes.  
+ Option à définir pour le serveur spécifié. *option_name* est **varchar (** 35 **)**, sans valeur par défaut. *option_name* peut être une des valeurs suivantes.  
   
 |Valeur| Description|  
 |-----------|-----------------|  
@@ -73,7 +72,7 @@ sp_serveroption [@server = ] 'server'
 |**promotion des transactions de procédures**|Cette option permet de protéger les actions d'une procédure de serveur à serveur par le biais d'une transaction MS DTC ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Distributed Transaction Coordinator). Lorsque cette option a la valeur TRUE (ou) appelant une procédure stockée distante démarre une transaction distribuée et inscrit la transaction avec MS DTC. L'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] appelant la procédure stockée distante constitue l'élément créateur de la transaction et qui contrôle l'exécution jusqu'à son terme. Si une instruction COMMIT TRANSACTION ou ROLLBACK TRANSACTION est ensuite émise pour la connexion, le serveur de contrôle demande à MS DTC de gérer l'achèvement de la transaction distribuée sur tous les ordinateurs concernés.<br /><br /> Une fois qu'une transaction distribuée [!INCLUDE[tsql](../../includes/tsql-md.md)] a démarré, des appels de procédures stockées distantes peuvent être effectués envers d'autres instances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui ont été définies en tant que serveurs liés. Les serveurs liés sont tous inscrits dans la transaction distribuée [!INCLUDE[tsql](../../includes/tsql-md.md)] et MS DTC garantit que la transaction est exécutée jusqu'à son terme sur chaque serveur lié.<br /><br /> Si cette option a la valeur FALSE (ou OFF), une transaction locale ne sera pas promue en transaction distribuée lors de l'exécution d'un appel de procédure distante sur un serveur lié.<br /><br /> Si, avant d'exécuter un appel de procédure de serveur à serveur, la transaction est déjà une transaction distribuée, cette option n'a pas effet. L'appel de procédure sur le serveur lié s'exécutera sous la même transaction distribuée.<br /><br /> Si, avant d'exécuter un appel de procédure de serveur à serveur, aucune transaction n'est active dans la connexion, cette option n'a pas effet. La procédure s'exécute ensuite sur le serveur lié sans transactions actives.<br /><br /> La valeur par défaut de cette option est TRUE (ou ON).|  
   
  [  **@optvalue =**] **'***argument option_value***'**  
- Spécifie ou non le *option_name* doit être activée (**TRUE** ou **sur**) ou désactivé (**FALSE** ou **hors**). *l’argument option_value* est **varchar (**10**)**, sans valeur par défaut.  
+ Spécifie ou non le *option_name* doit être activée (**TRUE** ou **sur**) ou désactivé (**FALSE** ou **hors**). *l’argument option_value* est **varchar (** 10 **)**, sans valeur par défaut.  
   
  *l’argument option_value* peut être un entier non négatif pour le **délai de connexion** et **délai de requête** options. Pour le **nom de classement** option, *argument option_value* peut être un nom de classement ou une valeur NULL.  
   

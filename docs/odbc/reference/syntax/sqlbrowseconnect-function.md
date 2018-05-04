@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 apiname:
 - SQLBrowseConnect
 apilocation:
@@ -26,12 +26,11 @@ caps.latest.revision: 36
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 3bbe32ab3098b0e3e7b6ea5ec284a2a86d4f7752
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 34fbd05bcdec421ee9a00474f939d54219f7b321
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlbrowseconnect-function"></a>Fonction SQLBrowseConnect
 **Mise en conformité**  
@@ -124,7 +123,7 @@ SQLRETURN SQLBrowseConnect(
  *attribute-value* ::= *character-string*<br>
  *défini-attribut-mot clé Driver* :: = *identificateur*<br>
   
- où *chaîne de caractères* a zéro ou plusieurs caractères ; *identificateur* a un ou plusieurs caractères ; *mot clé de l’attribut* ne respecte pas la casse ; *attribut-valeur* peut respecter la casse ; et la valeur de la **DSN** mot clé n’est pas constitué uniquement d’espaces. En raison de l’initialisation et la chaîne de fichier grammaire, mots clés et l’attribut valeurs de connexion qui contient les caractères **[] {} (), ? \*= ! @** doit être évitée. En raison de la grammaire dans les informations système, les noms de sources de données et les mots clés ne peut pas contenir la barre oblique inverse (\\) caractères. Pour une application ODBC 2. *x* pilote, accolades sont obligatoires pour la valeur d’attribut pour le mot clé DRIVER.  
+ où *chaîne de caractères* a zéro ou plusieurs caractères ; *identificateur* a un ou plusieurs caractères ; *mot clé de l’attribut* ne respecte pas la casse ; *attribut-valeur* peut respecter la casse ; et la valeur de la **DSN** mot clé n’est pas constitué uniquement d’espaces. En raison de l’initialisation et la chaîne de fichier grammaire, mots clés et l’attribut valeurs de connexion qui contient les caractères **[]{}(), ? \*= ! @** doit être évitée. En raison de la grammaire dans les informations système, les noms de sources de données et les mots clés ne peut pas contenir la barre oblique inverse (\\) caractères. Pour une application ODBC 2. *x* pilote, accolades sont obligatoires pour la valeur d’attribut pour le mot clé DRIVER.  
   
  Si tous les mots clés sont répétés dans la chaîne de connexion de demande de parcourir, le pilote utilise la valeur associée à la première occurrence du mot clé. Si le **DSN** et **pilote** mots clés sont inclus dans la même chaîne de connexion de demande de parcourir, le Gestionnaire de pilotes et le pilote utilisent le mot clé qui apparaît en premier.  
   
@@ -139,7 +138,7 @@ SQLRETURN SQLBrowseConnect(
  *Mot clé ODBC attribut* = {`UID` &#124; `PWD`} [`:`*identificateur localisée*] *-défini-attribut-mot clé driver* :: = *identificateur*[`:`*identificateur localisée*] *attribut-valeur* :: = `{` *attribut-valeur-list* `}` &#124; `?` (Les accolades sont littéral ; ils sont retournés par le pilote).<br>
  *liste de valeurs d’attribut* :: = *chaîne de caractères* [`:`*chaîne de caractères localisés*] &#124; *chaîne de caractères* [`:` *chaîne de caractères localisés*] `,` *liste de valeurs d’attribut*<br>
   
- où *chaîne de caractères* et *chaîne de caractères localisés* avoir zéro ou plusieurs caractères ; *identificateur* et *identificateur localisée* ont un ou plusieurs caractères ; *mot clé de l’attribut* ne respecte pas la casse ; et *attribut-valeur* peut respecter la casse. En raison de la connexion chaîne et l’initialisation du fichier grammaire, les mots clés et les identificateurs localisées et valeurs d’attribut qui contient les caractères **[] {} (), ? \*= ! @** doit être évitée. En raison de la grammaire dans les informations système, les noms de sources de données et les mots clés ne peut pas contenir la barre oblique inverse (\\) caractères.  
+ où *chaîne de caractères* et *chaîne de caractères localisés* avoir zéro ou plusieurs caractères ; *identificateur* et *identificateur localisée* ont un ou plusieurs caractères ; *mot clé de l’attribut* ne respecte pas la casse ; et *attribut-valeur* peut respecter la casse. En raison de la connexion chaîne et l’initialisation du fichier grammaire, les mots clés et les identificateurs localisées et valeurs d’attribut qui contient les caractères **[]{}(), ? \*= ! @** doit être évitée. En raison de la grammaire dans les informations système, les noms de sources de données et les mots clés ne peut pas contenir la barre oblique inverse (\\) caractères.  
   
  La syntaxe de chaîne de connexion résultats Parcourir est utilisée selon les règles sémantiques suivantes :  
   

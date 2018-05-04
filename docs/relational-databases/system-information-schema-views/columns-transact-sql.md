@@ -25,13 +25,12 @@ caps.latest.revision: 48
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 6d74da1d1b45cfa7c9bf3185ee216303b10b4591
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 5a3014753cf48c66c63e28f0e551358c40a0fb51
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="columns-transact-sql"></a>COLUMNS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -42,29 +41,29 @@ ms.lasthandoff: 04/16/2018
   
 |Nom de colonne|Type de données| Description|  
 |-----------------|---------------|-----------------|  
-|**TABLE_CATALOG**|**nvarchar(**128**)**|Qualificateur de la table.|  
-|**TABLE_SCHEMA**|**nvarchar(**128**)**|Nom du schéma qui contient la table.<br /><br /> **\*\* Important \* \***  n’utilisez pas les vues INFORMATION_SCHEMA pour déterminer le schéma d’un objet. La seule méthode fiable pour rechercher le schéma d’un objet est d’interroger l’affichage catalogue sys.objects.|  
-|**NOM_TABLE**|**nvarchar(**128**)**|Nom de la table.|  
-|**COLUMN_NAME**|**nvarchar(**128**)**|Nom de colonne.|  
+|**TABLE_CATALOG**|**nvarchar(** 128 **)**|Qualificateur de la table.|  
+|**TABLE_SCHEMA**|**nvarchar(** 128 **)**|Nom du schéma qui contient la table.<br /><br /> **\*\* Important \* \***  n’utilisez pas les vues INFORMATION_SCHEMA pour déterminer le schéma d’un objet. La seule méthode fiable pour rechercher le schéma d’un objet est d’interroger l’affichage catalogue sys.objects.|  
+|**NOM_TABLE**|**nvarchar(** 128 **)**|Nom de la table.|  
+|**COLUMN_NAME**|**nvarchar(** 128 **)**|Nom de colonne.|  
 |**ORDINAL_POSITION**|**int**|Numéro d’identification de la colonne.|  
-|**COLUMN_DEFAULT**|**nvarchar (**4000**)**|Valeur par défaut de la colonne.|  
-|**IS_NULLABLE**|**varchar (**3**)**|Valeur NULL possible dans la colonne. Si cette colonne accepte des valeurs NULL, elle renvoie YES. Dans le cas contraire, elle renvoie NO.|  
-|**DATA_TYPE**|**nvarchar(**128**)**|Type de données fourni par le système.|  
+|**COLUMN_DEFAULT**|**nvarchar (** 4000 **)**|Valeur par défaut de la colonne.|  
+|**IS_NULLABLE**|**varchar (** 3 **)**|Valeur NULL possible dans la colonne. Si cette colonne accepte des valeurs NULL, elle renvoie YES. Dans le cas contraire, elle renvoie NO.|  
+|**DATA_TYPE**|**nvarchar(** 128 **)**|Type de données fourni par le système.|  
 |**CHARACTER_MAXIMUM_LENGTH**|**int**|Longueur maximale (en caractères) des données de type binaire, caractère, texte et image.<br /><br /> -1 pour **xml** et les données de type de valeur élevée. Renvoie NULL dans les autres cas. Pour plus d’informations, consultez [Types de données &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md).|  
 |**CHARACTER_OCTET_LENGTH**|**int**|Longueur maximale, en octets, des données de type binaire, caractère, texte et image.<br /><br /> -1 pour **xml** et les données de type de valeur élevée. Renvoie NULL dans les autres cas.|  
 |**NUMERIC_PRECISION**|**tinyint**|Précision des données numériques approchées ou exactes, des données de type entier ou monétaire. Renvoie NULL dans les autres cas.|  
 |**NUMERIC_PRECISION_RADIX**|**smallint**|Base de précision des données numériques approchées ou exactes, des données de type entier ou monétaire. Renvoie NULL dans les autres cas.|  
 |**NUMERIC_SCALE**|**int**|Échelle des données numériques approchées ou exactes, des données de type entier ou monétaire. Renvoie NULL dans les autres cas.|  
 |**DATETIME_PRECISION**|**smallint**|Code de sous-type pour **datetime** et ISO **intervalle** des types de données. Renvoie NULL pour les autres types de données.|  
-|**CHARACTER_SET_CATALOG**|**nvarchar(**128**)**|Retourne **master**. Cela indique la base de données dans laquelle se trouve le jeu de caractères, si la colonne est de données de type caractère ou **texte** type de données. Renvoie NULL dans les autres cas.|  
-|**CHARACTER_SET_SCHEMA**|**nvarchar(**128**)**|Retourne toujours la valeur Null.|  
-|**CHARACTER_SET_NAME**|**nvarchar(**128**)**|Retourne le nom unique pour le jeu de caractères si cette colonne est de données de type caractère ou **texte** type de données. Renvoie NULL dans les autres cas.|  
-|**COLLATION_CATALOG**|**nvarchar(**128**)**|Retourne toujours la valeur Null.|  
-|**COLLATION_SCHEMA**|**nvarchar(**128**)**|Retourne toujours la valeur Null.|  
-|**COLLATION_NAME**|**nvarchar(**128**)**|Retourne le nom unique pour le classement si la colonne est de données de type caractère ou **texte** type de données. Renvoie NULL dans les autres cas.|  
-|**DOMAIN_CATALOG**|**nvarchar(**128**)**|Si la colonne est un type de données alias, elle correspond au nom de la base de données dans laquelle le type de données défini par l'utilisateur a été créé. Renvoie NULL dans les autres cas.|  
-|**DOMAIN_SCHEMA**|**nvarchar(**128**)**|Si la colonne est un type de données défini par l'utilisateur, elle renvoie le nom du schéma du type de données défini par l'utilisateur. Renvoie NULL dans les autres cas.<br /><br /> **\*\* Important \* \***  n’utilisez pas les vues INFORMATION_SCHEMA pour déterminer le schéma d’un type de données. La seule méthode fiable pour rechercher le schéma d'un type est d'utiliser la fonction TYPEPROPERTY.|  
-|**NOM_DOMAINE**|**nvarchar(**128**)**|Si la colonne est un type de données défini par l'utilisateur, elle représente le nom du type de données défini par l'utilisateur. Renvoie NULL dans les autres cas.|  
+|**CHARACTER_SET_CATALOG**|**nvarchar(** 128 **)**|Retourne **master**. Cela indique la base de données dans laquelle se trouve le jeu de caractères, si la colonne est de données de type caractère ou **texte** type de données. Renvoie NULL dans les autres cas.|  
+|**CHARACTER_SET_SCHEMA**|**nvarchar(** 128 **)**|Retourne toujours la valeur Null.|  
+|**CHARACTER_SET_NAME**|**nvarchar(** 128 **)**|Retourne le nom unique pour le jeu de caractères si cette colonne est de données de type caractère ou **texte** type de données. Renvoie NULL dans les autres cas.|  
+|**COLLATION_CATALOG**|**nvarchar(** 128 **)**|Retourne toujours la valeur Null.|  
+|**COLLATION_SCHEMA**|**nvarchar(** 128 **)**|Retourne toujours la valeur Null.|  
+|**COLLATION_NAME**|**nvarchar(** 128 **)**|Retourne le nom unique pour le classement si la colonne est de données de type caractère ou **texte** type de données. Renvoie NULL dans les autres cas.|  
+|**DOMAIN_CATALOG**|**nvarchar(** 128 **)**|Si la colonne est un type de données alias, elle correspond au nom de la base de données dans laquelle le type de données défini par l'utilisateur a été créé. Renvoie NULL dans les autres cas.|  
+|**DOMAIN_SCHEMA**|**nvarchar(** 128 **)**|Si la colonne est un type de données défini par l'utilisateur, elle renvoie le nom du schéma du type de données défini par l'utilisateur. Renvoie NULL dans les autres cas.<br /><br /> **\*\* Important \* \***  n’utilisez pas les vues INFORMATION_SCHEMA pour déterminer le schéma d’un type de données. La seule méthode fiable pour rechercher le schéma d'un type est d'utiliser la fonction TYPEPROPERTY.|  
+|**NOM_DOMAINE**|**nvarchar(** 128 **)**|Si la colonne est un type de données défini par l'utilisateur, elle représente le nom du type de données défini par l'utilisateur. Renvoie NULL dans les autres cas.|  
   
 ## <a name="remarks"></a>Notes  
  Le **ORDINAL_POSITION** colonne de la **INFORMATION_SCHEMA. COLONNES** vue n’est pas compatible avec le modèle binaire des colonnes retournées par la fonction COLUMNS_UPDATED. Pour obtenir un modèle binaire qui est compatible avec COLUMNS_UPDATED, vous devez référencer le **ColumnID** propriété de la fonction système COLUMNPROPERTY lorsque vous interrogez le **INFORMATION_SCHEMA. COLONNES** vue. Par exemple :  

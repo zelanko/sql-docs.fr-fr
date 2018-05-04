@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - delimited text lines
 - fixed-width text files
@@ -22,12 +22,11 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 32de9cd4d9f471f53735dae1251494121d034188
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 582860c2972f205244fd3d4e9f9cae45673df66f
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="text-file-format-text-file-driver"></a>Format de fichier texte (pilote du fichier texte)
 Le pilote ODBC texte prend en charge les deux fichiers texte délimités et à largeur fixe. Un fichier texte se compose d’une ligne d’en-tête facultatif et zéro ou plusieurs lignes de texte.  
@@ -49,7 +48,7 @@ Le pilote ODBC texte prend en charge les deux fichiers texte délimités et à l
 |Non-italique|Caractères qui doivent être écrits comme indiqué|  
 |*Italique*|Arguments sont définis ailleurs dans la grammaire|  
 |crochets ([])|Éléments facultatifs|  
-|les accolades ({})|Une liste de choix s’excluent mutuellement|  
+|accolades ({})|Une liste de choix s’excluent mutuellement|  
 |barres verticales (&#124;)|Options mutuellement exclusives distinctes|  
 |points de suspension (...)|Éléments qui peuvent être répétés une ou plusieurs fois|  
   

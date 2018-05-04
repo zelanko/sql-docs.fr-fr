@@ -24,12 +24,11 @@ caps.latest.revision: 27
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: e195e4fb851b1b301b1ccac9501ae5be107e0689
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 5bcebdb4e6bdca021480e8b889228fc95b109a0d
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sphelpjob-transact-sql"></a>sp_help_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -108,7 +107,7 @@ sp_help_job { [ @job_id = ] job_id
 |**7**|Effectue le travail.|  
   
  [  **@date_comparator =**] **'***comparateur_de_dates***'**  
- L’opérateur de comparaison à utiliser dans les comparaisons de *date_created* et *date_de_modification*. *comparateur_de_dates* est **char (1)**et peut être =, \<, ou >.  
+ L’opérateur de comparaison à utiliser dans les comparaisons de *date_created* et *date_de_modification*. *comparateur_de_dates* est **char (1)** et peut être =, \<, ou >.  
   
  [  **@date_created =**] *date_created*  
  Date de création du travail. *date_de_création*est **datetime**, avec NULL comme valeur par défaut.  

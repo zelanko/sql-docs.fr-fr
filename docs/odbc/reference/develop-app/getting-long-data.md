@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - long data [ODBC]
 - fetches [ODBC], long data
@@ -23,12 +23,11 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: ff0a11691216d03edc80d5be16c18f428664e7b7
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 0e681bac1af7f778d0e8c813129a344af6c21dd8
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="getting-long-data"></a>Obtention de données de type Long
 Définir des SGBD *données longues* sous forme de n’importe quel caractère ou binaire sur une certaine taille, tels que 255 caractères. Ces données peuvent être assez petites pour être stocké dans une mémoire tampon unique, telle qu’une description de partie de plusieurs caractères de milliers. Toutefois, il peut être trop long pour stocker en mémoire, telles que des documents de texte long ou de bitmaps. Étant donné que ces données ne peut pas être stockées dans un tampon unique, il est extraite du pilote dans des parties avec **SQLGetData** après les autres données de la ligne a été extraite.  

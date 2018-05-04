@@ -27,15 +27,15 @@ caps.latest.revision: 51
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 3863648b3c8978fa8ac3b8ba981c6fa634c30ef0
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 0d6f8fed78b79b6b57f1a41ed1e0886378d9df67
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="allowdrillthrough-element-assl"></a>Élément AllowDrillThrough (ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Détermine si l’extraction est autorisée sur l’élément parent.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Détermine si l'extraction est autorisée sur l'élément parent.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -61,9 +61,9 @@ ms.lasthandoff: 01/08/2018
 |Relation|Élément|  
 |------------------|-------------|  
 |Éléments parents|[Élément MiningModel](../../../analysis-services/scripting/objects/miningmodel-element-assl.md), [MiningModelPermission](../../../analysis-services/scripting/objects/miningmodelpermission-element-assl.md), [MiningStructurePermission](../../../analysis-services/scripting/objects/miningstructurepermission-element-assl.md)|  
-|Éléments enfants|None|  
+|Éléments enfants|Aucune|  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Les éléments qui correspondent aux parents de **AllowDrillThrough** dans le modèle d’objet objets AMO (Analysis Management) sont <xref:Microsoft.AnalysisServices.MiningModel>, <xref:Microsoft.AnalysisServices.MiningModelPermission>, et <xref:Microsoft.AnalysisServices.MiningStructurePermission>.  
   
 ## <a name="drillthrough-on-mining-structures"></a>Extraction sur des structures d'exploration de données  
@@ -75,12 +75,12 @@ ms.lasthandoff: 01/08/2018
   
  `SELECT * FROM <structure>.CASES`  
   
- ou Gestionnaire de configuration  
+ ou  
   
  `SELECT StructureColumn('<structure-column-name>') FROM <model>.CASES`  
   
 ## <a name="see-also"></a>Voir aussi  
- [Élément role &#40; ASSL &#41;](../../../analysis-services/scripting/objects/role-element-assl.md)   
- [Propriétés &#40; ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
+ [Élément role & #40 ; ASSL & #41 ;](../../../analysis-services/scripting/objects/role-element-assl.md)   
+ [Propriétés & #40 ; ASSL & #41 ;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   

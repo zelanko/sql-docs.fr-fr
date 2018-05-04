@@ -23,20 +23,20 @@ caps.latest.revision: 36
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 8ee6e7231d4a3a3696de68e3c22b8cad7eb05a92
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: a199a80277c56825dad9d5ac00909244b57844d4
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mdschemamembers-rowset"></a>Ensemble de lignes MDSCHEMA_MEMBERS
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Décrit les membres d’une base de données.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Décrit les membres d'une base de données.  
   
 ## <a name="rowset-columns"></a>Colonnes de l'ensemble de lignes  
  Le **MDSCHEMA_MEMBERS** ensemble de lignes contient les colonnes suivantes.  
   
-|Nom de colonne|Indicateur de type|Longueur|Description|  
+|Nom de colonne|Indicateur de type|Longueur| Description|  
 |-----------------|--------------------|------------|-----------------|  
 |**CATALOG_NAME**|**DBTYPE_WSTR**||Nom de la base de données à laquelle ce membre appartient.|  
 |**SCHEMA_NAME**|**DBTYPE_WSTR**||Nom du schéma auquel ce membre appartient.|  
@@ -70,21 +70,21 @@ ms.lasthandoff: 01/08/2018
   
 |Nom de colonne|Indicateur de type|État de la restriction|  
 |-----------------|--------------------|-----------------------|  
-|**CATALOG_NAME**|**DBTYPE_WSTR**|Facultatif.|  
-|**SCHEMA_NAME**|**DBTYPE_WSTR**|Facultatif.|  
-|**CUBE_NAME**|**DBTYPE_WSTR**|Facultatif.|  
-|**DIMENSION_UNIQUE_NAME**|**DBTYPE_WSTR**|Facultatif.|  
-|**HIERARCHY_UNIQUE_NAME**|**DBTYPE_WSTR**|Facultatif.|  
-|**LEVEL_UNIQUE_NAME**|**DBTYPE_WSTR**|Facultatif.|  
-|**LEVEL_NUMBER**|**DBTYPE_UI4**|Facultatif.|  
-|**MEMBER_NAME**|**DBTYPE_WSTR**|Facultatif.|  
-|**MEMBER_UNIQUE_NAME**|**DBTYPE_WSTR**|Facultatif.|  
-|**MEMBER_CAPTION**|**DBTYPE_WSTR**|Facultatif.|  
-|**MEMBER_TYPE**|**DBTYPE_I4**|Facultatif.|  
+|**CATALOG_NAME**|**DBTYPE_WSTR**|Ce paramètre est facultatif.|  
+|**SCHEMA_NAME**|**DBTYPE_WSTR**|Ce paramètre est facultatif.|  
+|**CUBE_NAME**|**DBTYPE_WSTR**|Ce paramètre est facultatif.|  
+|**DIMENSION_UNIQUE_NAME**|**DBTYPE_WSTR**|Ce paramètre est facultatif.|  
+|**HIERARCHY_UNIQUE_NAME**|**DBTYPE_WSTR**|Ce paramètre est facultatif.|  
+|**LEVEL_UNIQUE_NAME**|**DBTYPE_WSTR**|Ce paramètre est facultatif.|  
+|**LEVEL_NUMBER**|**DBTYPE_UI4**|Ce paramètre est facultatif.|  
+|**MEMBER_NAME**|**DBTYPE_WSTR**|Ce paramètre est facultatif.|  
+|**MEMBER_UNIQUE_NAME**|**DBTYPE_WSTR**|Ce paramètre est facultatif.|  
+|**MEMBER_CAPTION**|**DBTYPE_WSTR**|Ce paramètre est facultatif.|  
+|**MEMBER_TYPE**|**DBTYPE_I4**|Ce paramètre est facultatif.|  
 |**TREE_OP**|**DBTYPE_I4**|(Facultatif) S'applique uniquement à un membre unique :<br /><br /> **MDTREEOP_ANCESTORS** (**0 x 20**) renvoie tous les ancêtres.<br /><br /> **MDTREEOP_CHILDREN** (**0 x 01**) retourne uniquement les enfants immédiats.<br /><br /> **MDTREEOP_SIBLINGS** (**0 x 02**) renvoie les membres du même niveau.<br /><br /> **MDTREEOP_PARENT** (**0 x 04**) retourne uniquement le parent immédiat.<br /><br /> **MDTREEOP_SELF** (**0 x 08**) se retourne lui-même dans la liste des lignes retournées.<br /><br /> **MDTREEOP_DESCENDANTS** (**0 x 10**) retourne tous les descendants.|  
 |**CUBE_SOURCE**|**DBTYPE_UI2**|(Facultatif) Restriction par défaut est une valeur de 1. Une image bitmap avec l’une des valeurs valides suivantes :<br /><br /> 1 CUBE<br /><br /> 2 DIMENSION|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Ensembles de lignes de schéma OLE DB pour OLAP](../../../analysis-services/schema-rowsets/ole-db-olap/ole-db-for-olap-schema-rowsets.md)  
+ [OLE DB pour OLAP Schema Rowsets](../../../analysis-services/schema-rowsets/ole-db-olap/ole-db-for-olap-schema-rowsets.md)  
   
   

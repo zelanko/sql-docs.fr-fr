@@ -1,33 +1,32 @@
 ---
-title: "L’élément KpiGoal (CSDLBI) | Documents Microsoft"
-ms.custom: 
+title: L’élément KpiGoal (CSDLBI) | Documents Microsoft
+ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
 ms.assetid: fd8afbe7-b57d-4b47-862d-eb7b2489c327
-caps.latest.revision: 
+caps.latest.revision: 13
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 4e15a18c55318373b41c8a4fabe7377aad5d9f00
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: f54d62233dad9360cfa7e530e7b9dea30ad30f5e
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="kpigoal-element-csdlbi"></a>Élément KpiGoal (CSDLBI)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-L'élément KpiGoal fournit une référence à la colonne utilisée pour définir l'objectif d'un indicateur de performance clé (KPI).  
+  L'élément KpiGoal fournit une référence à la colonne utilisée pour définir l'objectif d'un indicateur de performance clé (KPI).  
   
  Dans CSDLBI, les indicateurs de performance clés sont basés sur les mesures, et l’élément Measure contient la formule (le cas échéant), tandis que d’autres métadonnées associées à l’indicateur de performance clé sont définies en tant que partie intégrante de [l’élément KPI &#40;CSDLBI&#41;](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/kpi-element-csdlbi.md).  L'élément Kpigoal est un sous-type de l'élément Kpi.  
   
@@ -86,6 +85,6 @@ L'élément KpiGoal fournit une référence à la colonne utilisée pour défini
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Élément KPI &#40; CSDLBI &#41;](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/kpi-element-csdlbi.md)  
+ [Élément KPI & #40 ; CSDLBI & #41 ;](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/kpi-element-csdlbi.md)  
   
   

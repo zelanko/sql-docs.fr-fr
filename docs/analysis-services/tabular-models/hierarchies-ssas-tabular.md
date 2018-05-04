@@ -1,30 +1,30 @@
 ---
-title: "Hiérarchies | Documents Microsoft"
-ms.custom: 
+title: Hiérarchies | Documents Microsoft
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: e3e50e89-f85d-485b-a271-1e0550520212
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: e0a881f97fc071d0921a8829c8bb70d4f50197c2
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 54ea595a8d310ffaa009f32a3b060728b4241346
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="hierarchies"></a>Hierarchies
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Dans les modèles tabulaires, les hiérarchies sont des métadonnées qui définissent les relations entre deux ou plusieurs colonnes dans une table. Les hiérarchies peuvent apparaître séparément des autres colonnes dans une liste de champs de clients de création de rapports, ce qui les rend faciles à parcourir par les utilisateurs du client et à inclure dans un rapport.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+  Les hiérarchies, dans les modèles tabulaires, sont des métadonnées qui définissent les relations entre deux colonnes ou plus d'une table. Les hiérarchies peuvent apparaître séparément des autres colonnes dans une liste de champs de clients de création de rapports, ce qui les rend faciles à parcourir par les utilisateurs du client et à inclure dans un rapport.  
   
 ##  <a name="bkmk_benefits"></a> Avantages  
  Les tables peuvent inclure des dizaines, voire des centaines de colonnes avec des noms de colonne inhabituels sans ordre apparent. Cela peut entraîner une apparence non ordonnée dans les listes de champs de clients de création de rapports, ce qui complique la tâche des utilisateurs qui recherchent et souhaitent inclure des données dans un rapport. Les hiérarchies peuvent fournir une vue simple et intuitive d'une structure de données autrement plus complexe.  
@@ -50,7 +50,7 @@ ms.lasthandoff: 01/08/2018
   
 ##  <a name="bkmk_related_tasks"></a> Related tasks  
   
-|Tâche|Description|  
+|Tâche| Description|  
 |----------|-----------------|  
 |[Créer et gérer des hiérarchies](../../analysis-services/tabular-models/create-and-manage-hierarchies-ssas-tabular.md)|Décrit comment créer et gérer des hiérarchies à l'aide du générateur de modèles dans la vue de diagramme.|  
   

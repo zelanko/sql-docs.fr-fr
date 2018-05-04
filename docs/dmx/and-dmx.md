@@ -22,12 +22,11 @@ caps.latest.revision: 13
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 4acd3c33863e8e8c198480e4cc90e4661f7acf94
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 4968fc4f42ffe33e6e8926d8eccbc661060c30a4
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="and-dmx"></a>AND (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -51,7 +50,7 @@ Expression1 AND Expression2
 ## <a name="return-value"></a>Valeur retournée  
  Valeur booléenne qui retourne TRUE si les deux paramètres donnent comme résultat la valeur TRUE ; dans le cas contraire, elle retourne FALSE.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Les deux paramètres sont considérés comme valeurs booléennes (0 correspond à la valeur FALSE ; sinon TRUE) avant que l'opérateur effectue la conjonction logique. Le tableau ci-dessous affiche la liste des valeurs qui sont retournées selon les différentes combinaisons de valeurs des paramètres.  
   
 |Si Expression1 est|Si Expression2 est|La valeur de retour est|  
@@ -62,8 +61,8 @@ Expression1 AND Expression2
 |FALSE|FALSE|FALSE|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Les Extensions d’exploration de données &#40; DMX &#41; Référence des opérateurs](../dmx/data-mining-extensions-dmx-operator-reference.md)   
- [Logique opérateurs &#40; DMX &#41;](../dmx/operators-logical.md)   
- [Opérateurs &#40; DMX &#41;](../dmx/operators-dmx.md)  
+ [Data Mining Extensions &#40;DMX&#41; référence des opérateurs](../dmx/data-mining-extensions-dmx-operator-reference.md)   
+ [Opérateurs logiques &#40;DMX&#41;](../dmx/operators-logical.md)   
+ [Opérateurs &#40;DMX&#41;](../dmx/operators-dmx.md)  
   
   

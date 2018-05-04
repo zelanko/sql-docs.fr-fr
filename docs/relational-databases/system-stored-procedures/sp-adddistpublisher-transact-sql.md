@@ -24,12 +24,11 @@ caps.latest.revision: 35
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 0332ecba1226855d841ba9f8619e660cb72e91af
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 3ca0d66f6b5a4df2e0d4f4fa79d9eb882159c431
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spadddistpublisher-transact-sql"></a>sp_adddistpublisher (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -79,10 +78,10 @@ sp_adddistpublisher [ @publisher= ] 'publisher'
 >  N'utilisez pas de mot de passe vide. Utilisez un mot de passe fort.  
   
  [  **@working_directory=**] **'***working_directory***'**  
- Nom du répertoire de travail utilisé pour stocker les fichiers de données et de schéma destinés à la publication. *working_directory* est **nvarchar (255)**et les valeurs par défaut pour le dossier ReplData pour cette instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], par exemple 'C:\Program Files\Microsoft SQL Server\MSSQL\MSSQ.1\ReplData'. Le nom doit être indiqué au format UNC.  
+ Nom du répertoire de travail utilisé pour stocker les fichiers de données et de schéma destinés à la publication. *working_directory* est **nvarchar (255)** et les valeurs par défaut pour le dossier ReplData pour cette instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], par exemple 'C:\Program Files\Microsoft SQL Server\MSSQL\MSSQ.1\ReplData'. Le nom doit être indiqué au format UNC.  
   
  [  **@trusted=**] **'***approuvé***'**  
- Ce paramètre est déconseillé et n'est fourni qu'à des fins de compatibilité ascendante. *approuvé* est **nvarchar (5)**et la valeur n’est pas défini **false** entraîne une erreur.  
+ Ce paramètre est déconseillé et n'est fourni qu'à des fins de compatibilité ascendante. *approuvé* est **nvarchar (5)** et la valeur n’est pas défini **false** entraîne une erreur.  
   
  [  **@encrypted_password=**] *encrypted_password*  
  Paramètre *encrypted_password* n’est plus pris en charge. Tentative de définition de cette **bits** paramètre **1** entraîne une erreur.  
