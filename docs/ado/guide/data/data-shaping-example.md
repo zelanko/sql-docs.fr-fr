@@ -1,11 +1,9 @@
 ---
 title: Exemple de mise en forme des données | Documents Microsoft
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -19,12 +17,11 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 0685e0c593a77f5369513fa9b39fe61f89498ff4
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 3ead77ee3f08e2a4ffe9e385b32d289a77a55a92
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="data-shaping-example"></a>Exemple de mise en forme des données
 Les données suivantes, mise en forme de la commande montre comment générer une liste hiérarchique **Recordset** à partir de la **clients** et **commandes** tables dans la base de données Northwind.  
