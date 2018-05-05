@@ -1,11 +1,9 @@
 ---
 title: Les données persistantes | Documents Microsoft
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -22,12 +20,11 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 915f1d4e8ac954302c35eb430bb36bb72b33ef14
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: d3f4fed35b629f8dd1eae89c42895fb8a780c4cb
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="persisting-data"></a>Persistance des données
 Informatique portable (par exemple, à l’aide d’ordinateurs portables) a généré la nécessité pour les applications qui peuvent s’exécuter dans un état connecté et déconnecté. ADO prend également en charge pour ce qui permet au développeur pour enregistrer un curseur client **Recordset** sur le disque et recharger ultérieurement.  

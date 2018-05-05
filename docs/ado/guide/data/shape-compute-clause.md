@@ -1,11 +1,9 @@
 ---
 title: Forme la Clause COMPUTE | Documents Microsoft
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -21,12 +19,11 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 5a157d7d77bd6beefae7c3258039953c5e5e4995
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 25d89db4052234482846dc752e5c0431bb517164
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="shape-compute-clause"></a>Clause COMPUTE de forme
 Une clause COMPUTE de forme génère un parent **Recordset**, dont les colonnes sont constitués d’une référence à l’enfant **Recordset**; facultatif dont le contenu est chapitre, nouveau, ou des colonnes calculées, des colonnes ou le résultat de l’exécution des fonctions d’agrégation de l’enfant **Recordset** ou un préalablement mis en forme **Recordset**; et toutes les colonnes à partir de l’enfant **Recordset** répertoriées dans le paramètre facultatif par clause.  
@@ -45,7 +42,7 @@ SHAPE child-command [AS] child-alias
  *commande-enfant*  
  Se compose d’une des opérations suivantes :  
   
--   Une commande de requête entre accolades (« {} ») qui retourne un enfant **Recordset** objet. La commande est envoyée au fournisseur de données sous-jacent et sa syntaxe dépend des exigences de ce fournisseur. Ce sera généralement le langage SQL, même si ADO ne requiert pas de langage de requête particulier.  
+-   Une commande de requête entre accolades («{}») qui retourne un enfant **Recordset** objet. La commande est envoyée au fournisseur de données sous-jacent et sa syntaxe dépend des exigences de ce fournisseur. Ce sera généralement le langage SQL, même si ADO ne requiert pas de langage de requête particulier.  
   
 -   Le nom d’un objet en forme **Recordset**.  
   
