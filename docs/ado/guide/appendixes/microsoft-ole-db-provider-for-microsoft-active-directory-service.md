@@ -1,11 +1,9 @@
 ---
 title: Fournisseur Microsoft OLE DB pour le Service Microsoft Active Directory | Documents Microsoft
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -22,12 +20,11 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 5fbfe4b445df4375bee52a8bccc4db87d0040798
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 7c38caaead8d2eb1fa24a4b7a38aebfdc19cbcec
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-active-directory-service"></a>Fournisseur Microsoft OLE DB pour le Service Microsoft Active Directory
 Le fournisseur Active Directory Service Interfaces ADSI () permet à ADO pour se connecter à des services d’annuaire hétérogènes via ADSI. Ainsi, les applications ADO accès en lecture seule pour les services d’annuaire Microsoft Windows NT 4.0 et Microsoft Windows 2000, en plus de n’importe quel service d’annuaire compatible LDAP et les Services d’annuaire Novell. ADSI est basé sur un modèle de fournisseur, afin que s’il existe un nouveau fournisseur donnant accès à un autre annuaire, l’application ADO puisse y accéder en toute transparence. Le fournisseur ADSI est libre de threads et Unicode.  

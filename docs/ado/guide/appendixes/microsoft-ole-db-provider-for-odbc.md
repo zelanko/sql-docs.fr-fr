@@ -1,11 +1,9 @@
 ---
 title: Fournisseur Microsoft OLE DB pour ODBC | Documents Microsoft
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -20,12 +18,11 @@ caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: a05ee69c7b22365dd6acbbaf6ff15d078279c5ee
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 612ca78e6af181aaf3e2d3b1eb16ae5fea7eec3c
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="microsoft-ole-db-provider-for-odbc-overview"></a>Fournisseur Microsoft OLE DB pour ODBC présentation
 Pour un programmeur ADO ou RDS, l’idéal serait dans toutes les données source expose une interface OLE DB, afin que ADO peut appeler directement dans la source de données. Bien que les fournisseurs de base de données plus en plus implémentez les interfaces OLE DB, certaines sources de données ne sont pas encore exposées de cette manière. Toutefois, la plupart des systèmes SGBD utilisés aujourd'hui accessibles via ODBC.

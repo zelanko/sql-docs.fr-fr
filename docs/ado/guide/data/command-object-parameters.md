@@ -1,11 +1,9 @@
 ---
 title: Paramètres de l’objet de commande | Documents Microsoft
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -19,12 +17,11 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: d55af0ad3553a9129ff9e54308b68b14a622c154
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: fa60d076d6c4a3d4eea2092db92c3006d4fd0905
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="command-object-parameters"></a>Paramètres de l’objet de commande
 La rubrique précédente présentée [création et exécution d’une commande Simple](../../../ado/guide/data/creating-and-executing-a-simple-command.md). Une utilisation plus intéressante pour la [commande](../../../ado/reference/ado-api/command-object-ado.md) objet est indiqué dans l’exemple suivant, dans lequel la commande SQL a été paramétrée. Cette modification permet de réutiliser la commande, en passant une valeur différente pour le paramètre chaque fois. Étant donné que la [préparé la propriété](../../../ado/reference/ado-api/prepared-property-ado.md) propriété sur le **commande** objet a la valeur **true**, ADO nécessitera le fournisseur compiler la commande spécifiée dans [ CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) avant de l’exécuter pour la première fois. Il sera également conserver la commande compilée en mémoire. Cela ralentit l’exécution de la commande légèrement la première fois qu’elle est exécutée en raison de la surcharge requise pour préparer, mais entraîne un gain de performances chaque fois que la commande est appelée par la suite. Par conséquent, les commandes doivent être préparées uniquement si elles seront utilisées plusieurs fois.  

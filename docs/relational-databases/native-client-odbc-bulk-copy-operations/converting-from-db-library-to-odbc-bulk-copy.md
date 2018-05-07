@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: ''
 ms.component: native-client-odbc-bulk-copy-operations
 ms.reviewer: ''
 ms.suite: sql
@@ -22,13 +21,12 @@ caps.latest.revision: 30
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: c5ef54d6c9d0eee2481941f8dc6c77fab737d3fc
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: bc8072a1bd0f0e3a097a01696c9d034e0acb33c7
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="converting-from-db-library-to-odbc-bulk-copy"></a>Conversion à partir de la bibliothèque de bases de données vers une copie en bloc ODBC
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -57,7 +55,7 @@ ms.lasthandoff: 04/16/2018
   
      Dans DB-Library, un *varlen* valeur -1 indique que les données de longueur variable sont fournies, qui, dans ODBC *cbData* est interprété comme signifiant que seules les valeurs NULL sont fournies. Modifier n’importe quel DB-Library *varlen* spécifications de -1 en SQL_VARLEN_DATA et les *varlen* spécifications de 0 en SQL_NULL_DATA.  
   
--   La bibliothèque DB-Library  **bcp_colfmt *** file_collen* et ODBC [bcp_colfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md)*cbUserData * ont le même problème que le **bcp_bind *** varlen*et *cbData* paramètres indiqués ci-dessus. Modifier n’importe quel DB-Library *file_collen* spécifications de -1 en SQL_VARLEN_DATA et les *file_collen* spécifications de 0 en SQL_NULL_DATA.  
+-   La bibliothèque DB-Library  **bcp_colfmt *** file_collen* et ODBC [bcp_colfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md)* cbUserData * ont le même problème que le **bcp_bind *** varlen*et *cbData* paramètres indiqués ci-dessus. Modifier n’importe quel DB-Library *file_collen* spécifications de -1 en SQL_VARLEN_DATA et les *file_collen* spécifications de 0 en SQL_NULL_DATA.  
   
 -   Le *iValue* paramètre de ODBC [bcp_control](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-control.md) fonction est un pointeur void. Dans DB-Library, *iValue* était un entier. Convertir les valeurs pour ODBC *iValue* en void *.  
   

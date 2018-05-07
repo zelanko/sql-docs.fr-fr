@@ -1,11 +1,9 @@
 ---
 title: Limites d’un objet Recordset | Documents Microsoft
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -21,12 +19,11 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: da0eb328f331847d30a5e408369c77646d5a967e
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 20373bc374d1f5f5b75522ede5255a376ab6f657
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="boundaries-of-a-recordset"></a>Limites d’un jeu d’enregistrements
 **Jeu d’enregistrements** prend en charge la **BOF** et **EOF** propriétés pour délimiter le début et la fin, respectivement, du jeu de données. Vous pouvez considérer **BOF** et **EOF** sous forme d’enregistrements « fantômes » placés au début et à la fin de la **Recordset**. Comptage **BOF** et **EOF**, notre exemple **Recordset** ressemble maintenant à ceci :  

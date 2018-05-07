@@ -1,11 +1,9 @@
 ---
 title: Section de données | Documents Microsoft
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -19,12 +17,11 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: ea45564e35d9e6bbd3d8cd484f190a4fdd3b88aa
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: cc7a8e66765d35d4c8a8a7f74f63720dec4d9429
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="data-section"></a>Section de données
 La section de données définit les données de l’ensemble de lignes, ainsi que tout en attente de mises à jour, les insertions ou les suppressions. La section de données peut contenir zéro ou plusieurs lignes. Il ne peut contenir que des données à partir d’un ensemble de lignes où la ligne est définie par le schéma. En outre, comme mentionné précédemment, les colonnes dépourvues de données peuvent être omis. Si un attribut ou un sous-élément est utilisé dans la section de données et que cette construction n’a pas été définie dans la section de schéma, il est ignoré en mode silencieux.  

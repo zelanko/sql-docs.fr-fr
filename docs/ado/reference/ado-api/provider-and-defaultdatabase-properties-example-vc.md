@@ -1,11 +1,9 @@
 ---
 title: Fournisseur et un exemple de propriétés DefaultDatabase (VC ++) | Documents Microsoft
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -22,12 +20,11 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: d1529314e0e14f1cae6de34196961a22b9e4bef4
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: dfa6d9521b403ae23cffbe8605072ed346bd5229
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="provider-and-defaultdatabase-properties-example-vc"></a>Fournisseur et un exemple de propriétés DefaultDatabase (VC ++)
 Cet exemple illustre la [fournisseur](../../../ado/reference/ado-api/provider-property-ado.md) propriété en ouvrant trois [connexion](../../../ado/reference/ado-api/connection-object-ado.md) objets à l’aide de différents fournisseurs. Elle utilise également le [DefaultDatabase](../../../ado/reference/ado-api/defaultdatabase-property.md) propriété à définir la base de données par défaut pour le fournisseur ODBC de Microsoft.  

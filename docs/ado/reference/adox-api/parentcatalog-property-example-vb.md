@@ -1,11 +1,9 @@
 ---
 title: Exemple de propriété ParentCatalog (VB) | Documents Microsoft
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -21,12 +19,11 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 0350834ded19524547e2107dc8910486cb6ab28f
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: a6d6c999e0df8036f64a949704309088bce4a145
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="parentcatalog-property-example-vb"></a>Exemple de propriété ParentCatalog (VB)
 Le code suivant montre comment utiliser le [ParentCatalog](../../../ado/reference/adox-api/parentcatalog-property-adox.md) propriété accéder à une propriété spécifique au fournisseur avant d’ajouter une table à un catalogue. La propriété est **AutoIncrement**, ce qui crée un champ de type AutoIncrement dans une base de données Microsoft Jet.  

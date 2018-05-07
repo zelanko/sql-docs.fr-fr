@@ -1,11 +1,9 @@
 ---
 title: Exemple (VC ++) de modèle événements ADO | Documents Microsoft
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -21,12 +19,11 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 51cd8fc601b8ecb14f680ee7af8d4f3879647985
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: ec57df4ce7217579d4b409d3a571a077c376d98e
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ado-events-model-example-vc"></a>Exemple de modèle d’événements ADO (VC ++)
 La section Visual C++ de [instanciation des événements ADO par langage](../../../ado/guide/data/ado-event-instantiation-by-language.md) fournit une description générale de la façon d’instancier le modèle d’événement ADO. Voici un exemple spécifique de l’instanciation du modèle d’événement dans l’environnement créé par le **#import** directive.  

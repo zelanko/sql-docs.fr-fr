@@ -25,13 +25,12 @@ caps.latest.revision: 64
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Active
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 29c2557584393605ba0e89f45dc079dea6d5ddb8
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 40f20ba8dd8db388d0cae1173030497beac331c4
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spexecutesql-transact-sql"></a>sp_executesql (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -64,7 +63,7 @@ sp_executesql [ @stmt = ] statement
   
  Chaque paramètre inclus dans @stmt doit posséder une entrée correspondante dans la liste des définitions de paramètres @params et dans la liste des valeurs de paramètres.  
   
- [ @params=] N'@*nom_paramètre ** data_type* [,... *n* ] '  
+ [ @params=] N'@*nom_paramètre ** data_type* [,...] *n* ] '  
  Chaîne contenant les définitions de tous les paramètres qui ont été incorporés dans @stmt. Cette chaîne doit être une constante Unicode ou une variable Unicode. Chaque définition de paramètre se compose d'un nom de paramètre et d'un type de données. *n* est un espace réservé qui indique les définitions de paramètres supplémentaires. Chaque paramètre spécifié dans @stmtmust être défini dans @params. Si le lot ou l'instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] figurant dans @stmt ne contient aucun paramètre, il est inutile d'utiliser @params. La valeur par défaut de ce paramètre est NULL.  
   
  [ @param1=] '*value1*'  

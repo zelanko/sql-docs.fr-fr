@@ -1,11 +1,9 @@
 ---
 title: Visual Basic pour Applications functions | Documents Microsoft
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -22,12 +20,11 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 0a41a263f8b6d6ea69c013656c5863ea9b366c57
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 20d9f7f726ac705ebdf93484c5e7ecef5f3ad54d
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="visual-basic-for-applications-functions"></a>Visual Basic pour Applications functions
 Visual Basic suivant pour les fonctions d’Applications peuvent servir dans les expressions de calcul de la mise en forme des données :  

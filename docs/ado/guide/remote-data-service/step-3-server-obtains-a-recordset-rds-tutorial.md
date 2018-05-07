@@ -1,11 +1,9 @@
 ---
 title: 'Étape 3 : Le serveur obtient un objet Recordset (didacticiel RDS) | Documents Microsoft'
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -19,12 +17,11 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 7c24a84e24498003d5c08af60f81707c43d11091
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: fdefc86152b1a91ab20099e31a748940c5fe57ff
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="step-3-server-obtains-a-recordset-rds-tutorial"></a>Étape 3 : Le serveur obtient un jeu d’enregistrements (didacticiel sur les services Bureau à distance)
 Le programme de serveur utilise le texte de chaîne et la commande de se connecter pour interroger la source de données pour les lignes souhaitées. ADO est généralement utilisé pour récupérer cette **Recordset**, bien que les autres Microsoft d’accès aux données des interfaces, telles que OLE DB, peut être utilisé.  
