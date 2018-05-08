@@ -1,22 +1,22 @@
 ---
-title: Mise à jour - se connecter à la documentation de SQL Server | Documents Microsoft
-description: Affiche des extraits de contenus mis à jour récemment dans la documentation de Connect to Microsoft SQL Server.
+title: Mise à jour – Documentation Connexion au serveur SQL Server | Microsoft Docs
+description: Affiche des extraits de contenus mis à jour récemment dans la documentation Connexion au serveur SQL Server.
 manager: craigg
 author: MightyPen
 ms.author: genemi
 ms.topic: article
 ms.custom: UpdArt.exe
 ms.suite: sql
-ms.prod_service: sql-non-specified
+ms.prod_service: sql
 ms.component: connect
 ms.date: 02/03/2018
-ms.openlocfilehash: da7ff58d5930acb084220c8d0364147ae93ed963
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.openlocfilehash: b7f3307feb3e17ec342c9693c5b70d07866b383f
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2018
+ms.lasthandoff: 04/26/2018
 ---
-# <a name="new-and-recently-updated-connect-to-sql-server"></a>Nouveaux et mis à jour récemment : se connecter à SQL Server
+# <a name="new-and-recently-updated-connect-to-sql-server"></a>Nouveautés et mises à jour récentes : Connexion au serveur SQL Server
 
 
 
@@ -29,7 +29,7 @@ Les mises à jour récentes sont signalées pour la plage de dates et le sujet s
 
 
 - *Période des mises à jour :* &nbsp; **03-12-2017** &nbsp; au &nbsp; **03-02-2018**
-- *Zone de sujet :* &nbsp; **se connecter à SQL Server**.
+- *Zone de thème :* &nbsp;**Connexion au serveur SQL Server**.
 
 
 
@@ -91,28 +91,28 @@ Cette liste compacte fournit des liens vers tous les articles mis à jour qui so
 
 
 
-**Récupérer des données dans des parties avec SQLGetData**
+**Récupérer une partie des données avec SQLGetData**
 
-Avant le 17 du pilote ODBC pour SQL Server, cryptage caractère et les colonnes de type binary ne sont pas accessibles dans des parties avec SQLGetData. Un seul appel de SQLGetData peut être effectué, avec une mémoire tampon de longueur suffisante pour contenir les données de la colonne entière.
+Avant la version 17 du pilote ODBC pour SQL Server, il n’est pas possible de récupérer une partie des colonnes binaires et des caractères chiffrés avec SQLGetData. Un seul appel de SQLGetData est possible, avec une mémoire tampon de taille suffisante pour contenir la totalité des données de la colonne.
 
-**Envoyer des données dans des parties avec SQLPutData**
+**Envoyer une partie des données avec SQLPutData**
 
-Impossible d’envoyer les données de comparaison ou insertion dans des parties avec SQLPutData. Un seul appel à SQLPutData peut être effectué, avec une mémoire tampon contenant la totalité des données. Pour insérer des données de type long dans les colonnes chiffrées, utilisez l’API de copie en bloc, décrit dans la section suivante, avec un fichier de données d’entrée.
+Il n’est pas possible d’envoyer une partie des données à des fins de comparaison ou d’insertion avec SQLPutData. Un seul appel à SQLPutData est possible, avec une mémoire tampon contenant la totalité des données. Pour insérer des données de type long dans des colonnes chiffrées, utilisez l’API de copie en bloc, décrite dans la section suivante, avec un fichier de données d’entrée.
 
-**Smallmoney et money chiffrée**
+**Colonnes money et smallmoney chiffrées**
 
-Chiffré **money** ou **smallmoney** colonnes ne peut pas être ciblés par les paramètres, car il n’existe aucun spécifique qui correspond à ces types, ce qui entraîne des erreurs de conflit de Type opérande de type de données ODBC.
+Les paramètres ne peuvent pas cibler les colonnes **money** et **smallmoney**, car il n’existe aucun type de données ODBC correspondant spécifiquement à ces types, ce qui provoque des erreurs de conflit de type opérande.
 
-**Copie en bloc des colonnes chiffrées**
+**Copie en bloc de colonnes chiffrées**
 
 
-Utilisation de la [des fonctions de copie en bloc SQL](odbc/../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md) et le **bcp** utilitaire est pris en charge avec Always Encrypted depuis le 17 du pilote ODBC pour SQL Server. Texte en clair (insertion chiffrée sur et récupération déchiffrée sur) et texte chiffré (transféré textuellement) peuvent être insérés et récupérés à l’aide de la copie en bloc (bcp_ *) API et la **bcp** utilitaire.
+Les [fonctions de copie en bloc SQL](odbc/../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md) et l’utilitaire **bcp** sont pris en charge avec Always Encrypted depuis la version 17 du pilote ODBC pour SQL Server. Le texte en clair (chiffré lors de l’insertion et déchiffré lors de la récupération) et le texte chiffré (transféré textuellement) peuvent être insérés et récupérés à l’aide des API de copie en bloc (bcp_*) et de l’utilitaire **bcp**.
 
-- Pour récupérer du texte chiffré sous forme de varbinary (max) (par exemple, pour le chargement en masse dans une autre base de données), de se connecter sans le `ColumnEncryption` option (ou la valeur `Disabled`) et effectuer une opération BCP OUT.
+- Pour récupérer du texte chiffré au format varbinary(max) (par exemple, pour le chargement en masse dans une autre base de données), connectez-vous sans l’option `ColumnEncryption` (ou en lui donnant la valeur `Disabled`) et effectuez une opération BCP OUT.
 
-- Pour insérer, extraire en texte clair et permettent d’effectuer en toute transparence le chiffrement et le déchiffrement en tant que paramètre requis, le pilote `ColumnEncryption` à `Enabled` est suffisante. Les fonctionnalités de l’API BCP sont inchangée.
+- Pour insérer et récupérer du texte clair et laisser le pilote effectuer en toute transparence le chiffrement et le déchiffrement, il suffit de donner la valeur `Enabled` à `ColumnEncryption`. Les fonctionnalités de l’API BCP restent inchangées par ailleurs.
 
-- Pour insérer du texte chiffré sous forme de varbinary (max) (par exemple, tel que récupéré ci-dessus), définissez la `BCPMODIFYENCRYPTED` option sur TRUE et effectuer une opération BCP IN. Dans l’ordre pour les données résultantes être decryptable, assurez-vous que la destination clé de la colonne est la même que celle à partir de laquelle le texte chiffré obtenu à l’origine.
+- Pour insérer du texte chiffré au format varbinary(max) (tel qu’il a été récupéré ci-dessus, par exemple), donnez la valeur TRUE à l’option `BCPMODIFYENCRYPTED` et effectuez une opération BCP IN. Pour que les données résultantes soient déchiffrables, la clé CEK de la colonne de destination doit être la même que celle avec laquelle le texte chiffré a été obtenu à l’origine.
 
 
 
