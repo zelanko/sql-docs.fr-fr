@@ -7,11 +7,11 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 405e4636525898268c54f1a3d603c9e5da3dc14d
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.openlocfilehash: 45cfb2f67cbd575913739b118e21626448b80866
+ms.sourcegitcommit: 1aedef909f91dc88dc741748f36eabce3a04b2b1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="whats-new-in-sql-server-machine-learning-services"></a>Nouveautés de SQL Server Machine Learning Services 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -47,7 +47,7 @@ En outre, **(autonome) du serveur SQL Server 2016 R** a été publié comme un m
 
 | Version |Mise à jour de la fonctionnalité |
 |---------|----------------|
-| CU | [**Calculer les scores en temps réel** ](real-time-scoring.md) s’appuie sur les bibliothèques natives C++ pour lire un modèle stocké dans un format binaire optimisé, puis générer des prédictions sans avoir à appeler le runtime R. Cela rend les opérations de calcul de score beaucoup plus rapides. Avec le calcul de score en temps réel, vous pouvez exécuter une procédure stockée ou effectuer en temps réel à partir du code R de calcul de score. Calculer les scores en temps réel sont également disponible pour SQL Server 2016, si l’instance est mis à niveau vers la dernière version de [!INCLUDE[rsql-platform-md](../includes/rsql-platform-md.md)]. |
+| Ajouts CU | [**Calculer les scores en temps réel** ](real-time-scoring.md) s’appuie sur les bibliothèques natives C++ pour lire un modèle stocké dans un format binaire optimisé, puis générer des prédictions sans avoir à appeler le runtime R. Cela rend les opérations de calcul de score beaucoup plus rapides. Avec le calcul de score en temps réel, vous pouvez exécuter une procédure stockée ou effectuer en temps réel à partir du code R de calcul de score. Calculer les scores en temps réel sont également disponible pour SQL Server 2016, si l’instance est mis à niveau vers la dernière version de [!INCLUDE[rsql-platform-md](../includes/rsql-platform-md.md)]. |
 | Version initiale | [**Intégration de R pour la base de données analytique**](r/sql-server-r-services.md). <br/><br/> Packages R pour R appelant des fonctions dans T-SQL et vice versa. Les fonctions RevoScaleR fournissent des analytique R à l’échelle par segmentation des données dans des composants, la coordination et la gestion distribuée de traitement et l’agrégation des résultats. Dans SQL Server 2016 R Services (de-de base de données), le moteur de RevoScaleR est intégré à une instance du moteur de base de données, chambres analytique dans le même contexte de traitement et données. <br/><br/>Intégration de T-SQL et R via [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql). Vous pouvez appeler n’importe quel code R à l’aide de cette procédure stockée. Cette infrastructure de sécurité permet le déploiement d’entreprise de modèles de Rn et les scripts qui peuvent être appelées à partir d’une application à l’aide d’une procédure stockée simple. Gains de performances supplémentaires sont possibles par diffusion en continu des données à partir de SQL pour les processus R et la parallélisation anneau MPI. <br/><br/>Vous pouvez utiliser le code T-SQL [PREDICT](../t-sql/queries/predict-transact-sql.md) fonction à exécuter [score native](sql-native-scoring.md) sur un modèle dont l’apprentissage a déjà été enregistré au format binaire.|
 
 ## <a name="linux-support-roadmap"></a>Guide de prise en charge de Linux
@@ -55,6 +55,12 @@ En outre, **(autonome) du serveur SQL Server 2016 R** a été publié comme un m
 Apprentissage à l’aide de R ou Python dans-base de données n’est pas pris en charge dans SQL Server sur Linux. Recherchez des annonces dans une version ultérieure.
 
 Toutefois, sur Linux, vous pouvez effectuer [score native](sql-native-scoring.md) à l’aide de la fonction de prédiction de T-SQL. Calculer les scores native vous permet de score à partir d’un modèle préformé très rapide, sans appeler ou même nécessitant un runtime R. Cela signifie que vous pouvez utiliser SQL Server sur Linux pour générer des prédictions très rapides, à répondre à des applications clientes.
+
+<a name="azure-sql-database-roadmap"></a>
+
+## <a name="azure-sql-database-roadmap"></a>Feuille de route de base de données SQL Azure
+
+Il existe une prise en charge limitée pour R dans la base de données SQL Azure : disponible uniquement dans l’ouest des États-Unis, dans les services créés au niveau Premium. Couverture de protection, y compris la prise en charge de Python, est susceptible de suivre dans une version ultérieure. Toutefois, il n’existe aucune date de publication prévue pour l’instant.  
 
 ## <a name="next-steps"></a>Étapes suivantes
 
