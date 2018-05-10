@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.service: ''
 ms.component: data-flow
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.aggregatetrans.f1
 - sql13.dts.designer.aggregationtransformation.aggregations.f1
@@ -26,12 +25,11 @@ caps.latest.revision: 59
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 4583115b3d2faea2c6b421ea8c1bdb6fe20d5e29
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: 0a8e1f5981bdaf8cec7b263a9894ce3d1c4c7b04
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="aggregate-transformation"></a>Transformation d'agrégation
   La transformation d’agrégation applique des fonctions d’agrégation, comme Average, aux valeurs des colonnes et copie les résultats dans la sortie de la transformation. Outre les fonctions d'agrégation, cette transformation propose la clause GROUP BY qui permet de spécifier des groupes auxquels appliquer l'agrégation.  

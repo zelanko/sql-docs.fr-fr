@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.service: ''
 ms.component: data-flow
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql13.ssis.packagepublishwizard.f1
 ms.assetid: d32d9761-93fb-4020-bf82-231439c6f3ac
@@ -19,17 +18,16 @@ caps.latest.revision: 12
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: a4aca75d9495d628c314c1382a73dc889cdcc367
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: 2f9ea549c18c576498ae0d1c7f4d49a52d8b1c2a
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="walkthrough-publish-an-ssis-package-as-a-sql-view"></a>Procédure pas à pas : publier un package SSIS en tant que vue SQL
   Cette procédure pas à pas fournit des étapes détaillées sur la publication d’un package SSIS en tant que vue SQL dans une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Conditions préalables requises  
  Pour pouvoir effectuer cette procédure pas à pas, vous devez disposer des logiciels suivants installés sur votre ordinateur.  
   
 1.  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ou version ultérieure avec [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  

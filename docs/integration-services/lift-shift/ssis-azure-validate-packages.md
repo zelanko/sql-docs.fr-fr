@@ -1,10 +1,9 @@
 ---
 title: Valider les packages SSIS déployés sur Azure | Microsoft Docs
 ms.date: 11/27/2017
-ms.topic: article
+ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: integration-services
-ms.service: ''
 ms.component: lift-shift
 ms.suite: sql
 ms.custom: ''
@@ -13,11 +12,11 @@ ms.technology:
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6e2bf8f48751d819293edbaa0e40a85e74b0c513
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: 09086d0f4ff9c5a3f69a922e0c17c046c84001fb
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="validate-ssis-packages-deployed-to-azure"></a>Valider les packages SSIS déployés sur Azure
 Quand vous déployez un projet SQL Server Integration Services (SSIS) sur la base de données de catalogue SSIS (SSISDB) sur un serveur Azure, l’Assistant Déploiement de package ajoute une étape de validation après la page **Vérifier**. Cette étape de validation inspecte les packages du projet à la recherche de problèmes connus susceptibles d’impacter leur exécution dans Azure SSIS Integration Runtime. L’Assistant affiche ensuite tous les avertissements applicables dans la page **Valider**.
