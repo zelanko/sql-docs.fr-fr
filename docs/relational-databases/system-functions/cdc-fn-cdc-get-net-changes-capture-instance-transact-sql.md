@@ -21,11 +21,11 @@ caps.latest.revision: 29
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 27ad3ba5560be3fa547975d0d86099b3f4ab1450
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
-ms.translationtype: HT
+ms.openlocfilehash: d4f66b0608afcfa883f4e12d0e3dfe39e8bf7512
+ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="cdcfncdcgetnetchangesltcaptureinstancegt-transact-sql"></a>cdc.fn_cdc_get_net_changes_&lt;capture_instance&gt; (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -93,7 +93,9 @@ cdc.fn_cdc_get_net_changes_capture_instance ( from_lsn , to_lsn , '<row_filter_o
  Requiert l'appartenance au rôle serveur fixe sysadmin ou au rôle de base de données fixe db_owner. Pour tous les autres utilisateurs, requiert l'autorisation SELECT sur toutes les colonnes capturées dans la table source et, si un rôle de régulation pour l'instance de capture a été défini, l'appartenance à ce rôle de base de données. Lorsque l'appelant n'a pas l'autorisation de consulter les données sources, la fonction retourne l'erreur 208 (nom d'objet non valide).  
   
 ## <a name="remarks"></a>Notes  
- Si la plage spécifiée de numéro séquentiel dans le journal ne se situe pas dans la chronologie de suivi des modifications pour l'instance de capture, la fonction retourne l'erreur 208 (nom d'objet non valide).  
+ Si la plage spécifiée de numéro séquentiel dans le journal ne se situe pas dans la chronologie de suivi des modifications pour l'instance de capture, la fonction retourne l'erreur 208 (nom d'objet non valide).
+
+ Modifications de l’identificateur unique d’une ligne entraîne fn_cdc_get_net_changes afficher la commande de mise à jour initiale avec une suppression puis insérez les commandes à la place.  Ce comportement est nécessaire pour effectuer le suivi de la clé à la fois avant et après la modification.
   
 ## <a name="examples"></a>Exemples  
  L’exemple suivant utilise la fonction `cdc.fn_cdc_get_net_changes_HR_Department` pour signaler les modifications nettes apportées à la table source `HumanResources.Department` pendant un intervalle de temps spécifique.  
