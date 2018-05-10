@@ -3,15 +3,14 @@ title: Fonctionnalités du moteur de base de données dépréciées dans SQL Ser
 ms.custom: ''
 ms.date: 06/12/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.service: ''
+ms.prod_service: high-availability
 ms.component: database-engine
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - deprecated features [SQL Server]
 - Database Engine [SQL Server], backward compatibility
@@ -21,12 +20,11 @@ caps.latest.revision: 215
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: f062de9b5ace5629a4c6b2a5eb2660727b802092
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 5daaf2d0fadd131799cfa0c14244fbe576cafcdd
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="deprecated-database-engine-features-in-sql-server-2016"></a>Fonctionnalités du moteur de base de données déconseillées dans SQL Server 2016
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -78,7 +76,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |Types de données|Syntaxe de**timestamp** pour le type de données **rowversion** |Syntaxe du type de données**rowversion** |timestamp|158|  
 |Types de données|Possibilité d'insérer des valeurs NULL dans les colonnes **timestamp** .|Utilisez DEFAULT à la place.|INSERT NULL dans des colonnes TIMESTAMP|179|  
 |Types de données|Option de table 'text in row'|Utilisez les types de données **varchar(max)**, **nvarchar(max)** et **varbinary(max)**. Pour plus d’informations, consultez [sp_tableoption &#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md).|Option de table text in row|9|  
-|Types de données|Types de données :<br /><br /> **texte**<br /><br /> **ntext**<br /><br /> **image**|Utilisez les types de données **varchar(max)**, **nvarchar(max)**et **varbinary(max)** .|Types de données : **text**, **ntext** ou **image**|4|  
+|Types de données|Types de données :<br /><br /> **texte**<br /><br /> **ntext**<br /><br /> **image**|Utilisez les types de données **varchar(max)**, **nvarchar(max)** et **varbinary(max)** .|Types de données : **text**, **ntext** ou **image**|4|  
 |Gestion de base de données|sp_attach_db<br /><br /> sp_attach_single_file_db|Instruction CREATE DATABASE avec l'option FOR ATTACH. Pour recréer plusieurs fichiers journaux, lorsqu'un ou plusieurs d'entre eux possèdent un nouvel emplacement, utilisez FOR ATTACH_REBUILD_LOG.|sp_attach_db<br /><br /> sp_attach_single_file_db|81<br /><br /> 82|  
 |Objets de base de données|CREATE DEFAULT<br /><br /> DROP DEFAULT<br /><br /> sp_bindefault<br /><br /> sp_unbindefault|Mot clé DEFAULT dans CREATE TABLE et ALTER TABLE|CREATE_DROP_DEFAULT<br /><br /> sp_bindefault<br /><br /> sp_unbindefault|162<br /><br /> 64<br /><br /> 65|  
 |Objets de base de données|CREATE RULE<br /><br /> DROP RULE<br /><br /> sp_bindrule<br /><br /> sp_unbindrule|Mot clé CHECK dans CREATE TABLE et ALTER TABLE|CREATE_DROP_RULE<br /><br /> sp_bindrule<br /><br /> sp_unbindrule|161<br /><br /> 66<br /><br /> 67|  
