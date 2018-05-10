@@ -3,15 +3,12 @@ title: Se connecter au moteur de base de données à l’aide de la protection �
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.service: ''
-ms.component: configure-windows
+ms.prod_service: high-availability
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - spoofing attacks
 - service binding
@@ -24,12 +21,11 @@ caps.latest.revision: 22
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: bbcd2fcb55fabd3c8b9f4828f205c6017547e151
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: f0eae05397ebe6ce2c73841e9c27746e9a946dfc
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="connect-to-the-database-engine-using-extended-protection"></a>Se connecter au moteur de base de données à l'aide de la protection étendue
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -93,7 +89,7 @@ ms.lasthandoff: 04/16/2018
   
 1.  Dans le menu **Démarrer** , cliquez sur **Tous les programmes**, pointez sur **Microsoft SQL Server** , puis cliquez sur **Gestionnaire de configuration SQL Server**.  
   
-2.  Développez **Configuration du réseau SQL Server**, cliquez avec le bouton droit sur **Protocoles pour** *\<*nom_instance*>*, puis cliquez sur **Propriétés**.  
+2.  Développez **Configuration du réseau SQL Server**, cliquez avec le bouton droit sur **Protocoles pour** *\<* nom_instance*>*, puis cliquez sur **Propriétés**.  
   
 3.  Pour la liaison de service et la liaison de canal, sous l'onglet **Avancé** , affectez le paramètre approprié à **Protection étendue** .  
   

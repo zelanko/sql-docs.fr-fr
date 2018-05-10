@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
-ms.service: ''
 ms.component: non-specific
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - deployment packages [Master Data Services], creating
 - models [Master Data Services], creating a deployment package
@@ -21,12 +20,11 @@ caps.latest.revision: 8
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 70141f5f54c5a34ed08b03b23b7c50f3874f162a
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: ed423dbb14b49ca80117a3f89fa552d507e758a3
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-a-model-deployment-package-by-using-the-wizard"></a>Créer un package de déploiement de modèle à l'aide de l'Assistant
 
@@ -34,7 +32,7 @@ ms.lasthandoff: 04/26/2018
 
   Utilisez l'Assistant Déploiement de modèle de [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] pour créer un package d'objets de modèle uniquement. Si vous avez besoin d’inclure des données dans un package, consultez [Créer un package de déploiement de modèle à l’aide de MDSModelDeploy](../master-data-services/create-a-model-deployment-package-by-using-mdsmodeldeploy.md).  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Conditions préalables requises  
  Pour effectuer cette procédure :  
   
 -   Dans l’application web [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] , vous devez avoir l’autorisation d’accéder à la zone fonctionnelle **Administration de système** .  

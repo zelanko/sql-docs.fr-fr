@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.service: ''
 ms.component: tutorial
 ms.reviewer: ''
 ms.suite: sql
@@ -19,12 +18,11 @@ caps.latest.revision: 42
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: d7528d80856763fbf9871e8daed1f5afbd5f3020
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: 0a114b291767449f4e187c0d3747dac7a77435b8
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="lesson-1-2---adding-and-configuring-a-flat-file-connection-manager"></a>Leçon 1-2 : Ajout et configuration d’un gestionnaire de connexions de fichiers plats
 Dans cette tâche, vous ajoutez un gestionnaire de connexions de fichiers plats au package que vous venez de créer. Un gestionnaire de connexions de fichiers plats permet à un package d'extraire des données d'un fichier plat. Grâce à ce Gestionnaire, vous pouvez spécifier le nom et l'emplacement du fichier, les paramètres régionaux et la page de codes et enfin, le format du fichier, y compris les séparateurs de colonnes, à appliquer lorsque le package extrait les données du fichier plat. Par ailleurs, vous pouvez spécifier manuellement le type de données pour les colonnes individuelles ou utiliser la boîte de dialogue **Suggérer les types de colonnes** pour mapper automatiquement les colonnes de données extraites aux types de données [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  

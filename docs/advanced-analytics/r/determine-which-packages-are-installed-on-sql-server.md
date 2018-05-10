@@ -1,25 +1,24 @@
 ---
-title: Affichage R ou des packages Python installées sur SQL Server | Documents Microsoft
+title: Obtenir des informations de package de R et Python sur SQL Server Machine Learning | Documents Microsoft
+description: Déterminer la version du package R et Python, vérifier l’installation et obtenir la liste des packages installés sur SQL Server R Services ou des Services de Machine Learning.
 ms.custom: ''
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 05/08/2018
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 7cea8b82337ca7d5b4cd17b1038a1eccc99370be
-ms.sourcegitcommit: beaad940c348ab22d4b4a279ced3137ad30c658a
-ms.translationtype: MT
+ms.openlocfilehash: 3295bbdbb00c73c9aaa37dcb15d35121b82454bb
+ms.sourcegitcommit: 1aedef909f91dc88dc741748f36eabce3a04b2b1
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 05/08/2018
 ---
-# <a name="viewing-r-or-python-packages-installed-on-sql-server"></a>Affichage R ou des packages Python installées sur SQL Server
+#  <a name="get-r-and-python-package-information-on-sql-server-machine-learning"></a>Obtenir des informations de package de R et Python sur l’apprentissage de SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Si vous avez installé plusieurs environnements Python ou utilisez plusieurs outils R, il est facile à installer un package vers la bibliothèque incorrecte ou d’un environnement et alors en mesure de le retrouver ultérieurement. 
-
-Cet article fournit des requêtes que vous pouvez utiliser pour déterminer votre version actuelle et pour répertorier les packages qui sont installés dans l’environnement actuel de SQL Server.
+Si vous avez installé plusieurs environnements Python ou utilisez plusieurs outils R, il est facile à installer un package vers la bibliothèque incorrecte ou d’un environnement et alors en mesure de le retrouver ultérieurement. Cet article fournit des requêtes et des conseils utiles pour la version du package determininga et pour répertorier les packages qui sont installés dans l’environnement actuel de SQL Server.
 
 ## <a name="verify-the-current-default-library"></a>Vérifiez que la bibliothèque par défaut en cours
 

@@ -1,17 +1,16 @@
 ---
 title: Catalogue SSIS | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 04/30/2018
 ms.prod: sql
 ms.prod_service: integration-services
-ms.service: ''
 ms.component: service
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql13.ssis.ssms.iscreatecatalog.f1
 - sql13.ssis.ssms.iscatalogprop.general.f1
@@ -21,12 +20,11 @@ caps.latest.revision: 28
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: 50a4beefe7038fbce957209b9c34863d076bec41
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: 0285d3dbaf5bd1ed5def180029a75c32fe4fcb83
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ssis-catalog"></a>Catalogue SSIS
   Le catalogue **SSISDB** est l’élément central pour l’utilisation des projets [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] (SSIS) que vous avez déployés sur le serveur [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)]. Ainsi, c'est dans ce catalogue que vous définissez les paramètres de projet et de package, configurez les environnements pour spécifier des valeurs d'exécution pour les packages, exécutez et résolvez les problèmes relatifs aux packages, et gérez les opérations du serveur [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] .  
@@ -619,9 +617,7 @@ La procédure à suivre pour ajouter la base de données SSISDB à un groupe de 
   
 Indiquez le mot de passe que vous avez spécifié durant la création du catalogue SSIS sur la page **Sélectionner les bases de données** de l’Assistant **Nouveau groupe de disponibilité**.
 
-À l’invite **Sélectionner votre préférence de synchronisation de données**, sélectionnez **Ignorer la synchronisation de données initiale**.
-  
- ![Nouveau groupe de disponibilité](../../integration-services/service/media/ssis-newavailabilitygroup.png "Nouveau groupe de disponibilité")  
+![Nouveau groupe de disponibilité](../../integration-services/service/media/ssis-newavailabilitygroup.png "Nouveau groupe de disponibilité")  
   
 ####  <a name="Step3"></a> Étape 3 : activer la prise en charge de SSIS pour AlwaysOn  
  Après avoir créé le catalogue Integration Services, cliquez avec le bouton droit sur le nœud **Catalogues Integration Services**, puis cliquez sur **Activer la prise en charge d’Always On**. La boîte de dialogue **Enable Support for AlwaysOn** (Activer la prise en charge d’AlwaysOn) doit s’afficher. Si cette option de menu est désactivée, vérifiez que vous disposez de tous les composants requis, puis cliquez sur **Actualiser**.  

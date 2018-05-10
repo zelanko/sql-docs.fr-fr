@@ -3,25 +3,22 @@ title: Mettre à niveau vers une autre édition de SQL Server 2016 (Installatio
 ms.custom: ''
 ms.date: 07/24/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.service: ''
-ms.component: install-windows
+ms.prod_service: install
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- setup-install
+ms.technology: install
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 31d16820-d126-4c57-82cc-27701e4091bc
 caps.latest.revision: 27
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 752c9439124331200af3ee7aeba09b4a895c7934
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 1f23d04ecdaaafe3fdb2a7033a51e750eb61d519
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="upgrade-to-a-different-edition-of-sql-server-setup"></a>Mettre à niveau vers une autre édition de SQL Server 2016 (Installation)
 
@@ -37,7 +34,7 @@ L'installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pren
 > [!NOTE]  
 > **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur une instance de cluster de basculement :** une mise à niveau de l’édition sur un des nœuds de l’instance du cluster de basculement [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est suffisante. Le nœud peut être actif ou passif, et le moteur ne met pas les ressources hors connexion pendant la mise à niveau de l’édition. Après la mise à niveau de l'édition, il est nécessaire de redémarrer l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou de la basculer sur un nœud différent.  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Conditions préalables requises  
 Pour des installations locales, vous devez exécuter le programme d'installation en tant qu'administrateur. Si vous installez [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à partir d'un partage distant, vous devez utiliser un compte de domaine qui dispose des autorisations de lecture sur le partage distant.  
   
 > [!IMPORTANT]  

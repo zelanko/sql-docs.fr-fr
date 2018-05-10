@@ -10,11 +10,13 @@ ms.suite: sql
 ms.prod_service: sql-tools
 ms.reviewer: sstein
 manager: craigg
-ms.openlocfilehash: fe8d438d95e994438df565013eaf79da92ccf9b3
-ms.sourcegitcommit: 8f1d1363e18e0c32ff250617ab6cb2da2147bf8e
+ms.prod: sql
+ms.technology: ssms
+ms.openlocfilehash: e663bf07fb724e5b65a47573f26702a6b1ccae14
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/03/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="tutorial-connect-to-and-query-a-sql-server-instance-by-using-sql-server-management-studio"></a>Tutoriel : Se connecter à une instance SQL Server et l’interroger en utilisant SQL Server Management Studio
 Ce tutoriel vous apprend à utiliser SSMS (SQL Server Management Studio) pour vous connecter à votre instance SQL Server et exécuter des commandes T-SQL (Transact-SQL) de base. L’article explique comment effectuer les opérations suivantes :
@@ -28,7 +30,7 @@ Ce tutoriel vous apprend à utiliser SSMS (SQL Server Management Studio) pour vo
 > * Utiliser la table de fenêtre de requête pour vérifier les propriétés de votre connexion 
 > * Changer le serveur auquel votre fenêtre de requête est connectée
 
-## <a name="prerequisites"></a>Prérequis
+## <a name="prerequisites"></a>Conditions préalables requises
 Pour suivre ce tutoriel, vous avez besoin de SQL Server Management Studio et d’un accès à une instance SQL Server. 
 
 - Installez [SQL Server Management Studio](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms).
@@ -38,7 +40,7 @@ Si vous n’avez pas accès à une instance SQL Server, sélectionnez votre plat
 - **macOS** : [Téléchargez SQL Server 2017 sur Docker](https://docs.microsoft.com/en-us/sql/linux/quickstart-install-connect-docker).
 
 
-## <a name="connect-to-a-sql-server-instance"></a>Se connecter à une instance SQL Server
+## <a name="connect-to-a-sql-server-instance"></a>Se connecter à une instance de SQL Server
 
 1. Démarrez SQL Server Management Studio.  
     La première fois que vous exécutez SSMS, la fenêtre **Se connecter au serveur** s’ouvre. Si elle ne s’ouvre pas, vous pouvez l’ouvrir manuellement en sélectionnant **Explorateur d’objets** > **Se connecter** > **Moteur de base de données**.
@@ -49,8 +51,6 @@ Si vous n’avez pas accès à une instance SQL Server, sélectionnez votre plat
 
     - Pour **Type de serveur**, sélectionnez **Moteur de base de données** (généralement l’option par défaut).
     - Pour **Nom du serveur**, entrez le nom de votre instance SQL Server. (Cet article utilise le nom d’instance SQL2016ST sur le nom d’hôte NODE5 [NODE5\SQL2016ST].) Si vous ne savez pas comment déterminer le nom de votre instance SQL Server, consultez [Conseils et astuces supplémentaires sur l’utilisation de SSMS](ssms-tricks.md#determine-sql-server-name).  
-
-    ![Champ « Nom du serveur » avec un exemple de nom d’instance](media/connect-query-sql-server/connection.png)
 
     ![Champ « Nom du serveur » avec la possibilité d’utiliser une instance SQL Server](media/connect-query-sql-server/connection2.png)
 
@@ -64,7 +64,7 @@ Si vous n’avez pas accès à une instance SQL Server, sélectionnez votre plat
 
    ![Connexion réussie](media/connect-query-sql-server/successfulconnection.png)
 
-## <a name="create-a-database"></a>Créer une base de données
+## <a name="create-a-database"></a>création d'une base de données ;
 Créez une base de données appelée TutorialDB en procédant comme suit : 
 
 1. Dans l’Explorateur d’objets, cliquez avec le bouton droit sur votre instance de serveur et sélectionnez **Nouvelle requête** :

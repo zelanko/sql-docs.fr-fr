@@ -3,15 +3,13 @@ title: Ajouter un témoin de mise en miroir de bases de données à l’aide de 
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.service: ''
+ms.prod_service: high-availability
 ms.component: database-mirroring
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - witness [SQL Server], establishing
 - Windows authentication [SQL Server]
@@ -21,12 +19,11 @@ caps.latest.revision: 51
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: ac2992afd40c4890c5fe54da83d2a8528aedd4b9
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: ca7ab8872d8205ae7120913a7c481b3422f05f3b
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="add-a-database-mirroring-witness-using-windows-authentication-transact-sql"></a>Ajouter un témoin de mise en miroir de bases de données à l'aide de l'authentification Windows (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +38,7 @@ ms.lasthandoff: 04/16/2018
   
 ### <a name="to-establish-a-witness"></a>Pour établir un témoin  
   
-1.  Sur l'instance de serveur témoin, assurez-vous qu'un point de terminaison existe pour la mise en miroir de bases de données. Quel que soit le nombre de sessions de mise en miroir à prendre en charge, l'instance de serveur ne doit disposer que d'un seul point de terminaison de mise en miroir de bases de données. Si vous voulez utiliser cette instance de serveur exclusivement comme témoin dans des sessions de mise en miroir de bases de données, attribuez le rôle de témoin au point de terminaison (ROLE**=**WITNESS). Si vous souhaitez utiliser cette instance de serveur comme partenaire dans une ou plusieurs sessions de mise en miroir de bases de données, attribuez le rôle ALL au point de terminaison.  
+1.  Sur l'instance de serveur témoin, assurez-vous qu'un point de terminaison existe pour la mise en miroir de bases de données. Quel que soit le nombre de sessions de mise en miroir à prendre en charge, l'instance de serveur ne doit disposer que d'un seul point de terminaison de mise en miroir de bases de données. Si vous voulez utiliser cette instance de serveur exclusivement comme témoin dans des sessions de mise en miroir de bases de données, attribuez le rôle de témoin au point de terminaison (ROLE**=** WITNESS). Si vous souhaitez utiliser cette instance de serveur comme partenaire dans une ou plusieurs sessions de mise en miroir de bases de données, attribuez le rôle ALL au point de terminaison.  
   
      Pour exécuter une instruction SET WITNESS, la session de mise en miroir de bases de données doit déjà être démarrée (entre les partenaires) et la valeur STATE du point de terminaison du témoin doit être STARTED.  
   
@@ -66,7 +63,7 @@ ms.lasthandoff: 04/16/2018
   
      La syntaxe pour une adresse réseau de serveur est la suivante :  
   
-     TCP**://**\<*system-address>***:**\<*port>*  
+     TCP **://**\<*system-address>***:**\<* port>*  
   
      où \<*adresse-système>* est une chaîne qui identifie de façon non ambiguë l’ordinateur de destination et \<*port>* est le numéro de port utilisé par le point de terminaison de la mise en miroir de l’instance de serveur partenaire. Pour plus d’informations, consultez [Spécifier une adresse réseau de serveur &#40;mise en miroir de bases de données&#41;](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md).  
   
