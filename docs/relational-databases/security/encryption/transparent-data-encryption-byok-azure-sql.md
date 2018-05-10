@@ -13,17 +13,16 @@ ms.prod_service: sql-database, sql-data-warehouse
 ms.service: sql-database
 ms.custom: ''
 ms.component: security
-ms.workload: On Demand
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.date: 04/19/2018
 ms.author: aliceku
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 77dee541f04218f8e84fc0428a0d8e34001e829a
-ms.sourcegitcommit: beaad940c348ab22d4b4a279ced3137ad30c658a
+ms.openlocfilehash: 2265778ca41dd82a1e55fe01749bd2d5057f5f1c
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="transparent-data-encryption-with-bring-your-own-key-support-for-azure-sql-database-and-data-warehouse"></a>Transparent Data Encryption avec prise en charge de BYOK pour Azure SQL Database et Data Warehouse
 [!INCLUDE[appliesto-xx-asdb-asdw-xxx-md](../../../includes/appliesto-xx-asdb-asdw-xxx-md.md)]
@@ -66,9 +65,10 @@ Quand TDE est d’abord configuré pour utiliser un protecteur TDE dans Key Vaul
 
 ### <a name="guidelines-for-configuring-azure-key-vault"></a>Instructions de configuration d’Azure Key Vault
 
-- Configurez un coffre de clés en activant [soft-delete](https://docs.microsoft.com/azure/key-vault/key-vault-ovw-soft-delete) pour éviter de perdre des données en cas de suppression accidentelle ou malveillante d’une clé ou d’un coffre de clés.  Il s’agit d’une **exigence** pour l’utilisation de TDE avec l’option BYOK :  
-  - Les ressources supprimées de manière réversible sont conservées pendant 90 jours, sauf si elles sont récupérées ou vidées.
-  - Les actions de **récupération** et de **vidage** ont leurs propres autorisations, qui sont définies dans une stratégie d’accès au coffre de clés. 
+- Créez un coffre de clés avec [soft-delete](https://docs.microsoft.com/azure/key-vault/key-vault-ovw-soft-delete) activé pour éviter de perdre des données en cas de suppression accidentelle d’une clé ou d’un coffre de clés.  Vous devez utiliser [PowerShell pour activer la propriété « soft-delete »](https://docs.microsoft.com/en-us/azure/key-vault/key-vault-soft-delete-powershell) dans le coffre de clés (cette option n’est pas encore disponible dans le portail Azure Key Vault, mais elle est exigée par SQL) :  
+  - Les ressources supprimées de manière réversible sont conservées pendant une durée définie, 90 jours, sauf si elles sont récupérées ou vidées.
+  - Les actions de **récupération** et de **vidage** ont leurs propres autorisations associées dans une stratégie d’accès au coffre de clés. 
+
 - Accordez l’accès au serveur logique au Key Vault avec son identité Azure AD (Azure Active Directory).  Quand vous utilisez l’interface utilisateur du portail, l’identité Azure AD est automatiquement créée et les autorisations d’accès au Key Vault sont accordées au serveur.  Si vous utilisez PowerShell pour configurer TDE avec BYOK, l’identité Azure AD doit être créée et vérifiée. Consultez [Configurer TDE avecBYOK](transparent-data-encryption-byok-azure-sql-configure.md) pour obtenir des instructions détaillées sur l’utilisation de PowerShell.
 
   >[!NOTE]

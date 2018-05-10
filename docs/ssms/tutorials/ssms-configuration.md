@@ -7,14 +7,16 @@ ms.author: mathoma
 ms.date: 03/16/2018
 ms.topic: Tutorial
 ms.suite: sql
+ms.prod: sql
+ms.technology: ssms
 ms.prod_service: sql-tools
 ms.reviewer: sstein
 manager: craigg
-ms.openlocfilehash: 8cdb4f258f62b425be78e9f6b4628d69e304c7ba
-ms.sourcegitcommit: ccb05cb5a4cccaf7ffa9e85a4684fa583bab914e
+ms.openlocfilehash: b2c850ac32aebf78441234327ec33b6223dc447b
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="tutorial-sql-server-management-studio-components-and-configuration"></a>Tutoriel : Composants et configuration de SQL Server Management Studio
 Ce tutoriel décrit les différents composants de fenêtres dans SSMS (SQL Server Management Studio) et certaines options de configuration de base pour votre espace de travail. Dans cet article, vous allez approfondir les sujets suivants : 
@@ -27,7 +29,7 @@ Ce tutoriel décrit les différents composants de fenêtres dans SSMS (SQL Serve
 > * Configuration des options de démarrage 
 > * Réinitialisation de la configuration par défaut 
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Conditions préalables requises
 Pour suivre ce tutoriel, vous avez besoin de SQL Server Management Studio.  
 
 - Installez [SQL Server Management Studio](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms).
