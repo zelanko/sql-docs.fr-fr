@@ -3,15 +3,12 @@ title: Configurer un groupe de disponibilité pour les transactions distribuées
 ms.custom: ''
 ms.date: 07/19/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.service: ''
-ms.component: availability-groups
+ms.prod_service: high-availability
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - database mirroring [SQL Server], interoperability
 - cross-database transactions [SQL Server]
@@ -23,11 +20,11 @@ caps.latest.revision: 33
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: b6812a199583fee5cff0ce90c0a0e7f72f9b7645
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 73563a02f1e51e91719a4831ac8b5dd34465aaa6
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configure-availability-group-for-distributed-transactions"></a>Configurer un groupe de disponibilité pour les transactions distribuées
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +42,7 @@ Dans une transaction distribuée, les applications clientes utilisent Microsoft 
 
 [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)] n’empêche pas les transactions distribuées pour des bases de données dans un groupe de disponibilité, même quand le groupe de disponibilité n’est pas configuré pour les transactions distribuées. Cependant, quand un groupe de disponibilité n’est pas configuré pour les transactions distribuées, le basculement peut échouer dans certaines situations. En particulier, l’instance de [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)] du nouveau réplica principal ne peut parfois pas obtenir le résultat de la transaction auprès du DTC. Pour permettre à l’instance de [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)] d’obtenir le résultat des transactions incertaines auprès du DTC après un basculement, configurez le groupe de disponibilité pour les transactions distribuées. 
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Conditions préalables requises
 
 Avant de configurer un groupe de disponibilité pour prendre en charge les transactions distribuées, vous devez respecter les prérequis suivants :
 

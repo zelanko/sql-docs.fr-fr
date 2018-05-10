@@ -4,12 +4,10 @@ ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.service: ''
 ms.component: extending-packages-scripting
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-xml
+ms.technology: xml
 ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
@@ -24,12 +22,11 @@ caps.latest.revision: 39
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 806031144d6668dbfeeb0ae95ab2a6e2d4a459ea
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: 194f4ded206617e7cb97e3cffb85f02019b5bb3d
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="comparing-the-script-task-and-the-script-component"></a>Comparaison de la tâche de script et du composant Script
   La tâche de script, disponible dans la fenêtre Flux de contrôle du concepteur [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], et le composant Script, disponible dans la fenêtre Flux de données, ont des fonctions très différentes dans un package [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. La tâche est un outil de flux de contrôle à usage général, alors que le composant sert de source, de transformation ou de destination dans le flux de données. En dépit de leurs rôles différents, la tâche de script et le composant Script présentent toutefois des similarités dans les outils de codage qu'ils utilisent et les objets du package qu'ils mettent à la disposition des développeurs. Comprendre ces ressemblances et ces différences peut vous aider à utiliser la tâche et le composant de manière plus efficace.  
