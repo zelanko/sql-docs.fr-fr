@@ -4,12 +4,10 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: ''
 ms.component: t-sql|functions
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: t-sql
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
@@ -26,17 +24,16 @@ caps.latest.revision: 45
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: ee5a20cb527fbf0d617f0d147580b885b54b9338
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 579d578e7e34330c4788db3008417a0da2a84d6b
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="identseed-transact-sql"></a>IDENT_SEED (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Renvoie la valeur de départ d’origine (sous la forme **numeric**(**@@**MAXPRECISION,0)) spécifiée lors de la création d’une colonne d’identité dans une table ou une vue. La modification de la valeur actuelle d'une colonne d'identité en utilisant DBCC CHECKIDENT ne modifie pas la valeur retournée par cette fonction.  
+  Renvoie la valeur de départ d’origine (sous la forme **numeric**(**@@** MAXPRECISION,0)) spécifiée lors de la création d’une colonne d’identité dans une table ou une vue. La modification de la valeur actuelle d'une colonne d'identité en utilisant DBCC CHECKIDENT ne modifie pas la valeur retournée par cette fonction.  
   
  ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
