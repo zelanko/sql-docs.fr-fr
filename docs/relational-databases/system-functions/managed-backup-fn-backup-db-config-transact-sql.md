@@ -25,11 +25,11 @@ caps.latest.revision: 14
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: b1bc7964fafb35a4da03f8d5414f93835b49ed17
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 5c4e752c1d8c88a4b0f9dadc129213a6f2ac8951
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="managedbackupfnbackupdbconfig-transact-sql"></a>managed_backup.fn_backup_db_config (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -60,7 +60,7 @@ managed_backup.fn_backup_db_config (‘database_name’ | ‘’ | NULL)
 |is_dropped|BIT|La valeur 1 indique que c'est une base de données supprimée.|  
 |credential_name|SYSNAME|Nom des informations d'identification SQL utilisées pour authentifier le compte de stockage. Une valeur NULL indique qu'aucune information d'identification SQL n'a été définie.|  
 |retention_days|INT|Période de rétention actuelle, en jours. Une valeur NULL indique que la [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] n'a jamais été configurée pour cette base de données.|  
-|is_smart_backup_enabled|INT|Indique si la [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] est actuellement activée pour cette base de données. Une valeur 1 indique que la [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] est actuellement activée, et une valeur 0 indique que la [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] est désactivée pour cette base de données.|  
+|is_managed_backup_enabled|INT|Indique si la [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] est actuellement activée pour cette base de données. Une valeur 1 indique que la [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] est actuellement activée, et une valeur 0 indique que la [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] est désactivée pour cette base de données.|  
 |storage_url|NVARCHAR (1024)|URL du compte de stockage.|  
 |Encryption_algorithm|NCHAR (20)|Retourne l'algorithme de chiffrement actuel à utiliser lors du chiffrement de la sauvegarde.|  
 |Encryptor_type|NCHAR(15)|Retourne le paramètre de chiffreur : certificat ou clé asymétrique.|  

@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - articles [SQL Server replication], conflict resolution
 - conflict resolution [SQL Server replication], merge replication
@@ -21,12 +20,11 @@ caps.latest.revision: 39
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 49f738f95cc01297d6df28d7626a138489ad8f95
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: b062f6dc200d2024a1bb08c93847304ef9f6a5e2
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="specify-a-merge-article-resolver"></a>Spécifier un programme de résolution d'articles de fusion
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -75,7 +73,7 @@ ms.lasthandoff: 04/16/2018
   
 3.  Dans la page **Propriétés de l’article - \<Article>**, cliquez sur l’onglet **Résolveur**.  
   
-4.  Sélectionnez **Utiliser un résolveur personnalisé (inscrit sur le serveur de distribution)**puis, dans la liste, cliquez sur le programme de résolution.  
+4.  Sélectionnez **Utiliser un résolveur personnalisé (inscrit sur le serveur de distribution)** puis, dans la liste, cliquez sur le programme de résolution.  
   
 5.  Si le programme de résolution nécessite des entrées (par exemple un nom de colonne), indiquez- les dans la zone de texte **Entrez les informations requises par le résolveur** .  
   

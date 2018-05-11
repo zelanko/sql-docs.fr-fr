@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 07/21/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - transactional replication, updatable subscriptions
 - updatable subscriptions, about updatable subscriptions
@@ -24,12 +23,11 @@ caps.latest.revision: 60
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: d33ebae50e932efe39bd062d96ab1af46f2e2969
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: d52ee6d23418e83fb19a9029efe615b0f796f5e8
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="updatable-subscriptions---for-transactional-replication"></a>Abonnements pouvant être mis à jour pour la réplication transactionnelle
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -89,7 +87,7 @@ ms.lasthandoff: 04/16/2018
   
 -   Les Abonnés ne peuvent pas mettre à jour ou insérer des valeurs **text**, **ntext** ou **image** , car il est impossible de lire à partir des tables insérées ou supprimées dans les déclencheurs de suivi des modifications de réplication. De même, les Abonnés ne peuvent pas mettre à jour ou insérer de valeur **text** ou **image** à l’aide de **WRITETEXT** ou **UPDATETEXT** , car les données sont écrasées par le serveur de publication. En revanche, vous pouvez partitionner les colonnes **text** et **image** dans une table distincte et modifier les deux tables à l’intérieur d’une transaction.  
   
-     Pour mettre à jour des objets volumineux sur un Abonné, utilisez respectivement les types de données **varchar(max)**, **nvarchar(max)**et **varbinary(max)** au lieu des types de données **text**, **ntext**et **image** .  
+     Pour mettre à jour des objets volumineux sur un Abonné, utilisez respectivement les types de données **varchar(max)**, **nvarchar(max)** et **varbinary(max)** au lieu des types de données **text**, **ntext**et **image** .  
   
 -   Les mises à jour de clés uniques (y compris les clés primaires) générant des doublons (comme une mise à jour de type `UPDATE <column> SET <column> =<column>+1` ) ne sont pas autorisées et sont rejetées en raison d’une violation d’unicité. En effet, les mises à jour de jeux appliquées sur l’Abonné sont propagées par la réplication en tant qu’instructions **UPDATE** individuelles pour chaque ligne concernée.  
   

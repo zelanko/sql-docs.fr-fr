@@ -4,16 +4,16 @@ ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.component: adomd
-ms.topic: article
+ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 69f937bd8842d2e89d25527587342978ab8686bd
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: MT
+ms.openlocfilehash: 49bfcc651b00f9d6afc5d2028e174062b0916515
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="developing-with-adomdnet"></a>Développement avec ADOMD.NET
   ADOMD.NET est un [!INCLUDE[msCoName](../../../includes/msconame-md.md)] fournisseur de données .NET Framework est conçu pour communiquer avec [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. ADOMD.NET utilise le protocole XMLA (XML for Analysis) pour communiquer avec les sources de données analytiques en utilisant des connexions TCP/IP ou HTTP pour transmettre et recevoir des demandes et des réponses SOAP conformes à la spécification XML for Analysis. Les commandes peuvent être envoyées dans une syntaxe MDX (Multidimensional Expressions), DMX (Data Mining Extensions), ASSL (Analysis Services Scripting Language), voire une syntaxe limitée de SQL ; il se peut qu'elles ne retournent pas de résultats. Les données analytiques, les indicateurs de performance clés et les modèles d'exploration de données peuvent être interrogés et manipulés par le biais du modèle objet ADOMD.NET. ADOMD.NET vous permet également de consulter et d'utiliser les métadonnées en récupérant des ensembles de lignes de schéma compatibles OLE DB ou en utilisant le modèle objet ADOMD.NET.  

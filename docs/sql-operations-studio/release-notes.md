@@ -2,9 +2,9 @@
 title: Notes de publication Microsoft SQL Studio Operations (version préliminaire) | Documents Microsoft
 description: Notes de publication Microsoft SQL Studio Operations (version préliminaire)
 ms.custom: tools|sos
-ms.date: 04/25/2018
+ms.date: 05/08/2018
 ms.prod: sql
-ms.reviewer: alayu; erickang; sstein
+ms.reviewer: alayu; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
 ms.component: sos
@@ -13,15 +13,42 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3e13f0604ebbfc616a70768d7382b0e044055ec6
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.openlocfilehash: 47c5e129ca6c77f9116b6be928f202341d457041
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="sql-operations-studio-preview-release-notes"></a>Notes de publication SQL opérations Studio (version préliminaire)
 
-**[Télécharger la version d’avril Public Preview](download.md)**
+**[Télécharger la version préliminaire publique de mai](download.md)**
+
+
+## <a name="may-2018-may-public-preview"></a>Mai 2018 (version préliminaire publique de mai)
+
+date de publication : le 7 mai 2018  
+version : 0.29.3
+
+Le *peut Public Preview* porte sur les correctifs de bogues et de stabilisation. Cette version contient les caractéristiques suivantes :  
+
+- Annonce Redgate SQL recherche les extensions disponibles dans le Gestionnaire d’extensions.
+- Localisation de communauté disponible pour 10 langues : allemand, espagnol, Français, italien, japonais, coréen, portugais, russe, chinois simplifié et chinois traditionnel.
+- Build PIBR conforme a réduit collecte des données de télémétrie, annulations améliore l’expérience et les liens dans le produit à la déclaration de confidentialité.
+- Gestionnaire d’extensions a amélioré Marketplace d’expérience pour découvrir facilement des extensions de la Communauté.
+- Travaux d’extension de l’Agent SQL et de l’historique des travaux du mode d’amélioration du produit.
+- Met à jour des extensions pour whoisactive et le serveur de rapports.
+- Améliorer le défilement de gérer les propriétés du tableau de bord.
+- Résoudre les problèmes de GitHub :
+   - Corriger [émettre 703](https://github.com/Microsoft/sqlopsstudio/issues/703): l’entrée de texte HTML dans les données de modification entraîne la valeur à afficher incorrectement jusqu'à ce que l’actualisation
+   - Corriger [émettre 821](https://github.com/Microsoft/sqlopsstudio/issues/821): dépendance de package sqlopsstudio.deb
+   - Corriger [émettre 1260](https://github.com/Microsoft/sqlopsstudio/issues/1260): mot clé 'distinct' pas mis en surbrillance
+   - Corriger [émettre 1332](https://github.com/Microsoft/sqlopsstudio/issues/1332): restaurer des données de modification ligne ne fonctionne pas
+   - Corriger [émettre 1215](https://github.com/Microsoft/sqlopsstudio/issues/1215): extension de l’Agent SQL et de la barre d’état
+   - Corriger [émettre 1316](https://github.com/Microsoft/sqlopsstudio/issues/1316): ne pas de l’Agent SQL redimensionner après modifier la taille de windows
+
+
+Pour plus d’informations, consultez la [journal des modifications](https://github.com/Microsoft/sqlopsstudio/blob/master/CHANGELOG.md), et [versions](https://github.com/Microsoft/sqlopsstudio/releases).
+
 
 
 ## <a name="april-2018-april-public-preview"></a>Avril 2018 (avril Public Preview)

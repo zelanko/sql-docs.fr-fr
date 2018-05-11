@@ -4,16 +4,16 @@ ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.component: adomd
-ms.topic: article
+ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 01fee3784b60b6b36c8e1ad5b187fb6786c168dc
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: MT
+ms.openlocfilehash: 9954141f2f4c69d42be879960ea183fc11d4e162
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="retrieving-data-using-the-cellset"></a>Récupération de données à l'aide d'un ensemble de cellules
   Lors de la récupération de données analytiques, l'objet <xref:Microsoft.AnalysisServices.AdomdClient.CellSet> procure une interactivité et une souplesse optimales. L'objet <xref:Microsoft.AnalysisServices.AdomdClient.CellSet> est un cache de données et métadonnées hiérarchiques en mémoire qui préserve la dimensionnalité des données. L'objet <xref:Microsoft.AnalysisServices.AdomdClient.CellSet> peut également être parcouru en état connecté ou déconnecté. Du fait de cette aptitude en état déconnecté, l'objet <xref:Microsoft.AnalysisServices.AdomdClient.CellSet> peut être utilisé pour consulter les données et les métadonnées dans n'importe quel ordre et constitue le modèle objet le plus complet pour la récupération de données. Autre conséquence de cette aptitude en état déconnecté : l'objet <xref:Microsoft.AnalysisServices.AdomdClient.CellSet> subit une charge maximale, et il s'agit du modèle objet de récupération de données ADOMD.NET le plus long à remplir.  

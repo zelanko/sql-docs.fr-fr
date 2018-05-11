@@ -4,16 +4,16 @@ ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.component: xmla
-ms.topic: article
+ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: de925e6bb83f7219ec1bd453f47d63a3fb3624a1
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: MT
+ms.openlocfilehash: e86596352228e28aebcd2dd52b7942ed76f89d72
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="handling-errors-and-warnings-xmla"></a>Gestion des erreurs et des avertissements (XMLA)
   Gestion des erreurs est requises lorsqu’un document XML for Analysis (XMLA) [Discover](../../analysis-services/xmla/xml-elements-methods-discover.md) ou [Execute](../../analysis-services/xmla/xml-elements-methods-execute.md) appel de méthode ne s’exécute pas, s’exécute correctement mais génère des erreurs ou avertissements, ou s’exécute correctement mais retourne des résultats qui contiennent des erreurs.  

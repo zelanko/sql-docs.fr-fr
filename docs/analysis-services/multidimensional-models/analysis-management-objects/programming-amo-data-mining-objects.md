@@ -4,16 +4,16 @@ ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.component: amo
-ms.topic: article
+ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 9ba64d48fe93ea047210c00717d84cde0e4dcae9
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: MT
+ms.openlocfilehash: 2c0cd9ff11f2d2bc12a823c4696690ce9a7a8c44
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="programming-amo-data-mining-objects"></a>Programmation d'objets d'exploration de données AMO
   La programmation d'objets d'exploration de données à l'aide d'AMO est simple et directe. La première étape consiste à créer le modèle de structure de données pour prendre en charge le projet d'exploration de données. Vous devez ensuite créer le modèle d'exploration de données qui prend en charge l'algorithme d'exploration de données que vous souhaitez utiliser pour prédire ou rechercher les relations invisibles sur lesquelles reposent vos données. Dès lors que le projet d'exploration de données est créé (y compris la structure et les algorithmes), vous pouvez traiter les modèles d'exploration de données pour obtenir les modèles ayant fait l'objet d'un apprentissage que vous utiliserez par la suite lors des interrogations et des prédictions réalisées à partir de l'application cliente.  

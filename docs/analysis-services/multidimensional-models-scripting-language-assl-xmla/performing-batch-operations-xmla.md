@@ -4,16 +4,16 @@ ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.component: xmla
-ms.topic: article
+ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 7fcf1074de0d233c3df24ddf1696e26a8d3bd84a
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: MT
+ms.openlocfilehash: 6d8fc92672858886a3c770d485bc21f6eb9f8eaa
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="performing-batch-operations-xmla"></a>Exécution d'opérations de traitement par lot (XMLA)
   Vous pouvez utiliser la [lot](../../analysis-services/xmla/xml-elements-commands/batch-element-xmla.md) commande XML for Analysis (XMLA) pour exécuter plusieurs commandes XMLA à l’aide d’un seul XMLA [Execute](../../analysis-services/xmla/xml-elements-methods-execute.md) (méthode). Vous pouvez exécuter plusieurs commandes contenues dans le **lot** commande comme une transaction unique ou dans des transactions individuelles pour chaque commande, en série ou en parallèle. Vous pouvez également spécifier des liaisons hors ligne et autres propriétés dans le **lot** commande pour le traitement de plusieurs [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] objets.  

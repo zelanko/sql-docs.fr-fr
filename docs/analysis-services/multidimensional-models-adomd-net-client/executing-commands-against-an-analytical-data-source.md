@@ -4,16 +4,16 @@ ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.component: adomd
-ms.topic: article
+ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: b2255f699edf57b1416191383b216875a7f13bb5
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: MT
+ms.openlocfilehash: 7fc6b29a0c914dbcf61a6fe08557e7255f80261c
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="executing-commands-against-an-analytical-data-source"></a>Exécution de commandes sur une source de données analytiques
   Après avoir établi une connexion à une source de données analytiques, vous pouvez utiliser un objet <xref:Microsoft.AnalysisServices.AdomdClient.AdomdCommand> pour exécuter des commandes sur cette source de données et en obtenir les résultats. Ces commandes permettent de récupérer des données via MDX (Multidimensional Expressions), DMX (Data Mining Extensions), voire une syntaxe limitée de SQL. En outre, vous pouvez utiliser des commandes ASSL (Analysis Services Scripting Language) pour modifier la base de données sous-jacente.  

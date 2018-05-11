@@ -3,15 +3,12 @@ title: Mettre à niveau une instance de cluster de basculement SQL Server | Micr
 ms.custom: ''
 ms.date: 10/01/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.service: ''
-ms.component: failover-clusters
+ms.prod_service: high-availability
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - upgrading failover clusters
 - clusters [SQL Server], upgrading
@@ -21,12 +18,11 @@ caps.latest.revision: 47
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 1acb84179caac743aa8c5593a005259a3f7ea21c
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: a4326012731d0237a118a8f44f1d3486d9bc881f
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="upgrade-a-sql-server-failover-cluster-instance"></a>Mettre à niveau une instance de cluster de basculement SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +46,7 @@ ms.lasthandoff: 04/26/2018
   
 -   Pendant la mise à niveau du cluster de basculement, le temps mort est limité au temps de basculement et au délai d'exécution des scripts de mise à niveau. Si vous suivez le processus de mise à niveau propagée du cluster de basculement ci-dessous et respectez tous les prérequis sur tous les nœuds avant de commencer le processus de mise à niveau, le temps mort est minime. Une mise à niveau de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] quand les tables à mémoire optimisée sont en cours d’utilisation prend plus de temps. Pour plus d’informations, consultez [Planifier et tester le plan de mise à niveau du moteur de base de données](../../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md).  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Conditions préalables requises  
  Avant de commencer, passez en revue les informations importantes suivantes :  
   
 -   [Mises à niveau de la version et de l’édition prises en charge](../../../database-engine/install-windows/supported-version-and-edition-upgrades.md) : vérifiez que vous pouvez procéder à une mise à niveau vers [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] à partir de votre version du système d’exploitation Windows et de la version de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Par exemple, vous ne pouvez pas effectuer directement la mise à niveau d’une instance de cluster de basculement SQL Server 2005 vers [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] ou mettre à niveau un cluster de basculement exécutant [!INCLUDE[winxpsvr-md](../../../includes/winxpsvr-md.md)].  

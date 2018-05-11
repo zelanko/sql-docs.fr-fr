@@ -4,14 +4,12 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: ''
 ms.component: ssms-visual-db
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- tools-ssms
+ms.technology: ssms
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - database diagrams [SQL Server], about database diagrams
 - database diagrams [SQL Server], designing
@@ -21,18 +19,17 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 16bb175df6dbbf20f3abbb2c3327a6a2bb01f0d3
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: a81fc1d6a60bc4bbb1d9ef2f67c3f5c32f60dc7c
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="walkthrough-adding-and-changing-a-database-diagram"></a>Procédure pas à pas : ajouter et modifier un schéma de base de données
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 Cette procédure pas à pas montre comment créer et modifier un schéma de base de données et apporter des modifications à la base de données par l'intermédiaire du composant des schémas de base de données. Vous apprendrez à ajouter des tables aux schémas, à créer des relations entre les tables, créer des contraintes et des index sur des colonnes et modifier le niveau des informations qui s'affichent pour chaque table.  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Conditions préalables requises  
 Pour réaliser cette procédure pas à pas, vous aurez besoin des éléments suivants :  
   
 -   Accès à [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] avec l'exemple de base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject_md.md)] .  

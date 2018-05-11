@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - filters [SQL Server replication], join
 - merge replication join filters [SQL Server replication]
@@ -22,12 +21,11 @@ caps.latest.revision: 46
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 1635b5e35a6056b9c44db159ae6ba4c58d4c0fbe
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: bf7d996475800dfc34e472b42e76aa86696c0345
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="define-and-modify-a-join-filter-between-merge-articles"></a>Définir et modifier un filtre de jointure entre des articles de fusion
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -72,7 +70,7 @@ ms.lasthandoff: 04/16/2018
   
     -   Si vous sélectionnez le générateur, utilisez les colonnes de la grille (**Conjonction**, **Colonnes de table filtrée**, **Opérateur**et **Colonnes de table jointe**) pour créer une instruction de jointure.  
   
-         Chaque colonne de la grille contient une zone de liste déroulante fixe permettant de sélectionner deux colonnes et un opérateur (**=**, **<>**, **<=**, **\<**, **>=**, **>**et **like**). Les résultats s'affichent dans la zone de texte **Aperçu** . Si la jointure concerne plus d'une paire de colonnes, sélectionnez une conjonction (AND ou OR) dans la colonne **Conjonction** , et entrez deux autres colonnes et un opérateur.  
+         Chaque colonne de la grille contient une zone de liste déroulante fixe permettant de sélectionner deux colonnes et un opérateur (**=**, **<>**, **<=**, **\<**, **>=**, **>** et **like**). Les résultats s'affichent dans la zone de texte **Aperçu** . Si la jointure concerne plus d'une paire de colonnes, sélectionnez une conjonction (AND ou OR) dans la colonne **Conjonction** , et entrez deux autres colonnes et un opérateur.  
   
     -   Si vous créez l'instruction manuellement, écrivez l'instruction de jointure dans la zone de texte **Instruction de jointure** . Utilisez la zone de liste **Colonnes de table filtrée** et la zone de liste **Colonnes de table jointe** pour faire glisser et déposer des colonnes dans la zone de texte **Instruction de jointure** .  
   

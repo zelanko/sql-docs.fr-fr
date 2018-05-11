@@ -4,16 +4,16 @@ ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.component: xmla
-ms.topic: article
+ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: f80756cb147b33b7caede48093fb69e17eb4a263
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: MT
+ms.openlocfilehash: e70aa569a63451b64e03e5fff6f29357ab25a8cc
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="inserting-updating-and-dropping-members-xmla"></a>Insertion, mise à jour et suppression de membres (XMLA)
   Vous pouvez utiliser la [insérer](../../analysis-services/xmla/xml-elements-commands/insert-element-xmla.md), [mettre à jour](../../analysis-services/xmla/xml-elements-commands/update-element-xmla.md), et [supprimer](../../analysis-services/xmla/xml-elements-commands/drop-element-xmla.md) commandes XML for Analysis (XMLA) pour respectivement, insérer, mettre à jour ou supprimer des membres dans une dimension activée en écriture. Pour plus d’informations sur les dimensions activées en écriture, consultez [Write Dimensions](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/write-enabled-dimensions.md).  

@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 08/21/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: ''
 ms.component: performance
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - XML query plans [SQL Server]
 - opening execution plans
@@ -23,13 +22,12 @@ caps.latest.revision: 25
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: Inactive
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: b803fb963c72cdf59c6d195269a63b1b55cb49e8
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 9353d2395ce32b9145d6bda0703644ee711a2ed4
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="save-an-execution-plan-in-xml-format"></a>Enregistrer un plan d'exécution au format XML
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -77,7 +75,7 @@ ms.lasthandoff: 04/16/2018
   
 5.  Dans la boîte de dialogue **Enregistrer** **les résultats \<de la grille ou du texte>**, dans la zone **Type de fichier**, cliquez sur **Tous les fichiers (\*.\*)**.  
   
-6.  Dans la boîte de dialogue **Nom de fichier**, fournissez un nom au format \<nom**>.sqlplan**, puis cliquez sur **Enregistrer**.  
+6.  Dans la boîte de dialogue **Nom de fichier**, fournissez un nom au format \<nom **>.sqlplan**, puis cliquez sur **Enregistrer**.  
   
 ### <a name="to-save-an-execution-plan-by-using-sql-server-management-studio-options"></a>Pour enregistrer un plan d'exécution avec les options de SQL Server Management Studio  
   
@@ -89,7 +87,7 @@ ms.lasthandoff: 04/16/2018
   
 3.  Dans la boîte de dialogue **Enregistrer sous**, assurez-vous que **Type de fichier** est défini à **Fichiers de plan d’exécution (\*.sqlplan)**.  
   
-4.  Dans la boîte de dialogue **Nom de fichier**, fournissez un nom au format \<nom**>.sqlplan**, puis cliquez sur **Enregistrer**.  
+4.  Dans la boîte de dialogue **Nom de fichier**, fournissez un nom au format \<nom **>.sqlplan**, puis cliquez sur **Enregistrer**.  
   
 ### <a name="to-open-a-saved-xml-query-plan-in-sql-server-management-studio"></a>Pour ouvrir un plan de requête XML dans SQL Server Management Studio  
   

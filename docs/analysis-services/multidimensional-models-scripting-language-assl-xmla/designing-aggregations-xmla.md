@@ -4,16 +4,16 @@ ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.component: xmla
-ms.topic: article
+ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: f020d4b154ecfef556b13be45fced0fa6095f17e
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: MT
+ms.openlocfilehash: 57897290129010259885a9fdffe15645a88dffc7
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="designing-aggregations-xmla"></a>Conception d'agrégations (XMLA)
   Les conceptions d'agrégation sont associées aux partitions d'un groupe de mesures particulier pour s'assurer que les partitions utilisent la même structure lors du stockage d'agrégations. À l’aide de la même structure de stockage pour les partitions permet de définir facilement des partitions qui peuvent être fusionnées ultérieurement à l’aide de la [MergePartitions](../../analysis-services/xmla/xml-elements-commands/mergepartitions-element-xmla.md) commande. Pour plus d’informations sur les conceptions d’agrégation, consultez [agrégations et conceptions d’agrégation](../../analysis-services/multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md).  

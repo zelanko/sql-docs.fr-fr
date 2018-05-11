@@ -1,30 +1,24 @@
 ---
 title: Résoudre les problèmes de connectivité de PolyBase Kerberos | Microsoft Docs
-description: ''
-services: ''
-documentationcenter: ''
 author: alazad-msft
-manager: ''
-editor: ''
-tags: ''
+ms.author: alazad
+manager: craigg
 ms.assetid: ''
-ms.service: ''
 ms.component: polybase
+ms.technology: database
 ms.suite: sql
 ms.custom: ''
-ms.workload: ''
 ms.tgt_pltfrm: na
 ms.devlang: ''
 ms.topic: article
 ms.date: 07/19/2017"
 ms.prod: sql
 ms.prod_service: database-engine, sql-data-warehouse, pdw
-ms.author: alazad
-ms.openlocfilehash: d41adcd958af3c5bc87c03b83a4d1330fdf1c779
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: dce5bc3018cb223a8d3c9f0f85aa56c8aba1e4f3
+ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="troubleshoot-polybase-kerberos-connectivity"></a>Résoudre les problèmes de connectivité de PolyBase Kerberos
 [!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +26,7 @@ Vous pouvez utiliser un outil de diagnostic interactif qui a été intégré à 
 
 Cet article sert de guide tout le long du processus de débogage de tels problèmes en tirant parti de cet outil.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Conditions préalables requises
 
 1. SQL Server 2016 RTM mise à jour cumulative 6 / SQL Server 2016 SP1 mise à jour cumulative 3 / SQL Server 2017 ou version ultérieure avec PolyBase installé
 1. Un cluster Hadoop (Cloudera ou Hortonworks) sécurisé avec Kerberos (Active Directory ou MIT)
