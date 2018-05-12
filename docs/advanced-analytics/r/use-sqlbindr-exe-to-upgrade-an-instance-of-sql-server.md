@@ -8,8 +8,8 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 716fbd8a105164d40bfa6b3e67d126067174dc5a
-ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.openlocfilehash: f58eb498843c259c4bc9ac9a5d453456dac21b54
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/10/2018
@@ -98,13 +98,23 @@ En termes d’expérience utilisateur, la technologie et la façon dont vous tra
 
 Le programme d’installation de Microsoft Machine Learning détecte les fonctionnalités existantes et la version de SQL Server et appelle un utilitaire appelé SqlBindR.exe pour modifier la liaison. En interne, SqlBindR est chaîné au programme d’installation et utilisée indirectement. Une version ultérieure, vous pouvez appeler SqlBindR directement à partir de la ligne de commande d’exercer des options spécifiques.
 
-1. Vérifiez que votre serveur répond aux exigences de version minimale. Pour SQL Server 2016 R Services, la valeur minimale est [Service Pack 1](https://www.microsoft.com/download/details.aspx?id=54276) et [CU3](https://support.microsoft.com/help/4019916/cumulative-update-3-for-sql-server-2016-sp1). Dans SSMS, exécutez `SELECT @@version` pour retourner des informations de version de serveur. 
+1. Dans SSMS, exécutez `SELECT @@version` pour vérifier le serveur répond aux exigences de version minimale. 
 
-1. Vérifiez la version de R et RevoScaleR pour vérifier que les versions existantes sont inférieures à ce que vous envisagez de les remplacer par. Pour SQL Server 2016 R Services, package de Base de R est 3.2.2 et RevoScaleR est 8.0.3.
+   Pour SQL Server 2016 R Services, la valeur minimale est [Service Pack 1](https://www.microsoft.com/download/details.aspx?id=54276) et [CU3](https://support.microsoft.com/help/4019916/cumulative-update-3-for-sql-server-2016-sp1).
 
-    + Accédez à \Program Files\Microsoft SQL Server\MSSQL13. MSSQLSERVER\R_SERVICES\bin
-    + Double-cliquez sur **R** pour ouvrir la console.
-    + Pour obtenir des versions de package, utilisez `library(help="base")` et `library(help="RevoScaleR")`. 
+1. Vérifiez la version de base de R et de packages de RevoScaleR pour vérifier que les versions existantes sont inférieures à ce que vous envisagez de les remplacer par. Pour SQL Server 2016 R Services, package de Base de R est 3.2.2 et RevoScaleR est 8.0.3.
+
+    ```SQL
+    EXECUTE sp_execute_external_script
+    @language=N'R'
+    ,@script = N'str(OutputDataSet);
+    packagematrix <- installed.packages();
+    Name <- packagematrix[,1];
+    Version <- packagematrix[,3];
+    OutputDataSet <- data.frame(Name, Version);'
+    , @input_data_1 = N''
+    WITH RESULT SETS ((PackageName nvarchar(250), PackageVersion nvarchar(max) ))
+    ```
 
 1. Télécharger Microsoft Machine Learning Server sur l’ordinateur qui dispose de l’instance que vous souhaitez mettre à niveau. Nous vous recommandons du [version la plus récente](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install#download-machine-learning-server-installer).
 
@@ -138,15 +148,23 @@ Si la mise à niveau échoue, vérifiez [codes d’erreur SqlBindR](#sqlbindr-er
 
 Vérifiez la version de R et RevoScaleR pour confirmer que les versions plus récentes. Utilisez la console R distribuée avec les packages R dans votre instance du moteur de base de données pour obtenir des informations de package :
 
-+ Accédez à \Program Files\Microsoft SQL Server\MSSQL13. MSSQLSERVER\R_SERVICES\bin
-+ Double-cliquez sur **R** pour ouvrir la console.
-+ Pour obtenir des versions de package, utilisez `library(help="base")` et `library(help="RevoScaleR")`. 
+```SQL
+EXECUTE sp_execute_external_script
+@language=N'R'
+,@script = N'str(OutputDataSet);
+packagematrix <- installed.packages();
+Name <- packagematrix[,1];
+Version <- packagematrix[,3];
+OutputDataSet <- data.frame(Name, Version);'
+, @input_data_1 = N''
+WITH RESULT SETS ((PackageName nvarchar(250), PackageVersion nvarchar(max) ))
+```
 
 Pour SQL Server 2016 R Services liés à la Machine Learning serveur 9.3, package de Base de R doit être 3.4.1, RevoScaleR doit être 9.3, et vous devez également avoir MicrosoftML 9.3. 
 
 Si vous avez ajouté les modèles dont l’apprentissage, les modèles sont incorporés dans la bibliothèque MicrosoftML et vous pouvez les appeler via les fonctions MicrosoftML. Pour plus d’informations, consultez [exemples R pour MicrosoftML](https://docs.microsoft.com/machine-learning-server/r/sample-microsoftml).
 
-## <a name="offline-no-internet-access"></a>En mode hors connexion (aucun accès internet)
+## <a name="offline-binding-no-internet-access"></a>Liaison en mode hors connexion (aucun accès internet)
 
 Pour les systèmes sans connexion internet, vous pouvez télécharger les fichiers de programme d’installation et .cab sur un ordinateur connecté à internet et puis transférer les fichiers vers le serveur isolé. 
 
@@ -156,7 +174,7 @@ Les instructions suivantes expliquent comment placer les fichiers pour une insta
 
 1. Téléchargez le programme d’installation MLS. Il télécharge sous la forme d’un seul fichier zip. Nous vous recommandons du [version la plus récente](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install#download-machine-learning-server-installer), mais vous pouvez également installer [les versions antérieures](https://docs.microsoft.com/machine-learning-server/install/r-server-install-windows-offline#download-required-components).
 
-1. Télécharger les fichiers .cab. Les liens suivants concernent des version 9.3. Si vous avez besoin des versions antérieures, les liens supplémentaires sont accessibles dans [R Server 9.1](https://docs.microsoft.com/machine-learning-server/install/r-server-install-windows-offline#download-required-components). Rappelez-vous que Python/Anaconda peut uniquement être ajouté à une instance de SQL Server 2017 Machine Learning Services. Il existe des modèles dont l’apprentissage de R et Python ; le fichier .cab fournit des modèles dans les langues que vous utilisez.
+1. Télécharger les fichiers .cab. Les liens suivants concernent la version 9.3. Si vous avez besoin des versions antérieures, les liens supplémentaires sont accessibles dans [R Server 9.1](https://docs.microsoft.com/machine-learning-server/install/r-server-install-windows-offline#download-required-components). Rappelez-vous que Python/Anaconda peut uniquement être ajouté à une instance de SQL Server 2017 Machine Learning Services. Il existe des modèles dont l’apprentissage de R et Python ; le fichier .cab fournit des modèles dans les langues que vous utilisez.
 
     | Fonctionnalité | Télécharger |
     |---------|----------|
@@ -168,7 +186,7 @@ Les instructions suivantes expliquent comment placer les fichiers pour une insta
 
 1. Sur le serveur, tapez `%temp%` dans la commande Exécuter pour obtenir l’emplacement physique du répertoire temporaire. Le chemin d’accès physique varie selon l’ordinateur, mais il est généralement `C:\Users\<your-user-name>\AppData\Local\Temp`.
 
-1. Fichiers place.cab dans le dossier % Temp%.
+1. Placez les fichiers .cab dans le dossier % Temp%.
 
 1. Décompressez le programme d’installation.
 
@@ -285,7 +303,7 @@ Si vous trouvez des dossiers avec un nom tel que cela, vous pouvez le supprimer 
 |*bind*| Met à niveau l’instance de base de données SQL spécifiée vers la version la plus récente de R Server, et garantit que l’instance obtient automatiquement les mises à niveau ultérieures de R Server|
 |*unbind*|Désinstalle la version la plus récente de R Server de l’instance de base de données SQL spécifiée, et empêche les mises à niveau ultérieures de R Server d’affecter l’instance|
 
-< a = nom « sqlbinder-erreur-codes »<a/>
+<a name="sqlbinder-error-codes"><a/>
 
 ### <a name="errors"></a>Erreurs
 
@@ -299,10 +317,10 @@ L’outil retourne les messages d’erreur suivants :
 |Erreur 3 de liaison | Instance non valide | Une instance existe, mais n’est pas valide pour la liaison. |
 |Erreur 4 de liaison | Ne peut pas être liée | |
 |Liaison d’erreur 5 | Déjà liée | Vous avez exécuté la commande *bind* , mais l’instance spécifiée est déjà liée. |
-|Erreur 6 de liaison | Échec de la liaison | Une erreur s’est produite lors de l’annulation de l’instance de la liaison. |
+|Erreur 6 de liaison | Échec de la liaison | Une erreur s’est produite lors de l’annulation de l’instance de la liaison. Cette erreur peut se produire si vous exécutez le programme d’installation MLS sans sélectionner toutes les fonctionnalités.|
 |Liaison d’erreur 7 | Non lié | L’instance du moteur de base de données a R Services ou SQL Server Machine Learning Services. L’instance n’est pas lié à Microsoft Machine Learning Server. |
 |Erreur 8 de liaison | Annuler la liaison a échoué | Une erreur s’est produite lors de l’annulation de l’instance de la liaison. |
-|Erreur 9 de liaison | Aucune instance trouvée | Aucune instance n’a été trouvée sur cet ordinateur. |
+|Erreur 9 de liaison | Aucune instance trouvée | Aucune instance de moteur de base de données a été trouvée sur cet ordinateur. |
 
 
 ## <a name="see-also"></a>Voir aussi
