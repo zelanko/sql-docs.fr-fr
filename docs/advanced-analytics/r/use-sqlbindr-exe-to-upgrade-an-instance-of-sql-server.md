@@ -8,11 +8,11 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: f58eb498843c259c4bc9ac9a5d453456dac21b54
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
-ms.translationtype: HT
+ms.openlocfilehash: aa67fbf2480de093ffe2f919e9c50ee2d5082b83
+ms.sourcegitcommit: df382099ef1562b5f2d1cd506c1170d1db64de41
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 05/12/2018
 ---
 # <a name="upgrade-machine-learning-r-and-python-components-in-sql-server-instances"></a>Mise à niveau machine learning (R et Python) des composants dans les instances de SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -305,9 +305,9 @@ Si vous trouvez des dossiers avec un nom tel que cela, vous pouvez le supprimer 
 
 <a name="sqlbinder-error-codes"><a/>
 
-### <a name="errors"></a>Erreurs
+## <a name="binding-errors"></a>Erreurs de liaison
 
-L’outil retourne les messages d’erreur suivants :
+Programme d’installation MLS et SqlBindR retournent les codes d’erreur suivants et les messages.
 
 |Code d'erreur  | Boîte de           | Détails               |
 |------------|-------------------|-----------------------|
@@ -317,7 +317,7 @@ L’outil retourne les messages d’erreur suivants :
 |Erreur 3 de liaison | Instance non valide | Une instance existe, mais n’est pas valide pour la liaison. |
 |Erreur 4 de liaison | Ne peut pas être liée | |
 |Liaison d’erreur 5 | Déjà liée | Vous avez exécuté la commande *bind* , mais l’instance spécifiée est déjà liée. |
-|Erreur 6 de liaison | Échec de la liaison | Une erreur s’est produite lors de l’annulation de l’instance de la liaison. Cette erreur peut se produire si vous exécutez le programme d’installation MLS sans sélectionner toutes les fonctionnalités.|
+|Erreur 6 de liaison | Échec de la liaison | Une erreur s’est produite lors de l’annulation de l’instance de la liaison. Cette erreur peut se produire si vous exécutez le programme d’installation MLS sans sélectionner toutes les fonctionnalités. Liaison exige que vous sélectionnez une instance MSSQL et R et Python, en supposant que l’instance SQL Server 2017.|
 |Liaison d’erreur 7 | Non lié | L’instance du moteur de base de données a R Services ou SQL Server Machine Learning Services. L’instance n’est pas lié à Microsoft Machine Learning Server. |
 |Erreur 8 de liaison | Annuler la liaison a échoué | Une erreur s’est produite lors de l’annulation de l’instance de la liaison. |
 |Erreur 9 de liaison | Aucune instance trouvée | Aucune instance de moteur de base de données a été trouvée sur cet ordinateur. |

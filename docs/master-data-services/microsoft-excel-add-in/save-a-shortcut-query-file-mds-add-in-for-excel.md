@@ -4,25 +4,23 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
-ms.service: ''
 ms.component: microsoft-excel-add-in
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 98385f84-67cc-421a-b729-91847954e03e
 caps.latest.revision: 8
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 9e6ed5b91fb3ba8602bbadce30fa0266976940f4
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: fc742d5ba6069bee8f80223c21d9a84a31e422f8
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="save-a-shortcut-query-file-mds-add-in-for-excel"></a>Enregistrer un fichier de requête de raccourci (Complément MDS pour Excel)
 
@@ -30,7 +28,7 @@ ms.lasthandoff: 04/26/2018
 
   Dans le [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], si vous accédez souvent au même jeu de données, enregistrez un fichier de requête de raccourci.  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Conditions préalables requises  
  Pour effectuer cette procédure :  
   
 -   La feuille de calcul active doit contenir des données managées DM au format souhaité. Par exemple, vous devriez afficher les colonnes dans l'ordre souhaité, avec tous les filtres appliqués. Pour plus d’informations, consultez [Filtrer les données avant l’exportation &#40;Complément MDS pour Excel&#41;](../../master-data-services/microsoft-excel-add-in/filter-data-before-exporting-mds-add-in-for-excel.md) et [Réorganiser des colonnes &#40;Complément MDS pour Excel&#41;](../../master-data-services/microsoft-excel-add-in/reorder-columns-mds-add-in-for-excel.md).  

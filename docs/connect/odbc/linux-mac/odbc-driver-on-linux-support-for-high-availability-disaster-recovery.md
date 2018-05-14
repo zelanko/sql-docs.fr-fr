@@ -14,11 +14,11 @@ caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 38d39d96a32223e9ebe90315dc01c0cd7ab82c31
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d416abb8076e4728724ff971845a9efd970cccc2
+ms.sourcegitcommit: feff98b3094a42f345a0dc8a31598b578c312b38
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/11/2018
 ---
 # <a name="odbc-driver-on-linux-and-macos-support-for-high-availability-and-disaster-recovery"></a>Pilote ODBC sur Linux et macOS prise en charge de la haute disponibilité et récupération d’urgence
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -44,7 +44,7 @@ Si la première adresse IP retournée du serveur DNS n’est pas connectable, ce
 
 ## <a name="connecting-with-multisubnetfailover"></a>Connexion à MultiSubnetFailover
 
-Spécifiez toujours **MultiSubnetFailover = Yes** (ou **= True**) lors de la connexion à un [!INCLUDE[ssSQL11](../../../includes/sssql11_md.md)] écouteur du groupe de disponibilité ou [!INCLUDE[ssSQL11](../../../includes/sssql11_md.md)] Instance de Cluster de basculement. **MultiSubnetFailover** permet un basculement plus rapide pour tous les groupes de disponibilité et une instance de cluster de basculement dans [!INCLUDE[ssSQL11](../../../includes/sssql11_md.md)]. **MultiSubnetFailover** réduit également sensiblement le temps de basculement pour les topologies AlwaysOn de sous-réseaux uniques et multiples. Pendant un basculement de sous-réseaux multiples, le client tente des connexions en parallèle. Lors d’un basculement de sous-réseau, le pilote a retente agressivement la connexion TCP.
+Spécifiez toujours **MultiSubnetFailover = Yes** lors de la connexion à un [!INCLUDE[ssSQL11](../../../includes/sssql11_md.md)] écouteur du groupe de disponibilité ou [!INCLUDE[ssSQL11](../../../includes/sssql11_md.md)] Instance de Cluster de basculement. **MultiSubnetFailover** permet un basculement plus rapide pour tous les groupes de disponibilité et une instance de cluster de basculement dans [!INCLUDE[ssSQL11](../../../includes/sssql11_md.md)]. **MultiSubnetFailover** réduit également sensiblement le temps de basculement pour les topologies AlwaysOn de sous-réseaux uniques et multiples. Pendant un basculement de sous-réseaux multiples, le client tente des connexions en parallèle. Lors d’un basculement de sous-réseau, le pilote a retente agressivement la connexion TCP.
 
 La propriété de connexion **MultiSubnetFailover** indique que l’application est déployée dans un groupe de disponibilité ou une instance de cluster de basculement. Le pilote essaie de se connecter à la base de données sur le serveur principal [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] traite de l’instance en essayant de se connecter à tous les l’adresse IP. Lorsque vous vous connectez avec **MultiSubnetFailover = Yes**, le client tente de tentatives de connexion TCP plus rapidement que les intervalles de retransmission TCP par défaut du système d’exploitation. **MultiSubnetFailover=Yes** permet une reconnexion plus rapide après un basculement d’un groupe de disponibilité AlwaysOn ou d’une instance de cluster de basculement AlwaysOn. **MultiSubnetFailover = Yes** s’applique à la fois unique et à plusieurs sous-réseaux groupes de disponibilité et Instances de Cluster de basculement.  
 

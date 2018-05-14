@@ -3,15 +3,12 @@ title: Récupérer un numéro séquentiel dans le journal (SQL Server) | Microso
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.service: ''
-ms.component: backup-restore
+ms.prod_service: backup-restore
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - log sequence numbers [SQL Server]
 - STOPBEFOREMARK option [RESTORE statement]
@@ -28,12 +25,11 @@ caps.latest.revision: 38
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 8a4f7bf02ef09eb623afc88d4c36da3cbc31056d
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 441daeb74bcc141c148edef396b04bf75aff3f0f
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="recover-to-a-log-sequence-number-sql-server"></a>Récupérer un numéro séquentiel dans le journal (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -71,11 +67,11 @@ ms.lasthandoff: 04/16/2018
 ## <a name="transact-sql-syntax-for-restoring-to-an-lsn"></a>Syntaxe Transact-SQL relative à la restauration d'après un LSN  
  Grâce à l'instruction [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) , vous pouvez vous arrêter à un LSN ou immédiatement avant ce point de la façon suivante :  
   
--   Utilisez la clause WITH STOPATMARK **='**lsn:*<numéro_lsn>***'**, où lsn:*\<numéro_lsn>* correspond à une chaîne spécifiant que l’enregistrement du journal qui contient le LSN spécifié est le point de récupération.  
+-   Utilisez la clause WITH STOPATMARK **='** lsn:*<numéro_lsn>***'**, où lsn:*\<numéro_lsn>* correspond à une chaîne spécifiant que l’enregistrement du journal qui contient le LSN spécifié est le point de récupération.  
   
      STOPATMARK permet la restauration par progression jusqu'au NSE et inclut l'enregistrement correspondant issu du journal, dans la restauration.  
   
--   Utilisez la clause WITH STOPBEFOREMARK **='**lsn:*<numéro_lsn>***'**, où lsn:*\<numéro_lsn>* correspond à une chaîne spécifiant que l’entrée se trouvant dans le journal immédiatement avant celle qui contient le LSN précisé est le point de récupération.  
+-   Utilisez la clause WITH STOPBEFOREMARK **='** lsn:*<numéro_lsn>***'**, où lsn:*\<numéro_lsn>* correspond à une chaîne spécifiant que l’entrée se trouvant dans le journal immédiatement avant celle qui contient le LSN précisé est le point de récupération.  
   
      STOPBEFOREMARK permet la restauration par progression jusqu'au NSE mais exclut l'enregistrement correspondant, se trouvant dans le journal, de la restauration par progression.  
   

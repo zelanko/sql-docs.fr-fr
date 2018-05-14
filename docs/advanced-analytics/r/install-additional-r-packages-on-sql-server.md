@@ -3,82 +3,48 @@ title: Installer de nouveaux packages R sur SQL Server Machine Learning Services
 description: Ajouter de nouveaux packages R pour SQL Server 2016 R Services ou SQL Server 2017 Machine Learning Services (de-de base de données)
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 05/08/2018
+ms.date: 05/10/2018
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 57c5d4b9c3584a4aa556b1f4b6f7541a14f91a00
-ms.sourcegitcommit: 1aedef909f91dc88dc741748f36eabce3a04b2b1
+ms.openlocfilehash: 1106d0f1505f29a3b54f9fc036fcaf28b8715b75
+ms.sourcegitcommit: feff98b3094a42f345a0dc8a31598b578c312b38
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 05/11/2018
 ---
 # <a name="install-new-r-packages-on-sql-server"></a>Installer de nouveaux packages R sur SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Cet article décrit comment installer de nouveaux packages R à une instance de SQL Server où l’apprentissage automatique est activé.
+Cet article décrit comment installer de nouveaux packages R à une instance de SQL Server où l’apprentissage automatique est activé. Il existe plusieurs méthodes pour l’installation de nouveaux packages R, selon la version de SQL Server que vous avez et indique si le serveur possède une connexion internet.
 
-Il existe plusieurs méthodes pour l’installation de nouveaux packages R, selon la version de SQL Server que vous avez et indique si le serveur a accès à internet.
+## <a name="bkmk_rInstall"></a> Installer des packages R via une connexion Internet
 
-+ [Installation de nouveaux packages à l’aide des outils R, avec accès à internet](#bkmk_rInstall)
-
-    Utilisez des commandes R classiques pour installer des packages à partir d’Internet. Ceci est la méthode la plus simple, mais requiert un accès administrateur.
-
-    **S’applique à :**[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)][!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)]. Également requis pour les instances de [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)] où gestion des packages via DDL n’a pas été activée.
-
-+ [Installer de nouveaux packages R sur un serveur avec **aucune** accès à internet](#bkmk_offlineInstall)
-
-    Si le serveur n’a pas accès à internet, certaines étapes supplémentaires sont requises pour préparer les packages. Cette section décrit comment préparer les fichiers requis pour l’installation du package et ses dépendances.
-
-+ [Installer des packages à l’aide de l’instruction de créer une bibliothèque externe](#bkmk_createlibrary) 
-
-    Le [créer une bibliothèque externe](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql) instruction est fournie dans SQL Server 2017, pour le rendre possible de créer une bibliothèque de package sans exécuter R ou directement le code Python. Toutefois, cette méthode requiert que vous préparez tous les packages requis à l’avance et nécessite des autorisations de base de données supplémentaires.
-
-    **S’applique à :** [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]; autres restrictions s’appliquent.
-
-## <a name="bkmk_rInstall"></a> Installation de nouveaux packages R à l’aide d’Internet
-
-Vous pouvez utiliser les outils R standard pour installer de nouveaux packages sur une instance de SQL Server 2016 ou SQL Server 2017. Ce processus suppose que vous êtes un administrateur sur l’ordinateur.
+Vous pouvez utiliser les outils R standard pour installer de nouveaux packages sur une instance de SQL Server 2016 ou SQL Server 2017, en fournissant l’ordinateur a un port ouvert 80 et dispose de droits d’administrateur.
 
 > [!IMPORTANT] 
 > Veillez à installer des packages à la bibliothèque par défaut qui est associée à l’instance actuelle. Ne jamais installer de packages vers un répertoire de l’utilisateur.
 
-Cette procédure décrit comment vous pouvez installer des packages à l’aide de RGui ; Toutefois, vous pouvez utiliser RTerm ou tout autre R de ligne de commande outil qui prend en charge l’accès avec élévation de privilèges.
+Cette procédure utilise RGui, mais vous pouvez utiliser RTerm ou tout autre R de ligne de commande outil qui prend en charge l’accès avec élévation de privilèges.
 
-### <a name="install-a-package-using-rgui-or-rterm"></a>Installer un package à l’aide de RGui ou RTerm
+### <a name="install-a-package-using-rgui"></a>Installer un package à l’aide de RGui
 
-1. Accédez au dossier sur le serveur où sont installées les bibliothèques R pour l’instance.
+1. [Déterminer l’emplacement de la bibliothèque de l’instance](installing-and-managing-r-packages.md). Accédez au dossier où sont installés les outils R. Par exemple, le chemin d’accès par défaut pour une instance par défaut de SQL Server 2017 est comme suit : `C:\Program Files\MSSQL14.MSSQLSERVER\R_SERVICES\bin\x64`
 
-  **Instance par défaut**
+1. RGui.exe d’avec le bouton droit, puis sélectionnez **exécuter en tant qu’administrateur**. Si vous n’avez pas les autorisations requises, contactez l’administrateur de base de données et fournir une liste des packages que vous avez besoin.
 
-    SQL Server 2017 : `C:\Program Files\MSSQL14.MSSQLSERVER\R_SERVICES\bin\x64`
-    
-    SQL Server 2016 : `C:\Program Files\MSSQL13.MSSQLSERVER\R_SERVICES\bin\x64`
+1. À partir de la ligne de commande, si vous connaissez le nom du package, vous pouvez taper : `install.packages("the_package-name")` des guillemets doubles sont requises pour le nom du package.
 
-  **Instance nommée**
+1. Lorsque vous êtes invité pour un site miroir, sélectionnez n’importe quel site qui est adapté à votre emplacement.
 
-    SQL Server 2017 : `C:\Program files\MSSQL14.<instanceName>\R_SERVICES\bin\x64`
-    
-    SQL Server 2016 : `C:\Program files\MSSQL13.<instanceName>\R_SERVICES\bin\x64`
+Si le package cible dépend de packages supplémentaires, le programme d’installation de R télécharge les dépendances et les installe pour vous automatiquement.
 
-  Si vous avez utilisé la liaison pour mettre à niveau les composants d’apprentissage automatique, le chemin d’accès peut ont changé. Vérifiez toujours le chemin d’accès de l’instance avant d’installer de nouveaux packages. 
-
-2. RGui.exe d’avec le bouton droit, puis sélectionnez **exécuter en tant qu’administrateur**.
-
-    Si vous n’avez pas les autorisations requises, contactez l’administrateur de base de données et fournir une liste des packages que vous avez besoin.
-
-3. À partir de la ligne de commande, si vous connaissez le nom du package, vous pouvez taper : `install.packages("the_package-name")` des guillemets doubles sont requises pour le nom du package.
-
-4. Lorsque vous êtes invité pour un site miroir, sélectionnez n’importe quel site qui est adapté à votre emplacement.
-
-5. Si le package cible dépend de packages supplémentaires, le programme d’installation de R télécharge les dépendances et les installe pour vous automatiquement.
-
-6. Pour chaque instance où vous devez utiliser le package, exécutez installation séparément. Les packages ne peuvent pas être partagés entre les instances.
+Si vous avez plusieurs instances de SQL Server, tels que les instances côte à côte de SQL Server 2016 R Services et SQL Server 2017 Machine Learning Services, exécutez installation séparément pour chaque instance si vous souhaitez utiliser le package dans les deux contextes. Les packages ne peuvent pas être partagés entre les instances.
 
 ## <a name = "bkmk_offlineInstall"></a> Installation hors connexion à l’aide des outils R
 
-Pour installer des packages R sur un serveur qui n’a pas accès à internet, vous devez :
+Si le serveur n’a pas accès à internet, des étapes supplémentaires sont requises pour préparer les packages. Pour installer des packages R sur un serveur qui n’a pas accès à internet, vous devez :
 
 + Analyser les dépendances à l’avance.
 + Téléchargez le package cible sur un ordinateur connecté à Internet.
@@ -96,21 +62,9 @@ Cette procédure suppose que vous avez préparé tous les packages que vous avez
 
 1. Copie le package compressé de fichiers, ou pour plusieurs packages, le référentiel complet qui contient tous les packages compressés format, à un emplacement accessible au serveur.
 
-2. Ouvrez le dossier sur le serveur où sont installées les bibliothèques R pour l’instance. Par exemple, si vous utilisez l’invite de commandes Windows, accédez au répertoire où se trouvent les RTerm.Exe ou RGui.exe.
+2. Ouvrez le dossier sur le serveur où sont installés les outils R pour l’instance. Par exemple, si vous utilisez l’invite de commandes Windows sur un système avec SQL Server 2016 R Services, basculez vers `C:\Program Files\MSSQL13.MSSQLSERVER\R_SERVICES\bin\x64`.
 
-  **Instance par défaut**
-
-    SQL Server 2017 : `C:\Program Files\MSSQL14.MSSQLSERVER\R_SERVICES\bin\x64`
-    
-    SQL Server 2016 : `C:\Program Files\MSSQL13.MSSQLSERVER\R_SERVICES\bin\x64`
-
-  **Instance nommée**
-
-    SQL Server 2017 : `C:\Program files\MSSQL14.<instanceName>\R_SERVICES\bin\x64`
-    
-    SQL Server 2016 : `C:\Program files\MSSQL13.<instanceName>\R_SERVICES\bin\x64`
-
-3. Avec le bouton droit sur l’interface RGui ou l’invite de commandes et sélectionnez **exécuter en tant qu’administrateur**.
+3. Avec le bouton droit sur RGui ou RTerm et sélectionnez **exécuter en tant qu’administrateur**.
 
 4. Exécutez la commande R `install.packages` et spécifiez le package ou le nom du référentiel et l’emplacement des fichiers compressés.
 
@@ -122,17 +76,17 @@ Cette procédure suppose que vous avez préparé tous les packages que vous avez
 
     Si tous les packages requis ne sont pas présents dans la bibliothèque de l’instance et ne peut pas être trouvés dans les fichiers, l’installation du package cible échoue.
 
-## <a name="bkmk_createlibrary"></a> Utilisez une instruction DDL pour installer un package 
+## <a name="bkmk_createlibrary"></a> Utiliser créer une bibliothèque externe
 
-Dans SQL Server 2017, vous pouvez utiliser la [créer une bibliothèque externe](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql) instruction pour ajouter un package ou un ensemble de packages à une instance ou d’une base de données spécifique. Cette instruction DDL et les rôles de base de données prise en charge sont destinées à faciliter l’installation et la gestion de packages par un propriétaire de base de données sans avoir à utiliser les outils R ou Python.
+**S’applique à :**  [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]
 
-Ce processus requiert une préparation, par opposition à l’installation des packages à l’aide des méthodes classiques de R ou Python.
+Le [créer une bibliothèque externe](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql) instruction permet d’ajouter un package ou un ensemble de packages à une base de données spécifique ou à une instance sans exécuter R ou directement le code Python. Toutefois, cette méthode requiert la préparation du package et les autorisations de base de données supplémentaires.
 
-+ Tous les packages doivent être disponibles comme compressé de fichiers local, plutôt que par téléchargement à partir d’internet.
++ Tous les packages doivent être disponibles en tant qu’un fichier zip local, plutôt que téléchargement à la demande à partir d’internet.
 
     Si vous n’avez pas de l’accès au système de fichiers sur le serveur, vous pouvez également passer un package complet en tant que variable, à l’aide d’un format binaire. Pour plus d’informations, consultez [créer une bibliothèque externe](../../t-sql/statements/create-external-library-transact-sql.md).
 
-+ L’instruction échoue si les packages nécessaires ne sont pas disponibles. Vous devez analyser les dépendances du package que vous souhaitez installer et de vous assurer que les packages sont téléchargés sur le serveur et la base de données. Nous vous recommandons d’utiliser **miniCRAN** ou **igraph** pour l’analyse des dépendances de packages.
++ Toutes les dépendances doivent être identifiés par le nom et la version et inclus dans le fichier zip. L’instruction échoue si les packages nécessaires ne sont pas disponibles, notamment les dépendances de package en aval. Nous vous recommandons d’utiliser **miniCRAN** ou **igraph** pour l’analyse des dépendances de packages. L’installation d’une version incorrecte du package ou de la dépendance de package peut se produire l’instruction échoue. 
 
 + Vous devez disposer des autorisations nécessaires sur la base de données. Pour plus d’informations, consultez [créer une bibliothèque externe](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql).
 
@@ -167,19 +121,7 @@ Ce processus requiert une préparation, par opposition à l’installation des p
     library(randomForest)'
     ```
 
-### <a name="known-issues-with-create-external-library"></a>Problèmes connus de créer une bibliothèque externe
-
-CRÉER une bibliothèque externe est pris en charge dans les conditions suivantes :
-
-+ Vous installez un package sans dépendances.
-+ Vous installez les packages avec des dépendances et que vous avez préparé tous les packages à l’avance. 
-
-L’instruction DDL échoue s’il manquants des dépendances du package. Par exemple, le processus d’installation est connu à échouer dans ces cas :
-
-+ Vous avez installé un package qui a des dépendances de deuxième niveau et l’analyse s’étendent pas aux packages de second niveau. Par exemple, vous souhaitez installer **gglot2**et identifié tous les packages répertoriés dans le manifeste ; Toutefois, ces packages autres dépendances qui n’ont pas été installés.
-+ Vous avez installé un ensemble de packages qui requièrent différentes versions d’un package de prise en charge et votre serveur a une version incorrecte.
-
-## <a name="package-installation-tips"></a>Conseils d’installation de package
+## <a name="tips-for-package-installation"></a>Conseils pour l’installation du package
 
 Cette section fournit des conseils assorties et questions courantes liées à l’installation du package R dans SQL Server.
 
@@ -219,18 +161,14 @@ Packages R dépendent souvent plusieurs packages, certains d'entre eux peuvent �
 Si vous avez besoin d’installer plusieurs packages ou souhaitez vous assurer que tous les membres de votre organisation Obtient le type de package approprié et la version, nous vous recommandons d’utiliser le [miniCRAN](https://mran.microsoft.com/package/miniCRAN) package pour analyser la chaîne de dépendance terminée. minicRAN crée un référentiel local qui peut être partagé entre plusieurs utilisateurs ou ordinateurs. Pour plus d’informations, consultez [créer un référentiel de package local à l’aide de miniCRAN](create-a-local-package-repository-using-minicran.md).
 
 
-### <a name="know-which-library-you-are-using-for-installation"></a>Connaître la bibliothèque dans laquelle vous utilisez pour l’installation
+### <a name="know-which-library-you-are-installing-to-and-which-packages-are-already-installed"></a>Connaître la bibliothèque dans laquelle vous effectuez l’installation et lesquelles packages sont déjà installés.
 
 Si vous avez modifié précédemment l’environnement R sur l’ordinateur, avant d’installer quoi que ce soit, prenez un moment, puis vérifiez que la variable d’environnement R `.libPath` utilise simplement un chemin d’accès.
 
-Ce chemin d’accès doit pointer vers le dossier R_SERVICES pour l’instance. Pour plus d’informations, consultez [packages R sont installés avec SQL Server](installing-and-managing-r-packages.md).
+Ce chemin d’accès doit pointer vers le dossier R_SERVICES pour l’instance. Pour plus d’informations, notamment la façon de déterminer les packages qui sont déjà installés, consultez [packages R sont installés avec SQL Server](installing-and-managing-r-packages.md).
 
-### <a name="side-by-side-installation-with-r-server"></a>Installation côte à côte avec R Server
+### <a name="side-by-side-installation-with-standalone-r-or-python-servers"></a>Installation côte à côte avec Standalone R ou les serveurs de Python
 
-Si vous avez installé Microsoft Machine Learning Server (autonome) en plus des Services de SQL Server Machine Learning, votre ordinateur doit disposer des installations séparées de R pour chacune, avec des doublons de tous les outils R et les bibliothèques.
+Si vous avez installé SQL Server 2017 Microsoft Machine Learning Server (autonome) ou SQL Server 2016 R Server (autonome) en plus de l’analytique dans base de données (SQL Server 2017 Machine Learning Services et SQL Server 2016 R Services), votre ordinateur a Séparez les installations de R pour chacune, avec des doublons de tous les outils R et les bibliothèques.
 
-Les packages qui sont installés à la bibliothèque R_SERVER sont utilisés uniquement par Microsoft R Server et ne sont pas accessibles par SQL Server. Veillez à utiliser le `R_SERVICES` bibliothèque lors de l’installation des packages que vous souhaitez utiliser dans SQL Server.
-
-### <a name="how-to-determine-which-packages-are-already-installed"></a>Comment déterminer les packages qui sont déjà installés ?
-
- Consultez [packages R sont installés avec SQL Server](installing-and-managing-r-packages.md)
+Les packages qui sont installés à la bibliothèque R_SERVER sont utilisés uniquement par un serveur autonome et ne sont pas accessibles par une instance de SQL Server (de-de base de données). Utilisez toujours le `R_SERVICES` bibliothèque lors de l’installation des packages que vous souhaitez utiliser dans la base de données sur SQL Server.

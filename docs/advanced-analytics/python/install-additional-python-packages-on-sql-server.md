@@ -8,11 +8,11 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 77cc91c4d0a9fbe339e92705a71a3a8642de5563
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: fa1ed2612fb88653a7259af0675b496fac4a6723
+ms.sourcegitcommit: df382099ef1562b5f2d1cd506c1170d1db64de41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 05/12/2018
 ---
 # <a name="install-new-python-packages-on-sql-server"></a>Installer de nouveaux packages Python sur SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -123,13 +123,13 @@ import cntk as cntk
 cntk._version_
 ```
 
-##  <a name="how-to-view-installed-packages-using-conda"></a>Comment afficher les packages installés à l’aide de conda
+## <a name="list-installed-packages-using-conda"></a>Répertorier les packages installés à l’aide de conda
 
 Il existe différentes façons dont vous pouvez obtenir une liste des packages installés. Par exemple, vous pouvez afficher les packages installés dans le **environnements Python** windows de Visual Studio.
 
-Si vous utilisez la ligne de commande Python, vous pouvez utiliser la **conda** package manager, qui est incluse dans l’environnement Anaconda Python ajoutée par le programme d’installation de SQL Server.
+Si vous utilisez la ligne de commande Python, vous pouvez utiliser **Pip** ou **conda** Gestionnaire de package, inclus dans l’environnement Anaconda Python ajoutée par le programme d’installation de SQL Server.
 
-En supposant que vous avez ajouté le dossier Scripts à la variable d’environnement PATH, pour exécuter cette commande à partir de l’invite de commandes de l’administrateur pour répertorier les packages dans votre environnement de Python.
+En supposant que vous avez ajouté le dossier Scripts à la variable d’environnement PATH, pour exécuter cette commande à partir de l’invite de commandes de l’administrateur pour répertorier les packages dans votre environnement de Python. Dans le cas contraire, consultez [sur les packages R d’obtenir et Python](../r/determine-which-packages-are-installed-on-sql-server.md#pip-conda) pour les pointeurs sur la façon d’exécuter les outils Python dans SQL Server.
 
 ```python
 conda list
