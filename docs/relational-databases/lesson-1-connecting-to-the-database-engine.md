@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 02/05/2018
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: tutorial
 ms.reviewer: ''
 ms.suite: sql
@@ -17,12 +16,11 @@ caps.latest.revision: 26
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: ee4e7f2092b2d023a07d3e6519639ed63b679c67
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 1795e19eb13aaac59009ea610b0d261d3dc4d649
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="lesson-1-connecting-to-the-database-engine"></a>Leçon 1 : Connexion au moteur de base de données
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -66,7 +64,7 @@ Les exemples de bases de données et les exemples ne sont pas fournis avec [!INC
 1.  Ouvrez une session Windows en tant que membre du groupe Administrateurs, puis ouvrez [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)].  
 2.  Dans la boîte de dialogue **Se connecter au serveur** , cliquez sur **Annuler**.  
 3.  Si le composant Serveurs inscrits n'apparaît pas, dans le menu **Affichage** , cliquez sur **Serveurs inscrits**.
-4.  Sélectionnez l’option **Moteur de base de données** dans la barre d’outils Serveurs inscrits, développez **Moteur de base de données**, cliquez avec le bouton droit sur **Groupes de serveurs locaux**, pointez sur **Tâches**, puis cliquez sur **Inscrire les serveurs locaux**. Toutes les instances du [!INCLUDE[ssDE](../includes/ssde-md.md)] installées sur l'ordinateur s'affichent, L'instance par défaut n'a pas de nom et prend le nom de l'ordinateur. Une instance nommée s’affiche sous le nom de l’ordinateur suivi d’une barre oblique inversée (\\), puis du nom de l’instance. Pour [!INCLUDE[ssExpress](../includes/ssexpress-md.md)], l’instance est nommée *<nom_ordinateur>*\sqlexpress sauf si vous avez modifié le nom pendant l’installation.  
+4.  Sélectionnez l’option **Moteur de base de données** dans la barre d’outils Serveurs inscrits, développez **Moteur de base de données**, cliquez avec le bouton droit sur **Groupes de serveurs locaux**, pointez sur **Tâches**, puis cliquez sur **Inscrire les serveurs locaux**. Toutes les instances du [!INCLUDE[ssDE](../includes/ssde-md.md)] installées sur l'ordinateur s'affichent, L'instance par défaut n'a pas de nom et prend le nom de l'ordinateur. Une instance nommée s’affiche sous le nom de l’ordinateur suivi d’une barre oblique inversée (\\), puis du nom de l’instance. Pour [!INCLUDE[ssExpress](../includes/ssexpress-md.md)], l’instance est nommée *<nom_ordinateur>* \sqlexpress sauf si vous avez modifié le nom pendant l’installation.  
 
 ##### <a name="to-verify-that-the-database-engine-is-running"></a>Pour vérifier que le moteur de base de données est en cours d'exécution
 

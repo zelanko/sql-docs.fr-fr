@@ -4,14 +4,12 @@ ms.custom: ''
 ms.date: 09/30/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: ''
 ms.component: import-export
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-bulk-import-export
+ms.technology: data-movement
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data formats [SQL Server], Unicode character
 - Unicode [SQL Server], bulk importing and exporting
@@ -20,13 +18,12 @@ caps.latest.revision: 37
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: On Demand
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 168797b37247a0309d09b80960e2ae5089e7d51b
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: ecc827d1b784ad81907443c42f80d69b6f7f05f6
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="use-unicode-character-format-to-import-or-export-data-sql-server"></a>Utiliser le format caractère Unicode pour importer ou exporter des données (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -148,7 +145,7 @@ Notepad D:\BCP\myWidechar.fmt
 Les exemples ci-dessous utilisent la base de données et les fichiers de format créés ci-dessus.
 
 ### **Utilisation de bcp et du format caractère Unicode pour exporter des données**<a name="bcp_widechar_export"></a>
-Commutateur**-w** et commande **OUT** .  Remarque : Le fichier de données créé dans cet exemple est utilisé dans tous les exemples suivants.  À partir d’une invite de commandes, entrez les commandes suivantes :
+Commutateur **-w** et commande **OUT** .  Remarque : Le fichier de données créé dans cet exemple est utilisé dans tous les exemples suivants.  À partir d’une invite de commandes, entrez les commandes suivantes :
 ```
 bcp TestDatabase.dbo.myWidechar OUT D:\BCP\myWidechar.bcp -T -w
 
@@ -157,7 +154,7 @@ NOTEPAD D:\BCP\myWidechar.bcp
 ```
 
 ### **Utilisation de bcp et du format caractère Unicode pour importer des données sans un fichier de format**<a name="bcp_widechar_import"></a>
-Commutateur**-w** et commande **IN** .  À partir d’une invite de commandes, entrez les commandes suivantes :
+Commutateur **-w** et commande **IN** .  À partir d’une invite de commandes, entrez les commandes suivantes :
 ```
 REM Truncate table (for testing)
 SQLCMD -Q "TRUNCATE TABLE TestDatabase.dbo.myWidechar;"
@@ -169,7 +166,7 @@ REM Review results is SSMS
 ```
 
 ### **Utilisation de bcp et du format caractère Unicode pour importer des données avec un fichier de format non XML**<a name="bcp_widechar_import_fmt"></a>
-Commutateurs**-w** et **-f** switches et **IN** commet.  Vous devez utiliser une solution de contournement dans la mesure où cet exemple implique bcp, un fichier de format, le caractère Unicode, et le premier champ de données dans le fichier de données n’est pas de type caractère.  Consultez [Considérations spéciales relatives à l’utilisation du format caractère Unicode, de bcp et d’un fichier de format](#special_considerations)ci-dessus.  Le fichier de données `myWidechar.bcp` est modifié par l’ajout d’un enregistrement supplémentaire « factice » qui est ensuite ignoré avec le commutateur `-F 2` .
+Commutateurs **-w** et **-f** switches et **IN** commet.  Vous devez utiliser une solution de contournement dans la mesure où cet exemple implique bcp, un fichier de format, le caractère Unicode, et le premier champ de données dans le fichier de données n’est pas de type caractère.  Consultez [Considérations spéciales relatives à l’utilisation du format caractère Unicode, de bcp et d’un fichier de format](#special_considerations)ci-dessus.  Le fichier de données `myWidechar.bcp` est modifié par l’ajout d’un enregistrement supplémentaire « factice » qui est ensuite ignoré avec le commutateur `-F 2` .
 
 À l’invite de commandes, entrez les commandes suivantes et suivez la procédure de modification :
 ```

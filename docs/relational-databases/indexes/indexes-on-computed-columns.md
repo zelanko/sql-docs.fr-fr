@@ -3,15 +3,12 @@ title: Index sur les colonnes calculées | Microsoft Docs
 ms.custom: ''
 ms.date: 12/21/2017
 ms.prod: sql
-ms.prod_service: database-engine, sql-database
-ms.service: ''
-ms.component: indexes
+ms.prod_service: table-view-index, sql-database
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-indexes
+ms.technology: table-view-index
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - computed columns, index creation
 - index creation [SQL Server], computed columns
@@ -20,16 +17,15 @@ helpviewer_keywords:
 - precise [SQL Server]
 ms.assetid: 8d17ac9c-f3af-4bbb-9cc1-5cf647e994c4
 caps.latest.revision: 41
-author: barbkess
-ms.author: barbkess
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.workload: On Demand
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 2a2328fca99839f9d33eec502e539905f64fdeb2
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 7cfaac5fd37f389db2569906a21b02627241176b
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="indexes-on-computed-columns"></a>Index sur les colonnes calculées
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -100,7 +96,7 @@ La propriété **IsPrecise** de la fonction COLUMNPROPERTY indique si un paramè
 **Data Type Requirements**  
   
 -   Le paramètre *computed_column_expression* défini pour la colonne calculée ne peut pas correspondre aux types de données **text**, **ntext**ou **image** .  
--   Les colonnes calculées dérivées des types de données **image**, **ntext**, **text**, **varchar(max)**, **nvarchar(max)**, **varbinary(max)**et **xml** peuvent être indexées tant que le type de données de lacolonne calculée est autorisé en tant que colonne clé d’index.  
+-   Les colonnes calculées dérivées des types de données **image**, **ntext**, **text**, **varchar(max)**, **nvarchar(max)**, **varbinary(max)** et **xml** peuvent être indexées tant que le type de données de lacolonne calculée est autorisé en tant que colonne clé d’index.  
 -   Les colonnes calculées dérivées des types de données **image**, **ntext**et **text** peuvent être des colonnes (incluses) non-clés dans un index non-cluster tant que le type de données utilisé dans la colonne calculée lui permet d’être une colonne d’index non-clés.  
   
 **SET Option Requirements**  
