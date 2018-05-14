@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: data-tier-applications
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-data-tier-apps
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql13.swb.registerdacwizard.summary.f1
 - sql13.swb.registerdacwizard.introduction.f1
@@ -27,12 +26,11 @@ caps.latest.revision: 22
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: c80a09793bae9691c25590b1c929a76f0da4e4b0
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: d14994b4e90429cdd4d3e8a9b58c2b3998492b3d
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="register-a-database-as-a-dac"></a>Inscrire une base de données en tant que DAC
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -117,7 +115,7 @@ ms.lasthandoff: 04/16/2018
  [Utilisation de l'Assistant Inscrire l'application de la couche Données](#UsingRegisterDACWizard)  
   
 ### <a name="validating-objects"></a>Validation d'objets  
- **Vérification de**  *Nom_schéma* **.** *Nom_objet* **.** - Affiche une barre de progression au fur et à mesure que l'Assistant vérifie les dépendances des objets récupérés, et vérifie que ces objets sont tous valides pour une DAC. *nom_schéma***.***nom_objet* identifie l’objet en cours de vérification.  
+ **Vérification de**  *Nom_schéma* **.** *Nom_objet* **.** - Affiche une barre de progression au fur et à mesure que l'Assistant vérifie les dépendances des objets récupérés, et vérifie que ces objets sont tous valides pour une DAC. *nom_schéma ***.*** nom_objet* identifie l’objet en cours de vérification.  
   
  **< Précédent** : vous renvoie à la page **Définir les propriétés** pour modifier vos entrées.  
   

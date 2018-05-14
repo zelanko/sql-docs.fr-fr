@@ -3,15 +3,12 @@ title: Ajouter des fonctionnalités à une instance de SQL Server (programme d�
 ms.custom: ''
 ms.date: 09/07/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.service: ''
-ms.component: install-windows
+ms.prod_service: install
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- setup-install
+ms.technology: install
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - feature adding [SQL Server]
 - SQL Server, features
@@ -21,11 +18,11 @@ caps.latest.revision: 29
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 3640b4cd0373ce77919fd02a496d6951373f0f37
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 59091eaee7c04613f06d0b5b2652a2377b825420
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="add-features-to-an-instance-of-sql-server-setup"></a>Ajouter des fonctionnalités à une instance de SQL Server (programme d’installation)
 
@@ -35,7 +32,7 @@ ms.lasthandoff: 04/16/2018
   
  Pour ajouter des fonctionnalités à une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à partir d’une invite de commandes, consultez [Installer SQL Server à partir de l’invite de commandes](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md).  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Conditions préalables requises  
  Avant de continuer, consultez les articles dans [Planification d’une installation SQL Server](../../sql-server/install/planning-a-sql-server-installation.md).  
   
 > [!NOTE]  

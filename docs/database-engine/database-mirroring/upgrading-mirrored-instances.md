@@ -3,15 +3,13 @@ title: Mise à niveau des instances en miroir | Microsoft Docs
 ms.custom: ''
 ms.date: 02/01/2016
 ms.prod: sql
-ms.prod_service: database-engine
-ms.service: ''
+ms.prod_service: high-availability
 ms.component: database-mirroring
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - upgrading SQL Server, rolling upgrade of mirrored databases
 - database mirroring [SQL Server], upgrading system
@@ -21,12 +19,11 @@ caps.latest.revision: 44
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 329c2a8f2fb61ed3691d83b289bcb3fb9ea4f4e0
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 33ef8a942301b3f29fec9c468faaccf016ee257d
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="upgrading-mirrored-instances"></a>Mise à niveau des instances en miroir
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +32,7 @@ ms.lasthandoff: 04/16/2018
 > [!NOTE]  
 >  Pour plus d’informations sur l’utilisation de la mise en miroir de base de données avec la copie des journaux de transaction lors d’une migration, téléchargez ce [livre blanc sur la mise en miroir de base de données et la copie de journaux de transaction](https://t.co/RmO6ruCT4J).  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Conditions préalables requises  
  Avant de commencer, passez en revue les informations importantes suivantes :  
   
 -   [Supported Version and Edition Upgrades](../../database-engine/install-windows/supported-version-and-edition-upgrades.md): vérifiez que vous pouvez procéder à une mise à niveau vers SQL Server 2016 à partir de votre version du système d’exploitation Windows et de la version de SQL Server. Par exemple, vous ne pouvez pas mettre à niveau directement une instance SQL Server 2005 vers [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  

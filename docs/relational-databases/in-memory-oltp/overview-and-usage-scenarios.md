@@ -4,26 +4,24 @@ ms.custom: ''
 ms.date: 04/10/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: ''
 ms.component: in-memory-oltp
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 62c964c5-eae4-4cf1-9024-d5a19adbd652
 caps.latest.revision: 5
 author: jodebrui
 ms.author: jodebrui
 manager: craigg
-ms.workload: On Demand
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 2bbf55de6f63d6d78165e9c7a57685bb7fdea4ca
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: defc260673b6dd9a2170c154ca35730ec5bb4309
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="overview-and-usage-scenarios"></a>Vue d’ensemble et scénarios d’utilisation
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -62,7 +60,7 @@ C’est le scénario principal pour lequel nous avons créé l’OLTP en mémoir
 
 Les scénarios de charge de travail les plus fréquents sont les suivants : négoce d’instruments financiers, paris sportifs, jeux mobiles et diffusion publicitaire. Un autre modèle courant observé est un « catalogue » souvent lu ou mis à jour. Par exemple, vous avez des fichiers volumineux, qui sont répartis sur plusieurs nœuds de cluster, et vous cataloguez l’emplacement de chaque partition de fichier dans une table à mémoire optimisée.
 
-#### <a name="implementation-considerations"></a>Considérations relatives à la mise en œuvre
+#### <a name="implementation-considerations"></a>Considérations relatives à l’implémentation
 
 Utilisez des tables optimisées en mémoire pour vos tables de transactions principales, c’est-à-dire pour les tables qui présentent les transactions les plus critiques pour les performances. Utilisez des procédures stockées compilées en mode natif pour optimiser l’exécution de la logique associée à la transaction commerciale. Plus vous pourrez transmettre la logique aux procédures stockées dans la base de données, plus vous tirerez profit de l’OLTP en mémoire.
 
@@ -108,7 +106,7 @@ La technologie d’OLTP en mémoire rend SQL vraiment intéressant pour le maint
 
 L’état de session ASP.NET est un cas d’utilisation très efficace pour l’OLTP en mémoire. Avec [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], un client est parvenu à atteindre 1,2 million de requêtes par seconde. Dans le même temps, il a commencé à utiliser l’OLTP en mémoire pour les besoins de mise en cache de toutes les applications de niveau intermédiaire de l’entreprise. Détails : [How bwin is using [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] In-Memory OLTP to achieve unprecedented performance and scale](https://blogs.msdn.microsoft.com/sqlcat/2016/10/26/how-bwin-is-using-sql-server-2016-in-memory-oltp-to-achieve-unprecedented-performance-and-scale/)
 
-#### <a name="implementation-considerations"></a>Considérations relatives à la mise en œuvre
+#### <a name="implementation-considerations"></a>Considérations relatives à l’implémentation
 
 Vous pouvez utiliser des tables à mémoire optimisée non durables comme magasin clé-valeur simple en stockant un objet BLOB dans une colonne varbinary(max). Vous pouvez aussi implémenter un cache semi-structuré avec [prise en charge JSON](https://azure.microsoft.com/blog/json-support-is-generally-available-in-azure-sql-database/) dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. Enfin, vous pouvez créer un cache relationnel complet via des tables non durables présentant un schéma relationnel complet, avec divers types et contraintes de données.
 
@@ -127,7 +125,7 @@ Utilisez des tables non durables et des types de tables à mémoire optimisée p
 
 Les variables de table et les tables non durables optimisées en mémoire réduisent généralement l’utilisation du processeur par rapport aux variables de table et aux tables #temp traditionnels, et suppriment complètement les E/S de journal.
 
-#### <a name="implementation-considerations"></a>Considérations relatives à la mise en œuvre
+#### <a name="implementation-considerations"></a>Considérations relatives à l’implémentation
 
 Pour bien démarrer, consultez : [Improving temp table and table variable performance using memory optimization.](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/21/improving-temp-table-and-table-variable-performance-using-memory-optimization/)(Amélioration des performances des tables temporaires et des variables de table à l’aide de l’optimisation de la mémoire)
 
@@ -139,7 +137,7 @@ Pour bien démarrer, consultez : [Improving temp table and table variable perfor
 
 Les flux de travail ETL incluent souvent le chargement de données dans une table de mise en lots, les transformations de données et le chargement dans les tables finales.
 
-#### <a name="implementation-considerations"></a>Considérations relatives à la mise en œuvre
+#### <a name="implementation-considerations"></a>Considérations relatives à l’implémentation
 
 Utilisez des tables optimisées en mémoire non durables pour la mise en lots des données. Elles suppriment complètement les E/S et optimisent l’efficacité de l’accès aux données.
 

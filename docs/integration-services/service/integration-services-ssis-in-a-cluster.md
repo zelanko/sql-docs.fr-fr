@@ -4,25 +4,23 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.service: ''
 ms.component: service
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 0216266d-d866-4ea2-bbeb-955965f4d7c2
 caps.latest.revision: 11
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: e76d8815ad02797233c8daada93fc54e5433d106
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: dfab44cc1e7b73e7172e5195c49268b97c94857f
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="integration-services-ssis-in-a-cluster"></a>Integration Services (SSIS) dans un cluster
   Le clustering [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] n’est pas recommandé, car le service [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] n’est pas un service cluster ou prenant en charge les clusters. De plus, il ne prend pas en charge le basculement d’un nœud de cluster à un autre. Par conséquent, dans un environnement cluster, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] doit être installé et démarré en tant que service autonome sur chaque nœud du cluster.  
