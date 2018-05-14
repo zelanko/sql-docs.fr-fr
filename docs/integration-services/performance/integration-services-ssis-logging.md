@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.service: ''
 ms.component: performance
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.configuredtslogs.containers.f1
 - sql13.dts.designer.configuredtslogs.loggingdetails.f1
@@ -36,17 +35,16 @@ caps.latest.revision: 69
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: 603f1d339745e83c3a16ec5b036a8c2f2cc4c980
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: bd0e92f62d99f30d244b9fc14bbf0ebb42f15269
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="integration-services-ssis-logging"></a>Journalisation d'Integration Services (SSIS)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] contient des modules fournisseur d'informations que vous pouvez utiliser pour implémenter la journalisation dans les packages, les conteneurs et les tâches. Avec la journalisation, vous pouvez capturer des informations d'exécution sur un package qui vous aideront à auditer et à résoudre les problèmes d'un package à chaque exécution. Un journal peut ainsi capturer le nom de l'opérateur ayant exécuté le package et l'heure à laquelle le package a débuté et s'est terminé.  
   
- Vous pouvez configurer l'étendue des informations enregistrées lors d'une exécution de package sur le serveur [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Pour plus d’informations, consultez [Enable Logging for Package Execution on the SSIS Server](#server_logging).  
+ Vous pouvez configurer l'étendue des informations enregistrées lors d'une exécution de package sur le serveur [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Pour plus d’informations, consultez [Activer la journalisation des exécutions de package sur le serveur SSIS](#server_logging).  
   
  Vous pouvez également inclure la journalisation lorsque vous exécutez un package à l'aide de l'utilitaire d'invite de commandes **dtexec** . Pour plus d'informations sur les arguments d'invite de commandes prenant en charge la journalisation, consultez [dtexec Utility](../../integration-services/packages/dtexec-utility.md).  
   
