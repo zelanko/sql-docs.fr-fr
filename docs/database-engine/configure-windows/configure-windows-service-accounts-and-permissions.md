@@ -1,7 +1,7 @@
 ---
 title: Configurer les comptes de service Windows et les autorisations | Microsoft Docs
 ms.custom: ''
-ms.date: 04/09/2018
+ms.date: 05/08/2018
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
@@ -54,11 +54,11 @@ caps.latest.revision: 207
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 5e6c8d3232bf821bce0be78e31c040d5cbb07d61
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 59306ab48061fe2c759b4cb2dac784e7a24cb325
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="configure-windows-service-accounts-and-permissions"></a>Configurer les comptes de service Windows et les autorisations
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -67,10 +67,11 @@ ms.lasthandoff: 05/03/2018
 
   Chaque service de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] représente un processus ou un ensemble de processus permettant de gérer l'authentification des opérations de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] avec Windows. Cette rubrique décrit la configuration par défaut des services inclus dans cette version de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ainsi que les options de configuration des services [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] susceptibles d'être définies durant l'installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et par la suite. Cette rubrique permet aux utilisateurs expérimentés de comprendre les détails des comptes de service.  
   
- La plupart des services et de leurs propriétés peuvent être configurés à l’aide du Gestionnaire de configuration [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Voici les chemins d’accès aux quatre dernières versions lorsque Windows est installé sur le lecteur C.  
+ La plupart des services et de leurs propriétés peuvent être configurés à l’aide du Gestionnaire de configuration [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Voici les chemins d’accès aux quatre dernières versions lorsque Windows est installé sur le lecteur C.  
   
 |||  
 |-|-|  
+|SQL Server 2017|C:\Windows\SysWOW64\SQLServerManager14.msc| 
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016|C:\Windows\SysWOW64\SQLServerManager13.msc|  
 |[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|C:\Windows\SysWOW64\SQLServerManager12.msc|  
 |[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|C:\Windows\SysWOW64\SQLServerManager11.msc|  

@@ -50,7 +50,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="tasks"></a>Tâches  
  Les tâches qui activent la configuration de serveur de rapports à distance incluent les éléments suivants :  
   
--   Activer les ports du Pare-feu Windows afin d'autoriser les demandes sur les ports utilisés par le serveur de rapports et par l'instance du moteur de base de données SQL Server.  Voir [Configure a Firewall for Report Server Access](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md) et [Configure a Windows Firewall for Database Engine Access](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md).  
+-   Activer les ports du Pare-feu Windows afin d'autoriser les demandes sur les ports utilisés par le serveur de rapports et par l'instance du moteur de base de données SQL Server.  Voir [Configurer un pare-feu pour accéder au serveur de rapports](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md) et [Configurer un pare-feu Windows pour accéder au moteur de base de données](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md).  
   
 -   Autoriser les connexions distantes à l'instance du moteur de base de données qui héberge la base de données du serveur de rapports. Une connexion distante est nécessaire pour la configuration de la connexion à la base de données du serveur de rapports et la gestion des clés de chiffrement.  
   

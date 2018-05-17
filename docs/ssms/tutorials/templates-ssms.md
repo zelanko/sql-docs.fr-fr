@@ -20,11 +20,11 @@ helpviewer_keywords:
 - Transact-SQL tutorials
 - SQL Server Management Studio [SQL Server], tutorials
 - scripts [SQL Server], SQL Server Management Studio
-ms.openlocfilehash: f981d8455f82db44979a04611e861bb4d13d20d4
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.openlocfilehash: c4ddbf149048b7cb7f89be24369c60afc47bdb4a
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="tutorial-using-templates-within-sql-server-management-studio"></a>Tutoriel : Utilisation de modèles dans SQL Server Management Studio
 Ce tutoriel vous présente les modèles T-SQL (Transact-SQL) prédéfinis qui sont disponibles dans SSMS (SQL Server Management Studio). Dans cet article, vous allez apprendre à :
@@ -39,8 +39,8 @@ Ce tutoriel vous présente les modèles T-SQL (Transact-SQL) prédéfinis qui so
 ## <a name="prerequisites"></a>Conditions préalables requises
 Pour suivre ce tutoriel, vous avez besoin de SQL Server Management Studio et de l’accès à un serveur SQL Server. 
 
-- Installez [SQL Server Management Studio](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms).
-- Installez [SQL Server 2017 Developer Edition](https://www.microsoft.com/en-us/sql-server/sql-server-downloads).
+- Installez [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
+- Installez [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
 
  
 
