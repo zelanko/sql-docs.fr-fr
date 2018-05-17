@@ -44,7 +44,7 @@ Ce guide de démarrage rapide, vous allez installer SQL Server 2017 sur Red Hat 
     * Ajouter une règle de trafic entrant pour autoriser le trafic sur le port sur lequel SQL Server écoute (port TCP par défaut 1433)
 
     
-## <a name="digital-ocean"></a>Numérique océan
+## <a name="digital-ocean"></a>Digital Ocean
 1. Se connecter à la [le panneau de configuration](https://cloud.digitalocean.com/login) et cliquez sur Créer un droplet
 1. Choisissez un droplet Ubuntu 16.04 au moins 2 Go de mémoire
 1. Se connecter au droplet avec ssh
