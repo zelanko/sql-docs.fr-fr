@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 08/24/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Snapshot Agent, administering
 - Log Reader Agent, administering
@@ -29,12 +28,11 @@ caps.latest.revision: 48
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: c3cccb42d089124c5d57eaad656ff00676b385f9
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: b2607af48ae1f542ce314a0aebca1ec3463921fe
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="replication-agent-administration"></a>Administration de l'Agent de réplication
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -96,8 +94,8 @@ ms.lasthandoff: 04/16/2018
 |Travail de nettoyage|Description|Planification par défaut|  
 |------------------|-----------------|----------------------|  
 |Nettoyage de l'historique de l'agent : distribution|Supprime les enregistrements historiques des agents de réplication dans la base de données de distribution.|S'exécute toutes les dix minutes|  
-|Nettoyage de la distribution : distribution|Suppression des transactions répliquées de la base de données de distribution. Désactive les abonnements qui n’ont été pas été synchronisés au cours de la période maximale de rétention de distribution.|S'exécute toutes les dix minutes|  
-|Nettoyage de l'abonnement expiré|Détecte les abonnements expirés et les retire des bases de données de publication.|S'exécute chaque jour à 1 heure du matin.|  
+|Nettoyage de la distribution : distribution|Suppression des transactions répliquées de la base de données de distribution. |S'exécute toutes les dix minutes|  
+|Nettoyage de l'abonnement expiré|Détecte les abonnements expirés et les retire des bases de données de publication. Sur le serveur de distribution, désactive les abonnements qui n’ont été pas été synchronisés au cours de la période maximale de rétention de distribution.|S'exécute chaque jour à 1 heure du matin.| 
 |Réinitialiser les abonnements présentant des erreurs lors de la validation de données|Détecte tous les abonnements qui ont des échecs de validation des données et les marque pour réinitialisation. Lors de l'exécution suivante de l'Agent de fusion ou de l'Agent de distribution, un nouvel instantané sera appliqué aux Abonnés.|Pas de planification par défaut (non activé par défaut).|  
 |Contrôle des Agents de réplication|Détecte les Agents de réplication n'ayant pas d'enregistrement historique actif. Il écrit dans le journal des événements de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows si l'étape d'un travail échoue.|S'exécute toutes les dix minutes.|  
 |Actualisateur d'analyse de réplication pour la distribution|Actualise les requêtes mises en cache utilisées par le moniteur de réplication.|S'exécute en permanence.|  

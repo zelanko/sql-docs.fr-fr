@@ -287,7 +287,7 @@ ms.lasthandoff: 05/03/2018
   
 6.  Sélectionnez **Activer**. L'état de la fonctionnalité devient **Actif**.  
   
- Cette procédure doit être exécutée par collection de sites. Pour plus d'informations, consultez [Activate the Report Server and Power View Integration Features in SharePoint](../../reporting-services/report-server-sharepoint/site-collection-features-report-server-and-power-view.md).  
+ Cette procédure doit être exécutée par collection de sites. Pour plus d'informations, consultez [Activer les fonctionnalités d'intégration Report Server et Power View dans SharePoint](../../reporting-services/report-server-sharepoint/site-collection-features-report-server-and-power-view.md).  
   
 ##  <a name="bkmk_full_script"></a> Script Windows PowerShell pour les étapes 1 à 4  
  Le script PowerShell de cette section correspond à l'exécution des étapes 1 à 4 des sections précédentes. Le script effectue les tâches suivantes :  

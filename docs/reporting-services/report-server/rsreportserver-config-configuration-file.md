@@ -1,27 +1,25 @@
 ---
 title: Fichier de configuration RSReportServer.config | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 06/12/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-server
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 60e0a0b2-8a47-4eda-a5df-3e5e403dbdbc
-caps.latest.revision: 
+caps.latest.revision: 20
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Active
-ms.openlocfilehash: 87efa1c9f3fd309ac6b9da150545ac7e08630cd5
-ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
+ms.openlocfilehash: 1be44e3e1f30aab2be4c446e6efd23610b9ae68b
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="rsreportserverconfig-configuration-file"></a>Fichier de configuration RSReportServer.config
 Le fichier [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]**RsReportServer.config** stocke les paramètres utilisés par le service Web Report Server et le traitement en arrière-plan. Toutes les applications [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] s'exécutent au sein d'un processus unique qui lit les paramètres de configuration stockés dans le fichier RSReportServer.config. Les serveurs de rapports en mode natif et en mode SharePoint utilisent le fichier RSReportServer.config. Toutefois, les deux modes n'utilisent pas les mêmes paramètres dans le fichier de configuration. La version en mode SharePoint du fichier est moins volumineuse car de nombreux paramètres du mode SharePoint sont stockés dans des bases de données de configuration SharePoint plutôt que dans le fichier. Cette rubrique décrit le fichier de configuration par défaut installé en mode natif ou en mode SharePoint, et certains paramètres et comportements importants qui sont contrôlés par le fichier de configuration.  
@@ -65,7 +63,7 @@ Pour plus d’informations sur la modification du fichier, consultez [Modifier u
  Le tableau suivant fournit des informations sur les paramètres de configuration généraux qui apparaissent dans la première partie du fichier. Les paramètres sont présentés dans l'ordre dans lequel ils apparaissent dans le fichier de configuration. La dernière colonne du tableau indique si le paramètre s’applique à un serveur de rapports en mode natif **(N)** , à un serveur de rapports en mode SharePoint **(S)** ou aux deux.  
   
 > [!NOTE]  
->  Dans cette rubrique, « entier maximal » désigne la valeur INT_MAX de 2147483647.  Pour plus d’informations, consultez [Limites relatives aux entiers](http://msdn.microsoft.com/library/296az74e\(v=vs.110\).aspx) (http://msdn.microsoft.com/fr-fr/library/296az74e(v=vs.110).aspx).  
+>  Dans cette rubrique, « entier maximal » désigne la valeur INT_MAX de 2147483647.  Pour plus d'informations, consultez [Limites des ressources](http://msdn.microsoft.com/library/296az74e\(v=vs.110\).aspx) (http://msdn.microsoft.com/library/296az74e(v=vs.110).aspx).  
   
 |Paramètre|Description|Mode|  
 |-------------|-----------------|----------|  
@@ -98,7 +96,7 @@ Pour plus d’informations sur la modification du fichier, consultez [Modifier u
  **URLReservations** définit l’accès HTTP au service Web Report Server et au portail web pour l’instance actuelle. Les URL sont réservées et stockées dans HTTP.SYS lorsque vous configurez le serveur de rapports.  
   
 > [!WARNING]  
->  Pour le mode SharePoint, les réservations d'URL sont configurées dans l'Administration centrale de SharePoint. Pour plus d’informations, consultez [Configurer le mappage des accès de substitution (http://technet.microsoft.com/fr-fr/library/cc263208(office.12).aspx)](http://technet.microsoft.com/library/cc263208\(office.12\).aspx).  
+>  Pour le mode SharePoint, les réservations d'URL sont configurées dans l'Administration centrale de SharePoint. Pour plus d’informations, consultez [Configurer le mappage des accès de substitution (http://technet.microsoft.com/library/cc263208(office.12).aspx)](http://technet.microsoft.com/library/cc263208\(office.12\).aspx).  
   
  Ne modifiez pas directement les réservations d'URL dans le fichier de configuration. Utilisez toujours le Gestionnaire de configuration [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ou le fournisseur WMI de Report Server pour créer ou modifier des réservations d'URL dans le cadre d'un serveur de rapports en mode natif. Si vous modifiez les valeurs du fichier de configuration, vous risquez d'endommager la réservation, ce qui provoquera des erreurs sur le serveur au moment de l'exécution ou laissera des réservations orphelines dans HTTP.SYS, car ces dernières ne seront pas supprimées si vous désinstallez le logiciel. Pour plus d’informations, consultez [Configurer des URL de serveurs de rapports &#40;Gestionnaire de configuration de SSRS&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md) et [URL des fichiers de configuration &#40;Gestionnaire de configuration de SSRS&#41;](../../reporting-services/install-windows/urls-in-configuration-files-ssrs-configuration-manager.md).  
   

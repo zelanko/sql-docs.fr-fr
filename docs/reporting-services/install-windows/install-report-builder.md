@@ -70,7 +70,7 @@ ms.lasthandoff: 05/03/2018
   
      Cette opération lance l’Assistant SQL Server [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] .  
   
-3.  Suivez les étapes suivantes décrites dans [To install Report Builder from the download site](#download).  
+3.  Suivez les étapes suivantes décrites dans [Pour installer le Générateur de rapports à partir du site de téléchargement](#download).  
   
 ## <a name="to-install-includessrbnoversionincludesssrbnoversion-mdmd-from-the-command-line"></a>Pour installer l’ [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] à partir de la ligne de commande 
 
