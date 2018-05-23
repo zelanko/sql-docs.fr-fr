@@ -74,14 +74,14 @@ Pour utiliser ce didacticiel, vous devez avoir installé les éléments suivants
   
 -   Exemple de base de données **AdventureWorks2014** , qui fournit des données à l’exemple de rapport.  
   
--   Attribution de rôle [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] incluant la tâche Gérer tous les abonnements sur l’exemple de rapport. Cette tâche est obligatoire dans la définition des abonnements pilotés par les données. Si vous êtes l'administrateur de l'ordinateur, l'attribution de rôle par défaut pour les administrateurs locaux fournit les autorisations nécessaires à la création d'abonnements pilotés par les données. Pour plus d’informations, consultez [Granting Permissions on a Native Mode Report Server](../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md).  
+-   Attribution de rôle [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] incluant la tâche Gérer tous les abonnements sur l’exemple de rapport. Cette tâche est obligatoire dans la définition des abonnements pilotés par les données. Si vous êtes l'administrateur de l'ordinateur, l'attribution de rôle par défaut pour les administrateurs locaux fournit les autorisations nécessaires à la création d'abonnements pilotés par les données. Pour plus d’informations, consultez [Octroi d'autorisations sur un serveur de rapports en mode natif](../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md).  
   
 -   Dossier partagé pour lequel vous bénéficiez de droits d'accès en écriture. Le dossier partagé doit être accessible via une connexion réseau.  
   
 **Durée estimée pour effectuer ce didacticiel :** 30 minutes. Trente minutes supplémentaires si vous n'avez pas étudié le didacticiel de création d'un rapport de base.  
   
 ## <a name="see-also"></a> Voir aussi  
-[Data-Driven Subscriptions](../reporting-services/subscriptions/data-driven-subscriptions.md)  
+[Abonnements pilotés par les données](../reporting-services/subscriptions/data-driven-subscriptions.md)  
 [Créer un rapport de tableau de base &#40;Didacticiel SSRS&#41;](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)
  
 

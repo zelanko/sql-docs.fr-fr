@@ -61,9 +61,9 @@ ms.lasthandoff: 05/03/2018
   
 -   [Remise par courrier électronique dans Reporting Services](../../reporting-services/subscriptions/e-mail-delivery-in-reporting-services.md) Décrit le fonctionnement et la configuration de la remise par partage de fichiers du serveur de rapports.  
   
--   [Create and Manage Subscriptions for Native Mode Report Servers](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers.md) Étapes détaillées du processus de création d’abonnements avec un serveur de rapports en mode natif.  
+-   [Créer et gérer des abonnements pour les serveurs de rapports en mode natif](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers.md) Étapes détaillées du processus de création d’abonnements avec un serveur de rapports en mode natif.  
   
--   [Create and Manage Subscriptions for SharePoint Mode Report Servers](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-sharepoint-mode-report-servers.md) Étapes détaillées du processus de création d’abonnements avec un serveur de rapports en mode SharePoint.  
+-   [Créer et gérer des abonnements pour des serveurs de rapports en mode SharePoint](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-sharepoint-mode-report-servers.md) Étapes détaillées du processus de création d’abonnements avec un serveur de rapports en mode SharePoint.  
   
 -   [File Share Delivery in Reporting Services](../../reporting-services/subscriptions/file-share-delivery-in-reporting-services.md) Décrit le fonctionnement et la configuration de la remise par partage de fichiers du serveur de rapports.  
   

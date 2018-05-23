@@ -78,7 +78,7 @@ sp_table_validation [ @table = ] 'table'
 |-----------|-----------------|  
 |**0**|Effectue un comptage total à l'aide de COUNT(*).|  
 |**1**|Effectue un comptage de rapide **sysindexes.rows**. Le décompte de lignes **sysindexes** est beaucoup plus rapide que le décompte de lignes dans la table. Toutefois, étant donné que **sysindexes** est immédiatement mis à jour, le nombre de lignes peut être inexact.|  
-|**2** (par défaut)|Exécute un décompte rapide conditionnel en essayant d'abord la méthode rapide. Si la méthode rapide affiche des différences, revient à la méthode totale. Si *expected_rowcount* a la valeur NULL et la procédure stockée est en cours d’utilisation pour obtenir la valeur, un Count complète est toujours utilisée.|  
+|**2** (par défaut)|Exécute un décompte rapide conditionnel en essayant d'abord la méthode rapide. Si la méthode rapide affiche des différences, revient à la méthode totale. Si *expected_rowcount* a la valeur NULL et la procédure stockée est en cours d’utilisation pour obtenir la valeur, un Count (\*) complète est toujours utilisée.|  
   
  [  **@shutdown_agent=**] *shutdown_agent*  
  Si l’Agent de Distribution est en cours d’exécution **sp_table_validation**, spécifie si l’Agent de Distribution doit être fermé immédiatement après l’achèvement de la validation. *shutdown_agent* est **bits**, avec une valeur par défaut **0**. Si **0**, l’agent de réplication ne s’arrête pas. Si **1**, l’erreur 20578 est déclenchée et l’agent de réplication est signalé pour l’arrêter. Ce paramètre est ignoré lorsque **sp_table_validation** exécuté directement par un utilisateur.  
