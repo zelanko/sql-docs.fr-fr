@@ -28,11 +28,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 6307d2bd9f7af779e37fbcc37bc5b1b743dbd83a
-ms.sourcegitcommit: bac61a04d11fdf61deeb03060e66621c0606c074
+ms.openlocfilehash: 911e983816453ede6a40375aad7e09bf399567b0
+ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/14/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="sql-server-index-architecture-and-design-guide"></a>Guide de conception et d’architecture d’index SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -798,11 +798,11 @@ Un index de hachage peut être déclaré comme :
   
 Le code suivant est un exemple de la syntaxe appropriée pour créer un index de hachage, en dehors de l’instruction CREATE TABLE :  
   
-    ```sql
-    ALTER TABLE MyTable_memop  
-    ADD INDEX ix_hash_Column2 UNIQUE  
-    HASH (Column2) WITH (BUCKET_COUNT = 64);
-    ``` 
+```sql
+ALTER TABLE MyTable_memop  
+ADD INDEX ix_hash_Column2 UNIQUE  
+HASH (Column2) WITH (BUCKET_COUNT = 64);
+``` 
 
 ### <a name="row-versions-and-garbage-collection"></a>Versions de lignes et garbage collection  
 Dans une table à mémoire optimisée, quand une ligne est modifiée par une instruction `UPDATE`, la table crée une version mise à jour de la ligne. Lors de la transaction de mise à jour, d’autres sessions peuvent être en mesure de lire l’ancienne version de la ligne et d’éviter ainsi le ralentissement des performances associé à un verrou de ligne.  

@@ -22,11 +22,11 @@ caps.latest.revision: 21
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 50569b63d34534472e4db8d0afc9dd48e1160f96
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0f67623539244916e430976d46f07f4a1e73baf4
+ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="tutorial-configure-replication-between-two-fully-connected-servers-transactional"></a>Tutoriel : Configurer la réplication entre deux serveurs intégralement connectés (réplication transactionnelle)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -141,7 +141,7 @@ Si SQL Server Agent n’était pas en cours d’exécution quand vous avez cré�
 
 ![Bouton « Démarrer » et modification du message d’état indiquant que l’Agent d’instantané a été exécuté](media/tutorial-replicating-data-between-continuously-connected-servers/startsnapshotagent.png)
      
-Si une erreur apparaît ici, consultez [Résoudre les erreurs liées à l’Agent d’instantané](../../troubleshooters/replication/troubleshoot-tran-repl-errors.md#troubleshoot-errors-with-snapshot-agent). 
+Si une erreur apparaît ici, consultez [Résoudre les erreurs liées à l’Agent d’instantané](../../troubleshooters/replication/troubleshoot-tran-repl-errors.md#find-errors-with-snapshot-agent). 
 
   
 ### <a name="add-the-distribution-agent-login-to-the-pal"></a>Ajouter la connexion de l'Agent de distribution à la liste d'accès à la publication (PAL)  

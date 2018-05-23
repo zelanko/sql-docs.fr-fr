@@ -19,14 +19,14 @@ caps.latest.revision: 5
 author: Lingxi-Li
 ms.author: lingxl
 manager: craigg
-ms.openlocfilehash: e9dc3062b902074f052475f5c63130244e9a582e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8da49de795c0a0fbc8d6da2cf28374a07d7f8778
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="azure-sql-dw-upload-task"></a>Tâche de chargement Azure SQL Data Warehouse
-La **tâche de chargement Azure SQL Data Warehouse** permet à un package SSIS de charger des données locales sur une table dans Azure SQL Data Warehouse. Le format de fichier de données source pris en charge actuellement est le texte délimité dans l’encodage UTF-8. Le processus de chargement suit l’approche PolyBase efficace comme décrit dans l’article [Azure SQL Data Warehouse Loading Patterns and Strategies](https://blogs.msdn.microsoft.com/sqlcat/2016/02/06/azure-sql-data-warehouse-loading-patterns-and-strategies/). Plus précisément, les données sont tout d’abord chargées sur le stockage Blob Azure, puis sur Azure SQL Data Warehouse. Par conséquent, un compte de stockage Blob Azure est nécessaire pour utiliser cette tâche.
+La **tâche de chargement Azure SQL Data Warehouse** permet à un package SSIS de charger des données locales sur une table dans Azure SQL Data Warehouse. Le format de fichier de données source pris en charge actuellement est le texte délimité dans l’encodage UTF-8. Le processus de chargement suit l’approche PolyBase efficace comme décrit dans l’article [Azure SQL Data Warehouse Loading Patterns and Strategies](https://blogs.msdn.microsoft.com/sqlcat/2017/05/17/azure-sql-data-warehouse-loading-patterns-and-strategies/). Plus précisément, les données sont tout d’abord chargées sur le stockage Blob Azure, puis sur Azure SQL Data Warehouse. Par conséquent, un compte de stockage Blob Azure est nécessaire pour utiliser cette tâche.
 
 La **tâche de chargement Azure SQL Data Warehouse** est un composant de [SQL Server Integration Services (SSIS) Feature Pack pour Azure](../../integration-services/azure-feature-pack-for-integration-services-ssis.md).
 
