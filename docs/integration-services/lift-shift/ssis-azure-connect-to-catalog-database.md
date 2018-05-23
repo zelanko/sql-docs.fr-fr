@@ -1,5 +1,5 @@
 ---
-title: Se connecter à la base de données de catalogues SSISDB sur Azure | Microsoft Docs
+title: Se connecter à la base de données de catalogues SSIS dans Azure | Microsoft Docs
 ms.date: 09/25/2017
 ms.topic: conceptual
 ms.prod: sql
@@ -12,13 +12,13 @@ ms.technology:
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b34e28dca32da44b60f65f92934373d1f7a42f12
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ef69dc52b041541b89052038cadad94b9fa2f45c
+ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/23/2018
 ---
-# <a name="connect-to-the-ssisdb-catalog-database-on-azure"></a>Se connecter à la base de données de catalogues SSISDB sur Azure
+# <a name="connect-to-the-ssis-catalog-database-ssisdb-in-azure"></a>Se connecter à la base de données de catalogues SSIS (SSISDB) dans Azure
 
 Obtenez les informations de connexion dont vous avez besoin pour vous connecter à la base de données de catalogues SSISDB hébergée sur un serveur Azure SQL Database. Vous avez besoin des éléments suivants pour vous connecter :
 - nom complet du serveur
@@ -49,7 +49,7 @@ Avant de commencer, veillez à disposer de la version 17.2 ou ultérieure de SQ
    | ------------ | ------------------ | ------------------------------------------------- | 
    | **Type de serveur** | Moteur de base de données | Cette valeur est requise. |
    | **Nom du serveur** | Nom complet du serveur | Le nom doit être au format suivant : **mysqldbserver.database.windows.net**. |
-   | **Authentification** | Authentification SQL Server | Ce guide de démarrage rapide utilise l’authentification SQL. |
+   | **Authentification** | Authentification SQL Server | |
    | **Connexion** | Compte Administrateur du serveur | Il s’agit du compte que vous avez spécifié quand vous avez créé le serveur. |
    | **Mot de passe** | Mot de passe du compte Administrateur de votre serveur | Il s’agit du mot de passe que vous avez spécifié quand vous avez créé le serveur. |
 

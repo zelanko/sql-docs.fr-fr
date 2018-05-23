@@ -13,11 +13,11 @@ ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 245a6f2b2c8484ad83d70c2e76dc55522fde7d1b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2ccff01afbd9e51f0754ceaecf885b36a5b28f9b
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="powershell-cmdlets-for-reporting-services-sharepoint-mode"></a>Applets de commande PowerShell pour le mode SharePoint de Reporting Services
 
@@ -102,7 +102,7 @@ Lorsque vous installez le mode SharePoint de SQL Server 2016 Reporting Services
 |Get-SPRSDatabaseRightsScript|Affiche à l’écran le script de droits de base de données pour une application de service Reporting Services. Invite à entrer l'utilisateur et la base de données souhaités, puis retourne un script Transact-SQL que vous pouvez exécuter pour modifier des autorisations. Vous pouvez ensuite exécuter ce script dans SQL Server Management Studio.|  
 |Get-SPRSDatabaseUpgradeScript|Génère un script de mise à niveau de base de données à l'écran. Le script met à niveau les bases de données de l’application de service Reporting Services vers la version de base de données de l’installation actuelle de Reporting Services.|  
   
-## <a name="reporting-services-custom-runctionality-cmdlets"></a>Applets de commande personnalisés de Reporting Services
+## <a name="reporting-services-custom-functionality-cmdlets"></a>Applets de commande de fonctionnalités personnalisées Reporting Services
   
 |Applet de commande|Description|  
 |------------|-----------------|  

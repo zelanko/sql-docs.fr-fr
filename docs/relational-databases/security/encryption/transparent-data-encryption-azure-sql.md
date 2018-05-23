@@ -13,19 +13,19 @@ ms.service: sql-database
 ms.component: security
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
-ms.date: 04/10/2018
+ms.date: 05/08/2018
 ms.author: rebeccaz
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: bc007f1021c68c782d8a3e2e426cad3c43f3047a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b88dfeac58ef9c00307b2cfee35aca3ea0549f02
+ms.sourcegitcommit: feff98b3094a42f345a0dc8a31598b578c312b38
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/11/2018
 ---
 # <a name="transparent-data-encryption-for-sql-database-and-data-warehouse"></a>TDE pour SQL Database et Data Warehouse
-[!INCLUDE[appliesto-xx-asdb-xxxx-xxx-md](../../../includes/appliesto-xx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-xx-asdb-asdw-xxx-md](../../../includes/appliesto-xx-asdb-asdw-xxx-md.md)]
 
-TDE vous aide à protéger Azure SQL Database et Azure Data Warehouse contre les menaces d’activités malveillantes. Il effectue un chiffrement et un déchiffrement en temps réel de la base de données, des sauvegardes associées et des fichiers journaux transactionnels au repos, sans qu’il soit nécessaire de modifier l’application.
+TDE vous aide à protéger Azure SQL Database et Azure Data Warehouse contre les menaces d’activités malveillantes. Il effectue un chiffrement et un déchiffrement en temps réel de la base de données, des sauvegardes associées et des fichiers journaux transactionnels au repos, sans qu’il soit nécessaire de modifier l’application. Par défaut, TDE est activé pour toutes les bases de données Azure SQL Database nouvellement déployées, mais il peut être nécessaire de l’activer manuellement pour les bases de données plus anciennes.  
 
 TDE chiffre le stockage d’une base de données entière en utilisant une clé symétrique appelée clé de chiffrement de la base de données. Cette clé de chiffrement de base de données est protégée par le protecteur TDE. Le protecteur est un certificat géré par le service (TDE géré par le service) ou une clé asymétrique stockée dans Azure Key Vault (Bring Your Own Key). Vous définissez le protecteur TDE au niveau du serveur. 
 

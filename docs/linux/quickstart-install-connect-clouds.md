@@ -14,7 +14,7 @@ ms.technology: database-engine
 ms.assetid: ''
 ms.openlocfilehash: 29ed2b218f4d9c746f9356a2a57bbacd845b4df6
 ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 04/18/2018
 ---

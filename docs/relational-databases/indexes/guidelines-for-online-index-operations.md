@@ -1,7 +1,7 @@
 ---
 title: Instructions pour les opérations d’index en ligne | Microsoft Docs
 ms.custom: ''
-ms.date: 07/10/2017
+ms.date: 05/14/2018
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: table-view-index
@@ -22,11 +22,11 @@ manager: craigg
 ms.suite: sql
 ms.prod_service: table-view-index, sql-database
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 03b9ea68c0c0139a3faca89fb0e3c5c59e5b11f8
-ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
+ms.openlocfilehash: 97a125f6de05f5a17a5b1015c247f6d84cf8d434
+ms.sourcegitcommit: 0cc2cb281e467a13a76174e0d9afbdcf4ccddc29
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 05/15/2018
 ---
 # <a name="guidelines-for-online-index-operations"></a>Instructions pour les opérations d'index en ligne
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -111,6 +111,16 @@ En règle générale, il n’existe aucune différence de performances entre la 
 - Pour les grosses charges de travail de mise à jour, vous risquez de faire face à une dégradation du débit (nos tests montrent une dégradation inférieure à 10 %).
 
 En règle générale, il n’existe aucune différence de qualité de défragmentation entre la regénération d’index en ligne avec reprise et sans reprise.
+
+## <a name="online-default-options"></a>Options par défaut d’exécution en ligne 
+
+Vous pouvez définir des options par défaut pour l’exécution en ligne (« online ») ou pouvant être reprise (« resumable ») à un niveau de base de données en définissant les options de configuration étendues à la base de données ELEVATE_ONLINE ou ELEVATE_RESUMABLE. Grâce à ces options par défaut, vous pouvez éviter l’exécution accidentelle d’une opération qui met votre base de données en mode hors connexion. Les deux options forcent le moteur à élever automatiquement certaines opérations à une exécution en ligne (« online) ou à une exécution pouvant être reprise (« resumable »).  
+Vous pouvez attribuer à chaque option la valeur FAIL_UNSUPPORTED, WHEN_SUPPORTED ou NEVER. Vous pouvez attribuer différentes valeurs aux options d’exécution en ligne (« online ») et d’exécution pouvant être reprise (« resumable »). 
+
+ELEVATE_ONLINE et ELEVATE_RESUMABLE s’appliquent uniquement aux instructions DDL qui prennent en charge la syntaxe online et resumable, respectivement. Par exemple, si vous tentez de créer un index XML avec ELEVATE_ONLINE=FAIL_UNSUPORTED, l’opération s’exécute en mode hors connexion, car les index XML ne prennent pas en charge la syntaxe ONLINE=. Les options n’ont d’effet que sur les instructions DDL qui sont soumises sans spécifier d’option ONLINE ou RESUMABLE. Par exemple, en soumettant une instruction avec l’option ONLINE=OFF ou RESUMABLE=OFF, l’utilisateur peut remplacer un paramètre FAIL_UNSUPPORTED et exécuter une instruction en mode hors connexion et/ou sans qu’elle puisse être reprise. 
+ 
+> [!NOTE]
+> ELEVATE_ONLINE et ELEVATE_RESUMABLE ne s’appliquent pas aux opérations d’index XML. 
  
 ## <a name="related-content"></a>Contenu associé  
  [Fonctionnement des opérations d’index en ligne](../../relational-databases/indexes/how-online-index-operations-work.md)  

@@ -17,11 +17,11 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 monikerRange: = sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: bc83f2e17c82ca074fe07f6312fd5c3c864c9e74
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2568e2d57cb05164153fa5a9b2a22a49bcb31dac
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="sql-server-2016-release-notes"></a>Notes de publication de SQL Server 2016
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ Améliorations relatives aux performances et à la scalabilité incluses dans SQ
 |Utiliser l’expiration du temps processeur pour annuler une requête Resource Governor   |   Améliore la gestion des demandes de requête en annulant réellement la requête, si les seuils du processeur pour une requête ont été atteints. Ce comportement est activé sous l’indicateur de trace 2422. |   [KB4038419](https://support.microsoft.com/help/4038419/add-cpu-timeout-to-resource-governor-request-max-cpu-time-sec)   |
 |SELECT INTO pour créer une table cible dans un groupe de fichiers    |   À partir de SQL Server 2016 SP2, la syntaxe T-SQL SELECT INTO prend en charge le chargement d’une table dans un groupe de fichiers autre qu’un groupe de fichiers par défaut de l’utilisateur, à l’aide du mot clé ON <Filegroup name> dans la syntaxe T-SQL. |       |
 |Point de contrôle indirect amélioré pour TempDB    |   Le point de contrôle indirect pour TempDB est amélioré pour minimiser la contention de verrouillage tournant sur DPLists. Cette amélioration permet à la charge de travail TempDB sur SQL Server 2016 de bénéficier immédiatement d’une croissance externe (scale out) si le point de contrôle indirect est défini sur ON pour TempDB.    |   [KB4040276](https://support.microsoft.com/en-us/help/4040276)   |
-|Performances de sauvegarde de base de données améliorées sur les machines à mémoire volumineuse  |   SQL Server 2016 SP2 optimise la façon dont nous drainons les E/S continues durant la sauvegarde, entraînant des gains significatifs en termes de performances de sauvegarde pour les bases de données petites à moyennes. Nous avons constaté une amélioration supérieure à 100 fois lors de sauvegardes de bases de données système sur une machine de 2 To. Vous trouverez ci-dessous des résultats de test des performances plus détaillés sur des bases de données de différentes tailles. Le gain de performances diminue avec l’augmentation de la taille de la base de données, car les pages à sauvegarder et les E/S de la sauvegarde prennent plus de temps que les itérations du pool de mémoires tampons. Cette amélioration permet d’améliorer les performances de sauvegarde pour les clients hébergeant plusieurs bases de données de petite taille sur des serveurs haut de gamme volumineux dotés d’une grande mémoire. |       |
+|Performances de sauvegarde de base de données améliorées sur les machines à mémoire volumineuse  |   SQL Server 2016 SP2 optimise la façon dont nous drainons les E/S continues durant la sauvegarde, entraînant des gains significatifs en termes de performances de sauvegarde pour les bases de données petites à moyennes. Nous avons constaté une amélioration supérieure à 100 fois lors de sauvegardes de bases de données système sur une machine de 2 To. Le gain de performances diminue avec l’augmentation de la taille de la base de données, car les pages à sauvegarder et les E/S de la sauvegarde prennent plus de temps que les itérations du pool de mémoires tampons. Cette modification permet d’améliorer les performances de sauvegarde pour les clients hébergeant plusieurs bases de données de petite taille sur des serveurs haut de gamme volumineux dotés d’une grande capacité de mémoire.    |       |
 |Prise en charge de la compression de sauvegarde VDI pour les bases de données compatibles TDE   |   SQL Server 2016 SP2 ajoute la prise en charge de VDI pour permettre aux solutions de sauvegarde VDI de tirer parti de la compression pour les bases de données compatibles TDE. Avec cette amélioration, un nouveau format de sauvegarde a été introduit pour prendre en charge la compression de sauvegarde pour les bases de données compatibles TDE. Le moteur SQL Server gère en toute fluidité les formats de sauvegarde nouveaux et anciens pour restaurer les sauvegardes.   |       |
 |Chargement dynamique des paramètres de profil d’agent de réplication    |   Cette nouvelle amélioration permet le chargement dynamique des paramètres des agents de réplication sans avoir à redémarrer l’agent. Ce changement s’applique uniquement aux paramètres de profil d’agent les plus couramment utilisés. |       |
 |Prise en charge de l’option MAXDOP pour la création/mise à jour des statistiques |    Cette amélioration permet de spécifier l’option MAXDOP pour une instruction CREATE/UPDATE relative aux statistiques. Elle permet aussi de s’assurer que le paramètre MAXDOP correct est utilisé lorsque des statistiques sont mises à jour dans le cadre d’une opération de création ou de regénération de tous types d’index (si l’option MAXDOP est présente)   |   [KB4041809](https://support.microsoft.com/en-us/help/4041809)   |
@@ -64,6 +64,7 @@ Améliorations relatives à la prise en charge et aux diagnostics incluses dans 
 |Nouvelle vue de gestion dynamique (DMV) pour surveiller l’utilisation de l’espace du magasin de versions TempDB    |   Une nouvelle DMV sys.dm_tran_version_store_space_usage est présentée dans SQL Server 2016 SP2 pour permettre le monitoring de l’utilisation du magasin de versions par TempDB. Les Administrateurs de base de données peuvent désormais planifier de manière proactive le dimensionnement de TempDB en fonction des exigences d’utilisation du magasin de versions par base de données, sans surcharge des performances en cas d’exécution sur des serveurs de production. |       |
 |Prise en charge complète des vidages (dumps) pour les agents de réplication | Actuellement, si les agents de réplication rencontrent une exception non gérée, le comportement par défaut est de créer un vidage minimal des symptômes de l’exception. Cela rend la résolution des problèmes d’une exception non gérée très difficile. Via cette modification, nous introduisons une nouvelle clé de registre, qui permet de créer un vidage complet pour les Agents de réplication.  |       |
 |Amélioration des événements étendus pour la lecture de l’échec de routage pour un groupe de disponibilité |   Auparavant, xEvent read_only_rout_fail se déclenchait si une liste de routage existait, mais qu’aucun des serveurs dans la liste de routage n’était disponible pour les connexions. SQL Server 2016 SP2 inclut des informations supplémentaires pour aider à résoudre ce type de problème. Il étend également les points de code où cet événement XEvent peut être déclenché.  |       |
+|Nouvelle vue de gestion dynamique (DMV) pour analyser le journal des transactions |   Ajout d’une nouvelle DMV sys.dm_db_log_stats qui retourne des attributs de niveau résumé et des informations sur les fichiers journaux des transactions des bases de données. |       |
 |Nouvelle vue de gestion dynamique (DMV) pour surveiller les informations du fichier journal virtuel |   Une nouvelle vue de gestion dynamique, sys.dm_db_log_info, est introduite dans SQL Server 2016 SP2 pour exposer les informations de fichier journal virtuel similaires à DBCC LOGINFO, afin de surveiller, alerter et éviter les problèmes T-Log potentiels rencontrés par les clients.    |       |
 |Informations de processeur dans sys.dm_os_sys_info|   De nouvelles colonnes ont été ajoutées à la DMV sys.dm_os_sys_info pour exposer les informations relatives au processeur, comme socket_count et cores_per_numa.  |       |
 |Informations d’extension modifiée dans sys.dm_db_file_space_usage| Une nouvelle colonne a été ajoutée à sys.dm_db_file_space_usage pour suivre le nombre d’extensions modifiées depuis la dernière sauvegarde complète.  |       |
@@ -221,12 +222,13 @@ De même, exécutez les procédures stockées ci-dessous du magasin de requêtes
     
 * Ouvrez le fichier %LOCALAPPDATA%\Microsoft\HelpViewer2.2\HlpViewer_SSMS16_en-US.settings | HlpViewer_VisualStudio14_en-US.settings dans le Bloc-notes et remplacez la date dans le code ci-dessous par une date future.
 
-     Dernière actualisation du cache = « 31/12/2017 00:00:00 »    
+```
+     Cache LastRefreshed="12/31/2017 00:00:00"    
 ```
 
-## Additional Information
-+ [SQL Server 2016 installation](../database-engine/install-windows/installation-for-sql-server-2016.md)
-+ [SQL Server Update Center - links and information for all supported versions](https://msdn.microsoft.com/library/ff803383.aspx)
+## <a name="additional-information"></a>Informations supplémentaires
++ [Installation de SQL Server 2016](../database-engine/install-windows/installation-for-sql-server-2016.md)
++ [Centre de mise à jour SQL Server - liens et informations pour toutes les versions prises en charge](https://msdn.microsoft.com/library/ff803383.aspx)
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
 

@@ -1,5 +1,5 @@
 ---
-title: Déployer, exécuter et surveiller un package SSIS sur Azure | Microsoft Docs
+title: Déployer et exécuter un package SSIS dans Azure | Microsoft Docs
 ms.date: 02/05/2018
 ms.topic: conceptual
 ms.prod: sql
@@ -12,13 +12,13 @@ ms.technology:
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a15194b18efb21c7a7947e23b8bc673021606b31
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 27c7e77b5143bca56b7ded2233c01e11ad088d5f
+ms.sourcegitcommit: 0cc2cb281e467a13a76174e0d9afbdcf4ccddc29
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/15/2018
 ---
-# <a name="deploy-run-and-monitor-an-ssis-package-on-azure"></a>Déployer, exécuter et surveiller un package SSIS sur Azure
+# <a name="deploy-and-run-an-ssis-package-in-azure"></a>Déployer et exécuter un package SSIS dans Azure
 Ce didacticiel vous montre comment déployer un projet SQL Server Integration Services sur la base de données de catalogues SSISDB dans Azure SQL Database, comment exécuter un package dans le runtime d’intégration Azure SSIS et comment surveiller le package en cours d’exécution.
 
 ## <a name="prerequisites"></a>Conditions préalables requises

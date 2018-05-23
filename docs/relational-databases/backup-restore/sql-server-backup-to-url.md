@@ -14,11 +14,11 @@ caps.latest.revision: 44
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: e63134bbf85d2894140d8640fb5ade10daa4340f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9d688171b49697b785f571f7e08fee0bfe339858
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="sql-server-backup-to-url"></a>Sauvegarde SQL Server vers une URL
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -89,7 +89,7 @@ ms.lasthandoff: 05/03/2018
   
 -   La sauvegarde dans le stockage Premium n’est pas prise en charge.  
   
--   La taille maximale de sauvegarde prise en charge à l’aide d’un objet blob de pages est limitée par la taille maximale d’un objet blob de page unique, c’est-à-dire 1 To. La taille maximale de sauvegarde prise en charge à l’aide d’objets blob de blocs n’est pas limitée par la taille maximale d’un objet blob de blocs unique, qui est de 200 Go, car la sauvegarde vers des objets blob de blocs prend en charge un système de distribution permettant d’accepter des tailles de sauvegarde sensiblement plus importantes.  
+-   SQL Server limite la taille de sauvegarde maximale prise en charge en utilisant un objet blob de pages à 1 To. La taille de sauvegarde maximale prise en charge en utilisant des objets blob de blocs est limitée à environ 200 Mo (50 000 blocs * 4 Mo de MAXTRANSFERSIZE). Les objets blob de blocs prennent en charge l’entrelacement pour prendre en charge des tailles de sauvegarde sensiblement plus importantes.  
   
 -   Vous pouvez émettre des instructions de sauvegarde ou de restauration à l’aide de TSQL, SMO, des applets de commande PowerShell, ou de l’Assistant Restauration ou Sauvegarde de SQL Server Management Studio.   
   

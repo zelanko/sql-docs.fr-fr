@@ -27,16 +27,16 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 346b5aada1a16e84aa3e74019e83dd7a74d9914a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e1d3b1e73a1e353fb87dcb7cd5782f551e9508a2
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="datalength-transact-sql"></a>DATALENGTH (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-Retourne le nombre d'octets utilisés pour représenter une expression.
+Cette fonction retourne le nombre d’octets utilisés pour représenter une expression.
   
 ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -51,18 +51,30 @@ DATALENGTH ( expression )
 [Expression](../../t-sql/language-elements/expressions-transact-sql.md) de n’importe quel type de données.
   
 ## <a name="return-types"></a>Types de retour
-**bigint** si *expression* est du type **varchar(max)**, **nvarchar(max)** ou **varbinary(max)**  ; sinon, **int**.
+**bigint** si le type de données de *expression* est **nvarchar(max)**, **varbinary(max)** ou **varchar(max)**  ; sinon, **int**.
   
 ## <a name="remarks"></a>Notes   
-DATALENGTH est particulièrement utile pour les types de données **varchar**, **varbinary**, **text**, **image**, **nvarchar** et **ntext**, car ces types de données permettent le stockage de données de longueur variable.
+La fonction `DATALENGTH` devient très utile quand elle est utilisée avec les types de données
+
+- **image**
+- **ntext**
+- **nvarchar**
+- **texte**
+- **varbinary**
+
+et
+
+- **varchar**
+
+car ceux-ci permettent le stockage de données de longueur variable.
   
-La fonction DATALENGTH exécutée sur la valeur NULL donne NULL comme résultat.
+Pour une valeur NULL, `DATALENGTH` retourne NULL.
   
 > [!NOTE]  
 >  Les niveaux de compatibilité peuvent affecter les valeurs de retour. Pour plus d’informations sur les niveaux de compatibilité, consultez [Niveau de compatibilité ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
   
 ## <a name="examples"></a>Exemples  
-L'exemple suivant recherche la longueur de la colonne `Name` dans la table `Product`.
+Cet exemple recherche la longueur de la colonne `Name` dans la table `Product` :
   
 ```sql
 -- Uses AdventureWorks  

@@ -33,11 +33,11 @@ caps.latest.revision: 98
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3c7254b34f1664953d92723371f26c3c58fdd168
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d77629ddd1ebd711d9ec026c0b1a7a4ae9001f1b
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="database-detach-and-attach-sql-server"></a>Attacher et détacher une base de données (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -109,7 +109,10 @@ ms.lasthandoff: 05/03/2018
 ###  <a name="Metadata"></a> Modifications des métadonnées lors de l'attachement d'une base de données  
  Lorsqu'une base de données en lecture seule est détachée puis rattachée, les informations de sauvegarde sur la base différentielle active sont perdues. La *base différentielle* est la sauvegarde complète la plus récente de toutes les données de la base de données ou d'un sous-ensemble des fichiers ou groupes de fichiers de la base de données. Sans les informations de sauvegarde de la base, la base de données **MASTER** est désynchronisée par rapport à la base de données en lecture seule ; ainsi, les sauvegardes différentielles effectuées ultérieurement peuvent produire des résultats inattendus. C'est la raison pour laquelle, si vous utilisez des sauvegardes différentielles avec une base de données en lecture seule, vous devez établir une nouvelle base différentielle en effectuant une sauvegarde complète après le rattachement de la base de données. Pour plus d’informations sur les sauvegardes différentielles, consultez [Sauvegardes différentielles &#40;SQL Server&#41;](../../relational-databases/backup-restore/differential-backups-sql-server.md).  
   
- À l'attachement, la base de données démarre. En général, l'attachement d'une base de données la place dans le même état où elle se trouvait au moment de son détachement ou de sa copie. Toutefois, les opérations d'attachement et de détachement désactivent le chaînage des propriétés des bases de données croisées de la base de données. Pour plus d’informations sur l’activation du chaînage, consultez [Chaînage des propriétés des bases de données croisées (option de configuration de serveur)](../../database-engine/configure-windows/cross-db-ownership-chaining-server-configuration-option.md). En outre, TRUSTWORTHY prend la valeur OFF à chaque fois que la base de données est attachée. Pour plus d’informations sur la façon d’affecter la valeur ON à TRUSTWORTHY, consultez [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).  
+ À l'attachement, la base de données démarre. En général, l'attachement d'une base de données la place dans le même état où elle se trouvait au moment de son détachement ou de sa copie. Toutefois, les opérations d'attachement et de détachement désactivent le chaînage des propriétés des bases de données croisées de la base de données. Pour plus d’informations sur l’activation du chaînage, consultez [Chaînage des propriétés des bases de données croisées (option de configuration de serveur)](../../database-engine/configure-windows/cross-db-ownership-chaining-server-configuration-option.md). 
+
+ >[!IMPORTANT]
+ > Par défaut et pour des raisons de sécurité, les options pour *is_broker_enabled*, *is_honor_broker_priority_on* et *is_trustworthy_on* sont définies sur OFF chaque fois que la base de données est attachée. Pour plus d’informations sur l’activation de ces options, consultez [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).  Pour plus d’informations sur les métadonnées, consultez [Gérer les métadonnées lors de la mise à disposition d’une base de données sur un autre serveur](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md).
   
 ### <a name="backup-and-restore-and-attach"></a>Sauvegarder, restaurer et attacher  
  Comme toutes les bases de données complètement ou partiellement hors connexion, une base de données contenant des fichiers de restauration ne peut pas être attachée. Pour attacher la base de données, arrêtez la séquence de restauration. Puis, vous pouvez redémarrer la séquence de restauration.  
