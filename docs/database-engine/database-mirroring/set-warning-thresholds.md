@@ -35,7 +35,7 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="options"></a>Options  
  *Instance de serveur et état de la connexion*  
- Nom d’une instance de serveur partenaire au format *SYSTÈME***\\*** NOM_INSTANCE*. Pour une instance de serveur par défaut, seul le nom du système s'affiche.  
+ Nom d’une instance de serveur partenaire au format *SYSTÈME***\\***NOM_INSTANCE*. Pour une instance de serveur par défaut, seul le nom du système s'affiche.  
   
  Ce champ indique également si le moniteur est actuellement connecté à cette instance de serveur. Les états de connexion possibles sont les suivants :  
   
@@ -77,10 +77,10 @@ ms.lasthandoff: 05/03/2018
 |**Avertir si la durée de vie de la plus ancienne transaction non envoyée dépasse le seuil**|Ce seuil indique la durée exprimée en minutes des transactions qui n'ont pas encore été envoyées depuis la file d'attente d'envoi vers l'instance de serveur miroir. Cette valeur permet de mesurer la perte de données potentielle en termes de temps.|  
 |**Avertir si le temps de traitement de validation de miroir dépasse le seuil**|Ce seuil indique le délai en millisecondes par transaction (utile uniquement en mode haute sécurité). Ce délai correspond au temps de traitement pendant lequel l'instance de serveur principal attend que l'instance de serveur miroir écrive l'enregistrement du journal de transaction dans la file d'attente de restauration par progression.|  
   
- **Activé sur «**  *\<instance_serveur>*  **»**  
+ **Activé sur «**   *\<instance_serveur>*   **»**  
  Une case à cocher vide indique que l'avertissement est actuellement désactivé sur l'instance de serveur. Pour activer l'avertissement, activez la case à cocher.  
   
- **Seuil sur «**  *\<instance_serveur>*  **»**  
+ **Seuil sur «**   *\<instance_serveur>*   **»**  
  Lorsqu'un avertissement est activé, définissez le seuil dans la partie gauche de cette colonne. Un événement se produit si le seuil spécifié est atteint lors de la mise à jour de la table d'état. Si vous désactivez un seuil après avoir configuré une valeur, cette valeur reste dans le champ et sera utilisée lorsque vous activerez de nouveau l'avertissement.  
   
  Lorsqu'un avertissement n'est pas activé, ce champ est inactif.  

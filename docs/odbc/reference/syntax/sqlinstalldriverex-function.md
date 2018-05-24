@@ -102,9 +102,9 @@ BOOL SQLInstallDriverEx(
 ## <a name="comments"></a>Commentaires  
  Le *lpszDriver* argument est une liste d’attributs sous la forme de paires mot clé-valeur. Chaque paire se termine par un octet null, et la liste entière se termine par un octet null. (Autrement dit, deux octets null marquent la fin de la liste.) Le format de cette liste est la suivante :  
   
- *pilote-desc* **\\** 0Driver**=***pilote-DLL-nom de fichier***\\** 0 [le programme d’installation **= ***le programme d’installation-DLL-nom de fichier***\\** 0]  
+ *pilote-desc* **\\**0Driver**=***pilote-DLL-nom de fichier***\\**0 [le programme d’installation **= ***le programme d’installation-DLL-nom de fichier***\\**0]  
   
- [*pilote-attr-mot_clé1***=*** value1 ***\\** 0] [* pilote-attr-mot Clé2***=*** value2 ***\\** 0]... **\\** 0  
+ [*pilote-attr-mot_clé1***=*** value1 ***\\**0] [* pilote-attr-mot Clé2***=*** value2 ***\\**0]... **\\**0  
   
  où \0 est un octet null et *pilote-attr-keywordn* est n’importe quel mot clé d’attribut pilote. Les mots clés doivent apparaître dans l’ordre spécifié. Par exemple, supposons qu’un pilote pour les fichiers de texte mis en forme possède de pilote séparé et le programme d’installation DLL et pouvez utiliser des fichiers portant les extensions .txt et .csv. Le *lpszDriver* argument pour ce pilote peut être comme suit :  
   

@@ -63,7 +63,7 @@ sp_tables [ [ @table_name = ] 'name' ]
  [  **@table_qualifier=** ] **'***qualificateur***'**  
  Nom du qualificateur de la table. *qualificateur* est **sysname**, avec NULL comme valeur par défaut. Divers produits SGBD prennent en charge d’affectation de noms en trois parties pour les tables (*qualificateur ***.*** propriétaire ***.*** nom de*). Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], cette colonne représente le nom de la base de données. Dans d'autres produits, elle représente le nom du serveur de l'environnement de base de données de la table.  
   
- [ **,** [  **@table_type=** ] **» «***type***'**, **'** type**» «** ]  
+ [ **,** [  **@table_type=** ] **» «***type***'**, **'** type **» «** ]  
  Liste de valeurs séparées par des virgules, donnant des informations sur toutes les tables des types spécifiés. Ceux-ci incluent **TABLE**, **SYSTEMTABLE**, et **vue**. *type* est **varchar (100)**, avec NULL comme valeur par défaut.  
   
 > [!NOTE]  

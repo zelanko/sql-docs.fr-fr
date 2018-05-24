@@ -47,7 +47,7 @@ sp_grantdbaccess [ @loginame = ] 'login'
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@loginame =** ]  **' *** connexion* **'** est le nom du groupe Windows, nom de connexion Windows ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connexion à associer à la nouvelle base de données utilisateur. Noms des groupes Windows et les connexions Windows doivent être qualifiés avec un nom de domaine Windows sous la forme *domaine*\\* connexion *, par exemple, **LONDON\Joeb**. La connexion ne peut pas être déjà associée à un utilisateur de la base de données. *connexion* est un **sysname**, sans valeur par défaut.  
+ [  **@loginame =** ]  **' *** connexion* **'** est le nom du groupe Windows, nom de connexion Windows ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connexion à associer à la nouvelle base de données utilisateur. Noms des groupes Windows et les connexions Windows doivent être qualifiés avec un nom de domaine Windows sous la forme *domaine*\\*connexion *, par exemple, **LONDON\Joeb**. La connexion ne peut pas être déjà associée à un utilisateur de la base de données. *connexion* est un **sysname**, sans valeur par défaut.  
   
  [  **@name_in_db=**] **'***nom_dans_la_base_de_données***'** [ **sortie**]  
  Nom du nouvel utilisateur de base de données. *nom_dans_la_base_de_données* est une variable de sortie avec un type de données **sysname**et une valeur par défaut NULL. Si non spécifié, *connexion* est utilisé. S’il est spécifié comme variable de sortie avec une valeur NULL, **@name_in_db** a la valeur *connexion*. *nom_dans_la_base_de_données* ne doit pas déjà exister dans la base de données actuelle.  

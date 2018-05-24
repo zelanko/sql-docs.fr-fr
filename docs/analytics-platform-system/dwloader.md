@@ -396,7 +396,7 @@ Le chargeur insère des lignes à la fin des lignes existantes dans la table de 
 fastappend  
 Le chargeur insère des lignes directement, sans utiliser une table temporaire, à la fin des lignes existantes dans la table de destination. fastappend requiert la transaction multi (– m) option. Une base de données mise en lots ne peut pas être spécifié lors de l’utilisation de fastappend. Il n’existe aucune restauration avec fastappend, ce qui signifie que la récupération à partir d’un échec ou abandon de charge doit être gérée par votre propre processus de chargement.  
   
-upsert **-K***merge_column* [,...] *n* ]    
+upsert **-K***merge_column* [,...*n* ]    
 Le chargeur utilise l’instruction de fusion de SQL Server pour mettre à jour les lignes existantes et insérer de nouvelles lignes.  
   
 L’option-K spécifie l’ou les colonnes sur la fusion de base. Ces colonnes forment une clé de fusion, qui doit représenter une ligne unique. Si la clé de fusion existe dans la table de destination, la ligne est mise à jour. Si la clé de fusion n’existe pas dans la table de destination, la ligne est ajoutée.  

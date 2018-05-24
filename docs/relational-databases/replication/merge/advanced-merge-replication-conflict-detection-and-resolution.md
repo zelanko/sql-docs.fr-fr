@@ -115,7 +115,7 @@ ms.lasthandoff: 05/03/2018
   
  L'Outil de résolution des conflits affiche des informations issues de trois tables système :  
   
--   La réplication crée une table de conflits pour chaque table d’un article de fusion, dont le nom se présente sous la forme **MSmerge_conflic_\<nom_publication>_\<nom_article>**.  
+-   La réplication crée une table de conflits pour chaque table d’un article de fusion, dont le nom se présente sous la forme **MSmerge_conflict_\<nom_publication>_\<nom_article>**.  
   
      Les tables de conflits possèdent la même structure que les tables sur lesquelles elles sont basées. Une ligne de l'une de ces tables se compose de la version perdante d'une ligne conflictuelle (la version gagnante de la ligne réside dans la table utilisateur réelle).  
   
