@@ -13,11 +13,11 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 47c5e129ca6c77f9116b6be928f202341d457041
-ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.openlocfilehash: 3f461b78c3d76f7e6b848b83d8a2333dffe5de3c
+ms.sourcegitcommit: a9da0abd3e17fbcd6339980d7331d0418cdada53
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 05/24/2018
 ---
 # <a name="sql-operations-studio-preview-release-notes"></a>Notes de publication SQL opérations Studio (version préliminaire)
 
@@ -33,7 +33,7 @@ Le *peut Public Preview* porte sur les correctifs de bogues et de stabilisation.
 
 - Annonce Redgate SQL recherche les extensions disponibles dans le Gestionnaire d’extensions.
 - Localisation de communauté disponible pour 10 langues : allemand, espagnol, Français, italien, japonais, coréen, portugais, russe, chinois simplifié et chinois traditionnel.
-- Build PIBR conforme a réduit collecte des données de télémétrie, annulations améliore l’expérience et les liens dans le produit à la déclaration de confidentialité.
+- Collection de télémétrie réduite, annulations améliore l’expérience et les liens dans le produit à la déclaration de confidentialité.
 - Gestionnaire d’extensions a amélioré Marketplace d’expérience pour découvrir facilement des extensions de la Communauté.
 - Travaux d’extension de l’Agent SQL et de l’historique des travaux du mode d’amélioration du produit.
 - Met à jour des extensions pour whoisactive et le serveur de rapports.

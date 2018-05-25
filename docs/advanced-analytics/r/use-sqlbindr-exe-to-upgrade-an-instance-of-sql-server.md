@@ -8,11 +8,11 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: aa67fbf2480de093ffe2f919e9c50ee2d5082b83
-ms.sourcegitcommit: df382099ef1562b5f2d1cd506c1170d1db64de41
+ms.openlocfilehash: 694cbb2a6addc89f40dd6d9670768ad13a84ef3f
+ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/12/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="upgrade-machine-learning-r-and-python-components-in-sql-server-instances"></a>Mise à niveau machine learning (R et Python) des composants dans les instances de SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -258,37 +258,6 @@ Il s’agit plus de travail, mais vous pouvez également désinstaller complète
 
 Vous avez ajouté des autres packages tiers ou open source à votre bibliothèque de package. Étant donné que l’emplacement de la bibliothèque de package par défaut en inversant la liaison des commutateurs, vous devez réinstaller les packages à la bibliothèque R et Python est maintenant en utilisant. Pour plus d’informations, consultez [par défaut des packages](installing-and-managing-r-packages.md), [installer de nouveaux packages R](install-additional-r-packages-on-sql-server.md), et [installer de nouveaux packages Python](../python/install-additional-python-packages-on-sql-server.md).
 
-## <a name="known-issues"></a>Problèmes connus
-
-Cette section répertorie spécifique de problèmes connus liés à l’aide de l’utilitaire SqlBindR.exe ou aux mises à niveau du serveur Machine Learning susceptibles d’affecter les instances de SQL Server.
-
-### <a name="restoring-packages-that-were-previously-installed"></a>Restauration des packages qui ont été précédemment installées
-
-Si vous mettez à niveau Microsoft R Server 9.0.1, la version de SqlBindR.exe pour cette version Impossible de restaurer les packages d’origine ou les composants R complètement, demandant à l’utilisateur d’exécuter la réparation de SQL Server sur l’instance, s’appliquent à toutes les versions de service, puis redémarrez l’instance.
-
-Une version ultérieure de SqlBindR automatiquement restaurer les fonctions R d’origine, en éliminant la nécessité pour la réinstallation des composants de R ou ré-appliquer le correctif. Toutefois, vous devez installer les mises à jour du package de R qui ont peut-être été ajoutées après l’installation initiale.
-
-Si vous avez utilisé les rôles de gestion de package à installer et partager le package, cette tâche est beaucoup plus facile : vous pouvez utiliser des commandes R pour synchroniser les packages installés dans le système de fichiers à l’aide d’enregistrements dans la base de données et vice versa. Pour plus d’informations, consultez [gestion des packages R pour SQL Server](r-package-management-for-sql-server-r-services.md).
-
-### <a name="problems-with-multiple-upgrades-from-sql-server"></a>Problèmes avec plusieurs mises à niveau à partir de SQL Server
-
-Si vous avez précédemment mis à niveau une instance de SQL Server 2016 R Services à 9.0.1, lorsque vous exécutez le programme d’installation de nouveau pour Microsoft R Server 9.1.0, il affiche une liste de toutes les instances valides, puis sélectionne précédemment liée d’instances par défaut. Si vous continuez, les instances précédemment liés sont indépendants. Par conséquent, la 9.0.1 antérieures installation est supprimée, y compris tous les packages, mais la nouvelle version de Microsoft R Server (9.1.0) n’est pas installée.
-
-Pour résoudre ce problème, vous pouvez modifier l’installation de R Server existante comme suit :
-1. Dans le panneau de configuration, ouvrez **Ajout / Suppression de programmes**.
-2. Recherchez Microsoft R Server, puis cliquez sur **modification/modifier**.
-3. Lorsque le programme d’installation démarre, sélectionnez les instances que vous souhaitez lier à 9.1.0.
-
-Microsoft Machine Learning Server 9.2.1 et 9.3 n’ont pas ce problème.
-
-### <a name="binding-or-unbinding-leaves-multiple-temporary-folders"></a>La liaison ou la séparation laisse plusieurs dossiers temporaires
-
-La liaison et annulation de la liaison des opérations échouent parfois à nettoyer les dossiers temporaires.
-Si vous trouvez des dossiers avec un nom tel que cela, vous pouvez le supprimer une fois l’installation terminée : R_SERVICES_<guid>
-
-> [!NOTE]
-> Veillez à attendre que l’installation est terminée. Il peut prendre beaucoup de temps à supprimer les bibliothèques R associé liés une version, puis ajoutez les nouvelles bibliothèques R. Lorsque l’opération est terminée, les dossiers temporaires sont supprimés.
-
 ## <a name="sqlbindrexe-command-syntax"></a>Syntaxe de commande SqlBindR.exe
 
 ### <a name="usage"></a>Utilisation
@@ -322,6 +291,36 @@ Programme d’installation MLS et SqlBindR retournent les codes d’erreur suiva
 |Erreur 8 de liaison | Annuler la liaison a échoué | Une erreur s’est produite lors de l’annulation de l’instance de la liaison. |
 |Erreur 9 de liaison | Aucune instance trouvée | Aucune instance de moteur de base de données a été trouvée sur cet ordinateur. |
 
+## <a name="known-issues"></a>Problèmes connus
+
+Cette section répertorie spécifique de problèmes connus liés à l’aide de l’utilitaire SqlBindR.exe ou aux mises à niveau du serveur Machine Learning susceptibles d’affecter les instances de SQL Server.
+
+### <a name="restoring-packages-that-were-previously-installed"></a>Restauration des packages qui ont été précédemment installées
+
+Si vous mettez à niveau Microsoft R Server 9.0.1, la version de SqlBindR.exe pour cette version Impossible de restaurer les packages d’origine ou les composants R complètement, demandant à l’utilisateur d’exécuter la réparation de SQL Server sur l’instance, s’appliquent à toutes les versions de service, puis redémarrez l’instance.
+
+Une version ultérieure de SqlBindR automatiquement restaurer les fonctions R d’origine, en éliminant la nécessité pour la réinstallation des composants de R ou ré-appliquer le correctif. Toutefois, vous devez installer les mises à jour du package de R qui ont peut-être été ajoutées après l’installation initiale.
+
+Si vous avez utilisé les rôles de gestion de package à installer et partager le package, cette tâche est beaucoup plus facile : vous pouvez utiliser des commandes R pour synchroniser les packages installés dans le système de fichiers à l’aide d’enregistrements dans la base de données et vice versa. Pour plus d’informations, consultez [gestion des packages R pour SQL Server](r-package-management-for-sql-server-r-services.md).
+
+### <a name="problems-with-multiple-upgrades-from-sql-server"></a>Problèmes avec plusieurs mises à niveau à partir de SQL Server
+
+Si vous avez précédemment mis à niveau une instance de SQL Server 2016 R Services à 9.0.1, lorsque vous exécutez le programme d’installation de nouveau pour Microsoft R Server 9.1.0, il affiche une liste de toutes les instances valides, puis sélectionne précédemment liée d’instances par défaut. Si vous continuez, les instances précédemment liés sont indépendants. Par conséquent, la 9.0.1 antérieures installation est supprimée, y compris tous les packages, mais la nouvelle version de Microsoft R Server (9.1.0) n’est pas installée.
+
+Pour résoudre ce problème, vous pouvez modifier l’installation de R Server existante comme suit :
+1. Dans le panneau de configuration, ouvrez **Ajout / Suppression de programmes**.
+2. Recherchez Microsoft R Server, puis cliquez sur **modification/modifier**.
+3. Lorsque le programme d’installation démarre, sélectionnez les instances que vous souhaitez lier à 9.1.0.
+
+Microsoft Machine Learning Server 9.2.1 et 9.3 n’ont pas ce problème.
+
+### <a name="binding-or-unbinding-leaves-multiple-temporary-folders"></a>La liaison ou la séparation laisse plusieurs dossiers temporaires
+
+La liaison et annulation de la liaison des opérations échouent parfois à nettoyer les dossiers temporaires.
+Si vous trouvez des dossiers avec un nom tel que cela, vous pouvez le supprimer une fois l’installation terminée : R_SERVICES_<guid>
+
+> [!NOTE]
+> Veillez à attendre que l’installation est terminée. Il peut prendre beaucoup de temps à supprimer les bibliothèques R associé liés une version, puis ajoutez les nouvelles bibliothèques R. Lorsque l’opération est terminée, les dossiers temporaires sont supprimés.
 
 ## <a name="see-also"></a>Voir aussi
 

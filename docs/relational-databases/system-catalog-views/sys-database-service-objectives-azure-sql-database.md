@@ -22,11 +22,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: d222a06a64d53ab26d19206f846edadf69e613ba
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: a63c3142cdc5ca670117ef7d14c4d6079b575972
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="sysdatabaseserviceobjectives-azure-sql-database"></a>Sys.database_service_objectives (de base de données SQL Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
@@ -43,8 +43,8 @@ Retourne l’édition (niveau de service), l’objectif de service (niveau de ta
 |Nom de la colonne|Type de données| Description|  
 |-----------------|---------------|-----------------|  
 |database_id|int|ID de la base de données unique dans une instance du serveur de base de données SQL Azure. Joignable avec [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).|  
-|édition|sysname|Le niveau de service pour l’entrepôt de données ou de la base de données : **base**, **Standard**, **Premium**, **usage général**,  **Critiques**, ou **l’entrepôt de données**.|  
-|service_objective|sysname|Le niveau de tarification de la base de données. Si la base de données est dans un pool élastique, retourne **ElasticPool**.<br /><br /> Sur le **base** au niveau, retourne **base**.<br /><br /> Base de données dans un niveau de service standard retourne les valeurs valides actuelles pour ce niveau.<br /><br /> La base de données unique dans un niveau premium renvoie les valeurs valides actuelles pour ce niveau de service.<br /><br />Base de données dans la couche de service usage général retourne les valeurs valides actuelles pour ce niveau de service.<br /><br />Base de données dans la couche de service critique d’entreprise retourne les valeurs valides actuelles pour ce niveau de service.<br /><br /> SQL Data Warehouse retourne les valeurs valides actuelles pour l’entrepôt de données SQL.|  
+|édition|sysname|Le niveau de service pour l’entrepôt de données ou de la base de données : **base**, **Standard**, **Premium** ou **Data Warehouse**.|  
+|service_objective|sysname|Le niveau de tarification de la base de données. Si la base de données est dans un pool élastique, retourne **ElasticPool**.<br /><br /> Sur le **base** au niveau, retourne **base**.<br /><br /> **Base de données dans un niveau de service standard** renvoie l’une des opérations suivantes : S0, S1, S2 ou S3.<br /><br /> **La base de données unique dans un niveau premium** retourne des éléments suivants : P1, P2, P4, P6/P3 ou P11.<br /><br /> **SQL Data Warehouse** retourne DW100 via DW10000c.|  
 |elastic_pool_name|sysname|Le nom de la [pool élastique](https://azure.microsoft.com/documentation/articles/sql-database-elastic-pool/) appartenant à la base de données. Retourne **NULL** si la base de données est une base de données ou un warehoue de données.|  
   
 ## <a name="permissions"></a>Autorisations  
