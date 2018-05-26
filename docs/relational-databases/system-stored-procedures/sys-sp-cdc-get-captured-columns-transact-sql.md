@@ -26,11 +26,11 @@ caps.latest.revision: 30
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.openlocfilehash: 5c9c09866f34736adec722c8988c18dab16fc2dd
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: b131dce10e231bc0ee479ff0157a614bcfb2d6f4
+ms.sourcegitcommit: fc3cd23685c6b9b6972d6a7bab2cc2fc5ebab5f2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/25/2018
 ---
 # <a name="sysspcdcgetcapturedcolumns-transact-sql"></a>sys.sp_cdc_get_captured_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -65,7 +65,7 @@ sys.sp_cdc_get_captured_columns
 |capture_instance|**sysname**|Nom de l'instance de capture.|  
 |column_name|**sysname**|Nom de la colonne source capturée.|  
 |column_id|**int**|ID de la colonne dans la table source.|  
-|ordinal_position|**int**|Position de la colonne dans la table source.|  
+|column_ordinal|**int**|Position de la colonne dans la table source.|  
 |data_type|**sysname**|Type de données de la colonne.|  
 |character_maximum_length|**int**|Longueur maximale en caractères de la colonne basée sur les caractères ; sinon, NULL.|  
 |numeric_precision|**tinyint**|Précision de la colonne si elle est numérique ; sinon, NULL.|  
