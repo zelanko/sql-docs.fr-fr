@@ -34,11 +34,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: e1ea30abed242b49684c685b55b05622b360159e
-ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
+ms.openlocfilehash: f00d346a509c7a240b00ce287782001804126311
+ms.sourcegitcommit: 6fd8a193728abc0a00075f3e4766a7e2e2859139
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="create-columnstore-index-transact-sql"></a>CREATE COLUMNSTORE INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -340,8 +340,8 @@ Si la table sous-jacente a une colonne d’un type de données non pris en charg
 -   uniqueidentifier (S’applique à [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)])  
 
 **Index columnstore non-cluster :**
--   Ne peut pas avoir plus de 1 024 colonnes.  
--   Une table comportant un index non cluster columnstore peut avoir des contraintes uniques, des contraintes de clés primaires ou des contraintes de clés étrangères, mais les contraintes ne peuvent pas être incluses dans l'index non cluster columnstore.  
+-   Ne peut pas avoir plus de 1 024 colonnes.
+-   Ne peut pas être créé comme un index basé sur les contraintes. Une table avec un index columnstore peut avoir des contraintes uniques, des contraintes de clé primaire et des contraintes de clé étrangère. Les contraintes sont toujours appliquées avec un index rowstore. Les contraintes ne peuvent pas être appliquées avec un index columnstore (en cluster ou non).
 -   Ne peut pas être créé sur une vue ou une vue indexée.  
 -   Ne peut pas inclure de colonne éparse.  
 -   Ne peut pas être modifié en utilisant l’instruction **ALTER INDEX**. Pour modifier l'index non cluster, vous devez plutôt supprimer et recréer l'index columnstore. Vous pouvez utiliser **ALTER INDEX** pour désactiver et reconstruire un index columnstore.  

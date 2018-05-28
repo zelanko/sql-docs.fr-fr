@@ -1,7 +1,7 @@
 ---
 title: Configurer un groupe de disponibilité pour les transactions distribuées | Microsoft Docs
 ms.custom: ''
-ms.date: 07/19/2017
+ms.date: 05/22/2018
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
@@ -20,11 +20,11 @@ caps.latest.revision: 33
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 73563a02f1e51e91719a4831ac8b5dd34465aaa6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: bde3ca6e1b9712e34a3e0b43f0a52687de25a40f
+ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="configure-availability-group-for-distributed-transactions"></a>Configurer un groupe de disponibilité pour les transactions distribuées
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.lasthandoff: 05/03/2018
 Afin de garantir des transactions distribuées, le groupe de disponibilité doit être configuré pour inscrire les bases de données en tant que gestionnaires de ressources de transactions distribuées.  
 
 >[!NOTE]
->[!INCLUDE[SQL2016](../../../includes/sssql15-md.md)] prend aussi en charge les transactions distribuées. Cependant, la prise en charge dans [!INCLUDE[SQL2016](../../../includes/sssql15-md.md)] est limitée. Dans [!INCLUDE[SQL2016](../../../includes/sssql15-md.md)], une transaction distribuée avec une base de données dans un groupe de disponibilité n’est pas prise en charge si celui-ci comprend plusieurs bases de données sur le même serveur. [!INCLUDE[SQL2017](../../../includes/sssqlv14-md.md)] n’a pas cette limitation. 
+>[!INCLUDE[SQL Server 2016]](../../../includes/sssql15-md.md)] Service Pack 2 et version supérieure fournit une prise en charge complète des transactions distribuées dans les groupes de disponibilité. Dans les versions de [!INCLUDE[SQL Server 2016]](../../../includes/sssql15-md.md)] antérieures à Service Pack 2, les transactions distribuées entre bases de données (autrement dit, une transaction qui utilise des bases de données sur la même instance de SQL Server) impliquant une base de données dans un groupe de disponibilité ne sont pas prises en charge. [!INCLUDE[SQL2017](../../../includes/sssqlv14-md.md)] n’a pas cette limitation. 
 >
 >Dans [!INCLUDE[SQL2016](../../../includes/sssql15-md.md)], les étapes de configuration sont les mêmes que dans [!INCLUDE[SQL2017](../../../includes/sssqlv14-md.md)].
 
@@ -56,7 +56,7 @@ Configurez un groupe de disponibilité pour prendre en charge les transactions d
 
 Vous pouvez créer un groupe de disponibilité pour les transactions distribuées sur [!INCLUDE[SQL2016](../../../includes/sssql15-md.md)] ou ultérieur. Pour créer un groupe de disponibilité pour des transactions distribuées, incluez `DTC_SUPPORT = PER_DB` dans la définition du groupe de disponibilité. Le script suivant crée un groupe de disponibilité pour des transactions distribuées. 
 
-```transact-sql
+```sql
 CREATE AVAILABILITY GROUP MyAG
    WITH (
       DTC_SUPPORT = PER_DB  
@@ -82,7 +82,7 @@ CREATE AVAILABILITY GROUP MyAG
 
 Vous pouvez modifier un groupe de disponibilité pour les transactions distribuées sur [!INCLUDE[SQL2017](../../../includes/sssqlv14-md.md)] ou ultérieur. Pour modifier un groupe de disponibilité pour les transactions distribuées, incluez `DTC_SUPPORT = PER_DB` dans le script `ALTER AVAILABILITY GROUP`. L’exemple de script change le groupe de disponibilité pour qu’il prenne en charge les transactions distribuées. 
 
-```transact-sql
+```sql
 ALTER AVAILABILITY GROUP MyaAG
    SET (
       DTC_SUPPORT = PER_DB  
@@ -167,19 +167,19 @@ Exécutez seulement un des scripts suivants :
 
    * Pour valider la transaction, modifiez et exécutez le script suivant : remplacez le `yyyyyyyy-yyyy-yyyy-yyyy-yyyyyyyyyyyy` par l’unité de travail de la transaction incertaine provenant du message d’erreur précédent puis exécutez :
 
-      ```transact-sql
-      KILL 'yyyyyyyy-yyyy-yyyy-yyyy-yyyyyyyyyyyy' WITH COMMIT
-      ```
+   ```sql
+   KILL 'yyyyyyyy-yyyy-yyyy-yyyy-yyyyyyyyyyyy' WITH COMMIT
+   ```
 
    * Pour annuler la transaction, modifiez et exécutez le script suivant : remplacez le `yyyyyyyy-yyyy-yyyy-yyyy-yyyyyyyyyyyy` par l’unité de travail de la transaction incertaine provenant du message d’erreur précédent puis exécutez :
 
-      ```transact-sql
-      KILL 'yyyyyyyy-yyyy-yyyy-yyyy-yyyyyyyyyyyy' WITH ROLLBACK
-     ```
+   ```sql
+   KILL 'yyyyyyyy-yyyy-yyyy-yyyy-yyyyyyyyyyyy' WITH ROLLBACK
+   ```
 
 Après avoir validé ou annulé la transaction, vous pouvez utiliser `ALTER DATABASE` pour placer la base de données en ligne. Modifiez et exécutez le script suivant - utilisez le nom de la base de données pour le nom de la base de données suspecte :
 
-   ```transact-sql
+   ```sql
    ALTER DATABASE [DB1] SET ONLINE
    ```
 

@@ -21,11 +21,11 @@ caps.latest.revision: 14
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: fdf20d18d4397b0d8ed2f0598b287a88d03caf0e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 20e98a86e61ba084073022eb515d436787f6a341
+ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="odata-source"></a>Source OData
 Utilisez le composant source OData dans un package SSIS pour consommer les données provenant d’un service OData (Open Data Protocol). Le composant prend en charge les protocoles OData v3 et v4.  
@@ -37,7 +37,10 @@ Utilisez le composant source OData dans un package SSIS pour consommer les donn�
 La source OData prend en charge les sources de données suivantes :
 -   Microsoft Dynamics AX Online et Microsoft Dynamics CRM Online,
 -   Listes SharePoint. Pour visualiser toutes les listes d’un serveur SharePoint, utilisez l’URL suivante : http://\<serveur>/_vti_bin/ListData.svc. Pour plus d'informations sur les conventions d'URL SharePoint, consultez [Interface REST de SharePoint Foundation](http://msdn.microsoft.com/library/ff521587.aspx).
-  
+
+> [!NOTE]
+> Le composant Source OData ne prend pas en charge les types complexes, comme les éléments à choix multiple, dans des listes SharePoint.
+
 ## <a name="odata-format-and-performance"></a>Format OData et performances
  La plupart des services OData retournent les résultats dans plusieurs formats. Vous pouvez spécifier le format du jeu de résultats à l’aide de l’option de requête `$format`. Les formats comme JSON et JSON Light sont plus efficaces qu’ATOM ou XML, et peuvent offrir un gain de performances en cas de transfert d’un grand volume de données. Le tableau suivant fournit les résultats des tests. Comme vous pouvez le voir, le passage d’ATOM à JSON s’est traduit par un gain de performances de 30 à 53 %, et le passage d’ATOM au nouveau format JSON Light (disponible dans WCF Data Services 5.1) a entraîné un gain de performances de 67 %.  
   

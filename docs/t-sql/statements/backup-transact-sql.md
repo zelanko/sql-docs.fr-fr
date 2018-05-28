@@ -51,11 +51,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 81267bd94920ba0398a9ed6e3ca8192eaa3cdaa4
-ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
+ms.openlocfilehash: 3c7d97d9c8ee56af89807f07cd335b16c50fbcc1
+ms.sourcegitcommit: 02c889a1544b0859c8049827878d66b2301315f8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="backup-transact-sql"></a>BACKUP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
@@ -700,10 +700,11 @@ Lorsque vous utilisez la compression de sauvegarde avec des bases de données ne
 Avec [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] et versions ultérieures, cela permet l’utilisation d’un algorithme de compression optimisé pour les bases de données chiffrées avec TDE, qui chiffre d’abord une page, la compresse, puis la chiffre de nouveau. Si vous utilisez `MAXTRANSFERSIZE = 65536` (64 Ko), la compression de sauvegarde pour les bases de données chiffrées avec TDE va directement compresser les pages chiffrées et peut ne pas fournir de bons taux de compression. Pour plus d’informations, consultez [Backup Compression for TDE-enabled Databases](http://blogs.msdn.microsoft.com/sqlcat/2016/06/20/sqlsweet16-episode-1-backup-compression-for-tde-enabled-databases/).
 
 > [!NOTE]  
-> L’algorithme de compression optimisé pour les bases de données chiffrées avec TDE est utilisé automatiquement quand :
-> * 
->  La sauvegarde vers une URL est utilisée, auquel cas la valeur par défaut de `MAXTRANSFERSIZE` est remplacée par 1048576 (1 Mo) et n’est pas forcée à une valeur inférieure.
-> * La base de données comprend plusieurs fichiers de données, auquel cas la valeur par défaut de `MAXTRANSFERSIZE` est remplacée par un multiple de 65 536 (64 Ko) et n’est pas remplacée par une valeur inférieure (telle que `MAXTRANSFERSIZE = 65536`). 
+> Dans certains cas, la valeur par défaut `MAXTRANSFERSIZE` est supérieure à 64 Ko :
+> * Quand la base de données a plusieurs fichiers de données créés, elle utilise `MAXTRANSFERSIZE` > 64 Ko
+> * Quand vous effectuez une sauvegarde vers une URL, la valeur par défaut `MAXTRANSFERSIZE = 1048576` (1 Mo)
+>   
+> Même si une de ces conditions s’applique, vous devez définir explicitement `MAXTRANSFERSIZE` supérieure à 64 Ko dans votre commande de sauvegarde afin d’obtenir le nouvel algorithme de compression de sauvegarde.
   
 Par défaut, chaque opération de sauvegarde réussie ajoute une entrée au journal des erreurs [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et au journal des événements système. Si vous sauvegardez très fréquemment le journal, ces messages de réussite peuvent rapidement s'accumuler, créer des journaux d'erreurs très volumineux et compliquer la recherche d'autres messages. Dans de tels cas, vous pouvez supprimer ces entrées de journal en utilisant l'indicateur de trace 3226 si aucun de vos scripts ne dépend de ces entrées. Pour plus d’informations, consultez [Indicateurs de trace &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).  
   

@@ -24,11 +24,11 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 monikerRange: '>= sql-server-linux-2017  || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: fe7bb29dbea7d45687cc0a1395b93e8b54fbc142
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: b2fc97c10ee40d90704459dd820882c5b97d22d2
+ms.sourcegitcommit: 02c889a1544b0859c8049827878d66b2301315f8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="sql-server-documentation"></a>Documentation SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -106,6 +106,7 @@ SQL Server est un élément central de la plateforme de données Microsoft. SQL 
 - [Importer et exporter des données avec l’Assistant Importation et Exportation SQL Server](../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md)
 - [Migration d’une base de données SQL Server vers Azure SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-migrate-your-sql-server-database)
 - [Assistant Migration de données Microsoft](https://www.microsoft.com/download/details.aspx?id=53595)
+- [Parcours de migration Azure - évaluer, migrer, optimiser](https://azure.microsoft.com/en-us/migration/)]
 ::: moniker-end
 
 ::: moniker range=">= sql-server-2017 || >= sql-server-linux-2017 || = sqlallproducts-allversions"
@@ -115,6 +116,7 @@ SQL Server est un élément central de la plateforme de données Microsoft. SQL 
 - [Migrer les données vers SQL Server sur Linux](../linux/sql-server-linux-migrate-overview.md)
 - [Migration d’une base de données SQL Server vers Azure SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-migrate-your-sql-server-database)
 - [Assistant Migration de données Microsoft](https://www.microsoft.com/download/details.aspx?id=53595)
+- [Importer des données d’Excel vers SQL Server ou SQL Database](https://docs.microsoft.com/sql/relational-databases/import-export/import-data-from-excel-to-sql?view=sql-server-2017)
 ::: moniker-end
 
 ## <a name="update-your-version-of-sql-server"></a>Mettre à jour votre version de SQL Server

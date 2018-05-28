@@ -15,11 +15,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: f7415cfbe4343f9f50de42c26db5444b6582a572
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 03077d7ede10d42b4d4812ce6ef93a35dd295a22
+ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="creating-a-system-versioned-temporal-table"></a>Création d’une table temporelle avec gestion de version du système
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -184,7 +184,7 @@ ALTER TABLE InsurancePolicy
   
 -   L’ajout d’une période entraîne une vérification de cohérence des données sur la table actuelle pour s’assurer que les valeurs par défaut pour les colonnes de période sont valides.  
   
--   Quand une table de l’historique existant est spécifiée lors de l’activation de **SYSTEM_VERSIONING**, une vérification de cohérence des données temporelles est effectuée sur les tables actuelles et de l’historique. Elle peut être ignorée si vous spécifiez **DATA_CONISTENCY_CHECK = OFF** comme paramètre supplémentaire.  
+-   Quand une table de l’historique existant est spécifiée lors de l’activation de **SYSTEM_VERSIONING**, une vérification de cohérence des données temporelles est effectuée sur les tables actuelles et de l’historique. Elle peut être ignorée si vous spécifiez **DATA_CONSISTENCY_CHECK = OFF** comme paramètre supplémentaire.  
   
 ### <a name="migrate-existing-tables-to-built-in-support"></a>Migrer de tables existantes vers la prise en charge intégrée  
  Cet exemple montre comment migrer une solution basée sur des déclencheurs vers la prise en charge temporelle intégrée. Pour cet exemple, nous partons du principe que la solution personnalisée active fractionne les données actuelles et historiques en deux tables utilisateur séparées (**ProjectTaskCurrent** et **ProjectTaskHistory**). Si votre solution utilise une table unique pour stocker les lignes réelles et historiques, vous devez fractionner les données en deux tables avant d’effectuer les étapes de migration présentées dans cet exemple :  

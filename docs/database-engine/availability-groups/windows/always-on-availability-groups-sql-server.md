@@ -20,11 +20,11 @@ caps.latest.revision: 35
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: eeacfa947295ed049cb8ce7aa2af2db32a0c6e47
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d8bff088048ed6a547eae419a870d32da9ba8112
+ms.sourcegitcommit: b3bb41424249de198f22d9c6d40df4996f083aa6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="always-on-availability-groups-sql-server"></a>Groupes de disponibilité Always On (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +33,8 @@ ms.lasthandoff: 05/03/2018
   
  Un groupe de disponibilité bascule au niveau d'un réplica de disponibilité. Les basculements ne sont pas dus à des problèmes de base de données, tels qu'une base de données devenant suspecte en raison de la perte d'un fichier de données, de la suppression d'une base de données ou de l'altération d'un journal des transactions.  
  
- >[REMARQUE] « Groupe de disponibilité Always On » est le nom complet et formel de cette fonctionnalité de disponibilité. L’abréviation est AG, et non AOAG ni AAG. 
+ >[!NOTE]
+ >« Groupe de disponibilité Always On » est le nom complet et formel de cette fonctionnalité de disponibilité. L’abréviation est AG, et non AOAG ni AAG. 
   
 ##  <a name="Benefits"></a> Avantages  
  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] fournissent un riche ensemble d'options qui améliorent la disponibilité des bases de données et l'utilisation des ressources. Les composants clés sont les suivants :  
