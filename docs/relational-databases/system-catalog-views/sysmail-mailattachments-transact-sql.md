@@ -23,22 +23,23 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 36c5433f51191004a994b1afb3486db89a317acb
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "33220690"
 ---
 # <a name="sysmailmailattachments-transact-sql"></a>sysmail_mailattachments (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Contient une ligne pour chaque pièce jointe soumise à la messagerie de base de données. Utilisez cette vue lorsque vous voulez des informations sur les pièces jointes de la messagerie de base de données. Pour passer en revue tous les messages électroniques traités à l’aide de la messagerie de base de données [sysmail_allitems &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-allitems-transact-sql.md).  
   
-|Nom de colonne|Type de données| Description|  
+|Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**attachment_id**|**int**|Identificateur de la pièce jointe.|  
-|**mailitem_id**|**int**|Identificateur de l'élément de messagerie qui contenait la pièce jointe.|  
+|**attachment_id**|**Int**|Identificateur de la pièce jointe.|  
+|**mailitem_id**|**Int**|Identificateur de l'élément de messagerie qui contenait la pièce jointe.|  
 |**filename**|**nvarchar(520)**|Nom de fichier de la pièce jointe. Lorsque **attach_query_result** est 1 et **query_attachment_filename** est NULL, la messagerie de base de données crée un nom de fichier arbitraire.|  
-|**filesize**|**int**|Taille de la pièce jointe en octets.|  
+|**filesize**|**Int**|Taille de la pièce jointe en octets.|  
 |**attachment**|**varbinary(max)**|Contenu de la pièce jointe.|  
 |**last_mod_date**|**datetime**|Date et heure de la dernière modification de la ligne.|  
 |**last_mod_user**|**sysname**|Dernier utilisateur qui a modifié la ligne.|  

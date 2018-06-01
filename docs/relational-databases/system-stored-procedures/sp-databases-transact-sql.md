@@ -23,10 +23,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: c22415c34f0e25dc1117b6a5f86839c66f0ba53b
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "33238000"
 ---
 # <a name="spdatabases-transact-sql"></a>sp_databases (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,14 +44,14 @@ sp_databases
 ```  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
- Aucun  
+ None  
   
 ## <a name="result-sets"></a>Jeux de résultats  
   
-|Nom de colonne|Type de données| Description|  
+|Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**DATABASE_NAME**|**sysname**|Nom de la base de données. Dans le [!INCLUDE[ssDE](../../includes/ssde-md.md)], cette colonne représente le nom de la base de données stockées dans le **sys.databases** vue de catalogue.|  
-|**DATABASE_SIZE**|**int**|Taille de la base de données, exprimée en kilo-octets.|  
+|**DATABASE_SIZE**|**Int**|Taille de la base de données, exprimée en kilo-octets.|  
 |**SECTION NOTES**|**varchar(254)**|Pour le [!INCLUDE[ssDE](../../includes/ssde-md.md)], ce champ retourne toujours NULL.|  
   
 ## <a name="remarks"></a>Notes  

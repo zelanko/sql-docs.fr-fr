@@ -26,10 +26,11 @@ ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 5fb74ca331e580ffa71111f987bf3a93450f2b56
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "33178335"
 ---
 # <a name="schemas-catalog-views---sysschemas"></a>Affichages - catalogue de schémas sys.schemas
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -39,11 +40,11 @@ ms.lasthandoff: 05/04/2018
 > [!NOTE]  
 >  Les schémas de base de données diffèrent des schémas XML, qui sont utilisés pour définir le modèle de contenu des documents XML.  
   
-|Nom de colonne|Type de données| Description|  
+|Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**nom**|**sysname**|Nom du schéma. Unique dans la base de données.|  
-|**schema_id**|**int**|Identificateur du schéma. Unique dans la base de données.|  
-|**principal_id**|**int**|Identificateur du principal qui possède ce schéma.|  
+|**schema_id**|**Int**|Identificateur du schéma. Unique dans la base de données.|  
+|**principal_id**|**Int**|Identificateur du principal qui possède ce schéma.|  
   
 ## <a name="remarks"></a>Notes  
  Schémas de base de données agissent comme des espaces de noms ou des conteneurs d’objets, tels que des tables, vues, procédures et fonctions, qui se trouvent dans le **sys.objects** affichage catalogue.  

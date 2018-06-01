@@ -30,23 +30,24 @@ ms.author: edmaca
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: dae89c39aa55f8139ce76942f0bdda660b645241
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "33221130"
 ---
 # <a name="syssecuritypolicies-transact-sql"></a>Sys.security_policies (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Retourne une ligne pour chaque stratégie de sécurité dans la base de données.  
   
-|Nom de colonne|Type de données| Description|  
+|Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|name|**sysname**|Nom de la stratégie de sécurité, unique dans la base de données.|  
-|object_id|**int**|ID de la stratégie de sécurité.|  
-|principal_id|**int**|ID du propriétaire de la stratégie de sécurité, tel qu'enregistré dans la base de données. NULL si le propriétaire est déterminé par le schéma.|  
-|schema_id|**int**|ID du schéma où réside l'objet.|  
-|parent_object_id|**int**|Identificateur de l'objet auquel appartient la stratégie. Doit être égal à 0.|  
+|NAME|**sysname**|Nom de la stratégie de sécurité, unique dans la base de données.|  
+|object_id|**Int**|ID de la stratégie de sécurité.|  
+|principal_id|**Int**|ID du propriétaire de la stratégie de sécurité, tel qu'enregistré dans la base de données. NULL si le propriétaire est déterminé par le schéma.|  
+|schema_id|**Int**|ID du schéma où réside l'objet.|  
+|parent_object_id|**Int**|Identificateur de l'objet auquel appartient la stratégie. Doit être égal à 0.|  
 |Type|**vachar(2)**|Doit être **SP**.|  
 |type_desc|**nvarchar(60)**|**SECURITY_POLICY**.|  
 |create_date|**datetime**|Date UTC de création de la stratégie de sécurité.|  

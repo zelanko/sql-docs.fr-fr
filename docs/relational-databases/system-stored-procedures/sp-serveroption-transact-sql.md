@@ -24,10 +24,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: 99f936f0a8d127dd33ebce8b86c0a958cafccf66
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "33260945"
 ---
 # <a name="spserveroption-transact-sql"></a>sp_serveroption (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +53,7 @@ sp_serveroption [@server = ] 'server'
  [  **@optname =** ] **'***option_name***'**  
  Option à définir pour le serveur spécifié. *option_name* est **varchar (** 35 **)**, sans valeur par défaut. *option_name* peut être une des valeurs suivantes.  
   
-|Valeur| Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |**compatible avec le classement**|Concerne l'exécution des requêtes distribuées sur les serveurs liés. Si cette option est définie sur **true**, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] suppose que tous les caractères du serveur lié sont compatibles avec le serveur local, en ce qui concerne la séquence de classement et de jeu de caractères (ou ordre de tri). [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut alors envoyer au fournisseur des comparaisons sur les colonnes de caractères. Si cette option n'est pas activée, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] compare toujours les colonnes de caractères en local.<br /><br /> Cette option ne doit être définie que si la source de données correspondant au serveur lié possède le même jeu de caractères et respecte le même ordre de tri que le serveur local.|  
 |**Nom de classement**|Spécifie le nom du classement utilisé par la source de données distante si **utiliser le classement distant** est **true** et la source de données n’est pas un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] source de données. Le nom doit être l'un des classements pris en charge par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> Utilisez cette option lors d'un accès à une source de données OLE DB autre que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], mais dont le classement correspond à l'un des classements de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .<br /><br /> Le serveur lié doit prendre en charge un classement unique utilisable pour toutes les colonnes du serveur. Ne définissez pas cette option si le serveur lié prend en charge plusieurs classements dans une source de données unique ou si le classement du serveur lié ne correspond peut-être pas à l'un des classements de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
@@ -96,7 +97,7 @@ EXEC sp_serveroption 'SEATTLE3', 'collation compatible', 'true';
  [sp_adddistpublisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md)   
  [sp_addlinkedserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)   
  [sp_dropdistpublisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropdistpublisher-transact-sql.md)   
- [sp_helpserver & #40 ; Transact-SQL & #41 ;](../../relational-databases/system-stored-procedures/sp-helpserver-transact-sql.md)   
+ [sp_helpserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpserver-transact-sql.md)   
  [Procédures stockées système &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

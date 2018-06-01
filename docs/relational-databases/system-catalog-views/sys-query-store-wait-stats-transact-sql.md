@@ -25,17 +25,18 @@ ms.author: AndrejsAnt
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2017 || = sqlallproducts-allversions
 ms.openlocfilehash: d4a7afdca88de97188577e726d203040e33c8c71
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "33182015"
 ---
 # <a name="sysquerystorewaitstats-transact-sql"></a>Sys.query_store_wait_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
 
   Contient des informations sur les informations de l’attente de la requête.  
   
-|Nom de colonne|Type de données| Description|  
+|Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**wait_stats_id**|**bigint**|Identificateur de la ligne représentant les statistiques d’attente de plan_id, runtime_stats_interval_id, execution_type et wait_category. Il est unique seulement pour les derniers intervalles de statistiques de runtime. Intervalle actuellement actif peut avoir plusieurs lignes représentant des statistiques d’attente pour le plan référencé par plan_id, avec le type d’exécution représenté par execution_type et la catégorie d’attente représentées par wait_category. En règle générale, une ligne représente les statistiques d’attente sont vidées sur le disque, tandis que les autres (s) représentent l’état en mémoire. Par conséquent, pour obtenir l’état réel de chaque intervalle vous devez les métriques d’agrégation, le regroupement par plan_id, runtime_stats_interval_id, execution_type et wait_category. |  
 |**plan_id**|**bigint**|Clé étrangère. Joint à [sys.query_store_plan &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md).|  
