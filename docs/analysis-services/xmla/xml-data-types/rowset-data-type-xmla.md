@@ -9,11 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: fe96b343afe9cdf5f8f2f301c9c0c8eade9dd67f
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: d3275114e1442634a462470487bc4c5f40d8dac6
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34574791"
 ---
 # <a name="rowset-data-type-xmla"></a>Type de données Rowset (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -37,13 +38,13 @@ ms.lasthandoff: 05/10/2018
 |Caractéristique|Description|  
 |--------------------|-----------------|  
 |Types de données de base|[Jeu de résultats](../../../analysis-services/xmla/xml-data-types/resultset-data-type-xmla.md)|  
-|Types de données dérivés|Aucune|  
+|Types de données dérivés|None|  
   
-## <a name="data-type-relationships"></a>Relations du type de données  
+## <a name="data-type-relationships"></a>Relations des types de données  
   
 |Relation|Élément|  
 |------------------|-------------|  
-|Éléments parents|Aucune|  
+|Éléments parents|None|  
 |Éléments enfants|[Ligne](../../../analysis-services/xmla/xml-elements-properties/row-element-xmla.md)|  
 |Éléments dérivés|[racine](../../../analysis-services/xmla/xml-elements-properties/root-element-xmla.md)|  
   
@@ -212,7 +213,7 @@ ms.lasthandoff: 05/10/2018
 </root>  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a>Voir aussi
  [Types de données XML &#40;XMLA&#41;](../../../analysis-services/xmla/xml-data-types/xml-data-types-xmla.md)  
   
   

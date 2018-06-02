@@ -1,32 +1,20 @@
 ---
 title: Instruction SELECT (MDX) | Documents Microsoft
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- SELECT
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- SELECT statement [MDX]
-- cubes [Analysis Services], SELECT statement
-ms.assetid: c0a57214-aa3f-44ce-a369-660c69746f34
-caps.latest.revision: 43
-author: Minewiskan
+ms.date: 05/30/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 93a58d6453300d79f07fa19874cc2db8c21cfb11
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 787bd07976f7472ae5f86c347c5ba06493414d7a
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34579981"
 ---
 # <a name="mdx-data-manipulation---select"></a>Manipulation de données MDX - SELECT
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -476,9 +464,9 @@ WHERE
 |80 450 596,98 $|$79,980,114.38|$470,482.60|0.58%|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Concepts clés dans MDX & #40 ; Analysis Services & #41 ;](../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)   
+ [Concepts clés pour MDX &#40;Analysis Services&#41;](../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)   
  [Les instructions de Manipulation de données MDX &#40;MDX&#41;](../mdx/mdx-data-manipulation-statements-mdx.md)   
- [Restriction de la requête avec les Axes de secteur et de requête & #40 ; MDX & #41 ;](~/analysis-services/multidimensional-models/mdx/mdx-query-and-slicer-axes-restricting-the-query.md)  
+ [Restriction de la requête avec les Axes de requête et segment &#40;MDX&#41;](~/analysis-services/multidimensional-models/mdx/mdx-query-and-slicer-axes-restricting-the-query.md)  
   
   
 

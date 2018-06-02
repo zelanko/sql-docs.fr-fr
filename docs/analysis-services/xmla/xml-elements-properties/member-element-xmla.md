@@ -9,11 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 3ef62ab60f54f8bb9f4590ca6bbe2d1a7893399e
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 1c962452675a0c1c91a3573546f0763060dfb44e
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34575651"
 ---
 # <a name="member-element-xmla"></a>Élément Member (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -48,12 +49,12 @@ ms.lasthandoff: 05/10/2018
 </Tuple>  
 ```  
   
-## <a name="element-characteristics"></a>Caractéristiques de l'élément  
+## <a name="element-characteristics"></a>Caractéristiques de l’élément  
   
 |Caractéristique|Description|  
 |--------------------|-----------------|  
-|Type de données et longueur|Aucune|  
-|Valeur par défaut|Aucune|  
+|Type de données et longueur|None|  
+|Valeur par défaut|None|  
 |Cardinalité|0-n : élément facultatif pouvant apparaître plusieurs fois.|  
   
 ## <a name="element-relationships"></a>Relations entre les éléments  
@@ -65,14 +66,14 @@ ms.lasthandoff: 05/10/2018
   
 ## <a name="attributes"></a>Attributs  
   
-|Attribut|Description|  
+|Attribute|Description|  
 |---------------|-----------------|  
 |Hiérarchie|Attribut **String** requis (pour les éléments **Tuple** parents uniquement). Nom de la hiérarchie dont font partie les membres représentés par l'élément **Member** .|  
   
 ## <a name="remarks"></a>Notes  
  L'élément **Member** contient les informations nécessaires pour identifier et afficher un membre dans une hiérarchie donnée. Pour les éléments **Members** parents, la hiérarchie est déjà spécifiée par l'attribut **Hierarchy** de l'élément parent. Pour les éléments **Tuple** parents, la hiérarchie est spécifiée à l'aide de l'attribut **Hierarchy** de l'élément **Member** .  
   
-## <a name="see-also"></a>Voir aussi  
- [Propriétés & #40 ; XMLA & #41 ;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+## <a name="see-also"></a>Voir aussi
+ [Propriétés &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

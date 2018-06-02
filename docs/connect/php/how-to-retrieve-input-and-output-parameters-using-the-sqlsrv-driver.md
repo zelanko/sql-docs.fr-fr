@@ -3,8 +3,6 @@ title: 'Comment : récupérer des paramètres d’e/s à l’aide du pilote SQL
 ms.custom: ''
 ms.date: 04/12/2018
 ms.prod: sql
-ms.prod_service: connectivity
-ms.component: php
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -17,11 +15,12 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5ef60cf4ef6710690d0ba63b5e159400f724268b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 57143ae8694bba2bdeae3ff552b2ebb089ce6536
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34563927"
 ---
 # <a name="how-to-retrieve-input-and-output-parameters-using-the-sqlsrv-driver"></a>How to: Retrieve Input and Output Parameters Using the SQLSRV Driver
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -31,7 +30,7 @@ Cette rubrique montre comment utiliser le pilote SQLSRV pour appeler une procéd
 > [!NOTE]  
 > Les variables initialisées ou mises à jour avec la valeur **null**, **DateTime**ou des types de flux ne peuvent pas être utilisées comme paramètres de sortie.  
   
-## <a name="example"></a>Exemple  
+## <a name="example-1"></a>Exemple 1
 L’exemple suivant appelle une procédure stockée qui soustrait des heures de congé utilisées des heures de congé disponibles d’un employé spécifié. La variable qui représente les heures de congé utilisées, *$vacationHrs*, est passée à la procédure stockée comme paramètre d’entrée. Après la mise à jour des heures de congé disponibles, la procédure stockée utilise le même paramètre pour retourner le nombre d’heures de congé restantes.  
   
 > [!NOTE]  
@@ -129,7 +128,7 @@ sqlsrv_close( $conn);
 > [!NOTE]
 > Lors de la liaison d’un paramètre d’entrée/sortie à un type bigint, si la valeur peut finir à l’extérieur de la plage d’un [entier](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md), vous devez spécifier son type de champ SQL en tant que SQLSRV_SQLTYPE_BIGINT. Sinon, elle peut entraîner une exception « valeur hors limites ».
 
-## <a name="example"></a>Exemple  
+## <a name="example-2"></a>Exemple 2
 Cet exemple de code montre comment lier une valeur bigint volumineux comme paramètre d’entrée/sortie.  
 
 ```
