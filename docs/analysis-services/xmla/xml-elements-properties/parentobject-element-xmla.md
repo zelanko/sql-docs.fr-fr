@@ -9,11 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: c5ad08e36625073701996333e5e0a9d886ecfa92
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: ff9ebc460691d9f97e5cfe64783574b00eab6915
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34576001"
 ---
 # <a name="parentobject-element-xmla"></a>Élément ParentObject (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -32,13 +33,13 @@ ms.lasthandoff: 05/10/2018
 </Create>  
 ```  
   
-## <a name="element-characteristics"></a>Caractéristiques de l'élément  
+## <a name="element-characteristics"></a>Caractéristiques de l’élément  
   
 |Caractéristique|Description|  
 |--------------------|-----------------|  
-|Type de données et longueur|Aucune|  
-|Valeur par défaut|Aucune|  
-|Cardinalité|0-1: élément facultatif qui peut apparaître une fois et une seule.|  
+|Type de données et longueur|None|  
+|Valeur par défaut|None|  
+|Cardinalité|0-1 : élément facultatif qui peut apparaître une fois et une seule.|  
   
 ## <a name="element-relationships"></a>Relations entre les éléments  
   
@@ -51,7 +52,7 @@ ms.lasthandoff: 05/10/2018
  L'ordre dans lequel les identificateurs apparaissent n'a pas d'importance.  
   
 ## <a name="example"></a>Exemple  
- L’exemple suivant crée la **panier** structure d’exploration de données, inclus dans le [!INCLUDE[ssAWDWsp](../../../includes/ssawdwsp-md.md)] exemple [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] base de données.  
+ L’exemple suivant crée la **panier** structure d’exploration de données, inclus dans le [!INCLUDE[ssAWDWsp](../../../includes/ssawdwsp-md.md)] base de données Analysis Services.  
   
 ```  
 <Create xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">  
@@ -173,7 +174,7 @@ ms.lasthandoff: 05/10/2018
 </Create>  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- [Propriétés & #40 ; XMLA & #41 ;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+## <a name="see-also"></a>Voir aussi
+ [Propriétés &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

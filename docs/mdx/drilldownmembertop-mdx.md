@@ -1,31 +1,20 @@
 ---
 title: DrilldownMemberTop (MDX) | Documents Microsoft
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- DRILLDOWNMEMBERTOP
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- DrilldownMemberTop function
-ms.assetid: b6575544-1fd3-4fa1-aa2e-272d307c7750
-caps.latest.revision: 37
-author: Minewiskan
+ms.date: 05/30/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 360b29ba0a3e041cf7fdc381251e34912a667461
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 2ee0fe543638687b09aba44956d88250b6d9337d
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34578101"
 ---
 # <a name="drilldownmembertop-mdx"></a>DrilldownMemberTop (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -46,13 +35,13 @@ DrillDownMemberTop(<Set_Expression1>, <Set_Expression2>, <Count> [,[<Numeric_Exp
  *Set_Expression2*  
  Une expression MDX (Multidimensional Expressions) valide qui retourne un jeu.  
   
- *Compter*  
+ *Nombre*  
  Expression numérique valide qui précise le nombre de tuples à retourner.  
   
  *Numeric_expression*  
  Expression numérique valide qui correspond généralement à une expression MDX (Multidimensional Expressions) des coordonnées des cellules qui retournent un nombre.  
   
- *Hiérarchie*  
+ *Hierarchy*  
  Expression MDX (Multidimensional Expressions) valide qui retourne une hiérarchie.  
   
  *Récursive*  
@@ -91,6 +80,6 @@ WHERE [Measures].[Reseller Order Quantity]
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Référence des fonctions MDX & #40 ; MDX & #41 ;](../mdx/mdx-function-reference-mdx.md)  
+ [Référence des fonctions MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   
