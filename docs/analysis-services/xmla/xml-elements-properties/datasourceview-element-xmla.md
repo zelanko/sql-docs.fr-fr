@@ -9,11 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 431cbcb08cb6f69c90b82520fadf191ffc43df45
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: d92dd753d63979f32fe9b8242d78202303f2bb60
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34574311"
 ---
 # <a name="datasourceview-element-xmla"></a>Élément DataSourceView (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -33,13 +34,13 @@ ms.lasthandoff: 05/10/2018
 </Batch>  
 ```  
   
-## <a name="element-characteristics"></a>Caractéristiques de l'élément  
+## <a name="element-characteristics"></a>Caractéristiques de l’élément  
   
 |Caractéristique|Description|  
 |--------------------|-----------------|  
-|Type de données et longueur|Aucune|  
-|Valeur par défaut|Aucune|  
-|Cardinalité|0-1: élément facultatif qui peut apparaître une fois et une seule.|  
+|Type de données et longueur|None|  
+|Valeur par défaut|None|  
+|Cardinalité|0-1 : élément facultatif qui peut apparaître une fois et une seule.|  
   
 ## <a name="element-relationships"></a>Relations entre les éléments  
   
@@ -49,11 +50,11 @@ ms.lasthandoff: 05/10/2018
 |Éléments enfants|[DatabaseID](../../../analysis-services/xmla/xml-elements-properties/databaseid-element-xmla.md), [DataSourceViewID](../../../analysis-services/scripting/properties/datasourceviewid-element-assl.md)|  
   
 ## <a name="remarks"></a>Notes  
- Le **DataSourceView** élément représente une liaison hors ligne pour une vue de source de données, utilisée par le **lot** ou **processus** commande pour remplacer temporairement la vue de source de données pour la liaison [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] objets traités par la commande.  
+ Le **DataSourceView** élément représente une liaison hors ligne pour une vue de source de données, utilisée par le **lot** ou **processus** commande pour remplacer temporairement la source de données liaison de vue pour les objets Analysis Services traités par la commande.  
   
- Pour plus d’informations sur les liaisons hors ligne, consultez [des Sources de données et liaisons & #40 ; SSAS multidimensionnel & #41 ; ](../../../analysis-services/multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md).  
+ Pour plus d’informations sur les liaisons hors ligne, consultez [des Sources de données et des liaisons &#40;multidimensionnels SSAS&#41;](../../../analysis-services/multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md).  
   
-## <a name="see-also"></a>Voir aussi  
- [Propriétés & #40 ; XMLA & #41 ;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+## <a name="see-also"></a>Voir aussi
+ [Propriétés &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

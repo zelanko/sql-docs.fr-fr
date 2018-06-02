@@ -9,11 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 97cebdade566f796ff09bd68e8b292868e37e0a9
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 7fc64d6b31f1b05d8bf5b4d1c80d75dff0583e86
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34576161"
 ---
 # <a name="results-element-xmla"></a>Élément results (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -32,13 +33,13 @@ ms.lasthandoff: 05/10/2018
 </return>  
 ```  
   
-## <a name="element-characteristics"></a>Caractéristiques de l'élément  
+## <a name="element-characteristics"></a>Caractéristiques de l’élément  
   
 |Caractéristique|Description|  
 |--------------------|-----------------|  
-|Type de données et longueur|Aucune|  
-|Valeur par défaut|Aucune|  
-|Cardinalité|0-1: élément facultatif qui peut apparaître une fois et une seule.|  
+|Type de données et longueur|None|  
+|Valeur par défaut|None|  
+|Cardinalité|0-1 : élément facultatif qui peut apparaître une fois et une seule.|  
   
 ## <a name="element-relationships"></a>Relations entre les éléments  
   
@@ -52,7 +53,7 @@ ms.lasthandoff: 05/10/2018
   
  Pour les commandes **Batch** non transactionnelles, l'élément **results** contient un élément **root** pour chacune des commandes exécutées par la commande **Batch** , que ces commandes réussissent ou échouent. Pour les commandes **Batch** transactionnelles, l'élément **results** contient un seul élément **root** contenant les informations d'erreur de la commande qui a échoué dans la commande **Batch** .  
   
-## <a name="see-also"></a>Voir aussi  
- [Propriétés & #40 ; XMLA & #41 ;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+## <a name="see-also"></a>Voir aussi
+ [Propriétés &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

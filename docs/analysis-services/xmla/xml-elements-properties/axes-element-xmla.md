@@ -9,11 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 02b9c91f30c45e59d0f5eba00a5b76262070d711
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 3a8dfff1c8a551157661bcb1de5700bf51a7f914
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34574911"
 ---
 # <a name="axes-element-xmla"></a>Élément Axes (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -32,20 +33,20 @@ ms.lasthandoff: 05/10/2018
 </root>  
 ```  
   
-## <a name="element-characteristics"></a>Caractéristiques de l'élément  
+## <a name="element-characteristics"></a>Caractéristiques de l’élément  
   
 |Caractéristique|Description|  
 |--------------------|-----------------|  
 |Type de données et longueur|Tout|  
-|Valeur par défaut|Aucune|  
-|Cardinalité|1-1 : élément requis qui apparaît une fois et une seule.|  
+|Valeur par défaut|None|  
+|Cardinalité|1-1 : élément requis qui apparaît une fois et une seule.|  
   
 ## <a name="element-relationships"></a>Relations entre les éléments  
   
 |Relation|Élément|  
 |------------------|-------------|  
 |Éléments parents|[racine](../../../analysis-services/xmla/xml-elements-properties/root-element-xmla.md)|  
-|Éléments enfants|[Axe](../../../analysis-services/xmla/xml-elements-properties/axis-element-xmla.md)|  
+|Éléments enfants|[Axis](../../../analysis-services/xmla/xml-elements-properties/axis-element-xmla.md)|  
   
 ## <a name="remarks"></a>Notes  
  Sous le **Axes** élément, le **axe** éléments sont répertoriés dans l’ordre où ils apparaissent dans le jeu de données, en commençant à zéro. Le **AxisFormat** définition de la propriété XMLA détermine comment **axe** mise en forme des éléments. Pour plus d’informations sur la **AxisFormat** propriété, consultez [pris en charge les propriétés XMLA &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md).  
@@ -72,7 +73,7 @@ ms.lasthandoff: 05/10/2018
   
  Le tableau suivant répertorie les opérations qui peuvent être utilisées pour définir et caractériser la structure et les membres d'un axe.  
   
-|Opération| Description|  
+|Opération|Description|  
 |---------------|-----------------|  
 |Membre|La plus petite unité d'un axe représentant le membre d'une hiérarchie de dimension.|  
 |Membres|Une collection de **membre** les objets de la même hiérarchie de dimension.|  
@@ -103,8 +104,8 @@ CrossProduct (
   
  Un client peut utiliser le **AxisFormat** propriété pour demander une représentation spécifique.  
   
-## <a name="see-also"></a>Voir aussi  
- [Type de données MDDataSet & #40 ; XMLA & #41 ;](../../../analysis-services/xmla/xml-data-types/mddataset-data-type-xmla.md)   
- [Propriétés & #40 ; XMLA & #41 ;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+## <a name="see-also"></a>Voir aussi
+ [Type de données MDDataSet &#40;XMLA&#41;](../../../analysis-services/xmla/xml-data-types/mddataset-data-type-xmla.md)   
+ [Propriétés &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

@@ -9,15 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 56a48ffaf6d290d99503d7c8e1018f17e8d99a33
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 6c47a3c1a297bd636c64e52fcb83fda6a2b7bad5
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34574931"
 ---
 # <a name="xml-elements---methods---execute"></a>Les éléments XML - méthodes - exécuter
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-  Envoie le code XML pour les commandes Analysis (XMLA) à une instance de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Ceci inclut des demandes qui impliquent un transfert de données (par exemple, la récupération ou la mise à jour de données sur le serveur).  
+  Envoie le code XML pour les commandes Analysis (XMLA) à une instance d’Analysis Services. Ceci inclut des demandes qui impliquent un transfert de données (par exemple, la récupération ou la mise à jour de données sur le serveur).  
   
  **Espace de noms** urn:schemas-microsoft-com:xml-analysis  
   
@@ -34,19 +35,19 @@ ms.lasthandoff: 05/10/2018
 </Execute>  
 ```  
   
-## <a name="element-characteristics"></a>Caractéristiques de l'élément  
+## <a name="element-characteristics"></a>Caractéristiques de l’élément  
   
 |Caractéristique|Description|  
 |--------------------|-----------------|  
-|Type de données et longueur|Aucune|  
-|Valeur par défaut|Aucune|  
+|Type de données et longueur|None|  
+|Valeur par défaut|None|  
 |Cardinalité|0-1 : élément facultatif qui apparaît une fois et une seule.|  
   
 ## <a name="element-relationships"></a>Relations entre les éléments  
   
 |Relation|Élément|  
 |------------------|-------------|  
-|Élément parent|Aucun|  
+|Élément parent|None|  
 |Éléments enfants|[Commande](../../analysis-services/xmla/xml-elements-properties/command-element-xmla.md), [paramètres](../../analysis-services/xmla/xml-elements-properties/parameters-element-xmla.md), [propriétés](../../analysis-services/xmla/xml-elements-properties/properties-element-xmla.md)|  
   
 ## <a name="remarks"></a>Notes  
@@ -73,11 +74,11 @@ ms.lasthandoff: 05/10/2018
 </Execute>  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- [Types de données XML & #40 ; XMLA & #41 ;](../../analysis-services/xmla/xml-data-types/xml-data-types-xmla.md)   
+## <a name="see-also"></a>Voir aussi
+ [Types de données XML &#40;XMLA&#41;](../../analysis-services/xmla/xml-data-types/xml-data-types-xmla.md)   
  [Méthode Discover &#40;XMLA&#41;](../../analysis-services/xmla/xml-elements-methods-discover.md)   
  [Méthodes &#40;XMLA&#41;](../../analysis-services/xmla/xml-elements-methods.md)   
- [Éléments XML & #40 ; XMLA & #41 ;](http://msdn.microsoft.com/library/40ab2360-efb6-4ba6-bf23-e84964e51008)   
- [Ensembles de lignes de schéma de Analysis Services](../../analysis-services/schema-rowsets/analysis-services-schema-rowsets.md)  
+ [Éléments XML &#40;XMLA&#41;](http://msdn.microsoft.com/library/40ab2360-efb6-4ba6-bf23-e84964e51008)   
+ [Ensembles de lignes de schéma Analysis Services](../../analysis-services/schema-rowsets/analysis-services-schema-rowsets.md)  
   
   

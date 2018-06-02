@@ -9,11 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 07e34958589bd9366cda6b42207c289bfda72453
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 2b2c5b195e2bc95d95a555557accd481aa9836f7
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34574761"
 ---
 # <a name="crossproduct-element-xmla"></a>Élément CrossProduct (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -32,24 +33,24 @@ ms.lasthandoff: 05/10/2018
 </Axis>  
 ```  
   
-## <a name="element-characteristics"></a>Caractéristiques de l'élément  
+## <a name="element-characteristics"></a>Caractéristiques de l’élément  
   
 |Caractéristique|Description|  
 |--------------------|-----------------|  
-|Type de données et longueur|Aucune|  
-|Valeur par défaut|Aucune|  
+|Type de données et longueur|None|  
+|Valeur par défaut|None|  
 |Cardinalité|0-n : élément facultatif pouvant apparaître plusieurs fois.|  
   
 ## <a name="element-relationships"></a>Relations entre les éléments  
   
 |Relation|Élément|  
 |------------------|-------------|  
-|Éléments parents|[Axe](../../../analysis-services/xmla/xml-elements-properties/axis-element-xmla.md)|  
+|Éléments parents|[Axis](../../../analysis-services/xmla/xml-elements-properties/axis-element-xmla.md)|  
 |Éléments enfants|[Membres](../../../analysis-services/xmla/xml-elements-properties/members-element-xmla.md)|  
   
 ## <a name="attributes"></a>Attributs  
   
-|Attribut| Description|  
+|Attribute|Description|  
 |---------------|-----------------|  
 |Taille|Requis **entier** attribut. Indique le nombre de tuples contenus dans le produit croisé représenté par le **CrossProduct** élément.|  
   
@@ -109,7 +110,7 @@ ms.lasthandoff: 05/10/2018
 </Axes>  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- [Propriétés & #40 ; XMLA & #41 ;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+## <a name="see-also"></a>Voir aussi
+ [Propriétés &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

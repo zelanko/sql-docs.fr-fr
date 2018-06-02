@@ -9,15 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 29ad501e7a29e77c1f6b1ed04e497c2881b9a7d0
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 85ddeb22fac03e5ae7f66521ac3ca8a46e210fe7
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34574781"
 ---
 # <a name="protocolcapabilities-element-xmla"></a>Élément ProtocolCapabilities (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
-  Utilise l’en-tête SOAP dans un message de demande SOAP pour identifier les fonctionnalités de protocole entre une instance de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] et une application cliente.  
+  Utilise l’en-tête SOAP dans un message de demande SOAP pour identifier les fonctionnalités de protocole entre une instance d’Analysis Services et une application cliente.  
   
  **espace de noms** `http://schemas.microsoft.com/analysisservices/2003/engine`  
   
@@ -39,19 +40,19 @@ ms.lasthandoff: 05/10/2018
 </soap:Envelope>  
 ```  
   
-## <a name="element-characteristics"></a>Caractéristiques de l'élément  
+## <a name="element-characteristics"></a>Caractéristiques de l’élément  
   
 |Caractéristique|Description|  
 |--------------------|-----------------|  
-|Type de données et longueur|Aucune|  
-|Valeur par défaut|Aucune|  
-|Cardinalité|0-1: élément facultatif qui peut apparaître une fois et une seule.|  
+|Type de données et longueur|None|  
+|Valeur par défaut|None|  
+|Cardinalité|0-1 : élément facultatif qui peut apparaître une fois et une seule.|  
   
 ## <a name="element-relationships"></a>Relations entre les éléments  
   
 |Relation|Élément|  
 |------------------|-------------|  
-|Éléments parents|Aucune|  
+|Éléments parents|None|  
 |Éléments enfants|[Fonctionnalité](../../../analysis-services/xmla/xml-elements-properties/capability-element-xmla.md)|  
   
 ## <a name="remarks"></a>Notes  
@@ -71,8 +72,8 @@ ms.lasthandoff: 05/10/2018
   
  Les fonctionnalités de protocole n'ont pas à être négociées de manière explicite, ce qui signifie qu'une application cliente n'a pas pour obligation d'inclure un élément **ProtocolCapabilities** dans le cadre de la demande SOAP. Si une demande SOAP n’inclut pas un **ProtocolCapabilities** élément, le [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] instance répond en adoptant le même format que la demande SOAP.  
   
-## <a name="see-also"></a>Voir aussi  
- [La gestion des connexions et Sessions & #40 ; XMLA & #41 ;](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/managing-connections-and-sessions-xmla.md)   
- [En-têtes & #40 ; XMLA & #41 ;](../../../analysis-services/xmla/xml-elements-headers/xml-elements-headers.md)  
+## <a name="see-also"></a>Voir aussi
+ [Gestion des connexions et Sessions &#40;XMLA&#41;](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/managing-connections-and-sessions-xmla.md)   
+ [En-têtes &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-headers/xml-elements-headers.md)  
   
   

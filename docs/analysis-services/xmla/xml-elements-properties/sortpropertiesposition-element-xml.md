@@ -9,11 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: f6812eb6de6c7cc1effe876394c6b63c0343ad54
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 855857e0c4b1a9cb554fcbaa61935809ad9c71e0
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34576341"
 ---
 # <a name="sortpropertiesposition-element-xml"></a>Élément SortPropertiesPosition (XML)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -30,7 +31,7 @@ ms.lasthandoff: 05/10/2018
 </RelationshipEndVisualizationProperties>  
 ```  
   
-## <a name="element-characteristics"></a>Caractéristiques de l'élément  
+## <a name="element-characteristics"></a>Caractéristiques de l’élément  
   
 |Caractéristique|Description|  
 |--------------------|-----------------|  
@@ -43,7 +44,7 @@ ms.lasthandoff: 05/10/2018
 |Relation|Élément|  
 |------------------|-------------|  
 |Éléments parents|[RelationshipEndVisualizationProperties](../../../analysis-services/scripting/data-type/relationshipendvisualizationproperties-data-type-assl.md)|  
-|Éléments enfants|Aucune|  
+|Éléments enfants|None|  
   
 ## <a name="remarks"></a>Notes  
  Pour **RelationshipEndVisualizationProperties** éléments, le **SortPropertiesPosition** élément contient la position de l’élément de propriétés de tri dans une collection de détails. La valeur par défaut indique qu'il n'y a aucune propriété de tri à utiliser.  

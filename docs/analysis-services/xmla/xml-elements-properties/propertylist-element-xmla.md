@@ -9,11 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 8d7e92f667ebe37cbdfaf75393bdf2816ef818fd
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 3e773de16e65aa9c7f1be521214088aa9f06b369
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34577831"
 ---
 # <a name="propertylist-element-xmla"></a>Élément PropertyList (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -30,13 +31,13 @@ ms.lasthandoff: 05/10/2018
 </Properties>  
 ```  
   
-## <a name="element-characteristics"></a>Caractéristiques de l'élément  
+## <a name="element-characteristics"></a>Caractéristiques de l’élément  
   
 |Caractéristique|Description|  
 |--------------------|-----------------|  
-|Type de données et longueur|Aucune|  
-|Valeur par défaut|Aucune|  
-|Cardinalité|0-1: élément facultatif qui peut apparaître une fois et une seule.|  
+|Type de données et longueur|None|  
+|Valeur par défaut|None|  
+|Cardinalité|0-1 : élément facultatif qui peut apparaître une fois et une seule.|  
   
 ## <a name="element-relationships"></a>Relations entre les éléments  
   
@@ -50,7 +51,7 @@ ms.lasthandoff: 05/10/2018
   
  Les propriétés disponibles et leurs valeurs peuvent être obtenues via le type de demande DISCOVER_PROPERTIES avec la méthode **Discover** . Il n'existe aucun ordre requis pour les propriétés répertoriées dans l'élément **PropertyList** .  
   
- Pour plus d’informations sur les propriétés XMLA prises en charge par [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], consultez [pris en charge les propriétés XMLA &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md).  
+ Pour plus d’informations sur les propriétés XMLA prises en charge par Analysis Services, consultez [pris en charge les propriétés XMLA &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md).  
   
 ## <a name="example"></a>Exemple  
   
@@ -70,7 +71,7 @@ ms.lasthandoff: 05/10/2018
 </Properties>  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- [Propriétés & #40 ; XMLA & #41 ;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+## <a name="see-also"></a>Voir aussi
+ [Propriétés &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

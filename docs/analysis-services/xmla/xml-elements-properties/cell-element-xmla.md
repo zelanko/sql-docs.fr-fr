@@ -9,11 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 014f46219ece054c292ff3a3b7a11d98c07c1547
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 38d9954c50f13a78c0c0d13d0d83989a4e31224a
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34575091"
 ---
 # <a name="cell-element-xmla"></a>Élément Cell (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -32,12 +33,12 @@ ms.lasthandoff: 05/10/2018
 </UpdateCells>  
 ```  
   
-## <a name="element-characteristics"></a>Caractéristiques de l'élément  
+## <a name="element-characteristics"></a>Caractéristiques de l’élément  
   
 |Caractéristique|Description|  
 |--------------------|-----------------|  
-|Type de données et longueur|Aucune|  
-|Valeur par défaut|Aucune|  
+|Type de données et longueur|None|  
+|Valeur par défaut|None|  
 |Cardinalité|0-n : élément facultatif pouvant apparaître plusieurs fois.|  
   
 ## <a name="element-relationships"></a>Relations entre les éléments  
@@ -49,14 +50,14 @@ ms.lasthandoff: 05/10/2018
   
 ## <a name="attributes"></a>Attributs  
   
-|Attribut|Description|  
+|Attribute|Description|  
 |---------------|-----------------|  
 |CellOrdinal|Attribut **Long** requis. Contient la position ordinale de base zéro de la cellule à mettre à jour.|  
   
 ## <a name="remarks"></a>Notes  
  Pour plus d’informations sur la mise à jour des cellules, consultez [Mise à jour de cellules &#40;XMLA&#41;](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/updating-cells-xmla.md).  
   
-## <a name="see-also"></a>Voir aussi  
- [Propriétés & #40 ; XMLA & #41 ;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+## <a name="see-also"></a>Voir aussi
+ [Propriétés &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   
