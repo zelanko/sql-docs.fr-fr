@@ -1,25 +1,20 @@
 ---
 title: InStr (MDX) | Documents Microsoft
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-ms.assetid: 5638c358-47da-40ad-b988-1a5214c05492
-caps.latest.revision: 6
-author: Minewiskan
+ms.date: 05/30/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 1e98798452a475c6ee8d71d3e68a44ad9118aef4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: eadd3d7b5d5e99b7d34da6a9f67345b1ef88300e
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34579821"
 ---
 # <a name="instr-mdx"></a>InStr (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -45,7 +40,7 @@ InStr([start, ]searched_string, search_string[, compare])
  *Comparer*  
  (facultatif) Valeur entière. Cet argument est toujours ignoré. Il est défini pour la compatibilité avec d’autres **Instr** fonctions dans d’autres langages.  
   
-## <a name="return-value"></a>Valeur retournée  
+## <a name="return-value"></a>Valeur de retour  
  Une valeur entière avec la position de départ de *chaîne2* dans *String1*.  
   
  En outre, **InStr** fonction retourne les valeurs répertoriées dans le tableau suivant en fonction de la condition :  
@@ -108,7 +103,7 @@ from [Adventure Works]
 |majuscules trouvées dans la chaîne en minuscules|16|  
 |la chaîne de recherche est vide|0|  
 |la chaîne de recherche est Null|Non défini|  
-|chaîne de recherche est vide|1|  
+|chaîne de recherche est vide| 1|  
 |la chaîne de recherche est start 10 vide|10|  
 |chaîne de recherche a la valeur null|Non défini|  
 |trouvé à partir de start 10|16|  

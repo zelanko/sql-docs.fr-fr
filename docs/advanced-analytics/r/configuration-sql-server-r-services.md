@@ -7,11 +7,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 0b524e7e9fb24ff0296fc0e70c8bb8a462f3d199
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: b24832c8debe12c11aaa337e9558d99e7fae5ae0
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34585501"
 ---
 # <a name="configure-and-manage-machine-learning-components-in-sql-server"></a>Configurer et gérer les composants de la machine learning dans SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -33,7 +34,7 @@ Cet article fournit des liens vers des informations plus détaillées sur la fa�
 
 Ces articles décrivent comment installer de nouveaux packages R sur l’instance de SQL Server, gestion des bibliothèques de package de R et restaurer des bibliothèques de package après une restauration de base de données.
 
-+ [Installation et gestion des packages R](installing-and-managing-r-packages.md)
++ [Par défaut R et Python packages dans SQL Server](installing-and-managing-r-packages.md)
 + [L’installation de nouveaux Packages R](install-additional-r-packages-on-sql-server.md)
 + [Activer la gestion de Package pour une Instance à l’aide de rôles de base de données](r-package-how-to-enable-or-disable.md)
 + [Créer un référentiel de packages Local à l’aide de miniCRAN](create-a-local-package-repository-using-minicran.md)

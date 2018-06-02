@@ -3,8 +3,6 @@ title: 'Comment : récupérer des paramètres de sortie à l’aide du pilote S
 ms.custom: ''
 ms.date: 04/11/2018
 ms.prod: sql
-ms.prod_service: connectivity
-ms.component: php
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -17,11 +15,12 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8699d76ace19555c57ff3bcd8992f60a5cef526a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 81a94f68d7198285125236337a0025e41f1bf8ef
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34563887"
 ---
 # <a name="how-to-retrieve-output-parameters-using-the-sqlsrv-driver"></a>Procédure : récupérer des paramètres de sortie à l’aide du pilote SQLSRV
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -33,7 +32,7 @@ Cette rubrique montre comment appeler une procédure stockée dans laquelle un s
   
 Une troncation de données peut se produire quand des types de flux comme SQLSRV_SQLTYPE_VARCHAR('max') sont utilisés comme paramètres de sortie. Les types de flux ne sont pas pris en charge comme paramètres de sortie. Pour les types autres que types de flux, une troncation de données peut se produire si la longueur du paramètre de sortie n’est pas spécifiée ou si la longueur spécifiée n’est pas assez élevée pour le paramètre de sortie.  
   
-## <a name="example"></a>Exemple  
+## <a name="example-1"></a>Exemple 1
 L’exemple suivant appelle une procédure stockée qui retourne les ventes de l’année jusqu’à ce jour effectuées par un employé spécifique. La variable PHP *$lastName* est un paramètre d’entrée et *$salesYTD* est un paramètre de sortie.  
   
 > [!NOTE]  
@@ -125,9 +124,9 @@ sqlsrv_close( $conn);
 ```  
 
 > [!NOTE]
-> Lors de la liaison d’un paramètre de sortie à une valeur bigint, si la valeur peut finir à l’extérieur de la plage d’un [entier](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md), vous devez spécifier son type de champ SQL en tant que SQLSRV_SQLTYPE_BIGINT. Sinon, elle peut entraîner une exception « valeur hors limites ».
+> Lors de la liaison d’un paramètre de sortie à un type bigint, si la valeur peut finir à l’extérieur de la plage d’un [entier](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md), vous devez spécifier son type de champ SQL en tant que SQLSRV_SQLTYPE_BIGINT. Sinon, elle peut entraîner une exception « valeur hors limites ».
 
-## <a name="example"></a>Exemple  
+## <a name="example-2"></a>Exemple 2
 Cet exemple de code montre comment lier une valeur bigint volumineux en tant que paramètre de sortie.  
 
 ```

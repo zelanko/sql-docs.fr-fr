@@ -9,11 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 6af1143891fff7bc5ddc8fd25d4908fae5246bba
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 1ba73a6ea5926de6f445c5ca5cec8142b3e196bd
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34576271"
 ---
 # <a name="cell-element-mddataset-xmla"></a>Élément Cell (MDDataSet) (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -32,12 +33,12 @@ ms.lasthandoff: 05/10/2018
 </CellData>  
 ```  
   
-## <a name="element-characteristics"></a>Caractéristiques de l'élément  
+## <a name="element-characteristics"></a>Caractéristiques de l’élément  
   
 |Caractéristique|Description|  
 |--------------------|-----------------|  
-|Type de données et longueur|Aucune|  
-|Valeur par défaut|Aucune|  
+|Type de données et longueur|None|  
+|Valeur par défaut|None|  
 |Cardinalité|0-n : élément facultatif pouvant apparaître plusieurs fois.|  
   
 ## <a name="element-relationships"></a>Relations entre les éléments  
@@ -49,7 +50,7 @@ ms.lasthandoff: 05/10/2018
   
 ## <a name="attributes"></a>Attributs  
   
-|Attribut|Description|  
+|Attribute|Description|  
 |---------------|-----------------|  
 |CellOrdinal|Requis **unsignedInt** attribut. Position ordinale de la cellule dans le dataset multidimensionnel.|  
   
@@ -65,7 +66,7 @@ ms.lasthandoff: 05/10/2018
  Le type de données d'une valeur de propriété de cellule est spécifié uniquement pour la propriété de cellule VALUE. Les types de données des autres propriétés de cellule sont déterminées par la définition de propriété de cellule incluse dans le **CellInfo** élément. Un élément de valeur de propriété de cellule peut être exclu si une valeur par défaut a été spécifiée (en incluant un **par défaut** , élément pour une définition de propriété de cellule contenue dans le **CellInfo** élément) pour une propriété de cellule, ou si aucune valeur par défaut n’a été spécifié et la valeur de la propriété de cellule a la valeur null.  
   
 ## <a name="cell-property-errors"></a>Erreurs de propriété de cellule  
- Si une propriété de cellule ne peut pas être retournée en raison d’une erreur qui se produit sur l’instance de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], telle qu’une erreur de calcul qui empêche que la valeur retournée pour une cellule donnée, une **erreur** élément remplace le contenu de la propriété de cellule en question. L'exemple XML suivant décrit une erreur de propriété de cellule :  
+ Si une propriété de cellule ne peut pas être retournée en raison d’une erreur qui se produit sur l’instance d’Analysis Services, tel qu’une erreur de calcul qui empêche que la valeur retournée pour une cellule donnée, une **erreur** élément remplace le contenu de la propriété de cellule en question. L'exemple XML suivant décrit une erreur de propriété de cellule :  
   
 ```  
 <Cell CellOrdinal="0">  
@@ -125,8 +126,8 @@ ms.lasthandoff: 05/10/2018
 </CellData>  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- [Type de données MDDataSet & #40 ; XMLA & #41 ;](../../../analysis-services/xmla/xml-data-types/mddataset-data-type-xmla.md)   
- [Propriétés & #40 ; XMLA & #41 ;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+## <a name="see-also"></a>Voir aussi
+ [Type de données MDDataSet &#40;XMLA&#41;](../../../analysis-services/xmla/xml-data-types/mddataset-data-type-xmla.md)   
+ [Propriétés &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

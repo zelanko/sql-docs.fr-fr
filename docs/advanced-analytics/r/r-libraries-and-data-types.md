@@ -7,11 +7,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 56a3bc495fa6541208a094f82ede9a43b4021c23
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: d06f34210f5ec4aee741d3f3a70a01f60f10fb98
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34586041"
 ---
 # <a name="r-libraries-and-r-data-types"></a>Bibliothèques R et les types de données R
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -34,7 +35,7 @@ Pour afficher la version de R associée à une instance particulière de SQL Ser
 
 Pour rechercher la version de R inclus dans une version particulière de Microsoft R Server, consultez [R Server - Nouveautés](https://msdn.microsoft.com/microsoft-r/rserver-whats-new#new-and-updated-packages).
 
-Notez que le système de gestion de package dans SQL Server signifie que plusieurs versions d’un package R peuvent être installées sur le même ordinateur, avec plusieurs utilisateurs partage le même package ou à l’aide de différentes versions du même package. Pour plus d’informations, consultez [gestion des packages R dans SQL Server](../r/r-package-management-for-sql-server-r-services.md).
+Notez que le système de gestion de package dans SQL Server signifie que plusieurs versions d’un package R peuvent être installées sur le même ordinateur, avec plusieurs utilisateurs partage le même package ou à l’aide de différentes versions du même package. Pour plus d’informations, consultez [gestion des packages R dans SQL Server](../r/install-additional-r-packages-on-sql-server.md).
 
 ## <a name="r-and-sql-data-types"></a>R et les Types de données SQL
 
@@ -56,14 +57,14 @@ Le tableau suivant présente les modifications de types de données et de valeur
 |**date**|`POSIXct`|**datetime**|Représenté au format GMT|
 |**decimal(p,s)**|`numeric`|**float**||
 |**float**|`numeric`|**float**||
-|**int**|`integer`|**int**||
+|**Int**|`integer`|**Int**||
 |**money**|`numeric`|**float**||
 |**numeric(p,s)**|`numeric`|**float**||
 |**real**|`numeric`|**float**||
 |**smalldatetime**|`POSIXct`|**datetime**|Représenté au format GMT|
-|**smallint**|`integer`|**int**||
+|**smallint**|`integer`|**Int**||
 |**smallmoney**|`numeric`|**float**||
-|**tinyint**|`integer`|**int**||
+|**tinyint**|`integer`|**Int**||
 |**uniqueidentifier**|`character`|**varchar(max)**||
 |**varbinary(n)**<br /><br /> n <= 8000|`raw`|**varbinary(max)**|Uniquement autorisé en tant que paramètre d’entrée et sortie|
 |**varbinary(max)**|`raw`|**varbinary(max)**|Uniquement autorisé en tant que paramètre d’entrée et sortie|
@@ -147,8 +148,8 @@ outputDataSet <- inputDataSet'
 ||||||
 |-|-|-|-|-|
 ||C1|C2|C3|C4|
-|1|1|Hello|6e225611-4b58-4995-a0a5-554d19012ef1|4|
-|1|-11|world|6732ea46-2d5d-430b-8ao1-86e7f3351c3e|2|
+| 1| 1|Hello|6e225611-4b58-4995-a0a5-554d19012ef1|4|
+| 1|-11|world|6732ea46-2d5d-430b-8ao1-86e7f3351c3e|2|
 
 Notez l’utilisation de la fonction `str` dans R pour obtenir le schéma des données de sortie. Cette fonction retourne les informations suivantes :
 

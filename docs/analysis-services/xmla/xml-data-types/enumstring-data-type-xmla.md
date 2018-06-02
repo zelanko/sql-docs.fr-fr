@@ -9,11 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: bb1a181a73a6e6a2f4998fb12381c522afb4e510
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: a795b4cf935f7eae8052c52a3527005f362b533c
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34573801"
 ---
 # <a name="enumstring-data-type-xmla"></a>Type de données EnumString (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -31,22 +32,22 @@ ms.lasthandoff: 05/10/2018
 |Caractéristique|Description|  
 |--------------------|-----------------|  
 |Types de données de base|**chaîne**|  
-|Types de données dérivés|Aucune|  
+|Types de données dérivés|None|  
   
-## <a name="data-type-relationships"></a>Relations du type de données  
+## <a name="data-type-relationships"></a>Relations des types de données  
   
 |Relation|Élément|  
 |------------------|-------------|  
-|Éléments parents|Aucune|  
-|Éléments enfants|Aucune|  
-|Éléments dérivés|Aucune|  
+|Éléments parents|None|  
+|Éléments enfants|None|  
+|Éléments dérivés|None|  
   
 ## <a name="remarks"></a>Notes  
  XML for Analysis (XMLA) utilise des énumérations pour limiter les valeurs de chaîne à un ensemble de paramètres vérifiables. **EnumString** utilise le type de données XML **string** standard. Les valeurs propres à chacune des constantes nommées sont spécifiées avec la définition de l'énumérateur. Les énumérateurs sont définies en les ajoutant à la [DISCOVER_ENUMERATORS](../../../analysis-services/schema-rowsets/xml/discover-enumerators-rowset.md) de lignes du schéma et peut être récupéré à l’aide de la [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md) type de demande de méthode avec le DISCOVER_ENUMERATORS.  
   
- Le tableau suivant décrit les énumérateurs pris en charge par une instance de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
+ Le tableau suivant décrit les énumérateurs pris en charge par une instance d’Analysis Services.  
   
-|Énumérateur| Description|  
+|Énumérateur|Description|  
 |----------------|-----------------|  
 |ProviderType|Prend en charge de la colonne ProviderType dans le [DISCOVER_DATASOURCES](../../../analysis-services/schema-rowsets/xml/discover-datasources-rowset.md) de lignes du schéma, qui détermine le type de données qui peuvent être retournées par une [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] instance.<br /><br /> Cette énumération prend également en charge la propriété XMLA **ProviderType**, qui détermine les types de fournisseurs pris en charge par un [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] instance. Cette énumération est également utilisée dans l'ensemble de lignes du schéma DISCOVER_DATASOURCES.<br /><br /> Pour plus d’informations sur **ProviderType**, consultez [pris en charge les propriétés XMLA &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md).|  
 |AuthenticationMode|Prend en charge la colonne AuthenticationMode dans l'ensemble de lignes du schéma DISCOVER_DATASOURCES qui détermine les informations d'identification de sécurité à transmettre pour accéder à une instance [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].|  
@@ -58,7 +59,7 @@ ms.lasthandoff: 05/10/2018
 |ResultsetContents|Prend en charge la propriété XMLA **Content**qui détermine si les données ou les métadonnées sont retournées dans un élément **root** .<br /><br /> Pour plus d’informations sur **contenu**, consultez [pris en charge les propriétés XMLA &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md).|  
 |MDXSupportLevel|Prend en charge la propriété XMLA **MDXSupport**, ce qui indique le niveau de prise en charge de MDX (Multidimensional Expressions) disponible sur un [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] instance.<br /><br /> Pour plus d’informations sur **MDXSupport**, consultez [pris en charge les propriétés XMLA &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md).|  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a>Voir aussi
  [Types de données XML &#40;XMLA&#41;](../../../analysis-services/xmla/xml-data-types/xml-data-types-xmla.md)  
   
   
