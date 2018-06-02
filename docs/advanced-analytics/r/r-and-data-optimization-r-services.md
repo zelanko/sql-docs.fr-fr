@@ -7,11 +7,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 98605a5eb5291444e0bd46d64bd3b84ab7c1b008
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 5a30ff30651bacde42c60a1e0b265105e3c932e3
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34563757"
 ---
 # <a name="performance-for-r-services---data-optimization"></a>Performances pour R Services - optimisation des données
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -30,7 +31,7 @@ Si vous manipulez des jeux de données volumineux, utilisez toujours le contexte
 
 ## <a name="factors"></a>Facteurs
 
-Le langage R propose le concept de « facteurs », une variable spéciale pour les données par catégorie. Les chercheurs de données souvent utiliser des variables de facteur dans leur formule, étant donné que la gestion des variables catégorielles comme facteurs garantit que les données est traitée correctement par les fonctions d’apprentissage machine. Pour plus d’informations, consultez [R pour les nuls : facteur de Variables] (http://www.dummies.com/programming/r/how-to-look-at-the-structure-of-a-factor-in-r/).
+Le langage R propose le concept de « facteurs », une variable spéciale pour les données par catégorie. Les chercheurs de données souvent utiliser des variables de facteur dans leur formule, étant donné que la gestion des variables catégorielles comme facteurs garantit que les données est traitée correctement par les fonctions d’apprentissage machine. Pour plus d’informations, consultez [R pour les nuls : facteur de Variables](http://www.dummies.com/programming/r/how-to-look-at-the-structure-of-a-factor-in-r/).
 
 Par sa conception, les variables de facteur peuvent être convertis à partir de chaînes à des entiers et arrière à nouveau pour le stockage ou le traitement. R `data.frame` fonction gère toutes les chaînes en tant que variables de facteur, sauf si l’argument *stringsAsFactors* a la valeur **False**. Cela signifie est que les chaînes sont automatiquement converti en un entier pour le traitement, puis mappé à la chaîne d’origine.
 

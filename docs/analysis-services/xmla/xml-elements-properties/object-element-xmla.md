@@ -9,11 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 56de6684969db18c66d57c95e3dec589a48fed89
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: f9ef2f645895e567d69d06e4e1383e0c477b6ed1
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34575911"
 ---
 # <a name="object-element-xmla"></a>Élément Object (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -23,7 +24,7 @@ ms.lasthandoff: 05/10/2018
   
 ```xml  
   
-<Alter> <!-- or any of the parent elements in the Element Relationships table -->  
+<Alter> <!-- or any of the parent elements in the Element relationships table -->  
 ...  
    <Object>  
       <!-- One or more object identifiers, depending on the parent element -->  
@@ -32,18 +33,18 @@ ms.lasthandoff: 05/10/2018
 </Alter>  
 ```  
   
-## <a name="element-characteristics"></a>Caractéristiques de l'élément  
+## <a name="element-characteristics"></a>Caractéristiques de l’élément  
   
 |Caractéristique|Description|  
 |--------------------|-----------------|  
-|Type de données et longueur|Aucune|  
-|Valeur par défaut|Aucune|  
+|Type de données et longueur|None|  
+|Valeur par défaut|None|  
 |Cardinalité|Consultez le tableau ci-dessous.|  
   
 |Ancêtre ou parent|Cardinalité|  
 |------------------------|-----------------|  
-|[ALTER](../../../analysis-services/xmla/xml-elements-commands/create-element-xmla.md)|0-1: élément facultatif qui peut apparaître une fois et une seule.|  
-|Autres|1-1 : élément requis qui apparaît une fois et une seule.|  
+|[ALTER](../../../analysis-services/xmla/xml-elements-commands/create-element-xmla.md)|0-1 : élément facultatif qui peut apparaître une fois et une seule.|  
+|Autres|1-1 : élément requis qui apparaît une fois et une seule.|  
   
 ## <a name="element-relationships"></a>Relations entre les éléments  
   
@@ -55,9 +56,9 @@ ms.lasthandoff: 05/10/2018
 ## <a name="remarks"></a>Notes  
  L'ordre dans lequel les identificateurs apparaissent n'a pas d'importance.  
   
- Pour **Alter** éléments, l’instance de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] est utilisé en tant que l’objet par défaut si le **objet** élément n’est pas spécifié.  
+ Pour **Alter** éléments, l’instance d’Analysis Services est utilisé en tant que l’objet par défaut si le **objet** élément n’est pas spécifié.  
   
-## <a name="see-also"></a>Voir aussi  
- [Propriétés & #40 ; XMLA & #41 ;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+## <a name="see-also"></a>Voir aussi
+ [Propriétés &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

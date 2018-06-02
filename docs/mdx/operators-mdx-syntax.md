@@ -1,32 +1,20 @@
 ---
 title: Opérateurs (syntaxe MDX) | Documents Microsoft
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- Multidimensional Expressions [Analysis Services], operators
-- operators [MDX]
-- precedence [MDX]
-- MDX [Analysis Services], operators
-ms.assetid: 1ff5a529-88fd-4619-86e1-19fa214650d6
-caps.latest.revision: 29
-author: Minewiskan
+ms.date: 05/30/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 00f1b46fbb0087f41b4472f08c9861631fef7c1b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 309311bfcef0ada531e391e99091a788715c8e2d
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34580661"
 ---
 # <a name="operators-mdx-syntax"></a>Opérateurs (syntaxe MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -45,10 +33,10 @@ ms.lasthandoff: 05/03/2018
   
 |Si vous devez effectuer ce type d'opération|Utiliser|  
 |---------------------------------------|---------|  
-|Affecter une valeur à une variable ou associer une colonne de jeu de résultats à un alias.|[Opérateurs d’affectation](../mdx/assignment-operators.md)|  
+|Affecter une valeur à une variable ou associer une colonne de jeu de résultats à un alias|[Opérateurs d’affectation](../mdx/assignment-operators.md)|  
 |Addition, soustraction, multiplication, division.|[Opérateurs arithmétiques](../mdx/arithmetic-operators.md)|  
 |Tester une condition telle que AND, OR, NOT et XOR.|[Opérateurs au niveau du bit](../mdx/bitwise-operators.md)|  
-|Comparer une valeur à une autre ou à une expression.|[Opérateurs de comparaison](../mdx/comparison-operators.md)|  
+|Comparer une valeur à une autre ou à une expression|[Opérateurs de comparaison](../mdx/comparison-operators.md)|  
 |Combiner deux chaînes en une de façon permanente ou temporaire.|[Opérateurs de concaténation](../mdx/concatenation-operators.md)|  
 |Combiner deux expressions d'ensemble en une de façon permanente ou temporaire.|[Opérateurs de jeu](../mdx/set-operators.md)|  
 |Exécute une opération sur un opérande.|[Opérateurs unaires](../mdx/unary-operators.md)|  
@@ -88,7 +76,7 @@ ms.lasthandoff: 05/03/2018
   
 -   XOR  
   
--   OU  
+-   - ou -  
   
  Pour plus d’informations sur les opérateurs dans la syntaxe MDX, consultez [référence des opérateurs MDX &#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md).  
   
@@ -104,8 +92,8 @@ ms.lasthandoff: 05/03/2018
   
 |Type d'origine|Type exigé|Conversion|  
 |-------------------|-----------------|----------------|  
-|Niveau|Définissez|\<niveau > .members|  
-|Hiérarchie|Membre|\<hiérarchie > .defaultmember|  
+|Level|Définissez|\<niveau > .members|  
+|Hierarchy|Membre|\<hiérarchie > .defaultmember|  
 |Membre|Tuple|(\<Membre >)|  
 |Tuple|Membre|\<Tuple > .item(0)|  
 |Tuple|Scalaire|\<Tuple > .value|  

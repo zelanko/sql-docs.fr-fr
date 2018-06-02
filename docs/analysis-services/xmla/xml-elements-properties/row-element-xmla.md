@@ -9,15 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 78539bfa16bfca56cbac10a4d1d9a793f685a333
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 84cf252303832ed157981103ffaede9718949e16
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34576211"
 ---
 # <a name="row-element-xmla"></a>Élément row (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
-  Contient une ligne unique de données pour un élément [root](../../../analysis-services/xmla/xml-elements-properties/root-element-xmla.md) contenant les données sous forme de tableau retournées par un appel de méthode [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md) ou [Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md) .  
+  Contient une ligne unique de données pour un [racine](../../../analysis-services/xmla/xml-elements-properties/root-element-xmla.md) élément qui contient les données sous forme de tableau retournées par une [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md) ou [Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md) appel de méthode.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -30,19 +31,19 @@ ms.lasthandoff: 05/10/2018
 </root>  
 ```  
   
-## <a name="element-characteristics"></a>Caractéristiques de l'élément  
+## <a name="element-characteristics"></a>Caractéristiques de l’élément  
   
 |Caractéristique|Description|  
 |--------------------|-----------------|  
-|Type de données et longueur|Aucune|  
-|Valeur par défaut|Aucune|  
+|Type de données et longueur|None|  
+|Valeur par défaut|None|  
 |Cardinalité|0-n : élément facultatif pouvant apparaître plusieurs fois.|  
   
 ## <a name="element-relationships"></a>Relations entre les éléments  
   
 |Relation|Élément|  
 |------------------|-------------|  
-|Éléments parents|[root](../../../analysis-services/xmla/xml-elements-properties/root-element-xmla.md) (utilisation du type de données [Rowset](../../../analysis-services/xmla/xml-data-types/rowset-data-type-xmla.md) )|  
+|Éléments parents|[racine](../../../analysis-services/xmla/xml-elements-properties/root-element-xmla.md) (à l’aide de la [ensemble de lignes](../../../analysis-services/xmla/xml-data-types/rowset-data-type-xmla.md) type de données)|  
 |Éléments enfants|Un ou plusieurs éléments de colonne.|  
   
 ## <a name="remarks"></a>Notes  
@@ -61,7 +62,7 @@ ms.lasthandoff: 05/10/2018
 </row>  
 ```  
   
- Ou:  
+ - ou -  
   
 ```  
 <row>  
@@ -81,9 +82,9 @@ ms.lasthandoff: 05/10/2018
 </row>  
 ```  
   
- Pour plus d’informations sur la colonne d’affectation de noms et des informations de schéma pour les données tabulaires, consultez [Type d’ensemble de lignes de données & #40 ; XMLA & #41 ; ](../../../analysis-services/xmla/xml-data-types/rowset-data-type-xmla.md).  
+ Pour plus d’informations sur la colonne d’affectation de noms et des informations de schéma pour les données tabulaires, consultez [Type de données d’ensemble de lignes &#40;XMLA&#41;](../../../analysis-services/xmla/xml-data-types/rowset-data-type-xmla.md).  
   
-## <a name="see-also"></a>Voir aussi  
- [Propriétés & #40 ; XMLA & #41 ;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+## <a name="see-also"></a>Voir aussi
+ [Propriétés &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

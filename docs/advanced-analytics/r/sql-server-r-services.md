@@ -7,11 +7,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 24ef28cd5bfb8e09e3f0ac7dbfe46b5838ce029c
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 559309a29944f20f8c006ccc92769f0b2824e3b3
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34585961"
 ---
 # <a name="sql-server-machine-learning-and-r-services-in-database"></a>Apprentissage et R Services (de-de base de données) de l’ordinateur SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -34,7 +35,7 @@ Dans la base de données analytique est conçus pour une intégration étroite a
 
 SQL Server 2016 est R uniquement. SQL Server 2017 prend en charge R et Python. Le tableau suivant décrit les fonctionnalités de chaque version. À l’exception du service SQL Server Launchpad, cette table est identique à celle fournie dans le [article de serveur autonome](r-server-standalone.md).
 
-| Composant |  Description |
+| Composant | Description |
 |-----------|-------------|
 | Service SQL Server Launchpad | Un service qui gère les communications entre les exécutions de R et Python externes et le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance. |
 | Packages R | [RevoScaleR](revoscaler-overview.md) est la bibliothèque principale pour R évolutive avec des fonctions de manipulation de données, de transformation, visualzation et analyse.  <br/>[MicrosoftML (R)](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package) ajoute des algorithmes d’apprentissage automatique pour créer des modèles personnalisés pour l’analyse de texte, l’analyse de l’image et analyse des sentiments. <br/>[mrsdeploy](operationalization-with-mrsdeploy.md) offres web de déploiement du service (dans SQL Server 2017 uniquement). <br/>[olapR](how-to-create-mdx-queries-using-olapr.md) de spécifier des requêtes MDX dans R.|
@@ -124,7 +125,7 @@ Pour tirer parti de la gestion des ressources et les fonctionnalités de sécuri
 **Ressources**
 
 + [Gouvernance des ressources pour R](resource-governance-for-r-services.md)
-+ [Gestion des packages R pour SQL Server](r-package-management-for-sql-server-r-services.md)
++ [Gestion des packages R pour SQL Server](install-additional-r-packages-on-sql-server.md)
 
 ## <a name="see-also"></a>Voir aussi
 

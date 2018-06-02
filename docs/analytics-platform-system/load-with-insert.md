@@ -9,15 +9,16 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: a505a099e239049aab40c616c9e98e44e328537c
-ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
+ms.openlocfilehash: b7a05e5381c2ad687c37926ad449cd6765403ceb
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34585781"
 ---
 # <a name="load-data-with-insert-into-parallel-data-warehouse"></a>Charger des données avec INSERT dans Parallel Data Warehouse
 
-Vous pouvez utiliser l’instruction INSERT tsql pour charger des données dans un SQL Server Parallel Data Warehouse (PDW) distribuées ou table répliquée. Pour plus d’informations sur l’insertion, consultez [insérer](../t-sql/statements/insert-transact-sql.md). Pour les tables répliquées et toutes les colonnes non-distribution dans une table distribuée, PDW utilise SQL Server pour convertir implicitement les valeurs de données spécifiées dans l’instruction pour le type de données de la colonne de destination. Pour plus d’informations sur les règles de conversion de données SQL Server, consultez [de types de données pour SQL](http://msdn.microsoft.com/library/ms191530&#40;v=sql11&#40;.aspx). Toutefois, pour les colonnes de distribution, PDW prend en charge uniquement un sous-ensemble des conversions implicites qui prend en charge de SQL Server. Par conséquent, lorsque vous utilisez l’instruction INSERT pour charger des données dans une colonne de distribution, la source de données doit être spécifié dans un des formats définis dans les tableaux suivants.  
+Vous pouvez utiliser l’instruction INSERT tsql pour charger des données dans un SQL Server Parallel Data Warehouse (PDW) distribuées ou table répliquée. Pour plus d’informations sur l’insertion, consultez [insérer](../t-sql/statements/insert-transact-sql.md). Pour les tables répliquées et toutes les colonnes non-distribution dans une table distribuée, PDW utilise SQL Server pour convertir implicitement les valeurs de données spécifiées dans l’instruction pour le type de données de la colonne de destination. Pour plus d’informations sur les règles de conversion de données SQL Server, consultez [de types de données pour SQL](http://msdn.microsoft.com/library/ms191530\(v=sql11\).aspx). Toutefois, pour les colonnes de distribution, PDW prend en charge uniquement un sous-ensemble des conversions implicites qui prend en charge de SQL Server. Par conséquent, lorsque vous utilisez l’instruction INSERT pour charger des données dans une colonne de distribution, la source de données doit être spécifié dans un des formats définis dans les tableaux suivants.  
   
   
 ## <a name="InsertingLiteralsBinary"></a>Insérer des littéraux dans les types binaires  
@@ -123,8 +124,8 @@ Le tableau suivant définit les formats acceptés et les règles pour insérer d
   
 |Type littéral|Format|Règles de conversion|  
 |------------|------|----------------|
-|Littéral de chaîne dans **entier** format|'nnnnnnnnnnnnnn'<br /><br />Exemple : '321312313123'| Aucun |  
-|Littéral d’entier|nnnnnnnnnnnnnn<br /><br />Exemple : 321312313123| Aucun|  
+|Littéral de chaîne dans **entier** format|'nnnnnnnnnnnnnn'<br /><br />Exemple : '321312313123'| None |  
+|Littéral d’entier|nnnnnnnnnnnnnn<br /><br />Exemple : 321312313123| None|  
 |Littéral décimal|nnnnnn.nnnnn<br /><br />Exemple : 123344.34455|Les valeurs à droite du séparateur décimal sont tronquées.|  
   
 ### <a name="money-and-smallmoney-data-types"></a>types de données Money et smallmoney  
@@ -147,10 +148,10 @@ Le tableau suivant définit les formats acceptés et les règles pour insérer d
   
 |Type littéral|Format|Règles de conversion|  
 |----------------|----------|--------------------|  
-|Littéral de chaîne|Format : « chaîne de caractères'<br /><br />Exemple : 'abc'| Aucun|  
-|Littéral de chaîne Unicode|Format : Chaîne N'character'<br /><br />Exemple : N’ABC »|  Aucun |  
-|Littéral d’entier|Format : nnnnnnnnnnn<br /><br />Exemple : 321312313123| Aucun |  
-|Littéral décimal|Format : nnnnnn.nnnnnnn<br /><br />Exemple : 12344.34455| Aucun |  
+|Littéral de chaîne|Format : « chaîne de caractères'<br /><br />Exemple : 'abc'| None|  
+|Littéral de chaîne Unicode|Format : Chaîne N'character'<br /><br />Exemple : N’ABC »|  None |  
+|Littéral d’entier|Format : nnnnnnnnnnn<br /><br />Exemple : 321312313123| None |  
+|Littéral décimal|Format : nnnnnn.nnnnnnn<br /><br />Exemple : 12344.34455| None |  
 |Money littéral|Format : $nnnnnn.nnnnn<br /><br />Exemple : $123456.99|Le symbole de devise n’est pas inséré avec la valeur. Pour insérer le symbole de devise, insérez la valeur comme un littéral de chaîne. Cela fera correspondre le format de la **dwloader** outil qui traite chaque littéral comme un littéral de chaîne.<br /><br />Des virgules ne sont pas autorisés.<br /><br />Si le nombre de chiffres après la virgule décimale dépasse 2, la valeur est arrondie à la valeur la plus proche. Par exemple, la valeur 123.946789 est insérée en tant que 123.95.<br /><br />Seul le style par défaut 0 (pas de virgule et 2 chiffres après la virgule décimale) est autorisé lors de l’utilisation de la fonction CONVERT pour insérer des littéraux de l’argent.|  
 
   

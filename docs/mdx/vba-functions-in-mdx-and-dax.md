@@ -1,25 +1,20 @@
 ---
 title: Les fonctions VBA dans MDX et DAX | Documents Microsoft
-ms.custom: ''
-ms.date: 01/30/2018
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-ms.assetid: 420452fd-9507-4093-8857-71d3e70d96cc
-caps.latest.revision: 11
-author: Minewiskan
+ms.date: 05/30/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 6dce57c7a8043a8d25b31b389e47763df261baa8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: a9764d4e302a663800bd71a5c7083d985ea230bc
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34582521"
 ---
 # <a name="vba-functions-in-mdx-and-dax"></a>Fonctions VBA dans MDX et DAX
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -68,12 +63,12 @@ ms.lasthandoff: 05/03/2018
 |DoEvents|Non pris en charge||  
 |Environ|Non pris en charge||  
 |EOF|Non pris en charge||  
-|Erreur|Non pris en charge||  
+|Error|Non pris en charge||  
 |Exp|DAX, MDX||  
 |FileAttr|Non pris en charge||  
 |DateHeureFich|Non pris en charge||  
 |LongFich|Non pris en charge||  
-|Filtre|Non pris en charge|**Avertissement** MDX implémente une fonction différente avec le même nom ; la fonction FILTER (Set_Expression, Logical_Expression) retourne le jeu qui résulte du filtrage d’un jeu spécifié selon une condition de recherche à partir des arguments fournis<br /><br /> **Avertissement** DAX implémente une fonction différente avec le même nom ; le filtre (\<table >,\<filtre >) fonction retourne une table qui représente un sous-ensemble d’une autre table ou une expression des arguments fournis|  
+|Filtrer|Non pris en charge|**Avertissement** MDX implémente une fonction différente avec le même nom ; la fonction FILTER (Set_Expression, Logical_Expression) retourne le jeu qui résulte du filtrage d’un jeu spécifié selon une condition de recherche à partir des arguments fournis<br /><br /> **Avertissement** DAX implémente une fonction différente avec le même nom ; le filtre (\<table >,\<filtre >) fonction retourne une table qui représente un sous-ensemble d’une autre table ou une expression des arguments fournis|  
 |Fix|MDX uniquement||  
 |Format (Visual Basic for Applications)|DAX, MDX||  
 |FormatCurrency|Non pris en charge||  
@@ -119,7 +114,7 @@ ms.lasthandoff: 05/03/2018
 |ExtracChaîne|DAX, MDX||  
 |Minute|DAX, MDX||  
 |MIRR|MDX uniquement||  
-|Mois|DAX, MDX||  
+|Month|DAX, MDX||  
 |MonthName|Non pris en charge||  
 |MsgBox|Non pris en charge||  
 |maintenant|DAX, MDX||  

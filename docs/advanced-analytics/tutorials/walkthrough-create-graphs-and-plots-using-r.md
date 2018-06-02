@@ -7,11 +7,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 23ff23c009a002f13a58340af8fc7f85ec1720b3
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 4d4b573bc2aa0cc48e7c158edafa0dd604e6fc87
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34585471"
 ---
 # <a name="create-graphs-and-plots-using-sql-and-r-walkthrough"></a>Créer des graphiques et des graphiques à l’aide de SQL et R (procédure pas à pas)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -97,8 +98,8 @@ En règle générale, les serveurs de base de données bloquent l’accès à In
 
 ## <a name="next-lesson"></a>Leçon suivante
 
-[Créer des fonctionnalités de données à l’aide de R et SQL](/walkthrough-create-data-features.md)
+[Créer des fonctionnalités de données à l’aide de R et SQL](walkthrough-create-data-features.md)
 
 ## <a name="previous-lesson"></a>Leçon précédente
 
-[Résumer les données à l’aide de R](/walkthrough-view-and-summarize-data-using-r.md)
+[Résumer les données à l’aide de R](walkthrough-view-and-summarize-data-using-r.md)

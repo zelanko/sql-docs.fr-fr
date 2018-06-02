@@ -7,11 +7,12 @@ ms.topic: overview
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: d52196007b5a1de4753e9846e4057295113baa7b
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.openlocfilehash: ecd58ee9670724a2732ce8aabc5d9f2c62042995
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34585451"
 ---
 # <a name="what-is-sql-server-machine-learning-services"></a>Nouveautés de SQL Server Machine Learning Services ?
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -31,13 +32,13 @@ Prise en charge pour chaque langue est par le biais des packages Microsoft propr
 
 Étant donné que les packages propriétaires reposent sur les distributions de R et Python open source, script ou code que vous exécutez dans SQL Server peut également appeler des fonctions de base et utiliser des packages tiers compatibles avec la version de langage fournie dans SQL Server (Python 3.5 et versions récentes de R, 3.3.3 actuellement).
 
-| R  | Python |  Description |
+| R  | Python | Description |
 |-----------|----------------|-------------|
 | [RevoScaleR](r/revoscaler-overview.md) | [revoscalepy](python/what-is-revoscalepy.md)   | Fonctions de ces bibliothèques sont parmi les plus couramment utilisées. Transformations de données et la manipulation, synthèse des statistique, la visualisation et de nombreux formulaires d’analyses et de modélisation sont trouvent dans ces bibliothèques. En outre, les fonctions de ces bibliothèques distribue automatiquement les charges de travail entre les cœurs disponibles pour un traitement parallèle, avec la possibilité de fonctionner sur les segments de données qui sont coordonnées et gérées par le moteur de calcul. |
 | [MicrosoftML](using-the-microsoftml-package.md) | [microsoftml](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package) | Pointe algorithmes d’apprentissage pour la personnalisation de l’image, problèmes de classification et bien plus encore. |
-| [olapR](r/how-to-create-mdx-queries-using-olapr.md) | aucun | Générer ou exécuter une requête MDX dans le script R.
-| [sqlRUtils](r/generating-an-r-stored-procedure-for-r-code-using-the-sqlrutils-package.md) | aucun | Fonctions de la mise des scripts R dans T-SQL des procédures stockées, l’inscription d’une procédure stockée avec une base de données et la procédure stockée en cours d’exécution à partir d’un environnement de développement R.
-| [mrsdeploy](operationalization-with-mrsdeploy.md) | aucun | Principalement utilisé sur une installation non SQL Server d’apprentissage Machine, telles que la [(autonome) version](r/r-server-standalone.md). Utilisez ce package pour déployer et d’héberger des services web, de générer des topologies de montée en puissance parallèle avec web dédié et de nœuds de calcul, de basculer entre les sessions locales et distantes, exécutez les diagnostics et bien plus encore. Pour une installation (de-de base de données), utilisez ce package dans une capacité d’un client : par exemple, pour accéder à un service web sur un serveur distant dédié simplement les charges de travail Machine Learning Services en cours d’exécution. |
+| [olapR](r/how-to-create-mdx-queries-using-olapr.md) | none | Générer ou exécuter une requête MDX dans le script R.
+| [sqlRUtils](r/generating-an-r-stored-procedure-for-r-code-using-the-sqlrutils-package.md) | none | Fonctions de la mise des scripts R dans T-SQL des procédures stockées, l’inscription d’une procédure stockée avec une base de données et la procédure stockée en cours d’exécution à partir d’un environnement de développement R.
+| [mrsdeploy](operationalization-with-mrsdeploy.md) | none | Principalement utilisé sur une installation non SQL Server d’apprentissage Machine, telles que la [(autonome) version](r/r-server-standalone.md). Utilisez ce package pour déployer et d’héberger des services web, de générer des topologies de montée en puissance parallèle avec web dédié et de nœuds de calcul, de basculer entre les sessions locales et distantes, exécutez les diagnostics et bien plus encore. Pour une installation (de-de base de données), utilisez ce package dans une capacité d’un client : par exemple, pour accéder à un service web sur un serveur distant dédié simplement les charges de travail Machine Learning Services en cours d’exécution. |
 
 La portabilité de votre code R et Python personnalisé est adressée par l’intermédiaire de la distribution de packages et les interpréteurs de plusieurs produits. Les packages qui sont fournis dans SQL Server sont également disponibles dans plusieurs autres produits et services Microsoft, y compris une version non SQL appelée [Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/). Les clients libres qui incluent des interpréteurs de notre R et Python incluent [Microsoft R Client](https://docs.microsoft.com/machine-learning-server/r-client/what-is-microsoft-r-client) et le [bibliothèques de Python](https://docs.microsoft.com/machine-learning-server/install/python-libraries-interpreter).
 
@@ -101,4 +102,4 @@ Les versions récentes de la documentation de SQL Server sont indépendant de la
 
 **Étape 3 :** ajouter vos packages R et Python favoris et les utiliser avec les packages fournis par Microsoft
 
-+ [Gestion des packages de R pour SQL Server](r/r-package-management-for-sql-server-r-services.md)
++ [Gestion des packages de R pour SQL Server](r/install-additional-r-packages-on-sql-server.md)
