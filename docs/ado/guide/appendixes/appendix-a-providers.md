@@ -21,11 +21,12 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e26659de53d43f14863e0bf83d70f5f6d3dbcfd0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a4cd609a06e0d30e28a451a4308cfec337d47f68
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34707507"
 ---
 # <a name="appendix-a-data-and-service-providers"></a>Annexe a : données et fournisseurs de services
 Cette section traite des trois types de fournisseurs : les fournisseurs de données, les fournisseurs de services et les composants de service. Fournisseurs sont divisés en deux catégories : ceux qui fournissent des données et ceux qui fournissent des services. A *fournisseur de données* possède ses propres données et les expose sous forme de tableau à votre application. A *fournisseur de services* encapsule un service en production et la consommation des données, étendant les fonctionnalités de vos applications ADO. Un fournisseur de services peut être également défini comme un *composant de service*, qui doivent travailler conjointement avec d’autres composants ou fournisseurs de service.
@@ -57,7 +58,7 @@ Cette section traite des trois types de fournisseurs : les fournisseurs de donn
 ## <a name="provider-specific-dynamic-properties"></a>Propriétés dynamiques spécifiques au fournisseur
  Le [propriétés](../../../ado/reference/ado-api/properties-collection-ado.md) collections de la [connexion](../../../ado/reference/ado-api/connection-object-ado.md), [commande](../../../ado/reference/ado-api/command-object-ado.md), et [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objets incluent des propriétés dynamiques spécifiques à la fournisseur. Ces propriétés fournissent des informations sur les fonctionnalités spécifiques au fournisseur au-delà des propriétés intégrées ADO prend en charge.
 
- Après avoir établi la connexion et de création de ces objets, utilisez la [Actualiser](../../../ado/reference/ado-api/refresh-method-ado.md) méthode sur le **propriétés** collection de l’objet pour obtenir les propriétés spécifiques au fournisseur. Reportez-vous à la documentation du fournisseur et le [Guide du programmeur OLE DB](http://msdn.microsoft.com/en-us/3c5e2dd5-35e5-4a93-ac3a-3818bb43bbf8) pour plus d’informations sur ces propriétés dynamiques.
+ Après avoir établi la connexion et de création de ces objets, utilisez la [Actualiser](../../../ado/reference/ado-api/refresh-method-ado.md) méthode sur le **propriétés** collection de l’objet pour obtenir les propriétés spécifiques au fournisseur. Reportez-vous à la documentation du fournisseur et le [Guide du programmeur OLE DB](http://msdn.microsoft.com/3c5e2dd5-35e5-4a93-ac3a-3818bb43bbf8) pour plus d’informations sur ces propriétés dynamiques.
 
 ## <a name="service-providers"></a>Fournisseurs de services
  Pour utiliser un fournisseur de services, vous devez fournir un mot clé. Vous devez également être conscient des propriétés dynamiques spécifiques au fournisseur associées à chaque fournisseur de service. Les détails spécifiques au fournisseur sont répertoriés pour chaque fournisseur de service est actuellement disponible à partir de Microsoft :

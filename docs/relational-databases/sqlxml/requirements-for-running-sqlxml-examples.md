@@ -22,10 +22,11 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 9318904e6cf1509118711db228e30a7266647610
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34708717"
 ---
 # <a name="requirements-for-running-sqlxml-examples"></a>Configuration requise pour l'exécution des exemples SQLXML
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -39,6 +40,6 @@ ms.lasthandoff: 05/03/2018
   
 -   MDAC 2.6 ou version ultérieure  
   
- Dans de nombreux exemples, les modèles sont utilisés pour spécifier des requêtes XPath par rapport au schéma de mappage XSD. Pour plus d’informations, consultez [à l’aide des schémas XSD annotés dans les requêtes & #40 ; SQLXML 4.0 & #41 ; ](../../relational-databases/sqlxml/annotated-xsd-schemas/using-annotated-xsd-schemas-in-queries-sqlxml-4-0.md).  
+ Dans de nombreux exemples, les modèles sont utilisés pour spécifier des requêtes XPath par rapport au schéma de mappage XSD. Pour plus d’informations, consultez [à l’aide des schémas XSD annotés dans les requêtes &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml/annotated-xsd-schemas/using-annotated-xsd-schemas-in-queries-sqlxml-4-0.md).  
   
   

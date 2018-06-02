@@ -32,10 +32,11 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: b054765ab3fe626d1eb8360691a56da17b3174c0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34707397"
 ---
 # <a name="sqlxml-40-net-framework-support---using-diffgrams-to-modify-data"></a>SQLXML 4.0 pour Microsoft .NET Framework prise en charge - l’utilisation de DiffGrams pour modifier des données
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -45,16 +46,16 @@ ms.lasthandoff: 05/03/2018
 >  Cette section fournit présente brièvement les DiffGrams et donne des exemples illustrant leur utilisation. Elle suppose que vous connaissez bien les DiffGrams dans le .NET Framework. Cette documentation porte principalement sur les problèmes liés aux DiffGrams spécifiques à SQLXML.  
   
 ## <a name="in-this-section"></a>Dans cette section  
- [Introduction aux DiffGrams dans SQLXML 4.0](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/diffgram/introduction-to-diffgrams-in-sqlxml-4-0.md)  
+ [Introduction aux DiffGrams dans SQLXML 4.0](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/diffgram/introduction-to-diffgrams-in-sqlxml-4-0.md)  
  Fournit des informations de base sur les Diffgrams.  
   
- [Exemples de DiffGram & #40 ; SQLXML 4.0 & #41 ;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/diffgram/diffgram-examples-sqlxml-4-0.md)  
+ [Exemples de DiffGram &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/diffgram/diffgram-examples-sqlxml-4-0.md)  
  Fournit des exemples d'utilisation de Diffgrams.  
   
- [Exécution d’un DiffGram à l’aide d’ADO & #40 ; SQLXML 4.0 & #41 ;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/diffgram/executing-a-diffgram-by-using-ado-sqlxml-4-0.md)  
+ [Exécution d’un DiffGram à l’aide d’ADO &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/diffgram/executing-a-diffgram-by-using-ado-sqlxml-4-0.md)  
  Fournit un exemple d'exécution d'un Diffgram avec des objets ADO (ActiveX Data Object).  
   
- [Exécution d’un DiffGram à l’aide de SQLXML de Classes managées](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/diffgram/executing-a-diffgram-by-using-sqlxml-managed-classes.md)  
+ [Exécution d’un DiffGram à l’aide des classes managées SQLXML](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/diffgram/executing-a-diffgram-by-using-sqlxml-managed-classes.md)  
  Fournit un exemple d'exécution d'un Diffgram avec des classes managées SQLXML.  
   
   

@@ -8,11 +8,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 694cbb2a6addc89f40dd6d9670768ad13a84ef3f
-ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
+ms.openlocfilehash: 11b9e58c583712d8ee5ae70f4dbb98b6c175239c
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34707687"
 ---
 # <a name="upgrade-machine-learning-r-and-python-components-in-sql-server-instances"></a>Mise à niveau machine learning (R et Python) des composants dans les instances de SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -26,30 +27,26 @@ Liaison ne modifie pas les notions de base de votre installation : intégration
 > [!NOTE]
 > Liaison s’applique uniquement les instances (de-de base de données). Liaison s’applique pas à une installation (autonome).
 
-**SQL Server 2017**
+**Considérations relatives à la liaison SQL Server 2017**
 
 Pour SQL Server 2017 Machine Learning Services, vous pouvez envisager de liaison uniquement quand Microsoft Machine Learning Server commence à offrir des packages supplémentaires ou des versions plus récentes sur ce que vous ont déjà.
 
-**SQL Server 2016**
+**Considérations relatives à la liaison SQL Server 2016**
 
-Pour les clients de SQL Server 2016 R Services, il existe deux chemins d’accès pour l’obtention de nouvelles et mises à jour des packages R. Un implique la mise à niveau vers SQL Server 2017 ; la seconde, liaison et le serveur Microsoft Machine Learning.
+Pour SQL Server 2016 R Services fournit des clients, la liaison de mise à jour des packages R, les nouveaux packages ne fait pas partie de l’installation d’origine et de modèles préformés, qui peut plus être actualisé à chaque nouvelle version majeure et mineure du serveur de Microsoft Machine Learning. Liaison ne donne pas une prise en charge de Python, qui est une fonctionnalité de SQL Server 2017. 
 
-Mise à niveau vers SQL Server 2017 vous Obtient les packages R sur les versions incluses dans cette version, ainsi que les fonctionnalités de Python. Vous pouvez également liaison vous mis à jour les packages R, qui peuvent plus être actualisées à chaque nouvelle version majeure et mineure du serveur de Microsoft Machine Learning. 
+## <a name="version-map"></a>Mappage de version
 
-Liaison ne donne pas une prise en charge de Python, qui est une fonctionnalité de SQL Server 2017. 
+Le tableau suivant est un mappage de version, affichant des versions de package sur véhicules de version afin que vous pouvez déterminer les chemins d’accès de la mise à niveau potentional lorsque vous liez à Microsoft Machine Learning Server (anciennement appelé R Server avant l’ajout de la prise en charge de Python à compter de MLS 9.2.1). 
 
-**Mises à niveau du composant disponibles via Microsoft Machine Learning Server**
-
-Le tableau suivant est un mappage de version, indiquant la version installée avec SQL Server, avec les éventuelles mises à jour lorsque vous liez à Microsoft Machine Learning Server (précédemment appelé R Server avant l’ajout de la prise en charge de Python à partir de MLS 9.2.1). 
-
-Notez que liaison ne garantit pas la version récente de R ou Anaconda. Lorsque vous liez au serveur de Microsoft Machine Learning, vous obtenez la version de R ou Python installée via le programme d’installation, ce qui peut ou ne peut pas être la dernière version disponible sur le web.
+Notez que liaison ne garantit pas la version récente de R ou Anaconda. Lorsque vous liez à Microsoft Machine Learning serveur (MLS), vous obtenez la version de R ou Python installée via le programme d’installation, qui ne peut pas être la dernière version disponible sur le web.
 
 [**SQL Server 2016 R Services**](../install/sql-r-services-windows-install.md)
 
-Composant |Version initiale | R Server 9.0.1 | R Server 9.1 | MLS 9.2.1 | MLS 9.3 |
+Composant |Version initiale | [R Server 9.0.1](https://docs.microsoft.com/machine-learning-server/install/r-server-install-windows) | [R Server 9.1](https://docs.microsoft.com/machine-learning-server/install/r-server-install-windows) | [MLS 9.2.1](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install) | [MLS 9.3](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install) |
 ----------|----------------|----------------|--------------|---------|-------|
 Microsoft R Open (MRO) sur R | R 3.2.2     | R 3.3.2   |R 3.3.3   | R 3.4.1  | R 3.4.3 |
-[RevoScaleR](https://docs.microsoft.com/achine-learning-server/r-reference/revoscaler/revoscaler) | 8.0.3  | 9.0.1 |  9.1 |  9.2.1 |  9.3 |
+[RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) | 8.0.3  | 9.0.1 |  9.1 |  9.2.1 |  9.3 |
 [MicrosoftML](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package)| néant | 9.0.1 |  9.1 |  9.2.1 |  9.3 |
 [modèles préformés](https://docs.microsoft.com/machine-learning-server/install/microsoftml-install-pretrained-models)| néant | 9.0.1 |  9.1 |  9.2.1 |  9.3 |
 [sqlrutils](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/sqlrutils)| néant | 1.0 |  1.0 |  1.0 |  1.0 |
@@ -266,7 +263,7 @@ Vous avez ajouté des autres packages tiers ou open source à votre bibliothèqu
 
 ### <a name="parameters"></a>Paramètres
 
-|Nom| Description|
+|Nom   |Description|
 |------|------|
 |*list*| Affiche une liste de tous les ID d’instances de bases de données SQL sur l’ordinateur actuel|
 |*bind*| Met à niveau l’instance de base de données SQL spécifiée vers la version la plus récente de R Server, et garantit que l’instance obtient automatiquement les mises à niveau ultérieures de R Server|
@@ -278,7 +275,7 @@ Vous avez ajouté des autres packages tiers ou open source à votre bibliothèqu
 
 Programme d’installation MLS et SqlBindR retournent les codes d’erreur suivants et les messages.
 
-|Code d'erreur  | Boîte de           | Détails               |
+|Code d'erreur  | Message           | Détails               |
 |------------|-------------------|-----------------------|
 |Erreur 0 de liaison | OK (réussite) | Liaison transmis sans erreur. |
 |Erreur 1 de liaison | Arguments non valides | Erreur de syntaxe. |
@@ -301,7 +298,7 @@ Si vous mettez à niveau Microsoft R Server 9.0.1, la version de SqlBindR.exe po
 
 Une version ultérieure de SqlBindR automatiquement restaurer les fonctions R d’origine, en éliminant la nécessité pour la réinstallation des composants de R ou ré-appliquer le correctif. Toutefois, vous devez installer les mises à jour du package de R qui ont peut-être été ajoutées après l’installation initiale.
 
-Si vous avez utilisé les rôles de gestion de package à installer et partager le package, cette tâche est beaucoup plus facile : vous pouvez utiliser des commandes R pour synchroniser les packages installés dans le système de fichiers à l’aide d’enregistrements dans la base de données et vice versa. Pour plus d’informations, consultez [gestion des packages R pour SQL Server](r-package-management-for-sql-server-r-services.md).
+Si vous avez utilisé les rôles de gestion de package à installer et partager le package, cette tâche est beaucoup plus facile : vous pouvez utiliser des commandes R pour synchroniser les packages installés dans le système de fichiers à l’aide d’enregistrements dans la base de données et vice versa. Pour plus d’informations, consultez [gestion des packages R pour SQL Server](install-additional-r-packages-on-sql-server.md).
 
 ### <a name="problems-with-multiple-upgrades-from-sql-server"></a>Problèmes avec plusieurs mises à niveau à partir de SQL Server
 

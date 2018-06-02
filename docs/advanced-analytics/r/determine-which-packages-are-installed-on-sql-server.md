@@ -4,27 +4,28 @@ description: Déterminer la version du package R et Python, vérifier l’instal
 ms.custom: ''
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 05/08/2018
+ms.date: 05/29/2018
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 21975b4a59cbfaf1e3a203bc732543144856633f
-ms.sourcegitcommit: df382099ef1562b5f2d1cd506c1170d1db64de41
+ms.openlocfilehash: 85ea4658ca8b60fc24d7e4f7849de1655eab6082
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/12/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34707887"
 ---
-#  <a name="get-r-and-python-package-information-on-sql-server"></a>Obtenir des informations de package de R et Python sur SQL Server
+#  <a name="get-r-and-python-package-information"></a>Obtenir des informations sur le package R et Python
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Parfois, lorsque vous travaillez avec plusieurs environnements ou les installations de R ou Python, vous devez vérifier que le code que vous exécutez est à l’aide de l’environnement attendu pour Python ou que l’espace de travail correct pour R. Par exemple, si vous avez mis à niveau les composants à l’aide de la liaison d’apprentissage automatique, le chemin d’accès à la bibliothèque R peut être dans un dossier autre que celui de la valeur par défaut. En outre, si vous installez R ou une instance du serveur autonome, vous pouvez avoir plusieurs bibliothèques R sur votre ordinateur.
+Parfois, lorsque vous travaillez avec plusieurs environnements ou les installations de R ou Python, vous devez vérifier que le code que vous utilisez est à l’aide de l’environnement attendu pour Python ou l’espace de travail correct pour R. Par exemple, si vous avez mis à niveau les composants par le biais d’apprentissage automatique [liaison](use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md), le chemin d’accès à la bibliothèque R peut être dans un dossier autre que celui de la valeur par défaut. En outre, si vous installez R ou une instance du serveur autonome, vous pouvez avoir plusieurs bibliothèques R sur votre ordinateur.
 
-Exemples de cet article vous montrent comment obtenir le chemin d’accès et la version de la bibliothèque qui est utilisée par SQL Server.
+Les exemples de scripts R et Python dans cet article vous montrent comment obtenir le chemin d’accès et la version des packages utilisé par SQL Server.
 
-## <a name="get-the-current-r-library"></a>Obtenir la bibliothèque R en cours
+## <a name="get-the-r-library-location"></a>Obtenir l’emplacement de la bibliothèque R
 
-Pour **R** dans n’importe quelle version de SQL Server, exécutez l’instruction suivante pour vérifier que la bibliothèque par défaut pour l’instance actuelle :
+Pour n’importe quelle version de SQL Server, exécutez l’instruction suivante pour vérifier la [bibliothèque de package par défaut R](installing-and-managing-r-packages.md) pour l’instance actuelle :
 
 ```sql
 EXECUTE sp_execute_external_script  
@@ -34,7 +35,7 @@ WITH RESULT SETS (([DefaultLibraryName] VARCHAR(MAX) NOT NULL));
 GO
 ```
 
-Si vous le souhaitez, vous pouvez utiliser rxSqlLibPaths dans les versions plus récentes de RevoScaleR dans SQL Server 2017 Machine Learning Services ou [R Services mis R au moins RevoScaleR 9.0.1](use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md). Cette procédure stockée retourne le chemin d’accès de la bibliothèque de l’instance et la version de RevoScaleR utilisé par SQL Server :
+Si vous le souhaitez, vous pouvez utiliser [rxSqlLibPaths](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsqllibpaths) dans les versions plus récentes de RevoScaleR dans SQL Server 2017 Machine Learning Services ou [R Services mis R au moins RevoScaleR 9.0.1](use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md). Cette procédure stockée retourne le chemin d’accès de la bibliothèque de l’instance et la version de RevoScaleR utilisé par SQL Server :
 
 ```sql
 EXECUTE sp_execute_external_script
@@ -57,7 +58,7 @@ STDOUT message(s) from external script:
 [1] '9.3.0'
 ```
 
-## <a name="get-the-current-python-library"></a>Obtenir la bibliothèque en cours de Python
+## <a name="get-the-python-library-location"></a>Obtenir l’emplacement de la bibliothèque de Python
 
 Pour **Python** dans SQL Server 2017, exécutez l’instruction suivante pour vérifier que la bibliothèque par défaut pour l’instance actuelle. Cet exemple retourne la liste des dossiers inclus dans les Python `sys.path` variable. La liste inclut le répertoire actif et le chemin d’accès de la bibliothèque standard.
 
