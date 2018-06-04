@@ -20,11 +20,12 @@ author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2017 || = sqlallproducts-allversions
-ms.openlocfilehash: de3984b5005114a2b8644c99706dcce48ab873e0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0e77a1d7e24fa2635b3e699672338e588c1f5c1c
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34707767"
 ---
 # <a name="automatic-tuning"></a>Paramétrage automatique
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -95,10 +96,10 @@ Plans forcés manuellement ne doivent pas être forcés à forever, parce que le
 
 Dans [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], vous pouvez rechercher les régressions de choix de plan à l’aide de vues système de magasin de requêtes. Dans [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)], le [!INCLUDE[ssde_md](../../includes/ssde_md.md)] détecte et présente des régressions de choix de plan potentiels et les actions recommandées qui doivent être appliquées dans le [sys.dm_db_tuning_recommendations &#40;Transact-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md) vue. La vue affiche des informations sur le problème, l’importance du problème et des détails tels que la requête identifiée, l’ID du plan de régression, l’ID du plan qui a été utilisé en tant que ligne de base pour la comparaison et le [!INCLUDE[tsql_md](../../includes/tsql_md.md)] instruction qui peut être exécutée pour résoudre le problème.
 
-| Type | description | datetime | score | détails | … |
+| Type | description | DATETIME | score | détails | … |
 | --- | --- | --- | --- | --- | --- |
-| `FORCE_LAST_GOOD_PLAN` | Temps processeur passé de 4 ms à 14 ms | 3/17/2017 | 83 | `queryId` `recommendedPlanId` `regressedPlanId` `T-SQL` |   |
-| `FORCE_LAST_GOOD_PLAN` | Temps processeur passé de ms 37 à 84 ms | 3/16/2017 | 26 | `queryId` `recommendedPlanId` `regressedPlanId` `T-SQL` |   |
+| `FORCE_LAST_GOOD_PLAN` | Temps processeur passé de 4 ms à 14 ms | 3/17/2017 | 83 | `queryId` `recommendedPlanId` `regressedPlanId` `T-SQL`) |   |
+| `FORCE_LAST_GOOD_PLAN` | Temps processeur passé de ms 37 à 84 ms | 3/16/2017 | 26 | `queryId` `recommendedPlanId` `regressedPlanId` `T-SQL`) |   |
 
 Certaines colonnes de cette vue sont décrits dans la liste suivante :
  - Type de l’action recommandée - `FORCE_LAST_GOOD_PLAN`.
@@ -165,7 +166,7 @@ Recherche l’ensemble optimal d’index qui améliorent les performances des re
 
 En plus de la détection, [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] peuvent appliquer automatiquement les recommandations identifiées. Si vous trouvez que les règles intégrées améliorent les performances de votre base de données, vous pouvez laisser [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] gérer automatiquement les index.
 
-Pour activer le réglage automatique dans la base de données SQL Azure et permettent de gérer entièrement votre charge de travail de réglage automatique, consultez [activer le réglage automatique dans la base de données SQL Azure à l’aide du portail Azure](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-automatic-tuning-enable).
+Pour activer le réglage automatique dans la base de données SQL Azure et permettent de gérer entièrement votre charge de travail de réglage automatique, consultez [activer le réglage automatique dans la base de données SQL Azure à l’aide du portail Azure](https://docs.microsoft.com/azure/sql-database/sql-database-automatic-tuning-enable).
 
 Lorsque le [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] applique une recommandation de CREATE INDEX ou DROP INDEX, il analyse automatiquement les performances des requêtes qui sont affectés par l’index. Nouvel index est conservé uniquement si les performances des requêtes concernées sont améliorées. L’index supprimé sera automatiquement recréé s’il existe des requêtes qui s’exécutent plus lentement en raison de l’absence de l’index.
 
@@ -177,7 +178,7 @@ Actions requises pour créer des index nécessaires dans [!INCLUDE[ssazure_md](.
 
 Sans la gestion automatique des index, l’utilisateur doit interroger manuellement [sys.dm_db_missing_index_details &#40;Transact-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-details-transact-sql.md) afin de retrouver les index qui peut améliorer les performances, créer des index à l’aide des détails fourni dans cette vue et surveiller les performances de la requête manuellement. Afin de trouver l’index doivent être supprimés, les utilisateurs doivent surveiller opérationnel statistiques des index à l’index de recherche rarement utilisée.
 
-[!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] simplifie ce processus. [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] analyse de votre charge de travail, identifie les requêtes qui peuvent être exécutées plus rapidement avec un nouvel index et identifie les index non utilisés ou en double. Trouver les informations d’identification d’index doit être modifié sur [trouver des recommandations d’index dans le portail Azure](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-advisor-portal).
+[!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] simplifie ce processus. [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] analyse de votre charge de travail, identifie les requêtes qui peuvent être exécutées plus rapidement avec un nouvel index et identifie les index non utilisés ou en double. Trouver les informations d’identification d’index doit être modifié sur [trouver des recommandations d’index dans le portail Azure](https://docs.microsoft.com/azure/sql-database/sql-database-advisor-portal).
 
 ## <a name="see-also"></a>Voir aussi  
  [MODIFICATION de base de données ensemble AUTOMATIC_TUNING &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)   
