@@ -41,7 +41,7 @@ Cet article fournit des informations sur les outils disponibles pour l’utilisa
 |[MSSQL-cli](mssql-cli.md)|MSSQL-cli est un outil de ligne de commande interactif pour l’exécution de requêtes SQL Server. **MSSQL-cli s’exécute sur Windows, Mac OS et Linux**|
 | [Visual Studio Code](https://code.visualstudio.com/)| Après avoir installé Visual Studio Code, vous devez installer le [mssql extension](https://marketplace.visualstudio.com/items?itemName=ms-mssql.mssql) pour le développement de Microsoft SQL Server, base de données SQL Azure et SQL Data Warehouse. **Code Visual Studio s’exécute sur Windows et Linux macOS**.|
 
-## <a name="which-tool-should-i-choose"></a>Quels Outils dois-je choisir ?
+## <a name="which-tool-should-i-choose"></a>Quel outil dois-je choisir ?
 
 - Vous souhaitez gérer une instance de SQL Server ou de la base de données, dans un éditeur non activable sur Windows, Linux ou Mac ? Choisissez [[!INCLUDE[name-sos](../includes/name-sos.md)]](../sql-operations-studio/download.md)
 - Vous souhaitez gérer une instance de SQL Server ou de la base de données sur Windows avec prise en charge complète de l’interface graphique utilisateur ? Choisissez [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md)
