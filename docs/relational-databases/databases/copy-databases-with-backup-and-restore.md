@@ -29,13 +29,14 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32931094"
 ---
 # <a name="copy-databases-with-backup-and-restore"></a>Copier des bases de données avec la sauvegarde et la restauration
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   Dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], vous pouvez créer une base de données en restaurant une sauvegarde d'une base de données utilisateur créée à l'aide de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ou version ultérieure. Cependant, les sauvegardes des bases de données **master**, **model** et **msdb** créées avec une version antérieure de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne peuvent pas être restaurées par [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Par ailleurs, les sauvegardes [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ne peuvent pas être restaurées par les versions antérieures de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
->**IMPORTANT !** SQL Server 2016 utilise un chemin d’accès par défaut différent de celui des versions précédentes. Par conséquent, pour restaurer des sauvegardes d'une base de données créée à l'emplacement par défaut de versions antérieures, vous devez utiliser l'option MOVE. Pour plus d'informations sur le nouveau chemin par défaut, consultez [File Locations for Default and Named Instances of SQL Server](../../sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md). Pour plus d'informations sur le déplacement des fichiers d'une base de données, consultez la section « Déplacement des fichiers d'une base de données » dans les pages suivantes de cette rubrique.  
+>**IMPORTANT !** SQL Server 2016 utilise un chemin d’accès par défaut différent de celui des versions précédentes. Par conséquent, pour restaurer des sauvegardes d'une base de données créée à l'emplacement par défaut de versions antérieures, vous devez utiliser l'option MOVE. Pour plus d'informations sur le nouveau chemin par défaut, consultez [Emplacements des fichiers pour les instances par défaut et les instances nommées de SQL Server](../../sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md). Pour plus d'informations sur le déplacement des fichiers d'une base de données, consultez la section « Déplacement des fichiers d'une base de données » dans les pages suivantes de cette rubrique.  
   
 ## <a name="general-steps-for-using-backup-and-restore-to-copy-a-database"></a>Étapes générales de l’utilisation de la sauvegarde et de la restauration pour copier une base de données  
  Lorsque vous utilisez la sauvegarde et la restauration pour copier une base de données vers une autre instance de SQL Server, les ordinateurs source et de destination peuvent correspondre à n’importe quelle plateforme qui exécute SQL Server.  
@@ -140,7 +141,7 @@ D’autres points sont susceptibles d’affecter cette procédure :
   
 ## <a name="see-also"></a>Voir aussi  
  [Copier des bases de données sur d'autres serveurs](../../relational-databases/databases/copy-databases-to-other-servers.md)   
- [File Locations for Default and Named Instances of SQL Server](../../sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md)   
+ [Emplacements des fichiers pour les instances par défaut et les instances nommées de SQL Server](../../sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md)   
  [RESTORE FILELISTONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)   
  [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)  
   
