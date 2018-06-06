@@ -17,6 +17,7 @@ ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32545307"
 ---
 # <a name="new-and-recently-updated-master-data-services-for-sql-server"></a>Nouveau et mis à jour récemment : Master Data Services pour SQL Server
 
