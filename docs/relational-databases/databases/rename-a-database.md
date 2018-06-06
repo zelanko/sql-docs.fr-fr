@@ -20,11 +20,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: f6ffe861f520bd0d580b3be540ad39b622cf4918
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 26021dfab23092edbfdea5ec94e114301695f044
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34582481"
 ---
 # <a name="rename-a-database"></a>Modifier le nom d'une base de données
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -47,7 +48,7 @@ ms.lasthandoff: 05/03/2018
 -   **Follow Up:**  [After renaming a database](#FollowUp)  
 
 > [!NOTE]
-> Pour renommer une base de données dans Azure SQL Database, utilisez l’instruction [ALTER DATABASE (Azure SQL Database)](../../t-sql/statements/alter-database-azure-sql-database.md). Pour renommer une base de données dans Azure SQL Data Warehouse ou Parallel Data Warehouse, utilisez l’instruction [RENAME (Transact-SQL)](/t-sql/statements/rename-transact-sql).
+> Pour renommer une base de données dans Azure SQL Database, utilisez l’instruction [ALTER DATABASE (Azure SQL Database)](../../t-sql/statements/alter-database-azure-sql-database.md). Pour renommer une base de données dans Azure SQL Data Warehouse ou Parallel Data Warehouse, utilisez l’instruction [RENAME (Transact-SQL)](../../t-sql/statements/rename-transact-sql.md).
   
 ##  <a name="BeforeYouBegin"></a> Avant de commencer  
   

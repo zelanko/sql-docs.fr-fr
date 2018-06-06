@@ -16,11 +16,12 @@ caps.latest.revision: 1
 author: haoqian
 ms.author: haoqian
 manager: craigg
-ms.openlocfilehash: bd9c61743812b386d4bcf420debfce6e83fb0778
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d11bd76d4bc8f811cbaa4ea34258b56aaf6d6763
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34470241"
 ---
 # <a name="scale-out-support-for-high-availability-via-sql-server-failover-cluster-instance"></a>Prise en charge de Scale Out pour la haute disponibilité au moyen d’une instance de cluster de basculement SQL Server
 
@@ -62,7 +63,7 @@ Mettez le service Scale Out Master en ligne.
 ![Mettre en ligne](media/bring-online.PNG)
 
 > [!NOTE]
-> Si vous souhaitez effectuer le basculement de SSISDB et du service Scale Out Master séparément, suivez les étapes décrites dans [7. Configurer le rôle du service Scale Out Master du cluster de basculement Windows](scale-out-support-for-high-availability.md#7-configure-the-scale-out-master-service-role-of-the-windows-failover-cluster)
+> Si vous souhaitez effectuer le basculement de SSISDB et du service Scale Out Master séparément, suivez les étapes décrites dans [7. Configurer le rôle du service Scale Out Master du cluster de basculement Windows](scale-out-support-for-high-availability.md#7-configure-the-scale-out-master-service-role-of-the-windows-server-failover-cluster)
 
 ## <a name="7-install-scale-out-workers"></a>7. Installer chaque Scale Out Worker
 Installez Scale Out Worker sur les nœuds Worker. Durant le processus d’installation, spécifiez https://[nom réseau SQL Server]:[port master] pour le point de terminaison master. 

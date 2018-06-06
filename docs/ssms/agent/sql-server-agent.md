@@ -19,11 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 6eacddc4432560bcde519602dd26c2b472b37041
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 80b6776f555fd5bdaa8ed4c4977dc5193a27eba2
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34708937"
 ---
 # <a name="sql-server-agent"></a>SQL Server Agent
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -119,7 +120,7 @@ Un *opérateur* est une personne responsable de la maintenance d'une ou plusieur
 > [!IMPORTANT]  
 > Les options du récepteur de radiomessagerie et **net send** seront supprimées de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent dans une prochaine version de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Évitez d'utiliser ces fonctionnalités dans une nouvelle tâche de développement et prévoyez de modifier les applications qui les utilisent actuellement.  
   
-Pour envoyer des notifications aux opérateurs par e-mail ou radiomessagerie, vous devez configurer [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent afin qu’il utilise la messagerie de base de données. Pour plus d’informations, consultez [Messagerie de base de données](http://msdn.microsoft.com/en-us/9e4563dd-4799-4b32-a78a-048ea44a44c1).  
+Pour envoyer des notifications aux opérateurs par e-mail ou radiomessagerie, vous devez configurer [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent afin qu’il utilise la messagerie de base de données. Pour plus d’informations, consultez [Messagerie de base de données](http://msdn.microsoft.com/9e4563dd-4799-4b32-a78a-048ea44a44c1).  
   
 Un opérateur peut être l'alias d'un groupe d'individus. De cette façon, tous les membres de cet alias sont avertis en une seule fois. Pour plus d’informations, consultez [Opérateurs](../../ssms/agent/operators.md).  
   
@@ -181,9 +182,9 @@ Utilisez les tâches suivantes pour démarrer [!INCLUDE[ssNoVersion](../../inclu
 |Décrit les considérations à prendre en compte lors de la spécification d'un compte pour le service SQL Server Agent.|[Sélectionner un compte pour le service SQL Server Agent](../../ssms/agent/select-an-account-for-the-sql-server-agent-service.md)|  
 |Explique comment utiliser le journal des erreurs de SQL Server Agent.|[Journal des erreurs de SQL Server Agent](../../ssms/agent/sql-server-agent-error-log.md)|  
 |Explique comment utiliser des objets de performances.|[Utiliser des objets de performance](../../ssms/agent/use-performance-objects.md)|  
-|Décrit l'Assistant Plan de maintenance qui est un utilitaire permettant de créer des travaux, des alertes et des opérateurs en vue d'automatiser l'administration d'une instance de SQL Server.|[Utiliser l'Assistant Plan de maintenance](http://msdn.microsoft.com/en-us/db65c726-9892-480c-873b-3af29afcee44)|  
+|Décrit l'Assistant Plan de maintenance qui est un utilitaire permettant de créer des travaux, des alertes et des opérateurs en vue d'automatiser l'administration d'une instance de SQL Server.|[Utiliser l'Assistant Plan de maintenance](http://msdn.microsoft.com/db65c726-9892-480c-873b-3af29afcee44)|  
 |Explique comment automatiser des tâches administratives à l'aide de l'Agent SQL Server.|[Tâches d’administration automatisée &#40;SQL Server Agent&#41;](../../ssms/agent/automated-administration-tasks-sql-server-agent.md)|  
   
 ## <a name="see-also"></a> Voir aussi  
-[Configuration de la surface d'exposition](http://msdn.microsoft.com/en-us/f741169c-1453-4ad2-830b-bf2be27d712f)  
+[Configuration de la surface d'exposition](http://msdn.microsoft.com/f741169c-1453-4ad2-830b-bf2be27d712f)  
   

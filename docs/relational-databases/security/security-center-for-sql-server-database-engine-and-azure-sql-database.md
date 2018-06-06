@@ -24,11 +24,12 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 8e07f44a6d09e0c5416f43c4a9113b633e2aa689
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3ebdcbdde0a274df0240b6e7d182ce600bd62ed7
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34708097"
 ---
 # <a name="security-center-for-sql-server-database-engine-and-azure-sql-database"></a>Centre de sécurité pour le moteur de base de données SQL Server et Azure SQL Database
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -74,7 +75,7 @@ ms.lasthandoff: 05/03/2018
   
 |||  
 |-|-|  
-|**Audit automatisé**<br /><br /> ![security-center-sqlserver](../../relational-databases/performance/media/security-center-sqlserver.png "security-center-sqlserver") [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Audit (au niveau du serveur et de la base de données)<br /><br /> ![security-center-sqldb](../../relational-databases/security/media/security-center-sqldb.png "security-center-sqldb") [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Audit (au niveau de la base de données)<br /><br /> ![security-center-sqldb](../../relational-databases/security/media/security-center-sqldb.png "security-center-sqldb") Détection des menaces| <br /><br /> [SQL Server Audit &#40moteur de base de données&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)<br /><br /> [Audit SQL Database](http://azure.microsoft.com/documentation/articles/sql-database-auditing-get-started/)<br /><br /> [Prise en main de la fonction de détection des menaces de la base de données SQL](https://azure.microsoft.com/documentation/articles/sql-database-threat-detection-get-started/) <br /><br /> [SQL Database Vulnerability Assessment](https://docs.microsoft.com/en-us/azure/sql-database/sql-vulnerability-assessment) |  
+|**Audit automatisé**<br /><br /> ![security-center-sqlserver](../../relational-databases/performance/media/security-center-sqlserver.png "security-center-sqlserver") [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Audit (au niveau du serveur et de la base de données)<br /><br /> ![security-center-sqldb](../../relational-databases/security/media/security-center-sqldb.png "security-center-sqldb") [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Audit (au niveau de la base de données)<br /><br /> ![security-center-sqldb](../../relational-databases/security/media/security-center-sqldb.png "security-center-sqldb") Détection des menaces| <br /><br /> [SQL Server Audit &#40moteur de base de données&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)<br /><br /> [Audit SQL Database](http://azure.microsoft.com/documentation/articles/sql-database-auditing-get-started/)<br /><br /> [Prise en main de la fonction de détection des menaces de la base de données SQL](https://azure.microsoft.com/documentation/articles/sql-database-threat-detection-get-started/) <br /><br /> [SQL Database Vulnerability Assessment](https://docs.microsoft.com/azure/sql-database/sql-vulnerability-assessment) |  
 |**Audit personnalisé**<br /><br /> ![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") Déclencheurs|Implémentation d’un audit personnalisé : création de [déclencheurs DDL](../../relational-databases/triggers/ddl-triggers.md) et de [déclencheurs DML](../../relational-databases/triggers/dml-triggers.md)|  
 |**Conformité**<br /><br /> ![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") Conformité|SQL Server :<br />                        [Critères courants](http://go.microsoft.com/fwlink/?LinkId=616319)<br /><br /> Base de données SQL :<br />                        [Microsoft Azure Trust Center : Conformité par fonctionnalité](http://azure.microsoft.com/support/trust-center/services/)|  
   

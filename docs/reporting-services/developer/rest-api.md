@@ -1,7 +1,7 @@
 ---
 title: Développer avec les API REST pour Reporting Services | Microsoft Docs
 ms.description: The REST API provides programmatic access to the objects in a SQL Server 2017 Reporting Services report server catalog.
-ms.date: 10/19/2017
+ms.date: 05/25/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.component: developer
@@ -14,11 +14,12 @@ ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 5a180e19628ad832b970026422e9b03e7373ecfb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8f2f0959639736379bc28c6add71d09769352fed
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34553830"
 ---
 # <a name="develop-with-the-rest-apis-for-reporting-services"></a>Développer avec les API REST pour Reporting Services
 
@@ -27,6 +28,8 @@ ms.lasthandoff: 05/03/2018
 Microsoft SQL Server 2017 Reporting Services prend en charge les API REST (Representational State Transfer). Les API REST sont des points de terminaison de service prenant en charge des opérations HTTP (méthodes) qui fournissent, créent, récupèrent, mettent à jour ou suppriment l’accès aux ressources d’un serveur de rapports.
 
 L’API REST fournit un accès par programmation aux objets d’un catalogue de serveur de rapports SQL Server 2017 Reporting Services. Parmi ces objets figurent les dossiers, les rapports, les indicateurs de performance clés, les sources de données, les jeux de données, les plans d’actualisation et les abonnements. À l’aide de l’API REST, vous pouvez, par exemple, parcourir l’arborescence des dossiers, découvrir le contenu d’un dossier ou télécharger une définition de rapport. Vous pouvez également créer, mettre à jour et supprimer des objets. Parmi les exemples d’utilisation des objets citons le chargement d’un rapport, l’exécution d’un plan d’actualisation ou la suppression d’un dossier.
+
+[!INCLUDE [GDPR-related guidance](../../includes/gdpr-hybrid-note.md)]
 
 ## <a name="components-of-a-rest-api-requestresponse"></a>Composants d’une demande/réponse d’API REST
 

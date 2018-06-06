@@ -1,7 +1,7 @@
 ---
 title: Configurer la base de données de distribution SQL Server dans un groupe de disponibilité | Microsoft Docs
 ms.custom: ''
-ms.date: 04/19/2018
+ms.date: 05/23/2018
 ms.prod: sql
 ms.reviewer: ''
 ms.suite: sql
@@ -23,11 +23,12 @@ caps.latest.revision: 44
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: a7253c3cc263d653c9e2d86e03da49ead9731e31
-ms.sourcegitcommit: 6fd8a193728abc0a00075f3e4766a7e2e2859139
+ms.openlocfilehash: 11574b8454c425c3f022ed1daf415e71ea317535
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/17/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34473883"
 ---
 # <a name="set-up-replication-distribution-database-in-always-on-availability-group"></a>Configurer la base de données de distribution de réplication dans un groupe de disponibilité AlwaysOn
 
@@ -76,7 +77,6 @@ Une fois qu’une base de données de distribution du groupe de disponibilité a
 - Modifiez les propriétés du serveur de distribution et de la base de données dans tous les réplicas qui se trouvent dans le groupe de disponibilité de base de données.
 - Apportez des modifications aux travaux de réplication à l’aide de procédures stockées msdb ou de SQL Server Management Studio dans tous les réplicas qui se trouvent dans le groupe de disponibilité de base de données.
 - La configuration du serveur de distribution sur le serveur de publication doit être effectuée à l’aide de scripts. L’Assistant Réplication ne peut pas être utilisé. Les Assistants Réplication et les feuilles de propriétés servant d’autres fins sont pris en charge.
-- Le moniteur de réplication et les autres interfaces utilisateur qui se connectent en utilisant le nom de l’écouteur du groupe de disponibilité ne sont plus pris en charge à compter de SQL Server 2017 CU 6. Pour administrer les agents de réplication associés à la base de données de distribution d’un groupe de disponibilité, utilisez les propriétés des travaux et l’historique des travaux.
 - Vous pouvez uniquement configurer le groupe de disponibilité pour les bases de données de distribution à l’aide de scripts.
 - La configuration des bases de données de distribution d’un groupe de disponibilité doit être réalisée comme une nouvelle configuration de réplication. Le remplacement d’une base de données de distribution existante dans un groupe de disponibilité n’est pas pris en charge. En outre, une fois qu’une base de données de distribution est supprimée d’un groupe de disponibilité, elle ne fonctionne plus comme une base de données de distribution valide et doit être supprimée.
 

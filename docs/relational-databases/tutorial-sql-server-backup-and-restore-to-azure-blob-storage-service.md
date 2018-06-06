@@ -17,11 +17,12 @@ caps.latest.revision: 11
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 5aec79dad9d34b8cdd77938b312ca990665c29bb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1c070d081e622982bbead15826914b01a89179e7
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34585621"
 ---
 # <a name="tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service"></a>Didacticiel : Sauvegarde et restauration SQL Server dans le service Stockage Blob Azure
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +37,7 @@ Dans cette leçon, vous allez créer un compte de stockage Azure et un conteneur
 [Leçon 2 : Créer des informations d’identification SQL Server](http://msdn.microsoft.com/library/64f8805c-1ddc-4c96-a47c-22917d12e1ab)  
 Dans cette leçon, vous allez créer des informations d’identification afin de stocker les informations de sécurité utilisées pour accéder au compte de stockage Azure.  
   
-[Leçon 3 : Écrire une sauvegarde de base de données complète dans le service Stockage Blob Azure](https://technet.microsoft.com/en-us/library/jj720552&#40;v=sql.110&#41;.aspx)  
+[Leçon 3 : Écrire une sauvegarde de base de données complète dans le service Stockage Blob Azure](https://technet.microsoft.com/en-us/library/jj720552\(v=sql.110\).aspx)  
 Dans cette leçon, vous allez publier une instruction T-SQL pour écrire une sauvegarde de la base de données AdventureWorks2012 dans le service Stockage Blob Azure.  
   
 [Leçon 4 : Effectuer une restauration d’une sauvegarde de base de données complète](http://msdn.microsoft.com/library/580f76e6-9802-4abc-9043-db6de592c733)  

@@ -3,7 +3,6 @@ title: Option de détection de l’intégrité des bases de données pour le bas
 ms.custom: ''
 ms.date: 04/28/2017
 ms.prod: sql
-ms.prod_service: high-availability
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: high-availability
@@ -19,14 +18,15 @@ helpviewer_keywords:
 - SQL Server
 ms.assetid: d74afd28-25c3-48a1-bc3f-e353bee615c2
 caps.latest.revision: 4
-author: MikeRayMSFT
-ms.author: mikeray
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 179c6d1e4014dc6090adffe795390ae866fbd1f3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 85fcf4c5f16093b51da9ec8cab3cf3da7b16bdc2
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34769965"
 ---
 # <a name="availability-group-database-level-health-detection-failover-option"></a>Option de détection de l’intégrité au niveau base de données du groupe de disponibilité pour le basculement
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -15,11 +15,12 @@ caps.latest.revision: 20
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 1be44e3e1f30aab2be4c446e6efd23610b9ae68b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a0bc8e10c310ed490ae64022a5c002b66e104a9c
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34550860"
 ---
 # <a name="rsreportserverconfig-configuration-file"></a>Fichier de configuration RSReportServer.config
 Le fichier [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]**RsReportServer.config** stocke les paramètres utilisés par le service Web Report Server et le traitement en arrière-plan. Toutes les applications [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] s'exécutent au sein d'un processus unique qui lit les paramètres de configuration stockés dans le fichier RSReportServer.config. Les serveurs de rapports en mode natif et en mode SharePoint utilisent le fichier RSReportServer.config. Toutefois, les deux modes n'utilisent pas les mêmes paramètres dans le fichier de configuration. La version en mode SharePoint du fichier est moins volumineuse car de nombreux paramètres du mode SharePoint sont stockés dans des bases de données de configuration SharePoint plutôt que dans le fichier. Cette rubrique décrit le fichier de configuration par défaut installé en mode natif ou en mode SharePoint, et certains paramètres et comportements importants qui sont contrôlés par le fichier de configuration.  
@@ -182,7 +183,7 @@ Pour plus d’informations sur la modification du fichier, consultez [Modifier u
 |Paramètre|Description|Mode|  
 |-------------|-----------------|----------|  
 |**ReportServerUrl**|Spécifie l’URL du serveur de rapports auquel se connecte le portail web. Ne modifiez cette valeur que si vous configurez le portail web pour qu’il se connecte à un serveur de rapports dans une autre instance ou sur un ordinateur distant.|N,S|  
-|**ReportBuilderTrustLevel**|Ne modifiez pas cette valeur ; elle n'est pas configurable. Dans [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] et versions ultérieures, le Générateur de rapports s’exécute uniquement en **FullTrust**. Pour plus d’informations, consultez [Configurer l’accès au Générateur de rapports](../../reporting-services/report-server/configure-report-builder-access.md) . Pour plus d’informations sur la suppression du mode de confiance partielle, consultez [Fonctionnalités supprimées de SQL Server Reporting Services dans SQL Server 2016](../../reporting-services/discontinued-functionality-to-sql-server-reporting-services-in-sql-server.md).|N,S|  
+|**ReportBuilderTrustLevel**|Ne modifiez pas cette valeur ; elle n'est pas configurable. Dans [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] et versions ultérieures, le Générateur de rapports s’exécute uniquement en **FullTrust**. Pour plus d’informations sur la suppression du mode de confiance partielle, consultez [Fonctionnalités supprimées de SQL Server Reporting Services dans SQL Server 2016](../../reporting-services/discontinued-functionality-to-sql-server-reporting-services-in-sql-server.md).|N,S|  
 |**PageCountMode**|Pour le portail web uniquement, ce paramètre spécifie si le serveur de rapports calcule le nombre de pages avant le rendu du rapport ou pendant l’affichage de ce dernier. Les valeurs possibles sont **Estimate** (par défaut) et **Actual**. Utilisez **Estimate** pour calculer le nombre de pages du rapport pendant que l’utilisateur le consulte. Initialement, le nombre de pages est défini à 2 (pour la page actuelle plus une page supplémentaire), mais cette valeur s'ajuste au fur et à mesure que l'utilisateur navigue parmi les pages du rapport. Utilisez **Actual** si vous souhaitez calculer le nombre de pages à l’avance avant que le rapport ne s’affiche. **Actual** est fourni pour la compatibilité descendante. Notez que, si vous affectez **Actual** à **PageCountMode**, le rapport entier doit être traité pour permettre l’obtention d’un nombre de pages valide, ce qui accroît le temps d’attente avant que le rapport ne soit affiché.|N,S|  
   
 ##  <a name="bkmk_extensions"></a> Extensions (fichier RSReportServer.config) en mode natif  
