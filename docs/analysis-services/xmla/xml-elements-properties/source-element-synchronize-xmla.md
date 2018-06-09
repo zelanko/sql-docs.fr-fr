@@ -13,7 +13,7 @@ ms.openlocfilehash: 40afa5695c1f3629f9d88054d3d7129f95af240b
 ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/02/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34576401"
 ---
 # <a name="source-element-synchronize-xmla"></a>Élément Source (commande Synchronize) (XMLA)

@@ -1,8 +1,6 @@
 ---
 title: Définition des Options de projet (DB2ToSQL) | Documents Microsoft
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-db2
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,11 +16,12 @@ caps.latest.revision: 5
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 82cfce0e662130c38c8c3040d7366045d0d3fccd
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 48c434d30623d7b293fc4fef0cb3d42a737b5a5b
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34775985"
 ---
 # <a name="setting-project-options-db2tosql"></a>Définition des Options de projet (DB2ToSQL)
 Pour chaque projet SSMA, vous pouvez définir les options de niveau projet. Ces options déterminent la conversion de l’objet, lors du chargement de l’objet de paramètres de migration des données et d’interface utilisateur. Avant de convertir des objets à [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ou migrer des données dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], vérifiez que les options de configuration sont appropriées pour le projet.  
@@ -44,7 +43,7 @@ SSMA a cinq jeux de paramètres du projet :
   
 Il comprend quatre modes de configuration de ces paramètres :  
   
--   Par défaut  
+-   Valeur par défaut  
   
 -   Optimistic  
   

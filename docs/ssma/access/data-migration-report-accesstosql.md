@@ -1,8 +1,6 @@
 ---
 title: Rapport de Migration de données (AccessToSQL) | Documents Microsoft
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-access
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,11 +16,12 @@ caps.latest.revision: 4
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 65c7dc7ea2a28a8960fe498a1a03bb338a1e41f6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: abe41ca0672776faae966d375daca718c6769434
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34774985"
 ---
 # <a name="data-migration-report-accesstosql"></a>Rapport de Migration de données (AccessToSQL)
 Le **rapport de Migration de données** boîte de dialogue s’affiche après la migration des données à [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
@@ -31,7 +30,7 @@ Le **rapport de Migration de données** boîte de dialogue s’affiche après la
 **État**  
 Indique l’état de la migration des données à partir de la source de la base de données cible.  
   
-**De**  
+**From**  
 La table source.  
   
 **Pour**  

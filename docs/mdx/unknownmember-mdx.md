@@ -1,6 +1,6 @@
 ---
 title: UnknownMember (MDX) | Documents Microsoft
-ms.date: 05/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -9,15 +9,15 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: b74454c00f48a36b963e6c7f5b7b1bdf4e2ea44e
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 84eda6f42b674ebde8793605816f98e82af350d8
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34582211"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34743358"
 ---
 # <a name="unknownmember-mdx"></a>UnknownMember (MDX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   Retourne le membre inconnu associé à un niveau ou un membre.  
   
@@ -40,7 +40,7 @@ Hierarchy_Expression.UnknownMember
  Expression MDX (Multidimensional Expressions) valide qui retourne une hiérarchie.  
   
 ## <a name="remarks"></a>Notes  
- [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Crée un membre inconnu pour associer des données de table de faits à une hiérarchie lorsque la hiérarchie n’est pas connue. Le membre inconnu peut se trouver à l'un des niveaux suivants :  
+ Analysis Services crée un membre inconnu pour associer des données de table de faits à une hiérarchie lorsque la hiérarchie n’est pas connue. Le membre inconnu peut se trouver à l'un des niveaux suivants :  
   
 -   Au niveau supérieur des hiérarchies d'attribut qui ne sont pas agrégées.  
   

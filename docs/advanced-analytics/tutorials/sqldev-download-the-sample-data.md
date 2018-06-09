@@ -1,26 +1,28 @@
 ---
-title: Leçon 1 Télécharger les exemples de données | Documents Microsoft
+title: Exemples de données leçon 1 téléchargement et les scripts incorporés R (SQL Server Machine Learning) | Documents Microsoft
+description: Le didacticiel expliquant comment incorporer R dans SQL Server procédures stockées et fonctions T-SQL
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 06/07/2018
 ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: a87d307dafa733e449c6ec893ece21645fe65640
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 74a60a95da4fb701f3862c36e35a4bada6ef933b
+ms.sourcegitcommit: b52b5d972b1a180e575dccfc4abce49af1a6b230
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35249832"
 ---
-# <a name="lesson-1-download-the-sample-data"></a>Leçon 1 : Télécharger les exemples de données
+# <a name="lesson-1-download-data-and-scripts"></a>Leçon 1 : Télécharger des données et des scripts
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Cet article fait partie d’un didacticiel pour les développeurs SQL sur la façon d’utiliser R dans SQL Server.
 
 Dans cette étape, vous allez télécharger l’exemple de dataset et le [!INCLUDE[tsql](../../includes/tsql-md.md)] script des fichiers qui sont utilisés dans ce didacticiel. Les données et les fichiers de script sont partagés sur GitHub, mais le script PowerShell va télécharger les fichiers de script et de données dans un répertoire local de votre choix.
 
-## <a name="download-the-data-and-scripts"></a>Télécharger les données et les scripts
+## <a name="download-tutorial-files-from-github"></a>Télécharger les fichiers du didacticiel à partir de Github
 
 1.  Ouvrez une console de commande Windows PowerShell.
   
@@ -64,4 +66,4 @@ Dans cette étape, vous allez télécharger l’exemple de dataset et le [!INCLU
 
 ## <a name="previous-lesson"></a>Leçon précédente
 
-[Analytique de R dans base de données pour les développeurs SQL](../tutorials/sqldev-in-database-r-for-sql-developers.md)
+[Analytique de R incorporé pour les développeurs SQL](../tutorials/sqldev-in-database-r-for-sql-developers.md)

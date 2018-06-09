@@ -13,7 +13,7 @@ ms.openlocfilehash: b9ad13a08b6afa19b59dbdaf8d43686c13649a43
 ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/02/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34574343"
 ---
 # <a name="xml-elements---objects---discoverresponse"></a>XML éléments - objets - DiscoverResponse

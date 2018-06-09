@@ -1,6 +1,6 @@
 ---
 title: Utilisation d’Expressions de membre | Documents Microsoft
-ms.date: 05/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -9,19 +9,19 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: bdf16151dac1e55e6fe41d76078b5fc409fd36d3
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 7abc83ae3483afedaa540c8fdcff0383af6ae994
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34581531"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34743769"
 ---
 # <a name="using-member-expressions"></a>Utilisation d'expressions de membre
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   Une expression de membre contient un identificateur de membre, une fonction membre ou une expression pouvant être convertie en membre.  
   
- Les identificateurs de membre sont disponibles dans plusieurs formats. La forme la plus simple d'un identificateur de membre se compose du nom du membre. Par exemple :  
+ Les identificateurs de membre sont disponibles dans plusieurs formats. La forme la plus simple d'un identificateur de membre se compose du nom du membre. Exemple :  
   
 ```  
 SELECT Amount ON 0  

@@ -1,8 +1,6 @@
 ---
 title: L’exécution de la Console SSMA (AccessToSQL) | Documents Microsoft
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-access
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,11 +16,12 @@ caps.latest.revision: 25
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 630e58111b82485b0e7567b972f05227fc26921e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e871f2dd71c4c348067555e03c45a151f001d933
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34773995"
 ---
 # <a name="executing-the-ssma-console-accesstosql"></a>L’exécution de la Console SSMA (AccessToSQL)
 Microsoft vous fournit un ensemble robuste de commandes de script de fichier et les options de ligne de commande pour exécuter et contrôler les activités SSMA. Les sections qui en découlent décrit en détail le même.  
@@ -30,7 +29,7 @@ Microsoft vous fournit un ensemble robuste de commandes de script de fichier et 
 ## <a name="project--script-file-commands"></a>Commandes de Script de fichier projet  
 Les commandes de projet gèrent la création de projets, ouvrir, enregistrer et les projets en cours de fermeture.  
   
-**Command**  
+**Commande**  
   
 créer à nouveau projet : crée un projet SSMA.  
   
@@ -77,7 +76,7 @@ Est de l’attribut 'Remplacer-if-exists' **false** par défaut.
   
 Est de l’attribut 'type de projet' **sql-server-2008** par défaut.  
   
-**Command**  
+**Commande**  
   
 projet ouvert : ouvre un projet existant.  
   
@@ -100,7 +99,7 @@ projet ouvert : ouvre un projet existant.
 ```  
 **Remarque :** application Console de SSMA pour Access prend en charge la compatibilité descendante. Vous ne pourrez pas ouvrir les projets créés par une version précédente de SSMA.  
   
-**Command**  
+**Commande**  
   
 enregistrer le projet : enregistre le projet de migration.  
   
@@ -111,7 +110,7 @@ enregistrer le projet : enregistre le projet de migration.
 ```xml  
 <save-project/>  
 ```  
-**Command**  
+**Commande**  
   
 projet de fermer : ferme le projet de migration.  
   
@@ -137,7 +136,7 @@ Le **l’authentification windows** et **port** paramètres ne sont pas applicab
   
 Pour plus d’informations sur « Créer des fichiers de Script », consultez [création de fichiers de Script &#40;AccessToSQL&#41;](../../ssma/access/creating-script-files-accesstosql.md).  
   
-**Command**  
+**Commande**  
   
 se connecter--base de données source  
   
@@ -154,7 +153,7 @@ Définition de serveur est récupérée à partir de l’attribut de nom défini
 ```xml  
 <connect-source-database  server="<server-unique-name>"/>  
 ```  
-**Command**  
+**Commande**  
   
 charge--base de données access : utilisé pour charger des fichiers de base de données access  
   
@@ -165,7 +164,7 @@ charge--base de données access : utilisé pour charger des fichiers de base de
 ```xml  
 <load-access-database  database-file="<Access-database>"/>  
 ```  
-ou  
+ou Gestionnaire de configuration  
   
 ```xml  
 <load-access-database>  
@@ -176,7 +175,7 @@ ou
   
 </load-access-database>  
 ```  
-**Command**  
+**Commande**  
   
 force-charge-source/cible-base de données  
   
@@ -199,7 +198,7 @@ Nécessite un ou plusieurs nœuds de la métabase en tant que paramètre de lign
   
   metabase="<source/target>"/>  
 ```  
-ou  
+ou Gestionnaire de configuration  
   
 ```xml  
 <force-load>  
@@ -208,7 +207,7 @@ ou
   
 </force-load>  
 ```  
-**Command**  
+**Commande**  
   
 reconnecter--base de données source  
   
@@ -223,7 +222,7 @@ reconnecter--base de données source
 ```xml  
 <reconnect-source-database  server="<server-unique-name>"/>  
 ```  
-**Command**  
+**Commande**  
   
 se connecter--base de données cible  
   
@@ -240,7 +239,7 @@ Définition de serveur est récupérée à partir de l’attribut de nom défini
 ```xml  
 <connect-target-database  server="<server-unique-name>"/>  
 ```  
-**Command**  
+**Commande**  
   
 reconnecter--base de données cible  
   
@@ -259,7 +258,7 @@ reconnecter--base de données cible
 ## <a name="report-script-file-commands"></a>Commandes de fichier de Script de rapport  
 Les commandes de rapports génèrent des rapports sur les performances de diverses activités de la Console de SSMA.  
   
-**Command**  
+**Commande**  
   
 Générer--rapport d’évaluation  
   
@@ -312,7 +311,7 @@ Générer--rapport d’évaluation
   
 />  
 ```  
-ou  
+ou Gestionnaire de configuration  
   
 ```xml  
 <generate-assessment-report  
@@ -334,7 +333,7 @@ Les commandes de Migration de convertir le schéma de base de données cible au 
   
 La sortie de console par défaut définissant pour les commandes de migration est le rapport de sortie « Complète » avec aucun rapport d’erreur détaillé : résumé uniquement sur le nœud racine d’arborescence objet source.  
   
-**Command**  
+**Commande**  
   
 convert-schema  
   
@@ -384,7 +383,7 @@ convert-schema
   
 />  
 ```  
-ou  
+ou Gestionnaire de configuration  
   
 ```xml  
 <convert-schema  
@@ -399,7 +398,7 @@ ou
   
 </convert-schema>  
 ```  
-**Command**  
+**Commande**  
   
 migrer des données  
   
@@ -444,7 +443,7 @@ migrer des données
   
 </migrate-data>  
 ```  
-ou  
+ou Gestionnaire de configuration  
   
 ```xml  
 <migrate-data  
@@ -457,7 +456,7 @@ ou
   
   report-errors="true" verbose="true"/>  
 ```  
-**Command**  
+**Commande**  
   
 tables de lien : cette commande lie la table source (Access) à la table cible.  
   
@@ -474,7 +473,7 @@ tables de lien : cette commande lie la table source (Access) à la table cible.
   
 </link-tables>  
 ```  
-ou  
+ou Gestionnaire de configuration  
   
 ```xml  
 <link-tables>  
@@ -483,7 +482,7 @@ ou
   
 </link-tables>  
 ```  
-**Command**  
+**Commande**  
   
 tables dissocier : cette commande supprime la table source (Access) à partir de la table cible.  
   
@@ -500,7 +499,7 @@ tables dissocier : cette commande supprime la table source (Access) à partir d
   
 </unlink-tables>  
 ```  
-ou  
+ou Gestionnaire de configuration  
   
 ```xml  
 <unlink-tables>  
@@ -513,7 +512,7 @@ ou
 ## <a name="migration-preparation-script-file-commands"></a>Commandes de fichier de Script de préparation migration  
 La commande de préparation de Migration lance un mappage de schéma entre les bases de données source et cible.  
   
-**Command**  
+**Commande**  
   
 schéma de mappage : le mappage de schéma de base de données source vers le schéma cible.  
   
@@ -536,7 +535,7 @@ Les commandes de la facilité de gestion permettent de synchroniser les objets d
   
 La sortie de console par défaut définissant pour les commandes de migration est le rapport de sortie « Complète » avec aucun rapport d’erreur détaillé : résumé uniquement sur le nœud racine d’arborescence objet source.  
   
-**Command**  
+**Commande**  
   
 synchroniser la cible  
   
@@ -579,7 +578,7 @@ synchroniser la cible
   
 />  
 ```  
-ou  
+ou Gestionnaire de configuration  
   
 ```xml  
 <synchronize-target  
@@ -588,7 +587,7 @@ ou
   
   object-type="category"/>  
 ```  
-ou  
+ou Gestionnaire de configuration  
   
 ```xml  
 <synchronize-target>  
@@ -601,7 +600,7 @@ ou
   
 </synchronize-target>  
 ```  
-**Command**  
+**Commande**  
   
 actualisation de base de données  
   
@@ -644,7 +643,7 @@ Nécessite un ou plusieurs nœuds de la métabase en tant que paramètre de lign
   
 />  
 ```  
-ou  
+ou Gestionnaire de configuration  
   
 ```xml  
 <refresh-from-database  
@@ -653,7 +652,7 @@ ou
   
   object-type="category"/>  
 ```  
-ou  
+ou Gestionnaire de configuration  
   
 ```xml  
 <refresh-from-database>  
@@ -666,7 +665,7 @@ ou
 ## <a name="script-generation-script-file-commands"></a>Commandes de fichier de Script de génération script  
 La génération du Script de commandes aident à enregistrer la sortie de console dans un fichier de script.  
   
-**Command**  
+**Commande**  
   
 en tant que script de sauvegarde  
   
@@ -703,7 +702,7 @@ Nécessite un ou plusieurs nœuds de la métabase en tant que paramètre de lign
   
 />  
 ```  
-ou  
+ou Gestionnaire de configuration  
   
 ```xml  
 <save-as-script  

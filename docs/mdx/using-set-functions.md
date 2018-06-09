@@ -1,6 +1,6 @@
 ---
 title: À l’aide des fonctions de jeu | Documents Microsoft
-ms.date: 05/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -9,15 +9,15 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: a042092cfcddb985b29e7b0c98612f07c68ac2d0
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: ca9c5e1a3e110e1f1f2f14e9bd9b52e245d457a6
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34582281"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34743668"
 ---
 # <a name="using-set-functions"></a>Utilisation de fonctions de jeu
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   Une fonction de jeu récupère un jeu à partir d'une dimension, d'une hiérarchie, ou d'un niveau, ou encore en parcourant les emplacements absolus et relatifs des membres contenus dans ces objets et en construisant des jeux de différentes manières.  
   

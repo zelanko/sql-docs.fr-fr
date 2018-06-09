@@ -11,7 +11,7 @@ ms.openlocfilehash: 20a3742c9dfc956accd902539524724cac3f9b8c
 ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/02/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34563857"
 ---
 # <a name="known-issues-in-machine-learning-services"></a>Problèmes connus dans les Services de Machine Learning
@@ -175,7 +175,7 @@ Pour les autres problèmes connus qui peuvent affecter des solutions R, consulte
 
 ### <a name="access-denied-warning-when-executing-r-scripts-on-sql-server-in-a-non-default-location"></a>Accès refusé avertissement lors de l’exécution des scripts R sur SQL Server dans un emplacement non par défaut
 
-Si l’instance de SQL Server a été installé à un emplacement non définis par défaut, comme à l’extérieur de la `Program Files` dossier, l’avertissement ACCESS_DENIED est déclenché lorsque vous essayez d’exécuter des scripts qui installent un package. Par exemple :
+Si l’instance de SQL Server a été installé à un emplacement non définis par défaut, comme à l’extérieur de la `Program Files` dossier, l’avertissement ACCESS_DENIED est déclenché lorsque vous essayez d’exécuter des scripts qui installent un package. Exemple :
 
 > *Dans `normalizePath(path.expand(path), winslash, mustWork)` : chemin d’accès [2] = « ~ExternalLibraries/R/8/1 » : l’accès est refusé.*
 
@@ -321,7 +321,7 @@ Par exemple, supposons que vous avez défini deux fonctions, `f` et `g`, dans vo
 
 Si vous rencontrez ce problème, vous pouvez le résoudre en incorporant la définition de `f` dans votre définition de `g`, n’importe où avant l’appel habituel de `g` par `f`.
 
-Par exemple :
+Exemple :
 
 ```r
 f <- function(x) { 2*x * 3 }

@@ -13,7 +13,7 @@ ms.openlocfilehash: 921afc6d17a0eddcba48e5a6a6064810a3b3b6ef
 ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/02/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34575011"
 ---
 # <a name="xml-elements---methods---discover"></a>Découvrir les éléments XML de - méthodes suivantes :

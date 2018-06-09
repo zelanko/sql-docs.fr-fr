@@ -1,8 +1,6 @@
 ---
 title: Génération de rapports (MySQLToSQL) | Documents Microsoft
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-mysql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -20,11 +18,12 @@ caps.latest.revision: 6
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: aaa0b1d90463f1e6b85a3423c13e4f785621c817
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 12be453eebf7e5ac3539b235d5b35d2f9a0b52c3
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34776185"
 ---
 # <a name="generating-reports-mysqltosql"></a>Génération de rapports (MySQLToSQL)
 Les rapports de certaines activités effectuées à l’aide des commandes sont générés dans la Console SSMA au niveau d’arborescence objet.  
@@ -37,8 +36,8 @@ Utilisez la procédure suivante pour générer des rapports :
   
     ||||  
     |-|-|-|  
-    |**Sl. Non.**|**Command**|**Titre de rapport**|  
-    |1|Générer--rapport d’évaluation|AssessmentReport&lt;n&gt;. XML|  
+    |**Sl. Non.**|**Commande**|**Titre de rapport**|  
+    | 1|Générer--rapport d’évaluation|AssessmentReport&lt;n&gt;. XML|  
     |2|convert-schema|SchemaConversionReport&lt;n&gt;.XML|  
     |3|migrer des données|DataMigrationReport&lt;n&gt;. XML|  
     |4|instruction CONVERT-sql|ConvertSQLReport&lt;n&gt;.XML|  
@@ -55,7 +54,7 @@ Utilisez la procédure suivante pour générer des rapports :
     ||||  
     |-|-|-|  
     |**Sl. Non.**|**Commande et paramètre**|**Description de la sortie**|  
-    |1|verbose = « false »|Génère un rapport de synthèse de l’activité.|  
+    | 1|verbose = « false »|Génère un rapport de synthèse de l’activité.|  
     |2|verbose = « true »|Génère un rapport d’état résumées et détaillées pour chaque activité.|  
   
     > [!NOTE]  
@@ -66,7 +65,7 @@ Utilisez la procédure suivante pour générer des rapports :
     ||||  
     |-|-|-|  
     |**Sl. Non.**|**Commande et paramètre**|**Description de la sortie**|  
-    |1|signaler les erreurs = « false »|Aucun détail d’erreur / avertissement / messages d’informations.|  
+    | 1|signaler les erreurs = « false »|Aucun détail d’erreur / avertissement / messages d’informations.|  
     |2|signaler les erreurs = « true »|Erreur détaillée / avertissement / messages d’informations.|  
   
     > [!NOTE]  

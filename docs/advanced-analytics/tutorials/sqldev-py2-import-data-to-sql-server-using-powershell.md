@@ -2,23 +2,24 @@
 title: Étape 2 importer des données dans SQL Server à l’aide de PowerShell | Documents Microsoft
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 06/07/2018
 ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: d85419c06915cc7d96c9713053239c27c70a9f0b
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 14606b42d17acdd56527795d2d475a263d918d7d
+ms.sourcegitcommit: b52b5d972b1a180e575dccfc4abce49af1a6b230
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35249992"
 ---
 # <a name="step-2-import-data-to-sql-server-using-powershell"></a>Étape 2 : Importer des données vers SQL Server à l’aide de PowerShell
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Cet article fait partie d’un didacticiel, [analytique Python de la base de données pour les développeurs SQL](sqldev-in-database-python-for-sql-developers.md). 
 
-Dans cette étape, vous exécutez un des scripts téléchargés, pour créer les objets de base de données requis pour la procédure pas à pas. Le script crée plusieurs procédures stockées et télécharge les exemples de données à une table dans la base de données que vous avez spécifié.
+Dans cette étape, vous exécutez un des scripts téléchargés pour créer les objets de base de données requis pour la procédure pas à pas. Le script crée plusieurs procédures stockées et télécharge les exemples de données à une table dans la base de données que vous avez spécifié.
 
 ## <a name="create-database-objects-and-load-data"></a>Créer des objets de base de données et charger des données
 
@@ -34,6 +35,16 @@ Le script effectue les actions suivantes :
 
 Si vous rencontrez des problèmes, vous pouvez utiliser le script en tant que référence pour effectuer les étapes manuellement.
 
+### <a name="modify-the-script-to-use-a-trusted-windows-identity"></a>Modifiez le script pour utiliser une identité Windows approuvée
+
+Par défaut, le script suppose une connexion utilisateur de base de données SQL Server et le mot de passe. Si vous êtes db_owner sous votre compte d’utilisateur Windows, vous pouvez utiliser votre identité Windows pour créer les objets. Pour ce faire, ouvrez `RunSQL_SQL_Walkthrough.ps1` dans un éditeur de code à ajouter **`-T`** insertion de commande à l’utilitaire bcp en bloc :
+
+```text
+bcp $db_tb in $csvfilepath -t ',' -S $server -f taxiimportfmt.xml -F 2 -C "RAW" -b 200000 -U $u -P $p -T
+```
+
+### <a name="run-the-script"></a>Exécutez le script
+
 1. Ouvrez une invite de commandes PowerShell en tant qu’administrateur. Si vous n’êtes pas déjà dans le dossier créé à l’étape précédente, accédez au dossier, puis exécutez la commande suivante :
   
     ```ps
@@ -44,8 +55,8 @@ Si vous rencontrez des problèmes, vous pouvez utiliser le script en tant que r�
 
     - Le nom ou l’adresse d’un [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] instance où la Machine Learning Services avec Python a été installé.
     - Les nom d’utilisateur et mot de passe d’un compte sur l’instance. Le compte que vous utilisez doit avoir la possibilité de créer des bases de données, créer des tables et des procédures stockées et en bloc des données de charge pour les tables. 
-    - Si vous ne fournissez pas de nom d’utilisateur et mot de passe, votre identité de Windows est utilisée pour se connecter à SQL Server, et vous sont promus pour entrer un mot de passe.
-    - Le chemin et le nom du fichier de données exemple que vous venez de télécharger. Par exemple : `C:\temp\pysql\nyctaxi1pct.csv`
+    - Si vous ne fournissez pas de nom d’utilisateur et mot de passe, votre identité Windows est utilisée pour se connecter à SQL Server.
+    - Le chemin et le nom du fichier de données exemple que vous venez de télécharger. Par exemple, `C:\temp\pysql\nyctaxi1pct.csv`
 
     > [!NOTE]
     > Pour charger les données correctement, le fichier xmlrw.dll bibliothèque doit être dans le même dossier que bcp.exe.

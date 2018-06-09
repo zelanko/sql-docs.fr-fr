@@ -1,24 +1,26 @@
 ---
-title: Leçon 6 tiens du modèle R | Documents Microsoft
+title: Leçon 6 résultats potentiels Predict à l’aide des modèles R (SQL Server Machine Learning) | Documents Microsoft
+description: Le didacticiel expliquant comment incorporer R dans SQL Server procédures stockées et fonctions T-SQL
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 06/08/2018
 ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 1503467f1979e2e123f12227cc92ea975b6cd6a3
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 32984626dfac11bd2465cb783c583f6b210f6b68
+ms.sourcegitcommit: b52b5d972b1a180e575dccfc4abce49af1a6b230
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35249852"
 ---
-# <a name="lesson-6-operationalize-the-r-model"></a>Leçon 6 : Mettre le modèle R
+# <a name="lesson-6-predict-potential-outcomes-using-an-r-model-in-a-stored-procedure"></a>Leçon 6 : Prédire les résultats potentiels à l’aide d’un modèle R dans une procédure stockée
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Cet article fait partie d’un didacticiel pour les développeurs SQL sur la façon d’utiliser R dans SQL Server.
 
-Dans cette étape, vous apprenez à *opérationnaliser* à l’aide d’une procédure stockée. Cette procédure stockée peut être appelée directement par d’autres applications, pour effectuer des prédictions sur de nouvelles observations. La procédure pas à pas illustre deux façons d’effectuer le calcul de score à l’aide d’un modèle R dans une procédure stockée :
+Dans cette étape, vous apprenez à utiliser le modèle par rapport aux nouvelles observations pour prédire les résultats potentiels. Le modèle est encapsulé dans une procédure stockée qui peut être appelée directement par d’autres applications. La procédure pas à pas montre plusieurs façons d’effectuer le calcul de score :
 
 - **Mode de score par lot**: utiliser une requête SELECT comme entrée à la procédure stockée. La procédure stockée retourne une table d’observations correspondant aux cas d’entrée.
 
@@ -28,7 +30,7 @@ Tout d’abord, examinons le fonctionnement du calcul de score en général.
 
 ## <a name="basic-scoring"></a>Base de calcul de score
 
-La procédure stockée _PredictTip_ illustre la syntaxe de base pour l’encapsulation d’un appel de prédiction dans une procédure stockée.
+La procédure stockée **PredictTip** illustre la syntaxe de base pour l’encapsulation d’un appel de prédiction dans une procédure stockée.
 
 ```SQL
 CREATE PROCEDURE [dbo].[PredictTip] @inquery nvarchar(max) 
@@ -54,7 +56,7 @@ GO
 
 + L’instruction SELECT Obtient le modèle sérialisé à partir de la base de données et stocke le modèle dans la variable R `mod` pour un traitement supplémentaire à l’aide de R.
 
-+ Les nouveaux cas pour calculer les scores sont obtenues à partir de la [!INCLUDE[tsql](../../includes/tsql-md.md)] requête spécifiée dans `@inquery`, le premier paramètre de la procédure stockée. Lors de la lecture des données de requête, les lignes sont enregistrées dans la trame de données par défaut, `InputDataSet`. Cette trame de données est passée à la fonction `rxPredict` en R, qui génère les scores.
++ Les nouveaux cas pour calculer les scores sont obtenues à partir de la [!INCLUDE[tsql](../../includes/tsql-md.md)] requête spécifiée dans `@inquery`, le premier paramètre de la procédure stockée. Lors de la lecture des données de requête, les lignes sont enregistrées dans la trame de données par défaut, `InputDataSet`. Cette trame de données est transmise à la [rxPredict](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxpredict) fonctionner dans [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler), ce qui génère les scores.
   
     `OutputDataSet<-rxPredict(modelObject = mod, data = InputDataSet, outData = NULL, predVarNames = "Score", type = "response", writeModelVars = FALSE, overwrite = TRUE);`
   
@@ -91,13 +93,13 @@ Examinons maintenant le fonctionnement du calcul de score du lot.
     1  214 0.7 2013-06-26 13:28:10.000   0.6970098661
     ```
 
-    Cette requête peut être utilisée comme entrée pour la procédure stockée, _PredictTipBatchMode_, fourni dans le cadre du téléchargement.
+    Cette requête peut être utilisée comme entrée pour la procédure stockée, **PredictTipMode**, fourni dans le cadre du téléchargement.
 
-2. Prenez une minute pour examiner le code de la procédure stockée _PredictTipBatchMode_ dans [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].
+2. Prenez une minute pour examiner le code de la procédure stockée **PredictTipMode** dans [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].
 
     ```SQL
-    /****** Object:  StoredProcedure [dbo].[PredictTipBatchMode]  ******/
-    CREATE PROCEDURE [dbo].[PredictTipBatchMode] @inquery nvarchar(max)
+    /****** Object:  StoredProcedure [dbo].[PredictTipMode]  ******/
+    CREATE PROCEDURE [dbo].[PredictTipMode] @inquery nvarchar(max)
     AS
     BEGIN
     DECLARE @lmodel2 varbinary(max) = (SELECT TOP 1 model FROM nyc_taxi_models);
@@ -141,7 +143,7 @@ Parfois, vous souhaitez transmettre des valeurs spécifiques à partir d’une a
 
 Dans cette section, vous allez apprendre à créer des prévisions uniques à l’aide d’une procédure stockée.
 
-1. Prenez une minute pour examiner le code de la procédure stockée _PredictTipSingleMode_, inclus dans le téléchargement.
+1. Prenez une minute pour examiner le code de la procédure stockée **PredictTipSingleMode**, qui est inclus dans le cadre du téléchargement.
   
     ```SQL
     CREATE PROCEDURE [dbo].[PredictTipSingleMode] @passenger_count int = 0, @trip_distance float = 0, @trip_time_in_secs int = 0, @pickup_latitude float = 0, @pickup_longitude float = 0, @dropoff_latitude float = 0, @dropoff_longitude float = 0

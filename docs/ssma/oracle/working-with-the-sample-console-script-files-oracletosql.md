@@ -1,8 +1,6 @@
 ---
 title: Travailler avec les fichiers de Script de la Console exemple (OracleToSQL) | Documents Microsoft
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-oracle
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -19,11 +17,12 @@ caps.latest.revision: 9
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: e1f95cff5d19282f32017786851d04a3d3322dc3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f18acd6f1bac8c418c4d3e67845cce52faf0412e
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34778045"
 ---
 # <a name="working-with-the-sample-console-script-files-oracletosql"></a>Travailler avec les fichiers de Script de la Console exemple (OracleToSQL)
 Quelques exemples de fichiers ont été fournis avec le produit pour la référence de l’utilisateur et son utilisation. Cette section décrit la façon de personnaliser ces scripts en fonction des besoins des utilisateurs finaux.  
@@ -84,7 +83,7 @@ Les fichiers de script de console exemple suivants couvrant les différents scé
   
     Mappage de schéma de base de données source vers le schéma cible.  
   
-    **Attribut**  
+    **Attribute**  
   
     -   `source-schema:` Spécifie la base de données source qui nécessite d’être converti.  
   
@@ -98,7 +97,7 @@ Les fichiers de script de console exemple suivants couvrant les différents scé
   
     -   Si l’utilisateur doit évaluer plusieurs objets / bases de données qu’il peut spécifier plusieurs `metabase-object` nœuds, comme illustré dans le `convert-schema` 4 d’exemple de la commande de l’exemple de fichier de script de console.  
   
-    **Attribut**  
+    **Attribute**  
   
     `object-name`: Permet de spécifier la base de données source / nom qui nécessite d’être converti de l’objet. Vérifiez que le correspondant `object-type` est modifié en fonction du type d’objet qui est spécifié dans le `object-name`  
   
@@ -110,7 +109,7 @@ Les fichiers de script de console exemple suivants couvrant les différents scé
   
     -   Si l’utilisateur doit évaluer plusieurs objets / bases de données qu’il peut spécifier plusieurs `metabase-object` nœuds, comme illustré dans le `synchronize-target` 3 d’exemple de la commande de l’exemple de fichier de script de console.  
   
-    **Attribut**  
+    **Attribute**  
   
     `object-name:` Spécifiez la base de données sql server / nom qui nécessite la création de l’objet. Vérifiez que le correspondant `object-type` est modifié en fonction du type d’objet qui est spécifié dans le `object-name`  
   
@@ -122,7 +121,7 @@ Les fichiers de script de console exemple suivants couvrant les différents scé
   
     -   Si l’utilisateur doit évaluer plusieurs objets / bases de données qu’il peut spécifier plusieurs `metabase-object` nœuds, comme illustré dans le `migrate-data` exemple 2 de la commande de l’exemple de fichier de script de console.  
   
-    **Attribut**  
+    **Attribute**  
   
     `object-name:` Spécifie la source de données / tables nom qui nécessite d’être migrée. Vérifiez que le correspondant `object-type` est modifié en fonction du type d’objet qui est spécifié dans le `object-name`  
   

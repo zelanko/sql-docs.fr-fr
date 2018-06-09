@@ -1,6 +1,6 @@
 ---
 title: Instruction CREATE MEMBER (MDX) | Documents Microsoft
-ms.date: 05/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -9,15 +9,15 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 4458554d8b3aa6b0cb87d59629c70a18b609df44
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 432438fe9a6e1b39c849188050b67f816d895187
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34579361"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34742249"
 ---
 # <a name="mdx-data-definition---create-member"></a>Définition de données MDX - créer des membres
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   Crée un membre calculé.  
   
@@ -106,14 +106,14 @@ WHERE ProfitRatio
 ```  
   
 ## <a name="standard-properties"></a>Propriétés standard  
- Chaque membre calculé possède un jeu de propriétés par défaut. Lorsqu’une application cliente est connectée à [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], les propriétés par défaut sont pris en charge, soit disponible pour être pris en charge, comme l’administrateur choisit.  
+ Chaque membre calculé possède un jeu de propriétés par défaut. Lorsqu’une application cliente est connectée à [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], les propriétés par défaut sont pris en charge, soit disponible pour être pris en charge, comme l’administrateur choisit.  
   
  Des propriétés de membre supplémentaires peuvent être disponibles, selon la définition du cube. Les propriétés suivantes représentent des informations relatives au niveau de dimension dans le cube.  
   
 |Identificateur de propriété|Signification|  
 |-------------------------|-------------|  
 |SOLVE_ORDER|Ordre dans lequel le membre calculé sera résolu si un membre calculé fait référence à un autre membre calculé (c'est-à-dire à l'intersection des membres calculés).|  
-|FORMAT_STRING|Chaîne de format de style [!INCLUDE[msCoName](../includes/msconame-md.md)] Office que l'application cliente peut utiliser lors de l'affichage de valeurs de cellule.|  
+|FORMAT_STRING|Une chaîne de format de style Office que l’application cliente peut utiliser lors de l’affichage des valeurs de cellule.|  
 |VISIBLE|Valeur qui indique si le membre calculé est visible dans un ensemble de lignes de schéma. Calculés visibles membres peuvent être ajoutés à un jeu à le [AddCalculatedMembers](../mdx/addcalculatedmembers-mdx.md) (fonction). Une valeur autre que zéro indique que le membre calculé est visible. La valeur par défaut de cette propriété est *Visible*.<br /><br /> Les membres calculés qui ne sont pas visibles (possédant la valeur zéro) sont généralement utilisés comme étapes intermédiaires dans des membres calculés plus complexes. Ces membres calculés peuvent également être référencés par d'autres types de membres, tels que des mesures.|  
 |NON_EMPTY_BEHAVIOR|Mesure ou jeu utilisé pour déterminer le comportement des membres calculés lors de la résolution des cellules vides.<br /><br /> **\*\* Avertissement \* \***  cette propriété est déconseillée. Évitez de l'utiliser. Pour plus d’informations, consultez [Fonctionnalités Analysis Services déconseillées dans SQL Server 2016](../analysis-services/deprecated-analysis-services-features-in-sql-server-2016.md).|  
 |CAPTION|Chaîne que l'application cliente utilise à titre de légende du membre.|  
