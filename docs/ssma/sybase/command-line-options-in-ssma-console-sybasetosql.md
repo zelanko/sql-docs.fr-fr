@@ -3,8 +3,6 @@ title: Options de ligne de commande dans la Console SSMA (SybaseToSQL) | Documen
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-sybase
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ssma
@@ -20,11 +18,12 @@ caps.latest.revision: 11
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 7ca88b6398fd6f46eb4fef7ee38a4d0da5eca85f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4d55867d0563f5f805212806bc3710abaf7804f7
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34778305"
 ---
 # <a name="command-line-options-in-ssma-console-sybasetosql"></a>Options de ligne de commande dans la Console SSMA (SybaseToSQL)
 Microsoft vous fournit un ensemble complet des options de ligne de commande pour exécuter et contrôler les activités SSMA. Les sections qui en découlent décrit en détail le même.  
@@ -92,7 +91,7 @@ Définition de serveur peut être une partie du fichier de connexion de serveur 
 ### <a name="xml-output-option--xxmloutput-xmloutputfile"></a>Option de sortie XML : - x / xmloutput [xmloutputfile]  
 Cette commande est utilisée pour la sortie des messages de sortie de commande au format xml à la console ou dans un fichier xml.  
   
-Il existe deux options pour xmloutput, notamment..,:  
+Il existe deux options pour xmloutput, notamment.., :  
   
 -   Si le chemin d’accès est fourni après le commutateur xmloutput la sortie est redirigée vers le fichier.  
   
