@@ -3,8 +3,6 @@ title: Prise en main de SSMA pour Sybase Console (SybaseToSQL) | Documents Micro
 ms.custom: ''
 ms.date: 09/30/2017
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-sybase
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ssma
@@ -22,11 +20,12 @@ caps.latest.revision: 22
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: d9b401ea1efdfcececbb35a16d7d10b29915e1fc
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0ae06be98a30b6c293ef3625f31ff2ac272c1d8e
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34778545"
 ---
 # <a name="getting-started-with-the-ssma-for-sybase-console-sybasetosql"></a>Prise en main de SSMA pour Sybase Console (SybaseToSQL)
 Cette section décrit la procédure de lancement et de prise en main de SSMA pour Sybase console. Également répertoriés ici sont les conventions utilisées dans une fenêtre de sortie de Console de SSMA classique.  
@@ -64,7 +63,7 @@ Lors de l’exécution des commandes de script SSMA et des options, le programme
   
 Couleur-interprétation de la sortie de console s’affiche dans le tableau suivant :  
   
-|Color| Description|  
+|Couleur|Description|  
 |---------|---------------|  
 |Rouge|Erreur irrécupérable lors de l’exécution|  
 |Gris|Cachet de date et heure, le message à l’utilisateur|  

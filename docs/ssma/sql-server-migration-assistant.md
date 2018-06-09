@@ -3,8 +3,6 @@ title: SQL Server Migration Assistant | Documents Microsoft
 ms.custom: ''
 ms.date: 09/30/2017
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-access
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ssma
@@ -18,11 +16,12 @@ caps.latest.revision: 18
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 1a49b3e1d9516d0276c689b7c61defc80bd2cb9c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a76b6092cfc092c44b6ec023e97b4914520c4ed6
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34778105"
 ---
 # <a name="sql-server-migration-assistant"></a>Assistant de migration SQL Server
 Migration Assistant Microsoft SQL Server (SSMA) est un outil conçu pour automatiser la migration de la base de données vers SQL Server à partir de Microsoft Access, DB2, MySQL, Oracle et SAP ASE.  
@@ -44,11 +43,11 @@ Pour des sources prises en charge, passez en revue les informations sur le centr
 
 SSMA prennent en charge les versions suivantes de la cible.
 
-- SQL Server 2008
-- SQL Server 2008 R2
+- SQL Server 2008
+- SQL Server 2008 R2
 - SQL Server 2012
 - SQL Server 2014
-- SQL Server 2016
+- SQL Server 2016
 - Azure SQL Database
 - SQL Server 2017 sur Windows et Linux (version préliminaire)
 - ** Azure SQL Data Warehouse
@@ -104,4 +103,3 @@ Il peut arriver qu’une fonctionnalité donnée ne doive pas être utilisée di
 Les clients ne doivent pas utiliser d’API non documentées, y compris mais de manière non limitative : les procédures stockées, les procédures stockées étendues, les fonctions, les vues, les tables, les colonnes, les propriétés ou les métadonnées. Support technique Microsoft ne prend pas en charge les bases de données ou des applications qui exploitent ou utilisent des points d’entrée non documentés.  
   
 Les mises à niveau de serveur et de base de données vers les versions ultérieures de SQL Server ne sont pas garanties pour les applications et les bases de données qui exploitent et utilisent des points d’entrée non documentés. L’utilisation des fonctions et fonctionnalités SQL Server doit être limitée à celles qui sont incluses dans la documentation Microsoft SQL Server. Si une fonctionnalité n’est pas documentée dans la documentation Microsoft SQL Server, elle n’est pas considérée comme une partie prise en charge de SQL Server.  
-  

@@ -1,8 +1,6 @@
 ---
 title: Prise en main de SSMA pour MySQL Console (MySQLToSQL) | Documents Microsoft
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-mysql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -21,11 +19,12 @@ caps.latest.revision: 23
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 30fe5fba0bd0b9321c16c72642f29a515320cb63
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 75e189d89c9a1bbc7207521b8156d0f4b56ca759
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34776235"
 ---
 # <a name="getting-started-with-ssma-for-mysql-console-mysqltosql"></a>Prise en main de SSMA pour MySQL Console (MySQLToSQL)
 Cette section décrit la procédure pour lancer et commencer à l’application de console MySQL. Dans la liste, qu’elle contient, sont les conventions utilisées dans une fenêtre de sortie de Console de SSMA classique.  
@@ -63,7 +62,7 @@ Lors de l’exécution des commandes de script SSMA et des options, le programme
   
 Interprétation de couleur de la sortie de console dans le tableau suivant :  
   
-|Color| Description|  
+|Couleur|Description|  
 |---------|---------------|  
 |Rouge|Erreur irrécupérable lors de l’exécution|  
 |Gris|Cachet de date et heure, le message à l’utilisateur|  

@@ -1,41 +1,20 @@
 ---
 title: SELECT FROM &lt;modèle&gt; PREDICTION JOIN (DMX) | Documents Microsoft
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- PREDICTION
-- PREDICTION_JOIN
-- SELECT
-- join
-- FROM
-- PREDICTION JOIN
-dev_langs:
-- DMX
-helpviewer_keywords:
-- prediction joins [DMX]
-- PREDICTION JOIN statement
-- natural prediction joins [DMX]
-- open query predictions
-- singleton query predictions [DMX]
-- SELECT FROM <model> PREDICTION JOIN statement
-ms.assetid: 7ca37fec-4a50-4d79-b1d6-1c7c12176946
-caps.latest.revision: 43
-author: Minewiskan
+ms.date: 06/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: dmx
+ms.topic: conceptual
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 7014d546d0484dcd5d741844a98c8060f925c96c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: f0778a104383f54cf2798c0d6f51f082926b1fd4
+ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34842162"
 ---
 # <a name="select-from-ltmodelgt-prediction-join-dmx"></a>SELECT FROM &lt;modèle&gt; PREDICTION JOIN (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -55,7 +34,7 @@ FROM <model> | <sub select> [NATURAL] PREDICTION JOIN
   
 ## <a name="arguments"></a>Arguments  
  *n*  
- Ce paramètre est facultatif. Entier qui spécifie le nombre de lignes à retourner.  
+ Facultatif. Entier qui spécifie le nombre de lignes à retourner.  
   
  *Sélectionnez la liste d’expressions*  
  Liste séparée par des virgules des identificateurs de colonnes et expressions dérivées du modèle d'exploration de données.  
@@ -70,13 +49,13 @@ FROM <model> | <sub select> [NATURAL] PREDICTION JOIN
  Requête source  
   
  *liste de mappage de jointure*  
- Ce paramètre est facultatif. Expression logique qui compare les colonnes du modèle aux colonnes de la requête source.  
+ Facultatif. Expression logique qui compare les colonnes du modèle aux colonnes de la requête source.  
   
  *Expression de condition*  
- Ce paramètre est facultatif. Condition pour restreindre les valeurs retournées de la liste des colonnes.  
+ Facultatif. Condition pour restreindre les valeurs retournées de la liste des colonnes.  
   
  *expression*  
- Ce paramètre est facultatif. Expression qui retourne une valeur scalaire.  
+ Facultatif. Expression qui retourne une valeur scalaire.  
   
 ## <a name="remarks"></a>Notes  
  La clause ON définit le mappage entre les colonnes de la requête source et les colonnes du modèle d'exploration de données. Ce mappage sert à diriger les colonnes depuis la requête source vers les colonnes du modèle d'exploration de données de sorte que les colonnes puissent être utilisées en valeurs d'entrée pour créer des prédictions. Colonnes dans les \< *liste de mappage de jointure*> sont liées à l’aide d’un signe égal (=), comme indiqué dans l’exemple suivant :  
@@ -211,6 +190,6 @@ NATURAL PREDICTION JOIN
  [SÉLECTIONNEZ &AMP;#40;DMX&AMP;#41;](../dmx/select-dmx.md)   
  [Data Mining Extensions &#40;DMX&#41; instructions de définition de données](../dmx/dmx-statements-data-definition.md)   
  [Data Mining Extensions &#40;DMX&#41; instructions de Manipulation de données](../dmx/dmx-statements-data-manipulation.md)   
- [Les Extensions d’exploration de données & #40 ; DMX & #41 ; Référence des instructions](../dmx/data-mining-extensions-dmx-statements.md)  
+ [Guide de référence des instructions DMX &#40;Data Mining Extensions&#41;](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

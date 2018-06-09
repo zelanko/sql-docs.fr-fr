@@ -1,6 +1,6 @@
 ---
 title: Propriétés du serveur dans Analysis Services | Documents Microsoft
-ms.date: 05/03/2018
+ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: ''
@@ -9,22 +9,24 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: dd37fd44c7bfaff5b338602eb18b0d779ee9e777
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: d70f58bfb5dba352d154f18b4c3db675b69147ad
+ms.sourcegitcommit: 6e55a0a7b7eb6d455006916bc63f93ed2218eae1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35238819"
 ---
 # <a name="server-properties-in-analysis-services"></a>Propriétés du serveur dans Analysis Services
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
+
   Un administrateur [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] peut modifier les propriétés de configuration par défaut du serveur d’une instance [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Chaque instance a ses propriétés de configuration propres, qui sont définies indépendamment des autres instances présentes sur le même serveur.  
   
- Pour configurer le serveur, utilisez SQL Server Management Studio ou modifiez le fichier msmdsrv.ini d’une instance spécifique.  
+ Pour configurer le serveur, utilisez SQL Server Management Studio ou modifier le fichier msmdsrv.ini d’une instance spécifique de SQL Server Analysis Services.  
  
 Les pages de propriétés dans SQL Server Management Studio affichent un sous-ensemble des propriétés susceptibles d’être modifiées. La liste complète des propriétés figure dans le fichier msmdsrv.ini.   
   
 > [!NOTE]  
->  Dans une installation par défaut, msmdsrv.ini se trouve dans le dossier \Program Files\Microsoft SQL Server\MSAS13.MSSQLSERVER\OLAP\Config.
+>  Dans une installation de SQL Server Analysis Services par défaut, msmdsrv.ini peut être trouvé dans le Program Files\Microsoft SQL Server\MSAS13. MSSQLSERVER\OLAP\Config dossier.
 > 
 > Parmi les autres propriétés qui affectent la configuration du serveur figurent les propriétés de configuration de déploiement dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Pour plus d’informations sur ces propriétés, consultez [Spécification de paramètres de configuration pour le déploiement de solutions](../../analysis-services/multidimensional-models/deployment-script-files-solution-deployment-config-settings.md).
  
@@ -64,21 +66,21 @@ Les pages de propriétés dans SQL Server Management Studio affichent un sous-en
 |Rubrique|Description|  
 |-----------|-----------------|  
 |[Propriétés générales](../../analysis-services/server-properties/general-properties.md)|Les propriétés générales sont des propriétés fondamentales et avancées qui définissent notamment le répertoire de données, le répertoire de sauvegarde et d'autres comportements du serveur.|  
-|[Propriétés d’exploration de données](../../analysis-services/server-properties/data-mining-properties.md)|Les propriétés d'exploration de données déterminent les algorithmes d'exploration de données à activer ou à désactiver. Par défaut, tous les algorithmes sont activés.| 
+|[Propriétés de l'exploration de données](../../analysis-services/server-properties/data-mining-properties.md)|Les propriétés d'exploration de données déterminent les algorithmes d'exploration de données à activer ou à désactiver. Par défaut, tous les algorithmes sont activés.| 
 |[Propriétés DAX](../../analysis-services/server-properties/dax-properties.md)|Définit les propriétés liées aux requêtes DAX.|
 |DSO|DSO n'est plus pris en charge. Les propriétés DSO sont ignorées.|  
 |[Propriétés de fonctionnalité](../../analysis-services/server-properties/feature-properties.md)|Les propriétés de fonctionnalité se rapportent à des fonctionnalités de produit, le plus souvent de caractère avancé. Il s'agit notamment de propriétés qui contrôlent les liaisons entre les instances de serveur.|  
-|[FILESTORE, propriété](../../analysis-services/server-properties/filestore-properties.md)|Les propriétés du stockage de fichiers s'adressent uniquement aux utilisateurs expérimentés. Elles contiennent des paramètres avancés de gestion de la mémoire.|  
-|[Propriétés du Gestionnaire de verrous](../../analysis-services/server-properties/lock-manager-properties.md)|Les propriétés du gestionnaire de verrous définissent les comportements du serveur en matière de verrouillage et de délais d'attente. La plupart de ces propriétés s'adressent uniquement aux utilisateurs expérimentés.|  
+|[Propriétés du cache de fichiers](../../analysis-services/server-properties/filestore-properties.md)|Les propriétés du stockage de fichiers s'adressent uniquement aux utilisateurs expérimentés. Elles contiennent des paramètres avancés de gestion de la mémoire.|  
+|[Propriétés du gestionnaire de verrous](../../analysis-services/server-properties/lock-manager-properties.md)|Les propriétés du gestionnaire de verrous définissent les comportements du serveur en matière de verrouillage et de délais d'attente. La plupart de ces propriétés s'adressent uniquement aux utilisateurs expérimentés.|  
 |[Propriétés du journal](../../analysis-services/server-properties/log-properties.md)|Les propriétés du journal contrôlent si des événements sont enregistrés sur le serveur et, dans l'affirmative, à quel emplacement et de quelle façon. Il s'agit en particulier de l'enregistrement des erreurs, des exceptions et des requêtes, de la boîte noire SQL et des traces.|  
 |[Propriétés de mémoire](../../analysis-services/server-properties/memory-properties.md)|Les propriétés de la mémoire contrôlent la façon dont le serveur utilise la mémoire. Elles s'adressent essentiellement aux utilisateurs expérimentés.|  
-|[Propriétés du réseau](../../analysis-services/server-properties/network-properties.md)|Les propriétés réseau contrôlent le comportement du serveur en matière de réseau, et contiennent notamment des paramètres XML binaire et de compression. La plupart de ces propriétés s'adressent uniquement aux utilisateurs expérimentés.|  
+|[Propriétés réseau](../../analysis-services/server-properties/network-properties.md)|Les propriétés réseau contrôlent le comportement du serveur en matière de réseau, et contiennent notamment des paramètres XML binaire et de compression. La plupart de ces propriétés s'adressent uniquement aux utilisateurs expérimentés.|  
 |[Propriétés OLAP](../../analysis-services/server-properties/olap-properties.md)|Les propriétés OLAP contrôlent le traitement des cubes et des dimensions, le traitement différé, la mise en cache des données et le comportement des requêtes. Il s'agit de propriétés fondamentales et de propriétés avancées.|  
 |[Propriétés de sécurité](../../analysis-services/server-properties/security-properties.md)|La section de la sécurité contient des propriétés fondamentales et avancées qui définissent les autorisations d'accès. Il s'agit de paramètres concernant les administrateurs et les utilisateurs.|  
-|[Propriétés du Pool de threads](../../analysis-services/server-properties/thread-pool-properties.md)|Les propriétés du pool de threads contrôlent le nombre de threads que crée le serveur. Il s'agit essentiellement de propriétés avancées.|  
+|[Propriétés du pool de threads](../../analysis-services/server-properties/thread-pool-properties.md)|Les propriétés du pool de threads contrôlent le nombre de threads que crée le serveur. Il s'agit essentiellement de propriétés avancées.|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Gestion d’instances Analysis Services](../../analysis-services/instances/analysis-services-instance-management.md)   
- [Spécification des paramètres de Configuration pour le déploiement de solutions](../../analysis-services/multidimensional-models/deployment-script-files-solution-deployment-config-settings.md)  
+ [Gestion d'instances Analysis Services](../../analysis-services/instances/analysis-services-instance-management.md)   
+ [Spécification de paramètres de configuration pour le déploiement de solutions](../../analysis-services/multidimensional-models/deployment-script-files-solution-deployment-config-settings.md)  
   
   

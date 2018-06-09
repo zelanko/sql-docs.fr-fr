@@ -1,8 +1,6 @@
 ---
 title: Chargement converti objets base de données dans SQL Server (OracleToSQL) | Documents Microsoft
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-oracle
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,11 +16,12 @@ caps.latest.revision: 10
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: a6e65bb6c795cb5216bf32889b6dfe7eb75c2a53
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 26ac7029947dcf826c19851b5988b5e898783f7c
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34777615"
 ---
 # <a name="loading-converted-database-objects-into-sql-server-oracletosql"></a>Chargement converti objets base de données dans SQL Server (OracleToSQL)
 Après avoir converti les schémas Oracle vers SQL Server, vous pouvez charger les objets de base de données résultant dans SQL Server. Vous pouvez avoir créer les objets SSMA, ou vous pouvez les objets de script et exécuter les scripts vous-même. En outre, SSMA vous permet de mettre à jour des métadonnées de la cible avec le contenu de la base de données SQL Server.  

@@ -12,11 +12,12 @@ ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: 26868cfd136f3d06366a47ec7d52fa17e3c8fe39
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+ms.openlocfilehash: ddbe5f25cf3153b3354425fd426798e7061bdf36
+ms.sourcegitcommit: 99e355b71ff2554782f6bc8e0da86e6d9e3e0bef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/19/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34799809"
 ---
 # <a name="always-on-availability-group-failover-on-linux"></a>Basculement du groupe de disponibilité AlwaysOn sur Linux
 
@@ -71,7 +72,7 @@ Lors d’un basculement manuel, le `pcs` commande `move` ou `crm` commande `migr
 - **Exemple RHEL/Ubuntu**
 
    ```bash
-   sudo pcs constraint --full
+   sudo pcs constraint list --full
    ```
 
 - **Exemple SLES**
@@ -80,35 +81,17 @@ Lors d’un basculement manuel, le `pcs` commande `move` ou `crm` commande `migr
    crm config show
    ```
 
-Supprimez la contrainte d’emplacement des basculements futures, y compris le basculement automatique - fonctionner. 
-
-Pour supprimer la contrainte, exécutez la commande suivante : 
-
-- **Exemple RHEL/Ubuntu**
-
-   Dans cet exemple `ag_cluster-master` est le nom de la ressource qui a basculé. 
-
-   ```bash
-   sudo pcs resource clear ag_cluster-master 
-   ```
-
-- **Exemple SLES**
-
-   Dans cet exemple `ag_cluster` est le nom de la ressource qui a basculé. 
-
-   ```bash
-   crm resource clear ag_cluster
-   ```
-
-Vous pouvez aussi supprimer la contrainte d’emplacement en exécutant la commande ci-dessous.  
+Un exemple de la contrainte qui est créé en raison d’un basculement manuel. 
+ `Enabled on: Node1 (score:INFINITY) (role: Master) (id:cli-prefer-ag_cluster-master)`
 
 - **Exemple RHEL/Ubuntu**
 
-   Dans la commande `cli-prefer-ag_cluster-master` ci-dessous figure l’ID de la contrainte à supprimer. `sudo pcs constraint --full` retourne cet ID. 
-
+   Dans la commande `cli-prefer-ag_cluster-master` ci-dessous figure l’ID de la contrainte à supprimer. `sudo pcs constraint list --full` retourne cet ID. 
+   
    ```bash
    sudo pcs constraint remove cli-prefer-ag_cluster-master  
    ```
+   
 - **Exemple SLES**
 
    Dans la commande suivante `cli-prefer-ms-ag_cluster` est l’ID de la contrainte. `crm config show` retourne cet ID. 
@@ -122,7 +105,7 @@ Vous pouvez aussi supprimer la contrainte d’emplacement en exécutant la comma
 >[!NOTE]
 >Comme l’opération de basculement automatique n’ajoute pas de contrainte d’emplacement, aucun nettoyage n’est nécessaire. 
 
-Pour plus d'informations, consultez :
+Pour plus d'informations, consultez :
 - [Red Hat - Managing Cluster Resources](http://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/6/html/Configuring_the_Red_Hat_High_Availability_Add-On_with_Pacemaker/ch-manageresource-HAAR.html) (Red Hat - Gestion des ressources de cluster)
 - [STIMULATEUR - déplacer manuellement les ressources](http://clusterlabs.org/doc/en-US/Pacemaker/1.1-pcs/html/Clusters_from_Scratch/_move_resources_manually.html)
  [SLES ressources - Guide d’Administration](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html#sec.ha.troubleshooting.resource) 
@@ -137,13 +120,13 @@ Ce processus pour forcer le basculement est spécifique à SQL Server sur Linux.
 
 1. Vérifiez que la ressource de groupe de disponibilité n’est pas plus gérée par le cluster. 
 
-      - Définissez les ressources non managées en mode sur le nœud de cluster cible. Cette commande signale que l’agent de ressource pour la surveillance des ressources d’arrêt et la gestion. Par exemple : 
+      - Définissez les ressources non managées en mode sur le nœud de cluster cible. Cette commande signale que l’agent de ressource pour la surveillance des ressources d’arrêt et la gestion. Exemple : 
       
       ```bash
       sudo pcs resource unmanage <resourceName>
       ```
 
-      - Si la tentative de définir le mode de la ressource en mode non managé échoue, supprimez la ressource. Par exemple :
+      - Si la tentative de définir le mode de la ressource en mode non managé échoue, supprimez la ressource. Exemple :
 
       ```bash
       sudo pcs resource delete <resourceName>

@@ -3,8 +3,6 @@ title: La gestion des sauvegardes (SybaseToSQL) | Documents Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-sybase
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ssma
@@ -20,11 +18,12 @@ caps.latest.revision: 5
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 85ccefaddf6e8f0bad35d3a01d1b355f0482db9c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3ca7901e604bfce6649211e87cc7909730640842
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34778951"
 ---
 # <a name="managing-backups-sybasetosql"></a>La gestion des sauvegardes (SybaseToSQL)
 Gestion de sauvegarde Sybase vous permet de sauvegarde et restauration de données de la table avant ou après l’exécution d’un test. Vous pouvez également gérer le contenu de la sauvegarde avec la boîte de dialogue gérer du contenu de sauvegarde.  
@@ -42,7 +41,7 @@ Les boutons suivants sont disponibles dans la boîte de dialogue :
   
 -   Cliquez sur le **Annuler** pour fermer la boîte de dialogue.  
   
-### <a name="restore"></a>Restore  
+### <a name="restore"></a>Restaurer  
 Pour ouvrir la boîte de dialogue de restauration, dans le menu testeur, pointez sur la gestion de sauvegarde Sybase, puis cliquez sur restauration... Vous y trouverez une arborescence contenant les tables disponibles dans la sauvegarde. Sélectionnez une ou plusieurs tables pour restaurer ses données.  
   
 Les boutons suivants sont disponibles dans la boîte de dialogue :  
@@ -78,7 +77,7 @@ Les boutons suivants sont disponibles dans la boîte de dialogue :
   
 -   Cliquez sur le **Annuler** pour fermer la boîte de dialogue.  
   
-### <a name="restore"></a>Restore  
+### <a name="restore"></a>Restaurer  
 Pour ouvrir la boîte de dialogue de restauration, dans le menu testeur point de gestion de sauvegarde SQL Server, la restauration, cliquez sur... Vous y trouverez une arborescence contenant les tables disponibles dans la sauvegarde. Sélectionnez un ou plusieurs table pour restaurer ses données.  
   
 Les boutons suivants sont disponibles dans la boîte de dialogue :  

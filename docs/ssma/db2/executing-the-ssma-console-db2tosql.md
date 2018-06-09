@@ -1,8 +1,6 @@
 ---
 title: L’exécution de la Console SSMA (DB2ToSQL) | Documents Microsoft
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-db2
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,11 +16,12 @@ caps.latest.revision: 7
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 6d9625334272ee1e5addd8838055ff57f56635d7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: abfd3a12482d71f808887b1f3f987d0bd1582c76
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34774805"
 ---
 # <a name="executing-the-ssma-console-db2tosql"></a>L’exécution de la Console SSMA (DB2ToSQL)
 Microsoft vous fournit un ensemble robuste de script de commandes du fichier à exécuter et contrôler les activités SSMA. Les sections qui en découlent décrit en détail le même. L’application console utilise certaines commandes de fichier de script standard comme énuméré dans cette section.  
@@ -30,7 +29,7 @@ Microsoft vous fournit un ensemble robuste de script de commandes du fichier à 
 ## <a name="project-script-file-commands"></a>Commandes de Script de fichier projet  
 Les commandes de projet gèrent la création de projets, ouvrir, enregistrer et les projets en cours de fermeture.  
   
-**Command**  
+**Commande**  
   
 créer à nouveau projet  
   
@@ -65,7 +64,7 @@ Est de l’attribut 'Remplacer-if-exists' **false** par défaut.
   
 Est de l’attribut 'type de projet' **sql-server-2008** par défaut.  
   
-**Command**  
+**Commande**  
   
 projet ouvert  
   
@@ -90,7 +89,7 @@ Ouvre un projet existant.
 ```  
 SSMA pour l’Application de Console DB2 prend en charge la compatibilité descendante. Vous ne pourrez pas ouvrir les projets créés par une version précédente de SSMA.  
   
-**Command**  
+**Commande**  
   
 enregistrer le projet  
   
@@ -103,7 +102,7 @@ Enregistre le projet de migration.
 ```xml  
 <save-project/>  
 ```  
-**Command**  
+**Commande**  
   
 projet de fermer  
   
@@ -128,7 +127,7 @@ Les commandes de connexion de base de données aident à vous connecter à la ba
   
 -   Pour plus d’informations sur « Créer des fichiers de Script », consultez [création de fichiers de Script &#40;OracleToSQL&#41;](../../ssma/oracle/creating-script-files-oracletosql.md).  
   
-**Command**  
+**Commande**  
   
 se connecter--base de données source  
   
@@ -145,7 +144,7 @@ Définition de serveur est récupérée à partir de l’attribut de nom défini
 ```xml  
 <connect-source-database  server="<server-unique-name>"/>  
 ```  
-**Command**  
+**Commande**  
   
 force-charge-source/cible-base de données  
   
@@ -166,7 +165,7 @@ Nécessite un ou plusieurs nœuds de la métabase en tant que paramètre de lign
   
   metabase="<source/target>"/>  
 ```  
-ou  
+ou Gestionnaire de configuration  
   
 ```xml  
 <force-load>  
@@ -175,7 +174,7 @@ ou
   
 </force-load>  
 ```  
-**Command**  
+**Commande**  
   
 reconnecter--base de données source  
   
@@ -190,7 +189,7 @@ reconnecter--base de données source
 ```xml  
 <reconnect-source-database  server="<server-unique-name>"/>  
 ```  
-**Command**  
+**Commande**  
   
 se connecter--base de données cible  
   
@@ -207,7 +206,7 @@ Définition de serveur est récupérée à partir de l’attribut de nom défini
 ```xml  
 <connect-target-database  server="<server-unique-name>"/>  
 ```  
-**Command**  
+**Commande**  
   
 reconnecter--base de données cible  
   
@@ -226,7 +225,7 @@ reconnecter--base de données cible
 ## <a name="report-script-file-commands"></a>Commandes de fichier de Script de rapport  
 Les commandes de rapports génèrent des rapports sur les performances de diverses activités de la Console de SSMA.  
   
-**Command**  
+**Commande**  
   
 Générer--rapport d’évaluation  
   
@@ -279,7 +278,7 @@ Générer--rapport d’évaluation
   
 />  
 ```  
-ou  
+ou Gestionnaire de configuration  
   
 ```xml  
 <generate-assessment-report  
@@ -300,7 +299,7 @@ ou
 ## <a name="migration-script-file-commands"></a>Commandes de fichier de Script de migration  
 Les commandes de Migration de convertir le schéma de base de données cible au schéma source et migre les données vers le serveur cible. La sortie de console par défaut définissant pour les commandes de migration est le rapport de sortie « Complète » avec aucun rapport d’erreur détaillé : résumé uniquement sur le nœud racine d’arborescence objet source.  
   
-**Command**  
+**Commande**  
   
 convert-schema  
   
@@ -351,7 +350,7 @@ convert-schema
   
 />  
 ```  
-ou  
+ou Gestionnaire de configuration  
   
 ```xml  
 <convert-schema  
@@ -366,7 +365,7 @@ ou
   
 </convert-schema>  
 ```  
-**Command**  
+**Commande**  
   
 migrer des données : migre les données source à la cible.  
   
@@ -417,7 +416,7 @@ migrer des données : migre les données source à la cible.
   
 </migrate-data>  
 ```  
-ou  
+ou Gestionnaire de configuration  
   
 ```xml  
 <migrate-data  
@@ -436,7 +435,7 @@ ou
 ## <a name="migration-preparation-script-file-commands"></a>Commandes de fichier de Script de préparation migration  
 La commande de préparation de Migration lance un mappage de schéma entre les bases de données source et cible.  
   
-**Command**  
+**Commande**  
   
 schéma de mappage  
   
@@ -457,7 +456,7 @@ Mappage de schéma de base de données source vers le schéma cible.
   
    sql-server-schema="<target-schema>"/>  
 ```  
-**Command**  
+**Commande**  
   
 schéma de mappage  
   
@@ -484,7 +483,7 @@ Les commandes de la facilité de gestion permettent de synchroniser les objets d
   
 La sortie de console par défaut définissant pour les commandes de migration est le rapport de sortie « Complète » avec aucun rapport d’erreur détaillé : résumé uniquement sur le nœud racine d’arborescence objet source.  
   
-**Command**  
+**Commande**  
   
 synchroniser la cible  
   
@@ -527,7 +526,7 @@ synchroniser la cible
   
 />  
 ```  
-ou  
+ou Gestionnaire de configuration  
   
 ```xml  
 <synchronize-target  
@@ -536,7 +535,7 @@ ou
   
    object-type="<object-category>"/>  
 ```  
-ou  
+ou Gestionnaire de configuration  
   
 ```xml  
 <synchronize-target>  
@@ -549,7 +548,7 @@ ou
   
 </synchronize-target>  
 ```  
-**Command**  
+**Commande**  
   
 actualisation de base de données  
   
@@ -592,7 +591,7 @@ Nécessite un ou plusieurs nœuds de la métabase en tant que paramètre de lign
   
 />  
 ```  
-ou  
+ou Gestionnaire de configuration  
   
 ```xml  
 <refresh-from-database  
@@ -601,7 +600,7 @@ ou
   
    object-type="<object-category>"/>  
 ```  
-ou  
+ou Gestionnaire de configuration  
   
 ```xml  
 <refresh-from-database>  
@@ -614,7 +613,7 @@ ou
 ## <a name="script-generation-script-file-commands"></a>Commandes de fichier de Script de génération script  
 Les commandes de génération du Script effectuent deux tâches : ils permettent d’enregistrer la console de sortie dans un fichier de script ; et enregistrez la sortie de T-SQL dans la console ou un fichier basé sur le paramètre que vous spécifiez.  
   
-**Command**  
+**Commande**  
   
 en tant que script de sauvegarde  
   
@@ -651,7 +650,7 @@ Nécessite un ou plusieurs nœuds de la métabase en tant que paramètre de lign
   
 />  
 ```  
-ou  
+ou Gestionnaire de configuration  
   
 ```xml  
 <save-as-script  
@@ -666,7 +665,7 @@ ou
   
 </save-as-script>  
 ```  
-**Command**  
+**Commande**  
   
 instruction CONVERT-sql  
   
@@ -690,7 +689,7 @@ instruction CONVERT-sql
   
 -   `write-summary-report-to` Spécifie le chemin d’accès où le rapport sera généré. Si seul le chemin d’accès du dossier est indiqué, puis de fichiers par nom **ConvertSQLReport.XML** est créé. (attribut facultatif)  
   
-    La création a 2 autres sous-catégories, notamment des rapports..,:  
+    La création a 2 autres sous-catégories, notamment des rapports.., :  
   
     -   erreurs de rapport (= « true/false », la valeur par défaut en tant que « false » (attributs facultatifs)).  
   
@@ -727,7 +726,7 @@ Nécessite un ou plusieurs nœuds de la métabase en tant que paramètre de lign
   
 </convert-sql-statement>  
 ```  
-ou  
+ou Gestionnaire de configuration  
   
 ```  
 <convert-sql-statement  
@@ -750,7 +749,7 @@ ou
   
    sql-files="<folder-name>\*.sql" />  
 ```  
-ou  
+ou Gestionnaire de configuration  
   
 ```  
 <convert-sql-statement  

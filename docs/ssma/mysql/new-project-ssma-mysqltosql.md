@@ -1,8 +1,6 @@
 ---
 title: Nouveau projet (SSMA) (MySQLToSQL) | Documents Microsoft
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-mysql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,11 +16,12 @@ caps.latest.revision: 10
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 37c620e110ea2d096c5085f0d040dd13e35f65f0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 92c0d05c34027b17f43cf0d9c8ba98f70d3ff017
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34776705"
 ---
 # <a name="new-project-ssma-mysqltosql"></a>Nouveau projet (SSMA) (MySQLToSQL)
 Utilisez le **nouveau projet** boîte de dialogue pour créer un projet SSMA. Pour accéder à la **nouveau projet** boîte de dialogue le **fichier** menu, cliquez sur **nouveau projet**.  

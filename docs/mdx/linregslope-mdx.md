@@ -1,6 +1,6 @@
 ---
 title: LinRegSlope (MDX) | Documents Microsoft
-ms.date: 05/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -9,15 +9,15 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 108156c215840162bc93152db20a35f666c093bf
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: aa1c24076f76c4f61692deac69741d8cf1557462
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34579031"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34741538"
 ---
 # <a name="linregslope-mdx"></a>LinRegSlope (MDX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   Calcule la régression linéaire d’un jeu et retourne la valeur de la pente dans la ligne de régression y = ax + b.  
   

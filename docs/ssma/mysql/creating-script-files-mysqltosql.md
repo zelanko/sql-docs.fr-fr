@@ -1,8 +1,6 @@
 ---
 title: Création de fichiers de Script (MySQLToSQL) | Documents Microsoft
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-mysql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -23,16 +21,17 @@ caps.latest.revision: 22
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 7f588120f3facb3ccaf91727fa601876c8478c44
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0de174bd310fb4cdd69deb87ebf6ead7d66a0a7b
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34775871"
 ---
 # <a name="creating-script-files-mysqltosql"></a>Création de fichiers de Script (MySQLToSQL)
 La première étape avant le lancement de l’application de console SSMA est à créer le fichier de script et, si nécessaire de créer le fichier de la valeur de la variable et le fichier de connexion de serveur.  
   
-Le fichier de script peut être divisé en trois sections, notamment..,:  
+Le fichier de script peut être divisé en trois sections, notamment.., :  
   
 1.  **config :** permet à l’utilisateur définir les paramètres de configuration pour l’application console.  
   

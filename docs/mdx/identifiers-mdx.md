@@ -1,40 +1,25 @@
 ---
 title: Identificateurs (MDX) | Documents Microsoft
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- formats [Analysis Services]
-- Multidimensional Expressions [Analysis Services], identifiers
-- identifiers [MDX]
-- MDX [Analysis Services], identifiers
-- delimited identifiers [MDX]
-- regular identifiers [MDX]
-- formats [Analysis Services], identifiers
-ms.assetid: 739a8a67-bef3-4b56-961d-ee96cfc36b5b
-caps.latest.revision: 32
-author: Minewiskan
+ms.date: 06/04/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: a04d387c0ee40d825fddf3c50f02793e722cdbc8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 7562beb2cccd94853c346aaf2f1be1886a2e3ac5
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34740808"
 ---
 # <a name="identifiers-mdx"></a>Identificateurs (MDX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  Un identificateur est le nom d’un [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] objet. Tous les objets [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] peuvent et doivent posséder un identificateur. Ces objets comprennent les cubes, les dimensions, les hiérarchies, les niveaux, les membres, etc. L'identificateur d'un objet permet de faire référence à l'objet dans des instructions MDX (Multidimensional Expressions).  
+
+  Un identificateur est le nom d’un objet Analysis Services. Chaque objet peut et doit avoir un identificateur. Ces objets comprennent les cubes, les dimensions, les hiérarchies, les niveaux, les membres, etc. L'identificateur d'un objet permet de faire référence à l'objet dans des instructions MDX (Multidimensional Expressions).  
   
  Selon le nom que vous attribuez à l'objet, son identificateur sera un identificateur régulier ou délimité.  
   
@@ -95,7 +80,7 @@ ms.lasthandoff: 05/03/2018
   
 -   Lorsque le nom d'un objet ou une partie du nom utilise des mots réservés.  
   
-     Il est conseillé de ne pas utiliser les mots clés réservés comme noms d'objets. Bases de données mis à niveau à partir de versions antérieures de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] peuvent contenir des identificateurs qui incluent des mots ne réservés pas dans la version antérieure, mais sont des mots réservés pour [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Aussi longtemps que vous ne modifiez pas l'identificateur de l'objet, vous pouvez faire référence à l'objet à l'aide d'un identificateur délimité.  
+     Il est conseillé de ne pas utiliser les mots clés réservés comme noms d'objets. Bases de données mis à niveau à partir de versions antérieures de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] peuvent contenir des identificateurs qui incluent des mots ne réservés pas dans la version antérieure, mais sont maintenant réservés. Aussi longtemps que vous ne modifiez pas l'identificateur de l'objet, vous pouvez faire référence à l'objet à l'aide d'un identificateur délimité.  
   
 -   Lorsque le nom d'un objet utilise des caractères non répertoriés comme identificateurs qualifiés.  
   
@@ -139,8 +124,8 @@ ms.lasthandoff: 05/03/2018
  En outre, l'identificateur Measures de l'exemple précédent a été délimité pour illustrer la délimitation de plusieurs identificateurs.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Référence du langage MDX & #40 ; MDX & #41 ;](../mdx/mdx-language-reference-mdx.md)   
- [Principes de base de requête MDX & #40 ; Analysis Services & #41 ;](../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)   
+ [Référence du langage MDX &#40;MDX&#41;](../mdx/mdx-language-reference-mdx.md)   
+ [Principes de base de requête MDX &#40;Analysis Services&#41;](../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)   
  [Éléments de syntaxe MDX &#40;MDX&#41;](../mdx/mdx-syntax-elements-mdx.md)  
   
   

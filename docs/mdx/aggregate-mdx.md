@@ -1,6 +1,6 @@
 ---
 title: Aggregate (MDX) | Documents Microsoft
-ms.date: 05/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -9,15 +9,15 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 31fc7fe749d8e14f0e18ea88128d984875cdaa31
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 11e10d5a03702329a5ed59ed42acee0abc2d27c8
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34578421"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34740568"
 ---
 # <a name="aggregate-mdx"></a>Aggregate (MDX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   Retourne un nombre calculé par agrégation sur les cellules retournées par l'expression de jeu. Si aucune expression numérique n'est spécifiée, cette fonction agrège chaque mesure dans le contexte de requête actuel en utilisant l'opérateur d'agrégation par défaut spécifié pour chaque mesure. Si une expression numérique est précisée, cette fonction évalue d'abord, puis totalise l'expression numérique pour chaque cellule du jeu spécifié.  
   

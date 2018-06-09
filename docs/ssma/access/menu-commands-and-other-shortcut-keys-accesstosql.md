@@ -1,8 +1,6 @@
 ---
 title: Commandes de menu et autres touches de raccourci (AccessToSQL) | Documents Microsoft
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-access
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,11 +16,12 @@ caps.latest.revision: 4
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: c9119662915a4c2b83d8e50b33ab041f1fd248bd
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2735835c3eb0ca0a3e6a1f25e81182107a863e57
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34774735"
 ---
 # <a name="menu-commands-and-other-shortcut-keys-accesstosql"></a>Commandes de menu et autres touches de raccourci (AccessToSQL)
 Les sections suivantes décrivent les raccourcis clavier pour accéder aux commandes de menu et autres touches de raccourci utilisées dans les différentes boîtes de dialogue de SSMA pour l’application d’accès.  

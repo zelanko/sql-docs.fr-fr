@@ -1,8 +1,6 @@
 ---
 title: Options de ligne de commande dans la Console SSMA (OracleToSQL) | Documents Microsoft
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-oracle
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -20,11 +18,12 @@ caps.latest.revision: 12
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: b3eeca8d9afb45b68d67f08b285624f3eee7cc5c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 54e126873dd4ade8112d2e37f66c085e06425f8f
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34776855"
 ---
 # <a name="command-line-options-in-ssma-console-oracletosql"></a>Options de ligne de commande dans la Console SSMA (OracleToSQL)
 Microsoft vous fournit un options de ligne de commande ensemble robuste pour exécuter et contrôler les activités SSMA. Les sections qui en découlent décrit en détail le même.  
@@ -92,7 +91,7 @@ Définition de serveur peut être une partie du fichier de connexion de serveur 
 ### <a name="xml-output-option--xxmloutput-xmloutputfile"></a>Option de sortie XML : - x / xmloutput [xmloutputfile]  
 Cette commande est utilisée pour la sortie des messages de sortie de commande au format xml à la console ou dans un fichier xml.  
   
-Il existe deux options pour xmloutput, notamment..,:  
+Il existe deux options pour xmloutput, notamment.., :  
   
 -   Si le chemin d’accès est fourni après le commutateur xmloutput la sortie est redirigée vers le fichier.  
   
