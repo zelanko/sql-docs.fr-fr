@@ -3,8 +3,6 @@ title: Modifier le mappage de Type (SybaseToSQL) | Documents Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-sybase
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ssma
@@ -18,11 +16,12 @@ caps.latest.revision: 4
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 69ec45caaf03b4ccda51683b88c02a3c0247b86c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 950155f09d2addb4240ffb0529d624542c545442
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34779205"
 ---
 # <a name="edit-type-mapping-sybasetosql"></a>Modifier le mappage de Type (SybaseToSQL)
 Le **modifier le mappage de Type** boîte de dialogue vous permet de spécifier comment les types sont mappés entre les objets de base de données source et de destination.  
@@ -41,7 +40,7 @@ Sélectionnez le type de données source à mapper à un [!INCLUDE[ssNoVersion](
   
 Si le type de données est de longueur variable, les champs suivants apparaissent sous **type de Source de**:  
   
-**De**  
+**From**  
 Spécifiez la longueur minimale pour ce mappage. Par exemple, pour le **nchar** type de données, vous pouvez entrer 10 pour indiquer que ce mappage est pour une plage commençant à **nchar(10)**.  
   
 **Pour**  

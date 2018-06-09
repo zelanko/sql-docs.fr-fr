@@ -1,8 +1,6 @@
 ---
 title: Référence de l’Interface utilisateur (OracleToSQL) | Documents Microsoft
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-oracle
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,11 +13,12 @@ caps.latest.revision: 10
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: bf07df733aad0657fa24791eb8b0ca4a01def782
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 981fd5efeda156774de298be5f45d5a9387279e1
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34778125"
 ---
 # <a name="user-interface-reference-oracletosql"></a>Référence de l’Interface utilisateur (OracleToSQL)
 Cette section inclut des rubriques d’aide pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Migration Assistant (SSMA) pour Oracle.  
@@ -29,7 +28,7 @@ Le tableau suivant répertorie les boîtes de dialogue SSMA :
   
 |||  
 |-|-|  
-|Rubrique| Description|  
+|Rubrique|Description|  
 |[Avancé de sélection d’un objet &#40;OracleToSQL&#41;](../../ssma/oracle/advanced-object-selection-oracletosql.md)|Utilisez le **avancé le sélectionnez objet** boîte de dialogue pour rechercher des objets de base de données à l’aide de critères de filtre, puis activez ou désactivez ces objets.|  
 |[Rapport d’évaluation &#40;OracleToSQL&#41;](../../ssma/oracle/assessment-report-oracletosql.md)|Utilisez le rapport d’évaluation pour afficher les résultats de la conversion d’objets Oracle à [!INCLUDE[tsql](../../includes/tsql_md.md)] syntaxe et pour estimer le temps et la complexité d’une migration vers [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].|  
 |[Connexion à Oracle &#40;OracleToSQL&#41;](../../ssma/oracle/connect-to-oracle-oracletosql.md)|Utilisez le **se connecter à Oracle** boîte de dialogue se connecter à la base de données Oracle que vous souhaitez migrer.|  
