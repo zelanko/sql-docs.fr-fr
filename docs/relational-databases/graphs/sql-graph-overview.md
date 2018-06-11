@@ -21,10 +21,10 @@ ms.author: shkale
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2017 || = sqlallproducts-allversions
 ms.openlocfilehash: 8c2ad7f5b31a97de5d0bfb22074b55bd61bb825b
-ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/01/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34707047"
 ---
 # <a name="graph-processing-with-sql-server-and-azure-sql-database"></a>Graphique de traitement avec SQL Server et la base de données SQL Azure
@@ -63,7 +63,7 @@ CREATE TABLE friends (StartDate date) AS EDGE;
 Nœuds et bords sont stockés sous forme de tables  
 
 ### <a name="query-language-extensions"></a>Extensions de langage de requête  
-Nouvelle `MATCH` clause est introduite pour prendre en charge la recherche de correspondance et de navigation cascade via le graphique. Le `MATCH` fonction utilise la syntaxe de style pointe ASCII pour les critères spéciaux. Par exemple :  
+Nouvelle `MATCH` clause est introduite pour prendre en charge la recherche de correspondance et de navigation cascade via le graphique. Le `MATCH` fonction utilise la syntaxe de style pointe ASCII pour les critères spéciaux. Exemple :  
 
 ```   
 -- Find friends of John
